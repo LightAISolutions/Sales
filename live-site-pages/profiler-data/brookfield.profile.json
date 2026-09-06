@@ -453,8 +453,8 @@
    "since": "2025-10",
    "scale": "framework expanded from USD 5bn to USD 25bn of total capex",
    "note": "Bloom Energy supplies behind-the-meter fuel cells under a framework Brookfield describes as a seed AI-infrastructure investment for its AI fund.",
-   "context": "The original framework covered up to 1 GW of behind-the-meter power for data centres and AI factories at about USD 5bn, and Brookfield described it as 'a seed AI infrastructure investment for the Fund' when launching BAIIF. It was expanded fivefold to USD 25bn of total capex, confirmed independently in BIP's, BN's and BAM's Q2 2026 disclosures, and BIP increased its equity commitment in the same quarter.\n\n**A figure worth carrying with the relationship:** Bloom Energy's own Form 8-K filings break out related-party revenue from the Brookfield joint venture at USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and USD 2.8m in Q2 2026 — a near-total collapse in what was a record revenue quarter for Bloom. The figure is audited and counterparty-disclosed, and it appears in none of Brookfield's own channels. No source located explains the fall.",
-   "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results"
+   "context": "The original framework covered up to 1 GW of behind-the-meter power for data centres and AI factories at about USD 5bn, and Brookfield described it as 'a seed AI infrastructure investment for the Fund' when launching BAIIF. It was expanded fivefold to USD 25bn of total capex, confirmed independently in BIP's, BN's and BAM's Q2 2026 disclosures, and BIP increased its equity commitment in the same quarter.\n\n**A figure worth carrying with the relationship, verified against Bloom's own filings rather than against trade coverage.** The joint ventures are housed in Brookfield's AI Infrastructure Fund and Bloom holds only **9.9% passive interests** in them; Bloom's Q2 2026 Form 10-Q states that 'the AI Fund and Brookfield hold the remaining ownership interests and serve as the primary beneficiaries', so Bloom does not consolidate them. Bloom's reported **total related-party revenue** ran **USD 288.0m in Q3 2025** — the quarter the joint ventures were established, and essentially all of it theirs — then **USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and USD 2.818m in Q2 2026**, a quarter in which Bloom's total revenue reached a record USD 1,065.4m, up 166% year on year. Two caveats travel with the series: the 2025 figures also include Bloom's Korean joint venture and SK ecoplant, so they are not a clean measure of this relationship, and the Q4 2025 and Q1 2026 quarterly numbers are derived by subtraction from stated cumulative periods. The fall itself is not in doubt, it appears in none of Brookfield's own channels, and **no source located explains it** — it is recorded here as an open question, not as a trend.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm"
   },
   {
    "slug": "crusoe",
@@ -706,6 +706,11 @@
    "date": "2026-07-29"
   },
   {
+   "label": "Bloom Energy Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm",
+   "date": "2026-07-28"
+  },
+  {
    "label": "NAVER, NVIDIA and Brookfield expand Korea's national AI factory infrastructure",
    "url": "https://bam.brookfield.com/press-releases/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure",
    "date": "2026-07-27"
@@ -835,5 +840,5 @@
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 1
+ "profileVersion": 2
 }

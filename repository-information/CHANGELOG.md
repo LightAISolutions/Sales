@@ -3,11 +3,41 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.87r] — 2026-09-06 05:14:08 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Run a `bloom-energy` revision to fold in the counterparty-disclosed JV
+> revenue collapse — it is a contradicted-claim-shaped finding sitting in a dossier that currently describes the Brookfield
+> framework only in its expansion direction.")*
+
+### Changed
+
+- **`bloom-energy` revised to profileVersion 6** (v5 archived). The dossier described the Brookfield framework only in its expansion direction — USD 5bn to USD 25bn — and carried a single quarter's related-party figure as a concentration flag. It now carries the whole arc, the structure behind it, and the open question.
+- **`brookfield` revised to profileVersion 2.** The Bloom relationship's context was written at v04.86r from a research agent's summary citing Form 8-K filings. It is re-sourced to Bloom's own 10-K and 10-Qs, with the figures corrected and two caveats added that the summary did not carry.
+
+### Added
+
+- **A curated `bloom-energy` <-> `brookfield` reciprocal**, typed `customer`/`supplier`. The first draft typed Bloom's side `partner`, which is incoherent against Brookfield's `supplier` — and the revenue line settles the substance: Brookfield's joint ventures are the contracting customer.
+- **A `technicalSpecs` table** setting out the joint-venture structure and the reported revenue series side by side, and a confidence-tagged judgment recording the collapse as a fact and its cause as undisclosed.
+- **A refresh-calendar row for `bloom-energy`, which had none** (112 -> 113 rows). The company was covered but unscheduled — part of the known gap between the 151-company roster and the calendar — and it now carries the open question as its first watch item. The Brookfield row's "chase this from Bloom's side" item is closed and replaced with what to watch next.
+
+### Fixed
+
+- **The revenue series was verified against primary filings and the previously recorded figures were incomplete.** Every number now in the corpus comes from Bloom's own 10-K or 10-Q: **USD 288.0m (Q3 2025), USD 574.2m (Q4 2025, derived), USD 373.3m (Q1 2026, derived), USD 2.818m (Q2 2026, stated)**, against FY2025's USD 892.0m and a record Q2 2026 total revenue of USD 1,065.4m, up 166 per cent. **Two qualifications the earlier write-up lacked:** the related-party line is not purely Brookfield — FY2025 includes Bloom's Korean joint venture and SK ecoplant, and SK ecoplant ceased to be a related party on 10 July 2025, so only the 2026 figures are close to a clean signal — and the Q4 2025 and Q1 2026 quarterly numbers are **derived by subtraction** from stated cumulative periods rather than published as quarters.
+
+### Notes
+
+- **The structure is the finding as much as the number.** Bloom's filings state that the joint ventures sit inside Brookfield's AI Infrastructure Fund, that Bloom holds **9.9 per cent passive interests** in Bolt US Class A JVCo LLC and Bolt US JVCo LLC, and that "the AI Fund and Brookfield hold the remaining ownership interests and serve as the primary beneficiaries" — so Bloom does not consolidate them. Long-term projects carry a **put right back to the AI Fund at a set rate of return**, and Bloom warns its "customer" in these transactions "may be a project-finance affiliate rather than the ultimate end user".
+- A three-way arrangement is on the record: Bloom paid **USD 50.0m** in May 2026 for option rights that were assigned to a Brookfield vehicle in July 2026, with **Oracle** as the original holder to whom the rights may be put back.
+- **Graph edges unchanged at 1,222 (918 curated)** — the expected result, and worth stating: the pair already existed one-sidedly, so adding the reciprocal made it bidirectional without creating a new pair. Evidence items 3,619 -> 3,625.
+- CHANGELOG `Sections: 89/100` -> `90/100`; ten pushes of headroom, no rotation due.
 
 ## [v04.86r] — 2026-09-06 09:47:58 AM EST — v01.83w
 

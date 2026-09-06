@@ -225,6 +225,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-08-30",
       "supersededBy": 5
+    },
+    {
+      "file": "bloom-energy.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 6
     }
   ],
   "burns-mcdonnell": [

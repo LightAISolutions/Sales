@@ -164,6 +164,20 @@
       ]
     },
     {
+      "slug": "bloom-energy",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "source": "PUBLIC COMPANY — NYSE: BE (Bloom Energy Corporation, CIK 0001664703, fiscal year end 31 December). THE DATE IS NOT COMPANY-CONFIRMED: no Q3 2026 scheduling notice was located as of 2026-09-06. It is a cadence inference — Q3 2025 was reported 2025-10-28 and Q2 2026 on 2026-07-28, both Tuesdays, so late October 2026 is the expected window. HOW TO CONFIRM: Bloom files an 8-K carrying the earnings release on the day, and posts a scheduling notice to its investor site ahead of it; check EDGAR CIK 0001664703 for 8-K filings. ROW ADDED 2026-09-06 — this company was covered but had no calendar row, which is part of the known gap between the 151-company roster and the 112-row calendar.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "THE OPEN QUESTION THIS ROW EXISTS FOR: related-party revenue through the Brookfield AI-Fund joint ventures collapsed to USD 2.818m in Q2 2026 from USD 373.3m in Q1, in a quarter when Bloom's total revenue reached a record USD 1,065.4m, up 166%. Neither Bloom nor Brookfield explains it. Watch the next 10-Q for a reconciliation. CAVEAT to carry: the 2025 comparatives also include Bloom's Korean JV and SK ecoplant (a related party only until 2025-07-10), so they are not a clean measure of the Brookfield channel; only the 2026 figures are.",
+        "The USD 25bn Brookfield framework — expanded fivefold from USD 5bn. Watch whether committed capex or delivered megawatts are ever published against it, and whether Bloom's 9.9% passive JV interests or the long-term put right back to the AI Fund change.",
+        "CHESTERTON CHECK: Bloom's Q4 2025 and Q1 2026 related-party figures in the dossier are DERIVED by subtraction from stated cumulative periods, not published as quarters. If Bloom ever publishes a quarterly series, replace the derived numbers rather than assuming they were always stated.",
+        "The three-way option arrangement: Bloom paid USD 50.0m in May 2026 for contractual rights assigned in July 2026 to a Brookfield vehicle, with Oracle as the original holder to whom they may be put back. Watch for exercise, or for the put.",
+        "Oracle master agreement — up to 2.8 GW, with up to 2.45 GW earmarked; watch conversion from agreement to delivered capacity."
+      ]
+    },
+    {
       "slug": "burns-mcdonnell",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
@@ -1668,7 +1682,7 @@
       "watch": [
         "THREE REORGANISATIONS COMPLETING IN Q4 2026 — BIP+BIPC and BEP+BEPC each hold special meetings on 2026-10-14, and BN is combining with Brookfield Wealth Solutions into Brookfield Corporation Ltd. Every share-count, ticker and entity-name fact in the dossier has a shelf life of weeks. This is the highest-priority watch item on this row.",
         "Aypa Power closing — BEP's Q2 2026 interim statements, Note 22, say closing 'is expected to occur in the second half of 2026 and is subject to customary closing conditions'. CHESTERTON CHECK: the `portfolio` edge to aypa-power is written `announced`, not `active`; flip it only on a completion announcement, and flip Blackstone's side in the same commit.",
-        "Bloom Energy joint-venture revenue — Bloom's own 8-Ks show related-party revenue from the Brookfield JV at USD 574.2m (Q4 2025), USD 373.3m (Q1 2026) and USD 2.8m (Q2 2026), a near-total collapse in a record quarter for Bloom, appearing in none of Brookfield's channels and explained by no located source. Chase this from Bloom's side.",
+        "Bloom Energy joint-venture revenue — CHASED AND WRITTEN UP at v04.87r from Bloom's own 10-K and 10-Qs, so this is now a watch rather than a gap. Bloom's total related-party revenue ran USD 288.0m (Q3 2025, the quarter the Fund JVs were established), USD 574.2m (Q4 2025, derived), USD 373.3m (Q1 2026, derived) and USD 2.818m (Q2 2026, stated) — against a record USD 1,065.4m total-revenue quarter. NO source explains the fall and it appears in none of Brookfield's channels. WHAT TO WATCH: Bloom's next 10-Q for a reconciliation, and whether Brookfield's own disclosure ever acknowledges it. CAVEAT to carry: the 2025 figures also include Bloom's Korean JV and SK ecoplant, so they are not a clean measure of this relationship.",
         "Microsoft 10.5 GW framework — the build window opened in 2026 and NO contracted-or-delivered figure has ever been published. Watch for the first one.",
         "BAIIF deployment against the USD 100bn programme ambition — the fund targets USD 10bn of equity with USD 5bn committed; watch that coverage does not conflate the two."
       ]

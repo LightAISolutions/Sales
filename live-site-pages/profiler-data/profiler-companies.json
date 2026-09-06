@@ -312,12 +312,12 @@
       "hq": "San Jose, CA, USA",
       "ticker": "NYSE: BE",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "bloomenergy.com"
       ],
-      "srcTotal": 14,
-      "srcFirstPct": 50,
+      "srcTotal": 17,
+      "srcFirstPct": 59,
       "kpiNorm": true
     },
     {
@@ -339,8 +339,8 @@
         "bn.brookfield.com",
         "greeninvestmentgroup.com"
       ],
-      "srcTotal": 35,
-      "srcFirstPct": 91,
+      "srcTotal": 36,
+      "srcFirstPct": 92,
       "kpiNorm": true
     },
     {

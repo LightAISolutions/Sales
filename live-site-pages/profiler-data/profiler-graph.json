@@ -9136,11 +9136,20 @@
    "a": "bloom-energy",
    "b": "brookfield",
    "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Brookfield's AI-Fund joint ventures are the contracting customer for Bloom-powered campuses; Bloom holds 9.9% passive stakes in them and does not consolidate them.",
+     "context": "The framework began at about USD 5bn for up to 1 GW of behind-the-meter power for data centres and AI factories, and Brookfield described it as a seed AI-infrastructure investment for its AI Infrastructure Fund. It was expanded fivefold to USD 25bn of total capex, confirmed in Brookfield Infrastructure's, Brookfield Corporation's and Brookfield Asset Management's Q2 2026 disclosures.\n\nThe mechanics are asymmetric and are stated in Bloom's own filings rather than Brookfield's. The joint ventures sit inside the AI Fund; Bloom holds 9.9% passive equity interests in Bolt US Class A JVCo LLC and Bolt US JVCo LLC; and 'the AI Fund and Brookfield hold the remaining ownership interests and serve as the primary beneficiaries', so Bloom does not consolidate them. For projects of five years or more Bloom's holding is capped at the lesser of 9.9% of equity and 2% of the projected investment, and it carries a put right back to the AI Fund at a set rate of return. Bloom also warns that its 'customer' in these transactions 'may be a project-finance affiliate rather than the ultimate end user'.\n\n**The reported revenue through this channel has collapsed, and no source explains it.** Total related-party revenue ran USD 288.0m in Q3 2025 — the quarter the Fund JVs were established, and essentially all of it theirs — then USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and **USD 2.818m in Q2 2026**, a quarter in which Bloom's total revenue reached a record USD 1,065.4m, up 166% year on year. Two caveats belong with the series: the 2025 figures also include the Korean joint venture and SK ecoplant, so they are not a clean Brookfield measure, and the Q4 2025 and Q1 2026 quarterly numbers are derived by subtraction from stated cumulative periods. The fall itself is not in doubt, and it appears in none of Brookfield's own channels.\n\nA three-way arrangement is also on the record: in May 2026 Bloom paid USD 50.0m for contractual rights under an option; in July 2026 those rights were assigned to a Brookfield vehicle which agreed to pay Bloom USD 50.0m on exercising the option and acquiring the underlying project, and if it does not proceed Brookfield may put the rights back to the original holder, Oracle, with Bloom recovering the USD 50.0m.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "USD 25bn total-capex framework; up to 1 GW"
+    },
     "b": {
      "type": "supplier",
      "note": "Bloom Energy supplies behind-the-meter fuel cells under a framework Brookfield describes as a seed AI-infrastructure investment for its AI fund.",
-     "context": "The original framework covered up to 1 GW of behind-the-meter power for data centres and AI factories at about USD 5bn, and Brookfield described it as 'a seed AI infrastructure investment for the Fund' when launching BAIIF. It was expanded fivefold to USD 25bn of total capex, confirmed independently in BIP's, BN's and BAM's Q2 2026 disclosures, and BIP increased its equity commitment in the same quarter.\n\n**A figure worth carrying with the relationship:** Bloom Energy's own Form 8-K filings break out related-party revenue from the Brookfield joint venture at USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and USD 2.8m in Q2 2026 — a near-total collapse in what was a record revenue quarter for Bloom. The figure is audited and counterparty-disclosed, and it appears in none of Brookfield's own channels. No source located explains the fall.",
-     "source": "https://bam.brookfield.com/press-releases/brookfield-asset-management-reports-second-quarter-2026-results",
+     "context": "The original framework covered up to 1 GW of behind-the-meter power for data centres and AI factories at about USD 5bn, and Brookfield described it as 'a seed AI infrastructure investment for the Fund' when launching BAIIF. It was expanded fivefold to USD 25bn of total capex, confirmed independently in BIP's, BN's and BAM's Q2 2026 disclosures, and BIP increased its equity commitment in the same quarter.\n\n**A figure worth carrying with the relationship, verified against Bloom's own filings rather than against trade coverage.** The joint ventures are housed in Brookfield's AI Infrastructure Fund and Bloom holds only **9.9% passive interests** in them; Bloom's Q2 2026 Form 10-Q states that 'the AI Fund and Brookfield hold the remaining ownership interests and serve as the primary beneficiaries', so Bloom does not consolidate them. Bloom's reported **total related-party revenue** ran **USD 288.0m in Q3 2025** — the quarter the joint ventures were established, and essentially all of it theirs — then **USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and USD 2.818m in Q2 2026**, a quarter in which Bloom's total revenue reached a record USD 1,065.4m, up 166% year on year. Two caveats travel with the series: the 2025 figures also include Bloom's Korean joint venture and SK ecoplant, so they are not a clean measure of this relationship, and the Q4 2025 and Q1 2026 quarterly numbers are derived by subtraction from stated cumulative periods. The fall itself is not in doubt, it appears in none of Brookfield's own channels, and **no source located explains it** — it is recorded here as an open question, not as a trend.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm",
      "status": "active",
      "since": "2025-10",
      "scale": "framework expanded from USD 5bn to USD 25bn of total capex"
@@ -9153,9 +9162,51 @@
      "text": "BOTTOM LINE UP FRONT: Bloom Energy is the fastest workaround to the grid-interconnection queue — solid-oxide fuel cells delivering whole-data-center prime power in as little as 55 days against multi-year interconnect waits — and demand has repriced the company: revenue guidance for 2026 has been raised twice to $3.9-4.2B (~100% growth at midpoint), the Oracle master agreement reaches up to 2.8 GW (up to 2.45 GW earmarked for the Doña Ana 'Project Jupiter' campus, displacing planned gas turbines and diesel), AEP firmed a 1 GW / $2.65B order, and Brookfield expanded its financing framework fivefold to $25B.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that **the Brookfield channel is a financing structure Bloom sells into rather than a business it owns, and that its reported revenue has collapsed without public explanation**.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis, all from Bloom's own filings: the joint ventures are housed in Brookfield's AI Infrastructure Fund, Bloom holds 9.9% passive interests, Brookfield and the Fund are the primary beneficiaries and the vehicles are not consolidated.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap:** neither party has published an explanation, the figure appears in none of Brookfield's channels, and the 2025 comparatives mix in the Korean joint venture and SK ecoplant.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "Related-party revenue falls to USD 2.8m in Q2 2026, from USD 373.3m in Q1, while total revenue reaches a record USD 1,065.4m — The two lines moved in opposite directions in the same quarter: total revenue rose 166% year on year while the Brookfield-JV channel went to almost nothing — 0.26% of the quarter. Bloom offers no explanation and none has been located, so it is recorded as an open question rather than as a trend.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "FY2025 related-party revenue of USD 892.0m, against USD 338.6m in FY2024, with USD 151.9m still outstanding as related-party receivables — The step up is the Fund JVs switching on in the second half — and the figure mixes the Korean JV and SK ecoplant with Brookfield, so it is not a clean measure of the Brookfield channel.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-28",
+     "text": "The Fund JVs with Brookfield are established during Q3 2025 and qualify as related parties under ASC 850 — USD 255.7m of product and USD 32.3m of installation revenue was recognised from them in their first quarter of existence — essentially all of that quarter's related-party revenue.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1664703/000162828025046844/be-20250930.htm",
+     "from": "a"
     }
    ],
-   "last": "2025-10"
+   "last": "2026-07-28"
   },
   {
    "a": "bloom-energy",

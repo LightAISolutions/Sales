@@ -68,13 +68,6 @@
   {
    "date": "2026-07-28",
    "category": "financial",
-   "headline": "Related-party revenue falls to USD 2.8m in Q2 2026, from USD 373.3m in Q1, while total revenue reaches a record USD 1,065.4m",
-   "read": "The two lines moved in opposite directions in the same quarter: total revenue rose 166% year on year while the Brookfield-JV channel went to almost nothing — 0.26% of the quarter. Bloom offers no explanation and none has been located, so it is recorded as an open question rather than as a trend.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm"
-  },
-  {
-   "date": "2026-07-28",
-   "category": "financial",
    "headline": "Q2 2026: first $1B+ quarter — revenue $1.065B (+165.5%, beat consensus by ~31%), non-GAAP EPS $0.78 (beat by 100%); FY guidance raised again to $3.9-4.2B",
    "read": "Fourth consecutive large double-beat; consensus keeps lagging the data-center ramp. Gross margin reached 34.3% non-GAAP.",
    "source": "https://www.sec.gov/Archives/edgar/data/0001664703/000162828026050150/ex991_q226financialresults.htm"
@@ -101,25 +94,11 @@
    "source": "https://www.bloomenergy.com/news/bloom-energy-appoints-simon-edwards-as-chief-financial-officer/"
   },
   {
-   "date": "2026-02-09",
-   "category": "financial",
-   "headline": "FY2025 related-party revenue of USD 892.0m, against USD 338.6m in FY2024, with USD 151.9m still outstanding as related-party receivables",
-   "read": "The step up is the Fund JVs switching on in the second half — and the figure mixes the Korean JV and SK ecoplant with Brookfield, so it is not a clean measure of the Brookfield channel.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
-  },
-  {
    "date": "2026-01-15",
    "category": "order-win",
    "headline": "AEP gigawatt firmed: ~$2.65B for 1 GW, described by management as 'unconditional' (up from the 100 MW firm at the November 2024 signing)",
    "read": "The utility-channel template validated at gigawatt scale — and the best public pricing benchmark for fuel-cell prime power (~$2.65/W).",
    "source": "https://www.energycentral.com/energy-biz/post/bloom-energy-signed-a-2-65-billion-deal-with-aep-for-1gw-of-solid-oxide-8IkYU2sk03xhUGJ"
-  },
-  {
-   "date": "2025-10-28",
-   "category": "partnership",
-   "headline": "The Fund JVs with Brookfield are established during Q3 2025 and qualify as related parties under ASC 850",
-   "read": "USD 255.7m of product and USD 32.3m of installation revenue was recognised from them in their first quarter of existence — essentially all of that quarter's related-party revenue.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828025046844/be-20250930.htm"
   },
   {
    "date": "2025-10-13",
@@ -141,8 +120,7 @@
   "(High confidence) We assess the headline pipeline overstates firm demand and the distinction matters. Basis: Oracle's 2.8 GW is a master-agreement ceiling with ~1.2 GW contracted; AEP's 1 GW was only 100 MW firm for its first year (Jefferies publicly discounted the rest until the January 2026 firming); backlog ~$20B splits ~$6B product / ~$14B service, and management itself disclaims more than ~six months of demand visibility.",
   "(Moderate confidence) We assess manufacturing ramp is the binding constraint, and the scandium question is unresolved. Basis: ~$4B guided 2026 revenue against a factory exiting the year at 2 GW run-rate; Hunterbrook's claim that 5 GW output would need ~220 t/yr of scandium oxide (near projected global supply) versus management's '25 GW supported from industrial tailings' rebuttal — neither side has published verifiable sourcing data; a class action now attaches litigation discovery to the question.",
   "(Moderate confidence) We assess the service-margin inflection is the strongest evidence the historical bear case is aging out. Basis: service margins moved from -20.6% (FY2023) to +10% GAAP (FY2025), directly answering the Hindenburg-era degradation/replacement-economics critique; the 2019-vintage field-degradation data remains the canonical counterexample but predates two product generations.",
-  "(Low confidence) We assess natural-gas anchoring is a medium-term reputational and regulatory exposure rather than a demand constraint. Basis: cells at scale run on gas with CCGT-comparable CO2; company marketing leans on criteria pollutants and water; The Register's unanswered fuel-type questions at Oracle sites illustrate the opacity — but no customer loss or rule change has yet been tied to it.",
-  "**(High confidence)** We assess that **the Brookfield channel is a financing structure Bloom sells into rather than a business it owns, and that its reported revenue has collapsed without public explanation**. Basis, all from Bloom's own filings: the joint ventures are housed in Brookfield's AI Infrastructure Fund, Bloom holds 9.9% passive interests, Brookfield and the Fund are the primary beneficiaries and the vehicles are not consolidated. Related-party revenue ran USD 288.0m, USD 574.2m and USD 373.3m in the three quarters from Q3 2025, then **USD 2.818m in Q2 2026 — 0.26% of a record USD 1,065.4m quarter**. The collapse is a fact on the face of an audited filing; its cause is not disclosed, and we do not infer one. **Collection gap:** neither party has published an explanation, the figure appears in none of Brookfield's channels, and the 2025 comparatives mix in the Korean joint venture and SK ecoplant. The next 10-Q is the first place a reconciliation could appear."
+  "(Low confidence) We assess natural-gas anchoring is a medium-term reputational and regulatory exposure rather than a demand constraint. Basis: cells at scale run on gas with CCGT-comparable CO2; company marketing leans on criteria pollutants and water; The Register's unanswered fuel-type questions at Oracle sites illustrate the opacity — but no customer loss or rule change has yet been tied to it."
  ],
  "relationships": [
   {
@@ -155,100 +133,9 @@
    "status": "active",
    "since": "2025",
    "scale": "up to 2.8 GW master agreement"
-  },
-  {
-   "slug": "brookfield",
-   "type": "customer",
-   "status": "active",
-   "since": "2025-10",
-   "scale": "USD 25bn total-capex framework; up to 1 GW",
-   "note": "Brookfield's AI-Fund joint ventures are the contracting customer for Bloom-powered campuses; Bloom holds 9.9% passive stakes in them and does not consolidate them.",
-   "context": "The framework began at about USD 5bn for up to 1 GW of behind-the-meter power for data centres and AI factories, and Brookfield described it as a seed AI-infrastructure investment for its AI Infrastructure Fund. It was expanded fivefold to USD 25bn of total capex, confirmed in Brookfield Infrastructure's, Brookfield Corporation's and Brookfield Asset Management's Q2 2026 disclosures.\n\nThe mechanics are asymmetric and are stated in Bloom's own filings rather than Brookfield's. The joint ventures sit inside the AI Fund; Bloom holds 9.9% passive equity interests in Bolt US Class A JVCo LLC and Bolt US JVCo LLC; and 'the AI Fund and Brookfield hold the remaining ownership interests and serve as the primary beneficiaries', so Bloom does not consolidate them. For projects of five years or more Bloom's holding is capped at the lesser of 9.9% of equity and 2% of the projected investment, and it carries a put right back to the AI Fund at a set rate of return. Bloom also warns that its 'customer' in these transactions 'may be a project-finance affiliate rather than the ultimate end user'.\n\n**The reported revenue through this channel has collapsed, and no source explains it.** Total related-party revenue ran USD 288.0m in Q3 2025 — the quarter the Fund JVs were established, and essentially all of it theirs — then USD 574.2m in Q4 2025, USD 373.3m in Q1 2026 and **USD 2.818m in Q2 2026**, a quarter in which Bloom's total revenue reached a record USD 1,065.4m, up 166% year on year. Two caveats belong with the series: the 2025 figures also include the Korean joint venture and SK ecoplant, so they are not a clean Brookfield measure, and the Q4 2025 and Q1 2026 quarterly numbers are derived by subtraction from stated cumulative periods. The fall itself is not in doubt, and it appears in none of Brookfield's own channels.\n\nA three-way arrangement is also on the record: in May 2026 Bloom paid USD 50.0m for contractual rights under an option; in July 2026 those rights were assigned to a Brookfield vehicle which agreed to pay Bloom USD 50.0m on exercising the option and acquiring the underlying project, and if it does not proceed Brookfield may put the rights back to the original holder, Oracle, with Bloom recovering the USD 50.0m.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm"
   }
  ],
  "technicalSpecs": [
-  {
-   "product": "The Brookfield AI Fund joint ventures — structure and reported revenue, from Bloom's own filings",
-   "specs": [
-    {
-     "band": "Structure",
-     "label": "What the vehicles are",
-     "value": "Bloom and Brookfield Asset Management have entered into joint-venture structures housed in an AI Infrastructure Fund created by Brookfield (the 'AI Fund'). Bloom accounts for the AI Fund JVs and the JVs outside it (together the 'Fund JVs') under the equity method per ASC 323"
-    },
-    {
-     "band": "Structure",
-     "label": "Who controls them",
-     "value": "'The AI Fund and Brookfield hold the remaining ownership interests and serve as the primary beneficiaries; accordingly, both the AI Fund JVs and the Other JVs are not consolidated by us'"
-    },
-    {
-     "band": "Structure",
-     "label": "Bloom's equity interests",
-     "value": "Bolt US Class A JVCo LLC 9.9% and Bolt US JVCo LLC 9.9% at both 30 June 2026 and 31 December 2025"
-    },
-    {
-     "band": "Structure",
-     "label": "Short Term AI Fund (term under five years)",
-     "value": "Bloom contributes sufficient funds for a passive equity holding not to exceed 9.9%"
-    },
-    {
-     "band": "Structure",
-     "label": "Long Term AI Fund (term five years or more)",
-     "value": "A passive holding not to exceed the lesser of 9.9% of the equity amount and 2% of the projected investment amount — and these projects entitle Bloom to a put right back to the AI Fund at a set rate of return"
-    },
-    {
-     "band": "Structure",
-     "label": "Who the 'customer' is",
-     "value": "'Customer' refers to the contractual counterparty to which Bloom sells and installs, 'which in certain transactions may be a project-finance affiliate rather than the ultimate end user of the products'"
-    },
-    {
-     "band": "Revenue",
-     "label": "H1 2025",
-     "value": "USD 29.9m of total related-party revenue — the Fund JVs did not yet exist"
-    },
-    {
-     "band": "Revenue",
-     "label": "Q3 2025",
-     "value": "USD 288.0m, of which USD 255.7m of product and USD 32.3m of installation revenue was recognised from the Fund JVs, established that quarter"
-    },
-    {
-     "band": "Revenue",
-     "label": "Q4 2025",
-     "value": "USD 574.2m — derived as FY2025's USD 892.0m less the USD 317.8m reported for the nine months to 30 September 2025"
-    },
-    {
-     "band": "Revenue",
-     "label": "Q1 2026",
-     "value": "USD 373.3m — derived as H1 2026's USD 376.081m less Q2 2026's USD 2.818m"
-    },
-    {
-     "band": "Revenue",
-     "label": "Q2 2026",
-     "value": "USD 2.818m — as stated in the Q2 2026 Form 10-Q"
-    },
-    {
-     "band": "Revenue",
-     "label": "FY2025 total",
-     "value": "USD 892.0m against USD 338.6m in FY2024 and USD 487.2m in FY2023"
-    },
-    {
-     "band": "Balance sheet",
-     "label": "Related-party accounts receivable",
-     "value": "USD 151.9m at 31 December 2025 against USD 93.5m a year earlier"
-    },
-    {
-     "band": "Balance sheet",
-     "label": "Unfunded commitment to the Fund JVs",
-     "value": "USD 58.2m at 31 December 2025 for future capital calls"
-    },
-    {
-     "band": "Balance sheet",
-     "label": "Equity in loss of unconsolidated affiliates",
-     "value": "USD 19.6m in Q3 2025 and USD 40.4m for FY2025; USD 12.656m for H1 2026, within which Q2 2026 was a USD 4.346m gain"
-    }
-   ],
-   "notes": "Two qualifications that change how this table reads. First, the related-party line is NOT purely Brookfield: FY2025's USD 892.0m is footnoted as including the Korean joint venture, the Fund JVs and SK ecoplant, while the 2026 figures are footnoted as the Fund JVs and SK ecoplant only — and SK ecoplant ceased to be a related party on 10 July 2025. The 2026 numbers are therefore close to a clean Fund-JV signal; the 2025 comparatives are not. Second, the Q4 2025 and Q1 2026 quarterly figures are DERIVED by subtraction from stated cumulative periods, because Bloom does not publish a standalone quarterly related-party series."
-  },
   {
    "product": "Energy Server 6.5",
    "specs": [
@@ -466,11 +353,6 @@
    "date": "2026-07-28"
   },
   {
-   "label": "Bloom Energy Form 10-Q, quarter ended 30 June 2026",
-   "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026050247/be-20260630.htm",
-   "date": "2026-07-28"
-  },
-  {
    "label": "24/7 Wall St — Hunterbrook short-report coverage",
    "url": "https://247wallst.com/investing/2026/07/09/the-market-rejects-bloom-energy-short-attack-but-should-you-ignore-it-too/",
    "date": "2026-07-09"
@@ -496,11 +378,6 @@
    "date": "2026-04-13"
   },
   {
-   "label": "Bloom Energy Form 10-K for FY2025",
-   "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
-   "date": "2026-02-09"
-  },
-  {
    "label": "Bloom Q4/FY2025 results",
    "url": "https://www.bloomenergy.com/news/bloom-energy-reports-fourth-quarter-and-full-year-2025-financial-results-with-record-full-year-revenues/",
    "date": "2026-02-05"
@@ -521,11 +398,6 @@
    "date": "2026-01-15"
   },
   {
-   "label": "Bloom Energy Form 10-Q, quarter ended 30 September 2025",
-   "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828025046844/be-20250930.htm",
-   "date": "2025-10-28"
-  },
-  {
    "label": "AEP gigawatt procurement agreement",
    "url": "https://www.bloomenergy.com/news/bloom-energy-announces-gigawatt-fuel-cell-procurement-agreement-with-aep-to-power-ai-data-centers/",
    "date": "2024-11-14"
@@ -541,6 +413,6 @@
    "date": "2019-09-17"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }
