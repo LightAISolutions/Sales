@@ -6,6 +6,48 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 09:22 PM EST
+**Repo version:** v04.78r — one push commit this session (`0b30312`, merged to `main`), plus this housekeeping commit
+**Branch:** `claude/phase-b-closeout-verify-rx201s` (rebased onto `origin/main` after the merge)
+**Model:** Fable 5.1 High — **Phase B closeout**: bookkeeping and verification only, no dossier or guide work, no `Profiler.html`, `Profiler.gs`, `Scraper.gs` or family-map change.
+
+### What was done
+
+- **`CLASSROOM-CURRICULUM-PLAN.md` §6 re-run in full (G1–G12) against the corpus** — files by slug, guide section ids, the eight `guidanceDocs_()` ids — with a dated v04.78r verdict in every row. **One status change: G10 `Partial v04.58r` → `Closed v04.78r`** on the register's own definition of Partial (its one stated ask, a module revision *or* one IE-firm dossier, is satisfied twice by `dnv` and `sargent-lundy`; insurance/brokers were never an ask — residual recorded in the row). G1–G5, G7–G9 re-confirmed closed (G8 over-satisfied: `oklo` + `x-energy`); **G6 stays Open and structural** (no interconnection module among eight; "Order 2023" nowhere in the corpus); G11, G12 re-affirmed. Intro sentence dates the Phase B re-run; Standings rewritten (eight closed · one open · two standing; Scheduled bucket empty); trail count six; one append-only paragraph "Where the register stands after Phase B (re-run 2026-09-05, v04.78r)".
+- **`PROFILER-COVERAGE-PLAN.md` marks Phase B complete**: §1 dated counts paragraph + delta table (136 dossiers · 110 guides · 8 projects · 1,012 edges (749 curated) · 922 concepts · 8 modules · 4 reports vs the v04.39r baseline 89 / 62 / 8 / 490 / 112 / 7 / 4; roster tags supplier 54 · developer 28 · ipp 21 · epc 12 · integrator 10 · hyperscaler 8 · neocloud 7 · gc 6 · utility 6 · advisor 2 · investor 2); §4 "Phase B complete" note under Regrouping (B1–B2, F1–F8 with versions; B2 on Opus 5 xhigh, F5 on Fable 5.1 Medium); §7 bullet handing the `Colocation & Cloud Capacity` peer-family split (`renewables-developer`, keyed on the `developer · ipp` pairing) to **X3 as a decision**, with three loose threads (CoreWeave's Elk Grove Village lease missing from `coreweave`; `plus-power`'s Sierra Estrella line unconfirmed; Tract's PUCN decision due 8 Sept 2026); §9.5 row 2 done.
+- **Verified**: all 29 §8 B rows carry versions in both columns and no §4 hypothesis wording; calendar Phase B rows all present (7 public with nextReport/confirmed/source/watch[], 22 private `cadence: "quarterly"`); **Fermi's 2026-11-12 stays `confirmed: false`** — EDGAR (CIK 2071778) has no Q3-date 8-K (post-Q2 filings: 31 Aug officer 8-K, 2 Sept shareholder-nomination 8-K) and `investor.fermiamerica.com/events-presentations` returned HTTP 403; row untouched.
+- **Checkers at v04.78r, all exit 0**: registry 0/136 updated · graph 1,012 edges unchanged · study 0/0 · relationships 0 findings (14 suppressed) · crossrefs 0 candidates (7 suppressed, 20 scopes over the cap) · **reports 35 aged-pin warnings** across three reports (X3, not re-pinned).
+- CHANGELOG **95/100**; no rotation.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean. **Program state: 47 of 65 new companies, 4 of 30 guide passes. Phases A and B complete and closed out; the §6 register is dated at v04.78r.** The Phase C paste-in prompt for C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy, Opus 5 xhigh) was handed to the developer in this session's chat.
+
+- **Remaining, in §9.5 order:** C5 · C6 · C7 · C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
+- **CHANGELOG rotation will fire in the Phase C dossier block, not the guide block** — 95/100 now, so the sixth push from here (around C10/C12) crosses 100. The §7 "CHANGELOG capacity" bullet still reads 86/100 as of v04.69r; refresh it when a session touches §7.
+
+### Key decisions and findings
+
+- **G10 closed rather than held**: Partial means "premise moved, stated asks not done"; the ask was done twice. The insurance seat (property, delay-in-start-up, warranty wraps) is still untaught — no insurer/broker slug, "delay-in-start-up" in no guide — and is a **new** row if the developer wants it, structural like G6.
+- **G6 is the register's only commissioning ask** and is blocked on a developer-supplied document (`industry guidance:` command), not on any model or Phase C session.
+- **Nothing in Phase C is a register closer** — the Scheduled bucket is empty; C5–C12 are ecosystem coverage. Every §5 row is still a hypothesis to be rewritten with a verdict (C1–C3 and C11 shipped without one; C4 and B5 went nought for three).
+- **Peer family**: C5's `developer · ipp` storage owners will join the same `Colocation & Cloud Capacity` family the F3–F5 owners sit in; the split is X3's decision — dossier sessions must not touch the family map.
+
+### Active context
+
+- Branch `claude/phase-b-closeout-verify-rx201s`; repo version **v04.78r**; CHANGELOG **95/100** — 5 pushes of headroom.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Checker state at v04.78r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports exit 0 with 35 aged pins (X3) · roles not run.
+
+### Recommendation for next session
+
+- **Run Phase C session C5 on Opus 5 xhigh — ENGIE North America, AES Clean Energy, RWE Clean Energy (`developer · ipp`, §8 rows at `—`/`—`), dossier + study guide each, the four after-write checkers plus crossrefs, calendar rows per `.claude/rules/profiler-app.md` Scheduled Refreshes, README tree entries, flip the §8 rows and rewrite the §5 C5 row with premise verdicts. One push commit.** The paste-in prompt was handed over in the v04.78r closeout session's chat; the §7 template in `PROFILER-COVERAGE-PLAN.md` regenerates it.
+**To continue:** type `run Phase C session C5 on Opus 5 xhigh`
+
+## Previous Sessions
+
+### Session — Phase B F8, Fermi America · Tract · Prime Data Centers (Fable 5.1 High)
 **Date:** 2026-09-05 08:47 PM EST
 **Repo version:** v04.77r — one push commit this session (`8ed8487`, merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-b-f8-profiler-setw9a` (rebased onto `origin/main` after the merge)
@@ -50,49 +92,10 @@ Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **P
 - **Run the Phase B closeout on Fable 5.1 High — the §7 "Register checks" obligation: re-run all twelve `CLASSROOM-CURRICULUM-PLAN.md` §6 rows against the corpus (files by slug, guide section titles, `guidanceDocs_()` ids — not against the rows' own text), append a dated "Where the register stands after Phase B" trail paragraph and refresh the Standings, then mark Phase B complete in `PROFILER-COVERAGE-PLAN.md` (§4 header/Regrouping note, §9.5 run-order row 2, the §1-style counts) and carry the peer-family observation into a §7 bullet for X3.** One push commit; no dossier work.
 **To continue:** type `run the Phase B closeout on Fable 5.1 High`
 
-## Previous Sessions
-
 ### Session — Phase B F7, Compass Datacenters · EdgeCore · PowerHouse Data Centers (Fable 5.1 High)
 **Date:** 2026-09-05 07:27 PM EST
 **Repo version:** v04.76r — three push commits this session (`a560905` v04.74r F7, `df0ef87` v04.75r, `de70a93` v04.76r; all merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-b-f7-aidc-landlords-3h01nd` (rebased onto `origin/main` after each merge)
 **Model:** Fable 5.1 High — Phase B session **F7**: Compass Datacenters · EdgeCore Digital Infrastructure · PowerHouse Data Centers (the AIDC landlords), then two follow-up fixes to the `mccarthy` dossier. Six research subagents (two per company), dossiers, guides, lesson plans, step 7 reconciliation, all in one push commit; context compacted once, just before that commit.
-
-### What was done
-
-- **Three dossiers** (schema v7, profileVersion 1, intel-briefing, category `developer`): `compass-datacenters` (102 sources, 42% first-party, 10 relationships), `edgecore` (107, 53%, 7), `powerhouse-data-centers` (114, 52%, 6; `ownership.type: subsidiary` of American Real Estate Partners). 46 company-published headshots (execs 594 across 86 companies). All three private or sponsor-owned → calendar `cadence: "quarterly"` (94 rows).
-- **Three schema v2 guides + lesson plans**: Compass (the sponsor-owned build-to-suit developer — the case study), EdgeCore (the single-tenant campus lease from the landlord's chair — the structural chapter), PowerHouse (powered land and the utility-first campus). 40 shared concepts registered (895 total); two alias collisions resolved on first registration. None repeats aligned, vantage, qts, switch, equinix, stack-infrastructure, fluidstack or nscale.
-- **Step 7 reconciliation**: `southern-company` v2 (Compass `customer` edge added, URL registered); `holder-construction` v5 (six "$1.9B contract" strings corrected — the Construction Dive figure is EdgeCore's financing, not Holder's award — and an `edgecore` `customer` edge added). `hitt` and `mccarthy` EdgeCore mentions were accurate and untouched in F7. `\bPowerhouse\b` hits in `kiewit` and `oklo` are Oklo's Aurora product, not the company; `Joliet` had no hits.
-- **Follow-ups (separate pushes)**: `mccarthy` v3 — the Construction Dive source date corrected 2023-08-01 → 2024-01-10 (verified on the live page); `mccarthy` v4 — the same source's label aligned with Holder's wording, keeping the "corrects a misattribution to McCarthy" clause. Both archived (v2, v3) and indexed.
-- **Checkers at v04.76r**: registry sync clean (133 companies) · study 0 errors (107 guides) · relationships exit 0 with **0 new accepts** (14 entries unchanged; no `investor` edges written) · crossrefs exit 0 with 0 new candidates (one Compass `productsAndServices` entry at 1,761 chars is over the checker's cap and listed as not examined) · graph 974 edges (727 curated) · Playwright: five touched slugs rendered with zero page errors.
-- **Bookkeeping**: §8 rows flipped `B7 → F7` with premise verdicts; §7 investor bullet extended with the landlords' peer-group note; F7 entry in the calibration log (0/0/0/0); README tree (+3 profiles, +3 guides, +3 study-prep folders, +5 archive lines); CHANGELOG **93/100**.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **Program state: 44 of 65 new companies, 4 of 30 guide passes.** The F8 paste-in prompt was handed to the developer in this session's chat (regenerate from §4 row B8, §7 and the F7 prompt pattern if lost).
-
-- **Next action is F8** on Fable 5.1 High — Fermi America · Tract · Prime Data Centers (`developer`, AIDC developers) — the last Fable session of Phase B.
-- **Fable remaining:** F8 (High). **Opus remaining:** C5–C10, C12, 26 guide backfills, X3.
-
-### Key decisions and findings
-
-- **Premise verdicts (§4 → §8 Closes):** the B7 cell fused three companies. "Brookfield-owned" = Compass, **held imprecisely** (co-controlled by Brookfield Infrastructure and Ontario Teachers'; KKR at asset level since Dec 2025). "1.8 GW delivered or under development on $16.1B planned" = EdgeCore's own 13 Jan 2026 wording, **held as wording** (two operating buildings; site now says 2.27+ GW / $7.4bn). "Joliet 1.8 GW campus" = Hillwood/PowerHouse, **held as a plan**: annexed 8–1 on 19 Mar 2026, ComEd transmission agreement cancelled 24 Jul 2026, litigation pending — the most volatile item before the first quarterly refresh.
-- **Brief corrections:** PowerHouse's brief domains were parked or dead (real: powerhousedata.com, americanrepartners.com, joliettechnologycenter.com); HQ McLean, not Reston/Herndon; "Luke Kinney" is Luke Kipfer. EdgeCore headshots are AVIF (`pillow-avif-plugin`).
-- **No project pins** — every campus stayed in prose because no relationship was ready to pin one; `profiler-projects.json`, Scraper.gs and Profiler.html untouched (page stays v01.82w).
-- **Peer group reads oddly:** `Colocation & Cloud Capacity` mixes build-to-suit landlords with F3–F5 merchant storage developers. Noted in §7; family map unchanged by instruction.
-- **Step 7 taught a GC-dossier rule:** general-contractor dossiers restate campus values as contract awards — verify builder/campus attributions against the landlord's own release before trusting them.
-- **Environment:** harness needs `wait_until='load'` and a 90 s reload timeout (`networkidle` timed out on southern-company); the harness-created remote branch was swept by the workflow before each push, so push-once held every time; three rebases this session, one before each push commit.
-
-### Active context
-
-- Branch `claude/phase-b-f7-aidc-landlords-3h01nd`; repo version **v04.76r**; CHANGELOG **93/100** — 7 pushes of headroom.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.76r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports not re-run (X3 re-pins) · roles not run.
-
-### Recommendation for next session
-
-- **Run F8 on Fable 5.1 High — `profiler` + `profiler prep` for Fermi America, Tract and Prime Data Centers (`developer`, AIDC developers), then the four after-write scripts, three calendar rows (Fermi America is believed listed — confirm and give it a `nextReport`), README tree entries and the §8 flips.** Corpus mentions to reconcile in step 7: Fermi America in `xcel-energy` (and `\bFermi\b` in `excelsior-energy-capital` — classify); Tract in `compass-datacenters`, `hunt-energy-network`, `powerhouse-data-centers` (watch for "Tract of land"); Prime Data Centers in `lambda`, `plus-power`; Amarillo in `intersect-power`, `xcel-energy`.
-**To continue:** type `run F8 on Fable 5.1 High`
 
 Developed by: LightAISolutions
