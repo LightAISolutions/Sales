@@ -2,6 +2,28 @@
 
 Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtml.changelog.md).
 
+## [v01.34w] — 2026-08-21 11:01:38 PM EST — v02.75r — [0f7c48b](https://github.com/LightAISolutions/Sales/commit/0f7c48b9e924ba72aafdbb37c23f4d1bf396013f)
+
+### Added
+- Two new roster categories: EPC and General Contractor, each with its own tag color and filter
+
+### Changed
+- Construction and engineering companies are now grouped under the new categories, so filtering the roster by company type is more precise
+- Category names now display with proper formatting throughout the app
+
+## [v01.33w] — 2026-08-21 10:49:24 PM EST — v02.74r — [369827c](https://github.com/LightAISolutions/Sales/commit/369827c23039a27bcf11b6e88dc911ca4b4839e2)
+
+### Added
+- New "Neocloud" company category with its own color tag — GPU-cloud providers now appear under their own label instead of "Hyperscaler"
+- Every company now has an in-app study guide — 30 new technology study guides were added, completing coverage across the full roster
+
+### Changed
+- Dossier summaries now display "Bottom Line Up Front" and "Background" as separate paragraphs for easier reading
+- Snapshot facts (ownership, ecosystem role, and other background fields) now display with capitalized words
+
+### Fixed
+- Newer dossiers now show their Headquarters, Ownership, stock ticker, and legal-name details correctly — these fields could previously appear blank on some companies
+
 ## [v01.32w] — 2026-08-18 06:16:45 AM EST — v02.67r — [12d3737](https://github.com/LightAISolutions/Sales/commit/12d373758ced83dd2d9fb4c10b14b5a5ec5cd12e)
 
 ### Fixed

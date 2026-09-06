@@ -3,11 +3,46 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.85r] — 2026-09-06 08:33:03 AM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "add `portfolio` to the `relationships[].type` enum in
+> `PROFILER-SCHEMA.md` and the checker's inverse table, then retire the accept entries it makes redundant — do it
+> before C10 rather than after, so the investor-heavy session writes coherent edges instead of generating five more
+> accepts.")*
+
+### Added
+
+- **`portfolio` is now a `relationships[].type` value.** It is the coherent inverse of `investor` and had been missing since the type set was written, so an owner's side of an investment link had to be typed `other` and the pair accepted by hand. Added to `PROFILER-SCHEMA.md`, to the checker's invariant comment, and to `Profiler.html`'s `OV_REL_TYPES` (rendering as "Portfolio company") and `OV_REL_WORK` (grouping under *Working with*, beside its `investor` counterpart). **Enum expansion only, no `schemaVersion` bump**, on the `recentDevelopments.category` precedent: no existing profile used the value and consumers render an unrecognised type as-is.
+- **A Phase X ledger row** in `PROFILER-COVERAGE-PLAN.md` §9.4 recording the change ahead of X3.
+
+### Changed
+
+- **Seven edges flipped `other` → `portfolio`** across three dossiers, each archived before editing: `amazon` → `mainspring-energy` (pv 9 → 10); `mgx` → `openai`, `aligned`, `anthropic`, `xai`, `vantage` (pv 1 → 2); `google` → `cipher-mining` (pv 7 → 8). The two MGX edges with silent counterparties were included because their own notes said they were typed `other` only for want of the value — leaving them would have preserved the defect in the edges that happened not to trip the checker. Prose on every flipped edge that referenced the missing enum value was rewritten.
+- **Five accept entries retired; the list moves 15 → 10.** `amazon x mainspring-energy`, `mgx x openai`, `aligned x mgx`, `anthropic x mgx` and `cipher-mining x google` were accepted solely because the inverse did not exist; the pairs are now genuinely coherent. The remaining ten were each re-audited rather than assumed: eight are genuinely-both-true or no-claim cases and stand unchanged, and **`blattner x quanta-services` was re-reasoned and kept** — `portfolio` was considered and rejected there, because a wholly-owned operating subsidiary is not a financial holding and the types actually missing are `parent`/`subsidiary`.
+- Profiler page v01.82w → **v01.83w**; its changelog rotated (2 sections dated 2026-08-21 moved to the archive with SHA enrichment, 50/50 → 49/50).
+
+### Fixed
+
+**Three errors in the Google backstop material published at v04.84r, corrected here on research that landed afterwards. All three were verified directly against primary filings before being written down.**
+
+- **"Alphabet discloses nothing" was wrong, and it was the headline.** Alphabet **does** disclose the programme — in Note 3 of its 10-K and 10-Qs, accounted for as **credit derivatives**, with gross notional running USD 0 (FY2024) → **USD 16,940m** (31 Dec 2025) → **USD 28,436m** (31 Mar 2026) → **USD 43,785m** (30 Jun 2026), a fair-value liability of USD 69m → 339m → 815m, and a forward commitment of up to USD 33.3bn restated to an estimated USD 24.1bn. What Alphabet withholds is **identity**, not existence: "Fluidstack", "TeraWulf", "Cipher", "Hut 8" and "Recognition Agreement" appear zero times in all three documents. The corrected finding is a two-halves problem — Alphabet publishes the only programme-level total that exists and names nobody; the landlords name everybody and publish no total — and the halves do not reconcile: named caps total ~USD 6.233bn against USD 16,940m at end-2025, and 2026's +USD 26.8bn of growth is entirely unattributed. **A separate trap now recorded:** the energy-equipment backstops in Note 10 (USD 5.7bn → 9.0bn → 7.6bn) are **financial guarantees**, a different programme — a reader who goes to the guarantees footnote for this one finds the wrong instrument.
+- **"Google took nothing at Hut 8, unlike everywhere else" overstated a true fact.** Hut 8 did give no warrants and no equity — but it is **not the only case**. TeraWulf's Abernathy joint venture states plainly that "no TeraWulf equity securities or warrants were issued in connection with this transaction", and Cipher's USD 333m increase added none either. The strip attached only to the **first tranche** at each of the two landlords that paid one and to nothing since. The conclusion survives in stronger form — the price is negotiated and went to zero — but the uniqueness claim was wrong. Related: **TeraWulf's USD 3.2bn is two instruments**, USD 1.8bn (13–14 Aug 2025, ~41m warrants, ~8% pro forma) then +USD 1.4bn (17–18 Aug 2025, taking it to ~14%), not one.
+- **The "springing Alphabet guarantee" at River Bend is in no SEC filing.** "Alphabet" returns zero hits in Hut 8's FY2025 10-K; the lease and recognition agreement were never filed as exhibits (the deal was disclosed under Item 8.01); and the only executed recognition agreement in the public record — TeraWulf's — names **Google LLC alone, with Alphabet expressly not a guarantor** and Google's liability capped at the termination fee. The claim and the reported six-year novation window are now flagged in both `google` and `hut-8` as trade coverage of the 144A offering memorandum rather than deleted, so a future session with the memorandum can resolve them. `hut-8` revised to profileVersion 2; the C9 rows in §5 and §8 carry correction notes.
+- **New Lebanon, Indiana is no longer counted as a Google instrument.** The campus is real — 430 MW on a 15-year Fluidstack master lease behind USD 5.7bn of Meridian Arc HoldCo 6.25% notes priced 20 April 2026 — but no public filing establishes Google support and no source quantifies it. It is now named and excluded from the totals rather than listed among them.
+
+### Added (research banked while correcting the above)
+
+- **The caps are debt-sized, not lease-sized** — USD 3.2bn matches TeraWulf's 7.750% notes, USD 1.733bn matches Cipher's 7.125% notes and USD 1.3bn the Abernathy 7.250% notes, almost exactly. The backstop is scaled to what the lenders required, not to the rent.
+- **Both landlords capitalise the backstop, and both measure what they gave rather than what they got** — Cipher USD 544.5m and TeraWulf USD 515.5m, in each case the issuance-date fair value of the warrants. Meanwhile TeraWulf's warrant liability ran USD 844.7m → USD 1.82bn in six months, producing a USD 972.0m fair-value loss in H1 2026: the better the landlord's stock does, the larger its reported loss.
+- **Neither Google nor Alphabet has ever filed a 13D, 13G, Form 3 or Form 4 on any of the three landlords**, and Google LLC is not an EDGAR filer at all. The warrants carry no beneficial-ownership blocker; their exercise period opens only at lease commencement and an HSR cooperation clause gates exercise, so the position is not yet reportable under Rule 13d-3(d)(1). Whether that changes as leases commence is recorded as an open question and a calendar watch item.
 
 ## [v04.84r] — 2026-09-06 08:14:28 AM EST
 

@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.83w] — 2026-09-06 08:33:03 AM EST — v04.85r
+
+### Added
+- Company relationships can now say that one company **owns** another. Where an investor's holding used to show up as a vague "Linked" entry in *Other links*, it now reads **Portfolio company** and sits under *Working with*, alongside the investment shown from the other side
+
+### Changed
+- Seven relationships across three companies were re-labelled from the old catch-all to the new one, so an ownership link now reads the same way whichever company you are looking at
 
 ## [v01.82w] — 2026-09-04 01:15:19 AM EST — v04.49r
 
@@ -324,24 +332,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Fixed
 - Company overviews now display as properly spaced paragraphs on every dossier (one dossier previously ran its opening sections together)
 
-## [v01.34w] — 2026-08-21 11:01:38 PM EST — v02.75r
-
-### Added
-- Two new roster categories: EPC and General Contractor, each with its own tag color and filter
-
-### Changed
-- Construction and engineering companies are now grouped under the new categories, so filtering the roster by company type is more precise
-- Category names now display with proper formatting throughout the app
-
-## [v01.33w] — 2026-08-21 10:49:24 PM EST — v02.74r
-
-### Added
-- New "Neocloud" company category with its own color tag — GPU-cloud providers now appear under their own label instead of "Hyperscaler"
-- Every company now has an in-app study guide — 30 new technology study guides were added, completing coverage across the full roster
-
-### Changed
-- Dossier summaries now display "Bottom Line Up Front" and "Background" as separate paragraphs for easier reading
-- Snapshot facts (ownership, ecosystem role, and other background fields) now display with capitalized words
-
-### Fixed
-- Newer dossiers now show their Headquarters, Ownership, stock ticker, and legal-name details correctly — these fields could previously appear blank on some companies

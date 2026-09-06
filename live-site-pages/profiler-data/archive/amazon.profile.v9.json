@@ -182,7 +182,7 @@
     },
     {
       "slug": "mainspring-energy",
-      "type": "portfolio",
+      "type": "other",
       "note": "Portfolio investment via the Climate Pledge Fund (Series F) — plus reported last-mile deployments.",
       "context": "Amazon's Climate Pledge Fund participated in Mainspring's $258M Series F (April 2025), and the linear-generator maker's fleet section carries reported Amazon last-mile deployments — a strategic-investment relationship in FEOC-immune onsite generation.",
       "source": "Series F participation (Apr 2025)",
@@ -581,5 +581,5 @@
     }
   ],
   "lastUpdated": "2026-09-06",
-  "profileVersion": 10
+  "profileVersion": 9
 }

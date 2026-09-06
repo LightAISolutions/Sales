@@ -1039,8 +1039,8 @@
         "google",
         "google.com"
       ],
-      "srcTotal": 38,
-      "srcFirstPct": 55,
+      "srcTotal": 43,
+      "srcFirstPct": 58,
       "kpiNorm": true
     },
     {
@@ -1530,7 +1530,7 @@
       "tagline": "Abu Dhabi's state-backed AI investment vehicle (Mubadala and G42 founding partners; chaired by Sheikh Tahnoon bin Zayed) — USD 49bn Fund I, Stargate initial equity funder, AIP co-founder and owner of Aligned Data Centers, repeat investor in OpenAI, Anthropic and xAI.",
       "hq": "Abu Dhabi, United Arab Emirates",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "mgx.ae"
       ],

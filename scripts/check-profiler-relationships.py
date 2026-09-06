@@ -111,9 +111,12 @@ KINDS = ("dangling-slug", "reciprocal-type", "unregistered-source",
 # supplier" implies "A is B's customer". `other` is deliberately absent — it
 # carries no claim, so no reciprocal can be shown coherent with it; those
 # pairs are reported for a human to accept with a reason. `portfolio` is the
-# schema-level inverse of `investor` (PROFILER-COVERAGE-PLAN.md §9.3); the
-# schema's enum does not yet carry it, so an investor edge whose reciprocal is
-# anything else is reported until the enum grows or the pair is accepted.
+# schema-level inverse of `investor` (PROFILER-COVERAGE-PLAN.md §9.3). The
+# schema's enum CARRIES IT as of 2026-09-06 (v04.85r), so an investor edge
+# whose reciprocal is `other` is now a fixable finding rather than a standing
+# accept: write `portfolio` on the owner's side. Accept the pair only where two
+# types are genuinely true at once (investor AND commercial partner), which is
+# a different claim from "the inverse does not exist".
 INVERSE = {
     "customer": "supplier",
     "supplier": "customer",

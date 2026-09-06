@@ -105,6 +105,12 @@
       "profileVersion": 8,
       "archivedAt": "2026-09-06",
       "supersededBy": 9
+    },
+    {
+      "file": "amazon.profile.v9.json",
+      "profileVersion": 9,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 10
     }
   ],
   "applied-digital": [
@@ -713,6 +719,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-06",
       "supersededBy": 7
+    },
+    {
+      "file": "google.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 8
     }
   ],
   "hitachi-energy": [
@@ -2326,6 +2338,22 @@
   "engie-north-america": [
     {
       "file": "engie-north-america.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "mgx": [
+    {
+      "file": "mgx.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "hut-8": [
+    {
+      "file": "hut-8.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2

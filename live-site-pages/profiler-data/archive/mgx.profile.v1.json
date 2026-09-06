@@ -392,40 +392,40 @@
   "relationships": [
     {
       "slug": "openai",
-      "type": "portfolio",
+      "type": "other",
       "status": "active",
       "since": "2024-10",
-      "note": "Portfolio company and Stargate co-funder: five follow-on investments including co-lead of the USD 122 billion round (March 2026), and one of four initial equity funders of Stargate LLC.",
+      "note": "Portfolio company and Stargate co-funder: five follow-on investments including co-lead of the USD 122 billion round (March 2026), and one of four initial equity funders of Stargate LLC — the `type` enum has no 'portfolio' value, so the honest typing is `other`.",
       "context": "MGX's board releases record the sequence: participation in the October 2024 round (amount undisclosed), 'an additional major investment in OpenAI in its most recent $300 billion valuation funding round' (September 2025), 'participation in OpenAI's latest employee secondary—its fourth follow-on investment in OpenAI' (February 2026) and 'participation as co-lead in OpenAI's latest US$122 billion funding round. This investment, which marks MGX's fifth follow-on in OpenAI' (May 2026). SoftBank's Stargate release names 'SoftBank, OpenAI, Oracle, and MGX' as the initial equity funders. No dollar figure or stake is published by either party; Bloomberg's about USD 7 billion Stargate figure is press-reported.\n\nThe OpenAI dossier on this corpus records 'Oracle and MGX equity partners' in Stargate — consistent with the SoftBank text. MGX's own Stargate exposure is otherwise indirect: Vantage (Texas and Wisconsin campuses) and Khazna (Stargate UAE).",
       "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-chairs-mgxs-second-board-meeting-2026"
     },
     {
       "slug": "aligned",
-      "type": "portfolio",
+      "type": "other",
       "status": "active",
       "since": "2026-07",
       "scale": "~USD 40 billion EV; 51 campuses; 6.4 GW",
-      "note": "Owner since 21 July 2026: MGX, AIP and BlackRock's GIP acquired 100% of Aligned's equity from Macquarie-managed funds and committed USD 5 billion of growth capital.",
+      "note": "Owner since 21 July 2026: MGX, AIP and BlackRock's GIP acquired 100% of Aligned's equity from Macquarie-managed funds and committed USD 5 billion of growth capital — a portfolio holding typed `other` because the enum carries no 'portfolio' value.",
       "context": "The closing release: 'AIP, MGX, and BlackRock's Global Infrastructure Partners (GIP) today announced the completion of their acquisition of 100% of the equity in Aligned Data Centers' at 'approximately $40 billion' enterprise value, with 'an additional $5 billion of growth capital'; Aligned has '51 campuses and more than 6.4GW of operational and planned capacity'. MGX is named as a direct buyer alongside AIP (which it co-founded) and GIP. Its percentage and the debt package are undisclosed.\n\nAligned's dossier on this corpus carries the same transaction from the target's side and lists NVIDIA, Microsoft, xAI and GE Vernova as investors through AIP. The consortium members are also, through Stargate, Vantage and the frontier labs, the tenants' financiers — the layered ownership this corpus's landlord dossiers describe.",
       "source": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers"
     },
     {
       "slug": "anthropic",
-      "type": "portfolio",
+      "type": "other",
       "status": "active",
       "since": "2025-05",
       "scale": "co-lead, USD 30bn Series G; significant investor, USD 65bn Series H",
-      "note": "Portfolio company: first backed by May 2025, co-lead of the USD 30 billion Series G (February 2026) and a 'significant investor' in the USD 65 billion Series H (May 2026).",
+      "note": "Portfolio company: first backed by May 2025, co-lead of the USD 30 billion Series G (February 2026) and a 'significant investor' in the USD 65 billion Series H (May 2026); typed `other` for want of a 'portfolio' enum value.",
       "context": "Anthropic's Series G release lists MGX among the co-leads ('The round was co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ, and MGX'); its Series H release lists MGX under 'Significant investors'. MGX's board release calls the Series G a 'follow-on investment', so a prior position existed — the May 2025 board release had 'welcomed MGX investments in leading large language models (LLM's) including Open AI, Anthropic and xAI'. Amounts undisclosed.\n\nThe relationship carries a documented governance debate on the Anthropic side: WIRED (via Fwdstart) quoted Dario Amodei's memo that Gulf capital is 'a real downside and I'm not thrilled about it' and that any deal would be 'narrowly scoped, purely financial'; The Intercept (June 2026) reports MGX in both rounds. The corpus's Anthropic dossier records MGX in the Series G investor list.",
       "source": "https://x.com/mgx_ai/status/2022186555738341520"
     },
     {
       "slug": "xai",
-      "type": "portfolio",
+      "type": "other",
       "status": "active",
       "since": "2024-12",
       "scale": "USD 6bn Series C; USD 20bn Series E",
-      "note": "Portfolio company (Series C, December 2024; USD 20 billion Series E, January 2026; subsequently merged with SpaceX) and AIP technology partner since March 2025.",
+      "note": "Portfolio company (Series C, December 2024; USD 20 billion Series E, January 2026; subsequently merged with SpaceX) and AIP technology partner since March 2025; typed `other` for want of a 'portfolio' enum value.",
       "context": "xAI's Series C release names MGX among participants; its Series E release lists MGX with Valor Equity Partners, StepStone, Fidelity, QIA and Baron Capital, with NVIDIA and Cisco as strategic investors. MGX's X post: 'This investment supports the rapid scaling of compute infrastructure and the buildout of the largest GPU clusters in the world.' MGX's portfolio page now lists the holding as SpaceX following the merger noted in the February 2026 board release. xAI also joined AIP as a technology partner in March 2025 and is named among Aligned's strategic partners.",
       "source": "https://x.ai/news/series-e"
     },
@@ -461,11 +461,11 @@
     },
     {
       "slug": "vantage",
-      "type": "portfolio",
+      "type": "other",
       "status": "active",
       "since": "2025",
       "scale": "Stargate build-out of 2.3 gigawatts in Texas and Wisconsin",
-      "note": "Portfolio holding: 'further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' (board release, December 2025); amount undisclosed.",
+      "note": "Portfolio holding: 'further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' (board release, December 2025); amount undisclosed; typed `other` for want of a 'portfolio' enum value.",
       "context": "MGX's December 2025 board release is the only first-party statement: 'In the United States, MGX is expanding next-generation digital infrastructure through its further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin.' Vantage Data Centers (North America) appears on MGX's portfolio page. The corpus's Vantage dossier carries the Frontier (Texas) and Lighthouse (Wisconsin) Stargate campuses; 'further investments' implies an earlier position that no MGX channel dates.",
       "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-final-board-meeting-2025"
     },
@@ -1283,6 +1283,6 @@
       "party": "disclosure"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

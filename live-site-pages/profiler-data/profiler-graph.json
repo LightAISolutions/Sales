@@ -2279,8 +2279,8 @@
      "scale": "~$40B EV; $5B growth capital; 51 campuses, 6.4 GW"
     },
     "b": {
-     "type": "other",
-     "note": "Owner since 21 July 2026: MGX, AIP and BlackRock's GIP acquired 100% of Aligned's equity from Macquarie-managed funds and committed USD 5 billion of growth capital — a portfolio holding typed `other` because the enum carries no 'portfolio' value.",
+     "type": "portfolio",
+     "note": "Owner since 21 July 2026: MGX, AIP and BlackRock's GIP acquired 100% of Aligned's equity from Macquarie-managed funds and committed USD 5 billion of growth capital.",
      "context": "The closing release: 'AIP, MGX, and BlackRock's Global Infrastructure Partners (GIP) today announced the completion of their acquisition of 100% of the equity in Aligned Data Centers' at 'approximately $40 billion' enterprise value, with 'an additional $5 billion of growth capital'; Aligned has '51 campuses and more than 6.4GW of operational and planned capacity'. MGX is named as a direct buyer alongside AIP (which it co-founded) and GIP. Its percentage and the debt package are undisclosed.\n\nAligned's dossier on this corpus carries the same transaction from the target's side and lists NVIDIA, Microsoft, xAI and GE Vernova as investors through AIP. The consortium members are also, through Stargate, Vantage and the frontier labs, the tenants' financiers — the layered ownership this corpus's landlord dossiers describe.",
      "source": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers",
      "status": "active",
@@ -3315,7 +3315,7 @@
    "b": "mainspring-energy",
    "curated": {
     "a": {
-     "type": "other",
+     "type": "portfolio",
      "note": "Portfolio investment via the Climate Pledge Fund (Series F) — plus reported last-mile deployments.",
      "context": "Amazon's Climate Pledge Fund participated in Mainspring's $258M Series F (April 2025), and the linear-generator maker's fleet section carries reported Amazon last-mile deployments — a strategic-investment relationship in FEOC-immune onsite generation.",
      "source": "Series F participation (Apr 2025)",
@@ -4817,7 +4817,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**.",
+     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google LLC is the payment backstop (a springing Alphabet guarantee is reported by trade coverage of the offering memorandum but appears in no filing), and **Anthropic is the end user and not a party to the lease at all**.",
      "src": "",
      "from": "b"
     },
@@ -4934,8 +4934,8 @@
      "scale": "co-lead, USD 30bn Series G; significant investor, USD 65bn Series H"
     },
     "b": {
-     "type": "other",
-     "note": "Portfolio company: first backed by May 2025, co-lead of the USD 30 billion Series G (February 2026) and a 'significant investor' in the USD 65 billion Series H (May 2026); typed `other` for want of a 'portfolio' enum value.",
+     "type": "portfolio",
+     "note": "Portfolio company: first backed by May 2025, co-lead of the USD 30 billion Series G (February 2026) and a 'significant investor' in the USD 65 billion Series H (May 2026).",
      "context": "Anthropic's Series G release lists MGX among the co-leads ('The round was co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ, and MGX'); its Series H release lists MGX under 'Significant investors'. MGX's board release calls the Series G a 'follow-on investment', so a prior position existed — the May 2025 board release had 'welcomed MGX investments in leading large language models (LLM's) including Open AI, Anthropic and xAI'. Amounts undisclosed.\n\nThe relationship carries a documented governance debate on the Anthropic side: WIRED (via Fwdstart) quoted Dario Amodei's memo that Gulf capital is 'a real downside and I'm not thrilled about it' and that any deal would be 'narrowly scoped, purely financial'; The Intercept (June 2026) reports MGX in both rounds. The corpus's Anthropic dossier records MGX in the Series G investor list.",
      "source": "https://x.com/mgx_ai/status/2022186555738341520",
      "status": "active",
@@ -11597,9 +11597,9 @@
    "b": "google",
    "curated": {
     "b": {
-     "type": "other",
-     "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher — the coherent inverse of Cipher's `investor` is `portfolio`, which the enum does not carry.",
-     "context": "Cipher Digital Inc. (renamed from Cipher Mining in February 2026) is Fluidstack's landlord at Barber Lake, Mitchell County, Texas: 300 MW gross / 207 MW critical IT on a ten-year modified-gross lease worth about USD 3.8bn over the initial term. Google backstops USD 1.73bn of Fluidstack's obligations there — USD 1.4bn at signing in September 2025 plus a USD 333m increase in November — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor.\n\nCipher's Q2 2026 10-Q carries a USD 544.5m asset for 'the value of Google agreeing to make the lease payments from Fluidstack', and the amortisation of Cipher's USD 1,733m of 7.125% project notes tracks the Google backstop rather than a fixed schedule — so the credit support is measured, capitalised and structurally load-bearing on the landlord's balance sheet. Cipher correctly types Google `investor`; the schema's `type` enum has no `portfolio`, so this side is typed `other` and the pair is accepted, exactly as for `amazon x mainspring-energy` and the three MGX pairs.",
+     "type": "portfolio",
+     "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
+     "context": "Cipher Digital Inc. (renamed from Cipher Mining in February 2026) is Fluidstack's landlord at Barber Lake, Mitchell County, Texas: 300 MW gross / 207 MW critical IT on a ten-year modified-gross lease worth about USD 3.8bn over the initial term. Google backstops USD 1.73bn of Fluidstack's obligations there — USD 1.4bn at signing in September 2025 plus a USD 333m increase in November — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor.\n\nCipher's Q2 2026 10-Q carries a USD 544.5m asset for 'the value of Google agreeing to make the lease payments from Fluidstack', and the amortisation of Cipher's USD 1,733m of 7.125% project notes tracks the Google backstop rather than a fixed schedule — so the credit support is measured, capitalised and structurally load-bearing on the landlord's balance sheet. Cipher types Google `investor` and this side is its coherent inverse, `portfolio` — a value the schema enum gained on 2026-09-06 precisely because pairs like this one had been accumulating as hand-written accepts.",
      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_8k.htm",
      "status": "active",
      "since": "2025-09",
@@ -23680,7 +23680,7 @@
     "b": {
      "type": "partner",
      "note": "The tenant Google's whole lease-backstop programme stands behind — Fluidstack is the lessee of record at every campus, and Google has never published a page naming it.",
-     "context": "Fluidstack Ltd is the counterparty at the centre of the programme: it signs the lease with the landlord, and Google signs a Recognition Agreement per building promising to step in on a Fluidstack payment default or insolvency event. Disclosed support runs to roughly USD 3.2bn at TeraWulf's Lake Mariner, USD 1.3bn at the Abernathy joint venture, USD 1.73bn at Cipher's Barber Lake (USD 1.4bn at signing plus a USD 333m increase) and the full fifteen-year base term at Hut 8's River Bend, plus a master lease at New Lebanon, Indiana.\n\nThe relationship is almost entirely one-directional in public: the mechanics live in the LANDLORDS' 8-Ks, Fluidstack's single joint release calls Google 'a leading global hyperscale partner', and Google has published nothing naming Fluidstack. The Wall Street Journal reported in February 2026 that Google was exploring a ~USD 100m equity investment tied to TPU distribution. Fluidstack itself has raised repeatedly through 2026 and Forbes put it at an USD 18bn valuation in September 2026, explicitly on the strength of building Google's and Anthropic's data centres.",
+     "context": "Fluidstack Ltd is the counterparty at the centre of the programme: it signs the lease with the landlord, and Google signs a Recognition Agreement per building promising to step in on a Fluidstack payment default or insolvency event. Disclosed support runs to roughly USD 3.2bn at TeraWulf's Lake Mariner, USD 1.3bn at the Abernathy joint venture, USD 1.73bn at Cipher's Barber Lake (USD 1.4bn at signing plus a USD 333m increase) and the full fifteen-year base term at Hut 8's River Bend. A fifth campus — New Lebanon, Indiana, 430 MW behind USD 5.7bn of Meridian Arc HoldCo notes — is usually grouped with these, but no public filing establishes Google support there and no source quantifies it.\n\nThe relationship is almost entirely one-directional in public: the mechanics live in the LANDLORDS' 8-Ks, Fluidstack's single joint release calls Google 'a leading global hyperscale partner', and Google has published nothing naming Fluidstack. The Wall Street Journal reported in February 2026 that Google was exploring a ~USD 100m equity investment tied to TPU distribution. Fluidstack itself has raised repeatedly through 2026 and Forbes put it at an USD 18bn valuation in September 2026, explicitly on the strength of building Google's and Anthropic's data centres.",
      "source": "https://www.forbes.com/sites/iainmartin/2026/09/03/a-tiny-startup-helping-google-take-on-nvidia-is-now-worth-18-billion/",
      "status": "active",
      "since": "2025-08",
@@ -23888,7 +23888,14 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "THE DISCLOSURE ASYMMETRY IS THE FINDING: 'Fluidstack' and 'Recognition Agreement' each return ZERO hits across every Alphabet SEC filing indexed by EDGAR full-text search, against 143 corpus-wide hits for 'Fluidstack' — Google has published nothing naming the tenant, and the entire programme is legible only from the landlords' 8-Ks and 10-Qs.",
+     "text": "(A fifth Fluidstack campus, New Lebanon, Indiana — 430 MW behind USD 5.7bn of Meridian Arc notes — is often grouped with these, but NO public filing establishes Google support there; it is excluded from the totals here.) THE PRICE IS PER-INSTRUMENT, AND IT WENT TO ZERO: the equity strip attached only to the FIRST tranche at each of the two landlords that paid one — USD 1.8bn for ~41m TeraWulf warrants (~8% pro forma) in August 2025, raised days later to USD 3.2bn for ~14%, and USD 1.4bn for 24,178,576 Cipher warrants at USD 0.01 (~5.4%, with a USD 430.0m value floor).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "What Alphabet does NOT do is name anyone: 'Fluidstack' appears ZERO times in that 10-Q and zero times in any Alphabet filing indexed by EDGAR full-text search, against 143 corpus-wide hits.",
      "src": "",
      "from": "b"
     },
@@ -24044,7 +24051,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**.",
+     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google LLC is the payment backstop (a springing Alphabet guarantee is reported by trade coverage of the offering memorandum but appears in no filing), and **Anthropic is the end user and not a party to the lease at all**.",
      "src": "",
      "from": "b"
     },
@@ -25945,19 +25952,19 @@
    "curated": {
     "a": {
      "type": "partner",
-     "note": "Backstops the full 15-year, USD 7.0bn River Bend base term — and took NO warrants and NO equity, unlike at TeraWulf and Cipher.",
-     "context": "Hut 8's River Bend campus in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to a Fluidstack subsidiary on a 15-year triple-net lease worth USD 7.0bn over the base term. Google backstops the rent and related pass-through obligations, with a springing Alphabet Inc. guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue.\n\nWhat distinguishes this instrument from every other one in the programme is its price: Google took no warrants and no equity in Hut 8, where it took about 14% of TeraWulf and about 5.4% of Cipher for the same service. No source located explains the difference. It is the single most useful comparison point in the programme, because it shows the equity component is negotiated rather than structural.",
+     "note": "Backstops the full 15-year, USD 7.0bn River Bend base term for no warrants and no equity — the largest instrument in the programme and the clearest of the three that carried no consideration.",
+     "context": "Hut 8's River Bend campus in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to Fluidstack USA IV Inc. on a 15-year triple-net lease worth USD 7.0bn over the base term. Hut 8's FY2025 10-K says only that Google 'is expected to provide a financial backstop that covers the lease payments and related pass-through obligations for the 15-year base lease term'. **No dollar cap is disclosed anywhere**, and neither the lease nor the recognition agreement was filed as an exhibit — Hut 8 disclosed the deal under Item 8.01.\n\nTwo widely-repeated details about this instrument are NOT in the filings and are flagged here rather than asserted: a **springing Alphabet guarantee** triggered if Google's revenue falls below 50% of consolidated Alphabet revenue, and a **six-year novation window**. Both come from trade coverage of the 144A offering memorandum; 'Alphabet' appears zero times in Hut 8's FY2025 10-K, and the only executed recognition agreement in the public record — TeraWulf's — names Google LLC alone, with Alphabet expressly not a guarantor and Google's liability capped at the termination fee.\n\nWhat IS established is the consideration: Hut 8's own investor deck states 'No equity or warrants issued' and 'no equity dilution required to secure transaction'. No source explains why, and management has never addressed it on the record. It is not unique — Abernathy and Cipher's USD 333m increase also carried none — but it is the largest.",
      "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217x8k.htm",
      "status": "active",
      "since": "2025-12",
-     "scale": "$7.0B base term; no warrants",
+     "scale": "$7.0B base term, no cap disclosed; no warrants",
      "via": "River Bend recognition agreement",
      "project": "river-bend-campus"
     },
     "b": {
      "type": "partner",
      "note": "Financial backstop of Fluidstack's River Bend rent — provided without warrants and without equity, unlike the same arrangement at Cipher and TeraWulf.",
-     "context": "Google LLC provides a financial backstop covering the lease payments and certain other financial obligations under the River Bend lease, with a springing Alphabet Inc. guarantee that triggers if Google's revenue falls below 50% of consolidated Alphabet revenue. Alphabet is rated AA+ by S&P and Aa2 by Moody's, and that credit is what carried the River Bend project notes to a BBB- rating before a megawatt was delivered.\n\n**This edge is deliberately typed `partner` rather than `investor`, and the difference from the corpus's other two Google backstops is the finding.** At Cipher Digital, Google's USD 1.73bn backstop bought warrants over about 5.4% of the company; at TeraWulf, backstops of about USD 4.5bn bought warrants now representing about 14%. Both are typed `investor` in this corpus on that basis. Hut 8 gave neither warrants nor equity: no Hut 8 filing or release — not the December 2025 press release, the investor deck, the 8-K, the FY2025 10-K, either 2026 10-Q, or the 2026 proxy — mentions warrants in connection with Google, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns no documents. Benchmark's analyst named that retention of full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the transaction's distinguishing feature.",
+     "context": "Google LLC provides a financial backstop covering the lease payments and certain other financial obligations under the River Bend lease for the 15-year base term. A springing Alphabet Inc. guarantee triggering below 50% of consolidated Alphabet revenue, and a six-year novation window, are both reported — but by trade coverage of the 144A offering memorandum, not by any SEC filing: 'Alphabet' appears zero times in Hut 8's FY2025 10-K, the lease and recognition agreement were never filed as exhibits, and the only executed recognition agreement in the public record (TeraWulf's) names Google LLC alone with Alphabet expressly not a guarantor. Alphabet is rated AA+ by S&P and Aa2 by Moody's, and that credit is what carried the River Bend project notes to a BBB- rating before a megawatt was delivered.\n\n**This edge is deliberately typed `partner` rather than `investor`, and the difference from the corpus's other two Google backstops is the finding.** At Cipher Digital, Google's USD 1.73bn backstop bought warrants over about 5.4% of the company; at TeraWulf, backstops of about USD 4.5bn bought warrants now representing about 14%. Both are typed `investor` in this corpus on that basis. Hut 8 gave neither warrants nor equity: no Hut 8 filing or release — not the December 2025 press release, the investor deck, the 8-K, the FY2025 10-K, either 2026 10-Q, or the 2026 proxy — mentions warrants in connection with Google, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns no documents. Benchmark's analyst named that retention of full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the transaction's distinguishing feature.",
      "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
      "status": "active",
      "since": "2025-12",
@@ -25969,21 +25976,28 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "Disclosed support: ~$3.2B at TeraWulf's Lake Mariner, $1.3B at Abernathy, $1.73B at Cipher's Barber Lake, the full 15-year base term of Hut 8's $7.0B River Bend lease, and a master lease at New Lebanon, Indiana.",
+     "text": "Disclosed support: ~$3.2B at TeraWulf's Lake Mariner, $1.3B at Abernathy, $1.73B at Cipher's Barber Lake, and the full 15-year base term of Hut 8's $7.0B River Bend lease.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "The price varied: penny warrants over ~14% of TeraWulf and ~5.4% of Cipher — and NOTHING AT ALL at Hut 8, where the consideration is instead a springing Alphabet guarantee.",
+     "text": "Every instrument after that carried NOTHING: TeraWulf's own Abernathy joint venture states plainly that 'no TeraWulf equity securities or warrants were issued in connection with this transaction', Cipher's USD 333m increase added no warrants, and Hut 8's entire USD 7.0bn River Bend deal — the largest in the set — carried no equity and no warrants at all.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "The equity strip is NEGOTIATED, NOT STRUCTURAL — Hut 8 paid none of it for the largest lease in the set — so the ~14% and ~5.4% taken elsewhere should not be read as the standing price.",
+     "text": "Hut 8 is the clearest case, not the only one.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The equity strip is NEGOTIATED, NOT STRUCTURAL, and the record shows it being negotiated away: it attached to the first tranche at TeraWulf and at Cipher and to nothing afterwards — not to the Abernathy joint venture, not to Cipher's USD 333m increase, and not to any part of Hut 8's larger and later River Bend deal.",
      "src": "",
      "from": "a"
     },
@@ -26053,14 +26067,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
-     "date": "",
-     "text": "Google LLC provides a financial backstop covering the lease payments and related pass-through obligations, with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue.",
+     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google LLC is the payment backstop (a springing Alphabet guarantee is reported by trade coverage of the offering memorandum but appears in no filing), and **Anthropic is the end user and not a party to the lease at all**.",
      "src": "",
      "from": "b"
     },
@@ -26899,12 +26906,12 @@
    "curated": {
     "a": {
      "type": "partner",
-     "note": "~USD 4.5B of credit backstops across the Fluidstack-TeraWulf lease chain, bought with penny warrants now ~14% of TeraWulf — the first and largest instrument in the programme.",
-     "context": "Google provides amortising lease backstops behind Fluidstack's TeraWulf capacity — USD 3.2bn across the Lake Mariner leases and USD 1.3bn at the Abernathy joint venture — under per-building Recognition Agreements that oblige Google, on a Fluidstack payment default or insolvency event, either to pay the termination fee or to pay all rent currently due and assume the lease as tenant. It took warrants over 32,568,197 TeraWulf shares, about 14% pro forma.\n\nThe backstop switches on at lease commencement rather than at signing: TeraWulf's Q2 2026 10-Q records USD 600m of it becoming effective when CB-3 was delivered. TeraWulf's own FY2025 10-K says the Google credit support 'was a key factor in enabling efficient financing and phased development' — which is the point of the instrument. This pair is knowingly recorded as `partner` here and `investor` from TeraWulf's side, and is on the relationships-checker accept list: both are true at once.",
+     "note": "The programme's first and largest counterparty: USD 3.2bn of backstops across two tranches, bought with penny warrants now ~14% of TeraWulf — plus USD 1.3bn at Abernathy that cost nothing.",
+     "context": "Google's support here came in three steps, not one. **USD 1.8bn** on 13-14 August 2025 behind Fluidstack USA I's Lake Mariner leases, for warrants over about 41 million shares (~8% pro forma); **a further USD 1.4bn** days later on 17-18 August with the CB-5 lease, taking the backstop to **USD 3.2bn** and the warrants to about 14%; and **USD 1.3bn** in October 2025 behind the 168 MW Abernathy joint venture — where TeraWulf states plainly that 'no TeraWulf equity securities or warrants were issued in connection with this transaction'. The first two caps match TeraWulf's USD 3.2bn 7.750% notes and the third the USD 1.3bn 7.250% Flash Compute notes, which is the clearest evidence that these backstops are sized to the project debt rather than to the rent.\n\nThe backstop attaches at lease commencement, not signing: TeraWulf's Q2 2026 10-Q records USD 600m becoming effective on delivery of CB-3, and its FY2025 10-K says the Google credit support 'was a key factor in enabling efficient financing and phased development'. TeraWulf carries a USD 515.5m deferred charge for the issuance-date fair value of the warrants — the mirror of Cipher's USD 544.5m — while the warrant liability itself ran to USD 1.82bn by June 2026, producing a USD 972.0m fair-value loss in H1 2026 alone. In July 2026 TeraWulf agreed to sell its entire 50.1% of the Abernathy JV to a Fluidstack-led group for about USD 530m, taking that instrument outside its reporting perimeter; what becomes of the USD 1.3bn backstop on transfer is not disclosed. This pair is recorded `partner` here and `investor` from TeraWulf's side and sits on the checker's accept list: both are true at once.",
      "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
      "status": "active",
      "since": "2025-08",
-     "scale": "~$4.5B backstops; ~14% warrants",
+     "scale": "$4.5B across three instruments; ~14% warrants",
      "via": "Fluidstack lease backstops"
     },
     "b": {
@@ -26922,14 +26929,35 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "Disclosed support: ~$3.2B at TeraWulf's Lake Mariner, $1.3B at Abernathy, $1.73B at Cipher's Barber Lake, the full 15-year base term of Hut 8's $7.0B River Bend lease, and a master lease at New Lebanon, Indiana.",
+     "text": "Disclosed support: ~$3.2B at TeraWulf's Lake Mariner, $1.3B at Abernathy, $1.73B at Cipher's Barber Lake, and the full 15-year base term of Hut 8's $7.0B River Bend lease.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "The price varied: penny warrants over ~14% of TeraWulf and ~5.4% of Cipher — and NOTHING AT ALL at Hut 8, where the consideration is instead a springing Alphabet guarantee.",
+     "text": "(A fifth Fluidstack campus, New Lebanon, Indiana — 430 MW behind USD 5.7bn of Meridian Arc notes — is often grouped with these, but NO public filing establishes Google support there; it is excluded from the totals here.) THE PRICE IS PER-INSTRUMENT, AND IT WENT TO ZERO: the equity strip attached only to the FIRST tranche at each of the two landlords that paid one — USD 1.8bn for ~41m TeraWulf warrants (~8% pro forma) in August 2025, raised days later to USD 3.2bn for ~14%, and USD 1.4bn for 24,178,576 Cipher warrants at USD 0.01 (~5.4%, with a USD 430.0m value floor).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Every instrument after that carried NOTHING: TeraWulf's own Abernathy joint venture states plainly that 'no TeraWulf equity securities or warrants were issued in connection with this transaction', Cipher's USD 333m increase added no warrants, and Hut 8's entire USD 7.0bn River Bend deal — the largest in the set — carried no equity and no warrants at all.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The equity strip is NEGOTIATED, NOT STRUCTURAL, and the record shows it being negotiated away: it attached to the first tranche at TeraWulf and at Cipher and to nothing afterwards — not to the Abernathy joint venture, not to Cipher's USD 333m increase, and not to any part of Hut 8's larger and later River Bend deal.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, THE CAPS ARE DEBT-SIZED, NOT LEASE-SIZED: USD 3.2bn matches TeraWulf's 7.750% notes, USD 1.733bn matches Cipher's 7.125% notes and USD 1.3bn matches the Abernathy 7.250% notes, almost exactly — the backstop is scaled to what the lenders needed, not to the rent.",
      "src": "",
      "from": "a"
     },
@@ -34584,8 +34612,8 @@
    "b": "openai",
    "curated": {
     "a": {
-     "type": "other",
-     "note": "Portfolio company and Stargate co-funder: five follow-on investments including co-lead of the USD 122 billion round (March 2026), and one of four initial equity funders of Stargate LLC — the `type` enum has no 'portfolio' value, so the honest typing is `other`.",
+     "type": "portfolio",
+     "note": "Portfolio company and Stargate co-funder: five follow-on investments including co-lead of the USD 122 billion round (March 2026), and one of four initial equity funders of Stargate LLC.",
      "context": "MGX's board releases record the sequence: participation in the October 2024 round (amount undisclosed), 'an additional major investment in OpenAI in its most recent $300 billion valuation funding round' (September 2025), 'participation in OpenAI's latest employee secondary—its fourth follow-on investment in OpenAI' (February 2026) and 'participation as co-lead in OpenAI's latest US$122 billion funding round. This investment, which marks MGX's fifth follow-on in OpenAI' (May 2026). SoftBank's Stargate release names 'SoftBank, OpenAI, Oracle, and MGX' as the initial equity funders. No dollar figure or stake is published by either party; Bloomberg's about USD 7 billion Stargate figure is press-reported.\n\nThe OpenAI dossier on this corpus records 'Oracle and MGX equity partners' in Stargate — consistent with the SoftBank text. MGX's own Stargate exposure is otherwise indirect: Vantage (Texas and Wisconsin campuses) and Khazna (Stargate UAE).",
      "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-chairs-mgxs-second-board-meeting-2026",
      "status": "active",
@@ -34840,8 +34868,8 @@
    "b": "vantage",
    "curated": {
     "a": {
-     "type": "other",
-     "note": "Portfolio holding: 'further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' (board release, December 2025); amount undisclosed; typed `other` for want of a 'portfolio' enum value.",
+     "type": "portfolio",
+     "note": "Portfolio holding: 'further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin' (board release, December 2025); amount undisclosed.",
      "context": "MGX's December 2025 board release is the only first-party statement: 'In the United States, MGX is expanding next-generation digital infrastructure through its further investments in Vantage Data Centers to support the Stargate build-out of 2.3 gigawatts in Texas and Wisconsin.' Vantage Data Centers (North America) appears on MGX's portfolio page. The corpus's Vantage dossier carries the Frontier (Texas) and Lighthouse (Wisconsin) Stargate campuses; 'further investments' implies an earlier position that no MGX channel dates.",
      "source": "https://www.mgx.ae/news-insights/his-highness-sheikh-tahnoon-bin-zayed-al-nahyan-chairs-mgxs-final-board-meeting-2025",
      "status": "active",
@@ -34886,8 +34914,8 @@
    "b": "xai",
    "curated": {
     "a": {
-     "type": "other",
-     "note": "Portfolio company (Series C, December 2024; USD 20 billion Series E, January 2026; subsequently merged with SpaceX) and AIP technology partner since March 2025; typed `other` for want of a 'portfolio' enum value.",
+     "type": "portfolio",
+     "note": "Portfolio company (Series C, December 2024; USD 20 billion Series E, January 2026; subsequently merged with SpaceX) and AIP technology partner since March 2025.",
      "context": "xAI's Series C release names MGX among participants; its Series E release lists MGX with Valor Equity Partners, StepStone, Fidelity, QIA and Baron Capital, with NVIDIA and Cisco as strategic investors. MGX's X post: 'This investment supports the rapid scaling of compute infrastructure and the buildout of the largest GPU clusters in the world.' MGX's portfolio page now lists the holding as SpaceX following the merger noted in the February 2026 board release. xAI also joined AIP as a technology partner in March 2025 and is named among Aligned's strategic partners.",
      "source": "https://x.ai/news/series-e",
      "status": "active",

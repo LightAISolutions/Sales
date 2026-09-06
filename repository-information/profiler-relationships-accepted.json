@@ -3,16 +3,10 @@
   "note": "relationships[] findings from scripts/check-profiler-relationships.py that a human has reviewed and that need no dossier change. Each id is printed by the checker and hashes the facts behind the finding (both types for a reciprocal pair; slug, counterparty and url for an unregistered source), so editing either side reopens it. These are structural invariants: an entry here is an exception with a written reason, never a loosened rule. Seeded empty at X1 (v04.71r); X2 populates it. Method: repository-information/PROFILER-CROSSREF-CALIBRATION.md → Relationships checker.",
   "accepted": [
     {
-      "id": "2ee80f475bc4",
-      "pair": "amazon x mainspring-energy",
-      "why": "Amazon is Mainspring's investor (Climate Pledge Fund, Series F) — the coherent inverse is `portfolio`, which the schema enum does not carry, so Amazon's side stays `other` until the enum grows",
-      "when": "2026-09-05"
-    },
-    {
       "id": "b9e868c6c207",
       "pair": "blattner x quanta-services",
-      "why": "Parent/subsidiary — Quanta owns Blattner outright. Neither `parent` nor `subsidiary` nor `portfolio` is in the enum; `investor`/`other` is the closest the schema allows, both dossiers state the corporate structure",
-      "when": "2026-09-05"
+      "why": "Parent/subsidiary — Quanta owns Blattner outright. `portfolio` entered the enum on 2026-09-06 and was considered here, but it still misdescribes this pair: an operating parent's wholly-owned construction subsidiary is not a financial holding. The types actually missing are `parent`/`subsidiary`; `investor`/`other` remains the closest the schema allows, so this accept stands on its own reason rather than on the enum gap.",
+      "when": "2026-09-06"
     },
     {
       "id": "129676ccb545",
@@ -63,34 +57,10 @@
       "when": "2026-09-05"
     },
     {
-      "id": "8c882676d589",
-      "pair": "mgx x openai",
-      "why": "OpenAI correctly records MGX as `investor` (Stargate initial equity funder; five follow-on rounds). The coherent inverse is `portfolio`, which the `type` enum does not carry, so MGX types OpenAI `other` with the gap written into its note. Same enum gap as amazon/mainspring-energy (X2). F6 investor-pair accept 1 of 4.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "63f344fec506",
-      "pair": "aligned x mgx",
-      "why": "Aligned correctly records MGX as `investor` (direct co-owner since the 21 July 2026 closing). The coherent inverse is `portfolio`, absent from the enum; MGX types Aligned `other`. Enum gap, not a factual conflict. F6 investor-pair accept 2 of 4.",
-      "when": "2026-09-05"
-    },
-    {
-      "id": "84f9fb321e07",
-      "pair": "anthropic x mgx",
-      "why": "Anthropic correctly records MGX as `investor` (Series G co-lead, Series H significant investor). The coherent inverse is `portfolio`, absent from the enum; MGX types Anthropic `other`. Enum gap. F6 investor-pair accept 3 of 4.",
-      "when": "2026-09-05"
-    },
-    {
       "id": "7fc58068dce6",
       "pair": "amazon x x-energy",
       "why": "Both true at once: Amazon is X-energy's largest outside shareholder (23.4% of Class A) AND the anchor buyer of Xe-100 capacity (Cascade rights, 5 GW option). X-energy types the shareholder side `investor`; Amazon types the commercial side `supplier` because the enum has no `portfolio` value and the purchase relation is the one Amazon's own page describes. F6 investor-pair accept 4 of 4.",
       "when": "2026-09-05"
-    },
-    {
-      "id": "67904fc82307",
-      "pair": "cipher-mining x google",
-      "why": "Cipher correctly records Google as `investor` (penny warrants over 24,178,576 shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor, taken as consideration for the USD 1.73bn Barber Lake rent backstop). The coherent inverse is `portfolio`, which the schema enum does not carry, so Google's side stays `other` until the enum grows — the same disposition as `amazon x mainspring-energy`, `mgx x openai`, `aligned x mgx` and `anthropic x mgx`. Note the sibling pair `google x terawulf` is accepted for a different reason (partner AND investor both true); here Google's side is not a second true type but the absent inverse.",
-      "when": "2026-09-06"
     }
   ]
 }

@@ -1173,5 +1173,98 @@ Cross-reference pairs 335 → **337**. One pre-existing oddity was left alone un
 Chesterton's fence: `recentDevelopments` carries a `2026-03-xx` date that predates
 this session and is not part of this change.
 
+**Enum change — 2026-09-06, v04.85r, Opus 5 xhigh. `portfolio` exists, and the
+accept list is 15 → 10.** Every prior entry in this log that touched the
+`investor` ↔ `portfolio` gap treated it as a standing condition to accept around.
+It is now fixed at the schema. `portfolio` is in `PROFILER-SCHEMA.md`, in this
+checker's invariant comment, and in `Profiler.html` — `OV_REL_TYPES` renders it
+"Portfolio company" and `OV_REL_WORK` groups it under *Working with*, beside the
+`investor` edge it mirrors. Enum expansion only, no `schemaVersion` bump, on the
+`recentDevelopments.category` precedent. Verified in page context, not merely by
+absence of errors: `ovRelData('mgx')` returns all five holdings under *Working
+with* labelled "Portfolio company", with zero page errors.
+
+**Seven edges flipped, and the two that would have been missed.** `amazon` →
+`mainspring-energy`; `mgx` → `openai`, `aligned`, `anthropic`, `xai`, `vantage`;
+`google` → `cipher-mining`. Only five of those seven were on the accept list —
+`mgx` → `xai` and `mgx` → `vantage` never tripped the checker, because
+one-sidedness is deliberately not an invariant and both counterparties are
+silent. Their own notes said they were typed `other` "for want of a 'portfolio'
+enum value", so fixing only the five that generated findings would have left the
+identical defect in the two that did not. **A corpus grep for `other`-typed edges
+whose prose invokes ownership found exactly these two and nine false positives**
+(a product portfolio, a wind portfolio, former Platinum Equity siblings, a
+reported suitor) — worth recording, because the word is far more common in its
+ordinary sense than in the enum sense.
+
+**The ten survivors were each re-audited, not assumed.** Eight are
+genuinely-both-true or no-claim cases and stand unchanged.
+**`blattner x quanta-services` was re-reasoned and kept**: `portfolio` was
+considered and rejected, because a wholly-owned operating construction subsidiary
+is not a financial holding — the types actually missing there are
+`parent`/`subsidiary`, and the accept now says so on its own reason rather than
+leaning on the enum gap. `google x terawulf` also stays: Google could now type it
+`portfolio`, but `partner` carries the backstop, which is the substantive claim,
+and the pair is accepted because two types are both true.
+
+**A correction to the C9 addendum immediately above, which was wrong on its
+headline.** That entry recorded, on my own EDGAR full-text search, that the Google
+backstop programme "is legible **only** from the landlords' 8-Ks and 10-Qs". Two
+research agents commissioned for the same revision reported after it shipped that
+**Alphabet discloses the programme itself**, and direct verification against the
+primary filings confirms them: Note 3 of the FY2025 10-K and both 2026 10-Qs
+accounts for these arrangements as **credit derivatives**, gross notional USD 0 →
+16,940m → 28,436m → **43,785m**, fair-value liability USD 69m → 339m → 815m, terms
+of up to fifteen years, with an explicit note that on default Alphabet may assume
+the leases and that a termination payment "may be partially offset by equity or
+cash receipts from counterparties" — the warrant trade, in Alphabet's own words.
+
+**The methodological lesson is precise, and it is not "the search was wrong".**
+The search was right and the controls were right: `Fluidstack` really does return
+zero hits inside Alphabet's CIK against 143 corpus-wide, and `data center` really
+does return 78, so the mechanism was demonstrably working. What failed was the
+**inference from a name-level null to a programme-level conclusion**. A company
+can disclose an arrangement thoroughly while never naming a counterparty, and
+searching for counterparty names cannot detect that. The corrected finding is
+better than the original: the disclosure asymmetry is **identity, not existence**,
+and the two halves do not reconcile — named caps total ~USD 6.233bn against
+USD 16,940m at end-2025, with 2026's +USD 26.8bn entirely unattributed. **Rule for
+future sessions: a null on a proper noun bounds only that proper noun. Before
+concluding a filer is silent on a SUBJECT, search the subject's mechanism words
+too** — here `backstop`, which returns 17 hits in the same document that returns
+zero for `Fluidstack`.
+
+**Two further corrections to C9's own dossiers, same cause.** (1) C9 recorded that
+Google "took no warrants and no equity in Hut 8" as the distinguishing fact of the
+programme, and made it load-bearing in `google`, `hut-8`, the §5 row and the §8
+row. It is true and it is **not unique**: TeraWulf's Abernathy JV release states
+"no TeraWulf equity securities or warrants were issued in connection with this
+transaction", and Cipher's USD 333m increase added none either — both verified
+directly. The strip attached only to the **first tranche** at each of the two
+landlords that paid one. The conclusion survives in stronger form; the uniqueness
+claim did not. (2) The **springing Alphabet guarantee** at River Bend appears in no
+SEC filing — "Alphabet" returns zero in Hut 8's FY2025 10-K, the lease and
+recognition agreement were never filed, and TeraWulf's executed recognition
+agreement names **Google LLC alone with Alphabet expressly not a guarantor**. It is
+flagged as offering-memorandum trade reporting in both dossiers rather than
+deleted, because a future session with the memorandum can settle it.
+
+**On the agents.** Both were commissioned during the v04.84r response and neither
+reported before it shipped; the revision went out on my own bounded verification.
+Both then corroborated each other on all three corrections. The honest reading is
+that shipping without them was defensible but cost a same-day correction, and that
+the failure mode was not impatience but the name-null inference above — which
+would have produced the same error however long I had waited, had the agents not
+looked at the mechanism words. **Every claim taken from either agent in this
+revision was re-verified against the primary filing before it was written**; the
+`$1.8bn`/`+$1.4bn` split and the Abernathy no-warrants sentence were both pulled
+from the 8-K exhibits directly rather than accepted on report.
+
+**Side effects.** Accept list 15 → 10. Graph unchanged at **1,177 edges (888
+curated)** — flipping a type changes no pair. `google` 38 → 43 sources and 55% →
+58% first-party; `hut-8` to profileVersion 2; `mgx` to 2; `amazon` to 10. Profiler
+page v01.82w → **v01.83w**, its changelog rotated (2 sections dated 2026-08-21,
+50/50 → 49/50). Cross-reference pairs unchanged at 337.
+
 
 Developed by: LightAISolutions
