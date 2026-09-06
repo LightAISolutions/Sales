@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 02:12 AM EST
+**Repo version:** v04.80r — one push commit this session (`c17c6f4`, merged to `main`), plus this housekeeping commit
+**Branch:** `claude/phase-c6-profiler-coverage-ez8zje` (rebased onto `origin/main` after the merge)
+**Model:** Opus 5 xhigh — Phase C session **C6**: Clearway Energy · Recurrent Energy · Form Energy. Six research subagents, three dossiers, three study guides, three lesson plans, **nine** step-7 revisions, all in one push commit.
+
+### What was done
+
+- **Three schema v7 dossiers at profileVersion 1, intel-briefing style.** `clearway-energy` (46 sources, 83% first-party, 10 relationships, 8 company-published headshots) — the listed yieldco at 13.9 GW rated / 10,665 MW net across 27 states, 1,439 MW rated / 849 MW net of contracted batteries, 2,770 MW of California gas selling resource adequacy into a 2026 recontracting cliff whose terms are undisclosed, a **single share class since CWEN.A was retired on 1 May 2026**, a first guidance cut in three years on CAISO wind at 87% of P-50, and an **unremediated ICFR material weakness on HLBV with an adverse PwC opinion**. `recurrent-energy` (48 sources, 79% first-party, 11 relationships) — Canadian Solar's development arm, **majority- not wholly-owned**: an 84.1 GWh pipeline that is 84.7% early-stage with only ~13 GWh interconnected, against roughly **1.5 GWh of net operating US storage**; $4.1bn of segment debt; four consecutive operating losses. `form-energy` (59 sources, 37% first-party, 7 relationships) — the corpus's **first iron-air company**: ~80 GWh stated backlog against ~55.7 GWh itemisable, one operating 1.5 MW project, 35–50% round-trip efficiency by design, and Google a **customer, not an investor**.
+- **Three schema v2 study guides + three lesson plans**, each teaching what no existing guide covers: Clearway = how contracted renewables are financed (yieldco structure, CAFD vs net income, tax equity and HLBV, resource adequacy as the product an idle gas plant sells, P-50, rated vs net capacity); Recurrent = reading a pipeline and a preferred stake (the four development stages, interconnection as the traded asset, hold vs sell, the captive channel, and the five terms behind "BlackRock bought 20%"); Form = **deliberately past the C5 RWE iron-air section** — the four physical loss mechanisms in the cell, the manufacturing story and the Weirton plant, the $/kWh vs $/kW denominator problem, and what a utility actually buys when it buys 100 hours. **Eleven concepts registered** (939 total).
+- **Step 7 — nine dossiers revised and archived; two carried contradicted claims.** `canadian-solar` called Recurrent a "wholly-owned developer" in two places (wrong since May 2024; also 80.6 GWh → 84.1 GWh and $3.8bn → $4.1bn stale) and `rosendin` attributed Tranquility's ownership to Recurrent (EIA attributes it to Southern Power with AIP; the batteries were **Powin**, not e-STORAGE — the clearest counterexample to the captive-supply thesis). Seven were accurate and gained curated edges: `hunt-energy-network`, `blattner`, `strata-clean-energy`, `vistra`, `xcel-energy`, `crusoe`, `eolian`, `google`. Full reconciliation of `google` **deferred and stated** per the step-7 scope note.
+- **Three calendar rows decided separately by ownership shape** (103 rows), §5 C6 row rewritten with per-clause verdicts, §8 rows flipped, §7's CHANGELOG bullet 96/100 → 97/100, §7's X3 bullet extended from a fourth end, and a C6 calibration-log entry.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, `c17c6f4` merged to `main`. **Program state: 53 of 65 new companies, 4 of 30 guide passes. Phases A and B complete; C1–C6 and C11 shipped.** The C7 paste-in prompt (Power Electronics, Opus 5 xhigh) was handed to the developer in this session's chat.
+
+- **Remaining, in §9.5 order:** C7 · C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
+- **CHANGELOG is 97/100 — three pushes of headroom.** Rotation lands around C8 or C9.
+
+### Key decisions and findings
+
+- **I got a premise verdict wrong mid-session and corrected it.** I told the developer early that the §5 cell had "fused two companies" on the ~80 GWh figure, reasoning from `canadian-solar`'s 80.6 GWh alone. It had not: **Form's ~80 GWh backlog is Form's own number**, stated in its Series G release and corroborated by four outlets. The root cause was treating corpus-internal consistency with the brief's own prediction as confirmation while the disconfirming research was still running — Think Before Asserting Trigger C, skipped. Two companies genuinely carry ~80 GWh figures of different kinds.
+- **Premise verdicts, C6: two clauses held, two failed, three held with correction.** Failed — "Google-backed" (no Alphabet entity in any round from Series A to G, on Form's investor wall, or in the list filed to ISO New England) and Recurrent's "(four dossiers)" (ten hits, six substantive). Held with correction — Clearway's "large CAISO storage fleet" (844 MW rated but **391 MW net**, ~5% of Modo's 16.2 GW CAISO fleet, no owner-level league table includes it, and all 2026 growth landed outside CAISO), the row's own **CWEN/CWEN.A ticker premise**, and "Canadian Solar's development arm". Held — "public yieldco", "the long-duration reference", and the ~80 GWh backlog with its itemisability caveat.
+- **The `investor` ↔ `portfolio` enum gap has a cheaper resolution than an accept entry.** C6 wrote `form-energy` → `ge-vernova` as `investor` and left GE Vernova's side **silent**, because that dossier makes no claim about Form and one-sidedness is not a checker invariant. Accept list stayed at **14**. Six of those fourteen exist only because `portfolio` is missing from the enum — now evidenced across X2, F6 and C6.
+- **The pre-emit validator earns its keep.** A scratchpad script asserting `sources[]` membership before any file is written caught the X2 defect class (a relationship `source` that was not a registered URL) **one step earlier than X2 caught it**. Rebuild it first in any dossier session.
+- **A formatting trap worse than C5 recorded.** Beyond mixed indentation, **60 `.study.json` files use `ensure_ascii=True`** while profiles do not — a writer re-serialising with `ensure_ascii=False` produces a ~2,200-line spurious diff. A round-trip harness now detects indent, trailing newline and ASCII escaping per file; `apex-clean-energy.profile.json` is hand-formatted and must never be re-serialised.
+- **X3's peer-family decision got harder.** Clearway is the first family member whose data-centre exposure sits at a **different legal entity** from the dossier's subject (Google, Microsoft and Royal Slope were originated at Clearway Energy **Group**), which a tag-keyed family cannot express at all.
+
+### Active context
+
+- Branch `claude/phase-c6-profiler-coverage-ez8zje`; repo version **v04.80r**; CHANGELOG **97/100**.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Checker state at v04.80r: registry sync clean (142) · study 0/0 (116 guides, 939 concepts) · relationships exit 0 with **0 findings** (14 accepts) · crossrefs exit 0 (301 pairs, 9 accepts, 20 scopes over the cap) · graph **1,081 edges (784 → 812 curated)** · reports not run (X3's job).
+- Environment notes: `pip install playwright pillow` then `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the Profiler hash route is `#<slug>`; the dossier view sits behind the auth wall so the study guide is the real render check — `ovFetchJson(slug+'.study.json').then(ovShowStudy)` in page context. **Three hosts blocked this session:** `formenergy.com` (Sucuri JS proof-of-work, HTTP 202 empty stub — read via dated Wayback captures), `investor.clearwayenergy.com` (Akamai 503/403 — use EDGAR and GlobeNewswire) and all of `investors.canadiansolar.com` (503 — use EDGAR).
+
+### Recommendation for next session
+
+- **Run Phase C session C7 on Opus 5 xhigh — Power Electronics (§8 row `supplier`, both columns at `—`), dossier + study guide, the four after-write checkers plus crossrefs, a `cadence: "quarterly"` calendar row (the company is private and family-owned), README tree entries, flip the §8 row and rewrite the §5 C7 row with per-clause verdicts. The "(six dossiers)" premise is ALREADY REFUTED and the grep is a trap: `\bPower Electronics\b` returns eight files but five are not the company — `delta-electronics` (Delta's own segment name), `eve-energy` (EVE's own lab) and `vicor`, `flex`, `infineon` (all citing *Power Electronics News*). Only `sinexcel`, `sungrow` and `terra-gen` name the company, so expect a small step-7 tail. The clause that actually needs testing is "the leading US utility-scale PCS specialist" — find an independent ranking or say plainly that none exists. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
+**To continue:** type `run Phase C session C7 on Opus 5 xhigh`
+
+## Previous Sessions
+
+### Session — Phase C session C5 (Opus 5 xhigh)
+
 **Date:** 2026-09-06 12:41 AM EST
 **Repo version:** v04.79r — one push commit this session (`98c464b`, merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-c5-profiler-coverage-k4env1`
@@ -46,45 +91,3 @@ Nothing is in flight. Working tree clean, `98c464b` merged to `main`. **Program 
 - **Run Phase C session C6 on Opus 5 xhigh — Clearway Energy, Recurrent Energy, Form Energy (§8 rows at `—`/`—`; Clearway and Recurrent `developer · ipp`, Form `supplier`), dossier + study guide each, the four after-write checkers plus crossrefs, a calendar row per company decided separately because the three have different ownership shapes (Clearway listed, Recurrent a Canadian Solar unit, Form private), README tree entries, flip the §8 rows and rewrite the §5 C6 row with per-clause verdicts. Expect the largest step-7 tail yet — `\bRecurrent\b` already hits ten dossiers and `canadian-solar` calls Recurrent its wholly-owned developer with an 80.6 GWh pipeline, which is very likely the figure the C6 cell mis-attributes to Form Energy. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
 **To continue:** type `run Phase C session C6 on Opus 5 xhigh`
 
-## Previous Sessions
-
-### Session — Phase B closeout and §6 register re-run (Fable 5.1 High)
-
-**Date:** 2026-09-05 09:22 PM EST
-**Repo version:** v04.78r — one push commit this session (`0b30312`, merged to `main`), plus this housekeeping commit
-**Branch:** `claude/phase-b-closeout-verify-rx201s` (rebased onto `origin/main` after the merge)
-**Model:** Fable 5.1 High — **Phase B closeout**: bookkeeping and verification only, no dossier or guide work, no `Profiler.html`, `Profiler.gs`, `Scraper.gs` or family-map change.
-
-### What was done
-
-- **`CLASSROOM-CURRICULUM-PLAN.md` §6 re-run in full (G1–G12) against the corpus** — files by slug, guide section ids, the eight `guidanceDocs_()` ids — with a dated v04.78r verdict in every row. **One status change: G10 `Partial v04.58r` → `Closed v04.78r`** on the register's own definition of Partial (its one stated ask, a module revision *or* one IE-firm dossier, is satisfied twice by `dnv` and `sargent-lundy`; insurance/brokers were never an ask — residual recorded in the row). G1–G5, G7–G9 re-confirmed closed (G8 over-satisfied: `oklo` + `x-energy`); **G6 stays Open and structural** (no interconnection module among eight; "Order 2023" nowhere in the corpus); G11, G12 re-affirmed. Intro sentence dates the Phase B re-run; Standings rewritten (eight closed · one open · two standing; Scheduled bucket empty); trail count six; one append-only paragraph "Where the register stands after Phase B (re-run 2026-09-05, v04.78r)".
-- **`PROFILER-COVERAGE-PLAN.md` marks Phase B complete**: §1 dated counts paragraph + delta table (136 dossiers · 110 guides · 8 projects · 1,012 edges (749 curated) · 922 concepts · 8 modules · 4 reports vs the v04.39r baseline 89 / 62 / 8 / 490 / 112 / 7 / 4; roster tags supplier 54 · developer 28 · ipp 21 · epc 12 · integrator 10 · hyperscaler 8 · neocloud 7 · gc 6 · utility 6 · advisor 2 · investor 2); §4 "Phase B complete" note under Regrouping (B1–B2, F1–F8 with versions; B2 on Opus 5 xhigh, F5 on Fable 5.1 Medium); §7 bullet handing the `Colocation & Cloud Capacity` peer-family split (`renewables-developer`, keyed on the `developer · ipp` pairing) to **X3 as a decision**, with three loose threads (CoreWeave's Elk Grove Village lease missing from `coreweave`; `plus-power`'s Sierra Estrella line unconfirmed; Tract's PUCN decision due 8 Sept 2026); §9.5 row 2 done.
-- **Verified**: all 29 §8 B rows carry versions in both columns and no §4 hypothesis wording; calendar Phase B rows all present (7 public with nextReport/confirmed/source/watch[], 22 private `cadence: "quarterly"`); **Fermi's 2026-11-12 stays `confirmed: false`** — EDGAR (CIK 2071778) has no Q3-date 8-K (post-Q2 filings: 31 Aug officer 8-K, 2 Sept shareholder-nomination 8-K) and `investor.fermiamerica.com/events-presentations` returned HTTP 403; row untouched.
-- **Checkers at v04.78r, all exit 0**: registry 0/136 updated · graph 1,012 edges unchanged · study 0/0 · relationships 0 findings (14 suppressed) · crossrefs 0 candidates (7 suppressed, 20 scopes over the cap) · **reports 35 aged-pin warnings** across three reports (X3, not re-pinned).
-- CHANGELOG **95/100**; no rotation.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean. **Program state: 47 of 65 new companies, 4 of 30 guide passes. Phases A and B complete and closed out; the §6 register is dated at v04.78r.** The Phase C paste-in prompt for C5 (ENGIE North America · AES Clean Energy · RWE Clean Energy, Opus 5 xhigh) was handed to the developer in this session's chat.
-
-- **Remaining, in §9.5 order:** C5 · C6 · C7 · C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
-- **CHANGELOG rotation will fire in the Phase C dossier block, not the guide block** — 95/100 now, so the sixth push from here (around C10/C12) crosses 100. The §7 "CHANGELOG capacity" bullet still reads 86/100 as of v04.69r; refresh it when a session touches §7.
-
-### Key decisions and findings
-
-- **G10 closed rather than held**: Partial means "premise moved, stated asks not done"; the ask was done twice. The insurance seat (property, delay-in-start-up, warranty wraps) is still untaught — no insurer/broker slug, "delay-in-start-up" in no guide — and is a **new** row if the developer wants it, structural like G6.
-- **G6 is the register's only commissioning ask** and is blocked on a developer-supplied document (`industry guidance:` command), not on any model or Phase C session.
-- **Nothing in Phase C is a register closer** — the Scheduled bucket is empty; C5–C12 are ecosystem coverage. Every §5 row is still a hypothesis to be rewritten with a verdict (C1–C3 and C11 shipped without one; C4 and B5 went nought for three).
-- **Peer family**: C5's `developer · ipp` storage owners will join the same `Colocation & Cloud Capacity` family the F3–F5 owners sit in; the split is X3's decision — dossier sessions must not touch the family map.
-
-### Active context
-
-- Branch `claude/phase-b-closeout-verify-rx201s`; repo version **v04.78r**; CHANGELOG **95/100** — 5 pushes of headroom.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.78r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports exit 0 with 35 aged pins (X3) · roles not run.
-
-### Recommendation for next session
-
-- **Run Phase C session C5 on Opus 5 xhigh — ENGIE North America, AES Clean Energy, RWE Clean Energy (`developer · ipp`, §8 rows at `—`/`—`), dossier + study guide each, the four after-write checkers plus crossrefs, calendar rows per `.claude/rules/profiler-app.md` Scheduled Refreshes, README tree entries, flip the §8 rows and rewrite the §5 C5 row with premise verdicts. One push commit.** The paste-in prompt was handed over in the v04.78r closeout session's chat; the §7 template in `PROFILER-COVERAGE-PLAN.md` regenerates it.
-**To continue:** type `run Phase C session C5 on Opus 5 xhigh`
