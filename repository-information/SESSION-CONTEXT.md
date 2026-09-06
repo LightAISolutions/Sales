@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-05 08:47 PM EST
+**Repo version:** v04.77r — one push commit this session (`8ed8487`, merged to `main`), plus this housekeeping commit
+**Branch:** `claude/phase-b-f8-profiler-setw9a` (rebased onto `origin/main` after the merge)
+**Model:** Fable 5.1 High — Phase B session **F8**: Fermi America · Tract · Prime Data Centers (AIDC developers) — **the last Fable session of Phase B; all 29 Phase B companies are now covered.** Six research subagents (two per company), dossiers, guides, lesson plans, step 7 reconciliation, all in one push commit. Context compacted once mid-session (after the concept-registration step) and recovered without loss.
+
+### What was done
+
+- **Three dossiers** (schema v7, profileVersion 1, intel-briefing, category `developer`): `fermi-america` (132 sources, 52% first-party, 7 relationships; `ownership.type: public`, Nasdaq Global Select + LSE: FRMI), `tract` (150, 33%, 8; private), `prime-data-centers` (171, 30%, 8; private). 36 company-published headshots (execs 630 across 89 companies — one harvested Prime portrait was orphaned and removed). Tract's and Prime's company pages were read from dated Wayback captures (live sites block automated fetches) and cited at the canonical URLs with the capture date in the label.
+- **Three schema v2 guides + lesson plans**: Fermi (the generation-first campus — gas turbines and a COL behind the fence, time-to-power as the product), Tract (the developer's developer — the land value ladder, project bonds, who decides the price of power), Prime (recapitalising a build-to-suit pipeline — five rounds, a 7.5% bond on a neocloud lease, phantom equity). 27 shared concepts registered (922 total); one alias collision (`bridging power` vs `bridge-power`) caught before registration.
+- **Step 7 reconciliation**: `xcel-energy` v3 (Fermi `customer` edge — SPS ESA up to 200 MW; edge context records the 10-K restatement of first power to H2 2026); `lambda` v5 (Prime `supplier` edge — 21 MW of LAX01; Prime's Lambda release registered). Every `\bFermi\b`, `\bTract\b`, `\bPrime\b`, Amarillo, Matador and HyperGrid hit classified (recorded in the v04.77r CHANGELOG entry). `plus-power`'s Sierra Estrella "adjacent Prime campus" line left as written — SRP's release does not name Prime and the Plus Power microsite is JS-rendered.
+- **Calendar rows** (97): Fermi `nextReport: 2026-11-12`, `confirmed: false` (cadence inference — IR events page empty on 5 Sept; Q1/Q2 2026 reported 14 May / 13 Aug); Tract and Prime `cadence: "quarterly"`.
+- **Checkers at v04.77r**: registry sync clean (136 companies) · study 0 errors / 0 warnings (110 guides, 922 concepts) · relationships exit 0, **0 new accepts** (14 unchanged; no `investor`/`portfolio` edges) · crossrefs exit 0, 0 new candidates (one Tract `productsAndServices` scope at 2,877 chars over the cap, listed as not examined) · Playwright: all five dossiers zero page errors (lambda's guide has no `{{term}}` spans — the `.gd-term` wait timing out there is expected).
+- **Bookkeeping**: §8 rows flipped `B8 → F8` with every premise verdict; F8 entry in the calibration log (0/0/0/0/0); README tree (+3 profiles, +3 guides, +3 study-prep folders, +2 archive lines, execs count); CHANGELOG **94/100**.
+
+### Where we left off
+
+Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **Program state: 47 of 65 new companies, 4 of 30 guide passes. Phase B is complete** (F1–F8 all landed; B1–B2 utilities ran earlier under §2 substitutions). The Phase B closeout paste-in prompt was handed to the developer in this session's chat.
+
+- **Next action is the Phase B closeout** — the §7 "Register checks" obligation: re-run the `CLASSROOM-CURRICULUM-PLAN.md` §6 gap register in full against the corpus and date it (as the Phase A close did at v04.44r), plus the coverage-plan bookkeeping that marks Phase B done.
+- **Opus remaining after that:** C5–C10, C12, 26 guide backfills, X3, then Phase D.
+
+### Key decisions and findings
+
+- **Premise verdicts (§4 → §8 Closes):** all three B8 clauses **held with corrections**. "Amarillo multi-GW behind-the-fence campus" — Project Matador is in Carson County beside Pantex on a 99-year Texas Tech ground lease; up to 11 GW expandable to ~17 GW planned, 6 GW of gas TCEQ-permitted, four AP1000s at the NRC, ~1.5 GW of turbines landed, **nothing energised** (first 210 MW due July 2027); one binding-but-conditional tenant (TensorWave, 222 MW). "Land-and-power entitlement developer" — Tract sells shovel-ready parcels and does not build, but **no third-party sale is on the record** (only intra-group sales to Fleet's Storey County SPVs; USD 3.8bn + 4.6bn of notes). "Hyperscale build-to-suit" — Prime's most common model, but the named tenants are **neoclouds** (CoreWeave ~USD 2.2bn Elk Grove Village, Lambda Vernon); ~151 MW operating against a "4+ GW" pipeline.
+- **Fermi stays `developer`, not `developer · ipp`** — generation is captive to the campus and passed through to tenants, not sold into a market; reason written in §8, registry matches.
+- **Ownership → calendar row type:** Fermi public (brief's Nasdaq expectation held); Tract private (Tract Capital Management, no listed parent); Prime private (Data Realty Holding Corp., Macquarie/Ares joint control per EC M.11843, no listed parent).
+- **Brief corrections:** Tract HQ Denver (not Reno), no Georgia park, no Eloy; Prime HQ Dallas, parent is Data Realty (no "Prime Group"), no NoVA/Kansas City/Denton site; Fermi HQ moved to Dallas per the 31 Aug 2026 8-K; "HyperGrid" is a trademark, not a domain.
+- **No project pins** — Project Matador, the Tract parks and Avondale stayed in prose (no second dossier ready to pin); `profiler-projects.json`, Scraper.gs and Profiler.html untouched (page stays v01.82w).
+- **Loose threads for later revisions:** CoreWeave's dossier does not carry the Elk Grove Village lease (one-sided on Prime's side); Tract's PUCN decision on two temporary gas plants is due **8 Sept 2026**; Fermi's Q3 date is unconfirmed.
+- **Peer group:** F6, F7 and F8 all noted that `Colocation & Cloud Capacity` mixes generation-first, powered-land and build-to-suit developers with merchant battery developers; family map unchanged by instruction — a candidate item for the closeout or X3, not for a dossier session.
+- **Environment:** Wayback-read company pages need the canonical-URL citation convention (so first-party share stays honest); concept registration must run from the repo root (relative paths); the harness pattern from F6/F7 held.
+
+### Active context
+
+- Branch `claude/phase-b-f8-profiler-setw9a`; repo version **v04.77r**; CHANGELOG **94/100** — 6 pushes of headroom.
+- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
+- Checker state at v04.77r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports not re-run (X3 re-pins) · roles not run.
+
+### Recommendation for next session
+
+- **Run the Phase B closeout on Fable 5.1 High — the §7 "Register checks" obligation: re-run all twelve `CLASSROOM-CURRICULUM-PLAN.md` §6 rows against the corpus (files by slug, guide section titles, `guidanceDocs_()` ids — not against the rows' own text), append a dated "Where the register stands after Phase B" trail paragraph and refresh the Standings, then mark Phase B complete in `PROFILER-COVERAGE-PLAN.md` (§4 header/Regrouping note, §9.5 run-order row 2, the §1-style counts) and carry the peer-family observation into a §7 bullet for X3.** One push commit; no dossier work.
+**To continue:** type `run the Phase B closeout on Fable 5.1 High`
+
+## Previous Sessions
+
+### Session — Phase B F7, Compass Datacenters · EdgeCore · PowerHouse Data Centers (Fable 5.1 High)
 **Date:** 2026-09-05 07:27 PM EST
 **Repo version:** v04.76r — three push commits this session (`a560905` v04.74r F7, `df0ef87` v04.75r, `de70a93` v04.76r; all merged to `main`), plus this housekeeping commit
 **Branch:** `claude/phase-b-f7-aidc-landlords-3h01nd` (rebased onto `origin/main` after each merge)
@@ -47,49 +94,5 @@ Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **P
 
 - **Run F8 on Fable 5.1 High — `profiler` + `profiler prep` for Fermi America, Tract and Prime Data Centers (`developer`, AIDC developers), then the four after-write scripts, three calendar rows (Fermi America is believed listed — confirm and give it a `nextReport`), README tree entries and the §8 flips.** Corpus mentions to reconcile in step 7: Fermi America in `xcel-energy` (and `\bFermi\b` in `excelsior-energy-capital` — classify); Tract in `compass-datacenters`, `hunt-energy-network`, `powerhouse-data-centers` (watch for "Tract of land"); Prime Data Centers in `lambda`, `plus-power`; Amarillo in `intersect-power`, `xcel-energy`.
 **To continue:** type `run F8 on Fable 5.1 High`
-
-## Previous Sessions
-
-### Session — Phase B F6, MGX · Excelsior Energy Capital · X-energy (Fable 5.1 High)
-**Date:** 2026-09-05 06:02 PM EST
-**Repo version:** v04.73r — one push commit this session (`d229ff9`, merged to `main`), plus this housekeeping commit
-**Branch:** `claude/phase-b-f6-profiler-20aamw` (rebased onto `origin/main` after the merge)
-**Model:** Fable 5.1 High — Phase B session **F6**: MGX · Excelsior Energy Capital · X-energy — the first dossiers behind the `investor` chip. Two research subagents per company (six total, 60/57 · 67/64 · 85/66 sources), dossiers, guides, lesson plans, step 7 reconciliation, all in one push commit.
-
-### What was done
-
-- **Three dossiers** (schema v7, profileVersion 1, intel-briefing): `mgx` (`investor`; 103 sources, 42% first-party, 11 relationships), `excelsior-energy-capital` (`investor · developer`; 108 sources, 55%, 8 relationships), `x-energy` (`supplier`; 139 sources, 62%, 7 relationships; `ownership.type: public`, NASDAQ: XE). 39 company-published headshots (execs 548 across 83 companies).
-- **Three schema v2 guides + lesson plans**: MGX (the money behind the money — sovereign funds, fund/platform/JV/direct stake, sizing an investor with no numbers, why labs take Gulf money, circular financing, export controls and CFIUS); Excelsior (the fund above the platform — closed-end fund calendar, Form D/ADV, own/operate/develop, battery reservation agreements and the domestic-content bonus, EV/EBITDA on the Enel sale, the green tariff); X-energy (the fuel is the reactor — TRISO as containment, 750°C as product, continuous refuelling, the HALEU chain, Part 50 on an 18-month clock, the ring around a vendor that owns no plant, an order book of options, going public on cost share). 44 shared concepts registered (855 total). None repeats Oklo, Aypa, GridStor, Anthropic or Dominion.
-- **Step 7 reconciliation — eleven older dossiers revised and archived** (kiewit v7, oklo v2, openai v5, aligned v5, anthropic v2, amazon v7, talen-energy v2, black-veatch v7, sargent-lundy v2, fluence v8, lg-energy-solution v6). The kiewit and oklo dossiers carried a wrong negative finding on X-energy (Kiewit Nuclear Solutions is in the Cascade Nuclear Partners JV since October 2025) — corrected. Every inbound edge's URL was registered in the same edit.
-- **Checkers**: registry sync clean (130 companies) · study 0 errors (104 guides) · relationships exit 0 with **4 accepts** (`mgx`/`openai`, `aligned`/`mgx`, `anthropic`/`mgx`, `amazon`/`x-energy` — all the `investor` ↔ `portfolio` enum gap; 14 accept entries total, 6 of them the enum gap) · crossrefs exit 0 with 2 accepted open questions · graph 942 edges.
-- **Investor chip visual check** (Playwright, Profiler v01.82w, unchanged): roster chip `investor 2`, `.ov-tag.investor` = `#b18cf2` as declared, Compare "Investor" alone for MGX and "Investor / Colocation & Cloud Capacity" when Excelsior (also `developer`) is picked first — the family map as designed; artefact recorded in §7.
-- **Bookkeeping**: three calendar rows (91) — `x-energy` carries `nextReport: 2026-11-13` (unconfirmed) because it is public; §8 rows flipped `B6/B10 → F6` with premise verdicts in Closes; §7 investor bullet rewritten; F6 entry in the calibration log; README tree (+3 profiles, +3 guides, +3 study-prep folders, +11 archive lines); CHANGELOG **90/100**.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, branch rebased onto `origin/main`. **Program state: 41 of 65 new companies, 4 of 30 guide passes.** The F7 paste-in prompt was handed to the developer in this session's chat (regenerate from §4 row B7 and §7 if lost).
-
-- **Next action is F7** on Fable 5.1 High — Compass Datacenters · EdgeCore Digital Infrastructure · PowerHouse Data Centers (`developer`, AIDC developers).
-- **Fable remaining:** F7 · F8 (High). **Opus remaining:** C5–C10, C12, 26 guide backfills, X3.
-
-### Key decisions and findings
-
-- **Premise verdicts (§4 → §8 Closes):** Excelsior — Fluence 2.2 GWh customer **held**, but signed 30 July 2024 (December 2024 is LG's separate 7.5 GWh deal) and no recipient project or delivery is named; `developer` holds only via the wholly-owned Lydian platform. MGX — Aligned **held** (direct co-owner since 21 July 2026), Stargate **held narrowly** (named initial funder, contribution unconfirmed, later releases omit MGX), "10 dossiers" **did not hold**: 12 files match `\bMGX\b`, 8 are NVIDIA's MGX rack architecture, 4 name the fund. X-energy — Amazon SMR partner **held** on every element; brief corrections: public since 24 April 2026, Series D USD 700m closed November 2025 led by Jane Street.
-- **Enum gap evidence, not fixed:** six accept-list entries now exist only because `portfolio` is absent from `relationships[].type`. Recorded in the calibration log for the schema decision; not adopted.
-- **`developer` spans two spaces:** the `Colocation & Cloud Capacity` peer family treats data-centre developers and renewable/storage developers (F3–F5's `developer · ipp`) as one space. A `renewables-developer` family split is a visible option; noted in §7, not done.
-- **Writer discipline that made the checker trivial:** the dossier builders asserted every relationship/policy/development URL was an exact member of `sources[]` before writing (0 unregistered-source findings), and a scratchpad URL index refused any URL the agents had not fetched (0 unmatched across three dossiers).
-- **Environment:** mgx.ae pages are ~15 MB (curl, not WebFetch; `/en/` paths redirect); excelsiorenergycapital.com redirects to excelsiorcapital.com; Business Wire, WAM, openai.com, centrica.com, investors.x-energy.com, federalregister.gov unreadable — mirrors used and cited; Python `playwright` and `pillow` needed `pip install`; the harness-created remote branch was already swept by the workflow at push time (ls-remote empty), so push-once held.
-
-### Active context
-
-- Branch `claude/phase-b-f6-profiler-20aamw`; repo version **v04.73r**; CHANGELOG **90/100** — 10 pushes of headroom.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.73r: registry sync clean · study clean · relationships exit 0 (14 accepts) · crossrefs exit 0 (8 accepts) · reports not re-run (X3 re-pins) · roles not run.
-
-### Recommendation for next session
-
-- **Run F7 on Fable 5.1 High — `profiler` + `profiler prep` for Compass Datacenters, EdgeCore Digital Infrastructure and PowerHouse Data Centers (`developer`, AIDC developers), then the four after-write scripts, three calendar rows, README tree entries and the §8 flips.** Corpus mentions to reconcile in step 7: Compass in `southern-company`; EdgeCore in `hitt`, `holder-construction`, `mccarthy`; PowerHouse none under `\bPowerHouse\b` (also grep `\bPowerhouse\b` and `Joliet`).
-**To continue:** type `run F7 on Fable 5.1 High`
 
 Developed by: LightAISolutions
