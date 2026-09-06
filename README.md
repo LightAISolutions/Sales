@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-06 05:26:42 PM EST` · Repo version: `v04.88r`
+Last updated: `2026-09-06 05:39:00 PM EST` · Repo version: `v04.89r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -822,7 +822,7 @@ Last updated: `2026-09-06 05:26:42 PM EST` · Repo version: `v04.88r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/lift-study-guides.py">lift-study-guides.py</a> — One-shot mechanical study-guide lift from schema v1 to v2 (lossless heading/bullets → prose sections; --check reports without writing)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-study.py">check-profiler-study.py</a> — Study-layer validator (guide v1/v2 shapes, section kinds and ids, concepts-registry shape, {{term}} resolution) — required after any study or concepts write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/verify-profiler-roles.py">verify-profiler-roles.py</a> — Profiler app verifier (Role + Access matrix with per-tier screenshots, per-account guidance-progress isolation, Technical Annex render audit across all dossiers)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/sync-profiler-registry.py">sync-profiler-registry.py</a> — Profiler registry reconciliation (syncs denormalized lastUpdated / source counts / first-party share / KPI flag from the profile JSONs; --check reports drift)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/sync-profiler-registry.py">sync-profiler-registry.py</a> — Profiler registry reconciliation (syncs denormalized lastUpdated / source counts / first-party share / KPI flag from the profile JSONs, and asserts the roster / refresh-calendar bijection; --check reports drift and exits 1)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-study-prep-pdf.mjs">build-study-prep-pdf.mjs</a> — Typesets a study-prep Markdown brief to PDF; the Markdown stays the source of truth so the PDF cannot drift
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/harvest-exec-photos.py">harvest-exec-photos.py</a> — Executive-headshot harvester for Profiler dossiers (first-party leadership pages + license-verified Wikimedia Commons, contact-sheet verification, surgical JSON wiring)

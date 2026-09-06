@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.89r] — 2026-09-06 05:39:00 PM EST — v01.83w
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the previous response: "Add a bijection assertion to `sync-profiler-registry.py --check` —
+> fail when any covered company lacks a calendar row or any row lacks a dossier. It is a few lines, it turns a
+> self-hiding gap into a checker failure, and it means no future session has to notice the absence by accident the way
+> this one did.")*
+
+### Added
+
+- **`scripts/sync-profiler-registry.py` now asserts the roster / refresh-calendar bijection.** Every active company has exactly one calendar row and every row resolves to a covered company. It also validates the row shape against PROFILER-SCHEMA.md: exactly one of `nextReport` or `cadence`, `confirmed` present on dated rows, `cadence` equal to `"quarterly"`, a well-formed `YYYY-MM-DD` date, and non-empty `source`, `lastRefreshed` and `watch`.
+
+### Changed
+
+- **`PROFILER-SCHEMA.md`, `PROFILER-COVERAGE-PLAN.md` §7 and `.claude/rules/profiler-app.md` step 5** all now state the invariant and that it is enforced, and the README tree entry for the script no longer describes it as a reconciler alone. The §7 bullet written at v04.88r said a bijection check was "worth running at each phase close"; it is no longer advisory.
+
+### Notes
+
+- **Where it lives, and why not in its own checker.** It went into the sync script because that is the script sessions already run after every profile write. An unscheduled company is a defect that **hides itself** — it never enters the earnings desk's queue, so nothing surfaces it — and a seventh checker that nobody remembers to run would not have closed that. The gap reached **38 of 151 companies** and was found by accident at v04.88r, when a watch-item edit to a row that did not exist silently did nothing.
+- **How hard it fails is a deliberate split.** Under `--check` a finding is an **error and exits 1**; in write mode the identical finding is a **warning** and exits 0. The reason is that the Profiler Command registers a company at step 5 and adds its calendar row later in the same session, so a hard failure in write mode would fire on correct work. `--check` is the pre-commit verification pass, which is exactly when the row must exist — and this matches the script's existing exit-code contract rather than inventing a new one.
+- **The checker was tested by being made to fail.** Seven deliberately broken states in a sandbox, none of them touching the real data files: a covered company with no row (the original bug), an orphan row, a duplicate, a row carrying both `nextReport` and `cadence`, a row missing `confirmed`, a malformed date, a bad `cadence` value, an empty `watch`, an absent calendar file and a corrupt one — plus the write-mode/`--check` split verified on the same defect. All produced the intended message and exit code.
+- **Two defects in the first draft, found by that testing and fixed:** duplicates were reported once per occurrence rather than once with a count, and the docstring claimed the check "degrades gracefully" on a missing calendar file while the code exits 1. The behaviour is right — the calendar is a committed file and its absence from a real checkout is itself a defect — so the wording was corrected to match the code rather than the reverse.
+- Archived companies may keep a calendar row but are not required to have one; the desk only queues live coverage. All 151 companies are currently `active`, so that branch is untested against real data and is documented rather than relied on.
+- CHANGELOG `Sections: 91/100` -> `92/100`; eight pushes of headroom, no rotation due.
 
 ## [v04.88r] — 2026-09-06 05:26:43 PM EST — v01.83w
 

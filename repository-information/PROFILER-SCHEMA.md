@@ -346,6 +346,8 @@ Why the file date rather than a per-entry `updated`:
 
 **Who writes it.** The desk advances the row it refreshed (`nextReport`, `confirmed`, `source`, `lastRefreshed`, and `watch[]` where the picture moved) in the same commit as the dossier. A developer adds a row when a company joins coverage, and converts a `cadence` row to a `nextReport` row when a private company lists — the quarterly sweep's watch items already flag the candidates (Vantage, Switch, Lambda, xAI).
 
+**The roster and the calendar are in bijection, and it is enforced.** Every **active** company in `profiler-companies.json` has exactly one row here, and every row resolves to a covered company. `scripts/sync-profiler-registry.py` asserts this: under `--check` a missing row, an orphan row, a duplicate, or a row that breaks the field rules above is an **error and exits 1**; in write mode the same finding is a **warning**, because during authoring a company is legitimately registered before its row is added later in the same session. Archived companies may keep a row but are not required to have one. The check lives in the sync script rather than in a checker of its own for one reason: it is the script that already runs after every profile write, and an unscheduled company is a defect that **hides itself** — it simply never enters the desk's queue. The gap reached **38 of 151 companies** before anyone noticed (found by accident at v04.88r, enforced from v04.89r).
+
 **Adding a company.** Add the row in the same commit that adds the dossier. A public company with no announced date gets `confirmed: false` and a cadence-inferred `nextReport`; the desk confirms it when the date comes within seven days.
 
 ## Extending the schema
