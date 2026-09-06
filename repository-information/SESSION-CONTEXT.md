@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 08:38 AM EST
+**Repo version:** v04.85r — **three** push commits this session (`02ce5be` v04.83r, `64c4806` v04.84r, `6049838` v04.85r, all merged to `main`), plus this housekeeping commit
+**Branch:** `claude/phase-c-session-c9-hra8xc` (rebased onto `origin/main` after each merge)
+**Model:** Opus 5 xhigh — Phase C session **C9**: Cipher Digital · Hut 8 · Galaxy Digital, then two follow-on pushes the developer asked for by accepting the recommendation each time.
+
+### What was done
+
+**Push 1 — v04.83r, C9 proper.** Three `developer` dossiers (schema v7, pv1) with study guides and lesson plans: `cipher-mining` (47 sources, 45% first-party, 19 relationships), `hut-8` (71 / 48% / 14, plus 11 verified exec photos), `galaxy-digital` (61 / 66% / 12). Seven step-7 counterparty revisions, each archived before editing. 33 concepts registered (1,002 total). Registered the **`river-bend-campus`** named project with its Scraper interest-topic seed (Scraper GAS v02.00g → v02.01g); a `helios` pin was weighed and declined. **The CHANGELOG rotation fired** — fourteen sections dated 2026-08-30 (v03.84r–v03.97r) moved to the archive with SHA enrichment, 100/100 → 86/100.
+
+**Push 2 — v04.84r, the `google` reconciliation.** Closed the one deferral C9 left open. `google` to pv7: the Fluidstack lease-backstop programme written up as a first-class strand, four relationships added and one enriched, 24 → 38 sources.
+
+**Push 3 — v04.85r, the `portfolio` enum + three corrections.** Added `portfolio` to `relationships[].type` (schema, checker comment, `Profiler.html` `OV_REL_TYPES`/`OV_REL_WORK`; Profiler v01.82w → **v01.83w**). Seven edges flipped `other` → `portfolio` across `amazon`, `mgx` (five) and `google`. **Accept list 15 → 10.** And corrected three errors published in push 2 — see below.
+
+### Where we left off
+
+All three pushes are merged. Working tree clean, all checkers green: registry sync clean (148 companies), study **0 errors / 0 warnings** (122 guides, 1,002 concepts), relationships **exit 0** (10 accepts), crossrefs **exit 0** (337 pairs), graph 1,177 edges / 888 curated, Playwright 0 page errors. CHANGELOG at **88/100** — twelve pushes of headroom, no rotation due. **C10 is the next session and the developer has been given a paste-in prompt for it.**
+
+### Key decisions and findings
+
+- **`portfolio` now exists in the enum.** This is the change that matters most for the next session. Enum expansion only, no `schemaVersion` bump, on the `recentDevelopments.category` precedent. Write it directly; do not accept around it.
+- **I published three errors at v04.84r and fixed them at v04.85r.** (1) "Alphabet discloses nothing" was wrong — it discloses the programme as **credit derivatives**, notional USD 0 → 16,940m → 28,436m → **43,785m**, withholding only counterparty identity. (2) "Google took nothing at Hut 8, unlike everywhere else" overstated a true fact — Abernathy and Cipher's USD 333m increase carried no warrants either. (3) The **springing Alphabet guarantee** at River Bend is in no SEC filing and is now flagged as offering-memorandum trade reporting in both `google` and `hut-8`.
+- **The methodological lesson, now in the calibration log:** a null on a proper noun bounds only that proper noun. My EDGAR search and its controls were both correct — `Fluidstack` really does return zero inside Alphabet's CIK — but inferring a programme-level conclusion from a name-level null was not. Search the subject's **mechanism words** too; `backstop` returns 17 hits in the same document that returns zero for `Fluidstack`.
+- **C9's own §5 verdicts:** `>$19B of leases combined` **FAILED** three ways; `the miner-pivot landlords` held for two and, for Galaxy, held at the site while failing at the company; the four remaining clauses held with correction. The three subjects are all SEC-classified finance companies (SIC 6199 / 6199 / 6211).
+- Cipher was renamed **Cipher Digital Inc.** in February 2026; the slug stays `cipher-mining` on the C5 RWE precedent.
+
+### Active context
+
+- Branch `claude/phase-c-session-c9-hra8xc`, repo **v04.85r**, 148 companies, 122 study guides.
+- Accept list **10 entries**; `blattner x quanta-services` was re-reasoned and kept because a wholly-owned operating subsidiary is not a financial holding (the missing types there are `parent`/`subsidiary`).
+- Toggles unchanged: `START_OF_RESPONSE_BLOCK` On, `CHAT_BOOKENDS` Off, `TIMING_ESTIMATES` On, `END_OF_RESPONSE_BLOCK` On, `MULTI_SESSION_MODE` Off.
+- REMINDERS.md has no active reminders; TODO.md is empty.
+- **Known, unfixed, and deliberately so:** the README archive listing is ~40 files behind (314 entries against 356 on disk). Four sessions have now followed the same precedent of not inserting them. This needs a developer decision — regenerate mechanically, or exclude archive snapshots from the tree by rule.
+- **Open questions parked in the dossiers, not guessed:** the dollar cap on Hut 8's River Bend backstop and whether Google backstops New Lebanon at all. Both live in 144A offering memoranda. The rating-agency presales on the Hut 8 DC LLC 6.192% 2042 notes are the likeliest public route.
+
+### Recommendation for next session
+
+- Run **C10 — Blackstone · Brookfield · Macquarie** (`investor`, Opus 5 xhigh). The enum blocker is cleared, so this session can finally write `investor`/`portfolio` pairs coherently instead of generating accepts; these three are the counterparties `aligned`, `cyrusone`, `digital-realty` and `qts` currently cannot link to at all. Budget for the inbound tail — the union of `\bBlackstone\b`, `\bBrookfield\b` and `\bMacquarie\b` is **38 dossiers**, nearly double C8's twenty — and guard hard against **BlackRock**, which appears in 19 files and is a different firm.
+
+**To continue:** type `continue with C10`
+
+## Previous Sessions
+
+### Session — Phase C session C8 (Opus 5 xhigh)
+
 **Date:** 2026-09-06 05:47 AM EST
 **Repo version:** v04.82r — one push commit this session (`81746f2`, merged to `main` as of `1088e16`), plus this housekeeping commit
 **Branch:** `claude/phase-c8-profiler-coverage-yl4hgi` (rebased onto `origin/main` after the merge)
@@ -51,48 +95,4 @@ Nothing is in flight. Working tree clean, `81746f2` merged to `main`. **Program 
 - **Run Phase C session C9 on Opus 5 xhigh — Cipher Mining, Hut 8 and Galaxy Digital (three §8 rows, all `developer`, all columns at `—`). THE CHANGELOG ROTATION IS MANDATORY THIS SESSION: it sits at 99/100 and this push crosses 100, so budget ~10 extra minutes for moving the oldest whole date group to `CHANGELOG-archive.md` with SHA enrichment on every moved header. C9 INVERTS C8's SHAPE: the inbound step-7 grep is SMALL — `\bCipher\b` hits 4 files, `\bHut 8\b` 3, and `\bGalaxy Digital\b` returns ZERO — but the OUTBOUND edge set will be large, because nearly every lease counterparty and peer is already a covered slug (anthropic, fluidstack, amazon, coreweave, google, terawulf, entergy, aep, iren, lambda, nscale, oracle, sargent-lundy, core-scientific, applied-digital, crusoe). Amazon and Google are in the step-7 scope-note 40+ inbound class — defer with a statement rather than skimming, as C6 did with `google`. TWO REAL TRAPS: `\bGalaxy\b` hits four files of which `envision-energy` and `piller` are Envision's "Galaxy Campus" in Ulanqab (definite false positives) while `compass-datacenters` and `schneider-electric` carry a Texas Governor's release naming "Galaxy" beside Compass and Montera — plausibly the real company, VERIFY don't assume; and `\bHelios\b` is a C7-shaped trap, because `oracle` means AMD's MI450 "Helios racks" and `rolls-royce-power-systems` means the Voltaria Helios battery in Scotland, neither of which is Galaxy's Texas campus. The `Why` cell's ">$19B of leases combined" is a SUMMED figure of exactly the class that failed C8's count test — test each lease separately. GUIDE SCOPE: five miner-pivot guides already exist (`terawulf`, `iren`, `core-scientific`, `applied-digital`, `crusoe`) and between them cover why miners became landlords, the vertical-integration spectrum, brownfield power, take-or-pay colocation, transition-period income statements, GPU financing and unnamed-tenant concentration. They ALL start after the pivot decision — so the unclaimed gap is (a) the bitcoin economics that FORCE it (hashprice, network difficulty, the halving, why a fleet strands) and (b) Galaxy Digital, which is not a miner at all but an asset manager that happens to own a campus, a business none of the five describes.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
 **To continue:** type `run Phase C session C9 on Opus 5 xhigh`
 
-## Previous Sessions
-
-### Session — Phase C session C7 (Opus 5 xhigh)
-
-**Date:** 2026-09-06 03:40 AM EST
-**Repo version:** v04.81r — one push commit this session (`d900bc4`), plus this housekeeping commit
-**Branch:** `claude/phase-c7-power-electronics-gom1y8`
-**Model:** Opus 5 xhigh — Phase C session **C7**: Power Electronics. Two research subagents, one dossier, one study guide, one lesson plan, **three** step-7 revisions, all in one push commit.
-
-### What was done
-
-- **One schema v7 dossier at profileVersion 1, intel-briefing style.** `power-electronics` (85 sources, **61% first-party**, 8 relationships, 4 `policyExposure` entries) — Power Electronics España, S.L. of Llíria, Valencia, the corpus's **first dedicated power-conversion specialist**: founded 1987, 3,685 employees, FY2025 revenue above €1.3bn with EBITDA above €250m, and **approximately 70% of group revenue earned in the United States while manufacturing in Spain**. Grid forming (VISMA) shipped as **standard** across the storage and solar lines. Wholly owned by a holding company administered by three corporate vehicles, with **no outside capital anywhere in the public record**.
-- **One schema v2 study guide (11 sections) + lesson plan (5 modules)**, written deliberately past `sinexcel`, `sungrow` and `delta-electronics`, which already cover modular-versus-central conversion and the grid-forming metaphor. The new material: the power triangle and why a converter is rated in kVA, reading a capability curve and a derating table, following versus forming as **current source versus voltage source**, **the two separate US rulebooks** (IEEE 1547 + UL 1741 SA/SB at distribution against IEEE 2800 + NERC PRC-029-1 + FERC Order 901 at transmission), ride-through and the prohibition of momentary cessation, and what a developer buys when it buys conversion separately from cells. **Twelve concepts registered** (951 total) — none of the standards existed in the registry before.
-- **Step 7 — three dossiers revised and archived, splitting three ways.** `sinexcel` v6→v7 **contradicted**: it grouped the subject with Sungrow and SMA as "integrated-inverter giants" competing on "full BESS supply", which is right about Sungrow and wrong about a company that makes no cells and sells no turnkey system. `sungrow` v7→v8 **accurate and left alone** (corroborated by Wood Mackenzie's own CY2023 wording). `terra-gen` v4→v5 **under-evidenced rather than wrong** — qualified, not deleted.
-- **Calendar row** (104 rows, 52 private) with `cadence: "quarterly"`, the ownership finding written into `source`, and a nine-item `watch[]`; **§5 row rewritten** with per-clause verdicts, **§8 row flipped**, §7's CHANGELOG bullet 97/100 → **98/100**, and a C7 calibration-log entry.
-
-### Where we left off
-
-Nothing is in flight. Working tree clean, `d900bc4` pushed to `claude/phase-c7-power-electronics-gom1y8`. **Program state: 54 of 65 new companies, 4 of 30 guide passes. Phases A and B complete; C1–C7 and C11 shipped.** The C8 paste-in prompt was handed to the developer in this session's chat.
-
-- **Remaining, in §9.5 order:** C8 · C9 · C10 · C12 (Opus 5 xhigh), then the 26 guide backfills (6 sessions), then X3, then Phase D.
-- **CHANGELOG is 98/100 — two pushes of headroom.** C8 takes it to 99; **C9 is the session that crosses 100 and must budget the rotation**.
-
-### Key decisions and findings
-
-- **Premise verdicts, C7: nought for two, one with a narrower true core.** "The leading US utility-scale PCS specialist" **failed as stated** — and the reason is the session's main result: **no independent ranking of US utility-scale PCS suppliers exists at all**, and the absence is *structural*, because analyst houses rank either global PV inverters or **AC-integrated** storage systems, and Wood Mackenzie's integrator ranking states a scope that excludes conversion-only vendors **by definition rather than by performance**. The one independent US-leadership statement (Wood Mackenzie, CY2023) concerns **solar central inverters**, names Sungrow jointly, is unquantified, and was not repeated the following year. "(six dossiers)" **failed — three, not six**.
-- **A new verdict shape worth reusing: a premise can be *unfalsifiable* rather than true or false.** C7 is the first session to record that, and the dossier says so in `strategyRead` and in the guide's "where this fails" section instead of repeating the claim. Future superlative clauses ("the largest missing X") should be tested against a measurable basis and reported this way when none exists.
-- **A research agent misclassified a source and the error was caught before it propagated.** Agent A treated `power-electronics.co.nz` as a first-party subsidiary site; it says **"locally owned supplier"** — an independent distributor. That one word meant the Sinexcel supply link belongs to the *distributor*, not the manufacturer (so no supplier edge was written), and the "family owned" and "three factories / 120,000 m² / 30 GW" statements are third-party.
-- **Two provenance traps ran in opposite directions**, and together would have misstated the first-party share both ways at once: the company serves its own datasheets from an S3 bucket host that tiers `independent` (nine sources carry an explicit `"party": "company"`), while the NZ distributor's domain was deliberately kept **out** of the registry's `domains`.
-- **The schema's "FX rates are researched, not remembered" rule earned its keep.** A remembered EUR/USD rate of 1.09 was wrong by 4% (actual 2025 average 1.1296); the FY2025 USD overlay moved $1,417m → $1,468m.
-- **The pre-emission validator and the round-trip harness both paid for themselves again**, at roughly ten minutes to rebuild. The validator reported 0 errors first run; the harness kept the three step-7 revisions to **17–21 changed lines each** rather than full re-serialisations.
-- **A false-positive class more extreme than `\bAES\b` or `\bRecurrent\b`.** `\bPower Electronics\b` matched eight dossiers and **five were not the company** — Delta's own business segment, EVE's own lab, and three citations of the trade publication *Power Electronics News*; `vicor` alone carried three distinct kinds (publication, IEEE award name, academic discipline). A company whose name is also its industry's name defeats word-boundary matching entirely.
-
-### Active context
-
-- Branch `claude/phase-c7-power-electronics-gom1y8`; repo version **v04.81r**; CHANGELOG **98/100**.
-- Toggles: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- `REMINDERS.md`: no active reminders. `TODO.md`: no items.
-- Checker state at v04.81r: registry sync clean (143) · study 0/0 (117 guides, 951 concepts) · relationships exit 0 with **0 findings** (14 accepts) · crossrefs exit 0 (304 pairs, 9 accepts, 20 scopes over the cap) · graph **1,096 edges (820 curated)** · reports not run (X3's job).
-- Environment notes: `pip install playwright pillow` then `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`; the Profiler hash route is `#<slug>`; the dossier view sits behind the auth wall so the study guide is the real render check — `ovFetchJson(slug+'.study.json').then(ovShowStudy)` in page context. **PDF text extraction is broken in this environment** (`cryptography` module panics, so `pypdf` and `pdfminer.six` both fail and `pdftotext` is absent) — plan around it. **Hosts blocked this session:** `eleconomista.es` and `pv-magazine-usa.com` (both 403 — use `valenciaplaza.com` and the global `pv-magazine.com`), `fcc.gov` FAQ pages (403 — use law-firm alerts), and the company's own `/en/blog` index is JS-rendered and returns an empty shell, so use `sitemap-0.xml` for the post inventory.
-
-### Recommendation for next session
-
-- **Run Phase C session C8 on Opus 5 xhigh — Digital Realty and CyrusOne (both §8 rows `developer`, all columns at `—`), two dossiers + two study guides, the four after-write checkers plus crossrefs, two calendar rows of DIFFERENT types (Digital Realty is a listed REIT and gets a researched `nextReport` row; CyrusOne is private and gets `cadence: "quarterly"`), README tree entries, flip both §8 rows and rewrite the §5 C8 row with per-clause verdicts. BUDGET THE SESSION AROUND STEP 7: the greps return 15 files for `\bDigital Realty\b` and 10 for `\bCyrusOne\b`, a union of TWENTY dossiers with EIGHTEEN substantive — twice C5's and C6's tail and the largest in the program. Unlike C7 there is no false-positive class, so the filtering is "career history versus substantive claim". "(13 dossiers)" is already refuted (15), and "KKR/GIP-owned" is stale — GIP has been part of BlackRock since October 2024, as three dossiers already record. The clause that needs real testing is the superlative "the largest missing AIDC landlord": test it against megawatts, revenue or a published ranking, and if none exists report that the way C7 reported the absent PCS ranking. The guides must reach past the nine colocation guides already in the library — the unclaimed gap is the money layer (what a REIT is, funds from operations versus earnings, how a stabilised asset is valued and financed, churn and mark-to-market on renewal, and what a take-private changes). CHANGELOG goes 98 → 99, so C8 does not rotate but C9 will. One push commit.** The paste-in prompt was handed over in this session's chat; the §7 template regenerates it.
-**To continue:** type `run Phase C session C8 on Opus 5 xhigh`
+Developed by: LightAISolutions
