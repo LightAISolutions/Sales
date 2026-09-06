@@ -24,7 +24,7 @@
     "Google credit support totals $3.2B at Lake Mariner (plus $1.3B at the exited Abernathy JV) in exchange for warrants — ~73.5M shares at $0.01, ~14% pro forma",
     "102 MW energized at Lake Mariner as of July 2026; 438 contracted MW targeted energized by 1H 2027"
    ],
-   "positioning": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+   "positioning": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
    "soldThrough": "Long-term triple/modified-gross leases to AI clouds and labs; project-level debt (WULF Compute LLC $3.2B 7.75% notes) secured by the leases.",
    "targetSegments": [
     "AI-cloud intermediaries (Fluidstack, Core42)",
@@ -160,7 +160,7 @@
    "slug": "iren",
    "type": "competitor",
    "note": "Miner-pivot cohort rival — TeraWulf leads on contracted backlog.",
-   "context": "TeraWulf leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) against Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B and IREN's $9.7B Microsoft deal — Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+   "context": "TeraWulf leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) against Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B and IREN's $9.7B Microsoft deal — Bernstein tags WULF and Cipher the 'power landlords of AI'.",
    "source": "Miner-pivot cohort backlog comparison (Q2 2026 deck)",
    "status": "active"
   },
@@ -179,14 +179,6 @@
    "context": "Applied Digital's ~$11B contracted book (CoreWeave leases at Polaris Forge) sits beside TeraWulf's in the miner-pivot cohort — competing for the same AI-tenant demand, capital-markets capacity, and power-site scarcity.",
    "source": "Miner-pivot cohort backlog comparison (Q2 2026 deck)",
    "status": "active"
-  },
-  {
-   "slug": "cipher-mining",
-   "type": "competitor",
-   "status": "active",
-   "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
-   "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm"
   }
  ],
  "technicalSpecs": [
@@ -414,11 +406,6 @@
  },
  "sources": [
   {
-   "label": "Cipher Digital Q2 2026 Business Update presentation (8-K Ex-99.2) — ~$11.4bn contracted revenue across 700 MW",
-   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
-   "date": "2026-08-04"
-  },
-  {
    "label": "TeraWulf Q2 2026 results",
    "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
    "date": "2026-08-05"
@@ -556,6 +543,6 @@
    "date": "2024-10-03"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 6
 }

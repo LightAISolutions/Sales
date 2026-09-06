@@ -115,6 +115,14 @@
       ]
     },
     {
+      "slug": "agency-trading",
+      "term": "agency trading",
+      "def": "Executing a customer's order in the market for a fee, without taking ownership or price risk. Revenue is a commission rather than a spread, and it does not consume balance-sheet capacity.",
+      "aliases": [
+        "agency"
+      ]
+    },
+    {
       "slug": "agm",
       "term": "AGM",
       "def": "Absorbent glass mat: the construction that made lead-acid sealed. The electrolyte is held in a glass-fibre mat between the plates and the oxygen made at one plate recombines at the other instead of escaping, so the cell never needs topping up.",
@@ -170,6 +178,14 @@
         "Title V",
         "PSD review",
         "air-quality permit"
+      ]
+    },
+    {
+      "slug": "all-in-cost-to-mine",
+      "term": "all-in cost to mine",
+      "def": "Everything spent to produce one bitcoin — electricity, hosting fees, staff, depreciation of the machines, and corporate overhead. Companies often quote only the electricity part, which can be less than half the true figure.",
+      "aliases": [
+        "cost to mine"
       ]
     },
     {
@@ -360,11 +376,27 @@
       ]
     },
     {
+      "slug": "asic",
+      "term": "ASIC",
+      "def": "An application-specific integrated circuit — a chip built to do exactly one job and nothing else. Bitcoin mining ASICs compute SHA-256 hashes thousands of times more efficiently than a general-purpose processor, and are worthless for anything else, which is why a mining fleet cannot be repurposed for AI.",
+      "aliases": [
+        "application-specific integrated circuit"
+      ]
+    },
+    {
       "slug": "asset-manager",
       "term": "asset manager",
       "def": "A firm that invests other people's money — pension funds, insurers, sovereign funds — through funds it manages for a fee. Goldman Sachs Asset Management is the arm of the bank that runs such funds; when it 'owns' GridStor, the owners are really the fund's investors.",
       "aliases": [
         "GSAM"
+      ]
+    },
+    {
+      "slug": "assets-under-management",
+      "term": "assets under management",
+      "def": "The market value of the money a firm invests on other people's behalf. It is the base that management fees are charged on, so it drives fee revenue directly — but it is not the firm's own money and does not sit on its balance sheet.",
+      "aliases": [
+        "AUM"
       ]
     },
     {
@@ -562,6 +594,15 @@
       ]
     },
     {
+      "slug": "bid-ask-spread",
+      "term": "bid-ask spread",
+      "def": "The gap between the highest price a buyer will pay and the lowest a seller will accept. It is a market maker's gross margin per trade and a rough measure of how liquid an asset is.",
+      "aliases": [
+        "bid-offer spread",
+        "spread"
+      ]
+    },
+    {
       "slug": "bipolar-device",
       "term": "bipolar device",
       "def": "A switch that floods its drift region with both kinds of charge carrier to conduct, like an IGBT. The flooding gives a low voltage drop at high current regardless of rating, but the stored charge has to be removed at turn-off, which costs time and energy.",
@@ -569,6 +610,15 @@
         "bipolar",
         "minority carrier device",
         "conductivity modulation"
+      ]
+    },
+    {
+      "slug": "bitcoin-fair-value-accounting",
+      "term": "bitcoin fair value accounting",
+      "def": "The rule (effective for 2025 reporting) requiring companies to carry the bitcoin they hold at market value and run every price move through the income statement. It makes reported profit swing with the bitcoin price regardless of how the operating business performed.",
+      "aliases": [
+        "ASU 2023-08",
+        "crypto fair value accounting"
       ]
     },
     {
@@ -590,6 +640,12 @@
         "100% block load",
         "load step"
       ]
+    },
+    {
+      "slug": "block-subsidy",
+      "term": "block subsidy",
+      "def": "The newly created bitcoin awarded to whoever mines a block, as distinct from the transaction fees paid by users in the same block. The subsidy is the larger part of miner revenue today and is what the halving cuts.",
+      "aliases": []
     },
     {
       "slug": "blowdown",
@@ -1220,6 +1276,15 @@
       ]
     },
     {
+      "slug": "collateralised-lending",
+      "term": "collateralised lending",
+      "def": "Lending against assets pledged as security, sized so the collateral is worth more than the loan. In volatile markets the margin of safety has to be large and topped up as prices move, or the lender liquidates.",
+      "aliases": [
+        "secured lending",
+        "collateralized lending"
+      ]
+    },
+    {
       "slug": "colocation",
       "term": "colocation",
       "def": "Data-center space, power, and cooling leased to tenants who bring their own IT equipment. Colocation providers are the landlords of the AI buildout.",
@@ -1452,6 +1517,12 @@
         "contracted backlog",
         "contracted megawatts"
       ]
+    },
+    {
+      "slug": "contracted-revenue",
+      "term": "contracted revenue",
+      "def": "The sum of payments a tenant is contractually obliged to make over a lease's term. It is a revenue figure spread across many years, not a valuation and not cash received, and it is only as good as the tenant's ability to pay.",
+      "aliases": []
     },
     {
       "slug": "conversion-efficiency",
@@ -1999,6 +2070,14 @@
       ]
     },
     {
+      "slug": "demand-response-revenue",
+      "term": "demand response revenue",
+      "def": "Money a large electricity consumer earns for agreeing to switch off when the grid is short. For a flexible load like a mining fleet this can be worth more than the output forgone, which turns curtailment from a cost into a product.",
+      "aliases": [
+        "demand response payments"
+      ]
+    },
+    {
       "slug": "derating",
       "term": "derating",
       "def": "Operating equipment below its nameplate rating because real conditions — ambient temperature, altitude, state of charge, or age — do not match the conditions the rating assumed. A specification read as a guaranteed operating number rather than a rated one is one of the most common sources of a capacity shortfall that presents as an equipment fault.",
@@ -2132,6 +2211,23 @@
         "DPF",
         "particulate filter",
         "soot filter"
+      ]
+    },
+    {
+      "slug": "difficulty-retarget",
+      "term": "difficulty retarget",
+      "def": "The recalculation of network difficulty that happens every 2,016 blocks — about every two weeks. It is the mechanism that turns every rival's new machine into a direct cut in your own revenue, without any price moving.",
+      "aliases": [
+        "retarget"
+      ]
+    },
+    {
+      "slug": "digital-asset",
+      "term": "digital asset",
+      "def": "A blockchain-recorded claim of value — a cryptocurrency, a token, or a tokenised version of a conventional asset. Regulators differ on whether particular ones are securities, commodities or something else, which is the source of most of the sector's legal uncertainty.",
+      "aliases": [
+        "crypto asset",
+        "cryptocurrency"
       ]
     },
     {
@@ -2802,6 +2898,15 @@
       "def": "The heat exchanger where the refrigerant boils and takes heat out of the water being chilled. In a chiller it is where the useful cooling actually happens."
     },
     {
+      "slug": "exahash",
+      "term": "exahash",
+      "def": "One quintillion (10^18) hash attempts. Fleet sizes are quoted in exahashes per second (EH/s); a single modern mining machine contributes a few hundred terahashes per second, so an exahash is thousands of machines.",
+      "aliases": [
+        "exahashes",
+        "EH"
+      ]
+    },
+    {
       "slug": "excitation",
       "term": "excitation",
       "aliases": [
@@ -3107,6 +3212,14 @@
       "aliases": [
         "flame flashback",
         "flame holding"
+      ]
+    },
+    {
+      "slug": "fleet-stranding",
+      "term": "fleet stranding",
+      "def": "The point at which mining machines stop covering even their electricity cost, so running them destroys value and switching them off costs nothing. Difficulty only ever ratchets up and the halving only ever cuts revenue, so stranding is a scheduled outcome rather than a risk.",
+      "aliases": [
+        "stranded fleet"
       ]
     },
     {
@@ -3566,6 +3679,15 @@
       ]
     },
     {
+      "slug": "halving",
+      "term": "halving",
+      "def": "A scheduled event, roughly every four years, that cuts the new bitcoin paid to miners per block in half. It is a step change in industry revenue with no offsetting change in cost, so it forces the least efficient capacity out.",
+      "aliases": [
+        "the halving",
+        "halvening"
+      ]
+    },
+    {
       "slug": "harmonics",
       "term": "harmonics",
       "def": "Distortion added to a clean AC waveform by loads that draw current in gulps rather than smoothly — rectifiers, drives, server power supplies. Harmonics overheat transformers and neutral conductors, nuisance-trip breakers, and distort the voltage other equipment sees; total harmonic distortion (THD) is the score, and under 5% is the common target.",
@@ -3582,6 +3704,24 @@
       "aliases": [
         "harvest",
         "harvesting"
+      ]
+    },
+    {
+      "slug": "hashprice",
+      "term": "hashprice",
+      "def": "Mining revenue per unit of computing power per day — typically dollars per petahash per second per day. It bundles the bitcoin price, network difficulty and transaction fees into one number, and it is the single figure that decides whether a machine earns more than the electricity it burns.",
+      "aliases": [
+        "hash price"
+      ]
+    },
+    {
+      "slug": "hashrate",
+      "term": "hashrate",
+      "def": "How many hash guesses a machine, a fleet or the whole network makes per second. Measured in terahashes (TH/s, a trillion per second) and exahashes (EH/s, a million million million per second). A miner's share of total network hashrate is roughly its share of the rewards.",
+      "aliases": [
+        "hash rate",
+        "EH/s",
+        "TH/s"
       ]
     },
     {
@@ -4263,6 +4403,15 @@
       ]
     },
     {
+      "slug": "joules-per-terahash",
+      "term": "joules per terahash",
+      "def": "The efficiency rating of a mining machine: how much energy it spends per trillion hash attempts. Lower is better. Because every miner sells the same product at the same price, this number and the price of electricity are almost the whole of a miner's competitive position.",
+      "aliases": [
+        "J/TH",
+        "joules per terahash per second"
+      ]
+    },
+    {
       "slug": "just-transition",
       "term": "just transition",
       "def": "The policy of retiring coal plants on a schedule while funding the workers and communities that depended on them. Colorado wrote it into law in 2019 with a 2030 carbon target and a state office; it is why the state's resource plans pair a coal retirement date with a replacement build and a community package in the same decision.",
@@ -4632,6 +4781,14 @@
       ]
     },
     {
+      "slug": "loan-to-value",
+      "term": "loan-to-value",
+      "def": "A loan's size as a percentage of the collateral backing it. A 50% loan-to-value means the collateral could halve before the lender is exposed — the standard measure of how much cushion a secured loan has.",
+      "aliases": [
+        "LTV"
+      ]
+    },
+    {
       "slug": "lockbox-account",
       "term": "lockbox account",
       "def": "A bank account controlled by lenders into which a tenant's rent is paid before anyone else can touch it. It turns a lease into collateral: the cash flow is captured at source rather than promised.",
@@ -4751,6 +4908,14 @@
       "slug": "mark-to-market",
       "term": "mark-to-market",
       "def": "Restating an open contract at today's market price so that unrealised gains and losses appear in the accounts immediately. It makes a hedged generator's reported earnings swing with prices even when the underlying physical business has not changed."
+    },
+    {
+      "slug": "market-making",
+      "term": "market making",
+      "def": "Quoting a price to buy and a price to sell the same asset continuously, and earning the difference. The market maker supplies liquidity and takes inventory risk; it does not need the price to go up to make money.",
+      "aliases": [
+        "market maker"
+      ]
     },
     {
       "slug": "mass-grading",
@@ -5105,6 +5270,15 @@
       ]
     },
     {
+      "slug": "net-asset-value",
+      "term": "net asset value",
+      "def": "What a firm's assets are worth after subtracting what it owes. For a trading and investing business it is the most meaningful measure of size, because revenue can be enormous while the capital at risk is small, or the reverse.",
+      "aliases": [
+        "NAV",
+        "book value"
+      ]
+    },
+    {
       "slug": "net-lease",
       "term": "net lease",
       "def": "A lease under which the tenant, not the landlord, pays the property's operating costs — taxes, insurance and maintenance. A triple-net lease passes all three, which makes the landlord's rent unusually predictable.",
@@ -5120,6 +5294,14 @@
         "short position"
       ],
       "def": "How much more electricity a company has committed to sell than it can produce, or the reverse, over a given period. Being long means owning output with no buyer yet; being short means owing power that has not been secured."
+    },
+    {
+      "slug": "network-difficulty",
+      "term": "network difficulty",
+      "def": "A number the bitcoin network adjusts so that blocks keep arriving about every ten minutes no matter how much hashrate joins or leaves. If total hashrate doubles, difficulty roughly doubles, and each machine's share of the rewards roughly halves.",
+      "aliases": [
+        "mining difficulty"
+      ]
     },
     {
       "slug": "neutron-cross-section",
@@ -5351,6 +5533,12 @@
         "break-before-make",
         "open-transition ATS"
       ]
+    },
+    {
+      "slug": "operating-lease",
+      "term": "operating lease",
+      "def": "A lease the landlord keeps on its own balance sheet as property, recognising rent evenly over the term. The building stays the landlord's asset and the tenant simply pays for use.",
+      "aliases": []
     },
     {
       "slug": "or-equal",
@@ -5960,6 +6148,15 @@
       ]
     },
     {
+      "slug": "principal-trading",
+      "term": "principal trading",
+      "def": "Trading with your own capital and balance sheet, taking the risk and the profit. Contrast with agency trading, where the firm executes a customer's order for a commission and never owns the asset.",
+      "aliases": [
+        "principal",
+        "proprietary trading"
+      ]
+    },
+    {
       "slug": "private-grid",
       "term": "private grid",
       "def": "A campus electrical system that generates, distributes and manages its own power behind the meter, buying from the public grid only as a supplement or reserve. It replicates generation and distribution; it still depends on the utility for any grid tie and on regulators for permits.",
@@ -6046,6 +6243,14 @@
       "slug": "promote-income",
       "term": "promote income",
       "def": "The performance fee a fund manager earns when a vehicle it manages beats an agreed return. For a landlord that manages third-party money it is real income, but it is lumpy and unrelated to how the buildings performed that quarter."
+    },
+    {
+      "slug": "proof-of-work",
+      "term": "proof of work",
+      "def": "A rule that makes adding a block to a blockchain expensive on purpose: computers race to find a number that, when hashed with the block's data, produces an output below a target. There is no shortcut — only guessing — so the work is a real cost that an attacker would also have to pay.",
+      "aliases": [
+        "PoW"
+      ]
     },
     {
       "slug": "prudence-review",
@@ -6350,6 +6555,15 @@
       "slug": "rectifier",
       "term": "rectifier",
       "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
+    },
+    {
+      "slug": "redomiciliation",
+      "term": "redomiciliation",
+      "def": "Moving a company's legal home from one country to another. It changes which regulator it reports to, which rules govern shareholders, and often which exchange it lists on — so filings from before and after the move are not directly comparable.",
+      "aliases": [
+        "redomestication",
+        "reorganisation of domicile"
+      ]
     },
     {
       "slug": "regulatory-asset",
@@ -6712,6 +6926,15 @@
       ]
     },
     {
+      "slug": "sales-type-lease",
+      "term": "sales-type lease",
+      "def": "A lease so long or so complete that accounting treats it as effectively selling the asset to the tenant: the landlord books a receivable and much of the profit up front instead of rent over time. Whether a data-centre lease qualifies changes the reported earnings profile enormously.",
+      "aliases": [
+        "finance lease",
+        "direct financing lease"
+      ]
+    },
+    {
       "slug": "same-store",
       "term": "same-store",
       "def": "A comparison limited to properties owned throughout both periods being compared, so growth is not flattered by acquisitions or new construction. Landlords often call it same-capital.",
@@ -6868,6 +7091,14 @@
       ]
     },
     {
+      "slug": "self-mining",
+      "term": "self-mining",
+      "def": "Operating mining machines you own, for your own account, and keeping the bitcoin. Contrast with hosting, where you sell power, space and operations to someone else who owns the machines and takes the price risk.",
+      "aliases": [
+        "self mining"
+      ]
+    },
+    {
       "slug": "self-perform",
       "term": "self-perform",
       "def": "Work a general contractor executes with its own directly employed craft workforce rather than subcontracting it. It buys schedule control and cost visibility on the scopes that drive the programme."
@@ -6954,6 +7185,14 @@
       "aliases": [
         "SF6-free",
         "clean air switchgear"
+      ]
+    },
+    {
+      "slug": "sha-256",
+      "term": "SHA-256",
+      "def": "The one-way hashing function bitcoin mining uses. It turns any input into a fixed 256-bit output that cannot be run backwards, so the only way to hit a target output is to try inputs until one works.",
+      "aliases": [
+        "SHA256"
       ]
     },
     {
@@ -7281,6 +7520,22 @@
         "stabilized",
         "stabilization",
         "stabilized building"
+      ]
+    },
+    {
+      "slug": "stablecoin",
+      "term": "stablecoin",
+      "def": "A digital asset designed to hold a fixed value, usually one US dollar, by holding reserves against every unit issued. The issuer earns interest on those reserves, which makes it a deposit-like business rather than a speculative one.",
+      "aliases": [
+        "stablecoins"
+      ]
+    },
+    {
+      "slug": "staking",
+      "term": "staking",
+      "def": "Locking up a proof-of-stake blockchain's tokens to help validate its transactions, in return for a share of newly issued tokens. A service provider can do this on customers' behalf and take a cut, which is fee revenue rather than a directional bet.",
+      "aliases": [
+        "staking-as-a-service"
       ]
     },
     {
@@ -7887,6 +8142,14 @@
       ]
     },
     {
+      "slug": "total-contract-value",
+      "term": "total contract value",
+      "def": "A headline number that may include optional renewal periods, pass-through costs or capacity not yet built. Because there is no accounting definition, two companies can quote very different figures for economically similar deals.",
+      "aliases": [
+        "TCV"
+      ]
+    },
+    {
       "slug": "total-facility-power",
       "term": "total facility power",
       "def": "Everything a campus draws for a tenant — the IT load plus cooling, distribution losses and building services. A rent quoted on total facility power must be divided by the PUE to compare with a rent quoted on critical IT load.",
@@ -7953,6 +8216,15 @@
       "aliases": [
         "TSA",
         "transmission security agreements"
+      ]
+    },
+    {
+      "slug": "treasury-company",
+      "term": "treasury company",
+      "def": "A listed company whose main purpose is to hold a digital asset on its balance sheet so that its shares act as a proxy for that asset. It raises equity or debt to buy more, and trades at a premium or discount to what it holds.",
+      "aliases": [
+        "digital asset treasury",
+        "DAT"
       ]
     },
     {

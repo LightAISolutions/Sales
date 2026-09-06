@@ -219,17 +219,6 @@
       "note": "AES Clean Energy is the developer-owner behind six of Amazon's named US renewable assets, including Bellefield.",
       "context": "The AES FY2025 10-K facility table names Amazon as the customer on Bellefield 1 (California, Solar 500 + Storage 500, 75% AES equity, COD 2025, contract to 2040), McFarland B (Arizona, Solar 300 + Storage 150, to 2043), Oak Ridge (Louisiana, Solar 200, to 2043), Delta (Mississippi, Wind 185, to 2043-44), Baldy Mesa (California, Solar 150 + Storage 75, to 2043) and Silver Peak (California, Solar 50 + Storage 25, to 2044). AES has never disclosed the Bellefield battery supplier, and the inference that it is Fluence rests only on the corporate stake, which the parent cut from 28% to 22% in May 2026.",
       "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000072/aes-2025annualreport.pdf"
-    },
-    {
-      "slug": "cipher-mining",
-      "type": "supplier",
-      "status": "active",
-      "since": "2025-10",
-      "scale": "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
-      "via": "Turnkey space and power for AI workloads in Texas",
-      "note": "Landlord on two Texas campuses leased to Amazon Data Services, with base rent and operating expenses guaranteed by Amazon.com, Inc.",
-      "context": "Cipher Digital Inc. (formerly Cipher Mining) leases two Texas campuses to Amazon: Black Pearl near Wink, Winkler County — about 300 MW gross on a 15-year base term for about USD 5.5bn, first capacity delivered 31 July 2026 — and Stingray at Andrews — 100 gross MW / 70 critical IT MW on a 15-year base term for about USD 2.0bn, with rent targeted from April and May 2027. Both carry three five-year extension options and a 3.0% annual escalator.\n\nThe credit terms are unusually explicit for this corpus. **Amazon.com, Inc., the public parent, fully guarantees all base rent and operating expenses on both leases.** At Stingray Amazon additionally agrees to cover construction cost overruns above USD 10.5m per critical IT MW and provides a parent completion guaranty, and the lease carries no termination for convenience after commencement. No other converted-miner landlord in this corpus holds a directly investment-grade-guaranteed tenancy.\n\nOne naming inconsistency, reported rather than reconciled: Cipher's FY2025 10-K names the Black Pearl counterparty 'Amazon Web Services, Inc.' while its June 2026 bond presentation names 'Amazon Data Services, Inc.' for both leases.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm"
     }
   ],
   "policyExposure": [
@@ -462,11 +451,6 @@
   },
   "sources": [
     {
-      "label": "Stingray Compute — June 2026 bond investor presentation (8-K Ex-99.1), naming Amazon Data Services, Inc. as tenant at both Cipher campuses",
-      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm",
-      "date": "2026-06-08"
-    },
-    {
       "label": "Flex — Form 8-K on the Amazon transaction agreement and warrant",
       "url": "https://www.sec.gov/Archives/edgar/data/866374/000110465925079795/tm2523681d1_8k.htm",
       "date": "2025-08-18",
@@ -581,5 +565,5 @@
     }
   ],
   "lastUpdated": "2026-09-06",
-  "profileVersion": 9
+  "profileVersion": 8
 }

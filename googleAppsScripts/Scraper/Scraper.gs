@@ -1,4 +1,4 @@
-var VERSION = "v02.00g";
+var VERSION = "v02.01g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -680,6 +680,9 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
   { key: 'topic-lighthouse', label: 'Project: Lighthouse (Vantage/Stargate — Port Washington, WI)',
     terms: ['Port Washington', 'Vantage Lighthouse', 'Stargate Wisconsin', 'Lighthouse campus'],
     source: 'project:lighthouse' },
+  { key: 'topic-river-bend-campus', label: 'Project: River Bend Campus (Hut 8/Fluidstack — West Feliciana Parish, LA)',
+    terms: ['Hut 8 River Bend', 'River Bend campus', 'River Bend data center'],
+    source: 'project:river-bend-campus' },
   { key: 'topic-stargate', label: 'Project: Stargate (OpenAI/Oracle/SoftBank program)',
     terms: ['Stargate', 'Abilene', 'Lancium Clean Campus'],
     source: 'project:stargate' },

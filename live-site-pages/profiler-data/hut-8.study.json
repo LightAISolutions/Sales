@@ -1,0 +1,413 @@
+{
+ "schemaVersion": 2,
+ "slug": "hut-8",
+ "title": "Hut 8 — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: where the company ends",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The **Cipher Digital** guide in this library teaches the economics that force a bitcoin miner to become a landlord. Read it first if you have not. Five further guides — TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe — teach what the landlord business then looks like.",
+    "This guide takes the layer none of them covers: **the boundary of the reporting entity**. Hut 8 is the corpus's clearest case of a company whose economics sit in four different places, only one of which is inside the income statement in the ordinary way. Its mining fleet belongs to a separately listed subsidiary it controls on 80% of the votes and about 54% of the economics. Its largest operating mining site is a 50/50 joint venture whose revenue never appears in its revenue line at all. Its two AI campuses sit inside ring-fenced subsidiaries whose USD 7.5bn of debt has no recourse to the parent. And its bitcoin is carried at market, so the reported bottom line moves with a price rather than with a business.",
+    "**The question this guide answers is: when you read a consolidated income statement, what exactly are you looking at?** That turns out to be four separate accounting decisions — consolidation, the equity method, non-recourse ring-fencing and fair-value measurement — each of which puts real economics somewhere a casual reader will not find it.",
+    "High-school arithmetic is enough. No accounting background is assumed; every term is built up from first principles."
+   ]
+  },
+  {
+   "id": "consolidation-line",
+   "title": "The consolidation line: control, not ownership",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Accounting draws a single hard line: if you **control** another company, you add 100% of its revenue, costs and assets to your own, then subtract the share of profit belonging to everyone else on one line near the bottom called the {{minority interest}}. If you do not control it, you do something else entirely.",
+    "Control is normally about votes, not economics — and those can be separated. Hut 8 contributed its mining fleet to **American Bitcoin Corp.** in March 2025 in exchange for Class B shares carrying **10,000 votes each**. That gives it **80.0% of the voting power** and therefore consolidation. Its **economic** interest is a different number: **55.30% at 31 March 2026** and about **54%** by the August 2026 earnings call, because American Bitcoin has issued its own equity — including a USD 110.5m at-the-market programme in one quarter — which dilutes the economics while leaving the super-voting stock untouched.",
+    "**So a reader sees 100% of American Bitcoin's revenue in Hut 8's revenue line, and roughly 46% of its losses handed back on the noncontrolling-interest line.** In Q2 2026 that mechanism moved USD 27.0m: a consolidated net loss of USD 177.1m became USD 150.2m attributable to Hut 8.",
+    "The widely repeated statement that 'Hut 8 owns 80% of American Bitcoin' is therefore **true about votes and wrong about money**, and the gap is widening every time the subsidiary raises equity. This is the single most common error made about this company.",
+    "**Why would you structure it this way?** Control without proportionate economics lets you keep strategic direction while other people fund the growth. The cost is that consolidated revenue overstates what accrues to your shareholders, and a reader who compares Hut 8's revenue with a peer's is comparing a partly-owned business with a wholly-owned one."
+   ]
+  },
+  {
+   "id": "equity-method",
+   "title": "The other side of the line: revenue that is not revenue",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Below control, accounting switches to the **equity method**. You do not add any of the other company's revenue or costs. You carry your stake as a single asset and take your share of its profit as a single line, usually near the bottom of the income statement.",
+    "Hut 8's **King Mountain** is the case to study: 280 MW in McCamey, Texas, held **50%** through TZRC LLC, which the filings describe as 'a two-member operating joint venture where both members jointly control the essential areas'. Joint control is not control, so King Mountain is equity-method.",
+    "The consequence is stark. King Mountain generated **USD 57.3m of colocation revenue in FY2025** and about USD 27.0m in Q2 2026 alone — and **none of it appears in Hut 8's revenue line**. It arrives as USD 8.7m of 'Equity in earnings of unconsolidated joint venture', net of that venture's own costs and depreciation, dozens of lines further down.",
+    "Now put the two together. King Mountain at 280 MW is **larger than any site Hut 8 consolidates** except Vega, and it is Hut 8's only third-party managed-services site. A reader who measures the business by its revenue line is measuring a company that excludes its second-biggest operating asset and includes all of a subsidiary it half owns.",
+    "**The general lesson**: revenue is not a measure of activity. It is a measure of activity *inside a boundary drawn by control tests*. Two companies with identical assets and identical profits can report revenue that differs by a factor of two purely because one owns 50% of something and the other owns 51%."
+   ]
+  },
+  {
+   "id": "four-treatments",
+   "title": "The same economics, four places",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "This is the practical core of the guide. Each row is a real Hut 8 arrangement; the columns show where a reader has to look to find it. Nothing here is unusual accounting — all four treatments are ordinary and correct. The point is that they scatter one company's economics across four parts of the report.",
+   "cols": [
+    "Arrangement",
+    "Treatment",
+    "Where the revenue appears",
+    "What a reader must remember"
+   ],
+   "rows": [
+    [
+     "American Bitcoin (80.0% of votes, ~54% of economics)",
+     "**Consolidation** with a {{minority interest}}",
+     "100% in revenue and costs; the other ~46% of the result removed on one line",
+     "Revenue overstates what accrues to Hut 8 shareholders. Watch the NCI line — USD 27.0m in Q2 2026."
+    ],
+    [
+     "King Mountain (50%, joint control)",
+     "**Equity method**",
+     "**Nowhere in revenue.** One net line: 'Equity in earnings of unconsolidated joint venture'",
+     "USD 57.3m of FY2025 colocation revenue is invisible above the line. The site is 280 MW — bigger than most that are consolidated."
+    ],
+    [
+     "River Bend and Beacon Point (wholly owned, ring-fenced)",
+     "**Consolidation**, but the debt is **non-recourse** to the parent",
+     "Nothing yet — no rent has commenced",
+     "USD 7.5bn of project notes sit on the consolidated balance sheet while being legally unreachable from the parent. Consolidated leverage overstates parent risk."
+    ],
+    [
+     "Bitcoin held",
+     "**{{bitcoin fair value accounting}}** at market",
+     "Not revenue — a gain or loss inside operating expenses",
+     "FY2025's USD 220.0m loss and FY2024's USD 509.3m gain are the largest single items in both years, with no operating cause."
+    ],
+    [
+     "Far North (80.1%, sold Feb 2026)",
+     "Consolidated, then **derecognised**",
+     "Power revenue fell from USD 56.6m to USD 23.2m",
+     "A revenue decline that is a disposal, not a deterioration. Energy capacity under management fell 1,020 MW → 710 MW for the same reason."
+    ]
+   ]
+  },
+  {
+   "id": "fair-value",
+   "title": "Why the bottom line is a price chart",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Until recently a company holding bitcoin carried it at the **lower** of cost and market: write it down when the price fell, never write it back up. That was widely criticised as showing only bad news. The rule that replaced it requires **fair value** — carry the holding at market and run every movement, up and down, through the income statement.",
+    "The fix created a different problem. **A treasury holding now dominates the earnings of the operating business it sits beside.** Hut 8's FY2024 profit of USD 331.4m contains a USD 509.3m gain on digital assets; its FY2025 loss of USD 248.0m contains a USD 220.0m loss. That is a **USD 729m swing in one line item across two years, with no operating cause whatsoever** — the mining, hosting and power businesses did not do anything that produced it.",
+    "Q1 2026 shows it at quarterly resolution: revenue more than tripled year on year to USD 71.0m while the reported loss roughly doubled to USD 253.1m, of which USD 295.7m was primarily unrealised digital-asset losses. **The operating business grew and the reported result got much worse.**",
+    "**Now watch what a company can do about it.** Hut 8's definition of adjusted EBITDA in force through Q1 2026 contained **no add-back for the digital-asset mark**, so that measure absorbed all of it: USD (135.4)m for FY2025 and USD (250.5)m for Q1 2026. From Q2 2026 the company revised the definition to exclude the mark and now publishes both — USD 10.4m for the quarter on the new basis against USD (94.6)m on the old, with prior periods recast.",
+    "Neither definition is wrong. But adjusted EBITDA is a **non-GAAP measure the company defines itself**, and this is a clean worked example of what that means: the same quarter, the same cash, two published numbers 105 million dollars apart. **Any comparison of Hut 8's adjusted EBITDA across the August 2026 boundary is invalid unless both figures are on the same definition.**"
+   ]
+  },
+  {
+   "id": "ringfence",
+   "title": "Ring-fencing: how a pre-revenue building borrows at investment grade",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Hut 8 has raised about **USD 7.5bn** against two campuses that have not delivered a megawatt, and carries about **USD 159.3m** of recourse debt at the parent against roughly USD 1.3bn of cash and bitcoin. Understanding how is the second technical core of this guide.",
+    "The structure is **non-recourse project finance**. The campus is put inside a subsidiary that owns the asset, holds the lease and issues the debt. Lenders take security over that subsidiary and its assets and **have no claim on the parent** if it fails. In exchange they get first call on the rent.",
+    "The rating then depends on the **rent**, not the borrower. River Bend's USD 3.25bn notes carry a **6.192%** coupon, mature in 2042 and are rated **BBB- by both S&P and Fitch** — investment grade, on a building under construction, because the tenant's rent is backstopped by Google with a springing Alphabet guarantee. Fitch's published minimum debt service coverage ratio of **1.31x** is the arithmetic: rent covers debt service 1.31 times at the worst modelled point.",
+    "Three terms do the work. **Loan-to-cost** caps borrowing as a share of build cost — up to 85% at River Bend, so equity funds the rest. **{{DSCR}}** measures rent against debt service, with covenants that bite if it falls. And a **completion guarantee** from the parent obliges it to fund whatever is needed to reach rent commencement — the one place recourse deliberately survives, because lenders will not take construction risk on a shell company.",
+    "**Read the direction of the protection carefully.** Ring-fencing protects the parent from the project, so consolidated leverage of USD 7.5bn overstates what Hut 8 shareholders are exposed to. It also protects the project from the parent, which is why the notes can be rated above whatever the parent would achieve. Compare Cipher, which uses the same structures for its campuses but carries USD 1.47bn of convertible notes **at the parent** that depend on corporate liquidity rather than lease cash flow — the same asset-level model, a materially different group-level risk."
+   ]
+  },
+  {
+   "id": "price-of-credit",
+   "title": "What credit support costs, and how to price it",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "A landlord with a thin-credit tenant needs someone stronger to stand behind the rent. Three companies in this corpus bought the same service from the same guarantor for the same tenant — and paid three different prices. That comparison is the cleanest available lesson in what credit enhancement is worth.",
+   "cards": [
+    {
+     "t": "What a Google backstop costs, across three landlords",
+     "meta": "The same guarantor, the same tenant, the same service — priced three different ways in equity, and a fourth data point from a landlord that bought none",
+     "adv": [
+      "**Hut 8 paid nothing in equity.** Google backstops the River Bend rent and pass-through obligations with a springing Alphabet guarantee, and took **no warrants and no equity**. An analyst covering the transaction named exactly that — full economic ownership retained 'without warrants or equity sweeteners that have shown up in other deals' — as its distinguishing feature.",
+      "**The backstop still bought the rating.** BBB-, 6.192%, on a pre-construction asset.",
+      "**Cipher paid about 5.4% of itself** — penny warrants over 24,178,576 shares with a USD 430m value floor — for a USD 1.73bn backstop, and issued its notes at 7.125%.",
+      "**TeraWulf paid about 14%** for backstops of roughly USD 4.5bn.",
+      "**The unenhanced comparison completes the scale.** Galaxy Digital's Helios notes, behind a single unrated tenant with no disclosed backstop, priced at **9.875%** — about 370 basis points above Hut 8's."
+     ],
+     "dis": [
+      "**A backstop is not a guarantee of the whole lease.** Cipher's USD 1.73bn covers roughly 46% of about USD 3.8bn of contracted revenue.",
+      "**Guarantees usually start late.** Cipher's 10-K states its tenant guarantees are 'only effective following the rent commencement date' and that a delayed completion may let a tenant terminate 'and such termination events would not trigger the tenants' guarantee either' — precisely the period a construction lender is exposed to.",
+      "**Caps and default triggers apply**, so the headline support figure is an upper bound.",
+      "**The guarantor is doing this for its own reasons.** Google's backstops across this cohort exceed USD 5bn and sit off Alphabet's balance sheet; the tenant they support is buying compute for a frontier lab Google also invests in. A reader should not treat the support as disinterested.",
+      "**And termination rights survive it.** Hut 8's own 10-K discloses that the River Bend lease 'provides the customer with certain termination rights, including in connection with certain breaches of the lease or power contract, casualty events, or other circumstances beyond our control'."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "who-is-the-tenant",
+   "title": "Reading a lease when the tenant is not named",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Hut 8's largest asset is let to a company it has never named. Beacon Point's two leases — 704 MW of {{critical IT load}} and USD 19.6bn of base-term contract value — go to a counterparty described only as **'a high-investment-grade company (i.e., rated AA- or higher)'**. The chief executive explained that naming Anthropic and Fluidstack at River Bend had created 'unnecessary eyeballs' and competitive friction.",
+    "**What can a reader actually conclude?** The rating band is the useful part: AA- or higher is a very small set of companies, and it is a contractual representation in an SEC-filed document rather than marketing. That is enough to underwrite the rent without knowing the name.",
+    "**What a reader cannot conclude** is anything about concentration across the tenant's other commitments, about whether this tenant also leases from Hut 8's competitors, or about how the capacity will be used. Those are the questions a name would answer.",
+    "**Contrast the River Bend chain**, which is named in full and is more complicated for it: Hut 8 is landlord, a **Fluidstack** subsidiary is the tenant, **Google** backstops the rent, and **Anthropic** is the end user under a separate partnership and **is not a party to the lease at all**. Hut 8 issued two press releases on the same day precisely to keep those apart. A reader who collapses that into 'Hut 8 leased to Anthropic' has lost the credit structure, which is the only part that matters if the compute demand disappoints.",
+    "**The general skill**: in this sector the counterparty of record, the credit support and the end user are frequently three different companies. Always ask which one a headline is naming."
+   ]
+  },
+  {
+   "id": "hut8-clock",
+   "title": "Hut 8 on one clock",
+   "kind": "timeline",
+   "read": "5 min",
+   "unit": "calendar year",
+   "intro": "Years across the bottom. The upper lane is what the company owns and operates; the lower lane is how it is funded. Watch how completely the two swap places between 2024 and 2026.",
+   "lanes": {
+    "own": "Assets and operations",
+    "cap": "Funding and structure"
+   },
+   "items": [
+    {
+     "x": 2023,
+     "lane": "own",
+     "label": "Hut 8 Mining and US Bitcoin Corp merge",
+     "sub": "Hut 8 Corp. formed November 2023; Delaware, Nasdaq and TSX"
+    },
+    {
+     "x": 2024,
+     "lane": "own",
+     "label": "Buys four Ontario gas plants (310 MW) with Macquarie",
+     "sub": "Court-approved stalking-horse bid; USD 3.1m gain on bargain purchase"
+    },
+    {
+     "x": 2024,
+     "lane": "own",
+     "label": "Drumheller closed; Salt Creek built",
+     "sub": "42 MW switched off in Alberta; a Culberson County substation becomes a Texas site"
+    },
+    {
+     "x": 2024,
+     "lane": "cap",
+     "label": "Short report; shares fall 23%",
+     "sub": "Class action later narrowed at summary judgment and settled for USD 2.35m in June 2026"
+    },
+    {
+     "x": 2024,
+     "lane": "cap",
+     "label": "USD 150m convertible from Coatue",
+     "sub": "Later converted into 9.7m shares, eliminating parent recourse debt"
+    },
+    {
+     "x": 2025,
+     "lane": "own",
+     "label": "Mining fleet contributed to American Bitcoin",
+     "sub": "80% of votes for ~USD 120m of equipment; economics since diluted to ~54%"
+    },
+    {
+     "x": 2025,
+     "lane": "own",
+     "label": "Vega energised — 205 MW, ~15 EH/s",
+     "sub": "About USD 455,000 per MW, under a year from acquisition"
+    },
+    {
+     "x": 2025,
+     "lane": "own",
+     "label": "River Bend: 245 MW leased to Fluidstack for USD 7.0bn",
+     "sub": "Google backstops the rent; Anthropic named separately as end user"
+    },
+    {
+     "x": 2026,
+     "lane": "own",
+     "label": "Ontario gas fleet sold to TransAlta",
+     "sub": "USD 34.7m gain; owned generation goes to zero"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "USD 3.25bn River Bend notes at 6.192%, rated BBB-",
+     "sub": "Investment grade on a building under construction"
+    },
+    {
+     "x": 2026,
+     "lane": "own",
+     "label": "Beacon Point fully let — two 352 MW leases, USD 19.6bn",
+     "sub": "One unnamed AA- or better tenant; campus 704 MW critical IT"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "USD 4.25bn Beacon Point notes",
+     "sub": "About USD 7.5bn of non-recourse project debt in six weeks"
+    },
+    {
+     "x": 2026,
+     "lane": "cap",
+     "label": "Adjusted EBITDA redefined to exclude the bitcoin mark",
+     "sub": "Q2 2026: USD 10.4m on the new basis, USD (94.6)m on the old"
+    },
+    {
+     "x": 2027,
+     "lane": "own",
+     "label": "First revenue due",
+     "sub": "Beacon Point energisation Q1; River Bend first data hall Q2 — inside the ERCOT audit window"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Ring-fencing is not magic, and completion guarantees are the seam.** Non-recourse debt stops being non-recourse to the extent the parent has promised to fund completion. Hut 8's parent gave completion support at River Bend, and Galaxy's parent gave an *uncapped* one at Helios. Before treating project debt as someone else's problem, find the completion guarantee and read its limits.",
+    "**Consolidation percentages move.** Every share American Bitcoin issues dilutes Hut 8's economics while leaving the 80% voting control intact. A reader who anchors on a percentage from a filing six months old will be wrong, and wrong in a predictable direction.",
+    "**Non-GAAP definitions are the company's to change**, and this one changed mid-year with prior periods recast. Always check which definition a figure is on before comparing two of them.",
+    "**None of this teaches whether the leases are good.** The tenant at Beacon Point is unnamed, no rent has commenced anywhere, Beacon Point's Q1 2027 energisation sits inside a Texas regulatory audit due to report in December 2026, and the whole USD 26.6bn is 2027-and-beyond revenue against a company whose trailing revenue is about USD 318m. This guide teaches you where to look, not what you will find."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What determines whether one company consolidates another, and why can that differ from how much of it they own?",
+     "a": "Control, normally measured by votes. Super-voting share classes separate the two: Hut 8 holds 80.0% of American Bitcoin's voting power through Class B shares carrying 10,000 votes each, but only about 54% of the economics."
+    },
+    {
+     "q": "Hut 8 consolidates American Bitcoin. Where does the ~46% it does not own show up?",
+     "a": "On the {{minority interest}} line, which removes that share of the result near the bottom of the income statement. In Q2 2026 it moved USD 27.0m — a consolidated loss of USD 177.1m became USD 150.2m attributable to Hut 8."
+    },
+    {
+     "q": "King Mountain generated USD 57.3m of colocation revenue in FY2025. Why does none of it appear in Hut 8's revenue?",
+     "a": "Because the 50% joint venture is jointly controlled, not controlled, so it is equity-method. Hut 8 reports one net line — USD 8.7m of 'Equity in earnings of unconsolidated joint venture' — instead of any revenue or cost."
+    },
+    {
+     "q": "Explain the USD 729m swing between Hut 8's FY2024 and FY2025 results.",
+     "a": "{{bitcoin fair value accounting}}. FY2024 carried a USD 509.3m gain on digital assets and FY2025 a USD 220.0m loss. Neither has an operating cause; the holding is carried at market and every move runs through the income statement."
+    },
+    {
+     "q": "How can a data centre that has not delivered a megawatt borrow at investment grade?",
+     "a": "Non-recourse project finance. The campus, lease and debt sit in a ring-fenced subsidiary, so the rating depends on the rent rather than the borrower. River Bend's rent is Google-backstopped, giving BBB- at 6.192% with a modelled minimum {{DSCR}} of 1.31x."
+    },
+    {
+     "q": "Define loan-to-cost, DSCR and a completion guarantee, and say which one preserves recourse to the parent.",
+     "a": "Loan-to-cost caps borrowing as a share of build cost (up to 85% at River Bend). DSCR measures rent against debt service. A completion guarantee obliges the parent to fund whatever is needed to reach rent commencement — and it is the one place recourse deliberately survives."
+    },
+    {
+     "q": "Three companies bought the same Google backstop for the same tenant. What did each pay?",
+     "a": "Hut 8 paid nothing in equity. Cipher gave penny warrants over about 5.4% of itself. TeraWulf gave about 14%. For contrast, Galaxy's unenhanced single-tenant notes priced at 9.875% against Hut 8's 6.192%."
+    },
+    {
+     "q": "Why is 'Hut 8 leased River Bend to Anthropic' wrong, and what is right?",
+     "a": "Hut 8 is landlord, a Fluidstack subsidiary is the tenant, Google backstops the rent, and Anthropic is the end user under a separate partnership announced the same day — not a party to the lease. The credit standing behind the rent is Google's, not Anthropic's."
+    },
+    {
+     "q": "A company changes its adjusted EBITDA definition and recasts prior periods. What must a reader do?",
+     "a": "Check which definition every figure is on before comparing any two. Hut 8's Q2 2026 is USD 10.4m excluding the bitcoin mark and USD (94.6)m including it — the same quarter, the same cash, USD 105m apart."
+    },
+    {
+     "q": "What can and cannot be concluded from a tenant described only as 'rated AA- or higher'?",
+     "a": "You can underwrite the rent: it is a contractual representation in an SEC-filed document, and the rating band is a very small set of companies. You cannot assess the tenant's concentration elsewhere, whether it also leases from competitors, or what the capacity is for."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A parent holds 80% of the votes and 54% of the economics of a listed subsidiary. Its consolidated revenue includes:",
+     "c": [
+      "54% of the subsidiary's revenue",
+      "80% of the subsidiary's revenue",
+      "100% of the subsidiary's revenue",
+      "None of it, because the subsidiary is separately listed"
+     ],
+     "a": 2,
+     "why": "Control triggers full consolidation. All of the subsidiary's revenue is added, and the ~46% of the result belonging to others is removed on the minority-interest line."
+    },
+    {
+     "q": "A 50/50 jointly controlled venture earns USD 57m of revenue. In the investor's accounts this appears as:",
+     "c": [
+      "USD 57m of revenue",
+      "USD 28.5m of revenue",
+      "One net line of equity earnings, with no revenue at all",
+      "Nothing until it is sold"
+     ],
+     "a": 2,
+     "why": "Joint control is not control, so the equity method applies: a single net line, after the venture's own costs and depreciation. Revenue is a function of the consolidation boundary, not of activity."
+    },
+    {
+     "q": "A company's operating businesses grew but its reported loss doubled. The most likely cause in this sector is:",
+     "c": [
+      "Higher depreciation",
+      "A mark-to-market loss on a treasury holding",
+      "A goodwill impairment",
+      "Higher tax"
+     ],
+     "a": 1,
+     "why": "Fair-value accounting on bitcoin runs price moves through the income statement. Hut 8's Q1 2026 tripled revenue year on year and doubled the reported loss on USD 295.7m of primarily unrealised digital-asset losses."
+    },
+    {
+     "q": "Non-recourse project debt of USD 7.5bn sits on the consolidated balance sheet. Parent shareholders' exposure is:",
+     "c": [
+      "The full USD 7.5bn",
+      "Nothing at all",
+      "Less than USD 7.5bn, but not nothing — the completion guarantee survives",
+      "Only the interest"
+     ],
+     "a": 2,
+     "why": "Ring-fencing means lenders have no claim on the parent if the project fails — but completion guarantees oblige the parent to fund the project to rent commencement. That seam is where recourse deliberately survives."
+    },
+    {
+     "q": "Fitch publishes a minimum DSCR of 1.31x on a lease-backed bond. This means:",
+     "c": [
+      "The bond yields 1.31%",
+      "Rent covers debt service 1.31 times at the worst modelled point",
+      "The loan is 131% of cost",
+      "The tenant is rated 1.31 notches above investment grade"
+     ],
+     "a": 1,
+     "why": "Debt service coverage ratio is cash available for debt service divided by debt service. At 1.31x there is 31% of headroom before rent fails to cover the payments."
+    },
+    {
+     "q": "Google backstopped leases at three landlords. Which paid the most equity for it?",
+     "c": [
+      "Hut 8",
+      "Cipher Digital",
+      "TeraWulf",
+      "They all paid the same"
+     ],
+     "a": 2,
+     "why": "TeraWulf's warrants represent about 14% pro forma, Cipher's about 5.4%, and Hut 8 gave none. The same service, three prices — which is what makes this the cleanest available lesson in what credit enhancement is worth."
+    },
+    {
+     "q": "A landlord announces adjusted EBITDA of USD 10.4m for a quarter it previously would have reported as USD (94.6)m. What happened?",
+     "c": [
+      "The business improved by USD 105m",
+      "An accounting error was corrected",
+      "The company changed its own definition of the non-GAAP measure",
+      "A subsidiary was sold"
+     ],
+     "a": 2,
+     "why": "Adjusted EBITDA is not defined by any standard — the company sets it. Hut 8 revised its definition to exclude the digital-asset mark from Q2 2026 and recast prior periods, so figures published before and after that boundary are not comparable."
+    },
+    {
+     "q": "Which of these is Hut 8's second-largest operating site by capacity, and where does its revenue appear?",
+     "c": [
+      "Salt Creek — in revenue",
+      "King Mountain — in revenue",
+      "King Mountain — not in revenue, only in equity earnings",
+      "Medicine Hat — in revenue"
+     ],
+     "a": 2,
+     "why": "King Mountain is 280 MW, larger than everything except Vega's 205 MW among consolidated sites — and being a 50% jointly controlled venture, none of its revenue reaches the revenue line."
+    }
+   ]
+  }
+ ]
+}

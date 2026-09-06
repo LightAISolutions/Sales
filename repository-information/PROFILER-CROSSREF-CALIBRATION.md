@@ -974,5 +974,134 @@ calendar has no trailing newline** while every other file does, and
 seventeen step-7 revisions came to **8-20 changed lines each** rather than full
 rewrites.
 
+**C9 — 2026-09-06, v04.83r, Opus 5 xhigh.** Three `developer` dossiers — Cipher
+Digital Inc. (Nasdaq: CIFR, renamed from Cipher Mining in February 2026), Hut 8
+Corp. (Nasdaq: HUT) and Galaxy Digital Inc. (Nasdaq: GLXY) — and **the inverse of
+C8's shape**: a small inbound grep against a **large outbound edge set**. The three
+dossiers wrote **45 relationship entries across 24 distinct counterparties**, and
+**every one of the 24 is already a covered slug**, which is the first time in the
+program that a session's whole counterparty union was in-corpus. The checker exited
+0 on its first run against the written corpus with **0** findings: 0 reciprocal-type
+findings, **0** unregistered sources, **0** dangling slugs, **0** unregistered
+project pins. As in C6, C7 and C8, that is a pre-emit result rather than luck — the
+scratchpad validator was rebuilt before anything was written and enforced exact
+`sources[]` membership, reciprocal coherence against both the live corpus and the
+two sibling drafts, and the schema-v7 required-field set.
+
+| Disposition | Count | Detail |
+|-------------|-------|--------|
+| reciprocal-type · **accepted** | **0** | — |
+| reciprocal-type · **corrected** | **0** | Coherent by construction. The customer/supplier pairs: `cipher-mining`→`amazon` and →`fluidstack` `customer` against those dossiers' `supplier`; `cipher-mining`→`engie-north-america`/`aep`/`vistra`/`quanta-services` `supplier`; `hut-8`→`fluidstack` and →`anthropic` `customer` against `supplier`; `hut-8`→`entergy`/`aep`/`vertiv` `supplier`; `galaxy-digital`→`coreweave` `customer` against `supplier`. Symmetric `partner`: `hut-8`↔`google`, `galaxy-digital`↔`compass-datacenters`. Symmetric `competitor` across the whole converted-miner and landlord set — `cipher-mining`↔`hut-8`↔`galaxy-digital`, and each of the three against `terawulf`, `core-scientific`, `applied-digital`, `iren`, `crusoe`, `coreweave`, `digital-realty`, `equinix`, `vantage` and `aligned` as their dossiers carry them |
+| source disposition | **911 exact / 0 missing** | Corpus-wide after the writes: 911 exact URL matches, 146 label-only (allowed), 77 absent (allowed) |
+| project pins | **56 registered / 0 unregistered** | Up from 51: this session registered `river-bend-campus` and pinned it on five edges |
+
+**The `google` typing decision, and why no fifteenth accept entry was written.** The
+two Google edges in this session are the same commercial arrangement with materially
+different consideration, and the difference is the single most load-bearing fact
+across the three dossiers. Google backstopped Fluidstack's rent at Cipher's Barber
+Lake for **warrants worth about 5.4%** of Cipher, and at TeraWulf for **about 14%**;
+at Hut 8's River Bend it took **no warrants and no equity at all**. The dossiers
+therefore type them differently — `cipher-mining`→`google` as `investor`, matching
+the corpus's existing TeraWulf precedent for the identical warrant structure, and
+`hut-8`→`google` as `partner`. **`google` itself was left silent on both**, which is
+**C6's cheaper resolution** rather than C8's: a silent counterparty whose dossier
+makes no claim generates no finding, so no accept entry is needed, where writing a
+reciprocal `portfolio` edge into `google` would have hit the `investor` ↔ `portfolio`
+enum gap and required a **fifteenth** accept entry. The gap is therefore **still at
+six instances and gained no evidence either way**. **Accept-list state: 14 entries,
+unchanged** — C8 added none and C9 adds none.
+
+**First project registration by a dossier session, and one declined.** The named-pin
+question was weighed on both candidates rather than defaulted. **`river-bend-campus`
+was registered** in `profiler-projects.json` — schema slug disambiguated deliberately,
+because Entergy's **River Bend nuclear station is in the same parish** and the
+`entergy` dossier already carries both meanings of the phrase in one file — with the
+matching `project:river-bend-campus` seed added to `Scraper.gs` in the same commit
+and its terms scoped to `Hut 8 River Bend` / `River Bend campus` / `River Bend data
+center` rather than the bare name, per the seed block's own distinctive-proper-noun
+rule. It is pinned on **five** relationships (`fluidstack`, `google`, `anthropic`,
+`entergy`, `vertiv`), which is the multi-party recurrence the registry exists for.
+**`helios` was declined**: two parties rather than five, effectively one dossier, and
+**three separate in-corpus name collisions** — AMD's MI450 Helios racks in `oracle`,
+the Voltaria Helios battery at Falkirk in `rolls-royce-power-systems`, and Galaxy's
+own Helios I/II/III phase names. Counterparty-side pins (`fluidstack`→, `entergy`→)
+are **deferred to those dossiers' next revisions** rather than written now.
+
+**A note on the peer family, from a sixth end — and the first that is not about
+storage.** F6, F7, F8, C5, C6 and C7 all saw `Colocation & Cloud Capacity` mixing
+landlords with the F3–F5 storage developers; C8 saw the same mixing from the first
+pure landlords. C9 breaks the family from a different direction: **Galaxy Digital is
+a securities broker-dealer that owns a data-centre campus**, SEC-classified **SIC
+6211**, and its comparable universe is Coinbase and Cumberland rather than any member
+of the family it lands in. A `renewables-developer` split keyed on `developer · ipp`
+would **not fix it** — Galaxy is `developer` and nothing else, exactly like Digital
+Realty and CyrusOne, so it stays on the same side of that split. C8 recorded that the
+family map cannot express capital structure; C9 records that it cannot express the
+owner's **industry** either, and that the mismatch is not confined to Galaxy: **all
+three subjects are finance companies to their own regulator** — Cipher and Hut 8 under
+**SIC 6199**, Galaxy under **6211**, none under a real-estate or data-processing code.
+Recorded in `PROFILER-COVERAGE-PLAN.md` §7 for X3; no family-map change was made.
+
+**Cross-reference checker.** Exit 0, **no new candidate**; **335** mutually-mentioning
+pairs compared, up from 324 at v04.82r. Accept list unchanged at 9 entries.
+
+**Step 7 — reviewed, changed, deferred.** All **24** counterparties were reviewed and
+**7 were changed**: `fluidstack` v1→v2, `anthropic` v2→v3, `entergy` v1→v2, `terawulf`
+v6→v7, `engie-north-america` v1→v2, `compass-datacenters` v2→v3 and `amazon` v8→v9,
+each at **18–26 changed lines** and each archived **before** editing. `terawulf`
+carried a **contradicted claim that was corrected**, not merely extended. Fifteen
+counterparties were reviewed and needed no change. **Two were deferred explicitly and
+are named here rather than left silent:** `amazon` received the curated Cipher edge
+but **not** a full reconciliation of its data-centre lease record, and **`google` was
+not opened at all** — neither dossier's own account of the backstop programme was
+reconciled against the three landlord dossiers that now describe it, and both remain
+in the step-7 scope-note class C6 first recorded. Anyone reading the Google backstop
+story from `google`'s side is still reading a partial record.
+
+**Side effects.** 148 dossiers on the roster; graph rebuilt to **1,177 edges (888
+curated)**; **33 shared concepts registered (1,002 total)** — the bitcoin-economics
+set (proof of work, SHA-256, ASIC, network difficulty, the 2,016-block retarget,
+halving, block subsidy, hashprice, joules per terahash, fleet stranding, curtailment,
+demand response) plus the lease- and accounting-side set (gross capacity, critical IT
+load, contracted revenue, total contract value, base-term lease value, ASC 842,
+operating lease, sales-type lease, rent backstop, non-recourse, ring-fencing, equity
+method, fair-value measurement, principal trading, agency trading, AUM, yield on cost,
+DSCR, loan-to-cost, completion guarantee, credit backstop). **Five proposals were
+dropped as collisions caught before registration** — `critical IT load`, `gross
+capacity`, `contracted backlog` and a `dual-class-shares` slug-plus-alias pair — the
+same guard that saved C5, C7 and C8. **Eleven executive photographs added** for Hut 8,
+all company-published and verified on a contact sheet before use; Cipher and Galaxy
+publish none that survived checking. Report pins unchanged (X3's job).
+
+**A data-integrity incident worth recording.** Two parallel research agents wrote to
+the same scratchpad filename and one agent's downloaded Cipher 10-K was **overwritten
+on disk by Hut 8's**. The agent detected the substitution itself, re-downloaded to an
+isolated path and MD5-verified. Every Cipher financial figure was then **independently
+corroborated against SEC XBRL company-facts** and all matched exactly, so no
+contamination reached the dossier — but the mechanism is real and the fix is per-agent
+scratchpad paths, not vigilance. Separately, a draft carried **SIC 6199 for Galaxy**;
+verifying against the EDGAR submissions API before use corrected it to **6211**, and
+the correction **strengthened** the finding rather than weakening it.
+
+**A README drift, still flagged and still not fixed.** The archive listing is now
+**38 files behind** — 314 entries against 352 on disk. C9 added seven more snapshots
+and **followed C8's precedent** rather than inserting them, for the same reason: the
+omission is systematic, not this session's, and mechanically regenerating or
+rule-excluding the archive listing is a developer decision.
+
+**A formatting note, inherited and confirmed a fourth time.** The harness was rebuilt
+before anything was written and swept **635** corpus JSON files: **566 reproduce
+byte-identically** under per-file detection of indent width, trailing newline and
+ASCII escaping. The **69** that do not are `apex-clean-energy`, the two report files
+and 66 older archive snapshots — the compact-single-line-object class — none of which
+this session re-serialised. The seven new archive snapshots inherit their live file's
+convention and **do** round-trip, which is why the not-round-tripping count did not
+move. Two traps the harness caught again: the **refresh calendar has no trailing
+newline** while every other file does, and `profiler-concepts.json` is **indent=2**
+where the profiles are indent=1. One new one: `archive.py` was written with
+`sort_keys=True`, which would have **re-serialised the whole unsorted
+`archive-index.json`** into a spurious several-hundred-line diff; it was caught by
+asserting `keys == sorted(keys)` before the first run and removed.
+
 
 Developed by: LightAISolutions

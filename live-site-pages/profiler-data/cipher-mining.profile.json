@@ -1,0 +1,1377 @@
+{
+ "schemaVersion": 7,
+ "slug": "cipher-mining",
+ "name": "Cipher Digital Inc.",
+ "shortName": "Cipher Digital",
+ "categories": [
+  "developer"
+ ],
+ "website": "https://cipherdigital.com/",
+ "headquarters": "New York, NY, USA",
+ "founded": "2020 (as Good Works Acquisition Corp.; Cipher Mining from 2021, Cipher Digital from February 2026)",
+ "employees": "66 full-time (FY2025 10-K, February 2026)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: CIFR"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Cipher has substantially completed the exit from bitcoin mining that its peers are still describing as a pivot — self-mining hashrate halved from about 23.6 EH/s to about 11.6 EH/s between Q3 2025 and Q1 2026, the three WindHQ joint-venture sites were sold to Canaan in February 2026, Black Pearl's mining fleet was switched off the same month, and on 20 February 2026 the registrant changed its name from Cipher Mining Inc. to **Cipher Digital Inc.** One 207 MW site at Odessa is all the mining that remains. In its place sit three contracted hyperscale leases totalling 700 MW of gross capacity and approximately USD 11.4bn of contracted revenue, of which **two of the three are with Amazon** — Black Pearl (about 300 gross MW, 15 years, about USD 5.5bn) and Stingray (100 gross MW / 70 critical IT MW, 15 years, about USD 2.0bn), both with base rent and operating expenses guaranteed by Amazon.com, Inc. The third is Barber Lake: 300 gross MW / 207 critical IT MW leased to Fluidstack USA II Inc. for ten years at about USD 3.8bn, with Google backstopping USD 1.73bn of Fluidstack's obligations in exchange for warrants over 24,178,576 shares at USD 0.01.\n\n**BACKGROUND.** Delaware-incorporated, New York-headquartered, Nasdaq-listed as CIFR and classified by the SEC under SIC 6199 (Finance Services). Sixty-six full-time employees. FY2025 revenue USD 223.9m (+48.0% on FY2024's USD 151.3m) against a net loss of USD 822.2m and diluted EPS of USD (2.15) — a loss dominated by non-cash items rather than operations, principally a USD 450.4m fair-value loss on the embedded derivative in the 2031 convertible notes and a USD 410.3m fourth-quarter movement in the Google warrant liability. Revenue has since fallen every quarter as mining wound down: USD 71.7m in Q3 2025, USD 59.7m in Q4, USD 34.8m in Q1 2026 and USD 24.8m in Q2 2026, with no lease revenue yet recognised — the Q2 2026 10-Q states plainly that the HPC leases 'have not commenced and no revenue has been recognized as of June 30, 2026'. The company raised about USD 3.2bn of gross proceeds in 2025 and carried USD 6,016m of total consolidated indebtedness at 30 June 2026 against USD 4,560m of cash including restricted, most of it ring-fenced at project level. The largest holder is Bitfury, at 15.11%.",
+ "ecosystemRole": "The clearest test in the corpus of whether a bitcoin miner's power position, rather than its fleet, was ever the asset. Cipher is further through that conversion than any peer: it has sold or switched off everything except one site, renamed itself away from mining, and replaced a commodity revenue line with three long leases. For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds. Its power counterparties are AEP (Colchis, Ulysses via AEP Ohio) and, at Odessa, Luminant under a take-or-pay contract; its interconnection story is an ERCOT story, and its regulatory exposure is the Texas SB 6 large-load regime and ERCOT's new batch interconnection process, on which four of its pipeline sites depend.",
+ "productsAndServices": [
+  {
+   "name": "Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+   "category": "AI/HPC data-centre leasing",
+   "description": "Cipher's whole forward business. Three signed leases totalling approximately 700 MW of contracted gross HPC capacity and approximately USD 11.4bn of contracted revenue, all in Texas, all triple-net or modified-gross, all financed at project level with non-recourse notes. **Black Pearl** (near Wink, Winkler County): about 300 gross MW to Amazon on a 15-year base term for about USD 5.5bn, first capacity delivered 31 July 2026 per the Q2 2026 10-Q, with base rent and operating expenses guaranteed by Amazon.com, Inc.; Cipher does not publish a critical IT figure for this site. **Barber Lake** (near Colorado City, Mitchell County): 300 gross MW supporting 207 MW of critical IT load, leased in two tranches to Fluidstack USA II Inc. on a 10-year base term for about USD 3.8bn combined, with two five-year extension options that would take it to about USD 9.0bn, and with Google LLC backstopping USD 1.73bn of Fluidstack's obligations. **Stingray** (Andrews, Andrews County): 100 gross MW / 70 critical IT MW to Amazon Data Services, Inc. on a 15-year base term for about USD 2.0bn, targeted initial rent commencement 1 April 2027 for the 10 MW network hall and 1 May 2027 for the 60 MW data hall. Two of the three leases are therefore with Amazon.",
+   "highlights": [
+    "Approximately USD 11.4bn of contracted revenue and 700 MW of contracted gross HPC capacity; average annualised NOI of about USD 793m across October 2026 to September 2036 per the Q2 2026 deck",
+    "Amazon.com, Inc. guarantees base rent and operating expenses on both Amazon leases — the only directly investment-grade-guaranteed tenancy among the miner-landlords in this corpus",
+    "Barber Lake's Google backstop is USD 1.73bn against about USD 3.8bn of contracted revenue: it covers roughly 46% of the base term, not the whole lease",
+    "Stingray adds a cost cap the others do not have — Amazon agrees to cover construction cost overruns above USD 10.5m per critical IT MW, plus a parent completion guaranty",
+    "No lease revenue had been recognised as of 30 June 2026; USD 25.5m of deferred revenue represents tenant-requested change orders only",
+    "Site NOI margins as published: about 100% for both Amazon leases (triple-net) and about 86% for Barber Lake (modified gross)"
+   ],
+   "positioning": "Against TeraWulf, Core Scientific, Applied Digital, IREN and Hut 8, Cipher's differentiation is counterparty credit rather than scale. Bernstein put it at 495 MW of critical IT across USD 11.4bn with 67% investment-grade-backed — the highest investment-grade share in the cohort — while Core Scientific carries roughly 1.1 GW and over USD 24bn, Hut 8 949 MW and USD 26.6bn, and TeraWulf about USD 13bn. The offsetting exposure is concentration: Bernstein put Amazon at 48% of Cipher revenue and Global Data Center Hub at about 66% of the backlog, and the two estimates are not reconciled by any source.",
+   "soldThrough": "Direct long-term leases to hyperscalers and to a neocloud tenant of record, negotiated bilaterally; Morgan Stanley was sole financial adviser on the first Fluidstack transaction. Quanta Services, Inc. is the named engineering, construction and procurement partner for Black Pearl and Barber Lake.",
+   "targetSegments": [
+    "Hyperscale cloud providers",
+    "AI neoclouds and tenants of record",
+    "Frontier AI labs reached indirectly through a tenant of record"
+   ],
+   "roadmap": "Black Pearl Phase I data halls in MEP fit-out with Phase II foundations and steel underway; Barber Lake rent commencing October 2026 with the 39 MW second tranche by January 2027; Stingray targeted energisation Q4 2026 and rent from April–May 2027."
+  },
+  {
+   "name": "Development pipeline — approximately 4.4 GW across eight uncontracted sites",
+   "category": "Powered land and interconnection development",
+   "description": "Cipher describes a portfolio of approximately 5.3 GW across 11 sites at various stages of interconnection, of which the 700 MW above is contracted and approximately 4.4 GW sits across seven Texas sites and one Ohio site with no tenant. **Colchis** (West Texas, 1,000 MW gross, targeted 2028) is the largest and the only one with a fully executed 1 GW Direct Connect Agreement with American Electric Power for a dual interconnection facility; Cipher bought a majority JV interest in November 2025 and expects about 95% equity ownership. **Ulysses** (Ohio, 200 MW gross, Q4 2027) was acquired in December 2025, is Cipher's first site outside Texas, takes capacity from AEP Ohio and gives direct access to PJM. **McLennan** (Central Texas, 500 MW), **Mikeska** (West Texas, 500 MW) and **Milsing** (East Texas, 500 MW) are option sites whose purchase rights were exercised between December 2025 and February 2026. **Reveille** (Cotulla, 70 MW, Q3 2027) has approved interconnection. **Apollo** (within 25 miles of San Antonio, up to 900 MW, 2030+) was optioned on 23 July 2026. Barber Lake and Stingray each carry adjacent expansion potential (500 MW and 200 MW) — the Barber Lake expansion is a memorandum of understanding to negotiate, not a lease.",
+   "highlights": [
+    "Portfolio grew from approximately 4.2 GW across 10 sites at the FY2025 10-K to approximately 5.3 GW across 11 sites by the Q2 2026 10-Q",
+    "Four pipeline sites — Colchis, Mikeska, McLennan and Apollo — depend on ERCOT's new batch interconnection process and are expected in Batch Zero; none is contracted",
+    "Ulysses is the only non-ERCOT asset and the only PJM exposure",
+    "A separate bring-your-own-generation programme announced 3 September 2026 develops lateral gas pipelines at multiple sites for up to 2.5 GW of on-site generation targeted before end-2027 — explicitly NOT included in the 5.3 GW figure",
+    "Pipeline megawatts carry no tenant, no rent and no guarantee, and must not be added to the USD 11.4bn"
+   ],
+   "positioning": "The pipeline is what a miner's power position looks like once the machines are gone: land options, interconnection studies and utility agreements rather than operating assets. Its value is entirely optionality on ERCOT's batch process and on further hyperscaler demand.",
+   "soldThrough": "Held for future direct leasing; sites are optioned or owned through single-purpose subsidiaries.",
+   "targetSegments": [
+    "Hyperscale cloud providers",
+    "AI neoclouds"
+   ],
+   "roadmap": "Reveille and Ulysses targeted Q3 and Q4 2027; Colchis, McLennan and Mikeska 2028; Milsing 2028–2029 per the 10-K and 2030+ per the website; Apollo 2030+."
+  },
+  {
+   "name": "Bitcoin self-mining — one remaining site at Odessa",
+   "category": "Bitcoin mining (in run-off)",
+   "description": "What is left of the original business. Odessa, Texas is a 207 MW, roughly 52-acre wholly owned site that began mining in November 2022 and completed build-out in September 2023; it is the first bitcoin mining data centre to receive the Uptime Institute's M&O Stamp of Approval, awarded in 2024. Power comes from a fixed-price Luminant PPA at about 2.8 cents per kWh — raised from about 2.7 cents in October 2025 and subject to tariff-related increases — running to at least July 2027, under which Cipher must accept and pay for at least 66.7% of the full 207 MW each year and Luminant holds annual curtailment rights. Everything else has gone: the three WindHQ joint-venture sites (Alborz, Bear and Chief, 120 MW combined, Cipher holding 49% of each) were sold to Canaan U.S. Inc. on 19 February 2026, and Black Pearl's mining fleet, which had ramped to 150 MW by September 2025, was switched off in February 2026 for the HPC retrofit. Self-mining hashrate fell from about 23.6 EH/s at Q3 2025 to about 11.6 EH/s by Q1 2026 and has stayed there. Cipher is in discussions to lease Odessa itself for HPC hosting.",
+   "highlights": [
+    "Fleet efficiency about 17.2 J/TH at Q1 and Q2 2026, against about 16.8 J/TH at Q3 2025 — the average worsened as the more efficient Black Pearl fleet came out",
+    "Q3 2025 was the last period for which Cipher published an all-in electricity cost per bitcoin: USD 34,189 group-wide, ranging from USD 25,414 at Odessa to USD 58,427 at the JV sites",
+    "About 85% of Black Pearl's existing data-centre infrastructure is expected to be repurposed for the Amazon lease",
+    "Foundry USA Pool paid USD 157.0m in FY2025 — 70% of total consolidated revenue, a concentration that will disappear with mining",
+    "Bitcoin held fell from 1,433 BTC at 31 December 2025 to 646 BTC at 30 June 2026, described by the company as being strategically managed down",
+    "Miner useful life was shortened from five years to three years with effect from 1 June 2024"
+   ],
+   "positioning": "Cipher is further out of mining than any peer in this corpus: hashrate halved, the joint ventures sold, one site left, and the corporate name changed. Where TeraWulf, IREN and Core Scientific still report a mining segment alongside hosting, Cipher's Odessa is a single asset in run-off that it would rather lease than run.",
+   "soldThrough": "Self-mining for its own account through the Foundry USA Pool on a full-pay-per-share basis with 24-hour contract terms; surplus contracted power sold back into ERCOT through Luminant.",
+   "targetSegments": [
+    "Own account"
+   ],
+   "roadmap": "In discussions for an HPC hosting lease at Odessa; the Luminant power agreement runs to at least July 2027 and auto-renews annually absent six months' notice."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "capacity",
+   "headline": "Begins developing lateral gas pipelines at multiple sites to enable on-site generation of up to 2.5 GW, targeting new power before the end of 2027",
+   "read": "A second power-sourcing route that bypasses the ERCOT interconnection queue entirely. Note that the 2.5 GW is explicitly excluded from the 5.3 GW portfolio figure, so the two must not be added.",
+   "source": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-begins-development-lateral-pipelines-facilitate"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "policy",
+   "headline": "Publicly supports Governor Abbott's push for transparency and accountability in Texas data-centre growth",
+   "read": "Cipher positions itself inside the compliance cohort rather than against it — the same posture Galaxy, Compass and Montera took, and a hedge against the ERCOT/PUCT audit that froze new large-load energisations in August 2026.",
+   "source": "https://www.globaldatacenterhub.com/p/cipher-digitals-114b-backlog-two"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "financial",
+   "headline": "Keefe, Bruyette & Woods cuts its price target from USD 32 to USD 28 while maintaining Outperform; the stock falls 5.9%",
+   "read": "Reported under a 'downgrade' headline, but no rating changed. Every dated 2026 analyst action on Cipher is a target cut against a maintained bullish rating — Cantor USD 24 to 22, Morgan Stanley USD 48.50 to 47, KBW USD 32 to 28.",
+   "source": "https://www.thecerbatgem.com/2026/08/07/cipher-mining-nasdaqcifr-trading-down-5-9-on-analyst-downgrade.html"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: revenue USD 24.8m against consensus of roughly USD 31.7-32.5m, net loss USD 267.5m including a USD 150.5m non-cash warrant remeasurement; contracted revenue restated at about USD 11.4bn across 700 MW",
+   "read": "The clearest quarter yet of the transition trough: mining revenue has collapsed and no lease revenue has begun. The GAAP loss is dominated by the Google warrant liability, which moves with Cipher's own share price and tells a reader nothing about operations.",
+   "source": "https://www.investing.com/news/company-news/cipher-digital-q2-2026-slides-show-114b-pipeline-amid-earnings-miss-93CH-4834719"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "capacity",
+   "headline": "First Black Pearl capacity delivered in early August, promoted as two months ahead of schedule; the Q2 10-Q dates the amended delivery to 31 July 2026",
+   "read": "True only against the revised October 2026 target. The original November 2025 guidance was an August 2026 rent commencement, so measured against what the company first told the market, delivery was on time rather than early.",
+   "source": "https://www.disruptionbanking.com/2026/08/05/is-ciphers-early-black-pearl-delivery-the-real-story-of-q2/"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "capacity",
+   "headline": "Options the Apollo site, up to 900 MW within 25 miles of San Antonio, submitted as a studied load in ERCOT's Batch Zero",
+   "read": "The largest single addition to the uncontracted pipeline and the first inside a major metro's orbit rather than in West Texas.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm"
+  },
+  {
+   "date": "2026-06-16",
+   "category": "leadership",
+   "headline": "Hires Bill Blevins as Head of Grid Strategies, previously Director of Grid Coordination at ERCOT managing large-load interconnections",
+   "read": "A direct hire of the regulator's own large-load gatekeeper at the moment four pipeline sites depend on ERCOT's batch process. Also hired Mohamed Abouelella as Head of Engineering, previously a Google engineering manager responsible for 5 GW+ of data centres.",
+   "source": "https://cipherdigital.com/company/"
+  },
+  {
+   "date": "2026-06-15",
+   "category": "financial",
+   "headline": "Stingray Compute LLC issues USD 810m of 6.000% senior secured notes due 2031, fully funding Stingray through substantial completion and reimbursing USD 56.7m of prior spend",
+   "read": "The third project-level, non-recourse financing in seven months. Amortisation is tied to a 1.25x DSCR target and begins only on completion — the structure that lets a pre-revenue campus carry investment-grade-adjacent debt.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "customer",
+   "headline": "A bond investor presentation reveals the March 2026 'investment-grade Hyperscale tenant' as Amazon Data Services, Inc. — Cipher's second Amazon lease, 100 gross MW / 70 critical IT MW at Stingray for about USD 2.0bn",
+   "read": "The tenant's name reached the public record through a debt document, not an earnings release. Two of Cipher's three leases are now with Amazon, and the concentration that follows is the company's central risk.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "market",
+   "headline": "Bernstein initiates coverage of TeraWulf and Cipher at Outperform with price targets of USD 36 and USD 32, calling them 'the power landlords of AI' and projecting Cipher's AI revenue from USD 19m in 2026 to USD 1.2bn in 2030",
+   "read": "The first sell-side attempt to size the cohort: 6 GW contracted across 17 deals worth over USD 110bn in two years, about 10% of US data centres under construction. Bernstein measures Cipher at 495 MW of critical IT and USD 11.4bn with 67% investment-grade backing.",
+   "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "corporate",
+   "headline": "Announces a third data-centre campus lease with an unnamed investment-grade hyperscaler, and a USD 200m revolving credit facility with Morgan Stanley Senior Funding as administrative agent",
+   "read": "The revolver is the first corporate-level bank facility and carries a minimum-liquidity covenant that steps from USD 100m to USD 200m as Barber Lake and Black Pearl come online.",
+   "source": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-announces-business-updates"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "financial",
+   "headline": "FY2025: revenue USD 223.9m (+48.0%), net loss USD 822.2m, diluted EPS USD (2.15); Q4 revenue USD 59.7m against a Zacks consensus of USD 77.9m",
+   "read": "The loss is almost entirely non-cash — a USD 450.4m fair-value charge on the 2031 convertible notes' embedded derivative and a USD 410.3m Q4 warrant movement. Adjusted earnings were positive at USD 22.2m.",
+   "source": "https://finance.yahoo.com/news/cipher-digital-q4-loss-wider-163100655.html"
+  },
+  {
+   "date": "2026-02-20",
+   "category": "corporate",
+   "headline": "Changes its name from Cipher Mining Inc. to Cipher Digital Inc. by amended and restated charter; EDGAR carries the former name through 23 February 2026",
+   "read": "Not cosmetic. The company states the rebrand 'aligns with our corporate strategy to scale into a leading HPC data center developer and operator' — the clearest single marker that the pivot is finished rather than in progress. The ticker CIFR is unchanged.",
+   "source": "https://data.sec.gov/submissions/CIK0001819989.json"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "ma",
+   "headline": "Sells its 49% interests in the Alborz, Bear and Chief joint ventures with WindHQ to Canaan U.S. Inc., removing about 59 MW and about 2.2 EH/s",
+   "read": "These were the highest-cost machines in the fleet at USD 58,427 all-in electricity cost per bitcoin in Q3 2025, against USD 25,414 at Odessa. The disposal is the stranding thesis executed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "financial",
+   "headline": "Black Pearl Compute LLC prices USD 2.0bn of 6.125% senior secured notes due 2031 with about USD 13bn of book interest, roughly 6.5x oversubscribed; surplus funding reimburses about USD 233m of capex",
+   "read": "An Amazon-guaranteed rent stream priced at 6.125% against a 7.125% coupon on the Google-backstopped Barber Lake paper three months earlier. The 100 basis points is the market pricing the difference between a guarantee and a backstop.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000007/cipherdigital_businessup.htm"
+  },
+  {
+   "date": "2026-02",
+   "category": "capacity",
+   "headline": "Ceases bitcoin mining at Black Pearl to begin the HPC retrofit; about 85% of the existing data-centre infrastructure is expected to be repurposed",
+   "read": "The convertibility question answered in practice: the shell, power and substation carry over, the ASICs do not.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "date": "2025-12",
+   "category": "capacity",
+   "headline": "Acquires the Ulysses site in Ohio, 200 MW from AEP Ohio with land options on about 195 acres — the first site outside Texas and the first PJM exposure",
+   "read": "Diversifies away from a portfolio that the 10-K's own risk factors describe as concentrated in ERCOT, and into the largest US wholesale market.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "date": "2025-11-26",
+   "category": "financial",
+   "headline": "Calls all remaining SPAC-era public warrants for redemption at USD 0.01, electing cashless exercise only at 0.2687 of a share per warrant",
+   "read": "Triggered by the shares trading above USD 18.00 for 20 of 30 days. Cleans the legacy capital structure ahead of the project financings.",
+   "source": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-mining-announces-redemption-and-cashless-exercise"
+  },
+  {
+   "date": "2025-11-20",
+   "category": "customer",
+   "headline": "Signs an additional 56 gross MW / 39 critical IT MW with Fluidstack for about USD 830m, taking Barber Lake to about USD 3.8bn over the initial term and about USD 9.0bn if all extensions are exercised; the Google backstop rises by USD 333m to USD 1.73bn",
+   "read": "Fluidstack now leases the entire 300 MW of Barber Lake. The second tranche carries a higher stated site NOI margin (85-90%) than the first (80-85%), and the company later blends both to about 86%.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm"
+  },
+  {
+   "date": "2025-11-13",
+   "category": "financial",
+   "headline": "Cipher Compute LLC issues USD 1.4bn of 7.125% senior secured notes due 2030 at about 71% loan-to-cost, followed by a USD 333m tack-on on 24 November",
+   "read": "Amortisation is rent-based — it tracks the Google backstop, which is itself determined by Fluidstack's rent payments. The debt is structurally tied to the credit support rather than to the asset.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "customer",
+   "headline": "Announces an approximately USD 5.5bn 15-year lease with Amazon Web Services for 300 MW of gross capacity at Black Pearl, described in the deck as 'Estimated Contract Value'",
+   "read": "The largest single contract in Cipher's history, and the first time a hyperscaler took the whole of one of its campuses. The FY2025 deck three months later relabels the same USD 5.5bn as 'Contracted Revenue' and moves the lease start from August to October 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998925000110/nov3_earningspressreleasex.htm"
+  },
+  {
+   "date": "2025-10-06",
+   "category": "leadership",
+   "headline": "Announces the retirement of Chief Financial Officer Edward Farrell; Gregory Mumford, previously a digital-assets investment banker at Keefe, Bruyette & Woods, succeeds him",
+   "read": "A banker rather than an operator in the CFO seat, at the point where the business becomes a project-finance company.",
+   "source": "https://cipherdigital.com/company/"
+  },
+  {
+   "date": "2025-09-30",
+   "category": "financial",
+   "headline": "Issues USD 1,300.0m of 0.00% convertible senior notes due 2031 at an initial conversion price of about USD 16.03, after announcing a USD 1.1bn upsized offering on 25 September; capped calls cost about USD 82.7m with an initial cap of USD 23.32",
+   "read": "A zero-coupon convert is cheap money that costs authorised shares. Share settlement required a stockholder-approved increase in authorised shares, obtained 30 October 2025 — until then the conversion feature was carried as a derivative, and its fair-value movement produced the USD 450.4m charge that drove the FY2025 loss.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "date": "2025-09-25",
+   "category": "customer",
+   "headline": "Signs a 168 critical IT MW, ten-year AI hosting agreement with Fluidstack for about USD 3.0bn of contracted revenue, backstopped by Google to USD 1.4bn in exchange for warrants over about 24 million shares — about 5.4% pro forma",
+   "read": "The transaction that put Cipher into the AI landlord business. The same release calls USD 3.0bn 'contracted revenue' in its headline and body and 'contract value' in its bullets, and the USD 7.0bn extension figure is total contract value contingent on two five-year options.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm"
+  },
+  {
+   "date": "2025-01-30",
+   "category": "financial",
+   "headline": "SoftBank Group takes a USD 50m PIPE, about 10.4 million shares, funded from treasury stock",
+   "read": "SoftBank does not appear as a greater-than-5% holder in the April 2026 proxy, so the position was not maintained at that level.",
+   "source": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-mining-announces-50-million-pipe-investment-softbank"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess that Cipher has completed, rather than begun, the miner-to-landlord conversion, and that the corporate rename is the accurate marker of it. Basis: self-mining hashrate fell from about 23.6 EH/s at Q3 2025 to about 11.6 EH/s by Q1 2026 and has not recovered; the three WindHQ joint ventures were sold to Canaan on 19 February 2026; Black Pearl's fleet was switched off in February 2026; one 207 MW site at Odessa remains, and the company says it is in discussions to lease that too. The registrant changed its name to Cipher Digital Inc. on 20 February 2026 with the stated reason that it 'aligns with our corporate strategy to scale into a leading HPC data center developer and operator'. No peer in this corpus has gone as far.",
+  "2. **(High confidence)** We assess that the single most important discipline for reading this company — and the cohort — is distinguishing four kinds of dollar figure that Cipher itself uses interchangeably. Basis: the same USD 5.5bn Amazon number is 'Estimated Contract Value' in the November 2025 deck and 'Contracted Revenue' in the February 2026 deck. The Fluidstack figure is 'contracted revenue' in a release headline, 'contract value' in that release's own bullets, and 'minimum contracted revenue' in the accompanying deck. The aggregate is 'approximately USD 8.5 billion in lease payments' in the Q3 2025 release. And a fourth, genuinely different number sits beside them: 'estimated project costs of USD 9-11 million per MW of critical IT load', which is capex. Four labels, three of them for revenue and one for cost, inside ten weeks.",
+  "3. **(High confidence)** We assess that Cipher's differentiation among the miner-landlords is counterparty credit rather than scale, and that its corresponding weakness is concentration in the same counterparty. Basis: Amazon.com, Inc. guarantees base rent and operating expenses on both Amazon leases, and at Stingray also caps construction cost overruns above USD 10.5m per critical IT MW and provides a parent completion guaranty. No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave. Bernstein measures Cipher's investment-grade-backed share at 67%, the highest in the cohort. The same fact read from the other side: Bernstein puts Amazon at 48% of Cipher revenue and Global Data Center Hub at about 66% of the backlog, and no source reconciles the two estimates.",
+  "4. **(Moderate confidence)** We assess that the guarantees are weaker than their headline suggests, and that the 10-K says so more clearly than any outside commentary. Basis: the filing states that tenant guarantees are 'only effective following the rent commencement date', are subject to 'event of default triggers or caps on liability', and that if completion is delayed a tenant 'may have the right to terminate their lease' and 'such termination events would not trigger the tenants' guarantee either'. The Google backstop is separately qualified — the 10-K warns of enforcement delay 'notwithstanding the Google Backstop'. The credit support therefore protects a delivered building, not a building under construction, which is exactly the period Cipher is in.",
+  "5. **(Moderate confidence)** We assess that reported GAAP results will remain uninformative about operations until at least FY2027, and that the Google warrant is the main reason. Basis: the warrant over 24,178,576 shares at USD 0.01 is carried as a Level 3 liability and remeasured each period, producing a USD 410.3m charge in Q4 2025, a USD 43.6m gain in Q1 2026 and a USD 150.5m charge in Q2 2026. Its value rises when Cipher's share price rises, so good news for shareholders is a loss on the income statement. Meanwhile no lease revenue has been recognised at all, and mining revenue is in deliberate run-off. The company itself switched its primary non-GAAP measure from Adjusted Earnings to Adjusted EBITDA from Q1 2026.",
+  "6. **(Moderate confidence)** We assess that the uncontracted pipeline is the real equity story and that it is almost entirely a bet on ERCOT process. Basis: about 4.4 GW of the 5.3 GW portfolio has no tenant, and four of those sites — Colchis, Mikeska, McLennan and Apollo — are explicitly qualified as 'subject to ERCOT batch process' and expected in Batch Zero. Texas SB 6 imposed new interconnection requirements, security-type payments and a co-location approval for loads of at least 75 MW, and in December 2025 ERCOT announced it may batch large-load requests and evaluate them on a portfolio basis. Cipher's response has been to hire ERCOT's own former Director of Grid Coordination and, separately, to start building gas laterals for up to 2.5 GW of on-site generation that would not need the queue at all.",
+  "7. **(Low confidence)** We assess that the absence of Cipher from every published bitcoin-miner hashrate ranking is now correct rather than an omission, and that no ranking exists to place it in its new business. Basis: Cipher does not appear in the ten-company public-miner hashrate table on ziven.io, which is right for a company at 11.6 EH/s in run-off. But no independent ranking of AI-data-centre landlords by contracted megawatts or lease value exists either — what exists is sell-side coverage that groups and sizes the cohort without ordering it. Any statement that Cipher is the Nth largest anything in its new business is therefore unsupported in both directions.",
+  "**Collection gap:** Cipher publishes no critical IT megawatt figure for Black Pearl — only about 300 MW gross — while publishing both figures for Barber Lake and Stingray. It has published no all-in electricity cost per bitcoin since Q3 2025, no hashprice sensitivity analysis, and no monthly operational update since October 2025. There is no consensus revenue or EPS figure for FY2024 from any third party we could locate, so no 'vs expectations' verdict is offered for that year. Consensus figures for Q2 2026 differ across a 65% range on EPS between outlets, and the outlet with the widest coverage does not disclose whose consensus it uses."
+ ],
+ "relationships": [
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+   "via": "Turnkey space and power for AI workloads",
+   "note": "Tenant on two of Cipher's three contracted campuses, with base rent and operating expenses guaranteed by Amazon.com, Inc.",
+   "context": "Amazon leases Black Pearl (about 300 MW gross, 15-year base term, about USD 5.5bn, rent commencing in the fourth quarter of 2026) and Stingray (100 gross MW / 70 critical IT MW, 15-year base term, about USD 2.0bn, rent targeted from 1 April 2027). Both carry three five-year tenant extension options and a 3.0% annual escalator; Stingray is triple-net with de minimis operating expenses for Cipher.\n\nThe credit support is the point. Amazon.com, Inc. — the public parent — fully guarantees base rent and operating expenses on both leases, and at Stingray also agrees to cover construction cost overruns above USD 10.5m per critical IT MW and provides a parent completion guaranty. No other miner-landlord in this corpus holds a directly investment-grade-guaranteed tenancy; TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy Digital all sit behind Fluidstack or CoreWeave.\n\nTwo cautions. Cipher's own 10-K states the guarantees are 'only effective following the rent commencement date' and are subject to caps and event-of-default triggers, and that a delayed completion may let the tenant terminate without the guarantee ever triggering. And the counterparty naming is inconsistent across Cipher's own documents: the FY2025 10-K names 'Amazon Web Services, Inc.' for Black Pearl while the June 2026 bond presentation names 'Amazon Data Services, Inc.' for both. Concentration estimates differ too — Bernstein puts Amazon at 48% of Cipher revenue, Global Data Center Hub at about 66% of the backlog, and no source reconciles them.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm"
+  },
+  {
+   "slug": "fluidstack",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+   "via": "AI hosting at Barber Lake",
+   "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
+   "context": "Fluidstack USA II Inc. leases all 300 gross MW / 207 critical IT MW of Barber Lake, taken in two tranches: 168 critical IT MW in September 2025 for about USD 3.0bn over ten years, and a further 39 critical IT MW in November 2025 for about USD 830m. Two five-year extension options would take the combined figure to about USD 9.0bn. The lease is modified-gross with annual escalators, and Cipher retains 100% ownership of the project.\n\nFluidstack is unrated, which is why the structure exists at all: Google LLC backstops USD 1.73bn of Fluidstack's lease obligations under a recognition agreement, and the 7.125% Cipher Compute notes amortise in line with that backstop rather than on a fixed schedule. Note the asymmetry — USD 1.73bn of support against about USD 3.8bn of contracted revenue covers roughly 46% of the base term, not the whole lease.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf (Lake Mariner and Abernathy) and Hut 8 (River Bend), which makes Fluidstack the single largest shared counterparty risk across the miner-landlord cohort in this corpus.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm"
+  },
+  {
+   "slug": "google",
+   "type": "investor",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma",
+   "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+   "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm"
+  },
+  {
+   "slug": "anthropic",
+   "type": "other",
+   "status": "active",
+   "note": "Named by Anthropic and Fluidstack as the end user behind the Barber Lake capacity; Cipher itself has never named it.",
+   "context": "Anthropic is described in this corpus, and in Fluidstack's own account, as the end user of the compute installed at Barber Lake — one of five campuses totalling about 1.4 GW of contracted critical IT that Fluidstack holds for Anthropic across TeraWulf, Cipher, Hut 8 and Meridian Arc.\n\nThe attribution does not come from Cipher. A full first-party sweep of Cipher's FY2025 10-K, its Q2 2026 10-Q, every business-update deck and its complete press-release archive found no mention of Anthropic at any point. Cipher's counterparty is Fluidstack USA II Inc. and its disclosure stops there. This edge is typed `other` rather than `customer` for that reason: the relationship is real in the ecosystem and absent from the subject's own record, and the two should not be conflated.",
+   "source": "https://northwiseproject.com/cifr-barber-lake-site/"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2025-05",
+   "scale": "up to 300 MW contemplated",
+   "via": "Co-located data centre at a West Texas wind site",
+   "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
+   "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment — rather than as a sustainability arrangement.\n\nIt remains preliminary. No megawatt figure is under contract, no definitive agreement has been announced by either party, and the arrangement appears in none of Cipher's contracted-capacity disclosures: the 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only. ENGIE's own dossier lists a definitive Cipher agreement among the indicators that would move its co-location judgment from announced to real, which is the correct reading from both sides.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "aep",
+   "type": "supplier",
+   "status": "active",
+   "scale": "1 GW Direct Connect Agreement at Colchis; 200 MW at Ulysses via AEP Ohio",
+   "note": "Interconnection and capacity counterparty at Colchis, Ulysses and Barber Lake.",
+   "context": "American Electric Power is Cipher's principal interconnection counterparty outside the Luminant arrangement at Odessa. At Colchis, the 1,000 MW West Texas joint-venture site, Cipher holds a fully executed 1 GW Direct Connect Agreement with AEP for a dual interconnection facility. At Ulysses in Ohio — Cipher's first site outside Texas and its only PJM exposure — capacity is secured from AEP Ohio. Barber Lake's 300 MW ERCOT interconnection is in AEP Texas territory.\n\nThe dependency runs the other way too: four of Cipher's uncontracted pipeline sites are qualified as subject to ERCOT's new batch interconnection process, and the value of those megawatts is a function of how that process resolves rather than of anything Cipher controls.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "vistra",
+   "type": "supplier",
+   "status": "active",
+   "since": "2022-11",
+   "scale": "207 MW at ~2.8 c/kWh; minimum take of 66.7% of capacity",
+   "via": "Luminant ET Services fixed-price power agreement",
+   "note": "Power and substation counterparty at Odessa through its Luminant retail arm, on a take-or-pay contract to at least July 2027.",
+   "context": "Odessa runs on a fixed-price power purchase agreement with Luminant ET Services Company LLC at about 2.8 cents per kWh — raised from about 2.7 cents in October 2025 and expressly subject to tariff-related increases — with access to at least July 2027 and automatic annual renewal absent six months' notice. The contract is take-or-pay: Cipher must accept and pay for at least 66.7% of the full 207 MW each contractual year, and Luminant holds curtailment rights in each year.\n\nThe relationship extends to the site itself. The combined Luminant lease covering land and substation, which commenced in November 2022, is classified as a finance lease with monthly instalments totalling USD 19.7m undiscounted over the four years from July 2023, and at the end of the term the substation is sold back to Vistra Operations Company, LLC at a price set by secondary-market bids. Surplus contracted power is sold back into ERCOT through Luminant, producing USD 7.9m of power sales in FY2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "quanta-services",
+   "type": "supplier",
+   "status": "active",
+   "via": "Engineering, procurement and construction",
+   "note": "Named by Cipher as a key engineering, construction and procurement partner for Black Pearl and Barber Lake.",
+   "context": "Cipher's FY2025 10-K states that it has 'secured a key partnership with Quanta Services, Inc.' as 'a key engineering, construction and procurement partner for our development of sites like Black Pearl and Barber Lake'. No contract value, scope split or duration is disclosed on either side, and Quanta's own dossier does not mention Cipher — so this is recorded from Cipher's side only, at the level of specificity the source supports.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "terawulf",
+   "type": "competitor",
+   "status": "active",
+   "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
+   "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
+   "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030"
+  },
+  {
+   "slug": "hut-8",
+   "type": "competitor",
+   "status": "active",
+   "note": "The other half of the aggregation behind the widely repeated but unreconciled '>USD 19bn combined' figure.",
+   "context": "Hut 8 and Cipher are the two companies named in the only traceable source for the '>USD 19 billion combined' claim that circulates about this cohort — a 27 May 2026 trade piece whose own components (about USD 16.8bn for Hut 8 and about USD 9.3bn for Cipher) sum to USD 26.1bn rather than USD 19bn. Neither company publishes that combined figure.\n\nOn substance the two are the closest structural pair in the cohort after TeraWulf: both fund campuses with non-recourse, investment-grade-rated project bonds ring-fenced from the parent, and both lease to Fluidstack with Google support at one campus. They diverge sharply at the parent: Cipher carries USD 1.47bn of convertible notes at the corporate level that depend on corporate liquidity rather than lease cash flow, while Hut 8 carries about USD 159.3m of parent recourse debt against USD 1.3bn of cash and bitcoin. Google took warrants at Cipher and none at Hut 8.",
+   "source": "https://www.globaldatacenterhub.com/p/cipher-digitals-114b-backlog-two"
+  },
+  {
+   "slug": "galaxy-digital",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both let a large Texas campus to a single tenant, but Galaxy is a financial-services firm rather than a converted miner.",
+   "context": "Galaxy Digital's Helios campus in Dickens County and Cipher's three Texas campuses compete for the same ERCOT interconnection capacity and the same tenants, and both companies emerged from bitcoin mining sites. The comparison stops there. Galaxy is a digital-asset trading, asset-management and investment-banking firm classified by the SEC as a securities broker-dealer, for which the data centre is one segment among several; Cipher is a pure landlord whose only other business is a single mining site in run-off.\n\nThe tenant profiles are opposites in credit terms: Galaxy's Helios capacity is 100% let to CoreWeave, an unrated and highly levered AI-cloud operator, while roughly two-thirds of Cipher's contracted revenue carries an Amazon.com, Inc. guarantee.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "core-scientific",
+   "type": "competitor",
+   "status": "active",
+   "note": "The largest contracted book in the miner-landlord cohort, and the counter-case on counterparty credit.",
+   "context": "Core Scientific holds roughly 1.1 GW of leased customer power and more than USD 24bn of contracted value across CoreWeave and AMD — the largest book among the converted miners, against Cipher's 700 MW and USD 11.4bn. It is also the counter-case on the dimension Cipher leads: Core Scientific's counterparties are an unrated neocloud and a chip vendor, where Cipher's largest is guaranteed by Amazon.com, Inc.",
+   "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030"
+  },
+  {
+   "slug": "applied-digital",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer miner-landlord with a larger critical IT book and a single neocloud anchor.",
+   "context": "Applied Digital contracts around 400 MW of critical IT with CoreWeave and reports roughly USD 11bn of contracted lease value on a base-term basis, closely comparable to Cipher's USD 11.4bn but concentrated on a single unrated tenant rather than split between a guaranteed hyperscaler and a backstopped neocloud.",
+   "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030"
+  },
+  {
+   "slug": "iren",
+   "type": "competitor",
+   "status": "active",
+   "note": "The vertically integrated alternative — IREN operates the compute it houses rather than leasing space and power.",
+   "context": "IREN sits at the opposite end of the vertical-integration spectrum from Cipher. Where Cipher leases turnkey space and power and installs nothing, IREN operates GPU clusters as a cloud business alongside its landlord role, anchored by a USD 9.7bn Microsoft contract. The Futurum Group's contracted-revenue-per-megawatt measure puts IREN highest in the cohort at about USD 40m per MW, against a figure of roughly USD 23m per MW derivable from Cipher's own USD 11.4bn across 495 MW of critical IT — a gap that reflects business model and contract term as much as pricing power.",
+   "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030"
+  },
+  {
+   "slug": "coreweave",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+   "context": "Cipher's FY2025 10-K names its competitive set explicitly: 'Several companies compete in this industry, including: CoreWeave, Digital Realty, Equinix, Vantage Data Centers and Aligned Data Centers.' CoreWeave is the only neocloud on that list and is the tenant at Core Scientific, Applied Digital and Galaxy Digital — so it is simultaneously Cipher's named competitor and the counterparty its peers depend on. No commercial relationship between Cipher and CoreWeave is disclosed by either party.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "digital-realty",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+   "context": "One of five companies Cipher's FY2025 10-K names as competitors. The comparison is instructive for scale rather than similarity: Digital Realty operates 310 data centres with about 3.1 GW of in-place IT capacity and FY2025 revenue of USD 6,112.7m, against Cipher's three contracted campuses and USD 223.9m of revenue, none of it yet from leasing. What they compete for is the same hyperscale tenant demand and, increasingly, the same interconnection capacity.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "equinix",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+   "context": "Named among five competitors in Cipher's FY2025 10-K. Equinix is the retail-colocation leader and the largest data-centre REIT by revenue; the overlap with a single-tenant West Texas build-to-suit landlord is limited to the demand pool rather than the product.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "vantage",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+   "context": "Named among five competitors in Cipher's FY2025 10-K. Vantage is a sponsor-owned hyperscale developer competing for the same build-to-suit hyperscaler mandates that Cipher won at Black Pearl and Stingray.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "slug": "aligned",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+   "context": "Named among five competitors in Cipher's FY2025 10-K — the fifth of the five, and like Vantage a sponsor-owned hyperscale developer bidding for the same single-tenant campuses.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas SB 6 (large-load interconnection)",
+   "status": "in-effect",
+   "effectiveDate": "2025",
+   "exposure": "The Texas legislature enacted Senate Bill 6 in 2025, requiring the Public Utility Commission of Texas and ERCOT to create new processes and requirements for interconnecting facilities with large electrical loads of at least 75 MW, imposing security-type payments as part of the initial interconnection request, proposing minimum transmission rates on certain large loads, removing phantom loads from the queue, and creating a new approval requirement for co-locating generation with large loads. Every one of Cipher's sites exceeds the 75 MW threshold, and the co-location approval bears directly on both the ENGIE West Texas arrangement and the bring-your-own-generation programme announced in September 2026.",
+   "mitigation": "Cipher hired Bill Blevins, previously ERCOT's Director of Grid Coordination responsible for large-load interconnections, as Head of Grid Strategies in June 2026, and publicly supported Governor Abbott's data-centre transparency directive in August 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "regime": "ERCOT batch interconnection process",
+   "status": "in-effect",
+   "effectiveDate": "2025-12",
+   "exposure": "ERCOT announced amendments in December 2025 to the approval process for large-load interconnection requests and is implementing a process that may batch multiple requests to evaluate system impacts on a portfolio basis. Cipher's 10-K warns that this, together with potential requirements on grid stability, voltage ride-through, frequency ride-through and curtailment obligations, 'could increase costs, delay project timelines, or impose additional operational constraints'. Four pipeline sites — Colchis, Mikeska, McLennan and Apollo, together about 2.9 GW — are explicitly qualified as subject to the batch process and are expected in Batch Zero.",
+   "mitigation": "Cipher states that the requisite studies and executed facilities-extension agreements were submitted to ERCOT on time for Batch Zero inclusion.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "regime": "PUCT / ERCOT data-centre verification and audit (Abbott directive)",
+   "status": "in-effect",
+   "effectiveDate": "2026-08-03",
+   "exposure": "Governor Abbott directed the PUCT and ERCOT on 3 August 2026 to verify and audit data centres in the interconnection process, pausing new large-load energisations pending investigation of energy consumption, water use and use of public funds. ERCOT tracks more than 1,800 large-load requests totalling about 474 GW against a grid peak near 91 GW, and targets delivering its report to the PUCT by 10 December 2026. Cipher's Stingray energisation is targeted for Q4 2026, inside that window.",
+   "mitigation": "Cipher issued a release on 10 August 2026 supporting the directive, and states that it backs ambient noise studies published throughout the data-centre lifecycle and supported the water-use transparency audit.",
+   "source": "https://www.globaldatacenterhub.com/p/cipher-digitals-114b-backlog-two"
+  },
+  {
+   "regime": "PUCT registration of large virtual-currency mining operations",
+   "status": "in-effect",
+   "effectiveDate": "2024",
+   "exposure": "The PUCT required operators of large virtual-currency mining operations connected to the ERCOT grid to register their facilities from 2024. The requirement now bears on a single Cipher site — Odessa — and falls away entirely if that site is converted to HPC hosting.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "regime": "Tariffs on imported equipment",
+   "status": "in-effect",
+   "exposure": "Cipher's Odessa power price is expressly 'subject to certain increases related to certain tariffs', and the rate moved from about 2.7 to about 2.8 cents per kWh in October 2025 on that basis. The FY2025 10-K carries a general risk factor that enhanced tariffs, import or export restrictions or other trade barriers may adversely affect global economic conditions. No tariff rate specific to mining rigs or data-centre equipment is published.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  },
+  {
+   "regime": "US federal digital-asset policy",
+   "status": "in-effect",
+   "effectiveDate": "2025-01-23",
+   "exposure": "The FY2025 10-K describes the 23 January 2025 executive order 'Strengthening American Leadership in Digital Financial Technology' and the interagency working group's July 2025 report recommending legislation on self-custody, Bank Secrecy Act applicability, CFTC spot-market authority, prohibition of a central bank digital currency, and tax clarification. The exposure is diminishing with the mining business: bitcoin held fell from 1,433 BTC at end-2025 to 646 BTC at 30 June 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Black Pearl — near Wink, Winkler County, TX (Amazon)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Gross capacity",
+     "value": "~300 MW"
+    },
+    {
+     "band": "Capacity",
+     "label": "Critical IT load",
+     "value": "Not published — Cipher publishes gross only for this site"
+    },
+    {
+     "band": "Lease",
+     "label": "Tenant",
+     "value": "Amazon Web Services, Inc. per the FY2025 10-K; Amazon Data Services, Inc. per the June 2026 bond presentation"
+    },
+    {
+     "band": "Lease",
+     "label": "Guarantor",
+     "value": "Amazon.com, Inc. guarantees all base rent and operating expenses"
+    },
+    {
+     "band": "Lease",
+     "label": "Base term",
+     "value": "15 years, plus three five-year extension options"
+    },
+    {
+     "band": "Lease",
+     "label": "Headline figure",
+     "value": "~$5.5Bn — 'Estimated Contract Value' (Q3 2025 deck), relabelled 'Contracted Revenue' (FY2025 deck)"
+    },
+    {
+     "band": "Lease",
+     "label": "NOI margin",
+     "value": "~100%"
+    },
+    {
+     "band": "Delivery",
+     "label": "First capacity delivered",
+     "value": "'accelerated delivery of the first capacity to July 31, 2026' per the Q2 2026 10-Q"
+    },
+    {
+     "band": "Delivery",
+     "label": "Rent commencement, as guided over time",
+     "value": "'August 2026' (Nov 2025 PR) → 'fourth quarter of 2026' (FY2025 10-K) → '2026 Oct Lease Start Date' (FY2025 deck)"
+    },
+    {
+     "band": "Power",
+     "label": "Interconnection",
+     "value": "300 MW approved; ERCOT market agreements executed"
+    },
+    {
+     "band": "Site",
+     "label": "Land",
+     "value": "~75 acres owned by a wholly-owned subsidiary"
+    },
+    {
+     "band": "Financing",
+     "label": "Project debt",
+     "value": "$2.0bn 6.125% senior secured notes due 2031, Black Pearl Compute LLC; ~85% loan-to-cost; ~6.5x oversubscribed"
+    },
+    {
+     "band": "History",
+     "label": "Prior use",
+     "value": "Bitcoin mining from June 2025, ramped to 150 MW by September 2025, ceased February 2026; ~85% of infrastructure repurposed"
+    }
+   ],
+   "notes": "The brief for this dossier placed Black Pearl in Culberson County. SEC full-text search returns 20 filings matching 'Black Pearl' with 'Winkler County' and zero matching 'Black Pearl' with 'Culberson' — the site is at Wink, Winkler County."
+  },
+  {
+   "product": "Barber Lake — near Colorado City, Mitchell County, TX (Fluidstack / Google)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Gross capacity",
+     "value": "300 MW (244 MW Phase I + 56 MW Phase II)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Critical IT load",
+     "value": "207 MW (168 MW Phase I + 39 MW Phase II)"
+    },
+    {
+     "band": "Lease",
+     "label": "Tenant",
+     "value": "Fluidstack USA II Inc. — unrated"
+    },
+    {
+     "band": "Lease",
+     "label": "Credit support",
+     "value": "Google LLC backstops $1.73bn of Fluidstack's lease obligations under a lease recognition agreement"
+    },
+    {
+     "band": "Lease",
+     "label": "Base term",
+     "value": "10 years, plus two five-year extension options"
+    },
+    {
+     "band": "Lease",
+     "label": "Headline figures",
+     "value": "~$3.0Bn tranche 1 + ~$830m tranche 2 = ~$3.8Bn over the initial term; ~$9.0Bn if all extensions are exercised"
+    },
+    {
+     "band": "Lease",
+     "label": "Structure",
+     "value": "Modified gross lease with annual escalators; Cipher retains 100% project ownership"
+    },
+    {
+     "band": "Lease",
+     "label": "NOI margin",
+     "value": "80-85% (tranche 1), 85-90% (tranche 2), ~86% blended"
+    },
+    {
+     "band": "Capex",
+     "label": "Estimated project cost",
+     "value": "$9-11m per MW of critical IT load (tranche 1); $9-10m per MW (tranche 2)"
+    },
+    {
+     "band": "Delivery",
+     "label": "Commencement",
+     "value": "Initial delivery September 2026; rent from October 2026; the 39 MW tranche by January 2027"
+    },
+    {
+     "band": "Power",
+     "label": "Interconnection",
+     "value": "300 MW ERCOT interconnection approved 'without any restrictions on the load profile'; AEP Texas territory"
+    },
+    {
+     "band": "Site",
+     "label": "Land",
+     "value": "250 acres owned by Cipher Barber Lake LLC per the 10-K; 587 acres total site acreage per the September 2025 release; county reinvestment zone 872.859 acres"
+    },
+    {
+     "band": "Financing",
+     "label": "Project debt",
+     "value": "$1.4bn + $333m tack-on of 7.125% senior secured notes due 2030, Cipher Compute LLC; ~71% loan-to-cost; amortisation tracks the Google backstop"
+    },
+    {
+     "band": "Equity",
+     "label": "Google warrants",
+     "value": "24,178,576 shares at $0.01, ~5.4% pro forma, exercisable from lease commencement to 2030-09-24, with a $430.0m value floor"
+    }
+   ],
+   "notes": "Cipher recorded an offsetting asset of $544.5m at issuance for the value of the backstop, amortised straight-line over the lease life; the warrant itself is a Level 3 liability, $632.1m at 30 June 2026."
+  },
+  {
+   "product": "Stingray — Andrews, Andrews County, TX (Amazon)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Gross capacity",
+     "value": "100 MW"
+    },
+    {
+     "band": "Capacity",
+     "label": "Critical IT load",
+     "value": "70 MW"
+    },
+    {
+     "band": "Lease",
+     "label": "Tenant",
+     "value": "Amazon Data Services, Inc."
+    },
+    {
+     "band": "Lease",
+     "label": "Guarantor",
+     "value": "Amazon.com, Inc. fully guarantees all base rent and operating expenses"
+    },
+    {
+     "band": "Lease",
+     "label": "Base term",
+     "value": "15 years plus three five-year tenant extension options"
+    },
+    {
+     "band": "Lease",
+     "label": "Headline figures",
+     "value": "'~$2.0Bn of Contracted Revenue' and '~$2.0 - $5.7 Bn Contracted Lease Payments' on the same slide"
+    },
+    {
+     "band": "Lease",
+     "label": "Structure",
+     "value": "Triple net; de minimis operating expenses for Cipher; 3.0% annual rent escalator; no termination for convenience after commencement"
+    },
+    {
+     "band": "Lease",
+     "label": "NOI margin",
+     "value": "~100%"
+    },
+    {
+     "band": "Capex",
+     "label": "Development cost",
+     "value": "$10.5m per IT MW — and Amazon agrees to cover construction cost overruns above that figure"
+    },
+    {
+     "band": "Delivery",
+     "label": "Rent commencement targets",
+     "value": "1 April 2027 for the 10 IT MW network hall; 1 May 2027 for the 60 IT MW data hall"
+    },
+    {
+     "band": "Power",
+     "label": "Interconnection",
+     "value": "ERCOT interconnection approved for 100 gross MW; substation development underway"
+    },
+    {
+     "band": "Site",
+     "label": "Land",
+     "value": "250 acres"
+    },
+    {
+     "band": "Financing",
+     "label": "Project debt",
+     "value": "$810m 6.000% senior secured notes due 2031, Stingray Compute LLC; amortisation on a 1.25x DSCR target from completion"
+    }
+   ],
+   "notes": "Announced 2026-03-25 as a lease with an unnamed 'investment-grade Hyperscale tenant'; Amazon was named only in the 8-K bond exhibit of 2026-06-08."
+  },
+  {
+   "product": "Odessa — Ector County, TX (bitcoin mining, in run-off)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Operating capacity",
+     "value": "207 MW on a ~52-acre site"
+    },
+    {
+     "band": "Fleet",
+     "label": "Group self-mining hashrate",
+     "value": "~23.6 EH/s (Q3 2025) → ~11.6 EH/s (Q1 and Q2 2026)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Group fleet efficiency",
+     "value": "~16.8 J/TH (Q3 2025) → ~17.2 J/TH (Q1 and Q2 2026)"
+    },
+    {
+     "band": "Fleet",
+     "label": "Odessa site efficiency (Q3 2025)",
+     "value": "~17.6 J/TH at ~11.3 EH/s"
+    },
+    {
+     "band": "Cost",
+     "label": "All-in electricity cost per BTC (Q3 2025, last published)",
+     "value": "$25,414 at Odessa; $34,189 group-wide; $42,803 at Black Pearl; $58,427 at the WindHQ JV sites"
+    },
+    {
+     "band": "Power",
+     "label": "Contract",
+     "value": "Luminant ET Services fixed-price PPA at ~2.8 c/kWh (raised from ~2.7 c in October 2025), to at least July 2027, auto-renewing annually"
+    },
+    {
+     "band": "Power",
+     "label": "Take-or-pay",
+     "value": "Cipher must accept and pay for at least 66.7% of the full 207 MW each contractual year; Luminant holds annual curtailment rights"
+    },
+    {
+     "band": "Certification",
+     "label": "Uptime Institute",
+     "value": "M&O Stamp of Approval, 2024 — the first bitcoin mining data centre to receive it"
+    },
+    {
+     "band": "Treasury",
+     "label": "Bitcoin held",
+     "value": "1,433 BTC (2025-12-31) → 646 BTC (2026-06-30)"
+    },
+    {
+     "band": "Concentration",
+     "label": "Mining pool",
+     "value": "Foundry USA Pool paid $157.0m in FY2025 — 70% of total consolidated revenue"
+    }
+   ],
+   "notes": "Cipher states Odessa 'may also be suitable for retrofitting for HPC tenants' and is in discussions for an HPC hosting lease."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Tyler Page",
+   "title": "Chief Executive Officer and Director",
+   "background": [
+    "Chief Executive Officer — Cipher Digital Inc. (founder; from 2021)",
+    "Business development and strategic planning — Bitfury Group",
+    "Senior roles — New York Digital Investment Group (NYDIG), Stone Ridge Asset Management, Guggenheim Partners, Goldman Sachs, Lehman Brothers",
+    "Attorney — Davis Polk & Wardwell LLP",
+    "J.D., University of Michigan Law School; B.A., University of Virginia"
+   ]
+  },
+  {
+   "name": "William Iwaschuk",
+   "title": "Co-President and Chief Legal Officer (and Corporate Secretary)",
+   "background": [
+    "Co-President and Chief Legal Officer — Cipher Digital Inc., sharing responsibility for day-to-day operations with a focus on the corporate side",
+    "Global General Counsel, Corporate Secretary, board and management committee member — Tower Research Capital",
+    "Partner — Morgan Lewis & Bockius; legal roles at Goldman Sachs; began at Davis Polk & Wardwell",
+    "Board member — Texas Blockchain Council",
+    "B.A. and LL.B., University of British Columbia"
+   ]
+  },
+  {
+   "name": "Patrick Kelly",
+   "title": "Co-President and Chief Operating Officer",
+   "background": [
+    "Co-President and Chief Operating Officer — Cipher Digital Inc.",
+    "Chief Operating Officer and co-founder — Stone Ridge Asset Management; Treasurer and Principal Financial Officer of the Stone Ridge Trusts",
+    "Advisory board — Atalaya Capital Management, managing the build-out of Funding Path",
+    "Leadership roles — Magnetar Capital and D. E. Shaw & Co.; began at Citadel",
+    "CFA Charterholder; graduate of DePaul University"
+   ]
+  },
+  {
+   "name": "Gregory Mumford",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Chief Financial Officer — Cipher Digital Inc. (successor to Edward Farrell, whose retirement was announced 2025-10-06)",
+    "Senior investment banker, Digital Assets & Infrastructure Investment Banking — Keefe, Bruyette & Woods",
+    "Began his career at one of Canada's largest banks",
+    "CFA Charterholder; graduate of McMaster University"
+   ]
+  },
+  {
+   "name": "James Newsome",
+   "title": "Chair of the Board",
+   "background": [
+    "Founding partner — Delta Strategy Group",
+    "Board member — CME Group (2009-2011)",
+    "President — New York Mercantile Exchange (NYMEX) (2004-2009)",
+    "Chairman — US Commodity Futures Trading Commission (2000-2004); Commissioner (1998-2000)",
+    "Advisory board — Bitfury Top HoldCo (2015-2021), per the 2026 proxy"
+   ]
+  },
+  {
+   "name": "Caitlin Long",
+   "title": "Director",
+   "background": [
+    "Chairman and Chief Executive Officer — Custodia Bank",
+    "Managing Director — Morgan Stanley and Credit Suisse (1994-2016)"
+   ]
+  },
+  {
+   "name": "Wesley Williams",
+   "title": "Director",
+   "background": [
+    "Gallatin Loan Management / Aquarian Credit Partners",
+    "Previously Goldman Sachs"
+   ]
+  },
+  {
+   "name": "Cary Grossman",
+   "title": "Director",
+   "background": [
+    "Co-founder and officer — Good Works Acquisition Corp., the SPAC that merged with Cipher, and Good Works II",
+    "Certified Public Accountant"
+   ]
+  },
+  {
+   "name": "Robert Flatley",
+   "title": "Director",
+   "background": [
+    "Chief Executive Officer and founder — TS Imagine",
+    "President, Chief Financial Officer and Chief Operating Officer — New York Digital Investment Group (NYDIG) (2018-2019)"
+   ]
+  },
+  {
+   "name": "Thomas Duda",
+   "title": "Director",
+   "background": [
+    "Vice President of Real Estate — Henry Crown and Company"
+   ]
+  },
+  {
+   "name": "Bill Blevins",
+   "title": "Head of Grid Strategies",
+   "background": [
+    "Head of Grid Strategies — Cipher Digital Inc. (from June 2026)",
+    "Director of Grid Coordination — ERCOT, managing large-load interconnections"
+   ]
+  },
+  {
+   "name": "Mohamed Abouelella",
+   "title": "Head of Engineering",
+   "background": [
+    "Head of Engineering — Cipher Digital Inc.",
+    "Global Engineering Manager — Google, responsible for design and delivery of 5 GW+ of data centres"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Cipher reports in USD, so the normalized-KPI overlay is 'as reported' throughout. Two things make the GAAP line items unusually poor guides to the business right now. First, the trough: mining revenue is in deliberate run-off and no lease revenue has been recognised at all — the Q2 2026 10-Q states the HPC leases 'have not commenced and no revenue has been recognized as of June 30, 2026', with USD 25.5m of deferred revenue representing tenant-requested change orders only. Second, non-cash remeasurement: the FY2025 net loss of USD 822.2m is driven by a USD 450.4m fair-value loss on the embedded derivative in the 2031 convertible notes, and quarterly results since are dominated by movements in the Google warrant liability, which rises when Cipher's share price rises. Adjusted earnings for FY2025 were positive at USD 22.2m against that USD 822.2m GAAP loss. Cipher changed its primary non-GAAP measure from Adjusted Earnings to Adjusted EBITDA with effect from Q1 2026 and states it does not intend to report Adjusted Earnings in future periods. No published third-party consensus for FY2024 could be located, so no beat/miss verdict is offered for that year; for Q2 2026 the consensus figures published by different outlets differ across a 65% range on EPS, and the outlet with the widest coverage does not disclose whose consensus it uses.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The last full year before the pivot. Revenue grew on the Odessa and joint-venture fleets; the modest net loss reflects depreciation on a young fleet rather than any of the financing complexity that arrives in 2025.",
+    "metrics": [
+     {
+      "name": "Revenue — bitcoin mining",
+      "actual": "USD 151.270m (+19.3% on FY2023's USD 126.842m)",
+      "expected": "",
+      "verdict": "",
+      "result": "No published third-party consensus revenue figure for FY2024 could be located from any source, so no beat/miss verdict is offered.",
+      "kpi": "revenue",
+      "usdMillions": 151.27,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating loss",
+      "actual": "USD (43.699)m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (44.635)m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": -44.635,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (0.14)",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "eps",
+      "usdMillions": -0.14,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings (the company's then-primary non-GAAP measure)",
+      "actual": "USD 106.679m, or USD 0.33 per diluted share",
+      "expected": "",
+      "verdict": "",
+      "result": "Restated in the FY2025 deck as Adjusted EBITDA of USD 106.258m."
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 855.446m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Cash and cash equivalents",
+      "actual": "USD 5.585m",
+      "expected": "",
+      "verdict": "",
+      "result": "Against USD 628.263m a year later — the balance sheet is transformed by the 2025 financings."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Revenue grew 48.0% while the company lost USD 822.2m, and almost none of the loss is operational. The USD 450.4m derivative charge on the 2031 convertible notes arose because share settlement required a stockholder-approved increase in authorised shares, obtained only on 30 October 2025; until then the conversion feature had to be carried as a derivative. Within operating losses sit a USD 96.1m write-down of miners held for sale, a USD 45.3m impairment of long-lived assets at Odessa and a USD 29.4m loss on disposal of miners — the stranding of the fleet, recognised. Financing activities produced USD 3,189.2m, essentially all of it debt.",
+    "metrics": [
+     {
+      "name": "Revenue — bitcoin mining",
+      "actual": "USD 223.942m (+48.0%)",
+      "expected": "USD 264.16m (Zacks consensus)",
+      "verdict": "miss",
+      "result": "Missed the Zacks full-year consensus by 15.2%. Q4 alone came in at USD 59.7m against a Zacks consensus of USD 77.9m, a 23.3% miss.",
+      "kpi": "revenue",
+      "usdMillions": 223.942,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating loss",
+      "actual": "USD (421.563)m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (822.244)m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes a USD 450.4m fair-value loss on the 2031 convertible notes' embedded derivative and a USD 410.3m Q4 movement in the Google warrant liability, partly offset by a USD 45.1m gain on capped calls and a USD 19.3m warrant gain.",
+      "kpi": "net-income",
+      "usdMillions": -822.244,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (2.15)",
+      "expected": "USD (0.36) (Zacks consensus)",
+      "verdict": "miss",
+      "result": "A large miss on GAAP EPS driven entirely by non-cash remeasurement.",
+      "kpi": "eps",
+      "usdMillions": -2.15,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings",
+      "actual": "USD 22.236m, or USD 0.06 per diluted share",
+      "expected": "",
+      "verdict": "",
+      "result": "Positive against a USD 822.2m GAAP loss — the gap between the two is the clearest single statement of how little the income statement currently says about operations."
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 4,291.908m (from USD 855.446m)",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Total liabilities",
+      "actual": "USD 3,456.054m, including USD 2,711.648m of long-term borrowings and a USD 525.160m warrant liability",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Cash and restricted cash",
+      "actual": "USD 628.263m cash plus USD 1,761.292m current and USD 275.076m non-current restricted cash",
+      "expected": "",
+      "verdict": "",
+      "result": "Most of the liquidity is ring-fenced at project level and not available to the parent."
+     },
+     {
+      "name": "Bitcoin held",
+      "actual": "1,433 BTC carried at USD 125.400m",
+      "expected": "",
+      "verdict": "",
+      "result": "From 994 BTC at USD 92.651m a year earlier; 1,925 BTC mined and 2,289 BTC sold during the year."
+     }
+    ]
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "commentary": "The first quarter after the WindHQ disposals and the Black Pearl shutdown, and the first reported under the Cipher Digital name. Hashrate had halved and no lease revenue had begun.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "USD 34.838m",
+      "expected": "~USD 35.7m implied",
+      "verdict": "miss",
+      "result": "A narrow miss on an Investing.com-sourced implied consensus.",
+      "kpi": "revenue",
+      "usdMillions": 34.838,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (114.316)m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes a USD 43.6m gain on the warrant liability and USD 59.2m of interest expense.",
+      "kpi": "net-income",
+      "usdMillions": -114.316,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (0.28)",
+      "expected": "USD (0.23)",
+      "verdict": "miss",
+      "result": ""
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "USD (48.222)m",
+      "expected": "",
+      "verdict": "",
+      "result": "The first quarter reported on the new primary non-GAAP measure."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "The trough. Revenue fell again to USD 24.8m — a level last seen in 2024 — while total assets reached USD 7.5bn and total debt USD 6,016m. Stockholders' equity fell to USD 562.1m from USD 805.5m at the year end, principally on the accumulated deficit and the warrant liability. The market reaction was severe: the shares fell about 15-16% on the print.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "USD 24.837m",
+      "expected": "USD 31.7m (24/7 Wall St.) / USD 32.5m (The Motley Fool)",
+      "verdict": "miss",
+      "result": "A miss of roughly 22% against the lower of the two published consensus figures. Note the outlets disagree, and 24/7 Wall St. does not disclose whose consensus it uses.",
+      "kpi": "revenue",
+      "usdMillions": 24.837,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (267.529)m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes a USD 150.510m non-cash charge on the Google warrant liability and USD 66.736m of interest expense.",
+      "kpi": "net-income",
+      "usdMillions": -267.529,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (0.65)",
+      "expected": "USD (0.14) (24/7 Wall St.) / USD (0.23) (The Motley Fool)",
+      "verdict": "miss",
+      "result": "The published consensus figures differ across a 65% range, so the size of the miss is not well defined.",
+      "kpi": "eps",
+      "usdMillions": -0.65,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "USD (29.986)m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 7,501.454m",
+      "expected": "",
+      "verdict": "",
+      "result": "Property and equipment net of USD 2,132.585m, from USD 622-633m at the year end — the construction programme, capitalised."
+     },
+     {
+      "name": "Total debt",
+      "actual": "USD 6,016m consolidated, of which USD 4,543m is project-level secured and USD 1,473m is parent-level convertible notes",
+      "expected": "",
+      "verdict": "",
+      "result": "Against USD 4,560m of cash including restricted, of which USD 3,728m is restricted project-level cash and USD 832m is at the parent."
+     },
+     {
+      "name": "Stockholders' equity",
+      "actual": "USD 562.057m",
+      "expected": "",
+      "verdict": "",
+      "result": "Down from USD 805.535m at 31 December 2025."
+     },
+     {
+      "name": "Shares outstanding",
+      "actual": "414,253,564 at 30 June 2026; 415,030,722 at 3 August 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "Up about 18% over twelve months. USD 725.7m of ATM capacity remains; 5.5m shares were sold in Q2 2026 for about USD 129.2m net at an average of USD 23.50."
+     },
+     {
+      "name": "Contracted revenue (company metric, not a GAAP line)",
+      "actual": "~USD 11.4bn across 700 MW of contracted gross HPC capacity; average annualised NOI of ~USD 793m from October 2026 to September 2036",
+      "expected": "",
+      "verdict": "",
+      "result": "Not revenue under any accounting standard — an undiscounted sum of future contracted rent across three leases of 10 and 15 years."
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "label": "Cipher Digital Begins Development of Lateral Pipelines to Facilitate Data Center Expansion via Bring-Your-Own-Generation",
+   "url": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-begins-development-lateral-pipelines-facilitate",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "The Crypto Times — Bitcoin Hashrate Marks 316 Days Below Peak as Miners Redirect Power to AI",
+   "url": "https://www.cryptotimes.io/2026/09/03/bitcoin-hashrate-marks-316-days-below-peak-as-miners-redirect-power-to-ai/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Shattered.io — Bitcoin Hashrate Hits 1,001 EH/s, Difficulty -19%",
+   "url": "https://shattered.io/bitcoin-hashrate-zettahash-difficulty-2026/",
+   "date": "2026-09-05"
+  },
+  {
+   "label": "The Cerbat Gem — Cipher Mining (NASDAQ:CIFR) Trading Down 5.9% on Analyst Downgrade",
+   "url": "https://www.thecerbatgem.com/2026/08/07/cipher-mining-nasdaqcifr-trading-down-5-9-on-analyst-downgrade.html",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Disruption Banking — Is Cipher's Early Black Pearl Delivery the Real Story of Q2?",
+   "url": "https://www.disruptionbanking.com/2026/08/05/is-ciphers-early-black-pearl-delivery-the-real-story-of-q2/",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Cipher Digital Provides Second Quarter 2026 Business Update (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/q226_earningsxprxdraftxvf.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Cipher Digital Q2 2026 Business Update presentation (8-K Ex-99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Cipher Digital Inc. Form 10-Q, quarterly period ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — Cipher Digital Q2 2026 slides show $11.4B pipeline amid earnings miss",
+   "url": "https://www.investing.com/news/company-news/cipher-digital-q2-2026-slides-show-114b-pipeline-amid-earnings-miss-93CH-4834719",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "The Motley Fool — Why Investors Dumped Cipher Digital Stock on Tuesday",
+   "url": "https://www.fool.com/investing/2026/08/04/why-investors-dumped-cipher-digital-stock-on-tuesd/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "24/7 Wall St. — Cipher Mining (CIFR) Earnings Report Q2 2026",
+   "url": "https://247wallst.com/companies/cifr/earnings",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Global Data Center Hub — Cipher Digital's $11.4B Backlog: Two Tenants, Five Tranches, One Timing Gap",
+   "url": "https://www.globaldatacenterhub.com/p/cipher-digitals-114b-backlog-two",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Stingray Compute — June 2026 bond investor presentation (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "The Block — 'The power landlords of AI': Bernstein initiates coverage on TeraWulf and Cipher Digital",
+   "url": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "The Block — Bitcoin miner-to-AI boom sends stocks soaring as Cipher and Hut 8 hit fresh highs",
+   "url": "https://www.theblock.co/news/markets/2026-05-27-bitcoin-miner-ai-boom-stocks-soaring-cipher-hut-8-fresh-highs-402773",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Spoted Crypto — Hut 8 & Cipher Digital AI Data Center Pivot 2026: Sector Analysis",
+   "url": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Northwise — CIFR Barber Lake Site: Cipher's Flagship AI Data Center Bet",
+   "url": "https://northwiseproject.com/cifr-barber-lake-site/",
+   "date": "2026-05-25"
+  },
+  {
+   "label": "Northwise — CIFR Stock Black Pearl Site: AWS Lease, Power, and Risk",
+   "url": "https://northwiseproject.com/cifr-stock-black-pearl-site/",
+   "date": "2026-05-17"
+  },
+  {
+   "label": "Cipher Digital Provides First Quarter 2026 Business Update (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000025/exh991q1fy26_earningsxprvf.htm",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Cipher Digital Q1 2026 Business Update presentation (8-K Ex-99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000025/exh992cipherdigital_busi.htm",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Cipher Digital Inc. Definitive Proxy Statement (DEF 14A), 2026 Annual Meeting",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000016/cifr-20260420.htm",
+   "date": "2026-04-20"
+  },
+  {
+   "label": "Luxor Hashrate Index — Hashrate Index Roundup (April 13, 2026)",
+   "url": "https://hashrateindex.com/blog/hashrate-index-roundup-april-13-2026/",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "Cipher Digital Announces Business Updates — third campus lease and $200m revolving credit facility",
+   "url": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-announces-business-updates",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "CoinShares — Bitcoin Mining Report Q1 2026",
+   "url": "https://coinshares.com/insights/research-data/bitcoin-mining-report-q1-2026/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Cipher Digital Q4 Loss Wider Than Expected, Revenues Down Sequentially",
+   "url": "https://finance.yahoo.com/news/cipher-digital-q4-loss-wider-163100655.html",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Cipher Digital Inc. Form 10-K, fiscal year ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Cipher Digital Provides Fourth Quarter and Full Year 2025 Business Update (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000007/exh991q4fy25_earningsprxvf.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Cipher Digital FY2025 Business Update presentation (8-K Ex-99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000007/cipherdigital_businessup.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Sherwood News — Cipher Mining pares early losses after Q4 results disappoint",
+   "url": "https://sherwood.news/markets/cipher-mining-q4-2025-earnings-results-ai-data-center/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "insights4vc — Bitcoin Mining's AI Pivot: 2026 Thesis Update",
+   "url": "https://insights4vc.substack.com/p/bitcoin-minings-ai-pivot-2026-thesis",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Cipher Mining Announces Redemption and Cashless Exercise of Outstanding Warrants",
+   "url": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-mining-announces-redemption-and-cashless-exercise",
+   "date": "2025-11-26"
+  },
+  {
+   "label": "Cipher Mining Signs Additional 56 MW, 10-Year AI Hosting Agreement with Fluidstack (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+   "date": "2025-11-20"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Cipher Mining Q3 Earnings Beat Estimates, Revenues Up Y/Y, Shares Fall",
+   "url": "https://finance.yahoo.com/news/cipher-mining-q3-earnings-beat-182400040.html",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Cipher Mining Provides Third Quarter 2025 Business Update (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998925000110/nov3_earningspressreleasex.htm",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Cipher Mining Q3 2025 Business Update presentation (8-K Ex-99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998925000110/ciphermining_businessupd.htm",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Cipher Mining Signs 168 MW, 10-Year AI Hosting Agreement with Fluidstack (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+   "date": "2025-09-25"
+  },
+  {
+   "label": "The Block — Bitcoin miner Cipher signs $3 billion Google-backed AI hosting deal over ten years",
+   "url": "https://www.theblock.co/post/372315/cipher-mining-google-backed-3-billion-usd-ai-hosting-deal",
+   "date": "2025-09-25"
+  },
+  {
+   "label": "24/7 Wall St. — Cipher Mining (CIFR) Q2 2025 earnings report",
+   "url": "https://247wallst.com/companies/cifr/earnings/2025/Q2",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "24/7 Wall St. — Cipher Mining (CIFR) Q1 2025 earnings report",
+   "url": "https://247wallst.com/companies/cifr/earnings/2025/Q1",
+   "date": "2025-05-06"
+  },
+  {
+   "label": "Cipher Mining Announces $50 Million PIPE Investment from SoftBank Group",
+   "url": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-mining-announces-50-million-pipe-investment-softbank",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Cipher Digital — Company (executive management, board of directors and bios)",
+   "url": "https://cipherdigital.com/company/"
+  },
+  {
+   "label": "Cipher Digital — Infrastructure (site-by-site capacity and energisation table)",
+   "url": "https://cipherdigital.com/infrastructure/"
+  },
+  {
+   "label": "SEC EDGAR — submissions index for Cipher Digital Inc. (CIK 0001819989), recording the former name Cipher Mining Inc. through 2026-02-23",
+   "url": "https://data.sec.gov/submissions/CIK0001819989.json"
+  },
+  {
+   "label": "StockAnalysis.com — Cipher Digital (CIFR) stock price and overview",
+   "url": "https://stockanalysis.com/stocks/cifr/"
+  },
+  {
+   "label": "CoinWarz — Bitcoin Difficulty Chart",
+   "url": "https://www.coinwarz.com/bitcoin-difficulty"
+  },
+  {
+   "label": "Ziven.io — Bitcoin Mining Hashrate: Public Miners Ranked by Exahash",
+   "url": "https://ziven.io/bitcoin-mining/hashrate"
+  },
+  {
+   "label": "Interconnection.fyi (GridTracker) — Cipher Mining Barber Lake Data Center",
+   "url": "https://www.interconnection.fyi/data-center/project/cipher-mining-barber-lake-d5ad5c3a"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

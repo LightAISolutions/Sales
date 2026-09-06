@@ -1006,16 +1006,6 @@
    "note": "Dominion's GS-5 class binds data-center customers through a published tariff; Entergy binds them through single-customer electric service agreements and certificates that name the customer — the two ends of the regulated-contracting spectrum in this file.",
    "context": "Dominion Energy Virginia's GS-5 class publishes 85 percent transmission-and-distribution and 60 percent generation minimums with 14-year terms, effective January 2027; Entergy's contracts state 15- to 20-year terms with minimum bills sized to the incremental revenue requirement, filed under seal, and its plants are certified for the named customer under Louisiana's Lightning Amendment, Arkansas's Act 373 clock and Mississippi's pre-certification statute. The two utilities do not compete for load; they set the terms hyperscalers compare when choosing a state.",
    "source": "https://s201.q4cdn.com/714390239/files/doc_presentations/2026/Jun/09/Entergy-2026-Investor-Day.pdf"
-  },
-  {
-   "slug": "hut-8",
-   "type": "customer",
-   "status": "active",
-   "scale": "330 MW initial utility capacity, scalable to 1,000 MW",
-   "via": "Electric service at the River Bend campus, West Feliciana Parish",
-   "note": "Large-load customer at River Bend, taking 330 MW from Entergy Louisiana with first service targeted for Q2 2027.",
-   "context": "Hut 8's River Bend campus in West Feliciana Parish takes 330 MW of Entergy Louisiana utility capacity, available from 1 July 2026 and scalable to 1,000 MW, behind 245 MW of contracted critical IT let to a Fluidstack subsidiary with a Google backstop. Entergy plans new transmission for a roughly 345 MW West Feliciana load, and the campus benefits from transmission line capacity upgraded to about 1,045 MVA.\n\nNote the naming trap this creates in the corpus: **River Bend is also the name of Entergy's nuclear station in the same parish**, which appears elsewhere in this dossier and in `sargent-lundy`. The two are distinct assets that share a place name.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm"
   }
  ],
  "policyExposure": [
@@ -1170,11 +1160,6 @@
   }
  ],
  "sources": [
-  {
-   "label": "Hut 8 Signs 15-Year, 245 MW AI Data Center Lease at River Bend Campus with Total Contract Value of $7.0 Billion (8-K Ex-99.1)",
-   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
-   "date": "2025-12-17"
-  },
   {
    "label": "Arkansas Democrat-Gazette — Google's contribution was at issue in Arkansas PSC case",
    "url": "https://www.nwaonline.com/news/2026/sep/03/googles-contribution-was-at-issue-in-arkansas/",
@@ -1639,6 +1624,6 @@
    "url": "https://www.gem.wiki/Delta_Blues_Advanced_Power_Station"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 2
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
 }

@@ -3,11 +3,87 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 86/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.83r] — 2026-09-06 07:53:35 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase C session C9 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Opus 5 xhigh as a fresh session: Cipher Mining, Hut 8 and Galaxy Digital. C8 landed at v04.82r; Phases A and B
+> are complete and the §6 register in CLASSROOM-CURRICULUM-PLAN.md is dated at v04.78r — nothing in Phase C is a
+> register closer, so do not touch §6.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest = C8, Previous = C7); PROFILER-COVERAGE-PLAN.md §2
+> (the model rule and its three evidence notes), §5 (the demotion warning, and the C5, C6, C7 and C8 rows as four
+> worked examples of per-clause verdicts — study C7 and C8 together, because both concluded that a §5 superlative
+> was UNFALSIFIABLE rather than true or false, and C8's row explains why that keeps happening), §7 (every bullet —
+> especially "§5 — rewrite your own row", the after-write checkers, the calendar bullet, the CHANGELOG-capacity
+> bullet, and the X3 peer-family bullet as C5, C6, C7 and C8 extended it), the three §8 rows (`cipher-mining`,
+> `hut-8`, `galaxy-digital`, all `developer`, all columns at `—`), and §9.5; .claude/rules/profiler-app.md
+> (Profiler Command incl. steps 5 and 7, Profiler Prep Command, Scheduled Refreshes, Archival Procedure);
+> .claude/rules/changelogs.md (THE ARCHIVE ROTATION PROCEDURE — you will need it, see below);
+> repository-information/PROFILER-SCHEMA.md (relationships[] incl. `project` pins, sources[], Source provenance,
+> named-projects registry); repository-information/PROFILER-STYLES.md (active style: intel-briefing);
+> PROFILER-CROSSREF-CALIBRATION.md → "Relationships checker" incl. the F6, F7, F8, C5, C6, C7 and C8 adjudication
+> logs (the writer rules the builders followed: every relationship `source` is the exact registered string in that
+> dossier's sources[], asserted before the file is emitted — rebuild that scratchpad validator and the JSON
+> round-trip harness FIRST, as C6, C7 and C8 all did; C8 reports the validator catching a URL-FABRICATION near-miss
+> that a bare-label `source` would have hidden completely).
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+> category `developer` per the §8 rows) and study guide (schema v2) — then the four after-write scripts
+> (sync-profiler-registry.py, build-profiler-graph.py, check-profiler-study.py, check-profiler-relationships.py) plus
+> check-profiler-crossrefs.py, a calendar row per company, README tree entries, and flip all three §8 rows. One push
+> commit.
+>
+> SESSION-SPECIFIC NOTES: [Ten notes, quoted in full in the session transcript — the mandatory CHANGELOG rotation at 99/100; C9 inverting C8's shape (small inbound grep, large outbound edge set); Amazon and Google as step-7 scope-note deferrals; two named false-positive classes for `\bGalaxy\b` and `\bHelios\b`; grepping the tickers CIFR/HUT/GLXY separately from the names; campuses named by town, county, plant or project code; testing each lease dollar figure separately and establishing whether it is contracted revenue, total contract value, an enterprise value or capex; using sec.gov with a declared non-personal User-Agent and never the developer's email in a request header; Galaxy Digital not being a miner and the mismatch being a finding; guide scope against the five existing miner guides; researched calendar rows with a Chesterton check each; investor edges and C6's cheaper resolution over a fifteenth accept entry; named-project pins to be weighed rather than defaulted; per-file JSON formatting detection with `apex-clean-energy`, the reports and `archive/` never re-serialised; and archiving before editing rather than after.]
+>
+> THE §5 ROW IS A HYPOTHESIS, NOT A BRIEF: the C9 `Why` cell ("The miner-pivot landlords: 300 MW AWS lease; $7B
+> Anthropic/Fluidstack River Bend plus a $9.8B 352 MW Texas lease; 800 MW CoreWeave at Helios — >$19B of leases
+> combined") is unverified prompt material. Every megawatt figure, every dollar figure and the combined total are
+> separate premises. C4 and B5 went nought for three; C5 went two held, two failed, one split; C6 went two held, two
+> failed, three held with correction; C7 went nought for two with one narrower true core; C8 went one unfalsifiable,
+> one failed, three held with correction. Treat every clause as a premise to check, and before you commit rewrite
+> that cell plus the `Checked` column with what the sources actually showed, including "premise held" where it did.
+> Record the per-clause verdicts in all three §8 `Closes` cells too, as C5, C6, C7 and C8 did.
+>
+> VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py 0 errors / 0 warnings,
+> check-profiler-relationships.py exit 0 with every finding either fixed or accepted with a reason,
+> check-profiler-crossrefs.py exit 0, all three dossiers and all three guides render (Playwright) with zero page
+> errors, and the CHANGELOG counter back under 100 after rotation. Add a C9 entry to the calibration log's
+> Relationships checker adjudication log in the C5/C6/C7/C8 format. Report: source count and first-party share per
+> company, relationships written, any accepts, every §5 premise verdict, the step-7 count reviewed versus changed
+> versus deferred, whether the Abbott-release "Galaxy" is the company, and what the rotation moved. Normal Pre-Commit
+> and Pre-Push checklists; one push commit on a claude/* branch."
+
+### Added
+
+- **Cipher Digital dossier** (`cipher-mining.profile.json`, schema v7, profileVersion 1, `developer`) — the miner that finished the pivot and renamed itself: self-mining hashrate halved from ~23.6 to ~11.6 EH/s between Q3 2025 and Q1 2026, the three WindHQ joint-venture sites sold to Canaan and Black Pearl's fleet switched off in February 2026, leaving one 207 MW site at Odessa. In its place, 700 MW gross across three Texas campuses on ~USD 11.4bn of contracted revenue — Black Pearl (~300 gross MW, ~USD 5.5bn) and Stingray (100 gross / 70 critical IT MW, ~USD 2.0bn) both guaranteed by Amazon.com, Inc., and Barber Lake (300 gross / 207 critical IT MW) leased to Fluidstack USA II Inc. for ten years at ~USD 3.8bn with Google backstopping USD 1.73bn for ~5.4% of the equity. **47 sources, 45% first-party; 19 relationships; 6 `policyExposure` entries.**
+- **Hut 8 dossier** (`hut-8.profile.json`, schema v7, profileVersion 1, `developer`) — the largest contracted book in the cohort at 949 MW of critical IT on USD 26.6bn of base-term lease value, and the only one where Google's rent backstop cost **no warrants and no equity**. River Bend (245 MW critical IT on 330 MW of Entergy capacity, West Feliciana Parish, fifteen years, USD 7.0bn, Fluidstack subsidiary as lessee and Anthropic as end user) and Beacon Point (704 MW on 1,000 MW of AEP Texas capacity under two identical 352 MW leases of USD 9.8bn each) carry the whole book; the mining fleet sits in American Bitcoin Corp., 80.0% of the votes for ~54% of the economics. **71 sources, 48% first-party; 14 relationships; 6 `policyExposure` entries.**
+- **Galaxy Digital dossier** (`galaxy-digital.profile.json`, schema v7, profileVersion 1, `developer`) — the counter-example in the cohort: not a miner but a digital-asset broker-dealer, SEC-classified SIC 6211, reporting FY2025 revenue of USD 60.41bn on a gross principal basis against USD 3.03bn of equity and a USD 241.3m net loss, while owning 1.63 GW of ERCOT-approved capacity at Helios in Dickens County of which 800 MW gross / 526 MW of critical IT is let to CoreWeave and nothing else is let to anyone. Phase I is financed by a USD 1.4bn Deutsche Bank term loan at a ring-fenced Galaxy Helios I LLC. **61 sources, 66% first-party; 12 relationships; 7 `policyExposure` entries.**
+- **Three in-app study guides** (`cipher-mining.study.json` 15 sections, `hut-8.study.json` 12, `galaxy-digital.study.json` 12) and their **three lesson plans** under `repository-information/study-prep/`. The unclaimed gap against the five existing miner guides was taken deliberately: the bitcoin economics that *force* the pivot rather than merely invite it, and Galaxy Digital's actual business, which none of the five describes.
+- **33 shared concepts registered** in `profiler-concepts.json` (1,002 total) — the bitcoin-economics set (proof of work, SHA-256, ASICs, network difficulty, the 2,016-block retarget, halving, block subsidy, hashprice, joules per terahash, fleet stranding, curtailment, demand response) and the lease- and accounting-side set (gross capacity, critical IT load, contracted revenue, total contract value, base-term lease value, ASC 842, operating lease, sales-type lease, rent backstop, non-recourse, ring-fencing, equity method, fair-value measurement, principal trading, agency trading, AUM, yield on cost, DSCR, loan-to-cost, completion guarantee, credit backstop). Five further proposals were dropped as alias collisions caught before registration.
+- **`river-bend-campus` registered** in `profiler-projects.json` with its matching `project:river-bend-campus` seed in the News Scraper, pinned on all five River Bend relationships. Search terms are deliberately scoped (`Hut 8 River Bend`, `River Bend campus`, `River Bend data center`) because Entergy's River Bend **nuclear station** sits in the same parish. A `helios` pin was weighed and declined — two parties, one dossier, three in-corpus name collisions.
+- **Eleven company-published executive photographs** for Hut 8 under `live-site-pages/images/execs/`, verified on a contact sheet before use.
+- **Three researched refresh-calendar rows** — all three companies are public, none has filed a Q3 2026 earnings-scheduling 8-K, so each row carries a cadence-inferred `nextReport` with `confirmed: false`, the reasoning in `source`, and a Chesterton-check watch item.
+- **Twelve README tree entries** (three profiles, three study guides, three study-prep directories and their lesson plans).
+- **A C9 entry in the relationships-checker adjudication log** in `PROFILER-CROSSREF-CALIBRATION.md`, in the C5/C6/C7/C8 format.
+
+### Changed
+
+- **Seven step-7 counterparty revisions**, each archived before editing and each at 18–26 changed lines: `fluidstack` v1→v2, `anthropic` v2→v3, `entergy` v1→v2, `terawulf` v6→v7, `engie-north-america` v1→v2, `compass-datacenters` v2→v3 and `amazon` v8→v9. All 24 counterparties in the union were reviewed; fifteen needed no change; **`amazon`'s full lease-record reconciliation and `google` entirely are deferred and named as deferrals** rather than left silent.
+- **`profiler-graph.json` rebuilt** to 1,177 edges (888 curated) from 1,128 (846).
+- **`PROFILER-COVERAGE-PLAN.md`** — the §5 C9 row rewritten with per-clause verdicts and its `Checked` cell filled, the three §8 rows flipped with the same verdicts, the §7 X3 peer-family bullet extended with a sixth viewpoint, and the §7 CHANGELOG-capacity bullet brought current.
+- **News Scraper GAS** v02.00g → v02.01g for the new named-project seed.
+- **CHANGELOG rotation fired.** The new section took the count to 100/100; the oldest whole date group — **fourteen sections dated 2026-08-30, v03.84r through v03.97r** — moved to `CHANGELOG-archive.md` with SHA enrichment on every moved header, leaving **86/100**. Rotated at exactly 100 rather than above it on the developer's explicit instruction for this session.
+
+### Fixed
+
+- **`terawulf`** — a claim contradicted by the Hut 8 record was corrected rather than merely extended, as part of the step-7 pass.
+- **Cipher's Black Pearl location** — the site is near Wink in **Winkler County**, not Culberson: SEC full-text search returns 20 hits for the pair with Winkler and zero with Culberson.
 
 ## [v04.82r] — 2026-09-06 05:39:39 AM EST
 
@@ -4163,303 +4239,4 @@ The Phase 6 Classroom design gate, held and closed: four decision points put to 
 ### Added
 - **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — the approved Phase 6 spec: Classroom as its **own app** (`Classroom.html` + `Classroom.gs`, federated via Pages data + token-gated routes — recommendation reversed from "Profiler mode" once the developer stated the growing-ecosystem/quality-over-economy context); audience admin/contributor/analyst (viewer excluded); "Everything" content under the **provenance-gating rule** (a lesson inherits the strictest gate of its inputs; field notes never become content); the approved **Profiler analyst-tier retune** (loses Relationships/Network, Coverage with a real server-side check, and Export; viewer strict dossier-only) executing as C0's first slice; phase plan C0–C6 with **v1 = C0–C2** (scaffold + learning core + scheduled curriculum pipeline with weekly briefing lessons and freshness deltas); **C3 — Guidance homecoming** (developer-proposed migration of Industry Guidance from Profiler.gs to Classroom, with the full migration checklist: ops, Admin lens re-hosting, mentions route, progress-tick export/import, Routine + rules re-pointing); C4 drills, C5 sales simulations, C6 team layer gated on a team existing; in-app runtime Q&A stays deliberately deferred
 - **README tree** — entry for the new spec doc
-
-## [v03.97r] — 2026-08-30 11:13:05 PM EST
-
-> **Prompt:** "Picking up from my recent "BESS/AIDC market research system phase 4", build Phase 5 (learning-layer unification) per repository-information/PHASE5-LEARNING-LAYER-PLAN.md — study.json v2 on the guidance engine, the concepts registry, the v1 adapter (+ confirm the one-shot lift of all 62 guides), and the approved Layer 3 Scraper-seed rider in the same train."
-
-Phase 5 — learning-layer unification: study guides now share the guidance engine's renderer and vocabulary (never its content channels or gates), the shared concepts registry is live, all 62 guides are lifted to v2 in one shot, and the approved Layer 3 Scraper-seed rider rode the same train.
-
-### Added
-- **Study Guide schema v2** (`repository-information/PROFILER-SCHEMA.md`) — sections use the guidance section-kind vocabulary (`prose`/`callout`/`table`/`proscons`/`timeline`/`bars`/`ledger` + study-only `flashcards`/`quiz`) with stable kebab-case ids; optional per-guide `glossary[]`; legacy top-level `flashcards[]` valid at v2; v1 stays renderable forever via the in-page adapter
-- **`live-site-pages/profiler-data/profiler-concepts.json`** — the shared public concepts glossary (schema v1: slug/term/def/aliases), seeded with 44 core BESS/AIDC concepts (LFP, PCS, ITC, 45X, FEOC, NDAA §154, N+1, 800 VDC, SST, ERCOT/PJM, tolling, bankability, …). Study `{{term}}` tooltips resolve doc-glossary-first, then this registry; guidance modules keep their internal glossaries (role-gated content stays in `Profiler.gs`)
-- **`scripts/lift-study-guides.py`** — the one-shot mechanical v1→v2 lift (heading/bullets → prose/ps, generated section ids mirroring the in-page adapter, flashcards and `lastUpdated` preserved, per-file losslessness assertions, `--check` mode). Run once: **all 62 guides lifted (384 sections, 802 flashcards), zero already-v2, zero skipped**
-- **`scripts/check-profiler-study.py`** — the study-layer validator (v1/v2 shapes, per-kind section fields, unique ids matching the server progress pattern, slug↔filename↔registry↔profile agreement, concepts-registry shape + case-insensitive term/alias collision detection, `{{term}}` resolution): clean pass on the lifted corpus, wired into PROFILER-SCHEMA.md and the Prep Command as the mandatory post-write check
-- **Named-project seed convention** (PROFILER-SCHEMA.md → Named-projects registry) — registering a project now adds a matching Scraper interest seed in the same commit
-
-### Changed
-- **`.claude/rules/profiler-app.md`** — Prep Command step 4 rewritten for v2 authoring: guidance vocabulary, concepts-registry registration instead of per-guide redefinition, `{{term}}` markup, mandatory checker run
-- **All 62 `<slug>.study.json` files** — lifted v1→v2 (lossless; content and `lastUpdated` unchanged)
-
-#### `Profiler.html` — v01.74w
-##### Changed
-- `ovShowStudy` renders through `gdRenderDoc` with a study shell: "Study Guide" kicker, as-of line replacing the source line when a doc carries no source meta, concepts-registry tooltip fallback (`ovConceptsLoad`, one cached fetch), covered-company chips, and per-account section/quiz progress under doc id `study-<slug>` (server-synced where the guidance ops allow, localStorage otherwise). New `ovStudyV2` adapter keeps schema v1 renderable
-##### Removed
-- The v1 study overlay renderer and its dedicated skin (`#ov-study-overlay`/`#ov-study-panel` halves, `.ov-flash`) — the Coverage overlay keeps the formerly shared skeleton
-
-#### `Profiler.gs` — v01.29g
-##### Changed
-- `gdProgressWrite_` accepts `study-<slug>` doc ids alongside module ids: slug validated against the public registry (new `gdStudySlugs_`, 6h cache), section ids pattern-checked (`GD_STUDY_SEC_RE`), per-doc tick cap (`GD_STUDY_SEC_CAP` = 80) — study ticks sync cross-device without loosening the junk-params containment or the guidance role gate
-
-#### `Scraper.gs` — v01.90g
-##### Added
-- Layer 3 rider: 8 named-project interest topic seeds (`source: 'project:<slug>'`) for colossus, frontier, homer-city, hyperion, jupiter-nm, lighthouse, stargate, trimount — insert-only sheet upserts, distinctive multi-word terms to avoid topic-band padding
-
-## [v03.96r] — 2026-08-30 10:53:59 PM EST
-
-> **Prompt:** "Continue with your recommendation, then remember session."
-
-The Phase 5 handoff (the greenlit recommendation, executed as a fresh-session spec rather than an in-session build, per the recommendation's own framing) plus the session-context save.
-
-### Added
-- **`repository-information/PHASE5-LEARNING-LAYER-PLAN.md`** — the detailed Phase 5 spec, re-derived from the current codebase since only the one-line scope survived the gap-analysis transcript: current-state inventory (62 study.json v1 files / 384 sections / 802 flashcards vs the fetch-decoupled `gdRenderDoc` guidance engine), the build order (study.json v2 on the guidance section-kind vocabulary → renderer swap with a study shell → `profiler-concepts.json` registry → v1 adapter + optional one-shot lift → the approved Layer 3 Scraper-seed rider → docs/verification), open questions, and the Phase 6 Classroom design-gate boundary
-
-### Changed
-- **`repository-information/SESSION-CONTEXT.md`** — Remember Session: the strategic/Phases-0–3 entry rotated to Previous Sessions (2-session cap dropped the Scraper-reliability entry), new Latest Session covering v03.91r–v03.96r (Phase 4 build, fleet backfill, pin layer, report automation, this handoff) with the next-session recommendation `build phase 5`
-- **README tree** — entry for the new plan doc
-
-## [v03.95r] — 2026-08-30 10:42:56 PM EST
-
-> **Prompt:** "I approve of your alternative: a drift-gated monthly Routine + library filters. Go ahead. Continue with your recommendation."
-
-The report-automation build, all three approved halves: the baseline opportunity report, the library's search/filter surface, and the drift-gated monthly Routine.
-
-### Added
-- **Inaugural opportunity report** — `live-site-pages/profiler-data/reports/named-project-bess-attach--opportunity--2026-08-30.report.json` (intel-briefing style): BESS attach across the eight registered named projects. 15 scoped companies pinned at today's versions, 18 citations copied verbatim from dossier `sources[]` with derived party tiers, 5 confidence-tagged key judgments, a project-by-project pipeline table, the two proven attach lanes (owner-led Jupiter/Hithium Trimount; vendor-led Tesla at Colossus), a labeled-analysis whitespace callout, and 5 `indicators[]` that double as the drift gate's tripwires. Registered in `reports-index.json`; `check-profiler-reports.py` passed with 0 errors on the first run
-- **Report library search + filters** (`Profiler.html` v01.72w → v01.73w) — title/topic/scope search box, type filter chips, and a Superseded toggle in the `#reports` view (superseded editions now sit behind the toggle instead of always trailing the list); new `.rp-lib-bar`/`.rp-lib-q` styles
-- **Drift-gated monthly Routine** — `Profiler opportunity report — monthly drift check` (`trig_01TvnXREVHsQ4QCrtveYjvZM`, cron `0 17 1 * *` ≈ 1st of the month 9am PST, fresh session per fire; first fire 2026-09-01): counts scoped dossiers revised past the current edition's coverage pins and checks `indicators[]` via the Scraper corpus when a token is supplied; under 10 revised dossiers with no fired indicator it stands down silently, otherwise it authors a superseding edition opening with "What changed since the last edition". Documented as step 8 of the Profiler Report Command in `.claude/rules/profiler-app.md`
-
-### Fixed
-- **README tree report entries** — the reports block listed only one of the three 2026-08-29 report files; all four report JSONs (including today's) now have tree entries
-
-### Notes
-- Verified: Playwright renders of the filtered library (search narrowing to the new card, chips + Superseded toggle styled) and the report view's coverage table (15 pins, all at 2026-08-30); inline-script `node --check` clean; zero page errors
-- The Routine's first firing lands tomorrow (2026-09-01 17:00 UTC) — expected outcome is a silent stand-down at near-zero drift, which doubles as the gate's live test
-
-## [v03.94r] — 2026-08-30 10:31:34 PM EST
-
-> **Prompt:** "Regarding Lancium Clean Campus / Abilene, mention it in stargate's registry note. Regarding the opportunity analysis report, my first instinct is to ask you to automatically generate one weekly every Monday 9am PST and create an organized way for me to easily search and filter through past versions. Do you think that's a good idea? If not, propose an alternative with reasoning. Once we are done, continue with your recommendation."
-
-Pin-coverage Layers 1+2 per the approved recommendation, after a corroboration-verified read of every candidate relationship context. (The weekly-report question was answered as analysis — a drift-gated monthly Routine proposed instead of weekly wall-clock; nothing armed pending the developer's decision.)
-
-### Added
-- **Named-projects registry v2** (`live-site-pages/profiler-data/profiler-projects.json`; schema section updated in PROFILER-SCHEMA.md) — optional `parent` field for sub-campus rollup, plus five registrations: `hyperion` (Meta Richland Parish), `frontier` and `lighthouse` (Vantage, parent `stargate`), `jupiter-nm` (STACK Doña Ana, parent `stargate`), `trimount` (Jupiter Power/Hithium, Everett MA). Stargate's note now names the Abilene flagship as the Lancium Clean Campus (developer instruction). Denton deliberately NOT registered — all three CoreWeave-side engagements span multiple sites, so no relationship is ready to pin it (the registry's own rule held)
-- **14 new project pins** across 9 dossiers (each archived + profileVersion +1): the Meta Richland Parish co-prime web (meta↔turner-construction/dpr/mortenson + GC↔GC partner links → `hyperion`), vantage→voltagrid → `frontier`, bloom-energy→oracle → `jupiter-nm`, hithium↔jupiter-power → `trimount`. Skips were deliberate: turner-construction→meta spans two campuses (stays unpinned), lightsource-bp↔meta is trade-press framing not stated service, amazon↔openai's "Frontier" is OpenAI's product, holder-construction's Hyperion mentions are absence-of-role observations
-- **`scripts/scan-project-candidates.py`** — Layer 2: the standing corroboration scanner (20-name watchlist, distinct-dossier counts, flags unregistered names at ≥3 dossiers). First run: new-albany 8 (multi-operator OH cluster — needs a human split), denton 5, polaris-forge 4, lebanon-in/horizon-childress/fort-wayne/cwl1/clinton 3
-
-### Changed
-- **3 program pins refined to their specific campus** (pin-precision rule now in PROFILER-SCHEMA.md): stack-infrastructure→oracle and →openai `stargate` → `jupiter-nm` (the engagement is Project Jupiter itself), vantage→turner-construction `stargate` → `lighthouse` (the Turner-McCarthy JV builds Lighthouse phase 1). turner-construction→vantage and voltagrid→vantage keep `stargate` (multi-site engagements)
-- **`Profiler.html` v01.71w → v01.72w** — ⚑ chip tooltips on sub-campus pins now name the umbrella program ("part of Stargate")
-
-### Notes
-- Post-write passes clean: registry sync (0 drift), graph rebuilt (curated edges carry the new pins), global v7 validation 42 pins / 0 errors
-- Fleet pin count 28 → 42; every pin was verified against the relationship's own note/context before writing — 8 scanner hits were rejected as false positives or peer-comparison mentions
-
-## [v03.93r] — 2026-08-30 10:07:41 PM EST
-
-> **Prompt:** "Tesla's policy & regulatory exposure and xAI's "via Megapacks" and "Colossus" all showed up as intended. Backfill all the other dossiers with the new schema v7."
-
-Fleet-wide schema-v7 backfill — nine parallel agents worked the 86 remaining dossiers, each strictly limited to what its dossier's own sourced prose supports.
-
-### Changed
-- **83 dossiers revised to schema v7** (`live-site-pages/profiler-data/*.profile.json`, each profileVersion +1, lastUpdated 2026-08-30) carrying, fleet-wide: **116 `policyExposure[]` entries** (FEOC restrictions and ITC/45X most common; DoD 1260H / NDAA §154 blocks on the Chinese suppliers — CATL, EVE, Hithium, CRRC, Huawei DP, Narada; coined regimes where the dossier supports them, e.g. FERC co-location precedent, Texas data-center standards, US offshore wind stop-work), **180 relationship `via` fields**, **28 `project` pins** (Stargate 26 — OpenAI 6, Oracle 5, STACK/Vantage/Turner/DPR/Crusoe/Samsung C&T/GE Vernova et al.; Colossus 2 — voltagrid→xai plus the existing xai→tesla; Homer City 1 — kiewit→ge-vernova), and **10 physical KPI overlays** (`gwh-shipped`: BYD 60, Sungrow 43, Sunwoda 25.6, Hithium 35.1 + 30.0; `backlog-gwh`: LG Energy Solution 140; `mw-contracted`: Applied Digital 1400, TeraWulf 522 + 839; `mw-energized`: QTS 2000)
-- **3 dossiers legitimately untouched** — `core-scientific`, `hitt`, `holder-construction`: their prose names campuses and litigation but no policy regime, product line, or clean physical KPI; per the schema's absent-beats-forced rule they stay at their prior schema versions
-- **83 outgoing versions archived** (`profiler-data/archive/`, index entries appended, README tree entries added) — archival driven from git history so every pre-backfill state is preserved
-- **Post-write passes** — `sync-profiler-registry.py` (83 entries), `build-profiler-graph.py` (472 edges, curated edges now carry `via`/`project`, zero unregistered-project warnings)
-- **CHANGELOG archive rotation** — this section pushed the counter to 101, so the oldest date group (2026-08-24: v02.93r–v03.00r, 8 sections) rotated to `CHANGELOG-archive.md` verbatim with commit-SHA enrichment on every header; active file 93 sections, archive 200
-
-### Notes
-- Global v7 validation: 0 errors, 1 benign warning (EVE Energy's DoD 1260H source is the dossier's own recentDevelopments source URL — dossier-internal, carried with the dossier's original verify-caveat). Statuses all in-enum, every pin registered, no metric carries both `usdMillions` and `qty`
-- Agents also catalogued ~30 recurring unregistered project names (Meta Hyperion/Richland Parish, Vantage Frontier/Lighthouse, Project Jupiter/Stargate NM, TeraWulf Lake Mariner, Hithium Trimount…) — reported for a future registry decision, deliberately not pinned
-- Verified: Playwright renders of CATL's policy tab and OpenAI's relationships with the real data (zero page errors); all 83 files parse; regime labels have minor cross-dossier drift ("DoD 1260H list" vs "listing", "US import tariffs" vs "US–China battery tariffs") — normalizable opportunistically later
-
-## [v03.92r] — 2026-08-30 09:44:57 PM EST
-
-> **Prompt:** "continue with your recommendation"
-
-First real schema-v7 data — the Tesla and xAI dossiers backfilled so every Phase 4 surface renders live.
-
-### Changed
-- **Tesla dossier → schema v7, profileVersion 6** (`live-site-pages/profiler-data/tesla.profile.json`; outgoing v5 archived as `archive/tesla.profile.v5.json` with an index entry) — added `policyExposure[]` with two regimes built strictly from the dossier's existing sourced prose: `US–China battery tariffs` (in-effect; China-sourced CATL cell dependence and multi-sourcing exposure, with the stated onshoring sequence — Sparks NV, EVE Malaysia, LG Lansing, Megafactory Shanghai — as mitigation, TeslaNorth source) and `FEOC restrictions` (in-effect; CATL-anchored cell chain with the $4.3B LG Lansing contract as mitigation, LG disclosure source); added `via` deal metadata to the CATL (`"Megapack"`) and LG Energy Solution (`"Megapack 3"`) relationships
-- **xAI dossier → schema v7, profileVersion 4** (`xai.profile.json`; outgoing v3 archived as `archive/xai.profile.v3.json`) — the Tesla relationship now carries `via: "Megapack"` and `project: "colossus"`, the first named-project pin against the new `profiler-projects.json` registry
-- **Post-write passes** — `sync-profiler-registry.py` (2 entries updated) and `build-profiler-graph.py` rebuilt `profiler-graph.json` (472 edges; the tesla–xai curated edge now carries `via`/`project`, zero unregistered-project warnings)
-- **README tree** — archive entries added for `tesla.profile.v5.json` and `xai.profile.v3.json`
-
-### Notes
-- Pre-existing archive-trail gap flagged, deliberately NOT repaired piecemeal: `tesla.profile.v4.json` was never archived when the 88-dossier relationships-curation pass (v03.67r) bumped Tesla v4→v5 (the index still ends at v3 `supersededBy: 4`), while the same pass did archive xAI's outgoing v2 — surfaced to the developer for a decision on recovering it from git history
-- Verified: Playwright renders of the live Tesla Policy & Regulatory Exposure tab and the xAI Relationships tab using the real revised data (zero page errors); both profile JSONs and the archive index parse cleanly
-
-## [v03.91r] — 2026-08-30 09:31:43 PM EST
-
-> **Prompt:** "Picking up from my recent "BESS/AIDC market research system" session, build phase 4."
-
-Phase 4 of the approved strategic plan — schema v7 depth: policy-exposure tracking, BESS/AIDC-native physical KPIs, named-project relationship pins, and the full Compare peer-family map.
-
-### Added
-- **`policyExposure[]` profile section (schema v7)** — `repository-information/PROFILER-SCHEMA.md` defines `{regime, status, effectiveDate, exposure, mitigation, source}` (status enum `in-effect` / `announced` / `proposed` / `expired`; mitigation is the company's own stated response, never inference); `Profiler.html` (v01.70w → v01.71w) renders it as a new dossier tab — per-style labels added to `OV_SEC_LABELS` (Bloomberg chapters renumbered 4→9), status chips, gold Mitigation/Source labels, source links resolved against `sources[]` via `ovRelSource`, and a matching Word/PDF export chapter
-- **BESS/AIDC-native KPI keys (schema v7)** — the normalized-KPI vocabulary gains physical keys `gwh-shipped`, `backlog-gwh`, `mw-energized`, `mw-contracted` with a new `qty` overlay field (the figure in the unit the key names; currency KPIs keep `usdMillions`+`fxBasis`, never both on one metric); `scripts/check-profiler-reports.py` bars verification now accepts `qty` overlay values alongside `usdMillions`
-- **Named-projects registry** — new `live-site-pages/profiler-data/profiler-projects.json` (schemaVersion 1) carrying Colossus, Homer City, and Stargate as first-class entities, with its schema section in PROFILER-SCHEMA.md (deliberately lightweight: identity + one orientation line; participants stay derivable from published relationships); `Profiler.html` loads it memoized (`ovProjectsLoad`, graph-fetch pattern) and renders relationship `project` pins as gold ⚑ chips with kind/location tooltips and a raw-slug fallback for unregistered pins
-- **Relationship `via`/`project` fields (schema v7)** — optional deal metadata: `via` (the product line the engagement runs through, teal chip) and `project` (named-project pin); carried through `ovRelData`, the relationship one-pager export, and `scripts/build-profiler-graph.py` curated edges (`CURATED_FIELDS` + a WARN on unregistered project slugs)
-
-### Changed
-- **Compare peer families** — `OV_PEER_FAMILIES` in `Profiler.html` expanded beyond the single `hardware` family: `colocation` (developer + neocloud — the AIDC capacity providers; IREN and Crusoe carry both tags), `construction` (epc + gc — they build the same campuses), `developer-ipp` (the BESS project-developer/owner-operator set under its market name); hyperscalers deliberately stay their own family (they are the buyers, not competing sellers)
-- **CHANGELOG archive rotation** — this section pushed the counter to 101, so the oldest date group (2026-08-23: v02.91r–v02.92r, 2 sections) rotated to `CHANGELOG-archive.md` verbatim with commit-SHA enrichment on both headers; active file 99 sections, archive 192
-
-### Notes
-- No data migration — existing dossiers stay valid at their schema versions; v7 backfill rides each dossier's next revision per the proven v3/v4 pattern (raw policy material already exists across dossier prose, the bankability guidance module, and the §154 risk report)
-- Verified: Playwright render of the policy tab + v7 relationship chips on a synthetic dossier (zero page errors), `node --check` on the page script, `build-profiler-graph.py --check` byte-stable (472 edges), `sync-profiler-registry.py --check` (88/88 in sync), `check-profiler-reports.py` (0 errors)
-
-## [v03.90r] — 2026-08-30 09:09:00 PM EST
-
-> **Prompt:** "Coverage seems to work (see first three screenshots from Tesla, CATL, and NVIDIA). Then see the last screenshot: The current searchbar seems to be matching my inputs to both dossier names + summary. Change it so the searchbar only matches my inputs to dossier names."
-
-Bridge verified live by the developer (Tesla/CATL/NVIDIA Coverage panels all rendering, including event capture and desk reads on pre-launch rows), then the requested roster-search narrowing.
-
-### Changed
-
-#### `live-site-pages/Profiler.html` — v01.70w
-
-##### Changed
-- Roster search now matches company **names only** (`c.name` + `c.slug`) — the tagline was dropped from the haystack, so a query like "nvidia" no longer surfaces every card whose blurb mentions NVIDIA. The slug rides along as the hyphenated name form and cannot reintroduce tagline noise
-
-## [v03.89r] — 2026-08-30 08:43:06 PM EST
-
-> **Prompt:** "approve phases 0-3"
-
-Phases 0–3 of the approved Profiler/Scraper strategic plan (gap analysis authored in the prior research response): hygiene sweep, the Scraper↔Profiler bridge, corpus preservation, and the diamond pipeline — one commit.
-
-### Added
-- News-triage procedure for refresh sessions: new "News Triage — Scraper Corpus Bridge" section in `.claude/rules/profiler-app.md` (corpus endpoint shape, CORPUS_TOKEN handling rules — the token lives only in both projects' Script Properties and Routine prompts, never in repo files — triage/promotion procedure, single-source weighting), wired into the Scheduled Refreshes convention
-
-### Changed
-- `repository-information/PROFILER-SCHEMA.md`: registry categories now document `ipp`; the `legalName`+`hq` identity variant is documented beside the canonical `name`/`shortName`+`headquarters` shape (consumers must tolerate both; normalize opportunistically); `recentDevelopments.category` canonical enum expanded from 8 to 17 values with a case-insensitive consumption rule (the live corpus had drifted to 33 free-text spellings)
-- Diagrams synced for the new behavior: Scraper sequence diagram (corpus route, corpus-only archive rows, event/figure capture, EdgeCandidates mining + reconcile, Drive cold storage), Profiler sequence diagram (Coverage panel proxy flow), REPO-ARCHITECTURE flowchart (Profiler.gs → Scraper.gs "Coverage proxy" edge) — all three pako URLs regenerated and decompression-verified
-- Rotated the six 2026-08-10 sections of the Profiler page changelog to its archive with SHA enrichment (file was at its 50-section cap)
-
-#### `googleAppsScripts/Scraper/Scraper.gs` — v01.89g
-
-##### Added
-- Token-gated corpus read route (`?action=corpus`, `scHandleCorpus_`): `cop=timeline` (per-slug news, since-filter, cross-edition dedupe on the article key) and `cop=candidates` (pending relationship candidates); flat refusal while `CORPUS_TOKEN` is unset
-- EdgeCandidates tab + `scMineEdgeCandidates_` (post-render, one row per covered-company pair per article, deduped, ≤25/run) + `scReconcileEdgeCandidates_` (daily: pending → `covered` when the published profiler-graph.json curates the pair, `expired` after 60 days)
-- Drive cold storage (`scColdStoreRows_` → "Scraper Archive" folder): Digests-tab and DigestIntake retention trims serialize rows to JSON files before deletion; a failed Drive write skips the trim rather than lose rows
-- Summarize call now also returns per-item `event` (closed 10-value vocabulary, validated on parse) and up to 6 verbatim `figs`, merged into the row's Signals JSON (`scSignalsMerge_`)
-- Corpus-only intake rows: sub-floor items naming a covered company are stored with Section `archive` — excluded from the digest flow (`scDigestItems_` drops them) but searchable, timelineable, and mineable
-
-##### Changed
-- Rubric returns matched-company slugs (`matchedCompanySlugs` from the Interests Key) alongside labels; intake Signals JSON now carries `mcs` + a normalized-URL article key `ak`, serialized field-drop-first via `scSignalsJson_` (replaces the raw 1200-char slice that could cut mid-structure)
-- `companyTimeline` refactored onto the shared `scTimelineScan_` (slug match with label fallback, bounded, deduped); `searchArchive` haystack extended to summary + analysis text and slug filtering; `searchArchive`/`sourceStats`/mining read bounded newest-8000-row (and column-scoped) ranges instead of full-tab `getDataRange()` scans
-- ClickLog retention cap (`scTrimClickLog_`, 20k rows) added to the hourly tick's quiet branch
-
-#### `googleAppsScripts/Profiler/Profiler.gs` — v01.28g
-
-##### Added
-- Coverage proxy op (`action=news`, `handleNewsOp_`): session-validated, then server-to-server `UrlFetchApp` call to Scraper's corpus route with the shared `CORPUS_TOKEN` Script Property; reports `not_configured` while the token is unset; GET api mirror + doPost route registered
-
-#### `live-site-pages/Profiler.html` — v01.69w
-
-##### Added
-- "Coverage 📰" dossier button + overlay (`ovShowCoverage`/`ovNewsApi`): stored trade-press items split at the dossier's `lastUpdated` ("since this dossier was written" vs earlier), with event chips, verbatim figures, desk-read analysis, corpus-only markers, and a "possible relationships spotted in the news" candidates list; graceful states for unconfigured token, expired session, and missing backend
-
-##### Fixed
-- Removed the stale duplicate `profiler report <topic>` commands-reference entry that was still marked "Planned" for a shipped feature
-
-## [v03.88r] — 2026-08-30 07:14:52 PM EST
-
-> **Prompt:** "Where do I input the "op=deploy" probe? If it's through you, then execute the probe. Then, start building Phase 2."
-
-Probe executed first: the live deployment answered `Already up to date (v01.87g)`, confirming Phase 1 deployed via the webhook. Then the four approved Phase 2 items, as one commit.
-
-#### `googleAppsScripts/Scraper/Scraper.gs` — v01.88g
-
-##### Fixed
-- **Item 5 (server half): `scAiWithRetry_` accepts a `deadlineMs`** and rethrows instead of sleeping past it — the backoff ladder sleeps up to 53s inside one call while the 40s step budget is only tested between batches, so a batch entering at t=39s could return at t≈95s: the actual mechanism behind the browser's "no reply after 90s". Both digest callsites (summarize batch, lead) pass `t0 + SCRAPER_DIGEST_TIME_BUDGET_MS`. With the Phase 1 re-queue, giving up early costs nothing — the batch keeps its attempts
-- **Item 6: delivery candidates widen from "dated today" to the last `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` (3) days** — the old check was a silent, permanent midnight give-up for any edition that missed its day. The one-email guard now groups per edition per DAY, the in-flight hold and the completeness hold key on the ROW's date (an older row's repair day is over — it ships as it stands), and a late-delivered edition's subject carries its own date
-
-##### Added
-- **Item 6 (quota):** `MailApp.getRemainingDailyQuota()` read once per delivery pass and decremented per send; an edition the remaining allowance cannot cover is HELD (retried when quota refreshes) with a once-per-day alert, instead of throwing into the formerly-silent send catch
-- **Item 7: the scheduled path leaves traces** — `scDigestLogErr_` (Script Property ring buffer, capped 20) wired into every meaningful swallowed catch: tick interests/milestone/deliver/step/start/repair, morning-run step (via the ladder), repair, deliver, per-row send failures, and the continuation-trigger create (the scriptapp-scope failure that silently kills the ladder). `scDigestNoteRun_` stamps the last scheduled run (`build` / `tick` / `delivery` + outcome) in `DIGEST_LAST_RUN`
-- **Item 8: `scRecordDeploy_`** logs completion time, route (`webhook` / `get`) and result of every deploy call (capped 10) — called after `pullAndDeployFromGitHub()` in both the `doPost(action=deploy)` handler and the GET fallback with inline `// PROJECT:` markers, never gating the pull (Deploy Handler Protection intact)
-- **`goLiveStatus` serves the diagnostics**: `lastRun`, `recentErrors` (24-hour tail, last 5) and `recentDeploys` (last 5) — what makes the transport `http_404`-vs-deploy-swap theory finally testable
-
-#### `live-site-pages/Scraper.html` — v01.68w
-
-##### Fixed
-- **Item 5 (client half): `stepLoop` resumes instead of declaring failure on a transport error** ("no reply after 90s", `http_404`/`429`/`5xx`, failed fetch) — the build is resumable server-side, so re-calling `runDigestNow` continues from saved state. Bounded at 3 consecutive misses with growing pauses (5s/10s/15s) so an overrunning server call can finish before the resume lands; any successful reply resets the allowance
-
-##### Added
-- **"Last scheduled run" health tile** in the go-live status strip: kind + age of the last scheduled run, flagged `warn` with an error count when the 24-hour trail is non-empty
-
-## [v03.87r] — 2026-08-30 06:58:35 PM EST
-
-> **Prompt:** "Picking up from my recent "Morning Digests footer updates" session, build approved phase 1."
-
-### Fixed
-
-**`googleAppsScripts/Scraper/Scraper.gs` (v01.87g)**
-- **Soft-failed AI batches now re-queue instead of being written off** — the confirmed root cause of the 2-of-3-unsummarized edition. `scDigestSummarizeStep_` tracks per-item attempts in run state (`state.aiAttempts`, ceiling `SCRAPER_DIGEST_ITEM_AI_ATTEMPTS` = 3 per pass); a batch that soft-fails (`ai_bad_json` / `ai_truncated` / `ai_empty_response` / `ai_blocked_*`), or an item skipped in an otherwise-parsed reply, goes back to pending with its summary cell left EMPTY. The old path wrote the raw feed snippet as the summary, which permanently excluded those items from every later batch, step and continuation ("pending" is recomputed as items with no summary, and a snippet is a summary to that test). Snippets are now written in exactly one place: the hard-stop finalizer
-- **The scheduled build's swallowed-throw hole** — `scDigestMorningRun`'s `catch (stepErr) { break; }` scheduled no continuation (`more` only reflects the budget) and left no trace, while the hourly tick refused to look before 07:00 against a 06:00 build. The tick gate (`scDigestScheduledTick_`) and `scEditionDue_` now use `SCRAPER_DIGEST_BUILD_HOUR` (6); the retired `SCRAPER_DIGEST_RUN_HOUR` (7) is removed (approved Phase 1 item 5)
-
-### Added
-
-**`googleAppsScripts/Scraper/Scraper.gs` (v01.87g)**
-- **Completeness verdict + delivery gate** — the render step computes `complete` (every summarize-set item carries a real AI summary; the lead has text + analysis) into a new `Complete` column (17: `yes` / `no` / `best-available`; blank on pre-existing rows = ship as before). `scDigestDeliverPending_` HOLDS a `no` row — left pending, never stamped — until the 12:00 ET hard stop (`SCRAPER_DIGEST_HARD_STOP_HOUR`, = 09:00 PT per the developer's deadline model)
-- **Repair pass** (`scDigestRepairPass_`, weekday- and build-hour-gated) — reopens today's rendered-but-incomplete undelivered editions (attempts reset, phase back to summarize; only empty-summary items re-attempted; the lead redone only when it lacks text or analysis), advances them within the caller's budget, and the delivery pass that follows mails each edition the moment it is whole. At the hard stop `scDigestFinalizeBestAvailable_` writes the display snippets, re-renders with the honest footer note ("a few summaries fell back to source text") and ships; a due edition with no Digests row at all triggers a once-per-day failure alert email instead of an unexplained empty inbox
-- **Escalating-backoff retry ladder** — Tier 1: 3 immediate same-execution attempts (`scDigestStepWithRetry_`, 2s/5s pauses); Tier 2: one-off continuations at +5/+10/+20/+30/+60/+60/+60 min (`SCRAPER_DIGEST_RETRY_LADDER_MIN`, monotonic per-day index in one self-resetting Script Property — at most 7 rungs/day, ~21 step attempts across six hours where a fixed 5-minute interval would burn ~72 executions against the consumer 90 min/day trigger budget); Tier 3: the hourly tick to the hard stop. Terminal AI faults (`scAiTerminal_`: missing key, unconfigured provider, rejected request) skip the rungs — one alert per day (`scDigestAlertOnce_`) and recovery stays with the tick. `scDigestScheduleContinuation_` now accepts a delay
-- **Hidden subscriber-milestone alert** (`scSubsMilestoneCheck_`, called from `scSchedulerTick` right after the Interests sync, before the pause gate) — when active subscribers reach `SCRAPER_SUBS_MILESTONE` (15) and the `SUBS_MILESTONE_15_SENT` Script Property is unset, one email to the developer covers the consumer 100-recipients/day ceiling, the ×3 editions multiplier and the transactional-provider option, then sets the property so it can never fire twice. No UI surface; threshold and address deliberately kept out of the public GAS changelog per the approved plan
-
-### Changed
-
-**`googleAppsScripts/Scraper/Scraper.gs` (v01.87g)**
-- `SCRAPER_DIGEST_ITEMS_PER_AI_CALL` 5 → 3 — smaller batches truncate less, and a soft-fail now costs 3 items, not 5 (approved Phase 1 item 6)
-- **Delivery recipients split** — the developer's two addresses ride in `to:` (`SCRAPER_DIGEST_TO_ADDRS`), every other subscriber in `bcc:` (first subscriber promoted to `to:` if neither developer address subscribes — MailApp requires one); the old comma-joined `to:` exposed every subscriber's address to every recipient. Zero quota cost — Apps Script counts recipients, not fields
-- `listDigests` tail read widened to columns 9–17 and rows carry the `complete` verdict; the render step's return and saved state carry the verdict for the ladder/repair callers; `SCRAPER_DIGEST_MAX_SOFT_AI_FAILS` re-commented for its new semantics (caps per-pass churn; items stay pending for repair)
-
-**`repository-information/diagrams/Scraper-diagram.md`**
-- Sequence diagram synced to the new behavior: hourly tick assists ≥6 ET, Complete verdict + hold/repair/hard-stop and the `to:`/`bcc:` split in the delivery note, `listDigests` columns 1-6 + 9-17. mermaid.live URL regenerated via pako and decompression-verified
-
-## [v03.86r] — 2026-08-30 05:32:47 PM EST
-
-> **Prompt:** "I want the footer to be formatted like so:
->
-> * Left-aligned: "Amber = Analysis by X * Y relevant of Z scanned" where X can be Gemini or Claude depending on AI model used, Y is number of relevant articles, and Z is number of scanned articles"
-> * Right-aligned: "Developed by Jon Yang""
-
-### Changed
-
-**`googleAppsScripts/Scraper/Scraper.gs` (v01.86g)**
-- Night Ink footer is now a two-cell table row instead of one stacked run: left cell (`align="left"`) carries `Amber = Analysis by <Brand> · <relevant> relevant of <intake> scanned` plus any AI fallback note, right cell (`align="right"`, `white-space:nowrap`, 14px left gutter) carries `Developed by Jon Yang`. The `View More (N)` link keeps its own full-width row below
-- The left run is built as a `footLeft` array joined with `' · '` rather than concatenated with leading separators. Two of its three parts are conditional, and the concatenated form emitted a dangling leading `·` on an edition containing no analysis — a join cannot express that
-- Layout deliberately uses an email `<table>` with HTML `align` attributes rather than CSS columns. The previous two-column footer was replaced by a stacked block because it depended on a media query to stack on phones and Gmail drops the whole `<style>` element when it dislikes any part of it; a table needs no query at any width — the left cell wraps inside itself and the byline stays pinned right — and `align` attributes cannot be stripped
-- Verified with Playwright at 640px and 390px across four states (Gemini + analysis, Claude + soft fallback note, hard fallback with no analysis, analysis with no model label): two columns hold, no overlap, no horizontal scroll, no stray separators
-
-## [v03.85r] — 2026-08-30 04:34:20 PM EST
-
-> **Prompt:** "The changes successfully went through. One adjustment: I would actually like the right side of the footer say "X revelant of Y scanned" where X is the total number of relevant articles (including the ones in View More) and Y is the total number of articles scanned, just like before."
->
-> **Follow-up (same turn):** "Also, change "Published by Jon Yang" to "Developed by Jon Yang""
-
-### Changed
-
-**`googleAppsScripts/Scraper/Scraper.gs` (v01.85g)**
-- Night Ink footer restores the coverage pair on the right: `<relevant> relevant of <intake> scanned`, from `d.counts.relevant` (the whole relevant set, held-back items included) and `d.counts.intake`. The desk-side half removed in v01.84g stays removed — no `shown` count, no `N more held back by the per-section caps` clause — and the News Stand remains the home for those
-- Footer byline changed from `Published by Jon Yang` to `Developed by Jon Yang`
-- The footer comment now distinguishes the two claims explicitly: shown/held-back is pipeline telemetry (moved to the News Stand), relevant-of-scanned is the edition telling the reader how wide a net it cast, and `relevant` being the full set is what keeps it consistent with the `View More (N)` link rather than in tension with it
-
-### Housekeeping
-- `live-site-pages/gs-changelogs/Scrapergs.changelog.md` exceeded its 50-section cap (51 after this entry), so the oldest date group — all 19 sections dated 2026-08-27 — rotated to `Scrapergs.changelog-archive.md` with commit-SHA enrichment on every moved header. Active file now at `Sections: 32/50`
-
-## [v03.84r] — 2026-08-30 04:17:50 PM EST
-
-> **Prompt:** "Picking up from my "Scraper subscriber/edition matching" session, I want the following changes to the Morning Digests' footers:
->
-> * Replace "Published by your Scraper desk" with "Published by Jon Yang"
-> * Replace "Amber = analysis" with "Amber = Analysis by X" where X is the AI model used. If it is Gemini 3.5 flash lite, just say "Gemini" and don't mention the exact model
-> * Since we reference the AI model above, remove the "summarized by X" line at the end
-> * Remove the "14 of 15 relevant * 104 scanned * 1 more held back by the per-section caps" - My readers don't need to know all that. Just make it clear in the News Stand for me to see."
-
-### Changed
-
-**`googleAppsScripts/Scraper/Scraper.gs` (v01.84g)**
-- Night Ink footer (`scRenderDigestNightInk_`) rewritten: byline is now `Published by Jon Yang`; the amber key reads `Amber = Analysis by <Brand>`; the coverage run (`shown of relevant · intake scanned · N more held back by the per-section caps`) and the trailing `summarized by <provider/model>` credit are both removed. The `aiNote` / `aiSoftNote` fallback notices are deliberately kept — they are claims about the content in front of the reader, not attributions
-- `Digests` tab header gained `Shown` and `Held Back` (columns 15–16), denormalised out of the Sections JSON for the same reason `Lead` and `No` are: the News Stand read path must not pull the heavy column to print two integers. `ensureScraperTabs_`'s cache key is column-count-derived, so the widening lands on the next call
-- `listDigests` tail read widened from 6 to 8 columns and now returns `shown` / `heldBack`. Both are `null` (not `0`) on rows written before the columns existed, so the app can omit the figure rather than claim an edition showed nothing
-
-**`live-site-pages/Scraper.html` (v01.67w)**
-- News Stand subtitle (`wdLandingShowEdition_`) now prints the full coverage line for the open issue — `N shown of M relevant · K scanned · J held back by the section caps` — plus the exact `provider/model` label and any AI note. This is the desk-side home of what the footer used to broadcast to every subscriber
-- News Stand card tooltips carry the same per-issue breakdown
-
-### Added
-
-**`googleAppsScripts/Scraper/Scraper.gs`**
-- `scAiBrand_(label)` maps the stored `provider/model` label to a reader-facing brand (`gemini/gemini-3.5-flash-lite` → `Gemini`, `claude/...` → `Claude`, unknown providers title-cased, fallback runs → `''`). The model version is intentionally dropped: it is unactionable for a reader and dates an archived edition the moment the model is swapped
 

@@ -1,0 +1,1449 @@
+{
+ "schemaVersion": 7,
+ "slug": "hut-8",
+ "name": "Hut 8 Corp.",
+ "shortName": "Hut 8",
+ "categories": [
+  "developer"
+ ],
+ "website": "https://www.hut8.com/",
+ "headquarters": "Miami, FL, USA",
+ "founded": "2017 (Hut 8 Mining Corp.); Hut 8 Corp. formed November 2023 by the merger of Hut 8 Mining Corp. and U.S. Data Mining Group, Inc. (US Bitcoin Corp)",
+ "employees": "Not published as a headcount figure in the FY2025 10-K",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: HUT"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Hut 8 has contracted **949 MW of critical IT capacity across USD 26.6bn of base-term lease value** — the largest contracted book among the converted bitcoin miners in this corpus — and has done it with a credit structure materially stronger than its peers': **Google took no warrants and no equity in Hut 8** for backstopping the River Bend lease, where Cipher gave away about 5.4% of itself and TeraWulf about 14% for the same service. Two campuses carry the whole book. **River Bend** in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to a Fluidstack subsidiary for fifteen years at USD 7.0bn with Google backstopping the rent and Anthropic as end user. **Beacon Point** in Nueces County, Texas is 704 MW of critical IT on 1,000 MW of AEP Texas capacity, let under **two identical 352 MW leases of USD 9.8bn each** to one unnamed tenant the company describes only as rated AA- or higher — USD 19.6bn for the campus. Neither has delivered a megawatt: initial energisation at Beacon Point is targeted for Q1 2027 and the first River Bend data hall for Q2 2027.\n\n**BACKGROUND.** Delaware-incorporated, Miami-headquartered, dual-listed on Nasdaq and the Toronto Stock Exchange as HUT, and classified by the SEC under SIC 6199. FY2025 revenue USD 235.1m (+44.8%) against a net loss of USD 248.0m, of which USD 226.1m was attributable to Hut 8 — a loss dominated by a **USD 220.0m mark-to-market loss on bitcoin**, where FY2024's USD 331.4m profit had been dominated by a USD 509.3m bitcoin gain. Mining itself is no longer Hut 8's own business: the fleet was contributed to **American Bitcoin Corp. (Nasdaq: ABTC)** in March 2025, in which Hut 8 holds **80.0% of the voting power but only about 54% of the economics**. The 310 MW Ontario gas fleet was sold to TransAlta in February 2026, leaving 710 MW of energy capacity under management. Roughly USD 7.5bn of investment-grade, non-recourse project debt funds the two campuses against about USD 159.3m of parent recourse debt.",
+ "ecosystemRole": "The converted miner that went furthest into project finance and least far into dilution. Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt. It is also the node where three other dossiers meet — Entergy Louisiana is its utility at River Bend, Fluidstack is its tenant of record there, and Anthropic is the end user, the same chain that runs through TeraWulf and Cipher. AEP Texas is its counterparty at Beacon Point. Its mining exposure now reaches the ecosystem indirectly, through a separately listed subsidiary it controls on 80% of the votes and roughly half the economics.",
+ "productsAndServices": [
+  {
+   "name": "Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+   "category": "AI/HPC data-centre leasing",
+   "description": "Three signed leases across two campuses, none yet delivering. **River Bend** (West Feliciana Parish, Louisiana; MISO; Entergy Louisiana): 245 MW of critical IT supported by 330 MW of utility capacity, leased to a subsidiary of Fluidstack Ltd. on a 15-year triple-net lease with a 3.0% annual escalator, base-term contract value USD 7.0bn and expected cumulative NOI of USD 6.9bn — an average of USD 454m a year. Google LLC provides a financial backstop covering the lease payments and related pass-through obligations, with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue. Three five-year renewal options would take contract value to about USD 17.7bn. **Beacon Point** (Nueces County, Texas; ERCOT; AEP Texas): 704 MW of critical IT on 1,000 MW of utility capacity, let under **two separate but substantially identical 352 MW leases of USD 9.8bn each** — Phase 1 announced 6 May 2026 and Phase 2 on 20 July 2026 — to the same tenant, a company Hut 8 describes only as 'high-investment-grade (i.e., rated AA- or higher)' and has never named. Campus base-term contract value USD 19.6bn, or USD 50.2bn with all renewals.",
+   "highlights": [
+    "**Google took no warrants and no equity in Hut 8.** The only consideration described in any first-party document is a payment backstop — a material contrast with Cipher (about 5.4% of pro forma equity) and TeraWulf (about 14%) for the same service on the same Fluidstack template",
+    "The Beacon Point tenant is unnamed. Chief executive Asher Genoot said naming Anthropic and Fluidstack at River Bend had created 'unnecessary eyeballs' and competitive friction",
+    "Phase 1 at Beacon Point was redesigned from 224 MW to 352 MW of IT capacity within the same building footprint — a 57% increase over the original design",
+    "Portfolio economics work out at roughly USD 1.86-1.90m of contract value per MW-year across all three leases, a remarkably tight band",
+    "Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties",
+    "Build cost is guided at USD 9-11m per MW at both campuses; River Bend PUE 1.35, Beacon Point PUE 1.42",
+    "Nothing has been delivered: Beacon Point initial energisation targeted Q1 2027 with Phase 1 data halls in Q3 2027 and Phase 2 in Q2 2028; River Bend's first data hall in Q2 2027"
+   ],
+   "positioning": "The largest contracted book in the converted-miner cohort — 949 MW of critical IT and USD 26.6bn of base-term value against Cipher's 700 MW gross / about USD 11.4bn, TeraWulf's roughly USD 13bn and Galaxy's 526 MW. Applied Digital reports more capacity (about 1.4 GW) and a larger headline (about USD 36bn), and Core Scientific more leased power (about 1.1 GW), but Hut 8 is alone in combining scale with an investment-grade counterparty on every megawatt and no equity given away for credit support.",
+   "soldThrough": "Direct long-term triple-net leases negotiated bilaterally. J.P. Morgan was lead left loan underwriter and Goldman Sachs & Co. LLC a loan underwriter at River Bend; Vertiv co-developed the custom infrastructure solution and Jacobs Solutions is EPCM partner.",
+   "targetSegments": [
+    "Frontier AI labs, reached through a tenant of record",
+    "Hyperscale and high-investment-grade technology companies"
+   ],
+   "roadmap": "River Bend first data hall Q2 2027 with further halls across the balance of 2027; Beacon Point initial energisation Q1 2027, Phase 1 delivery Q3 2027, Phase 2 delivery Q2 2028, campus fully operational spring 2028. A right of first offer covers up to 1,000 MW of additional IT capacity at River Bend and Hut 8 and Anthropic may jointly develop up to 1,050 MW more elsewhere."
+  },
+  {
+   "name": "Power and development pipeline — 710 MW under management and about 8.7 GW in the pipeline",
+   "category": "Powered land, interconnection and energy capacity",
+   "description": "Hut 8 describes itself as an energy infrastructure platform and measures itself in megawatts at four pipeline stages. At 30 June 2026 it managed **710 MW of energy capacity**, down from 1,020 MW a year earlier after the February 2026 sale of the 310 MW Ontario gas fleet, with about 5,400 MW under diligence, 1,880 MW under exclusivity and 830 MW under construction. Owned generation is now **zero**: the entire fleet was the Far North JV — Iroquois Falls and Kingston at 120 MW each and North Bay and Kapuskasing at 35 MW each — held 80.1% with Macquarie, acquired out of a court-approved stalking-horse bid in February 2024 and sold to TransAlta on 2 February 2026 for a gain of USD 34.7m. What remains is behind-the-meter wind at Vega and at the 50%-owned King Mountain joint venture, grid connections in ERCOT, AESO and NYISO, and interconnection positions at the two development campuses. A third US site, **Logan Prairie** in Logan County, Illinois — 500 MW proposed on a 50-acre footprint, subject to Ameren Illinois and MISO studies and a conditional use permit — appears on the company's website but in no SEC filing.",
+   "highlights": [
+    "Energy capacity under management fell from 1,020 MW to 710 MW on the Far North divestiture; the four plants had just won five-year IESO capacity contracts commencing 1 May 2026",
+    "Beacon Point's full 1,000 MW is secured under an executed interconnection agreement with AEP Texas; River Bend's 330 MW from Entergy Louisiana was available from 1 July 2026 with a path to 1,000 MW",
+    "About 1.5 GW of utility capacity across operational and development sites in Texas, including large-scale behind-the-meter projects at King Mountain and Vega",
+    "Land owned: 627 acres in West Feliciana Parish (2,361 further acres under option), 524 acres in Nueces County and 7.2 acres in Batavia, Illinois",
+    "Vega was developed at an all-in cost of about USD 455,000 per megawatt and energised in under a year from acquisition",
+    "Logan Prairie is explicitly not a mining site — the company states it is 'not proposed or designed for cryptocurrency mining'"
+   ],
+   "positioning": "Hut 8's pipeline discipline — publishing four named stages quarter by quarter — is more granular than any peer's in this corpus, and the trend is a deliberate narrowing: total pipeline fell from 11,008 MW at Q1 2025 to about 8,660 MW at Q2 2026 as diligence-stage megawatts converted or were dropped.",
+   "soldThrough": "Owned and optioned land with utility interconnection agreements; capacity is monetised through leases rather than power sales.",
+   "targetSegments": [
+    "AI and HPC tenants",
+    "Affiliated ASIC compute (American Bitcoin)"
+   ],
+   "roadmap": "Logan Prairie remains in early development subject to local approvals; the River Bend ROFO covers up to 1,000 MW of additional IT capacity."
+  },
+  {
+   "name": "Compute — American Bitcoin, Hut 8 Canada and Highrise AI",
+   "category": "Bitcoin mining, colocation and AI cloud",
+   "description": "Three brands. **American Bitcoin Corp. (Nasdaq: ABTC)** holds the mining fleet Hut 8 contributed in March 2025 for Class B stock; Hut 8 holds **80.0% of total voting power** through super-voting Class B shares carrying 10,000 votes each, but only about **55.30% of the economics at 31 March 2026** and about 54% by the August 2026 earnings call, diluted by ABTC's own equity issuance including a USD 110.5m ATM in Q1 2026. Hut 8 is ABTC's exclusive infrastructure development and operating partner under a Master Colocation Services Agreement targeting a 25% yield on cost and a Master Managed Services Agreement at USD 1.250 per kW-month, both eliminated in consolidation. **Hut 8 Canada** runs about 3 MW and more than 36,000 square feet of cloud and colocation space across five Canadian sites for more than 200 customers. **Highrise AI** operated 1,000 NVIDIA H100 and 96 H200 GPUs at a third-party colocation site near Chicago at 31 December 2025.",
+   "highlights": [
+    "The widely repeated '80% of American Bitcoin' is **voting power, not economics** — the economic interest is roughly 54-55% and falling as ABTC issues equity",
+    "Vega hosts about 15 EH/s across 17,280 ASIC servers under an ASIC colocation agreement with American Bitcoin, at rack densities up to 180 kW on a direct-to-chip liquid-cooled design",
+    "Drumheller, closed in March 2024, was re-energised in March 2026 for about 11,298 miners representing about 3.05 EH/s at about 13.5 J/TH, bought for USD 49.4m paid in pledged bitcoin",
+    "King Mountain (280 MW, 50% JV with equity-method accounting) is Hut 8's only third-party managed-services site and contributed USD 57.3m of colocation revenue in FY2025 through the equity line",
+    "Bitcoin held at 31 March 2026: about 16,332 BTC — about 9,311 at Hut 8 and about 7,021 at American Bitcoin",
+    "Monthly operations updates ran from December 2023 to April 2025 and then stopped, coinciding with the American Bitcoin carve-out"
+   ],
+   "positioning": "Hut 8 does not appear in any public-miner hashrate ranking, and that is now correct rather than an omission: the fleet belongs to American Bitcoin, which is ranked sixth at 25.00 EH/s. Any dossier ranking Hut 8 by hashrate in 2026 is using a stale frame. On all-in cost per bitcoin CoinShares put Hut 8 at USD 160,402 for Q4 2025 with the **lowest cash cost in the cohort at USD 50,332**, the gap being elevated stock-based compensation of USD 48,527 per bitcoin.",
+   "soldThrough": "Intercompany colocation and managed-services agreements with American Bitcoin; direct cloud and colocation contracts in Canada; GPU-as-a-service through Highrise AI.",
+   "targetSegments": [
+    "American Bitcoin (affiliated)",
+    "Canadian enterprise cloud and colocation customers",
+    "AI cloud customers"
+   ],
+   "roadmap": "No separate roadmap is published for the compute brands; the strategic direction is set by the two AI campuses."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-10",
+   "category": "policy",
+   "headline": "Affirms commitment to responsible data-centre development following Governor Abbott's directive; notes Beacon Point's design incorporates battery systems to mitigate voltage impacts",
+   "read": "Beacon Point's Q1 2027 energisation target sits inside the ERCOT/PUCT audit window, with the report due to the commission by 10 December 2026. This is the live regulatory risk to the larger of the two campuses.",
+   "source": "https://www.hut8.com/news-insights/press-releases/hut-8-affirms-commitment-to-responsible-data-center-development-following-directive-from-texas"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: revenue USD 74.9m (+81.4%), net loss attributable USD 150.2m, diluted EPS USD (1.27); adjusted EBITDA USD 10.4m on a newly revised definition that excludes the bitcoin mark",
+   "read": "The definitional change matters more than the number. Hut 8 now reports adjusted EBITDA both excluding and including digital-asset mark-to-market, and recast prior periods — so figures published before 4 August 2026 are not comparable with those published after.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090041/tm2621890d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-07-20",
+   "category": "customer",
+   "headline": "Second 352 MW IT lease at Beacon Point for USD 9.8bn on substantially the same terms as Phase 1, taking the campus to 704 MW of contracted IT and USD 19.6bn of base-term contract value",
+   "read": "The same tenant doubled its position on the same campus. Note the wording collision in the release itself: USD 9.8bn is used for the base-term contract value and, two bullets later, for the cumulative NOI contribution — where River Bend distinguished the two (USD 7.0bn against USD 6.9bn).",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926084862/tm2620835d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "leadership",
+   "headline": "E. Stanley O'Neal, former chairman and chief executive of Merrill Lynch, becomes Chair of the board, succeeding William Tai",
+   "read": "A capital-markets chair for a company that has become a project-finance issuer. O'Neal also sits on the board of Clearway Energy, another dossier in this corpus.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926049711/hut-20260611xdef14a.htm"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "financial",
+   "headline": "Closes USD 4.25bn of investment-grade senior secured notes for the Beacon Point data-centre project",
+   "read": "With River Bend's USD 3.25bn, Hut 8 has raised about USD 7.5bn of non-recourse project debt in six weeks — against about USD 159.3m of parent recourse debt. That ratio is the company's stated non-dilutive growth model.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926071952/tm2617190d1_8k.htm"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "leadership",
+   "headline": "Appoints Mark Eidelman as Head of Investor Relations",
+   "read": "",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2026-05-19",
+   "category": "corporate",
+   "headline": "Commits USD 16m to expand water infrastructure in West Feliciana Parish — a new well and about eight miles of main, transferred to the parish at no cost",
+   "read": "A community-benefit package on a campus whose land assembly drew allegations from parish port commissioners that the site had been resold to Hut 8 at an undisclosed markup. Hut 8 cited confidentiality; the allegations are single-outlet and denied.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "customer",
+   "headline": "Commercialises the first phase of Beacon Point with a 15-year, 352 MW IT lease at a base-term contract value of USD 9.8bn to an unnamed high-investment-grade tenant",
+   "read": "The campus was originally underwritten on a speed-to-power thesis to serve American Bitcoin. It is now fully let to a third party, which is a different and better business.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926055894/hut-20260506xex99d1.htm"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "financial",
+   "headline": "Q1 2026: revenue USD 71.0m against a Zacks consensus of USD 77.7m, net loss USD 253.1m including USD 295.7m of primarily unrealised digital-asset losses; adjusted EBITDA USD (250.5)m on the old definition",
+   "read": "The clearest illustration of why bitcoin fair-value accounting makes a miner-landlord's income statement unreadable: the operating businesses grew and the reported loss tripled.",
+   "source": "https://finance.yahoo.com/markets/stocks/articles/hut-8-hut-reports-q1-130509114.html"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "financial",
+   "headline": "Closes USD 3.25bn of investment-grade senior secured notes for the River Bend project — 6.192% coupon, maturity 15 November 2042, rated BBB- by S&P (Positive) and Fitch (Stable, minimum DSCR 1.31x)",
+   "read": "An investment-grade rating on a pre-construction data centre is what a Google backstop buys. Principal amortises from May 2028.",
+   "source": "https://www.globaldatacenterhub.com/p/hut-8-prices-325b-investment-grade"
+  },
+  {
+   "date": "2026-02-25",
+   "category": "financial",
+   "headline": "FY2025: revenue USD 235.1m (+44.8%), net loss USD 248.0m including a USD 220.0m loss on digital assets, against FY2024's USD 331.4m profit which included a USD 509.3m gain",
+   "read": "A USD 729m swing in one line item, with no operating cause. Adjusted EBITDA as then defined went from USD 555.7m to USD (135.4)m because that definition contained no add-back for the bitcoin mark.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019393/hut-20260225xex99d1.htm"
+  },
+  {
+   "date": "2026-02-02",
+   "category": "ma",
+   "headline": "Completes the sale of the 310 MW Far North portfolio of four Ontario gas plants to TransAlta, recognising a gain of USD 34.7m net of transaction costs",
+   "read": "Hut 8 exits owned generation entirely, months after the plants won five-year IESO capacity contracts commencing May 2026 — selling into the strength those contracts created.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm"
+  },
+  {
+   "date": "2025-12-17",
+   "category": "customer",
+   "headline": "Signs a 15-year, 245 MW IT triple-net lease at River Bend with a Fluidstack subsidiary at a total contract value of USD 7.0bn, with Google backstopping all rent and related pass-through obligations",
+   "read": "The structural difference from every peer: **no warrants and no equity to Google**. Benchmark's analyst identified Hut 8's ability to keep full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the differentiator, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns nothing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm"
+  },
+  {
+   "date": "2025-12-17",
+   "category": "partnership",
+   "headline": "Announces an AI infrastructure partnership with Anthropic and Fluidstack for at least 245 MW and up to 2,295 MW of AI data-centre infrastructure",
+   "read": "Two releases the same day, and the distinction between them is the point: the lease is with Fluidstack, the partnership is with Anthropic, and Anthropic is not a party to the lease. The 2,295 MW is the sum of the 245 MW launch, a 1,000 MW right of first offer at River Bend and up to 1,050 MW of optional capacity elsewhere.",
+   "source": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack"
+  },
+  {
+   "date": "2025-11-17",
+   "category": "ma",
+   "headline": "Announces a definitive agreement to sell the 310 MW Ontario power portfolio to TransAlta",
+   "read": "",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2025-08-26",
+   "category": "capacity",
+   "headline": "Announces plans to develop four new sites with more than 1.5 GW of total capacity",
+   "read": "The pipeline disclosure that became River Bend, Beacon Point and the Illinois site.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "corporate",
+   "headline": "Rebrands to align external positioning with a power-first, platform-driven business model",
+   "read": "The three-layer Power / Digital Infrastructure / Compute framing dates from here, and it is the frame the FY2025 10-K uses throughout.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2025-07-02",
+   "category": "regulatory",
+   "headline": "The Far North plants win five-year IESO capacity contracts in the MT2 medium-term capacity auction, commencing 1 May 2026",
+   "read": "",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2025-06-30",
+   "category": "capacity",
+   "headline": "Energises the Vega data centre — 205 MW, 162,000 square feet, direct-to-chip liquid cooling supporting about 15 EH/s",
+   "read": "Developed at about USD 455,000 per MW and energised less than a year after acquisition, against USD 9-11m per MW for the AI campuses. The two figures measure different products: a mining shed and an AI data hall.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2025-03-31",
+   "category": "corporate",
+   "headline": "Launches American Bitcoin with Eric Trump, contributing about USD 120m of mining equipment for Class B stock representing 80% of total and combined voting power",
+   "read": "The carve-out that removed mining from Hut 8's own operations. The 80% is voting; the economic interest has since fallen to about 54% through ABTC's own issuance.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019392/hut-20251231x10k.htm"
+  },
+  {
+   "date": "2024-07-01",
+   "category": "financial",
+   "headline": "Closes a USD 150m convertible investment from Coatue to partner in building a next-generation AI infrastructure platform",
+   "read": "Converted into 9.7 million shares, which management said eliminated parent-level recourse debt. Coatue remains the largest disclosed holder at 7.5%.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2024-02-15",
+   "category": "ma",
+   "headline": "Completes the acquisition of four Ontario power generation facilities totalling 310 MW in partnership with Macquarie",
+   "read": "Acquired through a court-approved stalking-horse bid and recorded with a USD 3.1m gain on bargain purchase; sold two years later for a USD 34.7m gain.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "date": "2024-01-24",
+   "category": "legal",
+   "headline": "Responds to a short-seller report; the shares fall more than 23% on 18 January 2024",
+   "read": "The J Capital Research report challenged statements about the USBTC transaction and alleged operational problems at King Mountain. The resulting securities class action was narrowed at summary judgment to Securities Act claims on King Mountain disclosure and settled for USD 2.35m in June 2026 with no admission.",
+   "source": "https://www.theblock.co/post/405760/hut-8-agrees-to-2-35-million-settlement-in-investor-suit-tied-to-us-bitcoin-merger"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess that the single most important fact about Hut 8's River Bend transaction is what Google did **not** receive, and that it is routinely misreported. Basis: no first-party Hut 8 disclosure — not the 17 December 2025 press release, the investor deck, the 8-K, the FY2025 10-K, either 2026 10-Q or the 2026 proxy — states that Google took warrants or equity. The word 'warrant' does not appear in connection with Google anywhere, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns no documents. The only consideration described is 'a financial backstop, which covers the lease payments and related pass-through obligations'. Benchmark's analyst identified precisely this — full economic ownership retained 'without warrants or equity sweeteners that have shown up in other deals' — as the differentiator. Cipher gave Google warrants over about 5.4% of itself and TeraWulf about 14% for the same service on the same Fluidstack template.",
+  "2. **(High confidence)** We assess that the '352 MW / USD 9.8bn Texas lease' is two leases and that the distinction changes the scale of the business. Basis: Phase 1 was announced on 6 May 2026 and Phase 2 on 20 July 2026, each 352 MW of critical IT at USD 9.8bn over a 15-year base term with a 3.0% escalator, both to the same tenant on substantially the same terms. The campus totals 704 MW of contracted IT on 1,000 MW of AEP Texas utility capacity and USD 19.6bn of base-term contract value, rising to USD 50.2bn if all three five-year renewal options on each lease are exercised. Company-wide the contracted book is 949 MW and USD 26.6bn.",
+  "3. **(High confidence)** We assess that the counterparty structure at River Bend is a three-party arrangement that reporting routinely collapses into two. Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**. Hut 8 published two separate releases on 17 December 2025 — one for the lease, one for the partnership — and the separation is deliberate.",
+  "4. **(High confidence)** We assess that Hut 8's reported earnings are currently a bitcoin price chart with an operating business attached, and that the company has just changed how it says so. Basis: FY2025's USD 220.0m loss on digital assets and FY2024's USD 509.3m gain are the largest single line items in both years, a USD 729m swing with no operating cause. The adjusted EBITDA definition in force through Q1 2026 contained **no add-back** for the bitcoin mark, so it absorbed the whole of it — FY2025 at USD (135.4)m and Q1 2026 at USD (250.5)m. From Q2 2026 the definition excludes the mark, producing USD 10.4m for the quarter against USD (94.6)m on the old basis, with prior periods recast. Figures published before 4 August 2026 are not comparable with those published after.",
+  "5. **(Moderate confidence)** We assess that the '80% of American Bitcoin' figure in general circulation is wrong as an economic statement and that the gap is widening. Basis: ABTC's proxy filed 27 April 2026 records Hut 8's 80.0% of total voting power through Class B shares carrying 10,000 votes each; Hut 8's own Q1 2026 10-Q records **55.30% economic ownership** with a 44.70% third-party non-controlling interest, and the August 2026 earnings call says about 54%. ABTC's own equity issuance, including a USD 110.5m ATM in Q1 2026, dilutes the economics while the super-voting stock preserves control. ABTC also carries governance features an outside reader should weigh: controlled-company exemptions from independent compensation and nominating committees, three related-party agreements all dated 31 March 2025, USD 73.6m owed to Hut 8 at 31 December 2025, and cash held in Hut 8-controlled commingled accounts.",
+  "6. **(Moderate confidence)** We assess that Hut 8's capital structure is the most conventional in the converted-miner cohort and that this is the deliberate strategy. Basis: about USD 7.5bn of non-recourse, investment-grade-rated, campus-level project notes — USD 3.25bn at 6.192% for River Bend rated BBB- by S&P and Fitch, and USD 4.25bn for Beacon Point — against about USD 159.3m of parent recourse debt and roughly USD 1.3bn of cash and bitcoin. Management describes the model as equity funding early-stage development and project debt funding post-commercialisation construction. Compare Cipher, which carries USD 1.47bn of parent-level convertible notes outside its non-recourse structures.",
+  "7. **(Moderate confidence)** We assess that the largest near-term risk to the contracted book is regulatory timing rather than credit. Basis: Beacon Point's Q1 2027 initial energisation falls inside the verification and audit the Texas Governor ordered on 3 August 2026, which pauses new large-load energisations pending PUCT and ERCOT review of some 250 to 300 Batch Zero projects, with the report due by 10 December 2026. Even the seventeen large loads that had completed stability assessments must go through some form of the process. Separately, the FY2025 10-K discloses that the River Bend lease 'provides the customer with certain termination rights, including in connection with certain breaches of the lease or power contract, casualty events, or other circumstances beyond our control'.",
+  "8. **(Low confidence)** We assess that Hut 8 is unrankable in both of its historical identities, and that the absences are informative rather than gaps. Basis: it appears in no public-miner hashrate ranking, correctly, because the fleet belongs to American Bitcoin, which is ranked sixth at 25.00 EH/s. And no independent ranking of AI-data-centre operators by contracted megawatts from a named research house places Hut 8 at all; the only cross-operator measure located is The Futurum Group's contracted revenue per megawatt, relayed second-hand, which lists Hut 8 in the top ten without publishing its figure. Hut 8's own USD 26.6bn across 949 MW implies about USD 28m per MW, close to CoreWeave's, but the terms behind each company's figure are not held constant.",
+  "**Collection gap:** the Beacon Point tenant is unnamed in every first-party source and cannot be identified. Hut 8 publishes no employee headcount, no tax-abatement or PILOT terms at either campus, and no all-in cost per bitcoin (that figure now belongs to American Bitcoin). SEDAR+ was unreachable during this research, so any Canadian-only disclosure is outside this dossier. No FY2024 EPS-versus-consensus comparison is offered because no reliable contemporaneous consensus could be located. Consensus figures for Q2 2026 differ across four published revenue estimates and three EPS estimates, and Q4 2025 revenue is published as USD 88.5m by the company and USD 121.37m by a data feed, unreconciled."
+ ],
+ "relationships": [
+  {
+   "slug": "fluidstack",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-12",
+   "scale": "245 MW critical IT; USD 7.0bn base-term contract value",
+   "via": "River Bend data centre campus",
+   "note": "Lessee of record under the 15-year triple-net River Bend lease, with Google backstopping its payment obligations.",
+   "context": "A subsidiary of Fluidstack Ltd. is the tenant under Hut 8's 15-year triple-net lease for 245 MW of critical IT capacity at River Bend, supported by 330 MW of Entergy Louisiana utility capacity. The base-term contract value is USD 7.0bn inclusive of a 3.0% annual escalator, with expected cumulative NOI of USD 6.9bn — an average of USD 454m a year — and three five-year renewal options that would take contract value to about USD 17.7bn.\n\nFluidstack is unrated, and the lease is bankable because Google LLC backstops the rent and related pass-through obligations. Hut 8 and Fluidstack also expect to execute an Operations Services Agreement backed by a further Google backstop of payment obligations.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf and Cipher. Hut 8's version differs in one material respect: Google took no warrants and no equity here.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "project": "river-bend-campus"
+  },
+  {
+   "slug": "google",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-12",
+   "scale": "backstop of all rent and related pass-through obligations over the 15-year base term",
+   "note": "Financial backstop of Fluidstack's River Bend rent — provided without warrants and without equity, unlike the same arrangement at Cipher and TeraWulf.",
+   "context": "Google LLC provides a financial backstop covering the lease payments and certain other financial obligations under the River Bend lease, with a springing Alphabet Inc. guarantee that triggers if Google's revenue falls below 50% of consolidated Alphabet revenue. Alphabet is rated AA+ by S&P and Aa2 by Moody's, and that credit is what carried the River Bend project notes to a BBB- rating before a megawatt was delivered.\n\n**This edge is deliberately typed `partner` rather than `investor`, and the difference from the corpus's other two Google backstops is the finding.** At Cipher Digital, Google's USD 1.73bn backstop bought warrants over about 5.4% of the company; at TeraWulf, backstops of about USD 4.5bn bought warrants now representing about 14%. Both are typed `investor` in this corpus on that basis. Hut 8 gave neither warrants nor equity: no Hut 8 filing or release — not the December 2025 press release, the investor deck, the 8-K, the FY2025 10-K, either 2026 10-Q, or the 2026 proxy — mentions warrants in connection with Google, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns no documents. Benchmark's analyst named that retention of full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the transaction's distinguishing feature.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "project": "river-bend-campus"
+  },
+  {
+   "slug": "anthropic",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-12",
+   "scale": "at least 245 MW and up to 2,295 MW of AI data-centre infrastructure",
+   "note": "Counterparty to a separate AI infrastructure partnership covering up to 2,295 MW; the end user at River Bend, but not a party to the lease.",
+   "context": "Hut 8 announced two things on 17 December 2025 and the separation between them is deliberate. The **lease** is with a Fluidstack subsidiary. The **partnership** is with Anthropic and Fluidstack together, and is structured across tranches that establish a path from at least 245 MW to up to 2,295 MW: the River Bend launch of 245 MW of IT on 330 MW of utility capacity; a right of first offer for up to 1,000 MW of additional IT capacity at River Bend subject to power expansion; and up to 1,050 MW of optional capacity that Hut 8 and Anthropic may jointly diligence and develop elsewhere in the pipeline.\n\nAnthropic's own framing, quoted in the release, is that the arrangement 'is an expansion of our existing work with Fluidstack and marks a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'. So Anthropic is a direct counterparty to Hut 8 for the programme and an indirect one for the building — a distinction that matters because the credit standing behind the rent is Google's, not Anthropic's.",
+   "source": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+   "project": "river-bend-campus"
+  },
+  {
+   "slug": "entergy",
+   "type": "supplier",
+   "status": "active",
+   "scale": "330 MW of utility capacity, scalable to 1,000 MW",
+   "via": "Electric service at River Bend",
+   "note": "Utility counterparty at River Bend, providing 330 MW available from 1 July 2026 with a path to 1,000 MW.",
+   "context": "Entergy Louisiana (rated BBB+ by S&P and Baa2 by Moody's) provides the 330 MW of utility capacity behind River Bend's 245 MW of contracted critical IT, in MISO, with transmission line capacity upgraded to about 1,045 MVA and roughly 3.7 GW of generation across four nearby facilities. The campus sits on 627 owned acres with riparian rights adjacent to the Mississippi River.\n\nThe regulatory context is live and contested. Louisiana's 'lightning amendment', approved in December 2025, created a fast-track approval process for large-load infrastructure requiring a 15-year supply agreement and at least 50% of infrastructure capital cost borne by the data centre, while waiving RFP requirements; the Union of Concerned Scientists argues ratepayers could still fund 50-75% of capital costs because gas plants depreciate over thirty years while the contracts run fifteen. No LPSC docket specific to Hut 8 or River Bend was identified — the named Entergy Louisiana large-load dockets concern Meta and Westlake.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d2.htm",
+   "project": "river-bend-campus"
+  },
+  {
+   "slug": "aep",
+   "type": "supplier",
+   "status": "active",
+   "scale": "1,000 MW interconnection agreement",
+   "via": "Electric delivery service at Beacon Point",
+   "note": "Utility counterparty at Beacon Point, where the campus's full 1,000 MW is secured under an executed interconnection agreement.",
+   "context": "Beacon Point's entire 1,000 MW of utility capacity is secured under an interconnection agreement with AEP Texas for electric delivery service, fed by a 345 kV underground line from a nearby AEP substation, with about 4.6 GW of generation across six nearby facilities and four diverse campus entrances. Hut 8 funded the Contribution in Aid of Construction and commenced substation construction in Q1 2026, and states that it pre-funded infrastructure upgrades so ratepayers bear no cost.\n\nThe exposure is timing: initial energisation is targeted for Q1 2027, inside the verification and audit the Texas Governor ordered on 3 August 2026, which pauses new large-load energisations pending PUCT and ERCOT review with a report due by 10 December 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926084862/tm2620835d1_ex99-1.htm"
+  },
+  {
+   "slug": "vertiv",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-12",
+   "via": "Custom critical infrastructure at River Bend",
+   "note": "Co-developer of the custom infrastructure solution at River Bend, named by Hut 8 alongside Jacobs as EPCM partner.",
+   "context": "Hut 8's River Bend release names Vertiv as 'Co-developer of the custom infrastructure solution' and Jacobs Solutions as EPCM partner, with the data centre to be built at USD 9-11m per MW. Note a wording error in Hut 8's own FY2025 10-K, reported here rather than reconciled: its Recent Developments section describes both Entergy — 'which will be providing power to the site' — and Vertiv — 'who is the power provider for the site' — as the power provider, and calls Jacobs the general contractor where the press release calls it EPCM partner.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "project": "river-bend-campus"
+  },
+  {
+   "slug": "nvidia",
+   "type": "other",
+   "status": "active",
+   "via": "DSX reference architecture at Beacon Point",
+   "note": "Beacon Point is designed to NVIDIA's DSX reference architecture for gigawatt-scale AI infrastructure — a design standard, not a disclosed commercial agreement.",
+   "context": "Hut 8's 8-K of 10 June 2026 and the Beacon Point releases state that the campus is 'designed to NVIDIA's DSX reference architecture for gigawatt-scale AI infrastructure', with six data halls in Phase 1. This edge is typed `other` because the relationship as disclosed is adoption of a published design standard rather than a contract: no supply agreement, purchase commitment, investment or partnership between Hut 8 and NVIDIA appears in any first-party source, and the words 'CoreWeave', 'Microsoft', 'Oracle', 'Lambda' and 'Nscale' appear nowhere in Hut 8's FY2025 10-K, FY2024 10-K, either 2026 10-Q or the 2026 proxy.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926071952/tm2617190d1_8k.htm"
+  },
+  {
+   "slug": "cipher-mining",
+   "type": "competitor",
+   "status": "active",
+   "note": "The closest structural comparator — same ring-fenced project-debt model, opposite parent-level risk.",
+   "context": "Hut 8 and Cipher Digital both fund campuses with non-recourse, investment-grade-rated, campus-level project bonds. The divergence is at the parent: Cipher carries USD 1.47bn of convertible notes at the corporate level that depend on corporate liquidity rather than lease cash flow, while Hut 8 carries about USD 159.3m of parent recourse debt against roughly USD 1.3bn of cash and bitcoin.\n\nThe two are also the pair named in the only traceable source for the widely repeated 'over USD 19 billion combined' figure — a 27 May 2026 trade piece whose own components, about USD 16.8bn for Hut 8 and about USD 9.3bn for Cipher, sum to USD 26.1bn rather than USD 19bn. Neither company publishes that combined figure, and Hut 8's own book has since reached USD 26.6bn on its own.",
+   "source": "https://www.globaldatacenterhub.com/p/quarterly-earnings-cipher-and-hut"
+  },
+  {
+   "slug": "galaxy-digital",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
+   "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "terawulf",
+   "type": "competitor",
+   "status": "active",
+   "note": "The other Fluidstack landlord with a Google backstop — and the one that paid for it in equity.",
+   "context": "TeraWulf leases to Fluidstack with Google backstops at Lake Mariner and Abernathy, and holds a separately reported Anthropic lease in Kentucky over a 20-year initial term. It is the closest structural analogue to River Bend and the clearest contrast on price: Google's backstops there bought warrants now representing about 14% of TeraWulf pro forma, where Hut 8 gave none.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "core-scientific",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer converted miner with more leased power but an unrated counterparty set.",
+   "context": "Core Scientific holds roughly 1.1 GW of leased customer power across CoreWeave and AMD with more than USD 24bn of contracted value — more power than Hut 8 and a larger headline, against counterparties that are an unrated neocloud and a chip vendor rather than an AA- or higher rated technology company.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "applied-digital",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer landlord publishing a larger headline on a single neocloud anchor.",
+   "context": "Applied Digital reports about USD 36bn of total contracted long-term lease value across roughly 1.4 GW of critical IT, larger than Hut 8's USD 26.6bn across 949 MW, but concentrated on CoreWeave rather than spread across a Google-backstopped tenant and an investment-grade technology company.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "iren",
+   "type": "competitor",
+   "status": "active",
+   "note": "The vertically integrated comparator, and the leader on contracted revenue per megawatt.",
+   "context": "IREN operates GPU clusters itself rather than leasing space and power, anchored by a USD 9.7bn Microsoft contract. The Futurum Group's contracted-revenue-per-megawatt measure — relayed second-hand and the only cross-operator ranking located for this cohort — puts IREN highest at about USD 40m per MW and places Hut 8 in the top ten without publishing its figure; Hut 8's own USD 26.6bn across 949 MW implies about USD 28m per MW.",
+   "source": "https://www.webull.com/news/15425103535293440"
+  },
+  {
+   "slug": "crusoe",
+   "type": "competitor",
+   "status": "active",
+   "note": "Private energy-first developer competing for the same power positions without publishing contract values.",
+   "context": "Crusoe discloses roughly 4.9 GW contracted across a much larger pipeline but no contract values, so it competes with Hut 8 for power and tenants while being uncomparable on any published financial measure.",
+   "source": "https://insights4vc.substack.com/p/bitcoin-minings-ai-pivot-2026-thesis"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "PUCT / ERCOT data-centre verification and audit (Abbott directive)",
+   "status": "in-effect",
+   "effectiveDate": "2026-08-03",
+   "exposure": "The Texas Governor directed the PUCT and ERCOT on 3 August 2026 to verify and audit every data centre advancing through the interconnection process, pausing new large-load energisations pending review of energy consumption, water use and use of public funds. The scope is some 250 to 300 Batch Zero projects of at least 75 MW against a queue of more than 1,800 large-load requests totalling about 474 GW; ERCOT targets delivering its report to the PUCT by 10 December 2026. Even seventeen large loads that had completed stability assessments must go through some form of the process. Beacon Point's initial energisation is targeted for Q1 2027, inside that window.",
+   "mitigation": "Hut 8 issued a release on 10 August 2026 affirming its commitment to responsible data-centre development, and states that Beacon Point's design incorporates battery systems to mitigate voltage impacts and support reliable integration with the Texas grid.",
+   "source": "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/"
+  },
+  {
+   "regime": "Louisiana Public Service Commission large-load framework ('lightning amendment')",
+   "status": "in-effect",
+   "effectiveDate": "2025-12",
+   "exposure": "The LPSC approved a fast-track approval process for large-load infrastructure in December 2025, requiring a 15-year supply agreement and at least 50% of infrastructure capital cost to be borne by the data centre, while waiving RFP requirements. Entergy plans new transmission for a roughly 345 MW West Feliciana load, of which 330 MW is allocated to River Bend. No LPSC docket specific to Hut 8 or River Bend was identified — the named Entergy Louisiana large-load dockets concern Meta (U-37425, U-37882) and Westlake (U-37853), with a large-load guidelines repository at X-37921.",
+   "mitigation": "Hut 8 committed about USD 16m in May 2026 to expand parish water infrastructure — a new well and about eight miles of main, transferred to the parish at no cost — plus a USD 10m advance. A new Industrial Development Board was created to collect payments in lieu of taxes.",
+   "source": "https://blog.ucs.org/paul-arbaje/louisianas-new-policy-allows-even-more-data-center-costs-to-be-passed-to-ratepayers/"
+  },
+  {
+   "regime": "Tariffs and trade policy on imported equipment",
+   "status": "in-effect",
+   "exposure": "The FY2025 10-K states that 'equipment necessary for our operations and our offerings is manufactured in large part outside of the United States' and flags significant uncertainty about US trade policies, treaties, tariffs and taxes with Canada, Mexico, China and the European Union. It separately names 'supply chain and logistical issues, including tariff and inflationary pressures' among construction risks and flags challenges to the transfer pricing of cross-border intercompany transactions. No tariff rate specific to mining rigs or data-centre equipment is published.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019392/hut-20251231x10k.htm"
+  },
+  {
+   "regime": "Dual US and Canadian reporting obligations",
+   "status": "in-effect",
+   "exposure": "Hut 8 is a Delaware corporation and a domestic US filer on EDGAR, and is simultaneously listed on the Toronto Stock Exchange with a SEDAR+ profile referenced in every 8-K forward-looking legend. Canadian obligations bind in substance as well as form: the proxy's related-person policy incorporates Multilateral Instrument 61-101 on the protection of minority security holders, and the Q2 2026 10-Q states that 'under Canadian law, the number of shares the Company can repurchase through July 20, 2027 is 6,159,439 shares'. The 2024 ATM sales agreement carries Canadian agents.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm"
+  },
+  {
+   "regime": "Illinois local permitting and MISO interconnection (Logan Prairie)",
+   "status": "proposed",
+   "exposure": "The proposed 500 MW Logan Prairie site in Logan County, Illinois is in early development and subject to local approvals. Ameren Illinois and MISO must complete formal interconnection and system-impact studies before energisation, and Hut 8 states that it — not residential or farm customers — will fund any project-specific upgrades identified. The facility would operate under enforceable conditions in a Conditional Use Permit that the county can revoke, with a bond or similar instrument for decommissioning.",
+   "mitigation": "Hut 8 states the cooling system is not designed to draw from local wells or the Mahomet Aquifer and that cooling water will be trucked in from water-abundant areas outside Logan County, with local domestic use up to about 9,000 gallons a day. It has committed to the Central Illinois Building and Construction Trades Council to prioritise qualified local labour.",
+   "source": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "regime": "Power-access restrictions on ASIC compute",
+   "status": "in-effect",
+   "exposure": "The FY2025 10-K states that 'we believe the value of power will continue to rise' and that 'access to power has become a key gating factor for digital infrastructure development', and carries a risk factor referencing jurisdictions that prohibit the provision of electricity to ASIC compute operations. Hut 8's own ASIC exposure is now indirect, through its roughly 54% economic interest in American Bitcoin, but the affiliated colocation revenue depends on those sites continuing to receive power.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019392/hut-20251231x10k.htm"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "River Bend — West Feliciana Parish, Louisiana",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Contracted critical IT",
+     "value": "245 MW"
+    },
+    {
+     "band": "Capacity",
+     "label": "Utility capacity",
+     "value": "330 MW from Entergy Louisiana, available from 1 July 2026; potential to scale to 1,000 MW"
+    },
+    {
+     "band": "Capacity",
+     "label": "Implied gross-to-critical-IT ratio",
+     "value": "~1.35:1"
+    },
+    {
+     "band": "Grid",
+     "label": "RTO",
+     "value": "MISO; transmission line capacity upgraded to ~1,045 MVA; ~3.7 GW across four nearby generation facilities"
+    },
+    {
+     "band": "Lease",
+     "label": "Tenant",
+     "value": "A subsidiary of Fluidstack Ltd. — lessee of record"
+    },
+    {
+     "band": "Lease",
+     "label": "Credit support",
+     "value": "Google LLC backstops all rent and related pass-through obligations, with a springing Alphabet guarantee if Google revenue falls below 50% of consolidated Alphabet revenue. No warrants and no equity were given"
+    },
+    {
+     "band": "Lease",
+     "label": "Structure and term",
+     "value": "Triple net; 15-year base term with a 3.0% annual base rent escalator; three five-year renewal options"
+    },
+    {
+     "band": "Lease",
+     "label": "Base-term contract value",
+     "value": "$7.0Bn; ~$17.7Bn if all renewals are exercised"
+    },
+    {
+     "band": "Lease",
+     "label": "NOI",
+     "value": "Expected cumulative $6.9Bn over the base term, averaging $454m a year"
+    },
+    {
+     "band": "Design",
+     "label": "PUE",
+     "value": "1.35"
+    },
+    {
+     "band": "Design",
+     "label": "Latency",
+     "value": "10-70 ms round-trip delay; up to five diverse campus entrances"
+    },
+    {
+     "band": "Site",
+     "label": "Land",
+     "value": "627 acres owned, with 2,361 further acres under option; riparian rights adjacent to the Mississippi River"
+    },
+    {
+     "band": "Capex",
+     "label": "Build cost",
+     "value": "$9-11 million per MW"
+    },
+    {
+     "band": "Financing",
+     "label": "Project debt",
+     "value": "$3.25bn senior secured notes, 6.192% coupon, maturity 15 November 2042, issued through Hut 8 DC LLC on a non-recourse basis; rated BBB- by S&P (Positive) and Fitch (Stable, minimum DSCR 1.31x); principal amortises from May 2028; up to 85% loan-to-cost"
+    },
+    {
+     "band": "Delivery",
+     "label": "Schedule",
+     "value": "Initial data hall Q2 2027, with further halls across the balance of 2027; vertical construction commenced Q2 2026"
+    },
+    {
+     "band": "Local",
+     "label": "Economic impact",
+     "value": "~1,000 construction workers at peak; 75 or more direct permanent jobs and 190 or more indirect, 265 in total; Phase 1 capital investment 'up to $10B'"
+    }
+   ],
+   "notes": "Hut 8 announced the lease and the Anthropic partnership as two separate releases on the same day. Anthropic is the end user and is not a party to the lease."
+  },
+  {
+   "product": "Beacon Point — Nueces County, Texas",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Contracted critical IT",
+     "value": "704 MW — two leases of 352 MW each"
+    },
+    {
+     "band": "Capacity",
+     "label": "Utility capacity",
+     "value": "1,000 MW under an executed interconnection agreement with AEP Texas (500 MW per phase)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Implied gross-to-critical-IT ratio",
+     "value": "~1.42:1"
+    },
+    {
+     "band": "Grid",
+     "label": "RTO and connection",
+     "value": "ERCOT; 345 kV underground line from a nearby AEP substation; ~4.6 GW across six nearby generation facilities; four diverse campus entrances"
+    },
+    {
+     "band": "Lease",
+     "label": "Tenant",
+     "value": "Not named. Described only as 'a high-investment-grade company (i.e., rated AA- or higher)'; the same tenant took both phases"
+    },
+    {
+     "band": "Lease",
+     "label": "Structure and term",
+     "value": "Triple net, take-or-pay; 15-year base term each with a 3.0% annual escalator; three five-year renewal options per lease"
+    },
+    {
+     "band": "Lease",
+     "label": "Contract value",
+     "value": "$9.8Bn per phase; $19.6Bn campus base-term; $50.2Bn with all renewals"
+    },
+    {
+     "band": "Lease",
+     "label": "NOI",
+     "value": "$655m average annual per phase; $1.31Bn for the full campus"
+    },
+    {
+     "band": "Design",
+     "label": "PUE",
+     "value": "1.42"
+    },
+    {
+     "band": "Design",
+     "label": "Architecture",
+     "value": "Designed to NVIDIA's DSX reference architecture for gigawatt-scale AI infrastructure; six data halls in Phase 1"
+    },
+    {
+     "band": "Design",
+     "label": "Redesign",
+     "value": "Phase 1 was originally scoped for 224 MW of IT capacity and redesigned to 352 MW within the same footprint — a 57% increase"
+    },
+    {
+     "band": "Design",
+     "label": "Cooling",
+     "value": "Closed loop; filled once with water sourced from outside Nueces County, expected to remain in use four to seven years; municipal use about 10,000 gallons a day per phase"
+    },
+    {
+     "band": "Design",
+     "label": "Grid support",
+     "value": "Battery systems designed to mitigate voltage impacts and support reliable integration with the Texas grid"
+    },
+    {
+     "band": "Site",
+     "label": "Land",
+     "value": "525 acres per the decks; 524 acres per the FY2025 10-K; approximately 521 acres per the 8-K of 10 June 2026"
+    },
+    {
+     "band": "Fibre",
+     "label": "Providers",
+     "value": "FiberLight, Arelion and Windstream, with connection to East and West Coast hubs"
+    },
+    {
+     "band": "Capex",
+     "label": "Build cost",
+     "value": "$9-11 million per MW; combined capital investment across the first two phases about $17 billion"
+    },
+    {
+     "band": "Financing",
+     "label": "Project debt",
+     "value": "$4.25bn of investment-grade senior secured notes, priced 4 June 2026 and closed 9 June 2026"
+    },
+    {
+     "band": "Delivery",
+     "label": "Schedule",
+     "value": "Initial energisation Q1 2027; Phase 1 data hall delivery Q3 2027; Phase 2 Q2 2028; campus fully operational spring 2028"
+    },
+    {
+     "band": "Local",
+     "label": "Oversight",
+     "value": "The site is in unincorporated Nueces County outside Robstown and Corpus Christi city limits, so no city council or commissioners court authorisation was required"
+    }
+   ],
+   "notes": "Originally underwritten on a speed-to-power thesis to serve American Bitcoin; now fully contracted to a third party under two AI leases."
+  },
+  {
+   "product": "Operating portfolio and energy capacity under management",
+   "specs": [
+    {
+     "band": "Total",
+     "label": "Energy capacity under management",
+     "value": "710 MW at 30 June 2026, from 1,020 MW a year earlier after the Far North divestiture"
+    },
+    {
+     "band": "ASIC compute",
+     "label": "Vega — Texas Panhandle",
+     "value": "205 MW; 162,000 sq ft single building; behind-the-meter wind plus ERCOT; direct-to-chip liquid cooling to 180 kW per rack; ~15 EH/s across 17,280 servers; Tier I; all-in development cost ~$455,000 per MW"
+    },
+    {
+     "band": "ASIC compute",
+     "label": "King Mountain — McCamey, TX",
+     "value": "280 MW; 50% unconsolidated joint venture (TZRC LLC) accounted for by the equity method; wind plus ERCOT; Hut 8's only third-party managed-services site; ~10.29 EH/s for a single hosting customer"
+    },
+    {
+     "band": "ASIC compute",
+     "label": "Medicine Hat, Alberta",
+     "value": "67 MW; CCGT plus AESO grid; 20 acres owned"
+    },
+    {
+     "band": "ASIC compute",
+     "label": "Salt Creek — Orla, TX",
+     "value": "63 MW; ERCOT; substation and 1.9 acres bought December 2023 for $7.1m in Culberson County, with a lease on 20 adjacent acres; construction completed April 2024"
+    },
+    {
+     "band": "ASIC compute",
+     "label": "Alpha — Niagara Falls, NY",
+     "value": "50 MW; NYISO; colocation structured under a profit-share arrangement rather than the 25% yield-on-cost target used elsewhere"
+    },
+    {
+     "band": "ASIC compute",
+     "label": "Drumheller, Alberta",
+     "value": "42 MW; closed March 2024, re-energised March 2026 for ~11,298 miners representing ~3.05 EH/s at ~13.5 J/TH, purchased for $49.4m paid in pledged bitcoin"
+    },
+    {
+     "band": "Cloud and colocation",
+     "label": "Hut 8 Canada",
+     "value": "~3 MW and more than 36,000 sq ft across Kelowna, Mississauga, Vaughan and two Vancouver sites; more than 200 customers per the 10-K (269 per the May 2026 deck, 221 per the July 2026 deck)"
+    },
+    {
+     "band": "AI cloud",
+     "label": "Highrise AI",
+     "value": "1,000 NVIDIA H100 and 96 H200 GPUs at 31 December 2025, at a third-party colocation site near Chicago"
+    },
+    {
+     "band": "Divested",
+     "label": "Far North JV",
+     "value": "Iroquois Falls 120 MW, Kingston 120 MW, North Bay 35 MW, Kapuskasing 35 MW — 310 MW of Ontario CCGT held 80.1% with Macquarie, sold to TransAlta 2 February 2026 for a $34.7m gain"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Stages at 30 June 2026",
+     "value": "Under diligence 5,400 MW; under exclusivity 1,880 MW; under development 550 MW; under construction 830 MW (the same-date press release states 50 MW and 1,330 MW, reflecting Beacon Point Phase 2 advancing after quarter end)"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Logan Prairie — Logan County, IL",
+     "value": "500 MW proposed on a 50-acre footprint, AI/cloud; Ameren Illinois and MISO studies pending; appears on hut8.com but in no SEC filing"
+    }
+   ],
+   "notes": "Owned generation is now zero. Hut 8's remaining power positions are behind-the-meter wind at Vega and King Mountain, grid connections, and the two campus interconnections."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Asher Genoot",
+   "title": "Chief Executive Officer and Director",
+   "photo": "images/execs/hut-8-genoot.jpg",
+   "background": [
+    "Chief Executive Officer — Hut 8 Corp. (from February 2024)",
+    "Executive Chairman — American Bitcoin Corp. (from September 2025); director from March 2025",
+    "President, Chief Operating Officer and director — US Bitcoin Corp (December 2020 to the November 2023 merger), which he co-founded",
+    "Managing Director — Flagship Endeavors, a consumer brands incubator (2019)",
+    "Founded and exited two EdTech ventures in Shanghai — the Ivy Crest Institute of International Education and Curio",
+    "B.S. Business Administration, University of Southern California, summa cum laude at 19; Forbes 30 Under 30 Energy, 2024"
+   ]
+  },
+  {
+   "name": "Michael Ho",
+   "title": "Chief Strategy Officer and Director",
+   "photo": "images/execs/hut-8-ho.jpg",
+   "background": [
+    "Chief Strategy Officer — Hut 8 Corp.",
+    "Chief Executive Officer and director — American Bitcoin Corp. (from September 2025); Executive Chairman March to September 2025",
+    "Chief Executive Officer and Chairman — US Bitcoin Corp (December 2020 to the November 2023 merger)",
+    "Began mining digital assets in 2014; from 2017 built businesses procuring, managing and selling turnkey mining facilities to institutional customers",
+    "Chief Executive Officer — MKH International Ltd. (2015-2018) and Vancouver Motorcars Ltd. (2012-2015)"
+   ]
+  },
+  {
+   "name": "Sean Glennan",
+   "title": "Chief Financial Officer",
+   "photo": "images/execs/hut-8-glennan.jpg",
+   "background": [
+    "Chief Financial Officer — Hut 8 Corp. (from August 2024)",
+    "Managing Director, Power, Utilities and Renewables Group — Citi (Managing Director from August 2021); thirteen years at Citi advising on over USD 80bn of M&A and capital markets transactions",
+    "Management consulting — Orion Consultants; began at Asia International in Nanjing",
+    "B.A., University of Notre Dame; MBA, University of Virginia Darden School of Business"
+   ]
+  },
+  {
+   "name": "Victor Semah",
+   "title": "Chief Legal Officer and Corporate Secretary",
+   "photo": "images/execs/hut-8-semah.jpg",
+   "background": [
+    "Chief Legal Officer and Corporate Secretary — Hut 8 Corp. (from May 2024)",
+    "Chief Legal Officer — Cyxtera Technologies, guiding the data-centre business through a carve-out acquisition, software and cybersecurity spin-outs, a going-public transaction, a June 2023 Chapter 11 filing and a company sale",
+    "Partner — Medina Capital, a private equity firm and major Cyxtera shareholder",
+    "Shareholder, corporate and securities practice — Greenberg Traurig, Miami",
+    "B.A., Baruch College; J.D., Boston University School of Law"
+   ]
+  },
+  {
+   "name": "Matthew Saxon",
+   "title": "Chief People Officer",
+   "photo": "images/execs/hut-8-saxon.jpg",
+   "background": [
+    "Chief People Officer — Hut 8 Corp.",
+    "Chief People Officer — Zoom, through its evolution from hyper-growth startup to scaled enterprise, partnering to build out AI organisational capabilities",
+    "Vice President of People Operations — Meta",
+    "Senior HR leadership — Humana, Motorola Solutions and Campbell's",
+    "Bachelor of Social Science, Queensland University of Technology; executive programmes at Wharton and Michigan Ross"
+   ]
+  },
+  {
+   "name": "E. Stanley O'Neal",
+   "title": "Chair of the Board",
+   "photo": "images/execs/hut-8-oneal.jpg",
+   "background": [
+    "Chair of the Board — Hut 8 Corp. (from June 2026); director of US Bitcoin Corp from March 2021",
+    "Chairman and Chief Executive Officer — Merrill Lynch & Co. (CEO 2002, Chairman 2003, to October 2007); President and COO 2001; Executive Vice President and Chief Financial Officer 1998-2000; 21 years at the firm",
+    "General Assistant Treasurer and other roles — General Motors Corporation; director of General Motors 2001-2006",
+    "Director — Clearway Energy, Inc. and Element Solutions Inc.; Arconic (through Alcoa) 2008-2023",
+    "B.S., Kettering University; MBA, Harvard Business School"
+   ]
+  },
+  {
+   "name": "William Tai",
+   "title": "Director (Chair until June 2026)",
+   "photo": "images/execs/hut-8-tai.jpg",
+   "background": [
+    "Director — Hut 8; director and Chair of legacy Hut 8 from March 2018",
+    "Venture capitalist; early investor in Canva, Color Genomics, Dapper Labs, SafetyCulture, TweetDeck and Zoom Video",
+    "Co-founder — IPInfusion and Treasure Data Inc., where he was Chairman; director of seven publicly listed companies",
+    "B.S. Electrical Engineering with Honors, University of Illinois; MBA, Harvard Business School"
+   ]
+  },
+  {
+   "name": "Mayo A. Shattuck III",
+   "title": "Director",
+   "photo": "images/execs/hut-8-shattuck.jpg",
+   "background": [
+    "Director — Hut 8; director of US Bitcoin Corp from December 2021",
+    "Chairman — Exelon (February 2012 to April 2022); Executive Chairman March 2012 to February 2013",
+    "Chairman, President and Chief Executive Officer — Constellation Energy (October 2001 to February 2012)",
+    "Chairman and Chief Executive Officer — Deutsche Banc Alex. Brown; Global Head of Investment Banking and Global Head of Private Banking",
+    "Chairman — Institute of Nuclear Power Operators; Board Chair of Gap Inc. since 2002; director of Capital One Financial since 2003",
+    "B.A., Williams College; MBA, Stanford Graduate School of Business"
+   ]
+  },
+  {
+   "name": "Carl J. Rickertsen",
+   "title": "Director",
+   "photo": "images/execs/hut-8-rickertsen.jpg",
+   "background": [
+    "Director — Hut 8; director of legacy Hut 8 from December 2021",
+    "Managing partner — Pine Creek Partners LLC (from January 2004)",
+    "Managing partner — Thayer Capital Partners (1994-2004), founding three private equity funds totalling over USD 1.4bn",
+    "Director — MicroStrategy Incorporated since October 2002 (compensation committee chair) and Magnera Corporation since October 2024",
+    "B.S., Stanford University; MBA, Harvard Business School"
+   ]
+  },
+  {
+   "name": "Joseph Flinn",
+   "title": "Director",
+   "photo": "images/execs/hut-8-flinn.jpg",
+   "background": [
+    "Director — Hut 8; director of legacy Hut 8 from 2018",
+    "Chief Financial Officer — Seaboard Transportation Group (from March 2019)",
+    "President — Clarke Transportation Group (2017-2019)",
+    "Chief Financial Officer of Sysco Canada and President of Sysco Canada's Eastern Division (2008-2015)",
+    "B.Comm., Saint Mary's University; chartered professional accountant; ICD.D"
+   ]
+  },
+  {
+   "name": "Amy Wilkinson",
+   "title": "Director",
+   "photo": "images/execs/hut-8-wilkinson.jpg",
+   "background": [
+    "Director — Hut 8; director of US Bitcoin Corp from August 2022; named to the 2024 NACD Directorship 100",
+    "Founder and Chief Executive Officer — Ingenuity, an innovation consulting firm",
+    "Lecturer in Management — Stanford Graduate School of Business (from May 2015)",
+    "Senior Fellow — Harvard Kennedy School (2009-2015); White House Fellow and Special Assistant to the United States Trade Representative (2004-2007)",
+    "Strategy consultant — McKinsey & Company; M&A banker — JP Morgan"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Hut 8 reports in USD, so the normalized-KPI overlay is 'as reported'. Two adjustments are needed before the numbers mean anything. **First, bitcoin fair-value accounting dominates the income statement**: FY2025 carried a USD 220.0m loss on digital assets where FY2024 carried a USD 509.3m gain — a USD 729m swing with no operating cause — and Q1 2026 alone carried USD 295.7m of primarily unrealised losses. **Second, the adjusted EBITDA definition changed mid-2026.** The definition in force through Q1 2026 contained no add-back for the digital-asset mark and therefore absorbed all of it, producing USD (135.4)m for FY2025 and USD (250.5)m for Q1 2026. From Q2 2026 Hut 8 excludes the mark and presents the inclusive figure separately, producing USD 10.4m for the quarter against USD (94.6)m on the old basis, with prior periods recast. Figures published before 4 August 2026 are not comparable with those published after. A third caution on scale: none of the USD 26.6bn of contracted lease value has begun, so revenue today is colocation, managed services and legacy compute. No reliable contemporaneous FY2024 EPS consensus could be located, so no verdict is offered for that year; consensus for Q2 2026 differs across four published revenue estimates and three EPS estimates, and Q4 2025 revenue is published as USD 88.5m by the company and USD 121.37m by a data feed, unreconciled.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "A profitable year on paper, almost entirely because bitcoin rose. Revenue of USD 162.4m produced operating income of USD 460.5m — the difference is a USD 509.3m gain on digital assets sitting inside operating expenses as a credit.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "USD 162.385m",
+      "expected": "",
+      "verdict": "",
+      "result": "Power USD 56.602m, Digital Infrastructure USD 17.482m, Compute USD 80.701m, Other USD 7.600m. Q4 revenue of USD 31.7m missed a Zacks consensus of USD 34.85m by about 9%.",
+      "kpi": "revenue",
+      "usdMillions": 162.385,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gain on digital assets",
+      "actual": "USD 509.337m (a credit within operating expenses)",
+      "expected": "",
+      "verdict": "",
+      "result": "Larger than three times revenue."
+     },
+     {
+      "name": "Operating income",
+      "actual": "USD 460.539m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Net income",
+      "actual": "USD 331.409m; USD 331.882m attributable to Hut 8 Corp.",
+      "expected": "",
+      "verdict": "",
+      "result": "No reliable contemporaneous EPS consensus for the full year could be located.",
+      "kpi": "net-income",
+      "usdMillions": 331.882,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD 3.40 (basic USD 3.71)",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "eps",
+      "usdMillions": 3.4,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA (definition then in force, including the digital-asset mark)",
+      "actual": "USD 555.675m",
+      "expected": "",
+      "verdict": "",
+      "result": "Not comparable with figures published from August 2026 onward."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Revenue grew 44.8% as the Compute segment more than doubled, and the company reported a USD 248.0m loss because bitcoin fell. Operating expenses include a USD 220.0m loss on digital assets and USD 101.9m of depreciation on a fleet and campuses that barely existed a year earlier. Investing activities consumed USD 754.2m, of which USD 405.1m was American Bitcoin's own bitcoin purchases.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "USD 235.118m (+44.8%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Power USD 23.212m, Digital Infrastructure USD 9.577m, Compute USD 202.329m. Q4 revenue is published as USD 88.5m by the company and USD 121.37m by a data feed, against a Zacks consensus of USD 97.5m — the two actuals are not reconciled by any source.",
+      "kpi": "revenue",
+      "usdMillions": 235.118,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Loss on digital assets",
+      "actual": "USD 220.037m",
+      "expected": "",
+      "verdict": "",
+      "result": "Against a USD 509.337m gain in FY2024 — a USD 729m swing in one line."
+     },
+     {
+      "name": "Operating loss",
+      "actual": "USD (321.994)m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (247.998)m; USD (226.149)m attributable to Hut 8 Corp.",
+      "expected": "",
+      "verdict": "",
+      "result": "Noncontrolling interests absorbed USD 21.849m, principally American Bitcoin's third-party holders.",
+      "kpi": "net-income",
+      "usdMillions": -226.149,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (2.14)",
+      "expected": "USD (0.12) Q4 (Zacks); no reliable full-year consensus located",
+      "verdict": "miss",
+      "result": "Q4 adjusted EPS of USD (0.1101) beat a USD (0.1243) consensus by 11.42% on one data feed, while the GAAP full-year figure missed heavily.",
+      "kpi": "eps",
+      "usdMillions": -2.14,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA (definition then in force, including the digital-asset mark)",
+      "actual": "USD (135.353)m",
+      "expected": "",
+      "verdict": "",
+      "result": "The FY2025 reconciliation contains no add-back for the digital-asset mark, so this figure absorbs the full USD 220.0m loss."
+     },
+     {
+      "name": "Equity in earnings of the King Mountain joint venture",
+      "actual": "USD 8.727m, on USD 57.3m of colocation revenue recognised through the equity line",
+      "expected": "",
+      "verdict": "",
+      "result": "The 50% joint venture is equity-method, so its revenue never appears in Hut 8's revenue line."
+     },
+     {
+      "name": "Cash used in investing activities",
+      "actual": "USD 754.2m",
+      "expected": "",
+      "verdict": "",
+      "result": "USD 405.1m of American Bitcoin's bitcoin purchases, USD 202.9m of property and equipment principally for Vega and River Bend, and USD 162.7m of deposits for future land and infrastructure."
+     }
+    ]
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "commentary": "Revenue more than tripled year on year while the reported loss doubled, entirely on the bitcoin mark. This is the quarter that most clearly shows why the adjusted EBITDA definition had to change.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "USD 71.017m (from USD 21.815m)",
+      "expected": "USD 77.65m (Zacks)",
+      "verdict": "miss",
+      "result": "A miss of 8.56%. Power USD 3.740m, Digital Infrastructure USD 1.303m, Compute USD 65.974m.",
+      "kpi": "revenue",
+      "usdMillions": 71.017,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (253.135)m; USD (219.849)m attributable to Hut 8",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes USD 295.7m of primarily unrealised losses on digital assets.",
+      "kpi": "net-income",
+      "usdMillions": -219.849,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (1.98) GAAP; USD (0.12) adjusted",
+      "expected": "USD (0.28) adjusted (Zacks)",
+      "verdict": "beat",
+      "result": "A 56.76% beat on the adjusted measure against a GAAP loss of USD 1.98 a share.",
+      "kpi": "eps",
+      "usdMillions": -1.98,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA (old definition)",
+      "actual": "USD (250.512)m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Bitcoin held",
+      "actual": "~16,332 BTC — ~9,311 at Hut 8 and ~7,021 at American Bitcoin, at a fair value of about USD 68,222 each",
+      "expected": "",
+      "verdict": "",
+      "result": "Liquidity of about USD 1.3bn in cash and bitcoin, USD 795.6m attributable to Hut 8 and USD 489.0m to American Bitcoin."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "Revenue grew 81.4% and the company reported its first positive adjusted EBITDA on the new definition. The GAAP loss of USD 1.27 a share is still a bitcoin number. Note the interest line: USD 51.2m of expense against USD 27.1m of income, as USD 7.5bn of project debt begins to carry before any rent arrives.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "USD 74.932m (+81.4%)",
+      "expected": "USD 76.8m (Zacks) / USD 79.37m (MarketBeat)",
+      "verdict": "miss",
+      "result": "A miss of roughly 2.4% to 6% depending on the panel. Six-month revenue USD 145.949m.",
+      "kpi": "revenue",
+      "usdMillions": 74.932,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Loss on digital assets",
+      "actual": "USD 138.597m in the quarter; USD 434.254m for the half",
+      "expected": "",
+      "verdict": "",
+      "result": "Against a USD 217.640m gain in Q2 2025."
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (177.142)m; USD (150.191)m attributable to Hut 8",
+      "expected": "",
+      "verdict": "",
+      "result": "Six-month net loss attributable USD (370.040)m.",
+      "kpi": "net-income",
+      "usdMillions": -150.191,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (1.27)",
+      "expected": "USD (0.48) (Zacks) / USD (0.55) (MarketBeat) / USD (0.64)",
+      "verdict": "miss",
+      "result": "A miss of USD 0.63 to USD 0.79 depending on the panel.",
+      "kpi": "eps",
+      "usdMillions": -1.27,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA (new definition, excluding the digital-asset mark)",
+      "actual": "USD 10.449m, against USD 4.191m in Q2 2025",
+      "expected": "~USD 2m",
+      "verdict": "beat",
+      "result": "On the inclusive basis the same quarter is USD (94.582)m. Both are now published."
+     },
+     {
+      "name": "Energy capacity under management",
+      "actual": "710 MW, from 1,020 MW a year earlier",
+      "expected": "",
+      "verdict": "",
+      "result": "The decrease is the February 2026 Far North divestiture of 310 MW.",
+      "kpi": "mw-energized",
+      "qty": 710
+     },
+     {
+      "name": "Contracted critical IT capacity",
+      "actual": "949 MW across three leases — 245 MW at River Bend and 704 MW at Beacon Point",
+      "expected": "",
+      "verdict": "",
+      "result": "Supported by 1,330 MW of utility capacity. None delivered.",
+      "kpi": "mw-contracted",
+      "qty": 949
+     },
+     {
+      "name": "Aggregate base-term contract value (company metric, not a GAAP line)",
+      "actual": "USD 26.6bn, with average annual NOI above USD 1.75bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Undiscounted contracted rent over 15-year base terms; USD 67.9bn if every renewal option on all three leases is exercised."
+     },
+     {
+      "name": "American Bitcoin ownership",
+      "actual": "80.0% of voting power; about 54% of the economics",
+      "expected": "",
+      "verdict": "",
+      "result": "55.30% economic at 31 March 2026 per the 10-Q, about 54% per the August 2026 call, diluted by ABTC's own issuance including a USD 110.5m ATM in Q1 2026."
+     },
+     {
+      "name": "Gain on sale of the Far North JV",
+      "actual": "USD 34.711m for the six months, net of transaction costs",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "label": "Ziven.io — Bitcoin Mining Hashrate: Public Miners Ranked by Exahash",
+   "url": "https://ziven.io/bitcoin-mining/hashrate"
+  },
+  {
+   "label": "Hut 8 Affirms Commitment to Responsible Data Center Development Following Directive from Texas Governor Greg Abbott",
+   "url": "https://www.hut8.com/news-insights/press-releases/hut-8-affirms-commitment-to-responsible-data-center-development-following-directive-from-texas",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "MarketBeat — FY2026 earnings estimate for Hut 8 issued by Maxim Group",
+   "url": "https://www.marketbeat.com/instant-alerts/fy2026-earnings-estimate-for-hut-8-issued-by-maxim-group-2026-08-11/",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "AOL — Hut 8 (HUT) Q2 2026 Earnings Call Transcript",
+   "url": "https://www.aol.com/articles/hut-8-hut-q2-2026-171448000.html",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Simply Wall St — Things Look Grim For Hut 8 After Today's Downgrade (a consensus estimate cut, not a rating downgrade)",
+   "url": "https://simplywall.st/stocks/us/software/nasdaq-hut/hut-8/news/things-look-grim-for-hut-8-corp-nasdaqhut-after-todays-downg",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Hut 8 Reports Second Quarter 2026 Results (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090041/tm2621890d1_ex99-1.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Hut 8 Corp. Form 10-Q, quarterly period ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "BiggGo Finance — Hut 8 Shares Fall After Q2 Miss as $26.6 Billion AI Data Center Push Takes Center Stage",
+   "url": "https://finance.biggo.com/news/b7cad4f0-9fbb-4e2e-9dfe-6bedbe4ac1ee",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Global Data Center Hub — Quarterly Earnings: Cipher and Hut 8 (Same Ring-Fence, Opposite Parent Risk)",
+   "url": "https://www.globaldatacenterhub.com/p/quarterly-earnings-cipher-and-hut",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Utility Dive — ERCOT aims to complete Texas governor's data center audit by December",
+   "url": "https://www.utilitydive.com/news/ercot-texas-puc-data-center-audit/828472/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Hut 8 Fully Commercializes 1 GW Beacon Point AI Data Center Campus with Second 352 MW IT Lease (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926084862/tm2620835d1_ex99-1.htm",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — Beacon Point Phase 2 lease (Items 8.01/9.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926084862/tm2620835d1_8k.htm",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Hut 8 — Beacon Point Data Center Campus Overview investor presentation",
+   "url": "https://cdn.sanity.io/files/2iccs2ie/production/62cc856839f56613548f3bd3fe5d21de8bbb6c4c.pdf",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Coastal Bend Current — Beacon Point moves ahead with no local oversight",
+   "url": "https://www.coastalbendcurrent.com/blogs/beacon-point-moves-ahead-without-any-local-oversight",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "The Tokenist via Investing.com — American Bitcoin's 8,000 BTC milestone masks a deeper equity problem",
+   "url": "https://www.investing.com/analysis/american-bitcoins-8000-btc-milestone-masks-a-deeper-equity-problem-200683553",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "CryptoSlate — Eric Trump's American Bitcoin forces 1-for-15 reverse split to avoid Nasdaq delisting",
+   "url": "https://cryptoslate.com/eric-trumps-american-bitcoin-forces-1-for-15-reverse-split-to-avoid-nasdaq-delisting-amid-8k-btc-holding/",
+   "date": "2026-07-12"
+  },
+  {
+   "label": "The Block — Hut 8 agrees to $2.35 million settlement in investor suit tied to US Bitcoin merger",
+   "url": "https://www.theblock.co/post/405760/hut-8-agrees-to-2-35-million-settlement-in-investor-suit-tied-to-us-bitcoin-merger",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — closing of the Beacon Point senior secured notes (Items 1.01/2.03/9.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926071952/tm2617190d1_8k.htm",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Hut 8 Announces Pricing of $4.25 Billion of Investment-Grade Senior Secured Notes for Beacon Point (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926070744/tm2616926d1_ex99-1.htm",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Hut 8 Corp. — Illustrative Financial Information of the Beacon Point Data Center Project (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926070393/tm2616869d1_ex99-1.htm",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Hut 8 CEO says Beacon Point backlash is driven by misinformation, keeps tenant undisclosed",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/hut-8-ceo-says-beacon-132100054.html",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Spoted Crypto — Hut 8 & Cipher Digital AI Data Center Pivot 2026: Sector Analysis",
+   "url": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Hut 8 Reports First Quarter 2026 Results (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926055894/hut-20260506xex99d1.htm",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Hut 8 Corp. Form 10-Q, quarterly period ended March 31, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926055891/hut-20260331x10q.htm",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Hut 8 (HUT) Reports Q1 Loss, Lags Revenue Estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/hut-8-hut-reports-q1-130509114.html",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "TradingView — Hut 8 reports Q1 2026: $71.0M revenue, $253.1M net loss, $250.5M adjusted EBITDA",
+   "url": "https://www.tradingview.com/news/tradingview:a72acfca349b1:0-hut-8-reports-q1-2026-71-0m-revenue-253-1-m-net-loss-250-5-m-adjusted-ebitda/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — closing of the River Bend senior secured notes (Items 1.01/2.03/9.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926053247/tm2613163d1_8k.htm",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Hut 8 Corp. Definitive Proxy Statement (DEF 14A), 2026 Annual Meeting",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926049711/hut-20260611xdef14a.htm",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "Hut 8 Announces Pricing of $3.25 Billion of Investment-Grade Senior Secured Notes for River Bend (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926049810/tm2612880d1_ex99-1.htm",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Hut 8 Corp. — Illustrative Financial Information of the River Bend Data Center Project (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926049090/tm2612485d1_ex99-1.htm",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "American Bitcoin Corp. Definitive Proxy Statement (DEF 14A) — Class B voting power and Trump-family holdings",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001755953/000119312526178754/abtc-20260424.htm",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Global Data Center Hub — Hut 8 Prices $3.25B Investment-Grade Bond For River Bend Data Center",
+   "url": "https://www.globaldatacenterhub.com/p/hut-8-prices-325b-investment-grade",
+   "date": "2026-05-04"
+  },
+  {
+   "label": "CoinShares — Bitcoin Mining Report Q1 2026",
+   "url": "https://coinshares.com/insights/research-data/bitcoin-mining-report-q1-2026/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Hut 8 Corp. Form 10-K, fiscal year ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019392/hut-20251231x10k.htm",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Hut 8 Reports Fourth Quarter and Full Year 2025 Results (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019393/hut-20260225xex99d1.htm",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — ATM Sales Agreement Amendment No. 1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019443/hut-20260225x8k.htm",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "TradingView — Hut 8 Corp. reports fourth quarter and full year 2025 results",
+   "url": "https://www.tradingview.com/news/tradingview:f6c44ef56aeed:0-hut-8-corp-reports-fourth-quarter-and-full-year-2025-results/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Investing.com — Earnings call transcript: Hut 8 Q4 2025 results show EPS beat, revenue miss",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-hut-8-q4-2025-results-show-eps-beat-revenue-miss-93CH-4524766",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Union of Concerned Scientists — Louisiana's new policy allows even more data center costs to be passed to ratepayers",
+   "url": "https://blog.ucs.org/paul-arbaje/louisianas-new-policy-allows-even-more-data-center-costs-to-be-passed-to-ratepayers/",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "insights4vc — Bitcoin Mining's AI Pivot: 2026 Thesis Update",
+   "url": "https://insights4vc.substack.com/p/bitcoin-minings-ai-pivot-2026-thesis",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — Coinbase Fourth Amended and Restated Credit Agreement",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925125613/hut-20251222x8k.htm",
+   "date": "2025-12-31"
+  },
+  {
+   "label": "1012 Industry Report — Hut 8 lands a massive partnership for its West Feliciana data center",
+   "url": "https://www.1012industryreport.com/technology/ai/hut-8-lands-a-massive-partnership-for-its-west-feliciana-data-center/",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "Carbon Credits — Hut 8 pivots from bitcoin to AI with $7B Google-backed deal to power data centers",
+   "url": "https://carboncredits.com/hut-8-pivots-from-bitcoin-to-ai-with-7b-google-backed-deal-to-power-data-centers/",
+   "date": "2025-12-23"
+  },
+  {
+   "label": "Yahoo Finance / Simply Wall St — Hut 8 (HUT) is down 14.1% after the $7 billion AI lease",
+   "url": "https://finance.yahoo.com/news/hut-8-hut-down-14-153950753.html",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "Hut 8 Signs 15-Year, 245 MW AI Data Center Lease at River Bend Campus with Total Contract Value of $7.0 Billion (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Hut 8 Announces AI Infrastructure Partnership with Anthropic and Fluidstack",
+   "url": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Hut 8 — River Bend Data Center Campus Transaction investor presentation (8-K Ex-99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d2.htm",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Hut 8 Corp. Form 8-K — River Bend lease, Fluidstack and Google backstop (Items 8.01/9.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217x8k.htm",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Reuters via MarketScreener — Hut 8 shares jump as ex-bitcoin miner signs $7 billion AI data center lease",
+   "url": "https://www.marketscreener.com/news/hut-8-shares-jump-as-ex-bitcoin-miner-signs-7-billion-ai-data-center-lease-ce7d50dfdd89f023",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Investing.com — Hut 8 signs $7 billion data center lease with Google backstop",
+   "url": "https://www.investing.com/news/company-news/hut-8-signs-7-billion-data-center-lease-with-google-backstop-93CH-4412307",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Crypto Briefing — Hut 8 signs 15-year AI lease backed by Google, stock jumps 25% premarket",
+   "url": "https://cryptobriefing.com/bitcoin-mining-partnership-hut8-google-fluidstack/",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Hut 8 Corp. Form 10-K, fiscal year ended December 31, 2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000155837025001996/hut-20241231x10k.htm",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Hut 8 — Corporate Overview investor presentation",
+   "url": "https://cdn.sanity.io/files/2iccs2ie/production/8a415cf7e1c3b3bb46e104ee40092d9f9f50bd48.pdf",
+   "date": "2026-05"
+  },
+  {
+   "label": "Hut 8 — Beacon Point Data Center Campus Phase 1 Transaction investor presentation",
+   "url": "https://cdn.sanity.io/files/2iccs2ie/production/f5fe60a0f8207c01c5f14d90b2270145c2740c02.pdf",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "news.bitcoin.com — Bitcoin miners get a lifeline as hashprice explodes 20% higher",
+   "url": "https://news.bitcoin.com/mining/bitcoin-miners-get-a-lifeline-as-hashprice-explodes-20-higher/",
+   "date": "2026-08-23"
+  },
+  {
+   "label": "Webull — relay of The Futurum Group's contracted-revenue-per-megawatt ranking",
+   "url": "https://www.webull.com/news/15425103535293440",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "LouisianAI — LPSC data center dockets: power filings and ratepayer risk",
+   "url": "https://louisianai.com/lpsc-dockets",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "WBRZ Investigative Unit — West Feliciana Port Commission members allege wrongdoing in data center land deal (single-outlet, denied)",
+   "url": "https://www.wbrz.com/news/wbrz-investigative-unit-west-feliciana-port-commission-members-allege-wrongdoing-in-data-center-land-deal",
+   "date": "2025-03-27"
+  },
+  {
+   "label": "Hut 8 — About Us (leadership, board and offices)",
+   "url": "https://www.hut8.com/about-us"
+  },
+  {
+   "label": "Hut 8 — Our Platform",
+   "url": "https://www.hut8.com/our-platform"
+  },
+  {
+   "label": "Hut 8 — Power",
+   "url": "https://www.hut8.com/power"
+  },
+  {
+   "label": "Hut 8 — Digital Infrastructure",
+   "url": "https://www.hut8.com/digital-infrastructure"
+  },
+  {
+   "label": "Hut 8 — Compute",
+   "url": "https://www.hut8.com/compute"
+  },
+  {
+   "label": "Hut 8 — Press release index",
+   "url": "https://www.hut8.com/news-insights/press-releases"
+  },
+  {
+   "label": "Hut 8 — Investors",
+   "url": "https://www.hut8.com/investors"
+  },
+  {
+   "label": "Hut 8 — Investor FAQ",
+   "url": "https://www.hut8.com/investors/faq"
+  },
+  {
+   "label": "Hut 8 — Homepage",
+   "url": "https://www.hut8.com/"
+  },
+  {
+   "label": "SEC EDGAR — submissions index for Hut 8 Corp. (CIK 0001964789), SIC 6199, state of incorporation DE",
+   "url": "https://data.sec.gov/submissions/CIK0001964789.json"
+  },
+  {
+   "label": "StockAnalysis.com — Hut 8 (HUT) analyst rating actions",
+   "url": "https://stockanalysis.com/stocks/hut/ratings/"
+  },
+  {
+   "label": "StockAnalysis.com — Hut 8 (HUT) price, market cap and TTM revenue",
+   "url": "https://stockanalysis.com/stocks/hut/"
+  },
+  {
+   "label": "CoinWarz — Bitcoin Difficulty Chart",
+   "url": "https://www.coinwarz.com/bitcoin-difficulty"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

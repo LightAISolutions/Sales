@@ -1,0 +1,485 @@
+{
+ "schemaVersion": 2,
+ "slug": "cipher-mining",
+ "title": "Cipher Digital — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the question the other five guides skip",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "Five guides in this library already teach the bitcoin-miner pivot into AI hosting. **TeraWulf** teaches brownfield power and credit enhancement for a thin-credit tenant. **IREN** teaches the vertical-integration spectrum and GPU financing. **Core Scientific** teaches the four-stage power funnel and the take-or-pay colocation contract. **Applied Digital** teaches the AI-factory landlord model and unnamed-tenant concentration. **Crusoe** teaches energy-first siting. Read any of them for what happens *after* a miner decides to become a landlord.",
+    "**Every one of them begins after that decision has been made.** None explains why it was made, or why it cannot be unmade. That is this guide's subject: the economics of bitcoin mining itself, and the specific, scheduled way in which they strand a fleet.",
+    "This matters because the pivot is usually reported as opportunism — AI money arrived, miners chased it. The arithmetic says something narrower and more interesting: **a bitcoin miner's revenue per machine falls automatically over time, by design, with no help from the market.** Two separate mechanisms guarantee it. A miner that does nothing is not standing still; it is sliding. Understanding those mechanisms is what lets you read a miner's AI announcement as either a rescue or a land-grab, and tell which.",
+    "You need high-school physics and arithmetic. No finance background is assumed."
+   ]
+  },
+  {
+   "id": "what-mining-is",
+   "title": "What a miner actually sells",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Bitcoin needs a way to decide who gets to add the next page to its ledger, without any authority to ask. Its answer is {{proof of work}}: make adding a page expensive, so that anyone wanting to cheat has to outspend everyone honest combined.",
+    "The expense is manufactured with a hashing function called {{SHA-256}}. Feed it any input and it returns a 256-bit number. The function is one-way — you cannot work backwards from the output you want to the input that produces it. So if the rule is *find an input whose output is below some target*, there is no method except guessing, and every guess costs a little electricity.",
+    "A machine's guessing speed is its {{hashrate}}, quoted in terahashes per second (a trillion guesses a second) and aggregated across the network in {{exahash}} units. Roughly every ten minutes, one machine somewhere lands a winning guess and its owner is paid the {{block subsidy}} plus that block's transaction fees.",
+    "Two consequences follow, and everything else in this guide is downstream of them.",
+    "**First, the payout is a lottery, but the odds are exactly proportional.** A miner with 2% of world hashrate earns about 2% of the rewards. Not more, not less, and no cleverness improves it. There is no product differentiation available — every miner produces an identical, perfectly fungible good and sells it at a price it does not set.",
+    "**Second, the machines can do nothing else.** Mining runs on {{ASIC}} chips built to compute SHA-256 and literally nothing else — no operating system, no general instruction set, no alternative workload. This is the single most important fact for what follows: when a mining fleet stops being economic, it does not get repurposed. It gets scrapped. An AI data centre next door running GPUs cannot use one of these machines for any part of its work."
+   ]
+  },
+  {
+   "id": "difficulty-ratchet",
+   "title": "The ratchet: why your neighbour's new machine cuts your revenue",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Bitcoin wants blocks to arrive about every ten minutes regardless of how much computing power is pointed at it. So it adjusts the target — the {{network difficulty}} — to compensate. If total hashrate doubles, difficulty roughly doubles, and blocks keep arriving every ten minutes.",
+    "The adjustment happens on a schedule: every 2,016 blocks, which is about every two weeks. This is the {{difficulty retarget}}, and it is the mechanism that makes mining unlike almost any other industry.",
+    "**Work the consequence through slowly, because it is counter-intuitive.** Suppose you own machines producing 1% of world hashrate and you are content. You buy nothing, change nothing, and your machines run perfectly. Meanwhile competitors add capacity and world hashrate rises 20%. At the next retarget, difficulty rises 20% to hold the ten-minute cadence. Your unchanged machines now produce 1/1.2 = **0.83% of world hashrate**, and your revenue falls about 17%.",
+    "You did nothing wrong. You were not outsold, out-marketed or out-engineered. A stranger installed machines in another country and your income fell. **In mining, a rival's capital expenditure is a direct debit from your revenue**, and the debit is automatic, mechanical and impossible to hedge against by operating better.",
+    "This is why mining capital expenditure has a treadmill quality. Buying new machines is not growth; it is often just holding position. A fleet that is not being refreshed is losing share every fortnight.",
+    "**The rare exception proves the rule.** Difficulty can fall, and in 2026 it did — an unusual year-over-year decline, taking difficulty from a peak of roughly 156 trillion in late October 2025 to about 127 trillion by early September 2026, roughly 18% below the high. When difficulty falls, every surviving machine earns proportionally more for doing exactly the same work. Note what caused it, though: capacity leaving the network. Some of that capacity left because its owners pointed the power at AI instead."
+   ]
+  },
+  {
+   "id": "the-halving",
+   "title": "The halving: a scheduled cut with no offsetting benefit",
+   "kind": "timeline",
+   "read": "6 min",
+   "unit": "block subsidy in BTC per block",
+   "intro": "Difficulty responds to what miners do. The halving does not respond to anything — it is written into the protocol and arrives on schedule roughly every four years, cutting the block subsidy in half. Costs do not halve with it. Read this as a step-function in industry revenue that every participant can see coming years in advance and none can avoid.",
+   "lanes": {
+    "sub": "Block subsidy",
+    "mkt": "What happened to the industry"
+   },
+   "items": [
+    {
+     "x": 2012,
+     "lane": "sub",
+     "label": "50 → 25 BTC",
+     "sub": "First halving"
+    },
+    {
+     "x": 2016,
+     "lane": "sub",
+     "label": "25 → 12.5 BTC",
+     "sub": "Second halving"
+    },
+    {
+     "x": 2020,
+     "lane": "sub",
+     "label": "12.5 → 6.25 BTC",
+     "sub": "Third halving"
+    },
+    {
+     "x": 2024,
+     "lane": "sub",
+     "label": "6.25 → 3.125 BTC",
+     "sub": "Fourth halving, April 2024"
+    },
+    {
+     "x": 2024,
+     "lane": "mkt",
+     "label": "Network hashrate fell about 10%",
+     "sub": "Unprofitable machines switched off before difficulty rebalanced — the mechanism working exactly as designed"
+    },
+    {
+     "x": 2026,
+     "lane": "mkt",
+     "label": "Transaction fees are not filling the gap",
+     "sub": "Fees ran about 0.58% of total block rewards in April 2026 — the subsidy is still effectively the whole of miner revenue"
+    },
+    {
+     "x": 2026,
+     "lane": "mkt",
+     "label": "Difficulty falls year over year",
+     "sub": "Only the second such decline in bitcoin's history; capacity leaves for AI and for power contracts"
+    },
+    {
+     "x": 2028,
+     "lane": "sub",
+     "label": "3.125 → 1.5625 BTC",
+     "sub": "Fifth halving projected mid-April 2028 at block 1,050,000 — daily issuance about 450 → about 225 BTC"
+    }
+   ]
+  },
+  {
+   "id": "hashprice",
+   "title": "Hashprice: the one number that decides everything",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "You now have three moving parts — the bitcoin price, network difficulty, and transaction fees. {{hashprice}} bundles all three into a single figure: **revenue per unit of computing power per day**, usually quoted in dollars per petahash per second per day.",
+    "It is the most useful number in the industry because it collapses the question *should this machine be running?* into a comparison with one other number: what the electricity costs. If hashprice exceeds your energy cost per unit of hashrate, run. If not, switch off.",
+    "**Read hashprice as a price you receive, not a price you set.** Every miner in the world faces the same hashprice on the same day. What differs between them is only the cost side — which is why the whole competitive game is about electricity and machine efficiency, and nothing else.",
+    "It also explains a pattern that confuses newcomers: **a rising bitcoin price does not reliably help miners.** A higher price attracts capital, capital buys machines, machines raise hashrate, and the retarget raises difficulty — pushing hashprice back down. The benefit leaks away into difficulty within a few months. Miners capture price rises only briefly, and lose price falls immediately.",
+    "Hashrate Index's own commentary in April 2026, with hashprice around $33, put it plainly: at that level hashprice is **at or below breakeven for many miners** depending on operating cost and machine model. That is the industry's normal condition, not a crisis — the retarget pushes the marginal miner to breakeven and holds them there."
+   ]
+  },
+  {
+   "id": "hashprice-today",
+   "title": "The 2026 readings, dated",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "mixed units — read each label; hashprice in USD per PH/s per day, difficulty in trillions, hashrate in EH/s",
+   "intro": "Point-in-time figures so the mechanisms above have numbers attached. Note the volatility: hashprice moved roughly 40% inside three months of 2026 with no change in any miner's own operations. This is why a miner's quarterly revenue is close to unforecastable, and why a fifteen-year lease at a fixed escalator is a fundamentally different asset.",
+   "items": [
+    {
+     "label": "Hashprice — 13 Apr 2026",
+     "sub": "USD per PH/s/day; Hashrate Index called this at-or-below breakeven for many miners",
+     "v": 33.25
+    },
+    {
+     "label": "Hashprice — late June 2026 (trough)",
+     "sub": "USD per PH/s/day",
+     "v": 27.66
+    },
+    {
+     "label": "Hashprice — 17 Aug 2026",
+     "sub": "USD per PH/s/day",
+     "v": 31.89
+    },
+    {
+     "label": "Hashprice — late Aug 2026",
+     "sub": "USD per PH/s/day; about 39% off the June trough",
+     "v": 38.0
+    },
+    {
+     "label": "Network difficulty — peak, 29 Oct 2025",
+     "sub": "trillions",
+     "v": 155.97
+    },
+    {
+     "label": "Network difficulty — 6 Sep 2026",
+     "sub": "trillions; about 18% below peak, an unusual year-over-year fall",
+     "v": 127.45
+    },
+    {
+     "label": "Network hashrate — peak, late Oct 2025",
+     "sub": "EH/s",
+     "v": 1151
+    },
+    {
+     "label": "Network hashrate — end Aug 2026 (7-day avg)",
+     "sub": "EH/s; roughly 20% below peak, and below peak for 316 consecutive days",
+     "v": 920
+    }
+   ]
+  },
+  {
+   "id": "efficiency-and-cost",
+   "title": "The whole competitive position: two numbers",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Because every miner sells an identical product at a price none of them sets, competitive advantage lives entirely on the cost side — and the cost side has only two real inputs. This table is the practical core of mining economics. Everything a miner says about strategy reduces to moving one of these two numbers.",
+   "cols": [
+    "Input",
+    "What it is",
+    "Why it is the whole game",
+    "What a reader should ask"
+   ],
+   "rows": [
+    [
+     "Machine efficiency",
+     "{{joules per terahash}} — energy spent per trillion hash attempts. Lower is better.",
+     "Sets how much electricity you burn per unit of the identical product everyone sells. A fleet at 15 J/TH against one at 30 J/TH earns the same revenue per terahash and pays half the power bill.",
+     "What is the **fleet-average** efficiency, not the best machine in it? An average hides a long tail of old units."
+    ],
+    [
+     "Power price",
+     "Delivered cost per kWh, including transmission, capacity charges and demand charges — not the headline energy rate.",
+     "The other multiplicand. At scale a cent per kWh is the difference between a profitable fleet and a stranded one.",
+     "Is the quoted rate all-in? Is it fixed, indexed, or merchant? A merchant rate in ERCOT is a different business from a fixed contract."
+    ],
+    [
+     "— what is NOT a lever —",
+     "Product quality, brand, customer relationships, distribution, pricing power.",
+     "Bitcoin is perfectly fungible and sold into a global market at a single price. There is no premium for a better-run miner.",
+     "Be sceptical of any miner claiming a commercial moat in mining itself. The moat, if there is one, is in the power contract."
+    ],
+    [
+     "Reported cost to mine",
+     "Usually **electricity only**.",
+     "Companies quote the number that flatters them. Electricity is often less than half of {{all-in cost to mine}}.",
+     "Does the figure include depreciation of the machines, hosting fees, staff and overhead? If it says 'cash cost' or 'energy cost', it excludes most of the cost base."
+    ],
+    [
+     "Curtailment credits",
+     "Payments for switching off when the grid is short.",
+     "Can turn the worst hours of the year into revenue rather than loss — see the next section.",
+     "Is demand-response income reported inside revenue, netted against power cost, or in other income? All three treatments exist."
+    ]
+   ]
+  },
+  {
+   "id": "stranding",
+   "title": "Stranding: why the end is scheduled, not risked",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Put the two mechanisms together. Difficulty ratchets up whenever competitors invest, which they do whenever mining is profitable. The halving cuts the subsidy on a fixed calendar regardless of anything. Neither ever runs the other way for long.",
+    "So a mining machine's revenue curve is **monotonically downward over its life**, punctuated by a step down every four years, with only the bitcoin price pushing the other way — and the price's help leaks into difficulty within months.",
+    "There is a point on that curve where the machine stops covering the electricity it burns. Past that point, running it destroys value and switching it off costs nothing. This is {{fleet stranding}}, and the important word is *scheduled*: it is not a risk that might materialise, it is an arrival time that can be estimated from the machine's {{joules per terahash}}, the power price, and the halving calendar.",
+    "**This reframes the whole pivot.** A miner announcing an AI hosting lease is not diversifying in the ordinary corporate sense. It is doing something closer to what a landowner does when the mine under the field runs out: the machines were always going to strand, and what has value is the thing underneath them — an interconnection, a substation, a transmission position, land, water, permits, and a power contract that took years to obtain.",
+    "That is why the pivot happened across the whole listed cohort within about two years rather than company by company. They were all on the same curve, reading the same calendar.",
+    "**And it is why the assets convert but the business does not.** The power position is worth as much to a GPU hall as to a mining shed — arguably more, since AI load is less price-elastic. The ASICs are worth scrap. A miner's balance sheet, read correctly, is a power position with a depreciating lottery ticket bolted to it."
+   ]
+  },
+  {
+   "id": "curtailment-revenue",
+   "title": "Selling the off switch",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A grid has to match supply and demand every second. When it cannot, it pays someone to stop consuming. A load that can shut down in seconds without damage is unusually valuable to a grid operator, and mining is close to the ideal case: no process to spoil, no customers to disappoint, no restart cost beyond a few minutes.",
+    "So miners sell {{curtailment}} as a product. In ERCOT this runs through {{demand response}} programmes and ancillary-service markets, and in the worst hours it can pay more than the mining revenue forgone. **The economically correct way to read this is that the miner is short a call option on power and is being paid the premium.**",
+    "Two things follow that matter when reading a miner's accounts.",
+    "**First, {{demand response revenue}} makes reported power cost misleading.** Some companies net curtailment credits against energy expense, which flatters cost per kWh; others book it as revenue, which flatters revenue. The same economics produce two different-looking income statements, and comparing two miners' 'cost to mine' without checking the treatment is meaningless.",
+    "**Second — and this is the part the AI pivot changes — flexibility is exactly what an AI tenant will not accept.** A training run cannot be interrupted for four hours because ERCOT is short. So when a miner converts a site from mining to AI hosting it gives up the curtailment revenue and takes on a firm-power obligation. That is a real cost of the pivot, and it is rarely quantified in the announcement."
+   ]
+  },
+  {
+   "id": "one-way-door",
+   "title": "Why the pivot cannot be reversed",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "The comparison that decides how to read any miner's AI announcement. The point is not that leasing is better — it is that the two businesses have opposite risk shapes, and moving from one to the other is a door that only opens one way.",
+   "cards": [
+    {
+     "t": "Bitcoin mining against a contracted AI lease",
+     "meta": "The same site, the same power, two revenue models — and moving from the first to the second cannot be undone",
+     "adv": [
+      "**Contracted revenue with a known counterparty.** A fifteen-year lease with a stated escalator replaces a daily lottery whose payout falls by design.",
+      "**No difficulty ratchet.** A competitor building a data centre in another state does not reduce your rent. Nothing in the lease adjusts against you every two weeks.",
+      "**No halving.** The revenue does not step down on a protocol schedule.",
+      "**Financeable.** A contracted rent stream supports project debt at a rate mining cash flow never could — which is why these leases are announced alongside note issues.",
+      "**The power position is finally worth its scarcity value.** Interconnection queues are years long; a lease prices that queue position."
+     ],
+     "dis": [
+      "**Irreversible on any relevant horizon.** As one 2026 analysis put it, a five-year hyperscaler agreement cannot simply be paused when bitcoin rallies. Mining optionality is sold, not parked.",
+      "**Concentration replaces diversification.** Mining revenue comes from an anonymous global market that cannot default. Lease revenue comes from one named tenant that can.",
+      "**Counterparty credit becomes the whole risk.** This is why {{credit backstop}} structures and parent guarantees dominate these deals — see the TeraWulf guide.",
+      "**Capital intensity rises sharply.** Building critical-IT capacity runs roughly $8–10m per MW, an order of magnitude above racking miners in a shed.",
+      "**Flexibility revenue is surrendered.** Firm power for a training cluster means no curtailment income.",
+      "**Delivery risk is now yours.** Rent starts when the hall is delivered. Mining revenue started the day a machine was plugged in."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "what-converts",
+   "title": "What converts, and what is scrap",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The pivot is only possible because part of a mining site is reusable. Working out which part is the whole valuation question, and Cipher's own disclosure gives an unusually clean answer: about 85% of Black Pearl's existing data-centre infrastructure was expected to be repurposed for its AI lease.",
+   "cols": [
+    "Layer",
+    "Reusable for AI?",
+    "Why"
+   ],
+   "rows": [
+    [
+     "Interconnection and substation",
+     "**Yes — and it is the whole asset.** ",
+     "An approved grid connection takes years and is the binding constraint on AI build-out. It does not care what the electrons are for."
+    ],
+    [
+     "Land, water rights, permits, tax arrangements",
+     "**Yes**",
+     "Site control and local consent transfer intact."
+    ],
+    [
+     "Power contract",
+     "**Usually, with renegotiation**",
+     "A mining contract may carry curtailment rights and a minimum take that an AI tenant will not accept. Cipher's Odessa contract obliges it to take at least 66.7% of 207 MW a year and lets the supplier curtail — workable for mining, not for a training cluster."
+    ],
+    [
+     "Building shell, transformers, switchgear",
+     "**Largely**",
+     "This is most of the 85% figure. The electrical distribution is broadly the same job at a different density."
+    ],
+    [
+     "Cooling",
+     "**Partly**",
+     "Mining sheds are often air-cooled at low density. AI halls need liquid cooling at 100 kW-plus per rack. Cipher quotes {{critical IT load}} build costs of $9-11m per MW against a mining shed at a small fraction of that."
+    ],
+    [
+     "{{ASIC}} miners",
+     "**No. Zero.**",
+     "A SHA-256 chip cannot run any part of an AI workload. Cipher wrote down $96.1m of miners held for sale and $29.4m on disposals in FY2025, and sold its joint-venture fleet to a rig manufacturer."
+    ],
+    [
+     "Operating organisation",
+     "**Partly**",
+     "Running a mining fleet and running a hyperscaler's hall are different disciplines. Note who Cipher hired: an ERCOT interconnection official and a Google data-centre engineering manager."
+    ]
+   ]
+  },
+  {
+   "id": "reading-the-numbers",
+   "title": "Four kinds of dollar figure, and how to tell them apart",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Every company in this sector announces leases with a large dollar number attached. **Four different quantities circulate under similar names, and they differ by more than an order of magnitude.** This section is the practical skill the whole guide builds towards.",
+    "**1. {{contracted revenue}} over the base term.** The sum of rent the tenant is obliged to pay across the initial lease, usually including a stated escalator. Undiscounted — a dollar in year fifteen counts the same as a dollar in year one. This is the most meaningful of the four and the one to insist on.",
+    "**2. {{total contract value}} including renewals.** The same sum, extended over option periods the tenant has not exercised and may never exercise. Cipher's Barber Lake is about $3.8bn on the first measure and about $9.0bn on the second — the same building, 2.4 times the number.",
+    "**3. Net operating income.** Rent minus the operating costs the landlord bears. Under a triple-net lease the tenant pays those costs, so NOI approaches rent and the two figures nearly coincide; under a modified-gross lease they diverge. Cipher publishes NOI margins of about 100% for its Amazon leases and about 86% for Barber Lake, which tells you the lease type without reading the lease.",
+    "**4. Capital expenditure.** What it costs the landlord to build. Cipher publishes $9-11m per critical IT MW at Barber Lake and $10.5m at Stingray. This is a **cost**, and it appears in the same press releases as the revenue figures.",
+    "**Now the discipline.** Cipher described the same $5.5bn Amazon figure as **'Estimated Contract Value'** in its November 2025 deck and as **'Contracted Revenue'** in its February 2026 deck. It called the same Fluidstack figure 'contracted revenue' in a release headline, 'contract value' in that release's own bullets, and 'minimum contracted revenue' in the accompanying slide. It described the two together as **'approximately $8.5 billion in lease payments'**. And the Stingray slide carries **'~$2.0Bn of Contracted Revenue'** and **'~$2.0 - $5.7 Bn Contracted Lease Payments'** side by side.",
+    "None of that is deception — each label is defensible in its own document. But it means **you cannot compare two companies' headline numbers without opening both leases**, and it is why a widely circulated claim that two of these companies had 'more than $19 billion combined' fell apart on inspection: the article's own components summed to $26.1bn.",
+    "**The same discipline applies to megawatts.** {{gross capacity}} is the capacity at the fence; {{critical IT load}} is what reaches the servers. The ratio in this sector runs about 1.35 to 1.5 to one. Cipher publishes both for Barber Lake (300 gross / 207 IT) and Stingray (100 / 70) and **only gross for Black Pearl** — so its most valuable lease cannot be compared on the same basis as its other two."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this framework fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**The stranding argument does not tell you when.** It says the curve slopes down and steps down every four years. It does not give a date, because the bitcoin price can outrun difficulty for long stretches, and a miner with cheap enough power can outlast several halvings. Anyone using this framework to predict a specific quarter is over-reading it.",
+    "**Difficulty can fall, and did.** 2026 saw only the second year-over-year decline in bitcoin's history, taking difficulty about 18% below its October 2025 peak and handing every surviving machine roughly a quarter more revenue per unit of work. A framework that treats the ratchet as strictly one-way is wrong at the margins — though note the cause was capacity leaving, much of it for AI.",
+    "**The pivot is not available to everyone.** It requires an interconnection, land, water and local consent that a hosted miner renting rack space does not have. For most of the industry the exit is not conversion but shutdown, which is why the listed cohort's story is not the industry's story.",
+    "**And the destination has its own risks, which this guide does not teach.** Single-tenant concentration, construction delay, guarantees that only bite after rent commences, and regulatory pauses on energisation are all live. The five landlord guides in this library cover them; the point here is only that the pivot is compelled, not that it is safe."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why does a competitor's new machine reduce your mining revenue, even though you sell into a global market at a fixed price?",
+     "a": "Because bitcoin adjusts {{network difficulty}} every 2,016 blocks to hold block times near ten minutes. More total hashrate means higher difficulty, which means your unchanged machines win a smaller share. A 20% rise in world hashrate cuts your revenue about 17% with no action by you."
+    },
+    {
+     "q": "What is {{hashprice}} and why is it the only revenue number a miner really needs?",
+     "a": "Revenue per unit of computing power per day, usually dollars per petahash per second per day. It bundles the bitcoin price, network difficulty and transaction fees into one figure, so comparing it with your energy cost per unit of hashrate answers 'should this machine be running?' directly."
+    },
+    {
+     "q": "Name the two inputs that make up essentially all of a miner's competitive position, and one thing that is not on the list.",
+     "a": "{{joules per terahash}} (machine efficiency) and delivered power price. Not on the list: anything commercial — product quality, brand, pricing power — because bitcoin is perfectly fungible and sold at a price no miner sets."
+    },
+    {
+     "q": "Why is {{fleet stranding}} described as scheduled rather than risked?",
+     "a": "Because both mechanisms that drive revenue per machine down are one-way by design. Difficulty ratchets up whenever anyone invests, and the halving cuts the subsidy on a fixed calendar. The arrival time can be estimated from machine efficiency, power price and the halving date."
+    },
+    {
+     "q": "A miner announces an AI lease. Which parts of its mining site carry over and which are worthless?",
+     "a": "Interconnection, substation, land, permits and most of the shell and electrical distribution carry over — Cipher put that at about 85% of one site's infrastructure. The {{ASIC}} miners are worth scrap: a SHA-256 chip cannot run any part of an AI workload."
+    },
+    {
+     "q": "Why does converting a site to AI hosting cost a miner its curtailment revenue?",
+     "a": "Because {{demand response revenue}} is paid for being interruptible, and an AI tenant needs firm power. A training run cannot stop for four hours because the grid is short. The landlord takes on a firm obligation and gives up the option premium."
+    },
+    {
+     "q": "Distinguish contracted revenue, total contract value, NOI and capex in a lease announcement.",
+     "a": "Contracted revenue is rent over the base term. Total contract value adds unexercised renewal options — often more than double. NOI is rent minus landlord-borne costs, so it approaches rent under a triple-net lease. Capex is the landlord's build cost, quoted per critical IT MW, and is a cost not a revenue."
+    },
+    {
+     "q": "A release says '300 MW'. What must you ask before using the number?",
+     "a": "Whether it is {{gross capacity}} at the fence or {{critical IT load}} reaching the servers. The ratio runs about 1.35-1.5 to one, so a gross figure overstates sellable capacity by roughly a third to a half."
+    },
+    {
+     "q": "Why is the pivot from mining to AI leasing a one-way door?",
+     "a": "Because a fifteen-year lease cannot be paused if bitcoin rallies. Mining optionality is sold, not parked — and the capital spent converting the halls, plus the firm-power obligation, cannot be unwound either."
+    },
+    {
+     "q": "What does it mean that a miner's reported profit swings with the bitcoin price even when nothing operational changed?",
+     "a": "{{bitcoin fair value accounting}} carries held bitcoin at market and runs every price move through the income statement. Combined with warrant and derivative remeasurement, reported earnings can be dominated by non-cash items — Cipher's FY2025 loss of $822.2m sat against positive adjusted earnings of $22.2m."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "World hashrate rises 25% over a difficulty epoch while you add no machines. Your revenue, approximately:",
+     "c": [
+      "Is unchanged, because you sell at the market price",
+      "Rises 25%, because the network is more valuable",
+      "Falls about 20%, because difficulty rises to match",
+      "Falls 25%, exactly in proportion"
+     ],
+     "a": 2,
+     "why": "Difficulty rises to hold ten-minute blocks, so your share falls to 1/1.25 = 0.8 of what it was — about a 20% cut. The market price of bitcoin has not moved; the retarget did all of it."
+    },
+    {
+     "q": "Two miners face the same hashprice. Miner A runs 15 J/TH machines on 6c/kWh power; Miner B runs 30 J/TH on 3c/kWh. Which is better placed?",
+     "c": [
+      "Miner A, because newer machines always win",
+      "Miner B, because power cost dominates",
+      "Neither — their energy cost per unit of work is identical",
+      "Cannot be determined without the bitcoin price"
+     ],
+     "a": 2,
+     "why": "Energy cost per unit of hashing is efficiency times power price: 15 × 6 = 90 and 30 × 3 = 90. They are equally placed today — but Miner A's fleet has more life left before efficiency alone strands it, and Miner B's advantage depends on a contract that may reprice."
+    },
+    {
+     "q": "A landlord announces a lease of '$9.0 billion'. The fine print says $3.8bn over the initial ten years with two five-year options. The honest headline is:",
+     "c": [
+      "$9.0bn of contracted revenue",
+      "$3.8bn of contracted revenue, or $9.0bn of total contract value if both options are exercised",
+      "$9.0bn of net operating income",
+      "$9.0bn of capital expenditure"
+     ],
+     "a": 1,
+     "why": "Only the base term is contracted. The options belong to the tenant and may never be exercised, so the larger figure is total contract value — a different and weaker measure."
+    },
+    {
+     "q": "Which of these is a cost rather than a revenue?",
+     "c": [
+      "Minimum contracted revenue",
+      "Base-term contract value",
+      "Estimated project cost per critical IT MW",
+      "Average annualised NOI"
+     ],
+     "a": 2,
+     "why": "Project cost per MW is the landlord's capital expenditure. It appears in the same announcements as the revenue figures and is often quoted immediately beside them, which is exactly why it gets confused with them."
+    },
+    {
+     "q": "A miner converts a site to AI hosting. Which of the following does it NOT keep?",
+     "c": [
+      "The grid interconnection",
+      "The substation",
+      "The ASIC miners",
+      "The land and permits"
+     ],
+     "a": 2,
+     "why": "Application-specific chips compute SHA-256 and nothing else. Everything else on the list transfers, which is why the power position, not the fleet, was always the asset."
+    },
+    {
+     "q": "Bitcoin's difficulty falls year over year for only the second time in its history. The most likely cause is:",
+     "c": [
+      "The protocol changed its rules",
+      "Capacity left the network",
+      "The bitcoin price rose sharply",
+      "Transaction fees replaced the subsidy"
+     ],
+     "a": 1,
+     "why": "Difficulty tracks total hashrate. A fall means machines were switched off or repointed — in 2026, substantially because operators redirected power to AI. A rising price would attract capacity and push difficulty up, not down."
+    },
+    {
+     "q": "Why does a fifteen-year lease with a 3% escalator change a miner's risk profile more than it changes its revenue?",
+     "c": [
+      "Because the revenue is larger",
+      "Because the revenue becomes contracted and counterparty-dependent rather than market-dependent",
+      "Because escalators outpace inflation",
+      "Because leases are tax-advantaged"
+     ],
+     "a": 1,
+     "why": "Mining revenue comes from an anonymous global market that cannot default but falls by design. Lease revenue comes from one named tenant that can default but does not fall. The risk moves from market to credit — which is why guarantees and backstops became the sector's central negotiation."
+    }
+   ]
+  }
+ ]
+}

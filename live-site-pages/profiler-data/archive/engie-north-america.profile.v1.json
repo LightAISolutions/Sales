@@ -507,17 +507,6 @@
    "note": "Google-owned ERCOT storage developer and one of the eighteen new owners that took 52% of ERCOT's 2025 battery additions.",
    "context": "Modo Energy records that 18 owners with no prior Texas battery assets brought 3.1 GW online in ERCOT during 2025 — 52% of that year's additions — naming Intersect among them alongside TotalEnergies, Eni, Equinor, Brookfield, Gridstor, esVolta and Tokyo Gas America. Intersect is the sharpest case because Alphabet acquired it in March 2026, putting one of ENGIE's own PPA counterparties on the other side of the market as an owner.",
    "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
-  },
-  {
-   "slug": "cipher-mining",
-   "type": "customer",
-   "status": "announced",
-   "since": "2025-05",
-   "scale": "up to 300 MW contemplated",
-   "via": "Co-located data centre at an unnamed West Texas wind facility",
-   "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
-   "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
-   "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
   }
  ],
  "policyExposure": [
@@ -877,11 +866,6 @@
  ],
  "sources": [
   {
-   "label": "Cipher Digital Inc. Form 10-K, fiscal year ended December 31, 2025",
-   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
-   "date": "2026-02-24"
-  },
-  {
    "label": "ENGIE — ENGIE and QTS strengthen renewable energy partnership in Texas with ABEI Energy's Lubio Solar project",
    "url": "https://www.engie-na.com/engie-qts-solar-power-purchase-agreement-texas/",
    "date": "2026-08-18"
@@ -1172,5 +1156,5 @@
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 2
+ "profileVersion": 1
 }

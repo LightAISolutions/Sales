@@ -1,0 +1,370 @@
+{
+ "schemaVersion": 2,
+ "slug": "galaxy-digital",
+ "title": "Galaxy Digital — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: this one is not a miner",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "Galaxy Digital appears in this library beside Cipher Digital, Hut 8, TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe, and it owns a comparable asset — a 1.63 GW campus in Dickens County, Texas with 526 MW of {{critical IT load}} let to CoreWeave. **Everything else about it is different.**",
+    "The SEC classifies the registrant under **SIC 6211, Security Brokers, Dealers and Flotation Companies**. It reports **USD 60.4bn of revenue** against **USD 3.0bn of total equity**. Its largest disclosed concentrations are trading platforms and lending counterparties. Its regulated entities are three broker-dealers, an investment adviser, a registered swap dealer and money-services businesses. It is a financial institution that happens to own a data centre.",
+    "**So this guide teaches a different subject from every other guide in the library: how a trading and asset-management firm works, and what happens when one of them builds a building.** The other guides teach power, cooling, tenancy and construction. None of them describes market making, a lending book, assets under management, or lessor accounting — and without those you cannot read this company's accounts at all.",
+    "One warning up front, because it governs everything: **Galaxy's revenue line is not comparable to any operating company's.** Understanding why is the first job."
+   ]
+  },
+  {
+   "id": "gross-vs-net",
+   "title": "Why the revenue line says USD 60 billion",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Galaxy's FY2025 revenue was **USD 60,406.7m**. Its transaction expenses were **USD 60,175.8m**. The difference — about USD 231m — is closer to what the business actually earned from that activity.",
+    "The reason is **{{principal trading}}**. When Galaxy sells a digital asset to a customer it owns that asset first, so the accounting treats it as a sale of Galaxy's own inventory: the gross proceeds are revenue and the cost of the asset is an expense. Sell the same bitcoin ten times in a year and you book ten times its value as revenue. The company says so itself: gross recognition means 'the magnitude of changes in Revenue on the Company's statement of operations overshadow other parts of the business, but are predominantly offset by Transaction expenses in Net income'.",
+    "Contrast **{{agency trading}}**, where the firm executes a customer's order without owning the asset and books only the commission. Identical economics for the customer; revenue smaller by a factor of hundreds.",
+    "**A single trade can move the line.** Galaxy attributes the FY2025 increase principally to one Q3 2025 transaction of **80,000 BTC**. That is a revenue event with almost no earnings content.",
+    "**What to use instead.** Galaxy steers readers to **adjusted gross profit** — USD 426m for FY2025 — and adjusted EBITDA, which was **USD 33.7m** against USD 715.4m in FY2024. Neither is a defined accounting measure, but both are far closer to the economics than the revenue line.",
+    "**And the practical rule this establishes**: before comparing any two companies' revenue, ask whether each recognises as principal or as agent. A landlord's rent and a market maker's turnover are both called revenue and measure entirely different things. Galaxy's revenue is roughly ten times Digital Realty's; its equity is about a third of the size."
+   ]
+  },
+  {
+   "id": "how-a-trading-firm-earns",
+   "title": "How a trading firm earns without predicting anything",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "The intuition most people bring is that a trading firm makes money by guessing which way prices go. Professional firms mostly do not, and the distinction matters for reading their risk.",
+    "**{{market making}}** means quoting a price to buy and a price to sell the same asset continuously. The gap between them is the **{{bid-ask spread}}**, and it is the market maker's gross margin per trade. Buy at 99, sell at 101, repeat: the profit comes from the spread and the volume, not from the direction.",
+    "What the market maker takes on instead is **inventory risk**. Between buying and selling it owns the asset, and if the price moves against it in that window the spread can be wiped out. So the business is one of managing exposure and turnover, and its natural enemy is a market that gaps rather than one that falls.",
+    "**Volume, not price, is the revenue driver.** Galaxy discloses **1,741 trading counterparties** at Q2 2026, up from 1,381 in Q1 2025 — the count is the franchise. Global Markets adjusted gross profit was USD 294.5m in a record Q3 2025 and USD 30-49m in each of the following three quarters. The swing is activity, not a view.",
+    "**The lending book works the same way.** Galaxy lends against digital assets pledged as security — an average book of about **USD 1,438m** in Q2 2026 — at a **{{loan-to-value}}** low enough to absorb a fall. The 10-K says the loans are typically **110% to 140%** collateralised. The lender's return is the interest spread; its risk is that collateral falls faster than it can be liquidated.",
+    "**{{staking}}** completes the fee side: Galaxy runs validator infrastructure for proof-of-stake networks and retains between **5% and 10%** of the rewards earned on third-party assets bonded to its nodes. Again a fee on someone else's asset, not a bet.",
+    "**The one place Galaxy does take direction** is its Treasury and Corporate segment, which holds the firm's own digital assets and investments — and that is exactly where the losses appear: a FY2025 segment net loss of USD 434.1m against Digital Assets' USD 193.9m profit."
+   ]
+  },
+  {
+   "id": "balance-sheet",
+   "title": "A trading firm's balance sheet, next to a landlord's",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Put Galaxy's balance sheet beside a data-centre landlord's and almost nothing lines up. This table is the fastest way to see that the two businesses are not variants of each other. Galaxy figures are at 30 June 2026.",
+   "cols": [
+    "What you look at",
+    "A data-centre landlord",
+    "Galaxy Digital",
+    "Why it differs"
+   ],
+   "rows": [
+    [
+     "Biggest asset",
+     "Buildings and land",
+     "**Digital assets and loans** — USD 2,450.7m of digital intangible assets, USD 1,055.7m of digital financial assets, USD 947.4m of loans receivable and USD 782.4m of digital-asset loans",
+     "A trading firm's assets are inventory and receivables that turn over constantly, not fixed assets held for decades."
+    ],
+    [
+     "Property and equipment",
+     "Essentially the whole business",
+     "**USD 2,218.2m** — and rising fast, from USD 237.0m at end-2024",
+     "Helios is now a fifth of the balance sheet. This is the line where the two businesses meet."
+    ],
+    [
+     "Biggest liability",
+     "Mortgages and unsecured notes",
+     "**Digital assets borrowed (USD 1,486.9m) and collateral payable (USD 1,933.1m)**",
+     "Positions and margin, not property debt. These move with the market daily."
+    ],
+    [
+     "Revenue relative to equity",
+     "Roughly 0.3-0.5×",
+     "**About 22×** — USD 60.4bn of revenue on USD 2.7bn of total equity",
+     "The gross principal-basis effect. A ratio like this is a signature of turnover, not of earning power."
+    ],
+    [
+     "What can go wrong overnight",
+     "Nothing much — a tenant is contracted",
+     "**A great deal.** Counterparty default, collateral gapping, a stablecoin de-peg, slashing on a proof-of-stake network",
+     "This is why the firm publishes counterparty counts and collateralisation ranges, which no landlord does."
+    ],
+    [
+     "Disclosed concentration",
+     "Top tenants by share of rent",
+     "**Two trading platforms = 38% of FY2025 revenue; three counterparties = 45% of the loan book; one platform held 14% of the firm's digital assets**",
+     "The concentrations are financial, not tenurial — except at Helios, where they are absolute: one tenant, 100%."
+    ],
+    [
+     "Cash",
+     "Cash",
+     "**USD 896m of cash and USD 1,563m of stablecoins**",
+     "More stablecoins than cash, which is itself a statement about where this balance sheet lives."
+    ]
+   ]
+  },
+  {
+   "id": "aum",
+   "title": "Assets under management: earning on money you do not own",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The third leg is asset management, and it works on a principle worth stating plainly: **{{assets under management}} is other people's money.** It does not appear on Galaxy's balance sheet and Galaxy cannot spend it. What it does is generate a management fee, usually a small percentage a year, which makes AUM the base that fee revenue is charged on.",
+    "That makes AUM the cleanest measure of an asset manager's size — and it moves for two quite different reasons. **Net flows** are clients adding or withdrawing money, which is the business performing. **Market movement** is the value of what is already there going up or down, which is not. A manager whose AUM doubled in a bull market has not necessarily won a single client.",
+    "**Galaxy's has gone the other way, and sharply.** Combined AUM and assets under stake fell from about **USD 12bn at 31 December 2025** to **USD 7.1bn at 30 June 2026** — roughly 40% in six months — with ETFs at USD 1,805m, Alternatives at USD 2,553m and assets under stake at USD 2,790m. Segment adjusted gross profit is correspondingly small and flat: USD 21m, USD 18m and USD 17m in the three quarters to Q2 2026.",
+    "**Sub-advisory is the model.** Rather than distributing its own funds, Galaxy manages money inside other firms' products — named partners include State Street Global Advisors, Invesco, DWS, CI Global Asset Management and Itaú, and BlackRock selected Galaxy as an approved validator for its first rewards-generating crypto ETP. The economics are a shared fee whose **split Galaxy explicitly does not disclose**.",
+    "**Scale check.** The Invesco Galaxy Bitcoin ETF holds roughly USD 516-526m. BlackRock's iShares Bitcoin Trust holds about USD 51.9bn — roughly a hundred times as much. Galaxy is a real participant in this market and not a large one, and no genuine industry league table of digital-asset managers that includes it could be located."
+   ]
+  },
+  {
+   "id": "lessor-accounting",
+   "title": "When a financial firm becomes a landlord: the lease classification",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Here is where the two halves of the company collide, and it is the most consequential technical fact in this dossier.",
+    "When a landlord signs a lease, accounting asks a question that sounds pedantic and is not: **is this really a rental, or is it effectively a sale?** A fifteen-year lease on a purpose-built asset with no realistic alternative use looks a lot like handing the asset over. The answer determines where the money appears and when.",
+    "**An {{operating lease}}** treats it as a rental. The landlord keeps the building on its balance sheet as property, depreciates it, and recognises rent evenly across the term — straight-line, regardless of when cash actually arrives.",
+    "**A {{sales-type lease}}** treats it as a disposal. The landlord derecognises the asset, books a receivable for the future payments, and recognises much of the profit **up front**, with the rest arriving as interest income over the term.",
+    "**Same building. Same tenant. Same cash. Wildly different earnings profile.** A sales-type classification front-loads profit into year one; an operating classification spreads it across fifteen.",
+    "**Galaxy classifies the CoreWeave leases as operating leases under ASC 842** — and the policy paragraph saying so appears for the first time in the Q2 2026 10-Q. It is not in the FY2025 10-K. Three consequences are visible in the accounts:",
+    "**One:** the campus stays in Property and equipment at USD 2,218.2m and no lease receivable exists. **Two:** consideration is split — rent is lease income under ASC 842, while power and operating-service pass-throughs are recognised separately under ASC 606 as 'Data center operator revenue', USD 5.816m in Q2 2026 **exactly offset** by USD 5.816m of operator cost. **Three, and most striking:** a USD 150.0m prepayment received in FY2025 was **still sitting unrecognised in deferred revenue at 30 June 2026**, even though rent had commenced — because straight-line recognition follows the term, not the cash.",
+    "**The number that matters most for comparison** is the audited one this produces: **USD 4,747.8m of total future minimum lease income** at 30 June 2026. That is the ASC 842 figure — and it is not the same as any of the marketing figures in the next section."
+   ]
+  },
+  {
+   "id": "which-number",
+   "title": "Five numbers for one lease",
+   "kind": "bars",
+   "read": "6 min",
+   "unit": "USD millions — note that these measure DIFFERENT things and must not be added or ranked against each other",
+   "intro": "Galaxy publishes at least five figures for the CoreWeave arrangement, each correct in its own document. Laying them on one axis shows why comparing this company's headline with a peer's is unsound. Only one of them is audited.",
+   "items": [
+    {
+     "label": "Phase I — total lease payments, 15-year initial term",
+     "sub": "Galaxy's own figure for Phase I alone, escalators included",
+     "v": 4500
+    },
+    {
+     "label": "Phase II — minimum contracted lease payments",
+     "sub": "Phase II alone, excluding a $100m option payment already received",
+     "v": 10400
+    },
+    {
+     "label": "ASC 842 total future minimum lease income at 30 Jun 2026",
+     "sub": "**The audited figure.** All phases, as recognised under the accounting standard",
+     "v": 4748
+    },
+    {
+     "label": "Anticipated average ANNUAL revenue, all three phases",
+     "sub": "An annual rate, not a total — raised from '$1B+' to '$1.2B+' in Q2 2026",
+     "v": 1200
+    },
+    {
+     "label": "'Total potential value' over a potential 25-year term",
+     "sub": "All phases INCLUDING both five-year extension options — the weakest measure in circulation",
+     "v": 30000
+    }
+   ]
+  },
+  {
+   "id": "underwriting-a-campus",
+   "title": "How a financial firm underwrites and finances a building",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Galaxy is unusually explicit about the arithmetic, because it is a finance house and thinks in these terms naturally.",
+    "**Pricing.** Rent is set on a **gross yield on cost** — Galaxy says so directly: rental payments are 'calculated using a gross yield-on-cost, which fixes the return on the capital Galaxy deploys to build and deliver the contracted critical IT load'. Phase II's starting figure is **13.7%**. Build the hall for USD 100, charge USD 13.70 a year. This is a lender's way of pricing a building, and it removes construction cost risk from the return.",
+    "**Escalation.** Rent rises 3.0% a year if inflation is below 3%, 5.0% if above 5%, and with inflation in between — a collar that caps the tenant's exposure and floors the landlord's.",
+    "**Structure.** The leases are **near triple net**: the tenant pays utilities, taxes, insurance, maintenance and ordinary repairs, but Galaxy provides the personnel operating the mechanical, cooling and electrical systems outside the white space. That is why the margin is quoted at about 90%+ rather than approaching 100%.",
+    "**Funding, in two very different instruments.** Phase I used a **USD 1.4bn senior secured term loan** from Deutsche Bank at one-month SOFR plus 4.75% with a 2.50% floor, at 80% loan-to-cost against USD 350m of Galaxy equity, maturing 2028 — short-dated construction money. Phase II used **USD 3,507m of 9.875% senior secured notes due 2031**, issued at 99.500%.",
+    "**That 9.875% coupon is the lesson.** Compare the same market at the same time: Hut 8's River Bend notes at **6.192%** with BBB- ratings behind a Google-backstopped tenant; Cipher's Black Pearl notes at **6.125%** behind an Amazon.com guarantee. Galaxy's tenant is unrated CoreWeave with **no disclosed credit enhancement**, and the bond market charged roughly 370 basis points for the difference. Credit support is not a formality; it is a price.",
+    "**And the exit is planned.** Galaxy states that once Phase I is operational it expects to 'refinance the construction loan and replace it with a long-term loan based on the market value of the data center rather than its build cost' — illustrating a project costing USD 1bn, borrowed at 80% of cost, revalued at a 7% cap rate on USD 150m of NOI to USD 2.1bn, and refinanced at 60% of that for a roughly **USD 500m equity takeout**. That is the developer's classic manoeuvre, and a finance house executes it deliberately."
+   ]
+  },
+  {
+   "id": "two-businesses",
+   "title": "Should one company own both?",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Galaxy is the corpus's only company running a securities business and a data-centre business inside one balance sheet. The market has not settled whether that is a strength, and the arguments are worth holding separately.",
+   "cards": [
+    {
+     "t": "One balance sheet, two businesses",
+     "meta": "A securities firm and a data-centre landlord under one roof — the market has not settled whether that is a strength",
+     "adv": [
+      "**Capital allocation is genuinely flexible.** At 30 June 2026 equity was split roughly 36% Digital Assets, 36% Data Centers and 28% Treasury and Corporate — a firm that can move capital to whichever business has the better return.",
+      "**The financial business knows how to finance things.** Yield on cost, cap-rate refinancing and an equity takeout are second nature to a merchant bank and were executed inside eighteen months.",
+      "**The data centre diversifies away from crypto.** Contracted rent from a fifteen-year lease is uncorrelated with trading volumes, which is exactly what a firm whose earnings swing with digital-asset prices needs.",
+      "**Sum-of-the-parts analysts see value.** Citizens split its target roughly USD 25 a share for Digital Assets and more than USD 35 for Data Centers — the newer business worth more than the original one.",
+      "**The origin was an accident worth having.** Helios was bought from Argo Blockchain in December 2022 as a mining site; the pivot turned a stranded crypto asset into the firm's largest capital commitment."
+     ],
+     "dis": [
+      "**Nobody can value it on one multiple.** Piper Sandler runs a data-centre sum-of-the-parts and simultaneously values the whole on about 15 times adjusted gross profit, a financials method. Maxim's thesis rests on the digital-asset side. Zacks files it under Financial - Miscellaneous Services and cut it to Strong Sell in July 2026 while Morgan Stanley raised its target to USD 48.",
+      "**The discount is large and may be correct.** Simply Wall St notes a price-to-sales ratio of about 0.1× against an industry average near 3.5× — on a gross revenue line, which makes the ratio nearly meaningless and is itself evidence the market lacks a frame.",
+      "**Capital intensity collides with volatility.** A construction programme with USD 1,489.2m of outstanding commitments has to be funded through crypto drawdowns it cannot control.",
+      "**Concentration is absolute on one side.** One tenant, no disclosed backstop, contract expiry 2040.",
+      "**Key-person risk runs through both.** The founder held about 49.25% of total voting power at April 2026, and the 10-K's own risk factor concedes that his visibility makes regulatory scrutiny foreseeable 'irrespective of whether we have engaged in any unlawful conduct'."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**The revenue warning cuts both ways.** Dismissing the USD 60.4bn line as meaningless is as wrong as taking it at face value. It measures something real — the scale of flow through the franchise — and it is the base from which adjusted gross profit is extracted. Use it for what it measures, which is turnover.",
+    "**Operating-lease classification is a judgment, not a law.** It depends on term, asset life, alternative use and transfer of control, and a differently structured lease at the same campus could classify differently. Do not assume the treatment travels.",
+    "**Segment results this early are not informative.** The Data Centers segment showed a USD 1.1m net loss for FY2025 and USD 20m of adjusted gross profit in Q2 2026, on one delivered phase. Judging the economics of a fifteen-year lease from two quarters of a three-phase build is premature.",
+    "**And the record moves faster than the filings.** The FY2025 10-K describes the Ontario class action as uncertified with a hearing scheduled for June 2026; it was **certified on 27 August 2026**, after every Galaxy filing this guide draws on. When a company's risks are legal and regulatory, the annual report is a lagging document."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is Galaxy's USD 60.4bn revenue not comparable with a data-centre landlord's revenue?",
+     "a": "Because Galaxy trades as principal: it owns the assets it sells, so gross proceeds are revenue and the cost of the asset is an offsetting expense of almost the same size. FY2025 revenue of USD 60,406.7m sat against transaction expenses of USD 60,175.8m. Rent and turnover are both called revenue and measure different things."
+    },
+    {
+     "q": "Distinguish principal trading from agency trading.",
+     "a": "{{principal trading}} means the firm owns the asset and takes the price risk, earning the spread; {{agency trading}} means it executes a customer order for a commission and never owns the asset. Identical economics for the customer, revenue different by orders of magnitude."
+    },
+    {
+     "q": "How does a market maker earn without predicting prices?",
+     "a": "By quoting both a buy and a sell price continuously and capturing the {{bid-ask spread}} on volume. The risk taken is inventory risk — owning the asset between the two trades — not directional risk."
+    },
+    {
+     "q": "What is AUM and why does it not appear on the manager's balance sheet?",
+     "a": "{{assets under management}} is client money the firm invests on their behalf. It is not the firm's asset; it is the base on which management fees are charged. Galaxy's combined AUM and assets under stake fell from about USD 12bn to USD 7.1bn in six months."
+    },
+    {
+     "q": "State the difference between an operating lease and a sales-type lease for the landlord.",
+     "a": "An {{operating lease}} keeps the asset on the balance sheet and spreads rent straight-line over the term. A {{sales-type lease}} derecognises the asset, books a receivable and recognises most of the profit up front. Same cash, very different earnings profile."
+    },
+    {
+     "q": "Galaxy received a USD 150m prepayment in FY2025 and had recognised none of it by 30 June 2026, after rent commenced. Why?",
+     "a": "Because under the operating-lease classification lease income is recognised straight-line over the term, not when cash arrives. The prepayment sits in deferred revenue and releases across fifteen years."
+    },
+    {
+     "q": "Galaxy's Phase II notes priced at 9.875% while Hut 8's River Bend notes priced at 6.192%. What explains the gap?",
+     "a": "Counterparty credit. Hut 8's rent is backstopped by Google with a springing Alphabet guarantee, giving BBB- ratings; Galaxy's single tenant is unrated CoreWeave with no disclosed enhancement. The bond market charged roughly 370 basis points for it."
+    },
+    {
+     "q": "What does a 13.7% gross yield on cost mean, and why would a finance house price a building this way?",
+     "a": "Rent is set as a fixed percentage return on the capital deployed to build and deliver the capacity — build for USD 100, charge USD 13.70 a year. It removes construction-cost risk from the return, which is how a lender rather than a developer thinks about an asset."
+    },
+    {
+     "q": "Galaxy publishes 'over USD 1.2bn' for the CoreWeave leases and Hut 8 publishes 'USD 26.6bn'. Can these be ranked?",
+     "a": "No. Galaxy's is an anticipated **average annual** revenue across three phases; Hut 8's is a **base-term total** across fifteen years. Galaxy publishes no all-phase base-term aggregate at all. Its only audited figure is USD 4,747.8m of ASC 842 future minimum lease income."
+    },
+    {
+     "q": "Name the three power figures published for Helios and say which is contracted.",
+     "a": "1.63 GW is ERCOT-approved and utility-contracted; 800 MW gross / 526 MW {{critical IT load}} is leased to CoreWeave; 133 MW of critical IT was delivered at 30 June 2026. Only the middle one is leased — the 10-K states the remaining 830 MW 'remains available to be contracted'."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A firm reports USD 60bn of revenue and USD 60bn of transaction expenses. The most likely explanation is:",
+     "c": [
+      "It is loss-making at the gross level",
+      "It recognises trading as principal, so gross proceeds are revenue",
+      "It has made an accounting error",
+      "Its costs are unusually high"
+     ],
+     "a": 1,
+     "why": "Principal recognition books the gross proceeds of each sale as revenue with the cost of the inventory as an offsetting expense. The near-equality is the signature of turnover, not distress."
+    },
+    {
+     "q": "Which of these does a market maker NOT primarily rely on?",
+     "c": [
+      "The bid-ask spread",
+      "Trading volume",
+      "Correctly predicting price direction",
+      "Managing inventory risk"
+     ],
+     "a": 2,
+     "why": "Market making earns the spread on volume while managing the risk of holding inventory between trades. Direction is what it tries to avoid being exposed to."
+    },
+    {
+     "q": "A manager's AUM falls 40% in six months. Which conclusion is NOT supported?",
+     "c": [
+      "Fee revenue will likely fall",
+      "Clients may have withdrawn money",
+      "Markets may have fallen",
+      "The manager's own balance sheet shrank by 40%"
+     ],
+     "a": 3,
+     "why": "AUM is client money and is not on the manager's balance sheet. Its fall reduces the fee base; it does not directly reduce the firm's own assets."
+    },
+    {
+     "q": "Two landlords sign identical fifteen-year leases. One classifies it as sales-type, the other as operating. In year one:",
+     "c": [
+      "Both report the same profit",
+      "The sales-type landlord reports much more profit",
+      "The operating landlord reports much more profit",
+      "Neither reports any profit"
+     ],
+     "a": 1,
+     "why": "A sales-type classification recognises most of the profit up front as an effective disposal; an operating classification spreads it straight-line across fifteen years. Identical cash, very different year-one earnings."
+    },
+    {
+     "q": "Galaxy's Helios notes priced at 9.875%, Hut 8's at 6.192%, Cipher's at 6.125%. The best single explanation is:",
+     "c": [
+      "Different maturities",
+      "Different construction risk",
+      "Different tenant credit and credit enhancement",
+      "Different states"
+     ],
+     "a": 2,
+     "why": "Hut 8's rent is Google-backstopped and Cipher's is Amazon.com-guaranteed; Galaxy's single tenant is unrated with no disclosed enhancement. Credit support is priced, and here it is worth roughly 370 basis points."
+    },
+    {
+     "q": "Which Galaxy figure for the CoreWeave leases is the audited one?",
+     "c": [
+      "Over USD 1.2bn of average annual revenue",
+      "USD 4.5bn of Phase I total lease payments",
+      "USD 4,747.8m of ASC 842 total future minimum lease income",
+      "Over USD 30bn of total potential value over 25 years"
+     ],
+     "a": 2,
+     "why": "The ASC 842 schedule in the 10-Q is the accounting figure. The others are company-authored measures over different scopes and terms, including one that assumes both renewal options are exercised."
+    },
+    {
+     "q": "Helios has 1.63 GW approved, 800 MW gross contracted and 133 MW of critical IT delivered. A headline saying 'Galaxy's 1.6 GW campus is leased to CoreWeave' is:",
+     "c": [
+      "Correct",
+      "Wrong — 830 MW of the approved capacity is not leased to anyone",
+      "Wrong — CoreWeave leases 1.63 GW plus options",
+      "Correct but understated"
+     ],
+     "a": 1,
+     "why": "The FY2025 10-K states plainly that the remaining 830 MW of approved capacity 'remains available to be contracted'. Approved, contracted and delivered are three different numbers on this campus and differ by more than an order of magnitude end to end."
+    },
+    {
+     "q": "Why is Galaxy's price-to-sales ratio of about 0.1× against an industry average near 3.5× a weak argument that it is cheap?",
+     "c": [
+      "Because P/S is never useful",
+      "Because the sales figure is gross principal turnover, not comparable revenue",
+      "Because the industry average is wrong",
+      "Because it has no earnings"
+     ],
+     "a": 1,
+     "why": "A ratio built on a gross principal-basis revenue line cannot be compared with one built on operating revenue. The discount is arithmetic before it is a judgment — which is itself evidence the market lacks a settled frame for this company."
+    }
+   ]
+  }
+ ]
+}

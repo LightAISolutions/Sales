@@ -604,28 +604,6 @@
       "note": "IREN named Fluidstack among the customers of USD 2.8 billion of new multi-year cloud contracts announced on 20 July 2026 — Fluidstack as a buyer of GPU capacity from another neocloud.",
       "context": "IREN's release lists Perplexity, Figure AI, Together AI, Fluidstack, Fireworks, Fal, Hume and one unnamed customer behind USD 2.8 billion of multi-year contracts and a year-end 2026 ARR target above USD 4 billion. Read with the Boost Run contract (December 2025), it shows Fluidstack sourcing capacity from other providers while its own leased halls are still under construction. The individual Fluidstack contract value is not disclosed.",
       "source": "https://iren.gcs-web.com/news-releases/news-release-details/iren-signs-28bn-new-customer-contracts-leading-ai-developers"
-    },
-    {
-      "slug": "cipher-mining",
-      "type": "supplier",
-      "status": "active",
-      "since": "2025-09",
-      "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
-      "via": "Barber Lake, Colorado City TX",
-      "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
-      "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm"
-    },
-    {
-      "slug": "hut-8",
-      "type": "supplier",
-      "status": "active",
-      "since": "2025-12",
-      "scale": "245 MW critical IT on 330 MW of utility capacity; USD 7.0bn base-term contract value",
-      "via": "River Bend, West Feliciana Parish LA",
-      "note": "Landlord at River Bend under a 15-year triple-net lease, with Google backstopping Fluidstack's rent.",
-      "context": "Hut 8 Corp., through Hut 8 DC LLC, is Fluidstack's landlord at River Bend: 245 MW of critical IT supported by 330 MW of Entergy Louisiana capacity, on a 15-year triple-net lease with a 3.0% annual escalator worth USD 7.0bn over the base term and about USD 17.7bn if all three five-year renewal options are exercised. A right of first offer covers up to 1,000 MW of additional IT capacity at the site.\n\nGoogle backstops the rent and related pass-through obligations, with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue — and, unlike at TeraWulf and Cipher, **took no warrants and no equity in the landlord**. That is what this dossier's own summary records when it says the backstops were paid for with penny warrants in two of the landlords rather than three.",
-      "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm"
     }
   ],
   "policyExposure": [
@@ -1541,6 +1519,6 @@
       "url": "https://efts.sec.gov/LATEST/search-index?q=Fluidstack&dateRange=custom&startdt=2025-01-01&enddt=2026-09-04"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

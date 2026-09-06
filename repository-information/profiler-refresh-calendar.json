@@ -219,6 +219,21 @@
       ]
     },
     {
+      "slug": "cipher-mining",
+      "nextReport": "2026-11-03",
+      "confirmed": false,
+      "source": "Cadence inference, not a company announcement. As of 2026-09-06 the EDGAR submissions feed for CIK 0001819989 carries no Q3 2026 earnings-scheduling 8-K — the only filing since 2026-08-10 is a Schedule 13G dated 2026-08-13 — so no third-quarter date is company-confirmed. The row uses Tuesday 2026-11-03 because the quarterly releases have fallen in the first days of the reporting month (Q3 2025 on 2025-11-03, Q1 2026 on 2026-05-05, Q2 2026 on 2026-08-04), with the annual report later in February (FY2025 on 2026-02-24). Confirm from the company's investor-relations events page or the 8-K feed (CIK 0001819989) before relying on the date; note the filer is now Cipher Digital Inc., so a search on 'Cipher Mining' may miss the announcement.",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Whether the Odessa run-off finishes. Self-mining hashrate halved from about 23.6 EH/s to about 11.6 EH/s between Q3 2025 and Q1 2026, the three WindHQ joint-venture sites went to Canaan in February 2026 and Black Pearl's fleet was switched off the same month; Odessa's 207 MW is all that is left. Watch whether it is converted, sold or simply stopped, and whether any self-mining segment disclosure survives",
+        "First rent recognition on the three hyperscale leases — Black Pearl (about 300 gross MW, Amazon, 15 years, about USD 5.5bn), Stingray (100 gross / 70 critical IT MW, Amazon, 15 years, about USD 2.0bn) and Barber Lake (300 MW in a 244 MW Phase I plus 56 MW Phase II, Fluidstack as lessee with Google backstopping the rent). Watch the lessor accounting specifically: operating versus sales-type under ASC 842 changes the shape of every future income statement",
+        "Whether the roughly USD 11.4bn of contracted revenue is ever restated or re-cut. It is base-term revenue across fifteen years for three leases, not an annual figure and not an enterprise value, and trade press has repeatedly summed it with peers' equivalent figures",
+        "The Google position. Cipher gave warrants amounting to about 5.4% of itself for the Barber Lake backstop, where Hut 8 gave nothing for the same service at River Bend. Watch whether any further lease carries a warrant strip and on what terms",
+        "New site or capacity announcements against the Amazon relationship in particular, which now accounts for two of the three leases and the bulk of the contracted book — concentration that no single-tenant disclosure currently quantifies",
+        "Chesterton check, do not re-import: Black Pearl is in WINKLER County, Texas (near Wink), not Culberson — SEC full-text search returns 20 hits for 'Black Pearl' with Winkler and zero with Culberson. The registrant is CIPHER DIGITAL INC. since February 2026; the slug and most trade press still say Cipher Mining. The widely repeated 'more than USD 19bn of leases combined' covers Hut 8 and Cipher only, excludes Galaxy Digital entirely, and its own components sum to about USD 26.1bn. Cipher is SEC-classified SIC 6199, a finance company, not a miner"
+      ]
+    },
+    {
       "slug": "clearway-energy",
       "nextReport": "2026-11-03",
       "confirmed": false,
@@ -568,6 +583,20 @@
       ]
     },
     {
+      "slug": "galaxy-digital",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "source": "Cadence inference, not a company announcement. As of 2026-09-06 the EDGAR submissions feed for CIK 0001859392 carries no Q3 2026 earnings-scheduling 8-K — only Forms 4 and 144, a 13F-HR and an N-PX since 2026-08-10. The row uses Tuesday 2026-10-27 on the company's own cadence, which runs late October / early February / late April / early August (Q3 2025 on 2025-10-21, FY2025 on 2026-02-03, Q1 2026 on 2026-04-28, Q2 2026 on 2026-08-05). Galaxy reports earlier in the quarter-end month than either miner-converted peer, so do not infer this date from Cipher's or Hut 8's. Confirm from the company's investor-relations events page or the 8-K feed (CIK 0001859392).",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "Helios Phase I leasing revenue — 133 MW of critical IT fully delivered by 2026-06-30 and expected to run at about USD 80m a quarter from Q3 2026. This is the first quarter in which that should appear as an actual rather than a guide; watch whether it lands and how it is segmented against the trading business",
+        "Phases II and III (2027 and 2028) and, more importantly, whether ANYTHING beyond CoreWeave is ever leased. Of 1.63 GW of ERCOT-approved capacity at Dickens County, 800 MW gross / 526 MW of critical IT is leased to CoreWeave and nothing else is leased to anyone",
+        "The financing stack — the USD 1.4bn Phase I senior secured term loan at Galaxy Helios I LLC with Deutsche Bank AG New York Branch as initial lender — and whether Phase II is financed the same way. Watch the non-recourse ring-fencing specifically: it is what keeps the data-centre leverage off the trading balance sheet",
+        "The revenue presentation. FY2025 revenue of USD 60.41bn is gross principal trading turnover against total equity of USD 3.03bn and a net loss of USD 241.3m. Any change to gross-versus-net presentation, or any move toward agency treatment, would restate the top line by orders of magnitude without the business changing",
+        "Chesterton check, do not re-import: GALAXY DIGITAL IS NOT A BITCOIN MINER. The SEC classifies it SIC 6211, Security Brokers and Dealers; it is filed here under `developer` for Helios, and the category mismatch is a finding rather than an error to smooth over. The 'Galaxy' named in the Texas Governor's release IS this company — TDLR TABS records name Galaxy Helios II LLC of 300 Vesey Street, Galaxy's own head office, as owner of Helios 2/3 at Afton, Dickens County. But the `Galaxy` hits in envision-energy and piller are Envision's Galaxy Campus, and the four in schneider-electric are its own Galaxy VXL UPS product family — three distinct false-positive classes for one word"
+      ]
+    },
+    {
       "slug": "google",
       "nextReport": "2026-10-27",
       "confirmed": true,
@@ -672,6 +701,21 @@
         "Any lender, tax-equity or credit-transfer announcement; none has ever been published for a 420 MW fleet",
         "The next fleet count (33 facilities in February 2026 vs '31 batteries' in May 2026) and whether the web project list is updated to include Fort Duncan",
         "Chesterton check: HEN is ERCOT-only, fully merchant, and a sub-10 MW distributed owner (plus one 100 MW battery); Manulife is a JV equity partner, not an owner; the Caterpillar agreement is the parent's. Do not re-import the 2026-09-03 premise"
+      ]
+    },
+    {
+      "slug": "hut-8",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "source": "Cadence inference with a live tracker conflict, not a company announcement. As of 2026-09-06 the EDGAR submissions feed for CIK 0001964789 carries no Q3 2026 earnings-scheduling 8-K — only Forms 4 and 144 since 2026-08-10. The row uses Wednesday 2026-11-04 on the company's own cadence (Q3 2025 on 2025-11-04, FY2025 on 2026-02-25, Q1 2026 on 2026-05-06, Q2 2026 on 2026-08-04). TipRanks instead shows an estimated 2026-11-18, two weeks later, with no basis stated; both are recorded here because neither is confirmed and the gap is material to a refresh window. Confirm from the company's investor-relations events page or the 8-K feed (CIK 0001964789).",
+      "lastRefreshed": "2026-09-06",
+      "watch": [
+        "River Bend delivery — 245 MW of critical IT on 330 MW of Entergy capacity in West Feliciana Parish, Louisiana, leased fifteen years to a Fluidstack subsidiary at USD 7.0bn with Google backstopping the rent and Anthropic as end user. Watch energization milestones and any movement in Entergy's capacity commitment or the Louisiana regulatory record",
+        "Beacon Point — 704 MW of critical IT on 1,000 MW of AEP Texas capacity in Nueces County, let under TWO IDENTICAL 352 MW leases of USD 9.8bn each. Watch whether the counterparty is ever named, whether the two leases stay identical, and whether AEP Texas's Senate Bill 6 financial-security posture touches the site",
+        "Whether Google's terms hold on any expansion. Google took NO WARRANTS AND NO EQUITY in Hut 8 for the River Bend backstop, where Cipher gave about 5.4% and TeraWulf about 14% for the same service. That difference is the most load-bearing single fact in this dossier and the first thing an expansion could quietly reverse",
+        "Energy capacity under management, 710 MW at 30 June 2026 against 1,020 MW a year earlier, and the disposal programme behind the decline — the 310 MW Ontario gas fleet sold to TransAlta on 2026-02-02 for a USD 34.7m gain, with behind-the-meter wind at Vega and the 50%-owned King Mountain joint venture remaining",
+        "American Bitcoin Corp. (Nasdaq: ABTC), which holds the contributed mining fleet and in which Hut 8 has 80.0% of the voting power but only about 54% of the economics. Watch the consolidation treatment, the economics/voting spread, and whether ABTC's own capital raises dilute it further",
+        "Chesterton check, do not re-import: Hut 8 is NOT a bitcoin miner on its own account — the fleet belongs to American Bitcoin, which is ranked separately at 25.00 EH/s, so any 2026 ranking of Hut 8 by hashrate is a stale frame, not an omission. Google took no warrants and no equity here. The 'more than USD 19bn combined' press figure understates the Hut 8 book alone, which is USD 26.6bn of base-term lease value across 949 MW of contracted critical IT. Hut 8 is SEC-classified SIC 6199, a finance company"
       ]
     },
     {

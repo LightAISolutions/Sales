@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.01g] — 2026-09-06 07:53:35 AM EST — v04.83r
+
+### Added
+- One more named-project topic is available to switch on, covering a large Louisiana AI data-centre campus and the companies building and leasing it
+
+### Changed
+- Its search terms are deliberately narrow, because a nuclear power station in the same parish shares the project's name — the topic scores articles about the campus rather than everything nearby
 
 ## [v02.00g] — 2026-09-04 04:01:12 PM EST — v04.55r
 

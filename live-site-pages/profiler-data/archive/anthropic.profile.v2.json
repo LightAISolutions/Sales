@@ -700,17 +700,6 @@
       "note": "Abu Dhabi's MGX co-led the USD 30 billion Series G (February 2026) and is listed as a significant investor in the USD 65 billion Series H (May 2026); MGX's board calls the Series G a follow-on, so an earlier position existed.",
       "context": "Anthropic's Series G release: 'The round was co-led by D. E. Shaw Ventures, Dragoneer, Founders Fund, ICONIQ, and MGX'; the Series H release lists MGX under 'Significant investors'. Amounts undisclosed. The relationship carries a documented internal debate at Anthropic over Gulf capital (WIRED-reported Amodei memo: 'a real downside and I'm not thrilled about it'; deals to be 'narrowly scoped, purely financial'). MGX's dossier (this corpus) types the reverse link `other` because the schema's `type` enum has no 'portfolio' value.",
       "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
-    },
-    {
-      "slug": "hut-8",
-      "type": "supplier",
-      "status": "active",
-      "since": "2025-12",
-      "scale": "at least 245 MW and up to 2,295 MW",
-      "via": "River Bend, Louisiana and the wider Hut 8 pipeline",
-      "note": "Direct partnership counterparty for up to 2,295 MW of AI data-centre infrastructure, with River Bend as the launch site.",
-      "context": "Hut 8 and Anthropic announced an AI infrastructure partnership on 17 December 2025, structured across tranches that establish a path from at least 245 MW to up to 2,295 MW: the River Bend launch of 245 MW of critical IT on 330 MW of Entergy Louisiana capacity; a right of first offer for up to 1,000 MW of additional IT capacity at River Bend; and up to 1,050 MW of optional capacity the two may jointly diligence and develop elsewhere in Hut 8's pipeline.\n\nThe partnership and the lease are separate instruments announced the same day, and the distinction matters for credit: the River Bend lease is between Hut 8 and a Fluidstack subsidiary, backstopped by Google, and Anthropic is not a party to it. Anthropic's own quoted framing is that the arrangement 'is an expansion of our existing work with Fluidstack and marks a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'.",
-      "source": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack"
     }
   ],
   "policyExposure": [
@@ -1062,11 +1051,6 @@
     "INDICATORS TO WATCH — *Q4 2026 — the public S-1:* would replace every press-sourced revenue and commitment figure and name the lease credit support. *End-2026 — 'nearly 1GW' of Trainium and the Fluidstack sites 'online throughout 2026':* the first hard delivery tests of Judgment 4. *Late 2027 — Justified, Rockdale, Monarch and Google/Broadcom TPU first capacity:* the concentration of the book's start dates in one window is itself the risk. *Any ERock site disclosure:* would show where the 470 MW of generation goes and whether it is bridge or permanent power. *D.C. Circuit ruling on the supply-chain-risk designation:* decides whether the federal customer returns. *A confirmed Nscale or Lambda release:* would convert Judgment 7 from inference to record."
   ],
   "sources": [
-    {
-      "label": "Hut 8 Announces AI Infrastructure Partnership with Anthropic and Fluidstack",
-      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
-      "date": "2025-12-17"
-    },
     {
       "label": "TechXplore — Anthropic's $35B deal with NVIDIA-backed Lambda",
       "url": "https://techxplore.com/news/2026-09-anthropic-35b-startup-nvidia.html",
@@ -1804,6 +1788,6 @@
       "url": "https://www.hut8.com/data-centers/river-bend"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 3
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 2
 }

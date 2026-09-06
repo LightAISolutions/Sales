@@ -1,0 +1,1508 @@
+{
+ "schemaVersion": 7,
+ "slug": "galaxy-digital",
+ "name": "Galaxy Digital Inc.",
+ "shortName": "Galaxy Digital",
+ "categories": [
+  "developer"
+ ],
+ "website": "https://www.galaxy.com/",
+ "headquarters": "New York, NY, USA",
+ "founded": "2018 (Galaxy Digital Holdings Ltd., Cayman Islands); Galaxy Digital Inc. incorporated in Delaware 23 April 2021, successor public company from 13 May 2025",
+ "employees": "700+ worldwide, ~530 in the United States (31 December 2025)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: GLXY"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Galaxy Digital is a digital-asset financial-services firm that also owns one of the largest single-site data-centre campuses in ERCOT, and the two halves are not comparable businesses. The SEC classifies it under SIC 6211, Security Brokers, Dealers and Flotation Companies; it reports FY2025 revenue of **USD 60.41bn** on a gross principal basis — trading turnover, not rent — against total equity of USD 3.03bn and a net loss of USD 241.3m. Its Helios campus in Dickens County, Texas holds 1.63 GW of ERCOT-approved power, of which **800 MW gross / 526 MW of critical IT load is leased to CoreWeave and nothing else is leased to anyone**. Phase I's 133 MW of critical IT load was fully delivered by 30 June 2026 and is expected to run at about USD 80m of quarterly leasing revenue from Q3 2026; Phases II and III follow in 2027 and 2028. Filed under `developer` for what Helios is, the company's balance sheet, revenue model and risk register are a financial institution's.\n\n**BACKGROUND.** Delaware-incorporated, New York-headquartered, listed on Nasdaq as GLXY and, since 19 March 2026, on no other exchange — the company voluntarily delisted from the Toronto Stock Exchange, though it remains a reporting issuer in Canada filing on SEDAR. The structure is an Up-C: Galaxy Digital Inc. is the general partner of Galaxy Digital Holdings LP, which conducts the business; Class B common stock carries votes but no economic interest, and **both classes carry one vote per share** — there is no super-voting class. Founder and chief executive Michael Novogratz held about **49.25% of total voting power** at 2 April 2026. Three reportable segments since Q1 2025: Digital Assets, Data Centers, and Treasury and Corporate. FY2025 adjusted EBITDA was USD 33.7m against USD 715.4m in FY2024; the swing is a USD 753.7m digital-asset impairment charge and about USD 160m of one-time costs. Equity capital at 30 June 2026 was allocated roughly 36% Digital Assets, 36% Data Centers and 28% Treasury and Corporate — the data centre now consumes as much of the firm's capital as its original business.",
+ "ecosystemRole": "The corpus's first data-centre owner that is not, in any other respect, a data-centre company. Galaxy sits in the `developer` category beside Digital Realty, CyrusOne, Compass, EdgeCore, Prime and the converted miners, and it competes with them for ERCOT interconnection capacity and for the same neocloud and hyperscaler demand. But its revenue is principally trading turnover, its largest counterparty exposures are lending and trading counterparties rather than tenants, and its regulator treats it as a securities broker-dealer. For the ecosystem it is therefore two things at once: a landlord whose single tenant is CoreWeave — the same counterparty that anchors Core Scientific and Applied Digital — and a capital-markets participant that finances, advises and takes positions in the digital-asset businesses several other dossiers in this corpus describe. Its power counterparties are AEP Texas and Wind Energy Transmission Texas; its exposure to Governor Abbott's August 2026 data-centre audit is disclosed in its own 10-Q as a risk to power approval timelines.",
+ "productsAndServices": [
+  {
+   "name": "Global Markets — trading, lending, derivatives and investment banking",
+   "category": "Digital-asset financial services",
+   "description": "Galaxy's original and still largest earning business, and the source of the USD 60.41bn revenue line that dominates its accounts. Galaxy trades digital assets **as principal**, so the gross proceeds of every sale are recognised as revenue with an almost exactly offsetting cost in Transaction expenses — FY2025 revenue of USD 60,406.7m against transaction expenses of USD 60,175.8m. Digital-asset sales alone were USD 59,850.9m of that, and a single Q3 2025 trade of **80,000 BTC** is named by the company as the principal driver of the year-on-year increase. Bitcoin, ether and tether were 85% of digital-asset sales in FY2025. Alongside the trading desk sit a collateralised lending book (average USD 1,794.8m in FY2025, USD 1,438m in Q2 2026, typically 110-140% collateralised), an OTC derivatives business with a registered swap dealer, and an investment bank whose largest FY2025 fee came from acting as placement agent on the Forward Industries Solana-treasury PIPE.",
+   "highlights": [
+    "1,741 trading counterparties at Q2 2026, from 1,381 at Q1 2025",
+    "Revenue is recognised gross because Galaxy acts as principal — the company itself warns that 'the magnitude of changes in Revenue on the Company's statement of operations overshadow other parts of the business, but are predominantly offset by Transaction expenses in Net income'",
+    "Global Markets adjusted gross profit: USD 294.5m in Q3 2025 (a record, including a USD 9bn notional bitcoin sale), then USD 30m, USD 31m and USD 49m in the three quarters to Q2 2026",
+    "Three FINRA broker-dealers (Galaxy Digital Partners, Galaxy Securities, FIN2), an SEC-registered adviser, a CFTC CTA/CPO, a registered swap dealer and an FCA-licensed UK entity; Galaxy claims more than 50 global licences",
+    "NYDFS granted GalaxyOne Prime NY a BitLicense and Money Transmission License on 18 May 2026 — Galaxy held no BitLicense at the date of the FY2025 10-K",
+    "Concentration disclosed in the 10-K: two digital-asset trading platforms accounted for 38% of FY2025 revenue, and three counterparties for 45% of the combined loans receivable balance"
+   ],
+   "positioning": "Against Coinbase, Cumberland/DRW, FalconX and B2C2, Galaxy is a full-service merchant bank rather than a pure exchange or market maker. No independent league table of digital-asset OTC desks with market shares could be located, so its rank in trading is unmeasured. In lending it is roughly the size of Coinbase — about USD 1bn to USD 1.4bn of book against a CeFi market of about USD 23.3bn in Q1 2026 in which Tether alone holds about 68% — so mid-single-digit share, not leadership.",
+   "soldThrough": "Direct institutional relationships; principal trading, bilateral lending and advisory mandates. GalaxyOne, launched October 2025, adds a retail channel with an FDIC-insured deposit account through Cross River Bank, equities through DriveWealth and crypto through Paxos.",
+   "targetSegments": [
+    "Institutional trading counterparties",
+    "Digital-asset treasury companies",
+    "Crypto-native funds and protocols",
+    "Retail (via GalaxyOne, from October 2025)"
+   ],
+   "roadmap": "Galaxy Onchain Financing Rate (GOFR) launched 14 July 2026; institutional OTC prediction markets from 2 June 2026; an Institutional Vault Curator from 16 July 2026; a Crypto Portfolio Line of Credit from 25 August 2026."
+  },
+  {
+   "name": "Data Centers — the Helios campus and the CoreWeave leases",
+   "category": "AI/HPC data-centre leasing",
+   "description": "A 2,200-plus-acre campus in Dickens County, Texas, bought from Argo Blockchain in December 2022 as a bitcoin mining facility and converted after mining ceased at the end of Q1 2025. Galaxy publishes three power numbers that must not be conflated: **1.63 GW is ERCOT-approved and utility-contracted**, **800 MW gross / 526 MW critical IT is leased to CoreWeave**, and **133 MW of critical IT was delivered and in service at 30 June 2026**. The CoreWeave capacity comes in three phases on identical terms — 15-year base leases with two five-year extension options, a 3.0-5.0% CPI-linked escalator, and a near-triple-net structure in which the tenant pays operating costs but Galaxy provides the personnel. Phase I (133 MW IT / ~200 MW gross) delivered its first data hall in April 2026 and was complete by quarter end; Phase II (260 MW IT / ~400 MW gross, lease dated 8 August 2025) begins delivering in Q2 2027 with HITT Contracting as general contractor; Phase III (133 MW IT / ~200 MW gross, lease entered January 2026) is due in 2028. The remaining 830 MW of approved capacity is unleased and Galaxy says discussions with prospective tenants continue.",
+   "highlights": [
+    "**One tenant, and the 10-K says so**: 'We expect that our AI/HPC data center business will initially be highly dependent on a single customer, CoreWeave' — 100% of contracted capacity, with the initial contract expiring in 2040",
+    "Galaxy publishes no all-phase base-term contract value. It publishes about USD 4.5bn of total lease payments for Phase I alone, USD 10.4bn of minimum contracted lease payments for Phase II alone, and 'more than USD 1.2bn' of anticipated **average annual** revenue across all three — raised from 'USD 1B+' in the Q1 2026 release",
+    "The audited figure is different again: ASC 842 total future minimum lease income of **USD 4,747.8m** at 30 June 2026",
+    "Phase II starting gross yield on cost 13.7%; Phase I capex about USD 13m per MW of critical IT load, about USD 1.75bn in total; lease-level adjusted EBITDA margins guided at about 90%+",
+    "Phase I is expected to run at about USD 80m of quarterly leasing revenue from Q3 2026",
+    "Design: 130-140 kW rack densities, closed-loop cooling requiring near-zero additional water after the initial fill, under 15 ms round trip to Dallas, Galaxy-owned private substation",
+    "Pipeline beyond Helios: Merlin at McGregor (500 acres, 74 MW initial phase, potential 500 MW), Caspian (~700 MW) and Selene (~900 MW), taking the stated company power pipeline above 5.7 GW"
+   ],
+   "positioning": "Helios competes with Cipher's Texas campuses, Hut 8's Beacon Point, TeraWulf, Core Scientific and Applied Digital for ERCOT interconnection and for neocloud demand. On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant. On measured scale it is mid-pack at 526 MW of critical IT.",
+   "soldThrough": "Direct long-term leases; DLA Piper acted for Galaxy on the Phase I lease and option agreement.",
+   "targetSegments": [
+    "AI neoclouds",
+    "Hyperscale cloud providers (for the unleased 830 MW)"
+   ],
+   "roadmap": "Phase II data-hall deliveries from Q2 2027; Phase III in 2028; Helios III and Helios IV load requests of 1 GW each in the ERCOT process, which Galaxy says would take the campus to a potential 3.6 GW; Merlin first power in 2028."
+  },
+  {
+   "name": "Asset Management and Infrastructure Solutions",
+   "category": "Digital-asset asset management and staking",
+   "description": "Galaxy manages funds and sub-advises exchange-traded products, and runs validator infrastructure for proof-of-stake networks. The platform is measured in two ways the company reports separately: assets under management across ETFs and Alternatives, and assets under stake. **The combined figure has more than halved in six months** — from about USD 12bn of total platform assets at the end of 2025 to USD 7.1bn at 30 June 2026, with ETFs at USD 1,805m, Alternatives at USD 2,553m and assets under stake at USD 2,790m. The FY2025 10-K describes validator services to eleven blockchain networks and smart-contract deployments across more than 20. Named ETF partners include State Street Global Advisors, Invesco, DWS, CI Global Asset Management and Itaú; BlackRock selected Galaxy as an approved validator for its first rewards-generating crypto ETP in April 2026, and Morgan Stanley Investment Management for new Ethereum and Solana ETPs in August 2026.",
+   "highlights": [
+    "AUM plus assets under stake fell from about USD 12bn (31 December 2025) to USD 7.1bn (30 June 2026)",
+    "Adjusted gross profit from this segment is small and stable: USD 21m, USD 18m and USD 17m in the three quarters to Q2 2026",
+    "Galaxy retains between 5% and 10% of the blockchain rewards earned on third-party assets bonded to its validator nodes",
+    "Alluvial Finance acquired 25 November 2025 for USD 7.1m cash, making Galaxy the development company for Liquid Collective",
+    "Initial USD 75m closing of a tokenized CLO in January 2026, which Galaxy calls the first of its kind",
+    "The fee split between Galaxy and its ETF issuer partners is **explicitly not disclosed**"
+   ],
+   "positioning": "The one ranked comparison located is an editorial list, not an industry league table, and it places Galaxy fifth of five at USD 12bn behind BlackRock (USD 51.9bn in IBIT alone), Grayscale, Bitwise and Fidelity — and that figure is now stale by roughly 40%. The Invesco Galaxy Bitcoin ETF holds about USD 516-526m against IBIT's USD 51.9bn, about 1% of the leader. No genuine digital-asset AUM league table including Galaxy could be found.",
+   "soldThrough": "Sub-advisory and partnership arrangements with established asset managers; direct fund management; validator services to custodians and institutions.",
+   "targetSegments": [
+    "ETF and ETP issuers",
+    "Institutional allocators",
+    "Custodians and banks",
+    "Digital-asset treasury companies"
+   ],
+   "roadmap": "State Street Galaxy Onchain Liquidity Sweep Fund; a USD 125m onchain yield fund with SharpLink announced 7 August 2026; a multi-year BNY collaboration announced 4 August 2026 with Galaxy as design partner for staking on BNY's digital-asset custody platform."
+  },
+  {
+   "name": "Treasury and Corporate",
+   "category": "Balance-sheet and principal investment",
+   "description": "The third reportable segment holds Galaxy's own digital assets, its venture and fund investments, and the legacy mining assets that were written down on the Helios conversion. It is where the losses sit: FY2025 segment net loss of USD 434.1m against Digital Assets' USD 193.9m profit. Net digital-asset and investment exposure was about USD 2.1bn at 30 September 2025 and USD 1,160m at Q2 2026. Largest disclosed investments at 31 December 2025 were bitcoin and ether spot ETFs (USD 535.8m), limited-partner interests in Galaxy-sponsored funds (USD 259.3m), Ripple Labs (USD 217.1m) and Forward Industries (USD 88.2m).",
+   "highlights": [
+    "FY2025 impairment of digital assets: USD 753.7m, against USD 331.9m in FY2024",
+    "Mining equipment and related infrastructure impaired by USD 87.3m in FY2025 on the Helios conversion, plus USD 12.3m of disposals",
+    "Proprietary mining revenue fell 77% to USD 14.5m in FY2025 and ceased at the end of Q1 2025",
+    "Cash and stablecoins of USD 2,459m at Q2 2026 (USD 896m cash plus USD 1,563m stablecoins)"
+   ],
+   "positioning": "This segment is what makes Galaxy's reported earnings swing with the crypto market irrespective of how the trading desk or the data centre performed, and it is the clearest reason a reader should not treat consolidated net income as a measure of either operating business.",
+   "soldThrough": "Own account.",
+   "targetSegments": [
+    "Own account"
+   ],
+   "roadmap": "Not disclosed as a growth business."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-27",
+   "category": "corporate",
+   "headline": "Ontario Superior Court of Justice grants leave under s.138.8 of the Ontario Securities Act and certifies Banach v. Galaxy Digital Holdings Ltd. as a class proceeding",
+   "read": "Material and very recent — it post-dates every Galaxy filing. The FY2025 10-K described the action as uncertified with a hearing scheduled for June 2026; it is now certified against the company, Michael Novogratz and former CFO Alex Ioffe, for secondary-market purchasers between 17 May 2021 and 6 May 2022.",
+   "source": "https://www.investmentexecutive.com/news/regulation/court-certifies-crypto-class-action/"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "policy",
+   "headline": "The Governor of Texas names Galaxy, Compass Datacenters and Montera Infrastructure as committing to comply with his data-centre standards",
+   "read": "The release names no legal entity beyond the bare word 'Galaxy'. The identification rests on corroboration — Texas construction records list Galaxy Helios II LLC at Galaxy Digital's own 300 Vesey Street address as the owner of the Helios 2 and Helios 3 projects in Dickens County.",
+   "source": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "policy",
+   "headline": "Galaxy issues a statement supporting Governor Abbott's data-centre grid directive, committing Helios to respond to declared emergency conditions as required by SB 6",
+   "read": "A voluntary alignment with the regulator at the moment ERCOT's audit could delay power approvals — a risk Galaxy discloses in its own Q2 2026 10-Q.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-statement-on-governor-abbotts-data-center-grid-directive"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "Q2 2026: revenue USD 8,557.3m, net loss USD 85.3m, adjusted EBITDA USD (77)m; first data-centre revenue recognised — leasing revenue USD 18.877m and operator revenue USD 5.816m",
+   "read": "The first quarter in which Helios earned anything. Note the scale mismatch it exposes: USD 18.9m of rent inside USD 8.6bn of reported revenue.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000084/glxy-20260630xpressrelease.htm"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "leadership",
+   "headline": "Chief Accounting Officer Robert Rico notifies the company of his resignation effective 30 September 2026",
+   "read": "The second senior legal or finance departure in twelve months, after General Counsel Andrew Siegel left in September 2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000086/glxy-20260805.htm"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "financial",
+   "headline": "Galaxy Helios Data Centers II LLC closes USD 3,507m of 9.875% senior secured notes due 2031 at 99.500%, funding Phase II's 400 MW of utility capacity and 260 MW of critical IT",
+   "read": "A 9.875% coupon is the price of a single unrated tenant. Compare Cipher's 6.125% on Amazon-guaranteed paper and 7.125% on Google-backstopped paper — 275 to 375 basis points of counterparty credit, priced.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000079/glxy-20260728.htm"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "capacity",
+   "headline": "Acquires a 500-acre campus at McGregor, McLennan County, Texas — the Merlin site — with a 74 MW initial phase and potential to grow to 500 MW",
+   "read": "The first campus outside Dickens County, and the first with a co-operative rather than an investor-owned utility: Heart of Texas Electric Cooperative. Galaxy funds and builds its own substation.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-expands-data-center-footprint-with-acquisition-of-500-acre-campus-in-mcgregor-texas"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "financial",
+   "headline": "Prices the USD 3.507bn Helios Phase II notes; Morgan Stanley acts as representative of the initial purchasers",
+   "read": "GDH LP provided an uncapped completion guarantee — the parent stands behind delivery even though the notes are otherwise ring-fenced.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000074/glxy-20260723.htm"
+  },
+  {
+   "date": "2026-07-13",
+   "category": "leadership",
+   "headline": "Steven Bandrowczak, chief executive of Xerox Holdings from August 2022 to March 2026, appointed to the board and to the audit committee",
+   "read": "The first director with large-scale operating and technology-infrastructure experience rather than a finance or crypto background — a board response to the data-centre business.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000063/glxy-20260710.htm"
+  },
+  {
+   "date": "2026-07-06",
+   "category": "capacity",
+   "headline": "Completes Phase I of Helios, delivering approximately 200 MW of gross power and 133 MW of critical IT load to CoreWeave",
+   "read": "The 1.52:1 gross-to-critical-IT ratio published here is the number that makes every '800 MW' headline about this campus readable.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-completes-phase-i-of-its-helios-data-center-campus"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "corporate",
+   "headline": "2026 annual meeting: all six nominees elected on a combined Class A and Class B vote; KPMG ratified; Richard Tavoso not renominated and ceases to be a director",
+   "read": "Both share classes voted as a single class on every matter, which is what a one-vote-per-share dual-class structure produces.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000060/glxy-20260528.htm"
+  },
+  {
+   "date": "2026-05-18",
+   "category": "regulatory",
+   "headline": "NYDFS grants GalaxyOne Prime NY a BitLicense and a Money Transmission License",
+   "read": "Galaxy held no BitLicense at the date of its FY2025 10-K. The grant closes the most conspicuous gap in a licence estate the company now describes as more than 50 global licences.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-receives-bitlicense"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "corporate",
+   "headline": "Voluntarily delists from the Toronto Stock Exchange, leaving Nasdaq as the sole listing",
+   "read": "Galaxy nevertheless remains a reporting issuer in Canada and continues to file on SEDAR, so the disclosure obligation did not end with the listing.",
+   "source": "https://www.prnewswire.com/news-releases/galaxy-to-voluntarily-delist-from-the-tsx-in-favor-of-its-current-nasdaq-listing-302701877.html"
+  },
+  {
+   "date": "2026-02-26",
+   "category": "financial",
+   "headline": "FY2025 Form 10-K: revenue USD 60,406.7m, net loss USD 241.3m, diluted EPS USD (0.61), adjusted EBITDA USD 33.7m against USD 715.4m in FY2024",
+   "read": "The revenue line is gross principal trading turnover. The collapse in adjusted EBITDA is a USD 753.7m digital-asset impairment plus about USD 160m of one-time costs, not a collapse in the businesses.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  },
+  {
+   "date": "2026-02-06",
+   "category": "financial",
+   "headline": "Board authorises a share repurchase programme of up to USD 200m over twelve months",
+   "read": "About USD 65m was used in Q1 2026 and USD 4.3m in Q2, leaving USD 134.9m — a modest buyback beside a USD 3.5bn note issue in the same year.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000091/glxy-20260630.htm"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "capacity",
+   "headline": "Completes ERCOT large-load interconnection studies and secures approval for an additional 830 MW at Helios, doubling total approved capacity to over 1.6 GW",
+   "read": "The 830 MW is approved and utility-contracted but **not leased**, and the 10-K says so explicitly. Reporting that treats 1.63 GW as contracted capacity is wrong by a factor of two.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000005/heliosercotapproval_1x15.htm"
+  },
+  {
+   "date": "2025-12-11",
+   "category": "corporate",
+   "headline": "Analyst Day discloses Phase I economics: about USD 4.5bn of total lease payments over the 15-year initial term, about USD 300m average annual, about USD 240m in the first twelve months at full energisation",
+   "read": "Galaxy's clearest statement of the figure taxonomy. It also sets out the refinancing intent — replace the construction loan with a long-term loan sized on stabilised value rather than build cost, illustrated as a roughly USD 500m equity takeout.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000088/exhibit991-glxy2025analy.htm"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "ma",
+   "headline": "Acquires Alluvial Finance for USD 7.1m cash, becoming the development company for Liquid Collective",
+   "read": "A small deal that buys a position in liquid staking infrastructure rather than assets under management.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "financial",
+   "headline": "Issues USD 1,300m of 0.50% exchangeable senior notes due 2031 at an initial exchange price of USD 55.76",
+   "read": "Cheap coupon, high strike. Total exchangeable notes outstanding reach about USD 2,147.5m, exchangeable into a maximum of about 74.2 million Class A shares.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "financial",
+   "headline": "Closes a USD 460m private placement at USD 36.00 a share — 9,027,778 new shares from the company and 3,750,000 from executive officers",
+   "read": "Executives sold USD 135m of stock alongside the company's raise, at a price the shares have not seen since.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000061/glxy-20251010.htm"
+  },
+  {
+   "date": "2025-10",
+   "category": "product",
+   "headline": "Launches GalaxyOne, a retail platform with an FDIC-insured deposit account through Cross River Bank, equities through DriveWealth and crypto through Paxos",
+   "read": "A move down-market from a wholly institutional franchise, and the reason the NYDFS licences mattered.",
+   "source": "https://www.galaxy.com/all-news"
+  },
+  {
+   "date": "2025-08-15",
+   "category": "financial",
+   "headline": "Closes a USD 1.4bn senior secured term loan for Helios Phase I with Deutsche Bank as initial lender, at one-month Term SOFR plus 4.75% with a 2.50% floor, maturing 15 August 2028",
+   "read": "Eighty per cent loan-to-cost against USD 350m of Galaxy equity, with a covenant package requiring a 1.40 minimum debt service coverage ratio after stabilisation. Proceeds included a one-time dividend to Galaxy repaying part of its prior equity funding.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000039/glxy-20250815.htm"
+  },
+  {
+   "date": "2025-08",
+   "category": "customer",
+   "headline": "CoreWeave exercises its option for Phase II (260 MW critical IT), with the Phase II lease dated 8 August 2025, and its final option for Phase III (133 MW)",
+   "read": "With Phase III's lease entered in January 2026, the whole of the currently approved 800 MW of gross power is let to one tenant.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  },
+  {
+   "date": "2025-06-12",
+   "category": "corporate",
+   "headline": "Resegments into three reportable segments — Digital Assets, Data Centers, and Treasury and Corporate — and recasts historical quarterly financials",
+   "read": "The first time the data centre was visible as its own P&L. Without this, the segment economics discussed throughout this dossier would not exist.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000015/glxy-20250612.htm"
+  },
+  {
+   "date": "2025-05-16",
+   "category": "corporate",
+   "headline": "Class A common stock begins trading on Nasdaq under GLXY at an opening reference price of USD 22.80, with Galaxy Digital Inc. succeeding Galaxy Digital Holdings Ltd.",
+   "read": "The end of a four-year effort to list in the United States. Galaxy was dual-listed on Nasdaq and the TSX until March 2026.",
+   "source": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2025-246"
+  },
+  {
+   "date": "2025-05-13",
+   "category": "corporate",
+   "headline": "Completes the Reorganization Transactions: Galaxy Digital Holdings Ltd. and Galaxy Digital Holdings LP redomicile from the Cayman Islands to Delaware by continuation, and the holding company merges into Galaxy Digital Inc.",
+   "read": "Accounted for as a reverse recapitalisation, with GDH LP the accounting acquirer and predecessor — so comparative periods before this date are the partnership's, not the listed company's.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000010/glxy-20250507.htm"
+  },
+  {
+   "date": "2025-04-23",
+   "category": "customer",
+   "headline": "CoreWeave commits to Phase II, taking Helios from 133 MW to a contemplated 393 MW of critical IT load",
+   "read": "Structure Research's contemporaneous description — '133MW of critical IT load (supported by a 200MW private substation)' — is the cleanest external formulation of the gross-versus-IT distinction on this campus.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-announces-commitment-with-coreweave"
+  },
+  {
+   "date": "2025-03-27",
+   "category": "legal",
+   "headline": "Settles with the New York Attorney General over the promotion and sale of LUNA for USD 200m undiscounted, payable USD 40m in each of 2025 and 2026 and USD 60m in each of 2027 and 2028, without admitting or denying",
+   "read": "A USD 166m charge in FY2024 and a USD 151m accrued provision still on the balance sheet at 31 December 2025. The settlement also imposed compliance enhancements on the company's public statements about cryptocurrency.",
+   "source": "https://www.theblock.co/post/348602/nyag-galaxy-digital-settlement-luna"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess that Galaxy is a financial institution that owns a data centre, not a data-centre company with a trading desk, and that the mismatch with its `developer` classification is real rather than cosmetic. Basis: the SEC classifies the registrant under SIC 6211, Security Brokers, Dealers and Flotation Companies. FY2025 revenue of USD 60,406.7m is recognised gross on a principal basis with USD 60,175.8m of offsetting transaction expense — the company's own 10-K warns that this 'overshadow[s] other parts of the business'. Its disclosed concentrations are trading-platform and lending-counterparty concentrations, not tenant concentrations. Its regulated subsidiaries are three broker-dealers, an investment adviser, a swap dealer and money-services businesses. The data-centre segment produced USD 20m of adjusted gross profit in Q2 2026 against USD 49m from Global Markets.",
+  "2. **(High confidence)** We assess that the three power numbers published for Helios are routinely conflated in outside reporting and that only one of them is contracted. Basis: 1.63 GW is ERCOT-approved, LLIS-complete and utility-contracted; **800 MW gross / 526 MW of critical IT load is leased to CoreWeave**; and 133 MW of critical IT was delivered at 30 June 2026. The FY2025 10-K states plainly that 'the remaining 830 MW of approved power capacity remains available to be contracted'. The gross-to-critical-IT ratio on this campus is about 1.52:1, so a headline of '800 MW' overstates sellable IT load by roughly half.",
+  "3. **(High confidence)** We assess that Galaxy publishes no all-phase base-term contract value, and that the absence is what makes cross-company lease comparisons in this cohort unsound. Basis: the only aggregates Galaxy publishes across all three phases are **average annual** figures — 'over USD 1bn' from August 2025, raised to 'USD 1.2bn+' in the Q2 2026 release. Base-term totals exist only per phase: about USD 4.5bn of total lease payments for Phase I and USD 10.4bn of minimum contracted lease payments for Phase II, with no Phase III equivalent published. The audited ASC 842 figure is different again at USD 4,747.8m of total future minimum lease income at 30 June 2026. Peers publish 15-year base-term aggregates (Hut 8 USD 26.6bn, Applied Digital about USD 36bn); Galaxy publishes an annual rate. The two are not the same measure and cannot be ranked against each other.",
+  "4. **(High confidence)** We assess that the lessor accounting is the single most consequential technical fact about this business and that it is new. Basis: the Q2 2026 10-Q added an accounting policy that did not exist in the FY2025 10-K, classifying the CoreWeave arrangements as **operating leases under ASC 842**, with lease income recognised straight-line and consideration allocated between lease and non-lease components. The consequences are visible: the campus stays in Property and equipment (USD 2,218.2m at 30 June 2026) rather than becoming a lease receivable; there is no day-one gain; and a USD 150.0m prepayment received in FY2025 was **still sitting in deferred revenue at 30 June 2026**, unrecognised, even though rent had commenced. A sales-type classification would have produced a materially different earnings profile from identical cash flows.",
+  "5. **(Moderate confidence)** We assess that Galaxy's cost of data-centre capital is materially higher than its peers' and that single-tenant credit is the reason. Basis: the Phase II notes priced at **9.875%** in July 2026. In the same market Cipher issued Amazon-guaranteed paper at 6.125% in February 2026 and Google-backstopped paper at 7.125% in November 2025, and Hut 8's River Bend bond priced at 6.192% with BBB- ratings. Galaxy's tenant is CoreWeave, unrated and levered, and no credit enhancement behind the lease is disclosed. The 10-K's own risk factor concedes the dependence on 'a single customer' whose contract expires in 2040 and which 'may terminate its agreement with us in certain circumstances, including if we fail to achieve certain milestones'.",
+  "6. **(Moderate confidence)** We assess that the asset-management franchise is contracting rather than growing, and that outside rankings of it are stale. Basis: combined assets under management and assets under stake fell from about USD 12bn at 31 December 2025 to **USD 7.1bn at 30 June 2026**, a fall of roughly 40% in six months. The most-cited external ranking places Galaxy fifth of five US crypto asset managers at the USD 12bn figure, which is now wrong. The Invesco Galaxy Bitcoin ETF holds about USD 516-526m against BlackRock's IBIT at about USD 51.9bn. No genuine industry league table of digital-asset managers that includes Galaxy could be located.",
+  "7. **(Moderate confidence)** We assess that key-person exposure here is legal as much as operational, and that the company says so itself. Basis: the 10-K names Michael Novogratz in its key-person risk factor and adds a second, unusual one — that 'our Founder has been a vocal and visible proponent of digital assets, in some cases attracting controversy' and that this makes material regulatory scrutiny foreseeable 'irrespective of whether we have engaged in any unlawful conduct'. The New York Attorney General's LUNA case turned on his personal promotion of the token, and he is a named individual defendant in the Ontario class action certified on 27 August 2026. He held about 49.25% of total voting power at 2 April 2026 and his board seat derives from a nomination agreement with an entity he controls.",
+  "8. **(Low confidence)** We assess that the market has not settled on how to value the company and that the disagreement is about which business it is. Basis: Citizens split its target roughly USD 25 a share for Digital Assets against more than USD 35 for Data Centers — i.e. the data centre is worth more than the original firm — while Piper Sandler attributed about USD 28 of a USD 42 target to Helios and simultaneously valued the whole on about 15 times 2027 estimated adjusted gross profit, a financials methodology. Maxim's thesis rests on the digital-asset business instead. Zacks classifies it under Financial - Miscellaneous Services and downgraded it to Strong Sell in July 2026 while Morgan Stanley raised its target to USD 48 in September 2026. Sixteen analysts average about USD 40 with a range of USD 25 to USD 57.",
+  "**Collection gap:** Galaxy publishes no Phase III base-term dollar figure, no Phase III capex, and no yield on cost other than Phase II's 13.7%. The ETF fee split with issuer partners is explicitly not disclosed. AUM is not broken out below the ETFs / Alternatives / assets-under-stake split. The company publishes no photographs of any executive or director. investor.galaxy.com and SEDAR+ were both unreachable during this research, so anything Galaxy has filed only in Canada — including the original 28 March 2025 Phase I lease announcement, which is absent from the company's own newsroom archive — is outside this dossier. Finally, the FY2025 10-K's account of the Ontario class action is superseded: it describes the matter as uncertified with a hearing scheduled for June 2026, and certification was granted on 27 August 2026."
+ ],
+ "relationships": [
+  {
+   "slug": "coreweave",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-04",
+   "scale": "800 MW gross / 526 MW critical IT across three phases; >USD 1.2bn anticipated average annual revenue",
+   "via": "Helios data-centre campus, Dickens County, Texas",
+   "note": "The sole tenant of the entire contracted capacity at Helios, across three 15-year leases.",
+   "context": "CoreWeave leases all 800 MW of gross power and 526 MW of critical IT load currently contracted at Helios, in three phases on identical terms: 15-year base leases with two five-year extension options, a 3.0-5.0% CPI-linked escalator and a near-triple-net structure. Phase I (133 MW critical IT) was fully delivered by 30 June 2026 and is expected to run at about USD 80m of quarterly leasing revenue from Q3 2026; Phase II (260 MW, lease dated 8 August 2025) delivers from Q2 2027; Phase III (133 MW, lease entered January 2026) in 2028.\n\nThe exposure is total and Galaxy discloses it as such: 'We expect that our AI/HPC data center business will initially be highly dependent on a single customer, CoreWeave, and may continue to derive a significant portion of the revenue of our Data Centers operating business segment from such single customer for the foreseeable future.' The initial contract expires in 2040, and the tenant may terminate in defined circumstances including a failure to hit construction milestones.\n\nNo credit enhancement behind the tenant is disclosed — no parent guarantee, no third-party backstop. That is the material difference from Cipher (Amazon.com, Inc. guaranty) and Hut 8 (a Google backstop at River Bend), and it is visible in the pricing: Galaxy's Phase II notes carry a 9.875% coupon against Cipher's 6.125% on Amazon paper.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  },
+  {
+   "slug": "aep",
+   "type": "supplier",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "service agreement for the incremental 830 MW; campus total 1.63 GW approved",
+   "note": "Utility counterparty for Helios's incremental approved capacity, alongside Wind Energy Transmission Texas as transmission interconnection provider.",
+   "context": "Galaxy executed a service agreement with AEP Texas Inc. for the additional 830 MW approved by ERCOT on 15 January 2026, which doubled total approved capacity at Helios to over 1.6 GW. Wind Energy Transmission Texas, LLC is the transmission interconnection provider and facilitated the large-load interconnection studies — a steady-state study and a stability study. Galaxy funds and owns its own private substation and connects front-of-the-meter to the ERCOT grid.\n\nThe relationship now runs through a regulatory bottleneck: Galaxy's Q2 2026 10-Q discloses that the Texas Governor's August 2026 directive requires the PUCT and ERCOT to complete a verification and audit of every data centre in the interconnection process before any project moves forward, and that this 'may impact the power approval timelines for certain of our data center sites'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000005/heliosercotapproval_1x15.htm"
+  },
+  {
+   "slug": "hitt",
+   "type": "supplier",
+   "status": "active",
+   "since": "2026-04",
+   "via": "General contractor, Helios Phase II",
+   "note": "General contractor on Helios Phase II, mobilised on site since April 2026.",
+   "context": "HITT Contracting is the general contractor for Helios Phase II — the 400 MW gross / 260 MW critical IT project financed by the USD 3.507bn senior secured notes — and has been mobilised on site since April 2026, with earthwork complete and structural foundations under way as of the Q2 2026 report. Data-hall deliveries are expected to commence in Q2 2027. HITT's own dossier makes no claim about Galaxy, so this edge is recorded from Galaxy's side only.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000084/glxy-20260630xpressrelease.htm"
+  },
+  {
+   "slug": "cipher-mining",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both let large Texas campuses to single tenants; the counterparty credit is opposite.",
+   "context": "Cipher Digital and Galaxy compete for ERCOT interconnection capacity and for the same tenant demand, and both campuses began as bitcoin mining sites. The credit structures are opposites: roughly two-thirds of Cipher's contracted revenue carries an Amazon.com, Inc. guarantee, while 100% of Galaxy's contracted capacity sits with unrated CoreWeave and carries no disclosed enhancement. The bond market prices the difference at 375 basis points — Cipher's Black Pearl notes at 6.125% against Galaxy's Helios Phase II notes at 9.875%.\n\nThe deeper difference is that Cipher is a pure landlord in run-off from mining, while Galaxy is a securities firm for which the campus is one segment of three.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "hut-8",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
+   "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
+   "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html"
+  },
+  {
+   "slug": "terawulf",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer converted-miner landlord, with a 20-year lease term against Galaxy's 15.",
+   "context": "TeraWulf leases to Fluidstack with Google backstops and, separately, holds an Anthropic lease at Hawesville, Kentucky reported at about USD 19bn over a **20-year** initial term. That term difference alone makes a headline-value comparison with Galaxy's 15-year leases misleading, which is the general problem with ranking this cohort by contract value.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "core-scientific",
+   "type": "competitor",
+   "status": "active",
+   "note": "The other large landlord whose contracted capacity depends on CoreWeave.",
+   "context": "Core Scientific and Galaxy share the same principal tenant. Core Scientific's CoreWeave contract runs about USD 10.2bn over twelve years alongside an AMD arrangement above USD 14bn, giving it a second anchor Galaxy does not have. For the ecosystem the more important point is the shared exposure: a CoreWeave credit event would reach Core Scientific, Applied Digital and Galaxy at once.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "applied-digital",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer landlord, also anchored on CoreWeave, publishing a base-term aggregate where Galaxy publishes an annual rate.",
+   "context": "Applied Digital reports about USD 36bn of total contracted long-term lease value across roughly 1.4 GW of critical IT on a 15-year base-term basis, with about USD 86bn quoted including renewals. Galaxy's comparable disclosure does not exist: it publishes per-phase base-term figures and an all-phase average annual figure, so the two companies' headline numbers measure different things.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "iren",
+   "type": "competitor",
+   "status": "active",
+   "note": "The vertically integrated comparator — IREN operates compute rather than leasing space.",
+   "context": "IREN runs GPU clusters as a cloud business alongside its landlord role, anchored on Microsoft. The Futurum Group's contracted-revenue-per-megawatt measure — the one cross-operator ranking located for this cohort — puts IREN highest at about USD 40m per MW and Galaxy second at about USD 29m per MW, ahead of CoreWeave itself at about USD 28m. That measure is relayed second-hand and its term basis is not held constant across the companies compared.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "crusoe",
+   "type": "competitor",
+   "status": "active",
+   "note": "Private energy-first developer competing for the same Texas power positions.",
+   "context": "Crusoe builds and operates AI campuses on an energy-first thesis and discloses roughly 4.9 GW contracted across a much larger pipeline, but publishes no contract values. It competes with Galaxy for ERCOT capacity and for neocloud tenants without being comparable on any published financial measure.",
+   "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/"
+  },
+  {
+   "slug": "nebius",
+   "type": "competitor",
+   "status": "active",
+   "note": "Neocloud peer of Galaxy's tenant rather than of Galaxy itself — included because the tenant layer is where the credit risk sits.",
+   "context": "Nebius is one of the neoclouds competing with CoreWeave for the AI compute demand that ultimately pays Galaxy's rent. Galaxy has no relationship with Nebius; the edge records that Galaxy's single-tenant exposure is exposure to competition at a layer it does not control. Galaxy's own July 2026 investor presentation characterises CoreWeave's position using CoreWeave's public filings — a USD 99.4bn contracted revenue backlog at Q1 2026 and an NVIDIA equity stake of about 11.5% — which is the company underwriting its tenant's competitive position in public.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000068/launch8-kexhibit99172226.htm"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named together in the Texas Governor's data-centre standards release of 13 August 2026.",
+   "context": "Galaxy and Compass Datacenters were named together, with Montera Infrastructure, in the Texas Governor's release announcing commitments to comply with his data-centre standards. The release identifies Galaxy only by that single word; the identification as Galaxy Digital Inc. rests on Texas construction records naming Galaxy Helios II LLC of 300 Vesey Street, New York as owner of the Helios 2 and Helios 3 projects in Dickens County, and on the absence of any other Texas data-centre developer of that name.\n\nBoth compete for ERCOT interconnection capacity and hyperscale demand, from opposite kinds of business: Compass is a sponsor-owned build-to-suit landlord, Galaxy a securities broker-dealer for which the campus is one segment of three.",
+   "source": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "PUCT / ERCOT data-centre verification and audit (Abbott directive)",
+   "status": "in-effect",
+   "effectiveDate": "2026-08",
+   "exposure": "Galaxy's Q2 2026 10-Q states that 'in August 2026, the Governor of Texas directed the Public Utility Commission of Texas and ERCOT to conduct a comprehensive verification and audit of all data centers advancing through ERCOT's interconnection process, and PUCT and ERCOT must complete this audit before any data center project moves forward. This review may impact the power approval timelines for certain of our data center sites.' The exposure bears on the 830 MW of approved but unleased Helios capacity, on the Helios III and Helios IV load requests of 1 GW each, and on the Merlin, Caspian and Selene sites.",
+   "mitigation": "Galaxy issued a public statement on 7 August 2026 supporting the directive and committing that 'during declared emergency conditions, Helios will respond as required by SB-6'. It was named in the Governor's 13 August 2026 release as committing to comply with the state's data-centre standards.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-statement-on-governor-abbotts-data-center-grid-directive"
+  },
+  {
+   "regime": "Texas SB 6 large-load rules and the ERCOT 75 MW threshold",
+   "status": "in-effect",
+   "effectiveDate": "2025",
+   "exposure": "Helios operates entirely front-of-the-meter on the ERCOT grid through a Galaxy-owned private substation, with AEP Texas as the utility and Wind Energy Transmission Texas as the transmission interconnection provider. Galaxy's Q2 2026 release describes capacity in ERCOT's own terms — 'Batch Zero Base Load' (signed interconnection agreements plus posted financial security) and 'Batch Zero Studied Load'. The McGregor announcement references coordinating with the utility 'to support development above the 75 MW large load threshold in ERCOT'.",
+   "mitigation": "Galaxy funds and owns its own electrical infrastructure rather than relying on utility capital, and has committed Helios to emergency-condition response under SB 6.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000005/heliosercotapproval_1x15.htm"
+  },
+  {
+   "regime": "Digital-asset securities and commodities regulation (SEC, CFTC)",
+   "status": "in-effect",
+   "exposure": "Galaxy operates a Token Committee of senior executives that classifies digital assets as 'No Restrictions' (US-tradable) or 'Non-U.S.', requiring a third-party assessment of federal securities-law status and a New York state securities-law assessment before transacting; the approved token list was published as an appendix to its December 2025 prospectus. Galaxy Derivatives LLC is a registered swap dealer and the company states it 'experienced a significant increase in costs to appropriately comply with swap dealer requirements'. The 10-K concedes that 'legal and regulatory risk will be an inherent feature of our business model until greater legal and regulatory certainty becomes possible'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  },
+  {
+   "regime": "GENIUS Act (federal payment-stablecoin framework)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07",
+   "exposure": "Galaxy's FY2025 10-K describes the GENIUS Act, signed into law in July 2025, as establishing 'the first comprehensive regulatory scheme for payment stablecoins in the United States'. The Q2 2026 10-Q adds that implementing rules and supervisory expectations from the federal banking agencies are being applied, and pairs it with the EU Markets in Crypto-Assets Regulation. The exposure is direct: Galaxy held USD 1,563m of stablecoins at 30 June 2026, more than its USD 896m of cash.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000091/glxy-20260630.htm"
+  },
+  {
+   "regime": "NYDFS BitLicense and state money-transmission licensing",
+   "status": "in-effect",
+   "effectiveDate": "2026-05-18",
+   "exposure": "At the date of the FY2025 10-K, 'neither Galaxy nor any of its affiliates currently have a BitLicense'. On 18 May 2026 the New York State Department of Financial Services granted GalaxyOne Prime NY a BitLicense and a Money Transmission License. Galaxy now describes a footprint of more than 50 global licences across three continents, including an FCA-licensed UK entity, registration under the Bahamas DARE Act 2024, and an ADGM office opened in December 2025. California's Digital Financial Assets Law required licensing from 1 July 2026, and at the 10-K date Galaxy had not applied but expected to.",
+   "mitigation": "Galaxy secured the NYDFS licences before launching GalaxyOne's New York offering and holds an active lending licence in California.",
+   "source": "https://www.galaxy.com/newsroom/galaxy-receives-bitlicense"
+  },
+  {
+   "regime": "Dual US and Canadian reporting obligations",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-19",
+   "exposure": "Galaxy voluntarily delisted from the Toronto Stock Exchange on 19 March 2026 but remains a reporting issuer in Canada, supervised by the Canadian Securities Administrators including the Ontario Securities Commission and filing on SEDAR. The 10-K names the resulting dual compliance burden as a risk. The Ontario Superior Court of Justice is also the forum for the securities class action certified against the company on 27 August 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000091/glxy-20260630.htm"
+  },
+  {
+   "regime": "New York Attorney General settlement — compliance undertakings",
+   "status": "in-effect",
+   "effectiveDate": "2025-03-27",
+   "exposure": "Galaxy settled with the New York Attorney General on 27 March 2025 over its promotion and sale of LUNA, for USD 200m undiscounted payable across 2025 to 2028, neither admitting nor denying. Beyond the money the settlement imposed compliance enhancements covering the company's public statements about cryptocurrency and its own purchases and sales — an ongoing constraint on how a firm whose founder is its most visible marketing asset may speak. A legal provision of USD 151m remained on the balance sheet at 31 December 2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Helios campus — Dickens County, Texas",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Total approved gross capacity",
+     "value": "1.63 GW — LLIS-complete, ERCOT-approved and utility-contracted (from 800 MW before 15 January 2026)"
+    },
+    {
+     "band": "Power",
+     "label": "Contracted to CoreWeave",
+     "value": "800 MW gross / 526 MW critical IT"
+    },
+    {
+     "band": "Power",
+     "label": "Delivered and in service",
+     "value": "133 MW critical IT at 30 June 2026"
+    },
+    {
+     "band": "Power",
+     "label": "Approved but unleased",
+     "value": "830 MW — 'remains available to be contracted' per the FY2025 10-K"
+    },
+    {
+     "band": "Power",
+     "label": "Utility and transmission",
+     "value": "Service agreement with AEP Texas Inc.; Wind Energy Transmission Texas, LLC as transmission interconnection provider; Galaxy-owned private substation, front-of-the-meter"
+    },
+    {
+     "band": "Design",
+     "label": "Rack density",
+     "value": "130-140 kW per rack"
+    },
+    {
+     "band": "Design",
+     "label": "Redundancy",
+     "value": "100% uninterruptible power supply and battery backup; distributed-redundant and block-redundant electrical topologies"
+    },
+    {
+     "band": "Design",
+     "label": "Cooling",
+     "value": "Closed-loop, requiring near-zero additional water after the initial system fill"
+    },
+    {
+     "band": "Design",
+     "label": "Latency",
+     "value": "Round-trip time to Dallas under 15 milliseconds"
+    },
+    {
+     "band": "Site",
+     "label": "Campus size",
+     "value": "2,200+ acres under direct control (Q2 2026 release and galaxy.com); the Q1 2026 release stated 1,500+"
+    },
+    {
+     "band": "Site",
+     "label": "Origin",
+     "value": "Acquired from Argo Blockchain plc in December 2022 as a bitcoin mining facility; hosting ceased Q1 2025 and proprietary mining ceased end-Q1 2025"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Under study",
+     "value": "Helios III and Helios IV, 1 GW each, in the ERCOT process — Galaxy states these would represent potential total capacity of 3.6 GW"
+    }
+   ],
+   "notes": "Three power numbers are published for this campus and only one of them is leased. Approved (1.63 GW), contracted (800 MW gross / 526 MW critical IT) and delivered (133 MW critical IT) differ by more than an order of magnitude end to end."
+  },
+  {
+   "product": "CoreWeave leases — Phases I, II and III",
+   "specs": [
+    {
+     "band": "Phase I",
+     "label": "Capacity",
+     "value": "133 MW critical IT / ~200 MW gross"
+    },
+    {
+     "band": "Phase I",
+     "label": "Economics",
+     "value": "~$4.5Bn of total lease payments over the 15-year initial term; ~$300m average annual (raised to ~$315m); ~$240m in the first twelve months at full energisation"
+    },
+    {
+     "band": "Phase I",
+     "label": "Status",
+     "value": "First data hall delivered April 2026; all 133 MW in service by 30 June 2026; ~$80m of quarterly leasing revenue expected from Q3 2026"
+    },
+    {
+     "band": "Phase I",
+     "label": "Capex",
+     "value": "~$13m per MW of critical IT load; ~$1.75Bn total"
+    },
+    {
+     "band": "Phase II",
+     "label": "Capacity",
+     "value": "260 MW critical IT / ~400 MW gross"
+    },
+    {
+     "band": "Phase II",
+     "label": "Economics",
+     "value": "$10.4Bn 'Minimum Contracted Lease Payments' over the initial term, excluding a $100m option payment already received; 13.7% starting MRC gross yield on cost"
+    },
+    {
+     "band": "Phase II",
+     "label": "Status",
+     "value": "Lease dated 8 August 2025; HITT Contracting on site since April 2026; data-hall deliveries from Q2 2027"
+    },
+    {
+     "band": "Phase III",
+     "label": "Capacity",
+     "value": "133 MW critical IT / ~200 MW gross"
+    },
+    {
+     "band": "Phase III",
+     "label": "Economics",
+     "value": "Not published — no base-term figure, no capex, no yield on cost"
+    },
+    {
+     "band": "Phase III",
+     "label": "Status",
+     "value": "Option exercised August 2025; lease entered January 2026; delivery 2028"
+    },
+    {
+     "band": "All phases",
+     "label": "Term",
+     "value": "15-year base term plus two five-year extension options; initial contract expiry 2040"
+    },
+    {
+     "band": "All phases",
+     "label": "Escalator",
+     "value": "3.0% if CPI is below 3%, 5.0% if CPI exceeds 5%, CPI in between; begins one year after the first data hall becomes operational"
+    },
+    {
+     "band": "All phases",
+     "label": "Structure",
+     "value": "Near triple net — the tenant pays utilities, taxes, insurance, maintenance and ordinary repairs, but not the Galaxy personnel operating mechanical, cooling, electrical and administrative functions outside the white space"
+    },
+    {
+     "band": "All phases",
+     "label": "Aggregate revenue measure",
+     "value": "'$1.2B+ Anticipated Average Annual Revenue' (Q2 2026), raised from '$1B+' — an annual rate, not a base-term total"
+    },
+    {
+     "band": "All phases",
+     "label": "Audited figure",
+     "value": "ASC 842 total future minimum lease income of $4,747.8m at 30 June 2026"
+    },
+    {
+     "band": "All phases",
+     "label": "Margin",
+     "value": "~90%+ anticipated average lease-level adjusted EBITDA margin; no GAAP reconciliation provided"
+    }
+   ],
+   "notes": "Galaxy publishes no all-phase base-term contract value. Peers publish 15-year base-term aggregates; Galaxy publishes per-phase totals and an all-phase annual rate, so headline figures across this cohort are not like-for-like."
+  },
+  {
+   "product": "Helios project financing",
+   "specs": [
+    {
+     "band": "Phase I",
+     "label": "Instrument",
+     "value": "$1.4bn senior secured term loan, Galaxy Helios I LLC; Deutsche Bank AG New York Branch as initial lender; GLAS USA LLC as administrative and collateral agent"
+    },
+    {
+     "band": "Phase I",
+     "label": "Pricing and term",
+     "value": "One-month Term SOFR (2.50% floor) plus 4.75%; matures 15 August 2028; interest-rate caps used as cash flow hedges"
+    },
+    {
+     "band": "Phase I",
+     "label": "Structure",
+     "value": "80% loan-to-cost with $350m of Galaxy equity; minimum 1.40 debt service coverage ratio after stabilisation; maximum 80% loan-to-cost until stabilisation"
+    },
+    {
+     "band": "Phase I",
+     "label": "Drawn",
+     "value": "$434m (30 Sep 2025) → $878.0m (31 Dec 2025) → $1.3bn (30 Jun 2026)"
+    },
+    {
+     "band": "Phase I",
+     "label": "Recourse",
+     "value": "'The obligations under the Credit Agreement are not secured by any assets of Galaxy Digital'; GDH LP gave completion and limited recourse carve-out guarantees"
+    },
+    {
+     "band": "Phase II",
+     "label": "Instrument",
+     "value": "$3,507m 9.875% senior secured notes due 1 August 2031, Galaxy Helios Data Centers II LLC; issued at 99.500%; Rule 144A / Reg S; BNY Mellon trustee; Morgan Stanley representative of the initial purchasers"
+    },
+    {
+     "band": "Phase II",
+     "label": "Amortisation",
+     "value": "Semi-annual per the indenture, with none before the first payment date, which occurs at least ten months after Project completion"
+    },
+    {
+     "band": "Phase II",
+     "label": "Redemption triggers",
+     "value": "100% on a Data Center Lease Termination Event; a one-time partial redemption at 100% if the debt service coverage ratio falls below 1.1:1.0; 101% change-of-control offer; 100% of any lease termination fee must be offered to repurchase notes"
+    },
+    {
+     "band": "Phase II",
+     "label": "Parent support",
+     "value": "GDH LP gave a customary, uncapped completion guarantee to fund whatever is needed for each phase to satisfy the conditions for rent commencement"
+    },
+    {
+     "band": "Refinancing intent",
+     "label": "Stated plan",
+     "value": "'Once Phase I is operational and generating revenue, we expect to refinance the construction loan and replace it with a long-term loan based on the market value of the data center rather than its build cost' — illustrated as a ~$500m equity takeout"
+    }
+   ],
+   "notes": "The 9.875% coupon on Phase II is the highest data-centre project coupon in this corpus and is the clearest market pricing of an unenhanced single-tenant lease."
+  },
+  {
+   "product": "Accounting treatment of the data-centre business",
+   "specs": [
+    {
+     "band": "Classification",
+     "label": "Lessor accounting",
+     "value": "Operating leases under ASC 842 — not sales-type, not direct financing"
+    },
+    {
+     "band": "Classification",
+     "label": "Revenue recognition",
+     "value": "Lease income straight-line over the lease term, presented as 'Data center leasing revenue'; non-lease components (power and related operating services pass-throughs) recognised under ASC 606 as 'Data center operator revenue'"
+    },
+    {
+     "band": "Classification",
+     "label": "When the policy appeared",
+     "value": "Added in the Q2 2026 10-Q; it does not exist in the FY2025 10-K"
+    },
+    {
+     "band": "Balance sheet",
+     "label": "Where the asset sits",
+     "value": "Property and equipment, net — $237.0m (2024-12-31) → $1,423.1m (2025-12-31) → $2,218.2m (2026-06-30). No lease receivable is recognised"
+    },
+    {
+     "band": "Balance sheet",
+     "label": "Deferred revenue",
+     "value": "$150.0m received in FY2025 as 'Lease billings in advance of performance obligation satisfaction' (relabelled 'Prepaid rent' in the Q2 2026 10-Q) and still $150.0m unrecognised at 30 June 2026"
+    },
+    {
+     "band": "Balance sheet",
+     "label": "Construction commitments",
+     "value": "$9.1m (2024-12-31) → $529.8m (2025-12-31) → $1,489.2m (2026-06-30)"
+    },
+    {
+     "band": "P&L",
+     "label": "First revenue",
+     "value": "Q2 2026 — data center leasing revenue $18,877k and data centers operator revenue $5,816k, the latter exactly offset by $5,816k of operator cost"
+    },
+    {
+     "band": "Segments",
+     "label": "Data Centers total assets",
+     "value": "$1,863,911k (2025-12-31) → $2,543,967k (2026-06-30)"
+    },
+    {
+     "band": "Segments",
+     "label": "Data Centers result",
+     "value": "FY2025 segment net loss $(1,098)k; Q2 2026 pre-tax $(1,295)k; Q2 2026 adjusted gross profit $20m and adjusted EBITDA $11m"
+    },
+    {
+     "band": "Conversion",
+     "label": "Mining write-down",
+     "value": "FY2025 impairment of mining equipment and related infrastructure $87.3m (of which $49.2m in Q1 2025) plus $12.3m of disposals, charged to Treasury and Corporate"
+    }
+   ],
+   "notes": "An operating-lease classification means no day-one gain and no receivable: identical cash flows under a sales-type classification would have produced a materially different earnings profile."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Michael Novogratz",
+   "title": "Founder, Chief Executive Officer and Director",
+   "background": [
+    "Founder and Chief Executive Officer — Galaxy Digital",
+    "Partner and President — Fortress Investment Group",
+    "Eleven years at Goldman Sachs; elected Partner 1998",
+    "Investment Advisory Committee on Financial Markets — Federal Reserve Bank of New York (2012-2015)",
+    "Chairman — The Bail Project; Board of Overseers, NYU Langone",
+    "A.B. Economics, Princeton University; US Army helicopter pilot"
+   ]
+  },
+  {
+   "name": "Christopher Ferraro",
+   "title": "President and Chief Investment Officer",
+   "background": [
+    "President and Chief Investment Officer — Galaxy Digital (joined February 2017; previously Co-head of the Merchant Bank, then CIO, then Co-President)",
+    "Managing Director and Partner, Direct Lending and Special Situations — HPS Investment Partners (formerly Highbridge Principal Strategies)",
+    "Began at BlackRock Kelso Capital Advisors",
+    "B.A. Applied Mathematics and B.A. Economics, Yale University"
+   ]
+  },
+  {
+   "name": "Anthony Paquette",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Chief Financial Officer — Galaxy Digital (from January 2025)",
+    "Chief Financial Officer — Point72 (October 2020 to December 2024)",
+    "Business Unit Leader — SoFi (2018-2020)",
+    "Managing Director, Portfolio Manager and Global Head of Funding and Liability Management — JPMorgan Chase; Managing Director, Corporate Investments and Treasury — Bank of America",
+    "B.A. Business Economics and Organizational Behavior & Management, Brown University; CFA Charterholder"
+   ]
+  },
+  {
+   "name": "Erin Brown",
+   "title": "Chief Operating Officer",
+   "background": [
+    "Chief Operating Officer — Galaxy Digital (from May 2021)",
+    "Chief Risk Officer — Jump Trading (January 2020 to May 2021)",
+    "Eleven years at DRW, latterly Head of Global Treasury and Operations",
+    "B.S. Accounting and Finance, DePaul University"
+   ]
+  },
+  {
+   "name": "Matt Friedrich",
+   "title": "Chief Legal Officer",
+   "background": [
+    "Chief Legal Officer — Galaxy Digital (from 8 September 2025)",
+    "Executive Vice President and General Counsel — Cognizant Technology Solutions (May 2017 to January 2021)",
+    "Chief Legal Officer — UnitedHealth Group (January to March 2021)",
+    "Chief Corporate Counsel — Chevron; partner at Freshfields Bruckhaus Deringer and Boies, Schiller & Flexner",
+    "Thirteen years at the US Department of Justice, concluding as Acting Assistant Attorney General, Criminal Division",
+    "J.D., University of Texas; University of Virginia. Life Member, Council on Foreign Relations"
+   ]
+  },
+  {
+   "name": "Steve Kurz",
+   "title": "Global Co-Head, Digital Assets",
+   "background": [
+    "Global Co-Head, Digital Assets — Galaxy Digital; founding-team member; management committee and venture investment committee",
+    "Co-founder — Outer Realm (sold 2022)",
+    "Principal and Head of Business Development — River Birch Capital; Vice President — Fortress Investment Group (New York and Singapore)",
+    "Began at Lehman Brothers Fixed Income",
+    "B.A. Economics, Cornell University; Term Member, Council on Foreign Relations"
+   ]
+  },
+  {
+   "name": "Jason Urban",
+   "title": "Global Co-Head, Digital Assets",
+   "background": [
+    "Global Co-Head, Digital Assets — Galaxy Digital",
+    "Chief Executive Officer — DrawBridge Lending",
+    "Founded and ran the equity index derivative business — DRW (2009)",
+    "Ran equity volatility — Goldman Sachs",
+    "MBA, University of Chicago Booth School of Business; B.S./B.A., Georgetown University"
+   ]
+  },
+  {
+   "name": "Thomas Harrop",
+   "title": "Chief Risk Officer",
+   "background": [
+    "Chief Risk Officer — Galaxy Digital; first joined as Treasurer",
+    "Nearly two decades at Goldman Sachs and Credit Suisse"
+   ]
+  },
+  {
+   "name": "Rob Cornish",
+   "title": "Chief Technology Officer",
+   "background": [
+    "Chief Technology Officer — Galaxy Digital",
+    "Founder — Fierce",
+    "First Chief Technology Officer — Gemini (Gemini Custody, Gemini Dollar, Gemini Clearing)",
+    "Chief Information Officer — NYSE",
+    "Seventeen years at the International Securities Exchange"
+   ]
+  },
+  {
+   "name": "Michael Daffey",
+   "title": "Chair of the Board",
+   "background": [
+    "Chair of the Board — Galaxy Digital Inc. (from May 2025); Chair of Galaxy Digital Holdings Ltd. September 2021 to May 2025; senior adviser to Galaxy April 2021 to September 2024",
+    "Chairman — Tamesis Partners (from 2024)",
+    "Twenty-five years at Goldman Sachs: Partner (2002); Chairman of the Global Markets Division and Management Committee member from 2014; Global Co-COO of Equities",
+    "Bachelor's degree in economics and finance, University of New South Wales"
+   ]
+  },
+  {
+   "name": "Bill Koutsouras",
+   "title": "Lead Independent Director; Chair of the Audit Committee",
+   "background": [
+    "Lead Independent Director and Audit Committee Chair — Galaxy Digital (from May 2025)",
+    "Principal — Kouts Capital (2011-2025)",
+    "Executive Vice President and Chief Financial Officer — Endeavour Financial Corporation, involved in over USD 25bn of M&A and more than USD 4bn of financings",
+    "CPA (Canada) and CFA Charterholder"
+   ]
+  },
+  {
+   "name": "Jane Dietze",
+   "title": "Director; Audit and Compensation Committees",
+   "background": [
+    "Director — Galaxy Digital (appointed to the Galaxy Digital Holdings board March 2022)",
+    "Chief Investment Officer — Investment Office of Brown University (endowment and other assets over USD 7bn)",
+    "Managing Director, Credit Funds — Fortress Investment Group; General Partner — Columbia Capital and Nextpoint Partners",
+    "Investment Officer — IFC / World Bank; began at Goldman Sachs M&A",
+    "B.A., Princeton University; M.A., Johns Hopkins SAIS"
+   ]
+  },
+  {
+   "name": "Steven Bandrowczak",
+   "title": "Director; Audit Committee",
+   "background": [
+    "Director — Galaxy Digital (appointed 10 July 2026, effective 13 July 2026)",
+    "Chief Executive Officer — Xerox Holdings Corporation (August 2022 to March 2026); joined June 2018 as President and Chief Operating Officer",
+    "Chief Operating Officer and Chief Information Officer — Alight Solutions (2016-2018)",
+    "Chief Information Officer — DHL, consolidating global data-centre operations; led the technology integration of IBM's PC business at Lenovo",
+    "Senior roles at Avaya, Nortel, Avnet and HP; Senior Advisor at Sol Consulting from May 2026",
+    "B.S. Computer Science, Long Island University; M.S. Technology Management, Columbia University"
+   ]
+  },
+  {
+   "name": "Rhonda Adams-Medina",
+   "title": "Director; Nominating and Corporate Governance Committee",
+   "background": [
+    "Director — Galaxy Digital (from May 2025)",
+    "Global Head of Business Affairs — Audible, Inc. (Amazon)",
+    "Director of Business and Legal Affairs — Netflix; Vice President, Business and Legal Affairs — NBCUniversal Kids",
+    "Seventeen years at Nickelodeon, latterly Senior Vice President and Deputy General Counsel"
+   ]
+  },
+  {
+   "name": "Douglas Deason",
+   "title": "Director; Nominating and Corporate Governance Committee",
+   "background": [
+    "Director — Galaxy Digital (from July 2025, when the board was increased from six to seven)",
+    "President — Deason Capital Services (from 2011)",
+    "Chief Executive Officer — Precept Builders (1993-2009); Precept Business Services",
+    "Chairman — Great American Media; boards of Ryan LLC and Park Cities Financial Group",
+    "Degree in data processing quantitative analysis, University of Arkansas"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Galaxy reports in USD, so the normalized-KPI overlay is 'as reported'. **The revenue line requires a warning before it can be used at all.** Galaxy trades digital assets as principal and therefore recognises the gross proceeds of every sale as revenue, with an almost exactly offsetting cost in Transaction expenses — FY2025 revenue of USD 60,406.7m against transaction expenses of USD 60,175.8m. The company's own 10-K states that 'the magnitude of changes in Revenue on the Company's statement of operations overshadow other parts of the business, but are predominantly offset by Transaction expenses in Net income'. The `kpi: revenue` overlay below is set because it is the company's reported total revenue for the whole company, which is what the field means; a consumer comparing it with an operating company's revenue is comparing turnover with rent and will be wrong by orders of magnitude. Galaxy's own preferred measures are adjusted gross profit and adjusted EBITDA, neither of which has a GAAP equivalent. A second caution: the reorganisation of 13 May 2025 was accounted for as a reverse recapitalisation with Galaxy Digital Holdings LP as accounting acquirer and predecessor, so comparative periods before that date are the partnership's. No US analyst consensus for FY2024 could be located — Galaxy was a Cayman-domiciled TSX issuer with no SEC domestic reporting until May 2025 — so no beat/miss verdict is offered for that year.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The last full year before the US listing, reported by the predecessor partnership. Profitable, and the profit was principally trading and digital-asset gains rather than fees.",
+    "metrics": [
+     {
+      "name": "Revenues (gross, principal basis)",
+      "actual": "USD 42,596.673m",
+      "expected": "",
+      "verdict": "",
+      "result": "No published US analyst consensus existed for this period.",
+      "kpi": "revenue",
+      "usdMillions": 42596.673,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Revenues and gains from operations",
+      "actual": "USD 43,757.790m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Net income",
+      "actual": "USD 346.722m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes a USD 166m charge for the New York Attorney General settlement.",
+      "kpi": "net-income",
+      "usdMillions": 346.722,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD 0.84 (basic USD 0.96)",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "eps",
+      "usdMillions": 0.84,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "USD 715.4m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 7,119.855m; total equity USD 2,194.352m",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Property and equipment, net",
+      "actual": "USD 237.038m",
+      "expected": "",
+      "verdict": "",
+      "result": "Before the Helios build began in earnest."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "The year of the US listing and the Helios conversion, and a loss-making one. Revenue rose 42% on a single 80,000 BTC trade in Q3 among others, while adjusted EBITDA collapsed from USD 715.4m to USD 33.7m on a USD 753.7m digital-asset impairment and about USD 160m of one-time costs. The data-centre segment earned essentially nothing — a USD 1.1m segment net loss — because no rent had commenced.",
+    "metrics": [
+     {
+      "name": "Revenues (gross, principal basis)",
+      "actual": "USD 60,406.728m (+41.8%)",
+      "expected": "~USD 64.7bn (Simply Wall St, aggregator-derived)",
+      "verdict": "miss",
+      "result": "The only pre-print revenue estimate located was an aggregator figure of about USD 64.7bn. Against a gross principal-basis revenue line, a revenue beat or miss carries almost no information.",
+      "kpi": "revenue",
+      "usdMillions": 60406.728,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Revenues and gains from operations",
+      "actual": "USD 61,355.667m",
+      "expected": "",
+      "verdict": "",
+      "result": "Includes USD 948.939m of gains from operations and a net gain on digital assets of USD 742.4m."
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (241.349)m",
+      "expected": "",
+      "verdict": "",
+      "result": "Of which USD (86.902)m attributable to Class A common stockholders and USD 45.792m to noncontrolling interests.",
+      "kpi": "net-income",
+      "usdMillions": -241.349,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "USD (0.61) (basic USD (0.53))",
+      "expected": "USD 0.591 (Simply Wall St, aggregator-derived)",
+      "verdict": "miss",
+      "result": "A sign flip against the only estimate located.",
+      "kpi": "eps",
+      "usdMillions": -0.61,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted gross profit",
+      "actual": "USD 426m",
+      "expected": "",
+      "verdict": "",
+      "result": "The company's preferred netted revenue measure."
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "USD 33.7m, against USD 715.4m in FY2024",
+      "expected": "",
+      "verdict": "",
+      "result": "Driven by a USD 753.7m impairment of digital assets and about USD 160m of one-time costs."
+     },
+     {
+      "name": "Impairment of digital assets",
+      "actual": "USD 753.701m, against USD 331.920m in FY2024",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 11,348.081m; total equity USD 3,034.777m including USD 1,079.042m of noncontrolling interest",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Property and equipment, net",
+      "actual": "USD 1,423.113m, from USD 237.038m",
+      "expected": "",
+      "verdict": "",
+      "result": "The Helios build, capitalised. Construction commitments outstanding rose from USD 9.1m to USD 529.8m."
+     },
+     {
+      "name": "Assets on platform",
+      "actual": "~USD 12.3bn at 31 December 2025 (USD 6.4bn AUM plus USD 5.0bn assets under stake)",
+      "expected": "",
+      "verdict": "",
+      "result": "With USD 2.0bn of net inflows in asset management, which the company describes as 34% organic growth."
+     }
+    ]
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "commentary": "A loss-making quarter with no data-centre revenue yet — Phase I's first data hall was delivered in April, after the quarter closed.",
+    "metrics": [
+     {
+      "name": "Revenues",
+      "actual": "USD 10,041.444m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "ChartMill headlined the quarter a revenue and EPS miss while Zacks recorded an EPS beat; the two use different consensus panels.",
+      "kpi": "revenue",
+      "usdMillions": 10041.444,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (216.311)m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": -216.311,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted and adjusted EPS",
+      "actual": "USD (0.49)",
+      "expected": "USD (0.59) (Zacks)",
+      "verdict": "beat",
+      "result": "A 16.95% beat on the Zacks consensus.",
+      "kpi": "eps",
+      "usdMillions": -0.49,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted gross loss / adjusted EBITDA",
+      "actual": "USD (88)m adjusted gross loss; USD (188)m adjusted EBITDA",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Data Centers segment",
+      "actual": "Adjusted gross profit USD 3m; adjusted EBITDA USD (0.9)m; capital expenditure USD 354m",
+      "expected": "",
+      "verdict": "",
+      "result": "Delivered critical IT load reported as nil."
+     },
+     {
+      "name": "Share repurchases",
+      "actual": "2,966 thousand shares at an average of USD 20.50",
+      "expected": "",
+      "verdict": "",
+      "result": "The Q1 release states 3.2 million shares for USD 65m; the 10-Q's own table implies about USD 60.8m. Both are published and neither is reconciled."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "The first quarter with data-centre revenue, and the smallest loss in four quarters. Phase I's 133 MW was fully in service by quarter end. Note the scale: USD 18.9m of leasing revenue inside USD 8.56bn of reported revenue.",
+    "metrics": [
+     {
+      "name": "Revenues",
+      "actual": "USD 8,557.336m",
+      "expected": "~USD 10.5bn implied (Zacks)",
+      "verdict": "miss",
+      "result": "An 18.12% miss on a gross principal-basis line — informative about trading volumes, not about the business's earning power.",
+      "kpi": "revenue",
+      "usdMillions": 8557.336,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Data center leasing revenue",
+      "actual": "USD 18.877m",
+      "expected": "",
+      "verdict": "",
+      "result": "The first lease revenue Galaxy has ever recognised. A further USD 5.816m of data centers operator revenue was exactly offset by USD 5.816m of operator cost."
+     },
+     {
+      "name": "Net loss",
+      "actual": "USD (85.316)m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": -85.316,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted and adjusted EPS",
+      "actual": "USD (0.09)",
+      "expected": "USD (0.36) (Zacks)",
+      "verdict": "beat",
+      "result": "A 75% beat on the Zacks consensus. A separate tracker reported the same quarter against a USD (0.46) estimate for an 80.5% beat — the panels disagree.",
+      "kpi": "eps",
+      "usdMillions": -0.09,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted gross profit / adjusted EBITDA",
+      "actual": "USD 43m adjusted gross profit; USD (77)m adjusted EBITDA",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Segment adjusted gross profit",
+      "actual": "Global Markets USD 49m; Data Centers USD 20m; Asset Management and Infrastructure Solutions USD 17m",
+      "expected": "",
+      "verdict": "",
+      "result": "Data Centers is now the second-largest contributor, in its first quarter of operation."
+     },
+     {
+      "name": "Total assets",
+      "actual": "USD 10,843.981m; total equity USD 2,720.108m; stockholders' equity USD 1,823.366m",
+      "expected": "",
+      "verdict": "",
+      "result": "Property and equipment net USD 2,218.204m; construction commitments outstanding USD 1,489.2m."
+     },
+     {
+      "name": "Notes payable",
+      "actual": "USD 3,415.757m at 30 June 2026, excluding the USD 3,507m Helios Phase II notes issued on 28 July 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "Comprising USD 445m of 2026 exchangeables, USD 1,268.257m due 2028 (the Helios I term loan), USD 402.5m of 2029 exchangeables and USD 1,300m of 2031 exchangeables."
+     },
+     {
+      "name": "Assets under management plus assets under stake",
+      "actual": "USD 7.1bn — ETFs USD 1,805m, Alternatives USD 2,553m, assets under stake USD 2,790m",
+      "expected": "",
+      "verdict": "",
+      "result": "Down from about USD 12bn at 31 December 2025. Galaxy's own website reported USD 8bn of assets on platform and USD 4.4bn of AUM for the same date — the two disclosures do not agree."
+     },
+     {
+      "name": "Trading counterparties and loan book",
+      "actual": "1,741 counterparties; average loan book USD 1,438m",
+      "expected": "",
+      "verdict": "",
+      "result": "Digital-asset loans receivable net of USD 786.680m against collateral payable of USD 983.122m."
+     },
+     {
+      "name": "Cash and stablecoins",
+      "actual": "USD 2,459m — USD 896m of cash and USD 1,563m of stablecoins",
+      "expected": "",
+      "verdict": "",
+      "result": "More stablecoins than cash, which is itself a statement about the balance sheet."
+     }
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "label": "The Texas Spur — $20.5M tax abatement paves way for Galaxy growth in Dickens County",
+   "url": "https://www.thetexasspur.com/news/205m-tax-abatement-paves-way-galaxy-growth-dickens-county",
+   "date": "2026-09-06"
+  },
+  {
+   "label": "The Texas Spur — Dickens County taxpayers see 20% cut as communities prepare for Galaxy growth",
+   "url": "https://www.thetexasspur.com/news/dickens-county-taxpayers-see-20-cut-communities-prepare-galaxy-growth",
+   "date": "2026-09-06"
+  },
+  {
+   "label": "Investment Executive — Court certifies crypto class action (Banach v. Galaxy Digital Holdings Ltd., 2026 ONSC 4534)",
+   "url": "https://www.investmentexecutive.com/news/regulation/court-certifies-crypto-class-action/",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "The Center Square via Yahoo — More data centers complying with Abbott's Texas standards",
+   "url": "https://www.yahoo.com/news/politics/articles/more-data-centers-complying-abbott-162100207.html",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "Crypto Times — Galaxy, Compass and Montera agree to Texas data center rules",
+   "url": "https://www.cryptotimes.io/2026/08/15/galaxy-compass-and-montera-agree-to-texas-data-center-rules/",
+   "date": "2026-08-15"
+  },
+  {
+   "label": "Office of the Texas Governor — Governor Abbott Announces Galaxy, Compass Datacenters And Montera Infrastructure Commit To Comply With His Data Center Standards",
+   "url": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 10-Q, quarterly period ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000091/glxy-20260630.htm",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Galaxy Statement on Governor Abbott's Data Center Grid Directive",
+   "url": "https://www.galaxy.com/newsroom/galaxy-statement-on-governor-abbotts-data-center-grid-directive",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Galaxy Announces Second Quarter 2026 Financial Results (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000084/glxy-20260630xpressrelease.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — resignation of Chief Accounting Officer Robert Rico",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000086/glxy-20260805.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Galaxy Digital Inc. (GLXY) Reports Q2 Loss, Misses Revenue Estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/galaxy-digital-inc-glxy-reports-121504647.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Galaxy and BNY Collaborate to Advance Digital Asset Infrastructure",
+   "url": "https://www.galaxy.com/newsroom/galaxy-and-bny-collaborate-to-advance-digital-asset-infrastructure",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — Galaxy Digital Q2 2026 slides show $30B contract pipeline amid losses",
+   "url": "https://www.investing.com/news/company-news/galaxy-digital-q2-2026-slides-show-30b-contract-pipeline-amid-losses-93CH-4838097",
+   "date": "2026-08"
+  },
+  {
+   "label": "Galaxy Expands Data Center Footprint with Acquisition of 500 Acre Campus in McGregor, Texas",
+   "url": "https://www.galaxy.com/newsroom/galaxy-expands-data-center-footprint-with-acquisition-of-500-acre-campus-in-mcgregor-texas",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — closing of USD 3.507bn 9.875% senior secured notes due 2031, indenture and completion guarantee",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000079/glxy-20260728.htm",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Data Center Knowledge — Galaxy's 500-Acre Texas AI Data Center Reflects New Grid Model",
+   "url": "https://www.datacenterknowledge.com/data-center-construction/galaxy-s-500-acre-texas-ai-campus-reflects-new-grid-model",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — pricing of USD 3.507bn senior secured notes",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000074/glxy-20260723.htm",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "Galaxy Digital Investor Presentation, July 2026 (8-K Ex-99.1) — Helios Phase II financing and illustrative annual financial summary",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000068/launch8-kexhibit99172226.htm",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "Hut 8 Fully Commercializes 1 GW Beacon Point AI Data Center Campus with Second 352 MW IT Lease, Bringing Campus-Level Base-Term Contract Value to $19.6 Billion",
+   "url": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Simply Wall St — Where does Galaxy Digital's value sit after Helios?",
+   "url": "https://simplywall.st/stocks/us/diversified-financials/nasdaq-glxy/galaxy-digital/news/where-does-galaxy-digital-nasdaqgsglxy-value-sit-after-helio",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — appointment of Steven Bandrowczak as director",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000063/glxy-20260710.htm",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "The Block — Galaxy delivers 133 MW of critical IT load to CoreWeave as Helios bitcoin mine turns AI hub",
+   "url": "https://www.theblock.co/post/407396/galaxy-delivers-133-mw-of-critical-it-load-to-coreweave-as-helios-bitcoin-mine-turns-ai-hub",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Galaxy Completes Phase I of Its Helios Data Center Campus, Delivering 133 Megawatts of Critical IT Load to CoreWeave",
+   "url": "https://www.galaxy.com/newsroom/galaxy-completes-phase-i-of-its-helios-data-center-campus",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — 2026 annual meeting voting results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000060/glxy-20260528.htm",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Galaxy Receives BitLicense from the New York State Department of Financial Services",
+   "url": "https://www.galaxy.com/newsroom/galaxy-receives-bitlicense",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 10-Q, quarterly period ended March 31, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000054/glxy-20260331.htm",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Galaxy Announces First Quarter 2026 Financial Results (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000047/glxy-2026331xpressrelease.htm",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "Galaxy Digital Inc. Definitive Proxy Statement (DEF 14A), 2026 Annual Meeting",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000037/glxy-20260408.htm",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Spoted Crypto — Hut 8 & Cipher Digital AI Data Center Pivot 2026: Sector Analysis",
+   "url": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "BeInCrypto via Yahoo Finance — 5 Asset Managers That Control Wall Street's Crypto in 2026",
+   "url": "https://finance.yahoo.com/markets/crypto/articles/5-asset-managers-control-wall-203747851.html",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "Galaxy to Voluntarily Delist from the TSX in Favor of Its Current Nasdaq Listing",
+   "url": "https://www.prnewswire.com/news-releases/galaxy-to-voluntarily-delist-from-the-tsx-in-favor-of-its-current-nasdaq-listing-302701877.html",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "GlobeNewswire — GLXY Investors Have Opportunity to Join Galaxy Digital Fraud Investigation with the Schall Law Firm",
+   "url": "https://www.globenewswire.com/news-release/2026/03/04/3249458/0/en/GLXY-Investors-Have-Opportunity-to-Join-Galaxy-Digital-Fraud-Investigation-with-the-Schall-Law-Firm.html",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 10-K, fiscal year ended December 31, 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Galaxy Announces Fourth Quarter and Full Year 2025 Financial Results (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000009/glxy-20251231xpressrelease_.htm",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "Galaxy Completes ERCOT Interconnection Studies and Secures Approval for Additional 830 Megawatts at Helios Data Center Campus (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000005/heliosercotapproval_1x15.htm",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Galaxy Digital Analyst Day Corporate Presentation (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000088/exhibit991-glxy2025analy.htm",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 424(b)(3) resale prospectus — business description, FY2024/FY2023 financial statements, approved token list",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000162828025058094/galaxydigitalinc-resale424b.htm",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — USD 460m private placement at USD 36.00 a share",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000061/glxy-20251010.htm",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "TipRanks / The Fly — Galaxy Digital price target raised to $42 from $36 at Piper Sandler",
+   "url": "https://www.tipranks.com/news/the-fly/galaxy-digital-price-target-raised-to-42-from-36-at-piper-sandler-thefly",
+   "date": "2025-10-01"
+  },
+  {
+   "label": "Galaxy Closes $1.4 Billion Project Financing Facility to Accelerate Helios AI Datacenter Development",
+   "url": "https://www.galaxy.com/newsroom/galaxy-closes-helios-project-financing",
+   "date": "2025-08-15"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — USD 1.4bn Galaxy Helios I credit agreement with Deutsche Bank AG",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000039/glxy-20250815.htm",
+   "date": "2025-08-15"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — appointment of Matt Friedrich as Chief Legal Officer; departure of Andrew Siegel",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000036/glxy-20250806.htm",
+   "date": "2025-08-11"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — appointment of Douglas Deason as director",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000020/glxy-20250728.htm",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — resegmentation into Digital Assets, Data Centers, and Treasury and Corporate, with recast historical quarterly financials",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000015/glxy-20250612.htm",
+   "date": "2025-06-13"
+  },
+  {
+   "label": "Galaxy Digital Inc. Form 8-K — completion of the Reorganization Transactions (Cayman Islands to Delaware domestication and merger)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859392/000185939225000010/glxy-20250507.htm",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "Nasdaq Trader — Equity Corporate Actions Alert #2025-246: listing of Galaxy Digital Inc. (GLXY)",
+   "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2025-246",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "Galaxy Announces Commitment with CoreWeave to Host Additional AI and HPC Infrastructure",
+   "url": "https://www.galaxy.com/newsroom/galaxy-announces-commitment-with-coreweave",
+   "date": "2025-04-23"
+  },
+  {
+   "label": "Structure Research — CoreWeave leases triple-digit MW data centre capacity from Galaxy Digital",
+   "url": "https://www.structureresearch.net/2025/04/21/coreweave-leases-triple-digit-mw-data-centre-capacity-from-galaxy-digital/",
+   "date": "2025-04-21"
+  },
+  {
+   "label": "The Block — New York Attorney General and Galaxy Digital settle for $200 million",
+   "url": "https://www.theblock.co/post/348602/nyag-galaxy-digital-settlement-luna",
+   "date": "2025-03-28"
+  },
+  {
+   "label": "Galaxy Digital — Data Centers (Helios location, campus size, approved capacity, rack density, latency)",
+   "url": "https://www.galaxy.com/data-centers"
+  },
+  {
+   "label": "Galaxy Digital — Leadership (executive names, titles and bios)",
+   "url": "https://www.galaxy.com/leadership"
+  },
+  {
+   "label": "Galaxy Digital — Board of Directors",
+   "url": "https://www.galaxy.com/board-of-directors"
+  },
+  {
+   "label": "Galaxy Digital — Global Markets (counterparties, licences, loan book)",
+   "url": "https://www.galaxy.com/global-markets"
+  },
+  {
+   "label": "Galaxy Digital — Asset Management and Infrastructure Solutions (assets on platform, AUM, assets under stake, chains, ETPs)",
+   "url": "https://www.galaxy.com/asset-management-and-infrastructure-solutions"
+  },
+  {
+   "label": "Galaxy Digital — Homepage",
+   "url": "https://www.galaxy.com/"
+  },
+  {
+   "label": "Galaxy Digital — Full press-release archive index (162 items, 2020-05-11 to 2026-08-27)",
+   "url": "https://www.galaxy.com/all-news"
+  },
+  {
+   "label": "SEC EDGAR — submissions index for Galaxy Digital Inc. (CIK 0001859392), SIC 6211, state of incorporation DE",
+   "url": "https://data.sec.gov/submissions/CIK0001859392.json"
+  },
+  {
+   "label": "Texas Department of Licensing and Regulation TABS2026014892 — Galaxy Helios Phase 2 (Helios 2), owner Galaxy Helios II LLC, 300 Vesey Street, Afton, Dickens County",
+   "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892"
+  },
+  {
+   "label": "Texas Department of Licensing and Regulation TABS2026014893 — Galaxy Helios Phase 2 (Helios 3), owner Galaxy Helios II LLC",
+   "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2026014893"
+  },
+  {
+   "label": "StockAnalysis.com — Galaxy Digital (GLXY) stock forecast and analyst price targets",
+   "url": "https://stockanalysis.com/stocks/glxy/forecast/"
+  },
+  {
+   "label": "SMK Law — Galaxy Digital Securities Class Action (Banach v. Galaxy Digital Holdings Ltd., 2026 ONSC 4534)",
+   "url": "https://smklawyers.ca/currentinvestigation/galaxy-digital-securities-class-action/"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

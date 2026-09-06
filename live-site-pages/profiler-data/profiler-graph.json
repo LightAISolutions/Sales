@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-06",
- "companies": 145,
+ "companies": 148,
  "edges": [
   {
    "a": "abb",
@@ -1073,6 +1073,30 @@
   },
   {
    "a": "aep",
+   "b": "cipher-mining",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Interconnection and capacity counterparty at Colchis, Ulysses and Barber Lake.",
+     "context": "American Electric Power is Cipher's principal interconnection counterparty outside the Luminant arrangement at Odessa. At Colchis, the 1,000 MW West Texas joint-venture site, Cipher holds a fully executed 1 GW Direct Connect Agreement with AEP for a dual interconnection facility. At Ulysses in Ohio — Cipher's first site outside Texas and its only PJM exposure — capacity is secured from AEP Ohio. Barber Lake's 300 MW ERCOT interconnection is in AEP Texas territory.\n\nThe dependency runs the other way too: four of Cipher's uncontracted pipeline sites are qualified as subject to ERCOT's new batch interconnection process, and the value of those megawatts is a function of how that process resolves rather than of anything Cipher controls.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active",
+     "scale": "1 GW Direct Connect Agreement at Colchis; 200 MW at Ulysses via AEP Ohio"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Development pipeline — approximately 4.4 GW across eight uncontracted sites",
+     "date": "",
+     "text": "**Colchis** (West Texas, 1,000 MW gross, targeted 2028) is the largest and the only one with a fully executed 1 GW Direct Connect Agreement with American Electric Power for a dual interconnection facility; Cipher bought a majority JV interest in November 2025 and expects about 95% equity ownership.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aep",
    "b": "constellation-energy",
    "curated": {
     "a": {
@@ -1203,6 +1227,23 @@
   },
   {
    "a": "aep",
+   "b": "galaxy-digital",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Utility counterparty for Helios's incremental approved capacity, alongside Wind Energy Transmission Texas as transmission interconnection provider.",
+     "context": "Galaxy executed a service agreement with AEP Texas Inc. for the additional 830 MW approved by ERCOT on 15 January 2026, which doubled total approved capacity at Helios to over 1.6 GW. Wind Energy Transmission Texas, LLC is the transmission interconnection provider and facilitated the large-load interconnection studies — a steady-state study and a stability study. Galaxy funds and owns its own private substation and connects front-of-the-meter to the ERCOT grid.\n\nThe relationship now runs through a regulatory bottleneck: Galaxy's Q2 2026 10-Q discloses that the Texas Governor's August 2026 directive requires the PUCT and ERCOT to complete a verification and audit of every data centre in the interconnection process before any project moves forward, and that this 'may impact the power approval timelines for certain of our data center sites'.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000005/heliosercotapproval_1x15.htm",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "service agreement for the incremental 830 MW; campus total 1.63 GW approved"
+    }
+   },
+   "evid": [],
+   "last": "2026-01"
+  },
+  {
+   "a": "aep",
    "b": "ge-vernova",
    "curated": {
     "a": {
@@ -1322,6 +1363,23 @@
    },
    "evid": [],
    "last": "2021"
+  },
+  {
+   "a": "aep",
+   "b": "hut-8",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Utility counterparty at Beacon Point, where the campus's full 1,000 MW is secured under an executed interconnection agreement.",
+     "context": "Beacon Point's entire 1,000 MW of utility capacity is secured under an interconnection agreement with AEP Texas for electric delivery service, fed by a 345 kV underground line from a nearby AEP substation, with about 4.6 GW of generation across six nearby facilities and four diverse campus entrances. Hut 8 funded the Contribution in Aid of Construction and commenced substation construction in Q1 2026, and states that it pre-funded infrastructure upgrades so ratepayers bear no cost.\n\nThe exposure is timing: initial energisation is targeted for Q1 2027, inside the verification and audit the Texas Governor ordered on 3 August 2026, which pauses new large-load energisations pending PUCT and ERCOT review with a report due by 10 December 2026.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926084862/tm2620835d1_ex99-1.htm",
+     "status": "active",
+     "scale": "1,000 MW interconnection agreement",
+     "via": "Electric delivery service at Beacon Point"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "aep",
@@ -2045,6 +2103,21 @@
   },
   {
    "a": "aligned",
+   "b": "cipher-mining",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+     "context": "Named among five competitors in Cipher's FY2025 10-K — the fifth of the five, and like Vantage a sponsor-owned hyperscale developer bidding for the same single-tenant campuses.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aligned",
    "b": "compass-datacenters",
    "curated": {
     "b": {
@@ -2749,6 +2822,119 @@
   },
   {
    "a": "amazon",
+   "b": "cipher-mining",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Landlord on two Texas campuses leased to Amazon Data Services, with base rent and operating expenses guaranteed by Amazon.com, Inc.",
+     "context": "Cipher Digital Inc. (formerly Cipher Mining) leases two Texas campuses to Amazon: Black Pearl near Wink, Winkler County — about 300 MW gross on a 15-year base term for about USD 5.5bn, first capacity delivered 31 July 2026 — and Stingray at Andrews — 100 gross MW / 70 critical IT MW on a 15-year base term for about USD 2.0bn, with rent targeted from April and May 2027. Both carry three five-year extension options and a 3.0% annual escalator.\n\nThe credit terms are unusually explicit for this corpus. **Amazon.com, Inc., the public parent, fully guarantees all base rent and operating expenses on both leases.** At Stingray Amazon additionally agrees to cover construction cost overruns above USD 10.5m per critical IT MW and provides a parent completion guaranty, and the lease carries no termination for convenience after commencement. No other converted-miner landlord in this corpus holds a directly investment-grade-guaranteed tenancy.\n\nOne naming inconsistency, reported rather than reconciled: Cipher's FY2025 10-K names the Black Pearl counterparty 'Amazon Web Services, Inc.' while its June 2026 bond presentation names 'Amazon Data Services, Inc.' for both leases.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+     "via": "Turnkey space and power for AI workloads in Texas"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Tenant on two of Cipher's three contracted campuses, with base rent and operating expenses guaranteed by Amazon.com, Inc.",
+     "context": "Amazon leases Black Pearl (about 300 MW gross, 15-year base term, about USD 5.5bn, rent commencing in the fourth quarter of 2026) and Stingray (100 gross MW / 70 critical IT MW, 15-year base term, about USD 2.0bn, rent targeted from 1 April 2027). Both carry three five-year tenant extension options and a 3.0% annual escalator; Stingray is triple-net with de minimis operating expenses for Cipher.\n\nThe credit support is the point. Amazon.com, Inc. — the public parent — fully guarantees base rent and operating expenses on both leases, and at Stingray also agrees to cover construction cost overruns above USD 10.5m per critical IT MW and provides a parent completion guaranty. No other miner-landlord in this corpus holds a directly investment-grade-guaranteed tenancy; TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy Digital all sit behind Fluidstack or CoreWeave.\n\nTwo cautions. Cipher's own 10-K states the guarantees are 'only effective following the rent commencement date' and are subject to caps and event-of-default triggers, and that a delayed completion may let the tenant terminate without the guarantee ever triggering. And the counterparty naming is inconsistent across Cipher's own documents: the FY2025 10-K names 'Amazon Web Services, Inc.' for Black Pearl while the June 2026 bond presentation names 'Amazon Data Services, Inc.' for both. Concentration estimates differ too — Bernstein puts Amazon at 48% of Cipher revenue, Global Data Center Hub at about 66% of the backlog, and no source reconciles them.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+     "via": "Turnkey space and power for AI workloads"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In its place sit three contracted hyperscale leases totalling 700 MW of gross capacity and approximately USD 11.4bn of contracted revenue, of which **two of the three are with Amazon** — Black Pearl (about 300 gross MW, 15 years, about USD 5.5bn) and Stingray (100 gross MW / 70 critical IT MW, 15 years, about USD 2.0bn), both with base rent and operating expenses guaranteed by Amazon.com, Inc.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the same USD 5.5bn Amazon number is 'Estimated Contract Value' in the November 2025 deck and 'Contracted Revenue' in the February 2026 deck.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "guarantees base rent and operating expenses on both Amazon leases, and at Stingray also caps construction cost overruns above USD 10.5m per critical IT MW and provides a parent completion guaranty.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The same fact read from the other side: Bernstein puts Amazon at 48% of Cipher revenue and Global Data Center Hub at about 66% of the backlog, and no source reconciles the two estimates.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "**Black Pearl** (near Wink, Winkler County): about 300 gross MW to Amazon on a 15-year base term for about USD 5.5bn, first capacity delivered 31 July 2026 per the Q2 2026 10-Q, with base rent and operating expenses guaranteed by Amazon.com, Inc.; Cipher does not publish a critical IT figure for this site.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "**Stingray** (Andrews, Andrews County): 100 gross MW / 70 critical IT MW to Amazon Data Services, Inc.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Two of the three leases are therefore with Amazon.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "The offsetting exposure is concentration: Bernstein put Amazon at 48% of Cipher revenue and Global Data Center Hub at about 66% of the backlog, and the two estimates are not reconciled by any source.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-08",
+     "text": "A bond investor presentation reveals the March 2026 'investment-grade Hyperscale tenant' as Amazon Data Services, Inc. — Cipher's second Amazon lease, 100 gross MW / 70 critical IT MW at Stingray for about USD 2.0bn — The tenant's name reached the public record through a debt document, not an earnings release. Two of Cipher's three leases are now with Amazon, and the concentration that follows is the company's central risk.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326008635/dp248110_ex9901.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "Black Pearl Compute LLC prices USD 2.0bn of 6.125% senior secured notes due 2031 with about USD 13bn of book interest, roughly 6.5x oversubscribed; surplus funding reimburses about USD 233m of capex — An Amazon-guaranteed rent stream priced at 6.125% against a 7.125% coupon on the Google-backstopped Barber Lake paper three months earlier. The 100 basis points is the market pricing the difference between a guarantee and a backstop.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000007/cipherdigital_businessup.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-03",
+     "text": "Announces an approximately USD 5.5bn 15-year lease with Amazon Web Services for 300 MW of gross capacity at Black Pearl, described in the deck as 'Estimated Contract Value' — The largest single contract in Cipher's history, and the first time a hyperscaler took the whole of one of its campuses. The FY2025 deck three months later relabels the same USD 5.5bn as 'Contracted Revenue' and moves the lease start from August to October 2026.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998925000110/nov3_earningspressreleasex.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-08"
+  },
+  {
+   "a": "amazon",
    "b": "compass-datacenters",
    "curated": {
     "b": {
@@ -3014,6 +3200,34 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "amazon",
+   "b": "galaxy-digital",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "In the same market Cipher issued Amazon-guaranteed paper at 6.125% in February 2026 and Google-backstopped paper at 7.125% in November 2025, and Hut 8's River Bend bond priced at 6.192% with BBB- ratings.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "Galaxy Helios Data Centers II LLC closes USD 3,507m of 9.875% senior secured notes due 2031 at 99.500%, funding Phase II's 400 MW of utility capacity and 260 MW of critical IT — A 9.875% coupon is the price of a single unrated tenant. Compare Cipher's 6.125% on Amazon-guaranteed paper and 7.125% on Google-backstopped paper — 275 to 375 basis points of counterparty credit, priced.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000079/glxy-20260728.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-28"
   },
   {
    "a": "amazon",
@@ -3979,6 +4193,21 @@
   },
   {
    "a": "anthropic",
+   "b": "cipher-mining",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Named by Anthropic and Fluidstack as the end user behind the Barber Lake capacity; Cipher itself has never named it.",
+     "context": "Anthropic is described in this corpus, and in Fluidstack's own account, as the end user of the compute installed at Barber Lake — one of five campuses totalling about 1.4 GW of contracted critical IT that Fluidstack holds for Anthropic across TeraWulf, Cipher, Hut 8 and Meridian Arc.\n\nThe attribution does not come from Cipher. A full first-party sweep of Cipher's FY2025 10-K, its Q2 2026 10-Q, every business-update deck and its complete press-release archive found no mention of Anthropic at any point. Cipher's counterparty is Fluidstack USA II Inc. and its disclosure stops there. This edge is typed `other` rather than `customer` for that reason: the relationship is real in the ecosystem and absent from the subject's own record, and the two should not be conflated.",
+     "source": "https://northwiseproject.com/cifr-barber-lake-site/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "anthropic",
    "b": "coreweave",
    "curated": {
     "a": {
@@ -4500,6 +4729,91 @@
     }
    ],
    "last": "2026-06-10"
+  },
+  {
+   "a": "anthropic",
+   "b": "hut-8",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Direct partnership counterparty for up to 2,295 MW of AI data-centre infrastructure, with River Bend as the launch site.",
+     "context": "Hut 8 and Anthropic announced an AI infrastructure partnership on 17 December 2025, structured across tranches that establish a path from at least 245 MW to up to 2,295 MW: the River Bend launch of 245 MW of critical IT on 330 MW of Entergy Louisiana capacity; a right of first offer for up to 1,000 MW of additional IT capacity at River Bend; and up to 1,050 MW of optional capacity the two may jointly diligence and develop elsewhere in Hut 8's pipeline.\n\nThe partnership and the lease are separate instruments announced the same day, and the distinction matters for credit: the River Bend lease is between Hut 8 and a Fluidstack subsidiary, backstopped by Google, and Anthropic is not a party to it. Anthropic's own quoted framing is that the arrangement 'is an expansion of our existing work with Fluidstack and marks a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'.",
+     "source": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "at least 245 MW and up to 2,295 MW",
+     "via": "River Bend, Louisiana and the wider Hut 8 pipeline"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Counterparty to a separate AI infrastructure partnership covering up to 2,295 MW; the end user at River Bend, but not a party to the lease.",
+     "context": "Hut 8 announced two things on 17 December 2025 and the separation between them is deliberate. The **lease** is with a Fluidstack subsidiary. The **partnership** is with Anthropic and Fluidstack together, and is structured across tranches that establish a path from at least 245 MW to up to 2,295 MW: the River Bend launch of 245 MW of IT on 330 MW of utility capacity; a right of first offer for up to 1,000 MW of additional IT capacity at River Bend subject to power expansion; and up to 1,050 MW of optional capacity that Hut 8 and Anthropic may jointly diligence and develop elsewhere in the pipeline.\n\nAnthropic's own framing, quoted in the release, is that the arrangement 'is an expansion of our existing work with Fluidstack and marks a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027'. So Anthropic is a direct counterparty to Hut 8 for the programme and an indirect one for the building — a distinction that matters because the credit standing behind the rent is Google's, not Anthropic's.",
+     "source": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "at least 245 MW and up to 2,295 MW of AI data-centre infrastructure",
+     "project": "river-bend-campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The compute buyer this corpus's landlords, utilities and power vendors are building for: named in Amazon's, Google's, Microsoft's and NVIDIA's own releases as the counterparty for gigawatt-denominated silicon; the end user behind Fluidstack's Google-backstopped leases at TeraWulf, Cipher and Hut 8; the direct tenant at TeraWulf's Justified campus and, per Bloomberg, at Riot's Rockdale; ERock's largest-ever order (470 MW of gas gensets); the reported anchor at Nscale's Monarch campus and, through Lambda and NVIDIA, at Hut 8's Beacon Point; and the anchor tenant of Theseus, the Macquarie–GIC platform that will 'develop, own, operate, and lease' facilities to it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Sites, leases and power — TeraWulf Justified, Fluidstack's five campuses, Riot Rockdale, Hut 8 River Bend and Beacon Point, ERock generation, Theseus",
+     "date": "",
+     "text": "Where Anthropic itself, rather than a cloud, is the tenant, end user or equipment buyer: a 20-year, 401 MW lease at TeraWulf's Justified campus in Hawesville, Kentucky (about USD 19 billion initial term, up to about USD 33 billion with extensions, 'supported by an investment-grade credit'); the USD 50 billion Fluidstack programme whose leases the landlords file under Fluidstack's name with Google backstops; Riot's 191 MW build-to-suit at Rockdale, Texas (USD 9.1 billion over 20 years; tenant unnamed by Riot, Anthropic per Bloomberg); Hut 8's River Bend (245 MW for Anthropic via Fluidstack, up to 2,295 MW) and Beacon Point (704 MW, NVIDIA lease, Lambda operator, Anthropic buyer per CoinDesk); ERock's 470 MW RockBlock order; and Theseus, the Macquarie Asset Management–GIC platform formed to 'develop, own, operate, and lease' facilities to Anthropic.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-02",
+     "text": "Bloomberg (via TechXplore and Dealroom): a six-year, USD 35 billion compute deal with NVIDIA-backed Lambda, with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where NVIDIA holds the lease; NVIDIA's CFO: 'we know some will call this circular financing. We see it differently' — The chip vendor as lessee, the neocloud as installer, the lab as buyer — the most layered counterparty chain in the book.",
+     "src": "https://techxplore.com/news/2026-09-anthropic-35b-startup-nvidia.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Hut 8 announces an AI infrastructure partnership with Anthropic and Fluidstack: 'at least 245 megawatts and up to 2,295 MW' for Anthropic at River Bend, Louisiana and beyond, 'leveraging clusters operated by Fluidstack'; James Bradbury, Head of Compute: 'a new opportunity to collaborate with Hut 8 to bring additional capacity online by early 2027' — The first landlord release to name Anthropic as the end user behind a Fluidstack lease.",
+     "src": "https://www.prnewswire.com/news-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack-302644377.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**River Bend** in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to a Fluidstack subsidiary for fifteen years at USD 7.0bn with Google backstopping the rent and Anthropic as end user.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the node where three other dossiers meet — Entergy Louisiana is its utility at River Bend, Fluidstack is its tenant of record there, and Anthropic is the end user, the same chain that runs through TeraWulf and Cipher.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Announces an AI infrastructure partnership with Anthropic and Fluidstack for at least 245 MW and up to 2,295 MW of AI data-centre infrastructure — Two releases the same day, and the distinction between them is the point: the lease is with Fluidstack, the partnership is with Anthropic, and Anthropic is not a party to the lease. The 2,295 MW is the sum of the 245 MW launch, a 1,000 MW right of first offer at River Bend and up to 1,050 MW of optional capacity elsewhere.",
+     "src": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-02"
   },
   {
    "a": "anthropic",
@@ -5239,7 +5553,7 @@
     {
      "where": "Capabilities · HPC/AI colocation leasing (WULF Compute)",
      "date": "",
-     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "src": "",
      "from": "b"
     }
@@ -5812,6 +6126,43 @@
   },
   {
    "a": "applied-digital",
+   "b": "cipher-mining",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer miner-landlord with a larger critical IT book and a single neocloud anchor.",
+     "context": "Applied Digital contracts around 400 MW of critical IT with CoreWeave and reports roughly USD 11bn of contracted lease value on a base-term basis, closely comparable to Cipher's USD 11.4bn but concentrated on a single unrated tenant rather than split between a guaranteed hyperscaler and a backstopped neocloud.",
+     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Against TeraWulf, Core Scientific, Applied Digital, IREN and Hut 8, Cipher's differentiation is counterparty credit rather than scale.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "applied-digital",
    "b": "core-scientific",
    "curated": {
     "a": {
@@ -5902,6 +6253,73 @@
      "text": "BACKGROUND: Dallas-based; founded 2021 out of Applied Blockchain; CEO Wes Cummins (ex-B.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "applied-digital",
+   "b": "galaxy-digital",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer landlord, also anchored on CoreWeave, publishing a base-term aggregate where Galaxy publishes an annual rate.",
+     "context": "Applied Digital reports about USD 36bn of total contracted long-term lease value across roughly 1.4 GW of critical IT on a 15-year base-term basis, with about USD 86bn quoted including renewals. Galaxy's comparable disclosure does not exist: it publishes per-phase base-term figures and an all-phase average annual figure, so the two companies' headline numbers measure different things.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it is therefore two things at once: a landlord whose single tenant is CoreWeave — the same counterparty that anchors Core Scientific and Applied Digital — and a capital-markets participant that finances, advises and takes positions in the digital-asset businesses several other dossiers in this corpus describe.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Peers publish 15-year base-term aggregates (Hut 8 USD 26.6bn, Applied Digital about USD 36bn); Galaxy publishes an annual rate.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "Helios competes with Cipher's Texas campuses, Hut 8's Beacon Point, TeraWulf, Core Scientific and Applied Digital for ERCOT interconnection and for neocloud demand.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "applied-digital",
+   "b": "hut-8",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer landlord publishing a larger headline on a single neocloud anchor.",
+     "context": "Applied Digital reports about USD 36bn of total contracted long-term lease value across roughly 1.4 GW of critical IT, larger than Hut 8's USD 26.6bn across 949 MW, but concentrated on CoreWeave rather than spread across a Google-backstopped tenant and an investment-grade technology company.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+     "date": "",
+     "text": "Applied Digital reports more capacity (about 1.4 GW) and a larger headline (about USD 36bn), and Core Scientific more leased power (about 1.1 GW), but Hut 8 is alone in combining scale with an investment-grade counterparty on every megawatt and no equity given away for credit support.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -6011,7 +6429,7 @@
     {
      "where": "Capabilities · HPC/AI colocation leasing (WULF Compute)",
      "date": "",
-     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "src": "",
      "from": "b"
     }
@@ -10892,6 +11310,584 @@
    "last": "2026-08-14"
   },
   {
+   "a": "cipher-mining",
+   "b": "core-scientific",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The largest contracted book in the miner-landlord cohort, and the counter-case on counterparty credit.",
+     "context": "Core Scientific holds roughly 1.1 GW of leased customer power and more than USD 24bn of contracted value across CoreWeave and AMD — the largest book among the converted miners, against Cipher's 700 MW and USD 11.4bn. It is also the counter-case on the dimension Cipher leads: Core Scientific's counterparties are an unrated neocloud and a chip vendor, where Cipher's largest is guaranteed by Amazon.com, Inc.",
+     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Against TeraWulf, Core Scientific, Applied Digital, IREN and Hut 8, Cipher's differentiation is counterparty credit rather than scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Bernstein put it at 495 MW of critical IT across USD 11.4bn with 67% investment-grade-backed — the highest investment-grade share in the cohort — while Core Scientific carries roughly 1.1 GW and over USD 24bn, Hut 8 949 MW and USD 26.6bn, and TeraWulf about USD 13bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Bitcoin self-mining — one remaining site at Odessa",
+     "date": "",
+     "text": "Where TeraWulf, IREN and Core Scientific still report a mining segment alongside hosting, Cipher's Odessa is a single asset in run-off that it would rather lease than run.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "coreweave",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+     "context": "Cipher's FY2025 10-K names its competitive set explicitly: 'Several companies compete in this industry, including: CoreWeave, Digital Realty, Equinix, Vantage Data Centers and Aligned Data Centers.' CoreWeave is the only neocloud on that list and is the tenant at Core Scientific, Applied Digital and Galaxy Digital — so it is simultaneously Cipher's named competitor and the counterparty its peers depend on. No commercial relationship between Cipher and CoreWeave is disclosed by either party.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "crusoe",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "digital-realty",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+     "context": "One of five companies Cipher's FY2025 10-K names as competitors. The comparison is instructive for scale rather than similarity: Digital Realty operates 310 data centres with about 3.1 GW of in-place IT capacity and FY2025 revenue of USD 6,112.7m, against Cipher's three contracted campuses and USD 223.9m of revenue, none of it yet from leasing. What they compete for is the same hyperscale tenant demand and, increasingly, the same interconnection capacity.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "engie-north-america",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at an unnamed West Texas wind facility"
+    },
+    "a": {
+     "type": "supplier",
+     "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment — rather than as a sustainability arrangement.\n\nIt remains preliminary. No megawatt figure is under contract, no definitive agreement has been announced by either party, and the arrangement appears in none of Cipher's contracted-capacity disclosures: the 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only. ENGIE's own dossier lists a definitive Cipher agreement among the indicators that would move its co-location judgment from announced to real, which is the correct reading from both sides.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at a West Texas wind site"
+    }
+   },
+   "evid": [],
+   "last": "2025-05"
+  },
+  {
+   "a": "cipher-mining",
+   "b": "equinix",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+     "context": "Named among five competitors in Cipher's FY2025 10-K. Equinix is the retail-colocation leader and the largest data-centre REIT by revenue; the overlap with a single-tenant West Texas build-to-suit landlord is limited to the demand pool rather than the product.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "fluidstack",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
+     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "Barber Lake, Colorado City TX"
+    },
+    "a": {
+     "type": "customer",
+     "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
+     "context": "Fluidstack USA II Inc. leases all 300 gross MW / 207 critical IT MW of Barber Lake, taken in two tranches: 168 critical IT MW in September 2025 for about USD 3.0bn over ten years, and a further 39 critical IT MW in November 2025 for about USD 830m. Two five-year extension options would take the combined figure to about USD 9.0bn. The lease is modified-gross with annual escalators, and Cipher retains 100% ownership of the project.\n\nFluidstack is unrated, which is why the structure exists at all: Google LLC backstops USD 1.73bn of Fluidstack's lease obligations under a recognition agreement, and the 7.125% Cipher Compute notes amortise in line with that backstop rather than on a fixed schedule. Note the asymmetry — USD 1.73bn of support against about USD 3.8bn of contracted revenue covers roughly 46% of the base term, not the whole lease.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf (Lake Mariner and Abernathy) and Hut 8 (River Bend), which makes Fluidstack the single largest shared counterparty risk across the miner-landlord cohort in this corpus.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "AI hosting at Barber Lake"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The third is Barber Lake: 300 gross MW / 207 critical IT MW leased to Fluidstack USA II Inc.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "for ten years at about USD 3.8bn, with Google backstopping USD 1.73bn of Fluidstack's obligations in exchange for warrants over 24,178,576 shares at USD 0.01.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Fluidstack figure is 'contracted revenue' in a release headline, 'contract value' in that release's own bullets, and 'minimum contracted revenue' in the accompanying deck.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "**Barber Lake** (near Colorado City, Mitchell County): 300 gross MW supporting 207 MW of critical IT load, leased in two tranches to Fluidstack USA II Inc.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "on a 10-year base term for about USD 3.8bn combined, with two five-year extension options that would take it to about USD 9.0bn, and with Google LLC backstopping USD 1.73bn of Fluidstack's obligations.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-20",
+     "text": "Signs an additional 56 gross MW / 39 critical IT MW with Fluidstack for about USD 830m, taking Barber Lake to about USD 3.8bn over the initial term and about USD 9.0bn if all extensions are exercised; the Google backstop rises by USD 333m to USD 1.73bn — Fluidstack now leases the entire 300 MW of Barber Lake. The second tranche carries a higher stated site NOI margin (85-90%) than the first (80-85%), and the company later blends both to about 86%.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-13",
+     "text": "Cipher Compute LLC issues USD 1.4bn of 7.125% senior secured notes due 2030 at about 71% loan-to-cost, followed by a USD 333m tack-on on 24 November — Amortisation is rent-based — it tracks the Google backstop, which is itself determined by Fluidstack's rent payments. The debt is structurally tied to the credit support rather than to the asset.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-25",
+     "text": "Signs a 168 critical IT MW, ten-year AI hosting agreement with Fluidstack for about USD 3.0bn of contracted revenue, backstopped by Google to USD 1.4bn in exchange for warrants over about 24 million shares — about 5.4% pro forma — The transaction that put Cipher into the AI landlord business. The same release calls USD 3.0bn 'contracted revenue' in its headline and body and 'contract value' in its bullets, and the USD 7.0bn extension figure is total contract value contingent on two five-year options.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-20"
+  },
+  {
+   "a": "cipher-mining",
+   "b": "galaxy-digital",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Both let a large Texas campus to a single tenant, but Galaxy is a financial-services firm rather than a converted miner.",
+     "context": "Galaxy Digital's Helios campus in Dickens County and Cipher's three Texas campuses compete for the same ERCOT interconnection capacity and the same tenants, and both companies emerged from bitcoin mining sites. The comparison stops there. Galaxy is a digital-asset trading, asset-management and investment-banking firm classified by the SEC as a securities broker-dealer, for which the data centre is one segment among several; Cipher is a pure landlord whose only other business is a single mining site in run-off.\n\nThe tenant profiles are opposites in credit terms: Galaxy's Helios capacity is 100% let to CoreWeave, an unrated and highly levered AI-cloud operator, while roughly two-thirds of Cipher's contracted revenue carries an Amazon.com, Inc. guarantee.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Both let large Texas campuses to single tenants; the counterparty credit is opposite.",
+     "context": "Cipher Digital and Galaxy compete for ERCOT interconnection capacity and for the same tenant demand, and both campuses began as bitcoin mining sites. The credit structures are opposites: roughly two-thirds of Cipher's contracted revenue carries an Amazon.com, Inc. guarantee, while 100% of Galaxy's contracted capacity sits with unrated CoreWeave and carries no disclosed enhancement. The bond market prices the difference at 375 basis points — Cipher's Black Pearl notes at 6.125% against Galaxy's Helios Phase II notes at 9.875%.\n\nThe deeper difference is that Cipher is a pure landlord in run-off from mining, while Galaxy is a securities firm for which the campus is one segment of three.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "for ten years at about USD 3.8bn, with Google backstopping USD 1.73bn of Fluidstack's obligations in exchange for warrants over 24,178,576 shares at USD 0.01.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "FY2025 revenue USD 223.9m (+48.0% on FY2024's USD 151.3m) against a net loss of USD 822.2m and diluted EPS of USD (2.15) — a loss dominated by non-cash items rather than operations, principally a USD 450.4m fair-value loss on the embedded derivative in the 2031 convertible notes and a USD 410.3m fourth-quarter movement in the Google warrant liability.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Google backstop is separately qualified — the 10-K warns of enforcement delay 'notwithstanding the Google Backstop'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that reported GAAP results will remain uninformative about operations until at least FY2027, and that the Google warrant is the main reason.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "on a 10-year base term for about USD 3.8bn combined, with two five-year extension options that would take it to about USD 9.0bn, and with Google LLC backstopping USD 1.73bn of Fluidstack's obligations.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "Q2 2026: revenue USD 24.8m against consensus of roughly USD 31.7-32.5m, net loss USD 267.5m including a USD 150.5m non-cash warrant remeasurement; contracted revenue restated at about USD 11.4bn across 700 MW — The clearest quarter yet of the transition trough: mining revenue has collapsed and no lease revenue has begun. The GAAP loss is dominated by the Google warrant liability, which moves with Cipher's own share price and tells a reader nothing about operations.",
+     "src": "https://www.investing.com/news/company-news/cipher-digital-q2-2026-slides-show-114b-pipeline-amid-earnings-miss-93CH-4834719",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-16",
+     "text": "Hires Bill Blevins as Head of Grid Strategies, previously Director of Grid Coordination at ERCOT managing large-load interconnections — A direct hire of the regulator's own large-load gatekeeper at the moment four pipeline sites depend on ERCOT's batch process. Also hired Mohamed Abouelella as Head of Engineering, previously a Google engineering manager responsible for 5 GW+ of data centres.",
+     "src": "https://cipherdigital.com/company/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "Black Pearl Compute LLC prices USD 2.0bn of 6.125% senior secured notes due 2031 with about USD 13bn of book interest, roughly 6.5x oversubscribed; surplus funding reimburses about USD 233m of capex — An Amazon-guaranteed rent stream priced at 6.125% against a 7.125% coupon on the Google-backstopped Barber Lake paper three months earlier. The 100 basis points is the market pricing the difference between a guarantee and a backstop.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000007/cipherdigital_businessup.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-20",
+     "text": "Signs an additional 56 gross MW / 39 critical IT MW with Fluidstack for about USD 830m, taking Barber Lake to about USD 3.8bn over the initial term and about USD 9.0bn if all extensions are exercised; the Google backstop rises by USD 333m to USD 1.73bn — Fluidstack now leases the entire 300 MW of Barber Lake. The second tranche carries a higher stated site NOI margin (85-90%) than the first (80-85%), and the company later blends both to about 86%.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-13",
+     "text": "Cipher Compute LLC issues USD 1.4bn of 7.125% senior secured notes due 2030 at about 71% loan-to-cost, followed by a USD 333m tack-on on 24 November — Amortisation is rent-based — it tracks the Google backstop, which is itself determined by Fluidstack's rent payments. The debt is structurally tied to the credit support rather than to the asset.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-25",
+     "text": "Signs a 168 critical IT MW, ten-year AI hosting agreement with Fluidstack for about USD 3.0bn of contracted revenue, backstopped by Google to USD 1.4bn in exchange for warrants over about 24 million shares — about 5.4% pro forma — The transaction that put Cipher into the AI landlord business. The same release calls USD 3.0bn 'contracted revenue' in its headline and body and 'contract value' in its bullets, and the USD 7.0bn extension figure is total contract value contingent on two five-year options.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-04"
+  },
+  {
+   "a": "cipher-mining",
+   "b": "hut-8",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The other half of the aggregation behind the widely repeated but unreconciled '>USD 19bn combined' figure.",
+     "context": "Hut 8 and Cipher are the two companies named in the only traceable source for the '>USD 19 billion combined' claim that circulates about this cohort — a 27 May 2026 trade piece whose own components (about USD 16.8bn for Hut 8 and about USD 9.3bn for Cipher) sum to USD 26.1bn rather than USD 19bn. Neither company publishes that combined figure.\n\nOn substance the two are the closest structural pair in the cohort after TeraWulf: both fund campuses with non-recourse, investment-grade-rated project bonds ring-fenced from the parent, and both lease to Fluidstack with Google support at one campus. They diverge sharply at the parent: Cipher carries USD 1.47bn of convertible notes at the corporate level that depend on corporate liquidity rather than lease cash flow, while Hut 8 carries about USD 159.3m of parent recourse debt against USD 1.3bn of cash and bitcoin. Google took warrants at Cipher and none at Hut 8.",
+     "source": "https://www.globaldatacenterhub.com/p/cipher-digitals-114b-backlog-two",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The closest structural comparator — same ring-fenced project-debt model, opposite parent-level risk.",
+     "context": "Hut 8 and Cipher Digital both fund campuses with non-recourse, investment-grade-rated, campus-level project bonds. The divergence is at the parent: Cipher carries USD 1.47bn of convertible notes at the corporate level that depend on corporate liquidity rather than lease cash flow, while Hut 8 carries about USD 159.3m of parent recourse debt against roughly USD 1.3bn of cash and bitcoin.\n\nThe two are also the pair named in the only traceable source for the widely repeated 'over USD 19 billion combined' figure — a 27 May 2026 trade piece whose own components, about USD 16.8bn for Hut 8 and about USD 9.3bn for Cipher, sum to USD 26.1bn rather than USD 19bn. Neither company publishes that combined figure, and Hut 8's own book has since reached USD 26.6bn on its own.",
+     "source": "https://www.globaldatacenterhub.com/p/quarterly-earnings-cipher-and-hut",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Against TeraWulf, Core Scientific, Applied Digital, IREN and Hut 8, Cipher's differentiation is counterparty credit rather than scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Bernstein put it at 495 MW of critical IT across USD 11.4bn with 67% investment-grade-backed — the highest investment-grade share in the cohort — while Core Scientific carries roughly 1.1 GW and over USD 24bn, Hut 8 949 MW and USD 26.6bn, and TeraWulf about USD 13bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "iren",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The vertically integrated alternative — IREN operates the compute it houses rather than leasing space and power.",
+     "context": "IREN sits at the opposite end of the vertical-integration spectrum from Cipher. Where Cipher leases turnkey space and power and installs nothing, IREN operates GPU clusters as a cloud business alongside its landlord role, anchored by a USD 9.7bn Microsoft contract. The Futurum Group's contracted-revenue-per-megawatt measure puts IREN highest in the cohort at about USD 40m per MW, against a figure of roughly USD 23m per MW derivable from Cipher's own USD 11.4bn across 495 MW of critical IT — a gap that reflects business model and contract term as much as pricing power.",
+     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Against TeraWulf, Core Scientific, Applied Digital, IREN and Hut 8, Cipher's differentiation is counterparty credit rather than scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Bitcoin self-mining — one remaining site at Odessa",
+     "date": "",
+     "text": "Where TeraWulf, IREN and Core Scientific still report a mining segment alongside hosting, Cipher's Odessa is a single asset in run-off that it would rather lease than run.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Named by Cipher as a key engineering, construction and procurement partner for Black Pearl and Barber Lake.",
+     "context": "Cipher's FY2025 10-K states that it has 'secured a key partnership with Quanta Services, Inc.' as 'a key engineering, construction and procurement partner for our development of sites like Black Pearl and Barber Lake'. No contract value, scope split or duration is disclosed on either side, and Quanta's own dossier does not mention Cipher — so this is recorded from Cipher's side only, at the level of specificity the source supports.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active",
+     "via": "Engineering, procurement and construction"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "terawulf",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
+     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
+     "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
+     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it sits beside TeraWulf, IREN, Core Scientific, Applied Digital and Crusoe on the landlord side, and it is the counterparty that anchors two of the corpus's most-referenced credit structures at once — the Fluidstack tenancy with a Google backstop that also appears at TeraWulf and Hut 8, and a directly Amazon.com-guaranteed lease that no other miner-landlord in the corpus holds.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No other miner-landlord in this corpus holds a directly investment-grade-guaranteed lease — TeraWulf, Hut 8, Core Scientific, Applied Digital and Galaxy all sit behind Fluidstack or CoreWeave.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Against TeraWulf, Core Scientific, Applied Digital, IREN and Hut 8, Cipher's differentiation is counterparty credit rather than scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted hyperscale data-centre leases — 700 MW gross across three Texas campuses",
+     "date": "",
+     "text": "Bernstein put it at 495 MW of critical IT across USD 11.4bn with 67% investment-grade-backed — the highest investment-grade share in the cohort — while Core Scientific carries roughly 1.1 GW and over USD 24bn, Hut 8 949 MW and USD 26.6bn, and TeraWulf about USD 13bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Bitcoin self-mining — one remaining site at Odessa",
+     "date": "",
+     "text": "Where TeraWulf, IREN and Core Scientific still report a mining segment alongside hosting, Cipher's Odessa is a single asset in run-off that it would rather lease than run.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-04",
+     "text": "Bernstein initiates coverage of TeraWulf and Cipher at Outperform with price targets of USD 36 and USD 32, calling them 'the power landlords of AI' and projecting Cipher's AI revenue from USD 19m in 2026 to USD 1.2bn in 2030 — The first sell-side attempt to size the cohort: 6 GW contracted across 17 deals worth over USD 110bn in two years, about 10% of US data centres under construction. Bernstein measures Cipher at 495 MW of critical IT and USD 11.4bn with 67% investment-grade backing.",
+     "src": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-04"
+  },
+  {
+   "a": "cipher-mining",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named by Cipher in its own FY2025 10-K competitor list.",
+     "context": "Named among five competitors in Cipher's FY2025 10-K. Vantage is a sponsor-owned hyperscale developer competing for the same build-to-suit hyperscaler mandates that Cipher won at Black Pearl and Stingray.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cipher-mining",
+   "b": "vistra",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Power and substation counterparty at Odessa through its Luminant retail arm, on a take-or-pay contract to at least July 2027.",
+     "context": "Odessa runs on a fixed-price power purchase agreement with Luminant ET Services Company LLC at about 2.8 cents per kWh — raised from about 2.7 cents in October 2025 and expressly subject to tariff-related increases — with access to at least July 2027 and automatic annual renewal absent six months' notice. The contract is take-or-pay: Cipher must accept and pay for at least 66.7% of the full 207 MW each contractual year, and Luminant holds curtailment rights in each year.\n\nThe relationship extends to the site itself. The combined Luminant lease covering land and substation, which commenced in November 2022, is classified as a finance lease with monthly instalments totalling USD 19.7m undiscounted over the four years from July 2023, and at the end of the term the substation is sold back to Vistra Operations Company, LLC at a price set by secondary-market bids. Surplus contracted power is sold back into ERCOT through Luminant, producing USD 7.9m of power sales in FY2025.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "active",
+     "since": "2022-11",
+     "scale": "207 MW at ~2.8 c/kWh; minimum take of 66.7% of capacity",
+     "via": "Luminant ET Services fixed-price power agreement"
+    }
+   },
+   "evid": [],
+   "last": "2022-11"
+  },
+  {
    "a": "clearway-energy",
    "b": "constellation-energy",
    "curated": {
@@ -10948,6 +11944,20 @@
     }
    ],
    "last": "2026-01-15"
+  },
+  {
+   "a": "clearway-energy",
+   "b": "hut-8",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "E. Stanley O'Neal, former chairman and chief executive of Merrill Lynch, becomes Chair of the board, succeeding William Tai — A capital-markets chair for a company that has become a project-finance issuer. O'Neal also sits on the board of Clearway Energy, another dossier in this corpus.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926049711/hut-20260611xdef14a.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-11"
   },
   {
    "a": "clearway-energy",
@@ -11241,6 +12251,43 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "galaxy-digital",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named alongside Compass in the Texas Governor's data-centre standards release; both operate large Texas campuses.",
+     "context": "Compass Datacenters and Galaxy were named together, with Montera Infrastructure, in the Texas Governor's release of 13 August 2026 announcing commitments to comply with his data-centre standards — paying for electric infrastructure, reusing their own water, reducing electricity costs, avoiding residential neighbourhoods and taking no taxpayer incentives.\n\nThe release names no legal entity beyond the bare word 'Galaxy'. The identification is Galaxy Digital Inc., established from Texas Department of Licensing and Regulation construction records that list **Galaxy Helios II LLC of 300 Vesey Street, 13th Floor, New York** — Galaxy Digital's own registered head office — as owner of the Helios 2 and Helios 3 projects at 1003 FM 193, Afton, Dickens County. No other Texas data-centre developer using the name was found.\n\nThe two compete for Texas interconnection capacity and hyperscale demand from opposite starting points: Compass is a sponsor-owned build-to-suit landlord, Galaxy a securities broker-dealer whose campus is one segment of three.",
+     "source": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named together in the Texas Governor's data-centre standards release of 13 August 2026.",
+     "context": "Galaxy and Compass Datacenters were named together, with Montera Infrastructure, in the Texas Governor's release announcing commitments to comply with his data-centre standards. The release identifies Galaxy only by that single word; the identification as Galaxy Digital Inc. rests on Texas construction records naming Galaxy Helios II LLC of 300 Vesey Street, New York as owner of the Helios 2 and Helios 3 projects in Dickens County, and on the absence of any other Texas data-centre developer of that name.\n\nBoth compete for ERCOT interconnection capacity and hyperscale demand, from opposite kinds of business: Compass is a sponsor-owned build-to-suit landlord, Galaxy a securities broker-dealer for which the campus is one segment of three.",
+     "source": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-13",
+     "text": "Governor Abbott announces that Galaxy (Galaxy Digital Inc., the Helios campus in Dickens County), Compass Datacenters and Montera Infrastructure commit to comply with his data-center standards (pay for electric infrastructure, reuse own water, reduce electricity costs, avoid residential neighbourhoods, no taxpayer incentives) — Compass traded the Ellis County abatement it had already lost for a first-mover seat at the standard-setting table in ERCOT's largest developer market. The release names only 'Galaxy' with no legal entity; it is Galaxy Digital Inc., established from Texas construction records that name Galaxy Helios II LLC of 300 Vesey Street, New York — Galaxy Digital's own head office — as owner of the Helios 2 and Helios 3 projects at Afton, Dickens County.",
+     "src": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-13",
+     "text": "The Governor of Texas names Galaxy, Compass Datacenters and Montera Infrastructure as committing to comply with his data-centre standards — The release names no legal entity beyond the bare word 'Galaxy'. The identification rests on corroboration — Texas construction records list Galaxy Helios II LLC at Galaxy Digital's own 300 Vesey Street address as the owner of the Helios 2 and Helios 3 projects in Dickens County.",
+     "src": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-13"
   },
   {
    "a": "compass-datacenters",
@@ -12158,6 +13205,66 @@
   },
   {
    "a": "core-scientific",
+   "b": "galaxy-digital",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The other large landlord whose contracted capacity depends on CoreWeave.",
+     "context": "Core Scientific and Galaxy share the same principal tenant. Core Scientific's CoreWeave contract runs about USD 10.2bn over twelve years alongside an AMD arrangement above USD 14bn, giving it a second anchor Galaxy does not have. For the ecosystem the more important point is the shared exposure: a CoreWeave credit event would reach Core Scientific, Applied Digital and Galaxy at once.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it is therefore two things at once: a landlord whose single tenant is CoreWeave — the same counterparty that anchors Core Scientific and Applied Digital — and a capital-markets participant that finances, advises and takes positions in the digital-asset businesses several other dossiers in this corpus describe.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "Helios competes with Cipher's Texas campuses, Hut 8's Beacon Point, TeraWulf, Core Scientific and Applied Digital for ERCOT interconnection and for neocloud demand.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "core-scientific",
+   "b": "hut-8",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer converted miner with more leased power but an unrated counterparty set.",
+     "context": "Core Scientific holds roughly 1.1 GW of leased customer power across CoreWeave and AMD with more than USD 24bn of contracted value — more power than Hut 8 and a larger headline, against counterparties that are an unrated neocloud and a chip vendor rather than an AA- or higher rated technology company.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+     "date": "",
+     "text": "Applied Digital reports more capacity (about 1.4 GW) and a larger headline (about USD 36bn), and Core Scientific more leased power (about 1.1 GW), but Hut 8 is alone in combining scale with an investment-grade counterparty on every megawatt and no equity given away for credit support.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "core-scientific",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -12200,7 +13307,7 @@
     {
      "where": "Capabilities · HPC/AI colocation leasing (WULF Compute)",
      "date": "",
-     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "src": "",
      "from": "b"
     }
@@ -12244,6 +13351,102 @@
   },
   {
    "a": "coreweave",
+   "b": "galaxy-digital",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "The sole tenant of the entire contracted capacity at Helios, across three 15-year leases.",
+     "context": "CoreWeave leases all 800 MW of gross power and 526 MW of critical IT load currently contracted at Helios, in three phases on identical terms: 15-year base leases with two five-year extension options, a 3.0-5.0% CPI-linked escalator and a near-triple-net structure. Phase I (133 MW critical IT) was fully delivered by 30 June 2026 and is expected to run at about USD 80m of quarterly leasing revenue from Q3 2026; Phase II (260 MW, lease dated 8 August 2025) delivers from Q2 2027; Phase III (133 MW, lease entered January 2026) in 2028.\n\nThe exposure is total and Galaxy discloses it as such: 'We expect that our AI/HPC data center business will initially be highly dependent on a single customer, CoreWeave, and may continue to derive a significant portion of the revenue of our Data Centers operating business segment from such single customer for the foreseeable future.' The initial contract expires in 2040, and the tenant may terminate in defined circumstances including a failure to hit construction milestones.\n\nNo credit enhancement behind the tenant is disclosed — no parent guarantee, no third-party backstop. That is the material difference from Cipher (Amazon.com, Inc. guaranty) and Hut 8 (a Google backstop at River Bend), and it is visible in the pricing: Galaxy's Phase II notes carry a 9.875% coupon against Cipher's 6.125% on Amazon paper.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm",
+     "status": "active",
+     "since": "2025-04",
+     "scale": "800 MW gross / 526 MW critical IT across three phases; >USD 1.2bn anticipated average annual revenue",
+     "via": "Helios data-centre campus, Dickens County, Texas"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its Helios campus in Dickens County, Texas holds 1.63 GW of ERCOT-approved power, of which **800 MW gross / 526 MW of critical IT load is leased to CoreWeave and nothing else is leased to anyone**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the ecosystem it is therefore two things at once: a landlord whose single tenant is CoreWeave — the same counterparty that anchors Core Scientific and Applied Digital — and a capital-markets participant that finances, advises and takes positions in the digital-asset businesses several other dossiers in this corpus describe.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: 1.63 GW is ERCOT-approved, LLIS-complete and utility-contracted; **800 MW gross / 526 MW of critical IT load is leased to CoreWeave**; and 133 MW of critical IT was delivered at 30 June 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Q2 2026 10-Q added an accounting policy that did not exist in the FY2025 10-K, classifying the CoreWeave arrangements as **operating leases under ASC 842**, with lease income recognised straight-line and consideration allocated between lease and non-lease components.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Galaxy's tenant is CoreWeave, unrated and levered, and no credit enhancement behind the lease is disclosed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "Galaxy publishes three power numbers that must not be conflated: **1.63 GW is ERCOT-approved and utility-contracted**, **800 MW gross / 526 MW critical IT is leased to CoreWeave**, and **133 MW of critical IT was delivered and in service at 30 June 2026**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "The CoreWeave capacity comes in three phases on identical terms — 15-year base leases with two five-year extension options, a 3.0-5.0% CPI-linked escalator, and a near-triple-net structure in which the tenant pays operating costs but Galaxy provides the personnel.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-06",
+     "text": "Completes Phase I of Helios, delivering approximately 200 MW of gross power and 133 MW of critical IT load to CoreWeave — The 1.52:1 gross-to-critical-IT ratio published here is the number that makes every '800 MW' headline about this campus readable.",
+     "src": "https://www.galaxy.com/newsroom/galaxy-completes-phase-i-of-its-helios-data-center-campus",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08",
+     "text": "CoreWeave exercises its option for Phase II (260 MW critical IT), with the Phase II lease dated 8 August 2025, and its final option for Phase III (133 MW) — With Phase III's lease entered in January 2026, the whole of the currently approved 800 MW of gross power is let to one tenant.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-23",
+     "text": "CoreWeave commits to Phase II, taking Helios from 133 MW to a contemplated 393 MW of critical IT load — Structure Research's contemporaneous description — '133MW of critical IT load (supported by a 200MW private substation)' — is the cleanest external formulation of the gross-versus-IT distinction on this campus.",
+     "src": "https://www.galaxy.com/newsroom/galaxy-announces-commitment-with-coreweave",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-06"
+  },
+  {
+   "a": "coreweave",
    "b": "google",
    "curated": {
     "a": {
@@ -12268,6 +13471,20 @@
      "text": "SemiAnalysis ClusterMAX: the only Platinum-tier GPU cloud (AWS/Google/Lambda rated Bronze in the same system) — operational quality, not price, is the differentiator.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "coreweave",
+   "b": "hut-8",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Hut 8's own USD 26.6bn across 949 MW implies about USD 28m per MW, close to CoreWeave's, but the terms behind each company's figure are not held constant.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -13361,6 +14578,21 @@
   },
   {
    "a": "crusoe",
+   "b": "galaxy-digital",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Private energy-first developer competing for the same Texas power positions.",
+     "context": "Crusoe builds and operates AI campuses on an energy-first thesis and discloses roughly 4.9 GW contracted across a much larger pipeline, but publishes no contract values. It competes with Galaxy for ERCOT capacity and for neocloud tenants without being comparable on any published financial measure.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "crusoe",
    "b": "ge-vernova",
    "curated": {
     "a": {
@@ -13489,6 +14721,21 @@
      "from": "b"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "crusoe",
+   "b": "hut-8",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Private energy-first developer competing for the same power positions without publishing contract values.",
+     "context": "Crusoe discloses roughly 4.9 GW contracted across a much larger pipeline but no contract values, so it competes with Hut 8 for power and tenants while being uncomparable on any published financial measure.",
+     "source": "https://insights4vc.substack.com/p/bitcoin-minings-ai-pivot-2026-thesis",
+     "status": "active"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {
@@ -14642,6 +15889,20 @@
   },
   {
    "a": "cyrusone",
+   "b": "galaxy-digital",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Galaxy sits in the `developer` category beside Digital Realty, CyrusOne, Compass, EdgeCore, Prime and the converted miners, and it competes with them for ERCOT interconnection capacity and for the same neocloud and hyperscaler demand.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
    "b": "mitsubishi-electric",
    "curated": {
     "a": {
@@ -15419,6 +16680,20 @@
      "text": "Turn-Key Flex pre-commissioned suites in a distributed-redundant design that can be subdivided; Data Center Services covering on-demand and scheduled remote work (tape swaps, hard and soft reboots, patch-cord installation, equipment transport, KVM output, cross-connect loopback verification, rack-and-stack and structured cabling, maintenance-window support) with more than ten services offered 24 hours a day, 365 days a year; and High-Density Colocation, the AI product, which the company states starts at 30 kW per cabinet and scales to multi-megawatt deployments at up to 150 kW per cabinet using Air-Assisted Liquid Cooling and Direct Liquid Cooling.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "galaxy-digital",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Galaxy sits in the `developer` category beside Digital Realty, CyrusOne, Compass, EdgeCore, Prime and the converted miners, and it competes with them for ERCOT interconnection capacity and for the same neocloud and hyperscaler demand.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -18507,6 +19782,76 @@
     }
    ],
    "last": "2026-09-03"
+  },
+  {
+   "a": "entergy",
+   "b": "hut-8",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Large-load customer at River Bend, taking 330 MW from Entergy Louisiana with first service targeted for Q2 2027.",
+     "context": "Hut 8's River Bend campus in West Feliciana Parish takes 330 MW of Entergy Louisiana utility capacity, available from 1 July 2026 and scalable to 1,000 MW, behind 245 MW of contracted critical IT let to a Fluidstack subsidiary with a Google backstop. Entergy plans new transmission for a roughly 345 MW West Feliciana load, and the campus benefits from transmission line capacity upgraded to about 1,045 MVA.\n\nNote the naming trap this creates in the corpus: **River Bend is also the name of Entergy's nuclear station in the same parish**, which appears elsewhere in this dossier and in `sargent-lundy`. The two are distinct assets that share a place name.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "status": "active",
+     "scale": "330 MW initial utility capacity, scalable to 1,000 MW",
+     "via": "Electric service at the River Bend campus, West Feliciana Parish"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Utility counterparty at River Bend, providing 330 MW available from 1 July 2026 with a path to 1,000 MW.",
+     "context": "Entergy Louisiana (rated BBB+ by S&P and Baa2 by Moody's) provides the 330 MW of utility capacity behind River Bend's 245 MW of contracted critical IT, in MISO, with transmission line capacity upgraded to about 1,045 MVA and roughly 3.7 GW of generation across four nearby facilities. The campus sits on 627 owned acres with riparian rights adjacent to the Mississippi River.\n\nThe regulatory context is live and contested. Louisiana's 'lightning amendment', approved in December 2025, created a fast-track approval process for large-load infrastructure requiring a 15-year supply agreement and at least 50% of infrastructure capital cost borne by the data centre, while waiving RFP requirements; the Union of Concerned Scientists argues ratepayers could still fund 50-75% of capital costs because gas plants depreciate over thirty years while the contracts run fifteen. No LPSC docket specific to Hut 8 or River Bend was identified — the named Entergy Louisiana large-load dockets concern Meta and Westlake.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d2.htm",
+     "status": "active",
+     "scale": "330 MW of utility capacity, scalable to 1,000 MW",
+     "via": "Electric service at River Bend",
+     "project": "river-bend-campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the sellers in this corpus it is four different counterparties: for turbine competitors, a market closed for the decade by the exclusivity agreement; for balance-of-plant, transformer and switchgear suppliers, ten approved combined-cycle units and more than a thousand miles of new transmission whose EPCs — Sargent & Lundy and TIC at Orange County — are named only for the first; for battery sellers, operating-company RFPs (Louisiana's 2025 BESS solicitation, Mississippi's and Arkansas's renewables-and-storage RFPs) and the utility-owned Cypress project, with no supplier yet named on any owned system; and for the hyperscalers and developers in this file — Meta, Google, Amazon Web Services and Hut 8 by name — the counterparty whose 15- to 20-year ESAs, minimum bills sized to the revenue requirement, parent guaranties and contributions in aid of construction are the price of a 2028 in-service date.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Q3 2026 — Mississippi storm securitization filing; Q3 2026 — Orange County in service and its $150.4M rider; Q2 2027 — Hut 8's first 330 MW and whatever plant is filed for the campus's growth to 1,000 MW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Hut 8 selects Entergy Louisiana for a $10B AI campus at River Bend, West Feliciana Parish — 330 MW initial utility capacity, scalable to 1,000 MW, Fluidstack as tenant with a Google backstop, operations from Q2 2027 — A second Louisiana hyperscale load, sized in utility megawatts, with no plant filed for it yet.",
+     "src": "https://www.entergy.com/news/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**River Bend** in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to a Fluidstack subsidiary for fifteen years at USD 7.0bn with Google backstopping the rent and Anthropic as end user.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the node where three other dossiers meet — Entergy Louisiana is its utility at River Bend, Fluidstack is its tenant of record there, and Anthropic is the end user, the same chain that runs through TeraWulf and Cipher.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+     "date": "",
+     "text": "**River Bend** (West Feliciana Parish, Louisiana; MISO; Entergy Louisiana): 245 MW of critical IT supported by 330 MW of utility capacity, leased to a subsidiary of Fluidstack Ltd.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-17"
   },
   {
    "a": "entergy",
@@ -22509,6 +23854,127 @@
   },
   {
    "a": "fluidstack",
+   "b": "hut-8",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Landlord at River Bend under a 15-year triple-net lease, with Google backstopping Fluidstack's rent.",
+     "context": "Hut 8 Corp., through Hut 8 DC LLC, is Fluidstack's landlord at River Bend: 245 MW of critical IT supported by 330 MW of Entergy Louisiana capacity, on a 15-year triple-net lease with a 3.0% annual escalator worth USD 7.0bn over the base term and about USD 17.7bn if all three five-year renewal options are exercised. A right of first offer covers up to 1,000 MW of additional IT capacity at the site.\n\nGoogle backstops the rent and related pass-through obligations, with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue — and, unlike at TeraWulf and Cipher, **took no warrants and no equity in the landlord**. That is what this dossier's own summary records when it says the backstops were paid for with penny warrants in two of the landlords rather than three.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "245 MW critical IT on 330 MW of utility capacity; USD 7.0bn base-term contract value",
+     "via": "River Bend, West Feliciana Parish LA"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Lessee of record under the 15-year triple-net River Bend lease, with Google backstopping its payment obligations.",
+     "context": "A subsidiary of Fluidstack Ltd. is the tenant under Hut 8's 15-year triple-net lease for 245 MW of critical IT capacity at River Bend, supported by 330 MW of Entergy Louisiana utility capacity. The base-term contract value is USD 7.0bn inclusive of a 3.0% annual escalator, with expected cumulative NOI of USD 6.9bn — an average of USD 454m a year — and three five-year renewal options that would take contract value to about USD 17.7bn.\n\nFluidstack is unrated, and the lease is bankable because Google LLC backstops the rent and related pass-through obligations. Hut 8 and Fluidstack also expect to execute an Operations Services Agreement backed by a further Google backstop of payment obligations.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf and Cipher. Hut 8's version differs in one material respect: Google took no warrants and no equity here.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "245 MW critical IT; USD 7.0bn base-term contract value",
+     "via": "River Bend data centre campus",
+     "project": "river-bend-campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Fluidstack is the tenant-of-record, not the owner, of roughly 1.4 GW of contracted critical IT load across five US campuses being built for Anthropic — Lake Mariner NY (378 MW, TeraWulf), Abernathy TX (168 MW, the joint venture it now controls), Barber Lake TX (207 MW, Cipher), River Bend LA (245 MW, Hut 8) and New Lebanon IN (430 MW, Meridian Arc) — and every one of those leases is bankable only because Google stands behind Fluidstack's rent with more than USD 6 billion of backstops and guarantees, paid for with penny warrants in two of the landlords; its own equity is USD 2.6 billion of total funding, USD 830 million of it a January 2026 Series A at a USD 7.5 billion valuation, plus a reported but unannounced USD 1.5 billion round at USD 18 billion in September 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The clearest case in the corpus of the credit-substitution layer between a frontier lab and the power landlords: TeraWulf, Cipher and Hut 8 sign 10–25-year leases with a Fluidstack subsidiary, Google's recognition agreements make Google the tenant of last resort, and the end user — Anthropic — is named by the landlords only in separate partnership releases or not at all.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Anthropic signed 401 MW at Hawesville directly with TeraWulf 'supported by an investment-grade credit', with no Fluidstack entity in the lease; Anthropic has since contracted directly or through other operators with Nscale, Lambda, Riot and Hut 8's Beacon Point.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data-centre development and operations for frontier labs (the tenant-operator model)",
+     "date": "",
+     "text": "The buildings belong to the landlord (TeraWulf, Cipher, Hut 8, Meridian Arc) and the chips increasingly to a financing vehicle; Fluidstack sells speed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-25",
+     "text": "Hut 8 FY2025 results 8-K restates the River Bend 245 MW, USD 7.0 billion Fluidstack lease with a Google backstop, confirms the Anthropic partnership and says project financing of up to 85% loan-to-cost with J.P. Morgan and Goldman Sachs is expected — Financial close at River Bend is still a future event; the lease exists, the debt does not yet.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926019393/hut-20260225xex99d1.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Hut 8 signs a 15-year, USD 7.0 billion triple-net lease with Fluidstack for 245 MW at River Bend, Louisiana (Google backstop on rent and pass-throughs, ROFO for 1,000 MW more) and announces a partnership with Anthropic and Fluidstack for 'at least 245 megawatts and up to 2,295 MW'; Entergy Louisiana to supply 330 MW of utility capacity — The first lease where the landlord names Anthropic as the end user on the same day; Louisiana grants sales-tax rebates under Act 730.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**River Bend** in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to a Fluidstack subsidiary for fifteen years at USD 7.0bn with Google backstopping the rent and Anthropic as end user.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the node where three other dossiers meet — Entergy Louisiana is its utility at River Bend, Fluidstack is its tenant of record there, and Anthropic is the end user, the same chain that runs through TeraWulf and Cipher.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Cipher gave Google warrants over about 5.4% of itself and TeraWulf about 14% for the same service on the same Fluidstack template.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+     "date": "",
+     "text": "**River Bend** (West Feliciana Parish, Louisiana; MISO; Entergy Louisiana): 245 MW of critical IT supported by 330 MW of utility capacity, leased to a subsidiary of Fluidstack Ltd.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Signs a 15-year, 245 MW IT triple-net lease at River Bend with a Fluidstack subsidiary at a total contract value of USD 7.0bn, with Google backstopping all rent and related pass-through obligations — The structural difference from every peer: **no warrants and no equity to Google**. Benchmark's analyst identified Hut 8's ability to keep full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the differentiator, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns nothing.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Announces an AI infrastructure partnership with Anthropic and Fluidstack for at least 245 MW and up to 2,295 MW of AI data-centre infrastructure — Two releases the same day, and the distinction between them is the point: the lease is with Fluidstack, the partnership is with Anthropic, and Anthropic is not a party to the lease. The 2,295 MW is the sum of the 245 MW launch, a 1,000 MW right of first offer at River Bend and up to 1,050 MW of optional capacity elsewhere.",
+     "src": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+     "from": "b"
+    }
+   ],
+   "last": "2026-02-25"
+  },
+  {
+   "a": "fluidstack",
    "b": "iren",
    "curated": {
     "a": {
@@ -23178,6 +24644,170 @@
     }
    ],
    "last": "2026-02-24"
+  },
+  {
+   "a": "galaxy-digital",
+   "b": "google",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "In the same market Cipher issued Amazon-guaranteed paper at 6.125% in February 2026 and Google-backstopped paper at 7.125% in November 2025, and Hut 8's River Bend bond priced at 6.192% with BBB- ratings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "Galaxy Helios Data Centers II LLC closes USD 3,507m of 9.875% senior secured notes due 2031 at 99.500%, funding Phase II's 400 MW of utility capacity and 260 MW of critical IT — A 9.875% coupon is the price of a single unrated tenant. Compare Cipher's 6.125% on Amazon-guaranteed paper and 7.125% on Google-backstopped paper — 275 to 375 basis points of counterparty credit, priced.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000079/glxy-20260728.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-28"
+  },
+  {
+   "a": "galaxy-digital",
+   "b": "hitt",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "General contractor on Helios Phase II, mobilised on site since April 2026.",
+     "context": "HITT Contracting is the general contractor for Helios Phase II — the 400 MW gross / 260 MW critical IT project financed by the USD 3.507bn senior secured notes — and has been mobilised on site since April 2026, with earthwork complete and structural foundations under way as of the Q2 2026 report. Data-hall deliveries are expected to commence in Q2 2027. HITT's own dossier makes no claim about Galaxy, so this edge is recorded from Galaxy's side only.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000084/glxy-20260630xpressrelease.htm",
+     "status": "active",
+     "since": "2026-04",
+     "via": "General contractor, Helios Phase II"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "Phase I (133 MW IT / ~200 MW gross) delivered its first data hall in April 2026 and was complete by quarter end; Phase II (260 MW IT / ~400 MW gross, lease dated 8 August 2025) begins delivering in Q2 2027 with HITT Contracting as general contractor; Phase III (133 MW IT / ~200 MW gross, lease entered January 2026) is due in 2028.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04"
+  },
+  {
+   "a": "galaxy-digital",
+   "b": "hut-8",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
+     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
+     "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
+     "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Peers publish 15-year base-term aggregates (Hut 8 USD 26.6bn, Applied Digital about USD 36bn); Galaxy publishes an annual rate.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "In the same market Cipher issued Amazon-guaranteed paper at 6.125% in February 2026 and Google-backstopped paper at 7.125% in November 2025, and Hut 8's River Bend bond priced at 6.192% with BBB- ratings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "Helios competes with Cipher's Texas campuses, Hut 8's Beacon Point, TeraWulf, Core Scientific and Applied Digital for ERCOT interconnection and for neocloud demand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "galaxy-digital",
+   "b": "iren",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The vertically integrated comparator — IREN operates compute rather than leasing space.",
+     "context": "IREN runs GPU clusters as a cloud business alongside its landlord role, anchored on Microsoft. The Futurum Group's contracted-revenue-per-megawatt measure — the one cross-operator ranking located for this cohort — puts IREN highest at about USD 40m per MW and Galaxy second at about USD 29m per MW, ahead of CoreWeave itself at about USD 28m. That measure is relayed second-hand and its term basis is not held constant across the companies compared.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "galaxy-digital",
+   "b": "nebius",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Neocloud peer of Galaxy's tenant rather than of Galaxy itself — included because the tenant layer is where the credit risk sits.",
+     "context": "Nebius is one of the neoclouds competing with CoreWeave for the AI compute demand that ultimately pays Galaxy's rent. Galaxy has no relationship with Nebius; the edge records that Galaxy's single-tenant exposure is exposure to competition at a layer it does not control. Galaxy's own July 2026 investor presentation characterises CoreWeave's position using CoreWeave's public filings — a USD 99.4bn contracted revenue backlog at Q1 2026 and an NVIDIA equity stake of about 11.5% — which is the company underwriting its tenant's competitive position in public.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000068/launch8-kexhibit99172226.htm",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "galaxy-digital",
+   "b": "terawulf",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Peer converted-miner landlord, with a 20-year lease term against Galaxy's 15.",
+     "context": "TeraWulf leases to Fluidstack with Google backstops and, separately, holds an Anthropic lease at Hawesville, Kentucky reported at about USD 19bn over a **20-year** initial term. That term difference alone makes a headline-value comparison with Galaxy's 15-year leases misleading, which is the general problem with ranking this cohort by contract value.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Data Centers — the Helios campus and the CoreWeave leases",
+     "date": "",
+     "text": "Helios competes with Cipher's Texas campuses, Hut 8's Beacon Point, TeraWulf, Core Scientific and Applied Digital for ERCOT interconnection and for neocloud demand.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "ge-vernova",
@@ -24209,6 +25839,95 @@
     }
    ],
    "last": "2025-01-28"
+  },
+  {
+   "a": "google",
+   "b": "hut-8",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Financial backstop of Fluidstack's River Bend rent — provided without warrants and without equity, unlike the same arrangement at Cipher and TeraWulf.",
+     "context": "Google LLC provides a financial backstop covering the lease payments and certain other financial obligations under the River Bend lease, with a springing Alphabet Inc. guarantee that triggers if Google's revenue falls below 50% of consolidated Alphabet revenue. Alphabet is rated AA+ by S&P and Aa2 by Moody's, and that credit is what carried the River Bend project notes to a BBB- rating before a megawatt was delivered.\n\n**This edge is deliberately typed `partner` rather than `investor`, and the difference from the corpus's other two Google backstops is the finding.** At Cipher Digital, Google's USD 1.73bn backstop bought warrants over about 5.4% of the company; at TeraWulf, backstops of about USD 4.5bn bought warrants now representing about 14%. Both are typed `investor` in this corpus on that basis. Hut 8 gave neither warrants nor equity: no Hut 8 filing or release — not the December 2025 press release, the investor deck, the 8-K, the FY2025 10-K, either 2026 10-Q, or the 2026 proxy — mentions warrants in connection with Google, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns no documents. Benchmark's analyst named that retention of full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the transaction's distinguishing feature.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "backstop of all rent and related pass-through obligations over the 15-year base term",
+     "project": "river-bend-campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Hut 8 has contracted **949 MW of critical IT capacity across USD 26.6bn of base-term lease value** — the largest contracted book among the converted bitcoin miners in this corpus — and has done it with a credit structure materially stronger than its peers': **Google took no warrants and no equity in Hut 8** for backstopping the River Bend lease, where Cipher gave away about 5.4% of itself and TeraWulf about 14% for the same service.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**River Bend** in West Feliciana Parish, Louisiana is 245 MW of critical IT on 330 MW of Entergy capacity, leased to a Fluidstack subsidiary for fifteen years at USD 7.0bn with Google backstopping the rent and Anthropic as end user.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that the single most important fact about Hut 8's River Bend transaction is what Google did **not** receive, and that it is routinely misreported.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no first-party Hut 8 disclosure — not the 17 December 2025 press release, the investor deck, the 8-K, the FY2025 10-K, either 2026 10-Q or the 2026 proxy — states that Google took warrants or equity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The word 'warrant' does not appear in connection with Google anywhere, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns no documents.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Cipher gave Google warrants over about 5.4% of itself and TeraWulf about 14% for the same service on the same Fluidstack template.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Hut 8 is lessor through Hut 8 DC LLC, a Fluidstack subsidiary is lessee under the 15-year triple-net lease, Google is the payment backstop with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue, and **Anthropic is the end user and not a party to the lease at all**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+     "date": "",
+     "text": "Google LLC provides a financial backstop covering the lease payments and related pass-through obligations, with a springing Alphabet guarantee if Google's revenue falls below 50% of consolidated Alphabet revenue.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "Closes USD 3.25bn of investment-grade senior secured notes for the River Bend project — 6.192% coupon, maturity 15 November 2042, rated BBB- by S&P (Positive) and Fitch (Stable, minimum DSCR 1.31x) — An investment-grade rating on a pre-construction data centre is what a Google backstop buys. Principal amortises from May 2028.",
+     "src": "https://www.globaldatacenterhub.com/p/hut-8-prices-325b-investment-grade",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Signs a 15-year, 245 MW IT triple-net lease at River Bend with a Fluidstack subsidiary at a total contract value of USD 7.0bn, with Google backstopping all rent and related pass-through obligations — The structural difference from every peer: **no warrants and no equity to Google**. Benchmark's analyst identified Hut 8's ability to keep full economic ownership 'without warrants or equity sweeteners that have shown up in other deals' as the differentiator, and an EDGAR full-text search of Hut 8's December 2025 8-Ks for 'warrant' returns nothing.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-30"
   },
   {
    "a": "google",
@@ -27852,6 +29571,122 @@
    "last": ""
   },
   {
+   "a": "hut-8",
+   "b": "iren",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The vertically integrated comparator, and the leader on contracted revenue per megawatt.",
+     "context": "IREN operates GPU clusters itself rather than leasing space and power, anchored by a USD 9.7bn Microsoft contract. The Futurum Group's contracted-revenue-per-megawatt measure — relayed second-hand and the only cross-operator ranking located for this cohort — puts IREN highest at about USD 40m per MW and places Hut 8 in the top ten without publishing its figure; Hut 8's own USD 26.6bn across 949 MW implies about USD 28m per MW.",
+     "source": "https://www.webull.com/news/15425103535293440",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "hut-8",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Beacon Point is designed to NVIDIA's DSX reference architecture for gigawatt-scale AI infrastructure — a design standard, not a disclosed commercial agreement.",
+     "context": "Hut 8's 8-K of 10 June 2026 and the Beacon Point releases state that the campus is 'designed to NVIDIA's DSX reference architecture for gigawatt-scale AI infrastructure', with six data halls in Phase 1. This edge is typed `other` because the relationship as disclosed is adoption of a published design standard rather than a contract: no supply agreement, purchase commitment, investment or partnership between Hut 8 and NVIDIA appears in any first-party source, and the words 'CoreWeave', 'Microsoft', 'Oracle', 'Lambda' and 'Nscale' appear nowhere in Hut 8's FY2025 10-K, FY2024 10-K, either 2026 10-Q or the 2026 proxy.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926071952/tm2617190d1_8k.htm",
+     "status": "active",
+     "via": "DSX reference architecture at Beacon Point"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Compute — American Bitcoin, Hut 8 Canada and Highrise AI",
+     "date": "",
+     "text": "**Highrise AI** operated 1,000 NVIDIA H100 and 96 H200 GPUs at a third-party colocation site near Chicago at 31 December 2025.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "hut-8",
+   "b": "terawulf",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The other Fluidstack landlord with a Google backstop — and the one that paid for it in equity.",
+     "context": "TeraWulf leases to Fluidstack with Google backstops at Lake Mariner and Abernathy, and holds a separately reported Anthropic lease in Kentucky over a 20-year initial term. It is the closest structural analogue to River Bend and the clearest contrast on price: Google's backstops there bought warrants now representing about 14% of TeraWulf pro forma, where Hut 8 gave none.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** Hut 8 has contracted **949 MW of critical IT capacity across USD 26.6bn of base-term lease value** — the largest contracted book among the converted bitcoin miners in this corpus — and has done it with a credit structure materially stronger than its peers': **Google took no warrants and no equity in Hut 8** for backstopping the River Bend lease, where Cipher gave away about 5.4% of itself and TeraWulf about 14% for the same service.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the node where three other dossiers meet — Entergy Louisiana is its utility at River Bend, Fluidstack is its tenant of record there, and Anthropic is the end user, the same chain that runs through TeraWulf and Cipher.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Cipher gave Google warrants over about 5.4% of itself and TeraWulf about 14% for the same service on the same Fluidstack template.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Contracted AI data-centre leases — 949 MW critical IT across two campuses",
+     "date": "",
+     "text": "The largest contracted book in the converted-miner cohort — 949 MW of critical IT and USD 26.6bn of base-term value against Cipher's 700 MW gross / about USD 11.4bn, TeraWulf's roughly USD 13bn and Galaxy's 526 MW.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "hut-8",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Co-developer of the custom infrastructure solution at River Bend, named by Hut 8 alongside Jacobs as EPCM partner.",
+     "context": "Hut 8's River Bend release names Vertiv as 'Co-developer of the custom infrastructure solution' and Jacobs Solutions as EPCM partner, with the data centre to be built at USD 9-11m per MW. Note a wording error in Hut 8's own FY2025 10-K, reported here rather than reconciled: its Recent Developments section describes both Entergy — 'which will be providing power to the site' — and Vertiv — 'who is the power provider for the site' — as the power provider, and calls Jacobs the general contractor where the press release calls it EPCM partner.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+     "status": "active",
+     "since": "2025-12",
+     "via": "Custom critical infrastructure at River Bend",
+     "project": "river-bend-campus"
+    }
+   },
+   "evid": [],
+   "last": "2025-12"
+  },
+  {
    "a": "hyperstrong",
    "b": "trina-storage",
    "curated": {
@@ -29179,7 +31014,7 @@
     "b": {
      "type": "competitor",
      "note": "Miner-pivot cohort rival — TeraWulf leads on contracted backlog.",
-     "context": "TeraWulf leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) against Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B and IREN's $9.7B Microsoft deal — Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+     "context": "TeraWulf leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) against Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B and IREN's $9.7B Microsoft deal — Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "source": "Miner-pivot cohort backlog comparison (Q2 2026 deck)",
      "status": "active"
     }
@@ -29188,7 +31023,7 @@
     {
      "where": "Capabilities · HPC/AI colocation leasing (WULF Compute)",
      "date": "",
-     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "src": "",
      "from": "b"
     }
@@ -33570,7 +35405,7 @@
     {
      "where": "Capabilities · HPC/AI colocation leasing (WULF Compute)",
      "date": "",
-     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$9.3B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
+     "text": "Leads the miner-pivot cohort on contracted backlog ($12.8B at YE2025 before the $19B Anthropic add) vs Core Scientific ~$10.2B, Applied Digital ~$11B, Cipher ~$11.4B, IREN's $9.7B Microsoft deal; Bernstein tags WULF and Cipher the 'power landlords of AI'.",
      "src": "",
      "from": "b"
     }

@@ -114,8 +114,8 @@
         "aboutamazon.com",
         "amazon.com"
       ],
-      "srcTotal": 23,
-      "srcFirstPct": 57,
+      "srcTotal": 24,
+      "srcFirstPct": 58,
       "kpiNorm": true
     },
     {
@@ -127,14 +127,14 @@
       "tagline": "The compute buyer — up to 5 GW of Trainium, 'well over a gigawatt' of TPUs then multi-GW from 2027, USD 30bn of Azure, all of Colossus 1, a 401 MW direct lease, a 470 MW gas order and reported USD 45bn/USD 35bn neocloud contracts, on run-rate revenue of USD 47bn and a USD 965bn Series H ahead of an IPO.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "anthropic.com",
         "claude.com",
         "www-cdn.anthropic.com",
         "assets.anthropic.com"
       ],
-      "srcTotal": 149,
+      "srcTotal": 150,
       "srcFirstPct": 56,
       "kpiNorm": false
     },
@@ -426,7 +426,7 @@
       "domains": [
         "compassdatacenters.com"
       ],
-      "srcTotal": 102,
+      "srcTotal": 103,
       "srcFirstPct": 42,
       "kpiNorm": false
     },
@@ -747,8 +747,8 @@
         "engie.com",
         "newsroom.engie.com"
       ],
-      "srcTotal": 60,
-      "srcFirstPct": 58,
+      "srcTotal": 61,
+      "srcFirstPct": 59,
       "kpiNorm": false
     },
     {
@@ -761,7 +761,7 @@
       "hq": "New Orleans, LA, USA",
       "ticker": "NYSE: ETR",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "entergy.com",
         "entergylouisiana.com",
@@ -773,8 +773,8 @@
         "s201.q4cdn.com",
         "rfp.entergy.com"
       ],
-      "srcTotal": 94,
-      "srcFirstPct": 56,
+      "srcTotal": 95,
+      "srcFirstPct": 57,
       "kpiNorm": true
     },
     {
@@ -977,7 +977,7 @@
       "tagline": "Tenant-of-record on ~1.4 GW of Anthropic-bound leases at TeraWulf, Cipher, Hut 8 and Meridian Arc — bankable only through Google's backstops and penny warrants; owns one campus (Abernathy, July 2026) and USD 2.6bn of equity against ~USD 27bn of rent.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "fluidstack.io",
         "okmulgeefluidstack.io",
@@ -2428,12 +2428,12 @@
       "hq": "Easton, MD, USA",
       "ticker": "NASDAQ: WULF",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "terawulf.com"
       ],
-      "srcTotal": 28,
-      "srcFirstPct": 61,
+      "srcTotal": 29,
+      "srcFirstPct": 62,
       "kpiNorm": true
     },
     {
@@ -2735,6 +2735,61 @@
       ],
       "srcTotal": 43,
       "srcFirstPct": 42,
+      "kpiNorm": true
+    },
+    {
+      "slug": "cipher-mining",
+      "name": "Cipher Digital",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The miner that finished the pivot and renamed itself — 700 MW / ~$11.4bn contracted across three Texas campuses, two of them Amazon.com-guaranteed; hashrate halved to 11.6 EH/s and one mining site left.",
+      "hq": "New York, NY, USA",
+      "ticker": "NASDAQ: CIFR",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "cipherdigital.com",
+        "ciphermining.com"
+      ],
+      "srcTotal": 47,
+      "srcFirstPct": 45,
+      "kpiNorm": true
+    },
+    {
+      "slug": "hut-8",
+      "name": "Hut 8",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The largest contracted book in the miner-pivot cohort — 949 MW critical IT / $26.6bn base-term across River Bend and Beacon Point, and the only one where Google's backstop cost no warrants and no equity.",
+      "hq": "Miami, FL, USA",
+      "ticker": "NASDAQ: HUT",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "hut8.com"
+      ],
+      "srcTotal": 71,
+      "srcFirstPct": 48,
+      "kpiNorm": true
+    },
+    {
+      "slug": "galaxy-digital",
+      "name": "Galaxy Digital",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "A digital-asset broker-dealer that owns a 1.63 GW ERCOT campus — $60.4bn of gross trading revenue, 800 MW gross / 526 MW critical IT all let to CoreWeave, and a 9.875% coupon that prices a single unrated tenant.",
+      "hq": "New York, NY, USA",
+      "ticker": "NASDAQ: GLXY",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "galaxy.com"
+      ],
+      "srcTotal": 61,
+      "srcFirstPct": 66,
       "kpiNorm": true
     }
   ]

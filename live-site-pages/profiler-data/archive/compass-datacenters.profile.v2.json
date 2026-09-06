@@ -327,8 +327,8 @@
     {
       "date": "2026-08-13",
       "category": "policy",
-      "headline": "Governor Abbott announces that Galaxy (Galaxy Digital Inc., the Helios campus in Dickens County), Compass Datacenters and Montera Infrastructure commit to comply with his data-center standards (pay for electric infrastructure, reuse own water, reduce electricity costs, avoid residential neighbourhoods, no taxpayer incentives)",
-      "read": "Compass traded the Ellis County abatement it had already lost for a first-mover seat at the standard-setting table in ERCOT's largest developer market. The release names only 'Galaxy' with no legal entity; it is Galaxy Digital Inc., established from Texas construction records that name Galaxy Helios II LLC of 300 Vesey Street, New York — Galaxy Digital's own head office — as owner of the Helios 2 and Helios 3 projects at Afton, Dickens County.",
+      "headline": "Governor Abbott announces that Galaxy, Compass Datacenters and Montera Infrastructure commit to comply with his data-center standards (pay for electric infrastructure, reuse own water, reduce electricity costs, avoid residential neighbourhoods, no taxpayer incentives)",
+      "read": "Compass traded the Ellis County abatement it had already lost for a first-mover seat at the standard-setting table in ERCOT's largest developer market.",
       "source": "https://gov.texas.gov/news/post/governor-abbott-announces-galaxy-compass-datacenters-and-montera-infrastructure-commit-to-comply-with-his-data-center-standards"
     },
     {
@@ -594,14 +594,6 @@
       "source": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
       "status": "active",
       "since": "2026-09"
-    },
-    {
-      "slug": "galaxy-digital",
-      "type": "competitor",
-      "status": "active",
-      "note": "Named alongside Compass in the Texas Governor's data-centre standards release; both operate large Texas campuses.",
-      "context": "Compass Datacenters and Galaxy were named together, with Montera Infrastructure, in the Texas Governor's release of 13 August 2026 announcing commitments to comply with his data-centre standards — paying for electric infrastructure, reusing their own water, reducing electricity costs, avoiding residential neighbourhoods and taking no taxpayer incentives.\n\nThe release names no legal entity beyond the bare word 'Galaxy'. The identification is Galaxy Digital Inc., established from Texas Department of Licensing and Regulation construction records that list **Galaxy Helios II LLC of 300 Vesey Street, 13th Floor, New York** — Galaxy Digital's own registered head office — as owner of the Helios 2 and Helios 3 projects at 1003 FM 193, Afton, Dickens County. No other Texas data-centre developer using the name was found.\n\nThe two compete for Texas interconnection capacity and hyperscale demand from opposite starting points: Compass is a sponsor-owned build-to-suit landlord, Galaxy a securities broker-dealer whose campus is one segment of three.",
-      "source": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892"
     }
   ],
   "policyExposure": [
@@ -928,10 +920,6 @@
     "INDICATORS TO WATCH — *Mid-2026 to 2027 — ComEd energises Hoffman Estates Building 1:* on time would confirm the nine-month-delivery claim on a 200 MW greenfield; a slip into 2027 would indicate the Sears-site programme is behind its 2024 schedule. *2026–2027 — a fifth ABS series or a Red Oak/Meridian securitization:* would confirm Judgment 2's recycling thesis and show whether Moody's AAA extends to new collateral. *Any first-party or filing disclosure of the KKR amount or the assets transferred:* would size the third sponsor. *A named hyperscale tenant at Meridian or a Mississippi Power docket showing the contracted MW:* would test Judgment 3 and reconcile 320 MW against 500 MW. *Ellis County or Texas legislative action on data-center abatements after the Abbott standards:* would show whether pre-emption bought Compass anything. *A prime-power, BESS or Bloom Energy award at a Compass campus:* would overturn Judgment 6."
   ],
   "sources": [
-    {
-      "label": "Texas Department of Licensing and Regulation TABS2026014892 — Galaxy Helios Phase 2, owner Galaxy Helios II LLC, 300 Vesey Street, Afton, Dickens County",
-      "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026014892"
-    },
     {
       "label": "Compass Datacenters — Infrastructure for America Launches",
       "url": "https://www.compassdatacenters.com/news/infrastructure-for-america-launch/",
@@ -1433,5 +1421,5 @@
     }
   ],
   "lastUpdated": "2026-09-06",
-  "profileVersion": 3
+  "profileVersion": 2
 }

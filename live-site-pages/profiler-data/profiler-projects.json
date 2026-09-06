@@ -47,6 +47,13 @@
    "note": "Vantage's Wisconsin Stargate campus ($8B first phase, 1.3 GW), built by a four-way GC bench."
   },
   {
+   "slug": "river-bend-campus",
+   "name": "River Bend Campus",
+   "kind": "aidc-campus",
+   "location": "West Feliciana Parish, LA",
+   "note": "Hut 8's 245 MW critical-IT campus on 330 MW of Entergy capacity (scalable to 1,000 MW), leased 15 years to a Fluidstack subsidiary with Google backstopping the rent and Anthropic as end user; Vertiv and Jacobs are the named infrastructure and EPCM partners. NOT Entergy's River Bend nuclear station, which is in the same parish — scope any search term accordingly."
+  },
+  {
    "slug": "stargate",
    "name": "Stargate",
    "kind": "program",

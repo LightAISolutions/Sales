@@ -99,6 +99,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-09-06",
       "supersededBy": 8
+    },
+    {
+      "file": "amazon.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 9
     }
   ],
   "applied-digital": [
@@ -1811,6 +1817,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-09-05",
       "supersededBy": 6
+    },
+    {
+      "file": "terawulf.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 7
     }
   ],
   "terra-gen": [
@@ -2205,6 +2217,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-09-05",
       "supersededBy": 2
+    },
+    {
+      "file": "anthropic.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 3
     }
   ],
   "talen-energy": [
@@ -2272,6 +2290,36 @@
   "compass-datacenters": [
     {
       "file": "compass-datacenters.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    },
+    {
+      "file": "compass-datacenters.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 3
+    }
+  ],
+  "fluidstack": [
+    {
+      "file": "fluidstack.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "entergy": [
+    {
+      "file": "entergy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-06",
+      "supersededBy": 2
+    }
+  ],
+  "engie-north-america": [
+    {
+      "file": "engie-north-america.profile.v1.json",
       "profileVersion": 1,
       "archivedAt": "2026-09-06",
       "supersededBy": 2
