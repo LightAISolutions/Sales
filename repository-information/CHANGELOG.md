@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.03r] — 2026-09-07 03:52:59 AM EST
+
+> **Prompt:** "Ok, I understand now. In this case, accept X3b, then give me a prompt to paste into a new Fable 5.1 Medium session to run Phase 1, then remember session."
+
+### Changed
+
+- **X3b accepted and Phase X closed.** After two explanatory turns (what X3b needs from the developer; what "38 pins quiet" means), the developer accepted the amended §9.3 exit criterion. `PROFILER-COVERAGE-PLAN.md` §9.4's X3b row flips to **Done — v05.03r**, closed against the v05.02r state (0 errors / 0 warnings / 38 aged pins verified and quiet) by the session *after* the one that wrote the criterion, per the rule recorded at Phase 0; the v05.02r row text is kept beneath it as history. §9.5 row 5 reads X3a Done / X3b Done, Phase X closed; §6's parenthetical and §9.3's Phase 0 evaluation record the acceptance date. `INTEGRATED-REMEDIATION-PLAN.md` §5 and §6 updated to match.
+- **Session context saved** (`SESSION-CONTEXT.md` — Latest Session rotated, 2-session cap applied) with the Phase 1 paste-in prompt handed over in chat for a fresh Fable 5.1 Medium session.
+
+### Verified
+
+- No rotation: same EST day (2026-09-07); with this section the file holds 103 sections, 5 exempt today → 98 non-exempt.
 
 ## [v05.02r] — 2026-09-07 03:40:00 AM EST
 

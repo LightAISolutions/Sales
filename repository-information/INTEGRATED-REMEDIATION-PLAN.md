@@ -98,7 +98,7 @@ Recorded at the X3 close (2026-09-07, v05.01r) from `CLASSROOM-CURRICULUM-PLAN.m
 **Standing caveats while the plan runs.**
 - **Do not act on the `named-project` report's whitespace call.** Two of its three "storage whitespace" campuses now have storage on the record (F10). The caveat lifts at Phase 6 or when Phase 5 restates it.
 - **Reports are immutable.** No phase edits a published report; the only route to a fresh pin is a new edition carrying `supersedes`. A pin that re-warns after a dossier bump is read again and recorded in `report-pins-verified.json`, never re-pinned.
-- **X3b stays Open until the developer accepts the amended criterion** in `PROFILER-COVERAGE-PLAN.md` §9.3. It does not gate Phase D / Phases 3–4.
+- **X3b closed at v05.03r** — the developer accepted the amended criterion in `PROFILER-COVERAGE-PLAN.md` §9.3 on 2026-09-07, and Phase X is closed. The pins that re-warn after Phase 1 are read again and recorded, never re-pinned.
 - **CHANGELOG rotation** is decided by the non-exempt count on the day a push lands (`CHANGELOG-archive.md` step 1, fixed at v05.01r). When it fires, `git fetch --unshallow` runs before any SHA lookup.
 
 **Recorded, not scheduled.**
@@ -110,7 +110,7 @@ Recorded at the X3 close (2026-09-07, v05.01r) from `CLASSROOM-CURRICULUM-PLAN.m
 
 | Phase | Model · effort | Status |
 |-------|----------------|--------|
-| 0 · record and criterion | Fable 5.1 High | **Done — v05.02r (2026-09-07).** §9.4 split into X3a Done / X3b Open; §9.3 criterion amended with the defect noted; `report-pins-verified.json` seeded with 38 pins after re-confirming the triples against a live checker run; `check-profiler-reports.py` skips superseded reports for drift and consults the verified list — 0 errors / 0 warnings / 38 quiet at v05.02r; this file persisted |
+| 0 · record and criterion | Fable 5.1 High | **Done — v05.02r (2026-09-07).** §9.4 split into X3a Done / X3b Open; §9.3 criterion amended with the defect noted; `report-pins-verified.json` seeded with 38 pins after re-confirming the triples against a live checker run; `check-profiler-reports.py` skips superseded reports for drift and consults the verified list — 0 errors / 0 warnings / 38 quiet at v05.02r; this file persisted. **X3b accepted by the developer and closed at v05.03r** |
 | 1 · five zero-research dossier fixes | Fable 5.1 Medium | Open — next |
 | 2a · `sungrow` + `catl` research | Opus 5 xhigh | Open |
 | 2b · `tract` citation read | Fable 5.1 High | Open |
