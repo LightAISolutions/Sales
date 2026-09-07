@@ -20,6 +20,15 @@
       ]
     },
     {
+      "slug": "48e",
+      "term": "48E",
+      "def": "The US clean electricity investment tax credit, which replaced the older technology-specific investment credit. It returns a percentage of a storage or generation project's capital cost as a federal tax credit, and since 2025 a project must also clear a foreign-content cost test to qualify.",
+      "aliases": [
+        "Section 48E",
+        "clean electricity investment credit"
+      ]
+    },
+    {
       "slug": "765-kv",
       "term": "765 kV",
       "def": "The highest transmission voltage in common use in the United States. A 765 kV line carries several times the power of a 345 kV line on one right-of-way with lower losses, which is why it is the backbone choice when a region must move gigawatts across hundreds of miles. AEP built and operates most of the country's existing 765 kV network; Texas chose it in 2025 for the Permian Basin plan.",
@@ -1048,6 +1057,14 @@
       ]
     },
     {
+      "slug": "cell-to-pack",
+      "term": "cell-to-pack",
+      "def": "A battery pack design that omits the intermediate module layer and mounts cells directly into the pack structure. Removing module housings frees volume and mass, so the same chemistry yields more usable energy per litre and per kilogram.",
+      "aliases": [
+        "CTP"
+      ]
+    },
+    {
       "slug": "centrifugal-compressor",
       "term": "centrifugal compressor",
       "def": "A compressor that raises pressure by flinging refrigerant outward with a high-speed impeller. Very efficient at large capacities and smooth flow, and it has a lower flow limit below which it cannot maintain head."
@@ -1341,6 +1358,15 @@
       "def": "The structured testing that proves a finished plant performs as contracted before it is handed over and paid for. For storage it is where capacity and round-trip-efficiency guarantees are measured; for a data center it is where the outage choreography gets rehearsed rather than discovered in production.",
       "aliases": [
         "commissioned"
+      ]
+    },
+    {
+      "slug": "commissioning-agent",
+      "term": "commissioning agent",
+      "def": "An independent party that tests a finished building's systems against the design intent before handover — running power, cooling and controls through failure scenarios. On a data centre the commissioning sequence is often the longest single item on the schedule.",
+      "aliases": [
+        "CxA",
+        "commissioning authority"
       ]
     },
     {
@@ -1930,6 +1956,15 @@
       ]
     },
     {
+      "slug": "dc-block",
+      "term": "DC block",
+      "def": "A containerised battery unit sold as direct-current energy only, leaving the inverter and transformer to the buyer. Vendors compete on how many megawatt-hours they fit inside a standard twenty-foot container, which is why capacity ratings climb while the box stays the same size.",
+      "aliases": [
+        "DC-block",
+        "direct current block"
+      ]
+    },
+    {
       "slug": "dc-circuit-breaker",
       "term": "DC circuit breaker",
       "def": "A breaker for direct current, which offers no zero crossing to help it. It has to force the current to zero itself — with a resonant circuit or with semiconductors — which is why DC breakers arrived decades after AC ones and still cost far more.",
@@ -2106,6 +2141,14 @@
       ]
     },
     {
+      "slug": "depth-of-discharge",
+      "term": "depth of discharge",
+      "def": "How much of a battery's stored energy is drawn out before recharging, as a percentage of capacity. Shallower cycling generally extends cycle life, so a quoted cycle count is only meaningful alongside the depth of discharge it was measured at.",
+      "aliases": [
+        "DoD"
+      ]
+    },
+    {
       "slug": "derating",
       "term": "derating",
       "def": "Operating equipment below its nameplate rating because real conditions — ambient temperature, altitude, state of charge, or age — do not match the conditions the rating assumed. A specification read as a guaranteed operating number rather than a rated one is one of the most common sources of a capacity shortfall that presents as an equipment fault.",
@@ -2113,6 +2156,12 @@
         "derate",
         "derated"
       ]
+    },
+    {
+      "slug": "design-assist",
+      "term": "design-assist",
+      "def": "An arrangement in which the builder or a specialist trade contributes to the design before it is finished, without taking design liability. It is how constructability and long-lead equipment choices get settled early on schedule-driven projects.",
+      "aliases": []
     },
     {
       "slug": "design-authority",
@@ -3333,6 +3382,15 @@
       ]
     },
     {
+      "slug": "flow-down",
+      "term": "flow-down",
+      "def": "The practice of passing contractual obligations from a prime contract down through each subcontract tier. Where a required clause fails to flow down, the obligation usually stays with the prime contractor — which is how a prime becomes liable for a lower-tier subcontractor's wage violations.",
+      "aliases": [
+        "flow-down clause",
+        "flowdown"
+      ]
+    },
+    {
       "slug": "flywheel",
       "term": "flywheel",
       "aliases": [
@@ -3560,6 +3618,14 @@
       ]
     },
     {
+      "slug": "general-contractor",
+      "term": "general contractor",
+      "def": "The firm that holds the construction contract with the owner and organises everyone who actually builds. Most general contractors subcontract every trade and add value through scheduling, coordination, procurement and risk-taking rather than through their own labour.",
+      "aliases": [
+        "GC"
+      ]
+    },
+    {
       "slug": "general-partner",
       "term": "general partner",
       "def": "The firm that runs an investment fund, chooses its investments and earns a management fee and a share of profits. The limited partners supply the money; the general partner supplies the decisions.",
@@ -3610,6 +3676,12 @@
         "geotechnical report",
         "soils report"
       ]
+    },
+    {
+      "slug": "gigafactory",
+      "term": "gigafactory",
+      "def": "A battery plant sized in gigawatt-hours of annual output rather than in units. Capacity is normally quoted as nameplate — the design figure — which can differ substantially from what a plant actually ships in its early years.",
+      "aliases": []
     },
     {
       "slug": "goes",
@@ -4727,6 +4799,14 @@
       "def": "A UPS that normally passes the supply through while a transformer or inverter trims the voltage, stepping in fully only when the supply fails. Cheaper and more efficient than double conversion, at the cost of a short break the load must be able to ride."
     },
     {
+      "slug": "liquid-cooling",
+      "term": "liquid cooling",
+      "def": "Removing heat with a circulating fluid rather than moving air. In battery containers it holds the temperature spread between cells much tighter than air cooling, which matters because the hottest cell in a string sets the ageing rate for all of them.",
+      "aliases": [
+        "liquid-cooled"
+      ]
+    },
+    {
       "slug": "liquid-to-air-cdu",
       "term": "liquid-to-air CDU",
       "def": "A coolant distribution unit that rejects the racks' heat into the room air through a radiator and fans instead of into facility water, so liquid-cooled racks can go into a hall that has no water near them. It pays a much higher approach temperature and fan power, and the room's air system must still carry the heat away.",
@@ -4761,6 +4841,14 @@
       "aliases": [
         "LLC",
         "LLC resonant converter"
+      ]
+    },
+    {
+      "slug": "lmfp",
+      "term": "LMFP",
+      "def": "Lithium manganese iron phosphate: lithium iron phosphate with manganese added to raise cell voltage and so energy density, while keeping most of the cost and stability advantages. It sits between standard iron-phosphate and nickel chemistries.",
+      "aliases": [
+        "lithium manganese iron phosphate"
       ]
     },
     {
@@ -5031,6 +5119,14 @@
       "def": "A single thick reinforced slab under an entire structure, spreading its load over the whole footprint. Used where soil is weak, loads are heavy, or differential settlement must be controlled."
     },
     {
+      "slug": "material-assistance-cost-ratio",
+      "term": "material assistance cost ratio",
+      "def": "A US test that asks what share of a project's or component's direct costs did NOT come from a restricted foreign supplier. The share must exceed a threshold that rises each year, so it is a sliding cost calculation rather than a list of banned companies.",
+      "aliases": [
+        "MACR"
+      ]
+    },
+    {
       "slug": "medium-voltage",
       "term": "medium voltage",
       "def": "Distribution-level voltage, roughly the single-digit to tens of kilovolts — the tier data centers and storage plants connect at before power is stepped down to usable levels.",
@@ -5113,6 +5209,12 @@
         "milestone facility",
         "milestone-based funding"
       ]
+    },
+    {
+      "slug": "miller-act",
+      "term": "Miller Act",
+      "def": "A US law requiring contractors on federal construction projects to post payment and performance bonds, so subcontractors and suppliers have a surety to claim against if they are not paid. Because bonds are public, the resulting court records reveal which sureties back a private contractor.",
+      "aliases": []
     },
     {
       "slug": "minimum-demand-charge",
@@ -6296,6 +6398,14 @@
       ]
     },
     {
+      "slug": "prismatic-cell",
+      "term": "prismatic cell",
+      "def": "A battery cell in a rigid rectangular can, as opposed to a cylinder or a soft pouch. The flat faces pack together with little wasted space and the can carries structural load, which is why grid storage has converged on very large prismatic formats.",
+      "aliases": [
+        "prismatic"
+      ]
+    },
+    {
       "slug": "private-grid",
       "term": "private grid",
       "def": "A campus electrical system that generates, distributes and manages its own power behind the meter, buying from the public grid only as a supplement or reserve. It replicates generation and distribution; it still depends on the utility for any grid tie and on regulators for permits.",
@@ -6349,6 +6459,14 @@
       "aliases": [
         "PDB",
         "progressive design build"
+      ]
+    },
+    {
+      "slug": "prohibited-foreign-entity",
+      "term": "prohibited foreign entity",
+      "def": "The current US statutory category that decides whether a company can claim clean-energy tax credits or contribute content to a project that does. It combines a named-entity test with a control test, and it replaced the older foreign-entity-of-concern framing for these credits in 2025.",
+      "aliases": [
+        "PFE"
       ]
     },
     {
@@ -7162,6 +7280,14 @@
       ]
     },
     {
+      "slug": "section-1260h",
+      "term": "Section 1260H",
+      "def": "A US Department of Defense list of companies identified as Chinese military companies operating in the United States. Appearing on it triggers defence contracting restrictions, and it is a separate list from the battery-specific procurement ban — a company can be on one and not the other.",
+      "aliases": [
+        "1260H"
+      ]
+    },
+    {
       "slug": "section-301",
       "term": "Section 301 tariffs",
       "def": "US tariffs on Chinese imports imposed under Section 301 of the Trade Act — including steep rates on lithium-ion batteries — that reshape the landed cost of China-sourced storage hardware.",
@@ -7568,6 +7694,15 @@
       ]
     },
     {
+      "slug": "solid-state-battery",
+      "term": "solid-state battery",
+      "def": "A battery that replaces the liquid electrolyte with a solid one, removing the most flammable component and allowing higher-energy electrode pairings. The engineering difficulty is maintaining physical contact between solid layers as they expand and contract with every cycle.",
+      "aliases": [
+        "all-solid-state",
+        "solid state battery"
+      ]
+    },
+    {
       "slug": "source-term",
       "term": "source term",
       "def": "The quantity and kind of radioactive material a given accident could release. Almost every downstream siting, staffing and emergency-planning requirement is sized from it."
@@ -7610,6 +7745,14 @@
       "aliases": [
         "W/kg",
         "power per kilogram"
+      ]
+    },
+    {
+      "slug": "specified-foreign-entity",
+      "term": "specified foreign entity",
+      "def": "The first half of the US prohibited-foreign-entity test. A company qualifies either by being named on one of several government lists or, more broadly, by being incorporated in or controlled from a covered nation — so incorporation alone can be enough.",
+      "aliases": [
+        "SFE"
       ]
     },
     {
@@ -7836,6 +7979,12 @@
       "aliases": [
         "submittals"
       ]
+    },
+    {
+      "slug": "substantial-completion",
+      "term": "substantial completion",
+      "def": "The contractual milestone at which a building is usable for its intended purpose, even with minor work outstanding. It usually starts warranties and ends the daily damages a contractor pays for being late, so disputes over the date are common and expensive.",
+      "aliases": []
     },
     {
       "slug": "substation",

@@ -370,7 +370,7 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002594 · HKEX: 1211",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "byd.com",
         "bydenergy.com"
@@ -1087,6 +1087,28 @@
       "kpiNorm": true
     },
     {
+      "slug": "gotion",
+      "name": "Gotion High-Tech",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Hefei cell maker, Volkswagen's 24%-held partner, and the only §154-named producer with an operating US plant",
+      "hq": "Hefei, China",
+      "ticker": "SZSE: 002074",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "gotion.com.cn",
+        "gotion.com",
+        "gotionillinois.com",
+        "gotion.asia",
+        "gibenergy.com"
+      ],
+      "srcTotal": 61,
+      "srcFirstPct": 25,
+      "kpiNorm": true
+    },
+    {
       "slug": "gridstor",
       "name": "GridStor",
       "categories": [
@@ -1427,7 +1449,7 @@
       "tagline": "The second verified Hithium customer — 640 MWh at Woolooga, Australia only; FEOC-clean First Solar in the US, Gotion won the next battery, and bp is reportedly selling the whole platform to a Kuwait-backed consortium.",
       "hq": "London, UK",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "lightsourcebp.com"
       ],
@@ -2006,7 +2028,7 @@
       "hq": "Heathrow, FL, US",
       "ticker": "NASDAQ: NXT (parent Nextpower)",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "prevalonenergy.com"
       ],
@@ -2144,6 +2166,25 @@
       "srcTotal": 91,
       "srcFirstPct": 66,
       "kpiNorm": false
+    },
+    {
+      "slug": "rept",
+      "name": "REPT BATTERO",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Tsingshan-backed cell and system maker, first globally in residential storage cells and first-ever profit in 2025",
+      "hq": "Wenzhou, China",
+      "ticker": "HKEX: 0666",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "reptbattero.com",
+        "rept-battero.com"
+      ],
+      "srcTotal": 52,
+      "srcFirstPct": 50,
+      "kpiNorm": true
     },
     {
       "slug": "rolls-royce-power-systems",
@@ -2602,7 +2643,7 @@
       "tagline": "ENR's #1 US contractor six years running — data-center revenue tripling toward a $20B-by-2030 target on Meta, CoreWeave, and Stargate mega-campuses; SourceBlue buys the gear.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-06",
       "domains": [
         "turnerconstruction.com"
       ],
@@ -2718,6 +2759,23 @@
       "srcTotal": 30,
       "srcFirstPct": 70,
       "kpiNorm": false
+    },
+    {
+      "slug": "whiting-turner",
+      "name": "Whiting-Turner",
+      "categories": [
+        "gc"
+      ],
+      "tagline": "Fifth-largest US contractor, one of the Lighthouse campus builders, and a diversified builder in a specialists' sector",
+      "hq": "Towson, Maryland, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "whiting-turner.com"
+      ],
+      "srcTotal": 62,
+      "srcFirstPct": 34,
+      "kpiNorm": true
     },
     {
       "slug": "x-energy",

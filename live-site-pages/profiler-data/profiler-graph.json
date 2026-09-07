@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-06",
- "companies": 151,
+ "built": "2026-09-07",
+ "companies": 154,
  "edges": [
   {
    "a": "abb",
@@ -4174,6 +4174,23 @@
     }
    ],
    "last": "2025-11-06"
+  },
+  {
+   "a": "amazon",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Built the USD 1.5bn Amazon Air hub at Cincinnati/Northern Kentucky International Airport through a Whiting-Turner Kokosing joint venture.",
+     "context": "Recorded because it is where the company's most recent documented site fatality occurred — an ironworker employed by a steel-erection subcontractor was killed in February 2020 — and because it establishes that Whiting-Turner uses joint ventures on large logistics work as well as on federal projects.",
+     "source": "https://www.constructiondive.com/news/worker-killed-at-15b-amazon-airport-project-in-kentucky/571534/",
+     "status": "historical",
+     "since": "2020",
+     "scale": "USD 1.5bn"
+    }
+   },
+   "evid": [],
+   "last": "2020"
   },
   {
    "a": "amazon",
@@ -10395,7 +10412,7 @@
     {
      "where": "Capabilities · Storage cells — Blade LFP (FinDreams Battery)",
      "date": "",
-     "text": "Vertical integration is the differentiator vs merchant-only cell makers (EVE, REPT, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
+     "text": "Vertical integration is the differentiator vs cell makers with no captive end-product demand (EVE, REPT BATTERO, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
      "src": "",
      "from": "a"
     },
@@ -10530,11 +10547,41 @@
   },
   {
    "a": "byd",
+   "b": "gotion",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Second globally in EV batteries at 14.4% and fourth in storage cells at 7.7% for H1 2026.",
+     "context": "Named in §154(b) alongside Gotion and added to the §1260H list at parent level in June 2026. The comparison that matters is captive consumption: BYD consumes its own cells in its own vehicles, Gotion sells to Volkswagen and others.",
+     "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: it is NOT on the UFLPA Entity List as of the 31 July 2026 update despite a congressional demand that it be added; it is NOT on the Department of Defense §1260H list as of 8 June 2026, unlike CATL, BYD, CALB and EVE, so it escapes the §805 contracting bans that catch them; and the NO GOTION Act was never enacted — H.R.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) battery systems",
+     "date": "",
+     "text": "Fifth globally in EV battery installations at 4.6% share in H1 2026, in a peer band with CALB and EVE Energy and far behind CATL and BYD, which hold 54.3% combined.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "byd",
    "b": "hithium",
    "curated": {
     "a": {
      "type": "competitor",
-     "note": "Merchant-cell rival — the dossier groups Hithium with EVE and REPT as merchant-only cell makers against BYD's captive-plus-merchant model."
+     "note": "Merchant-cell rival — the dossier groups Hithium with EVE and REPT BATTERO against BYD's captive-plus-merchant model. The distinction is captive consumption, not product scope: REPT BATTERO in particular also sells complete containerised systems, so 'merchant-only' is accurate about its lack of an in-house end product and inaccurate if read as cells-only."
     },
     "b": {
      "type": "competitor",
@@ -10548,7 +10595,7 @@
     {
      "where": "Capabilities · Storage cells — Blade LFP (FinDreams Battery)",
      "date": "",
-     "text": "Vertical integration is the differentiator vs merchant-only cell makers (EVE, REPT, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
+     "text": "Vertical integration is the differentiator vs cell makers with no captive end-product demand (EVE, REPT BATTERO, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
      "src": "",
      "from": "a"
     },
@@ -10718,6 +10765,57 @@
      "where": "Capabilities · Networking, Software & Other Platforms",
      "date": "",
      "text": "Automotive/physical AI: robotaxi platforms with BYD, Hyundai, Nissan, Geely; robotics partnerships (ABB, KUKA, Universal Robots).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "byd",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Sixth globally in storage cell shipments at 31.4 GWh and 6.8% for H1 2026, against BYD's fourth at 35.7 GWh and 7.7% — the closest competitor to BYD in that ranking.",
+     "context": "The structural difference is captive demand rather than product scope. BYD consumes its own cells in its own vehicles and systems; REPT BATTERO has no in-house end product, but it does sell complete containerised systems as well as bare cells, so it is not a cells-only supplier.",
+     "source": "SNE Research H1 2026 storage cell shipment ranking",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Fourth globally in storage cells at 35.7 GWh and 7.7% for H1 2026, just ahead of REPT.",
+     "context": "BYD's dossier groups REPT with EVE and Hithium as merchant-only cell makers against BYD's captive-plus-merchant model. The contrast holds on captive consumption — BYD consumes its own cells in its own vehicles and systems, REPT does not — but REPT is not cells-only: it sells the Powtrix container line and delivered a grid-connected Japanese project on its own cabinets.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Storage cells — Blade LFP (FinDreams Battery)",
+     "date": "",
+     "text": "Vertical integration is the differentiator vs cell makers with no captive end-product demand (EVE, REPT BATTERO, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Wending (问顶) cell platform",
+     "date": "",
+     "text": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) batteries",
+     "date": "",
+     "text": "Third tier in Chinese EV batteries at roughly 2.5% national share — 19.50 GWh installed in FY2025 per CABIA — behind CATL, BYD, CALB and Gotion.",
      "src": "",
      "from": "b"
     }
@@ -11047,6 +11145,21 @@
      "from": "a"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "canadian-solar",
+   "b": "gotion",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "A storage-system competitor, and the company whose dossier already cites Gotion as a cautionary precedent — that a US plant alone does not guarantee tax-credit eligibility.",
+     "context": "That inbound characterisation is correct and this session's research strengthens it: Gotion's Manteno plant operates, and its output still cannot claim §45X, because prohibited-foreign-entity status attaches to the owner rather than the site.",
+     "source": "https://www.law.cornell.edu/uscode/text/26/7701",
+     "status": "active"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {
@@ -12342,6 +12455,43 @@
   },
   {
    "a": "catl",
+   "b": "gotion",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "A different weight class in both markets — 39.9% of global EV battery installations and 27.1% of storage cells in H1 2026, against Gotion's 4.6% and 4.5%.",
+     "context": "Also a peer on the §154(b) list, and unlike Gotion, additionally on the Department of Defense §1260H list since January 2025 — so CATL carries the §805 contracting bans that Gotion escapes.",
+     "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: it is NOT on the UFLPA Entity List as of the 31 July 2026 update despite a congressional demand that it be added; it is NOT on the Department of Defense §1260H list as of 8 June 2026, unlike CATL, BYD, CALB and EVE, so it escapes the §805 contracting bans that catch them; and the NO GOTION Act was never enacted — H.R.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) battery systems",
+     "date": "",
+     "text": "Fifth globally in EV battery installations at 4.6% share in H1 2026, in a peer band with CALB and EVE Energy and far behind CATL and BYD, which hold 54.3% combined.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Materials, resources and recycling",
+     "date": "",
+     "text": "Vertical integration is Gotion's answer to per-watt-hour cost compression in the Chinese second tier, where it competes with CALB, EVE and SVOLT rather than with CATL.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "catl",
    "b": "hithium",
    "curated": {
     "a": {
@@ -12686,6 +12836,51 @@
     }
    ],
    "last": "2024-12-10"
+  },
+  {
+   "a": "catl",
+   "b": "rept",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The reference point in every storage-cell ranking. SNE put CATL at 125.0 GWh and 27.1% of global storage cell shipments for H1 2026 against REPT's 31.4 GWh and 6.8% — roughly four times the volume.",
+     "context": "CATL is also the scale against which REPT's margin is judged: REPT's 13.3% gross margin in H1 2026 remains far below CATL's.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active",
+     "scale": "27.1% vs 6.8% of global storage cell shipments, H1 2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Wending (问顶) cell platform",
+     "date": "",
+     "text": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Residential and C&I storage cells",
+     "date": "",
+     "text": "Per SNE for H1 2026, REPT is first in residential and second in C&I at roughly 14% against CATL's 35%.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) batteries",
+     "date": "",
+     "text": "Third tier in Chinese EV batteries at roughly 2.5% national share — 19.50 GWh installed in FY2025 per CABIA — behind CATL, BYD, CALB and Gotion.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "catl",
@@ -19776,6 +19971,21 @@
    "last": "2024-12"
   },
   {
+   "a": "dpr",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Seventh in the ENR 2026 Top 400 at USD 14.0bn, just below Whiting-Turner, and third in the 2025 data-centre ranking, well above it. Runs 57% telecom revenue.",
+     "context": "Another instance of the same pattern: closer on total revenue, further ahead in the sector.",
+     "source": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
    "a": "eaton",
    "b": "equinix",
    "curated": {
@@ -21987,6 +22197,21 @@
   },
   {
    "a": "envision-energy",
+   "b": "gotion",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Eighth in global storage cell shipments for H1 2026 through its AESC arm, just ahead of Gotion.",
+     "context": "The sixth and final name on the §154(b) list. Envision's response to the material-assistance rules was to sell its Tennessee cell plant to a US buyer — a structural exit from the problem that Gotion has not attempted.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "envision-energy",
    "b": "hithium",
    "curated": {
     "a": {
@@ -22043,6 +22268,21 @@
    },
    "evid": [],
    "last": "2026-06"
+  },
+  {
+   "a": "envision-energy",
+   "b": "rept",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Competitor in storage systems, and the counterparty behind REPT's displacement at Prevalon: Envision's AESC sold its Smyrna, Tennessee cell plant to Fixx Energy in 2026 explicitly to comply with US material-assistance rules, and Prevalon subsequently contracted 10 GWh of US-made cells from that route.",
+     "context": "The cleanest illustration in the corpus of foreign-entity rules reallocating a supply relationship rather than merely taxing it. Envision is itself named in NDAA §154(b), which is why the plant changed hands.",
+     "source": "https://www.energy-storage.news/aesc-signs-10gwh-us-domestic-content-bess-cell-and-module-deal-with-system-integrator-prevalon/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "envision-energy",
@@ -23215,6 +23455,29 @@
   },
   {
    "a": "eve-energy",
+   "b": "gotion",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Directly adjacent in both markets — seventh in EV installations at 3.4% and second in storage cells at 10.4% for H1 2026, where it is well ahead of Gotion.",
+     "context": "Named in §154(b) and added to §1260H in June 2026. Among Chinese peers, EVE's storage position is the one Gotion has most clearly lost ground against.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Power (EV) battery systems",
+     "date": "",
+     "text": "Fifth globally in EV battery installations at 4.6% share in H1 2026, in a peer band with CALB and EVE Energy and far behind CATL and BYD, which hold 54.3% combined.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eve-energy",
    "b": "hithium",
    "curated": {
     "a": {
@@ -23377,6 +23640,29 @@
      "text": "Directly targets the AI load-volatility problem (the same physics behind xAI's Megapack buffering and ABB's synchronous condensers) at the cell/cabinet level — competing with LG, Samsung SDI, and Panasonic BBU lines in the NVIDIA 800 VDC ecosystem.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eve-energy",
+   "b": "rept",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Second globally in storage cells at 48.0 GWh and 10.4% for H1 2026, against REPT's 31.4 GWh. The two are also direct rivals in the residential segment, where REPT, EVE and Great Power together held about 63% of shipments.",
+     "context": "EVE was added to the US Department of Defense §1260H list in the June 2026 update and is named in NDAA §154(b); REPT is on neither. Same market, materially different US political exposure.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Wending (问顶) cell platform",
+     "date": "",
+     "text": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -25216,6 +25502,29 @@
     }
    ],
    "last": "2026-06-16"
+  },
+  {
+   "a": "fluence",
+   "b": "rept",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Competes with REPT's Powtrix container line at the system level in Western markets, and is the other integrator drawing US-made cells from the Fixx-controlled Smyrna plant.",
+     "context": "An asymmetric rivalry: Fluence is a system integrator that buys cells, REPT is a cell maker that has moved into systems. They meet on the container, not on the cell.",
+     "source": "https://www.energy-storage.news/aesc-jinkos-asset-sales-are-start-of-wider-us-clean-energy-manufacturing-industry-restructuring/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "fluence",
@@ -29013,6 +29322,30 @@
   },
   {
    "a": "google",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Prime contractor on two separate Google data centres, each reported at about USD 600m: The Dalles / Wasco County, Oregon, a 290,000 sq ft build contracted through Google subsidiary Design LLC and cleared to start in January 2024; and Clarksville, Tennessee, active from 2018.",
+     "context": "The Oregon engagement is the only named Whiting-Turner data-centre client that reached the record through an ordinary announcement. The Tennessee one surfaced through the EEOC's litigation over conduct on that site, not through either party's disclosure.",
+     "source": "https://www.constructiondive.com/news/google-whiting-turner-oregon-data-center/705938/",
+     "status": "active",
+     "scale": "Two projects at about USD 600m each"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Whiting-Turner is the fifth-largest contractor in the United States at USD 14.68bn of 2025 revenue, and it is on the marquee data-centre jobs — one of the builders of Vantage's Lighthouse campus in Wisconsin, prime on two separate USD 600m Google data centres — but it slipped from fourth to fifth in the ENR 2026 Top 400 while every data-centre specialist around it climbed, because at 27% telecom revenue it participates in the boom rather than being carried by it.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "google",
    "b": "x-energy",
    "evid": [
     {
@@ -29183,6 +29516,129 @@
     }
    ],
    "last": "2025-08-19"
+  },
+  {
+   "a": "gotion",
+   "b": "hithium",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Third globally in storage cells at 10.0% for H1 2026, more than double Gotion's share in a market Gotion entered earlier.",
+     "context": "Also named in §154(b). Hithium is the storage-specialised comparison; Gotion's storage business is a second line behind EV batteries and is losing share while Hithium's grows.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gotion",
+   "b": "lg-energy-solution",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Third in global EV battery installations at 8.6% and eleventh in storage cells at 2.6% for H1 2026, with storage shipments up 357% year on year.",
+     "context": "The clearest illustration of the policy tailwind: a non-Chinese supplier growing storage shipments more than fourfold in the year the US rules tightened around Chinese cells.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gotion",
+   "b": "lightsource-bp",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Supplying the Lower Wonga solar-plus-storage project in Queensland, Australia — 281 MW / 843 MWh paired with a 380 MWdc solar plant, through an engineering joint venture with INTEC, with commercial operation targeted for late 2028.",
+     "context": "The clearest named storage customer on the record, and it sits in Australia rather than the US or Europe. Lightsource bp's own dossier records the same project from the buyer's side and notes that its US book is deliberately kept clear of Chinese storage suppliers — so this relationship exists precisely where the US foreign-entity rules do not reach.",
+     "source": "https://www.energytrend.com/news/20260610-51579.html",
+     "status": "announced",
+     "since": "2026-06-10",
+     "scale": "281 MW / 843 MWh"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Supplying the Lower Wonga hybrid in Queensland — 281 MW / 843 MWh of storage beside 380 MWdc of solar — through an EPC joint venture between INTEC Energy Solutions and Gotion Hi-Tech Australia, with Rio Tinto taking 40% of output for the Boyne Island smelter and commercial operation targeted for late 2028.",
+     "context": "ENTITY NOTE: the counterparty of record is Gotion Hi-Tech Australia, an overseas subsidiary, not the listed Hefei parent Gotion High-Tech (SZSE: 002074) that this slug covers. The edge is recorded at parent level because the parent's own filings claim the project, but a reader should not attribute the Australian entity's contracting to the parent without checking. The relationship also sits deliberately outside the US foreign-entity regime — Lightsource bp's US book is kept clear of Chinese storage suppliers, and Chinese BESS is engaged only in Australia and Asia-Pacific where those rules do not reach.",
+     "source": "https://reneweconomy.com.au/power-sector-enters-new-phase-as-huge-solar-battery-project-that-will-help-power-smelter-starts-construction/",
+     "status": "announced",
+     "since": "2026-06-10",
+     "scale": "281 MW / 843 MWh"
+    }
+   },
+   "evid": [],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "gotion",
+   "b": "narada",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A Chinese supplier in the telecom and data-centre backup power segment, which is where Gotion claims its strongest position — above 28% global share and first place in base-station and data-centre UPS backup batteries.",
+     "context": "Recorded because that segment is the one most relevant to this corpus and the one no major research house independently tracks; Gotion's share claim rests on a single house and cannot be corroborated.",
+     "source": "https://www.prnewswire.com/apac/news-releases/gotion-posts-industry-leading-growth-strengthens-global-leadership-302684958.html",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gotion",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ninth against sixth in global storage cell shipments for H1 2026 — Gotion 20.8 GWh and 4.5%, REPT 31.4 GWh and 6.8%. Covered together as the corpus's paired study of how US foreign-entity rules bear on Chinese cell makers.",
+     "context": "The pair is the point. To a US buyer's tax-credit arithmetic they are equally disqualifying — both are prohibited foreign entities. On every other axis they diverge sharply: Gotion is named in NDAA §154(b) with a Defense procurement ban dated 1 October 2027, has an operating Illinois plant and an abandoned Michigan one with incentives clawed back, and carries live state-level political exposure. REPT is named on no list, has no US plant and no stranded capital.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Ninth globally in storage cells at 20.8 GWh and 4.5% for H1 2026, against REPT's 31.4 GWh and 6.8%. Covered in the same session as the corpus's paired study of how US foreign-entity rules bear on Chinese cell makers.",
+     "context": "The pair is the point. Both are prohibited foreign entities for tax-credit purposes, so to a US buyer's credit arithmetic they are equally disqualifying. On every other axis they diverge: Gotion is named in NDAA §154(b) with a Department of Defense procurement ban dated 1 October 2027, holds an operating Illinois plant and an abandoned Michigan one with incentives clawed back, and carries live state-level political exposure. REPT is named in nothing, has no US plant and no stranded capital, and is exposed only through its customers' credit maths.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gotion",
+   "b": "samsung-sdi",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Twelfth in global storage cell shipments at 1.4% for H1 2026 — a Korean comparator whose value here is as the non-Chinese alternative a US buyer reaches for precisely because of the foreign-entity rules.",
+     "context": "The Korean and Japanese suppliers are the direct beneficiaries of the material-assistance regime that constrains Gotion.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "gotion",
+   "b": "sunwoda",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Tenth globally in EV battery installations at 2.4% for H1 2026, inside the same Chinese second tier as Gotion, CALB and EVE.",
+     "context": "Notably absent from the §154(b) list, which is the axis on which this peer group genuinely diverges.",
+     "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "gridstor",
@@ -30512,6 +30968,29 @@
   },
   {
    "a": "hithium",
+   "b": "rept",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Third globally in storage cells at 46.2 GWh and 10.0% for H1 2026. Both are storage-specialised Chinese cell makers of the same generation competing on the large-format capacity race.",
+     "context": "Hithium is named in NDAA §154(b) and REPT is not — the clearest same-segment illustration that named designation and PRC incorporation are separate exposures.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Wending (问顶) cell platform",
+     "date": "",
+     "text": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "hithium",
    "b": "samsung-ct",
    "curated": {
     "b": {
@@ -31111,6 +31590,36 @@
    "last": "2025-04-10"
   },
   {
+   "a": "hitt",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The clearest contrast in the corpus. HITT is eighth in the ENR 2026 Top 400 at USD 13.0bn against Whiting-Turner's fifth at USD 14.68bn — but HITT runs 82% telecom revenue against Whiting-Turner's 27%, and ranks first in Building Design+Construction's data-centre list where Whiting-Turner ranks sixth.",
+     "context": "Whiting-Turner is the larger contractor; HITT is the larger data-centre contractor. The pair is the cleanest available illustration that overall scale and sector position are different things.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Mission Critical / Data Center Construction",
+     "date": "",
+     "text": "#1 ENR 2025 Telecommunications/Data Center Contractor and listed first on BD+C's 2025 data-center ranking, ahead of Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn, and Mortenson.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-07",
+     "text": "Listed first among top data-center construction firms in BD+C's 2025 Giants 400 ranking — Independent corroboration of the #1 position beyond ENR's survey — ahead of Holder, DPR, Clayco, Turner, and Whiting-Turner on trailing data-center revenue.",
+     "src": "BD+C Giants 400, 2025-10-07",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-07"
+  },
+  {
    "a": "holder-construction",
    "b": "mccarthy",
    "curated": {
@@ -31254,6 +31763,21 @@
      "note": "Publicly named on the newest mega-campus awards Holder is absent from.",
      "context": "Turner holds publicly reported roles in the 2025-26 mega-campus wave (Meta, Stargate-era sites) where Holder — historically the quiet hyperscale incumbent that delivered more hyperscale square footage than any named peer — has no reported presence. The visible face of the share-shift question hanging over Holder.",
      "source": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "holder-construction",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Second in the 2025 Building Design+Construction data-centre ranking, ahead of Whiting-Turner at sixth, and one of the specialists whose sector concentration is the counterpoint to Whiting-Turner's diversification.",
+     "context": "A peer dossier records Holder rising three places in the ENR 2026 Top 400. That specific movement could not be verified in this session's sources, which place Holder at 25; the four other movement claims in the same passage — Mortenson, Clune, Fortis and HITT — all check out.",
+     "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
      "status": "active"
     }
    },
@@ -33233,6 +33757,42 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "jupiter-power",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "REPT BATTERO modules sit inside the Energy Vault B-VAULT AC blocks at St Gall near Fort Stockton — 100 MW / 200 MWh across 76 containers, COD July 2024. REPT BATTERO lists Fort Stockton among its own US projects.",
+     "context": "Indirect: Jupiter Power's counterparty is Energy Vault, which sources the modules. Worth recording how thinly the attribution is sourced — trade press identified REPT BATTERO as the supplier from a close-up photograph of the containers in a video on Energy Vault's site, and neither Energy Vault nor Jupiter Power named it in their own releases. The supplier for the second 100 MW / 200 MWh ERCOT project announced June 2025 is not disclosed anywhere and must not be assumed to be the same.",
+     "source": "https://www.energy-storage.news/jupiter-power-energy-vault-bess-project-commercial-operation-in-ercot-texas-usa/",
+     "status": "active",
+     "since": "2024-07",
+     "scale": "100 MW / 200 MWh",
+     "via": "Energy Vault"
+    },
+    "b": {
+     "type": "customer",
+     "note": "REPT modules sit inside the Energy Vault B-VAULT AC blocks at Jupiter Power's St Gall project near Fort Stockton, Pecos County, Texas — 100 MW / 200 MWh across 76 containers, operating in ERCOT.",
+     "context": "An indirect relationship: REPT supplies Energy Vault, which builds for Jupiter Power. Worth noting how thinly the attribution is sourced — trade press identified REPT as the module supplier from a close-up photograph of the containers in a video on Energy Vault's site, and neither Energy Vault nor Jupiter Power named REPT in their own releases. REPT itself lists Fort Stockton among its US projects.",
+     "source": "https://www.energy-storage.news/jupiter-power-energy-vault-bess-project-commercial-operation-in-ercot-texas-usa/",
+     "status": "active",
+     "since": "2024-07",
+     "scale": "100 MW / 200 MWh",
+     "via": "Energy Vault"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its cells sit inside Energy Vault's B-VAULT AC blocks on Jupiter Power's ERCOT fleet, and it supplied Prevalon's 511 platform before that integrator moved to US-made cells.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-07"
   },
   {
    "a": "jupiter-power",
@@ -35394,7 +35954,7 @@
     {
      "where": "Recent Reporting",
      "date": "2025-09-25",
-     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — split four ways with Whiting-Turner, Weitz, and Michels, the clearest evidence hyperscale owners multi-source GC capacity.",
+     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — shared with Whiting-Turner and Weitz, which each build one building while the Turner-McCarthy JV builds two, the clearest evidence hyperscale owners multi-source GC capacity. Michels, often listed alongside the GCs, is a subcontractor.",
      "src": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
      "from": "b"
     }
@@ -35449,6 +36009,65 @@
     }
    ],
    "last": "2026-01-22"
+  },
+  {
+   "a": "mccarthy",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Co-contractor on Lighthouse as the other half of the Turner/McCarthy joint venture, which holds Buildings 13 and 14 at 468 MW combined, and a peer in the ENR rankings.",
+     "context": "McCarthy's own dossier records the same ENR 2026 reshuffle from the other side — it fell from 20 to 22 in the year the data-centre category grew 86%. Both companies lost rank in the boom for the same reason: diversification.",
+     "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+     "status": "active",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Mission critical — data centres and secure facilities",
+     "date": "",
+     "text": "McCarthy does not appear in the named leaders of ENR's or Building Design+Construction's data-centre rankings, nor in Construction Dive's roundup of multibillion-dollar hyperscaler projects — those name HITT, Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn and Mortenson.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-03",
+     "text": "Construction team chosen for the $8bn first phase of the $15bn, 1.3 GW Vantage campus in Wisconsin — Whiting-Turner, The Weitz Co., the Turner-McCarthy joint venture and Michels — A four-way split of a single phase, and ENR notes the friction alongside it: an open-shop right-to-work state with a Building Trades Council labour partnership, and community opposition on water use, habitat loss and light pollution.",
+     "src": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: it does not appear on the National Center for Employee Ownership's Employee Ownership 100 while construction peers of identical size — McCarthy, JE Dunn, Swinerton, Sundt — all do; the company's own site never claims employee ownership, including on its careers pages; its press boilerplate omits it; and only a 401(k) profit-sharing plan surfaces in retirement-plan indexes.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-21",
+     "text": "Lighthouse ramps up — about 300 workers and 200 pieces of equipment on site, earthwork through April, steel from end February; the Turner/McCarthy JV is named for Buildings 13 and 14 at 468 MW combined — The building-by-building reporting is what establishes that this is three general contractors across four buildings with Michels subcontracted, not an even four-way split.",
+     "src": "Ozaukee Press, 2026-01-21; Daily Reporter, 2026-01-22",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Groundbreaking at Vantage's Lighthouse campus, Port Washington, Wisconsin — USD 15bn campus, USD 8bn first phase, completion 2028 — Whiting-Turner published nothing about the award. Vantage announced the team, and Weitz, Turner and McCarthy each issued their own statements; the silence is characteristic rather than accidental.",
+     "src": "BizTimes, 2025-12-17",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-03",
+     "text": "Vantage selects the build team for the Port Washington campus, Whiting-Turner among them — Entry onto a gigawatt-scale campus bench alongside Turner, McCarthy and Weitz — the credential that matters most in the sector.",
+     "src": "infraUS, 2025-11-03",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-21"
   },
   {
    "a": "megmeet",
@@ -36393,7 +37012,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "The shared-award pattern on mega-campuses (Meta LA split three ways; Stargate WI split four ways) also reveals how hyperscalers dual-source GC capacity — no single builder, even the largest, gets an AI gigacampus alone.",
+     "text": "The shared-award pattern on mega-campuses (Meta LA split three ways; the Wisconsin Stargate campus split across three GC entities over four buildings) also reveals how hyperscalers dual-source GC capacity — no single builder, even the largest, gets an AI gigacampus alone.",
      "src": "",
      "from": "b"
     },
@@ -38795,6 +39414,36 @@
      "text": "Battery-vendor experience spans Tesla, Samsung, BYD, LG, Fluence, Powin, and Wärtsilä.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mortenson",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Ranked ninth in the 2025 data-centre list, behind Whiting-Turner, but the biggest mover in the ENR 2026 Top 400 — up twelve places from 22 to 10 on USD 10.8bn, entirely on a hyperscale book.",
+     "context": "The direct counterfactual. Mortenson is the specialist trajectory Whiting-Turner did not take: smaller in absolute terms, rising fast because the sector is where its revenue sits.",
+     "source": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: revenue grew 10.4% in FY2025 against 11.8% for the Top 400 as a whole and 86.4% for the telecom category, and its rank fell from fourth to fifth in the same edition in which Mortenson rose twelve places, Clune thirteen and Fortis eleven, all on hyperscale books.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Construction management and general contracting",
+     "date": "",
+     "text": "Competes with Turner, HITT, Holder, DPR, Clayco, Fortis, JE Dunn, Mortenson, Clune, Hensel Phelps, Gilbane and Skanska USA.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -41284,7 +41933,7 @@
     "b": {
      "type": "customer",
      "note": "Builder on the Stargate Wisconsin campus — and enterprise customer of OpenAI in the other direction.",
-     "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW — split four ways with Whiting-Turner, Weitz and Michels). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
+     "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase; 1.3 GW of total facility power against 902 MW of critical IT load — three GC entities across four buildings, with Whiting-Turner and Weitz each taking one and the Turner-McCarthy JV two; Michels is a subcontractor, not a fourth GC). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
      "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
      "status": "active",
      "since": "2025-09",
@@ -41324,7 +41973,7 @@
     {
      "where": "Recent Reporting",
      "date": "2025-09-25",
-     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — split four ways with Whiting-Turner, Weitz, and Michels, the clearest evidence hyperscale owners multi-source GC capacity.",
+     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — shared with Whiting-Turner and Weitz, which each build one building while the Turner-McCarthy JV builds two, the clearest evidence hyperscale owners multi-source GC capacity. Michels, often listed alongside the GCs, is a subcontractor.",
      "src": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
      "from": "b"
     }
@@ -41458,6 +42107,23 @@
     }
    ],
    "last": "2026-02-24"
+  },
+  {
+   "a": "openai",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Tenant of the Lighthouse campus under the Stargate programme, which also involves Oracle, SoftBank, MGX, Arm, Microsoft and NVIDIA.",
+     "context": "Two steps removed from Whiting-Turner's actual contract, and recorded for the corpus's project graph rather than as a commercial relationship.",
+     "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+     "status": "active",
+     "via": "Vantage Data Centers",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "openai",
@@ -41624,7 +42290,7 @@
     {
      "where": "Recent Reporting",
      "date": "2025-09-25",
-     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — split four ways with Whiting-Turner, Weitz, and Michels, the clearest evidence hyperscale owners multi-source GC capacity.",
+     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — shared with Whiting-Turner and Weitz, which each build one building while the Turner-McCarthy JV builds two, the clearest evidence hyperscale owners multi-source GC capacity. Michels, often listed alongside the GCs, is a subcontractor.",
      "src": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
      "from": "b"
     }
@@ -41771,6 +42437,23 @@
     }
    ],
    "last": "2026-02-24"
+  },
+  {
+   "a": "oracle",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Operator of the Lighthouse campus Whiting-Turner is helping build, under the Stargate programme with OpenAI as tenant.",
+     "context": "A stack relationship rather than a contractual one — Whiting-Turner's counterparty is Vantage as developer, not Oracle as operator.",
+     "source": "https://www.datacenterknowledge.com/data-center-construction/vantage-breaks-ground-on-15b-stargate-campus-in-wisconsin",
+     "status": "active",
+     "via": "Vantage Data Centers",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "panasonic",
@@ -42607,6 +43290,32 @@
   },
   {
    "a": "prevalon",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Supplied the 320Ah Wending LFP cells and long-format modules behind the original 511 platform, under a partnering agreement announced 11 April 2024; Prevalon was also designated service provider for REPT BATTERO's supplied fleet across the Americas.",
+     "context": "The commonly cited 2.5 GWh figure is narrower than it reads: it was a Letter of Intent for US deployments during calendar 2024 only, inside a stated short-term target of 10 GWh across the Americas, with roughly 1.5 GWh already deployed at announcement. CHESTERTON CHECK: no source states the relationship ended. It is typed `historical` because a February 2026 interview about foreign-entity rules names a different Chinese manufacturer as Prevalon's primary supplier without mentioning REPT BATTERO, and because Prevalon has since contracted 10 GWh of US-made cells — dormant and superseded, not confirmed terminated.",
+     "source": "https://www.energy-storage.news/prevalon-rept-partnership-targets-2-5gwh/",
+     "status": "historical",
+     "since": "2024-04-11",
+     "scale": "2.5 GWh LOI for US deployments in 2024, within a stated 10 GWh Americas target"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Supplied 320Ah Wending LFP cells and long-format modules into Prevalon's 511 Integrated Energy Storage Platform under a partnering agreement announced 11 April 2024; Prevalon was also designated service provider for REPT's supplied fleet across the Americas.",
+     "context": "The headline figures need care. A Letter of Intent covered 2.5 GWh of US deployments during calendar 2024 only, inside a stated short-term target of 10 GWh across the Americas, with roughly 1.5 GWh already deployed at announcement. No source states the relationship ended, but a February 2026 interview with Prevalon's chief executive about foreign-entity rules names a different Chinese manufacturer as its primary supplier and does not mention REPT, and Prevalon has since contracted 10 GWh of US-made cells. Treat as dormant and superseded rather than confirmed terminated.",
+     "source": "https://www.businesswire.com/news/home/20240411945451/en/",
+     "status": "historical",
+     "since": "2024-04-11",
+     "scale": "2.5 GWh LOI for 2024 within a stated 10 GWh Americas target"
+    }
+   },
+   "evid": [],
+   "last": "2024-04-11"
+  },
+  {
+   "a": "prevalon",
    "b": "tesla",
    "curated": {
     "a": {
@@ -43218,6 +43927,71 @@
     }
    ],
    "last": "2026-04-09"
+  },
+  {
+   "a": "rept",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked first in Wood Mackenzie's inaugural global BESS integrator ranking of July 2026, in which REPT does not appear in the top ten — the gap between REPT's cell-market position and its system-market recognition.",
+     "context": "An integrator ranking rather than a cell ranking, so REPT's absence is expected; recorded because it bounds how far the Powtrix line has actually carried REPT into the system market.",
+     "source": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rept",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rept",
+   "b": "trina-storage",
+   "evid": [
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "rept",
+   "b": "wartsila",
+   "evid": [
+    {
+     "where": "Capabilities · Powtrix containerised storage systems",
+     "date": "",
+     "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "rolls-royce-power-systems",
@@ -45211,7 +45985,7 @@
     "a": {
      "type": "customer",
      "note": "Repeat wholesale client — Ohio work plus the $15B Stargate Wisconsin campus.",
-     "context": "Vantage appears among Turner's company-referenced Critical Facilities clients (Ohio; the Stargate Wisconsin campus) — a wholesale-landlord relationship where megacampus owners hire Turner alongside rivals rather than instead of them: Stargate WI is split four ways, Meta LA three ways.",
+     "context": "Vantage appears among Turner's company-referenced Critical Facilities clients (Ohio; the Stargate Wisconsin campus) — a wholesale-landlord relationship where megacampus owners hire Turner alongside rivals rather than instead of them: the Wisconsin Stargate campus is split across three GC entities over four buildings, Meta LA three ways.",
      "source": "https://www.turnerconstruction.com/pages/critical-facilities-market",
      "status": "active",
      "via": "Critical Facilities",
@@ -45220,7 +45994,7 @@
     "b": {
      "type": "supplier",
      "note": "Turner-McCarthy JV among phase-1 builders of the Lighthouse Stargate campus.",
-     "context": "The Turner-McCarthy JV was named among the phase-1 builders of Lighthouse ($8B first phase, 1.3 GW), split four ways with Whiting-Turner, Weitz and Michels — the multi-source GC model Vantage applies to giga-campus delivery.",
+     "context": "The Turner-McCarthy JV was named among the phase-1 builders of Lighthouse ($8B first phase; 1.3 GW of total facility power against the 902 MW of critical IT load Vantage publishes) and builds two of the four buildings, while Whiting-Turner and Weitz each build one — three GC entities, not a four-way split. Michels, which trade coverage lists alongside the GCs, is named a subcontractor by local reporting and is absent from the site's OSHA Strategic Partnership, which covers only the three GC entities. The multi-source GC model is what Vantage applies to giga-campus delivery.",
      "source": "ENR — Stargate WI phase-1 construction team (Sept 2025)",
      "status": "active",
      "since": "2025-09",
@@ -45230,6 +46004,37 @@
    },
    "evid": [],
    "last": "2025-09"
+  },
+  {
+   "a": "turner-construction",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Co-contractor on the Lighthouse campus, where Turner is half of the joint venture building two of the four buildings, and a direct rival everywhere else. Turner is first in the ENR 2026 Top 400 at USD 28.3bn against Whiting-Turner's fifth at USD 14.68bn.",
+     "context": "The two are unrelated despite the shared surname — Whiting-Turner was founded in Baltimore in 1909 by G.W.C. Whiting and LeBaron Turner, while Turner Construction is a separate New York firm now owned by Hochtief. A multi-contractor campus is a co-opetition structure: on Lighthouse they are colleagues, in bidding they are not.",
+     "source": "https://ozaukeepress.com/content/project-no-other",
+     "status": "active",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-25",
+     "text": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028) — A seat on the flagship OpenAI-linked campus — shared with Whiting-Turner and Weitz, which each build one building while the Turner-McCarthy JV builds two, the clearest evidence hyperscale owners multi-source GC capacity. Michels, often listed alongside the GCs, is a subcontractor.",
+     "src": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Whiting and LeBaron Turner, MIT classmates; no relation to Turner Construction despite the surname.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-25"
   },
   {
    "a": "vantage",
@@ -45324,6 +46129,24 @@
     }
    ],
    "last": "2026-01-05"
+  },
+  {
+   "a": "vantage",
+   "b": "whiting-turner",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "One of the general contractors on Vantage's Lighthouse campus at Port Washington, Wisconsin — a USD 15bn, four-building, 2.5 million sq ft development with 902 MW of critical IT load, on which Whiting-Turner builds one building.",
+     "context": "Whiting-Turner never announced the award. Vantage named the build team in November 2025 and Weitz, Turner and McCarthy each published their own statements; Whiting-Turner published nothing, which is its consistent posture. Its specific building and its contract value are both unpublished.",
+     "source": "https://infraus.org/vantage-selects-build-team-for-15-billion-port-washington-data-center-campus/",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "One of four buildings on a USD 8bn first phase",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [],
+   "last": "2025-11"
   },
   {
    "a": "vertiv",

@@ -1,0 +1,287 @@
+{
+ "schemaVersion": 2,
+ "slug": "gotion",
+ "title": "Gotion High-Tech — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: chemistry roadmaps and the rules that decide who may sell",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Two forces govern this company, and only one of them is engineering.",
+   "ps": [
+    "The first is the chemistry ladder: iron-phosphate cells improving incrementally, manganese added to raise voltage, sodium arriving as a lithium hedge, and solid electrolytes promised beyond that. Each step trades cost, energy, safety and manufacturability against the others.",
+    "The second is a body of US law that decides whether any of it may be sold into a project claiming a federal tax credit. That law changed substantially in 2025 and most published commentary still describes the old version.",
+    "This guide teaches both, because for a Chinese cell maker with an American factory they are the same subject. It also teaches a third skill the company's own filings demand: how to tell a reported profit from an earned one."
+   ]
+  },
+  {
+   "id": "chemistry-ladder",
+   "title": "The chemistry ladder, and what each rung actually buys",
+   "kind": "table",
+   "read": "Every step is a trade, and the trades are what the roadmaps are really about.",
+   "intro": "Cell voltage times capacity gives energy. Chemistry sets the voltage, the cost, the safety margin and how hard the cell is to manufacture — and no chemistry wins on all four.",
+   "cols": [
+    "Chemistry",
+    "Rough energy density",
+    "What it buys",
+    "What it costs"
+   ],
+   "rows": [
+    [
+     "{{LFP}}",
+     "160–205 Wh/kg",
+     "Cheap, no cobalt or nickel, very stable, long cycle life",
+     "Lower voltage and energy, weaker cold performance"
+    ],
+    [
+     "{{LMFP}}",
+     "Around 240 Wh/kg",
+     "Manganese raises cell voltage, so more energy from a similar cost base",
+     "Manganese dissolution shortens life; harder to manufacture consistently"
+    ],
+    [
+     "{{NMC}}",
+     "250–330 Wh/kg",
+     "The highest practical energy today; strong power and cold behaviour",
+     "Expensive nickel and cobalt, less thermally forgiving"
+    ],
+    [
+     "{{sodium-ion}}",
+     "160–260 Wh/kg claimed",
+     "No lithium at all; works far below freezing; very high cycle counts",
+     "Lower energy for the same volume; an immature supply chain"
+    ],
+    [
+     "{{solid-state battery}}",
+     "350 Wh/kg claimed",
+     "Removes the flammable liquid electrolyte and enables higher-energy pairings",
+     "Keeping solid layers in contact through expansion is unsolved at scale"
+    ]
+   ],
+   "note": "Read a roadmap by its manufacturing readiness, not its energy density. A pilot line measured in a fraction of a gigawatt-hour is a laboratory result with a factory attached; a {{gigafactory}} is tens of gigawatt-hours. The distance between those two is where most battery roadmaps quietly stall."
+  },
+  {
+   "id": "nameplate-vs-real",
+   "title": "Nameplate capacity is a design figure, not an output",
+   "kind": "prose",
+   "read": "Announced gigawatt-hours, built gigawatt-hours and shipped gigawatt-hours are three different numbers.",
+   "ps": [
+    "A plant's **nameplate** capacity is what it was designed to produce annually at full utilisation. It is announced years before the plant exists, and it is the number that appears in headlines.",
+    "Built capacity is what has actually been installed and commissioned. Shipped volume is what left the door. In a young plant these can differ by a factor of several.",
+    "Announced international capacity is the least reliable of all. Projects are announced with incentive packages attached, and a meaningful share never reach production — cancelled, defaulted, or quietly rescoped. A company can hold an operating plant on one continent and a written-off site on another at the same time.",
+    "There is a useful tell in financial statements. **Construction in progress** is the accounting line for capital spent on assets not yet in service. Watching it move — which projects appear, which grow, which never appear at all — is a far better guide to what is actually being built than press announcements, because it is audited and a dead project simply stops.",
+    "The general skill: when a company publishes a list of production bases and an aggregate capacity figure but no per-site table, the aggregate is the only honest number. Circulating per-site figures that sum to twice the stated total are stale planning targets, not capacity."
+   ]
+  },
+  {
+   "id": "feoc-machinery",
+   "title": "How the US restricted-entity rules actually work",
+   "kind": "prose",
+   "read": "It is a two-part status test plus a separate cost calculation, and conflating them produces wrong answers.",
+   "ps": [
+    "Start with status. A **{{specified foreign entity}}** is a company that either appears on one of several government lists, or — far more broadly — is incorporated in or controlled from a covered nation. The second limb matters enormously: incorporation alone can be enough, so a company can be captured without ever being named anywhere.",
+    "Combine that with a separate influence test and you get a **{{prohibited foreign entity}}**. Such an entity cannot itself claim the relevant clean-energy credits, and that prohibition follows its subsidiaries. This is why an American factory owned by a restricted parent cannot claim the domestic manufacturing credit for what it makes: the status attaches to the owner, not the site.",
+    "Then, separately, there is the content test. A project that wants the storage investment credit must show that enough of its cost did **not** come from restricted suppliers — the **{{material assistance cost ratio}}**. It is a sliding threshold that rises each year, not a blacklist. Since cells routinely exceed half the manufactured-product cost of a storage system, a system built on restricted cells will usually fail the ratio — but it fails on arithmetic, and that distinction decides the edge cases: a mixed-supplier system, a project grandfathered by an early binding contract, or non-cell content.",
+    "Finally, keep the regimes apart. A **{{Section 1260H}}** listing is a defence-department matter and triggers contracting restrictions. A battery-specific procurement ban is a third thing again, prospective and confined to defence purchasing. Forced-labour import lists are a fourth. A company can be on one and absent from the others, and the difference is not cosmetic.",
+    "The reason this matters for reading: essentially all commentary written before mid-2025 describes a vehicle-credit test that no longer exists, because the credit it attached to was terminated. Citing it today is not a small error — it is answering a question nobody is asking."
+   ]
+  },
+  {
+   "id": "regime-map",
+   "title": "Four regimes that are constantly confused",
+   "kind": "ledger",
+   "read": "Each has a different author, a different trigger and a different consequence.",
+   "cols": [
+    "Regime",
+    "Who administers it",
+    "What triggers it",
+    "What it actually stops"
+   ],
+   "rows": [
+    [
+     "Clean-energy credit eligibility",
+     "Tax authority",
+     "Restricted-entity status, or failing the content cost ratio",
+     "Claiming manufacturing, generation or storage tax credits"
+    ],
+    [
+     "Battery procurement ban",
+     "Defence department",
+     "Being named in the statute",
+     "Defence purchases of that company's batteries, from a stated future date"
+    ],
+    [
+     "{{Section 1260H}} listing",
+     "Defence department",
+     "Designation as a military-linked company",
+     "Defence contracting relationships more broadly"
+    ],
+    [
+     "Forced-labour import list",
+     "Customs and border authority",
+     "Designation over supply-chain labour findings",
+     "Importing the goods at all"
+    ]
+   ],
+   "note": "The common error is to treat these as one blacklist. They are four instruments with four authors, and a company's position under each must be checked separately. Being absent from three of them while named in one is an ordinary outcome, not a contradiction."
+  },
+  {
+   "id": "earnings-quality",
+   "title": "Reading a profit that is not from operations",
+   "kind": "prose",
+   "read": "Chinese filings publish the answer directly, in a line most foreign readers skip.",
+   "ps": [
+    "Companies listed in mainland China report two profit figures. The headline is net profit attributable to shareholders. Beneath it sits a second line — profit **excluding non-recurring items**, 扣非 — which strips out gains and losses that are not the operating business.",
+    "The items removed are mostly four kinds: changes in the fair value of investments the company holds, gains from selling those investments, government grants, and asset impairments. All four can be very large relative to a thin industrial margin.",
+    "When the two figures diverge by an order of magnitude, the headline is not describing the business. A company reporting a near-tripling of profit while the ex-non-recurring line shows a fraction of a per cent net margin is telling you, in its own filing, that a securities portfolio moved.",
+    "Three cross-checks make this concrete. First, look at the **quarterly** pattern: a year that looks strong annually may contain a loss quarter and a quarter down eighty per cent. Second, read the **composition of total profit**, which these filings disclose as percentages — fair-value changes and grants can together exceed one hundred per cent of profit, with impairments negative. Third, check whether the board has **authorised further disposals**, which tells you the mechanism is expected to continue.",
+    "None of this means the company is doing anything improper. Holding equity stakes in customers is normal, and the disclosure is complete and audited. The error would be reading the headline as an operating result when the filing plainly says it is not."
+   ]
+  },
+  {
+   "id": "reading-traps",
+   "title": "Reading traps in this corner of the market",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Five specific errors that recur in coverage of Chinese battery makers.",
+   "ps": [
+    "**Largest shareholder is not controller.** A holder can sit at twenty-four per cent and still not control a company if it contractually waives voting rights. Read the shareholders' agreement terms and, critically, the expiry date — waivers are extended, and an expiry converts a passive holding into control automatically.",
+    "**A falling percentage is not a sale.** If the share count is unchanged, the percentage fell because the denominator grew. Check the absolute number of shares before writing that an investor sold down.",
+    "**Shipments and revenue can move in opposite directions**, and when they do the divergence is the story. Rising volume with falling segment revenue means price erosion or a shift from selling systems to selling bare cells.",
+    "**An operating factory does not confer eligibility.** Restricted-entity status attaches to ownership. A plant on the right continent owned by the wrong parent still cannot claim the credit.",
+    "**Check whether a named bill was actually enacted.** Proposed legislation targeting specific companies gets extensive coverage at introduction and very little when it stalls, so 'a law was passed' claims need the status checked rather than assumed."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Chemistry, policy and filing literacy.",
+   "cards": [
+    {
+     "q": "What does adding manganese to iron-phosphate chemistry buy, and what does it cost?",
+     "a": "{{LMFP}} raises cell voltage and therefore energy density from a similar cost base. The cost is manganese dissolution, which shortens life, and greater manufacturing difficulty in keeping cells consistent."
+    },
+    {
+     "q": "Why is a pilot line measured in a fraction of a gigawatt-hour not evidence that a new chemistry has arrived?",
+     "a": "Because a {{gigafactory}} is tens of gigawatt-hours. The gap between a pilot line and volume manufacturing is where most battery roadmaps stall, and it is a manufacturing problem rather than a chemistry one."
+    },
+    {
+     "q": "Can a company be a {{specified foreign entity}} without appearing on any government list?",
+     "a": "Yes. The definition includes a control limb — incorporation in or control from a covered nation — so a company can be captured by where it is incorporated alone, with no designation anywhere."
+    },
+    {
+     "q": "A US factory is owned by a restricted foreign parent. Can it claim the domestic manufacturing credit?",
+     "a": "No. Restricted-entity status follows ownership and extends to subsidiaries, so the plant's location does not cure it. This is the single most consequential point in the regime."
+    },
+    {
+     "q": "What is the {{material assistance cost ratio}} testing?",
+     "a": "The share of a project's or component's direct costs that did NOT come from restricted suppliers. It is a sliding threshold rising each year — a cost calculation, not a supplier blacklist — which is why edge cases turn on arithmetic."
+    },
+    {
+     "q": "A filing shows net profit up 278% and profit excluding non-recurring items of a small fraction of that. What happened?",
+     "a": "Something outside the operating business moved — typically a fair-value gain on investments the company holds, plus government grants. The ex-non-recurring line is the operating result; the headline is not."
+    },
+    {
+     "q": "A shareholder's stake fell from 26.5% to 24.3% while its share count was unchanged. What happened?",
+     "a": "Dilution. New shares were issued, growing the denominator. Nothing was sold, and reporting it as a sell-down would be wrong."
+    },
+    {
+     "q": "Why must a voting-rights waiver be read with its expiry date?",
+     "a": "Because on expiry the largest shareholder's votes revert automatically, which can convert a passive holding into a controlling one without any transaction taking place. The date is the event."
+    },
+    {
+     "q": "Why is a company's absence from three restricted lists while named on a fourth an ordinary outcome?",
+     "a": "Because the four regimes have different authors, triggers and consequences — tax eligibility, defence procurement, military-company designation and forced-labour imports. Each must be checked separately; they are not one blacklist."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on chemistry, policy and filings.",
+   "items": [
+    {
+     "q": "Sodium-ion's clearest advantage over lithium iron phosphate is:",
+     "c": [
+      "Higher energy density",
+      "Operation far below freezing and no lithium in the supply chain",
+      "Lower manufacturing complexity",
+      "Longer calendar life"
+     ],
+     "a": 1,
+     "why": "Sodium chemistry tolerates extreme cold and removes lithium from the bill of materials entirely. Its energy density is generally lower, which is the trade being made."
+    },
+    {
+     "q": "A company lists ten production bases and one aggregate capacity figure but no per-site table. Circulating per-site figures sum to twice the aggregate. You should:",
+     "c": [
+      "Use the per-site figures",
+      "Average the two",
+      "Report the aggregate and treat the per-site figures as stale planning targets",
+      "Report both as equally valid"
+     ],
+     "a": 2,
+     "why": "The audited aggregate is the only sourced number. Per-site figures summing to twice it are announced plans that were never built, and republishing them as capacity launders a target into a fact."
+    },
+    {
+     "q": "The main practical consequence of restricted-entity status for a cell maker's customers is:",
+     "c": [
+      "Their imports are seized",
+      "They cannot claim certain federal tax credits on projects using those cells",
+      "They face criminal liability",
+      "They must relabel the product"
+     ],
+     "a": 1,
+     "why": "The status governs tax-credit eligibility, via both the entity test and the cost-ratio test. Import prohibition is a separate regime with a separate list."
+    },
+    {
+     "q": "A vehicle-credit foreign-content test drove years of coverage about a battery maker. Today that framing is:",
+     "c": [
+      "Still the primary constraint",
+      "Moot, because the credit it attached to was terminated",
+      "Now stricter than before",
+      "Applied only to imports"
+     ],
+     "a": 1,
+     "why": "When the underlying credit is repealed there is nothing for the test to attach to. Repeating the old framing answers a question that no longer exists."
+    },
+    {
+     "q": "Which financial-statement line best reveals what a company is actually building, as opposed to announcing?",
+     "c": [
+      "Revenue by segment",
+      "Construction in progress",
+      "Operating cash flow",
+      "Gross margin"
+     ],
+     "a": 1,
+     "why": "Construction in progress is audited capital spent on assets not yet in service. Projects that appear and grow are real; a project that never appears was never built."
+    },
+    {
+     "q": "A company's storage shipments rose 41% while its storage revenue fell 19%. The most useful reading is:",
+     "c": [
+      "One of the figures is wrong",
+      "Price erosion, or a shift from selling systems to selling bare cells",
+      "Currency movement",
+      "A change of auditor"
+     ],
+     "a": 1,
+     "why": "Both can be true simultaneously. Volume up and revenue down means realised value per unit fell — through price, through mix, or both."
+    },
+    {
+     "q": "The single best reason to read the ex-non-recurring profit line in a mainland Chinese filing is that it:",
+     "c": [
+      "Is audited more rigorously",
+      "Removes fair-value gains, disposals, grants and impairments to leave the operating result",
+      "Is the figure used for tax",
+      "Is comparable across countries"
+     ],
+     "a": 1,
+     "why": "It is the filing's own statement of what the business earned from operating, stripped of items that do not recur. Where it diverges sharply from the headline, it is the more informative number."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1055 @@
+{
+ "schemaVersion": 7,
+ "slug": "gotion",
+ "name": "Gotion High-Tech Co., Ltd. (国轩高科股份有限公司)",
+ "shortName": "Gotion High-Tech",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.gotion.com.cn",
+ "headquarters": "Hefei, Anhui, China",
+ "founded": "2015 (listed vehicle — formerly Dongyuan Electric, renamed on the 2015 major asset restructuring)",
+ "employees": "~33,000 (implied: 4,358 R&D staff stated as 13.17% of headcount, 2025)",
+ "ownership": {
+  "type": "public",
+  "ticker": "SZSE: 002074"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Gotion High-Tech's headline profit growth is almost entirely a securities revaluation, and the operating business behind it runs at a fraction of a percent of net margin — H1 2026 net profit attributable rose 278.05% to RMB 1,386.0m while profit excluding non-recurring items was RMB 106.9m on RMB 27,775.5m of revenue, a core net margin of 0.38%. It is simultaneously the only Chinese cell maker in this corpus with an operating US plant and the only one named on a US procurement blacklist, which is the tension the whole dossier turns on. BACKGROUND. The listed vehicle is Gotion High-Tech Co., Ltd., Shenzhen 002074, headquartered in Hefei, Anhui; it was formerly Dongyuan Electric and took its present shape in a 2015 major asset restructuring. Volkswagen (China) Investment is the largest shareholder at 24.28% and has not sold a share since 2021 — the percentage drift is dilution — but it contractually waives voting rights to sit at least five points below the founder party, and extended that waiver in December 2024 from 36 months to 72, to roughly December 2027. Li Zhen is the actual controller through a 17.85% concert party with his son and Nanjing Guoxuan Holding. FY2025 revenue was RMB 45,070.5m (+27.35%) on roughly 100 GWh of shipments; the company ranked fifth globally in EV battery installations at 4.5% share and ninth in storage cells at 4.5%.",
+ "ecosystemRole": "Gotion reaches the AI-data-centre build-out from an angle no other Chinese cell maker in this corpus occupies: it claims to be the world's largest supplier of base-station and data-centre UPS backup batteries, above 28% share, and that claim appears in its own audited annual report rather than only in marketing. It also sells a containerised storage line — the Gotion Grid family at 5, 7 and 20 MWh, and a 5 MW / 18.8 MWh grid-forming cabinet — with a C&I product marketed explicitly at data centres. What it cannot do is sell any of that into a US project claiming a clean-energy tax credit. It is named on the FY2024 NDAA §154(b) list, which makes it a specified foreign entity by statute rather than by inference, and its US subsidiaries are captured with it, so the Manteno plant it actually operates in Illinois cannot claim the advanced manufacturing production credit for what it makes there. The Richardson Electronics partnership announced in May 2026 is the visible attempt to route around that.",
+ "productsAndServices": [
+  {
+   "name": "Power (EV) battery systems",
+   "category": "Battery cells, modules and packs",
+   "description": "Gotion's largest segment at 75.6% of FY2025 revenue and 81.4% by H1 2026, spanning LFP, lithium manganese iron phosphate and ternary chemistries, and extended well beyond cars into electric vessels, low-altitude aircraft, power tools, two-wheelers and construction machinery.",
+   "highlights": [
+    "The Qichen (启晨) LMFP line is the flagship: generation two is described by the company as the world's first ultra-fast-charge LMFP cell at 240 Wh/kg and 5C, and generation three launched at the May 2026 technology conference targeting passenger cars, vans and light and heavy trucks.",
+    "A fifth-generation LFP full-scenario cell reaches 205 Wh/kg, with a superfast variant charging 10–70% state of charge in under 4.5 minutes and an ultra-long-life variant carrying a 10-year vehicle warranty and a 30-year storage life.",
+    "G-Yuan is a hybrid solid-liquid cell at 300 Wh/kg with a stated 1,000 km vehicle range; the Gemstone all-solid-state cell claims 350 Wh/kg, has a 0.2 GWh pilot line commissioned in 2025 and entered on-road vehicle testing in March 2026.",
+    "Gnascent sodium-ion arrives in three variants — a 261 Wh/kg high-energy anode-free cell, a 162 Wh/kg power cell discharging to −50°C, and a 180Ah storage cell rated above 20,000 cycles — with gigawatt-scale lines at Tangshan and Hefei and mass production stated for Q4 2026.",
+    "The G-Xing heavy-truck standard pack is 116 kWh with four-gun parallel charging on a 1000V platform, and a modular building-block system performs a five-minute battery swap."
+   ],
+   "positioning": "Fifth globally in EV battery installations at 4.6% share in H1 2026, in a peer band with CALB and EVE Energy and far behind CATL and BYD, which hold 54.3% combined. In China it is fourth at roughly 6.3% and was passed by CALB during 2026.",
+   "soldThrough": "Vehicle-programme nomination and direct supply. The company reports 100% direct sales — RMB 45.07bn, the whole of FY2025 revenue — with no distributor or licensing channel disclosed.",
+   "targetSegments": [
+    "Passenger EV OEMs",
+    "Commercial vehicles and heavy trucks",
+    "Marine and low-altitude aviation",
+    "Two-wheelers and power tools"
+   ]
+  },
+  {
+   "name": "Volkswagen unified cell programme",
+   "category": "Battery cells",
+   "description": "A dedicated 20 GWh Hefei plant making Volkswagen's standard cell, in LFP and other chemistries, under a supply arrangement running 2026 to 2032. This is the single relationship that most distinguishes Gotion from its Chinese peers, and it is a customer relationship layered on top of a shareholding.",
+   "highlights": [
+    "Mass production and a symbolic first delivery took place in Hefei in November 2025, received by Volkswagen's chief technology officer and PowerCo's chief executive.",
+    "Gotion won a new Volkswagen ID-series high-end nomination in H1 2026, and PowerCo now appears by name in the company's own customer list alongside VinFast, Rivian, Tata, Chery, Geely and Leapmotor.",
+    "The capital project behind it was repeatedly rescoped: from a 16 GWh high-energy-density line to a 20 GWh unified-cell line, with the implementing subsidiary changed, the in-service date pushed out, the project terminated early and the surplus proceeds permanently redirected to working capital.",
+    "Reported in July 2026 to be in talks to take a controlling stake in PowerCo's Sagunto plant near Valencia — 40 GWh initially, expandable to 60 GWh — with PowerCo stating on the record that it has no plans to relinquish control of the site.",
+    "Volkswagen holds 24.28% of Gotion and has two executives on its board, so the commercial and shareholding relationships are entangled in a way no peer's are."
+   ],
+   "positioning": "The anchor-OEM differentiator against CALB's GAC and Xpeng book and EVE's BMW cylindrical programme. Brokerage coverage treats scaled unified-cell deliveries from the second half of 2026 as the core growth driver for 2026–27.",
+   "soldThrough": "Direct OEM supply under a long-term programme agreement.",
+   "targetSegments": [
+    "Volkswagen Group platforms",
+    "European vehicle assembly"
+   ]
+  },
+  {
+   "name": "Energy storage systems — the Gotion Grid line",
+   "category": "Energy storage",
+   "description": "A full-stack storage business running cells, standardised battery boxes, integrated cabinets and complete system solutions across generation-side, grid-side, commercial and industrial, residential and portable applications, certified to Chinese national standards plus UL, IEC, CSA and TÜV.",
+   "highlights": [
+    "Gotion Grid 5 MWh is a liquid-cooled 20-foot unit holding temperature spread within 3°C on cells rated 12,000 cycles, with mass production started at Göttingen, Germany in July 2025 after certification under the EU Battery Regulation.",
+    "Gotion Grid 7 MWh carried more than 7 GWh of confirmed orders at its March 2025 launch; a 20 MWh modular system attracted more than 3 GWh of letters of intent at SNEC 2025.",
+    "The second-generation grid-forming system is a 5 MW / 18.8 MWh single cabin integrating batteries, inverters and controls in one enclosure at 92.1% efficiency, with an embedded lightweight AI model.",
+    "Qianyuan Zaidao is the commercial and industrial product, configurable at two or four hours above 91% round-trip efficiency, and marketed explicitly for industrial parks, PV-storage-charging stations, data centres and microgrids.",
+    "Named projects include the Baotou Weijun 1.2 GWh grid-side station in China, two Japanese storage stations, and Lightsource bp's Lower Wonga in Queensland at 281 MW / 843 MWh paired with a 380 MWdc solar plant."
+   ],
+   "positioning": "Ninth globally in storage cell shipments at 4.5% for H1 2026 and losing about a point of share, in a field where Great Power is growing five times faster off a similar base. Research houses disagree sharply on the FY2025 rank — EVTank places Gotion eighth, ICC has it in the top ten, and InfoLink does not name it in its top six at all.",
+   "soldThrough": "Project tendering, large-customer strategic cooperation and direct system integration. Overseas sales skew to integrated systems and domestic sales to bare cells.",
+   "targetSegments": [
+    "Grid-side and generation-side storage",
+    "Commercial and industrial",
+    "Data centres and microgrids",
+    "Residential and portable"
+   ]
+  },
+  {
+   "name": "Base-station and data-centre UPS backup batteries",
+   "category": "Backup power",
+   "description": "The company's strongest stated market position and the one most directly relevant to this corpus: Gotion reports being ranked first globally in base-station and data-centre uninterruptible-power-supply backup batteries, with share above 28%, citing ICC. Products are specified at 6C high-rate discharge and a 15-year design service life.",
+   "highlights": [
+    "The 28% figure appears in the audited FY2025 annual report's market-position discussion, not only in a press release — which makes it a harder claim than most data-centre positioning in this sector.",
+    "It is nonetheless a share statistic attributed to a single research house, and no independent research house reached in this session publishes a base-station or UPS backup category at all.",
+    "AI data-centre storage is named in the H1 2026 filing as forming a new growth pole driving continued market expansion, and data centres appear in the annual report's list of emerging storage scenarios alongside mining.",
+    "Collection gap: no named data-centre operator, hyperscaler, colocation provider or UPS original-equipment manufacturer appears in any source. The share is stated; the counterparties are not.",
+    "For contrast, the AI-data-centre storage orders that did surface in the same window went to other suppliers — Energy Vault at 1.25 GW and ERock at 470 MW."
+   ],
+   "positioning": "If the 28% figure holds, Gotion is the leading supplier in a category the major research houses do not track — which is why it cannot be corroborated and should be carried as a company claim.",
+   "soldThrough": "Direct to telecom operators and data-centre builders; not broken out in segment reporting.",
+   "targetSegments": [
+    "Telecom base stations",
+    "Data-centre UPS",
+    "Critical backup power"
+   ]
+  },
+  {
+   "name": "Materials, resources and recycling",
+   "category": "Upstream",
+   "description": "An unusually deep vertical position for a cell maker, spanning mining and beneficiation, cathode, anode, separator, electrolyte, copper foil and precursors, plus a closed-loop recycling network.",
+   "highlights": [
+    "Resource positions at the Yichun lithium mine in Jiangxi, Indonesian nickel, and Argentine salt-lake lithium held as a resource interest rather than an operating stake.",
+    "A 200,000 tonne per year LFP cathode project under construction, carried at RMB 657.0m of construction in progress at 30 June 2026.",
+    "The world's first zero-carbon anode-material plant, commissioned at Wuhai in Inner Mongolia.",
+    "A memorandum with BASF signed February 2026 on high-performance materials for next-generation solid-state batteries.",
+    "A solid-state materials roadmap targeting 300 tonnes per year of lithium sulfide and 2,000 tonnes of solid electrolyte by 2026, scaling to 50,000 and 100,000 tonnes by 2030."
+   ],
+   "positioning": "Vertical integration is Gotion's answer to per-watt-hour cost compression in the Chinese second tier, where it competes with CALB, EVE and SVOLT rather than with CATL.",
+   "soldThrough": "Largely captive, feeding its own cell plants.",
+   "targetSegments": [
+    "Internal cell manufacturing",
+    "Third-party cathode and anode supply"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Manufacturing footprint",
+   "specs": [
+    {
+     "band": "China",
+     "label": "Operating bases",
+     "value": "More than ten — Hefei, Tongcheng, Lu'an, Chuzhou, Nanjing, Tangshan, Qingdao, Yichun, Liuzhou and Wuhai; capacity additions under way at Wuhu, Hefei and Nanjing"
+    },
+    {
+     "band": "United States",
+     "label": "Manteno, Illinois",
+     "value": "PRODUCING. About USD 2bn, 40 GWh planned; five lines running, two for commercial-scale storage assembly plus two for EV batteries and chargers; state incentives above USD 536m, of which USD 165m has actually been paid in five cheques"
+    },
+    {
+     "band": "United States",
+     "label": "Big Rapids, Michigan",
+     "value": "DEAD. The USD 2.4bn cathode and anode plant was declared in default in September 2025 after 120-plus days without eligible construction; about USD 175m of incentives were terminated and only the USD 23.6m land purchase was ever disbursed"
+    },
+    {
+     "band": "Europe",
+     "label": "Göttingen, Germany",
+     "value": "PRODUCING. Site bought from Bosch in 2021; pack production from 2023; mass production of the liquid-cooled 5 MWh storage system from July 2025"
+    },
+    {
+     "band": "Europe",
+     "label": "Šurany, Slovakia",
+     "value": "UNDER CONSTRUCTION. Gotion InoBat Batteries joint venture, EUR 1.2bn, 20 GWh phase one expandable to 40 GWh; ground broken October 2025, pilot production targeted September 2026"
+    },
+    {
+     "band": "Africa",
+     "label": "Kenitra, Morocco",
+     "value": "PRE-PRODUCTION. 20 GWh initial with a roadmap to 100 GWh over five phases; production expected around Q3 2026; construction in progress leapt from RMB 251.7m to RMB 2,150.1m in six months"
+    },
+    {
+     "band": "Asia",
+     "label": "Other",
+     "value": "Equity-method positions in Vietnam (51%), Thailand (49%), India with Tata AutoComp (40%), Turkey (40%) and Japan (30%), plus consolidated Indonesian materials and trading entities"
+    },
+    {
+     "band": "Capital",
+     "label": "Construction in progress",
+     "value": "RMB 20,653.4m at 2026-06-30, up 62.9% from RMB 12,676.5m at 2025-12-31"
+    }
+   ],
+   "notes": "Collection gap: Gotion publishes no per-site nameplate capacity table in either the FY2025 annual report or the H1 2026 interim. The figures above are the named base list and the construction-in-progress table from the filings, with per-site gigawatt-hour numbers taken from press and labelled as such. There is no Michigan and no Slovakia line item in consolidated construction in progress — Michigan is dead, and Slovakia sits in the joint venture rather than on the balance sheet. An older target of 300 GWh by 2025 was not met and no longer appears in the filings."
+  },
+  {
+   "product": "Shipments, installations and market position",
+   "specs": [
+    {
+     "band": "Shipments",
+     "label": "FY2025 total",
+     "value": "About 100 GWh, +57% — a management statement at the results briefing, not a figure in the audited filing"
+    },
+    {
+     "band": "Installations",
+     "label": "FY2025 EV, global",
+     "value": "53.5 GWh, +82.5%, 4.5% share, rank 5 — the fastest growth in the global top ten (SNE Research)"
+    },
+    {
+     "band": "Installations",
+     "label": "H1 2026 EV, global",
+     "value": "28.0 GWh, +43.3%, 4.6% share, rank 5; outside-China installations up 141.5%"
+    },
+    {
+     "band": "Installations",
+     "label": "China domestic",
+     "value": "Rank 4 at 6.29% in July 2026, having been passed by CALB during the year"
+    },
+    {
+     "band": "Storage",
+     "label": "FY2025",
+     "value": "More than 30 GWh at about 5% share per ICC — against roughly 28 GWh implied by the company's own '28% of ~100 GWh' briefing statement"
+    },
+    {
+     "band": "Storage",
+     "label": "H1 2026",
+     "value": "20.8 GWh, +41%, 4.5% share, rank 9 — and share DOWN about a point year on year"
+    },
+    {
+     "band": "Backup",
+     "label": "Base-station and data-centre UPS",
+     "value": "Above 28% share and ranked first globally, per ICC as cited in the audited annual report — no independent corroboration located"
+    }
+   ],
+   "notes": "Physical volume in the annual report is disclosed only in 万安时 (ten-thousand ampere-hour) units — sales 3,087,352, production 3,192,604 — and is never converted to gigawatt-hours. The storage rank is genuinely contested: EVTank places Gotion eighth for FY2025, ICC has it inside the top ten, and InfoLink does not name it in its top six. A further unreconciled pair: SNE reports H1 2026 storage shipments up 41% while the company's own storage revenue fell 19.14%."
+  },
+  {
+   "product": "Earnings quality — where the profit actually comes from",
+   "specs": [
+    {
+     "band": "H1 2026",
+     "label": "Net profit attributable",
+     "value": "RMB 1,386.0m, +278.05%"
+    },
+    {
+     "band": "H1 2026",
+     "label": "Excluding non-recurring items",
+     "value": "RMB 106.9m, +46.71% — 92.3% of headline profit is non-recurring"
+    },
+    {
+     "band": "H1 2026",
+     "label": "Core net margin",
+     "value": "0.38% on RMB 27,775.5m of revenue"
+    },
+    {
+     "band": "H1 2026",
+     "label": "Composition of total profit",
+     "value": "Fair-value changes +72.35%; government grants +26.44%; investment income +14.88%; asset impairment −20.30%"
+    },
+    {
+     "band": "Quarterly",
+     "label": "Q1 2026",
+     "value": "Net profit attributable RMB 21.1m, DOWN 79.04% — the quarter before the +278% half"
+    },
+    {
+     "band": "Quarterly",
+     "label": "Q4 2025",
+     "value": "A loss quarter: net profit attributable RMB −150.0m on the year's largest revenue quarter"
+    },
+    {
+     "band": "Portfolio",
+     "label": "Source of the fair-value swings",
+     "value": "Listed holdings in Chery Automobile (RMB 1,263.1m), VinFast (RMB 459.9m) and Tongguan Copper Foil, of which 8.4m shares were sold in H1 2026 for RMB 829.2m; the board has authorised further disposals up to 15% of net assets"
+    }
+   ],
+   "notes": "This is the single most important framing in the dossier. Any reading that leads with the +278% headline without the ex-non-recurring line misstates the business. The pattern is not new — FY2025's +97.49% headline sat against ex-non-recurring profit of RMB 432m on RMB 45.07bn of revenue."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-25",
+   "category": "financial",
+   "headline": "H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
+   "read": "Fair-value changes contributed 72.35% of total profit and government grants 26.44%. The operating business earned a 0.38% net margin; the headline is a portfolio revaluation.",
+   "source": "Interim report, cninfo, 2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "category": "leadership",
+   "headline": "Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
+   "read": "Both are Volkswagen production executives, so the seat stays with Volkswagen — the change is a rotation inside the shareholder's own bench rather than a shift in board control.",
+   "source": "Announcement 2026-059, cninfo, 2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "category": "corporate",
+   "headline": "Board authorises management to sell listed equity holdings opportunistically, up to 15% of net assets attributable to the parent — roughly RMB 4.37bn — over twelve months",
+   "read": "An explicit mandate to keep doing the thing that produced the +278% headline. Worth reading beside the earnings-quality numbers rather than separately.",
+   "source": "Announcement 2026-058, cninfo, 2026-08-25"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "partnership",
+   "headline": "Reports that Gotion is in talks to take a controlling stake in Volkswagen's PowerCo cell plant at Sagunto near Valencia — 40 GWh initially, expandable to 60 GWh",
+   "read": "PowerCo stated on the record that it has no plans to relinquish control. The plausible driver is schedule slippage at Valencia, where pre-series production has moved to December 2026 and only 50 of 500 pre-series staff had been hired.",
+   "source": "electrive / battery-news.de, 2026-07-28"
+  },
+  {
+   "date": "2026-07-04",
+   "category": "financial",
+   "headline": "Hefei Gotion sells 8,399,527 Tongguan Copper Foil shares for RMB 829.2m, a gain exceeding 10% of the last audited net profit attributable",
+   "read": "The mechanism behind the fair-value line, made explicit: a listed-equity disposal large enough to require its own announcement.",
+   "source": "Announcement 2026-050, cninfo, 2026-07-04"
+  },
+  {
+   "date": "2026-05-17",
+   "category": "product-launch",
+   "headline": "Fifteenth Global Technology Conference in Hefei launches seven products — the Gemstone all-solid-state cell, G-Yuan hybrid solid-liquid, fifth-generation LFP, third-generation Qichen LMFP, Gnascent sodium-ion, a grid-forming cascaded storage system and a mobile storage-and-swap solution",
+   "read": "A wide launch with a stated solid-state cost target of RMB 1 per watt-hour; the substance to watch is the 0.2 GWh Gemstone pilot line and on-road testing rather than the headline energy densities.",
+   "source": "H1 2026 report; CleanTechnica, 2026-05-22"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "partnership",
+   "headline": "Technology partnership with Richardson Electronics — Gotion supplies battery technology from Manteno, Richardson handles commercialisation and integration from La Fox, Illinois, on a 760 kWh commercial product and a 5 MWh utility product",
+   "read": "The visible attempt to route around prohibited-foreign-entity status by moving the commercial layer to a US counterparty. Neither party has published a credit-eligibility claim, and the statutory 'effective control' test that would govern it is undefined.",
+   "source": "Energy-Storage.News, 2026-05-14"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "product-launch",
+   "headline": "Second-generation Gotion Grid unveiled — a 5 MW / 18.8 MWh grid-forming cabin integrating batteries, inverters and controls at 92.1% efficiency, with more than 3 GWh of customer letters of intent",
+   "read": "Grid-forming in a single enclosure is the direction the whole segment is moving; the letters of intent are not orders.",
+   "source": "ESS News, 2026-04-30"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "financial",
+   "headline": "FY2025 results — revenue RMB 45,070.5m (+27.35%), net profit attributable RMB 2,383.3m (+97.49%), but ex-non-recurring profit of RMB 431.8m and gross margin down 1.83 points to 16.17%",
+   "read": "The same shape a half earlier: a doubled headline on a thin core. The auditor made receivables recoverability a key audit matter and separately flagged the inherent risk of revenue-recognition manipulation to meet targets.",
+   "source": "Annual report, cninfo, 2026-04-29"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "financial",
+   "headline": "Extraordinary general meeting approves a private placement of up to RMB 5.0bn, funding 20 GWh projects at Hefei, Wuhu and Nanjing against total project investment above RMB 14bn",
+   "read": "The placement is the live dilution risk to Volkswagen's 24.28% — it is approved but not completed.",
+   "source": "H1 2026 summary, cninfo"
+  },
+  {
+   "date": "2026-02-13",
+   "category": "legal",
+   "headline": "Gotion states it will not repay Michigan's USD 23.7m grant, arguing the Big Rapids land has been rendered undevelopable",
+   "read": "The end of the Michigan project as anything but litigation. In May 2026 Gotion turned plaintiff, suing Green Charter Township for sunk costs it itemises at nearly USD 88m.",
+   "source": "Michigan Public, 2026-02-13"
+  },
+  {
+   "date": "2025-11-21",
+   "category": "product-launch",
+   "headline": "Mass production and first delivery of Volkswagen's unified cell in Hefei, received by Volkswagen's chief technology officer and PowerCo's chief executive; supply runs 2026 to 2032",
+   "read": "The anchor-OEM programme reaching volume — and the clearest reason Gotion's customer structure differs from CALB's or EVE's.",
+   "source": "electrive, 2025-11-21"
+  },
+  {
+   "date": "2025-10-23",
+   "category": "regulatory",
+   "headline": "Michigan pulls about USD 175m of incentives for the Big Rapids plant after declaring Gotion in default; the state had disbursed only the USD 23.6m land purchase",
+   "read": "A USD 2.4bn project dead after years of local opposition and litigation — the stranded-capital risk that distinguishes Gotion from Chinese peers who never built in America.",
+   "source": "Bridge Michigan, 2025-10-23"
+  },
+  {
+   "date": "2025-07-29",
+   "category": "capacity",
+   "headline": "Mass production of the liquid-cooled 5 MWh storage system begins at Göttingen, Germany, after TÜV SÜD certification under the EU Battery Regulation",
+   "read": "Europe is where Gotion's storage manufacturing actually works — certified, producing, and outside the reach of US foreign-entity rules.",
+   "source": "ESS News, 2025-07-29"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess Gotion's reported profit growth materially overstates the operating business, and that the gap is structural rather than a one-off. Basis: H1 2026 net profit attributable of RMB 1,386.0m against ex-non-recurring profit of RMB 106.9m — 92.3% non-recurring — on revenue of RMB 27,775.5m, a 0.38% core net margin. Fair-value changes were 72.35% of total profit, grants 26.44%. The same shape held at FY2025 (+97.49% headline, RMB 431.8m ex-non-recurring), Q1 2026 was down 79.04%, and Q4 2025 was a loss quarter on the year's largest revenue. In August 2026 the board authorised further listed-equity disposals up to 15% of net assets, so the mechanism is mandated to continue.",
+  "2. **(High confidence)** We assess Gotion is the most US-exposed and most US-constrained Chinese cell maker in this corpus at the same time, and that this is the defining fact about it. Basis: it is the only one with an operating US plant — five lines at Manteno, Illinois, on more than USD 536m of pledged state incentives — and it is named in NDAA §154(b), making it a specified foreign entity by statute rather than by inference. Its US subsidiaries are captured with it, so the plant it actually runs cannot claim the advanced manufacturing production credit for what it makes. It also carries the stranded capital its peers avoided: USD 2.4bn at Big Rapids, written off after Michigan declared default.",
+  "3. **(High confidence)** We assess three widely repeated claims about Gotion's US legal position are false and should be corrected wherever the corpus repeats them. Basis: it is NOT on the UFLPA Entity List as of the 31 July 2026 update despite a congressional demand that it be added; it is NOT on the Department of Defense §1260H list as of 8 June 2026, unlike CATL, BYD, CALB and EVE, so it escapes the §805 contracting bans that catch them; and the NO GOTION Act was never enacted — H.R. 524 sits at 'introduced' with no further action. Separately, the §30D framing that drove all 2023–24 coverage is moot, because §30D itself terminated for vehicles acquired after 30 September 2025.",
+  "4. **(Moderate confidence)** We assess Volkswagen's position is a control question with a dated trigger, not a static shareholding. Basis: Volkswagen (China) Investment holds 24.28% on an unchanged 440,630,983 shares — the drift from 26.47% is dilution, not a sale — but it contractually waives voting rights to sit at least five points below the founder party, and in December 2024 extended that waiver from 36 months to 72, to approximately 15 December 2027. Li Zhen remains actual controller on a 17.85% concert party. The waiver also lapses if Volkswagen's stake falls below 15%, and the approved but uncompleted RMB 5.0bn placement is a live dilution path. Commentary still describing a 'three-year' waiver is working from the expired original term.",
+  "5. **(Moderate confidence)** We assess the storage business is losing ground while the EV business gains it, and that the company's disclosure obscures which. Basis: EV installations rose 43.3% in H1 2026 to hold fifth globally, while storage share fell about a point to 4.5% and ninth, with Great Power growing five times faster off a similar base. More sharply, SNE reports Gotion's H1 2026 storage shipments up 41% while the company's own storage revenue fell 19.14% — a divergence the filing calls 'business structure optimisation' and does not reconcile. Either severe price erosion or a shift from systems to bare cells; both readings are unfavourable to margin.",
+  "6. **(Low confidence)** We assess the data-centre backup position is Gotion's most valuable strategic asset and its least verifiable claim. Basis: the audited FY2025 annual report states above 28% global share and first place in base-station and data-centre UPS backup batteries, citing ICC — appearing in a filing rather than only in marketing, which is a higher bar than most sector positioning clears. Against that, no independent research house reached in this session publishes such a category at all, so the figure cannot be corroborated, and no named data-centre operator, hyperscaler or UPS manufacturer appears anywhere. Collection gap: the share is stated, the counterparties are absent."
+ ],
+ "policyExposure": [
+  {
+   "regime": "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "Gotion is a specified foreign entity on two independent statutory grounds, which is what separates it from every other Chinese cell maker in this corpus. It is named on the FY2024 NDAA §154(b) list imported by 26 U.S.C. §7701(a)(51)(B)(iv), and it is separately a PRC-incorporated foreign-controlled entity under clause (B)(v); its US subsidiaries are captured as controlled entities. Two distinct prohibitions follow and are frequently conflated: no Gotion entity may claim §45X, §45Y, §48E, §45Q, §45U or §45Z for taxable years beginning after 4 July 2025, and separately a §45X eligible component containing any material assistance from a prohibited foreign entity is disqualified outright. A US storage project using Gotion cells must additionally clear a 55% material assistance cost ratio in 2026, rising to 75% after 2029 — a test whose worked example in IRS Notice 2026-15 fails at 27.2%. New §6662(m) drops the substantial-understatement threshold to 1% and §6501(o) extends the assessment window to six years, which is why developers avoid the question rather than argue it.",
+   "mitigation": "The Richardson Electronics partnership announced 13 May 2026 is the visible attempt at a workaround — Gotion supplies technology from Manteno and Richardson handles commercialisation and integration from La Fox, Illinois, on a 760 kWh commercial product and a 5 MWh utility product. Neither party has published a credit-eligibility claim, and the statutory 'effective control' prong that would govern such a licensing structure has no Treasury definition yet.",
+   "source": "https://www.law.cornell.edu/uscode/text/26/7701"
+  },
+  {
+   "regime": "NDAA §154 Department of Defense procurement ban",
+   "status": "announced",
+   "effectiveDate": "2027-10-01",
+   "exposure": "Gotion High-tech is one of exactly six entities named in §154(b) of the FY2024 National Defense Authorization Act, alongside CATL, BYD, Envision Energy, EVE Energy and Hithium. From 1 October 2027 the Department of Defense may not procure its batteries. The ban is prospective and confined to Defense procurement — it is not a government-wide bar and no FAR-level prohibition was located.",
+   "mitigation": "None available. Being named is not curable by restructuring.",
+   "source": "https://www.opensanctions.org/programs/US-NDAA-154/"
+  },
+  {
+   "regime": "Lists Gotion is NOT on",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-31",
+   "exposure": "Three widely repeated claims fail on checking, and the corrections matter. Gotion is NOT on the UFLPA Entity List as of the 31 July 2026 update, despite a June 2024 congressional demand that it be added. It is NOT on the Department of Defense §1260H Chinese military companies list as of the 8 June 2026 update — unlike CATL, BYD, CALB and EVE — so it escapes the §805 contracting bans that catch those peers. And the NO GOTION Act was never enacted: H.R. 6175 died in the 118th Congress and H.R. 524, reintroduced 16 January 2025, remains at 'introduced' with no further action. No CFIUS proceeding has ever been publicly confirmed, only demanded.",
+   "mitigation": "Not applicable — these are absences rather than exposures, recorded because the corpus and the trade press both tend to assume the opposite.",
+   "source": "https://www.dhs.gov/uflpa-entity-list"
+  },
+  {
+   "regime": "US state-level incentive clawback and local litigation",
+   "status": "in-effect",
+   "effectiveDate": "2025-09-17",
+   "exposure": "Michigan declared Gotion in default on the Big Rapids project on 17 September 2025 after more than 120 days without eligible construction activity, terminating about USD 175m of incentives of which only the USD 23.6m land purchase had been disbursed. The state attorney general demanded repayment of USD 23.7m in January 2026 and Gotion refused in February, arguing the land had been rendered undevelopable. In May 2026 Gotion Inc. sued Green Charter Township for damages, itemising sunk costs of USD 24m land, USD 56m salaries and infrastructure, USD 7.3m architecture and engineering and USD 0.5m management. Separately in Illinois, a citizens' suit over the Manteno rezoning survived partial dismissal and proceeded toward trial, and Manteno trustees voted 3–2 in January 2026 against asking Gotion to make a voluntary CFIUS filing.",
+   "mitigation": "Manteno is operating and Gotion closed out the fire-readiness items its local fire chief raised, standing up a site brigade and an approved emergency action plan by January 2026. The Michigan project is not recoverable.",
+   "source": "https://bridgemi.com/business-watch/michigan-gotion-battery-plant-plan-is-dead-after-years-of-controversy/"
+  },
+  {
+   "regime": "IRA §30D clean vehicle credit",
+   "status": "expired",
+   "effectiveDate": "2025-09-30",
+   "exposure": "Moot, and recorded because it is the single most out-of-date framing in circulation. The FEOC test under §30D drove essentially all 2023 and 2024 coverage of Gotion's US position — the argument that its cells would disqualify a vehicle from the USD 7,500 credit. OBBBA terminated §30D for vehicles acquired after 30 September 2025, so there is no longer a credit for the test to attach to.",
+   "mitigation": "Not applicable.",
+   "source": "https://www.arnoldporter.com/en/perspectives/advisories/2025/07/from-ira-to-obbba-a-new-era-for-clean-energy-tax-credits"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "rept",
+   "type": "competitor",
+   "note": "Ninth against sixth in global storage cell shipments for H1 2026 — Gotion 20.8 GWh and 4.5%, REPT 31.4 GWh and 6.8%. Covered together as the corpus's paired study of how US foreign-entity rules bear on Chinese cell makers.",
+   "context": "The pair is the point. To a US buyer's tax-credit arithmetic they are equally disqualifying — both are prohibited foreign entities. On every other axis they diverge sharply: Gotion is named in NDAA §154(b) with a Defense procurement ban dated 1 October 2027, has an operating Illinois plant and an abandoned Michigan one with incentives clawed back, and carries live state-level political exposure. REPT is named on no list, has no US plant and no stranded capital.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "catl",
+   "type": "competitor",
+   "note": "A different weight class in both markets — 39.9% of global EV battery installations and 27.1% of storage cells in H1 2026, against Gotion's 4.6% and 4.5%.",
+   "context": "Also a peer on the §154(b) list, and unlike Gotion, additionally on the Department of Defense §1260H list since January 2025 — so CATL carries the §805 contracting bans that Gotion escapes.",
+   "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "byd",
+   "type": "competitor",
+   "note": "Second globally in EV batteries at 14.4% and fourth in storage cells at 7.7% for H1 2026.",
+   "context": "Named in §154(b) alongside Gotion and added to the §1260H list at parent level in June 2026. The comparison that matters is captive consumption: BYD consumes its own cells in its own vehicles, Gotion sells to Volkswagen and others.",
+   "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "eve-energy",
+   "type": "competitor",
+   "note": "Directly adjacent in both markets — seventh in EV installations at 3.4% and second in storage cells at 10.4% for H1 2026, where it is well ahead of Gotion.",
+   "context": "Named in §154(b) and added to §1260H in June 2026. Among Chinese peers, EVE's storage position is the one Gotion has most clearly lost ground against.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "hithium",
+   "type": "competitor",
+   "note": "Third globally in storage cells at 10.0% for H1 2026, more than double Gotion's share in a market Gotion entered earlier.",
+   "context": "Also named in §154(b). Hithium is the storage-specialised comparison; Gotion's storage business is a second line behind EV batteries and is losing share while Hithium's grows.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "envision-energy",
+   "type": "competitor",
+   "note": "Eighth in global storage cell shipments for H1 2026 through its AESC arm, just ahead of Gotion.",
+   "context": "The sixth and final name on the §154(b) list. Envision's response to the material-assistance rules was to sell its Tennessee cell plant to a US buyer — a structural exit from the problem that Gotion has not attempted.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "sunwoda",
+   "type": "competitor",
+   "note": "Tenth globally in EV battery installations at 2.4% for H1 2026, inside the same Chinese second tier as Gotion, CALB and EVE.",
+   "context": "Notably absent from the §154(b) list, which is the axis on which this peer group genuinely diverges.",
+   "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "samsung-sdi",
+   "type": "competitor",
+   "note": "Twelfth in global storage cell shipments at 1.4% for H1 2026 — a Korean comparator whose value here is as the non-Chinese alternative a US buyer reaches for precisely because of the foreign-entity rules.",
+   "context": "The Korean and Japanese suppliers are the direct beneficiaries of the material-assistance regime that constrains Gotion.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "lg-energy-solution",
+   "type": "competitor",
+   "note": "Third in global EV battery installations at 8.6% and eleventh in storage cells at 2.6% for H1 2026, with storage shipments up 357% year on year.",
+   "context": "The clearest illustration of the policy tailwind: a non-Chinese supplier growing storage shipments more than fourfold in the year the US rules tightened around Chinese cells.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "lightsource-bp",
+   "type": "customer",
+   "note": "Supplying the Lower Wonga solar-plus-storage project in Queensland, Australia — 281 MW / 843 MWh paired with a 380 MWdc solar plant, through an engineering joint venture with INTEC, with commercial operation targeted for late 2028.",
+   "context": "The clearest named storage customer on the record, and it sits in Australia rather than the US or Europe. Lightsource bp's own dossier records the same project from the buyer's side and notes that its US book is deliberately kept clear of Chinese storage suppliers — so this relationship exists precisely where the US foreign-entity rules do not reach.",
+   "source": "https://www.energytrend.com/news/20260610-51579.html",
+   "status": "announced",
+   "since": "2026-06-10",
+   "scale": "281 MW / 843 MWh"
+  },
+  {
+   "slug": "canadian-solar",
+   "type": "competitor",
+   "note": "A storage-system competitor, and the company whose dossier already cites Gotion as a cautionary precedent — that a US plant alone does not guarantee tax-credit eligibility.",
+   "context": "That inbound characterisation is correct and this session's research strengthens it: Gotion's Manteno plant operates, and its output still cannot claim §45X, because prohibited-foreign-entity status attaches to the owner rather than the site.",
+   "source": "https://www.law.cornell.edu/uscode/text/26/7701",
+   "status": "active"
+  },
+  {
+   "slug": "narada",
+   "type": "competitor",
+   "note": "A Chinese supplier in the telecom and data-centre backup power segment, which is where Gotion claims its strongest position — above 28% global share and first place in base-station and data-centre UPS backup batteries.",
+   "context": "Recorded because that segment is the one most relevant to this corpus and the one no major research house independently tracks; Gotion's share claim rests on a single house and cannot be corroborated.",
+   "source": "https://www.prnewswire.com/apac/news-releases/gotion-posts-industry-leading-growth-strengthens-global-leadership-302684958.html",
+   "status": "active"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Li Zhen (李缜)",
+   "title": "Chairman and General Manager; actual controller",
+   "background": [
+    "Chairman since the 2015 restructuring; holds both the chairmanship and the general manager role, which the company defends on founder-continuity grounds",
+    "Actual controller through a 17.85% concert party — 5.69% personally, 10.59% via Nanjing Guoxuan Holding, and 1.57% held by his son Li Chen",
+    "Executive director of Guoxuan Holding and Guoxuan Group",
+    "Former general manager, Hefei Economic and Technological Development Co.; earlier a researcher at the Hefei Municipal Economic Research Centre",
+    "DBA, National University of Singapore",
+    "Born January 1964; term runs to 29 December 2028"
+   ]
+  },
+  {
+   "name": "Wang Qisui (王启岁)",
+   "title": "Director, Deputy General Manager and Executive President",
+   "background": [
+    "Former head of Hefei Gotion Plant No. 3, later vice president and president of the China business unit",
+    "Chaired the former supervisory board, abolished at the end of 2025",
+    "Professor-level senior engineer; postdoctoral work in materials chemistry at the University of Science and Technology of China; PhD Wuhan University of Technology",
+    "Born July 1984"
+   ]
+  },
+  {
+   "name": "Steven Cai",
+   "title": "Director and Senior Vice President, Europe and Africa business unit",
+   "background": [
+    "US national",
+    "Former Engineering Technical Director at CATL — the competitor most directly relevant to Gotion's positioning",
+    "Former general manager of patent and electric-vehicle-safety committees at General Motors",
+    "Former President of the Gotion Engineering Research Institute",
+    "Stepped down as deputy general manager at the end of the 2025 board term while retaining the directorship",
+    "MSc Wayne State University; born October 1962"
+   ]
+  },
+  {
+   "name": "Zhang Yifei (张一飞)",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Former Director of accounting, treasury and tax at Volkswagen (Anhui) — the finance chief came from the largest shareholder's own China operation",
+    "Former finance section chief, JAC Group",
+    "MBA Hefei University of Technology; BA accounting, Harbin Institute of Technology",
+    "Born March 1985"
+   ]
+  },
+  {
+   "name": "Zhang Wei (张巍)",
+   "title": "Deputy General Manager and President, Energy Storage business unit",
+   "background": [
+    "Runs the storage business, which passed 30 GWh of shipments in FY2025 but lost about a point of global share in H1 2026",
+    "Former general manager, Nanjing Gotion Battery",
+    "Former vice president of the Strategy business unit",
+    "MPA; born February 1980"
+   ]
+  },
+  {
+   "name": "Fu Zhou",
+   "title": "Deputy General Manager and Dean, Engineering Research Institute",
+   "background": [
+    "US national",
+    "Former R&D Director and vice president, Tianqi Lithium",
+    "Former Senior R&D Manager, A123 Systems",
+    "Former R&D group leader, Dow Chemical",
+    "More than 70 patents and 30-plus published papers",
+    "Postdoctoral work at Dalhousie; PhD materials chemistry, University of Science and Technology of China; born October 1979"
+   ]
+  },
+  {
+   "name": "Ralf Lorenz",
+   "title": "Deputy General Manager, Head of Procurement",
+   "background": [
+    "German national; with Volkswagen AG from September 1997",
+    "Former head of electrical purchasing, Volkswagen AG",
+    "Former chief general manager of production-material purchasing, Volkswagen India Pune",
+    "Former head of exterior purchasing, SAIC-Volkswagen",
+    "MSc engineering, Braunschweig/Wolfenbüttel; born September 1970"
+   ]
+  },
+  {
+   "name": "Rainer Ernst Seidl",
+   "title": "Non-executive Director (Volkswagen-nominated)",
+   "background": [
+    "German national; with Volkswagen AG from October 1997",
+    "Former head of Group Financial Controlling, Volkswagen AG",
+    "Former Executive Vice President Finance, Volkswagen (China) Investment",
+    "Former First Vice President (Finance), FAW-Volkswagen; former head of finance at Lamborghini",
+    "BEng Munich University of Applied Sciences; born July 1971"
+   ]
+  },
+  {
+   "name": "Wang Quan (汪泉)",
+   "title": "Board Secretary and head of investor relations",
+   "background": [
+    "The company's disclosure contact",
+    "Former Anhui Guoyuan Capital; earlier Guoyuan Securities and Zhonghui Life asset management",
+    "MSc financial science, Illinois Institute of Technology",
+    "Born May 1987"
+   ]
+  },
+  {
+   "name": "Sun Zhe (孙哲)",
+   "title": "Independent Director",
+   "background": [
+    "Co-Director of Columbia University's China programme",
+    "Former Director, Tsinghua Center for US-China Relations; former Deputy Director, Fudan Center for American Studies",
+    "Ten years as an independent non-executive director at MGM China; currently independent director at China Resources Land and JS Global Lifestyle",
+    "PhD political science, Columbia; LLM and LLB Fudan; born January 1966"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "RMB",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 35,391.8m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Comparative in the FY2025 annual report"
+     },
+     {
+      "name": "Net profit attributable",
+      "actual": "RMB 1,206.8m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Basic EPS RMB 0.68; weighted average return on equity 4.77%"
+     },
+     {
+      "name": "Excluding non-recurring items",
+      "actual": "RMB 262.5m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Even in the base year, ex-non-recurring profit was under a quarter of the headline — the pattern predates FY2025"
+     }
+    ],
+    "commentary": "Gross margin was 18.00%, the high point of the recent series."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 45,070.5m, +27.35%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Audited by Suya Jincheng with a standard unqualified opinion. All of it booked as direct sales — no distributor or licensing channel",
+      "kpi": "revenue",
+      "usdMillions": 6270.8,
+      "fxBasis": "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Revenue by segment",
+      "actual": "Power battery systems RMB 34,074.0m (75.6%, +32.85%); storage RMB 9,066.1m (20.1%, +15.76%); transmission and distribution RMB 422.9m; other RMB 1,507.5m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Storage grew far slower than the segment's market. The transmission and distribution line is the legacy Dongyuan Electric switchgear business"
+     },
+     {
+      "name": "Net profit attributable",
+      "actual": "RMB 2,383.3m, +97.49%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Well above the sell-side range then in circulation — but the beat was non-operating",
+      "kpi": "net-income",
+      "usdMillions": 331.6,
+      "fxBasis": "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Excluding non-recurring items",
+      "actual": "RMB 431.8m, +64.48%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "0.96% of revenue. This is the operating result; the RMB 2,383.3m headline is not"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "16.17%, down 1.83 points from 18.00%",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Compression across every segment and geography: power battery 14.39% (−0.75pt), storage 20.75% (−1.00pt), China 14.85%, overseas 20.70% (−1.58pt). The five-year series runs 18.61% (2021), 17.79%, 16.92%, 18.00%, 16.17%"
+     },
+     {
+      "name": "Overseas revenue",
+      "actual": "RMB 10,183.1m, DOWN 7.47%; share fell from 31.09% to 22.59%",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The opposite of the globalisation narrative. It rebounded in H1 2026 to RMB 9,475.6m (+48.06%), but the FY2025 contraction is real"
+     },
+     {
+      "name": "Cash and leverage",
+      "actual": "Operating cash flow RMB 3,624.4m; investing cash flow RMB −10,296m; asset-liability ratio 70.99%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Capex ran nearly three times operating cash generation"
+     },
+     {
+      "name": "Customer concentration",
+      "actual": "Top five customers RMB 18,733.3m, 41.56% of revenue; largest 10.77%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Names are withheld in the filing, so the concentration cannot be attributed to Volkswagen, Chery or anyone else. Related-party sales within the top five were nil"
+     }
+    ],
+    "commentary": "The auditor made receivables recoverability a key audit matter and separately flagged the inherent risk that management manipulates revenue recognition to meet targets. Gross accounts receivable stood at RMB 19,285m against a RMB 2,985m bad-debt provision — 15.5%. Quarterly net profit attributable ran RMB 100.6m, RMB 266.0m, RMB 2,166.6m and RMB −150.0m: the third quarter carried the year and the fourth was a loss on the largest revenue quarter."
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 27,775.5m, +43.22%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Power battery systems RMB 22,597.2m (81.4%, +61.01%); storage RMB 3,688.8m (13.3%, DOWN 19.14%)"
+     },
+     {
+      "name": "Net profit attributable",
+      "actual": "RMB 1,386.0m, +278.05%",
+      "expected": "Guided +227.3% to +322.8% in the 15 July profit alert",
+      "verdict": "inline",
+      "result": "Landed inside the company's own guided range. This is guidance, not consensus"
+     },
+     {
+      "name": "Excluding non-recurring items",
+      "actual": "RMB 106.9m, +46.71%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "92.3% of headline profit is non-recurring. Core net margin 0.38%. Fair-value changes were 72.35% of total profit, government grants 26.44%, investment income 14.88%, asset impairment −20.30%"
+     },
+     {
+      "name": "Storage divergence",
+      "actual": "Storage revenue fell 19.14% while SNE reports storage shipments up 41%",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The filing calls it business structure optimisation and does not reconcile it. Either severe price erosion or a shift from integrated systems to bare cells — both unfavourable to margin"
+     },
+     {
+      "name": "Working capital and leverage",
+      "actual": "Receivables RMB 21,881m (+34.2% in six months); inventory RMB 14,815m (+52.9%); asset-liability ratio 71.73%; quick ratio 0.61",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Receivables and inventory both grew faster than revenue. Construction in progress rose 62.9% to RMB 20,653m and financing cash inflow was RMB 9,768m (+217.05%)"
+     }
+    ],
+    "commentary": "Unaudited interim. Consensus is wide and unreliable: a thirteen-institution aggregation priced 2 September 2026 forecasts FY2026 net profit of RMB 1,847m, while a June 2026 brokerage initiation forecasts RMB 968m — a roughly twofold spread. Neither is reconcilable with an H1 ex-non-recurring result of RMB 106.9m without a very large second half or continued portfolio gains."
+   }
+  ],
+  "commentary": "Gotion reports only in RMB and offers no USD translation of revenue or profit anywhere in its filings; the USD overlays above are conversions at a cited 2025 average rate. The single most important reading instruction for this record is to use the 扣非 (excluding non-recurring items) line rather than the headline — the two have diverged by roughly an order of magnitude in each of the last three reported periods."
+ },
+ "sources": [
+  {
+   "label": "Gotion High-Tech — FY2025 annual report, full text (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225254220.pdf",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Gotion High-Tech — FY2025 annual report summary, announcement 2026-028 (SZSE)",
+   "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/0f9b5c41-60b3-46dc-ac99-dd37c3310807.PDF",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Gotion High-Tech — H1 2026 interim report, full text (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495934.PDF",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Gotion High-Tech — H1 2026 interim report summary, announcement 2026-055 (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495933.PDF",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Gotion High-Tech — Q1 2026 report, announcement 2026-030 (SZSE)",
+   "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/4a2bf774-bd31-43f5-bc47-f7faf4fbac35.PDF",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Gotion High-Tech — director resignation and by-election, announcement 2026-059 (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495941.PDF",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Gotion High-Tech — authorisation to sell listed equity assets, announcement 2026-058 (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495932.PDF",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Gotion High-Tech — sale of Tongguan Copper Foil shares, announcement 2026-050 (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-07-04/1225408055.PDF",
+   "date": "2026-07-04"
+  },
+  {
+   "label": "Gotion High-Tech — H1 2026 earnings pre-announcement (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225424302.PDF",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Gotion High-Tech — FY2025 financial statements (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225241973.PDF",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Gotion High-Tech — notice of the 2026 second extraordinary general meeting (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495939.PDF",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Gotion High-Tech — announcement index for 002074 (cninfo)",
+   "url": "https://www.cninfo.com.cn/new/disclosure/stock?stockCode=002074&orgId=9900001001"
+  },
+  {
+   "label": "Gotion High-Tech — corporate site",
+   "url": "https://www.gotion.com.cn"
+  },
+  {
+   "label": "PR Newswire — Gotion posts industry-leading growth, strengthens global leadership (FY2025 performance; the 28% UPS share claim)",
+   "url": "https://www.prnewswire.com/apac/news-releases/gotion-posts-industry-leading-growth-strengthens-global-leadership-302684958.html",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Gotion Illinois — Manteno site",
+   "url": "https://gotionillinois.com/"
+  },
+  {
+   "label": "26 U.S. Code §7701 — specified foreign entity, foreign-influenced entity and material assistance cost ratio",
+   "url": "https://www.law.cornell.edu/uscode/text/26/7701"
+  },
+  {
+   "label": "IRS Notice 2026-15 — material assistance provided by prohibited foreign entities (full text)",
+   "url": "https://www.irs.gov/pub/irs-drop/n-26-15.pdf",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "OpenSanctions — FY2024 NDAA §154 programme (the six named producers, including Gotion)",
+   "url": "https://www.opensanctions.org/programs/US-NDAA-154/"
+  },
+  {
+   "label": "DHS — UFLPA Entity List (Gotion absent as of the 2026-07-31 update)",
+   "url": "https://www.dhs.gov/uflpa-entity-list",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "DHS — 43 companies added to the UFLPA Entity List",
+   "url": "https://www.dhs.gov/news/2026/07/31/dhs-announces-addition-43-companies-uflpa-entity-list",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "GovTrack — H.R. 524, the NO GOTION Act, status 'introduced' with no further action",
+   "url": "https://www.govtrack.us/congress/bills/119/hr524",
+   "date": "2025-01-16"
+  },
+  {
+   "label": "WilmerHale — Pentagon adds 65 entities to the §1260H list (Gotion absent)",
+   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
+   "date": "2026-06-12"
+  },
+  {
+   "label": "Arnold & Porter — from the IRA to OBBBA: the end of §30D",
+   "url": "https://www.arnoldporter.com/en/perspectives/advisories/2025/07/from-ira-to-obbba-a-new-era-for-clean-energy-tax-credits",
+   "date": "2025-07"
+  },
+  {
+   "label": "Arnold & Porter — FY2024 NDAA, navigating expanded restrictions (§154 named entities)",
+   "url": "https://www.arnoldporter.com/en/perspectives/advisories/2023/12/fy24-ndaa-navigating-expanded-restrictions",
+   "date": "2023-12"
+  },
+  {
+   "label": "Bracewell — FEOC material assistance rules for clean energy tax credits",
+   "url": "https://www.bracewell.com/resources/feoc-material-assistance-rules-clean-energy-tax-credits/"
+  },
+  {
+   "label": "Bipartisan Policy Center — unpacking the FEOC provisions in the One Big Beautiful Bill Act",
+   "url": "https://bipartisanpolicy.org/explainer/unpacking-the-feoc-provisions-in-the-one-big-beautiful-bill-act/"
+  },
+  {
+   "label": "CnEVPost — SNE Research global EV battery market share, H1 2026",
+   "url": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "CnEVPost — SNE Research global storage battery market share, H1 2026",
+   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "CnEVPost — top battery makers by China share, July 2026 (CABIA)",
+   "url": "https://cnevpost.com/2026/08/18/top-battery-makers-share-china-jul-2026/",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "InfoLink — global storage battery shipment ranking 2025 (Gotion not in the top six)",
+   "url": "https://www.infolink-group.com/energy-article/energy-storage-topic-global-battery-shipment-ranking-2025",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "电池网 / EVTank — 2025 global storage battery shipment top ten white paper (Gotion eighth)",
+   "url": "https://www.itdcw.com/news/hangyebaogao/0205153ER026.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Bridge Michigan — the Michigan battery plant plan is dead after years of controversy",
+   "url": "https://bridgemi.com/business-watch/michigan-gotion-battery-plant-plan-is-dead-after-years-of-controversy/",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "Bridge Michigan — Gotion sues a Michigan township to recoup costs from the failed deal",
+   "url": "https://bridgemi.com/business-watch/gotion-sues-tiny-michigan-township-to-recoup-costs-from-failed-ev-battery-deal/",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "Michigan Public — Gotion says it will not repay the state grant",
+   "url": "https://www.michiganpublic.org/politics-government/2026-02-13/chinese-company-says-it-wont-pay-back-state-grant-after-plans-for-battery-plant-fail",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "Capitol News Illinois — battery plant coming to Illinois with a USD 530m incentive deal",
+   "url": "https://capitolnewsillinois.com/news/battery-manufacturing-plant-coming-to-illinois-with-530m-incentive-deal/"
+  },
+  {
+   "label": "Shaw Local — Gotion updates Manteno village on safety issues",
+   "url": "https://www.shawlocal.com/daily-journal/2026/01/07/gotion-updates-manteno-village-on-safety-issues/",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "Shaw Local — Gotion gives updates on the Manteno plant (headcount targets)",
+   "url": "https://www.shawlocal.com/daily-journal/2025/11/18/gotion-gives-updates-on-manteno-plant/",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "Southwest Regional Publishing — Manteno trustees vote down a Gotion investment review",
+   "url": "https://southwestregionalpublishing.com/2026/02/06/manteno-votes-down-gotion-investment-review/",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Energy-Storage.News — Gotion and Richardson Electronics partner for US-made storage",
+   "url": "https://www.energy-storage.news/chinas-gotion-and-richardson-electronics-partner-for-us-made-bess/",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Energy-Storage.News — Gotion unveils a 7 MWh storage system as the energy-density race continues",
+   "url": "https://www.energy-storage.news/gotion-unveils-7mwh-bess-as-energy-density-race-continues/",
+   "date": "2025-03-06"
+  },
+  {
+   "label": "ESS News — Gotion unveils a 5 MW / 18.8 MWh enclosed storage system",
+   "url": "https://www.ess-news.com/2026/04/30/gotion-unveils-5-mw-18-8-mwh-ensclosed-battery-storage-system/",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "ESS News — Gotion starts mass production of the liquid-cooled 5 MWh system in Germany",
+   "url": "https://www.ess-news.com/2025/07/29/gotion-starts-mass-production-of-liquid-cooled-5-mwh-battery-storage-system-at-plant-in-germany/",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "EnergyTrend — overseas storage orders including Lightsource bp's Lower Wonga",
+   "url": "https://www.energytrend.com/news/20260610-51579.html",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "electrive — Gotion is now mass-producing Volkswagen standard cells",
+   "url": "https://www.electrive.com/2025/11/21/gotion-high-tech-is-now-mass-producing-vw-standard-cells/",
+   "date": "2025-11-21"
+  },
+  {
+   "label": "electrive — Gotion eyes a stake in PowerCo's Spanish cell factory",
+   "url": "https://www.electrive.com/2026/07/28/gotion-eyes-stake-in-powercos-spanish-battery-cell-factory/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "battery-news.de — Gotion in talks to acquire a stake in the PowerCo plant at Sagunto",
+   "url": "https://battery-news.de/en/2026/07/28/gotion-in-talks-to-acquire-stake-in-powerco-battery-plant-in-sagunto/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "electrive — Gotion kicks off factory construction in Slovakia",
+   "url": "https://www.electrive.com/2025/10/31/gotion-kicks-off-factory-construction-in-slovakia/",
+   "date": "2025-10-31"
+  },
+  {
+   "label": "Médias24 — the Kenitra plant is set to start production in August 2026",
+   "url": "https://medias24.com/2026/05/09/electric-batteries-gotions-kenitra-plant-set-to-start-production-in-august-2026-1674087/",
+   "date": "2026-05-09"
+  },
+  {
+   "label": "ESS News — Gotion prepares Africa's first battery gigafactory in Morocco",
+   "url": "https://www.ess-news.com/2026/08/03/gotion-high-tech-prepares-africas-first-battery-gigafactory-in-morocco/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "CleanTechnica — Gotion unveils sodium battery products at 261 Wh/kg and 20,000 cycles",
+   "url": "https://cleantechnica.com/2026/05/22/gotion-unveils-sodium-battery-products-with-261-wh-kg-energy-density-and-20000-charge-cycles/",
+   "date": "2026-05-22"
+  },
+  {
+   "label": "CnEVPost — Gotion finalises the design for a 2 GWh solid-state battery line",
+   "url": "https://cnevpost.com/2026/03/02/gotion-finalizes-design-2-gwh-solid-state-battery-line/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "electrive — Gotion begins pilot production of a solid-state battery",
+   "url": "https://www.electrive.com/2025/05/19/gotion-begins-pilot-production-of-solid-state-battery/",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "electrive — Gotion and BASF collaborate on solid-state batteries",
+   "url": "https://www.electrive.com/2026/02/11/gotion-and-basf-collaborate-on-solid-state-batteries/",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Green Car Congress — the Astroinno L600 LMFP cell at 240 Wh/kg",
+   "url": "https://www.greencarcongress.com/2023/05/20230524-astroinno.html",
+   "date": "2023-05-24"
+  },
+  {
+   "label": "CnEVPost — Volkswagen China officially becomes the largest shareholder of Gotion",
+   "url": "https://cnevpost.com/2021/12/15/volkswagen-china-officially-becomes-largest-shareholder-of-ev-battery-maker-gotion-high-tech/",
+   "date": "2021-12-15"
+  },
+  {
+   "label": "Gasgoo — Gotion H1 net profit rises 278%",
+   "url": "https://autonews.gasgoo.com/articles/ev/gotion-high-tech-h1-net-profit-rises-278-2092499944476008449",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "EnergyTrend — Gotion's RMB 5bn placement funding 60 GWh of new capacity",
+   "url": "https://www.energytrend.com/news/20260209-50932.html",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Sina Finance — Gotion's FY2025 total shipments of about 100 GWh, stated at the results briefing",
+   "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-05-06/doc-inhwyixy8212434.shtml",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Tonghuashun 10jqka — consensus forecasts for 002074 (13 institutions)",
+   "url": "https://basic.10jqka.com.cn/002074/worth.html",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Moolenaar — congressional demand for a CFIUS review of Gotion's ownership",
+   "url": "https://moolenaar.house.gov/media-center/press-releases/moolenaar-rubio-demand-cfius-review-gotion-ownership",
+   "date": "2023-09-21"
+  },
+  {
+   "label": "x-rates — CNY/USD monthly average table for 2025 (FX basis for the USD overlays)",
+   "url": "https://www.x-rates.com/average/?from=CNY&to=USD&amount=1&year=2025"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

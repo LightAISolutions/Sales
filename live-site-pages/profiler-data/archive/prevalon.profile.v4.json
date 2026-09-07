@@ -286,16 +286,6 @@
    "note": "Prevalon was created in February 2024 out of Mitsubishi Power Americas' battery energy storage business as a standalone, legally separated company, and Mitsubishi Power Americas remained a co-owner until the July 2026 sale to Nextpower.",
    "context": "The announcement described Mitsubishi Power Americas transforming and rebranding its BESS business into Prevalon, carrying over 30 projects and roughly 3 GWh of deployed utility-scale storage along with the leadership team, technology, employees and other assets. Within weeks the structure was restructured into a joint venture between Mitsubishi Power Americas and Emerald Energy Storage, an entity representing Prevalon's senior management plus outside investment.\n\nNextpower, the renamed Nextracker, acquired Prevalon from both Mitsubishi Power Americas and Emerald Energy Storage for up to $365 million in cash and stock, closing in July 2026. Mitsubishi Power has fully exited battery storage as a result, and its post-close position — whether any stake, supply agreement or clean exit — is not stated in any source located.",
    "source": "https://power.mhi.com/regions/amer/news/20240222.html"
-  },
-  {
-   "slug": "rept",
-   "type": "supplier",
-   "note": "Supplied the 320Ah Wending LFP cells and long-format modules behind the original 511 platform, under a partnering agreement announced 11 April 2024; Prevalon was also designated service provider for REPT BATTERO's supplied fleet across the Americas.",
-   "context": "The commonly cited 2.5 GWh figure is narrower than it reads: it was a Letter of Intent for US deployments during calendar 2024 only, inside a stated short-term target of 10 GWh across the Americas, with roughly 1.5 GWh already deployed at announcement. CHESTERTON CHECK: no source states the relationship ended. It is typed `historical` because a February 2026 interview about foreign-entity rules names a different Chinese manufacturer as Prevalon's primary supplier without mentioning REPT BATTERO, and because Prevalon has since contracted 10 GWh of US-made cells — dormant and superseded, not confirmed terminated.",
-   "source": "https://www.energy-storage.news/prevalon-rept-partnership-targets-2-5gwh/",
-   "status": "historical",
-   "since": "2024-04-11",
-   "scale": "2.5 GWh LOI for US deployments in 2024, within a stated 10 GWh Americas target"
   }
  ],
  "policyExposure": [
@@ -498,6 +488,6 @@
    "url": "https://prevalonenergy.com/hybrid-power-stabilizer-for-data-centers/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 5
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 4
 }

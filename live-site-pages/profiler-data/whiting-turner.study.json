@@ -1,0 +1,340 @@
+{
+ "schemaVersion": 2,
+ "slug": "whiting-turner",
+ "title": "Whiting-Turner — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: who actually builds a gigawatt campus",
+   "kind": "callout",
+   "tone": "info",
+   "read": "A hyperscale data centre is assembled by a company that, in most cases, physically builds none of it.",
+   "ps": [
+    "A campus like the one at Port Washington, Wisconsin is four buildings, about 2.5 million square feet, 902 megawatts of computing load, and roughly four thousand workers at peak. No single firm employs those workers.",
+    "The {{general contractor}} holds the contract with the owner and organises everyone else. Its product is coordination, scheduling, procurement and risk-taking — not labour.",
+    "This guide teaches the machinery of that arrangement: how the contract is shaped, who carries which risk, why the mechanical and electrical work dominates the schedule, and how to read the industry's own league tables without being misled by them."
+   ]
+  },
+  {
+   "id": "delivery-models",
+   "title": "Three ways to buy a building, and what each one does with risk",
+   "kind": "prose",
+   "read": "The delivery model decides who pays when the estimate is wrong. Everything else follows from that.",
+   "ps": [
+    "**Hard bid.** The owner finishes the design, contractors bid a lump sum, low price wins. The builder carries all the cost risk and has every incentive to claim extra work. It is the cheapest way to buy a simple building and the worst way to buy a complicated one.",
+    "**{{CM at risk}}.** The builder joins early as an adviser during design, then converts to a price it guarantees — typically a {{guaranteed maximum price}}, above which overruns come out of its own fee. The owner buys early advice and a ceiling; the builder buys a seat at the table before the drawings harden.",
+    "**{{design-build}}.** One entity holds both the design and the construction contract, so the owner has a single point of responsibility and no gap to argue about when something does not work. Fast, and it concentrates a great deal of discretion in the builder.",
+    "**{{IPD}}** goes furthest: owner, designer and builder sign one agreement and share the risk and the reward, deliberately removing the opposed incentives the other models keep.",
+    "There is a fourth arrangement that is not a delivery model but changes the outcome as much as one. **{{design-assist}}** brings the builder or a specialist trade into the design before it is finished, without giving them design liability. On a schedule-driven job it is how long-lead equipment gets specified early enough to arrive on time."
+   ]
+  },
+  {
+   "id": "who-does-what",
+   "title": "The contracting tiers, and why the top one is liable for the bottom one",
+   "kind": "table",
+   "read": "Obligations travel downward through the tiers, and when one fails to travel the liability stays at the top.",
+   "intro": "Almost every general contractor subcontracts every trade. That creates a chain, and the chain is where both the efficiency and the legal exposure live.",
+   "cols": [
+    "Tier",
+    "Who they are",
+    "What they carry",
+    "Where it goes wrong"
+   ],
+   "rows": [
+    [
+     "Owner / developer",
+     "The party that will operate the building",
+     "Design intent, financing, the schedule that matters commercially",
+     "Changing the design after prices are set"
+    ],
+    [
+     "General contractor (prime)",
+     "Holds the contract with the owner",
+     "Schedule, coordination, procurement, and the price guarantee",
+     "Everything below it that it failed to pass down properly"
+    ],
+    [
+     "First-tier subcontractor",
+     "The named trade — mechanical, electrical, structural",
+     "Its own scope and its own workforce",
+     "Failing to {{flow-down}} required clauses to the tier below"
+    ],
+    [
+     "Second-tier subcontractor",
+     "A sub-subcontractor, often small",
+     "The actual labour on a portion of a trade",
+     "Wage and classification violations that surface years later"
+    ],
+    [
+     "Supplier",
+     "Fabricators and equipment vendors",
+     "Long-lead items that gate the schedule",
+     "Non-payment disputes, resolved through bond claims"
+    ]
+   ],
+   "note": "The mechanism to understand is {{flow-down}}. A prime contract carries obligations — prevailing wage, safety, insurance — and each subcontract must pass them down. Where a clause fails to flow down, the obligation does not vanish; it stays with the prime. That is how a general contractor ends up paying back wages for workers employed by a company two tiers below it that it never selected."
+  },
+  {
+   "id": "the-mep-problem",
+   "title": "Why mechanical and electrical work decides the schedule",
+   "kind": "prose",
+   "read": "In a data centre the building is mostly a container for power and cooling, so the trades that install them run the job.",
+   "ps": [
+    "An office building is structure with services threaded through it. A data hall is the reverse: the structure exists to hold up the electrical distribution and the cooling plant, and the white space where the servers sit is a fraction of the footprint.",
+    "That inverts the schedule. Switchgear, transformers, generators, chillers and uninterruptible power supplies are long-lead items ordered a year or more ahead, and the sequence in which they arrive dictates when everything else can happen.",
+    "It also makes clash detection existential. Thousands of conduit, pipe, duct and cable-tray runs occupy the same overhead space, and finding a conflict in the field costs weeks. {{VDC}} exists to find those conflicts in a model instead.",
+    "This is why a builder's mechanical and electrical capability is the thing worth examining. It comes in two shapes. Some contractors **self-perform** — they employ the electricians and pipefitters directly, which gives them control over productivity and a captive workforce. Others hold the expertise as a coordination and procurement function layered over subcontracted trades, selecting the trade partners, reviewing their designs, and running the commissioning.",
+    "Neither is obviously better at campus scale. The coordination model scales faster because it is not limited by how many electricians the contractor employs; the self-perform model protects the schedule when labour is scarce. What matters is knowing which one you are buying — and a contractor whose in-house group lists 'trade contractor selection' among its own services is telling you it is the second kind."
+   ]
+  },
+  {
+   "id": "commissioning",
+   "title": "Commissioning: the part that cannot be compressed",
+   "kind": "prose",
+   "read": "A data centre is not finished when it is built; it is finished when it has been proven to survive failure.",
+   "ps": [
+    "Commissioning is the sequence of tests that demonstrates the building does what the design intended, run by a {{commissioning agent}} who is independent of the builder.",
+    "It runs in levels, from factory testing of individual components, through installation checks, to functional testing of each system, and finally to integrated systems testing — where the whole facility is loaded artificially and then subjected to deliberate failures.",
+    "Integrated testing is the part outsiders underestimate. Utility power is cut and the batteries must carry the load until the generators start and stabilise; the cooling must hold while that happens. This is where {{N+1}} redundancy stops being a diagram and becomes an observed behaviour.",
+    "Commissioning is frequently the longest single item on a data-centre programme and it is at the end, which means every delay upstream lands on it. It is also where {{substantial completion}} is contested — the milestone that starts warranties and stops the daily damages a contractor pays for being late.",
+    "For the storage side of this industry the connection is direct: the batteries in an uninterruptible power supply are not proven by their datasheet but by the transfer test, and {{critical IT load}} is the figure that test is run against."
+   ]
+  },
+  {
+   "id": "campus-clock",
+   "title": "A gigawatt campus on one clock",
+   "kind": "timeline",
+   "read": "The visible construction is the short part. Selection, earthwork and commissioning bracket it.",
+   "unit": "calendar year",
+   "lanes": {
+    "contract": "Contracting",
+    "field": "In the field"
+   },
+   "items": [
+    {
+     "x": 2025,
+     "lane": "contract",
+     "label": "Developer announces the site and the programme",
+     "sub": "October 2025 — the tenant and operator are named before the builders are"
+    },
+    {
+     "x": 2025.9,
+     "lane": "contract",
+     "label": "Build team selected — four buildings split across three contractor entities",
+     "sub": "November 2025; scopes are allocated by building, not by an even share"
+    },
+    {
+     "x": 2025.95,
+     "lane": "field",
+     "label": "Groundbreaking",
+     "sub": "December 2025"
+    },
+    {
+     "x": 2026.1,
+     "lane": "field",
+     "label": "Earthwork and foundation drilling; about 300 workers on site",
+     "sub": "January to April 2026 — the quiet phase that sets everything after it"
+    },
+    {
+     "x": 2026.2,
+     "lane": "field",
+     "label": "Steel and superstructure begin",
+     "sub": "From end February 2026; headcount climbs toward 3,500"
+    },
+    {
+     "x": 2027,
+     "lane": "field",
+     "label": "Peak construction workforce",
+     "sub": "About 4,000 to 5,000 workers across the campus"
+    },
+    {
+     "x": 2028,
+     "lane": "field",
+     "label": "Integrated systems testing and handover",
+     "sub": "Completion 2028; the commissioning sequence is the last gate"
+    }
+   ],
+   "note": "Three years from groundbreaking to completion for roughly 2.5 million square feet. The compression is achieved by running buildings in parallel under separate contractors rather than by building any one of them faster."
+  },
+  {
+   "id": "reading-rankings",
+   "title": "How to read a contractor league table without being fooled",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Total revenue and sector position are different measurements, and the industry's main table reports only the first.",
+   "ps": [
+    "The dominant ranking is built from a **confidential survey the contractors fill in themselves**. It is unaudited, and for private firms it is usually the only revenue figure in existence anywhere. Treat it as self-reported, because it is.",
+    "It ranks by **total** revenue. A contractor can therefore rank fifth overall and sixth in data centres, and both are true — the first measures size, the second measures specialisation.",
+    "The useful derived number is the **sector share**. A builder at 27% telecom revenue and one at 82% are in different businesses even if they appear on the same page, and the second will move up the table faster in a data-centre boom purely because more of its book is growing.",
+    "Watch for the **rank-versus-growth trap**. A firm can add well over a billion dollars of revenue and still fall a place, if the index grew faster. Falling in the table is not the same as shrinking.",
+    "Finally, beware the **publication-year label**. Some business-press profiles date figures by the year the list was published rather than the year the revenue was earned, so the same number appears against two different years in two sources. They are not independent confirmations of anything."
+   ]
+  },
+  {
+   "id": "specialist-vs-diversified",
+   "title": "Specialist or diversified — the strategic choice underneath the rankings",
+   "kind": "proscons",
+   "read": "Concentration and breadth are both defensible, and they fail in opposite conditions.",
+   "intro": "Every large contractor sits somewhere on this axis, and where it sits explains most of what happens to it in a boom or a bust.",
+   "cards": [
+    {
+     "t": "The data-centre specialist",
+     "meta": "Eighty per cent or more of revenue from one sector",
+     "adv": [
+      "**Rank and revenue rise fast when the sector does** — the whole book compounds at the sector's growth rate.",
+      "**Deep repeatable expertise.** The same details, the same equipment vendors, the same commissioning sequences, job after job.",
+      "**Client relationships concentrate**, and hyperscale developers reward builders who have already done it."
+     ],
+     "dis": [
+      "**A sector downturn hits everything at once**, with nothing to cushion it.",
+      "**Client concentration is severe** — a handful of developers can represent most of the book.",
+      "*Pricing power erodes* as more contractors chase the same work."
+     ]
+    },
+    {
+     "t": "The diversified general builder",
+     "meta": "A large data-centre line inside a much bigger general-building book",
+     "adv": [
+      "**Sector downturns are survivable** because healthcare, education, life sciences and federal work do not move together.",
+      "**Adjacent expertise transfers.** Occupied-facility work, cleanrooms and hospital infrastructure are all rehearsals for building beside a live data hall.",
+      "**Federal and institutional work provides a floor** that is uncorrelated with private capital cycles."
+     ],
+     "dis": [
+      "**It loses relative position in a boom.** Growing at ten per cent while the index grows at twelve means falling in the table.",
+      "**Harder to claim specialist credibility** against a firm that does nothing else.",
+      "*Management attention is divided* across many sectors with different rhythms."
+     ]
+    }
+   ],
+   "note": "Neither column is a verdict. The question a reader should ask is whether the diversification is a deliberate hedge or simply the residue of an older business the firm has not yet grown out of — and the sector-share trend over several years is the only public evidence either way."
+  },
+  {
+   "id": "reading-traps",
+   "title": "Reading traps specific to private contractors",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "A company that files nothing still leaves a record, but only where someone else was compelled to speak.",
+   "ps": [
+    "**Absence of a citation is not a clean record.** Safety databases are frequently unreachable or incomplete. If you could not query the database, say the database was unavailable — not that the record was empty.",
+    "**Adversarial process is the best source.** Litigation dockets, labour enforcement actions, federal award databases and bond claims under the {{Miller Act}} disclose what a private firm will not. A surety panel can be reconstructed from bond-claim party lists even though no contractor publishes its bonding capacity.",
+    "**Beware the confident content farm.** Private companies attract automatically generated profile pages that state precise-sounding operational metrics — incident rates, subcontract-spend percentages, ownership structures — with no sourcing at all, and often contradict themselves on the same page. A specific number with no source is worse than no number.",
+    "**Test an ownership claim against a list that would have to include it.** If a firm is described as majority employee-owned, it should appear on the registry of large employee-owned companies. Absence from a list that captures its same-size peers is strong evidence, and much better than searching for a positive statement that may not exist."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Mechanics and reading skills.",
+   "cards": [
+    {
+     "q": "Under {{CM at risk}}, who absorbs a cost overrun above the agreed ceiling?",
+     "a": "The builder, out of its own fee. That is what makes it 'at risk' — under agency construction management the manager only advises and the owner carries the cost."
+    },
+    {
+     "q": "A required labour clause was in the prime contract but never appeared in a second-tier subcontract. Who is liable for the resulting underpayment?",
+     "a": "The prime contractor. {{flow-down}} is an obligation, not a formality; where a clause fails to travel down the chain, the liability stays at the top."
+    },
+    {
+     "q": "Why does mechanical and electrical work set a data centre's schedule rather than the structure?",
+     "a": "Because the building largely exists to hold the power and cooling. Switchgear, transformers, generators and chillers are long-lead items ordered a year or more ahead, and their arrival sequence gates everything else."
+    },
+    {
+     "q": "What does integrated systems testing prove that component testing cannot?",
+     "a": "That the facility survives failure as a whole. Utility power is cut under artificial load and the batteries must carry it until the generators stabilise, with cooling maintained throughout — which is where {{N+1}} redundancy is actually demonstrated."
+    },
+    {
+     "q": "A contractor ranks fifth by total revenue and sixth in data centres. Is that a contradiction?",
+     "a": "No. The first measures overall size and the second measures sector position. A diversified builder can be larger than a specialist overall while doing less data-centre work than it does."
+    },
+    {
+     "q": "A builder's in-house mechanical group lists 'trade contractor selection' among its services. What does that tell you?",
+     "a": "That it coordinates rather than self-performs. The group is an advisory and procurement function layered over subcontracted trades, not a division that employs the installers."
+    },
+    {
+     "q": "Why is {{substantial completion}} so often litigated?",
+     "a": "Because it starts warranties and stops the daily damages the contractor owes for being late. Moving the date by weeks can move real money, so both sides argue it."
+    },
+    {
+     "q": "What is the single best way to test a claim that a private firm is employee-owned?",
+     "a": "Check whether it appears on the published registry of the largest employee-owned companies. If same-size peers in the same industry are listed and it is not, the claim is very likely false."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on delivery, sequence and reading the record.",
+   "items": [
+    {
+     "q": "An owner wants a single point of responsibility with no gap between design and construction. Which model fits?",
+     "c": [
+      "Hard bid",
+      "Design-build",
+      "Agency construction management",
+      "Construction management at risk"
+     ],
+     "a": 1,
+     "why": "Design-build places both the design and the construction obligation with one entity, so there is no interface for the parties to argue across."
+    },
+    {
+     "q": "On a data-centre programme, the longest single item at the end of the schedule is usually:",
+     "c": [
+      "Structural steel erection",
+      "Site earthwork",
+      "Commissioning and integrated systems testing",
+      "Interior fit-out"
+     ],
+     "a": 2,
+     "why": "Commissioning proves the facility survives deliberate failures under load. It sits at the end, so every upstream delay compresses it."
+    },
+    {
+     "q": "A contractor's revenue rose 10% while the industry index rose 12% and its rank fell one place. The best reading is:",
+     "c": [
+      "The company shrank",
+      "The company lost relative share in a growing market",
+      "The ranking is unreliable",
+      "The company exited a sector"
+     ],
+     "a": 1,
+     "why": "Growing slower than the index means losing relative position. It is a statement about the market's growth, not about the business contracting."
+    },
+    {
+     "q": "You cannot reach the regulator's safety-inspection database. The correct thing to write is:",
+     "c": [
+      "The company has a clean safety record",
+      "No violations were found",
+      "The database was unreachable, so no systematic history could be built",
+      "The company has not been inspected"
+     ],
+     "a": 2,
+     "why": "An unreachable source bounds only your access, not the underlying facts. Reporting an inaccessible database as an empty one turns a collection gap into a false finding."
+    },
+    {
+     "q": "Which is the strongest evidence about a private contractor's finances?",
+     "c": [
+      "A contact-data aggregator's revenue estimate",
+      "A self-reported industry survey figure",
+      "An automatically generated company profile page",
+      "A press release from a competitor"
+     ],
+     "a": 1,
+     "why": "The self-reported survey is unaudited but is the contractor's own number, submitted under its own name. Aggregator estimates are modelled and generated profiles are frequently fabricated."
+    },
+    {
+     "q": "Two sources give a contractor's revenue as USD 13.3bn for different years. The most likely explanation is:",
+     "c": [
+      "One source is wrong",
+      "One labels by publication year and the other by revenue year",
+      "The company restated its accounts",
+      "Currency conversion"
+     ],
+     "a": 1,
+     "why": "Business-press profiles often date a figure by the year the list appeared rather than the year the money was earned, so the same number lands against two different years. They are not independent readings."
+    }
+   ]
+  }
+ ]
+}

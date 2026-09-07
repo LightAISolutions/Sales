@@ -1,0 +1,925 @@
+{
+ "schemaVersion": 7,
+ "slug": "whiting-turner",
+ "name": "The Whiting-Turner Contracting Company",
+ "shortName": "Whiting-Turner",
+ "categories": [
+  "gc"
+ ],
+ "website": "https://www.whiting-turner.com",
+ "headquarters": "Towson (Baltimore), Maryland, USA",
+ "founded": "1909",
+ "employees": "~5,000 salaried (2025), about 1,000 of them in the Baltimore area",
+ "ownership": {
+  "type": "private"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Whiting-Turner is the fifth-largest contractor in the United States at USD 14.68bn of 2025 revenue, and it is on the marquee data-centre jobs — one of the builders of Vantage's Lighthouse campus in Wisconsin, prime on two separate USD 600m Google data centres — but it slipped from fourth to fifth in the ENR 2026 Top 400 while every data-centre specialist around it climbed, because at 27% telecom revenue it participates in the boom rather than being carried by it. BACKGROUND. Founded 1909 in Baltimore by G.W.C. Whiting and LeBaron Turner, MIT classmates; no relation to Turner Construction despite the surname. Privately held, with three chief executives in 115 years: the founders, Willard Hackerman (1955–2014, and sole stockholder during his tenure), and Timothy J. Regan since 2014. Construction management, general contracting, design-build and integrated project delivery across 24 declared market sectors and about 48 enumerated offices in 30 states, with no international revenue. It files nothing with the SEC, publishes no revenue figure of its own, and issued exactly one distributed press release in the trailing eighteen months. Collection gap: the widely repeated description of the company as employee-owned or an ESOP is unsupported — see the ownership judgment below.",
+ "ecosystemRole": "Whiting-Turner is one of the small set of general contractors capable of taking a hyperscale data-hall building at gigawatt-campus scale, and it appears in this corpus mainly through the campuses it builds for others rather than through anything it owns. Its data-centre practice runs out of a Mission Critical business unit whose national leader also runs the in-house mechanical and electrical group — an organisational tell, since the company subcontracts every trade and holds its MEP expertise as a coordination and commissioning function rather than a self-perform division. It has documented substation, central-plant and combined-heat-and-power capability, but no battery storage, on-site generation or microgrid delivery appears anywhere in the public record; on the Lighthouse campus the utility scope sits with a specialist subcontractor rather than with Whiting-Turner. For the storage side of this corpus it is therefore a builder of the load, not of the power behind it.",
+ "productsAndServices": [
+  {
+   "name": "Mission critical — data centres",
+   "category": "Market sector",
+   "description": "One of 24 declared market sectors, and the one that has driven the company's growth. Delivered through a dedicated business unit whose national leader, Greg Botteon, also leads the in-house mechanical and electrical group — the two roles sitting with one person is the clearest available statement of how Whiting-Turner organises data-centre work.",
+   "highlights": [
+    "One of the builders of Vantage Data Centers' Lighthouse campus at Port Washington, Wisconsin — a USD 15bn, 2.5 million square foot, four-building campus on 672 acres, with Oracle as operator and OpenAI as tenant under the Stargate programme.",
+    "Prime contractor on two separate Google data centres, each reported at about USD 600m: The Dalles / Wasco County, Oregon (290,000 sq ft, contracted through Google subsidiary Design LLC) and Clarksville, Tennessee.",
+    "Named data-centre projects on its own site are mostly confidential: an IBM B009 upgrade in Boulder (100,000 sq ft, live-facility UPS and generator replacement), a 54,000 sq ft confidential conversion in the Mountain States, and 'Project Oasis', a 465,000 sq ft server development and operations campus in the Southeast.",
+    "Ranked sixth in Building Design+Construction's 2025 data-centre contractor ranking, behind HITT, Holder, DPR, Clayco and Turner and ahead of Fortis, JE Dunn and Mortenson.",
+    "Stated technical concerns are conventional for the sector — redundancy, grounding, disaster recovery, PUE, commissioning, site hardening — with construction protocols for cleanliness, vibration and cable management."
+   ],
+   "positioning": "At 27% telecom revenue Whiting-Turner is a diversified general builder with a large data-centre line, not a mission-critical specialist. The contrast is the point: HITT runs 82% telecom, DPR 57%. Whiting-Turner outranks both overall while ranking below them in the sector.",
+   "soldThrough": "Direct negotiated and construction-management-at-risk engagements with developers and hyperscalers; multi-contractor campus benches where it takes individual buildings alongside rivals.",
+   "targetSegments": [
+    "Hyperscale developers",
+    "Colocation providers",
+    "Enterprise data centres",
+    "Cloud operators"
+   ]
+  },
+  {
+   "name": "Construction management and general contracting",
+   "category": "Delivery",
+   "description": "The core business. Whiting-Turner describes itself as offering construction management, general contracting, design-build and integrated project delivery, and markets method selection rather than a method taxonomy — its own materials do not distinguish at-risk from agency construction management.",
+   "highlights": [
+    "About 71% of 2025 revenue was construction-management-at-risk, per ENR's survey data; the same survey put it at 62% for 2022, so the mix has shifted toward at-risk delivery.",
+    "Sector mix 2025: 65% general building, 27% telecom, the remaining 8% across manufacturing, industrial and petroleum, and transportation. Zero international revenue.",
+    "Seven operating regions — Mid-Atlantic, Midwest, Mountain States, Northeast, Southeast, South Central and West.",
+    "The company states 'over 60 locations'; its own contact page enumerates about 48, the heaviest concentrations being California, Virginia, Texas, Pennsylvania and Florida.",
+    "Runs a materially higher share of hard-bid and lump-sum work than the data-centre specialists, which are at or near 100% at-risk — a lower-margin, higher-risk posture consistent with its heavy federal design-build book."
+   ],
+   "positioning": "Competes with Turner, HITT, Holder, DPR, Clayco, Fortis, JE Dunn, Mortenson, Clune, Hensel Phelps, Gilbane and Skanska USA. On the Lighthouse campus it works alongside three of them rather than against them — a multi-contractor campus is a co-opetition structure, and being one of the bench is itself the credential.",
+   "soldThrough": "Direct negotiated work, competitive bid, and federal design-build under IDIQ vehicles.",
+   "targetSegments": [
+    "Hyperscale and enterprise data centres",
+    "Healthcare and higher education",
+    "Life sciences and semiconductor",
+    "Federal and military"
+   ]
+  },
+  {
+   "name": "In-house MEP group and virtual design",
+   "category": "Technical services",
+   "description": "Whiting-Turner's stated technical differentiator, and worth reading precisely: the group provides mechanical and electrical review and coordination, not installation. Its listed services are preconstruction cost estimation, design review, long-lead equipment identification and procurement, trade contractor selection, testing and commissioning, BIM and constructability.",
+   "highlights": [
+    "'Trade contractor selection' among the group's own listed services is the tell — this is a coordination function layered over subcontracted trades.",
+    "No self-perform concrete, steel or MEP installation capability appears anywhere in the company's materials or in third-party reporting; peers that do self-perform publish dedicated pages for it and Whiting-Turner has none.",
+    "The entire trade base is subcontracted, with prequalification run through BuildingConnected.",
+    "Eight named practice areas alongside MEP: advanced delivery methods, high-performance buildings, lean, off-site construction, sustainability, virtual design and construction, and technology excellence.",
+    "Quality and safety are led by named executives — Kate Edwards on quality, Nadine Green on environmental health and safety — with OSHA 30-hour training for all operations personnel."
+   ],
+   "positioning": "For a data-centre client the relevant comparison is against contractors that self-perform MEP. Whiting-Turner's answer is coordination depth and commissioning rather than in-house trades, which is a genuinely different model and not obviously worse at campus scale.",
+   "soldThrough": "Bundled into construction-management engagements rather than sold separately.",
+   "targetSegments": [
+    "Mission critical",
+    "Life sciences and pharmaceutical",
+    "Healthcare",
+    "Semiconductor and advanced manufacturing"
+   ]
+  },
+  {
+   "name": "Federal and military construction",
+   "category": "Market sector",
+   "description": "A smaller share of revenue than its visibility suggests, but the fastest-growing part of the book in this window and the one part of the business with hard, independently verifiable numbers, because federal awards are public.",
+   "highlights": [
+    "309 prime contract awards totalling USD 8.44bn across FY2008 to September 2026 per USASpending — Department of Defense USD 4.95bn, Department of Homeland Security USD 1.62bn, GSA USD 0.77bn, HHS USD 0.44bn.",
+    "At roughly USD 0.6–0.8bn a year against USD 14.7bn of total revenue, federal work is about 4–5% of the book. Whiting-Turner is overwhelmingly a private-client contractor.",
+    "May 2026: USD 516.7m of Coast Guard awards in a single announcement — up to USD 400m design-build at Training Center Cape May, New Jersey, described by the Coast Guard as the largest shore construction award in its history, plus USD 116.7m to recapitalise Pier Mike at Base Charleston.",
+    "September 2025: USD 137m for Base Seattle phase 1A, including dredging of contaminated sediment described as the largest CERCLA action in Coast Guard history, and about USD 69m for two membrane tension hangars at Air Station Barbers Point, Hawai'i.",
+    "Operates through joint ventures on some federal work — a Whiting-Turner Walsh JV appears in the federal recipient index and a Whiting-Turner Kokosing JV built the Amazon Air hub at Cincinnati."
+   ],
+   "positioning": "Federal design-build is where the company's lump-sum posture and its bonding relationships are exercised. Its standing surety panel — Liberty Mutual, Zurich American, and Fidelity and Deposit Company of Maryland — recurs across Miller Act actions in three courts over eight years.",
+   "soldThrough": "Competitive federal design-build and IDIQ delivery orders with NAVFAC, the Coast Guard, GSA and HHS.",
+   "targetSegments": [
+    "Coast Guard and Navy shore infrastructure",
+    "Federal laboratories and health facilities",
+    "GSA consolidations"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Lighthouse campus, Port Washington, Wisconsin — the scope Whiting-Turner actually holds",
+   "specs": [
+    {
+     "band": "Campus",
+     "label": "Developer and stack",
+     "value": "Vantage Data Centers, with Oracle as operator and OpenAI as tenant, under the Stargate programme"
+    },
+    {
+     "band": "Campus",
+     "label": "Investment",
+     "value": "USD 15bn campus; USD 8bn first phase"
+    },
+    {
+     "band": "Campus",
+     "label": "Scale",
+     "value": "Four single-storey buildings, about 2.5 million sq ft, on 672 developed acres of a roughly 1,900-acre holding"
+    },
+    {
+     "band": "Power",
+     "label": "Critical IT load",
+     "value": "902 MW, per Vantage's own campus page"
+    },
+    {
+     "band": "Power",
+     "label": "Total facility power",
+     "value": "1.3 GW across the four phase-one buildings, per ENR — a different metric from the 902 MW IT load, and the two should not be merged"
+    },
+    {
+     "band": "Contractors",
+     "label": "Whiting-Turner's scope",
+     "value": "One of the four buildings. Weitz builds one; a Turner Construction / McCarthy joint venture builds the remaining two, identified as Buildings 13 and 14 at 468 MW combined"
+    },
+    {
+     "band": "Contractors",
+     "label": "Michels",
+     "value": "A subcontractor, not a fourth general contractor — the local trade press names four GCs and lists Michels with Veit among subcontractors, and the site's OSHA Strategic Partnership names only the three GC entities"
+    },
+    {
+     "band": "Schedule",
+     "label": "Milestones",
+     "value": "Build team selected November 2025; groundbreaking 17 December 2025; steel from end February 2026; completion 2028"
+    },
+    {
+     "band": "Labour",
+     "label": "Workforce",
+     "value": "Union, under Vantage's partnership with the Wisconsin Building Trades Council; peak above 4,000 construction workers"
+    }
+   ],
+   "notes": "Collection gap: which of the four buildings Whiting-Turner holds is not published, and neither is its contract value. Two buildings are about 719,000 sq ft and two about 560,000 sq ft, so even the one-of-four allocation does not yield a figure. Dividing the USD 8bn phase-one cost four ways would be a fabrication — the scopes are unequal."
+  },
+  {
+   "product": "Published scale — every figure self-reported to ENR",
+   "specs": [
+    {
+     "band": "Revenue",
+     "label": "FY2025",
+     "value": "USD 14,675.9m — ENR Top 400 rank 5"
+    },
+    {
+     "band": "Revenue",
+     "label": "FY2024",
+     "value": "USD 13.3bn — ENR rank 4"
+    },
+    {
+     "band": "Revenue",
+     "label": "FY2023",
+     "value": "USD 11.3bn — ENR rank 5"
+    },
+    {
+     "band": "Revenue",
+     "label": "FY2022",
+     "value": "USD 8,599.9m — ENR rank 7"
+    },
+    {
+     "band": "Mix",
+     "label": "Sector, 2025",
+     "value": "65% general building, 27% telecom (where data centres sit), 8% manufacturing, industrial and petroleum, and transportation; zero international"
+    },
+    {
+     "band": "Mix",
+     "label": "Delivery",
+     "value": "About 71% construction-management-at-risk in 2025, against 62% in 2022"
+    },
+    {
+     "band": "Scale",
+     "label": "People and offices",
+     "value": "About 5,000 salaried staff; about 48 enumerated offices in 30 states against a stated 'over 60 locations'"
+    }
+   ],
+   "notes": "The company publishes no revenue figure of its own. Every number here reaches the public record through ENR's confidential contractor survey, which is self-reported and unaudited — it is the single most load-bearing document in this dossier. Forbes' series labels by list year rather than revenue year and therefore runs one year behind ENR; the two are not independent readings."
+  },
+  {
+   "product": "Independent record — federal awards, litigation and the safety file",
+   "specs": [
+    {
+     "band": "Federal",
+     "label": "Prime awards",
+     "value": "309 awards totalling USD 8.44bn, FY2008 to September 2026, per USASpending"
+    },
+    {
+     "band": "Federal",
+     "label": "By agency",
+     "value": "Defense USD 4.95bn; Homeland Security USD 1.62bn; GSA USD 0.77bn; Health and Human Services USD 0.44bn"
+    },
+    {
+     "band": "Federal",
+     "label": "Share of revenue",
+     "value": "About USD 0.6–0.8bn a year against USD 14.7bn total — roughly 4–5% of the book"
+    },
+    {
+     "band": "Litigation",
+     "label": "Federal dockets",
+     "value": "199 with Whiting-Turner as a named party; the largest categories are contract (~68), civil-rights employment (16), insurance (12), ERISA (11) and FLSA (9)"
+    },
+    {
+     "band": "Litigation",
+     "label": "EEOC",
+     "value": "USD 1.2m settlement and a two-year consent decree, Case 3:21-cv-00753, M.D. Tenn., over race harassment and retaliation on the Clarksville Google data centre"
+    },
+    {
+     "band": "Labour",
+     "label": "Department of Labor",
+     "value": "USD 531,173 in back wages for 45 ironworkers on the NIH Building 10 East Wing project; the second-tier subcontractor and two of its officers were debarred for three years"
+    },
+    {
+     "band": "Safety",
+     "label": "Fatalities on the record",
+     "value": "Amazon Air hub, Hebron, Kentucky, February 2020 (Whiting-Turner Kokosing JV); Disneyland Resort, August 2019; Westfield Montgomery Mall, Bethesda, May 2013"
+    },
+    {
+     "band": "Bonding",
+     "label": "Surety panel",
+     "value": "Liberty Mutual, Zurich American, and Fidelity and Deposit Company of Maryland — recurring together across Miller Act actions in three courts between 2015 and 2023"
+    }
+   ],
+   "notes": "Collection gap on safety: OSHA's IMIS establishment search returns HTTP 403 to this network and data.osha.gov does not resolve, so no systematic citation or penalty history could be built. The three fatalities above were recovered through case law and trade press. Do not read the absence of a citation record as a clean safety record — the database was unreachable, not empty. Whiting-Turner publishes no experience modification rate, recordable rate or hours-worked figure."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-05-22",
+   "category": "market",
+   "headline": "ENR 2026 Top 400 published — Whiting-Turner fifth at USD 14,675.9m, down one place from fourth despite adding USD 1.4bn of revenue",
+   "read": "The most informative datapoint in a file with no income statement: it grew 10.4% in a year the Top 400 grew 11.8% and the telecom category grew 86.4%, so it lost relative ground in the boom it is visibly part of.",
+   "source": "Construction Dive / ENR, 2026-05-22"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "order-win",
+   "headline": "USD 516.7m of Coast Guard awards in one announcement — up to USD 400m design-build at Training Center Cape May, New Jersey, and USD 116.7m to recapitalise Pier Mike at Base Charleston",
+   "read": "The Coast Guard calls Cape May the largest shore construction award in its history. Federal marine work, not data centres, was the fastest-growing part of the book in this window.",
+   "source": "Construction Dive, 2026-05-12"
+  },
+  {
+   "date": "2026-01-21",
+   "category": "project",
+   "headline": "Lighthouse ramps up — about 300 workers and 200 pieces of equipment on site, earthwork through April, steel from end February; the Turner/McCarthy JV is named for Buildings 13 and 14 at 468 MW combined",
+   "read": "The building-by-building reporting is what establishes that this is three general contractors across four buildings with Michels subcontracted, not an even four-way split.",
+   "source": "Ozaukee Press, 2026-01-21; Daily Reporter, 2026-01-22"
+  },
+  {
+   "date": "2025-12-17",
+   "category": "project",
+   "headline": "Groundbreaking at Vantage's Lighthouse campus, Port Washington, Wisconsin — USD 15bn campus, USD 8bn first phase, completion 2028",
+   "read": "Whiting-Turner published nothing about the award. Vantage announced the team, and Weitz, Turner and McCarthy each issued their own statements; the silence is characteristic rather than accidental.",
+   "source": "BizTimes, 2025-12-17"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "order-win",
+   "headline": "Vantage selects the build team for the Port Washington campus, Whiting-Turner among them",
+   "read": "Entry onto a gigawatt-scale campus bench alongside Turner, McCarthy and Weitz — the credential that matters most in the sector.",
+   "source": "infraUS, 2025-11-03"
+  },
+  {
+   "date": "2025-10-07",
+   "category": "market",
+   "headline": "Building Design+Construction's 2025 data-centre contractor ranking places Whiting-Turner sixth, behind HITT, Holder, DPR, Clayco and Turner",
+   "read": "It ranks fifth overall and sixth in data centres — the gap is the whole story of a diversified builder in a specialist's market.",
+   "source": "Building Design+Construction, 2025-10-07"
+  },
+  {
+   "date": "2025-09-24",
+   "category": "order-win",
+   "headline": "About USD 69m from the Coast Guard for two membrane tension hangars at Air Station Barbers Point, Kapolei, Hawai'i, with construction from 2026 and completion in early 2028",
+   "read": "Part of a sustained federal design-build run rather than a one-off.",
+   "source": "Construction Dive, 2025-09-24"
+  },
+  {
+   "date": "2025-09-10",
+   "category": "order-win",
+   "headline": "USD 137m for Coast Guard Base Seattle phase 1A, including dredging described as the largest CERCLA action in Coast Guard history",
+   "read": "Environmental remediation inside a waterfront recapitalisation is a materially different risk profile from a data hall, and the company takes both.",
+   "source": "Construction Dive, 2025-09-10"
+  },
+  {
+   "date": "2025-05-02",
+   "category": "legal",
+   "headline": "California Court of Appeal affirms Whiting-Turner's win against a San Francisco hotel developer — USD 5.4m for wrongful termination, with USD 4.7m in attorneys' fees affirmed in June",
+   "read": "Whiting-Turner as plaintiff, after a 79-day trial. The roughly USD 10m total that trade coverage headlines is the damages plus the fee award, not a single figure — the two reported numbers are the same case at different stages.",
+   "source": "Bradley BuildSmart, 2025-05-02; ENR, 2025-08"
+  },
+  {
+   "date": "2025-02-26",
+   "category": "corporate",
+   "headline": "First headquarters relocation in 51 years announced — a 150,000 sq ft building Whiting-Turner will construct for itself on six acres of the Goucher College campus in Towson, under a 50-year ground lease, architect Gensler, completion late 2028",
+   "read": "The only distributed press release the company issued in the trailing eighteen months, and it is about itself. Regan's line is the tell: in its entire history the firm has never had a building of its own.",
+   "source": "PR Newswire, 2025-02-26"
+  },
+  {
+   "date": "2024-12",
+   "category": "legal",
+   "headline": "New England's largest steel fabricator sues over USD 757,000 withheld for a year on a Navy shipyard project at Kittery, Maine, alleging breach of contract and violation of federal prompt-pay law; parties reported close to resolution",
+   "read": "One of 199 federal dockets, and representative of the largest category: payment disputes with subcontractors on federal work.",
+   "source": "ENR, 2024-12"
+  },
+  {
+   "date": "2024-01-30",
+   "category": "order-win",
+   "headline": "Google engages Whiting-Turner for a USD 600m, 290,000 sq ft data centre at The Dalles, Wasco County, Oregon, contracted through Google subsidiary Design LLC",
+   "read": "The second Google engagement on the public record and the only one Whiting-Turner did not have to be sued to reveal — the Clarksville, Tennessee project of similar value surfaced through the EEOC action.",
+   "source": "Construction Dive, 2024-01-30"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess Whiting-Turner participates in the data-centre boom rather than being carried by it, and that its own ENR submissions say so. Basis: revenue grew 10.4% in FY2025 against 11.8% for the Top 400 as a whole and 86.4% for the telecom category, and its rank fell from fourth to fifth in the same edition in which Mortenson rose twelve places, Clune thirteen and Fortis eleven, all on hyperscale books. At 27% telecom against HITT's 82% and DPR's 57% it is a diversified general builder with a large data-centre line. The climb is nonetheless real — the telecom share was roughly 9% three years earlier, implying growth from about USD 0.8bn to USD 4.0bn.",
+  "2. **(High confidence)** We assess the widely repeated claim that Whiting-Turner is employee-owned or operates an ESOP is unsupported and should not be carried. Basis: it does not appear on the National Center for Employee Ownership's Employee Ownership 100 while construction peers of identical size — McCarthy, JE Dunn, Swinerton, Sundt — all do; the company's own site never claims employee ownership, including on its careers pages; its press boilerplate omits it; and only a 401(k) profit-sharing plan surfaces in retirement-plan indexes. Every instance of the claim traces to a network of AI-generated content farms that also assert, on the same pages, that Willard Hackerman was sole stockholder — a mutually exclusive pair. What is supportable is that the firm is closely held, was wholly owned by Hackerman until his death in 2014, and that the disposition of that stake is unreported. Collection gap: a Department of Labor Form 5500 Schedule E would settle it and was unreachable from this session.",
+  "3. **(High confidence)** We assess Whiting-Turner is a pure construction manager that self-performs nothing, and that this is a deliberate model rather than a gap. Basis: its in-house MEP group lists trade contractor selection among its own services, alongside estimation, design review, procurement and commissioning — all coordination functions; its whole trade base is prequalified and subcontracted through BuildingConnected; and peers that do self-perform publish dedicated pages for it while Whiting-Turner has none. For a data-centre client this is the substantive difference between it and a self-perform rival.",
+  "4. **(Moderate confidence)** We assess the company's public silence is a deliberate posture with a measurable cost to outside assessment. Basis: it publishes no revenue, no backlog, no margin, no bonding capacity, no safety statistics and no ownership structure; three of the six data-centre projects on its own site are labelled confidential; it issued one distributed press release in eighteen months; it published nothing about the Lighthouse award while all three of its co-contractors did. Consequently almost everything hard in this dossier reaches the record because a counterparty was compelled to speak — ENR's survey, an EEOC consent decree, a Department of Labor debarment, USD 8.44bn of federal obligations, and a surety panel reconstructed from Miller Act party lists.",
+  "5. **(Moderate confidence)** We assess federal marine and installation work, not data centres, was the fastest-growing part of the book in this window. Basis: USD 516.7m of Coast Guard awards in a single May 2026 announcement including the largest shore construction award in that service's history, plus USD 137m at Base Seattle and about USD 69m in Hawai'i in late 2025, against a federal run-rate of USD 0.6–0.8bn a year. Federal work remains only 4–5% of revenue, so this shifts the growth story rather than the revenue mix.",
+  "6. **(Low confidence)** We assess Whiting-Turner has no battery storage, on-site generation or microgrid capability, and that this bounds its role in this corpus. Basis: four separate searches for storage, BESS or microgrid work returned nothing; what exists is conventional energy infrastructure — a campus substation and central plant at Stanford, a nominal 2 MW combined heat and power plant at Baltimore Washington Medical Center — and on Lighthouse the utility scope sits with Michels, a utility contractor, as subcontractor. Confidence is low rather than high only because a private contractor's scope is frequently invisible; the null is well controlled but a subcontracted storage scope would not necessarily surface."
+ ],
+ "policyExposure": [
+  {
+   "regime": "Davis-Bacon and prevailing wage",
+   "status": "in-effect",
+   "effectiveDate": "2021-08-25",
+   "exposure": "On the NIH Building 10 East Wing renovation, where Whiting-Turner was the prime on a USD 181m contract, a second-tier subcontractor falsified certified payrolls to conceal paying below Davis-Bacon rates — sometimes more than 50% below — and denied overtime premiums to 22 workers. The Department of Labor recovered USD 531,173 for 45 ironworkers and debarred the subcontractor and two of its officers for three years. The first-tier subcontractor had failed to flow the required clauses down, and under 29 CFR 5.5(a)(6) the compliance obligation and the back-wage liability sit with the prime where flow-down fails.",
+   "mitigation": "None disclosed publicly. The exposure is structural to being a prime on federally funded work with multiple subcontract tiers.",
+   "source": "https://eascarpenters.org/wp-content/uploads/2024/10/Subcontractor-of-Whiting-Turner-debarred-Fined-531m.pdf"
+  },
+  {
+   "regime": "Title VII and EEOC enforcement",
+   "status": "in-effect",
+   "effectiveDate": "2023-05-04",
+   "exposure": "A USD 1.2m settlement and a two-year consent decree over conduct on the Clarksville, Tennessee Google data centre between May 2018 and autumn 2019 — segregated all-Black crews, racial slurs and graffiti, a noose displayed on Martin Luther King Jr.'s birthday, and the termination of two employees who complained. The decree required an explicit prohibition of hate symbols in the anti-harassment policy, an EEO liaison assigned to every construction site, and semi-annual Title VII training.",
+   "mitigation": "The consent-decree obligations. Note that the company's navigation exposes a diversity and inclusion section whose pages return HTTP 404, and no supplier-diversity targets or workforce demographics are published — which is notable given the decree.",
+   "source": "https://www.eeoc.gov/newsroom/whiting-turner-pay-12-million-settle-eeoc-racial-harassment-and-retaliation-suit"
+  },
+  {
+   "regime": "Maryland hospital procurement governance reform",
+   "status": "in-effect",
+   "effectiveDate": "2019",
+   "exposure": "The University of Maryland Medical System and its affiliates paid Whiting-Turner at least USD 127m from 2012, including USD 89m for the 2013 Shock Trauma Center renovation, while chief executive Timothy J. Regan sat as vice chairman of the University of Maryland Medical Center board and a vice president sat on the St Joseph board. Both relationships were disclosed to state hospital regulators. The resulting legislation banned no-bid deals with board members, required full-board approval of member-company contracts, and forced sitting board members to resign — but did not extend to affiliates.",
+   "mitigation": "Disclosure to regulators at the time; the statutory reform now governs the relationship. Recorded because a negotiated-work contractor's board relationships are exactly the kind of exposure a private company does not volunteer.",
+   "source": "https://www.baltimoresun.com/2019/05/23/university-of-maryland-hospitals-paid-127-million-to-whiting-turner-whose-executives-sit-on-their-boards/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "vantage",
+   "type": "customer",
+   "note": "One of the general contractors on Vantage's Lighthouse campus at Port Washington, Wisconsin — a USD 15bn, four-building, 2.5 million sq ft development with 902 MW of critical IT load, on which Whiting-Turner builds one building.",
+   "context": "Whiting-Turner never announced the award. Vantage named the build team in November 2025 and Weitz, Turner and McCarthy each published their own statements; Whiting-Turner published nothing, which is its consistent posture. Its specific building and its contract value are both unpublished.",
+   "source": "https://infraus.org/vantage-selects-build-team-for-15-billion-port-washington-data-center-campus/",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "One of four buildings on a USD 8bn first phase",
+   "project": "lighthouse"
+  },
+  {
+   "slug": "turner-construction",
+   "type": "competitor",
+   "note": "Co-contractor on the Lighthouse campus, where Turner is half of the joint venture building two of the four buildings, and a direct rival everywhere else. Turner is first in the ENR 2026 Top 400 at USD 28.3bn against Whiting-Turner's fifth at USD 14.68bn.",
+   "context": "The two are unrelated despite the shared surname — Whiting-Turner was founded in Baltimore in 1909 by G.W.C. Whiting and LeBaron Turner, while Turner Construction is a separate New York firm now owned by Hochtief. A multi-contractor campus is a co-opetition structure: on Lighthouse they are colleagues, in bidding they are not.",
+   "source": "https://ozaukeepress.com/content/project-no-other",
+   "status": "active",
+   "project": "lighthouse"
+  },
+  {
+   "slug": "mccarthy",
+   "type": "competitor",
+   "note": "Co-contractor on Lighthouse as the other half of the Turner/McCarthy joint venture, which holds Buildings 13 and 14 at 468 MW combined, and a peer in the ENR rankings.",
+   "context": "McCarthy's own dossier records the same ENR 2026 reshuffle from the other side — it fell from 20 to 22 in the year the data-centre category grew 86%. Both companies lost rank in the boom for the same reason: diversification.",
+   "source": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+   "status": "active",
+   "project": "lighthouse"
+  },
+  {
+   "slug": "hitt",
+   "type": "competitor",
+   "note": "The clearest contrast in the corpus. HITT is eighth in the ENR 2026 Top 400 at USD 13.0bn against Whiting-Turner's fifth at USD 14.68bn — but HITT runs 82% telecom revenue against Whiting-Turner's 27%, and ranks first in Building Design+Construction's data-centre list where Whiting-Turner ranks sixth.",
+   "context": "Whiting-Turner is the larger contractor; HITT is the larger data-centre contractor. The pair is the cleanest available illustration that overall scale and sector position are different things.",
+   "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+   "status": "active"
+  },
+  {
+   "slug": "dpr",
+   "type": "competitor",
+   "note": "Seventh in the ENR 2026 Top 400 at USD 14.0bn, just below Whiting-Turner, and third in the 2025 data-centre ranking, well above it. Runs 57% telecom revenue.",
+   "context": "Another instance of the same pattern: closer on total revenue, further ahead in the sector.",
+   "source": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+   "status": "active"
+  },
+  {
+   "slug": "holder-construction",
+   "type": "competitor",
+   "note": "Second in the 2025 Building Design+Construction data-centre ranking, ahead of Whiting-Turner at sixth, and one of the specialists whose sector concentration is the counterpoint to Whiting-Turner's diversification.",
+   "context": "A peer dossier records Holder rising three places in the ENR 2026 Top 400. That specific movement could not be verified in this session's sources, which place Holder at 25; the four other movement claims in the same passage — Mortenson, Clune, Fortis and HITT — all check out.",
+   "source": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+   "status": "active"
+  },
+  {
+   "slug": "mortenson",
+   "type": "competitor",
+   "note": "Ranked ninth in the 2025 data-centre list, behind Whiting-Turner, but the biggest mover in the ENR 2026 Top 400 — up twelve places from 22 to 10 on USD 10.8bn, entirely on a hyperscale book.",
+   "context": "The direct counterfactual. Mortenson is the specialist trajectory Whiting-Turner did not take: smaller in absolute terms, rising fast because the sector is where its revenue sits.",
+   "source": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+   "status": "active"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "note": "Prime contractor on two separate Google data centres, each reported at about USD 600m: The Dalles / Wasco County, Oregon, a 290,000 sq ft build contracted through Google subsidiary Design LLC and cleared to start in January 2024; and Clarksville, Tennessee, active from 2018.",
+   "context": "The Oregon engagement is the only named Whiting-Turner data-centre client that reached the record through an ordinary announcement. The Tennessee one surfaced through the EEOC's litigation over conduct on that site, not through either party's disclosure.",
+   "source": "https://www.constructiondive.com/news/google-whiting-turner-oregon-data-center/705938/",
+   "status": "active",
+   "scale": "Two projects at about USD 600m each"
+  },
+  {
+   "slug": "oracle",
+   "type": "partner",
+   "note": "Operator of the Lighthouse campus Whiting-Turner is helping build, under the Stargate programme with OpenAI as tenant.",
+   "context": "A stack relationship rather than a contractual one — Whiting-Turner's counterparty is Vantage as developer, not Oracle as operator.",
+   "source": "https://www.datacenterknowledge.com/data-center-construction/vantage-breaks-ground-on-15b-stargate-campus-in-wisconsin",
+   "status": "active",
+   "project": "lighthouse",
+   "via": "Vantage Data Centers"
+  },
+  {
+   "slug": "openai",
+   "type": "partner",
+   "note": "Tenant of the Lighthouse campus under the Stargate programme, which also involves Oracle, SoftBank, MGX, Arm, Microsoft and NVIDIA.",
+   "context": "Two steps removed from Whiting-Turner's actual contract, and recorded for the corpus's project graph rather than as a commercial relationship.",
+   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+   "status": "active",
+   "project": "lighthouse",
+   "via": "Vantage Data Centers"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "note": "Built the USD 1.5bn Amazon Air hub at Cincinnati/Northern Kentucky International Airport through a Whiting-Turner Kokosing joint venture.",
+   "context": "Recorded because it is where the company's most recent documented site fatality occurred — an ironworker employed by a steel-erection subcontractor was killed in February 2020 — and because it establishes that Whiting-Turner uses joint ventures on large logistics work as well as on federal projects.",
+   "source": "https://www.constructiondive.com/news/worker-killed-at-15b-amazon-airport-project-in-kentucky/571534/",
+   "status": "historical",
+   "since": "2020",
+   "scale": "USD 1.5bn"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Timothy J. Regan",
+   "title": "President and Chief Executive Officer",
+   "background": [
+    "President and chief executive since 2014 — the third chief executive in the company's 115-year history, after the founders and Willard Hackerman",
+    "Joined Whiting-Turner in 1980 as a project engineer; utility, industrial and public works projects, later life sciences",
+    "Graduate of the A. James Clark School of Engineering, University of Maryland",
+    "Served as vice chairman of the University of Maryland Medical Center board and has sat on the medical school's board of visitors since 2009 — relationships disclosed to state regulators and the subject of subsequent Maryland procurement-governance legislation",
+    "Quoted in the February 2025 headquarters announcement: in the company's entire history it had never had a building of its own"
+   ]
+  },
+  {
+   "name": "Anthony G. Moag",
+   "title": "Chief Operating Officer",
+   "background": [
+    "Chief operating officer since 2014",
+    "Joined Whiting-Turner in 1982",
+    "Co-established the in-house MEP group, which remains the company's principal technical differentiator",
+    "Career spent in construction delivery"
+   ]
+  },
+  {
+   "name": "Greg Botteon",
+   "title": "National Leader, Mission Critical, and National Leader, In-House MEP Group",
+   "background": [
+    "Holds both roles simultaneously — the clearest organisational statement of how Whiting-Turner delivers data centres, with mechanical and electrical coordination and the mission-critical practice under one leader",
+    "Based at the Baltimore headquarters",
+    "No published biography; the company names him as the contact for both practices"
+   ]
+  },
+  {
+   "name": "Kate Edwards",
+   "title": "Division Vice President of Quality",
+   "background": [
+    "About 20 years with the firm",
+    "Previously Director of Quality Assurance and National Lean Coordinator",
+    "Earlier a senior-level project manager"
+   ]
+  },
+  {
+   "name": "Nadine Green",
+   "title": "Vice President, Environmental Health and Safety",
+   "background": [
+    "Leads the environmental, health and safety programme, under which all operations personnel complete OSHA 30-hour training",
+    "No published biography"
+   ]
+  },
+  {
+   "name": "Thomas Wooden",
+   "title": "National Leader, Science and Technology",
+   "background": [
+    "Leads the laboratory, cleanroom and pharmaceutical practice — vivariums, nanotechnology cleanrooms, FDA and EU cGMP facilities, high-purity piping",
+    "Based in the Bay Area"
+   ]
+  },
+  {
+   "name": "Keith Douglas",
+   "title": "Executive Vice President",
+   "background": [
+    "Served as a judge for ENR's 2026 Excellence in Safety and Sustainability awards for Texas and the Southeast"
+   ]
+  },
+  {
+   "name": "Brian C. DeWitt",
+   "title": "Vice President",
+   "background": [
+    "Joined Whiting-Turner in 1985",
+    "Senior project manager roles before the vice presidency",
+    "MS Construction Management, University of Maryland College Park; BS Civil Engineering, Bucknell"
+   ]
+  },
+  {
+   "name": "John Keith",
+   "title": "Vice President",
+   "background": [
+    "Vice president since 1993",
+    "MBA, Johns Hopkins University; BS Civil Engineering, Virginia Tech"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2023 (ENR 2024 list)",
+    "periodType": "annual",
+    "periodEnd": "2023-12-31",
+    "metrics": [
+     {
+      "name": "Revenue, third-party",
+      "actual": "USD 11.3bn",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENR Top 400, self-reported to the survey. Rank 5, up two places from 7"
+     },
+     {
+      "name": "ENR Top 400 rank",
+      "actual": "5, from 7",
+      "expected": "",
+      "verdict": "inline",
+      "result": "A 31.4% revenue increase over FY2022 — the steepest single year in the visible series"
+     }
+    ],
+    "commentary": "Included to make the trajectory legible. FY2022 was USD 8,599.9m at rank 7."
+   },
+   {
+    "period": "FY2024 (ENR 2025 list)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue, third-party",
+      "actual": "USD 13.3bn, +17.7%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENR Top 400, self-reported. The same figure appears in Forbes' profile labelled 2025, because Forbes labels by list year rather than revenue year and runs one cycle behind — the two are not independent readings"
+     },
+     {
+      "name": "ENR Top 400 rank",
+      "actual": "4, from 5",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The company's highest recorded position"
+     }
+    ],
+    "commentary": "The peak. No margin, backlog or end-market profitability exists for this or any other year."
+   },
+   {
+    "period": "FY2025 (ENR 2026 list)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue, third-party",
+      "actual": "USD 14,675.9m, +10.4%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ENR Top 400, self-reported and unaudited. This is the only revenue figure of any kind in the public record — the company publishes none of its own",
+      "kpi": "revenue",
+      "usdMillions": 14675.9,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "ENR Top 400 rank",
+      "actual": "5, down from 4",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Recorded as a miss on the sector rather than on the business: it added USD 1.4bn and still fell a place, because the Top 400 grew 11.8% and the telecom category grew 86.4% while it grew 10.4%. Kiewit passed it"
+     },
+     {
+      "name": "Sector mix",
+      "actual": "65% general building, 27% telecom, 8% other; zero international",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Against HITT at 82% telecom and DPR at 57%. The telecom share was roughly 9% three years earlier, implying growth from about USD 0.8bn to USD 4.0bn"
+     },
+     {
+      "name": "Delivery mix",
+      "actual": "About 71% construction-management-at-risk",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Up from 62% in FY2022, but still well below the data-centre specialists, which run at or near 100% at-risk — a higher share of hard-bid and lump-sum work than its peers"
+     },
+     {
+      "name": "Federal prime awards",
+      "actual": "About USD 0.6–0.8bn a year; USD 8.44bn cumulative across 309 awards since FY2008",
+      "expected": "",
+      "verdict": "inline",
+      "result": "From USASpending, which is authoritative and public — unlike everything else in this table. Roughly 4–5% of revenue"
+     }
+    ],
+    "commentary": "No margin, no backlog, no bonding capacity, no leverage and no segment profitability is published, and none was obtainable. The company files nothing with the SEC, has no credit rating, and no private placement or debt facility surfaced. Its standing surety panel — Liberty Mutual, Zurich American, and Fidelity and Deposit Company of Maryland — was reconstructed from Miller Act party lists across three courts, which is the closest available proxy for financial capacity."
+   }
+  ],
+  "commentary": "Every revenue figure here reaches the record through ENR's confidential contractor survey. It is self-reported, unaudited and the single most load-bearing document in this dossier — the whole scale-and-trajectory picture rests on it. No analyst consensus exists or could exist for a private company with no public debt, so every 'expected' field is deliberately empty rather than manufactured. Two aggregator figures were rejected: a modelled USD 8.8bn 'in 2026' from a contact-data vendor, which is wrong by a wide margin, and a USD 4.3bn project pipeline dated 2017 whose headline project was never built."
+ },
+ "sources": [
+  {
+   "label": "Whiting-Turner — about the company",
+   "url": "https://www.whiting-turner.com/about-us/"
+  },
+  {
+   "label": "Whiting-Turner — history",
+   "url": "https://www.whiting-turner.com/about-us/history/"
+  },
+  {
+   "label": "Whiting-Turner — market sectors",
+   "url": "https://www.whiting-turner.com/markets/"
+  },
+  {
+   "label": "Whiting-Turner — mission critical",
+   "url": "https://www.whiting-turner.com/markets/mission-critical/"
+  },
+  {
+   "label": "Whiting-Turner — mission critical national leader",
+   "url": "https://www.whiting-turner.com/mission-critical-national-leader/"
+  },
+  {
+   "label": "Whiting-Turner — science and technology",
+   "url": "https://www.whiting-turner.com/markets/science-and-technology/"
+  },
+  {
+   "label": "Whiting-Turner — innovation practice areas",
+   "url": "https://www.whiting-turner.com/innovation/"
+  },
+  {
+   "label": "Whiting-Turner — advanced delivery methods",
+   "url": "https://www.whiting-turner.com/innovation/advanced-delivery-methods/"
+  },
+  {
+   "label": "Whiting-Turner — in-house MEP group",
+   "url": "https://www.whiting-turner.com/innovation/in-house-mep-group/"
+  },
+  {
+   "label": "Whiting-Turner — quality management",
+   "url": "https://www.whiting-turner.com/quality-management/"
+  },
+  {
+   "label": "Whiting-Turner — safety",
+   "url": "https://www.whiting-turner.com/safety/"
+  },
+  {
+   "label": "Whiting-Turner — subcontractor prequalification",
+   "url": "https://www.whiting-turner.com/subcontractor-prequalification/"
+  },
+  {
+   "label": "Whiting-Turner — office locations",
+   "url": "https://www.whiting-turner.com/contact-us/"
+  },
+  {
+   "label": "Whiting-Turner — IBM B009 data center upgrade",
+   "url": "https://www.whiting-turner.com/projects/mission-critical/ibm-b009-data-center-upgrade/"
+  },
+  {
+   "label": "Whiting-Turner — confidential data center project",
+   "url": "https://www.whiting-turner.com/projects/mission-critical/confidential-data-center/"
+  },
+  {
+   "label": "Whiting-Turner — Project Oasis",
+   "url": "https://www.whiting-turner.com/projects/mission-critical/project-oasis/"
+  },
+  {
+   "label": "Whiting-Turner — energy market sector",
+   "url": "https://www.whiting-turner.com/markets/energy/"
+  },
+  {
+   "label": "Whiting-Turner — Stanford University Energy System Innovations",
+   "url": "https://www.whiting-turner.com/projects/energy/stanford-university-energy-system-innovations/"
+  },
+  {
+   "label": "Whiting-Turner — BWMC cogeneration heat and power plant",
+   "url": "https://www.whiting-turner.com/projects/energy/bwmc-cogeneration-heat-and-power-system-plant/"
+  },
+  {
+   "label": "Whiting-Turner — John Palmour Manufacturing Center for Silicon Carbide (Wolfspeed)",
+   "url": "https://www.whiting-turner.com/in-progress/the-john-palmour-manufacturing-center-for-silicon-carbide/"
+  },
+  {
+   "label": "PR Newswire — Whiting-Turner to establish new corporate headquarters on the Goucher College campus",
+   "url": "https://www.prnewswire.com/news-releases/whiting-turner-to-establish-new-corporate-headquarters-on-goucher-college-campus-302385366.html",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "Construction Dive — the top commercial contractors of 2026 (ENR Top 400)",
+   "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+   "date": "2026-05-22"
+  },
+  {
+   "label": "The Job Walk — ENR releases the 2026 Top 400, with rank movements and sector mix",
+   "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Construction Dive — the top commercial contractors of 2025 (ENR Top 400)",
+   "url": "https://www.constructiondive.com/news/top-commercial-contractors-2025-revenue-enr/749244/",
+   "date": "2025-05-29"
+  },
+  {
+   "label": "Construction Dive — the top commercial contractors of 2024 (ENR Top 400)",
+   "url": "https://www.constructiondive.com/news/top-commercial-contractors-2024/717484/",
+   "date": "2024-05-30"
+  },
+  {
+   "label": "ENR 2023 Top 400 Contractors — full list (FY2022 revenue and delivery mix)",
+   "url": "https://www.jrmcm.com/content/uploads/2023/05/ENR-2023-Top-400-National-Contractors.pdf",
+   "date": "2023-05"
+  },
+  {
+   "label": "Building Design+Construction — top data center construction firms for 2025",
+   "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+   "date": "2025-10-07"
+  },
+  {
+   "label": "Vantage Data Centers — Port Washington, Wisconsin campus page (902 MW critical IT load)",
+   "url": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin"
+  },
+  {
+   "label": "Vantage Data Centers — OpenAI, Oracle and Vantage announce the Stargate site in Wisconsin",
+   "url": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "Vantage Data Centers — partnership with the Wisconsin Building Trades Council",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-and-wisconsin-building-trades-council-partner-to-build-port-washington-data-center-development/"
+  },
+  {
+   "label": "infraUS — Vantage selects the build team for the USD 15bn Port Washington campus",
+   "url": "https://infraus.org/vantage-selects-build-team-for-15-billion-port-washington-data-center-campus/",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Ozaukee Press — 'A project like no other' (building-by-building contractor allocation; Michels named a subcontractor)",
+   "url": "https://ozaukeepress.com/content/project-no-other",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "The Daily Reporter — Turner and McCarthy announce their Port Washington joint venture (Buildings 13 and 14, 468 MW)",
+   "url": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "BizTimes — groundbreaking as construction begins on the USD 15bn Port Washington data centre",
+   "url": "https://biztimes.com/groundbreaking-held-as-construction-begins-on-15b-port-washington-data-center/",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Data Center Knowledge — Vantage breaks ground on the USD 15bn Stargate campus in Wisconsin",
+   "url": "https://www.datacenterknowledge.com/data-center-construction/vantage-breaks-ground-on-15b-stargate-campus-in-wisconsin",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "Weitz — groundbreaking marks a new era for data centre infrastructure in Wisconsin",
+   "url": "https://www.weitz.com/groundbreaking-marks-new-era-for-data-center-infrastructure-in-wisconsin/",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "OSHA — Strategic Partnership 1462, Vantage Data Centers Project Lighthouse",
+   "url": "https://www.osha.gov/node/999887026"
+  },
+  {
+   "label": "Construction Dive — Google taps Whiting-Turner to build a USD 600m Oregon data centre",
+   "url": "https://www.constructiondive.com/news/google-whiting-turner-oregon-data-center/705938/",
+   "date": "2024-01-30"
+  },
+  {
+   "label": "Construction Dive — Coast Guard awards Whiting-Turner USD 516.7m for Cape May and Charleston",
+   "url": "https://www.constructiondive.com/news/coast-guard-cape-may-charleston-base-improvements/819997/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Construction Dive — Whiting-Turner wins USD 137m Coast Guard Base Seattle contract",
+   "url": "https://www.constructiondive.com/news/whiting-turner-coast-guard-seattle-base/759690/",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "Construction Dive — Coast Guard hangars at Barbers Point, Hawai'i",
+   "url": "https://www.constructiondive.com/news/whiting-turner-coast-guard-hawaii-barbers-point/760965/",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "USASpending.gov — Whiting-Turner federal prime award history (309 awards, USD 8.44bn)",
+   "url": "https://api.usaspending.gov"
+  },
+  {
+   "label": "EEOC — Whiting-Turner to pay USD 1.2m to settle racial harassment and retaliation suit",
+   "url": "https://www.eeoc.gov/newsroom/whiting-turner-pay-12-million-settle-eeoc-racial-harassment-and-retaliation-suit",
+   "date": "2023-05-04"
+  },
+  {
+   "label": "EEOC — agency sues Whiting-Turner for racial harassment and retaliation (Clarksville, Tennessee)",
+   "url": "https://www.eeoc.gov/newsroom/eeoc-sues-whiting-turner-contracting-racial-harassment-and-retaliation",
+   "date": "2021-10-01"
+  },
+  {
+   "label": "Eastern Atlantic States Carpenters — Department of Labor debarment and USD 531,173 in back wages, NIH Building 10",
+   "url": "https://eascarpenters.org/wp-content/uploads/2024/10/Subcontractor-of-Whiting-Turner-debarred-Fined-531m.pdf",
+   "date": "2021-11-10"
+  },
+  {
+   "label": "Bradley BuildSmart — Whiting-Turner prevails in a wrongful termination dispute (USD 5.4m affirmed)",
+   "url": "https://www.buildsmartbradley.com/2025/05/whiting-turner-prevails-in-wrongful-termination-dispute/",
+   "date": "2025-05-02"
+  },
+  {
+   "label": "ENR — 'Nightmare' project leads to a USD 10 million award to Whiting-Turner",
+   "url": "https://www.enr.com/articles/61153-nightmare-project-leads-to-10-million-award-to-whiting-turner",
+   "date": "2025-08"
+  },
+  {
+   "label": "ENR — steel subcontractor that sued Whiting-Turner says a payment deal is close",
+   "url": "https://www.enr.com/articles/60096-steel-sub-that-sued-whiting-turner-says-payment-deal-is-close",
+   "date": "2024-12"
+  },
+  {
+   "label": "Construction Dive — worker killed at the USD 1.5bn Amazon Air hub in Kentucky",
+   "url": "https://www.constructiondive.com/news/worker-killed-at-15b-amazon-airport-project-in-kentucky/571534/",
+   "date": "2020-02-03"
+  },
+  {
+   "label": "OSHRC — Secretary of Labor v. Whiting-Turner Contracting Co., Docket 87-1238",
+   "url": "https://www.oshrc.gov/decisions/whiting-turner-contracting-company/whiting-turner-contracting-company/",
+   "date": "1989-04-20"
+  },
+  {
+   "label": "Maryland Court of Special Appeals — MOSH citation reversed over the 2013 Bethesda collapse",
+   "url": "https://caselaw.findlaw.com/court/md-court-of-special-appeals/1895759.html",
+   "date": "2018-04-26"
+  },
+  {
+   "label": "Washington Lawyers' Committee — wage-theft suit against Whiting-Turner and two subcontractors",
+   "url": "https://www.washlaw.org/washington-lawyers-committee-and-murphy-anderson-announce-lawsuit-against-whiting-turner-contracting-company-centerline-construction-company-and-congratulations-construction-for-alleged-wag/",
+   "date": "2024-01-10"
+  },
+  {
+   "label": "Baltimore Sun — University of Maryland hospitals paid USD 127 million to Whiting-Turner while its executives sat on their boards",
+   "url": "https://www.baltimoresun.com/2019/05/23/university-of-maryland-hospitals-paid-127-million-to-whiting-turner-whose-executives-sit-on-their-boards/",
+   "date": "2019-05-23"
+  },
+  {
+   "label": "GAO — bid protest B-422278 denied",
+   "url": "https://www.gao.gov/products/b-422278",
+   "date": "2024-03-26"
+  },
+  {
+   "label": "CourtListener — federal docket search, Whiting-Turner as named party (199 dockets)",
+   "url": "https://www.courtlistener.com/api/rest/v4/search/"
+  },
+  {
+   "label": "National Center for Employee Ownership — the Employee Ownership 100",
+   "url": "https://www.nceo.org/articles/employee-ownership-100",
+   "date": "2025-10"
+  },
+  {
+   "label": "Forbes — Whiting-Turner company profile (revenue and employees, labelled by list year)",
+   "url": "https://www.forbes.com/companies/whiting-turner-contracting/"
+  },
+  {
+   "label": "The Baltimore Banner — Whiting-Turner headquarters moving to the Goucher College campus",
+   "url": "https://www.thebanner.com/economy/whiting-turner-headquarters-goucher-college-NDXZMX7AFVGXNHYA2P5EVL37QE/",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "Data Center Dynamics — Whiting-Turner company profile (mission critical unit)",
+   "url": "https://www.datacenterdynamics.com/en/company/whiting-turner-contracting-company/"
+  },
+  {
+   "label": "GovConWire — Whiting-Turner leaders, founders and executives",
+   "url": "https://www.govconwire.com/articles/whiting-turner-contracting-co-leaders-founders-and-executives-who-are-they",
+   "date": "2023-02-28"
+  },
+  {
+   "label": "University of Maryland A. James Clark School of Engineering — alumnus Regan named chief executive of Whiting-Turner",
+   "url": "https://eng.umd.edu/news/story/clark-school-alumnus-regan-named-ceo-of-whitingturner"
+  },
+  {
+   "label": "Baltimore Sun — Willard Hackerman, 1914–2014",
+   "url": "https://baltimoresun.com/opinion/editorial/bs-ed-hackerman-20140210-story.html",
+   "date": "2014-02-10"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

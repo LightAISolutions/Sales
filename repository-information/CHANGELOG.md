@@ -3,11 +3,66 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.94r] — 2026-09-06 08:15:02 PM EST — v01.83w
+
+> **Prompt:** "Run Phase C session C12 of repository-information/PROFILER-COVERAGE-PLAN.md on Opus 5 xhigh as a fresh
+> session: Whiting-Turner, Gotion High-Tech, REPT Battero. These are the LAST THREE new companies in the program — they
+> take the corpus from 151 to the 154 that X3's close-out assumes. […] MIXED SUBJECT TYPES, ONE MODEL, DELIBERATELY.
+> […] EDGAR IS BLOCKED FROM THIS ENVIRONMENT […] RUN `python3 scripts/check-source-reachability.py` BEFORE PLANNING
+> RESEARCH. […] A NULL ON A PROPER NOUN BOUNDS ONLY THAT PROPER NOUN. […] GOTION IS NOT GOTION INTERNATIONAL IS NOT
+> GUOXUAN. […] THE FEOC ROSTER IS THE POINT for Gotion and REPT. Whatever the plan's §8 row says, verify the FEOC
+> framing against primary sources rather than inheriting it — the statutory tests changed and trade coverage has not
+> kept up. […] THE ACCEPT LIST STANDS AT TEN. […] JSON FORMATTING — inherit per-file conventions or ship a spurious
+> diff. […] ALSO IN THIS COMMIT, both one-line fixes the session is already in the right files to make: §9.4's status
+> ledger is EMPTY […] §7's after-every-write list names four scripts. […] VERIFY: all six checkers exit 0 plus the
+> reachability probe […] one push commit on a claude/* branch."
+
+### Added
+
+- **Phase C session C12 — the last three new companies in the coverage programme. The corpus reaches 154, the figure X3's close-out assumes.** All three at schema v7, `profileVersion` 1, with study guides at schema v2 and lesson plans.
+  - **`whiting-turner`** — The Whiting-Turner Contracting Company (`gc`, private, Towson MD). 62 sources, 34% first-party, 11 relationships, 11 guide sections. Treated as §2 prescribes for an opaque private subject: the strategy read and the confidence tags are the product.
+  - **`gotion`** — Gotion High-Tech Co., Ltd. (`supplier`, SZSE 002074, Hefei). 61 sources, 25% first-party, 12 relationships, 9 guide sections. Subject resolved to the listed Hefei parent and kept distinct from Gotion Inc./Gotion International and the older Guoxuan romanisation.
+  - **`rept`** — REPT BATTERO Energy Co., Ltd. (`supplier`, HKEX 0666, Wenzhou). 52 sources, 50% first-party, 10 relationships, 10 guide sections. The company's own styling is **REPT BATTERO** all-caps; the corpus's "Rept Battero" was trade-press house style.
+- **19 concepts registered** (1,030 → 1,049), led by the post-2025 statutory vocabulary the corpus was missing: `prohibited-foreign-entity`, `specified-foreign-entity`, `material-assistance-cost-ratio`, `section-1260h`, `48e`. Three proposed concepts were **dropped as duplicates** on checking — `cm-at-risk`, `ipd` and `vdc` already existed and a phrase-based probe had missed them.
+- **Three refresh-calendar rows**, keeping the roster/calendar bijection at 154. Gotion and REPT carry researched `nextReport` dates, both `confirmed: false` with the cadence basis and the filing route written into `source`; Whiting-Turner takes the quarterly sweep.
+
+### Changed
+
+- **§5's C12 row rewritten from hypothesis to record.** Both premises held, the second more interestingly than the brief expected. *'Second DC general contractor'* **held as a ranking and failed as a characterisation** — Whiting-Turner is fifth overall in ENR 2026 and sixth in data centres, but at **27% telecom against HITT's 82%** it **fell from fourth to fifth** while the specialists climbed.
+- **§8's three C12 rows flipped** to `v1 · v04.94r` / `✓ · v04.94r` with per-company verdicts.
+- **§9.4's X3 row** now records that its first precondition is met: the corpus is at 154; what remains is the 26 guide backfills (128 guides against 154 profiles).
+- **§7's after-every-write list corrected — it named four scripts and there are six**, plus the reachability probe, which belongs *before* research rather than after a write. Each is now named with what it actually catches.
+- **Step-7 corpus reconciliation — 11 inbound mentions read, 6 dossiers revised, 5 left alone as accurate.** `turner-construction` (v8), `vantage` (v9), `byd` (v7), `prevalon` (v5), `jupiter-power` (v6), `lightsource-bp` (v6), each archived before editing.
+- **`s154-listed-bess-suppliers` report scope corrected** by raw string replacement, never re-serialised: its rationale said "Gotion is listed but not covered by a dossier", which this session made false. One line changed.
+
+### Fixed
+
+- **The Lighthouse campus was recorded wrongly in two dossiers and is now right.** It is **three GC entities across four buildings**, not a four-way split: Whiting-Turner and Weitz build one each, the Turner-McCarthy JV builds two (Buildings 13 and 14, 468 MW). **Michels is a subcontractor**, not a fourth general contractor — verified against local trade reporting read directly and corroborated by the site's OSHA Strategic Partnership, which names only the three GC entities. Separately, **902 MW is critical IT load** (Vantage's own figure, read at source) and **1.3 GW is total facility power** (ENR); the two are different metrics and were being merged.
+- **`byd`'s "merchant-only cell makers (EVE, REPT, Hithium)" was a categorical mischaracterisation of REPT** — precisely the class `check-profiler-crossrefs.py` is blind to. REPT BATTERO sells the Powtrix container line at 5.01, 6.26 and 6.9 MWh and delivered a grid-connected Japanese project on its own cabinets. The distinction that survives is **captive consumption**, not product scope, and the dossier now says so.
+- **A fabricated URL was caught by the relationships checker before it shipped.** A RenewEconomy link reconstructed from a research report had a plausible but wrong slug; the checker flagged it unregistered and the already-registered real URL replaced it. A second finding, a PR Newswire distribution-tools variant, was resolved the same way.
+
+### Verified
+
+- **The FEOC framing was checked against statute rather than inherited, as the prompt required, and the tests have changed in ways trade coverage has not caught up with.** Both subjects are **prohibited foreign entities**, so to a US buyer's credit arithmetic they are equally disqualifying — but they arrive there differently and diverge on everything else. **Gotion is a specified foreign entity twice over**: named in **NDAA FY2024 §154(b)** — one of exactly six, with CATL, BYD, Envision, EVE and Hithium — *and* PRC-incorporated. **REPT is named nowhere**, captured only by the incorporation prong of §7701(a)(51)(B)(v). Gotion therefore faces a **dated Defense procurement ban from 2027-10-01** and an **operating Illinois plant that cannot claim §45X**, because status follows ownership rather than site; REPT has no US plant, no designation and no stranded capital, and would be caught only from **2028-01-01** by FY2026 NDAA **§842's generic standard**, which trade coverage has missed.
+- **Three widely repeated claims about Gotion are false.** It is **NOT** on the UFLPA Entity List (2026-07-31 update), **NOT** on the DoD §1260H list (2026-06-08 update, unlike CATL, BYD, CALB and EVE), and the **NO GOTION Act was never enacted** — H.R. 524 sits at "introduced". **And the §30D framing that drove all 2023–24 coverage is moot**: §30D terminated for vehicles acquired after 2025-09-30. The operative test is a **material assistance cost ratio** — 55% for 2026 storage construction starts, rising to 75% after 2029 — a cost calculation rather than a blacklist, which is exactly what the trade shorthand loses.
+- **`jupiter-power` and `prevalon` were checked for reported defects and had none.** Both were flagged in research as carrying corpus errors; reading the files showed `jupiter-power` already treats St Gall and Fort Stockton as one project, and `prevalon` was already at pv4 with the Nextpower acquisition recorded. Both "corrections" were artefacts of this session's own prompt phrasing. No edit was made — this is the over-calling failure mode §9.2 warns about, avoided by reading the file rather than trusting the report.
+- **All six checkers exit 0**, plus the reachability probe: registry sync clean at 154 with the calendar in bijection, study 0 errors / 0 warnings across 128 guides and 1,049 concepts, relationships 0 findings with the accept list unchanged at **10**, crossrefs exit 0, graph 1,257 edges / 950 curated, reports 0 errors with 38 aged-pin warnings that are X3's to clear.
+
+### Worth noting
+
+- **A single reachability probe is not a finding, and this session proved it the hard way.** Its first probe of `www.szse.cn` returned `000` — a TCP-level failure — and it recorded the host as unreachable in §7. A research subagent then used that host successfully, and a three-attempt re-probe returned **200 / 000 / 200**: the host is *intermittent*, not down. §7 now carries the corrected rule — sample a failing host at least three times before recording it as blocked, because the failure mode is asymmetric: a false "blocked" silently narrows the research plan and is never contradicted, since nobody retries a host they have written off.
+- **The brief's claim that §9.4's status ledger was empty was stale.** It was populated at v04.77r and v04.85r and already read exactly what the brief wanted it to say. No manufactured edit was made; the X3 row was updated instead, which is the change that was actually available.
+- **Gotion's headline profit is not an operating result.** H1 2026 net profit attributable rose 278.05% while profit excluding non-recurring items was **RMB 106.9m on RMB 27,775.5m of revenue — a 0.38% core net margin**, with fair-value changes 72.35% of total profit. Q1 2026 was **down 79%** and Q4 2025 was a **loss quarter**. The board has authorised further listed-equity disposals up to 15% of net assets, so the mechanism is expected to continue.
+- **Volkswagen has not sold a Gotion share** — 24.28% on an unchanged 440,630,983 shares, the percentage drift being dilution — but it **waives its votes**, and the waiver was extended in December 2024 from 36 to 72 months, to about **2027-12-15**. On expiry it mechanically becomes controlling shareholder unless extended again. Commentary still describing a "three-year" waiver is working from the expired original term.
+- **Whiting-Turner is not employee-owned.** It is absent from NCEO's Employee Ownership 100 while same-size construction peers — McCarthy, JE Dunn, Swinerton, Sundt — are all listed; it never claims employee ownership on its own site or in its press boilerplate; and only a 401(k) profit-sharing plan surfaces in the plan indexes. Every instance of the claim traces to AI-generated content farms that simultaneously assert Willard Hackerman was sole stockholder, a mutually exclusive pair. What is supportable is that it is closely held and that the post-2014 disposition of Hackerman's stake is unreported.
+- **OSHA's IMIS establishment search is blocked from this network** (HTTP 403 via CloudFront; `data.osha.gov` does not resolve), so no systematic safety history could be built for Whiting-Turner. Three fatalities are on the record via case law and trade press. The dossier states this as a collection gap rather than reporting an unreachable database as an empty one.
+- **CHANGELOG capacity 96/100 → 97/100** — three pushes of headroom. The counter was checked against the real section count rather than trusted, and the two agree exactly at 96 before this push. Rotation is not yet due; the next one moves the 2026-08-31 group.
 
 ## [v04.93r] — 2026-09-06 06:52:23 PM EST — v01.83w
 

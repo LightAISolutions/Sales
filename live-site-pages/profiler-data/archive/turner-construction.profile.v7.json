@@ -12,7 +12,7 @@
  "employees": "16,000+ (company, 2026; up from ~12,000 mid-2024)",
  "website": "https://www.turnerconstruction.com",
  "summary": "BOTTOM LINE UP FRONT: Turner is America's largest general builder (ENR Top 400 #1 six consecutive years) converting itself into an AI-infrastructure prime at extraordinary speed — data-center revenue roughly tripled from $3.6B (2024) toward ~$9B (2025) on the way to a stated >$20B-per-year target by 2030, with data centers now ~42% of a record $48.9B backlog (Q1 2026) and €21.6B of trailing-twelve-month data-center orders per parent Hochtief. The award stack reads like the AI buildout itself: Meta Richland Parish LA (expanded to $50B / 5 GW, shared with DPR and Mortenson), Meta Lebanon IN ($10B / 1 GW), CoreWeave Lancaster PA ($6B, Turner-Wohlsen JV), and the $15B Vantage 'Stargate' campus for OpenAI/Oracle in Port Washington WI (Turner-McCarthy JV on phase 1). BACKGROUND: Founded 1902 in New York; wholly owned by Germany's Hochtief (itself ~79-80% ACS-controlled) since 1999 — Turner now generates ~68% of Hochtief group sales. 2025 revenue $29.2B (+40%, company-reported); Hochtief-basis operational PBT €921M (+62%) at a 3.6% margin, with FY2026 guidance of $1.40-1.46B. The enterprise moats are procurement and engineering, not the cranes: SourceBlue (~$1B annual product volume, 1,300+ OEM relationships, open-book long-lead procurement), Turner Engineering Group (six-to-nine-nines reliability), 'xPL Offsite' prefab, and the ~1,000-person Dornan Engineering M&E acquisition for Europe. Caveat from the sector tables: on trailing dedicated data-center revenue, BD+C's 2025 ranking still placed HITT, Holder, and DPR ahead of Turner — the forward backlog is where Turner's takeover of the category shows.",
- "ecosystemRole": "We assess Turner as the single largest procurement channel into the AI-infrastructure supply chain among US general contractors — and therefore a demand aggregator this ecosystem's equipment vendors sell through, not just alongside. Basis: SourceBlue's open-book OEM procurement model handles the long-lead electrical and mechanical packages (transformers, switchgear, generators, chillers) for a data-center order book running at €18-22B/year, and Turner's scale claims (~3 GW delivered per Blackridge, #4 globally) sit on top of a $44B+ backlog that is ~40% data centers. For power-chain vendors: Turner's preconstruction stage is where equipment gets specified and reserved — its 'identify long-lead equipment before it reaches the field' pitch is precisely the choke point the whole sector's schedules hinge on. The shared-award pattern on mega-campuses (Meta LA split three ways; the Wisconsin Stargate campus split across three GC entities over four buildings) also reveals how hyperscalers dual-source GC capacity — no single builder, even the largest, gets an AI gigacampus alone.",
+ "ecosystemRole": "We assess Turner as the single largest procurement channel into the AI-infrastructure supply chain among US general contractors — and therefore a demand aggregator this ecosystem's equipment vendors sell through, not just alongside. Basis: SourceBlue's open-book OEM procurement model handles the long-lead electrical and mechanical packages (transformers, switchgear, generators, chillers) for a data-center order book running at €18-22B/year, and Turner's scale claims (~3 GW delivered per Blackridge, #4 globally) sit on top of a $44B+ backlog that is ~40% data centers. For power-chain vendors: Turner's preconstruction stage is where equipment gets specified and reserved — its 'identify long-lead equipment before it reaches the field' pitch is precisely the choke point the whole sector's schedules hinge on. The shared-award pattern on mega-campuses (Meta LA split three ways; Stargate WI split four ways) also reveals how hyperscalers dual-source GC capacity — no single builder, even the largest, gets an AI gigacampus alone.",
  "productsAndServices": [
   {
    "name": "Critical Facilities / data-center construction",
@@ -134,7 +134,7 @@
    "date": "2025-09-25",
    "category": "order-win",
    "headline": "Turner-McCarthy JV named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW, four buildings on 672 acres, completion 2028)",
-   "read": "A seat on the flagship OpenAI-linked campus — shared with Whiting-Turner and Weitz, which each build one building while the Turner-McCarthy JV builds two, the clearest evidence hyperscale owners multi-source GC capacity. Michels, often listed alongside the GCs, is a subcontractor.",
+   "read": "A seat on the flagship OpenAI-linked campus — split four ways with Whiting-Turner, Weitz, and Michels, the clearest evidence hyperscale owners multi-source GC capacity.",
    "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus"
   },
   {
@@ -199,7 +199,7 @@
    "slug": "openai",
    "type": "customer",
    "note": "Builder on the Stargate Wisconsin campus — and enterprise customer of OpenAI in the other direction.",
-   "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase; 1.3 GW of total facility power against 902 MW of critical IT load — three GC entities across four buildings, with Whiting-Turner and Weitz each taking one and the Turner-McCarthy JV two; Michels is a subcontractor, not a fourth GC). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
+   "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW — split four ways with Whiting-Turner, Weitz and Michels). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
    "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
    "via": "Turner-McCarthy JV",
    "project": "stargate",
@@ -219,7 +219,7 @@
    "slug": "vantage",
    "type": "customer",
    "note": "Repeat wholesale client — Ohio work plus the $15B Stargate Wisconsin campus.",
-   "context": "Vantage appears among Turner's company-referenced Critical Facilities clients (Ohio; the Stargate Wisconsin campus) — a wholesale-landlord relationship where megacampus owners hire Turner alongside rivals rather than instead of them: the Wisconsin Stargate campus is split across three GC entities over four buildings, Meta LA three ways.",
+   "context": "Vantage appears among Turner's company-referenced Critical Facilities clients (Ohio; the Stargate Wisconsin campus) — a wholesale-landlord relationship where megacampus owners hire Turner alongside rivals rather than instead of them: Stargate WI is split four ways, Meta LA three ways.",
    "source": "https://www.turnerconstruction.com/pages/critical-facilities-market",
    "via": "Critical Facilities",
    "project": "stargate",
@@ -570,6 +570,6 @@
    "url": "https://www.turnerconstruction.com/services"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 8
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 7
 }

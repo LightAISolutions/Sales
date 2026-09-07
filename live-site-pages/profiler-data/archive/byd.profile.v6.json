@@ -59,7 +59,7 @@
    "highlights": [
     "Merchant supply to Tesla Shanghai Megafactory (LFP storage cells, from Q1 2025) — BYD cells inside a direct competitor's flagship BESS product"
    ],
-   "positioning": "Vertical integration is the differentiator vs cell makers with no captive end-product demand (EVE, REPT BATTERO, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
+   "positioning": "Vertical integration is the differentiator vs merchant-only cell makers (EVE, REPT, Hithium): BYD consumes its own cells in vehicles and BESS at volumes that fund cost curves, then sells the surplus — competing with CATL both as cell merchant and as system vendor",
    "soldThrough": "Internal transfer to BYD Energy Storage and BYD Auto; merchant cell sales to external OEMs/integrators (incl. Tesla)",
    "targetSegments": "Grid-scale and C&I storage integrators, EV/storage OEMs seeking non-CATL LFP supply"
   },
@@ -197,21 +197,13 @@
   {
    "slug": "hithium",
    "type": "competitor",
-   "note": "Merchant-cell rival — the dossier groups Hithium with EVE and REPT BATTERO against BYD's captive-plus-merchant model. The distinction is captive consumption, not product scope: REPT BATTERO in particular also sells complete containerised systems, so 'merchant-only' is accurate about its lack of an in-house end product and inaccurate if read as cells-only."
+   "note": "Merchant-cell rival — the dossier groups Hithium with EVE and REPT as merchant-only cell makers against BYD's captive-plus-merchant model."
   },
   {
    "slug": "sinexcel",
    "type": "competitor",
    "note": "C&I storage rival — Chess Plus competes with Sinexcel's cabinets in the segment where thermal-incident history drives procurement.",
    "via": "Chess Plus"
-  },
-  {
-   "slug": "rept",
-   "type": "competitor",
-   "note": "Sixth globally in storage cell shipments at 31.4 GWh and 6.8% for H1 2026, against BYD's fourth at 35.7 GWh and 7.7% — the closest competitor to BYD in that ranking.",
-   "context": "The structural difference is captive demand rather than product scope. BYD consumes its own cells in its own vehicles and systems; REPT BATTERO has no in-house end product, but it does sell complete containerised systems as well as bare cells, so it is not a cells-only supplier.",
-   "source": "SNE Research H1 2026 storage cell shipment ranking",
-   "status": "active"
   }
  ],
  "technicalSpecs": [
@@ -710,6 +702,6 @@
    "url": "https://www.vpsolar.com/en/product/byd-battery-box-premium-hvs-hvm/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

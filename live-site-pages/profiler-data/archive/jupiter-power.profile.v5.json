@@ -247,17 +247,6 @@
    "note": "The largest ERCOT storage owner, named in the same Modo ranking that places Jupiter third past 1 GWh installed.",
    "context": "Modo Energy's ERCOT annual buildout report ranks ENGIE first at about 2.8 GW and a 20% share, more than twice the next owner, and reports Jupiter the third owner past 1 GWh installed alongside Plus Power and ENGIE. The two run parallel merchant fleets against the same energy and ancillary revenue stack; ENGIE's fleet has historically been one-hour, with five 50+ MW two-hour units commissioned in Q3 2025, against Jupiter's mostly one-to-two-hour durations.",
    "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report"
-  },
-  {
-   "slug": "rept",
-   "type": "supplier",
-   "note": "REPT BATTERO modules sit inside the Energy Vault B-VAULT AC blocks at St Gall near Fort Stockton — 100 MW / 200 MWh across 76 containers, COD July 2024. REPT BATTERO lists Fort Stockton among its own US projects.",
-   "context": "Indirect: Jupiter Power's counterparty is Energy Vault, which sources the modules. Worth recording how thinly the attribution is sourced — trade press identified REPT BATTERO as the supplier from a close-up photograph of the containers in a video on Energy Vault's site, and neither Energy Vault nor Jupiter Power named it in their own releases. The supplier for the second 100 MW / 200 MWh ERCOT project announced June 2025 is not disclosed anywhere and must not be assumed to be the same.",
-   "source": "https://www.energy-storage.news/jupiter-power-energy-vault-bess-project-commercial-operation-in-ercot-texas-usa/",
-   "status": "active",
-   "since": "2024-07",
-   "scale": "100 MW / 200 MWh",
-   "via": "Energy Vault"
   }
  ],
  "policyExposure": [
@@ -435,5 +424,5 @@
   }
  ],
  "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "profileVersion": 5
 }

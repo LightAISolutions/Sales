@@ -1,0 +1,296 @@
+{
+ "schemaVersion": 2,
+ "slug": "rept",
+ "title": "REPT BATTERO — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the cell is the product, the container is the argument",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Grid storage is sold by the container, but everything that decides the container is decided in the cell.",
+   "ps": [
+    "A storage container is a steel box of fixed external size — twenty feet — full of battery cells, cooling, and control electronics. Every vendor ships the same box. What differs is how much energy is inside it.",
+    "Over four years the industry has gone from about 3 MWh to about 7 MWh in that same box, and almost none of that came from making the box bigger. It came from making the cell bigger and packing it better.",
+    "This guide follows that chain: what a cell actually is, why the capacity numbers keep climbing, what the specification sheet is and is not telling you, and how the same physics shows up as a commercial argument about footprint and installation hours."
+   ]
+  },
+  {
+   "id": "what-a-cell-is",
+   "title": "Cell, module, pack, container",
+   "kind": "prose",
+   "read": "Four nested levels, and each one wastes some of the energy density of the level below it.",
+   "ps": [
+    "A **cell** is the smallest complete battery — two electrodes, a separator, and an electrolyte that carries lithium ions between them. Everything above it is packaging.",
+    "Cells come in three shapes. Cylindrical cells are cheap and mechanically robust but leave gaps when packed. Pouch cells are flat and space-efficient but need external structure. A **{{prismatic cell}}** is a rigid rectangular can: the flat faces stack with almost no wasted space and the can itself carries load. Grid storage has converged almost entirely on very large prismatic formats for exactly that reason.",
+    "A **module** groups cells with their own housing, sensing and interconnects. A **pack** or rack groups modules. Each layer adds mass and volume that store no energy, which is why the industry keeps trying to remove layers — **{{cell-to-pack}}** designs delete the module entirely and mount cells straight into the pack structure.",
+    "At the top sits the container. A **{{DC block}}** is the common commercial unit: the box is sold as direct-current energy only, leaving the inverter and transformer to the buyer. That is why vendors quote megawatt-hours per twenty-foot container and compete on that single number."
+   ]
+  },
+  {
+   "id": "capacity-ladder",
+   "title": "The large-format capacity race",
+   "kind": "table",
+   "read": "The numbers are ampere-hours per cell, and they have roughly doubled in three years.",
+   "intro": "Cell capacity is quoted in ampere-hours. Multiply by cell voltage — about 3.2 volts for iron-phosphate chemistry — to get watt-hours. The ladder below is one manufacturer's, and the industry's shape is the same.",
+   "cols": [
+    "Cell",
+    "Approximate energy",
+    "Stated cycle life",
+    "What it enabled"
+   ],
+   "rows": [
+    [
+     "280Ah",
+     "~0.90 kWh",
+     "10,000",
+     "The format that standardised the 20-foot container at around 3.7 MWh"
+    ],
+    [
+     "314Ah",
+     "~1.00 kWh",
+     "10,000",
+     "The volume workhorse; a 5 MWh container"
+    ],
+    [
+     "314 Pro",
+     "~1.00 kWh",
+     "12,000",
+     "Same energy, longer life — a durability step rather than a density step"
+    ],
+    [
+     "392Ah",
+     "1.25 kWh",
+     "12,000",
+     "A 6.26 MWh container; the only cell in the range with published Wh/kg and Wh/L"
+    ],
+    [
+     "588Ah",
+     "1.88 kWh",
+     "&gt;10,000",
+     "Long-duration positioning, 25-year calendar life"
+    ],
+    [
+     "648Ah",
+     "~2.07 kWh",
+     "&gt;10,000",
+     "A 6.9 MWh container aimed at data-centre duty"
+    ]
+   ],
+   "note": "Notice what is missing. Only one cell in this ladder publishes energy density in watt-hours per kilogram or per litre. Capacity in ampere-hours tells you how big the cell is, not how efficiently it uses its own mass and volume — and a manufacturer that publishes capacity but not density is choosing which comparison to invite."
+  },
+  {
+   "id": "reading-a-spec",
+   "title": "How to read a cell specification honestly",
+   "kind": "prose",
+   "read": "Four numbers appear on every datasheet and three of them are conditional.",
+   "ps": [
+    "**{{energy density}}** comes in two forms and they are not interchangeable. Watt-hours per kilogram governs vehicles, where mass is the enemy. Watt-hours per litre governs grid storage, where the constraint is the fixed volume of a shipping container. A cell can be excellent on one and unremarkable on the other.",
+    "**{{cycle life}}** is meaningless without the conditions it was measured at. The two that matter most are {{depth of discharge}} — how far the cell is drained each time — and temperature. Cycling a cell shallowly and coolly produces a far larger number than cycling it deeply and warmly, and vendors are rarely specific about which they did.",
+    "**{{C-rate}}** describes how fast energy goes in or out relative to capacity. A cell rated for a four-hour discharge is a different product from one rated for high-rate pulses, even at the same capacity — which is why a manufacturer will offer a separate high-rate cell for backup-power duty rather than reuse its grid cell.",
+    "**{{round-trip efficiency}}** is the share of energy you get back. At container level the honest figure includes the parasitic load of the cooling system, and a quoted figure without a stated cycle duration is not comparable to anything.",
+    "The trap worth naming: a cell quoted at 12,000 cycles and 96% efficiency and 1.25 kWh looks strictly better than one at 10,000 and 95% and 1.88 kWh. It is not — the second stores half as much again per cell, which changes the container economics more than either of the first two numbers."
+   ]
+  },
+  {
+   "id": "thermal",
+   "title": "Why cooling decides how long the whole thing lasts",
+   "kind": "prose",
+   "read": "Cells age at the rate of the hottest one, so the useful figure is not temperature but temperature spread.",
+   "ps": [
+    "Every charge and discharge produces waste heat, and lithium cells degrade faster when warm. In a container holding thousands of cells wired in series, capacity is limited by the weakest cell — so the cell that runs hottest sets the ageing rate for all of them.",
+    "That reframes the engineering problem. The goal is not a low average temperature but a **narrow spread** between the hottest and coolest cell in the enclosure.",
+    "Air cooling moves large volumes of air and struggles to hold that spread as containers get denser. **{{liquid cooling}}** circulates fluid through cold plates in contact with the cells, and modern designs run the coolant to every module in parallel rather than in series, so the last module in the loop does not receive fluid already warmed by the first. Specifications now quote the resulting spread — within three degrees across a compartment is a current claim.",
+    "Thermal management is also the primary defence against {{thermal runaway}}, the self-sustaining reaction in which a failing cell heats its neighbours until they fail too. Containment, venting and gas detection matter, but keeping cells cool and even is what stops the sequence starting."
+   ]
+  },
+  {
+   "id": "container-economics",
+   "title": "From physics to a purchase order",
+   "kind": "bars",
+   "read": "Denser containers win on installed cost, not on the battery price.",
+   "unit": "per cent saved on a one-gigawatt-hour project, larger container versus 5 MWh baseline",
+   "intro": "When a vendor moves from a 5 MWh container to a 6.9 MWh one, the sales argument is not the cells. It is everything that scales with the number of boxes.",
+   "items": [
+    {
+     "label": "Fewer container units",
+     "v": 28
+    },
+    {
+     "label": "Less land footprint",
+     "v": 30
+    },
+    {
+     "label": "Fewer on-site installation hours",
+     "v": 28
+    }
+   ],
+   "note": "Each container needs a foundation, a crane lift, cabling, commissioning and a share of land. Cutting unit count by a quarter cuts all of those. This is why the capacity race is real commercial competition and not specification vanity — and why the external dimensions stay fixed at twenty feet, because the whole logistics chain is built around them."
+  },
+  {
+   "id": "backup-vs-grid",
+   "title": "Two different batteries wearing the same name",
+   "kind": "proscons",
+   "read": "Grid storage and data-centre backup ask opposite things of a cell.",
+   "intro": "Both are called energy storage and both use lithium iron phosphate, but the duty cycles are almost inverted — which is why manufacturers build separate cells for them.",
+   "cards": [
+    {
+     "t": "Grid storage duty",
+     "meta": "Typically a four-hour discharge, once or twice a day, for twenty years",
+     "adv": [
+      "**Energy is what you are buying.** Cost per kilowatt-hour dominates, so large-format cells and high volumetric density win.",
+      "**Cycle life is the headline durability number**, because the asset is cycled daily for decades.",
+      "**Moderate discharge rates** let the cell be optimised for energy rather than power."
+     ],
+     "dis": [
+      "*Sensitive to calendar ageing* as well as cycling, so twenty-five-year claims are hard to evidence.",
+      "*Revenue depends on market design* — arbitrage, ancillary services, capacity payments — not on the battery."
+     ]
+    },
+    {
+     "t": "Data-centre backup duty",
+     "meta": "Seconds of very high power, very rarely, for fifteen years",
+     "adv": [
+      "**Power is what you are buying.** The cell must deliver a large multiple of its capacity for a short period — a high {{C-rate}} — to hold the load until generators start.",
+      "**Cycle count is almost irrelevant.** The battery may discharge in earnest a handful of times in its life.",
+      "**Predictable, uncycled service life** makes calendar durability the design target."
+     ],
+     "dis": [
+      "*Poor energy economics* — you are paying for power capability that sits idle almost always.",
+      "*The transfer test is the only real proof*, and it happens after installation, which is why {{commissioning}} matters more here than the datasheet."
+     ]
+    }
+   ],
+   "note": "A cell advertised at 10C continuous discharge with more than 60,000 high-rate pulse cycles is a backup cell, not a grid cell, whatever the marketing calls it. Reading which duty a product is built for tells you which market a manufacturer is actually entering."
+  },
+  {
+   "id": "reading-rankings",
+   "title": "Why two research houses rank the same companies differently",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Shipment rankings disagree because they are measuring different things, not because one is wrong.",
+   "ps": [
+    "**Cells versus systems.** A house counting cell shipments and one counting integrated systems will produce different orders, because some firms sell cells to integrators and others sell finished containers.",
+    "**Front-of-meter versus everything.** Excluding residential and commercial storage changes the denominator substantially, and a manufacturer strong in household storage can look mid-pack in one table and first in another.",
+    "**Shipped versus installed.** Shipment leads installation by months, so the two series diverge whenever demand turns.",
+    "**The gaps at the top are often tiny.** A tenth of a gigawatt-hour can separate fifth from sixth place. Where two houses disagree by one rank on a 0.3% share difference, both are effectively saying the same thing.",
+    "The practical rule: cite the house, the metric and the period together, or the rank means nothing. And when a company's own shipments rise while its own revenue for the same segment falls, that is not a ranking artefact — it is price erosion or a shift from selling systems to selling bare cells, and it is worth more attention than the rank."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Cell physics and specification literacy.",
+   "cards": [
+    {
+     "q": "Why has grid storage converged on the {{prismatic cell}}?",
+     "a": "Its flat rigid faces pack with almost no wasted volume and the can carries structural load. In an application where the binding constraint is the fixed volume of a shipping container, packing efficiency beats the mechanical simplicity of a cylinder."
+    },
+    {
+     "q": "What does {{cell-to-pack}} remove, and what does removing it buy?",
+     "a": "It removes the module layer, mounting cells directly into the pack structure. Module housings store no energy, so deleting them frees mass and volume and raises usable energy density for the same chemistry."
+    },
+    {
+     "q": "A cell is quoted at 12,000 cycles. What must you ask before comparing it to one quoted at 10,000?",
+     "a": "At what {{depth of discharge}} and what temperature. Shallow, cool cycling produces far larger numbers than deep, warm cycling, and vendors rarely state which they used."
+    },
+    {
+     "q": "Why is temperature spread more important than average temperature in a battery container?",
+     "a": "Cells are wired in series and the string is limited by its weakest member, so the hottest cell sets the ageing rate for all of them. Holding a narrow spread matters more than holding a low mean."
+    },
+    {
+     "q": "A vendor claims a 6.9 MWh container saves 28% of installation hours against 5 MWh units. Where does the saving actually come from?",
+     "a": "From needing fewer boxes. Each container requires a foundation, a crane lift, cabling and commissioning, so cutting unit count by roughly a quarter cuts all the per-unit work with it. The cells themselves are not cheaper."
+    },
+    {
+     "q": "How do you tell a backup-duty cell from a grid-storage cell on a datasheet?",
+     "a": "By the {{C-rate}} and the cycle specification. A cell rated for high continuous discharge and tens of thousands of high-rate pulses is built to hold a load for seconds; a grid cell is optimised for a four-hour discharge and daily cycling."
+    },
+    {
+     "q": "Two research houses put a manufacturer at fifth and sixth in the same period. What is the most likely explanation?",
+     "a": "Different definitions — cells against systems, or front-of-meter against all segments — combined with a genuinely tiny gap between the two firms concerned. Both can be correct."
+    },
+    {
+     "q": "A company's storage shipments rise 41% while its storage revenue falls 19%. What does that tell you?",
+     "a": "That price per unit of energy fell sharply, or that the mix shifted from selling integrated systems to selling bare cells. Either way volume growth is not translating into revenue, which is a margin story rather than a demand story."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on cells, containers and specifications.",
+   "items": [
+    {
+     "q": "Which energy-density measure matters most for a container-based grid storage product?",
+     "c": [
+      "Watt-hours per kilogram",
+      "Watt-hours per litre",
+      "Ampere-hours per cell",
+      "Watts per kilogram"
+     ],
+     "a": 1,
+     "why": "The binding constraint is the fixed internal volume of a twenty-foot container, so volumetric density governs. Gravimetric density matters where mass is the enemy, which is vehicles."
+    },
+    {
+     "q": "A manufacturer publishes cell capacity in ampere-hours but not energy density. The most useful inference is:",
+     "c": [
+      "The cell is poorly made",
+      "Capacity is the more meaningful figure",
+      "It is choosing which comparison to invite",
+      "Energy density cannot be measured for large cells"
+     ],
+     "a": 2,
+     "why": "Capacity says how big the cell is; density says how efficiently it uses its own mass and volume. Publishing one and withholding the other is a choice about which comparison is favourable."
+    },
+    {
+     "q": "The main reason liquid cooling displaced air cooling in dense containers is that it:",
+     "c": [
+      "Uses less energy overall",
+      "Holds a narrower temperature spread between cells",
+      "Is cheaper to install",
+      "Eliminates thermal runaway"
+     ],
+     "a": 1,
+     "why": "Series-connected cells age at the rate of the hottest one, so the spread governs life. Liquid cooling holds it far tighter than air as density rises."
+    },
+    {
+     "q": "A twenty-foot container's external dimensions have stayed fixed while capacity rose from about 3 MWh to about 7 MWh. Why fix the dimensions?",
+     "c": [
+      "Regulatory requirement",
+      "The entire shipping and site logistics chain is built around them",
+      "Cells only fit that shape",
+      "Cooling requires it"
+     ],
+     "a": 1,
+     "why": "Roads, cranes, ships and site layouts are all designed around standard container dimensions. Keeping the envelope fixed and raising density inside it is what makes the gains usable."
+    },
+    {
+     "q": "A cell rated 10C continuous discharge with more than 60,000 pulse cycles is designed for:",
+     "c": [
+      "Four-hour grid arbitrage",
+      "Data-centre or telecom backup power",
+      "Long-duration storage above eight hours",
+      "Residential solar self-consumption"
+     ],
+     "a": 1,
+     "why": "Very high discharge rate with enormous pulse-cycle counts and little emphasis on energy is a backup-power profile — seconds of high power, rarely called on."
+    },
+    {
+     "q": "A manufacturer with no plant in a country still cannot supply projects there that claim a domestic tax credit. The most likely reason is:",
+     "c": [
+      "Shipping costs",
+      "Its corporate ownership disqualifies it regardless of where it manufactures",
+      "Its cells fail local safety standards",
+      "Tariffs"
+     ],
+     "a": 1,
+     "why": "Restricted-entity status attaches to the company, not the factory. Moving production to a third country addresses tariffs but not an ownership-based test."
+    }
+   ]
+  }
+ ]
+}

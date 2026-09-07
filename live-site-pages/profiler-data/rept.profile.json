@@ -1,0 +1,944 @@
+{
+ "schemaVersion": 7,
+ "slug": "rept",
+ "name": "REPT BATTERO Energy Co., Ltd.",
+ "shortName": "REPT BATTERO",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.reptbattero.com",
+ "headquarters": "Wenzhou, Zhejiang, China",
+ "founded": "2017",
+ "employees": "~12,000 (2026)",
+ "ownership": {
+  "type": "public",
+  "ticker": "HKEX: 0666"
+ },
+ "summary": "BOTTOM LINE UP FRONT: REPT BATTERO turned its first annual profit in FY2025 — RMB 680.9m on revenue of RMB 24,334.0m — and then exceeded that figure in a single half, reporting RMB 778.3m for H1 2026, per its HKEX filings. The business has inverted: energy storage passed EV batteries to become the majority of revenue in FY2025 (55.7%) and 61.9% by H1 2026. It is, however, the only large Chinese cell maker in this corpus with no US manufacturing and no disclosed plan for any; its answer to US trade barriers is Indonesia, not America. BACKGROUND. Founded 2017 in Wenzhou, Zhejiang; listed on the Hong Kong Stock Exchange 18 December 2023 at HK$18.30. Controlled by the Tsingshan Holding Group — the stainless-steel and nickel group — through Yongqing Technology, which beneficially owns 46.62% of issued share capital; Mr Xiang Guangda controls roughly 57.5% of Tsingshan directly and indirectly. Six domestic production bases (Wenzhou, Jiashan, Jiaxing, Liuzhou, Foshan, Chongqing) plus a first overseas plant in Indonesia opened May 2026; designed capacity 100 GWh at 30 June 2026, up from 90 GWh a year earlier. FY2025 shipments 82.7 GWh (+89.2%); H1 2026 shipments 42.7 GWh, split 27.2 GWh storage and 15.5 GWh EV. Ranked first globally in household energy-storage cell shipments for FY2025 and H1 2026, and fifth to sixth in total storage cells depending on the research house.",
+ "ecosystemRole": "REPT BATTERO is a cell and system supplier to the storage layer of the AI-data-centre build-out, and it reaches the US market only through integrators rather than directly. Its cells sit inside Energy Vault's B-VAULT AC blocks on Jupiter Power's ERCOT fleet, and it supplied Prevalon's 511 platform before that integrator moved to US-made cells. Since 2026 it has addressed data centres as a named product line rather than an inference: the H1 2026 filing lists 'AIDC high-rate LFP' as one of three dedicated cell tracks, and the Powtrix 6.9 MWh container launched in August 2026 is positioned explicitly for AI data-centre duty. Its structural constraint is regulatory rather than technical — as a PRC-incorporated company it is a prohibited foreign entity for US clean-energy tax-credit purposes, so a buyer claiming the investment tax credit must clear a material-assistance cost ratio that cell content alone will normally break.",
+ "productsAndServices": [
+  {
+   "name": "Wending (问顶) cell platform",
+   "category": "Battery cells",
+   "description": "REPT's flagship cell architecture and the cornerstone of every other product line — a patented top-cap design with seamless welding that removes internal dead space, applied across both LFP and ternary chemistries and across storage, passenger EV, commercial EV and frontier cells. It is a structural platform rather than a single cell, which is why the same name attaches to a 314Ah storage cell and a 350 Wh/kg solid-hybrid ternary cell.",
+   "highlights": [
+    "Storage cell ladder runs 280Ah → 314Ah → 314 Pro (12,000 cycles) → 392Ah → 564Ah → 588Ah → 648Ah, per the company's own catalogue; the 392Ah is rated 190 Wh/kg and 415 Wh/L at 12,000 cycles, and the 588Ah delivers 1.88 kWh per cell on a 25-year calendar life.",
+    "Monthly Wending shipments exceeded 2 GWh during 2025, per the FY2025 chairman's statement — the platform is at volume, not in pilot.",
+    "The 588Ah entered global mass delivery in June 2026; the company states it has planned 500Ah+ long-duration cells on the upgraded platform.",
+    "A 320Ah sodium-ion Wending cell was unveiled at SNEC in June 2026 — >20,000 cycles, ≥97% round-trip efficiency, operation to −50°C with >87% capacity retained — with mass production stated for 2027.",
+    "An 85Ah AIDC cell launched at the same show is a backup-duty cell rather than a grid-storage cell: 10C continuous discharge, −40°C to 65°C, >60,000 high-rate pulse cycles."
+   ],
+   "positioning": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race. REPT sits fifth to sixth globally in storage cell shipments depending on the research house — SNE put it at 31.4 GWh and 6.8% for H1 2026, 0.1 GWh behind CALB, which is why 'fifth' and 'sixth' are both defensible. It is first globally in residential storage cells.",
+   "soldThrough": "Direct to integrators and OEMs, and through REPT's own overseas subsidiaries in the US, Germany, Hong Kong, Indonesia, Australia and Japan.",
+   "targetSegments": [
+    "Storage system integrators",
+    "EV and commercial-vehicle OEMs",
+    "Residential and C&I storage brands",
+    "Data-centre backup power"
+   ]
+  },
+  {
+   "name": "Powtrix containerised storage systems",
+   "category": "Energy storage systems",
+   "description": "REPT's own containerised DC block line, which is what makes the common description of the company as a merchant cell maker inaccurate — it sells complete systems, not only cells. The line has climbed 6.0 → 6.26 → 6.9 MWh inside a fixed 20-foot envelope, with the newest unit aimed explicitly at AI data centres.",
+   "highlights": [
+    "Powtrix 6.9 MWh, launched 8 August 2026, runs Wending 648Ah cells on a 1500V DC LFP platform at ≥96% round-trip efficiency over a four-hour cycle and >10,000 cycles, with module-level full-parallel liquid cooling holding intra-compartment temperature spread within 3°C.",
+    "Against 5 MWh alternatives on a 1 GWh project the company claims 28% fewer units, 30% less footprint and 28% fewer on-site installation hours.",
+    "Powtrix 3.0 at 6.26 MWh, on the 392Ah cell, claims +25% volumetric energy density and −18% on-site labour against a 314Ah 5 MWh system.",
+    "A 417 kWh liquid-cooled outdoor DC cabinet is the unit deployed on REPT's first grid-connected Japanese project.",
+    "Roadmap holds the 20-foot external envelope fixed while raising cabin capacity, with active BMS equalisation the company states is 20× more efficient than passive, and 8h+ long-duration and grid-forming capability targeted."
+   ],
+   "positioning": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+   "soldThrough": "Direct and through integrator partners; the September 2025 Energy Vault agreement is for energy storage systems rather than bare cells.",
+   "targetSegments": [
+    "Utility-scale storage",
+    "C&I and industrial parks",
+    "AI data centres",
+    "Diesel replacement in emerging markets"
+   ]
+  },
+  {
+   "name": "Residential and C&I storage cells",
+   "category": "Battery cells",
+   "description": "The small-format line on which REPT holds its strongest market position — first globally in household storage cell shipments for both FY2025 and H1 2026, and second globally in C&I.",
+   "highlights": [
+    "50Ah and 72Ah cells for high-voltage residential systems; a 100Ah series in three variants for low-voltage residential.",
+    "72Ah and 100Ah rated above 165 Wh/kg; cycle lives across the range run 3,500 to 7,000.",
+    "Certified to TÜV Rheinland, CSA, UL and IEC, with an operating range of −40°C to 60°C.",
+    "EU Notified Body certificates secured in June 2026 for the 5 MWh system and the 314Ah cell."
+   ],
+   "positioning": "Per SNE for H1 2026, REPT is first in residential and second in C&I at roughly 14% against CATL's 35%. REPT, EVE and Great Power together held about 63% of the residential segment.",
+   "soldThrough": "OEM supply to residential storage brands and direct to C&I integrators.",
+   "targetSegments": [
+    "Residential storage brands",
+    "Commercial and industrial storage",
+    "European and Asian household markets"
+   ]
+  },
+  {
+   "name": "Power (EV) batteries",
+   "category": "Battery cells and packs",
+   "description": "The business REPT started in and which storage overtook during FY2025. It spans passenger BEV and PHEV cells, commercial-vehicle cells and a heavy-truck systems line, with the company's strongest EV position in commercial rather than passenger vehicles.",
+   "highlights": [
+    "BEV: NCM cylindrical 32Ah (280 Wh/kg) and 42Ah (330 Wh/kg) at φ46×H95mm; LFP prismatic 106Ah to 175Ah at 170–188 Wh/kg.",
+    "Commercial vehicle: LFP 206–340Ah at 170–193 Wh/kg and 6,000–8,000 cycles; NCM 223Ah (248 Wh/kg) and 295Ah (255 Wh/kg).",
+    "ChenXing (辰星) S-series systems launched 2026 cut pack weight by 400–600 kg by duty; the D800 Pro is an 800 kWh-class pack on a 220 Wh/kg platform supporting 1.3 MW charging.",
+    "Roughly 8% of China's 2025 electric heavy-truck battery market with installations up 278% year on year, and second in battery-swap heavy-truck batteries.",
+    "Frontier development cells include LMFP 155Ah, semi-solid-state NCM 170Ah and aviation-grade cells for low-altitude flight."
+   ],
+   "positioning": "Third tier in Chinese EV batteries at roughly 2.5% national share — 19.50 GWh installed in FY2025 per CABIA — behind CATL, BYD, CALB and Gotion. Its differentiated position is in commercial vehicles and battery-swap heavy trucks rather than passenger cars.",
+   "soldThrough": "OEM programme nomination, direct supply, and sales into the Tsingshan group's own electric heavy-truck and engineering-transport fleets under a connected-transaction framework.",
+   "targetSegments": [
+    "Commercial-vehicle OEMs",
+    "Battery-swap heavy truck operators",
+    "Passenger EV OEMs",
+    "eVTOL and robotics"
+   ]
+  },
+  {
+   "name": "Overseas manufacturing and service",
+   "category": "Operations",
+   "description": "REPT's answer to trade barriers is offshore manufacturing outside the US rather than inside it. Its first and only overseas plant is in Indonesia, and its US presence is a sales office with no manufacturing behind it.",
+   "highlights": [
+    "PT REPT Battero Indonesia, 60% owned, opened May 2026 — the first overseas plant, phase one 8 GWh for cells, systems and components.",
+    "REPT Battero American Corporation is a wholly-owned US subsidiary whose stated principal activity is battery sales; the North America office opened in Irvine, California in September 2024.",
+    "Trade press reporting the Indonesian opening noted explicitly that there was no mention of any plan to establish cell, module or system manufacturing in North America.",
+    "Six domestic bases — Wenzhou, Jiashan, Jiaxing, Liuzhou, Foshan and Chongqing — with aggregate designed capacity of 100 GWh at 30 June 2026, up from 90 GWh at end-2025 and 79 GWh at end-2024.",
+    "Subsidiaries established in Australia and Japan; the first grid-connected Japanese project, 1.99 MW / 8.35 MWh at Kanuma City, Tochigi, was delivered August 2026."
+   ],
+   "positioning": "Distinguishes REPT from Chinese peers that built US plants. Gotion has an operating Illinois plant and an abandoned Michigan one; REPT has neither the stranded capital nor the political exposure, and also none of the domestic-content access.",
+   "soldThrough": "Own subsidiaries and local partners.",
+   "targetSegments": [
+    "Southeast Asia",
+    "Europe",
+    "Japan and Australia",
+    "US via integrators only"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Powtrix 6.9 MWh — the AI data-centre system",
+   "specs": [
+    {
+     "band": "Energy",
+     "label": "Nameplate",
+     "value": "6.9 MWh DC in a standard 20-foot container"
+    },
+    {
+     "band": "Energy",
+     "label": "Cell",
+     "value": "Wending 648Ah LFP on a 1500V DC platform"
+    },
+    {
+     "band": "Electrical",
+     "label": "Round-trip efficiency",
+     "value": "≥96% on a four-hour cycle"
+    },
+    {
+     "band": "Electrical",
+     "label": "Cycle life",
+     "value": ">10,000 cycles"
+    },
+    {
+     "band": "Thermal",
+     "label": "Cooling",
+     "value": "Module-level full-parallel liquid cooling; intra-compartment temperature spread within 3°C"
+    },
+    {
+     "band": "Deployment",
+     "label": "Against 5 MWh alternatives (1 GWh project)",
+     "value": "28% fewer units, 30% less footprint, 28% fewer on-site installation hours"
+    },
+    {
+     "band": "Deployment",
+     "label": "Launched",
+     "value": "8 August 2026, 2026 Brand Day, Shanghai"
+    }
+   ],
+   "notes": "Company-stated figures from the launch and the H1 2026 filing. The comparison against 5 MWh alternatives is REPT's own arithmetic on a hypothetical 1 GWh project, not an independent benchmark."
+  },
+  {
+   "product": "Wending 392Ah storage cell",
+   "specs": [
+    {
+     "band": "Energy",
+     "label": "Capacity",
+     "value": "392Ah, 1.25 kWh per cell"
+    },
+    {
+     "band": "Energy",
+     "label": "Energy density",
+     "value": "190 Wh/kg; 415 Wh/L"
+    },
+    {
+     "band": "Electrical",
+     "label": "Cycle life",
+     "value": "12,000 cycles"
+    },
+    {
+     "band": "Electrical",
+     "label": "Efficiency",
+     "value": ">95%; peak 1P charge and discharge"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions",
+     "value": "75 × 182 × 224 mm"
+    },
+    {
+     "band": "Design",
+     "label": "Against the 314Ah",
+     "value": "+25% capacity in a larger footprint"
+    }
+   ],
+   "notes": "The only large storage cell in REPT's range with published Wh/kg and Wh/L figures; the 564Ah, 588Ah and 648Ah are published on capacity and cycle life only. REPT's own materials date the launch to 11 April 2025 at ESIE, while the H1 2026 filing dates an all-application-scenario variant to Q4 2025 — most likely unveiling versus commercial release, but both are the company's own statements and neither is reconciled."
+  },
+  {
+   "product": "Capacity and shipments",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Designed capacity",
+     "value": "100 GWh at 2026-06-30; 90 GWh at 2025-12-31; 79 GWh at 2024-12-31"
+    },
+    {
+     "band": "Capacity",
+     "label": "Overseas",
+     "value": "Indonesia phase one 8 GWh, opened May 2026 — the only company-confirmed per-site figure"
+    },
+    {
+     "band": "Shipments",
+     "label": "FY2025",
+     "value": "82.7 GWh, +89.2%; the storage/EV split is not disclosed for the full year"
+    },
+    {
+     "band": "Shipments",
+     "label": "H1 2026",
+     "value": "42.7 GWh, +31.8% — 27.2 GWh storage (+43.9%) and 15.5 GWh EV (+14.8%)"
+    },
+    {
+     "band": "Shipments",
+     "label": "Q3 2025",
+     "value": ">23 GWh in a single quarter, best month above 8 GWh (voluntary announcement)"
+    }
+   ],
+   "notes": "Collection gap: REPT discloses aggregate designed capacity and a list of six domestic bases, but no per-site nameplate table. Circulating site figures that sum to roughly 209 GWh against an actual 100 GWh are stale plan targets and are not carried here. Utilisation is not disclosed as a percentage; shipments over designed capacity is arithmetic on two disclosed numbers, not a disclosure."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-01",
+   "category": "corporate",
+   "headline": "CSRC accepts a filing for a second H-share full circulation — 676,172,244 domestic unlisted shares, about 48.21% of that class, to convert to H shares",
+   "read": "The float roughly doubles if it completes, which matters more for liquidity than for control: Tsingshan's chain runs through the domestic unlisted block and conversion does not by itself dilute it.",
+   "source": "HKEX filing, 2026-09-01"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "financial",
+   "headline": "H1 2026 results — revenue RMB 14,915.6m (+57.2%), gross margin 13.3%, profit RMB 778.3m against a RMB 62.7m loss a year earlier",
+   "read": "Half-year profit exceeded the whole of FY2025, and the margin gain came from scale rather than price: cost of sales rose 49.3% against revenue up 57.2%.",
+   "source": "HKEX interim results, 2026-08-26"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "market",
+   "headline": "REPT reports retaining first place globally in residential storage cell shipments for H1 2026",
+   "read": "The residential niche is where REPT leads outright rather than places fifth or sixth, and it is the position least exposed to US policy.",
+   "source": "Company release, 2026-08-26"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "project",
+   "headline": "First grid-connected storage project in Japan delivered — 1.99 MW / 8.35 MWh at Kanuma City, Tochigi, on 417 kWh liquid-cooled outdoor cabinets",
+   "read": "A merchant asset earning from frequency regulation, capacity and spot markets — REPT entering a market on its own equipment rather than as a cell supplier behind someone else's brand.",
+   "source": "Company release, 2026-08-20"
+  },
+  {
+   "date": "2026-08-08",
+   "category": "product-launch",
+   "headline": "2026 Brand Day: Powtrix 6.9 MWh for AI data centres on 648Ah cells, a 320Ah sodium-ion cell, the ChenXing S-series and D800 Pro, and solid-hybrid ternary and manganese cells",
+   "read": "The AI data centre stops being an adjacency and becomes a named product target; the H1 filing separately lists 'AIDC high-rate LFP' as one of three dedicated cell tracks.",
+   "source": "Company release, 2026-08-13"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "leadership",
+   "headline": "Non-executive director Wei Yong resigns, citing changes in his work arrangements",
+   "read": "Wei Yong was SAIC Motor's acting CFO and a vice president; his departure removes the SAIC-nominated seat while SAIC remains both the largest customer and a shareholder in two subsidiaries.",
+   "source": "HKEX filing, 2026-07-15"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "product-launch",
+   "headline": "Wending 320Ah sodium-ion cell unveiled at SNEC — >20,000 cycles, ≥97% round-trip efficiency, operation to −50°C — with mass production stated for 2027",
+   "read": "A hedge on lithium price and on cold-climate duty rather than a near-term revenue line; the 2027 date is the company's own and unproven.",
+   "source": "pv-magazine, 2026-06-17"
+  },
+  {
+   "date": "2026-05-15",
+   "category": "capacity",
+   "headline": "Indonesian plant officially opens — REPT's first overseas manufacturing facility, phase one 8 GWh",
+   "read": "The company's answer to a roughly 55% US tariff wall is to manufacture outside China but also outside America; trade coverage noted at the time that it still does not solve the foreign-entity rules, which attach to the owner rather than the plant.",
+   "source": "Energy-Storage.News, 2026-05-15"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "financial",
+   "headline": "FY2025 results — first annual profit in the company's history: RMB 680.9m against a RMB 1,352.6m loss, on revenue of RMB 24,334.0m (+36.7%) and gross margin of 11.2% against 4.1%",
+   "read": "Storage overtook EV batteries for the first time at 55.7% of revenue, and the loss run of 2021 through 2024 ends; Ernst & Young signed a clean opinion with no going-concern emphasis.",
+   "source": "HKEX annual results, 2026-03-26"
+  },
+  {
+   "date": "2026-03-09",
+   "category": "order-win",
+   "headline": "8.3 GWh of storage supply agreements signed with seven European partners at the KEY expo in Italy, for delivery over two years",
+   "read": "Europe is where REPT's system business is actually landing volume; the partners are unnamed, which is the norm for these announcements and limits what can be verified.",
+   "source": "ESS News, 2026-03-09"
+  },
+  {
+   "date": "2025-11-07",
+   "category": "financial",
+   "headline": "Placing of 60,000,000 new H shares at HK$13.35 closes — gross HK$801.0m, net HK$794.3m, at an 11.65% discount to the prior close",
+   "read": "Capacity expansion took 85% of the proceeds. The discount is the tell: this was raised into weakness, and the shares have since traded lower still.",
+   "source": "HKEX filing, 2025-11-07"
+  },
+  {
+   "date": "2025-09-16",
+   "category": "partnership",
+   "headline": "Energy Vault agreement to supply 3 GWh of energy storage systems during 2026",
+   "read": "Read against REPT's own statement that three years of partnership had produced cumulative supply exceeding 1.5 GWh, the 2023 headline of 10 GWh was substantially undrawn — a caution against reading framework announcements as orders.",
+   "source": "Company release, 2025-09-16"
+  }
+ ],
+ "strategyRead": [
+  "1. **(High confidence)** We assess REPT's FY2025 profit inflection is genuine and operational, not an accounting event. Basis: gross profit rose 269.2% and gross margin went 4.1% → 11.2% while cost of sales rose 26.7% against revenue up 36.7%, so the margin came from volume absorbing fixed cost; H1 2026 extended it to 13.3% and a RMB 778.3m profit that exceeds the whole prior year. Ernst & Young signed a clean opinion. The contrast with a peer whose profit is portfolio revaluation is the point — REPT's is in the gross line.",
+  "2. **(High confidence)** We assess REPT is not the 'merchant-only cell maker' the corpus has described, and the distinction now matters commercially. Basis: it sells the Powtrix container line at 5.01, 6.26 and 6.9 MWh, the September 2025 Energy Vault agreement is for energy storage systems rather than cells, the Hyosung memorandum covers cells, modules and containerised DC blocks, and it delivered a Japanese grid-connected project on its own cabinets. It is a cell maker that has moved downstream into systems without an EV brand of its own to consume the cells — which is a different thing from merchant-only.",
+  "3. **(High confidence)** We assess REPT's US position is structurally weaker than its order book suggests, and that the cause is ownership rather than product. Basis: as a PRC-incorporated company it is a specified foreign entity under IRC §7701(a)(51)(B)(v) — the foreign-controlled prong — so a §48E storage project beginning construction in 2026 must reach a 55% material-assistance cost ratio that cell content alone will normally break. It has no US plant and no disclosed plan for one; its answer to tariffs is Indonesia, and foreign-entity status attaches to the owner, not the plant. Its only US route is a buyer willing to forgo the credit.",
+  "4. **(Moderate confidence)** We assess the balance sheet is the real constraint on the growth story, not demand. Basis: net current liabilities of RMB 147.2m at end-2025 against net current assets a year earlier; pledged assets of RMB 17,387.8m, up RMB 8,927.8m in a year and about 37% of total assets; gearing 74.5%; and RMB 145.7m of receivables written off during 2025 against RMB 0.17m the year before. The directors' going-concern support rests on long-term time deposits they state can be redeemed — a reclassifiable asset rather than headroom.",
+  "5. **(Moderate confidence)** We assess related-party concentration is the least-priced risk in the file. Basis: the largest customer is RMB 3,593.7m or 14.8% of revenue including entities under common control with it, and that same figure appears in the related-party note under non-controlling shareholders — the customer is the SAIC Motor group, which also holds 49% of subsidiary REPT SAIC. Total related-party sales are roughly RMB 5,841.9m, about 24% of revenue. Separately, a Tsingshan materials purchasing framework carried a RMB 8,917m cap against nil actual transactions: the capacity to route billions through a controlling-shareholder affiliate exists and is approved but unused.",
+  "6. **(Low confidence)** We assess the AI data-centre line is real intent but unproven revenue. Basis: the Powtrix 6.9 MWh, the 85Ah high-rate cell and the 'AIDC high-rate LFP' cell track are all company-disclosed and dated, and REPT's own market commentary ties North American demand to data-centre backup. Against that, no named data-centre operator, hyperscaler, colocation provider or UPS original-equipment manufacturer appears in any source. Collection gap: the customer side of this line is entirely absent from the public record."
+ ],
+ "policyExposure": [
+  {
+   "regime": "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "REPT is a specified foreign entity under IRC §7701(a)(51)(B)(v) — the foreign-controlled-entity prong — purely by virtue of being incorporated and headquartered in the PRC, and is therefore a prohibited foreign entity. The consequence for a US buyer is not a supplier blacklist but a cost-ratio failure: a §48E energy-storage project beginning construction in 2026 must reach a material assistance cost ratio of 55% non-prohibited direct cost, rising five points a year to 75% after 2029, and cells typically exceed half of a system's manufactured-product cost. IRS Notice 2026-15 of 12 February 2026 is the first material-assistance guidance and its own worked example produces a 27.2% ratio against a 55% threshold. The widely repeated trade shorthand that Chinese cells simply disqualify the credit reaches the right answer for most systems by the wrong route, and will mislead at the margin — on a mixed-supplier system, on a project grandfathered by a binding contract finalised before 16 June 2025, or on non-cell content.",
+   "mitigation": "None available to REPT itself. Foreign-entity status attaches to the owner, not the plant, so the Indonesian facility does not cure it. The realistic US channel is buyers who are not claiming the credit.",
+   "source": "26 U.S.C. §7701(a)(51)–(52); IRS Notice 2026-15, 2026-02-12"
+  },
+  {
+   "regime": "NDAA §154 procurement ban (FY2024) and §842 (FY2026)",
+   "status": "announced",
+   "effectiveDate": "2027-10-01",
+   "exposure": "REPT is NOT named in §154(b) of the FY2024 NDAA, which lists exactly six producers — CATL, BYD, Envision Energy, EVE Energy, Gotion High-tech and Hithium — and bars Department of Defense procurement from them from 1 October 2027. This is the sharpest distinction between REPT and Gotion in this corpus. However, §842 of the FY2026 NDAA replaces the named-company approach with a generic foreign-entity standard covering batteries, cells and functional cell components, phased from 1 January 2028 for new acquisitions, 1 January 2029 for standard batteries and 30 January 2031 for existing acquisitions — and that definitional test would capture REPT. Trade coverage has largely not picked this up.",
+   "mitigation": "None disclosed. REPT has no federal procurement exposure today, so the 2028 date is a forward risk rather than a present constraint.",
+   "source": "Pub. L. 118-31 §154(b); FY2026 NDAA §842"
+  },
+  {
+   "regime": "US tariffs on Chinese battery products",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "Trade reporting puts the duty on Chinese battery imports at roughly 55% from 1 January 2026, with a separate analysis of the all-in stack reaching 82%; the two figures come from the same outlet in different articles and are not reconciled. REPT states no rate itself but attributes a 96% collapse in its battery-components revenue — RMB 2,587.8m to RMB 93.5m — to tariff uncertainty causing overseas customers to pause orders. That is the tariff regime's effect visible in an audited income statement.",
+   "mitigation": "The Indonesian plant, opened May 2026, is explicitly framed by the company as reducing trade barriers. It addresses tariffs; it does not address foreign-entity status.",
+   "source": "FY2025 annual results, 2026-03-26; Energy-Storage.News tariff analysis"
+  },
+  {
+   "regime": "US domestic content bonus and §30D clean vehicle credit",
+   "status": "in-effect",
+   "effectiveDate": "2024-01-01",
+   "exposure": "Two unambiguous exclusions with no cost-ratio nuance. Chinese-owned cells cannot count toward the 10% domestic-content investment-credit adder. And under the final clean-vehicle regulations of 6 May 2024, a vehicle containing any battery component manufactured or assembled by a foreign entity of concern has been ineligible for §30D since 2024, with the same rule extended to critical minerals from 2025 — a bright-line disqualification rather than a threshold.",
+   "mitigation": "None. These are entity-level exclusions.",
+   "source": "T.D. 9995, Federal Register, 2024-05-06"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "prevalon",
+   "type": "customer",
+   "note": "Supplied 320Ah Wending LFP cells and long-format modules into Prevalon's 511 Integrated Energy Storage Platform under a partnering agreement announced 11 April 2024; Prevalon was also designated service provider for REPT's supplied fleet across the Americas.",
+   "context": "The headline figures need care. A Letter of Intent covered 2.5 GWh of US deployments during calendar 2024 only, inside a stated short-term target of 10 GWh across the Americas, with roughly 1.5 GWh already deployed at announcement. No source states the relationship ended, but a February 2026 interview with Prevalon's chief executive about foreign-entity rules names a different Chinese manufacturer as its primary supplier and does not mention REPT, and Prevalon has since contracted 10 GWh of US-made cells. Treat as dormant and superseded rather than confirmed terminated.",
+   "source": "https://www.businesswire.com/news/home/20240411945451/en/",
+   "status": "historical",
+   "since": "2024-04-11",
+   "scale": "2.5 GWh LOI for 2024 within a stated 10 GWh Americas target"
+  },
+  {
+   "slug": "jupiter-power",
+   "type": "customer",
+   "note": "REPT modules sit inside the Energy Vault B-VAULT AC blocks at Jupiter Power's St Gall project near Fort Stockton, Pecos County, Texas — 100 MW / 200 MWh across 76 containers, operating in ERCOT.",
+   "context": "An indirect relationship: REPT supplies Energy Vault, which builds for Jupiter Power. Worth noting how thinly the attribution is sourced — trade press identified REPT as the module supplier from a close-up photograph of the containers in a video on Energy Vault's site, and neither Energy Vault nor Jupiter Power named REPT in their own releases. REPT itself lists Fort Stockton among its US projects.",
+   "source": "https://www.energy-storage.news/jupiter-power-energy-vault-bess-project-commercial-operation-in-ercot-texas-usa/",
+   "status": "active",
+   "since": "2024-07",
+   "scale": "100 MW / 200 MWh",
+   "via": "Energy Vault"
+  },
+  {
+   "slug": "catl",
+   "type": "competitor",
+   "note": "The reference point in every storage-cell ranking. SNE put CATL at 125.0 GWh and 27.1% of global storage cell shipments for H1 2026 against REPT's 31.4 GWh and 6.8% — roughly four times the volume.",
+   "context": "CATL is also the scale against which REPT's margin is judged: REPT's 13.3% gross margin in H1 2026 remains far below CATL's.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active",
+   "scale": "27.1% vs 6.8% of global storage cell shipments, H1 2026"
+  },
+  {
+   "slug": "eve-energy",
+   "type": "competitor",
+   "note": "Second globally in storage cells at 48.0 GWh and 10.4% for H1 2026, against REPT's 31.4 GWh. The two are also direct rivals in the residential segment, where REPT, EVE and Great Power together held about 63% of shipments.",
+   "context": "EVE was added to the US Department of Defense §1260H list in the June 2026 update and is named in NDAA §154(b); REPT is on neither. Same market, materially different US political exposure.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "hithium",
+   "type": "competitor",
+   "note": "Third globally in storage cells at 46.2 GWh and 10.0% for H1 2026. Both are storage-specialised Chinese cell makers of the same generation competing on the large-format capacity race.",
+   "context": "Hithium is named in NDAA §154(b) and REPT is not — the clearest same-segment illustration that named designation and PRC incorporation are separate exposures.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "byd",
+   "type": "competitor",
+   "note": "Fourth globally in storage cells at 35.7 GWh and 7.7% for H1 2026, just ahead of REPT.",
+   "context": "BYD's dossier groups REPT with EVE and Hithium as merchant-only cell makers against BYD's captive-plus-merchant model. The contrast holds on captive consumption — BYD consumes its own cells in its own vehicles and systems, REPT does not — but REPT is not cells-only: it sells the Powtrix container line and delivered a grid-connected Japanese project on its own cabinets.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "gotion",
+   "type": "competitor",
+   "note": "Ninth globally in storage cells at 20.8 GWh and 4.5% for H1 2026, against REPT's 31.4 GWh and 6.8%. Covered in the same session as the corpus's paired study of how US foreign-entity rules bear on Chinese cell makers.",
+   "context": "The pair is the point. Both are prohibited foreign entities for tax-credit purposes, so to a US buyer's credit arithmetic they are equally disqualifying. On every other axis they diverge: Gotion is named in NDAA §154(b) with a Department of Defense procurement ban dated 1 October 2027, holds an operating Illinois plant and an abandoned Michigan one with incentives clawed back, and carries live state-level political exposure. REPT is named in nothing, has no US plant and no stranded capital, and is exposed only through its customers' credit maths.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "status": "active"
+  },
+  {
+   "slug": "envision-energy",
+   "type": "competitor",
+   "note": "Competitor in storage systems, and the counterparty behind REPT's displacement at Prevalon: Envision's AESC sold its Smyrna, Tennessee cell plant to Fixx Energy in 2026 explicitly to comply with US material-assistance rules, and Prevalon subsequently contracted 10 GWh of US-made cells from that route.",
+   "context": "The cleanest illustration in the corpus of foreign-entity rules reallocating a supply relationship rather than merely taxing it. Envision is itself named in NDAA §154(b), which is why the plant changed hands.",
+   "source": "https://www.energy-storage.news/aesc-signs-10gwh-us-domestic-content-bess-cell-and-module-deal-with-system-integrator-prevalon/",
+   "status": "active"
+  },
+  {
+   "slug": "fluence",
+   "type": "competitor",
+   "note": "Competes with REPT's Powtrix container line at the system level in Western markets, and is the other integrator drawing US-made cells from the Fixx-controlled Smyrna plant.",
+   "context": "An asymmetric rivalry: Fluence is a system integrator that buys cells, REPT is a cell maker that has moved into systems. They meet on the container, not on the cell.",
+   "source": "https://www.energy-storage.news/aesc-jinkos-asset-sales-are-start-of-wider-us-clean-energy-manufacturing-industry-restructuring/",
+   "status": "active"
+  },
+  {
+   "slug": "sungrow",
+   "type": "competitor",
+   "note": "Ranked first in Wood Mackenzie's inaugural global BESS integrator ranking of July 2026, in which REPT does not appear in the top ten — the gap between REPT's cell-market position and its system-market recognition.",
+   "context": "An integrator ranking rather than a cell ranking, so REPT's absence is expected; recorded because it bounds how far the Powtrix line has actually carried REPT into the system market.",
+   "source": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "status": "active"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Cao Hui (曹辉)",
+   "title": "Chairman of the Board and Executive Director",
+   "background": [
+    "Chairman since 25 October 2017; executive director since 11 November 2022",
+    "President 2017–2024; resigned the presidency 29 October 2024 while retaining the chairmanship",
+    "Vice president and general manager, Shanghai Aerospace Power Technology (2009–2017)",
+    "Senior engineer, Shanghai Institute of Space Power-Sources (2006–2009)",
+    "PhD materials physics and chemistry, Shanghai Institute of Microsystem and Information Technology, Chinese Academy of Sciences (2006); BSc and MSc non-ferrous metallurgy, Central South University",
+    "General partner of Wenzhou Ruili, an H-share holding vehicle"
+   ]
+  },
+  {
+   "name": "Feng Ting (冯霆)",
+   "title": "President and Executive Director",
+   "background": [
+    "President since 29 October 2024; executive director since 27 June 2025",
+    "Chairman of BatteroTech Co. and BatteroTech Jiaxing since 2024",
+    "Deputy general manager, Shanghai SIGMA Hightech (2021–2023)",
+    "Cinda Securities, asset management and investment banking (2015–2020)",
+    "MSc Columbia University (2013); MSc Northwestern University (2012); BA economics, University of British Columbia (2011)",
+    "Spouse of non-executive director Xiang Yangyang and son-in-law of controlling shareholder Xiang Guangda",
+    "Styled President in every HKEX filing but Chief Executive Officer in the company's own English releases — the filing title is the controlled one"
+   ]
+  },
+  {
+   "name": "Huang Jiehua (黄杰华)",
+   "title": "Chief Financial Officer and Employee Representative Director",
+   "background": [
+    "Chief financial officer since 1 August 2021",
+    "Executive director 2022–2025; re-designated employee representative director on 31 December 2025 when the supervisory committee was abolished",
+    "General manager of finance, REPT Technology Group (2016–2021); deputy general manager (2011–2016)",
+    "Associate degree in accounting, Zhejiang Institute of Economics and Trade",
+    "Signs the interim accounts alongside the chairman"
+   ]
+  },
+  {
+   "name": "Wu Yanjun (吴彦均)",
+   "title": "Executive Director, Board Secretary and Joint Company Secretary",
+   "background": [
+    "Director since 31 March 2022",
+    "General manager, Shanghai Tsingshan Trading (2014–2022) — the Tsingshan link inside the board",
+    "Vice president, Tsingtuo Industrial Group (2013–2014)",
+    "Deputy general manager, Yangjiang Century Tsingshan Nickel (2011–2013)",
+    "Vale Minerals China (2009–2010); Canadian Inco Metals, Shanghai (2005–2009)",
+    "Director of XCMG Tsingshan (Xuzhou) New Energy Vehicle"
+   ]
+  },
+  {
+   "name": "Hu Xiaodong (胡晓东)",
+   "title": "Executive Director",
+   "background": [
+    "Director since 12 June 2020; re-designated from non-executive to executive director on 26 March 2025",
+    "Chairman of Yongqing Technology — the entity holding 46.62% of REPT's issued capital — since September 2019",
+    "Career civil servant 1997–2019: district mayor of Lucheng District, Wenzhou, and deputy party secretary of Taishun County"
+   ]
+  },
+  {
+   "name": "Xiang Yangyang (项洋洋)",
+   "title": "Non-executive Director",
+   "background": [
+    "General manager, strategic investment department, Shanghai Decent, since July 2018",
+    "Deputy general manager, Golden Harbor International (2016–2018)",
+    "Citibank N.A. Singapore (2013–2016)",
+    "BA Brandeis University",
+    "Daughter of controlling shareholder Xiang Guangda and spouse of president Feng Ting",
+    "Director of PT REPT Battero Indonesia"
+   ]
+  },
+  {
+   "name": "Wang Haijun (王海军)",
+   "title": "Non-executive Director",
+   "background": [
+    "Chairman and president of Shanghai Decent since January 2024; director and president since 2007",
+    "Former general manager, Zhejiang Tsingshan Iron & Steel",
+    "MSc aerospace propulsion"
+   ]
+  },
+  {
+   "name": "Andy Tang",
+   "title": "Chief Executive Officer, Overseas Business",
+   "background": [
+    "Based in California; the public face of REPT's Western go-to-market",
+    "Former head of energy storage and optimisation, Wärtsilä",
+    "Earlier roles at Greensmith Energy, AutoGrid and SCIenergy",
+    "Not a board position — recorded because the overseas business is where REPT's US and European exposure actually sits"
+   ]
+  },
+  {
+   "name": "Wong Sze Wing",
+   "title": "Independent Non-executive Director and Audit Committee Chair",
+   "background": [
+    "Fellow of the Hong Kong Institute of Certified Public Accountants",
+    "Independent non-executive director, Wuxi Lead Intelligent, since October 2025",
+    "Independent non-executive director, CNGR Advanced Material, since November 2025",
+    "EMBA CEIBS; BBA University of Hong Kong"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "RMB",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 17,795.9m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Reported in the FY2025 annual results as the comparative"
+     },
+     {
+      "name": "Gross profit / margin",
+      "actual": "RMB 736.9m, a 4.1% margin",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The base against which FY2025's 269.2% gross-profit jump is measured"
+     },
+     {
+      "name": "Loss for the year",
+      "actual": "RMB −1,352.6m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The fourth consecutive annual loss: −804m (2021), −451m (2022), −1,943m (2023), −1,353m (2024)"
+     },
+     {
+      "name": "Shipments",
+      "actual": "43.71 GWh, +124.4%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Third-party reported; REPT does not publish a full-year storage/EV split"
+     }
+    ],
+    "commentary": "The last loss-making year. Revenue grew 29.4% while the company remained deeply unprofitable — volume was arriving faster than unit economics improved."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 24,334.0m, +36.7%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Audited by Ernst & Young, clean unqualified opinion, no going-concern emphasis",
+      "kpi": "revenue",
+      "usdMillions": 3385.7,
+      "fxBasis": "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Revenue by segment",
+      "actual": "Storage RMB 13,561.3m (55.7%, +86.8%); EV RMB 10,013.4m (41.1%, +35.6%); other RMB 759.2m (3.1%, −75.9%)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Storage overtook EV batteries for the first time. The 75.9% collapse in 'other' is the battery-components line, which fell from RMB 2,587.8m to RMB 93.5m — company-attributed to tariff uncertainty pausing overseas orders"
+     },
+     {
+      "name": "Gross profit / margin",
+      "actual": "RMB 2,721.1m, +269.2%; margin 11.2% against 4.1%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Cost of sales rose 26.7% against revenue up 36.7% — the margin came from scale absorbing fixed cost, not from price"
+     },
+     {
+      "name": "Profit for the year",
+      "actual": "RMB 680.9m, against a RMB 1,352.6m loss",
+      "expected": "",
+      "verdict": "beat",
+      "result": "The first annual profit in the company's history. Attributable to owners RMB 623.0m; basic EPS RMB 0.27",
+      "kpi": "net-income",
+      "usdMillions": 94.7,
+      "fxBasis": "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Shipments",
+      "actual": "82.7 GWh, +89.2%, against designed capacity of 90 GWh at year end",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The storage/EV split is not disclosed for the full year. Shipments over designed capacity is roughly 92%, but that is arithmetic on two disclosed numbers — REPT publishes no utilisation percentage and shipments are not production",
+      "kpi": "gwh-shipped",
+      "qty": 82.7
+     },
+     {
+      "name": "Balance sheet",
+      "actual": "Total assets RMB 46,472.2m; net assets RMB 11,855.5m; gearing 74.5%; net current liabilities RMB 147.2m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Net current liabilities against net current assets of RMB 159.6m a year earlier. Directors support going concern by pointing to RMB 1,376.3m of long-term time deposits they state can be redeemed — a reclassifiable asset rather than headroom"
+     }
+    ],
+    "commentary": "The inflection year, and the balance sheet is where the caution sits. Pledged assets reached RMB 17,387.8m, up RMB 8,927.8m in twelve months and about 37% of total assets. Trade and bills receivable of RMB 8,529.2m grew 55% against revenue up 36.7%, and RMB 145.7m was written off as uncollectible during the year against RMB 0.17m the year before. Related-party sales were roughly RMB 5,841.9m, about 24% of revenue. No published analyst consensus exists in any meaningful sense — coverage runs to between two and five brokers — so no 'expected' figure is stated rather than one being manufactured."
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 14,915.6m, +57.2%",
+      "expected": "RMB 14.5–15.2bn, per the company's own positive profit alert of 9 July 2026",
+      "verdict": "inline",
+      "result": "Landed inside its own guided range. This is company guidance, not analyst consensus — no meaningful consensus exists"
+     },
+     {
+      "name": "Revenue by segment",
+      "actual": "Storage RMB 9,225.5m (61.9%, +81.5%); EV RMB 5,225.5m (35.0%, +29.8%); other RMB 464.7m (3.1%)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The storage share widened again from 55.7% at the full year"
+     },
+     {
+      "name": "Gross profit / margin",
+      "actual": "RMB 1,980.3m, +138.8%; margin 13.3% against 8.7%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "A further 4.6 percentage points on the half"
+     },
+     {
+      "name": "Profit for the period",
+      "actual": "RMB 778.3m, against a RMB 62.7m loss",
+      "expected": "RMB 700–850m guided",
+      "verdict": "inline",
+      "result": "Half-year profit exceeded the whole of FY2025's RMB 680.9m. Attributable to owners RMB 703.8m; basic EPS RMB 0.30"
+     },
+     {
+      "name": "Shipments",
+      "actual": "42.7 GWh, +31.8% — storage 27.2 GWh (+43.9%), EV 15.5 GWh (+14.8%)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Designed capacity 100 GWh at 30 June 2026, up from 90 GWh at year end"
+     }
+    ],
+    "commentary": "Unaudited interim. The trajectory is intact and the profit is in the gross line rather than in gains — which is the substantive contrast with peers whose recent profit growth is portfolio revaluation. Against that, the market has not rewarded it: the shares traded at HK$10.00 on 4 September 2026, near the bottom of a HK$9.74–18.87 52-week range, in the same quarter the company posted record profits."
+   }
+  ],
+  "commentary": "REPT reports in RMB and publishes no USD translation of revenue or profit; the USD overlays above are conversions at a cited 2025 average rate and are not company figures. Analyst coverage is genuinely thin — Investing.com shows five analysts, TipRanks two ratings in three months — so 'expected' fields are populated from the company's own guidance where it exists and left empty otherwise. The auditor is Ernst & Young; the FY2025 opinion is clean with two key audit matters, inventory allowance and expected credit losses on trade receivables. The company states it had no contingent liabilities at 31 December 2025 and was not engaged in any material litigation or arbitration."
+ },
+ "sources": [
+  {
+   "label": "REPT BATTERO — FY2025 annual results announcement (HKEX)",
+   "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032602768.pdf",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "REPT BATTERO — H1 2026 interim results (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601913.pdf",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "REPT BATTERO — 2025 annual report (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042902781.pdf",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "REPT BATTERO — H1 2025 interim results (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0811/2025081101182.pdf",
+   "date": "2025-08-11"
+  },
+  {
+   "label": "REPT BATTERO — FY2024 annual results (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0326/2025032602386.pdf",
+   "date": "2025-03-26"
+  },
+  {
+   "label": "REPT BATTERO — CSRC acceptance of second H-share full circulation filing (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103733.pdf",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "REPT BATTERO — positive profit alert for H1 2026 (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0709/2026070901051.pdf",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "REPT BATTERO — resignation of non-executive director Wei Yong (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071500532.pdf",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "REPT BATTERO — change of joint company secretary (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601881.pdf",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "REPT BATTERO — date of board meeting for the H1 2026 results (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081400396.pdf",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "REPT BATTERO — placing of 60,000,000 new H shares at HK$13.35 (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1031/2025103100103.pdf",
+   "date": "2025-10-31"
+  },
+  {
+   "label": "REPT BATTERO — closing of the H-share placing (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1107/2025110701692.pdf",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "REPT BATTERO — Q3 2025 shipments voluntary announcement (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1014/2025101400003.pdf",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "REPT BATTERO — continuing connected transactions, Tsingshan purchase framework (HKEX)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043004724.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "REPT BATTERO — company profile",
+   "url": "https://www.reptbattero.com/company-profile/"
+  },
+  {
+   "label": "REPT BATTERO — battery cell catalogue",
+   "url": "https://www.reptbattero.com/battery-cell/"
+  },
+  {
+   "label": "REPT BATTERO — manufacturing bases",
+   "url": "https://www.reptbattero.com/manufacturing/"
+  },
+  {
+   "label": "REPT BATTERO — Wending innovative technology",
+   "url": "https://www.reptbattero.com/innovative-technology/"
+  },
+  {
+   "label": "REPT BATTERO — innovation at 2026 Brand Day (Powtrix 6.9 MWh, sodium-ion, ChenXing)",
+   "url": "https://www.reptbattero.com/news/rept-batteros-innovation-at-2026-brand-day/",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "REPT BATTERO — first grid-connected storage project in Japan",
+   "url": "https://www.reptbattero.com/news/rept-battero-delivers-its-first-gridconnected-bess-project-in-japan/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "REPT BATTERO — 3 GWh energy storage supply agreement with Energy Vault",
+   "url": "https://www.reptbattero.com/news/rept-battero-signs-3gwh-energy-storage-supply-agreement-with-energy-vault/",
+   "date": "2025-09-16"
+  },
+  {
+   "label": "REPT BATTERO — 392Ah Wending cell and Powtrix 3.0 launch at ESIE",
+   "url": "https://www.reptbattero.com/news/392ah-wending-es-battery-rept-battero-unveils-solutions-from-cell-to-system/",
+   "date": "2025-04-11"
+  },
+  {
+   "label": "REPT BATTERO — tops residential storage cell rankings for H1 2026",
+   "url": "https://www.reptbattero.com/news/rept-battero-tops-residential-ess-cell-rankings-in-h1-2026/",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "REPT BATTERO — EU Notified Body certificates for the 5 MWh system and 314Ah cell",
+   "url": "https://www.reptbattero.com/news/rept-batterosecured-eu-nb-certificates-for-5mwh-system-and-314ah-cell/",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "PR Newswire — REPT BATTERO achieves first annual profit of RMB 681 million in 2025",
+   "url": "https://www.prnewswire.com/news-releases/rept-battero-achieves-first-annual-profit-of-rmb-681-million-in-2025-302737670.html",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "CnEVPost — SNE Research global storage battery market share, H1 2026",
+   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Energy-Storage.News — REPT surpasses FY2025 results in H1 2026, launches AIDC-tailored storage",
+   "url": "https://www.energy-storage.news/rept-battero-surpasses-2025-full-year-results-in-h1-2026-launches-aidc-tailored-storage-systems/",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Energy-Storage.News — REPT opens Indonesian cell and BESS manufacturing facility",
+   "url": "https://www.energy-storage.news/rept-battero-opens-indonesian-cell-and-bess-manufacturing-facility/",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Energy-Storage.News — REPT opens North America office, launches 6MWh containerised BESS",
+   "url": "https://www.energy-storage.news/rept-battero-opens-north-america-office-launches-6mwh-containerised-bess/",
+   "date": "2024-09-25"
+  },
+  {
+   "label": "Energy-Storage.News — Jupiter Power / Energy Vault St Gall into commercial operation (REPT modules)",
+   "url": "https://www.energy-storage.news/jupiter-power-energy-vault-bess-project-commercial-operation-in-ercot-texas-usa/",
+   "date": "2024-07-26"
+  },
+  {
+   "label": "Energy-Storage.News — Prevalon–REPT partnership targets 2.5 GWh of US deployments in 2024",
+   "url": "https://www.energy-storage.news/prevalon-rept-partnership-targets-2-5gwh-of-us-bess-deployments-in-2024/",
+   "date": "2024-06-06"
+  },
+  {
+   "label": "Business Wire — Prevalon and REPT announce partnering agreement for the Americas",
+   "url": "https://www.businesswire.com/news/home/20240411945451/en/",
+   "date": "2024-04-11"
+  },
+  {
+   "label": "Energy-Storage.News — Prevalon on how FEOC rules change US BESS buying",
+   "url": "https://www.energy-storage.news/scrutinising-origin-ownership-and-control-feoc-rules-change-us-bess-buying/",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "Energy-Storage.News — AESC signs 10 GWh US domestic-content cell and module deal with Prevalon",
+   "url": "https://www.energy-storage.news/aesc-signs-10gwh-us-domestic-content-bess-cell-and-module-deal-with-system-integrator-prevalon/",
+   "date": "2026-05"
+  },
+  {
+   "label": "Energy-Storage.News — AESC and Jinko asset sales start a wider US manufacturing restructuring",
+   "url": "https://www.energy-storage.news/aesc-jinkos-asset-sales-are-start-of-wider-us-clean-energy-manufacturing-industry-restructuring/",
+   "date": "2026-03"
+  },
+  {
+   "label": "Energy-Storage.News — Tier 2 battery OEM REPT agrees 10 GWh supply deal with Energy Vault",
+   "url": "https://www.energy-storage.news/tier-2-battery-oem-rept-agrees-10gwh-supply-deal-with-energy-vault/",
+   "date": "2023-05-23"
+  },
+  {
+   "label": "Energy Vault — St Gall project page (76 B-VAULT containers, Pecos County, Jupiter Power)",
+   "url": "https://www.energyvault.com/projects/st-gall"
+  },
+  {
+   "label": "ESS News — REPT secures 8.3 GWh of storage orders in Europe",
+   "url": "https://www.ess-news.com/2026/03/09/rept-battero-secures-8-3-gwh-of-energy-storage-orders-in-europe/",
+   "date": "2026-03-09"
+  },
+  {
+   "label": "pv-magazine — REPT unveils 320Ah sodium-ion cell for long-duration storage",
+   "url": "https://www.pv-magazine.com/2026/06/17/rept-battero-unveils-320-ah-sodium-ion-cell-for-long-duration-storage/",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "EnergyTrend / TrendForce — Q1 2026 global storage cell ranking",
+   "url": "https://www.energytrend.com/news/20260525-51447.html",
+   "date": "2026-05-25"
+  },
+  {
+   "label": "InfoLink — global storage battery shipment ranking, Q1–Q3 2025",
+   "url": "https://www.infolink-group.com/energy-article/energy-storage-topic-global-battery-shipment-ranking-3Q25",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "Wood Mackenzie — first global BESS integrator ranking, 2026",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "date": "2026-07"
+  },
+  {
+   "label": "CnEVPost — REPT makes Hong Kong stock market debut at HK$18.30",
+   "url": "https://cnevpost.com/2023/12/18/ev-battery-maker-rept-makes-hk-stock-market-debut/",
+   "date": "2023-12-18"
+  },
+  {
+   "label": "StockAnalysis — HKG:0666 quote and 52-week range",
+   "url": "https://stockanalysis.com/quote/hkg/0666/"
+  },
+  {
+   "label": "26 U.S. Code §7701 — specified foreign entity, foreign-influenced entity and material assistance cost ratio thresholds",
+   "url": "https://www.law.cornell.edu/uscode/text/26/7701"
+  },
+  {
+   "label": "IRS Notice 2026-15 — material assistance provided by prohibited foreign entities (full text)",
+   "url": "https://www.irs.gov/pub/irs-drop/n-26-15.pdf",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "IRS — Treasury and IRS provide guidance on material assistance by prohibited foreign entities",
+   "url": "https://www.irs.gov/newsroom/treasury-irs-provide-guidance-for-certain-energy-tax-credits-regarding-material-assistance-provided-by-prohibited-foreign-entities-under-the-one-big-beautiful-bill",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "OpenSanctions — FY2024 NDAA §154 program (the six named producers)",
+   "url": "https://www.opensanctions.org/programs/US-NDAA-154/"
+  },
+  {
+   "label": "Pillsbury — FY2026 NDAA sourcing restrictions, critical minerals and advanced batteries (§842)",
+   "url": "https://www.pillsburylaw.com/en/news-and-insights/fy2026-ndaa-sourcing-restrictions-critical-minerals-advanced-batteries.html",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "K&L Gates — understanding the new prohibited foreign entity rules for clean energy tax credits",
+   "url": "https://www.klgates.com/Understanding-the-New-Prohibited-Foreign-Entity-Rules-for-Clean-Energy-Tax-Credits-9-18-2025",
+   "date": "2025-09-18"
+  },
+  {
+   "label": "Federal Register — clean vehicle credits under §§25E and 30D, final regulations (T.D. 9995)",
+   "url": "https://www.federalregister.gov/documents/2024/05/06/2024-09094/clean-vehicle-credits-under-sections-25e-and-30d-transfer-of-credits-critical-minerals-and-battery",
+   "date": "2024-05-06"
+  },
+  {
+   "label": "x-rates — CNY/USD monthly average table for 2025 (FX basis for the USD overlays)",
+   "url": "https://www.x-rates.com/average/?from=CNY&to=USD&amount=1&year=2025"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}
