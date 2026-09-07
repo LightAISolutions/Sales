@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 107/100`
+`Sections: 108/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.08r] — 2026-09-07 05:01:28 PM EST
+
+> **Prompt:** "Regarding the five empty areas: * Software and optimization: I approve adding Stem, Habitat Energy, and Gridmatic. * Insurance and risk transfer: I approve adding Marsh, Aon, and kWh Analytics. * Upstream materials: I approve adding Albemarle for lithium, a US LFP cathode entrant, a graphite or anode name. Recommend me companies for the US LFP cathode entrant and a graphite or anode name. * Transmission developers: I approve adding Grid United and Pattern Energy. * Testing and certification: I approve adding UL Solutions, CSA Group, and Intertek. Regarding G6, the large-load interconnection module, I am willing to accept a research-synthesis module. I simply want the option to upload a document and have my app (currently Profiler, but should probably be Classroom later) break it down and teach me the core concepts that I need to understand. Given the context above, revise my overall action plan to add dossiers to fill the gap from the empty areas above and include G6 (without requiring documents). Integrate this S0-S3 action plan into the bigger Profiler & Classroom plan, evaluate what has landed since you proposed the original plan, and output an updated plan from where I am now to completion (making sure each phase has a recommended AI model/effort level). Then, give me a prompt to paste into a new Fable 5.1 xhigh session to start S0, then remember session."
+
+### Added
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7 — Program extension, from Phase 3's close to completion (agreed 2026-09-07 PM).** Persisted so the next session edits against a file, not a transcript — the lesson this plan's own preamble records.
+  - **7.1 What landed against the original plan**: Phases 0–3 landed on the planned models with three deviations recorded (2a refuted two attributions rather than corroborating them; 3 found the skeleton's "20 remaining" was 24; the drill's study pool reads top-level `flashcards[]` only, 1,154 section cards unseen). Phase 4 is now 26 sessions; Phases 5–6 move before S2; G6 is reclassified.
+  - **7.2 Decisions**: the segment layer approved with three fences moved (content contract amended — segment lessons may drill structure, roster deck opt-in; landscape analyses at the contributor tier; segments as a registry layer the Profiler Command populates). Taxonomy: seventeen segments plus software-and-optimization and insurance-and-risk-transfer, testing-and-certification merged with advisors as assurance, upstream materials and transmission developers as adjacent roles → **nineteen**. **Seventeen dossiers approved** with a model each under the coverage plan's §2 rule: Stem · Habitat Energy · Gridmatic; Marsh · Aon · kWh Analytics; UL Solutions · CSA Group · Intertek; Albemarle · Mitra Chem (ICL alternate, Nano One fallback) · Novonix (Syrah Vidalia and Westwater Kellyton alternates); Grid United · Pattern Energy; CALB · Cornex · Great Power — all marked hypotheses for the sessions to verify. **G6 accepted as research synthesis** on the G4 precedent (six of eight modules have no ingested document); a document-based revision stays possible via the `industry guidance:` command, which moves to Classroom at C3.
+  - **7.3 Run order** with model · effort · sessions · done-when · dependencies: S0 (Fable 5.1 xhigh) → K1 study-pool fix (Fable 5.1 High) → Phase 5 (Fable xhigh) → S1 generator/tracks/health checker/`reading-the-graph` (Fable High + Opus) → Phase 6 (Opus) → S3 coverage fill, 6–7 sessions (Opus for public deep records, Fable High for private) → G6 (Opus) → C3 guidance homecoming (Opus) → S2 landscape modules, ~19 (Opus) interleaved with Phase 4's 26 rows (Opus) → K2 roster deck (Opus) → C5 simulations (Fable xhigh design, Opus authoring) → C6 deferred → quarterly clocks. **~73 sessions from here.**
+  - **7.4 Sequencing and critical path**; **7.5 the paste-in brief for S0** (nine deliverables, DO NOTs, VERIFY, the CHANGELOG rotation arithmetic for a later EST day).
+- Preamble sentence pointing to §7 as the extension that supersedes §2's rows 4–6 and G6 where they differ.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §6** — nine rows added (S0 **next**, K1, S1, S3, C3, S2, K2, C5, C6 deferred); Phase 4 → **0 of 26**; Phases 5 and 6 marked moved before S2; G6 row rewritten (Opus 5 xhigh research synthesis, no longer developer-blocked); the closing sentence names the records each new row flips.
+- **`SESSION-CONTEXT.md`** — Latest Session rewritten for this session (Phase 3 + the program extension), the Phase 2b entry moved to Previous Sessions, the older entry dropped (2-session cap). Recommendation: run S0 from §7.5.
+- **`README.md`** — tree description of `INTEGRATED-REMEDIATION-PLAN.md` mentions the §7 extension; `Last updated:` line.
+
+### Verified
+
+- v05.07r (`184416c`) confirmed merged into `main` and its branch deleted by the workflow before this push; the local branch fast-forwarded to `origin/main` (`33e0be7`), so this is the session's second push under the "prior push already merged" exception — one commit for this interaction.
+- No checker input changed in this commit (documentation and session context only); `check-classroom-content.py` 10 / 3 / 134 with 0 / 0 and `check-profiler-reports.py` 0 errors / 7 warnings stand as recorded at v05.07r.
+- **CHANGELOG rotation checked, not assumed:** `grep -c` returned 107 before this section and `TZ=America/New_York date` returned 2026-09-07 — the same EST day as the nine `v04.99r`–`v05.07r` sections — so with this section the file holds 108 sections of which **10 are exempt → 98 non-exempt → no rotation**; the counter reads `Sections: 108/100`.
 
 ## [v05.07r] — 2026-09-07 06:32:19 AM EST
 
