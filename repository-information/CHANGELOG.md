@@ -3,11 +3,103 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.02r] — 2026-09-07 03:40:00 AM EST
+
+> **Prompt:** "Picking up from the X3 close-out session, run PHASE 0 of the nine-phase remediation plan on Fable 5.1
+> High as a fresh session. Phase 0 corrects a record that currently OVERSTATES progress, and it is the
+> only phase that unblocks nothing else — do it anyway, first, because everything after it reads this
+> record.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest Session — it carries the whole finding
+> set and the phase plan), then PROFILER-COVERAGE-PLAN.md §9.3, §9.4, §9.5; PROFILER-SCHEMA.md → Report
+> schema (the "Snapshot semantics" paragraph is load-bearing); and the docstring plus lines 117-145 and
+> 219-243 of scripts/check-profiler-reports.py.
+>
+> THE PREMISE, ALREADY ESTABLISHED — DO NOT RE-DERIVE IT, BUT DO RE-VERIFY THE LINE NUMBERS. X3's "done
+> when" has three clauses. Two were met at v05.01r. The third — check-profiler-reports.py reports 0
+> WARNINGS — was not, and is PERMANENTLY unreachable: :219 builds the file set from every *.report.json
+> on disk, :228-235 calls check_report() on each with NO status gate, and `superseded` is not computed
+> until :236, after the loop. Superseded reports stay on disk by schema design, so regenerating reports
+> adds clean pins AND keeps the old aged ones. The count can only grow. Separately, re-pinning a
+> published report is forbidden: the schema says a report "is immutable once published … the report
+> itself is never edited", and the renderer badges an aged pin "dossier since revised" — the drift is a
+> FEATURE. The previous session marked X3 Done against a replacement criterion it wrote itself in the
+> same commit; the developer has agreed X3 is NOT done.
+>
+> THE TASK — five components.
+>
+> (1) SPLIT THE LEDGER ROW. In §9.4, replace the single X3 row with two: X3a · integrity close-out =
+> DONE at v05.01r (six checkers, the 21 over-cap scopes, the 38 pin re-verifications, the §6 register
+> re-run — keep the existing row's substance, it is accurate), and X3b · report-pin policy = OPEN,
+> naming the unreachable clause as the reason. Update §9.5's run order to match: row 5 is no longer a
+> flat "Done". Phase D still starts at step 2 — that overlap is settled and recorded in three places.
+>
+> (2) AMEND THE EXIT CRITERION in §9.3's X3 row. It currently reads "…reports 0 warnings…". Replace it
+> with a criterion that is both achievable and meaningful. The previous session's proposal, which you
+> should evaluate rather than accept: "0 errors, and every aged pin re-verified by reading and recorded
+> in report-pins-verified.json". Leave a visible note that the original clause was defective and why —
+> do not silently rewrite history.
+>
+> (3) ADD repository-information/report-pins-verified.json. Mirror the shape and spirit of
+> repository-information/profiler-crossref-accepted.json (schemaVersion + a list, each entry carrying a
+> reason and a date). One entry per verified pin: report id, slug, the profileVersion it was verified
+> AT, the date, and a one-line reason. Populate it with the 38 pins verified at v05.01r. YOU MUST
+> RE-CONFIRM RATHER THAN TRUST: run check-profiler-reports.py, confirm it still reports 0 errors and 38
+> warnings with the same (slug, pinned version, current version) triples the v05.01r CHANGELOG entry
+> records, and only then write the file. If any triple differs, a dossier moved since — stop and say so.
+>
+> (4) CHANGE scripts/check-profiler-reports.py so the warning count becomes actionable: (a) skip
+> superseded reports for PIN-DRIFT only — they must still be schema-checked and citation-checked, and
+> the index status reconciliation at :236-243 must keep working; (b) consult report-pins-verified.json
+> so a pin verified at version N stays quiet until the dossier moves PAST N, then warns again. That
+> re-warning is the intended behaviour, not a bug — Phase 1 will bump hithium, google, arevon,
+> compass-datacenters and huawei-digital-power, and hithium alone is pinned in three reports, so expect
+> those pins to go loud again and leave them loud. Update the script's docstring, since it currently
+> states the severity model you are changing.
+>
+> (5) Persist the nine-phase integrated plan (Phase 0 through Phase 6 plus the developer-blocked G6, each with its model and effort level) as its own document under repository-information/. It exists today only in a chat transcript, and Phase 3's curriculum-skeleton review has nothing to edit against without it. Source the content from SESSION-CONTEXT.md's Latest Session, which records every phase, model and rationale.
+>
+> NO DOSSIER EDITS AND NO REPORT EDITS. Phase 1 owns the dossier fixes; the reports are immutable.
+> If you find a new defect while reading, record it for Phase 1 rather than fixing it here.
+>
+> CHANGELOG — CHECK, DO NOT ASSUME. The file holds 101 sections, three of them dated 2026-09-07. If your
+> push lands on the SAME EST day, it is 102 total − 4 exempt = 98 non-exempt → NO rotation. If it lands
+> on a LATER day, it is 102 non-exempt → ROTATION FIRES, and the oldest whole date group is the
+> THIRTEEN sections dated 2026-09-01 (v04.01r through v04.13r). Verify with
+> `grep -c '^## \[v[0-9]' repository-information/CHANGELOG.md` and `TZ=America/New_York date '+%Y-%m-%d'`
+> before deciding; step 1 of CHANGELOG-archive.md's rotation logic now correctly counts NON-EXEMPT
+> sections (fixed at v05.01r). If rotation fires, `git fetch --unshallow` MUST run BEFORE any SHA lookup
+> or every moved header archives as [SHA unavailable] permanently — budget ~10 extra minutes.
+>
+> VERIFY: all six checkers exit 0; check-profiler-reports.py's warning count is now explainable
+> line-by-line rather than merely nonzero; the new JSON file validates and is referenced from §9.3;
+> §9.4 and §9.5 no longer claim X3 is finished. Normal Pre-Commit and Pre-Push checklists; one push
+> commit on a claude/* branch."
+
+### Added
+
+- **`repository-information/report-pins-verified.json`** — the durable record of report-pin re-verifications, mirroring the shape and spirit of `profiler-crossref-accepted.json` (`schemaVersion` + a note + a list, one entry per `(report, slug)` carrying `pinnedVersion`, the `profileVersion` the pin was verified **against** (`verifiedAt`), a date and a one-line reason). **Seeded with the 38 pins X3a verified at v05.01r, after re-confirming rather than trusting:** the checker was re-run and reported 0 errors / 38 warnings with the same 38 `(slug, pinned, current)` triples — 17 short-gap (≤2 versions, compared) and 21 wide-gap (3–6 versions, read), the split the v05.01r entry records, with its named examples (`vertiv` v3→v9, `schneider-electric` v3→v9, `hithium` v5→v11, `eaton` v3→v8) and its cited dossier versions (`vantage` v9, `stack-infrastructure` v7, `meta` v9, `sungrow` v8, `catl` v6) all matching — and `git diff 6ad51a9..HEAD -- live-site-pages/profiler-data` was empty, so no dossier had moved since that commit. The file was then generated from the checker's own output, not typed. Reasons carry the specific figures the v05.01r entry lists where it lists them (the seven grid-scale `usdMillions` values, the four AIDC wide-gap claims, the three corpus-moved pins at `vantage`, `stack-infrastructure` and `meta`).
+- **`repository-information/INTEGRATED-REMEDIATION-PLAN.md`** — the nine-phase integrated Profiler + Classroom program (Phase 0 record/criterion · Phase 1 five zero-research dossier fixes · 2a `sungrow` + `catl` research · 2b `tract` citation read · Phase 3 curriculum re-plan and skeleton review · Phase 4 twenty lessons, one per session · Phase 5 report-strategy evaluation · Phase 6 report regeneration · the developer-blocked G6), each with its model and effort level and the written reason for the choice, sourced from `SESSION-CONTEXT.md`'s Latest Session. Also carries the twelve-item X3 finding set with a phase per finding, the curriculum skeleton as it stands (3 lanes · 5 tracks · 30 lessons · 10 built · 20 remaining, per track) so Phase 3 has something to edit against, the dependency and caveat list (Phase 5 before 6; do not act on the `named-project` whitespace call; X3b does not gate Phase D), what is recorded but not scheduled, and a status ledger with Phase 0 Done. It existed only in a chat transcript until now. ~31 sessions, 20 of them lesson authoring.
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §9.4 — the X3 row is split into X3a and X3b, reversing the v05.01r flip.** **X3a · integrity close-out = Done at v05.01r** keeps the existing row's substance unchanged (six checkers, the 21 over-cap scopes, the 38 pin re-verifications, the §6 register re-run) with a note that the row now covers the two met clauses. **X3b · report-pin policy = Open**, naming the unreachable third clause as the reason, recording that the v05.01r session flipped the whole row against a criterion it wrote in the same commit, that the developer did not accept that, and that the row stays Open **until the developer accepts the amended criterion** — the session that writes a criterion does not close against it. §9.5 row 5 reads X3a Done / X3b Open and states X3b does not gate row 6; Phase D still starts at step 2. §9.5 now also points at `INTEGRATED-REMEDIATION-PLAN.md` as the live run order, and §6 records that X3b does not gate Phase D.
+- **§9.3's X3 exit criterion amended, with the defect left visible.** The original "reports **0 warnings**" clause is struck through in place rather than rewritten, with a bracketed note that it was defective and permanently unreachable, and replaced by: *0 errors and 0 warnings under the v05.02r severity model — every aged pin on every **current** report re-verified by reading at the dossier's current `profileVersion` and recorded in `report-pins-verified.json`, superseded reports excluded from pin drift.* The row's "re-pin all four reports" instruction is likewise struck (the schema forbids it). A new **"Phase 0 evaluation"** paragraph records why the clause was permanently unreachable (re-verified against the v05.01r script: `:219` file set from every `*.report.json`, `:228–235` no status gate, `superseded` computed at `:236` after the loop; superseded reports stay on disk by schema design, so regeneration adds clean pins and keeps aged ones — the count could only grow) and **evaluates rather than accepts the v05.01r proposal** ("0 errors, and every aged pin re-verified by reading and recorded"): right in substance, wrong in form — (a) "re-verified by reading" is prose the checker cannot test, so the criterion would be met by assertion, exactly how the v05.01r flip went wrong; (b) it discards the warning count, the surface's only mechanical signal; (c) it is silent on superseded reports, so the count would still grow. Adopted instead: make the warning count mean what the proposal wanted. §7's checker bullet now says what a warning means since v05.02r.
+- **`scripts/check-profiler-reports.py` — the warning count is now actionable.** (a) Reports are loaded in a first pass so `superseded` is known before any pin check; superseded reports are **skipped for pin drift only** — still schema-, citation- and index-checked, and the status reconciliation still runs unchanged. (b) The checker consults `report-pins-verified.json`: a moved pin is quiet while the dossier sits at its `verifiedAt` and **warns again once the dossier moves past it** (`… last re-verified at vN — moved past its verification; read it again`) — the intended behaviour, not a bug; a moved pin with no entry warns `not yet re-verified`. (c) The list itself is validated as errors: unknown report, report superseded, slug not pinned by that report, duplicate `(report, slug)`, non-integer `verifiedAt`, `verifiedAt` at or below the pinned version, `verifiedAt` beyond the dossier's current version, and an entry for a pin that has not aged. The summary line now states the superseded count, skipped pins, and how many aged pins are verified and quiet. Docstring rewritten for the new severity model. **Exercised in a scratch copy before commit:** bumping `hithium` v11→v12 produced exactly the three expected re-warnings and nothing else; marking `grid-scale-bess` superseded skipped its 12 aged pins and flagged its 12 now-stale entries as errors; the malformed-entry cases each produced the intended error. **Live state at v05.02r: 4 reports, 0 superseded, 0 errors, 0 warnings, 38 aged pins verified and quiet** — every line of the count is now explainable. Expect Phase 1 to bump `hithium`, pinned in three current reports, and to leave those three warnings loud.
+- **`PROFILER-SCHEMA.md` → Report schema** — "Snapshot semantics" now states how drift on a current report is handled (warn until re-verified by reading and recorded; warn again when the dossier moves past that version; superseded reports never drift-checked; re-pinning never the answer), and the mandatory-verification paragraph names the verified-pins file.
+- `README.md` tree gains the two new files with descriptions.
+
+### Verified
+
+- **All six checkers exit 0 over the 154-company corpus after the changes:** `sync-profiler-registry.py --check` (0 of 154 out of sync, roster/refresh-calendar bijection clean), `build-profiler-graph.py` (**`profiler-graph.json` byte-identical for the sixth consecutive session**, asserted against the exact digest `563ae281f00ce164075ded5c21315c67769bbf50bcb8a8d046c80b882c2168d6`), `check-profiler-study.py` (154 guides + 1,210 concepts, 0 / 0), `check-profiler-relationships.py` (0 findings, 10 accepts), `check-profiler-crossrefs.py` (0 candidates, 21 scopes noted), `check-profiler-reports.py` (0 / 0 / 38 quiet). `check-classroom-content.py` also clean (10 lessons, 3 tracks, 134 gate cases).
+- **No dossier and no report was edited.** Phase 1 owns the dossier fixes; the reports are immutable. No new defect was found while reading, so nothing new was recorded for Phase 1 beyond the X3 set now tabulated in the plan.
+- **CHANGELOG rotation checked, not assumed:** `grep -c` returned 101 before this section; the push lands on **2026-09-07 EST**, the same day as `v04.99r`–`v05.01r`, so with this section the file holds 102 sections of which **4 are exempt → 98 non-exempt → no rotation**. The counter legitimately reads `Sections: 102/100`. The next push on a later EST day will rotate the thirteen `2026-09-01` sections (`v04.01r`–`v04.13r`) and must run `git fetch --unshallow` first.
 
 ## [v05.01r] — 2026-09-07 02:36:16 AM EST
 
