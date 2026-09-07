@@ -6,12 +6,67 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 08:58 PM EST
+**Repo version:** v04.95r — **one** push commit this session (`680f389`), merged to `main` as `850285c`, plus this housekeeping commit
+**Branch:** `claude/guide-backfill-buyer-storage-rwwnu2` (restarted from `origin/main` after the merge — see below)
+**Model:** Opus 5 xhigh — **guide-backfill session 1 of 6**, the five IPP buyer-side companies. Guides only.
+
+### What was done
+
+**v04.95r — five schema-v2 study guides plus lesson plans, no dossier touched.** `apex-clean-energy` (10 sections), `arevon` (11), `eolian` (10), `jupiter-power` (9), `key-capture-energy` (9). No `profileVersion` moved, nothing archived, `archive-index.json` untouched — and `profiler-graph.json` came back **byte-identical** after the rebuild, which is independent proof the guides-only constraint held.
+
+**The five were designed as one non-overlapping course, not five variations.** That decision was taken up front and is the reason they are worth reading in order:
+- `apex-clean-energy` — *the project lifecycle*: the development funnel and its attrition, the interconnection queue as the scarce asset, setback geometry and fire code as engineering inputs, the four-layer capital stack and why the tax-credit buyer's diligence (not a procurement policy) picks the supplier, attached against standalone, integrator insolvency as a warranty problem
+- `arevon` — *the offtake contract*: the resource-adequacy obligation as the source of demand, five contract forms and their risk allocation, ELCC against net qualifying capacity, the saturation mechanism by which storage erodes its own accreditation, DC- against AC-coupling, tax equity against credit transfer, single-supplier concentration read as a deliberate trade, safety as a specification
+- `eolian` — *the revenue stack*: four layers and their sharply different saturation behaviour, why reserves stop paying in every maturing market, the same battery as five businesses in ERCOT/CAISO/PJM/MISO/NYISO, duration as an asymmetric bet, forward capacity as a financing instrument, the connection as currency
+- `jupiter-power` — *dispatch*: inventory with an option attached, day-ahead as a hedge, four interacting inputs to an offer curve, warranty as a throughput budget, co-optimisation as a capital-allocation input, keeping or selling the dispatch right
+- `key-capture-energy` — *the regulated purchase*: resource plan to solicitation to commission approval, prudence review as the discipline behind every regulated preference, five structures, locational value, non-wires alternatives, three shapes of state incentive, being a market's first battery
+
+**Every guide opens by pointing chemistry back at `rept` and `gotion`** rather than re-teaching cells, containers or thermal design. That cross-reference is now the corpus convention for buyer-side guides.
+
+**24 concepts registered** (1,049 → 1,073): the market names the corpus lacked (`nyiso`, `iso-ne`, `icap`, `reliability-pricing-model`), the revenue anatomy (`revenue-stack`, `frequency-regulation`, `non-spinning-reserve`, `day-ahead-market`, `real-time-market`, `locational-marginal-price`, `offer-curve`, `degradation-cost`, `must-offer-obligation`), accreditation and siting (`net-qualifying-capacity`, `duck-curve`, `setback`, `network-upgrades`, `energy-only-interconnection`), procurement (`system-integrator`, `capacity-maintenance-agreement`, `non-wires-alternative`, `solar-peaker`, `energy-plus-load`, `speed-to-power`).
+
+**Also fixed three README tree entries C12 never added** — `study-prep/gotion/`, `study-prep/rept/`, `study-prep/whiting-turner/`. Found by the [PC-README-TREE] completeness audit, not reported by anyone. The study-prep listing is now exact at 85 directories.
+
+### Where we left off
+
+Push merged (`850285c`). The branch was **restarted from `origin/main`** for this housekeeping commit, because the prior push had already merged and its history is now on `main`. All six checkers exit 0; roster/calendar bijection clean at 154; 133 guides and 1,073 concepts validate with zero errors and zero warnings. The developer asked for a paste-in prompt for backfill session 2 and this context write.
+
+### Key decisions and findings
+
+- **The programmatic collision check earned its keep on the first run.** Of 25 proposed concepts, one alias — `frequency-regulation`'s *regulation service* — was already registered under `ancillary-services`. A phrase search for the display term would not have found it. Method that worked: load the registry, build a lowercase map of **every term and every alias** (3,109 keys), test every proposed term and alias against it, report all hits at once. Also worth knowing: **83 of an initial 108 candidate terms were already registered**, several under differently-named slugs (`resource adequacy` → `planning-reserve-margin`, `capacity accreditation` → `elcc`, `cluster study` → `batch-study`, `letter of credit` → `credit-support`, `peaker` → `simple-cycle`). The registry is far deeper than a term-by-term intuition suggests — always check before writing a definition.
+- **Extract the marker inventory from the finished guides, then intersect with the proposed concept set.** That step caught a 26th concept, `greenfield`, drafted as the obvious pair to the registered `brownfield` and used by nothing. Dropped before the merge. Intention is not usage; only the finished text is evidence.
+- **Diff proportionality held everywhere.** `profiler-companies.json` was never opened. Concepts 168/0 (pure insertion, 24 alphabetically placed entries, no reordering), plan 5/5, README 22/1, CHANGELOG 42/1, version 1/1.
+- **Serialisation conventions re-confirmed by round-trip**: `<slug>.study.json` is indent=1 / `ensure_ascii=False` / trailing newline; `profiler-concepts.json` is indent=2 / `ensure_ascii=False` / trailing newline. Each was asserted byte-exact before and after writing.
+- **The designated branch already existed at merged history when the session opened** — checked out at exactly `origin/main`'s tip with a stale remote-tracking ref, while `git ls-remote` showed no `claude/*` branches at all. Fetch, prune, start fresh. The same thing happened again for this housekeeping commit after the v04.95r merge.
+- **The checker's `{{term}}` trap is real and silent while authoring**: markers in `title`, `read` and `timeline.lanes.*` render as literal braces. All five guides were written with markers confined to `ps`/`intro`/`note`/`cards`/`rows`, and verified programmatically before the first checker run.
+
+### Active context
+
+- **Branch:** `claude/guide-backfill-buyer-storage-rwwnu2` · **repo version:** v04.95r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
+- **Corpus:** 154 companies · 154 profiles · **133 study guides (21 backfills outstanding)** · 374 archived dossier versions · **1,073 concepts** · 85 study-prep directories
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG: 98/100**, counter verified against the real section count (`grep -c '^## \[v[0-9]'`). **Rotation fires on backfill session 3, or session 4 at the latest** — and the clone must be deepened *before* rotating, because SHA enrichment on the oldest groups fails silently on a shallow clone.
+- **The 21 remaining backfills, grouped as §8 has them:** IPP buyer-side (4) `lightsource-bp` `nextera-energy-resources` `plus-power` `terra-gen`; bridge-power supplier (6) `voltagrid` `proenergy` `enchanted-rock` `mainspring-energy` `on-energy` `prevalon`; integrator (7) `canadian-solar` `crrc-zhuzhou` `envision-energy` `hyperstrong` `ls-energy-solutions` `sunwoda` `trina-storage`; EPC (4) `blattner` `mastec` `solv-energy` `samsung-ct`
+- **No dossier errors were found to hand forward.** The five profiles were read for `productsAndServices`, `technicalSpecs` and `policyExposure` only; nothing read contradicted itself or the corpus.
+- **Standing, unassigned:** the README *archive* listing is still well behind (the non-archive listing is exact); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; OSHA IMIS and SEC EDGAR are both network-blocked from this environment.
+
+### Recommendation for next session
+
+- Run **guide-backfill session 2** on the six bridge-power suppliers — `voltagrid`, `proenergy`, `enchanted-rock`, `mainspring-energy`, `on-energy`, `prevalon` — on Opus 5 xhigh, guides only. They are the next coherent cluster, and the five buyer-side guides just shipped give them their teaching contrast: bridge power is what a buyer procures when the interconnection queue, not the equipment, is the thing it cannot wait for. Six guides is one more than this session carried, so budget the extra reading rather than the extra authoring.
+
+**To continue:** type `run guide backfill session 2`
+
+## Previous Sessions
+
+### Session — Phase C session C12, the last three new companies (Opus 5 xhigh)
+
 **Date:** 2026-09-06 08:23 PM EST
 **Repo version:** v04.94r — **one** push commit this session (`e1324c7`), pushed to `claude/c11-landing-timeline-jmos13`, plus this housekeeping commit
 **Branch:** `claude/c11-landing-timeline-jmos13` (no rebase needed — `origin/main` had not advanced)
 **Model:** Opus 5 xhigh — Phase C session **C12**, the last three new companies in the coverage programme.
 
-### What was done
+#### What was done
 
 **v04.94r — C12: `whiting-turner`, `gotion`, `rept`.** Three dossiers at schema v7 / pv1 with schema-v2 study guides and lesson plans. 62 / 61 / 52 sources; 11 / 12 / 10 relationships; 11 / 9 / 10 guide sections. Six research subagents (two per company, first-party then third-party) ran in parallel, 9–25 minutes each.
 
@@ -26,11 +81,11 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **Plan bookkeeping:** §5's C12 row rewritten from hypothesis to record; §8's three rows flipped; §9.4's X3 row records its first precondition met; **§7's after-every-write list corrected from four scripts to six** plus the reachability probe.
 
-### Where we left off
+#### Where we left off
 
 Push merged. Working tree clean apart from this housekeeping commit. All six checkers exit 0 plus the probe. `Sections: 97/100` in CHANGELOG.md — **three pushes of headroom**. The developer asked for a paste-in prompt for the first guide-backfill session and this context write.
 
-### Key decisions and findings
+#### Key decisions and findings
 
 - **I recorded a wrong reachability finding and the correction is now a rule.** One probe of `www.szse.cn` returned `000`; I wrote it into §7 as unreachable. A subagent then used the host successfully and a three-attempt re-probe returned **200 / 000 / 200** — intermittent, not down. §7 now says: sample a failing host at least three times before recording it as blocked. The failure mode is asymmetric — a false "blocked" narrows the research plan and is never contradicted, because nobody retries a host they have written off.
 - **Two agent-reported "corpus errors" were artefacts of my own prompt wording.** `jupiter-power` already treats St Gall and Fort Stockton as one project; `prevalon` was already at pv4 with the Nextpower acquisition recorded. Reading the files rather than trusting the reports avoided two needless revisions — the over-calling failure mode §9.2 warns about.
@@ -41,7 +96,7 @@ Push merged. Working tree clean apart from this housekeeping commit. All six che
 - **Serialisation traps confirmed empirically**: `apex-clean-energy.profile.json` plus exactly two report files refuse round-trip; `archive-index.json` and the refresh calendar are indent=2 with **no** trailing newline; profiles and guides are indent=1 with one. A byte-exact write helper was proven against all seven families before use.
 - **The `s154-listed-bess-suppliers` report scope was corrected by raw string replacement**, never re-serialised — its rationale said "Gotion is listed but not covered by a dossier", which C12 made false. One line changed.
 
-### Active context
+#### Active context
 
 - **Branch:** `claude/c11-landing-timeline-jmos13` · **repo version:** v04.94r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
 - **Corpus:** 154 companies · 154 profiles · **128 study guides (26 backfills outstanding)** · 374 archived dossier versions · 1,049 concepts
@@ -51,57 +106,8 @@ Push merged. Working tree clean apart from this housekeeping commit. All six che
 - **Two dated triggers now in the calendar:** Volkswagen's Gotion voting waiver expires ~**2027-12-15**, on which date it mechanically becomes controlling shareholder unless extended; FY2026 NDAA **§842** captures REPT from **2028-01-01**.
 - **Standing, unassigned:** the README archive listing is well behind (the non-archive listing is exact at 282, matching disk); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; OSHA IMIS and SEC EDGAR are both network-blocked from this environment.
 
-### Recommendation for next session
+#### Recommendation for next session
 
 - Start the **guide backfills** with the five IPP buyer-side companies — `apex-clean-energy`, `arevon`, `eolian`, `jupiter-power`, `key-capture-energy` — on **Opus 5 xhigh**, guides only, no dossier edits. They are the largest thematic cluster, §6's `who-buys-storage` and `how-a-storage-project-happens` lessons depend on them, and starting now puts the CHANGELOG rotation early in the six-session block rather than against the deadline.
 
 **To continue:** type `start the guide backfills`
-
-## Previous Sessions
-
-### Session — Phase C session C10 + five follow-ons (Opus 5 xhigh)
-
-**Date:** 2026-09-06 07:00 PM EST
-**Repo version:** v04.93r — **five** push commits this session (`e8cfd6c` v04.88r was the prior session's tail; this session landed `f16c0f8` v04.89r, `2b8cb3c` v04.90r, `987d5f2` v04.91r, `61e2474` v04.92r, `fddbed4` v04.93r), all merged to `main`, plus this housekeeping commit
-**Branch:** `claude/phase-c10-profiler-coverage-ww7aro` (rebased onto `origin/main` after each merge)
-**Model:** Opus 5 xhigh — Phase C session **C10** (Blackstone · Brookfield · Macquarie, landed at v04.86r before the context compaction) and then five follow-on pushes, each one the developer accepting the previous response's recommendation.
-
-#### What was done
-
-**v04.89r — bijection enforcement.** `scripts/sync-profiler-registry.py` now asserts that every active roster company has exactly one refresh-calendar row and every row resolves to a covered company, plus the row shape from PROFILER-SCHEMA.md. Error under `--check` (exit 1), warning in write mode — because the Profiler Command registers a company at step 5 and adds its calendar row later in the same session. Tested by being made to fail in ten sandbox states.
-
-**v04.90r — closed the C10 step-7 deferral across the nine unreached dossiers.** One needed a change: `nvidia` to pv9, adding the 10 Aug 2026 six-firm compute-financing MOU and three reciprocal edges (`blackstone`, `brookfield`, `fluidstack`). Eight needed nothing and each is named with its reason in the CHANGELOG. The BlackRock/Blackstone control was run over all nine and came back clean.
-
-**v04.91r — the overdue `nvidia` earnings refresh.** Q2 FY2027 actuals (revenue $96.2B +106% against a $91B guide; data center $89.0B; GAAP EPS $2.46 above non-GAAP $2.22 on $7.771B of equity-securities gains; Q3 guided $108.0B ±2% at 74.0%). All four calendar watch items worked; the row advanced out of OVERDUE, `nextReport` rolled to 2026-11-25.
-
-**v04.92r — `scripts/check-source-reachability.py`.** A disclosure-tier reachability probe plus a corpus provenance measurement. Always exits 0. Two defects in the draft were found by testing it to failure.
-
-**v04.93r — archive-rotation hardening.** Did **not** run the rotation (the rule says stop at ≤100 and we are at 96). Dry-ran it instead and found the real risk: on a shallow clone every SHA lookup for the first-to-rotate groups fails silently.
-
-#### Where we left off
-
-All five pushes merged. Working tree clean, nothing unpushed. `Sections: 96/100` in CHANGELOG.md — four pushes of headroom. All seven checkers exit 0. The developer asked for a plan evaluation, a next-session prompt, and this context write.
-
-#### Key decisions and findings
-
-- **The attached run-order snapshot the developer pasted is STALE.** Its items ② (X2), ③ (F6·F7·F8) and most of ④ (C5–C10) are already complete. The real remaining program is **C12 → 6 guide sessions → X3 → Phase D**. Recorded here so a future session does not re-derive it.
-- **Phase X is done except X3.** X1 shipped at v04.71r; X2 is empirically clear — `check-profiler-relationships.py` reports 0 findings, 0 URLs outside `sources[]`, 0 incoherent reciprocals, and all 10 accept-list entries carry a `why`. **§9.4's status ledger is EMPTY and should be filled in** — the plan does not record that X1 and X2 landed.
-- **§7's after-every-write list is out of date** — it names four scripts; there are now six checkers plus the reachability probe.
-- **EDGAR is blocked from this environment's egress.** SEC's own "Undeclared Automated Tool" page under a correctly declared non-personal User-Agent; network-keyed, not fixable by changing the UA. **But `asx.com.au` and `londonstockexchange.com` both return 200**, so the filing route is alive and it is SEC specifically that is down. **This does not bite C12** — Whiting-Turner is private, Gotion files on Shenzhen (`szse.cn` / `cninfo.com.cn`) and REPT on HKEX (`hkexnews.hk`).
-- **Never put the developer's email in a request header.** `check-source-reachability.py` carries a role address on an org domain and a comment saying so.
-- **The accept list stays at TEN.** `portfolio` entered the enum at v04.85r; the list may grow only for genuinely-both-true pairs, never for enum gaps.
-- **Three of my four recommendations this session needed correcting on contact with the repo.** The pattern was recommending from memory of the rules at the end of a response rather than checking first.
-
-#### Active context
-
-- **Branch:** `claude/phase-c10-profiler-coverage-ww7aro` · **repo version:** v04.93r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
-- **Corpus:** 151 companies · 151 profiles · 125 study guides (26 backfills outstanding) · 297 archived dossier versions
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG:** 96/100. Next rotation moves the 2026-08-31 group (3 sections) once the total passes 100. **Deepen the clone first** — now a mandatory step in the procedure.
-- **Standing, unassigned:** the README archive listing is 53 entries behind (313 listed vs 366 on disk, ordering undecided); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; `nvidia`'s 2026-08-27 calendar one-shot fired SUCCEEDED but landed no commit, which no checker can see.
-
-#### Recommendation for next session
-
-- Run **Phase C session C12** — `whiting-turner`, `gotion`, `rept` — on **Opus 5 xhigh**, the last three new companies in the program, taking the corpus to the 154 that X3's close-out assumes. Fill in §9.4's empty status ledger for X1/X2 and refresh §7's checker list in the same commit, since both are stale and both are one-line fixes a C12 session is already in the right files to make.
-
-**To continue:** type `profiler coverage plan session C12`
