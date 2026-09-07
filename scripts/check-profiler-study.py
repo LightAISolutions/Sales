@@ -145,6 +145,27 @@ def check_unformatted(where, sec):
             if isinstance(v, str) and "{{" in v:
                 err("%s: lanes.%s is a plain-text legend label — a {{term}} here "
                     "shows literal braces to the reader" % (where, k))
+    # Quiz choices are the one formatted field a marker should still stay out of,
+    # and the reason is interaction rather than rendering. gdQuiz runs q, every
+    # c[] and why through gdFmt, so all three render the tooltip span correctly —
+    # this is NOT a literal-braces case. But a choice is a <button>: measured in
+    # headless Chromium 2026-09-07, a click on the term inside it fires the
+    # button's handler FIRST (the answer is submitted before the tooltip opens),
+    # so on touch there is no way to read the definition without answering; and
+    # once answered gdQuiz sets button.disabled, which suppresses mouse events on
+    # descendants, so the tooltip is dead exactly when the reader is reviewing a
+    # wrong answer. Put the term in the question or in why[] instead — both are
+    # plain containers where the tooltip behaves normally.
+    if sec.get("kind") == "quiz":
+        for j, it in enumerate(sec.get("items") or []):
+            if not isinstance(it, dict):
+                continue
+            for ci, choice in enumerate(it.get("c") or []):
+                if isinstance(choice, str) and "{{" in choice:
+                    err("%s items[%d].c[%d]: a {{term}} inside a quiz choice renders "
+                        "but its tooltip is unreachable — tapping it submits the answer, "
+                        "and the button is disabled afterwards; move the term into the "
+                        "question or into why" % (where, j, ci))
 
 
 def check_section(where, sec):

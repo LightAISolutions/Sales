@@ -2,7 +2,7 @@
  "schemaVersion": 2,
  "slug": "blackstone",
  "title": "Blackstone — Technology Study Guide",
- "lastUpdated": "2026-09-06",
+ "lastUpdated": "2026-09-07",
  "sections": [
   {
    "id": "start-here",
@@ -251,12 +251,12 @@
      "q": "A manager's total AUM rises by USD 50bn on a new fund close, but revenue does not move. The most likely reason is:",
      "c": [
       "The fee rate was cut",
-      "The capital is committed but not yet drawn, so it is not yet {{fee-earning AUM}}",
+      "The capital is committed but not yet drawn, so it is not yet fee-earning capital",
       "Performance fees fell by the same amount",
       "The fund is denominated in another currency"
      ],
      "a": 1,
-     "why": "Committed-but-undeployed capital — {{dry powder}} — typically sits in total AUM but outside fee-earning AUM in most structures, so a large close raises the headline before it raises revenue."
+     "why": "Committed-but-undeployed capital — {{dry powder}} — typically sits in total AUM but outside {{fee-earning AUM}} in most structures, so a large close raises the headline before it raises revenue."
     },
     {
      "q": "Which pairing correctly describes the structural difference between Blackstone's QTS position and Macquarie's Aligned position?",

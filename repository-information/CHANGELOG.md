@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.99r] — 2026-09-07 12:52:38 AM EST — v01.83w
+
+> **Prompt:** "Regarding the blackstone/Macquarie quiz marker question, where can I check the quiz rendering path
+> to settle whether markers there format or show literal braces? Are you referring to the self test section of the
+> study guide?" … "continue with your recommendation"
+
+### Fixed
+
+- **The three-session-old `blackstone`/`macquarie` quiz-marker question is settled, and the answer reverses the assumption it was filed under.** The suspicion, carried forward unexamined since v04.95r, was that `{{term}}` markers inside `check-yourself` quiz items might render as literal braces. **They do not.** `gdQuiz` (`live-site-pages/Profiler.html:7274`) passes the question, **every choice**, and the `why` explanation through `gdFmt` (`:6714`), which is the same formatter every other authored field uses; `gdBindTermTips` (`:7307`) binds by **event delegation on the guide shell** (`:7098`), checking `ev.target.classList.contains('gd-term')`, so a term span nested inside a `<button>` is reached like any other. The hand-enforced "keep quiz items marker-free" convention was **stricter than the renderer requires**, and the real scope was never a class of breakage: **three markers total** — `blackstone` had one in a choice and one in `why`, `macquarie` one in `why` — all three resolving to real registry definitions.
+- **But quiz *choices* are a genuine trap, for a reason that has nothing to do with rendering — measured, not inferred.** A standalone headless-Chromium reproduction of the exact markup and listeners returned: hovering a term in an **enabled** choice fires the tooltip; **clicking** it logs `ANSWERED` *before* `TIPCLICK`, because the term span is a child of the button and the click bubbles to the button's own handler — so on a touch device there is no way to read the definition without committing that answer; and after `gdQuiz` sets `button.disabled`, hovering the term returns **nothing**, because disabled form controls suppress mouse events on their descendants — so the tooltip dies exactly when a reader is reviewing a wrong answer. A marker in `q` or in `why` has neither problem: both are plain `<div>` containers.
+- **`scripts/check-profiler-study.py` now enforces exactly that boundary.** A new guard in `check_unformatted()` errors on `{{…}}` inside `quiz items[].c[]` and deliberately leaves `q` and `why` **unguarded**. The comment records why this case is unlike its two neighbours in that function: `title`, `read` and `timeline.lanes.*` are literal-braces bugs, whereas a quiz choice renders correctly and fails on interaction. Verified both ways — the guard reported exactly **one** error across all 150 guides before the fix (`blackstone.study.json sections[10] items[0].c[1]`), confirming the corpus-wide scope, and zero after it.
+- **`blackstone.study.json`** — `{{fee-earning AUM}}` moved out of the choice text (now reading "not yet fee-earning capital") and into that item's `why`, which already referenced the same term in plain text. The tooltip survives, both wrinkles are gone, and `{{dry powder}}` beside it is untouched. `lastUpdated` → 2026-09-07. **`macquarie.study.json` was not modified** — its single marker is in `why`, where the behaviour is correct.
+
+### Changed
+
+- **`SESSION-CONTEXT.md` standing-item list** — the quiz-marker question and the CHANGELOG rotation-rule contradiction both removed, with a note recording where each was settled (v04.99r and v04.98r). Three items remain: the README archive listing, the missing `archive/nvidia.profile.v2.json`, and the two network-blocked research hosts.
+
+### Notes
+
+- **The session's own authoring helper had encoded the old rule, and caught itself doing it.** The scratchpad audit used while writing the four EPC guides refused any marker anywhere in a quiz item, so it rejected the corrected `blackstone` file — the legitimate `why` marker tripped it. That is a small, clean demonstration of the finding: the blanket convention was wrong, and a tool built from it produces false positives. The helper was narrowed to choices before the edit was applied.
+- **The four v04.98r EPC guides are unaffected** — they keep all quiz items marker-free, which is conservative but valid under the refined rule. No guide was rewritten to add markers; the rule is a guard, not a prescription.
+- **No dossier, concept or graph change** — this touches one study guide, one checker and three bookkeeping files. `profiler-companies.json` and `profiler-graph.json` were not opened.
 
 ## [v04.98r] — 2026-09-06 11:47:34 PM EST — v01.83w
 
