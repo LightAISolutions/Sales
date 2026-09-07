@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17g] — 2026-09-07 07:44:48 PM EST — v05.10r
+
+### Fixed
+- **The drill's study pool now includes every study-guide card**, not only the ones kept at the top of a guide — about 1,920 cards instead of about 770. Existing card histories are unchanged
+
+### Changed
+- The pool can now grow to 2,400 study cards before the safety cap applies, and its cached form is smaller, so the full pool stays cached rather than being rebuilt on every request
 
 ## [v01.16g] — 2026-09-03 01:27:59 AM EST — v04.37r
 

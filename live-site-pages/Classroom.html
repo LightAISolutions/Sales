@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.07w">
+  <meta name="build-version" content="v01.08w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -5420,14 +5420,13 @@ function clShowLesson(id, scrollTo) {
 // The server owns scheduling and the gate; this file owns the study-guide
 // half of the item pool and the grading surface.
 //
-// Why the client supplies study items: 802 of the ~855 items live in study
-// guides on public Pages, which the server does not hold. Rather than have
-// Classroom.gs fetch 62 files per drill, the page sends the inventory it can
-// see — [[itemId, hash], …] — and the server validates it by containment
-// (slug in the public registry, capped) exactly as Profiler validates
-// 'study-<slug>' progress ids. Lesson items never travel this way: the server
-// enumerates those itself from the lessons the tier may read, so the gate
-// cannot be widened by anything the client claims.
+// Where the study half comes from: ~1,920 of the ~2,050 items live in study
+// guides on public Pages. The server builds and caches that pool itself
+// (ids and hashes only — see clDrillStudyItems_ in Classroom.gs) and serves
+// study items by id; this page fetches the text for the handful of guides a
+// queue actually names. Lesson items travel with their payload: the server
+// enumerates those from the lessons the tier may read, so the gate cannot be
+// widened by anything the client claims.
 var clDrillText = {};         // id → {q, a, title} for study cards actually served
 var clDrillQueueArr = [];
 var clDrillPos = 0;
@@ -5440,8 +5439,12 @@ function clDrillHashJs(text) {
 }
 
 // Fetch the text for the study cards in THIS queue — typically a handful of
-// guides, not all 62. The server sends study items as ids only (it caches ids
-// and hashes, never card text), so the page resolves the text it needs.
+// guides, not all ~154. The server sends study items as ids only (it caches
+// ids and hashes, never card text), so the page resolves the text it needs.
+// A guide keeps its cards in one of two places and the id says which:
+// sf:<slug>:<n> is the top-level flashcards[n]; ss:<slug>:<sectionId>:<n> is
+// cards[n] of the section of kind 'flashcards' with that id (every guide
+// authored from 2026-09). Both are indexed here from the one fetch.
 // cache: 'no-store' throughout: a drill scheduled against a stale card is
 // worse than a slow drill, and these files change on every dossier refresh.
 function clDrillLoadText(queue, done) {
@@ -5456,12 +5459,19 @@ function clDrillLoadText(queue, done) {
     fetch(CL_DATA_BASE + slug + '.study.json?_cb=' + Date.now(), { cache: 'no-store' })
       .then(function(r) { return r.ok ? r.json() : null; })
       .then(function(sg) {
-        var cards = (sg && sg.flashcards) || [];
-        for (var i = 0; i < cards.length; i++) {
-          if (!cards[i] || !cards[i].q) continue;
-          clDrillText['sf:' + slug + ':' + i] = {
-            q: cards[i].q, a: cards[i].a, title: (sg && sg.title) || slug };
-        }
+        var title = (sg && sg.title) || slug;
+        var index = function(prefix, cards, section) {
+          for (var i = 0; i < (cards || []).length; i++) {
+            if (!cards[i] || !cards[i].q) continue;
+            clDrillText[prefix + i] = { q: cards[i].q, a: cards[i].a, title: title, section: section || '' };
+          }
+        };
+        index('sf:' + slug + ':', sg && sg.flashcards, '');
+        ((sg && sg.sections) || []).forEach(function(sec) {
+          if (sec && sec.kind === 'flashcards' && sec.id) {
+            index('ss:' + slug + ':' + sec.id + ':', sec.cards, sec.title || sec.id);
+          }
+        });
       })
       .catch(function() { /* one unreadable guide must not sink the session */ })
       .then(function() { if (--pending === 0) done(); });
@@ -5588,7 +5598,16 @@ function clDrillPaint() {
   // trivia app, not a study tool.
   var src = clEl('div', 'sr');
   if (it.kind === 'study') {
-    src.appendChild(document.createTextNode('Study guide · ' + (txt.title || it.slug || '')));
+    // The guide opens from its company in Profiler; an ss: card also names
+    // the section it came from, so the reader knows where in the guide to look.
+    var gl = clEl('button', 'lk', txt.title || it.slug || '');
+    gl.type = 'button';
+    gl.addEventListener('click', function() {
+      window.location.href = 'Profiler.html#' + encodeURIComponent(it.slug || '');
+    });
+    src.appendChild(document.createTextNode('Study guide · '));
+    src.appendChild(gl);
+    if (txt.section) src.appendChild(document.createTextNode(' · ' + txt.section));
   } else {
     var link = clEl('button', 'lk', it.lessonTitle || it.lesson);
     link.type = 'button';

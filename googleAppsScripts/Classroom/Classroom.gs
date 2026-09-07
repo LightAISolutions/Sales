@@ -1,4 +1,4 @@
-var VERSION = "v01.16g";
+var VERSION = "v01.17g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4389,8 +4389,9 @@ var CL_DRILL_LOG_HEADERS = ['Timestamp', 'Account', 'ItemId', 'Grade',
 var CL_DRILL_SESSION_CAP = 20;    // items served in one drill session
 var CL_DRILL_NEW_CAP = 10;        // never-seen items introduced per day
 var CL_DRILL_ACCOUNT_CAP = 3000;  // state rows per account — a guard, not a limit
-var CL_DRILL_INV_CAP = 1200;      // study items built into the pool — a guard, not a limit
-var CL_DRILL_ID_RE = /^(lc|lq|sf):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
+var CL_DRILL_INV_CAP = 2400;      // study items built into the pool — a guard, not a limit (~1,920 today)
+var CL_DRILL_ID_RE = /^(lc|lq|sf|ss):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
+var CL_DRILL_SECTION_ID_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;   // an ss: section id must survive CL_DRILL_ID_RE
 
 // djb2 → base36. A CHANGE DETECTOR, not a checksum: it decides whether the
 // text behind an item id is still the text the account earned its schedule
@@ -4511,48 +4512,84 @@ function clDrillLessonItems_(sess) {
 // there is no client-supplied list to validate, cap, or trust. What the client
 // still does is fetch the text for the handful of study cards actually served.
 //
-// UrlFetchApp.fetchAll issues the ~62 guide fetches in parallel, so a cold
-// build is seconds rather than a minute. Cached as ids+hashes only (~23KB,
-// well inside the 100KB CacheService value cap) — never the card text.
+// UrlFetchApp.fetchAll issues the ~154 guide fetches in parallel, so a cold
+// build is seconds rather than a minute. Cached as ids+hashes only — never
+// the card text.
+//
+// v01.17g (K1, curriculum plan §10.7) — the pool reads BOTH places a guide
+// keeps its cards: the top-level flashcards[] (sf:<slug>:<n>, the 2026-08
+// shape) and every sections[] entry of kind 'flashcards' (ss:<slug>:<sectionId>:<n>,
+// the shape every guide authored from 2026-09 uses). Before this the drill saw
+// 766 of ~1,920 cards. The guides are not touched — lifting the cards would
+// move every study: pin and every sf: id's positional meaning; reading the
+// sections moves nothing, so no account's history shifts.
+//
+// The cached value is the compact form { id: hash } (~61KB for 1,920 items);
+// kind and slug are derived from the id on read. The full { kind, slug, hash }
+// shape the callers expect would be ~146KB, past the 100KB CacheService cap,
+// and would silently fall through to an uncached build on every request.
+var CL_DRILL_STUDY_CACHE_KEY = 'cl_drillstudy_v2';   // v1 held sf: only — never reuse it
+
+function clDrillStudyExpand_(flat) {
+  var out = {};
+  for (var id in flat) if (flat.hasOwnProperty(id)) {
+    out[id] = { kind: 'study', slug: id.split(':')[1], hash: flat[id] };
+  }
+  return out;
+}
+
 function clDrillStudyItems_() {
   var cache = null;
   try {
     cache = CacheService.getScriptCache();
-    var hit = cache.get('cl_drillstudy_v1');
-    if (hit) return JSON.parse(hit);
+    var hit = cache.get(CL_DRILL_STUDY_CACHE_KEY);
+    if (hit) return clDrillStudyExpand_(JSON.parse(hit));
   } catch (ce) { cache = null; }
-  var out = {};
+  var flat = {}, n = 0;
   try {
     var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/';
     var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-companies.json',
       { muteHttpExceptions: true }).getContentText());
     var slugs = ((reg && reg.companies) || []).map(function(c) { return c.slug; })
       .filter(function(x) { return !!x; });
-    if (!slugs.length) return out;
+    if (!slugs.length) return {};
     var reqs = slugs.map(function(sl) {
       return { url: base + sl + '.study.json', muteHttpExceptions: true };
     });
     var res = UrlFetchApp.fetchAll(reqs);
-    for (var i = 0; i < res.length && Object.keys(out).length < CL_DRILL_INV_CAP; i++) {
+    // One card list → ids under the given prefix. Returns false once the cap
+    // is reached so both walks below stop together.
+    var take = function(prefix, cards) {
+      for (var c = 0; c < (cards || []).length; c++) {
+        if (!cards[c] || !cards[c].q) continue;
+        if (n >= CL_DRILL_INV_CAP) return false;
+        flat[prefix + c] = clDrillHash_(cards[c].q + '||' + cards[c].a);
+        n++;
+      }
+      return true;
+    };
+    for (var i = 0; i < res.length && n < CL_DRILL_INV_CAP; i++) {
       var guide = null;
       try {
         if (res[i].getResponseCode() !== 200) continue;
         guide = JSON.parse(res[i].getContentText());
       } catch (pe) { continue; }   // one unreadable guide must not sink the pool
-      var cards = (guide && guide.flashcards) || [];
-      for (var c = 0; c < cards.length; c++) {
-        if (!cards[c] || !cards[c].q) continue;
-        if (Object.keys(out).length >= CL_DRILL_INV_CAP) break;
-        out['sf:' + slugs[i] + ':' + c] = {
-          kind: 'study', slug: slugs[i],
-          hash: clDrillHash_(cards[c].q + '||' + cards[c].a)
-        };
+      if (!guide) continue;
+      if (!take('sf:' + slugs[i] + ':', guide.flashcards)) break;
+      var secs = guide.sections || [];
+      for (var k = 0; k < secs.length; k++) {
+        var sec = secs[k];
+        if (!sec || sec.kind !== 'flashcards') continue;
+        // A section id the item regex would reject can never be graded, so it
+        // never enters the pool either — served and gradable stay one set.
+        if (!CL_DRILL_SECTION_ID_RE.test(String(sec.id || ''))) continue;
+        if (!take('ss:' + slugs[i] + ':' + sec.id + ':', sec.cards)) break;
       }
     }
-    if (cache) try { cache.put('cl_drillstudy_v1', JSON.stringify(out), 21600); }
+    if (cache) try { cache.put(CL_DRILL_STUDY_CACHE_KEY, JSON.stringify(flat), 21600); }
                catch (pu) { /* oversized — serve uncached */ }
   } catch (fe) { /* registry or guides unreachable — lesson items still drill */ }
-  return out;
+  return clDrillStudyExpand_(flat);
 }
 
 // The union of what this session may drill, lesson items and validated study

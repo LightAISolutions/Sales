@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08w] — 2026-09-07 07:44:48 PM EST — v05.10r
+
+### Fixed
+- **The drill now reaches every study-guide card.** Company study guides keep their flashcards in one of two places, and until now the drill only looked in one of them — so most of the newer guides' cards were never offered. The pool has grown from about 770 cards to about 1,920. Nothing you have already learned is affected: every card you had a history with keeps it
+
+### Changed
+- On a study-guide card, the answer's source line now links to the company in Profiler and, for cards from the newer guides, names the section the card came from
 
 ## [v01.07w] — 2026-09-02 06:23:38 PM EST — v04.29r
 

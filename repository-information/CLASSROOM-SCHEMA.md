@@ -154,8 +154,9 @@ An item id is `<kind>:<source>:<section>:<n>` — stable, derivable from the con
 | `lc` | `lc:<lessonId>:<sectionId>:<n>` | a lesson's `flashcards` section, `cards[n]` |
 | `lq` | `lq:<lessonId>:<sectionId>:<n>` | a lesson's `quiz` section, `items[n]` |
 | `sf` | `sf:<slug>:<n>` | a study guide's top-level `flashcards[n]` (public Pages data) |
+| `ss` | `ss:<slug>:<sectionId>:<n>` | a study guide's section of kind `flashcards` with that `id`, `cards[n]` (public Pages data; every guide authored from 2026-09 keeps its cards here — K1, curriculum plan §10.7) |
 
-`n` is the index within its array. Ids are **positional**, which is deliberate: the alternative is authoring an id per card, and 855 hand-written ids is a maintenance surface with no reader-visible benefit. Positional ids have one failure mode — inserting a card mid-array shifts every later id — and the content hash below is what makes that failure safe rather than silent.
+`n` is the index within its array. Ids are **positional**, which is deliberate: the alternative is authoring an id per card, and ~2,000 hand-written ids is a maintenance surface with no reader-visible benefit. Positional ids have one failure mode — inserting a card mid-array shifts every later id — and the content hash below is what makes that failure safe rather than silent. An `ss:` id is stable across guide edits for the same reason a `lc:` id is: the section id is permanent per the study schema, so only a mid-array insert moves it, and the hash absorbs that. `sf:` ids were not renamed when `ss:` arrived, so no account's history moved.
 
 ### The content hash
 
@@ -201,8 +202,8 @@ The design doc called this out at C4: drill history outgrows the 9 KB-per-accoun
 ### Caps
 
 - **`CL_DRILL_SESSION_CAP` = 20** items per drill session, and **`CL_DRILL_NEW_CAP` = 10** never-before-seen items introduced per day. A queue that returns everything due is a queue the reader stops opening
-- **`CL_DRILL_ACCOUNT_CAP` = 3000** state rows per account. The corpus holds ~855 items, so this is headroom rather than a limit; it exists so a malformed client cannot grow the tab without bound
-- **`CL_DRILL_INV_CAP` = 1200** study-guide items built into the pool — a guard against a registry that grows unexpectedly, not a limit the corpus is near
+- **`CL_DRILL_ACCOUNT_CAP` = 3000** state rows per account. The corpus holds ~2,050 items (1,920 study cards after K1 plus the lesson items), so this is headroom rather than a limit; it exists so a malformed client cannot grow the tab without bound
+- **`CL_DRILL_INV_CAP` = 2400** study-guide items built into the pool (`sf:` and `ss:` together — ~1,920 at K1) — a guard against a registry that grows unexpectedly, not a limit the corpus is near. The cached value is the compact `{ id: hash }` map (~61 KB at 1,920 items); if the corpus takes it past ~90 KB, split the cached value by slug initial before raising the cap again
 
 ### Serving — `cop=drill` and `cop=grade`
 

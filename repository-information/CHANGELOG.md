@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.10r] — 2026-09-07 07:44:48 PM EST
+
+> **Prompt:** "Run K1 on Fable 5.1 High from the curriculum plan §10.7: clDrillStudyItems_() reads every flashcards-kind section under a new ss:<slug>:<sectionId>:<n> item kind, CL_DRILL_INV_CAP → 2400, the schema's item-identity table gains the ss row, Classroom.html resolves ss: from the fetched guide; both checkers, node --check, check-classroom-pipeline.py --base origin/main (refresh gateDigest only if P3), Playwright read of the drill showing ≈1,920 study items; GAS + page bump. Phase 5 is the equally valid alternative if a Fable xhigh session is what is open.
+
+Also, regarding "S0's "done when" (attached screenshot) has one clause only you can close: the taxonomy review. The place to start is compute-and-the-rack — keep it thin until a coverage row fills it, or fold it into power conversion.", explain further what my options are, then let me decide."
+
+### Fixed
+
+- **K1 of `INTEGRATED-REMEDIATION-PLAN.md` §7 — the study-pool fix (Fable 5.1 High, curriculum plan §10.7).** The drill's study pool read a guide's top-level `flashcards[]` only, so the 95 guides authored from 2026-09 — 1,154 cards inside a section of kind `flashcards` — were never drilled: **766 of ~1,920 cards**. `clDrillStudyItems_()` in `Classroom.gs` now walks the top-level array **and** every `sections[]` entry of kind `flashcards`, emitting the new item kind **`ss:<slug>:<sectionId>:<n>`** beside the unchanged `sf:<slug>:<n>`. No guide was touched, no `sf:` id moved, no `study:` pin moved, so no account's drill history shifts. **`CL_DRILL_INV_CAP` 1200 → 2400**; `CL_DRILL_ID_RE` admits `ss`; a new `CL_DRILL_SECTION_ID_RE` keeps a section id the grade regex would reject out of the pool, so served and gradable stay one set.
+
+### Changed
+
+- **`Classroom.gs` — the study-pool cache is now the compact `{ id: hash }` map under a new key (`cl_drillstudy_v2`)**, expanded to `{ kind, slug, hash }` on read by `clDrillStudyExpand_()`. Measured against the live tree: the full shape for 1,920 items is ~146 KB — past the 100 KB `CacheService` value cap the §10.7 arithmetic assumed it would stay under — and would have fallen through to an uncached rebuild on every request; the compact form is ~61 KB. The `v1` key is never reused (it held `sf:` only). The block comment above the function records the K1 change; the fetch-count and cache-size figures in it were corrected (~154 guides, not ~62).
+- **`Classroom.html` — `clDrillLoadText()` indexes both places a fetched guide keeps its cards** (`sf:` from the top-level array, `ss:` from each `flashcards`-kind section) and records the section title; the drill card's source line now opens the guide's company in Profiler (`Profiler.html#<slug>`) and, for an `ss:` card, names the section it came from. The stale comment above the drill block ("the page sends the inventory") was rewritten to describe the server-built pool.
+- **`CLASSROOM-SCHEMA.md`** — the item-identity table gains the `ss` row; the positional-id paragraph explains why an `ss:` id is stable and why `sf:` ids were left alone; the Caps section documents `CL_DRILL_INV_CAP` = 2400 with the compact-cache note and the split-by-slug-initial fallback; the corpus figures (~855) updated to ~2,050 items.
+- **`scripts/check-classroom-content.py`** — the documented-cap assertion moves with the schema (1200 → 2400).
+- **`INTEGRATED-REMEDIATION-PLAN.md` §6** — K1 flipped to **Done — v05.10r**; Phase 5 alone is marked next. **`CLASSROOM-CURRICULUM-PLAN.md`** — §8 item 5 and §10.7 record the landing; §10 provenance paragraph updated; one §9 revision-log row.
+- **`README.md`** — Classroom versions in the tree (v01.08w · v01.17g); `Last updated:` line.
+
+### Verified
+
+- **The real pool builder, run under Node with `UrlFetchApp` / `CacheService` shims against the local Pages tree: 1,920 items (766 `sf:` + 1,154 `ss:`), cache payload 60,705 bytes, every id passes `CL_DRILL_ID_RE`, cache round-trip identical.** `node --check` clean. `check-classroom-content.py`: **10 / 3 / 134 — 0 errors / 0 warnings** (after the cap assertion moved; before it, exactly one error naming the 1200 → 2400 change). `check-classroom-pipeline.py --base origin/main`: P1 write-set and P2 outside-the-fence findings on the edited files — the expected developer-commit noise — and **no P3**, so `gateDigest` is untouched (none of the drill functions is in `GATE_SYMBOLS`); `--selftest` 13 fixtures / 0 failures.
+- **Playwright (Chromium, transport stubbed with the pool the real server code built):** the landing card reads **"0 of 1920 cards started · 1920 not yet seen"**; the served `ss:aep:drill:0` card renders the guide's exact question and answer with the source line "Study guide · AEP — Technology Study Guide · Flashcards".
+- **CHANGELOG rotation checked, not assumed:** `grep -c` returned 109 before this section and `TZ=America/New_York date` returned 2026-09-07 — the same EST day as the eleven `v04.99r`–`v05.09r` sections — so with this section the file holds 110 sections of which **12 are exempt → 98 non-exempt → no rotation**; the counter reads `Sections: 110/100`.
 
 ## [v05.09r] — 2026-09-07 07:24:18 PM EST
 
