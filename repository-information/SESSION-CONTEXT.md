@@ -6,12 +6,76 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-06 10:58 PM EST
+**Repo version:** v04.97r — **one** push commit this session (`7f73049`), merged to `main` as `8020d68`, plus this housekeeping commit
+**Branch:** `claude/guide-backfill-session-3-cldkuk` (restarted from `origin/main` after the merge — the remote branch was already deleted by the workflow)
+**Model:** Opus 5 xhigh — **guide-backfill session 3 of 6**, the seven integrators. Guides only.
+
+### What was done
+
+**v04.97r — seven schema-v2 study guides plus lesson plans, no dossier touched.** `hyperstrong` (9 sections), `canadian-solar` (10), `envision-energy` (9), `ls-energy-solutions` (10), `sunwoda` (10), `trina-storage` (10), `crrc-zhuzhou` (10) — 68 sections. No `profileVersion` moved, nothing archived, `archive-index.json` untouched, `profiler-companies.json` never opened — and `profiler-graph.json` came back **byte-identical** after the rebuild (sha256 `563ae281f00ce164075ded5c21315c67769bbf50bcb8a8d046c80b882c2168d6` before and after, unchanged since v04.96r), and correctly did not appear in the diff at all.
+
+**The seven were designed as one non-overlapping course, and the design was taken AGAINST `prevalon` rather than merely alongside it.** That guide owns the enclosure inventory, the DC/AC boundary, datasheet-reading, fire physics and hybrid plant control, so this course teaches the *design and the commerce* around them and never the inventory again. The organising claim is that **an integrator converts cells it did not make into a warranted system someone will finance**, and each guide owns one stage in the order a product comes into existence:
+- `hyperstrong` — *the cell you did not make*: the course entry point (what an integrator is, what the neighbouring courses own, the seven stages), a cell as a purchased component rather than a chemistry, the amp-hour format ladder and what each step transfers, seven layers of qualification and why life testing cannot be compressed, **why a second source is an engineering project not a purchase order**, and six cell-contract instruments with the symmetry that none secures supply and preserves flexibility at once
+- `canadian-solar` — *the box, and the heat inside it*: five conflicting jobs of an enclosure, **the hottest cell setting the ageing pace for the whole string** so the objective is cell temperature spread not average temperature, liquid displacing air on uniformity rather than efficiency, the environmental specification with the misreading in each line, where the round-trip losses go, monolith against modular skid, and the chain from energy per container to megawatt-hours per acre with its efficiency limit
+- `envision-energy` — *the software is the product*: **the two numbers the system reports cannot be measured, only inferred**, the four-level management hierarchy with authority increasing downward, passive against active balancing as the electronic attack on the same variance cooling attacks thermally, usable capacity as a distribution whose tails decide, the six-layer control stack and its contested row, and the fleet feedback loop as the durable difference
+- `ls-energy-solutions` — *permission to sell*: **test method produces data, listing produces permission, installation standard decides what the permission is worth on a given piece of land**; eleven documents mapped by function; the three parties and the local authority that can stop a project; why a listing attaches to a configuration and a factory; chemistry read purely through the permitting lens; three regimes and two parallel compliance tracks; and a programme sequence gated entirely by design freeze
+- `sunwoda` — *ten thousand identical cells*: the arithmetic that makes sampling hopeless against rare defects so **process evidence replaces inspection**, seven cell-plant steps and each one's latent defect, yield as a cost signal and a quality signal at once, traceability as a production-line design decision rather than a report, the two acceptance tests and what each cannot prove, the bathtub curve read diagnostically, and a battery as regulated freight
+- `trina-storage` — *the twenty-year promise*: **the product is an obligation and the hardware is its delivery mechanism**; five distinct promises and the defect-warranty asymmetry; the guaranteed capacity curve as a floor not a forecast; oversizing against augmentation against replacement; the duty envelope that turns the guarantee into a throughput budget every dispatch decision spends; the warranty reserve and its two inputs; the service agreement's exclusions; and what is owed at the end
+- `crrc-zhuzhou` — *who can stand behind it*: the closing argument. Bankability as a relationship rather than a product property; the nine-item diligence file where the previous five guides' work is finally read; six credit instruments and their shared weakness; **four structural positions** and the pattern that the best economics carry the worst credit standing; why margin concentrates at the ends and the middle commoditises; and **bankability as jurisdictional**, so corporate structure has become a technical specification
+
+**Every guide points at the other two courses rather than rebuilding them** — chemistry to `rept`/`gotion`, revenue to `eolian`, dispatch to `jupiter-power`, the contract to `arevon`, the regulated buyer to `key-capture-energy`, the project lifecycle to `apex-clean-energy`, the electrical interface to `on-energy`, the block and hybrid control to `prevalon`. That convention now holds across all three backfill sessions.
+
+**63 concepts registered** (1,112 → 1,175), pruned from ~83 drafted: the purchased cell (`ampere-hour`, `cell-format`, `cell-qualification`, `series-parallel-configuration`, `calendar-life`, `stacked-electrode`, `wound-cell`); the enclosure (`cell-temperature-spread`, `ingress-protection`, `nema-enclosure-rating`, `corrosivity-class`, `seismic-qualification`, `sound-power-level`, `parasitic-load`, `modular-skid`, `refrigerant`); the control layer (`coulomb-counting`, `open-circuit-voltage`, `cell-balancing`, `contactor`, `power-plant-controller`, `fleet-telemetry`, `modbus`, `iec-61850`, `over-the-air-update`, `change-control`); certification (`ul-9540`, `nfpa-68`, `nfpa-69`, `un-38-3`, `ce-marking`, `nrtl`, `type-approval`, `grid-code`, `compartmentalization`); manufacturing (`electrode-coating`, `calendering`, `dry-room`, `cell-formation`, `statistical-process-control`, `first-pass-yield`, `defects-per-million`, `root-cause-analysis`, `fmea`, `traceability`, `bathtub-curve`, `dangerous-goods`); the promise (`guaranteed-capacity-curve`, `energy-throughput`, `oversizing`, `warranty-reserve`, `preventive-maintenance`, `service-level-agreement`, `end-of-life`, `decommissioning`, `environmental-product-declaration`); and credit and structure (`technical-due-diligence`, `parent-company-guarantee`, `warranty-bond`, `surety-bond`, `insurance-wrap`, `commoditisation`, `switching-cost`).
+
+**CHANGELOG rotation fired.** The counter reached 100/100 with the v04.97r section and the oldest whole date group — **three sections dated 2026-08-31, `v03.98r` through `v04.00r`** — moved to `CHANGELOG-archive.md` with SHA enrichment on every moved header, leaving **97/100**. The clone was deepened first (`git fetch --unshallow`, 50 → 994 commits) and all three lookups resolved.
+
+**README tree audit found no orphans** — the only gaps were this session's own seven additions. All three listings are now exact at **98 study-prep directories, 110 lesson plans, 304 profiler-data files**.
+
+### Where we left off
+
+Push merged (`8020d68`). The branch was restarted from `origin/main` for this housekeeping commit. All six checkers exit 0; roster/calendar bijection clean at 154; **146 guides and 1,175 concepts** validate with zero errors and zero warnings. The developer asked for a paste-in prompt for backfill session 4 and this context write.
+
+### Key decisions and findings
+
+- **The collision-normalisation problem has a third layer, and this session found it.** Session 1 lost an alias to an invisible collision; session 2 found the unhyphenated-term class; session 3 normalised hyphens, spaces and case together as instructed — and that map caught `export control` colliding with the registered **plural** `export controls`. Punctuation normalisation alone would have missed it if the punctuation had matched, so a **plural-aware sweep** was added over the whole 64-term ledger and every proposed alias. It returned exactly that one hit. **The durable method is now: normalise hyphens/spaces/case, then also test singular/plural variants of the last word.** The fix was to use the registered display term in the guide rather than create a near-duplicate concept.
+- **Definitions of reused concepts must be read, not assumed — two would have contradicted the guide text.** `delta-T` is registered with a *chiller-water* definition (data-centre context), so using it for cell-to-cell spread would have produced a tooltip contradicting the sentence around it; `cell-temperature-spread` was registered instead. `station-power`'s alias `auxiliary load` is defined around co-location rules, not equipment self-consumption, so `parasitic-load` was registered for the battery meaning. `cold-plate` is defined as direct-to-chip processor cooling and was avoided entirely.
+- **The checker-as-ledger order is now proven three times and should just be the method.** Write the guides first, run `check-profiler-study.py`, and its `unresolved {{…}}` list *is* the registration ledger. It pruned 19 drafted-but-unused concepts this session (`passive balancing`, `battery module`, `design freeze`, `air cooling`, `product listing`, `original equipment manufacturer`, `state-owned enterprise` and twelve others), against session 2's eight and session 1's one.
+- **Zero structural errors on the first checker run for all seven guides** — 75 errors, every one an unresolved marker. Markers were confined to `ps`/`intro`/`note`/`cards`/`rows` from the start and quiz items kept marker-free, both asserted programmatically rather than trusted.
+- **Two pre-existing guides carry `{{term}}` markers inside quiz items** — `blackstone` and `macquarie`, both in `check-yourself`. The checker does not flag this. Left untouched: it is either a silent rendering bug in two guides or a convention that should stop being enforced by hand, and settling it requires reading `Profiler.html`'s quiz path. **Handed forward as a finding, not a fix.**
+- **The rotation rule contradicts itself and a future session may skip a due rotation.** `CHANGELOG-archive.md`'s quick rule says "100 triggers, date groups move" while its step 2 says "if the count is 100 or fewer, stop". Precedent (v04.83r rotated at exactly 100/100) and practice both rotate at 100, and that is what was done. The two sentences should be reconciled.
+- **The clone deepen was load-bearing, exactly as the rotation doc warns.** All three rotated headers resolved their SHAs; on the shallow 50-commit clone all three would have archived as `[SHA unavailable]` permanently, since the archive is never re-enriched.
+- **Diff proportionality held**: concepts 529/0 (pure insertion, 63 alphabetical entries, no existing entry moved — asserted programmatically), README 22/1, CHANGELOG 47/82, archive 80/0, plan 7/7, version 1/1, plus 14 new files. `profiler-graph.json` correctly absent. Nothing else.
+- **Serialisation re-confirmed by round-trip** before *and* after every write: `<slug>.study.json` indent=1 / `ensure_ascii=False` / trailing newline; `profiler-concepts.json` indent=2 / same. A shared writer helper asserted byte-equality on each file.
+- **The graph byte-identity check remains the standard guides-only proof** and is now doubly useful: the sha256 is unchanged across two sessions, so a future guides-only session can assert the *specific* expected hash rather than only "identical to before".
+- **Session 2's context recorded "298 profiler-data files"; the measured figure was 297 before this session's seven** (304 after). The listing was exact under both readings — the difference is whether the two subdirectories were counted — so nothing was ever missing, but the recorded number was one off.
+
+### Active context
+
+- **Branch:** `claude/guide-backfill-session-3-cldkuk` · **repo version:** v04.97r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
+- **Corpus:** 154 companies · 154 profiles · **146 study guides (8 backfills outstanding)** · 374 archived dossier versions · **1,175 concepts** · 98 study-prep directories · 110 lesson plans · 304 profiler-data files
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG: 97/100** after this session's rotation, counter verified against the real section count. **Rotation does not fire next session** — roughly three pushes of headroom. When it next fires, the oldest whole date group is **thirteen sections dated 2026-09-01**, and the clone must be deepened (`git fetch --unshallow`) before any SHA lookup.
+- **The 8 remaining backfills, grouped as §8 has them:** EPC (4) `blattner` `mastec` `solv-energy` `samsung-ct`; IPP buyer-side (4) `lightsource-bp` `nextera-energy-resources` `plus-power` `terra-gen`
+- **No dossier errors were found to hand forward.** The seven profiles were read for `productsAndServices` and `technicalSpecs` only; nothing read contradicted itself or the corpus.
+- **Standing, unassigned:** the `blackstone`/`macquarie` quiz-marker question above; the CHANGELOG rotation-rule contradiction above; the README *archive* listing is still well behind (the non-archive listing is exact); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; OSHA IMIS and SEC EDGAR are both network-blocked from this environment.
+
+### Recommendation for next session
+
+- Run **guide-backfill session 4** on the four EPC companies — `blattner`, `mastec`, `solv-energy`, `samsung-ct` — on Opus 5 xhigh, guides only. It is the natural next cluster and the one with the most support behind it: all three neighbouring courses now exist, so an EPC course can own the thing none of them cover — how a financed design becomes an energised plant, on a schedule, by people, under a contract that allocates who eats the delay. Read `ls-energy-solutions` first (the integrator gets the *product* listed; the EPC gets the *installation* accepted) and `sunwoda` second (its site-acceptance module is the seam where the EPC course begins). Four guides is the smallest cluster of the six, so the budget goes into the syllabus decision — including whether the fourth guide should close all four courses the way `crrc-zhuzhou` closed the integrator set.
+
+**To continue:** type `run guide backfill session 4`
+
+## Previous Sessions
+
+### Session — Guide-backfill session 2, the six bridge-power supplier guides (Opus 5 xhigh)
+
 **Date:** 2026-09-06 09:54 PM EST
 **Repo version:** v04.96r — **one** push commit this session (`6873833`), merged to `main` as `68c423b`, plus this housekeeping commit
 **Branch:** `claude/guide-backfill-session-2-iu6wxb` (restarted from `origin/main` after the merge — the remote branch was already deleted by the workflow)
 **Model:** Opus 5 xhigh — **guide-backfill session 2 of 6**, the six bridge-power suppliers. Guides only.
 
-### What was done
+#### What was done
 
 **v04.96r — six schema-v2 study guides plus lesson plans, no dossier touched.** `voltagrid` (11 sections), `proenergy` (9), `mainspring-energy` (10), `enchanted-rock` (9), `on-energy` (9), `prevalon` (10) — 58 sections. No `profileVersion` moved, nothing archived, `archive-index.json` untouched, `profiler-companies.json` never opened — and `profiler-graph.json` came back **byte-identical** after the rebuild (sha256 `563ae281…` before and after).
 
@@ -29,11 +93,11 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **README tree audit found no orphans** — the only gaps in `study-prep/` and `profiler-data/` were this session's own six additions. Session 1 had already cleaned up C12's three. Listings now exact at 91 study-prep directories and 298 profiler-data files.
 
-### Where we left off
+#### Where we left off
 
 Push merged (`68c423b`). The branch was restarted from `origin/main` for this housekeeping commit. All six checkers exit 0; roster/calendar bijection clean at 154; 139 guides and 1,112 concepts validate with zero errors and zero warnings. The developer asked for a paste-in prompt for backfill session 3 and this context write.
 
-### Key decisions and findings
+#### Key decisions and findings
 
 - **The unhyphenated-term collision is now a repeat offence, and it deserves a fix.** Of 292 strings tested across three passes against 3,151 registry keys, three collisions were invisible to a phrase search: `speed-to-power` is registered as term **"speed to power"** (no hyphens), `stranded asset` resolves to `stranded-cost`, and `residual value` to `residual-value-support`. A fourth, `Title V permit`, is an alias of `air-permit`. Session 1 hit the same *class* of miss on an alias. **The durable fix is to normalise hyphens, spaces and case when building the collision map — not just lowercase it.** A future session should do that before proposing terms; it closes the whole class.
 - **The registry was far deeper on bridge power than expected**, which changed the authoring rather than just the registration. `prime-power`, `standby-rating`, `continuous-rating`, `iso-8528`, `bridge-power`, `minor-source`, `major-source`, `air-permit`, `emergency-generator`, `rice-neshap`, `droop`, `inertia`, `rocof`, `synchronous-condenser`, `dln-combustor`, `lean-burn`, `heat-rate`, `part-load`, `non-attainment-area`, `ride-through`, `large-load-interconnection` and `dc-block` all already existed. **97 of 173 first-pass candidates were already registered.** The guides were written on that vocabulary rather than around it — always read the existing defs, because the guide text has to agree with them.
@@ -44,7 +108,7 @@ Push merged (`68c423b`). The branch was restarted from `origin/main` for this ho
 - **Pre-existing alphabetical ordering breaks in the README tree were left alone** — 8 in the `profiler-data` listing, 5 in `study-prep`. None involves this session's entries; fixing them would have inflated the diff for no benefit.
 - **The graph byte-identity check is cheap and worth keeping as the standard guides-only proof.** Copy `profiler-graph.json`, rebuild, `cmp`. It takes seconds and is the only evidence that no dossier was touched that does not depend on remembering not to touch one.
 
-### Active context
+#### Active context
 
 - **Branch:** `claude/guide-backfill-session-2-iu6wxb` · **repo version:** v04.96r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
 - **Corpus:** 154 companies · 154 profiles · **139 study guides (15 backfills outstanding)** · 374 archived dossier versions · **1,112 concepts** · 91 study-prep directories
@@ -54,63 +118,8 @@ Push merged (`68c423b`). The branch was restarted from `origin/main` for this ho
 - **No dossier errors were found to hand forward.** The six profiles were read for `productsAndServices` and `technicalSpecs` only; nothing read contradicted itself or the corpus.
 - **Standing, unassigned:** the README *archive* listing is still well behind (the non-archive listing is exact); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; OSHA IMIS and SEC EDGAR are both network-blocked from this environment.
 
-### Recommendation for next session
+#### Recommendation for next session
 
 - Run **guide-backfill session 3** on the seven integrators — `canadian-solar`, `crrc-zhuzhou`, `envision-energy`, `hyperstrong`, `ls-energy-solutions`, `sunwoda`, `trina-storage` — on Opus 5 xhigh, guides only, deepening the clone first because that session carries the CHANGELOG rotation. It is the largest remaining cluster and now has both flanks taught: session 1 gave it the buyer's economics and session 2 the equipment layer, so the integrator guides can teach what an integrator actually adds between a cell and a project without re-deriving either end.
 
 **To continue:** type `run guide backfill session 3`
-
-## Previous Sessions
-
-### Session — Guide-backfill session 1, the five IPP buyer-side guides (Opus 5 xhigh)
-
-**Date:** 2026-09-06 08:58 PM EST
-**Repo version:** v04.95r — **one** push commit this session (`680f389`), merged to `main` as `850285c`, plus this housekeeping commit
-**Branch:** `claude/guide-backfill-buyer-storage-rwwnu2` (restarted from `origin/main` after the merge — see below)
-**Model:** Opus 5 xhigh — **guide-backfill session 1 of 6**, the five IPP buyer-side companies. Guides only.
-
-#### What was done
-
-**v04.95r — five schema-v2 study guides plus lesson plans, no dossier touched.** `apex-clean-energy` (10 sections), `arevon` (11), `eolian` (10), `jupiter-power` (9), `key-capture-energy` (9). No `profileVersion` moved, nothing archived, `archive-index.json` untouched — and `profiler-graph.json` came back **byte-identical** after the rebuild, which is independent proof the guides-only constraint held.
-
-**The five were designed as one non-overlapping course, not five variations.** That decision was taken up front and is the reason they are worth reading in order:
-- `apex-clean-energy` — *the project lifecycle*: the development funnel and its attrition, the interconnection queue as the scarce asset, setback geometry and fire code as engineering inputs, the four-layer capital stack and why the tax-credit buyer's diligence (not a procurement policy) picks the supplier, attached against standalone, integrator insolvency as a warranty problem
-- `arevon` — *the offtake contract*: the resource-adequacy obligation as the source of demand, five contract forms and their risk allocation, ELCC against net qualifying capacity, the saturation mechanism by which storage erodes its own accreditation, DC- against AC-coupling, tax equity against credit transfer, single-supplier concentration read as a deliberate trade, safety as a specification
-- `eolian` — *the revenue stack*: four layers and their sharply different saturation behaviour, why reserves stop paying in every maturing market, the same battery as five businesses in ERCOT/CAISO/PJM/MISO/NYISO, duration as an asymmetric bet, forward capacity as a financing instrument, the connection as currency
-- `jupiter-power` — *dispatch*: inventory with an option attached, day-ahead as a hedge, four interacting inputs to an offer curve, warranty as a throughput budget, co-optimisation as a capital-allocation input, keeping or selling the dispatch right
-- `key-capture-energy` — *the regulated purchase*: resource plan to solicitation to commission approval, prudence review as the discipline behind every regulated preference, five structures, locational value, non-wires alternatives, three shapes of state incentive, being a market's first battery
-
-**Every guide opens by pointing chemistry back at `rept` and `gotion`** rather than re-teaching cells, containers or thermal design. That cross-reference is now the corpus convention for buyer-side guides.
-
-**24 concepts registered** (1,049 → 1,073): the market names the corpus lacked (`nyiso`, `iso-ne`, `icap`, `reliability-pricing-model`), the revenue anatomy (`revenue-stack`, `frequency-regulation`, `non-spinning-reserve`, `day-ahead-market`, `real-time-market`, `locational-marginal-price`, `offer-curve`, `degradation-cost`, `must-offer-obligation`), accreditation and siting (`net-qualifying-capacity`, `duck-curve`, `setback`, `network-upgrades`, `energy-only-interconnection`), procurement (`system-integrator`, `capacity-maintenance-agreement`, `non-wires-alternative`, `solar-peaker`, `energy-plus-load`, `speed-to-power`).
-
-**Also fixed three README tree entries C12 never added** — `study-prep/gotion/`, `study-prep/rept/`, `study-prep/whiting-turner/`. Found by the [PC-README-TREE] completeness audit, not reported by anyone. The study-prep listing is now exact at 85 directories.
-
-#### Where we left off
-
-Push merged (`850285c`). The branch was **restarted from `origin/main`** for this housekeeping commit, because the prior push had already merged and its history is now on `main`. All six checkers exit 0; roster/calendar bijection clean at 154; 133 guides and 1,073 concepts validate with zero errors and zero warnings. The developer asked for a paste-in prompt for backfill session 2 and this context write.
-
-#### Key decisions and findings
-
-- **The programmatic collision check earned its keep on the first run.** Of 25 proposed concepts, one alias — `frequency-regulation`'s *regulation service* — was already registered under `ancillary-services`. A phrase search for the display term would not have found it. Method that worked: load the registry, build a lowercase map of **every term and every alias** (3,109 keys), test every proposed term and alias against it, report all hits at once. Also worth knowing: **83 of an initial 108 candidate terms were already registered**, several under differently-named slugs (`resource adequacy` → `planning-reserve-margin`, `capacity accreditation` → `elcc`, `cluster study` → `batch-study`, `letter of credit` → `credit-support`, `peaker` → `simple-cycle`). The registry is far deeper than a term-by-term intuition suggests — always check before writing a definition.
-- **Extract the marker inventory from the finished guides, then intersect with the proposed concept set.** That step caught a 26th concept, `greenfield`, drafted as the obvious pair to the registered `brownfield` and used by nothing. Dropped before the merge. Intention is not usage; only the finished text is evidence.
-- **Diff proportionality held everywhere.** `profiler-companies.json` was never opened. Concepts 168/0 (pure insertion, 24 alphabetically placed entries, no reordering), plan 5/5, README 22/1, CHANGELOG 42/1, version 1/1.
-- **Serialisation conventions re-confirmed by round-trip**: `<slug>.study.json` is indent=1 / `ensure_ascii=False` / trailing newline; `profiler-concepts.json` is indent=2 / `ensure_ascii=False` / trailing newline. Each was asserted byte-exact before and after writing.
-- **The designated branch already existed at merged history when the session opened** — checked out at exactly `origin/main`'s tip with a stale remote-tracking ref, while `git ls-remote` showed no `claude/*` branches at all. Fetch, prune, start fresh. The same thing happened again for this housekeeping commit after the v04.95r merge.
-- **The checker's `{{term}}` trap is real and silent while authoring**: markers in `title`, `read` and `timeline.lanes.*` render as literal braces. All five guides were written with markers confined to `ps`/`intro`/`note`/`cards`/`rows`, and verified programmatically before the first checker run.
-
-#### Active context
-
-- **Branch:** `claude/guide-backfill-buyer-storage-rwwnu2` · **repo version:** v04.95r · **Profiler page:** v01.83w (unchanged since v04.85r — every push since has been data-only)
-- **Corpus:** 154 companies · 154 profiles · **133 study guides (21 backfills outstanding)** · 374 archived dossier versions · **1,073 concepts** · 85 study-prep directories
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG: 98/100**, counter verified against the real section count (`grep -c '^## \[v[0-9]'`). **Rotation fires on backfill session 3, or session 4 at the latest** — and the clone must be deepened *before* rotating, because SHA enrichment on the oldest groups fails silently on a shallow clone.
-- **The 21 remaining backfills, grouped as §8 has them:** IPP buyer-side (4) `lightsource-bp` `nextera-energy-resources` `plus-power` `terra-gen`; bridge-power supplier (6) `voltagrid` `proenergy` `enchanted-rock` `mainspring-energy` `on-energy` `prevalon`; integrator (7) `canadian-solar` `crrc-zhuzhou` `envision-energy` `hyperstrong` `ls-energy-solutions` `sunwoda` `trina-storage`; EPC (4) `blattner` `mastec` `solv-energy` `samsung-ct`
-- **No dossier errors were found to hand forward.** The five profiles were read for `productsAndServices`, `technicalSpecs` and `policyExposure` only; nothing read contradicted itself or the corpus.
-- **Standing, unassigned:** the README *archive* listing is still well behind (the non-archive listing is exact); `archive/nvidia.profile.v2.json` is missing and cannot be reconstructed; OSHA IMIS and SEC EDGAR are both network-blocked from this environment.
-
-#### Recommendation for next session
-
-- Run **guide-backfill session 2** on the six bridge-power suppliers — `voltagrid`, `proenergy`, `enchanted-rock`, `mainspring-energy`, `on-energy`, `prevalon` — on Opus 5 xhigh, guides only. They are the next coherent cluster, and the five buyer-side guides just shipped give them their teaching contrast: bridge power is what a buyer procures when the interconnection queue, not the equipment, is the thing it cannot wait for. Six guides is one more than this session carried, so budget the extra reading rather than the extra authoring.
-
-**To continue:** type `run guide backfill session 2`
