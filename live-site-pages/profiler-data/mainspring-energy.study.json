@@ -1,0 +1,357 @@
+{
+ "schemaVersion": 2,
+ "slug": "mainspring-energy",
+ "title": "Mainspring Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: chemistry decides where you may build",
+   "kind": "callout",
+   "tone": "info",
+   "read": "For on-site power, the binding constraint is usually not megawatts or fuel cost. It is what leaves the stack.",
+   "ps": [
+    "The two previous guides described machines. This one describes the constraint that decides whether a machine may be installed at all — and, in the hardest locations, which machines are eliminated before any commercial comparison begins.",
+    "Combustion of any hydrocarbon in air produces carbon dioxide and water, and — because the air is four-fifths nitrogen and the flame is hot — oxides of nitrogen as well. **{{NOx}}** is the pollutant that governs siting for gas-fired plant, because it drives ground-level ozone, and large parts of the country already exceed the federal ozone standard.",
+    "Two strategies exist. Either form less NOx in the first place, by keeping the flame cool, or destroy it afterwards in the exhaust with a catalyst. Machines differ enormously in how far the first strategy can be pushed, and that difference is the subject of this guide.",
+    "A **{{linear generator}}** sits at one extreme, which is why it is a useful lens: it is a combustion machine engineered around avoiding a flame altogether. Understanding why that produces very low NOx also explains why every other machine in this course needs the equipment it needs."
+   ]
+  },
+  {
+   "id": "where-nox-comes-from",
+   "title": "Why a hot flame is a dirty flame",
+   "kind": "prose",
+   "read": "Nitrogen and oxygen are unreactive until it gets very hot — then the reaction rate climbs exponentially.",
+   "ps": [
+    "Air is about seventy-eight percent nitrogen, and nitrogen molecules are held together by one of the strongest bonds in ordinary chemistry. At room temperature nitrogen and oxygen simply coexist. Above roughly 1,800 kelvin — around 1,500°C — the bond starts to break in significant numbers, and nitric oxide forms.",
+    "That formation route is called **{{thermal NOx}}**, and its defining property is that the rate depends *exponentially* on temperature. A modest reduction in peak flame temperature produces a large reduction in NOx. Everything below follows from that one fact.",
+    "It also explains why peak temperature matters more than average temperature. A flame with hot streaks in it produces far more NOx than a uniformly warm one at the same mean, because the exponential weights the hot spots disproportionately. Combustion engineering for emissions is therefore mostly the pursuit of *uniformity*, not merely of coolness.",
+    "The standard techniques all attack the same variable. **{{Lean-burn}}** adds excess air, which dilutes the mixture and lowers peak temperature. A **{{DLN combustor}}** premixes fuel and air thoroughly before ignition so the flame burns lean and evenly rather than in hot pockets. **{{Water injection}}** puts an inert, heat-absorbing mass into the flame. All three trade something — lean flames are close to blowing out and close to travelling back up the burner, and water is a consumable — but they work on the same exponential.",
+    "The logical end point of that pursuit is to remove the flame. Compress a very lean fuel-air mixture until the whole charge reacts at once, everywhere, at a temperature low enough that nitrogen never participates. There is no flame front, no hot streak, and consequently very little NOx — single-digit parts per million without any exhaust treatment at all. The engineering price is severe: a reaction with no flame front is hard to time, which is why machines built this way tend to use unconventional architectures — most notably a **{{free-piston}}** design with no crankshaft, where the piston's motion is controlled electromagnetically and induces current directly rather than turning a shaft.",
+    "The other route to low NOx skips combustion entirely, and is covered at the end of this guide."
+   ]
+  },
+  {
+   "id": "cleaning-the-exhaust",
+   "title": "What after-treatment actually does",
+   "kind": "table",
+   "read": "Three devices, three different pollutants, and three different reasons they are inconvenient.",
+   "intro": "When combustion alone cannot meet the permit, the exhaust is treated. Each device is a real chemical process with real operating requirements — none is a filter that can simply be bolted on and forgotten.",
+   "cols": [
+    "Device",
+    "What it does",
+    "What it demands in return"
+   ],
+   "rows": [
+    [
+     "**{{Selective catalytic reduction}}**",
+     "Injects ammonia or urea ahead of a catalyst, which converts NOx to ordinary nitrogen and water. Removes the large majority of NOx",
+     "A narrow exhaust temperature window; a stored ammonia or urea supply with its own hazard and permitting; catalyst that ages and is eventually replaced; and careful dosing, because excess reagent passes through as **{{ammonia slip}}**, itself a permitted pollutant"
+    ],
+    [
+     "**{{Oxidation catalyst}}**",
+     "Completes the burning of carbon monoxide and unburned hydrocarbons that the engine left behind, turning them into carbon dioxide and water",
+     "Backpressure, which costs a little efficiency; and sensitivity to catalyst poisons in fuel or lubricating oil"
+    ],
+    [
+     "Particulate control",
+     "Traps solid carbon. Standard on diesel engines as a **{{diesel particulate filter}}**",
+     "Regeneration cycles and maintenance. Gas engines produce very little **{{particulate matter}}** to begin with, which is a large part of why gas is preferred to diesel for anything running many hours"
+    ],
+    [
+     "Nothing at all",
+     "The machine meets the limit as built",
+     "Only available to designs whose combustion is inherently cool and uniform — and it removes an entire subsystem, its reagent logistics, its maintenance and its failure modes from the plant"
+    ]
+   ],
+   "note": "The final row is worth dwelling on because its value is systemic rather than chemical. A plant with no after-treatment has no ammonia storage to permit, no reagent deliveries to schedule, no slip limit to monitor and no catalyst to replace. In a difficult airshed that can be the difference between a project that is approvable and one that is not — and in an easy one it is simply less plant to own. That is the commercial argument every ultra-low-NOx machine is really making."
+  },
+  {
+   "id": "reading-a-number",
+   "title": "Three clean machines, three incomparable numbers",
+   "kind": "prose",
+   "read": "Concentration, rate and annual mass are different questions. Vendors quote whichever flatters them.",
+   "ps": [
+    "Emissions appear in three units, and confusing them is the most common analytical error in this sector.",
+    "**Concentration** — parts per million in the exhaust — describes how dirty the gas leaving the stack is. It says nothing about how much gas there is, so a large machine and a small one at the same concentration emit very different quantities. Worse, concentration can be diluted: add air and the number falls without a single molecule less being emitted. Regulators close that loophole with **{{oxygen correction}}**, restating everything at a reference oxygen level so dilution cannot flatter a result. A concentration quoted without its reference oxygen is not a measurement, it is a marketing figure.",
+    "**Rate** — pounds per megawatt-hour — normalises by useful output instead. This is the honest comparator between technologies, because it rewards efficiency: a machine that produces more electricity per unit of fuel emits less per megawatt-hour even at the same exhaust concentration. When comparing two different machines, this is the number to insist on.",
+    "**Annual mass** — tons per year — is what the permit is actually written against, and it is the product of the rate and the hours. This is where the previous two units connect to the regulatory world: a very clean machine run continuously can emit more in a year than a dirtier one run rarely, and the permitting system responds to the total.",
+    "The trap follows directly. A vendor may quote a low ppm figure at a favourable oxygen reference, a competitor may quote lb/MWh, and a third may quote tons per year at an assumed capacity factor. All three can be accurate and none can be compared. The disciplined move is to convert everything to lb/MWh for the technology comparison, then to tons per year at the *intended* run hours for the permitting question.",
+    "One further asymmetry matters. **{{Potential to emit}}** — the regulatory quantity — is generally computed at maximum capacity for every hour of the year unless the permit contains enforceable limits saying otherwise. So the annual number that determines a project's regulatory class is not what the plant expects to emit; it is what it *could* emit if it ran flat out. That distinction is the hinge of the next guide."
+   ]
+  },
+  {
+   "id": "where-you-may-build",
+   "title": "Where the air is already failing",
+   "kind": "prose",
+   "read": "The same machine faces completely different scrutiny depending on the air quality of the county it stands in.",
+   "ps": [
+    "Federal law sets health-based outdoor limits for a handful of **{{criteria pollutant}}s** — ozone and fine particulates being the two that matter most for combustion. Every region is designated against those standards, and the designation, not the machine, sets the rules a new source faces.",
+    "In an area that meets the standards, a large new source goes through a pre-construction review designed to stop clean air from deteriorating. Its central requirement is **{{BACT}}** — the best available control technology, determined case by case, weighing what is technically achievable against cost and energy penalties.",
+    "In a **{{non-attainment area}}** — where the air already fails the standard — two things change, and both are severe. First, the technology requirement escalates from 'best available, cost considered' to the *lowest achievable emission rate*, where cost is essentially not a defence. Second, and more consequentially, new emissions must be offset: the project must obtain **{{emission offsets}}** representing verified reductions elsewhere in the same airshed, at a ratio greater than one to one, so that total emissions fall even as the plant is added.",
+    "Offsets are a market, and often a thin one. In a badly polluted airshed there may simply be few credits available at any price, because the reductions have already been made and sold. When that happens the constraint stops being financial and becomes absolute: the project cannot proceed regardless of budget.",
+    "This is the mechanism that gives ultra-low-emission machines a wedge that has nothing to do with virtue. A machine emitting a small fraction of the NOx needs a small fraction of the offsets, and if it falls below the applicability thresholds it may avoid the non-attainment review path altogether. In an ozone non-attainment county — which includes a substantial share of the metropolitan areas where large campuses want to be — that can be the entire basis of a technology selection.",
+    "The corollary is a caution for anyone reading claims about permitting speed. 'Permits faster' is meaningless without naming the jurisdiction: in a clean rural airshed with generous thresholds, a conventional engine plant with **{{selective catalytic reduction}}** permits perfectly well, and the ultra-low-NOx premium buys little. The advantage is real, but it is *geographic*, and it should be underwritten county by county rather than asserted nationally."
+   ]
+  },
+  {
+   "id": "part-load",
+   "title": "Efficiency across the load range",
+   "kind": "bars",
+   "read": "Machines are compared at full load and then run at partial load for most of their lives.",
+   "unit": "approximate electrical efficiency, percent, at each share of rated load",
+   "intro": "Indicative electrical efficiency for a modular machine whose efficiency is nearly flat with load, shown against a single gas turbine of the same total output. The point is the shape of the curves, not the exact values.",
+   "items": [
+    {
+     "label": "Turbine at 100% load",
+     "v": 39
+    },
+    {
+     "label": "Turbine at 75% load",
+     "v": 35
+    },
+    {
+     "label": "Turbine at 50% load",
+     "v": 29
+    },
+    {
+     "label": "Turbine at 25% load",
+     "v": 20
+    },
+    {
+     "label": "Flat-efficiency array at 100% load",
+     "v": 46
+    },
+    {
+     "label": "Flat-efficiency array at 50% load",
+     "v": 45
+    },
+    {
+     "label": "Flat-efficiency array at 25% load",
+     "v": 44
+    }
+   ],
+   "note": "Two distinct mechanisms produce a flat curve, and they should not be confused. A **fleet** of engines stays efficient at {{part load}} by *staging* — switching whole units off so the survivors run near their best point — which works well down to the output of one unit and no further. A machine whose *individual* efficiency is genuinely flat achieves it thermodynamically, by varying how much fuel and air it takes in per stroke rather than by throttling a fixed-displacement cycle. The second is stronger at very low load and at fine granularity; the first is proven at scale. For a campus whose load varies widely — and an AI campus's does — the area under this curve, not the peak of it, is what determines the fuel bill."
+  },
+  {
+   "id": "many-fuels",
+   "title": "What multi-fuel really demands",
+   "kind": "table",
+   "read": "Fuels differ in energy content, flame speed and knock resistance — and a machine tolerant of all three is unusual.",
+   "intro": "Fuel flexibility is claimed widely and means very different things. These are the properties that actually vary, and what each one does to a machine.",
+   "cols": [
+    "Fuel",
+    "How it differs",
+    "What the machine must cope with"
+   ],
+   "rows": [
+    [
+     "Pipeline natural gas",
+     "The reference case, but composition drifts by region and season",
+     "A **{{Wobbe index}}** band wide enough to absorb seasonal variation without re-tuning"
+    ],
+    [
+     "Field or associated gas",
+     "Rich in heavier hydrocarbons, so a lower **{{methane number}}**",
+     "Knock. The controls retard timing and derate output to protect the machine, so capacity quietly falls"
+    ],
+    [
+     "**{{RNG}}** and raw biogas",
+     "Diluted with carbon dioxide, so much lower energy content, and often carrying sulphur and moisture",
+     "Far greater fuel volume for the same heat, plus corrosion and catalyst poisoning if the gas is not cleaned"
+    ],
+    [
+     "Propane",
+     "Higher energy density, very different Wobbe index",
+     "A genuinely different fuel setting; useful as a stored backup when the pipeline fails"
+    ],
+    [
+     "**{{Hydrogen}}**",
+     "No carbon, so no carbon dioxide — but a very fast flame that burns hot and can travel back up the burner",
+     "Flashback risk, higher {{thermal NOx}} at a given equivalence ratio, and materials that resist embrittlement. Blending a modest fraction is far easier than burning it neat"
+    ],
+    [
+     "**{{Ammonia}}**",
+     "Carbon-free and easier to store and ship than hydrogen",
+     "A reluctant, slow-burning fuel that is hard to ignite and, containing nitrogen in the fuel itself, opens a NOx pathway that has nothing to do with flame temperature"
+    ]
+   ],
+   "note": "The last two rows are why 'hydrogen-ready' should always be read closely. Burning ten or twenty percent hydrogen in an existing machine is a modest adjustment; burning it neat is a combustion-system redesign. And note the trap in the ammonia row: fuel-bound nitrogen produces NOx by a route that cooling the flame does not address, so a machine that is clean on natural gas is not automatically clean on ammonia. The honest questions to ask of any multi-fuel claim are: which fuels, at what blend fraction, with what change in rated output and emissions, and does switching need hardware changed or only software?"
+  },
+  {
+   "id": "heat-or-electrons",
+   "title": "Burning fuel, or converting it",
+   "kind": "proscons",
+   "read": "Combustion is limited by thermodynamics; electrochemistry is not — but it pays for that in other ways.",
+   "intro": "Every machine in this course except one turns fuel into heat, and heat into motion, and motion into electricity. A fuel cell skips the middle steps. That is a genuine difference in kind, and it sets the ceiling on what each can achieve.",
+   "cards": [
+    {
+     "t": "Thermal conversion",
+     "meta": "Engines, turbines, linear generators — fuel becomes heat first",
+     "adv": [
+      "**Follows load quickly**, because the fuel rate can be changed from moment to moment.",
+      "**Tolerates dirty and variable fuels** far better, and starts from cold in minutes.",
+      "**A mature supply chain** — thousands of machines a year, many suppliers, deep service networks and known failure modes."
+     ],
+     "dis": [
+      "*Bounded by the {{Carnot limit}}*: any heat engine's efficiency is capped by the ratio of its hot and cold temperatures, which is why raising {{firing temperature}} is the whole history of turbine development.",
+      "*Produces {{NOx}} whenever there is a hot flame in air*, so emissions control is intrinsic to the design rather than optional.",
+      "*Needs air handling, cooling and acoustic treatment* proportional to the heat it rejects."
+     ]
+    },
+    {
+     "t": "Electrochemical conversion",
+     "meta": "{{Solid-oxide fuel cell}} — fuel reacts without burning",
+     "adv": [
+      "**Not bounded by Carnot**, because chemical energy becomes electrical energy without an intermediate heat engine — so high electrical efficiency is achievable at modest scale.",
+      "**Almost no NOx**, because there is no flame and no high-temperature nitrogen chemistry.",
+      "**Quiet and vibration-free**, with no rotating mass and no combustion noise."
+     ],
+     "dis": [
+      "*Slow to follow load and slow to start*, since the stack must be held in a narrow temperature band — so it suits steady base load rather than a swinging campus.",
+      "*The stack is a consumable.* It degrades and is periodically replaced, which is a recurring capital cost rather than a maintenance item.",
+      "*It contributes no {{inertia}}*, so a plant built from fuel cells must source stability elsewhere."
+     ]
+    }
+   ],
+   "note": "For an AI campus the deciding column is usually the first disadvantage in each card. A load that swings by tens of percent within a second wants a machine that can follow it, or a plant with enough mass and stored energy to absorb the difference. A very efficient machine that cannot follow load is not disqualified — but it is a base-load block that must be paired with something faster, which changes it from a complete answer into one layer of a hybrid plant. That layering is the subject of the last guide in this course."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "NOx chemistry, after-treatment, units and airsheds.",
+   "cards": [
+    {
+     "q": "Why does burning any fuel in air produce {{NOx}}?",
+     "a": "Air is about four-fifths nitrogen. Above roughly 1,800 K the strong nitrogen–nitrogen bond begins to break in significant numbers and nitric oxide forms. This is {{thermal NOx}}, and its rate rises exponentially with temperature."
+    },
+    {
+     "q": "Why does uniformity of a flame matter as much as its average temperature?",
+     "a": "Because NOx formation is exponential in temperature, hot streaks contribute disproportionately. A flame with hot pockets emits far more than a uniformly warm flame at the same mean temperature — which is why premixing is such an effective control."
+    },
+    {
+     "q": "Name the three mainstream ways to lower flame temperature.",
+     "a": "{{Lean-burn}} — dilute with excess air; a {{DLN combustor}} — premix fuel and air so the flame burns lean and evenly; and {{water injection}} — add inert mass that absorbs heat. All attack the same exponential."
+    },
+    {
+     "q": "What does {{selective catalytic reduction}} require in return for removing NOx?",
+     "a": "A narrow exhaust-temperature window, stored ammonia or urea with its own hazards and permits, a catalyst that ages and must be replaced, and careful dosing — since excess reagent leaves as {{ammonia slip}}, itself a regulated pollutant."
+    },
+    {
+     "q": "Why is a ppm emissions figure meaningless without a reference oxygen level?",
+     "a": "Because concentration can be lowered by dilution — adding air reduces ppm without reducing what is emitted. {{Oxygen correction}} restates the measurement at a standard oxygen level so dilution cannot flatter the result."
+    },
+    {
+     "q": "When comparing two different technologies, which emissions unit should you insist on, and why?",
+     "a": "Pounds per megawatt-hour. It normalises by useful output, so it rewards efficiency and is comparable across machine sizes. Convert to tons per year at the intended run hours only when asking the permitting question."
+    },
+    {
+     "q": "What changes when a project moves from an attainment area to a {{non-attainment area}}?",
+     "a": "The control requirement escalates from {{BACT}}, where cost is weighed, to the lowest achievable emission rate, where it largely is not. And new emissions must be matched by {{emission offsets}} bought in the same airshed at better than one-to-one — a market that can simply be empty."
+    },
+    {
+     "q": "Why is 'permits faster' an incomplete claim?",
+     "a": "Because the advantage is geographic. In a clean rural airshed a conventional engine plant with SCR permits perfectly well and the ultra-low-NOx premium buys little. The wedge is real only where offsets are scarce or thresholds are near — so it must be underwritten county by county."
+    },
+    {
+     "q": "Distinguish the two ways a plant can stay efficient at {{part load}}.",
+     "a": "A fleet stages — shutting whole units off so the rest run near their best point, which works down to the output of one unit. A machine with genuinely flat efficiency achieves it thermodynamically, by varying fuel and air per cycle, and holds up at much lower load."
+    },
+    {
+     "q": "Why is a fuel cell not bound by the {{Carnot limit}}, and what does it pay for that?",
+     "a": "It converts chemical energy directly to electrical energy without an intermediate heat engine, so no hot-to-cold temperature ratio caps it. It pays in load-following speed, start time, a stack that degrades and must be replaced, and an absence of {{inertia}}."
+    },
+    {
+     "q": "Why is a machine that is clean on natural gas not automatically clean on ammonia?",
+     "a": "Ammonia contains nitrogen in the fuel itself, which opens a NOx formation route independent of flame temperature. Cooling the flame — the control that works for thermal NOx — does not address it."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on emissions and where they let you build.",
+   "items": [
+    {
+     "q": "Thermal NOx formation depends on temperature:",
+     "c": [
+      "Linearly",
+      "Exponentially",
+      "Not at all",
+      "Inversely"
+     ],
+     "a": 1,
+     "why": "The exponential dependence is why a modest cut in peak flame temperature produces a large cut in NOx, and why hot streaks dominate the total."
+    },
+    {
+     "q": "A vendor reports 5 ppm NOx but does not state a reference oxygen level. The correct response is:",
+     "c": [
+      "Accept it as excellent",
+      "Treat it as uninterpretable until corrected",
+      "Convert it to tons per year",
+      "Assume it means lb/MWh"
+     ],
+     "a": 1,
+     "why": "Concentration falls with dilution alone. Without oxygen correction the figure cannot be compared with anything."
+    },
+    {
+     "q": "Which unit is the fairest comparator between two different generating technologies?",
+     "c": [
+      "ppm in the exhaust",
+      "Pounds per megawatt-hour",
+      "Tons per year",
+      "Grams per litre of fuel"
+     ],
+     "a": 1,
+     "why": "It normalises by useful electrical output, so a more efficient machine is properly credited, and it is independent of machine size and dilution."
+    },
+    {
+     "q": "Potential to emit is normally calculated as:",
+     "c": [
+      "Expected annual emissions",
+      "Maximum capacity for every hour of the year, absent enforceable limits",
+      "Last year's measured total",
+      "The manufacturer's guarantee"
+     ],
+     "a": 1,
+     "why": "The regulatory quantity is what the plant could emit running flat out. Accepting enforceable limits on hours or fuel is what brings the calculated figure down."
+    },
+    {
+     "q": "In a non-attainment area, the requirement that most often stops a project outright is:",
+     "c": [
+      "Noise limits",
+      "Obtaining emission offsets that may not exist at any price",
+      "Water use",
+      "Fuel supply"
+     ],
+     "a": 1,
+     "why": "Offsets must be bought in the same airshed at better than one-to-one. Where prior reductions have been made and sold, the market can be empty, and the constraint becomes absolute rather than financial."
+    },
+    {
+     "q": "A machine burning 20% hydrogen by volume compared with one burning 100%:",
+     "c": [
+      "Faces the same engineering problem",
+      "Faces a far smaller one — neat hydrogen needs combustion-system redesign",
+      "Emits more NOx",
+      "Cannot be done"
+     ],
+     "a": 1,
+     "why": "Blending a modest fraction is a tuning exercise. Neat hydrogen brings flashback risk from a very fast flame, higher flame temperature and materials that must resist embrittlement."
+    },
+    {
+     "q": "The strongest reason a solid-oxide fuel cell suits base load rather than an AI campus's swinging demand is:",
+     "c": [
+      "It is too efficient",
+      "It follows load slowly and must be held in a narrow temperature band",
+      "It emits too much NOx",
+      "It cannot burn natural gas"
+     ],
+     "a": 1,
+     "why": "High efficiency and near-zero NOx are its strengths. Slow load-following, slow starts and no inertia mean it must be paired with something faster rather than used alone."
+    }
+   ]
+  }
+ ]
+}

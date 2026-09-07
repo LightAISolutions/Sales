@@ -1,0 +1,292 @@
+{
+ "schemaVersion": 2,
+ "slug": "enchanted-rock",
+ "title": "Enchanted Rock — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the permit, not the fuel line, decides how long you may run",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Two identical engines on two identical sites can be allowed to run 100 hours a year, or 8,760 — and the difference is a legal classification, not a mechanical one.",
+   "ps": [
+    "The previous guide covered what comes out of a stack. This one covers the document that decides how often it may come out, and who is permitted to own the machine underneath it.",
+    "Backup generation and on-site power look alike from a distance. Both are engines on a slab next to a building. Regulators treat them as entirely different things, because the annual quantity emitted is the product of the emission rate and the hours — and hours are the variable a permit can actually control.",
+    "That has an immediate and counter-intuitive consequence: **the most valuable thing a backup fleet has is often the thing that stops it earning money.** An emergency classification is what allowed it to be permitted quickly and cheaply, and running it for any commercial purpose is precisely what puts that classification at risk.",
+    "The second half of this guide follows the same asset into the utility's world, where a different question arises — not how many hours it may run, but on whose balance sheet it should sit, and who pays for it."
+   ]
+  },
+  {
+   "id": "three-duties",
+   "title": "Three duties, three regulatory worlds",
+   "kind": "table",
+   "read": "The same hardware occupies a different legal category depending on what it is allowed to do.",
+   "intro": "These are not engineering categories — the engines can be identical. They are permit classes, and each carries a different bargain between how quickly it can be approved and how freely it can be used.",
+   "cols": [
+    "Duty",
+    "What it is allowed to do",
+    "The bargain"
+   ],
+   "rows": [
+    [
+     "**{{Emergency generator}}**",
+     "Run when the normal supply fails, plus a small annual allowance for testing and maintenance",
+     "Fast, light permitting and the least demanding emission controls — bought with a hard ceiling on hours and a prohibition on running for commercial benefit"
+    ],
+    [
+     "Limited-use or peak-shaving",
+     "A capped number of hours a year at the owner's discretion",
+     "More controls and a fuller permit, in exchange for the right to choose when to run — which is what makes participation in grid programmes possible"
+    ],
+    [
+     "**{{Bridge power}}** at **{{prime power}}** duty",
+     "Carry the site's full load continuously for years",
+     "A full pre-construction air permit with proper control technology and, in a difficult airshed, offsets. The slowest and most expensive path — and the only one that actually replaces a grid connection"
+    ],
+    [
+     "Permanent islanded operation",
+     "Run as the site's sole supply indefinitely",
+     "Everything above, plus fuel security, redundancy and maintenance obligations that never end. The plant is now a power station, and must be engineered as one"
+    ]
+   ],
+   "note": "Reading down the third column gives the whole design problem. A campus wants row one's permitting timeline and row three's freedom, and cannot have both. What it can sometimes do is *sequence* them — begin under a limited classification while the full permit is processed, then convert — which is why the permitting strategy is usually settled before the machine is chosen, not after."
+  },
+  {
+   "id": "the-hundred-hours",
+   "title": "The hours that cost you the class",
+   "kind": "prose",
+   "read": "An emergency fleet may run a small number of non-emergency hours. Spending them for money is where fleets get into trouble.",
+   "ps": [
+    "The federal air-toxics rule for stationary engines, **{{RICE NESHAP}}**, is the instrument that makes this concrete. An engine in the emergency class may run without limit during a genuine outage, and beyond that gets a small annual allowance — commonly on the order of a hundred hours for maintenance and testing — of which only a limited share may be used for anything else.",
+    "The reason the allowance is so tightly drawn is straightforward. Emergency engines were permitted on the understanding that they would almost never run. If a fleet could be run whenever it was profitable, the assumption underpinning its light permitting would be false, and thousands of the least-controlled engines in the country would be operating at exactly the hours the grid is most stressed — which are also, frequently, the hours the air is worst.",
+    "So the boundary is drawn around *purpose*, not merely around hours. Running to keep a hospital lit during an outage is what the class is for. Running because wholesale prices are high, or because a utility is paying for load reduction, is commercial operation — and doing it can move the engines into a different class entirely, retroactively.",
+    "The practical consequence for anyone evaluating a proposal is a single sharp question: **is this fleet permitted for what you are being told it will do?** A pitch that combines emergency-class permitting speed with revenue from grid participation is describing two things that are usually mutually exclusive. There are legitimate routes to both — an engine permitted as a non-emergency limited-use unit with proper controls can participate freely — but that engine took longer to permit and cost more to equip, and the proposal should say so.",
+    "This is also the cleanest explanation of why gas engines have displaced diesel for anything intended to run more than rarely. Emission limits on diesel engines running many hours are severe, fuel must be stored and rotated on site, and particulate control is a permanent maintenance obligation. A pipeline-fed gas engine has no fuel inventory, produces very little **{{particulate matter}}**, and starts from a far better position on every limit that scales with hours. Once the intended duty crosses from 'almost never' to 'regularly', the fuel choice largely makes itself."
+   ]
+  },
+  {
+   "id": "under-the-threshold",
+   "title": "Designing a plant to fit beneath a line",
+   "kind": "prose",
+   "read": "Whether a project faces a permit measured in months or one measured in years is decided by an arithmetic exercise done before anything is built.",
+   "ps": [
+    "**{{Potential to emit}}** is the quantity that sorts projects into regulatory classes. It is not what the plant expects to emit; it is what it could emit running at maximum capacity every hour of the year, unless the permit itself contains enforceable limits saying otherwise.",
+    "Compare that figure with the applicable thresholds and the project lands in one of two worlds. Above them it is a **{{major source}}**: full pre-construction review, dispersion modelling, a best-available-control analysis, public comment, and — in a **{{non-attainment area}}** — offsets. Below them it is a **{{minor source}}**, with a far lighter permit and a schedule measured in months.",
+    "Three levers move a project across that line, and each costs something real:",
+    "The first is **emission rate** — a cleaner machine, or better after-treatment, lowers the tons-per-year for the same hours. The second is **accepting enforceable limits**: a plant that formally caps its own hours, fuel throughput or capacity becomes a *synthetic minor*, trading operational freedom for a lighter permit. That trade is genuine and permanent — the cap is a condition of the permit, and exceeding it is a violation rather than an overrun. The third is **plant size**, which is where the design work concentrates: sizing the block so that its potential to emit sits below the threshold.",
+    "This is why on-site power blocks so often appear in suspiciously round capacities, and why a developer may build several separately-permitted blocks rather than one large plant. It is also where the exercise gets genuinely difficult, because regulators aggregate sources that are functionally a single facility. Whether adjacent blocks under common control serving one campus count as one source or several is a real determination with a real answer, and treating it as a formality is how projects acquire enforcement problems years later.",
+    "The honest way to hold this: sizing to a threshold is legitimate and universal engineering practice, in the same way that designing a building to a height limit is. What is not legitimate is fragmenting a single plant on paper to avoid a review it should have had — and the distinction between the two is exactly what the aggregation analysis exists to draw."
+   ]
+  },
+  {
+   "id": "the-asset-that-earns-idle",
+   "title": "Getting paid to be available",
+   "kind": "prose",
+   "read": "A backup fleet is capital that produces nothing. Grid programmes are the attempt to make it earn while it waits.",
+   "ps": [
+    "Backup generation is, financially, insurance bought with capital equipment. It sits idle, depreciates, needs maintenance and produces no revenue. The obvious question — can it earn something while it waits? — has a real answer, and the answer's constraints are the subject of this section.",
+    "The mechanism is aggregation. Individually a few megawatts at one site is invisible to a grid operator. Aggregated across hundreds of sites under one controller, the same fleet becomes a resource of meaningful size that can be dispatched — a **{{virtual power plant}}**. It can bid into **{{demand response}}** programmes, where it is paid to reduce a site's draw from the grid at moments of stress, and in some markets into wholesale energy and **{{ancillary services}}** alongside conventional plant.",
+    "The commercial model this enables is worth naming, because it changes what the customer buys. Instead of purchasing generators, the customer pays a service fee for guaranteed reliability, and the provider owns the fleet and monetises it in the market. The market revenue subsidises the fee — so the customer's resilience costs less than owning the equipment would, and the provider earns twice from one asset.",
+    "Three constraints bound the model, and every one of them is easy to underestimate. The first is the permit class discussed above: an emergency-classified fleet largely cannot do this, so the equipment must be permitted for commercial operation from the outset, with the controls that implies.",
+    "The second is that **the customer's reliability obligation always outranks the market**. If the site needs power, the fleet serves the site regardless of what the grid is paying, so the market revenue is genuinely interruptible. Any valuation that treats it as firm is overstating it.",
+    "The third is that market revenue is not an entitlement. Programme rules change, payments compress as more resources enter, and a business model that depends on today's programme design is exposed to tomorrow's. That is the same saturation dynamic the merchant-storage guides in this corpus describe for batteries, and it applies here with equal force — the first movers into any capability earn the most, and the returns decay as the capability becomes common."
+   ]
+  },
+  {
+   "id": "whose-asset",
+   "title": "Two ways to own a bridge",
+   "kind": "proscons",
+   "read": "The same plant can be a customer's private equipment or a utility's rate-based asset — and the choice changes who bears every risk.",
+   "intro": "A bridge plant serving one very large customer can sit on either side of the regulatory boundary. The structures look similar on a site plan and are entirely different underneath.",
+   "cards": [
+    {
+     "t": "Customer-side, privately owned",
+     "meta": "The campus or a supplier owns and operates the plant behind the meter",
+     "adv": [
+      "**Fast, and controlled by the customer.** No commission approval, no public process, no queue of intervenors — the schedule is a procurement schedule.",
+      "**Fully flexible.** The owner decides how it is operated, maintained, expanded and eventually removed.",
+      "**No cost is socialised**, so no other customer can object to paying for it, which removes an entire category of opposition."
+     ],
+     "dis": [
+      "*Every risk sits with the owner* — fuel, emissions compliance, availability, and the {{stranded cost}} if the plant outlives its purpose.",
+      "*Financed at private cost of capital*, which is higher than a regulated utility's.",
+      "*It is a business the customer may not want to be in*, complete with operators, permits and reagent deliveries."
+     ]
+    },
+    {
+     "t": "Utility-owned under an approved rate",
+     "meta": "The utility builds and owns it; the large customer pays through a commission-approved tariff",
+     "adv": [
+      "**Cheap capital and a long horizon** — the utility funds it at regulated cost and recovers it over decades.",
+      "**The operator already exists**, with dispatch, compliance and maintenance organisations in place.",
+      "**The asset has a second life** in the utility's fleet after the bridge, since it can serve the wider system rather than one campus."
+     ],
+     "dis": [
+      "*It requires commission approval*, which means a public docket, intervenors and months of process before construction can start.",
+      "*The rate must be designed so other customers do not subsidise the one being served* — the central question a regulator will ask, and the one that most often reshapes the deal.",
+      "*The customer gives up control* over an asset its operations depend on."
+     ]
+    }
+   ],
+   "note": "The second structure is the more consequential development, because it converts a merchant equipment sale into regulated infrastructure. What makes it approvable is the rate design: the large customer must demonstrably pay the full cost of the plant serving it, so existing ratepayers are held harmless. Understand that principle and the whole category becomes legible — every version of this deal, whatever it is called, is an argument that the beneficiary pays. The regulated-purchase guide in this course covers how such approvals are actually tested."
+  },
+  {
+   "id": "the-tariff",
+   "title": "What the utility charges a site that makes its own power",
+   "kind": "table",
+   "read": "Self-generation does not end the relationship with the utility. It changes which parts of the bill matter.",
+   "intro": "A campus with on-site generation still touches the grid — for start-up, for backup, for the eventual permanent connection. These are the charges that decide whether self-generation actually saves money.",
+   "cols": [
+    "Charge",
+    "What it is for",
+    "Why it bites"
+   ],
+   "rows": [
+    [
+     "**{{Demand charge}}**",
+     "Billed on the highest power drawn in the period, not on total energy",
+     "On-site generation reduces energy consumed but may barely reduce the peak, if the plant is ever unavailable at the wrong moment. One bad fifteen-minute interval can set the charge for the month"
+    ],
+    [
+     "**{{Standby service rate}}**",
+     "The utility's charge for standing ready to serve a self-generating customer when its own plant is down",
+     "The utility must hold capacity for a customer that normally does not use it, and prices that readiness. It is often the single largest surprise in a self-generation business case"
+    ],
+    [
+     "**{{Interruptible}}** service",
+     "A discount for accepting curtailment a set number of hours a year",
+     "Attractive to a site with its own generation — it can ride through curtailment on its own plant — but the hours are the utility's to call, not the customer's"
+    ],
+    [
+     "**{{Flexible load interconnection}}**",
+     "Connecting sooner in exchange for accepting curtailment when the network is constrained",
+     "Converts a queue problem into an operational one. The site connects years earlier and covers curtailed periods with its own generation — which is often the real reason the on-site plant is kept after the wires arrive"
+    ]
+   ],
+   "note": "The last row is the quiet strategic point of this whole guide. A campus with substantial on-site generation is a far better interconnection candidate than one without, because it can credibly promise to reduce its draw when the network is stressed. The generation stops being purely a bridge and becomes the thing that makes an earlier, cheaper connection possible — which changes the answer to 'what happens to this plant in year six' from *nothing* to *it is why we got connected at all*."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Duty classes, thresholds, aggregation and tariffs.",
+   "cards": [
+    {
+     "q": "Why do regulators treat backup and on-site prime power as different things when the engines are identical?",
+     "a": "Because the annual quantity emitted is the emission rate multiplied by the hours, and hours are what a permit can control. An {{emergency generator}} was permitted on the assumption it would almost never run; a {{prime power}} plant is assumed to run continuously."
+    },
+    {
+     "q": "What does an emergency classification buy, and what does it cost?",
+     "a": "It buys fast, light permitting and the least demanding emission controls. It costs a hard ceiling on annual hours and a prohibition on running for commercial benefit — so the classification that made the fleet cheap to permit is what stops it earning."
+    },
+    {
+     "q": "Under {{RICE NESHAP}}, where is the boundary actually drawn?",
+     "a": "Around purpose as much as hours. Unlimited running during a genuine outage, plus a small annual allowance for testing and maintenance of which only a limited share may be non-emergency. Running because prices are high or a programme is paying is commercial operation."
+    },
+    {
+     "q": "What is {{potential to emit}}, and why is it larger than expected emissions?",
+     "a": "It is what the plant could emit at maximum capacity every hour of the year, absent enforceable limits. It is deliberately a ceiling rather than a forecast, because the permit must bound the worst case, not the plan."
+    },
+    {
+     "q": "Name the three levers that move a project below a major-source threshold.",
+     "a": "A lower emission rate, through a cleaner machine or better after-treatment; accepting enforceable caps on hours or fuel, becoming a synthetic {{minor source}}; and sizing the plant so its potential to emit sits below the line."
+    },
+    {
+     "q": "Why can a developer not simply split one large plant into several small permitted blocks?",
+     "a": "Because regulators aggregate sources that are functionally one facility under common control serving one site. Sizing a genuine plant to a threshold is normal engineering; fragmenting a single plant on paper to avoid review is what the aggregation analysis exists to catch."
+    },
+    {
+     "q": "How does a {{virtual power plant}} turn idle backup capital into revenue?",
+     "a": "By aggregating many small sites under one controller into a resource large enough to be dispatched, then selling {{demand response}} and, in some markets, energy and {{ancillary services}}. The market revenue can subsidise the customer's reliability fee."
+    },
+    {
+     "q": "What are the three constraints on that model?",
+     "a": "The fleet must be permitted for commercial operation, not as emergency units; the customer's own reliability always outranks the market, so the revenue is interruptible rather than firm; and programme payments compress as more resources enter."
+    },
+    {
+     "q": "Why does a {{standby service rate}} surprise people building a self-generation business case?",
+     "a": "Because self-generation reduces energy purchased but not the utility's obligation to stand ready when the on-site plant is down. The utility prices that readiness, and it is charged whether or not it is called on."
+    },
+    {
+     "q": "How can on-site generation make a grid connection arrive sooner?",
+     "a": "Under {{flexible load interconnection}}, a site that can credibly reduce its draw when the network is constrained can be connected years earlier than one that cannot. The generation covers the curtailed hours — so the plant is not just a bridge, it is the reason the connection was granted."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on hours, thresholds and ownership.",
+   "items": [
+    {
+     "q": "An emergency-classified fleet is offered a payment to run during a grid emergency. The main risk is:",
+     "c": [
+      "Higher fuel cost",
+      "Losing the emergency classification the light permit depends on",
+      "Excessive noise",
+      "Voiding the engine warranty"
+     ],
+     "a": 1,
+     "why": "The class is defined around purpose. Running for compensation is commercial operation, and can move the engines into a class requiring fuller permitting and better controls — potentially retroactively."
+    },
+    {
+     "q": "Potential to emit is best described as:",
+     "c": [
+      "Measured emissions last year",
+      "Maximum possible annual emissions absent enforceable limits",
+      "The manufacturer's guaranteed rate",
+      "Emissions at average load"
+     ],
+     "a": 1,
+     "why": "It is a ceiling calculated at maximum capacity for every hour of the year. Accepting permit limits on hours or fuel is what reduces it."
+    },
+    {
+     "q": "A plant accepts an enforceable annual hours cap to stay a minor source. This means:",
+     "c": [
+      "The cap is advisory",
+      "Exceeding the cap is a permit violation",
+      "The cap can be raised at will",
+      "Emissions are no longer monitored"
+     ],
+     "a": 1,
+     "why": "The cap is a condition of the permit, which is what makes the lighter review defensible. That is the trade: operational freedom for a faster approval."
+    },
+    {
+     "q": "Gas engines displaced diesel for frequently-run on-site power mainly because:",
+     "c": [
+      "Gas engines are cheaper to buy",
+      "Limits that scale with hours are far easier to meet, with no fuel inventory and little particulate",
+      "Diesel is unavailable",
+      "Gas engines are quieter"
+     ],
+     "a": 1,
+     "why": "Once duty crosses from rarely to regularly, diesel's emission limits, on-site fuel storage and particulate control obligations all become binding at once."
+    },
+    {
+     "q": "In a VPP, market revenue from an aggregated backup fleet should be valued as:",
+     "c": [
+      "Firm and contracted",
+      "Interruptible, because the customer's reliability need outranks it",
+      "Guaranteed by the grid operator",
+      "Independent of programme rules"
+     ],
+     "a": 1,
+     "why": "If the site needs power, the fleet serves the site regardless of market prices. The revenue is real but subordinate, and programme design can change it."
+    },
+    {
+     "q": "What makes a utility-owned bridge plant for one hyperscale customer approvable by a regulator?",
+     "c": [
+      "That it is the cheapest option",
+      "A rate design under which the beneficiary demonstrably pays the full cost",
+      "That the customer is large",
+      "That it uses gas rather than coal"
+     ],
+     "a": 1,
+     "why": "The central regulatory question is whether existing ratepayers subsidise the new customer. A rate that makes the beneficiary pay in full is what answers it."
+    }
+   ]
+  }
+ ]
+}

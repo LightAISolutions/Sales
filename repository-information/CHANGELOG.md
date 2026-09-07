@@ -3,11 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.96r] — 2026-09-06 09:42:56 PM EST — v01.83w
+
+> **Prompt:** "Picking up from the guide-backfill session 1, run the second of the six guide-backfill sessions from
+> repository-information/PROFILER-COVERAGE-PLAN.md §8 ("Study guides on existing dossiers") on Opus 5 xhigh as a fresh
+> session: voltagrid, proenergy, enchanted-rock, mainspring-energy, on-energy, prevalon. […] THE TASK, per company:
+> `profiler prep <Company>` ONLY — no dossier work. […] SIX COMPANIES, one more than session 1 carried — budget the
+> extra reading, not the extra authoring. THESE SIX ARE BRIDGE POWER, AND THAT IS THE TEACHING FRAME. They exist
+> because the interconnection queue, not the equipment, is what a buyer cannot wait for — so teach the machinery of
+> getting power to a site BEFORE the grid can serve it, and what each technology trades away to be fast. […] Cover
+> prime against standby against bridge duty; heat rate, emissions permitting and run-hour limits as the real
+> constraints; gas interconnection and fuel logistics as a second queue nobody counts; mobility and redeployment as
+> the residual-value argument; and where these assets sit relative to a utility's own tariff. SESSION 1 SHIPPED THE
+> BUYER-SIDE COURSE — REFERENCE IT, DON'T REBUILD IT. […] NO DOSSIER EDITS. […] After the graph rebuild, confirm
+> `profiler-graph.json` came back byte-identical. CONCEPTS — CHECK COLLISIONS PROGRAMMATICALLY, NOT BY PHRASE. […]
+> Then, after the guides are written, extract the `{{marker}}` inventory from the finished files and intersect it
+> with your proposed set. […] ALSO CHECK […] the [PC-README-TREE] completeness audit over
+> `repository-information/study-prep/` and `live-site-pages/profiler-data/`. CHANGELOG IS AT 98/100 […] VERIFY: all
+> six checkers exit 0 […] one push commit on a claude/* branch."
+
+### Added
+
+- **Guide-backfill session 2 of 6 — the six bridge-power supplier study guides.** Guides only: no dossier was opened for editing, no `profileVersion` moved, nothing was archived, `archive-index.json` untouched — and `profiler-graph.json` came back **byte-identical** after the rebuild, which is the independent proof the constraint held. Each guide is schema v2 with a lesson plan under `repository-information/study-prep/<slug>/`. As in session 1 the six were designed as **one non-overlapping course** before any authoring began, and the division of labour is the reason they are worth reading in order:
+  - **`voltagrid`** — *the machine and the fuel* (11 sections). The course's entry point: why bridge power exists at all, and a cross-technology map of six answers to the same question. Then the gas reciprocating engine itself — lean burn as an in-cylinder emissions control and turbocharging as the recovery of what it gives away; the four ISO 8528 ratings one engine carries and why quoting the wrong one misstates the plant; availability arithmetic and staging as the case for many small machines; inertia and RoCoF against a load that swings faster than fuel can follow; **the fuel chain as a second queue** with five separable failure points, and Wobbe index and methane number as the reason "multi-fuel" is a specification rather than a claim; and mobility as the residual-value argument.
+  - **`proenergy`** — *the turbine and the heat rate* (9 sections). The Brayton cycle and why simple-cycle machines discard their exhaust heat deliberately; aeroderivative against heavy-duty frame, and why the delivery-slot bullet is what actually decides bridge projects; **how to read a heat rate** through four incompatible conventions, with the LHV/HHV conversion worked through; the hot-day derate and the two recoveries that trade water for megawatts; equivalent operating hours and module exchange; and build-prove-sell-retain-the-O&M as how fast-build capacity changes hands.
+  - **`mainspring-energy`** — *what comes out of the stack* (10 sections). The Zeldovich exponential and why uniformity matters more than coolness; three ways to cool a flame and the fourth that removes it; what SCR and oxidation catalysts demand in return; **why three "clean" claims are usually incomparable** — concentration against rate against annual mass, and the oxygen correction that stops dilution flattering a result; criteria pollutants, BACT, LAER and an offset market that can simply be empty; the two distinct mechanisms behind a flat part-load curve; what multi-fuel really demands, including the ammonia trap that flame cooling does not close; and the Carnot limit as the difference in kind between burning fuel and converting it.
+  - **`enchanted-rock`** — *how many hours, and whose asset* (9 sections). Duty as a **legal** class rather than an engineering one; the emergency class and the trap inside it, where the boundary is drawn around purpose rather than hours; potential-to-emit arithmetic, the three levers that move a project below a threshold, and where legitimate threshold engineering becomes paper fragmentation; aggregation as the way idle backup capital earns, with the three constraints that bound it; private against utility-owned bridge under a commission-approved rate; and demand charges, standby service rates and flexible load interconnection as **where these assets sit relative to a utility's own tariff**.
+  - **`on-energy`** — *the campus as a grid citizen* (9 sections). The voltage ladder and the duplication-against-fault-consequence trade that decides where equipment sits; the transient travelling in both directions, and why the collective response to a small disturbance is more dangerous than the disturbance; ride-through as a depth-against-duration curve, and why a near-zero dip can only be met with stored energy; double conversion applied at medium voltage as a change of scope rather than of scale; grid-forming against grid-following as an architectural choice; buying an earlier connection by accepting curtailment; and the five protection questions medium voltage forces.
+  - **`prevalon`** — *the block, the mixture, and the ending* (10 sections). DC against AC blocks as a question of where responsibility is drawn; the six layers inside an enclosure and how each limit becomes a condition on the one above; the five datasheet numbers and the cooling-against-efficiency trade that lets two vendors both be honest; thermal runaway and deflagration as separate hazards, and why megawatt-hours per acre is a fire-testing outcome; the plant controller's division of labour and why transitions are where hybrids fail; hardware-in-the-loop as the answer to interactions being invisible to component testing; and **what remains when the wires arrive** — the course's closing argument.
+- **39 concepts registered** (1,073 → 1,112), the bridge-power vocabulary the corpus lacked: the machines (`reciprocating-engine`, `linear-generator`, `free-piston`, `spark-ignition`, `turbocharging`, `engine-core`, `ac-block`, `string-pcs`, `mobile-generation`); thermodynamics and measurement (`lhv`, `hhv`, `carnot-limit`, `oxygen-correction`, `water-injection`); emissions (`thermal-nox`, `ammonia-slip`, `oxidation-catalyst`, `particulate-matter`, `criteria-pollutant`, `bact`, `emission-offsets`, `potential-to-emit`); the fuel chain (`cng`, `lng`, `rng`, `hydrogen`, `ammonia`, `wobbe-index`, `methane-number`, `gas-lateral`, `firm-transportation`, `virtual-pipeline`); and the interface and commercial layer (`low-voltage-ride-through`, `voltage-sag`, `flexible-load-interconnection`, `standby-service-rate`, `deflagration`, `hardware-in-the-loop`, `o-and-m`).
+
+### Changed
+
+- **§8's six bridge-power rows flipped** to `✓ · v04.96r` with a one-line handle each, leaving **15 backfills outstanding** across four further sessions (7 integrator, 4 EPC, 4 IPP buyer-side).
+- **README tree** gains the six `<slug>.study.json` entries and six `study-prep/<slug>/` directory-and-file pairs, each inserted alphabetically without disturbing the pre-existing ordering of the surrounding listings.
+- **CHANGELOG `Sections: 98/100` → `99/100`.** The counter was verified against the real section count (`grep -c '^## \[v[0-9]'` returned 98) rather than trusted. **Rotation did not fire — it fires on the next push**, and the working clone is shallow at 50 commits, so the next session must deepen it before rotating or SHA enrichment on the oldest groups will fail silently.
 
 ## [v04.95r] — 2026-09-06 08:52:59 PM EST — v01.83w
 

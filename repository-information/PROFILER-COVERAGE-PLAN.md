@@ -276,12 +276,12 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | backfill | `nextera-energy-resources` | NextEra Energy Resources | IPP — buyer side has no guides | — |
 | backfill | `plus-power` | Plus Power | IPP — buyer side has no guides | — |
 | backfill | `terra-gen` | Terra-Gen | IPP — buyer side has no guides | — |
-| backfill | `voltagrid` | VoltaGrid | bridge-power supplier | — |
-| backfill | `proenergy` | ProEnergy | bridge-power supplier | — |
-| backfill | `enchanted-rock` | Enchanted Rock | bridge-power supplier | — |
-| backfill | `mainspring-energy` | Mainspring Energy | bridge-power supplier | — |
-| backfill | `on-energy` | ON.energy | bridge-power supplier | — |
-| backfill | `prevalon` | Prevalon | bridge-power supplier | — |
+| backfill | `voltagrid` | VoltaGrid | bridge-power supplier | ✓ · v04.96r — the machine and the fuel |
+| backfill | `proenergy` | ProEnergy | bridge-power supplier | ✓ · v04.96r — the turbine and the heat rate |
+| backfill | `enchanted-rock` | Enchanted Rock | bridge-power supplier | ✓ · v04.96r — how many hours, and whose asset |
+| backfill | `mainspring-energy` | Mainspring Energy | bridge-power supplier | ✓ · v04.96r — what comes out of the stack |
+| backfill | `on-energy` | ON.energy | bridge-power supplier | ✓ · v04.96r — the campus as a grid citizen |
+| backfill | `prevalon` | Prevalon | bridge-power supplier | ✓ · v04.96r — the block, the mixture, and the ending |
 | backfill | `narada` | Narada | G9 — the backup-power incumbent | ✓ · v04.51r — the cell, not the shelf |
 | backfill | `canadian-solar` | Canadian Solar | integrator | — |
 | backfill | `crrc-zhuzhou` | CRRC Zhuzhou | integrator | — |

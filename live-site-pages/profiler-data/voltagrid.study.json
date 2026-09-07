@@ -1,0 +1,377 @@
+{
+ "schemaVersion": 2,
+ "slug": "voltagrid",
+ "title": "VoltaGrid — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: when the grid is the thing you cannot wait for",
+   "kind": "callout",
+   "tone": "info",
+   "read": "A campus builds its own power station not because generation is cheap, but because the queue is long.",
+   "ps": [
+    "A large new electrical load — an AI campus, a hydrogen plant, a smelter — cannot simply be plugged in. It must be studied, the network reinforced around it, and its connection built. That process runs in years, and it is the subject of the buyer-side guides in this corpus.",
+    "**{{Bridge power}}** is the answer to a specific question: what does a customer do when the building is ready, the machines are bought, and the connection is not. The answer is to build a private power station on the site and run it until the wires arrive.",
+    "That decision buys speed and pays for it in five currencies — fuel cost, emissions, permit exposure, noise and land, and the awkward question of what happens to the plant afterwards. This guide, and the five that follow it, are about how each technology spends those five currencies differently.",
+    "Start with the machine most of this capacity is actually built from: the gas **{{reciprocating engine}}**. Cell chemistry is out of scope — that is the cell-maker guides. Revenue and dispatch are out of scope — those are the merchant-storage guides. What matters here is the physical business of making megawatts on a site that the grid cannot yet serve."
+   ]
+  },
+  {
+   "id": "five-answers",
+   "title": "Five answers to the same question",
+   "kind": "table",
+   "read": "Every on-site technology is a different trade between how soon, how clean, how efficient and how big.",
+   "intro": "Six machines compete for the same job. None is best; each is the right answer to a different constraint. The rest of this course takes them one at a time — this table is the map.",
+   "cols": [
+    "Technology",
+    "Typical block",
+    "What it is good at",
+    "What it gives up"
+   ],
+   "rows": [
+    [
+     "Gas {{reciprocating engine}}",
+     "1–20 MW per unit, stacked into hundreds",
+     "Fast delivery, high part-load efficiency, granular redundancy, real {{inertia}}",
+     "Many machines to maintain; a large site footprint; {{NOx}} needs after-treatment"
+    ],
+    [
+     "{{Aeroderivative}} gas turbine",
+     "25–60 MW per unit",
+     "High power density, fast starts, a small footprint per megawatt",
+     "Poorer {{part load}}; sensitive to hot weather; fewer suppliers"
+    ],
+    [
+     "{{Heavy-duty gas turbine}}",
+     "100–500 MW",
+     "The lowest fuel cost per megawatt-hour when run in {{combined cycle}}",
+     "Delivery slots years out, and long construction — the opposite of a bridge"
+    ],
+    [
+     "{{Linear generator}}",
+     "250 kW per unit, arrayed",
+     "Very low {{NOx}} without after-treatment; flat efficiency across the load range",
+     "A young supply chain; no large installed base to point at"
+    ],
+    [
+     "{{Solid-oxide fuel cell}}",
+     "Hundreds of kW, arrayed",
+     "High electrical efficiency, no combustion, quiet",
+     "Slow to follow load; the stack is a consumable that must be replaced"
+    ],
+    [
+     "Containerised battery",
+     "5 MWh per enclosure",
+     "Instant response, no emissions at the site, and it can be reused later",
+     "It stores energy, it does not make it — something else must fill it"
+    ]
+   ],
+   "note": "Read the middle two columns together. The block size decides how finely a site can match plant to load and how gracefully it degrades when one unit is down; the strength column decides what the plant is like to live with. A site that must be energised in twelve months has already eliminated two rows of this table before comparing anything else."
+  },
+  {
+   "id": "the-engine",
+   "title": "How a gas engine makes electricity",
+   "kind": "prose",
+   "read": "A truck engine's working principle, scaled to the size of a house, running on pipeline gas.",
+   "ps": [
+    "A **{{reciprocating engine}}** burns fuel inside cylinders, pushes pistons, and turns a crankshaft. The crankshaft spins an alternator. Everything else — the cooling system, the exhaust treatment, the controls — exists to let that happen continuously and safely for tens of thousands of hours.",
+    "Large stationary gas engines are almost all **{{spark ignition}}** and **{{lean-burn}}**: they burn with substantially more air than the fuel strictly needs. Excess air is the whole trick. It lowers the peak flame temperature inside the cylinder, and because the chemistry that forms nitrogen oxides is exponential in temperature, a cooler flame forms dramatically less of them. Lean-burn is an emissions strategy implemented in the combustion chamber rather than in the exhaust pipe.",
+    "Burning lean costs power, because a given cylinder now holds less fuel. **{{Turbocharging}}** recovers it: exhaust gas spins a turbine that drives a compressor, which forces more air — and therefore more fuel — into the same cylinder. A modern lean-burn gas engine reaches the mid-forties in percentage terms for electrical efficiency, which is comparable to a simple-cycle turbine several times its size.",
+    "The engine turns at a fixed speed because the alternator must produce power at grid frequency. That constraint has a valuable side-effect explored later in this guide: a spinning engine and alternator store real rotational energy, and that energy resists sudden changes in the grid's frequency.",
+    "Everything a buyer cares about follows from the machine being an engine rather than a turbine: it likes part load, it tolerates altitude and heat better, it can be started and stopped without much penalty, and it needs oil changes and cylinder-head work on a schedule measured in hundreds of hours. A hundred engines is a maintenance organisation, not a purchase."
+   ]
+  },
+  {
+   "id": "duty-ratings",
+   "title": "One engine, four different power ratings",
+   "kind": "table",
+   "read": "How many kilowatts a machine is worth depends entirely on how often you intend to run it.",
+   "intro": "**{{ISO 8528}}** defines the rating classes for engine gen-sets, so a kilowatt from one maker means the same as a kilowatt from another. The classes differ in permitted annual hours and average load, not in hardware — the same engine carries a different number in each row.",
+   "cols": [
+    "Rating class",
+    "What it assumes",
+    "Where it is used",
+    "Why the number differs"
+   ],
+   "rows": [
+    [
+     "Emergency standby",
+     "Runs only while the normal supply is out, limited hours a year, no overload allowance",
+     "A data centre's diesel backup fleet",
+     "The highest number the engine will carry, because it is rarely asked to"
+    ],
+    [
+     "Limited-time running",
+     "A fixed annual allowance at full load",
+     "Peak-shaving and utility programmes",
+     "Between standby and prime; the hours are contractually capped"
+    ],
+    [
+     "{{Prime power}}",
+     "Variable load, unlimited hours, with an overload allowance",
+     "A {{bridge power}} plant carrying a live campus",
+     "Lower than standby, because thermal and mechanical duty is continuous"
+    ],
+    [
+     "{{Continuous rating}}",
+     "Constant full load, unlimited hours",
+     "A permanently islanded site; a power station",
+     "The most conservative number of the four"
+    ]
+   ],
+   "note": "This table is the single most common source of confusion in the sector, and it is not academic. A fleet quoted at its **{{standby rating}}** and then operated as prime power will not deliver the megawatts on the datasheet, will consume maintenance intervals faster than budgeted, and — as the permitting guide in this course explains — may be in the wrong regulatory class entirely. When a proposal quotes a number, the first question is always: at which rating?"
+  },
+  {
+   "id": "granularity",
+   "title": "Why a hundred small engines beat one large machine",
+   "kind": "prose",
+   "read": "Redundancy, maintenance and load-following all improve when the plant is made of many small pieces.",
+   "ps": [
+    "A site needing 200 MW could buy two 100 MW turbines or fifty 4 MW engines. The engines usually win for a bridge plant, and the reasons are worth understanding because they generalise to every modular technology in this course.",
+    "The first reason is **availability arithmetic**. With two machines, losing one halves the plant. With fifty, losing one costs two percent, and building **{{N+1}}** redundancy means buying one extra unit rather than a second half of the plant. Redundancy is cheap when the increment is small.",
+    "The second is maintenance without an outage. Engines need scheduled work at intervals measured in hundreds of hours. A fleet takes units out one at a time while the rest carry the load, so the plant never stops. A single large machine's major inspection is a plant outage that has to be planned around.",
+    "The third is **{{part load}}**. A campus's load varies, and a machine running at forty percent of its rating is usually burning fuel less efficiently than one running at ninety. A fleet solves this by *staging* — shutting units down entirely and running the remainder near their best point — so fleet efficiency stays nearly flat across a wide load range. A single large turbine has no equivalent move.",
+    "The costs are real and should not be minimised. Fifty engines need fifty exhaust systems, fifty sets of after-treatment, far more land, and a maintenance organisation with people on site permanently. The plant is also acoustically complex: noise limits at the property line are a genuine design constraint, and a machine's rating in decibels at a stated distance belongs in the comparison alongside its rating in megawatts.",
+    "Finally, granularity is what makes phased energisation possible. A fleet can carry the first building while the rest of the campus is still being built, adding units as load arrives. That matches how large campuses are actually commissioned, and it is a structural advantage over any technology sold in very large blocks."
+   ]
+  },
+  {
+   "id": "the-transient",
+   "title": "The load that moves faster than the plant",
+   "kind": "prose",
+   "read": "AI training swings a campus's demand by tens of percent in under a second — and a spinning machine's mass is what absorbs the first moment of it.",
+   "ps": [
+    "A conventional data centre presents a smooth, slow-moving load. A large AI training cluster does not: thousands of accelerators start and stop a computation in step with one another, so demand can move by a substantial fraction of the total in well under a second, and do it repeatedly. To a power plant this is a **{{block load}}** arriving and departing on a timescale the fuel system cannot follow.",
+    "Physics gives the plant a free first response. Every spinning generator stores rotational kinetic energy, and when load suddenly exceeds generation that energy is drawn on automatically — the machines slow slightly, and the grid frequency falls. This is **{{inertia}}**, and it is what buys the control system the fraction of a second it needs before fuel can actually be added.",
+    "The measure that matters is **{{RoCoF}}** — how fast frequency changes in those first moments. A system with plenty of spinning mass falls slowly and recovers gracefully. A system with little of it falls fast enough that protective devices, whose settings were written for a slower world, may disconnect things that should have stayed connected.",
+    "This is why a private plant built from engines can credibly claim to handle violent load swings without batteries. The claim is not that engines are fast — combustion is not instantaneous — but that the plant has *mass*. Where more is needed, a **{{synchronous condenser}}** can be added: a large machine spinning in synchronism with no fuel and no prime mover, contributing inertia, reactive power and fault current but no energy. A **{{flywheel}}** coupled to one deepens the same effect.",
+    "The alternative architecture puts a battery inline instead, using power electronics to respond in milliseconds. That is a genuinely different answer to the same problem and it is the subject of a later guide in this course. The useful way to hold both in mind: **inertia is a physical property you buy with rotating mass, and fast response is a control property you buy with power electronics.** They are substitutes at the level of the symptom, not at the level of the mechanism — and a plant designed around one will be sized quite differently from a plant designed around the other."
+   ]
+  },
+  {
+   "id": "the-second-queue",
+   "title": "The fuel queue nobody counts",
+   "kind": "table",
+   "read": "A site that escaped the electricity queue has usually just joined a gas one.",
+   "intro": "Building generation on site removes the wait for wires and creates a new dependency: several hundred megawatts of engines burn a great deal of gas, continuously, at a pressure and flow rate the local network may not have. Each row below is a distinct thing that can be missing.",
+   "cols": [
+    "What is needed",
+    "What it actually is",
+    "How it fails"
+   ],
+   "rows": [
+    [
+     "A **{{gas lateral}}**",
+     "The pipe from the transmission or distribution main to the site, plus the metering and pressure-regulating station at the end",
+     "It has to be routed, permitted and built across land the buyer does not own — an easement problem with the same character as a transmission line, on a shorter but not trivial schedule"
+    ],
+    [
+     "Capacity on the main",
+     "Physical room in the pipeline at the hours the site will burn gas",
+     "The pipe may be full in winter, when heating demand competes; capacity is sold, not simply available"
+    ],
+    [
+     "**{{Firm transportation}}**",
+     "A contract obliging the pipeline to move a stated quantity every day",
+     "Interruptible transportation is cheaper and can be curtailed exactly when the system is stressed — which is when a campus can least afford it"
+    ],
+    [
+     "A gas supply contract",
+     "The commodity itself, distinct from moving it",
+     "Supply and transport are separate purchases, and a site can hold one without the other"
+    ],
+    [
+     "Pressure and gas quality",
+     "Enough delivery pressure for the engines, and gas within the composition they are tuned for",
+     "Low pressure means on-site compression — more equipment, more noise, more parasitic load; off-spec gas means derating or knock"
+    ]
+   ],
+   "note": "When any of these is missing, the fallback is a **{{virtual pipeline}}**: gas compressed to high pressure as **{{CNG}}**, or liquefied as **{{LNG}}**, and trucked to the site. It works, and it is genuinely how some bridge plants start. It is also a fleet of trucks arriving continuously, a storage and regasification yard on site, and a delivered fuel cost well above pipeline gas. That is why an owner with its own compression terminals and firm pipeline capacity is describing a real advantage rather than a logistics footnote — the fuel chain is the second queue, and it is the one that gets discovered late."
+  },
+  {
+   "id": "fuel-quality",
+   "title": "Not all natural gas is the same gas",
+   "kind": "prose",
+   "read": "Two numbers decide whether an engine will run on what the pipe actually delivers.",
+   "ps": [
+    "Pipeline gas is mostly methane, but the remainder varies by region, by season and by source, and engines are sensitive to that variation in two specific ways.",
+    "The first is energy content and burner behaviour, captured by the **{{Wobbe index}}** — heating value divided by the square root of relative density. Two gases with the same Wobbe index deliver about the same heat through the same orifice at the same pressure, so they are interchangeable without re-tuning. A gas whose Wobbe index sits outside the machine's declared band needs the fuel system adjusted, and in the limit needs different hardware.",
+    "The second is knock resistance, measured by the **{{methane number}}** — the gaseous-fuel analogue of octane rating. Heavier hydrocarbons like ethane and propane lower it, and a low-methane-number gas will detonate rather than burn smoothly in a highly-boosted lean-burn engine. The protective response is automatic and expensive: the control system retards timing and derates the engine, so the plant quietly delivers fewer megawatts than the datasheet promised.",
+    "This is why associated gas from an oilfield, **{{RNG}}** from a landfill or digester, and pipeline gas are not casually interchangeable even though all three are 'natural gas'. Field gas is often rich in heavier hydrocarbons; RNG is usually the opposite, dilute and needing upgrading before it meets pipeline specification.",
+    "For a buyer the practical consequence is that fuel flexibility is a specification to be read carefully rather than a marketing claim. 'Multi-fuel' should always prompt two questions: over what range of Wobbe index and methane number, and what happens to the rated output at the edges of that range?"
+   ]
+  },
+  {
+   "id": "mobility",
+   "title": "A plant that can leave when the wires arrive",
+   "kind": "proscons",
+   "read": "Whether the machines can be moved is the largest single question about what the asset is worth in year six.",
+   "intro": "Bridge plant has a defined and often short job. What it is worth afterwards depends almost entirely on whether it was built to stay or built to move — and that decision is taken at the beginning, in the foundations.",
+   "cards": [
+    {
+     "t": "Fixed on-site plant",
+     "meta": "Slab-mounted, permanently piped, permitted to the site",
+     "adv": [
+      "**Cheaper per megawatt to build and to run** — better acoustic treatment, better heat rejection, tidier fuel and electrical routing.",
+      "**Converts naturally to backup** once the grid connection matures, replacing a diesel fleet that would otherwise have been bought anyway.",
+      "**Supports higher availability**, because everything is engineered once for one place rather than for transport."
+     ],
+     "dis": [
+      "*Its value is tied to one site.* If the campus's plans change, the plant does not follow.",
+      "*The permit belongs to the location*, so the machines cannot simply be re-used elsewhere without starting the approvals again.",
+      "*It can become a {{stranded cost}}* if the grid arrives sooner than expected and no backup role is needed at that scale."
+     ]
+    },
+    {
+     "t": "**{{Mobile generation}}**",
+     "meta": "Trailer-mounted units paralleled through switchgear trailers",
+     "adv": [
+      "**The asset redeploys.** When one site is energised, the fleet moves to the next — so utilisation is a fleet property rather than a site property.",
+      "**It arrives extremely quickly**, and can start carrying load while permanent plant is still being installed.",
+      "**It matches uncertain demand**, because units can be added and removed as the campus's real load reveals itself."
+     ],
+     "dis": [
+      "*Higher cost per megawatt-hour* — transport-sized packages sacrifice efficiency, heat rejection and acoustics.",
+      "*Noise and footprint are harder to manage*, which limits where it can sit.",
+      "*Each move needs its own permit and interconnection work*, so redeployment is never free or instant."
+     ]
+    }
+   ],
+   "note": "Most serious operators run both, and the tiering is deliberate: mobile units carry commissioning and the earliest load, fixed plant carries the bridge years, and the mobile fleet is released to the next project. That tiering is also the honest answer to a question buyers should always ask about **{{bridge power}}** — *what happens to this equipment in year six?* A fleet with somewhere else to go is worth more than one without, and that is an argument about logistics rather than about engineering."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Engines, ratings, inertia and fuel.",
+   "cards": [
+    {
+     "q": "Why does a large load build its own power station rather than wait?",
+     "a": "Because the wait is for the connection, not for the equipment. Studying a very large load, reinforcing the network and building the connection runs in years, while a fleet of engines can be delivered and energised in months. {{Bridge power}} buys time and pays for it in fuel, emissions and permit exposure."
+    },
+    {
+     "q": "What does {{lean-burn}} actually achieve inside a gas engine?",
+     "a": "Burning with substantial excess air lowers the peak flame temperature. Because nitrogen-oxide formation rises exponentially with temperature, a cooler flame forms far less {{NOx}} — so lean-burn is an emissions control implemented in the cylinder rather than in the exhaust."
+    },
+    {
+     "q": "Why is {{turbocharging}} necessary once an engine burns lean?",
+     "a": "Excess air means less fuel in a given cylinder volume, which costs power. A turbocharger uses exhaust energy to compress the incoming air, forcing more air and therefore more fuel into the same cylinder, and recovering the lost output."
+    },
+    {
+     "q": "The same engine is quoted at four different kilowatt ratings. Why?",
+     "a": "Because {{ISO 8528}} rates a machine against how it will be used. Emergency standby assumes rare, short runs and carries the highest number; {{prime power}} assumes unlimited hours at varying load; {{continuous rating}} assumes constant full load and is the most conservative. The hardware is identical — the duty is not."
+    },
+    {
+     "q": "Give three reasons many small engines can beat one large machine for bridge duty.",
+     "a": "Losing one unit costs a small fraction of the plant, so {{N+1}} redundancy is cheap; maintenance happens unit by unit without a plant outage; and units can be shut down entirely so the rest run near their efficiency sweet spot, keeping fleet efficiency flat at {{part load}}."
+    },
+    {
+     "q": "What is {{inertia}}, and why does an AI campus care about it?",
+     "a": "The rotational kinetic energy stored in spinning generators, which is drawn on automatically when load suddenly exceeds generation. It slows the fall in frequency after a {{block load}} arrives, buying the control system time before fuel can be added — which matters because AI clusters swing demand by large fractions in under a second."
+    },
+    {
+     "q": "What does a {{synchronous condenser}} contribute, given it generates no energy?",
+     "a": "Inertia, reactive power and fault current. It is a large machine spinning in synchronism with no fuel and no prime mover, added when a plant needs more mass and stability than its generators alone provide."
+    },
+    {
+     "q": "Name three things that can be missing from a site's gas supply even after a pipeline is nearby.",
+     "a": "The {{gas lateral}} and metering station to reach the site; contracted capacity on the main at the hours needed; and {{firm transportation}} rather than interruptible, which can be curtailed exactly when the system is stressed. Delivery pressure and gas quality are two more."
+    },
+    {
+     "q": "What does a low {{methane number}} do to an engine's output?",
+     "a": "It makes the fuel prone to detonation in a highly-boosted lean-burn engine. The controls protect the machine by retarding timing and derating it, so the plant quietly delivers fewer megawatts than the datasheet — a fuel problem that presents as a capacity problem."
+    },
+    {
+     "q": "Why does mobility change what bridge plant is worth?",
+     "a": "Because the job ends. Fixed plant is cheaper and cleaner to run but its value is tied to one site and one permit; a mobile fleet costs more per megawatt-hour but redeploys to the next project, so its utilisation is a fleet property. A plant with nowhere to go afterwards risks becoming a {{stranded cost}}."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on making power on a site the grid cannot yet serve.",
+   "items": [
+    {
+     "q": "The primary reason bridge power exists is that:",
+     "c": [
+      "Generation is cheaper than grid electricity",
+      "The grid connection takes years the customer does not have",
+      "Engines are more reliable than the grid",
+      "On-site power avoids all permitting"
+     ],
+     "a": 1,
+     "why": "On-site generation is normally more expensive per megawatt-hour than grid supply. What it buys is time — the connection process, not the equipment, is the binding constraint."
+    },
+    {
+     "q": "Burning with excess air in a gas engine principally reduces emissions by:",
+     "c": [
+      "Filtering the exhaust",
+      "Lowering peak flame temperature",
+      "Raising the compression ratio",
+      "Adding a catalyst"
+     ],
+     "a": 1,
+     "why": "Nitrogen-oxide formation is exponential in flame temperature, so a leaner, cooler flame forms far less of it. No exhaust treatment is involved in this mechanism."
+    },
+    {
+     "q": "A supplier quotes 3 MW per unit at the standby rating. Operated as prime power, that unit will:",
+     "c": [
+      "Deliver the same 3 MW",
+      "Deliver less than 3 MW",
+      "Deliver more than 3 MW",
+      "Deliver 3 MW but use more fuel"
+     ],
+     "a": 1,
+     "why": "Standby is the highest of the ISO 8528 ratings because it assumes rare, short operation. Continuous duty at varying load carries a lower number on identical hardware."
+    },
+    {
+     "q": "A plant of fifty small engines loses one unit. Compared with a two-machine plant losing one, the consequence is:",
+     "c": [
+      "Identical",
+      "Far smaller, and cheap to cover with one spare unit",
+      "Larger, because more machines fail",
+      "Irrelevant, since both are redundant"
+     ],
+     "a": 1,
+     "why": "Granularity is what makes redundancy affordable — one extra unit out of fifty, rather than half a plant."
+    },
+    {
+     "q": "Which statement about inertia and battery response is correct?",
+     "c": [
+      "They are the same mechanism",
+      "Inertia comes from rotating mass; fast response comes from power electronics",
+      "Inertia is only available from batteries",
+      "Neither helps with sudden load changes"
+     ],
+     "a": 1,
+     "why": "They address the same symptom by different mechanisms. Inertia is a physical property of spinning mass; millisecond response is a control property of inverters. Plants designed around each are sized differently."
+    },
+    {
+     "q": "A campus holds interruptible rather than firm gas transportation. The risk is that supply is curtailed:",
+     "c": [
+      "Randomly through the year",
+      "Precisely when the wider energy system is most stressed",
+      "Only during maintenance",
+      "Never, in practice"
+     ],
+     "a": 1,
+     "why": "Interruptible service is curtailed when the pipeline is constrained — typically during extreme weather, which is exactly when the campus and the grid can least afford it."
+    },
+    {
+     "q": "The strongest argument for a mobile bridge fleet over fixed plant is:",
+     "c": [
+      "Lower fuel consumption",
+      "Quieter operation",
+      "The asset redeploys when the site is energised",
+      "Simpler permitting"
+     ],
+     "a": 2,
+     "why": "Fixed plant wins on efficiency, noise and availability. Mobility's distinct advantage is that the equipment has somewhere to go when the job ends, which is what protects its residual worth."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,371 @@
+{
+ "schemaVersion": 2,
+ "slug": "prevalon",
+ "title": "Prevalon — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the container is a product, the plant is a system",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Storage arrives as a box on a slab, but what is actually being bought is a coordinated plant with several kinds of machine in it.",
+   "ps": [
+    "This is the last guide in the bridge-power course, and it closes two loops. The first is the equipment loop: what is actually inside a containerised battery, and how to read a datasheet without being misled. The second is the architectural one: how storage, engines, turbines and the grid are made to behave as a single plant — and what becomes of all of it when permanent transmission finally arrives.",
+    "Two things are deliberately out of scope. **Cell chemistry** — what is in a cell, how it degrades, why one chemistry displaced another — belongs to the cell-maker guides in this corpus. **Revenue and dispatch** — what a battery earns and how it decides when to charge — belongs to the merchant-storage guides. Neither is repeated here.",
+    "What remains is the part those guides leave out: the box, the plant, and the ending. A storage system on a bridge-power site is not there to arbitrage energy prices. It is there to supply *time* — the seconds and minutes during which something else is starting, stopping, or failing — and that duty produces a very different set of design priorities.",
+    "It is also, notably, the one asset in this course that is certain to have a job after the bridge period ends. That fact is worth carrying to the last section."
+   ]
+  },
+  {
+   "id": "dc-or-ac",
+   "title": "Two ways to sell a battery",
+   "kind": "proscons",
+   "read": "Whether the inverter is inside the box or outside it changes who owns the integration problem.",
+   "intro": "Containerised storage is sold in two architectures. The difference looks like packaging and is really about where a system boundary — and therefore a responsibility — is drawn.",
+   "cards": [
+    {
+     "t": "**{{DC block}}**",
+     "meta": "Direct-current energy only; the buyer supplies inverters and transformers",
+     "adv": [
+      "**Maximum energy in the enclosure**, since the space is not shared with power conversion — which is why vendors compete on megawatt-hours per twenty-foot container.",
+      "**Freedom to choose the {{PCS}}**, so a buyer can standardise conversion across projects with different battery suppliers.",
+      "**A mature, well-understood interface** with a deep supplier base on both sides."
+     ],
+     "dis": [
+      "*Integration is the buyer's problem*, and so is the finger-pointing when performance falls short of the sum of its datasheets.",
+      "*A separate DC collection system* at high direct-current voltage, with its own cabling, protection and hazards.",
+      "*More site work and a longer commissioning* period, since two vendors' equipment must be made to agree."
+     ]
+    },
+    {
+     "t": "**{{AC block}}**",
+     "meta": "Conversion integrated in the enclosure; the unit connects to medium voltage",
+     "adv": [
+      "**One supplier owns the performance guarantee** end to end — {{round-trip efficiency}}, response and availability are warranted as a unit.",
+      "**Whole layers of site equipment disappear**: the DC collection system, and often a separate auxiliary supply, since the unit can power its own cooling from its own energy.",
+      "**Faster commissioning**, because the integration was done in a factory rather than on a slab."
+     ],
+     "dis": [
+      "*Less energy per enclosure*, since conversion equipment occupies volume that cells could have used.",
+      "*Supplier lock-in* on the conversion layer, which is often the component with the shortest technology cycle.",
+      "*Servicing conversion equipment means opening a live energy enclosure*, which changes maintenance procedures."
+     ]
+    }
+   ],
+   "note": "The industry has moved decisively toward integrated AC blocks, and the reason is not primarily technical. It is that the buyer of a large project would rather purchase a guaranteed outcome from one party than assemble one from several. The same logic drives modular construction everywhere: factory integration converts uncertain site labour into repeatable factory labour, and converts a coordination problem into a purchase. What the buyer gives up is optionality on the fastest-moving component in the system."
+  },
+  {
+   "id": "inside-the-block",
+   "title": "What is actually in the box",
+   "kind": "table",
+   "read": "Six layers, each of which sets a different limit on the whole.",
+   "intro": "Reading a storage enclosure from the inside out. Chemistry belongs to the cell-maker guides — what matters here is what each layer above the cell decides.",
+   "cols": [
+    "Layer",
+    "What it is",
+    "What it limits"
+   ],
+   "rows": [
+    [
+     "Cell",
+     "The electrochemical unit",
+     "Energy density, cycle life and safety behaviour — the subject of the cell-maker guides in this corpus"
+    ],
+    [
+     "Module and **{{battery string}}**",
+     "Cells assembled in series and parallel with monitoring",
+     "The voltage the system works at, and the granularity at which a fault can be isolated"
+    ],
+    [
+     "Battery management",
+     "Electronics measuring every cell's voltage, current and temperature",
+     "How closely cells stay balanced, and how early an abnormality is caught — the difference between a retired module and an incident"
+    ],
+    [
+     "Thermal system",
+     "**{{Liquid cooling}}** loops, chillers, and the enclosure's air management",
+     "Usable energy at high ambient temperature, degradation rate, and parasitic consumption. A datasheet's megawatt-hours are quoted at a stated temperature for this reason"
+    ],
+    [
+     "Conversion",
+     "The **{{PCS}}**, either integrated as a **{{string PCS}}** or supplied separately",
+     "Power rating, ramp rate, whether the unit is {{grid-forming}}, and a large share of the {{round-trip efficiency}}"
+    ],
+    [
+     "Safety systems",
+     "Gas detection, ventilation, {{deflagration}} venting or prevention, fire suppression",
+     "Whether an incident stays inside one enclosure — and how far apart units must be placed, which sets the site's land requirement"
+    ]
+   ],
+   "note": "The last row deserves its own attention and gets it in the next section. Note the pattern in the others: **each layer's limit shows up as a footnote on the layer above it.** Energy is quoted at a temperature the thermal system must maintain; efficiency is quoted at a duration the conversion layer must sustain; cycle life is quoted to a state of health the management system must actually deliver. A datasheet read layer by layer is a set of conditional promises, and the conditions are where projects go wrong."
+  },
+  {
+   "id": "rating-a-block",
+   "title": "Reading the datasheet honestly",
+   "kind": "table",
+   "read": "Every headline number carries a condition. The condition is the specification.",
+   "intro": "Five numbers appear on every storage datasheet. Each is true only under stated conditions, and the conditions differ between vendors — so comparing headline figures compares assumptions rather than products.",
+   "cols": [
+    "The number",
+    "The condition that qualifies it",
+    "What to ask"
+   ],
+   "rows": [
+    [
+     "Megawatt-hours per enclosure",
+     "Quoted at a reference ambient temperature, and usually at beginning of life",
+     "What is it at the site's design summer temperature, and at end of the warranted life?"
+    ],
+    [
+     "**{{Round-trip efficiency}}**",
+     "Quoted at a particular duration and power level, and sometimes measured at the DC terminals",
+     "Is it AC-to-AC at the point of connection, at the duration we will actually run, and does it include the cooling load?"
+    ],
+    [
+     "Cycle life",
+     "Quoted to a defined **{{state of health}}**, at a stated {{depth of discharge}}, {{C-rate}} and temperature",
+     "At our duty, how many cycles — and does the warranty follow the same envelope the datasheet used?"
+    ],
+    [
+     "Energy density per acre",
+     "A site-layout calculation, dependent on the spacing the fire strategy allows",
+     "What separation does the authority having jurisdiction actually require for this product here?"
+    ],
+    [
+     "Response time",
+     "Often measured from receipt of a command to full output, excluding communications",
+     "Measured from what, through what control path, and does it hold when the unit is nearly empty?"
+    ]
+   ],
+   "note": "The two temperature-dependent rows interact in a way that is easy to miss. Cooling harder preserves capacity and slows degradation, but consumes energy and lowers the delivered round-trip efficiency. So a vendor can present strong capacity retention *or* strong efficiency by choosing where on that trade to sit, and both figures can be honest. The only way to compare fairly is to fix the duty — this duration, this temperature, this daily cycle count — and ask every vendor to quote against it. That is what a well-written specification does, and it is the single highest-value document a buyer produces."
+  },
+  {
+   "id": "the-fire-question",
+   "title": "Why storage safety is tested at full scale",
+   "kind": "prose",
+   "read": "A battery fire cannot be extinguished in the ordinary sense, so the entire strategy is containment.",
+   "ps": [
+    "A lithium cell that is damaged, overcharged or overheated can enter **{{thermal runaway}}**: internal reactions generate heat faster than it can escape, the cell vents flammable gas, and the heat can push neighbouring cells over the same threshold. The chain is self-sustaining because the cell carries its own oxidiser — which is why conventional firefighting does not work as it does elsewhere. Water is applied to *cool neighbouring cells*, not to extinguish the reaction.",
+    "That reframes the entire engineering objective. Since the reaction cannot be reliably stopped once started, the design goal is to ensure it stays where it began: contained within one module, or at worst one enclosure, without propagating to the unit next door.",
+    "Two hazards must be handled separately, and conflating them is a common error. **Fire** is the visible one. **{{Deflagration}}** is the other: vented gases accumulating in an enclosed volume and igniting as an explosion. The controls differ — deflagration is managed by preventing the accumulation, through ventilation and inerting, or by providing a deliberate relief path so the pressure escapes in a controlled direction rather than by disassembling the enclosure.",
+    "Because the science does not permit confident prediction from component tests, the industry validates at full scale. **{{UL 9540A}}** is the standard test method: cells, then modules, then a unit, then an installation are deliberately driven into runaway and the propagation measured. Its output is data, not a pass mark — and that data is what the installation standard, **{{NFPA 855}}**, and the local authority use to set separation distances, barrier requirements and how close units may sit to a property line or an occupied building.",
+    "The direct consequence for a project is land. Test data showing that a burning unit does not ignite its neighbours supports tighter spacing; weaker data forces units apart, and the site grows. That is why megawatt-hours per acre is a *fire-testing* outcome as much as an engineering one, and why buyers ask for full-scale burn results rather than certificates.",
+    "Two implications follow for the hybrid sites this course has been describing. First, a storage block sitting beside gas engines and fuel systems is subject to a combined hazard analysis, not two independent ones. Second, on a campus where storage sits *inline* at medium voltage, the fire strategy has to coexist with the availability requirement — because a containment approach that works by isolating a unit must be reconciled with a load that cannot be dropped."
+   ]
+  },
+  {
+   "id": "the-mixture",
+   "title": "Making four kinds of machine behave as one plant",
+   "kind": "prose",
+   "read": "The controller, not the equipment, is what turns a collection of machines into a power station.",
+   "ps": [
+    "A mature bridge-power site is not one technology. It is a mixture: reciprocating engines or turbines for energy, storage for speed, a grid connection when one exists, and sometimes solar. Each has different response times, different costs per megawatt-hour, and different constraints. Something has to decide, continuously, what each of them does.",
+    "That something is the **{{EMS}}**, and its job on a hybrid site is best understood as assigning each source the work it is physically suited to:",
+    "**Storage supplies the first seconds.** It responds in milliseconds, so it absorbs load steps, covers the interval between a disturbance and a generator reaching load, and smooths what the grid sees. It holds little energy relative to the site's demand, so it cannot supply for long — and does not need to.",
+    "**Engines and turbines supply the energy.** They take seconds to minutes to load, and once loaded they can run indefinitely provided fuel keeps arriving. Their weakness is exactly the interval storage covers; their strength is duration.",
+    "**The grid, where present, supplies the base** and takes the surplus, and its availability is a variable the controller must plan around rather than assume.",
+    "The genuinely difficult part is not the steady state — it is the transitions. Moving from grid-connected to islanded operation without the load noticing requires the storage to hold voltage and frequency (which requires **{{grid-forming}}** conversion, per the interface guide) while generation starts and takes over. Coming back requires resynchronising to the grid, matching voltage, frequency and phase before closing the connection. Both are brief, both are hazardous, and both are where hybrid plants fail.",
+    "A second controller responsibility is economic rather than physical: deciding *which* source runs when several could. Every dispatch decision spends something — fuel, warranty life, or an emissions allowance under a permitted annual cap. On a site with a run-hour limit, hours themselves are inventory. The controller is therefore allocating several scarce budgets at once, which is why it is treated as intellectual property rather than as a commodity.",
+    "The reason this cannot be assembled from each vendor's own controls is that they optimise locally. An engine controller protects the engine; a battery controller protects the battery. Only a plant-level controller can decide that the right answer is to let the battery discharge deeply now so the engines need not start — a decision no local controller has the standing to make."
+   ]
+  },
+  {
+   "id": "proving-it",
+   "title": "Testing a controller against a grid that does not exist yet",
+   "kind": "callout",
+   "tone": "note",
+   "read": "You cannot short-circuit a live campus to see what happens. You can do it to a simulation, thousands of times.",
+   "ps": [
+    "The transitions described above are the dangerous part of a hybrid plant, and they cannot be commissioned by trial and error on a site carrying real load. Nor can they be validated by testing each machine alone, because the failures are interactions between machines.",
+    "**{{Hardware-in-the-loop}}** testing resolves this. The real controller and often the real power electronics are connected to a real-time simulation of the grid, the generators and the load. The simulation runs in true time, so the controller cannot tell it is not connected to a power system, and its actual reactions are observed against faults, load steps and losses of supply that would be unthinkable to stage physically.",
+    "What this buys is coverage of the cases that matter most and occur least: a fault during the transition to islanded operation; loss of the largest generator at minimum load; a violent load step while the storage is nearly empty; a communications failure between controller and machines. Each is rare, each is severe, and none can be arranged on a live site.",
+    "It also compresses schedule, which is the currency this whole course has been denominated in. Commissioning problems discovered on site are discovered in the most expensive possible place — with crews mobilised, equipment installed and a customer waiting. Finding them in a laboratory converts site-commissioning risk into laboratory time, months before the first container arrives.",
+    "The general principle is worth extracting, because it recurs across this corpus: **where a system's dangerous behaviours are interactions, testing the components is not testing the system.** Full-scale fire testing is the same principle applied to the safety layer; hardware-in-the-loop is it applied to the control layer. In both cases the industry moved to full-scale validation because component-level evidence did not predict system-level behaviour."
+   ]
+  },
+  {
+   "id": "after-the-bridge",
+   "title": "What is left when the wires arrive",
+   "kind": "proscons",
+   "read": "The bridge ends. Whether the plant has a second life was decided when it was specified.",
+   "intro": "Permanent transmission eventually arrives, and the on-site plant's justification disappears with it. The asset then goes one of two ways, and the two technologies in this course face very different odds.",
+   "cards": [
+    {
+     "t": "The generation",
+     "meta": "Engines and turbines that carried the campus for its bridge years",
+     "adv": [
+      "**It converts to backup**, replacing a diesel fleet the site would otherwise have had to buy — real value, but for a fraction of what it cost.",
+      "**It can be redeployed** if it was built to move, and its permits and connection can sometimes be reused.",
+      "**It keeps the interconnection cheaper**, since a site that can reduce its draw holds better {{flexible load interconnection}} terms permanently."
+     ],
+     "dis": [
+      "*Its permit belongs to the site*, and a permit written for prime power may not be worth much once the duty falls to occasional backup.",
+      "*Backup duty needs a small fraction of the megawatts installed*, so most of the fleet is surplus to the new requirement.",
+      "*What cannot move or convert becomes a {{stranded cost}}*, and the risk sits with whoever agreed to own it."
+     ]
+    },
+    {
+     "t": "The storage",
+     "meta": "Containerised blocks installed for transients and ride-through",
+     "adv": [
+      "**Its job does not end.** Ride-through obligations, load-step smoothing and power quality are permanent duties, not bridge duties.",
+      "**A grid connection expands its uses** rather than removing them — the merchant-storage guides in this corpus describe the revenue that then becomes available.",
+      "**It is inherently portable**, since a containerised block was designed to be craned onto a truck."
+     ],
+     "dis": [
+      "*It has been ageing throughout*, and cycles spent on bridge duty are cycles unavailable later.",
+      "*It may be the wrong duration* — a block sized for seconds of transient support is not sized for hours of energy arbitrage.",
+      "*{{Augmentation}} or replacement of cells is a real future cost*, and the bridge years brought it closer."
+     ]
+    }
+   ],
+   "note": "Reading the two cards together gives the course's closing argument. Generation is the asset that solves the bridge problem and the asset most at risk of having no job afterwards; storage contributes less to solving it and is far more likely to still be earning in year ten. That asymmetry should be priced at the beginning — in who owns which asset, over what term, and with what assumed residual — rather than discovered at the end. It is also why the question to ask of any bridge-power proposal is not *what does this cost per megawatt-hour*, but **what is each of these assets for, once the thing we are bridging to has arrived?**"
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Blocks, datasheets, fire, control and endings.",
+   "cards": [
+    {
+     "q": "What is the real difference between a {{DC block}} and an {{AC block}}?",
+     "a": "Where the system boundary sits. A DC block leaves conversion to the buyer, maximising energy in the enclosure but making integration and performance the buyer's problem. An AC block integrates conversion so one supplier warrants round-trip efficiency, response and availability as a unit."
+    },
+    {
+     "q": "Why has the market moved toward integrated AC blocks?",
+     "a": "Because buyers prefer to purchase a guaranteed outcome from one party rather than assemble one from several. Factory integration converts uncertain site labour and a coordination problem into a repeatable purchase — at the cost of lock-in on the fastest-moving component."
+    },
+    {
+     "q": "Why are enclosure megawatt-hours always quoted at a stated temperature?",
+     "a": "Because usable energy and degradation rate both depend on cell temperature, which the thermal system maintains. The rating is a conditional promise that holds only while the cooling holds."
+    },
+    {
+     "q": "How can two vendors both honestly claim superiority on capacity retention and efficiency?",
+     "a": "Because they trade against each other. Cooling harder preserves capacity and slows degradation but consumes energy and lowers delivered {{round-trip efficiency}}. Fixing the duty — duration, temperature, cycle count — is the only fair comparison."
+    },
+    {
+     "q": "Why can a lithium battery fire not be extinguished in the ordinary sense?",
+     "a": "Because {{thermal runaway}} is self-sustaining — the cell carries its own oxidiser, so the reaction does not need surrounding air. Water is applied to cool neighbouring cells and stop propagation, not to put the reaction out."
+    },
+    {
+     "q": "Distinguish the fire hazard from the {{deflagration}} hazard.",
+     "a": "Fire is the burning itself. Deflagration is vented flammable gas accumulating in an enclosed volume and igniting as an explosion. It is controlled by preventing accumulation — ventilation or inerting — or by providing a deliberate pressure-relief path."
+    },
+    {
+     "q": "What does {{UL 9540A}} produce, and who uses it?",
+     "a": "Full-scale propagation data from deliberately driving cells, modules, units and installations into runaway. It is data rather than a pass mark, and {{NFPA 855}} and the local authority use it to set separation distances and barrier requirements."
+    },
+    {
+     "q": "Why is megawatt-hours per acre partly a fire-testing outcome?",
+     "a": "Because spacing is set by how far a burning unit's heat and gas reach. Strong full-scale evidence of no propagation supports tighter spacing; weaker evidence pushes units apart and the site grows."
+    },
+    {
+     "q": "State the division of labour an EMS enforces on a hybrid site.",
+     "a": "Storage supplies the first seconds — responding in milliseconds to load steps and disturbances. Engines and turbines supply the energy, taking seconds to minutes to load but running indefinitely on fuel. The grid, where present, supplies the base and absorbs surplus."
+    },
+    {
+     "q": "Why are transitions the hard part of a hybrid plant?",
+     "a": "Going islanded needs storage to hold voltage and frequency — hence {{grid-forming}} conversion — while generation starts and takes over. Coming back needs resynchronising voltage, frequency and phase before closing in. Both are brief, hazardous, and where such plants fail."
+    },
+    {
+     "q": "Why can a plant controller not be assembled from each vendor's own controls?",
+     "a": "Because local controllers optimise locally — an engine controller protects the engine, a battery controller the battery. Only a plant-level controller has the standing to decide to discharge the battery deeply now so the engines need not start at all."
+    },
+    {
+     "q": "What does {{hardware-in-the-loop}} testing buy that component testing cannot?",
+     "a": "Coverage of interactions. The real controller runs against a real-time simulated grid and plant, so faults during islanding, loss of the largest generator, or a load step with the battery nearly empty can be staged thousands of times — cases impossible to arrange on a live site."
+    },
+    {
+     "q": "Why is storage more likely than generation to still be earning in year ten?",
+     "a": "Because its duties — ride-through, transient smoothing, power quality — are permanent rather than bridge duties, and a grid connection expands its uses instead of removing them. Generation's justification disappears when the wires arrive, and only a fraction is needed for backup."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on the block, the plant and the ending.",
+   "items": [
+    {
+     "q": "The principal reason buyers favour integrated AC blocks is:",
+     "c": [
+      "More energy per container",
+      "One supplier warrants the whole performance",
+      "Lower cell cost",
+      "They need no cooling"
+     ],
+     "a": 1,
+     "why": "DC blocks actually fit more energy per enclosure. The AC block wins because it converts an integration problem into a single guaranteed purchase."
+    },
+    {
+     "q": "A vendor quotes 92% round-trip efficiency. The most important follow-up is:",
+     "c": [
+      "What colour is the enclosure",
+      "AC-to-AC at the point of connection, at what duration, including cooling load",
+      "How many were sold",
+      "What is the warranty length"
+     ],
+     "a": 1,
+     "why": "Efficiency measured at DC terminals, at a favourable duration, excluding parasitic cooling, is a materially different number from what the site will experience."
+    },
+    {
+     "q": "Water is applied to a battery fire principally to:",
+     "c": [
+      "Extinguish the reaction",
+      "Cool neighbouring cells and stop propagation",
+      "Dilute the electrolyte",
+      "Improve visibility"
+     ],
+     "a": 1,
+     "why": "The runaway reaction supplies its own oxidiser and cannot be smothered. Containment — keeping the event in one module or enclosure — is the entire strategy."
+    },
+    {
+     "q": "UL 9540A test results most directly determine:",
+     "c": [
+      "Round-trip efficiency",
+      "Separation distances and site land area",
+      "Cycle life",
+      "Warranty terms"
+     ],
+     "a": 1,
+     "why": "Full-scale propagation data is what NFPA 855 and the local authority use to set spacing and barriers, which in turn sets how much land the project needs."
+    },
+    {
+     "q": "On a hybrid site, storage covers the interval between a disturbance and:",
+     "c": [
+      "The next billing period",
+      "A generator reaching load",
+      "The grid operator responding",
+      "The next maintenance window"
+     ],
+     "a": 1,
+     "why": "Generation takes seconds to minutes to load. Storage responds in milliseconds but holds relatively little energy — so it supplies time, not energy."
+    },
+    {
+     "q": "Islanding a hybrid campus without the load noticing requires the storage to be:",
+     "c": [
+      "Larger",
+      "Grid-forming",
+      "Cheaper",
+      "Air-cooled"
+     ],
+     "a": 1,
+     "why": "Something must establish voltage and frequency the moment the grid is lost. A grid-following converter has no reference to follow once the grid is gone."
+    },
+    {
+     "q": "Once permanent transmission arrives, the asset most likely to still have a job is:",
+     "c": [
+      "The gas engines",
+      "The storage",
+      "The fuel compression equipment",
+      "The switchgear trailers"
+     ],
+     "a": 1,
+     "why": "Ride-through, transient smoothing and power quality remain permanent obligations, and grid connection adds uses rather than removing them. Generation's bridge justification ends, and backup needs only a fraction of the installed megawatts."
+    }
+   ]
+  }
+ ]
+}

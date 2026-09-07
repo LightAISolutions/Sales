@@ -1,0 +1,292 @@
+{
+ "schemaVersion": 2,
+ "slug": "proenergy",
+ "title": "ProEnergy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: an aircraft engine, bolted to the ground",
+   "kind": "callout",
+   "tone": "info",
+   "read": "The fastest way to a few hundred megawatts on a new site is often a machine designed to fly.",
+   "ps": [
+    "The engine guide in this course covered plant assembled from many small reciprocating machines. This one covers the other main answer: gas turbines, in blocks of roughly fifty megawatts, derived directly from the engines that power wide-body aircraft.",
+    "An **{{aeroderivative}}** turbine is not merely 'a turbine that is smaller'. It is a jet engine core — the compressor, combustor and high-pressure turbine of a commercial turbofan — with the fan removed and an extra turbine stage added behind it to turn a generator instead of pushing air. Everything that made the engine light, compact and quick to start in the air carries over to the ground.",
+    "The trade is stated most cleanly in one number, the **{{heat rate}}**, and this guide is largely about learning to read it. A turbine converts a smaller share of its fuel into electricity than a good gas engine does, and a much smaller share than a combined-cycle plant. What it offers in exchange is power density, start speed, and — decisively for bridge duty — availability of the machines themselves.",
+    "Emissions chemistry is the next guide's subject; permits and run hours the one after that. Here the question is narrower: how a turbine turns fuel into electricity, what that costs in efficiency, and who ends up owning the plant when the bridge years are over."
+   ]
+  },
+  {
+   "id": "the-cycle",
+   "title": "Compress, burn, expand",
+   "kind": "prose",
+   "read": "Three steps, continuously, in a machine with one moving assembly.",
+   "ps": [
+    "A gas turbine runs the **{{Brayton cycle}}**. Air is drawn in and compressed; fuel is added and burned at roughly constant pressure; the hot gas expands through turbine blades. Part of the shaft work drives the compressor — a large part, often more than half — and the remainder is available to drive a generator.",
+    "Efficiency in this cycle rises with the pressure ratio and, above all, with the temperature at which gas enters the turbine. That **{{firing temperature}}** is limited by what the first row of blades can survive, which is why turbine development is largely a metallurgy and blade-cooling story: single-crystal alloys, ceramic thermal-barrier coatings, and **{{turbine cooling air}}** bled from the compressor and passed through hollow blades. Bleeding that air costs output, so blade cooling is itself a trade.",
+    "In a **{{simple cycle}}** machine the expanded gas leaves the stack still very hot, and that heat is simply lost. Roughly a third to two-fifths of the fuel's energy reaches the wires; most of the rest goes up the exhaust. Adding a **{{HRSG}}** and a steam turbine recovers much of it — a **{{combined cycle}}** plant reaches around sixty percent — but at the price of a far larger, more complex plant that takes years to build.",
+    "That trade is exactly why simple-cycle machines dominate bridge duty. A bridge plant's job may last five years. Spending three of them building a steam cycle to save fuel is a poor bargain, and the capital would be recovered over a life the plant will not have.",
+    "**{{Combined heat and power}}** is the third option and sits between them: instead of making steam to drive a turbine, the exhaust heat is used directly for a process or for heating. It reaches very high total fuel utilisation, but only where there is a genuine, continuous heat demand next door — which a data centre, whose waste heat problem runs the other way, generally does not have."
+   ]
+  },
+  {
+   "id": "aero-vs-frame",
+   "title": "Two kinds of gas turbine",
+   "kind": "proscons",
+   "read": "Aircraft ancestry or power-station ancestry — the difference decides everything about how the machine is used.",
+   "intro": "Both burn gas and both run the Brayton cycle. They descend from different design problems, and the inherited traits are what matter for a bridge plant.",
+   "cards": [
+    {
+     "t": "{{Aeroderivative}}",
+     "meta": "Flight-derived core, roughly 25–60 MW per unit",
+     "adv": [
+      "**Starts in minutes and tolerates frequent cycling**, because flight engines are designed for repeated thermal cycles.",
+      "**Very high power per unit of weight and footprint** — the whole package is road-transportable and lands on a modest slab.",
+      "**Higher simple-cycle efficiency** than a frame machine of similar output, because aviation pressure ratios are high.",
+      "**Maintained by module exchange** — the {{engine core}} is removed and a serviced one fitted, so an overhaul is a swap rather than a site rebuild."
+     ],
+     "dis": [
+      "*More expensive per kilowatt* to buy, reflecting aviation-grade materials and manufacturing.",
+      "*More sensitive to hot weather*, because output depends on the mass of air it can swallow.",
+      "*A narrower supply base*, and its parts compete with the aviation aftermarket for the same components."
+     ]
+    },
+    {
+     "t": "{{Heavy-duty gas turbine}}",
+     "meta": "Industrial frame machine, roughly 100–500 MW per unit",
+     "adv": [
+      "**The lowest fuel cost per megawatt-hour** available from gas, once configured as {{combined cycle}}.",
+      "**Cheaper per kilowatt installed** at large scale, and built for decades of service.",
+      "**A single machine covers an enormous block** of capacity with one interconnection and one control system."
+     ],
+     "dis": [
+      "*Delivery slots are the binding constraint* — order books for the largest frames run years out, which disqualifies them from bridge duty outright.",
+      "*Slower to start and less tolerant of frequent cycling*, with thermal stress accumulating on every start.",
+      "*Overhauls are site events*, measured in weeks, because the machine is rebuilt in place rather than exchanged."
+     ]
+    }
+   ],
+   "note": "The last bullet in each column is the one that decides bridge projects. When the equipment queue for large frames stretches past the date the campus must be energised, the comparison is not between two machines — it is between an available machine and no machine. That scarcity is also why refurbishing retired aviation cores into ground power packages is a real business rather than a curiosity: the world retires wide-body engines steadily, and each retired core is a potential fifty-megawatt block that does not need a new-build slot."
+  },
+  {
+   "id": "reading-heat-rate",
+   "title": "How to read a heat rate",
+   "kind": "table",
+   "read": "One number, quoted four different ways — and three of the four are not comparable without conversion.",
+   "intro": "**{{Heat rate}}** is fuel energy in per unit of electricity out, so lower is better. It is the same information as percentage efficiency, inverted. The traps are all in the conventions, and every one of them changes the number by enough to flip a comparison.",
+   "cols": [
+    "The convention",
+    "What it means",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "Btu per kilowatt-hour",
+     "The usual US unit. Divide 3,412 by the heat rate to get efficiency as a fraction",
+     "A machine at 8,800 Btu/kWh is about 38.8% efficient; one at 7,400 is about 46%"
+    ],
+    [
+     "**{{LHV}}** or **{{HHV}}**",
+     "Whether the fuel's energy is counted with the water in the exhaust left as vapour, or condensed back to liquid",
+     "For natural gas the higher value is about a tenth larger, so the same machine looks roughly ten percent worse on an HHV basis. Quoting one and comparing against the other is the most common error in the field"
+    ],
+    [
+     "Gross or net",
+     "Output at the generator terminals, or after the plant's own consumption",
+     "Fans, pumps, cooling and after-treatment all draw power. Net is what the site actually receives, and the gap widens on hot days when cooling works hardest"
+    ],
+    [
+     "At what load and what ambient",
+     "Full load at reference conditions, or the load the plant will really run at",
+     "{{Part load}} efficiency is materially worse for a turbine than for an engine fleet, so a full-load number can flatter a machine that will spend its life at seventy percent"
+    ]
+   ],
+   "note": "A worked check: a machine quoted at 8,800 Btu/kWh gross on an LHV basis is 3,412 ÷ 8,800 ≈ 38.8% gross LHV efficiency. Express the same machine on an HHV basis and it becomes roughly 35%. Subtract auxiliaries and it falls again. None of those numbers is dishonest — but only one of them answers the question *how much gas will this site burn per unit of electricity it actually uses*, and that is always the net figure, at the real load, on a stated basis."
+  },
+  {
+   "id": "hot-day",
+   "title": "Why output falls exactly when it is needed",
+   "kind": "bars",
+   "read": "A turbine is an air pump. Hot air is thinner, so a hot day is a smaller machine.",
+   "unit": "approximate percentage of ISO-rated output",
+   "intro": "Turbines are rated at **{{ISO rating}}** conditions — 15°C at sea level. Output depends on the mass of air the compressor can take in, and air density falls as temperature and altitude rise. The bars are indicative for an aeroderivative machine; frame machines lose somewhat less.",
+   "items": [
+    {
+     "label": "ISO reference, 15°C at sea level",
+     "v": 100
+    },
+    {
+     "label": "25°C ambient",
+     "v": 94
+    },
+    {
+     "label": "35°C ambient",
+     "v": 87
+    },
+    {
+     "label": "43°C ambient",
+     "v": 81
+    },
+    {
+     "label": "35°C with inlet chilling",
+     "v": 97
+    },
+    {
+     "label": "35°C at 1,500 m altitude",
+     "v": 73
+    }
+   ],
+   "note": "Two consequences follow. First, a plant in Arizona or Texas must be sized for the summer afternoon, not for the datasheet, so the number of machines is set by the worst hour of the year. Second, there are two standard recoveries, and they differ: **{{inlet air cooling}}** cools the incoming air — evaporatively, which is cheap but limited by humidity, or with chillers, which works anywhere and consumes power. **{{Water injection}}** instead adds mass directly into the machine, raising output and suppressing {{NOx}} at the same time. Both trade water for megawatts, which is a live constraint in exactly the arid regions where the derate is worst."
+  },
+  {
+   "id": "starts-and-cycles",
+   "title": "Starting fast is a design decision, not a feature",
+   "kind": "prose",
+   "read": "Every start costs a small amount of machine life, and how much depends on what the turbine was designed to do.",
+   "ps": [
+    "A turbine start heats components from ambient to well over a thousand degrees in minutes. Thick parts heat more slowly than thin ones, so the machine is briefly full of temperature differences, and temperature differences are stresses. Repeated enough times, they crack things. This is why maintenance intervals for turbines are counted in *equivalent operating hours*, with each start charged as some number of hours of running.",
+    "Aeroderivative machines carry a genuine advantage here, and it is inherited rather than added. An airliner's engine performs a full thermal cycle every flight, so the cores were designed from the beginning for frequent, rapid cycling. That is the real reason such a machine can reach full load in minutes and do it daily without an unusual penalty.",
+    "**Start reliability** is a separate property from start speed and, for bridge duty, the more important of the two. It is the probability that a start attempt succeeds — and a plant whose job is to carry a live campus is judged on whether it starts every time, not on how quickly it starts the times it does.",
+    "The distinction shapes what a machine is bought for. A market peaker starts on price signals, perhaps a few hundred times a year, and cares most about speed. A bridge plant starts rarely, runs almost continuously, and cares most about availability between overhauls. The same hardware serves both, but the maintenance contract, the spares holding and the guarantees underneath them are written differently.",
+    "The maintenance model differs from an engine fleet's in a way that matters for planning. Engines are serviced continuously, a unit at a time, without the plant stopping. A turbine's overhaul is a discrete event — but for an aeroderivative it is a module exchange, where the **{{engine core}}** is lifted out and a refurbished one dropped in, returning the plant to service in days rather than the weeks a frame machine's in-place rebuild demands. Whoever holds spare cores therefore holds the plant's availability, which is why depot capacity and core inventory are strategic rather than logistical questions."
+   ]
+  },
+  {
+   "id": "the-exit",
+   "title": "Who owns the plant when the bridge is over",
+   "kind": "prose",
+   "read": "Bridge assets are built by people with appetite for risk and end up owned by people with appetite for certainty.",
+   "ps": [
+    "A bridge plant is a temporary answer built with permanent equipment. The machines will run for decades; the contract that justified them may run for five years. Something has to happen at the seam, and the pattern that has emerged is a deliberate transfer of the asset from one kind of owner to another.",
+    "The developer's phase is the risky one: securing a site, an air permit, a gas supply and an interconnection, ordering long-lead equipment before the offtake is certain, and building. That work earns a development margin precisely because it can fail, and it is financed by capital that expects to be paid for taking the risk.",
+    "The buyer's phase is the opposite. A municipal utility, an electric cooperative or a regulated utility wants dispatchable capacity it can rely on for twenty years at a predictable cost, and it can fund that far more cheaply than a merchant developer can — a point developed properly in the regulated-purchase guide in this course. It has no appetite for construction risk, and no need for a development margin.",
+    "So the natural transaction is: the developer builds and proves the plant, then sells it to the long-term owner and *retains the {{O&M}} contract*. Both sides get what they are good at holding. The seller recycles capital into the next project and keeps a service annuity on the one just sold; the buyer gets a working plant with the people who built it still operating it.",
+    "That retained service contract is more strategically interesting than it looks. It is recurring revenue with high renewal rates, it keeps the builder's technicians employed between construction cycles, and it produces something no brochure can: an operating record. A plant that has started hundreds of times under someone else's ownership is the strongest possible evidence when the next customer asks whether the equipment works.",
+    "There is a governance point underneath the commercial one. When a regulated or member-owned utility buys the plant, the purchase must be justified to a commission or a board, the price tested against alternatives, and the cost recovered from customers over decades. That is a slower and more sceptical buyer than a data-centre developer — and it is also a far more durable one. Understanding both ends of that pipeline explains why a company can be simultaneously a manufacturer, a developer, an independent power producer and a service business without being unfocused: those are four stages of one asset's life."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Cycle, efficiency, derate and ownership.",
+   "cards": [
+    {
+     "q": "What are the three steps of the {{Brayton cycle}}?",
+     "a": "Air is compressed; fuel is burned at roughly constant pressure; the hot gas expands through a turbine. A large share of the shaft work drives the compressor itself, and only the remainder is available for the generator."
+    },
+    {
+     "q": "Why does a {{simple cycle}} turbine convert only about a third to two-fifths of its fuel to electricity?",
+     "a": "Because the exhaust leaves the machine very hot and that heat is discarded. Recovering it with a {{HRSG}} and a steam turbine — {{combined cycle}} — raises the figure to roughly sixty percent, at the cost of a far larger plant and years more construction."
+    },
+    {
+     "q": "Why is combined cycle usually the wrong answer for a bridge plant?",
+     "a": "Because the fuel savings are recovered over a plant life the bridge does not have, and the extra construction time consumes the very schedule the project exists to save. Simple cycle is the rational choice when the job may last five years."
+    },
+    {
+     "q": "A machine is quoted at 8,800 Btu/kWh. What efficiency is that, and what must you ask next?",
+     "a": "About 38.8%, from 3,412 ÷ 8,800. Then ask three things: {{LHV}} or {{HHV}} basis, gross or net of auxiliaries, and at what load and ambient temperature — each can move the number by enough to reverse a comparison."
+    },
+    {
+     "q": "Why does a turbine lose output on a hot day?",
+     "a": "It is fundamentally an air pump, and its output depends on the mass of air it ingests. Hot air is less dense, so the same volume carries less mass. Altitude does the same thing, and the two compound."
+    },
+    {
+     "q": "Distinguish {{inlet air cooling}} from {{water injection}}.",
+     "a": "Inlet cooling lowers the temperature of the incoming air so it is denser — evaporatively, which is cheap but humidity-limited, or with chillers, which work anywhere but consume power. Water injection adds mass into the machine directly, raising output while also suppressing {{NOx}}. Both consume water where it is often scarcest."
+    },
+    {
+     "q": "What does an {{aeroderivative}} machine inherit from aviation that matters on the ground?",
+     "a": "Tolerance of frequent thermal cycling and fast starts, high power for its weight and footprint, high pressure ratios and therefore good simple-cycle efficiency, and a module-exchange maintenance model where the {{engine core}} is swapped rather than rebuilt in place."
+    },
+    {
+     "q": "Why is start reliability more important than start speed for bridge duty?",
+     "a": "Because a bridge plant carries a live campus rather than chasing price signals. It starts rarely and runs almost continuously, so what matters is the probability that a start succeeds and that the plant stays available between overhauls."
+    },
+    {
+     "q": "Why do bridge plants tend to end up owned by municipal utilities and cooperatives?",
+     "a": "Because the two phases suit different capital. Development and construction carry risk that earns a margin; long-term ownership of dispatchable capacity wants certainty and cheap funding. The public or member-owned buyer can fund it more cheaply and hold it for decades."
+    },
+    {
+     "q": "Why does the builder try to retain the {{O&M}} contract after selling a plant?",
+     "a": "It converts a one-off construction margin into a long-lived service annuity with high renewal rates, keeps skilled crews employed between builds, and generates an operating record — the evidence the next customer actually wants."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on turbines and what they cost.",
+   "items": [
+    {
+     "q": "An aeroderivative turbine differs from a heavy-duty frame machine chiefly in that it:",
+     "c": [
+      "Burns a different fuel",
+      "Descends from an aircraft engine and tolerates frequent cycling",
+      "Is always more efficient",
+      "Requires no maintenance"
+     ],
+     "a": 1,
+     "why": "Its ancestry is a turbofan core designed for a thermal cycle every flight, which is why it starts fast, cycles well and is maintained by module exchange."
+    },
+    {
+     "q": "Two machines are quoted at 40% efficiency and 8,500 Btu/kWh. Without further information you can conclude:",
+     "c": [
+      "They are equally efficient",
+      "Nothing — the basis, gross-or-net and load point are unstated",
+      "The second is better",
+      "The first is better"
+     ],
+     "a": 1,
+     "why": "3,412 ÷ 8,500 is about 40%, so they look identical — but LHV against HHV alone moves natural-gas figures by around a tenth, and net-of-auxiliaries moves them again."
+    },
+    {
+     "q": "On a 43°C afternoon, an aeroderivative's output relative to its ISO rating is approximately:",
+     "c": [
+      "Unchanged",
+      "Around four-fifths",
+      "Around half",
+      "Higher, because the air is drier"
+     ],
+     "a": 1,
+     "why": "Reduced air density cuts the mass flow the compressor can deliver. Roughly a fifth of rated output is a reasonable expectation before any inlet cooling."
+    },
+    {
+     "q": "Which is the strongest reason bridge projects choose simple cycle over combined cycle?",
+     "c": [
+      "Simple cycle uses less fuel",
+      "The plant's expected life is too short to repay the steam cycle",
+      "Combined cycle cannot burn gas",
+      "Simple cycle emits less NOx"
+     ],
+     "a": 1,
+     "why": "Combined cycle is markedly more fuel-efficient. It is rejected because the extra capital and years of construction are not recovered over a five-year job."
+    },
+    {
+     "q": "Maintenance intervals for turbines are counted in equivalent operating hours because:",
+     "c": [
+      "Fuel quality varies",
+      "Each start imposes thermal stress equivalent to some hours of running",
+      "Regulators require it",
+      "Operators run them continuously"
+     ],
+     "a": 1,
+     "why": "Starts create large temperature differences across components of different thickness, and those stresses accumulate. Charging each start as a number of hours captures that."
+    },
+    {
+     "q": "A developer sells a completed peaking plant to a cooperative but keeps the service contract. The main benefit to the developer is:",
+     "c": [
+      "Avoiding all future liability",
+      "Recycling capital while retaining a service annuity and an operating record",
+      "Higher fuel margins",
+      "Eliminating the need for spares"
+     ],
+     "a": 1,
+     "why": "Capital returns to the next project, the retained contract is durable recurring revenue, and the plant becomes a live reference the next customer can inspect."
+    }
+   ]
+  }
+ ]
+}

@@ -58,6 +58,15 @@
       ]
     },
     {
+      "slug": "ac-block",
+      "term": "AC block",
+      "def": "A containerised battery unit with its power conversion built in, connecting straight to medium voltage. One supplier warrants energy, efficiency and response as a whole, and the site loses a separate direct-current collection system — at the cost of less energy per enclosure and lock-in on the conversion layer.",
+      "aliases": [
+        "integrated AC block",
+        "AC-block"
+      ]
+    },
+    {
       "slug": "ac-coupled",
       "term": "AC-coupled",
       "def": "A plant design in which the solar array and the battery each have their own inverter and meet on the alternating-current side. Simpler to build and to contract for in parts, but energy moving from array to battery is converted twice.",
@@ -218,6 +227,20 @@
         "gen end",
         "genend"
       ]
+    },
+    {
+      "slug": "ammonia",
+      "term": "ammonia",
+      "def": "A carbon-free fuel, easier to store and ship than hydrogen because it liquefies under mild conditions. It burns reluctantly and slowly, and because the nitrogen is in the fuel itself it opens a NOx pathway that cooling the flame does not address.",
+      "aliases": [
+        "NH3"
+      ]
+    },
+    {
+      "slug": "ammonia-slip",
+      "term": "ammonia slip",
+      "def": "Unreacted ammonia passing through a catalytic reduction system and out of the stack. It is itself a permitted pollutant, so reagent dosing has to be tuned between under-treating the nitrogen oxides and over-dosing into slip.",
+      "aliases": []
     },
     {
       "slug": "ampacity",
@@ -508,6 +531,14 @@
         "back leverage",
         "holdco debt",
         "holding-company debt"
+      ]
+    },
+    {
+      "slug": "bact",
+      "term": "BACT",
+      "def": "Best available control technology: the emission limit a new major source must meet, set case by case on what is technically achievable with cost and energy penalties weighed. Its stricter counterpart in areas that already fail an air standard is the lowest achievable emission rate, where cost is essentially not a defence.",
+      "aliases": [
+        "best available control technology"
       ]
     },
     {
@@ -1011,6 +1042,14 @@
       ]
     },
     {
+      "slug": "carnot-limit",
+      "term": "Carnot limit",
+      "def": "The ceiling on any engine that turns heat into work, set by the ratio of the temperatures it works between — which is why raising turbine firing temperature is the whole history of turbine development. A fuel cell converts chemical energy directly to electricity with no intermediate heat step, so this ceiling does not apply to it.",
+      "aliases": [
+        "Carnot efficiency"
+      ]
+    },
+    {
       "slug": "carried-interest",
       "term": "carried interest",
       "def": "The manager's share of a fund's profits — typically around 20% above a hurdle return — paid on top of the annual management fee; the main way a general partner is rewarded for performance.",
@@ -1253,6 +1292,14 @@
       "aliases": [
         "commercial mortgage-backed securities",
         "single-asset single-borrower"
+      ]
+    },
+    {
+      "slug": "cng",
+      "term": "CNG",
+      "def": "Compressed natural gas: pipeline gas squeezed to high pressure so a useful quantity fits in a transportable vessel. It is how gas reaches a site with no adequate pipe, at the price of compression equipment, a storage yard and a continuous flow of trucks.",
+      "aliases": [
+        "compressed natural gas"
       ]
     },
     {
@@ -1786,6 +1833,16 @@
       ]
     },
     {
+      "slug": "criteria-pollutant",
+      "term": "criteria pollutant",
+      "def": "One of the handful of pollutants for which federal law sets health-based outdoor air limits — ozone and fine particulates being the two that most constrain combustion plant. Every region is designated as meeting or failing each standard, and that designation, not the machine, decides how hard a new source is to permit.",
+      "aliases": [
+        "criteria pollutants",
+        "NAAQS",
+        "National Ambient Air Quality Standards"
+      ]
+    },
+    {
       "slug": "critical-it-load",
       "term": "critical IT load",
       "def": "The electrical capacity reserved for the computers themselves — servers, storage, networking — excluding cooling, lighting and losses. Data-center leases are priced per megawatt of critical IT load; the building's gross capacity is larger.",
@@ -2072,6 +2129,14 @@
       "slug": "deep-foundation",
       "term": "deep foundation",
       "def": "Piles or drilled shafts that carry load past unsuitable near-surface soil to competent material below. They are chosen when the ground near the surface cannot be made good enough."
+    },
+    {
+      "slug": "deflagration",
+      "term": "deflagration",
+      "def": "An explosion caused by flammable gas accumulating in an enclosed space and igniting — a distinct hazard from fire itself. In battery enclosures it is controlled by stopping the accumulation, through ventilation or inert gas, or by giving the pressure a deliberate escape route.",
+      "aliases": [
+        "deflagration venting"
+      ]
     },
     {
       "slug": "degradation",
@@ -2754,6 +2819,16 @@
       ]
     },
     {
+      "slug": "emission-offsets",
+      "term": "emission offsets",
+      "def": "Verified emission reductions bought elsewhere in the same airshed to compensate for a new source's emissions, required at better than one-to-one where the air already fails a standard. Where earlier reductions have been made and sold the market can be empty, and the constraint stops being financial and becomes absolute.",
+      "aliases": [
+        "emission offset",
+        "offset ratio",
+        "emission reduction credit"
+      ]
+    },
+    {
       "slug": "ems",
       "term": "EMS",
       "def": "Energy management system: the supervisory software that decides when a storage plant charges and discharges — following price signals, grid instructions, or a contract — and coordinates the PCS and BMS to do it.",
@@ -2868,6 +2943,15 @@
         "ESSA",
         "storage service agreement",
         "capacity-and-energy agreement"
+      ]
+    },
+    {
+      "slug": "engine-core",
+      "term": "engine core",
+      "def": "The compressor, combustor and high-pressure turbine at the heart of a gas turbine — in an aeroderivative machine, the same core that powered an airliner. Because it is removed and replaced as a module, an overhaul is a swap measured in days rather than a rebuild measured in weeks, and whoever holds spare cores holds the plant's availability.",
+      "aliases": [
+        "turbofan core",
+        "core exchange"
       ]
     },
     {
@@ -3314,6 +3398,15 @@
       ]
     },
     {
+      "slug": "firm-transportation",
+      "term": "firm transportation",
+      "def": "A contract obliging a pipeline to move a stated quantity of gas every day. Its cheaper alternative, interruptible transportation, can be curtailed when the pipeline is constrained — typically in extreme weather, which is exactly when a plant depending on it can least afford to stop.",
+      "aliases": [
+        "firm transport",
+        "firm gas transportation"
+      ]
+    },
+    {
       "slug": "firming",
       "term": "firming",
       "def": "Adding a controllable resource — gas engines, turbines or a long-duration battery — to a renewable site so the customer's load is met in the hours the sun and wind cannot cover. It is what turns a solar-and-wind campus into round-the-clock supply.",
@@ -3377,6 +3470,16 @@
       "def": "The point at which mining machines stop covering even their electricity cost, so running them destroys value and switching them off costs nothing. Difficulty only ever ratchets up and the halving only ever cuts revenue, so stranding is a scheduled outcome rather than a risk.",
       "aliases": [
         "stranded fleet"
+      ]
+    },
+    {
+      "slug": "flexible-load-interconnection",
+      "term": "flexible load interconnection",
+      "def": "Connecting a very large load sooner in exchange for accepting curtailment when the network is constrained. It works because interconnection studies otherwise assume the load draws its full demand at the system's worst hour, so a load that can be told to stop needs far less reinforcement built for it.",
+      "aliases": [
+        "curtailable interconnection",
+        "non-firm load service",
+        "flexible interconnection"
       ]
     },
     {
@@ -3518,6 +3621,15 @@
       "def": "Rejecting heat without running the compressors, by using a heat exchanger when the outdoor condition is cold enough to do the job directly. How many hours a year it works is a property of the climate and the water temperature chosen."
     },
     {
+      "slug": "free-piston",
+      "term": "free-piston",
+      "def": "An engine architecture with no crankshaft, where the piston's travel is controlled electromagnetically rather than by mechanical linkage. Freeing the motion allows compression to be varied cycle by cycle, which is what lets such a machine change fuels in software and hold its efficiency at low load.",
+      "aliases": [
+        "free piston",
+        "free-piston generator"
+      ]
+    },
+    {
       "slug": "frequency-converter",
       "term": "frequency converter",
       "aliases": [
@@ -3632,6 +3744,15 @@
         "GIS",
         "SF6 switchgear",
         "gas insulated switchgear"
+      ]
+    },
+    {
+      "slug": "gas-lateral",
+      "term": "gas lateral",
+      "def": "The pipe running from a gas main to a site, with the metering and pressure-regulating station at its end. It must be routed, permitted and built across land the buyer does not own, so it is an easement problem of the same kind as a power line — the fuel-side queue that on-site generation projects discover late.",
+      "aliases": [
+        "pipeline lateral",
+        "gas interconnect"
       ]
     },
     {
@@ -3882,6 +4003,15 @@
       ]
     },
     {
+      "slug": "hardware-in-the-loop",
+      "term": "hardware-in-the-loop",
+      "def": "Testing a real controller against a real-time simulation of the plant and grid it will run, so it cannot tell the difference. It is how faults during islanding, loss of the largest generator, or a violent load step with the battery nearly empty get exercised thousands of times — cases that could never be staged on a live site.",
+      "aliases": [
+        "HIL",
+        "hardware in the loop"
+      ]
+    },
+    {
       "slug": "harmonics",
       "term": "harmonics",
       "def": "Distortion added to a clean AC waveform by loads that draw current in gulps rather than smoothly — rectifiers, drives, server power supplies. Harmonics overheat transformers and neutral conductors, nuisance-trip breakers, and distort the voltage other equipment sees; total harmonic distortion (THD) is the score, and under 5% is the common target.",
@@ -3965,6 +4095,15 @@
         "commodity hedge",
         "fixed-for-floating swap",
         "heat-rate call option"
+      ]
+    },
+    {
+      "slug": "hhv",
+      "term": "HHV",
+      "def": "Higher heating value: a fuel's energy content counted with the water in the exhaust condensed back to liquid, so the heat of condensation is included. For natural gas it is about a tenth larger than the lower value, which means the same machine looks roughly ten percent less efficient when quoted on this basis.",
+      "aliases": [
+        "higher heating value",
+        "gross calorific value"
       ]
     },
     {
@@ -4099,6 +4238,14 @@
         "hydrotreated vegetable oil",
         "renewable diesel",
         "EN 15940"
+      ]
+    },
+    {
+      "slug": "hydrogen",
+      "term": "hydrogen",
+      "def": "A fuel containing no carbon, so burning it produces no carbon dioxide. Its flame is very fast and hot, which brings the risk of the flame travelling back up the burner and raises nitrogen-oxide formation — so blending a modest fraction into an existing machine is a tuning exercise, while burning it neat is a combustion-system redesign.",
+      "aliases": [
+        "H2"
       ]
     },
     {
@@ -4829,6 +4976,15 @@
       ]
     },
     {
+      "slug": "lhv",
+      "term": "LHV",
+      "def": "Lower heating value: a fuel's energy content counted with the water in the exhaust left as vapour, which is what a normal plant actually does with it. Efficiency and heat-rate figures are usually quoted on this basis, and comparing one against a higher-value figure is the most common error in the field.",
+      "aliases": [
+        "lower heating value",
+        "net calorific value"
+      ]
+    },
+    {
       "slug": "limited-partner",
       "term": "limited partner",
       "def": "An investor in a fund — a pension plan, an insurer, a sovereign fund — that puts up the money but takes no part in running it. CDPQ is both a limited partner in many funds and, at Invenergy, a direct owner.",
@@ -4859,6 +5015,14 @@
       "slug": "line-interactive",
       "term": "line-interactive",
       "def": "A UPS that normally passes the supply through while a transformer or inverter trims the voltage, stepping in fully only when the supply fails. Cheaper and more efficient than double conversion, at the cost of a short break the load must be able to ride."
+    },
+    {
+      "slug": "linear-generator",
+      "term": "linear generator",
+      "def": "A generating machine in which a piston drives magnets past coils in a straight line, inducing current directly instead of turning a shaft. Compressing a very lean mixture until it reacts all at once, with no flame front, keeps temperatures low enough that little nitrogen oxide forms — so it can meet tight limits without exhaust after-treatment.",
+      "aliases": [
+        "linear generators"
+      ]
     },
     {
       "slug": "liquid-cooling",
@@ -4911,6 +5075,14 @@
       "def": "Lithium manganese iron phosphate: lithium iron phosphate with manganese added to raise cell voltage and so energy density, while keeping most of the cost and stability advantages. It sits between standard iron-phosphate and nickel chemistries.",
       "aliases": [
         "lithium manganese iron phosphate"
+      ]
+    },
+    {
+      "slug": "lng",
+      "term": "LNG",
+      "def": "Liquefied natural gas: gas cooled until it condenses, shrinking it several hundredfold so far more energy fits in a trailer than compressed gas allows. It needs cryogenic handling and equipment on site to return it to gas, and is used where a site's demand outruns what compressed deliveries can sustain.",
+      "aliases": [
+        "liquefied natural gas"
       ]
     },
     {
@@ -5089,6 +5261,16 @@
       "def": "Utilization-level voltage — under about a thousand volts, the 400 or 480 V that feeds distribution boards, UPS units and the racks. Most UPS equipment has historically lived here; moving it up to medium voltage is one of the live arguments in gigawatt campuses."
     },
     {
+      "slug": "low-voltage-ride-through",
+      "term": "low-voltage ride-through",
+      "def": "The requirement to keep operating through a dip in supply voltage rather than disconnecting, specified as a curve of how deep a dip must be survived for how long. The demanding case — a fall to near zero for a few cycles while protection clears a fault — can only be met with stored energy, because for those cycles almost nothing is arriving.",
+      "aliases": [
+        "LVRT",
+        "zero-voltage ride-through",
+        "ZVRT"
+      ]
+    },
+    {
       "slug": "ltsa",
       "term": "LTSA",
       "def": "Long-term service agreement: the multi-year operations-and-maintenance contract through which a supplier delivers availability guarantees on the equipment it sold. Suppliers generally will not extend long-dated warranties without holding it, so the LTSA and the warranty are negotiated as one package.",
@@ -5262,6 +5444,14 @@
       "def": "Fuel in the form of a uranium alloy rather than a ceramic oxide pellet. It conducts heat far better, runs cooler, and expands when hot in a way that helps shut the reaction down."
     },
     {
+      "slug": "methane-number",
+      "term": "methane number",
+      "def": "A gaseous fuel's resistance to knock, the equivalent of octane rating for liquid fuels. Heavier hydrocarbons lower it, and a low-number gas makes a highly-boosted engine detonate — so the controls retard timing and reduce output, and a fuel problem shows up as a capacity shortfall.",
+      "aliases": [
+        "methane rating"
+      ]
+    },
+    {
       "slug": "microgrid",
       "term": "microgrid",
       "def": "A self-contained power system — generation, storage, and controls — that can run connected to the grid or islanded on its own. It is how some AI campuses get power before utility interconnection arrives."
@@ -5332,6 +5522,16 @@
         "Midcontinent Independent System Operator",
         "MISO South",
         "MISO South region"
+      ]
+    },
+    {
+      "slug": "mobile-generation",
+      "term": "mobile generation",
+      "def": "Generating sets packaged on trailers and paralleled through switchgear trailers, so a plant can be assembled at one site and moved to the next. It costs more per megawatt-hour than fixed plant because transport limits sacrifice efficiency, heat rejection and acoustics — and it is worth more at the end of a job, because the equipment has somewhere else to go.",
+      "aliases": [
+        "trailer-mounted generation",
+        "mobile gen-set",
+        "mobile generation fleet"
       ]
     },
     {
@@ -5762,6 +5962,15 @@
       ]
     },
     {
+      "slug": "o-and-m",
+      "term": "O&M",
+      "def": "Operations and maintenance: the contract to run and maintain a plant, usually long-dated and usually renewed. A builder that sells a completed plant but keeps this contract converts a one-off construction margin into recurring revenue, keeps its crews employed between builds, and accumulates the operating record the next customer wants to inspect.",
+      "aliases": [
+        "operations and maintenance",
+        "O and M"
+      ]
+    },
+    {
       "slug": "obsolescence",
       "term": "obsolescence",
       "def": "A component going out of production while the product that uses it is still selling. Managing it — last-time buys, qualified replacements, redesign — is a standing cost of owning any electronic product for more than a few years.",
@@ -5936,6 +6145,25 @@
       ]
     },
     {
+      "slug": "oxidation-catalyst",
+      "term": "oxidation catalyst",
+      "def": "An exhaust device that finishes burning the carbon monoxide and unburned hydrocarbons an engine left behind, turning them into carbon dioxide and water. It costs a little efficiency through backpressure and is poisoned over time by contaminants in fuel and lubricating oil.",
+      "aliases": [
+        "CO catalyst",
+        "oxidation catalysts"
+      ]
+    },
+    {
+      "slug": "oxygen-correction",
+      "term": "oxygen correction",
+      "def": "Restating an exhaust concentration at a standard oxygen level so that diluting the exhaust with air cannot make a source look cleaner than it is. A parts-per-million emissions figure quoted without its reference oxygen level is not a measurement that can be compared with anything.",
+      "aliases": [
+        "corrected to 15% O2",
+        "15% O2",
+        "reference oxygen"
+      ]
+    },
+    {
       "slug": "p50",
       "term": "P-50",
       "def": "The output level a wind or solar plant is expected to exceed half the time — the central estimate a forecast and a financing are built on. A year at 87% of P-50 means the wind simply blew less than the median expectation, which is a revenue miss no contract protects against.",
@@ -6009,6 +6237,16 @@
       "def": "Duty in which a battery is cycled without ever being returned to full. It is normal in solar, telecom and grid work, and it is precisely the condition ordinary lead-acid tolerates worst.",
       "aliases": [
         "PSoC"
+      ]
+    },
+    {
+      "slug": "particulate-matter",
+      "term": "particulate matter",
+      "def": "Fine solid and liquid particles in exhaust, regulated by size because the smallest travel deepest into the lungs. Diesel engines produce enough to need a filter; gas engines produce very little, which is a large part of why gas displaces diesel wherever a machine will run many hours.",
+      "aliases": [
+        "PM2.5",
+        "PM10",
+        "particulates"
       ]
     },
     {
@@ -6269,6 +6507,14 @@
         "postage-stamp",
         "postage stamp rate",
         "postage-stamp allocation"
+      ]
+    },
+    {
+      "slug": "potential-to-emit",
+      "term": "potential to emit",
+      "def": "What a plant could emit running at maximum capacity every hour of the year, unless its permit contains enforceable limits saying otherwise. It is a ceiling rather than a forecast, and comparing it with the applicable thresholds is what sorts a project into a light permit or a multi-year review.",
+      "aliases": [
+        "PTE"
       ]
     },
     {
@@ -6938,6 +7184,17 @@
       ]
     },
     {
+      "slug": "reciprocating-engine",
+      "term": "reciprocating engine",
+      "def": "An engine that burns fuel inside cylinders to push pistons and turn a crankshaft, which spins a generator. Built in units of a few megawatts and stacked into hundreds, it delivers fast, keeps its efficiency at part load, and gives a plant real spinning mass — at the cost of many machines to maintain and a large site footprint.",
+      "aliases": [
+        "recip",
+        "recip engine",
+        "reciprocating engines",
+        "reciprocating gas engine"
+      ]
+    },
+    {
       "slug": "recognition-agreement",
       "term": "recognition agreement",
       "def": "A side contract between a landlord, its tenant and a third party in which the third party promises that, if the tenant defaults or goes bankrupt, it will either pay the rent and step into the lease or pay a termination fee. It is how a guarantor's credit is attached to someone else's lease.",
@@ -7239,6 +7496,15 @@
       "slug": "ripple-current",
       "term": "ripple current",
       "def": "The small alternating current superimposed on a battery's direct current by the charger or the inverter. It heats the cell from the inside and ages it, which is why the acceptable level is a published specification rather than an afterthought."
+    },
+    {
+      "slug": "rng",
+      "term": "RNG",
+      "def": "Renewable natural gas: biogas from a landfill, digester or wastewater plant that has been cleaned and upgraded until it meets pipeline specification. Raw biogas is heavily diluted with carbon dioxide and often carries sulphur and moisture, so it needs far greater volume for the same heat and will poison catalysts if burned untreated.",
+      "aliases": [
+        "renewable natural gas",
+        "biogas"
+      ]
     },
     {
       "slug": "rocof",
@@ -7884,6 +8150,15 @@
       ]
     },
     {
+      "slug": "spark-ignition",
+      "term": "spark ignition",
+      "def": "Starting combustion with an electrical spark at a chosen instant, as almost all large stationary gas engines do. Its counterpart, compression ignition, relies on the heat of compression alone to ignite the charge — which is what a diesel does, and what makes its timing a property of the fuel rather than of the controls.",
+      "aliases": [
+        "spark-ignited",
+        "spark-ignition engine"
+      ]
+    },
+    {
       "slug": "spark-spread",
       "term": "spark spread",
       "def": "The gap between what a megawatt-hour of electricity sells for and what the gas to make it costs at a stated efficiency. It is the gross margin of a gas plant, and a merchant gas fleet's earnings are essentially the spark spread multiplied by the hours it is economic to run."
@@ -8015,6 +8290,15 @@
       ]
     },
     {
+      "slug": "standby-service-rate",
+      "term": "standby service rate",
+      "def": "What a utility charges a customer that makes its own power for standing ready to serve it when that plant is down. The utility must hold capacity for a customer who normally does not draw it, and prices that readiness whether or not it is called on — which is often the largest surprise in a self-generation business case.",
+      "aliases": [
+        "backup service rate",
+        "standby tariff"
+      ]
+    },
+    {
       "slug": "stargate",
       "term": "Stargate",
       "def": "The USD 500 billion AI-infrastructure programme announced in January 2025 by OpenAI, SoftBank, Oracle and MGX to build data-centre campuses for OpenAI, starting in Abilene, Texas.",
@@ -8125,6 +8409,15 @@
       "aliases": [
         "strict liability standard",
         "liability without fault"
+      ]
+    },
+    {
+      "slug": "string-pcs",
+      "term": "string PCS",
+      "def": "Power conversion split into many small units, each serving one group of battery strings, rather than concentrated in one large central converter. Distributing it lets the conversion sit inside the battery enclosure, shrinks the fault current any one unit can contribute, and means a converter failure costs a fraction of the block rather than all of it.",
+      "aliases": [
+        "distributed PCS",
+        "string power conversion"
       ]
     },
     {
@@ -8501,6 +8794,15 @@
       ]
     },
     {
+      "slug": "thermal-nox",
+      "term": "thermal NOx",
+      "def": "Nitrogen oxide formed when the nitrogen already in combustion air reacts with oxygen in a hot flame — the dominant source for gas-fired plant. Its rate climbs exponentially with temperature, so hot streaks matter more than the average, and every mainstream control works by making the flame cooler or more uniform.",
+      "aliases": [
+        "Zeldovich mechanism",
+        "thermal NOx formation"
+      ]
+    },
+    {
       "slug": "thermal-resistance",
       "term": "thermal resistance",
       "def": "How hard it is for heat to escape from a part to the air or liquid that carries it away, measured as temperature rise per watt. A converter's current rating is really a thermal statement: the current it can carry before its junction temperature reaches the limit through the path it has been given.",
@@ -8733,6 +9035,15 @@
       "aliases": [
         "turbocharger lag",
         "turbo response"
+      ]
+    },
+    {
+      "slug": "turbocharging",
+      "term": "turbocharging",
+      "def": "Using exhaust energy to spin a turbine that drives a compressor, forcing more air — and so more fuel — into the same cylinder. It is what recovers the output a lean-burn engine gives away by burning with excess air, and it is why a modern gas engine reaches efficiencies comparable to a much larger turbine.",
+      "aliases": [
+        "turbocharger",
+        "turbocharged"
       ]
     },
     {
@@ -8980,6 +9291,15 @@
       ]
     },
     {
+      "slug": "virtual-pipeline",
+      "term": "virtual pipeline",
+      "def": "Delivering gas by road as compressed or liquefied fuel when no adequate pipe reaches a site. It genuinely works and is how some on-site plants start, but it means a storage yard, regasification or decompression equipment, continuous truck movements, and a delivered fuel cost well above pipeline gas.",
+      "aliases": [
+        "trucked gas",
+        "trucked CNG"
+      ]
+    },
+    {
       "slug": "virtual-power-plant",
       "term": "virtual power plant",
       "aliases": [
@@ -9016,6 +9336,14 @@
         "unregulated converter",
         "voltage regulator",
         "regulated output"
+      ]
+    },
+    {
+      "slug": "voltage-sag",
+      "term": "voltage sag",
+      "def": "A partial or near-total collapse of supply voltage lasting a few cycles while protection clears a fault somewhere on the network. Sags are far more common than outages and cause most unplanned industrial disruption — and the damage usually comes from equipment disconnecting in response rather than from the sag itself.",
+      "aliases": [
+        "voltage dip"
       ]
     },
     {
@@ -9087,6 +9415,14 @@
       "slug": "water-cement-ratio",
       "term": "water-cement ratio",
       "def": "The mass of water relative to cement in a concrete mix, and the single strongest determinant of its strength and durability. Adding water at the truck to make placement easier trades permanent strength for temporary convenience."
+    },
+    {
+      "slug": "water-injection",
+      "term": "water injection",
+      "def": "Spraying water or steam into a gas turbine, which adds mass flow and so raises output, while absorbing heat and suppressing nitrogen-oxide formation at the same time. It buys megawatts and emissions margin with water — a hard trade in the arid places where hot-day output loss is worst.",
+      "aliases": [
+        "steam injection"
+      ]
     },
     {
       "slug": "water-neutral",
@@ -9173,6 +9509,14 @@
         "bus bracing",
         "momentary rating",
         "short-time withstand"
+      ]
+    },
+    {
+      "slug": "wobbe-index",
+      "term": "Wobbe index",
+      "def": "A gas's heating value divided by the square root of its relative density, which predicts how much heat it will deliver through a given burner at a given pressure. Two gases with the same value are interchangeable without re-tuning, so a machine's declared Wobbe band is the real measure of how much fuel variation it can absorb.",
+      "aliases": [
+        "Wobbe number"
       ]
     },
     {

@@ -1,0 +1,311 @@
+{
+ "schemaVersion": 2,
+ "slug": "on-energy",
+ "title": "ON.energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a gigawatt campus is a grid participant, not a customer",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Past a certain size, a data centre stops being something the grid serves and becomes something the grid must be protected from.",
+   "ps": [
+    "The first four guides in this course were about making power on site. This one is about the electrical boundary between the site and the grid — a boundary that changes character entirely once the load gets large enough.",
+    "A small load is a passive consumer. A load of several hundred megawatts that can swing by a large fraction of itself within a second is an active participant in system stability, and grid operators have begun writing rules that treat it as one. The obligations run in both directions: the campus must survive disturbances originating on the grid, and the grid must survive disturbances originating in the campus.",
+    "The equipment that manages that boundary has consequently moved. Power conditioning used to sit deep inside the building, downstream of everything, protecting individual racks at low voltage. As campuses grew, it began moving *upstream* — toward the point where the site meets the network, at **{{medium voltage}}** — because that is where a problem affecting the whole campus has to be solved.",
+    "Cell chemistry is covered by the cell-maker guides, revenue and dispatch by the merchant-storage guides, and the physical container by the last guide in this course. Here the subject is narrower and more specific: what the campus owes the grid, what the grid owes the campus, and where the equipment that settles the account has to sit."
+   ]
+  },
+  {
+   "id": "voltage-ladder",
+   "title": "Where equipment sits, and why it matters",
+   "kind": "table",
+   "read": "Power steps down from the transmission line to the chip, and each step is a place a product can live.",
+   "intro": "Electricity arrives at high voltage and reaches the silicon at a few volts. Each rung is a transformation, and each is a candidate location for protection and conditioning. Moving a function up the ladder changes what it can do and what it costs.",
+   "cols": [
+    "Level",
+    "What lives there",
+    "What can be solved here"
+   ],
+   "rows": [
+    [
+     "Transmission, tens to hundreds of kV",
+     "The connection to the network, the substation, the metering point",
+     "Nothing internal — this is where the campus is measured and where the grid's rules apply to it"
+    ],
+    [
+     "**{{Medium voltage}}**, roughly 1–35 kV",
+     "Campus distribution, the on-site generating plant, the {{point of interconnection}}",
+     "Anything affecting the whole site at once: {{ride-through}}, large transients, the interface between grid supply and on-site generation"
+    ],
+    [
+     "**{{Low voltage}}**, under 1 kV",
+     "Building distribution, conventional **{{UPS}}**, switchboards",
+     "Protection for one building or one hall, at the price of duplicating equipment for every one of them"
+    ],
+    [
+     "Rack and below",
+     "Power supplies, {{PDU}}s, on-board conversion",
+     "Individual server behaviour — invisible to the grid and irrelevant to it"
+    ]
+   ],
+   "note": "The economic argument for moving conditioning up the ladder is duplication. Solving a campus-wide problem at low voltage means installing equipment in every building and coordinating all of it; solving it once at medium voltage means one system at the boundary. The counter-argument is fault consequence: a single system at the boundary is a single thing that can fail, so it must be built to a standard the distributed version never needed to meet. That trade — fewer, larger, more critical pieces against many small ones — recurs at every level of infrastructure design, and it is the same trade the engine guide made about many small machines against one large one, running in the opposite direction."
+  },
+  {
+   "id": "the-transient-both-ways",
+   "title": "The disturbance travels in both directions",
+   "kind": "prose",
+   "read": "The campus can hurt the grid, and the grid can hurt the campus. The same equipment often addresses both.",
+   "ps": [
+    "Start with the direction that is newer and less intuitive: the campus disturbing the grid.",
+    "A large AI training cluster's accelerators work in lock-step. They begin and finish a computation together, so demand can rise or fall by a substantial fraction of a very large total in well under a second — a **{{block load}}** at a scale the network was not designed to see from a single customer. Generation elsewhere must respond, and if it cannot respond fast enough the frequency moves. Repeat that at intervals and a single customer is imposing a cycling duty on the whole system.",
+    "The grid operator's remedies are bluntly reasonable: require the load to limit how fast it may change, require it to stay connected through disturbances rather than tripping, and study it before connecting it at all. These obligations now attach to **{{large-load interconnection}}** in the markets where such campuses concentrate, and they are conditions of connection rather than advice.",
+    "Now the familiar direction: the grid disturbing the campus. Faults on the network — a lightning strike, a tree, a failed piece of equipment — cause a **{{voltage sag}}**: voltage collapses partially or almost completely for a few cycles, then recovers when protection clears the fault. Sags are far more common than outages, and they are the single largest cause of unplanned disruption in industrial facilities.",
+    "The dangerous response to a sag is over-reaction. If every sensitive device disconnects at the first sign of trouble, a local fault that would have cleared in a tenth of a second becomes a campus-wide shutdown — and if enough large loads do it simultaneously, a local fault becomes a system-wide event. That is precisely the failure mode that ride-through requirements exist to prevent, and it explains why regulators now demand that very large loads stay connected: **the collective response to a small disturbance is more dangerous than the disturbance**.",
+    "So one piece of equipment at the boundary can serve both directions at once. Something that can absorb and inject power in milliseconds smooths the campus's demand as seen by the grid, and holds the campus's voltage up when the grid dips. That dual role is why storage has migrated from a revenue asset in the merchant guides to a *protective* asset here — same hardware, entirely different justification."
+   ]
+  },
+  {
+   "id": "ride-through",
+   "title": "Staying connected when the voltage disappears",
+   "kind": "prose",
+   "read": "Ride-through is a specification with a shape: how deep a dip, for how long, and what the equipment must do afterwards.",
+   "ps": [
+    "**{{Ride-through}}** means continuing to operate through a disturbance instead of protectively disconnecting. It is not a single capability but a curve: for each depth of voltage dip there is a duration the equipment must survive, and requirements are written as a boundary on that plane.",
+    "The vocabulary distinguishes degrees. **{{Low-voltage ride-through}}** covers partial dips — voltage falls to some fraction of nominal and the equipment must hold. The demanding case is a dip to near zero for a few cycles, which is what a close-in fault looks like before protection clears it. Surviving that requires stored energy on the site, because for those cycles there is essentially nothing coming in.",
+    "Two long-standing standards frame the same problem from the equipment side. The industry's classic tolerance curve describes what voltage disturbances information-technology equipment should survive, and **{{IEC 62040-3}}** classifies uninterruptible supplies by how completely they isolate the load from input disturbances. Both are worth knowing because they explain why the answer is almost always some form of energy storage: you cannot ride through the absence of voltage with anything other than stored energy.",
+    "The conventional solution is a **{{double conversion}}** UPS. Incoming AC is rectified to DC, a battery sits on that DC bus, and an inverter rebuilds clean AC for the load. The load is *always* fed from the inverter, so it never sees the input directly — which is why this topology tolerates input disturbances so well, at the cost of conversion losses in both directions, continuously, for the life of the installation.",
+    "Applying that architecture at medium voltage rather than inside each building is a genuine change of scope rather than a scaling exercise. Insulation, clearances, switching devices and protection all work differently above a kilovolt, and the equipment must coordinate with the site's protection scheme rather than sitting safely downstream of it. The payoff is that one system covers the whole campus and can meet a *grid-facing* obligation — a low-voltage UPS inside a building protects that building's load, but it cannot make the campus as a whole ride through, because it sits downstream of the boundary where the obligation is measured."
+   ]
+  },
+  {
+   "id": "forming-or-following",
+   "title": "Two ways an inverter can behave",
+   "kind": "proscons",
+   "read": "Whether a converter follows the grid's voltage or creates its own decides what a site can do when the grid is gone.",
+   "intro": "Every battery, solar plant and modern power converter connects through an inverter, and inverters come in two behaviours. The distinction is invisible in normal operation and decisive in abnormal operation.",
+   "cards": [
+    {
+     "t": "**{{Grid-following}}**",
+     "meta": "Measures the grid's voltage and injects current in step with it",
+     "adv": [
+      "**Simpler and cheaper**, and entirely adequate wherever a strong grid is present.",
+      "**Well understood**, with a long track record and mature protection practice.",
+      "**Excellent at delivering energy** — which is all that most connected resources are asked to do."
+     ],
+     "dis": [
+      "*It needs an existing voltage to follow*, so it cannot start or sustain an island on its own.",
+      "*It contributes no {{inertia}}*, because there is no synchronised mass and no intrinsic resistance to frequency change.",
+      "*It may back away during a disturbance* — the {{momentary cessation}} behaviour that turned inverter fleets into a stability concern."
+     ]
+    },
+    {
+     "t": "**{{Grid-forming}}**",
+     "meta": "Establishes voltage and frequency itself, as a synchronous machine does",
+     "adv": [
+      "**Can create and hold an island**, so a campus can run detached from the grid on its own converters.",
+      "**Provides synthetic inertia and stiff voltage support**, imitating electronically what a spinning machine does physically.",
+      "**Supports {{black start}}** — energising a de-energised system from nothing."
+     ],
+     "dis": [
+      "*More complex control and more demanding hardware*, since it must supply {{fault current}} and hold voltage against whatever the load does.",
+      "*Sizing is harder*, because the converter's behaviour during faults is now load-bearing for the whole island.",
+      "*A newer practice*, with protection and interoperability conventions still maturing."
+     ]
+    }
+   ],
+   "note": "For a campus mixing grid supply, on-site generation and storage, this choice is architectural rather than incidental. If the storage is grid-following, the engines and turbines must form the island and the batteries can only assist. If it is grid-forming, the storage can hold the island's voltage and frequency while the generation starts, follows load and shuts down — which is the arrangement that lets a plant transition smoothly between grid-connected and islanded operation without the campus noticing. That transition, not the steady state, is where hybrid plants are actually difficult."
+  },
+  {
+   "id": "the-price-of-speed",
+   "title": "Connecting sooner by promising to be interruptible",
+   "kind": "prose",
+   "read": "A load willing to be curtailed can often be connected years before one that is not.",
+   "ps": [
+    "The queue exists because connecting a large load may require network reinforcement, and reinforcement takes years. But the studies that produce that conclusion assume the worst case: that the new load draws its full demand at the moment the network is most stressed.",
+    "Relax that assumption and the answer changes. A load that can be curtailed when the network is constrained does not need the network to be built for its peak — it needs it built for the conditions under which it will actually be allowed to draw. This is **{{flexible load interconnection}}**, and it is the most consequential idea in this guide because it converts a multi-year construction problem into an operational agreement.",
+    "The catch is obvious and important: curtailment means the campus is told to stop drawing power at exactly the times it may least want to. For a load that can genuinely pause — some training workloads can, since a checkpointed job can be halted and resumed — that is a modest cost. For inference serving live traffic it is not.",
+    "This is where the four preceding guides converge. A campus with substantial on-site generation can accept aggressive curtailment terms *and* keep operating, because when the grid says stop drawing, the site's own plant takes over. The generation is what makes the flexible commitment credible.",
+    "That reframes what the on-site plant is for, and it is worth stating plainly: it is not only a bridge that fills the years before the connection arrives. It is also the thing that made an earlier connection possible in the first place, and the thing that lets the campus keep a cheaper interconnection afterwards. An asset that would otherwise be idle after the bridge period has a permanent job.",
+    "The storage layer plays a specific part in that arrangement, distinct from the generation's. Curtailment instructions and grid disturbances arrive faster than engines can start. Something must carry the campus through the seconds between the instruction and the plant reaching load — and that is a stored-energy function, not a generation function. It is the clearest illustration of the division of labour this course keeps returning to: **generation supplies energy, storage supplies time.**"
+   ]
+  },
+  {
+   "id": "protection",
+   "title": "What changes when large equipment sits inline at medium voltage",
+   "kind": "ledger",
+   "read": "Five protection questions that a low-voltage product never had to answer.",
+   "cols": [
+    "Question",
+    "Why it arises at medium voltage",
+    "What it forces"
+   ],
+   "rows": [
+    [
+     "How much **{{fault current}}** can flow?",
+     "A short circuit at medium voltage draws enormous current until a device clears it. Every component in the path must survive that current for the clearing time",
+     "Equipment rated to a stated {{withstand rating}}, and a deliberate choice about how much fault current the inline converter itself contributes"
+    ],
+    [
+     "Do the protective devices coordinate?",
+     "Devices must trip in order — nearest the fault first — so a local fault does not disconnect the whole site",
+     "A {{coordination study}} for the campus as a whole, redone whenever the inline equipment or the on-site generation changes"
+    ],
+    [
+     "What is the **{{arc flash}}** energy?",
+     "Energy released by an arc scales with fault current and clearing time, and sets what protective equipment people must wear to work on the gear",
+     "Faster clearing or lower available fault current — one reason architectures that inherently limit fault contribution are valued beyond their electrical merits"
+    ],
+    [
+     "What happens if the inline equipment fails?",
+     "Anything in series with the whole campus is a single point of failure by construction",
+     "A bypass path that can carry full load, and maintenance procedures that do not require de-energising the site"
+    ],
+    [
+     "Can the island be detected and separated cleanly?",
+     "When the grid supply is lost, the site's own sources must not energise the utility's network",
+     "{{Anti-islanding}} detection and a defined separation point, coordinated with the utility's own protection"
+    ]
+   ],
+   "note": "None of these is exotic — they are standard practice in industrial power systems. They are listed because they are the real content of 'medium-voltage' as a product claim. Moving a function up the voltage ladder is not a matter of using bigger components; it is an undertaking to answer all five of these questions for a site whose availability requirement is close to absolute. That is why such systems are validated against simulated grids and faults before deployment — a practice the last guide in this course takes up directly."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Voltage levels, transients, ride-through and inverters.",
+   "cards": [
+    {
+     "q": "Why has power conditioning moved from inside the building toward the site boundary?",
+     "a": "Because the problems worth solving became campus-wide. A campus-scale transient or a grid-facing obligation cannot be met by equipment sitting downstream inside each building — it has to sit at {{medium voltage}}, where the site meets the network."
+    },
+    {
+     "q": "What is the trade when conditioning moves up the voltage ladder?",
+     "a": "Fewer, larger pieces instead of many small ones: one system replaces duplicated equipment in every building, but it becomes a single point of failure that must be built to a far higher standard and needs a full-load bypass."
+    },
+    {
+     "q": "How can a data centre disturb the grid?",
+     "a": "Accelerators in a training cluster work in lock-step, so demand can swing by a large fraction of a very large total in under a second. That is a {{block load}} the network never expected from one customer, and repeated it imposes cycling duty on the whole system."
+    },
+    {
+     "q": "What is a {{voltage sag}}, and why does it matter more than outages?",
+     "a": "A partial or near-total collapse of voltage for a few cycles while protection clears a fault on the network. Sags are far more common than outages and are the largest cause of unplanned industrial disruption."
+    },
+    {
+     "q": "Why do grid operators require very large loads to ride through disturbances?",
+     "a": "Because the collective response is more dangerous than the disturbance. If every large load trips at the first dip, a local fault that would have cleared in a fraction of a second becomes a system-wide event."
+    },
+    {
+     "q": "Why does surviving a near-zero voltage dip require stored energy?",
+     "a": "Because for those cycles essentially nothing is coming in. No amount of conditioning can pass through power that is not arriving — only stored energy can bridge the gap."
+    },
+    {
+     "q": "How does a {{double conversion}} UPS isolate its load?",
+     "a": "Incoming AC is rectified to DC, a battery sits on that DC bus, and an inverter rebuilds clean AC. The load is always fed from the inverter and never sees the input directly — paid for in continuous conversion losses."
+    },
+    {
+     "q": "What can a {{grid-forming}} converter do that a {{grid-following}} one cannot?",
+     "a": "Establish voltage and frequency itself, so it can create and hold an island, provide synthetic {{inertia}} and support {{black start}}. A grid-following converter needs an existing voltage to synchronise to."
+    },
+    {
+     "q": "Why does the grid-forming choice matter for a hybrid campus?",
+     "a": "It decides what holds the island together during transitions. Grid-forming storage can hold voltage and frequency while generation starts, follows load and stops — so the site moves between grid-connected and islanded operation without the load noticing."
+    },
+    {
+     "q": "How does accepting curtailment get a campus connected sooner?",
+     "a": "Interconnection studies assume the load draws its full demand when the network is most stressed. A load that can be curtailed does not need reinforcement built for that case — {{flexible load interconnection}} turns a multi-year construction problem into an operational agreement."
+    },
+    {
+     "q": "State the division of labour between generation and storage on such a campus.",
+     "a": "Generation supplies energy; storage supplies time. Curtailment instructions and grid faults arrive faster than engines can start, so stored energy carries the site through the seconds until the plant reaches load."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on the electrical boundary.",
+   "items": [
+    {
+     "q": "Ride-through obligations are now placed on very large loads mainly to prevent:",
+     "c": [
+      "Equipment damage at the site",
+      "Many loads tripping at once and turning a local fault into a system event",
+      "Excess energy consumption",
+      "Harmonic distortion"
+     ],
+     "a": 1,
+     "why": "The collective response is the hazard. Individually a trip is safe; simultaneously across many large loads it is a system-wide disturbance."
+    },
+    {
+     "q": "During a dip to near zero volts lasting a few cycles, the campus can only be supported by:",
+     "c": [
+      "A larger transformer",
+      "Stored energy on site",
+      "Power factor correction",
+      "A faster protective relay"
+     ],
+     "a": 1,
+     "why": "With essentially no incoming power, only stored energy can bridge the gap — which is why ride-through specifications imply a battery or equivalent."
+    },
+    {
+     "q": "The defining feature of a double-conversion UPS is that:",
+     "c": [
+      "It switches to battery when the input fails",
+      "The load is always fed from the inverter and never sees the input",
+      "It operates at medium voltage",
+      "It has no battery"
+     ],
+     "a": 1,
+     "why": "Continuous rectification and re-inversion is what isolates the load completely — and what costs conversion losses in both directions at all times."
+    },
+    {
+     "q": "A grid-following inverter cannot sustain an island because:",
+     "c": [
+      "It is too small",
+      "It needs an existing voltage to synchronise to",
+      "It has no battery",
+      "It is not certified"
+     ],
+     "a": 1,
+     "why": "It measures the grid's voltage and injects current in step with it. With no reference voltage there is nothing to follow, so something must form the island."
+    },
+    {
+     "q": "Moving a UPS function from low voltage to medium voltage principally:",
+     "c": [
+      "Reduces the equipment's rating",
+      "Replaces duplicated per-building systems with one campus-wide system at the boundary",
+      "Eliminates the need for storage",
+      "Avoids protection studies"
+     ],
+     "a": 1,
+     "why": "Consolidation at the boundary is the point — and it is precisely why the protection, fault-current and bypass questions become far more demanding."
+    },
+    {
+     "q": "Under flexible load interconnection, the campus's on-site generation is valuable because it:",
+     "c": [
+      "Lowers the energy bill",
+      "Makes the curtailment commitment credible so the connection can come earlier",
+      "Eliminates the interconnection study",
+      "Provides ancillary services"
+     ],
+     "a": 1,
+     "why": "The commitment to reduce draw is only meaningful if the site can keep operating while curtailed. The generation is what backs the promise."
+    },
+    {
+     "q": "The single-point-of-failure risk created by inline medium-voltage equipment is managed chiefly by:",
+     "c": [
+      "Redundant metering",
+      "A bypass path rated for full load",
+      "Higher insulation class",
+      "Remote monitoring"
+     ],
+     "a": 1,
+     "why": "Anything in series with the entire campus must be removable from the circuit without dropping it, so a full-capacity bypass is the essential mitigation."
+    }
+   ]
+  }
+ ]
+}
