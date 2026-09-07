@@ -1,0 +1,382 @@
+{
+ "schemaVersion": 2,
+ "slug": "nextera-energy-resources",
+ "title": "NextEra Energy Resources — Technology Study Guide",
+ "lastUpdated": "2026-09-07",
+ "sections": [
+  {
+   "id": "start-here",
+   "kind": "callout",
+   "title": "Start here: two rules from the first course that scale breaks",
+   "read": "A buyer's counterparty is the integrator, and a developer cannot use its own tax credit. Both are true — up to a size.",
+   "tone": "info",
+   "ps": [
+    "The first buyer-side course in this corpus states two things about a storage owner so consistently that they read like physical laws. **Its counterparty is the {{system integrator}}**, not the cell maker, because a battery is bought as a finished warranted system. And **it cannot use its own {{ITC}}**, because a company spending billions on construction has no tax bill large enough to absorb one, so the credit must be sold to somebody who has.",
+    "Both statements are accurate for almost every owner in the market. Both stop being accurate above a certain size, and the megawatt does not change when they do — the buyer does. This guide is about that inversion and what it costs.",
+    "The other courses stay where they are. How a cell is made and what a container does with the heat belong to the cell-maker guides; what an integrator actually adds, and how a twenty-year capacity promise is written and priced, belong to the integrator guides; the fixed price and the date belong to the contractor guides. What is examined here is the point at which a buyer stops being a customer of that supply chain and becomes a participant in it.",
+    "One idea runs through everything below. **Scale converts absolute constraints into variable ones.** A small owner cannot buy a factory slot two years out, cannot absorb a tax credit, and cannot self-insure an interface. A very large one can do all three — at a price, and with obligations that arrive attached."
+   ]
+  },
+  {
+   "id": "becoming-your-own-integrator",
+   "kind": "prose",
+   "title": "Buying cells instead of systems",
+   "read": "Self-integration is not a procurement decision. It is a decision to run an engineering organisation.",
+   "ps": [
+    "What an integrator sells is set out at length in the integrator course and is not repeated here: cells it did not make, packaged with conversion, cooling and control software, and warranted as one assembly. The buyer holds one contract and has, in most cases, no relationship with the cell manufacturer at all.",
+    "A sufficiently large buyer has another option. It can purchase cells or {{DC block}}s directly, buy conversion and balance-of-plant equipment separately, and perform the integration, controls and commissioning itself. The commercial literature calls this **self-integration**, and the reason for it is usually misidentified as margin.",
+    "Margin is the smallest of three reasons. The first real one is **access**. Cell manufacturing capacity is the genuinely scarce layer, and buying through an integrator means your volume is invisible to the factory — it appears as the integrator's demand, is allocated against the integrator's other customers, and gives you no standing when supply is short. Contracting directly makes the volume legible and makes the owner a customer the factory has a reason to protect.",
+    "The second is the **control layer**. A fleet is operated through its {{EMS}}, and the first course's warning about an integrator's insolvency is really a warning about that layer being orphaned. An owner that specifies and holds its own control platform has removed the re-platforming risk rather than mitigating it with escrow clauses.",
+    "The third is that at genuine scale the integration work has to be done by somebody with fleet knowledge anyway. An owner running dozens of near-identical sites already employs the engineers who write the settings, argue the safety case and diagnose the faults. Paying an outside party to do a version of that work, less well informed, becomes hard to justify.",
+    "What is taken on in exchange is the **interface**. When cells, conversion, controls and enclosure come from different suppliers, no single party has warranted the assembly — and the precondition for accepting that is a standing engineering organisation large enough to establish, at its own cost, which supplier caused a given shortfall. Below that threshold self-integration is not a cheaper way to buy a system; it is an uninsured one."
+   ]
+  },
+  {
+   "id": "the-seams",
+   "kind": "table",
+   "title": "Who answers when nobody sold you a system",
+   "intro": "The same six questions arise on every storage plant. What changes with self-integration is not whether they get answered but who is obliged to answer them.",
+   "read": "One counterparty is worth a great deal when something is wrong — and nothing at all if it is thin.",
+   "note": "The last row is the honest summary, and it cuts both ways. The integrator-failure warning in the first course is precisely about a single promise held by the weakest balance sheet in the chain. Self-integration replaces one fragile promise with several strong ones, plus a permanent obligation to work out at your own expense which of them was broken. That is a good trade only for an organisation that can actually do the working out — and an expensive illusion for one that assumes it will never have to.",
+   "cols": [
+    "The question",
+    "Answered by, when you buy a system",
+    "Answered by, when you self-integrate"
+   ],
+   "rows": [
+    [
+     "The plant misses its guaranteed energy",
+     "The integrator, under one capacity commitment and one {{availability guarantee}}",
+     "The owner — after establishing whether the cells, the thermal design, the {{inverter}} or its own control settings are responsible"
+    ],
+    [
+     "A cell batch turns out defective",
+     "The integrator replaces them and pursues its own supplier",
+     "The owner claims directly on the cell maker: a stronger position if it holds the contract and the records, a weaker one if the fault lives at an interface"
+    ],
+    [
+     "Firmware or settings change",
+     "The integrator revalidates and keeps the certification current",
+     "The owner runs its own {{change control}} and must re-establish the {{UL 9540A}} and listing basis for the configuration it altered"
+    ],
+    [
+     "Who is the manufacturer of the assembled unit",
+     "The integrator, which holds the listing for the tested configuration",
+     "The owner — a legal position with product-liability consequences, not merely a technical one"
+    ],
+    [
+     "Spares across twenty years",
+     "The integrator's {{LTSA}} obligation",
+     "The owner's own inventory decision, priced against {{obsolescence}}"
+    ],
+    [
+     "Who is liable when it is genuinely unclear",
+     "One counterparty for the whole system",
+     "Several, each with a defensible account of why it was one of the others"
+    ]
+   ]
+  },
+  {
+   "id": "forward-booking",
+   "kind": "prose",
+   "title": "Buying the factory's calendar instead of the equipment",
+   "read": "At portfolio scale you commit to volume before you know which projects will use it.",
+   "ps": [
+    "The first course makes a point about timing that is easy to read past: equipment is ordered **late** in a project's life, years after the site was acquired, because the order waits on financing, which waits on the permit and the contract. At the scale of a single project that sequence is sensible.",
+    "At the scale of a programme it becomes impossible, because the binding constraint moves. What is scarce is not the equipment but the factory's calendar, and a calendar cannot be bought retrospectively. So a large owner buys the calendar: a {{slot reservation}}, a framework agreement, or a {{take-or-pay}} volume commitment struck years before it knows which sites the megawatt-hours will land on.",
+    "That is a categorically different act, and it is worth naming precisely. The owner is committing money for equipment it has no offtake, no permit and no grid connection for. A procurement decision has become a **position** — one that can be right or wrong on its own terms, independent of any project.",
+    "Two consequences follow immediately. The first is **inventory**. A buyer holding more coverage than its expected build has stock, and stock is working capital tied up and an {{obsolescence}} clock running: cell formats change, and a container specified three years ago may no longer be the one the fleet standardised on. Coverage above one is a deliberate bet, not prudence, and it should be read as one.",
+    "The second is stranger. An owner with surplus book becomes a **seller**, and large developers periodically appear in the market supplying equipment to their own competitors. That is not a business line; it is the correct disposal of a position that has gone longer than the build programme needs.",
+    "The reason to do it anyway is that the alternative is worse than expensive — it is unavailable. When supply is tight the owner without a book cannot buy at any price, and a project that cannot buy equipment does not become dearer, it stops. And because eligibility rules increasingly attach to when equipment was ordered and from whom, a forward book is a compliance position as much as a commercial one: it fixes a supply chain at a moment when the rules were known."
+   ]
+  },
+  {
+   "id": "the-long-lead-list",
+   "kind": "bars",
+   "title": "The battery is usually not the long pole",
+   "intro": "Indicative order-to-delivery times in a tight market for the items that gate a storage or hybrid project. Actual figures move with the cycle; the ranking is what has been stable.",
+   "read": "Two of the slowest items are ordinary grid equipment that everyone else on the network also wants.",
+   "note": "Two lessons sit in this chart. First, the {{long-lead item}}s that decide a storage project's date are mostly not storage equipment — a large transformer and its switchgear are shared with data centres, utility replacement programmes and every other connection on the system, so their queue is not a storage queue and does not shorten when storage demand falls. Second, this is the whole argument for forward booking: an item with a thirty-month lead cannot be ordered after financial close if the plant is meant to run in three years. It has to be bought before anyone knows which project will use it.",
+   "unit": "approximate months from order to delivery when the market is tight",
+   "items": [
+    {
+     "label": "Large power {{transformer}}",
+     "v": 30
+    },
+    {
+     "label": "High-voltage circuit breakers",
+     "v": 20
+    },
+    {
+     "label": "Medium-voltage {{switchgear}}",
+     "v": 16
+    },
+    {
+     "label": "Battery cells and {{DC block}}s",
+     "v": 12
+    },
+    {
+     "label": "Inverters and conversion equipment",
+     "v": 9
+    },
+    {
+     "label": "Protection relays and controls",
+     "v": 6
+    }
+   ]
+  },
+  {
+   "id": "the-regulated-affiliate",
+   "kind": "prose",
+   "title": "What a regulated parent changes about the same megawatt",
+   "read": "Two businesses, two ways of earning, and a wall between them that a regulator maintains.",
+   "ps": [
+    "A number of the largest competitive developers are not standalone companies. They are subsidiaries of a {{holding company}} that also owns a regulated utility, and the group therefore runs two businesses with two entirely different earning mechanisms. One earns an allowed return on prudently invested plant in its {{rate base}}, approved by a commission and recovered from customers. The other earns whatever its markets and contracts pay. The utility course in this corpus covers the first; what matters here is what the pairing does to the second.",
+    "Four things are bought by it. **Credit**: the competitive arm borrows against, and contracts on, an {{investment-grade}} parent, which lowers its cost of debt and lets counterparties face it without demanding collateral — the credit itself becomes a commercial product. **Permanence**: there is no fund life and no exit date, so the group can hold an asset for its whole life and can accept contracted revenue at a lower required return than capital that must be given back by a certain year. **Tax capacity**, which is important enough to take separately below. And **shared scale**: one engineering, procurement, safety and asset-management organisation serves both halves, so the fixed costs are spread over a larger base than either could support alone.",
+    "The cost is **separation**, and it is a real constraint rather than a formality. Regulators police dealings between a regulated utility and its competitive affiliate, because the standing risk is that captive customers end up subsidising a business that competes in an open market. Codes of conduct restrict shared staff and shared information, bar preferential access to the utility's transmission and interconnection knowledge, and require transactions between the two to be at arm's length and often pre-approved. The competitive arm frequently cannot simply sell to its own utility; in many jurisdictions it must bid into the same solicitation as everyone else, and in some it is excluded from bidding at all.",
+    "There is a second cost that is easy to miss and periodically enormous. The **regulated business's risks become the group's**. A disallowed storm cost, an adverse rate case, a wildfire liability or a political shift in one state changes the parent's credit — which is the credit the competitive arm has just spent a decade borrowing and contracting on. The advantage runs in both directions.",
+    "And a third: **internal competition for capital**. The regulated side has a defensible, low-risk, commission-blessed claim on the group's money, because every dollar of prudent plant earns an allowed return for decades. In a constrained year the competitive arm is not competing with other developers for capital — it is competing with a rate base, and the rate base has the better argument."
+   ]
+  },
+  {
+   "id": "using-the-credit-yourself",
+   "kind": "callout",
+   "title": "The tax rule that scale inverts",
+   "read": "An absolute barrier for almost every developer becomes, for a few, a variable one.",
+   "tone": "note",
+   "ps": [
+    "The first course establishes this so firmly it reads as a law: a developer cannot use its own {{ITC}}, because construction spending and depreciation leave it without a tax bill large enough to absorb one. The credit must therefore be sold — through {{tax equity}} or an outright {{tax credit transferability}} sale — at a discount, and with the buyer's eligibility diligence attached as a condition of funding.",
+    "That is true of almost every developer. It is not true of a group with large, steady, taxable income — and the archetype of such a group is a holding company whose regulated utility earns a commission-set return year after year and pays tax on it.",
+    "When the credit can be used internally, four things change at once. The discount to face value disappears. The diligence becomes an internal exercise rather than a negotiation. There is no third-party partnership to structure and later unwind. And the funding stops depending on whether a particular buyer has appetite in a particular quarter — which, in a market where credit buyers are concentrated, is a genuine timing risk rather than a theoretical one.",
+    "The consequence reaches into the equipment decision, which is why it belongs in a technology course at all. When an outside party must be satisfied, eligibility diligence is a gate **someone else operates**, and a supplier who cannot document its provenance is simply unfundable regardless of price or quality. When the credit is absorbed internally, the group is diligencing itself: faster and cheaper, but the discipline is now self-imposed, and if the position is later disallowed the loss lands on the group rather than on a counterparty who accepted it.",
+    "Do not over-read this. Tax capacity is finite and varies year to year, so even groups with very large tax bills sell credits once their own appetite is used up. The lesson is not that scale removes the constraint. It is the general pattern of this guide: **scale turns an absolute barrier into a quantity that can be managed** — and managing it becomes another thing the organisation has to be good at."
+   ]
+  },
+  {
+   "id": "three-owners-one-megawatt",
+   "kind": "table",
+   "title": "One battery, three owners",
+   "intro": "The same 200-megawatt plant, on the same site, under the same contract. Nothing physical differs between the columns; almost everything commercial does.",
+   "read": "What an owner needs the asset to do is decided before the asset is chosen.",
+   "note": "This is a different axis from the dispatch comparison in the first course, and the two are worth keeping apart. There, two owners of one battery earned differently because one operated it better — a skill difference. Here they earn differently because they discount the same cash flows at different rates over different horizons — a capital difference. Both are real and they compound, and the practical consequence is uncomfortable: the cheapest capital and the best trading desk are rarely the same organisation. That mismatch is one honest explanation for why operating assets change hands as often as they do.",
+   "cols": [
+    "Owner",
+    "What it needs the asset to do",
+    "What follows in practice"
+   ],
+   "rows": [
+    [
+     "A closed-end fund",
+     "Return the capital with a target multiple inside a fixed fund life",
+     "The asset must be **sellable by a date**, so contracts, records and as-built documentation are maintained to survive a buyer's diligence from the first day; merchant exposure tends to be contracted or hedged away as the exit approaches, whatever the market is doing"
+    ],
+    [
+     "A founder-owned developer",
+     "Fund the next project",
+     "Assets are sold, or partly sold, once the risk has been taken out of them — because the alternative is to stop originating. The operating platform is retained, because the platform is the part that compounds and the plant is not"
+    ],
+    [
+     "A regulated-utility affiliate",
+     "Earn a return on permanent capital, indefinitely",
+     "It can hold for the asset's whole life, accept contracted revenue at a lower required return, absorb its own tax credits, and borrow on the parent's rating — but it must deal with its own utility at arm's length, and it competes for group capital against a {{rate base}} with a commission-approved claim"
+    ]
+   ]
+  },
+  {
+   "id": "what-size-buys",
+   "kind": "proscons",
+   "title": "The very large owner and the specialist, side by side",
+   "intro": "Scale is usually discussed as an unambiguous good. It is a trade, and several of its advantages are positional rather than earned — which is exactly why they are durable.",
+   "read": "Both positions are viable. They are answers to different questions.",
+   "note": "Read the first card's advantages carefully: being allocated a delivery slot in a shortage is a consequence of size, not of skill, and it persists through indifferent management. That is what makes the position durable and it is also why a specialist's usual route into it is to be acquired rather than to grow into it. The specialist's compensating advantage is genuinely real, though: it can take a position the large owner's own process forbids — and being the firm that did so is frequently what makes it worth buying.",
+   "cards": [
+    {
+     "t": "The very large owner",
+     "adv": [
+      "**Access before price.** When supply is short the large repeat buyer is allocated the slot while others are quoted a number they cannot act on.",
+      "**Volume large enough to underwrite a production line**, which changes what suppliers are willing to build and where they are willing to build it.",
+      "**Central functions spread thin.** Engineering, safety, controls, legal and asset management are roughly fixed in size whether they serve five sites or a hundred.",
+      "**Credit as an operating tool** — a counterparty others will face without demanding collateral, which is a saleable advantage in every contract it signs."
+     ],
+     "dis": [
+      "*It has to keep buying.* A forward book and a standing organisation both assume continuity, so a deliberate pause costs more than it would a smaller firm.",
+      "*It becomes the benchmark.* Its terms set what the market expects, so it has very little room to accept an unusual deal quietly.",
+      "*It is the obvious subject of any rule change*, from eligibility conditions to market-power scrutiny, simply by being the largest identifiable actor.",
+      "*Standardisation stops being optional.* At this size bespoke engineering per project is unaffordable, so flexibility is surrendered by necessity rather than chosen."
+     ]
+    },
+    {
+     "t": "The specialist owner",
+     "adv": [
+      "**Free to take a position the large owner's process forbids** — an unproven supplier, an awkward market, a duration nobody else wants.",
+      "**Decisions are fast**, and one good judgement moves the whole company rather than a rounding error of it.",
+      "**No standing organisation to feed** between projects, so a slow year is survivable rather than structurally expensive.",
+      "**Attractive to acquire** precisely because it has already done the things a large owner's committees would have stopped."
+     ],
+     "dis": [
+      "*Allocated last when supply is tight*, and quoted rather than served.",
+      "*Every fixed cost lands on a small base*, so the engineering, safety and asset-management functions are thinner than the risk actually warrants.",
+      "*Counterparties ask for collateral*, and posting {{credit support}} is a real and continuous cash cost.",
+      "*One bad project is a material share of the company*, so it must pay to hedge risks a large owner can simply absorb."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "kind": "flashcards",
+   "title": "Flashcards",
+   "read": "Self-integration, the forward book, and the parent behind the balance sheet.",
+   "cards": [
+    {
+     "q": "Name the strongest reason a very large owner self-integrates, and why margin is not it.",
+     "a": "Access to cell manufacturing capacity, which is the genuinely scarce layer. Buying through an integrator makes your volume invisible to the factory — it is allocated against the integrator's other customers and gives you no standing in a shortage. Contracting directly makes the volume legible and gives the factory a reason to protect you."
+    },
+    {
+     "q": "What does self-integration do to the risk that the first course warns about — an integrator's insolvency stranding the control layer?",
+     "a": "It removes it rather than mitigating it. An owner that specifies and holds its own {{EMS}} platform is not relying on escrow clauses to recover software it does not control; the control layer was never someone else's to orphan."
+    },
+    {
+     "q": "What is the interface problem, and what is the precondition for accepting it?",
+     "a": "When cells, conversion, controls and enclosures come from different suppliers, no single party has warranted the assembly, so a shortfall has no obvious owner. The precondition is a standing engineering organisation large enough to establish, at its own cost, which supplier caused it. Below that threshold self-integration is not a cheaper system, it is an uninsured one."
+    },
+    {
+     "q": "Why can a large owner not simply order long-lead equipment after financial close, as a single project does?",
+     "a": "Because the scarce thing is the factory's calendar, and a calendar cannot be bought retrospectively. An item with a thirty-month lead cannot be ordered after close if the plant must operate in three years, so the volume is committed before anyone knows which project will consume it."
+    },
+    {
+     "q": "Which items usually gate a storage project's date, and why does that matter?",
+     "a": "Large transformers and their switchgear, not the batteries. They are shared with every other connection on the network — data centres, replacement programmes, new load — so their queue is not a storage queue and does not shorten when storage demand does."
+    },
+    {
+     "q": "How should an inventory coverage ratio above one be read?",
+     "a": "As a deliberate position, not as prudence. Surplus stock is working capital tied up with an {{obsolescence}} clock running against it, and an owner holding more than its build programme needs will sometimes have to dispose of the excess by selling equipment to its own competitors."
+    },
+    {
+     "q": "Give the four things a regulated parent buys for a competitive developer.",
+     "a": "Credit — an {{investment-grade}} rating to borrow and contract on, so counterparties need no collateral. Permanence — no fund life, so assets can be held for their whole life at a lower required return. Tax capacity. And shared scale, because one engineering, safety and asset-management organisation serves both halves of the group."
+    },
+    {
+     "q": "What does the regulator require in exchange, and why?",
+     "a": "Separation. Codes of conduct restrict shared staff and information, bar preferential access to the utility's interconnection and transmission knowledge, and require dealings between the two to be at arm's length and often pre-approved — because the standing risk is that captive customers subsidise a business competing in an open market."
+    },
+    {
+     "q": "Name the two costs of a regulated parent that are usually left out of the description.",
+     "a": "The regulated side's risks become the group's — a disallowed storm cost, an adverse rate case or a wildfire liability changes the credit the competitive arm has been borrowing on. And internal competition for capital: in a constrained year the developer is bidding against a {{rate base}} whose every prudent dollar earns an approved return for decades."
+    },
+    {
+     "q": "Under what circumstances does the rule 'a developer cannot use its own tax credit' stop holding?",
+     "a": "When the group has large, steady taxable income — characteristically a holding company whose regulated utility earns a commission-set return and pays tax on it every year. Then the credit is absorbed internally rather than sold, so the discount, the partnership and the dependence on a buyer's quarterly appetite all disappear."
+    },
+    {
+     "q": "How does absorbing the credit internally change the equipment decision?",
+     "a": "It moves the eligibility gate inside the company. When an outside buyer must be satisfied, a supplier that cannot document its provenance is unfundable at any price. When the credit is used internally the group diligences itself — cheaper and faster, but self-imposed, and a later disallowance lands on the group rather than on a counterparty."
+    },
+    {
+     "q": "Why is 'access before price' described as a positional advantage rather than an earned one?",
+     "a": "Because allocation in a shortage follows from size and repeat volume rather than from skill, so it survives indifferent management. That is what makes it durable — and why a specialist's usual route to it is to be acquired rather than to grow into it."
+    },
+    {
+     "q": "State the general pattern this guide argues for.",
+     "a": "Scale converts absolute constraints into variable ones. A small owner cannot book a factory slot, absorb a tax credit or self-insure an interface at all; a very large one can do all three at a price. The constraint does not vanish — it becomes a quantity the organisation now has to be good at managing."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "kind": "quiz",
+   "title": "Self-test",
+   "read": "Eight questions on buying at scale.",
+   "items": [
+    {
+     "q": "The primary commercial reason a very large owner buys cells rather than complete systems is:",
+     "c": [
+      "To capture the integrator's margin",
+      "To make its volume visible to the factory that allocates scarce capacity",
+      "To reduce shipping cost",
+      "To avoid safety certification"
+     ],
+     "a": 1,
+     "why": "Margin is the smallest of the reasons. Bought through an integrator, an owner's demand is allocated against that integrator's other customers and carries no standing in a shortage."
+    },
+    {
+     "q": "A self-integrated plant misses its guaranteed energy. Compared with a bought system, the owner's difficulty is that:",
+     "c": [
+      "No warranty exists at all",
+      "Responsibility must first be established across several suppliers' interfaces",
+      "The cells cannot be replaced",
+      "Certification is void"
+     ],
+     "a": 1,
+     "why": "Each supplier's warranty is intact and often stronger than an integrator's. What is missing is a single party obliged to answer for the assembly, so the owner pays to determine which interface failed."
+    },
+    {
+     "q": "Why is a forward equipment commitment described as a position rather than a purchase?",
+     "c": [
+      "Because the price is floating",
+      "Because it is made before there is an offtake, permit or connection for the megawatts",
+      "Because it can be cancelled",
+      "Because it is off balance sheet"
+     ],
+     "a": 1,
+     "why": "The owner commits money for equipment with no project attached, so the commitment can be right or wrong on its own terms, independently of any site."
+    },
+    {
+     "q": "Which is the strongest reading of an owner holding equipment coverage well above its expected build?",
+     "c": [
+      "Conservative risk management",
+      "A deliberate bet carrying working-capital and obsolescence cost",
+      "A regulatory requirement",
+      "Evidence of a cancelled pipeline"
+     ],
+     "a": 1,
+     "why": "Surplus stock ties up capital while cell formats and container standards move on. It may be a good bet, but it is a bet — and surplus is sometimes disposed of by selling to competitors."
+    },
+    {
+     "q": "Which item most often sets a storage project's earliest possible operating date?",
+     "c": [
+      "Battery cells",
+      "A large power transformer",
+      "Protection relays",
+      "Inverters"
+     ],
+     "a": 1,
+     "why": "Transformers and their switchgear have the longest leads and are contested by every other connection on the network, so their queue is not a storage queue and does not ease when storage demand falls."
+    },
+    {
+     "q": "A competitive developer owned by a utility holding company wants to sell power to its own affiliated utility. Typically it:",
+     "c": [
+      "Sells at an internally set price",
+      "Must transact at arm's length, often bidding in the same solicitation as everyone else",
+      "Is given first refusal by regulation",
+      "Is exempt from commission review"
+     ],
+     "a": 1,
+     "why": "Codes of conduct exist to stop captive customers subsidising a competitive business, so dealings are held at arm's length, frequently pre-approved, and in some jurisdictions barred outright."
+    },
+    {
+     "q": "The reason a few groups can absorb their own investment tax credits is:",
+     "c": [
+      "A larger project pipeline",
+      "Large, steady taxable income elsewhere in the group",
+      "A different credit rating",
+      "Ownership of manufacturing"
+     ],
+     "a": 1,
+     "why": "A credit only helps a taxpayer that owes tax. A regulated utility earning an approved return year after year generates exactly the stable tax liability a construction-heavy developer lacks."
+    },
+    {
+     "q": "Two owners hold identical batteries under identical contracts and earn different returns. Which explanation belongs to this guide rather than to the dispatch guide?",
+     "c": [
+      "One desk forecasts its node better",
+      "One discounts the same cash flows at a lower rate over a longer horizon",
+      "One cycles more deeply",
+      "One holds more state of charge into the evening"
+     ],
+     "a": 1,
+     "why": "The other three are operating skill. Cost of capital and holding period are properties of the owner's capital, not of how the asset is run — and the two effects compound, because the cheapest capital and the best desk are rarely the same firm."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,387 @@
+{
+ "schemaVersion": 2,
+ "slug": "plus-power",
+ "title": "Plus Power — Technology Study Guide",
+ "lastUpdated": "2026-09-07",
+ "sections": [
+  {
+   "id": "start-here",
+   "kind": "callout",
+   "title": "Start here: the unit of production is the process, not the plant",
+   "read": "A single-project developer produces a project. A portfolio owner produces a way of producing projects.",
+   "tone": "info",
+   "ps": [
+    "The first buyer-side course in this corpus follows **one** project: how it is originated and connected, what its contract obliges, where its money comes from, how it is dispatched, and who has to approve the purchase. This guide opens a second course, and it asks a different question — what changes when the same company does that thirty times.",
+    "The tempting answer is *nothing, only more of it*. That answer is wrong in a specific and useful way. Above a handful of projects the thing a company actually makes is no longer a plant; it is a **repeatable process**, and each plant is that process's output. Almost every difference between an owner-operator and a developer follows from the switch.",
+    "This guide stays out of the other courses. Cells, chemistry and enclosures belong to the cell-maker guides; the box, its controls and its software to the integrator guides; the fixed price, the schedule and the craft labour that builds it to the contractor guides. What is left — and what nobody else in this corpus owns — is the layer between them: **what a fleet standardises, what it cannot, and what only goes wrong once there is more than one site.**",
+    "Carry one test through it. Every practice below is either a way of not repeating work, or a way of surviving the fact that a mistake now repeats too. Those are the two faces of the same decision, and no owner gets one without the other."
+   ]
+  },
+  {
+   "id": "the-repeatable-unit",
+   "kind": "prose",
+   "title": "What actually repeats is the decisions",
+   "read": "Building the same plant twice saves less than making the same decision once.",
+   "ps": [
+    "A **reference design** is a frozen set of answers: enclosure spacing, protection philosophy, foundation type, the cable schedule, the control architecture, the fire-safety package, the commissioning protocol. The plants built from it are not identical — the ground and the grid see to that — but the *arguments* behind them are.",
+    "The obvious benefit is the smallest one. Buying the same equipment repeatedly earns a discount, but engineering a design once and reusing it removes an entire class of work: the studies, the drawings, the settings calculations and the review cycles that a first project pays for in full and a tenth barely pays for at all.",
+    "The larger benefit is **evidentiary**, and it is the one that is easy to miss. A permit application, a lender's technical review, an insurer's underwriting file and a network operator's compliance assessment are all examinations of an argument. When the argument is the same one the reviewer accepted last year — the same {{UL 9540A}} test data, the same hazard-mitigation analysis, the same {{NFPA 855}} layout, the same protection settings — the examination is shorter and its outcome is more predictable. Repetition converts a negotiation into a precedent.",
+    "It also converts a schedule risk into a known quantity. The first project of a design discovers what its reviewers will object to; the fifth already knows, and has the answer written down. That is why an owner's second project in a jurisdiction is usually faster than its first by more than any procurement saving could explain.",
+    "The limit is worth stating plainly, because standardisation programmes fail on it. **Everything that is a decision can be frozen; everything that is a measurement cannot.** Soil bearing, corrosivity, seismic class, ambient temperature, the {{grid code}} duties at this point of connection, the {{network upgrades}} the interconnection study assigned — those are findings about a particular place, and no amount of fleet discipline makes them uniform. A reference design is therefore a boundary drawn between decisions and measurements, and the failure mode is letting a measurement quietly become an assumption."
+   ]
+  },
+  {
+   "id": "frozen-and-free",
+   "kind": "table",
+   "title": "The reference design, layer by layer",
+   "intro": "Read the two right-hand columns as one sentence each: this is what a fleet gets to decide once, and this is what every site still decides for itself.",
+   "read": "A platform with declared variation points, not a photocopy.",
+   "note": "The bottom row is the one most often neglected and the cheapest to fix. Documentation is pure decision — no site can force it to differ — yet it is routinely left to each project team, so a fleet ends up with thirty as-built conventions and no way to compare one site with another. That is not a filing problem; it is what makes fleet-wide analysis impossible later, and it is the subject of the operations guide that closes this course.",
+   "cols": [
+    "Layer of the design",
+    "What a fleet freezes once",
+    "What each site still decides for itself"
+   ],
+   "rows": [
+    [
+     "Power block and enclosures",
+     "Container type, unit count per block, spacing rule, and the pairing of {{inverter}} and {{transformer}}",
+     "Ambient temperature and altitude force {{derating}}, so a hot site needs more installed energy to guarantee the same delivered megawatt-hours"
+    ],
+    [
+     "Protection and controls",
+     "Relay philosophy, {{SCADA}} points list, {{EMS}} configuration, alarm and naming conventions",
+     "The {{grid code}} at the point of connection sets ride-through, reactive capability and frequency duties, and these genuinely differ between networks"
+    ],
+    [
+     "Fire and life safety",
+     "The tested configuration, the {{UL 9540A}} evidence, and the written hazard-mitigation argument",
+     "The {{AHJ}} interprets the code locally — separation, access, water supply and response planning are settled site by site"
+    ],
+    [
+     "Civil works and foundations",
+     "Layout geometry, road widths, drainage philosophy, security arrangement",
+     "The ground answers: bearing capacity, {{soil resistivity}}, corrosivity and seismic class are measured, and {{pile refusal}} is discovered rather than designed"
+    ],
+    [
+     "Grid connection",
+     "The single-line topology and the substation arrangement",
+     "The point of connection, the assigned {{network upgrades}} and the study's operating assumptions belong to that one queue position"
+    ],
+    [
+     "Records and procedures",
+     "{{As-built}} structure, commissioning protocol, spares list, settings register",
+     "Nothing at all — which is exactly why this layer repeats most cleanly and is most often allowed not to"
+    ]
+   ]
+  },
+  {
+   "id": "one-block-five-grids",
+   "kind": "table",
+   "title": "The same block, five different networks",
+   "intro": "Take one 250-megawatt, four-hour block and put it in five places. None of the changes below is a different battery, and none of them appears in a megawatt figure.",
+   "read": "What a network can force you to change is a short list, and it is never the cells.",
+   "note": "The cells, the chemistry and the containers can be identical in all five rows. What changes is the control software, the ratings margin, the auxiliary systems and the evidence file. That is the honest content of the phrase 'the same product' — and it explains where an owner's standardisation effort actually concentrates: on the layers a market is able to force it to change, because those are the ones that must be designed to be changeable.",
+   "cols": [
+    "Where the block sits",
+    "What the network demands that is not universal",
+    "What that changes inside the standard block"
+   ],
+   "rows": [
+    [
+     "A large island system",
+     "There is no fleet of big spinning machines to lean on, so the battery may be required to set frequency itself, survive the loss of the largest unit on the system, and help bring the network back from dead",
+     "{{Grid-forming}} control in place of {{grid-following}}, {{black start}} capability, and a much faster response duty — an inverter-rating and control-software change, not a battery one"
+    ],
+    [
+     "A weak point on a large network",
+     "Low {{system strength}}: converters interact and can destabilise one another, so the operator caps how much inverter-based capacity may connect there",
+     "Tuned and damped control settings, sometimes a synchronous condenser on site, and a commissioning stage in which the operator must accept a validated model of the plant"
+    ],
+    [
+     "A winter-peaking region",
+     "The hours worth being available for are the coldest ones, and the plant is judged on performing in them",
+     "Heating rather than cooling dominates the environmental design, the energy the site spends on itself peaks in winter instead of summer, and cold-start behaviour becomes a tested requirement"
+    ],
+    [
+     "A hot desert site",
+     "Every rating in the catalogue was quoted at a temperature this site exceeds for months of the year",
+     "{{Derating}} governs sizing: more installed energy for the same guaranteed deliverable, and the cooling design becomes a capacity decision rather than a comfort one"
+    ],
+    [
+     "A dense north-eastern site",
+     "Fire-code review is the binding approval and the reviewing official has every reason to be sceptical",
+     "Wider separation or smaller units, more test evidence, and a response plan agreed before approval — all of which change the footprint, and therefore the megawatt-hours the site can hold"
+    ]
+   ]
+  },
+  {
+   "id": "serial-schedule",
+   "kind": "bars",
+   "title": "Where repetition actually saves time",
+   "intro": "Indicative months from notice to proceed to commercial operation for successive builds of one reference design, by one owner, in a market it has already built in. The absolute figures depend on the project; the shape is the point.",
+   "read": "The curve falls quickly, then flattens well above zero — and it resets at a border.",
+   "note": "Two readings, and the second matters more. First, the saving is real but bounded: it comes from work that does not have to be repeated — engineering, the approvals argument, supplier qualification, crew familiarity — and once that is exhausted the schedule is governed by things repetition cannot compress, namely the queue, the network operator's own construction, and the factory's delivery date. Second, the counter **resets** when the owner enters a new jurisdiction. The reviewers are different, the code interpretation is local, the crews are new and the precedent does not travel. An owner that plans growth from its tenth-site schedule systematically under-prices its first project in every new market it enters.",
+   "unit": "approximate months from {{NTP}} to commercial operation",
+   "items": [
+    {
+     "label": "First site of the design",
+     "v": 22
+    },
+    {
+     "label": "Second site",
+     "v": 18
+    },
+    {
+     "label": "Third site",
+     "v": 16
+    },
+    {
+     "label": "Fifth site",
+     "v": 14
+    },
+    {
+     "label": "Tenth site",
+     "v": 13
+    },
+    {
+     "label": "First site in a new market",
+     "v": 21
+    }
+   ]
+  },
+  {
+   "id": "own-the-build-or-buy-it",
+   "kind": "proscons",
+   "title": "Keeping a build organisation, or hiring one every time",
+   "intro": "An owner with a continuous programme can employ the people who deliver it or contract each project out. The contractor guides in this corpus examine this bargain from the builder's chair; this is the same bargain from the owner's.",
+   "read": "The question is not who is cheaper. It is which activities the owner needs to learn from.",
+   "note": "Large owners almost always run a hybrid, and where they draw the line is informative. Keeping commissioning, controls integration and the settings register in-house while contracting civil and electrical works is the common split — because those are precisely the activities that touch the reference design and generate the operating record. The working rule is that an owner keeps what it must learn from and buys what it merely needs done.",
+   "cards": [
+    {
+     "t": "An in-house delivery organisation",
+     "adv": [
+      "**The learning stays.** The people who build the design also own it, so a lesson from site four is in the drawings by site five instead of leaving with a crew.",
+      "**Sequencing across sites becomes the owner's to optimise** — commissioning teams, cranes and specialist labour move between projects on one programme rather than several.",
+      "**No margin is paid on the largest cost line**, and no scope is re-negotiated at every award."
+     ],
+     "dis": [
+      "*It is a fixed cost that has to be fed.* A gap in the pipeline is idle payroll, so the organisation pushes for continuity whether or not the market justifies it.",
+      "*The owner keeps the risk it would otherwise transfer* — there is no fixed price to hold and no {{liquidated damages}} to collect from yourself.",
+      "*Depth is limited.* Specialist trades and peak manpower still come from the market, at the market's price, exactly when everyone else wants them."
+     ]
+    },
+    {
+     "t": "A contracted builder for each project",
+     "adv": [
+      "**A fixed price and a fixed date**, with damages attached — the risk transfer that the contractor course in this corpus is entirely about.",
+      "**Capacity flexes with the programme.** A slow year costs the owner nothing and a fast one is somebody else's hiring problem.",
+      "**Access to a builder's own scale** in labour, plant and buying power, which no single owner's programme can match."
+     ],
+     "dis": [
+      "*The learning leaves with the crew* unless the same builder is used repeatedly — at which point the relationship is doing the work that an in-house team would have done.",
+      "*Every award re-opens scope*, and the seams between separately contracted packages are where cost and delay actually live.",
+      "*A builder's capacity is a stock, not a tap.* In a busy market it is allocated to whoever booked it earliest, so an owner without a standing relationship queues."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-concurrency-limit",
+   "kind": "prose",
+   "title": "The real cap on how fast a fleet can grow",
+   "read": "Not capital. The number of things that can be finishing at the same time.",
+   "ps": [
+    "Ask what limits a fleet's growth rate and most answers are financial. In practice the binding constraint is usually **concurrency** — how many projects the organisation can carry through their final months at once — and it binds long before money does.",
+    "The reason is that a project's last phase consumes resources that every other project wants in the same week. Commissioning engineers are a small, specialised group. So are the network operator's witnessing staff, the {{AHJ}}'s inspectors, the interconnecting utility's energisation crews, and the owner's own signing engineers. Earlier phases can run in parallel almost indefinitely; the end of a project cannot.",
+    "A schedule can therefore be compressed only until it reaches a resource shared with the rest of the fleet. Two plants completing in the same month need two commissioning teams, or one of them waits — and a plant that waits is a finished asset earning nothing.",
+    "It is worse than idle capital, because several clocks have already started. Equipment warranties commonly begin at delivery, or at a fixed period after delivery, rather than at commercial operation. A plant standing complete but unenergised is spending guarantee life it will never earn revenue against, and by the time it starts work its {{availability guarantee}} may have months less to run than the owner assumed. A scheduling problem has quietly become a balance-sheet one.",
+    "So a well-run programme is planned in **energisation slots** — how many completions the organisation can absorb per quarter — rather than in ambition. An owner that has signed more offtake than it can commission is not being aggressive; it is over-booked, and the penalty clauses in those contracts do not care which. Some of the limit can be bought back with more teams and contracted commissioning capacity; the part that sits inside the network operator and the local authority cannot be bought at any price, which is why it is the part that has to be planned around."
+   ]
+  },
+  {
+   "id": "pipeline-as-options",
+   "kind": "prose",
+   "title": "A pipeline is a portfolio of options, and the discipline is killing them",
+   "read": "Holding more positions than you intend to build is correct. Holding them for too long is not.",
+   "ps": [
+    "What a pipeline figure counts, and how badly it can mislead, is read elsewhere in this corpus. The question here is different and more practical: given that an owner holds many early positions, what should it actually do with them?",
+    "Treat each position as an **option**. A land option, a dated place in the {{interconnection queue}}, an early permit — each costs a little now and confers a right, not an obligation, to build later. The value of an option comes from *uncertainty*, not from expectation: it is worth holding precisely because nobody yet knows what the market, the rules or the connection study will say.",
+    "That reframing explains a behaviour that looks like padding. A rational owner holds substantially more positions than it intends to build, and the right multiple is set by how uncertain the outcomes are rather than by optimism. In a market where three-quarters of study outcomes are unaffordable, holding four positions per intended plant is arithmetic, not exaggeration.",
+    "It also explains the timing. The scarcest input is not money but **queue time**: a position takes years to mature and is valuable because it is dated. Positions must therefore be acquired long before there is enough information to value them, which is another way of saying that some of them are always going to be wrong.",
+    "What separates a portfolio from a hoard is the **kill decision**. An option that will not be exercised still consumes deposits, study payments, land payments and — the resource that actually binds — the attention of the small number of people who can move a project forward. Killing early returns those people to positions that can still be built. Owners that are good at this describe it as unsentimental; what it really is, is recognising that development staff are the fleet's true bottleneck and refusing to spend them on options that have already failed.",
+    "One warning about the obvious metric. A high conversion rate from position to built plant is not by itself evidence of good judgement — it is equally consistent with an owner that only originates safe, expensive, late-stage sites and has therefore stopped buying optionality at all. The measure worth watching is whether kills happen **early**, because an option abandoned in year one cost a deposit and an option abandoned in year four cost four years of a developer's life."
+   ]
+  },
+  {
+   "id": "the-replicated-defect",
+   "kind": "callout",
+   "title": "The failure that only exists above one project",
+   "read": "If the design is wrong, standardisation has already installed the mistake everywhere.",
+   "tone": "warn",
+   "ps": [
+    "Every argument for a reference design is also an argument for this risk. A defect in a component batch, a firmware release, a torque specification or a protection setting is present at every site built to the same drawing, and it got there through exactly the discipline that made the fleet cheap to build.",
+    "Two features make it worse than the same defect scattered through a mixed fleet. The first is **correlation**: identical sites do not fail independently, they fail on the same trigger — a heatwave, a particular fault sequence, a firmware push — so the losses arrive together instead of averaging out over years. The second is **contractual**: identical sites tend to sit under similar contracts with similar availability obligations, so the {{liquidated damages}} arrive together too, in the season the assets were most needed.",
+    "The defences are unglamorous and they are the reason mature fleets are obsessive about records. Rigorous {{change control}}, so it is known exactly which sites carry which hardware revision and which firmware build. Staged rollout of settings and software changes rather than a fleet-wide push. A genuine {{root cause analysis}} capability rather than a repair capability — the difference being whether an investigation is allowed to end in a design change. And enough spare position that a batch recall slows the fleet instead of stopping it.",
+    "There is an uncomfortable corollary. Perfect standardisation maximises the benefit **and** the correlation, and the only structural hedge is deliberate variety: a second supplier, a second control platform, a second design revision held in service. That costs real money in engineering, spares and training.",
+    "Note carefully that this is **not** the argument for supplier diversity that the contracting guide in this course makes. That one is about counterparty failure, price discovery and eligibility rules — commercial risks attached to a company. This one is about a technical fault mode being common to every asset at once, and it would still apply if the supplier were immortal. An owner can be persuaded by one argument and unmoved by the other, which is why fleets that concentrate procurement often still insist on a second design lineage somewhere in the estate."
+   ]
+  },
+  {
+   "id": "drill",
+   "kind": "flashcards",
+   "title": "Flashcards",
+   "read": "The reference design, the concurrency limit, and the mistake that repeats.",
+   "cards": [
+    {
+     "q": "What does a reference design actually save, and what does it not?",
+     "a": "It saves the work of making the same decisions again — engineering, settings, layouts, the safety argument, the commissioning protocol — and it saves review time because examiners are re-examining an argument they already accepted. It does not save anything that depends on a measurement of the site: soil, seismic class, ambient temperature, the {{grid code}} at that connection, or the {{network upgrades}} the study assigned."
+    },
+    {
+     "q": "Why is repetition worth more in permitting and lending than in procurement?",
+     "a": "Because a permit, a technical review and an insurance file are all examinations of an argument rather than purchases of a thing. The second time a reviewer sees the same {{UL 9540A}} evidence and the same {{NFPA 855}} layout, the examination is shorter and its outcome more predictable. Procurement discounts are real but small next to converting a negotiation into a precedent."
+    },
+    {
+     "q": "Give the rule that decides what a fleet can freeze.",
+     "a": "Everything that is a decision can be frozen; everything that is a measurement cannot. The failure mode is letting a measurement quietly become an assumption — accepting a site on the belief that its ground or its grid resembles the last one's."
+    },
+    {
+     "q": "An identical block is built on a large island system. What has to change, and what does not?",
+     "a": "The control mode and ratings change — {{grid-forming}} rather than {{grid-following}}, {{black start}} capability, and a much faster response duty, because there is no fleet of large spinning machines to lean on. The cells, chemistry and containers do not have to change at all."
+    },
+    {
+     "q": "Why does an owner's build-time curve flatten instead of continuing to fall?",
+     "a": "Because the savings come from work that need not be repeated, and that is a finite stock. Once engineering, approvals precedent, supplier qualification and crew familiarity are exhausted, the remaining schedule belongs to the queue, the utility's own construction and the factory's delivery date — none of which repetition compresses."
+    },
+    {
+     "q": "What resets that curve, and why does it matter commercially?",
+     "a": "Crossing into a new jurisdiction. Reviewers, code interpretation and crews are all local, and compliance precedent does not travel. An owner that budgets a new market from its tenth-site schedule will under-price its first project there, systematically."
+    },
+    {
+     "q": "Why is concurrency, rather than capital, usually the cap on a fleet's growth?",
+     "a": "Because a project's final phase consumes resources shared with every other project — commissioning engineers, network-operator witnesses, inspectors, energisation crews. Early phases parallelise almost without limit; completions do not, so the fleet grows at the rate it can absorb energisations."
+    },
+    {
+     "q": "Why is a finished but unenergised plant worse than idle capital?",
+     "a": "Because clocks have already started. Equipment warranties commonly run from delivery or a fixed period after it rather than from commercial operation, so the plant spends guarantee life it will never earn revenue against, and begins service with less {{availability guarantee}} remaining than the owner assumed."
+    },
+    {
+     "q": "Why does a rational owner hold far more development positions than it intends to build?",
+     "a": "Because each position is an option whose value comes from uncertainty. Positions must be acquired years before the study, the rules or the market can be known, so a share of them will always fail — and the correct multiple is set by how uncertain those outcomes are, not by optimism."
+    },
+    {
+     "q": "What separates a pipeline from a hoard?",
+     "a": "Killing options early. An unexercised position keeps consuming deposits, study and land payments and — the real constraint — the attention of the small number of people who can advance a project. An option killed in year one cost a deposit; one killed in year four cost four years of a developer's working life."
+    },
+    {
+     "q": "Why is a high conversion rate not automatically a good sign?",
+     "a": "Because it is equally consistent with an owner that only originates safe, late-stage, expensive positions and has stopped buying optionality altogether. Whether kills happen early is the more informative measure."
+    },
+    {
+     "q": "State the replicated-defect problem, and why it is not the same as supplier-concentration risk.",
+     "a": "A standardised fleet installs any design error at every site, and identical sites fail on the same trigger and under similar availability obligations, so technical losses and {{liquidated damages}} arrive together. Supplier concentration is a commercial risk attached to a company — its solvency, its pricing, its eligibility. The replicated defect is a technical fault mode common to every asset, and it would still exist if the supplier were perfectly sound."
+    },
+    {
+     "q": "Name the four standard defences against a fleet-wide fault.",
+     "a": "Strict {{change control}} so it is known which sites carry which revision; staged rollout of firmware and settings rather than fleet-wide pushes; a real {{root cause analysis}} capability, meaning investigations that are allowed to end in a design change; and enough spares position that a batch recall slows the fleet rather than stopping it."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "kind": "quiz",
+   "title": "Self-test",
+   "read": "Eight questions on building the same thing many times.",
+   "items": [
+    {
+     "q": "Which of these can a reference design legitimately freeze across a fleet?",
+     "c": [
+      "The foundation type required by the ground",
+      "The relay and control philosophy",
+      "The assigned network upgrades",
+      "The local fire official's interpretation"
+     ],
+     "a": 1,
+     "why": "A control philosophy is a decision, so it can be made once. Foundations follow measured ground conditions, upgrades follow one queue position's study, and code interpretation belongs to the {{AHJ}}. Decisions freeze; measurements do not."
+    },
+    {
+     "q": "The largest benefit of building the same design repeatedly is usually:",
+     "c": [
+      "Volume discounts on equipment",
+      "Shorter and more predictable review by permitting officials, lenders and insurers",
+      "Lower cost of debt",
+      "Reduced land cost"
+     ],
+     "a": 1,
+     "why": "Permits, technical reviews and underwriting files are examinations of an argument. Re-presenting an accepted argument shortens the examination and narrows the range of outcomes, which is worth far more than a procurement discount."
+    },
+    {
+     "q": "A standard battery block is deployed on a large island system. The change most likely required is:",
+     "c": [
+      "A different cell chemistry",
+      "Grid-forming control with black-start capability",
+      "A larger enclosure",
+      "A longer duration"
+     ],
+     "a": 1,
+     "why": "An island has no fleet of large synchronous machines to set frequency, so the battery may have to set it — and help restart the system. That is an inverter-rating and control-software change, not a change to the cells."
+    },
+    {
+     "q": "Why does an owner's build schedule stop improving after roughly the fifth identical project?",
+     "c": [
+      "Crews reach a physical speed limit",
+      "The non-repeating stock of work has been used up",
+      "Equipment costs rise",
+      "Regulators intervene"
+     ],
+     "a": 1,
+     "why": "The savings come from work that need not be repeated. Once engineering, precedent, qualification and crew familiarity are exhausted, the remaining duration belongs to the queue, the utility's construction and the factory calendar."
+    },
+    {
+     "q": "A plant finishes construction three months before an energisation slot is available. The most under-appreciated cost is:",
+     "c": [
+      "Site security",
+      "Warranty and guarantee life consumed before revenue starts",
+      "Insurance premiums",
+      "Interest on construction debt"
+     ],
+     "a": 1,
+     "why": "Equipment warranties commonly start at delivery or a fixed period after it. A completed plant waiting to be energised is spending guarantee life it will never earn against, so it enters service with less protection remaining than assumed."
+    },
+    {
+     "q": "An owner holds four development positions for every plant it expects to build. This is best read as:",
+     "c": [
+      "Deliberate exaggeration of the pipeline",
+      "Rational option-holding against uncertain outcomes",
+      "Evidence of poor site selection",
+      "A financing requirement"
+     ],
+     "a": 1,
+     "why": "Each position is an option acquired before the study, the rules or the market can be known. Where most outcomes are unaffordable, holding several per intended plant is arithmetic rather than optimism."
+    },
+    {
+     "q": "Which measure best distinguishes a disciplined pipeline from a hoard?",
+     "c": [
+      "The total gigawatts held",
+      "The conversion rate from position to plant",
+      "How early failing positions are killed",
+      "The number of jurisdictions covered"
+     ],
+     "a": 2,
+     "why": "A high conversion rate can simply mean the owner stopped originating anything uncertain. Because staff attention is the binding resource, what matters is how quickly a dead option stops consuming it."
+    },
+    {
+     "q": "Which risk exists only because a fleet is standardised?",
+     "c": [
+      "Supplier insolvency",
+      "A single design fault present at every site simultaneously",
+      "Interconnection delay",
+      "Offtaker credit failure"
+     ],
+     "a": 1,
+     "why": "The other three afflict a single project just as readily. Only a common design installs the same fault everywhere, so that identical sites fail on the same trigger and their availability damages fall due together."
+    }
+   ]
+  }
+ ]
+}

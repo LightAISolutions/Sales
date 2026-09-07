@@ -1,0 +1,409 @@
+{
+ "schemaVersion": 2,
+ "slug": "lightsource-bp",
+ "title": "Lightsource bp — Technology Study Guide",
+ "lastUpdated": "2026-09-07",
+ "sections": [
+  {
+   "id": "start-here",
+   "kind": "callout",
+   "title": "Start here: the megawatt is the only part that is the same",
+   "read": "Everything that turns a megawatt into money is decided nationally.",
+   "tone": "info",
+   "ps": [
+    "The first two guides of this course ask what changes when one company builds many projects and when it buys at very large scale. This one asks what changes when the projects are in different countries — and the answer is more than it first appears.",
+    "The first buyer-side course already compares five wholesale markets, and that comparison is a real one. But it is a comparison of **revenue mechanisms inside one legal system, one currency and one set of institutions**. Crossing a border changes the money, the law, the permitting authority, the land tenure, the network rulebook and the compliance regime as well, and each of those can be worth more than the market design.",
+    "So this guide takes the parts of a project that are set by the country rather than by the technology: how a state pays for a megawatt-hour, how a national auction differs from a utility's solicitation, what a currency mismatch does over twenty years, what a network's rulebook can demand, and what a developer can actually carry with it when it enters somewhere new.",
+    "Hold one question through all of it: **is this difference a decision I can price, or a variance I cannot?** Almost every practical judgement about international development turns out to be that question rather than a judgement about which country is better."
+   ]
+  },
+  {
+   "id": "how-a-country-pays",
+   "kind": "table",
+   "title": "Six ways a state can pay for a megawatt-hour",
+   "intro": "Most markets run two or three of these at once, and a single project can sit under more than one. Read the fourth column as the behaviour each instrument actually produces, which is rarely the behaviour it was designed to produce.",
+   "read": "Each instrument fixes something and leaves something floating. What it leaves floating is what gets managed.",
+   "note": "The financing consequence is the fourth column read backwards. The cheapest debt attaches to the instruments that fix the most, so a country that moves from a certificate scheme to a contract for difference lowers the cost of its renewable energy without anyone building a better plant. That is the mechanism by which **policy design rather than engineering sets what a country's electricity costs** — and it is also why the same developer, with the same equipment, reports very different returns in two markets and is telling the truth in both.",
+   "cols": [
+    "Instrument",
+    "What it fixes",
+    "What it leaves floating",
+    "What it therefore rewards"
+   ],
+   "rows": [
+    [
+     "{{Contract for difference}}, two-way",
+     "A strike price per megawatt-hour for a fixed term — the counterparty pays the shortfall and reclaims the excess",
+     "Volume: you are paid only for what you actually generate and sell",
+     "Predictable output and cheap capital. It removes price risk almost entirely and leaves production risk, so it rewards a good resource assessment over a good trading desk"
+    ],
+    [
+     "Fixed {{feed-in tariff}}",
+     "The price and, usually, an obligation on somebody to take the output",
+     "Very little — which is why it starts markets and is then withdrawn",
+     "Speed. It rewards building quickly and rewards responding to the system not at all"
+    ],
+    [
+     "{{Feed-in premium}}",
+     "A top-up paid above whatever the market pays",
+     "The market price itself",
+     "Generating when the system wants power, because the premium adds to a price signal instead of replacing it"
+    ],
+    [
+     "{{Green certificate}} or quota obligation",
+     "A separate tradeable proof that the megawatt-hour was renewable",
+     "Both the power price and the certificate price",
+     "Nothing in particular. Two floating prices is the hardest combination to finance, and schemes built this way are routinely replaced"
+    ],
+    [
+     "{{Corporate PPA}}",
+     "A price with a private buyer, often for a shaped or fixed volume",
+     "The buyer's credit, and the gap between what you produce and what you promised to deliver",
+     "Matching a buyer's consumption profile, and being able to carry the shape risk that matching creates"
+    ],
+    [
+     "Merchant",
+     "Nothing",
+     "Everything",
+     "Location and flexibility — the same qualities the merchant guides in the first course examine at length"
+    ]
+   ]
+  },
+  {
+   "id": "the-national-auction",
+   "kind": "prose",
+   "title": "A national auction is not a utility solicitation",
+   "read": "One is a purchase that must be justified. The other is a rulebook and a clearing price.",
+   "ps": [
+    "The regulated-procurement guide in the first course describes a US utility solicitation: a resource plan litigated in public, a scored bid, a negotiated contract, and a commission that must approve it because customers will pay for it. A national auction is a different institution answering a different question, and a developer that treats them as the same will misjudge both.",
+    "In an auction, a state or its agency buys a defined quantity of capability at the lowest price it can, awards contracts of a set length, and publishes the result. There is no utility in the middle and no prudence review. There is a rulebook, a sealed bid and a clearing outcome — and four consequences that follow directly.",
+    "**The bid is a price, not a proposal.** Non-price criteria are thin or absent, so the winner is simply whoever bid lowest among the eligible. The elaborate deliverability, credit and safety scoring that decides US shortlists is replaced by a pass/fail gate.",
+    "**Prequalification replaces scoring, and it is paid for in advance.** Bidders are usually required to demonstrate site control, planning consent and a connection offer *before* they may bid. That means the money that makes a project eligible is spent before anyone knows whether it will win — which shifts development risk earlier and rewards developers who can afford to lose that spend repeatedly.",
+    "**Security and delivery penalties turn a win into an obligation.** Winners post a {{bid bond}} or equivalent and must deliver by a stated date or forfeit it, and often lose the contract as well. This is what suppresses speculative bidding, and it is why an auction result is a firmer indicator of what will be built than a pipeline figure ever is.",
+    "**Indexation is frequently worth more than the headline price.** Whether the strike price is uprated with inflation, against which index, and from which base year, changes the real value of a fifteen-year contract enormously. Two bids a few per cent apart on headline price can differ by far more in present value, and comparing awarded auction prices across countries without checking their indexation is one of the commonest errors in reading this industry.",
+    "Finally, a structural feature worth naming because it recurs everywhere: the **winner's curse**. When every bidder is estimating the same underlying costs and revenues, the winner is disproportionately whoever estimated most optimistically. It is a property of the auction format, not a mistake by an individual firm, and it is why rounds of very low clearing prices are periodically followed by non-delivery. The remedy is not better forecasting; it is penalties large enough to make optimism expensive. The opposite failure is just as common — an auction whose terms are unattractive simply goes undersubscribed, because the honest bidders decline to bid at all."
+   ]
+  },
+  {
+   "id": "currency-and-indexation",
+   "kind": "prose",
+   "title": "A project's money is not one money",
+   "read": "Equipment is bought once in a hard currency. Revenue arrives for twenty years in a local one.",
+   "ps": [
+    "A cross-border project has revenue in one currency, equipment priced in another and debt in a third, and the mismatch is not a detail — it is frequently the largest single risk in the investment case and the one least visible in a technical review.",
+    "The exposures are asymmetric **in time**, which is what makes them hard. Equipment is bought once, at the start, in a hard currency, because the supply chain prices in dollars, euros or renminbi wherever the plant is going. Revenue arrives across two decades in the local currency of whoever consumes the electricity. So a devaluation before construction raises the capital cost of a project already committed to a fixed strike price, while the same devaluation after construction leaves the plant physically untouched and destroys its value in the lenders' currency.",
+    "Hedging does not solve it, and the reason is worth understanding rather than asserting. Liquid forward cover exists for a few years in most currencies and for rather longer in a handful; it does not exist for twenty years in the currencies where new generation is most needed. So the long tail is **unhedgeable and therefore priced** — through a higher required return, through hard-currency indexation clauses in the offtake, or by borrowing in the revenue currency and accepting the higher local interest rate that goes with it.",
+    "That last option is the honest one and it is underused, because it makes the cost of the risk visible immediately instead of deferring it. Borrowing in local currency at a high nominal rate against local-currency revenue removes the mismatch; borrowing cheaply in dollars against the same revenue looks better until it does not. The history of infrastructure finance in emerging markets is largely a history of that second choice.",
+    "**Indexation** is the negotiated middle. A contract indexed to a local consumer-price index protects against general inflation but not against a currency move; one indexed to a foreign currency protects the investor and moves the risk to the offtaker — which is exactly why buyers resist it. What is actually being negotiated is who is the cheaper bearer of the risk, and the answer sometimes genuinely is the offtaker, because a state-owned utility selling power domestically may have a natural hedge that the investor does not.",
+    "There is a feedback into engineering that a technologist should expect. Where revenue is local and unhedged, a developer will pay more for equipment that can be sourced or serviced regionally, and will prefer a design with lower total capital exposure over one with the best specification. It is not sentiment about local content — it is shortening a mismatch, and it produces equipment choices that look irrational until the currency column is on the page."
+   ]
+  },
+  {
+   "id": "the-network-rulebook",
+   "kind": "table",
+   "title": "What a network can decide about your plant",
+   "intro": "Three institutions stand between a good site and a good project — the connection regime, the congestion regime and the compliance regime — and none of them is the market. All three vary far more across borders than the technology does.",
+   "read": "Two of these rows change revenue by several per cent without anything happening at the plant.",
+   "note": "The second and third rows are the ones that surprise people, and they share three properties: each changes revenue without changing anything physical, each is set administratively rather than by a market, and each can be revised during the asset's life. An investment case built on a price forecast has modelled neither. The last row is the reason a certified product is not automatically a permitted one — a distinction the certification guide in the integrator course develops at length.",
+   "cols": [
+    "What varies by country",
+    "The range actually seen",
+    "What it does to a project"
+   ],
+   "rows": [
+    [
+     "How connection capacity is allocated",
+     "A first-come queue by application date; a **first-ready** regime where position goes to whoever is furthest advanced; auctioned connection capacity; or direct allocation under the operator's own network plan",
+     "Decides whether an early position is a tradeable asset or merely a place in a line that a better-prepared project can overtake. It also decides whether hoarding positions is a viable strategy at all"
+    ],
+    [
+     "Whether {{curtailment}} is paid for",
+     "Fully compensated; compensated only above a threshold; capped at a set number of hours a year; or wholly uncompensated",
+     "Determines whether network congestion is the owner's revenue risk or the operator's problem. Uncompensated curtailment at a constrained node can remove a large share of annual output and appears nowhere in a price forecast"
+    ],
+    [
+     "How location and losses are settled",
+     "One national price; zonal prices; nodal prices; or a per-connection factor applied to output — an Australian {{marginal loss factor}} scales every megawatt-hour a plant sells and is recalculated annually",
+     "A revision to a loss factor can move revenue by several per cent overnight, in a direction the owner does not control and cannot hedge"
+    ],
+    [
+     "What the {{grid code}} demands",
+     "Ride-through envelopes, reactive capability and frequency duties everywhere; in weak networks, {{system strength}} remediation charged to the connecting party",
+     "Sets inverter ratings and control software, and can require plant — filters, synchronous condensers, additional protection — that the original business case never contemplated"
+    ],
+    [
+     "What evidence compliance requires",
+     "Some regimes accept international test reports; others require national {{type approval}}, and some require witnessed testing on the energised plant before it may operate commercially",
+     "Where a foreign test report is not recognised the testing is simply repeated, which is a large part of why compliance work does not travel and why finished plants sometimes wait months for permission to run"
+    ]
+   ]
+  },
+  {
+   "id": "land-and-consent",
+   "kind": "prose",
+   "title": "Land you can hold, and permission you can keep",
+   "read": "The question is not how long consent takes. It is how wide the range of possible answers is.",
+   "ps": [
+    "The first course treats siting as a US problem — setbacks, county ordinances, fire-code conditions — and that treatment is not repeated here. Internationally the variable is coarser and more structural: what kind of interest in land can be acquired at all, and how securely a permission, once granted, stays granted.",
+    "**Tenure** comes in incompatible forms. Freehold purchase, long leasehold, a state concession over public land, and customary or communal tenure administered by a body that is not a land registry. Each supports a different length of commitment, and a lease shorter than the plant's operating life is not a technicality — it is a residual-value risk that has to be priced or renegotiated, usually from a weak position because the plant is already built.",
+    "**Who decides** varies just as much: a national permitting authority, a regional government, a municipality, or a court. Some regimes impose a statutory deadline on the decision-maker; many do not, and where none exists the honest planning assumption is not an average but a distribution.",
+    "The variable that dominates a schedule, though, is the **appeal right** — who may challenge a granted consent, on what grounds, and for how long afterwards. A jurisdiction where any interested party can bring a legal challenge after approval has an effective timeline much longer than its statutory one, and, worse, an unquantifiable one. A fast regime with a wide appeal right can be harder to finance than a slow regime with none.",
+    "Two further items set hard floors that money cannot lift. **Environmental assessment** in many regimes requires a full season — sometimes a full year — of ecological survey, so a project that missed the survey window has lost a year no matter what it spends. And **benefit-sharing** is mandated in some countries as a percentage of revenue, a community ownership share or a fixed fund, while elsewhere it is voluntary and therefore negotiated project by project. Counter-intuitively, the mandated version is the easier one to live with, because it is knowable in advance.",
+    "The generalisation that survives all of this: **consent risk is about variance, not difficulty.** A slow but certain regime is financeable at a predictable cost; a fast but contestable one is not. That is why experienced developers will pay more for a position in a jurisdiction with a reputation for taking a long time and then honouring the outcome — and why 'how long does it take there' is a much less useful question than 'how often does it not go as expected'."
+   ]
+  },
+  {
+   "id": "time-to-energisation",
+   "kind": "bars",
+   "title": "The same project, five regulatory archetypes",
+   "intro": "Indicative total elapsed time from securing a site to first export for one solar-plus-storage project, by the kind of regime it sits in rather than by country. The shape is the lesson; the arithmetic is not.",
+   "read": "The two longest bars are long for opposite reasons, and only one of them can be financed.",
+   "note": "That opposition is the whole management problem. A congested network is a **known** wait — long, but datable, and therefore financeable, tradeable and even purchasable from someone who queued earlier. An appealable consent is an **unknown** wait, and an unknown wait cannot be sold to a lender at any length. The last bar is the international version of a point the regulated-procurement guide makes about being the first storage project a market has ever processed: the cost is paid in schedule, and what it buys is precedent and relationships that the second project inherits.",
+   "unit": "approximate months from site control to first export",
+   "items": [
+    {
+     "label": "Mature market, uncongested network, statutory consent deadline",
+     "v": 36
+    },
+    {
+     "label": "Auction market, prequalification required before bidding",
+     "v": 48
+    },
+    {
+     "label": "Mature market, congested network, no firm connection date",
+     "v": 66
+    },
+    {
+     "label": "Regime with an open appeal right and no decision deadline",
+     "v": 72
+    },
+    {
+     "label": "New market, first project of its kind",
+     "v": 84
+    }
+   ]
+  },
+  {
+   "id": "portable-and-not",
+   "kind": "proscons",
+   "title": "What a developer can carry across a border",
+   "intro": "Entering a new country is either an expansion of an existing company or the founding of a new one, and which it is depends entirely on how these two lists divide.",
+   "read": "Everything portable was paid for once. Everything non-portable is earned by doing projects.",
+   "note": "The asymmetry between the two cards is the entire international expansion decision. What travels is **capital-like** — bought once and reusable anywhere. What does not travel is **time-like** — accumulated by doing projects, and not compressible with money beyond a point. That is why entry into a new market is usually accomplished by acquiring or partnering with a local developer, and why such an acquisition looks expensive against the assets on its balance sheet: the thing being purchased is the right-hand card, and it has no line in the accounts.",
+   "cards": [
+    {
+     "t": "Travels with you",
+     "adv": [
+      "**The reference design and the engineering standards.** The design travels intact; only its declared variation points are re-set by the local rulebook.",
+      "**Financial structuring capability.** Project finance is the most international part of this business — the structures, and frequently the lenders and advisers themselves, are the same firms in every market.",
+      "**Supplier relationships and buying power.** A global order book earns allocation wherever it is placed, which is one of the few advantages that genuinely compounds across borders.",
+      "**The process itself** — how to run a funnel, what to kill and when, how to assemble a bid, what a good site looks like before anyone has surveyed it."
+     ],
+     "dis": [
+      "*None of it is sufficient alone.* Every item here needs a local counterpart before it can be used at all, so a company that has only this card has capability without the ability to deploy it."
+     ]
+    },
+    {
+     "t": "Has to be rebuilt",
+     "adv": [
+      "*The list is finite and mostly knowable.* Almost all of it can be bought, hired or partnered for, and the cost can be estimated before committing — which is more than can be said for most risks in this industry."
+     ],
+     "dis": [
+      "*Consent and network knowledge* — which body decides what, what evidence satisfies it, and how long each step truly takes. This is the same procedural asset the regulated-procurement guide identifies, and it is jurisdictional by definition.",
+      "*{{Type approval}} and compliance evidence*, because where a foreign test report is not recognised the testing is simply repeated.",
+      "*Land relationships* — the agents, the tenure conventions, and the local expectation of what a landowner and a community are owed.",
+      "*A local delivery record.* Credit and track record do not transfer, so the first project is financed on the parent's name rather than the platform's, and the second is the first one financed on its own.",
+      "*Language, legal form and dispute forum*, which together decide what a contract actually means on the day somebody tests it."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "diversification-and-its-limits",
+   "kind": "callout",
+   "title": "What a multi-country portfolio is actually diversified against",
+   "read": "Effective against politics. Weak against finance. Useless against a design fault.",
+   "tone": "note",
+   "ps": [
+    "A portfolio spread across countries is genuinely diversified in a way a portfolio spread across states is not. Support schemes, currencies, weather, consent regimes and political cycles are set by different governments answering to different electorates, and they are largely uncorrelated. That is a real reduction in risk, and — unusually in this industry — it is not paid for with a give-up in return.",
+    "Three shocks are nevertheless common to the whole portfolio, and they undo more of the benefit than owners generally allow for.",
+    "**The supply chain is global.** Cell, module, transformer and switchgear availability and price move together everywhere, because the factories serving twenty countries are the same factories. A shortage is not diversifiable by geography; it is the same shortage in every column of the portfolio at once.",
+    "**The cost of capital is global.** A rise in benchmark interest rates repriced every renewable asset on earth inside the same eighteen months. Note the direction of this one carefully, because it is counter-intuitive: a portfolio of long fixed-price contracts is **more** exposed to rate moves than a merchant one, not less. A fixed strike price for fifteen years is a bond, and bonds reprice with rates — so the instrument that removes market risk concentrates interest-rate risk in its place.",
+    "**Technology risk is common.** A fleet standardised across borders carries the replicated-defect exposure that the first guide of this course describes, and a national border does not interrupt a firmware release or a bad cell batch. Standardising internationally is the same trade as standardising domestically, taken further.",
+    "So the accurate summary is a three-part one, and it is worth insisting on the distinction: geographic diversification is **effective** against political and policy risk, **weak** against financial and supply-chain risk, and **useless** against a design fault. Portfolios are routinely described as diversified without saying which of the three is meant, and the difference decides whether the description is informative or merely reassuring."
+   ]
+  },
+  {
+   "id": "drill",
+   "kind": "flashcards",
+   "title": "Flashcards",
+   "read": "Support schemes, auctions, currency and what does not travel.",
+   "cards": [
+    {
+     "q": "What does a two-way {{contract for difference}} fix, and what does it leave with the owner?",
+     "a": "It fixes the price per megawatt-hour for a term — paying the shortfall below the strike and reclaiming the excess above it — and leaves volume risk entirely with the owner. So it rewards a good resource assessment and cheap capital, and rewards trading skill not at all."
+    },
+    {
+     "q": "Why is a {{green certificate}} scheme the hardest of these instruments to finance?",
+     "a": "Because it leaves two prices floating at once — the power price and the certificate price — and neither is contracted. Lenders size debt against certainty, so a structure with two uncontracted revenue lines supports the least of it."
+    },
+    {
+     "q": "Why does a country lower its renewable energy costs by changing its support instrument?",
+     "a": "Because the cheapest debt attaches to whatever fixes the most. Moving from a certificate scheme to a contract for difference reduces the cost of capital without anyone building a better plant — policy design, not engineering, sets a large part of what the electricity costs."
+    },
+    {
+     "q": "Name the two things a national auction replaces that a US utility solicitation relies on.",
+     "a": "It replaces scored non-price criteria with a pass/fail prequalification gate, and it replaces commission approval of the contract with a published clearing outcome. There is no utility in the middle and no prudence review — just a rulebook and a price."
+    },
+    {
+     "q": "Why does auction prequalification shift a developer's risk earlier?",
+     "a": "Because site control, consent and a connection offer usually have to be in hand *before* bidding. The spend that makes a project eligible happens before anyone knows whether it will win, which favours developers who can afford to lose that spend repeatedly."
+    },
+    {
+     "q": "What does a {{bid bond}} and a delivery penalty actually accomplish?",
+     "a": "They convert an auction win into an obligation, which suppresses speculative bidding. That is why an auction result is a much firmer indicator of what will be built than any pipeline figure."
+    },
+    {
+     "q": "Why can two auction prices a few per cent apart differ enormously in value?",
+     "a": "Indexation. Whether the strike price is uprated with inflation, against which index and from which base year changes the real value of a fifteen-year contract far more than a small headline difference does. Comparing awarded prices across countries without checking indexation is a standard error."
+    },
+    {
+     "q": "What is the winner's curse, and why is it not a mistake by an individual bidder?",
+     "a": "When every bidder is estimating the same underlying costs and revenues, the winner is disproportionately the one who estimated most optimistically. It is a property of the auction format, so the remedy is penalties large enough to make optimism expensive rather than better forecasting."
+    },
+    {
+     "q": "Why is a currency mismatch asymmetric in time?",
+     "a": "Equipment is bought once at the start in a hard currency; revenue arrives across two decades in the local one. A devaluation before construction raises the cost of a project already committed to a fixed price, while one afterwards leaves the plant untouched and destroys its value in the lenders' currency."
+    },
+    {
+     "q": "Why can twenty-year currency exposure not simply be hedged away?",
+     "a": "Liquid forward cover exists for a few years, not for two decades in the currencies where new generation is most needed. The long tail is therefore priced — through a higher required return, hard-currency indexation in the offtake, or borrowing in the revenue currency at a higher nominal rate."
+    },
+    {
+     "q": "Why can uncompensated {{curtailment}} be more damaging than a low price?",
+     "a": "Because it removes output rather than value per unit, it is set administratively rather than by a market, and it appears nowhere in a price forecast. At a constrained node it can take a large share of annual generation, and it can be revised during the asset's life."
+    },
+    {
+     "q": "What is a {{marginal loss factor}}, and why is it unusual as a risk?",
+     "a": "A per-connection factor that scales every megawatt-hour a plant is credited with, recalculated annually. A revision moves revenue by several per cent with nothing happening at the plant, in a direction the owner neither controls nor can hedge."
+    },
+    {
+     "q": "Give the rule that decides whether a consent regime is financeable.",
+     "a": "Variance, not duration. A slow but certain regime can be planned and funded; a fast one with an open appeal right cannot, because the wait has no upper bound. Developers rationally pay more for positions in slow, predictable jurisdictions."
+    },
+    {
+     "q": "Which developer capabilities travel across a border, and which have to be rebuilt?",
+     "a": "The design, the financial structuring, the supplier relationships and the process travel — they were paid for once and are reusable. Consent and network knowledge, {{type approval}} evidence, land relationships, a local delivery record and the legal and language layer must be rebuilt, because they are earned by doing projects rather than bought."
+    },
+    {
+     "q": "Why does buying a local developer look expensive against its balance sheet?",
+     "a": "Because what is being bought is the non-portable half — procedural knowledge, relationships, a delivery record and compliance precedent. All of it is time-like rather than capital-like, and none of it has a line in the accounts."
+    },
+    {
+     "q": "A portfolio is spread across eight countries. What is it genuinely diversified against, and what is it not?",
+     "a": "Effective against political and policy risk, which is set by different governments and is largely uncorrelated. Weak against financial and supply-chain risk, because the factories and the interest rates are global. Useless against a design fault, because a border does not interrupt a firmware release."
+    },
+    {
+     "q": "Why is a portfolio of long fixed-price contracts more exposed to interest rates than a merchant one?",
+     "a": "Because a fixed strike price for fifteen years behaves like a bond, and bonds reprice when rates move. The instrument that removes market price risk concentrates interest-rate risk in its place."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "kind": "quiz",
+   "title": "Self-test",
+   "read": "Eight questions on doing the same thing somewhere else.",
+   "items": [
+    {
+     "q": "A support instrument pays a top-up above whatever the market pays. Compared with a fixed feed-in tariff, it:",
+     "c": [
+      "Removes more risk from the owner",
+      "Preserves the market's signal about when to generate",
+      "Guarantees the volume taken",
+      "Is easier to finance"
+     ],
+     "a": 1,
+     "why": "A premium adds to a price signal rather than replacing it, so the owner still benefits from generating in valuable hours. A fixed tariff removes the signal entirely, which is why it produces deployment but no system responsiveness."
+    },
+    {
+     "q": "Which pair of instruments would you expect to attract the cheapest and the dearest debt, in that order?",
+     "c": [
+      "Merchant, then contract for difference",
+      "Contract for difference, then a certificate scheme",
+      "Corporate PPA, then feed-in tariff",
+      "Feed-in premium, then merchant"
+     ],
+     "a": 1,
+     "why": "Debt is sized against certainty. A two-way contract for difference fixes the price for a term; a certificate scheme leaves both the power price and the certificate price floating, which is the least financeable combination of the six."
+    },
+    {
+     "q": "The distinguishing feature of a national auction, compared with a regulated utility's solicitation, is that:",
+     "c": [
+      "It scores deliverability and credit heavily",
+      "It has no prudence review and awards on price among the prequalified",
+      "It runs faster",
+      "It requires local ownership"
+     ],
+     "a": 1,
+     "why": "There is no utility in the middle and no commission approving the purchase. Non-price judgement is compressed into a pass/fail prequalification gate, and the award goes to the lowest eligible bid."
+    },
+    {
+     "q": "Very low clearing prices in one auction round are frequently followed by non-delivery in the next few years. The best structural explanation is:",
+     "c": [
+      "Developers bid dishonestly",
+      "The winner is disproportionately the most optimistic estimator",
+      "Costs rose unexpectedly",
+      "Regulators changed the rules"
+     ],
+     "a": 1,
+     "why": "This is the winner's curse and it follows from the format rather than from any bidder's conduct. The corrective is delivery security large enough that optimism carries a real cost."
+    },
+    {
+     "q": "A project has a dollar-priced equipment order and twenty years of local-currency revenue. A devaluation two years after commercial operation:",
+     "c": [
+      "Raises the capital cost of the plant",
+      "Leaves the plant intact and cuts its value in the lenders' currency",
+      "Is fully offset by forward cover",
+      "Triggers the indexation clause automatically"
+     ],
+     "a": 1,
+     "why": "The equipment was already bought, so capital cost is fixed. Revenue continues in the weakened currency, and liquid forward cover does not extend to a twenty-year tail, so the exposure was priced rather than hedged."
+    },
+    {
+     "q": "Which of these can change a plant's revenue by several per cent without anything happening at the plant?",
+     "c": [
+      "A revision to its connection loss factor",
+      "A change of EPC contractor",
+      "A firmware update",
+      "A change in cell supplier"
+     ],
+     "a": 0,
+     "why": "A per-connection loss factor scales every megawatt-hour credited to the plant and is recalculated administratively. The owner neither controls it nor can hedge it."
+    },
+    {
+     "q": "Two jurisdictions: one takes four years and honours its decisions; the other takes eighteen months but allows any party to appeal a granted consent. A lender will usually prefer:",
+     "c": [
+      "The faster one, because time is money",
+      "The slower one, because the wait has an upper bound",
+      "Neither — they are equivalent",
+      "Whichever has the higher strike price"
+     ],
+     "a": 1,
+     "why": "Consent risk is about variance rather than duration. A long but bounded wait can be planned and funded; an unbounded one cannot be sold to a lender at any length."
+    },
+    {
+     "q": "An international portfolio suffers a simultaneous loss across every country it operates in. Which cause is consistent with that pattern?",
+     "c": [
+      "A change of government in one market",
+      "A cell batch defect in a standardised fleet",
+      "A local curtailment ruling",
+      "An adverse planning appeal"
+     ],
+     "a": 1,
+     "why": "Political, curtailment and consent risks are national and largely uncorrelated — that is what geographic diversification works against. A common design or component fault is carried by the standardisation itself, and a border does not interrupt it."
+    }
+   ]
+  }
+ ]
+}

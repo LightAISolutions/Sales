@@ -703,6 +703,15 @@
       ]
     },
     {
+      "slug": "bid-bond",
+      "term": "bid bond",
+      "def": "Security posted with a bid into a public auction or tender, forfeited if the bidder wins and then fails to sign or to deliver by the agreed date. It is what suppresses speculative bidding, and it is why an auction result is a firmer indication of what will actually be built than any pipeline figure.",
+      "aliases": [
+        "bid security",
+        "delivery security"
+      ]
+    },
+    {
       "slug": "bipolar-device",
       "term": "bipolar device",
       "def": "A switch that floods its drift region with both kinds of charge carrier to conduct, like an IGBT. The flooding gives a low voltage drop at high current regardless of rating, but the stored charge has to be removed at turn-off, which costs time and energy.",
@@ -1760,6 +1769,14 @@
       ]
     },
     {
+      "slug": "contract-for-difference",
+      "term": "contract for difference",
+      "def": "A support contract that fixes a strike price per megawatt-hour for a term: when the market pays less, the counterparty pays the difference; when it pays more, the generator pays it back. It removes price risk almost entirely and leaves volume risk with the owner, which is why it attracts the cheapest debt of any renewable support instrument — and why a portfolio of them is more exposed to interest rates than a merchant one.",
+      "aliases": [
+        "two-way contract for difference"
+      ]
+    },
+    {
       "slug": "contract-manufacturer",
       "term": "contract manufacturer",
       "def": "A firm that builds hardware to someone else's design and specification. The customer owns the design, the drawings and usually the tooling; the manufacturer sells labour, purchasing power and factory capacity.",
@@ -1843,6 +1860,15 @@
       "slug": "core-ffo",
       "term": "Core FFO",
       "def": "Funds from operations adjusted for items management considers non-recurring, such as transaction costs, debt-extinguishment charges or one-off incentive fees. It is usually the number a REIT guides to, and because each company defines its own adjustments it is not strictly comparable between companies."
+    },
+    {
+      "slug": "corporate-ppa",
+      "term": "corporate PPA",
+      "def": "A power purchase agreement signed directly with a private buyer — a manufacturer, a retailer, a data-centre operator — rather than with a utility or a state scheme. The price is contracted, but the buyer's credit and the gap between what is generated and the shape that was promised both stay with the seller. Compare the virtual PPA, which settles financially without the buyer ever taking the electricity.",
+      "aliases": [
+        "corporate power purchase agreement",
+        "offsite PPA"
+      ]
     },
     {
       "slug": "corrosion-inhibitor",
@@ -3558,6 +3584,22 @@
       ]
     },
     {
+      "slug": "feed-in-premium",
+      "term": "feed-in premium",
+      "def": "A support payment made on top of whatever the market pays, rather than instead of it. Because it adds to the price signal instead of replacing it, the generator still has a reason to produce when the system most wants the power — the main design advantage over a fixed feed-in tariff.",
+      "aliases": [
+        "market premium"
+      ]
+    },
+    {
+      "slug": "feed-in-tariff",
+      "term": "feed-in tariff",
+      "def": "A fixed price per megawatt-hour paid to a generator for a set term, usually with an obligation on somebody to take the output. It removes almost all risk and therefore deploys capacity quickly, but it gives no reason to generate at valuable times — which is why markets that use one to start typically replace it with a premium or an auction.",
+      "aliases": [
+        "fixed feed-in tariff"
+      ]
+    },
+    {
       "slug": "feoc",
       "term": "FEOC",
       "def": "Foreign entity of concern: a US legal designation (tied to China, Russia, Iran, and North Korea) that disqualifies projects and products with too much such involvement from federal tax credits — a central bankability question for China-linked battery supply.",
@@ -4201,6 +4243,16 @@
       "def": "Government funding recognised in a company's income statement as work under a cooperative agreement is performed; for a pre-revenue reactor developer it can be the largest line above the loss.",
       "aliases": [
         "government grant income"
+      ]
+    },
+    {
+      "slug": "green-certificate",
+      "term": "green certificate",
+      "def": "A tradeable certificate created by a quota: suppliers must surrender a set number each year, and that obligation is what gives the certificate a price. Unlike a plain renewable energy certificate, which records an attribute of generation, this is a support instrument — and because both the certificate price and the power price float, projects relying on one are the hardest of the support schemes to finance.",
+      "aliases": [
+        "renewable obligation certificate",
+        "quota obligation",
+        "tradeable green certificate"
       ]
     },
     {
@@ -5699,6 +5751,15 @@
       "def": "In a limited liability company, the member that runs the business day to day and makes operating decisions, regardless of how much of the economic ownership it holds. Invenergy's management is managing member with CDPQ and Blackstone as majority economic owners.",
       "aliases": [
         "managing member LLC"
+      ]
+    },
+    {
+      "slug": "marginal-loss-factor",
+      "term": "marginal loss factor",
+      "def": "A per-connection factor applied to every megawatt-hour a plant sells, scaling its output for the losses between where it connects and the reference point where prices are set. Used in the Australian market and recalculated periodically, so a revision can move a plant's revenue by several per cent with nothing having changed at the plant.",
+      "aliases": [
+        "MLF",
+        "transmission loss factor"
       ]
     },
     {

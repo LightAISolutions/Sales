@@ -272,10 +272,10 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | backfill | `eolian` | Eolian | IPP — buyer side has no guides | ✓ · v04.95r — where the money comes from |
 | backfill | `jupiter-power` | Jupiter Power | IPP — buyer side has no guides | ✓ · v04.95r — the same battery in two hands |
 | backfill | `key-capture-energy` | Key Capture Energy | IPP — buyer side has no guides | ✓ · v04.95r — when the buyer is regulated |
-| backfill | `lightsource-bp` | Lightsource bp | IPP — buyer side has no guides | — |
-| backfill | `nextera-energy-resources` | NextEra Energy Resources | IPP — buyer side has no guides | — |
-| backfill | `plus-power` | Plus Power | IPP — buyer side has no guides | — |
-| backfill | `terra-gen` | Terra-Gen | IPP — buyer side has no guides | — |
+| backfill | `lightsource-bp` | Lightsource bp | IPP — buyer side has no guides | ✓ · v05.00r — what crosses a border |
+| backfill | `nextera-energy-resources` | NextEra Energy Resources | IPP — buyer side has no guides | ✓ · v05.00r — the factory's calendar |
+| backfill | `plus-power` | Plus Power | IPP — buyer side has no guides | ✓ · v05.00r — the process, not the plant |
+| backfill | `terra-gen` | Terra-Gen | IPP — buyer side has no guides | ✓ · v05.00r — the twenty years after the ribbon |
 | backfill | `voltagrid` | VoltaGrid | bridge-power supplier | ✓ · v04.96r — the machine and the fuel |
 | backfill | `proenergy` | ProEnergy | bridge-power supplier | ✓ · v04.96r — the turbine and the heat rate |
 | backfill | `enchanted-rock` | Enchanted Rock | bridge-power supplier | ✓ · v04.96r — how many hours, and whose asset |

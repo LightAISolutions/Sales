@@ -1,0 +1,374 @@
+{
+ "schemaVersion": 2,
+ "slug": "terra-gen",
+ "title": "Terra-Gen — Technology Study Guide",
+ "lastUpdated": "2026-09-07",
+ "sections": [
+  {
+   "id": "start-here",
+   "kind": "callout",
+   "title": "Start here: everyone else's promise has an end date",
+   "read": "The owner is the only party in the chain still holding the asset when every contract that built it has expired.",
+   "tone": "info",
+   "ps": [
+    "This is the last guide of the buyer-side portfolio course, and it takes the period nobody sells: the twenty to thirty years after the ribbon is cut, when the interesting decisions have all been made and the asset simply has to keep working.",
+    "Start from an observation that organises everything below. **Every other participant in the chain sells something with a term.** The cell maker's warranty runs out. The integrator's service agreement has an end date. The contractor's defects liability expires. The offtake contract terminates. The optimiser's mandate is renewable. The loan amortises, the tax investor's position flips, the fund reaches the end of its life. Each of those is a promise with a boundary, and each is priced with that boundary in view.",
+    "The owner-operator is defined by holding what is left over. That is not a rhetorical flourish — it is the reason this function exists and the reason it is organised the way it is.",
+    "The boundaries with the other courses hold. What to bid and when to discharge belongs to the dispatch guide in the first course. How a supplier writes, prices and keeps a twenty-year capacity promise belongs to the integrator course, which treats it in detail. What is examined here is the **owner's side of the same twenty years**: the organisation that keeps a fleet available, the machinery for turning a written promise into money, and the decisions that only arrive after a decade has passed."
+   ]
+  },
+  {
+   "id": "the-asset-management-layer",
+   "kind": "prose",
+   "title": "The layer between the trading desk and the field",
+   "read": "Its output, when it is working, is the absence of a surprise. Which is why it is the first function to be underfunded.",
+   "ps": [
+    "Three things get called 'operations' and they are genuinely different jobs. The **desk** decides what to bid and when to discharge — the subject of the dispatch guide. **Field operations** keeps equipment running: inspections, repairs, cleaning, replacements. **Asset management** holds the commercial custody of the asset, and it is the one this guide is about.",
+    "What that custody consists of is a list of obligations rather than a list of activities. Asset management holds the contracts and knows what each one requires. It tracks the covenants that debt and tax structures impose and produces the reports they demand on the dates they demand them. It owns the operating budget and the twenty-year capital plan. It carries the insurance relationship. It is the party that notices a guarantee is drifting, and the party that then has to prove it. And it decides when to spend money on an asset that is already built — a decision nobody else in the organisation is positioned to make.",
+    "This is the layer that scales worst, and that is the practical reason it deserves a guide. Field operations can be contracted site by site. A trading desk can be rented, and the dispatch guide describes the market for exactly that. But the commercial custody of thirty contracts carrying thirty different sets of obligations cannot be handed to anybody, because those obligations are the owner's own liability. A contractor can be paid to perform them; it cannot be made to be liable for them.",
+    "It is also, reliably, the most understaffed function in a growing portfolio, and the reason is structural rather than careless. Development produces visible things — sites, contracts, plants. Asset management produces nothing visible when it works. Its entire output is that nothing unexpected happened, which is impossible to put in a board pack and easy to cut.",
+    "One concrete example makes the stakes real. Most long-term equipment obligations carry a **notice requirement**: the owner must notify a shortfall within a defined period of discovering it, permit an inspection, and allow a cure period before any remedy is owed. A shortfall that is discovered, recorded on a dashboard, and not notified inside that window is not a claim. It is a loss the owner has silently accepted. Asset management is the function whose job is to know that the deadline exists — and there is no technical failure anywhere in that sequence."
+   ]
+  },
+  {
+   "id": "availability-is-not-one-number",
+   "kind": "table",
+   "title": "Four things called availability",
+   "intro": "The word names at least four different measurements. They are not interchangeable, and the one written into the contract is usually not the one displayed on the dashboard.",
+   "read": "A guarantee is owed site by site. An average is a portfolio statistic. They are not the same object.",
+   "note": "The fourth row is the one to carry away, and the correlation problem from the first guide of this course reappears here in its financial form. Obligations are owed per site, so a portfolio average conceals a set of individual liabilities — and a common-mode fault produces shortfalls at many sites in the same week, which means the averaging that makes a fleet look stable stops working at precisely the moment it is needed. A fleet availability figure is a reporting convenience, never a measure of exposure.",
+   "cols": [
+    "Measure",
+    "What it counts",
+    "What it is used for",
+    "How it misleads"
+   ],
+   "rows": [
+    [
+     "Technical availability",
+     "Hours the plant was capable of operating, as a share of total hours",
+     "Day-to-day operations reporting",
+     "It treats every hour as equal, and the year's revenue is concentrated in a small number of them"
+    ],
+    [
+     "Contractual availability",
+     "The same, after excluding events the contract excuses — {{force majeure}}, network outages, maintenance inside an agreed window",
+     "Testing the {{availability guarantee}} and computing damages",
+     "The exclusions do all the work. Two contracts quoting the same headline percentage can be far apart once their excluded-event lists are compared, which is where the negotiation actually happens"
+    ],
+    [
+     "Value-weighted availability",
+     "Hours available, weighted by what those hours were worth",
+     "Judging the operation honestly",
+     "Almost never contracted, because it requires a price series both parties accept in advance — so the most informative measure is the one nobody is obliged to meet"
+    ],
+    [
+     "Fleet availability",
+     "The portfolio's aggregate figure",
+     "Investor and lender reporting",
+     "One site at 80 per cent and nine at 99 is not the same liability as ten at 97, because the damages are owed at the site that failed"
+    ]
+   ]
+  },
+  {
+   "id": "enforcing-the-promise",
+   "kind": "prose",
+   "title": "Turning a written guarantee into money",
+   "read": "How the promise is written belongs to the integrator course. Making it pay is an operational discipline.",
+   "ps": [
+    "The integrator course sets out what a capacity guarantee promises, what it is measured against, and how a supplier prices the obligation to keep it. None of that is repeated here. The question here is narrower and more practical: given a written promise, what does an owner actually have to do to convert a shortfall into a remedy? Three things, and none of them happens automatically.",
+    "**A measurement both parties accept.** The guarantee is tested by a demonstration to a defined protocol — a full charge and a timed discharge under stated conditions, witnessed or instrumented as the contract requires. That means removing the asset from the market for a day, in a window the offtaker has agreed, staffed by people competent to run the protocol and record it. It is an operational event with a direct revenue cost, and it happens on schedule whether or not a shortfall is suspected, because contracts commonly deem a missed test to be a pass or a failure by default. The result is decided by the calendar, not by the equipment.",
+    "**Records.** The measured result is compared with the guaranteed curve *given how the asset was operated*: cycles, temperature, {{depth of discharge}}, {{C-rate}}. If the owner cannot demonstrate that the duty stayed inside the agreed envelope, the supplier's first and entirely reasonable defence is that the operation caused the loss. A claim is therefore only as good as the operating data the owner kept — held in its own systems, at a resolution and in a form the supplier's engineers will accept. That requirement is set on the day of energisation and cannot be satisfied retrospectively.",
+    "**Notice.** Contracts impose deadlines: notify within a defined period of discovery, allow inspection, permit a cure period before any remedy is owed. Missing a notice deadline is the commonest way a perfectly valid claim is lost, and it is an administrative failure with no technical component whatsoever.",
+    "What follows is a **remedy ladder**, and its shape explains a great deal of supplier behaviour. Typically: repair or replace, then {{augmentation}} to restore the guaranteed capacity, then {{liquidated damages}}, and — rarely, last, and usually only for sustained failure — termination. Each rung costs the supplier more than the one below it, so a supplier performing badly but not catastrophically has every incentive to remain on the lowest rung indefinitely. Whether the contract escalates automatically on repeated failures, or requires the owner to push at each step, is worth more than most of the numbers in it.",
+    "One asymmetry is worth naming plainly. The supplier is a repeat player who has run this process across many fleets and knows exactly which arguments succeed; the owner is frequently doing it for the first time. The first thing scale buys an owner here is simply **having done it before**, which is an argument for a fleet-level claims capability rather than leaving each site's team to discover the process independently."
+   ]
+  },
+  {
+   "id": "augmentation-as-a-programme",
+   "kind": "prose",
+   "title": "Augmentation is a date, not an event",
+   "read": "Nothing about it is a surprise. Which is exactly why an unbudgeted one is a failure of planning rather than of equipment.",
+   "ps": [
+    "{{Augmentation}} appears in the first course as an obligation a supplier carries, and in the integrator course as a cost a supplier has to reserve against. From the owner's chair it is a third thing: a **capital programme with a schedule**, funded from the first year of the asset's life or not affordable at all.",
+    "It is programme-shaped because {{degradation}} is continuous and broadly predictable, and the guaranteed capacity curve steps down on known dates. A fleet approaching its floor is not an event that occurs; it is a date that arrives. So the work is planned years ahead, capital is reserved against it, and it is executed as a rolling campaign across many sites — which is also why a portfolio can do it more cheaply per megawatt-hour than a single project ever could.",
+    "The part most often missed is that **augmentation has to be designed in, years before it is needed**. Physical space in the layout for additional enclosures. Headroom in the conversion equipment, the transformer and the switchgear positions. Cable sizing and protection settings that anticipate energy which does not yet exist. Thermal and fire-separation allowances for a denser site than the one being built. A plant built to exactly its day-one requirement cannot be augmented without rebuilding the equipment it shares, at which point the economics of augmenting collapse and the site simply ages out.",
+    "**Who pays depends on where the promise sits.** Where the supplier carries a capacity commitment, augmentation is its cost and the owner's obligations are narrower but real: allow access, and preserve the operating envelope so the commitment stays valid. Where the owner carries it, augmentation is a capital line in a twenty-year budget, and the price of cells a decade out is an assumption sitting inside today's investment case. That assumption has historically erred in the owner's favour, which is a poor reason to keep relying on it.",
+    "Finally, the engineering constraint that arrives with the new hardware. Adding today's cells to a ten-year-old system puts new and old energy in one electrical system, with different impedance, different ageing behaviour and different capability. The usual answer is to keep vintages in separate strings or separate blocks under one control system rather than mixing at module level — which is another decision that has to be anticipated in the original design, by people who will have left the company long before it matters."
+   ]
+  },
+  {
+   "id": "many-vendors-one-fleet",
+   "kind": "table",
+   "title": "The operating bill for a mixed fleet",
+   "intro": "The contracting guide in the first course frames supplier diversity as a procurement question about counterparty risk, price discovery and eligibility. This is the same decision seen ten years later, from the budget that actually pays for it.",
+   "read": "Diversity is decided at procurement and paid for in operations — different budget, different year, different people.",
+   "note": "None of this is an argument for concentration. The commercial case for a second supplier is sound, and the correlated-failure case in the first guide of this course is stronger still. The point is where the cost lands: a fleet that sets its platform strategy without an asset-management voice in the room is deciding a ten-year operating cost using a one-year procurement argument, and will be surprised by a bill nobody in that meeting was accountable for.",
+   "cols": [
+    "What multiplies with each additional platform",
+    "Why it does not average out"
+   ],
+   "rows": [
+    [
+     "Spare-parts inventory",
+     "Spares are platform-specific and cannot be pooled. Each holding is sized against a fault frequency rather than against fleet size, so a second platform roughly doubles the stock instead of sharing it"
+    ],
+    [
+     "Control platforms and integration",
+     "Every {{EMS}} has its own interface, alarm vocabulary and update cycle. The owner's monitoring layer has to speak all of them, and each vendor release is a re-test of the owner's own systems"
+    ],
+    [
+     "Technician competence",
+     "Vendor certification is platform-specific and often a condition of warranty validity. A technician qualified on one platform is neither competent nor contractually permitted to work on another"
+    ],
+    [
+     "Test and claim procedures",
+     "Demonstration protocols, notice deadlines and evidence requirements differ by supplier, so the claims process is per-platform rather than per-fleet — and the 'having done it before' advantage has to be earned separately for each"
+    ],
+    [
+     "Data comparability",
+     "The least visible and most expensive. Vendors expose different quantities at different resolutions, so any fleet-wide comparison requires normalising data that was never designed to be compared"
+    ]
+   ]
+  },
+  {
+   "id": "the-data-loop",
+   "kind": "prose",
+   "title": "The same telemetry, read from the owner's side",
+   "read": "With one site an anomaly is an anomaly. With thirty identical sites, the other twenty-nine are a control group.",
+   "ps": [
+    "The integrator course treats fleet telemetry as the supplier's product — the software layer where a manufacturer's advantage survives commoditisation. From the owner's side the same data is a different asset answering different questions, and the difference is worth being precise about.",
+    "What a fleet's data permits that a single site's does not is **comparison between near-identical assets**. One site producing an unexpected result is an anomaly with no reference point. Thirty sites built to the same design, running the same firmware, under the same duty, are a controlled experiment: the twenty-nine that behaved normally are the control group, and the one that did not is a signal rather than a curiosity.",
+    "That is not merely an engineering convenience — it is the **evidence base for every warranty claim the fleet will ever make**. An owner who can show that thirty sites operated inside envelope while one degraded materially faster has a claim that is hard to answer. An owner with a single site and the same degradation has an argument, and arguments settle at a discount.",
+    "**Who owns the data is not obvious and is frequently never addressed.** The {{BMS}} and {{EMS}} generate it, the vendor's platform may store it, the maintenance contractor may be the only party with routine access, and the contract may grant the owner a dashboard rather than the underlying record. The distinction matters twice over: a dashboard is not evidence, and access granted by a contract ends when the contract does. The defensible position is that the owner extracts and holds raw, timestamped data in systems it controls, from the day of energisation.",
+    "There is an operations counterpart to the first course's warning about orphaned control layers, and it is quieter. When a vendor's platform is replaced ten or twelve years in — because the vendor changed it, or failed, or was replaced — the historical record has to survive the migration. If it does not, the degradation history underpinning every future claim is gone, and the fleet is back to arguing rather than demonstrating. Independent extraction costs very little on the day the plant is energised and is impossible to arrange retrospectively, which makes it one of the highest-return decisions in this entire guide and one of the least likely to be made by whoever is building the site."
+   ]
+  },
+  {
+   "id": "self-perform-or-wrap",
+   "kind": "proscons",
+   "title": "Employ the people, or buy the outcome",
+   "intro": "An owner can maintain the fleet itself with vendor support, or buy availability under a wrapped {{LTSA}}. What is inside such an agreement is the integrator course's subject; which one an owner should want is this one's.",
+   "read": "A wrap does not remove the twenty-year problem. It defers most of it to year eleven.",
+   "note": "That last drawback is where fleets are actually caught, and it converts an operating decision into a strategic one. A wrap turns a twenty-year obligation into a ten-year one and defers the remainder — entirely rational if the intention is to sell before the term ends, and dangerous otherwise. Note also what it does to the asset's residual value: a buyer looking at a fleet with an expiring wrap and no in-house capability is buying a capability-building programme it has not priced, and will discount accordingly. Wrap-or-self-perform is therefore partly a decision about who you expect to sell to.",
+   "cards": [
+    {
+     "t": "Self-perform, with vendor support",
+     "adv": [
+      "**Cost is visible and controllable**, with no margin paid on a service the owner is capable of managing itself.",
+      "**Operating knowledge accumulates in the owner**, which is what makes the next procurement, the next design revision and the next claim better informed.",
+      "**Response follows revenue.** A site facing a valuable week gets the crew first — a priority no external contract can be written to know in advance.",
+      "**Data and records are the owner's by default**, rather than by negotiation."
+     ],
+     "dis": [
+      "*It is a standing organisation with a permanent hiring problem*, competing for scarce, vendor-certified technicians against the vendors themselves.",
+      "*It creates warranty exposure*: work done in-house can complicate or void a claim if it disturbs the certified configuration or the operating envelope.",
+      "*No availability risk is transferred.* A shortfall is simply the owner's.",
+      "*It only works above a fleet size* that justifies the fixed cost, so it is unavailable exactly when a growing owner most wants the savings."
+     ]
+    },
+    {
+     "t": "A wrapped long-term service agreement",
+     "adv": [
+      "**Availability, and often the capacity curve, become someone else's obligation** with money attached to missing them.",
+      "**Certified labour and parts are contractually available**, and using them preserves the warranty rather than threatening it.",
+      "**Cost is a known annual figure**, which is what lenders and equity investors would rather underwrite than a variable one.",
+      "**The supplier's experience of its own product across every fleet it serves** exceeds what any single owner can observe."
+     ],
+     "dis": [
+      "*The owner learns very little*, and reaches the end of the term holding a fleet it does not know how to run.",
+      "*Priorities are the contract's rather than the revenue's* — response times are uniform where the value of the hours is not.",
+      "*The exclusions are the entire negotiation*, and the events most likely to cause a long, expensive outage are frequently among them.",
+      "*It ends.* A wrap typically runs ten years against an asset life of twenty or more, so the capability has to be built eventually — and building it late costs far more than building it early."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "what-the-course-was-arguing",
+   "kind": "callout",
+   "title": "What these four guides were arguing",
+   "read": "The first course asked what a project is worth. This one asks what an obligation is worth, and who should hold it.",
+   "tone": "note",
+   "ps": [
+    "Nine guides, one buyer. The first five follow a single project — how it is originated and connected, what its contract obliges, where its revenue comes from, how it is dispatched, and who has to approve the purchase. These four ask what changes when the same company does that thirty times, and each owns one answer. **Repetition**: the unit of production becomes a process, and a mistake now repeats along with the design. **Scale**: above a size the owner stops being a customer of the supply chain and becomes a participant in it, and rules that read like laws — your counterparty is the integrator, you cannot use your own tax credit — turn out to be facts about being small. **Distance**: what a developer can carry across a border is capital-like and reusable; what it cannot is time-like and has to be earned again. And **duration**, which is this guide.",
+    "The claim that ties them together is the one this guide opened with. **Every other party in the chain sells something with a term.** The cell maker's warranty, the integrator's service agreement, the contractor's defects liability, the offtaker's contract, the optimiser's mandate, the loan's tenor, the tax investor's flip, the fund's life — each is a promise with a boundary, and each is priced knowing exactly where that boundary falls.",
+    "The owner-operator is the party that holds what is left. Read that way, every practice in this course is a way of managing an obligation that outlives every contract that created it. Standardising a fleet is a bet that repetition will still be paying off in a decade. Booking a supply chain forward is buying capacity before the need is provable. The jurisdictional layer is the part of the business that will not travel with you. And asset management is simply the function that is still there when the promises have expired.",
+    "Which explains the behaviour that puzzles people most about this industry: owners sell assets they have just finished building, and do it repeatedly. Holding the residual obligation is expensive, and it should be held by whoever has the cheapest capital and the longest horizon — which is rarely the party that was best at finding the site, winning the contract and getting it built. The develop-and-sell arrangements, the rotation strategies and the permanent-capital vehicles examined elsewhere in this corpus are all answers to the same question of **who should hold the tail**. An asset changing hands after commercial operation is usually the system working, not failing.",
+    "So the two courses ask two different questions, and telling them apart is most of the skill. The first asks *what is this project worth?* This one asks *what is this obligation worth, and who is the right party to carry it?* A reader who can identify which question an announcement is actually answering can read almost anything in this market correctly — including the announcements that are carefully worded to obscure it."
+   ]
+  },
+  {
+   "id": "drill",
+   "kind": "flashcards",
+   "title": "Flashcards",
+   "read": "Availability, claims, augmentation and the twenty-year tail.",
+   "cards": [
+    {
+     "q": "What distinguishes asset management from field operations and from the trading desk?",
+     "a": "It holds the commercial custody of the asset — the contracts and their obligations, the covenants and reporting, the operating budget and the twenty-year capital plan, the insurance, and the decision to spend money on an asset already built. Operations can be contracted per site and a desk can be rented; the obligations cannot be handed over, because they remain the owner's liability."
+    },
+    {
+     "q": "Why is asset management reliably the first function to be underfunded?",
+     "a": "Because its output when it is working is that nothing unexpected happened. Development produces visible things — sites, contracts, plants — and a function whose success is the absence of a surprise is difficult to defend in a budget."
+    },
+    {
+     "q": "A shortfall is detected on a dashboard and recorded, but not notified to the supplier inside the contractual window. What has happened?",
+     "a": "A valid claim has been lost. Most long-term obligations require notice within a defined period of discovery, an opportunity to inspect and a cure period. Missing the deadline converts a remedy into a loss the owner has silently accepted, with no technical failure anywhere in the sequence."
+    },
+    {
+     "q": "Why is contractual availability usually the only one of the four measures that matters commercially?",
+     "a": "Because it is the one the {{availability guarantee}} is tested against and damages are computed from. The excluded-event list is where the real negotiation happens — two contracts quoting the same headline percentage can be far apart once the exclusions are compared."
+    },
+    {
+     "q": "Why is a fleet availability figure a poor measure of exposure?",
+     "a": "Because guarantees are owed site by site. One site at 80 per cent with nine at 99 is a different liability from ten at 97, and a common-mode fault produces shortfalls at many sites in the same week — so the averaging stops working exactly when it is needed."
+    },
+    {
+     "q": "What does a capacity demonstration actually cost an owner, apart from the risk of failing it?",
+     "a": "A day out of the market in a window the offtaker has agreed, plus the staff competent to run and record the protocol. It happens on schedule whether or not a shortfall is suspected, because contracts commonly deem a missed test a pass or a failure by default."
+    },
+    {
+     "q": "Why is a warranty claim only as good as the owner's own operating records?",
+     "a": "Because the measured result is judged against the guaranteed curve *given how the asset was operated*. Without evidence that cycles, temperature, {{depth of discharge}} and {{C-rate}} stayed inside the agreed envelope, the supplier's first defence is that the duty caused the loss — and that evidence cannot be assembled retrospectively."
+    },
+    {
+     "q": "Describe the remedy ladder and why its escalation mechanism matters more than its rungs.",
+     "a": "Typically repair or replace, then {{augmentation}}, then {{liquidated damages}}, then termination. Each rung costs the supplier more than the one below, so a supplier performing poorly but not catastrophically will sit on the bottom rung indefinitely unless the contract escalates automatically rather than requiring the owner to push at every step."
+    },
+    {
+     "q": "Why is augmentation described as a date rather than an event?",
+     "a": "Because degradation is continuous and broadly predictable and the guaranteed capacity curve steps down on known dates. A fleet reaching its floor is scheduled, not discovered — so it is planned years ahead, reserved against, and run as a rolling campaign across sites."
+    },
+    {
+     "q": "What has to be designed into a site years before its first augmentation?",
+     "a": "Physical space for additional enclosures, headroom in the conversion equipment, transformer and switchgear positions, cable sizing and protection settings for energy that does not yet exist, and thermal and fire-separation allowance for a denser site. A plant built to exactly its day-one requirement cannot be augmented without rebuilding what it shares."
+    },
+    {
+     "q": "Why can new cells not simply be added to a ten-year-old system at module level?",
+     "a": "Because new and old energy have different impedance, ageing behaviour and capability. Vintages are normally kept in separate strings or blocks under one control system — another constraint that has to be anticipated in the original design."
+    },
+    {
+     "q": "Give the operating consequence of running two equipment platforms rather than one.",
+     "a": "Spares cannot be pooled, each {{EMS}} needs its own integration and re-testing, technician certification is platform-specific and often a warranty condition, claim procedures differ per supplier, and fleet-wide data must be normalised. Diversity is bought at procurement and paid for in operations, in a different budget and a different year."
+    },
+    {
+     "q": "What can a thirty-site fleet's telemetry prove that a single site's cannot?",
+     "a": "That a fault is the product's rather than the duty's. Twenty-nine sites of identical design running the same firmware under the same duty are a control group, so the outlier is a signal instead of an anomaly — which is the evidence base for every claim the fleet will make."
+    },
+    {
+     "q": "Why should an owner extract and store raw telemetry from the day of energisation?",
+     "a": "Because a dashboard is not evidence, contractual access ends when the contract does, and when a vendor platform is replaced a decade in the historical record must survive the migration. Independent extraction costs little on day one and cannot be arranged retrospectively."
+    },
+    {
+     "q": "State the strongest argument against a wrapped service agreement.",
+     "a": "It ends. A wrap typically runs ten years against an asset life of twenty or more, so it defers rather than removes the problem — and an owner reaching the end of the term with no in-house capability has to build it late, at a higher cost, with the asset's resale value discounted for exactly that gap."
+    },
+    {
+     "q": "State the organising claim of this course in one sentence.",
+     "a": "Every other party in the chain sells something with a term — the warranty, the service agreement, the defects liability, the offtake, the loan, the fund's life — and the owner-operator is the party that holds what is left when all of them have expired."
+    },
+    {
+     "q": "Why do owners repeatedly sell assets they have just finished building?",
+     "a": "Because holding the residual obligation is expensive and should sit with whoever has the cheapest capital and the longest horizon, which is rarely the party best at finding the site and getting it built. An asset changing hands after commercial operation is usually the system allocating the tail correctly."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "kind": "quiz",
+   "title": "Self-test",
+   "read": "Eight questions on the twenty years nobody sells.",
+   "items": [
+    {
+     "q": "Which activity is the one an owner cannot contract out, even in principle?",
+     "c": [
+      "Field maintenance",
+      "Market dispatch",
+      "Commercial custody of the contracts and their obligations",
+      "Capacity demonstrations"
+     ],
+     "a": 2,
+     "why": "Maintenance can be contracted site by site and a desk can be rented. A contractor can be paid to perform an obligation but cannot be made liable for it — the liability stays with the owner, which is what asset management holds."
+    },
+    {
+     "q": "A capacity shortfall is detected and logged, but the supplier is notified after the contractual window closes. The most accurate description is:",
+     "c": [
+      "A technical failure",
+      "A valid claim converted into an accepted loss",
+      "A force majeure event",
+      "A dispute over measurement"
+     ],
+     "a": 1,
+     "why": "Notice requirements are conditions of the remedy. Nothing failed technically; the entitlement lapsed administratively, which is the commonest way a sound claim is lost."
+    },
+    {
+     "q": "Two supply contracts each guarantee 97 per cent availability. The difference between them most likely lies in:",
+     "c": [
+      "The measurement interval",
+      "The list of excluded events",
+      "The penalty rate",
+      "The technology"
+     ],
+     "a": 1,
+     "why": "Contractual availability excludes events the contract excuses. The exclusion list is where the negotiation actually happens, and it can make identical headline percentages mean very different things."
+    },
+    {
+     "q": "Why does a fleet-average availability figure understate an owner's exposure?",
+     "c": [
+      "It excludes planned maintenance",
+      "Guarantees are owed per site, and common-mode faults hit many sites at once",
+      "It is measured annually",
+      "It uses nameplate rather than delivered energy"
+     ],
+     "a": 1,
+     "why": "Damages fall due at the site that failed, so an average conceals a set of individual liabilities — and a shared design fault removes the independence that made averaging look reassuring."
+    },
+    {
+     "q": "A supplier disputes a capacity claim, arguing the duty caused the loss. The owner's decisive evidence is:",
+     "c": [
+      "The purchase contract",
+      "Operating records showing cycles, temperature, depth of discharge and rate within envelope",
+      "The original test certificate",
+      "The commissioning report"
+     ],
+     "a": 1,
+     "why": "The guaranteed curve is conditional on the operating envelope. Without kept, accepted-format data proving the duty was respected, the supplier's defence stands — and that data cannot be reconstructed after the fact."
+    },
+    {
+     "q": "Why does a supplier tend to stay on the lowest rung of the remedy ladder?",
+     "c": [
+      "Regulation requires it",
+      "Each higher rung costs it more, so it escalates only when forced",
+      "Owners prefer repairs",
+      "Insurance dictates the order"
+     ],
+     "a": 1,
+     "why": "Repair costs less than augmentation, which costs less than damages, which costs less than termination. Whether the contract escalates automatically on repeated failure, or requires the owner to push each time, is therefore worth more than the numbers in it."
+    },
+    {
+     "q": "A site cannot be augmented at year twelve without rebuilding its substation. The root cause is most likely:",
+     "c": [
+      "Faster than expected degradation",
+      "A design built to exactly the day-one requirement",
+      "A change of supplier",
+      "A grid code revision"
+     ],
+     "a": 1,
+     "why": "Augmentation must be designed in — space, conversion and transformer headroom, switchgear positions, cable sizing, thermal and separation allowance. A plant with no reserve in the shared equipment ages out instead of being extended."
+    },
+    {
+     "q": "According to this course, the reason owners repeatedly sell assets they have just built is best stated as:",
+     "c": [
+      "Development margins exceed operating margins",
+      "The residual obligation should sit with the cheapest, longest-horizon capital",
+      "Regulators require divestment",
+      "Operating assets are hard to finance"
+     ],
+     "a": 1,
+     "why": "Every other party's promise has a term; the owner holds what is left. Carrying that tail is a capital question rather than a skill question, and the party best at building is rarely the party best placed to hold it."
+    }
+   ]
+  }
+ ]
+}
