@@ -3,11 +3,57 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.97r] — 2026-09-06 10:33:15 PM EST — v01.83w
+
+> **Prompt:** "Picking up from the guide-backfill session 2, run the third of the six guide-backfill sessions from
+> repository-information/PROFILER-COVERAGE-PLAN.md §8 ("Study guides on existing dossiers") on Opus 5 xhigh as a fresh
+> session: canadian-solar, crrc-zhuzhou, envision-energy, hyperstrong, ls-energy-solutions, sunwoda, trina-storage.
+> […] THE TASK, per company: `profiler prep <Company>` ONLY — no dossier work. […] SEVEN COMPANIES, one more than
+> session 2 carried — the authoring collapses once the course is designed, so spend the extra budget on the reading
+> and the syllabus decision, not on the writing. THESE SEVEN ARE INTEGRATORS, AND THAT IS THE TEACHING FRAME. Both
+> flanks are now taught and this cluster sits between them […] So teach WHAT AN INTEGRATOR ACTUALLY ADDS BETWEEN A
+> CELL AND A PROJECT — and do not re-derive either end. Cover the integrator as the party that converts cells it did
+> not make into a warranted system someone will finance: cell qualification and dual-sourcing, the BMS and EMS as the
+> real product, enclosure and thermal design, safety certification as a gate rather than a badge, manufacturing and
+> quality systems, the long-term service agreement and the capacity guarantee as what is genuinely being sold,
+> bankability and who stands behind a twenty-year promise, and the tier structure of the industry […] SESSION 2
+> SHIPPED THE BRIDGE-POWER COURSE — REFERENCE IT, DON'T REBUILD IT. […] `prevalon` overlaps this cluster hardest:
+> read it FIRST and design around it, because a naive integrator guide will simply rewrite it. […] NO DOSSIER EDITS.
+> […] After the graph rebuild, confirm `profiler-graph.json` came back byte-identical — copy it first, rebuild,
+> `cmp`. […] CONCEPTS — CHECK COLLISIONS PROGRAMMATICALLY, AND NORMALISE MORE THAN CASE. […] Normalise hyphens,
+> spaces and case together when building the map; that closes the whole class. […] Then, after the guides are
+> written, run `check-profiler-study.py` and treat its `unresolved {{…}}` errors as the exact registration ledger.
+> […] CHANGELOG ROTATION FIRES THIS SESSION […] DEEPEN THE CLONE BEFORE ROTATING. […] ALSO CHECK […] the
+> [PC-README-TREE] completeness audit over `repository-information/study-prep/` and
+> `live-site-pages/profiler-data/`. VERIFY: all six checkers exit 0 […] one push commit on a claude/* branch."
+
+### Added
+
+- **Guide-backfill session 3 of 6 — the seven integrator study guides.** Guides only: no dossier was opened for editing, no `profileVersion` moved, nothing was archived, `archive-index.json` untouched, `profiler-companies.json` never opened — and `profiler-graph.json` came back **byte-identical** after the rebuild (sha256 `563ae281…` before and after, unchanged since v04.96r), which is the independent proof the constraint held. Each guide is schema v2 with a lesson plan under `repository-information/study-prep/<slug>/`. **68 sections across seven guides.** As in sessions 1 and 2 the set was designed as **one non-overlapping course before any authoring began**, and here the design was taken *against* `prevalon`, which owns the enclosure inventory, the DC/AC boundary, datasheet-reading, fire physics and hybrid plant control — so this course teaches the *design and the commerce* around those, never the inventory again. The organising claim is that **an integrator converts cells it did not make into a warranted system someone will finance**, and the seven guides own one stage each, in the order a product comes into existence:
+  - **`hyperstrong`** — *the cell you did not make* (9 sections). The course entry point. A cell as a purchased component rather than a chemistry: amp-hours as charge, the bus-voltage window that fixes a series count, C-rate read as duration, and two life clocks either of which ends the asset. The amp-hour format ladder and what each step transfers — cost out of the battery, risk into the thermal and safety layers. Seven layers of a qualification programme, and why life testing cannot be compressed without changing the mechanism it measures. **Why a second source is an engineering project rather than a purchase order**, with format standardisation as the industry's affordable middle ground. Six cell-contract instruments and the symmetry that none secures supply and preserves flexibility at once.
+  - **`canadian-solar`** — *the box, and the heat inside it* (10 sections). Five conflicting jobs of an enclosure and the arbitration between them. The mechanism that makes thermal design central: a series string is limited by its weakest cell, and temperature difference is what creates weakness — so the objective is **cell temperature spread, not average temperature**, and liquid displaced air on uniformity rather than efficiency. The environmental specification line by line with the misreading in each. Where the round-trip losses go and which line the enclosure designer controls. The monolith-against-modular-skid fork as a bet about where the customer's cost sits. And the chain from energy per container to megawatt-hours per acre, including the point where density is bought with efficiency the owner would rather keep.
+  - **`envision-energy`** — *the software is the product* (9 sections). The fact that organises the control layer: **the two numbers the system exists to report cannot be measured, only inferred** — charge counting drifts without correction, rest-voltage needs rest and is weakest on the flat-curve chemistry that dominates grid storage. The management system as a four-level hierarchy with authority increasing downward and a different failure mode at each level. Passive against active balancing as the electronic attack on the same variance the cooling design attacks thermally. Usable capacity as a distribution whose tails set what the plant delivers. The six-layer control stack and its contested row. And the fleet feedback loop as the durable difference when competitors ship the same cells in the same box.
+  - **`ls-energy-solutions`** — *permission to sell* (10 sections). Certification as a licence rather than a badge. The distinction everything hangs on: **a test method produces data with no pass mark, a listing produces permission, and an installation standard decides what that permission is worth on a given piece of land.** A map of eleven documents by function, including third-party listing against manufacturer declaration. The three parties and the local authority that can actually stop a project. Why a listing attaches to a configuration and a factory, so a cell, geometry, software or plant change re-opens the file — making certification a fixed cost that scales with variety and change rather than volume. Chemistry read purely through the permitting lens. Three regimes, two parallel compliance tracks, and a programme sequence gated entirely by design freeze.
+  - **`sunwoda`** — *ten thousand identical cells* (10 sections). Why a storage product is a statistics problem: thousands of cells per enclosure make sampling hopeless against rare defects, so **process evidence replaces inspection** and the factory's data systems become part of the product. Seven cell-plant steps and the latent defect each produces, with formation and ageing as the capital bottleneck. Yield read as a cost signal and a quality signal at once, and why a new format restarts the learning curve. Traceability as the difference between a bounded and an unbounded problem — and a production-line design decision, not a report. The two acceptance tests and what each structurally cannot prove. The bathtub curve read diagnostically. And a battery as regulated freight, where arrival damage is a quality-system failure.
+  - **`trina-storage`** — *the twenty-year promise* (10 sections). The reframing: **the product is a twenty-year obligation and the hardware is how it is delivered.** Five distinct promises usually collapsed into one warranty, and the asymmetry by which the defect warranty expires long before the capacity guarantee. The guaranteed capacity curve as a floor rather than a forecast, steep early and flat later. Oversizing against augmentation against replacement. The duty envelope that turns the guarantee into an energy-throughput budget, so **every dispatch decision spends something already paid for**. The warranty reserve and the two models that size it. What a service agreement contains, with the exclusions as the revealing part. And what is owed at the end.
+  - **`crrc-zhuzhou`** — *who can stand behind it* (10 sections). The closing argument. Bankability as a property of a relationship between supplier, lender and jurisdiction rather than of a product, and why the audience is the lenders' independent engineer. A nine-item due-diligence file — which is where the previous five guides' work is finally read. Six credit instruments and their shared weakness: all shorten or shrink a twenty-year obligation without replacing a supplier who is still present. **Four structural positions** — cell-owning, component-owning, capital-light, controls-only — and the pattern that the best economics carry the worst credit standing. Why margin concentrates at the ends of the chain and the middle commoditises, with switching cost and the certification burden as the two forces resisting it. And the sharpest lesson: **bankability is jurisdictional**, so a supplier can hold the strongest balance sheet in its industry and be unusable in a market — corporate structure has become a technical specification.
+- **63 concepts registered** (1,112 → 1,175), the integrator vocabulary the corpus lacked: the purchased cell (`ampere-hour`, `cell-format`, `cell-qualification`, `series-parallel-configuration`, `calendar-life`, `stacked-electrode`, `wound-cell`); the enclosure and its environment (`cell-temperature-spread`, `ingress-protection`, `nema-enclosure-rating`, `corrosivity-class`, `seismic-qualification`, `sound-power-level`, `parasitic-load`, `modular-skid`, `refrigerant`); the control layer (`coulomb-counting`, `open-circuit-voltage`, `cell-balancing`, `contactor`, `power-plant-controller`, `fleet-telemetry`, `modbus`, `iec-61850`, `over-the-air-update`, `change-control`); certification (`ul-9540`, `nfpa-68`, `nfpa-69`, `un-38-3`, `ce-marking`, `nrtl`, `type-approval`, `grid-code`, `compartmentalization`); manufacturing and quality (`electrode-coating`, `calendering`, `dry-room`, `cell-formation`, `statistical-process-control`, `first-pass-yield`, `defects-per-million`, `root-cause-analysis`, `fmea`, `traceability`, `bathtub-curve`, `dangerous-goods`); the promise (`guaranteed-capacity-curve`, `energy-throughput`, `oversizing`, `warranty-reserve`, `preventive-maintenance`, `service-level-agreement`, `end-of-life`, `decommissioning`, `environmental-product-declaration`); and credit and structure (`technical-due-diligence`, `parent-company-guarantee`, `warranty-bond`, `surety-bond`, `insurance-wrap`, `commoditisation`, `switching-cost`).
+
+### Changed
+
+- **§8's seven integrator rows flipped** to `✓ · v04.97r` with a one-line handle each, leaving **8 backfills outstanding** across two further sessions (4 EPC, 4 IPP buyer-side).
+- **README tree** gains the seven `<slug>.study.json` entries and seven `study-prep/<slug>/` directory-and-lesson-plan pairs, each inserted alphabetically without disturbing the pre-existing ordering breaks in the surrounding listings.
+- **CHANGELOG rotation fired.** The counter reached `100/100` with this section, and the oldest whole date group — **three sections dated 2026-08-31, `v03.98r` through `v04.00r`** — moved to `CHANGELOG-archive.md` with SHA enrichment on every moved header, leaving **`Sections: 97/100`**. The clone was deepened first (`git fetch --unshallow`, 50 → 994 commits) and all three SHA lookups resolved; on the shallow clone all three would have archived as `[SHA unavailable]` permanently. Next rotation is due at thirteen sections dated 2026-09-01.
+
+### Fixed
+
+- **The concept-collision check now normalises hyphens, spaces and case together, and it caught a live duplicate on its first run.** Sessions 1 and 2 each lost an alias to an invisible collision; this session's normalised map tested 292 candidate strings against 3,268 registry keys and found `export control` would have duplicated the registered `export-controls`. The guide was changed to use the registered display term rather than a new concept created. **A further sub-class was found and closed the same way**: normalising punctuation and case still misses singular/plural pairs, so a plural-aware sweep was run over the whole 64-term ledger and every proposed alias — it returned exactly one hit, the same one. Both normalisations are now the method to inherit.
 
 ## [v04.96r] — 2026-09-06 09:42:56 PM EST — v01.83w
 
@@ -4577,84 +4623,3 @@ Two collapse passes already existed and neither could catch it: corroboration gr
 - **15 clustering cases**: the three-outlet turbine story collapses to the tier-1 desk; same company + different event categories never merge; same company + same event + unrelated subject stays separate; entity-less stories never cluster; incidents never merge across sections; `$0` fallback mode still clusters on the stricter floor; a 5-article source cannot outrank a tier-1 desk; a backstop republication never wins; cluster size capped; different days never merge; a lone story is returned untouched
 - **12 numbering cases** against the developer's actual August rows: Friday 001, Saturday and Sunday unnumbered, Monday **002 not 004**; a second week stays dense with no holes; editions number independently; `scNextIssueNo_` returns 0 for a weekend build and reuses the number on a same-day weekday rebuild; the masthead rewrite strips a stale number, renumbers 004 → 002, and leaves an already-unnumbered masthead alone
 - The v04.00r off-day harness re-run clean, including both 2026 DST boundaries and the 365-day weekday sweep
-
-## [v04.00r] — 2026-08-31 08:53:46 PM EST
-
-> **Prompt:** "Picking up from my \"Morning Digests footer phase 1\" session, check how Monday's scheduled Scraper run went:
->
-> * Jonyang92@gmail.com (admin) received three different emails (see first attached screenshot): one for Saturday, Sunday, and Monday. Regardless of whether or not I generated Editions over the weekend, the Monday routine should not email out the weekend Editions.
-> * jymiasole01@gmail.com (analyst) received four different emails (see second attached screenshot): A BESS Edition from Saturday and Monday and an AIDC Edition from Saturday and Monday. This makes me feel like it only sent out the Saturday Edition because I generated one over the weekend. However, these weekend Editions should not be sent out on Monday.
-> * All three Monday Editions had over 30 relevant articles over the weekend. Several of them were from different news sources covering the same topic (Microsoft's DataOne AI data center caught using unpermitted turbines, Vertiv's Q1'26 Fiscal Results, etc). Do you have any good ideas on how we can group articles from different sources covering the same topic together and just show the most reliable source (based on source stats)? I think it's possible that it's normal for Monday digests to have 30+ relevant articles, while normal weekday digests have about 12-15 relevant articles, so there may be no real issues with Scraper."
-
-### Fixed
-
-The **Monday 2026-08-31 06:00 ET run — the first unattended one — worked**; the delivery gate around it did not. Verified against the admin's mailbox: the Saturday (No. 002), Sunday (No. 003) and Monday (No. 004) editions were all sent between 07:01:56 and 07:01:59 AM EDT, i.e. by a single delivery pass, not by three.
-
-Root cause: `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` (Phase 2, v03.9xr) widened the candidate set from "dated today" to "dated within three days and undelivered" to end a silent midnight give-up. That widening **split the weekday rule in two without anyone noticing**, because before it the two halves could not disagree — the only candidate was today's row, so a weekday `now` implied a weekday edition. `scDigestDeliverPending_` asks "is today a run day?" and always did; nothing asks "is the EDITION for a run day?". The weekend's manual builds were undelivered (the pass returns early on Sat/Sun), still inside the window on Monday, and mailed alongside Monday's own.
-
-#### `Scraper.gs` — v01.91g
-
-- `scIsoDayOfDateKey_(key)` — ISO day-of-week for a `yyyy-MM-dd` issue key. Deliberately **not** `new Date(key)` reformatted through `SCRAPER_DIGEST_TZ`: that string parses as UTC midnight, which in a western timezone is the previous calendar day, so a Saturday row would have read as Friday and passed the new gate. The y/m/d go through `Date.UTC` and the weekday is taken in the same frame — pure, node-testable, DST-proof. Returns `0` for an unparseable key
-- `scDigestDeliverableDate_(dateKey)` — the edition's own day against `SCRAPER_DIGEST_RUN_DAYS`; an unparseable key returns `true` so unreadable rows behave exactly as before
-- **Off-day gate in `scDigestDeliverPending_`**, applied in both the grouping loop (an off-day row can never become the `chosen` row) and the send loop. Honours `opts.force` the same way the existing hour and weekday gates do
-- Off-day rows are **stamped `'off-day'`** in the Delivered column rather than skipped, matching the `'superseded'` / `'no-recipients'` pattern — an unstamped row is reconsidered by every hourly tick for the rest of the window, and the cell should say why it never went out
-
-**The three-day window is kept, deliberately.** It is what carries a missed *Friday* edition to Monday's pass, which is the longest gap the weekday schedule can open and the exact silent-give-up it was added to prevent. Friday is a run day, so that rescue is untouched. The rule the window actually needed was narrower than it: an edition mails when **both** the day it is for and the day we are on are run days — only the second half was ever checked.
-
-**Weekend builds are not stranded.** They are stored, numbered, archived and visible in the UI, and `emailLatestDigest` (the developer's "email me the latest") reads the newest row directly without consulting the Delivered column — so a weekend edition can still be sent by hand on demand. Only the scheduled weekday mailing excludes them.
-
-### Changed
-
-- The stale rationale at `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` ("a weekend manual build" listed as a case the window exists to rescue — the behavior now removed) and the `scDigestDeliverPending_` header comment both rewritten to record the two-day-questions split, so the next reader does not re-derive the same bug
-
-### Verified
-
-- `node --check` clean; `scripts/check-gas-inner-scripts.js` clean (8 files, 76 blocks)
-- Ad-hoc node harness over the two extracted helpers: the four dates in evidence (Fri 08-28 deliverable, Sat 08-29 and Sun 08-30 not, Mon 08-31 deliverable), both 2026 US DST boundaries, unparseable keys, and a 365-day sweep of 2026 cross-checked against the platform's own weekday — all pass
-
-## [v03.99r] — 2026-08-31 05:18:48 AM EST
-
-> **Prompt:** "Picking up from my recent \"BESS/AIDC Phase 5 learning-layer unification\" session, before building Classroom V1, see the attached screenshot and fix the analyst-level users being able to access Network and Relationships in dossiers. I thought we changed that to Admins + Contributors only."
-
-### Changed
-
-Phase 6 **C0's first slice built ahead of the Classroom scaffold** — the Profiler access retune approved in the v03.98r design gate (`PHASE6-CLASSROOM-DESIGN.md`) but not yet coded. The developer's screenshot was correct behavior, not a regression: `OV_ROLE_CAPS` carried no `network` capability at all, so the Relationships tab and `#network` explorer were ungated for every signed-in tier.
-
-#### `Profiler.html` — v01.75w
-
-- `OV_ROLE_CAPS` gained four capabilities — `network`, `coverage`, `study`, `compare`. New matrix: admin all; contributor loses `fieldNote`/`versions`/`reports`/`style`; analyst additionally loses `guidance`/`network`/`coverage`/`export` (keeps `study` + `compare`); viewer empty
-- **One capability, two doors** — `network` gates both `ovNetworkBtnShow()` and the per-dossier Relationships tab (`paneFor('rels')` is now inside the `ovCan('network')` branch, so an ungated tier gets no tab rather than an empty one). They cannot drift apart
-- `ovDeniedView(main, what)` added: `ovRenderNetwork()` and `ovRenderCompare()` re-check their capability, so a bookmarked `#network` / `#compare/…` is turned away instead of trusting the hidden entry point
-- Coverage 📰 button wrapped in `ovCan('coverage')`; Study guide fetch wrapped in `ovCan('study')`; roster compare chip wrapped in `ovCan('compare')` and given `id="ov-cmp-chip"` so the verifier can probe it
-- Coverage overlay now renders `ROLE_DENIED` as "available to contributors and administrators" rather than falling through to the generic unavailable text
-- Three stale "ungated / every signed-in tier" comments corrected — they were the standing record of the old policy
-
-#### `Profiler.gs` — v01.30g
-
-- `COVERAGE_ROLES` + `coverageAllowed_()` added; `guidanceAllowed_`/`coverageAllowed_` now share a `roleAllowed_(sess, roles)` helper
-- `handleNewsOp_` captures the validated session and returns `ROLE_DENIED` for tiers outside `COVERAGE_ROLES`. **This is the one real boundary in the retune** — the corpus reaches the browser only through this proxy. The graph, study guides and compare read public Pages JSON, so their gates stay app-experience gates (the M3 data-relocation note in the Role + Access matrix comment)
-
-#### `scripts/verify-profiler-roles.py`
-
-- `EXPECT` extended from five surfaces to ten (adds `network`, `relTab`, `coverage`, `study`, `compare`); `CAPS` tuple drives the assertion loop so a future surface is one edit
-- Probe reads `ov-network-btn`, `ov-tab-rels`, `ov-cov-btn`, `ov-study-btn` on the dossier and `ov-cmp-chip` on the roster load (the compare chip is roster-only — probing it on the dossier would have been a silent no-op assertion)
-- **Deep-link assertions added** — walks `#network` and `#compare/zhonhen,abb` per tier and fails in both directions: a denied tier that renders, and an allowed tier that gets denied
-- GAS stub now mirrors `handleNewsOp_`'s tier check; docstring notes why zhonhen is the probe company (has a study guide *and* 9 graph edges, so every column is a live assertion)
-- Run clean: all four tiers, progress isolation, and the 88-dossier specs audit
-
-#### Documentation
-
-- `.claude/rules/profiler-app.md` — Role + Access matrix rewritten for the retune, including the one-capability-two-doors rule, the deep-link re-check, and which gates are real boundaries vs app-experience gates
-- `repository-information/PHASE6-CLASSROOM-DESIGN.md` — retune section marked **BUILT**, with a status note recording what shipped and that the rest of C0 (Classroom scaffold, cross-links) remains
-- `live-site-pages/html-changelogs/Profilerhtml.changelog.md` hit its 50-section cap, so the oldest date group (2 sections dated 2026-08-13) rotated to the archive with commit-SHA enrichment. Active file now at `Sections: 49/50`
-
-## [v03.98r] — 2026-08-31 03:51:22 AM EST
-
-> **Prompt:** "start the phase 6 design conversation"
-
-The Phase 6 Classroom design gate, held and closed: four decision points put to the developer with recommendations, their answers reasoned through (including a reversed form-factor recommendation under new ecosystem context), and the approved design written as the executable spec for the build sessions.
-
-### Added
-- **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — the approved Phase 6 spec: Classroom as its **own app** (`Classroom.html` + `Classroom.gs`, federated via Pages data + token-gated routes — recommendation reversed from "Profiler mode" once the developer stated the growing-ecosystem/quality-over-economy context); audience admin/contributor/analyst (viewer excluded); "Everything" content under the **provenance-gating rule** (a lesson inherits the strictest gate of its inputs; field notes never become content); the approved **Profiler analyst-tier retune** (loses Relationships/Network, Coverage with a real server-side check, and Export; viewer strict dossier-only) executing as C0's first slice; phase plan C0–C6 with **v1 = C0–C2** (scaffold + learning core + scheduled curriculum pipeline with weekly briefing lessons and freshness deltas); **C3 — Guidance homecoming** (developer-proposed migration of Industry Guidance from Profiler.gs to Classroom, with the full migration checklist: ops, Admin lens re-hosting, mentions route, progress-tick export/import, Routine + rules re-pointing); C4 drills, C5 sales simulations, C6 team layer gated on a team existing; in-app runtime Q&A stays deliberately deferred
-- **README tree** — entry for the new spec doc
-

@@ -1,0 +1,394 @@
+{
+ "schemaVersion": 2,
+ "slug": "ls-energy-solutions",
+ "title": "LS Energy Solutions — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: certification is permission, not praise",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "Fourth guide in the integrator course. The cell is bought, the box is designed, the software works. This guide answers the question that decides whether any of it can be sold: **who has to agree, and what do they need to see?**",
+    "The framing to abandon at the outset is that certification is a quality badge — a gold star a good product earns and a bad one does not. It is closer to a **licence**. A product without the right paper cannot be installed in a given jurisdiction at all, regardless of how good it is; a product with it can, regardless of whether it is the best available. Certification is a gate through a door, and the door is a market.",
+    "Scope. The **physics of battery fire** — thermal runaway, propagation, deflagration, and why the industry tests at full scale — is taught in the storage guide of the bridge-power course, and this guide assumes it. What is taught here is the **system of documents and decisions** built on top of that physics: which standard produces what, who issues it, who accepts it, and why a certified product is certified only as configured.",
+    "The reason this belongs in an integrator course rather than a compliance appendix is that certification is one of the largest and least visible costs of the business. It is what makes the format race in the first guide expensive, it is what a design change in the third guide can silently invalidate, and it is a substantial part of what the last guide means by a barrier to entry."
+   ]
+  },
+  {
+   "id": "tested-vs-listed",
+   "title": "The distinction everything else hangs on",
+   "kind": "prose",
+   "ps": [
+    "There are two fundamentally different kinds of document in this field, and conflating them is the single most common error a newcomer makes.",
+    "A **test method** describes a procedure and produces **data**. It has no pass or fail. {{UL 9540A}} is the canonical example: cells, then modules, then a unit, then an installation are deliberately driven into thermal runaway and the resulting heat, gas and propagation behaviour are measured. The output is a report, and that report is an input to somebody else's decision — how far apart units must sit, what suppression is required, whether an indoor installation is acceptable. A vendor saying its product is 'UL 9540A tested' has said almost nothing until the report's contents are read.",
+    "A **listing** is a certification that a specific product, built to a specific design, conforms to a safety standard — and it produces **permission**. {{UL 9540}} is the system-level listing for a complete energy storage system, and {{UL 1973}} is its component-level counterpart for the battery itself. A listing is issued by a recognised body, is tied to a named model built at named factories, and is maintained by ongoing factory surveillance. It is the thing a fire official asks to see.",
+    "The practical consequence is sharp. **Test data without a listing does not get a product installed**, because the official is not being asked to evaluate a design — they are being asked to accept that someone competent already did. Conversely, a listing without strong test data may get a product installed but on unfavourable terms, because the spacing and suppression requirements will be set conservatively in the absence of evidence.",
+    "There is a third category worth naming to complete the picture: **installation standards**, which govern not the product but the site. {{NFPA 855}} is the leading example — it sets out spacing, enclosure, ventilation and suppression requirements for a storage installation and references the test method for its evidence. A product cannot comply with an installation standard; only an installation can. That is why an integrator's job does not end at the factory gate."
+   ],
+   "note": "A compact way to hold it: **the test method produces evidence, the listing produces permission, and the installation standard decides what the permission is worth on a particular piece of land.** All three are needed, and a vendor's certification page usually mixes them together without distinction."
+  },
+  {
+   "id": "the-standards-map",
+   "title": "What each document actually does",
+   "kind": "table",
+   "intro": "The names are opaque and the numbers are similar, which is most of why this area is confusing. Read the middle column rather than memorising the numbers.",
+   "cols": [
+    "Document",
+    "Kind",
+    "What it produces, and who asks for it"
+   ],
+   "rows": [
+    [
+     "{{UL 9540}}",
+     "System listing",
+     "Certification that a complete storage system — battery, conversion, controls, enclosure — conforms as an assembly. The system-level answer a permitting official expects"
+    ],
+    [
+     "{{UL 9540A}}",
+     "Test method",
+     "Measured fire and propagation behaviour at cell, module, unit and installation scale. Feeds spacing and suppression decisions; carries no pass or fail of its own"
+    ],
+    [
+     "{{UL 1973}}",
+     "Component listing",
+     "Certification of the battery itself for stationary use — construction, protection and abuse testing. Usually the first document a fire marshal asks for"
+    ],
+    [
+     "{{UL 1741}}",
+     "Component listing",
+     "Certification of the inverter or converter for grid interconnection. The demonstration document for the behaviour the interconnection standard requires"
+    ],
+    [
+     "{{IEEE 1547}}",
+     "Interconnection standard",
+     "The requirement itself: what a resource connected to a distribution system must do, including graded ride-through obligations. The utility's document, not the fire official's"
+    ],
+    [
+     "{{NFPA 855}}",
+     "Installation standard",
+     "Spacing, enclosure, ventilation, suppression and commissioning requirements for the installation. References the test method for evidence"
+    ],
+    [
+     "{{NFPA 68}} and {{NFPA 69}}",
+     "Installation standards",
+     "Two complementary answers to the gas problem: give an explosion a controlled escape route, or prevent the explosive atmosphere forming in the first place"
+    ],
+    [
+     "{{IEC 62619}}",
+     "International component standard",
+     "Safety of industrial lithium cells and batteries. The common passport for selling cells and batteries outside North America"
+    ],
+    [
+     "{{IEC 62933}}",
+     "International system standard series",
+     "Unit parameters, test methods, planning, safety and environmental requirements for storage systems. Cited by independent engineers when specifying acceptance testing"
+    ],
+    [
+     "{{UN 38.3}}",
+     "Transport test",
+     "The abuse-test sequence a lithium battery must pass before it may legally be shipped. Not a performance or installation document at all — a freight one"
+    ],
+    [
+     "{{CE marking}}",
+     "Declaration of conformity",
+     "The manufacturer's own declaration that the product meets the applicable European requirements, supported by testing. A declaration regime rather than a third-party listing regime"
+    ]
+   ],
+   "note": "Two structural observations. First, the North American system is built on **third-party listing** while the European system is built on **manufacturer declaration supported by evidence** — which is why the same product needs genuinely different work in each market rather than a translated certificate. Second, notice how many separate authorities are represented here: fire, electrical, utility, transport. They do not coordinate, and satisfying one says nothing about the others."
+  },
+  {
+   "id": "who-actually-decides",
+   "title": "Three different people, and only one of them can stop you",
+   "kind": "prose",
+   "ps": [
+    "It helps to be concrete about who is involved, because the roles are frequently confused.",
+    "**The standards body** writes the document. It has no authority over any project and never sees one. Its influence is entirely through whether others choose to cite it.",
+    "**The testing and certification body** evaluates a product against a standard and issues the listing. In North America these are the laboratories recognised for the purpose — a {{nationally recognized testing laboratory}} — and their mark is what appears on the equipment. Crucially, they also perform ongoing factory surveillance, because a listing certifies not a prototype but a production process that is supposed to keep producing the same thing.",
+    "**The {{AHJ}}** — the authority having jurisdiction — is the local official who actually enforces the code on this particular site. This is the one that can stop the project, and the registry definition puts the essential point plainly: codes are national, interpretations are local, and it is the interpretation that has to be satisfied.",
+    "That last sentence is the practical heart of the subject. Two neighbouring counties adopt the same edition of the same fire code and reach different conclusions about the same product, because one has an official with battery experience and the other does not. An official may accept a large-scale test report as sufficient evidence for tight spacing, or may require additional separation because they are not persuaded. They may require a hazard mitigation analysis, a specific emergency response plan, or a full-scale demonstration.",
+    "So the work an integrator actually does is not only obtaining certificates; it is **assembling a package that a non-specialist official can be convinced by**, and doing it hundreds of times in hundreds of jurisdictions. That package — listings, test reports, hazard analysis, response plan, commissioning records — is a product in its own right, and being good at producing it is a genuine competitive capability that never appears on a datasheet."
+   ]
+  },
+  {
+   "id": "the-gate-not-the-badge",
+   "title": "Why a certified product is certified only as configured",
+   "kind": "prose",
+   "ps": [
+    "A listing attaches to a **specific configuration built in a specific place**. That single fact generates most of the operational burden of this area.",
+    "Change the cell — even to a nominally equivalent one from another supplier — and the thermal, electrical and fire behaviour of the assembly may differ, so the evidence base has to be re-established. The first guide in this course counted the cost of a second source; a large share of that cost is here.",
+    "Change the module or enclosure geometry and the propagation behaviour changes, so the full-scale test that supports spacing may need repeating. Full-scale fire testing is deliberately destructive and expensive, and it takes months to schedule and execute — which is why the density race in the second guide is slower and more conservative than the underlying engineering would permit.",
+    "Change the protection software and the safety case has changed, because the safety case includes what the controls do. This is the point the software guide flagged: an over-the-air fleet update is a fine capability and a serious hazard, and the discipline that resolves it is formal {{change control}} — a defined process for deciding whether a proposed change affects certified characteristics, and for re-establishing evidence when it does.",
+    "Change the factory, and the surveillance basis has changed. A listing covers production at named sites, so moving a line is a certification event even when nothing about the design moved.",
+    "The strategic reading is uncomfortable but important. **Certification is a fixed cost that scales with product variety and with change frequency, not with volume.** That means it penalises small players and rapid iteration, and rewards firms with a large installed base over few configurations. It is one of the strongest forces pushing this industry toward a handful of standard products rather than tailored ones — and one of the reasons an established integrator's position is more durable than its technology alone would suggest."
+   ],
+   "note": "This is also why {{compartmentalization}} — separating the conversion equipment from the battery within a product, or breaking a system into independently contained units — recurs as a design theme. Beyond its safety merit, a design whose hazardous parts are cleanly bounded produces a smaller and more defensible safety case, and therefore a cheaper one to re-establish when something changes."
+  },
+  {
+   "id": "chemistry-and-the-paperwork",
+   "title": "Two chemistries, read only through the permitting lens",
+   "kind": "proscons",
+   "intro": "This is deliberately not a chemistry lesson — the cell-maker guides own that. What follows is the narrow question of how a chemistry choice changes the certification and permitting burden, because that is a consequence integrators live with and buyers rarely see.",
+   "cards": [
+    {
+     "t": "Lithium iron phosphate",
+     "adv": [
+      "A higher thermal-runaway onset temperature and a less energetic event give a more favourable large-scale test result, which tends to support tighter spacing",
+      "Lower energy per unit volume means less energy released in a worst case, which simplifies the hazard argument for constrained or indoor sites",
+      "The industry's convergence on it means officials have seen it before, and familiarity meaningfully reduces friction with a non-specialist reviewer",
+      "Its flat voltage behaviour, awkward for state estimation, is irrelevant to the safety case"
+     ],
+     "dis": [
+      "Lower energy density means more enclosures for the same project energy, so more units to space, permit and inspect",
+      "It is not automatically safe: propagation still has to be demonstrated at full scale for the specific geometry, and the gas produced is still flammable",
+      "Convergence means little differentiation — a favourable test result is expected rather than distinguishing"
+     ]
+    },
+    {
+     "t": "Nickel manganese cobalt",
+     "adv": [
+      "Higher energy density puts more energy in the same footprint, which can reduce the number of units to be permitted",
+      "Better cold-temperature behaviour and power capability, which matter for some duty profiles",
+      "A long qualification history in transport applications, so the component-level standards and test regimes are thoroughly established"
+     ],
+     "dis": [
+      "A lower runaway onset temperature and a more energetic event make the large-scale result less favourable, which typically translates into wider required spacing",
+      "More energy per enclosure means more energy in a worst case, so indoor and constrained-site arguments are harder to make",
+      "Reviewers who have adapted to one chemistry's evidence may apply extra scrutiny to the other, which is a real cost even when unjustified"
+     ]
+    }
+   ],
+   "note": "The lesson is not that one chemistry is right. It is that **chemistry choice is partly a permitting decision**, and it is taken years before any specific site exists. A supplier that selects for energy density is also selecting for a harder conversation with a fire official on every project for the next decade — and that conversation happens hundreds of times."
+  },
+  {
+   "id": "selling-into-three-markets",
+   "title": "The same product, three regimes",
+   "kind": "table",
+   "intro": "A product that is fully compliant in one region is not a product in another. The work does not translate, and the amount of it is one of the largest hidden barriers to a supplier expanding geographically.",
+   "cols": [
+    "Regime",
+    "How conformity is established",
+    "The characteristic obstacle"
+   ],
+   "rows": [
+    [
+     "North America",
+     "Third-party listing by a recognised laboratory, plus test reports, evaluated locally by the {{AHJ}} against an adopted installation standard",
+     "Local interpretation. The certificates are national but acceptance is decided county by county, so the same package succeeds and fails on the same evidence"
+    ],
+    [
+     "Europe",
+     "Manufacturer's declaration of conformity supported by testing to harmonised standards, with {{CE marking}} applied by the manufacturer",
+     "Grid connection. Compliance with the product regime says nothing about the national {{grid code}}, which is a separate and frequently witnessed compliance programme per country"
+    ],
+    [
+     "Other markets",
+     "Commonly a national {{type approval}} regime that recognises international standards, sometimes with additional local testing",
+     "Recognition gaps. A test report from one accredited laboratory may or may not be accepted, and where it is not, the testing is simply repeated"
+    ]
+   ],
+   "note": "Two consequences worth carrying forward. First, **grid-code compliance is a second certification track running in parallel with the safety one** — different authority, different evidence, often a witnessed demonstration on the actual site, and it is a common cause of late energisation delays. The behaviour it tests is the subject of the electrical-interface guide in the bridge-power course. Second, this is why a supplier's home-market strength transfers so poorly: the engineering crosses borders easily and the paperwork does not."
+  },
+  {
+   "id": "the-programme",
+   "title": "How long the paper takes",
+   "kind": "timeline",
+   "unit": "months from design freeze",
+   "intro": "An indicative sequence for taking a new configuration to the point where it can be sold and installed in a new market. Durations vary widely; the value of the chart is the **ordering and the dependencies**, which are what make certification a schedule risk rather than a cost line.",
+   "lanes": {
+    "product": "Product evidence",
+    "site": "Project-side acceptance"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "product",
+     "label": "Design freeze",
+     "sub": "Nothing can be certified while it is still moving. Fixing the configuration is the actual start of the programme, and it is also the moment the product stops improving."
+    },
+    {
+     "x": 2,
+     "lane": "product",
+     "label": "Component listings underway",
+     "sub": "Battery and conversion equipment evaluated against their component standards. These can run in parallel with each other."
+    },
+    {
+     "x": 5,
+     "lane": "product",
+     "label": "Large-scale fire testing",
+     "sub": "Deliberately destructive, scheduled against a laboratory's capacity, and not repeatable cheaply. Its report is the evidence for spacing."
+    },
+    {
+     "x": 8,
+     "lane": "product",
+     "label": "System listing issued",
+     "sub": "The assembly is certified as a whole, at named factories, with ongoing surveillance attached."
+    },
+    {
+     "x": 9,
+     "lane": "site",
+     "label": "First permitting package submitted",
+     "sub": "Listings, test reports, hazard mitigation analysis and emergency response plan, assembled for one jurisdiction's official."
+    },
+    {
+     "x": 12,
+     "lane": "site",
+     "label": "Local acceptance and conditions",
+     "sub": "The official may accept, or impose additional spacing, suppression or monitoring. This step is repeated per jurisdiction and its outcome is never fully predictable."
+    },
+    {
+     "x": 14,
+     "lane": "site",
+     "label": "Grid-code compliance demonstration",
+     "sub": "A separate authority testing entirely different behaviour, often witnessed on the energised plant. A frequent cause of late delay."
+    },
+    {
+     "x": 16,
+     "lane": "site",
+     "label": "Commissioning and acceptance testing",
+     "sub": "The installed system proved in its final configuration, closing the loop the factory test opened."
+    }
+   ],
+   "note": "The dependency that hurts is at the start. Everything downstream is gated by design freeze, so the last engineering improvement a team accepts pushes the whole chain — and in a market where cell formats turn over every two to three years, a product can reach the end of this sequence just as a denser competitor reaches the beginning of the next one. **That tension, more than any single cost, is what makes certification strategically decisive rather than administrative.**"
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the difference between a test method and a listing?",
+     "a": "A test method describes a procedure and produces data with no pass or fail — it is evidence for someone else's decision. A listing certifies that a specific product built to a specific design conforms to a safety standard, and it produces permission to install."
+    },
+    {
+     "q": "A vendor says its product is 'fire tested'. What have you actually learned?",
+     "a": "Almost nothing until the report is read. The test method has no pass or fail; what matters is what the measured propagation, heat and gas behaviour supports in terms of spacing, suppression and siting."
+    },
+    {
+     "q": "Why can a product never comply with an installation standard?",
+     "a": "Because installation standards govern the site — spacing, ventilation, suppression, commissioning — not the equipment. Only an installation can comply with one, which is why an integrator's obligation does not end at the factory gate."
+    },
+    {
+     "q": "Who can actually stop a project, and why is that person unpredictable?",
+     "a": "The authority having jurisdiction: the local official enforcing the code on that site. Codes are adopted nationally but interpreted locally, so the same evidence package can be accepted in one county and questioned in the next."
+    },
+    {
+     "q": "What does ongoing factory surveillance add to a listing?",
+     "a": "It certifies a production process rather than a prototype. The listing is a claim that the factory keeps building the same thing, so the certification body inspects to confirm it — which is why moving production is itself a certification event."
+    },
+    {
+     "q": "Name four changes that can invalidate a listing.",
+     "a": "A different cell, a change in module or enclosure geometry, a change to protection software, and a change of manufacturing site. Each alters something the certification was granted against."
+    },
+    {
+     "q": "Why does certification favour large incumbents?",
+     "a": "It is a fixed cost that scales with product variety and change frequency rather than with volume. A firm with many units of few configurations spreads it thinly; a small firm or a fast-iterating one pays it repeatedly."
+    },
+    {
+     "q": "How does chemistry choice become a permitting decision?",
+     "a": "Runaway onset temperature and the energy released in a failure differ by chemistry, which changes the large-scale test result, which changes the spacing an official will accept. That conversation then repeats on every project for the product's life."
+    },
+    {
+     "q": "Why does compliance work not transfer across regions?",
+     "a": "The regimes are structurally different — third-party listing evaluated by a local official in North America, manufacturer declaration supported by testing in Europe, national type approval elsewhere — and grid-code compliance is a separate track again. The engineering crosses borders; the evidence does not."
+    },
+    {
+     "q": "What is grid-code compliance, and why is it a common source of late delay?",
+     "a": "A separate compliance programme, run by the network authority rather than the fire or product authority, testing the plant's electrical behaviour at the connection point. It is often witnessed on the energised plant, so it happens at the very end of the schedule where there is no slack left."
+    },
+    {
+     "q": "Why is design freeze the most consequential date in a certification programme?",
+     "a": "Nothing can be certified while it is still changing, so the entire downstream sequence is gated by it. Accepting one more engineering improvement moves the whole chain, and in a market whose cell formats turn over every few years that delay can be worth more than the improvement."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "Which document produces permission to install rather than evidence about behaviour?",
+     "c": [
+      "The large-scale fire test method",
+      "The system-level product listing",
+      "The installation standard",
+      "The transport test sequence"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An official accepts a competitor's product at tighter spacing than yours despite similar hardware. What most likely explains it?",
+     "c": [
+      "The competitor's price was lower",
+      "The competitor's full-scale test data supports a stronger propagation argument",
+      "The competitor has more installed capacity",
+      "The official prefers that manufacturer"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An integrator moves final assembly to a new plant with no design change. What has happened to its certification?",
+     "c": [
+      "Nothing — the design is unchanged",
+      "The surveillance basis has changed, so it is a certification event",
+      "The listing lapses automatically",
+      "Only the transport documentation is affected"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why is a remote firmware update across an installed fleet a compliance risk?",
+     "c": [
+      "It may interrupt operation",
+      "Protection behaviour is part of the certified configuration, so a change to it alters the safety case",
+      "It requires the owner's consent",
+      "Networks are insecure"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A supplier selects a higher-energy-density chemistry. What permitting consequence follows?",
+     "c": [
+      "Fewer standards apply",
+      "More energy in a worst-case event, which typically means wider required spacing and harder indoor arguments",
+      "Transport testing is simplified",
+      "Grid-code compliance becomes unnecessary"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which pair are the two parallel compliance tracks a project must satisfy before it can operate?",
+     "c": [
+      "Product safety and grid code",
+      "Fire testing and transport testing",
+      "Component listing and system listing",
+      "Factory surveillance and commissioning"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Why does the certification burden push the industry toward a small number of standard products?",
+     "c": [
+      "Standards bodies require it",
+      "The cost scales with the number of configurations and the rate of change, not with units sold",
+      "Customers prefer identical products",
+      "Testing laboratories have limited capacity"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What is the practical product an integrator sells to a permitting official?",
+     "c": [
+      "The enclosure",
+      "An evidence package a non-specialist can be convinced by",
+      "A warranty",
+      "A grid-code certificate"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

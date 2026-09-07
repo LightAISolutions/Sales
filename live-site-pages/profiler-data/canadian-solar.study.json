@@ -1,0 +1,341 @@
+{
+ "schemaVersion": 2,
+ "slug": "canadian-solar",
+ "title": "Canadian Solar (e-STORAGE) — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the box is not packaging",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "Second guide in the integrator course. The first established what an integrator buys — cells it did not make, on a format ladder it does not control. This one is about the first thing it genuinely designs: **the enclosure, and the thermal system inside it**.",
+    "One neighbouring guide must be read alongside this one rather than repeated. The storage guide in the bridge-power course already sets out **what layers exist inside a containerised block** — cell, module, rack, conversion, thermal, controls — how a direct-current block differs from an integrated alternating-current one, and how to read the five headline datasheet numbers without being misled. That is the inventory. This guide is about the **design**: why the layers are arranged as they are, what the thermal system is actually trying to achieve, and which of the specifications on the back page are load-bearing.",
+    "The claim this guide argues is narrow and, once seen, hard to unsee: **an enclosure's job is not to hold the cells, it is to make them all the same temperature.** Every other requirement — weather, corrosion, altitude, seismic, noise, transport — is a constraint on how that is achieved, not a competing objective. Get that ordering right and the whole product architecture becomes legible."
+   ]
+  },
+  {
+   "id": "five-jobs",
+   "title": "What the enclosure is actually for",
+   "kind": "prose",
+   "ps": [
+    "A containerised storage unit is a **manufactured product that happens to be shipped as freight**, and that dual identity explains most of its design. It has five jobs, and they conflict.",
+    "**Hold.** Roughly forty tonnes of cells, structure and conversion equipment, arranged so the load paths reach the corner castings a crane and a truck expect. The cells themselves need compression — lithium cells swell measurably as they age, and the module structure must hold that force without either releasing contact pressure or crushing the cell.",
+    "**Protect.** Rain, dust, salt, insects, ultraviolet light, and whatever the site's ambient temperature does across twenty years. This is where {{ingress protection}} and {{corrosivity class}} ratings come from, and they are quoted separately for the enclosure and for the battery packs inside it, because the two live in different environments.",
+    "**Cool.** Remove the heat the cells and the conversion electronics make, and — much harder — remove it *evenly*. The next section argues this is the real objective.",
+    "**Contain.** If a cell fails, keep the event inside. That means barriers between modules, a route for vented gas that does not accumulate, and a demonstrated result at full scale. The certification guide in this course covers the standards; the physics is in the bridge-power storage guide.",
+    "**Travel.** The unit is built in one place, put on a truck and a ship, and lifted onto a foundation somewhere else. It has to survive road vibration, sea motion, crane loads and a temperature range in transit that may exceed its operating range — while carrying regulated dangerous goods, which the manufacturing guide takes up.",
+    "The conflicts are immediate. Sealing the box for ingress protection makes cooling harder. Packing cells tighter raises energy density and worsens the thermal path. Adding barriers for containment steals volume and adds weight against a transport limit. **Enclosure design is the arbitration between those five jobs, and each vendor's product is a different settlement of the same argument.**"
+   ]
+  },
+  {
+   "id": "the-real-objective",
+   "title": "The hottest cell sets the pace for all of them",
+   "kind": "prose",
+   "ps": [
+    "Here is the mechanism that makes thermal design the centre of the product rather than a service to it. Cells in a series string carry the same current, so they cycle identically — but they do not age identically, because ageing rate is strongly temperature-dependent. A cell a few degrees warmer than its neighbours loses capacity faster.",
+    "In a series string, **usable capacity is set by the weakest cell**. Charging stops when the first cell reaches its upper limit and discharging stops when the first cell reaches its lower limit, so the string delivers what its most degraded member can deliver, not the average. That is why a small persistent temperature difference compounds: the warm cell ages faster, becomes the limiting cell, and the whole string's capacity tracks it.",
+    "The design objective that falls out is **{{cell temperature spread}}** — the difference between the hottest and coldest cell in the system at any moment — not average temperature. A system running uniformly warm can outlive a system running cooler on average but with a wide spread, because the spread is what creates divergence and divergence is what ends the string.",
+    "This reframes cooling. The goal is not to remove heat quickly; it is to remove it **from every cell at the same rate**, which is a much stronger requirement. Heat is generated inside each cell in proportion to its current and internal resistance, and must travel out through the can to whatever is carrying it away. Anything that makes that path different for different cells — position in the airflow, distance from a coolant channel, contact quality against a cooling plate, proximity to the enclosure wall — becomes a permanent unfairness that the control software then has to manage for twenty years.",
+    "That is the honest reason the industry moved to {{liquid cooling}}. It is not primarily about efficiency, and the registry definition says so directly: liquid holds the spread between cells much tighter than moving air can, because a liquid carries far more heat per unit volume and can be routed to touch every module on a nearly identical path. Air has to be blown through a volume, and a volume always has a near end and a far end."
+   ],
+   "note": "Carry this into the next guide. Thermal uniformity and cell balancing are two attacks on the same enemy — **variance between cells** — one mechanical and one electronic. A product that is good at one and bad at the other does not get a good result, because the variance simply reappears in the other domain."
+  },
+  {
+   "id": "air-or-liquid",
+   "title": "Two ways to move the heat",
+   "kind": "proscons",
+   "intro": "The industry has effectively settled this argument for utility-scale storage, but the reasoning is worth holding rather than the conclusion — because the same trade-offs recur in every enclosure decision.",
+   "cards": [
+    {
+     "t": "Air cooling",
+     "adv": [
+      "Mechanically simple: fans, ducting and a conventional cooling unit, with no fluid to leak into an electrical enclosure",
+      "Fewer components that can fail wet, and maintenance that any HVAC technician can perform",
+      "Lower initial cost, and a failure mode that degrades gradually rather than stopping abruptly",
+      "Still the right answer where power density is low — short-duration or lightly cycled systems make little heat to move"
+     ],
+     "dis": [
+      "Air carries little heat per unit volume, so it must move fast and in large quantity, which costs fan power and makes noise",
+      "A temperature gradient along the flow path is unavoidable — the air is warmer when it reaches the last module than the first — so the {{cell temperature spread}} is structurally worse",
+      "The airflow must reach every cell, which forces spacing between modules and therefore lower {{energy density}} per enclosure",
+      "Dust and salt travel with the air unless filtered, and filters are a maintenance item that silently degrades cooling as they load"
+     ]
+    },
+    {
+     "t": "Liquid cooling",
+     "adv": [
+      "Far more heat per unit volume of coolant, so the same duty is handled with small channels instead of large ducts",
+      "Coolant can be routed so every module sees a similar inlet condition, which is the direct attack on temperature spread",
+      "Modules can be packed tightly because heat leaves through conduction to a plate rather than through an air gap — this is a large part of how enclosure capacity has risen",
+      "Lower auxiliary consumption for the same heat removed, so less of the stored energy is spent on keeping the store alive"
+     ],
+     "dis": [
+      "A fluid loop inside a high-voltage enclosure: pumps, hoses, fittings, a {{refrigerant}} circuit and the possibility of a leak onto electrically live parts",
+      "Coolant is a consumable with a service life — concentration, corrosion inhibitors and freeze protection all drift and need maintenance nobody performs unless it is scheduled",
+      "More components in the reliability chain, and a cooling failure is abrupt rather than gradual: without flow, a densely packed module has very little thermal inertia",
+      "Higher cost, and a repair that requires draining a section rather than swapping a fan"
+     ]
+    }
+   ],
+   "note": "Notice that the deciding argument is not efficiency but **uniformity**, and the second-order consequence is density: liquid cooling permits tight packing, tight packing raises enclosure capacity, and enclosure capacity is what the format ladder in the previous guide has been converting into megawatt-hours. The three are one system."
+  },
+  {
+   "id": "the-envelope",
+   "title": "Reading the environmental specification",
+   "kind": "table",
+   "intro": "The back page of a datasheet is a list of environments the product has been shown to survive. Each line exists because something failed once. What follows is what each is really protecting against, and the trap in reading it.",
+   "cols": [
+    "Specification",
+    "What it protects against",
+    "How it is commonly misread"
+   ],
+   "rows": [
+    [
+     "Operating temperature range",
+     "Ambient extremes at the site, and the point beyond which the cooling system can no longer hold the internal setpoint",
+     "As a guarantee of full performance across the whole range. It is not — above some threshold the system {{derating}}s, and the derate point, not the range end, is the number that matters for a hot site"
+    ],
+    [
+     "Altitude rating",
+     "Thinner air: reduced cooling capability for air-cooled components, and reduced dielectric strength so electrical clearances that were adequate at sea level are not",
+     "As a mountain-only concern. It also silently derates equipment on any high plateau site, and the derate applies to the conversion electronics as much as the battery"
+    ],
+    [
+     "{{ingress protection}} rating",
+     "Solid objects and water reaching the interior — the first digit is dust, the second is water",
+     "As a single system property. The enclosure and the packs inside it usually carry different ratings, and the meaningful one depends on whether the failure being considered is external weather or an internal coolant leak"
+    ],
+    [
+     "{{NEMA enclosure rating}}",
+     "The same idea in the North American convention, with additional attention to ice, corrosion and outdoor use",
+     "As interchangeable with the international rating. They overlap but do not map cleanly, and permitting officials tend to ask for the one their code cites"
+    ],
+    [
+     "{{corrosivity class}}",
+     "Atmospheric corrosion of the enclosure and its fixings — coastal salt, industrial pollution, humidity",
+     "As paint quality. It is a rated corrosion category, and a coastal site specified for an inland class will show fastener and hinge failures long before anything electrical"
+    ],
+    [
+     "Humidity range and condensation control",
+     "Moisture condensing on cold surfaces inside the enclosure when warm damp air meets a cooled interior — the classic cause of tracking and corrosion on live parts",
+     "As covered by the ingress rating. It is not: a sealed box can still condense internally, which is why coolant supply temperature is held above the interior dew point"
+    ],
+    [
+     "{{seismic qualification}}",
+     "Ground motion, both for the enclosure's own survival and for the mounting of heavy internal assemblies",
+     "As a formality. It is a design case that drives internal bracing and anchor design, and it varies by jurisdiction in a way that can make the same product non-compliant across a state line"
+    ],
+    [
+     "{{sound power level}}",
+     "Noise from fans, pumps and conversion equipment, measured at a stated distance",
+     "As a comfort item. It is frequently a **permitting condition** near occupied land, and a system that is compliant only with cooling at part load is not compliant on the hottest afternoon"
+    ]
+   ],
+   "note": "The common thread is that most of these are *rated* conditions, not *guaranteed operating* conditions — and the registry's definition of derating names that confusion as one of the most common causes of a capacity shortfall that presents to the owner as an equipment fault."
+  },
+  {
+   "id": "where-the-losses-go",
+   "title": "The energy the box spends on itself",
+   "kind": "bars",
+   "unit": "% of energy through the system",
+   "intro": "A storage system returns less energy than it takes in, and the shortfall has several distinct causes. The illustrative split below is for a well-designed liquid-cooled utility system over a full charge-discharge cycle at moderate ambient temperature; the point is the **shape**, not the precise values, since every one of these moves with duty and climate.",
+   "items": [
+    {
+     "label": "Energy returned to the grid",
+     "v": 92
+    },
+    {
+     "label": "Power conversion losses (both directions)",
+     "v": 3
+    },
+    {
+     "label": "Losses inside the cells and interconnections",
+     "v": 2.5
+    },
+    {
+     "label": "Thermal management and controls — the parasitic load",
+     "v": 2.5
+    }
+   ],
+   "note": "Two lessons. First, {{round-trip efficiency}} is a **system** property, not a cell property: a superb cell inside a box that spends heavily on cooling delivers a mediocre number. Second, the {{parasitic load}} is the one line the enclosure designer directly controls, and it moves hard with climate — a system in a hot desert can spend several times what the same system spends in a temperate one. That is why efficiency is quoted at stated conditions, and why comparing two vendors' headline figures without their conditions compares climates rather than products."
+  },
+  {
+   "id": "monolith-or-modules",
+   "title": "One big box, or several small ones",
+   "kind": "proscons",
+   "intro": "There is a genuine, unresolved architectural fork in the industry: keep the twenty-foot shipping container as the unit of product, or break the product into smaller repeated units on skids. Both are shipping in volume.",
+   "cards": [
+    {
+     "t": "The monolithic container",
+     "adv": [
+      "One lift, one foundation, one set of external connections per unit of energy — the site work per megawatt-hour is lowest",
+      "The whole world's freight system already handles this shape, so transport is a solved problem with known costs",
+      "Shared thermal and fire systems across the whole unit, so the fixed overhead of those systems is spread over more energy",
+      "Fewer external interfaces means fewer places for water and dust to get in, and fewer field terminations to make correctly"
+     ],
+     "dis": [
+      "Weight rises with every capacity increase until road limits bind, and the limits differ by country — a product legal in one market may need de-rating or partial shipping in another",
+      "A single failure can take a large block of energy out of service, and repairs happen inside a live enclosure",
+      "Capacity comes in coarse steps, so odd project sizes strand capital",
+      "The internal layout is fixed at design time; adapting to a different cell format usually means a new enclosure"
+     ]
+    },
+    {
+     "t": "{{modular skid}} architecture",
+     "adv": [
+      "Each unit is lighter, so road transport is easier and the same product ships into markets with tighter axle limits",
+      "Failures and maintenance are confined to one small unit while the rest of the block keeps operating",
+      "Fine granularity: a project scales in small steps, and the same modules serve very different project sizes",
+      "Barriers between independent units are structurally easier to argue than barriers inside one enclosure, which can help the fire case"
+     ],
+     "dis": [
+      "More units means more foundations, more terminations, more cable and more installation hours per megawatt-hour",
+      "Thermal and fire-protection overhead is repeated per unit rather than shared, so the fixed cost per megawatt-hour is higher",
+      "More external interfaces to seal and maintain, and a larger overall footprint for the same energy",
+      "Commissioning is longer because there are simply more things to test and connect"
+     ]
+    }
+   ],
+   "note": "The choice is not really technical — it is a bet about **where the customer's cost actually sits**. If installation labour and land dominate, the monolith wins; if transport limits, serviceability and project-size flexibility dominate, the modular approach does. Both bets are being placed simultaneously by serious companies, which is usually a sign that the answer is genuinely market-dependent."
+  },
+  {
+   "id": "density-is-a-siting-argument",
+   "title": "Why energy per container becomes megawatt-hours per acre",
+   "kind": "prose",
+   "ps": [
+    "The format ladder in the previous guide pushed energy per enclosure up sharply. It is worth following that number all the way to the thing a project actually cares about, because the chain is not as direct as it looks.",
+    "Start with energy per enclosure. Divide the project's energy by it and you get a unit count. Multiply the unit count by the footprint of one unit **plus its required separation from its neighbours** and you get land area. That separation is the step most people skip, and it is not an engineering preference — it comes from fire-protection requirements, which are informed by full-scale test data on that specific product.",
+    "So **megawatt-hours per acre is jointly determined by the enclosure designer and the fire test**, and a denser box with weaker propagation test data can lose to a less dense box with stronger data. The certification guide in this course takes up why that data is expensive and why a design change re-opens it.",
+    "The chain continues past land. Fewer, denser units mean fewer foundations, less direct-current cabling, fewer terminations, fewer craned lifts and fewer commissioning hours — and those balance-of-plant items are a large share of an installed system's cost. This is why an integrator can honestly claim a project-level saving from a denser product even when its price per kilowatt-hour is no better than a rival's.",
+    "It also has a limit that is easy to miss. Denser packing concentrates heat, which raises the cooling duty and the {{parasitic load}}, which lowers delivered {{round-trip efficiency}}, which costs the owner energy every single cycle for twenty years. There is a point at which additional density is bought with efficiency the owner would rather have kept — and because density is a capital cost and efficiency is an operating cost, the two are traded through the owner's cost of capital rather than through any engineering judgment the vendor can make on their behalf."
+   ],
+   "note": "This is the guide's closing point and the reason the enclosure matters strategically. **The box does not store energy; it decides how much land, how much construction labour and how much lifetime efficiency the stored energy costs.** Those three are where an integrator's design work actually shows up on a project's balance sheet."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why is cell temperature spread a more important design target than average cell temperature?",
+     "a": "Cells in a series string share the same current, so the string's usable capacity is set by its weakest member. A cell that is persistently warmer ages faster, becomes that weakest member, and drags the whole string's capacity down — so the difference between cells matters more than the average."
+    },
+    {
+     "q": "State the real reason liquid cooling displaced air cooling in utility storage.",
+     "a": "Uniformity, not raw heat removal. Air must be blown through a volume and is warmer at the far end than the near end, which builds in a temperature gradient; liquid carries far more heat per unit volume and can be routed so every module sees a similar inlet condition."
+    },
+    {
+     "q": "An enclosure is rated to +55 °C. Why is that not the temperature at which it delivers full power?",
+     "a": "Because a rating states survival and operation, not guaranteed performance. Above some lower threshold the system derates — reducing power or capacity — and it is that derate point, not the range end, that determines what a hot site actually gets."
+    },
+    {
+     "q": "Why does altitude appear on a storage datasheet?",
+     "a": "Thin air both cools less effectively and insulates less effectively. Air-cooled components lose capability and electrical clearances that were adequate at sea level are no longer sufficient, so the whole system derates with height."
+    },
+    {
+     "q": "How can a sealed enclosure still suffer internal condensation?",
+     "a": "Sealing keeps external water out but does not prevent moisture already inside from condensing when it meets a surface below the internal dew point — typically a cooled component. Coolant supply temperature is therefore held above that dew point."
+    },
+    {
+     "q": "Give the chain from a higher-capacity cell to a smaller project footprint.",
+     "a": "A bigger cell puts more energy in an enclosure; more energy per enclosure means fewer enclosures for the same project; fewer enclosures means less land, fewer foundations, less cabling and fewer installation hours. The chain is only valid if the required separation between enclosures does not grow at the same time."
+    },
+    {
+     "q": "Why is round-trip efficiency a system property rather than a cell property?",
+     "a": "The energy that fails to come back is lost in conversion, in the cells and interconnections, and in the thermal management and controls that keep the system alive. Only the first two are about the cell; the third is a direct consequence of enclosure and thermal design, and it moves strongly with climate."
+    },
+    {
+     "q": "What is the central trade in choosing between one large container and several small skids?",
+     "a": "Installation and land cost against transport, serviceability and granularity. The monolith minimises site work and shares its thermal and fire overhead; the modular approach ships more easily, fails in smaller pieces and scales in finer steps, at the price of repeating that overhead per unit."
+    },
+    {
+     "q": "Why can a denser enclosure lose a siting comparison to a less dense one?",
+     "a": "Because the land a project needs depends on enclosure footprint plus required separation, and separation is set by fire-protection requirements informed by that product's own full-scale test results. Better test data can buy tighter spacing and beat a higher energy figure."
+    },
+    {
+     "q": "What limits how far density can profitably be pushed?",
+     "a": "Packing more energy into the same volume concentrates heat, which raises the cooling duty and the parasitic load, which lowers delivered round-trip efficiency for the whole life of the asset. Beyond some point the capital saved on land and installation is bought with energy the owner loses every cycle."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "Two enclosures hold the same energy. One runs all cells at 32 °C; the other averages 28 °C but with a 9 °C spread between hottest and coldest. Which is likely to retain capacity better over twenty years?",
+     "c": [
+      "The cooler average, because ageing is temperature-driven",
+      "The uniform one, because divergence between cells is what limits a series string",
+      "They are equivalent, since the averages differ by only 4 °C",
+      "It depends entirely on the chemistry"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which enclosure specification most often turns out to be a permitting condition rather than a comfort item?",
+     "c": [
+      "Ingress protection rating",
+      "Sound power level",
+      "Altitude rating",
+      "Corrosivity class"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A system's parasitic load is unusually high. Which explanation is most consistent with the rest of the design?",
+     "c": [
+      "The cells have poor internal resistance",
+      "The site is hot and the system is densely packed, so thermal management is working hard",
+      "The conversion equipment is oversized",
+      "The enclosure is rated for a high altitude"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What does an ingress protection rating on the battery packs, quoted separately from the enclosure's, most usefully tell you?",
+     "c": [
+      "That the enclosure rating is unreliable",
+      "How the packs would fare against an internal event such as a coolant leak, not just external weather",
+      "That the product is certified for outdoor use",
+      "That the packs can be installed without an enclosure"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does moving to modular skids raise the cost per megawatt-hour of thermal and fire protection?",
+     "c": [
+      "Smaller units need proportionally more cooling",
+      "The fixed overhead of those systems is repeated in every unit instead of shared across one large one",
+      "Skids cannot use liquid cooling",
+      "Fire codes require more suppression for smaller units"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner in a hot climate is choosing between two systems with identical quoted round-trip efficiency. What should they check first?",
+     "c": [
+      "The cell manufacturer",
+      "The ambient temperature at which each efficiency figure was measured",
+      "The warranty length",
+      "The enclosure's ingress rating"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which statement best captures the enclosure's strategic contribution to a project?",
+     "c": [
+      "It stores the energy safely",
+      "It determines how much land, construction labour and lifetime efficiency the stored energy costs",
+      "It protects the cells from weather",
+      "It sets the system's power rating"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

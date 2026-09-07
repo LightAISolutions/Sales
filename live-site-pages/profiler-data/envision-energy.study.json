@@ -1,0 +1,324 @@
+{
+ "schemaVersion": 2,
+ "slug": "envision-energy",
+ "title": "Envision Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the part of the product nobody can see",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "Third guide in the integrator course. The cell is bought; the box is designed. This guide is about the layer that decides whether the two behave — **the control software** — and about why, in an industry where competitors buy the same cells and ship the same twenty-foot enclosures, the software is where the difference actually lives.",
+    "Scope, carefully. This guide covers the {{BMS}} and the integrator's own supervisory stack up to the plant boundary. It does **not** cover three neighbouring subjects that other guides own. **How a hybrid site decides which of several machines runs** — engines, turbines, storage, grid — belongs to the storage guide in the bridge-power course. **How a battery decides what to bid into a market** belongs to the merchant-storage dispatch guide. **Grid-forming behaviour and what the network requires at the connection point** belongs to the electrical-interface guide. Those are the layers above and outside; this one is about the layer that has to be right before any of them can be trusted.",
+    "The single idea to carry through: **the two numbers this software exists to produce cannot be measured.** State of charge and state of health are estimates, derived indirectly, and every commercial promise the last two guides in this course describe is written against them."
+   ]
+  },
+  {
+   "id": "the-measurement-problem",
+   "title": "You cannot measure how full a battery is",
+   "kind": "prose",
+   "ps": [
+    "This is the fact that organises everything else. A fuel tank can be measured — put a float in it and read the level. A battery has no equivalent: the quantity of lithium sitting in one electrode is not directly observable from outside the can. What is observable is voltage, current and temperature. {{state of charge}} and {{state of health}} must be **inferred** from those three.",
+    "There are two classical ways to do it, and both are flawed in complementary ways.",
+    "**{{coulomb counting}}** integrates current over time: measure the current flowing in and out, add it up, and you know how much charge has moved. It is accurate over short intervals and it works while the battery is busy — but it is an integral, so the small bias in any current sensor accumulates without bound. A tiny persistent error becomes a large error over days of continuous operation, and nothing in the arithmetic ever corrects it.",
+    "**{{open-circuit voltage}}** exploits the fact that a cell at rest settles to a voltage that maps to its state of charge. That gives an absolute reading rather than an accumulating one — but the cell has to be genuinely at rest, which takes time, and lithium iron phosphate has an unusually **flat** voltage curve across the middle of its range. A very small voltage difference corresponds to a large charge difference, so exactly the chemistry that dominates grid storage is the chemistry where this method is weakest, and precisely in the middle of the operating window where the plant spends most of its life.",
+    "So neither works alone. Real systems fuse them: coulomb counting for the moment-to-moment answer, corrected whenever conditions permit a voltage-based fix, with a model of the cell's behaviour across temperature and age tying the two together. The quality of that fusion is a genuine engineering differentiator, and it is invisible on any datasheet.",
+    "{{state of health}} is harder still, because it is the slow signal underneath the fast one. It has to be extracted from the difference between how the cell behaves now and how the characterisation model said a new cell behaves — separating true capacity loss from temperature effects, from rate effects, and from the estimator's own error. And it only ever moves in one direction, so an estimator that drifts optimistically will not be contradicted by the data until the plant fails a performance test."
+   ],
+   "note": "Why this is not an academic point: a state-of-charge estimate that is a few percent optimistic means the plant occasionally cannot deliver what it offered, which is a contract breach. A state-of-health estimate that is a few percent optimistic means the supplier discovers late that it owes an {{augmentation}} it did not reserve for. Estimation error converts directly into money, in both directions."
+  },
+  {
+   "id": "the-bms-ladder",
+   "title": "The management system is a hierarchy, not a box",
+   "kind": "table",
+   "intro": "A {{BMS}} is usually drawn as one component. It is really three or four nested layers, each with its own timescale, its own authority and its own failure consequence. Reading it as a ladder makes the architecture obvious.",
+   "cols": [
+    "Level",
+    "What it measures and does",
+    "What its failure looks like"
+   ],
+   "rows": [
+    [
+     "Cell and module level",
+     "Voltage on every cell or small group, temperature at many points, and the balancing circuitry. Reports upward; acts only within narrow limits",
+     "Silent and dangerous — a lost sense wire means a cell is no longer being watched, and the layer above may not know the difference between a healthy reading and no reading"
+    ],
+    [
+     "Rack or string level",
+     "Aggregates the modules in one series string, measures string current and insulation resistance, and commands the {{contactor}}s that connect or isolate that string",
+     "Loud and containable — a string drops out and the plant loses a fraction of capacity, which is the outcome the architecture is designed to produce"
+    ],
+    [
+     "System level",
+     "Combines all strings into one reported state of charge, health and available power and energy; enforces the operating envelope; arbitrates between strings that disagree",
+     "Expensive rather than dangerous — the plant runs, but its reported numbers stop matching reality and every decision made on them is wrong"
+    ],
+    [
+     "Protection layer",
+     "Independent limits on voltage, current and temperature that act regardless of what the software above believes, usually with hardware backup",
+     "Catastrophic if absent. This is the layer that must work when the estimation layer is confidently mistaken, which is exactly the condition it exists for"
+    ]
+   ],
+   "note": "The architectural principle is worth naming: **authority increases downward, and scope increases upward.** The lowest layer knows about one cell and can do very little; the highest layer knows about everything and, deliberately, cannot override a protection limit. Every layer's failure mode differs, which is why a supplier's answer to 'what happens when this layer fails' is more informative than any accuracy claim."
+  },
+  {
+   "id": "balancing",
+   "title": "Two ways to stop the cells diverging",
+   "kind": "proscons",
+   "intro": "Cells in a series string never stay identical. Small differences in capacity, internal resistance and self-discharge mean some reach full or empty before others, and because the string stops at the first cell to hit a limit, divergence directly costs usable energy. {{cell balancing}} is the electronic counter-measure, and there are two families.",
+   "cards": [
+    {
+     "t": "Passive balancing",
+     "adv": [
+      "Simple and cheap: a resistor across each cell, switched on to bleed charge from whichever cells are running ahead until the laggards catch up",
+      "Very few components per cell, high reliability, and a failure that is usually benign — a channel that stops working simply stops balancing that cell",
+      "Well understood, easy to qualify, and adequate whenever the spread it must correct is small",
+      "Because it can only remove charge, its behaviour is trivially predictable and it cannot move energy into the wrong place"
+     ],
+     "dis": [
+      "It works by wasting energy as heat, so every gram of balancing is a small permanent efficiency loss",
+      "The heat is generated exactly where heat is least welcome — next to the cells whose temperature spread the enclosure design has been fighting",
+      "Balancing current is small, so correcting a large divergence takes a very long time and may never catch up with a genuinely mismatched cell",
+      "It levels down to the weakest cell rather than lifting it, so the string's capacity converges on its worst member"
+     ]
+    },
+    {
+     "t": "Active balancing",
+     "adv": [
+      "Moves charge from stronger cells to weaker ones rather than discarding it, so the energy stays in the system",
+      "Can correct a much larger divergence in a given time, which matters as cells age and spread widens",
+      "Generates far less heat, so it does not fight the thermal design",
+      "Can meaningfully extend usable capacity late in life, when the difference between the average cell and the weakest one is largest"
+     ],
+     "dis": [
+      "Substantially more components per cell — converters, inductors or capacitors, and their control — which is cost and a larger failure surface",
+      "The failure modes are less benign: circuitry capable of moving charge between cells is capable of moving it the wrong way if it misbehaves",
+      "Harder to qualify and to prove safe, because it introduces a new energy path that did not previously exist inside the pack",
+      "Its advantage is largest at end of life, which is the hardest place to demonstrate value at the point of sale"
+     ]
+    }
+   ],
+   "note": "Notice the connection to the previous guide. Balancing and thermal uniformity are two attacks on the **same enemy — variance between cells.** Balancing corrects the electrical symptom; the cooling design attacks the thermal cause. Spending heavily on one while neglecting the other does not work, because the variance simply reappears through the neglected route."
+  },
+  {
+   "id": "the-weakest-cell",
+   "title": "Why usable capacity is a distribution, not a number",
+   "kind": "prose",
+   "ps": [
+    "Put the last two sections together and a useful mental model appears. A system's cells are not one number; they are a **distribution** — a spread of capacities and resistances around a mean, which widens with age.",
+    "What the plant can actually deliver is set by the tails of that distribution, not its centre. Charging halts when the first cell reaches its ceiling; discharge halts when the first reaches its floor. The energy between the weakest cell's limits and the average cell's limits is real, present in the system, and unreachable.",
+    "That gives a clean way to think about the whole product. **Everything the integrator designs is an attempt to keep that distribution narrow.** Cell qualification tries to buy cells that start narrow and stay narrow. Manufacturing tries to avoid widening it during assembly. Thermal design tries to stop the environment widening it. Balancing tries to correct it electronically. The control software's job is to know where the tails are and to operate the plant so as not to make them worse.",
+    "The last part deserves attention because it is the least obvious. **How a plant is operated changes how fast the distribution widens.** Holding cells near full or empty for long periods accelerates ageing; so does cycling at high rate, and so does running warm. A control system that understands this can trade a small amount of today's availability for a slower widening — resting at a mid state of charge when nothing is required, tightening the operating window in hot weather, limiting rate when the spread is already wide.",
+    "Which is why this layer is not merely a monitoring system. It is continuously spending or preserving the asset's remaining life, and that connects it directly to the promise the sixth guide in this course describes: the capacity guarantee is a bet about how fast the distribution widens, and the software is the thing that either wins or loses that bet."
+   ]
+  },
+  {
+   "id": "above-the-bms",
+   "title": "The control stack, and who decides what",
+   "kind": "table",
+   "intro": "Above the battery management system sits a stack of controllers, each with a different timescale and a different owner. Confusing them is one of the most common sources of misunderstanding about what a storage product actually includes.",
+   "cols": [
+    "Layer",
+    "Timescale",
+    "What it decides",
+    "Who typically owns it"
+   ],
+   "rows": [
+    [
+     "{{BMS}}",
+     "Milliseconds to seconds",
+     "Whether each string may connect, what it may deliver right now, and when to disconnect for safety",
+     "The integrator, non-negotiably — it is inseparable from the battery it warrants"
+    ],
+    [
+     "Converter control",
+     "Microseconds to milliseconds",
+     "The switching that produces current and voltage, including whether the unit follows the grid or forms it",
+     "The {{PCS}} supplier, or the integrator when the conversion is in-house"
+    ],
+    [
+     "{{EMS}}",
+     "Seconds to minutes",
+     "How much to charge or discharge, given price signals, instructions or a contract — coordinating the conversion and battery layers to do it",
+     "Contested. The integrator supplies one; owners and traders frequently want their own"
+    ],
+    [
+     "{{power plant controller}}",
+     "Sub-second to seconds",
+     "The plant's electrical behaviour at the connection point — real and reactive power, voltage and frequency response — as the grid operator requires",
+     "The integrator or an independent controls vendor, tightly bound to the interconnection agreement"
+    ],
+    [
+     "{{SCADA}}",
+     "Continuous",
+     "Nothing, by design: it presents live telemetry and passes operator commands down. A visibility and intervention layer",
+     "The owner or its operator"
+    ],
+    [
+     "Fleet platform",
+     "Hours to years",
+     "Nothing in real time. It aggregates {{fleet telemetry}} across sites for diagnostics, {{degradation}} tracking and design feedback",
+     "The integrator, and this is the layer with the longest strategic reach"
+    ]
+   ],
+   "note": "The contested row is the interesting one. An owner that runs its own energy management retains the ability to change trading strategy without asking a vendor, and to compare vendors' hardware on equal terms — but takes on the obligation to operate inside the battery's warranted envelope. An owner that takes the integrator's stack gets a coherent warranted system and gives up some independence. That negotiation, more than any specification, determines how much of the product the integrator actually sells."
+  },
+  {
+   "id": "why-software-is-the-moat",
+   "title": "Why the software is where the difference survives",
+   "kind": "prose",
+   "ps": [
+    "Consider the position of an asset-light integrator honestly. Its cells come from a handful of makers who sell to everyone. Its conversion equipment comes from a similar handful. Its enclosure is a steel box in a standardised freight envelope. Two competitors can arrive at a customer with products that are, at the level of a bill of materials, close to identical.",
+    "What is not identical is everything discussed above: how accurately the system knows its own state, how well it holds the cell distribution together, how it trades availability against life, and how much its supplier has learned from the systems already in the field. None of that appears on a specification sheet, and all of it determines whether the twenty-year promise is profitable.",
+    "The most underrated element is the **feedback loop**. An integrator with a large installed base receives continuous measurements of how its products actually age, under real duty, in real climates, on real cells. That data does three things a laboratory cannot. It **prices the warranty** — the {{degradation}} model behind a capacity guarantee is far better informed by ten thousand real cell-years than by accelerated testing. It **finds the failures early**, because a pattern visible across a fleet is invisible in one site. And it **feeds the next design**, telling the engineers which of their assumptions the world disagreed with.",
+    "This is why the fleet platform in the table above has the longest strategic reach despite deciding nothing in real time, and why an integrator's installed base is a technical asset and not merely a sales record. It is also the honest answer to why the last guide in this course treats track record as a bankability input rather than a marketing claim.",
+    "The counter-pressure is **interoperability**. Owners have learned to be wary of a control layer that cannot be replaced, because a proprietary interface makes the supplier hard to leave — and an integrator that fails leaves an owner with a fleet nobody can service. Standard industrial protocols such as {{Modbus}} and {{IEC 61850}} exist precisely so that the plant remains addressable by someone else's software. The mature position is a product that speaks standard protocols at its boundary while keeping the estimation and protection logic proprietary inside: the owner can change who dispatches the battery without changing who is responsible for it.",
+    "Finally, a caution that connects forward. Software that improves is software that changes, and {{over-the-air update}} capability is now expected. But the certification guide makes the point that a certified product is certified *as configured* — so a firmware change that alters protection behaviour is a change to the safety case, not a convenience. Serious suppliers run formal {{change control}} on control software for exactly that reason, and the ability to update a fleet remotely is only an asset if the discipline around it is strong enough that the update cannot quietly invalidate the listing."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why can state of charge not be measured directly?",
+     "a": "The quantity of interest — how much lithium currently sits in one electrode — is not observable from outside the cell. Only voltage, current and temperature can be measured, so state of charge must be inferred from them."
+    },
+    {
+     "q": "What is coulomb counting, and what is its characteristic failure?",
+     "a": "Integrating current over time to track how much charge has moved in or out. Because it is an integral, any small bias in the current measurement accumulates without limit, and nothing in the method ever corrects it."
+    },
+    {
+     "q": "Why is the open-circuit-voltage method particularly weak for lithium iron phosphate?",
+     "a": "Its voltage curve is very flat across the middle of the charge range, so a tiny voltage difference corresponds to a large difference in charge — and the middle of the range is where a grid plant spends most of its time. The cell must also genuinely rest before the reading is valid."
+    },
+    {
+     "q": "State the architectural principle behind the levels of a battery management system.",
+     "a": "Authority increases downward and scope increases upward. The cell-level layer sees one cell and can do almost nothing; the system level sees everything and deliberately cannot override the independent protection limits."
+    },
+    {
+     "q": "Which management-system failure is described as silent, and why is that the dangerous property?",
+     "a": "A lost sense wire at cell or module level. The cell is no longer being watched, and the layer above may be unable to distinguish a healthy reading from no reading — so the fault does not announce itself."
+    },
+    {
+     "q": "How does passive balancing work, and what are its two costs?",
+     "a": "It bleeds charge from cells running ahead through a resistor until the others catch up. It wastes that energy as heat, and it generates the heat right next to the cells whose temperature spread the thermal design is trying to minimise."
+    },
+    {
+     "q": "Why is active balancing most valuable late in a system's life?",
+     "a": "Because the spread between the average cell and the weakest one widens with age, and active balancing moves charge to the laggards rather than discarding it from the leaders — so it recovers capacity that passive balancing can only level away."
+    },
+    {
+     "q": "Explain 'usable capacity is a distribution, not a number'.",
+     "a": "Cells vary in capacity and resistance, and that spread widens with age. Charging stops at the first cell to reach its ceiling and discharge at the first to reach its floor, so the plant delivers what the tails of the distribution allow, not what the average would suggest."
+    },
+    {
+     "q": "Give two ways an operating decision can slow the widening of that distribution.",
+     "a": "Resting at a mid state of charge rather than holding near full or empty when nothing is required, and narrowing the operating window or limiting rate in hot conditions. Both trade a little of today's availability for a slower loss of life."
+    },
+    {
+     "q": "Why is a large installed fleet a technical asset rather than just a sales record?",
+     "a": "Fleet telemetry measures how the product actually ages under real duty and climate. That prices the capacity warranty far better than laboratory testing can, surfaces failure patterns that are invisible at a single site, and tells the next design which assumptions were wrong."
+    },
+    {
+     "q": "What is the mature answer to an owner's fear of control-layer lock-in?",
+     "a": "Speak standard industrial protocols at the plant boundary so the battery can be dispatched by someone else's software, while keeping estimation and protection logic proprietary inside. The owner can change who operates the plant without changing who is responsible for the battery."
+    },
+    {
+     "q": "Why is remote firmware update a compliance question as well as a convenience?",
+     "a": "A product is certified as configured. Changing control software that affects protection behaviour changes the safety case, so the update has to run through formal change control or it can quietly invalidate the listing the installation was permitted under."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A plant's reported state of charge has drifted several percent above reality after a week of continuous cycling. Which method's characteristic failure is this?",
+     "c": [
+      "Open-circuit voltage",
+      "Coulomb counting",
+      "Temperature compensation",
+      "Insulation monitoring"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which layer of the management hierarchy is designed so that the layers above it cannot overrule it?",
+     "c": [
+      "The system level",
+      "The independent protection layer",
+      "The rack level",
+      "The fleet platform"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An integrator chooses passive balancing for a densely packed liquid-cooled product. What is the most relevant objection?",
+     "c": [
+      "It cannot correct large divergence quickly and adds heat where thermal margin is tightest",
+      "It moves charge in the wrong direction",
+      "It requires more components per cell",
+      "It is not permitted by safety standards"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Why does a series string deliver less energy than the sum of its cells' capacities suggests?",
+     "c": [
+      "Conversion losses",
+      "Charging and discharging both stop at the first cell to reach a limit",
+      "Balancing consumes the difference",
+      "The management system reserves a margin"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner insists on running its own energy management software. What does it take on in exchange?",
+     "c": [
+      "Responsibility for the battery's safety limits",
+      "The obligation to operate inside the warranted envelope, since dispatch decisions consume warranty life",
+      "The need to certify the product itself",
+      "Ownership of the plant controller"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which layer decides how the plant behaves at the grid connection point, as the interconnection agreement requires?",
+     "c": [
+      "The battery management system",
+      "The power plant controller",
+      "SCADA",
+      "The fleet platform"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Two competitors ship the same cells in the same enclosure format. Where is the durable difference most likely to be?",
+     "c": [
+      "In the steel and the paint",
+      "In estimation accuracy, life management and the fleet data that prices the warranty",
+      "In the cell supplier's price",
+      "In the container's dimensions"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why do owners ask for standard industrial protocols at the plant boundary?",
+     "c": [
+      "They are faster than proprietary ones",
+      "So the plant remains operable by someone else's software if the supplier changes or fails",
+      "They are required for grid connection",
+      "They reduce the cost of the management system"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

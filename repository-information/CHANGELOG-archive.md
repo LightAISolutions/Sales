@@ -78,6 +78,86 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v04.00r] — 2026-08-31 08:53:46 PM EST — [be0d747](https://github.com/LightAISolutions/Sales/commit/be0d747142c33e37ac2685f7a516f2d0cc966df8)
+
+> **Prompt:** "Picking up from my \"Morning Digests footer phase 1\" session, check how Monday's scheduled Scraper run went:
+>
+> * Jonyang92@gmail.com (admin) received three different emails (see first attached screenshot): one for Saturday, Sunday, and Monday. Regardless of whether or not I generated Editions over the weekend, the Monday routine should not email out the weekend Editions.
+> * jymiasole01@gmail.com (analyst) received four different emails (see second attached screenshot): A BESS Edition from Saturday and Monday and an AIDC Edition from Saturday and Monday. This makes me feel like it only sent out the Saturday Edition because I generated one over the weekend. However, these weekend Editions should not be sent out on Monday.
+> * All three Monday Editions had over 30 relevant articles over the weekend. Several of them were from different news sources covering the same topic (Microsoft's DataOne AI data center caught using unpermitted turbines, Vertiv's Q1'26 Fiscal Results, etc). Do you have any good ideas on how we can group articles from different sources covering the same topic together and just show the most reliable source (based on source stats)? I think it's possible that it's normal for Monday digests to have 30+ relevant articles, while normal weekday digests have about 12-15 relevant articles, so there may be no real issues with Scraper."
+
+### Fixed
+
+The **Monday 2026-08-31 06:00 ET run — the first unattended one — worked**; the delivery gate around it did not. Verified against the admin's mailbox: the Saturday (No. 002), Sunday (No. 003) and Monday (No. 004) editions were all sent between 07:01:56 and 07:01:59 AM EDT, i.e. by a single delivery pass, not by three.
+
+Root cause: `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` (Phase 2, v03.9xr) widened the candidate set from "dated today" to "dated within three days and undelivered" to end a silent midnight give-up. That widening **split the weekday rule in two without anyone noticing**, because before it the two halves could not disagree — the only candidate was today's row, so a weekday `now` implied a weekday edition. `scDigestDeliverPending_` asks "is today a run day?" and always did; nothing asks "is the EDITION for a run day?". The weekend's manual builds were undelivered (the pass returns early on Sat/Sun), still inside the window on Monday, and mailed alongside Monday's own.
+
+#### `Scraper.gs` — v01.91g
+
+- `scIsoDayOfDateKey_(key)` — ISO day-of-week for a `yyyy-MM-dd` issue key. Deliberately **not** `new Date(key)` reformatted through `SCRAPER_DIGEST_TZ`: that string parses as UTC midnight, which in a western timezone is the previous calendar day, so a Saturday row would have read as Friday and passed the new gate. The y/m/d go through `Date.UTC` and the weekday is taken in the same frame — pure, node-testable, DST-proof. Returns `0` for an unparseable key
+- `scDigestDeliverableDate_(dateKey)` — the edition's own day against `SCRAPER_DIGEST_RUN_DAYS`; an unparseable key returns `true` so unreadable rows behave exactly as before
+- **Off-day gate in `scDigestDeliverPending_`**, applied in both the grouping loop (an off-day row can never become the `chosen` row) and the send loop. Honours `opts.force` the same way the existing hour and weekday gates do
+- Off-day rows are **stamped `'off-day'`** in the Delivered column rather than skipped, matching the `'superseded'` / `'no-recipients'` pattern — an unstamped row is reconsidered by every hourly tick for the rest of the window, and the cell should say why it never went out
+
+**The three-day window is kept, deliberately.** It is what carries a missed *Friday* edition to Monday's pass, which is the longest gap the weekday schedule can open and the exact silent-give-up it was added to prevent. Friday is a run day, so that rescue is untouched. The rule the window actually needed was narrower than it: an edition mails when **both** the day it is for and the day we are on are run days — only the second half was ever checked.
+
+**Weekend builds are not stranded.** They are stored, numbered, archived and visible in the UI, and `emailLatestDigest` (the developer's "email me the latest") reads the newest row directly without consulting the Delivered column — so a weekend edition can still be sent by hand on demand. Only the scheduled weekday mailing excludes them.
+
+### Changed
+
+- The stale rationale at `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` ("a weekend manual build" listed as a case the window exists to rescue — the behavior now removed) and the `scDigestDeliverPending_` header comment both rewritten to record the two-day-questions split, so the next reader does not re-derive the same bug
+
+### Verified
+
+- `node --check` clean; `scripts/check-gas-inner-scripts.js` clean (8 files, 76 blocks)
+- Ad-hoc node harness over the two extracted helpers: the four dates in evidence (Fri 08-28 deliverable, Sat 08-29 and Sun 08-30 not, Mon 08-31 deliverable), both 2026 US DST boundaries, unparseable keys, and a 365-day sweep of 2026 cross-checked against the platform's own weekday — all pass
+
+## [v03.99r] — 2026-08-31 05:18:48 AM EST — [beb27de](https://github.com/LightAISolutions/Sales/commit/beb27de6c569ce758d8a8bc2c80a69ec5e922014)
+
+> **Prompt:** "Picking up from my recent \"BESS/AIDC Phase 5 learning-layer unification\" session, before building Classroom V1, see the attached screenshot and fix the analyst-level users being able to access Network and Relationships in dossiers. I thought we changed that to Admins + Contributors only."
+
+### Changed
+
+Phase 6 **C0's first slice built ahead of the Classroom scaffold** — the Profiler access retune approved in the v03.98r design gate (`PHASE6-CLASSROOM-DESIGN.md`) but not yet coded. The developer's screenshot was correct behavior, not a regression: `OV_ROLE_CAPS` carried no `network` capability at all, so the Relationships tab and `#network` explorer were ungated for every signed-in tier.
+
+#### `Profiler.html` — v01.75w
+
+- `OV_ROLE_CAPS` gained four capabilities — `network`, `coverage`, `study`, `compare`. New matrix: admin all; contributor loses `fieldNote`/`versions`/`reports`/`style`; analyst additionally loses `guidance`/`network`/`coverage`/`export` (keeps `study` + `compare`); viewer empty
+- **One capability, two doors** — `network` gates both `ovNetworkBtnShow()` and the per-dossier Relationships tab (`paneFor('rels')` is now inside the `ovCan('network')` branch, so an ungated tier gets no tab rather than an empty one). They cannot drift apart
+- `ovDeniedView(main, what)` added: `ovRenderNetwork()` and `ovRenderCompare()` re-check their capability, so a bookmarked `#network` / `#compare/…` is turned away instead of trusting the hidden entry point
+- Coverage 📰 button wrapped in `ovCan('coverage')`; Study guide fetch wrapped in `ovCan('study')`; roster compare chip wrapped in `ovCan('compare')` and given `id="ov-cmp-chip"` so the verifier can probe it
+- Coverage overlay now renders `ROLE_DENIED` as "available to contributors and administrators" rather than falling through to the generic unavailable text
+- Three stale "ungated / every signed-in tier" comments corrected — they were the standing record of the old policy
+
+#### `Profiler.gs` — v01.30g
+
+- `COVERAGE_ROLES` + `coverageAllowed_()` added; `guidanceAllowed_`/`coverageAllowed_` now share a `roleAllowed_(sess, roles)` helper
+- `handleNewsOp_` captures the validated session and returns `ROLE_DENIED` for tiers outside `COVERAGE_ROLES`. **This is the one real boundary in the retune** — the corpus reaches the browser only through this proxy. The graph, study guides and compare read public Pages JSON, so their gates stay app-experience gates (the M3 data-relocation note in the Role + Access matrix comment)
+
+#### `scripts/verify-profiler-roles.py`
+
+- `EXPECT` extended from five surfaces to ten (adds `network`, `relTab`, `coverage`, `study`, `compare`); `CAPS` tuple drives the assertion loop so a future surface is one edit
+- Probe reads `ov-network-btn`, `ov-tab-rels`, `ov-cov-btn`, `ov-study-btn` on the dossier and `ov-cmp-chip` on the roster load (the compare chip is roster-only — probing it on the dossier would have been a silent no-op assertion)
+- **Deep-link assertions added** — walks `#network` and `#compare/zhonhen,abb` per tier and fails in both directions: a denied tier that renders, and an allowed tier that gets denied
+- GAS stub now mirrors `handleNewsOp_`'s tier check; docstring notes why zhonhen is the probe company (has a study guide *and* 9 graph edges, so every column is a live assertion)
+- Run clean: all four tiers, progress isolation, and the 88-dossier specs audit
+
+#### Documentation
+
+- `.claude/rules/profiler-app.md` — Role + Access matrix rewritten for the retune, including the one-capability-two-doors rule, the deep-link re-check, and which gates are real boundaries vs app-experience gates
+- `repository-information/PHASE6-CLASSROOM-DESIGN.md` — retune section marked **BUILT**, with a status note recording what shipped and that the rest of C0 (Classroom scaffold, cross-links) remains
+- `live-site-pages/html-changelogs/Profilerhtml.changelog.md` hit its 50-section cap, so the oldest date group (2 sections dated 2026-08-13) rotated to the archive with commit-SHA enrichment. Active file now at `Sections: 49/50`
+
+## [v03.98r] — 2026-08-31 03:51:22 AM EST — [9063fb4](https://github.com/LightAISolutions/Sales/commit/9063fb4bceeb5cb80b57af91ed47d459009b8aef)
+
+> **Prompt:** "start the phase 6 design conversation"
+
+The Phase 6 Classroom design gate, held and closed: four decision points put to the developer with recommendations, their answers reasoned through (including a reversed form-factor recommendation under new ecosystem context), and the approved design written as the executable spec for the build sessions.
+
+### Added
+- **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — the approved Phase 6 spec: Classroom as its **own app** (`Classroom.html` + `Classroom.gs`, federated via Pages data + token-gated routes — recommendation reversed from "Profiler mode" once the developer stated the growing-ecosystem/quality-over-economy context); audience admin/contributor/analyst (viewer excluded); "Everything" content under the **provenance-gating rule** (a lesson inherits the strictest gate of its inputs; field notes never become content); the approved **Profiler analyst-tier retune** (loses Relationships/Network, Coverage with a real server-side check, and Export; viewer strict dossier-only) executing as C0's first slice; phase plan C0–C6 with **v1 = C0–C2** (scaffold + learning core + scheduled curriculum pipeline with weekly briefing lessons and freshness deltas); **C3 — Guidance homecoming** (developer-proposed migration of Industry Guidance from Profiler.gs to Classroom, with the full migration checklist: ops, Admin lens re-hosting, mentions route, progress-tick export/import, Routine + rules re-pointing); C4 drills, C5 sales simulations, C6 team layer gated on a team existing; in-app runtime Q&A stays deliberately deferred
+- **README tree** — entry for the new spec doc
+
 ## [v03.97r] — 2026-08-30 11:13:05 PM EST — [87cbf5b](https://github.com/LightAISolutions/Sales/commit/87cbf5b6cb243b61244c78730d8dae31d3a3a8b4)
 
 > **Prompt:** "Picking up from my recent "BESS/AIDC market research system phase 4", build Phase 5 (learning-layer unification) per repository-information/PHASE5-LEARNING-LAYER-PLAN.md — study.json v2 on the guidance engine, the concepts registry, the v1 adapter (+ confirm the one-shot lift of all 62 guides), and the approved Layer 3 Scraper-seed rider in the same train."

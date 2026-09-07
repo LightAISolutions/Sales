@@ -1,0 +1,398 @@
+{
+ "schemaVersion": 2,
+ "slug": "crrc-zhuzhou",
+ "title": "CRRC Zhuzhou Institute — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a promise is worth the party behind it",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "Last guide in the integrator course. The previous one established what is actually sold — a twenty-year obligation, delivered through hardware — and ended on the question this guide answers: **who is able to keep it, and how would anyone know in advance?**",
+    "The answer is the industry's word for it: {{bankability}}. It is a badly named idea, because it sounds like a property of a product and it is really a property of a **relationship between a supplier, a lender and a jurisdiction**. A supplier can be excellent and unbankable. A supplier can be mediocre and comfortably bankable. Understanding why is the last thing an integrator course owes its reader.",
+    "This guide also closes the course structurally, by asking what different **positions in the industry** — owning cells, owning components, owning only integration, owning only software — actually defend, and why the industry's firms keep migrating between them. That is not a business-strategy digression: the position determines what a supplier can promise, what it can be forced to pay for, and what happens to its customers if it fails.",
+    "A note on scope, because it matters here more than anywhere. **The buyer's side of financing** — the capital stack, tax equity, how a project reaches financial close — is taught in the project-lifecycle and offtake guides. This guide is about the **supplier** being examined, not the project doing the examining."
+   ]
+  },
+  {
+   "id": "bankability-is-not-quality",
+   "title": "Bankability is not a synonym for good",
+   "kind": "prose",
+   "ps": [
+    "The registry's definition is a good starting point: whether lenders and investors will finance a project or accept a supplier — a function of certifications, warranties, balance-sheet strength, track record and policy exposure rather than spec-sheet performance. Every word of that is doing work, and the last clause is the one to sit with.",
+    "The reason bankability decouples from quality is that **the audience is not the buyer.** A developer choosing equipment might reasonably weigh performance, price and its own engineers' judgment. But the developer is usually not spending its own money; it is assembling a project that lenders and tax-equity investors will fund, and those parties conduct their own diligence through an {{independent engineer}}. The registry names the consequence precisely: the independent engineer, not the buyer, is the audience a supplier's certifications and track record ultimately have to satisfy.",
+    "That audience has a different objective function. A lender does not gain if the equipment turns out to be excellent; it gains only if the debt is repaid. So it is **asymmetrically concerned with downside**, and it evaluates a supplier the way a credit analyst evaluates a counterparty: not 'is this good?' but 'what happens if this goes wrong, and who pays?'",
+    "From that vantage a great many things that look like engineering questions resolve into credit questions. A twenty-year capacity guarantee from a company with two years of history is not a twenty-year guarantee; it is a two-year guarantee followed by eighteen years of hope. A product with excellent test data but no listing in the relevant jurisdiction is not a cheaper option; it is an unfinanceable one. A supplier whose products cannot qualify for a tax benefit the project's economics assume is not a lower-cost supplier; it is a different project.",
+    "The uncomfortable corollary is that **bankability is partly self-fulfilling.** A supplier that has been financed before is easier to finance again, because the diligence has precedent and the lender's committee has seen the name. A newcomer with better technology must overcome not just scrutiny but unfamiliarity. That is a genuine barrier to entry, it is not a fair one, and it is one of the strongest forces shaping which firms survive in this industry."
+   ]
+  },
+  {
+   "id": "the-diligence-file",
+   "title": "What is actually examined",
+   "kind": "table",
+   "intro": "{{technical due diligence}} on a supplier is a defined exercise, and knowing its contents demystifies the whole subject. What follows is what an independent engineer looks at, and what each item is really a proxy for.",
+   "cols": [
+    "What is examined",
+    "What is actually being asked",
+    "How it can fail"
+   ],
+   "rows": [
+    [
+     "Certifications and listings",
+     "Can this equipment be installed in this jurisdiction at all, and on what terms?",
+     "A listing that covers a different configuration, or evidence that supports only conservative spacing — the certification guide's subject"
+    ],
+    [
+     "Test reports",
+     "Is the safety and performance evidence specific to what is being supplied, or to a relative of it?",
+     "Reports on a predecessor product, or on a configuration with a different cell"
+    ],
+    [
+     "Track record and fleet data",
+     "Has this product actually operated, for how long, in what climates, at what duty?",
+     "A large shipped volume with little operating history — a common pattern in a fast-growing product category"
+    ],
+    [
+     "Financial statements",
+     "Can this company survive twenty years, and can it absorb a large warranty event without failing?",
+     "Thin margins, heavy working-capital demands, or a warranty reserve that looks small against the obligations sold"
+    ],
+    [
+     "Warranty reserve and provisioning",
+     "Has the promise been paid for, or merely made?",
+     "A reserve sized by policy rather than by a degradation model and a defect-rate assumption"
+    ],
+    [
+     "Credit support",
+     "If the company cannot pay, who does?",
+     "A guarantee from an entity with no assets, or a bond whose cap is far below the exposure"
+    ],
+    [
+     "Supply chain",
+     "Where do the cells come from, and what happens if that source is interrupted?",
+     "Single-sourced supply with no qualified alternative — the first guide's subject arriving as a credit question"
+    ],
+    [
+     "Policy and jurisdictional exposure",
+     "Is anything about this supplier capable of making the project ineligible or unlawful?",
+     "Trade measures, entity designations, or eligibility rules that change during the project's development"
+    ],
+    [
+     "Contract quality",
+     "Do the guarantees actually say what the model assumes, and are the remedies collectible?",
+     "Caps on {{liquidated damages}} well below the lender's exposure, or exclusions that void the guarantee precisely when it matters"
+    ]
+   ],
+   "note": "Notice how much of this file was written by the earlier guides in this course. The cell strategy, the certification package, the manufacturing records, the fleet telemetry and the warranty reserve are not separate activities that a company also does — **they are the evidence base a supplier accumulates or fails to accumulate**, and this table is where it is finally read."
+  },
+  {
+   "id": "instruments",
+   "title": "Six ways to stand behind a promise",
+   "kind": "table",
+   "intro": "When diligence concludes that a supplier's own promise is not sufficient, the gap is closed with credit instruments. Each transfers a different amount of risk at a different price, and each has a characteristic weakness.",
+   "cols": [
+    "Instrument",
+    "How it works",
+    "Its characteristic weakness"
+   ],
+   "rows": [
+    [
+     "The balance sheet itself",
+     "The supplier simply has enough assets and earnings that its promise is credible without further support",
+     "It is only as good as the company's continued solvency, and it is not ring-fenced — a warranty claim competes with every other creditor"
+    ],
+    [
+     "{{parent company guarantee}}",
+     "A larger corporate parent guarantees the subsidiary's obligations, so the buyer's counterparty is effectively the parent",
+     "Only as strong as the parent, and only as broad as its wording. A guarantee capped at the contract value may not cover the consequential loss the buyer actually fears"
+    ],
+    [
+     "{{warranty bond}}",
+     "A third party undertakes to pay if the supplier fails to honour its warranty obligations, up to a stated amount",
+     "Capped, time-limited and priced — and the cap is usually a fraction of a full replacement, so it covers a bad year rather than a bad decade"
+    ],
+    [
+     "{{surety bond}}",
+     "A surety guarantees performance of the contract itself, stepping in or paying if the supplier defaults",
+     "Sureties underwrite the supplier's creditworthiness before issuing, so the firms that most need one are the least able to obtain it"
+    ],
+    [
+     "{{insurance wrap}}",
+     "An insurer takes on defined performance or warranty risk, converting a supplier's credit into an insurer's credit",
+     "Expensive, heavily conditioned, and its exclusions frequently mirror the risks the buyer was most worried about. It also depends on the insurer's continued appetite at renewal"
+    ],
+    [
+     "Escrow or retention",
+     "Part of the purchase price is withheld or held by a third party, released over time as obligations are met",
+     "Only covers the early years, and ties up the buyer's capital rather than the supplier's"
+    ]
+   ],
+   "note": "The pattern is worth stating explicitly. **Every instrument above converts a twenty-year obligation into a shorter or smaller one**, and none of them fully replaces a supplier that is still there and still competent in year fifteen. That is why diligence spends more effort on whether the company will survive than on how the promise is papered — and it is the direct link into the industry-structure question below."
+  },
+  {
+   "id": "the-tiers",
+   "title": "Four positions, and what each one defends",
+   "kind": "proscons",
+   "intro": "Storage integrators occupy structurally different positions depending on which parts of the chain they own. These are not tiers of quality; they are different bets about where value is defensible. Real companies frequently occupy more than one, and move between them.",
+   "cards": [
+    {
+     "t": "The cell-owning integrator (vertically integrated)",
+     "adv": [
+      "Controls its own supply in a shortage, and captures the cell's margin as well as the system's — the two largest cost and margin pools in the product",
+      "Can co-design cell and system together, so enclosure, thermal path and module structure are optimised for a cell it controls rather than adapted to one it does not",
+      "A credible answer to the diligence question about supply-chain interruption, since the supplier is the source",
+      "Owns the manufacturing records that make traceability and warranty reserving well founded"
+     ],
+     "dis": [
+      "Extremely capital-intensive: cell plants are large fixed investments with long payback and brutal utilisation sensitivity",
+      "Concentrates rather than diversifies risk — if the chosen chemistry or format loses, the company loses at both levels at once",
+      "Slower to adopt a rival's better cell, because doing so strands its own capacity. Vertical integration buys control and sells agility",
+      "Its own cell business may be sub-scale against merchant cell makers serving the whole industry, so it can end up with a worse cell at a higher cost"
+     ]
+    },
+    {
+     "t": "The component-owning integrator",
+     "adv": [
+      "Owns a genuinely hard component — typically power conversion — where deep engineering, semiconductor expertise and certification history are real barriers",
+      "That component can be sold to other integrators as well as used internally, giving a second revenue channel and better scale",
+      "Buys cells competitively and can switch as the format ladder moves, keeping the agility the vertically integrated position gives up",
+      "The component is often where {{grid code}} compliance and grid-forming capability actually live, so it defends the part of the product the network cares about"
+     ],
+     "dis": [
+      "Still exposed to cell supply and cell pricing, which are the larger share of the bill of materials",
+      "Its component advantage erodes if the industry standardises around merchant conversion equipment that is good enough",
+      "Selling components to rivals and systems against them is a permanent channel conflict",
+      "Component excellence does not by itself answer the twenty-year credit question, which is about the whole system"
+     ]
+    },
+    {
+     "t": "The pure integrator (capital-light)",
+     "adv": [
+      "Very low fixed capital, so it can grow fast and is not punished by a demand downturn the way a plant owner is",
+      "Free to choose the best available cell each generation, which in a market with rapid format turnover is a real advantage",
+      "Its costs track the market's costs, so falling cell prices pass through to competitiveness rather than stranding an investment",
+      "Can specialise entirely in the parts that are genuinely its own — thermal design, controls, certification, service"
+     ],
+     "dis": [
+      "Buys its principal input from firms that also sell finished systems, so its supplier is its competitor — the first guide's structural problem",
+      "Has the weakest position in a shortage, when makers allocate to their own systems business first",
+      "Thin balance sheet relative to the twenty-year obligations it is signing, which is exactly what diligence penalises",
+      "Its differentiation is the least visible on a datasheet and the hardest to prove to a lender who has not seen its fleet data"
+     ]
+    },
+    {
+     "t": "The controls and software position",
+     "adv": [
+      "Almost no fixed capital and high gross margins, with a product that improves without a factory",
+      "The differentiation is genuinely durable, because estimation quality and fleet learning compound over time rather than being copied from a datasheet",
+      "Can attach to many hardware suppliers, so it is not tied to one format ladder or one cell maker",
+      "Owns the layer that prices the warranty, which is the most valuable information in the whole chain"
+     ],
+     "dis": [
+      "Cannot warrant hardware it does not supply, so it is structurally excluded from the promise the buyer most wants",
+      "Its position depends on hardware suppliers keeping their interfaces open, which they have every incentive to close",
+      "Very small balance sheet against very large projects, so it is rarely acceptable as a principal counterparty",
+      "It is the layer a well-capitalised integrator is most likely to build or buy rather than rent"
+     ]
+    }
+   ],
+   "note": "Read the four together and a pattern appears: **the positions with the best economics have the worst credit standing, and the positions with the best credit standing have the worst agility.** No position is dominant, which is precisely why the industry has not converged on one — and why the same firms keep buying their way up or down the chain as conditions change."
+  },
+  {
+   "id": "what-each-position-defends",
+   "title": "Why the middle is the hardest place to stand",
+   "kind": "prose",
+   "ps": [
+    "The migration between positions is not random. It follows from where margin is defensible, and there is a general observation from other industries that applies well here: **margin concentrates at the ends of a value chain and gets squeezed out of the middle.**",
+    "At one end sit the cells. They are capital-intensive, technically deep, and consolidating — a handful of makers serve everyone. That is a defensible position because entry is expensive and scale is decisive.",
+    "At the other end sit the intangible layers: the estimation software, the fleet data, the service relationship, the certification portfolio and the record that makes a supplier bankable. These are defensible because they compound. A firm with ten thousand cell-years of field data can price a warranty better than a firm with a hundred, and no amount of capital buys that instantly.",
+    "The middle — buying cells, putting them in a box, wiring them up — is where {{commoditisation}} bites hardest. The engineering is real but it is increasingly well understood, the components are available to everyone, and the customer can compare offers directly. **A firm standing only in the middle is selling assembly, and assembly's price falls toward its cost.** That is the honest reason integrators climb: toward the cell, to capture the larger margin pool and control supply; or toward the software and service, to capture the compounding one.",
+    "There are two forces resisting the squeeze, and both were described earlier in this course. The first is **{{switching cost}}**: an owner running a fleet on one supplier's controls, with that supplier's service organisation and spares, does not change lightly, and the sixth guide's coupling of warranty to service makes the relationship stickier still. The second is the **certification and qualification burden**: the fourth guide's fixed cost that scales with product variety and change rather than with volume, and the first guide's months-long qualification programme. Both punish new entrants far more than incumbents, which slows the commoditisation the middle otherwise suffers.",
+    "The strategic reading of any storage supplier therefore begins with two questions. **Which end is it moving toward, and with whose money?** A firm building cell capacity is betting that supply control and integrated design will matter more than agility. A firm investing in fleet software and service scale is betting that the compounding layer will. A firm doing neither is defending the middle, and needs an unusually good answer as to how."
+   ]
+  },
+  {
+   "id": "jurisdiction",
+   "title": "Bankability is jurisdictional, and that is the sharpest lesson in the course",
+   "kind": "prose",
+   "ps": [
+    "Everything above treats bankability as a property of a company. The final refinement is that it is not — it is a property of a company **in a place**, and the same supplier can be entirely bankable in one market and unusable in another with no change whatsoever to its products, its balance sheet or its record.",
+    "Three mechanisms produce that result, and they are worth separating because they behave differently.",
+    "**Eligibility rules.** A project's financial model may depend on a tax credit, a subsidy or a procurement preference whose availability is conditioned on where components were made or who controls the supplier. If the equipment disqualifies the project, the supplier is not merely more expensive — it is a different and worse project. The {{FEOC}} concept in this corpus is exactly this: a designation that disqualifies projects and products from federal tax credits, which the registry rightly calls a central bankability question for China-linked battery supply. Note the mechanism: nothing is prohibited, the economics simply stop working.",
+    "**Trade measures and {{export controls}}.** Tariffs, duties and restrictions change landed cost or legality directly. They can be introduced during a project's development, after equipment has been selected and priced, which makes them a risk allocation question in the supply contract long before they are a policy question.",
+    "**Entity-level designations.** A government may name a specific company as ineligible for certain procurements or transactions on national-security grounds. This is the sharpest form, because it attaches to the firm rather than the goods and cannot be engineered around by changing where something is made.",
+    "The lesson this yields is the one to carry out of the course. **A supplier can have an unimpeachable balance sheet — larger and stronger than any of its competitors — and still be unbankable in a given market, because bankability is not creditworthiness in the abstract. It is creditworthiness that this buyer's financiers, under this jurisdiction's rules, are permitted and willing to accept.** An enormously well-capitalised firm that a project's lenders cannot transact with provides exactly no security to that project.",
+    "The reverse holds too, and it is why the same firms appear at the top of one market's supplier lists and are absent from another's. It is also why supplier strategy in this industry has become inseparable from where manufacturing sits, who owns the entity that signs the contract, and whether the traceability records from the fifth guide can prove what the eligibility rules demand. **Corporate structure has become a technical specification.**"
+   ]
+  },
+  {
+   "id": "the-course-ends-here",
+   "title": "What the seven guides were arguing",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "This course made a single claim in seven parts: **an integrator converts cells it did not make into a warranted system somebody will finance**, and each guide covered one thing that has to be true for that sentence to hold.",
+    "**The cell** has to be chosen and proved, with an honest answer about what happens if its maker cannot or will not supply — and the maker is usually also a competitor. **The box** has to hold the cells at the same temperature, because a series string is limited by its worst member and the enclosure decides how much land, labour and lifetime efficiency the energy costs. **The software** has to know a state it cannot measure, keep the distribution of cells narrow, and learn from a fleet — because the estimate is what every commercial promise is written against.",
+    "**The certification** has to exist in the specific jurisdiction, for the specific configuration, and be re-established every time anything changes — which is why permission, not performance, gates the market. **The factory** has to make the product identically at a scale where inspection cannot help, and prove it did, because rare defects at fleet scale are not rare. **The promise** has to be shaped, bounded by a duty envelope, and paid for with a reserve rather than merely made.",
+    "And then **someone has to still be there in year fifteen** — which is why the last guide is about credit, structure and jurisdiction rather than engineering, and why an integrator's position in the industry is not a business detail but a determinant of what it is able to promise at all.",
+    "The two neighbouring courses complete the picture from either side. The buyer-side guides explain who purchases this, on what contract, for what revenue, dispatched how, and approved by whom. The bridge-power guides explain the machines this equipment shares a site with, the emissions and permits that govern them, the electrical interface, and the containerised block itself. **Read together the three courses describe one industry from the cell to the connection to the contract** — and this one is the part in the middle that turns components into something a bank will lend against."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why can a supplier be excellent and unbankable?",
+     "a": "Because bankability is judged by lenders and their independent engineer, not by the buyer's engineers, and it turns on certifications, warranties, balance-sheet strength, track record and policy exposure rather than spec-sheet performance. A great product from a firm that may not exist in year fifteen provides no security."
+    },
+    {
+     "q": "Whose question is a lender actually asking about a supplier?",
+     "a": "Not 'is this good?' but 'what happens if this goes wrong, and who pays?' A lender gains nothing from equipment turning out excellent; it gains only from the debt being repaid, so it evaluates asymmetrically for downside."
+    },
+    {
+     "q": "In what sense is bankability self-fulfilling?",
+     "a": "A supplier that has been financed before is easier to finance again, because the diligence has precedent and the credit committee recognises the name. A newcomer with better technology must overcome unfamiliarity as well as scrutiny — a real and unfair barrier to entry."
+    },
+    {
+     "q": "Name four things a technical due-diligence file examines beyond the product itself.",
+     "a": "Financial statements and the ability to absorb a warranty event; the warranty reserve and how it was sized; credit support and who pays if the company cannot; and jurisdictional or policy exposure that could make the project ineligible. Contract quality and supply-chain concentration are examined too."
+    },
+    {
+     "q": "What is the characteristic weakness shared by warranty bonds, surety bonds and insurance wraps?",
+     "a": "Each converts a twenty-year obligation into a shorter or smaller one — capped, time-limited, conditioned — so none of them replaces a supplier that is still present and competent in year fifteen."
+    },
+    {
+     "q": "Why do sureties tend not to be available to the firms that most need them?",
+     "a": "A surety underwrites the supplier's creditworthiness before issuing the bond. A weak supplier is precisely the one a surety will decline, so the instrument is most obtainable where it is least necessary."
+    },
+    {
+     "q": "What does vertical integration into cells buy, and what does it sell?",
+     "a": "It buys supply control in a shortage, the cell's margin, co-designed hardware and a strong answer on supply-chain risk. It sells agility: adopting a rival's better cell strands your own capacity, and a wrong bet on chemistry or format loses at two levels at once."
+    },
+    {
+     "q": "State the structural problem of the pure capital-light integrator.",
+     "a": "It buys its principal input from firms that also sell finished systems, so its supplier is its competitor. It has the weakest allocation in a shortage and the thinnest balance sheet against the twenty-year obligations it signs."
+    },
+    {
+     "q": "Why is a controls-and-software-only position rarely acceptable as a principal counterparty?",
+     "a": "It cannot warrant hardware it does not supply, so it is excluded from the promise the buyer most wants, and its balance sheet is very small against project scale. It also depends on hardware suppliers keeping interfaces open, which they have every reason not to do."
+    },
+    {
+     "q": "Why does margin get squeezed out of the middle of this value chain?",
+     "a": "Cells are capital-intensive, consolidated and hard to enter; software, service and track record compound and cannot be bought instantly. Buying cells and putting them in a box is increasingly well understood with components available to all, so its price falls toward its cost."
+    },
+    {
+     "q": "Name the two forces that slow commoditisation of the middle.",
+     "a": "Switching cost — an owner running a fleet on one supplier's controls, service and spares does not change lightly, especially where warranty and service are coupled — and the certification and qualification burden, a fixed cost that scales with product variety and change rather than volume and therefore punishes entrants most."
+    },
+    {
+     "q": "Give the three mechanisms by which bankability becomes jurisdictional.",
+     "a": "Eligibility rules that condition a tax credit or preference on component origin or control; trade and export-control measures that change landed cost or legality; and entity-level designations that attach to the firm itself and cannot be engineered around."
+    },
+    {
+     "q": "Why is the eligibility mechanism described as the subtle one?",
+     "a": "Because nothing is prohibited. The equipment remains lawful and functional; it simply disqualifies the project from a benefit its financial model assumed, so the supplier is not more expensive — it is a different and worse project."
+    },
+    {
+     "q": "State the course's closing proposition about balance sheets.",
+     "a": "A supplier can have a stronger balance sheet than any competitor and still be unbankable in a market, because bankability is creditworthiness that this buyer's financiers, under this jurisdiction's rules, are permitted and willing to accept. Strength a lender cannot transact with secures nothing."
+    },
+    {
+     "q": "In one sentence, what did the seven guides collectively argue?",
+     "a": "That an integrator converts cells it did not make into a warranted system someone will finance — and that the cell choice, the enclosure, the control software, the certification, the factory, the guarantee and the supplier's own survival are each a condition for that sentence being true."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "Whose judgment does a supplier's certification and track record ultimately have to satisfy?",
+     "c": [
+      "The developer's engineering team",
+      "The independent engineer acting for the lenders",
+      "The authority having jurisdiction",
+      "The cell supplier"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A supplier offers a twenty-year capacity guarantee and has three years of corporate history. How should a lender read it?",
+     "c": [
+      "As a twenty-year guarantee, since it is contractual",
+      "As a short guarantee followed by many years of unsecured hope, unless credit support closes the gap",
+      "As irrelevant, since the equipment is what matters",
+      "As stronger than a shorter guarantee from an established firm"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which credit instrument's weakness is that its exclusions tend to mirror the risks the buyer was most worried about?",
+     "c": [
+      "Parent company guarantee",
+      "Insurance wrap",
+      "Escrow",
+      "Balance sheet"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which position gains supply control and loses the ability to adopt a rival's better cell quickly?",
+     "c": [
+      "The pure capital-light integrator",
+      "The vertically integrated cell-owning integrator",
+      "The controls-and-software position",
+      "The component-owning integrator"
+     ],
+     "a": 1
+    },
+    {
+     "q": "According to this guide, where does defensible margin sit in the storage value chain?",
+     "c": [
+      "Evenly across it",
+      "At the ends — cells at one, software, service and track record at the other",
+      "In assembly and enclosure design",
+      "In transport and logistics"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner is reluctant to change storage supplier despite a cheaper offer. Which two forces best explain that?",
+     "c": [
+      "Certification and transport cost",
+      "Switching cost from coupled warranty and service, plus the qualification and certification burden facing an alternative",
+      "Cell chemistry and enclosure size",
+      "Grid code and interconnection"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A well-capitalised supplier is excluded from a market by an entity-level designation. Why can it not engineer around this?",
+     "c": [
+      "The rules apply to cell chemistry",
+      "The designation attaches to the firm itself rather than to where the goods are made",
+      "The product fails certification",
+      "Its warranty reserve is too small"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which statement best captures the course's final proposition?",
+     "c": [
+      "The best technology eventually wins the market",
+      "Bankability is creditworthiness a specific buyer's financiers are permitted and willing to accept, so corporate structure has become a technical specification",
+      "Vertical integration is the strongest position",
+      "Certification is the only real barrier to entry"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

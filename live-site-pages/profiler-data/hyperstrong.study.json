@@ -1,0 +1,347 @@
+{
+ "schemaVersion": 2,
+ "slug": "hyperstrong",
+ "title": "HyperStrong — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: what an integrator actually adds",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "This is the first guide in the **integrator** course, and it is worth being precise about what an integrator is, because the word hides the whole business. A {{system integrator}} buys cells it did not make, puts them in a box it did design, adds conversion and control, certifies the result, manufactures it repeatably, and then sells someone a **warranted system** they can borrow money against. Almost none of that is chemistry, and almost none of it is the container.",
+    "Two neighbouring courses in this corpus already cover the ends of that sentence, and this one does not repeat them. **What is inside a cell** — chemistry, electrode design, why one chemistry displaced another — belongs to the cell-maker guides. **What a battery earns and how it decides when to run** — the revenue stack, dispatch, the offtake contract, the project's development and financing — belongs to the buyer-side guides. **What is inside a containerised block, and how several machines are made to behave as one plant** belongs to the storage guide in the bridge-power course.",
+    "What is left is the conversion itself, and this course splits it into seven stages: the **cell you buy** (this guide), the **box you build around it**, the **software that makes it behave**, the **certification that lets you sell it**, the **factory that makes it repeatable**, the **promise you attach to it**, and finally **who is able to keep that promise**. Read in that order they describe one product being brought into existence.",
+    "This guide owns the input. The question it answers is the one an asset-light integrator faces first and answers forever: you do not make cells, so how do you choose them, prove them, and avoid being held hostage by whoever does make them — given that your cell supplier very likely sells finished systems too, and is therefore also your competitor."
+   ]
+  },
+  {
+   "id": "what-a-cell-is-to-a-buyer",
+   "title": "A cell as a purchased component, not a chemistry",
+   "kind": "prose",
+   "ps": [
+    "To a chemist, a cell is an electrochemical system. To an integrator, it is a component with a datasheet, a price, a lead time and a supplier — and the useful mental model is closer to buying engines than to studying combustion. Four numbers do most of the work.",
+    "**Capacity, in {{ampere-hour}}s.** This is charge, not energy. Multiply by the cell's nominal voltage — about 3.2 V for the lithium iron phosphate cells that dominate grid storage — to get energy: a 314 Ah cell holds roughly 1 kWh, a 600 Ah cell roughly 2 kWh. The industry names cell generations by their amp-hours, which is why a conversation about product roadmaps sounds like a list of numbers.",
+    "**Voltage, and therefore how many you need in series.** A grid battery's direct-current bus typically sits between about 1,100 V and 1,500 V, because that is the window the conversion equipment and the cabling insulation are built for. Divide the target bus voltage by the cell voltage and you get the series count; divide the target energy by one cell's energy and you get the total; the ratio is the parallel count. This is why datasheets carry a {{series-parallel configuration}} such as 416S12P — 416 cells in series, twelve of those strings in parallel.",
+    "**{{C-rate}}, which is really duration.** A cell rated for continuous 0.5C discharge empties in two hours; 0.25C in four. Grid storage lives at low C-rates, so cells are optimised for energy rather than for delivering current hard — the opposite of the trade a data-centre backup cell makes. That single choice cascades into electrode thickness, internal resistance, heat generation and cooling design.",
+    "**Life, quoted twice.** {{cycle life}} is how many charge-discharge cycles the cell delivers before capacity falls to a stated fraction of new. {{calendar life}} is how long it lasts sitting still. A grid battery cycling once a day for twenty years needs roughly seven thousand cycles *and* twenty calendar years, and whichever runs out first ends the asset — so a cell with excellent cycle life and mediocre calendar life is not a grid cell.",
+    "Everything above is specified by the integrator and delivered by someone else. The integrator's real technical contribution at this layer is not inventing the cell; it is **deciding which cell the rest of the product will be designed around, and proving that decision holds** — which is the subject of the next four sections."
+   ],
+   "note": "A useful discipline when reading any storage datasheet: every cell number is quoted at conditions — temperature, C-rate, depth of discharge, state-of-charge window. Two cells are comparable only when those conditions match, and they usually do not."
+  },
+  {
+   "id": "the-format-ladder",
+   "title": "The format ladder, and why containers keep getting bigger",
+   "kind": "timeline",
+   "intro": "Grid storage has run through a rapid sequence of {{cell format}}s, each roughly doubling the charge in one can. The dates below mark when each class entered volume production in the industry generally, not any one company's roadmap. The point of the chart is the slope: a component the integrator does not control has been redefining the integrator's product every two to three years.",
+   "lanes": {
+    "a": "Cell format in volume production",
+    "b": "Typical energy per twenty-foot enclosure"
+   },
+   "items": [
+    {
+     "x": 2019,
+     "lane": "a",
+     "label": "~200 Ah class — the first purpose-built grid cell"
+    },
+    {
+     "x": 2020,
+     "lane": "b",
+     "label": "~2.5 MWh per enclosure"
+    },
+    {
+     "x": 2021,
+     "lane": "a",
+     "label": "280 Ah — the format that standardised the industry"
+    },
+    {
+     "x": 2022,
+     "lane": "b",
+     "label": "~3.7 MWh per enclosure"
+    },
+    {
+     "x": 2023,
+     "lane": "a",
+     "label": "314 Ah — same footprint, more charge per can"
+    },
+    {
+     "x": 2024,
+     "lane": "b",
+     "label": "~5 MWh per enclosure becomes the reference product"
+    },
+    {
+     "x": 2025,
+     "lane": "a",
+     "label": "550-700 Ah class — construction changes to get there"
+    },
+    {
+     "x": 2026,
+     "lane": "b",
+     "label": "6-7 MWh per enclosure; modular units break the 20-ft convention"
+    },
+    {
+     "x": 2026.5,
+     "lane": "a",
+     "label": "700-800 Ah class enters production"
+    }
+   ],
+   "note": "Two things follow from this slope. First, **the enclosure is a passenger**: container energy rises mostly because the cell got bigger, not because the box got cleverer — which is why the next guide argues the box's real job is thermal, not volumetric. Second, an integrator that qualified a format two years ago is now selling a product a competitor beats on {{energy density}} without being any better at integration. Format churn is the single largest source of obsolescence risk in this business."
+  },
+  {
+   "id": "bigger-is-not-free",
+   "title": "What a bigger cell buys, and what it costs",
+   "kind": "proscons",
+   "intro": "Every format step looks like free progress on a spec sheet. It is not: the same physics that makes a bigger can efficient also makes it harder to cool, harder to protect and coarser to configure.",
+   "cards": [
+    {
+     "t": "Larger cells (600 Ah and above)",
+     "adv": [
+      "More energy in the same enclosure, so fewer enclosures, less land, less cabling and fewer EPC hours per megawatt-hour — the cost saving is mostly *outside* the battery",
+      "Far fewer parts: fewer welds, fewer {{busbar}} joints, fewer sense wires, fewer monitoring channels. Every connection is a failure opportunity, so halving the count halves a whole class of defects",
+      "Better material utilisation — the can, terminals and case are overhead, and a bigger can spends proportionally less of its volume on them, which is most of the {{energy density}} gain",
+      "Fewer cells to balance and monitor, which simplifies the control electronics discussed in the software guide"
+     ],
+     "dis": [
+      "**Heat has further to travel.** A cell rejects heat through its surface, and surface area grows more slowly than volume — so a bigger cell runs hotter at its centre for the same current, and the cooling design has to work harder to keep the spread small",
+      "More energy sits behind one failure. A cell in {{thermal runaway}} releases what it stored, so a bigger cell is a larger single event and the containment argument has to be re-made",
+      "Coarser granularity: with fewer, larger cells the achievable energy and voltage combinations come in bigger steps, so a system cannot be tuned as finely to an odd project size",
+      "Immature supply. A new format has one or two qualified sources, lower factory yield and no field history — the exact conditions under which second-sourcing is hardest",
+      "Construction usually has to change. Above a certain size the traditional {{wound cell}} becomes awkward and makers move to a {{stacked electrode}} design, which is a different manufacturing process with a different defect population"
+     ]
+    }
+   ],
+   "note": "The pattern to carry forward: **format progress transfers cost out of the battery and into the rest of the plant's savings, while transferring risk into the thermal and safety layers.** That is why the next two guides — the box, and the control software — get harder every time the cell gets bigger, and why the certification guide's re-testing burden is the quiet tax on the whole race."
+  },
+  {
+   "id": "qualifying-a-cell",
+   "title": "What qualification actually means",
+   "kind": "table",
+   "intro": "{{cell qualification}} is the process by which an integrator converts a supplier's datasheet into its own liability. It is not a purchasing formality: at the end of it the integrator, not the cell maker, is the party that warranted the system. These are the layers a serious programme runs.",
+   "cols": [
+    "Layer",
+    "What it tests",
+    "Why the integrator cannot skip it"
+   ],
+   "rows": [
+    [
+     "Electrical characterisation",
+     "Capacity, internal resistance and voltage behaviour across temperature, {{C-rate}} and {{state of charge}} — measured, not read off the datasheet",
+     "The control software's estimates are built on these curves. A model fitted to the wrong curve mis-reports capacity for twenty years"
+    ],
+    [
+     "Life testing",
+     "Accelerated cycling and calendar ageing at several temperatures and depths of discharge, extrapolated to a {{degradation}} model",
+     "This model *is* the capacity guarantee. Getting it wrong is not an engineering error, it is an unfunded twenty-year obligation"
+    ],
+    [
+     "Abuse testing",
+     "Overcharge, over-discharge, short circuit, crush, penetration, thermal exposure — driving the cell to failure deliberately",
+     "Determines whether the protection design is adequate and feeds the safety case the certification guide describes"
+    ],
+    [
+     "Propagation behaviour",
+     "How one failing cell affects its neighbours inside the intended module and enclosure geometry",
+     "Cells are certified alone; systems fail together. Only the integrator's own geometry answers this"
+    ],
+    [
+     "Mechanical and environmental",
+     "Vibration, shock, thermal cycling, humidity, and swelling force as the cell ages",
+     "A cell grows measurably over its life. If the module structure does not accommodate it, the pack fails mechanically long before the chemistry does"
+    ],
+    [
+     "Manufacturing audit",
+     "Process control, traceability, change notification and the supplier's own test data at the plant that will actually build the order",
+     "Qualification is of *a line*, not of a company. A cell built on a second line to the same drawing is a different product until proven otherwise"
+    ],
+    [
+     "Pilot build and field",
+     "A full production-representative system, run in the intended duty for months before volume commitment",
+     "The first place the cell, the thermal design, the balancing strategy and the estimation software meet under real conditions"
+    ]
+   ],
+   "note": "Time and money are the reason this matters commercially. A full programme runs many months and costs real capital, and life testing cannot be compressed — you cannot accelerate calendar ageing without changing the mechanism you are trying to measure. That duration is exactly why the {{dual sourcing}} decision in the next section is an argued one."
+  },
+  {
+   "id": "the-second-source",
+   "title": "Why a second source is an engineering project, not a purchase order",
+   "kind": "prose",
+   "ps": [
+    "{{dual sourcing}} — qualifying two suppliers for the same item — is the standard defence against a supplier that can raise prices, miss deliveries or simply allocate its output elsewhere in a tight market. In most industries it is a procurement decision. In storage it is a design decision, and understanding why is the core of this guide.",
+    "The reason is that **the cell is a structural, thermal and electrical datum for everything above it.** A second cell of the same nominal capacity is not a drop-in replacement unless it shares the exact can dimensions, terminal positions, terminal metallurgy, swelling behaviour, internal resistance and thermal characteristics of the first. If it differs, then the module frame, the {{busbar}} geometry and welding process, the cooling plate contact, the compression hardware, the monitoring harness and the enclosure layout all change — and each change is a re-engineering task with its own validation.",
+    "It goes further than hardware. The control software's capacity and health estimates are fitted to a specific cell's curves, so a second cell needs its own characterisation and its own model. The {{degradation}} model behind the capacity guarantee must be re-derived. And because the safety case was demonstrated on a particular arrangement of a particular cell, the full-scale fire testing that supports enclosure spacing generally has to be repeated — which the certification guide treats as the dominant cost.",
+    "So the honest accounting of a second source is: a second qualification programme, a second set of tooling, possibly a second module design, a repeated fire test, a re-derived warranty model, split volume that raises unit cost on both suppliers, and a permanently larger spares and documentation burden. The registry definition of dual sourcing puts it plainly — it costs money, which is why it is argued rather than assumed.",
+    "Against that sits the exposure of not doing it. Cells have repeatedly moved between shortage and glut, and in a shortage the maker allocates to its own systems business first. Which brings the structural point: **the integrator's cell suppliers are usually also its competitors.** The large cell makers sell finished containerised systems. An asset-light integrator is therefore buying its principal input from a firm that would rather sell the customer the whole thing, and the supply agreement is negotiated in that light.",
+    "The practical middle ground the industry has converged on is **format standardisation rather than supplier standardisation**: design around a format that several makers build to compatible dimensions, so a second source is a qualification programme rather than a redesign. That is a large part of why the industry clusters so tightly on a few amp-hour classes, and why a maker that ships a proprietary format has to be much better to be worth the lock-in."
+   ]
+  },
+  {
+   "id": "how-cells-are-actually-bought",
+   "title": "The shape of a cell contract",
+   "kind": "table",
+   "intro": "Once a cell is qualified, the commercial structure determines whether the qualification is worth anything. These are the instruments, and each one trades a different risk.",
+   "cols": [
+    "Instrument",
+    "What it does",
+    "What it costs the buyer"
+   ],
+   "rows": [
+    [
+     "Multi-year framework agreement",
+     "Fixes a relationship and a total volume over several years, with pricing set periodically rather than per order",
+     "Commits the integrator's roadmap to that supplier's format ladder"
+    ],
+    [
+     "{{take-or-pay}} volume commitment",
+     "The buyer pays for a committed quantity whether or not it is used, so the maker will build capacity for it",
+     "Converts a demand forecast into a fixed obligation. If the market softens, the commitment does not"
+    ],
+    [
+     "Capacity reservation or prepayment",
+     "Buys a claim on a share of a specific plant's output, sometimes with cash up front",
+     "Ties up working capital and concentrates exposure onto one plant's execution"
+    ],
+    [
+     "Indexed pricing",
+     "Prices track a published raw-material or cell index rather than being fixed",
+     "Removes the chance to win on a falling market — and in a falling cell market that is where an integrator's margin often comes from"
+    ],
+    [
+     "Allocation priority",
+     "A contractual place in the queue when the maker is oversubscribed",
+     "Usually purchased with volume commitment, so the hedge against shortage is itself a bet on demand"
+    ],
+    [
+     "Quality and epidemic-failure terms",
+     "Defines the defect rate that constitutes a breach and who bears the cost of a systemic field failure",
+     "The clause that matters most and is negotiated least. Field replacement labour normally dwarfs the value of the cells"
+    ]
+   ],
+   "note": "Notice the symmetry: every instrument that secures supply also increases commitment, and every instrument that preserves flexibility weakens the claim on output. There is no structure that gives an integrator both, which is why cell strategy is the clearest expression of a storage company's view of its own demand — and why the last guide in this course reads a company's cell position as a statement about where it thinks the industry's margin will sit."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why is a cell's capacity quoted in ampere-hours rather than kilowatt-hours?",
+     "a": "Ampere-hours measure charge, which is the quantity the electrode materials actually hold. Energy is charge multiplied by voltage, so the amp-hour figure is the cell property and the kilowatt-hour figure is derived — about 3.2 V per cell for the lithium iron phosphate used in grid storage, so a 314 Ah cell is roughly 1 kWh."
+    },
+    {
+     "q": "What does a configuration such as 416S12P tell you?",
+     "a": "416 cells in series and twelve of those strings in parallel. The series count is set by the direct-current bus voltage the conversion equipment expects — around 1,100 to 1,500 V — and the parallel count is set by how much energy the enclosure is meant to hold."
+    },
+    {
+     "q": "A cell doubles in capacity at the same chemistry. Which engineering problem gets harder, and why?",
+     "a": "Cooling. Heat is generated throughout the cell's volume but leaves through its surface, and surface area grows more slowly than volume — so a larger cell runs hotter in the middle for the same relative current, and holding the temperature spread tight becomes the binding constraint."
+    },
+    {
+     "q": "Why is cycle life meaningless without stated conditions?",
+     "a": "Cycle life is measured at a specific depth of discharge, temperature, charge rate and state-of-charge window. Shallower cycling, cooler operation and a narrower window all extend it, so two cycle-life figures are comparable only when all of those match."
+    },
+    {
+     "q": "Why can an integrator not simply swap in a second supplier's cell of the same amp-hour rating?",
+     "a": "The cell is the structural, thermal and electrical datum for everything above it. Different can dimensions, terminals, swelling behaviour or internal resistance change the module frame, busbar and welding, the cooling contact, the monitoring harness, the software's capacity model, the degradation model behind the warranty, and usually the full-scale fire test that supports enclosure spacing."
+    },
+    {
+     "q": "What does a take-or-pay cell agreement actually transfer?",
+     "a": "Utilisation risk, from the maker to the integrator. The maker gets a volume it can build capacity against; the integrator pays for that volume whether or not its own order book materialises."
+    },
+    {
+     "q": "Why is it structurally awkward that large cell makers also sell complete systems?",
+     "a": "The asset-light integrator buys its single most important input from a firm competing for the same end customer. The supplier controls the integrator's cost base, its format roadmap and its allocation in a shortage, while preferring to sell the customer a finished system itself."
+    },
+    {
+     "q": "What is qualifying 'a line' rather than 'a company', and why does the distinction matter?",
+     "a": "Cell properties depend on the specific production line and its process settings, so a cell built to the same drawing at a different plant is a different product until it has been characterised again. A supplier moving an order between lines can therefore change the product without changing the part number."
+    },
+    {
+     "q": "Why does the industry cluster on a small number of amp-hour formats?",
+     "a": "Because standardising the format rather than the supplier is what makes a second source affordable. If several makers build to compatible dimensions, changing supplier is a qualification programme instead of a redesign of the module, thermal path and enclosure."
+    },
+    {
+     "q": "Where does most of the cost saving from a higher-capacity cell actually land?",
+     "a": "Outside the battery. Fewer enclosures for the same megawatt-hours means less land, less cabling, fewer foundations and fewer installation hours — so the format race is largely an argument about balance-of-plant and construction cost, not about the cell price itself."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "An integrator's datasheet says its enclosure holds 6.25 MWh where the previous generation held 5.0 MWh, in the same twenty-foot footprint. What most likely changed?",
+     "c": [
+      "The enclosure was redesigned to use its volume better",
+      "A higher-capacity cell format was adopted",
+      "The cooling system was made more efficient",
+      "The conversion equipment was moved outside"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which pair of numbers must both be satisfied for a cell to suit a twenty-year daily-cycling project?",
+     "c": [
+      "Energy density and round-trip efficiency",
+      "Cycle life and calendar life",
+      "C-rate and internal resistance",
+      "Nominal voltage and series count"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A supplier offers a cell with the same nominal capacity but 4 mm greater can height. What is the most significant consequence?",
+     "c": [
+      "A modest loss of energy density",
+      "The module structure, cooling contact and enclosure layout all need re-engineering and re-validation",
+      "Nothing, provided the terminals match",
+      "The warranty period must be shortened"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why is life testing the part of a qualification programme that cannot be compressed?",
+     "c": [
+      "Regulators mandate a minimum duration",
+      "Accelerating it far enough changes the ageing mechanism being measured",
+      "Test equipment is scarce",
+      "Suppliers refuse to release cells early"
+     ],
+     "a": 1
+    },
+    {
+     "q": "In a tight cell market, what does an integrator's take-or-pay commitment buy?",
+     "c": [
+      "A lower unit price than competitors",
+      "Priority claim on output, at the price of paying for volume it may not need",
+      "Freedom to switch suppliers without re-qualification",
+      "An extension of the cell warranty"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which statement best describes why format standardisation matters more to an asset-light integrator than supplier standardisation?",
+     "c": [
+      "It lowers the purchase price of cells",
+      "It makes a second source a qualification exercise rather than a product redesign",
+      "It is required by safety standards",
+      "It shortens shipping times"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An epidemic-failure clause in a cell contract is mainly about which cost?",
+     "c": [
+      "The replacement value of the defective cells",
+      "The field labour, transport and lost revenue involved in replacing them across an installed fleet",
+      "The cost of re-running qualification tests",
+      "The supplier's lost margin"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,345 @@
+{
+ "schemaVersion": 2,
+ "slug": "sunwoda",
+ "title": "Sunwoda — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a storage product is a statistics problem",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "Fifth guide in the integrator course. The cell is chosen, the enclosure designed, the software written, the certificates obtained. This guide is about the thing that decides whether any of that survives contact with volume: **making the same object thousands of times.**",
+    "There is a number worth fixing in mind before anything else. A single utility enclosure holds on the order of **five thousand cells**. A modest project uses tens of enclosures. A supplier shipping a few gigawatt-hours in a year is producing several million cells' worth of product, every one of which must work for twenty years inside a series string where the worst member sets the outcome.",
+    "At that scale, the language of quality changes. 'We tested it and it worked' stops meaning anything, because you cannot test several million of anything. What replaces it is **process control and statistics** — the argument that the way the thing was made makes a bad one improbable, together with the ability to prove which ones were made when and to find them again if you were wrong.",
+    "This guide covers the cell factory a buyer needs to understand, the statistical arguments that replace inspection, traceability, the two acceptance tests, the shape of a failure population over time, and the awkward fact that a battery is regulated freight. It connects backwards to cell qualification in the first guide — qualification is of a line, not a company — and forwards to the twenty-year promise, which is priced on an assumption about defect rates."
+   ]
+  },
+  {
+   "id": "rare-defects",
+   "title": "The arithmetic that makes inspection hopeless",
+   "kind": "prose",
+   "ps": [
+    "Start with the number above. Five thousand cells per enclosure, all in service, all in series strings where a single failed cell can take the string offline and a single unsafe cell can take the enclosure.",
+    "Now suppose a supplier achieves a defect rate of one hundred parts per million — one bad cell in ten thousand. That sounds excellent. It means roughly one defective cell in every two enclosures shipped. A hundred-enclosure project would contain around fifty of them.",
+    "Suppose instead the rate is one part per million. Now it is one defective cell in every two hundred enclosures — a very different project experience, and a very different warranty cost. **Two orders of magnitude in defect rate is the difference between a normal product and an unsellable one, and neither rate is visible from outside.**",
+    "This is why sampling cannot do the job. To detect a one-in-a-million event with any confidence you would have to test something close to a million units, which for a destructive test is the entire production run. Statistical sampling is excellent at catching a process that has drifted badly; it is essentially blind to rare events, and rare events are exactly what a twenty-year fleet is made of.",
+    "So the industry substitutes a different argument. Instead of proving that the shipped units are good, it proves that **the process that made them was in control at the moment it made them** — every parameter that matters recorded, every drift detected and corrected, every unit's manufacturing history retrievable. The claim becomes: this cell was made by a process that was demonstrably behaving, and here is the record.",
+    "That substitution has a consequence buyers routinely underestimate. It means **the factory's data systems are part of the product**, and a supplier's quality claim is only as strong as its ability to produce the record for a specific serial number years later. Which is the subject of the traceability section below."
+   ],
+   "note": "The same arithmetic explains why **epidemic failure** clauses dominate cell contracts. A random defect at a low rate is an operating cost. A systematic defect — a process that went wrong for a fortnight and put a common flaw into every cell built in that window — is not rare at all, and it is distributed through the fleet in a pattern nobody discovers until units start failing together."
+  },
+  {
+   "id": "inside-a-cell-plant",
+   "title": "What happens in a cell factory, and what each step decides",
+   "kind": "table",
+   "intro": "An integrator does not run these steps, but it audits them, and the failures they produce arrive years later as field problems it owns. This is the sequence in the order it happens, with what a buyer should understand about each.",
+   "cols": [
+    "Step",
+    "What happens",
+    "What a defect here looks like later"
+   ],
+   "rows": [
+    [
+     "{{electrode coating}}",
+     "Active material is mixed into a slurry and coated onto metal foil in a continuous web, then dried. Thickness and uniformity are controlled to very fine tolerances",
+     "Uneven coating means uneven current density, so parts of the electrode work harder than others — a cell that ages faster and unevenly, indistinguishable from a good one when new"
+    ],
+    [
+     "{{calendering}}",
+     "The coated foil is compressed between rollers to a precise density and thickness, setting how tightly the active material is packed",
+     "Over-compression damages structure and impedes movement inside the electrode; under-compression wastes volume. Both show up as capacity or rate behaviour that drifts from the model"
+    ],
+    [
+     "Cutting and {{stacked electrode}} or winding",
+     "Electrodes and separator are cut and assembled into the internal package — either wound into a roll or stacked in layers. Large formats increasingly use stacking",
+     "Burrs or misalignment at an edge are the classic internal short-circuit precursor: harmless for months or years, then catastrophic"
+    ],
+    [
+     "Assembly in a {{dry room}}",
+     "The package is inserted into its can and sealed, in an atmosphere held at extremely low humidity because the materials react with water",
+     "Moisture ingress produces gas generation and accelerated ageing — often the explanation for a cell population that swells and fades together"
+    ],
+    [
+     "Electrolyte fill and sealing",
+     "Precisely metered electrolyte is introduced and the cell is closed",
+     "Too little starves the cell late in life; a poor seal admits moisture. Both are slow failures that appear well outside any acceptance test window"
+    ],
+    [
+     "{{cell formation}}",
+     "The cell is charged and discharged for the first time under a controlled profile, growing the protective layer on the negative electrode that makes the cell stable",
+     "The single most consequential step for long-term life, and the slowest and most capital-intensive. A poor formation profile produces cells that meet specification at delivery and degrade abnormally afterwards"
+    ],
+    [
+     "Ageing and grading",
+     "Cells rest under observation for days or weeks, then are measured and sorted by capacity and self-discharge into matched groups",
+     "A cell whose self-discharge is slightly high passes every quick test and then becomes the weakest cell in its string. Grading is what keeps a string's distribution narrow from day one"
+    ]
+   ],
+   "note": "Two observations for a buyer. First, **formation and ageing dominate the plant's capital and floor space** — the steps that make the electrodes are fast and the steps that stabilise and prove the cell are slow — which is why a plant's nameplate capacity and its actual output diverge most in its early years, exactly as the registry's definition of a gigafactory warns. Second, almost every defect above is **latent**: it passes acceptance and reveals itself in service. That is precisely why process evidence outranks final inspection."
+  },
+  {
+   "id": "process-control",
+   "title": "Yield is a cost signal and a quality signal at the same time",
+   "kind": "prose",
+   "ps": [
+    "**{{statistical process control}}** is the discipline that replaces inspection. Instead of judging the output, it measures the parameters of the process itself — coating thickness, density, dimensions, temperatures, timings — and watches their distribution. A process that is stable produces a predictable spread around a target; the moment the spread widens or the centre moves, something has changed, and it is caught before it has made much of anything.",
+    "The power of the idea is that it detects a problem in the parameter rather than in the product, which is both earlier and far cheaper. Its limitation is that it only sees what it measures — a failure mode nobody thought to instrument is invisible to it, which is why audits examine what is measured as closely as the values.",
+    "Two numbers summarise the outcome. **{{first-pass yield}}** is the fraction of units that pass every step without rework. **{{defects per million}}** is the residual escape rate reaching the customer. They are related but distinct, and the relationship is the interesting part: a plant can achieve a low escape rate by inspecting and reworking heavily, which shows up as poor first-pass yield and high cost. So yield is simultaneously an economic measure and a quality measure, and a supplier quoting one without the other is choosing which story to tell.",
+    "Yield also explains something otherwise puzzling about the format race in the first guide. **A new cell format begins with poor yield.** New tooling, new process windows, new failure modes — the plant is relearning. That is why an aggressive new format can be genuinely more expensive per kilowatt-hour than the mature format it replaces, for the first year or two, despite being denser. The {{learning curve}} is real, but it runs from the start again each time the product changes fundamentally.",
+    "When something does escape, the response is what distinguishes a quality system from a quality department. **{{root cause analysis}}** insists on identifying the mechanism rather than the occasion — not 'this batch was bad' but 'this parameter drifted because this control was inadequate' — and the corrective action changes the process so the mechanism cannot recur. The test of whether an organisation actually does this is whether its corrective actions ever change a design or a control system, or only ever add an inspection step."
+   ],
+   "note": "A related tool worth naming because audits ask for it: **{{FMEA}}**, the systematic enumeration of how each part of a design or process could fail, how likely and how detectable each mode is, and what is done about the ones that matter. Its value is not the document but the discipline of having thought about undetectable failures before they happen — which, given how many battery defects are latent, is the whole game."
+  },
+  {
+   "id": "traceability",
+   "title": "Knowing exactly which ones",
+   "kind": "prose",
+   "ps": [
+    "{{traceability}} is the ability to take any unit in the field and reconstruct its history: which cells are in it, when and on which line they were made, what the process parameters were that shift, which materials lot they came from, what they measured at grading, and which project they shipped to.",
+    "It sounds like bookkeeping. It is the difference between two completely different commercial outcomes when something goes wrong.",
+    "**Without it**, a supplier that discovers a process problem knows only that some cells made in some period are suspect. It cannot bound the population, so it must either replace far more than necessary, at enormous cost, or replace nothing and hope, at enormous risk. Owners and their insurers, facing the same ignorance, will assume the worst.",
+    "**With it**, the supplier can say: three hundred and forty modules, at these eleven sites, containing cells from these two material lots. The remediation is bounded, its cost is calculable, and it can be reserved for. The same failure becomes a manageable event rather than a solvency question.",
+    "Traceability has become a compliance requirement as well as an engineering one. Rules that condition tax treatment or market access on where components were made can only be satisfied by a supplier that can demonstrate the origin of what it shipped, and a documented chain from material to installed unit is the only credible way to do it. The same records that bound a recall also bound an eligibility claim.",
+    "The practical requirement is a serial identity that survives every level of assembly — cell, module, rack, enclosure, project — with the links between levels recorded as they are made rather than reconstructed afterwards. Reconstruction does not work: the information is destroyed at assembly unless it was captured then, which means traceability is a decision taken when the line is designed, not a report generated when a problem appears."
+   ]
+  },
+  {
+   "id": "proving-it-twice",
+   "title": "Two acceptance tests, and what each cannot prove",
+   "kind": "proscons",
+   "intro": "A storage system is tested twice on its way into service: once at the works before it ships, and once installed on site. They are not redundant, and understanding what each cannot do is more useful than knowing what each does.",
+   "cards": [
+    {
+     "t": "{{factory acceptance test}}",
+     "adv": [
+      "Catches wiring, assembly, configuration and control-logic errors while the equipment is accessible and the fix costs a technician an afternoon",
+      "Performed in a controlled environment where instrumentation is good and faults can be investigated properly",
+      "The customer is present, so disagreements about what was supplied are settled before anything is on a ship",
+      "Can be repeated cheaply, so a marginal result can be chased down rather than accepted"
+     ],
+     "dis": [
+      "Only proves what can be simulated in a workshop — it cannot present the real grid, the real ambient conditions, or the real duty",
+      "Tests the unit, not the system: interactions between units, and between the plant and its connection, are out of scope by construction",
+      "A pass creates a false sense of completion, because the failure modes that matter most are precisely the ones the works cannot reproduce",
+      "Shipping happens after it, and shipping is itself a source of damage"
+     ]
+    },
+    {
+     "t": "{{site acceptance test}}",
+     "adv": [
+      "Proves the installation — the terminations, the earthing, the cooling once connected, the communications between units, the plant controller against the real connection",
+      "Runs in the actual environment, so temperature-dependent behaviour and real derating appear",
+      "Is the basis on which the owner accepts the plant and the warranty period starts, so it defines a legal boundary as well as a technical one",
+      "Exercises the whole system together, which is the only way interaction failures surface"
+     ],
+     "dis": [
+      "Every fault found here is expensive: crews are mobilised, equipment is installed, and a customer is waiting",
+      "Its schedule sits at the end of the project, where all accumulated delay has landed and there is pressure to accept marginal results",
+      "It cannot easily test rare conditions — a fault during an islanding transition, a heat wave, a grid disturbance — because they cannot be summoned on demand",
+      "It proves the plant works now; it says nothing about the twenty years that follow, which is what the guarantee is actually about"
+     ]
+    }
+   ],
+   "note": "The general principle is the one the bridge-power storage guide draws from full-scale fire testing and controller simulation: **where a system's important behaviours are interactions, testing the components does not test the system.** The works test proves the machine; the site test proves the installation; and neither proves the fleet, which is why the software guide's telemetry loop and this guide's process records are the only evidence that ever addresses the twenty-year question."
+  },
+  {
+   "id": "the-bathtub",
+   "title": "When failures happen tells you what caused them",
+   "kind": "bars",
+   "unit": "relative failure rate (illustrative)",
+   "intro": "Plot the failure rate of a large population of manufactured items against age and a characteristic shape appears — high at first, low and flat for a long time, then rising. It is called the {{bathtub curve}}, and its practical value is diagnostic: **when** a population fails tells you **what kind** of problem you have.",
+   "items": [
+    {
+     "label": "First months — infant mortality",
+     "v": 9
+    },
+    {
+     "label": "Year 1",
+     "v": 3
+    },
+    {
+     "label": "Years 2-5 — useful life",
+     "v": 1
+    },
+    {
+     "label": "Years 6-12 — useful life",
+     "v": 1.2
+    },
+    {
+     "label": "Years 13-17 — early wear-out",
+     "v": 3
+    },
+    {
+     "label": "Years 18-20 — wear-out",
+     "v": 7
+    }
+   ],
+   "note": "Read the three regions as three different conversations. **Early failures are a manufacturing signal** — escapes, damage in transit, installation errors — and the response is process control and, where the economics justify it, burn-in: running units under stress before shipment so the weak ones fail at the factory's expense rather than the customer's. **The flat middle is random**, and it is the only region where a figure such as {{MTBF}} means anything; even there the registry's caution applies, since it describes a fleet rather than a unit and says nothing about repair time. **Late failures are a design and materials signal**, and they are the region a twenty-year capacity guarantee is written across — which is why an integrator watching its fleet's failure rate is really watching for the wear-out shoulder arriving earlier than the warranty model assumed."
+  },
+  {
+   "id": "getting-it-there",
+   "title": "A battery is regulated freight",
+   "kind": "prose",
+   "ps": [
+    "A finished enclosure is not simply cargo. Lithium batteries are classified as {{dangerous goods}} for transport, and the classification is not a formality: it governs packaging, labelling, documentation, the state of charge at which units may ship, and in some cases which vessels or routes may carry them.",
+    "The gate is **{{UN 38.3}}**, a defined sequence of abuse tests — altitude simulation, thermal cycling, vibration, shock, external short circuit, impact, overcharge, forced discharge — that a lithium battery design must pass before it may legally be transported. It is worth noticing what this is and is not. It is not a performance standard and not an installation standard; it certifies that the design survives the journey without becoming a hazard. A product can be fully listed for installation and still be unshippable if this is not in place.",
+    "Units are normally shipped at a partial state of charge rather than full, because a cell at low charge has less energy to release if something goes wrong. That has a practical consequence at the far end: a system arrives needing to be brought up to an operating state, and the interval between manufacture and commissioning is a period of slow self-discharge and calendar ageing that has already begun consuming the warranty. A unit that sits in a port for six months has aged.",
+    "The journey itself is a mechanical test nobody scheduled. Road vibration, ship motion, crane lifts, temperature swings in an unconditioned container, and salt air all act on an assembly designed for a static foundation. This is why shock and vibration qualification exists, and why serious suppliers instrument shipments — a recorded impact is the difference between a warranty claim with evidence and an argument.",
+    "The framing that matters is the last one. **Damage in transit is a quality-system failure, not a logistics accident.** The packaging, the internal restraint, the shipping state of charge and the monitoring are all design decisions made months earlier, and a fleet that arrives damaged is telling the manufacturer something about those decisions — which is exactly the feedback loop this whole guide has been describing."
+   ],
+   "note": "Connecting forward: everything above is why an integrator's manufacturing footprint is a commercial as well as an industrial decision. Where cells are made determines transport cost, transit ageing, tariff exposure and — through the traceability records — eligibility under rules that condition market access on origin. The last guide in this course reads that footprint as a strategic position rather than a factory address."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Roughly how many cells are in one utility enclosure, and why does the number matter?",
+     "a": "On the order of five thousand. At that count even a very low defect rate produces defective cells in a routine project, and because cells sit in series strings where the weakest member limits the string, individually rare failures become a fleet-level problem."
+    },
+    {
+     "q": "Why is statistical sampling almost useless against a one-in-a-million defect?",
+     "a": "Detecting an event that rare with any confidence requires testing something close to a million units, which for a destructive test is the whole production run. Sampling catches gross process drift, not rare escapes."
+    },
+    {
+     "q": "What argument replaces final inspection at volume?",
+     "a": "Process evidence: proof that the process which made each unit was in control at the moment it made it, with the parameters recorded and every unit's manufacturing history retrievable. The factory's data systems become part of the product."
+    },
+    {
+     "q": "Which cell-factory step most determines long-term life, and why is it the plant's bottleneck?",
+     "a": "Formation — the first controlled charge and discharge that grows the protective layer on the negative electrode. It is slow and capital-intensive, so together with ageing it dominates a plant's floor space and explains why nameplate capacity and early actual output diverge."
+    },
+    {
+     "q": "Why does grading exist?",
+     "a": "Cells are measured and sorted into matched groups by capacity and self-discharge so that a string starts with a narrow distribution. A cell with slightly high self-discharge passes every quick test and would otherwise become the weakest cell in its string."
+    },
+    {
+     "q": "What is the difference between first-pass yield and defects per million, and why quote both?",
+     "a": "First-pass yield is the fraction passing every step without rework; defects per million is the escape rate reaching the customer. A plant can buy a low escape rate with heavy rework, which shows as poor yield and high cost — so either figure alone can be made to tell a flattering story."
+    },
+    {
+     "q": "Why can a denser new cell format be more expensive per kilowatt-hour than the format it replaces?",
+     "a": "Because a new format restarts the learning curve — new tooling, new process windows, new failure modes and therefore poor initial yield. The density advantage is real but the manufacturing cost advantage arrives later."
+    },
+    {
+     "q": "How do you tell a genuine root-cause analysis from a cosmetic one?",
+     "a": "By whether the corrective action changes a design or a control system rather than only adding an inspection step. Naming the occasion is not naming the mechanism."
+    },
+    {
+     "q": "State the commercial value of traceability in one sentence.",
+     "a": "It converts an unbounded problem into a bounded one — the difference between 'some cells from some period are suspect' and 'these three hundred and forty modules at these eleven sites', which is the difference between a solvency question and a reserved cost."
+    },
+    {
+     "q": "Why can traceability not be added after the fact?",
+     "a": "The links between cell, module, rack and enclosure are destroyed at assembly unless they are captured as the assembly happens. It is a decision taken when the production line is designed, not a report produced when a problem appears."
+    },
+    {
+     "q": "What does a factory acceptance test structurally fail to prove?",
+     "a": "Anything that depends on the real installation or the real environment: the connection to the grid, ambient conditions, interactions between units, and the plant controller against an actual network. It proves the machine, not the system."
+    },
+    {
+     "q": "A supplier sees elevated field failures in the first months of service. What kind of problem is that, and what is the standard response?",
+     "a": "A manufacturing signal — escapes, transit damage or installation error — read off the infant-mortality region of the bathtub curve. The responses are tighter process control and, where economics allow, burn-in so weak units fail before shipment."
+    },
+    {
+     "q": "What is UN 38.3, and what does passing it permit?",
+     "a": "A defined sequence of abuse tests — altitude, thermal cycling, vibration, shock, short circuit, impact, overcharge, forced discharge — that a lithium battery design must pass before it may legally be transported. It is a shipping qualification, entirely separate from installation listings."
+    },
+    {
+     "q": "Why are systems shipped at partial state of charge, and what does that cost?",
+     "a": "Less stored energy means less to release if something goes wrong in transit. The cost is that the unit arrives needing to be brought up to operating state, and every month between manufacture and commissioning is calendar ageing already spent against the warranty."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A supplier's cell defect rate is 100 parts per million. Roughly what does that mean for a 100-enclosure project?",
+     "c": [
+      "About one defective cell in the whole project",
+      "About fifty defective cells across the project",
+      "About five hundred defective cells",
+      "Nothing measurable"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which failure is most likely to be described as latent — passing acceptance and appearing years later?",
+     "c": [
+      "A missing terminal bolt",
+      "Moisture ingress during assembly causing gas generation and accelerated ageing",
+      "An incorrectly configured communications address",
+      "A damaged enclosure door"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Statistical process control is described as blind to one class of problem. Which?",
+     "c": [
+      "Slow parameter drift",
+      "A failure mode nobody thought to instrument",
+      "Operator error",
+      "Material lot variation"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A supplier reports excellent defects-per-million but will not disclose first-pass yield. What is the most likely explanation?",
+     "c": [
+      "The plant is highly automated",
+      "The low escape rate is being bought with heavy inspection and rework, which is expensive and fragile",
+      "The product is very simple",
+      "The figures are equivalent"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why is traceability now a compliance requirement and not only an engineering one?",
+     "c": [
+      "Insurers demand serial numbers",
+      "Rules conditioning tax treatment or market access on component origin can only be satisfied by a documented chain from material to installed unit",
+      "Fire codes require it",
+      "It reduces transport cost"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Failures cluster in years eighteen to twenty of a fleet's life. What kind of signal is this?",
+     "c": [
+      "Manufacturing escapes",
+      "Design and materials wear-out — the region a capacity guarantee is written across",
+      "Installation error",
+      "Random failure"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A product holds a full system listing for installation but has not completed the transport test sequence. What follows?",
+     "c": [
+      "It can be installed but not legally shipped",
+      "It can be shipped but not installed",
+      "Neither is affected",
+      "The listing is invalid"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Which framing does this guide argue for regarding damage discovered on arrival?",
+     "c": [
+      "A logistics accident to be recovered from the carrier",
+      "A quality-system failure, since packaging, restraint, shipping state of charge and monitoring were all design decisions",
+      "An unavoidable cost of international trade",
+      "An installation problem"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

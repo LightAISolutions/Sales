@@ -1,0 +1,402 @@
+{
+ "schemaVersion": 2,
+ "slug": "trina-storage",
+ "title": "Trina Storage — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the hardware is the delivery mechanism",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "Sixth guide in the integrator course, and the one that names what is actually being sold. Everything so far has been a physical object: a cell, a box, a control system, a certificate, a factory. This guide argues that none of those is the product.",
+    "**The product is a twenty-year obligation, and the hardware is how it is delivered.** A buyer is not purchasing five thousand cells in a steel enclosure. It is purchasing a promise that a stated quantity of energy will be available, at a stated efficiency, for a stated fraction of the hours, for two decades — with money attached to every part of that sentence. The steel arrives on a truck; the promise is what the lender underwrites.",
+    "That reframing explains behaviour that is otherwise puzzling. It explains why suppliers will not extend long warranties without also holding the service contract. It explains why an integrator's balance sheet is scrutinised more carefully than its datasheets. And it explains why the last guide in this course is about credit rather than engineering.",
+    "Scope. **How a battery earns money** and **how an owner decides when to run it** belong to the merchant-storage guides; **how a purchase contract allocates risk between an owner and its offtaker** belongs to the offtake guide. This guide is about the contract between the **supplier and the owner** — the guarantees, what they cost the party giving them, and how they are kept."
+   ]
+  },
+  {
+   "id": "what-is-guaranteed",
+   "title": "The five promises, and what each is measured against",
+   "kind": "table",
+   "intro": "A storage supply agreement typically carries several distinct guarantees. They are frequently discussed as one thing — 'the warranty' — and they are not: they are measured differently, breached differently and remedied differently.",
+   "cols": [
+    "Promise",
+    "What is measured, and how",
+    "Remedy when it is missed"
+   ],
+   "rows": [
+    [
+     "Capacity retention",
+     "That the system still holds at least a stated fraction of its original energy at each anniversary, proven by a defined capacity test under specified conditions",
+     "The supplier restores capacity at its own cost — normally by {{augmentation}}, sometimes by module replacement. This is the {{capacity maintenance agreement}}, and it is the most expensive promise in the set"
+    ],
+    [
+     "{{availability guarantee}}",
+     "The fraction of hours the plant was capable of performing, excluding agreed exclusions, measured over a year",
+     "{{liquidated damages}} per unit of shortfall. The registry's caution matters here: storage revenue concentrates into few hours, so an average availability figure can conceal an expensive absence"
+    ],
+    [
+     "Efficiency",
+     "{{round-trip efficiency}} at defined temperature, rate and state-of-charge window, proven by test rather than asserted",
+     "Damages, or a capacity make-good. Rarely the headline promise, but the one that quietly costs the owner energy on every cycle for twenty years"
+    ],
+    [
+     "Response and power",
+     "That the system delivers its rated power, and responds within its specified time, across the state-of-charge and temperature range",
+     "Damages, and in severe cases a rectification obligation. Matters most where the revenue depends on fast response"
+    ],
+    [
+     "Defect warranty",
+     "That equipment is free from defects in materials and workmanship for a stated period, usually much shorter than the capacity guarantee",
+     "Repair or replacement. Note the asymmetry: the defect warranty may expire long before the capacity guarantee, so late-life problems must be argued as capacity, not as defect"
+    ]
+   ],
+   "note": "The distinction that catches people is the last row. A component failing in year twelve is usually outside the defect warranty, so the owner's protection is whatever the availability and capacity guarantees provide — which is why the **service agreement**, not the warranty, is what actually keeps a plant running in its second decade."
+  },
+  {
+   "id": "the-capacity-curve",
+   "title": "The shape of the promise",
+   "kind": "bars",
+   "unit": "% of original energy still guaranteed",
+   "intro": "A capacity guarantee is not a single number; it is a **{{guaranteed capacity curve}}** — a schedule of the minimum energy the system must still hold at each year of its life. Below is an illustrative shape for a system cycled roughly once daily. The precise values differ by product and duty; what matters is the geometry and what it does to the supplier.",
+   "items": [
+    {
+     "label": "Year 0",
+     "v": 100
+    },
+    {
+     "label": "Year 2",
+     "v": 93
+    },
+    {
+     "label": "Year 5",
+     "v": 87
+    },
+    {
+     "label": "Year 8",
+     "v": 83
+    },
+    {
+     "label": "Year 11",
+     "v": 79
+    },
+    {
+     "label": "Year 14",
+     "v": 76
+    },
+    {
+     "label": "Year 17",
+     "v": 72
+    },
+    {
+     "label": "Year 20",
+     "v": 70
+    }
+   ],
+   "note": "Three properties of this curve are worth reading carefully. **It is steep at first and then flattens**, because capacity fade is fastest when a cell is new and slows as it ages — so an early test is a poor predictor of the later trajectory. **It is a floor, not a forecast**: the supplier's own expected curve sits above it, and the gap between the two is its margin of safety. And **it is a commitment made against a duty assumption** — the whole schedule is void or renegotiated if the plant is operated outside the envelope the next section describes."
+  },
+  {
+   "id": "three-ways-to-keep-it",
+   "title": "Three ways to keep a capacity promise",
+   "kind": "proscons",
+   "intro": "Given the curve above, a supplier has three broad strategies. Each is a different bet about cost, technology and its own longevity, and the choice is normally made at bid time and lived with for twenty years.",
+   "cards": [
+    {
+     "t": "{{oversizing}} — install more than the contract requires on day one",
+     "adv": [
+      "The simplest promise to keep: install enough extra energy that natural fade never crosses the guaranteed floor, and no future intervention is needed",
+      "No dependency on the future availability, price or compatibility of cells — a serious advantage over a twenty-year horizon",
+      "No repeated site work, no repeated commissioning, no repeated permitting",
+      "Simplest to underwrite, because the obligation is discharged at handover rather than carried"
+     ],
+     "dis": [
+      "The extra energy is paid for at day-one prices and sits idle for years, which is expensive capital in the wrong place",
+      "It enlarges the site: more enclosures, more land, more cabling, more spacing — the second guide's whole cost chain",
+      "It over-serves the early years and under-serves nothing, so it is the least efficient use of capital of the three",
+      "Cell prices have historically fallen, so paying early for capacity you need later is a bet against the industry's own trend"
+     ]
+    },
+    {
+     "t": "{{augmentation}} — add capacity later, as the curve demands",
+     "adv": [
+      "Capital is spent when it is needed, and later cells are usually cheaper and denser than earlier ones",
+      "The site starts smaller, so the early-year land, cabling and permitting cost is lower",
+      "The industry's default, so the commercial and contractual patterns are well established",
+      "Allows the supplier to defer cost, which improves the economics of the original bid"
+     ],
+     "dis": [
+      "Requires physical and electrical space reserved from day one — an augmentation nobody left room for is not an augmentation",
+      "Mixing new cells with aged ones in the same system is technically awkward: different capacity, different resistance, different ageing, so they are usually kept on separate strings rather than blended",
+      "It depends on the supplier still existing, and on a compatible product still being manufactured, a decade later. Both are real risks",
+      "Repeat permitting, repeat commissioning, and a site intervention on an operating plant"
+     ]
+    },
+    {
+     "t": "Replacement — swap modules when they fall below the floor",
+     "adv": [
+      "Restores the system to a known state rather than layering generations on top of each other",
+      "Keeps the whole plant on one product generation, so the control and warranty models stay coherent",
+      "Attractive where space is genuinely constrained and expansion is impossible",
+      "Removes the aged cells, which also removes their failure risk and their recycling obligation from the operating plant"
+     ],
+     "dis": [
+      "The most expensive of the three by a wide margin — new equipment plus removal, disposal and downtime",
+      "Requires the original form factor to still be available, which the first guide's format ladder makes unlikely after a decade",
+      "Takes the plant, or a large part of it, out of service during the work",
+      "Creates a large end-of-life disposal event rather than a gradual one"
+     ]
+    }
+   ],
+   "note": "Almost every real project is a blend, and the mix is decided by three things the supplier cannot control: how fast cell prices fall, whether the site has room, and whether the supplier will still be there. **The third is the reason the next guide exists** — a supplier's augmentation strategy is only as good as its own survival, and a strategy that defers cost furthest is also the one that depends most on its own longevity."
+  },
+  {
+   "id": "the-budget-you-are-spending",
+   "title": "The warranty is a budget, and dispatch spends it",
+   "kind": "prose",
+   "ps": [
+    "The guaranteed curve above is not a promise about time. It is a promise about **time under stated conditions**, and the conditions are the part that makes it enforceable.",
+    "A capacity guarantee is written against a duty envelope: a maximum number of full-equivalent cycles per year, a stated {{depth of discharge}}, temperature limits, a charge and discharge rate ceiling, and often limits on how long the system may sit at high or low {{state of charge}}. Together these define an **{{energy throughput}}** budget — a total quantity of energy the system may move over its life while the promise holds.",
+    "This turns something that looks like an engineering specification into an operating constraint with a price. Every dispatch decision spends part of the budget. Cycling harder to capture a good price is not free: it consumes warranty life that the owner has already paid for and cannot replace. The merchant-storage dispatch guide makes exactly this point from the owner's side — the battery's throughput is inventory, and spending it is a real cost that competes with the revenue that motivated it.",
+    "From the supplier's side the envelope is what makes a twenty-year promise underwritable at all. Without it, the supplier would be guaranteeing capacity against an operating pattern the owner chooses freely and can change at any time — which is not a risk anyone can price. The envelope converts an open-ended exposure into a bounded one.",
+    "The friction this creates is genuine and recurring. Owners want operational freedom because market conditions change; suppliers need bounded exposure because they have reserved money against it. The instruments that resolve it are all variations on **buying more envelope**: a higher cycle allowance at a higher price, a wider temperature range with a steeper guaranteed curve, or an explicit throughput-based structure where the guarantee is denominated in energy rather than years. All of them price the same underlying thing.",
+    "Monitoring is what makes any of this real, and it is why the software guide's telemetry loop is not a convenience feature. Continuous measurement of cycles, temperature, rate and state-of-charge dwell is simultaneously **the supplier's evidence** that the envelope was or was not respected and **the owner's evidence** that the system underperformed a duty it was given. A dispute without that record is unresolvable, so both parties have an interest in the same data being collected — which is one of the few genuinely aligned incentives in the relationship."
+   ]
+  },
+  {
+   "id": "who-pays-for-the-promise",
+   "title": "Where the money for a twenty-year promise actually sits",
+   "kind": "prose",
+   "ps": [
+    "A guarantee is a liability the supplier takes on at the moment of sale and discharges over twenty years. The question that decides whether it is worth anything is prosaic: **has the supplier set aside the money?**",
+    "The mechanism is a **{{warranty reserve}}** — a provision recognised when the sale is booked, sized by an estimate of future obligations, and drawn down as claims arrive. Sizing it requires two things: a {{degradation}} model good enough to forecast when augmentation will be needed, and a defect-rate assumption good enough to forecast field failures. The third and fifth guides in this course are about exactly those two inputs, which is not a coincidence — **fleet telemetry and manufacturing statistics are what make the reserve a calculation rather than a guess.**",
+    "There is a structural temptation here that every buyer should understand. A guarantee costs nothing today and everything later. A supplier under pressure to win work can offer a more aggressive curve, reserve too little, and book better margin now — and the shortfall will not appear for years, by which time it is somebody's problem and possibly nobody's. **Aggressive warranty terms from a financially weak supplier are a warning sign, not a bargain**, and they are cheap precisely because they may not be honoured.",
+    "This is also the honest explanation for a practice that is often read as a commercial land grab: suppliers generally will not extend long-dated warranties unless they also hold the {{LTSA}}. The registry definition states the outcome — the service agreement and the warranty are negotiated as one package — and the reasoning is sound in both directions. The supplier cannot underwrite performance it does not control or observe; a plant maintained by a third party to unknown standards is not a risk it can price. And the service contract gives it the revenue stream and the site access that make honouring the guarantee practical rather than merely obligatory.",
+    "For the owner the same coupling has a cost: it locks in a service provider for two decades and forecloses the option of competing that scope later. The trade is real. A shorter warranty with an open service market preserves flexibility and costs more in risk; a long warranty with a bundled service agreement transfers risk and costs flexibility. Which is right depends on how confident the owner is in the supplier's twenty-year survival — the question the final guide takes up."
+   ],
+   "note": "One further instrument worth knowing, because it directly addresses the reserve problem: a supplier's obligation can be backed by an external credit instrument rather than by its own promise alone. Those instruments — parent guarantees, bonds, insurance — are covered in the last guide, where they belong to the question of who can stand behind an obligation rather than what the obligation says."
+  },
+  {
+   "id": "what-a-service-agreement-contains",
+   "title": "What is actually inside a long-term service agreement",
+   "kind": "table",
+   "intro": "The {{LTSA}} is where the promise is operationalised. Its contents are more revealing than the headline warranty length, and the exclusions are more revealing than the inclusions.",
+   "cols": [
+    "Element",
+    "What it covers",
+    "What to look at closely"
+   ],
+   "rows": [
+    [
+     "{{preventive maintenance}}",
+     "Scheduled inspection and servicing — cooling system, coolant condition, filters, connections, fire-detection systems, software",
+     "Frequency, and who bears the cost of consumables. Coolant chemistry and filter replacement are unglamorous items that silently degrade thermal performance when skipped"
+    ],
+    [
+     "Corrective maintenance",
+     "Response to faults: diagnosis, parts and labour",
+     "Whether parts are included or charged, and whether the response obligation is to attend or to restore — a very different promise"
+    ],
+    [
+     "Response commitments",
+     "A {{service level agreement}} defining how quickly the supplier must respond to and resolve faults, by severity",
+     "The definition of severity, and the clock. A response measured from a ticket the owner must raise behaves differently from one triggered by remote monitoring"
+    ],
+    [
+     "Remote monitoring",
+     "Continuous telemetry, alarms and performance reporting",
+     "Who owns the data and who may see it. It is simultaneously the supplier's warranty evidence, the owner's performance evidence, and the supplier's fleet-learning input"
+    ],
+    [
+     "Spares provision",
+     "Which parts are held, where, and by whom",
+     "Obsolescence. A twenty-year agreement covering a product whose format generation turns over every few years needs an explicit answer to what happens when the original module is unavailable"
+    ],
+    [
+     "Augmentation scope",
+     "Whether capacity restoration is included, and on whose trigger",
+     "Whether space and electrical capacity were reserved at design, and who pays if the site cannot physically accommodate the work"
+    ],
+    [
+     "Exclusions",
+     "Grid events, force majeure, operation outside the envelope, owner-caused damage, and often changes in law",
+     "This is where most disputes live. Grid disturbances in particular are frequent, are not the supplier's fault, and are also exactly when the plant most needed to be available"
+    ],
+    [
+     "End of term",
+     "What condition the plant is handed back in, and what obligations survive",
+     "Whether a final capacity test is required, and whether any {{decommissioning}} or recycling obligation transfers with it"
+    ]
+   ]
+  },
+  {
+   "id": "the-end",
+   "title": "What is owed at the end",
+   "kind": "prose",
+   "ps": [
+    "A twenty-year promise has a twentieth year, and the obligations that survive it are increasingly part of what is being bought.",
+    "**{{end of life}} is a decision, not an event.** A system that reaches the bottom of its guaranteed curve is not broken; it is a system that still holds seventy percent of its original energy. Whether that is worth keeping depends entirely on what the site can earn with it, which is a market question rather than a technical one. Plenty of assets continue in a lower-value duty long past the end of their guarantee — and the merchant-storage guides make the point that a connection, once obtained, is itself worth having.",
+    "**{{decommissioning}} is a cost that has to sit somewhere.** Removing enclosures, safely discharging and extracting cells, restoring the site, and disposing of or recycling the batteries is real money, and lenders increasingly require that it be reserved for rather than assumed away. Because the residual metal value of the cells is uncertain two decades out, the honest treatment is a provision with a wide range rather than an offsetting asset.",
+    "**Recycling has become a design input.** Recovering materials from a battery is far easier when the pack was designed to come apart — bolted rather than bonded, modules that separate, materials that are identifiable. The adhesives and integration techniques that make a pack denser and cheaper to build frequently make it harder to dismantle, so the first guide's density race has a quiet end-of-life cost attached to it. Where extended-producer rules apply, that cost returns to the manufacturer.",
+    "**Second-life use is more attractive in principle than in practice.** Cells retired from one duty can serve a gentler one, but the sorting and testing needed to establish what each aged module can still do is labour-intensive, and it competes against new cells whose price keeps falling. It works best where the modules arrive with a complete history — which is the third guide's telemetry and the fifth guide's traceability arriving, years later, in a use nobody designed them for.",
+    "**An {{environmental product declaration}} is how this becomes contractible.** It is a verified statement of a product's environmental impact across its life, prepared to a defined methodology so that two products can be compared. Its significance to an integrator is not moral: procurement rules and public-sector tenders increasingly require one, so it is another gate of the kind the certification guide described — a document without which certain buyers are simply unavailable."
+   ],
+   "note": "The closing thought of this guide, and the handover to the next. Everything above — the curve, the envelope, the reserve, the service scope, the end-of-life obligation — describes a promise stretching two decades into the future. **Not one word of it is worth anything unless the party that made it is still there and still solvent when it falls due.** That is the last question in the course."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "State the central claim of this guide in one sentence.",
+     "a": "The product an integrator sells is a twenty-year obligation, and the hardware is the mechanism by which it is delivered — which is why the supplier's balance sheet is scrutinised as carefully as its datasheets."
+    },
+    {
+     "q": "Name the five distinct promises usually bundled as 'the warranty'.",
+     "a": "Capacity retention, availability, round-trip efficiency, power and response, and freedom from defects in materials and workmanship. They are measured differently, breached differently and remedied differently."
+    },
+    {
+     "q": "Why is the defect warranty's shorter term a trap for owners?",
+     "a": "It typically expires long before the capacity guarantee, so a component failing in the second decade is not a defect claim. The owner's protection then comes from the availability and capacity guarantees — that is, from the service agreement rather than the warranty."
+    },
+    {
+     "q": "Why is a guaranteed capacity curve steep early and flat later?",
+     "a": "Capacity fade is fastest when a cell is new and slows with age. A consequence is that an early capacity test is a poor predictor of the later trajectory, in either direction."
+    },
+    {
+     "q": "Is the guaranteed curve the supplier's expectation?",
+     "a": "No — it is a floor. The supplier's own expected curve sits above it, and the gap between the two is its margin of safety against being wrong about degradation."
+    },
+    {
+     "q": "Compare oversizing and augmentation as strategies for keeping a capacity promise.",
+     "a": "Oversizing installs surplus energy on day one: simple, independent of future supply, but expensive capital sitting idle and a larger site. Augmentation adds capacity later at probably lower prices, but needs reserved space, mixes cell generations awkwardly, and depends on the supplier and a compatible product still existing a decade on."
+    },
+    {
+     "q": "Why are new and aged cells usually kept on separate strings rather than mixed?",
+     "a": "They differ in capacity, internal resistance and ageing behaviour. In a shared series string the mismatch would immediately widen the distribution and the string would be limited by whichever cells were worst — so the generations are kept electrically separate."
+    },
+    {
+     "q": "What is a duty envelope, and what does it convert?",
+     "a": "The stated conditions a capacity guarantee is written against — cycles per year, depth of discharge, temperature, rate limits, state-of-charge dwell. It converts an open-ended exposure into a bounded one, which is what makes a twenty-year promise underwritable at all."
+    },
+    {
+     "q": "In what sense does a dispatch decision spend money that has already been paid?",
+     "a": "The warranty is a throughput budget. Cycling harder to capture a price consumes life the owner has already purchased and cannot replace, so the extra revenue is offset by warranty life spent — a real cost that competes with the reason for the trade."
+    },
+    {
+     "q": "Why do both parties want the same monitoring data collected?",
+     "a": "It is simultaneously the supplier's evidence that the duty envelope was respected and the owner's evidence that the system underperformed a duty it was properly given. Without the record neither side can prove its case."
+    },
+    {
+     "q": "What is a warranty reserve, and what two inputs size it?",
+     "a": "A provision recognised at the time of sale against future guarantee obligations. It is sized by a degradation model good enough to forecast augmentation and by a defect-rate assumption good enough to forecast field failures — the outputs of fleet telemetry and manufacturing statistics respectively."
+    },
+    {
+     "q": "Why are unusually generous warranty terms from a weak supplier a warning rather than a bargain?",
+     "a": "A guarantee costs nothing today and everything later, so an under-reserved aggressive curve improves margin now and produces a shortfall years afterwards. The terms are cheap precisely because they may not be honoured."
+    },
+    {
+     "q": "Give the supplier's legitimate reason for insisting on holding the service agreement.",
+     "a": "It cannot underwrite performance it neither controls nor observes. The service contract gives it site access, maintenance standards and the telemetry that make the guarantee priceable, and gives the owner a party contractually able to keep it."
+    },
+    {
+     "q": "Why does the density race have an end-of-life cost?",
+     "a": "The adhesives and integration that make a pack denser and cheaper to build make it harder to take apart, and recovering materials is far easier from a pack designed to be dismantled. Where producer-responsibility rules apply, that cost comes back to the manufacturer."
+    },
+    {
+     "q": "Why is a system at the bottom of its guaranteed curve not necessarily finished?",
+     "a": "It still holds around seventy percent of its original energy. Whether that is worth operating is an economic question about what the site and its connection can earn, not a technical judgment about the battery."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A component fails in year twelve of a twenty-year capacity guarantee. Under which promise is the owner most likely to be protected?",
+     "c": [
+      "The defect warranty",
+      "The availability guarantee and the service agreement",
+      "The efficiency guarantee",
+      "None — year twelve is uncovered"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A supplier's guaranteed capacity curve sits well above its own expected curve. What does that gap represent?",
+     "c": [
+      "Conservative marketing",
+      "Its margin of safety against being wrong about degradation",
+      "The augmentation schedule",
+      "The efficiency guarantee"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which strategy for keeping a capacity promise depends most heavily on the supplier's own survival?",
+     "c": [
+      "Oversizing on day one",
+      "Augmentation later in life",
+      "Module replacement",
+      "None — all are equivalent"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner cycles a plant harder than the contract's stated allowance to capture high prices. What has it done?",
+     "c": [
+      "Nothing, provided the plant performs",
+      "Spent warranty life it has already paid for, and put the guarantee's conditions at risk",
+      "Improved the plant's state of health",
+      "Triggered an efficiency claim"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What are the two inputs that turn a warranty reserve from a guess into a calculation?",
+     "c": [
+      "Sales forecasts and cell prices",
+      "A degradation model from fleet telemetry and a defect-rate assumption from manufacturing statistics",
+      "The certification package and the interconnection agreement",
+      "The capacity curve and the availability target"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which element of a service agreement most often causes disputes?",
+     "c": [
+      "Preventive maintenance frequency",
+      "The exclusions, particularly grid events",
+      "Remote monitoring",
+      "Spares location"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An augmentation was written into a contract but cannot be performed in year ten. What is the most likely reason?",
+     "c": [
+      "The cells are too expensive",
+      "No physical or electrical space was reserved for it at design",
+      "The plant is still above its guaranteed curve",
+      "The service agreement expired"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does an environmental product declaration function like a certification rather than a marketing document?",
+     "c": [
+      "It is issued by a fire authority",
+      "Procurement rules and public tenders increasingly require one, so without it certain buyers are unavailable",
+      "It replaces the capacity guarantee",
+      "It is required for transport"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

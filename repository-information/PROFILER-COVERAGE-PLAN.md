@@ -283,13 +283,13 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | backfill | `on-energy` | ON.energy | bridge-power supplier | ✓ · v04.96r — the campus as a grid citizen |
 | backfill | `prevalon` | Prevalon | bridge-power supplier | ✓ · v04.96r — the block, the mixture, and the ending |
 | backfill | `narada` | Narada | G9 — the backup-power incumbent | ✓ · v04.51r — the cell, not the shelf |
-| backfill | `canadian-solar` | Canadian Solar | integrator | — |
-| backfill | `crrc-zhuzhou` | CRRC Zhuzhou | integrator | — |
-| backfill | `envision-energy` | Envision Energy | integrator | — |
-| backfill | `hyperstrong` | HyperStrong | integrator | — |
-| backfill | `ls-energy-solutions` | LS Energy Solutions | integrator | — |
-| backfill | `sunwoda` | Sunwoda | integrator | — |
-| backfill | `trina-storage` | Trina Storage | integrator | — |
+| backfill | `canadian-solar` | Canadian Solar | integrator | ✓ · v04.97r — the box, and the heat inside it |
+| backfill | `crrc-zhuzhou` | CRRC Zhuzhou | integrator | ✓ · v04.97r — who can stand behind it |
+| backfill | `envision-energy` | Envision Energy | integrator | ✓ · v04.97r — the software is the product |
+| backfill | `hyperstrong` | HyperStrong | integrator | ✓ · v04.97r — the cell you did not make |
+| backfill | `ls-energy-solutions` | LS Energy Solutions | integrator | ✓ · v04.97r — permission to sell |
+| backfill | `sunwoda` | Sunwoda | integrator | ✓ · v04.97r — ten thousand identical cells |
+| backfill | `trina-storage` | Trina Storage | integrator | ✓ · v04.97r — the twenty-year promise |
 | backfill | `blattner` | Blattner | EPC | — |
 | backfill | `mastec` | MasTec | EPC | — |
 | backfill | `solv-energy` | SOLV Energy | EPC | — |

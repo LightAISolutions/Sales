@@ -251,6 +251,16 @@
       ]
     },
     {
+      "slug": "ampere-hour",
+      "term": "ampere-hour",
+      "def": "The unit in which a battery cell's capacity is quoted: how much electric charge it holds. Energy is charge multiplied by voltage, so a cell's kilowatt-hours are derived from its amp-hours and its nominal voltage rather than measured directly — which is why cell generations are named by their amp-hour rating.",
+      "aliases": [
+        "Ah",
+        "amp-hour",
+        "ampere-hours"
+      ]
+    },
+    {
       "slug": "anchor-investor",
       "term": "anchor investor",
       "def": "The first large investor to commit to a fund or a round, whose name and cheque persuade others to follow; anchors often get better terms in exchange for going first.",
@@ -611,6 +621,14 @@
       ]
     },
     {
+      "slug": "bathtub-curve",
+      "term": "bathtub curve",
+      "def": "The characteristic shape of a manufactured population's failure rate over time: high at first as weak units fail, low and roughly flat through the useful life, then rising as wear-out begins. Its value is diagnostic — when a population fails tells you whether the cause is manufacturing, chance or design.",
+      "aliases": [
+        "infant mortality curve"
+      ]
+    },
+    {
       "slug": "battery-string",
       "term": "battery string",
       "def": "Cells or blocks wired in series to make the voltage a UPS needs. The same current passes through all of them, so the string's runtime is set by its weakest cell — which is the entire reason cell monitoring exists.",
@@ -926,6 +944,21 @@
       ]
     },
     {
+      "slug": "calendar-life",
+      "term": "calendar life",
+      "def": "How long a battery lasts through time alone, independent of how much it is cycled. A grid battery must satisfy both calendar life and cycle life, and whichever expires first ends the asset — so a cell with excellent cycling behaviour and mediocre calendar ageing is not a grid cell.",
+      "aliases": [
+        "calendar ageing",
+        "calendar aging"
+      ]
+    },
+    {
+      "slug": "calendering",
+      "term": "calendering",
+      "def": "Compressing a coated electrode foil between rollers to a precise thickness and density before the cell is assembled. Too much compression damages the electrode structure and too little wastes volume, so the setting is a direct trade between energy density and how well the cell behaves over its life.",
+      "aliases": []
+    },
+    {
       "slug": "cap-rate",
       "term": "cap rate",
       "def": "A property's annual net operating income divided by its price or value, expressed as a percentage. It is the yield a buyer accepts for owning a finished, leased building — so a lower cap rate means a more expensive asset.",
@@ -1097,11 +1130,63 @@
       ]
     },
     {
+      "slug": "ce-marking",
+      "term": "CE marking",
+      "def": "The mark a manufacturer applies to declare that its product meets the applicable European requirements, supported by its own testing and technical file. It is a declaration regime rather than a third-party listing regime, which is why European and North American compliance work do not translate into each other.",
+      "aliases": [
+        "CE mark"
+      ]
+    },
+    {
       "slug": "cecpn",
       "term": "CECPN",
       "def": "Arkansas's certificate of environmental compatibility and public need — the state's version of a CPCN, the commission order a utility must obtain before building a major generating plant or transmission line and putting it in rate base.",
       "aliases": [
         "certificate of environmental compatibility and public need"
+      ]
+    },
+    {
+      "slug": "cell-balancing",
+      "term": "cell balancing",
+      "def": "Equalising the charge across cells in a series string so they reach full and empty together. Passive balancing bleeds charge from the cells running ahead through a resistor; active balancing moves charge from stronger cells to weaker ones. Without it the string's usable energy shrinks toward what its weakest member allows.",
+      "aliases": [
+        "balancing",
+        "passive balancing",
+        "active balancing"
+      ]
+    },
+    {
+      "slug": "cell-format",
+      "term": "cell format",
+      "def": "The physical size, shape and capacity class of a battery cell — the dimensions the rest of a product is designed around. Because the module structure, cooling path, electrical layout and fire-test evidence all depend on it, changing format is a redesign rather than a substitution.",
+      "aliases": [
+        "format"
+      ]
+    },
+    {
+      "slug": "cell-formation",
+      "term": "cell formation",
+      "def": "The first controlled charge and discharge a newly built cell receives, which grows the protective layer on the negative electrode that makes the cell stable for the rest of its life. It is slow and capital-intensive, so together with ageing it dominates a cell plant's floor space and is a common reason a plant's early output falls short of its nameplate.",
+      "aliases": [
+        "formation"
+      ]
+    },
+    {
+      "slug": "cell-qualification",
+      "term": "cell qualification",
+      "def": "The programme through which a system builder converts a cell supplier's datasheet into its own liability — electrical characterisation, life and abuse testing, propagation behaviour in the intended geometry, mechanical and environmental testing, a factory audit and a pilot build. It qualifies a specific production line, not a company.",
+      "aliases": [
+        "qualification programme",
+        "qualification testing"
+      ]
+    },
+    {
+      "slug": "cell-temperature-spread",
+      "term": "cell temperature spread",
+      "def": "The difference between the hottest and coldest cell in a battery system at a given moment. It matters more than average temperature, because ageing rate rises with temperature and a series string is limited by its most degraded member — so a persistent spread compounds into permanently lost capacity.",
+      "aliases": [
+        "temperature spread",
+        "cell-to-cell temperature spread"
       ]
     },
     {
@@ -1156,6 +1241,15 @@
       "slug": "chain-reaction",
       "term": "chain reaction",
       "def": "A self-sustaining sequence in which each fission releases neutrons that cause further fissions. A reactor is held at exactly one fission per fission — any more and power rises, any less and it falls."
+    },
+    {
+      "slug": "change-control",
+      "term": "change control",
+      "def": "A formal process for deciding whether a proposed change to a product — hardware, software or manufacturing site — affects characteristics that a certification was granted against, and for re-establishing evidence when it does. Without it, an ordinary improvement can silently invalidate the listing an installation was permitted under.",
+      "aliases": [
+        "configuration control",
+        "design change control"
+      ]
     },
     {
       "slug": "change-of-control",
@@ -1426,6 +1520,14 @@
       ]
     },
     {
+      "slug": "commoditisation",
+      "term": "commoditisation",
+      "def": "The process by which a product's differentiation erodes until buyers compare offers mainly on price, and price falls toward cost. It bites hardest where the components are available to everyone and the assembly is well understood, which is why firms in that position tend to move toward whichever end of their value chain is harder to enter.",
+      "aliases": [
+        "commoditization"
+      ]
+    },
+    {
       "slug": "community-benefit-agreement",
       "term": "community benefit agreement",
       "def": "A negotiated payment or set of commitments — cash to the city, a shelter, a training building, water and noise limits — that a developer offers in exchange for approval. Increasingly the price of consent where tax abatements have been withdrawn.",
@@ -1439,6 +1541,14 @@
       "slug": "compaction",
       "term": "compaction",
       "def": "Densifying placed soil so it will carry load without settling later, verified in the field against a laboratory maximum. Fill that was not compacted to specification shows up as a cracked slab years afterwards."
+    },
+    {
+      "slug": "compartmentalization",
+      "term": "compartmentalization",
+      "def": "Separating the parts of a product that carry different hazards — for instance putting power conversion in its own compartment away from the battery, or breaking a system into independently contained units. Beyond its safety merit it produces a smaller, more defensible safety case, which is cheaper to re-establish when a design changes.",
+      "aliases": [
+        "compartmentalisation"
+      ]
     },
     {
       "slug": "completion-guarantee",
@@ -1586,6 +1696,14 @@
       ]
     },
     {
+      "slug": "contactor",
+      "term": "contactor",
+      "def": "A large electrically operated switch that connects or isolates a battery string from the rest of the system. It is the physical means by which a management system's decision to disconnect actually happens, which is why its command path is treated as part of the protection layer rather than as ordinary control.",
+      "aliases": [
+        "contactors"
+      ]
+    },
+    {
       "slug": "contingency",
       "term": "contingency",
       "def": "Money held inside a budget for the work that is certain to be needed and not yet identified. Whose contingency it is, and who keeps what is unspent, is a negotiated term rather than an accounting detail."
@@ -1704,6 +1822,15 @@
       ]
     },
     {
+      "slug": "corrosivity-class",
+      "term": "corrosivity class",
+      "def": "A rated category describing how aggressively a site's atmosphere attacks metal — driven by salt, humidity and industrial pollution. Equipment is specified to a class, and a coastal installation given an inland specification shows fastener, hinge and panel failures long before anything electrical goes wrong.",
+      "aliases": [
+        "corrosion class",
+        "corrosivity category"
+      ]
+    },
+    {
       "slug": "cost-allocation",
       "term": "cost allocation",
       "def": "The question of who pays for a shared upgrade — the customer whose request triggered it, everyone in the rate class, or every ratepayer. Cost-causation says whoever causes the cost pays it; socialization spreads it. Large-load tariffs, contribution-in-aid-of-construction rules and transmission cost allocation are all answers to the same question.",
@@ -1745,6 +1872,14 @@
         "cost-share agreement",
         "cooperative agreement",
         "50/50 cost share"
+      ]
+    },
+    {
+      "slug": "coulomb-counting",
+      "term": "coulomb counting",
+      "def": "Estimating how full a battery is by integrating the current flowing in and out over time. It is accurate over short intervals and works while the battery is busy, but because it is an integral any small bias in the current measurement accumulates without limit and nothing in the method corrects it.",
+      "aliases": [
+        "charge counting"
       ]
     },
     {
@@ -1992,6 +2127,15 @@
       "def": "The laboratory crushing of test cylinders cast from a concrete pour, typically at seven and twenty-eight days, to prove the concrete reached its specified strength. A failed break stops everything that was going to sit on it."
     },
     {
+      "slug": "dangerous-goods",
+      "term": "dangerous goods",
+      "def": "Freight classified as hazardous for transport, with rules governing packaging, labelling, documentation and sometimes routing. Lithium batteries fall in this category, so how a storage product ships — and at what state of charge — is a regulatory question rather than a logistics preference.",
+      "aliases": [
+        "hazardous materials",
+        "Class 9"
+      ]
+    },
+    {
       "slug": "data-center-abs",
       "term": "data-center ABS",
       "def": "Bonds backed by the rent from specific leased data-center buildings, issued from a bankruptcy-remote trust that owns them. The refinancing that repays a construction loan and returns the sponsor's equity once a building is energised and leased.",
@@ -2111,6 +2255,14 @@
       "def": "The heat a reactor keeps producing after the chain reaction stops, from the radioactive decay of fission products — roughly 6-7% of full power at shutdown, falling over hours and days. Removing it is the central safety problem of every reactor."
     },
     {
+      "slug": "decommissioning",
+      "term": "decommissioning",
+      "def": "Removing a plant at the end of its life — safely discharging and extracting equipment, restoring the site, and disposing of or recycling what comes out. It is a real cost that has to sit with someone, and lenders increasingly require that it be reserved for rather than offset against an uncertain future scrap value.",
+      "aliases": [
+        "decommissioning obligation"
+      ]
+    },
+    {
       "slug": "decoupler",
       "term": "decoupler",
       "def": "The short length of pipe joining the primary and secondary loops of a chilled-water plant. Which way water flows through it, and how much, is the plant's most useful single diagnostic."
@@ -2129,6 +2281,15 @@
       "slug": "deep-foundation",
       "term": "deep foundation",
       "def": "Piles or drilled shafts that carry load past unsuitable near-surface soil to competent material below. They are chosen when the ground near the surface cannot be made good enough."
+    },
+    {
+      "slug": "defects-per-million",
+      "term": "defects per million",
+      "def": "The rate at which defective units escape a manufacturing process and reach the customer, expressed per million produced. At storage scale it is decisive: an enclosure holds thousands of cells, so a rate that sounds excellent still puts defective cells into ordinary projects.",
+      "aliases": [
+        "DPPM",
+        "parts per million defective"
+      ]
     },
     {
       "slug": "deflagration",
@@ -2622,6 +2783,14 @@
       "def": "Money investors have committed to a fund that the manager has not yet invested. It earns no fee in most structures until it is deployed, so a large balance is both a war chest and a drag."
     },
     {
+      "slug": "dry-room",
+      "term": "dry room",
+      "def": "A production area held at extremely low humidity because the materials inside a battery cell react with water. Cell assembly happens there, and moisture that gets in produces gas generation and accelerated ageing — a defect that passes every acceptance test and appears years later.",
+      "aliases": [
+        "dry rooms"
+      ]
+    },
+    {
       "slug": "dry-type-transformer",
       "term": "dry-type transformer",
       "def": "A transformer insulated and cooled by air or solid resin instead of oil. It carries no fire load and no oil-containment requirement, so it can sit inside a building, but it is larger, noisier and less efficient than an equivalent oil-filled unit and does not scale as far up in rating.",
@@ -2774,6 +2943,14 @@
       ]
     },
     {
+      "slug": "electrode-coating",
+      "term": "electrode coating",
+      "def": "The step in cell manufacture where active material is mixed into a slurry, coated onto metal foil in a continuous web and dried, to a closely controlled thickness. Unevenness makes some of the electrode work harder than the rest, producing a cell that looks normal when new and ages unevenly.",
+      "aliases": [
+        "coating"
+      ]
+    },
+    {
       "slug": "electrode-thickness",
       "term": "electrode thickness",
       "def": "How thickly the active material is coated onto a cell's current collectors. Thick electrodes hold more energy per litre and make the ions travel further; thin ones deliver current hard and store less. It is the single design choice that separates a power cell from an energy cell.",
@@ -2843,6 +3020,14 @@
       "aliases": [
         "EODV",
         "end voltage"
+      ]
+    },
+    {
+      "slug": "end-of-life",
+      "term": "end of life",
+      "def": "The point at which an asset stops being worth operating in its current duty — an economic judgment, not a technical failure. A storage system that has reached the bottom of its guaranteed capacity curve still holds most of its original energy, so whether it retires depends on what its site and connection can still earn.",
+      "aliases": [
+        "EOL"
       ]
     },
     {
@@ -2946,6 +3131,15 @@
       ]
     },
     {
+      "slug": "energy-throughput",
+      "term": "energy throughput",
+      "def": "The total quantity of energy a battery moves over its life, and the budget a long-dated capacity guarantee is really written against. Cycles, depth of discharge, rate and temperature all spend it, which is why an operating decision to cycle harder consumes warranty life the owner has already paid for.",
+      "aliases": [
+        "throughput",
+        "lifetime throughput"
+      ]
+    },
+    {
       "slug": "engine-core",
       "term": "engine core",
       "def": "The compressor, combustor and high-pressure turbine at the heart of a gas turbine — in an aeroderivative machine, the same core that powered an airliner. Because it is removed and replaced as a module, an overhaul is a swap measured in days rather than a rebuild measured in weeks, and whoever holds spare cores holds the plant's availability.",
@@ -3006,6 +3200,14 @@
       "aliases": [
         "EAPA",
         "environmental attribute agreement"
+      ]
+    },
+    {
+      "slug": "environmental-product-declaration",
+      "term": "environmental product declaration",
+      "def": "A verified statement of a product's environmental impact across its life, prepared to a defined methodology so that two products can be compared on the same basis. It functions commercially like a certification: procurement rules and public tenders increasingly require one, so without it some buyers are simply unavailable.",
+      "aliases": [
+        "EPD"
       ]
     },
     {
@@ -3434,6 +3636,15 @@
       ]
     },
     {
+      "slug": "first-pass-yield",
+      "term": "first-pass yield",
+      "def": "The fraction of units that pass every manufacturing step without rework. It is a quality measure and a cost measure at once — a plant can buy a low escape rate with heavy inspection and rework, which shows up here — so it is only informative alongside the rate of defects that actually escape.",
+      "aliases": [
+        "FPY",
+        "yield"
+      ]
+    },
+    {
       "slug": "fiscal-year-end",
       "term": "fiscal year end",
       "def": "The date a company closes its accounting year, which need not be 31 December. Comparing two companies' annual results without checking their year-ends can compare different twelve-month periods."
@@ -3470,6 +3681,15 @@
       "def": "The point at which mining machines stop covering even their electricity cost, so running them destroys value and switching them off costs nothing. Difficulty only ever ratchets up and the halving only ever cuts revenue, so stranding is a scheduled outcome rather than a risk.",
       "aliases": [
         "stranded fleet"
+      ]
+    },
+    {
+      "slug": "fleet-telemetry",
+      "term": "fleet telemetry",
+      "def": "Continuous operating data gathered from every system a supplier has installed. It is what makes a long-dated performance guarantee priceable rather than guessed, surfaces failure patterns invisible at a single site, and feeds the next product design — which is why a large installed base is a technical asset and not only a sales record.",
+      "aliases": [
+        "fleet data",
+        "fleet monitoring"
       ]
     },
     {
@@ -3541,6 +3761,14 @@
         "flywheels"
       ],
       "def": "Energy stored as rotation — half the moment of inertia times speed squared — in a heavy rotor or a fast light one on low-friction bearings, sometimes in a vacuum. It gives very high power for seconds, essentially unlimited cycles and no chemical aging, and its state of charge is simply its speed. In a UPS it covers a generator start; as a battery for hours it is the wrong tool."
+    },
+    {
+      "slug": "fmea",
+      "term": "FMEA",
+      "def": "Failure modes and effects analysis: a systematic enumeration of how each part of a design or process could fail, how likely and how detectable each mode is, and what is done about the ones that matter. Its value is the discipline of having thought about undetectable failures before they happen.",
+      "aliases": [
+        "failure modes and effects analysis"
+      ]
     },
     {
       "slug": "follow-on-investment",
@@ -3923,6 +4151,15 @@
       ]
     },
     {
+      "slug": "grid-code",
+      "term": "grid code",
+      "def": "The network operator's rulebook for how a connected plant must behave electrically — voltage and frequency response, reactive capability, ride-through and protection. Compliance is a separate programme from product safety certification, often witnessed on the energised plant, and is a common cause of late energisation delay.",
+      "aliases": [
+        "grid codes",
+        "grid-code compliance"
+      ]
+    },
+    {
       "slug": "grid-following",
       "term": "grid-following",
       "def": "An inverter that locks onto the grid's existing voltage wave and injects current into it — a surfer riding a wave someone else is making. It is the conventional mode and works well, but it cannot operate at all without a live grid to follow, so it contributes nothing during the outage it is standing beside.",
@@ -3960,6 +4197,15 @@
       "slug": "gross-margin-retail",
       "term": "retail gross margin",
       "def": "What a retail electricity supplier collects from customers minus what the electricity and its delivery cost to procure. It is the number a retail business is actually run on, and it widens when wholesale prices fall faster than retail prices do."
+    },
+    {
+      "slug": "guaranteed-capacity-curve",
+      "term": "guaranteed capacity curve",
+      "def": "The schedule of minimum energy a storage system must still hold at each year of its life. It is a floor rather than a forecast — the supplier's own expected curve sits above it — and it is steep early and flatter later, because capacity fade is fastest when cells are new.",
+      "aliases": [
+        "capacity guarantee",
+        "guaranteed capacity"
+      ]
     },
     {
       "slug": "guaranteed-maximum-price",
@@ -4313,6 +4559,12 @@
       ]
     },
     {
+      "slug": "iec-61850",
+      "term": "IEC 61850",
+      "def": "An international standard for communication between devices in electrical substations and power plants, widely used so that equipment from different suppliers can be monitored and controlled together. Speaking it at a plant's boundary is one of the ways an owner keeps the option of changing who operates the plant.",
+      "aliases": []
+    },
+    {
       "slug": "iec-62040-3",
       "term": "IEC 62040-3",
       "aliases": [
@@ -4467,6 +4719,15 @@
       ]
     },
     {
+      "slug": "ingress-protection",
+      "term": "ingress protection",
+      "def": "A rated measure of how well an enclosure keeps out solid objects and water, written as two digits — the first for dust, the second for water. Equipment and the assemblies inside it usually carry different ratings, because one is protecting against external weather and the other against events inside the box.",
+      "aliases": [
+        "IP rating",
+        "IP code"
+      ]
+    },
+    {
       "slug": "inlet-air-cooling",
       "term": "inlet air cooling",
       "def": "Chilling or humidifying the air entering a gas turbine's compressor to claw back the output that hot weather takes away. A turbine is a volumetric machine — it swallows a fixed volume per revolution — so hotter, thinner air means less mass, less fuel burned and less power, typically a fraction of a percent of output per degree Celsius.",
@@ -4493,6 +4754,14 @@
       "aliases": [
         "inrush current",
         "inrush surge"
+      ]
+    },
+    {
+      "slug": "insurance-wrap",
+      "term": "insurance wrap",
+      "def": "An insurance policy that takes on defined performance or warranty risk from a supplier, so a buyer's exposure becomes the insurer's credit rather than the supplier's. It is expensive and heavily conditioned, and its exclusions often mirror the risks the buyer was most concerned about.",
+      "aliases": [
+        "performance insurance"
       ]
     },
     {
@@ -5544,6 +5813,15 @@
       ]
     },
     {
+      "slug": "modbus",
+      "term": "Modbus",
+      "def": "A long-established, deliberately simple industrial communication protocol used to read measurements from and send commands to equipment. Its ubiquity is the point: a plant that speaks it can be monitored and dispatched by almost anyone's software, which is why owners ask for it at a system's boundary.",
+      "aliases": [
+        "Modbus TCP",
+        "Modbus RTU"
+      ]
+    },
+    {
       "slug": "moderator",
       "term": "moderator",
       "def": "A light material — water, graphite — that slows fast fission neutrons down to thermal speeds, where they are far more likely to cause the next fission. Removing the moderator is what makes a reactor a fast reactor.",
@@ -5557,6 +5835,15 @@
       "def": "A lease in which rent covers some operating costs and the tenant pays others directly — between a gross lease (everything in the rent) and a triple-net lease (tenant pays everything). Which costs sit where decides who bears the risk of rising power and insurance bills.",
       "aliases": [
         "modified gross"
+      ]
+    },
+    {
+      "slug": "modular-skid",
+      "term": "modular skid",
+      "def": "A storage architecture built from several smaller self-contained units rather than one large container. Each unit is lighter to transport and fails independently, at the cost of repeating the thermal and fire-protection overhead per unit and adding foundations, terminations and commissioning hours.",
+      "aliases": [
+        "skid architecture",
+        "modular block"
       ]
     },
     {
@@ -5733,6 +6020,16 @@
       "def": "A core designed so that getting hotter makes the chain reaction weaker. Power then self-corrects without any operator or control system acting — the physical basis of a passive-safety claim."
     },
     {
+      "slug": "nema-enclosure-rating",
+      "term": "NEMA enclosure rating",
+      "def": "The North American convention for describing what an electrical enclosure keeps out, covering dust and water plus ice, corrosion and outdoor exposure. It overlaps the international ingress-protection scale without mapping onto it cleanly, and officials tend to ask for whichever one their adopted code cites.",
+      "aliases": [
+        "NEMA rating",
+        "NEMA 3R",
+        "NEMA 4X"
+      ]
+    },
+    {
       "slug": "neocloud",
       "term": "neocloud",
       "def": "A newer GPU-cloud provider renting AI compute capacity, typically growing faster than its capital base — a distinct buyer class from the hyperscalers."
@@ -5820,6 +6117,18 @@
         "Type 10",
         "NFPA-110"
       ]
+    },
+    {
+      "slug": "nfpa-68",
+      "term": "NFPA 68",
+      "def": "The US standard for deflagration venting — giving an explosion a deliberate, engineered escape route so pressure is released where it does least harm. It is one of the two complementary answers to accumulated flammable gas in an enclosure; the other is preventing the accumulation in the first place.",
+      "aliases": []
+    },
+    {
+      "slug": "nfpa-69",
+      "term": "NFPA 69",
+      "def": "The US standard for explosion prevention systems — stopping an explosive atmosphere from forming, typically through ventilation, inerting or gas detection. It is the complement to venting: one removes the cause, the other manages the consequence.",
+      "aliases": []
     },
     {
       "slug": "nfpa-70e",
@@ -5923,6 +6232,15 @@
       "slug": "nplv",
       "term": "NPLV",
       "def": "Non-standard part-load value: the same weighted part-load calculation as IPLV but computed at the temperatures the actual project will run at. It is the honest number when the design is not the standard rating point."
+    },
+    {
+      "slug": "nrtl",
+      "term": "nationally recognized testing laboratory",
+      "def": "A laboratory formally recognised in the United States to test and certify products against safety standards. Its mark on equipment is what a listing means in practice, and its ongoing factory surveillance is why a listing certifies a production process rather than a prototype.",
+      "aliases": [
+        "NRTL",
+        "nationally recognised testing laboratory"
+      ]
     },
     {
       "slug": "nth-of-a-kind",
@@ -6074,6 +6392,14 @@
       ]
     },
     {
+      "slug": "open-circuit-voltage",
+      "term": "open-circuit voltage",
+      "def": "The voltage a cell settles to when it is resting with no current flowing, which maps to how full it is. It gives an absolute reading where charge counting only gives an accumulating one, but the cell must genuinely rest first — and for the flat-voltage chemistries common in grid storage a tiny voltage difference stands for a large difference in charge.",
+      "aliases": [
+        "OCV"
+      ]
+    },
+    {
       "slug": "open-transition",
       "term": "open transition",
       "def": "A transfer that opens the old source before closing onto the new one — break-before-make — so for a moment the load is fed by nothing. Simpler, and it never back-feeds the utility, but the gap means the UPS or some other stored energy has to carry the load across it or the servers see an outage.",
@@ -6128,11 +6454,29 @@
       ]
     },
     {
+      "slug": "over-the-air-update",
+      "term": "over-the-air update",
+      "def": "Changing a deployed product's software remotely across an installed fleet. It is how control software keeps improving after installation, and it is also a compliance risk: a product is certified as configured, so an update touching protection behaviour changes the safety case and has to pass through formal change control.",
+      "aliases": [
+        "OTA update",
+        "remote firmware update"
+      ]
+    },
+    {
       "slug": "overload-rating",
       "term": "overload rating",
       "def": "How much more than its nameplate a UPS will carry and for how long — commonly a few tens of percent for minutes, and a large multiple for a fraction of a second. It is what lets a downstream breaker clear a fault instead of the inverter folding back and the whole bus collapsing.",
       "aliases": [
         "overload withstand"
+      ]
+    },
+    {
+      "slug": "oversizing",
+      "term": "oversizing",
+      "def": "Installing more capacity than a contract requires on day one, so that natural degradation never carries the plant below its guaranteed floor. It is the simplest way to keep a long capacity promise and the least efficient use of capital, since the surplus is bought at day-one prices and sits idle for years.",
+      "aliases": [
+        "oversize",
+        "over-build"
       ]
     },
     {
@@ -6204,6 +6548,23 @@
       "aliases": [
         "stray inductance",
         "loop inductance"
+      ]
+    },
+    {
+      "slug": "parasitic-load",
+      "term": "parasitic load",
+      "def": "The energy a storage system consumes to keep itself alive — cooling, pumps, fans, controls and heating. It comes straight out of delivered round-trip efficiency, it is the line an enclosure designer most directly controls, and it moves sharply with climate, which is why efficiency figures are only comparable at stated conditions.",
+      "aliases": [
+        "auxiliary consumption",
+        "self-consumption"
+      ]
+    },
+    {
+      "slug": "parent-company-guarantee",
+      "term": "parent company guarantee",
+      "def": "A promise by a larger corporate parent to stand behind a subsidiary's contractual obligations, so the buyer's effective counterparty becomes the parent. It is only as strong as that parent and only as broad as its wording — a guarantee capped at contract value may not reach the loss a buyer actually fears.",
+      "aliases": [
+        "parent guarantee"
       ]
     },
     {
@@ -6572,6 +6933,15 @@
       ]
     },
     {
+      "slug": "power-plant-controller",
+      "term": "power plant controller",
+      "def": "The controller responsible for how a plant behaves at its connection point — real and reactive power, voltage and frequency response — as the grid operator requires. It sits above the individual converters and below any market-facing dispatch layer, and it is bound tightly to the interconnection agreement.",
+      "aliases": [
+        "PPC",
+        "plant controller"
+      ]
+    },
+    {
       "slug": "power-shelf",
       "term": "power shelf",
       "def": "A slide-in conversion tray occupying rack units and feeding the rack's own DC busbar, replacing per-server conversion with a pooled stage. Shelves are built with one more module than the load needs, so any single module can fail or be swapped while the rack keeps running.",
@@ -6719,6 +7089,15 @@
       "aliases": [
         "cycle pressure ratio",
         "compression ratio"
+      ]
+    },
+    {
+      "slug": "preventive-maintenance",
+      "term": "preventive maintenance",
+      "def": "Scheduled inspection and servicing performed before anything has failed — cooling systems, coolant condition, filters, connections, detection systems, software. The unglamorous items are the ones that matter: skipped coolant and filter service degrades thermal performance silently, and thermal performance is what sets ageing rate.",
+      "aliases": [
+        "preventative maintenance",
+        "planned maintenance"
       ]
     },
     {
@@ -7222,6 +7601,14 @@
       ]
     },
     {
+      "slug": "refrigerant",
+      "term": "refrigerant",
+      "def": "The working fluid in a cooling circuit, which absorbs heat where it evaporates and releases it where it condenses. Which one a product uses is increasingly a regulatory matter as well as an engineering one, since refrigerants differ widely in flammability and in their effect on the atmosphere.",
+      "aliases": [
+        "refrigerants"
+      ]
+    },
+    {
       "slug": "regulatory-asset",
       "term": "regulatory asset",
       "def": "A cost a utility has incurred but not yet recovered, which the commission has agreed may be collected from customers in the future. It sits on the balance sheet as an asset because a regulator's promise of recovery has value. Deferring costs into a regulatory asset lets a utility spend ahead of a rate case, at the price of a later prudence review that can disallow the deferral.",
@@ -7515,6 +7902,14 @@
       ]
     },
     {
+      "slug": "root-cause-analysis",
+      "term": "root cause analysis",
+      "def": "Investigating a failure until the mechanism is identified rather than the occasion — not that a batch was bad, but which parameter drifted and why the control did not catch it. The test of whether an organisation really does it is whether its corrective actions ever change a design or a control system rather than only adding an inspection.",
+      "aliases": [
+        "RCA"
+      ]
+    },
+    {
       "slug": "rotary-ups",
       "term": "rotary UPS",
       "aliases": [
@@ -7749,6 +8144,15 @@
       ]
     },
     {
+      "slug": "seismic-qualification",
+      "term": "seismic qualification",
+      "def": "Demonstrating that equipment and its mountings survive the ground motion a site's code requires. It is a design case rather than a formality — it drives internal bracing and anchor design — and because requirements vary by jurisdiction, the same product can be compliant on one side of a boundary and not the other.",
+      "aliases": [
+        "seismic rating",
+        "IEEE 693"
+      ]
+    },
+    {
       "slug": "selective-catalytic-reduction",
       "term": "selective catalytic reduction",
       "def": "Exhaust after-treatment that injects a urea or ammonia solution across a catalyst to convert nitrogen oxides into nitrogen and water. It is the standard control that lets a diesel or gas plant meet a tight air permit, and it is equipment, space and a consumable rather than a setting.",
@@ -7835,6 +8239,23 @@
       "aliases": [
         "SOO",
         "sequence of operation"
+      ]
+    },
+    {
+      "slug": "series-parallel-configuration",
+      "term": "series-parallel configuration",
+      "def": "How many cells are wired in series and how many of those strings sit in parallel, usually written as a pair of numbers. The series count is set by the direct-current bus voltage the conversion equipment expects; the parallel count is set by how much energy the enclosure is meant to hold.",
+      "aliases": [
+        "series-parallel",
+        "series and parallel count"
+      ]
+    },
+    {
+      "slug": "service-level-agreement",
+      "term": "service level agreement",
+      "def": "The part of a service contract defining how quickly a supplier must respond to and resolve faults, graded by severity. What matters is the definition of severity and when the clock starts — a response measured from a ticket the owner must raise behaves very differently from one triggered by remote monitoring.",
+      "aliases": [
+        "SLA"
       ]
     },
     {
@@ -8124,6 +8545,15 @@
       ]
     },
     {
+      "slug": "sound-power-level",
+      "term": "sound power level",
+      "def": "The rated noise a machine emits, quoted at a stated distance. On a storage or generation site it is frequently a permitting condition rather than a comfort item, and equipment that is compliant only at part-load cooling is not compliant on the hottest afternoon of the year.",
+      "aliases": [
+        "noise rating",
+        "sound pressure level"
+      ]
+    },
+    {
       "slug": "source-term",
       "term": "source term",
       "def": "The quantity and kind of radioactive material a given accident could release. Almost every downstream siting, staffing and emergency-planning requirement is sized from it."
@@ -8261,6 +8691,15 @@
       ]
     },
     {
+      "slug": "stacked-electrode",
+      "term": "stacked electrode",
+      "def": "A cell built by stacking cut sheets of electrode and separator in layers rather than winding a continuous roll. Very large cell formats increasingly use it because a stack fills a rectangular can more evenly, but it is a different manufacturing process with its own defect population.",
+      "aliases": [
+        "stacking",
+        "electrode stacking"
+      ]
+    },
+    {
       "slug": "staking",
       "term": "staking",
       "def": "Locking up a proof-of-stake blockchain's tokens to help validate its transactions, in return for a share of newly issued tokens. A service provider can do this on customers' behalf and take a cut, which is fee revenue rather than a directional bet.",
@@ -8371,6 +8810,15 @@
         "auxiliary load"
       ],
       "def": "The electricity a power plant itself consumes to run pumps, fans, controls and cooling. It matters in co-location arguments because rules about who may take power from behind a generator's connection were written with station power, not a gigawatt data centre, in mind."
+    },
+    {
+      "slug": "statistical-process-control",
+      "term": "statistical process control",
+      "def": "Controlling quality by measuring the parameters of a manufacturing process and watching their distribution, rather than by inspecting the output. It catches a drift before much has been made, which is earlier and far cheaper — but it is blind to any failure mode nobody thought to instrument.",
+      "aliases": [
+        "SPC",
+        "process control"
+      ]
     },
     {
       "slug": "stormwater-detention",
@@ -8518,6 +8966,14 @@
       ]
     },
     {
+      "slug": "surety-bond",
+      "term": "surety bond",
+      "def": "A guarantee from a third party that a contractor or supplier will perform its contract, with the surety stepping in or paying if it does not. Sureties underwrite the supplier's creditworthiness before issuing, so the firms that would benefit most from one are usually the least able to obtain it.",
+      "aliases": [
+        "surety"
+      ]
+    },
+    {
       "slug": "surge",
       "term": "surge",
       "def": "The flow breakdown that occurs when a centrifugal compressor is asked for more pressure rise than its current flow can sustain: the gas momentarily reverses. It is noisy, damaging, and the reason a centrifugal chiller has a minimum load."
@@ -8538,6 +8994,15 @@
       "def": "The assemblies of breakers, switches, and protective relays that route power and isolate faults at a substation or in a power room. It is where the electrical system decides which circuits go dark when something fails — and, built into factory-tested skids, it is how much of a data center's power room now arrives on site.",
       "aliases": [
         "switchboard"
+      ]
+    },
+    {
+      "slug": "switching-cost",
+      "term": "switching cost",
+      "def": "What a customer must spend, in money or disruption, to move from one supplier to another — retraining, requalification, new spares, lost integration. It is the main force resisting commoditisation in equipment markets, and coupling a warranty to a long service agreement raises it deliberately.",
+      "aliases": [
+        "switching costs",
+        "lock-in"
       ]
     },
     {
@@ -8724,6 +9189,15 @@
         "wires utility",
         "wires company",
         "TDUs"
+      ]
+    },
+    {
+      "slug": "technical-due-diligence",
+      "term": "technical due diligence",
+      "def": "The review lenders commission before financing a project, covering the equipment, its certifications and test evidence, the supplier's track record and finances, the contracts and the policy exposure. It asks what happens if things go wrong and who pays, rather than how good the technology is.",
+      "aliases": [
+        "TDD",
+        "technical diligence"
       ]
     },
     {
@@ -8940,6 +9414,15 @@
       ]
     },
     {
+      "slug": "traceability",
+      "term": "traceability",
+      "def": "The ability to reconstruct any delivered unit's history — which components it contains, when and where they were made, what the process readings were, and where it shipped. It converts an unbounded quality problem into a bounded one, and because the links are destroyed at assembly unless captured then, it is a production-line design decision rather than a report.",
+      "aliases": [
+        "serialisation",
+        "serialization"
+      ]
+    },
+    {
       "slug": "trainium",
       "term": "Trainium",
       "def": "Amazon's own AI training and inference chip, built for AWS and offered to customers as a lower-cost alternative to NVIDIA GPUs. Anthropic is its anchor user.",
@@ -9074,6 +9557,14 @@
       ]
     },
     {
+      "slug": "type-approval",
+      "term": "type approval",
+      "def": "A national regime in which an authority approves a product type for sale or use in that market, commonly recognising international test standards and sometimes adding local testing. Where a foreign test report is not recognised, the testing is simply repeated — which is a large part of why compliance work does not travel.",
+      "aliases": [
+        "type approvals"
+      ]
+    },
+    {
       "slug": "ul-1741",
       "term": "UL 1741",
       "def": "The American safety and listing standard for inverters and converters interconnecting with the grid. It is the test-and-listing document rather than the requirement: IEEE 1547 says what a resource must do, and a UL 1741 listing demonstrates that a given product does it.",
@@ -9101,9 +9592,24 @@
       "def": "The North American safety standard for stationary batteries — construction, protection and abuse testing for a battery meant to live in a building or a container. Listing to it is usually the first thing a fire marshal asks for."
     },
     {
+      "slug": "ul-9540",
+      "term": "UL 9540",
+      "def": "The North American safety standard and system-level listing for a complete energy storage system — battery, conversion, controls and enclosure evaluated as one assembly. It is the certification that produces permission to install, as distinct from the test method that produces fire and propagation data.",
+      "aliases": []
+    },
+    {
       "slug": "ul-9540a",
       "term": "UL 9540A",
       "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
+    },
+    {
+      "slug": "un-38-3",
+      "term": "UN 38.3",
+      "def": "The sequence of abuse tests — altitude, thermal cycling, vibration, shock, short circuit, impact, overcharge and forced discharge — that a lithium battery design must pass before it may legally be transported. It is a shipping qualification and says nothing about whether the product may be installed.",
+      "aliases": [
+        "UN38.3",
+        "UN 38.3 transport test"
+      ]
     },
     {
       "slug": "unforced-capacity",
@@ -9412,6 +9918,20 @@
       ]
     },
     {
+      "slug": "warranty-bond",
+      "term": "warranty bond",
+      "def": "An undertaking by a third party to pay if a supplier fails to honour its warranty obligations, up to a stated amount. Being capped and time-limited, it covers a bad year rather than a bad decade, and it does not replace a supplier that is still present and competent late in an asset's life.",
+      "aliases": []
+    },
+    {
+      "slug": "warranty-reserve",
+      "term": "warranty reserve",
+      "def": "Money a supplier provisions when a sale is booked, against the future cost of the guarantees it just gave. Sizing it honestly needs a degradation model good enough to forecast capacity top-ups and a defect-rate assumption good enough to forecast field failures — which is why aggressive terms from a thinly reserved supplier are a warning rather than a bargain.",
+      "aliases": [
+        "warranty provision"
+      ]
+    },
+    {
       "slug": "water-cement-ratio",
       "term": "water-cement ratio",
       "def": "The mass of water relative to cement in a concrete mix, and the single strongest determinant of its strength and durability. Adding water at the truck to make placement easier trades permanent strength for temporary convenience."
@@ -9517,6 +10037,15 @@
       "def": "A gas's heating value divided by the square root of its relative density, which predicts how much heat it will deliver through a given burner at a given pressure. Two gases with the same value are interchangeable without re-tuning, so a machine's declared Wobbe band is the real measure of how much fuel variation it can absorb.",
       "aliases": [
         "Wobbe number"
+      ]
+    },
+    {
+      "slug": "wound-cell",
+      "term": "wound cell",
+      "def": "A cell whose electrodes and separator are wound into a continuous roll before being placed in its housing. It is fast to manufacture and long established, but it fills a large rectangular can less evenly than a stack, which is one reason very large storage formats have moved toward stacked construction.",
+      "aliases": [
+        "jelly roll",
+        "winding"
       ]
     },
     {
