@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-07 06:00 AM EST
+**Repo version:** v05.06r — **one** push commit this session (`4a22d7f`), merged to `main` as `e31afca`, plus this housekeeping commit
+**Branch:** `claude/phase-2b-tract-pdc-citations-e2i2io` (fast-forwarded to `origin/main` after the merge; the workflow had deleted the remote branch, which freed push-once for this second push)
+**Model:** Fable 5.1 High — **Phase 2b of the integrated remediation plan: the `tract` ↔ `prime-data-centers` citation read (F9).** No new research, no report edit, no other dossier touched.
+
+### What was done
+
+**v05.06r — Phase 2b. Two dossiers moved, both archived, `lastUpdated` 2026-09-07.** Every cited page on both sides was opened (curl through the proxy; Austin Monitor via WebFetch). The hypothesis — USD 4bn is a build-out total, USD 400m a phase 1 — held with one correction: **the total is a nine-building figure from 2024, not an eight-building one.**
+
+- **What the sources say.** The Muskin Elam page behind `tract`'s USD 4bn is **dated** (`datePublished` 2025-05-08) and is a reprint of Justin Sayers's Austin Business Journal report — "across the street from a $4 billion data center campus project by Dallas-based Prime Data Centers LLC", **no scope stated**. The primary is the **Caldwell County Commissioners Court special meeting of 12 March 2024** (Hays Caldwell EDP 2024-03-13, Post Register 2024-03-20, echoed verbatim by the Caldwell DCAT tracker — all three already in Prime's `sources[]`): phase 1 **$1.3 billion for 3 buildings** (780,000 sq ft), **nine data centers across three phases**, **$4.2 billion at full buildout**, 10-year 100% abatement with a ~40% PILOT (~$840,000/yr). Texas filing **TABS2026019473** (registered 2026-05-05, read live) restates phase 1 as two 380,000 sq ft **shell** buildings, 760,000 sq ft, **$400,000,000**, June 2026–September 2027, owner Lockhart Property, LLC, Gensler. Baxtel's Prime Austin page (live) carries the current master plan: 206 acres, **eight buildings, 2 million sq ft**, phase 1 "provisionally pegged at $1.3 billion and 144 MW across three buildings" before the two-building filing. Austin Monitor and GovTech Insider mention neither Prime nor any dollar figure; Baxtel's Caldwell Valley page gives only the 1.43-mile distance.
+- **`tract` v3 (v2 archived).** Nothing deleted. Edge note, edge context and `productsAndServices[2].highlights[0]` now state both figures with their scopes and the ABJ attribution. Muskin Elam dated 2025-05-08, relabelled, and moved from the undated tail into chronological position (edge `source` URL unchanged); TDLR (2026-05-05), Post Register (2024-03-20), Hays Caldwell EDP (2024-03-13) and Baxtel Prime Austin (undated) added. `srcTotal` 151 → 155.
+- **`prime-data-centers` v3 (v2 archived) — step 7 in reverse.** Prime cited the county primary three times but never stated USD 4.2bn; the campus record, the `tract` edge and the H1 2026 "Campus investment claims" row now state USD 1.3bn (2024 phase 1), USD 4.2bn (2024 full build-out, nine buildings) and USD 400m (2026 two-shell phase 1) with their vintages, and say **no source restates a full-build-out total for the eight-building / 384 MW plan**. Muskin Elam added. `srcTotal` 172 → 173.
+- **Both relationship scopes kept under the crossref checker's 900-char joined cap** (`tract` rel[2] 860, Prime rel[5] 892) so the pair is examined; the checker joins every string in the relationship object, so note + context + URL must fit together.
+- **Records:** plan §6 Phase 2b → **Done — v05.06r**, Phase 3 marked next. README tree gained four archive entries — the two new v2 files **and the two v1 files missing since v05.00r**. CHANGELOG: no rotation (106 sections, 8 dated today → 98 non-exempt).
+
+### Where we left off
+
+v05.06r pushed and merged; this housekeeping push carries the session context. Phases 0, 1, 2a and 2b are closed in the plan. **The next unit of work is Phase 3 on Fable 5.1 xhigh** — the curriculum re-plan and skeleton review (F12) — and a paste-in prompt was handed over in chat. Nothing is half-done.
+
+### Key decisions and findings
+
+- **A "USD 4bn vs USD 400m disagreement" was two true figures for different scopes and different years** — and the plan's own hypothesis (eight-building total) was slightly wrong: the total belongs to the superseded nine-building plan. Reading the primary, not just the citing page, is what surfaced that.
+- **Prime's dossier held the primary source and never used it.** Citing a page is not stating its figure; step 7 has to run in both directions.
+- **Undated ≠ undated.** The Muskin Elam page carried `datePublished` in its metadata; a source that looks evergreen should be checked for article metadata before it is filed as undated.
+- **Two cited pages are unreachable from this environment:** Prime's own site (403 on every path) and the Wayback Machine (connection reset through the proxy — Wayback, not the target, is what fails). Austin Business Journal originals are paywalled; the reprint is the verifiable text.
+
+### Active context
+
+- **Branch:** `claude/phase-2b-tract-pdc-citations-e2i2io` · **repo version:** v05.06r · **Profiler page:** v01.83w (unchanged — data-only)
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 9 named projects / 8 guidance modules / 4 reports (0 superseded); `tract` 3, `prime-data-centers` 3
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG: 106 sections, 8 dated 2026-09-07.** Same EST day → 107 − 9 = 98 → no rotation. **A later EST day → 107 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`). `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
+- **Checker state:** reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — all left loud, `report-pins-verified.json` untouched) / 31 quiet. Crossrefs 0 candidates / 21 over-cap scopes / accept list 12. Relationships 0 findings / accept list 10. Study 0/0. Registry 154, calendar bijection clean. Graph digest `bf085b3f790f785a331a85b134513b23bbf25f3703ae9ea9ebd3b3a7dc27aa08` (1,260 edges / 950 curated / 3,677 evidence).
+- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** Phase 0 Done (v05.02r/v05.03r) · 1 Done (v05.04r) · 2a Done (v05.05r) · **2b Done (v05.06r)** · **3 next** · 4 (0/20), 5, 6, G6 open.
+- **Phase 3 inputs, mapped:** plan §2 row 3 ("done when": §1 re-dated; each §2.2 exclusion kept or reversed with a written reason; the 20-lesson remaining list re-ordered and recorded in the curriculum plan's §7), §3 paragraph, §4 skeleton (3 lanes · 5 tracks · 30 lessons · 10 built · 20 remaining; the three contradicted exclusions — nuclear/SMR vs `x-energy`+`oklo`, cooling vs `coolit`, `utility-procurement-meets-ai-load` vs six `utility` dossiers). `CLASSROOM-CURRICULUM-PLAN.md` §1 (verified 2026-09-02 against 89 dossiers), §2.2 exclusions, §6 gap register (G6 the only structural open row), §7 cut line (first five built; second wave of 7 and third wave listed), §8 item 9 (track edits are a developer-session write inside the content fence, `gateDigest` unchanged). Phase 3 writes into the curriculum plan, not the remediation plan's §4.
+- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; README archive listing may still lag for other slugs (tract and Prime caught up this session); OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention (not a scanned scope kind). Interim caveat still standing: **do not act on the `named-project` report's whitespace call** until Phase 5.
+
+### Recommendation for next session
+
+- Run **Phase 3 on Fable 5.1 xhigh** from `INTEGRATED-REMEDIATION-PLAN.md` §2 row 3, §3 and §4: re-verify `CLASSROOM-CURRICULUM-PLAN.md` §1 against the 154-company corpus and re-date it, re-test every §2.2 exclusion against the §6 closures with a written keep/reverse reason each, and re-order the 20 remaining lessons into §7 — a planning write into the curriculum plan only, no lesson authoring, no track edit.
+
+**To continue:** type `run phase 3`
+
+## Previous Sessions
+
 **Date:** 2026-09-07 05:25 AM EST
 **Repo version:** v05.05r — **one** push commit this session (`bd68d0e`), merged to `main` as `0ffb915`, plus this housekeeping commit
 **Branch:** `claude/phase-2a-sungrow-catl-afbfui` (fast-forwarded to `origin/main` after the merge via `git merge --ff-only origin/main`; the workflow had deleted the remote branch, which freed push-once for this second push)
@@ -54,50 +99,3 @@ v05.05r pushed and merged; this housekeeping push carries the session context. P
 - Run **Phase 2b on Fable 5.1 High** from `INTEGRATED-REMEDIATION-PLAN.md` §1 (F9), §2 and §3: the `tract` ↔ `prime-data-centers` citation read. Open the undated Muskin Elam page behind tract's USD 4bn and Prime's own Lockhart record, establish what scope each figure describes (a full eight-building/384 MW build-out total against a two-shell phase 1 is the obvious hypothesis, and it must be *tested*, not assumed), then **state both with their scopes** in both dossiers — or correct whichever is actually wrong. Deleting the USD 4bn without establishing its scope is the exact failure step 7 exists to prevent.
 
 **To continue:** type `run phase 2b`
-
-## Previous Sessions
-
-
-**Date:** 2026-09-07 04:19 AM EST
-**Repo version:** v05.04r — **one** push commit this session (`80e12f9`), merged to `main` as `3265d3e`, plus this housekeeping commit
-**Branch:** `claude/phase-1-dossier-fixes-5vp7km` (fast-forwarded to `origin/main` after the merge via `git merge --ff-only origin/main`; the workflow had deleted the remote branch, which freed push-once for this second push)
-**Model:** Fable 5.1 Medium — **Phase 1 of the integrated remediation plan: the five zero-research dossier fixes (F2–F6).** No report, `sungrow`, `catl` or `tract` edit.
-
-### What was done
-
-**v05.04r — Phase 1, all five dossiers revised and archived per the Profiler Command, `lastUpdated` 2026-09-07.**
-- **`hithium` v12 (v11 archived) — F2.** Added the `lightsource-bp` **customer** edge (Woolooga BESS Stage 1, 128 × 5 MWh / 640 MWh, `via` 5 MWh LFP containers, `since` 2024-12, active), mirroring the supplier edge Lightsource bp already carried; registered the Energy-Storage.News award article Lightsource bp cites (2024-12-18, independent tier) as the edge's exact `sources[]` URL. `srcTotal` 51 → 52.
-- **`google` v9 (v8 archived) — F3.** Intersect Power at the **USD 5,868m final purchase-price allocation** (Alphabet Q2 2026 10-Q: goodwill USD 2,174m, PP&E USD 5,129m, debt assumed USD 1,214m) in summary, product line, spec row and closing development; **~$4.75B kept as the announced figure**; new `financial` development dated 2026-07-23 citing the already-registered 10-Q (`sources[0]`, same URL `intersect-power` cites). Placeholder date `2026-03-xx` → `2026-03-10`.
-- **`compass-datacenters` v5 (v4 archived) — F4.** Brookfield × Bloom framework now reads USD 5bn / up to 1 GW at launch, **expanded fivefold to USD 25bn of total capex in Q2 2026**; registered Bloom Energy's Q2 2026 10-Q (the source `brookfield` and `bloom-energy` cite). "No source ties it to Compass" stands.
-- **`arevon` v4 (v3 archived) — F5.** Both operating-BESS counts stated with definitions: standalone-only = three by mid-2025 (Saticoy, Condor, Peregrine), four after Nighthawk; standalone-plus-hybrid = the company ordinals (Peregrine fifth, Nighthawk sixth — consistent with Vikings and Eland counted, the undated California Flats retrofit not). No registered source states Arevon's definition.
-- **`huawei-digital-power` v7 (v6 archived) — F6, attribution only.** Judgment 5, the `sungrow` edge, the `megmeet` edge and the FCC `policyExposure` entry now say the ~CNY 100B market-value loss and the wired-links argument attributed to Sungrow are **this dossier's own assertions** — re-reading the registered Cooley, Morgan Lewis, National Law Review and Energy-Storage.News pages found no Sungrow support (US News unreachable, but pre-action); `sungrow` v8 carries neither. Source tiers now visible in the prose. One registered-source qualification added: **Cooley's 31 July note reads the second security determination as covering wired as well as wireless connections**, which would moot a wired-links defence. No Sungrow research done.
-- **Toolchain:** registry synced (5 entries); graph rebuilt — 1,257 edges / 950 curated / 3,667 evidence, digest `401594320568f841…` (was `563ae281…`); **two new crossref candidates** (`6b7685094bf1`, `d55d105703c5`, lightsource-bp × hithium — Lightsource-side open questions on Woolooga energization and the Aula contract transfer that Hithium's record cannot answer) **adjudicated and accepted with reasons**, 0 candidates / 21 over-cap scopes after; `check-profiler-reports.py` **0 errors / exactly 3 warnings** (hithium v12 past its v11 verification in `grid-scale-bess`, `named-project-bess-attach`, `s154-listed-bess-suppliers`) — **left loud, `report-pins-verified.json` untouched**; study and relationships checkers 0/0.
-- **Records:** `INTEGRATED-REMEDIATION-PLAN.md` §6 Phase 1 → **Done — v05.04r**; Phase 2a marked next with the F6 residue. README tree gained the five archive files. CHANGELOG: no rotation (104 sections, 6 dated today → 98 non-exempt).
-
-### Where we left off
-
-v05.04r pushed and merged; this housekeeping push carries the session context. Phase 1 is closed in the plan. **The next unit of work is Phase 2a on Opus 5 xhigh** — the `sungrow` and `catl` research refreshes (F7, F8) — and a paste-in prompt was handed over in chat. Nothing is half-done.
-
-### Key decisions and findings
-
-- **Both figures stated, never reconciled by fiat** (step 7): Arevon's two counts carry their definitions; Google keeps the announced ~$4.75B beside the 10-Q USD 5,868m; Compass keeps the USD 5bn launch wording beside the USD 25bn expansion.
-- **The F6 attributions are unsourced in huawei's own record**, not merely uncorroborated by Sungrow's — the fix was to say so in the dossier with tiers, and hand the substance to 2a. The Cooley wired-or-wireless reading is the one new fact 2a must weigh: if the second determination covers wired links, a Sungrow wired-links defence would be moot.
-- **A crossref candidate raised by a new edge is adjudicated, not suppressed** — accepted only when the second passage genuinely cannot answer the first, with the reason written in the accept list.
-- **Standing, unfixed defects noted, not touched:** huawei Judgment 5 carries a double confidence tag "(Low confidence) (Moderate confidence)"; `google` has no `relationships[]` edge to `intersect-power` although the inverse investor edge exists.
-- Fast-forward (`git merge --ff-only origin/main`) again preferred over `checkout -B` after a merge.
-
-### Active context
-
-- **Branch:** `claude/phase-1-dossier-fixes-5vp7km` · **repo version:** v05.04r · **Profiler page:** v01.83w (unchanged — data-only)
-- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 9 named projects / 8 guidance modules / 4 reports (0 superseded); 5 dossiers at new versions (hithium 12, google 9, compass-datacenters 5, arevon 4, huawei-digital-power 7)
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG: 104 sections, 6 dated 2026-09-07.** Same EST day → 105 − 7 = 98 → no rotation. **A later EST day → 105 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`). `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
-- **Checker state:** `check-profiler-reports.py` 0 errors / **3 warnings (hithium, expected, left loud)** / 35 quiet. `check-profiler-crossrefs.py` 0 candidates / 21 scopes noted / accept list 12. `check-profiler-relationships.py` 0 findings, accept list 10. Graph digest `401594320568f841…`.
-- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** Phase 0 Done (v05.02r/v05.03r) · Phase 1 Done (v05.04r) · **2a next** · 2b, 3, 4 (0/20), 5, 6, G6 open.
-- **Standing, unassigned:** README archive listing behind for older versions; `archive/nvidia.profile.v2.json` missing; OSHA IMIS and SEC EDGAR network-blocked (SEC pages fetched fine this session via the proxy for reading, not research); README tree cosmetics in `study-prep/`. Interim caveat: **do not act on the `named-project` report's whitespace call** until Phase 5.
-
-### Recommendation for next session
-
-- Run **Phase 2a on Opus 5 xhigh** from `INTEGRATED-REMEDIATION-PLAN.md` §1–§3: the `sungrow` and `catl` research refreshes — F7 (SST / grid-to-chip / the CNY 100B loss / the FCC wired-prong argument, sourced from Sungrow's own record or stated as unconfirmed, weighing Cooley's wired-or-wireless reading now in huawei v7) and F8 (CATL's RMB 4.1B / 49% Zhonhen holdco purchase from CATL's side) — revised and archived per the Profiler Command, step 7 run against `hithium` and `huawei-digital-power`, all six checkers clean, the three hithium pins still loud unless read and recorded.
-
-**To continue:** type `run phase 2a`
