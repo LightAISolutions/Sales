@@ -6,6 +6,7 @@ The **Profiler** app (`live-site-pages/Profiler.html`) renders standardized corp
 - `<slug>.profile.json` — one **profile** per company: the full dossier
 - `reports/<id>.report.json` — one **industry report** per generation: a point-in-time synthesis across covered dossiers (see Report schema below)
 - `reports/reports-index.json` — the **reports index**: the library the app's Reports view lists
+- `profiler-segments.json` — the **segments registry**: the value-chain segments and every covered company's role in them (see Segments registry below)
 
 This file is the **single source of truth for the data schema**. Profiles are generated and revised by the **Profiler Command** (see `.claude/rules/profiler-app.md`), and every profile must conform to the structures below. The renderer only draws a section when its data is present, so optional sections can be omitted safely.
 
@@ -34,6 +35,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 | `companies[].srcTotal` | number | auto | **Denormalized** — number of cited sources in the profile. Written by `scripts/sync-profiler-registry.py`; never hand-edit. Powers the roster coverage line |
 | `companies[].srcFirstPct` | number | auto | **Denormalized** — first-party share (company + disclosure tiers), percent. Written by the sync script from the profile's `sources[]` and this entry's `domains` |
 | `companies[].kpiNorm` | boolean | auto | **Denormalized** — `true` when the profile carries a schema-v4 normalized annual revenue (`kpi: "revenue"` with `usdMillions`). Powers the roster's `$ comparable` tag and the coverage strip's count |
+| `companies[].segments[]` | object[] | auto | **Denormalized mirror of the segments registry** (S0, 2026-09-07) — `[{ "id", "role" }]`, one entry per segment the company is a member of in `profiler-segments.json`, in the registry's segment order; `role` ∈ `incumbent` · `challenger` · `adjacent`. Written by `scripts/sync-profiler-registry.py` from the segments registry (the sync-script change is S1's — until it lands the field is absent everywhere, and an absent field means "not yet synced", never "no segments"); never hand-edit. The segments registry is the source of truth; this mirror exists so the roster can filter and chip by segment from its one fetch. Additive and auto-written, so no `schemaVersion` bump (the `srcTotal`/`kpiNorm` precedent) |
 
 **Denormalized fields & the sync script.** The roster renders from the registry alone — one fetch, no per-card profile loads (see "Recall design" in `.claude/rules/profiler-app.md`) — so per-company summary facts the roster displays are denormalized into the registry. Denormalized data drifts; `scripts/sync-profiler-registry.py` is the reconciliation. Run it after any pass that adds or revises profiles (`--check` reports drift without writing). It also keeps `lastUpdated` in sync, replacing the one-off pass that previously did so.
 
@@ -303,15 +305,49 @@ Entries carry **no revision date** — see "Registry revision signals" below for
 
 **Scraper interest seed (registration-time sync, Layer 3 — 2026-08-30).** Every registered project also gets a matching interest-topic seed in `SCRAPER_INTEREST_TOPIC_SEEDS` (`googleAppsScripts/Scraper/Scraper.gs`) — `key: 'topic-<project-slug>'`, a label naming the project, precise search `terms` (multi-word phrases; a bare common word like "Frontier" or "Lighthouse" pads topic bands on unrelated articles), and `source: 'project:<slug>'` — mirroring the guidance-module seed convention in `.claude/rules/industry-guidance.md` step 9. When registering a new project, add the seed in the same commit (Scraper GAS version bump applies). Seeds are one-time sheet inserts: the developer's in-sheet edits win afterwards (see `.claude/rules/scraper-sources.md`).
 
+## Segments registry — `profiler-segments.json`
+
+The **value-chain segments** of the ecosystem as a registry layer (designed at S0 of `INTEGRATED-REMEDIATION-PLAN.md` §7, 2026-09-07; the developer's decision that segments are data the Profiler Command populates, not prose a lesson infers). Nineteen segments in chain order, each with a definition, the criteria its buyers buy on, and its **members** — every covered company that sits in it, with a **role** and the line in that company's own dossier that supports the assignment. It is the input to the generated segment lessons (`scripts/build-classroom-segments.py`, S1) and the landscape modules (S2), and the roster mirrors it as `companies[].segments[]`.
+
+**The evidence rule.** A membership is verified against the company's **own dossier** — its `ecosystemRole` and `productsAndServices[]` — never against the registry category, which is a filter label and not evidence. The `basis` field records the supporting line. A company whose dossier supports no segment goes in `unassigned[]` with a reason rather than being placed by guess; a dossier revision that removes the basis removes the membership.
+
+| Field | Type | Required | Meaning |
+|-------|------|----------|---------|
+| `schemaVersion` | number | yes | Segments registry schema version (currently `1`) |
+| `description` | string | yes | One-paragraph orientation for a reader (or a session) that opens the file cold |
+| `roles` | object | yes | The role vocabulary, self-describing: `incumbent` (the dossier places the company in the segment's established leading set — a third-party rank or the dossier's own incumbent / benchmark / reference / leader language), `challenger` (contesting that set — an entrant, a second source, a fast riser, a base being converted, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves), `adjacent` (the segment is not the company's primary business but its dossier records a product line, division, channel, or buyer/supplier position touching it). Adjacent members render under their own heading in a segment lesson's player table and never satisfy the floor rule's role requirement |
+| `tiers` | object | yes | The four chain tiers the `position` order runs through: `supply` (makes the thing) · `build` (builds, powers and cools the plant or hall) · `demand` (owns, operates or consumes it) · `services` (finances, assures, optimises or insures it) |
+| `floorRule` | string | yes | The rule stated in `CLASSROOM-CURRICULUM-PLAN.md` §10.2, repeated here so a consumer can apply it without the plan: a landscape module needs at least three members with a dossier, including one incumbent and one challenger |
+| `segments[]` | object[] | yes | Nineteen entries, ordered by `position` |
+| `segments[].id` | string | yes | Per Slug rules — the segment's **permanent identity**. Segment lesson ids derive from it (`segment-<id>`) and Classroom progress keys on those, so an id never changes; a segment that stops making sense is retired in place, never renamed |
+| `segments[].name` | string | yes | Display name |
+| `segments[].position` | number | yes | 1–19, the chain order the Value Chain tracks teach in (`CLASSROOM-CURRICULUM-PLAN.md` §10.5) |
+| `segments[].tier` | string | yes | One of `tiers` |
+| `segments[].definition` | string | yes | 1–3 sentences: what the segment makes or does and where it sits in the chain — the segment lesson's `the-segment` section is generated from it |
+| `segments[].buyingCriteria[]` | string[] | yes (≥3) | What a buyer in this segment buys on — the `what-is-bought-and-on-what` section's rows |
+| `segments[].notes` | string | no | Reserved adjacent roles not yet filled, floor state, and any taxonomy caveat the developer should see (e.g. a segment the plan counted above the floor that the dossiers do not support) |
+| `segments[].members[]` | object[] | yes (may be empty for a new segment) | The covered companies in the segment |
+| `segments[].members[].slug` | string | yes | Per Slug rules; must exist in `profiler-companies.json` and have a `<slug>.profile.json` |
+| `segments[].members[].role` | string | yes | `incumbent` · `challenger` · `adjacent` per `roles` |
+| `segments[].members[].basis` | string | yes | One line naming the dossier field and the claim that supports the assignment — `ecosystemRole: …`, `productsAndServices › <line>: …`, or `registry tagline: …` (the tagline is the dossier's own one-line summary as registered, acceptable as a pointer to the `ecosystemRole` it condenses). Written at assignment; a landscape module's claims ledger may cite it |
+| `unassigned[]` | object[] | yes (may be empty) | `{ "slug", "reason" }` — covered companies whose dossier supports no segment assignment. Empty at S0: all 154 dossiers placed |
+
+**Multiple membership is normal.** A company sits in every segment its dossier documents a position in — Tesla is an integrator incumbent, a cell and conversion adjacent, a software adjacent and a retail-supply adjacent — and the role differs per segment. A membership is never inferred from another membership.
+
+**Who writes it.** The **Profiler Command** assigns every new dossier to one or more segments with a role in the same commit that lands the dossier (`.claude/rules/profiler-app.md`, step 5 — the segment assignment), and re-checks the assignment on a revision when the `ecosystemRole` or product lines moved. A new segment is a **design decision** (the taxonomy is the developer's — nineteen agreed 2026-09-07), added here first and in `CLASSROOM-CURRICULUM-PLAN.md` §10 in the same commit; it never appears by a session's own initiative. **Revision date:** the file carries no `updated` field — like the projects and concepts registries below, its revision date is the file's last commit date (see "Registry revision signals"), and the segment lessons pin the member dossiers' own `lastUpdated`, never this file.
+
+**Verification.** `python3 -c "import json; json.load(open('live-site-pages/profiler-data/profiler-segments.json'))"` parses; every member slug has a profile file and a registry entry; no segment lists a slug twice; positions are 1–19 without gaps. From S1 these are assertions in `scripts/check-classroom-curriculum.py` (`CLASSROOM-CURRICULUM-PLAN.md` §10.9) and the content checker's segment check; until then they are the session's own pre-commit check.
+
 ## Registry revision signals — the undated layers
 
-Most corpus layers carry their own revision date (`lastUpdated` on a profile or study guide, `built` on the graph, `updated` on a guidance module, `generated` on a report). **`profiler-projects.json` and `profiler-concepts.json` do not** — neither the file nor its entries carry one. That gap was found while writing `CLASSROOM-COMMITTER-CONTRACT.md` (§6.1, handed to C2b as item 2) because the Classroom pipeline's refresh rule (G1) needs a comparable date for every layer a lesson pins.
+Most corpus layers carry their own revision date (`lastUpdated` on a profile or study guide, `built` on the graph, `updated` on a guidance module, `generated` on a report). **`profiler-projects.json`, `profiler-concepts.json` and (from S0, 2026-09-07) `profiler-segments.json` do not** — neither the file nor its entries carry one. That gap was found while writing `CLASSROOM-COMMITTER-CONTRACT.md` (§6.1, handed to C2b as item 2) because the Classroom pipeline's refresh rule (G1) needs a comparable date for every layer a lesson pins.
 
 **The decision (C2b, 2026-09-02): the layer's revision date is the file's last commit date.** No `updated` field is added to either registry.
 
 ```
 git log -1 --format=%cs -- live-site-pages/profiler-data/profiler-projects.json
 git log -1 --format=%cs -- live-site-pages/profiler-data/profiler-concepts.json
+git log -1 --format=%cs -- live-site-pages/profiler-data/profiler-segments.json
 ```
 
 `%cs` is the committer date as `YYYY-MM-DD`, which is exactly the pin format. Read it on the base revision the run started from (`origin/main`), not on a dirty working tree.
