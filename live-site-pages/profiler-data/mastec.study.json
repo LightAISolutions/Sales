@@ -1,0 +1,392 @@
+{
+ "schemaVersion": 2,
+ "slug": "mastec",
+ "title": "MasTec — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the one input you cannot order",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Equipment can be bought and money can be raised. Craft hours are produced by a labour market that does not read purchase orders.",
+   "ps": [
+    "Second guide in the construction course. The first established that an {{EPC}} contractor sells a date and a price, and that the price is really the cost of certainty. This guide is about the input that decides whether the date can be met at all.",
+    "Every other input to a construction project can be procured. Land is leased, equipment is ordered, money is raised, permits are applied for. **Craft labour cannot be procured in the same sense.** It is produced by a regional market with a fixed training pipeline, it is already employed somewhere, and it does not appear because a project needs it. A contractor short of electricians cannot solve the problem with a purchase order at any price it is willing to pay — and often at any price at all.",
+    "That single asymmetry produces the counter-intuitive claim this guide argues: **a labour shortage is a schedule risk, not a cost line.** Treating it as a cost line — assuming scarcity simply raises the wage and the estimate is wrong by the wage delta — misses the mechanism entirely and is the commonest analytical error made about this industry.",
+    "The guide covers the crafts and which of them actually becomes the constraint; how the labour market works, including why firms buy companies instead of hiring people; what productivity is as a measurable quantity and the specific things that destroy it; and then **safety**, treated as a production system rather than a compliance function — the arithmetic of a recordable rate, why that arithmetic is unreliable at small scale, and why a prequalification threshold built on it is a genuine barrier to entry.",
+    "A note on scope. The **contract** that fixes the date is the first guide; the **work** the crews perform is the third; the **money** that pays them is the fourth. This guide is about the people and the system that governs how they work."
+   ]
+  },
+  {
+   "id": "who-is-on-site",
+   "title": "The crafts, and which one becomes the constraint",
+   "kind": "table",
+   "read": "Two trades set the pace on almost every power project, and both are bid against by data centres.",
+   "intro": "A site's peak workforce is not one pool but a dozen trades arriving and leaving on different curves. Understanding which one is scarce, and when it is needed, is most of understanding whether a schedule is real.",
+   "cols": [
+    "Craft",
+    "What it does on a power or data-centre project",
+    "Why it becomes the constraint"
+   ],
+   "rows": [
+    [
+     "Equipment operators and earthwork crews",
+     "Clearing, grading, {{cut and fill}}, haul, {{compaction}}, access roads and drainage",
+     "Rarely the binding trade nationally, but intensely seasonal and highly local. Their availability is set by the regional civil market, which competes with roads and housing rather than with energy"
+    ],
+    [
+     "Pile and foundation crews",
+     "Driving or drilling the thousands of penetrations that hold trackers, racking and equipment pads",
+     "Specialised rigs and small crews with very high daily output, so a shortage shows up as an inability to start rather than an inability to finish. Rig availability, not headcount, is usually the limit"
+    ],
+    [
+     "Ironworkers and mechanical crews",
+     "Erecting structures, assembling racking and {{single-axis tracker}} rows, setting equipment, torqueing structural connections",
+     "Large volumes of repetitive work that scale well with headcount — which makes them the trade most often used to absorb acceleration, and therefore the one most exposed to trade stacking"
+    ],
+    [
+     "Electricians",
+     "Cable, conduit and tray, {{medium voltage}} terminations, {{inverter}} and equipment connections, grounding, controls wiring",
+     "The single largest labour content on a modern power or data-centre project, licensed, slow to train, and directly competed for by every data centre being built in the same region. This is usually the trade that decides the date"
+    ],
+    [
+     "Linemen and substation crews",
+     "The {{substation}}, the switchyard, the gen-tie line and the work up to the {{point of interconnection}}",
+     "A separate and much smaller labour market than general electrical, with its own training route and heavy competing demand from utility grid work. Scarcity here is severe, national and slow to relieve"
+    ],
+    [
+     "Instrumentation and controls technicians",
+     "Terminating and proving control wiring, configuring protection and controls, supporting {{commissioning}}",
+     "A small trade needed late, when all accumulated delay has landed. A shortage here compresses directly into the commissioning window, where there is no float left"
+    ],
+    [
+     "Commissioning and test technicians",
+     "Insulation, continuity and functional testing, energisation support, performance demonstration",
+     "The scarcest skill of all in absolute terms, frequently supplied by the equipment vendor rather than the contractor — which turns a labour constraint into an interface, and puts it on somebody else's calendar"
+    ]
+   ],
+   "note": "Two structural observations. First, the **scarcest trades are needed latest**, so labour shortage and schedule compression arrive at the same moment by construction. Second, the two scarcest — licensed electricians and linemen — are exactly the trades that large data-centre and grid programmes bid for. That competition converts what looks like a regional labour market into a national one, and it is why a project's staffing plan can be defeated by a construction announcement four states away."
+  },
+  {
+   "id": "the-labour-market",
+   "title": "Why you cannot simply hire more",
+   "kind": "prose",
+   "read": "Supervision is scarcer than craft, and it is what actually caps how fast a project can grow.",
+   "ps": [
+    "Craft labour is local by default. A worker lives somewhere, and a project that needs more people than the surrounding region holds must either import them or wait. Importing is normal and expensive: travel pay, subsistence, accommodation, rotation schedules and, above all, a workforce that will leave the moment work appears closer to home. **A travelling workforce is a rented workforce**, and it prices accordingly.",
+    "How that workforce is engaged varies by market and by owner. In a **union** market, labour is drawn through a hiring hall under agreed terms, which gives a contractor access to a trained pool without holding it on its own payroll — and gives the owner predictable rates and a dispute mechanism. A **project labour agreement** extends that to a whole site, binding every contractor to one set of terms for the duration. In an **open shop** market, contractors employ directly, train internally and compete for people on wage and continuity. Neither model is inherently faster or cheaper; what they differ in is where the training capacity sits and how quickly a crew can be assembled from outside the contractor's own payroll.",
+    "Where public money or certain tax benefits are involved, a further layer applies: **{{prevailing wage}}** requirements set the floor rate for the locality, and apprenticeship-hour requirements condition the benefit on a proportion of the work being performed by registered apprentices. This is worth noticing carefully, because it turns a workforce-development question into a **compliance** question — the project does not merely want apprentices, it needs documented apprentice hours in order to keep a financial benefit that was assumed in its business case.",
+    "That points at the deeper constraint. **An {{apprenticeship}} is a multi-year programme.** The supply of licensed electricians available next year was determined by enrolments four or five years ago, and no amount of present-day demand changes it. When people say a shortage is structural, this is what they mean: the response time of the supply curve is longer than the duration of most construction booms.",
+    "Which is why the observable behaviour of large contractors in a tight market is to **buy firms rather than hire individuals**. Acquiring a specialist contractor acquires a trained crew, its supervision, its licences, its relationships and its safety record in one transaction. None of those can be assembled quickly by recruitment, and the last two cannot be bought at all in any other way. When a large contractor pays a substantial multiple for a regional electrical firm, it is usually buying a workforce and a prequalification standing, not a book of contracts.",
+    "The least-discussed scarcity is **supervision**. Crews scale faster than the foremen who can run them. A general foreman can effectively run only so many crews; a superintendent only so many areas. Push past that ratio and the extra crews do not produce proportionally more work — they produce rework, safety exposure and coordination failures. In practice **the supervision ratio, not the craft headcount, is what caps how fast a project can safely grow**, and it is the number an experienced reviewer asks about when a contractor claims it can double its crew next month."
+   ],
+   "note": "A practical consequence for anyone reading a contractor's staffing plan: the plausibility test is not whether the total headcount exists in the region. It is whether the **ramp** is plausible — how many people are added per week, in which trades, under how many new foremen. Almost every failed schedule recovery was defeated by a ramp that looked fine as a total and was impossible as a rate."
+  },
+  {
+   "id": "productivity",
+   "title": "Productivity is a number, and it is fragile",
+   "kind": "prose",
+   "read": "The estimate is a bet on hours per unit. Almost everything that goes wrong on a site is a bet lost slowly.",
+   "ps": [
+    "Construction estimating rests on a single quantity: the **{{unit rate}}** — the hours required to install one of something. Hours per pile, per tracker row, per metre of cable, per termination, per cubic metre moved. Multiply by quantity and you have the labour estimate; divide the available hours into the schedule and you have the crew plan. The entire commercial structure of a fixed-price bid rests on those numbers being right.",
+    "The number actually achieved is expressed as a **{{productivity factor}}** — a ratio of planned hours to earned hours, tracked weekly. Above one and the job is beating its estimate; below one and it is consuming its margin. Because it is measured against installed quantity rather than against elapsed time, it is the earliest honest signal a project produces. A project can look on schedule and be failing, and the productivity factor is where that shows first.",
+    "Repetition is the strongest force pushing the number the right way. The hundredth of anything is dramatically faster than the tenth: the crew has learned the detail, the tooling is set up, the material flow is established, the inspection routine is understood. This is why **mobilisation and demobilisation are so expensive relative to the work they bracket**, why a small scope costs far more per unit than a large one, and why the same crew moved to an identical adjacent project starts slowly again if the details differ.",
+    "What destroys the number is worth listing precisely, because these are the mechanisms behind almost every labour overrun. **Sustained overtime**: extending the working week raises output at first and then falls back, as fatigue, absenteeism and error accumulate, and past several weeks a fifty-hour week can produce less than a forty-hour one did. **Trade stacking**: putting more crews into a fixed work area so that they interfere with one another, queue for access, and work around each other's incomplete work. **Out-of-sequence work**: doing what can be reached rather than what comes next, which converts one pass into two. **Waiting**: on material, on engineering answers, on an inspection, on a permit to work — the largest single component of lost time on most sites and the least visible, because a waiting crew looks like a working crew from a distance. **Rework**: the most expensive of all, because it consumes the hours twice and usually arrives late.",
+    "The commercially important asymmetry is this: productivity loss is **easy to cause and extremely hard to prove**. An owner that issues late drawings, changes a detail, delays an approval and adds a scope has caused a measurable loss, but measuring it after the fact requires a comparison against what would otherwise have happened — a counterfactual. This is why disruption claims are the hardest claims in construction, why contemporaneous records are a commercial asset rather than an administrative chore, and why an experienced contractor documents productivity weekly whether or not it expects a dispute."
+   ],
+   "note": "The clean way to hold the relationship between this guide and the last one: the first guide's acceleration decision is expensive **because of this section**. Adding hours runs into declining returns; adding crews runs into stacking and into the supervision ratio. Both are the same wall approached from different sides, and it is the reason time bought back always costs more than the arithmetic suggests."
+  },
+  {
+   "id": "shortage-is-schedule-risk",
+   "title": "A labour shortage is not a cost line",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "You cannot buy the hours at any price. So the work takes longer — and lateness is the risk with damages attached.",
+   "ps": [
+    "The intuitive model of a shortage is a price model: labour is scarce, so wages rise, so the estimate is wrong by the wage increase. On that model a shortage costs a few per cent of a cost line that is itself a minority of project cost, and it is a nuisance rather than a threat.",
+    "The mechanism is different. In a genuinely tight market the hours **are not available at the higher price either**, because the people are already employed on other projects under agreements that do not release them, and the training pipeline that would produce more of them takes years. What the contractor gets is not expensive labour but **less labour than planned**.",
+    "Follow that through. Fewer hours per week means the work takes longer. Longer means the completion date moves. A moved date means {{liquidated damages}} — the one exposure on the project with money attached per day. The contractor's response is acceleration, which requires more hours or more crews, which is the thing that was unavailable in the first place; what it can actually buy is overtime and crew density, both of which reduce the productivity it was already short of. **The shortage propagates into the schedule, and the schedule is where the money is.**",
+    "Two structural consequences follow. First, for the contractor: in a tight market the rational response to a job it cannot staff is to **decline it**, not to bid it high. A high bid on work you cannot resource buys damages, not margin. So the market's capacity behaves like a queue rather than a price — a fact that surprises anyone reading it as an ordinary competitive market, and one that shows up as long lead times for construction slots rather than as visibly rising prices.",
+    "Second, for the owner: **the constraint on how quickly a fleet of projects can be built is not equipment supply and not capital.** Both of those respond to price within a year or two. Craft capacity responds over the length of an apprenticeship. When an entire sector tries to build simultaneously, the binding constraint arrives on this axis, and it is the slowest of all of them to relieve.",
+    "The last guide in this course reaches the same conclusion — capacity as a stock rather than a flow — from the balance sheet instead of the workforce. That two independent constraints produce the same market behaviour is the strongest evidence that the behaviour is real."
+   ]
+  },
+  {
+   "id": "safety-arithmetic",
+   "title": "How a safety record is actually calculated",
+   "kind": "prose",
+   "read": "The rate is per hundred workers per year. At small scale one injury moves it by a whole point.",
+   "ps": [
+    "Contractor safety is bought and sold on numbers, and the numbers are less informative than the people using them generally believe. Understanding the arithmetic is therefore not a compliance exercise — it is how you read the market.",
+    "The unit of account is the **{{recordable incident}}**: not every injury, but a defined class — anything beyond first aid, involving medical treatment, restricted duty, lost time, loss of consciousness or a diagnosed condition. What counts is defined by regulation rather than by judgement, which is what makes cross-firm comparison possible at all.",
+    "The headline measure is the **{{total recordable incident rate}}**, and its formula is worth writing out: recordables multiplied by two hundred thousand, divided by hours worked. The odd constant is simply one hundred workers at forty hours for fifty weeks, so the rate reads as **recordables per hundred workers per year**. A related measure, the **{{DART rate}}**, counts only the subset involving days away, restricted duty or transfer, and is a better proxy for severity because it ignores the minor treatments that inflate the headline.",
+    "Now do the arithmetic, because its behaviour is the point. A contractor working two million hours a year with six recordables has a rate of 0.60. One more incident takes it to 0.70 — a change of about a sixth, which is noise. Apply the same formula to a single project working two hundred thousand hours: **one recordable produces a rate of 1.00, and a second produces 2.00.** The same event that is invisible at fleet scale doubles the number at project scale.",
+    "The consequence is structural and rarely acknowledged. **The recordable rate is unstable at small scale**, so a small contractor's number carries far less information than a large one's — it is a sample of one or two events, and its variance swamps the signal. Yet the threshold applied at prequalification is usually the same for both. A small specialist firm with genuinely good practice can be excluded from bidding for two years by one incident, while a large firm absorbs the same event without moving. That is a disadvantage which has nothing to do with how safely either of them works.",
+    "A third number, the **{{experience modification rate}}**, is the insurance market's version: a multiplier on workers' compensation premium derived from a firm's claim history against the expected history for its trade and size. Above one is worse than average, below one is better. It matters commercially — it is a direct cost, and many owners set a hard threshold on it — and it has a specific weakness: it is computed from claims that have already closed, so **it prices the past by several years** and cannot recognise a firm that has genuinely changed.",
+    "Finally, the distinction that governs how any of this should be used. The recordable rate, the DART rate and the modification rate are all **lagging** measures: they count what has already happened. Leading measures — hazard observations, quality of pre-task planning, near-miss reporting, supervision ratios, training currency — describe the system that produces the outcomes. There is a well-known trap in the leading set: **near-miss reporting rises when the culture improves**, because people start reporting. A rising near-miss count is usually a good sign that looks exactly like a bad one, and an organisation that punishes it destroys the only early warning it has."
+   ],
+   "note": "The measurement most worth distrusting is the one that seems most objective. A recordable rate can be lowered by improving the work, and it can also be lowered by managing the classification of injuries — light duty rather than lost time, on-site treatment rather than referral. Both produce the same number. This is exactly why the leading indicators and the programme review below carry weight that the headline figure does not."
+  },
+  {
+   "id": "safety-as-production",
+   "title": "Why safety is a production system, not a compliance function",
+   "kind": "prose",
+   "read": "The mechanisms that make a site safe are the same ones that make it productive. That is not a coincidence.",
+   "ps": [
+    "There are two ways to run safety on a construction site. The compliance reading treats it as a set of rules imposed from outside, enforced by inspection, whose objective is to avoid citations and keep a number below a threshold. The production reading treats it as **part of how the work is planned and executed**, whose objective is that the work goes as intended. The second is both more effective and, less obviously, cheaper.",
+    "The reason the two coincide is that the mechanisms overlap almost completely. **Planning the task before it starts** — a job hazard analysis walking through the steps, the exposures and the controls — is also the conversation in which the crew discovers it is missing a part, that another trade is in its area, or that the sequence does not work. **Controlling stored energy** through lockout and tagout is also the discipline that prevents a system being disturbed while it is being tested. **Controlling access and sequence** is also what prevents trade stacking. **Housekeeping** is also material control. A site that does these things has fewer injuries and better productivity for the same reason: the work was thought about before it was attempted.",
+    "The reverse holds with equal force. Every mechanism from the productivity section that destroys output also raises exposure. Sustained overtime produces fatigue. Crew density produces interference — people working above and below each other, lifts over occupied areas, cables run through active walkways. Out-of-sequence work removes the protections the sequence provided. Rework is unplanned work, which is the most dangerous kind. **Acceleration is a safety event as well as a cost event**, and that is the part of the previous guide's acceleration decision that appears in no estimate.",
+    "One hazard deserves separate treatment because it is specific to this industry and behaves unlike the others. An **{{arc flash}}** is the explosive release of energy when current jumps between conductors, and the energy available at a given piece of equipment is calculated by a study that sets the protective clothing and the breaker settings. The operationally important fact is that **the study has to be redone whenever the electrical system changes** — which, on a project under construction, is continuously. A temporary feed, a changed setting, an added transformer: each alters the incident energy at points downstream. So an electrical design change is simultaneously a schedule event, a testing event and a safety event, and the site that treats the study as a document issued once is exposed in a way no inspection will reveal.",
+    "The deepest reason to distrust rate-based management is the shape of severe outcomes. A small number of mechanisms — falls from height, being struck by moving loads or vehicles, being caught between, and electrical contact — account for most fatalities, and they are **not the same events that dominate the recordable rate**, which is populated by strains, lacerations and slips. A site can drive its recordable rate down substantially without touching its fatal exposure at all, because the controls are different: the recordable rate responds to housekeeping and hand protection, the fatal exposure responds to energy isolation, fall protection, lift planning and traffic management. **A low rate is compatible with a lethal profile.** Managing the rate rather than the exposures is how organisations are surprised."
+   ],
+   "note": "This is why serious owners audit the **system** — pre-task planning quality, energy-isolation practice, supervision ratios, how near misses are handled — and treat the headline rate as a screening filter rather than an assessment. It is also why safety performance is genuinely correlated with schedule performance across contractors: both are produced by the same underlying capability, which is the ability to plan work before doing it."
+  },
+  {
+   "id": "the-prequalification-gate",
+   "title": "Prequalification is a real barrier to entry",
+   "kind": "proscons",
+   "read": "The gate is defensible, useful, and structurally biased against exactly the firms it cannot measure.",
+   "intro": "Before a contractor may bid, most large owners require it to pass a prequalification screen — financial standing, experience, insurance, and above all a safety record. Two designs are in common use, and the choice between them shapes who is allowed to compete.",
+   "cards": [
+    {
+     "t": "A hard numerical threshold",
+     "adv": [
+      "Objective, cheap to administer at scale, and defensible if challenged — the same rule applied to everyone",
+      "Sets a genuine floor: a firm with a persistently poor record across large exposure is telling you something real",
+      "Fast, which matters when an owner must qualify dozens of bidders for a programme rather than a project",
+      "Transmits down the chain — a contractor applies the same threshold to its own subcontractors, so the standard propagates",
+      "Insurers and lenders understand it, so it aligns with the owner's own risk pricing"
+     ],
+     "dis": [
+      "Statistically unreliable at small scale: one incident on a small firm's hours moves the rate by a whole point, so the screen rejects on variance rather than on practice",
+      "Rewards classification management over actual improvement, because the number can be moved either way",
+      "Measures the past, and the modification rate measures a past several years old, so a firm that has genuinely transformed cannot demonstrate it",
+      "Excludes new entrants structurally — a firm with no hours has no rate, and the rule has no way to say yes",
+      "Freezes the bidder list, which reduces competition and raises price in exactly the tight markets where the owner can least afford it"
+     ]
+    },
+    {
+     "t": "A review of the safety programme",
+     "adv": [
+      "Sees the leading indicators — pre-task planning, energy isolation, supervision ratio, how near misses are treated — which are what actually predict outcomes",
+      "Can distinguish a small firm with excellent practice and one unlucky year from a firm with a genuinely poor system",
+      "Admits capable new entrants and specialists, keeping the bidder list open where scarcity is worst",
+      "Evaluates fatal-exposure controls rather than the recordable population, which is the risk the owner actually fears",
+      "Produces information the owner can use during the project, not merely a yes or no before it"
+     ],
+     "dis": [
+      "Expensive and slow — a real review requires experienced assessors and site visits, and cannot be run across a hundred bidders",
+      "Subjective, therefore harder to defend when a rejected bidder challenges the decision",
+      "Easy to satisfy on paper: a well-written programme and a documented process are not the same as practice in the field",
+      "Depends on the assessor's own competence, which varies more than a formula does",
+      "Difficult to apply consistently across geographies and trades, where good practice legitimately looks different"
+     ]
+    }
+   ],
+   "note": "Whichever design is used, prequalification is a **market structure decision, not an administrative one**. It determines who may compete, and both designs push toward the same outcome — a shorter list of larger firms. That is one of the forces consolidating the top of this market, and it is the direct sibling of the constraint the last guide in this course describes: a surety line and a safety threshold both limit which firms may hold which work, and both are hardest on precisely the firms that would benefit most from passing."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why is craft labour categorically different from every other project input?",
+     "a": "Everything else can be procured. Craft hours are produced by a regional market with a multi-year training pipeline, and they do not appear because a project needs them — so scarcity cannot be solved with a purchase order."
+    },
+    {
+     "q": "Which two trades usually set the date on a modern power project?",
+     "a": "Licensed electricians and linemen — the largest labour content and the scarcest separate market respectively, and both directly competed for by data-centre and utility grid programmes."
+    },
+    {
+     "q": "Why does labour scarcity and schedule compression always arrive together?",
+     "a": "The scarcest skills — controls technicians and commissioning testers — are needed latest, at the end of the schedule where all accumulated delay has already landed."
+    },
+    {
+     "q": "What is a travelling workforce really?",
+     "a": "A rented one. It costs travel, subsistence and rotation, and it leaves the moment work appears closer to home — so it prices accordingly and cannot be relied on for continuity."
+    },
+    {
+     "q": "Why do large contractors buy firms instead of hiring people in a tight market?",
+     "a": "An acquisition buys a trained crew, its supervision, its licences and its prequalification standing in one transaction. The last two cannot be assembled by recruitment at all."
+    },
+    {
+     "q": "What is the least-discussed constraint on how fast a project can grow?",
+     "a": "The supervision ratio. Crews scale faster than the foremen who can run them, and past the ratio the extra crews produce rework and exposure rather than output."
+    },
+    {
+     "q": "What is a unit rate, and why does everything rest on it?",
+     "a": "The hours required to install one of something. Multiplied by quantity it is the labour estimate; divided into the schedule it is the crew plan. A fixed-price bid is a bet that these numbers are right."
+    },
+    {
+     "q": "Why is the productivity factor the earliest honest signal a project gives?",
+     "a": "It is measured against installed quantity rather than elapsed time, so a project that looks on schedule but is consuming its margin shows up here first."
+    },
+    {
+     "q": "Name the five mechanisms that destroy construction productivity.",
+     "a": "Sustained overtime, trade stacking, out-of-sequence work, waiting (on material, engineering, inspection or permits), and rework."
+    },
+    {
+     "q": "Why are disruption claims the hardest claims in construction?",
+     "a": "Productivity loss is easy to cause and requires a counterfactual to prove. Establishing what would otherwise have happened is why contemporaneous records are a commercial asset."
+    },
+    {
+     "q": "Write out the recordable rate formula and say what the constant means.",
+     "a": "Recordables × 200,000 ÷ hours worked. The constant is one hundred workers × forty hours × fifty weeks, so the rate reads as recordables per hundred workers per year."
+    },
+    {
+     "q": "A firm works 200,000 hours and has one recordable. What is its rate, and what does that show?",
+     "a": "1.00. The same single event would move a two-million-hour firm from 0.60 to 0.65 — the rate is unstable at small scale, so a small firm's number carries far less information."
+    },
+    {
+     "q": "What does an experience modification rate measure, and what is its weakness?",
+     "a": "A firm's workers' compensation claim history against the expected history for its trade and size. It is computed from closed claims, so it prices the past by several years and cannot recognise a firm that has changed."
+    },
+    {
+     "q": "Why is a rising near-miss count usually good news?",
+     "a": "Reporting rises when the culture improves. It is a leading indicator that looks like a bad outcome, and punishing it destroys the only early warning the organisation has."
+    },
+    {
+     "q": "Why must an arc-flash study be redone during construction?",
+     "a": "The available incident energy depends on the electrical system, which changes continuously on a live project — a temporary feed or a changed protection setting alters the energy downstream and therefore the required protection."
+    },
+    {
+     "q": "Why can a low recordable rate coexist with a lethal exposure profile?",
+     "a": "Fatalities come from falls, struck-by, caught-between and electrical contact. The recordable population is dominated by strains, cuts and slips, and the controls for the two sets are different."
+    },
+    {
+     "q": "Why is a labour shortage a schedule risk rather than a cost line?",
+     "a": "The hours are not available at the higher price either. So the work takes longer, the date moves, liquidated damages run, and the acceleration bought to recover destroys the productivity already in short supply."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A contractor cannot find enough electricians. What is the primary consequence?",
+     "c": [
+      "The labour cost line rises by the wage premium",
+      "The work takes longer, so the completion date and its damages are at risk",
+      "The equipment order must be resized",
+      "The design must be simplified"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does construction capacity behave like a queue rather than a price?",
+     "c": [
+      "Regulations cap prices",
+      "A contractor that cannot staff a job is better off declining it than bidding it high, because a high bid on unstaffable work buys damages",
+      "Owners refuse to pay more",
+      "Unions set fixed rates nationally"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which craft is usually the scarcest separate labour market on a grid-connected project?",
+     "c": [
+      "Equipment operators",
+      "Linemen and substation crews",
+      "Ironworkers",
+      "Labourers"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A contractor says it will triple its crew next month. What is the right question?",
+     "c": [
+      "Whether the region has that many workers",
+      "Whether the ramp is plausible in workers per week and in new foremen — the supervision ratio, not the headcount",
+      "Whether the wage is competitive",
+      "Whether the equipment has arrived"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A project is on schedule but its productivity factor has been below one for six weeks. What does that mean?",
+     "c": [
+      "Nothing — the schedule is what matters",
+      "It is consuming its margin, and the schedule will follow",
+      "The estimate was too generous",
+      "The quantities were measured wrongly"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which of these is the largest normally-unmeasured component of lost time on a site?",
+     "c": [
+      "Rework",
+      "Waiting — on material, engineering answers, inspections and permits",
+      "Travel",
+      "Training"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A firm works 2,000,000 hours with 6 recordables. What is its total recordable incident rate?",
+     "c": [
+      "0.30",
+      "0.60",
+      "3.00",
+      "6.00"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does a hard recordable-rate threshold disadvantage small contractors structurally?",
+     "c": [
+      "Small firms are genuinely less safe",
+      "One incident moves a small firm's rate by a whole point, so the screen rejects on statistical variance rather than on practice",
+      "Small firms cannot afford insurance",
+      "Regulators apply different rules"
+     ],
+     "a": 1
+    },
+    {
+     "q": "The experience modification rate is best described as which kind of measure?",
+     "c": [
+      "A leading indicator of current practice",
+      "A lagging, insurance-priced measure computed from closed claims several years old",
+      "A regulatory citation count",
+      "A near-miss reporting rate"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why is acceleration also a safety decision?",
+     "c": [
+      "Because overtime is prohibited above a threshold",
+      "Because fatigue, crew density, out-of-sequence work and rework all raise exposure at the same time as they cut productivity",
+      "Because insurers must be notified",
+      "Because it requires new permits"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner reviews the safety programme rather than the number. What does that design gain and lose?",
+     "c": [
+      "Gains speed, loses accuracy",
+      "Gains sight of leading indicators and admits capable new entrants; loses objectivity, speed and defensibility",
+      "Gains legal protection, loses information",
+      "It is identical in effect"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What does the last guide in this course reach from the balance sheet that this guide reaches from the workforce?",
+     "c": [
+      "That price competition determines market share",
+      "That a contractor's capacity to hold work is a stock rather than a flow",
+      "That safety records are unreliable",
+      "That equipment lead times dominate"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

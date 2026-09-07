@@ -290,10 +290,10 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | backfill | `ls-energy-solutions` | LS Energy Solutions | integrator | ✓ · v04.97r — permission to sell |
 | backfill | `sunwoda` | Sunwoda | integrator | ✓ · v04.97r — ten thousand identical cells |
 | backfill | `trina-storage` | Trina Storage | integrator | ✓ · v04.97r — the twenty-year promise |
-| backfill | `blattner` | Blattner | EPC | — |
-| backfill | `mastec` | MasTec | EPC | — |
-| backfill | `solv-energy` | SOLV Energy | EPC | — |
-| backfill | `samsung-ct` | Samsung C&T | EPC | — |
+| backfill | `blattner` | Blattner | EPC | ✓ · v04.98r — the price of a date |
+| backfill | `mastec` | MasTec | EPC | ✓ · v04.98r — the people who build it |
+| backfill | `solv-energy` | SOLV Energy | EPC | ✓ · v04.98r — the ground, the wire and the handover |
+| backfill | `samsung-ct` | Samsung C&T | EPC | ✓ · v04.98r — who can hold the risk |
 
 ---
 

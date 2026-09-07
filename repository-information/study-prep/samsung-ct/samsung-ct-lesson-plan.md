@@ -1,0 +1,44 @@
+# Samsung C&T — Technology Lesson Plan
+
+**Subject:** Samsung C&T (a listed conglomerate's engineering-and-construction and renewables-development arms; a global contractor that also originates and sells development positions) · **Written:** 2026-09-06 · **Baseline assumed:** high-school STEM, no construction-finance, surety or international-contracting background.
+
+**What this teaches.** The contractor's own money over the period it is exposed, and the two counter-intuitive results that follow from a single mechanism — it pays for the work before it is paid for the work. How payment actually happens: a schedule of values agreed before anyone breaks ground, monthly measurement and certification, compounding lags, and retainage held for years. The arithmetic showing that a fast-growing contractor consumes cash while profitable, so the accounts of a thriving firm in a boom resemble those of a failing one. The difference between a change and a claim, the constructive change nobody intends, notice as the commonest way a legitimate entitlement is lost, and why disruption is the hardest thing in construction to prove. What lateness costs, the two distinct kinds of damages, and caps as the point where a risk transfer stops. Six security instruments and what each does not cover. Why a surety line makes capacity a stock rather than a flow, and the three consequences — a full line cannot be bought past, growth is self-limiting, and the firms that most need a bond cannot get one. What changes when the site is in another country. And a closing synthesis of all four courses in this corpus.
+
+**Why this gap.** The corpus described project financing from the buyer's side and supplier creditworthiness from the equipment side, and had nothing on the contractor's own balance sheet — which is the thing that actually determines how much work a firm can hold. Without it, the market's most visible behaviour was unexplained: capacity clearing as a queue rather than through price, consolidation at the top, and joint ventures on large jobs. It is also the natural place to close the corpus, because the contractor sits at the last hand-off before an asset begins operating.
+
+**Its place in the construction set.** Fourth of four, and the closing argument for the course and for the corpus. It answers the Blattner guide's damages and caps by asking what stands behind them; it reaches the MasTec guide's conclusion about queued capacity from the balance sheet instead of the labour market; and it takes the SOLV guide's retention leverage and reads it as a financing instrument. Its final module draws the buyer-side, bridge-power, integrator and construction courses into one argument.
+
+## Module 1 — Why growth consumes cash
+Weekly payroll and delivered materials against monthly billing in arrears, certification lag, payment terms and a withheld slice. The balance sheet as production equipment rather than a reporting artefact. The two results: a profitable growing contractor with negative cash flow, and capacity as a stock. The boundary against the two neighbouring courses — the project's capital stack and the supplier's twenty-year credit are taught elsewhere.
+
+## Module 2 — Getting paid
+The schedule of values, why front-loading is contested, and what a front-loaded table means if a contractor fails part-way. The monthly cycle of application, measurement, certification and payment, and how the three lags compound. Retainage — its two legitimate purposes and its real cost as interest-free profit held to a milestone with no schedule pressure behind it. Pay-when-paid transmitting the owner's cash timing, amplified, to the parties least able to absorb it, and why lien rights and payment bonds exist. Overbilling and underbilling as the readable signal, and what persistent underbilling on a growing book means.
+
+## Module 3 — The cash cycle, in days
+Work performed before cutoff, verification, payment terms and retention, added rather than considered separately. Why the total is a percentage of revenue rather than of margin, and what that does to a firm growing quickly on a single-digit margin. Why the cash statements of a thriving and a failing contractor look similar, and why distinguishing them is a surety's occupation. Prepaid long-lead equipment as a financing decision dressed as a scheduling one.
+
+## Module 4 — Change against claim
+Agreed against asserted, and how the same event becomes either. The three ordinary grounds — scope change, owner-caused delay or disruption, and a differing site condition. The constructive change, where nobody issues an instruction and the contractor is nonetheless doing more than it priced. Notice periods and why a competent site team's instinct forfeits entitlement, with the mature response of separating problem-solving from commercial notice. Disruption as real, large and nearly unprovable without contemporaneous records. Back charges running the other way.
+
+## Module 5 — What lateness costs
+Liquidated damages as a pre-agreed rate that converts an argument about damage into arithmetic. How the rate is built from the owner's daily exposure, and the risk at both ends of setting it wrongly. Delay damages buying time against performance damages buying down a permanent shortfall. Caps as the point where the risk transfer stops, and the lender's adviser's arithmetic test of whether the cap covers exposure to the outside date. Why early-completion bonuses are rare. Back-to-back damages down the supply chain, with caps shrinking at each step.
+
+## Module 6 — Standing behind it
+Performance bond, payment bond, advance payment guarantee, retention and warranty bonds, parent company guarantee, and on-demand bank instruments — who issues each, against what, and what each does not cover. The same instrument family the integrator course examined, aimed at an eighteen-month performance rather than a twenty-year warranty. The shared weaknesses: all capped, all only as good as their issuer, and none of them delivers a plant.
+
+## Module 7 — Bonding capacity
+Why a surety is not an insurer, and what that changes. The underwriting questions: working capital, net worth, relevant experience, and judgement. Single-job and aggregate limits, and why the aggregate binds. Three consequences: a full line cannot be bought past at any price, so the market clears as a queue; growth is self-limiting because the line grows with equity on a thin margin; and the firms that would benefit most cannot obtain one. Bonding as the commercial sibling of the previous guide's prequalification gate. The joint venture as a solution that converts a balance-sheet problem into an interface problem.
+
+## Module 8 — Across borders
+An international contractor under a wrap against local multi-package contracting with an owner's team. Lender recognition of credit and of local sureties, familiar contract forms, local content obligations, currency and country risk priced conservatively, expatriate cost against local craft, and where permitting and logistics knowledge actually lives. The systematic point: a jurisdiction changes a project's credit and its labour far more than its engineering — the same conclusion the integrator course reached about bankability, arrived at from the construction side.
+
+## Module 9 — What the four courses were arguing
+The construction course in four parts: the contract, the people, the work, the money. The buyer-side, bridge-power and integrator courses restated in one line each, and where this course sits between them. The single question asked at every hand-off — who carries the risk of something that has not happened yet, and what have they put up to prove they can — with the queue, the offtake, the listing, the capacity guarantee, the liquidated damages and the surety bond as one instrument in different costumes. The closing claim that serious failures happen at hand-offs rather than inside stages, and that the seams are what nobody owns.
+
+## Pacing
+Nine modules, roughly 20 minutes each, though Modules 1 to 3 form a single argument and are best taken together in one longer sitting. Module 5 is the one to read twice for anyone who negotiates or reviews contracts. Module 7 is the course's structural payoff and Module 9 is the corpus's; neither should be skimmed, and Module 9 is best read only after the other three courses.
+
+## Sources for the technology and industry content
+Grounded in the company's dossier and the sources registered there, plus standard construction-finance, surety and international-contracting fundamentals. No new research was carried out for this guide. All day counts, percentages and worked examples are illustrative, and no company's claimed backlog, order book, agreements, delivered volumes or credit standing is asserted as fact or used as teaching material. Concept definitions are registered in `profiler-concepts.json`.
+
+Developed by: LightAISolutions

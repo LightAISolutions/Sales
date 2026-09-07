@@ -1,0 +1,489 @@
+{
+ "schemaVersion": 2,
+ "slug": "blattner",
+ "title": "Blattner — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: an EPC sells a date, not a building",
+   "kind": "callout",
+   "tone": "info",
+   "read": "The buyer-side course gives construction one bar of about fourteen months. This course is inside that bar.",
+   "ps": [
+    "First guide in the construction course. Three neighbouring courses in this corpus have already described everything **around** a power project and almost nothing about the act of building one. The buyer-side guides explain who purchases a plant, on what contract, for what revenue, dispatched how and approved by whom. The bridge-power guides explain the machines — the engines, the turbines, the emissions and permits that govern them, the electrical interface, the containerised storage block. The integrator guides explain how a supplier turns cells it did not make into a warranted system a bank will lend against.",
+    "None of them covers the eighteen months in which a financed design becomes an energised plant. In the project-lifecycle guide that whole period is **a single bar on a chart**, and its note says a slipped date is usually a queue problem rather than a construction problem. That is true from the outside. From the inside, construction is the one activity on the project with a fixed price, a fixed date and money payable per day of lateness — so whatever caused the slip, this is where the argument about it happens.",
+    "The claim this course makes is that an {{EPC}} contractor does not sell construction. It sells **a date and a price**, and every other feature of the business — how it contracts, how it hires, how it inspects, how it is financed — is a consequence of having sold them. This guide covers the selling: what a fixed price actually transfers, how work is awarded, where the scope is cut and why the cuts are where projects fail, and what a schedule is as a commercial instrument rather than a chart.",
+    "The remaining three guides take the rest. The next is about **people** — craft labour as the binding constraint, and safety as the production system that governs it. The third is about **the work itself** — the ground, the terminations, and the sequence that ends in somebody signing for the plant. The last is about **money** — how a contractor gets paid, what lateness costs, and why a balance sheet decides how much work a firm can hold at once.",
+    "One thing to fix in mind before starting. A factory schedule and a construction schedule are different objects. A factory controls its inputs; a construction project's schedule contains **other people's decisions** — a utility's outage window, an inspector's calendar, a supplier's ship date, a soil condition nobody has seen yet — and the contractor has sold a date that depends on all of them."
+   ]
+  },
+  {
+   "id": "what-a-fixed-price-buys",
+   "title": "What a lump-sum turnkey price is really buying",
+   "kind": "prose",
+   "read": "The premium over cost is not margin. It is the price of converting a distribution into a number.",
+   "ps": [
+    "The intuitive reading of a fixed price is cost plus profit: the contractor estimates what the work will cost, adds a margin, and quotes the sum. That is arithmetically true and almost entirely misleading about what is being sold.",
+    "A contractor pricing a project does not have a cost. It has a **distribution** of possible costs — a most-likely figure with a long tail of ways the job could go badly. A {{lump-sum turnkey}} price replaces that distribution with a single number and hands the tail to the contractor. What the owner is buying is not construction services; it is **certainty**, and the difference between the quoted price and the most-likely cost is what certainty costs.",
+    "That reframing explains behaviour that otherwise looks like greed or timidity. A contractor asked to price work with an incomplete design does not price the design it was shown; it prices the worst design that drawing could become. A contractor asked to accept an uncapped obligation does not price it at its expected value, because an uncapped tail cannot be priced at all — it declines, or it prices it as though it will happen. **Ambiguity is more expensive than difficulty**, and the cheapest thing an owner can do to reduce a bid is to remove uncertainty from it rather than scope.",
+    "Inside the price sits {{contingency}}: money held for the work that is certain to be needed and not yet identified. Its size is a statement about how complete the design is. Whose contingency it is, and who keeps what is unspent, is one of the most consequential negotiated terms in the contract — an owner-held contingency drawn down against evidence produces one set of behaviours, and a contractor-held contingency that becomes profit if unspent produces another.",
+    "A fixed price is also only as fixed as the scope it was fixed against. Every project has a mechanism for handling work that was not in the scope — the {{change order}} — and the honest measure of how complete a design was at {{notice to proceed}} is the number and cause of the change orders it produces. A project that runs to a hundred change orders was not badly managed in construction; it was released to construction too early.",
+    "So the owner's real decision is not whether to pay the premium but whether it is buying anything with it. Where the design is complete, the site is known and the equipment is ordered, a fixed price transfers a small remaining risk at a small premium and is excellent value. Where the design is at sixty per cent, the geotechnical work is thin and the equipment is not selected, the same words transfer very little, cost a great deal, and end in a claim — because the contractor priced a tail it could not see, and the events that fill that tail will be argued about rather than absorbed.",
+    "There is one party whose preference is unambiguous. The lender's {{independent engineer}} wants a wrap, because a wrap produces a single responsible counterparty with {{liquidated damages}} and a bond behind it. Its question is never whether the price is efficient — it is whether, if the plant is late or short, there is one entity to pursue and enough security behind that entity to matter."
+   ],
+   "note": "A useful test when reading any construction price: ask what the contractor is being asked to *guarantee* rather than what it is being asked to *do*. Two firms quoting the same work under different guarantee sets are not quoting the same thing, and the cheaper number is often the one that has quietly kept a risk with the owner."
+  },
+  {
+   "id": "three-ways-to-buy-a-plant",
+   "title": "Three ways to buy the same plant",
+   "kind": "table",
+   "read": "Every model is the same work. What differs is who holds the seams between the scopes.",
+   "intro": "These are not degrees of the same thing — they are different allocations of the same risks, and each produces a different price, a different schedule and a different set of arguments. Read the third column, which is where the real difference lives.",
+   "cols": [
+    "Model",
+    "How the work is contracted",
+    "What the owner keeps — and what it costs"
+   ],
+   "rows": [
+    [
+     "Full {{EPC}} wrap ({{lump-sum turnkey}})",
+     "One contractor holds engineering, procurement and construction under one price and one date, and subcontracts whatever it does not {{self-perform}}",
+     "Almost nothing. The owner has one counterparty, one date, one set of {{liquidated damages}} and one bond. It pays a risk premium for that, and it loses visibility into where its money goes and control over which equipment is used"
+    ],
+    [
+     "{{multi-contract}}",
+     "The owner lets several direct contracts — civil, electrical, {{substation}}, {{commissioning}} — and coordinates them itself or through an {{owner's engineer}}",
+     "The seams. Each contractor is responsible for its own scope and for nothing between scopes, so every gap, overlap and timing mismatch is the owner's. It saves the wrap premium and pays for it in coordination staff, schedule risk, and delay arguments it must referee rather than transfer"
+    ],
+    [
+     "{{owner-furnished equipment}} with an installation contract",
+     "The owner buys the major equipment directly from the manufacturer and hands it to a contractor to install, test and connect",
+     "The equipment supply chain, and the seam where it meets the site. The owner keeps the supply agreement, the performance warranty and the tax position — which is usually why it does this — and accepts that a late or damaged delivery is now its own delay, not its contractor's"
+    ],
+    [
+     "Construction management at risk",
+     "A construction manager joins during design, advises on {{constructability}} and cost, then converts to a guaranteed maximum price once the design is far enough along",
+     "The early cost uncertainty, in exchange for the contractor's input while the design can still change. The guaranteed maximum caps the owner's exposure but leaves it exposed to everything the manager excluded when it set the cap — so the exclusions list matters more than the number"
+    ]
+   ],
+   "note": "In grid storage the third row is the norm rather than the exception, and the reason is not construction at all. The battery supply agreement, the capacity guarantee, the long-term service agreement and the tax-credit eligibility all work better held by the owner, so the owner buys the batteries and the contractor installs them. That single commercial decision creates the interface this course keeps returning to — and it means the phrase 'the EPC built it' usually describes a firm that never owned the largest item on the site."
+  },
+  {
+   "id": "how-work-is-awarded",
+   "title": "How the work is actually won",
+   "kind": "prose",
+   "read": "The largest contractors in this market announce almost nothing, because almost nothing they win is competitively bid.",
+   "ps": [
+    "A newcomer imagines construction work being awarded the way public infrastructure is: a design is finished, a tender is issued, sealed bids arrive, the lowest responsive bid wins. That happens, and at the top of this market it is the exception rather than the rule.",
+    "The dominant form is the **repeat-owner relationship**. A developer that builds a project a quarter cannot afford to re-qualify a contractor each time, cannot afford the bid period in its schedule, and above all cannot afford to be a new customer to a firm whose craft crews are already committed elsewhere. So it signs a {{master service agreement}} — a standing set of terms, rates and conditions — and issues work against it. Pricing is negotiated or open-book against agreed rates rather than competed; what is competed, once, is the relationship.",
+    "This has three consequences worth understanding. First, **market share becomes invisible**. A contractor operating this way issues no award announcements, names no clients on its project pages, and appears in public only through its customers' releases and its parent's financial disclosure. Its size has to be inferred rather than read. Second, **capacity is allocated before it is priced** — a repeat owner is buying a place in the contractor's crew calendar, and the price conversation happens afterwards. Third, the contractor's incentive shifts from winning the next job to keeping the relationship, which is a materially better alignment than a low-bid tender produces.",
+    "Award is also rarely a single event. The common sequence is a {{limited notice to proceed}} first — an instruction to begin a bounded slice of work, usually engineering, long-lead ordering and site mobilisation, with an agreed price for that slice — followed by full {{notice to proceed}} once financing closes and permits are in hand. The limited step exists because the equipment ordering clock in this course's next section starts long before financial close, and a project that waits for close to start ordering has already lost a year.",
+    "For an owner, the trade in all of this is competitive tension against schedule and certainty. A negotiated award costs more on paper than a keenly bid one and less in practice if the bid one arrives with a contractor that has not built this kind of plant, cannot staff it in the required window, and intends to recover its margin through {{change order}}s. The owner buying on price alone in a capacity-constrained market is usually buying a claim.",
+    "The pattern reverses in public and international procurement, where an owner is often obliged to tender, and the tender is the only mechanism available. The last guide in this course examines what that changes."
+   ],
+   "note": "The corollary for anyone reading this market from outside: **absence of announcements is not absence of activity**. In a relationship-driven segment the firms with the least public presence are frequently the largest, and their volumes only become visible through owner announcements, equipment-vendor case studies and parent-company segment reporting."
+  },
+  {
+   "id": "the-seams",
+   "title": "Projects fail between the scopes, not inside them",
+   "kind": "prose",
+   "read": "A scope split is a decision to create a seam. Seams fail in three characteristic ways.",
+   "ps": [
+    "Ask an experienced project manager where the trouble comes from and the answer is rarely a difficult activity. Difficult activities are visible, planned, staffed and watched. Trouble comes from the **boundaries between contracts**, which belong to nobody in particular and are examined by nobody until the day they matter.",
+    "Every scope split creates a seam, and a seam can fail in exactly three ways. A **gap**: work that both parties believed the other had, discovered when it is needed. An **overlap**: work both parties priced, done twice or, worse, done once to two incompatible assumptions. A **timing mismatch**: one party's output is another's input, on a date neither of them agreed because the date lives in two different schedules.",
+    "The characteristic seams on a grid-scale storage or renewables project are worth naming, because the same handful recur. **The equipment delivery seam** — {{owner-furnished equipment}} arriving on the owner's date, in the owner's condition, with the owner's documentation, into a contractor's crew plan built around a different date. **The utility seam** at the {{point of interconnection}}, where the contractor's work stops and the utility's begins, on a calendar the contractor does not control. **The civil seam**, where an owner has done early earthwork or road building and a contractor inherits a site it did not survey. **The controls seam**, between the integrator's system controls and the {{power plant controller}} that answers to the grid — two vendors, one behaviour, and a specification that describes the behaviour twice. **The documentation seam**, where the evidence one party needs for an approval is generated by another party who has no deadline for producing it.",
+    "The commercial consequence is sharper than the technical one. {{liquidated damages}} presuppose a single responsible party. Where responsibility is split across a seam, lateness stops being a fact and becomes an **argument** — and arguments are settled long after the money that would have fixed the problem could have been spent. This is why the price of a wrap is not simply a risk premium: the owner is paying the contractor to hold the seams internally, where they are resolved by a project manager rather than by lawyers.",
+    "There is also a boundary here that the integrator course drew from the other side. Certification of a **product** — the listings, the test reports, the evidence package a manufacturer assembles — is the supplier's work, and the certification guide in that course describes it in full. What is not the supplier's work is getting **this installation** accepted on **this piece of land**: the construction and electrical permits, the inspections during the work, the utility's witness test, and the final permission to energise. Those are the contractor's, they sit on the contractor's schedule, and the evidence they consume is produced by the supplier. The seam between the two is one of the most reliably underestimated items on a project.",
+    "The practical discipline against all of this is unglamorous and effective: a written **interface register** naming every boundary, the two parties on either side, the deliverable that crosses it, the date it crosses, and the person on each side who owns it. It is a list, it is maintained weekly, and it is the single highest-return document on a multi-party project."
+   ],
+   "note": "A useful heuristic: the risk of a scope split is not proportional to its size but to the **number of boundaries it creates**. Splitting one contract into two creates one seam; splitting it into five creates ten pairwise relationships. This is the same argument the integrator course makes about component interactions, arriving at a construction site instead of an enclosure."
+  },
+  {
+   "id": "the-schedule-is-the-product",
+   "title": "The schedule is a commercial instrument",
+   "kind": "prose",
+   "read": "Without an agreed baseline, delay cannot be measured — only asserted.",
+   "ps": [
+    "A construction schedule looks like a planning document and functions as a contract exhibit. It is the object against which lateness is measured, entitlement is proved and money changes hands, and understanding it is a commercial skill rather than a scheduling one.",
+    "Its logic is simple to state. The work is broken into activities; each has a duration; each is linked to the ones that must precede or follow it. Follow the longest chain of linked activities from start to finish and you have the {{critical path}} — the sequence whose durations add up to the completion date. Only work on that chain can make the project later, and only work on that chain can make it earlier. Adding crews to an activity that is not on it changes nothing except cost.",
+    "The other half of the idea is **{{float}}**: the amount an activity can slip before it becomes critical. Float is the schedule's shock absorber, and the crucial fact about it is that it is **consumed by whoever uses it first**. If the owner takes three weeks to approve a {{submittal}} on an activity with three weeks of float, the activity is now critical and the contractor has lost its cushion for a problem it has not had yet. This is why contracts increasingly state explicitly who owns float — the project, the contractor, or whoever needs it — and why that clause is argued over far more than its length suggests.",
+    "A schedule with a comfortable critical path can still be fragile. What matters is how many **near-critical** chains sit just behind it: a plan with one path at zero float and six more at five days is a plan that turns any small problem into a delay. Reading a schedule well means looking at the distribution of float, not just the finish date.",
+    "The {{baseline schedule}} is the version agreed at the start and frozen. Everything afterwards is measured against it, and without one, delay cannot be measured at all — only asserted, by two parties with different recollections. Updates are issued monthly, progress is recorded against the baseline, and the accumulated record of those updates is what an eventual delay analysis actually examines.",
+    "Two situations account for most disputes. **{{concurrent delay}}**, where both parties are late for the same period and neither can show the project would have finished earlier but for the other — outcomes here depend heavily on the contract's wording, and the usual compromise gives the contractor time but not money. And the pairing of an **{{extension of time}}** with **{{schedule compression}}**: when a project is running late, the owner chooses between granting time, which stops the damages clock but delays revenue, and paying for acceleration, which keeps the date and costs more than anyone expects. The next section takes that decision apart.",
+    "One last framing worth carrying. In the buyer-side course, construction and commissioning is one bar of roughly fourteen months against a decade of development, and the note observes that a slipped completion date is usually a queue or utility problem rather than a construction problem. Both statements are true, and neither helps the contractor: it has sold a date inside that bar, and the delay caused by everyone else arrives at its door first."
+   ],
+   "note": "The single most valuable habit in reading a schedule is to ask what the **first activity after {{energization}}** depends on. Energisation is almost always controlled by a third party, sits late in the plan, and has everything downstream of it — so a schedule that looks healthy in month nine can be entirely hostage to a date the contractor cannot influence."
+  },
+  {
+   "id": "the-ordering-clock",
+   "title": "What has to be ordered before the design is finished",
+   "kind": "timeline",
+   "read": "The critical path of a power project usually runs through a factory, not a field.",
+   "intro": "An indicative sequence for a grid-scale project from award to first power. The durations are illustrative and vary enormously; what matters is the **ordering and the dependencies**, and in particular how early the procurement lane has to start relative to the site lane.",
+   "items": [
+    {
+     "x": 0,
+     "lane": "procure",
+     "label": "Award and limited notice to proceed",
+     "sub": "A bounded instruction to start engineering, ordering and mobilisation, priced separately, months before financial close makes full notice possible."
+    },
+    {
+     "x": 1,
+     "lane": "procure",
+     "label": "Submittals issued and reviewed",
+     "sub": "Drawings, ratings and test reports go to the engineer of record. Approval, not the purchase order, is usually what releases a factory slot — so an engineering review queue sits on the critical path of steel that will not arrive for a year."
+    },
+    {
+     "x": 3,
+     "lane": "procure",
+     "label": "Long-lead equipment ordered",
+     "sub": "High-voltage transformers, medium-voltage switchgear and breakers. Lead times here are measured in quarters and are set by a global order book the project cannot influence."
+    },
+    {
+     "x": 2,
+     "lane": "site",
+     "label": "Geotechnical investigation and survey",
+     "sub": "Cheap, quick, and the single input that most determines what the civil scope will actually cost. Deleting borings to save money is how a differing-site-conditions claim is bought."
+    },
+    {
+     "x": 5,
+     "lane": "site",
+     "label": "Mobilisation and site establishment",
+     "sub": "Access roads, laydown yard, temporary power, offices, security. Nothing productive happens until it is done and it is rarely shown as critical until it is."
+    },
+    {
+     "x": 6,
+     "lane": "site",
+     "label": "Earthwork and drainage",
+     "sub": "The most weather-exposed scope on the project, and the one whose duration a wet season can double."
+    },
+    {
+     "x": 8,
+     "lane": "site",
+     "label": "Foundations",
+     "sub": "Where the geotechnical report is either confirmed or contradicted, at the rate of hundreds of penetrations a day."
+    },
+    {
+     "x": 11,
+     "lane": "procure",
+     "label": "Major equipment delivery window",
+     "sub": "The owner-furnished batteries and the transformers arrive. Crews are built around this window, so a slipped ship date is a crew standing idle rather than a line on a chart."
+    },
+    {
+     "x": 12,
+     "lane": "site",
+     "label": "Mechanical and electrical installation",
+     "sub": "Setting equipment, cable, terminations, grounding. The largest labour content of the project and the subject of the third guide in this course."
+    },
+    {
+     "x": 16,
+     "lane": "site",
+     "label": "Energisation and commissioning",
+     "sub": "Utility present, systems proved, guarantees measured. Everything the project failed to resolve earlier arrives here at once."
+    }
+   ],
+   "lanes": {
+    "procure": "Procurement and engineering",
+    "site": "Site works"
+   },
+   "note": "Two things surprise people the first time they read one of these. First, **the main equipment is often not the longest lead** — the high-voltage transformer and the utility's own scope usually are, and both are ordered against a global queue rather than a project. Second, the procurement lane starts before the site lane and finishes inside it, which is why the ordering decisions are made when the design is least complete. That is not poor planning; it is the arithmetic of a lead time longer than a design phase."
+  },
+  {
+   "id": "weather-and-the-calendar",
+   "title": "The year is not uniform",
+   "kind": "bars",
+   "read": "A slipped start does not cost the days it slipped. It costs the season it pushed the work into.",
+   "unit": "indicative workable days lost per month, exposed civil work, continental climate",
+   "intro": "Illustrative only — the shape matters, not the numbers, and it inverts in a hot-and-wet climate where the summer is the loss. The point is that a construction calendar has a grain, and the schedule either runs with it or pays for running against it.",
+   "items": [
+    {
+     "label": "January",
+     "v": 12
+    },
+    {
+     "label": "February",
+     "v": 11
+    },
+    {
+     "label": "March",
+     "v": 8
+    },
+    {
+     "label": "April",
+     "v": 6
+    },
+    {
+     "label": "May",
+     "v": 4
+    },
+    {
+     "label": "June",
+     "v": 3
+    },
+    {
+     "label": "July",
+     "v": 3
+    },
+    {
+     "label": "August",
+     "v": 3
+    },
+    {
+     "label": "September",
+     "v": 3
+    },
+    {
+     "label": "October",
+     "v": 5
+    },
+    {
+     "label": "November",
+     "v": 8
+    },
+    {
+     "label": "December",
+     "v": 11
+    }
+   ],
+   "note": "Contracts handle this by pricing **normal** weather into the schedule as a {{weather day}} allowance, and treating only the abnormal part as an excusable event — so ordinary winter is the contractor's risk and a record storm is shared or excused under {{force majeure}}. The consequence is a strong non-linearity in schedule risk. A project whose earthwork was planned for spring and slips two months into summer loses two months. The same project slipping two months into autumn can lose six, because the work it could not finish before the freeze cannot resume until thaw. This is why an owner's delay in issuing {{notice to proceed}} is so much more expensive than its length suggests, and why contractors fight hard for early mobilisation even when the rest of the project is not ready."
+  },
+  {
+   "id": "accept-or-accelerate",
+   "title": "The project is late: two ways to respond",
+   "kind": "proscons",
+   "read": "Time and money are the only two currencies, and every delay decision spends one of them.",
+   "intro": "A delay has occurred and it is going to push the completion date. Whoever is responsible, the owner and the contractor face the same binary. Both options are legitimate; the mistake is to make the choice implicitly, by drifting.",
+   "cards": [
+    {
+     "t": "Grant an {{extension of time}}",
+     "adv": [
+      "The completion date moves, so {{liquidated damages}} stop accruing and the argument about who was at fault can be settled later without a daily meter running",
+      "The work continues at its planned productivity, which is by definition the cheapest way to do it",
+      "It preserves the contractor's ability to staff the job properly rather than stacking crews into space that cannot hold them",
+      "For an owner whose revenue start is not tightly fixed, a later date can genuinely cost very little",
+      "It keeps the schedule honest: an extended baseline that everyone believes is more useful than an original baseline everyone privately knows is dead"
+     ],
+     "dis": [
+      "Revenue starts later, and where an offtake contract or a tax deadline has its own date, the owner's loss can be far larger than the contractor's damages would have been",
+      "Financing costs accrue through the extension — interest during construction does not pause",
+      "A later completion can push commissioning into a worse season or into a utility outage window that only opens twice a year",
+      "Granting time concedes entitlement in practice even where the contract says otherwise, weakening the owner's position on the next event",
+      "It removes urgency, and schedules that are extended once are extended again more easily"
+     ]
+    },
+    {
+     "t": "Accelerate and hold the date",
+     "adv": [
+      "The completion date and everything that depends on it — revenue, an offtake obligation, a deadline for a tax position — are preserved",
+      "It keeps the pressure on the causes of the delay rather than absorbing them",
+      "Where the owner's daily loss exceeds the cost of acceleration, it is straightforwardly the cheaper choice",
+      "Some acceleration is genuinely cheap: resequencing, adding a second shift on a single constrained activity, or moving one scope off the critical path"
+     ],
+     "dis": [
+      "The cost is **not linear in the time recovered**. Sustained overtime returns less per hour worked as the weeks accumulate, and adding crews to a fixed work area produces {{trade stacking}} that slows everyone in it",
+      "The productivity that acceleration destroys is real, expensive and extremely hard to evidence afterwards, which makes acceleration the source of the most intractable claims in construction",
+      "Quality risk rises exactly where it is least visible — terminations, torque, cable handling — and the defects surface at commissioning, at the end, where there is no time left to fix them",
+      "Safety exposure rises with crew density, shift length and fatigue, which is the subject of the next guide and is not a cost the schedule shows",
+      "If the acceleration fails, the owner has paid for it *and* is still late"
+     ]
+    }
+   ],
+   "note": "The cost curve of acceleration is the reason the next guide in this course is about people. Time can be bought back only by adding hours or adding workers, and both run into the same wall: **hours have declining returns and workers are not available on demand**. Understanding why is understanding the real constraint on every construction schedule."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What does a lump-sum turnkey price transfer that a cost-reimbursable price does not?",
+     "a": "The tail of the cost distribution. The owner converts a range of possible outcomes into one number and the contractor absorbs the difference — so the premium is the price of certainty, not margin."
+    },
+    {
+     "q": "Why is ambiguity more expensive than difficulty in a bid?",
+     "a": "Difficult work can be estimated and staffed. Ambiguous scope has to be priced as the worst thing the drawing could become, and an uncapped obligation cannot be priced at its expected value at all."
+    },
+    {
+     "q": "What is the honest measure of how complete a design was at notice to proceed?",
+     "a": "The number and cause of the change orders the project produces afterwards."
+    },
+    {
+     "q": "Why does an owner typically buy the batteries itself on a storage project?",
+     "a": "The supply agreement, the capacity guarantee, the long-term service agreement and the tax position all work better held by the owner — so the equipment is owner-furnished and the contractor installs it."
+    },
+    {
+     "q": "Name the three ways a scope seam fails.",
+     "a": "A gap (work nobody priced), an overlap (work priced twice, often to incompatible assumptions), and a timing mismatch (one party's output is another's input on a date living in two different schedules)."
+    },
+    {
+     "q": "Why do liquidated damages work poorly across a split scope?",
+     "a": "They presuppose a single responsible party. Where responsibility is split, lateness becomes an argument rather than a fact — and arguments settle long after the money could have fixed the problem."
+    },
+    {
+     "q": "What is float, and why does its ownership matter?",
+     "a": "The amount an activity can slip before becoming critical. It is consumed by whoever uses it first, so an owner's slow approval can spend the contractor's cushion for a problem that has not happened yet."
+    },
+    {
+     "q": "What does a baseline schedule make possible?",
+     "a": "Measurement. Without an agreed frozen baseline, delay cannot be measured — it can only be asserted by two parties with different recollections."
+    },
+    {
+     "q": "Why is a schedule with many near-critical paths fragile?",
+     "a": "Any small problem promotes one of them to critical. The distribution of float matters more than the finish date."
+    },
+    {
+     "q": "What usually sits on the longest lead time on a power project?",
+     "a": "Not the main equipment — typically the high-voltage transformer, the medium-voltage switchgear, and the utility's own scope, all ordered against a global queue the project cannot influence."
+    },
+    {
+     "q": "Why does submittal approval sit on the critical path?",
+     "a": "Approval, rather than the purchase order, generally releases the factory slot — so an engineering review queue controls the delivery date of equipment that will not arrive for a year."
+    },
+    {
+     "q": "How do contracts normally treat weather?",
+     "a": "Normal weather is priced into the schedule as an allowance and is the contractor's risk; only abnormal weather is an excusable event. So an ordinary winter is not a claim."
+    },
+    {
+     "q": "Why does a two-month slip sometimes cost six months?",
+     "a": "Because it pushes weather-exposed work past a seasonal boundary. The work that cannot finish before the freeze cannot resume until thaw — schedule risk is non-linear in the calendar."
+    },
+    {
+     "q": "Why is acceleration cost not linear in the time recovered?",
+     "a": "Sustained overtime returns less per hour as weeks accumulate, and added crews in a fixed work area stack trades and slow each other. The lost productivity is real and nearly impossible to evidence afterwards."
+    },
+    {
+     "q": "What is the difference between a factory schedule and a construction schedule?",
+     "a": "A factory controls its inputs. A construction schedule contains other people's decisions — a utility outage window, an inspector's calendar, a ship date, a soil condition nobody has seen — and the contractor has sold a date that depends on all of them."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "An owner asks two contractors to price the same incomplete design. One bid is 20% higher. What is the most likely explanation?",
+     "c": [
+      "The higher bidder is less efficient",
+      "The higher bidder priced the ambiguity and the lower one left it with the owner",
+      "The lower bidder has better equipment pricing",
+      "The higher bidder intends to earn more margin"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does a lender's independent engineer prefer a full wrap?",
+     "c": [
+      "It is always cheaper",
+      "It produces one responsible counterparty with damages and a bond behind it",
+      "It shortens the construction schedule",
+      "It removes the need for insurance"
+     ],
+     "a": 1
+    },
+    {
+     "q": "On a storage project, who normally holds the battery supply agreement?",
+     "c": [
+      "The construction contractor",
+      "The owner",
+      "The utility",
+      "The independent engineer"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Splitting one contract into five creates how many pairwise interfaces to manage?",
+     "c": [
+      "Four",
+      "Five",
+      "Ten",
+      "Twenty-five"
+     ],
+     "a": 2
+    },
+    {
+     "q": "An activity has ten days of float and the owner takes ten days to approve a submittal for it. What has happened?",
+     "c": [
+      "Nothing — the float absorbed it",
+      "The activity is now critical and the contractor's cushion is gone",
+      "The contractor is entitled to damages automatically",
+      "The baseline schedule is void"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which best describes concurrent delay?",
+     "c": [
+      "Two activities running at the same time",
+      "Both parties are late for the same period and neither can show the project would have finished earlier but for the other",
+      "A delay that repeats",
+      "A delay caused by a subcontractor"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which is usually the longest lead item on a grid-connected project?",
+     "c": [
+      "The batteries",
+      "The high-voltage transformer",
+      "The site fence",
+      "The control building"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A project's earthwork slips from spring into late autumn in a cold climate. Why might a two-month slip cost far more than two months?",
+     "c": [
+      "Labour is more expensive in winter",
+      "The work cannot resume until thaw, so the slip crosses a seasonal boundary",
+      "Equipment deliveries pause in winter",
+      "Permits expire annually"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What is the strongest reason a repeat owner negotiates rather than tenders?",
+     "c": [
+      "It is legally required",
+      "It is buying a place in the contractor's crew calendar, which price competition cannot deliver",
+      "Negotiated prices are always lower",
+      "Tendering is prohibited for private projects"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which document is the highest-return artefact on a multi-contract project?",
+     "c": [
+      "The site diary",
+      "A maintained interface register naming every boundary, its deliverable, its date and its owner on each side",
+      "The safety manual",
+      "The equipment datasheet"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner accelerates a late project and it finishes on time but with widespread commissioning defects. What most likely happened?",
+     "c": [
+      "The equipment was defective",
+      "Crew density and shift length degraded installation quality where it is least visible",
+      "The design was wrong",
+      "The commissioning plan was too short"
+     ],
+     "a": 1
+    },
+    {
+     "q": "The certification guide in the integrator course covers the product listing. What does this course say is the contractor's equivalent obligation?",
+     "c": [
+      "Obtaining the product listing",
+      "Getting this installation accepted on this site — permits, inspections, the witness test and permission to energise",
+      "Testing the cells",
+      "Writing the warranty"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

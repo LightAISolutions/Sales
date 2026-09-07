@@ -1,0 +1,528 @@
+{
+ "schemaVersion": 2,
+ "slug": "solv-energy",
+ "title": "SOLV Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: every check has a moment",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Most defects found at commissioning were created weeks earlier by work that looked finished.",
+   "ps": [
+    "Third guide in the construction course. The first was the contract and the schedule; the second was the people. This one is the work itself — the ground the plant stands on, the connections that carry its current, and the sequence that ends with somebody signing for it.",
+    "It is organised around a single observation that is obvious once stated and shapes everything a good contractor does: **almost every defect discovered during {{commissioning}} was created during installation**, weeks or months earlier, by work that looked complete at the time. The equipment arrived proven — the works test saw to that. What is being discovered at the end of a project is not the machine. It is the installation.",
+    "That has a direct consequence for how quality is managed. If defects are created early and found late, then inspection at the end is the most expensive possible place to find them, and the useful checks are the ones performed **at the moment the work becomes invisible** — before a trench is backfilled, before a cover goes on, before a cable is energised. Every check has a moment. Miss it and the check becomes an excavation.",
+    "A boundary worth stating before starting, because a neighbouring course owns the adjacent material. The **works test and the site acceptance test** are taught in the manufacturing guide of the integrator course, which explains precisely what each can and cannot prove. This guide is the sequence that *contains* the site test — what has to be true before it can start, what happens around it, and the completion milestones that follow it. Where that guide's site test proves the installation, this one is about how the installation came to be worth testing.",
+    "The last guide in the course is the money. This one ends where the construction project ends: at the moment the plant stops being a construction site and becomes an operating asset under a service agreement and a capacity guarantee — the regime the integrator course's warranty guide describes."
+   ]
+  },
+  {
+   "id": "the-ground",
+   "title": "What is under the site decides what is on it",
+   "kind": "prose",
+   "read": "Borings are point samples across hundreds of acres. Everything between them is an inference.",
+   "ps": [
+    "A **{{geotechnical investigation}}** is a programme of borings, samples and laboratory tests carried out before anything is designed. It establishes bearing capacity, groundwater depth, the presence and depth of rock, soil chemistry and resistivity, frost depth, and whether the soils shrink and swell with moisture. It is, as the industry's own summary of it has it, the cheapest work on a project and the source of its most expensive surprises.",
+    "Its findings determine an extraordinary amount. Bearing capacity and soil type decide the **foundation method**, which is the difference between driving a pile in ninety seconds and drilling a pier in an hour. Depth to rock decides how many of those piles will refuse before reaching design depth. Groundwater decides whether excavations need dewatering. **{{soil resistivity}}** and chemistry decide the corrosion allowance on buried steel and the design of the grounding system, both of which are twenty-year decisions taken in week two. Expansive soils decide whether a slab needs a structural design rather than a thickness.",
+    "The limitation is the one nobody internalises until they are on a site. **Borings are point samples.** A utility-scale project covers hundreds or thousands of acres and might be investigated at a spacing of hundreds of metres. The report describes with precision what was found at those points; everything between them is interpolation. A buried channel, a lens of soft clay, an old fill area, a shallow rock shelf across one corner — none of these has to appear in the report to be present on the site, and all of them are found by the first crew that drives a pile into them.",
+    "Which is why construction contracts contain a **{{differing site conditions}}** clause, and why it is one of the most consequential clauses in the document. It allocates the risk of what the investigation did not find. The conventional structure distinguishes two types: conditions that differ materially from what the contract documents indicated, and conditions of an unusual nature that differ materially from what would ordinarily be expected in work of that character. The first is a mismatch against a document; the second is a surprise against experience.",
+    "The commercial logic is worth spelling out, because it is counter-intuitive. Without such a clause, a contractor must price the risk that the ground is worse than the report suggests — and since it cannot know, it must price it pessimistically, on every bid, for every project. **The clause exists to make bids cheaper**, by letting contractors price the ground as described and relieving them when it is not. The owner keeps a risk it is better placed to investigate and to carry across a portfolio.",
+    "The practical corollary follows immediately: **an owner that thins its geotechnical programme to save money has bought a claim.** The investigation is a small, early, controllable cost. The condition it fails to find is a large, late, uncontrollable one, discovered by a mobilised crew with a schedule behind it. Adding borings is among the highest-return decisions available in the whole development sequence, and it is routinely cut because it happens before anyone feels the project is real."
+   ],
+   "note": "The same logic explains a habit that looks like over-engineering: experienced contractors commission their own supplementary borings in the areas that matter most to their means and methods, even when the owner's report is contractually theirs to rely on. It costs very little and it converts a late argument into an early design decision."
+  },
+  {
+   "id": "earth-and-foundations",
+   "title": "Moving the ground, then standing on it",
+   "kind": "table",
+   "read": "Haul is the expensive part of earthwork, and the balance is designed rather than discovered.",
+   "intro": "The civil scope is the first work on site, the most weather-exposed, and the one whose cost is most sensitive to what the ground turns out to be. Read the third column: these are the specific mechanisms by which a civil scope overruns.",
+   "cols": [
+    "Activity",
+    "What it involves",
+    "How it goes wrong, and what that costs"
+   ],
+   "rows": [
+    [
+     "Clearing, grubbing and topsoil strip",
+     "Removing vegetation, root systems and the organic layer, which cannot carry load, and stockpiling topsoil for later restoration",
+     "Unexpected volume of organic material, buried debris from previous land use, or a stockpile area that turns out to be needed for something else. Individually small, cumulatively a schedule problem because everything else waits behind it"
+    ],
+    [
+     "Grading and {{cut and fill}}",
+     "Shaping the site to the design surface, moving soil from high areas to low ones so that as little as possible is imported or exported",
+     "An unbalanced site. Haul is the expensive part of earthwork, and a design that requires importing or exporting large volumes converts a fixed price into an exposure to haul rates, truck availability and public-road agreements"
+    ],
+    [
+     "{{compaction}} and testing",
+     "Placing fill in controlled layers and densifying each one, verified in the field against a laboratory maximum before the next layer goes on",
+     "Wet material that will not compact, which stops the work entirely until it dries or is replaced. Failed tests mean re-working layers already covered. Untested fill that passes unnoticed becomes settlement under equipment years later"
+    ],
+    [
+     "Drainage and stormwater control",
+     "Permanent drainage plus the temporary controls a construction stormwater permit requires — silt fence, basins, stabilised entrances, inspection and record-keeping",
+     "This is a regulated obligation with real enforcement, and it is inspected during construction rather than at the end. A failure can stop work on an entire site, and the paperwork burden is continuous rather than one-off"
+    ],
+    [
+     "Access roads and laydown",
+     "Internal roads able to carry crane and transformer loads, plus the laid-out areas where equipment is received, stored and staged",
+     "Roads designed for cars rather than for a transformer transporter, or laydown too small for the delivery sequence. Both are discovered when the largest item arrives, which is exactly when there is no time to fix them"
+    ],
+    [
+     "Pile installation",
+     "Driving, screwing or drilling the thousands of penetrations that hold racking, {{single-axis tracker}} rows and equipment pads",
+     "**Refusal** — the pile stops short of design depth against rock or a dense layer — converting a cheap ninety-second operation into a pre-drilled or drilled-pier operation at a fraction of the locations. The fraction is precisely what the geotechnical programme was supposed to establish"
+    ],
+    [
+     "Foundation testing",
+     "Load tests on sample foundations, in tension, compression and lateral loading, proving the installed capacity against the design assumption",
+     "A failed test is not a local problem: it questions the design assumption across the whole site, and the remedy is usually deeper or additional foundations everywhere. This is the single largest civil risk on a solar or storage project"
+    ]
+   ],
+   "note": "Two things follow from this table. First, the civil scope is where the {{differing site conditions}} clause is actually exercised — almost every claim under it originates in one of these rows. Second, this is the most weather-exposed work on the project, so the schedule risk from the first guide's seasonal argument lands here first and hardest."
+  },
+  {
+   "id": "foundation-choices",
+   "title": "Three ways to hold a structure down",
+   "kind": "proscons",
+   "read": "The ground, not the structure, chooses the foundation.",
+   "intro": "Racking, equipment skids and enclosures all have to resist uplift, overturning and lateral load. Which method is used is decided almost entirely by what the geotechnical investigation found, and each choice has a distinct cost and schedule signature.",
+   "cards": [
+    {
+     "t": "Driven pile",
+     "adv": [
+      "Fast — a crew with a dedicated rig installs a very large number per day, which is why it is the default for large repetitive arrays",
+      "No concrete, so no cure time on the critical path and no batching, delivery or weather constraints on placement",
+      "Cheap per unit, and the cost is highly predictable in uniform soils",
+      "Capacity is testable directly, and installation resistance gives immediate feedback on whether the ground matches the assumption",
+      "Removable at end of life, which matters for a decommissioning obligation"
+     ],
+     "dis": [
+      "Requires drivable ground. Shallow rock, cobbles or dense layers cause refusal, and the mitigation is pre-drilling every affected location",
+      "Corrosion protection depends on soil chemistry and {{soil resistivity}}, so a corrosive site adds coating or sacrificial thickness across the whole array",
+      "Noise and vibration limits can restrict working hours or exclude the method near sensitive neighbours",
+      "Poor tolerance of variable ground: capacity varies where soils vary, and a large array will cross several conditions"
+     ]
+    },
+    {
+     "t": "Drilled pier or helical pile",
+     "adv": [
+      "Works where driving does not — rock, variable strata, cobbles and locations where vibration is unacceptable",
+      "Capacity is verifiable during installation, particularly for helical piles where installation torque correlates with capacity",
+      "Handles higher and more concentrated loads, which is why equipment pads and heavier structures use it even on sites where the array is driven",
+      "Depth can be varied location by location in response to what is actually encountered"
+     ],
+     "dis": [
+      "Slower and materially more expensive per unit than driving, and the gap widens with volume",
+      "Drilled piers involve concrete, and therefore batching, delivery, placement, cure time and cold-weather protection — all of which put a fixed duration on the critical path",
+      "Spoil has to be handled and disposed of, which is a permit and a haul cost",
+      "Specialist rigs and crews, whose availability is its own scarcity"
+     ]
+    },
+    {
+     "t": "Ballasted foundation",
+     "adv": [
+      "No ground penetration at all, which makes it the only option on capped landfill, contaminated ground, thin soil over rock or where a lease forbids penetration",
+      "Insensitive to soil chemistry — no buried steel to corrode",
+      "Installation is simple and weather-tolerant, and it can be relocated",
+      "Removes the entire {{pile refusal}} risk that dominates driven-pile cost variance"
+     ],
+     "dis": [
+      "Very heavy: the mass that resists uplift has to be delivered to site, which is a large haul cost and a road-loading constraint",
+      "Needs a prepared, flat, load-bearing surface, so it can reintroduce the earthwork it was meant to avoid",
+      "Wind uplift and seismic demand govern the design, and in an exposed location the required mass becomes uncompetitive",
+      "Highest cost per unit of the three in ordinary ground, so it is a constraint-driven choice rather than a preference"
+     ]
+    }
+   ],
+   "note": "The instructive point is that this is **not an engineering preference**. All three work. Which one a project uses is decided by the ground, the neighbours and the lease — that is, by findings and constraints established long before the structural design exists. It is the clearest example in this course of a construction cost being set by a development decision."
+  },
+  {
+   "id": "the-wire",
+   "title": "The quality of a plant is decided at its terminations",
+   "kind": "prose",
+   "read": "Hundreds of thousands of hand operations, each one identical in appearance whether it was done right or wrong.",
+   "ps": [
+    "A grid-scale plant contains an enormous number of electrical connections. Every string, every combiner, every {{inverter}}, every enclosure, every piece of {{switchgear}}, every instrument and control circuit terminates somewhere, and each termination is made by hand by a person with a tool. The plant's long-term reliability is very largely the aggregate of those operations, and **a good one and a bad one look identical**.",
+    "**Torque** is the first control. Bolted electrical connections are specified by a torque value because clamping force is what produces a low-resistance contact over a large area, and clamping force cannot be judged by feel. An **under-torqued** connection has a small real contact area, so it runs hot, oxidises, runs hotter, and eventually fails — months or years later, as a thermal event rather than an open circuit. An **over-torqued** connection damages the conductor or deforms the hardware and fails mechanically. Neither is visible. The controls are calibrated tools, a documented torque value per connection type, torque striping — a paint mark across bolt and fitting, so a later inspection can see at a glance whether a joint has moved — and re-torquing after the first thermal cycles, because conductors relax when they have been hot.",
+    "**Compression terminations** are the second. A lug is crimped onto a conductor with a die, and the quality of the crimp depends on the right die for the conductor size, the right number of crimps, correct conductor preparation and a full-cycle tool that cannot be released halfway. A crimp made with the next die size up looks perfectly normal, passes a tug, and has a fraction of the intended contact. This is the classic latent defect of an electrical installation.",
+    "**Cable pulling** is the third and the most physically demanding. Pulling a large conductor through conduit generates tension along its length and, at every bend, a **sidewall pressure** pressing the insulation against the inside of the bend. Exceed the allowable tension and the conductor stretches; exceed the sidewall pressure or violate the minimum **bend radius** and the insulation is crushed or thinned. None of this is visible afterwards — the cable looks like cable. It surfaces as an insulation failure weeks or years later, and the remedy is to replace a run that is now buried under everything installed since. The controls are engineered pulls with calculated tension, a measured pulling force, correct lubricant, roller and sheave setups at bends, and radius control at every transition.",
+    "**Grounding** is the fourth and has a special property: it is installed first and buried immediately. A ground grid goes in with the earthwork, and once it is covered, verifying it requires excavation. So it belongs to a small set of items — grounding, buried conduit, below-grade conduit seals, foundation reinforcement, underground drainage — where **the only opportunity to check is before it disappears**. The discipline is a witnessed inspection with photographic record at the open-trench stage, and it is the purest example of the principle this guide opened with.",
+    "Underneath all four sits a single idea worth naming: **workmanship is a process, not a talent**. Consistent terminations across hundreds of thousands of operations come from the same things that produce consistency in a factory — a defined method, calibrated tools, trained crews, a sample inspected at a defined rate, and a record. The integrator course makes exactly this argument about a cell plant, where inspection cannot cope with the numbers and process evidence has to replace it. A construction site has fewer units and worse conditions, but the argument transfers intact."
+   ],
+   "note": "This is where the second guide's productivity discussion becomes a quality discussion. Sustained overtime, crew density and out-of-sequence work degrade exactly these operations, and they degrade them **invisibly** — nothing looks different at the end of a fourteen-hour shift. That is why acceleration late in a project buys a schedule and sells a commissioning phase."
+  },
+  {
+   "id": "installation-defects",
+   "title": "Most commissioning defects are installation defects",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "The works test proved the machine. What energisation discovers is the wiring.",
+   "ps": [
+    "Sit through the first energisation of a plant and note what is actually found. Swapped phases. Reversed current-transformer polarity. Control wiring landed on the adjacent terminal. A current transformer with the wrong ratio installed. Protection relays carrying default settings rather than the project's. A parameter or firmware file loaded to the wrong revision. Loose or under-torqued power terminations showing up as heat. Cooling paths blocked by packaging nobody removed. Grounding conductors terminated but never bonded. Instrument tubing crossed.",
+    "**Almost none of these is an equipment fault.** The manufacturer's works test proved the machine, in a workshop, with the customer present — the integrator course's guide on manufacturing sets out exactly what that test can and cannot demonstrate. What energisation is discovering is everything that happened between the factory gate and this moment: the installation, and the human operations described in the previous section.",
+    "The economics of this are brutal and well established across every kind of engineering. The cost of finding a defect rises by roughly **an order of magnitude at each stage it survives** — trivial at the bench, modest at installation, significant at pre-commissioning, severe at energisation, and worst of all in service, where it is a warranty argument between parties who have already been paid. A crossed control wire found during a point-to-point check costs ten minutes. The same wire found at energisation costs a day, a crew, an outage window and a utility witness who has other appointments.",
+    "And it is found at the worst possible moment. Commissioning sits at the very end of the schedule, which is exactly where **all accumulated delay has landed**. Every earlier slip, from every earlier cause, has been absorbed by compressing the last phase, so the phase least tolerant of surprises is the one with the least remaining float — and the commercial pressure to accept a marginal result is at its maximum. The integrator course's site-acceptance card makes precisely this point from the equipment side; this is the same fact seen from the contractor's.",
+    "The response is not more inspection at the end. It is to **move quality control forward in the schedule**: an inspection and test plan written before the work starts, defining what is checked, by whom, against what, and — crucially — at which **hold points** work may not proceed until a check is witnessed and signed. Cable pull records with measured tension. Torque records with calibrated tool identity. Point-to-point continuity checks of every control circuit before any of it is energised. Insulation resistance on every run before it is connected. Photographs of everything about to be buried.",
+    "The paperwork this generates is often derided as bureaucratic, and it is worth being clear about what it actually is. It is the same substitution the integrator course describes in a cell factory: where you cannot test the finished thing exhaustively, you **prove the process that made it** and keep the record. On a construction site the record has a second job as well — it is the evidence that decides who pays when something is found later."
+   ]
+  },
+  {
+   "id": "commissioning-sequence",
+   "title": "From last bolt to first megawatt",
+   "kind": "timeline",
+   "read": "Two dates matter commercially. Everything else on this chart is engineering.",
+   "intro": "An indicative sequence from the end of installation to handover. The ordering is near-universal even though the durations vary enormously; what the chart is for is the **dependency structure**, and in particular how much of the late sequence depends on parties the contractor does not employ.",
+   "items": [
+    {
+     "x": 0,
+     "lane": "build",
+     "label": "Mechanical completion",
+     "sub": "The plant is physically built and the contractor declares it ready for testing. Not a contractual handover — a statement that construction is finished and proving can begin."
+    },
+    {
+     "x": 1,
+     "lane": "build",
+     "label": "Pre-commissioning checks",
+     "sub": "Insulation resistance, continuity, point-to-point verification of every control circuit, grounding tests, phasing checks, protection settings loaded and verified against the design. All of it de-energised, which is what makes it cheap."
+    },
+    {
+     "x": 3,
+     "lane": "build",
+     "label": "Electrical acceptance testing",
+     "sub": "Independent testing of transformers, switchgear, breakers and relays against recognised field-test standards, before anything is put under load. This is a distinct discipline, usually a specialist firm, and it is a prerequisite rather than a formality."
+    },
+    {
+     "x": 5,
+     "lane": "accept",
+     "label": "Inspections and permission to energise",
+     "sub": "The electrical and building inspections of the installed work, and the utility's consent to back-feed. This is the contractor's side of the acceptance question — the integrator course's certification guide covers the product side."
+    },
+    {
+     "x": 6,
+     "lane": "accept",
+     "label": "Back-feed and energisation",
+     "sub": "The plant is put under live voltage for the first time, with the utility present. Everything downstream depends on this date, and the contractor does not control it."
+    },
+    {
+     "x": 7,
+     "lane": "accept",
+     "label": "Site acceptance test of the equipment",
+     "sub": "The supplier proves the installed system in its final configuration. The manufacturing guide in the integrator course sets out what this test proves and what it cannot."
+    },
+    {
+     "x": 9,
+     "lane": "build",
+     "label": "Functional and integrated testing",
+     "sub": "The plant controller proved against the real connection: setpoint response, protection interaction, communications to the grid operator, alarm and trip behaviour. The first test of the system rather than its parts."
+    },
+    {
+     "x": 11,
+     "lane": "build",
+     "label": "Performance demonstration",
+     "sub": "The contracted guarantees measured — capacity, round-trip efficiency, availability over a defined window. This is what the performance damages in the contract are measured against."
+    },
+    {
+     "x": 13,
+     "lane": "accept",
+     "label": "Reliability run",
+     "sub": "A continuous period of operation without a disqualifying trip, proving the plant is stable rather than merely capable. A single fault can restart the clock, which is why it is the most schedule-dangerous item on the chart."
+    },
+    {
+     "x": 15,
+     "lane": "accept",
+     "label": "Substantial completion and handover",
+     "sub": "The owner takes the plant. Damages stop, warranties start, the operating regime begins — and a punch list remains."
+    }
+   ],
+   "lanes": {
+    "build": "Contractor-controlled",
+    "accept": "Owner, utility and supplier"
+   },
+   "note": "Read the lane assignment rather than the dates. From energisation onward, most of the remaining sequence sits with parties the contractor does not employ — a utility with its own outage calendar, an inspector with a queue, a supplier's commissioning team shared across projects, a grid operator that witnesses compliance on its own schedule. The contractor has sold a date whose last third it does not control, which is the first guide's argument arriving at the end of the project."
+  },
+  {
+   "id": "two-completions",
+   "title": "Two completions, and what each one moves",
+   "kind": "table",
+   "read": "Substantial completion moves the risk. Final completion moves the last of the money.",
+   "intro": "Construction contracts turn on milestones rather than on progress, and each of these moves something specific — risk, damages, warranties, or cash. Knowing which is which is most of understanding a construction dispute.",
+   "cols": [
+    "Milestone",
+    "What must be true",
+    "What changes the moment it happens"
+   ],
+   "rows": [
+    [
+     "Mechanical completion",
+     "Construction is finished and the plant is ready to be tested; no contractual acceptance is implied",
+     "Testing may begin, and the contractor's argument that it finished on time now depends on how quickly everyone else moves"
+    ],
+    [
+     "{{energization}}",
+     "Inspections passed, the utility consents, and protection is proved and set",
+     "The plant is live. Safety rules change completely, access becomes permit-controlled, and every subsequent activity is planned around isolation rather than around trades"
+    ],
+    [
+     "{{site acceptance test}} complete",
+     "The installed equipment has been proved in final configuration by the supplier",
+     "The equipment supplier's obligations shift toward warranty, and the equipment warranty clock typically starts here rather than at delivery"
+    ],
+    [
+     "{{substantial completion}}",
+     "The plant is capable of its intended use and has passed its performance demonstration, with only minor work outstanding",
+     "The largest single transfer on the project. Delay {{liquidated damages}} stop. Construction warranties start. Care, custody and control pass to the owner, along with the insurance obligation. The plant becomes an operating asset with an outstanding punch list"
+    ],
+    [
+     "{{commercial operation date}}",
+     "Substantial completion plus whatever the revenue contracts require — metering, telemetry registration, the offtaker's own acceptance",
+     "Revenue begins and construction debt converts to term. This is the owner's date rather than the contractor's, and the gap between the two is a frequent surprise"
+    ],
+    [
+     "Final completion",
+     "The punch list is closed, all documentation is delivered, and every remaining obligation is discharged",
+     "The remaining retention is released. This is the contractor's last payment and, for a contractor with capital tied up across many projects, often the most valuable milestone on the list"
+    ],
+    [
+     "End of the defects liability period",
+     "A defined period — commonly one to two years — has elapsed after substantial completion without unremedied defects",
+     "The contractor's obligation to return and fix ends, and responsibility passes entirely into the equipment warranties and the service agreement"
+    ]
+   ],
+   "note": "The distance between substantial and final completion is the least-managed part of a construction project. Damages have stopped, the crews have demobilised, the site team has moved to the next job, and the remaining work is small, scattered and unglamorous — so punch-list closure routinely takes longer than the whole commissioning phase that preceded it. The owner's leverage in that period is {{retention}}, which is precisely why retention exists and why the last guide in this course treats it as a financing instrument rather than an accounting detail."
+  },
+  {
+   "id": "the-handover",
+   "title": "What is actually handed over",
+   "kind": "prose",
+   "read": "The plant is handed over once. The documents that make it operable are handed over badly.",
+   "ps": [
+    "At {{substantial completion}} the project stops being a construction site and becomes an operating asset. What crosses the boundary is not only the plant — it is the information required to run it, and this is reliably the worst-executed part of an otherwise good project.",
+    "The handover package has a definable content. **{{as-built}} drawings**, showing what was actually installed rather than what was drawn, including every field change. **Test records** — torque, insulation resistance, cable pull, electrical acceptance results, functional test sheets — which together constitute the baseline against which every future measurement is compared. **Settings files**: protection relay settings, controller parameters and firmware revisions, with the revision identity recorded, because a device replaced in year four must be configured to match. **Operation and maintenance manuals** and the vendor documentation behind them. **The spares inventory** and its storage requirements. **Warranty documentation**, with dates, scope and claim procedures. **Training records** for the operating staff. And the **punch list**, with the residual items and their agreed dates.",
+    "Why it goes wrong is not mysterious. Documentation is produced by the same people who are simultaneously finishing the plant, at the point of maximum schedule pressure, and it is the only deliverable whose absence does not stop anything. So it is the thing that slips, and it slips into a period when the crews who knew the details have already demobilised.",
+    "The consequence lands on the operator, years later. A protection setting nobody recorded means a relay replacement is a guess. A missing as-built means an excavation to find a cable. A baseline test record that was never taken means the first thermographic survey has nothing to compare against, and a degraded connection cannot be distinguished from one that was always like that. **A missing record does not merely inconvenience the operator; it destroys the ability to detect change**, which is the whole basis of preventive maintenance.",
+    "From here the asset passes into the regime the integrator course's warranty guide describes: a long-term service agreement, an {{availability guarantee}}, a guaranteed capacity curve, a planned {{augmentation}} strategy and a duty envelope that dispatch spends. Everything in that regime is measured against a starting condition — and **the starting condition is whatever this handover recorded**. A guarantee written against a baseline nobody established is a guarantee that will be argued rather than enforced.",
+    "That is the seam this whole course has been walking toward, and it is worth stating plainly: the construction contractor's last act determines whether the operator's twenty years are measurable. It is the least glamorous deliverable on the project and the one with the longest reach."
+   ],
+   "note": "The structural fix is the same one that works everywhere else in this guide — move it earlier. Documentation delivered progressively, with payment milestones attached to it rather than to the end of the job, arrives. Documentation left to the end arrives late, incomplete, or in the form of a box of paper that nobody indexes."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the organising observation of this guide?",
+     "a": "Almost every defect found during commissioning was created during installation, weeks earlier, by work that looked finished. So the useful checks happen at the moment the work becomes invisible."
+    },
+    {
+     "q": "What does a geotechnical investigation establish?",
+     "a": "Bearing capacity, groundwater, depth to rock, soil chemistry and resistivity, frost depth and shrink-swell behaviour — which between them set the foundation method, the corrosion allowance, the grounding design and the earthwork plan."
+    },
+    {
+     "q": "What is the fundamental limitation of a geotechnical report?",
+     "a": "Borings are point samples, often hundreds of metres apart across thousands of acres. The report is precise about those points; everything between them is interpolation."
+    },
+    {
+     "q": "Why does a differing site conditions clause make bids cheaper?",
+     "a": "Without it every contractor must price the risk of unknown ground pessimistically on every bid. The clause lets them price the ground as described, and leaves the risk with the party better placed to investigate and to spread it."
+    },
+    {
+     "q": "What has an owner bought by thinning its geotechnical programme?",
+     "a": "A claim. The investigation is a small, early, controllable cost; the condition it misses is a large, late one found by a mobilised crew with a schedule behind it."
+    },
+    {
+     "q": "Why is haul the expensive part of earthwork?",
+     "a": "Moving soil across a site is cheap; moving it on or off site costs trucks, road agreements and time. That is why the cut-and-fill balance is designed rather than discovered."
+    },
+    {
+     "q": "What is pile refusal and why does it matter commercially?",
+     "a": "The pile stops short of design depth against rock or a dense layer. It converts a ninety-second driven operation into a pre-drilled or drilled-pier one — at a fraction of locations that the geotechnical programme was supposed to establish."
+    },
+    {
+     "q": "Why is a failed foundation load test worse than it sounds?",
+     "a": "It is not a local problem. It questions the design assumption across the whole site, and the remedy is usually deeper or additional foundations everywhere."
+    },
+    {
+     "q": "What are the failure modes of an under-torqued and an over-torqued electrical connection?",
+     "a": "Under-torqued: small real contact area, so it runs hot, oxidises and eventually fails thermally, months or years later. Over-torqued: damaged conductor or deformed hardware, failing mechanically. Neither is visible."
+    },
+    {
+     "q": "What is torque striping for?",
+     "a": "A paint mark across bolt and fitting so a later inspection can see at a glance whether a joint has moved — a permanent, zero-cost audit trail on an otherwise unverifiable operation."
+    },
+    {
+     "q": "What can go wrong in a cable pull, and why is it invisible?",
+     "a": "Excess pulling tension stretches the conductor; excess sidewall pressure or a violated bend radius crushes the insulation. The cable looks normal afterwards and fails as an insulation fault later, under everything installed since."
+    },
+    {
+     "q": "Why is grounding the purest example of 'every check has a moment'?",
+     "a": "The grid goes in with the earthwork and is buried immediately. Once covered, verification requires excavation — so a witnessed open-trench inspection is the only practical opportunity."
+    },
+    {
+     "q": "Name five things typically discovered at first energisation.",
+     "a": "Swapped phases, reversed CT polarity, mis-landed control wiring, wrong CT ratios or default relay settings, and loose terminations. Almost none of them is an equipment fault."
+    },
+    {
+     "q": "How does the cost of a defect change with the stage at which it is found?",
+     "a": "Roughly an order of magnitude at each stage it survives — bench, installation, pre-commissioning, energisation, in service. A crossed wire costs ten minutes at point-to-point and a day at energisation."
+    },
+    {
+     "q": "What is a hold point?",
+     "a": "A defined stage in an inspection and test plan at which work may not proceed until a check has been witnessed and signed — the mechanism that forces verification before the evidence disappears."
+    },
+    {
+     "q": "What changes at substantial completion?",
+     "a": "Delay damages stop, warranties start, and care, custody, control and the insurance obligation pass to the owner. The plant becomes an operating asset with an outstanding punch list."
+    },
+    {
+     "q": "Why does punch-list closure often take longer than commissioning?",
+     "a": "Damages have stopped, crews have demobilised and the site team has moved on, so the remaining small scattered work has no schedule pressure behind it. The owner's only leverage is the retention still held."
+    },
+    {
+     "q": "Why does a missing baseline test record matter years later?",
+     "a": "It destroys the ability to detect change. Without a baseline thermographic or resistance reading, a degraded connection cannot be distinguished from one that was always like that — and preventive maintenance depends entirely on detecting change."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A plant's first energisation finds a reversed current transformer and default relay settings. What class of problem is this?",
+     "c": [
+      "An equipment defect",
+      "An installation defect — the works test proved the machine, energisation is discovering the wiring",
+      "A design error",
+      "A commissioning-procedure error"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why is a geotechnical report precise and still incomplete?",
+     "c": [
+      "The laboratory methods are approximate",
+      "It describes point samples; conditions between borings are interpolated",
+      "It is written before the design",
+      "Groundwater changes seasonally"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What is the primary commercial purpose of a differing site conditions clause?",
+     "c": [
+      "To protect the owner from contractor error",
+      "To let contractors price the ground as described, so bids are not loaded with pessimism about the unknown",
+      "To satisfy lenders",
+      "To transfer weather risk"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which is the dominant cost driver in earthwork?",
+     "c": [
+      "Excavation",
+      "Haul — moving material on or off site",
+      "Compaction testing",
+      "Topsoil stripping"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A site has shallow rock across one corner not shown in the report. What is the most likely consequence?",
+     "c": [
+      "The design load changes",
+      "Pile refusal in that area, requiring pre-drilling or drilled piers at a cost and duration the bid did not carry",
+      "The grounding design changes",
+      "Nothing — piles are designed for rock"
+     ],
+     "a": 1
+    },
+    {
+     "q": "When is a ballasted foundation the right choice?",
+     "c": [
+      "When it is cheapest",
+      "When penetration is impossible or prohibited — capped landfill, contamination, thin soil over rock, or a restrictive lease",
+      "In high-wind locations",
+      "On very large arrays"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An electrical connection is under-torqued. How does it fail?",
+     "c": [
+      "Immediately, as an open circuit",
+      "Slowly and thermally — small contact area, heating, oxidation, worse contact, eventual failure months or years later",
+      "Mechanically, by shearing the bolt",
+      "It does not fail; torque is cosmetic"
+     ],
+     "a": 1
+    },
+    {
+     "q": "What does violating a cable's minimum bend radius during a pull produce?",
+     "c": [
+      "A visible kink that is repaired on the spot",
+      "Crushed or thinned insulation that looks normal and fails later",
+      "An immediate short circuit",
+      "Increased conductor resistance only"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why is the cost of finding a defect roughly an order of magnitude higher at each later stage?",
+     "c": [
+      "Labour rates rise over a project",
+      "Each stage buries the defect under more completed work and more parties' schedules",
+      "Warranties expire progressively",
+      "Testing equipment becomes more expensive"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which milestone transfers care, custody, control and the insurance obligation to the owner?",
+     "c": [
+      "Mechanical completion",
+      "Substantial completion",
+      "Final completion",
+      "Energisation"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which milestone releases the last of the retention?",
+     "c": [
+      "Substantial completion",
+      "Final completion",
+      "Commercial operation date",
+      "The end of the defects liability period"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Reading the commissioning timeline by lane, what is the contractor's structural problem?",
+     "c": [
+      "The testing is too long",
+      "From energisation onward most of the sequence sits with parties it does not employ, yet it has sold the date",
+      "The equipment arrives too late",
+      "Performance testing is unrepeatable"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does a missing settings record hurt the operator most in year four rather than year one?",
+     "c": [
+      "Warranties expire in year three",
+      "That is when a device is first replaced and must be configured to match something nobody wrote down",
+      "Degradation becomes measurable then",
+      "The service agreement changes"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

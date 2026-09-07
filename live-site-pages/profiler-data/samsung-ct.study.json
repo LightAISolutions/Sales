@@ -1,0 +1,433 @@
+{
+ "schemaVersion": 2,
+ "slug": "samsung-ct",
+ "title": "Samsung C&T — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the balance sheet is a piece of plant",
+   "kind": "callout",
+   "tone": "info",
+   "read": "A contractor pays for the work months before it is paid for it. Growth therefore consumes cash.",
+   "ps": [
+    "Last guide in the construction course. The first was the contract and the schedule, the second the people, the third the work. This one is the money — not the project's money, but the **contractor's own**, over the eighteen months it is on site.",
+    "The fact everything here follows from is simple and consistently underestimated. A contractor **pays for labour weekly and materials on delivery, bills monthly in arrears, waits for certification, waits again for payment terms, and has a slice withheld until the project is finished**. It funds the work before it is funded for the work. Its balance sheet is therefore not a financial-reporting artefact — it is a piece of production equipment, and its size determines how much work the firm can physically hold at one time.",
+    "That single mechanism produces the guide's two counter-intuitive results. **A fast-growing contractor consumes cash while it is profitable**, so the cash statement of a healthy construction business in a boom resembles that of a failing one — and distinguishing them is what a surety company does for a living. And **capacity is a stock, not a flow**: every bonded job consumes a line that is not released until the job completes, so a contractor with a full line cannot take the next job at any price. The second guide reached the same conclusion from the labour market. Two independent constraints producing the same market behaviour is the strongest evidence that the behaviour is real.",
+    "The guide covers how a contractor is actually paid; where its cash sits while a plant is being built; the difference between a change and a claim; what lateness costs and where the risk transfer stops; the instruments that stand behind a promise; why a surety line caps a firm's workload; and what changes when the site is in another country. It closes by drawing the four courses in this corpus together.",
+    "A boundary, because two neighbouring guides own adjacent material and neither is repeated here. The **project's** capital stack — construction debt, tax equity, the path to financial close — belongs to the project-lifecycle guide in the buyer-side course. The **supplier's** twenty-year creditworthiness, and whether anyone will still be there to honour a warranty in year fifteen, belongs to the closing guide of the integrator course. This guide sits between them: the contractor's own money, over the short and intense period it is exposed."
+   ]
+  },
+  {
+   "id": "getting-paid",
+   "title": "How a contractor actually gets paid",
+   "kind": "prose",
+   "read": "Everything is measured, certified and lagged — and a slice is kept back for years.",
+   "ps": [
+    "Payment on a construction contract is not a transfer against an invoice. It is a monthly cycle of measurement, certification and release, and each of its steps costs time.",
+    "It begins with the **schedule of values**: the contract price broken down into line items that can be measured independently — mobilisation, engineering, procurement of each equipment package, civil, foundations, electrical, commissioning, demobilisation. It is agreed at the start and it matters more than its clerical appearance suggests, because it determines what the contractor can claim and when. A contractor naturally seeks to weight value toward early activities, so that cash arrives before the heavy expenditure; an owner resists exactly that, because a **front-loaded** schedule of values means that if the contractor fails at sixty per cent complete, the owner has paid seventy per cent and must fund a replacement to finish. The negotiation over this table is a negotiation about who is exposed to whom, and it happens before anyone has turned a shovel.",
+    "Each month the contractor submits an application for payment against that schedule, claiming the percentage of each line item completed. The {{owner's engineer}} measures and verifies it — on a large site this is real work, often a joint walk — and issues a certificate. Payment follows the certificate after contractual terms. **Each of the three steps has a lag**, and they compound: work performed through a month-end cutoff, reviewed and certified over some weeks, then paid on terms after that.",
+    "From every certified payment the owner withholds **retainage**: a percentage — conventionally five or ten per cent, sometimes reducing at a milestone — held back until completion. Its purpose is legitimate and dual. It gives the contractor a financial reason to return and finish the unglamorous end of the job, and it gives the owner a fund with which to complete the work if the contractor does not. Its cost is equally real: retainage is typically a large fraction of the contractor's entire profit on the job, held without interest for the length of the project and beyond, and released only at final completion — which, as the previous guide noted, is the milestone with the least schedule pressure behind it.",
+    "The same structure repeats down the chain, usually worse. A subcontractor bills the main contractor, waits for the same cycle, and often works under **pay-when-paid** terms that make its payment contingent on the owner having paid first. So the owner's cash timing is transmitted, amplified, to the parties least able to absorb it — a specialist subcontractor with a small balance sheet and a payroll every Friday. This is precisely why statutory lien rights and payment bonds exist: they give the people furthest down the chain a claim that does not depend on the solvency or the goodwill of the party above them.",
+    "One practical reading skill follows from all of this. In a contractor's accounts, the relationship between work performed and work billed appears as **overbilling** or **underbilling** — amounts billed ahead of, or behind, the cost incurred. Persistent underbilling on a growing book means the firm is financing its customers out of its own equity, which is the condition that ends construction companies in booms rather than in downturns."
+   ],
+   "note": "It is worth noticing what a **{{limited notice to proceed}}** with an equipment prepayment actually does in this picture. When an owner funds long-lead equipment directly or advances against it, it is not merely accelerating procurement — it is removing the single largest cash exposure from the contractor's balance sheet, which lets a smaller contractor hold a larger job. That is a financing decision dressed as a scheduling one."
+  },
+  {
+   "id": "the-cash-cycle",
+   "title": "Where the money is while the plant is being built",
+   "kind": "bars",
+   "read": "Roughly two to three months of revenue is financed by the contractor at all times — plus retention for years.",
+   "unit": "indicative days of contractor cash tied up, one payment cycle",
+   "intro": "Illustrative figures for a conventional monthly cycle. The individual numbers vary by contract; what matters is that they **add**, and that the total scales with revenue rather than with margin.",
+   "items": [
+    {
+     "label": "Work performed before the billing cutoff",
+     "v": 30
+    },
+    {
+     "label": "Measurement, verification and certification",
+     "v": 15
+    },
+    {
+     "label": "Payment terms after certification",
+     "v": 30
+    },
+    {
+     "label": "Retention held to final completion",
+     "v": 450
+    }
+   ],
+   "note": "Do the arithmetic, because it is the whole point. The first three bars sum to about seventy-five days: at any moment the contractor is funding roughly two and a half months of turnover out of its own resources. That figure is a **percentage of revenue**, not of profit — so a firm growing forty per cent a year must find forty per cent more working capital every year merely to stand still, out of a margin that is typically single-digit. **Growth consumes cash faster than profit generates it**, which is why the cash statement of a thriving contractor in a boom and a failing one in decline look alarmingly similar. The fourth bar is different in kind: retention is a slice of the contractor's actual profit, held interest-free, released only at final completion — so an underperforming {{punch list}} is a direct financing cost, not merely an irritation."
+  },
+  {
+   "id": "change-and-claim",
+   "title": "The difference between a change and a claim",
+   "kind": "prose",
+   "read": "The same event becomes one or the other depending on whether it was priced before or after it was executed.",
+   "ps": [
+    "A **{{change order}}** is agreed. A **claim** is asserted. They can arise from the identical event, and which one it becomes usually depends on nothing more than whether the work was priced before it was done.",
+    "The three ordinary grounds are worth separating because they behave differently. A **change in scope**: the owner wants something different, and the mechanism is designed for exactly this. An **owner-caused delay or disruption**: late drawings, a slow approval, restricted access, a decision not made — the contractor's cost rises without any change in what it is building. And a **differing site condition**, which the previous guide covered: the ground is not as described, and a clause exists precisely to price it.",
+    "There is also the **constructive** change, which causes disproportionate trouble because nobody involved intends it. The owner does not issue an instruction; it simply rejects work that met the specification, or insists on an interpretation stricter than the document supports, or requires a sequence the contract did not. No change order is raised because, in the owner's view, nothing changed. The contractor is nonetheless doing more work than it priced.",
+    "This is where **notice** becomes decisive, and it is the commonest way a legitimate entitlement is lost. Most contracts require written notice of an event within a short period — often days — as a condition of any subsequent entitlement. The natural behaviour of a competent site team is the opposite: encounter a problem, solve it, keep the job moving, and raise the commercial consequences later when there is time. That instinct, which is exactly what you want in a project manager, **forfeits the claim**. Mature contractors therefore separate the two functions deliberately: the team solves the problem and a commercial function issues the notice the same week, without either treating it as an act of hostility.",
+    "The hardest category is **disruption** — not a delay to the completion date, but a loss of productivity in the work itself, which the second guide described in detail. It is real, it is often the largest number in a dispute, and it is nearly impossible to prove after the fact because proving it requires establishing what would otherwise have happened. The usual approaches are all imperfect: comparing an affected period against an unaffected one on the same project, comparing against a similar project, or arguing from industry factors, each of which the other side will attack. What actually decides these arguments is **contemporaneous evidence** — daily reports, manpower curves, schedule updates issued at the time, photographs, correspondence — which is why a good contractor's record-keeping is a commercial asset built during the work rather than assembled after it.",
+    "The traffic runs both ways. A **back charge** is the owner or main contractor recovering, against payments due, the cost of work it had to do because another party did not — cleaning up after a subcontractor, repairing damage, completing an unfinished scope. Down the subcontract chain it is a routine instrument and a routine source of dispute, because the party being charged is rarely consulted about the cost."
+   ],
+   "note": "A reliable diagnostic when reading a troubled project: count the change orders that were **agreed before the work was done** against those raised afterwards. A project where most changes were priced in advance is a project with a functioning commercial relationship. A project where they accumulate as unresolved claims has already failed commercially, whatever the schedule says."
+  },
+  {
+   "id": "damages-and-caps",
+   "title": "What lateness actually costs, and where the transfer stops",
+   "kind": "prose",
+   "read": "Beyond the cap, the owner is uninsured against its own contractor.",
+   "ps": [
+    "**{{liquidated damages}}** are a pre-agreed sum payable per day of delay, or per unit of performance shortfall, written into the contract so that the owner does not have to prove its loss. That is their entire purpose: to convert an argument about damage into an arithmetic exercise.",
+    "The rate is not arbitrary. It is built from the owner's actual daily exposure to lateness — debt service accruing on a plant that is not earning, the revenue the plant would have produced, any damages the owner itself owes under its offtake contract, and, where a tax position or an incentive has a deadline, the value at risk from missing it. A rate set far above genuine loss risks being unenforceable as a penalty rather than a genuine pre-estimate; a rate set below it leaves the owner carrying real exposure it thought it had transferred.",
+    "There are two distinct kinds and they buy different things. **Delay damages** compensate for the plant being late and stop when it is complete — they buy time. **Performance damages** compensate for the finished plant falling short of a guaranteed output, efficiency or availability, and they are typically a one-off payment calculated to buy down the shortfall's value over the asset's life — they buy a permanent deficiency. A plant that is late and short pays both.",
+    "Every one of these is **capped**, and the caps are the most important numbers in the contract. There is normally a cap on delay damages, a cap on performance damages, and an overall cap on the contractor's aggregate liability — commonly expressed as a percentage of contract value. What the caps mean is precise and often overlooked: **the cap is where the risk transfer stops.** Beyond it the owner is uninsured against its own contractor. If the plant is a year late and the delay cap is reached in month four, the remaining eight months are the owner's, and the wrap it paid a premium for has already stopped working.",
+    "This is exactly the question the lender's {{independent engineer}} asks, and the concept's own definition puts it plainly: not whether damages exist, but whether the **cap actually covers the lender's exposure** through to the outside date in the financing documents. A wrap with a thin cap is thinner than it looks, and it is one of the few contract terms whose adequacy can be tested arithmetically rather than argued.",
+    "Two smaller points complete the picture. **Early-completion bonuses** are rare, because an owner rarely benefits symmetrically from being early and because a bonus creates an incentive to accelerate in ways the third guide showed are quality-destroying. And the contractor's own exposure runs downward: it will seek back-to-back damages from the subcontractors and suppliers whose scopes could make it late, which is how a delay obligation propagates down a chain — usually with the caps shrinking at each step, so that the party at the bottom carries the least and the main contractor absorbs the difference."
+   ],
+   "note": "The relationship to the first guide is direct. Liquidated damages presuppose a single responsible party, and their cap presupposes a bounded exposure. A wrap with a low aggregate cap and a heavily split scope is a contract that looks like a risk transfer and functions as a coordination agreement."
+  },
+  {
+   "id": "standing-behind-it",
+   "title": "Six instruments, and what each one actually secures",
+   "kind": "table",
+   "read": "The same instrument family the integrator course examined, pointed at a shorter obligation.",
+   "intro": "A promise is worth the security behind it. These are the instruments a construction contract uses, and the useful column is the third one — what each does not do, which is where owners are surprised.",
+   "cols": [
+    "Instrument",
+    "Who issues it, and against what",
+    "What it does not cover"
+   ],
+   "rows": [
+    [
+     "Performance bond",
+     "A surety, on the contractor's credit, promising to complete the work or pay if the contractor defaults. Typically a percentage of contract value",
+     "It is capped, and calling it is slow and adversarial. A surety may elect to fund the existing contractor, tender a replacement, or pay — and the owner's schedule is at the mercy of that election. It secures completion, not timeliness"
+    ],
+    [
+     "Payment bond",
+     "A surety, guaranteeing that subcontractors and suppliers are paid, so they cannot pursue the owner or encumber the property",
+     "It protects the owner from the contractor's insolvency reaching its title — it does nothing at all for the owner's own losses from that insolvency"
+    ],
+    [
+     "Advance payment guarantee",
+     "A bank, refunding an advance or mobilisation payment if the contractor does not perform. Usually reduces as the advance is earned down",
+     "Only the advance. It is a refund mechanism for money already handed over, not a performance instrument"
+    ],
+    [
+     "Retention bond or {{warranty bond}}",
+     "A surety or bank, substituting for cash retention, or securing warranty obligations after handover",
+     "Being capped and time-limited, it covers a bad year rather than a bad decade — and it does not replace a contractor still present and competent enough to come back and fix the problem"
+    ],
+    [
+     "{{parent company guarantee}}",
+     "The contractor's corporate parent, standing behind the subsidiary's obligations so the effective counterparty becomes the parent",
+     "It is only as strong as that parent and only as broad as its wording. A guarantee capped at contract value may not reach the loss the owner actually fears, and a parent in a different jurisdiction may be slow or hard to pursue"
+    ],
+    [
+     "Bank guarantee or standby credit",
+     "A bank, paying on demand against a compliant document presentation rather than against proof of default",
+     "It reverses the burden — the owner draws first and the contractor argues afterwards — which makes it powerful and makes contractors price it. It is a liquidity instrument, not an assessment of whether the claim was right"
+    ]
+   ],
+   "note": "This is the same instrument family the integrator course's closing guide examined, aimed at a different obligation. There it secured a twenty-year warranty on equipment; here it secures an eighteen-month performance on a site. The shared weaknesses are identical and worth stating once: **every one of them is capped, every one is only as good as its issuer, and none of them delivers a plant.** They convert a delivery failure into money, more slowly than the schedule needs, which is why an owner's first line of defence is choosing a contractor that will not need them."
+  },
+  {
+   "id": "bonding-capacity",
+   "title": "Why a balance sheet limits how much work a firm can hold",
+   "kind": "prose",
+   "read": "Capacity is a stock. Every bonded job consumes a line that is not released until the job completes.",
+   "ps": [
+    "A **{{surety bond}}** is not insurance, and the distinction explains everything that follows. An insurer expects losses and prices them. A surety expects **no** losses — it underwrites the contractor much as a lender would, and if it pays, it pursues the contractor for the money. It is closer to an extension of credit than to a policy.",
+    "So the surety's questions are a credit analyst's. How much **working capital** does the firm have, since that is what funds the seventy-five-day cycle across every active job? What is its **net worth**, since that is what stands behind the indemnity? Does it have **experience** with work of this type and size, since the commonest cause of contractor failure is a firm executing its first job of a scale it has never attempted? And what is the quality of its management and its record — the judgement component that no ratio captures.",
+    "From that analysis the surety sets a **bonding line**, and it has two dimensions: a single-job limit and an aggregate limit across all bonded work. The aggregate is the binding one. Capacity consumed by a bonded job is not released until that job completes, so a contractor's available capacity is a **stock that is drawn down and slowly replenished**, not a flow that renews each period.",
+    "Three consequences follow, and each is visible in how this market behaves. **First, a contractor with a full line cannot take the next job at any price.** Not at a higher margin, not with better terms — the capacity does not exist. So the market clears through a queue for construction slots rather than through visible price movement, which is exactly the conclusion the second guide reached from the craft labour market. Two independent constraints, one behaviour.",
+    "**Second, growth is self-limiting.** Winning work consumes the capacity that permits winning work, and the line grows with retained earnings and equity — that is, at the pace of a single-digit margin on a business that is simultaneously consuming cash to fund its own growth. A contractor cannot compound its way into a much larger book from operations alone. The observable responses are all capital events: raising outside equity, listing, being acquired by a parent whose balance sheet supports the subsidiary, or forming a **{{joint venture}}** so that two firms' lines together hold a job neither could hold alone.",
+    "**Third — and this is the structural irony the concept's own definition states — the firms that would benefit most from a bond are the least able to obtain one.** Sureties underwrite creditworthiness before issuing, so an emerging contractor with a strong team and a thin balance sheet is precisely the firm that cannot be bonded, and therefore cannot bid the work that would build the balance sheet. Bonding is a market barrier in exactly the way the second guide's prequalification threshold is a market barrier: defensible, useful, and biased against new entrants by construction. Between them they explain most of the consolidation at the top of this industry.",
+    "The joint venture deserves one closing observation, because it closes a loop. Two contractors combining balance sheets to hold a job neither could hold alone have solved a capacity problem by **creating an interface** — a seam, in the first guide's language, between two organisations with different systems, different crews and different commercial interests, running through the middle of a single scope. The risk they removed from the balance sheet reappears on the site. There is no free move here; there is only a choice about where the risk sits."
+   ],
+   "note": "This is why a contractor's financial statements are read differently from a manufacturer's. The questions that matter are working capital against the size of the active book, the ratio of billings to costs incurred, the age of receivables and retention, and how much of the backlog is bonded — not the margin. A construction firm almost never fails because a project was unprofitable. It fails because it ran out of cash while growing."
+  },
+  {
+   "id": "across-borders",
+   "title": "What changes when the site is in another country",
+   "kind": "proscons",
+   "read": "A jurisdiction changes a project's credit and its labour far more than it changes its engineering.",
+   "intro": "An owner building outside its home market chooses between importing a contractor and assembling the work locally. The engineering is the same in both cases; almost nothing else is.",
+   "cards": [
+    {
+     "t": "Award an international contractor under a wrap",
+     "adv": [
+      "One counterparty with a balance sheet and a credit standing the lender already recognises, which can be the difference between a financeable project and an unfinanceable one",
+      "A familiar international form of contract, so the risk allocation, the damages regime and the dispute mechanism are understood by every party including the lender",
+      "Bonds and guarantees issued by banks the lender accepts, rather than by local institutions it may not",
+      "Experience of the specific technology and of exporting a project delivery system into an unfamiliar market",
+      "A single schedule, held internally — the seams from the first guide are the contractor's problem rather than the owner's"
+     ],
+     "dis": [
+      "Expatriate management is expensive, and the local craft is subcontracted anyway — so the owner is paying a premium for supervision and systems, not for the hands doing the work",
+      "Local content obligations may require local partners, local sourcing or local employment shares that the international firm has to construct artificially",
+      "Currency, payment and country risk are priced into the number, and priced conservatively because the contractor cannot manage them",
+      "A formal change process across borders is slower, so a project with an evolving design pays more for each change than it would at home",
+      "Local permitting, logistics and inspection practice are learned at the owner's expense during the first project"
+     ]
+    },
+    {
+     "t": "Contract locally, multiple packages, with an owner's team",
+     "adv": [
+      "Local craft, local supervision and local rates, with a labour market the contractors actually live in",
+      "No wrap premium, and no expatriate cost structure",
+      "Local content requirements are satisfied naturally rather than engineered around",
+      "Real knowledge of permitting, inspection practice, customs and logistics — the things that generate most of the schedule risk in an unfamiliar market",
+      "Money stays in the local economy, which frequently matters to the government whose approval the project needs"
+     ],
+     "dis": [
+      "The owner holds every seam — the first guide's interface risk, retained in full, and it now spans organisations that may not share a language or a technical standard",
+      "The lender may not accept the credit of the local contractors, or the local sureties standing behind them, which can block financing regardless of technical merit",
+      "The schedule risk sits with the owner, and it needs a capable owner's team on the ground to manage it",
+      "Technology-specific experience may not exist locally at all, which is a particular problem for storage and for grid interfaces",
+      "Enforcement of damages and guarantees depends on a local legal system whose behaviour the owner may not be able to predict"
+     ]
+    }
+   ],
+   "note": "The systematic point is worth isolating, because it is the same finding the integrator course reached and it arrives here from the opposite direction. That course concluded that **bankability is jurisdictional** — the same supplier with the same product is financeable in one country and not in another, because of where its corporate structure and its guarantees sit. This guide reaches it from construction: the same plant, built to the same drawings, is a different commercial proposition in a different country because the **credit** and the **labour** change even though the engineering does not. Corporate structure has become a technical specification on both sides of the transaction."
+  },
+  {
+   "id": "the-course-ends-here",
+   "title": "What the four courses were arguing",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Four courses, one industry, and the same question asked four times in different clothes.",
+   "ps": [
+    "This course made a single claim in four parts: **an {{EPC}} contractor converts a financed design into an energised plant by selling a date and a price**, and each guide covered one thing that has to be true for that sentence to hold.",
+    "**The contract** has to say who holds which risk, because a fixed price is really the price of certainty and it is only as fixed as the scope it was fixed against — and every scope split creates a seam that will fail as a gap, an overlap or a timing mismatch. **The people** have to exist, because craft labour is the one input that cannot be procured, its supply responds over the length of an apprenticeship, and the productivity that acceleration destroys is the same thing that safety practice protects. **The work** has to be done in a way that can be proved later, because the ground is only known at the points where it was sampled, every termination is a hand operation that looks identical whether it was done right or wrong, and almost everything found at commissioning was created months earlier. **And the money** has to be there, because a contractor funds the job before it is paid for it, and a surety line — like a safety threshold, and like a labour market — makes capacity a stock rather than a flow.",
+    "Set beside the three neighbouring courses, the shape of the whole becomes visible. The **buyer-side course** explains who purchases a plant, on what contract, for what revenue, dispatched how, and approved by whom — and gives construction one bar on its chart. The **bridge-power course** explains the machines that share the site: the engines and turbines, what comes out of their stacks, the permits that decide how many hours they may run, the electrical interface, and the storage block itself. The **integrator course** explains how a supplier turns purchased cells into a warranted system: the box, the software, the certification, the factory, the twenty-year promise, and who can stand behind it. **This course is the eighteen months in the middle** that none of them covers — the interval in which a set of drawings, a financing package and a container of equipment become a plant that is producing.",
+    "Read across all four, the same question is being asked at every hand-off, in different clothes each time: **who carries the risk of something that has not happened yet, and what have they put up to prove they can?** The interconnection queue and the offtake contract ask it of the developer. The emissions permit and the grid code ask it of the machine. The product listing, the capacity guarantee and the long-term service agreement ask it of the supplier. Liquidated damages, a performance bond and a surety line ask it of the contractor. They are the same instrument in four costumes, and each of them exists because someone downstream needed a promise to be worth something.",
+    "One last observation, which is the reason the four courses were written as one corpus rather than four. **Every serious failure in this industry happens at a hand-off, not inside one.** A project dies in the queue, between the developer and the grid. A supplier's product is excellent and unfinanceable, between the engineering and the credit. A plant is late because equipment slipped, between the owner's procurement and the contractor's crew plan. A twenty-year guarantee is unenforceable because nobody recorded the baseline, between construction and operations. The technical content of each stage is well understood by the people who do it. **The seams are what nobody owns** — and reading these four courses together is, in the end, an argument that the seams are the subject."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why does growth consume cash in a construction business?",
+     "a": "The contractor funds roughly two and a half months of turnover at all times. That figure is a percentage of revenue, so growing 40% a year requires 40% more working capital every year — out of a single-digit margin."
+    },
+    {
+     "q": "What is a schedule of values and why is it negotiated hard?",
+     "a": "The contract price broken into measurable line items. It decides what can be claimed and when — a front-loaded one means that if the contractor fails at 60% complete, the owner has already paid 70%."
+    },
+    {
+     "q": "What are the two legitimate purposes of retainage?",
+     "a": "It gives the contractor a financial reason to return and finish the unglamorous end of the job, and it gives the owner a fund with which to complete the work if the contractor does not."
+    },
+    {
+     "q": "Why is retainage expensive to a contractor beyond its face value?",
+     "a": "It is typically a large fraction of the whole project's profit, held without interest for the project's length and released only at final completion — the milestone with the least schedule pressure behind it."
+    },
+    {
+     "q": "What does pay-when-paid do to the subcontract chain?",
+     "a": "It transmits the owner's cash timing, amplified, to the parties least able to absorb it. Lien rights and payment bonds exist because of exactly that."
+    },
+    {
+     "q": "What does persistent underbilling on a growing book indicate?",
+     "a": "The firm is financing its customers out of its own equity — the condition that ends construction companies in booms rather than downturns."
+    },
+    {
+     "q": "What separates a change order from a claim?",
+     "a": "A change order is agreed; a claim is asserted. The same event becomes one or the other depending mostly on whether it was priced before the work was done."
+    },
+    {
+     "q": "What is a constructive change?",
+     "a": "The owner issues no instruction but rejects compliant work, insists on a stricter interpretation, or requires an unplanned sequence. No change order is raised because in the owner's view nothing changed — yet the contractor is doing more than it priced."
+    },
+    {
+     "q": "Why is notice the commonest way a legitimate entitlement is lost?",
+     "a": "Contracts require written notice within days as a condition of entitlement, while a good site team's instinct is to solve the problem and discuss money later. Mature contractors separate the two functions deliberately."
+    },
+    {
+     "q": "Why are disruption claims so hard to prove?",
+     "a": "They require a counterfactual — what would have happened without the disruption. Every measurement approach is attackable, so contemporaneous records made during the work decide them."
+    },
+    {
+     "q": "What is the difference between delay damages and performance damages?",
+     "a": "Delay damages compensate for the plant being late and stop when it is complete — they buy time. Performance damages compensate for a permanent shortfall in output, efficiency or availability, and are usually a one-off buy-down."
+    },
+    {
+     "q": "What does a liability cap actually mean for an owner?",
+     "a": "It is where the risk transfer stops. Beyond the cap the owner is uninsured against its own contractor — so a wrap with a thin cap stops working before the exposure does."
+    },
+    {
+     "q": "Why is a surety not an insurer?",
+     "a": "An insurer expects losses and prices them. A surety expects none — it underwrites the contractor's credit and pursues it for any payment made. It is closer to a lender than to a policy."
+    },
+    {
+     "q": "Why is bonding capacity a stock rather than a flow?",
+     "a": "The aggregate line is consumed by every bonded job and is not released until that job completes — so a contractor with a full line cannot take the next job at any price."
+    },
+    {
+     "q": "Why can a contractor not compound its way into a much larger book?",
+     "a": "The line grows with retained earnings and equity, on a single-digit margin, in a business simultaneously consuming cash to fund growth. Expansion requires a capital event: equity, a listing, a parent, or a joint venture."
+    },
+    {
+     "q": "What is the structural irony of surety bonding?",
+     "a": "Sureties underwrite creditworthiness before issuing, so the firms that would benefit most from a bond — capable teams with thin balance sheets — are exactly the ones that cannot get one."
+    },
+    {
+     "q": "What risk does a joint venture create while solving a capacity problem?",
+     "a": "A seam. Two organisations with different systems, crews and commercial interests now run through the middle of one scope — the balance-sheet risk reappears as interface risk on the site."
+    },
+    {
+     "q": "What changes most when a project is built in another country?",
+     "a": "The credit and the labour, not the engineering. The lender's acceptance of local contractors and sureties, local content obligations, and the local craft market decide the delivery model far more than the technology does."
+    },
+    {
+     "q": "What single question do all four courses ask at every hand-off?",
+     "a": "Who carries the risk of something that has not happened yet, and what have they put up to prove they can. The queue, the offtake, the listing, the capacity guarantee, the liquidated damages and the surety bond are the same instrument in different clothes."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A profitable contractor growing 40% a year reports negative operating cash flow. What is the most likely explanation?",
+     "c": [
+      "The margin figures are wrong",
+      "It must fund a fixed number of days of an ever-larger revenue base, and that requirement scales with revenue rather than profit",
+      "It is over-invoicing",
+      "Its projects are loss-making"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why does an owner resist a front-loaded schedule of values?",
+     "c": [
+      "It raises the total price",
+      "If the contractor fails part-way, the owner has paid more than the value in place and must fund a replacement",
+      "It delays the start of work",
+      "It complicates the tax treatment"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which milestone releases the last of the retention?",
+     "c": [
+      "Substantial completion",
+      "Final completion",
+      "Energisation",
+      "The performance test"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A subcontractor works under pay-when-paid terms. What is the practical effect?",
+     "c": [
+      "It is paid faster",
+      "The owner's payment timing is transmitted, amplified, to the party least able to absorb it",
+      "It is protected from the owner's insolvency",
+      "Its retention is waived"
+     ],
+     "a": 1
+    },
+    {
+     "q": "An owner rejects work that met the specification and insists on a stricter standard. What has occurred?",
+     "c": [
+      "A defect",
+      "A constructive change — more work than was priced, with no change order raised",
+      "A back charge",
+      "A force majeure event"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A contractor solves a problem promptly and raises the cost six weeks later. What has it most likely lost?",
+     "c": [
+      "Nothing, if the cost is documented",
+      "Its entitlement, because notice was required within days as a condition of the claim",
+      "Its bond",
+      "Its retention"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which is the correct description of a liability cap?",
+     "c": [
+      "The maximum the owner will pay the contractor",
+      "The point at which the risk transfer stops and the owner carries its own exposure",
+      "The insurance deductible",
+      "The maximum bond value"
+     ],
+     "a": 1
+    },
+    {
+     "q": "How does a surety differ from an insurer?",
+     "c": [
+      "It charges more",
+      "It expects no losses, underwrites the contractor's credit, and pursues the contractor for anything it pays",
+      "It covers only physical damage",
+      "It is required by statute"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A contractor with an excellent team and a thin balance sheet cannot be bonded. What does this illustrate?",
+     "c": [
+      "That sureties are poorly informed",
+      "That bonding is a market barrier which is hardest on the firms that would benefit most from passing it",
+      "That the firm is badly managed",
+      "That performance bonds are unnecessary"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Two contractors form a joint venture to hold a job neither could hold alone. What have they created?",
+     "c": [
+      "A cheaper bid",
+      "An interface running through the middle of one scope, between two organisations with different systems and interests",
+      "A parent company guarantee",
+      "A reduced liability cap"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Why might a lender refuse a locally contracted project that is technically sound?",
+     "c": [
+      "Local labour is less skilled",
+      "It may not accept the credit of the local contractors or the sureties behind them",
+      "Local content rules forbid financing",
+      "Currency risk is uninsurable"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Which conclusion do the labour market and the surety line reach independently?",
+     "c": [
+      "That prices rise in a boom",
+      "That a contractor's capacity to hold work is a stock rather than a flow, so the market clears by queue",
+      "That safety records predict schedule",
+      "That fixed prices are inefficient"
+     ],
+     "a": 1
+    },
+    {
+     "q": "According to the closing argument, where do serious failures in this industry occur?",
+     "c": [
+      "Inside the most technically difficult stage",
+      "At the hand-offs between stages, which nobody owns",
+      "In the design phase",
+      "During commissioning"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

@@ -343,6 +343,11 @@
       ]
     },
     {
+      "slug": "apprenticeship",
+      "term": "apprenticeship",
+      "def": "A multi-year programme combining paid work with structured instruction, through which a construction trade actually reproduces itself. Because it takes years, the supply of licensed craft available next year was decided by enrolments half a decade ago — which is why a labour shortage cannot be relieved by present-day demand. Some tax and public-funding regimes now condition a benefit on a documented share of apprentice hours, making it a compliance input as well as a workforce one."
+    },
+    {
       "slug": "approach",
       "term": "approach",
       "def": "The gap between the temperature a heat exchanger achieves and the theoretical best it could achieve — tower water above wet-bulb, or leaving water above refrigerant temperature. Closing an approach costs surface area and money."
@@ -396,6 +401,15 @@
       "slug": "arranger",
       "term": "arranger",
       "def": "The institution that structures and syndicates a loan or financing, often without holding much of it afterwards. Being named as arranger on a deal says nothing about whether the firm owns any of the asset."
+    },
+    {
+      "slug": "as-built",
+      "term": "as-built",
+      "def": "A drawing or model revised to show what was actually installed rather than what was designed, including every field change. It is the operator's map of the plant for the next twenty years, and it is produced under maximum schedule pressure by people who are simultaneously finishing the job — which is why it is so often the weakest part of an otherwise good handover.",
+      "aliases": [
+        "as-built drawings",
+        "as-builts"
+      ]
     },
     {
       "slug": "as-converted",
@@ -590,6 +604,11 @@
         "special purpose vehicle",
         "tenant SPV"
       ]
+    },
+    {
+      "slug": "baseline-schedule",
+      "term": "baseline schedule",
+      "def": "The version of the programme agreed at the start of a contract and frozen, against which all later progress and delay are measured. Without one, delay cannot be measured at all — only asserted by two parties with different recollections — which is why agreeing it is a commercial act rather than a planning one."
     },
     {
       "slug": "baseload",
@@ -1568,6 +1587,11 @@
       ]
     },
     {
+      "slug": "concurrent-delay",
+      "term": "concurrent delay",
+      "def": "Two delays, one caused by each party, running over the same period, so neither side can show the project would have finished earlier but for the other. Outcomes depend heavily on the contract's wording; the common compromise gives the contractor an extension of time but no money."
+    },
+    {
       "slug": "concurrent-maintainability",
       "term": "concurrent maintainability",
       "aliases": [
@@ -1650,6 +1674,14 @@
       "aliases": [
         "watts per cell",
         "W/cell"
+      ]
+    },
+    {
+      "slug": "constructability",
+      "term": "constructability",
+      "def": "How easily a design can actually be built with available crews, plant, access and sequence — as distinct from whether it is structurally or electrically correct. Reviewing it early is cheap and reviewing it during construction is a change order, which is the whole argument for involving a builder while the design can still move.",
+      "aliases": [
+        "buildability"
       ]
     },
     {
@@ -2136,6 +2168,14 @@
       ]
     },
     {
+      "slug": "dart-rate",
+      "term": "DART rate",
+      "def": "Days away, restricted or transferred: the subset of recordable injuries serious enough to keep someone off their normal job, expressed on the same per-hundred-workers basis as the headline recordable rate. It is the better severity proxy of the two, because it ignores the minor treatments that inflate the headline figure.",
+      "aliases": [
+        "days away restricted or transferred"
+      ]
+    },
+    {
       "slug": "data-center-abs",
       "term": "data-center ABS",
       "def": "Bonds backed by the rent from specific leased data-center buildings, issued from a bankruptcy-remote trust that owns them. The refinancing that repays a construction loan and returns the sponsor's equity once a building is energised and leased.",
@@ -2533,6 +2573,15 @@
         "DPF",
         "particulate filter",
         "soot filter"
+      ]
+    },
+    {
+      "slug": "differing-site-conditions",
+      "term": "differing site conditions",
+      "def": "A contract clause allocating the risk of ground that turns out not to match the investigation — either differing materially from what the documents indicated, or unusual against what would ordinarily be expected. Its commercial purpose is to make bids cheaper: without it every contractor must price unknown ground pessimistically on every job.",
+      "aliases": [
+        "differing site conditions clause",
+        "changed conditions"
       ]
     },
     {
@@ -3369,6 +3418,15 @@
       "def": "Clay that swells when it takes on water and shrinks when it dries, moving whatever sits on it. It is treated by removing it, stabilising it, or spanning over it — never by ignoring it."
     },
     {
+      "slug": "experience-modification-rate",
+      "term": "experience modification rate",
+      "def": "A multiplier applied to a contractor's workers' compensation premium, derived from its claim history against the expected history for its trade and size — above one is worse than average, below one better. Because it is computed from claims that have already closed, it prices the past by several years and cannot recognise a firm that has genuinely changed.",
+      "aliases": [
+        "EMR",
+        "experience modifier"
+      ]
+    },
+    {
       "slug": "export-controls",
       "term": "export controls",
       "def": "Government rules that restrict which products, technologies or data may be shipped to which countries or buyers without a licence; for AI, the rules that govern where advanced chips and servers may be sent and who may run them.",
@@ -3376,6 +3434,15 @@
         "chip export controls",
         "BIS export rules",
         "Country Group A:5"
+      ]
+    },
+    {
+      "slug": "extension-of-time",
+      "term": "extension of time",
+      "def": "A formal move of the contractual completion date in response to a delay the contractor is not responsible for, stopping the daily damages clock. It grants time, not necessarily money — whether costs follow depends on whether the delaying event was merely excusable or also compensable.",
+      "aliases": [
+        "EOT",
+        "time extension"
       ]
     },
     {
@@ -3711,6 +3778,15 @@
       ]
     },
     {
+      "slug": "float",
+      "term": "float",
+      "def": "The amount an activity can slip before it becomes critical and starts moving the completion date. Its decisive property is that it is consumed by whoever uses it first, so a slow approval can spend the contractor's cushion for a problem it has not yet had — which is why contracts increasingly state explicitly who owns it.",
+      "aliases": [
+        "total float",
+        "schedule float"
+      ]
+    },
+    {
       "slug": "float-charge",
       "term": "float charge",
       "def": "The small continuous voltage held across a standby battery to keep it full without overcharging it. Nearly all of a UPS battery's life is spent floating, and the float voltage together with the room temperature decides how long that life is.",
@@ -3786,6 +3862,11 @@
       "aliases": [
         "power density per square metre"
       ]
+    },
+    {
+      "slug": "force-majeure",
+      "term": "force majeure",
+      "def": "A contract clause excusing performance made impossible by defined events outside either party's control. On a construction schedule its practical role is narrow: ordinary bad weather is priced into the programme as the contractor's risk, and only the genuinely abnormal reaches this clause."
     },
     {
       "slug": "forced-outage-rate",
@@ -5254,6 +5335,14 @@
       ]
     },
     {
+      "slug": "limited-notice-to-proceed",
+      "term": "limited notice to proceed",
+      "def": "An instruction to start a bounded slice of work — usually engineering, long-lead ordering and mobilisation — at an agreed price, months before full notice to proceed is possible. It exists because equipment lead times are longer than the financing process, and when it funds equipment directly it also removes the largest cash exposure from the contractor's balance sheet.",
+      "aliases": [
+        "LNTP"
+      ]
+    },
+    {
       "slug": "limited-partner",
       "term": "limited partner",
       "def": "An investor in a fund — a pension plan, an insurer, a sovereign fund — that puts up the money but takes no part in running it. CDPQ is both a limited partner in many funds and, at Invenergy, a direct owner.",
@@ -5553,6 +5642,16 @@
       "def": "A fixed price for a fully defined scope, bid competitively. Cheapest where the design is complete and most expensive where it is not, because every change becomes a negotiation."
     },
     {
+      "slug": "lump-sum-turnkey",
+      "term": "lump-sum turnkey",
+      "def": "A construction contract in which one party delivers a complete working plant for one fixed price on one fixed date, holding the design, the procurement and the building. What the owner is really buying is certainty: the contractor replaces a distribution of possible costs with a single number and absorbs the tail, and the premium over expected cost is what that transfer costs.",
+      "aliases": [
+        "LSTK",
+        "lump sum turnkey",
+        "EPC wrap"
+      ]
+    },
+    {
       "slug": "magnetic-bearing",
       "term": "magnetic bearing",
       "aliases": [
@@ -5624,6 +5723,15 @@
       "slug": "mass-grading",
       "term": "mass grading",
       "def": "Reshaping an entire site to the elevations the design needs, before any building work. It is the first major scope on a greenfield project and the least reversible."
+    },
+    {
+      "slug": "master-service-agreement",
+      "term": "master service agreement",
+      "def": "A standing set of terms, rates and conditions between an owner and a contractor, against which individual jobs are released without re-tendering each one. It is how repeat buyers actually secure construction capacity — what is competed, once, is the relationship rather than the project.",
+      "aliases": [
+        "MSA",
+        "master services agreement"
+      ]
     },
     {
       "slug": "master-trust",
@@ -5920,6 +6028,15 @@
         "MISO Transmission Expansion Plan",
         "MTEP portfolio",
         "Tranche 2"
+      ]
+    },
+    {
+      "slug": "multi-contract",
+      "term": "multi-contract",
+      "def": "A delivery model in which the owner lets several direct contracts — civil, electrical, substation, commissioning — instead of one wrapped contract, and coordinates them itself. It avoids the wrap premium and keeps every seam between the scopes, so what the owner saves in price it pays in coordination and in delay arguments it must referee rather than transfer.",
+      "aliases": [
+        "multi-contracting",
+        "split EPC"
       ]
     },
     {
@@ -6480,6 +6597,16 @@
       ]
     },
     {
+      "slug": "owner-furnished-equipment",
+      "term": "owner-furnished equipment",
+      "def": "Major equipment bought by the project owner directly from the manufacturer and handed to a contractor to install, test and connect. It is the norm in grid storage because the supply agreement, the capacity guarantee and the tax position work better held by the owner — and it means a late or damaged delivery is the owner's delay rather than the contractor's.",
+      "aliases": [
+        "OFE",
+        "owner-supplied equipment",
+        "owner furnished equipment"
+      ]
+    },
+    {
       "slug": "owners-engineer",
       "term": "owner's engineer",
       "def": "The engineering firm an owner hires to act as its technical agent — writing the specification, reviewing the contractor's design submittals, witnessing tests and advising on change orders — as distinct from the contractor's engineer of record or the lender's independent engineer. Paid a fee; takes no equity and builds nothing.",
@@ -6770,6 +6897,14 @@
       "def": "The control circuit inside a grid-following inverter that continuously estimates the grid voltage's frequency and phase so the machine can synchronise its injected current to them. It needs a firm voltage to lock onto, which is why grid-following inverters struggle where system strength is low.",
       "aliases": [
         "PLL"
+      ]
+    },
+    {
+      "slug": "pile-refusal",
+      "term": "pile refusal",
+      "def": "A driven pile stopping short of its design depth against rock, cobbles or a dense layer. It converts a fast, cheap operation into a pre-drilled or drilled one at whatever fraction of locations is affected — and establishing that fraction in advance is exactly what the geotechnical investigation was for.",
+      "aliases": [
+        "refusal"
       ]
     },
     {
@@ -7092,6 +7227,11 @@
       ]
     },
     {
+      "slug": "prevailing-wage",
+      "term": "prevailing wage",
+      "def": "A legally set floor rate for a trade in a locality, applied where public money or certain tax benefits are involved. It removes wage as a competitive variable on those projects, so contractors compete on productivity, supervision and schedule instead."
+    },
+    {
       "slug": "preventive-maintenance",
       "term": "preventive maintenance",
       "def": "Scheduled inspection and servicing performed before anything has failed — cooling systems, coolant condition, filters, connections, detection systems, software. The unglamorous items are the ones that matter: skipped coolant and filter service degrades thermal performance silently, and thermal performance is what sets ageing rate.",
@@ -7189,6 +7329,11 @@
       "slug": "proctor-test",
       "term": "Proctor test",
       "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
+    },
+    {
+      "slug": "productivity-factor",
+      "term": "productivity factor",
+      "def": "The ratio of planned hours to hours actually earned against installed quantity, tracked weekly. Because it measures work in place rather than time elapsed, it is the earliest honest signal a project gives — a job can look on schedule and be consuming its margin, and this is where that shows first."
     },
     {
       "slug": "programmatic-joint-venture",
@@ -7317,6 +7462,16 @@
       "def": "A very short discharge and recovery — hundreds of milliseconds rather than hours. Rack-level backup cells are rated in hundreds of thousands of them, which is a different life metric from the cycle count quoted on a grid battery.",
       "aliases": [
         "pulse cycles"
+      ]
+    },
+    {
+      "slug": "punch-list",
+      "term": "punch list",
+      "def": "The list of minor incomplete or defective items outstanding at substantial completion, which the contractor must close before final completion. Closing it routinely takes longer than the commissioning that preceded it, because damages have stopped and the crews have gone — the owner's only remaining leverage is the retention it still holds.",
+      "aliases": [
+        "punch-list",
+        "snag list",
+        "punchlist"
       ]
     },
     {
@@ -7582,6 +7737,16 @@
       ]
     },
     {
+      "slug": "recordable-incident",
+      "term": "recordable incident",
+      "def": "A workplace injury or illness serious enough to be counted under the regulator's definition — beyond first aid, involving medical treatment, restricted duty, lost time or a diagnosed condition. Because the definition is regulatory rather than discretionary, it is what makes safety records comparable between firms at all.",
+      "aliases": [
+        "recordable",
+        "OSHA recordable",
+        "recordables"
+      ]
+    },
+    {
       "slug": "rectifier",
       "term": "rectifier",
       "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
@@ -7763,6 +7928,15 @@
         "deregulation",
         "retail electric provider",
         "REP"
+      ]
+    },
+    {
+      "slug": "retainage",
+      "term": "retainage",
+      "def": "A percentage withheld from every progress payment until the work is finished, released at final completion. It gives the contractor a reason to return and finish the unglamorous end of a job and gives the owner a fund to complete the work if it does not — and because it is usually a large share of the project's whole profit, held without interest for years, it is a financing instrument rather than an accounting detail.",
+      "aliases": [
+        "retention",
+        "retention money"
       ]
     },
     {
@@ -8055,6 +8229,11 @@
         "Virginia SCC",
         "Virginia State Corporation Commission"
       ]
+    },
+    {
+      "slug": "schedule-compression",
+      "term": "schedule compression",
+      "def": "Recovering time by adding hours or crews rather than by moving the completion date. Its cost is not linear in the time recovered: sustained overtime returns less per hour as weeks accumulate and extra crews in a fixed area interfere with each other, so the productivity lost is real, expensive and very hard to evidence afterwards."
     },
     {
       "slug": "screw-compressor",
@@ -8509,6 +8688,11 @@
         "resonant switching",
         "hard switching"
       ]
+    },
+    {
+      "slug": "soil-resistivity",
+      "term": "soil resistivity",
+      "def": "How strongly the ground resists electrical current, measured before design and expressed per unit length. It sets the design of the grounding system and the corrosion allowance on anything buried — two twenty-year decisions taken from a survey done in the first weeks of a project."
     },
     {
       "slug": "solar-peaker",
@@ -9404,6 +9588,15 @@
       ]
     },
     {
+      "slug": "total-recordable-incident-rate",
+      "term": "total recordable incident rate",
+      "def": "Recordable injuries multiplied by two hundred thousand and divided by hours worked — the constant being one hundred workers at forty hours for fifty weeks, so the result reads as recordables per hundred workers per year. The arithmetic is unstable at small scale: on a small firm's hours a single incident moves the rate by a whole point, which is why the same threshold means very different things for a large contractor and a small one.",
+      "aliases": [
+        "TRIR",
+        "recordable rate"
+      ]
+    },
+    {
       "slug": "tpu",
       "term": "TPU",
       "def": "Tensor Processing Unit: Google's own AI accelerator chip, designed in-house and built with Broadcom, used inside Google Cloud and now sold or leased to outside buyers as an alternative to NVIDIA GPUs.",
@@ -9420,6 +9613,14 @@
       "aliases": [
         "serialisation",
         "serialization"
+      ]
+    },
+    {
+      "slug": "trade-stacking",
+      "term": "trade stacking",
+      "def": "Putting more crews into a work area than it can hold, so that they queue for access, work around each other's unfinished work and interfere with one another. It is the usual reason adding people to a late project produces less extra output than expected, and it raises safety exposure at the same time as it cuts productivity.",
+      "aliases": [
+        "stacking of trades"
       ]
     },
     {
@@ -9642,6 +9843,11 @@
         "B units",
         "Class A units"
       ]
+    },
+    {
+      "slug": "unit-rate",
+      "term": "unit rate",
+      "def": "The hours needed to install one of something — one pile, one tracker row, one termination, one metre of cable. Multiplied by quantity it is the labour estimate and divided into the schedule it is the crew plan, so a fixed-price bid is fundamentally a bet that these numbers are right."
     },
     {
       "slug": "unitholder-letter",
@@ -9957,6 +10163,14 @@
       "slug": "water-reclamation",
       "term": "water reclamation",
       "def": "Treating used water to a standard fit for reuse rather than discharging it. A campus that promises to return or reuse its water has to build and operate a plant to do it."
+    },
+    {
+      "slug": "weather-day",
+      "term": "weather day",
+      "def": "A day on which weather prevents work, allowed for in the programme in advance so that ordinary seasonal conditions are the contractor's risk and only abnormal weather is an excusable event. The allowance is why a slipped start can cost far more than its own length — pushing exposed work across a seasonal boundary loses the whole season, not the days.",
+      "aliases": [
+        "weather days"
+      ]
     },
     {
       "slug": "wet-bulb",
