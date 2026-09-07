@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-07 03:52:59 AM EST` · Repo version: `v05.03r`
+Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -415,6 +415,7 @@ Last updated: `2026-09-07 03:52:59 AM EST` · Repo version: `v05.03r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/applied-digital.profile.v1.json">applied-digital.profile.v1.json</a> — Archived v1 dossier (Applied Digital)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/applied-digital.profile.v3.json">applied-digital.profile.v3.json</a> — Archived v3 dossier (Applied Digital)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/arevon.profile.v2.json">arevon.profile.v2.json</a> — Archived v2 dossier (Arevon Energy)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/arevon.profile.v3.json">arevon.profile.v3.json</a> — Archived v3 dossier (Arevon Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/bechtel.profile.v1.json">bechtel.profile.v1.json</a> — Archived v1 dossier (Bechtel)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/bechtel.profile.v3.json">bechtel.profile.v3.json</a> — Archived v3 dossier (Bechtel)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/black-veatch.profile.v1.json">black-veatch.profile.v1.json</a> — Archived v1 dossier (Black & Veatch)
@@ -440,6 +441,7 @@ Last updated: `2026-09-07 03:52:59 AM EST` · Repo version: `v05.03r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v2.json">catl.profile.v2.json</a> — Archived v2 dossier (CATL)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v3.json">catl.profile.v3.json</a> — Archived v3 dossier (CATL)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v5.json">catl.profile.v5.json</a> — Archived v5 dossier (CATL)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/compass-datacenters.profile.v4.json">compass-datacenters.profile.v4.json</a> — Archived v4 dossier (Compass Datacenters)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/constellation-energy.profile.v1.json">constellation-energy.profile.v1.json</a> — Archived v1 dossier (Constellation Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/constellation-energy.profile.v3.json">constellation-energy.profile.v3.json</a> — Archived v3 dossier (Constellation Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/core-scientific.profile.v1.json">core-scientific.profile.v1.json</a> — Archived v1 dossier (Core Scientific)
@@ -494,6 +496,7 @@ Last updated: `2026-09-07 03:52:59 AM EST` · Repo version: `v05.03r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v2.json">google.profile.v2.json</a> — Archived v2 dossier (Google)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v3.json">google.profile.v3.json</a> — Archived v3 dossier (Google)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v4.json">google.profile.v4.json</a> — Archived v4 dossier (Google)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/google.profile.v8.json">google.profile.v8.json</a> — Archived v8 dossier (Google)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitachi-energy.profile.v1.json">hitachi-energy.profile.v1.json</a> — Archived v1 dossier (Hitachi Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitachi-energy.profile.v3.json">hitachi-energy.profile.v3.json</a> — Archived v3 dossier (Hitachi Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitachi-energy.profile.v4.json">hitachi-energy.profile.v4.json</a> — Archived v4 dossier (Hitachi Energy)
@@ -506,6 +509,7 @@ Last updated: `2026-09-07 03:52:59 AM EST` · Repo version: `v05.03r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v8.json">hithium.profile.v8.json</a> — Archived v8 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v9.json">hithium.profile.v9.json</a> — Archived v9 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v10.json">hithium.profile.v10.json</a> — Archived v10 dossier (Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司))
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v11.json">hithium.profile.v11.json</a> — Archived v11 dossier (Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v1.json">hitt.profile.v1.json</a> — Archived v1 dossier (HITT Contracting)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v3.json">hitt.profile.v3.json</a> — Archived v3 dossier (HITT)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v4.json">hitt.profile.v4.json</a> — Archived v4 dossier (HITT Contracting)
@@ -516,6 +520,7 @@ Last updated: `2026-09-07 03:52:59 AM EST` · Repo version: `v05.03r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v2.json">huawei-digital-power.profile.v2.json</a> — Archived v2 dossier (Huawei Digital Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v4.json">huawei-digital-power.profile.v4.json</a> — Archived v4 dossier (Huawei Digital Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v5.json">huawei-digital-power.profile.v5.json</a> — Archived v5 dossier (Huawei Digital Power)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v6.json">huawei-digital-power.profile.v6.json</a> — Archived v6 dossier (Huawei Digital Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hunt-energy-network.profile.v1.json">hunt-energy-network.profile.v1.json</a> — Archived v1 dossier (Hunt Energy Network)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hyperstrong.profile.v2.json">hyperstrong.profile.v2.json</a> — Archived v2 dossier (HyperStrong)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hyperstrong.profile.v3.json">hyperstrong.profile.v3.json</a> — Archived v3 dossier (HyperStrong (Beijing HyperStrong Technology))

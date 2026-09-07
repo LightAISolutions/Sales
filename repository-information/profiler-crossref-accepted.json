@@ -61,6 +61,18 @@
       "pair": "brookfield x stack-infrastructure",
       "why": "An open question that genuinely stands unanswered on both sides. Both dossiers independently record the same June 2026 Bloomberg-sourced report that Blue Owl is preparing a sale of STACK's Asia-Pacific portfolio with Brookfield among the reported suitors, and both mark it unconfirmed. STACK's matched passage describes the construction of that portfolio, not the sale process, so it cannot close the question. No party has confirmed and no first-party source exists on either side.",
       "when": "2026-09-06"
+    },
+    {
+      "id": "6b7685094bf1",
+      "pair": "lightsource-bp x hithium",
+      "why": "Phase 1 (F2) added the hithium → lightsource-bp customer edge at hithium v12; its context restates the Woolooga deal and does not answer Lightsource's open question (whether Stage 1 energized on the mid-2026 schedule). Hithium's registered sources carry no energization date; the question stays with Lightsource's record.",
+      "when": "2026-09-07"
+    },
+    {
+      "id": "d55d105703c5",
+      "pair": "lightsource-bp x hithium",
+      "why": "Same edge, same v12 edit. Whether the under-construction Hithium BESS and its contract transferred to Aula Energy in the February 2026 portfolio sale is unresolved in Lightsource's record, and Hithium's dossier repeats the uncertainty rather than resolving it — no Hithium source addresses the asset sale.",
+      "when": "2026-09-07"
     }
   ]
 }

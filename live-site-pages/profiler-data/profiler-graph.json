@@ -4912,7 +4912,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power — announced at ~$4.75B in cash plus assumed debt, booked at USD 5,868m total purchase price in Alphabet's Q2 2026 10-Q; 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
      "src": "",
      "from": "b"
     },
@@ -6970,7 +6970,7 @@
     {
      "where": "Capabilities · CAISO standalone BESS fleet",
      "date": "",
-     "text": "The fastest per-GWh CAISO storage execution in the IPP tier — five operating utility-scale California BESS by mid-2025, all Tesla, mostly Tenaska-originated (Condor, Peregrine, Nighthawk; Avocet aligned).",
+     "text": "The fastest per-GWh CAISO storage execution in the IPP tier — all Tesla, mostly Tenaska-originated (Condor, Peregrine, Nighthawk; Avocet aligned).",
      "src": "",
      "from": "a"
     },
@@ -9270,7 +9270,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's 1 GW Bloom Energy framework is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed.",
+     "text": "Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's Bloom Energy framework (up to 1 GW and USD 5bn at launch; USD 25bn of total capex after the Q2 2026 expansion) is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed.",
      "src": "",
      "from": "b"
     },
@@ -9284,7 +9284,7 @@
     {
      "where": "Capabilities · Campus power and the 'co-serve' utility model",
      "date": "",
-     "text": "Brookfield Infrastructure's 'USD 5 billion strategic partnership with Bloom Energy to install up to 1 GW of behind-the-meter power' is a sponsor-level programme that no source ties to Compass.",
+     "text": "Brookfield Infrastructure's Bloom Energy framework — launched as a 'USD 5 billion strategic partnership with Bloom Energy to install up to 1 GW of behind-the-meter power' and expanded fivefold to USD 25bn of total capex in Q2 2026, per Bloom Energy's Form 10-Q for the quarter ended 30 June 2026 and confirmed in Brookfield Infrastructure's Q2 2026 results — is a sponsor-level programme that no source ties to Compass.",
      "src": "",
      "from": "b"
     }
@@ -9581,7 +9581,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's 1 GW Bloom Energy framework is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed.",
+     "text": "Basis: the Phoenix '191 MW Tier-4 diesel-powered microgrid under development' (Hawkins, May 2025), the Storm Fern statement that it can 'island' facilities on HVO generators, and the Abbott-standards commitment to reduce load during grid stress; against this, Brookfield's Bloom Energy framework (up to 1 GW and USD 5bn at launch; USD 25bn of total capex after the Q2 2026 expansion) is never tied to Compass, and no on-site prime power, PPA or battery project is disclosed.",
      "src": "",
      "from": "b"
     },
@@ -9596,6 +9596,13 @@
      "where": "Key Judgments",
      "date": "",
      "text": "Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the first clause describes Compass, and imprecisely — it is co-controlled by Brookfield Infrastructure and Ontario Teachers' with KKR at asset level; the 1.8 GW / USD 16.1 billion figures are EdgeCore's January 2026 release and Joliet is Hillwood and PowerHouse's campus (Compass's Illinois campus is Hoffman Estates, 200 MW).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Campus power and the 'co-serve' utility model",
+     "date": "",
+     "text": "Brookfield Infrastructure's Bloom Energy framework — launched as a 'USD 5 billion strategic partnership with Bloom Energy to install up to 1 GW of behind-the-meter power' and expanded fivefold to USD 25bn of total capex in Q2 2026, per Bloom Energy's Form 10-Q for the quarter ended 30 June 2026 and confirmed in Brookfield Infrastructure's Q2 2026 results — is a sponsor-level programme that no source ties to Compass.",
      "src": "",
      "from": "b"
     },
@@ -26763,7 +26770,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power — announced at ~$4.75B in cash plus assumed debt, booked at USD 5,868m total purchase price in Alphabet's Q2 2026 10-Q; 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
      "src": "",
      "from": "b"
     },
@@ -28264,7 +28271,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power — announced at ~$4.75B in cash plus assumed debt, booked at USD 5,868m total purchase price in Alphabet's Q2 2026 10-Q; 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
      "src": "",
      "from": "a"
     },
@@ -28280,6 +28287,13 @@
      "date": "",
      "text": "(High confidence) We assess Google has chosen ownership over procurement in energy: buying Intersect Power, co-developing energy parks, and anchoring first-of-kind storage (iron-air 30 GWh) and fusion offtakes make it the hyperscaler most likely to shape — rather than just consume — the storage market.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-23",
+     "text": "Alphabet's Q2 2026 10-Q records the final Intersect Power purchase-price allocation: USD 5,868m total — goodwill USD 2,174m, property and equipment USD 5,129m, debt assumed USD 1,214m — The 10-Q figure is the one to carry: it sits about USD 1.1bn above the ~$4.75B cash headline because it folds in assumed debt and purchase-price adjustments — the same allocation Intersect Power's own dossier reads from this filing. The announced figure is kept in this dossier as the announcement, not the price.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
      "from": "a"
     },
     {
@@ -28613,7 +28627,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power — announced at ~$4.75B in cash plus assumed debt, booked at USD 5,868m total purchase price in Alphabet's Q2 2026 10-Q; 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
      "src": "",
      "from": "a"
     },
@@ -28877,7 +28891,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power, ~$4.75B — 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
+     "text": "BOTTOM LINE UP FRONT: Google is the hyperscaler most structurally invested in storage-anchored energy: it bought a renewables developer outright (Intersect Power — announced at ~$4.75B in cash plus assumed debt, booked at USD 5,868m total purchase price in Alphabet's Q2 2026 10-Q; 2.2 GW solar + 2.4 GWh BESS, closed March 2026), anchored the largest battery project ever announced by energy capacity (300 MW / 30 GWh Form Energy iron-air, Minnesota), and signed the largest US solar+storage PPA (Steel River, up to 2.5 GW solar + 2.9 GWh BESS) — while its TPU v7 (Ironwood) became the first credible external threat to NVIDIA (Anthropic up to ~1M TPUs; Meta a multi-billion TPU lessee).",
      "src": "",
      "from": "a"
     },
@@ -30565,6 +30579,16 @@
    "a": "hithium",
    "b": "lightsource-bp",
    "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Woolooga BESS Stage 1, Queensland: 128 × 5 MWh containers (640 MWh) — Hithium's Australian grid-scale market entry and a prospectus-roster customer this dossier had named but not curated.",
+     "context": "Lightsource bp's Woolooga BESS Stage 1 (222 MW / 640 MWh, Queensland) runs on 128 Hithium 5 MWh containers on 314 Ah LFP cells with 25-year warranties, with INTEC partnering on O&M; Hithium's president of global business framed the December 2024 award as a significant move into the Australian market. Hithium's own HKEX prospectus coverage (ess-news, March 2025) then named Lightsource bp among its flagship customers alongside Jupiter Power, Samsung C&T, Datang and Longyuan Power.\n\nLightsource bp's dossier reads the relationship as real but single-deal and geographically fenced: its US book is FEOC-clean by design, the larger follow-on Queensland battery (Lower Wonga, 843 MWh) went to Gotion, and the Woolooga asset itself may have passed to Aula Energy in the February 2026 Australian portfolio sale — so no framework and no incumbency lock. This customer edge was added at v12 (2026-09-07) to match the supplier edge Lightsource bp's dossier already carried.",
+     "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-project/",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "640 MWh (128 × 5 MWh)",
+     "via": "5 MWh LFP containers"
+    },
     "b": {
      "type": "supplier",
      "note": "Woolooga BESS Stage 1: 128 × 5 MWh containers (640 MWh) — Hithium's Australian market entry, geographically fenced from the FEOC-clean US book.",
@@ -31791,7 +31815,7 @@
     "a": {
      "type": "other",
      "note": "Component-tier vendor beneath Huawei's integrated tier — and exposed to the same FCC rule's unresolved wired-management question.",
-     "context": "Chinese brokerages map Huawei as the anchor of the domestic AIDC power ecosystem above component players like Kehua, Kstar, Megmeet and Sinexcel. The July 2026 FCC Covered List test (bi-directional conversion AND remote connectivity) leaves unresolved whether wired management satisfies 'another similar connection' — the question that determines how far the rule reaches into data-center rack power from component vendors such as Megmeet.",
+     "context": "Chinese brokerages map Huawei as the anchor of the domestic AIDC power ecosystem above component players like Kehua, Kstar, Megmeet and Sinexcel. The July 2026 FCC Covered List test (bi-directional conversion AND remote connectivity) leaves unresolved on the fact sheet's wording whether wired management satisfies 'another similar connection' (Cooley's 31 July note, independent tier, reads the second security determination as covering wired as well as wireless connections) — the question that determines how far the rule reaches into data-center rack power from component vendors such as Megmeet.",
      "source": "https://docs.fcc.gov/public/attachments/DOC-423682A1.pdf",
      "status": "active"
     }
@@ -31807,7 +31831,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Whether wired management satisfies \"another similar connection\" is unresolved and determines how far the rule reaches into wired-managed power electronics, including data-center rack power from component vendors such as Megmeet.",
+     "text": "On the second prong, Cooley's 31 July note (independent tier) reads the second security determination as making clear the connections 'could be wireless or wired' — which, if right, would moot a wired-links defence; whether wired management is caught, and so how far the rule reaches into wired-managed power electronics including data-center rack power from component vendors such as Megmeet, is this dossier's reading of an ambiguity the fact sheet's wording leaves open, not a settled point.",
      "src": "",
      "from": "a"
     }
@@ -31858,8 +31882,8 @@
    "curated": {
     "a": {
      "type": "competitor",
-     "note": "Inverter duopoly partner (55% combined share) — and the rival that absorbed the Western bans' shock and took the Saudi prize.",
-     "context": "Huawei and Sungrow have been an effective PV-inverter duopoly (#1 and #2 for a decade; 55% combined global share), and they diverge exactly where it matters: Sungrow, not Huawei, won and grid-connected Saudi Arabia's 7.8 GWh SEC storage project next door to Huawei's Red Sea showcase, and BYD+Sungrow took 87% of 2025 Middle East BESS share.\n\nOn the regulatory front the July 2026 FCC Covered List action closed the US to the whole Chinese inverter bloc on origin grounds — Huawei was already excluded (Entity List, NDAA 889), so Sungrow absorbed the incremental damage; the EU's April 2027 phase-out names both companies.",
+     "note": "Inverter duopoly partner (55% combined share) — and the rival this dossier assesses as absorbing the Western bans' shock, and the one that took the Saudi prize.",
+     "context": "Huawei and Sungrow have been an effective PV-inverter duopoly (#1 and #2 for a decade; 55% combined global share), and they diverge exactly where it matters: Sungrow, not Huawei, won and grid-connected Saudi Arabia's 7.8 GWh SEC storage project next door to Huawei's Red Sea showcase, and BYD+Sungrow took 87% of 2025 Middle East BESS share.\n\nOn the regulatory front the July 2026 FCC Covered List action closed the US to the whole Chinese inverter bloc on origin grounds — Huawei was already excluded (Entity List, NDAA 889), so this dossier assesses Sungrow as absorbing the incremental damage — a one-sided read: the market-value loss and the wired-links argument attributed to Sungrow in earlier versions are not carried by any source registered here or by Sungrow's own dossier (see Judgment 5); the EU's April 2027 phase-out names both companies (Euronews, independent tier).",
      "source": "https://docs.fcc.gov/public/attachments/DOC-423682A1.pdf",
      "status": "active"
     }
@@ -31889,14 +31913,21 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Huawei was already excluded by the Entity List and NDAA 889, so its incremental loss is minimal; Sungrow, which retains US market access, absorbed the shock instead, shedding roughly CNY 100B (~$14.8B) of market value over the following month.",
+     "text": "Huawei was already excluded by the Entity List and NDAA 889, so its incremental loss is minimal; Sungrow, which retains US market access, is the vendor this dossier assesses as absorbing the shock instead.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Two limits on scope are load-bearing and should be tracked rather than assumed: the prohibition is prospective only, leaving pre-28-July authorizations saleable, and the definition requires BOTH bi-directional DC-AC conversion AND remote connectivity via \"Wi-Fi, cellular, Bluetooth or another similar connection\" — Sungrow has publicly argued its products fall outside on the second prong because it restricts connection activity to wired links.",
+     "text": "Two Sungrow-side claims carried in earlier versions of this judgment — that Sungrow shed roughly CNY 100B (~$14.8B) of market value over the following month, and that Sungrow has publicly argued its products fall outside the second prong because it restricts connection activity to wired links — are this dossier's own assertions: none of the sources registered here supports either (the FCC fact sheet, a government publication in the independent tier; the Cooley, Morgan Lewis and National Law Review notes and the Energy-Storage.News scope-clarity piece, all independent tier; the Reuters-via-US News draft-ban report, independent tier and dated before the action), and Sungrow's own dossier (v8) carries neither.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Both are retained as one-sided and unconfirmed pending Sungrow's own record (Phase 2a of the integrated remediation plan, recorded 2026-09-07).",
      "src": "",
      "from": "a"
     },

@@ -244,17 +244,6 @@
    "scale": "3 GWh supply + 2.8 GWh Trimount design win"
   },
   {
-   "slug": "lightsource-bp",
-   "type": "customer",
-   "note": "Woolooga BESS Stage 1, Queensland: 128 × 5 MWh containers (640 MWh) — Hithium's Australian grid-scale market entry and a prospectus-roster customer this dossier had named but not curated.",
-   "context": "Lightsource bp's Woolooga BESS Stage 1 (222 MW / 640 MWh, Queensland) runs on 128 Hithium 5 MWh containers on 314 Ah LFP cells with 25-year warranties, with INTEC partnering on O&M; Hithium's president of global business framed the December 2024 award as a significant move into the Australian market. Hithium's own HKEX prospectus coverage (ess-news, March 2025) then named Lightsource bp among its flagship customers alongside Jupiter Power, Samsung C&T, Datang and Longyuan Power.\n\nLightsource bp's dossier reads the relationship as real but single-deal and geographically fenced: its US book is FEOC-clean by design, the larger follow-on Queensland battery (Lower Wonga, 843 MWh) went to Gotion, and the Woolooga asset itself may have passed to Aula Energy in the February 2026 Australian portfolio sale — so no framework and no incumbency lock. This customer edge was added at v12 (2026-09-07) to match the supplier edge Lightsource bp's dossier already carried.",
-   "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-project/",
-   "via": "5 MWh LFP containers",
-   "status": "active",
-   "since": "2024-12",
-   "scale": "640 MWh (128 × 5 MWh)"
-  },
-  {
    "slug": "on-energy",
    "type": "competitor",
    "note": "ON.energy's FEOC-clean AI UPS (5 GW Crusoe anchor) is defining the US AIDC socket Hithium targets.",
@@ -1108,11 +1097,6 @@
    "date": "2025-03-27"
   },
   {
-   "label": "Energy-Storage.News — Lightsource bp picks Hithium to supply 640 MWh BESS for Australia project (Woolooga Stage 1, 128 × 5 MWh)",
-   "url": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-project/",
-   "date": "2024-12-18"
-  },
-  {
    "label": "PR Newswire — sodium-ion ∞Cell N162Ah launch (Dec 2024)",
    "url": "https://www.prnewswire.com/news-releases/hithium-launches-the-first-specialized-sodium-ion-battery-for-utility-scale-energy-storage--cell-n162ah-302336013.html",
    "date": "2024-12"
@@ -1134,6 +1118,6 @@
    "url": "https://en.hithium.com/products/residential.html"
   }
  ],
- "lastUpdated": "2026-09-07",
- "profileVersion": 12
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 11
 }

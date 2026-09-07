@@ -183,7 +183,7 @@
       "tagline": "The Tesla-locked CAISO machine — seven-for-seven Megapack across ~5.6 GWh, pension-owned (APG/CalSTRS), transferability pioneer ($191M JPMorgan first), and an on-record domestic-supply doctrine.",
       "hq": "Scottsdale, AZ, US",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "arevonenergy.com"
       ],
@@ -465,12 +465,12 @@
       "tagline": "Dallas single-tenant hyperscale campus developer co-controlled by Brookfield Infrastructure and Ontario Teachers' (October 2023) with KKR at asset level since December 2025 — a manufacturing model (84% offsite Moonraker building, Schneider factory on the Red Oak campus), a serial ABS programme with the first Moody's AAA on hyperscale collateral, Meridian's ~500 MW Mississippi Power contract, and a 2026 consent fight that lost the Prince William Digital Gateway and won a second Red Oak campus 4–1.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "compassdatacenters.com"
       ],
-      "srcTotal": 104,
-      "srcFirstPct": 42,
+      "srcTotal": 105,
+      "srcFirstPct": 43,
       "kpiNorm": false
     },
     {
@@ -1076,7 +1076,7 @@
       "hq": "Mountain View, CA, USA",
       "ticker": "NASDAQ: GOOGL",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "abc.xyz",
         "google",
@@ -1153,13 +1153,13 @@
       "tagline": "Stationary-only LFP cell and BESS specialist — Top-2 2025 ESS cell shipments; now fielding a four-SKU lithium-sodium AIDC line (zero named customers yet); financing remains the primary watch item",
       "hq": "Xiamen, China",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "en.hithium.com",
         "hithium.com"
       ],
-      "srcTotal": 51,
-      "srcFirstPct": 45,
+      "srcTotal": 52,
+      "srcFirstPct": 44,
       "kpiNorm": true
     },
     {
@@ -1206,7 +1206,7 @@
       "tagline": "The excluded benchmark — #1 in prefab modular DCs and PV inverters, CNY 77.3B revenue; US-banned and EU-phasing-out, so its AIDC market is the Gulf and APAC.",
       "hq": "Shenzhen, China",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "digitalpower.huawei.com",
         "huawei.com"

@@ -111,8 +111,8 @@ Recorded at the X3 close (2026-09-07, v05.01r) from `CLASSROOM-CURRICULUM-PLAN.m
 | Phase | Model · effort | Status |
 |-------|----------------|--------|
 | 0 · record and criterion | Fable 5.1 High | **Done — v05.02r (2026-09-07).** §9.4 split into X3a Done / X3b Open; §9.3 criterion amended with the defect noted; `report-pins-verified.json` seeded with 38 pins after re-confirming the triples against a live checker run; `check-profiler-reports.py` skips superseded reports for drift and consults the verified list — 0 errors / 0 warnings / 38 quiet at v05.02r; this file persisted. **X3b accepted by the developer and closed at v05.03r** |
-| 1 · five zero-research dossier fixes | Fable 5.1 Medium | Open — next |
-| 2a · `sungrow` + `catl` research | Opus 5 xhigh | Open |
+| 1 · five zero-research dossier fixes | Fable 5.1 Medium | **Done — v05.04r (2026-09-07).** `hithium` v12 (F2: `lightsource-bp` customer edge), `google` v9 (F3: USD 5,868m 10-Q allocation, announced ~$4.75B kept as the announcement), `compass-datacenters` v5 (F4: Bloom framework USD 5bn → 25bn), `arevon` v4 (F5: both BESS counts stated with their definitions), `huawei-digital-power` v7 (F6: Sungrow attributions marked one-sided and traced to the registered tier; the CNY 100B and wired-links claims carried unconfirmed to 2a); all five archived. Six checkers exit 0; `check-profiler-reports.py` 0 errors / exactly the three `hithium` pins re-warning, left loud; two new crossref candidates (lightsource-bp × hithium, both Lightsource-side open questions Hithium's record cannot answer) adjudicated and accepted with reasons |
+| 2a · `sungrow` + `catl` research | Opus 5 xhigh | Open — next. F6 residue recorded at `huawei-digital-power` v7 Judgment 5: the ~CNY 100B market-value loss and the wired-links argument are unsupported by any registered source and need Sungrow's own record |
 | 2b · `tract` citation read | Fable 5.1 High | Open |
 | 3 · curriculum re-plan + skeleton review | Fable 5.1 xhigh | Open |
 | 4 · author 20 lessons | Opus 5 xhigh, one per session | Open — 0 of 20 |

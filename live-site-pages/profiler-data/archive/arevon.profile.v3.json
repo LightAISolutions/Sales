@@ -17,7 +17,7 @@
   {
    "name": "CAISO standalone BESS fleet",
    "description": "Saticoy (100 MW/400 MWh, Oxnard, COD Jun 2021, SCE 20-yr; co-owned with S&B USA); Condor (200 MW/800 MWh, Grand Terrace, COD Jul/Aug 2024, SCE 15-yr, Tesla O&M); Peregrine (200 MW/400 MWh, Barrio Logan San Diego, COD Jun 2025, ~$300M, SCE RA); Nighthawk (300 MW/1,200 MWh, Poway, COD Aug 12, 2026, PG&E long-term offtake); Avocet (200 MW/800 MWh, Carson, San Diego Community Power 15-yr ESSA, >$350M, COD target Q2 2026 — status unconfirmed); Cormorant (250 MW/1,000 MWh, Daly City, construction Mar 2026, $600M, MCE offtake, COD 2027 — the one project whose OEM is unnamed).",
-   "positioning": "The fastest per-GWh CAISO storage execution in the IPP tier — all Tesla, mostly Tenaska-originated (Condor, Peregrine, Nighthawk; Avocet aligned). Two counts of 'operating utility-scale California BESS' circulate in this dossier and they rest on different definitions, so both are stated rather than reconciled: counting standalone batteries only, the project list above supports three operating by mid-2025 (Saticoy 2021, Condor 2024, Peregrine June 2025) and four after Nighthawk (August 2026); counting DC-coupled hybrids as well, the Peregrine entry under Recent Developments (sourced to Arevon's June 2025 release) calls Peregrine the fifth and the Nighthawk entry calls it the sixth — a sequence consistent with Vikings (November 2024) and Eland being counted and the California Flats retrofit (no commissioning date in this record) not, though the record does not date Eland 1 on its own. No source registered here states Arevon's definition. The earlier wording 'five operating utility-scale California BESS by mid-2025' is the company-ordinal count, not a standalone-fleet count (reconciled 2026-09-07).",
+   "positioning": "The fastest per-GWh CAISO storage execution in the IPP tier — five operating utility-scale California BESS by mid-2025, all Tesla, mostly Tenaska-originated (Condor, Peregrine, Nighthawk; Avocet aligned).",
    "soldThrough": "Long-term RA/ESSA contracts with SCE, PG&E, San Diego Community Power, MCE — the California community-choice and IOU offtake stack.",
    "targetSegments": "CAISO resource adequacy and peak capacity.",
    "roadmap": "7-9 GW development pipeline (figures inconsistent across company statements); CDO Shanelle Montana signals growth via pipeline expansion 'and M&A activities.'"
@@ -394,6 +394,6 @@
    "url": "https://arevonenergy.com/"
   }
  ],
- "lastUpdated": "2026-09-07",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }
