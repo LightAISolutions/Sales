@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
   "companies": [
     {
@@ -270,10 +270,11 @@
       "nextReport": "2026-10-31",
       "confirmed": false,
       "source": "Q3 2026 report required by the 2026-10-31 CSRC disclosure deadline; the exact date was unannounced at arming (most A-share companies file in the final week of October)",
-      "lastRefreshed": "2026-08-30",
+      "lastRefreshed": "2026-09-07",
       "watch": [
         "Q3 results and ESS/battery shipment mix",
-        "Data-center and grid storage order momentum",
+        "Zhonhen capital increase: closing must occur within six months of the 14 August 2026 signing (SAMR filing is the gating step) — watch for the first CATL-side disclosure of any kind, which has been absent throughout",
+        "Data-center and grid storage order momentum, and whether the 'compute-electricity coordination' strand acquires a named product or customer",
         "Overseas capacity progress"
       ]
     },
@@ -798,7 +799,7 @@
       "slug": "hithium",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
-      "lastRefreshed": "2026-08-30",
+      "lastRefreshed": "2026-09-07",
       "watch": [
         "ESS cell/system shipments and overseas orders",
         "Capacity and financing milestones"
@@ -835,7 +836,7 @@
       "slug": "huawei-digital-power",
       "cadence": "quarterly",
       "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
-      "lastRefreshed": "2026-08-30",
+      "lastRefreshed": "2026-09-07",
       "watch": [
         "Annual/interim segment figures",
         "US/EU regulatory actions",
@@ -1762,14 +1763,15 @@
     },
     {
       "slug": "sungrow",
-      "nextReport": "2026-08-29",
-      "confirmed": true,
-      "source": "H1 2026 report scheduled 2026-08-29 (SZSE: 300274, announced pre-disclosure date). OVERDUE — the 2026-08-30 one-shot fired (SUCCEEDED) but landed no commit and the dossier still reads 'H1 2026 due late August'. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
-      "lastRefreshed": "2026-08-30",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "source": "Q3 2026 report required by the 2026-10-31 CSRC disclosure deadline; the exact date was unannounced at arming (most A-share companies file in the final week of October). The H1 2026 report published 2026-08-28 has now been folded into the dossier from the SZSE interim report itself, clearing the previous OVERDUE state. HOW TO CONFIRM: SZSE pre-disclosure calendar for 300274.",
+      "lastRefreshed": "2026-09-07",
       "watch": [
-        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
-        "PV inverter and ESS shipment volumes and margins",
-        "Data-center power positioning and overseas order mix"
+        "Q3 2026 revenue and margin: does the H1 pattern hold — ESS carrying the revenue at the lower margin while inverters carry the margin?",
+        "AIDC commercialisation: EnerNeo/800 V HVDC batch orders were guided for 2027; watch for the first named customer, any overseas sampling, and UL certification (both questions Sungrow has so far declined to answer)",
+        "US regime: whether Sungrow pursues a §45X-eligible US manufacturing route, the reach of Executive Order 14420 once DOE defines it, and any FCC conditional-approval filing",
+        "A+H listing: the 24 April 2026 refiling is still pending CSRC/SFC/HKEX clearance and the H1 report does not mention it"
       ]
     },
     {
@@ -2054,7 +2056,7 @@
       "nextReport": "2026-10-30",
       "confirmed": false,
       "source": "PUBLIC COMPANY — SZSE: 002364 (Zhongheng Electric / Zhonhen). NOT an SEC registrant; use SZSE disclosure. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: FY2025 was reported in April 2026 and the dossier notes H1 2026 was NOT published as of 2026-08-18 — so this issuer runs late against the statutory window and the inference is correspondingly weak. Chinese A-share Q3 deadline is 31 October. HOW TO CONFIRM: SZSE disclosure portal.",
-      "lastRefreshed": "2026-09-06",
+      "lastRefreshed": "2026-09-07",
       "watch": [
         "NVIDIA's second 800 VDC white paper (Industry Alignment & Execution, August 2026) names the Panama Architecture as a transformer-rectifier reference. Watch whether that converts into disclosed orders.",
         "OVERDUE-FILING HISTORY: H1 2026 had not appeared by 2026-08-18. If the Q3 report is also late, that is itself the finding and should be recorded rather than treated as a data gap.",

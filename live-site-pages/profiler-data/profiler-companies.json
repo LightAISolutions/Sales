@@ -427,12 +427,12 @@
       "hq": "Ningde, China",
       "ticker": "SZSE: 300750 · HKEX: 3750",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "catl.com"
       ],
-      "srcTotal": 44,
-      "srcFirstPct": 32,
+      "srcTotal": 51,
+      "srcFirstPct": 37,
       "kpiNorm": true
     },
     {
@@ -1211,8 +1211,8 @@
         "digitalpower.huawei.com",
         "huawei.com"
       ],
-      "srcTotal": 21,
-      "srcFirstPct": 29,
+      "srcTotal": 27,
+      "srcFirstPct": 22,
       "kpiNorm": false
     },
     {
@@ -2456,13 +2456,13 @@
       "hq": "Hefei, China",
       "ticker": "SZSE: 300274",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "en.sungrowpower.com",
         "sungrowpower.com"
       ],
-      "srcTotal": 42,
-      "srcFirstPct": 48,
+      "srcTotal": 62,
+      "srcFirstPct": 45,
       "kpiNorm": true
     },
     {
@@ -2848,13 +2848,13 @@
       "hq": "Hangzhou, China",
       "ticker": "SZSE: 002364",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "en.hzzh.com",
         "hzzh.com",
         "zhonhen.com"
       ],
-      "srcTotal": 43,
+      "srcTotal": 45,
       "srcFirstPct": 42,
       "kpiNorm": true
     },

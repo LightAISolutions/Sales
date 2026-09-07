@@ -14,7 +14,7 @@
   "type": "public",
   "ticker": "SZSE: 002364"
  },
- "summary": "BOTTOM LINE UP FRONT: Zhonhen Electric is China's data-center HVDC power leader — #1 at 31% share per Kezhi Consulting's 2025 count, the co-developer of Alibaba's Panama power architecture, and the lead drafter of the national 240V/336V DC standard — now converting that fifteen-year domestic franchise into an 800VDC/AI story while CATL capital-increases RMB 4.1B into its controlling holdco for 49%; the unpublished H1 2026 report (due by 31 August 2026) is the near-term checkpoint. BACKGROUND: Founded 1996 in Hangzhou by Zhu Guoding; listed on the Shenzhen Stock Exchange March 2010. Four reported businesses: data-center power (36.3% of FY2025 revenue), telecom/station energy, grid power-supply systems, and power-digitalization software via subsidiary Beijing Zhonhen Borui, plus an EV charging line. FY2025 revenue RMB 2.137B (+8.9%), attributable net profit RMB 126.4M (+15.3%) — a miss against the ~RMB 164M institutional consensus, per company filings and consensus data from Tonghuashun (the Chinese financial-data platform 10jqka.com.cn). Exports were 4.1% of FY2025 revenue; overseas expansion runs through Singapore — wholly-owned Enervell Power Pte. Ltd. (est. 2024) and the 20%-held SuperX Digital Power JV (est. September 2025, mandate: global HVDC excluding Greater China). Governance requires explicit note: founder and actual controller Zhu Guoding (40.12% voting control) was convicted of securities-market manipulation by the Hangzhou Intermediate Court on 31 December 2025 (three years imprisonment suspended for four, RMB 1M fine); he resigned the chair in 2021 and holds no board or officer seat. His wife Bao Xiaoru has chaired the company since November 2021. Collection gap: no H1 2026 report or profit alert as of 22 August 2026, nine days before the filing deadline.",
+ "summary": "BOTTOM LINE UP FRONT: Zhonhen Electric is China's data-center HVDC power leader — #1 at 31% share per Kezhi Consulting's 2025 count, the co-developer of Alibaba's Panama power architecture, and the lead drafter of the national 240V/336V DC standard — now converting that fifteen-year domestic franchise into an 800VDC/AI story while CATL pays RMB 4.1B for 49% of its controlling holdco; the unpublished H1 2026 report (due by 31 August 2026) is the near-term checkpoint. BACKGROUND: Founded 1996 in Hangzhou by Zhu Guoding; listed on the Shenzhen Stock Exchange March 2010. Four reported businesses: data-center power (36.3% of FY2025 revenue), telecom/station energy, grid power-supply systems, and power-digitalization software via subsidiary Beijing Zhonhen Borui, plus an EV charging line. FY2025 revenue RMB 2.137B (+8.9%), attributable net profit RMB 126.4M (+15.3%) — a miss against the ~RMB 164M institutional consensus, per company filings and consensus data from Tonghuashun (the Chinese financial-data platform 10jqka.com.cn). Exports were 4.1% of FY2025 revenue; overseas expansion runs through Singapore — wholly-owned Enervell Power Pte. Ltd. (est. 2024) and the 20%-held SuperX Digital Power JV (est. September 2025, mandate: global HVDC excluding Greater China). Governance requires explicit note: founder and actual controller Zhu Guoding (40.12% voting control) was convicted of securities-market manipulation by the Hangzhou Intermediate Court on 31 December 2025 (three years imprisonment suspended for four, RMB 1M fine); he resigned the chair in 2021 and holds no board or officer seat. His wife Bao Xiaoru has chaired the company since November 2021. Collection gap: no H1 2026 report or profit alert as of 22 August 2026, nine days before the filing deadline.",
  "ecosystemRole": "We assess Zhonhen as the strongest pure claim on the thesis that NVIDIA's 800VDC transition validates an architecture China already runs at scale — its Panama one-stage 10kV-to-DC conversion predates the Western 800VDC push by six years, and its BAT/operator installed base is the largest HVDC field record anywhere. That validation is now explicit rather than inferred: NVIDIA's August 2026 execution paper names the Panama Architecture as a transformer-rectifier-unit implementation of its own data-hall DC power block (pp. 21–23). Architectural endorsement and commercial inclusion remain separate questions, and only the first has been answered. For US-facing AIDC work its relevance is prospective, not present: exports are 4.1% of revenue, no US entity is on record, it is absent from NVIDIA's published 800VDC partner rosters (whose power-component tier names Delta, Flex Power, Lead Wealth, LiteOn and Megmeet — Hopewind, contrary to Chinese trade coverage, is not on NVIDIA's lists either), and the company itself denied signed agreements with NVIDIA, Meta or Google in August 2025. The competitive read-through: Zhonhen entering the West via the Enervell/SuperX structure tests whether a Chinese HVDC incumbent can sell architecture leadership into markets whose policy stack is being built to exclude Chinese electronics.",
  "productsAndServices": [
   {
@@ -235,9 +235,9 @@
   {
    "date": "2026-04-09",
    "category": "partnership",
-   "headline": "CATL framework agreement announced: intent to subscribe RMB 4,099,858,823.53 of newly issued registered capital for 49% of the controlling holdco, with a 99.6970% stake in CATL's Times Tianyuan valued at RMB 1,196,364,000 as the equity leg and RMB 2,903,494,823.53 in cash",
-   "read": "First public confirmation of the CATL tie-up after months of market speculation; the definitive terms landed four months later — past the framework's own two-month deadline — with the same total but a very different mix. Correction recorded at v7: an earlier version of this entry reported a \"~43.5% premium to appraised value\". Neither Zhonhen announcement discloses any appraisal of the holdco or any premium. The only premium in the record is press-computed and measured against market value, not appraised value — 野马财经 puts it at ~45%, from an implied holdco valuation of about RMB 8.4B against the roughly RMB 5.8B market value of its 35.56% listco stake at the 8 April close of RMB 29.03. The only appraisal in the primary record runs the other way: Times Tianyuan was appraised at RMB 1,239,820,000 and priced at RMB 1,200,000,000, a ~3.2% discount. No source reconciles the 43.5% figure to a document.",
-   "source": "Announcement 2026-03, cninfo, 2026-04-09; 野马财经 premium computation, 2026-04-12"
+   "headline": "CATL framework agreement announced: intent to acquire 49% of the controlling holdco at a ~43.5% premium to appraised value",
+   "read": "First public confirmation of the CATL tie-up after months of market speculation; the definitive terms landed four months later with a different cash/equity split.",
+   "source": "Announcement 2026-03, cninfo, 2026-04-09; 21jingji"
   },
   {
    "date": "2026-01-13",
@@ -308,8 +308,8 @@
   {
    "slug": "catl",
    "type": "investor",
-   "note": "RMB 4.1B capital increase for 49% of the controlling holdco + same-day strategic cooperation across compute-electricity coordination.",
-   "context": "August 14, 2026: CATL signed definitive agreements — RMB 4,099,858,823.53 (RMB 3,511,858,823.53 cash plus a ~49% stake in Times Tianyuan valued RMB 588,000,000) for 49.00% of controlling holdco Zhonhen Technology Investment, with nomination rights to one listco director, one deputy GM and a finance-department manager, one of three holdco board seats, and a quorum right that no holdco shareholders' meeting can be held without it — all conditioned on holding at least 33%. A 60-month lock-up binds both sides. The same-day four-party strategic cooperation agreement — holdco, listco, CATL and Times Tianyuan — spans computing-power infrastructure, charging/swap through Zhonhen Yunqi and power trading through Beijing Zhonhen Borui, converting a data-center power vendor into the equipment arm of a 'compute-electricity coordination' platform. Closing within six months of signing.\n\nThe structure is a capital increase (增资), not a purchase of existing shares, and the distinction is load-bearing: CATL subscribes newly issued registered capital and the cash is paid into the target company's account, so founder Zhu Guoding and his wife Bao Xiaoru fall from 70%/30% to 35.70%/15.30% purely by dilution — neither sells a share nor receives a yuan, and as concert parties they retain 51% and with it actual control. English-language coverage that renders this as CATL \"buying\" or \"acquiring\" a stake misdescribes where the money goes.\n\nProvenance: the transaction is documented from this side only. CATL has published nothing naming Zhonhen — not on the exchange, not in its FY2025 annual report, Q1 2026 report or either language edition of its H1 2026 interim report, not on its newsroom or IR announcement list. Its only trace is an unnamed H1 2026 sentence about integrating power electronics and computing-power synergy resources \"through investment and collaboration\". See `catl` v7.",
+   "note": "RMB 4.1B for 49% of the controlling holdco + same-day strategic cooperation across compute-electricity coordination.",
+   "context": "August 14, 2026: CATL signed definitive agreements — RMB 4.099B (RMB 3.512B cash + a 49% stake in Times Tianyuan valued RMB 588M) for 49% of controlling holdco Zhonhen Technology Investment, with nomination rights to one listco director, one deputy GM and a finance-department manager; founder Zhu Guoding remains actual controller. The same-day strategic cooperation spans computing-power infrastructure, charging/swap and power trading — converting a data-center power vendor into the equipment arm of a 'compute-electricity coordination' platform. Closing within six months.",
    "source": "http://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
    "status": "announced",
    "since": "2026-08",
@@ -515,6 +515,11 @@
  },
  "sources": [
   {
+   "label": "NVIDIA — 800 VDC Architecture: Industry Alignment & Execution (white paper, 36 pp.); registration-gated, hosted on NVIDIA's 800 VDC architecture hub",
+   "url": "https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/",
+   "date": "2026-08"
+  },
+  {
    "label": "Announcement 2026-28 — CATL definitive agreements (capital increase, shareholders' & strategic-cooperation agreements)",
    "url": "http://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
    "date": "2026-08-15"
@@ -528,11 +533,6 @@
    "label": "cls.cn — '41亿增资正式启动'",
    "url": "https://www.cls.cn/detail/2454953",
    "date": "2026-08-14"
-  },
-  {
-   "label": "NVIDIA — 800 VDC Architecture: Industry Alignment & Execution (white paper, 36 pp.); registration-gated, hosted on NVIDIA's 800 VDC architecture hub",
-   "url": "https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/",
-   "date": "2026-08"
   },
   {
    "label": "ESOP-3 draft (hurdles, participants, pricing)",
@@ -560,11 +560,6 @@
    "date": "2026-04-21"
   },
   {
-   "label": "野马财经 via Tencent News — the only located premium computation on the CATL deal (~45% against the market value of the holdco's listco stake at the 8 April close), and the record that CATL gave no response as at 10 April 2026",
-   "url": "https://news.qq.com/rain/a/20260412A04F6400",
-   "date": "2026-04-12"
-  },
-  {
    "label": "21jingji — CATL 41亿 intent coverage",
    "url": "https://www.21jingji.com/article/20260410/c961315bf508c984a18571d019f04e32.html",
    "date": "2026-04-10"
@@ -572,11 +567,6 @@
   {
    "label": "Announcement 2026-03 — CATL framework agreement",
    "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225083748.PDF",
-   "date": "2026-04-09"
-  },
-  {
-   "label": "Zhonhen Electric Announcement 2026-03 — the CATL framework agreement of 8 April 2026: RMB 4,099,858,823.53 subscribing RMB 14,411,764.71 of newly issued holdco registered capital, with a 99.6970% Times Tianyuan stake valued at RMB 1,196,364,000 as the equity leg",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-04-09/1225083748.PDF",
    "date": "2026-04-09"
   },
   {
@@ -735,6 +725,6 @@
    "url": "http://basic.10jqka.com.cn/002364/worth.html"
   }
  ],
- "lastUpdated": "2026-09-07",
- "profileVersion": 7
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

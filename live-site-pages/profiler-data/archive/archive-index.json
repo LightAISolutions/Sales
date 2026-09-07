@@ -337,6 +337,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-08-30",
       "supersededBy": 6
+    },
+    {
+      "file": "catl.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-07",
+      "supersededBy": 7
     }
   ],
   "constellation-energy": [
@@ -837,6 +843,12 @@
       "profileVersion": 11,
       "archivedAt": "2026-09-07",
       "supersededBy": 12
+    },
+    {
+      "file": "hithium.profile.v12.json",
+      "profileVersion": 12,
+      "archivedAt": "2026-09-07",
+      "supersededBy": 13
     }
   ],
   "hitt": [
@@ -909,6 +921,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-09-07",
       "supersededBy": 7
+    },
+    {
+      "file": "huawei-digital-power.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-09-07",
+      "supersededBy": 8
     }
   ],
   "hyperstrong": [
@@ -1841,6 +1859,12 @@
       "profileVersion": 7,
       "archivedAt": "2026-09-06",
       "supersededBy": 8
+    },
+    {
+      "file": "sungrow.profile.v8.json",
+      "profileVersion": 8,
+      "archivedAt": "2026-09-07",
+      "supersededBy": 9
     }
   ],
   "sunwoda": [
@@ -2209,6 +2233,12 @@
       "profileVersion": 5,
       "archivedAt": "2026-08-30",
       "supersededBy": 6
+    },
+    {
+      "file": "zhonhen.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-09-07",
+      "supersededBy": 7
     }
   ],
   "piller": [

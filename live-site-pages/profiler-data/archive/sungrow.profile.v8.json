@@ -14,8 +14,8 @@
   "type": "public",
   "ticker": "SZSE: 300274"
  },
- "summary": "BOTTOM LINE UP FRONT: We assess Sungrow still holds the strongest ranking position among covered integrators — the first vendor to hold both Wood Mackenzie 2026 crowns — but 2026 is the year the position stopped paying and the year the US closed: H1 revenue fell 28.99%, storage reached exactly half of revenue on a falling margin while inverters became the higher-margin line, and the FCC's Covered List action bars new US equipment authorizations under an origin test that names no company and bites the largest single importer hardest. BACKGROUND: Sungrow is one of the world's largest manufacturers of solar PV inverters and battery energy storage systems, founded in 1997 by Hefei University of Technology academic Cao Renxian, with additional businesses in wind power converters, EV drive/charging equipment, floating PV, hydrogen electrolyzers, renewable plant development and, since January 2026, a dedicated AI data-centre power supply unit whose EnerNeo solid-state transformer converts medium-voltage AC directly to 800 V DC. Listed on Shenzhen's ChiNext since 2011; a Hong Kong H-share application was re-filed on 24 April 2026 after the October 2025 filing lapsed, and remains pending CSRC, SFC and HKEX clearance.",
- "ecosystemRole": "Ranked No. 1 in BOTH Wood Mackenzie's Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (2026 edition, assessing 2025) — the first company to take the integrator top spot from Tesla — and first on BloombergNEF's inverter bankability ranking for a sixth time. Company-reported 2025 shipments: 43 GWh of storage (+53.5%) and 143 GW of inverters. ESS revenue overtook inverters as the largest segment in FY2025 (41.8% of revenue at a 36.5% gross margin) and reached exactly 50.00% in H1 2026, though at a 32.43% margin against the inverter line's 42.72%. Overseas revenue was 73.40% of the H1 2026 total. Sungrow is also the corpus's most exposed vendor to the July–August 2026 US inverter regime: PV Tech Research identifies it as the largest single importer of solar PV inverters into the United States, and its own guidance is a gradual pullback from that market.",
+ "summary": "BOTTOM LINE UP FRONT: We assess Sungrow holds the strongest current competitive position among covered integrators — both Wood Mackenzie #1 rankings, with ESS now its largest and high-margin segment; the pending A+H listing and the ~10 GWh European PowerTitan 3.0 target are the 2026 checkpoints. BACKGROUND: Sungrow is one of the world's largest manufacturers of solar PV inverters and battery energy storage systems, founded in 1997 by Hefei University of Technology academic Cao Renxian, with additional businesses in wind power converters, EV drive/charging equipment, floating PV, hydrogen electrolyzers, and renewable plant development. Listed on Shenzhen's ChiNext since 2011; a Hong Kong H-share application was re-filed in April 2026 (the first, from October 2025, lapsed) — the A+H structure was pending as of August 2026.",
+ "ecosystemRole": "Ranked No. 1 in BOTH Wood Mackenzie's Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (2026 edition, assessing 2025) — the first company to take the integrator top spot from Tesla. Company-reported 2025 shipments: 43 GWh of storage (+53.5%) and 143 GW of inverters. ESS revenue overtook inverters as the largest segment in FY2025 (41.8% of revenue at a 36.5% gross margin). BloombergNEF has named Sungrow the most bankable ESS and PCS brand.",
  "productsAndServices": [
   {
    "name": "Utility-scale string inverters — SG-HX series (SG350HX / SG510HX / SG465HX)",
@@ -99,25 +99,6 @@
    "roadmap": "Grid-forming rollout tracking European grid-code evolution through 2026"
   },
   {
-   "name": "AI data-centre power supply — EnerNeo solid-state transformer & 800 V HVDC",
-   "category": "Power conversion — data centre",
-   "description": "A dedicated AIDC Power Supply business unit, established by January 2026, built on two prioritised technology routes: solid-state transformers and 800 V high-voltage DC distribution, plus 800 V DC/DC conversion and high-density server power supplies. Its flagship is EnerNeo, Sungrow's first self-developed solid-state transformer, launched at an AIDC product event in Hefei on 9 July 2026 and described in the H1 2026 interim report as \"officially launched and supplying the market\": it converts medium-voltage AC directly to 800 V HVDC, collapsing the conventional multi-stage conversion chain. Strategic cooperation and framework purchase agreements were signed on launch day with HEC Technology (东阳光) and ZDATA (中联数据), and the unit runs a Green Token Joint Innovation Center with Alibaba Cloud. The 800 V HVDC kit has completed small-batch domestic delivery.",
-   "highlights": [
-    "EnerNeo SST: 10–13.8 kV medium-voltage AC in, 800 V DC out, 1.5–4.5 MW configurable, 98.5% system efficiency, 312 kW/m² power density, 99.999% availability",
-    "Company-stated commercialisation curve: small-batch prototypes and trial verification with lead customers through 2026, batch orders from 2027, scale from 2028",
-    "Industry-first medium/low-voltage partitioning, intelligent module rotation-rest, integrated vacuum insulation and digital-twin operation, per the company's own specification answer",
-    "Sungrow describes the offer as covering \"end-to-end power products from medium-voltage grid level to chip level\" in its HKEX Application Proof"
-   ],
-   "positioning": "Sungrow's own English-market framing for this line is \"grid-to-chip\" — a phrase it has used since at least 19 January 2026 and which it develops as a \"Green–Gray–White\" three-space architecture for MW-level racks. The phrase is genuinely Sungrow's, not an outside analyst's, but it is English-only: it has no Chinese counterpart in the interim report or the investor-platform record, and it does not appear as a phrase in the HKEX filing, which uses \"from medium-voltage grid level to chip level\" instead. Hithium's dossier compresses the offer to \"PCS + storage + SST\" and calls it the most architecturally complete grid-to-chip offer among Chinese peers; the PCS-plus-storage-plus-SST reading is supported by Sungrow's own material, but the comparative superlative is Hithium's assessment and no independent ranking body or analyst has been located making it. Against Megmeet, Delta, LITEON and Vicor the contrast is one of layer rather than of scale: those vendors sit inside the rack, Sungrow is quoting from the medium-voltage grid to the rack DC bus.",
-   "soldThrough": "Direct to data-centre operators and IT-infrastructure partners, with framework purchase agreements as the entry vehicle (HEC Technology, ZDATA) and a joint innovation centre with Alibaba Cloud.",
-   "targetSegments": [
-    "AI data centres and high-density compute halls",
-    "Hyperscale and colocation operators in China",
-    "Cloud providers"
-   ],
-   "roadmap": "Company guidance: 2026 small-batch prototypes and field trials with lead customers; batch orders from 2027; scale deployment 2028 onward. Collection gap: investors asked on 14 and 31 August 2026 whether EnerNeo or the 800 V line has been sampled to North American hyperscalers and whether UL certification is progressing, and Sungrow left both questions unanswered; no first-party evidence of an overseas AIDC customer exists."
-  },
-  {
    "name": "EV charging (Sungrow Charging)",
    "category": "eMobility",
    "description": "AC and DC charger portfolio from 11 kW to 480 kW for residential, commercial, and public applications — IDC30E (30 kW compact DC), IDC180E, and the flagship IDC480E-C ultra-fast compact DC charger (May 2025, Power2Drive Munich): built on Sungrow's proprietary 40 kW power modules at >97% efficiency, isolated air-cooling with fully sealed dust-free chamber, IP65 and C5 anti-corrosion protection, 10+ year design life with AI-supported lifecycle management.",
@@ -179,12 +160,10 @@
   }
  ],
  "strategyRead": [
-  "(High confidence) We assess Sungrow holds the strongest competitive position in the covered set on the ranking evidence: the first vendor to hold both Wood Mackenzie crowns simultaneously (BESS integrator and PV inverter), and the first to take the integrator top spot from Tesla, with a sixth BNEF inverter-bankability ranking alongside. Basis: Wood Mackenzie 2026 rankings and the company's own interim report.",
-  "(High confidence) We assess storage has become the revenue centre without becoming the profit centre, and that the FY2025 read has to be revised. ESS overtook inverters in FY2025 at 41.8% of revenue on a 36.5% gross margin; by H1 2026 it reached exactly 50.00% of revenue but its margin had fallen to 32.43% while inverter margin rose to 42.72%. The segment that now carries the revenue is the one giving up price. Basis: company segment tables, FY2025 annual report and H1 2026 interim report.",
-  "(High confidence) We assess the US position is structurally impaired rather than merely disrupted, and that the impairment is a category effect rather than a naming. Neither FCC determination names a company; the test is a Buy American origin standard, and PV Tech Research identifies Sungrow as the largest single importer of US solar inverters, so the category bites it hardest. The 20 August second determination closed the two escapes that mattered — wired-only connectivity and shipping without the radio — leaving §45X-eligible US manufacture as the only route back in, which Sungrow does not claim. Its own guidance is a gradual pullback from the US. Basis: FCC DA 26-786 and DA 26-870, PV Tech, and Sungrow's own investor-platform answers.",
-  "(Moderate confidence) We assess the AIDC line is a real architectural position and not yet a commercial one. EnerNeo gives Sungrow a genuine medium-voltage-AC-to-800 V-DC stage, stated in an audited interim report as launched and supplying the market, and the \"grid-to-chip\" framing competitors attribute to Sungrow is Sungrow's own — used since January 2026, seven weeks before the SST that made the chain real. But the company's own curve is small-batch trials through 2026, batch orders from 2027 and scale from 2028, and it has declined to answer investor questions on North American hyperscaler sampling and UL certification. Basis: H1 2026 interim report, the 12 July specification answer, and the unanswered 14 and 31 August questions.",
-  "(Moderate confidence) We assess the 2026 share-price collapse has been misattributed in this corpus and elsewhere, and that the driver was sequence rather than any single rule. Sungrow's market capitalisation fell roughly a third between its 30 June high and late July — the window that produced the widely-repeated \"~CNY 100B\" figure — on the 30 June Reuters report of a draft ban, before the FCC acted. In the month actually after the 28 July action it fell about RMB 29.8B, roughly 12.8%, and the heaviest single days in that window followed Executive Order 14420 on 26 August and the weak H1 print released on 28 August, not the Covered List. Sungrow filed no abnormal-share-price announcement and no clarification announcement across all 114 of its 2026 SZSE filings to 7 September, and its interim report does not mention the FCC at all — its risk section discusses tariffs and local-content thresholds instead. Basis: daily closes reconstructed independently by two research passes against a share count validated two ways, plus a complete title scan of the company's 2026 SZSE announcements.",
-  "(Moderate confidence) We assess the re-filed A+H listing mirrors peer offshore raises and would fund international expansion, but that it is drifting: the October 2025 application lapsed, the 24 April 2026 refiling is still pending CSRC, SFC and HKEX clearance, and the H1 2026 interim report does not discuss the listing at all. The ~10 GWh European PowerTitan 3.0 delivery target for 2026 remains the near-term commercial proof point. Basis: company announcements and the interim report's silence."
+  "(High confidence) We assess Sungrow holds the strongest competitive position in the covered set: first vendor to hold both Wood Mackenzie crowns (BESS integrator and PV inverter) simultaneously, and the first to take the integrator top spot from Tesla. Basis: Wood Mackenzie 2026 rankings.",
+  "(High confidence) We assess storage is now the profit center — ESS overtook inverters as the largest segment in FY2025 (41.8% of revenue at 36.5% gross margin), meaning storage execution rather than inverters drives the equity story. Basis: company filings.",
+  "(Moderate confidence) We assess vertical integration is deepening selectively: specifying its own large cell (rather than packaging suppliers' standard 314Ah units) gives spec control without full cell-fab capex.",
+  "(Moderate confidence) We assess the re-filed A+H listing mirrors peer offshore raises and would fund international expansion; the ~10 GWh European PowerTitan 3.0 delivery target for 2026 is the near-term proof point."
  ],
  "relationships": [
   {
@@ -230,76 +209,9 @@
    "context": "Wood Mackenzie's August 2024 shipment release, covering calendar 2023, states that 'the US market was led by central inverter manufacturers Sungrow and Power Electronics' — the two companies named together, in solar central inverters specifically. This dossier's existing description of Power Electronics among conventional central-inverter competitors is accurate and is corroborated by that wording; it was checked this session and left unchanged.\n\nThe two are not symmetrically placed. Sungrow ranks second globally in Wood Mackenzie's H1 2025 inverter scorecard and first in its 2026 storage integrator ranking, and sells turnkey battery systems as well as conversion hardware. Power Electronics sells conversion hardware only — no cells, no turnkey system — which is why the integrator ranking's stated scope of factory-assembled AC-integrated systems cannot include it. Sungrow's greater exposure is regulatory: PV Tech identifies it as the largest single importer of photovoltaic inverters into the United States, at the moment the FCC's Covered List began barring foreign-produced inverters.",
    "source": "https://www.woodmac.com/press-releases/2024-press-releases/global-pv-inverter-shipments-grew-by-56-in-2023-to-536-gwac/",
    "status": "active"
-  },
-  {
-   "slug": "huawei-digital-power",
-   "type": "competitor",
-   "note": "The other half of the PV-inverter duopoly (~55% combined share) — and the counterparty whose dossier carried the two Sungrow claims this revision corrects.",
-   "context": "Sungrow and Huawei Digital Power have been the #1 and #2 PV-inverter vendors for a decade, at roughly 55% combined global share, and they diverge on regulation rather than on engineering. Huawei was closed out of the US years ago by the Entity List and NDAA 889; Sungrow retained US access until the FCC's 28 July 2026 Covered List action, and PV Tech Research's Mollie McCorkindale identifies Sungrow as the largest single importer of US solar inverters, which is why Huawei's dossier assesses Sungrow as the vendor absorbing the shock. That assessment stands. Two specifics Huawei's dossier attributed to Sungrow do not: the ~CNY 100B market-value loss belongs to the 30 June–late July window that preceded the FCC action, and the wired-links argument was never Sungrow's — Sungrow declined to adopt it when a retail investor proposed it, and on 4 September 2026 stated on the SZSE investor platform that wired-only remote communication is within the rule's scope. Both are corrected in `huawei-digital-power` v8.\n\nThe two also meet in the EU's phase-out of Chinese inverters from EU-funded projects by April 2027, and in the Gulf, where Sungrow won the 7.8 GWh Saudi SEC storage project next to Huawei's Red Sea showcase.",
-   "source": "https://www.pv-tech.org/how-will-the-fcc-inverter-ban-impact-the-us-solar-industry-in-the-short-and-long-term/",
-   "status": "active"
-  },
-  {
-   "slug": "hithium",
-   "type": "competitor",
-   "note": "Cell-heritage BESS rival that also rates Sungrow's AIDC stack — the source of the SST and grid-to-chip attributions this revision tests.",
-   "context": "Hithium and Sungrow meet in the 6+ MWh DC-block class, in C&I cabinets (∞Power against PowerStack) and in home storage. Hithium's dossier additionally assesses Sungrow as fielding \"the most architecturally complete grid-to-chip offer (PCS + storage + SST)\" among Chinese peers contesting the AI data-centre category. This revision tests that attribution against Sungrow's own record and splits it. The SST is real and first-party: EnerNeo, launched 9 July 2026 and described in the H1 2026 interim report as launched and supplying the market. The \"grid-to-chip\" phrase is also genuinely Sungrow's own, used in its English-market material since 19 January 2026. The comparative superlative — most architecturally complete — is Hithium's assessment; no independent ranking body or analyst making that completeness claim has been located, and Sungrow's own commercialisation guidance is small-batch trials through 2026 with scale only from 2028, so the completeness is architectural rather than commercial.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
-   "status": "active"
   }
  ],
  "technicalSpecs": [
-  {
-   "product": "EnerNeo solid-state transformer (July 2026)",
-   "specs": [
-    {
-     "band": "Power",
-     "label": "Rated power",
-     "value": "3 MW standard unit"
-    },
-    {
-     "band": "Power",
-     "label": "Power block",
-     "value": "1.5 MW minimum block; 1.5–4.5 MW configurable in any combination (3 MW and 4.5 MW configurations cited)"
-    },
-    {
-     "band": "Electrical",
-     "label": "Input",
-     "value": "10 kV–13.8 kV medium-voltage AC"
-    },
-    {
-     "band": "Electrical",
-     "label": "Output",
-     "value": "800 V DC"
-    },
-    {
-     "band": "Electrical",
-     "label": "System efficiency",
-     "value": "98.5%"
-    },
-    {
-     "band": "Design",
-     "label": "Power density",
-     "value": "312 kW/m²"
-    },
-    {
-     "band": "Design",
-     "label": "Footprint",
-     "value": "One-third to one-fifth of conventional systems (exact dimensions not stated)"
-    },
-    {
-     "band": "Design",
-     "label": "Architecture",
-     "value": "Industry-first medium/low-voltage partitioning, intelligent module rotation-rest and integrated vacuum insulation design, with digital-twin operation"
-    },
-    {
-     "band": "Availability",
-     "label": "System availability",
-     "value": "99.999%"
-    }
-   ],
-   "notes": "Figures as stated by Sungrow in its 12 July 2026 answer on the SZSE investor-interaction platform and corroborated by pv magazine's launch report of 10 July 2026. The interim report describes the product as launched and supplying the market; the company's own commercialisation guidance is small-batch trials in 2026, batch orders from 2027 and scale from 2028."
-  },
   {
    "product": "PowerTitan 3.0 (June 2025)",
    "specs": [
@@ -583,60 +495,11 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-09-04",
-   "category": "regulatory",
-   "headline": "Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
-   "read": "The company's own reading closes the question its competitors' dossiers left open: Sungrow does not claim a wired-links exemption and never has — it reads the rule as catching wired-managed grid-tied inverters and rests instead on off-grid scope and on grandfathering.",
-   "source": "https://irm.cninfo.com.cn/ssgsfb/index.html?stockcode=300274"
-  },
-  {
-   "date": "2026-08-29",
-   "category": "financial",
-   "headline": "H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
-   "read": "The segment rotation completed in a half where revenue fell 29% — mix shift running ahead of the money — and the margin split inverted: inverter gross margin rose to 42.72% while ESS fell to 32.43%, so the segment that now carries the revenue is the one giving up price.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF"
-  },
-  {
-   "date": "2026-08-26",
-   "category": "policy",
-   "headline": "US Executive Order 14420 declares a national emergency over the bulk-power system, reaching foreign-made grid equipment at 69 kV and above including storage; Sungrow shares fall more than 11% the following day",
-   "read": "A second US front, and on the share-price evidence a heavier one than the FCC action — the company's own reading is that the covering threshold and the point of application are not yet defined.",
-   "source": "https://finance.sina.com.cn/stock/zqgd/2026-08-27/doc-iniptnux5514085.shtml"
-  },
-  {
-   "date": "2026-08-20",
-   "category": "regulatory",
-   "headline": "FCC second national security determination (DA 26-870) narrows the covered device class to UL 1741 utility-interactive inverters while extending the connectivity prong to connections \"whether wired or wireless\", and removes §45X-eligible inverters from the Covered List",
-   "read": "Forecloses a wired-only design defence, and forecloses shipping without the radio too, since a device merely designed to accept a comms component is caught; US manufacture verified through the tax code becomes the only route back in.",
-   "source": "https://docs.fcc.gov/public/attachments/DA-26-870A1.pdf"
-  },
-  {
-   "date": "2026-08-03",
-   "category": "financial",
-   "headline": "A-share buyback plan of RMB 500m–1,000m at a price cap of RMB 188/share, following the chairman's 21 July proposal; the shares are designated for employee incentive plans",
-   "read": "The only company action taken during the selloff, and Sungrow ties it to confidence in the company's value rather than to any regulatory event — the absence of a link is itself the signal.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225456082.PDF"
-  },
-  {
-   "date": "2026-07-28",
-   "category": "regulatory",
-   "headline": "FCC adds foreign-produced connected power inverters to the Covered List (DA 26-786), barring new US equipment authorizations on a Buy American origin test; Sungrow closes down 3.55%",
-   "read": "The rule names no company, but Sungrow is the largest single importer of US solar inverters, so a category test lands on it hardest; already-authorized models keep selling and the company said so within days.",
-   "source": "https://docs.fcc.gov/public/attachments/DA-26-786A1.pdf"
-  },
-  {
    "date": "2026-07-14",
    "category": "other",
    "headline": "Ranked No. 1 in BOTH Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (assessing 2025)",
    "read": "First vendor ever to hold both crowns — and the first to take the BESS integrator top spot from Tesla — as annual global BESS installations passed 100 GW.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/"
-  },
-  {
-   "date": "2026-07-09",
-   "category": "product-launch",
-   "headline": "EnerNeo launched at an AIDC product event in Hefei — Sungrow's first self-developed solid-state transformer, converting 10–13.8 kV medium-voltage AC directly to 800 V DC for AI computing loads, with strategic cooperation and framework purchase agreements signed the same day with HEC Technology (东阳光) and ZDATA (中联数据)",
-   "read": "The piece that makes the grid-to-chip claim real: with PCS, storage and now an SST, Sungrow can quote medium-voltage AC to rack DC without a conventional transformer stage. Its own guidance is small-batch trials through 2026, batch orders from 2027 and scale from 2028 — so this is a position, not yet a revenue line.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF"
   },
   {
    "date": "2026-07-01",
@@ -658,13 +521,6 @@
    "headline": "European grid-forming PowerTitan 3.0 variant launched in Madrid — 1.78 MW / 7.14 MWh per 20-ft container, 4-hour duration, 7.2 MW / 28.5 MWh per block",
    "read": "A duration-optimized, grid-code-ready European configuration aimed at low-PPA-price markets; company claims €16M extra lifetime returns per 1 GWh project.",
    "source": "https://www.prnewswire.com/news-releases/more-than-powering-today-sungrow-launches-grid-forming-utility-ess-powertitan-3-0-in-madrid-302678906.html"
-  },
-  {
-   "date": "2026-01-19",
-   "category": "product-launch",
-   "headline": "AIDC Power Supply Business Unit established, with a roadmap covering solid-state transformer and 800 V DC power solutions and the company's first located use of its \"grid-to-chip\" framing",
-   "read": "The framing that competitors' dossiers attribute to Sungrow is Sungrow's own English-market language, and it was published almost six months before the product that completed the chain.",
-   "source": "https://www.sungrowpower.com/en/sungrow-concludes-wfes-2026-strengthening-grid-forming-capability-and-aidc-power-architecture"
   },
   {
    "date": "2026-01-15",
@@ -820,14 +676,9 @@
       "actual": "ESS RMB 37.29B (+49.4%, 41.8% of revenue, GM 36.5%) overtook inverters (RMB 31.14B, +6.9%); storage 43 GWh (+53.5%); inverters 143 GW; overseas ~60.5% of revenue (+48.8%)",
       "expected": "",
       "verdict": "beat",
-      "result": "Storage became the largest and highest-margin segment"
-     },
-     {
-      "name": "Shipments",
-      "actual": "Storage 43 GWh (+53.5%); PV inverters 143 GW",
+      "result": "Storage became the largest and highest-margin segment",
       "kpi": "gwh-shipped",
-      "qty": 43,
-      "result": "Company-reported 2025 volumes; the 143 GW inverter figure is repeated in the H1 2026 interim report."
+      "qty": 43
      }
     ],
     "commentary": "Dividends: FY2025 final RMB 6.90 per 10 shares plus an H1 2025 interim of RMB 9.50 per 10 shares; ~RMB 300M of buybacks in 2025. Shares hit a record (~RMB 413.5B market cap) in Nov 2025 after the first >RMB 4B quarterly profit.",
@@ -835,7 +686,7 @@
     "periodEnd": "2025-12-31"
    },
    {
-    "period": "Q1 2026 (reported April 2026)",
+    "period": "Q1 2026 (reported April 2026; H1 2026 due late August)",
     "metrics": [
      {
       "name": "Revenue",
@@ -855,121 +706,15 @@
     "commentary": "2026 management operating targets circulating from investor-briefing recaps (unverified against a filing): revenue RMB 110–120B, net profit RMB 17–19B, storage shipments ≥60 GWh.",
     "periodType": "quarter",
     "periodEnd": "2026-03-31"
-   },
-   {
-    "period": "H1 2026 (reported 28 August 2026)",
-    "periodType": "half",
-    "periodEnd": "2026-06-30",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "RMB 30.912B (-28.99%)",
-      "result": "Second consecutive decline after Q1 2026's -18.3%."
-     },
-     {
-      "name": "Net profit (attributable)",
-      "actual": "RMB 5.259B (-32.01%); operating cash flow RMB 3.735B (+8.75%); R&D RMB 2.095B (+2.85%); finance expense RMB 0.368B (+239.94%, on EUR/USD depreciation)",
-      "result": "Profit fell faster than revenue; cash generation held up."
-     },
-     {
-      "name": "Gross margin",
-      "actual": "35.92% overall (+1.56 pp)",
-      "result": "Group margin improved even as revenue fell, on mix."
-     },
-     {
-      "name": "Segments",
-      "actual": "ESS systems RMB 15.456B (50.00% of revenue, -13.18%, gross margin 32.43%, -7.49 pp); PV inverters and power-electronics conversion RMB 12.388B (40.08%, -19.17%, gross margin 42.72%, +6.98 pp); new-energy investment and development RMB 1.258B (-85.02%); PV plant generation RMB 0.296B (-61.05%)",
-      "result": "ESS reached exactly half of revenue and overtook PV inverters for the first time — but the margin ranking inverted, with inverters now the higher-margin line."
-     },
-     {
-      "name": "Geographic split",
-      "actual": "Mainland China RMB 8.222B (26.60%, -54.71%); overseas including Hong Kong, Macau and Taiwan RMB 22.690B (73.40%, -10.59%)",
-      "result": "Overseas share rose from 58.30% to 73.40% because domestic revenue more than halved, not because exports grew."
-     }
-    ],
-    "commentary": "Figures from the SZSE interim report (disclosure tier). No USD overlay is carried for this period: no sourced CNY/USD rate for H1 2026 was located, and the schema forbids an unsourced conversion. The widely-cited 25 GWh of H1 storage shipments (+28% YoY) is Energy-Storage.News reporting, not a company figure — the 205-page interim report contains no shipment volume at all, only third-party market context (global lithium storage installations 140 GWh, +30%; global new PV installations 177 GWac, -43%). A dividend of RMB 6.4 per 10 shares was declared on a base of 2,057,484,410 shares."
    }
   ],
-  "commentary": "Company-reported figures. FY2024 and FY2025 are annual-report figures as relayed by the cited outlets; H1 2026 is taken directly from the SZSE interim report. The FY2024 storage GWh is derived, and the 2026 targets are investor-recap numbers — both flagged as such. Analyst consensus was not located for any period, so `expected` is left empty rather than reconstructed."
+  "commentary": "Company-reported figures from annual/quarterly disclosures as relayed by cited outlets; the FY2024 storage GWh is derived, and the 2026 targets are investor-recap numbers, both flagged as such."
  },
  "sources": [
-  {
-   "label": "SZSE 互动易 investor-interaction platform (300274) — Sungrow's own answers on the FCC action: the 12 July 2026 \"no remote-upgrade and no remote-communication function\" reply, the 8 August new-certification-only line repeated across eight questions, and the 4 September reply stating that wired-only remote communication IS within the FCC's scope and that off-grid inverters are outside it, plus the EO 14420 reply; also the 12 July EnerNeo specification answer",
-   "url": "https://irm.cninfo.com.cn/ssgsfb/index.html?stockcode=300274",
-   "date": "2026-09-04",
-   "party": "disclosure"
-  },
-  {
-   "label": "Energy-Storage.News — Sungrow ships 25 GWh in H1 2026, storage revenue overtakes PV, and the company guides to a gradual US pullback",
-   "url": "https://www.energy-storage.news/sungrows-battery-storage-revenue-tops-pv-business-h1-shipments-hit-25gwh/",
-   "date": "2026-09-02"
-  },
-  {
-   "label": "北京商报 Beijing Business Today — shares hit a year low; H1 2026 revenue RMB 30.912B (-28.99%) and attributable net profit RMB 5.259B (-32.01%); market capitalisation about RMB 186.1B",
-   "url": "https://www.bbtnews.com.cn/2026/0831/604281.shtml",
-   "date": "2026-08-31"
-  },
-  {
-   "label": "Sungrow — 2026年半年度报告 (H1 2026 interim report, SZSE 300274, 205pp): EnerNeo SST launched and supplying the market, the AIDC power business unit's SST + 800 V HVDC routes, and the full segment, margin and geographic split",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
-   "date": "2026-08-29",
-   "party": "disclosure"
-  },
-  {
-   "label": "新浪财经 Sina Finance — Sungrow falls more than 11% the day after Executive Order 14420",
-   "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-27/doc-iniptnux5514085.shtml",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Troutman Pepper Locke — FCC modifies the Covered List entry for foreign-produced power inverters: the full revised two-prong definition, the UL 1741 narrowing and the §45X exclusion",
-   "url": "https://www.troutman.com/insights/fcc-modifies-covered-list-entry-for-foreign-produced-power-inverters/",
-   "date": "2026-08-25"
-  },
-  {
-   "label": "ESS News — FCC ban updated: foreign inverters now include wired devices, and a §45X safe harbour is added for storage",
-   "url": "https://www.ess-news.com/2026/08/24/us-fcc-ban-updates-foreign-inverters-now-include-wired-devices-adds-45x-safe-harbor-for-bess/",
-   "date": "2026-08-24"
-  },
-  {
-   "label": "FCC PSHSB — DA 26-870: modification of the power inverters entry on the Covered List (second national security determination); prong one confined to UL 1741 utility-interactive inverters, prong two extended to connections \"whether wired or wireless\"",
-   "url": "https://docs.fcc.gov/public/attachments/DA-26-870A1.pdf",
-   "date": "2026-08-20"
-  },
-  {
-   "label": "PV Tech — how the FCC inverter ban will affect the US solar industry; PV Tech Research senior analyst Mollie McCorkindale names Sungrow the largest single importer of US solar inverters, and an unnamed source is the sole basis for the wired-connections characterisation",
-   "url": "https://www.pv-tech.org/how-will-the-fcc-inverter-ban-impact-the-us-solar-industry-in-the-short-and-long-term/",
-   "date": "2026-08-07"
-  },
-  {
-   "label": "Sungrow — 关于回购公司股份方案的公告暨回购股份报告书 (A-share buyback plan, CNY 500m–1,000m, price cap CNY 188/share)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225456082.PDF",
-   "date": "2026-08-03",
-   "party": "disclosure"
-  },
-  {
-   "label": "第一财经 Yicai (via Sina) — FCC ban hits the inverter sector; chairman Cao Renxian told institutional investors on 15 July 2026 that Sungrow's US-exported inverters have no remote-upgrade or remote-communication functions",
-   "url": "https://finance.sina.com.cn/jjxw/2026-07-29/doc-iniknezf0096483.shtml",
-   "date": "2026-07-29"
-  },
-  {
-   "label": "BigGo Finance (AGGREGATOR — the origin of the ~CNY 100B / ~$14.8B market-value figure, citing only \"market calculations\" and measured from the 30 June high; its headline contradicts its own body)",
-   "url": "https://finance.biggo.com/news/54b33d54-6be9-44d4-9715-d65f340a3c26",
-   "date": "2026-07-29"
-  },
-  {
-   "label": "FCC PSHSB — DA 26-786: addition of foreign-produced power inverters and advanced robotic devices to the Covered List (first national security determination)",
-   "url": "https://docs.fcc.gov/public/attachments/DA-26-786A1.pdf",
-   "date": "2026-07-28"
-  },
   {
    "label": "ESS News — Wood Mackenzie inaugural global BESS integrator ranking (Jul 2026)",
    "url": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
    "date": "2026-07-14"
-  },
-  {
-   "label": "pv magazine — Sungrow launches the 3 MW EnerNeo solid-state transformer at an AIDC product event in Hefei (Vincent Shaw)",
-   "url": "https://www.pv-magazine.com/2026/07/10/sungrow-launches-3-mw-solid-state-transformer/",
-   "date": "2026-07-10"
   },
   {
    "label": "PR Newswire — PowerTitan 3.0 wins The smarter E AWARD 2026",
@@ -1002,37 +747,9 @@
    "date": "2026-05-22"
   },
   {
-   "label": "Sungrow (press release distributed via pv magazine) — \"From Grid to Chip: Sungrow's Power Architecture for the AI Data Center Era\"; the company's own framing of the grid-to-chip approach",
-   "url": "https://www.pv-magazine.com/press-releases/from-grid-to-chip-sungrows-power-architecture-for-the-ai-data-center-era/",
-   "date": "2026-05-19",
-   "party": "company"
-  },
-  {
-   "label": "Euronews — EU moves to phase Chinese inverters out of EU-funded energy projects by April 2027; Sungrow named among the firms analysts warn about",
-   "url": "https://www.euronews.com/my-europe/2026/05/04/eu-moves-to-ban-high-risk-inverters-from-china-over-cybersecurity-threats",
-   "date": "2026-05-04"
-  },
-  {
    "label": "Energy-Storage.News — Zelestra energizes 1 GWh Aurora BESS in Chile (May 2026)",
    "url": "https://www.energy-storage.news/zelestra-energises-1gwh-hybrid-bess-project-in-chile/",
    "date": "2026-05"
-  },
-  {
-   "label": "Sungrow — PR Newswire (issuer-distributed): GRES 2026 full-scenario solution; the \"Green–Gray–White\" three-space grid-to-chip architecture for MW-level racks",
-   "url": "https://www.prnewswire.com/news-releases/sungrow-unveils-full-scenario-solution-to-address-emerging-global-energy-challenges-302754036.html",
-   "date": "2026-04-28",
-   "party": "disclosure"
-  },
-  {
-   "label": "Sungrow — Unveils Full-Scenario Solution: \"a comprehensive grid-to-chip solution\"",
-   "url": "https://www.sungrowpower.com/en/sungrow-unveils-full-scenario-solution-to-address-emerging-global-energy-challenges",
-   "date": "2026-04-26"
-  },
-  {
-   "label": "Sungrow — HKEX Application Proof (updated filing, 24 April 2026), Business section: AIDC power supply built on \"long-established solid state transformer (SST) technology\", and an end-to-end portfolio \"from medium-voltage grid level to chip level\"",
-   "url": "https://www1.hkexnews.hk/app/sehk/2026/108461/documents/sehk26042400514.pdf",
-   "date": "2026-04-24",
-   "party": "disclosure"
   },
   {
    "label": "EnergyTrend — FY2025 revenue RMB 89.18B, segment detail",
@@ -1068,11 +785,6 @@
    "label": "pv magazine — new inverters & C&I storage for 2026 (SG510HX/SG465HX)",
    "url": "https://www.pv-magazine.com/2026/01/22/sungrow-releases-new-inverters-storage-system-for-utility-and-ci-solar/",
    "date": "2026-01-22"
-  },
-  {
-   "label": "Sungrow — WFES 2026 wrap-up: the AIDC Power Supply Business Unit and the earliest located use of the company's \"grid-to-chip\" framing",
-   "url": "https://www.sungrowpower.com/en/sungrow-concludes-wfes-2026-strengthening-grid-forming-capability-and-aidc-power-architecture",
-   "date": "2026-01-19"
   },
   {
    "label": "PR Newswire — WFES 2026: SG465HX + PowerStack ST255CS unveiled (Jan 2026)",
@@ -1203,31 +915,6 @@
    "url": "https://stockanalysis.com/quote/she/300274/company/"
   }
  ],
- "lastUpdated": "2026-09-07",
- "profileVersion": 9,
- "policyExposure": [
-  {
-   "regime": "FCC Covered List (power inverters)",
-   "status": "in-effect",
-   "effectiveDate": "2026-07-28",
-   "exposure": "Sungrow is the single most exposed vendor in this corpus to the US rule, and is exposed by category rather than by name: neither the first national security determination of 28 July 2026 (FCC DA 26-786) nor the second of 20 August 2026 (DA 26-870) names any company or country, and the test is the Buy American \"domestic end product\" origin standard. PV Tech Research senior analyst Mollie McCorkindale identifies Sungrow as \"the largest single importer\" of solar PV inverters into the United States, and notes that a portion of those imports originates from Sungrow's European rather than Chinese plants — which does not help under an origin test that asks only whether the product is domestic. The 20 August determination moved the boundary in both directions: prong one was confined to UL 1741 utility-interactive inverters (the microinverter/string/central/hybrid enumeration and AC-to-AC/DC conversion language were dropped), while prong two was extended to catch a device that \"contains, or is designed, equipped, or configured to accept\" a remote-communication component \"through Ethernet, Wi-Fi, cellular, Bluetooth, or other similar connections, whether wired or wireless.\" The prohibition is prospective — models already holding US equipment authorizations remain saleable, subject to a reserved revocation power — and inverters eligible for the 26 U.S.C. §45X Advanced Manufacturing Tax Credit were excluded from the list altogether.",
-   "mitigation": "Sungrow's own position is on the record on the SZSE investor-interaction platform, and it is not the position other dossiers in this corpus have attributed to it. Answering the 30 June Reuters report of a draft, it said on 12 July 2026 that the inverters it exports to the US \"have no remote-upgrade function and no remote-communication function, and meet the relevant US standards\", adding that a US Department of Energy test of Chinese inverters earlier in the year found no deliberately implanted malicious wireless communication function; chairman Cao Renxian repeated that to institutional investors around 15 July. After the rule was adopted it dropped that argument and rested on grandfathering, giving the same answer verbatim to eight separate investor questions on 8 August: the policy \"mainly restricts new product certification, does not affect sales of already-certified products, and the PV inverters and storage systems the company currently sells in the US are unaffected.\" On 4 September, after the second determination, it stated the scope in its own words — power inverters are \"not limited to devices with wireless communication capability; devices that achieve remote communication, control and monitoring solely by wired means such as Ethernet are also included\", while \"off-grid inverters without grid-connection capability are outside the scope of the ban.\" Commercially it has guided to a gradual pullback from the US, shifting resources to other regions and to channel-led sales, and on 3 August it opened an RMB 500m–1,000m A-share buyback that it attributes to confidence in the company's value rather than to any regulatory event.",
-   "source": "https://docs.fcc.gov/public/attachments/DA-26-870A1.pdf"
-  },
-  {
-   "regime": "Executive Order 14420 (bulk-power system)",
-   "status": "in-effect",
-   "effectiveDate": "2026-08-26",
-   "exposure": "A second and separate US overhang signed on 26 August 2026, declaring a national emergency over the bulk-power system and reaching foreign-made grid-connected equipment at 69 kV and above, battery energy storage included. Sungrow shares fell more than 11% the following day — the largest single-day move in the post-FCC period and larger than the FCC action's own-day move. The reach is not yet assessable: the covered countries and companies are for the Department of Energy to define.",
-   "mitigation": "Sungrow's public response was that the specific impact was 「还在研究中」 — still under study.",
-   "source": "https://finance.sina.com.cn/stock/zqgd/2026-08-27/doc-iniptnux5514085.shtml"
-  },
-  {
-   "regime": "EU high-risk inverter phase-out",
-   "status": "announced",
-   "effectiveDate": "2027-04",
-   "exposure": "The European Commission is phasing Chinese-made inverters out of EU-funded energy projects on economic and cybersecurity grounds, across all EU funding instruments including EIB and EBRD financing, with new contracts fully incorporating the restrictions from April 2027 and limited derogations possible. The restriction is scoped to EU-funded projects, not to the European market at large. Sungrow is named in the Euronews account only in the reported analyst warnings about European reliance on Chinese inverters, not by the Commission's own instrument, which is framed by origin rather than by vendor. Europe is where Sungrow's PowerTitan 3.0 volume target sits, so the exposure runs to the funded segment of its largest growth market.",
-   "source": "https://www.euronews.com/my-europe/2026/05/04/eu-moves-to-ban-high-risk-inverters-from-china-over-cybersecurity-threats"
-  }
- ]
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 8
 }

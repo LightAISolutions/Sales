@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
+Last updated: `2026-09-07 04:58:41 AM EST` · Repo version: `v05.05r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -441,6 +441,7 @@ Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v2.json">catl.profile.v2.json</a> — Archived v2 dossier (CATL)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v3.json">catl.profile.v3.json</a> — Archived v3 dossier (CATL)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v5.json">catl.profile.v5.json</a> — Archived v5 dossier (CATL)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v6.json">catl.profile.v6.json</a> — Archived v6 dossier (Contemporary Amperex Technology Co., Limited (宁德时代新能源科技股份有限公司))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/compass-datacenters.profile.v4.json">compass-datacenters.profile.v4.json</a> — Archived v4 dossier (Compass Datacenters)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/constellation-energy.profile.v1.json">constellation-energy.profile.v1.json</a> — Archived v1 dossier (Constellation Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/constellation-energy.profile.v3.json">constellation-energy.profile.v3.json</a> — Archived v3 dossier (Constellation Energy)
@@ -510,6 +511,7 @@ Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v9.json">hithium.profile.v9.json</a> — Archived v9 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v10.json">hithium.profile.v10.json</a> — Archived v10 dossier (Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v11.json">hithium.profile.v11.json</a> — Archived v11 dossier (Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司))
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v12.json">hithium.profile.v12.json</a> — Archived v12 dossier (Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v1.json">hitt.profile.v1.json</a> — Archived v1 dossier (HITT Contracting)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v3.json">hitt.profile.v3.json</a> — Archived v3 dossier (HITT)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v4.json">hitt.profile.v4.json</a> — Archived v4 dossier (HITT Contracting)
@@ -521,6 +523,7 @@ Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v4.json">huawei-digital-power.profile.v4.json</a> — Archived v4 dossier (Huawei Digital Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v5.json">huawei-digital-power.profile.v5.json</a> — Archived v5 dossier (Huawei Digital Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v6.json">huawei-digital-power.profile.v6.json</a> — Archived v6 dossier (Huawei Digital Power)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v7.json">huawei-digital-power.profile.v7.json</a> — Archived v7 dossier (Huawei Digital Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hunt-energy-network.profile.v1.json">hunt-energy-network.profile.v1.json</a> — Archived v1 dossier (Hunt Energy Network)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hyperstrong.profile.v2.json">hyperstrong.profile.v2.json</a> — Archived v2 dossier (HyperStrong)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hyperstrong.profile.v3.json">hyperstrong.profile.v3.json</a> — Archived v3 dossier (HyperStrong (Beijing HyperStrong Technology))
@@ -661,6 +664,8 @@ Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v3.json">sungrow.profile.v3.json</a> — Archived v3 dossier (Sungrow)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v5.json">sungrow.profile.v5.json</a> — Archived v5 dossier (Sungrow)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v6.json">sungrow.profile.v6.json</a> — Archived v6 dossier (Sungrow Power Supply Co., Ltd. (阳光电源股份有限公司))
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v7.json">sungrow.profile.v7.json</a> — Archived v7 dossier (Sungrow Power Supply Co., Ltd. (阳光电源股份有限公司))
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v8.json">sungrow.profile.v8.json</a> — Archived v8 dossier (Sungrow Power Supply Co., Ltd. (阳光电源股份有限公司))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sunwoda.profile.v2.json">sunwoda.profile.v2.json</a> — Archived v2 dossier (Sunwoda)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sunwoda.profile.v3.json">sunwoda.profile.v3.json</a> — Archived v3 dossier (Sunwoda (Sunwoda Electronic / Sunwoda Energy))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/switch.profile.v1.json">switch.profile.v1.json</a> — Archived v1 dossier (Switch)
@@ -716,6 +721,7 @@ Last updated: `2026-09-07 04:07:30 AM EST` · Repo version: `v05.04r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v2.json">zhonhen.profile.v2.json</a> — Archived v2 dossier (Zhonhen Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v3.json">zhonhen.profile.v3.json</a> — Archived v3 dossier (Zhonhen Electric)
 │   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v5.json">zhonhen.profile.v5.json</a> — Archived v5 dossier (Zhonhen Electric)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v6.json">zhonhen.profile.v6.json</a> — Archived v6 dossier (Hangzhou Zhonhen Electric Co., Ltd.)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/templates">templates/</a>               — [template] Template source files for creating new pages and GAS scripts
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-noauth.html.txt">HtmlAndGasTemplateAutoUpdate-noauth.html.txt</a> — [template] HTML page template without auth
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-auth.html.txt">HtmlAndGasTemplateAutoUpdate-auth.html.txt</a> — [template · modified] HTML page template with Google Authentication
