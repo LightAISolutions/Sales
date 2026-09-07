@@ -6,6 +6,58 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-07 05:25 AM EST
+**Repo version:** v05.05r — **one** push commit this session (`bd68d0e`), merged to `main` as `0ffb915`, plus this housekeeping commit
+**Branch:** `claude/phase-2a-sungrow-catl-afbfui` (fast-forwarded to `origin/main` after the merge via `git merge --ff-only origin/main`; the workflow had deleted the remote branch, which freed push-once for this second push)
+**Model:** Opus 5 xhigh — **Phase 2a of the integrated remediation plan: the two research refreshes (F7, F8).** No report edit; `tract` and `prime-data-centers` untouched.
+
+### What was done
+
+**v05.05r — Phase 2a. Five dossiers moved, all archived, `lastUpdated` 2026-09-07.** Research ran the two-stage Source Priority Protocol on three parallel `general-purpose` subagents (Sungrow first-party, Sungrow independent, CATL disclosure); the FCC, PV Tech, Troutman, Wiley, ESS News and Euronews pages were read directly by the main agent.
+
+- **`sungrow` v9 (v8 archived) — F7. All four contested attributions resolved, and only one survived intact.**
+  - **SST — CONFIRMED, first-party.** **EnerNeo**, launched at an AIDC product event in Hefei **9 July 2026**, described in the H1 2026 SZSE interim report as "officially launched and supplying the market": 10–13.8 kV MVAC in → **800 V DC** out, 1.5–4.5 MW configurable, **98.5%** system efficiency, **312 kW/m²**, **99.999%** availability. New `productsAndServices` entry (AI data-centre power supply: SST + 800 V HVDC + server power, HEC Technology and ZDATA framework agreements, Alibaba Cloud joint innovation centre) and a new `technicalSpecs` group. Company guidance: small-batch trials 2026, batch orders 2027, scale 2028.
+  - **"Grid-to-chip" — CONFIRMED as Sungrow's OWN framing**, used on sungrowpower.com since **19 January 2026**, developed as a "Green–Gray–White" three-space architecture. But **English-only**: no Chinese counterpart, and the HKEX Application Proof says "from medium-voltage grid level to chip level" instead. The *comparative superlative* is Hithium's assessment, not a ranking.
+  - **~CNY 100B loss — REFUTED as dated.** Traces to an aggregator (BigGo Finance, 29 July 2026, "market calculations", headline contradicting its own body) measuring from the **30 June high, before the FCC acted**, in a window dominated by the 30 June Reuters draft-ban report (−13.9% on 1 July). **28 July → 28 August was about RMB 29.8B (−12.8%)**; the FCC's own-day move was −3.55%. The heavy August days followed **EO 14420 (26 Aug)** and the **H1 print (28 Aug)**. Sungrow filed no 股价异动 and no 澄清公告 across all 114 of its 2026 SZSE filings, and its interim report never mentions the FCC.
+  - **Wired-links argument — REFUTED, and inverted.** Its only basis is an **unnamed source** speaking to PV Tech Premium (7 Aug 2026). A retail investor put the wired-only theory to Sungrow on 29 July; **Sungrow declined to adopt it**, and on **4 September** stated the opposite on the SZSE investor platform: devices communicating "solely by wired means such as Ethernet are also included". Sungrow's real arguments are grandfathering of certified models and off-grid scope.
+  - Also added: `policyExposure[]` (FCC, EO 14420, EU), the **H1 2026** `financials` period from the interim report, six rewritten judgments, edges to `huawei-digital-power` and `hithium`. `srcTotal` 42 → 62.
+- **`catl` v7 (v6 archived) — F8.** RMB **4,099,858,823.53** for **49.00%** of 杭州中恒科技投资有限公司 = RMB 3,511,858,823.53 cash + a ~49% stake in CATL's own converter subsidiary **Times Tianyuan (Contemporary Terapower)** valued RMB 588,000,000 against a RMB 1,239,820,000 appraisal. **It is a capital increase (增资), not a purchase** — newly issued registered capital, cash into the target's account, Zhu Guoding and Bao Xiaoru diluted 70/30 → 35.70/15.30 without selling a share, which is why Zhu keeps control. **CATL disclosed nothing**: zero mentions of 中恒 in the FY2025 annual report, Q1 2026 report or both editions of the H1 2026 interim report, nothing on cninfo, the IR list, either newsroom or 互动易. Only trace: an unnamed H1 sentence about integrating power electronics and computing-power-synergy resources "through investment and collaboration". At 0.36% of total assets it sits below the ChiNext test (recorded as inference). `portfolio` edge to `zhonhen`. `srcTotal` 44 → 51.
+- **Step 7 moved three more dossiers.** **`huawei-digital-power` v8** — both Sungrow claims withdrawn; the FCC scope closed **in both directions** by the **20 Aug 2026 second determination (FCC DA 26-870)**, which broadened prong two to "whether wired or wireless" and to "designed, equipped, or configured to accept", and narrowed prong one to **UL 1741 utility-interactive inverters** with AC-to-DC removed — so the Megmeet/rack-power speculation is **refuted**, not merely unresolved; its own "Cooley 31 July note" citation re-dated (the page carries "Updated August 27, 2026"); the `(Low confidence) (Moderate confidence)` double tag standing since v5 resolved to **(Moderate confidence)**; EU naming corrected. **`hithium` v13** — superlative marked as its own assessment. **`zhonhen` v7** — the unsourced **"~43.5% premium to appraised value" replaced** with what the filings say (no holdco appraisal, no premium disclosed; press computes ~45% against *market* value; the only appraisal in the record is a **~3.2% discount**), plus the capital-increase structure and the CATL-side null.
+- **Toolchain:** registry synced (4 entries); graph rebuilt — 1,260 edges / 950 curated / 3,676 evidence, digest `5da403c684612402456a17e7…` (was `401594320568f841…`); crossrefs **0 candidates, the same 21 over-cap scopes** as the baseline, so **no candidate was raised and none suppressed** — the accept list was not touched; relationships 0 findings; study 0/0. `check-profiler-reports.py` **0 errors / 7 warnings, every line traced** — three pre-existing `hithium` pins now reading v13, plus `sungrow` v9 and `catl` v7 in `grid-scale-bess`, `catl` v7 in `s154-listed-bess-suppliers`, `zhonhen` v7 in `aidc-power-conversion`. **Left loud; `report-pins-verified.json` untouched.**
+- **Records:** plan §6 Phase 2a → **Done — v05.05r**, 2b marked next. `sungrow`'s OVERDUE calendar row cleared (H1 2026 folded in; `nextReport` → 2026-10-31). README tree gained six archive files (including `sungrow.profile.v7.json`, missing since v05.00r). CHANGELOG: no rotation (105 sections, 7 dated today → 98 non-exempt).
+
+### Where we left off
+
+v05.05r pushed and merged; this housekeeping push carries the session context. Phase 2a is closed in the plan. **The next unit of work is Phase 2b on Fable 5.1 High** — the `tract` citation read (F9) — and a paste-in prompt was handed over in chat. Nothing is half-done.
+
+### Key decisions and findings
+
+- **The corpus already held the answer to the wired question.** `power-electronics` recorded the 20 August FCC refinement; the `huawei` judgment calling it an open ambiguity was written a day earlier without it. Step 7's grep found it in under a minute.
+- **Three attributions were wrong in three different ways** — one true-but-unrecorded (SST), one true-but-misattributed (grid-to-chip is Sungrow's own marketing, not an analyst's), one arithmetically real but attached to the wrong month and cause (CNY 100B), one the *inverse* of the subject's stated position (wired links). "Unconfirmed" was not a sufficient category for any of them.
+- **A null, exhaustively established, is a finding.** CATL's silence on a RMB 4.1B deal is documented with the search list rather than papered over with Zhonhen's account.
+- **F9's own description is imprecise** — `tract` asserts USD 4bn in **two** prose places plus one source label, not four. Verified this session; the next session should not go looking for four.
+- **Relationship asymmetry is the corpus norm, not a defect** — 272 of 950 pairs reciprocal (29%); `sungrow` 7/26 and `catl` 8/23 sit near baseline. Only the three edges step 7 required were added; a backfill was deliberately not opened inside a research phase.
+
+### Active context
+
+- **Branch:** `claude/phase-2a-sungrow-catl-afbfui` · **repo version:** v05.05r · **Profiler page:** v01.83w (unchanged — data-only)
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 9 named projects / 8 guidance modules / 4 reports (0 superseded); 5 dossiers at new versions (sungrow 9, catl 7, huawei-digital-power 8, hithium 13, zhonhen 7)
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG: 105 sections, 7 dated 2026-09-07.** Same EST day → 106 − 8 = 98 → no rotation. **A later EST day → 106 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`). `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
+- **Checker state:** reports **0 errors / 7 warnings** (enumerated above, all left loud) / 31 quiet. Crossrefs 0 candidates / 21 over-cap scopes / accept list 12. Relationships 0 findings / accept list 10. Study 0/0. Registry 154, calendar bijection clean. Graph digest `5da403c684612402456a17e72d5a3ab381506670f16df77a854bffd166166816`.
+- **Phase 2b intel gathered but not acted on:** the sole source behind `tract`'s USD 4bn is `sources[136]`, an **undated** Muskin Elam Group page ("across street from Prime Data Centers $4B campus") — also the `source` of tract's `prime-data-centers` edge. `prime-data-centers` never says 4bn: its Lockhart figures are USD 1.3bn (Bisnow 2024, three buildings) cut to **USD 400m** (Texas filing TABS2026019473, two 380,000 sq ft shells, Jun 2026–Sep 2027), against a campus page of 205 acres / eight buildings / 384 MW. tract's edge `context` already carries the USD 400m phase-1 figure; the unqualified USD 4bn sits in `relationships[2].note` and `productsAndServices[2].highlights[0]`. **No report pins either dossier**, so Phase 2b should leave the warning count at exactly 7.
+- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** Phase 0 Done (v05.02r/v05.03r) · 1 Done (v05.04r) · **2a Done (v05.05r)** · **2b next** · 3, 4 (0/20), 5, 6, G6 open.
+- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; README archive listing may still lag for other slugs; OSHA IMIS and SEC EDGAR network-blocked. New this session: `huawei`'s FCC `policyExposure` entry is now 1,297 chars, over the 900-char cap the v05.04r session kept it under (`policyExposure` is not a scanned scope kind, so nothing became unexamined — but the convention is no longer honoured). Two bounded research nulls: FCC ECFS returned 403/zero, and WeChat is not searchable from here. Interim caveat still standing: **do not act on the `named-project` report's whitespace call** until Phase 5.
+
+### Recommendation for next session
+
+- Run **Phase 2b on Fable 5.1 High** from `INTEGRATED-REMEDIATION-PLAN.md` §1 (F9), §2 and §3: the `tract` ↔ `prime-data-centers` citation read. Open the undated Muskin Elam page behind tract's USD 4bn and Prime's own Lockhart record, establish what scope each figure describes (a full eight-building/384 MW build-out total against a two-shell phase 1 is the obvious hypothesis, and it must be *tested*, not assumed), then **state both with their scopes** in both dossiers — or correct whichever is actually wrong. Deleting the USD 4bn without establishing its scope is the exact failure step 7 exists to prevent.
+
+**To continue:** type `run phase 2b`
+
+## Previous Sessions
+
+
 **Date:** 2026-09-07 04:19 AM EST
 **Repo version:** v05.04r — **one** push commit this session (`80e12f9`), merged to `main` as `3265d3e`, plus this housekeeping commit
 **Branch:** `claude/phase-1-dossier-fixes-5vp7km` (fast-forwarded to `origin/main` after the merge via `git merge --ff-only origin/main`; the workflow had deleted the remote branch, which freed push-once for this second push)
@@ -49,44 +101,3 @@ v05.04r pushed and merged; this housekeeping push carries the session context. P
 - Run **Phase 2a on Opus 5 xhigh** from `INTEGRATED-REMEDIATION-PLAN.md` §1–§3: the `sungrow` and `catl` research refreshes — F7 (SST / grid-to-chip / the CNY 100B loss / the FCC wired-prong argument, sourced from Sungrow's own record or stated as unconfirmed, weighing Cooley's wired-or-wireless reading now in huawei v7) and F8 (CATL's RMB 4.1B / 49% Zhonhen holdco purchase from CATL's side) — revised and archived per the Profiler Command, step 7 run against `hithium` and `huawei-digital-power`, all six checkers clean, the three hithium pins still loud unless read and recorded.
 
 **To continue:** type `run phase 2a`
-
-## Previous Sessions
-
-**Date:** 2026-09-07 03:52 AM EST
-**Repo version:** v05.03r — **two** push commits this session: `6ee86f9` (v05.02r, Phase 0), merged to `main` as `a33b577`, and the v05.03r push carrying the X3b acceptance and this context write
-**Branch:** `claude/fable-phase-0-remediation-dvqmwe` (fast-forwarded to `origin/main` after the first merge; the remote branch had been deleted by the workflow, which freed push-once for the second push)
-**Model:** Fable 5.1 High — **Phase 0 of the integrated remediation plan, then the X3b acceptance.** No dossier and no report edited.
-
-### What was done
-
-**v05.02r — Phase 0 of the nine-phase integrated plan, all five components.** (1) `PROFILER-COVERAGE-PLAN.md` §9.4's X3 row split into **X3a · integrity close-out = Done v05.01r** (substance kept) and **X3b · report-pin policy = Open**, §9.5 row 5 updated, Phase D still starts at step 2. (2) §9.3's "0 warnings" clause and the "re-pin all four reports" instruction struck **in place** with visible defect notes; a **Phase 0 evaluation** paragraph records why the clause was permanently unreachable (re-verified: `:219` file set from every `*.report.json`, `:228–235` no status gate, `superseded` computed at `:236`) and evaluates the v05.01r proposal — right in substance, wrong in form (prose the checker cannot test; discards the count; silent on superseded reports). Adopted: keep "0 warnings" and make the count mean the right thing. (3) **`repository-information/report-pins-verified.json`** seeded with the 38 pins, generated from a live checker run after confirming the same 38 triples (17 short-gap / 21 wide-gap, named examples matching) and an **empty** `git diff 6ad51a9..HEAD -- live-site-pages/profiler-data`. (4) **`scripts/check-profiler-reports.py`**: two-pass load so `superseded` is known first; superseded reports skipped for pin drift only; verified pins quiet until the dossier moves past `verifiedAt`, then re-warn; the list validated (eight error cases); docstring rewritten. Exercised in a scratch copy: `hithium` v11→v12 gave exactly 3 re-warnings; a superseded report skipped 12 pins and errored its 12 stale entries. **Live: 4 reports, 0 errors, 0 warnings, 38 quiet.** (5) **`repository-information/INTEGRATED-REMEDIATION-PLAN.md`** persisted — nine phases with model/effort/sessions/scope/done-when, the twelve-item X3 finding set with a phase each, the curriculum skeleton (3 lanes · 5 tracks · 30 lessons · 10 built · 20 remaining), dependencies and caveats, status ledger. All six checkers exit 0; `profiler-graph.json` byte-identical for the sixth session (digest asserted).
-
-**v05.03r — X3b accepted, Phase X closed.** Two explanatory turns (what X3b needed from the developer; what "quiet" means) then the developer accepted the amended criterion. §9.4 X3b → Done v05.03r (closed by the session *after* the one that wrote the criterion; v05.02r text kept as history); §9.5 row 5 Phase X closed; §6 and §9.3 record the date; plan §5/§6 updated. Phase 1 paste-in prompt handed over in chat.
-
-### Where we left off
-
-v05.03r pushed. Phase X is closed in every record. **The next unit of work is Phase 1 on Fable 5.1 Medium** — the five zero-research dossier fixes — and a paste-in prompt for it was handed over with this context write. Nothing is half-done.
-
-### Key decisions and findings
-
-- **The session that writes a criterion does not close against it.** Recorded in `INTEGRATED-REMEDIATION-PLAN.md` (intro rule 2) and applied twice this session: Phase 0 left X3b Open despite the checker reading clean, and the acceptance turn flipped it only on the developer's word.
-- **"0 warnings" was kept as the criterion, not replaced with prose.** The checker's count is the surface's only mechanical signal; making it mean "every aged pin on a current report read at the current version" preserves it, and the re-warn on dossier movement makes it self-arming. Phase 1 will bump `hithium` (pinned in three current reports) → expect exactly **3 warnings** to return; leave them loud until read again and recorded.
-- **Phase 1's fifth dossier, `huawei-digital-power`, is under-specified by the record.** The X3 finding names its Sungrow attributions (CNY 100B market-value loss, FCC wired-prong argument) that `sungrow` v8 does not carry, but not the edit. The plan says the Phase 1 brief scopes it; anything needing Sungrow's own record moves to Phase 2a.
-- **Cheap-and-certain before slow-and-uncertain** (Phase 1 before 2a) and **Phase 5 before Phase 6** (do not author the reports twice) are written into the plan's dependency list.
-- The `checkout -B` branch restart was denied by the permission classifier; `git merge --ff-only origin/main` reached the same state non-destructively. Prefer the fast-forward when the session's commit is already on `main`.
-
-### Active context
-
-- **Branch:** `claude/fable-phase-0-remediation-dvqmwe` · **repo version:** v05.03r · **Profiler page:** v01.83w (unchanged — every push since v04.85r has been data- or docs-only)
-- **Corpus:** unchanged from v05.01r — 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 9 named projects / 8 guidance modules / 4 reports (0 superseded)
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG: 103 sections, 5 dated 2026-09-07.** Same EST day → 104 − 6 = 98 → no rotation. **A later EST day → 104 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`). `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
-- **Checker state:** `check-profiler-reports.py` 0 errors / 0 warnings / 38 aged pins verified and quiet (`report-pins-verified.json`, 38 entries). `check-profiler-crossrefs.py` 0 candidates / 21 scopes noted. `check-profiler-relationships.py` 0 findings, accept list 10. Graph digest `563ae281…2168d6`.
-- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** Phase 0 Done (v05.02r, X3b accepted v05.03r) · Phase 1 next · 2a, 2b, 3, 4 (0/20), 5, 6, G6 open.
-- **Standing, unassigned:** README *archive* listing behind; `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS and SEC EDGAR network-blocked; README tree cosmetics in `study-prep/`. Interim caveat: **do not act on the `named-project` report's whitespace call** until Phase 5.
-
-### Recommendation for next session
-
-- Run **Phase 1 on Fable 5.1 Medium** from `INTEGRATED-REMEDIATION-PLAN.md` §1–§2: the five zero-research dossier fixes — `hithium` (add the `lightsource-bp` customer edge), `google` (Intersect Power at the USD 5,868m 10-Q allocation), `compass-datacenters` (Brookfield × Bloom USD 5bn → 25bn), `arevon` (five-vs-three operating BESS), `huawei-digital-power` (attribution wording only; Sungrow-record questions to 2a) — revised and archived per the Profiler Command, all six checkers clean, and exactly the three `hithium` pins re-warning in `check-profiler-reports.py`, left loud. Every correcting fact is already in the corpus; it is comparison work.
-
-**To continue:** type `run phase 1`
