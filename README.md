@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-07 05:47:31 AM EST` · Repo version: `v05.06r`
+Last updated: `2026-09-07 06:32:19 AM EST` · Repo version: `v05.07r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -941,7 +941,7 @@ Last updated: `2026-09-07 05:47:31 AM EST` · Repo version: `v05.06r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG-archive.md">CHANGELOG-archive.md</a>    — [template · initialized] Older changelog sections (rotated from CHANGELOG.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASP-PUSH-PILOT-SETUP.md">CLASP-PUSH-PILOT-SETUP.md</a> — Setup for the GitHub Actions → clasp push deployment pilot
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-COMMITTER-CONTRACT.md">CLASSROOM-COMMITTER-CONTRACT.md</a> — C2a: the contract an unattended Classroom pipeline run is held to (write set, frozen surfaces, fail-closed outcomes, corpus-delta guarantees, checker obligations)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-CURRICULUM-PLAN.md">CLASSROOM-CURRICULUM-PLAN.md</a> — Classroom curriculum design (planning output, nothing built): five-track structure, 25 proposed lessons with stamps and gates, teaching order, the grid-to-chip failure-point map, the research gap register, the cut line
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-CURRICULUM-PLAN.md">CLASSROOM-CURRICULUM-PLAN.md</a> — Classroom curriculum design, re-planned at v05.07r against the 154-company corpus: five-track structure, 34 lessons with stamps and gates (10 built · 24 remaining in Phase 4 order), teaching order, the grid-to-chip failure-point map, the research gap register, the re-ranked cut line, the revision log
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-SCHEMA.md">CLASSROOM-SCHEMA.md</a>     — Classroom app track/lesson schema + provenance stamp (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/classroom-pipeline-ledger.json">classroom-pipeline-ledger.json</a> — C2b: the Classroom pipeline's run record — curriculum watermark, gate-surface digest, last committing run
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CODING-GUIDELINES.md">CODING-GUIDELINES.md</a>    — [template · initialized] Domain-specific coding knowledge
