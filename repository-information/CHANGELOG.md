@@ -3,11 +3,52 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.95r] — 2026-09-06 08:52:59 PM EST — v01.83w
+
+> **Prompt:** "Picking up from the C12 session, run the first of the six guide-backfill sessions from
+> repository-information/PROFILER-COVERAGE-PLAN.md §8 ("Study guides on existing dossiers") on Opus 5 xhigh as a fresh
+> session: apex-clean-energy, arevon, eolian, jupiter-power, key-capture-energy. […] THE TASK, per company:
+> `profiler prep <Company>` ONLY — no dossier work. […] THESE FIVE ARE THE BUYER SIDE, AND THAT IS THE POINT. All five
+> are IPPs — the counterparties that actually purchase and operate storage. §6 says these guides unlock the
+> `who-buys-storage` and `how-a-storage-project-happens` lessons, so teach the BUYER'S machinery, not the vendors'
+> […] Do not re-teach cell chemistry — `rept` and `gotion` now cover it and you should reference rather than
+> duplicate. NO DOSSIER EDITS. […] CONCEPTS — CHECK COLLISIONS PROGRAMMATICALLY, NOT BY PHRASE. […] The registry is a
+> vocabulary in use, not an encyclopedia — register only what these five guides actually use. […] JSON FORMATTING —
+> inherit per-file conventions. […] DO NOT re-sort `profiler-companies.json` […] CHANGELOG IS AT 97/100 […] VERIFY:
+> all six checkers exit 0 […] one push commit on a claude/* branch."
+
+### Added
+
+- **Guide-backfill session 1 of 6 — the five IPP buyer-side study guides.** Guides only: no dossier was opened for editing, no `profileVersion` moved, nothing was archived. Each is schema v2 with a lesson plan under `repository-information/study-prep/<slug>/`, and the five are designed as **one non-overlapping course** rather than five variations on a theme:
+  - **`apex-clean-energy`** — *the project, not the battery* (10 sections). The development funnel and its attrition, the interconnection queue as the scarce asset, siting law and setback geometry as engineering inputs, where the years actually go, the four-layer capital stack and why the tax-credit buyer's diligence — not a procurement policy — picks the supplier, attached against standalone deployment, and what a system integrator's insolvency strands.
+  - **`arevon`** — *what the contract obligates* (11 sections). The resource-adequacy obligation as the source of demand, five contract forms and their risk allocation, effective load carrying capability against net qualifying capacity, the saturation mechanism by which storage erodes its own accreditation, DC- against AC-coupled hybrids, tax equity against credit transfer, single-supplier concentration read as a deliberate trade, and safety evidence as a specification.
+  - **`eolian`** — *where the money comes from* (10 sections). The four revenue layers and their sharply different saturation behaviour, why reserve income collapses in every maturing market while arbitrage does not, the same battery as five different businesses in ERCOT / CAISO / PJM / MISO / NYISO, duration as an asymmetric bet, forward capacity as a financing instrument, and the grid connection as the product.
+  - **`jupiter-power`** — *the same battery in two hands* (9 sections). Stored energy as inventory with an option attached, day-ahead commitment as a hedge, the four interacting inputs to an offer curve, warranty as a throughput budget and degradation cost as its price, what real-time co-optimisation with state-of-charge awareness changes, keeping or selling the dispatch right, and the five decisions that separate desks.
+  - **`key-capture-energy`** — *when the buyer is regulated* (9 sections). Resource plan to solicitation to commission approval, prudence review as the discipline behind every regulated preference, five procurement structures, zonal and locational value, non-wires alternatives, three shapes of state incentive and what each actually finances, and the cost and the prize of being a market's first battery.
+- **24 concepts registered** (1,049 → 1,073), all buyer-side vocabulary the corpus was missing: the market names it lacked (`nyiso`, `iso-ne`, `icap`, `reliability-pricing-model`), the revenue anatomy (`revenue-stack`, `frequency-regulation`, `non-spinning-reserve`, `day-ahead-market`, `real-time-market`, `locational-marginal-price`, `offer-curve`, `degradation-cost`, `must-offer-obligation`), the accreditation and siting terms (`net-qualifying-capacity`, `duck-curve`, `setback`, `network-upgrades`, `energy-only-interconnection`), and the procurement terms (`system-integrator`, `capacity-maintenance-agreement`, `non-wires-alternative`, `solar-peaker`, `energy-plus-load`, `speed-to-power`).
+
+### Changed
+
+- **§8's five backfill rows flipped** to `✓ · v04.95r` with a one-line handle each, leaving 21 backfills outstanding across five further sessions.
+- **README tree** gains the five `<slug>.study.json` entries and five `study-prep/<slug>/` pairs.
+
+### Fixed
+
+- **Three README tree entries C12 never added** — `study-prep/gotion/`, `study-prep/rept/` and `study-prep/whiting-turner/` existed on disk with no tree entry. Found by the [PC-README-TREE] completeness audit rather than reported, and fixed here because the audit is a pre-commit gate on every push, not a property of the session that created the gap. The study-prep listing is now exact at 85 directories.
+
+### Worth noting
+
+- **The collision check found one hit, and a phrase search would have missed it.** Of 25 proposed concepts, `frequency-regulation`'s proposed alias *regulation service* was already an alias of `ancillary-services` — invisible to a search for the display term, caught by building a lowercase map of every registered term **and** alias and testing every proposed term and alias against it. This is C12's lesson applied; it cost about ten seconds and it was not free of findings.
+- **A 26th concept was written and then dropped unused.** `greenfield` was drafted as the natural pair to the registered `brownfield`, and no guide ended up using it. The registry rule is a vocabulary in use, so it was removed before the merge rather than registered speculatively — the marker inventory was extracted from the finished guides and intersected with the proposed set, which is what surfaced it.
+- **`profiler-companies.json` was not touched at all.** C12's re-sort moved two pre-existing entries and inflated a 36-line diff to 176; this session's registry diff is **168 added, 0 removed** — a pure insertion of 24 alphabetically placed entries with no reordering.
+- **CHANGELOG capacity checked against the real section count, not the counter.** `grep -c '^## \[v[0-9]'` returned 97 and the counter read 97: no drift. This push takes it to 98, so **rotation is due on the session after next** and is now the binding schedule item for backfill sessions 3 and 4.
+- **No dossier errors were found to hand forward.** The five profiles were read for `productsAndServices`, `technicalSpecs` and `policyExposure` only, and nothing in what was read contradicted itself or the corpus.
 
 ## [v04.94r] — 2026-09-06 08:15:02 PM EST — v01.83w
 

@@ -1,0 +1,291 @@
+{
+ "schemaVersion": 2,
+ "slug": "jupiter-power",
+ "title": "Jupiter Power — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the same battery in two hands is two assets",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Identical hardware on identical sites can earn twice as much for one owner as for another. The difference is dispatch.",
+   "ps": [
+    "Grid batteries are near-commodities. Cells, containers, cooling and inverters converge quickly, and two owners in the same market can buy the same product at nearly the same price. What does not converge is **how the asset is operated**.",
+    "This guide is about that operation: the decision, taken thousands of times a year, to charge, discharge, or stand ready — and why it is a forecasting and risk problem rather than an engineering one.",
+    "The single idea underneath everything below is that stored energy is **inventory with an expiry option**. Selling it now forfeits selling it later, and every cycle spends a measurable amount of the asset's remaining life. Both costs are invisible on a price screen and both are real.",
+    "Chemistry is out of scope — cells, thermal design and container economics are covered in the cell-maker guides. What matters here is what the control layer decides to do with them."
+   ]
+  },
+  {
+   "id": "the-optimisers-problem",
+   "title": "Inventory, not generation",
+   "kind": "prose",
+   "read": "A power plant decides whether to run. A battery decides when to spend something it cannot replace for free.",
+   "ps": [
+    "A conventional generator's operating decision is close to a threshold test: if the price exceeds its fuel and variable cost, run. Its fuel arrives continuously and its decision this hour barely constrains the next.",
+    "A battery has no fuel cost and a hard inventory constraint. **{{State of charge}}** is a stock, refilled only by buying energy at some other hour, and discharging now removes the ability to discharge later. Every dispatch is therefore the exercise of an option whose value depends on the distribution of prices for the rest of the day.",
+    "That turns operation into a forecasting problem with three parts: what prices will do, how confident that forecast is, and what state of charge should be carried into each part of the day given the uncertainty. The last is where operators differ most — a policy that always ends the afternoon full sacrifices ordinary revenue for protection against rare spikes, and the right answer depends on how those spikes are distributed.",
+    "The forecast that matters is **{{locational marginal price}}** at the project's own node, not a regional average. Congestion means two batteries a short distance apart can face genuinely different prices, so a good forecast is local and includes the transmission constraints that bind around it.",
+    "Finally, the decision is not made once. Positions taken in the {{day-ahead market}} are financially binding, and the {{real-time market}} settles what actually happens. An asset can be committed day-ahead and then find real-time prices far higher — in which case it must buy back its shortfall — or lower, in which case the commitment was the right hedge. Managing the relationship between the two is a distinct skill from forecasting either one."
+   ]
+  },
+  {
+   "id": "building-an-offer",
+   "title": "How a bid actually gets built",
+   "kind": "table",
+   "read": "An offer curve is a forecast, a risk policy and a cost model compressed into a list of prices and quantities.",
+   "intro": "Each interval, the asset submits an {{offer curve}}: how much it will sell, and buy, at each price. Four inputs go into every point on that curve.",
+   "cols": [
+    "Input",
+    "What it contributes",
+    "What happens when it is wrong"
+   ],
+   "rows": [
+    [
+     "Price forecast at the node",
+     "The expected value of holding versus selling in each interval",
+     "Energy is sold into the second-best hour of the day, repeatedly"
+    ],
+    [
+     "{{Degradation cost}}",
+     "A floor under the spread worth capturing, in money per megawatt-hour moved",
+     "The asset cycles profitably on paper and consumes warranty life it will not earn back"
+    ],
+    [
+     "{{Round-trip efficiency}} and auxiliary load",
+     "The energy lost to conversion and to running the cooling system",
+     "Margins are systematically overstated, most severely on narrow spreads"
+    ],
+    [
+     "State-of-charge policy",
+     "How much energy is reserved for later intervals and for scarcity risk",
+     "The battery is empty during the hour that pays for the year, or full during the hour it should have sold"
+    ]
+   ],
+   "note": "The reason this is hard is that the four inputs interact. A wider spread justifies deeper cycling, which raises degradation cost; higher auxiliary load in hot weather coincides with the highest-value hours; and a conservative state-of-charge policy lowers ordinary revenue precisely to protect the tail. Optimisation is the joint problem, which is why it is done by software and judged over seasons rather than days."
+  },
+  {
+   "id": "the-cost-of-a-cycle",
+   "title": "What a cycle actually costs",
+   "kind": "prose",
+   "read": "Warranty life is a budget denominated in energy. Spending it is a cost like fuel.",
+   "ps": [
+    "A supplier's warranty does not promise a number of years. It promises that usable energy will stay above a stated curve given a defined usage envelope — a maximum number of full-equivalent cycles per year, a temperature range, and limits on {{depth of discharge}} and {{C-rate}}. Operating outside the envelope voids or degrades the promise.",
+    "That converts battery life into a budget measured in megawatt-hours of throughput. **{{Degradation cost}}** is simply that budget priced: the replacement or {{augmentation}} cost attributable to one megawatt-hour moved. A dispatch is only genuinely profitable when the captured spread exceeds this cost plus the energy lost to {{round-trip efficiency}} and to the cooling system.",
+    "This is why a well-run battery declines spreads that look positive. A narrow spread that clears on the price screen can be value-destroying once cycle cost and losses are subtracted, and an optimiser that ignores it will show excellent gross revenue alongside a fleet aging far faster than its warranty curve.",
+    "The relationship is not linear, which is where judgement enters. Deeper discharges and higher rates age cells disproportionately, so a shallow cycle costs less per megawatt-hour than a deep one. A rational operator therefore cycles deeply only when the spread justifies the extra wear — meaning the degradation cost used in the bid is itself a function of how the asset is being run.",
+    "One more consequence: cycles have to be spent somewhere. An asset contracted so that someone else dispatches it is spending the owner's warranty budget on the offtaker's decisions, which is why every {{tolling agreement}} contains cycle limits and a mechanism for charging for cycles beyond them. Those clauses are not boilerplate — they are the transfer price for battery life."
+   ]
+  },
+  {
+   "id": "co-optimisation",
+   "title": "When the market starts doing the optimising for you",
+   "kind": "callout",
+   "tone": "note",
+   "read": "Clearing energy and reserves together, with state of charge in the model, changes which batteries are worth building.",
+   "ps": [
+    "Historically, energy and {{ancillary services}} were procured on different timetables — reserves committed a day ahead, energy cleared every few minutes. A battery selling both had to guess: capacity promised as reserve was unavailable for energy, and the reserve commitment was made before the energy prices were known.",
+    "**{{Real-time co-optimization}}** clears both together in each short interval, so the system operator itself decides whether a given megawatt is worth more as energy or as reserve at that moment. The resource offers into both and the clearing engine allocates.",
+    "For batteries there is a second change that matters as much: the clearing engine can track **{{state of charge}}**, so it will not award a reserve obligation that the battery lacks the stored energy to honour. Before that, deliverability was the owner's problem and the market simply assumed it.",
+    "The consequences run in two directions. Awards become more efficient and less gameable, which narrows the advantage of a very sophisticated desk over an average one. But an operator loses some ability to arbitrage the seam between the two products, and a short-duration unit that was selling reserve it could not have delivered for a full hour is now assessed honestly.",
+    "The general lesson is that **market design is a capital-allocation input**. A rule change of this kind can revalue an existing fleet — favouring longer duration, penalising thin state-of-charge management — without a single physical change to any asset. Reading proposed market rules is therefore part of a buyer's technical due diligence, not a policy sideline."
+   ]
+  },
+  {
+   "id": "who-holds-the-button",
+   "title": "Keep the dispatch right, or sell it",
+   "kind": "proscons",
+   "read": "The choice is not merchant versus contracted. It is who is paid for being good at this.",
+   "intro": "An owner can operate the asset itself and take the market outcome, or sell the dispatch right for a fixed fee and let someone else take it. Both are respectable; they suit different balance sheets.",
+   "cards": [
+    {
+     "t": "Operate it yourself",
+     "meta": "In-house desk, merchant exposure, full upside",
+     "adv": [
+      "**Optimisation skill is retained as margin** rather than given away in the toll price.",
+      "**Fleet-wide learning compounds** — forecasts, node models and state-of-charge policies improve with every asset and season.",
+      "**Freedom to reposition** as market design or the {{revenue stack}} changes, without renegotiating a contract."
+     ],
+     "dis": [
+      "*Earnings are volatile*, and a mild year or a market redesign can halve them.",
+      "*Debt is harder and dearer* without a contracted floor.",
+      "*It is a real business* — traders, forecasting, risk control and round-the-clock staffing, all of which have fixed cost."
+     ]
+    },
+    {
+     "t": "Sell the dispatch right",
+     "meta": "A toll or availability contract; the counterparty takes the market",
+     "adv": [
+      "**Revenue becomes predictable**, which lowers the cost of debt and raises what the asset is worth to long-dated capital.",
+      "**Market risk transfers** to a counterparty better placed to hedge it, often one with a portfolio to net against.",
+      "**Operational obligations narrow** to availability and maintenance, which are controllable."
+     ],
+     "dis": [
+      "*The upside is sold* — a volatile year enriches the toller, not the owner.",
+      "*Cycle limits and availability tests* impose obligations that constrain maintenance choices.",
+      "*Counterparty credit becomes a core risk*, and the contract is only as good as the payer."
+     ]
+    }
+   ],
+   "note": "In practice large owners do both, project by project, and the mix moves with the market: as merchant spreads compress, the share of the fleet under contract rises. A fleet's contracted proportion is therefore a readable signal of how its owner currently views the merchant opportunity — and a fleet that is entirely one or the other is making a strong statement either way."
+  },
+  {
+   "id": "what-separates-desks",
+   "title": "Where the performance gap between two identical batteries comes from",
+   "kind": "ledger",
+   "read": "Five decisions, none of them about hardware.",
+   "cols": [
+    "Decision",
+    "The naive version",
+    "What a good desk does instead"
+   ],
+   "rows": [
+    [
+     "Price forecasting",
+     "Use a regional forward curve",
+     "Model the project's own node, including the constraints that bind around it and the weather that drives them"
+    ],
+    [
+     "State-of-charge policy",
+     "Empty at the highest forecast price",
+     "Carry a reserve into the risk window, sized to the probability and magnitude of scarcity rather than to the point forecast"
+    ],
+    [
+     "Energy against reserves",
+     "Sell whichever pays more today",
+     "Treat the split as a portfolio decision across the day, recognising that a reserve award constrains later energy delivery"
+    ],
+    [
+     "Cycling depth",
+     "Cycle to the warranty limit whenever the spread is positive",
+     "Price the {{degradation cost}} of the specific cycle and decline spreads that do not clear it"
+    ],
+    [
+     "Outage timing",
+     "Maintain when convenient",
+     "Schedule maintenance into the lowest-value windows and around availability obligations, because an outage in the wrong week can cost more than the work"
+    ]
+   ],
+   "note": "Every row is a decision the software makes and the operator supervises. This is why the same asset in different hands produces genuinely different returns, and why owners describe dispatch software as intellectual property rather than a tool. It is also why third-party optimisation is a real market: an owner who cannot justify a desk can rent one, and pay for it in a share of the upside."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Dispatch, cycle cost and market design.",
+   "cards": [
+    {
+     "q": "Why is a battery's operating decision harder than a gas plant's?",
+     "a": "A generator's fuel arrives continuously, so its decision is close to a price threshold. A battery holds a fixed inventory: discharging now removes the ability to discharge later, so each dispatch is exercising an option whose value depends on the rest of the day's prices."
+    },
+    {
+     "q": "What is {{degradation cost}}, and where does it enter a bid?",
+     "a": "The value of battery life consumed per megawatt-hour moved, derived from the warranty's usage envelope and the cost of replacement or {{augmentation}}. It sets a floor under the spread worth capturing, so it enters the offer curve as a minimum acceptable price difference."
+    },
+    {
+     "q": "Why does a well-run battery sometimes decline a spread that looks profitable?",
+     "a": "Because the spread must also cover round-trip losses, the cooling system's own consumption and the cycle's degradation cost — and because discharging now may forfeit a more valuable interval later."
+    },
+    {
+     "q": "Why does forecasting a regional average price rather than the project's node lose money?",
+     "a": "Congestion makes nodal prices diverge. Two batteries a short distance apart can face different {{locational marginal price}} outcomes when a constraint binds between them, so a regional forecast systematically mis-times dispatch at the actual settlement point."
+    },
+    {
+     "q": "What is the risk of a day-ahead commitment for a battery?",
+     "a": "It is financially binding. If real-time prices rise far above the committed price, the asset must effectively buy back its shortfall — so day-ahead selling is a hedge, and choosing how much to hedge is a separate decision from forecasting."
+    },
+    {
+     "q": "What changes for batteries when energy and ancillary services are co-optimised in real time?",
+     "a": "The market allocates each megawatt to its highest-value use every interval, and can track {{state of charge}} so it will not award reserve the battery cannot deliver. Awards get more efficient, the seam between products closes, and honest deliverability is enforced rather than assumed."
+    },
+    {
+     "q": "Why does a tolling agreement contain cycle limits?",
+     "a": "Because the toller is dispatching the owner's asset and every cycle spends warranty life the owner must replace. The cycle cap and the charge for exceeding it are the transfer price for battery degradation."
+    },
+    {
+     "q": "What does a rising contracted share of a fleet tell you about its owner's view?",
+     "a": "That it judges merchant spreads to be compressing or too uncertain to underwrite, and is trading upside for a financeable floor. The mix is a readable signal of the owner's market view, project by project."
+    },
+    {
+     "q": "Why should a buyer read proposed market rule changes as technical diligence?",
+     "a": "Because a design change can revalue an existing fleet with no physical change — favouring longer duration, penalising thin state-of-charge management, or closing an arbitrage between products. The rules are an input to capital allocation, not a policy sideline."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on operating a battery well.",
+   "items": [
+    {
+     "q": "Stored energy is best described in operating terms as:",
+     "c": [
+      "A fuel with a variable cost",
+      "Inventory whose sale forfeits a later option",
+      "A fixed capacity obligation",
+      "A regulated service"
+     ],
+     "a": 1,
+     "why": "The battery holds a stock it can only refill by buying at another hour, so every discharge is the exercise of an option on the remainder of the day."
+    },
+    {
+     "q": "A desk cycles whenever the raw price spread is positive. The most likely outcome over a year is:",
+     "c": [
+      "Maximum profit",
+      "Strong gross revenue with degradation ahead of the warranty curve",
+      "Reduced auxiliary load",
+      "Higher capacity accreditation"
+     ],
+     "a": 1,
+     "why": "Raw spread ignores round-trip losses, auxiliary consumption and the cost of the cycle itself, so the asset can look busy and profitable while consuming warranty life it will not earn back."
+    },
+    {
+     "q": "Under real-time co-optimisation with state-of-charge awareness, a one-hour battery:",
+     "c": [
+      "Gains an advantage over longer units",
+      "Is assessed on reserve it can actually deliver",
+      "Is barred from ancillary markets",
+      "Earns a capacity payment"
+     ],
+     "a": 1,
+     "why": "Tracking state of charge in the clearing prevents awards the resource cannot honour, which removes an advantage that short-duration units previously enjoyed at the seam between products."
+    },
+    {
+     "q": "Which of these is NOT a reason nodal forecasting matters?",
+     "c": [
+      "Congestion separates nearby prices",
+      "Constraints bind at specific times",
+      "Losses vary by location",
+      "Battery chemistry differs by node"
+     ],
+     "a": 3,
+     "why": "The first three are components of a locational price. Chemistry is a property of the asset and has nothing to do with where it settles."
+    },
+    {
+     "q": "An owner sells the dispatch right under a toll. Which risk grows rather than shrinks?",
+     "c": [
+      "Price risk",
+      "Counterparty credit risk",
+      "Forecasting risk",
+      "Volume risk"
+     ],
+     "a": 1,
+     "why": "Market risk transfers to the toller, but the owner's revenue now depends entirely on that counterparty continuing to pay — so credit exposure becomes the dominant risk."
+    },
+    {
+     "q": "Two identical batteries at the same node earn materially different returns. The most likely explanation is:",
+     "c": [
+      "Different cell suppliers",
+      "Different dispatch decisions and state-of-charge policy",
+      "Different container sizes",
+      "Different inverter brands"
+     ],
+     "a": 1,
+     "why": "At the same node, with the same duration, the operating decisions — forecast quality, reserve policy, cycling discipline and outage timing — dominate everything hardware can contribute."
+    }
+   ]
+  }
+ ]
+}

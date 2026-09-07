@@ -945,6 +945,15 @@
       "def": "The megawatts of firm injection a generator is entitled to put onto the grid at its point of interconnection, established by the studies it paid for. They are a property-like right: what a co-location arrangement argues over is whether load may sit behind them without a new study."
     },
     {
+      "slug": "capacity-maintenance-agreement",
+      "term": "capacity maintenance agreement",
+      "def": "A long-term contract in which the equipment supplier guarantees that a battery will still hold a stated fraction of its original energy after a given number of years, and adds cells or replaces modules at its own cost if it does not. It converts the physics of degradation into a commercial obligation, which is why the credit strength of the party giving it matters as much as the wording.",
+      "aliases": [
+        "capacity warranty",
+        "augmentation agreement"
+      ]
+    },
+    {
       "slug": "capacity-market",
       "term": "capacity market",
       "def": "A market that pays a resource for being available to serve peak demand — a payment for existing, not for energy produced. PJM runs its auction, the Base Residual Auction, three years ahead; the clearing price per megawatt-day is the signal that new data-center load has moved the region from surplus to scarcity, and it flows straight into a regulated utility's bills.",
@@ -1946,6 +1955,11 @@
       ]
     },
     {
+      "slug": "day-ahead-market",
+      "term": "day-ahead market",
+      "def": "The wholesale auction held the day before delivery, in which generators and buyers commit to quantities and prices for each hour of the following day. Commitments made here are financially binding, so a resource that fails to deliver must buy the shortfall back in the real-time market."
+    },
+    {
       "slug": "day-tank",
       "term": "day tank",
       "def": "The small fuel tank mounted at or near the gen-set, kept full by pumps from the bulk storage tank, that feeds the engine directly. Sizing it is a code and permit question as much as an engineering one, because the tank's capacity sets how long the set can run if the transfer pumps fail.",
@@ -2063,6 +2077,11 @@
       "slug": "degradation",
       "term": "degradation",
       "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
+    },
+    {
+      "slug": "degradation-cost",
+      "term": "degradation cost",
+      "def": "The value of the battery life consumed by one charge-discharge cycle, expressed as money per megawatt-hour moved. A dispatch decision is only profitable if the price spread captured exceeds this cost plus round-trip losses, which is why an optimizer will decline spreads that look positive on the price screen alone."
     },
     {
       "slug": "delayed-draw-term-loan",
@@ -2586,6 +2605,14 @@
       ]
     },
     {
+      "slug": "duck-curve",
+      "term": "duck curve",
+      "def": "The daily shape of demand left for conventional generators once solar output is subtracted — a deep midday trough and a steep evening climb, drawn as a duck's back and neck. It is the reason storage is valued for shifting energy a few hours rather than for days.",
+      "aliases": [
+        "net load curve"
+      ]
+    },
+    {
       "slug": "duration",
       "term": "duration",
       "def": "How long a storage plant can discharge at full power (energy divided by power, MWh ÷ MW). Duration decides which grid jobs a battery can do — most US grid-scale projects run a few hours."
@@ -2802,6 +2829,11 @@
       ]
     },
     {
+      "slug": "energy-only-interconnection",
+      "term": "energy-only interconnection",
+      "def": "A grid connection that lets a project sell energy but carries no guarantee it can be counted toward the region's capacity requirement, and no right to be served firmly when the network is constrained. It is cheaper and faster to obtain than a full capacity connection, and the trade is made explicitly at the study stage."
+    },
+    {
       "slug": "energy-only-market",
       "term": "energy-only market",
       "def": "A wholesale market design with no capacity market: generators are paid only for the energy they actually sell, and the incentive to build new plant comes from prices that spike when supply is scarce. ERCOT is the US example — no auction pays a plant to exist, so no commission certifies one, and whether a plant gets built is a private investment decision made against expected scarcity prices.",
@@ -2822,6 +2854,11 @@
         "industrial park",
         "power-and-load campus"
       ]
+    },
+    {
+      "slug": "energy-plus-load",
+      "term": "energy-plus-load",
+      "def": "Placing a large new electricity consumer — typically a data centre — at a site that already holds a grid connection built for generation or storage, so the consumer inherits the connection rather than joining the queue for a new one. The scarce asset being monetised is the interconnection position, not the equipment."
     },
     {
       "slug": "energy-storage-service-agreement",
@@ -3492,6 +3529,15 @@
       "def": "Equipment that turns power at one frequency into power at another — 50 Hz to 60 Hz between grids and ships, or grid power to the 400 Hz that aircraft systems use on the ground. Rotary versions do it with a motor-generator, static versions with a rectifier and an inverter."
     },
     {
+      "slug": "frequency-regulation",
+      "term": "frequency regulation",
+      "def": "A grid service in which a resource continuously adjusts its output up or down, second by second, following a signal from the system operator so that supply and demand stay matched and frequency stays near its target. Batteries are unusually good at it because they can reverse from charging to discharging almost instantly.",
+      "aliases": [
+        "automatic generation control",
+        "AGC"
+      ]
+    },
+    {
       "slug": "front-of-meter",
       "term": "front-of-meter",
       "def": "A resource that interconnects on the utility's side of the customer meter, like a small power plant, and is paid by wholesale markets or by contract — as opposed to behind-the-meter equipment on a customer's own site. Which side of the meter a project sits on decides the buyer, the contract, the rulebook, and the length of the sales cycle, which is why it is usually the first qualifying question asked.",
@@ -4104,6 +4150,14 @@
       ]
     },
     {
+      "slug": "icap",
+      "term": "ICAP",
+      "def": "Installed capacity — the capacity-market construct used in New York, in which load-serving entities must buy enough capability to cover their peak demand plus a reserve. A storage project earns from it by being available when called, separately from any energy it sells.",
+      "aliases": [
+        "installed capacity market"
+      ]
+    },
+    {
       "slug": "icra",
       "term": "ICRA",
       "def": "Infection control risk assessment: the formal procedure for building inside or beside an operating healthcare facility — barriers, negative pressure, filtration, traffic routes. The discipline transfers directly to building beside a live data hall.",
@@ -4481,6 +4535,14 @@
       "aliases": [
         "ISO 8528-1",
         "ISO-8528"
+      ]
+    },
+    {
+      "slug": "iso-ne",
+      "term": "ISO-NE",
+      "def": "The independent system operator for the six New England states, which runs the region's wholesale energy, reserve and capacity markets. Its load centres are transmission-constrained, so where a resource sits inside the system matters as much as how big it is.",
+      "aliases": [
+        "ISO New England"
       ]
     },
     {
@@ -4966,6 +5028,14 @@
       ]
     },
     {
+      "slug": "locational-marginal-price",
+      "term": "locational marginal price",
+      "def": "The wholesale electricity price at one specific point on the grid, equal to the cost of serving one more unit of demand there — energy cost plus the cost of congestion and losses in getting it to that point. Two projects a short distance apart can face very different prices when the transmission between them is full.",
+      "aliases": [
+        "LMP"
+      ]
+    },
+    {
       "slug": "lockbox-account",
       "term": "lockbox account",
       "def": "A bank account controlled by lenders into which a tenant's rent is paid before anyone else can touch it. It turns a lease into collateral: the cash flow is captured at source rather than promised.",
@@ -5400,6 +5470,11 @@
       "def": "Making money by selling a business at a higher valuation ratio than you paid, without the business itself changing much. The alternative to growing earnings, and the one most dependent on market timing."
     },
     {
+      "slug": "must-offer-obligation",
+      "term": "must-offer obligation",
+      "def": "A contractual or market requirement that a resource make its capability available to the system operator whenever it is physically able, rather than choosing to sit out. It is what makes a capacity payment meaningful: the buyer is paying for the certainty of being able to call on the resource."
+    },
+    {
       "slug": "n-minus-1",
       "term": "N-1",
       "def": "The planning rule that a network must survive losing any single element without shedding load. It is why transmission looks over-built on a normal day, and why one outage can make a region's apparent spare capacity vanish at once.",
@@ -5507,11 +5582,28 @@
       "def": "A management-accounting figure showing what each division earned before group-level costs, staff profit share and tax. Divisional figures added together will not equal group profit, by design."
     },
     {
+      "slug": "net-qualifying-capacity",
+      "term": "net qualifying capacity",
+      "def": "The megawatts a resource is allowed to count toward a resource-adequacy obligation, after the system operator discounts its nameplate rating for how reliably it can deliver during the hours that matter. For storage the discount depends heavily on how many hours it can run at full output.",
+      "aliases": [
+        "NQC",
+        "qualifying capacity"
+      ]
+    },
+    {
       "slug": "network-difficulty",
       "term": "network difficulty",
       "def": "A number the bitcoin network adjusts so that blocks keep arriving about every ten minutes no matter how much hashrate joins or leaves. If total hashrate doubles, difficulty roughly doubles, and each machine's share of the rewards roughly halves.",
       "aliases": [
         "mining difficulty"
+      ]
+    },
+    {
+      "slug": "network-upgrades",
+      "term": "network upgrades",
+      "def": "Transmission equipment — new lines, larger transformers, reconductored circuits — that the grid needs before a new project can connect without overloading something. The interconnection study assigns their cost to the project, and that assignment is often what decides whether the project is built.",
+      "aliases": [
+        "network upgrade"
       ]
     },
     {
@@ -5590,9 +5682,25 @@
       "def": "A letter of intent, memorandum or master agreement that expresses intent to transact without obligating either party to do so. In a pre-revenue pipeline it is a marker of interest, not of a sale."
     },
     {
+      "slug": "non-spinning-reserve",
+      "term": "non-spinning reserve",
+      "def": "Standby capability that is not already running but can be started and delivering within a defined short window, typically minutes, if a generator trips or demand surges. Batteries qualify easily because they need no warm-up, so the service is nearly free revenue while they sit idle.",
+      "aliases": [
+        "non-spin"
+      ]
+    },
+    {
       "slug": "non-traded-reit",
       "term": "non-traded REIT",
       "def": "A real-estate investment trust sold to individual investors that is not listed on a stock exchange. Investors get their money back by asking the fund to buy their shares, not by selling to another investor — which works until too many ask at once."
+    },
+    {
+      "slug": "non-wires-alternative",
+      "term": "non-wires alternative",
+      "def": "Using a resource such as a battery, sited at a constrained point on the network, to defer or avoid building a new line or substation. The utility buys a service that relieves the constraint instead of buying steel and copper.",
+      "aliases": [
+        "NWA"
+      ]
     },
     {
       "slug": "nox",
@@ -5646,6 +5754,14 @@
       ]
     },
     {
+      "slug": "nyiso",
+      "term": "NYISO",
+      "def": "The independent system operator for New York State, which runs the state's wholesale energy, ancillary-service and installed-capacity markets. It is divided into zones whose prices diverge sharply because the transmission linking upstate generation to downstate load is limited.",
+      "aliases": [
+        "New York ISO"
+      ]
+    },
+    {
       "slug": "obsolescence",
       "term": "obsolescence",
       "def": "A component going out of production while the product that uses it is still selling. Managing it — last-time buys, qualified replacements, redesign — is a standing cost of owning any electronic product for more than a few years.",
@@ -5671,6 +5787,14 @@
         "system-wide offer cap"
       ],
       "def": "The highest price a generator is permitted to bid into a wholesale market. In an energy-only market it also caps the scarcity revenue that is supposed to pay for building new plants, so where the regulator sets it is an investment decision as much as a consumer-protection one."
+    },
+    {
+      "slug": "offer-curve",
+      "term": "offer curve",
+      "def": "The schedule a resource submits to the market saying how much it will sell or buy at each price. For a battery the curve encodes a decision about the future — selling now forfeits the ability to sell later — so building it is a forecasting problem, not a cost calculation.",
+      "aliases": [
+        "bid curve"
+      ]
     },
     {
       "slug": "offshore-wind-lease",
@@ -6772,6 +6896,11 @@
       ]
     },
     {
+      "slug": "real-time-market",
+      "term": "real-time market",
+      "def": "The wholesale market that settles actual delivery in short intervals, typically five minutes, correcting the differences between what was committed the day before and what the grid actually needs. Its prices are far more volatile than day-ahead prices, which is where most of a merchant battery's upside and risk sits."
+    },
+    {
       "slug": "realisation",
       "term": "realisation",
       "def": "The moment a fund sells an investment and turns a paper gain into cash. Managers' earnings are lumpy because realisations are lumpy — a single large sale can dominate a quarter.",
@@ -6880,6 +7009,14 @@
         "RMR agreement"
       ],
       "def": "An agreement that keeps a plant its owner wants to retire running because the grid operator has found the system cannot yet do without it. The owner is paid its costs under a regulated rate, and the region's customers pay, until transmission or new generation removes the need."
+    },
+    {
+      "slug": "reliability-pricing-model",
+      "term": "Reliability Pricing Model",
+      "def": "PJM's forward capacity auction, which procures the capability the region will need several years ahead and sets a single clearing price for it. Winning a commitment turns a project's future availability into contracted revenue before it is built.",
+      "aliases": [
+        "RPM"
+      ]
     },
     {
       "slug": "reliance-letter",
@@ -7001,6 +7138,14 @@
       "def": "The total a utility is allowed to collect from customers over a period: operating costs plus depreciation plus taxes plus the allowed return on rate base. A rate case is an argument about this one number, and the tariffs are how it is divided among customer classes.",
       "aliases": [
         "revenue requirements"
+      ]
+    },
+    {
+      "slug": "revenue-stack",
+      "term": "revenue stack",
+      "def": "The set of separate payments one asset earns at the same time — energy arbitrage, ancillary services, capacity payments, contracted fees — which together decide whether it is viable. The same battery in two different markets can have completely different stacks, and comparing projects on any single layer is misleading.",
+      "aliases": [
+        "revenue stacking"
       ]
     },
     {
@@ -7427,6 +7572,11 @@
       ]
     },
     {
+      "slug": "setback",
+      "term": "setback",
+      "def": "A minimum distance a local ordinance requires between energy equipment and a property line, home or road. Setbacks decide how much of a leased site is actually usable, and a rule change can shrink a viable project below the size that justified the land."
+    },
+    {
       "slug": "settlement",
       "term": "settlement",
       "def": "A negotiated resolution of a regulatory proceeding, signed by the utility and some or all intervening parties and submitted to the commission for approval. A settlement can be unopposed, meaning every party signed, or contested. Commissions are not bound by settlements and can modify or reject them, which is the difference between agreeing with your opponents and winning.",
@@ -7674,6 +7824,11 @@
       ]
     },
     {
+      "slug": "solar-peaker",
+      "term": "solar peaker",
+      "def": "A solar plant paired with storage large enough that the combined plant can deliver firm output during the evening peak, after the sun has gone. It is sold as a substitute for a gas peaking plant rather than as intermittent generation."
+    },
+    {
       "slug": "solar-plus-storage",
       "term": "solar-plus-storage",
       "def": "A solar plant and a battery sharing one site and one grid connection, so midday solar can be shifted into the evening. The pairing raises the value of both and lets one interconnection serve two assets.",
@@ -7754,6 +7909,11 @@
       "aliases": [
         "SFE"
       ]
+    },
+    {
+      "slug": "speed-to-power",
+      "term": "speed to power",
+      "def": "How soon a site can actually be energised at the megawatts a customer needs — the constraint that has replaced land and construction cost as the binding one for large loads. A site with an existing grid connection can be worth far more than a better site that must wait years in the queue."
     },
     {
       "slug": "spent-fuel-pool",
@@ -8149,6 +8309,14 @@
         "facilities study",
         "impact study",
         "interconnection studies"
+      ]
+    },
+    {
+      "slug": "system-integrator",
+      "term": "system integrator",
+      "def": "The company that assembles cells, enclosures, cooling, power conversion and control software into a complete storage product and warrants it as one system. The buyer's warranty and service relationship is with the integrator, not the cell maker, which is why an integrator's failure strands support even when the cells are healthy.",
+      "aliases": [
+        "integrator"
       ]
     },
     {

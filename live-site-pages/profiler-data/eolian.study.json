@@ -1,0 +1,360 @@
+{
+ "schemaVersion": 2,
+ "slug": "eolian",
+ "title": "Eolian — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: what a battery is actually paid for",
+   "kind": "callout",
+   "tone": "info",
+   "read": "One asset, several simultaneous income lines, and a different mix in every market it could be built in.",
+   "ps": [
+    "A grid battery does not have a price list. It has a **{{revenue stack}}** — several payments earned at the same time for different things — and the stack is set by the market it sits in, not by the equipment.",
+    "That is why the same containers, the same cells and the same software produce completely different businesses in Texas, California and Pennsylvania. Comparing two projects on installed cost per megawatt-hour without knowing their markets is close to meaningless.",
+    "This guide takes the stack apart layer by layer, shows why one layer collapsed as the market matured, explains what a forward capacity auction is and why clearing one is worth so much, and ends on the asset that is now scarcer than any of them: the grid connection itself.",
+    "Chemistry is not repeated here — the cell-maker guides cover cells, containers and cooling. The only physical parameter that matters below is **{{duration}}**, because duration decides which of these income lines a battery is even allowed to compete for."
+   ]
+  },
+  {
+   "id": "the-stack",
+   "title": "The four layers, and what each one really pays for",
+   "kind": "table",
+   "read": "Two layers pay for moving energy. Two pay for standing ready. They behave completely differently.",
+   "intro": "A merchant battery earns from all four where they exist; a contracted battery sells one or more of them forward for a fixed fee. Reading which layers a project relies on tells you what would have to go wrong to break it.",
+   "cols": [
+    "Layer",
+    "What is being bought",
+    "How it behaves as more storage arrives"
+   ],
+   "rows": [
+    [
+     "{{Energy arbitrage}}",
+     "Moving energy from a cheap hour to an expensive one",
+     "Erodes slowly — every battery narrows the spread it feeds on, but demand growth widens it again"
+    ],
+    [
+     "{{Ancillary services}}",
+     "Standing ready to correct frequency or cover a sudden loss, within seconds to minutes",
+     "Collapses fast — the requirement is small and fixed, so it saturates once a modest fleet exists"
+    ],
+    [
+     "Capacity payments",
+     "Being available at peak, sold years ahead through a {{capacity market}}",
+     "Depends on accreditation rules, which are rewritten as the storage fleet grows"
+    ],
+    [
+     "Contracted fees",
+     "Certainty — a {{tolling agreement}} or {{RA contract}} paying a fixed amount regardless of prices",
+     "Grows in importance precisely as the merchant layers get harder to underwrite"
+    ]
+   ],
+   "note": "The asymmetry between the second and third rows is the single most useful thing to hold on to. Ancillary requirements are set by the size of the largest credible failure, so they do not grow when the fleet grows — the first gigawatt of batteries can serve most of the requirement, and everything after that is competing for a shrinking prize. Energy and capacity requirements scale with the system, so they do not saturate the same way."
+  },
+  {
+   "id": "why-ancillary-fell",
+   "title": "The disappearing first business",
+   "kind": "prose",
+   "read": "Every mature storage market repeats the same arc: reserves pay brilliantly, then they do not.",
+   "ps": [
+    "System operators buy reserves so that the sudden loss of the largest single generator does not take frequency out of bounds. Some of it is **{{frequency regulation}}** — continuous second-by-second following of a control signal — and some is contingency reserve, capacity held ready to respond in seconds or minutes, such as {{responsive reserve service}} or {{non-spinning reserve}}.",
+    "Batteries are almost unfairly good at these. They respond in milliseconds, they can move from charging to discharging without a warm-up, and holding a reserve costs them almost nothing because they are being paid to sit still. Early storage fleets in every market earned most of their income here.",
+    "The problem is that the requirement is a fixed quantity. A grid needs enough reserve to cover its largest credible contingency, and that number is set by physics and planning standards rather than by how many batteries exist. Once a few gigawatts of storage are in service, the requirement is met — and further entrants compete on price into a market that cannot grow.",
+    "So the prices fall, often by an order of magnitude within a few years, and the fleet's economics migrate to {{energy arbitrage}} and capacity. This is not a failure of the market; it is the market working exactly as intended. But it strands business plans written on the first phase, and it is why a project financed on early reserve prices can look distressed while the asset itself performs perfectly.",
+    "There is a second-order effect worth knowing. As reserve income disappears, batteries must earn from spreads, which requires **longer duration** — you cannot arbitrage a four-hour trough with a one-hour battery. The fleet built for the reserve era is therefore the wrong shape for the arbitrage era, and re-shaping it means adding energy to existing sites rather than building new ones."
+   ]
+  },
+  {
+   "id": "same-battery-five-markets",
+   "title": "The same battery, five different businesses",
+   "kind": "table",
+   "read": "Nothing about the hardware changes. Everything about the income does.",
+   "intro": "US wholesale markets were designed at different times for different problems, and they pay for different things. This is the single biggest reason a storage owner's strategy is really a portfolio-of-markets strategy.",
+   "cols": [
+    "Market",
+    "Its distinctive feature",
+    "What that does to a battery's stack"
+   ],
+   "rows": [
+    [
+     "{{ERCOT}}",
+     "Energy-only: no capacity market at all, and prices are allowed to rise to a very high administrative cap during scarcity",
+     "Income is concentrated in a handful of extreme hours; short-duration units can win big, and volatility is both the product and the risk"
+    ],
+    [
+     "{{CAISO}}",
+     "A resource-adequacy obligation on load-serving entities, met through bilateral contracts",
+     "Most batteries are contracted for availability; accreditation rules and {{duration}} decide value more than prices do"
+    ],
+    [
+     "{{PJM}}",
+     "A forward {{capacity market}} that procures capability several years ahead through the {{Reliability Pricing Model}}",
+     "A cleared commitment turns future availability into bankable revenue before construction, which changes what can be financed"
+    ],
+    [
+     "{{MISO}}",
+     "A large footprint with a seasonal capacity construct and significant transmission congestion between zones",
+     "Value is strongly locational; utility contracts dominate over merchant positions, because the utilities are the buyers"
+    ],
+    [
+     "{{NYISO}}",
+     "An {{ICAP}} market with sharply divided zones, plus state programmes that pay storage directly",
+     "Downstate positions earn a large locational premium, and state incentives can matter as much as the wholesale stack"
+    ]
+   ],
+   "note": "Two practical readings. First, duration is market-specific: a one-hour unit is a coherent product in an energy-only market with extreme scarcity pricing and close to pointless where value comes from a four-hour capacity obligation. Second, a developer's geographic expansion is really a **revenue diversification** decision — moving from one market to three replaces a bet on one price formation with a portfolio of unrelated ones."
+  },
+  {
+   "id": "duration-choice",
+   "title": "Short and long batteries are different bets",
+   "kind": "proscons",
+   "read": "Duration is chosen against a market's shape, not against a technical ideal.",
+   "intro": "Two hours or five is not an engineering preference. It is a judgement about where the money is, and it locks in for the asset's whole life because adding energy later is expensive.",
+   "cards": [
+    {
+     "t": "Short duration — one to two hours",
+     "meta": "Maximum power per dollar of energy",
+     "adv": [
+      "**Cheapest way to buy megawatts**, which is what {{ancillary services}} and scarcity pricing pay for.",
+      "**Highest power-to-energy ratio**, so it captures brief extreme price events fully.",
+      "**Smaller footprint and faster to build**, which matters where land or schedule binds."
+     ],
+     "dis": [
+      "*Poorly credited for capacity* — it covers only a fraction of a multi-hour evening deficit.",
+      "*Cannot arbitrage a long trough*, so it is stranded as reserve prices fall.",
+      "*Retrofitting energy is expensive* and often limited by the site's connection and layout."
+     ]
+    },
+    {
+     "t": "Long duration — four hours and beyond",
+     "meta": "Maximum energy behind each megawatt of connection",
+     "adv": [
+      "**Credited close to nameplate for capacity** where the deficit it must cover is shorter than its duration.",
+      "**Can actually run the daily arbitrage cycle** rather than skimming its edges.",
+      "**More contractable** — tolls and availability contracts are written around multi-hour delivery."
+     ],
+     "dis": [
+      "*More capital per megawatt of connection*, and the extra hours earn nothing on days without a wide spread.",
+      "*Diminishing capacity credit* once duration exceeds the deficit's length.",
+      "*Longer construction and a larger site*, which raises siting and fire-code exposure."
+     ]
+    }
+   ],
+   "note": "Notice the asymmetry in the failure modes. A short battery in a market that shifts toward capacity value is stuck with the wrong product. A long battery in a market that stays volatile is merely over-invested. That asymmetry is why fleets have drifted longer over time even where the short product still earns."
+  },
+  {
+   "id": "forward-capacity",
+   "title": "Getting paid in 2029 for existing in 2029",
+   "kind": "prose",
+   "read": "A forward capacity auction lets a project sell availability before it is built. That is a financing instrument as much as a market.",
+   "ps": [
+    "Some regions procure capability years ahead rather than relying on scarcity prices to attract investment. A **{{capacity market}}** runs an auction for a delivery year some years in the future; resources offer their accredited capability at a price, the operator buys what the reliability standard requires, and everyone who clears is paid the same clearing price.",
+    "PJM's version, the **{{Reliability Pricing Model}}**, is the largest. What a resource sells is {{unforced capacity}} — nameplate discounted for expected unavailability — and what it takes on is a **{{must-offer obligation}}**: it must make itself available when called, with penalties if it cannot. Payment is for readiness; the energy itself is sold separately.",
+    "The financing consequence is what makes this worth understanding. A cleared commitment is a contracted revenue line with an investment-grade counterparty, dated before construction finishes. That converts part of a merchant project into something lenders will size debt against, which is why a developer will design a project around clearing an auction rather than around the energy market alone.",
+    "Clearing prices are extremely volatile between auctions, because the auction buys a small increment against an inelastic requirement. When a region's load forecast jumps — large new consumers are the current cause — and supply has not moved, the price can multiply in a single auction. The same mechanism runs in reverse.",
+    "Accreditation returns here too. What clears is the **credited** megawatts, so the same accreditation curve that governs contracted markets governs auction revenue. A capacity auction is not an alternative to understanding accreditation; it is the place accreditation is monetised."
+   ]
+  },
+  {
+   "id": "connection-as-currency",
+   "title": "The connection became worth more than the plant",
+   "kind": "callout",
+   "tone": "note",
+   "read": "When large new consumers cannot get connected, an existing connection is the product.",
+   "ps": [
+    "Grid connection studies were designed for a world in which new **generation** queued to connect and demand grew slowly. Very large new consumers — data centres above a hundred megawatts, sometimes far above — invert that assumption, and the study queues were not built for them.",
+    "So the binding constraint on building one is no longer land, capital or equipment. It is **{{speed to power}}**: how soon a site can actually be energised at the megawatts required. A worse site that can be energised in two years beats a better site that must wait seven.",
+    "That revalues something storage developers already own. A battery project holds a dated queue position, a substation and a set of {{capacity interconnection rights}} sized for injection. **{{Energy-plus-load}}** is the practice of placing a large consumer at such a site so it inherits the connection rather than joining the queue for a new one.",
+    "The engineering question is what the existing rights actually permit. Injection rights and withdrawal rights are not the same thing, the studies that established them assumed a particular pattern of flows, and adding a large load behind them may or may not require a fresh study. That determination — not the construction — is the real deal risk.",
+    "The storage on such a site does two jobs at once: it keeps earning from the market, and it firms the campus's supply during its early phases before permanent transmission arrives. That is a genuinely new product category, and it is why battery developers now appear in conversations about data-centre siting at all."
+   ]
+  },
+  {
+   "id": "a-day-on-the-desk",
+   "title": "One day inside a merchant battery",
+   "kind": "timeline",
+   "read": "Hours across the bottom. The upper lane is what the market is doing; the lower lane is what the asset is doing about it.",
+   "unit": "hour of a typical summer day",
+   "lanes": {
+    "mkt": "Market condition",
+    "ops": "Asset action"
+   },
+   "items": [
+    {
+     "x": 2,
+     "lane": "mkt",
+     "label": "Overnight minimum",
+     "sub": "Demand low, wind often strong, prices at their floor"
+    },
+    {
+     "x": 3,
+     "lane": "ops",
+     "label": "Charge to full",
+     "sub": "Cheapest energy of the day; every cycle spends battery life, so the price must clear the degradation cost"
+    },
+    {
+     "x": 11,
+     "lane": "mkt",
+     "label": "Solar peak, prices sag",
+     "sub": "The midday trough of the net-load curve"
+    },
+    {
+     "x": 12,
+     "lane": "ops",
+     "label": "Top up and sell reserves",
+     "sub": "Standing ready pays while sitting still"
+    },
+    {
+     "x": 16,
+     "lane": "mkt",
+     "label": "Demand climbing, solar fading",
+     "sub": "The evening ramp begins"
+    },
+    {
+     "x": 18,
+     "lane": "ops",
+     "label": "Discharge into the peak",
+     "sub": "The single decision that makes or loses the day"
+    },
+    {
+     "x": 19,
+     "lane": "mkt",
+     "label": "Scarcity risk window",
+     "sub": "If reserves tighten, prices can move by orders of magnitude within minutes"
+    },
+    {
+     "x": 20,
+     "lane": "ops",
+     "label": "Hold a reserve, or empty the tank",
+     "sub": "Selling everything at 18:00 forfeits the option on 20:00"
+    },
+    {
+     "x": 23,
+     "lane": "ops",
+     "label": "Recharge for tomorrow",
+     "sub": "Position for the next day rather than the next hour"
+    }
+   ],
+   "note": "The whole discipline is in the 18:00 and 20:00 rows. Energy sold now cannot be sold later, so every dispatch is the exercise of an option on the rest of the day. That is why the operating skill is forecasting and risk management rather than engineering, and why the same hardware earns very different returns in different hands."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Revenue layers, market design and duration.",
+   "cards": [
+    {
+     "q": "Why do {{ancillary services}} prices collapse in every maturing storage market?",
+     "a": "Because the requirement is a fixed quantity set by the largest credible contingency, not by how much storage exists. A few gigawatts of batteries can serve most of it, and later entrants compete on price into a market that cannot grow."
+    },
+    {
+     "q": "Why does {{energy arbitrage}} erode more slowly than reserve revenue?",
+     "a": "Because the quantity of energy that needs shifting scales with the system and with renewable output, so demand for the service grows. Each battery narrows the spread it feeds on, but the underlying requirement is not capped the way a reserve requirement is."
+    },
+    {
+     "q": "What does a resource actually sell in a forward capacity auction, and what does it take on?",
+     "a": "It sells {{unforced capacity}} — nameplate discounted for expected unavailability — for a future delivery year, and takes on a {{must-offer obligation}} with penalties for being unavailable when called."
+    },
+    {
+     "q": "Why is clearing a capacity auction so valuable to a developer even before construction?",
+     "a": "It creates a dated, contracted revenue line with a creditworthy counterparty, which lenders will size debt against. It converts part of a merchant project into a financeable one."
+    },
+    {
+     "q": "Why is a one-hour battery a coherent product in {{ERCOT}} and a poor one in {{CAISO}}?",
+     "a": "ERCOT is energy-only with a very high scarcity price cap, so brief extreme events can be captured with maximum power per dollar. CAISO's value comes from a multi-hour capacity obligation, where a one-hour resource is credited for only a fraction of its nameplate."
+    },
+    {
+     "q": "What is {{speed to power}}, and why did it become the binding constraint?",
+     "a": "How soon a site can be energised at the megawatts a large consumer needs. Interconnection study queues were designed for slowly growing demand, so for very large loads the wait for a connection now exceeds the time to design, permit and build everything else."
+    },
+    {
+     "q": "Why can a storage site be a faster route to power for a data centre than a new connection request?",
+     "a": "Because the site already holds a dated queue position, a substation and established interconnection rights. Placing load there can inherit that position instead of starting a new study — subject to whether the existing rights permit withdrawal as well as injection."
+    },
+    {
+     "q": "A merchant battery declines a positive-looking price spread. Give the most likely reason.",
+     "a": "The spread did not clear the {{degradation cost}} plus round-trip losses, or discharging now would forfeit a more valuable option later in the day. Every dispatch spends both energy and battery life."
+    },
+    {
+     "q": "Why does falling reserve revenue push fleets toward longer {{duration}}?",
+     "a": "Because the surviving revenue layers — arbitrage and capacity — both reward energy rather than raw power. You cannot arbitrage a multi-hour trough or cover a multi-hour deficit with a one-hour unit."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on where the money comes from.",
+   "items": [
+    {
+     "q": "Which revenue layer saturates fastest as a storage fleet grows?",
+     "c": [
+      "Energy arbitrage",
+      "Ancillary services",
+      "Capacity payments",
+      "Contracted tolling fees"
+     ],
+     "a": 1,
+     "why": "The reserve requirement is fixed by the largest credible contingency rather than by fleet size, so it is met early and later entrants compete into a market that cannot expand."
+    },
+    {
+     "q": "ERCOT has no capacity market. The direct consequence for a battery there is:",
+     "c": [
+      "Lower construction cost",
+      "Revenue concentrated in a few extreme-price hours",
+      "Longer required duration",
+      "Guaranteed availability payments"
+     ],
+     "a": 1,
+     "why": "In an energy-only design, investment is signalled by allowing prices to rise very high during scarcity, so a large share of annual income arrives in a small number of hours."
+    },
+    {
+     "q": "A project clears a capacity auction for a delivery year three years out. The main benefit is:",
+     "c": [
+      "Immediate cash",
+      "Exemption from dispatch",
+      "A bankable revenue line before construction finishes",
+      "Higher energy prices"
+     ],
+     "a": 2,
+     "why": "The commitment is dated, contracted and creditworthy, which lets lenders size debt against it — turning part of a merchant project into a financeable one."
+    },
+    {
+     "q": "Why does a battery hold back some energy rather than selling everything into the evening peak?",
+     "c": [
+      "Regulatory limits on discharge",
+      "To preserve the option on a later, possibly higher price",
+      "To avoid thermal runaway",
+      "Because ancillary contracts forbid it"
+     ],
+     "a": 1,
+     "why": "Stored energy is an option: spending it now extinguishes the ability to spend it later. Optimisation is a forecasting problem about the rest of the day, not a single-hour calculation."
+    },
+    {
+     "q": "A large data centre chooses a worse site that can be energised sooner. This reflects:",
+     "c": [
+      "Cheaper land",
+      "Speed to power as the binding constraint",
+      "Better cooling conditions",
+      "Lower tax rates"
+     ],
+     "a": 1,
+     "why": "For very large loads, the wait for a grid connection now exceeds the time needed for every other step, so time-to-energisation dominates site quality."
+    },
+    {
+     "q": "Which pairing correctly matches a market to its defining feature?",
+     "c": [
+      "CAISO — no capacity market",
+      "PJM — a forward capacity auction",
+      "ERCOT — an installed-capacity market",
+      "NYISO — energy-only design"
+     ],
+     "a": 1,
+     "why": "PJM procures capability years ahead through a forward auction. CAISO uses a resource-adequacy obligation, ERCOT is energy-only, and NYISO runs an installed-capacity market with strong zonal separation."
+    }
+   ]
+  }
+ ]
+}

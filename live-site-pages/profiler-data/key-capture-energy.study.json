@@ -1,0 +1,328 @@
+{
+ "schemaVersion": 2,
+ "slug": "key-capture-energy",
+ "title": "Key Capture Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: outside Texas, somebody has to approve the purchase",
+   "kind": "callout",
+   "tone": "info",
+   "read": "In most of the country a battery is bought by a regulated body through a documented process, and the process shapes the product.",
+   "ps": [
+    "The merchant picture — a battery trading into a volatile wholesale market — describes one part of the United States well and most of it badly. In the majority of markets the buyer is a utility, a public power authority or a state programme, and the purchase must be justified to a regulator before it happens.",
+    "That changes what is being sold. A regulated buyer is not buying volatility; it is buying a **documented, prudent solution to an identified need**, on terms it can defend later. Price matters, but so do deliverability, safety evidence, credit and the ability to survive a hearing.",
+    "This guide covers that side: how a regulated procurement actually runs, the contract structures public buyers use, why location inside a constrained system can matter more than size, what state programmes do to project economics, and the particular risks of being the first storage project a market has ever processed.",
+    "Cells, chemistry and container design are covered in the cell-maker guides in this corpus and are not repeated. The relevant technical parameters here are duration, availability and safety evidence — the three things a regulator asks about."
+   ]
+  },
+  {
+   "id": "how-a-utility-buys",
+   "title": "The regulated purchase, step by step",
+   "kind": "prose",
+   "read": "Planning document, then solicitation, then contract, then approval. Skipping a step is not an option.",
+   "ps": [
+    "A regulated utility begins from a **resource plan** — a periodic filing that forecasts demand, catalogues what it already owns, identifies the gap, and proposes what should fill it. The plan is litigated in public by the commission, its staff and intervenors, and what emerges is an authorisation to procure a defined quantity of a defined thing.",
+    "Procurement then runs as a solicitation. Developers bid projects against stated requirements; the utility scores them on price and on non-price criteria — deliverability, site maturity, interconnection status, credit, safety record, sometimes local labour or community terms. Shortlisted bidders negotiate a contract.",
+    "The contract itself must usually be approved. A **{{public utility commission}}** reviews whether the price and terms are reasonable and whether the need was real, because the cost will ultimately be recovered from customers. This is the step that has no equivalent in a merchant market, and it is why bids carry documentation that a merchant buyer would consider excessive.",
+    "The discipline behind all of it is **prudence review**: years later, a regulator can examine whether a decision was reasonable *given what was known at the time*, and disallow recovery if it was not. That single risk explains most regulated procurement behaviour — the preference for proven equipment, for suppliers who will still exist in a decade, for contracts that transfer risk to the developer, and for a paper trail.",
+    "Public power buyers — municipal utilities and the joint agencies that buy on their behalf — run a parallel process governed by their own boards and public procurement law rather than a state commission. The mechanics differ; the effect is the same. The purchase is a public act and must be defensible as one."
+   ]
+  },
+  {
+   "id": "procurement-forms",
+   "title": "Five ways a public buyer can get a battery",
+   "kind": "table",
+   "read": "The structures differ in who owns the asset and who is exposed when it underperforms.",
+   "intro": "The same physical plant can reach a utility's customers through any of these. Each allocates ownership, operation and risk differently, and each has a different regulatory path.",
+   "cols": [
+    "Structure",
+    "Who owns and operates",
+    "What the buyer pays",
+    "Where the risk lands"
+   ],
+   "rows": [
+    [
+     "Utility-owned, rate-based",
+     "The utility owns and operates",
+     "Customers pay the capital cost plus an authorised return over the asset's life",
+     "Customers, through prudence review — hence the heaviest scrutiny"
+    ],
+    [
+     "Long-term {{PPA}} or {{tolling agreement}}",
+     "A developer owns; the utility dispatches or takes the output",
+     "A contracted fee for a term of years",
+     "The developer, for availability and performance"
+    ],
+    [
+     "{{Build-own-operate-transfer}}",
+     "A developer builds and operates, with ownership transferring later",
+     "A service fee, then ownership at a pre-agreed point",
+     "Shared, and shifting across the term"
+    ],
+    [
+     "{{Energy storage service agreement}}",
+     "A developer owns; a public agency buys the service",
+     "A fixed fee for the right to use the capacity",
+     "Mostly the developer, with availability tests"
+    ],
+    [
+     "State programme support",
+     "A developer owns and sells into the wholesale market",
+     "A state incentive or credit alongside market revenue",
+     "Shared with the state, which is topping up an uncertain revenue line"
+    ]
+   ],
+   "note": "The choice is rarely purely economic. Utility ownership puts the asset in the rate base and grows the utility's earning asset base, which is attractive to it and contested by intervenors; a contract keeps the cost off the balance sheet and transfers performance risk but forfeits that growth. Which structure a jurisdiction favours tells you as much about its regulatory politics as about the technology."
+  },
+  {
+   "id": "zones-and-icap",
+   "title": "Where a battery sits can matter more than how big it is",
+   "kind": "prose",
+   "read": "In a transmission-constrained system, the same megawatts are worth several times more on one side of the constraint.",
+   "ps": [
+    "Some wholesale systems are effectively one big pool; others are a set of pockets joined by limited transmission. **{{NYISO}}** is the clearest example of the second kind: generation is concentrated upstate, demand is concentrated downstate, and the lines between them are finite. When those lines are full, the two regions form separate price areas.",
+    "The capacity construct follows the same geography. New York's **{{ICAP}}** market requires load-serving entities to hold installed capability covering their peak plus a reserve, and it enforces **locational** requirements: a minimum share must sit inside the constrained zones. A megawatt inside the constraint is therefore not substitutable for one outside it, and its price reflects that.",
+    "The consequence for storage is straightforward and large. A project inside a load pocket earns a capacity premium, faces higher and more volatile energy prices, and is more likely to relieve a real constraint — but it is also competing for scarce, expensive land under the most demanding permitting and fire-code review anywhere in the system.",
+    "**{{ISO-NE}}** presents the same problem in a different shape: a region whose load centres are served through limited corridors, with the additional feature of winter fuel-security constraints that make availability during cold snaps unusually valuable. Sites at constrained substations near a major city are correspondingly prized, and brownfield industrial land with an existing connection is the classic solution.",
+    "There is a further use of the same fact. Where a constraint is local and predictable, a battery placed on the constrained side can defer building a line or a substation altogether — a **{{non-wires alternative}}**. The utility buys a service that relieves the constraint instead of buying steel, and the battery is paid for a transmission function rather than an energy one. It is a small category, but it produces some of the most durable contracts in the market."
+   ]
+  },
+  {
+   "id": "state-programmes",
+   "title": "When a state buys storage that the market will not",
+   "kind": "prose",
+   "read": "A state incentive exists to close the gap between what a battery earns and what it costs. How it closes the gap decides what gets built.",
+   "ps": [
+    "Several states have set explicit storage deployment targets and then discovered that wholesale revenue alone does not finance them. The instruments that follow come in three broad shapes, and the differences matter more than the headline megawatts.",
+    "The simplest is a **capital grant or bridge incentive** — a payment toward construction cost. It is easy to administer and it flatters the capital stack, but it does nothing about revenue uncertainty, so it helps projects that were nearly financeable and not those that were not.",
+    "The second is an **index-style credit**: the state pays the difference between a bid strike price and the project's actual market revenue, and claws back the excess when the market pays more. This is a contract for difference in substance. It transfers merchant risk to the state, so it finances far more cheaply — and it means the developer's bid is effectively a forecast of its own market revenue, which is why bidders with strong optimisation capability can bid lower.",
+    "The third is a **procurement mandate**: utilities are directed to contract a stated quantity by a date, converting a policy target into ordinary contracts. This produces the most conventional projects, because the utility's own procurement rules and prudence exposure govern the outcome.",
+    "For a supplier, the important consequence is that state-supported projects usually carry conditions the wholesale market does not impose — domestic or local content preferences, labour standards, community-benefit terms, and reporting. Those conditions reach into equipment selection, and a bid that cannot document compliance loses regardless of price."
+   ]
+  },
+  {
+   "id": "regulated-clock",
+   "title": "The regulated purchase on one clock",
+   "kind": "timeline",
+   "read": "Years across the bottom. The upper lane is the regulator and the buyer; the lower lane is the developer.",
+   "unit": "approximate year from the start of a planning cycle",
+   "lanes": {
+    "buy": "Buyer and regulator",
+    "dev": "Developer"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "buy",
+     "label": "Resource plan filed and litigated",
+     "sub": "The need is established in public before anything is bought"
+    },
+    {
+     "x": 0,
+     "lane": "dev",
+     "label": "Site control and queue entry",
+     "sub": "Positions must exist before a solicitation, not after"
+    },
+    {
+     "x": 1,
+     "lane": "buy",
+     "label": "Solicitation issued",
+     "sub": "Requirements, scoring criteria and contract form published"
+    },
+    {
+     "x": 1,
+     "lane": "dev",
+     "label": "Bid submitted",
+     "sub": "Price, plus deliverability, interconnection status, safety and credit evidence"
+    },
+    {
+     "x": 2,
+     "lane": "buy",
+     "label": "Shortlist and negotiation",
+     "sub": "Non-price criteria decide more shortlists than price does"
+    },
+    {
+     "x": 2,
+     "lane": "buy",
+     "label": "Contract filed for approval",
+     "sub": "The step with no merchant equivalent"
+    },
+    {
+     "x": 3,
+     "lane": "dev",
+     "label": "Financing and equipment order",
+     "sub": "Approval unlocks the capital stack; supplier eligibility is diligenced here"
+    },
+    {
+     "x": 4,
+     "lane": "dev",
+     "label": "Construction and commissioning",
+     "sub": "Fixed-price contract with damages for lateness"
+    },
+    {
+     "x": 5,
+     "lane": "buy",
+     "label": "In service; performance monitored",
+     "sub": "Availability tests run for the contract's whole term"
+    }
+   ],
+   "note": "Two readings. First, equipment is chosen at year three against rules that may have changed since the bid at year one, which is why bids increasingly price that risk explicitly. Second, the queue position at year zero is the gating item — a developer that enters a solicitation without one is bidding a schedule it cannot control."
+  },
+  {
+   "id": "being-first",
+   "title": "The cost and the prize of being the first battery a market has seen",
+   "kind": "proscons",
+   "read": "Someone has to write the rulebook by colliding with its absence. That is expensive, and it is also a moat.",
+   "intro": "Every wholesale market had a first storage project. It arrived before the participation model, the metering rules, the accreditation method and the interconnection precedent existed for it — and it paid for their creation in time.",
+   "cards": [
+    {
+     "t": "What being first costs",
+     "meta": "Rules made in real time, on your schedule",
+     "adv": [
+      "**Nothing about the process is faster.** Every step needs an interpretation before it can be applied."
+     ],
+     "dis": [
+      "*No participation model.* Market software written for generators may have no category for a resource that both consumes and produces, so telemetry, metering and settlement all need rulings.",
+      "*No accreditation method.* How much a battery counts toward capacity has to be decided before it can be sold, and the first project argues it from first principles.",
+      "*No interconnection precedent.* Study assumptions for a resource that charges are not the same as for one that only injects, and the first request forces the question.",
+      "*No {{commissioning}} template.* Utility, operator and fire authority are each doing this for the first time, so the schedule carries a large unknown."
+     ]
+    },
+    {
+     "t": "What being first buys",
+     "meta": "Institutional knowledge nobody else has yet",
+     "adv": [
+      "**The rules end up shaped by a real project** rather than an abstraction, and the first mover understands them from the inside.",
+      "**Relationships with the people who write them** — operator staff, commission staff, the interconnecting utility — which shorten every subsequent project.",
+      "**A demonstrated track record in that jurisdiction**, which is a scored criterion in the next solicitation.",
+      "**Site and queue positions taken before the market was crowded**, at prices that no longer exist."
+     ],
+     "dis": [
+      "*It is jurisdiction-specific.* Precedent earned in one market transfers only partially to the next, so the advantage must be re-earned each time."
+     ]
+    }
+   ],
+   "note": "The general lesson is that in regulated markets a developer's real asset is often **procedural knowledge** rather than land or capital — knowing which body decides what, what evidence satisfies it, and how long each step truly takes. That is why an incumbent with a mediocre fleet in a hard jurisdiction can be worth more than a larger fleet somewhere easy."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Regulated procurement, locational value and state programmes.",
+   "cards": [
+    {
+     "q": "What does prudence review do to a regulated buyer's equipment preferences?",
+     "a": "It pushes them toward proven products and durable suppliers with documented evidence, because a regulator can later examine whether the decision was reasonable given what was known and disallow cost recovery if it was not."
+    },
+    {
+     "q": "Why does a regulated procurement start with a resource plan rather than a solicitation?",
+     "a": "Because the need itself must be established and litigated in public first. The plan authorises the purchase of a defined quantity of a defined thing; the solicitation only decides who supplies it."
+    },
+    {
+     "q": "What is the essential difference between a rate-based utility-owned battery and a contracted one?",
+     "a": "Ownership and where the risk sits. Rate-basing puts the asset on the utility's books, earning an authorised return with customers exposed through prudence review; a contract transfers performance risk to the developer but forfeits the utility's asset-base growth."
+    },
+    {
+     "q": "What is a {{build-own-operate-transfer}} arrangement, in one line?",
+     "a": "A developer finances, builds and operates the plant, sells its service under a long-term contract, and ownership passes to the buyer at a pre-agreed point — so risk allocation shifts over the term rather than being fixed at signing."
+    },
+    {
+     "q": "Why can the same battery be worth several times more inside a load pocket?",
+     "a": "Because transmission into the pocket is limited, so capacity requirements are enforced locationally and energy prices inside the constraint are both higher and more volatile. A megawatt inside is not substitutable for one outside."
+    },
+    {
+     "q": "What is a {{non-wires alternative}}, and why are its contracts unusually durable?",
+     "a": "A resource sited to relieve a local constraint so the utility can defer building a line or substation. The contract is paid for a transmission function the utility genuinely needs at a specific place, which is a firmer commitment than a market revenue forecast."
+    },
+    {
+     "q": "How does an index-style state credit differ from a construction grant, and why does it finance more cheaply?",
+     "a": "The grant reduces capital cost but leaves revenue uncertain. The index credit pays the difference between a bid strike price and actual market revenue — and claws back the excess — so it removes merchant risk, which is what lenders charge for."
+    },
+    {
+     "q": "Why is being the first storage project in a market so slow?",
+     "a": "Because the participation model, metering and settlement treatment, accreditation method, interconnection assumptions and commissioning process do not yet exist for a resource that both consumes and produces. Each has to be decided before the project can proceed."
+    },
+    {
+     "q": "What does the first mover keep after the rules exist?",
+     "a": "Procedural knowledge and relationships — knowing which body decides what and what evidence satisfies it — plus a scored track record in that jurisdiction and early site and queue positions. It transfers only partly to the next market."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the regulated side of the market.",
+   "items": [
+    {
+     "q": "The regulatory step with no equivalent in a merchant market is:",
+     "c": [
+      "The interconnection study",
+      "Commission approval of the contract",
+      "Fire-code review",
+      "The environmental permit"
+     ],
+     "a": 1,
+     "why": "Merchant projects need studies and permits too. What is unique to a regulated purchase is that the contract and its price must be approved because customers will pay for it."
+    },
+    {
+     "q": "A utility prefers a well-known supplier over a cheaper unfamiliar one. The most likely driver is:",
+     "c": [
+      "Personal relationships",
+      "Prudence review exposure",
+      "Interconnection rules",
+      "Union labour requirements"
+     ],
+     "a": 1,
+     "why": "A decision that must be defensible years later, with cost recovery at stake, systematically favours evidence and durability over price alone."
+    },
+    {
+     "q": "New York's ICAP market enforces locational requirements because:",
+     "c": [
+      "Downstate land is expensive",
+      "Transmission into the load pocket is limited",
+      "Batteries perform better near cities",
+      "State law requires it for storage"
+     ],
+     "a": 1,
+     "why": "When the corridors into a region are constrained, capacity outside it cannot be relied on to serve it, so a share of the requirement must sit inside the constraint."
+    },
+    {
+     "q": "Which state instrument most directly reduces a project's cost of capital?",
+     "c": [
+      "A construction grant",
+      "An index-style credit against market revenue",
+      "A public awareness campaign",
+      "A permitting fast-track"
+     ],
+     "a": 1,
+     "why": "Lenders price revenue uncertainty. A credit that guarantees the difference to a strike price removes merchant risk, which is precisely what raises the cost of debt for uncontracted projects."
+    },
+    {
+     "q": "A battery is contracted to defer a substation upgrade. It is being paid for:",
+     "c": [
+      "Energy arbitrage",
+      "A transmission function",
+      "Frequency regulation",
+      "Black-start capability"
+     ],
+     "a": 1,
+     "why": "A non-wires alternative substitutes for network investment. The service purchased is relief of a specific constraint, not participation in an energy market."
+    },
+    {
+     "q": "The most transferable asset a first-mover keeps after a market matures is:",
+     "c": [
+      "Its original equipment",
+      "Procedural knowledge and relationships in that jurisdiction",
+      "A permanent price premium",
+      "Exemption from later rules"
+     ],
+     "a": 1,
+     "why": "Rules become public and equipment ages, but knowing which body decides what, what evidence satisfies it and how long each step takes remains scarce — and it is scored in the next solicitation."
+    }
+   ]
+  }
+ ]
+}

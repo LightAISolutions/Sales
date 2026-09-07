@@ -1,0 +1,352 @@
+{
+ "schemaVersion": 2,
+ "slug": "apex-clean-energy",
+ "title": "Apex Clean Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the project is the product",
+   "kind": "callout",
+   "tone": "info",
+   "read": "A developer-owner does not sell batteries. It sells finished projects, and almost all the risk is spent before the first cell arrives.",
+   "ps": [
+    "This guide is about the **buyer's** side of grid storage — the machinery a company uses to turn an option on a field into a plant that earns money. The equipment is roughly two years of the story; the site, the grid connection, the permits and the capital stack are the other eight.",
+    "It deliberately does not re-teach cell chemistry, container design or thermal management. Those live in the cell-maker guides in this corpus, and the honest division of labour is that a buyer specifies duty and warranty while a manufacturer specifies chemistry.",
+    "What follows is the sequence: how a project is originated, why the {{interconnection queue}} governs everything, what local siting law actually does to a design, how the capital stack is assembled, and what happens when a supplier fails after the plant is built.",
+    "One framing to carry through: a developer that also owns and operates is really running two businesses at once — a **factory for projects**, which is paid in development fees and sale proceeds, and a **fleet of assets**, which is paid in electricity. They compete for the same capital, and how a company splits between them explains most of its behaviour."
+   ]
+  },
+  {
+   "id": "the-funnel",
+   "title": "The development funnel, stage by stage",
+   "kind": "table",
+   "read": "Every stage is a filter. Most megawatts entering the top never reach the bottom.",
+   "intro": "A pipeline figure — 'x gigawatts in development' — is a count of things at every one of these stages at once, which is why the number is so much larger than what gets built. The useful question about any pipeline is what proportion sits below the queue stage, because that is where the survival rate changes.",
+   "cols": [
+    "Stage",
+    "What is actually being bought",
+    "What kills projects here"
+   ],
+   "rows": [
+    [
+     "Origination and {{site control}}",
+     "Options and leases over land near a usable grid connection, plus wind or solar resource data where relevant",
+     "Land assembly fails; a neighbour holds out; the resource turns out weaker than the screening model"
+    ],
+    [
+     "Interconnection request",
+     "A place in the study queue and, eventually, a signed {{interconnection agreement}}",
+     "The study assigns {{network upgrades}} the project cannot carry"
+    ],
+    [
+     "Permitting and siting",
+     "A local certificate or conditional-use permit, plus environmental clearances",
+     "A county ordinance, a {{setback}} change, or a referendum"
+    ],
+    [
+     "Offtake",
+     "A signed {{PPA}}, {{tolling agreement}} or {{RA contract}} — or a deliberate decision to stay {{merchant}}",
+     "No buyer at a price that clears the capital cost"
+    ],
+    [
+     "Financing",
+     "Construction debt, tax-credit proceeds and sponsor equity, all conditioned on the three rows above",
+     "A credit condition fails — most often a supplier's eligibility"
+    ],
+    [
+     "Construction and {{commissioning}}",
+     "An {{EPC}} contract with a fixed price and liquidated damages for lateness",
+     "Equipment delivery slips; {{energization}} waits on utility work"
+    ],
+    [
+     "{{COD}} and operation",
+     "The revenue contract turning on, and a long-term service agreement turning on with it",
+     "Nothing kills it now — but the {{degradation}} clock starts"
+    ]
+   ],
+   "note": "Notice that offtake sits below permitting in the sequence but often above it in importance: a project with a signed contract and no permit is a delay, while a permitted project with no buyer is a write-off. Developers therefore run these stages in parallel and accept that some spend is lost."
+  },
+  {
+   "id": "the-queue",
+   "title": "The grid connection is the scarce asset",
+   "kind": "prose",
+   "read": "You are not queuing for permission. You are queuing for a study that decides who pays to reinforce the network.",
+   "ps": [
+    "Connecting a plant to the transmission system requires the operator to prove the network can absorb it under credible failure conditions. That proof is a sequence of engineering studies, and its output is a bill: the {{network upgrades}} the project must fund before it can inject power.",
+    "Because every project affects every other, studies were historically done one at a time in order of application — and each withdrawal reshuffled the costs for everyone behind it. Operators have moved to the {{batch study}} approach, modelling a whole group together. It is fairer and more stable, and it means an individual request waits for the slowest member of its group.",
+    "Two different things can come out of that process. **{{Capacity interconnection rights}}** entitle a plant to inject firmly and to be counted toward the region's capacity need. **{{Energy-only interconnection}}** lets it sell energy but carries no such guarantee, and can be curtailed when the network is tight. Energy-only is cheaper and faster, and taking it is a real commercial choice with a permanent consequence.",
+    "There is also a shortcut worth knowing. **{{Surplus interconnection service}}** lets a second resource use an existing connection's headroom — the megawatts an existing plant does not use because it rarely runs at full output. Adding a battery to a wind or solar site under surplus service can skip years of queue time, and it is one reason storage attaches to existing generation rather than starting fresh.",
+    "The consequence for a buyer's equipment strategy is subtle but decisive. Queue positions are dated, and a position obtained years ago is worth more than a better site obtained today. That makes an existing connection a tradeable asset in its own right — the foundation of the {{energy-plus-load}} idea that later turns batteries into on-ramps for large new consumers."
+   ]
+  },
+  {
+   "id": "siting-is-a-design-constraint",
+   "title": "Local law is an engineering input, not paperwork",
+   "kind": "prose",
+   "read": "A setback rule changes how many megawatts fit on a site. That is a design change, not a delay.",
+   "ps": [
+    "Large energy projects need a permit from whoever holds siting authority, and in the United States that authority is split unevenly. Some states place it with a state board that weighs system need against local objection; others leave it with counties or townships, where a small elected body can refuse a project outright.",
+    "The mechanism that bites hardest is the **{{setback}}** — a required distance between equipment and property lines, homes or roads. Setbacks subtract usable area from the inside edge of a site, and the loss is not proportional: on an irregular parcel a modest increase can remove a disproportionate share of the buildable envelope, dropping the project below the size that justified the land and the connection.",
+    "For batteries specifically, the newer constraints come from fire codes rather than land use. Separation distances between enclosures, hazard-mitigation analysis and emergency-response planning are now standard conditions of approval, and they interact directly with equipment choice — a denser container needs either more spacing or more evidence.",
+    "The rational response is portfolio behaviour, not per-project heroics. Developers build in many jurisdictions at once, accept a known denial rate, and spend real money on the local relationship — community benefit payments, road agreements, tax arrangements — because a refusal after the queue and the permits have been paid for is the single most expensive failure in the funnel.",
+    "The lesson that generalises: siting risk is **jurisdictional**, not technical. Two identical designs in two counties have different probabilities of existing, and a developer's real asset is knowing which counties are which."
+   ]
+  },
+  {
+   "id": "schedule-shape",
+   "title": "Where the years actually go",
+   "kind": "bars",
+   "read": "Construction is the short part. The wait for a grid connection is the long one.",
+   "unit": "approximate months for a typical utility-scale storage project",
+   "intro": "Indicative durations for a standalone grid-scale battery in a mature US market. They overlap in practice — the point is the relative weight, not the arithmetic.",
+   "items": [
+    {
+     "label": "Origination and site control",
+     "v": 12
+    },
+    {
+     "label": "Interconnection studies",
+     "v": 30
+    },
+    {
+     "label": "Permitting and siting",
+     "v": 15
+    },
+    {
+     "label": "Offtake negotiation",
+     "v": 9
+    },
+    {
+     "label": "Financing to notice to proceed",
+     "v": 6
+    },
+    {
+     "label": "Construction and commissioning",
+     "v": 14
+    }
+   ],
+   "note": "Two consequences follow. First, equipment is ordered late relative to the project's life, so a buyer's supplier choice reflects the rules in force years after the site was acquired. Second, {{COD}} slippage is usually a queue or utility-work problem rather than a construction problem — which is why a slipped date rarely means the contractor failed."
+  },
+  {
+   "id": "the-capital-stack",
+   "title": "How the money is assembled",
+   "kind": "table",
+   "read": "Four different kinds of money, each with its own conditions — and any one of them can veto an equipment choice.",
+   "intro": "A project is financed once, at a moment when the site, the permit, the contract and the equipment order all have to be true at the same time. Each layer below prices a different risk, and the cheapest layers attach the strictest conditions.",
+   "cols": [
+    "Layer",
+    "What it is paid for",
+    "The condition it imposes"
+   ],
+   "rows": [
+    [
+     "Sponsor equity",
+     "Taking first loss and earning the residual",
+     "Must accept whatever risk the other layers refuse"
+    ],
+    [
+     "Construction and term-loan debt",
+     "Lending against a contracted or forecast cash flow",
+     "Completion guarantees, {{liquidated damages}} in the {{EPC}} contract, and an independent engineer's sign-off"
+    ],
+    [
+     "{{Tax equity}} or a credit transfer",
+     "Monetising an {{ITC}} the developer cannot use itself, because it has no tax bill large enough",
+     "Strict eligibility diligence — the credit must survive audit years later, so equipment provenance is examined before closing"
+    ],
+    [
+     "Capital recycling — a {{farmdown}}",
+     "Selling part of a finished asset to long-dated capital and recycling the proceeds into the next project",
+     "The buyer inherits the contracts, so sloppy documentation reduces the price"
+    ]
+   ],
+   "note": "The third row is the one that reaches back into engineering. Because credit eligibility now depends on where equipment and its inputs come from, a financing party's diligence — not a procurement policy — is often what actually decides which supplier a project uses. This is the mechanism behind the phrase 'the tax-equity market sets the supply chain'."
+  },
+  {
+   "id": "attach-or-standalone",
+   "title": "Two ways to build a battery",
+   "kind": "proscons",
+   "read": "Bolting storage onto a generator and building it alone are different businesses wearing the same equipment.",
+   "intro": "The same containers can be deployed either as a standalone plant that buys and sells energy, or attached to a solar or wind site whose output it reshapes. The choice determines the queue path, the contract, the tax treatment and who the customer is.",
+   "cards": [
+    {
+     "t": "Attached to generation",
+     "meta": "Shares a site, a substation and often an interconnection with a solar or wind plant",
+     "adv": [
+      "**Queue time can collapse** where {{surplus interconnection service}} lets the battery use the generator's unused headroom instead of joining the queue on its own.",
+      "**Shared {{balance of plant}}** — one substation, one control building, one set of roads and security — lowers cost per megawatt-hour installed.",
+      "**A cleaner product to sell.** Charging from the co-located plant turns intermittent output into firm evening delivery, which is what a {{solar peaker}} contract is buying."
+     ],
+     "dis": [
+      "*The battery inherits the host's constraints* — its site, its connection limit, and its outage schedule.",
+      "*Charging may be restricted* where tax rules or the contract require energy to come from the paired generator, which forfeits cheap grid charging.",
+      "*Sizing is dictated by the host*, so the battery is rarely the size the market alone would justify."
+     ]
+    },
+    {
+     "t": "Standalone",
+     "meta": "Its own site, its own connection, its own market position",
+     "adv": [
+      "**Sited where the grid needs it**, not where the sun is — usually next to load or a constraint, which is where prices are volatile.",
+      "**Free to charge from anywhere**, so it can exploit whatever hour is cheapest rather than the host plant's profile.",
+      "**Fully flexible commercially** — it can run {{merchant}}, sign a {{tolling agreement}}, or sell capacity, and can change over its life."
+     ],
+     "dis": [
+      "*The full queue wait and the full {{network upgrades}} bill* fall on one asset.",
+      "*No shared infrastructure*, so fixed costs are carried alone.",
+      "*It must justify itself on price volatility*, which is a forecast rather than a contract."
+     ]
+    }
+   ],
+   "note": "A developer with an existing renewables fleet has an option that a storage-only firm does not: it can attach batteries to connections it already owns. That is a genuine structural advantage, and it explains why wind and solar developers entered storage from a different direction than merchant battery specialists did."
+  },
+  {
+   "id": "when-the-integrator-fails",
+   "title": "Your warranty is only as good as the company holding it",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "The buyer's counterparty is the integrator, not the cell maker — and integrators are the thinnest-capitalised link in the chain.",
+   "ps": [
+    "A grid battery is bought as a finished system. A **{{system integrator}}** buys cells, packages them with cooling, power conversion and control software, and warrants the whole assembly. The buyer's contract is with that integrator; in most cases it has no contractual relationship with the cell manufacturer at all.",
+    "That matters because the promises attached to a battery are long. A **{{capacity maintenance agreement}}** commits the supplier to keep usable energy above a stated curve for a decade or more, adding modules — **{{augmentation}}** — when it falls short. Those obligations are worth exactly the credit standing of the company that made them.",
+    "Integration is also structurally fragile as a business. It buys the most expensive component in someone else's currency, sells a fixed-price system months or years later, and absorbs tariff, freight and warranty risk in between. A tariff change or a delivery failure can consume a whole project's margin, and several integrators have failed for precisely that reason.",
+    "When one does fail, the plant keeps running — cells do not care about bankruptcy — but the service stack around it comes apart. Software licences, spare-parts supply, remote monitoring and the augmentation promise are all left orphaned, and the owner must either buy service from whoever acquired the assets or re-platform the control layer onto a new provider.",
+    "The defence is structural, and buyers now write it into procurement: escrow the control software and its source, keep the {{BMS}} and {{EMS}} interfaces documented and non-proprietary where possible, insist on parts availability commitments, prefer suppliers whose warranty is backed by a parent balance sheet, and avoid a fleet in which one supplier holds every asset. Diversity of supply is not merely a price tactic — it is warranty risk management."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Project machinery: the queue, the permit, the stack, the warranty.",
+   "cards": [
+    {
+     "q": "Why is a 'development pipeline' figure so much larger than what a developer builds?",
+     "a": "Because it counts megawatts at every stage at once, including sites that only hold a land option and a queue position. Each stage is a filter with a real attrition rate, so the useful question is how much of the pipeline has cleared the interconnection study and holds an offtake."
+    },
+    {
+     "q": "What is actually being decided in an interconnection study?",
+     "a": "Who pays to reinforce the network. The study models the project against credible failure conditions and assigns it the {{network upgrades}} needed to accept its output — a bill that frequently decides whether the project proceeds."
+    },
+    {
+     "q": "What does {{surplus interconnection service}} let a developer avoid, and why does it exist?",
+     "a": "It lets a new resource use the unused headroom of an existing connection, avoiding a fresh queue position. It exists because a wind or solar plant rarely injects at its full rated output, so the connection is under-used most hours."
+    },
+    {
+     "q": "A project takes {{energy-only interconnection}} instead of {{capacity interconnection rights}}. What did it buy and what did it give up?",
+     "a": "It bought speed and a lower upgrade bill. It gave up firm injection rights and the ability to be counted toward the region's capacity requirement, which removes a revenue layer permanently."
+    },
+    {
+     "q": "Why can a change to a local {{setback}} rule kill a project outright rather than merely shrink it?",
+     "a": "Setbacks remove usable area from the inside edges of a site, and on an irregular parcel the loss is disproportionate. Below a certain size the project no longer supports the fixed costs of its land, permits and grid connection."
+    },
+    {
+     "q": "Why does a financing party end up influencing which battery supplier a project uses?",
+     "a": "Because tax-credit eligibility has to survive examination years after closing, so the party monetising the credit runs its own diligence on equipment provenance and can refuse to fund a non-compliant choice. Procurement policy is downstream of that condition."
+    },
+    {
+     "q": "Whom does a battery buyer actually hold a warranty with, and why is that a risk?",
+     "a": "With the {{system integrator}} that assembled the system, not the cell manufacturer. Integration is a thin-margin business exposed to tariffs and fixed-price contracts, so the entity carrying a decade-long {{capacity maintenance agreement}} may be the weakest balance sheet in the chain."
+    },
+    {
+     "q": "An integrator enters bankruptcy. What breaks at an already-operating plant?",
+     "a": "Not the hardware — the service layer. Software licences, spares, remote monitoring and the {{augmentation}} obligation are orphaned, so the owner must buy service from whoever acquired the assets or re-platform the controls."
+    },
+    {
+     "q": "Why does attaching storage to an existing renewables site often beat building standalone, even on a worse site?",
+     "a": "Because the existing grid connection is the scarce asset. Shared substation and civil works cut cost, and surplus interconnection can remove years of queue time that a standalone project must serve."
+    },
+    {
+     "q": "What is the practical difference between a {{farmdown}} and simply selling a project?",
+     "a": "A farmdown sells part of a finished asset to long-dated capital while the developer keeps a stake and continues to operate it. The proceeds recycle into the next project, so the developer funds growth without giving up the operating platform."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on how a project actually gets built.",
+   "items": [
+    {
+     "q": "Which stage of the development funnel typically consumes the most calendar time?",
+     "c": [
+      "Construction",
+      "Interconnection studies",
+      "Offtake negotiation",
+      "Permitting"
+     ],
+     "a": 1,
+     "why": "Study cycles routinely run for years, and batching means an individual request waits for its whole group. Construction of a grid battery is measured in months."
+    },
+    {
+     "q": "A battery is added to an operating solar farm using surplus interconnection service. What made that possible?",
+     "c": [
+      "The solar farm was oversized",
+      "The connection is under-used because solar rarely injects at nameplate",
+      "Batteries need less capacity than solar",
+      "The queue was empty"
+     ],
+     "a": 1,
+     "why": "Surplus service uses headroom that exists because the host resource's average injection is far below its rated maximum. The battery fills that gap rather than requesting new capability."
+    },
+    {
+     "q": "Why do buyers increasingly demand software escrow and documented control interfaces in storage contracts?",
+     "c": [
+      "To lower the purchase price",
+      "To protect operations if the integrator fails",
+      "Because regulators require it",
+      "To allow remote dispatch"
+     ],
+     "a": 1,
+     "why": "Integrator insolvency strands the service layer rather than the hardware. Escrowed software and open interfaces let the owner re-platform controls instead of losing them."
+    },
+    {
+     "q": "A developer sells 49% of a completed wind project and keeps operating it. This is best described as:",
+     "c": [
+      "A distressed sale",
+      "Capital recycling through a farmdown",
+      "A tax-equity structure",
+      "A tolling agreement"
+     ],
+     "a": 1,
+     "why": "A farmdown converts a completed asset into cash for the next project while retaining a stake and the operating role. It is a funding mechanism, not a retreat."
+    },
+    {
+     "q": "Which layer of the capital stack most often ends up dictating equipment provenance?",
+     "c": [
+      "Sponsor equity",
+      "Construction debt",
+      "The party monetising the tax credit",
+      "The EPC contractor"
+     ],
+     "a": 2,
+     "why": "Credit eligibility must survive later examination, so the tax-credit buyer diligences the supply chain and can decline non-compliant equipment. That diligence, not a policy statement, is the binding constraint."
+    },
+    {
+     "q": "A project's commercial operation date slips by nine months. What is the most likely cause?",
+     "c": [
+      "Poor construction management",
+      "Waiting on utility-side work or equipment delivery",
+      "Offtake renegotiation",
+      "Setback litigation"
+     ],
+     "a": 1,
+     "why": "Construction is the short, well-controlled phase. Slippage usually originates in interconnection work, network upgrades or supplier delivery — items the developer does not control directly."
+    },
+    {
+     "q": "Why is jurisdiction, rather than engineering, the dominant siting risk in the United States?",
+     "c": [
+      "Designs vary too much between states",
+      "Siting authority sits with different bodies, some of which can refuse outright",
+      "Federal permits are unpredictable",
+      "Grid codes differ by state"
+     ],
+     "a": 1,
+     "why": "Where a county or township holds veto power, an identical design has a materially different probability of approval than the same design one county over. That is a jurisdictional fact, not a technical one."
+    }
+   ]
+  }
+ ]
+}

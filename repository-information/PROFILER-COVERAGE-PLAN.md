@@ -267,11 +267,11 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | revision | `vertiv` | Vertiv | add a UPS section (G3) | ✓ · v04.51r — the machine and the transaction |
 | revision | `schneider-electric` | Schneider Electric | add a UPS section (G3) | ✓ · v04.51r — the system and the ladder |
 | revision | `siemens-energy` | Siemens Energy | add a grid-technology section (G4) | ✓ · v04.51r — the network as a system |
-| backfill | `apex-clean-energy` | Apex Clean Energy | IPP — buyer side has no guides | — |
-| backfill | `arevon` | Arevon | IPP — buyer side has no guides | — |
-| backfill | `eolian` | Eolian | IPP — buyer side has no guides | — |
-| backfill | `jupiter-power` | Jupiter Power | IPP — buyer side has no guides | — |
-| backfill | `key-capture-energy` | Key Capture Energy | IPP — buyer side has no guides | — |
+| backfill | `apex-clean-energy` | Apex Clean Energy | IPP — buyer side has no guides | ✓ · v04.95r — the project, not the battery |
+| backfill | `arevon` | Arevon | IPP — buyer side has no guides | ✓ · v04.95r — what the contract obligates |
+| backfill | `eolian` | Eolian | IPP — buyer side has no guides | ✓ · v04.95r — where the money comes from |
+| backfill | `jupiter-power` | Jupiter Power | IPP — buyer side has no guides | ✓ · v04.95r — the same battery in two hands |
+| backfill | `key-capture-energy` | Key Capture Energy | IPP — buyer side has no guides | ✓ · v04.95r — when the buyer is regulated |
 | backfill | `lightsource-bp` | Lightsource bp | IPP — buyer side has no guides | — |
 | backfill | `nextera-energy-resources` | NextEra Energy Resources | IPP — buyer side has no guides | — |
 | backfill | `plus-power` | Plus Power | IPP — buyer side has no guides | — |

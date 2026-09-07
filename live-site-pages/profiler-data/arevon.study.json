@@ -1,0 +1,360 @@
+{
+ "schemaVersion": 2,
+ "slug": "arevon",
+ "title": "Arevon — Technology Study Guide",
+ "lastUpdated": "2026-09-06",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a battery is sold by contract, not by megawatt-hour",
+   "kind": "callout",
+   "tone": "info",
+   "read": "In a contracted market the battery's revenue is written down years before it is built. Everything else follows from the wording.",
+   "ps": [
+    "The previous guide in this corpus follows how a storage project is built. This one follows the document that makes it worth building: the **offtake**. Who signs it, what it obliges the owner to do, and how many megawatts the buyer is allowed to count.",
+    "That question has a sharp answer in California, where most storage is contracted rather than {{merchant}}. Utilities and community energy agencies are legally required to hold enough capability to meet their share of peak demand, and they meet it by signing contracts with batteries. The obligation creates the market.",
+    "Chemistry is out of scope here — the cell-maker guides cover it. What matters on this side is the difference between a megawatt a battery can produce and a megawatt a regulator will count, because only the second one gets paid.",
+    "Read the guide with one question in view: **who bears which risk?** Every contract form below is a different answer to it, and the differences are worth more than the price."
+   ]
+  },
+  {
+   "id": "who-actually-buys",
+   "title": "The buyer's buyer",
+   "kind": "prose",
+   "read": "Nobody buys storage because they want a battery. They buy it because a regulator counts megawatts.",
+   "ps": [
+    "Every entity that sells electricity to end customers has a **resource-adequacy** obligation: it must demonstrate, in advance, that it has secured enough accredited capability to cover its share of the system's forecast peak plus a {{planning reserve margin}}. Failing the demonstration is a penalty, not an embarrassment, which is why the obligation reliably converts into procurement.",
+    "In California that obligation falls on three quite different kinds of buyer. The large investor-owned utilities are the biggest and the most creditworthy. **Community choice aggregators** — public agencies that buy power on behalf of a city or county while the utility still delivers it — carry the same obligation with smaller balance sheets and shorter track records. Municipal utilities and their joint-powers purchasing agencies buy for city-owned systems under their own governance.",
+    "Those differences matter to a project's financing. A twenty-year contract is only worth its credit: the same signed megawatts backed by a large utility and by a young public agency finance at different costs, so developers work with all three but price the risk differently.",
+    "The buyers are also not buying energy, in most cases. A **{{RA contract}}** pays a fixed monthly amount per megawatt for the right to count the resource, while whoever holds the dispatch right decides when it actually runs. The battery earns for **existing and being available**, and the energy it moves is a separate matter.",
+    "This is the structural fact that distinguishes a contracted market from a merchant one. In a merchant market the asset earns from volatility, so the owner wants price swings. Under a resource-adequacy contract the asset earns from availability, so the owner wants **uptime** — and the two operating philosophies are genuinely different jobs."
+   ]
+  },
+  {
+   "id": "contract-taxonomy",
+   "title": "Five ways to sell the same battery",
+   "kind": "table",
+   "read": "The contract decides who presses the button and who eats a bad price.",
+   "intro": "These forms coexist, and one asset can layer several at once. Reading which one a project uses tells you what the owner is actually being paid for and where the risk sits.",
+   "cols": [
+    "Form",
+    "Who decides when it runs",
+    "What the owner is paid",
+    "Who carries market risk"
+   ],
+   "rows": [
+    [
+     "{{Tolling agreement}}",
+     "The offtaker, within stated limits",
+     "A fixed capacity fee, plus pass-through of charging cost",
+     "The offtaker — it takes the spreads and the losses"
+    ],
+    [
+     "{{RA contract}}",
+     "The system operator, once the capacity is shown",
+     "A fixed monthly amount per accredited megawatt",
+     "Shared: the owner must be available, the buyer holds the position"
+    ],
+    [
+     "{{Energy storage service agreement}}",
+     "The public-power buyer",
+     "A fixed service fee for the term",
+     "The buyer — this is the municipal form of a toll"
+    ],
+    [
+     "{{PPA}} on a paired plant",
+     "Dispatched to shape the generator's delivery obligation",
+     "A price per megawatt-hour delivered, often with a firm evening block",
+     "The owner, if it cannot deliver the shaped profile"
+    ],
+    [
+     "{{Merchant}}",
+     "The owner's own trading desk",
+     "Whatever the market pays that hour",
+     "Entirely the owner"
+    ]
+   ],
+   "note": "Two traps worth naming. First, a tolling agreement transfers upside as well as downside — a toll signed before a volatile year looks expensive afterwards, and that regret is the price of bankability. Second, an availability obligation is usually stricter than it sounds: falling below a stated availability triggers {{liquidated damages}}, so a maintenance decision is also a contractual decision."
+  },
+  {
+   "id": "counted-megawatts",
+   "title": "The megawatts you may count, not the megawatts you own",
+   "kind": "prose",
+   "read": "A four-hour battery counts fully today because the shortfall it must cover is short. Lengthen the shortfall and the same battery counts for less.",
+   "ps": [
+    "System operators do not credit nameplate. They credit **{{ELCC}}** — how much a resource actually contributes to meeting peak, measured by how much conventional capacity it can displace without raising the risk of a shortfall. The number that reaches a contract in California is the **{{net qualifying capacity}}**, the megawatts the buyer may count toward its obligation.",
+    "For storage, accreditation is dominated by {{duration}}. A grid whose evening shortfall lasts about three hours can be covered by a four-hour battery at close to its full rating; a grid whose shortfall lasts six hours cannot. This is why four hours became the industry default: it is the shortest duration that fully covers the peak in the markets that first bought storage at scale.",
+    "The reason the shortfall is shaped that way is solar. Subtracting midday solar from demand leaves the **{{duck curve}}** — a deep midday trough and a steep evening ramp as the sun sets while demand is still high. Storage is not being bought to cover days of scarcity; it is being bought to move energy across that ramp.",
+    "The mechanism has a built-in decay, and it is the single most important thing to understand about this market. As more storage is added, the batteries themselves flatten the ramp — they charge in the trough and discharge on the neck. The remaining shortfall stretches later and longer, and accreditation for a four-hour resource **falls**. Every new project slightly devalues the ones already there, and the operator's accreditation rules are periodically rewritten to reflect it.",
+    "The consequence for a buyer's roadmap is concrete: duration creeps upward over time — four hours, then six, then eight — not because the technology changed but because the deficit the technology is credited against changed. A fleet built entirely at one duration has a slow, structural accreditation problem rather than an operational one."
+   ]
+  },
+  {
+   "id": "why-four-hours",
+   "title": "What each extra hour of duration buys",
+   "kind": "bars",
+   "read": "The credited contribution rises with duration and then flattens — the shape of the curve is the whole argument.",
+   "unit": "indicative share of nameplate credited toward a peak obligation, per cent",
+   "intro": "Illustrative accreditation for storage against a solar-shaped evening deficit. The exact figures are set by each system operator and revised as more storage arrives; the shape is what generalises.",
+   "items": [
+    {
+     "label": "1-hour storage",
+     "v": 25
+    },
+    {
+     "label": "2-hour storage",
+     "v": 50
+    },
+    {
+     "label": "4-hour storage",
+     "v": 95
+    },
+    {
+     "label": "6-hour storage",
+     "v": 100
+    },
+    {
+     "label": "8-hour storage",
+     "v": 100
+    }
+   ],
+   "note": "Two readings. Below four hours the credit is roughly proportional to duration, so a short battery is being paid mostly for energy services rather than capacity. Above the length of the deficit the curve flattens, so extra hours stop earning capacity value and must justify themselves on energy alone. The saturation effect described above pushes the knee of this curve to the right over time."
+  },
+  {
+   "id": "coupling",
+   "title": "Two ways to wire storage to a solar plant",
+   "kind": "proscons",
+   "read": "Whether the battery sits before or after the inverter changes the physics, the cost and what the plant may legally claim.",
+   "intro": "A hybrid plant can join its battery to the solar array on the direct-current side, sharing one inverter, or on the alternating-current side, with each having its own. This looks like a wiring diagram question and is really a commercial one.",
+   "cards": [
+    {
+     "t": "DC-coupled",
+     "meta": "Battery and array share one inverter; energy moves between them without conversion",
+     "adv": [
+      "**Captures clipped energy.** Arrays are deliberately oversized against their inverter, so on bright days output above the inverter limit is thrown away — a DC-coupled battery can absorb it instead.",
+      "**One conversion, not two.** Charging from the array avoids a DC-to-AC-to-DC round trip, so {{round-trip efficiency}} is higher.",
+      "**Cheaper shared equipment** — one inverter, one transformer, one point of connection."
+     ],
+     "dis": [
+      "*Charging from the grid is limited or impossible*, so the battery cannot exploit cheap overnight prices.",
+      "*The two assets are coupled operationally* — an inverter fault takes out both.",
+      "*Less flexibility to re-purpose* the battery later if the market changes."
+     ]
+    },
+    {
+     "t": "AC-coupled",
+     "meta": "Each has its own inverter; they meet at the substation",
+     "adv": [
+      "**Charge from anywhere**, including the grid at whatever hour is cheapest.",
+      "**Independent operation and sizing** — the battery can be larger or smaller than the array's profile would imply, and can be added years later.",
+      "**Simpler to contract separately**, because the battery's output is metered in its own right."
+     ],
+     "dis": [
+      "*Clipped DC energy is lost* — it never reaches a device that can store it.",
+      "*Two conversions when charging from the array*, so a few percentage points of efficiency go as heat.",
+      "*Duplicated power electronics* raise capital cost per megawatt."
+     ]
+    }
+   ],
+   "note": "The **{{solar peaker}}** product sits on the DC-coupled side of this choice: a solar plant with enough attached storage to deliver a firm evening block is sold as a substitute for a gas peaking plant rather than as intermittent generation. That is a different product with a different buyer, and it is why coupling is decided by the contract, not by the engineers."
+  },
+  {
+   "id": "the-credit",
+   "title": "The tax credit is a supply-chain rule in disguise",
+   "kind": "prose",
+   "read": "A third of the capital cost arrives as a credit, and the conditions attached to it reach all the way down to the cell.",
+   "ps": [
+    "A storage project earns an **{{ITC}}** — a credit against federal tax equal to a share of its qualifying cost. Storage became eligible on a standalone basis rather than only as an attachment to solar, and that single change is what created the standalone-storage industry.",
+    "Most developers cannot use the credit themselves, because they do not have a tax bill large enough to absorb it. Historically they sold the benefit through **{{tax equity}}**: an investor with a large tax appetite takes an ownership interest in a partnership structured so the credits and losses flow to it, and the arrangement unwinds after a fixed period. It is effective and legally intricate.",
+    "The alternative now is **{{tax credit transferability}}** — the credit is sold outright for cash to an unrelated buyer, with no partnership to build or unwind. It is dramatically simpler, opens the buyer pool to any profitable company rather than a handful of banks, and generally clears at a discount to face value that reflects the buyer's residual risk.",
+    "That residual risk is the reason the credit reaches into engineering. If the credit is later disallowed, the buyer bears the loss unless it is insured or indemnified — so credit buyers diligence eligibility hard, and eligibility now depends on **where the equipment and its inputs come from**. A project whose supplier fails a foreign-entity test does not merely lose a bonus; it can lose the transaction that funds a third of its cost.",
+    "There are also adders that reward specific choices: a bonus for meeting **{{domestic content}}** thresholds, and one for building in a designated **{{energy community adder}}**. Both are calculated from documentation the supplier must provide, which is why supply agreements now carry evidentiary obligations that would have looked bizarre a decade ago."
+   ]
+  },
+  {
+   "id": "one-supplier-or-many",
+   "title": "Standardising on a single supplier",
+   "kind": "proscons",
+   "read": "Concentration buys speed and costs optionality. Both effects are large, and neither is a mistake by itself.",
+   "intro": "Some buyers run a repeat cadence through one integrator; others deliberately hold two or three qualified suppliers. The trade is genuinely two-sided.",
+   "cards": [
+    {
+     "t": "One supplier, repeated",
+     "meta": "The same product across the whole fleet",
+     "adv": [
+      "**Engineering is done once.** Layouts, protection settings, fire-code packages and {{commissioning}} procedures are reused, which compresses schedule more than any procurement saving.",
+      "**Operations get simpler** — one spare-parts inventory, one control platform, one training programme, one escalation path.",
+      "**Buying power grows with the cadence**, and a large repeat customer gets delivery slots when supply is tight."
+     ],
+     "dis": [
+      "*Every project inherits one company's risk* — its solvency, its quality record, its policy exposure.",
+      "*Price discovery disappears* once there is no live alternative bid.",
+      "*A single safety event affects the whole fleet's permitting*, because reviewers see the same product everywhere."
+     ]
+    },
+    {
+     "t": "Several qualified suppliers",
+     "meta": "Two or three products held live in the fleet",
+     "adv": [
+      "**Live competition on every award**, and a credible walk-away.",
+      "**Failure is contained** — an insolvent supplier strands part of the fleet, not all of it.",
+      "**Optionality on eligibility rules**, since a policy change that disqualifies one vendor leaves another."
+     ],
+     "dis": [
+      "*Engineering is repeated per platform*, and integration cost is real.",
+      "*Thinner relationship with each vendor* when allocation is scarce.",
+      "*More {{EMS}} platforms to operate*, which is an ongoing staffing cost rather than a one-off."
+     ]
+    }
+   ],
+   "note": "The neutral way to read a concentrated fleet is that the buyer has bought execution speed and paid for it in optionality. That is a defensible trade while the supplier is healthy and the rules are stable — and it is exactly the trade that a supplier failure or a rule change converts into a fleet-wide problem."
+  },
+  {
+   "id": "safety-becomes-a-spec",
+   "title": "Why one fire changes the specification",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Storage safety is a permitting and insurance variable, so an incident anywhere raises the evidence burden everywhere.",
+   "ps": [
+    "A lithium battery failure is not an ordinary fire. **{{Thermal runaway}}** is self-sustaining: a damaged or overheated cell generates heat faster than it can shed it, decomposing its own materials and heating its neighbours until they do the same. Water cools but does not smother it, and the flammable gases released are their own hazard.",
+    "Modern design accepts that a cell may fail and concentrates on making failure **local**: spacing and barriers between enclosures, deflagration venting, gas detection that raises an alarm before ignition, and enclosure layouts that let responders defend the site rather than enter it.",
+    "The important point for a buyer is institutional rather than technical. An incident at any project is read by every permitting authority, fire marshal and insurer that reviews the next one. Approval conditions tighten, hazard-mitigation analysis becomes mandatory where it was advisory, and setback distances grow.",
+    "So safety performance becomes a **procurement criterion with a price**. A supplier's test evidence, incident history and response record are diligence items alongside cost and delivery — and an equipment choice that cannot clear a sceptical municipal review is expensive even if it is cheap.",
+    "This is also where urban and near-residential siting is decided. Projects in dense areas face the strictest review, so buyers targeting load centres — where the grid value is highest — carry the heaviest evidentiary burden. The technical remedy and the commercial remedy are the same: choose equipment whose safety case is already documented, and be able to show it."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Contracts, accreditation and the credit.",
+   "cards": [
+    {
+     "q": "Why does a resource-adequacy obligation reliably create storage procurement?",
+     "a": "Because it is enforced in advance with penalties: every load-serving entity must demonstrate accredited capability covering its share of peak plus a {{planning reserve margin}}. Storage is bought to close that demonstration, not because a battery is wanted for its own sake."
+    },
+    {
+     "q": "Under a {{tolling agreement}}, who profits when prices spike?",
+     "a": "The offtaker. It pays a fixed capacity fee for the right to dispatch and keeps whatever the market pays, so the owner has traded upside for a bankable, predictable revenue line."
+    },
+    {
+     "q": "What is the difference between a battery's nameplate rating and its {{net qualifying capacity}}?",
+     "a": "Nameplate is what it can physically deliver; net qualifying capacity is what a system operator will let a buyer count toward its obligation after discounting for how reliably it covers the hours that matter. Only the second is paid for as capacity."
+    },
+    {
+     "q": "Why did four hours become the default storage duration?",
+     "a": "Because it is roughly the length of the evening deficit left after solar output is subtracted, so a four-hour battery covers the shortfall almost fully and is credited close to nameplate. It is a fact about the deficit, not about the technology."
+    },
+    {
+     "q": "Why does storage accreditation fall as more storage is built?",
+     "a": "Because the batteries flatten the very ramp they are credited against. Charging in the midday trough and discharging on the evening neck stretches the remaining deficit later and longer, so a four-hour resource covers less of it than before."
+    },
+    {
+     "q": "What does a DC-coupled hybrid capture that an AC-coupled one loses?",
+     "a": "Clipped energy — the array output above the inverter's limit on bright days, which otherwise has nowhere to go. It also avoids one conversion step when charging from the array, so round-trip efficiency is higher."
+    },
+    {
+     "q": "What does an AC-coupled hybrid gain in exchange?",
+     "a": "Freedom. It can charge from the grid at the cheapest hour, be sized independently of the array, be added years later, and be contracted as a separate resource."
+    },
+    {
+     "q": "How does {{tax credit transferability}} differ from {{tax equity}}, and why does it matter to a supplier?",
+     "a": "Transferability sells the credit outright for cash with no partnership to build or unwind, opening the buyer pool to any profitable company. Because the buyer bears disallowance risk, it diligences equipment eligibility hard — which puts supplier provenance on the critical path to funding."
+    },
+    {
+     "q": "Give the two-sided reading of a fleet standardised on one integrator.",
+     "a": "It buys execution speed — engineering, spares, training and controls are done once — and pays for it in optionality: one company's solvency, quality and policy exposure become the whole fleet's, and price discovery stops."
+    },
+    {
+     "q": "Why does a single thermal event raise costs for projects that had nothing to do with it?",
+     "a": "Because permitting authorities, fire marshals and insurers generalise. Review conditions tighten, hazard analysis becomes mandatory and separation distances grow — so an incident anywhere raises the evidence burden on the next application everywhere."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on contracts, counted megawatts and credits.",
+   "items": [
+    {
+     "q": "A battery earns a fixed monthly payment per megawatt for being available, while the system operator dispatches it. This is:",
+     "c": [
+      "A merchant position",
+      "A resource-adequacy contract",
+      "A DC-coupled hybrid",
+      "A tax-equity structure"
+     ],
+     "a": 1,
+     "why": "The defining feature is payment for accredited availability rather than for energy delivered, with dispatch sitting elsewhere. That is the resource-adequacy form."
+    },
+    {
+     "q": "Which contract form leaves the owner with the most market risk?",
+     "c": [
+      "Tolling agreement",
+      "Energy storage service agreement",
+      "Merchant operation",
+      "Resource-adequacy contract"
+     ],
+     "a": 2,
+     "why": "A merchant asset has no contracted floor at all: it sells at whatever prices occur. The other three convert some or all of that exposure into a fixed fee."
+    },
+    {
+     "q": "Adding a great deal of four-hour storage to a solar-heavy grid causes accreditation for four-hour storage to:",
+     "c": [
+      "Rise, because storage is proven",
+      "Stay fixed by rule",
+      "Fall, because the deficit stretches longer",
+      "Depend only on chemistry"
+     ],
+     "a": 2,
+     "why": "Storage flattens the evening ramp it is credited against, so the residual deficit becomes longer and a four-hour resource covers a smaller share of it."
+    },
+    {
+     "q": "A hybrid plant is wired so the battery cannot charge from the grid. It is most likely:",
+     "c": [
+      "AC-coupled",
+      "DC-coupled",
+      "Behind the meter",
+      "Energy-only interconnected"
+     ],
+     "a": 1,
+     "why": "Sharing a single inverter with the array is what creates both the clipped-energy benefit and the restriction on grid charging."
+    },
+    {
+     "q": "Why do tax-credit buyers care which factory made a project's batteries?",
+     "c": [
+      "To verify performance claims",
+      "Because credit eligibility can be disallowed later and they bear that loss",
+      "Because of shipping costs",
+      "To satisfy the offtaker"
+     ],
+     "a": 1,
+     "why": "The credit must survive later examination. Since eligibility depends on equipment and input provenance, the party buying the credit runs the diligence and can decline to fund a non-compliant project."
+    },
+    {
+     "q": "The strongest argument for holding two qualified storage suppliers rather than one is:",
+     "c": [
+      "Lower engineering cost",
+      "Simpler operations",
+      "A supplier failure strands only part of the fleet",
+      "Faster commissioning"
+     ],
+     "a": 2,
+     "why": "The first, second and fourth options all favour standardisation. Containment of counterparty failure — and of a rule change that disqualifies one vendor — is what diversity actually buys."
+    },
+    {
+     "q": "Why does water not stop a battery fire the way it stops an ordinary one?",
+     "c": [
+      "Batteries are sealed",
+      "Thermal runaway is self-sustaining and supplies its own energy",
+      "Water conducts electricity",
+      "The fire burns too hot"
+     ],
+     "a": 1,
+     "why": "A cell in runaway decomposes its own materials and heats its neighbours, so there is nothing to smother. Water removes heat and slows propagation but does not extinguish the reaction, which is why design focuses on containing failure locally."
+    }
+   ]
+  }
+ ]
+}
