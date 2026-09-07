@@ -43507,15 +43507,15 @@
     "a": {
      "type": "competitor",
      "note": "Tract's Caldwell Valley park (about 2,973 acres, 'more than 4 GW') sits across the road from Prime's Lockhart campus in Caldwell County, Texas; both draw on Bluebonnet Electric Cooperative.",
-     "context": "The Caldwell DCAT tracker and Central Texas coverage place Prime's 'Project Snow' at 1395 Bob White Road and Tract's park on the same FM 2720 corridor; Prime's phase 1 (two shells, USD 400 million, June 2026–September 2027) and Tract's first 250 MW (Q1 2028) compete for the same cooperative capacity, and both sit under the county's August 2026 abatement suspension.",
+     "context": "The Caldwell DCAT tracker and Central Texas coverage place Prime's 'Project Snow' at 1395 Bob White Road and Tract's park on the same FM 2720 corridor; Prime's phase 1 (two shells, USD 400 million, June 2026–September 2027) and Tract's first 250 MW (Q1 2028) compete for the same cooperative capacity, and both sit under the county's August 2026 abatement suspension. Two capex figures circulate: USD 4.2 billion 'at full buildout' for nine buildings in three phases (county, March 2024; '$4 billion' in Tract-side press) and USD 400 million for the two-shell phase 1 (Texas filing, May 2026) — different scopes; no source restates a total for the eight-building, 384 MW plan.",
      "source": "https://caldwelldcat.org/",
      "status": "active",
      "since": "2025"
     },
     "b": {
      "type": "competitor",
-     "note": "Prime Data Centers' USD 4 billion Lockhart campus sits 'across the street' from Tract's Caldwell Valley park in Caldwell County, Texas — the two developers compete for the same Bluebonnet-served hyperscale tenants.",
-     "context": "Muskin Elam's account of the May 2025 acquisition places Prime's campus across the road from the 1,515 acres; Baxtel's Caldwell Valley page puts Prime 1.43 miles away and PowerHouse's Austin site adjacent. Prime's AUS01 filing (May 2026) is a two-building, USD 400 million first phase on Bluebonnet power; Tract's first 250 MW is contracted for Q1 2028. Both are exposed to the county's August 2026 suspension of data-center abatements.",
+     "note": "Prime Data Centers' Lockhart campus sits 'across the street' from Tract's Caldwell Valley park in Caldwell County, Texas; the two developers compete for the same Bluebonnet-served hyperscale tenants.",
+     "context": "The Austin Business Journal (8 May 2025, via Muskin Elam) puts the 1,515 acres 'across the street from a $4 billion data center campus project' by Prime, scope unstated. That rounds the county's March 2024 figure: phase 1 USD 1.3 billion for three buildings, USD 4.2 billion 'at full buildout' for nine buildings in three phases. Texas filing TABS2026019473 (5 May 2026) restated phase 1 as two 380,000 sq ft shells at USD 400 million; Baxtel now shows eight buildings and no total. Different scopes and vintages, not a contradiction.",
      "source": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/",
      "status": "active",
      "since": "2025"
@@ -43540,6 +43540,13 @@
      "where": "Capabilities · Build-to-suit, powered shell and turnkey wholesale data centers (the core product)",
      "date": "",
      "text": "Reporters set it beside Microsoft's Elk Grove Technology Park, CloudHQ and Meta in Chicago and beside Aligned, CyrusOne, Equinix and PowerHouse/Hillwood in CBRE's Chicago survey; beside STACK and Vantage in Phoenix; beside CoreSite and Digital Realty in Vernon; beside Tract and PowerHouse in Caldwell County; and beside Equinix, CyrusOne and Data4 in Madrid.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · The US campus portfolio — Chicago, Los Angeles, Phoenix, Dallas–Fort Worth, Austin, Sacramento and Silicon Valley",
+     "date": "",
+     "text": "Austin AUS01, Lockhart: 205 acres, eight buildings and 384 MW on the page, Bluebonnet Electric Cooperative; the county's March 2024 abatement announcement described a USD 1.3 billion, three-building, 780,000 sq ft turnkey phase 1 and 'a total of nine data centers on the site when all three phases are completed' at USD 4.2 billion 'at full buildout' — the figure Tract-side coverage rounds to 'a $4 billion data center campus'; the May 2026 Texas filing cut phase 1 to two 380,000 sq ft shells at USD 400 million, June 2026 to September 2027, and no source restates a full-build-out total for the eight-building plan.",
      "src": "",
      "from": "a"
     },

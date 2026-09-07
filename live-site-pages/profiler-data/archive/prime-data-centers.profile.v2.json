@@ -38,7 +38,7 @@
     {
       "name": "The US campus portfolio — Chicago, Los Angeles, Phoenix, Dallas–Fort Worth, Austin, Sacramento and Silicon Valley",
       "category": "Owned campuses (about 151 MW operating; about 222 MW under construction; about 700 MW in development on the location pages)",
-      "description": "Chicago ORD01, Elk Grove Village: 29.75 acres, three hyperscale buildings, 270 MW on the page (72 + 54 + 54 per building), ComEd with an adjacent substation; ORD01-01 operational and leased, ORD01-02 and -03 in development and leased — the CoreWeave campus, built by Clune with Gensler design and refinanced in June 2026. Los Angeles LAX01, Vernon: 1.95 acres, 33 MW across six halls on a 49.5 MVA, 66 kV Vernon Public Utilities substation, opened November 2024 'one hundred percent leased by two artificial intelligence companies'. Phoenix PHX01, Avondale: 66.5 acres bought in 2023 for USD 28.9 million, five buildings of 267,000 sq ft and 48 MW (240 MW; 210 MW and 42 MW per building in the 2023 plan), an SRP substation of about 250 MW with 'Phase 1 … commissioned to support the first 144MW', buildings 1–3 broke ground 21 May 2026 with ARCO/Murray. Dallas DFW01: two enterprise buildings, 8 MW operational (bought from VPLS/Evocative in 2023) and 12 MW under construction, Oncor; plus DFW04 Fort Worth (three 267,000 sq ft, 48 MW buildings; Texas filing completion date January 2026 with no reported opening) and DFW02 Garland (three buildings, 'more than USD 1.3 billion'). Austin AUS01, Lockhart: 205 acres, eight buildings and 384 MW on the page, Bluebonnet Electric Cooperative; the county's March 2024 abatement announcement described a USD 1.3 billion, three-building, 780,000 sq ft turnkey phase 1 and 'a total of nine data centers on the site when all three phases are completed' at USD 4.2 billion 'at full buildout' — the figure Tract-side coverage rounds to 'a $4 billion data center campus'; the May 2026 Texas filing cut phase 1 to two 380,000 sq ft shells at USD 400 million, June 2026 to September 2027, and no source restates a full-build-out total for the eight-building plan. Sacramento SMF01, McClellan Park: 8 MW operational (Holder Construction GC) and SMF02's 18 MW under construction from May 2026 (Clune), SMUD. Silicon Valley: five sites and 57 MW — Hayward SJC01 20 MW leased, Santa Clara SJC02 9 MW powered shell leased, SJC03 and SJC04 9 MW each, San Jose SJC06 10 MW — on Silicon Valley Power and PG&E.",
+      "description": "Chicago ORD01, Elk Grove Village: 29.75 acres, three hyperscale buildings, 270 MW on the page (72 + 54 + 54 per building), ComEd with an adjacent substation; ORD01-01 operational and leased, ORD01-02 and -03 in development and leased — the CoreWeave campus, built by Clune with Gensler design and refinanced in June 2026. Los Angeles LAX01, Vernon: 1.95 acres, 33 MW across six halls on a 49.5 MVA, 66 kV Vernon Public Utilities substation, opened November 2024 'one hundred percent leased by two artificial intelligence companies'. Phoenix PHX01, Avondale: 66.5 acres bought in 2023 for USD 28.9 million, five buildings of 267,000 sq ft and 48 MW (240 MW; 210 MW and 42 MW per building in the 2023 plan), an SRP substation of about 250 MW with 'Phase 1 … commissioned to support the first 144MW', buildings 1–3 broke ground 21 May 2026 with ARCO/Murray. Dallas DFW01: two enterprise buildings, 8 MW operational (bought from VPLS/Evocative in 2023) and 12 MW under construction, Oncor; plus DFW04 Fort Worth (three 267,000 sq ft, 48 MW buildings; Texas filing completion date January 2026 with no reported opening) and DFW02 Garland (three buildings, 'more than USD 1.3 billion'). Austin AUS01, Lockhart: 205 acres, eight buildings and 384 MW on the page, Bluebonnet Electric Cooperative; the May 2026 Texas filing cut phase 1 to two 380,000 sq ft shells at USD 400 million, June 2026 to September 2027. Sacramento SMF01, McClellan Park: 8 MW operational (Holder Construction GC) and SMF02's 18 MW under construction from May 2026 (Clune), SMUD. Silicon Valley: five sites and 57 MW — Hayward SJC01 20 MW leased, Santa Clara SJC02 9 MW powered shell leased, SJC03 and SJC04 9 MW each, San Jose SJC06 10 MW — on Silicon Valley Power and PG&E.",
       "highlights": [
         "Chicago is the fully leased campus and the one with a market price: Elk Grove Village Property LLC, 'a wholly-owned indirect subsidiary of Prime Data Centers LLC', priced USD 900 million of five-year 7.5% notes at par on 2 June 2026 (upsized from USD 850 million; Santander sole bookrunner) to refinance USD 500 million of debt and 'fund the remaining estimated construction costs', backed by CoreWeave's 15-year lease; CBRE's H2 2025 survey records the campus as fully leased.",
         "Phoenix is the flagship: 'more than $3 billion' of Prime investment 'with customers investing an average 2x more', buildings 1–3 'secured by a leading hyperscaler', buildings 4 and 5 available; Plus Power's Sierra Estrella battery (250 MW / 1,000 MWh, SRP tolling) sits at the same Avondale Boulevard address block. Data Center Knowledge's July 2026 note that Prime 'opened the first facility' conflicts with the company's 'Construction' status and the May groundbreaking.",
@@ -497,7 +497,7 @@
       "status": "active",
       "since": "2025",
       "note": "Tract's Caldwell Valley park (about 2,973 acres, 'more than 4 GW') sits across the road from Prime's Lockhart campus in Caldwell County, Texas; both draw on Bluebonnet Electric Cooperative.",
-      "context": "The Caldwell DCAT tracker and Central Texas coverage place Prime's 'Project Snow' at 1395 Bob White Road and Tract's park on the same FM 2720 corridor; Prime's phase 1 (two shells, USD 400 million, June 2026–September 2027) and Tract's first 250 MW (Q1 2028) compete for the same cooperative capacity, and both sit under the county's August 2026 abatement suspension. Two capex figures circulate: USD 4.2 billion 'at full buildout' for nine buildings in three phases (county, March 2024; '$4 billion' in Tract-side press) and USD 400 million for the two-shell phase 1 (Texas filing, May 2026) — different scopes; no source restates a total for the eight-building, 384 MW plan.",
+      "context": "The Caldwell DCAT tracker and Central Texas coverage place Prime's 'Project Snow' at 1395 Bob White Road and Tract's park on the same FM 2720 corridor; Prime's phase 1 (two shells, USD 400 million, June 2026–September 2027) and Tract's first 250 MW (Q1 2028) compete for the same cooperative capacity, and both sit under the county's August 2026 abatement suspension.",
       "source": "https://caldwelldcat.org/"
     },
     {
@@ -790,10 +790,10 @@
           },
           {
             "name": "Campus investment claims",
-            "actual": "Chicago '$1 billion' (2022); Phoenix 'more than two billion dollars' (2023); Austin '$1.3 billion' phase 1 and '$4.2 billion' at full buildout across nine buildings (county announcement, 2024), phase 1 since cut to '$400,000,000' for two shells (Texas filing, 2026); DFW04 '$1.6 billion' and DFW02 'more than $1.3 billion' (trade press)",
+            "actual": "Chicago '$1 billion' (2022); Phoenix 'more than two billion dollars' (2023); Austin '$1.3 billion' (2024); DFW04 '$1.6 billion' and DFW02 'more than $1.3 billion' (trade press)",
             "expected": "",
             "verdict": "inline",
-            "result": "PR Newswire; company releases; Hays Caldwell EDP; Post Register; TDLR; Baxtel"
+            "result": "PR Newswire; company releases; Baxtel"
           },
           {
             "name": "Tenant credit event",
@@ -1132,11 +1132,6 @@
       "label": "ION Analytics / Infralogic — ION Analytics/Infralogic raise delayed",
       "url": "https://ionanalytics.com/insights/infralogic/hyperscaler-equity-raise-gets-delayed/",
       "date": "2025-05-15"
-    },
-    {
-      "label": "Muskin Elam Group (reprint of Justin Sayers, Austin Business Journal) — Tract's 1,515 ac Caldwell County acquisition (7 May 2025) 'across the street from a $4 billion data center campus project by Dallas-based Prime Data Centers LLC' — no scope stated; rounds the county's March 2024 USD 4.2bn full-build-out figure",
-      "url": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/",
-      "date": "2025-05-08"
     },
     {
       "label": "MarketScreener — MarketScreener EC approval",
@@ -1617,6 +1612,6 @@
       "url": "https://www.edgeir.com/companies/prime-data-centers"
     }
   ],
-  "lastUpdated": "2026-09-07",
-  "profileVersion": 3
+  "lastUpdated": "2026-09-06",
+  "profileVersion": 2
 }

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-07 05:25:47 AM EST` · Repo version: `v05.05r`
+Last updated: `2026-09-07 05:47:31 AM EST` · Repo version: `v05.06r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -618,6 +618,8 @@ Last updated: `2026-09-07 05:25:47 AM EST` · Repo version: `v05.05r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/powell-industries.profile.v1.json">powell-industries.profile.v1.json</a> — Archived v1 dossier (Powell Industries)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/prevalon.profile.v2.json">prevalon.profile.v2.json</a> — Archived v2 dossier (Prevalon Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/prevalon.profile.v3.json">prevalon.profile.v3.json</a> — Archived v3 dossier (Prevalon Energy)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/prime-data-centers.profile.v1.json">prime-data-centers.profile.v1.json</a> — Archived v1 dossier (Prime Data Centers)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/prime-data-centers.profile.v2.json">prime-data-centers.profile.v2.json</a> — Archived v2 dossier (Prime Data Centers)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/primoris.profile.v1.json">primoris.profile.v1.json</a> — Archived v1 dossier (Primoris)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/primoris.profile.v3.json">primoris.profile.v3.json</a> — Archived v3 dossier (Primoris)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/proenergy.profile.v2.json">proenergy.profile.v2.json</a> — Archived v2 dossier (ProEnergy)
@@ -684,6 +686,8 @@ Last updated: `2026-09-07 05:25:47 AM EST` · Repo version: `v05.05r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v3.json">tesla.profile.v3.json</a> — Archived v3 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v5.json">tesla.profile.v5.json</a> — Archived v5 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v6.json">tesla.profile.v6.json</a> — Archived v6 dossier (Tesla, Inc.)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tract.profile.v1.json">tract.profile.v1.json</a> — Archived v1 dossier (Tract)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tract.profile.v2.json">tract.profile.v2.json</a> — Archived v2 dossier (Tract)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/trina-storage.profile.v2.json">trina-storage.profile.v2.json</a> — Archived v2 dossier (Trina Storage)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/trina-storage.profile.v3.json">trina-storage.profile.v3.json</a> — Archived v3 dossier (Trina Storage (Trina Solar))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/turner-construction.profile.v1.json">turner-construction.profile.v1.json</a> — Archived v1 dossier (Turner Construction)

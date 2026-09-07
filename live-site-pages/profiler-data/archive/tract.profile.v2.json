@@ -60,7 +60,7 @@
       "category": "Master-planned parks outside Nevada (8,688 acres, 13,240 MW on the projects page)",
       "description": "Caldwell Valley, Texas ('Project Snow'): 1,515 acres closed 7 May 2025 after '18 months' of pre-work with a Bluebonnet Electric Cooperative facility design agreement for 360 MW in 2028, plus 1,458 acres in January 2026 for about 2,973 acres and 'more than 4 GW', a Bluebonnet/LCRA on-site substation 'capable of scaling to 1.6GW' with 'the first 250MW of capacity contracted for delivery in the first quarter of 2028', 345 kV lines and the Kinder Morgan Permian Highway pipeline, and 'plans for onsite power generation that will become grid connected'; Medina (265 acres, 500 MW, Medina Electric Cooperative, mid-2028, adjacent to Microsoft's Castroville campus) and Applewhite in south San Antonio (339 acres, 720 MW design). Buckeye, Arizona: 2,069 acres bought in August 2024 for USD 136 million from Cipriani Holdings, 'up to 20 million square feet … as many as 40 individual data centers', up to 1.8 GW with APS, 22 by-right parcels of 44–242 acres, a development agreement approved unanimously — still 'planned or proposed' in May 2026. Eagle Mountain, Utah: 668 acres (January 2024) inside the RTI overlay with by-right use and 'more than 400 megawatts' from Rocky Mountain Power by 2028 (Pole Canyon 844 acres/1,700 MW; Pony Express 225 acres/120 MW next to Meta, Google and QTS). Altoona, Iowa: 453 acres (September 2025) with annexation, rezoning, a development agreement and a 588,000-gallon-a-day water reservation, 'over 1GW'. Morris, Illinois: 343 acres (January 2026, about USD 51.5 million from a Clarius Partners affiliate) with a ComEd transmission security agreement for 1 GW approved by FERC in April 2026, first power June 2028 and full ramp by 2032. Hanover, Virginia: 1,200 acres (May 2024, about USD 32.7 million) approved unanimously for up to 2.4 GW across eight Dominion substations, long-lead equipment ordered, bridging power 'as early as 2026', energisation 2028.",
       "highlights": [
-        "Texas is the largest non-Nevada position and the one with a contracted first block (250 MW, Q1 2028) — but also the site of a county whose commissioners suspended data-center abatements in August 2026 and where Prime Data Centers' campus sits 'across the street' — USD 4.2 billion at full build-out on the county's March 2024 nine-building plan (rounded to 'USD 4 billion' in Tract-side press), USD 400 million for the two-shell first phase filed in May 2026.",
+        "Texas is the largest non-Nevada position and the one with a contracted first block (250 MW, Q1 2028) — but also the site of a county whose commissioners suspended data-center abatements in August 2026 and where Prime Data Centers' USD 4 billion campus sits 'across the street'.",
         "Morris is the only park with a FERC-accepted utility contract: the ComEd TSA (counterparty Grundy County Power NR I, LLC) carries 'committed revenue contributions, minimum usage commitments, and shortfall payments for underperformance' — the same instrument that ComEd cancelled on PowerHouse's Joliet campus in July 2026.",
         "Virginia is where the model has lost most often: Chesterfield's 744 acres withdrawn (July 2025) under a county that now requires conditional-use permits and has 'signaled an end to data center approvals'; Hanover's second park rejected 4–3 (May 2026) despite a planning-commission 6–1 recommendation, a USD 15 million water pledge and a claimed USD 901 million of property tax over twenty years; Goochland's 870 acres opposed at pre-application (July 2026).",
         "The Minnesota and Carolina pipeline is press-only: Farmington (343 acres including a golf course, final plat approved November 2024), Rosemount (447 acres, environmental review), Cannon Falls (about 250 acres, 'USD 30 billion over 20 years', Dakota Electric) and the withdrawn Mooresville park on Earnhardt family land — none appears on the company's projects page."
@@ -533,8 +533,8 @@
       "type": "competitor",
       "status": "active",
       "since": "2025",
-      "note": "Prime Data Centers' Lockhart campus sits 'across the street' from Tract's Caldwell Valley park in Caldwell County, Texas; the two developers compete for the same Bluebonnet-served hyperscale tenants.",
-      "context": "The Austin Business Journal (8 May 2025, via Muskin Elam) puts the 1,515 acres 'across the street from a $4 billion data center campus project' by Prime, scope unstated. That rounds the county's March 2024 figure: phase 1 USD 1.3 billion for three buildings, USD 4.2 billion 'at full buildout' for nine buildings in three phases. Texas filing TABS2026019473 (5 May 2026) restated phase 1 as two 380,000 sq ft shells at USD 400 million; Baxtel now shows eight buildings and no total. Different scopes and vintages, not a contradiction.",
+      "note": "Prime Data Centers' USD 4 billion Lockhart campus sits 'across the street' from Tract's Caldwell Valley park in Caldwell County, Texas — the two developers compete for the same Bluebonnet-served hyperscale tenants.",
+      "context": "Muskin Elam's account of the May 2025 acquisition places Prime's campus across the road from the 1,515 acres; Baxtel's Caldwell Valley page puts Prime 1.43 miles away and PowerHouse's Austin site adjacent. Prime's AUS01 filing (May 2026) is a two-building, USD 400 million first phase on Bluebonnet power; Tract's first 250 MW is contracted for Q1 2028. Both are exposed to the county's August 2026 suspension of data-center abatements.",
       "source": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/"
     },
     {
@@ -1021,11 +1021,6 @@
       "date": "2026-05-05"
     },
     {
-      "label": "Texas TDLR — project TABS2026019473 (Prime Data Center AUS-01, 1395 Bob White Road, Lockhart): 'Two new 380,000 sf shell buildings for future use as data centers', 760,000 sq ft, estimated cost $400,000,000, start 6/1/2026, completion 9/30/2027; owner Lockhart Property, LLC; Gensler",
-      "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026019473",
-      "date": "2026-05-05"
-    },
-    {
       "label": "KDH News (Fleet Data Centers release) — Fleet closes upsized USD 4.6 billion 6.500% senior secured notes for the 517-acre Storey County campus",
       "url": "https://kdhnews.com/online_features/press_releases/fleet-data-centers-announces-closing-of-upsized-4-6b-6-500-senior-secured-notes-offering/article_8127ae89-f72d-58a4-b9e2-2177acf07bcb.html",
       "date": "2026-05-01"
@@ -1261,11 +1256,6 @@
       "date": "2025-05-13"
     },
     {
-      "label": "Muskin Elam Group (reprint of Justin Sayers, Austin Business Journal) — Caldwell 1,515 ac acquired May 7 2025; \"4 gigawatts ... at full buildout\" (2GW conservative); ≥5.5M sq ft; 800 jobs at full buildout; horizontal infrastructure \"$50 million and $100 million\"; no county/city incentives requested; 'across the street from a $4 billion data center campus project by Dallas-based Prime Data Centers LLC' — no scope stated; rounds the county's March 2024 USD 4.2bn full-build-out figure; 18 months of pre-work",
-      "url": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/",
-      "date": "2025-05-08"
-    },
-    {
       "label": "Yahoo Finance (GlobeNewswire mirror) — Tract closes acquisition of 1,515 acres in Caldwell County, Texas; Bluebonnet facility design agreement",
       "url": "https://finance.yahoo.com/news/tract-closes-acquisition-1-515-140000930.html",
       "date": "2025-05-07"
@@ -1389,16 +1379,6 @@
       "label": "Yahoo Finance — Yahoo Finance mirror of Tract PR: Peru Shelf groundbreaking; 686 ac / 810MW; South Valley 1,500 ac / 1,200MW; 510 ac adjacent; contractors Westex Geotechnical, F&P Construction; HQ Denver; \"20,000+ acres\"",
       "url": "https://finance.yahoo.com/news/tract-breaks-ground-peru-shelf-150500450.html",
       "date": "2024-04-30"
-    },
-    {
-      "label": "Post Register (Lockhart) — Caldwell County Commissioners Court special meeting 12 March 2024: Prime Data Centers 'Project Snow', ~206 ac at FM 2720 and Bob White Road; phase 1 $1.3 billion for 3 buildings (780,000 sq ft, 262,000 sq ft two-storey buildings); 'a total of nine data centers on the site when all three phases are completed'; 'total capital expenditure at full buildout would be $4.2 billion'; 10-year 100% abatement with ~40% PILOT (~$840,000/yr for phase 1)",
-      "url": "https://post-register.com/data-center-campus-coming-to-county/",
-      "date": "2024-03-20"
-    },
-    {
-      "label": "Hays Caldwell EDP — same county announcement (13 March 2024): $1.3 billion phase 1 for 3 buildings; nine data centers over three phases; $4.2 billion at full buildout; 52 jobs at $78,000 average wage",
-      "url": "https://hayscaldwelledp.com/about/news-and-publications/data-center-campus-to-be-constructed-in-caldwell-county",
-      "date": "2024-03-13"
     },
     {
       "label": "Commercial Property Executive — 517 ac at TRIC adjacent to 686 ac Peru Drive; ~120-ac pre-graded pad; water/sewer adjacent; NV Energy from 2026; Silicon Ranch renewables partnership; 2GW; mentions Microsoft, PowerHouse, EdgeCore, Novva, JLL, Harrison Street; van Rooyen \"bolt-on\" quote",
@@ -1561,6 +1541,10 @@
       "url": "https://post-register.com/tract-bringing-uhland-a-mega-tech-hub-site/"
     },
     {
+      "label": "Muskin Elam Group — Caldwell 1,515 ac acquired May 7 2025; \"4 gigawatts ... at full buildout\" (2GW conservative); ≥5.5M sq ft; 800 jobs at full buildout; horizontal infrastructure \"$50 million and $100 million\"; no county/city incentives requested; across street from Prime Data Centers $4B campus; 18 months of pre-work",
+      "url": "https://muskin-elam.com/1500-acre-data-center-campus-800-jobs-confirmed-for-small-town-in-caldwell-county/"
+    },
+    {
       "label": "Data Center Frontier — Data Center Frontier NV1/Vantage: Tract >11,000 ac Storey County incl. Peru Shelf + South Valley; up to 2GW from 2026; TRIC competitors Vantage NV1 224MW (2026), EdgeCore 216MW (late 2025), Novva 60MW (2026), Switch, Google",
       "url": "https://www.datacenterfrontier.com/site-selection/article/55305086/nv1-and-the-nevada-hyperscale-boom-vantage-data-centers-bets-3b-on-the-ai-future"
     },
@@ -1601,10 +1585,6 @@
       "url": "https://baxtel.com/data-center/tract-caldwell-valley"
     },
     {
-      "label": "Baxtel — Baxtel Prime Austin campus: 206-acre 'Project Snow' site; master plan eight buildings totalling 2 million sq ft; initial phase $400 million, two buildings (AUS01, AUS02); phase 1 'provisionally pegged' at $1.3 billion and 144 MW across three buildings in 2024 filings",
-      "url": "https://baxtel.com/data-center/prime-austin-campus"
-    },
-    {
       "label": "Central Texas Data Center Tracker — 1,515 ac (2025-05-07) + 1,458 ac (2026-01-13) = 2,973 ac, \"4+ GW\"; Bluebonnet FDA 360MW Q1 2028; Bluebonnet+LCRA substation to 1.6GW, 250MW contracted Q1 2028; Judge Hoppy Haden; no county tax incentives requested; no public water plan; KUT 2026-02-26 water advocates",
       "url": "https://centexdatacenters.org/projects/tract-caldwell-county"
     },
@@ -1622,6 +1602,6 @@
       "date": "2022-08-01"
     }
   ],
-  "lastUpdated": "2026-09-07",
-  "profileVersion": 3
+  "lastUpdated": "2026-09-06",
+  "profileVersion": 2
 }

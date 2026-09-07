@@ -2045,12 +2045,12 @@
       "tagline": "Founder-controlled Dallas developer of wholesale and build-to-suit campuses — ~151 MW operating (Chicago, Los Angeles, Dallas, Sacramento, Silicon Valley), 240 MW Avondale under construction from May 2026, a '4+ GW' (or '7 GW') pipeline into Texas, Pennsylvania and the Nordics — whose named tenants are CoreWeave (15-year, ~USD 2.2bn Elk Grove lease behind USD 900m of 7.5% notes) and Lambda (21 MW at Vernon), recapitalised five times (Macquarie, Ares, Siemens FS, Snowhawk/Nuveen, Grain), with a shelved Nordic bond and three fraud suits by former executives in August 2026.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "primedatacenters.com"
       ],
-      "srcTotal": 172,
-      "srcFirstPct": 30,
+      "srcTotal": 173,
+      "srcFirstPct": 29,
       "kpiNorm": false
     },
     {
@@ -2584,14 +2584,14 @@
       "tagline": "Denver powered-land developer (Tract Capital Management, founded 2022 by Cologix's Grant van Rooyen) that entitles and services master-planned parks — 14 parks, ~21,000 acres, ~18.7 GW on its projects page, 12,000 acres of it at Reno's TRIC — and sells shovel-ready parcels; the only recorded buyer is sister platform Fleet Data Centers, whose two 230 MW Storey County campuses are leased 197 months to a tenant Bloomberg names as Nvidia and financed by USD 8.4bn of notes, while NV Energy sued Tract in July 2026 and the PUCN decides its temporary gas plants on 8 September.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-07",
       "domains": [
         "tract.com",
         "tractcapital.com",
         "fleetdatacenters.com"
       ],
-      "srcTotal": 151,
-      "srcFirstPct": 34,
+      "srcTotal": 155,
+      "srcFirstPct": 33,
       "kpiNorm": false
     },
     {
