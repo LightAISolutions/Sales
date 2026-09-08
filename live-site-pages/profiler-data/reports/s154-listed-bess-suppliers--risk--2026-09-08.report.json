@@ -1,0 +1,572 @@
+{
+ "schemaVersion": 1,
+ "id": "s154-listed-bess-suppliers--risk--2026-09-08",
+ "title": "§154-Listed BESS Suppliers — US Market-Access Risk",
+ "type": "risk",
+ "topic": "US market-access, policy, and counterparty risk across the covered FY2024 NDAA §154(b)-listed battery makers",
+ "generated": "2026-09-08",
+ "style": "intel-briefing",
+ "scope": {
+  "kind": "slugs",
+  "value": [
+   "catl",
+   "byd",
+   "envision-energy",
+   "eve-energy",
+   "gotion",
+   "hithium"
+  ],
+  "rationale": "The statutory six named in §154(b) of the FY2024 NDAA — CATL, BYD, Envision Energy, EVE Energy, Gotion High-tech and Hithium — now that all six are covered. The 2026-08-29 edition spoke for five and recorded the sixth as its own coverage gap; Gotion closed that gap and is scoped here. The set is exactly the statute's, not a peer family: REPT is a listed Chinese BESS maker of comparable scale and is deliberately out of scope because it is not named, a negative recorded in limitations[] rather than in the scope."
+ },
+ "coverage": {
+  "companies": [
+   {
+    "slug": "catl",
+    "name": "CATL",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 51,
+    "srcFirstPct": 37,
+    "kpiNorm": true
+   },
+   {
+    "slug": "byd",
+    "name": "BYD",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 52,
+    "srcFirstPct": 19,
+    "kpiNorm": true
+   },
+   {
+    "slug": "envision-energy",
+    "name": "Envision Energy",
+    "profileVersion": 3,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 24,
+    "srcFirstPct": 25,
+    "kpiNorm": false
+   },
+   {
+    "slug": "eve-energy",
+    "name": "EVE Energy",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 38,
+    "srcFirstPct": 39,
+    "kpiNorm": true
+   },
+   {
+    "slug": "gotion",
+    "name": "Gotion High-Tech",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 61,
+    "srcFirstPct": 25,
+    "kpiNorm": true
+   },
+   {
+    "slug": "hithium",
+    "name": "Hithium",
+    "profileVersion": 13,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 52,
+    "srcFirstPct": 44,
+    "kpiNorm": true
+   }
+  ],
+  "gaps": [
+   "Statutory and tax mechanics — entity tests, material assistance cost ratios, the tariff stack, safe-harbour dates and the §6662(m)/§6501(o) penalty structure — are summarised from the policy record as the dossiers cite it, not re-derived; every such passage sits inside an analysis-flagged section.",
+   "**Two of the six publish no comparable financials at all.** Envision Energy is private with order-book and financing events only, and Hithium's last publicly filed full-year figure is FY2024 from its lapsed HKEX prospectus. No cross-company financial comparison is drawn in this report and the normalized-KPI overlay is unused.",
+   "Hithium's litigation and financing items rest on Chinese-language trade and financial press as carried in its dossier; no English-language corroboration is cited.",
+   "**Whether BYD is a specified foreign entity for §45X/§48E purposes is unresolved and is recorded as unresolved in its dossier.** No fetched primary or law-firm document names BYD as an SFE; the inference from its §154(b) naming is well-supported but the final link is not closed. Gotion is the only name in the set with an affirmatively documented SFE capture.",
+   "The §1260H status of Envision and Hithium is stated only as absence from the 8 June 2026 update as recorded in the Gotion dossier — it is not affirmatively verified against the list itself for those two names.",
+   "This report is built from the covered dossiers alone: no fresh research was performed for it, and no field-note content appears in it. The `byd` and `eve-energy` dossiers were refreshed to their H1 2026 interims immediately before this edition; the other four are pinned as they stood."
+  ],
+  "dataWindow": {
+   "oldest": "2026-08-30",
+   "newest": "2026-09-08"
+  }
+ },
+ "bluf": "**BOTTOM LINE UP FRONT:** The statutory set is six and all six are now covered, which changes what this report can say rather than what it concludes: the fence still decides *how* each maker touches the US market rather than whether it grows, and H1 2026 confirmed the growth — CATL, EVE and Gotion all grew profit sharply while the fence tightened [c:c15]. Two things are new. **Gotion is the only name caught on two independent statutory grounds** and simultaneously the only one absent from §1260H, which makes 'listed' a far less uniform status than the set's name implies [c:c3] [c:c4]. And **capital is the least fenced thing in the set** — CATL deployed RMB 4.1bn into a minority position in a data-centre power holdco while under both §154 and §1260H, a lane no instrument here reaches [c:c7]. The sharpest company-specific risks remain financing and litigation: Hithium after a third failed listing, EVE with an instituted ITC investigation.",
+ "keyJudgments": [
+  {
+   "text": "**(High confidence)** We assess 'the §154 six' is not a uniform status and should never be used as one. Gotion is caught on two independent statutory grounds — the §154(b) list and clause (B)(v) foreign control — yet is absent from both §1260H and the UFLPA Entity List, while CATL, BYD and EVE carry §1260H and its §805 contracting bars. Basis: the statute as counsel summarise it and the 8 June 2026 §1260H update. Three of six carry both instruments; three carry one.",
+   "confidence": "high",
+   "cites": [
+    "c1",
+    "c3",
+    "c4",
+    "c5"
+   ]
+  },
+  {
+   "text": "**(High confidence)** We assess the fence redirects growth rather than capping it, and H1 2026 is the clearest evidence yet. Four of the six now have H1 2026 on the record and three of those grew profit sharply — CATL +41.98%, EVE +105.66%, Gotion +278.05% — with storage revenue up 87.54% and 69.15% at CATL and EVE respectively. The one that fell, BYD, fell for reasons that have nothing to do with the fence. Basis: the interim review of the listed Chinese BESS players and the filings themselves.",
+   "confidence": "high",
+   "cites": [
+    "c15",
+    "c12",
+    "c9"
+   ]
+  },
+  {
+   "text": "**(Moderate confidence)** We assess minority capital in a third company is now a live lane and that no instrument in this fence reaches it. CATL subscribed RMB 4,099,858,823.53 of newly issued registered capital for 49.00% of the holdco controlling SZSE-listed Zhonhen Electric — structurally a capital increase, with the founder diluted rather than bought out — placing a §154-listed and §1260H-listed maker's capital one step above a transformer-rectifier architecture NVIDIA's own paper names. Basis: the Zhonhen announcement of the definitive agreements.",
+   "confidence": "moderate",
+   "cites": [
+    "c7"
+   ]
+  },
+  {
+   "text": "**(High confidence)** We assess financing posture remains the sharpest company-specific divergence in the set. Hithium's second HKEX prospectus lapsed on 27 April 2026 with no re-filing observed, leaving FY2024 as its last publicly filed full-year figure — a two-year-old audited number for a counterparty diligencing it today. CATL is the counter-case, compounding at a 23.96% storage gross margin against the second tier's 12.51%. Basis: the lapse record, the prospectus, and the interim review.",
+   "confidence": "high",
+   "cites": [
+    "c16",
+    "c17",
+    "c15"
+   ]
+  },
+  {
+   "text": "**(Moderate confidence)** We assess divest-to-comply remains the only lane currently putting listed-maker capacity into ITC-eligible US projects, and that it belongs to one name. Envision's AESC/Fixx structure is the working example; Hithium's Texas assembly is a tariff lever rather than a tax fix; and Gotion's US-partner route has published no credit-eligibility claim, with the statutory effective-control prong still undefined by Treasury. Basis: the FEOC rules as counsel state them and the partnership record.",
+   "confidence": "moderate",
+   "cites": [
+    "c6",
+    "c18",
+    "c19",
+    "c21"
+   ]
+  },
+  {
+   "text": "**(Moderate confidence)** We assess US-adjacent risk for this set is no longer only American. BYD sits on Brazil's forced-labour registry from April 2026 with an unresolved R$257m labour suit in the market where it is building a BESS line, and Gotion's Michigan default cost about USD 175m of incentives with a USD 23.7m clawback demand refused and now in litigation. Basis: the state and Brazilian records as the dossiers carry them. Sub-federal and non-US instruments are producing more concrete consequences than §154 has yet.",
+   "confidence": "moderate",
+   "cites": [
+    "c20",
+    "c9"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "changed",
+   "title": "What changed since the last edition",
+   "kind": "prose",
+   "read": "The four movements that made this edition necessary, before any of them is interpreted.",
+   "cites": [
+    "c1",
+    "c4",
+    "c7",
+    "c9",
+    "c12",
+    "c15"
+   ],
+   "ps": [
+    "**The statutory set is now covered in full.** The 2026-08-29 edition said in its own coverage gaps that it \"speaks for five of the statutory six\". Gotion High-tech is the sixth, and it is now covered. §154(b) names exactly six producers — CATL, BYD, Envision Energy, EVE Energy, Gotion High-tech and Hithium — and this edition scopes all six [c:c1] [c:c2]. Gotion is also the one name in the set caught on **two independent statutory grounds**: named on the §154(b) list imported by 26 U.S.C. §7701(a)(51)(B)(iv), and separately a PRC-incorporated foreign-controlled entity under clause (B)(v), which captures its US subsidiaries as controlled entities [c:c3].",
+    "**One evidentiary gap is closed and should not be repeated.** The previous edition recorded EVE's DoD §1260H addition as \"reported, not established\" because the dossier carried no citable source. It is now established: the 8 June 2026 update added 65 entities, EVE and BYD among them, taking the list to 188 [c:c4]. The consequence runs through §805 in two phases — no DoD contracting **with** a listed entity from 30 June 2026, extending to goods **produced by** one from 30 June 2027 — and the implementing DFARS rule is still unpublished. The same source establishes a useful negative: Gotion is **not** on §1260H, unlike CATL, BYD and EVE, so it escapes the §805 bars that catch those three.",
+    "**Four of the six now have H1 2026 on the record, and the halves diverge sharply.** CATL grew revenue 54.80% and profit 41.98% with storage revenue up 87.54% at a 23.96% gross margin; EVE grew revenue 62.20% and profit 105.66% with storage up 69.15% at 12.51% [c:c15] [c:c12]; Gotion grew revenue 43.22% and profit 278.05%, though non-recurring gains are estimated to have supplied roughly RMB 1.1–1.4bn of it. BYD went the other way — revenue down 7.13%, profit down 20.54% [c:c9]. The two that carry no H1 figure are the two private names, Envision and Hithium. The fence is not suppressing growth in this set; it is deciding which structures the growth can use.",
+    "**A new line in the fence: a listed maker's capital now sits one step above a data-centre power architecture.** On 14 August 2026 CATL signed definitive agreements to take 49.00% of Zhonhen Technology Investment, the controlling holdco of SZSE-listed Zhonhen Electric, for RMB 4,099,858,823.53 — RMB 3.512bn in cash plus a ~49% stake in its own PCS subsidiary Times Tianyuan valued at RMB 588m [c:c7]. Structurally it is a **capital increase, not a purchase**: CATL subscribes newly issued registered capital, the cash goes to the target, and the founder is diluted rather than bought out, which is why he keeps control. Zhonhen's Panama Architecture is named in NVIDIA's own second 800 VDC white paper as a transformer-rectifier reference. Nothing in §154 or §1260H reaches a minority capital position in a third company — which is precisely why it is worth recording as a lane."
+   ]
+  },
+  {
+   "id": "exposure",
+   "title": "The exposure map",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "All six covered §154(b) names, their US positions, and the sharpest company-specific signal in each file. Statutory listing per the FY2024 NDAA §154(b) roster [c:c1] [c:c2]; the tax-code import of that roster per the FEOC rules [c:c3] [c:c6]. **Read the §1260H column separately from the §154 column** — they are different instruments with different dates, and only three of the six carry both.",
+   "cols": [
+    "Company",
+    "§154(b)",
+    "Also §1260H?",
+    "US footprint & live lanes",
+    "Sharpest 2026 signal"
+   ],
+   "rows": [
+    [
+     "CATL",
+     "Named [c:c1]",
+     "Yes — since Jan 2025 [c:c4]",
+     "No direct US BESS lane of note; technology enters via Ford’s license-built LFP plant",
+     "H1 2026 revenue +54.80%, profit +41.98%; storage revenue +87.54% at a 23.96% gross margin on ~108–116 GWh [c:c15]. Took 49% of Zhonhen’s holdco by capital increase [c:c7]"
+    ],
+    [
+     "BYD",
+     "Named [c:c1]",
+     "Yes — added 8 Jun 2026 [c:c4]",
+     "US storage exposure minimal; growth in MENA, LatAm and Europe. Verified absent from the UFLPA Entity List [c:c5]",
+     "Ranked #1 in H1 2026 BESS system-integrator shipments [c:c11] while group profit fell 20.54% [c:c9]; disputes the §1260H designation on the record [c:c10]"
+    ],
+    [
+     "Envision Energy",
+     "Named (as Envision/AESC) [c:c2]",
+     "No",
+     "The set’s only working FEOC-clean US lane: AESC’s Smyrna plant, divested to Fixx Energy, feeds a domestic-content supply chain [c:c6]",
+     "Tied #5 on Wood Mackenzie’s 2026 integrator scorecard; no audited public financials, so the H1 comparison cannot be drawn"
+    ],
+    [
+     "EVE Energy",
+     "Named [c:c1]",
+     "Yes — added 8 Jun 2026 [c:c4]",
+     "US sales ran ~RMB 700m/yr over 2021–2023, under 10% of overseas revenue; the Amplify JV slipped to at least 2028",
+     "ITC 337-TA-1518 instituted 20 Aug 2026 over five US patents, ten respondents [c:c13]; EVE denies infringement and says it had not received formal documents [c:c14]. H1 profit +105.66% on a 12.51% storage margin [c:c12]"
+    ],
+    [
+     "Gotion High-tech",
+     "Named [c:c1] — **and** a foreign-controlled entity under clause (B)(v) [c:c3]",
+     "**No** — absent from the 8 Jun 2026 list [c:c4]",
+     "Manteno, Illinois operating; Michigan project dead — the state declared default and demanded USD 23.7m back [c:c20]. Richardson Electronics partnership is the visible workaround attempt [c:c21]",
+     "The only name in the set caught on two independent statutory grounds, and the only one that escapes §805 [c:c3] [c:c4]"
+    ],
+    [
+     "Hithium",
+     "Named [c:c1]",
+     "No",
+     "Safe-harboured and merchant lanes; Texas assembly shipping since Aug 2025 [c:c18]. FEOC-walled from ITC-driven procurement [c:c19]",
+     "Second HKEX prospectus lapsed 27 Apr 2026 — a third failed listing attempt [c:c16]; FY2024 remains the last filed full-year figure [c:c17]"
+    ]
+   ],
+   "note": "Gotion’s row is the one to read twice. Being named in §154(b) is not curable by restructuring, but §154 is a Defence procurement ban; the clause (B)(v) capture is what reaches its US subsidiaries and its tax-credit eligibility. The two do different work and only one of them can be engineered around at all."
+  },
+  {
+   "id": "fence",
+   "title": "The fence, briefly",
+   "kind": "prose",
+   "analysis": true,
+   "cites": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c22"
+   ],
+   "ps": [
+    "Four instruments are routinely conflated and they do different work. **§154 of the FY2024 NDAA** names six producers and bars the Department of Defense from procuring their batteries from 1 October 2027; a Secretary of Defense waiver exists, and 'produced by' reaches an entity that assembled the final product or supplied a majority of the components. It is prospective, Defence-only, and not a government-wide bar [c:c1] [c:c2].",
+    "**§1260H** is a list of Chinese military companies, not a sanctions regime — a designation imposes no import ban and prohibits no commercial transaction by itself. Its bite comes through **§805**: no DoD contracting with a listed entity from 30 June 2026, extending to goods produced or developed by one from 30 June 2027, with the DFARS implementing rule still unpublished [c:c4]. Three of the six carry it; three do not.",
+    "**The FEOC / prohibited-foreign-entity rules** in the tax code are the instrument that actually reaches commercial storage projects, and they run on a cost ratio rather than a name. A US storage project must clear a material assistance cost ratio of 55% non-prohibited content in 2026, rising toward 75% by 2030, with construction started before 1 January 2026 exempt; §45X components containing material assistance from a prohibited entity are disqualified outright, and §6662(m) drops the substantial-understatement threshold to 1% while §6501(o) extends the assessment window to six years [c:c3] [c:c6]. That penalty structure is why developers avoid the question rather than argue it.",
+    "**And a listing is not the same as a capture.** The clearest illustration in this set is Gotion, which is on §154(b) *and* separately captured as a PRC-incorporated foreign-controlled entity under clause (B)(v) — the second is what reaches its US subsidiaries — while being absent from both §1260H and the UFLPA Entity List — the latter verified against the 31 July 2026 update that added 43 companies [c:c3] [c:c4] [c:c5] [c:c22]. Three widely repeated claims about this set fail on checking, and the corrections matter more than the claims."
+   ]
+  },
+  {
+   "id": "counterparty",
+   "title": "The counterparty files",
+   "kind": "prose",
+   "cites": [
+    "c7",
+    "c8",
+    "c9",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c15",
+    "c16",
+    "c17",
+    "c20",
+    "c21"
+   ],
+   "ps": [
+    "**Hithium remains the acute financing case.** Its second HKEX prospectus lapsed on 27 April 2026 — a third failed listing attempt — and no re-filing has been observed since [c:c16]. The consequence for a buyer is concrete rather than reputational: the last publicly filed full-year figure is **FY2024**, from the listing prospectus [c:c17], so an independent engineer diligencing Hithium in late 2026 is reading a two-year-old audited number.",
+    "**EVE's file gained a live US legal front and a quality-of-earnings question in the same half.** The ITC instituted 337-TA-1518 on 20 August 2026 over five US patents with ten respondents, seeking a limited exclusion order; EVE denies infringement and stated on 24 July that it had not yet received formal documents [c:c13] [c:c14]. Direct US revenue at risk is small — under 10% of overseas revenue — so the exposure is to the power-tool OEM channel and to qualification standing. Separately, its H1 operating cash flow swung to −RMB 388m while investment income supplied 35.8% of attributable profit, though profit excluding non-recurring items grew *faster* than the headline [c:c12].",
+    "**CATL is the counter-case and it widened.** H1 2026 revenue +54.80% and profit +41.98%, storage revenue +87.54% at a 23.96% gross margin against the second tier's 12.51% — a gap the trade review reads as second-tier growth still hinging on volume-driven price concessions [c:c15], alongside a share buyback [c:c8]. It also deployed RMB 4.1bn into a minority capital position in a data-centre power holdco while under both §154 and §1260H [c:c7]. Capital is the least fenced thing in this set.",
+    "**BYD's counterparty question is not American.** It disputes the §1260H designation on the record [c:c10] and is verified absent from the UFLPA list [c:c5], but it sits on Brazil's forced-labour registry from April 2026 with an unresolved R$257m labour suit — in the market where it is building a BESS line for the December 2026 capacity auctions. Its H1 group profit fell 20.54% while it led global integrator shipments [c:c9] [c:c11].",
+    "**Gotion's file is the newest and the most concrete on state-level risk.** Michigan declared default on the Big Rapids project in September 2025 after 120 days without eligible construction, terminating about USD 175m of incentives; the attorney general demanded USD 23.7m back, Gotion refused, and in May 2026 Gotion sued the township for damages [c:c20]. Manteno is operating. The Richardson Electronics partnership announced 13 May 2026 is the visible attempt at a compliant commercialisation route, and neither party has published a credit-eligibility claim [c:c21]."
+   ]
+  },
+  {
+   "id": "lanes",
+   "title": "The lanes that remain — as actually used",
+   "kind": "callout",
+   "tone": "warn",
+   "analysis": true,
+   "ps": [
+    "Six lanes are visible in this set on the current record, and they are not equally available. **Divest-to-comply** is the only one currently putting listed-maker capacity into ITC-eligible US projects, and it belongs to Envision alone through the AESC/Fixx structure. **US assembly** — Hithium's Texas plant — is a tariff lever and a delivery shortener, not a tax fix. **Safe-harboured and merchant projects** remain open to all six because the construction-start exemption is a date, not an entity test. **Licensing** is CATL's route through Ford. **Non-US markets** carry the actual growth: MENA, LatAm and Europe for BYD, Europe and Australia for Hithium. And the newest lane is **minority capital in a third company** — CATL's 49% of Zhonhen's holdco, which no instrument in this fence reaches. Note what is *not* a lane: Gotion's US-partner structure has published no credit-eligibility claim, and the statutory 'effective control' prong that would govern such a licensing arrangement has no Treasury definition yet."
+   ]
+  }
+ ],
+ "indicators": [
+  {
+   "date": "by 2026-12-31",
+   "text": "Treasury's year-end prohibited-foreign-entity regulations and entity tables",
+   "confirms": "Would close or confirm the unresolved SFE question for BYD, and would define the effective-control prong the Gotion/Richardson structure depends on"
+  },
+  {
+   "date": "before 2027-10-01",
+   "text": "DFARS implementation detail for the §154 DoD ban, and the still-unpublished §805 rule",
+   "confirms": "Determines how far \"produced by\" reaches into components and whether the majority-of-components test bites in practice"
+  },
+  {
+   "date": "H2 2026 – 2027",
+   "text": "A Hithium HKEX re-filing (none observed since the 27 Apr 2026 lapse), or a fourth attempt elsewhere",
+   "confirms": "Refutes or confirms the financing judgment; a successful listing would produce the first audited figure since FY2024"
+  },
+  {
+   "date": "2026-2027",
+   "text": "ITC 337-TA-1518 target date and any limited exclusion order against EVE",
+   "confirms": "Tests whether the patent front converts from a standing risk into an actual US channel closure"
+  },
+  {
+   "date": "2026-2027",
+   "text": "A second AESC-style divestiture by any listed maker, or a published credit-eligibility claim from the Gotion/Richardson structure",
+   "confirms": "Would confirm divest-to-comply as a repeatable lane rather than a single structure"
+  },
+  {
+   "date": "Q3 2026 reports, by 31 Oct 2026",
+   "text": "Whether CATL discloses anything further on the Zhonhen capital increase, and whether the four-party cooperation converts into disclosed orders",
+   "confirms": "Tests whether minority capital is a real channel or a financial position"
+  }
+ ],
+ "limitations": [
+  "Statutory and tax mechanics are summarised from the policy record as the dossiers cite it, not re-derived from primary law; every such passage sits inside an analysis-flagged section.",
+  "**REPT is not §154(b)-listed and is therefore out of scope** — a useful negative rather than an omission. It is a listed Chinese BESS maker of comparable scale (H1 2026 revenue ~RMB 14.9bn, +57.2%; net profit RMB 778m, +108%) whose absence from the statutory roster is exactly the point: the fence is a named list, not a size threshold or a nationality test.",
+  "No cross-company financial comparison is drawn and the normalized-KPI overlay is unused: two of the six publish no comparable financials, and BESS-segment US revenue is not disclosed by any of them.",
+  "Whether BYD is a specified foreign entity for tax-credit purposes is unresolved; the report says so rather than resolving it by inference. Gotion is the only name with an affirmatively documented SFE capture.",
+  "The §1260H absence of Envision and Hithium rests on the Gotion dossier's record of the 8 June 2026 update, not on an affirmative check of those two names against the list.",
+  "Hithium's litigation and financing items rest on Chinese-language trade and financial press as carried in its dossier.",
+  "This report is built from the covered dossiers alone: no fresh research was performed, and no field-note content appears in it."
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "OpenSanctions — FY2024 NDAA §154 programme (the six named producers, including Gotion)",
+   "url": "https://www.opensanctions.org/programs/US-NDAA-154/",
+   "party": "independent"
+  },
+  {
+   "id": "c2",
+   "slug": "envision-energy",
+   "company": "Envision Energy",
+   "label": "TrendForce — NDAA FY24 §154 DoD battery ban naming six Chinese makers incl. Envision",
+   "url": "https://www.trendforce.com/news/2024/01/22/news-six-companies-including-byd-and-catl-are-included-in-the-u-s-procurement-ban-list/",
+   "date": "2024-01-22",
+   "party": "independent"
+  },
+  {
+   "id": "c3",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "26 U.S. Code §7701 — specified foreign entity, foreign-influenced entity and material assistance cost ratio",
+   "url": "https://www.law.cornell.edu/uscode/text/26/7701",
+   "party": "independent"
+  },
+  {
+   "id": "c4",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "WilmerHale — Pentagon adds 65 entities to the §1260H list (Gotion absent)",
+   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
+   "date": "2026-06-12",
+   "party": "independent"
+  },
+  {
+   "id": "c5",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "DHS — UFLPA Entity List (Gotion absent as of the 2026-07-31 update)",
+   "url": "https://www.dhs.gov/uflpa-entity-list",
+   "date": "2026-07-31",
+   "party": "independent"
+  },
+  {
+   "id": "c6",
+   "slug": "envision-energy",
+   "company": "Envision Energy",
+   "label": "Foley Hoag — the prohibited-foreign-entity (FEOC) rules and battery storage",
+   "url": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/",
+   "date": "2026-07-16",
+   "party": "independent"
+  },
+  {
+   "id": "c7",
+   "slug": "catl",
+   "company": "CATL",
+   "label": "Zhonhen Electric (SZSE 002364) Announcement 2026-28 — the definitive Capital Increase Agreement, Shareholders Agreement and four-party Strategic Cooperation Agreement of 14 August 2026; consideration, governance rights, closing conditions and the Times Tianyuan appraisal",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
+   "date": "2026-08-15",
+   "party": "disclosure"
+  },
+  {
+   "id": "c8",
+   "slug": "catl",
+   "company": "CATL",
+   "label": "CnEVPost — H1 2026 results + buyback",
+   "url": "https://cnevpost.com/2026/07/24/catl-h1-profit-share-buyback/",
+   "date": "2026-07-24",
+   "party": "independent"
+  },
+  {
+   "id": "c9",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "BYD — 2026 Interim Results Announcement (HKEX, 113pp): revenue RMB 344.815B (-7.13%), net profit RMB 12.325B (-20.54%), overseas RMB 181.268B (52.57%); two reportable segments only, storage not broken out",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801633.pdf",
+   "date": "2026-08-28",
+   "party": "disclosure"
+  },
+  {
+   "id": "c10",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "BYD — voluntary announcement on the US Department of Defense Chinese Military Companies list (HKEX): the company rejects the designation and notes it is not a sanctions list",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0609/2026060901188.pdf",
+   "date": "2026-06-09",
+   "party": "disclosure"
+  },
+  {
+   "id": "c11",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "Benchmark Mineral Intelligence — H1 2026 BESS cell and system shipments: BYD #1 in systems at 9.1% of 313 GWh, #4 in cells at 6.7% of 490 GWh",
+   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
+   "date": "2026-08-21",
+   "party": "independent"
+  },
+  {
+   "id": "c12",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "EVE Energy — 2026年半年度报告 (H1 2026 semi-annual report, SZSE ChiNext 300014, 185pp): segment revenue, shipments, margins and the itemised non-recurring schedule",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483571.PDF",
+   "date": "2026-08-19",
+   "party": "disclosure"
+  },
+  {
+   "id": "c13",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "Caixin Global — USITC institutes §337 investigation 337-TA-1518 against EVE (20 Aug 2026); US sales ~RMB 700M/yr over 2021-2023",
+   "url": "https://www.caixinglobal.com/2026-08-21/us-opens-patent-probe-into-chinese-battery-maker-eve-energy-102476541.html",
+   "date": "2026-08-21",
+   "party": "independent"
+  },
+  {
+   "id": "c14",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "EVE Energy — 关于美国专利诉讼相关事项声明的公告 (statement on the US patent action: formal documents not yet received, infringement denied)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-07-24/1225440376.PDF",
+   "date": "2026-07-24",
+   "party": "disclosure"
+  },
+  {
+   "id": "c15",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "Energy-Storage.News — H1 2026 interim reports of the listed Chinese BESS players: EVE storage revenue RMB 15.094B (+69.15%) at 12.51% gross margin vs CATL's 23.96%",
+   "url": "https://www.energy-storage.news/interim-reports-of-catl-eve-rept-and-other-listed-chinese-bess-players-leaders-see-steady-earnings-growth-second-tier-returns-to-profitability/",
+   "date": "2026-08-28",
+   "party": "independent"
+  },
+  {
+   "id": "c16",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "Sina Tech / CLS — second HKEX prospectus lapsed Apr 27, 2026 (third failed listing attempt); no re-filing observed",
+   "url": "https://finance.sina.com.cn/tech/roll/2026-05-12/doc-inhxrshk9966609.shtml",
+   "date": "2026-05-12",
+   "party": "independent"
+  },
+  {
+   "id": "c17",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "HKEX — Hithium application proof / prospectus (filed 27 Oct 2025)",
+   "url": "https://www1.hkexnews.hk/app/sehk/2025/107807/documents/sehk25102700292.pdf",
+   "date": "2025-10-27",
+   "party": "disclosure"
+  },
+  {
+   "id": "c18",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "Energy-Storage.News — first shipments from Texas BESS assembly plant",
+   "url": "https://www.energy-storage.news/chinese-battery-manufacturer-hithium-ships-first-units-from-texas-bess-assembly-plant/",
+   "date": "2025-08",
+   "party": "independent"
+  },
+  {
+   "id": "c19",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "ESS News — Hithium & LG ES begin US BESS manufacturing; tariff context (Jun 2025)",
+   "url": "https://www.ess-news.com/2025/06/06/hithium-lg-begin-us-battery-manufacture-in-tough-american-market/",
+   "date": "2025-06-06",
+   "party": "independent"
+  },
+  {
+   "id": "c20",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "Bridge Michigan — the Michigan battery plant plan is dead after years of controversy",
+   "url": "https://bridgemi.com/business-watch/michigan-gotion-battery-plant-plan-is-dead-after-years-of-controversy/",
+   "date": "2025-10-23",
+   "party": "independent"
+  },
+  {
+   "id": "c21",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "Energy-Storage.News — Gotion and Richardson Electronics partner for US-made storage",
+   "url": "https://www.energy-storage.news/chinas-gotion-and-richardson-electronics-partner-for-us-made-bess/",
+   "date": "2026-05-14",
+   "party": "independent"
+  },
+  {
+   "id": "c22",
+   "slug": "gotion",
+   "company": "Gotion High-Tech",
+   "label": "DHS — 43 companies added to the UFLPA Entity List",
+   "url": "https://www.dhs.gov/news/2026/07/31/dhs-announces-addition-43-companies-uflpa-entity-list",
+   "date": "2026-07-31",
+   "party": "independent"
+  }
+ ],
+ "supersedes": "s154-listed-bess-suppliers--risk--2026-08-29",
+ "guidanceOverlays": [
+  {
+   "moduleId": "china-policy-stack-2026-08",
+   "sectionId": "levers",
+   "title": "Who the levers actually bite",
+   "ps": [
+    "The statutory roster is six producers, and treating it as a uniform status is the most common error made with it. One of the six is caught on two independent grounds — the named list and, separately, foreign control of a PRC-incorporated entity, which is what reaches its US subsidiaries — while being absent from the military-companies list entirely. Three of the six carry that second list and its contracting bars; three do not. Which lever bites, and when, differs by name.",
+    "The instrument that actually reaches a commercial storage project is neither of the naming lists. It is the tax-code cost-ratio test, which runs on content percentages rather than on identity, with a construction-start date as the exemption. A project can be built entirely from a named maker's cells and remain whole if it started early enough; a project started later fails on arithmetic regardless of how the supplier is characterised."
+   ]
+  },
+  {
+   "moduleId": "china-policy-stack-2026-08",
+   "sectionId": "interaction",
+   "title": "The interaction map, live",
+   "ps": [
+    "Half of 2026 gave the interaction map a live test and the fence did not suppress growth. Three of the four listed makers with published interims grew profit sharply, one of them by nearly threefold, while their storage revenue lines grew faster still. The one that shrank did so for reasons unconnected to policy. What the fence determined was structure, not scale: which projects the volume could enter and through what corporate form.",
+    "The lane the map does not yet contain is capital. A maker under both naming instruments subscribed newly issued registered capital for a minority controlling-holdco position in a third listed company serving data-centre power — a capital increase rather than a purchase, leaving the founder in control. No instrument in the current stack reaches a minority capital position in a third company, and that is worth carrying explicitly rather than discovering later."
+   ]
+  },
+  {
+   "moduleId": "bess-bankability-2026-08",
+   "sectionId": "counterparty",
+   "title": "The listed set as a counterparty file (Sep 2026)",
+   "ps": [
+    "Two of the six publish no comparable financials at all. One is private with only order-book and financing events on the record; the other's last publicly filed full-year figure is now two years old, after a third failed listing attempt with no re-filing observed. An independent engineer diligencing either is not reading a recent audited statement, and no amount of policy analysis substitutes for that.",
+    "The counterparty questions in this set are not primarily about the fence. They are a lapsed listing and the financing posture behind it; an instituted patent investigation seeking an exclusion order; an operating cash flow that swung negative while investment income supplied a third of profit; and a state-level default that cost roughly USD 175m of incentives and is now in litigation. Each is checkable against a filing or a docket, and each moves faster than the statutory dates."
+   ]
+  },
+  {
+   "moduleId": "power-infra-aidc-2026-08",
+   "sectionId": "markets",
+   "title": "Where each listed maker actually sits",
+   "ps": [
+    "Growth in this set has moved to markets the US fence does not govern — the Middle East, Latin America and Europe for the largest name, Europe and Australia for the stationary-only specialist. The US positions that remain are structural rather than volumetric: one divest-to-comply supply chain feeding domestic-content systems, one domestic assembly plant that shortens delivery and cuts the dutiable base, and licensing into a partner's plant.",
+    "The newest position is adjacent rather than in the market: a listed maker's capital now sits one step above a transformer-rectifier architecture named in the buyer's own reference paper. Read that as a signal about where the listed set expects data-centre power value to accrue, and note that it was reached by capital rather than by supply."
+   ]
+  },
+  {
+   "moduleId": "utility-aidc-procurement-2026-08",
+   "sectionId": "channels",
+   "title": "Channel reality for the listed set",
+   "ps": [
+    "For a utility or data-centre buyer the practical question is not whether a supplier is named but which channel the project can use. Safe-harboured and merchant projects stay open to all six because the construction-start exemption is a date rather than an entity test. Tax-credit-driven procurement is where the content ratio bites, and only one structure in this set currently puts listed-maker capacity into it.",
+    "Two channel facts are worth carrying into an RFP. Defence procurement closes on all six in October 2027 and the implementing detail is still unpublished, so the reach of 'produced by' into components is not yet settled. And the penalty structure on the tax side — a one-percent substantial-understatement threshold and a six-year assessment window — is why counterparties decline to argue eligibility rather than argue it and lose."
+   ]
+  }
+ ]
+}

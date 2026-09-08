@@ -3,11 +3,52 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.14r] — 2026-09-08 02:58:30 AM EST
+
+> Run Phase 6 session 2 on Opus 5 xhigh: paste the "Session 2" blockquote from INTEGRATED-REMEDIATION-PLAN.md §7.8 — the grid-scale competitive and §154 risk editions in one session, deciding the byd / eve-energy preflight first (refresh both under the Profiler Command, or proceed and state the staleness in each edition's coverage.gaps[]).
+
+### Added
+
+- **Two superseding report editions published** (`live-site-pages/profiler-data/reports/`), both authoring-only against covered dossiers:
+  - `grid-scale-bess--competitive--2026-09-08` — supersedes the 2026-08-29 id. Scope **re-derived on the day** from the `storage-integrators-and-containers` registry roster: 10 incumbents + 8 challengers + `flexgen` as the named adjacent comparator = **19** (against 12). 36 citations, six sections, registry role as a table column, overlays on `bess-bankability-2026-08` → `counterparty` and `power-infra-aidc-2026-08` → `markets`.
+  - `s154-listed-bess-suppliers--risk--2026-09-08` — supersedes the 2026-08-29 id. Scope is the **statutory six** with `gotion` added, closing the old edition's own stated coverage gap. 22 citations, five sections, five overlays (`china-policy-stack-2026-08` → `levers` and `interaction`; `bess-bankability-2026-08` → `counterparty`; `power-infra-aidc-2026-08` → `markets`; `utility-aidc-procurement-2026-08` → `channels`), all anchors validated.
+- **A ranking-basis table** in the grid-scale edition — a new section recording, per company, the ranking as its dossier cites it *and the instrument that produced it*. Added because Benchmark, Wood Mackenzie and InfoLink disagree on the FY2025 integrator order, Wood Mackenzie's own two 2025 instruments disagree with each other, and none states its metric precisely enough to reconcile. This is what §7.7 block 2 meant by "the ranking basis per incumbent as the dossiers cite it".
+- **`byd.profile.json` gains a `policyExposure[]`** — it had none at all despite BYD being one of the six names the §154 report scopes. Five regimes recorded: NDAA §154 (named, 2027-10-01), DoD §1260H (added 2026-06-09, with BYD's own HKEX rebuttal), the OBBBA prohibited-foreign-entity rules (**recorded as unresolved**, see Fixed), the lists BYD is *not* on (UFLPA, verified against the DHS list itself), and Brazil's forced-labour registry.
+- **`eve-energy.profile.json` gains an NDAA §154 entry** — also previously absent despite EVE being named in the statute — plus an ITC/E.D. Texas litigation entry for 337-TA-1518.
+
+### Changed
+
+- **The `byd` / `eve-energy` preflight was TAKEN, not deferred** — the §7.8 brief offered "refresh both under the Profiler Command, or proceed and state the staleness in each edition's `coverage.gaps[]`; say which in the CHANGELOG". Refreshed. Reason: BYD's H1 2026 was a **fired indicator of both reports** (§7.7 blocks 2 and 3 both record it as fired-and-not-landed), and carrying a FY2025 BYD next to a Sungrow that already had H1 2026 would have broken the like-for-like rule the `competitive` head-to-head exists to satisfy. The decision was made empirically rather than by preference: `check-source-reachability.py` plus two targeted searches established both interims were published and retrievable *before* committing to the refresh path, so the alternative — burning the research and still writing the gap — was ruled out rather than guessed at.
+  - `byd.profile.json` v7 → **v8**; v7 archived. Sources 33 → **52**, `srcFirstPct` 15 → 19. H1 2026 period added from the HKEX interim itself.
+  - `eve-energy.profile.json` v5 → **v6**; v5 archived. Sources 16 → **38**, `srcFirstPct` 44 → 39. H1 2026 period added from the 185-page cninfo semi-annual report.
+  - Registry synced, graph rebuilt (3,677 → 3,681 evidence items), and both calendar rows advanced from overdue to the **2026-10-31 CSRC quarterly backstop** with rewritten `source` and `watch[]`.
+- **`reports-index.json` rebuilt deterministically** — both new entries added, both 2026-08-29 entries flipped to `superseded`, and the index is now regenerated from the report files rather than hand-edited, so `status`, `companies`, `citations` and `overlayModules` cannot drift from their reports.
+- **17 rows removed from `report-pins-verified.json`** (12 grid-scale + 5 §154), 25 → 8. The checker errors on a verified entry for a superseded report.
+- **Plan §6 Phase 6 row → 2 of 3 done**, with the session-2 outcome recorded; the §7.4 ordering row updated to name session 3 (AIDC) as the remainder.
+
+### Fixed
+
+- **The §154 edition's "EVE's §1260H addition is reported, not established" limitation is retired.** The old edition carried it because EVE's dossier sourced the listing to Wikipedia. The 8 June 2026 update is now citable from two independent legal alerts, and EVE's dossier entry was rewritten accordingly. The same source establishes a useful negative the new edition states: **Gotion is *not* on §1260H**, unlike CATL, BYD and EVE — so "the §154 six" is not a uniform status.
+- **BYD's FY2025 integrator ranking is no longer carried as settled.** The dossier said Benchmark ranks BYD #1 for 2025 while InfoLink says #3. Wood Mackenzie also says #3, and Wood Mackenzie's *own* two 2025 instruments place BYD differently (#3 on market share, #4 on the scorecard). The judgment now states the split, names the instrument for each, and records that no source reconciles them.
+- **A trap avoided rather than sprung: no H1 2026 figure enters either normalized table.** `sungrow` v9 already records why — "no sourced CNY/USD rate for H1 2026 was located, and the schema forbids an unsourced conversion" — so the same discipline was applied to the new BYD and EVE periods (`kpi`/`usdMillions` deliberately omitted) and the head-to-head stays on FY2025 for all 19. Verified: all 11 `bars` figures match the live KPI overlay exactly.
+- **BYD's Q2 2026 net profit is labelled analyst-derived, not company-reported.** BYD discloses no Q2 stub; the figure is H1 minus Q1. Its "vs expectations" is recorded as **mixed** — a beat against the Bloomberg survey (RMB 8.0bn) and a ~12% miss against a five-bank composite (~RMB 9.3bn) — with both carried because no source reconciles them.
+- **EVE's "energy storage is now the largest segment" is corrected to a split answer.** True by shipments (44.46 GWh vs 35.76 GWh) and **false by revenue** (storage RMB 15.094bn vs power RMB 17.278bn), because power sells at ~1.42× the revenue per GWh. The crossover also is not new — storage already out-shipped power in FY2025; the H1 movement is power closing the gap.
+- **BYD's FEOC/specified-foreign-entity status is recorded as UNRESOLVED rather than inferred.** No fetched primary or law-firm document names BYD as an SFE; the inference from its §154(b) naming is well-supported but the final link is not closed, and the document most likely to settle it was 403 from this egress. Both the dossier and the §154 edition say so explicitly.
+
+### Worth noting
+
+- **The §7.8 brief's "six added members" is wrong; it is eight.** §7.7 finding 5's own list names eight (`envision-energy`, `crrc-zhuzhou`, `hyperstrong`, `trina-storage`, `jinko`, `sunwoda`, `ls-energy-solutions`, `prevalon`), and set arithmetic against the live registry confirms it: 11 kept + 8 added − 1 removed (`eve-energy`) = 19. Per §7.7 finding 9 — "the registry on the day, not the ledger, decides membership" — the edition states eight and derives the set on the day.
+- **`profiler-segments.json` was re-read and deliberately NOT edited.** The Profiler Command's step 5 requires re-reading memberships on a revision, but the §7.8 DO NOT list forbids touching that file. Both roles stand (`byd` incumbent in cells and in integrators; `eve-energy` challenger in cells and in-hall power). **One finding to hand to the developer:** `byd`'s integrator-membership `basis` line cites "Benchmark ranked BYD the #1 global BESS system integrator for 2025 (~60 GWh, 13% share)" — a claim now known to be disputed by two other rankers. The role is unaffected; only the basis wording is stale.
+- **Both remaining first-party research agents corrected the brief's own egress assumptions.** `cninfo.com.cn` and `szse.cn` are reachable (the prompt assumed otherwise), and `bydglobal.com` is reachable but a stale legacy site whose IR pages stop at 2017–2018. The practical conclusions held; the premises did not.
+- **A genuine null worth recording:** BYD is absent from the Energy-Storage.News interim review of listed Chinese BESS players — structurally, not by oversight, because BYD reports no storage segment and so cannot enter a like-for-like comparison. That absence is itself the evidence behind the grid-scale edition's decoupling judgment.
+- **Rotation checked, not assumed.** `grep -c '^## \[v[0-9]'` returned **100** before this section and `TZ=America/New_York date` returned **2026-09-08**, the same EST day as the existing `v05.12r` and `v05.13r` sections — so with this section the file holds **101 sections of which 3 are exempt → 98 non-exempt → no rotation**; the counter reads `Sections: 101/100`. No SHA lookup was needed, so no `git fetch --unshallow` was run.
+- **Checker state after this push:** `check-profiler-reports.py` **0 errors / 1 warning** (`zhonhen` v7 on the untouched AIDC edition — session 3's to clear); all six profiler checkers exit 0; `check-classroom-content.py` 10 / 3 / 134, 0 / 0; `check-classroom-pipeline.py --base origin/main` 12 findings, **all P1** on out-of-write-set paths, **no P3**.
 
 ## [v05.13r] — 2026-09-08 02:12:19 AM EST
 

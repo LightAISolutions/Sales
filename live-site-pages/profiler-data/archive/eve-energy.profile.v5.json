@@ -12,7 +12,7 @@
  "ownership": "public (HKEX H-share listing twice-filed, unconsummated as of Aug 2026)",
  "employees": "~30,000+",
  "website": "https://www.evebattery.com",
- "summary": "BOTTOM LINE UP FRONT: EVE Energy's H1 2026 confirmed the cycle turn in volume and left its quality contested — revenue RMB 45.691B (+62.20%) and net profit RMB 3.301B (+105.66%), with energy storage the fastest-growing battery segment at RMB 15.094B (+69.15%) and 44.46 GWh shipped (+54.88%) — the largest segment by shipments, though power batteries remain the larger revenue line at RMB 17.278B because power sells at ~1.42x the revenue per GWh, but gross margin down in every segment, operating cash flow at -RMB 388M and investment income supplying 31.91% of total profit. It is the mass-production pioneer of the 600Ah+ cell class (Mr.Big 628Ah, deployed in the world's first 628Ah grid-scale station in January 2026) and an emerging AI data-center power player with a full-matrix BBU portfolio for 800V HVDC racks shown at OCP China 2026, though no independent source names an AIDC customer. Ranking claims need care: SNE Research places EVE #2 globally in H1 2026 ESS batteries at 48.0 GWh, while InfoLink, Benchmark, TrendForce and ICC Sino all place it #3 behind Hithium. BACKGROUND: Founded 2001 by Dr. Liu Jincheng, EVE runs a three-pillar model (consumer, EV power, ESS): #1 in primary lithium for 9 years, #4 global / #1 China in cylindrical cells (BMW Neue Klasse supplier), but a distant #8 in EV batteries (2.7% share) — ESS carries the story (71.05 GWh shipped in FY2025, +41%; >200 GWh cumulative). US-facing risks are stacking: a June 2026 DoD 1260H 'Chinese military companies' listing (verify against the Reuters original), an LG Energy Solution patent offensive at the ITC targeting its cylindrical cells, the Powin bankruptcy vaporizing 25+ GWh of contracted demand, and a twice-filed, still-unconsummated Hong Kong listing.",
+ "summary": "BOTTOM LINE UP FRONT: EVE Energy is the #3 global ESS cell maker (InfoLink FY2025 — displaced from #2 by Hithium, though company messaging still claims second), the mass-production pioneer of the 600Ah+ cell class (Mr.Big 628Ah, deployed in the world's first 628Ah grid-scale station in January 2026), and an emerging AI data-center power player with a full-matrix BBU portfolio for 800V HVDC racks shown at OCP China 2026. The cycle has turned violently in its favor: after FY2025 profit grew just +1.44% on +26% revenue (ESS gross margin ~12% at the H1 2025 trough), the glut-to-tightness reversal drove H1 2026 profit guidance to +95-110% — H1 2026 alone approaches FY2024's full-year profit. BACKGROUND: Founded 2001 by Dr. Liu Jincheng, EVE runs a three-pillar model (consumer, EV power, ESS): #1 in primary lithium for 9 years, #4 global / #1 China in cylindrical cells (BMW Neue Klasse supplier), but a distant #8 in EV batteries (2.7% share) — ESS carries the story (71.05 GWh shipped in FY2025, +41%; >200 GWh cumulative). US-facing risks are stacking: a June 2026 DoD 1260H 'Chinese military companies' listing (verify against the Reuters original), an LG Energy Solution patent offensive at the ITC targeting its cylindrical cells, the Powin bankruptcy vaporizing 25+ GWh of contracted demand, and a twice-filed, still-unconsummated Hong Kong listing.",
  "ecosystemRole": "We assess EVE as the aggressive-challenger cell supplier in the AIDC storage chain — the vendor forcing the 600Ah+ transition that halves system component count, and one of the few positioned across all three power layers of an AI campus (rack BBU, distribution-level high-rate backup, grid-scale storage). Basis: first mass production of the 628Ah class (>1M large cells produced; >10 GWh guided for 2026, >30 GWh of 2027 orders), the Mr.Giant 5 MWh container and 6.9 MWh successor, and the OCP China 2026 BBU portfolio aimed at GPU transient smoothing. It supplies Tesla (6th cell supplier, ESS cells from Malaysia starting 2026) and American Battery Solutions, and its Malaysia/Hungary plants plus the 10%-stake Amplify Cell Technologies JV (Cummins/Daimler/PACCAR, Mississippi) are its tariff-and-sanctions insulation. In the covered ecosystem it competes cell-for-cell with CATL and Hithium and feeds the integrators (FlexGen bought Powin's IP) that Jon's prospects build on.",
  "productsAndServices": [
   {
@@ -67,27 +67,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-08-20",
-   "category": "regulatory",
-   "headline": "USITC institutes Section 337 investigation 337-TA-1518 over five US patents; ten respondents including Bosch, Koki Holdings and Chervon",
-   "read": "The LG/Tulip action moved from complaint to instituted investigation in a month. Direct US revenue at risk is small — about RMB 700M a year over 2021-2023 — but an exclusion order would reach the power-tool OEM channel that carries EVE’s cylindrical cells.",
-   "source": "https://www.caixinglobal.com/2026-08-21/us-opens-patent-probe-into-chinese-battery-maker-eve-energy-102476541.html"
-  },
-  {
-   "date": "2026-08-19",
-   "category": "financial",
-   "headline": "H1 2026: revenue RMB 45.691B (+62.20%), net profit RMB 3.301B (+105.66%), storage revenue RMB 15.094B (+69.15%) at 12.51% gross margin; interim dividend RMB 2.3 per 10 shares",
-   "read": "The cycle turn landed, but at the top of a band guided in June rather than above it, and on margins that fell in every segment. Operating cash flow swung to -RMB 388M and investment income supplied 31.91% of total profit — the growth is real in volume and contested in quality.",
-   "source": "https://www.stcn.com/article/detail/4087867"
-  },
-  {
-   "date": "2026-07-27",
-   "category": "regulatory",
-   "headline": "LG Energy Solution (via Tulip Innovation) files E.D. Texas suit and ITC Section 337 complaint over five US patents targeting EVE cylindrical cells",
-   "read": "Seeks import exclusion orders covering EVE's power-tool cells and downstream customers (Bosch, Koki, Chervon). Large-format ESS cells are NOT implicated — but an exclusion order would set a precedent for patent-based market defense against Chinese cells that the ESS segment should watch. EVE denies infringement.",
-   "source": "https://www.ess-news.com/2026/07/27/lg-takes-eve-energy-patent-fight-to-us-court-trade-commission/"
-  },
-  {
    "date": "2026-07-24",
    "category": "product-launch",
    "headline": "Full-matrix BBU portfolio for AI data centers shown at OCP China 2026 — rack BBU + Panun 6C/10C cabinets + grid-level Mr.Big storage on 800V HVDC",
@@ -95,18 +74,11 @@
    "source": "https://www.evebattery.com/news-1101"
   },
   {
-   "date": "2026-07-04",
-   "category": "corporate",
-   "headline": "Board unifies financial reporting on Chinese Accounting Standards specifically for the H-share application, dropping the separate overseas auditor",
-   "read": "A concrete listing-specific step taken right at the second application’s six-month expiry, described in the present tense — it reads as preparation to re-file rather than abandonment. No H-shares were in issue at 30 June 2026 and no third filing has been announced.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-07-04/1225409734.PDF"
-  },
-  {
-   "date": "2026-06-22",
-   "category": "corporate",
-   "headline": "SK On’s remaining 49% of Huizhou EVE Power transfers to EVE — 4.2% for RMB 200m cash and 44.8% by non-cash swap — taking the subsidiary to 100%",
-   "read": "Booked a RMB 394.4m non-monetary asset exchange gain and named by EVE as a driver of the +263.55% investment income, while the company states the consolidation scope is unchanged. Buying out a minority in an already-consolidated subsidiary for a P&L gain of that size is the open accounting question in the print; the filing does not explain the mechanism.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483571.PDF"
+   "date": "2026-07-27",
+   "category": "regulatory",
+   "headline": "LG Energy Solution (via Tulip Innovation) files E.D. Texas suit and ITC Section 337 complaint over five US patents targeting EVE cylindrical cells",
+   "read": "Seeks import exclusion orders covering EVE's power-tool cells and downstream customers (Bosch, Koki, Chervon). Large-format ESS cells are NOT implicated — but an exclusion order would set a precedent for patent-based market defense against Chinese cells that the ESS segment should watch. EVE denies infringement.",
+   "source": "https://www.ess-news.com/2026/07/27/lg-takes-eve-energy-patent-fight-to-us-court-trade-commission/"
   },
   {
    "date": "2026-06-15",
@@ -118,23 +90,9 @@
   {
    "date": "2026-06-08",
    "category": "regulatory",
-   "headline": "Added to the Department of War §1260H list of Chinese military companies in the 65-entity June 2026 update",
-   "read": "Establishes what the dossier previously carried as Reuters-relayed. With §154 naming EVE in statute from October 2027 and §805 phasing in from June 2026, three separate US instruments now bear on the same company.",
-   "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies"
-  },
-  {
-   "date": "2026-06-08",
-   "category": "regulatory",
    "headline": "Reuters reports EVE added to the US DoD 1260H 'Chinese military companies' list",
    "read": "Major procurement and reputational risk for US ESS sales — utilities and federal-adjacent buyers increasingly screen against 1260H. Rests on Reuters as relayed by secondary sources; verify the original before citing in customer-facing material. Combined with the pending FCC Chinese-inverter ban, the US compliance wall around Chinese energy hardware is rising fast.",
    "source": "https://en.wikipedia.org/wiki/EVE_Energy"
-  },
-  {
-   "date": "2026-04-23",
-   "category": "expansion",
-   "headline": "230+ GWh of new manufacturing capacity announced within weeks (~RMB 23B), roughly twice FY2025 output",
-   "read": "The capacity build is what the negative operating cash flow and the RMB 19.4B of construction in progress are funding. It is a bet that the tightness holds through the ramp.",
-   "source": "https://www.ess-news.com/2026/04/23/eve-energy-outlines-230-gwh-manufacturing-capacity-expansion-within-weeks/"
   },
   {
    "date": "2026-03-30",
@@ -151,18 +109,18 @@
    "source": "https://www.evebattery.com/en/news-1894"
   },
   {
-   "date": "2026-02-09",
-   "category": "other",
-   "headline": "InfoLink FY2025 ranking: EVE slips to #3 global ESS cells — Hithium takes #2 as the market doubles to 612 GWh",
-   "read": "The competitive fact EVE's channels omit (company messaging still claims 'second globally'). CR6 ≈75%; EVE holds #3 in non-China markets too. Rank slippage during a demand boom is a share-loss signal, not a demand problem.",
-   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/"
-  },
-  {
    "date": "2026-01-02",
    "category": "financial",
    "headline": "Hong Kong H-share prospectus re-filed (CITIC sole sponsor) after the first lapsed December 30, 2025; CSRC probing related-entity debt capacity",
    "read": "Twice-filed and still unconsummated ~13 months after the June 2025 filing — while CATL's HK$41B HK raise set the template. The listing is the funding key for Malaysia/Hungary internationalization; the CSRC's debt questions echo the bear case (¥31.5B interest-bearing debt, 62.6% leverage, 69.2% utilization at end-2024 against a capacity doubling).",
    "source": "https://autonews.gasgoo.com/articles/news/eve-energy-responds-to-lapsed-hong-kong-prospectus-no-impact-on-ipo-timeline-2007794871366852609"
+  },
+  {
+   "date": "2026-02-09",
+   "category": "other",
+   "headline": "InfoLink FY2025 ranking: EVE slips to #3 global ESS cells — Hithium takes #2 as the market doubles to 612 GWh",
+   "read": "The competitive fact EVE's channels omit (company messaging still claims 'second globally'). CR6 ≈75%; EVE holds #3 in non-China markets too. Rank slippage during a demand boom is a share-loss signal, not a demand problem.",
+   "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/"
   },
   {
    "date": "2025-06-11",
@@ -174,10 +132,10 @@
  ],
  "strategyRead": [
   "(High confidence) EVE's large-cell bet is working technically and commercially: first to mass-produce the 600Ah+ class, first grid-connected 628Ah station, >30 GWh of 2027 orders — forcing the system-economics transition (fewer components, less installation labor) that CATL and Hithium are now following. Basis: company-published milestones corroborated by deployment coverage; order books are company-stated.",
-  "(High confidence) The US market is closing on EVE through three separate instruments, and H1 2026 established two of them: EVE is named in the FY2024 NDAA §154(b) statute itself — one of exactly six Chinese battery makers, barred from DoD procurement from 1 October 2027 and removable only by an act of Congress — and was added to the §1260H list on 8 June 2026, whose §805 consequences phase in from 30 June 2026 and reach goods produced by a listed entity from 30 June 2027. The third is the LG/Tulip action, instituted as ITC 337-TA-1518 on 20 August 2026. The physical evidence that the pathway is impaired is the Amplify JV: 73 WARN layoffs in April 2026 and production at the Mississippi plant slipped to at least 2028. Basis: two independent legal alerts on the listings, the statute as summarised by counsel, and the instituted investigation. Direct US exports remain under 10% of overseas revenue, so the exposure is to standing and channel rather than to volume.",
-  "(Moderate confidence) Profit quality is the open question H1 2026 sharpened rather than settled, and the evidence cuts both ways. Against: operating cash flow swung to -RMB 388M from +RMB 2.373B, investment income of RMB 1.183B (+263.55%) supplied 31.91% of total profit, gross margin fell in every segment (storage to 12.51% against CATL's 23.96%), operating costs grew 68.12% against revenue's 62.20%, and inventory rose to 11.14% of assets from 6.56%. For: net profit excluding non-recurring items grew 111.89%, faster than the 105.66% headline, so non-recurring items were a smaller share of profit than a year earlier; the equity-method income is recurring in character; and the inventory build is a defensible response to lithium carbonate running from ~RMB 120k/t to near RMB 200k/t. Basis: the interim as read by 21st Century Business Herald and Cailian Press. No source adjudicates between the two readings, and the market did not: the shares sat about 17% below the June guidance-day close a week after the print.",
-  "(Moderate confidence) The BBU/AIDC push remains logical adjacency and unproven commerce, and the H1 record did not change that: BBU A-samples were guided to customers for May-June 2026 on the April earnings call, but no independent source names a hyperscaler, cloud provider or server ODM. The one circulating claim of A-samples to North American cloud vendors sits in Eastmoney self-media and is not journalism. A corroborating negative: TrendForce's July 2026 AI-data-centre storage analysis names fifteen-plus Chinese vendors and does not include EVE. Incumbent BBU suppliers still own the server-OEM relationships — EVTank puts Japanese and Korean makers above 80% share with EVE still in sample delivery. Treat as 2027+ optionality, not current revenue.",
-  "(Low confidence) Ranking claims require care in any customer-facing use, and H1 2026 widened the spread rather than closing it: SNE Research places EVE #2 globally at 48.0 GWh and 10.4% share, while InfoLink, Benchmark, TrendForce and ICC Sino all place it #3 behind Hithium. SNE's 48.0 GWh also exceeds EVE's own reported 44.46 GWh by about 8%, and no source explains the gap. State both — '#2 on SNE Research, #3 on four other rankers' — rather than either alone. The one defensible superlative is narrower and real: InfoLink put EVE #1 in small-scale storage cells for FY2025."
+  "(High confidence) The US market is closing on EVE from three directions at once — DoD 1260H listing (procurement screening), the LG/Tulip ITC action (cylindrical import exclusion risk), and the broader Chinese-energy-hardware compliance wall (pending FCC inverter ban) — making its Malaysia plants and the 10%-stake Amplify JV structure the template for how Chinese cell makers will serve US demand: minority stakes, licensing, offshore cells. Basis: documented regulatory/litigation record; direct US exports are already <4% of revenue on FOB terms.",
+  "(Moderate confidence) Profit quality is the bear case the 2026 surge conceals: FY2025 profit grew 1.4% on 26% revenue growth, utilization hit a four-year low (69.2%) while planned capacity doubles, and leverage is high (¥31.5B interest-bearing debt, 62.6% asset-liability ratio). The H1 2026 doubling is cycle-driven (glut→tightness); if the tightness fades before the HK listing lands, the debt-funded expansion critique returns. Basis: third-party financial analysis (Tiger Brokers) and filed results.",
+  "(Moderate confidence) The BBU/AIDC push is a logical adjacency with real differentiation potential (pouch float-life tuning, three-layer coverage) but is unproven commercially — no named AIDC customer wins have surfaced, and incumbent BBU suppliers (LG, Samsung SDI, Panasonic) own the server-OEM relationships. Treat as a 2027+ optionality, not current revenue. Basis: OCP showcase materials only.",
+  "(Low confidence) Ranking claims require care in any customer-facing use: 'global top-2 ESS supplier' (company), #2 (InfoLink Q1 2025), #3 (InfoLink FY2025), and SNE's unpublished EVE figure all circulate simultaneously — methodology differences let every vendor cherry-pick. Use InfoLink FY2025 (#3) as the defensible current rank."
  ],
  "relationships": [
   {
@@ -256,25 +214,8 @@
   {
    "regime": "DoD 1260H list",
    "status": "in-effect",
-   "exposure": "EVE Energy Co., Ltd. was added to the Department of War's §1260H list of Chinese military companies in the update signed 5 June and released 8 June 2026 — 65 additions (17 parents, 48 subsidiaries) against 10 removals, taking the list to 188 entities. The cited grounds are military-civil fusion contribution and 'Single Champion' selection, with SASAC affiliation recorded. This supersedes the dossier's earlier treatment of the listing as Reuters-relayed and unverified: it is now established from two independent legal alerts. The consequence runs through §805 of the FY2024 NDAA in two phases — from 30 June 2026 DoD may not enter, renew or extend contracts with a listed entity, and from 30 June 2027 the bar extends to goods and services produced or developed by one. A §1260H designation is not itself a sanction and imposes no import ban; the DFARS rule implementing §805 has not been published. EVE has made no first-party statement on the designation: the 185-page H1 2026 interim contains no mention of §1260H or of any US restrictions list.",
-   "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
-   "effectiveDate": "2026-06-08"
-  },
-  {
-   "regime": "NDAA §154 Department of Defense procurement ban",
-   "status": "announced",
-   "effectiveDate": "2027-10-01",
-   "exposure": "EVE Energy Company, Limited is one of exactly six entities named in §154(b) of the FY2024 National Defense Authorization Act — alongside CATL, BYD, Envision Energy, Gotion High-tech and Hithium. From 1 October 2027 the Department of Defense may not procure batteries produced by any of them, where 'produced by' means the entity assembled or manufactured the final product or created or provided a majority of the components. The ban is prospective and confined to Defense procurement; it is not a government-wide bar. This is categorically more durable than an agency listing: removal takes an act of Congress, not an administrative revision.",
-   "mitigation": "None available — being named in the statute is not curable by restructuring.",
-   "source": "https://www.arnoldporter.com/en/perspectives/advisories/2023/12/fy24-ndaa-navigating-expanded-restrictions"
-  },
-  {
-   "regime": "US patent litigation — ITC Section 337 and E.D. Texas",
-   "status": "in-effect",
-   "effectiveDate": "2026-08-20",
-   "exposure": "The USITC instituted Investigation No. 337-TA-1518, Certain Secondary Cylindrical Batteries, Components Thereof, and Products Containing the Same, on 20 August 2026 on a complaint filed 21 July and supplemented 5 August by LG Energy Solution Ltd. and LG Energy Solution Arizona under the Tulip Innovation licensing programme, which pools LG Energy Solution and Panasonic Energy patents. Ten respondents are named, including EVE, its US subsidiaries and the power-tool OEMs Bosch, Koki Holdings and Chervon. Five US patents are at issue — four on cylindrical cell structure and safety, one on separators; the patent numbers are not disclosed in any accessible source. The relief sought is a limited exclusion order plus cease-and-desist orders. A parallel suit runs in the Eastern District of Texas. EVE denies infringement and says it will respond. Direct revenue at risk is small on the disclosed history — US sales ran about RMB 700M a year over 2021-2023, under 10% of overseas revenue — so the sharper exposure is to the power-tool OEM channel and to qualification standing. EVE's own account, filed with the exchange on 24 July 2026, is that it had not yet received formal legal documents, that it holds more than 17,000 global patent applications including over 3,000 in cylindrical cells, and that it denies infringement.",
-   "mitigation": "Offshore manufacturing (Malaysia phase II complete) moves the origin of cells for non-US-patent purposes but does not answer a patent exclusion order, which reaches the product rather than its origin.",
-   "source": "https://www.caixinglobal.com/2026-08-21/us-opens-patent-probe-into-chinese-battery-maker-eve-energy-102476541.html"
+   "exposure": "Reuters reported in June 2026 that EVE was added to the US DoD 1260H 'Chinese military companies' list — a major procurement and reputational risk for US ESS sales, since utilities and federal-adjacent buyers increasingly screen against 1260H. Combined with the pending FCC Chinese-inverter ban, the dossier reads the US compliance wall around Chinese energy hardware as rising fast. The listing rests on Reuters as relayed by secondary sources; the dossier flags it for verification against the original before customer-facing use.",
+   "source": "https://en.wikipedia.org/wiki/EVE_Energy"
   },
   {
    "regime": "US–China battery tariffs",
@@ -455,7 +396,7 @@
     "periodEnd": "2025-12-31"
    },
    {
-    "period": "Q1 2026 (reported April 2026)",
+    "period": "Q1 2026 + H1 2026 guidance",
     "metrics": [
      {
       "name": "Q1 revenue",
@@ -470,175 +411,20 @@
       "expected": "Within own 25-35% pre-announced range",
       "verdict": "inline",
       "result": "Record Q1 profit"
-     }
-    ],
-    "commentary": "Q1 was the first quarter of the glut-to-tightness turn. The 15 June profit alert that followed guided H1 net profit to RMB 3.13-3.37B (+95-110%) and moved the shares +13.8% on 16 June to RMB 66.88 — the re-rating happened on the guidance, not on the August report."
-   },
-   {
-    "period": "H1 2026 (reported August 2026)",
-    "metrics": [
+     },
      {
-      "name": "Revenue",
-      "actual": "RMB 45.691B (+62.20%)",
-      "expected": "Company guidance ~+60%",
+      "name": "H1 2026 net profit (guided)",
+      "actual": "¥3.13-3.37B (+95-110%)",
+      "expected": "n/a",
       "verdict": "beat",
-      "result": "Marginally ahead of the company’s own June guide; no pre-print sell-side consensus is publicly retrievable"
-     },
-     {
-      "name": "Net profit (attributable)",
-      "actual": "RMB 3,301.23m (+105.66%); basic EPS RMB 1.57 (+101.28%); weighted average ROE 7.24% (+3.04pp); interim dividend RMB 2.30 per 10 shares pre-tax, about RMB 500m and a 15.1% payout",
-      "expected": "RMB 3.130-3.371B (+95-110%), company guidance of 15 Jun 2026",
-      "verdict": "inline",
-      "result": "Landed at the top of the guided band but inside it — the beat was consumed in June, not August"
-     },
-     {
-      "name": "Net profit excluding non-recurring items",
-      "actual": "RMB 2.451B (+111.89%)",
-      "expected": "RMB 2.430-2.603B (+110-125%), company guidance",
-      "verdict": "inline",
-      "result": "Lower half of the band — but growing faster than the headline, so non-recurring items were a smaller share of profit than a year earlier"
-     },
-     {
-      "name": "Segments",
-      "actual": "Power batteries RMB 17,278.5m (+53.31%, GM 16.19%, -2.97pp); energy storage RMB 15,094.0m (+69.15%, GM 12.51%, -1.36pp); consumer RMB 6,410.8m (+26.22%, GM 22.64%, -4.04pp); battery materials RMB 6,865.6m (+140.73%, GM 5.29%, +2.30pp); overall GM 14.31% (-3.02pp). By geography, domestic RMB 34,358.6m (+62.07%, GM 13.92%) and overseas RMB 11,332.8m (+62.61%, GM 15.48%, -6.23pp)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Energy storage is the fastest-growing battery segment and the largest by shipments, but power batteries are still the larger revenue line — RMB 17.278B against RMB 15.094B — because power sells at roughly 1.42x the revenue per GWh. Storage also carries the lowest gross margin of any battery segment, against CATL’s comparable 23.96%"
-     },
-     {
-      "name": "Shipments",
-      "actual": "Storage batteries 44.46 GWh (+54.88%); power batteries 35.76 GWh (+66.47%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Company-reported. Storage has out-shipped power since FY2025 (71.05 GWh against 50.15 GWh), so the H1 movement is power closing the gap (+66.47% against +54.88%), not a new crossover. SNE Research separately credits EVE with 48.0 GWh — an ~8% gap above the company’s own figure that no source explains",
-      "kpi": "gwh-shipped",
-      "qty": 44.46
-     },
-     {
-      "name": "Cash flow and working capital",
-      "actual": "Operating cash flow -RMB 387.9m (from +RMB 2,372.6m, -116.35%); inventory RMB 15,422m (11.14% of assets, from 6.56%); receivables RMB 19,706m (+32.6%); investment income RMB 1,182.8m (+263.55%), 35.8% of attributable net profit; total non-recurring items RMB 849.7m, of which a RMB 394.4m non-monetary asset exchange gain on the SK On equity swap and RMB 374.9m of government grants are about 91%",
-      "expected": "",
-      "verdict": "miss",
-      "result": "The quality-of-earnings question the print leaves open. EVE’s own one-line explanations are that the cash-flow swing is \"strategic inventory reserve, payment for goods\" and that investment income rose on \"completion of the equity swap and profit growth at associates\" — no quantification or working-capital bridge is given. The increase in investment income alone equals about half the entire increase in attributable profit"
+      "result": "Ex-non-recurring +110-125%; H1 report due 2026-08-20"
      }
     ],
-    "commentary": "R&D expense RMB 1,701.9m (+34.96%). Total assets RMB 138,460.6m (+10.29%); liabilities RMB 88,062.3m; liabilities-to-assets 63.60%. No USD overlay is carried for this period: no sourced CNY/USD rate for H1 2026 was located and the schema forbids an unsourced conversion — the normalized comparison stays on FY2025. The filing cites SNE Research placing EVE #2 in global ESS cell shipments for the half and #7 in power-battery installations. No FY2026 shipment guidance is restated anywhere in the filing: the 200 GWh total and >100 GWh ESS figures in circulation are third-party and are not carried here. The filing contains no mention of the §1260H designation. Market reaction was muted to negative — the shares closed RMB 55.79 on 21 August and drifted to RMB 54.32 by 28 August, roughly 17% below the June guidance-day close.",
-    "periodType": "interim",
-    "periodEnd": "2026-06-30"
+    "commentary": "The cycle turn in full: H1 2026 profit alone approaches FY2024's full year. Sell-side consensus (Aug 2026): Buy (16 analysts), target ¥82.81 vs ~¥55 price; PE 26.1, forward 15.7."
    }
   ]
  },
  "sources": [
-  {
-   "label": "EVE Energy — 2026年半年度报告 (H1 2026 semi-annual report, SZSE ChiNext 300014, 185pp): segment revenue, shipments, margins and the itemised non-recurring schedule",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483571.PDF",
-   "date": "2026-08-19"
-  },
-  {
-   "label": "EVE Energy — 2026年半年度报告摘要 (H1 2026 report summary)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483570.PDF",
-   "date": "2026-08-19"
-  },
-  {
-   "label": "EVE Energy — 关于2026年中期分红方案的公告 (interim dividend plan: RMB 2.30 per 10 shares pre-tax)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483568.PDF",
-   "date": "2026-08-19"
-  },
-  {
-   "label": "EVE Energy — 2026年半年度业绩预告 (H1 2026 earnings pre-announcement: net profit RMB 3,130.08-3,370.86m)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-06-15/1225371777.PDF",
-   "date": "2026-06-15"
-  },
-  {
-   "label": "EVE Energy — 关于美国专利诉讼相关事项声明的公告 (statement on the US patent action: formal documents not yet received, infringement denied)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-07-24/1225440376.PDF",
-   "date": "2026-07-24"
-  },
-  {
-   "label": "EVE Energy — 关于发行H股并上市的进展的公告 (H-share issue and listing progress; application updated 2026-01-02)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-01-05/1224918982.PDF",
-   "date": "2026-01-05"
-  },
-  {
-   "label": "EVE Energy — 关于统一采用中国企业会计准则编制财务报表的公告 (unified adoption of Chinese Accounting Standards for the H-share application)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-07-04/1225409734.PDF",
-   "date": "2026-07-04"
-  },
-  {
-   "label": "EVE Energy — 亿纬锂能亮相 OCP China 2026，BBU 全矩阵方案赋能 800V HVDC 算力基建 (three-tier AIDC architecture: rack BBU cells, Pandun 6C/10C cabinets, Mr.Big source-grid systems)",
-   "url": "https://www.evebattery.com/cn/news-1101",
-   "date": "2026-07-24"
-  },
-  {
-   "label": "Energy-Storage.News — H1 2026 interim reports of the listed Chinese BESS players: EVE storage revenue RMB 15.094B (+69.15%) at 12.51% gross margin vs CATL's 23.96%",
-   "url": "https://www.energy-storage.news/interim-reports-of-catl-eve-rept-and-other-listed-chinese-bess-players-leaders-see-steady-earnings-growth-second-tier-returns-to-profitability/",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "南方财经网 / 21世纪经济报道 — H1 2026 quality-of-earnings read: investment income RMB 1.183B (31.91% of total profit), operating cash flow -RMB 388M",
-   "url": "https://www.sfccn.com/2026/8-20/3MMDE0MDdfMjIxNDg3Mw.html",
-   "date": "2026-08-20"
-  },
-  {
-   "label": "证券时报 Securities Times — H1 2026 net profit +105.66%, interim dividend RMB 2.3 per 10 shares",
-   "url": "https://www.stcn.com/article/detail/4087867",
-   "date": "2026-08-19"
-  },
-  {
-   "label": "财联社 Cailian Press — H1 2026 segment gross margins all down: consumer 22.64%, power 16.19%, storage 12.51%",
-   "url": "https://www.cls.cn/detail/2458755",
-   "date": "2026-08-19"
-  },
-  {
-   "label": "每日经济新闻 NBD — H1 2026: R&D RMB 1.70B (+34.96%), 628Ah Mr.Big ramp, RMB 100B revenue milestone targeted",
-   "url": "https://www.nbd.com.cn/articles/2026-08-19/4546908.html",
-   "date": "2026-08-19"
-  },
-  {
-   "label": "CnEVPost (SNE Research) — H1 2026 global ESS battery share: EVE #2 at 48.0 GWh / 10.4%, CATL 27.1%",
-   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
-   "date": "2026-08-04"
-  },
-  {
-   "label": "Benchmark Mineral Intelligence — H1 2026 BESS cell and system shipments: EVE #3 at 9.0% behind CATL and Hithium",
-   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
-   "date": "2026-08-21"
-  },
-  {
-   "label": "pv magazine (InfoLink) — H1 2026 ESS cell shipments 467.84 GWh (+94.8%); EVE #3 behind CATL and Hithium; CR10 falls to 82.3%",
-   "url": "https://www.pv-magazine.com/2026/08/17/energy-storage-cell-shipment-data-for-h1-2026-reveal-three-structural-shifts/",
-   "date": "2026-08-17"
-  },
-  {
-   "label": "Caixin Global — USITC institutes §337 investigation 337-TA-1518 against EVE (20 Aug 2026); US sales ~RMB 700M/yr over 2021-2023",
-   "url": "https://www.caixinglobal.com/2026-08-21/us-opens-patent-probe-into-chinese-battery-maker-eve-energy-102476541.html",
-   "date": "2026-08-21"
-  },
-  {
-   "label": "WilmerHale — Pentagon adds 65 entities to the §1260H list (8 Jun 2026); EVE Energy named among the 17 new parents",
-   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
-   "date": "2026-06-12"
-  },
-  {
-   "label": "Holland & Knight — §1260H list update and the §805 procurement phases (30 Jun 2026 / 30 Jun 2027)",
-   "url": "https://www.hklaw.com/en/insights/publications/2026/07/department-of-war-updates-section-1260h",
-   "date": "2026-07-28"
-  },
-  {
-   "label": "Arnold & Porter — FY2024 NDAA §154: the six named battery producers and the 1 Oct 2027 DoD prohibition",
-   "url": "https://www.arnoldporter.com/en/perspectives/advisories/2023/12/fy24-ndaa-navigating-expanded-restrictions",
-   "date": "2023-12"
-  },
-  {
-   "label": "ESS News — EVE outlines 230+ GWh of new manufacturing capacity announced within weeks (~RMB 23B)",
-   "url": "https://www.ess-news.com/2026/04/23/eve-energy-outlines-230-gwh-manufacturing-capacity-expansion-within-weeks/",
-   "date": "2026-04-23"
-  },
-  {
-   "label": "TrendForce Insights — AI data-centre storage vendor landscape (15+ Chinese vendors named; EVE absent)",
-   "url": "https://insights.trendforce.com/p/ai-data-center-energy-storage-demand",
-   "date": "2026-07-10"
-  },
   {
    "label": "ESS News — LG/Tulip patent suit and ITC Section 337 complaint",
    "url": "https://www.ess-news.com/2026/07/27/lg-takes-eve-energy-patent-fight-to-us-court-trade-commission/",
@@ -718,6 +504,6 @@
    "url": "https://stockanalysis.com/quote/she/300014/"
   }
  ],
- "lastUpdated": "2026-09-08",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

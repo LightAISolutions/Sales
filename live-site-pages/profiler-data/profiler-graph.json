@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-07",
+ "built": "2026-09-08",
  "companies": 154,
  "edges": [
   {
@@ -10389,6 +10389,13 @@
    },
    "evid": [
     {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The consequence is that BYD is excluded from like-for-like interim comparisons of listed Chinese BESS players — the August 2026 Energy-Storage.News review of CATL, EVE, CALB, Gotion, Great Power, REPT and Desay does not mention BYD at all — while every one of those peers grew net profit sharply in the same half and BYD's group profit fell 20.54%.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · HaoHan utility-scale platform (浩瀚, flagship 2025–)",
      "date": "",
      "text": "Single-block capacity leadership: 14.5 MWh vs CATL TENER's 6.25 MWh (9 MWh TENER Stack announced) and Tesla Megapack 3's ~5 MWh per unit.",
@@ -10906,6 +10913,20 @@
    },
    "evid": [
     {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For the half, two independent rankers agree: Benchmark puts BYD first at 9.1% of 313 GWh and InfoLink also ranks it first, calling BYD and Sungrow 'extremely similar' in utility-scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For the full year 2025 the rankers split — Benchmark says BYD #1 at 60 GWh and 13%, while Wood Mackenzie and InfoLink both say Tesla #1, Sungrow #2, BYD #3.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · HaoHan utility-scale platform (浩瀚, flagship 2025–)",
      "date": "",
      "text": "BYD's pitch is fewer blocks, less land, and lower balance-of-plant per MWh, plus grid-forming capability bundled in-house (GC Flux) rather than via a third-party PCS vendor — competing head-on with Sungrow's PowerTitan integrated approach.",
@@ -11022,6 +11043,13 @@
      "where": "Summary",
      "date": "",
      "text": "We assess BYD as top-tier in every storage ranking, with scope-dependent placement: #2 global ESS battery shipper in 2023 (28.4 GWh, Fastmarkets), #3 ESS cell shipper in 2024 (SMM/InfoLink), and for 2025 Benchmark ranked BYD the #1 global BESS system integrator (~60 GWh, 13% share, overtaking Tesla) while InfoLink placed it #3 in systems — estimates differ by scope.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For the full year 2025 the rankers split — Benchmark says BYD #1 at 60 GWh and 13%, while Wood Mackenzie and InfoLink both say Tesla #1, Sungrow #2, BYD #3.",
      "src": "",
      "from": "a"
     },
@@ -12310,6 +12338,13 @@
      "where": "Key Judgments",
      "date": "",
      "text": "(High confidence) EVE's large-cell bet is working technically and commercially: first to mass-produce the 600Ah+ class, first grid-connected 628Ah station, >30 GWh of 2027 orders — forcing the system-economics transition (fewer components, less installation labor) that CATL and Hithium are now following.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against: operating cash flow swung to -RMB 388M from +RMB 2.373B, investment income of RMB 1.183B (+263.55%) supplied 31.91% of total profit, gross margin fell in every segment (storage to 12.51% against CATL's 23.96%), operating costs grew 68.12% against revenue's 62.20%, and inventory rose to 11.14% of assets from 6.56%.",
      "src": "",
      "from": "b"
     },
@@ -23537,7 +23572,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: EVE Energy is the #3 global ESS cell maker (InfoLink FY2025 — displaced from #2 by Hithium, though company messaging still claims second), the mass-production pioneer of the 600Ah+ cell class (Mr.Big 628Ah, deployed in the world's first 628Ah grid-scale station in January 2026), and an emerging AI data-center power player with a full-matrix BBU portfolio for 800V HVDC racks shown at OCP China 2026.",
+     "text": "Ranking claims need care: SNE Research places EVE #2 globally in H1 2026 ESS batteries at 48.0 GWh, while InfoLink, Benchmark, TrendForce and ICC Sino all place it #3 behind Hithium.",
      "src": "",
      "from": "a"
     },
@@ -23552,6 +23587,13 @@
      "where": "Key Judgments",
      "date": "",
      "text": "(High confidence) EVE's large-cell bet is working technically and commercially: first to mass-produce the 600Ah+ class, first grid-connected 628Ah station, >30 GWh of 2027 orders — forcing the system-economics transition (fewer components, less installation labor) that CATL and Hithium are now following.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) Ranking claims require care in any customer-facing use, and H1 2026 widened the spread rather than closing it: SNE Research places EVE #2 globally at 48.0 GWh and 10.4% share, while InfoLink, Benchmark, TrendForce and ICC Sino all place it #3 behind Hithium.",
      "src": "",
      "from": "a"
     },
@@ -23665,13 +23707,6 @@
    },
    "evid": [
     {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "(Moderate confidence) The BBU/AIDC push is a logical adjacency with real differentiation potential (pouch float-life tuning, three-layer coverage) but is unproven commercially — no named AIDC customer wins have surfaced, and incumbent BBU suppliers (LG, Samsung SDI, Panasonic) own the server-OEM relationships.",
-     "src": "",
-     "from": "a"
-    },
-    {
      "where": "Capabilities · AI data-center BBU portfolio (OCP China 2026)",
      "date": "",
      "text": "Directly targets the AI load-volatility problem (the same physics behind xAI's Megapack buffering and ABB's synchronous condensers) at the cell/cabinet level — competing with LG, Samsung SDI, and Panasonic BBU lines in the NVIDIA 800 VDC ecosystem.",
@@ -23717,13 +23752,6 @@
     }
    },
    "evid": [
-    {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "(Moderate confidence) The BBU/AIDC push is a logical adjacency with real differentiation potential (pouch float-life tuning, three-layer coverage) but is unproven commercially — no named AIDC customer wins have surfaced, and incumbent BBU suppliers (LG, Samsung SDI, Panasonic) own the server-OEM relationships.",
-     "src": "",
-     "from": "a"
-    },
     {
      "where": "Capabilities · AI data-center BBU portfolio (OCP China 2026)",
      "date": "",

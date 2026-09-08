@@ -14,7 +14,7 @@
   "type": "public",
   "ticker": "SZSE: 002594 · HKEX: 1211"
  },
- "summary": "BOTTOM LINE UP FRONT: BYD is the world's largest BESS system integrator by H1 2026 shipments on two independent counts (Benchmark 9.1%, InfoLink #1) and fourth in cells, while its group result went the other way — H1 2026 revenue RMB 344.82B (-7.13%) and net profit RMB 12.33B (-20.54%) against a peer set whose listed Chinese BESS players all grew profit sharply. Storage is not separately disclosed and sits inside an automotive P&L compressed by the domestic price war, so the storage business is visible only in third-party shipment counts and in the order book: 11.275 GWh for Masdar, 12.5 GWh for Saudi Electricity Company, 2.4 GWh for Greenvolt in Poland. BACKGROUND: BYD is a Chinese conglomerate spanning batteries, new-energy vehicles, electronics, and rail transit, and one of the world's largest battery-energy-storage suppliers. Its storage arm — the Energy Storage & New-type Battery Business Division (BYD Energy Storage, est. 2008), supplied by cell subsidiary FinDreams Battery — makes LFP 'Blade' cells and integrated BESS products from grid-scale containers to home batteries. BYD is also China's largest NEV maker (4.60M NEVs sold in 2025, >1M exported), sharing the Blade LFP platform between vehicles and storage.",
+ "summary": "BOTTOM LINE UP FRONT: BYD pairs the world's largest NEV platform with gigascale storage — shared Blade LFP economics put it at or near the top of every 2025 storage ranking, and the 11.275 GWh Masdar HaoHan award is the delivery test through 2027. BACKGROUND: BYD is a Chinese conglomerate spanning batteries, new-energy vehicles, electronics, and rail transit, and one of the world's largest battery-energy-storage suppliers. Its storage arm — the Energy Storage & New-type Battery Business Division (BYD Energy Storage, est. 2008), supplied by cell subsidiary FinDreams Battery — makes LFP 'Blade' cells and integrated BESS products from grid-scale containers to home batteries. BYD is also China's largest NEV maker (4.60M NEVs sold in 2025, >1M exported), sharing the Blade LFP platform between vehicles and storage.",
  "ecosystemRole": "We assess BYD as top-tier in every storage ranking, with scope-dependent placement: #2 global ESS battery shipper in 2023 (28.4 GWh, Fastmarkets), #3 ESS cell shipper in 2024 (SMM/InfoLink), and for 2025 Benchmark ranked BYD the #1 global BESS system integrator (~60 GWh, 13% share, overtaking Tesla) while InfoLink placed it #3 in systems — estimates differ by scope. Company-reported: >75 GWh in commercial operation across 360+ projects in 110+ countries by end-2024. FinDreams capacity expansion (incl. Chongqing blade-cell base and Wuwei, Gansu) took planned battery capacity above 500 GWh in 2025.",
  "productsAndServices": [
   {
@@ -96,32 +96,11 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-08-28",
-   "category": "financial",
-   "headline": "H1 2026: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%); Q2 net profit RMB 8.2B (+29.8%), the first quarterly growth in five quarters; overseas revenue above half of the total for the first time",
-   "read": "The half fell and the quarter turned. Overseas revenue at 52.57% of the total is the structural change; the profit decline is domestic price war plus foreign-exchange pressure. Every listed Chinese BESS peer grew profit sharply in the same half, which is the measure of how much of BYD storage is masked by an auto P&L moving the other way.",
-   "source": "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/"
-  },
-  {
-   "date": "2026-08-21",
-   "category": "market-position",
-   "headline": "Benchmark places BYD #1 in H1 2026 BESS system-integrator shipments at 9.1% of 313 GWh and #4 in cells at 6.7% of 490 GWh; InfoLink also ranks BYD #1 in systems",
-   "read": "Two independent rankers agree on the integrator crown for the half — the cleanest storage claim in the file, and one that survives BYD disclosing no storage revenue.",
-   "source": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-"
-  },
-  {
    "date": "2026-07-09",
    "category": "order-win",
    "headline": "11.275 GWh HaoHan contract signed with Masdar for Abu Dhabi's 5.2 GW / 19 GWh round-the-clock RTC project",
    "read": "HaoHan validated at gigascale within a year of launch — BYD supplies the majority of the world's first gigascale solar+storage RTC plant (online 2027).",
    "source": "https://www.bydenergy.com/en/news/20260709"
-  },
-  {
-   "date": "2026-07-01",
-   "category": "order-win",
-   "headline": "Greenvolt signs BYD Energy for Siedlce, 600 MW / 2.4 GWh — Poland’s largest BESS, construction from Q3 2026",
-   "read": "Europe joins the Middle East and Latin America as a named HaoHan market; the non-China storage book is where BYD’s storage growth is visible while the domestic auto business compresses.",
-   "source": "https://www.ess-news.com/2026/07/01/greenvolt-byd-energy-sign-supply-deal-for-600-mw-bess-in-poland/"
   },
   {
    "date": "2026-06-17",
@@ -131,25 +110,11 @@
    "source": "https://www.ess-news.com/2026/06/22/byd-plans-98-million-bess-production-line-in-brazil/"
   },
   {
-   "date": "2026-06-09",
-   "category": "regulatory",
-   "headline": "Added to the Department of War §1260H list of Chinese military companies; BYD rejects the designation in a voluntary HKEX announcement the next day",
-   "read": "Procurement screening rather than a sales ban: §805 bars DoD contracting with a listed entity from 30 June 2026 and reaches goods produced by one from 30 June 2027. BYD says it is neither a military company nor a military-civil fusion contributor and notes the list is not a sanctions regime. It compounds the §154 statutory naming already running to October 2027.",
-   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0609/2026060901188.pdf"
-  },
-  {
    "date": "2026-05-13",
    "category": "other",
    "headline": "Benchmark ranks BYD the #1 global BESS integrator for 2025 (>60 GWh shipped, 13% share), overtaking Tesla (46.7 GWh)",
    "read": "The scale crown is real but scope-dependent — InfoLink's system ranking still places BYD #3; either way BYD now leads or podiums every storage league table.",
    "source": "https://electrek.co/2026/05/13/byd-surpasses-tesla-energy-storage-bess-benchmark-2025/"
-  },
-  {
-   "date": "2026-04-07",
-   "category": "regulatory",
-   "headline": "Brazil adds BYD to the forced-labour \"dirty list\" over 2024 conditions at the Camaçari site",
-   "read": "Blocks government loans and triggers private-bank credit review in the market where BYD is building a US$98M BESS line for the December 2026 capacity auctions. A separate R$257m labour suit remains unresolved.",
-   "source": "https://www.cnbc.com/2026/04/07/brazil-puts-chinas-byd-on-list-of-shame-for-workers-past-slavery-like-conditions.html"
   },
   {
    "date": "2026-03-30",
@@ -203,11 +168,9 @@
  ],
  "strategyRead": [
   "(High confidence) We assess BYD's storage cost position derives from vertical integration and the Blade LFP platform shared with its NEV business — planned cell capacity above 500 GWh amortizes across vehicles and storage. Basis: company capacity disclosures and filings.",
-  "(High confidence) We assess BYD leads H1 2026 BESS system-integrator shipments, and (Moderate confidence) that the FY2025 crown is genuinely disputed rather than merely scope-dependent. For the half, two independent rankers agree: Benchmark puts BYD first at 9.1% of 313 GWh and InfoLink also ranks it first, calling BYD and Sungrow 'extremely similar' in utility-scale. For the full year 2025 the rankers split — Benchmark says BYD #1 at 60 GWh and 13%, while Wood Mackenzie and InfoLink both say Tesla #1, Sungrow #2, BYD #3. Wood Mackenzie's own two 2025 instruments also differ (BYD #3 on market share, #4 on the ten-criteria scorecard), which is a difference of instrument rather than a contradiction but reads as one if cited side by side without the basis. Basis: none of the rankers states its metric precisely enough — shipments versus installations versus contracted volume is never nailed down — and no source reconciles them. In cells BYD is consistently #4 (SNE 35.7 GWh / 7.7%; Benchmark 6.7%), and even there SNE's volume and Benchmark's implied volume differ by about 3 GWh. Never cite a single ranking as settled.",
-  "(High confidence) We assess BYD's storage performance is structurally invisible in its own accounts and will stay that way. The H1 2026 interim disclosed no standalone energy-storage revenue line, as no prior period has: storage sits inside 'automobiles and related products'. The consequence is that BYD is excluded from like-for-like interim comparisons of listed Chinese BESS players — the August 2026 Energy-Storage.News review of CATL, EVE, CALB, Gotion, Great Power, REPT and Desay does not mention BYD at all — while every one of those peers grew net profit sharply in the same half and BYD's group profit fell 20.54%. Basis: the disclosure record and the peer review. Any BESS revenue figure attributed to BYD is a third-party estimate; only shipment volumes and ranks exist.",
+  "(Moderate confidence) We assess the scale leadership is real but scope-dependent: Benchmark ranks BYD the #1 2025 BESS system integrator (~60 GWh) while InfoLink places it #3 in systems — single-ranking claims should be treated with caution.",
   "(Moderate confidence) We assess the HaoHan/Masdar RTC award and three repeat MC Cube-T purchases from the same Chilean developer indicate field-performance credibility at gigascale; the 2027 delivery schedule is the verification point.",
-  "(Moderate confidence) We assess Latin America is the template for BYD's non-China storage growth — following tender demand with local assembly (Brazil) mirrors the Chile SEC/Grenergy sequence.",
-  "(Moderate confidence) We assess the regulatory fence around BYD is now three-layered and asymmetric, and that the sharpest near-term item is not American. In the US, statutory naming in NDAA §154(b) bars DoD procurement from October 2027 and the June 2026 §1260H listing brings §805 contracting bars from June 2026 and June 2027 — both procurement instruments, neither an import ban, and BYD is verified absent from the UFLPA Entity List. Whether BYD is a specified foreign entity for §45X/§48E purposes is unresolved and recorded as unresolved. In Brazil — the market BYD is building a US$98M BESS line for ahead of the December 2026 capacity auctions — BYD sits on the forced-labour 'dirty list' from April 2026, which blocks government loans and triggers bank credit review, with an R$257m labour suit unresolved. Basis: the legal-alert record and Brazilian state sources."
+  "(Moderate confidence) We assess Latin America is the template for BYD's non-China storage growth — following tender demand with local assembly (Brazil) mirrors the Chile SEC/Grenergy sequence."
  ],
  "relationships": [
   {
@@ -562,7 +525,7 @@
     "periodEnd": "2025-12-31"
    },
    {
-    "period": "Q1 2026 (reported April 2026)",
+    "period": "Q1 2026 (reported April 2026; H1 2026 due late August)",
     "metrics": [
      {
       "name": "Revenue",
@@ -579,157 +542,12 @@
       "result": "Goldman Sachs reportedly called underlying EBIT a beat on overseas mix (~46% of volume)"
      }
     ],
-    "commentary": "Q1 was the trough of the domestic price war; the overseas pivot that carried H1 was already visible in the monthly volume data."
-   },
-   {
-    "period": "H1 2026 (reported 28 August 2026)",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "RMB 344.815B (-7.13%); automobiles and related RMB 275.341B (-8.98%, 79.85% of revenue), electronics and other RMB 69.405B (+0.96%, 20.13%). Gross profit RMB 64.989B (-2.81%), gross margin 18.85% (+84bp)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "No public H1 revenue consensus was located from any provider — the field is left empty rather than reconstructed"
-     },
-     {
-      "name": "Net profit (attributable)",
-      "actual": "RMB 12.33B (-20.54%); EPS RMB 1.35; gross margin 18.85% (+84bp)",
-      "expected": "No H1 net-profit consensus located",
-      "verdict": "inline",
-      "result": "The half fell; the second quarter turned — see the Q2 line"
-     },
-     {
-      "name": "Q2 2026 net profit (analyst-derived, not disclosed)",
-      "actual": "RMB 8.2B (+29.8%) — the first quarterly profit growth in five quarters",
-      "expected": "RMB 8.0B (Bloomberg analyst survey); ~RMB 9.3B implied by a Morgan Stanley / UBS / Citi / Deutsche Bank / CMBI composite",
-      "verdict": "mixed",
-      "result": "Beat the Bloomberg survey by ~2.5% and missed a five-bank composite by ~12%; no source reconciles the two consensus constructions. BYD discloses no Q2 stub — the quarter is obtained by subtracting Q1 from H1, so this line is analyst arithmetic, not a company figure"
-     },
-     {
-      "name": "Overseas mix",
-      "actual": "Overseas revenue RMB 181.268B (+33.92%) — 52.57% of total, above half for the first time; PRC including Hong Kong, Macau and Taiwan RMB 163.547B. H1 exports ~792,000 vehicles (+67.8%), a figure BYD attributes to CAAM rather than to its own count",
-      "expected": "",
-      "verdict": "beat",
-      "result": "The structural change in the half: overseas gross margin ~22% against domestic price-war compression"
-     },
-     {
-      "name": "Storage",
-      "actual": "No standalone energy-storage revenue disclosed. The interim carries two reportable segments and the only H1 change was renaming the handset segment to \"Electronics and Other Products\" — storage stays inside \"automobiles and related products\" as lithium-ion and iron battery products, with no total GWh anywhere in the filing. BYD claims the \"dual global championship\" for NEV sales and energy-storage system shipments and attributes the storage ranking to InfoLink. HaoHan commenced mass delivery in the half. Contracts named in the interim: Masdar 11.275 GWh, Grenergy 2.6 GWh, Elena (Chile) 3.5 GWh, CGN 1.2 GWh, sodium-ion at 100 MWh scale",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Two independent rankers put BYD first in H1 2026 integrator shipments and BYD cites one of them itself — but storage revenue, margin and volume are all unobservable from BYD’s own reporting. Any BYD storage revenue figure is a third-party model"
-     },
-     {
-      "name": "Cash flow and balance sheet",
-      "actual": "Operating cash flow RMB 37.335B (+17.28%); capital expenditure RMB 32.715B (-58.00%); R&D investment ~RMB 28.9B with cumulative spend above RMB 270B; cash and equivalents RMB 55.619B against reserves of ~RMB 167.4B including trading financial assets; no interim dividend declared. Finance expenses swung RMB 8.34B adverse — a RMB 3.247B net gain became a RMB 5.096B net cost",
-      "expected": "",
-      "verdict": "inline",
-      "result": "The finance-expense swing alone is about 2.6x the RMB 3.19B fall in attributable profit, which makes management’s attribution to the NEV business plus foreign-exchange losses quantitatively sufficient. Note the tension the filing leaves standing: elsewhere it states the group saw no significant liquidity impact from exchange-rate fluctuation. Separately, net debt-to-equity has risen to roughly 25% after four years in net cash"
-     }
-    ],
-    "commentary": "Vehicle sales 1,808,511 (-15.72%); production 1,814,130 (-15.11%); premium brands +61.0% YoY at 12.8% of passenger volume. Management attributed the fall primarily to second-generation Blade Battery supply rather than demand — unfulfilled flash-charge orders were reported above 140,000 units. Electronics segment profit fell 85.50% to RMB 194M. No USD overlay is carried for this period: no sourced CNY/USD rate for H1 2026 was located and the schema forbids an unsourced conversion, so the normalized comparison stays on FY2025. The shares fell 6.04% in Hong Kong and 2.08% in Shenzhen in the first full session after the print; no named-bank rating action dated after the print was locatable. August 2026 NEV sales of 440,293 (+17.8%) narrowed the year-to-date decline to -6.84%. The widely-quoted line that BYD called core-business profitability \"stable\" does not appear in the HKEX filing and is not carried here.",
-    "periodType": "interim",
-    "periodEnd": "2026-06-30"
+    "commentary": "H1 2026 monthly data show NEV sales ~1.81M (-15.7%) with overseas +70.7% — the overseas pivot is the offset to domestic price-war pressure."
    }
   ],
-  "commentary": "Group figures company-reported; consensus numbers are Bloomberg/press estimates. BYD does not disclose standalone energy-storage revenue — storage sits inside the automobiles & related products segment, so shipment GWh (third-party estimates) is the best storage KPI. H1 2026 confirms the disclosure position: no standalone ESS revenue line appears in the interim either, so shipment GWh from third-party rankers remains the only storage KPI — and those rankers disagree on both rank and volume."
+  "commentary": "Group figures company-reported; consensus numbers are Bloomberg/press estimates. BYD does not disclose standalone energy-storage revenue — storage sits inside the automobiles & related products segment, so shipment GWh (third-party estimates) is the best storage KPI."
  },
  "sources": [
-  {
-   "label": "BYD — 2026 Interim Results Announcement (HKEX, 113pp): revenue RMB 344.815B (-7.13%), net profit RMB 12.325B (-20.54%), overseas RMB 181.268B (52.57%); two reportable segments only, storage not broken out",
-   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801633.pdf",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "BYD — 2026 Interim Report (HKEX, 114pp)",
-   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801695.pdf",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "BYD — voluntary announcement on the US Department of Defense Chinese Military Companies list (HKEX): the company rejects the designation and notes it is not a sanctions list",
-   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0609/2026060901188.pdf",
-   "date": "2026-06-09"
-  },
-  {
-   "label": "BYD — voluntary announcement, production and sales volume for August 2026 (HKEX): NEV sales 440,293 (+17.8%), exports 189,466",
-   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090101971.pdf",
-   "date": "2026-09-01"
-  },
-  {
-   "label": "BYD Energy Storage — Latin America's largest battery plant inaugurated: Elena, Chile, 446 MW / 3.5 GWh on 624 MC Cube-T units",
-   "url": "https://www.bydenergy.com/en/news/20260615",
-   "date": "2026-06-15"
-  },
-  {
-   "label": "CnEVPost — H1 2026 results: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%), overseas revenue 52.57% of total",
-   "url": "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "Bloomberg — BYD profit rises for the first time in five quarters on exports (Q2 net RMB 8.2B, +30%)",
-   "url": "https://www.bloomberg.com/news/articles/2026-08-28/byd-profit-rises-for-first-time-in-five-quarters-as-exports-boom",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "SCMP — Q2 2026 net profit RMB 8.2B against a Bloomberg analyst survey of RMB 8.0B",
-   "url": "https://www.scmp.com/business/china-evs/article/3365652/byd-posts-us12-billion-profit-second-quarter-surging-global-demand",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "CarNewsChina — H1 2026 sales hit by second-generation Blade Battery shortages; Wang Chuanfu on battery output as the binding constraint",
-   "url": "https://carnewschina.com/2026/08/29/byd-sees-export-surge-yet-h1-2026-sales-hit-by-second-gen-blade-battery-shortages/",
-   "date": "2026-08-29"
-  },
-  {
-   "label": "Benchmark Mineral Intelligence — H1 2026 BESS cell and system shipments: BYD #1 in systems at 9.1% of 313 GWh, #4 in cells at 6.7% of 490 GWh",
-   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
-   "date": "2026-08-21"
-  },
-  {
-   "label": "Wood Mackenzie — Chinese integrators capture 76% of the global BESS market (2025 shares; Tesla #1, Sungrow #2, BYD #3)",
-   "url": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
-   "date": "2026-06-29"
-  },
-  {
-   "label": "CnEVPost (SNE Research) — H1 2026 global ESS battery share: BYD #4 at 35.7 GWh / 7.7%",
-   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
-   "date": "2026-08-04"
-  },
-  {
-   "label": "Holland & Knight — Department of War updates the §1260H list; §805 procurement phases 30 Jun 2026 and 30 Jun 2027",
-   "url": "https://www.hklaw.com/en/insights/publications/2026/07/department-of-war-updates-section-1260h",
-   "date": "2026-07-28"
-  },
-  {
-   "label": "WilmerHale — Pentagon adds 65 entities to the §1260H list (8 Jun 2026); BYD Company Limited named",
-   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
-   "date": "2026-06-12"
-  },
-  {
-   "label": "Arnold & Porter — FY2024 NDAA §154: the six named battery producers and the 1 Oct 2027 DoD prohibition",
-   "url": "https://www.arnoldporter.com/en/perspectives/advisories/2023/12/fy24-ndaa-navigating-expanded-restrictions",
-   "date": "2023-12"
-  },
-  {
-   "label": "DHS — UFLPA Entity List (BYD and its FinDreams and BYD Electronic units absent as of the 2026-07-31 update)",
-   "url": "https://www.dhs.gov/uflpa-entity-list",
-   "date": "2026-07-31"
-  },
-  {
-   "label": "CNBC / Reuters — Brazil adds BYD to the forced-labour 'dirty list' over the Camaçari site",
-   "url": "https://www.cnbc.com/2026/04/07/brazil-puts-chinas-byd-on-list-of-shame-for-workers-past-slavery-like-conditions.html",
-   "date": "2026-04-07"
-  },
-  {
-   "label": "ess-news — Greenvolt and BYD Energy sign a 600 MW / 2.4 GWh BESS supply deal in Poland",
-   "url": "https://www.ess-news.com/2026/07/01/greenvolt-byd-energy-sign-supply-deal-for-600-mw-bess-in-poland/",
-   "date": "2026-07-01"
-  },
-  {
-   "label": "Foley Hoag — the prohibited foreign entity (FEOC) rules and battery storage",
-   "url": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/",
-   "date": "2026-07"
-  },
   {
    "label": "ESS News — Masdar RTC 11.275 GWh HaoHan supply detail (Jul 2026)",
    "url": "https://www.ess-news.com/2026/07/13/byd-to-supply-11-275-gwh-for-masdars-abu-dhabi-rtc-project/",
@@ -892,48 +710,6 @@
    "url": "https://www.vpsolar.com/en/product/byd-battery-box-premium-hvs-hvm/"
   }
  ],
- "lastUpdated": "2026-09-08",
- "profileVersion": 8,
- "policyExposure": [
-  {
-   "regime": "NDAA §154 Department of Defense procurement ban",
-   "status": "announced",
-   "effectiveDate": "2027-10-01",
-   "exposure": "BYD Company, Ltd. is one of exactly six entities named in §154(b) of the FY2024 National Defense Authorization Act, alongside CATL, Envision Energy, EVE Energy, Gotion High-tech and Hithium. From 1 October 2027 the Department of Defense may not procure batteries produced by any of them, where 'produced by' means the entity assembled or manufactured the final product or created or provided a majority of the components. A Secretary of Defense waiver exists. The ban is prospective and confined to Defense procurement — it is not a government-wide bar.",
-   "mitigation": "None available — statutory naming is not curable by restructuring.",
-   "source": "https://www.arnoldporter.com/en/perspectives/advisories/2023/12/fy24-ndaa-navigating-expanded-restrictions"
-  },
-  {
-   "regime": "DoD §1260H Chinese military companies list",
-   "status": "in-effect",
-   "effectiveDate": "2026-06-08",
-   "exposure": "BYD Company Limited was added to the §1260H list in the update released 8 June 2026 — 65 additions taking the list to 188 entities — on military-civil fusion grounds. The consequence runs through §805 of the FY2024 NDAA in two phases: from 30 June 2026 the Department may not enter, renew or extend contracts with a listed entity, and from 30 June 2027 that bar extends to goods and services produced or developed by one. A §1260H designation is not itself a sanction and imposes no import ban or prohibition on commercial transactions; the DFARS rule implementing §805 has not been published. BYD responded the next day in a voluntary HKEX announcement, stating that it is neither a Chinese military company nor a military-civil fusion contributor and that there is no justification for its inclusion, noting that the list is not a sanctions list and does not restrict securities transactions, and reserving the right to seek review or legal proceedings. That response is the company's own and is recorded as such, not as adjudication.",
-   "mitigation": "None at entity level; the company disputes the designation on the record. The practical effect on BYD is procurement screening by federal-adjacent and utility buyers rather than a direct sales bar.",
-   "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies"
-  },
-  {
-   "regime": "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
-   "status": "announced",
-   "effectiveDate": "2026-01-01",
-   "exposure": "UNRESOLVED, AND RECORDED AS SUCH. A US storage project using BYD systems must clear a material assistance cost ratio of 55% non-prohibited content in 2026, rising toward 75% by 2030, with construction started before 1 January 2026 exempt; Treasury and IRS issued Notice 2026-15 in February 2026. Whether BYD is itself a specified foreign entity is the open question. No fetched primary or law-firm document names BYD as an SFE. What is established is that BYD is named in NDAA §154(b), and that counsel describe the SFE definition as importing entities on certain national-security lists — including, per one summary, entities ineligible for Department of Defense contracts — without enumerating which lists or naming companies. The final link is therefore an inference, not a verified fact, and the document most likely to settle it was unreachable from this session's egress. Treat as a well-supported inference with a documented gap.",
-   "mitigation": "Not determinable until the SFE question is closed against Notice 2026-15 itself.",
-   "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
-  },
-  {
-   "regime": "Lists BYD is NOT on",
-   "status": "in-effect",
-   "effectiveDate": "2026-07-31",
-   "exposure": "Recorded because the corpus and the trade press both tend to assume the opposite. BYD Company Limited, BYD Auto, FinDreams and BYD Electronic do not appear on the DHS UFLPA Entity List as of the 31 July 2026 update, which added 43 companies effective 3 August and took the list to roughly 285 entities. No automotive OEM is on that list. Verified against the DHS list itself, not against coverage of it.",
-   "mitigation": "Not applicable — this is an absence rather than an exposure.",
-   "source": "https://www.dhs.gov/uflpa-entity-list"
-  },
-  {
-   "regime": "Brazil forced-labour registry and labour prosecution",
-   "status": "in-effect",
-   "effectiveDate": "2026-04-07",
-   "exposure": "BYD was added to Brazil's 'dirty list' of employers in April 2026 over conditions at the Camaçari site in 2024, where 471 Chinese workers were brought in illegally and 163 were rescued from conditions the authorities characterised as slavery-like. Listing blocks access to government loans and triggers credit review at private banks; it does not halt plant operations. A separate R$257m (~US$50m) suit filed by Bahia labour prosecutors in May 2025 against BYD and two contractors was unresolved as of this revision. This is the clearest non-US policy exposure in the file and it bears on the market BYD is building a BESS line for.",
-   "mitigation": "Not established from the public record.",
-   "source": "https://www.cnbc.com/2026/04/07/brazil-puts-chinas-byd-on-list-of-shame-for-workers-past-slavery-like-conditions.html"
-  }
- ]
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 7
 }

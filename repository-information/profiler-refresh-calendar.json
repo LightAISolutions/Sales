@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-07",
+  "updated": "2026-09-08",
   "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
   "companies": [
     {
@@ -224,14 +224,17 @@
     },
     {
       "slug": "byd",
-      "nextReport": "2026-08-29",
-      "confirmed": true,
-      "source": "H1 2026 interim results scheduled 2026-08-29 (SZSE: 002594 / HKEX: 1211). OVERDUE — the 2026-08-30 one-shot fired (SUCCEEDED) but landed no commit and the dossier still reads 'H1 2026 due late August'. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
-      "lastRefreshed": "2026-08-30",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "source": "Q3 2026 report — SZSE: 002594 / HKEX: 1211. THE DATE IS NOT COMPANY-CONFIRMED: it is the statutory backstop, the 2026-10-31 CSRC quarterly disclosure deadline for A-share issuers. H1 2026 was published 2026-08-28 and folded into the dossier at v8 on 2026-09-08 by the Phase 6 session-2 preflight, clearing the row that had been overdue since 2026-08-29 (the 2026-08-30 one-shot fired SUCCEEDED but landed no commit). HOW TO CONFIRM: the SZSE disclosure portal or HKEXnews; note that szse.cn and bydglobal.com were unreachable from the 2026-09-08 session's egress while hkexnews.hk answered.",
+      "lastRefreshed": "2026-09-08",
       "watch": [
-        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
-        "BYD Energy Storage (BESS) shipments and the MC Cube line",
-        "Blade/second-gen cell roadmap and overseas ESS wins"
+        "THE CLAIM TO TEST: BYD is #1 in H1 2026 BESS system-integrator shipments on Benchmark and InfoLink, but #3 for FY2025 on Wood Mackenzie and InfoLink against Benchmark's #1. Watch whether the Q3/FY2026 rankings converge or the split persists — and always record the ranking basis, which no ranker states precisely.",
+        "Storage disclosure: BYD has never broken out energy-storage revenue and did not in H1 2026. Watch for a segment line; until one appears, third-party shipment GWh is the only storage KPI.",
+        "Whether BYD is a specified foreign entity for OBBBA §45X/§48E purposes is UNRESOLVED in the dossier. Close it against IRS Notice 2026-15 itself if irs.gov is reachable — that single fetch converts an inference into a verified risk line or retracts it.",
+        "Second-generation Blade Battery supply — management named battery output, not demand, as the binding constraint on H1 volumes (140,000+ unfulfilled flash-charge orders). Watch the Xixian base ramp and whether capacity reaches the ~100 GWh estimated for end-2026.",
+        "Net debt-to-equity rose to ~25% after four years in net cash following the end of the IOU-based supplier-payment system. Watch whether that reverses or entrenches.",
+        "Brazil: the forced-labour 'dirty list' entry (Apr 2026) and the unresolved R$257m Bahia labour suit, against the US$98M BESS line built for the December 2026 capacity auctions."
       ]
     },
     {
@@ -605,18 +608,18 @@
     },
     {
       "slug": "eve-energy",
-      "nextReport": "2026-08-20",
-      "confirmed": true,
-      "source": "H1 2026 semi-annual report (SZSE ChiNext: 300014) — expected 2026-08-18 (TradingView) or 2026-08-20 (StockAnalysis); sources conflicted at arming, so the desk confirms the actual publication date. OVERDUE — the 2026-08-21 one-shot fired (SUCCEEDED) but landed no commit. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
-      "lastRefreshed": "2026-08-30",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "source": "Q3 2026 report — SZSE ChiNext: 300014. THE DATE IS NOT COMPANY-CONFIRMED: it is the statutory backstop, the 2026-10-31 CSRC quarterly disclosure deadline. H1 2026 was published ~2026-08-19 and folded into the dossier at v6 on 2026-09-08 by the Phase 6 session-2 preflight, clearing the row that had been overdue since 2026-08-20 (the 2026-08-21 one-shot fired SUCCEEDED but landed no commit). NOTE: sources disagree on whether the interim landed 18, 19 or 20 August; szse.cn was unreachable from the 2026-09-08 session's egress. HOW TO CONFIRM: cninfo.com.cn, the CSRC-designated disclosure portal.",
+      "lastRefreshed": "2026-09-08",
       "watch": [
-        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[] (the dossier still carries only 'Q1 2026 + H1 2026 guidance')",
-        "H1 2026 actuals vs the +95-110% YoY net-profit pre-guidance",
-        "ESS shipment volumes and 628Ah/Mr.Big ramp vs the >10 GWh 2026 guidance",
-        "Hong Kong H-share listing status (twice-filed, unconsummated as of Aug 2026)",
-        "US DoD 1260H listing (verify the Reuters original)",
-        "LG Energy Solution/Tulip ITC Section 337 case",
-        "AI data-center BBU customer wins; Malaysia/Hungary plant progress"
+        "THE CLAIM TO TEST: EVE's global ESS rank. SNE Research says #2 (48.0 GWh, 10.4%); InfoLink, Benchmark, TrendForce and ICC Sino all say #3 behind Hithium. SNE's 48.0 GWh also exceeds EVE's own reported 44.46 GWh by ~8% and no source explains the gap. Carry both, never one.",
+        "Profit quality: H1 2026 had investment income at 31.91% of total profit and operating cash flow at -RMB 388M, but ex-items profit grew FASTER than the headline (111.89% vs 105.66%). Watch whether H2 cash flow recovers as the inventory build unwinds.",
+        "Margins fell in every segment (storage 12.51% vs CATL's 23.96%). Watch whether the overseas bases turn accretive — overseas margin fell 6.23pp against domestic 1.96pp.",
+        "ITC 337-TA-1518 (instituted 20 Aug 2026): the five patent numbers, the presiding ALJ and the target date were not obtainable — usitc.gov 403'd from the 2026-09-08 egress. Retry from a different path.",
+        "AI data-centre BBU: still no independently named customer. TrendForce's July 2026 AIDC vendor analysis names 15+ Chinese vendors and does not include EVE. Watch for a first named design win.",
+        "Hong Kong H-share listing status (twice-filed, unconsummated). NOTE: targeted searches found NO CSRC probe against EVE — the earlier 'CSRC probe' framing should not be repeated without a source.",
+        "Amplify Cell Technologies (EVE 10%): 73 WARN layoffs Apr 2026, Mississippi production slipped to at least 2028."
       ]
     },
     {

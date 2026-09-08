@@ -1,0 +1,1110 @@
+{
+ "schemaVersion": 1,
+ "id": "grid-scale-bess--competitive--2026-09-08",
+ "title": "Grid-Scale Battery Storage — Competitive Assessment",
+ "type": "competitive",
+ "topic": "Grid-scale battery energy storage systems — the head-to-head set of system suppliers and integrators",
+ "generated": "2026-09-08",
+ "style": "intel-briefing",
+ "scope": {
+  "kind": "slugs",
+  "value": [
+   "sungrow",
+   "tesla",
+   "fluence",
+   "byd",
+   "catl",
+   "wartsila",
+   "canadian-solar",
+   "envision-energy",
+   "crrc-zhuzhou",
+   "hyperstrong",
+   "hithium",
+   "trina-storage",
+   "jinko",
+   "sunwoda",
+   "ls-energy-solutions",
+   "prevalon",
+   "lg-energy-solution",
+   "samsung-sdi",
+   "flexgen"
+  ],
+  "rationale": "The `storage-integrators-and-containers` segment as the registry holds it on the day — ten incumbents and eight challengers (18) — plus `flexgen`, kept as the named adjacent comparator the pure-integrator consolidation judgment needs (19). The rule, not the list, is the scope, and it is re-derived for each edition: it grew from twelve hand-cut names at the 2026-08-29 edition to nineteen here, adding eight and dropping one. `eve-energy` leaves because the registry places it in cells and in-hall power rather than in the integrator set — its Mr.Giant block is a cell maker's system line. The segment's other adjacent members — the gen-set OEMs, Vertiv, Eaton, GE Vernova, Huawei Digital Power, Narada, ON.energy and Sinexcel — stay out because they sell into the integration business rather than compete in it."
+ },
+ "coverage": {
+  "companies": [
+   {
+    "slug": "sungrow",
+    "name": "Sungrow",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 62,
+    "srcFirstPct": 45,
+    "kpiNorm": true
+   },
+   {
+    "slug": "tesla",
+    "name": "Tesla",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 30,
+    "srcFirstPct": 20,
+    "kpiNorm": true
+   },
+   {
+    "slug": "fluence",
+    "name": "Fluence",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 33,
+    "srcFirstPct": 61,
+    "kpiNorm": true
+   },
+   {
+    "slug": "byd",
+    "name": "BYD",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 52,
+    "srcFirstPct": 19,
+    "kpiNorm": true
+   },
+   {
+    "slug": "catl",
+    "name": "CATL",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 51,
+    "srcFirstPct": 37,
+    "kpiNorm": true
+   },
+   {
+    "slug": "wartsila",
+    "name": "Wärtsilä",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 30,
+    "srcFirstPct": 70,
+    "kpiNorm": false
+   },
+   {
+    "slug": "canadian-solar",
+    "name": "Canadian Solar (e-STORAGE)",
+    "profileVersion": 4,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 29,
+    "srcFirstPct": 59,
+    "kpiNorm": true
+   },
+   {
+    "slug": "envision-energy",
+    "name": "Envision Energy",
+    "profileVersion": 3,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 24,
+    "srcFirstPct": 25,
+    "kpiNorm": false
+   },
+   {
+    "slug": "crrc-zhuzhou",
+    "name": "CRRC Zhuzhou Institute",
+    "profileVersion": 3,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 21,
+    "srcFirstPct": 38,
+    "kpiNorm": false
+   },
+   {
+    "slug": "hyperstrong",
+    "name": "HyperStrong",
+    "profileVersion": 4,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 26,
+    "srcFirstPct": 38,
+    "kpiNorm": false
+   },
+   {
+    "slug": "hithium",
+    "name": "Hithium",
+    "profileVersion": 13,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 52,
+    "srcFirstPct": 44,
+    "kpiNorm": true
+   },
+   {
+    "slug": "trina-storage",
+    "name": "Trina Storage",
+    "profileVersion": 4,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 32,
+    "srcFirstPct": 47,
+    "kpiNorm": false
+   },
+   {
+    "slug": "jinko",
+    "name": "Jinko",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 15,
+    "srcFirstPct": 40,
+    "kpiNorm": true
+   },
+   {
+    "slug": "sunwoda",
+    "name": "Sunwoda",
+    "profileVersion": 4,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 21,
+    "srcFirstPct": 29,
+    "kpiNorm": true
+   },
+   {
+    "slug": "ls-energy-solutions",
+    "name": "LS Energy Solutions",
+    "profileVersion": 3,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 20,
+    "srcFirstPct": 60,
+    "kpiNorm": false
+   },
+   {
+    "slug": "prevalon",
+    "name": "Prevalon Energy",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 22,
+    "srcFirstPct": 50,
+    "kpiNorm": false
+   },
+   {
+    "slug": "lg-energy-solution",
+    "name": "LG Energy Solution",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 15,
+    "srcFirstPct": 53,
+    "kpiNorm": true
+   },
+   {
+    "slug": "samsung-sdi",
+    "name": "Samsung SDI",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 15,
+    "srcFirstPct": 60,
+    "kpiNorm": true
+   },
+   {
+    "slug": "flexgen",
+    "name": "FlexGen",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 25,
+    "srcFirstPct": 72,
+    "kpiNorm": false
+   }
+  ],
+  "gaps": [
+   "All revenue comparisons are **whole-company**, not BESS-segment — no company in scope discloses BESS revenue comparably. A company-level figure overstates BESS scale for diversified groups (storage is a single-digit share of BYD and Tesla revenue) and is the whole business only for pure plays like Fluence. H1 2026 made this worse rather than better: BYD's interim confirms storage is still inside 'automobiles and related products' with no GWh anywhere in the filing.",
+   "**Eight of nineteen carry no normalized figure**, each for a stated reason: Wärtsilä (storage reclassified pending the RCT JV), HyperStrong (public and growing but no USD overlay carried), Trina Storage (segment not broken out of the parent), CRRC Zhuzhou (business unit of a listed parent, BU profitability undisclosed), Envision Energy, LS Energy Solutions, Prevalon and FlexGen (private or subsidiary, no standalone financials). They appear with the reason rather than with a manufactured number.",
+   "**No H1 2026 figure enters the normalized table.** Neither Sungrow's, BYD's nor any other H1 print carries a sourced CNY/USD rate in its dossier, and the schema forbids an unsourced conversion — so the comparison stays on the last full fiscal year while the narrative carries the halves.",
+   "Hithium's comparable figure is FY2024, from its HKEX listing prospectus — no FY2025 full-year figure is publicly filed after three failed listing attempts.",
+   "**Rankings in this report are reproduced as the dossiers cite them and are not reconciled**, because they cannot be: Benchmark, Wood Mackenzie and InfoLink disagree on the FY2025 integrator order, Wood Mackenzie's own two 2025 instruments disagree with each other, and none states its metric precisely enough to explain the gap. The ranking-basis table records the instrument for each claim.",
+   "This report is built from the covered dossiers alone: no fresh research was performed for it, and no field-note content appears in it. Sourcing quality is bounded by each dossier's own source list. The `byd` and `eve-energy` dossiers were refreshed to their H1 2026 interims immediately before this edition was authored; every other dossier is pinned as it stood."
+  ],
+  "dataWindow": {
+   "oldest": "2026-08-30",
+   "newest": "2026-09-08"
+  }
+ },
+ "bluf": "**BOTTOM LINE UP FRONT:** The grid-scale integrator contest is nineteen companies, not twelve, and the eight added on the registry's own roster include a Wood Mackenzie top-five name the previous cut omitted entirely [c:c37]. Scale leadership still sits with vertically integrated Chinese cell-owners, but H1 2026 broke the link between company scale and storage performance: BYD was ranked first in system-integrator shipments by two independent counts while its group profit fell 20.54%, and Sungrow's storage line carried exactly half its revenue while both the line and the company shrank [c:c31] [c:c30] [c:c3]. Meanwhile every listed Chinese peer whose storage business is visible as a segment grew profit sharply in the same half [c:c33]. The read: whole-company revenue — the only figure comparable across this set — is now actively misleading about storage, and the pure-integrator tier continues to consolidate out of independence rather than into it.",
+ "keyJudgments": [
+  {
+   "text": "**(High confidence)** We assess the peer set must be taken from the registry rather than hand-cut, and that the previous cut materially under-counted the field. Eight covered companies selling grid-scale BESS at system level sat outside the 2026-08-29 scope, among them Envision Energy — tied fifth on the only comprehensive global integrator scorecard published — and CRRC Zhuzhou, which leads APAC regional share. Basis: the `storage-integrators-and-containers` roster on the day, against the prior edition's twelve.",
+   "confidence": "high",
+   "cites": [
+    "c37",
+    "c32",
+    "c23"
+   ]
+  },
+  {
+   "text": "**(High confidence)** We assess company scale and storage performance have decoupled, and that H1 2026 is the print that demonstrates it. BYD holds the H1 2026 integrator crown on two independent counts while its group profit fell 20.54% on a RMB 8.34B adverse finance-expense swing; Sungrow's ESS reached exactly 50.00% of revenue while group revenue fell 28.99% and the storage line itself fell 13.18%. Basis: both interims as filed, plus Benchmark and InfoLink shipment counts.",
+   "confidence": "high",
+   "cites": [
+    "c44",
+    "c30",
+    "c31",
+    "c3",
+    "c4"
+   ]
+  },
+  {
+   "text": "**(High confidence)** We assess no ordinal ranking in this market should be cited without its instrument. Benchmark ranks BYD #1 for FY2025 while Wood Mackenzie and InfoLink rank it #3; Wood Mackenzie's own market-share and scorecard instruments place BYD differently in the same year; and none of the three states its metric precisely enough to reconcile. Basis: the three rankings as the dossiers carry them. This is a claim about the evidence, not about the companies.",
+   "confidence": "high",
+   "cites": [
+    "c31",
+    "c32",
+    "c37"
+   ]
+  },
+  {
+   "text": "**(Moderate confidence)** We assess the pure-integrator tier is consolidating out of independence. Wärtsilä has moved storage into a 50/50 JV and stopped reporting it as a segment, Prevalon was acquired by Nextpower for up to $365M, and FlexGen converted Powin's assets into a 25+ GWh software-and-services fleet rather than an integration business. Basis: three completed transactions in eighteen months. The survivors in that tier lead on provenance — US-made or Korean cells — rather than on scale.",
+   "confidence": "moderate",
+   "cites": [
+    "c36",
+    "c27",
+    "c28",
+    "c40",
+    "c43"
+   ]
+  },
+  {
+   "text": "**(Moderate confidence)** We assess the storage cycle turned favourably in H1 2026 for companies whose storage is visible, and that the turn is priced in volume rather than margin. Utility-scale cell prices recovered quarter-on-quarter from a price-war floor near RMB 0.30/Wh, and every listed Chinese peer with a storage segment grew profit — but the margin gap between the leader and the second tier is wide (CATL 23.96% storage gross margin against EVE's 12.51%), which is the second tier paying for volume with price. Basis: the interim review of the listed Chinese BESS players.",
+   "confidence": "moderate",
+   "cites": [
+    "c33"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "changed",
+   "title": "What changed since the last edition",
+   "kind": "prose",
+   "read": "The corpus movement that made this edition necessary, before any of it is interpreted.",
+   "cites": [
+    "c3",
+    "c4",
+    "c30",
+    "c31",
+    "c32",
+    "c33",
+    "c34",
+    "c35",
+    "c37",
+    "c44",
+    "c45"
+   ],
+   "ps": [
+    "**The peer set is the registry's, and it is nineteen.** The 2026-08-29 edition cut the field at twelve on a hand-drawn \"cell-to-system suppliers and pure integrators\" rule. This edition takes the `storage-integrators-and-containers` segment as the registry holds it on the day — ten incumbents and eight challengers — plus FlexGen as the named adjacent comparator the consolidation judgment needs. Eleven names carry over. **Eight are added**: Envision Energy, CRRC Zhuzhou, HyperStrong, Trina Storage, Jinko, Sunwoda, LS Energy Solutions and Prevalon. **One leaves**: EVE Energy, which the registry places in cells and in-hall power rather than in the integrator set — its Mr.Giant block is a cell maker's system line, and its H1 2026 filing reports storage as a battery segment rather than an integration business [c:c45], and the cell rankers that place it second or third globally are counting cells, not systems [c:c34]. The omissions mattered: Envision is tied fifth on Wood Mackenzie's 2026 integrator ranking [c:c37] and was outside the old scope entirely.",
+    "**Sungrow's H1 2026 is the print that dates the last edition.** Revenue fell 28.99% to RMB 30.912B and attributable profit 32.01% to RMB 5.259B, while gross margin *rose* 1.56pp to 35.92% [c:c3]. Inside that, energy storage carried the company for the first time — ESS systems RMB 15.456B, exactly 50.00% of revenue, on 25 GWh of H1 shipments — but the storage line itself fell 13.18% and its gross margin gave up 7.49pp to 32.43% [c:c3] [c:c4]. Overseas held far better than home: mainland China -54.71%, overseas +/-10.59%. The prior edition's Judgment 1 rested on Sungrow's mix shift into storage; the mix shift is confirmed and the revenue is down by nearly a third.",
+    "**BYD's H1 2026 landed, and it inverts the frame.** Group revenue fell 7.13% to RMB 344.815B and attributable profit 20.54% to RMB 12.325B, with a RMB 8.34B adverse swing in finance expenses that is on its own about 2.6 times the fall in profit [c:c44] [c:c30]. Yet on shipments BYD is first: Benchmark puts it at 9.1% of 313 GWh of H1 system-integrator shipments and InfoLink also ranks it first, a ranking BYD cites in its own interim [c:c31] [c:c44]. The two facts sit together because BYD discloses no storage segment at all — the interim's only structural change was renaming the handset segment, and storage stays inside \"automobiles and related products\" with no GWh figure anywhere in the filing [c:c44].",
+    "**The FY2025 integrator crown is disputed, not merely scope-dependent — and the last edition did not say so.** Benchmark ranks BYD first for 2025 at 60 GWh and 13% share; Wood Mackenzie and InfoLink both rank Tesla first, Sungrow second and BYD third [c:c32]. Wood Mackenzie's own two 2025 instruments differ from each other — third on market share, fourth on the ten-criteria scorecard [c:c37] — which is a difference of instrument, not a contradiction, but reads as one when cited side by side without the basis. None of the rankers states its metric precisely enough to explain the gap, and no source reconciles them. This edition therefore carries the basis in a table of its own rather than a single ordinal.",
+    "**And the half was good for everyone except the diversified.** Every listed Chinese BESS peer with a pure-play storage line grew profit sharply in H1 2026 — CATL +41.98% with storage revenue +87.54% at a 23.96% gross margin, EVE +105.66% with storage +69.15% at 12.51%, CALB, Gotion, Great Power, REPT and Desay all up in triple digits or from losses — against utility-scale cell prices recovering quarter-on-quarter from a price-war floor near RMB 0.30/Wh [c:c33]. BYD's group profit fell 20.54% in the same half, and Sungrow's fell 32.01%. The divergence is not about storage demand; it is about what else is in the P&L."
+   ]
+  },
+  {
+   "id": "fin",
+   "title": "Head-to-head: latest annual scale, by registry role",
+   "kind": "table",
+   "intro": "Whole-company revenue normalized to US$ millions on each dossier's own cited FX basis — **11 of the 19** in scope carry a comparable figure, and the eight that do not appear with the reason rather than with a manufactured number. The registry role is a column so incumbents and challengers stay like-for-like within the same table. Storage's share of these figures runs from a single-digit percentage (BYD, Tesla) to effectively all of it (Fluence, Hithium): the comparison sizes the balance sheets behind the fight, **not** BESS revenue, which no company in scope discloses comparably.",
+   "cols": [
+    "Company",
+    "Registry role",
+    "US$M",
+    "As reported",
+    "vs expectations",
+    "Basis"
+   ],
+   "rows": [
+    [
+     "BYD",
+     "Incumbent",
+     "111,860",
+     "RMB 803.97B (+3.5%)",
+     "miss",
+     "FY2025 (reported March 2026) [c:c10]"
+    ],
+    [
+     "Tesla",
+     "Incumbent",
+     "94,830",
+     "$94.83B (-3%); Q4 $24.90B",
+     "beat",
+     "FY2025 [c:c11]"
+    ],
+    [
+     "CATL",
+     "Incumbent",
+     "58,951",
+     "RMB 423.7B (+17.0%)",
+     "beat",
+     "FY2025 (reported March 2026) [c:c12]"
+    ],
+    [
+     "LG Energy Solution",
+     "Challenger",
+     "16,652",
+     "KRW 23.67T (-7.6%)",
+     "miss",
+     "FY2025 [c:c13]"
+    ],
+    [
+     "Sungrow",
+     "Incumbent",
+     "12,408",
+     "RMB 89.18B (+14.6%)",
+     "inline",
+     "FY2025 (reported April 2026) [c:c14]"
+    ],
+    [
+     "Jinko",
+     "Challenger",
+     "9,370",
+     "RMB 65.50B / $9.37B (-29.0%)",
+     "beat",
+     "FY2025 [c:c16]"
+    ],
+    [
+     "Samsung SDI",
+     "Challenger",
+     "9,335",
+     "KRW 13.27T (-20%)",
+     "miss",
+     "FY2025 [c:c15]"
+    ],
+    [
+     "Sunwoda",
+     "Challenger",
+     "8,800",
+     "RMB 63.246B (+12.9%)",
+     "n/a",
+     "FY2025 (reported 23 Apr 2026) [c:c17]"
+    ],
+    [
+     "Canadian Solar (e-STORAGE)",
+     "Incumbent",
+     "5,600",
+     "$5.6B; net loss $(104.1)M",
+     "miss",
+     "FY2025 [c:c18]"
+    ],
+    [
+     "Fluence",
+     "Incumbent",
+     "2,300",
+     "$2.3B — below even the final guided range",
+     "miss",
+     "FY2025 (ended 30 Sep 2025) [c:c19]"
+    ],
+    [
+     "Hithium",
+     "Challenger",
+     "1,800",
+     "RMB 12.917B (~$1.8B, +26-27%)",
+     "inline",
+     "FY2024, per the HKEX prospectus [c:c20]"
+    ],
+    [
+     "Wärtsilä",
+     "Incumbent",
+     "not normalized",
+     "Group net sales EUR 6,914M (+7%); Energy Storage segment net sales EUR 694M (-13%), order intake -60%",
+     "—",
+     "Storage reclassified pending the RCT joint venture — no USD overlay carried [c:c21] [c:c36]"
+    ],
+    [
+     "HyperStrong",
+     "Incumbent",
+     "not normalized",
+     "RMB 11.61B (+40.4%); net profit RMB 951.2M (+46.8%)",
+     "—",
+     "Public and growing fast, but the dossier carries no normalized USD figure [c:c24]"
+    ],
+    [
+     "Trina Storage",
+     "Challenger",
+     "not normalized",
+     "Parent Trina Solar RMB 67.28B (-16.2%), attributable net loss ~RMB 7.0B",
+     "—",
+     "Storage segment revenue is not broken out of the parent [c:c25]"
+    ],
+    [
+     "CRRC Zhuzhou Institute",
+     "Incumbent",
+     "not normalized",
+     "Comprehensive Energy BU revenue RMB 7.085B (+22.9%), 14.16 GWh shipped",
+     "—",
+     "Business unit of a listed parent; BU profitability undisclosed [c:c23]"
+    ],
+    [
+     "Envision Energy",
+     "Incumbent",
+     "not normalized",
+     "Private — no audited public financials; >90 GWh of orders in hand",
+     "—",
+     "Order book and financing events only [c:c47]"
+    ],
+    [
+     "Prevalon Energy",
+     "Challenger",
+     "not normalized",
+     "Private through July 2026; acquired by Nextpower for up to $365M",
+     "—",
+     "No standalone financials ever published [c:c27]"
+    ],
+    [
+     "LS Energy Solutions",
+     "Challenger",
+     "not normalized",
+     "Private subsidiary of KRX-listed LS ELECTRIC; >1.5 GW / 2.6 GWh installed base",
+     "—",
+     "LS-ES standalone is undisclosed within the parent [c:c43]"
+    ],
+    [
+     "FlexGen",
+     "Adjacent",
+     "not normalized",
+     "Private — no disclosed revenue; 25+ GWh under software and services after Powin",
+     "—",
+     "Software and services scale via acquisition [c:c28]"
+    ]
+   ],
+   "note": "FX conversions per each dossier's stated basis (2025 calendar-year average rates, cited in the profiles). Hithium's figure is FY2024 — no FY2025 full-year figure is publicly filed. **No H1 2026 figure appears in this table**: neither Sungrow's, BYD's nor any other H1 print carries a sourced CNY/USD rate in its dossier, and the schema forbids an unsourced conversion, so the normalized comparison stays on the last full fiscal year for every company."
+  },
+  {
+   "id": "fin-bars",
+   "title": "Revenue magnitude",
+   "kind": "bars",
+   "unit": "US$M (whole company, latest annual)",
+   "intro": "The eleven comparable figures drawn to scale. The point of the picture: this head-to-head is fought by companies whose overall scale differs by roughly 62x, and the registry role does not track the size.",
+   "items": [
+    {
+     "label": "BYD",
+     "sub": "RMB 803.97B (+3.5%) · FY2025",
+     "v": 111859.8,
+     "slug": "byd",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Tesla",
+     "sub": "$94.83B (-3%) · FY2025",
+     "v": 94830,
+     "slug": "tesla",
+     "kpi": "revenue"
+    },
+    {
+     "label": "CATL",
+     "sub": "RMB 423.7B (+17.0%) · FY2025",
+     "v": 58951,
+     "slug": "catl",
+     "kpi": "revenue"
+    },
+    {
+     "label": "LG Energy Solution",
+     "sub": "KRW 23.67T (-7.6%) · FY2025",
+     "v": 16651.7,
+     "slug": "lg-energy-solution",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Sungrow",
+     "sub": "RMB 89.18B (+14.6%) · FY2025",
+     "v": 12408,
+     "slug": "sungrow",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Jinko",
+     "sub": "RMB 65.50B (-29.0%) · FY2025",
+     "v": 9370,
+     "slug": "jinko",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Samsung SDI",
+     "sub": "KRW 13.27T (-20%) · FY2025",
+     "v": 9335.3,
+     "slug": "samsung-sdi",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Sunwoda",
+     "sub": "RMB 63.246B (+12.9%) · FY2025",
+     "v": 8799.7,
+     "slug": "sunwoda",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Canadian Solar (e-STORAGE)",
+     "sub": "$5.6B · FY2025",
+     "v": 5600,
+     "slug": "canadian-solar",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Fluence",
+     "sub": "$2.3B · FY2025",
+     "v": 2300,
+     "slug": "fluence",
+     "kpi": "revenue"
+    },
+    {
+     "label": "Hithium",
+     "sub": "RMB 12.917B (~$1.8B) · FY2024",
+     "v": 1800,
+     "slug": "hithium",
+     "kpi": "revenue"
+    }
+   ],
+   "cites": [
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c14",
+    "c16",
+    "c15",
+    "c17",
+    "c18",
+    "c19",
+    "c20"
+   ]
+  },
+  {
+   "id": "rankbasis",
+   "title": "The ranking basis, per player",
+   "kind": "table",
+   "analysis": true,
+   "intro": "The single most misused figure in this market is an ordinal without its instrument. Rankers measure different things — shipments, installations, contracted volume, or a qualitative scorecard — and **none of them states the metric precisely enough to reconcile against another**. This table records what each dossier actually cites, so a claim can be traced to its instrument before it is repeated. Where a company appears under two rankers with different results, both are given.",
+   "cols": [
+    "Company",
+    "Role",
+    "Ranking as the dossier cites it",
+    "Instrument"
+   ],
+   "rows": [
+    [
+     "Sungrow",
+     "Incumbent",
+     "#1 on Wood Mackenzie’s 2026 comprehensive integrator ranking; #2 on 2025 market share [c:c37] [c:c32]",
+     "Ten-criteria scorecard; separately, share of installations"
+    ],
+    [
+     "BYD",
+     "Incumbent",
+     "#1 in H1 2026 system-integrator shipments (Benchmark 9.1% of 313 GWh; InfoLink also #1). FY2025 disputed: #1 on Benchmark at 60 GWh / 13%, #3 on Wood Mackenzie and InfoLink [c:c31] [c:c32]",
+     "Shipment volume — and the FY2025 split is unreconciled"
+    ],
+    [
+     "Tesla",
+     "Incumbent",
+     "#1 on Wood Mackenzie and InfoLink for FY2025; #2 on Benchmark at ~47 GWh [c:c32]",
+     "Share of installations vs shipment volume"
+    ],
+    [
+     "CATL",
+     "Incumbent",
+     "#3 on Wood Mackenzie’s 2026 scorecard; 27.1% of global ESS batteries in H1 2026 at ~125 GWh [c:c37] [c:c33]",
+     "Scorecard; separately cell-level share, not integration"
+    ],
+    [
+     "Envision Energy",
+     "Incumbent",
+     "Tied #5 with Trina on Wood Mackenzie’s 2026 scorecard; absent from InfoLink’s 2025 volume top tier [c:c37]",
+     "Capability scorecard — the clearest capability/volume split in the set"
+    ],
+    [
+     "Fluence",
+     "Incumbent",
+     "Top ten globally on Wood Mackenzie 2026 [c:c37]",
+     "Comprehensive scorecard"
+    ],
+    [
+     "Wärtsilä",
+     "Incumbent",
+     "Present in the integrator field but exiting it — storage moving to a 50/50 JV with RCT Solutions [c:c36] [c:c21]",
+     "Not ranked on a current basis"
+    ],
+    [
+     "Canadian Solar",
+     "Incumbent",
+     "Ranked through e-STORAGE; no top-five volume placement cited [c:c18]",
+     "—"
+    ],
+    [
+     "CRRC Zhuzhou",
+     "Incumbent",
+     "#1 APAC on Wood Mackenzie 2025 regional share; 14.16 GWh BU shipments [c:c23] [c:c41]",
+     "Regional market share"
+    ],
+    [
+     "HyperStrong",
+     "Incumbent",
+     "Top-3 on S&P 2024 installs and #5 on InfoLink shipments, but absent from Wood Mackenzie’s and Benchmark’s global top tiers; #2 APAC behind CRRC [c:c39] [c:c24]",
+     "Installs vs shipments — the most methodology-dependent story in the set"
+    ],
+    [
+     "Hithium",
+     "Challenger",
+     "Global top-two in utility-scale ESS cells on its own H1 2025 release; #2 in H1 2026 ESS cells on SNE and Benchmark [c:c20]",
+     "Cell shipments, not integration"
+    ],
+    [
+     "Trina Storage",
+     "Challenger",
+     "Wood Mackenzie Grade A, tied #5 with Envision on the 2026 scorecard; S&P Global Tier 1 ESS supplier 2026; absent from every published volume top-five [c:c37] [c:c38]",
+     "Bankability grading, not volume"
+    ],
+    [
+     "Jinko",
+     "Challenger",
+     "BNEF Tier 1 ESS maker for eight consecutive quarters; absent from integrator top-ten rankings [c:c42]",
+     "Bankability inclusion list — not an ordinal ranking"
+    ],
+    [
+     "Sunwoda",
+     "Challenger",
+     "Top-ten merchant cell supplier and roughly #9 system integrator [c:c17]",
+     "Two instruments at once — it sells cells to integrators it competes with"
+    ],
+    [
+     "LG Energy Solution",
+     "Challenger",
+     "No integrator ranking cited; 140 GWh ESS order backlog [c:c13]",
+     "Backlog, not shipments"
+    ],
+    [
+     "Samsung SDI",
+     "Challenger",
+     "No integrator ranking cited [c:c15]",
+     "—"
+    ],
+    [
+     "LS Energy Solutions",
+     "Challenger",
+     "No ranking cited; >1.5 GW / 2.6 GWh installed base across 300+ projects [c:c43]",
+     "Company-stated installed base"
+    ],
+    [
+     "Prevalon",
+     "Challenger",
+     "No ranking cited; 6.4+ GWh deployed, company-claimed [c:c27] [c:c40]",
+     "Company-stated deployed base"
+    ],
+    [
+     "FlexGen",
+     "Adjacent",
+     "Not ranked as an integrator; 25+ GWh under software and services after the Powin acquisition [c:c28]",
+     "Fleet under management — a different business"
+    ]
+   ],
+   "note": "Read down the instrument column before comparing any two rows. A scorecard rank and a shipment rank are not the same quantity, and the two rankers that publish both have put the same company in different places in the same year."
+  },
+  {
+   "id": "read",
+   "title": "The competitive read",
+   "kind": "prose",
+   "analysis": true,
+   "cites": [
+    "c30",
+    "c31",
+    "c33",
+    "c37",
+    "c36",
+    "c40",
+    "c25"
+   ],
+   "ps": [
+    "**The field is wider than the last edition showed, and the widening is concentrated in one tier.** Of the eight companies added, six are Chinese and none is small: Envision is tied fifth on the only comprehensive integrator scorecard published, CRRC Zhuzhou leads APAC regional share, HyperStrong is top-five on shipments under one instrument and invisible under two others. Wood Mackenzie puts Chinese integrators at 76% of the global market [c:c32]. A head-to-head that omitted three of them was not measuring the contest.",
+    "**Scale and storage performance have come apart, and H1 2026 is where it shows.** The two largest balance sheets in the table — BYD and Tesla — are the two whose storage results are least observable, because neither reports storage as a segment a reader can check. BYD's group profit fell 20.54% in a half when it was ranked first in integrator shipments by two independent counts [c:c30] [c:c31]; every pure-play or near-pure-play listed Chinese peer grew profit sharply in the same half [c:c33]. The inference is not that BYD's storage business is weak. It is that whole-company revenue — the only figure comparable across this set — is now actively misleading about storage, and the gap is widest exactly where the numbers are largest.",
+    "**The pure-integrator tier is still consolidating, and the direction is out.** Wärtsilä is moving storage into a 50/50 JV with RCT Solutions and has stopped reporting it as a segment [c:c36]. Prevalon was acquired by Nextpower for up to $365M [c:c27]. FlexGen bought Powin's assets out of Chapter 11 and now runs 25+ GWh as software and services rather than as an integrator [c:c28]. Three of the four independents that were not vertically integrated have changed owner, changed structure, or changed business in eighteen months. The survivors in that tier are the ones with a provenance story rather than a scale story — Prevalon's US-made AESC cells through Fixx [c:c40], LS-ES's Korean parent and Korean cells [c:c43].",
+    "**What the widened field does not change.** The block race is still the frontier fight and it is still architectural, and the top of the shipment tables is still held by companies that own their cells. Adding eight names moves no incumbent out of the top tier. What it changes is the denominator — and therefore every share claim computed against the old twelve."
+   ]
+  },
+  {
+   "id": "aidc",
+   "title": "The AI data-centre adjacency",
+   "kind": "callout",
+   "tone": "info",
+   "analysis": true,
+   "ps": [
+    "The integrator set is being pulled toward AI-data-centre storage from two directions at once, and the covered record is thinner than the noise suggests. On the demand side the buyers are real: BYD lists energy storage for AIDC among its served segments in its own interim [c:c44], and Envision commissioned the first building of its Galaxy Campus running on on-site renewables [c:c47]. On the supply side, the products announced into this lane are mostly announcements — Prevalon's HPS is the one in the set with DOE-laboratory validation against GPU load profiles and a named integration path [c:c40]. Treat AIDC as a lane where position is being taken and revenue is not yet visible in any company in this scope."
+   ]
+  }
+ ],
+ "indicators": [
+  {
+   "date": "Q3 2026 reports, by 31 Oct 2026",
+   "text": "BYD and Sungrow Q3 2026 against the H1 trajectory — and whether either breaks out a storage segment for the first time",
+   "confirms": "Confirms or refutes the decoupling judgment: a storage segment line would make the comparison checkable for the first time"
+  },
+  {
+   "date": "Q3 2026",
+   "text": "Wärtsilä–RCT storage JV completion and the first period reported without a storage segment",
+   "confirms": "Confirms the consolidation judgment; a collapse of the JV would refute it"
+  },
+  {
+   "date": "Nov 2026",
+   "text": "Fluence Q4 FY2026 against the cut $2.9–3.1B guidance",
+   "confirms": "Tests whether execution rather than demand is still the binding constraint in the non-Chinese tier"
+  },
+  {
+   "date": "Q4 2026",
+   "text": "Samsung SDI SBB 2.0 US production start; LG Energy Solution Lansing LFP lines from 2027",
+   "confirms": "Tests whether US domestic content converts into placement against the Chinese incumbents"
+  },
+  {
+   "date": "next ranking cycle",
+   "text": "Whether Benchmark, Wood Mackenzie and InfoLink converge on the FY2026 integrator order, or the split persists",
+   "confirms": "A persistent split confirms the instrument judgment; convergence would allow a single ordinal to be cited again"
+  }
+ ],
+ "limitations": [
+  "Comparisons are whole-company revenue, not BESS-segment revenue — no company in scope discloses BESS revenue comparably, and BYD's H1 2026 interim confirms it still does not.",
+  "Eight of the nineteen carry no normalized figure and appear with the reason rather than a manufactured number; every comparison in this report is therefore over eleven companies, not nineteen.",
+  "Shipment and share rankings are independent-analyst estimates reproduced as the dossiers cite them. They are not re-verified here and, as the ranking-basis table records, they are not reconcilable against each other.",
+  "No H1 2026 figure enters the normalized table: no dossier carries a sourced CNY/USD rate for the half, and the schema forbids an unsourced conversion.",
+  "This report is built from the covered dossiers alone: no fresh research was performed, and no field-note content appears in it.",
+  "Collection gap: Hithium FY2025 full-year results are not publicly filed (three lapsed listing attempts); FlexGen, Envision, Prevalon and LS Energy Solutions disclose no comparable financials; Wärtsilä's storage unit is not separately reported ahead of the JV; CRRC Zhuzhou's BU profitability is undisclosed."
+ ],
+ "citations": [
+  {
+   "id": "c3",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "Sungrow — 2026年半年度报告 (H1 2026 interim report, SZSE 300274, 205pp): EnerNeo SST launched and supplying the market, the AIDC power business unit's SST + 800 V HVDC routes, and the full segment, margin and geographic split",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
+   "date": "2026-08-29",
+   "party": "disclosure"
+  },
+  {
+   "id": "c4",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "Energy-Storage.News — Sungrow ships 25 GWh in H1 2026, storage revenue overtakes PV, and the company guides to a gradual US pullback",
+   "url": "https://www.energy-storage.news/sungrows-battery-storage-revenue-tops-pv-business-h1-shipments-hit-25gwh/",
+   "date": "2026-09-02",
+   "party": "independent"
+  },
+  {
+   "id": "c10",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "CnEVPost — FY2025 results: profit -19% on price war (Mar 2026)",
+   "url": "https://cnevpost.com/2026/03/27/byd-2025-full-year-results/",
+   "date": "2026-03-27",
+   "party": "independent"
+  },
+  {
+   "id": "c11",
+   "slug": "tesla",
+   "company": "Tesla",
+   "label": "Teslarati — Q4 & FY2025 earnings results",
+   "url": "https://www.teslarati.com/tesla-tsla-q4-and-fy-2025-earnings-results/",
+   "date": "2026-01",
+   "party": "independent"
+  },
+  {
+   "id": "c12",
+   "slug": "catl",
+   "company": "CATL",
+   "label": "CATL — 2025年年度报告 (FY2025 annual report, SZSE 300750): the Times Tianyuan 99.51% → 99.70% step-up; no mention of Zhonhen",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225002214.PDF",
+   "date": "2026-03-10",
+   "party": "disclosure"
+  },
+  {
+   "id": "c13",
+   "slug": "lg-energy-solution",
+   "company": "LG Energy Solution",
+   "label": "LGES — FY2025 financial results",
+   "url": "https://inside.lgensol.com/en/2026/01/lg-energy-solution-releases-2025-financial-results/",
+   "date": "2026-01-29",
+   "party": "company"
+  },
+  {
+   "id": "c14",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "EnergyTrend — FY2025 revenue RMB 89.18B, segment detail",
+   "url": "https://www.energytrend.com/news/20260401-51176.html",
+   "date": "2026-04-01",
+   "party": "independent"
+  },
+  {
+   "id": "c15",
+   "slug": "samsung-sdi",
+   "company": "Samsung SDI",
+   "label": "Samsung SDI — FY2025 results",
+   "url": "https://news.samsungsdi.com/global/articleView?seq=370",
+   "date": "2026-01",
+   "party": "company"
+  },
+  {
+   "id": "c16",
+   "slug": "jinko",
+   "company": "Jinko",
+   "label": "JinkoSolar — Q4/FY2025 results",
+   "url": "https://ir.jinkosolar.com/news-releases/news-release-details/jinkosolar-announces-fourth-quarter-and-full-year-2025-financial",
+   "date": "2026-04-16",
+   "party": "company"
+  },
+  {
+   "id": "c17",
+   "slug": "sunwoda",
+   "company": "Sunwoda",
+   "label": "Sunwoda 2025 Annual Report (EN, 315 pp)",
+   "url": "https://sunwoda.codady.com/upload/portal/20260423/110269ded56f897887b967fceb3f3735.pdf",
+   "date": "2026-04-23",
+   "party": "independent"
+  },
+  {
+   "id": "c18",
+   "slug": "canadian-solar",
+   "company": "Canadian Solar (e-STORAGE)",
+   "label": "Canadian Solar Q4/FY2025 results",
+   "url": "https://www.prnewswire.com/news-releases/canadian-solar-reports-fourth-quarter-and-full-year-2025-results-302718570.html",
+   "date": "2026-03-19",
+   "party": "disclosure"
+  },
+  {
+   "id": "c19",
+   "slug": "fluence",
+   "company": "Fluence",
+   "label": "Fluence — FY2025 results + FY2026 initial guidance (Nov 24, 2025)",
+   "url": "https://www.globenewswire.com/news-release/2025/11/24/3193926/0/en/Fluence-Energy-Inc-Reports-2025-Financial-Results-and-Initiates-2026-Guidance.html",
+   "date": "2025-11-24",
+   "party": "disclosure"
+  },
+  {
+   "id": "c20",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "HKEX — Hithium application proof / prospectus (filed 27 Oct 2025)",
+   "url": "https://www1.hkexnews.hk/app/sehk/2025/107807/documents/sehk25102700292.pdf",
+   "date": "2025-10-27",
+   "party": "disclosure"
+  },
+  {
+   "id": "c21",
+   "slug": "wartsila",
+   "company": "Wärtsilä",
+   "label": "Wärtsilä — Half-year Financial Report Jan–Jun 2026",
+   "url": "https://www.wartsila.com/media/news/21-07-2026-wartsila-s-half-year-financial-report-january-june-2026-3773763",
+   "date": "2026-07-21",
+   "party": "company"
+  },
+  {
+   "id": "c23",
+   "slug": "crrc-zhuzhou",
+   "company": "CRRC Zhuzhou Institute",
+   "label": "CRRC IR — 2025 annual results briefing",
+   "url": "https://crrcgc.cc/en/2026-05/12/article_2026051209081739202.html",
+   "date": "2026-05-12",
+   "party": "company"
+  },
+  {
+   "id": "c24",
+   "slug": "hyperstrong",
+   "company": "HyperStrong",
+   "label": "EnergyTrend — HyperStrong H1 2026 forecast",
+   "url": "https://www.energytrend.com/news/20260730-51840.html",
+   "date": "2026-07-30",
+   "party": "independent"
+  },
+  {
+   "id": "c25",
+   "slug": "trina-storage",
+   "company": "Trina Storage",
+   "label": "EnergyTrend — Trina Solar 2026 semi-annual report",
+   "url": "https://www.energytrend.com/news/20260807-51902.html",
+   "date": "2026-08-07",
+   "party": "independent"
+  },
+  {
+   "id": "c27",
+   "slug": "prevalon",
+   "company": "Prevalon Energy",
+   "label": "ess-news — Nextpower completes $365M Prevalon acquisition",
+   "url": "https://www.ess-news.com/2026/07/20/nextpower-completes-365-million-prevalon-energy-acquisition/",
+   "date": "2026-07-20",
+   "party": "independent"
+  },
+  {
+   "id": "c28",
+   "slug": "flexgen",
+   "company": "FlexGen",
+   "label": "Energy-Storage.News — FlexGen completes Powin acquisition (fleet to 25+ GWh)",
+   "url": "https://www.ess-news.com/2025/08/20/flexgen-completes-powin-acquisition-expands-its-battery-fleet-to-more-than-25-gwh/",
+   "date": "2025-08-20",
+   "party": "independent"
+  },
+  {
+   "id": "c30",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "CnEVPost — H1 2026 results: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%), overseas revenue 52.57% of total",
+   "url": "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/",
+   "date": "2026-08-28",
+   "party": "independent"
+  },
+  {
+   "id": "c31",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "Benchmark Mineral Intelligence — H1 2026 BESS cell and system shipments: BYD #1 in systems at 9.1% of 313 GWh, #4 in cells at 6.7% of 490 GWh",
+   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
+   "date": "2026-08-21",
+   "party": "independent"
+  },
+  {
+   "id": "c32",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "Wood Mackenzie — Chinese integrators capture 76% of the global BESS market (2025 shares; Tesla #1, Sungrow #2, BYD #3)",
+   "url": "https://www.woodmac.com/press-releases/2026-bess-market-share-chinese-integrators-76-percent-global-dominance-2025/",
+   "date": "2026-06-29",
+   "party": "independent"
+  },
+  {
+   "id": "c33",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "Energy-Storage.News — H1 2026 interim reports of the listed Chinese BESS players: EVE storage revenue RMB 15.094B (+69.15%) at 12.51% gross margin vs CATL's 23.96%",
+   "url": "https://www.energy-storage.news/interim-reports-of-catl-eve-rept-and-other-listed-chinese-bess-players-leaders-see-steady-earnings-growth-second-tier-returns-to-profitability/",
+   "date": "2026-08-28",
+   "party": "independent"
+  },
+  {
+   "id": "c34",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "CnEVPost (SNE Research) — H1 2026 global ESS battery share: EVE #2 at 48.0 GWh / 10.4%, CATL 27.1%",
+   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "date": "2026-08-04",
+   "party": "independent"
+  },
+  {
+   "id": "c35",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "ess-news — Greenvolt and BYD Energy sign a 600 MW / 2.4 GWh BESS supply deal in Poland",
+   "url": "https://www.ess-news.com/2026/07/01/greenvolt-byd-energy-sign-supply-deal-for-600-mw-bess-in-poland/",
+   "date": "2026-07-01",
+   "party": "independent"
+  },
+  {
+   "id": "c36",
+   "slug": "wartsila",
+   "company": "Wärtsilä",
+   "label": "Wärtsilä — Energy Storage JV with RCT Solutions (15 Jun 2026)",
+   "url": "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438",
+   "date": "2026-06-15",
+   "party": "company"
+  },
+  {
+   "id": "c37",
+   "slug": "envision-energy",
+   "company": "Envision Energy",
+   "label": "Wood Mackenzie — global BESS integrator 2026 ranking (Envision tied 5th)",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "date": "2026-07-14",
+   "party": "independent"
+  },
+  {
+   "id": "c38",
+   "slug": "trina-storage",
+   "company": "Trina Storage",
+   "label": "Trina — S&P Global Tier 1 ESS Supplier 2026 (Cell-to-Grid architecture)",
+   "url": "https://www.trinasolar.com/en-glb/newsroom202607291412/",
+   "date": "2026-07-29",
+   "party": "company"
+  },
+  {
+   "id": "c39",
+   "slug": "hyperstrong",
+   "company": "HyperStrong",
+   "label": "EnergyTrend — Benchmark 2025 global integrator top-10",
+   "url": "https://www.energytrend.com/news/20260519-51424.html",
+   "date": "2026-05-19",
+   "party": "independent"
+  },
+  {
+   "id": "c40",
+   "slug": "prevalon",
+   "company": "Prevalon Energy",
+   "label": "Prevalon — AESC multi-year 10 GWh supply agreement (US-made modules via Fixx Energy)",
+   "url": "https://prevalonenergy.com/prevalon-energy-and-aesc-sign-multi-year-supply-agreement/",
+   "date": "2026-06-16",
+   "party": "company"
+  },
+  {
+   "id": "c41",
+   "slug": "crrc-zhuzhou",
+   "company": "CRRC Zhuzhou Institute",
+   "label": "ess-news — Hithium ≥120 GWh supply deal with CRRC",
+   "url": "https://www.ess-news.com/2025/12/10/crrc-zhuzhou-taps-hithium-for-massive-120-gwh-battery-supply-deal/",
+   "date": "2025-12-10",
+   "party": "independent"
+  },
+  {
+   "id": "c42",
+   "slug": "jinko",
+   "company": "Jinko",
+   "label": "ESS-News — FY2025 loss, storage to double in 2026",
+   "url": "https://www.ess-news.com/2026/04/17/jinkosolar-posts-a-loss-but-energy-storage-business-expected-to-double-in-2026/",
+   "date": "2026-04-17",
+   "party": "independent"
+  },
+  {
+   "id": "c43",
+   "slug": "ls-energy-solutions",
+   "company": "LS Energy Solutions",
+   "label": "LS-ES — overview brochure (installed-base figures, MSSP GEN 2.0)",
+   "url": "https://www.ls-es.com/wp-content/uploads/2026/02/LS-ES_Overview_Brochure_Digital_02_10_26.pdf",
+   "date": "2026-02-10",
+   "party": "company"
+  },
+  {
+   "id": "c44",
+   "slug": "byd",
+   "company": "BYD",
+   "label": "BYD — 2026 Interim Results Announcement (HKEX, 113pp): revenue RMB 344.815B (-7.13%), net profit RMB 12.325B (-20.54%), overseas RMB 181.268B (52.57%); two reportable segments only, storage not broken out",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082801633.pdf",
+   "date": "2026-08-28",
+   "party": "disclosure"
+  },
+  {
+   "id": "c45",
+   "slug": "eve-energy",
+   "company": "EVE Energy",
+   "label": "EVE Energy — 2026年半年度报告 (H1 2026 semi-annual report, SZSE ChiNext 300014, 185pp): segment revenue, shipments, margins and the itemised non-recurring schedule",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483571.PDF",
+   "date": "2026-08-19",
+   "party": "disclosure"
+  },
+  {
+   "id": "c47",
+   "slug": "envision-energy",
+   "company": "Envision Energy",
+   "label": "Company PR — first Gen 8 deliveries, ju:niz Energy Germany 140.6 MWh",
+   "url": "https://www.envision-group.com/news-detail?id=6a6c73dba7d9a3002dfe204d&lang=en",
+   "date": "2026-07-08",
+   "party": "company"
+  }
+ ],
+ "supersedes": "grid-scale-bess--competitive--2026-08-29",
+ "guidanceOverlays": [
+  {
+   "moduleId": "bess-bankability-2026-08",
+   "sectionId": "counterparty",
+   "title": "The integrator field, as a counterparty question",
+   "ps": [
+    "The integrator peer set is nineteen covered companies on the registry's own roster, and eight of them publish no comparable financials at all — private, subsidiary, or a business unit inside a listed parent. For an independent engineer that is the counterparty file in one line: for eight of nineteen there is no audited standalone statement to read, and the diligence has to run on installed base, parentage and order book instead.",
+    "The tier that has changed most is the one without vertical integration. Three of the four independents that did not own cells have changed owner, structure or business in eighteen months — one into a joint venture, one acquired outright, one converted from integration into software and services. Counterparty risk in that tier is not primarily balance-sheet risk; it is the risk that the entity signing the long-term service agreement is not the entity that will perform it."
+   ]
+  },
+  {
+   "moduleId": "power-infra-aidc-2026-08",
+   "sectionId": "markets",
+   "title": "Where the integrator field actually earns",
+   "ps": [
+    "Half of 2026 separated company scale from storage performance in this field. The two largest balance sheets among the integrators are also the two whose storage results cannot be checked, because neither reports storage as a segment — one of them was ranked first in global system shipments for the half by two independent counts while its group profit fell by a fifth. Every listed peer whose storage is visible as a segment grew profit sharply in the same half.",
+    "The practical consequence for reading this market: whole-company revenue is the only figure comparable across the field, and it is now actively misleading about storage. Ask which market design a supplier's volume is actually earning in, and whether its storage line is visible at all, before treating group scale as evidence of storage strength."
+   ]
+  }
+ ]
+}
