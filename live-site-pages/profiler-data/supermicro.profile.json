@@ -1,0 +1,1468 @@
+{
+ "schemaVersion": 7,
+ "slug": "supermicro",
+ "name": "Super Micro Computer, Inc.",
+ "shortName": "Supermicro",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.supermicro.com",
+ "headquarters": "San Jose, California, United States",
+ "founded": 1993,
+ "employees": "over 7,000 (as of 2026-06-30)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: SMCI"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Supermicro is the rack the corpus was missing — the vendor that turns a chip vendor's reference design into a delivered, liquid-cooled, factory-tested rack, and now sells the cooling plant and the power shelf around it as well. It is a challenger rather than an incumbent, and the evidence is its own margin: revenue grew 5.5× from FY2023 to FY2026 while gross margin fell 719 basis points to 10.8%, which is the arithmetic of an integrator winning volume on price. IDC's series says the same thing from outside — Supermicro peaked at 8.0% of worldwide server revenue in 4Q23 and sat at 7.6% in 1Q26 against Dell's 16.5%, with ODM Direct above 50%. BACKGROUND. Incorporated in California in September 1993 by Charles Liang and Sara Liu and reincorporated in Delaware in March 2007, headquartered at 980 Rock Avenue, San Jose, listed on Nasdaq as SMCI with mandatory convertible preferred depositary shares as SMCIP, an S&P 500 constituent, over 7,000 employees at 30 June 2026 and a fiscal year ending 30 June. FY2026 net sales were $39,063.1m, up 77.8%, with net income of $2,230.5m and diluted EPS of $3.26. FY2027 is guided to $65.0–72.0bn against an analyst consensus of about $54.4bn.",
+ "ecosystemRole": "Supermicro sits exactly where compute meets the building, and it is the only member of this corpus that sells across that seam. Its Data Center Building Block Solutions line begins with GPU systems and ends with 1–50 MW cooling towers, and in between it sells the parts other dossiers in this corpus sell as their whole business: in-rack coolant distribution units to 250 kW, in-row CDUs to 1.8 MW, rear-door heat exchangers from 10 to 120 kW per door, 33 kW power shelves, battery backup units rated for 90 seconds of 48 V DC, and a 1.5 MW / 3.1 MWh battery energy storage system. The 10-K is explicit that these are made rather than resold — 'we manufacture the sophisticated management systems — Cooling Distribution Units, Cooling Distribution Manifolds'. The power side is the opposite: Compuware, a company controlled by the chief executive's brother, manufactured about 94.4% of the power supplies Supermicro purchased in FY2026, and Ablecom about 95.3% of the chassis. So the cooling line is a genuine product line and the power line is a bought-in component, and the dossier should not treat them alike. What Supermicro does not have is a defensible position against the layer above it or below it: Dell has more than doubled its share in five quarters, and ODM Direct — selling straight to hyperscalers at 2–3% margins — is now the largest block of the server market.",
+ "productsAndServices": [
+  {
+   "name": "Data Center Building Block Solutions (DCBBS) — the rack and the plant around it",
+   "category": "Data-centre infrastructure",
+   "description": "Launched as a distinct business line in October 2025 and the reason this dossier belongs in a power-and-cooling corpus at all. The 10-K states DCBBS grew in about one year to more than ten key subsystems — coolant distribution units, liquid-to-air heat exchangers, chilled doors, power shelves, battery backup units, water towers, dry towers, high-speed switching and data-centre management software. It is sold as an integrated offering that delivers complete modular AI infrastructure from validated components, ranging from individual GPUs and networking switches to complete racks, site infrastructure, management software and professional services.",
+   "highlights": [
+    "In-rack coolant distribution units to 250 kW with redundant pumps and power supplies; in-row CDUs to 1.8 MW for multi-rack deployments",
+    "Rear-door heat exchangers across ten models from 10 kW to 120 kW per door, up to 240 kW of cooling capacity at rack level, EIA, ORv3 and MGX compatible with N+1 redundancy and anti-condensation control",
+    "Site infrastructure sold as product: water cooling towers and dry coolers each rated 1 MW to over 50 MW, and a 1.5 MW / 3.1 MWh battery energy storage system",
+    "In-rack power: 33 kW power shelves and battery backup units rated for 90 seconds of 48 V DC",
+    "DCBBS Blueprints announced May 2026 scale from a 5 MW to a 1 GW power envelope; one scalable unit is 1,152 NVIDIA Rubin GPUs and 331 TB of HBM4 across 16 compute racks, 6 networking racks, 4 Petascale storage racks and 2 context-memory racks, with 5 MW cooling towers and four in-row CDUs at up to 1.8 MW each",
+    "Each Vera Rubin rack in that blueprint carries four 110 kW power shelves with redundant 18.3 kW power supplies, plus an optional BESS",
+    "AI Rack Series launched July 2026: ten models across 44OU and 48OU 21-inch OCP ORv3 and 48U and 52U 19-inch EIA, static load to 5,500 lb / 2,500 kg, GR-63-CORE Zone 4 seismic qualified",
+    "Charles Liang's time-to-market claim for DCBBS is deployment as quickly as three months"
+   ],
+   "positioning": "The distinguishing claim is scope rather than depth — Supermicro is the only server OEM in this corpus selling the cooling plant and the rack power shelf alongside the compute. It is not, however, a named leader in liquid cooling: Dell'Oro's January 2026 assessment names Vertiv as the leader with CoolIT, nVent and Boyd holding strong positions, and does not name Supermicro at all. It is also a taker of DLC supply rather than a maker of all of it — DataCenterDynamics reported a DLC component shortage costing $800m of revenue in a quarter.",
+   "soldThrough": "Direct sales force to large-scale cloud, enterprise and OEM customers, plus distributors, value-added resellers and system integrators; a centralised command centre supports configuration.",
+   "targetSegments": [
+    "Hyperscale and neocloud AI campuses",
+    "Enterprise AI",
+    "Sovereign AI programmes",
+    "HPC",
+    "US federal government"
+   ],
+   "roadmap": "Vera Rubin NVL72 and HGX Rubin NVL8 blueprint deployments scheduled for the second half of 2026, aligned with NVIDIA Vera Rubin general availability."
+  },
+  {
+   "name": "Direct Liquid Cooling — DLC and DLC-2",
+   "category": "Thermal management",
+   "description": "The subsystem line that makes a cooling-segment membership defensible. The FY2026 10-K states plainly: 'We design, build, test, validate, and deliver complete rack scale solutions for liquid-cooled direct-to-chip cold plate solutions for CPUs, GPUs, and memory. In addition, we manufacture the sophisticated management systems — Cooling Distribution Units, Cooling Distribution Manifolds — to regulate system temperatures.' The DLC-2 stack adds rear-door heat exchangers, liquid-to-air sidecars and cooling towers, with proprietary coolant fluids engineered for chemical and thermal stability.",
+   "highlights": [
+    "Up to 98% heat capture per server rack, covering CPU, GPU, PCIe switch, DIMM, VRM and power supply",
+    "Up to 40% data-centre power savings against air, and up to 40% water savings at 45 °C warm-water operation — eliminating chilled water and the compressor",
+    "Up to 60% space savings on more than 2.5× the compute density of air-cooled systems; about 50 dB noise; up to 20% lower total cost of ownership",
+    "Liquid-to-air sidecar capacity is published at two different figures on Supermicro's own pages — up to 200 kW on the DCBBS page and up to 500 kW on the liquid-cooling page — and no source reconciles them",
+    "Industry-first Intel-certified immersion cooling solution announced June 2025",
+    "The share of shipments that is liquid-cooled is not disclosed anywhere first-party; the nearest statements are forward-looking market claims that up to 30% of new data centres will adopt liquid cooling"
+   ],
+   "positioning": "An attach to the compute rather than a standalone franchise, and it should be read that way. Independent trackers place the leadership elsewhere, and the specialist consolidation of 2026 — Ecolab acquiring CoolIT, Vertiv acquiring Strategic Thermal Labs and ThermoKey, Legrand adding Kratos — happened around Supermicro rather than through it. Dell and HPE ship their own direct liquid cooling and no independent assessment differentiates Supermicro's against theirs.",
+   "soldThrough": "Sold inside DCBBS racks and clusters rather than as a standalone cooling product to third-party server vendors.",
+   "targetSegments": [
+    "AI training and inference halls",
+    "HPC sites",
+    "Retrofit of air-cooled halls via rear-door exchangers"
+   ],
+   "roadmap": "Rear-door heat exchanger portfolio expanded to ten models in July 2026; DLC-2 is the current generation."
+  },
+  {
+   "name": "GPU and accelerator systems — NVIDIA, AMD and Arm",
+   "category": "AI servers and rack-scale systems",
+   "description": "The revenue engine. Supermicro ships NVIDIA GB300 NVL72 and GB200 NVL72 rack-scale systems, HGX B300 and B200 eight-GPU servers in air- and liquid-cooled form, NVL4 systems, and has announced support for the Vera Rubin NVL72, HGX Rubin NVL8 and NVL4 generations. On the AMD side it ships Instinct MI300A, MI300X, MI325X, MI350X, MI350P and MI355X platforms, and announced support in June 2026 for AMD's Helios 72-GPU rack. Arm AGI CPU platforms and OCP ORv3 systems were added in FY2026.",
+   "highlights": [
+    "SRS-GB300-NVL72: 36 Grace CPUs and 72 Blackwell Ultra GPUs at 1.8 TB/s GPU-to-GPU interconnect, liquid-cooled with a 250 kW liquid-to-liquid CDU or a 200 kW liquid-to-air sidecar option",
+    "Blackwell Ultra volume shipments began September 2025; per GPU up to 1,400 W and 270 GB HBM3e, with 1.1 exaFLOPS of dense FP4 per GB300 NVL72 rack",
+    "A 4U liquid-cooled HGX B200 configuration reaches up to 96 GPUs in a single rack with up to 40% data-centre power savings; the 2OU OCP ORv3 HGX B300 reaches 144 GPUs per rack",
+    "AMD systems shipping: AS-8125GS-TNMR2, 8U air-cooled with eight MI350X and 1.5 TB of HBM3; AS-4126GS-NMR-LCC, 4U liquid-cooled with eight MI355X and a claimed 51% data-centre energy cost saving; H14 5U PCIe systems taking up to eight MI350P or MI325X",
+    "Vera Rubin NVL72 is published at 3.6 exaflops NVFP4 and 75 TB of fast memory; HBM4 bandwidth appears as both 1.4 PB/s and 1.6 PB/s on Supermicro's own pages, unreconciled",
+    "Rack output capacity is published at four different figures with different scopes — 5,000 air-cooled or 2,000 liquid-cooled racks per month (February 2025), up to 5,000 racks per month, up to 3,000 including 2,000 liquid-cooled for the new AI Rack Series (July 2026), and up to 6,000 at full production on the Vera Rubin page"
+   ],
+   "positioning": "First-to-market on new silicon rather than differentiated against peers. Supermicro is a first-wave NVIDIA rack partner and a mainstream non-exclusive AMD partner, listed for Helios alongside Bull, HPE and Lenovo. No independent source confirms any allocation advantage, and SemiAnalysis argues explicitly that the 'Dell wins on NVIDIA allocation favouritism' narrative is wrong — Dell is winning on go-to-market.",
+   "soldThrough": "Direct to large-scale data-centre customers and through the channel; racks ship after L11 or L12 validation testing.",
+   "targetSegments": [
+    "Neoclouds and AI service providers",
+    "Hyperscale cloud",
+    "Enterprise AI",
+    "Sovereign AI"
+   ],
+   "roadmap": "Vera Rubin NVL72, HGX Rubin NVL8 and NVL4 in the second half of 2026; Fujitsu's Arm-based MONAKA platform targeted for 2027."
+  },
+  {
+   "name": "Server, storage and edge systems",
+   "category": "General-purpose compute and storage",
+   "description": "The base business the AI line grew out of, organised around what Supermicro trademarks as Server Building Block Solutions. Blade and multi-node families — SuperBlade, MicroBlade, FlexTwin, GrandTwin, BigTwin — share common computing resources for density; Hyper, CloudDC and WIO cover general rackmount; SuperStorage and Petascale all-flash cover storage; MicroCloud and short-depth systems cover space- and power-constrained environments and the edge.",
+   "highlights": [
+    "FY2026 introductions spanned Intel Xeon 6 and Xeon 6+, AMD EPYC 9006 and 4005, Arm platforms and OCP ORv3 systems",
+    "Petascale all-flash storage built on the NVIDIA Grace CPU Superchip with E3.S PCIe Gen5 SSDs; a Petascale JBOF with BlueField-3; among the first to unveil a BlueField-4 STX storage server",
+    "AI-optimised storage extended in FY2026 to systems designed for context-memory extension",
+    "Four- and eight-socket rackmount systems for very large in-memory and mission-critical workloads"
+   ],
+   "positioning": "Breadth and time-to-market at competitive price is the company's own stated basis of competition, and its 10-K concedes that most competitors have longer operating histories, greater resources, greater name recognition or deeper market penetration, and that ODMs benefit from scale and very low-cost manufacturing while increasingly offering their own branded products.",
+   "soldThrough": "Direct and indirect channel; OEM arrangements.",
+   "targetSegments": [
+    "Enterprise data centre",
+    "Cloud service providers",
+    "Telecom and 5G edge",
+    "Retail and IoT edge"
+   ],
+   "roadmap": "Continued platform refreshes tracking Intel, AMD and Arm generations."
+  },
+  {
+   "name": "Software and services",
+   "category": "Management software and deployment services",
+   "description": "The attach layer around the hardware: Supermicro Server Manager, Power Management and Update Manager, SuperDoctor 5, and the SuperCloud family — Composer, Director, Automation Center and Developer Console. Services run from planning and validation through on-site deployment and data-centre fit-out to on-site support with four-hour response options, plus L11 and L12 rack and cluster validation before shipping.",
+   "highlights": [
+    "Services and software revenue was $538.3m in FY2026 against $330.5m in FY2025 and $228.3m in FY2024",
+    "Warranties typically run one to three years, with a limited warranty to end users of 15 to 39 months",
+    "Rack Level Services offer a single point of contact from design to deployment for full rack and cluster AI and HPC data centres",
+    "The new US campus states that entire clusters at L12 and data centres can be built and tested in a single facility"
+   ],
+   "positioning": "Still small relative to hardware — $538.3m is about 1.4% of FY2026 net sales — which is the quantitative statement of why the gross margin behaves like an integrator's rather than a systems vendor's.",
+   "soldThrough": "Sold attached to hardware; direct and OEM support plans.",
+   "targetSegments": [
+    "Large-scale data-centre operators",
+    "Enterprise IT",
+    "US federal government"
+   ],
+   "roadmap": "SuperCloud tooling extended alongside DCBBS deployment services."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "DCBBS liquid-cooling subsystems (DLC-2)",
+   "specs": [
+    {
+     "band": "Cooling capacity",
+     "label": "In-rack CDU",
+     "value": "up to 250kW cooling capacity with redundant pumps and PSUs"
+    },
+    {
+     "band": "Cooling capacity",
+     "label": "In-row CDU",
+     "value": "up to 1.8MW of cooling capacity for scalable, multi-rack deployments"
+    },
+    {
+     "band": "Cooling capacity",
+     "label": "Liquid-to-air sidecar",
+     "value": "Up to 500kW liquid-to-air cooling capacity (liquid-cooling page) / up to 200kW (DCBBS page) — two first-party figures, unreconciled"
+    },
+    {
+     "band": "Cooling capacity",
+     "label": "Rear door heat exchanger",
+     "value": "10kW up to 120kW per door; 240kW of cooling capacity at rack level; ten models"
+    },
+    {
+     "band": "Cooling capacity",
+     "label": "Site infrastructure",
+     "value": "1–50MW Modular Closed-Loop Cooling (water cooling towers and dry coolers)"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Heat capture",
+     "value": "Up to 98% Heat capture in DLC-2 with CPU, GPU, PCIe Switch, DIMM, VRM, and PSU"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Power saving",
+     "value": "Up to 40% data centre power savings against air"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Water saving",
+     "value": "Up to 40% Savings with 45°C warm water operation"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Space saving",
+     "value": "Up to 60% Savings with more than 2.5x compute density compared to air-cooled systems"
+    },
+    {
+     "band": "Efficiency",
+     "label": "TCO",
+     "value": "Up to 20% Lower TCO"
+    },
+    {
+     "band": "Environment",
+     "label": "Facility water inlet",
+     "value": "up to 45 °C warm water, eliminating chilled water and compressor"
+    },
+    {
+     "band": "Environment",
+     "label": "Noise",
+     "value": "~50dB"
+    }
+   ],
+   "notes": "All figures are Supermicro's own published claims, not independent measurements. The share of shipments that is liquid-cooled is not disclosed anywhere first-party."
+  },
+  {
+   "product": "DCBBS in-rack power and energy storage",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Power shelf",
+     "value": "33kW"
+    },
+    {
+     "band": "Power",
+     "label": "Battery backup unit",
+     "value": "90 seconds of 48V DC power"
+    },
+    {
+     "band": "Power",
+     "label": "Vera Rubin rack power shelves",
+     "value": "four 110 kW power shelves with redundant 18.3 kW PSUs per rack"
+    },
+    {
+     "band": "Energy storage",
+     "label": "BESS",
+     "value": "1.5 MW/3.1 MWh"
+    },
+    {
+     "band": "Networking",
+     "label": "Switching",
+     "value": "800 GbE link speeds and 51.2 Tbps throughput"
+    }
+   ],
+   "notes": "Compuware, controlled by the chief executive's brother, manufactured approximately 94.4% of the power supplies Supermicro purchased in FY2026 — the power line is a bought-in component, unlike the cooling line, which the 10-K states Supermicro manufactures."
+  },
+  {
+   "product": "NVIDIA GB300 NVL72 rack (SRS-GB300-NVL72)",
+   "specs": [
+    {
+     "band": "Configuration",
+     "label": "Silicon",
+     "value": "36 NVIDIA Grace CPUs and 72 NVIDIA Blackwell Ultra GPUs"
+    },
+    {
+     "band": "Fabric",
+     "label": "Interconnect",
+     "value": "1.8TB/s GPU-GPU Interconnect across all 72 GPUs and CPUs"
+    },
+    {
+     "band": "Performance",
+     "label": "Dense FP4 per rack",
+     "value": "1.1 exaFLOPS"
+    },
+    {
+     "band": "Per GPU",
+     "label": "Power",
+     "value": "up to 1400W"
+    },
+    {
+     "band": "Per GPU",
+     "label": "Memory",
+     "value": "270 GB HBM3e"
+    },
+    {
+     "band": "Cooling",
+     "label": "Options",
+     "value": "250kW CDU Liquid-to-Liquid or 200kW Liquid-to-Air Sidecar Option"
+    }
+   ]
+  },
+  {
+   "product": "AMD Instinct systems shipped by Supermicro",
+   "specs": [
+    {
+     "band": "MI355X",
+     "label": "AS-4126GS-NMR-LCC",
+     "value": "4U liquid-cooled, 8x MI355X; 51% data center energy cost savings; up to 16x dedicated hot-swap NVMe drives"
+    },
+    {
+     "band": "MI350X",
+     "label": "AS-8125GS-TNMR2",
+     "value": "8U air-cooled, 8x MI350X; 1.5 TB HBM3 per system; 8 high-speed 400G networking cards; 5th Gen AMD EPYC"
+    },
+    {
+     "band": "MI350P / MI325X",
+     "label": "H14 5U PCIe",
+     "value": "up to 8x MI350P or MI325X, air-cooled"
+    },
+    {
+     "band": "MI300A",
+     "label": "AS-4145GH-TNMR / AS-2145GH-TNMR-LCC",
+     "value": "4U air-cooled and 2U liquid-cooled, 4x MI300A APU"
+    },
+    {
+     "band": "Helios",
+     "label": "AMD MI455X rack",
+     "value": "a 72-GPU double-width rack-scale system powered by AMD Instinct MI455X GPUs, 6th Gen AMD EPYC CPUs, and AMD Pensando networking technologies all unified by the open AMD ROCm software stack"
+    }
+   ],
+   "notes": "Support for AMD's Helios rack was announced 1 June 2026 with no shipping date published."
+  },
+  {
+   "product": "DCBBS Blueprint — one Vera Rubin NVL72 scalable unit",
+   "specs": [
+    {
+     "band": "Scale",
+     "label": "GPUs per scalable unit",
+     "value": "1,152 NVIDIA Rubin GPUs"
+    },
+    {
+     "band": "Scale",
+     "label": "GPU memory",
+     "value": "331TB HBM4 GPU memory"
+    },
+    {
+     "band": "Racks",
+     "label": "Composition",
+     "value": "16 compute racks, 6 networking racks (4 compute + 2 converged), 4 Petascale storage racks, 2 context-memory storage racks"
+    },
+    {
+     "band": "Cooling",
+     "label": "Plant",
+     "value": "5MW cooling towers with 4x in-row cooling distribution units (up to 1.8MW each)"
+    },
+    {
+     "band": "Cooling",
+     "label": "Cold plates",
+     "value": "576 direct-to-chip copper cold plates, one per host processor module"
+    },
+    {
+     "band": "Envelope",
+     "label": "Blueprint range",
+     "value": "End-to-End Blueprint Scalable from a 5MW to 1GW Power Envelope"
+    }
+   ]
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-31",
+   "category": "regulatory",
+   "headline": "FY2026 Form 10-K filed: three of four material weaknesses remediated, the IT general controls weakness remains unremediated, and disclosure controls are again not effective",
+   "read": "BDO issued a second consecutive adverse opinion on internal control over financial reporting while giving the financial statements themselves a clean opinion — the numbers are not in dispute, the controls around them are.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "legal",
+   "headline": "Independent board investigation into the export-control matter completes, finding no evidence senior management knew of the alleged diversion scheme",
+   "read": "A finding of no evidence by the company's own independent directors, assisted by Munger Tolles and AlixPartners — not a regulatory exoneration. Fortune noted the disclosure carried minimal specifics and that the CFO the 2024 Special Committee said should be replaced immediately remains in post.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-announces-completion-independent-investigation-and-continued-enhancement"
+  },
+  {
+   "date": "2026-08-11",
+   "category": "financial",
+   "headline": "Q4 and FY2026 results: FY2026 net sales $39,063.1m up 77.8%, more than $60bn of new orders in the year, and FY2027 guided to $65.0–72.0bn against a consensus near $54.4bn",
+   "read": "Revenue missed consensus for the third time in four prints while EPS beat, and the stock rose on guidance. The market is trading the order book, not the results.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "Board declares the initial dividend on the 7.00% Series A Mandatory Convertible Preferred — $14.7778 per preferred share, $0.73889 per depositary share",
+   "read": "The first cash cost of the June 2026 preferred raise, and the reason net income attributable to common now diverges from net income.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000020/smci-20260805.htm"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "product-launch",
+   "headline": "DCBBS AI Rack Series launched — ten rack models across 44OU/48OU OCP ORv3 and 48U/52U EIA, static load to 5,500 lb, GR-63-CORE Zone 4 seismic qualified",
+   "read": "Selling the rack itself as a product, with a stated output of up to 3,000 of them a month including 2,000 liquid-cooled — one of four different capacity figures the company publishes.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-expands-dcbbs-precision-engineered-ai-rack-series-accelerate-deployment"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "product-launch",
+   "headline": "New server portfolio on 6th Gen AMD EPYC 9006 with claimed 1.7× generational performance improvements",
+   "read": "Same-day platform support on AMD's newest server generation — the first-to-market posture that is Supermicro's stated basis of competition.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-new-server-portfolio-6th-gen-amd-epyctm-9006-series-cpus"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "product-launch",
+   "headline": "DCBBS liquid-cooling portfolio expanded with ten rear-door heat exchanger models from 10 kW to 120 kW per door",
+   "read": "Rear-door exchangers are the retrofit path for air-cooled halls, which extends the cooling line beyond new-build liquid racks.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-expands-end-end-dcbbs-liquid-cooling-portfolio-rear-door-heat-exchangers"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "product-launch",
+   "headline": "Vera Rubin NVL4 end-to-end DCBBS blueprint with native FP64 for converged HPC and AI",
+   "read": "Extends the blueprint approach from AI-only racks into HPC, where FP64 still matters.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-delivers-nvidia-vera-rubin-nvl4-end-end-dcbbs-blueprint-native-fp64"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "financial",
+   "headline": "Pricing of the equity and equity-linked financing, with proceeds earmarked to fund components for approximately $39bn of orders received in recent weeks",
+   "read": "The clearest statement of the working-capital problem: the orders are real and the components must be bought before the revenue lands. FY2026 operating cash flow was negative $6,809.9m against $2,230.5m of net income.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-announces-pricing-equity-and-equity-linked-financing-transactions-fund-ai"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "financial",
+   "headline": "Announces $7.0bn of equity and equity-linked financing to fund AI orders — $1.25bn of common at $27.50 plus $3.75bn of 7.00% mandatory convertible preferred, with a $1.25bn at-the-market programme",
+   "read": "Guided diluted share count for Q1 FY2027 is 745m GAAP against 656.9m common outstanding at 31 July 2026 — a further 13–16% step-up as the preferred and converts enter the base.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-announces-proposed-70-billion-equity-and-equity-linked-financing"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "partnership",
+   "headline": "Announces support for AMD's Helios rack-scale platform — a 72-GPU double-width rack on Instinct MI455X, 6th Gen EPYC and Pensando networking",
+   "read": "Puts Supermicro on the AMD rack alongside Bull, HPE and Lenovo. No shipping date has been published.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-expands-rack-scale-ai-leadership-amd-helios-platform-accelerating"
+  },
+  {
+   "date": "2026-05-31",
+   "category": "product-launch",
+   "headline": "DCBBS Blueprints introduced for NVIDIA Vera Rubin NVL72 and HGX Rubin NVL8, scalable from a 5 MW to a 1 GW power envelope",
+   "read": "The company is now selling a data-centre design, not a server — one scalable unit is 1,152 GPUs across 28 racks with its own 5 MW cooling plant.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-dcbbs-blueprints-nvidia-vera-rubin-nvl72-and-nvidia-hgx-rubin"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "legal",
+   "headline": "Collaboration with Taiwanese authorities on an illicit diversion case — three arrests and 50 servers seized after product sold to an authorised reseller was deceptively acquired",
+   "read": "The company's own framing of where its export exposure actually sits: downstream resale beyond direct manufacturer control.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-collaborates-taiwanese-authorities-prevent-illicit-diversion-server"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "regulatory",
+   "headline": "Material weaknesses reported as remaining unremediated as of 31 March 2026, more than a year after first identification",
+   "read": "The gap between identification in February 2025 and partial remediation in August 2026 is the governance fact most likely to affect procurement confidence.",
+   "source": "https://www.cfodive.com/news/super-micros-internal-control-material-weaknesses-linger/820034/"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "Q3 FY2026: revenue $10,243.0m against consensus figures of $12.33–12.45bn — a miss of about 17–18% — while non-GAAP EPS beat at $0.84 against $0.62; the stock rose 18% after hours",
+   "read": "The pattern in miniature: revenue predictability is poor and the market prices the forward guide instead.",
+   "source": "https://www.cnbc.com/2026/05/05/super-micro-smci-q3-earnings-report-2026.html"
+  },
+  {
+   "date": "2026-04-28",
+   "category": "regulatory",
+   "headline": "Second SEC subpoena received, seeking customer-related documents",
+   "read": "Follows the November 2024 subpoena in 'In the Matter of Super Micro Computer, Inc.' The company says it is too preliminary to judge the likelihood of an adverse outcome.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "capacity",
+   "headline": "Fourth Bay Area campus added — about 32.8 acres and more than 714,000 sq ft with 10 MW of on-campus capacity, taking the regional footprint to nearly 4 million sq ft",
+   "read": "US manufacturing is the differentiator Supermicro claims against the ODMs, and it is also the tariff hedge — tariff expense in cost of sales rose to roughly $342m in FY2026.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-adds-largest-silicon-valley-campus-new-dcbbs-facility-advance-delivery"
+  },
+  {
+   "date": "2026-04-07",
+   "category": "legal",
+   "headline": "Independent-director investigation update: overseen by Scott Angel and Tally Liu with Munger, Tolles & Olson and AlixPartners, coordinating with BDO; no definitive timetable set",
+   "read": "A concurrent internal review of the Global Trade Compliance Program was led by General Counsel Yitai Hu.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-provides-update-investigation-independent-board-directors"
+  },
+  {
+   "date": "2026-03-20",
+   "category": "leadership",
+   "headline": "Co-founder Yih-Shyan 'Wally' Liaw resigns from the board the day after the indictment was unsealed; DeAnna Luna appointed acting Chief Compliance Officer",
+   "read": "The company states the resignation was not the result of a disagreement. Liaw had previously resigned all positions in January 2018 during an earlier filing-delinquency period and returned in 2021–2023.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000011/a991.htm"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "legal",
+   "headline": "SDNY unseals an indictment of three individuals employed by or associated with the company over an alleged export-control conspiracy; Supermicro is not named as a defendant",
+   "read": "Prosecutors allege roughly $2.5bn of NVIDIA-equipped servers were routed to China through a Southeast Asian front company. The shares fell about a third in a week and the trial has since moved to March 2027.",
+   "source": "https://www.cnn.com/2026/03/19/politics/super-micro-computer-founder-charged-ai-chips-china"
+  },
+  {
+   "date": "2026-02-20",
+   "category": "leadership",
+   "headline": "Fortune reports the CFO search pledged as immediate in December 2024 was still unresolved fourteen months later",
+   "read": "The Special Committee held the CFO primarily responsible for process lapses and recommended immediate replacement; David Weigand remained in post through the FY2026 10-K.",
+   "source": "https://fortune.com/2026/02/20/supermicro-smci-cfo-search-david-weigand-nvidia/"
+  },
+  {
+   "date": "2026-02-03",
+   "category": "financial",
+   "headline": "Q2 FY2026: revenue $12,682.5m beats consensus by about $2.3bn while gross margin collapses to 6.3%, with a single customer at 63% of revenue",
+   "read": "The trough margin and the peak concentration in the same quarter. Liang attributed the margin to premium transport costs for Blackwell parts and tariffs.",
+   "source": "https://www.theregister.com/2026/02/04/for_once_supermicro_has_dodged"
+  },
+  {
+   "date": "2025-12-11",
+   "category": "market",
+   "headline": "IDC's Q3 2025 tracker shows Supermicro revenue down 13.2% year on year and share halved to 4.0% in a quarter when the total server market grew 61.1%, with ODM Direct at 59.4%",
+   "read": "The single most damaging independent datapoint in the file: in the best quarter the server market ever had, Supermicro shrank.",
+   "source": "https://my.idc.com/getdoc.jsp?containerId=prUS54034325"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "financial",
+   "headline": "Q1 FY2026: revenue $5,017.8m against a $6.0–7.0bn guide, gross margin 9.3%, and about $1.5bn of revenue unrecognisable on customer-requested configuration changes",
+   "read": "The second major revenue warning of 2025. Liang attributed the margin to the complexity of new GPU racks and conceded a strategic large design win carried higher cost and lower margin.",
+   "source": "https://www.theregister.com/2025/11/05/supermicro_q1_2026/"
+  },
+  {
+   "date": "2025-10-29",
+   "category": "corporate",
+   "headline": "Super Micro Federal LLC formed to expand into the federal market, with TAA-compliant and Buy American Act eligible systems manufactured and tested in Silicon Valley",
+   "read": "US manufacturing converted into a compliance-gated sales channel, at the moment export-compliance credibility became a purchasing criterion.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-announces-us-federal-entity-expand-further-federal-market-extensive-us"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "corporate",
+   "headline": "DCBBS introduced as a distinct business line covering data-centre facilities equipment and management services",
+   "read": "The formal move from server vendor to data-centre infrastructure vendor, and the origin of the cooling and power product lines this dossier records.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-new-business-line-data-center-building-block-solutions-data"
+  },
+  {
+   "date": "2025-06-23",
+   "category": "financial",
+   "headline": "$2.0bn of 0.00% convertible senior notes due 2030 priced at a $55.20 conversion price, with $182.2m spent on capped calls and $200m used to repurchase about 4.9m shares",
+   "read": "The shares fell on dilution concerns. The 2030 notes sit alongside $1,725m of 2029 notes and $700m of 2028 notes in a capital structure that reached about $8.7bn of debt by June 2026.",
+   "source": "https://www.benzinga.com/news/financing/25/06/46074323/supermicro-raises-2-billion-via-private-convertible-debt-with-35-conversion-premium"
+  },
+  {
+   "date": "2025-05-14",
+   "category": "customer",
+   "headline": "Strategic partnership with Saudi Arabia's DataVolt for hyperscale AI campuses, at an estimated minimum market value of about $20bn",
+   "read": "Structured as a memorandum of understanding rather than a booked order, and announced alongside roughly $300bn of US-Saudi deals — treat the figure as a framing number, not a backlog entry.",
+   "source": "https://www.datacenterdynamics.com/en/news/saudis-datavolt-signs-20bn-deal-with-supermicro/"
+  },
+  {
+   "date": "2025-05-08",
+   "category": "financial",
+   "headline": "The $40bn FY2026 revenue target is withdrawn; The Next Platform characterises Supermicro as 'primarily an integrator rather than a differentiated vendor'",
+   "read": "The largest withdrawn target of the period, and the moment the integrator thesis entered mainstream independent commentary.",
+   "source": "https://www.nextplatform.com/2025/05/08/supermicro-hiccups-on-hopper-pulls-40-billion-guidance-for-fiscal-2026/"
+  },
+  {
+   "date": "2025-03-24",
+   "category": "market",
+   "headline": "Goldman Sachs downgrades to Sell with a price target cut from $40 to $32, citing commoditisation and lack of product differentiation",
+   "read": "Goldman forecast gross margins of 12.2% in 2025 and 11.7% in 2026; the actuals came in below even that at 11.06% and 10.82%.",
+   "source": "https://www.cnbc.com/2025/03/24/goldman-sachs-downgrades-super-micro-calls-for-more-than-20percent-downside-from-here.html"
+  },
+  {
+   "date": "2025-02-25",
+   "category": "regulatory",
+   "headline": "Files the delinquent FY2024 10-K and two 10-Qs on the same day, one day before the Nasdaq deadline, regaining listing compliance with no restatement of previously issued financial statements",
+   "read": "The second time the company has come to the edge of a Nasdaq delisting; it was delisted in 2018 and relisted in January 2020.",
+   "source": "https://www.theregister.com/2025/02/26/supermicro_10k_filing/"
+  },
+  {
+   "date": "2024-12-02",
+   "category": "regulatory",
+   "headline": "Special Committee completes its review, reporting no substantial concerns about the integrity of senior management or the Audit Committee, while identifying process lapses and recommending a new CFO — recommendations the board adopted in full",
+   "read": "It also stated that EY's resignation and conclusions were not supported by the facts it examined. EY stood by its resignation, only a summary was published, and the CFO recommendation was still unexecuted at the FY2026 10-K.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000044/smci-20241127.htm"
+  },
+  {
+   "date": "2024-11-18",
+   "category": "corporate",
+   "headline": "BDO USA appointed as auditor and a compliance plan submitted to Nasdaq; the securities remain listed pending review",
+   "read": "Nasdaq granted an exception through 25 February 2025, which the company met by one day.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicro-announces-compliance-plan-submission-nasdaq"
+  },
+  {
+   "date": "2024-10-30",
+   "category": "regulatory",
+   "headline": "Ernst & Young resigns, stating it could no longer rely on management's and the Audit Committee's representations and was unwilling to be associated with the financial statements",
+   "read": "EY had questioned the company's commitment to integrity and ethical values under COSO Principle 1 and the board's independence from the CEO under Principle 2. It had been engaged in March 2023 and never issued a report. The shares fell about a third.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000036/smci-20241024.htm"
+  },
+  {
+   "date": "2024-08-27",
+   "category": "incident",
+   "headline": "A short-seller report alleges accounting manipulation, sibling self-dealing and sanctions evasion; the company says it contains false or inaccurate statements and announces the next day that the FY2024 10-K will be late",
+   "read": "Allegation, not finding. No restatement has ever followed and no regulator has made a finding of accounting fraud; separately, the related-party structure the report described is real and had been disclosed for years.",
+   "source": "https://hindenburgresearch.com/smci/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "supplier",
+   "status": "active",
+   "via": "GB300/GB200 NVL72, HGX B300/B200, Vera Rubin platforms",
+   "note": "NVIDIA is the silicon Supermicro's AI business is built on; the 10-K names it first among the vendors Supermicro works closely with to develop compatible products.",
+   "context": "Supermicro is a first-wave rack partner across GB200 NVL72, GB300 NVL72 and the HGX B200/B300 lines, and has announced support for Vera Rubin NVL72, HGX Rubin NVL8 and NVL4. It also builds NVIDIA networking and DPUs into its systems — Spectrum-X, Quantum-2 and X800, BlueField-3 and BlueField-4.\n\nNo independent source confirms any allocation advantage. SemiAnalysis argues explicitly that the narrative of Dell winning on NVIDIA allocation favouritism is incorrect and that Dell is winning on go-to-market. Since the March 2026 indictment, independent analysts have argued the allocation risk runs the other way — that a compliance trust deficit could move NVIDIA allocation toward Dell.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "slug": "amd",
+   "type": "supplier",
+   "status": "active",
+   "via": "Instinct MI300A/MI300X/MI325X/MI350X/MI350P/MI355X and EPYC",
+   "note": "Supermicro is a mainstream, non-exclusive AMD partner shipping Instinct systems in air- and liquid-cooled form, and is named by AMD as a Helios OEM.",
+   "context": "Shipping platforms include the 8U air-cooled AS-8125GS-TNMR2 with eight MI350X, the 4U liquid-cooled AS-4126GS-NMR-LCC with eight MI355X, H14 5U PCIe systems taking up to eight MI350P or MI325X, and MI300A systems in 4U air-cooled and 2U liquid-cooled form. The FY2026 10-K confirms new products supporting the MI350 series.\n\nOn 1 June 2026 Supermicro announced support for AMD's Helios rack — 72 MI455X GPUs, 6th Gen EPYC and Pensando networking on ROCm — with no shipping date published. AMD lists Supermicro among the Helios OEMs alongside Bull, HPE and Lenovo.",
+   "source": "https://www.supermicro.com/en/accelerators/amd"
+  },
+  {
+   "slug": "oracle",
+   "type": "customer",
+   "status": "historical",
+   "scale": "300–400 GB300 NVL72 racks, ~$1.05–1.40bn",
+   "note": "Oracle cancelled an order for 300 to 400 GB300 NVL72 racks, reported in April 2026 and attributed to the export-control investigations and class-action litigation.",
+   "context": "The estimated value of $1.05–1.40bn makes this the clearest quantified instance of the governance overhang converting into lost revenue rather than remaining a reputational matter.\n\nIt is recorded here as historical because the order did not proceed. Supermicro's filings do not name its 10% customers, so whether Oracle appears elsewhere in the revenue base cannot be established from the disclosures.",
+   "source": "https://finance.yahoo.com/sectors/technology/articles/oracle-canceled-nvidia-server-order-180557762.html"
+  },
+  {
+   "slug": "coolit",
+   "type": "competitor",
+   "status": "active",
+   "via": "In-house cold plates and coolant distribution units",
+   "note": "Supermicro designs and manufactures its own cold plates, CDUs and coolant distribution manifolds, competing directly with the CDU and cold-plate specialists.",
+   "context": "Supermicro's FY2026 10-K states that it manufactures the cooling distribution units and manifolds in its DLC-2 stack, and CoolIT's own dossier records that Supermicro and Lenovo build in-rack CDUs and cold plates in house, with Supermicro's materials describing them with no CoolIT mention.\n\nThe two dossiers do not agree on the character of the relationship. CoolIT's records Supermicro as a stated collaborator; Supermicro names no third-party cooling vendor anywhere in its filings or product pages. Both can be true — a collaboration CoolIT publicises and Supermicro does not — and no source reconciles them, so the substantive and mutually supported reading is competition in cold plates and rack CDUs.",
+   "source": "https://www.supermicro.com/en/solutions/liquid-cooling"
+  },
+  {
+   "slug": "crusoe",
+   "type": "partner",
+   "status": "active",
+   "note": "Crusoe is named among the twenty-one technology companies contributing to Supermicro's seventh annual Open Storage Summit on deploying enterprise AI at scale.",
+   "context": "This is an ecosystem-programme association rather than a disclosed commercial contract; no order, deployment or dollar value is published on either side. It is recorded because it is the only named link between Supermicro and a covered neocloud in the first-party record.\n\nSupermicro does not name its customers above 10% of revenue, and CoreWeave, Meta and Ola/Krutrim — each of which has been associated with Supermicro in secondary commentary — appear in no Supermicro filing or press release located during this research.",
+   "source": "https://www.supermicro.com/en/pressreleases/supermicros-seventh-annual-open-storage-summit-brings-together-21-ecosystem-partners"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US export controls (EAR advanced-computing rules) and the related investigations",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-19",
+   "exposure": "Supermicro discloses an SEC subpoena on customers and controls, a grand jury subpoena from the US Attorney for the Southern District of New York, and multiple subpoenas from the Office of Export Enforcement of BIS including at least two subpoenas and one informal request relating to a customer implicated by the March 2026 indictment. It states it has not been informed that it is the target of any of these investigations to date, but warns that BIS could seek to suspend, revoke or deny its export privileges, including through a temporary or permanent denial order. Three individuals employed by or associated with the company were indicted on 19 March 2026; Supermicro is not named as a defendant.",
+   "mitigation": "An independent board investigation completed 20 August 2026 found no evidence senior management knew of the alleged scheme or that the company directly sold export-controlled products to known restricted parties; the company terminated personnel for policy violations and is enhancing its export compliance programme.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "regime": "Section 232 tariffs and general trade policy",
+   "status": "in-effect",
+   "exposure": "Tariff expense in cost of sales rose about $86.5m or 493.6% in FY2025 and a further $237.7m or 228.3% in FY2026, taking the level to roughly $342m and driven by new trade policies enacted during the year. The FY2026 balance sheet carries receivables related to Section 232 claims within other assets, and accrued import tax and tariff liabilities stood at $30.8m against $20.9m a year earlier.",
+   "mitigation": "Supermicro frames its Silicon Valley, Taiwan, Netherlands and Malaysia manufacturing footprint as mitigating the impact of tariffs and regional costs, and its US manufacturing as the basis for TAA-compliant and Buy American Act eligible federal systems.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "regime": "IEEPA tariff refunds following the February 2026 Supreme Court ruling",
+   "status": "announced",
+   "effectiveDate": "2026-02",
+   "exposure": "The FY2026 10-K states that as a result of a Supreme Court ruling issued in February 2026 the company may be entitled to a refund of tariffs previously paid on imported products under the International Emergency Economic Powers Act, and that as of 30 June 2026 it had not recognised an asset related to the potential refund. The amount is therefore unquantified and sits outside the reported results.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "regime": "Customer and supplier concentration",
+   "status": "in-effect",
+   "exposure": "One customer accounted for 28.1% of FY2026 net sales; in FY2025 four separate customers each exceeded 10%, at 20.9%, 11.5%, 11.3% and 11.1%. Three customers were 23.0%, 17.1% and 12.5% of year-end accounts receivable. On the supply side one supplier accounted for 63.1% of total purchases in FY2026, 64.4% in FY2025 and 65.4% in FY2024. None is named in the filings. Independent reporting from the Q2 FY2026 earnings call put a single unnamed customer at 63% of that quarter's revenue.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  },
+  {
+   "regime": "Internal control over financial reporting — material weakness",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-30",
+   "exposure": "BDO issued an adverse opinion on internal control over financial reporting for a second consecutive year. Three of the four material weaknesses reported for FY2025 were remediated during FY2026; the remaining one, over information technology general controls, was unremediated at 30 June 2026 — controls over user access to certain financial applications, system infrastructure and programs did not operate for a sufficient period or consistently. Management concluded that disclosure controls and procedures were also not effective. BDO's opinion on the financial statements themselves was clean.",
+   "mitigation": "The company expects remediation subject to completion of operating-effectiveness testing during fiscal 2027; its own executive compensation disclosure records that it did not achieve full remediation with a clean internal controls opinion.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Charles Liang",
+   "title": "Founder, President, Chief Executive Officer and Chairman of the Board",
+   "background": [
+    "Co-founded the company in September 1993 with Sara Liu and has led it since; also chairman of the board",
+    "The board's stated rationale for combining the chairman and chief executive roles is the relatively small size of the board and Liang's position as founder with extensive industry experience",
+    "Beneficially owns, jointly with Sara Liu, 81,772,121 shares or 12.2% — including 15,300,000 exercisable options. There is a single class of common stock with one vote per share; there is no founder-controlled voting structure",
+    "Disclosed in the filings: in October 2018 Liang personally borrowed about $12.9m from Chien-Tsun Chang, the spouse of his brother Steve Liang, to repay margin loans secured by company stock that lenders called after the 2018 Nasdaq trading suspension",
+    "Married to co-founder Sara Liu"
+   ]
+  },
+  {
+   "name": "Sara Liu",
+   "title": "Co-Founder, Senior Vice President and Director",
+   "background": [
+    "Board member since inception in September 1993",
+    "Treasurer from inception to May 2019; Chief Administrative Officer 1993–2019; Senior Vice President Operations 2014–2018",
+    "Previously in accounting and operational roles including at Micro Center Computer",
+    "BS in Accounting, Providence University, Taiwan; married to Charles Liang"
+   ]
+  },
+  {
+   "name": "David Weigand",
+   "title": "Senior Vice President and Chief Financial Officer; Chief Compliance Officer",
+   "background": [
+    "Chief Financial Officer since February 2021; Chief Compliance Officer since May 2018",
+    "The Special Committee recommended in late 2024 that the company recruit a new Chief Financial Officer and the board said it would begin a search immediately; Weigand remained in post through the FY2026 10-K filed 31 August 2026 with no successor appointed",
+    "Vice President — Hewlett Packard Enterprise (2016–2018)",
+    "Vice President, Tax — Silicon Graphics International (2013–2016, through the HPE acquisition)",
+    "Vice President and Chief Financial Officer — Renesas Electronics America (2010–2013); Vice President, Controller — NEC Electronics America (2004–2010)",
+    "MS in Taxation, University of Hartford; BS in Accounting, San Jose State University; CPA (California, inactive)"
+   ]
+  },
+  {
+   "name": "Kenneth Cheung",
+   "title": "Senior Vice President and Chief Accounting Officer",
+   "background": [
+    "Appointed 27 November 2024 as principal accounting officer, a role created on the Special Committee's recommendation",
+    "Vice President, Corporate Controller from January 2018; joined the company September 2017",
+    "Assistant Corporate Controller — Lumentum Holdings (2015–2017); Corporate Controller — Pericom Semiconductor (2010–2015)",
+    "Began in public accounting at Ernst & Young, then PwC audit and assurance",
+    "BA, University of Western Ontario; CPA (California, inactive) and CPA Canada"
+   ]
+  },
+  {
+   "name": "Jin Xiao (Tom Xiao)",
+   "title": "Senior Corporate Vice President of Engineering",
+   "background": [
+    "In role since January 2026, directing software engineering and product development, switch development, lab validation and global IT operations",
+    "Assumed the operations responsibilities of the retiring SVP Operations George Kao effective 31 December 2025 — de facto head of both engineering and operations",
+    "Joined Supermicro in 2001 as a staff hardware design engineer; VP Quality Control and Lab Testing 2017–2022; SVP Engineering 2022–2026",
+    "Assistant General Manager of R&D — Lenovo QDI",
+    "Master's in industrial automation, Harbin Institute of Technology; bachelor's in electrical engineering, Huazhong University of Science and Technology"
+   ]
+  },
+  {
+   "name": "Vikranth (Vik) Malyala",
+   "title": "Chief Business Officer",
+   "background": [
+    "In role since May 2026; joined Supermicro in 2009",
+    "Senior Vice President Technology and AI, and President and Managing Director EMEA (2024–2026); Managing Director EMEA and SVP Field Application Engineering (2021–2024)",
+    "Design engineering, technical marketing and application engineering — Broadcom (2001–2008); Senior Design Engineer — ServerWorks (1995–2001)",
+    "MS in Electrical Engineering, University of Idaho; BE in Electronics and Communication Engineering, Osmania University"
+   ]
+  },
+  {
+   "name": "Matthew Thauberger",
+   "title": "Chief Revenue Officer",
+   "background": [
+    "In role since May 2026; joined April 2020 as Senior Vice President, Strategy and Business Development",
+    "Vice President of Sales — Burlywood",
+    "General Manager, US Sales — Inspur Systems",
+    "Vice President Global Sales and General Manager EMEA Operations — AMAX"
+   ]
+  },
+  {
+   "name": "Yitai Hu",
+   "title": "General Counsel",
+   "background": [
+    "Leads the internal review of the Global Trade Compliance Program begun after the March 2026 indictment",
+    "Acting Chief Compliance Officer DeAnna Luna, appointed March 2026, reports to him"
+   ]
+  },
+  {
+   "name": "Scott Angel",
+   "title": "Lead Independent Director; member of the Audit Committee",
+   "background": [
+    "Co-led the independent directors' investigation into the export-control matter with Tally Liu, assisted by Munger, Tolles & Olson and AlixPartners",
+    "Former audit partner at Deloitte"
+   ]
+  },
+  {
+   "name": "Tally Liu",
+   "title": "Director; Chair of the Audit Committee",
+   "background": [
+    "Chair of the Audit Committee and a member of the Compensation Committee",
+    "Co-led the independent directors' investigation into the export-control matter",
+    "The Audit Committee he chairs is the body EY questioned the independence of when it resigned in October 2024, and which the Special Committee subsequently found had demonstrated appropriate independence"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Supermicro reports on a fiscal year ending 30 June. Two figures in this record do not reconcile across sources and both are given rather than resolved: FY2026 net income is $2,230.5m on the company's own statements while StockAnalysis computes $2,196m — most plausibly the difference between net income and net income attributable to common stockholders after the June 2026 preferred dividend — and Q4 FY2026 diluted EPS appears as both $1.62 and $1.70. Consensus figures are the published analyst consensus named in each row; where two consensus figures were reported for the same print, both are given. The FY2026 revenue guide moved $33bn to $36bn to $40bn and then to $38.9–40.4bn before landing at $39.06bn.",
+  "periods": [
+   {
+    "period": "FY2024 (ended 2024-06-30)",
+    "periodType": "annual",
+    "periodEnd": "2024-06-30",
+    "commentary": "The last year before the accounting episode. Gross margin was already falling — 13.8% against 18.0% in FY2023 — while revenue more than doubled.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "$14,989.3m, up 110%",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "revenue",
+      "usdMillions": 14989.3,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "13.8%",
+      "expected": "",
+      "verdict": "",
+      "result": "Gross profit $2,061.4m."
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,152.7m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 1152.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$1.92",
+      "expected": "",
+      "verdict": "",
+      "result": "Non-GAAP $2.12."
+     },
+     {
+      "name": "Customer concentration",
+      "actual": "One customer at 20.0% of net sales",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     }
+    ]
+   },
+   {
+    "period": "FY2025 (ended 2025-06-30)",
+    "periodType": "annual",
+    "periodEnd": "2025-06-30",
+    "commentary": "Guidance was cut twice — from $26.0–30.0bn issued in August 2024 to $23.5–25.0bn in February 2025 and $21.8–22.6bn in May 2025 — landing 26.8% below the top of the original range. General and administrative expense rose 35.4%, driven by a 241.0% increase in professional and service fees attributed to the Special Committee investigation and the delayed 10-K.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "$21,972.0m, up 46.6%",
+      "expected": "$26.0–30.0bn originally guided, cut to $21.8–22.6bn",
+      "verdict": "miss",
+      "result": "Landed inside the twice-cut guide and far below the original.",
+      "kpi": "revenue",
+      "usdMillions": 21972.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "11.1%",
+      "expected": "12.2% (Goldman Sachs forecast for 2025)",
+      "verdict": "miss",
+      "result": "Below even the bearish sell-side forecast. Gross profit $2,429.9m."
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,048.9m",
+      "expected": "",
+      "verdict": "",
+      "result": "Fell year on year on a 46.6% revenue increase.",
+      "kpi": "net-income",
+      "usdMillions": 1048.9,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$1.68",
+      "expected": "",
+      "verdict": "",
+      "result": "Non-GAAP $2.06."
+     },
+     {
+      "name": "Customer concentration",
+      "actual": "Four customers each above 10% — 20.9%, 11.5%, 11.3% and 11.1%",
+      "expected": "",
+      "verdict": "",
+      "result": "Thailand was a 10.9% ship-to country."
+     }
+    ]
+   },
+   {
+    "period": "FY2026 (ended 2026-06-30)",
+    "periodType": "annual",
+    "periodEnd": "2026-06-30",
+    "commentary": "Revenue grew 77.8% and gross margin fell again. The company attributes the decline to competitive pricing to gain market share, product and customer mix, and higher manufacturing expenses. Cash from operations was negative $6,809.9m against $2,230.5m of net income, as inventory rose to $12,895.9m and receivables to $6,125.4m — the working-capital cost of the order book, and the reason for the $7.0bn June 2026 financing.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "$39,063.1m, up 77.8%",
+      "expected": "$38.9–40.4bn (own guide, most recently raised to at least $40.0bn)",
+      "verdict": "miss",
+      "result": "Landed below the $40bn re-raised guide.",
+      "kpi": "revenue",
+      "usdMillions": 39063.1,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "10.8%",
+      "expected": "11.7% (Goldman Sachs forecast for 2026)",
+      "verdict": "miss",
+      "result": "Gross profit $4,227.3m. Down 719 basis points from FY2023's 18.0% while revenue grew 5.5x."
+     },
+     {
+      "name": "Net income",
+      "actual": "$2,230.5m on the company's statements; $2,196m per StockAnalysis — no source reconciles the two",
+      "expected": "",
+      "verdict": "",
+      "result": "Non-GAAP net income attributable to common stockholders $2.5bn.",
+      "kpi": "net-income",
+      "usdMillions": 2230.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$3.26",
+      "expected": "",
+      "verdict": "",
+      "result": "Non-GAAP $3.63."
+     },
+     {
+      "name": "Cash from operations",
+      "actual": "negative $6,809.9m",
+      "expected": "",
+      "verdict": "",
+      "result": "Against positive $1,659.5m in FY2025."
+     },
+     {
+      "name": "Remaining performance obligations",
+      "actual": "$2,612.0m at 30 June 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "Against $731.4m a year earlier; deferred revenue rose $1,880.6m including a $943.4m increase in non-refundable advance consideration."
+     },
+     {
+      "name": "Customer and supplier concentration",
+      "actual": "One customer at 28.1% of net sales; one supplier at 63.1% of total purchases",
+      "expected": "",
+      "verdict": "",
+      "result": "Neither is named in the filings."
+     }
+    ]
+   },
+   {
+    "period": "Q4 FY2026 (ended 2026-06-30)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "Gross margin spiked to 17.5% from 9.9% the prior quarter. The CFO attributed about 75% of the gain to the deferral of contracts from Q4 FY2026 into Q1 FY2027 and called it a non-recurring event; the chief executive called it a one-time positive contribution. Management guided the current quarter to a non-GAAP gross margin of 10.4–10.8%, so the company's own guidance says the spike does not repeat.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "$11,119.8m",
+      "expected": "$11.55bn (StockStory) / $11.73bn (other) — no source reconciles the two",
+      "verdict": "miss",
+      "result": "A miss of between 3.8% and 5.2% depending on which consensus is used. The shares rose 6.4–9.7% after hours on the FY2027 guide.",
+      "kpi": "revenue",
+      "usdMillions": 11119.8,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "17.5% GAAP, 17.6% non-GAAP",
+      "expected": "",
+      "verdict": "",
+      "result": "Against a 6.3% trough two quarters earlier."
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,178m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 1178.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$1.62 per the company's statements; $1.70 as reported by StockStory — no source reconciles the two",
+      "expected": "$0.96 (StockStory) / $1.59 (other)",
+      "verdict": "beat",
+      "result": "A beat on any of the reported consensus figures; the spread between them is itself the finding."
+     },
+     {
+      "name": "FY2027 guidance",
+      "actual": "$65.0–72.0bn, with Q1 FY2027 at $14.5–15.5bn",
+      "expected": "$54.4bn consensus for FY2027",
+      "verdict": "beat",
+      "result": "Guidance far above the Street; guided diluted share count of 745m GAAP against 656.9m common outstanding."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess Supermicro is a challenger in compute and the rack, not an incumbent, and that its own gross margin is the cleanest evidence. Basis: revenue grew 5.5× from FY2023 to FY2026 while gross margin fell 719 basis points from 18.0% to 10.8% — the arithmetic of buying volume with price. IDC's tracker says the same from outside: Supermicro peaked at 8.0% of worldwide server revenue in 4Q23, was statistically tied with Dell at 6.5% against 7.2% in 4Q24, and by 1Q26 sat at 7.6% against Dell's 16.5%. The Next Platform characterises it as primarily an integrator rather than a differentiated vendor, and Goldman Sachs downgraded it to Sell on commoditisation and lack of differentiation.",
+  "**(High confidence)** We assess the pressure on Supermicro comes from above and below rather than from its named OEM peers. Basis: ODM Direct — vendors selling straight to hyperscalers at roughly 2–3% margins — reached 59.4% of the server market in 3Q25 and was 50.2% in 1Q26, dwarfing every OEM; meanwhile Dell grew 244.1% year on year in 1Q26 against Supermicro's 128.9%. HPE has drifted from 6.8% to 3.0% over the same span, so Supermicro comfortably beats its nearest OEM peers and still loses share.",
+  "**(High confidence)** We assess the cooling business is a genuine manufactured product line rather than a resale, and that this is what distinguishes it from the power line. Basis: the FY2026 10-K states the company designs, builds, tests, validates and delivers direct-to-chip cold-plate solutions and manufactures the coolant distribution units and manifolds itself, with published capacities of 250 kW in-rack, 1.8 MW in-row, 10–120 kW per rear door and 1–50 MW cooling towers. By contrast Compuware manufactured about 94.4% of the power supplies Supermicro purchased in FY2026 and Ablecom about 95.3% of the chassis.",
+  "**(Moderate confidence)** We assess the cooling position is real but is not a leadership position, and a dossier that reads the DLC-2 claims as market standing will overstate it. Basis: Dell'Oro's January 2026 assessment names Vertiv as the liquid-cooling leader with CoolIT, nVent and Boyd holding strong positions and does not name Supermicro; every DLC-2 performance figure — 98% heat capture, 40% power saving, 20% lower total cost of ownership — is a company claim rather than an independent measurement; and DataCenterDynamics reported a DLC component shortage costing $800m of revenue in a quarter, which is the behaviour of a taker of cooling supply rather than a maker of it.",
+  "**(Moderate confidence)** We assess the governance overhang has stopped being reputational and started being commercial. Basis: Oracle cancelled an order for 300–400 GB300 NVL72 racks worth an estimated $1.05–1.40bn, reported in April 2026 and attributed to the export-control investigations and class actions; Futurum argues the March 2026 indictment created a compliance trust deficit that cannot be resolved by a press statement and that Dell is best positioned to capture displaced NVIDIA allocation; and the one material weakness still unremediated at 30 June 2026 sits in exactly the IT access controls a procurement reviewer would ask about.",
+  "**(Moderate confidence)** We assess working capital rather than demand is the binding constraint on this business. Basis: FY2026 cash from operations was negative $6,809.9m against $2,230.5m of net income, with inventory at $12,895.9m and receivables at $6,125.4m; the company raised $7.0bn of equity and equity-linked financing in June 2026 explicitly to fund components for approximately $39bn of orders received in recent weeks; and guided Q1 FY2027 diluted shares of 745m against 656.9m common outstanding implies a further 13–16% dilution. An order book that has to be pre-funded at this ratio is a financing business as much as a manufacturing one.",
+  "**(Moderate confidence)** We assess that the Q4 FY2026 gross-margin recovery should not be read as a turn in the integrator thesis. Basis: management's own account is that about 75% of the 17.5% margin came from contracts deferred out of Q4 into Q1 FY2027, described by the CFO as a non-recurring event and by the chief executive as a one-time positive contribution — and the guide for the following quarter is a non-GAAP gross margin of 10.4–10.8%, back in the range of the preceding two years.",
+  "**(Moderate confidence)** We assess the related-party manufacturing structure is a structural feature of the business rather than a resolved historical matter, and that it should be recorded as fact without being characterised as impropriety. Basis: Ablecom, whose chief executive Steve Liang is Charles Liang's brother, manufactured about 95.3% of chassis purchased in FY2026; Compuware, chaired and led by Bill Liang, brother to both, manufactured about 94.4% of power supplies and received a $200.0m trade credit line in November 2025; the two are together only 2.1% of cost of sales but are building campuses adjacent to Supermicro's own in Malaysia and hold a superficies agreement on three Taoyuan parcels. No regulator has found the arrangement improper and it has been disclosed for well over a decade.",
+  "**(Low confidence)** We assess that the accounting episode is better read as a recurrence pattern than as a single event, while noting that the distinction between allegation, finding and exoneration has to be held carefully. Basis: the SEC charged the company and a former CFO with accounting violations in 2020, settled for a $17.5m penalty with a clawback of $2.1m of the chief executive's stock profits, and it was delisted from Nasdaq in 2018 before relisting in 2020; the 2024–25 delinquency was the second such episode. Against that: no restatement of previously issued financial statements has ever followed the 2024 allegations, no regulator has made a finding of accounting fraud, and the Special Committee found no substantial concerns about senior management's integrity — while also identifying process lapses, holding the CFO primarily responsible, and recommending a replacement that had not been made two years later."
+ ],
+ "sources": [
+  {
+   "label": "StockAnalysis — SMCI overview, annual and quarterly financials, forecasts and ratings",
+   "url": "https://stockanalysis.com/stocks/smci/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "24/7 Wall St — Don't fall for Supermicro's margin magic; the company already said it's temporary",
+   "url": "https://247wallst.com/investing/2026/09/08/dont-fall-for-supermicros-margin-magic-the-company-already-said-its-temporary/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "24/7 Wall St — Dell surges on a record $95bn AI backlog; HPE climbs; Super Micro ticks up",
+   "url": "https://247wallst.com/investing/2026/09/02/dell-surges-9-on-record-95b-ai-backlog-hewlett-packard-enterprise-climbs-4-super-micro-ticks-up/",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 2026-06-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Supermicro — Completion of independent investigation and continued enhancement of export compliance",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-announces-completion-independent-investigation-and-continued-enhancement",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Fortune — Supermicro investigation clears CEO in the alleged $2.5bn smuggling scheme",
+   "url": "https://fortune.com/2026/08/20/supermicro-investigation-ceo-nvidia-smuggling/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "The Register — Big Cloud is poised to corner the market for enterprise hardware",
+   "url": "https://www.theregister.com/systems/2026/08/12/big-cloud-is-poised-to-corner-the-market-for-enterprise-hardware/5286621",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "LongYield — Super Micro: the margin that blinked",
+   "url": "https://longyield.substack.com/p/super-micro-the-margin-that-blinked",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Q4 and full fiscal year 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "StockStory via Yahoo Finance — Super Micro beats Q2 CY2026 non-GAAP EPS, misses revenue estimates",
+   "url": "https://stockstory.org/us/stocks/nasdaq/smci/news/earnings/super-micro-nasdaqsmci-misses-q2-cy2026-revenue-estimates-but-stock-soars-97percent",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Supermicro — Seventh annual Open Storage Summit brings together 21 ecosystem partners",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicros-seventh-annual-open-storage-summit-brings-together-21-ecosystem-partners",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "SEC Form 8-K — initial dividend declared on the Series A Mandatory Convertible Preferred",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000020/smci-20260805.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Supermicro — DCBBS expanded with the precision-engineered AI Rack Series",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-expands-dcbbs-precision-engineered-ai-rack-series-accelerate-deployment",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Daily Political — SMCI shares down following an analyst downgrade (Mizuho price target cut)",
+   "url": "https://www.dailypolitical.com/2026/07/24/super-micro-computer-nasdaqsmci-shares-down-3-5-following-analyst-downgrade.html",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "Supermicro — New server portfolio on 6th Gen AMD EPYC 9006 Series CPUs",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-new-server-portfolio-6th-gen-amd-epyctm-9006-series-cpus",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Supermicro — DCBBS liquid-cooling portfolio expanded with rear door heat exchangers",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-expands-end-end-dcbbs-liquid-cooling-portfolio-rear-door-heat-exchangers",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Supermicro — Validated Kubernetes edge AI appliances with Red Hat and Everpure",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-simplifies-edge-ai-deployments-validated-kubernetes-appliances-red-hat",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "The Register — Trouble keeps finding Supermicro as strange server shipments attract police attention in Taiwan and Singapore",
+   "url": "https://www.theregister.com/legal/2026/07/02/trouble-keeps-finding-supermicro-as-strange-server-shipments-attract-police-attention-in-taiwan-and-singapore/5265520",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "Supermicro — NVIDIA Vera Rubin NVL4 end-to-end DCBBS blueprint with native FP64",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-delivers-nvidia-vera-rubin-nvl4-end-end-dcbbs-blueprint-native-fp64",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Electronics Weekly — Server market up 30% in Q1 2026 (IDC vendor table)",
+   "url": "https://www.electronicsweekly.com/news/business/server-market-2026-06/",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "SEC Form 8-K — Mandatory Convertible Preferred closing and certificate of designations",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000119312526270430/d151436d8k.htm",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "SEC Form 8-K — common stock underwriting agreement",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000119312526269703/d45696d8k.htm",
+   "date": "2026-06-12"
+  },
+  {
+   "label": "Supermicro — Pricing of equity and equity-linked financing transactions to fund AI orders",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-announces-pricing-equity-and-equity-linked-financing-transactions-fund-ai",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Supermicro — Proposed $7.0 billion equity and equity-linked financing",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-announces-proposed-70-billion-equity-and-equity-linked-financing",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Supermicro — Rack-scale AI leadership expanded with the AMD Helios platform",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-expands-rack-scale-ai-leadership-amd-helios-platform-accelerating",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Supermicro — Collaboration with Arm on energy-efficient rack-scale infrastructure",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-collaborates-arm-deliver-new-class-energy-efficient-rack-scale",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Supermicro — DCBBS Blueprints for NVIDIA Vera Rubin NVL72 and HGX Rubin NVL8",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-dcbbs-blueprints-nvidia-vera-rubin-nvl72-and-nvidia-hgx-rubin",
+   "date": "2026-05-31"
+  },
+  {
+   "label": "Supermicro — Collaboration with Taiwanese authorities to prevent illicit diversion of servers",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-collaborates-taiwanese-authorities-prevent-illicit-diversion-server",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Supermicro — Sustainable full-stack AI cloud infrastructure with Verda",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-and-verda-deliver-sustainable-full-stack-ai-cloud-infrastructure-next",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Supermicro — Matthew Thauberger appointed Chief Revenue Officer",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-appoints-matthew-thauberger-chief-revenue-officer",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "CFO Dive — Super Micro's internal control material weaknesses linger",
+   "url": "https://www.cfodive.com/news/super-micros-internal-control-material-weaknesses-linger/820034/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Supermicro — Vik Malyala appointed Chief Business Officer",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-appoints-vik-malyala-chief-business-officer",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "24/7 Wall St — Super Micro doubled revenue year over year and the stock is still flat",
+   "url": "https://247wallst.com/investing/2026/05/06/super-micro-doubled-revenue-year-over-year-and-the-stock-is-still-flat-that-math-doesnt-add-up/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "CNBC — Super Micro Q3 fiscal 2026 earnings report",
+   "url": "https://www.cnbc.com/2026/05/05/super-micro-smci-q3-earnings-report-2026.html",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Supermicro — Largest Silicon Valley campus added with a new DCBBS facility",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-adds-largest-silicon-valley-campus-new-dcbbs-facility-advance-delivery",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Yahoo Finance — How Oracle's cancelled NVIDIA server order at Supermicro changed the story",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/oracle-canceled-nvidia-server-order-180557762.html",
+   "date": "2026-04-25"
+  },
+  {
+   "label": "Supermicro — Update on the investigation by independent board directors",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-provides-update-investigation-independent-board-directors",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "Futurum Group — Will Supermicro's legal crisis shift server market share to Dell and HPE?",
+   "url": "https://futurumgroup.com/insights/will-supermicros-legal-crisis-shift-server-market-share-to-new-dell-and-hpe-gpu-platforms/",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — statement on the SDNY indictment and board resignation",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000011/a991.htm",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "CNN — Super Micro co-founder charged with diverting $2.5bn in Nvidia AI chips to China",
+   "url": "https://www.cnn.com/2026/03/19/politics/super-micro-computer-founder-charged-ai-chips-china",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Network World — IDC: Dell leads the server market driven by AI infrastructure needs (Q4 2025)",
+   "url": "https://www.networkworld.com/article/4147841/idc-dell-leads-server-market-driven-by-ai-infrastructure-needs.html",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Supermicro — DCBBS revealed for NVIDIA Vera Rubin NVL72, HGX Rubin NVL8 and Vera CPU systems",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-reveals-dcbbsr-new-nvidia-vera-rubin-nvl72-hgx-rubin-nvl8-and-vera-cpu",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Supermicro — Industry's highest density AMD EPYC 4005 Series MicroBlade",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-industrys-highest-density-amd-epyctm-4005-series-microblader",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "Fortune — Supermicro pledged to hire a new CFO immediately; that was 14 months ago",
+   "url": "https://fortune.com/2026/02/20/supermicro-smci-cfo-search-david-weigand-nvidia/",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "The Register — For once, Supermicro has dodged the drama and delivered data centres",
+   "url": "https://www.theregister.com/2026/02/04/for_once_supermicro_has_dodged",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Q2 fiscal 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000006/exhibit991_20251231.htm",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "Dell'Oro Group — Data centre liquid cooling market to approach $7 billion by 2029",
+   "url": "https://www.delloro.com/news/data-center-liquid-cooling-market-to-approach-7-billion-by-2029-as-ai-deployments-accelerate/",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "StorageReview — Global server market sets a new revenue record in Q3 2025 (IDC table)",
+   "url": "https://www.storagereview.com/news/global-server-market-sets-new-revenue-record-in-q3-2025-as-ai-infrastructure-spending-accelerates",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "IDC — Worldwide server market revenue increased 61% in 3Q25",
+   "url": "https://my.idc.com/getdoc.jsp?containerId=prUS54034325",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "Supermicro — Air-cooled AI solutions portfolio expanded with AMD Instinct MI355X GPUs",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-expands-its-portfolio-performance-and-efficiency-driven-air-cooled-ai",
+   "date": "2025-11-19"
+  },
+  {
+   "label": "The Register — Supermicro says making AI hardware is tricky and low-margin",
+   "url": "https://www.theregister.com/2025/11/05/supermicro_q1_2026/",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Q1 fiscal 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000029/exhibit991_20250930.htm",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Supermicro — Super Micro Federal LLC formed to expand in the federal market",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-announces-us-federal-entity-expand-further-federal-market-extensive-us",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Supermicro — Expanded NVIDIA collaboration; compliance, data integrity and US manufacturing",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-expands-collaboration-nvidia-and-strengthens-compliance-data-integrity-and",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "The Register — Supermicro warns of a $1bn revenue miss",
+   "url": "https://www.theregister.com/2025/10/24/supermicro_revenue_warning/",
+   "date": "2025-10-24"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Q1 fiscal 2026 business update",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000162828025045989/fq12026businessupdatev9ms.htm",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "Supermicro — DCBBS introduced as a new business line for data centre facilities equipment and management services",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-new-business-line-data-center-building-block-solutions-data",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Supermicro — Volume shipments begin of NVIDIA Blackwell Ultra systems and rack plug-and-play solutions",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-begins-volume-shipments-nvidia-blackwell-ultra-systems-and-rack-plug-and",
+   "date": "2025-09-11"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 2025-06-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000027/smci-20250630.htm",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "Supermicro — Lambda builds AI factories on Supermicro NVIDIA Blackwell GPU server clusters",
+   "url": "https://www.supermicro.com/en/pressreleases/lambda-builds-ai-factories-supermicro-nvidia-blackwell-gpu-server-clusters-deliver",
+   "date": "2025-08-25"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Q4 and full fiscal year 2025 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000023/exhibit991_q425.htm",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "Supermicro — Industry first: systems certified for the Intel immersion cooling solution",
+   "url": "https://www.supermicro.com/en/pressreleases/industry-first-supermicro-systems-certified-intel-immersion-cooling-solution",
+   "date": "2025-06-30"
+  },
+  {
+   "label": "Benzinga — Supermicro raises $2 billion via private convertible debt at a 35% conversion premium",
+   "url": "https://www.benzinga.com/news/financing/25/06/46074323/supermicro-raises-2-billion-via-private-convertible-debt-with-35-conversion-premium",
+   "date": "2025-06-24"
+  },
+  {
+   "label": "Supermicro — Liquid-cooled and air-cooled solutions with AMD Instinct MI350 series",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-delivers-performance-and-efficiency-optimized-liquid-cooled-and-air-cooled",
+   "date": "2025-06-12"
+  },
+  {
+   "label": "Supermicro — DCBBS simplify and shorten global-scale data centre buildouts",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicros-revolutionary-data-center-building-block-solutionsr-dcbbs-simplify",
+   "date": "2025-05-15"
+  },
+  {
+   "label": "DataCenterDynamics — Saudi Arabia's DataVolt signs a $20bn deal with Supermicro",
+   "url": "https://www.datacenterdynamics.com/en/news/saudis-datavolt-signs-20bn-deal-with-supermicro/",
+   "date": "2025-05-14"
+  },
+  {
+   "label": "Supermicro — DLC-2 next-generation direct liquid cooling solutions",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicros-dlc-2-next-generation-direct-liquid-cooling-solutions-aims-reduce-data",
+   "date": "2025-05-14"
+  },
+  {
+   "label": "The Next Platform — Supermicro hiccups on Hopper, pulls $40 billion guidance for fiscal 2026",
+   "url": "https://www.nextplatform.com/2025/05/08/supermicro-hiccups-on-hopper-pulls-40-billion-guidance-for-fiscal-2026/",
+   "date": "2025-05-08"
+  },
+  {
+   "label": "The Register — Supermicro warns of a massive revenue miss",
+   "url": "https://www.theregister.com/2025/04/30/supermicro_q3_revenue_miss/",
+   "date": "2025-04-30"
+  },
+  {
+   "label": "CNBC — Goldman Sachs downgrades Super Micro, calls for more than 20% downside",
+   "url": "https://www.cnbc.com/2025/03/24/goldman-sachs-downgrades-super-micro-calls-for-more-than-20percent-downside-from-here.html",
+   "date": "2025-03-24"
+  },
+  {
+   "label": "IDC — Worldwide server market, 4Q24 and 4Q23 comparatives",
+   "url": "https://my.idc.com/getdoc.jsp?containerId=prUS53264225",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Supermicro — US manufacturing capacity expanded with a third Silicon Valley campus",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-expands-us-manufacturing-capacity-and-development-industry-leading-total",
+   "date": "2025-02-28"
+  },
+  {
+   "label": "The Register — Supermicro finally files its long-delayed 10-K and avoids delisting",
+   "url": "https://www.theregister.com/2025/02/26/supermicro_10k_filing/",
+   "date": "2025-02-26"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 2024-06-30 (filed delinquent)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536525000004/smci-20240630.htm",
+   "date": "2025-02-25"
+  },
+  {
+   "label": "CFO Dive — Super Micro says the DOJ and SEC subpoenaed documents",
+   "url": "https://www.cfodive.com/news/supermicro-doj-sec-subpoenaed-documents-accounting/739992/",
+   "date": "2025-02-12"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Nasdaq exception granted through 2025-02-25",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000045/smci-pressreleasenasdaqext.htm",
+   "date": "2024-12-06"
+  },
+  {
+   "label": "CFO Dive — Super Micro heeds a committee call for a new CFO amid process lapses",
+   "url": "https://www.cfodive.com/news/super-micro-heeds-committee-call-new-cfo-process-lapses/734517/",
+   "date": "2024-12-03"
+  },
+  {
+   "label": "SEC Form 8-K — Special Committee findings and Chief Accounting Officer appointment",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000044/smci-20241127.htm",
+   "date": "2024-12-02"
+  },
+  {
+   "label": "Supermicro — Compliance plan submitted to Nasdaq and BDO USA appointed",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-announces-compliance-plan-submission-nasdaq",
+   "date": "2024-11-18"
+  },
+  {
+   "label": "SEC Form 8-K Item 4.01 — Ernst & Young resignation",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000036/smci-20241024.htm",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "CNBC — Super Micro auditor resigns after raising concerns months earlier",
+   "url": "https://www.cnbc.com/2024/10/30/super-micro-auditor-resigns-after-raising-concerns-months-earlier.html",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "Counterpoint Research — AI servers are now one-third of the global server market",
+   "url": "https://counterpointresearch.com/en/reports/post-report-ai-servers-are-now-one-third-of-the-global-server-market",
+   "date": "2024-10-11"
+  },
+  {
+   "label": "Supermicro — Position solidified as a leader in complete rack-scale liquid cooling solutions",
+   "url": "https://www.supermicro.com/en/pressreleases/supermicro-solidifies-position-leader-complete-rack-scale-liquid-cooling-solutions",
+   "date": "2024-10-07"
+  },
+  {
+   "label": "Supermicro — Fujitsu and Supermicro strategic collaboration on green AI computing",
+   "url": "https://www.supermicro.com/en/pressreleases/fujitsu-and-supermicro-announce-strategic-collaboration-develop-green-ai-computing",
+   "date": "2024-10-02"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — Nasdaq non-compliance letter",
+   "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536524000033/smci-pressreleasenasdaqdef.htm",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "Hindenburg Research — Super Micro report (short position disclosed)",
+   "url": "https://hindenburgresearch.com/smci/",
+   "date": "2024-08-27"
+  },
+  {
+   "label": "SEC — Press release 2020-190: SEC charges Super Micro and its former CFO with accounting violations",
+   "url": "https://www.sec.gov/newsroom/press-releases/2020-190",
+   "date": "2020-08-25"
+  },
+  {
+   "label": "Supermicro — Liquid cooling and DLC-2 solutions page",
+   "url": "https://www.supermicro.com/en/solutions/liquid-cooling"
+  },
+  {
+   "label": "Supermicro — Data Center Building Block Solutions page",
+   "url": "https://www.supermicro.com/en/solutions/dcbbs"
+  },
+  {
+   "label": "Supermicro — AMD Instinct accelerator systems",
+   "url": "https://www.supermicro.com/en/accelerators/amd"
+  },
+  {
+   "label": "Supermicro — NVIDIA accelerator systems",
+   "url": "https://www.supermicro.com/en/accelerators/nvidia"
+  },
+  {
+   "label": "Supermicro — NVIDIA Vera Rubin solutions page",
+   "url": "https://www.supermicro.com/en/accelerators/nvidia/vera-rubin"
+  },
+  {
+   "label": "Supermicro — AI SuperCluster solutions page",
+   "url": "https://www.supermicro.com/en/solutions/ai-supercluster"
+  },
+  {
+   "label": "Supermicro — US manufacturing expansion",
+   "url": "https://www.supermicro.com/en/about/us-manufacturing-expansion"
+  },
+  {
+   "label": "SEC EDGAR — Supermicro submissions index, CIK 0001375365",
+   "url": "https://data.sec.gov/submissions/CIK0001375365.json"
+  },
+  {
+   "label": "SEC EDGAR — Supermicro XBRL company facts, CIK 0001375365",
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001375365.json"
+  },
+  {
+   "label": "TOP500 — list statistics, vendor system and performance share",
+   "url": "https://www.top500.org/statistics/list/"
+  }
+ ],
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 1
+}

@@ -1,0 +1,1556 @@
+{
+ "schemaVersion": 7,
+ "slug": "amd",
+ "name": "Advanced Micro Devices, Inc.",
+ "shortName": "AMD",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.amd.com",
+ "headquarters": "Santa Clara, California, United States",
+ "founded": 1969,
+ "employees": "~31,000 (as of 2025-12-27)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: AMD"
+ },
+ "summary": "BOTTOM LINE UP FRONT: AMD is the only merchant second source of AI accelerator silicon at scale, and in 2026 it stopped competing chip-against-chip and started competing rack-against-rack — Helios, a 72-GPU liquid-cooled double-wide rack it designs and licenses but does not build. The position is asymmetric and the dossier should not average it: on server CPUs AMD is an incumbent co-leader at 34.5% of x86 server units, while on accelerators it books an estimated 5–10% of revenue against NVIDIA's 75–92%, and NVIDIA's data-centre revenue alone is more than thirteen times AMD's entire Data Center segment. BACKGROUND. Incorporated in Delaware on 1 May 1969, headquartered at 2485 Augustine Drive, Santa Clara, California, listed on Nasdaq as AMD, about 31,000 employees at 27 December 2025, fiscal year ending the last Saturday in December. FY2025 revenue was $34,639m, up 34.3%, of which Data Center was $16,635m; GAAP net income $4,335m and diluted EPS $2.65 (non-GAAP $4.17). Q2 FY2026 set a record at $11,536m with Data Center at $6,718m — 58% of the company — and the standing Q3 guide is about $13.0bn.",
+ "ecosystemRole": "For a data-centre power and cooling corpus AMD matters as the load, not as a supplier to the load. It defines what a rack must be fed and cooled: Helios puts 72 Instinct MI455X accelerators and 18 EPYC 'Venice' CPUs in one OCP Open Rack Wide double-wide frame with quick-disconnect liquid cooling, and AMD's own comparative claims are normalised to a 100 kW rack power envelope. Three things distinguish it from NVIDIA in this ecosystem. First, AMD states plainly that although it supplies parts used in a Helios system it does not manufacture or sell the completed rack — the architecture is developed and licensed for customers and their manufacturing partners, so the rack reaches site through Sanmina, Wiwynn, Wistron, Inventec and the OEMs. Second, AMD prescribes no rack power architecture and names no power-conversion vendors: it adopted the Open Rack Wide specification Meta contributed to the Open Compute Project rather than publishing an 800 VDC roster of its own. Third, AMD has begun taking direct balance-sheet exposure to the buildout rather than only selling into it — $4.1bn of guarantees on commercial partners' data-centre lease obligations on terms up to fifteen years, sometimes issued in exchange for warrants, alongside $4.5bn of leases not yet commenced and a further $9.5bn signed after quarter-end for 2027–2028.",
+ "productsAndServices": [
+  {
+   "name": "Instinct data-centre accelerators (MI300 → MI400 Series)",
+   "category": "AI accelerators",
+   "description": "The GPU line AMD competes against NVIDIA with, and the reason the Data Center segment more than doubled in two years. MI300X (CDNA 3, 192 GB HBM3, 5.3 TB/s) and the MI300A CPU+GPU APU shipped from December 2023; MI325X (256 GB HBM3E, 6.0 TB/s) from Q4 2024; the CDNA 4 MI350 Series (MI350X, MI355X) launched at Advancing AI 2025 and became, in AMD's words, the fastest-ramping product in company history; the PCIe-card MI350P (128 compute units, 144 GB HBM3E) and the MI400 Series (MI455X for AI, MI430X for HPC and sovereign AI at up to 288 TFLOPS hardware FP64) launched at Advancing AI 2026 on 23 July 2026. MI440X was announced at CES 2026 for enterprise AI. MI500 follows in 2027 and MI600 in 2028. MI308 is the China-compliant derivative whose licence status, not its specification, defines it.",
+   "highlights": [
+    "MI355X: 288 GB HBM3E class memory, 1.4 kW per GPU against Blackwell B200's 1 kW — SemiAnalysis measures Blackwell about 20% more energy-efficient on throughput per watt",
+    "AMD claims the MI350 Series delivers 4× the gen-on-gen AI compute and a 35× generational inference leap, and that MI355X delivers up to 40% more tokens per dollar than competing solutions",
+    "MI455X: AMD claims 3.4× the token throughput of MI355X on Deepseek V4 Flash at FP4; HBM4 memory supplied by Samsung",
+    "Independent verification is mixed and should be read as the real state of play: MLPerf Training 6.0 put MI355X within about 5% of B200 on Llama 2 70B LoRA and about 6% on Llama 3.1 8B pretraining, but SemiAnalysis's InferenceX v2 found the MI355X competitive on FP8 disaggregated perf-per-TCO while being decisively beaten on FP4 disaggregated work with wide expert parallelism",
+    "The composability failure is the specific technical limitation: FP4, disaggregation and wide expert parallelism cannot currently be combined simultaneously on the AMD stack",
+    "MI300A powers El Capitan at Lawrence Livermore — number 2 on the June 2026 TOP500 — and MI250X powers Frontier at Oak Ridge at number 3; AMD Instinct is in four of the top ten"
+   ],
+   "positioning": "The credible second source rather than the leader. Independent estimates put AMD at roughly 5–10% of data-centre AI accelerator revenue against NVIDIA at 75–92%, and no named tier-one house publishes a clean split — the honest figure is a band, not a number. The comparison that needs no estimate is reported revenue: NVIDIA's data-centre revenue of $89.0bn in its quarter ended 26 July 2026 against AMD's entire Data Center segment, EPYC included, of $6,718m. Hyperscaler custom silicon is growing faster than AMD is.",
+   "soldThrough": "Direct to hyperscalers and frontier labs under multi-gigawatt agreements, and through OEMs — Bull (Eviden), HPE, Lenovo, Supermicro, Dell — and neoclouds including TensorWave, Vultr and Cirrascale.",
+   "targetSegments": [
+    "Frontier AI labs",
+    "Hyperscale cloud",
+    "Sovereign AI programmes",
+    "National laboratories and HPC",
+    "Neoclouds"
+   ],
+   "roadmap": "MI500 Series with EPYC 'Verano' in 2027; MI600 Series with EPYC 'Ferrara' in 2028."
+  },
+  {
+   "name": "Helios rack-scale platform — designed and licensed, not manufactured",
+   "category": "Rack-scale AI systems",
+   "description": "AMD's answer to NVIDIA's NVL72 and the single most consequential product line for this corpus. One Helios rack holds 72 Instinct MI455X accelerators and 18 sixth-generation EPYC 'Venice' CPUs with Pensando front-end, scale-up and scale-out networking, in an OCP Open Rack Wide double-wide frame with quick-disconnect liquid cooling. AMD launched it on 23 July 2026 and began shipping in the second half of 2026. The commercial structure is the part most easily misread: AMD's own 10-Q states that although it supplies certain products used in a Helios-based system, it does not manufacture or sell the completed Helios rack systems — the architecture is developed and licensed for implementation by customers and their manufacturing partners.",
+   "highlights": [
+    "Up to 2.9 exaFLOPS of FP4 per rack; 31 TB of HBM4 and 1.7 PB/s of HBM bandwidth across the rack",
+    "Scale-up runs at 1.8 TB/s per direction per GPU over 72 links using AMD's UALoE, with two 512-port switch ASICs per switch tray; 800G Pensando Vulcano NICs give up to 2.4 Tb/s per direction per GPU for scale-out",
+    "Rack power is 225–245 kW peak per The Register's independent reporting, against an estimated 240–250 kW for Vera Rubin; both are liquid-cooled and the switch trays alone draw about 7 kW each",
+    "Built on the Open Rack Wide specification Meta contributed to the Open Compute Project — a double-wide rack that OCP describes as optimised for the power, cooling and serviceability needs of gigawatt-scale data centres",
+    "AMD claims up to 30% more inference tokens per dollar than an NVIDIA Vera Rubin NVL72 rack, on Kimi K2 Thinking; the claim is an AMD Performance Labs estimate and is not independently verified",
+    "The production risk is mechanical, not architectural: SemiAnalysis documents 1,728 cables per rack and up to 85% of the backplane requiring retiming with over 550 Broadcom Ethernet retimers",
+    "AMD conceded through its VP of AI software that real tests reach about 50% of peak FLOPS — 20 PFLOPS achieved against 40 peak — so the exaFLOPS figure is a ceiling"
+   ],
+   "positioning": "The first generation in which AMD is not a year late. The Register's read is that Helios lands right in time with Vera Rubin, which breaks AMD's historical pattern; ServeTheHome's is that NVIDIA will still sell a great many Vera Rubin racks but it is good to have a second vendor operating at this scale. Volume, not launch date, is the open question — initial volume in Q3 2026 with significant ramp only in Q4 2026 into Q1 2027.",
+   "soldThrough": "Architecture licensed to customers and their manufacturing partners. OEMs named by AMD are Bull (Eviden), HPE, Lenovo and Supermicro; infrastructure and ODM partners are Sanmina — AMD's preferred new-product-introduction manufacturing partner after it sold ZT Systems' manufacturing arm to it — plus Wiwynn, Wistron and Inventec, with AIC on rack-level and compute-tray mechanical architecture.",
+   "targetSegments": [
+    "Gigawatt-scale AI campuses",
+    "Hyperscale cloud",
+    "Sovereign AI programmes",
+    "Neoclouds"
+   ],
+   "roadmap": "Helios 500 with MI500 and EPYC 'Verano' plus Pensando 'Como'/'Monza' in 2027; Helios 600 with MI600 and EPYC 'Ferrara' plus Pensando 'Palma'/'Levanzo' in 2028."
+  },
+  {
+   "name": "EPYC server CPUs — the incumbent half of the company",
+   "category": "Server processors",
+   "description": "Where AMD is not a challenger. Fifth-generation EPYC 9005 'Turin' launched October 2024 on 'Zen 5' with 8 to 192 cores in the SP5 socket, including the EPYC 9575F, a 64-core part boosting to 5 GHz built specifically as an AI head node. Sixth-generation 'Venice' launched at Advancing AI 2026 and is the first HPC product in the industry taped out and brought up on TSMC's 2 nm N2 process, with production ramping in Taiwan from May 2026 and planned to ramp at TSMC Arizona. 'Verano' follows on the same node with integrated LPDDR aimed explicitly at power-constrained workloads. EPYC 4005, 8005 and the Embedded 9005/4005/2005 series fill the entry, telecom and edge tiers.",
+   "highlights": [
+    "EPYC 9996 reaches 256 cores and 512 threads at 400 W — and AMD has replaced the term TDP with 'Default CPU Power' starting with the sixth generation",
+    "16 channels of 12.8 GT/s MRDIMM and PCIe Gen 6 on 'Venice'; select SKUs boost to 5 GHz",
+    "AMD publishes its density claims against a 100 kW rack power envelope: 2.08× the cores and threads per rack of an NVIDIA Vera-based rack and 1.24× an Intel Xeon 6980P rack",
+    "Mercury Research puts AMD at 34.5% of x86 server units in Q2 2026, up from 27.3% a year earlier — and at 46.4% when the comparison is narrowed to Xeon SP against EPYC",
+    "Packaging is a differentiator in its own right: TSMC SoIC-X and CoWoS-L plus AMD's own Elevated Fanout Bridge 2.5D interconnect, qualified with ASE, SPIL and — in the industry's first panel-based form — Powertech"
+   ],
+   "positioning": "An incumbent co-leader, and the fact that most complicates any single verdict on AMD. A share above a third of server units, rising seven points year on year, is not a challenger position. Two systems in the June 2026 Green500 top six pair AMD EPYC hosts with NVIDIA H100 accelerators — an efficiency win for the socket that is not a win for Instinct.",
+   "soldThrough": "Direct to hyperscalers and through the full OEM channel; more than 950 EPYC-powered public cloud instances and over 350 OxM platforms were available at the Turin launch.",
+   "targetSegments": [
+    "Hyperscale cloud",
+    "Enterprise data centre",
+    "HPC",
+    "Telecom and edge",
+    "AI head nodes"
+   ],
+   "roadmap": "'Verano' on 2 nm with LPDDR; seventh-generation 'Florence', 'Ferrara' and 'Fidenza' on 'Zen 7' in 2028; 'Ravenna' on 'Zen 8' in 2030."
+  },
+  {
+   "name": "Pensando networking, DPUs and AI NICs",
+   "category": "Data-centre networking silicon",
+   "description": "The interconnect layer AMD acquired with Pensando and Solarflare, now load-bearing for Helios. Pollara 400 is described by AMD as the industry's first Ultra Ethernet Consortium-ready AI NIC with a P4-programmable engine for back-end GPU-to-GPU fabric; Salina is the third-generation front-end DPU at 400G; Vulcano is the 800G scale-out NIC inside Helios. Solarflare contributes ultra-low-latency capital-markets adapters and the Onload user-space networking stack.",
+   "highlights": [
+    "Vulcano delivers up to 2.4 Tb/s per direction per accelerator in Helios — 50% more scale-out bandwidth than Vera Rubin's 1.6 Tb/s per The Register",
+    "AMD's scale-up fabric is UALink over Ethernet (UALoE), an open standard, against NVIDIA's proprietary NVLink",
+    "HPE's Helios variant uses a purpose-built HPE Juniper scale-up Ethernet switch developed with Broadcom on UALoE",
+    "Fifth-generation AMD Infinity Fabric, introduced at Financial Analyst Day 2025, covers scale-in, scale-up and scale-out"
+   ],
+   "positioning": "AMD's open-standards counter to NVIDIA's vertically integrated fabric. Marvell and Astera Labs were both named as UALink collaborators at Advancing AI 2025, which is the point — the fabric is meant to be multi-vendor in a way NVLink is not.",
+   "soldThrough": "Integrated into Helios and sold as discrete NICs and DPUs to cloud providers; Pensando DPUs are deployed at Microsoft Azure.",
+   "targetSegments": [
+    "Hyperscale cloud",
+    "AI cluster operators",
+    "Capital-markets low-latency"
+   ],
+   "roadmap": "Pensando 'Como'/'Monza' with Helios 500 in 2027; 'Palma'/'Levanzo' with Helios 600 in 2028."
+  },
+  {
+   "name": "ROCm — the software layer that decides whether the silicon is substitutable",
+   "category": "Developer software platform",
+   "description": "AMD's open software platform for GPU computation, and by every independent account the decisive variable in whether Instinct is a genuine second source. ROCm 7 launched at Advancing AI 2025, ROCm 7.2 at CES 2026 with Windows and Linux support across the Ryzen AI 400 Series, and ROCm.ai at Advancing AI 2026 as an AI-native developer platform that lets coding agents — Claude, Codex, Cursor — work natively against AMD platforms. PyTorch, Hugging Face, vLLM and SGLang are enabled on MI455X.",
+   "highlights": [
+    "AMD reports ROCm downloads up tenfold year on year as of November 2025, and doubled platform support across Ryzen and Radeon during 2025",
+    "Independent measurement puts ROCm at about 94% of the CUDA baseline on GPT-2 XL training and an ~8% gap at 70B with standard attention, but CUDA holds a 20–30% advantage on large transformer training because cuDNN and TensorRT-LLM have no full ROCm equivalents",
+    "SemiAnalysis upgraded AMD's odds of breaking the CUDA moat from zero to 'a great chance of success' in July 2026, conditional on two unsolved problems",
+    "The first is capacity: AMD's internal GPU clusters for its own software teams remain more than an order of magnitude smaller than NVIDIA's, and its Kubernetes and Pollara NIC continuous-integration coverage sits at zero parity with NVIDIA's ConnectX nightly CI",
+    "The second is discipline: SemiAnalysis documented AMD leadership pulling clusters away from its own software team during launch week, causing vLLM gating coverage to regress and slipping automated testing to October 2026",
+    "AMD adopted Claude across its engineering and product development teams from July 2026, and Anthropic is contracted to help optimise ROCm"
+   ],
+   "positioning": "The moat is NVIDIA's and it is software, not silicon. SemiAnalysis's summary is the one to carry: AMD no longer needs one more hero optimisation, it needs the entire distributed inference stack to move as one system.",
+   "soldThrough": "Free and open source; monetised through accelerator sales. AMD Developer Cloud gives broad access to Instinct hardware.",
+   "targetSegments": [
+    "AI framework maintainers",
+    "Frontier labs",
+    "Enterprise MLOps",
+    "Independent software vendors"
+   ],
+   "roadmap": "Automated distributed-inference testing from October 2026; continued day-zero model enablement."
+  },
+  {
+   "name": "Ryzen client, Radeon graphics and semi-custom",
+   "category": "Client and gaming",
+   "description": "The half of the company that funds the other half. Ryzen 9000 desktop on 'Zen 5' with second-generation 3D V-Cache, Ryzen AI 300 and 400 Series mobile with Copilot+ NPUs, the Ryzen AI Max+ and Ryzen AI Halo developer platform with up to 128 GB of unified memory able to run 200-billion-parameter models locally, Threadripper and Threadripper PRO workstations, and the Ryzen Z2 handheld line. Radeon RX 9000 on RDNA 4 and the Radeon AI PRO R9000 Series cover gaming and local inference. Semi-custom silicon powers the PlayStation 5, Xbox Series S and X and the Valve Steam Machine.",
+   "highlights": [
+    "More than a billion AMD-based gaming devices across three console generations",
+    "AI PC portfolio expanded 2.5× since 2024; Ryzen powers more than 250 platforms and is adopted by over half of the Fortune 100",
+    "Socket AM5 support extended through 2029 — an unusually long platform commitment",
+    "FSR 'Redstone' adds machine-learning upscaling, frame generation, ray regeneration and radiance caching"
+   ],
+   "positioning": "Stable and profitable but no longer the growth story: Client grew 23% in Q2 FY2026 while Gaming fell 31%. The segment's near-term risk is external — AMD has told investors it is planning for lower second-half PC shipments because of higher memory and component costs, with Gartner expecting a more than 10% drop in 2026 PC shipments.",
+   "soldThrough": "OEM design wins, retail channel and semi-custom contracts with Sony, Microsoft and Valve.",
+   "targetSegments": [
+    "Consumer and commercial PCs",
+    "Gaming consoles and handhelds",
+    "Workstations",
+    "Local AI inference"
+   ],
+   "roadmap": "'Gorgon' and 'Medusa' as the next client inflection, targeting up to 10× AI gains since 2024."
+  },
+  {
+   "name": "Embedded and adaptive computing — the Xilinx lineage",
+   "category": "FPGAs, adaptive SoCs and embedded",
+   "description": "The Xilinx portfolio, now AMD's steadiest margin pool. Virtex, Kintex, Artix and Spartan FPGAs; Zynq and Versal adaptive SoCs including Versal HBM, Premium, Prime, AI Core and AI Edge, with Versal Premium Series Gen 2 and Versal RF added through 2026; Alveo accelerator cards; Kria system-on-modules; and the Vitis, Vitis AI and Vivado toolchains. Embedded x86 runs alongside as EPYC Embedded 9005/4005/2005 and Ryzen Embedded 9000 and AI Embedded P100/X100.",
+   "highlights": [
+    "More than $50 billion in Embedded design wins secured since 2022; AMD targets above 70% adaptive-computing revenue share",
+    "The Kria AI Robotics Developer Platform, launched July 2026, is described by AMD as the first open turnkey integrated platform for autonomous robotics combining CPU, GPU, NPU and FPGA compute",
+    "Space-grade Versal RF and Versal AI Edge Gen 2 serve aerospace and defence"
+   ],
+   "positioning": "Counter-cyclical to the AI cycle and the segment least exposed to it — Embedded revenue was $3,454m in FY2025 against $3,557m in FY2024, essentially flat while Data Center grew 32%.",
+   "soldThrough": "Direct and through distribution to industrial, aerospace, defence, automotive, test-and-measurement and communications OEMs.",
+   "targetSegments": [
+    "Industrial and robotics",
+    "Aerospace and defence",
+    "Communications and telecom",
+    "Automotive",
+    "Test and measurement"
+   ],
+   "roadmap": "Kintex UltraScale+ Gen 2 and Versal Premium Gen 2 Memory on Package shipping through 2026."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "AMD Helios rack (MI455X + EPYC 'Venice' + Pensando Vulcano)",
+   "specs": [
+    {
+     "band": "Configuration",
+     "label": "Accelerators per rack",
+     "value": "72 AMD Instinct MI455X GPUs"
+    },
+    {
+     "band": "Configuration",
+     "label": "Host CPUs per rack",
+     "value": "18 6th Gen EPYC 'Venice' CPUs"
+    },
+    {
+     "band": "Configuration",
+     "label": "Tray layout",
+     "value": "18 compute + 6 switch trays"
+    },
+    {
+     "band": "Configuration",
+     "label": "Rack standard",
+     "value": "44OU ORW-HPR double-wide (1.2 m) OCP rack"
+    },
+    {
+     "band": "Performance",
+     "label": "Peak FP4 per rack",
+     "value": "Up to 2.9 exaFLOPS"
+    },
+    {
+     "band": "Performance",
+     "label": "Achieved against peak",
+     "value": "~50% of peak in actual tests (20 PFLOPS achieved against 40 peak), per AMD VP Anush Elangovan"
+    },
+    {
+     "band": "Memory",
+     "label": "HBM4 per rack",
+     "value": "31 TB"
+    },
+    {
+     "band": "Memory",
+     "label": "HBM bandwidth per rack",
+     "value": "1.7 PB/s"
+    },
+    {
+     "band": "Fabric",
+     "label": "Scale-up",
+     "value": "1.8 TB/s per direction per GPU over 72 IFoE links at 200G using AMD UALoE"
+    },
+    {
+     "band": "Fabric",
+     "label": "Scale-up switching",
+     "value": "Two 512-port 200G UALoE switch ASICs per switch tray (10.8 TB/s per direction)"
+    },
+    {
+     "band": "Fabric",
+     "label": "Scale-out",
+     "value": "800G Pensando Vulcano NICs, up to 2.4 Tb/s per direction per GPU"
+    },
+    {
+     "band": "Fabric",
+     "label": "Aggregate",
+     "value": "260 TB/s scale-up, 43 TB/s scale-out"
+    },
+    {
+     "band": "Power and cooling",
+     "label": "Rack power",
+     "value": "225–245 kW peak (The Register)"
+    },
+    {
+     "band": "Power and cooling",
+     "label": "Switch tray power",
+     "value": "~7 kW per switch tray"
+    },
+    {
+     "band": "Power and cooling",
+     "label": "Cooling",
+     "value": "Quick-disconnect liquid cooling for sustained thermal performance (AMD)"
+    },
+    {
+     "band": "Power and cooling",
+     "label": "Busbar",
+     "value": "50 V DC"
+    },
+    {
+     "band": "Manufacturing",
+     "label": "Cable count",
+     "value": "1,728 cables per rack — 12 Genesis cables per tray crammed into 1U (SemiAnalysis)"
+    },
+    {
+     "band": "Manufacturing",
+     "label": "Backplane retiming",
+     "value": "Up to 85% of the backplane needs retiming, requiring over 550 Broadcom Ethernet retimers per rack (SemiAnalysis)"
+    }
+   ],
+   "notes": "AMD supplies parts used in a Helios system but does not manufacture or sell the completed rack; the architecture is licensed to customers and their manufacturing partners. Rack power is an independent figure — AMD has published no per-rack kW number of its own."
+  },
+  {
+   "product": "AMD Instinct MI355X (CDNA 4)",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Power per GPU",
+     "value": "1.4 kW/GPU against B200's 1 kW; Blackwell ~20% more energy efficient on throughput-per-watt (SemiAnalysis)"
+    },
+    {
+     "band": "Performance",
+     "label": "Generational claim (AMD)",
+     "value": "4× gen-on-gen AI compute; 35× generational inference leap"
+    },
+    {
+     "band": "Performance",
+     "label": "Economics claim (AMD)",
+     "value": "Up to 40% more tokens-per-dollar than competing solutions"
+    },
+    {
+     "band": "Independent benchmark",
+     "label": "MLPerf Training 6.0",
+     "value": "Within ~5% of B200 on Llama 2 70B LoRA fine-tuning and ~6% on Llama 3.1 8B pretraining — AMD used MXFP4 where NVIDIA used NVFP4"
+    },
+    {
+     "band": "Independent benchmark",
+     "label": "MLPerf Inference v6.0",
+     "value": "100,282 tok/s on Llama2-70B-99.9 Server against MI325X's 32,028 — about 3.1× generational"
+    },
+    {
+     "band": "Independent benchmark",
+     "label": "FP4 disaggregated",
+     "value": "'Gets absolutely mogged by Nvidia's B200' on FP4 disaggregated prefill with wide expert parallelism (SemiAnalysis)"
+    },
+    {
+     "band": "Independent benchmark",
+     "label": "FP8 disaggregated",
+     "value": "Competitive on perf-per-TCO against B200 SGLang; single-node FP8 SGLang delivers better perf-per-dollar"
+    },
+    {
+     "band": "Software",
+     "label": "vLLM status",
+     "value": "Zero tests in vLLM CI; runs a vLLM 0.10.1 fork, with the official 0.15.1 image running into hard errors (SemiAnalysis, February 2026)"
+    }
+   ],
+   "notes": "AMD's own product pages were unreachable when this dossier was written, so per-SKU HBM capacity, bandwidth, TDP and process node are not first-party sourced here. The power, benchmark and software figures are independent."
+  },
+  {
+   "product": "AMD Instinct MI350P (CDNA 4, gfx950)",
+   "specs": [
+    {
+     "band": "Configuration",
+     "label": "Compute units",
+     "value": "128 CUs"
+    },
+    {
+     "band": "Memory",
+     "label": "Capacity",
+     "value": "144 GB HBM3E"
+    },
+    {
+     "band": "Form factor",
+     "label": "Package",
+     "value": "PCIe card, SPX compute / NPS1"
+    },
+    {
+     "band": "Performance",
+     "label": "Economics claim (AMD)",
+     "value": "Up to 4.2× more tokens/s per dollar than competition"
+    }
+   ]
+  },
+  {
+   "product": "6th Gen AMD EPYC 'Venice' (EPYC 9996)",
+   "specs": [
+    {
+     "band": "Configuration",
+     "label": "Cores and threads",
+     "value": "256 cores / 512 threads"
+    },
+    {
+     "band": "Power",
+     "label": "Default CPU Power",
+     "value": "400 W"
+    },
+    {
+     "band": "Process",
+     "label": "Node",
+     "value": "TSMC N2 (2 nm) — first HPC product in the industry taped out and brought up on N2"
+    },
+    {
+     "band": "Packaging",
+     "label": "Technologies",
+     "value": "TSMC SoIC-X and CoWoS-L; AMD Elevated Fanout Bridge (EFB) 2.5D bridge interconnect"
+    },
+    {
+     "band": "Memory",
+     "label": "Channels",
+     "value": "16 channels of 12.8 GT/s MRDIMM"
+    },
+    {
+     "band": "I/O",
+     "label": "PCIe",
+     "value": "PCIe Gen 6"
+    },
+    {
+     "band": "Clocks",
+     "label": "Boost",
+     "value": "Select SKUs boost to 5 GHz"
+    },
+    {
+     "band": "Rack density",
+     "label": "At a 100 kW rack envelope",
+     "value": "2.08× the cores/threads per rack of an NVIDIA Vera (88C) rack; 1.24× an Intel Xeon 6980P (128C) rack"
+    }
+   ],
+   "notes": "Starting with the 6th Gen EPYC family AMD uses 'Default CPU Power' to describe processor power consumption, succeeding its historical TDP reference. The prior generation's EPYC 9965 was 192 cores at 500 W TDP."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-31",
+   "category": "customer",
+   "headline": "AMD, Cisco and HUMAIN put MI355X infrastructure live in production in Saudi Arabia; next phase up to 250 MW on MI400 Series from 2027",
+   "read": "The first of the sovereign gigawatt agreements to actually carry traffic rather than sit in a memorandum — the joint venture remains on track for up to 1 GW by 2030.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live"
+  },
+  {
+   "date": "2026-08-19",
+   "category": "leadership",
+   "headline": "Tim Ryan appointed to the board; KC McClure becomes chair of the Audit and Finance Committee; Joseph Householder retires after eleven years",
+   "read": "Audit-committee leadership changes hands in the same year the company took on $4.75bn of new notes and began guaranteeing third parties' data-centre leases.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1297/amd-appoints-tim-ryan-to-board-of-directors"
+  },
+  {
+   "date": "2026-08-17",
+   "category": "financial",
+   "headline": "Closed a $4.75bn public senior-notes offering across 2029, 2031, 2033 and 2036 maturities",
+   "read": "AMD had $3,250m of debt principal outstanding before this; the issuance more than doubles it and funds a balance sheet now carrying data-centre lease guarantees as well as silicon.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000119312526354029/d142696d8k.htm"
+  },
+  {
+   "date": "2026-08-06",
+   "category": "ma",
+   "headline": "Definitive agreement to acquire Taalas, a Toronto specialist in AI inference silicon",
+   "read": "Buys dataflow-optimised inference silicon to fold into the accelerator roadmap — the same 'own more of the stack' pattern as ZT Systems and Silo AI. No price disclosed.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "market",
+   "headline": "Shares fall 10.5% intraday on a double beat as analysts question customer concentration in the Helios book",
+   "read": "Lisa Su conceded most Helios racks are sold to a handful of customers and that non-gigawatt buyers want the rack at a more regular scale. The growth depends on counterparties that have yet to prove they can operate profitably.",
+   "source": "https://www.theregister.com/systems/2026/08/05/amds-ai-eggs-are-in-too-few-baskets-wall-street-worries/5283142"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 FY2026: record revenue $11,536m, Data Center $6,718m up 107% and 58% of the company; Q3 guided to about $13.0bn",
+   "read": "The quarter the Data Center segment became the company. The market still sold it, because the Q3 non-GAAP gross-margin guide was flat at about 56% despite 13% sequential revenue growth — management attributed the pressure to the Helios ramp.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "product-launch",
+   "headline": "Advancing AI 2026: Helios enters production, MI400 Series (MI455X, MI430X) and MI350P launch, 6th Gen EPYC 'Venice' launches, ROCm.ai introduced",
+   "read": "The pivot from selling chips to defining racks, executed in one event, with the roadmap published through 2030 and the addressable market framed at about $2 trillion in 2030.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "partnership",
+   "headline": "Cerebras partnership on disaggregated inference combining Helios with the Wafer-Scale Engine, claiming up to 5× tokens per second per watt",
+   "read": "An efficiency claim expressed in tokens per kilowatt rather than per dollar — the metric that matters once a site's power is fixed.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1293/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference-solution"
+  },
+  {
+   "date": "2026-07-22",
+   "category": "customer",
+   "headline": "Anthropic to deploy up to 2 GW of MI455X in Helios racks from the first half of 2027, with AMD committing a strategic equity investment of up to $5bn",
+   "read": "The third gigawatt agreement, and the one where the money flows both ways: AMD invests in the buyer, and the buyer is contracted to help optimise ROCm — which is AMD's binding constraint, not its silicon.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+  },
+  {
+   "date": "2026-07-20",
+   "category": "customer",
+   "headline": "Microsoft to ramp Helios at scale on Azure for frontier-model inference, with two new EPYC 'Venice' VM series and broader Pensando DPU deployment",
+   "read": "Scale and terms undisclosed, which is itself the signal — the gigawatt agreements that carry warrants were announced with numbers, and this one was not.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1291/microsoft-to-deploy-next-gen-amd-instinct-and-amd-epyc-processors-as-the-companies-expand-their-long-term-strategic-partnership"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "capacity",
+   "headline": "Commits up to £2bn over five years in the United Kingdom, with Imperial College London and Oriole Networks, and Dell-supported systems at Cambridge",
+   "read": "Sovereign-AI money placed where the compute will be bought, following the HUMAIN and TCS pattern.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1288/amd-commits-up-to-2-billion-to-accelerate-ai-innovation-and-research-in-the-united-kingdom"
+  },
+  {
+   "date": "2026-05-21",
+   "category": "capacity",
+   "headline": "'Venice' enters production ramp on TSMC 2 nm — the first HPC product in the industry to do so — with more than $10bn of Taiwan ecosystem investment announced the same day",
+   "read": "Process leadership is the one axis on which AMD is ahead rather than behind, and it is rented from TSMC. The same release names the Helios ODMs and the packaging partners the rack depends on.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "market",
+   "headline": "AMD warns that rising memory costs will hit second-half PC shipments; Gartner expects a fall of more than 10% in 2026 PC shipments",
+   "read": "The memory squeeze that HBM demand created is now taxing AMD's own client business — DRAM revenue is forecast up 246.6% and NAND up 371.9% in 2026.",
+   "source": "https://www.theregister.com/personal-tech/2026/05/06/amd-warns-rising-memory-costs-will-hit-pc-shipments/5231063"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "Q1 FY2026: revenue $10,253m up 38%, Data Center $5,775m up 57%; shares rose 16–18% to an all-time high",
+   "read": "A double beat against LSEG consensus of $9.89bn and $1.29, with a Q2 guide well above the Street.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "customer",
+   "headline": "Meta to deploy up to 6 GW of Instinct, opening with 1 GW of a custom MI450-architecture GPU it co-engineered, on a warrant for up to 160 million AMD shares at $0.01",
+   "read": "The second 6 GW agreement on warrant terms reported as identical to OpenAI's. Whether that is a genuinely separate grant or a restatement of the first is the largest unresolved dilution question in this file.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1279/amd-and-meta-announce-expanded-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "incident",
+   "headline": "SemiAnalysis reports MI455X manufacturing delays pushing volume to Q2 2027; AMD's VP of AI software responds publicly with 'BS. Right on target for H2 2026'",
+   "read": "Partly resolved in AMD's favour — Helios launched on 23 July 2026 — but the volume ramp landing in Q4 2026 into Q1 2027 sits closer to the critique than to the marketing.",
+   "source": "https://videocardz.com/newz/amd-denies-mi455x-delay-claims-says-shipments-remain-set-for-h2-2026"
+  },
+  {
+   "date": "2026-02-16",
+   "category": "market",
+   "headline": "SemiAnalysis InferenceX v2 finds MI355X competitive on FP8 disaggregated perf-per-TCO but decisively beaten on FP4 disaggregated work, with zero tests in vLLM CI",
+   "read": "The most rigorous independent benchmark published, and the clearest statement that the gap is software composability rather than silicon.",
+   "source": "https://newsletter.semianalysis.com/p/inferencex-v2-nvidia-blackwell-vs"
+  },
+  {
+   "date": "2026-02-03",
+   "category": "financial",
+   "headline": "FY2025 closes at record revenue $34,639m up 34.3%, with Q4 MI308 revenue to China of about $390m and an inventory reserve release of about $360m",
+   "read": "The China line swung from an $800m write-down to a $390m revenue quarter inside three quarters, netting to about $440m of charges for the year — the volatility is policy, not demand.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results"
+  },
+  {
+   "date": "2025-11-11",
+   "category": "corporate",
+   "headline": "Financial Analyst Day: long-term model of more than 35% company revenue CAGR, more than 60% Data Center CAGR, more than 80% data-centre AI CAGR and non-GAAP EPS above $20",
+   "read": "A model that only closes if the gigawatt agreements convert. The targets are the clearest statement of how much of AMD's valuation rests on counterparties rather than on products.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "project",
+   "headline": "Oak Ridge National Laboratory's Lux (MI355X, deploying early 2026) and Discovery (MI430X, 2028) announced with HPE and Oracle, at about $1bn of combined public and private investment",
+   "read": "The national-laboratory channel is where AMD's HPC incumbency is real — Instinct already powers four of the June 2026 TOP500 top ten.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1264/amd-powers-u-s-sovereign-ai-factory-supercomputers-accelerating-an-open-american-ai-stack"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "product-launch",
+   "headline": "Helios shown publicly for the first time at the OCP Global Summit, built on the Open Rack Wide specification Meta contributed to the Open Compute Project",
+   "read": "AMD adopted someone else's rack specification rather than publishing its own — the opposite of NVIDIA's approach, and the reason AMD names no power-conversion vendor roster.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1261/amd-showcases-helios-rack-scale-platform-built-on-the-open-compute-project-open-rack-for-ai-introduced-by-meta"
+  },
+  {
+   "date": "2025-10-06",
+   "category": "customer",
+   "headline": "OpenAI to deploy 6 GW of Instinct, opening with 1 GW of MI450 in the second half of 2026, on a warrant for up to 160 million AMD shares at $0.01",
+   "read": "The deal that repriced the stock 23% in a day and put AMD inside the circular-financing critique: the vendor issues equity to the customer that is buying its output.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus"
+  },
+  {
+   "date": "2025-08-22",
+   "category": "leadership",
+   "headline": "Chief Accounting Officer Philip Carter resigns effective 5 September 2025; CFO Jean Hu takes the role on an interim basis until Emily Ellis is appointed in December",
+   "read": "Reported as involving no disagreement, and closed within four months — but the CFO holding both roles for a quarter is worth recording rather than assuming.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000147/amd-20250822.htm"
+  },
+  {
+   "date": "2025-08-11",
+   "category": "policy",
+   "headline": "US officials expect a 15% share of revenue from licensed MI308 sales to China — reported as the first time a US company has agreed to pay a percentage of revenues for an export licence",
+   "read": "AMD's own filings note that no regulation establishing the requirement has been published, and warn that any such request could subject it to litigation and benefit competitors not subject to the arrangement.",
+   "source": "https://www.trendforce.com/news/2025/08/11/news-nvidia-amd-make-historic-deal-reportedly-pay-15-of-h20-mi308-china-sales-for-export-licenses/"
+  },
+  {
+   "date": "2025-04-16",
+   "category": "policy",
+   "headline": "Export controls extended to MI308; AMD flags charges of up to approximately $800m in inventory, purchase commitments and related reserves",
+   "read": "Recorded in full the following quarter, cutting Q2 FY2025 GAAP gross margin to 40% and producing a $134m operating loss.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000039/amd-20250415.htm"
+  },
+  {
+   "date": "2025-03-31",
+   "category": "ma",
+   "headline": "ZT Systems acquisition completed; the manufacturing arm is sold on to Sanmina in October 2025 for about $3bn",
+   "read": "AMD bought rack-scale design capability for $4.9bn as announced ($4.409bn as finally accounted) and immediately sold the factories, keeping the engineers. It is why AMD designs Helios and does not build it.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1240/amd-completes-acquisition-of-zt-systems"
+  },
+  {
+   "date": "2024-10-10",
+   "category": "product-launch",
+   "headline": "Instinct MI325X launches with 256 GB HBM3E and 6.0 TB/s, alongside 5th Gen EPYC 9005 'Turin', the Pollara 400 AI NIC and the Salina DPU",
+   "read": "The generation where AMD assembled a whole data-centre platform — accelerator, host CPU, DPU and NIC — rather than selling a part into someone else's.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1220/amd-delivers-leadership-ai-performance-with-amd-instinct-mi325x-accelerators"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "nvidia",
+   "type": "competitor",
+   "status": "active",
+   "note": "AMD's own 10-K names NVIDIA as a primary Data Center competitor, and every headline Helios and Instinct claim is benchmarked against an NVIDIA part.",
+   "context": "AMD's FY2025 10-K names NVIDIA as a primary Data Center competitor, and every headline Helios and Instinct claim is benchmarked against an NVIDIA part.\n\nThe scale gap governs the rest. NVIDIA reported $89.0bn of data-centre revenue in its quarter ended 26 July 2026 against AMD's entire Data Center segment — EPYC included — of $6,718m. Independent estimates place AMD at roughly 5–10% of data-centre accelerator revenue against NVIDIA at 75–92%, though no named tier-one house publishes a clean split.\n\nAt the rack the comparison narrows sharply: The Register reads Helios as offering about 15% more peak FP4 and 50% more HBM4 and scale-out bandwidth than Vera Rubin, at 225–245 kW against an estimated 240–250 kW, and — for the first time — arriving in the same window rather than a year late.",
+   "source": "https://www.theregister.com/systems/2026/07/23/amd-attacks-the-rack-with-helios-systems-that-rival-nvidias/5277246",
+   "via": "Instinct accelerators and Helios racks"
+  },
+  {
+   "slug": "openai",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025-10",
+   "scale": "6 GW",
+   "via": "MI450 Series in Helios racks",
+   "note": "OpenAI agreed to deploy 6 GW of Instinct across multiple generations, opening with 1 GW of MI450 in the second half of 2026, and received a warrant for up to 160 million AMD shares at $0.01.",
+   "context": "Announced 6 October 2025. The first tranche vests at the initial gigawatt with further tranches to 6 GW, conditioned on AMD share-price targets and OpenAI technical and commercial milestones, exercisable through 5 October 2030. AMD's CFO described the agreement as expected to deliver tens of billions of dollars of revenue and to be highly accretive to non-GAAP EPS.\n\nAMD states that OpenAI expects to bring Helios online beginning in the fourth quarter of 2026 and accelerating through 2027, and that OpenAI is optimising GPT-class workloads on MI455X through Triton and ROCm. The warrant structure is the substance of the critique: the vendor issues equity to the customer buying its output, which analysts have placed inside a broader pattern of circular financing across the AI buildout.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-02",
+   "scale": "6 GW",
+   "via": "Custom MI450-architecture GPU in Helios racks",
+   "note": "Meta agreed to deploy up to 6 GW of Instinct, opening with 1 GW of a custom MI450-architecture GPU it co-engineered, and is a lead customer for the 'Venice' and 'Verano' EPYC generations.",
+   "context": "Announced 24 February 2026 as a definitive multi-year, multi-generation agreement, with a warrant for up to 160 million AMD shares at $0.01 exercisable through 23 February 2031.\n\nMeta's role runs deeper than as a buyer: Helios is built on the Open Rack Wide specification Meta contributed to the Open Compute Project, and AMD describes the rack architecture as jointly developed with Meta through OCP. Meta has also deployed millions of AMD EPYC CPUs and runs MI300X broadly for Llama inference.\n\nWhether the Meta warrant is a genuinely separate 160-million-share grant or a restatement of the OpenAI terms is not settled by the sources reviewed; if separate, cumulative potential dilution is materially larger than the roughly 10% usually quoted.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1279/amd-and-meta-announce-expanded-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus"
+  },
+  {
+   "slug": "anthropic",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "up to 2 GW",
+   "via": "MI455X in Helios racks",
+   "note": "Anthropic will take up to 2 GW of MI455X in Helios racks from the first half of 2027, and AMD committed a strategic equity investment of up to $5bn in Anthropic.",
+   "context": "Announced 22 July 2026, building on Anthropic's existing MI355X use. The commercial structure is two-way: AMD invests in the buyer, and the buyer contributes engineering to optimise AMD workloads and accelerate ROCm — which every independent assessment identifies as AMD's binding constraint rather than its silicon. AMD separately adopted Claude across its own engineering and product development teams from the same month.\n\nAMD's Q2 FY2026 10-Q records investment commitments of up to $5.0bn entered into after the quarter end and expected to be made through FY2028, which is the accounting expression of this agreement.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-07",
+   "via": "Helios racks and EPYC 'Venice' VM series",
+   "note": "Microsoft will ramp Helios at scale on Azure for frontier-model inference, alongside two new EPYC 'Venice'-powered VM series and broader Pensando DPU deployment.",
+   "context": "Announced 20 July 2026. Azure HDv2 targets agentic AI and data pipelines and Azure HXv2 targets semiconductor design; AMD silicon is integrated with Azure Boost. MI300X already powers proprietary and open models in production on Azure through the ND MI300X v5 VM family.\n\nScale and terms were not disclosed, which distinguishes this from the OpenAI, Meta and Anthropic agreements — those were announced with gigawatt figures and, in two cases, warrants. Microsoft has separately said its own Maia 200 inference accelerator 'will not replace Nvidia or AMD'.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1291/microsoft-to-deploy-next-gen-amd-instinct-and-amd-epyc-processors-as-the-companies-expand-their-long-term-strategic-partnership"
+  },
+  {
+   "slug": "oracle",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025-10",
+   "scale": "50,000 MI450 GPUs",
+   "via": "Helios racks with EPYC 'Venice' and Pensando Vulcano",
+   "note": "Oracle Cloud Infrastructure is the launch partner for MI450 superclusters, with an initial deployment of 50,000 GPUs from the third quarter of calendar 2026 on the Helios rack design.",
+   "context": "Announced 14 October 2025 and described by AMD as the first publicly available AI supercluster built on the Helios rack design. Oracle had previously announced zettascale clusters of up to 131,072 MI355X GPUs and offers OCI Compute E6 shapes on 5th Gen EPYC.\n\nOracle is also a co-developer of the Department of Energy's Lux system at Oak Ridge alongside AMD and HPE — the same counterparty appearing as cloud customer and as national-laboratory partner.",
+   "source": "https://www.cnbc.com/2025/10/14/oracle-cloud-to-deploy-50000-amd-ai-chips-as-alternative-to-nvidia.html"
+  },
+  {
+   "slug": "core-scientific",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "~530 MW across five sites",
+   "note": "Core Scientific is contracted to host about 530 MW of AMD capacity across five sites, with more than $14bn of potential base contracted revenue, and granted AMD warrants for 30 million shares at $23.47.",
+   "context": "Announced 28 July 2026. The capacity splits into roughly 377–380 MW leased by AMD directly plus about 150 MW routed through an unnamed AMD-credit-backed neocloud, expandable to 2.5 GW, with deliveries running from the first half of 2027 to the first half of 2028.\n\nThe direction of the relationship is the point: AMD is the tenant, not the landlord, and this is one instance of the broader posture its own filings disclose — $4.1bn of guarantees on commercial partners' data-centre lease obligations, sometimes issued in exchange for warrants. Trade coverage reads the deal as AMD building a hosting channel to counter NVIDIA's neocloud ecosystem, with silicon vendors now competing through landlords.",
+   "source": "https://investors.corescientific.com/news-events/press-releases/detail/138"
+  },
+  {
+   "slug": "flex",
+   "type": "supplier",
+   "status": "active",
+   "since": "2026",
+   "via": "Instinct MI355X eight-GPU platform",
+   "note": "Flex manufactures AMD's Instinct MI355X eight-GPU platform in Austin, Texas — AMD owns the product and Flex assembles it.",
+   "context": "Flex's own release describes assembling the GPUs with PCIe Gen 5 interfaces, high-bandwidth memory and interconnect fabric, tested with JetCool liquid-cooling hardware. Flex is explicit that this is contract manufacturing and that AMD owns the platform.\n\nIt is a clean illustration of AMD's structural choice at the system level: AMD designs and licenses, and other firms build. Flex's own dossier records the same arrangement from the manufacturer's side.",
+   "source": "https://investors.flex.com/news/news-details/2026/Flex-Announces-U-S--Manufacturing-Collaboration-with-AMD-to-Accelerate-Domestic-AI-Infrastructure/default.aspx"
+  },
+  {
+   "slug": "supermicro",
+   "type": "customer",
+   "status": "active",
+   "via": "Instinct MI300A/MI300X/MI325X/MI350X/MI355X systems and Helios",
+   "note": "Supermicro is a named OEM for Instinct systems and for the Helios rack, shipping air- and liquid-cooled MI355X platforms.",
+   "context": "AMD names Supermicro among the Helios OEMs alongside Bull (Eviden), HPE and Lenovo. Supermicro's own materials confirm the relationship from the other side: an 8U air-cooled AS-8125GS-TNMR2 carrying eight MI350X, a 4U liquid-cooled AS-4126GS-NMR-LCC carrying eight MI355X, 5U PCIe systems taking up to eight MI350P or MI325X, and MI300A systems in 4U air-cooled and 2U liquid-cooled form.\n\nSupermicro announced support for the Helios MI455X 72-GPU rack on 1 June 2026 but has published no shipping date for it.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "via": "EPYC-powered AWS instances",
+   "note": "AWS offers instances on 5th Gen EPYC that AMD describes as delivering the highest x86 performance in the AWS cloud.",
+   "context": "The EPYC cloud franchise is the part of AMD's data-centre business that is already incumbent rather than contested — more than 950 EPYC-powered public cloud instances were available at the Turin launch. AWS is a buyer of the CPU and, through Trainium, a builder of competing accelerator silicon.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "via": "EPYC-powered C4D and H4D virtual machines",
+   "note": "Google Cloud offers C4D and H4D virtual machines on 5th Gen EPYC, with H4D aimed at high-performance computing.",
+   "context": "As with AWS, the relationship is CPU-side. Google is simultaneously one of the largest developers of custom accelerator silicon through its TPU programme, which independent analysts identify as a faster-growing threat to NVIDIA's share than AMD is.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results"
+  },
+  {
+   "slug": "crusoe",
+   "type": "customer",
+   "status": "active",
+   "via": "Instinct MI355X and MI300X in its GPU cloud",
+   "note": "Crusoe offers AMD Instinct MI355X and MI300X alongside NVIDIA parts in its GPU cloud, and is named by AMD among the neoclouds adopting Helios.",
+   "context": "Crusoe's own dossier lists MI355X and MI300X in the GPU cloud catalogue beside GB200, B200, H200 and H100. The neocloud tier matters to AMD disproportionately: it is where a second source can win on price and availability without needing to displace an incumbent software stack across an enterprise estate.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results"
+  },
+  {
+   "slug": "nscale",
+   "type": "customer",
+   "status": "active",
+   "via": "Instinct MI300X and MI250X",
+   "note": "Nscale runs AMD MI300X for inference and the MI250X Svartisen cluster at Glomfjord, which placed 24th on the November 2024 TOP500.",
+   "context": "Nscale's own dossier records that the AMD line dates from its Arkon era and that no MI355X appears on its first-party pages — so this is an installed base rather than a current-generation win. It is a useful counterweight to the gigawatt announcements: the deployed AMD fleet at the neocloud tier is still largely prior-generation.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth"
+  },
+  {
+   "slug": "iren",
+   "type": "customer",
+   "status": "active",
+   "scale": "1.1k MI350X",
+   "via": "Instinct MI350X",
+   "note": "IREN's GPU cloud includes 1,100 AMD MI350X alongside a much larger NVIDIA fleet.",
+   "context": "IREN's own dossier puts the AMD position at 1.1k MI350X within a fleet that reached about 23,000 GPUs in September 2025 and targets 150,000. The ratio is the finding — at the neocloud tier AMD is presently a minority second source rather than a co-equal platform.",
+   "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US export controls on advanced AI chips (BIS advanced-computing rule)",
+   "status": "in-effect",
+   "effectiveDate": "2025-04-15",
+   "exposure": "AMD cannot ship certain Instinct integrated circuits and certain Versal FPGAs to China, or to customers headquartered in or ultimately parented in a D:5 country, without a licence. The April 2025 extension to MI308 produced charges of up to approximately $800m in inventory, purchase commitments and related reserves, recorded in Q2 FY2025 — cutting GAAP gross margin to 40% and producing a $134m operating loss. Q3 FY2025 carried no MI308 revenue to China at all. Licences were granted for certain China customers in Q4 FY2025, about $360m of reserves were released and about $390m of MI308 China revenue was recognised, netting to roughly $440m of charges for the year. Export controls cost about $1.5bn of 2025 revenue.",
+   "mitigation": "AMD resumed MI308 shipments under licence from July 2025 and included about $100m of MI308 China sales in its Q1 FY2026 guide.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm"
+  },
+  {
+   "regime": "US government revenue-share expectation on licensed China sales",
+   "status": "proposed",
+   "effectiveDate": "2025-08",
+   "exposure": "AMD's FY2025 10-K states that in August 2025 US government officials expressed an expectation that the government will receive 15% of the revenue generated from licensed MI308 sales to China, and that to date the government has not published a regulation establishing such a requirement. AMD warns that any request for a percentage of the revenue could subject it to litigation, increase its costs, harm its competitive position and benefit competitors not subject to such arrangements. Reported as the first time a US company has agreed to pay a percentage of revenues for an export licence; NVIDIA agreed to equivalent terms on H20.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm"
+  },
+  {
+   "regime": "MI325 China licences and the 25% inspection tariff",
+   "status": "in-effect",
+   "effectiveDate": "2026-02",
+   "exposure": "AMD's Q2 FY2026 10-Q states that in February 2026 the US government granted export licences authorising shipment of Instinct MI325 products to certain China-based customers, that AMD does not yet know whether any imports will be allowed into China, and that any MI325 shipped under the licences must first undergo an inspection process in the United States — as a result of which it will be subject to a 25% tariff upon importation into the United States for that inspection. This is the only specific, quantified tariff exposure AMD discloses.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm"
+  },
+  {
+   "regime": "AI Diffusion Rule and replacement regulations",
+   "status": "expired",
+   "effectiveDate": "2025-05",
+   "exposure": "Issued as a BIS final rule in January 2025 and announced for rescission in May 2025, with replacement rules to follow. AMD states the replacement rules may limit its ability to engage in certain business transactions, require new export licences, delay shipments, or necessitate changes in compliance processes and product designs. BIS separately moved NVIDIA H200 and AMD MI325X from presumption of denial to case-by-case review in January 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm"
+  },
+  {
+   "regime": "General tariff policy and Section 232 semiconductor action",
+   "status": "in-effect",
+   "exposure": "AMD names neither Section 232 nor Section 301 anywhere in its FY2025 10-K or Q2 FY2026 10-Q; its tariff exposure is disclosed generically, warning that tariffs on hardware required for data centres could raise costs for its customers and cause them to delay or cancel AI infrastructure investments. A cross-reference is worth recording and is not confirmed from AMD's own filings: the Infineon dossier states that the phase-one Section 232 semiconductor action, a 25% tariff from 14 January 2026 on articles under HTSUS headings 8471.50, 8471.80 and 8473.30, names AMD Instinct MI325X in its annex. AMD's own disclosures neither confirm nor contradict that.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm"
+  },
+  {
+   "regime": "Taiwan and TSMC foundry concentration",
+   "status": "in-effect",
+   "exposure": "AMD relies on TSMC for all wafers for microprocessor and GPU products at 7 nm or smaller, and primarily on GLOBALFOUNDRIES above 7 nm. Its 10-K warns that geopolitical changes between China and Taiwan could disrupt the operations of its Taiwan-based foundries, manufacturing facilities and subcontractors and materially adversely affect delivery of products, and notes the April 2024 Taiwan earthquake near those foundries. Taiwan was $5,186m of FY2025 revenue (15.0%) and China including Hong Kong $7,751m (22.4%); international sales were 67% of net revenue.",
+   "mitigation": "5th Gen EPYC was validated at TSMC Arizona Fab 21 in April 2025 and AMD plans to ramp 'Venice' there alongside Taiwan.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Dr. Lisa T. Su",
+   "title": "Chair, President and Chief Executive Officer",
+   "background": [
+    "Chair since February 2022; President and Chief Executive Officer since October 2014; Chief Operating Officer July–October 2014",
+    "Joined AMD January 2012 as Senior Vice President and General Manager, Global Business Units",
+    "Senior Vice President and General Manager, Networking and Multimedia — Freescale Semiconductor (joined 2007 as Chief Technology Officer)",
+    "Thirteen years at IBM, including Vice President of the Semiconductor Research and Development Center",
+    "Member of technical staff — Texas Instruments (1994–1995)",
+    "BS, MS and PhD in Electrical Engineering, Massachusetts Institute of Technology; IEEE Fellow (2009); member of the National Academy of Engineering",
+    "Awarded a CEO Value Creation Equity Award in February 2026 with a $75m target, performance-vesting on stock-price hurdles through March 2031"
+   ]
+  },
+  {
+   "name": "Jean Hu",
+   "title": "Executive Vice President, Chief Financial Officer and Treasurer",
+   "background": [
+    "At AMD since January 2023; leads global finance, investor relations, global corporate services and facilities",
+    "Served as interim Chief Accounting Officer from September to December 2025 after Philip Carter's resignation",
+    "Chief Financial Officer — Marvell Technology (August 2016 – January 2023)",
+    "Senior Vice President and Chief Financial Officer — QLogic (2011–2016), and acting Chief Executive Officer twice in that period",
+    "Chief Financial Officer — Conexant Systems",
+    "Board member, Fortinet, since October 2019",
+    "BS in Chemical Engineering, Beijing University of Chemical Technology; PhD in Economics, Claremont Graduate University"
+   ]
+  },
+  {
+   "name": "Forrest E. Norrod",
+   "title": "Executive Vice President and General Manager, Data Center Solutions Business Unit",
+   "background": [
+    "In role since January 2023; joined AMD November 2014 — the executive who owns the AI and data-centre business",
+    "Vice President and General Manager of Dell's server business (December 2009 – October 2014)",
+    "Vice President and General Manager, Dell Data Center Solutions — created Dell's first internal startup for hyperscale",
+    "Joined Dell August 2000 as Chief Technology Officer of Client Products; National Semiconductor 1997–2000; Cyrix 1993–1997",
+    "Began as a VLSI design engineer at Hewlett-Packard",
+    "Board member, Intuit, since July 2024",
+    "BS and MS in Electrical Engineering, Virginia Tech; eleven US patents"
+   ]
+  },
+  {
+   "name": "Mark D. Papermaster",
+   "title": "Executive Vice President and Chief Technology Officer, Technology and Engineering",
+   "background": [
+    "In role since January 2019; joined AMD October 2011 as Chief Technology Officer and Senior Vice President",
+    "Led the 'Zen' x86 core family and the Infinity Architecture modular design approach",
+    "Led Cisco's Silicon Engineering Group",
+    "Senior Vice President, Devices Hardware Engineering — Apple (iPod and iPhone hardware)",
+    "Senior roles at IBM",
+    "Elected to the National Academy of Engineering, February 2025; appointed to the US Department of Energy Office of Science Advisory Committee, February 2026",
+    "BS in Electrical Engineering, University of Texas at Austin; MS in Electrical Engineering, University of Vermont"
+   ]
+  },
+  {
+   "name": "Philip Guido",
+   "title": "Executive Vice President, Chief Commercial Officer",
+   "background": [
+    "Since June 2023; leads the Worldwide Sales Organization",
+    "General Manager and global managing partner of Strategic Sales — IBM Consulting",
+    "More than thirty years at IBM, including General Manager of IBM North America (more than $40bn of revenue) and General Manager of Infrastructure Services"
+   ]
+  },
+  {
+   "name": "Darren Grasby",
+   "title": "Executive Vice President, Chief Sales Officer and President EMEA",
+   "background": [
+    "Appointed Chief Sales Officer 13 January 2025; previously Executive Vice President, Strategic Partnerships and President EMEA",
+    "At AMD since 2007; Senior Vice President Global Computing and Graphics Sales (2018–2019); President EMEA and Global Channel Sales (2015–2018); Corporate Vice President and General Manager EMEA (2007–2014)",
+    "Before AMD, founded companies in computer manufacturing, supply chain, distribution and graphics brands including ATI"
+   ]
+  },
+  {
+   "name": "Vamsi Boppana",
+   "title": "Senior Vice President, Artificial Intelligence Group",
+   "background": [
+    "Leads the AI group across silicon and software; the named AMD executive on the Taalas acquisition and on Advancing AI product launches",
+    "Joined AMD through the Xilinx acquisition, where he led AI and software"
+   ]
+  },
+  {
+   "name": "Sam Naffziger",
+   "title": "Senior Vice President and Corporate Fellow",
+   "background": [
+    "Owner of AMD's public energy-efficiency goals — the 2020–2025 '30×25' server and accelerator target, which AMD reports it exceeded at 38×",
+    "Announced the successor goal in June 2025: a 20× increase in rack-scale energy efficiency by 2030 from a 2024 base, framed as training in fewer than one fully utilised rack what today needs more than 275, using 95% less electricity",
+    "Long career in processor power and performance architecture, at AMD and previously Hewlett-Packard"
+   ]
+  },
+  {
+   "name": "Anush Elangovan",
+   "title": "Corporate Vice President, AI Software Development",
+   "background": [
+    "Leads ROCm and AI software development; joined AMD through the Nod.ai acquisition in 2023",
+    "The executive who publicly disputed SemiAnalysis's February 2026 report of MI455X delays and who conceded that real Helios tests reach about 50% of peak FLOPS"
+   ]
+  },
+  {
+   "name": "Dan McNamara",
+   "title": "Senior Vice President and General Manager, Compute and Enterprise AI",
+   "background": [
+    "Leads the server CPU business, previously titled Senior Vice President and General Manager of the server business",
+    "Joined AMD through the Xilinx acquisition, having led its data-centre group; earlier at Intel and Altera"
+   ]
+  },
+  {
+   "name": "Emily Ellis",
+   "title": "Corporate Vice President, Chief Accounting Officer",
+   "background": [
+    "Appointed effective 15 December 2025, closing the interim period in which the CFO held both roles",
+    "Vice President, Controller — Palo Alto Networks (from March 2024)",
+    "Partner — PricewaterhouseCoopers (July 2019 – March 2024)",
+    "Certified Public Accountant; BA in Accounting, San Jose State University"
+   ]
+  },
+  {
+   "name": "Ava M. Hahn",
+   "title": "Senior Vice President, General Counsel and Corporate Secretary",
+   "background": [
+    "Since January 2024; oversees legal, corporate governance, ethics and compliance, corporate responsibility and government relations",
+    "Senior Vice President and Chief Legal Officer — Lam Research",
+    "General Counsel at CA Technologies, Aruba Networks, ShoreTel and Genesis Microchip; earlier at Kleiner Perkins and Felicis Ventures",
+    "BA, University of California Berkeley; JD, Columbia Law School"
+   ]
+  },
+  {
+   "name": "Nora M. Denzel",
+   "title": "Lead Independent Director",
+   "background": [
+    "Lead Independent Director since November 2022; member of the Audit and Finance Committee from August 2026",
+    "Former interim Chief Executive Officer of Outerwall; senior leadership roles at Hewlett-Packard, Legato Systems and IBM",
+    "Serves on the boards of several public technology companies"
+   ]
+  },
+  {
+   "name": "KC McClure",
+   "title": "Director; Chair of the Audit and Finance Committee",
+   "background": [
+    "Appointed to the AMD board 20 January 2026; became chair of the Audit and Finance Committee 19 August 2026",
+    "Chief Financial Officer — Accenture (2019–2024)",
+    "More than thirty years at Accenture in finance leadership roles"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "AMD reports on a 52/53-week fiscal year ending the last Saturday in December, so period-end dates move: FY2024 ended 2024-12-28 and FY2025 ended 2025-12-27. Client and Gaming were merged into one reportable segment from Q1 FY2025 with prior periods retrospectively adjusted. Consensus figures below are the published analyst consensus named in each row; where none was found the field is left empty rather than reconstructed. Q3 FY2026 had not been reported when this dossier was written — the standing guide issued 2026-08-04 is about $13.0bn ±$300m at about 56% non-GAAP gross margin.",
+  "periods": [
+   {
+    "period": "FY2024 (ended 2024-12-28)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-28",
+    "commentary": "Data Center nearly doubled to $12,579m while Gaming fell to $2,595m. Q4 was a record at $7,658m but the Data Center line of $3.9bn missed the roughly $4.14bn the Street expected, and the stock fell.",
+    "metrics": [
+     {
+      "name": "Total net revenue",
+      "actual": "$25,785m, up 13.7%",
+      "expected": "",
+      "verdict": "",
+      "result": "Record annual revenue.",
+      "kpi": "revenue",
+      "usdMillions": 25785,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Data Center segment revenue",
+      "actual": "$12,579m, up 94%",
+      "expected": "",
+      "verdict": "",
+      "result": "Segment operating income $3,482m."
+     },
+     {
+      "name": "Net income (GAAP)",
+      "actual": "$1,641m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 1641,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS (GAAP)",
+      "actual": "$1.00",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Gross margin (GAAP)",
+      "actual": "49%",
+      "expected": "",
+      "verdict": "",
+      "result": "Gross profit $12,725m."
+     }
+    ]
+   },
+   {
+    "period": "FY2025 (ended 2025-12-27)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-27",
+    "commentary": "Record year. The China export-control episode cost about $1.5bn of revenue and roughly $440m net of charges — an $800m gross write-down in Q2 partly reversed by about $360m in Q4, when about $390m of MI308 China revenue was finally recognised. AMD's release states GAAP gross margin of 50%; StockAnalysis computes 52.49% from gross profit of $18,183m, a difference no source reconciles and most likely a classification difference on amortisation of acquisition-related intangibles.",
+    "metrics": [
+     {
+      "name": "Total net revenue",
+      "actual": "$34,639m, up 34.3%",
+      "expected": "",
+      "verdict": "",
+      "result": "Record annual revenue.",
+      "kpi": "revenue",
+      "usdMillions": 34639,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Data Center segment revenue",
+      "actual": "$16,635m, up 32%",
+      "expected": "",
+      "verdict": "",
+      "result": "Segment operating income $3,603m."
+     },
+     {
+      "name": "Net income (GAAP)",
+      "actual": "$4,335m; non-GAAP $6,831m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 4335,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS (GAAP)",
+      "actual": "$2.65; non-GAAP $4.17",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Gross margin",
+      "actual": "50% GAAP (AMD release); 52% non-GAAP",
+      "expected": "",
+      "verdict": "",
+      "result": "Gross profit $17,152m per the segment tables."
+     },
+     {
+      "name": "Research and development expense",
+      "actual": "$8,091m, up 25.3%",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     }
+    ]
+   },
+   {
+    "period": "Q1 FY2026 (ended 2026-03-28)",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-28",
+    "commentary": "A double beat against LSEG consensus, with a Q2 guide of about $11.2bn against $10.52bn expected. Shares rose 16–18% to an all-time high.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$10,253m, up 38%",
+      "expected": "$9.89bn (LSEG)",
+      "verdict": "beat",
+      "result": "Beat consensus by about 3.7%.",
+      "kpi": "revenue",
+      "usdMillions": 10253,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Data Center segment revenue",
+      "actual": "$5,775m, up 57%",
+      "expected": "",
+      "verdict": "",
+      "result": "Segment operating income $1,599m."
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$1.37, up 43%",
+      "expected": "$1.29 (LSEG)",
+      "verdict": "beat",
+      "result": "GAAP diluted EPS was $0.84."
+     },
+     {
+      "name": "Net income (GAAP)",
+      "actual": "$1,383m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 1383,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gross margin (GAAP)",
+      "actual": "53%",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     }
+    ]
+   },
+   {
+    "period": "Q2 FY2026 (ended 2026-06-27)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-27",
+    "commentary": "A double beat and a guidance beat on which the stock still fell 8–10.5%. Two things drove that: the Q3 non-GAAP gross-margin guide was flat at about 56% despite about 13% sequential revenue growth, which management attributed to the Helios ramp, and analysts pressed on how few customers the Helios book rests on. A widely repeated framing of a 'gross margin miss, 54% vs 56%' compares GAAP actual against non-GAAP consensus — AMD's non-GAAP gross margin was 56%, in line.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$11,536m, up 50%",
+      "expected": "$11,284m",
+      "verdict": "beat",
+      "result": "Record quarterly revenue.",
+      "kpi": "revenue",
+      "usdMillions": 11536,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Data Center segment revenue",
+      "actual": "$6,718m, up 107% — 58% of company revenue",
+      "expected": "",
+      "verdict": "",
+      "result": "Segment operating income $2,103m."
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$1.66",
+      "expected": "$1.62",
+      "verdict": "beat",
+      "result": "GAAP diluted EPS $1.38. The print missed the Earnings Whisper number of $1.69."
+     },
+     {
+      "name": "Net income (GAAP)",
+      "actual": "$2,297m; non-GAAP $2,760m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 2297,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "54% GAAP, 56% non-GAAP",
+      "expected": "56% non-GAAP",
+      "verdict": "inline",
+      "result": "Non-GAAP gross margin was in line; the GAAP figure is not the comparable."
+     },
+     {
+      "name": "Client and Gaming segment revenue",
+      "actual": "$3,841m — Client $3,062m up 23%, Gaming $779m down 31%",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Embedded segment revenue",
+      "actual": "$977m, up 19%",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**(High confidence)** We assess that AMD's position cannot be stated as a single verdict, and that any dossier which averages it will be wrong. Basis: Mercury Research puts AMD at 34.5% of x86 server units in Q2 2026, up 7.2 points year on year — an incumbent co-leader's share — while independent estimates put Instinct at roughly 5–10% of data-centre accelerator revenue against NVIDIA's 75–92%. The company is an incumbent in the socket and a challenger in the accelerator, and the rack is the bet that converts one into the other.",
+  "**(High confidence)** We assess that the binding constraint on AMD's accelerator business is software and internal cluster capacity, not silicon. Basis: SemiAnalysis's July 2026 assessment upgraded AMD's chances of breaking the CUDA moat to 'a great chance of success' while documenting that AMD's internal development clusters remain more than an order of magnitude smaller than NVIDIA's, that its Kubernetes and Pollara NIC continuous-integration coverage sits at zero parity, and that AMD leadership pulled clusters from its own software team during launch week, causing a gating-coverage regression and slipping automated testing to October 2026.",
+  "**(High confidence)** We assess that AMD has deliberately chosen not to be a rack manufacturer, and that this is a structural position rather than a transitional one. Basis: AMD bought ZT Systems for $4.9bn as announced and sold its manufacturing arm to Sanmina for about $3bn within seven months, keeping the design IP and engineers; its Q2 FY2026 10-Q states that although it supplies certain products used in a Helios system it does not manufacture or sell the completed rack, which is developed and licensed for implementation by customers and their manufacturing partners.",
+  "**(High confidence)** We assess that AMD is not a participant in the rack power-conversion layer and should not be read as one. Basis: no AMD statement on 800 VDC or higher-voltage rack power architecture appears in any 2024–2026 AMD press release or SEC filing reviewed; AMD adopted the Open Rack Wide specification Meta contributed to the Open Compute Project rather than publishing an architecture of its own, and it names no power-conversion vendor roster. Its only published power figures are a 50 V DC busbar, a 400 W 'Default CPU Power' for EPYC 9996, and comparative claims normalised to a 100 kW rack envelope. This is the opposite of NVIDIA's posture, which prescribes the architecture and names the qualified vendors.",
+  "**(Moderate confidence)** We assess that AMD's demand book is more concentrated and more reflexive than its revenue currently shows. Basis: three of the four largest commitments — OpenAI at 6 GW, Meta at 6 GW and Anthropic at up to 2 GW — carry equity consideration flowing between the parties, two through warrants for up to 160 million AMD shares each at $0.01 and one through an AMD equity investment of up to $5bn in the buyer. Lisa Su conceded on the Q2 FY2026 call that most Helios racks are sold to a handful of customers. The stock fell 10.5% intraday on a double beat, which is the market pricing that concentration rather than the results.",
+  "**(Moderate confidence)** We assess that AMD is moving from selling into the data-centre buildout to carrying balance-sheet exposure to it, and that this is under-appreciated relative to the product news. Basis: the Q2 FY2026 10-Q discloses $4.1bn of maximum gross exposure from guarantees on commercial partners' data-centre lease obligations on terms up to fifteen years, which 'may be issued in exchange for warrants'; $4.5bn of leases not yet commenced; a further $9.5bn of data-centre leases signed after quarter-end for 2027–2028; and about $30.3bn of unconditional purchase commitments of which $17.4bn falls in the remainder of FY2026.",
+  "**(Moderate confidence)** We assess that Helios's launch-date parity with Vera Rubin is real but that its volume parity is not yet demonstrated. Basis: SemiAnalysis reported in February 2026 that MI455X volume would slip to Q2 2027 and AMD's VP of AI software publicly rejected the claim; Helios then launched on 23 July 2026, vindicating the launch date, but AMD's own guidance places initial volume in Q3 2026 with significant ramp only in Q4 2026 into Q1 2027, and SemiAnalysis documents 1,728 cables and more than 550 retimers per rack as production-engineering risk.",
+  "**(Low confidence)** We assess that the reported Meta warrant may represent a second grant of up to 160 million shares rather than a restatement of the OpenAI terms, in which case cumulative potential dilution is roughly double the ~10% figure usually quoted. Basis: coverage of the February 2026 Meta agreement describes warrant terms identical to OpenAI's — up to 160 million shares at $0.01 with a final tranche at $600 — but no source reviewed reconciles whether these are two distinct grants. This is the largest unresolved quantitative question in this file and belongs in the proxy or a 10-Q note.",
+  "**(Low confidence)** We assess that the memory cycle is a larger near-term risk to AMD's consolidated results than the accelerator competition is. Basis: DRAM revenue is forecast up 246.6% and NAND up 371.9% in 2026, Gartner expects a fall of more than 10% in 2026 PC shipments, and AMD has told investors it is planning for lower second-half PC shipments on higher memory and component costs — while Client and Gaming was still $3,841m of the $11,536m Q2 FY2026 quarter."
+ ],
+ "sources": [
+  {
+   "label": "StockAnalysis — AMD financials, consensus estimates, ratings and price targets",
+   "url": "https://stockanalysis.com/stocks/amd/forecast/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Motley Fool — AMD's Instinct systems are now live in Saudi Arabia; what the next 250 megawatts are worth",
+   "url": "https://www.fool.com/investing/2026/09/01/amd-s-instinct-systems-are-now-live-in-saudi-arabia-here-s-what-the-next-250-megawatts-are-worth-to-the-stock/",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "AMD — AMD, Cisco and HUMAIN expand Saudi Arabia's AI infrastructure as AMD Instinct systems go live",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Robert Castellano — Nvidia added twice AMD's entire data-center revenue in one quarter",
+   "url": "https://drrobertcastellano.substack.com/p/nvidia-added-twice-amds-data-center",
+   "date": "2026-08-30"
+  },
+  {
+   "label": "The Register — Memory crunch: cloud operators may be pushed to spend 68% of capex on DRAM and NAND",
+   "url": "https://www.theregister.com/storage/2026/08/26/memory-crunch-cloud-operators-may-be-pushed-to-splurge-68-of-capex-on-dram-and-nand/5292648",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Investing.com — NVIDIA Q2 FY27: revenue $96bn, data centre $89bn",
+   "url": "https://www.investing.com/news/company-news/nvidia-q2-fy27-slides-revenue-doubles-to-96b-data-center-surges-93CH-4878041",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "ServeTheHome — AMD Helios MI400 system architecture at Hot Chips 2026",
+   "url": "https://www.servethehome.com/amd-helios-mi400-system-architecture-at-hot-chips-2026/",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "The Register — Chipmakers laughing all the way to the vault as memory prices go stratospheric",
+   "url": "https://www.theregister.com/systems/2026/08/24/chipmakers-laughing-all-the-way-to-the-vault-as-memory-prices-go-stratospheric/5291690",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "The Register — AMD grabs more CPU share while pricier PCs punish desktop demand (Mercury Research Q2 2026)",
+   "url": "https://www.theregister.com/systems/2026/08/21/amd-grabs-more-cpu-share-while-pricier-pcs-punish-desktop-demand/5291053",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "AMD — AMD appoints Tim Ryan to board of directors",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1297/amd-appoints-tim-ryan-to-board-of-directors",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "SEC Form 8-K — $4.75bn senior notes offering closed",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526354029/d142696d8k.htm",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "AMD — AMD acquires Taalas to advance compute solutions for the AI inference market",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "The Register — AMD's AI eggs are in too few baskets, Wall Street worries",
+   "url": "https://www.theregister.com/systems/2026/08/05/amds-ai-eggs-are-in-too-few-baskets-wall-street-worries/5283142",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "SEC Form 10-Q — quarter ended 2026-06-27",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "AMD — AMD reports second quarter 2026 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — AMD Q2 2026 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "SemiAnalysis — Can AMD break the CUDA moat? Advancing AI 2026",
+   "url": "https://newsletter.semianalysis.com/p/can-amd-break-the-cuda-moat-amd-advancing",
+   "date": "2026-07-25"
+  },
+  {
+   "label": "AMD — Advancing AI 2026: AMD delivers full-stack compute for the agentic AI era",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "AMD — AMD and Cerebras announce ultra-low-latency, high-throughput AI inference solution",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1293/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference-solution",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "The Register — AMD attacks the rack with Helios systems that rival Nvidia's",
+   "url": "https://www.theregister.com/systems/2026/07/23/amd-attacks-the-rack-with-helios-systems-that-rival-nvidias/5277246",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "AMD — AMD and Anthropic announce strategic partnership to deploy up to 2 gigawatts of Instinct MI450 Series GPUs",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "CNBC — AMD to invest up to $5 billion in Anthropic as part of computing power deal",
+   "url": "https://www.cnbc.com/2026/07/22/amd-anthropic-ai-chip-investment.html",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "AMD — Microsoft to deploy next-gen AMD Instinct and EPYC processors",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1291/microsoft-to-deploy-next-gen-amd-instinct-and-amd-epyc-processors-as-the-companies-expand-their-long-term-strategic-partnership",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "AMD — AMD appoints Alan Smith as newest Corporate Fellow",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1290/amd-appoints-alan-smith-as-newest-corporate-fellow",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Igor's Lab — AMD MLPerf Training 6.0: Instinct MI355X approaches Blackwell",
+   "url": "https://www.igorslab.de/en/amd-mlperf-training-6-0-instinct-mi355x-approaches-blackwell-scales-multiple-servers/",
+   "date": "2026-06-19"
+  },
+  {
+   "label": "AMD — AMD commits up to £2 billion to accelerate AI innovation and research in the United Kingdom",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1288/amd-commits-up-to-2-billion-to-accelerate-ai-innovation-and-research-in-the-united-kingdom",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "The Register — AMD takes a third of the server CPU market as shipments grow (Mercury Research Q1 2026)",
+   "url": "https://www.theregister.com/systems/2026/06/04/amd-takes-a-third-of-server-cpu-market-as-shipments-grow/5251283",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "TOP500 — June 2026 list",
+   "url": "https://top500.org/lists/top500/list/2026/06/",
+   "date": "2026-06"
+  },
+  {
+   "label": "Green500 — June 2026 list",
+   "url": "https://top500.org/lists/green500/list/2026/06/",
+   "date": "2026-06"
+  },
+  {
+   "label": "AMD — Production ramp of next-generation EPYC 'Venice' on TSMC 2nm process technology",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "AMD — More than $10 billion in Taiwan ecosystem investments to accelerate AI infrastructure",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1286/amd-announces-more-than-10-billion-in-taiwan-ecosystem-investments-to-accelerate-ai-infrastructure",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "SEC Form 8-K — $5.0bn five-year revolving credit facility",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526226746/d118163d8k.htm",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "The Register — AMD warns rising memory costs will hit PC shipments",
+   "url": "https://www.theregister.com/personal-tech/2026/05/06/amd-warns-rising-memory-costs-will-hit-pc-shipments/5231063",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "AMD — AMD reports first quarter 2026 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "CNBC — AMD Q1 2026 earnings report",
+   "url": "https://www.cnbc.com/2026/05/05/amd-q1-2026-earnings-report.html",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "SEC Form DEF 14A — 2026 proxy statement",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000119312526129057/d85856ddef14a.htm",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "AMD — AMD and Nutanix announce strategic partnership for enterprise AI",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1280/amd-and-nutanix-announce-strategic-partnership-to-advance-an-open-and-scalable-platform-for-enterprise-ai",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "AMD — AMD and Meta announce expanded strategic partnership to deploy 6 gigawatts of AMD GPUs",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1279/amd-and-meta-announce-expanded-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "ServeTheHome — AMD and Meta announce a massive 6GW deal",
+   "url": "https://www.servethehome.com/amd-and-meta-announce-a-massive-6gw-deal/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "VideoCardz — AMD denies MI455X delay claims, says shipments remain set for H2 2026",
+   "url": "https://videocardz.com/newz/amd-denies-mi455x-delay-claims-says-shipments-remain-set-for-h2-2026",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "SEC Form 8-K — FY2025 incentive bonuses and CEO Value Creation Equity Award",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000029/amd-20260210.htm",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "SemiAnalysis — InferenceX v2: NVIDIA Blackwell vs AMD vs Hopper",
+   "url": "https://newsletter.semianalysis.com/p/inferencex-v2-nvidia-blackwell-vs",
+   "date": "2026-02-16"
+  },
+  {
+   "label": "AMD — AMD and TCS to bring Helios rack-scale AI architecture to India",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1278/amd-and-tcs-to-bring-state-of-the-art-helios-rack-scale-ai-architecture-to-india",
+   "date": "2026-02-16"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 2025-12-27",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "AMD — AMD reports fourth quarter and full year 2025 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "SEC Form 8-K Exhibit 99.1 — AMD Q4 and FY2025 results",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "AMD — AMD appoints KC McClure to board of directors",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1275/amd-appoints-kc-mcclure-to-board-of-directors",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "Forbes — DigitalOcean and AMD deliver doubled inference performance for Character.AI",
+   "url": "https://www.forbes.com/sites/janakirammsv/2026/01/19/digitalocean-and-amd-deliver-doubled-inference-performance-for-characterai/",
+   "date": "2026-01-19"
+  },
+  {
+   "label": "AMD — AMD expands AI leadership across client, graphics and software at CES 2026",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1270/amd-expands-ai-leadership-across-client-graphics-and-software-with-new-ryzen-ryzen-ai-and-amd-rocm-announcements-at-ces-2026",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "SEC Form 8-K — Emily Ellis appointed Chief Accounting Officer",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000182/amd-20251212.htm",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "AMD — AMD and HPE expand collaboration to advance open rack-scale AI infrastructure",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1269/amd-and-hpe-expand-collaboration-to-advance-open-rack-scale-ai-infrastructure",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "AMD — AMD and Eviden to power Europe's new exascale supercomputer",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1267/amd-and-eviden-to-power-europes-new-exascale-supercomputer-the-first-based-in-france",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "AMD — AMD unveils strategy to lead the $1 trillion compute market (Financial Analyst Day)",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+   "date": "2025-11-11"
+  },
+  {
+   "label": "AMD — AMD reports third quarter 2025 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1265/amd-reports-third-quarter-2025-financial-results",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "AMD — AMD powers US sovereign AI factory supercomputers (Lux and Discovery)",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1264/amd-powers-u-s-sovereign-ai-factory-supercomputers-accelerating-an-open-american-ai-stack",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "AMD — AMD completes divestiture of ZT Systems' data-center infrastructure manufacturing business to Sanmina",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1263/amd-completes-divestiture-of-zt-systems-data-center-infrastructuremanufacturing-business-to-sanmina",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "AMD — AMD showcases Helios rack-scale platform built on the OCP Open Rack introduced by Meta",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1261/amd-showcases-helios-rack-scale-platform-built-on-the-open-compute-project-open-rack-for-ai-introduced-by-meta",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "CNBC — Oracle Cloud to deploy 50,000 AMD AI chips as an alternative to Nvidia",
+   "url": "https://www.cnbc.com/2025/10/14/oracle-cloud-to-deploy-50000-amd-ai-chips-as-alternative-to-nvidia.html",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "AMD — AMD and OpenAI announce strategic partnership to deploy 6 gigawatts of AMD GPUs",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+   "date": "2025-10-06"
+  },
+  {
+   "label": "CNBC — AMD stock skyrockets 23% as OpenAI looks to take a stake",
+   "url": "https://www.cnbc.com/2025/10/06/openai-amd-chip-deal-ai.html",
+   "date": "2025-10-06"
+  },
+  {
+   "label": "AMD — AMD and Cohere expand global AI collaboration",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1259/amd-and-cohere-expand-global-ai-collaboration-to-power-enterprise-and-sovereign-deployments-with-amd-ai-infrastructure",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "SEC Form 8-K — Chief Accounting Officer Philip Carter resignation",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000147/amd-20250822.htm",
+   "date": "2025-08-25"
+  },
+  {
+   "label": "TrendForce — NVIDIA and AMD reportedly to pay 15% of H20/MI308 China sales for export licences",
+   "url": "https://www.trendforce.com/news/2025/08/11/news-nvidia-amd-make-historic-deal-reportedly-pay-15-of-h20-mi308-china-sales-for-export-licenses/",
+   "date": "2025-08-11"
+  },
+  {
+   "label": "AMD — AMD reports second quarter 2025 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1257/amd-reports-second-quarter-2025-financial-results",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "CNBC — AMD to resume MI308 AI chip exports to China",
+   "url": "https://www.cnbc.com/2025/07/15/amd-mi308-ai-chip-china.html",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "AMD — AMD unveils vision for an open AI ecosystem at Advancing AI 2025 (MI350, Helios preview, ROCm 7)",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1255/amd-unveils-vision-for-an-open-ai-ecosystem-detailing-new-silicon-software-and-systems-at-advancing-ai-2025",
+   "date": "2025-06-12"
+  },
+  {
+   "label": "AMD — AMD announces agreement to divest ZT Systems' manufacturing business to Sanmina",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1252/amd-announces-agreement-to-divest-zt-systems-data-center-infrastructure-manufacturing-business-to-sanmina",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "AMD — AMD and HUMAIN form strategic $10bn collaboration to advance global AI",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1250/amd-and-humain-form-strategic-10b-collaboration-to-advance-global-ai",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "AMD — AMD reports first quarter 2025 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1247/amd-reports-first-quarter-2025-financial-results",
+   "date": "2025-05-06"
+  },
+  {
+   "label": "SEC Form 8-K — MI308 export control, charges of up to approximately $800m",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000039/amd-20250415.htm",
+   "date": "2025-04-16"
+  },
+  {
+   "label": "AMD — AMD achieves first TSMC N2 product silicon milestone",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1245/amd-achieves-first-tsmc-n2-product-silicon-milestone",
+   "date": "2025-04-14"
+  },
+  {
+   "label": "AMD — AMD completes acquisition of ZT Systems",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1240/amd-completes-acquisition-of-zt-systems",
+   "date": "2025-03-31"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 2024-12-28",
+   "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000012/amd-20241228.htm",
+   "date": "2025-02-05"
+  },
+  {
+   "label": "AMD — AMD reports fourth quarter and full year 2024 financial results",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1236/amd-reports-fourth-quarter-and-full-year-2024-financial-results",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "AMD — AMD delivers leadership AI performance with Instinct MI325X accelerators",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1220/amd-delivers-leadership-ai-performance-with-amd-instinct-mi325x-accelerators",
+   "date": "2024-10-10"
+  },
+  {
+   "label": "AMD — AMD launches 5th Gen EPYC CPUs",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1219/amd-launches-5th-gen-amd-epyc-cpus-maintaining-leadership-performance-and-features-for-the-modern-data-center",
+   "date": "2024-10-10"
+  },
+  {
+   "label": "AMD — AMD to expand data center AI systems capabilities with acquisition of ZT Systems",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1211/amd-to-significantly-expand-data-center-ai-systems-capabilities-with-acquisition-of-hyperscale-solutions-provider-zt-systems",
+   "date": "2024-08-19"
+  },
+  {
+   "label": "AMD — AMD delivers leadership portfolio of data center AI solutions with Instinct MI300 Series",
+   "url": "https://ir.amd.com/news-events/press-releases/detail/1173/amd-delivers-leadership-portfolio-of-data-center-ai-solutions-with-amd-instinct-mi300-series",
+   "date": "2023-12-06"
+  },
+  {
+   "label": "Flex — Flex announces US manufacturing collaboration with AMD to accelerate domestic AI infrastructure",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-U-S--Manufacturing-Collaboration-with-AMD-to-Accelerate-Domestic-AI-Infrastructure/default.aspx"
+  },
+  {
+   "label": "Core Scientific — AMD strategic partnership announcement",
+   "url": "https://investors.corescientific.com/news-events/press-releases/detail/138"
+  },
+  {
+   "label": "SEC EDGAR — AMD submissions index, CIK 0000002488",
+   "url": "https://data.sec.gov/submissions/CIK0000002488.json"
+  },
+  {
+   "label": "SEC EDGAR — AMD XBRL company facts, CIK 0000002488",
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000002488.json"
+  },
+  {
+   "label": "AMD Investor Relations — board of directors",
+   "url": "https://ir.amd.com/corporate-governance/board-of-directors"
+  },
+  {
+   "label": "AMD Investor Relations — press releases index",
+   "url": "https://ir.amd.com/news-events/press-releases"
+  }
+ ],
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 1
+}

@@ -880,8 +880,14 @@
      "slug": "aligned",
      "role": "adjacent",
      "basis": "productsAndServices › Cooling technology platform — Delta³ and DeltaFlow, company-designed, deployed platform-wide rather than sold as merchant product"
+    },
+    {
+     "slug": "supermicro",
+     "role": "adjacent",
+     "basis": "productsAndServices › Direct Liquid Cooling (DLC-2): the FY2026 10-K states Supermicro manufactures the coolant distribution units and manifolds itself — in-rack CDUs to 250 kW, in-row to 1.8 MW, rear-door heat exchangers 10-120 kW per door and 1-50 MW cooling towers, sold inside DCBBS racks"
     }
-   ]
+   ],
+   "notes": "Supermicro was added as adjacent at S3 P1 (2026-09-08) on a manufactured product line, not a market position. The distinction is deliberate and the evidence cuts both ways: its FY2026 10-K states it designs, builds and delivers direct-to-chip cold-plate solutions and manufactures the CDUs and manifolds, which is the same standard on which Delta Electronics and LiteOn sit here; but Dell'Oro's January 2026 assessment names Vertiv as the liquid-cooling leader with CoolIT, nVent and Boyd holding strong positions and does not name Supermicro at all, every DLC-2 performance figure is a company claim rather than an independent measurement, and a DLC component shortage cost it a reported $800m of revenue in a quarter. Adjacent, not challenger."
   },
   {
    "id": "compute-and-the-rack",
@@ -896,7 +902,7 @@
     "Reference architecture and the qualified power and cooling vendor set",
     "Cooling requirement (direct-to-chip, facility-water temperature)"
    ],
-   "notes": "Below the floor at S0 (2026-09-07): one incumbent, no challenger. AMD, the rack and server OEMs (Dell, HPE, Supermicro) and the ASIC programmes are not covered; Flex is the only system builder on record. INTEGRATED-REMEDIATION-PLAN.md §7.2 counted this segment above the floor — the dossiers do not support that count. Recorded for the developer's taxonomy review. Developer's taxonomy review, 2026-09-07 PM — Option B chosen: fill the segment rather than fold it or leave it thin. AMD (the challenger to NVIDIA) and Supermicro (the rack/server OEM) are added to the coverage plan as Phase E group E7 (PROFILER-COVERAGE-PLAN.md §8/§10, both public → Opus 5 xhigh); the segment reaches the floor when both dossiers land. Folding was rejected because both current members already sit in power-conversion-and-rack-power-silicon, so a fold would only have deleted the load's own buying criteria.",
+   "notes": "Below the floor at S0 (2026-09-07): one incumbent, no challenger. AMD, the rack and server OEMs (Dell, HPE, Supermicro) and the ASIC programmes were not covered; Flex was the only system builder on record. INTEGRATED-REMEDIATION-PLAN.md §7.2 counted this segment above the floor — the dossiers did not support that count. Developer's taxonomy review, 2026-09-07 PM — Option B chosen: fill the segment rather than fold it or leave it thin. Folding was rejected because both current members already sit in power-conversion-and-rack-power-silicon, so a fold would only have deleted the load's own buying criteria. AT THE FLOOR from S3 P1 (2026-09-08, v05.20r): AMD and Supermicro landed as four members — NVIDIA incumbent, AMD and Supermicro challengers, Flex adjacent — so the segment now satisfies the floor rule (three members, one incumbent, one challenger) and its landscape module is writable. Both were typed challenger on the evidence rather than the hypothesis: AMD because independent estimates put Instinct at 5-10% of accelerator revenue against NVIDIA's 75-92% and NVIDIA's data-centre revenue alone is more than thirteen times AMD's whole Data Center segment; Supermicro because IDC's series shows its share peaking at 8.0% in 4Q23 and falling behind Dell's 16.5% by 1Q26 while gross margin fell 719 basis points over three years. The §8 row allowed Supermicro to be either incumbent or challenger; the record decided challenger. Dell and HPE, the named alternates, were not needed and remain uncovered — the segment still has no dossier for the two largest OEM competitors, and no ODM (Foxconn, Quanta, Wiwynn) is covered even though ODM Direct is now above 50% of the server market.",
    "members": [
     {
      "slug": "nvidia",
@@ -907,6 +913,16 @@
      "slug": "flex",
      "role": "adjacent",
      "basis": "productsAndServices › Electronics manufacturing services (BUILT FOR OTHERS): AMD Instinct GPU platforms in Austin, Cerebras wafer-scale systems in Milpitas"
+    },
+    {
+     "slug": "amd",
+     "role": "challenger",
+     "basis": "ecosystemRole: defines what a rack must be fed and cooled — Helios puts 72 Instinct MI455X and 18 EPYC 'Venice' in one OCP Open Rack Wide frame with quick-disconnect liquid cooling; productsAndServices › Instinct: an estimated 5-10% of data-centre accelerator revenue against NVIDIA's 75-92%"
+    },
+    {
+     "slug": "supermicro",
+     "role": "challenger",
+     "basis": "ecosystemRole: the rack and server OEM that turns a chip vendor's reference design into a delivered, factory-tested rack; productsAndServices › GPU and accelerator systems: peaked at 8.0% of worldwide server revenue in 4Q23 and sat at 7.6% in 1Q26 against Dell's 16.5%, with gross margin down 719bp in three years"
     }
    ]
   },

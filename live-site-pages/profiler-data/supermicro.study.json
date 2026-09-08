@@ -1,0 +1,350 @@
+{
+ "schemaVersion": 2,
+ "slug": "supermicro",
+ "title": "Supermicro — Technology Study Guide",
+ "lastUpdated": "2026-09-08",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the job between the chip and the building",
+   "kind": "callout",
+   "tone": "info",
+   "read": "2 min",
+   "ps": [
+    "This guide teaches **what it takes to turn accelerators into a working data hall** — how a server is built up into a rack, why the industry measures that assembly in levels, what liquid cooling actually requires of a building, and why the economics of doing this work are so different from the economics of designing the silicon.",
+    "It deliberately does not repeat neighbouring guides. **AMD's guide** covers the silicon and why the rack became the unit of compute. **Vertiv's** and **Delta's** cover the thermal and conversion plant from the facility side. **Flex's** covers electrical distribution and what contract manufacturing is. This guide occupies the seam between them: the rack itself, and the services that put it on a floor.",
+    "The baseline is high-school physics. Terms in **bold with a dotted underline** carry a definition you can hover."
+   ]
+  },
+  {
+   "id": "what-a-rack-is",
+   "title": "What a rack actually is, and why its units matter",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A rack is a standardised steel frame, and almost everything about data-centre equipment is shaped by its dimensions. Height is measured in **{{rack unit}}s** — one unit is 1.75 inches — and a full-height rack is typically 42 to 52 of them. Every server, switch and power shelf is described by how many units it occupies, so U is the currency in which rack space is spent.",
+    "Two width standards coexist. The long-established one is 19 inches, from telephone exchanges. The newer one is 21 inches, introduced by the **{{Open Compute Project}}** so that operators could publish designs anyone could build to. Vendors selling into both worlds build both, which is why a rack catalogue lists the same product in 44OU and 48U variants.",
+    "Inside the frame, three things are distributed vertically and each is a design decision. Power arrives on a **{{busbar}}** — a rigid conductor running the height of the rack that equipment clips onto — or on cables from a distribution unit. Data arrives on cabling whose bulk is a real constraint: a modern accelerator rack can contain well over a thousand cables. And, increasingly, coolant arrives too, through a manifold running the height of the rack with a connection at each server.",
+    "The last of those three is new, and it changes what a rack is. A rack that carries liquid is a plumbing assembly as much as an electrical one, with leak detection, quick-disconnect couplings and a defined behaviour when a server is pulled out. That is a different manufacturing discipline from bolting servers into a frame."
+   ]
+  },
+  {
+   "id": "integration-levels",
+   "title": "Integration levels: what 'L11' and 'L12' actually mean",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The industry describes how much assembly a supplier does using a ladder of levels. The vocabulary sounds like jargon but it is the single most useful thing to know about this market, because where a vendor sits on the ladder determines what it is paid for, what risk it carries and how much of the customer's project it removes.",
+   "cols": [
+    "Level",
+    "What is delivered",
+    "Who does the remaining work",
+    "What the supplier is paid for"
+   ],
+   "rows": [
+    [
+     "Components",
+     "Boards, chassis, power supplies, cold plates as parts",
+     "Everyone downstream",
+     "Manufacturing cost plus a thin margin; entirely price-competitive"
+    ],
+    [
+     "L6 — a built server",
+     "A working server in a box, tested standalone",
+     "The customer racks, cables, powers and tests it on site",
+     "Design, assembly and standalone test"
+    ],
+    [
+     "**{{L11}}** — a built and tested rack",
+     "Servers installed in a rack, cabled, powered, cooled and tested as a rack",
+     "The customer connects the rack to the facility and to the network",
+     "Rack design, integration labour, and having caught the faults before shipping"
+    ],
+    [
+     "**L12** — a tested cluster",
+     "Multiple racks wired together as a working cluster, with the network fabric and software stack validated",
+     "The customer connects the cluster to the building and starts using it",
+     "Removing the entire integration project, and warranting that the cluster works as one machine"
+    ],
+    [
+     "Facility scope",
+     "The cluster plus the cooling plant, power distribution and site services around it",
+     "The customer supplies a building, power and water",
+     "Being a single point of responsibility for the whole hall"
+    ]
+   ],
+   "note": "The reason the ladder matters commercially: each rung removes more of the customer's project, but each rung also adds cost the supplier carries before it is paid. Assembling and testing a full cluster means holding the accelerators — the most expensive components in the industry — on your own balance sheet while you do it. That is why vendors high on this ladder show enormous inventory and negative operating cash flow in the quarters when they are growing fastest, and it is the single most important thing to understand about their financial statements."
+  },
+  {
+   "id": "air-or-liquid",
+   "title": "Air or liquid: the choice a hall can only make once",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "Below roughly 20 kilowatts per rack, air works. Above roughly 100, it does not — the airflow required becomes physically impossible and acoustically intolerable. Modern accelerator racks are far above that line, which forces a decision that reaches back into the building itself.",
+   "cards": [
+    {
+     "t": "Air cooling",
+     "meta": "Fans move air across heatsinks; the room's cooling plant chills the air",
+     "adv": [
+      "Every technician already knows how to work on it; no new failure modes",
+      "No liquid anywhere near live electronics",
+      "Works in existing halls with no building changes",
+      "A failed fan is a cheap, fast, well-understood repair"
+     ],
+     "dis": [
+      "Runs out of physics somewhere around 100 kW per rack — there is no version that works above it",
+      "Fans themselves consume a significant share of the power they exist to cool",
+      "Needs chilled air, which means compressors, which is where a large part of a facility's overhead sits",
+      "Low density means more floor area for the same computing, and floor area near power is scarce"
+     ]
+    },
+    {
+     "t": "Direct liquid cooling",
+     "meta": "A **{{cold plate}}** clamped to each hot chip carries heat away in a coolant loop, through a **{{CDU}}** to the facility's water",
+     "adv": [
+      "The only option that works at current rack densities; the density itself saves floor area",
+      "Liquid carries heat far better than air, so it can run on warm water — often up to about 45 °C — which can remove the chiller entirely",
+      "Removing fans and compressors is where the double-digit facility power savings come from",
+      "Much quieter, and it captures heat in a form that can actually be reused"
+     ],
+     "dis": [
+      "The building must supply and accept facility water at a defined temperature — a plumbing project, not a purchase",
+      "New failure modes: leaks, coupling wear, coolant chemistry and filtration",
+      "Servicing requires disconnecting a fluid circuit, so the mechanical design of every connection matters",
+      "Locks the hall to a thermal design; retrofitting a liquid-cooled row into an air-cooled building is expensive"
+     ]
+    }
+   ],
+   "note": "There is a middle path worth knowing because it is how most existing buildings actually adopt this: a **rear-door heat exchanger** — a radiator in the rack's back door that catches hot exhaust air before it reaches the room. It needs facility water but not cold plates on the chips, so a conventional hall can raise its density substantially without re-plumbing every server. It is the retrofit product, and it is why vendors sell exchangers from about 10 kW to over 100 kW per door."
+  },
+  {
+   "id": "the-cooling-chain",
+   "title": "The cooling chain, from the die to the sky",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Follow the heat and the whole product category makes sense. It leaves the chip into a **{{cold plate}}** — a metal block with fluid channels, clamped directly onto the package. Contact quality here decides everything downstream; a cold plate is a precision part, not a lump of copper.",
+    "From every cold plate in the rack the warmed fluid collects into a manifold running the rack's height, and from there into a **{{CDU}}**. This is the pivot of the whole system, and the thing to understand about it is that it keeps two loops separate: a clean, controlled loop that touches the servers, and the facility's water loop that touches the building. It transfers heat between them without mixing them, and it controls the flow, pressure and temperature the servers see. A unit sized for one rack handles a few hundred kilowatts; one sized for a row handles a megawatt or more.",
+    "The facility loop then carries the heat outdoors, and how it is rejected there is a climate and water decision rather than an IT one. A **cooling tower** evaporates water to dump heat and is very effective and thirsty. A **dry cooler** rejects heat to air with no evaporation, using no water and working less well as ambient temperature rises. Which one a site uses is usually decided by whether it can get a water permit.",
+    "Two numbers govern the whole chain. The **{{approach temperature}}** is the gap between the facility water and the ambient conditions — the smaller the gap you demand, the more plant you must buy. And the facility-water temperature the silicon vendor permits decides whether a chiller is needed at all: if the servers accept water at around 45 °C, a large part of the world can cool them without mechanical refrigeration, and the compressor — one of the largest overheads in a data centre — disappears.",
+    "That is the entire argument for warm-water liquid cooling, and it is why the efficiency claims are quoted as facility power savings rather than as server savings. The saving is mostly not in the rack."
+   ]
+  },
+  {
+   "id": "who-does-what",
+   "title": "Who does what in a delivered rack",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A finished accelerator rack is the output of several distinct businesses, and confusing them is the most common error in reading this market. This table separates the roles and names what each one is actually paid for.",
+   "cols": [
+    "Role",
+    "What it contributes",
+    "How it competes",
+    "Where the margin comes from"
+   ],
+   "rows": [
+    [
+     "Silicon designer",
+     "The accelerators, host processors and the reference design for the rack",
+     "Performance, memory, software ecosystem",
+     "Scarce, differentiated design; the highest margin in the chain"
+    ],
+    [
+     "{{Foundry}} and packaging",
+     "Manufacturing the silicon and assembling it with its stacked memory",
+     "Process generation and capacity",
+     "Capital intensity and technological lead; capacity is rationed"
+    ],
+    [
+     "Rack OEM / **{{system integrator}}**",
+     "Turning the reference design into a buildable, tested, shippable rack; often the cooling and power subsystems too",
+     "Time to market, breadth, integration quality, and ability to deliver at volume",
+     "Integration and validation labour — thin, and thinner as the design becomes standard"
+    ],
+    [
+     "**{{ODM}}**",
+     "Building to a hyperscaler's own design and selling direct to them",
+     "Cost, at very large scale",
+     "Very thin margins by design; the customer keeps the value"
+    ],
+    [
+     "**{{Contract manufacturer}}**",
+     "Building to someone else's design without owning it",
+     "Manufacturing cost and capacity",
+     "Labour and overhead; the design belongs to the customer"
+    ],
+    [
+     "Cooling and power specialists",
+     "Cold plates, CDUs, chillers, power shelves, switchgear",
+     "Thermal and electrical performance, qualification, service",
+     "Engineering content in a component the buyer cannot easily second-source"
+    ],
+    [
+     "Colocation landlord",
+     "The building, the power connection, the water",
+     "Location, available megawatts, time to energisation",
+     "Long leases against a fixed asset"
+    ]
+   ],
+   "note": "The uncomfortable structural fact is that the rack OEM's rung is the most easily squeezed. Above it the silicon designer holds the scarce input; below it the ODM will do the same assembly at two to three per cent margin for a hyperscaler that does not want the service. An OEM only escapes that squeeze by selling something the ODM does not — which is exactly why vendors in this position expand into cooling plant, power subsystems and deployment services."
+  },
+  {
+   "id": "integrator-economics",
+   "title": "Reading an integrator's economics",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "If you learn one analytical habit from this guide, make it this one: for a company at this rung, read gross margin against revenue growth, not on its own.",
+    "The reason is that an integrator's revenue includes the cost of the accelerators it buys and passes through. When accelerator prices rise and volume grows, revenue can multiply while the value the integrator adds — the integration labour and validation — stays roughly constant per rack. Gross margin then falls even though nothing has gone wrong operationally. Revenue growing five-fold while margin falls several hundred basis points is the signature of that pass-through, and it is exactly what differentiates an integrator from a differentiated systems vendor.",
+    "The second habit is to read the cash-flow statement before the income statement. Assembling racks at this rung means buying the most expensive components in the industry months before the customer pays. A company can report substantial net income and simultaneously consume billions in cash, because the money is sitting in inventory and receivables. That is not necessarily distress — it is what growth looks like at this rung — but it means the business needs continuous external financing, and that financing dilutes the owners.",
+    "The third habit is to distrust single-quarter margin. Revenue at this rung is lumpy: a large deployment can land in one quarter or slip into the next, and a quarter's margin can swing several points on mix alone. When a margin figure moves sharply, the useful question is whether management attributed it to something recurring or to a timing effect — and the honest ones say which.",
+    "Put together, these give you a way to read this kind of company that its own headline figures will not. Revenue growth tells you about demand for the silicon it resells. Margin tells you how much of the rack is actually its own work. Cash flow tells you who is financing the growth."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this goes wrong in practice",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "intro": "Six errors that recur in reading this part of the chain.",
+   "ps": [
+    "**Reading pass-through revenue as market power.** An integrator's revenue includes the accelerators it bought. Revenue growth at this rung is substantially a statement about silicon prices and allocation, not about the integrator's own position.",
+    "**Treating a company's own efficiency claims as measurements.** Figures like 'up to 40% power saving' or '98% heat capture' are vendor claims under vendor-chosen conditions. They are useful for understanding what a technology is *for*; they are not independent test results and should never be compared across vendors as if they were.",
+    "**Confusing selling a subsystem with leading its market.** A rack vendor that ships its own coolant distribution units genuinely has a cooling product line. That is a different claim from being a leader in cooling, which is settled by independent share trackers, and the two are routinely conflated in both directions.",
+    "**Assuming manufacturing capacity figures are comparable.** 'Racks per month' can mean total capacity, capacity at full production, or capacity for one product family, and the same company can publish several such numbers with different scopes. Always check what the figure is counting.",
+    "**Mistaking an order for revenue.** At this rung the gap between a signed order, a recognised sale and cash received is long and is where the risk lives. Configuration changes requested by a customer can make revenue unrecognisable for a quarter or more.",
+    "**Ignoring compliance as a commercial variable.** For equipment subject to export control, a customer's confidence that its supplier's controls are sound is a purchasing criterion. Governance problems at this rung are not only a governance story; they show up as cancelled orders."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "6 min",
+   "cards": [
+    {
+     "q": "What is a rack unit, and why is it the currency of rack design?",
+     "a": "One rack unit — 1U — is 1.75 inches of height in a standard frame, and a full-height rack is about 42 to 52 of them. Every piece of equipment is specified by how many units it occupies, so U is what rack space is spent in."
+    },
+    {
+     "q": "What is the difference between delivering a built server and delivering a built and tested rack?",
+     "a": "A built server is tested standalone and the customer racks, cables, powers, cools and tests it on site. A built and tested rack arrives assembled, cabled, powered, cooled and validated as a rack — the supplier has already found the faults, and carries the cost of the components while doing so."
+    },
+    {
+     "q": "Why does air cooling stop working above roughly 100 kW per rack?",
+     "a": "The airflow needed to carry that much heat out of that volume becomes physically impractical and acoustically intolerable. It is a limit of physics, not of engineering effort, which is why high-density racks are liquid-cooled by necessity."
+    },
+    {
+     "q": "What does a coolant distribution unit actually do?",
+     "a": "It separates two loops — a clean controlled loop that touches the servers and the facility's water loop that touches the building — transferring heat between them without mixing them, while controlling the flow, pressure and temperature the servers see."
+    },
+    {
+     "q": "Why does the facility-water temperature a system tolerates matter so much?",
+     "a": "If servers accept water at around 45 °C, much of the world can cool them without mechanical refrigeration, so the chiller and its compressor can be removed. That is where most of the claimed facility power saving comes from — the saving is largely outside the rack."
+    },
+    {
+     "q": "What is a rear-door heat exchanger for?",
+     "a": "It is a radiator in the rack's back door that catches hot exhaust before it reaches the room. It needs facility water but not cold plates on the chips, so it is the retrofit path that lets a conventional air-cooled hall raise density without re-plumbing every server."
+    },
+    {
+     "q": "What is the difference between a cooling tower and a dry cooler?",
+     "a": "A cooling tower evaporates water to reject heat — very effective and water-hungry. A dry cooler rejects heat to air with no evaporation — no water use, but less effective as ambient temperature rises. The choice is usually decided by whether the site can get a water permit."
+    },
+    {
+     "q": "Why can an integrator's gross margin fall while its revenue multiplies?",
+     "a": "Because revenue includes the cost of the accelerators it buys and passes through. If component prices and volumes rise while the value it adds per rack stays roughly constant, margin falls arithmetically without anything going wrong operationally."
+    },
+    {
+     "q": "Why does a fast-growing rack integrator often consume cash despite reporting profits?",
+     "a": "It must buy the most expensive components in the industry months before the customer pays, so the money sits in inventory and receivables. Growth at this rung is financed, and the financing dilutes existing owners."
+    },
+    {
+     "q": "How does an ODM differ from a rack OEM, and why does it matter to the OEM?",
+     "a": "An ODM builds to a hyperscaler's own design and sells direct at very thin margins, because that customer does not want the service wrapper. It matters because the ODM will do substantially the same physical assembly far more cheaply, which squeezes the OEM from below."
+    },
+    {
+     "q": "Why does a rack OEM expand into cooling units, power shelves and deployment services?",
+     "a": "Because the pure integration rung is squeezed from above by the silicon designer holding the scarce input and from below by ODMs. Selling subsystems and services the ODM does not sell is the way to add value the assembly itself no longer captures."
+    },
+    {
+     "q": "Why is export-control compliance a commercial variable rather than only a legal one?",
+     "a": "Because for controlled equipment a buyer must be confident its supplier's controls are sound. When that confidence drops, orders are cancelled and allocation of scarce silicon can move to competitors — so a governance problem converts directly into lost revenue."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "A vendor reports revenue up 78% and gross margin down 30 basis points to 10.8%. Which reading is best supported?",
+     "c": [
+      "The business is failing",
+      "It is passing through expensive components it buys, so revenue growth largely reflects silicon prices and volume rather than its own added value",
+      "It has raised prices successfully",
+      "Its costs are entirely fixed"
+     ],
+     "a": 1,
+     "e": "This is the integrator signature. Revenue includes bought-in accelerators; if the value added per rack is roughly constant, margin falls as component cost rises as a share of the sale. It is a statement about where the company sits in the chain, not about operational failure."
+    },
+    {
+     "q": "An operator wants to raise density in an existing air-cooled hall without re-plumbing every server. What is the appropriate step?",
+     "c": [
+      "Add more room air conditioning",
+      "Install rear-door heat exchangers, which need facility water but no cold plates on the chips",
+      "Move straight to full direct-to-chip cooling",
+      "Reduce the number of servers per rack"
+     ],
+     "a": 1,
+     "e": "The rear-door exchanger is the retrofit rung on the ladder: it captures exhaust heat at the rack before it reaches the room, requiring a facility water connection but no change to the servers themselves."
+    },
+    {
+     "q": "Why does a company at the rack-integration rung typically show very large inventory during its fastest growth?",
+     "c": [
+      "Poor demand forecasting",
+      "It must buy accelerators months before delivering and being paid, so growth is carried on its own balance sheet",
+      "It is stockpiling against price rises",
+      "Accounting policy"
+     ],
+     "a": 1,
+     "e": "Building and testing racks means holding the most expensive components in the industry through the assembly cycle. It is the structural reason this rung consumes cash while growing and needs recurring external financing."
+    },
+    {
+     "q": "A rack vendor publishes both 'up to 5,000 racks per month' and 'up to 3,000 racks per month' in different releases. What is the right conclusion?",
+     "c": [
+      "One figure is false",
+      "The figures have different scopes — total capacity against one product family, or current against full production — and must be read with their scope attached",
+      "Capacity fell",
+      "The figures are interchangeable"
+     ],
+     "a": 1,
+     "e": "Capacity claims routinely differ in what they count. Reading any single figure as the company's throughput, without checking whether it covers all products, all sites, or full production, produces a wrong comparison."
+    },
+    {
+     "q": "A server vendor manufactures its own coolant distribution units and cold plates. What does that entitle you to conclude?",
+     "c": [
+      "It leads the liquid-cooling market",
+      "It has a genuine cooling product line; whether it leads that market is a separate question settled by independent share data",
+      "Its cooling is better than a specialist's",
+      "It no longer buys any cooling components"
+     ],
+     "a": 1,
+     "e": "Having a manufactured product line and holding a market position are different claims. Independent trackers name the leaders in a market; a vendor's own catalogue establishes only that it participates in it — which is exactly the distinction between an adjacent and a leading position."
+    },
+    {
+     "q": "Which pair of figures best reveals how much of a delivered rack is a vendor's own work rather than pass-through?",
+     "c": [
+      "Revenue and headcount",
+      "Gross margin read against revenue growth",
+      "Order backlog and share price",
+      "Number of product SKUs"
+     ],
+     "a": 1,
+     "e": "Revenue growth reflects demand for the silicon being resold; margin reflects the share of the sale that is the vendor's own contribution. Reading the two together separates a differentiated systems vendor from an assembler of someone else's components."
+    }
+   ]
+  }
+ ]
+}

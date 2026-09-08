@@ -1,0 +1,373 @@
+{
+ "schemaVersion": 2,
+ "slug": "amd",
+ "title": "AMD — Technology Study Guide",
+ "lastUpdated": "2026-09-08",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: what this guide teaches, and what it deliberately leaves out",
+   "kind": "callout",
+   "tone": "info",
+   "read": "2 min",
+   "ps": [
+    "This guide teaches the **technology under AMD's data-centre products** — why a {{GPU}} beat a CPU at this job, why memory rather than arithmetic is usually the limit, why one chip stopped being enough and the rack became the unit of compute, and why the hardest part of competing with the leader turns out to be software. It is not a guide to AMD's corporate history, its executives or its share price; those live in the dossier.",
+    "Three neighbouring guides in this app already cover ground this one needs and will not repeat. **Flex's guide** teaches the last hundred metres of electrical distribution and what a contract manufacturer actually sells. **Delta's** and **Vertiv's** guides teach the conversion and thermal plant around the rack. This guide starts at the die and works outward to the rack door, then stops.",
+    "The baseline assumed is high-school physics and maths. Every acronym is defined on first use, and terms in **bold with a dotted underline** have a definition you can hover."
+   ]
+  },
+  {
+   "id": "why-a-gpu",
+   "title": "Why a GPU and not a CPU",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A conventional processor is built to do a small number of complicated things very quickly, one after another, with a lot of silicon devoted to guessing what it will be asked to do next. That is the right design for running an operating system or a spreadsheet, where each step depends on the one before it.",
+    "A neural network is the opposite shape of problem. Almost all of the work is one operation — multiply a number by another number and add the result to a running total — repeated an enormous number of times on values that do not depend on each other. Nothing has to wait; everything can happen at once.",
+    "A {{GPU}} is a processor built for that shape: thousands of simple arithmetic units running the same instruction on different data simultaneously. The name is historical — the same structure was originally built to colour in millions of pixels — and the fact that it suits neural networks is a genuine accident of engineering that the whole industry now depends on.",
+    "The term of art for a processor built specifically for this arithmetic is an **{{AI accelerator}}**. GPUs are the dominant kind. The other kind is silicon designed by a cloud operator for its own use, and those are growing faster than either merchant vendor.",
+    "The practical consequence for a data centre is that these chips are *dense*. A processor that keeps thousands of units busy at once turns almost all the electricity it draws into heat in a very small volume, which is why every question in this guide eventually becomes a question about power and cooling."
+   ]
+  },
+  {
+   "id": "the-memory-wall",
+   "title": "The memory wall: why the arithmetic is rarely the limit",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Ask what limits an AI chip and the intuitive answer is how fast it can calculate. For most real work the intuitive answer is wrong.",
+    "A model is a very large collection of numbers — its parameters. To produce one word of output the machine has to read a large fraction of them out of memory and multiply them by the input. The arithmetic units finish that multiplication far faster than memory can deliver the next batch of numbers. The chip spends most of its time waiting.",
+    "That is why **{{memory bandwidth}}** — how fast data moves between the processor and its memory — is usually the number that decides real speed, and why the memory a chip carries is quoted as prominently as its arithmetic performance.",
+    "The answer the industry converged on is **{{HBM}}**: memory chips stacked vertically and placed in the same package as the processor, joined by a link thousands of wires wide instead of a few dozen. Short distance and enormous width buy bandwidth. It is expensive, hard to make and, for several years, the single scarcest component in the industry.",
+    "Two consequences follow, and both explain things a reader will otherwise find puzzling. First, memory capacity sets the largest model a single chip can hold — which is why a vendor with more memory per chip can sometimes win a workload outright regardless of arithmetic speed. Second, because these chips are packaged with their memory, the packaging step is itself a bottleneck: **{{advanced packaging}}** capacity, not {{wafer}} capacity, is what commonly rations supply."
+   ]
+  },
+  {
+   "id": "precision",
+   "title": "Precision as a design lever",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Every number inside the machine is stored in some number of bits. Fewer bits means less memory used, less bandwidth consumed and more arithmetic per second — and less accuracy. Neural networks turn out to tolerate remarkably little accuracy, so each generation of hardware has moved to a smaller format. This is why a headline performance figure is meaningless without the format it was measured in, and why comparing two vendors' numbers requires checking they are quoting the same one.",
+   "cols": [
+    "Format",
+    "Bits per number",
+    "Roughly what it buys",
+    "Where it is used"
+   ],
+   "rows": [
+    [
+     "FP32 (single precision)",
+     "32",
+     "The baseline; no compression",
+     "Scientific computing and anything needing exact reproducibility"
+    ],
+    [
+     "FP64 (double precision)",
+     "64",
+     "Half the throughput of FP32, far more accuracy",
+     "Classical {{HPC}} — weather, fluid dynamics, nuclear simulation. Still the metric national laboratories buy on"
+    ],
+    [
+     "FP16 / BF16",
+     "16",
+     "About twice the throughput and half the memory of FP32",
+     "The workhorse of model {{training}} for several years"
+    ],
+    [
+     "**{{FP8}}**",
+     "8",
+     "Roughly double again",
+     "Current mainstream for training and high-throughput {{inference}}"
+    ],
+    [
+     "FP4",
+     "4",
+     "Roughly double again",
+     "The current frontier; headline 'exaFLOPS per rack' figures are almost always quoted here"
+    ]
+   ],
+   "note": "A caution that matters when reading vendor claims: a peak figure assumes every arithmetic unit is busy every cycle, which never happens. AMD's own VP of AI software conceded that real tests on its rack reach about half of peak. Treat peak numbers as a ceiling, not a forecast — and note that two vendors can use different four-bit formats, which makes even a like-for-like comparison less like-for-like than it appears."
+  },
+  {
+   "id": "building-a-big-chip",
+   "title": "Building a big chip out of small ones",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Chips are made hundreds at a time on a disc of silicon called a **{{wafer}}**. Defects land on that disc more or less at random, so the bigger a single chip is, the more likely it is that at least one defect lands inside it and ruins it. Since the wafer costs the same whether its chips work or not, the share that work — the yield — is what turns a manufacturing process into a price.",
+    "That arithmetic puts a ceiling on how large a single piece of silicon can sensibly be, and modern accelerators want to be far larger than that ceiling. The industry's answer is the **{{chiplet}}**: build the design as several smaller pieces, each of which is individually likely to be good, and join them together in one package with a very fast connection between them.",
+    "This buys two things beyond yield. Each piece can be made on whichever manufacturing generation suits it — the arithmetic on the newest and most expensive **{{process node}}**, the input-output on an older and cheaper one. And a family of products can be assembled from a common set of pieces in different combinations.",
+    "The cost is that the pieces have to talk to each other at nearly the speed they would if they were one chip, which is an interconnect problem, and that packaging becomes a manufacturing step as demanding as the silicon itself.",
+    "One more structural fact shapes everything here. AMD is **fabless**: it designs chips and does not own factories. It buys manufacturing from a **{{foundry}}** — for its leading-edge parts, essentially one of them. Whatever process capacity and packaging capacity that foundry will sell is the ceiling on what AMD can ship, no matter how good the design is. A design win and a supply win are different things."
+   ]
+  },
+  {
+   "id": "one-chip-is-not-enough",
+   "title": "One chip is not enough: the rack becomes the unit",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A frontier model does not fit on one accelerator and is not trained by one. It is spread across thousands, which must stay in step with each other — every one waiting for the slowest. The machine is therefore not the chip; it is the whole cluster, and its speed is set as much by the wiring as by the silicon.",
+    "There are two different wiring problems and the industry gives them different names. **{{Scale-up}}** is the very fast, memory-speed link that makes a group of accelerators behave as if they were one larger accelerator. It runs over copper, which limits its reach to roughly the length of a rack. **Scale-out** is the switched network joining those groups into a cluster; it runs over optics and reaches across a building.",
+    "That physical limit — copper reaches about a rack — is why the rack became the product. If the fastest possible link only spans a rack, then a vendor should sell the largest coherent group that fits in one, fully assembled and wired, rather than selling servers and letting the customer wire them.",
+    "So a modern rack-scale system is a single object: dozens of accelerators, their host processors, the scale-up switching, the network interfaces and the liquid-cooling plumbing, delivered as one unit. AMD's is called Helios and holds 72 accelerators; the market leader's equivalent holds 72 as well. The convergence is not a coincidence — both are solving the same copper-reach problem.",
+    "This is where the electrical and thermal consequences arrive all at once. A rack of this kind draws roughly 225 to 245 kilowatts. A conventional data-centre rack draws five to fifteen. Air physically cannot remove that much heat from that volume, so these racks are liquid-cooled by necessity rather than by preference — a point the cooling guides in this app develop further."
+   ]
+  },
+  {
+   "id": "open-or-proprietary",
+   "title": "Open standards or a proprietary stack",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Having decided the rack is the product, a vendor faces a strategic choice about how much of it to own. The two current answers are visible in the market and the difference is not cosmetic — it decides who else can make money in the rack, and what a buyer is committing to.",
+   "cards": [
+    {
+     "t": "A proprietary, fully specified stack",
+     "meta": "The vendor defines the rack, the scale-up fabric, the power architecture and the qualified supplier list, and publishes which vendors are approved for each part",
+     "adv": [
+      "Everything is designed together, so performance is predictable and the vendor can guarantee it",
+      "The buyer has one throat to choke and a shorter integration project",
+      "The vendor can move the whole platform forward in step — a new power architecture arrives with the silicon that needs it",
+      "Suppliers who qualify get a large, well-defined market"
+     ],
+     "dis": [
+      "The buyer is committed to one supplier's roadmap, pricing and allocation decisions",
+      "Component suppliers must qualify on the vendor's terms, and being designed out is abrupt",
+      "Second-sourcing anything requires the platform owner's cooperation"
+     ]
+    },
+    {
+     "t": "An open, standards-based stack",
+     "meta": "The vendor adopts published specifications — rack mechanics, management interfaces, scale-up fabric — that anyone may build to, rather than defining its own",
+     "adv": [
+      "Multiple suppliers can build compatible parts, which the buyer can play against each other",
+      "A buyer can mix vendors within one facility and reuse mechanical and electrical designs across them",
+      "Lowers the cost of being a second source, which is precisely what a challenger needs"
+     ],
+     "dis": [
+      "Standards move at committee speed, not at silicon speed",
+      "Nobody owns end-to-end performance, so integration risk sits with the buyer or the builder",
+      "Openness is worth little to a buyer until the ecosystem is actually populated"
+     ]
+    }
+   ],
+   "note": "AMD took the second route: Helios is built on the **{{Open Compute Project}}**'s Open Rack Wide specification — which another company contributed — and uses open fabric standards. One consequence is worth noticing because it is easy to misread: AMD names **no** power-conversion vendor roster and prescribes no rack power architecture of its own. The market leader does both. That is a real difference in posture, not an omission."
+  },
+  {
+   "id": "the-software-moat",
+   "title": "The software moat, and why it is the whole contest",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Everything above is hardware, and on hardware the two merchant vendors are closer than most readers expect — comparable memory, comparable arithmetic, comparable rack density. The durable advantage is somewhere else.",
+    "A researcher does not program an accelerator directly. They use a framework, which calls a library, which calls a driver, which talks to the chip. Almost two decades of those libraries, and of the people who know how to use them, were built on the leader's platform — **{{CUDA}}**. AMD's equivalent is **{{ROCm}}**.",
+    "The gap is not that ROCm cannot run a model; it usually can. The gap is in the last twenty per cent — the highly tuned library for a specific operation, the tested combination of features, the confidence that a given model will run correctly at a given scale on the day it is released. Independent measurement puts ROCm within a few per cent of the alternative on some straightforward workloads and twenty to thirty per cent behind on large transformer training, because some tuned libraries have no equivalent.",
+    "The most interesting finding in the independent literature is not about code at all. It is that AMD's own software teams have historically had far less hardware to test on than their competitor's — more than an order of magnitude less — and that automated testing coverage for new parts has lagged the silicon. You cannot make software reliable on hardware you cannot get access to. A software gap turns out to be a capital-allocation problem.",
+    "This is why a buyer evaluating a second source is really asking a software question: not 'is this chip fast?' but 'will the model I want to run, at the scale I want to run it, work on day one, and who fixes it if it does not?'"
+   ]
+  },
+  {
+   "id": "where-products-slot-in",
+   "title": "Where each product line slots into the chain",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "With the concepts in place, AMD's portfolio stops looking like a catalogue and starts looking like a position along the chain. This table maps each line onto the layer it serves and what it competes against there.",
+   "cols": [
+    "Product line",
+    "Layer of the chain",
+    "What it competes against",
+    "What decides the win"
+   ],
+   "rows": [
+    [
+     "Instinct accelerators",
+     "The arithmetic and memory at the die",
+     "The market leader's accelerators, plus cloud operators' own silicon",
+     "Memory capacity and bandwidth per chip, {{performance per watt}}, and whether the software stack runs the buyer's model on day one"
+    ],
+    [
+     "Helios rack-scale systems",
+     "The largest coherent group that copper can reach",
+     "The leader's equivalent rack",
+     "Rack density, scale-up bandwidth, delivery date, and — because AMD licenses rather than builds it — whether the manufacturing partners can produce it reliably"
+    ],
+    [
+     "EPYC server processors",
+     "The host processor beside the accelerators, and the general-purpose fleet",
+     "The other x86 vendor and Arm designs",
+     "Cores per rack inside a fixed power envelope, memory channels, and the {{process node}} the parts are made on"
+    ],
+    [
+     "Pensando networking and DPUs",
+     "The scale-out network and the offload of network work from the host",
+     "Merchant networking silicon and the leader's integrated fabric",
+     "Bandwidth per accelerator and whether the fabric is open or proprietary"
+    ],
+    [
+     "ROCm and developer tooling",
+     "The software between the framework and the chip",
+     "{{CUDA}} and its library ecosystem",
+     "Day-one model support, tuned libraries, and continuous testing coverage"
+    ],
+    [
+     "Ryzen, Radeon and semi-custom",
+     "Client devices and consoles",
+     "The other x86 vendor and the leader's consumer graphics",
+     "Volume economics; it funds the data-centre investment and is exposed to memory prices"
+    ],
+    [
+     "Embedded and adaptive (FPGA) parts",
+     "Long-lived industrial, aerospace and communications systems",
+     "Other programmable-logic vendors",
+     "Longevity, certification and performance per watt rather than peak speed"
+    ]
+   ],
+   "note": "Read the table as two businesses with different competitive positions. In the host-processor row AMD holds about a third of server units — an established position. In the accelerator row it holds an estimated five to ten per cent. A single verdict on 'how AMD is doing' will always be wrong; the interesting question is whether the rack converts the first position into the second."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this goes wrong in practice",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "intro": "Five mistakes a reader can make with this material, each of which has been made in public by someone who should have known better.",
+   "ps": [
+    "**Comparing peak numbers across formats.** An exaFLOPS figure at four bits and one at eight bits are not the same measurement, and neither is achievable in practice. Always ask which format, and remember that real throughput is commonly about half of peak.",
+    "**Assuming a memory figure is a performance figure.** More memory lets a chip *hold* a larger model. Whether it runs it quickly depends on bandwidth and on whether the software can use the memory efficiently. The two are related but not interchangeable.",
+    "**Treating a rack-scale announcement as a shipping product.** Launching a rack, shipping the first ones and shipping them in volume are three different dates that can be a year apart. A rack with over a thousand cables in it has manufacturing risk that a chip does not.",
+    "**Reading an open standard as a finished ecosystem.** Adopting a published specification is a commitment, not a supply chain. The question is always how many suppliers have actually built to it.",
+    "**Assuming a second source is substitutable.** Two accelerators with similar specifications are not interchangeable if the software stack differs. The migration cost is real, it falls on the buyer, and it is the reason share moves more slowly than hardware comparisons suggest."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "6 min",
+   "cards": [
+    {
+     "q": "Why does the shape of neural-network arithmetic suit a GPU rather than a conventional processor?",
+     "a": "Because almost all the work is the same simple operation — multiply and accumulate — repeated over enormous numbers of values that do not depend on each other. A conventional processor spends its silicon on executing dependent steps quickly; a GPU spends it on thousands of simple units doing the same thing at once."
+    },
+    {
+     "q": "For most AI work, what actually limits speed — arithmetic or memory?",
+     "a": "Memory. The arithmetic units finish faster than memory can supply the next batch of parameters, so memory bandwidth usually sets achieved speed. This is why bandwidth and capacity are quoted as prominently as arithmetic throughput."
+    },
+    {
+     "q": "What is HBM and why is it packaged with the processor?",
+     "a": "High-bandwidth memory: memory chips stacked vertically and placed in the same package as the processor, connected by a very wide link. Short distance and great width buy bandwidth, which is the binding constraint."
+    },
+    {
+     "q": "Why does moving from FP16 to FP8 to FP4 roughly double throughput each time?",
+     "a": "Each halving of bits per number halves the memory and bandwidth each value consumes and lets more arithmetic run per second. Neural networks tolerate the lost precision well — which is why a performance figure is meaningless without the format attached."
+    },
+    {
+     "q": "Why are large chips built from chiplets rather than as one piece of silicon?",
+     "a": "Defects land randomly on a wafer, so a larger single chip is more likely to contain one and be scrapped. Splitting the design into smaller pieces raises the share that work, and lets each piece be made on whichever process generation suits it — at the cost of needing very fast links between them."
+    },
+    {
+     "q": "What is the difference between scale-up and scale-out?",
+     "a": "Scale-up is the memory-speed link that makes a group of accelerators behave as one; it runs on copper and therefore reaches about a rack. Scale-out is the switched network joining those groups across a building, running on optics."
+    },
+    {
+     "q": "Why did the rack become the unit that vendors sell?",
+     "a": "Because the fastest possible interconnect only spans about a rack. If that is the largest coherent group physically possible, the vendor may as well sell it assembled, wired and cooled rather than sell servers for someone else to integrate."
+    },
+    {
+     "q": "Why must a rack of this class be liquid-cooled?",
+     "a": "It draws roughly 225-245 kilowatts against five to fifteen for a conventional rack. Air cannot move that much heat out of that volume at any practical flow rate, so liquid is a physical necessity rather than an efficiency choice."
+    },
+    {
+     "q": "What does it mean that a chip designer is 'fabless', and why does it matter?",
+     "a": "It designs chips but owns no factories, buying manufacturing from a foundry. Whatever process and packaging capacity that foundry will sell is a hard ceiling on shipments, so a design win and a supply win are separate things."
+    },
+    {
+     "q": "Why is the software stack, rather than the silicon, usually described as the durable advantage?",
+     "a": "Because two decades of tuned libraries, tools and trained practitioners were built on the incumbent platform. A challenger's chip can be competitive while its software is still missing the tuned library for a specific operation, or day-one support for a newly released model — and that last gap is what a buyer actually feels."
+    },
+    {
+     "q": "Why is advanced packaging capacity often the real supply constraint rather than wafer capacity?",
+     "a": "Because an accelerator is not one chip but several pieces plus stacked memory assembled onto a carrier. That assembly step has its own limited capacity, and it has repeatedly been scarcer than the silicon fabrication itself."
+    },
+    {
+     "q": "What does 'performance per watt' decide that peak performance does not?",
+     "a": "How much computing a site can ever contain. Once the electrical supply to a building is fixed, useful work per watt sets the ceiling on total capacity — which is why it matters more to a data-centre buyer than headline speed."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "Two accelerators are quoted at similar peak arithmetic throughput, but one carries substantially more high-bandwidth memory. What can you conclude?",
+     "c": [
+      "They will perform identically on all workloads",
+      "The one with more memory can hold a larger model on a single chip, but achieved speed still depends on bandwidth and software",
+      "The one with more memory is always faster",
+      "Memory capacity is a marketing figure with no operational meaning"
+     ],
+     "a": 1,
+     "e": "Capacity decides what fits; bandwidth and software decide how fast it runs. The two are related but distinct, and conflating them is the most common error in reading accelerator specifications."
+    },
+    {
+     "q": "A vendor advertises 'up to 2.9 exaFLOPS per rack'. What is the first question to ask?",
+     "c": [
+      "Which numeric format that figure is measured in",
+      "How many racks are available",
+      "What the rack weighs",
+      "Who manufactures the rack"
+     ],
+     "a": 0,
+     "e": "Peak figures are almost always quoted at the smallest format the hardware supports, currently four bits. A figure at four bits and one at eight bits differ by roughly a factor of two before any other consideration — and both are ceilings that real workloads reach perhaps half of."
+    },
+    {
+     "q": "Why does the reach of copper interconnect explain why rack-scale systems exist?",
+     "c": [
+      "Copper is cheaper than optical fibre",
+      "The memory-speed scale-up link runs on copper and reaches about the length of a rack, so a rack is the largest coherent group physically possible",
+      "Racks are a standard size in every data centre",
+      "Copper is easier to cool than fibre"
+     ],
+     "a": 1,
+     "e": "The physical reach of the fastest link sets the size of the largest group that can behave as one accelerator. Once that group is a rack, selling it assembled is the logical product — which is why competing vendors independently arrived at 72 accelerators per rack."
+    },
+    {
+     "q": "A buyer is choosing between an established accelerator platform and a challenger's with similar hardware specifications and a lower price. What is the largest hidden cost?",
+     "c": [
+      "Shipping and installation",
+      "Rack mechanical incompatibility",
+      "Software migration — whether the models and libraries the buyer depends on run correctly on day one, and who fixes them if not",
+      "The difference in warranty terms"
+     ],
+     "a": 2,
+     "e": "The silicon comparison is the easy part. The migration cost sits in the software stack and falls on the buyer, which is why market share moves far more slowly than hardware comparisons alone would predict."
+    },
+    {
+     "q": "A chip designer with an excellent new design cannot increase shipments. Which explanation is most consistent with how this industry works?",
+     "c": [
+      "Its engineers are not productive enough",
+      "It has run into the limit of the foundry and advanced-packaging capacity it can buy",
+      "Demand has collapsed",
+      "Its software is too good"
+     ],
+     "a": 1,
+     "e": "A fabless designer's output is bounded by the manufacturing and packaging capacity a foundry will sell it. Packaging in particular has repeatedly been scarcer than fabrication, because accelerators are assemblies of several silicon pieces plus stacked memory."
+    },
+    {
+     "q": "What does it tell you when a rack vendor publishes a qualified list of power and cooling suppliers, and a competitor does not?",
+     "c": [
+      "The second vendor's rack needs no power or cooling",
+      "The first is prescribing the architecture around its silicon and creating a qualified supplier market; the second has adopted an open specification and leaves those choices to the ecosystem",
+      "The second vendor's rack is more efficient",
+      "Nothing — the two are equivalent"
+     ],
+     "a": 1,
+     "e": "Publishing a vendor roster is an act of platform ownership: it defines who may sell into the rack and on whose terms. Adopting an open specification instead moves those decisions to the ecosystem, which lowers the barrier to being a second source but leaves integration risk with the builder."
+    }
+   ]
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-08",
- "companies": 154,
+ "companies": 156,
  "edges": [
   {
    "a": "abb",
@@ -2784,6 +2784,22 @@
   },
   {
    "a": "amazon",
+   "b": "amd",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "AWS offers instances on 5th Gen EPYC that AMD describes as delivering the highest x86 performance in the AWS cloud.",
+     "context": "The EPYC cloud franchise is the part of AMD's data-centre business that is already incumbent rather than contested — more than 950 EPYC-powered public cloud instances were available at the Turin launch. AWS is a buyer of the CPU and, through Trainium, a builder of competing accelerator silicon.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+     "status": "active",
+     "via": "EPYC-powered AWS instances"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "amazon",
    "b": "anthropic",
    "curated": {
     "b": {
@@ -4363,6 +4379,708 @@
    },
    "evid": [],
    "last": "2025-05"
+  },
+  {
+   "a": "amd",
+   "b": "anthropic",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Anthropic will take up to 2 GW of MI455X in Helios racks from the first half of 2027, and AMD committed a strategic equity investment of up to $5bn in Anthropic.",
+     "context": "Announced 22 July 2026, building on Anthropic's existing MI355X use. The commercial structure is two-way: AMD invests in the buyer, and the buyer contributes engineering to optimise AMD workloads and accelerate ROCm — which every independent assessment identifies as AMD's binding constraint rather than its silicon. AMD separately adopted Claude across its own engineering and product development teams from the same month.\n\nAMD's Q2 FY2026 10-Q records investment commitments of up to $5.0bn entered into after the quarter end and expected to be made through FY2028, which is the accounting expression of this agreement.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "up to 2 GW",
+     "via": "MI455X in Helios racks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three of the four largest commitments — OpenAI at 6 GW, Meta at 6 GW and Anthropic at up to 2 GW — carry equity consideration flowing between the parties, two through warrants for up to 160 million AMD shares each at $0.01 and one through an AMD equity investment of up to $5bn in the buyer.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07"
+  },
+  {
+   "a": "amd",
+   "b": "applied-digital",
+   "evid": [
+    {
+     "where": "Capabilities · AI Factory campuses (HPC hosting — the core business)",
+     "date": "",
+     "text": "Largest disclosed base-term backlog among the AI-DC landlords (vs Core Scientific ~$10.2B pre-AMD, TeraWulf $12.8B at YE25, IREN's $9.7B Microsoft deal); derived lease rates ~$1.65M (hyperscaler) to $1.83M (CoreWeave) per MW-year.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "coolit",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The CDU specialist the corpus lacked: where Vertiv, Schneider Electric (through Motivair) and Trane (through LiquidStack) reach liquid cooling from the plant side, CoolIT reaches it from the chip — it designs the cold plate to the silicon vendor's reference (NVIDIA's Recommended Vendor List; Intel and AMD series), builds the loop and the manifold for the server OEM (Dell, HPE, Gigabyte; Supermicro as a stated collaborator), and sells the row and in-rack CDUs that separate that clean technology-cooling loop from the building's water.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "core-scientific",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Core Scientific is contracted to host about 530 MW of AMD capacity across five sites, with more than $14bn of potential base contracted revenue, and granted AMD warrants for 30 million shares at $23.47.",
+     "context": "Announced 28 July 2026. The capacity splits into roughly 377–380 MW leased by AMD directly plus about 150 MW routed through an unnamed AMD-credit-backed neocloud, expandable to 2.5 GW, with deliveries running from the first half of 2027 to the first half of 2028.\n\nThe direction of the relationship is the point: AMD is the tenant, not the landlord, and this is one instance of the broader posture its own filings disclose — $4.1bn of guarantees on commercial partners' data-centre lease obligations, sometimes issued in exchange for warrants. Trade coverage reads the deal as AMD building a hosting channel to counter NVIDIA's neocloud ecosystem, with silicon vendors now competing through landlords.",
+     "source": "https://investors.corescientific.com/news-events/press-releases/detail/138",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "~530 MW across five sites"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Core Scientific is the shareholder-revolt vindication story of the AI-landlord cohort — nine months after stockholders voted down CoreWeave's $9B all-stock acquisition (October 30, 2025), the company signed AMD as a second 500 MW-class anchor (July 28, 2026: ~530 MW across five sites, >$14B potential base contracted revenue, expandable to 2.5 GW, AMD taking warrants for 30M shares at $23.47), doubling contracted capacity to ~1.1 GW and total backlog past $24B.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Derived economics say the rejection paid: the AMD book prices ~$1.76M per MW-year vs ~$1.44M for CoreWeave.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Core Scientific as the miner-pivot cohort's most instructive case in tenant credit and capital-markets dynamics: the first landlord with two distinct 500 MW-class anchors (a leveraged neocloud and a chip vendor building a hosting channel against NVIDIA's ecosystem), the cleanest proof that rejecting an anchor-tenant acquisition can precede better economics, and — via the AMD warrants — another instance of silicon vendors buying equity in their infrastructure chain.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: company decks and filings, trade coverage; ~2.5 GW total leasable potential with AMD.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the AMD book prices ~$1.76M/MW-year vs ~$1.44M for the CoreWeave book (derived from disclosed totals), total backlog went $10.2B → $24B+ in nine months, and CORZ became the first miner-convert with two 500 MW-class anchors — while the stock, at ~$17.81, sits below the $20.40 implied deal price it rejected.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 10-K states CoreWeave is 100% of colocation revenue, ~83% of total Q2 2026 revenue; AMD revenue starts only with early-2027 deliveries; mining revenue is being deliberately liquidated ($208M of BTC sold in Q1 2026 alone).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: $3.3B 7.75% secured notes + $1.085B converts against a -$2.4B stockholders' deficit, $11–12M/MW build costs implying ~$6B for the AMD program, and $677M of 2026 site acquisitions — against $1.8B of liquidity and customer-funded fit-out.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The CoreWeave book (anchor #1)",
+     "date": "",
+     "text": "The concentration the AMD deal exists to dilute: post-AMD, CoreWeave is ~42% of backlog — still the only revenue until 2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The AMD partnership (anchor #2, July 2026)",
+     "date": "",
+     "text": "Strategic partnership deploying AMD Instinct GPUs, EPYC CPUs, and ROCm software on dedicated capacity: ~530 MW across five sites (Pecos ~185, Dalton ~120, Hunt ~110, Muskogee ~82, Auburn ~32 MW) — 377–380 MW leased by AMD directly plus ~150 MW through an unnamed AMD-credit-backed neocloud.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The AMD partnership (anchor #2, July 2026)",
+     "date": "",
+     "text": ">$14B potential base contracted revenue over ~15 years with 2.5%/yr escalators; expansion potential to 2.5 GW; AMD receives market-priced warrants for 30M shares at $23.47 (~9.3% if exercised).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "AMD partnership: ~530 MW across five sites, >$14B potential base contracted revenue, up to 2.5 GW expansion; AMD takes warrants for 30M shares at $23.47; ~150 MW of it routed through an unnamed AMD-credit-backed neocloud — The second anchor, at richer per-MW economics than the first — and AMD's answer to NVIDIA's neocloud ecosystem, fought through landlords. The unnamed neocloud tenant is a standing disclosure gap.",
+     "src": "https://investors.corescientific.com/news-events/press-releases/detail/138",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-28"
+  },
+  {
+   "a": "amd",
+   "b": "crusoe",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Crusoe offers AMD Instinct MI355X and MI300X alongside NVIDIA parts in its GPU cloud, and is named by AMD among the neoclouds adopting Helios.",
+     "context": "Crusoe's own dossier lists MI355X and MI300X in the GPU cloud catalogue beside GB200, B200, H200 and H100. The neocloud tier matters to AMD disproportionately: it is where a second source can win on price and availability without needing to displace an incumbent software stack across an enterprise estate.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+     "status": "active",
+     "via": "Instinct MI355X and MI300X in its GPU cloud"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Crusoe Cloud & modular (Spark, Edge Zones)",
+     "date": "",
+     "text": "GPU cloud (GB200/B200/H200/H100, AMD MI355X/MI300X; managed Kubernetes/Slurm; customers include Figure AI, Cursor, Together AI, Windsurf; 99.98% uptime cited) plus Crusoe Industries manufacturing (Arvada CO and Tulsa OK factories; Spark modular data centers, power distribution centers, switchgear) and Edge Zones (Spark-based cloud zones deployable in ~three months).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "fermi-america",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is a buyer of Siemens Energy and GE Vernova turbines, an EPC customer of Primoris and TSK, a prospective owner of four AP1000s that Westinghouse, Hyundai E&C and Doosan are lined up to deliver, a 20-year lessee of Mobile Power Solutions' TM2500 fleet, and a landlord whose only signed tenant is an AMD-GPU neocloud.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Binding lease with TensorWave: 222 MW, about $6.5 billion over a 15-year initial term, expansion option to 650 MW; delivery late 2027 to Q1 2028; shares rise about 36% — The first signed tenant since the IPO — an AMD-GPU neocloud rather than a hyperscaler, binding but conditional on financing and guaranties by 30 September 2026.",
+     "src": "https://investor.fermiamerica.com/fermi-announces-binding-lease-agreement-with-tensorwave",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "amd",
+   "b": "flex",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Flex manufactures AMD's Instinct MI355X eight-GPU platform in Austin, Texas — AMD owns the product and Flex assembles it.",
+     "context": "Flex's own release describes assembling the GPUs with PCIe Gen 5 interfaces, high-bandwidth memory and interconnect fabric, tested with JetCool liquid-cooling hardware. Flex is explicit that this is contract manufacturing and that AMD owns the platform.\n\nIt is a clean illustration of AMD's structural choice at the system level: AMD designs and licenses, and other firms build. Flex's own dossier records the same arrangement from the manufacturer's side.",
+     "source": "https://investors.flex.com/news/news-details/2026/Flex-Announces-U-S--Manufacturing-Collaboration-with-AMD-to-Accelerate-Domestic-AI-Infrastructure/default.aspx",
+     "status": "active",
+     "since": "2026",
+     "via": "Instinct MI355X eight-GPU platform"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Flex OWNS a branded critical-power and cooling portfolio — Anord Mardix switchgear, busway and power pods, Crown Technical Systems relay panels and medium-voltage switchgear, Electrical Power Products substation control and protection, JetCool direct-to-chip liquid cooling, and Flex Power Modules — and it BUILDS hardware to other companies' designs at a scale few can match, including AMD's Instinct GPU platforms in Austin and Cerebras wafer-scale systems in Milpitas.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-02",
+     "text": "US manufacturing of AMD's Instinct MI355X eight-GPU platform goes live in Austin, Texas — Contract manufacturing, explicitly: AMD owns the platform. Notable for the internal cross-sell — the platforms are tested using JetCool hardware, which is Flex selling its own product into its own manufacturing line.",
+     "src": "https://investors.flex.com/news/news-details/2026/Flex-Announces-U-S--Manufacturing-Collaboration-with-AMD-to-Accelerate-Domestic-AI-Infrastructure/default.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-02"
+  },
+  {
+   "a": "amd",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google Cloud offers C4D and H4D virtual machines on 5th Gen EPYC, with H4D aimed at high-performance computing.",
+     "context": "As with AWS, the relationship is CPU-side. Google is simultaneously one of the largest developers of custom accelerator silicon through its TPU programme, which independent analysts identify as a faster-growing threat to NVIDIA's share than AMD is.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+     "status": "active",
+     "via": "EPYC-powered C4D and H4D virtual machines"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "iren",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "IREN's GPU cloud includes 1,100 AMD MI350X alongside a much larger NVIDIA fleet.",
+     "context": "IREN's own dossier puts the AMD position at 1.1k MI350X within a fleet that reached about 23,000 GPUs in September 2025 and targets 150,000. The ratio is the finding — at the neocloud tier AMD is presently a minority second source rather than a co-equal platform.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+     "status": "active",
+     "scale": "1.1k MI350X",
+     "via": "Instinct MI350X"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · IREN Cloud™ (AI Cloud services)",
+     "date": "",
+     "text": "Bare-metal and managed GPU cloud built to NVIDIA reference architecture with non-blocking 3.2 Tb/s InfiniBand: H100/H200, B200 (180GB), B300 (288GB), GB300 NVL72 racks, plus 1.1k AMD MI350X.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta agreed to deploy up to 6 GW of Instinct, opening with 1 GW of a custom MI450-architecture GPU it co-engineered, and is a lead customer for the 'Venice' and 'Verano' EPYC generations.",
+     "context": "Announced 24 February 2026 as a definitive multi-year, multi-generation agreement, with a warrant for up to 160 million AMD shares at $0.01 exercisable through 23 February 2031.\n\nMeta's role runs deeper than as a buyer: Helios is built on the Open Rack Wide specification Meta contributed to the Open Compute Project, and AMD describes the rack architecture as jointly developed with Meta through OCP. Meta has also deployed millions of AMD EPYC CPUs and runs MI300X broadly for Llama inference.\n\nWhether the Meta warrant is a genuinely separate 160-million-share grant or a restatement of the OpenAI terms is not settled by the sources reviewed; if separate, cumulative potential dilution is materially larger than the roughly 10% usually quoted.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1279/amd-and-meta-announce-expanded-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+     "status": "announced",
+     "since": "2026-02",
+     "scale": "6 GW",
+     "via": "Custom MI450-architecture GPU in Helios racks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, AMD prescribes no rack power architecture and names no power-conversion vendors: it adopted the Open Rack Wide specification Meta contributed to the Open Compute Project rather than publishing an 800 VDC roster of its own.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no AMD statement on 800 VDC or higher-voltage rack power architecture appears in any 2024–2026 AMD press release or SEC filing reviewed; AMD adopted the Open Rack Wide specification Meta contributed to the Open Compute Project rather than publishing an architecture of its own, and it names no power-conversion vendor roster.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three of the four largest commitments — OpenAI at 6 GW, Meta at 6 GW and Anthropic at up to 2 GW — carry equity consideration flowing between the parties, two through warrants for up to 160 million AMD shares each at $0.01 and one through an AMD equity investment of up to $5bn in the buyer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Low confidence)** We assess that the reported Meta warrant may represent a second grant of up to 160 million shares rather than a restatement of the OpenAI terms, in which case cumulative potential dilution is roughly double the ~10% figure usually quoted.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: coverage of the February 2026 Meta agreement describes warrant terms identical to OpenAI's — up to 160 million shares at $0.01 with a final tranche at $600 — but no source reviewed reconciles whether these are two distinct grants.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-14",
+     "text": "Helios shown publicly for the first time at the OCP Global Summit, built on the Open Rack Wide specification Meta contributed to the Open Compute Project — AMD adopted someone else's rack specification rather than publishing its own — the opposite of NVIDIA's approach, and the reason AMD names no power-conversion vendor roster.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1261/amd-showcases-helios-rack-scale-platform-built-on-the-open-compute-project-open-rack-for-ai-introduced-by-meta",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02"
+  },
+  {
+   "a": "amd",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft will ramp Helios at scale on Azure for frontier-model inference, alongside two new EPYC 'Venice'-powered VM series and broader Pensando DPU deployment.",
+     "context": "Announced 20 July 2026. Azure HDv2 targets agentic AI and data pipelines and Azure HXv2 targets semiconductor design; AMD silicon is integrated with Azure Boost. MI300X already powers proprietary and open models in production on Azure through the ND MI300X v5 VM family.\n\nScale and terms were not disclosed, which distinguishes this from the OpenAI, Meta and Anthropic agreements — those were announced with gigawatt figures and, in two cases, warrants. Microsoft has separately said its own Maia 200 inference accelerator 'will not replace Nvidia or AMD'.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1291/microsoft-to-deploy-next-gen-amd-instinct-and-amd-epyc-processors-as-the-companies-expand-their-long-term-strategic-partnership",
+     "status": "announced",
+     "since": "2026-07",
+     "via": "Helios racks and EPYC 'Venice' VM series"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Azure & AI Infrastructure (Fairwater)",
+     "date": "",
+     "text": "Maia 200 in-house inference accelerator launched January 2026 (delayed from 2025; Microsoft explicitly says it 'will not replace Nvidia or AMD').",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-26",
+     "text": "Maia 200 inference accelerator launched (delayed from 2025); Microsoft: it 'will not replace Nvidia or AMD' — Custom silicon as cost-relief, not independence — Microsoft remains the most NVIDIA-committed hyperscaler at the frontier.",
+     "src": "https://blogs.microsoft.com/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07"
+  },
+  {
+   "a": "amd",
+   "b": "nscale",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Nscale runs AMD MI300X for inference and the MI250X Svartisen cluster at Glomfjord, which placed 24th on the November 2024 TOP500.",
+     "context": "Nscale's own dossier records that the AMD line dates from its Arkon era and that no MI355X appears on its first-party pages — so this is an installed base rather than a current-generation win. It is a useful counterweight to the gigawatt announcements: the deployed AMD fleet at the neocloud tier is still largely prior-generation.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+     "status": "active",
+     "via": "Instinct MI300X and MI250X"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · GPU compute — NVIDIA Vera Rubin NVL72, GB300/GB200 NVL72, H200, H100; AMD MI300X and MI250X",
+     "date": "",
+     "text": "The hardware layer sold as instances, reserved clusters or whole-site deployments: the catalogue lists the NVIDIA DGX Vera Rubin NVL72, GB300 NVL72, GB200 NVL72, H200 and H100; AMD MI300X serves inference and the Hugging Face provider and MI250X the Svartisen cluster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU compute — NVIDIA Vera Rubin NVL72, GB300/GB200 NVL72, H200, H100; AMD MI300X and MI250X",
+     "date": "",
+     "text": "Nscale is buying the same NVL72 racks as CoreWeave, Nebius and Lambda but has moved its anchor contracts to Vera Rubin earlier than any European peer; the AMD line dates from the Arkon era and no MI355X appears on first-party pages.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "AMD's own 10-K names NVIDIA as a primary Data Center competitor, and every headline Helios and Instinct claim is benchmarked against an NVIDIA part.",
+     "context": "AMD's FY2025 10-K names NVIDIA as a primary Data Center competitor, and every headline Helios and Instinct claim is benchmarked against an NVIDIA part.\n\nThe scale gap governs the rest. NVIDIA reported $89.0bn of data-centre revenue in its quarter ended 26 July 2026 against AMD's entire Data Center segment — EPYC included — of $6,718m. Independent estimates place AMD at roughly 5–10% of data-centre accelerator revenue against NVIDIA at 75–92%, though no named tier-one house publishes a clean split.\n\nAt the rack the comparison narrows sharply: The Register reads Helios as offering about 15% more peak FP4 and 50% more HBM4 and scale-out bandwidth than Vera Rubin, at 225–245 kW against an estimated 240–250 kW, and — for the first time — arriving in the same window rather than a year late.",
+     "source": "https://www.theregister.com/systems/2026/07/23/amd-attacks-the-rack-with-helios-systems-that-rival-nvidias/5277246",
+     "status": "active",
+     "via": "Instinct accelerators and Helios racks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The position is asymmetric and the dossier should not average it: on server CPUs AMD is an incumbent co-leader at 34.5% of x86 server units, while on accelerators it books an estimated 5–10% of revenue against NVIDIA's 75–92%, and NVIDIA's data-centre revenue alone is more than thirteen times AMD's entire Data Center segment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Three things distinguish it from NVIDIA in this ecosystem.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mercury Research puts AMD at 34.5% of x86 server units in Q2 2026, up 7.2 points year on year — an incumbent co-leader's share — while independent estimates put Instinct at roughly 5–10% of data-centre accelerator revenue against NVIDIA's 75–92%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: SemiAnalysis's July 2026 assessment upgraded AMD's chances of breaking the CUDA moat to 'a great chance of success' while documenting that AMD's internal development clusters remain more than an order of magnitude smaller than NVIDIA's, that its Kubernetes and Pollara NIC continuous-integration coverage sits at zero parity, and that AMD leadership pulled clusters from its own software team during launch week, causing a gating-coverage regression and slipping automated testing to October 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "This is the opposite of NVIDIA's posture, which prescribes the architecture and names the qualified vendors.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Instinct data-centre accelerators (MI300 → MI400 Series)",
+     "date": "",
+     "text": "The GPU line AMD competes against NVIDIA with, and the reason the Data Center segment more than doubled in two years.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Instinct data-centre accelerators (MI300 → MI400 Series)",
+     "date": "",
+     "text": "Independent estimates put AMD at roughly 5–10% of data-centre AI accelerator revenue against NVIDIA at 75–92%, and no named tier-one house publishes a clean split — the honest figure is a band, not a number.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Instinct data-centre accelerators (MI300 → MI400 Series)",
+     "date": "",
+     "text": "The comparison that needs no estimate is reported revenue: NVIDIA's data-centre revenue of $89.0bn in its quarter ended 26 July 2026 against AMD's entire Data Center segment, EPYC included, of $6,718m.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Helios rack-scale platform — designed and licensed, not manufactured",
+     "date": "",
+     "text": "AMD's answer to NVIDIA's NVL72 and the single most consequential product line for this corpus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Helios rack-scale platform — designed and licensed, not manufactured",
+     "date": "",
+     "text": "The Register's read is that Helios lands right in time with Vera Rubin, which breaks AMD's historical pattern; ServeTheHome's is that NVIDIA will still sell a great many Vera Rubin racks but it is good to have a second vendor operating at this scale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · EPYC server CPUs — the incumbent half of the company",
+     "date": "",
+     "text": "Two systems in the June 2026 Green500 top six pair AMD EPYC hosts with NVIDIA H100 accelerators — an efficiency win for the socket that is not a win for Instinct.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Pensando networking, DPUs and AI NICs",
+     "date": "",
+     "text": "AMD's open-standards counter to NVIDIA's vertically integrated fabric.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ROCm — the software layer that decides whether the silicon is substitutable",
+     "date": "",
+     "text": "The moat is NVIDIA's and it is software, not silicon.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-14",
+     "text": "Helios shown publicly for the first time at the OCP Global Summit, built on the Open Rack Wide specification Meta contributed to the Open Compute Project — AMD adopted someone else's rack specification rather than publishing its own — the opposite of NVIDIA's approach, and the reason AMD names no power-conversion vendor roster.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1261/amd-showcases-helios-rack-scale-platform-built-on-the-open-compute-project-open-rack-for-ai-introduced-by-meta",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Rack-Scale AI Compute Platforms (Blackwell → Rubin → Feynman)",
+     "date": "",
+     "text": "Holds ~80–85% of data-center AI-accelerator revenue (IDC-cited estimates); AMD Instinct ~5–7%; hyperscaler custom silicon (TPU/Trainium/Maia/MTIA) ~10–20% of revenue and growing faster, concentrated in inference.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-14"
+  },
+  {
+   "a": "amd",
+   "b": "openai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "OpenAI agreed to deploy 6 GW of Instinct across multiple generations, opening with 1 GW of MI450 in the second half of 2026, and received a warrant for up to 160 million AMD shares at $0.01.",
+     "context": "Announced 6 October 2025. The first tranche vests at the initial gigawatt with further tranches to 6 GW, conditioned on AMD share-price targets and OpenAI technical and commercial milestones, exercisable through 5 October 2030. AMD's CFO described the agreement as expected to deliver tens of billions of dollars of revenue and to be highly accretive to non-GAAP EPS.\n\nAMD states that OpenAI expects to bring Helios online beginning in the fourth quarter of 2026 and accelerating through 2027, and that OpenAI is optimising GPT-class workloads on MI455X through Triton and ROCm. The warrant structure is the substance of the critique: the vendor issues equity to the customer buying its output, which analysts have placed inside a broader pattern of circular financing across the AI buildout.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+     "status": "announced",
+     "since": "2025-10",
+     "scale": "6 GW",
+     "via": "MI450 Series in Helios racks"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: three of the four largest commitments — OpenAI at 6 GW, Meta at 6 GW and Anthropic at up to 2 GW — carry equity consideration flowing between the parties, two through warrants for up to 160 million AMD shares each at $0.01 and one through an AMD equity investment of up to $5bn in the buyer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Low confidence)** We assess that the reported Meta warrant may represent a second grant of up to 160 million shares rather than a restatement of the OpenAI terms, in which case cumulative potential dilution is roughly double the ~10% figure usually quoted.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: coverage of the February 2026 Meta agreement describes warrant terms identical to OpenAI's — up to 160 million shares at $0.01 with a final tranche at $600 — but no source reviewed reconciles whether these are two distinct grants.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "Meta to deploy up to 6 GW of Instinct, opening with 1 GW of a custom MI450-architecture GPU it co-engineered, on a warrant for up to 160 million AMD shares at $0.01 — The second 6 GW agreement on warrant terms reported as identical to OpenAI's. Whether that is a genuinely separate grant or a restatement of the first is the largest unresolved dilution question in this file.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1279/amd-and-meta-announce-expanded-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-06",
+     "text": "OpenAI to deploy 6 GW of Instinct, opening with 1 GW of MI450 in the second half of 2026, on a warrant for up to 160 million AMD shares at $0.01 — The deal that repriced the stock 23% in a day and put AMD inside the circular-financing critique: the vendor issues equity to the customer that is buying its output.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess OpenAI as the demand signal that reprices everything else in this file: its commitments set the order books of Oracle (~$300B contract), CoreWeave (~$22.4B), Microsoft ($250B Azure), AWS ($38B + reported $100B expansion), NVIDIA (10 GW LOI), AMD (6 GW + warrant), Broadcom (10 GW custom accelerators), and Cerebras (750 MW) — and its Stargate campuses are where behind-the-fence power architectures get chosen at gigawatt scale (gas microgrids at Shackelford and Doña Ana, Bloom fuel cells via Oracle at Jupiter, DTE-plus-BESS in Michigan, majority-renewables-plus-BESS in Wisconsin).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: ~$1.4T/~30 GW acknowledged by the CEO; per-counterparty tallies corroborated across Reuters, company posts, and counterparty filings; Oracle, CoreWeave, AMD, and Broadcom order books and share prices all repriced on OpenAI announcements.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Compute supply portfolio (cloud + silicon)",
+     "date": "",
+     "text": "Silicon: NVIDIA (≥10 GW LOI, up to $100B progressive investment), AMD (6 GW Instinct with a 160M-share warrant), Broadcom (10 GW of OpenAI-designed accelerators, deployments 2026-2029), Cerebras (750 MW), AWS Trainium — plus its own Jalapeño inference ASIC (design-to-tape-out in nine months, initial deployment by end-2026).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-02-24"
+  },
+  {
+   "a": "amd",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Oracle Cloud Infrastructure is the launch partner for MI450 superclusters, with an initial deployment of 50,000 GPUs from the third quarter of calendar 2026 on the Helios rack design.",
+     "context": "Announced 14 October 2025 and described by AMD as the first publicly available AI supercluster built on the Helios rack design. Oracle had previously announced zettascale clusters of up to 131,072 MI355X GPUs and offers OCI Compute E6 shapes on 5th Gen EPYC.\n\nOracle is also a co-developer of the Department of Energy's Lux system at Oak Ridge alongside AMD and HPE — the same counterparty appearing as cloud customer and as national-laboratory partner.",
+     "source": "https://www.cnbc.com/2025/10/14/oracle-cloud-to-deploy-50000-amd-ai-chips-as-alternative-to-nvidia.html",
+     "status": "announced",
+     "since": "2025-10",
+     "scale": "50,000 MI450 GPUs",
+     "via": "Helios racks with EPYC 'Venice' and Pensando Vulcano"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-27",
+     "text": "Oak Ridge National Laboratory's Lux (MI355X, deploying early 2026) and Discovery (MI430X, 2028) announced with HPE and Oracle, at about $1bn of combined public and private investment — The national-laboratory channel is where AMD's HPC incumbency is real — Instinct already powers four of the June 2026 TOP500 top ten.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1264/amd-powers-u-s-sovereign-ai-factory-supercomputers-accelerating-an-open-american-ai-stack",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · OCI AI infrastructure (Superclusters, Zettascale10)",
+     "date": "",
+     "text": "Launch partner for AMD Instinct MI450 superclusters (initial 50,000 GPUs from Q3 CY2026 on Helios racks).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-14",
+     "text": "OCI Zettascale10 unveiled: up to 800,000 NVIDIA GPUs, 16 zettaFLOPS, multi-gigawatt clusters within a 2 km radius; AMD MI450 launch partnership (50,000 GPUs from Q3 CY2026) — The Abilene fabric productized — and the industry's most concrete disclosure of what 'multi-gigawatt AI cluster' means physically.",
+     "src": "https://www.oracle.com/news/announcement/ai-world-oracle-unveils-next-generation-oci-zettascale10-cluster-for-ai-2025-10-14/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-27"
+  },
+  {
+   "a": "amd",
+   "b": "supermicro",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Supermicro is a named OEM for Instinct systems and for the Helios rack, shipping air- and liquid-cooled MI355X platforms.",
+     "context": "AMD names Supermicro among the Helios OEMs alongside Bull (Eviden), HPE and Lenovo. Supermicro's own materials confirm the relationship from the other side: an 8U air-cooled AS-8125GS-TNMR2 carrying eight MI350X, a 4U liquid-cooled AS-4126GS-NMR-LCC carrying eight MI355X, 5U PCIe systems taking up to eight MI350P or MI325X, and MI300A systems in 4U air-cooled and 2U liquid-cooled form.\n\nSupermicro announced support for the Helios MI455X 72-GPU rack on 1 June 2026 but has published no shipping date for it.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+     "status": "active",
+     "via": "Instinct MI300A/MI300X/MI325X/MI350X/MI355X systems and Helios"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Supermicro is a mainstream, non-exclusive AMD partner shipping Instinct systems in air- and liquid-cooled form, and is named by AMD as a Helios OEM.",
+     "context": "Shipping platforms include the 8U air-cooled AS-8125GS-TNMR2 with eight MI350X, the 4U liquid-cooled AS-4126GS-NMR-LCC with eight MI355X, H14 5U PCIe systems taking up to eight MI350P or MI325X, and MI300A systems in 4U air-cooled and 2U liquid-cooled form. The FY2026 10-K confirms new products supporting the MI350 series.\n\nOn 1 June 2026 Supermicro announced support for AMD's Helios rack — 72 MI455X GPUs, 6th Gen EPYC and Pensando networking on ROCm — with no shipping date published. AMD lists Supermicro among the Helios OEMs alongside Bull, HPE and Lenovo.",
+     "source": "https://www.supermicro.com/en/accelerators/amd",
+     "status": "active",
+     "via": "Instinct MI300A/MI300X/MI325X/MI350X/MI350P/MI355X and EPYC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · GPU and accelerator systems — NVIDIA, AMD and Arm",
+     "date": "",
+     "text": "On the AMD side it ships Instinct MI300A, MI300X, MI325X, MI350X, MI350P and MI355X platforms, and announced support in June 2026 for AMD's Helios 72-GPU rack.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU and accelerator systems — NVIDIA, AMD and Arm",
+     "date": "",
+     "text": "Supermicro is a first-wave NVIDIA rack partner and a mainstream non-exclusive AMD partner, listed for Helios alongside Bull, HPE and Lenovo.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-23",
+     "text": "New server portfolio on 6th Gen AMD EPYC 9006 with claimed 1.7× generational performance improvements — Same-day platform support on AMD's newest server generation — the first-to-market posture that is Supermicro's stated basis of competition.",
+     "src": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-new-server-portfolio-6th-gen-amd-epyctm-9006-series-cpus",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-01",
+     "text": "Announces support for AMD's Helios rack-scale platform — a 72-GPU double-width rack on Instinct MI455X, 6th Gen EPYC and Pensando networking — Puts Supermicro on the AMD rack alongside Bull, HPE and Lenovo. No shipping date has been published.",
+     "src": "https://www.supermicro.com/en/pressreleases/supermicro-expands-rack-scale-ai-leadership-amd-helios-platform-accelerating",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-23"
+  },
+  {
+   "a": "amd",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Capabilities · Factorized Power Architecture (FPA™) — PRM™ regulators and VTM™ current multipliers for 48 V point-of-load",
+     "date": "",
+     "text": "SemiAnalysis's 2023 history (independent) records Vicor 'designed out' of NVIDIA's H100 and 'replaced by Monolithic Power Systems', after V100/A100, Google TPU, AMD MI300, Tesla, Intel and Cerebras wins — so the position is contested socket by socket, and Vicor's 2026 ITC complaint names MPS's MPC12109 module and AMD MI3XX boards as the accused products.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "Vicor files '087-patent suits in E.D. Texas against Delta Electronics (2:26-cv-00017) and Luxshare/MetaPWR (2:26-cv-00018) and in W.D. Texas against Monolithic Power Systems and Wistron (7:26-cv-00005), three days before its second ITC complaint — The accused product per the public complaint is MPS's MPC12109 module on AMD MI3XX boards — the socket Vicor lost is now the socket it is litigating.",
+     "src": "https://news.bloomberglaw.com/ip-law/vicor-corp-hits-competitors-with-patent-suits-over-power-tech",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-09"
   },
   {
    "a": "anthropic",
@@ -13445,16 +14163,6 @@
    "a": "cipher-mining",
    "b": "engie-north-america",
    "curated": {
-    "b": {
-     "type": "customer",
-     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
-     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
-     "status": "announced",
-     "since": "2025-05",
-     "scale": "up to 300 MW contemplated",
-     "via": "Co-located data centre at an unnamed West Texas wind facility"
-    },
     "a": {
      "type": "supplier",
      "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
@@ -13464,6 +14172,16 @@
      "since": "2025-05",
      "scale": "up to 300 MW contemplated",
      "via": "Co-located data centre at a West Texas wind site"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at an unnamed West Texas wind facility"
     }
    },
    "evid": [],
@@ -13488,16 +14206,6 @@
    "a": "cipher-mining",
    "b": "fluidstack",
    "curated": {
-    "b": {
-     "type": "supplier",
-     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
-     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
-     "via": "Barber Lake, Colorado City TX"
-    },
     "a": {
      "type": "customer",
      "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
@@ -13507,6 +14215,16 @@
      "since": "2025-09",
      "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
      "via": "AI hosting at Barber Lake"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
+     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "Barber Lake, Colorado City TX"
     }
    },
    "evid": [
@@ -13609,6 +14327,15 @@
    "a": "cipher-mining",
    "b": "google",
    "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
+    },
     "b": {
      "type": "portfolio",
      "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
@@ -13618,15 +14345,6 @@
      "since": "2025-09",
      "scale": "$1.73B backstop; ~5.4% warrants",
      "via": "Barber Lake recognition agreement"
-    },
-    "a": {
-     "type": "investor",
-     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
-     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
     }
    },
    "evid": [
@@ -13832,18 +14550,18 @@
    "a": "cipher-mining",
    "b": "terawulf",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
-     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
      "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
      "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
+     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
      "status": "active"
     }
    },
@@ -14990,6 +15708,44 @@
     }
    ],
    "last": "2024-10"
+  },
+  {
+   "a": "coolit",
+   "b": "supermicro",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Supermicro designs and manufactures its own cold plates, CDUs and coolant distribution manifolds, competing directly with the CDU and cold-plate specialists.",
+     "context": "Supermicro's FY2026 10-K states that it manufactures the cooling distribution units and manifolds in its DLC-2 stack, and CoolIT's own dossier records that Supermicro and Lenovo build in-rack CDUs and cold plates in house, with Supermicro's materials describing them with no CoolIT mention.\n\nThe two dossiers do not agree on the character of the relationship. CoolIT's records Supermicro as a stated collaborator; Supermicro names no third-party cooling vendor anywhere in its filings or product pages. Both can be true — a collaboration CoolIT publicises and Supermicro does not — and no source reconciles them, so the substantive and mutually supported reading is competition in cold plates and rack CDUs.",
+     "source": "https://www.supermicro.com/en/solutions/liquid-cooling",
+     "status": "active",
+     "via": "In-house cold plates and coolant distribution units"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The CDU specialist the corpus lacked: where Vertiv, Schneider Electric (through Motivair) and Trane (through LiquidStack) reach liquid cooling from the plant side, CoolIT reaches it from the chip — it designs the cold plate to the silicon vendor's reference (NVIDIA's Recommended Vendor List; Intel and AMD series), builds the loop and the manifold for the server OEM (Dell, HPE, Gigabyte; Supermicro as a stated collaborator), and sells the row and in-rack CDUs that separate that clean technology-cooling loop from the building's water.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · In-rack CDUs — CHx200 and CHx80",
+     "date": "",
+     "text": "A mature line (2019 first install) now secondary to the row CDUs for AI; competes with Vertiv's and Motivair's rack CDUs and with the in-house rack CDUs Supermicro and Lenovo build.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Cold plates and coldplate loops — Split-Flow, OMNI, the 4 kW and 15 kW demonstrators",
+     "date": "",
+     "text": "The cold plate is where the Asetek dispute was fought and where Supermicro and Lenovo build in-house; CoolIT's claim is thermal headroom (4 kW and 15 kW demonstrated on single-phase water-glycol) that pushes back two-phase and immersion alternatives.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "coolit",
@@ -17416,6 +18172,21 @@
      "from": "b"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "crusoe",
+   "b": "supermicro",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Crusoe is named among the twenty-one technology companies contributing to Supermicro's seventh annual Open Storage Summit on deploying enterprise AI at scale.",
+     "context": "This is an ecosystem-programme association rather than a disclosed commercial contract; no order, deployment or dollar value is published on either side. It is recorded because it is the only named link between Supermicro and a covered neocloud in the first-party record.\n\nSupermicro does not name its customers above 10% of revenue, and CoreWeave, Meta and Ola/Krutrim — each of which has been associated with Supermicro in secondary commentary — appear in no Supermicro filing or press release located during this research.",
+     "source": "https://www.supermicro.com/en/pressreleases/supermicros-seventh-annual-open-storage-summit-brings-together-21-ecosystem-partners",
+     "status": "active"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {
@@ -27051,29 +27822,22 @@
    "a": "galaxy-digital",
    "b": "hut-8",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
-     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
-     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
      "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
      "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
      "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
+     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
     }
    },
    "evid": [
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
-     "src": "",
-     "from": "b"
-    },
     {
      "where": "Key Judgments",
      "date": "",
@@ -27101,6 +27865,13 @@
      "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -40923,6 +41694,65 @@
   },
   {
    "a": "nvidia",
+   "b": "supermicro",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "NVIDIA is the silicon Supermicro's AI business is built on; the 10-K names it first among the vendors Supermicro works closely with to develop compatible products.",
+     "context": "Supermicro is a first-wave rack partner across GB200 NVL72, GB300 NVL72 and the HGX B200/B300 lines, and has announced support for Vera Rubin NVL72, HGX Rubin NVL8 and NVL4. It also builds NVIDIA networking and DPUs into its systems — Spectrum-X, Quantum-2 and X800, BlueField-3 and BlueField-4.\n\nNo independent source confirms any allocation advantage. SemiAnalysis argues explicitly that the narrative of Dell winning on NVIDIA allocation favouritism is incorrect and that Dell is winning on go-to-market. Since the March 2026 indictment, independent analysts have argued the allocation risk runs the other way — that a compliance trust deficit could move NVIDIA allocation toward Dell.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000022/smci-20260630.htm",
+     "status": "active",
+     "via": "GB300/GB200 NVL72, HGX B300/B200, Vera Rubin platforms"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Oracle cancelled an order for 300–400 GB300 NVL72 racks worth an estimated $1.05–1.40bn, reported in April 2026 and attributed to the export-control investigations and class actions; Futurum argues the March 2026 indictment created a compliance trust deficit that cannot be resolved by a press statement and that Dell is best positioned to capture displaced NVIDIA allocation; and the one material weakness still unremediated at 30 June 2026 sits in exactly the IT access controls a procurement reviewer would ask about.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU and accelerator systems — NVIDIA, AMD and Arm",
+     "date": "",
+     "text": "Supermicro ships NVIDIA GB300 NVL72 and GB200 NVL72 rack-scale systems, HGX B300 and B200 eight-GPU servers in air- and liquid-cooled form, NVL4 systems, and has announced support for the Vera Rubin NVL72, HGX Rubin NVL8 and NVL4 generations.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU and accelerator systems — NVIDIA, AMD and Arm",
+     "date": "",
+     "text": "Supermicro is a first-wave NVIDIA rack partner and a mainstream non-exclusive AMD partner, listed for Helios alongside Bull, HPE and Lenovo.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GPU and accelerator systems — NVIDIA, AMD and Arm",
+     "date": "",
+     "text": "No independent source confirms any allocation advantage, and SemiAnalysis argues explicitly that the 'Dell wins on NVIDIA allocation favouritism' narrative is wrong — Dell is winning on go-to-market.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-31",
+     "text": "DCBBS Blueprints introduced for NVIDIA Vera Rubin NVL72 and HGX Rubin NVL8, scalable from a 5 MW to a 1 GW power envelope — The company is now selling a data-centre design, not a server — one scalable unit is 1,152 GPUs across 28 racks with its own 5 MW cooling plant.",
+     "src": "https://www.supermicro.com/en/pressreleases/supermicro-introduces-dcbbs-blueprints-nvidia-vera-rubin-nvl72-and-nvidia-hgx-rubin",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "SDNY unseals an indictment of three individuals employed by or associated with the company over an alleged export-control conspiracy; Supermicro is not named as a defendant — Prosecutors allege roughly $2.5bn of NVIDIA-equipped servers were routed to China through a Southeast Asian front company. The shares fell about a third in a week and the trial has since moved to March 2027.",
+     "src": "https://www.cnn.com/2026/03/19/politics/super-micro-computer-founder-charged-ai-chips-china",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-31"
+  },
+  {
+   "a": "nvidia",
    "b": "switch",
    "curated": {
     "b": {
@@ -42452,6 +43282,22 @@
     }
    ],
    "last": "2025-09-26"
+  },
+  {
+   "a": "oracle",
+   "b": "supermicro",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Oracle cancelled an order for 300 to 400 GB300 NVL72 racks, reported in April 2026 and attributed to the export-control investigations and class-action litigation.",
+     "context": "The estimated value of $1.05–1.40bn makes this the clearest quantified instance of the governance overhang converting into lost revenue rather than remaining a reputational matter.\n\nIt is recorded here as historical because the order did not proceed. Supermicro's filings do not name its 10% customers, so whether Oracle appears elsewhere in the revenue base cannot be established from the disclosures.",
+     "source": "https://finance.yahoo.com/sectors/technology/articles/oracle-canceled-nvidia-server-order-180557762.html",
+     "status": "historical",
+     "scale": "300–400 GB300 NVL72 racks, ~$1.05–1.40bn"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "oracle",
@@ -45628,6 +46474,34 @@
     }
    ],
    "last": "2026-04"
+  },
+  {
+   "a": "supermicro",
+   "b": "vertiv",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Dell'Oro's January 2026 assessment names Vertiv as the liquid-cooling leader with CoolIT, nVent and Boyd holding strong positions and does not name Supermicro; every DLC-2 performance figure — 98% heat capture, 40% power saving, 20% lower total cost of ownership — is a company claim rather than an independent measurement; and DataCenterDynamics reported a DLC component shortage costing $800m of revenue in a quarter, which is the behaviour of a taker of cooling supply rather than a maker of it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data Center Building Block Solutions (DCBBS) — the rack and the plant around it",
+     "date": "",
+     "text": "It is not, however, a named leader in liquid cooling: Dell'Oro's January 2026 assessment names Vertiv as the leader with CoolIT, nVent and Boyd holding strong positions, and does not name Supermicro at all.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Direct Liquid Cooling — DLC and DLC-2",
+     "date": "",
+     "text": "Independent trackers place the leadership elsewhere, and the specialist consolidation of 2026 — Ecolab acquiring CoolIT, Vertiv acquiring Strategic Thermal Labs and ThermoKey, Legrand adding Kratos — happened around Supermicro rather than through it.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "switch",

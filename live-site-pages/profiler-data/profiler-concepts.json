@@ -109,6 +109,15 @@
       "def": "A chemical added to a concrete mix to change how it behaves — plasticisers for flow, retarders and accelerators for setting time, air entrainment for freeze resistance. It is how one mix serves many conditions."
     },
     {
+      "slug": "advanced-packaging",
+      "term": "advanced packaging",
+      "def": "Building one finished chip out of several separate pieces of silicon mounted together on a carrier, rather than cutting it from a single piece of wafer. It is how a processor gets stacked memory sitting millimetres away instead of centimetres, and the capacity to do it is a separate bottleneck from the capacity to make the silicon itself.",
+      "aliases": [
+        "CoWoS",
+        "2.5D packaging"
+      ]
+    },
+    {
       "slug": "aeroderivative",
       "term": "aeroderivative",
       "def": "A power-generation gas turbine derived from an aircraft engine rather than designed as a heavy industrial frame. Lighter and far quicker to start than a heavy-duty machine, in blocks of roughly tens of megawatts — and because the cores can come from retiring airliners, sourceable outside the heavy-frame factory queue that sets everyone else's delivery date.",
@@ -160,6 +169,14 @@
       "slug": "ahri-550-590",
       "term": "AHRI 550/590",
       "def": "The North American standard that fixes the conditions a water-cooled chiller is rated at and the weighting used for its part-load number, so that two manufacturers' figures can be compared at all."
+    },
+    {
+      "slug": "ai-accelerator",
+      "term": "AI accelerator",
+      "def": "A processor built for the specific arithmetic that neural networks need — very large numbers of low-precision multiply-and-add operations running in parallel — rather than for general-purpose computing. GPUs are the dominant kind; purpose-built chips designed by cloud operators for their own use are the other.",
+      "aliases": [
+        "accelerator"
+      ]
     },
     {
       "slug": "ai-growth-zone",
@@ -1333,6 +1350,11 @@
       ]
     },
     {
+      "slug": "chiplet",
+      "term": "chiplet",
+      "def": "One of several smaller pieces of silicon that are packaged together to make a single processor. Splitting a large design into chiplets raises the share of good pieces per wafer and lets each piece be made on whichever manufacturing process suits it, at the cost of needing fast links between them."
+    },
+    {
       "slug": "chp",
       "term": "CHP",
       "def": "Combined heat and power, also called cogeneration: using both the electricity a prime mover generates and the heat it would otherwise vent. Because the heat is free once the fuel is burned, overall fuel utilisation can pass 80 percent — but only if there is a real use for the heat next door, which is what makes siting rather than efficiency the binding question.",
@@ -2083,6 +2105,11 @@
         "M-CRPS",
         "common redundant power supply"
       ]
+    },
+    {
+      "slug": "cuda",
+      "term": "CUDA",
+      "def": "NVIDIA's programming platform for running general computation on its GPUs. Almost two decades of libraries, tools and trained practitioners are built on it, which is why a rival accelerator competes against the software as much as against the silicon."
     },
     {
       "slug": "curing",
@@ -3967,6 +3994,15 @@
       "def": "An allowance built into a heat exchanger's rating for the film of scale, biology and dirt that will accumulate on its tubes. Real fouling beyond the allowance shows up as a widening approach and a rising kW/ton."
     },
     {
+      "slug": "foundry",
+      "term": "foundry",
+      "def": "A factory that manufactures chips to other companies' designs and sells no chips of its own. A company that designs but does not manufacture is called fabless, and its roadmap is bounded by whatever manufacturing process and capacity its foundry will sell it.",
+      "aliases": [
+        "pure-play foundry",
+        "fabless"
+      ]
+    },
+    {
       "slug": "free-cooling",
       "term": "free cooling",
       "def": "Rejecting heat without running the compressors, by using a heat exchanger when the outdoor condition is cold enough to do the job directly. How many hours a year it works is a property of the climate and the water temperature chosen."
@@ -4238,6 +4274,19 @@
       ]
     },
     {
+      "slug": "gpu",
+      "term": "GPU",
+      "def": "Graphics processing unit — a processor with thousands of simple cores designed to do the same operation on very many numbers at once. That shape turned out to suit neural networks far better than a conventional CPU, which is why the graphics part of the name is now mostly historical.",
+      "aliases": [
+        "graphics processing unit"
+      ]
+    },
+    {
+      "slug": "gpu-cluster",
+      "term": "GPU cluster",
+      "def": "A large number of accelerators wired together with a high-speed network so they can work on one job. What makes it a cluster rather than a pile of servers is the interconnect and the software that keeps thousands of chips in step."
+    },
+    {
       "slug": "grant-income",
       "term": "grant income",
       "def": "Government funding recognised in a company's income statement as work under a cooperative agreement is performed; for a pre-revenue reactor developer it can be the largest line above the loss.",
@@ -4428,6 +4477,14 @@
       ]
     },
     {
+      "slug": "hbm",
+      "term": "HBM",
+      "def": "High-bandwidth memory — memory chips stacked vertically and placed in the same package as the processor, connected by a very wide link. Its capacity and speed usually decide how large a model an accelerator can hold and how fast it can be fed, so it is often the binding constraint rather than the arithmetic.",
+      "aliases": [
+        "high-bandwidth memory"
+      ]
+    },
+    {
       "slug": "heat-pipe-reactor",
       "term": "heat-pipe reactor",
       "def": "A microreactor design that moves heat out of the core through sealed tubes in which a fluid evaporates at the hot end and condenses at the cold end, with no pumps and no coolant loop at all."
@@ -4483,6 +4540,15 @@
       "aliases": [
         "higher heating value",
         "gross calorific value"
+      ]
+    },
+    {
+      "slug": "high-performance-computing",
+      "term": "HPC",
+      "def": "High-performance computing — the classical supercomputing workload of physical simulation: weather, fluid dynamics, structural and nuclear modelling. It differs from AI work in needing high-precision arithmetic rather than tolerating low precision, which is why national laboratories still buy on double-precision performance.",
+      "aliases": [
+        "high-performance computing",
+        "supercomputing"
       ]
     },
     {
@@ -4842,6 +4908,11 @@
         "synthetic inertia",
         "grid inertia"
       ]
+    },
+    {
+      "slug": "inference",
+      "term": "inference",
+      "def": "Running a finished model to produce an answer, as opposed to building it. Each request is small compared with training but there are enormous numbers of them, so inference rewards memory capacity, low latency and cost per answer rather than raw peak arithmetic."
     },
     {
       "slug": "infrastructure-fund",
@@ -5657,6 +5728,16 @@
       ]
     },
     {
+      "slug": "low-precision-format",
+      "term": "FP8",
+      "def": "A number format that stores each value in eight bits instead of the sixteen or thirty-two once used, with FP4 halving it again. Neural networks tolerate the lost precision surprisingly well, so each generation of lower-precision arithmetic roughly doubles the throughput and halves the memory a model needs — which is why headline performance figures are meaningless without the format they were measured in.",
+      "aliases": [
+        "FP4",
+        "low-precision format",
+        "reduced precision"
+      ]
+    },
+    {
       "slug": "low-pressure-refrigerant",
       "term": "low-pressure refrigerant",
       "def": "A refrigerant whose cycle runs below atmospheric pressure on the low side, so a leak draws air in rather than pushing refrigerant out. It permits a very different, thinner-walled machine and needs a purge unit."
@@ -5834,6 +5915,11 @@
       ]
     },
     {
+      "slug": "memory-bandwidth",
+      "term": "memory bandwidth",
+      "def": "How fast data can be moved between a processor and its memory, usually quoted in terabytes per second. For most AI work the arithmetic units finish faster than memory can supply them, so bandwidth rather than raw compute sets the achieved speed."
+    },
+    {
       "slug": "mep",
       "term": "MEP",
       "def": "Mechanical, electrical and plumbing — the building services trades taken together. On a data-centre schedule MEP is where most of the labour hours and most of the risk sit, which is why who holds those trades decides who can compress the programme.",
@@ -5988,6 +6074,14 @@
       "aliases": [
         "Modbus TCP",
         "Modbus RTU"
+      ]
+    },
+    {
+      "slug": "model-training",
+      "term": "training",
+      "def": "Building a model by repeatedly showing it data and adjusting its internal parameters. It is one very long job spread across thousands of accelerators that must stay synchronised, which is why it drives demand for the fastest interconnect and the densest racks.",
+      "aliases": [
+        "model training"
       ]
     },
     {
@@ -6578,6 +6672,14 @@
       ]
     },
     {
+      "slug": "open-compute-project",
+      "term": "Open Compute Project",
+      "def": "An industry body through which operators and vendors publish hardware designs — rack dimensions, power distribution, cooling interfaces — as open specifications. Contributing a design there is how a vendor invites others to build compatible parts, and how a buyer avoids being locked to one supplier's mechanical and electrical choices.",
+      "aliases": [
+        "OCP"
+      ]
+    },
+    {
       "slug": "open-transition",
       "term": "open transition",
       "def": "A transfer that opens the old source before closing onto the new one — break-before-make — so for a moment the load is fed by nothing. Simpler, and it never back-feeds the utility, but the gap means the UPS or some other stored energy has to carry the load across it or the servers see an outage.",
@@ -6905,6 +7007,14 @@
         "contracted share",
         "95% contracted",
         "contracted versus merchant"
+      ]
+    },
+    {
+      "slug": "performance-per-watt",
+      "term": "performance per watt",
+      "def": "Useful work divided by the power it took. Once a site's electrical supply is fixed, this is the number that decides how much computing the site can ever contain, which is why it matters more to a data-centre buyer than peak performance does.",
+      "aliases": [
+        "perf-per-watt"
       ]
     },
     {
@@ -7387,6 +7497,11 @@
       ]
     },
     {
+      "slug": "process-node",
+      "term": "process node",
+      "def": "The generation of manufacturing technology a chip is made on, named by a number in nanometres that is now a marketing label rather than a measurement of anything. A newer node generally means more transistors in the same area and less energy per operation, and access to the newest one is rationed by the foundry."
+    },
+    {
       "slug": "proctor-test",
       "term": "Proctor test",
       "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
@@ -7609,12 +7724,30 @@
       ]
     },
     {
+      "slug": "rack-integration",
+      "term": "rack integration",
+      "def": "Assembling, cabling, cooling, powering and testing a complete rack in a factory so it arrives at the site ready to switch on, rather than shipping loose servers to be built up on the floor. The industry labels the depth of this work — roughly, components, then a built server, then a fully integrated and tested rack — and how far up that ladder a vendor goes is a large part of what distinguishes rack vendors from each other.",
+      "aliases": [
+        "L11",
+        "L12",
+        "L10"
+      ]
+    },
+    {
       "slug": "rack-manifold",
       "term": "rack manifold",
       "def": "The vertical supply and return pipes in a rack that split the row's coolant to each server's hoses through quick disconnects and collect it again — stainless steel, built for the rack standard (EIA, ORV3, MGX) and height, leak-tested before shipment, and the place where flow to each server is set.",
       "aliases": [
         "rack manifolds",
         "vertical rack manifold"
+      ]
+    },
+    {
+      "slug": "rack-unit",
+      "term": "rack unit",
+      "def": "The standard height increment of equipment mounted in a rack, written as U — one unit is 1.75 inches, and a full-height rack is normally 42 to 52 of them. Every server and power shelf is described by how many it occupies, so U is the currency in which rack space is spent.",
+      "aliases": [
+        "RU"
       ]
     },
     {
@@ -8127,6 +8260,11 @@
         "renewable natural gas",
         "biogas"
       ]
+    },
+    {
+      "slug": "rocm",
+      "term": "ROCm",
+      "def": "AMD's open software platform for running computation on its GPUs — its answer to CUDA. Whether a given model, framework or library runs well on it is the practical question that decides how substitutable AMD silicon is for NVIDIA's."
     },
     {
       "slug": "rocof",
@@ -9380,6 +9518,11 @@
       ]
     },
     {
+      "slug": "tape-out",
+      "term": "tape-out",
+      "def": "The moment a chip design is finished and sent to the foundry to be made. It is the point of no return in a silicon schedule: after it, fixing a design error means another pass costing months and a great deal of money."
+    },
+    {
       "slug": "tax-credit-transferability",
       "term": "tax credit transferability",
       "def": "The ability, created by the 2022 US climate law, to sell clean-energy tax credits for cash to an unrelated party rather than monetizing them through a tax-equity partnership. It turns credits into a near-cash financing source for utilities with limited tax appetite, usually at a discount to face value that the seller must account for.",
@@ -9637,6 +9780,14 @@
       "def": "A headline number that may include optional renewal periods, pass-through costs or capacity not yet built. Because there is no accounting definition, two companies can quote very different figures for economically similar deals.",
       "aliases": [
         "TCV"
+      ]
+    },
+    {
+      "slug": "total-cost-of-ownership",
+      "term": "total cost of ownership",
+      "def": "The whole cost of running something over its life — purchase price plus power, cooling, space, maintenance and the staff to operate it — rather than the price on the invoice. In a data centre the electricity and cooling over a few years commonly exceed what the hardware cost.",
+      "aliases": [
+        "TCO"
       ]
     },
     {
@@ -10151,6 +10302,11 @@
       "aliases": [
         "voltage regulator module"
       ]
+    },
+    {
+      "slug": "wafer",
+      "term": "wafer",
+      "def": "The thin disc of silicon on which chips are made, hundreds at a time, before being cut apart. The share of those that work is the yield, and because a wafer costs the same whether its chips work or not, yield is what turns a manufacturing process into a price."
     },
     {
       "slug": "wafer-diameter",

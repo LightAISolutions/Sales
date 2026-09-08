@@ -2198,6 +2198,40 @@
     "Federal work is the fastest-growing part of the book: USD 516.7m of Coast Guard awards in May 2026 alone, against a run-rate of USD 0.6–0.8bn a year and USD 8.44bn cumulative since FY2008. USASpending is authoritative and public and should be re-queried at each refresh.",
     "The new headquarters on the Goucher College campus in Towson — 150,000 sq ft under a 50-year ground lease, architect Gensler — completes late 2028. The company will build it itself and has never owned a building in its history."
    ]
+  },
+  {
+   "slug": "amd",
+   "nextReport": "2026-11-03",
+   "confirmed": false,
+   "source": "Cadence inference from AMD's own EDGAR 8-K series, not from a tracker. AMD's Item 2.02 earnings 8-Ks landed 2025-11-04 (Q3 2025), 2026-02-03 (Q4/FY2025), 2026-05-05 (Q1 2026) and 2026-08-04 (Q2 2026) — every one a Tuesday at exactly 38 days after the fiscal quarter end. Fiscal quarters end on a Saturday: Q2 2026 ended 2026-06-27, so Q3 2026 ends 2026-09-26 (13 weeks later, verified) and 38 days after that is 2026-11-03, a Tuesday (verified with date -d). MarketBeat and other trackers independently give 2026-11-03; Wall Street Horizon labels it unconfirmed. AMD had not issued its 'AMD to Report Fiscal Third Quarter 2026 Financial Results' release as of 2026-09-08 — it normally comes two to three weeks ahead, so expect it in mid-October and confirm then. The 10-Q normally follows the earnings release by one day (2026-08-05 after 2026-08-04). SEC registrant CIK 0000002488; fiscal year ends the last Saturday in December. NOTE FOR THE DESK: Supermicro's row carries the same 2026-11-03 date from an independent cadence — that is a genuine coincidence of two Tuesday reporters, not a copy.",
+   "lastRefreshed": "2026-09-08",
+   "watch": [
+    "Q3 2026 against the standing guide of about $13.0bn plus or minus $300m at about 56% non-GAAP gross margin. The margin guide is the live question: it was flat sequentially against 13% revenue growth and management attributed the pressure to the Helios ramp",
+    "HELIOS VOLUME, NOT LAUNCH. AMD guided initial volume in Q3 2026 with significant ramp only in Q4 2026 into Q1 2027. SemiAnalysis's February 2026 claim of a slip to Q2 2027 was rejected by AMD and the July launch vindicated the date — the volume figure is what settles the argument",
+    "THE WARRANT QUESTION, still open. Coverage of the February 2026 Meta agreement describes warrant terms identical to OpenAI's (up to 160 million shares at $0.01, final tranche at $600) and no source reviewed reconciles whether these are two distinct grants. If separate, potential dilution is roughly double the ~10% usually quoted. Look for the warrant note in the 10-Q or the proxy",
+    "Data-centre lease exposure. The Q2 FY2026 10-Q disclosed $4.1bn of guarantees on commercial partners' data-centre leases (terms to 15 years, 'may be issued in exchange for warrants'), $4.5bn of leases not yet commenced and a further $9.5bn signed after quarter-end for 2027-2028. Watch whether this keeps growing and whether any guarantee is called",
+    "China: whether MI325 units actually enter China under the February 2026 licences, and whether the 15% revenue-share expectation is ever published as a regulation. AMD's filings note no regulation establishing it exists",
+    "FY2025 GAAP gross margin is recorded as 50% by AMD and computed at 52.49% by StockAnalysis — resolve or carry the gap",
+    "Customer concentration: no customer reached 10% of revenue in FY2025 or FY2024, but Lisa Su conceded most Helios racks go to a handful of buyers. Watch for the first named 10% customer"
+   ]
+  },
+  {
+   "slug": "supermicro",
+   "nextReport": "2026-11-03",
+   "confirmed": false,
+   "source": "Cadence inference from Supermicro's own EDGAR Item 2.02 earnings 8-Ks. Those landed 2025-11-04 (Q1 FY2026, 35 days after the 2025-09-30 quarter end), 2026-02-03 (Q2 FY2026, 34 days after a 2025-12-31 Wednesday quarter end), 2026-05-05 (Q3 FY2026, 35 days) and 2026-08-11 (Q4/FY2026, 42 days — fiscal year-end takes longer). All four are Tuesdays. Q1 FY2027 ends 2026-09-30, a Wednesday, which is the same shape as the 2025-12-31 quarter end, and the Tuesday at that same 34-day lag is 2026-11-03 (verified with date -d). Trackers agree on 2026-11-03. Set confirmed:false because Supermicro's own date-announcement release had not been issued as of 2026-09-08 and the quarter had not closed; confirm when the company publishes it. CAVEAT FOR THE DESK: the 2026-08-05 8-K is NOT the results release — it is a preferred dividend declaration; the FY2026 results 8-K is 2026-08-11. Also note EDGAR's company metadata still records the state of incorporation as CA while the 10-K cover and all 2026 8-Ks state Delaware (reincorporated March 2007). SEC registrant CIK 0001375365; fiscal year ends 30 June; the 10-K follows the results release by about three weeks (2026-08-31).",
+   "lastRefreshed": "2026-09-08",
+   "watch": [
+    "GROSS MARGIN IS THE WHOLE STORY. Q4 FY2026 spiked to 17.5% from 9.9%, and the CFO attributed about 75% of the gain to contracts deferred into Q1 FY2027, calling it non-recurring. Management guided the current quarter to 10.4-10.8% non-GAAP. If Q1 FY2027 prints materially above that, the integrator thesis needs revisiting; if it prints inside it, the spike was an artefact",
+    "Q1 FY2027 against the $14.5-15.5bn guide and the FY2027 guide of $65.0-72.0bn against a consensus near $54.4bn. Supermicro missed revenue in three of its last four prints while beating EPS — watch which side moves",
+    "THE REMAINING MATERIAL WEAKNESS. Three of four were remediated in FY2026; the IT general controls weakness over user access to financial applications was still unremediated at 2026-06-30 and BDO issued a second consecutive adverse ICFR opinion. The company expects remediation subject to operating-effectiveness testing during FY2027 — watch the Q1 and Q2 10-Qs for the first clean quarter",
+    "WORKING CAPITAL. FY2026 cash from operations was negative $6,809.9m against $2,230.5m of net income, inventory reached $12,895.9m and receivables $6,125.4m, and $7.0bn was raised in June 2026 to fund components. Watch whether operating cash flow turns and whether the $1.25bn ATM programme is drawn",
+    "DILUTION. Guided Q1 FY2027 diluted shares are 745m GAAP against 656.9m common outstanding at 2026-07-31, before any ATM issuance. The mandatory preferred converts 2029-06-01 at 30.3040-36.3640 common per preferred share",
+    "THE LEGAL TRACK. SEC subpoenas (2024-11-19 and 2026-04-28), an SDNY grand jury subpoena, multiple BIS Office of Export Enforcement subpoenas, and the Liaw trial moved to March 2027. The company says it has not been told it is a target. Watch for any change in that status and for any BIS denial-order risk",
+    "THE CFO SEARCH, unresolved since December 2024. The Special Committee recommended immediate replacement and David Weigand remained in post through the FY2026 10-K",
+    "Concentration: one customer at 28.1% of FY2026 net sales and one supplier at 63.1% of purchases, neither named; independent reporting put a single customer at 63% of Q2 FY2026 revenue",
+    "Two unreconciled figures to resolve at the next refresh: FY2026 net income $2,230.5m against StockAnalysis's $2,196m, and Q4 FY2026 diluted EPS $1.62 against $1.70"
+   ]
   }
  ]
 }

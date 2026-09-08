@@ -161,6 +161,32 @@
       ]
     },
     {
+      "slug": "amd",
+      "name": "AMD",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The merchant second source of AI accelerators — an incumbent in the server CPU socket at 34.5% of x86 units and a challenger in the accelerator at an estimated 5-10%; designs and licenses the 72-GPU Helios rack but does not build it.",
+      "hq": "Santa Clara, California, United States",
+      "ticker": "NASDAQ: AMD",
+      "status": "active",
+      "lastUpdated": "2026-09-08",
+      "domains": [
+        "amd.com",
+        "ir.amd.com",
+        "xilinx.com"
+      ],
+      "srcTotal": 84,
+      "srcFirstPct": 67,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "compute-and-the-rack",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "anthropic",
       "name": "Anthropic",
       "categories": [
@@ -3709,6 +3735,35 @@
         {
           "id": "in-hall-power",
           "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "supermicro",
+      "name": "Supermicro",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The rack and server OEM that now sells the cooling plant with it — DCBBS runs from GPU systems to 1-50 MW cooling towers; FY2026 revenue $39.1bn on a gross margin of 10.8%, down 719bp in three years.",
+      "hq": "San Jose, California, United States",
+      "ticker": "NASDAQ: SMCI",
+      "status": "active",
+      "lastUpdated": "2026-09-08",
+      "domains": [
+        "supermicro.com",
+        "ir.supermicro.com"
+      ],
+      "srcTotal": 97,
+      "srcFirstPct": 62,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cooling",
+          "role": "adjacent"
+        },
+        {
+          "id": "compute-and-the-rack",
+          "role": "challenger"
         }
       ]
     },
