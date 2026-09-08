@@ -1,4 +1,4 @@
-var VERSION = "v01.17g";
+var VERSION = "v01.18g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4029,6 +4029,27223 @@ function clLessonWhereBessPlugsIn_() {
 };
 }
 
+function clLessonSegmentCellsAndChemistry_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-cells-and-chemistry",
+ "type": "module",
+ "title": "Cells and chemistry",
+ "short": "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-10-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:byd",
+    "date": "2026-09-08",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:canadian-solar",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:catl",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:envision-energy",
+    "date": "2026-08-30",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eve-energy",
+    "date": "2026-09-08",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:form-energy",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:gotion",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hithium",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lg-energy-solution",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:narada",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:panasonic",
+    "date": "2026-08-30",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rept",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:samsung-sdi",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sunwoda",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tesla",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:trina-storage",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "16",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "4",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "8",
+   "v": "challengers",
+   "sub": "contesting that set; 4 adjacent"
+  },
+  {
+   "k": "68",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and lead-carbon cells under UPS and BBU duty, and the non-lithium chemistries (sodium-ion, iron-air) contesting the long end. The first link in the value chain: every integrator, UPS maker and BBU shelf below it buys or makes a cell here.",
+    "Chain position 1 of 19 · tier **supply** — makes the thing."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream",
+     "— (first link in the chain)",
+     ""
+    ],
+    [
+     "**This segment** (position 1)",
+     "**Cells and chemistry**",
+     "supply"
+    ],
+    [
+     "Downstream (position 2)",
+     "Storage integrators and containers",
+     "supply"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Storage developers and IPPs (33 edges) · Storage integrators and containers (13 edges) · Software and optimization (9 edges) · In-hall power (8 edges) · Clean firm and nuclear (8 edges) · Hyperscalers and AI labs (8 edges) · Utilities (8 edges) · AIDC developers and landlords (7 edges) · Grid equipment (3 edges) · Capital (3 edges) · Power conversion and rack-power silicon (2 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Neoclouds (2 edges) · Bridge and on-site generation (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Power conversion and rack-power silicon (5 edges) · Grid equipment (3 edges) · In-hall power (3 edges) · Storage integrators and containers (2 edges) · Assurance (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Cycle life and calendar life against the warranty curve",
+     "*Duration, Degradation, and the Twenty-Year Promise*"
+    ],
+    [
+     "Cost per kWh at the cell and the format (Ah class) that sets container count",
+     "*From Cell to Container*"
+    ],
+    [
+     "Chemistry fit to duty — energy vs power cell, C-rate, cold performance",
+     "*From Cell to Container*"
+    ],
+    [
+     "Prohibited-foreign-entity status and the factory's location (status follows ownership, not site)",
+     "*Four Levers and One Order* (planned)"
+    ],
+    [
+     "Factory capacity and delivery slots; yield record",
+     "—"
+    ],
+    [
+     "Safety certification (UL 9540A at cell level) and the fire record",
+     "*From Cell to Container*"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**BYD**",
+     "byd",
+     "incumbent",
+     "productsAndServices › Storage cells — Blade LFP (FinDreams Battery); ecosystemRole: top-tier in every storage ranking"
+    ],
+    [
+     "**CATL**",
+     "catl",
+     "incumbent",
+     "ecosystemRole: No. 1 in energy-storage batteries for five consecutive years; ESS battery sales 121 GWh (2025)"
+    ],
+    [
+     "**Hithium**",
+     "hithium",
+     "incumbent",
+     "ecosystemRole: Top 2 in total and utility-scale ESS battery shipments for 2025; ∞Cell line purpose-built for stationary storage"
+    ],
+    [
+     "**LG Energy Solution**",
+     "lg-energy-solution",
+     "incumbent",
+     "ecosystemRole: the ecosystem's premier non-Chinese ESS supply chain; 140 GWh ESS backlog; five North American ESS sites"
+    ],
+    [
+     "**Envision**",
+     "envision-energy",
+     "challenger",
+     "productsAndServices › AESC cells (the vertical-integration layer): 300+/500+/700+ Ah ESS ladder; cells arm Fluence and Prevalon via the Fixx template"
+    ],
+    [
+     "**EVE Energy**",
+     "eve-energy",
+     "challenger",
+     "ecosystemRole: 'the aggressive-challenger cell supplier' forcing the 600Ah+ transition; #3 global ESS cells"
+    ],
+    [
+     "**Form Energy**",
+     "form-energy",
+     "challenger",
+     "ecosystemRole: the only company manufacturing 100-hour iron-air storage at scale; one operating 1.5 MW project against ~80 GWh of stated backlog"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "gotion",
+     "challenger",
+     "ecosystemRole: §154(b)-named cell maker with an operating US plant that cannot claim §45X; Gotion Grid storage line; claims first place in UPS backup batteries"
+    ],
+    [
+     "**Narada**",
+     "narada",
+     "challenger",
+     "productsAndServices › Semi-solid / large-cell ladder: self-made 314 Ah LFP and semi-solid cells at GWh scale; ecosystemRole: distressed, ST-designated"
+    ],
+    [
+     "**REPT BATTERO**",
+     "rept",
+     "challenger",
+     "ecosystemRole: cell and system supplier reaching the US only through integrators; first globally in residential storage cells"
+    ],
+    [
+     "**Samsung SDI**",
+     "samsung-sdi",
+     "challenger",
+     "ecosystemRole: premium-chemistry counterweight — small global share (#12, 1.4%) but differentiated in high-power NCA/LMO"
+    ],
+    [
+     "**Sunwoda**",
+     "sunwoda",
+     "challenger",
+     "ecosystemRole: the fastest riser of the Chinese top ten; top-10 global storage-cell supplier (InfoLink H1 2025); 684 Ah cell"
+    ],
+    [
+     "**Canadian Solar**",
+     "canadian-solar",
+     "adjacent",
+     "ecosystemRole: a domestic cell plant announced before the rules bit (Shelbyville KY ramp unconfirmed); cells feed SolBank"
+    ],
+    [
+     "**Panasonic**",
+     "panasonic",
+     "adjacent",
+     "productsAndServices › EV cylindrical cells (2170/4680) and BBU cells — the incumbent of data-center backup power, not grid-scale BESS"
+    ],
+    [
+     "**Tesla**",
+     "tesla",
+     "adjacent",
+     "productsAndServices › Megapack 3 on a new Tesla-designed 2.8-litre LFP cell — captive to its own integrator business"
+    ],
+    [
+     "**Trina Storage**",
+     "trina-storage",
+     "adjacent",
+     "productsAndServices › In-house LFP cells (Chuzhou), captive to the Elementa line rather than sold merchant"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**BYD**",
+     "FY2025 · 2025-12-31",
+     "111,859.8",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "60",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "FY2025 · 2025-12-31",
+     "58,951",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com); cross-checks against this dossier’s own \"~US$10B\" beside RMB 72.2B net profit",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "FY2024 · 2024-12-31",
+     "1,800",
+     "as stated in this dossier's own reporting (RMB 12.917B ≈ US$1.8B)",
+     "35.1",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "FY2025 · 2025-12-31",
+     "16,651.7",
+     "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "140",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "FY2025 · 2025-12-31",
+     "8,552.6",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "FY2025 · 2025-12-31",
+     "6,270.8",
+     "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Narada**",
+     "FY2025 · 2025-12-31",
+     "1,039.5",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**REPT BATTERO**",
+     "FY2025 · 2025-12-31",
+     "3,385.7",
+     "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "82.7",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "FY2025 · 2025-12-31",
+     "9,335.3",
+     "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "FY2025 · 2025-12-31",
+     "8,799.7",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "25.6",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Canadian Solar**",
+     "FY2025 · 2025-12-31",
+     "5,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "FY2025 · 2025-12-31",
+     "94,830",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Envision, Form Energy, Panasonic, Trina Storage"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**BYD**",
+     "**CATL**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**REPT BATTERO**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "LFP cells"
+    ],
+    [
+     "**CATL**",
+     "**BYD**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**EVE Energy**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**LG Energy Solution**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Samsung SDI**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "LFP cells"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**EVE Energy**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Panasonic**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "ESS cells ex-Malaysia",
+     "ESS cells"
+    ],
+    [
+     "**Envision**",
+     "**BYD**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**CATL**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Canadian Solar**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Narada**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**REPT BATTERO**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Sunwoda**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "~10 suits >RMB 240M; Top-2 vs #1 in 2025 shipments",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "$4.3B; production from 2027",
+     "Megapack 3 LFP cells"
+    ],
+    [
+     "**Narada**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Panasonic**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Panasonic**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "~41 GWh/yr 2170 anchor volume",
+     "2170 cells"
+    ],
+    [
+     "**REPT BATTERO**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**REPT BATTERO**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "27.1% vs 6.8% of global storage cell shipments, H1 2026",
+     "—"
+    ],
+    [
+     "**REPT BATTERO**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**REPT BATTERO**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**REPT BATTERO**",
+     "**Gotion High-Tech**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**REPT BATTERO**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "**Panasonic**",
+     "competitor",
+     "active",
+     "—",
+     "BBU"
+    ],
+    [
+     "**Samsung SDI**",
+     "**Tesla**",
+     "customer",
+     "announced",
+     "~10 GWh/yr (reported talks)",
+     "LFP ESS cells"
+    ],
+    [
+     "**Sunwoda**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "684 Ah cell"
+    ],
+    [
+     "**Sunwoda**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "684 Ah cell"
+    ],
+    [
+     "**Sunwoda**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "EV cells"
+    ],
+    [
+     "**Tesla**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**CATL**",
+     "supplier",
+     "active",
+     "Primary storage-cell source",
+     "Megapack"
+    ],
+    [
+     "**Tesla**",
+     "**EVE Energy**",
+     "supplier",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**LG Energy Solution**",
+     "supplier",
+     "active",
+     "$4.3B",
+     "Megapack 3"
+    ],
+    [
+     "**Tesla**",
+     "**Panasonic**",
+     "supplier",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**Samsung SDI**",
+     "supplier",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**Sunwoda**",
+     "supplier",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trina Storage**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trina Storage**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "Elementa 3"
+    ],
+    [
+     "**Trina Storage**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "Sinexcel",
+     "competitor",
+     "—",
+     "—",
+     "Chess Plus"
+    ],
+    [
+     "**BYD**",
+     "Sungrow",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "Sungrow",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**BYD**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**CATL**",
+     "supplier",
+     "active",
+     "20 GWh",
+     "314/587 Ah cells"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Hithium**",
+     "supplier",
+     "active",
+     "≥120 GWh through 2030",
+     "314/587/1,175 Ah cells"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Canadian Solar**",
+     "Fluence",
+     "competitor",
+     "—",
+     "—",
+     "SolBank 4.0"
+    ],
+    [
+     "**Canadian Solar**",
+     "HyperStrong",
+     "competitor",
+     "—",
+     "—",
+     "SolBank 4.0"
+    ],
+    [
+     "**Canadian Solar**",
+     "Sungrow",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**EVE Energy**",
+     "FlexGen",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "Fluence",
+     "customer",
+     "active",
+     "—",
+     "AESC LFP cells (Smyrna)"
+    ],
+    [
+     "**Envision**",
+     "Prevalon",
+     "customer",
+     "active",
+     "10 GWh / 3 years",
+     "AESC cells and modules"
+    ],
+    [
+     "**Envision**",
+     "Sungrow",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**CATL**",
+     "supplier",
+     "historical",
+     "10 GWh multi-year",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Hithium**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "TENER Stack"
+    ],
+    [
+     "**Fluence**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Form Energy**",
+     "GE Vernova",
+     "investor",
+     "active",
+     "—",
+     "Series F and Series G participation plus a strategic memorandum of understanding"
+    ],
+    [
+     "**Hithium**",
+     "ON.energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "Sungrow",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**HyperStrong**",
+     "**CATL**",
+     "supplier",
+     "active",
+     "≥200 GWh (2026-28) + 60 GWh sodium-ion",
+     "—"
+    ],
+    [
+     "**HyperStrong**",
+     "**EVE Energy**",
+     "supplier",
+     "active",
+     "50 GWh",
+     "—"
+    ],
+    [
+     "**HyperStrong**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "FlexGen",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "Fluence",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LS-ES**",
+     "**Samsung SDI**",
+     "supplier",
+     "active",
+     "—",
+     "E4D NMC cells"
+    ],
+    [
+     "**LS-ES**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**CATL**",
+     "supplier",
+     "historical",
+     "~320 MWh LatAm fleet",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Prevalon**",
+     "**REPT BATTERO**",
+     "supplier",
+     "historical",
+     "2.5 GWh LOI for US deployments in 2024, within a stated 10 GWh Americas target",
+     "—"
+    ]
+   ],
+   "note": "Curated edges among members: 68 · to the neighbouring segments: 60 (the first 40 shown, by company) · derived-only mentions (no curated typing): 6 among members, 5 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-08 — BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
+     "sub": "BYD · regulatory"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-01 — CSRC accepts a filing for a second H-share full circulation — 676,172,244 domestic unlisted shares, about 48.21% of that class, to convert to H shares",
+     "sub": "REPT BATTERO · corporate"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-28 — H1 2026: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%); Q2 net profit RMB 8.2B (+29.8%), the first quarterly growth in five quarters; overseas revenue above half of the total for the first time",
+     "sub": "BYD · financial"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-26 — REPT reports retaining first place globally in residential storage cell shipments for H1 2026",
+     "sub": "REPT BATTERO · market"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-26 — H1 2026 results — revenue RMB 14,915.6m (+57.2%), gross margin 13.3%, profit RMB 778.3m against a RMB 62.7m loss a year earlier",
+     "sub": "REPT BATTERO · financial"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-25 — Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
+     "sub": "Gotion High-Tech · leadership"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-25 — H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
+     "sub": "Gotion High-Tech · financial"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-25 — Board authorises management to sell listed equity holdings opportunistically, up to 15% of net assets attributable to the parent — roughly RMB 4.37bn — over twelve months",
+     "sub": "Gotion High-Tech · corporate"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-21 — Benchmark places BYD #1 in H1 2026 BESS system-integrator shipments at 9.1% of 313 GWh and #4 in cells at 6.7% of 490 GWh; InfoLink also ranks BYD #1 in systems",
+     "sub": "BYD · market-position"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-20 — First grid-connected storage project in Japan delivered — 1.99 MW / 8.35 MWh at Kanuma City, Tochigi, on 417 kWh liquid-cooled outdoor cabinets",
+     "sub": "REPT BATTERO · project"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-20 — USITC institutes Section 337 investigation 337-TA-1518 over five US patents; ten respondents including Bosch, Koki Holdings and Chervon",
+     "sub": "EVE Energy · regulatory"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-19 — H1 2026: revenue RMB 45.691B (+62.20%), net profit RMB 3.301B (+105.66%), storage revenue RMB 15.094B (+69.15%) at 12.51% gross margin; interim dividend RMB 2.3 per 10 shares",
+     "sub": "EVE Energy · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Brazil forced-labour registry and labour prosecution",
+     "in-effect",
+     "2026-04-07",
+     "BYD"
+    ],
+    [
+     "China battery export controls",
+     "in-effect",
+     "—",
+     "Hithium"
+    ],
+    [
+     "DoD 1260H list",
+     "in-effect",
+     "2026-06-08",
+     "EVE Energy"
+    ],
+    [
+     "DoD 1260H listing",
+     "in-effect",
+     "2025-01",
+     "CATL"
+    ],
+    [
+     "DoD §1260H Chinese military companies list",
+     "in-effect",
+     "2026-06-08",
+     "BYD"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "—",
+     "Hithium"
+    ],
+    [
+     "Federal energy demonstration funding",
+     "in-effect",
+     "2024-09-20",
+     "Form Energy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "Canadian Solar, Envision, Hithium, LG Energy Solution, Narada, Samsung SDI, Sunwoda, Tesla"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Trina Storage"
+    ],
+    [
+     "IRA domestic content bonus",
+     "in-effect",
+     "—",
+     "Canadian Solar"
+    ],
+    [
+     "IRA sourcing rules",
+     "in-effect",
+     "—",
+     "CATL"
+    ],
+    [
+     "IRA §30D clean vehicle credit",
+     "expired",
+     "2025-09-30",
+     "Gotion High-Tech"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Form Energy, LG Energy Solution, Panasonic, Samsung SDI"
+    ],
+    [
+     "Lists BYD is NOT on",
+     "in-effect",
+     "2026-07-31",
+     "BYD"
+    ],
+    [
+     "Lists Gotion is NOT on",
+     "in-effect",
+     "2026-07-31",
+     "Gotion High-Tech"
+    ],
+    [
+     "NDAA §154",
+     "announced",
+     "2027-10",
+     "CATL"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "—",
+     "Narada"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "2027-10",
+     "Envision"
+    ],
+    [
+     "NDAA §154 Department of Defense procurement ban",
+     "announced",
+     "2027-10-01",
+     "BYD, EVE Energy, Gotion High-Tech"
+    ],
+    [
+     "NDAA §154 procurement ban (FY2024) and §842 (FY2026)",
+     "announced",
+     "2027-10-01",
+     "REPT BATTERO"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Canadian Solar, Narada, Trina Storage"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01",
+     "Sunwoda"
+    ],
+    [
+     "State utility cost recovery",
+     "in-effect",
+     "2023-07-06",
+     "Form Energy"
+    ],
+    [
+     "US domestic content bonus and §30D clean vehicle credit",
+     "in-effect",
+     "2024-01-01",
+     "REPT BATTERO"
+    ],
+    [
+     "US EV tax credits",
+     "expired",
+     "—",
+     "Panasonic"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "Panasonic"
+    ],
+    [
+     "US patent litigation — ITC Section 337 and E.D. Texas",
+     "in-effect",
+     "2026-08-20",
+     "EVE Energy"
+    ],
+    [
+     "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
+     "in-effect",
+     "2025-07-04",
+     "Gotion High-Tech, REPT BATTERO"
+    ],
+    [
+     "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
+     "in-effect",
+     "2026-01-01",
+     "BYD"
+    ],
+    [
+     "US state-level incentive clawback and local litigation",
+     "in-effect",
+     "2025-09-17",
+     "Gotion High-Tech"
+    ],
+    [
+     "US tariffs on Chinese battery products",
+     "in-effect",
+     "2026-01-01",
+     "REPT BATTERO"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "CATL, EVE Energy, Hithium, Tesla"
+    ],
+    [
+     "West Virginia incentive package",
+     "in-effect",
+     "2022-12-22",
+     "Form Energy"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *From Cell to Container* · *Duration, Degradation, and the Twenty-Year Promise* · *From Powder to Cell: Manufacturing, Formats, and Yield* (planned) · *Long Duration, Sodium, and the Engine Boundary* (planned) · *Four Levers and One Order* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** BYD, CATL, Hithium, LG Energy Solution, Envision, EVE Energy, Form Energy, Gotion High-Tech, Narada, REPT BATTERO, Samsung SDI, Sunwoda, Canadian Solar, Panasonic, Tesla, Trina Storage — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **BYD** in (among others)?",
+     "c": [
+      "Assurance",
+      "Cells and chemistry",
+      "Capital",
+      "Utilities"
+     ],
+     "a": 1,
+     "why": "The registry's basis line: productsAndServices › Storage cells — Blade LFP (FinDreams Battery); ecosystemRole: top-tier in every storage ranking"
+    },
+    {
+     "q": "What role does the registry give **Trina Storage** in Cells and chemistry?",
+     "c": [
+      "challenger",
+      "incumbent",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Cells and chemistry** buy on, per the registry?",
+     "c": [
+      "Time to power and the landlord's ability to deliver critical IT MW on schedule",
+      "Commissioning record (L1–L5) and reliability engineering",
+      "Cost per kW and heat rate at the real operating point (part load, hot thin air)",
+      "Cycle life and calendar life against the warranty curve"
+     ],
+     "a": 3,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **downstream** of Cells and chemistry?",
+     "c": [
+      "AIDC developers and landlords",
+      "Neoclouds",
+      "Storage integrators and containers",
+      "Insurance and risk transfer"
+     ],
+     "a": 2,
+     "why": "This segment is the first link; position 2 follows it."
+    },
+    {
+     "q": "The graph records a curated edge from **BYD** to **CATL**. How is it typed from BYD's side?",
+     "c": [
+      "partner",
+      "investor",
+      "customer",
+      "competitor"
+     ],
+     "a": 3,
+     "why": "Competes with CATL both as cell merchant and as system vendor — HaoHan 14.5 MWh vs TENER 6.25 MWh, Blade LFP vs CATL cells at the same Tesla account."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentStorageIntegratorsAndContainers_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-storage-integrators-and-containers",
+ "type": "module",
+ "title": "Storage integrators and containers",
+ "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-10-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:byd",
+    "date": "2026-09-08",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:canadian-solar",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:caterpillar",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:catl",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:crrc-zhuzhou",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cummins",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eaton",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:envision-energy",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flexgen",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluence",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ge-vernova",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hithium",
+    "date": "2026-09-07",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:huawei-digital-power",
+    "date": "2026-09-07",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hyperstrong",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:jinko",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lg-energy-solution",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ls-energy-solutions",
+    "date": "2026-08-30",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:narada",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:on-energy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:prevalon",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rolls-royce-power-systems",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:samsung-sdi",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sinexcel",
+    "date": "2026-09-08",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sungrow",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sunwoda",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tesla",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:trina-storage",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vertiv",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:wartsila",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "29",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "10",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "8",
+   "v": "challengers",
+   "sub": "contesting that set; 11 adjacent"
+  },
+  {
+   "k": "128",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with a warranty, an LTSA and a bankability score. What a developer or utility actually buys when it buys a battery.",
+    "Chain position 2 of 19 · tier **supply** — makes the thing."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 1)",
+     "Cells and chemistry",
+     "supply"
+    ],
+    [
+     "**This segment** (position 2)",
+     "**Storage integrators and containers**",
+     "supply"
+    ],
+    [
+     "Downstream (position 3)",
+     "Power conversion and rack-power silicon",
+     "supply"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Storage developers and IPPs (48 edges) · AIDC developers and landlords (20 edges) · Utilities (12 edges) · Clean firm and nuclear (10 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (6 edges) · Capital (5 edges) · Grid equipment (3 edges) · EPC and construction (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "In-hall power (8 edges) · Cells and chemistry (7 edges) · Assurance (5 edges) · Software and optimization (5 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Bankability — Wood Mackenzie / BNEF ranking and independent-engineer acceptance",
+     "*The Independent Engineer's Report* (planned)"
+    ],
+    [
+     "Installed cost per kWh and site density (MWh per acre)",
+     "*From Cell to Container*"
+    ],
+    [
+     "Warranty, energy-retention curve and long-term service agreement",
+     "—"
+    ],
+    [
+     "Domestic content and prohibited-foreign-entity exposure of the cell inside",
+     "*From Cell to Container*"
+    ],
+    [
+     "Delivery slot and the factory's location",
+     "—"
+    ],
+    [
+     "UL 9540A / NFPA 855 file and the vendor's fire record",
+     "*Listing, Test Method, Code* (planned)"
+    ],
+    [
+     "Grid-forming capability and EMS/trading integration",
+     "*The Control Stack: BMS, PCS, EMS — Who Decides What*"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**BYD**",
+     "byd",
+     "incumbent",
+     "ecosystemRole: Benchmark ranked BYD the #1 global BESS system integrator for 2025 (~60 GWh, 13% share)"
+    ],
+    [
+     "**Canadian Solar**",
+     "canadian-solar",
+     "incumbent",
+     "ecosystemRole: ranks in Wood Mackenzie's 2026 global top-10 on bankability while outside the volume top-5; e-STORAGE SolBank"
+    ],
+    [
+     "**CATL**",
+     "catl",
+     "incumbent",
+     "productsAndServices › Utility-scale storage (TENER family); sole BESS supplier (19 GWh) for Masdar's 5.2 GW project"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "crrc-zhuzhou",
+     "incumbent",
+     "ecosystemRole: a top-tier BESS integrator dominating the world's largest domestic market — no US office, no US channel, no FEOC workaround attempted"
+    ],
+    [
+     "**Envision**",
+     "envision-energy",
+     "incumbent",
+     "registry tagline and ecosystemRole: Wood Mackenzie tied-#5 integrator; Gen 8 platform"
+    ],
+    [
+     "**Fluence**",
+     "fluence",
+     "incumbent",
+     "ecosystemRole: one of the two leading Western system integrators (with Tesla); #7 in Wood Mackenzie's ranking; $6.4B backlog"
+    ],
+    [
+     "**HyperStrong**",
+     "hyperstrong",
+     "incumbent",
+     "registry tagline: China's grid-side integration specialist; ecosystemRole: domestic dominance and a genuine European beachhead; ~10 GWh of 2026 overseas orders"
+    ],
+    [
+     "**Sungrow**",
+     "sungrow",
+     "incumbent",
+     "ecosystemRole: No. 1 in Wood Mackenzie's Global BESS Integrator Comprehensive Ranking (2026 edition); 43 GWh shipped in 2025"
+    ],
+    [
+     "**Tesla**",
+     "tesla",
+     "incumbent",
+     "ecosystemRole: the leading Western BESS integrator — #1 global for 2024, #2 in the 2026 ranking behind Sungrow"
+    ],
+    [
+     "**Wärtsilä**",
+     "wartsila",
+     "incumbent",
+     "ecosystemRole: one of the established Western storage integrators — >19 GWh deployed or contracted; global top-ten in Wood Mackenzie's ranking"
+    ],
+    [
+     "**Hithium**",
+     "hithium",
+     "challenger",
+     "productsAndServices › Containerized utility-scale systems (∞Block / ∞Power); US module + system plant in Mesquite TX; US access runs through battery-buying owners"
+    ],
+    [
+     "**Jinko**",
+     "jinko",
+     "challenger",
+     "ecosystemRole: a PV giant becoming a storage challenger — BNEF Tier-1 ESS maker but absent from top-10 BESS integrator rankings"
+    ],
+    [
+     "**LG Energy Solution**",
+     "lg-energy-solution",
+     "challenger",
+     "productsAndServices › LG Energy Solution Vertech (US BESS integrator): turnkey grid-scale BESS from the 2022 NEC acquisition"
+    ],
+    [
+     "**LS-ES**",
+     "ls-energy-solutions",
+     "challenger",
+     "ecosystemRole: the quiet Korean-owned mid-tier option — Korean cells, US PCS heritage, no new US wins in over a year and a half"
+    ],
+    [
+     "**Prevalon**",
+     "prevalon",
+     "challenger",
+     "ecosystemRole: a Western mid-tier integrator converting the FEOC regime into positioning; 10 GWh of US-made AESC cells locked"
+    ],
+    [
+     "**Samsung SDI**",
+     "samsung-sdi",
+     "challenger",
+     "productsAndServices › ESS — Samsung Battery Box (SBB) line, all-in-one 20-ft DC containers"
+    ],
+    [
+     "**Sunwoda**",
+     "sunwoda",
+     "challenger",
+     "registry tagline: ~#9 integrator at 25.6 GWh (+188%); NoahX containerized platform"
+    ],
+    [
+     "**Trina Storage**",
+     "trina-storage",
+     "challenger",
+     "ecosystemRole: sold its US plant and retreated to import-plus-services; betting bankability over volume in Europe and Asia"
+    ],
+    [
+     "**Caterpillar**",
+     "caterpillar",
+     "adjacent",
+     "productsAndServices › Cat Energy Storage Systems, microgrid controls and hybrid solutions (launched January 2025)"
+    ],
+    [
+     "**Cummins**",
+     "cummins",
+     "adjacent",
+     "productsAndServices › Battery energy storage systems — 211 kWh to 2,280 kWh catalogue, 5 MWh data-center block (launched March 2025)"
+    ],
+    [
+     "**Eaton**",
+     "eaton",
+     "adjacent",
+     "productsAndServices › On-site generation & energy storage (Siemens Energy alliance, xStorage)"
+    ],
+    [
+     "**FlexGen**",
+     "flexgen",
+     "adjacent",
+     "ecosystemRole: positioned around hardware-agnostic software and services rather than factory-built AC blocks; services the ex-Powin fleet"
+    ],
+    [
+     "**GE Vernova**",
+     "ge-vernova",
+     "adjacent",
+     "productsAndServices › BESS & solar (FLEXRESERVOIR, RESTORE DC Block)"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "huawei-digital-power",
+     "adjacent",
+     "productsAndServices › FusionSolar Smart PV & grid-forming ESS (LUTERRA); US-banned — the dossier centres it on AIDC power"
+    ],
+    [
+     "**Narada**",
+     "narada",
+     "adjacent",
+     "productsAndServices › Center L utility BESS family; ecosystemRole: assessed as a cautionary comparable rather than a live US containerized-BESS rival"
+    ],
+    [
+     "**ON.energy**",
+     "on-energy",
+     "adjacent",
+     "productsAndServices › Legacy merchant BESS & LatAm integration franchise; the pivot product is the AI UPS"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "rolls-royce-power-systems",
+     "adjacent",
+     "productsAndServices › mtu EnergyPack — battery energy storage, cabinet to grid scale"
+    ],
+    [
+     "**Sinexcel**",
+     "sinexcel",
+     "adjacent",
+     "productsAndServices › Energy storage PCS & containerized systems (StellaON); the core business is the PCS"
+    ],
+    [
+     "**Vertiv**",
+     "vertiv",
+     "adjacent",
+     "productsAndServices › Energy storage (DynaFlex BESS, EnergyCore Grid) — 1.5–6 MW class, diesel-generator replacement"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**BYD**",
+     "FY2025 · 2025-12-31",
+     "111,859.8",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "60",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Canadian Solar**",
+     "FY2025 · 2025-12-31",
+     "5,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "FY2025 · 2025-12-31",
+     "58,951",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com); cross-checks against this dossier’s own \"~US$10B\" beside RMB 72.2B net profit",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "FY2025 · 2025-09-30",
+     "2,300",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "FY2025 · 2025-12-31",
+     "12,408",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "43",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "FY2025 · 2025-12-31",
+     "94,830",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "FY2024 · 2024-12-31",
+     "1,800",
+     "as stated in this dossier's own reporting (RMB 12.917B ≈ US$1.8B)",
+     "35.1",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "FY2025 · 2025-12-31",
+     "9,370",
+     "as stated in this dossier's own reporting (RMB 65.50B / $9.37B)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "FY2025 · 2025-12-31",
+     "16,651.7",
+     "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "140",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "FY2025 · 2025-12-31",
+     "9,335.3",
+     "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "FY2025 · 2025-12-31",
+     "8,799.7",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "25.6",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Caterpillar**",
+     "FY2025 · 2025-12-31",
+     "67,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Cummins**",
+     "FY2025 · 2025-12-31",
+     "33,700",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "FY2025 · 2025-12-31",
+     "27,400",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "FY2025 · 2025-12-31",
+     "38,100",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Narada**",
+     "FY2025 · 2025-12-31",
+     "1,039.5",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "FY2025 · 2025-12-31",
+     "481.8",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "FY2025 · 2025-12-31",
+     "10,230",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "CRRC Zhuzhou, Envision, HyperStrong, Wärtsilä, LS-ES, Prevalon, Trina Storage, FlexGen, Huawei Digital Power, ON.energy, Rolls-Royce Power Systems"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**BYD**",
+     "**CATL**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Sinexcel**",
+     "competitor",
+     "—",
+     "—",
+     "Chess Plus"
+    ],
+    [
+     "**BYD**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "LFP cells"
+    ],
+    [
+     "**CATL**",
+     "**BYD**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**LG Energy Solution**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Samsung SDI**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "LFP cells"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**BYD**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**CATL**",
+     "supplier",
+     "active",
+     "20 GWh",
+     "314/587 Ah cells"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Hithium**",
+     "supplier",
+     "active",
+     "≥120 GWh through 2030",
+     "314/587/1,175 Ah cells"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**HyperStrong**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Fluence**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank 4.0"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**Canadian Solar**",
+     "**HyperStrong**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank 4.0"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**Caterpillar**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**FlexGen**",
+     "other",
+     "historical",
+     "$25.5M Series A (with Altira and GE Ventures)",
+     "Caterpillar Ventures Series A participation"
+    ],
+    [
+     "**Caterpillar**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
+    ],
+    [
+     "**Caterpillar**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-speed gas engines for data-center prime power"
+    ],
+    [
+     "**Cummins**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "Wartsila: 2 GW of US orders since 2025 against Cummins' 20 GW capacity addition",
+     "Behind-the-meter prime power"
+    ],
+    [
+     "**Eaton**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**BYD**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**CATL**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Fluence**",
+     "customer",
+     "active",
+     "—",
+     "AESC LFP cells (Smyrna)"
+    ],
+    [
+     "**Envision**",
+     "**Hithium**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Prevalon**",
+     "customer",
+     "active",
+     "10 GWh / 3 years",
+     "AESC cells and modules"
+    ],
+    [
+     "**Envision**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**CATL**",
+     "supplier",
+     "historical",
+     "10 GWh multi-year",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Hithium**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "TENER Stack"
+    ],
+    [
+     "**Fluence**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "PowerTitan 3.0"
+    ],
+    [
+     "**Fluence**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "~10 suits >RMB 240M; Top-2 vs #1 in 2025 shipments",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**ON.energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**CRRC Zhuzhou**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Sinexcel**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**HyperStrong**",
+     "**CATL**",
+     "supplier",
+     "active",
+     "≥200 GWh (2026-28) + 60 GWh sodium-ion",
+     "—"
+    ],
+    [
+     "**HyperStrong**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jinko**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**FlexGen**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "$4.3B; production from 2027",
+     "Megapack 3 LFP cells"
+    ],
+    [
+     "**LS-ES**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LS-ES**",
+     "**Samsung SDI**",
+     "supplier",
+     "active",
+     "—",
+     "E4D NMC cells"
+    ],
+    [
+     "**LS-ES**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Narada**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**CATL**",
+     "supplier",
+     "historical",
+     "~320 MWh LatAm fleet",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "5 GW of pad-mount transformers",
+     "pad-mount transformers"
+    ],
+    [
+     "**ON.energy**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Prevalon**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "10 GWh shared domestic-cell route",
+     "—"
+    ],
+    [
+     "**Prevalon**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "HD5 AC"
+    ],
+    [
+     "**Prevalon**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "—",
+     "HD5 AC"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**CATL**",
+     "supplier",
+     "announced",
+     "43 MW / 86 MWh Voltaria Helios project",
+     "mtu EnergyPack cells"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "Wartsila 790 MW Texas data-center order, April 2026",
+     "Behind-the-meter prime power"
+    ],
+    [
+     "**Samsung SDI**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "**Tesla**",
+     "customer",
+     "announced",
+     "~10 GWh/yr (reported talks)",
+     "LFP ESS cells"
+    ],
+    [
+     "**Sinexcel**",
+     "**BYD**",
+     "customer",
+     "active",
+     "—",
+     "battery formation & test equipment"
+    ],
+    [
+     "**Sinexcel**",
+     "**CATL**",
+     "customer",
+     "active",
+     "—",
+     "battery formation & test equipment"
+    ],
+    [
+     "**Sinexcel**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "**Vertiv**",
+     "customer",
+     "announced",
+     "—",
+     "36 kW HVDC rectifier module"
+    ],
+    [
+     "**Sungrow**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "PowerTitan 3.0"
+    ],
+    [
+     "**Sungrow**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "**Huawei Digital Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "**Sinexcel**",
+     "competitor",
+     "active",
+     "—",
+     "PowerStack"
+    ],
+    [
+     "**Sungrow**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "PowerTitan 3.0"
+    ],
+    [
+     "**Sunwoda**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "684 Ah cell"
+    ],
+    [
+     "**Sunwoda**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "**Sungrow**",
+     "customer",
+     "active",
+     "—",
+     "storage cells"
+    ],
+    [
+     "**Sunwoda**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "EV cells"
+    ],
+    [
+     "**Tesla**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**CATL**",
+     "supplier",
+     "active",
+     "Primary storage-cell source",
+     "Megapack"
+    ],
+    [
+     "**Tesla**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**LG Energy Solution**",
+     "supplier",
+     "active",
+     "$4.3B",
+     "Megapack 3"
+    ],
+    [
+     "**Tesla**",
+     "**Samsung SDI**",
+     "supplier",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "**Sunwoda**",
+     "supplier",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trina Storage**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trina Storage**",
+     "**FlexGen**",
+     "partner",
+     "active",
+     "371 MWh",
+     "DC blocks"
+    ],
+    [
+     "**Trina Storage**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "Elementa 3"
+    ],
+    [
+     "**Trina Storage**",
+     "**HyperStrong**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trina Storage**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trina Storage**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Sinexcel**",
+     "supplier",
+     "announced",
+     "—",
+     "36 kW HVDC rectifier modules"
+    ],
+    [
+     "**Wärtsilä**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Wärtsilä**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Wärtsilä**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Wärtsilä**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "Quantum3"
+    ],
+    [
+     "**ABB**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "REPT BATTERO",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "EVE Energy",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "Zhonhen Electric",
+     "portfolio",
+     "announced",
+     "RMB 4,099,858,823.53 for 49.00% of the controlling holdco",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**GE Vernova**",
+     "competitor",
+     "—",
+     "—",
+     "solid-state transformers"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**FlexGen**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "ESS cells ex-Malaysia",
+     "ESS cells"
+    ],
+    [
+     "**Eaton**",
+     "ABB",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "Flex",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ],
+    [
+     "**Eaton**",
+     "Schneider Electric",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**Fluence**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "136 MW reference facility design",
+     "Smartstack"
+    ],
+    [
+     "**Form Energy**",
+     "**GE Vernova**",
+     "investor",
+     "active",
+     "—",
+     "Series F and Series G participation plus a strategic memorandum of understanding"
+    ],
+    [
+     "**GE Vernova**",
+     "Hitachi Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC reference designs"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Canadian Solar**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Narada**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Sunwoda**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "EVE Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "ABB",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "Megmeet",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**HyperStrong**",
+     "EVE Energy",
+     "supplier",
+     "active",
+     "50 GWh",
+     "—"
+    ]
+   ],
+   "note": "Curated edges among members: 128 · to the neighbouring segments: 81 (the first 40 shown, by company) · derived-only mentions (no curated typing): 9 among members, 28 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-08 — BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
+     "sub": "BYD · regulatory"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
+     "sub": "Sungrow · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
+     "sub": "Rolls-Royce Power Systems · product-launch"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
+     "sub": "Sungrow · financial"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
+     "sub": "Caterpillar · capacity"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-28 — H1 2026: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%); Q2 net profit RMB 8.2B (+29.8%), the first quarterly growth in five quarters; overseas revenue above half of the total for the first time",
+     "sub": "BYD · financial"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-26 — US Executive Order 14420 declares a national emergency over the bulk-power system, reaching foreign-made grid equipment at 69 kV and above including storage; Sungrow shares fall more than 11% the following day",
+     "sub": "Sungrow · policy"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-24 — James Hopkins promoted to VP, Financial Planning, Capital Management and Investor Relations effective 2026-09-01, reporting to CFO Mark Smith; Nick Arens now reports to Hopkins",
+     "sub": "Cummins · leadership"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-21 — Benchmark places BYD #1 in H1 2026 BESS system-integrator shipments at 9.1% of 313 GWh and #4 in cells at 6.7% of 490 GWh; InfoLink also ranks BYD #1 in systems",
+     "sub": "BYD · market-position"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-20 — FCC second national security determination (DA 26-870) narrows the covered device class to UL 1741 utility-interactive inverters while extending the connectivity prong to connections \"whether wired or wireless\", and removes §45X-eligible inverters from the Covered List",
+     "sub": "Sungrow · regulatory"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-18 — Parent LS ELECTRIC wins a $34M Bloom Energy power order for a hyperscale data center in Wyoming (repeat order) and posts record Q2 2026 results (revenue ~KRW 1.58T, operating profit ~KRW 179B)",
+     "sub": "LS-ES · partnership"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-18 — Selected to supply battery energy storage for a large US data-center project — 5 MWh nominal LFP blocks, the largest BESS deployment in company history; customer, location and value undisclosed",
+     "sub": "Cummins · order-win"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "AD/CVD",
+     "in-effect",
+     "—",
+     "Jinko"
+    ],
+    [
+     "Alternative-fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Cummins"
+    ],
+    [
+     "Brazil forced-labour registry and labour prosecution",
+     "in-effect",
+     "2026-04-07",
+     "BYD"
+    ],
+    [
+     "China anti-involution policy",
+     "in-effect",
+     "—",
+     "Jinko"
+    ],
+    [
+     "China battery export controls",
+     "in-effect",
+     "—",
+     "Hithium"
+    ],
+    [
+     "Cybersecurity regulation (IEC 62443 / NIS2)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "DoD 1260H listing",
+     "in-effect",
+     "—",
+     "CRRC Zhuzhou"
+    ],
+    [
+     "DoD 1260H listing",
+     "in-effect",
+     "2025-01",
+     "CATL"
+    ],
+    [
+     "DoD §1260H Chinese military companies list",
+     "in-effect",
+     "2026-06-08",
+     "BYD"
+    ],
+    [
+     "EPA / CARB / DOJ emissions Settlement Agreements",
+     "in-effect",
+     "2024-04",
+     "Cummins"
+    ],
+    [
+     "EPA 2027 on-highway emissions rules",
+     "proposed",
+     "2027-01",
+     "Cummins"
+    ],
+    [
+     "EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Cummins"
+    ],
+    [
+     "EPA stationary-engine rules (NSPS Subparts IIII/JJJJ, NESHAP ZZZZ)",
+     "in-effect",
+     "2013-01",
+     "Caterpillar"
+    ],
+    [
+     "ERCOT NOGRR 282",
+     "in-effect",
+     "—",
+     "ON.energy"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "—",
+     "Hithium"
+    ],
+    [
+     "EU Foreign Subsidies Regulation",
+     "in-effect",
+     "—",
+     "CRRC Zhuzhou"
+    ],
+    [
+     "EU high-risk inverter phase-out",
+     "announced",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "EU high-risk inverter phase-out",
+     "announced",
+     "2027-04",
+     "Sungrow"
+    ],
+    [
+     "EU Stage V",
+     "proposed",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "Executive Order 14420 (bulk-power system)",
+     "in-effect",
+     "2026-08-26",
+     "Sungrow"
+    ],
+    [
+     "FCC Covered List (power inverters)",
+     "in-effect",
+     "2026-07-28",
+     "Huawei Digital Power, Sungrow"
+    ],
+    [
+     "FEOC / NDAA Section 889 / UFLPA",
+     "proposed",
+     "—",
+     "Cummins"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "CRRC Zhuzhou, Canadian Solar, Envision, Fluence, Hithium, HyperStrong, LG Energy Solution, LS-ES, Narada, ON.energy, Samsung SDI, Sunwoda, Tesla, Wärtsilä"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Prevalon, Trina Storage"
+    ],
+    [
+     "German grid code VDE-AR-N 4110",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "German Power Plant Strategy",
+     "announced",
+     "2026-02",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "IRA domestic content bonus",
+     "in-effect",
+     "—",
+     "Canadian Solar"
+    ],
+    [
+     "IRA sourcing rules",
+     "in-effect",
+     "—",
+     "CATL"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Fluence, LG Energy Solution, Samsung SDI"
+    ],
+    [
+     "Lists BYD is NOT on",
+     "in-effect",
+     "2026-07-31",
+     "BYD"
+    ],
+    [
+     "NDAA §154",
+     "announced",
+     "2027-10",
+     "CATL"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "—",
+     "Narada"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "2027-10",
+     "Envision"
+    ],
+    [
+     "NDAA §154 Department of Defense procurement ban",
+     "announced",
+     "2027-10-01",
+     "BYD"
+    ],
+    [
+     "NDAA §889",
+     "in-effect",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "NFPA 110 and NFPA 855",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "Renewable fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Canadian Solar, Narada, Trina Storage"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01",
+     "Prevalon, Sunwoda"
+    ],
+    [
+     "State data-center siting and air-permit review",
+     "proposed",
+     "2026",
+     "Caterpillar"
+    ],
+    [
+     "TIVSA transit ban",
+     "in-effect",
+     "2020",
+     "CRRC Zhuzhou"
+    ],
+    [
+     "Uptime Institute Tier standards",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "US Entity List",
+     "in-effect",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "US EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "GE Vernova, Rolls-Royce Power Systems"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2025",
+     "Cummins"
+    ],
+    [
+     "US import tariffs (IEEPA and Section 232)",
+     "in-effect",
+     "2025",
+     "Caterpillar"
+    ],
+    [
+     "US offshore wind stop-work",
+     "in-effect",
+     "2025-12",
+     "GE Vernova"
+    ],
+    [
+     "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
+     "in-effect",
+     "2026-01-01",
+     "BYD"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "CATL, Fluence, Hithium, Tesla, Wärtsilä"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *From Cell to Container* · *The Spec Sheet, Decoded* · *The Control Stack: BMS, PCS, EMS — Who Decides What* · *The Independent Engineer's Report* (planned) · *Listing, Test Method, Code* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** BYD, Canadian Solar, CATL, CRRC Zhuzhou, Envision, Fluence, HyperStrong, Sungrow, Tesla, Wärtsilä, Hithium, Jinko, LG Energy Solution, LS-ES, Prevalon, Samsung SDI, Sunwoda, Trina Storage, Caterpillar, Cummins, Eaton, FlexGen, GE Vernova, Huawei Digital Power, Narada, ON.energy, Rolls-Royce Power Systems, Sinexcel, Vertiv — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **BYD** in (among others)?",
+     "c": [
+      "Cells and chemistry",
+      "In-hall power",
+      "Storage integrators and containers",
+      "Cooling"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: ecosystemRole: Benchmark ranked BYD the #1 global BESS system integrator for 2025 (~60 GWh, 13% share)"
+    },
+    {
+     "q": "What role does the registry give **Vertiv** in Storage integrators and containers?",
+     "c": [
+      "adjacent",
+      "challenger",
+      "incumbent"
+     ],
+     "a": 0,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Storage integrators and containers** buy on, per the registry?",
+     "c": [
+      "Bankability — Wood Mackenzie / BNEF ranking and independent-engineer acceptance",
+      "Fuel logistics and firm gas supply",
+      "Manufacturing location under the FCC inverter rule and EO 14420",
+      "Scope of the technical due diligence and the construction-monitoring sequence"
+     ],
+     "a": 0,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Storage integrators and containers?",
+     "c": [
+      "Cooling",
+      "Assurance",
+      "AIDC developers and landlords",
+      "Cells and chemistry"
+     ],
+     "a": 3,
+     "why": "Chain position 1 against this segment's 2."
+    },
+    {
+     "q": "The graph records a curated edge from **BYD** to **CATL**. How is it typed from BYD's side?",
+     "c": [
+      "portfolio",
+      "competitor",
+      "supplier",
+      "partner"
+     ],
+     "a": 1,
+     "why": "Competes with CATL both as cell merchant and as system vendor — HaoHan 14.5 MWh vs TENER 6.25 MWh, Blade LFP vs CATL cells at the same Tesla account."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-power-conversion-and-rack-power-silicon",
+ "type": "module",
+ "title": "Power conversion and rack-power silicon",
+ "short": "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:abb",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:delta-electronics",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eaton",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flex",
+    "date": "2026-09-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ge-vernova",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hitachi-energy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:huawei-digital-power",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:infineon",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:liteon",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ls-energy-solutions",
+    "date": "2026-08-30",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:megmeet",
+    "date": "2026-09-08",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nvidia",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:power-electronics",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:schneider-electric",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sinexcel",
+    "date": "2026-09-08",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sungrow",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tesla",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vicor",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:zhonhen",
+    "date": "2026-09-08",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "19",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "9",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "2",
+   "v": "challengers",
+   "sub": "contesting that set; 8 adjacent"
+  },
+  {
+   "k": "85",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU shelf in the rack, the bus converter and point-of-load regulator at the die, and the SiC/GaN silicon all of it is switched with. Sold as a separate purchase when a buyer unbundles conversion from storage, and as a qualified component inside the rack when NVIDIA's roster names the vendor.",
+    "Chain position 3 of 19 · tier **supply** — makes the thing."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 2)",
+     "Storage integrators and containers",
+     "supply"
+    ],
+    [
+     "**This segment** (position 3)",
+     "**Power conversion and rack-power silicon**",
+     "supply"
+    ],
+    [
+     "Downstream (position 4)",
+     "Grid equipment",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Storage developers and IPPs (23 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (15 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Neoclouds (6 edges) · Utilities (6 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Capital (2 edges) · Grid equipment (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Cells and chemistry (15 edges) · In-hall power (14 edges) · Storage integrators and containers (11 edges) · Assurance (3 edges) · Grid equipment (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · AIDC developers and landlords (1 edge) · Utilities (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Efficiency at the operating point (0.1 % is real money at utility scale, paid twice more in cooling)",
+     "*Rectifier, Inverter, DC-DC, Transformer* (planned)"
+    ],
+    [
+     "Grid-forming and ride-through capability (utility scale) or NVIDIA platform qualification (rack scale)",
+     "—"
+    ],
+    [
+     "Power density — kW per shelf, kW per rack, MW per skid",
+     "—"
+    ],
+    [
+     "Manufacturing location under the FCC inverter rule and EO 14420",
+     "*Rectifier, Inverter, DC-DC, Transformer* (planned)"
+    ],
+    [
+     "Second-source status and roadmap alignment (800 VDC, Vera Rubin)",
+     "*The 800 VDC Shift: Convert Once, Early, High*"
+    ],
+    [
+     "Patent position on bus conversion and vertical power delivery",
+     "*Rectifier, Inverter, DC-DC, Transformer* (planned)"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Delta Electronics**",
+     "delta-electronics",
+     "incumbent",
+     "ecosystemRole: the incumbent standard inside the NVIDIA rack — first-qualified power-shelf supplier for GB200/GB300; the only complete grid-to-chip 800 VDC stack"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "huawei-digital-power",
+     "incumbent",
+     "productsAndServices › FusionSolar: global #1 PV inverter franchise (176 GWac shipped 2024)"
+    ],
+    [
+     "**Infineon**",
+     "infineon",
+     "incumbent",
+     "ecosystemRole: the silicon layer of the AI data-centre power chain — SiC, GaN and silicon from the SST to the point of load; Gartner's 'company to beat'"
+    ],
+    [
+     "**LITEON**",
+     "liteon",
+     "incumbent",
+     "registry tagline: #2 in AI server power with the BBU franchise; ecosystemRole: the leading second source in NVIDIA-class rack power"
+    ],
+    [
+     "**Power Electronics**",
+     "power-electronics",
+     "incumbent",
+     "ecosystemRole: the conversion layer itself — no cells, no turnkey system; ~70 % of €1.3bn revenue in the US; grid forming as standard. No independent US PCS ranking exists (C7 verdict) — the position rests on Wood Mackenzie's CY2023 joint mention with Sungrow for solar central inverters"
+    ],
+    [
+     "**Sinexcel**",
+     "sinexcel",
+     "incumbent",
+     "ecosystemRole: one of China's leading third-party PCS suppliers for battery energy storage, with grid-forming capability"
+    ],
+    [
+     "**Sungrow**",
+     "sungrow",
+     "incumbent",
+     "ecosystemRole: No. 1 in Wood Mackenzie's Global PV Inverter Manufacturer ranking; in-house storage PCS; EnerNeo SST for 800 V HVDC"
+    ],
+    [
+     "**Vicor**",
+     "vicor",
+     "incumbent",
+     "ecosystemRole: this corpus's reference for the last centimetre — fixed-ratio bus converters and current multipliers, 128 patents; absent from every NVIDIA 800 VDC partner list"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "zhonhen",
+     "incumbent",
+     "registry tagline: China's data-center HVDC leader — #1 at 31 % share; the Panama one-stage 10 kV-to-DC conversion NVIDIA's August 2026 paper names"
+    ],
+    [
+     "**Flex**",
+     "flex",
+     "challenger",
+     "productsAndServices › Flex-branded rack and row power (power shelves to NVIDIA platform requirements, 800 VDC Power Rack); the pending $4.4bn EPC Power purchase"
+    ],
+    [
+     "**Megmeet**",
+     "megmeet",
+     "challenger",
+     "ecosystemRole: a power-conversion supplier converting an industrial base into AI data-center power; the only mainland vendor NVIDIA named for GB200 NVL72 power"
+    ],
+    [
+     "**ABB**",
+     "abb",
+     "adjacent",
+     "productsAndServices › 800 VDC / solid-state DC portfolio (NVIDIA collaboration): MVAC-to-LVDC converter, SACE Infinitus solid-state breaker"
+    ],
+    [
+     "**Eaton**",
+     "eaton",
+     "adjacent",
+     "productsAndServices › 800 VDC architecture & NVIDIA platform alignment; Resilient Power solid-state transformers"
+    ],
+    [
+     "**GE Vernova**",
+     "ge-vernova",
+     "adjacent",
+     "productsAndServices › Solid-state transformers & NVIDIA 800 VDC reference designs; FLEXINVERTER"
+    ],
+    [
+     "**Hitachi Energy**",
+     "hitachi-energy",
+     "adjacent",
+     "productsAndServices › Data-center offering — Grid-eXpand, 800 VDC, e-mesh BESS"
+    ],
+    [
+     "**LS-ES**",
+     "ls-energy-solutions",
+     "adjacent",
+     "productsAndServices › String PCS: AiON-SIS and MSSP GEN 2.0 (in-house, Parker heritage) inside its own AC block"
+    ],
+    [
+     "**NVIDIA**",
+     "nvidia",
+     "adjacent",
+     "productsAndServices › 800VDC Power Architecture Initiative — the buyer that prescribes the architecture and names the vendors"
+    ],
+    [
+     "**Schneider Electric**",
+     "schneider-electric",
+     "adjacent",
+     "productsAndServices › NVIDIA reference designs & AI-factory blueprints (grid to chip) — the design franchise, not a converter line"
+    ],
+    [
+     "**Tesla**",
+     "tesla",
+     "adjacent",
+     "productsAndServices › Megapack 3's silicon-carbide integrated inverter and the Megablock MV block — captive conversion"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Delta Electronics**",
+     "FY2025 · 2025-12-31",
+     "17,801.8",
+     "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Infineon**",
+     "FY2025 · 2025-09-30",
+     "16,217.6",
+     "EUR at 1.1061 USD/EUR (unweighted mean of European Central Bank daily reference rates over Infineon's FY2025, 2024-10-01 to 2025-09-30, 255 trading days)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**LITEON**",
+     "FY2025 · 2025-12-31",
+     "5,328.7",
+     "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Power Electronics**",
+     "FY2025 · 2025-12-31",
+     "1,468",
+     "EUR at 1.1296 USD/EUR (2025 calendar-year average, exchange-rates.org / exchangerates.org.uk); the company reports in euros for FY2024 and FY2025 and reported in US dollars for FY2023",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "FY2025 · 2025-12-31",
+     "481.8",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "FY2025 · 2025-12-31",
+     "12,408",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "43",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Vicor**",
+     "FY2025 · 2025-12-31",
+     "452.7",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "FY2025 · 2025-12-31",
+     "297.3",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "FY2026 · 2026-03-31",
+     "27,914",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "FY2025 · 2025-12-31",
+     "1,308.3",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "FY2025 · 2025-12-31",
+     "33,200",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "FY2025 · 2025-12-31",
+     "27,400",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "FY2025 · 2025-12-31",
+     "38,100",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "FY2025 · 2026-03-31",
+     "19,800",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**NVIDIA**",
+     "FY2026 · 2026-01-25",
+     "215,900",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "FY2025 · 2025-12-31",
+     "45,393.6",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "FY2025 · 2025-12-31",
+     "94,830",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Huawei Digital Power, LS-ES"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway and data-centre switchgear"
+    ],
+    [
+     "**ABB**",
+     "**Hitachi Energy**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "HiPerGuard + SACE Infinitus"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Delta Electronics**",
+     "**GE Vernova**",
+     "competitor",
+     "—",
+     "—",
+     "solid-state transformers"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Infineon**",
+     "supplier",
+     "active",
+     "—",
+     "Vertical power delivery modules"
+    ],
+    [
+     "**Delta Electronics**",
+     "**LITEON**",
+     "competitor",
+     "—",
+     "—",
+     "NVL72 power shelves"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Megmeet**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**NVIDIA**",
+     "customer",
+     "active",
+     "—",
+     "GB200/GB300 NVL72 power shelves"
+    ],
+    [
+     "**Eaton**",
+     "**ABB**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ],
+    [
+     "**Eaton**",
+     "**Schneider Electric**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Busway and data-centre switchgear"
+    ],
+    [
+     "**Flex**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**LITEON**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**Flex**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power system components"
+    ],
+    [
+     "**Flex**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**GE Vernova**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC reference designs"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC grid-to-rack architecture"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Megmeet**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Sinexcel**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Infineon**",
+     "**Delta Electronics**",
+     "partner",
+     "active",
+     "—",
+     "Vertical power delivery modules"
+    ],
+    [
+     "**Infineon**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power conversion silicon"
+    ],
+    [
+     "**Infineon**",
+     "**Tesla**",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Infineon**",
+     "**Vicor**",
+     "competitor",
+     "active",
+     "—",
+     "AI point-of-load power delivery"
+    ],
+    [
+     "**LITEON**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LITEON**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**LITEON**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "NVL72 power shelves"
+    ],
+    [
+     "**LITEON**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power components"
+    ],
+    [
+     "**LS-ES**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power system components"
+    ],
+    [
+     "**Megmeet**",
+     "**LITEON**",
+     "competitor",
+     "active",
+     "—",
+     "NVIDIA power shelves"
+    ],
+    [
+     "**Megmeet**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800V HVDC Sidecar"
+    ],
+    [
+     "**NVIDIA**",
+     "**ABB**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Delta Electronics**",
+     "supplier",
+     "active",
+     "~70% Blackwell PSU share (est.)",
+     "Blackwell-platform PSUs"
+    ],
+    [
+     "**NVIDIA**",
+     "**Eaton**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Flex**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**NVIDIA**",
+     "**GE Vernova**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Hitachi Energy**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Infineon**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power conversion silicon"
+    ],
+    [
+     "**NVIDIA**",
+     "**LITEON**",
+     "partner",
+     "active",
+     "—",
+     "Blackwell-platform PSUs"
+    ],
+    [
+     "**NVIDIA**",
+     "**Megmeet**",
+     "partner",
+     "active",
+     "—",
+     "GB200 NVL72 power"
+    ],
+    [
+     "**Power Electronics**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Gamesa Electric"
+    ],
+    [
+     "**Power Electronics**",
+     "**Flex**",
+     "competitor",
+     "announced",
+     "US$4.4bn acquisition of EPC Power",
+     "EPC Power"
+    ],
+    [
+     "**Power Electronics**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "EKS Energy"
+    ],
+    [
+     "**Power Electronics**",
+     "**Sinexcel**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Power Electronics**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "data-center UPS"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Huawei Digital Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "reference designs and AI-factory blueprints"
+    ],
+    [
+     "**Sinexcel**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "**Power Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sinexcel**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "**Huawei Digital Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "**Power Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sungrow**",
+     "**Sinexcel**",
+     "competitor",
+     "active",
+     "—",
+     "PowerStack"
+    ],
+    [
+     "**Sungrow**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "PowerTitan 3.0"
+    ],
+    [
+     "**Tesla**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vicor**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "Bus converter modules (BCM/NBM patents)"
+    ],
+    [
+     "**Vicor**",
+     "**Infineon**",
+     "competitor",
+     "active",
+     "—",
+     "AI point-of-load power delivery"
+    ],
+    [
+     "**Vicor**",
+     "**NVIDIA**",
+     "customer",
+     "historical",
+     "—",
+     "Power-on-Package current multipliers"
+    ],
+    [
+     "**Vicor**",
+     "**Tesla**",
+     "customer",
+     "historical",
+     "—",
+     "Power-on-Package current multipliers"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**ABB**",
+     "partner",
+     "active",
+     "—",
+     "HVDC / 800V DC"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**NVIDIA**",
+     "other",
+     "announced",
+     "—",
+     "Panama Architecture"
+    ],
+    [
+     "**ABB**",
+     "Mitsubishi Electric",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**ABB**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**ABB**",
+     "Siemens Energy",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "Vertiv",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Sinexcel**",
+     "competitor",
+     "—",
+     "—",
+     "Chess Plus"
+    ],
+    [
+     "**BYD**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**BYD**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "LFP cells"
+    ],
+    [
+     "**CATL**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CATL**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "LFP cells"
+    ],
+    [
+     "**CATL**",
+     "**Zhonhen Electric**",
+     "portfolio",
+     "announced",
+     "RMB 4,099,858,823.53 for 49.00% of the controlling holdco",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**Caterpillar**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
+    ],
+    [
+     "**Delta Electronics**",
+     "Vertiv",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "Mitsubishi Electric",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and transformers"
+    ],
+    [
+     "**Eaton**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Eaton**",
+     "Siemens Energy",
+     "partner",
+     "active",
+     "~500 MW plant template",
+     "~500 MW modular on-site power plants"
+    ],
+    [
+     "**Eaton**",
+     "Vertiv",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Sungrow**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Envision**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "Mitsubishi Electric",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Flex**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Vertically integrated data-centre power rooms"
+    ],
+    [
+     "**Flex**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**FlexGen**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "136 MW reference facility design",
+     "Smartstack"
+    ],
+    [
+     "**Fluence**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "PowerTitan 3.0"
+    ],
+    [
+     "**Fluence**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "Siemens Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "Siemens Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "BYD",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "CRRC Zhuzhou",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Infineon**",
+     "BYD",
+     "competitor",
+     "active",
+     "—",
+     "Power modules in China"
+    ],
+    [
+     "**Infineon**",
+     "Mitsubishi Electric",
+     "competitor",
+     "active",
+     "—",
+     "Power discretes and modules"
+    ]
+   ],
+   "note": "Curated edges among members: 85 · to the neighbouring segments: 108 (the first 40 shown, by company) · derived-only mentions (no curated typing): 32 among members, 16 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
+     "sub": "Sungrow · regulatory"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-04 — Flex agrees to acquire the US conversion manufacturer EPC Power for $4.4bn",
+     "sub": "Power Electronics · market"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-03 — Consensus for the 10 or 11 November Q4 FY2026 print stands at €4,704m of revenue and a 23.2% Segment Result margin",
+     "sub": "Infineon · corporate"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
+     "sub": "Flex · ma"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
+     "sub": "Sungrow · financial"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
+     "sub": "Zhonhen Electric · financial"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-27 — Board approves a $150 million share-repurchase authorization with no expiration, replacing the prior program (8-K, event date August 25, 2026)",
+     "sub": "Vicor · corporate"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-27 — Headquarters-base project deferred from September 2026 to December 2027",
+     "sub": "Megmeet · corporate"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-27 — H1 2026 interim: revenue +29.68%, headline profit +45.21%, ex-non-recurring profit −16.13%",
+     "sub": "Megmeet · financial"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-26 — US Executive Order 14420 declares a national emergency over the bulk-power system, reaching foreign-made grid equipment at 69 kV and above including storage; Sungrow shares fall more than 11% the following day",
+     "sub": "Sungrow · policy"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-26 — Executive Order 14420 declares a national emergency over the bulk-power system, naming grid-connected inverters and storage at 69 kV and above",
+     "sub": "Power Electronics · policy"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-26 — Q2 FY2027: revenue $96.2B (+106% YoY, +18% QoQ) against a $91B guide; data center $89.0B (+117%); GAAP EPS $2.46 above non-GAAP $2.22; Q3 guided to $108.0B ±2% at 74.0% gross margin",
+     "sub": "NVIDIA · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "China Anti-Monopoly Law",
+     "in-effect",
+     "—",
+     "NVIDIA"
+    ],
+    [
+     "China gallium and germanium export controls",
+     "in-effect",
+     "2023-08-01",
+     "Infineon"
+    ],
+    [
+     "CHIPS Act §48D advanced manufacturing investment credit",
+     "in-effect",
+     "—",
+     "Vicor"
+    ],
+    [
+     "Data-centre siting and energy regulation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "EU Chips Act",
+     "in-effect",
+     "2025-02-20",
+     "Infineon"
+    ],
+    [
+     "EU high-risk inverter phase-out",
+     "announced",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "EU high-risk inverter phase-out",
+     "announced",
+     "2027-04",
+     "Sungrow"
+    ],
+    [
+     "Executive Order 14420 (bulk-power system)",
+     "in-effect",
+     "2026-08-26",
+     "Sungrow"
+    ],
+    [
+     "Executive Order 14420 — bulk-power system",
+     "in-effect",
+     "2026-08-26",
+     "Power Electronics"
+    ],
+    [
+     "FCC Covered List (power inverters)",
+     "in-effect",
+     "2026-07-28",
+     "Huawei Digital Power, Sungrow"
+    ],
+    [
+     "FCC Covered List — foreign-produced inverters and PCS",
+     "in-effect",
+     "2026-07-28",
+     "Power Electronics"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "LS-ES, Tesla"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Power Electronics"
+    ],
+    [
+     "NDAA 889 / Entity List",
+     "in-effect",
+     "—",
+     "Schneider Electric"
+    ],
+    [
+     "NDAA §889",
+     "in-effect",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "Flex"
+    ],
+    [
+     "Section 232 tariffs",
+     "in-effect",
+     "2026-01-14",
+     "Infineon"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-07-24",
+     "Flex"
+    ],
+    [
+     "Section 337 (USITC exclusion orders)",
+     "in-effect",
+     "2025-02-13",
+     "Vicor"
+    ],
+    [
+     "Singapore incorporation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "Trade tariff disputes and export controls",
+     "in-effect",
+     "—",
+     "Infineon"
+    ],
+    [
+     "US Entity List",
+     "in-effect",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "US export controls (China)",
+     "in-effect",
+     "—",
+     "NVIDIA"
+    ],
+    [
+     "US export controls on semiconductors",
+     "in-effect",
+     "2024-12-02",
+     "Infineon"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "GE Vernova, LITEON, Megmeet, Schneider Electric"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2026-02-20",
+     "Flex"
+    ],
+    [
+     "US offshore wind stop-work",
+     "in-effect",
+     "2025-12",
+     "GE Vernova"
+    ],
+    [
+     "US reciprocal tariffs",
+     "in-effect",
+     "—",
+     "Delta Electronics"
+    ],
+    [
+     "US tariffs on EU goods",
+     "in-effect",
+     "—",
+     "Power Electronics"
+    ],
+    [
+     "USMCA",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "Tesla"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* (planned) · *One Big Box or Many Small Ones* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* (planned) · *Faults, Grounding, and the Interlock at 800 Volts* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Flex, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Delta Electronics** in (among others)?",
+     "c": [
+      "Clean firm and nuclear",
+      "In-hall power",
+      "Power conversion and rack-power silicon",
+      "Hyperscalers and AI labs"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: ecosystemRole: the incumbent standard inside the NVIDIA rack — first-qualified power-shelf supplier for GB200/GB300; the only complete grid-to-chip 800 VDC stack"
+    },
+    {
+     "q": "What role does the registry give **Tesla** in Power conversion and rack-power silicon?",
+     "c": [
+      "adjacent",
+      "challenger",
+      "incumbent"
+     ],
+     "a": 0,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Power conversion and rack-power silicon** buy on, per the registry?",
+     "c": [
+      "Delivery slot and the factory's location",
+      "Grid-forming capability and EMS/trading integration",
+      "Efficiency at the operating point (0.1 % is real money at utility scale, paid twice more in cooling)",
+      "Refrigerant calendar and the sequence of operations the BMS runs"
+     ],
+     "a": 2,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Power conversion and rack-power silicon?",
+     "c": [
+      "Cells and chemistry",
+      "Storage integrators and containers",
+      "EPC and construction",
+      "Compute and the rack"
+     ],
+     "a": 1,
+     "why": "Chain position 2 against this segment's 3."
+    },
+    {
+     "q": "The graph records a curated edge from **ABB** to **Eaton**. How is it typed from ABB's side?",
+     "c": [
+      "competitor",
+      "investor",
+      "customer",
+      "portfolio"
+     ],
+     "a": 0,
+     "why": "Top-5 rival in data-center power; overlaps on distribution and UPS, with deeper US hyperscale UPS incumbency."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentGridEquipment_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-grid-equipment",
+ "type": "module",
+ "title": "Grid equipment",
+ "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:abb",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eaton",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flex",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ge-vernova",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hitachi-energy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:invenergy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ls-energy-solutions",
+    "date": "2026-08-30",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mitsubishi-electric",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:powell-industries",
+    "date": "2026-09-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:quanta-services",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:schneider-electric",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:siemens-energy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:zhonhen",
+    "date": "2026-09-08",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "13",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "5",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "1",
+   "v": "challenger",
+   "sub": "contesting that set; 7 adjacent"
+  },
+  {
+   "k": "54",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that connect a campus or a storage plant to the bulk grid and hold it up. The segment whose delivery calendar sets energization dates for everyone else.",
+    "Chain position 4 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 3)",
+     "Power conversion and rack-power silicon",
+     "supply"
+    ],
+    [
+     "**This segment** (position 4)",
+     "**Grid equipment**",
+     "build"
+    ],
+    [
+     "Downstream (position 5)",
+     "In-hall power",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "AIDC developers and landlords (19 edges) · Clean firm and nuclear (11 edges) · Hyperscalers and AI labs (10 edges) · Utilities (10 edges) · Storage developers and IPPs (8 edges) · Storage integrators and containers (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · Capital (2 edges) · In-hall power (1 edge) · EPC and construction (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Cells and chemistry (3 edges) · Storage integrators and containers (3 edges) · In-hall power (3 edges) · Clean firm and nuclear (2 edges) · EPC and construction (2 edges) · Assurance (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Lead time and the manufacturing slot (transformers 30–40 months; test-bay availability)",
+     "*Why Electricity Changes Clothes* (planned)"
+    ],
+    [
+     "Voltage and MVA class; GIS vs AIS; SF6-free options",
+     "—"
+    ],
+    [
+     "Domestic manufacture under EO 14420 and the tariff stack",
+     "—"
+    ],
+    [
+     "Protection and automation integration (IEC 61850) and the coordination study",
+     "*Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation*"
+    ],
+    [
+     "Service, spares and the bushing supply chain",
+     "*Why Electricity Changes Clothes* (planned)"
+    ],
+    [
+     "Custom-engineered speed (ten-week MV switchgear from a domestic plant)",
+     "*Why Electricity Changes Clothes* (planned)"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "abb",
+     "incumbent",
+     "ecosystemRole: strong #2–5 across the data-center electrical stack; synchronous condensers with flywheels (62 units for VoltaGrid); MNS LV switchgear"
+    ],
+    [
+     "**GE Vernova**",
+     "ge-vernova",
+     "incumbent",
+     "productsAndServices › Electrification — transformers (Prolec GE, seven Americas plants), switchgear, HVDC; ecosystemRole: holds more turbine slots and transformer capacity than anyone in the Americas"
+    ],
+    [
+     "**Hitachi Energy**",
+     "hitachi-energy",
+     "incumbent",
+     "registry tagline: world's largest transformer maker and HVDC leader; ecosystemRole: the AIDC buildout's most consequential grid-equipment supplier"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "mitsubishi-electric",
+     "incumbent",
+     "ecosystemRole: consistently named in the leading vendor set for power transformers and gas-insulated switchgear; transformers 69–765 kV, GIS 145–550 kV"
+    ],
+    [
+     "**Siemens Energy**",
+     "siemens-energy",
+     "incumbent",
+     "productsAndServices › Grid Technologies — transformers 10 kV–800 kV, GIS/AIS incl. SF6-free, HVDC, grid stability; €51B Grid Technologies backlog"
+    ],
+    [
+     "**Powell Industries**",
+     "powell-industries",
+     "challenger",
+     "ecosystemRole: outside the ABB/Siemens/Schneider/Eaton/GE Vernova oligopoly, among the regional specialists eroding its share — tailored MV switchgear in ten weeks from Texas"
+    ],
+    [
+     "**Eaton**",
+     "eaton",
+     "adjacent",
+     "productsAndServices › Power distribution — busway, PDUs, switchgear, transformers, within a data-center grid-to-chip scope"
+    ],
+    [
+     "**Flex**",
+     "flex",
+     "adjacent",
+     "productsAndServices › Crown Technical Systems and Electrical Power Products (OWNED): relay panels, MV switchgear, substation control and protection"
+    ],
+    [
+     "**Invenergy**",
+     "invenergy",
+     "adjacent",
+     "productsAndServices › Transmission — Grain Belt Express and the HVDC portfolio (merchant HVDC transmission developer)"
+    ],
+    [
+     "**LS-ES**",
+     "ls-energy-solutions",
+     "adjacent",
+     "productsAndServices › Parent channel: LS ELECTRIC's Bastrop TX switchgear, transformer and distribution campus — the channel, not an LS-ES product"
+    ],
+    [
+     "**Quanta Services**",
+     "quanta-services",
+     "adjacent",
+     "productsAndServices › Supply chain & manufacturing: nearly doubling HV transformer manufacturing capacity by 2028; Hyosung HICO breaker JV"
+    ],
+    [
+     "**Schneider Electric**",
+     "schneider-electric",
+     "adjacent",
+     "productsAndServices › Prefab/modular data centers & electrical distribution; named in the MV switchgear top five by the Powell dossier"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "zhonhen",
+     "adjacent",
+     "productsAndServices › Grid power-supply systems — AC LV switchgear, substation DC systems for State Grid and Southern Grid"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "FY2025 · 2025-12-31",
+     "33,200",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "FY2025 · 2025-12-31",
+     "38,100",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "FY2025 · 2026-03-31",
+     "19,800",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Siemens Energy**",
+     "FY2025 · 2025-09-30",
+     "44,180.5",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Powell Industries**",
+     "FY2025 · 2025-09-30",
+     "1,104.3",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "FY2025 · 2025-12-31",
+     "27,400",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "FY2026 · 2026-03-31",
+     "27,914",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Quanta Services**",
+     "FY2025 · 2025-12-31",
+     "28,480",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "FY2025 · 2025-12-31",
+     "45,393.6",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "FY2025 · 2025-12-31",
+     "297.3",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Mitsubishi Electric, Invenergy, LS-ES"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway and data-centre switchgear"
+    ],
+    [
+     "**ABB**",
+     "**Hitachi Energy**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**ABB**",
+     "**Powell Industries**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**ABB**",
+     "**Siemens Energy**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**ABB**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and transformers"
+    ],
+    [
+     "**Eaton**",
+     "**Powell Industries**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Eaton**",
+     "**Schneider Electric**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Siemens Energy**",
+     "partner",
+     "active",
+     "~500 MW plant template",
+     "~500 MW modular on-site power plants"
+    ],
+    [
+     "**Flex**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Busway and data-centre switchgear"
+    ],
+    [
+     "**Flex**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Flex**",
+     "**Powell Industries**",
+     "competitor",
+     "active",
+     "—",
+     "Vertically integrated data-centre power rooms"
+    ],
+    [
+     "**Flex**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**GE Vernova**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Invenergy**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "15 × 4.2 MW turbines (Rusutsu, Japan); 1.48 GW Oklahoma order (2021); 3 turbines at Lackawanna (1,485 MW)",
+     "Wind turbines and gas turbines"
+    ],
+    [
+     "**Invenergy**",
+     "**Quanta Services**",
+     "supplier",
+     "active",
+     "USD 1.7bn combined with Kiewit Energy Group",
+     "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)"
+    ],
+    [
+     "**Invenergy**",
+     "**Siemens Energy**",
+     "supplier",
+     "active",
+     "5,000 MW HVDC (two Phase 1 converter stations)",
+     "HVDC converter technology for Grain Belt Express"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Gas-insulated switchgear and transformers"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Gas-insulated switchgear and North American manufacturing capacity"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Powell Industries**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Siemens Energy**",
+     "partner",
+     "announced",
+     "—",
+     "SF6-free high-voltage switching"
+    ],
+    [
+     "**Powell Industries**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Powell Industries**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Powell Industries**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Vertically integrated data-centre power rooms"
+    ],
+    [
+     "**Powell Industries**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Powell Industries**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Powell Industries**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Powell Industries**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Quanta Services**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Quanta Services**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "transformers and 800 kV breakers"
+    ],
+    [
+     "**Quanta Services**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "transformers and 800 kV breakers"
+    ],
+    [
+     "**Schneider Electric**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "data-center UPS"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Powell Industries**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Siemens Energy**",
+     "**Eaton**",
+     "partner",
+     "active",
+     "500 MW standard block",
+     "500 MW SGT-800 block"
+    ],
+    [
+     "**Siemens Energy**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Siemens Energy**",
+     "**Mitsubishi Electric**",
+     "partner",
+     "announced",
+     "—",
+     "SF6-free high-voltage switching"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**ABB**",
+     "partner",
+     "active",
+     "—",
+     "HVDC / 800V DC"
+    ],
+    [
+     "**ABB**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "HiPerGuard + SACE Infinitus"
+    ],
+    [
+     "**ABB**",
+     "Vertiv",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Caterpillar**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
+    ],
+    [
+     "**Caterpillar**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "SGT-400 turbines beside Solar units at Socrates South"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Delta Electronics**",
+     "**GE Vernova**",
+     "competitor",
+     "—",
+     "—",
+     "solid-state transformers"
+    ],
+    [
+     "**Eaton**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ],
+    [
+     "**Eaton**",
+     "Vertiv",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "Delta Electronics",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "LITEON",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**Flex**",
+     "Megmeet",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power system components"
+    ],
+    [
+     "**Flex**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**GE Vernova**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC reference designs"
+    ],
+    [
+     "**Hitachi Energy**",
+     "Delta Electronics",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC grid-to-rack architecture"
+    ],
+    [
+     "**Hitachi Energy**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Infineon**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Power discretes and modules"
+    ],
+    [
+     "**Invenergy**",
+     "NVIDIA",
+     "partner",
+     "announced",
+     "—",
+     "'Flexible AI factories as grid assets' programme (Vera Rubin DSX reference design with Emerald AI)"
+    ],
+    [
+     "**Invenergy**",
+     "Tesla",
+     "customer",
+     "active",
+     "100 MW virtual PPA (Delilah I Solar)",
+     "Virtual power purchase agreement"
+    ],
+    [
+     "**LITEON**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**LS-ES**",
+     "Samsung SDI",
+     "supplier",
+     "active",
+     "—",
+     "E4D NMC cells"
+    ],
+    [
+     "**LS-ES**",
+     "Tesla",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power system components"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Delta Electronics",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Infineon",
+     "competitor",
+     "active",
+     "—",
+     "Power discretes and modules"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power delivery"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Narada",
+     "supplier",
+     "active",
+     "—",
+     "HRL-700 VRLA battery strings for the 9900D UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Piller",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Samsung SDI",
+     "supplier",
+     "active",
+     "—",
+     "Lithium-ion battery strings for the 9900D UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Tesla",
+     "customer",
+     "active",
+     "—",
+     "Uninterruptible power supplies"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and switchgear manufacturing capacity"
+    ],
+    [
+     "**NVIDIA**",
+     "**ABB**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Eaton**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Flex**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**NVIDIA**",
+     "**GE Vernova**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Hitachi Energy**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ]
+   ],
+   "note": "Curated edges among members: 54 · to the neighbouring segments: 65 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 26 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
+     "sub": "Flex · ma"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
+     "sub": "Zhonhen Electric · financial"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
+     "sub": "Zhonhen Electric · other"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-20 — Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
+     "sub": "Mitsubishi Electric · ma"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-20 — Quincy Solar (120 MW, Grant County, Washington) breaks ground; Cupertino Electric named contractor; commercial late 2027",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-18 — Parent LS ELECTRIC wins a $34M Bloom Energy power order for a hyperscale data center in Wyoming (repeat order) and posts record Q2 2026 results (revenue ~KRW 1.58T, operating profit ~KRW 179B)",
+     "sub": "LS-ES · partnership"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-15 — CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed",
+     "sub": "Zhonhen Electric · corporate"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-14 — CATL signs definitive agreements: RMB 4.099B (RMB 3.512B cash + a 49% stake in Times Tianyuan valued RMB 588M) for 49% of controlling holdco Zhonhen Technology Investment; Zhu Guoding remains actual controller (35.7% of holdco post-deal, wife Bao Xiaoru 15.3%); same-day strategic cooperation across computing-power infrastructure, charging/swap and power trading",
+     "sub": "Zhonhen Electric · financial"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-14 — Cantor Fitzgerald cuts its price target to $235 from $320 and keeps a Neutral rating after a call with the CFO, reiterating $235 on 2026-09-02",
+     "sub": "Powell Industries · market"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-12 — EGM approves the third employee stock ownership plan: up to RMB 40M, ≤40 participants, buyback shares at RMB 21.79 (half the market average), with unlock hurdles of revenue +30%/+70%/+120% vs FY2025 (or profit alternatives) across 2026–2028",
+     "sub": "Zhonhen Electric · other"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Buy American and GSA federal procurement",
+     "in-effect",
+     "—",
+     "Powell Industries"
+    ],
+    [
+     "Data-centre siting and energy regulation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "DOE distribution transformer efficiency standards",
+     "in-effect",
+     "2024-07-08",
+     "Mitsubishi Electric"
+    ],
+    [
+     "DOE Loan Programs Office",
+     "expired",
+     "2025-07-23",
+     "Invenergy"
+    ],
+    [
+     "DOE transmission policy (FAST-41, NIETC)",
+     "in-effect",
+     "2024-02",
+     "Invenergy"
+    ],
+    [
+     "ENERGY STAR",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "LS-ES"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Invenergy"
+    ],
+    [
+     "IEEE C37.20.7 arc-resistant switchgear testing",
+     "in-effect",
+     "—",
+     "Powell Industries"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2023-01",
+     "Invenergy"
+    ],
+    [
+     "NDAA 889 / Entity List",
+     "in-effect",
+     "—",
+     "Schneider Electric"
+    ],
+    [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "Flex"
+    ],
+    [
+     "Offshore wind lease policy (Interior settlements)",
+     "in-effect",
+     "2026-06-17",
+     "Invenergy"
+    ],
+    [
+     "One Big Beautiful Bill Act",
+     "in-effect",
+     "2025-07-04",
+     "Powell Industries"
+    ],
+    [
+     "OSHA 29 CFR 1910 Subpart S and NFPA 70E",
+     "in-effect",
+     "—",
+     "Powell Industries"
+    ],
+    [
+     "Product safety and EMC listings",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Section 232 tariffs",
+     "in-effect",
+     "2025-08-18",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Section 232 tariffs",
+     "in-effect",
+     "2026-04",
+     "Powell Industries"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-07-24",
+     "Flex"
+    ],
+    [
+     "SF6 and fluorinated-gas restrictions",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Singapore incorporation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "State siting and certificate law (Missouri, Illinois, Kansas, Indiana)",
+     "in-effect",
+     "2023-10",
+     "Invenergy"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "GE Vernova, Schneider Electric, Siemens Energy"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2026-02-20",
+     "Flex"
+    ],
+    [
+     "US offshore wind stop-work",
+     "in-effect",
+     "2025-12",
+     "GE Vernova"
+    ],
+    [
+     "USMCA",
+     "in-effect",
+     "—",
+     "Flex"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* (planned) · *Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** ABB, GE Vernova, Hitachi Energy, Mitsubishi Electric, Siemens Energy, Powell Industries, Eaton, Flex, Invenergy, LS-ES, Quanta Services, Schneider Electric, Zhonhen Electric — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **ABB** in (among others)?",
+     "c": [
+      "Grid equipment",
+      "Cells and chemistry",
+      "Capital",
+      "Neoclouds"
+     ],
+     "a": 0,
+     "why": "The registry's basis line: ecosystemRole: strong #2–5 across the data-center electrical stack; synchronous condensers with flywheels (62 units for VoltaGrid); MNS LV switchgear"
+    },
+    {
+     "q": "What role does the registry give **Zhonhen Electric** in Grid equipment?",
+     "c": [
+      "incumbent",
+      "challenger",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Grid equipment** buy on, per the registry?",
+     "c": [
+      "Lead time and the manufacturing slot (transformers 30–40 months; test-bay availability)",
+      "Tenant credit and the credit-substitution layer (backstops, guarantees)",
+      "Bankability — Wood Mackenzie / BNEF ranking and independent-engineer acceptance",
+      "Patent position on bus conversion and vertical power delivery"
+     ],
+     "a": 0,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Grid equipment?",
+     "c": [
+      "Power conversion and rack-power silicon",
+      "Clean firm and nuclear",
+      "Compute and the rack",
+      "Cells and chemistry"
+     ],
+     "a": 0,
+     "why": "Chain position 3 against this segment's 4."
+    },
+    {
+     "q": "The graph records a curated edge from **ABB** to **Eaton**. How is it typed from ABB's side?",
+     "c": [
+      "competitor",
+      "customer",
+      "partner",
+      "portfolio"
+     ],
+     "a": 0,
+     "why": "Top-5 rival in data-center power; overlaps on distribution and UPS, with deeper US hyperscale UPS incumbency."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentInHallPower_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-in-hall-power",
+ "type": "module",
+ "title": "In-hall power",
+ "short": "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-10-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:abb",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:caterpillar",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cummins",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:delta-electronics",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eaton",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eve-energy",
+    "date": "2026-09-08",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flex",
+    "date": "2026-09-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flexgen",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:gotion",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hithium",
+    "date": "2026-09-07",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:huawei-digital-power",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lg-energy-solution",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mitsubishi-electric",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:narada",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:on-energy",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:panasonic",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:piller",
+    "date": "2026-09-03",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:prevalon",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rehlko",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rolls-royce-power-systems",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rosendin",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:samsung-sdi",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:schneider-electric",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sunwoda",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vertiv",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:zhonhen",
+    "date": "2026-09-08",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "26",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "10",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "7",
+   "v": "challengers",
+   "sub": "contesting that set; 9 adjacent"
+  },
+  {
+   "k": "91",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and PDUs inside the fence, the prefabricated power module, the facility-level DC bus, and the VRLA, lithium and flywheel stores under all of it — including the BBU and UPS cells that make the UPS room the one place a battery sale happens inside the building.",
+    "Chain position 5 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 4)",
+     "Grid equipment",
+     "build"
+    ],
+    [
+     "**This segment** (position 5)",
+     "**In-hall power**",
+     "build"
+    ],
+    [
+     "Downstream (position 6)",
+     "Bridge and on-site generation",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "AIDC developers and landlords (20 edges) · Storage developers and IPPs (19 edges) · Storage integrators and containers (17 edges) · Power conversion and rack-power silicon (16 edges) · Utilities (16 edges) · Hyperscalers and AI labs (15 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (7 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Bridge and on-site generation (2 edges) · Compute and the rack (2 edges) · Grid equipment (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Storage integrators and containers (7 edges) · Cells and chemistry (6 edges) · Power conversion and rack-power silicon (4 edges) · Assurance (3 edges) · Software and optimization (2 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "kVA per frame and installed MW per protected MW under the chosen redundancy topology",
+     "*N+1, 2N, and Six Nines* (planned)"
+    ],
+    [
+     "Efficiency in double conversion and in eco-mode; SiC content",
+     "—"
+    ],
+    [
+     "Repair time and the maintenance day as the design case (monolithic vs modular)",
+     "—"
+    ],
+    [
+     "Battery type under the UPS — VRLA, lithium, flywheel — minutes of autonomy and float life",
+     "*Static, Rotary, Modular, and the Battery Under Each* (planned)"
+    ],
+    [
+     "Reference-design alignment (NVIDIA blueprints) and 800 VDC readiness",
+     "—"
+    ],
+    [
+     "Lead time for factory-built power rooms and the tested-at-factory guarantee",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "abb",
+     "incumbent",
+     "ecosystemRole: the medium-voltage innovator — HiPerGuard, the industry's first static MV UPS; MegaFlex DPA LV UPS"
+    ],
+    [
+     "**Eaton**",
+     "eaton",
+     "incumbent",
+     "ecosystemRole: top-3-to-5 in data-center power and UPS behind Schneider; 9395X UPS, busway, prefab power enclosures (Fibrebond)"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "huawei-digital-power",
+     "incumbent",
+     "ecosystemRole: the excluded benchmark — competes at the integrated-solution tier with Schneider, Vertiv, Eaton, ABB; #1 in prefab modular DCs; PowerPOD 2.4–3.2 MW blocks"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "mitsubishi-electric",
+     "incumbent",
+     "ecosystemRole: consistently named in the leading vendor set for data-center UPS; 9900 Series large static UPS to 2 MW; SUMMIT SiC UPS"
+    ],
+    [
+     "**Narada**",
+     "narada",
+     "incumbent",
+     "registry tagline: the distressed backup-power incumbent — #2 in DC/base-station batteries; VRLA-to-lithium UPS, 10C AIOn X-Rate"
+    ],
+    [
+     "**Panasonic**",
+     "panasonic",
+     "incumbent",
+     "ecosystemRole: the incumbent of data-center backup power — claims ~80 % of the distributed-power (BBU) market; Capacitor Backup Units"
+    ],
+    [
+     "**Piller**",
+     "piller",
+     "incumbent",
+     "ecosystemRole: the reference for rotary, diesel-rotary and flywheel UPS and the isolated-parallel bus; SHIELDX in every Bergen Engines behind-the-meter plant"
+    ],
+    [
+     "**Schneider Electric**",
+     "schneider-electric",
+     "incumbent",
+     "ecosystemRole: shared #1 in data-center physical infrastructure (Dell'Oro); Galaxy VXL UPS; the NVIDIA reference-design franchise"
+    ],
+    [
+     "**Vertiv**",
+     "vertiv",
+     "incumbent",
+     "ecosystemRole: co-#1 with Schneider; top-5 in power; Trinergy AI-class UPS scalable to 20 MW"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "zhonhen",
+     "incumbent",
+     "productsAndServices › Data-center power — HVDC, Panama and 800V: the core franchise; China's data-center HVDC leader at 31 % share"
+    ],
+    [
+     "**EVE Energy**",
+     "eve-energy",
+     "challenger",
+     "productsAndServices › AI data-center BBU portfolio (OCP China 2026): rack-level, distribution-level and grid-scale backup on 800V HVDC"
+    ],
+    [
+     "**Flex**",
+     "flex",
+     "challenger",
+     "productsAndServices › Anord Mardix — critical power (OWNED): LV/MV switchgear, busway and power pods; JetCool"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "gotion",
+     "challenger",
+     "productsAndServices › Base-station and data-centre UPS backup batteries: claims first place globally above 28 % share in its audited report — uncorroborated by any research house"
+    ],
+    [
+     "**Hithium**",
+     "hithium",
+     "challenger",
+     "productsAndServices › ∞Power Solutions for AI Data Center — a four-SKU lithium-sodium AIDC line launched December 2025 with zero named customers"
+    ],
+    [
+     "**LG Energy Solution**",
+     "lg-energy-solution",
+     "challenger",
+     "ecosystemRole: frames the growth market as AI data centers — BESS + UPS + BBU — claiming to be the only supplier serving all three with a non-FEOC chain"
+    ],
+    [
+     "**ON.energy**",
+     "on-energy",
+     "challenger",
+     "ecosystemRole: productizing BESS into the AIDC power chain as a medium-voltage UPS category competing with Vertiv/Eaton/Schneider; 5 GW Crusoe award"
+    ],
+    [
+     "**Samsung SDI**",
+     "samsung-sdi",
+     "challenger",
+     "productsAndServices › Data-Center UPS & BBU Batteries — the turnaround engine, guided to grow >70 % in 2026; world-first UL indoor large-scale fire test for UPS batteries"
+    ],
+    [
+     "**Caterpillar**",
+     "caterpillar",
+     "adjacent",
+     "productsAndServices › Switchgear, transfer switches, paralleling and generator controls — Cat ATC ATS, EGP and XLM switchgear"
+    ],
+    [
+     "**Cummins**",
+     "cummins",
+     "adjacent",
+     "productsAndServices › PowerCommand paralleling systems, switchgear and automatic transfer switches 40 A to 4,000 A"
+    ],
+    [
+     "**Delta Electronics**",
+     "delta-electronics",
+     "adjacent",
+     "productsAndServices › Data-center infrastructure (InfraSuite, Ultron DPM UPS, UZR3 lithium cabinets) beside the rack-power franchise"
+    ],
+    [
+     "**FlexGen**",
+     "flexgen",
+     "adjacent",
+     "productsAndServices › Integrated systems & data-center energy solutions; the BESSUPS product with Rosendin"
+    ],
+    [
+     "**Prevalon**",
+     "prevalon",
+     "adjacent",
+     "productsAndServices › Hybrid Power Stabilizer for data centers — BESS-plus-power-electronics against GPU load swings"
+    ],
+    [
+     "**Rehlko**",
+     "rehlko",
+     "adjacent",
+     "productsAndServices › Kohler Uninterruptible Power — three-phase static UPS to 500 kVA; PD-Series paralleling switchgear; the only gen-set OEM that also builds a UPS"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "rolls-royce-power-systems",
+     "adjacent",
+     "productsAndServices › mtu Kinetic PowerPack — diesel rotary UPS, 480 to 3,000 kVA"
+    ],
+    [
+     "**Rosendin**",
+     "rosendin",
+     "adjacent",
+     "productsAndServices › BESSUPS & next-generation data-center power (with FlexGen): utility-scale BESS replacing UPS and diesel gensets"
+    ],
+    [
+     "**Sunwoda**",
+     "sunwoda",
+     "adjacent",
+     "productsAndServices › AIDC / network-energy backup power (BBU, UPS, HVDC) in the Network Energy division"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "FY2025 · 2025-12-31",
+     "33,200",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "FY2025 · 2025-12-31",
+     "27,400",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Narada**",
+     "FY2025 · 2025-12-31",
+     "1,039.5",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "FY2025 · 2025-12-31",
+     "375",
+     "EUR at 1.1296 USD/EUR (2025 calendar-year average, poundsterlinglive.com EUR-USD 2025 history)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "FY2025 · 2025-12-31",
+     "45,393.6",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "FY2025 · 2025-12-31",
+     "10,230",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "FY2025 · 2025-12-31",
+     "297.3",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "FY2025 · 2025-12-31",
+     "8,552.6",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "FY2026 · 2026-03-31",
+     "27,914",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "FY2025 · 2025-12-31",
+     "6,270.8",
+     "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "FY2024 · 2024-12-31",
+     "1,800",
+     "as stated in this dossier's own reporting (RMB 12.917B ≈ US$1.8B)",
+     "35.1",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "FY2025 · 2025-12-31",
+     "16,651.7",
+     "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "140",
+     "—",
+     "—"
+    ],
+    [
+     "**Samsung SDI**",
+     "FY2025 · 2025-12-31",
+     "9,335.3",
+     "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Caterpillar**",
+     "FY2025 · 2025-12-31",
+     "67,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Cummins**",
+     "FY2025 · 2025-12-31",
+     "33,700",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "FY2025 · 2025-12-31",
+     "17,801.8",
+     "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "FY2025 · 2025-12-31",
+     "8,799.7",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "25.6",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Huawei Digital Power, Mitsubishi Electric, Panasonic, ON.energy, FlexGen, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**ABB**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway and data-centre switchgear"
+    ],
+    [
+     "**ABB**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**ABB**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Caterpillar**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**FlexGen**",
+     "other",
+     "historical",
+     "$25.5M Series A (with Altira and GE Ventures)",
+     "Caterpillar Ventures Series A participation"
+    ],
+    [
+     "**Caterpillar**",
+     "**Rehlko**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Rehlko**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**FlexGen**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Panasonic**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EVE Energy**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**ABB**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and transformers"
+    ],
+    [
+     "**Eaton**",
+     "**Schneider Electric**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Busway and data-centre switchgear"
+    ],
+    [
+     "**Flex**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Flex**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**FlexGen**",
+     "**Hithium**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Rosendin**",
+     "partner",
+     "active",
+     "—",
+     "BESSUPS"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Narada**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gotion High-Tech**",
+     "**Sunwoda**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**LG Energy Solution**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**ON.energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hithium**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**FlexGen**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LG Energy Solution**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Narada**",
+     "supplier",
+     "active",
+     "—",
+     "HRL-700 VRLA battery strings for the 9900D UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Piller**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Samsung SDI**",
+     "supplier",
+     "active",
+     "—",
+     "Lithium-ion battery strings for the 9900D UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and switchgear manufacturing capacity"
+    ],
+    [
+     "**Narada**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Panasonic**",
+     "**Samsung SDI**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "**Caterpillar**",
+     "partner",
+     "historical",
+     "—",
+     "Cat UPS distribution of Active Power flywheels"
+    ],
+    [
+     "**Piller**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Piller**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Rehlko**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rehlko**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rehlko**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rehlko**",
+     "**Schneider Electric**",
+     "partner",
+     "active",
+     "—",
+     "Infrastructure Masons working group"
+    ],
+    [
+     "**Rehlko**",
+     "**Vertiv**",
+     "other",
+     "active",
+     "—",
+     "Shared sponsor and board or advisory ties"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Rehlko**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rosendin**",
+     "**FlexGen**",
+     "partner",
+     "active",
+     "—",
+     "BESSUPS"
+    ],
+    [
+     "**Samsung SDI**",
+     "**Panasonic**",
+     "competitor",
+     "active",
+     "—",
+     "BBU"
+    ],
+    [
+     "**Schneider Electric**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "data-center UPS"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Huawei Digital Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sunwoda**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "684 Ah cell"
+    ],
+    [
+     "**Sunwoda**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**Vertiv**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and switchgear manufacturing capacity"
+    ],
+    [
+     "**Vertiv**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**ABB**",
+     "partner",
+     "active",
+     "—",
+     "HVDC / 800V DC"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "Hitachi Energy",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**ABB**",
+     "Siemens Energy",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "VoltaGrid",
+     "customer",
+     "active",
+     "62 synchronous condensers + ~$150M related order",
+     "flywheel synchronous condensers"
+    ],
+    [
+     "**Caterpillar**",
+     "Bloom Energy",
+     "competitor",
+     "active",
+     "—",
+     "Fuel cells as prime power displacing gen-sets and turbines"
+    ],
+    [
+     "**Caterpillar**",
+     "GE Vernova",
+     "competitor",
+     "active",
+     "—",
+     "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
+    ],
+    [
+     "**Caterpillar**",
+     "Siemens Energy",
+     "competitor",
+     "active",
+     "—",
+     "SGT-400 turbines beside Solar units at Socrates South"
+    ],
+    [
+     "**Caterpillar**",
+     "Wärtsilä",
+     "competitor",
+     "active",
+     "—",
+     "Medium-speed gas engines for data-center prime power"
+    ],
+    [
+     "**Cummins**",
+     "Wärtsilä",
+     "competitor",
+     "active",
+     "Wartsila: 2 GW of US orders since 2025 against Cummins' 20 GW capacity addition",
+     "Behind-the-meter prime power"
+    ],
+    [
+     "**Delta Electronics**",
+     "GE Vernova",
+     "competitor",
+     "—",
+     "—",
+     "solid-state transformers"
+    ],
+    [
+     "**ERock**",
+     "**Hithium**",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Eaton**",
+     "Siemens Energy",
+     "partner",
+     "active",
+     "~500 MW plant template",
+     "~500 MW modular on-site power plants"
+    ],
+    [
+     "**Flex**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Vertically integrated data-centre power rooms"
+    ],
+    [
+     "**GE Vernova**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hitachi Energy**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LS-ES**",
+     "**Samsung SDI**",
+     "supplier",
+     "active",
+     "—",
+     "E4D NMC cells"
+    ],
+    [
+     "**Mainspring**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "GE Vernova",
+     "competitor",
+     "active",
+     "—",
+     "Gas-insulated switchgear and transformers"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Hitachi Energy",
+     "competitor",
+     "active",
+     "—",
+     "Gas-insulated switchgear and North American manufacturing capacity"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Mitsubishi Power",
+     "partner",
+     "active",
+     "—",
+     "Next-generation gas turbine control system"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Powell Industries",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "Siemens Energy",
+     "partner",
+     "announced",
+     "—",
+     "SF6-free high-voltage switching"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**Mitsubishi Electric**",
+     "partner",
+     "active",
+     "—",
+     "Next-generation gas turbine control system"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**Prevalon**",
+     "other",
+     "historical",
+     "—",
+     "Battery energy storage"
+    ],
+    [
+     "**ON.energy**",
+     "GE Vernova",
+     "supplier",
+     "active",
+     "5 GW of pad-mount transformers",
+     "pad-mount transformers"
+    ],
+    [
+     "**Piller**",
+     "Bloom Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Powell Industries**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Powell Industries**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Powell Industries**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Vertically integrated data-centre power rooms"
+    ],
+    [
+     "**Powell Industries**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear"
+    ],
+    [
+     "**Powell Industries**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-voltage switchgear and low-voltage breaker elements"
+    ],
+    [
+     "**Prevalon**",
+     "Mitsubishi Power",
+     "other",
+     "historical",
+     "—",
+     "Battery energy storage carve-out"
+    ],
+    [
+     "**Prevalon**",
+     "Wärtsilä",
+     "competitor",
+     "active",
+     "—",
+     "HD5 AC"
+    ],
+    [
+     "**ProEnergy**",
+     "**Hithium**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Quanta Services**",
+     "**Rosendin**",
+     "competitor",
+     "active",
+     "—",
+     "data-center electrical"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "Wärtsilä",
+     "competitor",
+     "active",
+     "Wartsila 790 MW Texas data-center order, April 2026",
+     "Behind-the-meter prime power"
+    ]
+   ],
+   "note": "Curated edges among members: 91 · to the neighbouring segments: 46 (the first 40 shown, by company) · derived-only mentions (no curated typing): 12 among members, 18 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
+     "sub": "Flex · ma"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
+     "sub": "Rolls-Royce Power Systems · product-launch"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-28 — New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
+     "sub": "Piller · regulatory"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
+     "sub": "Caterpillar · capacity"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
+     "sub": "Zhonhen Electric · financial"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-27 — Rehlko joined the Wisconsin Data Center Coalition as an energy-resilience member, stating a track record of 14-plus GW of deployed data-center capacity, more than 90 percent of it custom-engineered",
+     "sub": "Rehlko · corporate"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-25 — Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
+     "sub": "Gotion High-Tech · leadership"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-25 — H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
+     "sub": "Gotion High-Tech · financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-25 — Board authorises management to sell listed equity holdings opportunistically, up to 15% of net assets attributable to the parent — roughly RMB 4.37bn — over twelve months",
+     "sub": "Gotion High-Tech · corporate"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-24 — James Hopkins promoted to VP, Financial Planning, Capital Management and Investor Relations effective 2026-09-01, reporting to CFO Mark Smith; Nick Arens now reports to Hopkins",
+     "sub": "Cummins · leadership"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
+     "sub": "Zhonhen Electric · other"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-20 — Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
+     "sub": "Mitsubishi Electric · ma"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Alternative-fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Cummins"
+    ],
+    [
+     "Building, seismic and wind codes",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "Buy America / domestic content",
+     "proposed",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "China battery export controls",
+     "in-effect",
+     "—",
+     "Hithium"
+    ],
+    [
+     "Cybersecurity regulation (IEC 62443 / NIS2)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "Data-centre siting and energy regulation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "DoD 1260H list",
+     "in-effect",
+     "2026-06-08",
+     "EVE Energy"
+    ],
+    [
+     "DOE distribution transformer efficiency standards",
+     "in-effect",
+     "2024-07-08",
+     "Mitsubishi Electric"
+    ],
+    [
+     "ENERGY STAR",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "EPA / CARB / DOJ emissions Settlement Agreements",
+     "in-effect",
+     "2024-04",
+     "Cummins"
+    ],
+    [
+     "EPA 2027 on-highway emissions rules",
+     "proposed",
+     "2027-01",
+     "Cummins"
+    ],
+    [
+     "EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Cummins"
+    ],
+    [
+     "EPA stationary-engine rules (NSPS Subparts IIII/JJJJ, NESHAP ZZZZ)",
+     "in-effect",
+     "2013-01",
+     "Caterpillar"
+    ],
+    [
+     "ERCOT NOGRR 282",
+     "in-effect",
+     "—",
+     "ON.energy"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "—",
+     "Hithium"
+    ],
+    [
+     "EU high-risk inverter phase-out",
+     "announced",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "EU Medium Combustion Plant Directive and UK Specified Generator controls (DRUPS engines in Europe)",
+     "in-effect",
+     "—",
+     "Piller"
+    ],
+    [
+     "EU Stage V",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "EU Stage V",
+     "proposed",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "FCC Covered List (power inverters)",
+     "in-effect",
+     "2026-07-28",
+     "Huawei Digital Power"
+    ],
+    [
+     "FEOC / NDAA Section 889 / UFLPA",
+     "proposed",
+     "—",
+     "Cummins"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "Hithium, LG Energy Solution, Narada, ON.energy, Samsung SDI, Sunwoda"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Prevalon"
+    ],
+    [
+     "German grid code VDE-AR-N 4110",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "German Power Plant Strategy",
+     "announced",
+     "2026-02",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "IRA §30D clean vehicle credit",
+     "expired",
+     "2025-09-30",
+     "Gotion High-Tech"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "LG Energy Solution, Panasonic, Samsung SDI"
+    ],
+    [
+     "Lists Gotion is NOT on",
+     "in-effect",
+     "2026-07-31",
+     "Gotion High-Tech"
+    ],
+    [
+     "NDAA 889 / Entity List",
+     "in-effect",
+     "—",
+     "Schneider Electric"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "—",
+     "Narada"
+    ],
+    [
+     "NDAA §154 Department of Defense procurement ban",
+     "announced",
+     "2027-10-01",
+     "EVE Energy, Gotion High-Tech"
+    ],
+    [
+     "NDAA §889",
+     "in-effect",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "NFPA 110 and NFPA 855",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "NFPA and NEC codes",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "Flex"
+    ],
+    [
+     "Product safety and EMC listings",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Renewable fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Rehlko, Rolls-Royce Power Systems"
+    ],
+    [
+     "Section 232 tariffs",
+     "in-effect",
+     "2025-08-18",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Narada"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01",
+     "Prevalon, Sunwoda"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-07-24",
+     "Flex"
+    ],
+    [
+     "SF6 and fluorinated-gas restrictions",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Singapore incorporation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "South African merger conditions",
+     "in-effect",
+     "2024-04",
+     "Rehlko"
+    ],
+    [
+     "State air-quality tightening above the federal floor",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "State data-center siting and air-permit review",
+     "proposed",
+     "2026",
+     "Caterpillar"
+    ],
+    [
+     "Uptime Institute Tier standards",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "US Entity List",
+     "in-effect",
+     "—",
+     "Huawei Digital Power"
+    ],
+    [
+     "US EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Rehlko, Rolls-Royce Power Systems"
+    ],
+    [
+     "US EV tax credits",
+     "expired",
+     "—",
+     "Panasonic"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "Panasonic, Rolls-Royce Power Systems, Schneider Electric"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2025",
+     "Cummins"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2026-02-20",
+     "Flex"
+    ],
+    [
+     "US import tariffs",
+     "proposed",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "US import tariffs (IEEPA and Section 232)",
+     "in-effect",
+     "2025",
+     "Caterpillar"
+    ],
+    [
+     "US import tariffs on German-built equipment (Section 232 derivatives; EU–US 15% ceiling)",
+     "in-effect",
+     "2026-07-01",
+     "Piller"
+    ],
+    [
+     "US patent litigation — ITC Section 337 and E.D. Texas",
+     "in-effect",
+     "2026-08-20",
+     "EVE Energy"
+    ],
+    [
+     "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
+     "in-effect",
+     "2025-07-04",
+     "Gotion High-Tech"
+    ],
+    [
+     "US reciprocal tariffs",
+     "in-effect",
+     "—",
+     "Delta Electronics"
+    ],
+    [
+     "US state-level incentive clawback and local litigation",
+     "in-effect",
+     "2025-09-17",
+     "Gotion High-Tech"
+    ],
+    [
+     "US stationary engine and data-center generator rules (RICE NESHAP/NSPS; state and local air permits)",
+     "in-effect",
+     "2025-05-01",
+     "Piller"
+    ],
+    [
+     "USMCA",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "EVE Energy, Hithium"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Static, Rotary, Modular, and the Battery Under Each* (planned) · *The Ten-Second Race* (planned) · *N+1, 2N, and Six Nines* (planned) · *Where BESS Plugs In: The Three Sockets*.",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Caterpillar, Cummins, Delta Electronics, FlexGen, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **ABB** in (among others)?",
+     "c": [
+      "Compute and the rack",
+      "Power conversion and rack-power silicon",
+      "In-hall power",
+      "Capital"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: ecosystemRole: the medium-voltage innovator — HiPerGuard, the industry's first static MV UPS; MegaFlex DPA LV UPS"
+    },
+    {
+     "q": "What role does the registry give **Sunwoda** in In-hall power?",
+     "c": [
+      "incumbent",
+      "challenger",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **In-hall power** buy on, per the registry?",
+     "c": [
+      "Data behind the underwriting — degradation, fire incidents, performance history",
+      "Service, spares and the bushing supply chain",
+      "kVA per frame and installed MW per protected MW under the chosen redundancy topology",
+      "Cybersecurity certification (IEC 62443, NERC CIP)"
+     ],
+     "a": 2,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of In-hall power?",
+     "c": [
+      "Grid equipment",
+      "Storage developers and IPPs",
+      "EPC and construction",
+      "Bridge and on-site generation"
+     ],
+     "a": 0,
+     "why": "Chain position 4 against this segment's 5."
+    },
+    {
+     "q": "The graph records a curated edge from **ABB** to **Eaton**. How is it typed from ABB's side?",
+     "c": [
+      "competitor",
+      "other",
+      "portfolio",
+      "supplier"
+     ],
+     "a": 0,
+     "why": "Top-5 rival in data-center power; overlaps on distribution and UPS, with deeper US hyperscale UPS incumbency."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentBridgeAndOnSiteGeneration_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-bridge-and-on-site-generation",
+ "type": "module",
+ "title": "Bridge and on-site generation",
+ "short": "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:bloom-energy",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:caterpillar",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cummins",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eaton",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:enchanted-rock",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:engie-north-america",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ge-vernova",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mainspring-energy",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mitsubishi-power",
+    "date": "2026-09-03",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nrg-energy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:piller",
+    "date": "2026-09-03",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:proenergy",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rehlko",
+    "date": "2026-09-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rolls-royce-power-systems",
+    "date": "2026-09-04",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:siemens-energy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:voltagrid",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:wartsila",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "17",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "8",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "5",
+   "v": "challengers",
+   "sub": "contesting that set; 4 adjacent"
+  },
+  {
+   "k": "40",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells and linear generators — and the standby gen-sets behind every transfer switch. The segment that converts the interconnection queue into a calendar, and the one every BESS bridge or buffer proposal is priced against.",
+    "Chain position 6 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 5)",
+     "In-hall power",
+     "build"
+    ],
+    [
+     "**This segment** (position 6)",
+     "**Bridge and on-site generation**",
+     "build"
+    ],
+    [
+     "Downstream (position 7)",
+     "Clean firm and nuclear",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "AIDC developers and landlords (21 edges) · Hyperscalers and AI labs (20 edges) · Utilities (12 edges) · Clean firm and nuclear (11 edges) · Storage developers and IPPs (10 edges) · Neoclouds (10 edges) · Capital (4 edges) · Storage integrators and containers (2 edges) · Grid equipment (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Power conversion and rack-power silicon (2 edges) · Grid equipment (2 edges) · In-hall power (2 edges) · Clean firm and nuclear (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · EPC and construction (1 edge) · Assurance (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Time to power — the production slot, reservation fees, trailer-mounted mobility",
+     "—"
+    ],
+    [
+     "Cost per kW and heat rate at the real operating point (part load, hot thin air)",
+     "—"
+    ],
+    [
+     "Emissions permitting — NOx without SCR, Tier 4 hours, non-attainment areas",
+     "*Bridge Power: Building the Plant Before the Grid Arrives*"
+    ],
+    [
+     "Fuel logistics and firm gas supply",
+     "*Bridge Power: Building the Plant Before the Grid Arrives*"
+    ],
+    [
+     "Block-load and ride-through behaviour against a swinging AI hall",
+     "—"
+    ],
+    [
+     "Rating (standby / prime / continuous) and the O&M and dealer network for the fleet's life",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Caterpillar**",
+     "caterpillar",
+     "incumbent",
+     "registry tagline: ~18 % of the data-center generator market and 33 % of tracked behind-the-meter capacity with Solar Turbines"
+    ],
+    [
+     "**Cummins**",
+     "cummins",
+     "incumbent",
+     "ecosystemRole: the second pole of the data-center standby duopoly; QSK95 and Centum gen-sets, HSK78G lean-burn gas"
+    ],
+    [
+     "**ERock**",
+     "enchanted-rock",
+     "incumbent",
+     "ecosystemRole: the archetype of the FEOC-immune energy dollar — public, vertically integrated gas-genset platform; a 470 MW Anthropic order"
+    ],
+    [
+     "**GE Vernova**",
+     "ge-vernova",
+     "incumbent",
+     "ecosystemRole: whoever holds turbine slots sets the energization date — reservations sold out through ~2030; 7HA and LM2500XPRESS fleets"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "mitsubishi-power",
+     "incumbent",
+     "registry tagline: the third heavy-duty gas turbine OEM — 35 GW of large-frame backlog; two-tier data-center bridge-power offer"
+    ],
+    [
+     "**Siemens Energy**",
+     "siemens-energy",
+     "incumbent",
+     "ecosystemRole: a top-3 global gas-turbine position; the Eaton alliance's repeatable 500 MW SGT-800 block"
+    ],
+    [
+     "**VoltaGrid**",
+     "voltagrid",
+     "incumbent",
+     "registry tagline: volume leader of behind-the-meter AIDC gas power — 2.3 GW Oracle/OpenAI, >1 GW Vantage; ≥3.8 GW of INNIO Jenbacher production locked"
+    ],
+    [
+     "**Wärtsilä**",
+     "wartsila",
+     "incumbent",
+     "productsAndServices › Engine power plants (retained, NOT in the storage JV): medium-speed engine plants scaling past 450 MW; ecosystemRole: the retained engine business independently monetizes data-center power"
+    ],
+    [
+     "**Bloom Energy**",
+     "bloom-energy",
+     "challenger",
+     "ecosystemRole: the disruptor of the time-to-power bottleneck — 55-day fuel-cell deployments; Oracle up to 2.8 GW, AEP 1 GW firm"
+    ],
+    [
+     "**Mainspring**",
+     "mainspring-energy",
+     "challenger",
+     "ecosystemRole: the permitting-wedge player of the FEOC-immune onsite-generation cohort — sub-1.5 ppm NOx with no after-treatment"
+    ],
+    [
+     "**ProEnergy**",
+     "proenergy",
+     "challenger",
+     "ecosystemRole: the mid-block (~50 MW/unit) specialist of the gas-bridge cohort, between the recip fleets below and GE Vernova's frames above; PE6000"
+    ],
+    [
+     "**Rehlko**",
+     "rehlko",
+     "challenger",
+     "registry tagline: formerly Kohler Energy — KD Series gen-sets 60 kW to 4 MW; Clarke Energy as INNIO Jenbacher's largest distributor"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "rolls-royce-power-systems",
+     "challenger",
+     "ecosystemRole: the widest single-vendor product span in on-site data-center power — mtu gen-sets, DRUPS, batteries, MEPP modular gas plants; outside the Cat/Cummins duopoly"
+    ],
+    [
+     "**Eaton**",
+     "eaton",
+     "adjacent",
+     "productsAndServices › On-site generation & energy storage — the Siemens Energy alliance's standardized ~500 MW modular on-site plants"
+    ],
+    [
+     "**ENGIE North America**",
+     "engie-north-america",
+     "adjacent",
+     "productsAndServices › Data-centre power and cooling — Sustainable Microgrids: on-site generation with battery storage"
+    ],
+    [
+     "**NRG Energy**",
+     "nrg-energy",
+     "adjacent",
+     "productsAndServices › Bring Your Own Power — customer-backed new generation; the 5.4 GW GE Vernova / TIC Project Development Agreement"
+    ],
+    [
+     "**Piller**",
+     "piller",
+     "adjacent",
+     "productsAndServices › SHIELDX kinetic stabilizer — one unit per 12 MW Bergen Engines gen-set on islanded AI campuses"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Caterpillar**",
+     "FY2025 · 2025-12-31",
+     "67,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Cummins**",
+     "FY2025 · 2025-12-31",
+     "33,700",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ERock**",
+     "FY2025 · 2025-12-31",
+     "183.1",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "FY2025 · 2025-12-31",
+     "38,100",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Siemens Energy**",
+     "FY2025 · 2025-09-30",
+     "44,180.5",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Bloom Energy**",
+     "FY2025 · 2025-12-31",
+     "2,020",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "FY2025 · 2025-12-31",
+     "27,400",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "FY2025 · 2025-12-31",
+     "30,713",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "FY2025 · 2025-12-31",
+     "375",
+     "EUR at 1.1296 USD/EUR (2025 calendar-year average, poundsterlinglive.com EUR-USD 2025 history)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Mitsubishi Power, VoltaGrid, Wärtsilä, Mainspring, ProEnergy, Rehlko, Rolls-Royce Power Systems, ENGIE North America"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Caterpillar**",
+     "**Bloom Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Fuel cells as prime power displacing gen-sets and turbines"
+    ],
+    [
+     "**Caterpillar**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
+    ],
+    [
+     "**Caterpillar**",
+     "**Rehlko**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Caterpillar**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "SGT-400 turbines beside Solar units at Socrates South"
+    ],
+    [
+     "**Caterpillar**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "—",
+     "Medium-speed gas engines for data-center prime power"
+    ],
+    [
+     "**Cummins**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "Caterpillar 18% / Cummins 16% of the data-center generator market (Fortune Business Insights estimate, 2026 data)",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Rehlko**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center standby generator sets"
+    ],
+    [
+     "**Cummins**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "Wartsila: 2 GW of US orders since 2025 against Cummins' 20 GW capacity addition",
+     "Behind-the-meter prime power"
+    ],
+    [
+     "**ERock**",
+     "**ProEnergy**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ERock**",
+     "**VoltaGrid**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Siemens Energy**",
+     "partner",
+     "active",
+     "~500 MW plant template",
+     "~500 MW modular on-site power plants"
+    ],
+    [
+     "**GE Vernova**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**GE Vernova**",
+     "**Mitsubishi Power**",
+     "competitor",
+     "active",
+     "—",
+     "Heavy-duty gas turbines"
+    ],
+    [
+     "**GE Vernova**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mainspring**",
+     "**ERock**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mainspring**",
+     "**ProEnergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mainspring**",
+     "**VoltaGrid**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Heavy-duty gas turbines"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**Siemens Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Heavy-duty gas turbines"
+    ],
+    [
+     "**NRG Energy**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "3.6 GW of 7HA turbine slots reserved against a 5.4 GW development ceiling",
+     "7HA gas turbines"
+    ],
+    [
+     "**Piller**",
+     "**Bloom Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Piller**",
+     "**Caterpillar**",
+     "partner",
+     "historical",
+     "—",
+     "Cat UPS distribution of Active Power flywheels"
+    ],
+    [
+     "**Piller**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ProEnergy**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "PE6000"
+    ],
+    [
+     "**ProEnergy**",
+     "**VoltaGrid**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ProEnergy**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "—",
+     "PE6000"
+    ],
+    [
+     "**Rehlko**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rehlko**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rehlko**",
+     "**Rolls-Royce Power Systems**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Caterpillar**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Cummins**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Rehlko**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center generator sets"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "Wartsila 790 MW Texas data-center order, April 2026",
+     "Behind-the-meter prime power"
+    ],
+    [
+     "**Siemens Energy**",
+     "**Eaton**",
+     "partner",
+     "active",
+     "500 MW standard block",
+     "500 MW SGT-800 block"
+    ],
+    [
+     "**Siemens Energy**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Siemens Energy**",
+     "**Mitsubishi Power**",
+     "competitor",
+     "active",
+     "—",
+     "Heavy-duty gas turbines"
+    ],
+    [
+     "**VoltaGrid**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**Siemens Energy**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ABB**",
+     "**VoltaGrid**",
+     "customer",
+     "active",
+     "62 synchronous condensers + ~$150M related order",
+     "flywheel synchronous condensers"
+    ],
+    [
+     "**Caterpillar**",
+     "FlexGen",
+     "other",
+     "historical",
+     "$25.5M Series A (with Altira and GE Ventures)",
+     "Caterpillar Ventures Series A participation"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**GE Vernova**",
+     "competitor",
+     "—",
+     "—",
+     "solid-state transformers"
+    ],
+    [
+     "**Dominion Energy**",
+     "**Siemens Energy**",
+     "supplier",
+     "active",
+     "176 turbines, 2.6 GW",
+     "Siemens Gamesa offshore wind turbines (CVOW)"
+    ],
+    [
+     "**ENGIE North America**",
+     "NextEra",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ERock**",
+     "Hithium",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "ABB",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "Flex",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "Mitsubishi Electric",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and transformers"
+    ],
+    [
+     "**Eaton**",
+     "Schneider Electric",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "Vertiv",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "3 Frame 6B (~116 MW) + 7 TM2500 (157.5 MW nameplate, leased)",
+     "Secondary-market Frame 6B units; TM2500 mobile turbines leased from Mobile Power Solutions"
+    ],
+    [
+     "**Fermi America**",
+     "**Siemens Energy**",
+     "supplier",
+     "active",
+     "6 SGT-800 + 3 SGT6-5000F (~1,024 MW simple cycle)",
+     "SGT-800 and SGT6-5000F gas turbines; Rated Capacity Agreement"
+    ],
+    [
+     "**Flex**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Form Energy**",
+     "**GE Vernova**",
+     "investor",
+     "active",
+     "—",
+     "Series F and Series G participation plus a strategic memorandum of understanding"
+    ],
+    [
+     "**Huawei Digital Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Kiewit**",
+     "**GE Vernova**",
+     "partner",
+     "active",
+     "~11 GW AI-driven gas EPC book",
+     "7HA turbines"
+    ],
+    [
+     "**Mainspring**",
+     "Hithium",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "Gas-insulated switchgear and transformers"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Mitsubishi Power**",
+     "partner",
+     "active",
+     "—",
+     "Next-generation gas turbine control system"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Piller**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Siemens Energy**",
+     "partner",
+     "announced",
+     "—",
+     "SF6-free high-voltage switching"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "Entergy",
+     "customer",
+     "announced",
+     "—",
+     "M501JAC gas turbines with carbon capture"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "Kiewit",
+     "partner",
+     "active",
+     "—",
+     "EPC on Mitsubishi Power turbine projects"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "Mitsubishi Electric",
+     "partner",
+     "active",
+     "—",
+     "Next-generation gas turbine control system"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "Prevalon",
+     "other",
+     "historical",
+     "—",
+     "Battery energy storage"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "Southern Company",
+     "customer",
+     "active",
+     "—",
+     "M501JAC and M501GAC turbines at Georgia Power"
+    ],
+    [
+     "**NRG Energy**",
+     "Constellation Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "Kiewit",
+     "supplier",
+     "active",
+     "up to 5.4 GW of combined-cycle EPC",
+     "TIC — The Industrial Company"
+    ],
+    [
+     "**NRG Energy**",
+     "Talen Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "Vistra",
+     "competitor",
+     "active",
+     "~25 GW vs ~50 GW pro forma",
+     "—"
+    ],
+    [
+     "**NextEra**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "4 GW CCGT turbine slots",
+     "CCGT turbines"
+    ],
+    [
+     "**ON.energy**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ON.energy**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "5 GW of pad-mount transformers",
+     "pad-mount transformers"
+    ],
+    [
+     "**Oklo**",
+     "**Siemens Energy**",
+     "supplier",
+     "active",
+     "SST-600 turbine + SGen-100A generator",
+     "Power conversion system"
+    ],
+    [
+     "**Piller**",
+     "ABB",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ]
+   ],
+   "note": "Curated edges among members: 40 · to the neighbouring segments: 61 (the first 40 shown, by company) · derived-only mentions (no curated typing): 16 among members, 15 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-01 — POWER Magazine publishes a four-way comparison of turbines under contract: GE Vernova 116 GW, Siemens Energy 95 GW, Mitsubishi Heavy Industries 35 GW of large-frame backlog across 80 units, with Ansaldo Energia re-entering the US market",
+     "sub": "Mitsubishi Power · market"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
+     "sub": "Rolls-Royce Power Systems · product-launch"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-28 — New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
+     "sub": "Piller · regulatory"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
+     "sub": "Caterpillar · capacity"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-27 — Rehlko joined the Wisconsin Data Center Coalition as an energy-resilience member, stating a track record of 14-plus GW of deployed data-center capacity, more than 90 percent of it custom-engineered",
+     "sub": "Rehlko · corporate"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
+     "sub": "NRG Energy · market"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-24 — James Hopkins promoted to VP, Financial Planning, Capital Management and Investor Relations effective 2026-09-01, reporting to CFO Mark Smith; Nick Arens now reports to Hopkins",
+     "sub": "Cummins · leadership"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-18 — ENGIE and QTS extend their Texas partnership: 48 MWac of ABEI Energy's ~61 MWac Lubio Solar (Kaufman County) to QTS's Irving data centres, ~150 GWh a year, with retail supply and energy management bundled",
+     "sub": "ENGIE North America · customer"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-18 — Selected to supply battery energy storage for a large US data-center project — 5 MWh nominal LFP blocks, the largest BESS deployment in company history; customer, location and value undisclosed",
+     "sub": "Cummins · order-win"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-13 — Large-frame gas turbine backlog reaches 80 units and 35 GW at 2026-06-30, up from 53 units and 23 GW a year earlier, on 10 units booked in the quarter (4 Americas, 6 Asia); MHI's gas and nuclear orders reached ¥1.1 trillion for April to June",
+     "sub": "Mitsubishi Power · financial"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-13 — CNBC/BofA frame EROC as 'a play on the Anthropic IPO'; Buy reiterated",
+     "sub": "ERock · market"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-12 — 33 mtu engines ordered for the modernisation of the Korean freight locomotive fleet",
+     "sub": "Rolls-Royce Power Systems · order-win"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Alternative-fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Cummins"
+    ],
+    [
+     "Beginning-of-construction safe harbor (IRS Notice 2025-42)",
+     "in-effect",
+     "2025-08",
+     "ENGIE North America"
+    ],
+    [
+     "Build America, Buy America",
+     "in-effect",
+     "—",
+     "Mitsubishi Power"
+    ],
+    [
+     "Building, seismic and wind codes",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "Buy America / domestic content",
+     "proposed",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "Clean Air Act section 111 greenhouse gas standards",
+     "proposed",
+     "2025-06-17",
+     "Mitsubishi Power"
+    ],
+    [
+     "Cybersecurity regulation (IEC 62443 / NIS2)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "EPA / CARB / DOJ emissions Settlement Agreements",
+     "in-effect",
+     "2024-04",
+     "Cummins"
+    ],
+    [
+     "EPA 2027 on-highway emissions rules",
+     "proposed",
+     "2027-01",
+     "Cummins"
+    ],
+    [
+     "EPA mobile-turbine permitting",
+     "proposed",
+     "—",
+     "ProEnergy"
+    ],
+    [
+     "EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Cummins"
+    ],
+    [
+     "EPA stationary-engine rules (NSPS Subparts IIII/JJJJ, NESHAP ZZZZ)",
+     "in-effect",
+     "2013-01",
+     "Caterpillar"
+    ],
+    [
+     "ERCOT market design and ancillary-services procurement",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "ERCOT market design — real-time co-optimisation with batteries",
+     "in-effect",
+     "2025-12-05",
+     "NRG Energy"
+    ],
+    [
+     "EU Medium Combustion Plant Directive and UK Specified Generator controls (DRUPS engines in Europe)",
+     "in-effect",
+     "—",
+     "Piller"
+    ],
+    [
+     "EU Stage V",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "EU Stage V",
+     "proposed",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "FEOC / NDAA Section 889 / UFLPA",
+     "proposed",
+     "—",
+     "Cummins"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "ERock, Mainspring, ProEnergy, VoltaGrid, Wärtsilä"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "FERC review of the LS Power acquisition (Federal Power Act section 203)",
+     "expired",
+     "2025-11-14",
+     "NRG Energy"
+    ],
+    [
+     "German grid code VDE-AR-N 4110",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "German Power Plant Strategy",
+     "announced",
+     "2026-02",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2025-07",
+     "Mainspring"
+    ],
+    [
+     "ITC/45X (One Big Beautiful Bill Act phase-out)",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "Minor-source air permitting",
+     "in-effect",
+     "—",
+     "VoltaGrid"
+    ],
+    [
+     "New York Public Service Commission consumer settlement (Case 25-M-0516)",
+     "in-effect",
+     "2026-04-16",
+     "NRG Energy"
+    ],
+    [
+     "NFPA 110 and NFPA 855",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "NFPA and NEC codes",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "Offshore wind leasing suspension and lease relinquishment",
+     "in-effect",
+     "2026-04-28",
+     "ENGIE North America"
+    ],
+    [
+     "Renewable fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Rehlko, Rolls-Royce Power Systems"
+    ],
+    [
+     "Retail supply regulation (state PUCs)",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "Section 232 tariffs",
+     "in-effect",
+     "2026-04",
+     "Mitsubishi Power"
+    ],
+    [
+     "Section 45V clean hydrogen production credit",
+     "in-effect",
+     "2025-01-10",
+     "Mitsubishi Power"
+    ],
+    [
+     "South African merger conditions",
+     "in-effect",
+     "2024-04",
+     "Rehlko"
+    ],
+    [
+     "State air-quality tightening above the federal floor",
+     "in-effect",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "State data-center siting and air-permit review",
+     "proposed",
+     "2026",
+     "Caterpillar"
+    ],
+    [
+     "State integrated resource planning",
+     "in-effect",
+     "—",
+     "Mitsubishi Power"
+    ],
+    [
+     "Texas Energy Fund (Senate Bills 2627 and 2268)",
+     "in-effect",
+     "2023",
+     "NRG Energy"
+    ],
+    [
+     "Texas large-load interconnection pause and PUCT verification (August 2026)",
+     "in-effect",
+     "2026-08-03",
+     "NRG Energy"
+    ],
+    [
+     "Uptime Institute Tier standards",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "US air-quality permitting",
+     "in-effect",
+     "—",
+     "ERock, Mainspring"
+    ],
+    [
+     "US EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Rehlko, Rolls-Royce Power Systems"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "GE Vernova, Rolls-Royce Power Systems, Siemens Energy"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2025",
+     "Cummins"
+    ],
+    [
+     "US import tariffs",
+     "proposed",
+     "—",
+     "Rehlko"
+    ],
+    [
+     "US import tariffs (IEEPA and Section 232)",
+     "in-effect",
+     "2025",
+     "Caterpillar"
+    ],
+    [
+     "US import tariffs on German-built equipment (Section 232 derivatives; EU–US 15% ceiling)",
+     "in-effect",
+     "2026-07-01",
+     "Piller"
+    ],
+    [
+     "US offshore wind stop-work",
+     "in-effect",
+     "2025-12",
+     "GE Vernova"
+    ],
+    [
+     "US stationary engine and data-center generator rules (RICE NESHAP/NSPS; state and local air permits)",
+     "in-effect",
+     "2025-05-01",
+     "Piller"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "Wärtsilä"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Bridge Power: Building the Plant Before the Grid Arrives* · *The Ten-Second Race* (planned) · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Caterpillar, Cummins, ERock, GE Vernova, Mitsubishi Power, Siemens Energy, VoltaGrid, Wärtsilä, Bloom Energy, Mainspring, ProEnergy, Rehlko, Rolls-Royce Power Systems, Eaton, ENGIE North America, NRG Energy, Piller — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Caterpillar** in (among others)?",
+     "c": [
+      "Clean firm and nuclear",
+      "Bridge and on-site generation",
+      "Hyperscalers and AI labs",
+      "In-hall power"
+     ],
+     "a": 1,
+     "why": "The registry's basis line: registry tagline: ~18 % of the data-center generator market and 33 % of tracked behind-the-meter capacity with Solar Turbines"
+    },
+    {
+     "q": "What role does the registry give **Piller** in Bridge and on-site generation?",
+     "c": [
+      "incumbent",
+      "challenger",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Bridge and on-site generation** buy on, per the registry?",
+     "c": [
+      "Firm power availability at the site and the date it arrives",
+      "Delay-in-start-up and business-interruption cover on the schedule the lender assumes",
+      "Firmness and resource adequacy against the plan's need",
+      "Time to power — the production slot, reservation fees, trailer-mounted mobility"
+     ],
+     "a": 3,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Bridge and on-site generation?",
+     "c": [
+      "EPC and construction",
+      "Compute and the rack",
+      "In-hall power",
+      "Power conversion and rack-power silicon"
+     ],
+     "a": 2,
+     "why": "Chain position 5 against this segment's 6."
+    },
+    {
+     "q": "The graph records a curated edge from **Caterpillar** to **Bloom Energy**. How is it typed from Caterpillar's side?",
+     "c": [
+      "investor",
+      "customer",
+      "competitor",
+      "supplier"
+     ],
+     "a": 2,
+     "why": "Second-largest OEM in Cleanview's tracker of permitted behind-the-meter data-center generation (14% to Caterpillar/Solar's 33%), and the flameless alternative the permit section of the study guide describes."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentCleanFirmAndNuclear_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-clean-firm-and-nuclear",
+ "type": "module",
+ "title": "Clean firm and nuclear",
+ "short": "Firm carbon-free power as a product — existing reactor output sold on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-01-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:bechtel",
+    "date": "2026-08-30",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:black-veatch",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:constellation-energy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dominion-energy",
+    "date": "2026-09-03",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:entergy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fermi-america",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:form-energy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:kiewit",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nextera-energy-resources",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:oklo",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sargent-lundy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:southern-company",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:talen-energy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vistra",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:x-energy",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:xcel-energy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "16",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "3",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "2",
+   "v": "challengers",
+   "sub": "contesting that set; 11 adjacent"
+  },
+  {
+   "k": "42",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "Firm carbon-free power as a product — existing reactor output sold on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the storage-firmed alternatives that compete for the same 'clean firm' line in a hyperscaler contract. The segment where the licence is the schedule.",
+    "Chain position 7 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 6)",
+     "Bridge and on-site generation",
+     "build"
+    ],
+    [
+     "**This segment** (position 7)",
+     "**Clean firm and nuclear**",
+     "build"
+    ],
+    [
+     "Downstream (position 8)",
+     "Cooling",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Hyperscalers and AI labs (25 edges) · AIDC developers and landlords (21 edges) · Neoclouds (3 edges) · Utilities (3 edges) · Grid equipment (2 edges) · Bridge and on-site generation (2 edges) · Storage developers and IPPs (2 edges) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Grid equipment (11 edges) · Bridge and on-site generation (11 edges) · Storage integrators and containers (10 edges) · Storage developers and IPPs (7 edges) · Power conversion and rack-power silicon (6 edges) · In-hall power (6 edges) · EPC and construction (6 edges) · Cells and chemistry (4 edges) · Software and optimization (4 edges) · Assurance (3 edges) · AIDC developers and landlords (2 edges) · Utilities (2 edges)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "First-power date and the licensing path (NRC vs DOE authorization; combined licence vs construction permit)",
+     "—"
+    ],
+    [
+     "$/MWh against the restart, existing-reactor and new-build price ladder",
+     "*When the Campus Signs a Reactor* (planned)"
+    ],
+    [
+     "Capacity factor and firmness; how badly the unit follows load",
+     "—"
+    ],
+    [
+     "Fuel security — HALEU supply, fabrication capacity",
+     "—"
+    ],
+    [
+     "Additionality and the behind-the-meter vs front-of-meter treatment (the Talen precedent)",
+     "—"
+    ],
+    [
+     "Balance sheet and the sponsor's ability to carry a first-of-a-kind schedule",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Constellation Energy**",
+     "constellation-energy",
+     "incumbent",
+     "ecosystemRole: the price-setter for firm carbon-free power in the AI buildout; the largest US nuclear fleet; Crane restart for Microsoft"
+    ],
+    [
+     "**Talen Energy**",
+     "talen-energy",
+     "incumbent",
+     "ecosystemRole: a merchant generator selling from an existing fleet — 90 % of Susquehanna, up to 1,920 MW to Amazon through 2042"
+    ],
+    [
+     "**Vistra**",
+     "vistra",
+     "incumbent",
+     "registry tagline: 3.8 GW of six reactors sold to Amazon and Meta on twenty-year agreements; 6,448 MW nuclear at four sites"
+    ],
+    [
+     "**Oklo**",
+     "oklo",
+     "challenger",
+     "registry tagline: pre-commercial SMR developer building a 75 MWe sodium-cooled fast reactor at Idaho under DOE authorization; non-binding order book"
+    ],
+    [
+     "**X-energy**",
+     "x-energy",
+     "challenger",
+     "ecosystemRole: the corpus's SMR-side anchor — Amazon's chosen reactor vendor (Cascade), the Dow/Long Mott applicant; sells reactors, fuel and services"
+    ],
+    [
+     "**Bechtel**",
+     "bechtel",
+     "adjacent",
+     "productsAndServices › Nuclear (conventional, SMR & export): the only EPC to bring 21st-century US nuclear online"
+    ],
+    [
+     "**Black & Veatch**",
+     "black-veatch",
+     "adjacent",
+     "productsAndServices › Nuclear / SMR (Cascade JV) with Aecon and Kiewit for Energy Northwest"
+    ],
+    [
+     "**Dominion Energy**",
+     "dominion-energy",
+     "adjacent",
+     "productsAndServices › Nuclear fleet and small modular reactor development at North Anna — seven units in three states"
+    ],
+    [
+     "**Entergy**",
+     "entergy",
+     "adjacent",
+     "productsAndServices › Nuclear fleet — four plants, five reactors, and the uprate and new-build options"
+    ],
+    [
+     "**Fermi America**",
+     "fermi-america",
+     "adjacent",
+     "productsAndServices › Nuclear programme — four Westinghouse AP1000 units under a combined license application (2033–2036)"
+    ],
+    [
+     "**Form Energy**",
+     "form-energy",
+     "adjacent",
+     "ecosystemRole: sold against a still, overcast week — the storage-firmed alternative that competes for the clean-firm line rather than the arbitrage stack"
+    ],
+    [
+     "**Kiewit**",
+     "kiewit",
+     "adjacent",
+     "productsAndServices › Nuclear (Kiewit Nuclear Solutions): lead constructor for Oklo's first Aurora powerhouse"
+    ],
+    [
+     "**NextEra**",
+     "nextera-energy-resources",
+     "adjacent",
+     "registry tagline: Duane Arnold restart inside the AIDC energy franchise"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "sargent-lundy",
+     "adjacent",
+     "productsAndServices › Nuclear — new build, SMR licensing and design, restarts, uprates and life extension"
+    ],
+    [
+     "**Southern Company**",
+     "southern-company",
+     "adjacent",
+     "productsAndServices › Nuclear fleet — Vogtle 3 and 4, the Vogtle 1–2 and Hatch uprates; Southern Nuclear"
+    ],
+    [
+     "**Xcel Energy**",
+     "xcel-energy",
+     "adjacent",
+     "productsAndServices › Nuclear fleet — Monticello and Prairie Island (~1,650 MW)"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Talen Energy**",
+     "FY2025 · 2025-12-31",
+     "2,581",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,920"
+    ],
+    [
+     "**Vistra**",
+     "FY2025 · 2025-12-31",
+     "17,738",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,200"
+    ],
+    [
+     "**Oklo**",
+     "FY2025 · 2025-12-31",
+     "0",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Dominion Energy**",
+     "FY2025 · 2025-12-31",
+     "16,506",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Entergy**",
+     "FY2025 · 2025-12-31",
+     "12,947",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "FY2025 · 2025-12-31",
+     "0",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Southern Company**",
+     "FY2025 · 2025-12-31",
+     "29,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "10,000"
+    ],
+    [
+     "**Xcel Energy**",
+     "FY2025 · 2025-12-31",
+     "14,669",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Constellation Energy, X-energy, Bechtel, Black & Veatch, Form Energy, Kiewit, NextEra, Sargent & Lundy"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Bechtel**",
+     "**Kiewit**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Black & Veatch**",
+     "**Bechtel**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Black & Veatch**",
+     "**Kiewit**",
+     "partner",
+     "active",
+     "—",
+     "X-energy Xe-100 SMRs"
+    ],
+    [
+     "**Black & Veatch**",
+     "**X-energy**",
+     "partner",
+     "active",
+     "first 4 of 12 Xe-100s, up to 320 MW",
+     "Cascade Nuclear Partners"
+    ],
+    [
+     "**Dominion Energy**",
+     "**NextEra**",
+     "other",
+     "announced",
+     "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5% / Dominion 25.5%",
+     "NextEra Energy–Dominion Energy combination"
+    ],
+    [
+     "**Entergy**",
+     "**Dominion Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Large-load contracting design"
+    ],
+    [
+     "**Fermi America**",
+     "**Xcel Energy**",
+     "supplier",
+     "active",
+     "up to 200 MW",
+     "Southwestern Public Service Company electric service agreement (115 kV)"
+    ],
+    [
+     "**Form Energy**",
+     "**Dominion Energy**",
+     "customer",
+     "announced",
+     "about 4.95 MW / 494 MWh within a $70.6m two-technology pilot",
+     "Darbytown Storage Pilot"
+    ],
+    [
+     "**Form Energy**",
+     "**Southern Company**",
+     "customer",
+     "announced",
+     "15 MW / 1,500 MWh",
+     "Georgia Power integrated resource planning"
+    ],
+    [
+     "**Form Energy**",
+     "**Xcel Energy**",
+     "customer",
+     "active",
+     "30 GWh at Pine Island plus 1,000 MWh at Sherco and 1,000 MWh at Comanche",
+     "Regulated utility procurement and a large-load tariff"
+    ],
+    [
+     "**Kiewit**",
+     "**Bechtel**",
+     "competitor",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Kiewit**",
+     "**Black & Veatch**",
+     "partner",
+     "active",
+     "—",
+     "Cascade Nuclear Partners"
+    ],
+    [
+     "**Kiewit**",
+     "**Oklo**",
+     "customer",
+     "active",
+     "75 MWe first unit",
+     "—"
+    ],
+    [
+     "**Kiewit**",
+     "**X-energy**",
+     "partner",
+     "active",
+     "first 4 of 12 Xe-100s, up to 320 MW",
+     "Cascade Nuclear Partners (Kiewit Nuclear Solutions Co., Black & Veatch, Aecon)"
+    ],
+    [
+     "**Oklo**",
+     "**Kiewit**",
+     "supplier",
+     "active",
+     "Lead constructor, Aurora-INL",
+     "Kiewit Nuclear Solutions"
+    ],
+    [
+     "**Oklo**",
+     "**X-energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Bechtel**",
+     "partner",
+     "active",
+     "—",
+     "Clinch River BWRX-300 integrated project delivery"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Black & Veatch**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Constellation Energy**",
+     "customer",
+     "historical",
+     "—",
+     "Exelon engineer-of-choice contract"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Dominion Energy**",
+     "customer",
+     "historical",
+     "—",
+     "Nuclear services"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Entergy**",
+     "customer",
+     "active",
+     "1,215 MW",
+     "Engineer of record — Orange County Advanced Power Station; ANO-1 subsequent licence renewal"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Kiewit**",
+     "partner",
+     "historical",
+     "—",
+     "Carbon-capture FEED and EPC teams"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**NextEra**",
+     "customer",
+     "historical",
+     "—",
+     "Wind repowering engineering"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Southern Company**",
+     "customer",
+     "active",
+     "—",
+     "Vogtle 3 and 4 on-site support; Augusta office"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**X-energy**",
+     "customer",
+     "active",
+     "Long Mott construction permit application (four Xe-100s, 320 MW)",
+     "Site selection, licensing and environmental services for Dow / X-energy"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Xcel Energy**",
+     "customer",
+     "active",
+     "—",
+     "Utilities Service Alliance engineer-of-choice; Monticello security; Black Dog conversion"
+    ],
+    [
+     "**Southern Company**",
+     "**Dominion Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Large-load tariff design"
+    ],
+    [
+     "**Southern Company**",
+     "**NextEra**",
+     "supplier",
+     "announced",
+     "—",
+     "Purchase agreements in the December 2025 Georgia certification"
+    ],
+    [
+     "**Talen Energy**",
+     "**Constellation Energy**",
+     "competitor",
+     "active",
+     "20.3 GW vs 13.1 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Talen Energy**",
+     "**Vistra**",
+     "competitor",
+     "active",
+     "13.9 GW vs 13.1 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Talen Energy**",
+     "**X-energy**",
+     "partner",
+     "announced",
+     "three or more four-unit Xe-100 plants (non-binding LOI)",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Constellation Energy**",
+     "competitor",
+     "active",
+     "20.3 GW vs 13.9 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**NextEra**",
+     "competitor",
+     "historical",
+     "2,194 MW vs 750 MW brought online in 2023",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Talen Energy**",
+     "competitor",
+     "active",
+     "13.9 GW vs 13.1 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**X-energy**",
+     "**Black & Veatch**",
+     "partner",
+     "active",
+     "first 4 of 12 Xe-100s, up to 320 MW",
+     "Cascade Nuclear Partners"
+    ],
+    [
+     "**X-energy**",
+     "**Kiewit**",
+     "partner",
+     "active",
+     "first 4 of 12 Xe-100s, up to 320 MW",
+     "Cascade Nuclear Partners (Kiewit Nuclear Solutions Co., Black & Veatch, Aecon)"
+    ],
+    [
+     "**X-energy**",
+     "**Oklo**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**X-energy**",
+     "**Sargent & Lundy**",
+     "supplier",
+     "active",
+     "Long Mott construction permit application (four Xe-100s)",
+     "Site selection, licensing and environmental services for Dow / Long Mott"
+    ],
+    [
+     "**X-energy**",
+     "**Talen Energy**",
+     "partner",
+     "announced",
+     "three or more four-unit Xe-100 plants (non-binding LOI)",
+     "—"
+    ],
+    [
+     "**Xcel Energy**",
+     "**Fermi America**",
+     "customer",
+     "announced",
+     "up to 200 MW",
+     "Southwestern Public Service Company electric service agreement (115 kV) — Project Matador, Carson County, TX"
+    ],
+    [
+     "**Xcel Energy**",
+     "**Form Energy**",
+     "supplier",
+     "active",
+     "30 GWh at Pine Island plus 1,000 MWh each at Sherco and Comanche",
+     "100-hour iron-air multi-day storage"
+    ],
+    [
+     "**Xcel Energy**",
+     "**NextEra**",
+     "partner",
+     "active",
+     "2 GW of data center capacity (joint development agreement)",
+     "Joint development agreement — generation, storage and interconnection for large load"
+    ],
+    [
+     "**Dominion Energy**",
+     "Siemens Energy",
+     "supplier",
+     "active",
+     "176 turbines, 2.6 GW",
+     "Siemens Gamesa offshore wind turbines (CVOW)"
+    ],
+    [
+     "**ENGIE North America**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "GE Vernova",
+     "supplier",
+     "active",
+     "3 Frame 6B (~116 MW) + 7 TM2500 (157.5 MW nameplate, leased)",
+     "Secondary-market Frame 6B units; TM2500 mobile turbines leased from Mobile Power Solutions"
+    ],
+    [
+     "**Fermi America**",
+     "Siemens Energy",
+     "supplier",
+     "active",
+     "6 SGT-800 + 3 SGT6-5000F (~1,024 MW simple cycle)",
+     "SGT-800 and SGT6-5000F gas turbines; Rated Capacity Agreement"
+    ],
+    [
+     "**Form Energy**",
+     "GE Vernova",
+     "investor",
+     "active",
+     "—",
+     "Series F and Series G participation plus a strategic memorandum of understanding"
+    ],
+    [
+     "**Kiewit**",
+     "GE Vernova",
+     "partner",
+     "active",
+     "~11 GW AI-driven gas EPC book",
+     "7HA turbines"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**Entergy**",
+     "customer",
+     "announced",
+     "—",
+     "M501JAC gas turbines with carbon capture"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**Kiewit**",
+     "partner",
+     "active",
+     "—",
+     "EPC on Mitsubishi Power turbine projects"
+    ],
+    [
+     "**Mitsubishi Power**",
+     "**Southern Company**",
+     "customer",
+     "active",
+     "—",
+     "M501JAC and M501GAC turbines at Georgia Power"
+    ],
+    [
+     "**NRG Energy**",
+     "**Constellation Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "**Kiewit**",
+     "supplier",
+     "active",
+     "up to 5.4 GW of combined-cycle EPC",
+     "TIC — The Industrial Company"
+    ],
+    [
+     "**NRG Energy**",
+     "**Talen Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "**Vistra**",
+     "competitor",
+     "active",
+     "~25 GW vs ~50 GW pro forma",
+     "—"
+    ],
+    [
+     "**NextEra**",
+     "GE Vernova",
+     "supplier",
+     "active",
+     "4 GW CCGT turbine slots",
+     "CCGT turbines"
+    ],
+    [
+     "**Oklo**",
+     "Siemens Energy",
+     "supplier",
+     "active",
+     "SST-600 turbine + SGen-100A generator",
+     "Power conversion system"
+    ],
+    [
+     "**Oklo**",
+     "Vertiv",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "GE Vernova",
+     "customer",
+     "active",
+     "—",
+     "BWRX-300 reactor building standard plant design"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "Mitsubishi Power",
+     "partner",
+     "active",
+     "1,215 MW",
+     "Orange County Advanced Power Station EPC consortium"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "Wärtsilä",
+     "other",
+     "active",
+     "72 MW",
+     "Reciprocating-engine plants engineered by Sargent & Lundy"
+    ],
+    [
+     "**Siemens Energy**",
+     "**Oklo**",
+     "customer",
+     "active",
+     "SST-600 turbine + SGen-100A generator",
+     "Power conversion system"
+    ],
+    [
+     "**Southern Company**",
+     "Wärtsilä",
+     "supplier",
+     "active",
+     "65 MW / 4-hour",
+     "Quantum energy storage and GEMS platform — Mossy Branch"
+    ],
+    [
+     "**Vertiv**",
+     "**Oklo**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "NRG Energy",
+     "competitor",
+     "active",
+     "~50 GW pro forma vs ~25 GW",
+     "—"
+    ],
+    [
+     "**Xcel Energy**",
+     "GE Vernova",
+     "supplier",
+     "active",
+     "five F-class gas turbines reserved; multiple gigawatts of wind turbine capacity",
+     "Strategic Alliance Agreement — gas turbines, wind turbines, synchronous condensers"
+    ],
+    [
+     "**Xcel Energy**",
+     "Siemens Energy",
+     "supplier",
+     "active",
+     "10 SGT6-5000F turbines, 2,088 MW",
+     "Gas turbines and generators for Tolk Station and a Gaines County peaker (Texas)"
+    ]
+   ],
+   "note": "Curated edges among members: 42 · to the neighbouring segments: 25 · derived-only mentions (no curated typing): 2 among members, 5 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-04 — TVA presents Sargent & Lundy its 2026 Valley Supplier Award; the relationship 'began in February 1994' with 'no gap in service'",
+     "sub": "Sargent & Lundy · customer"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-03 — Arkansas Democrat-Gazette: APSC staff testified that 'Google is paying well below the full cost of this resource' on Cypress Solar; the November 17, 2026 hearing is mostly closed; Entergy sought to stop publication of the FOIA'd contract",
+     "sub": "Entergy · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-03 — Special meeting of shareholders to vote on the NextEra Energy combination — 9:30 a.m. ET, virtual; joint proxy statement mailed July 28 after the S-4 went effective July 23",
+     "sub": "Dominion Energy · corporate"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-01 — Company posts a 'Community Questions' FAQ stating Phase 1 is 'primarily natural gas'",
+     "sub": "Fermi America · other"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-31 — Minnesota Attorney General Ellison and the Citizens Utility Board file reconsideration petitions against the PUC's 3–2 verbal decision granting NSP-Minnesota ~$211 million over two years at a 9.6 percent ROE; the PUC's response is due mid-October",
+     "sub": "Xcel Energy · regulatory"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-31 — PJM withdraws Oklo's 750 MW Pike County interconnection project; Oklo files an emergency complaint at FERC",
+     "sub": "Oklo · regulatory"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-31 — 8-K: first annual meeting set for 30 October 2026, record date 31 August, nomination and proposal deadline 10 September; Jeffrey Stein joins the Audit Committee",
+     "sub": "Fermi America · corporate"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-31 — Arkansas Democrat-Gazette reads the Google contract: $526M ($443M accelerated, $83M minimum-demand) plus $190M for transmission, a 20-year term, 480 MW minimum against 600 MW maximum, a ~$2B termination fee declining after year 13",
+     "sub": "Entergy · customer"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-27 — AJC: the OpenAI contract's added protections — no recovery of a revenue shortfall from residential customers on early termination, PSC notice within 15 days of any large-customer cancellation, semiannual public reporting; Georgia Watch calls the commitment letter 'full of ifs'",
+     "sub": "Southern Company · regulatory"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-27 — NRC issues its environmental assessment and finding of no significant impact for Long Mott Energy (Dow) and X-energy's four-unit Xe-100 plant at Seadrift; Sargent & Lundy prepared the environmental report with WSP and expects the PSAR review 'to be completed by year-end'",
+     "sub": "Sargent & Lundy · regulatory"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-27 — Entergy says customers are beginning to see benefits from the data-center agreements — about $7B over two decades; Mississippi residential bills avoided a $4.87 monthly increase in July; Meta to pay about 10 percent of Entergy Louisiana's storm and resiliency charges",
+     "sub": "Entergy · corporate"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-26 — CPR reports resident and advocate pushback on Xcel's Colorado large-load tariff (Proceeding 26AL-0137E), following an Earthjustice-led intervention in May",
+     "sub": "Xcel Energy · regulatory"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Arkansas Act 373 of 2025 (Generating Arkansas Jobs Act)",
+     "in-effect",
+     "2025-04",
+     "Entergy"
+    ],
+    [
+     "DOE Advanced Reactor Demonstration Program (ARDP) cost share",
+     "in-effect",
+     "2021-02",
+     "X-energy"
+    ],
+    [
+     "DOE HALEU Availability Program and HALEU supply",
+     "in-effect",
+     "2025-04",
+     "X-energy"
+    ],
+    [
+     "DOE Loan Programs Office",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "DOE Loan Programs Office guarantees",
+     "in-effect",
+     "2026-02-25",
+     "Southern Company"
+    ],
+    [
+     "DOE Reactor Pilot Program (Executive Order 14301)",
+     "in-effect",
+     "2025-05-23",
+     "Oklo"
+    ],
+    [
+     "EPA administrative settlement agreement for the Moss Landing site",
+     "in-effect",
+     "2025-07-17",
+     "Vistra"
+    ],
+    [
+     "EPA effluent limitations guidelines and coal combustion residuals rules",
+     "in-effect",
+     "2020",
+     "Talen Energy"
+    ],
+    [
+     "EPA mercury and air toxics standards and greenhouse-gas rules for existing units",
+     "in-effect",
+     "2024-05",
+     "Talen Energy"
+    ],
+    [
+     "EPA power-plant rules (mercury and air toxics, greenhouse-gas standards)",
+     "in-effect",
+     "2025-04",
+     "Southern Company"
+    ],
+    [
+     "Federal and Texas nuclear and clean-energy incentives (45J, 45Q, 45V, 48C; DOE Office of Energy Dominance Financing; Texas HB14)",
+     "announced",
+     "—",
+     "Fermi America"
+    ],
+    [
+     "Federal clean-energy credits (ITC/45X, nuclear PTC) after the 2025 reconciliation act",
+     "in-effect",
+     "—",
+     "Southern Company"
+    ],
+    [
+     "Federal clean-energy credits after the 2025 reconciliation act (IRA wind/solar phase-out, 45U nuclear, transferability)",
+     "in-effect",
+     "2025-07-04",
+     "Xcel Energy"
+    ],
+    [
+     "Federal energy demonstration funding",
+     "in-effect",
+     "2024-09-20",
+     "Form Energy"
+    ],
+    [
+     "Federal offshore-wind policy and import tariffs (CVOW)",
+     "in-effect",
+     "2025-12-22",
+     "Dominion Energy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "NextEra"
+    ],
+    [
+     "FERC co-located load and large-load interconnection (dockets ER24-2172, EL25-49, EL26-67)",
+     "in-effect",
+     "2025-12-18",
+     "Talen Energy"
+    ],
+    [
+     "FERC co-located load rulemaking in PJM (dockets EL25-49, EL26-67)",
+     "in-effect",
+     "2025-12-18",
+     "Vistra"
+    ],
+    [
+     "FERC co-location rules (PJM)",
+     "announced",
+     "—",
+     "Constellation Energy"
+    ],
+    [
+     "FERC large-load and co-location rules (PJM, Docket EL25-49)",
+     "announced",
+     "2025-12-18",
+     "Dominion Energy"
+    ],
+    [
+     "FERC Order 1920 (long-term transmission planning) and Order 1000",
+     "in-effect",
+     "2024-05",
+     "Sargent & Lundy"
+    ],
+    [
+     "FERC Order 845 — interconnection queue modifications",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "Georgia data-center sales-tax exemption and 2026 cost-shift bills",
+     "in-effect",
+     "—",
+     "Southern Company"
+    ],
+    [
+     "Georgia PSC large-load rule (contracts above 100 MW)",
+     "in-effect",
+     "2025-02-01",
+     "Southern Company"
+    ],
+    [
+     "HALEU supply and the DOE HALEU Availability Program",
+     "in-effect",
+     "—",
+     "Oklo"
+    ],
+    [
+     "Illinois ZEC program",
+     "in-effect",
+     "—",
+     "Constellation Energy"
+    ],
+    [
+     "Inflation Reduction Act ITC/PTC (as amended in 2025)",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Form Energy, NextEra"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2024-12",
+     "X-energy"
+    ],
+    [
+     "Large-load tariffs (Minnesota approved; Colorado and Wisconsin filed)",
+     "in-effect",
+     "2026",
+     "Xcel Energy"
+    ],
+    [
+     "Local water and tax agreements (City of Amarillo; Carson County)",
+     "in-effect",
+     "2025-10",
+     "Fermi America"
+    ],
+    [
+     "Louisiana PSC 'Lightning Amendment' and large-load guidelines",
+     "in-effect",
+     "2025-12-17",
+     "Entergy"
+    ],
+    [
+     "Merger approvals (NextEra Energy combination)",
+     "announced",
+     "2026-07-15",
+     "Dominion Energy"
+    ],
+    [
+     "Mississippi pre-certification statute for facilities serving data-processing customers (SB 2001 of 2024)",
+     "in-effect",
+     "2024",
+     "Entergy"
+    ],
+    [
+     "NERC large-load reliability standards (Large Loads Task Force)",
+     "proposed",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "NRC 10 CFR Part 50 construction permits (advanced reactors)",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "NRC combined licence (10 CFR Part 52)",
+     "proposed",
+     "2020-03-17",
+     "Oklo"
+    ],
+    [
+     "NRC combined license (10 CFR Part 52) and the applicant-prepared EIS pilot",
+     "in-effect",
+     "2025-09-05",
+     "Fermi America"
+    ],
+    [
+     "NRC Part 50 construction permit — Executive Order 14300 18-month schedule",
+     "in-effect",
+     "2025-06-10",
+     "X-energy"
+    ],
+    [
+     "NRC Part 53",
+     "in-effect",
+     "2026-03-30",
+     "Oklo"
+    ],
+    [
+     "Nuclear production tax credit (section 45U)",
+     "in-effect",
+     "2024-01-01",
+     "Talen Energy, Vistra"
+    ],
+    [
+     "Pennsylvania data-centre executive order and RGGI withdrawal",
+     "in-effect",
+     "2026-08-19",
+     "Talen Energy"
+    ],
+    [
+     "PJM capacity market",
+     "in-effect",
+     "2025-06",
+     "Dominion Energy"
+    ],
+    [
+     "PJM interconnection process",
+     "in-effect",
+     "2026-08-03",
+     "Oklo"
+    ],
+    [
+     "Prohibiting Russian Uranium Imports Act",
+     "in-effect",
+     "2024-08-11",
+     "Oklo"
+    ],
+    [
+     "Sections 45Y and 48E clean-electricity credits (OBBBA)",
+     "in-effect",
+     "2025-07-04",
+     "Oklo"
+    ],
+    [
+     "Securities litigation and federal inquiries",
+     "in-effect",
+     "2026-01-05",
+     "Fermi America"
+    ],
+    [
+     "State clean-energy mandates — Minnesota 100% carbon-free by 2040; Colorado 80% by 2030 and coal exit; New Mexico RPS",
+     "in-effect",
+     "—",
+     "Xcel Energy"
+    ],
+    [
+     "State rate regulation — 2026 base-rate outcomes and ROE contests",
+     "in-effect",
+     "2026",
+     "Xcel Energy"
+    ],
+    [
+     "State utility cost recovery",
+     "in-effect",
+     "2023-07-06",
+     "Form Energy"
+    ],
+    [
+     "Storm-cost securitization statutes (Louisiana, Mississippi)",
+     "in-effect",
+     "2026-04",
+     "Entergy"
+    ],
+    [
+     "TCEQ Clean Air Act permitting (Texas)",
+     "in-effect",
+     "2026-02-25",
+     "Fermi America"
+    ],
+    [
+     "Texas Attorney General litigation and agreed injunction (Smokehouse Creek)",
+     "in-effect",
+     "2026-02",
+     "Xcel Energy"
+    ],
+    [
+     "Texas Energy Fund in-ERCOT generation loan programme",
+     "in-effect",
+     "2023",
+     "Vistra"
+    ],
+    [
+     "Texas large-load interconnection directive (ERCOT) — not applicable to SPS/SPP",
+     "in-effect",
+     "2026-08",
+     "Fermi America"
+    ],
+    [
+     "Texas SB 6 (2025) large-load rules",
+     "in-effect",
+     "2025",
+     "Entergy"
+    ],
+    [
+     "Texas Senate Bill 6 and the PUCT large-load rulemaking (Project 58317)",
+     "in-effect",
+     "2025-06",
+     "Vistra"
+    ],
+    [
+     "UK Generic Design Assessment",
+     "in-effect",
+     "2026-06-02",
+     "X-energy"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "NextEra"
+    ],
+    [
+     "US–Japan AI infrastructure framework",
+     "announced",
+     "—",
+     "Kiewit"
+    ],
+    [
+     "Virginia Clean Economy Act and the April 2026 storage statute",
+     "in-effect",
+     "2026-04",
+     "Dominion Energy"
+    ],
+    [
+     "Virginia large-load cost allocation (GS-5; Rider T-1 direct assignment; HB 1393; 2026 budget consumption tax)",
+     "in-effect",
+     "2027-01-01",
+     "Dominion Energy"
+    ],
+    [
+     "West Virginia incentive package",
+     "in-effect",
+     "2022-12-22",
+     "Form Energy"
+    ],
+    [
+     "Wildfire liability law — Texas, North Dakota, South Dakota reforms; no Colorado statute; Colorado securitization",
+     "in-effect",
+     "2025",
+     "Xcel Energy"
+    ],
+    [
+     "§45U nuclear PTC",
+     "in-effect",
+     "—",
+     "Constellation Energy"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *When the Campus Signs a Reactor* (planned) · *Reading the Eight Named Projects* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Constellation Energy, Talen Energy, Vistra, Oklo, X-energy, Bechtel, Black & Veatch, Dominion Energy, Entergy, Fermi America, Form Energy, Kiewit, NextEra, Sargent & Lundy, Southern Company, Xcel Energy — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Constellation Energy** in (among others)?",
+     "c": [
+      "Bridge and on-site generation",
+      "Capital",
+      "Clean firm and nuclear",
+      "Compute and the rack"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: ecosystemRole: the price-setter for firm carbon-free power in the AI buildout; the largest US nuclear fleet; Crane restart for Microsoft"
+    },
+    {
+     "q": "What role does the registry give **Xcel Energy** in Clean firm and nuclear?",
+     "c": [
+      "challenger",
+      "adjacent",
+      "incumbent"
+     ],
+     "a": 1,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Clean firm and nuclear** buy on, per the registry?",
+     "c": [
+      "Protection and automation integration (IEC 61850) and the coordination study",
+      "First-power date and the licensing path (NRC vs DOE authorization; combined licence vs construction permit)",
+      "Minimum-demand, term, collateral and exit-fee terms the large-load customer will sign",
+      "Lead time for factory-built power rooms and the tested-at-factory guarantee"
+     ],
+     "a": 1,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Clean firm and nuclear?",
+     "c": [
+      "Compute and the rack",
+      "Bridge and on-site generation",
+      "EPC and construction",
+      "Cooling"
+     ],
+     "a": 1,
+     "why": "Chain position 6 against this segment's 7."
+    },
+    {
+     "q": "The graph records a curated edge from **Black & Veatch** to **Bechtel**. How is it typed from Black & Veatch's side?",
+     "c": [
+      "portfolio",
+      "other",
+      "supplier",
+      "competitor"
+     ],
+     "a": 3,
+     "why": "Mega-EPC comparison point — B&V deliberately runs an engineer-brain, lighter-balance-sheet model against Bechtel-class hard-dollar EPC exposure."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentCooling_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-cooling",
+ "type": "module",
+ "title": "Cooling",
+ "short": "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2026-11-09",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:aligned",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:coolit",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:delta-electronics",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eaton",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flex",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:liteon",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mitsubishi-electric",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:schneider-electric",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:trane-technologies",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vertiv",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "10",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "4",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "1",
+   "v": "challenger",
+   "sub": "contesting that set; 5 adjacent"
+  },
+  {
+   "k": "38",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door exchangers, containment and the building-management layer — and the water and approach-temperature arithmetic that sizes the plant. The other half of the megawatt, and the half where campuses now get refused permits.",
+    "Chain position 8 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 7)",
+     "Clean firm and nuclear",
+     "build"
+    ],
+    [
+     "**This segment** (position 8)",
+     "**Cooling**",
+     "build"
+    ],
+    [
+     "Downstream (position 9)",
+     "Compute and the rack",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "AIDC developers and landlords (11 edges) · Hyperscalers and AI labs (7 edges) · Power conversion and rack-power silicon (3 edges) · Compute and the rack (2 edges) · Neoclouds (2 edges) · Capital (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Utilities (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Storage integrators and containers (4 edges) · Power conversion and rack-power silicon (3 edges) · Cells and chemistry (2 edges) · In-hall power (2 edges)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Approach temperature and the facility-water temperature the chip vendor allows (ASHRAE W-classes)",
+     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+    ],
+    [
+     "PUE and WUE by climate; waterless heat rejection",
+     "*PUE, WUE, and the Plant Outside the Hall* (planned) · *Heat Is the Constraint*"
+    ],
+    [
+     "Part-load efficiency (IPLV) and the chiller's real operating point",
+     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+    ],
+    [
+     "NVIDIA recommended-vendor status for cold plates and CDUs; leak detection and rack-down behaviour",
+     "*PUE, WUE, and the Plant Outside the Hall* (planned) · *Heat Is the Constraint*"
+    ],
+    [
+     "Lead time on chillers and CDUs; factory witness testing",
+     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+    ],
+    [
+     "Refrigerant calendar and the sequence of operations the BMS runs",
+     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**CoolIT Systems**",
+     "coolit",
+     "incumbent",
+     "ecosystemRole: the CDU specialist the corpus lacked — designs the cold plate to NVIDIA's reference (Recommended Vendor List); customers 'four of the five hyperscalers'"
+    ],
+    [
+     "**Schneider Electric**",
+     "schneider-electric",
+     "incumbent",
+     "productsAndServices › Liquid cooling (Motivair by Schneider Electric): NVIDIA-certified CDUs 105 kW to 2.5 MW"
+    ],
+    [
+     "**Trane Technologies**",
+     "trane-technologies",
+     "incumbent",
+     "ecosystemRole: the chiller and thermal-plant layer of the data-centre cooling chain; LiquidStack and Stellar Energy acquired 2026; CDUs to 14 MW"
+    ],
+    [
+     "**Vertiv**",
+     "vertiv",
+     "incumbent",
+     "ecosystemRole: top-share position in thermal (Omdia top-3, ~6 points of share gained); CoolChip CDUs 70 kW to 2.3 MW"
+    ],
+    [
+     "**Eaton**",
+     "eaton",
+     "challenger",
+     "productsAndServices › Liquid cooling (Boyd Thermal, acquired for $9.5B, closed March 2026): ~$1.5B of liquid cooling entered by acquisition"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "aligned",
+     "adjacent",
+     "productsAndServices › Cooling technology platform — Delta³ and DeltaFlow, company-designed, deployed platform-wide rather than sold as merchant product"
+    ],
+    [
+     "**Delta Electronics**",
+     "delta-electronics",
+     "adjacent",
+     "productsAndServices › Liquid cooling (GoCool 3 MW CDUs, cold plates)"
+    ],
+    [
+     "**Flex**",
+     "flex",
+     "adjacent",
+     "productsAndServices › JetCool — direct-to-chip liquid cooling (OWNED)"
+    ],
+    [
+     "**LITEON**",
+     "liteon",
+     "adjacent",
+     "productsAndServices › Liquid cooling (CDUs, cold plates, sidecars) beside the rack-power franchise"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "mitsubishi-electric",
+     "adjacent",
+     "productsAndServices › Data-center cooling and integrated power — the CritiCool chiller line"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Schneider Electric**",
+     "FY2025 · 2025-12-31",
+     "45,393.6",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Trane Technologies**",
+     "FY2025 · 2025-12-31",
+     "21,321.9",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "FY2025 · 2025-12-31",
+     "10,230",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "FY2025 · 2025-12-31",
+     "27,400",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "FY2025 · 2025-12-31",
+     "17,801.8",
+     "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "FY2026 · 2026-03-31",
+     "27,914",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**LITEON**",
+     "FY2025 · 2025-12-31",
+     "5,328.7",
+     "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "CoolIT Systems, Aligned Data Centers, Mitsubishi Electric"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Aligned Data Centers**",
+     "**Vertiv**",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CoolIT Systems**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CoolIT Systems**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Eaton**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Delta Electronics**",
+     "**LITEON**",
+     "competitor",
+     "—",
+     "—",
+     "NVL72 power shelves"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and transformers"
+    ],
+    [
+     "**Eaton**",
+     "**Schneider Electric**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Eaton**",
+     "**Trane Technologies**",
+     "partner",
+     "active",
+     "—",
+     "Eaton Beam Rubin DSX / Trane Continuum Rubin DSX"
+    ],
+    [
+     "**Eaton**",
+     "**Vertiv**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**LITEON**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**Flex**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Flex**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**LITEON**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LITEON**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and switchgear manufacturing capacity"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and gas-insulated switchgear"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Trane Technologies**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trane Technologies**",
+     "**Eaton**",
+     "partner",
+     "active",
+     "—",
+     "Trane Continuum Rubin DSX / Eaton Beam Rubin DSX"
+    ],
+    [
+     "**Trane Technologies**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Trane Technologies**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**Vertiv**",
+     "**Mitsubishi Electric**",
+     "competitor",
+     "active",
+     "—",
+     "Data-center UPS and switchgear manufacturing capacity"
+    ],
+    [
+     "**Vertiv**",
+     "**Schneider Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
+     "**Trane Technologies**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "NVIDIA",
+     "investor",
+     "active",
+     "~$40B enterprise value + $5B growth capital",
+     "—"
+    ],
+    [
+     "**CoolIT Systems**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "NVIDIA Partner Network; Recommended Vendor List"
+    ],
+    [
+     "**Delta Electronics**",
+     "NVIDIA",
+     "customer",
+     "active",
+     "—",
+     "GB200/GB300 NVL72 power shelves"
+    ],
+    [
+     "**Eaton**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ],
+    [
+     "**Flex**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**LITEON**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power components"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power delivery"
+    ],
+    [
+     "**NVIDIA**",
+     "**Delta Electronics**",
+     "supplier",
+     "active",
+     "~70% Blackwell PSU share (est.)",
+     "Blackwell-platform PSUs"
+    ],
+    [
+     "**NVIDIA**",
+     "**Eaton**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "**Flex**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**NVIDIA**",
+     "**LITEON**",
+     "partner",
+     "active",
+     "—",
+     "Blackwell-platform PSUs"
+    ],
+    [
+     "**NVIDIA**",
+     "**Trane Technologies**",
+     "partner",
+     "active",
+     "—",
+     "Thermal management reference design"
+    ],
+    [
+     "**NVIDIA**",
+     "**Vertiv**",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**Oklo**",
+     "**Vertiv**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "reference designs and AI-factory blueprints"
+    ],
+    [
+     "**Trane Technologies**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "Thermal management reference design"
+    ],
+    [
+     "**Vertiv**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ],
+    [
+     "**Vertiv**",
+     "Oklo",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ]
+   ],
+   "note": "Curated edges among members: 38 · to the neighbouring segments: 18 · derived-only mentions (no curated typing): 2 among members, 1 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
+     "sub": "Flex · ma"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-31 — Calgary Herald: since the Ecolab close CoolIT's headcount has grown from about 650 to 'nearly 900'; Ecolab's Global High-Tech head says the Calgary manufacturing, engineering and R&D footprint will keep growing and new offices are planned in the Bay Area and Houston",
+     "sub": "CoolIT Systems · capacity"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-20 — Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
+     "sub": "Mitsubishi Electric · ma"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-17 — Trane Technologies and Eaton publish an industry-first joint power-and-thermal reference design for AI data centres",
+     "sub": "Trane Technologies · partnership"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-17 — 'Launching September 28, 2026: CoolIT's next-generation CDU is engineered for 1MW+ ultra-dense AI racks' — no name, capacity or specification disclosed",
+     "sub": "CoolIT Systems · product-launch"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-07-31 — Q1 FY2027 (quarter ended 2026-06-30): revenue ¥1,497.1bn (+14.0%), adjusted operating profit ¥144.3bn (+53.8%); full-year guidance raised to ¥6,270.0bn revenue and ¥620.0bn adjusted operating profit",
+     "sub": "Mitsubishi Electric · financial"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-07-31 — Q2 2026 all-time records: revenue NT$52.7B (+30%), EPS NT$3.14 (+126%), gross margin 27.2%, operating margin 15.6%; 2026 capex raised NT$13B → NT$18B; DenseLight optical stake announced",
+     "sub": "LITEON · financial"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-07-31 — Record Q2 2026 — revenue $8.53B (+21.4%), both lines beat; Mobility spin-off announced for Q1 2027",
+     "sub": "Eaton · financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-07-30 — Q2 2026: revenue $6,353.5M up 11%, adjusted continuing EPS $4.31 up 11%, backlog a record $12.1bn up 70%, Applied bookings up 130%",
+     "sub": "Trane Technologies · financial"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-07-30 — H1 2026 record: revenue €21.2B (+14% organic), adjusted EBITA €4.09B (+22% organic, beat ~€3.8B expected); FY2026 guidance raised to +14-19% organic EBITA growth",
+     "sub": "Schneider Electric · financial"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-07-29 — Q2 2026: EPS beat ($1.52 vs ~$1.43) but first revenue miss of the run ($3.27B vs ~$3.37B consensus); stock fell ~10-17% despite raised FY guidance",
+     "sub": "Vertiv · financial"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-07-29 — Q1 FY2027: revenue $7,928m up 21%, record adjusted earnings per share of $1.00, FY2027 guidance raised — and the shares fell about 9%",
+     "sub": "Flex · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "A2L refrigerants and building codes (ASHRAE 15 and 34)",
+     "in-effect",
+     "—",
+     "Trane Technologies"
+    ],
+    [
+     "AIM Act HFC phasedown",
+     "in-effect",
+     "—",
+     "Trane Technologies"
+    ],
+    [
+     "Asbestos liability — Aldrich Pump and Murray Boiler Chapter 11",
+     "in-effect",
+     "2020-06",
+     "Trane Technologies"
+    ],
+    [
+     "ASHRAE TC 9.9 liquid-cooling thermal guidelines (W-classes)",
+     "in-effect",
+     "—",
+     "CoolIT Systems"
+    ],
+    [
+     "Canada — Fighting Against Forced Labour and Child Labour in Supply Chains Act",
+     "in-effect",
+     "2024-01-01",
+     "CoolIT Systems"
+    ],
+    [
+     "Data-centre siting and energy regulation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "DOE distribution transformer efficiency standards",
+     "in-effect",
+     "2024-07-08",
+     "Mitsubishi Electric"
+    ],
+    [
+     "ENERGY STAR",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "EPA Technology Transitions rule (as amended)",
+     "in-effect",
+     "2026-05-26",
+     "Trane Technologies"
+    ],
+    [
+     "Irish domicile and OECD Pillar Two",
+     "in-effect",
+     "2024-01-01",
+     "Trane Technologies"
+    ],
+    [
+     "NDAA 889 / Entity List",
+     "in-effect",
+     "—",
+     "Schneider Electric"
+    ],
+    [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "Flex"
+    ],
+    [
+     "Open Compute Project — ORV3 racks and Modular TCS guidance",
+     "in-effect",
+     "—",
+     "CoolIT Systems"
+    ],
+    [
+     "Product safety and EMC listings",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Section 232 tariffs",
+     "in-effect",
+     "2025-08-18",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Section 232 tariffs on steel, aluminium and copper",
+     "in-effect",
+     "2026-04-06",
+     "Trane Technologies"
+    ],
+    [
+     "Section 25C and 179D efficiency incentives (OBBBA)",
+     "expired",
+     "2025-07-04",
+     "Trane Technologies"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-07-24",
+     "Flex"
+    ],
+    [
+     "Section 301 tariffs and the exclusion expiry",
+     "in-effect",
+     "2026-11-09",
+     "Trane Technologies"
+    ],
+    [
+     "SF6 and fluorinated-gas restrictions",
+     "in-effect",
+     "—",
+     "Mitsubishi Electric"
+    ],
+    [
+     "Singapore incorporation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "Texas data-center standards",
+     "in-effect",
+     "2026-08",
+     "Aligned Data Centers"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "LITEON, Schneider Electric"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2026-02-20",
+     "Flex"
+    ],
+    [
+     "US patent law — inter partes review and district-court enforcement (Asetek dispute)",
+     "expired",
+     "2022-10-06",
+     "CoolIT Systems"
+    ],
+    [
+     "US reciprocal tariffs",
+     "in-effect",
+     "—",
+     "Delta Electronics"
+    ],
+    [
+     "USMCA",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "US–Canada trade measures (Section 232 and reciprocal tariffs)",
+     "in-effect",
+     "—",
+     "CoolIT Systems"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Heat Is the Constraint* · *PUE, WUE, and the Plant Outside the Hall* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** CoolIT Systems, Schneider Electric, Trane Technologies, Vertiv, Eaton, Aligned Data Centers, Delta Electronics, Flex, LITEON, Mitsubishi Electric — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **CoolIT Systems** in?",
+     "c": [
+      "Cooling",
+      "Grid equipment",
+      "Compute and the rack",
+      "EPC and construction"
+     ],
+     "a": 0,
+     "why": "The registry's basis line: ecosystemRole: the CDU specialist the corpus lacked — designs the cold plate to NVIDIA's reference (Recommended Vendor List); customers 'four of the five hyperscalers'"
+    },
+    {
+     "q": "What role does the registry give **Mitsubishi Electric** in Cooling?",
+     "c": [
+      "incumbent",
+      "challenger",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Cooling** buy on, per the registry?",
+     "c": [
+      "Approach temperature and the facility-water temperature the chip vendor allows (ASHRAE W-classes)",
+      "Cost recovery — what the commission will allow into rate base or a customer-specific charge",
+      "Delay-in-start-up and business-interruption cover on the schedule the lender assumes",
+      "Emissions permitting — NOx without SCR, Tier 4 hours, non-attainment areas"
+     ],
+     "a": 0,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Cooling?",
+     "c": [
+      "Clean firm and nuclear",
+      "Compute and the rack",
+      "Grid equipment",
+      "Storage developers and IPPs"
+     ],
+     "a": 0,
+     "why": "Chain position 7 against this segment's 8."
+    },
+    {
+     "q": "The graph records a curated edge from **Aligned Data Centers** to **Vertiv**. How is it typed from Aligned Data Centers's side?",
+     "c": [
+      "other",
+      "supplier",
+      "portfolio",
+      "partner"
+     ],
+     "a": 0,
+     "why": "Not a disclosed supplier: Aligned's in-house Delta³/DeltaFlow cooling IP is its moat claim versus peers who buy merchant CRAH/CDU equipment from Vertiv and others."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentComputeAndTheRack_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-compute-and-the-rack",
+ "type": "module",
+ "title": "Compute and the rack",
+ "short": "The compute that sits in the rack and defines the power ask — the GPU, the rack-scale system it ships as, and the system integrators that build it — the load…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:flex",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nvidia",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "2",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "1",
+   "v": "incumbent",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "0",
+   "v": "challengers",
+   "sub": "contesting that set; 1 adjacent"
+  },
+  {
+   "k": "2",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The compute that sits in the rack and defines the power ask — the GPU, the rack-scale system it ships as, and the system integrators that build it — the load whose density, transients and cooling requirement every upstream segment is designed around.",
+    "Chain position 9 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 8)",
+     "Cooling",
+     "build"
+    ],
+    [
+     "**This segment** (position 9)",
+     "**Compute and the rack**",
+     "build"
+    ],
+    [
+     "Downstream (position 10)",
+     "EPC and construction",
+     "build"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Hyperscalers and AI labs (9 edges) · AIDC developers and landlords (3 edges) · Neoclouds (3 edges)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Power conversion and rack-power silicon (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · EPC and construction (1 edge) · AIDC developers and landlords (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Performance per watt and per dollar across a generation",
+     "*The Last Ten Metres* (planned)"
+    ],
+    [
+     "Allocation and delivery against a sold-out roadmap",
+     "*The Last Ten Metres* (planned)"
+    ],
+    [
+     "Rack density (kW) and the NVLink domain the rack forms",
+     "*Heat Is the Constraint* · *The Last Ten Metres* (planned)"
+    ],
+    [
+     "Reference architecture and the qualified power and cooling vendor set",
+     "—"
+    ],
+    [
+     "Cooling requirement (direct-to-chip, facility-water temperature)",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**NVIDIA**",
+     "nvidia",
+     "incumbent",
+     "ecosystemRole: the ecosystem's gravitational center — does not sell power or storage, but its architecture decisions create the market for both; GB200/GB300 NVL72, Vera Rubin"
+    ],
+    [
+     "**Flex**",
+     "flex",
+     "adjacent",
+     "productsAndServices › Electronics manufacturing services (BUILT FOR OTHERS): AMD Instinct GPU platforms in Austin, Cerebras wafer-scale systems in Milpitas"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**NVIDIA**",
+     "FY2026 · 2026-01-25",
+     "215,900",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Flex**",
+     "FY2026 · 2026-03-31",
+     "27,914",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Flex**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**NVIDIA**",
+     "**Flex**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "**NVIDIA**",
+     "investor",
+     "active",
+     "~$40B enterprise value + $5B growth capital",
+     "—"
+    ],
+    [
+     "**Bechtel**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "Omniverse DSX"
+    ],
+    [
+     "**CoolIT Systems**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "NVIDIA Partner Network; Recommended Vendor List"
+    ],
+    [
+     "**Delta Electronics**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Delta Electronics**",
+     "**NVIDIA**",
+     "customer",
+     "active",
+     "—",
+     "GB200/GB300 NVL72 power shelves"
+    ],
+    [
+     "**Eaton**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Eaton**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ],
+    [
+     "**Flex**",
+     "Delta Electronics",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves and racks"
+    ],
+    [
+     "**Flex**",
+     "Eaton",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "LITEON",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**Flex**",
+     "Mitsubishi Electric",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Flex**",
+     "Schneider Electric",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "Vertiv",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**HITT Contracting**",
+     "**NVIDIA**",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**LITEON**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power shelves"
+    ],
+    [
+     "**LITEON**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power components"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Data-centre switchgear and power distribution"
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power delivery"
+    ],
+    [
+     "**NVIDIA**",
+     "Delta Electronics",
+     "supplier",
+     "active",
+     "~70% Blackwell PSU share (est.)",
+     "Blackwell-platform PSUs"
+    ],
+    [
+     "**NVIDIA**",
+     "Eaton",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**NVIDIA**",
+     "LITEON",
+     "partner",
+     "active",
+     "—",
+     "Blackwell-platform PSUs"
+    ],
+    [
+     "**NVIDIA**",
+     "Trane Technologies",
+     "partner",
+     "active",
+     "—",
+     "Thermal management reference design"
+    ],
+    [
+     "**NVIDIA**",
+     "Vertiv",
+     "partner",
+     "active",
+     "—",
+     "800VDC ecosystem"
+    ],
+    [
+     "**Schneider Electric**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Busway, switchgear and liquid cooling"
+    ],
+    [
+     "**Schneider Electric**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "reference designs and AI-factory blueprints"
+    ],
+    [
+     "**Trane Technologies**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "Thermal management reference design"
+    ],
+    [
+     "**Vertiv**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "Integrated switchgear, UPS and distribution"
+    ],
+    [
+     "**Vertiv**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "800 VDC power systems"
+    ]
+   ],
+   "note": "Curated edges among members: 2 · to the neighbouring segments: 28 · derived-only mentions (no curated typing): 0 among members, 0 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
+     "sub": "Flex · ma"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-26 — Q2 FY2027: revenue $96.2B (+106% YoY, +18% QoQ) against a $91B guide; data center $89.0B (+117%); GAAP EPS $2.46 above non-GAAP $2.22; Q3 guided to $108.0B ±2% at 74.0% gross margin",
+     "sub": "NVIDIA · financial"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-26 — AWS to deploy 2 million additional NVIDIA GPUs across its global infrastructure in 2027-2028 — on top of the 1 million announced at GTC 2026 — spanning Blackwell Ultra, Rubin and Rubin Ultra, Vera CPU, NVLink Fusion and Spectrum networking, plus 100,000 GPUs for federal workloads",
+     "sub": "NVIDIA · partnership"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-10 — Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital",
+     "sub": "NVIDIA · partnership"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-07-29 — Q1 FY2027: revenue $7,928m up 21%, record adjusted earnings per share of $1.00, FY2027 guidance raised — and the shares fell about 9%",
+     "sub": "Flex · financial"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-07-29 — Leadership teams named for Flex and the planned spin-off",
+     "sub": "Flex · corporate"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-07-29 — A significant customer accounted for 12% of net sales in Q1 FY2027, with the majority in Cloud and Power Infrastructure",
+     "sub": "Flex · financial"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-07-09 — Expanded partnership with Cerebras to raise CS-3 production capacity roughly sevenfold through 2026 at Milpitas, California",
+     "sub": "Flex · customer"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-06-25 — JetCool launches a turnkey liquid-cooled Dell PowerEdge XE7745 at up to 8 kW per server",
+     "sub": "Flex · product-launch"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-06-09 — Flex admitted to the S&P 500 index effective before the open on 22 June 2026",
+     "sub": "Flex · corporate"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-06-01 — COMPUTEX 2026: the 110 kW Vera Rubin power shelf, a 30 kW capacitive energy storage system, and the BMR317 intermediate bus converter",
+     "sub": "Flex · product-launch"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-05-20 — Q1 FY2027: revenue $81.6B (+85% YoY) vs $78.8B consensus; Q2 guided to $91B; dividend raised 25x, +$80B buyback",
+     "sub": "NVIDIA · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "China Anti-Monopoly Law",
+     "in-effect",
+     "—",
+     "NVIDIA"
+    ],
+    [
+     "Data-centre siting and energy regulation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "Flex"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-07-24",
+     "Flex"
+    ],
+    [
+     "Singapore incorporation",
+     "in-effect",
+     "—",
+     "Flex"
+    ],
+    [
+     "US export controls (China)",
+     "in-effect",
+     "—",
+     "NVIDIA"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "2026-02-20",
+     "Flex"
+    ],
+    [
+     "USMCA",
+     "in-effect",
+     "—",
+     "Flex"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The Last Ten Metres* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *Heat Is the Constraint*.",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** NVIDIA, Flex — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **NVIDIA** in (among others)?",
+     "c": [
+      "Bridge and on-site generation",
+      "Storage developers and IPPs",
+      "Cells and chemistry",
+      "Compute and the rack"
+     ],
+     "a": 3,
+     "why": "The registry's basis line: ecosystemRole: the ecosystem's gravitational center — does not sell power or storage, but its architecture decisions create the market for both; GB200/GB300 NVL72, Vera Rubin"
+    },
+    {
+     "q": "What role does the registry give **Flex** in Compute and the rack?",
+     "c": [
+      "incumbent",
+      "adjacent",
+      "challenger"
+     ],
+     "a": 1,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Compute and the rack** buy on, per the registry?",
+     "c": [
+      "Domestic content and prohibited-foreign-entity exposure of the cell inside",
+      "Bankability — Wood Mackenzie / BNEF ranking and independent-engineer acceptance",
+      "Performance per watt and per dollar across a generation",
+      "Grid-forming capability and EMS/trading integration"
+     ],
+     "a": 2,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Compute and the rack?",
+     "c": [
+      "Clean firm and nuclear",
+      "AIDC developers and landlords",
+      "Cooling",
+      "Capital"
+     ],
+     "a": 2,
+     "why": "Chain position 8 against this segment's 9."
+    },
+    {
+     "q": "The graph records a curated edge from **Flex** to **NVIDIA**. How is it typed from Flex's side?",
+     "c": [
+      "portfolio",
+      "customer",
+      "partner",
+      "competitor"
+     ],
+     "a": 2,
+     "why": "NVIDIA names Flex Power in the power-system-components tier of its own published 800 VDC ecosystem, and Flex has since shipped power shelves built to NVIDIA platform requirements."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentEpcAndConstruction_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-epc-and-construction",
+ "type": "module",
+ "title": "EPC and construction",
+ "short": "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:bechtel",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:black-veatch",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:blattner",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:burns-mcdonnell",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dpr",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hitt",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:holder-construction",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:kiewit",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mastec",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mccarthy",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mortenson",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:primoris",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:quanta-services",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rosendin",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:samsung-ct",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:solv-energy",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:strata-clean-energy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:turner-construction",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:whiting-turner",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "19",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "16",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "2",
+   "v": "challengers",
+   "sub": "contesting that set; 1 adjacent"
+  },
+  {
+   "k": "57",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and generation EPCs, the substation and transmission builders, and the electrical trades that physically install what the supply segments sell. The constructability gatekeeper on owner-furnished equipment and the largest procurement channel into the supply chain.",
+    "Chain position 10 of 19 · tier **build** — builds, powers and cools the plant or the hall."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 9)",
+     "Compute and the rack",
+     "build"
+    ],
+    [
+     "**This segment** (position 10)",
+     "**EPC and construction**",
+     "build"
+    ],
+    [
+     "Downstream (position 11)",
+     "Storage developers and IPPs",
+     "demand"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Storage developers and IPPs (31 edges) · AIDC developers and landlords (24 edges) · Hyperscalers and AI labs (18 edges) · Utilities (9 edges) · Capital (9 edges) · Clean firm and nuclear (8 edges) · Neoclouds (4 edges) · Grid equipment (3 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Compute and the rack (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Storage integrators and containers (3 edges) · Cells and chemistry (2 edges) · Power conversion and rack-power silicon (2 edges) · Software and optimization (2 edges) · Grid equipment (1 edge) · Utilities (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Schedule certainty and speed benchmarks (commissioned MW per year, days to energize)",
+     "*From Site Control to Commercial Operation* (planned)"
+    ],
+    [
+     "Self-perform craft labour and prefabrication share",
+     "*From Site Control to Commercial Operation* (planned)"
+    ],
+    [
+     "Commissioning record (L1–L5) and reliability engineering",
+     "*From Site Control to Commercial Operation* (planned)"
+    ],
+    [
+     "Bonding capacity, backlog quality and project-controls record (percentage-of-completion)",
+     "—"
+    ],
+    [
+     "Owner-furnished vs contractor-furnished equipment and the procurement model (open-book OEM sourcing)",
+     "—"
+    ],
+    [
+     "Safety record (TRIR) and repeat-relationship share",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Bechtel**",
+     "bechtel",
+     "incumbent",
+     "registry tagline: the megaproject dynasty — ENR #2 at $19.5B; NVIDIA's partner for modularized gigawatt AI factories"
+    ],
+    [
+     "**Black & Veatch**",
+     "black-veatch",
+     "incumbent",
+     "ecosystemRole: the interconnection specialist of the AI buildout — client-owned substations; ENR #6 Power"
+    ],
+    [
+     "**Blattner**",
+     "blattner",
+     "incumbent",
+     "registry tagline: the invisible fifth of US renewables — 75,000+ MW, 3,300+ storage containers built; Quanta's renewables engine"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "burns-mcdonnell",
+     "incumbent",
+     "registry tagline: ENR's #1 power design firm eleven years running; the largest US substation design group"
+    ],
+    [
+     "**DPR Construction**",
+     "dpr",
+     "incumbent",
+     "registry tagline: the technical builder of Stargate Abilene; ENR #7 at $14.0B; self-performing GC with ~6,000 craft workers"
+    ],
+    [
+     "**HITT Contracting**",
+     "hitt",
+     "incumbent",
+     "registry tagline: America's #1 data-center builder by revenue — $13B on an 82 % mission-critical mix, 2+ GW commissioned"
+    ],
+    [
+     "**Holder Construction**",
+     "holder-construction",
+     "incumbent",
+     "registry tagline: BD+C's #1 data-center contractor in 2023–24; Google's Fort Wayne campus and EdgeCore's Mesa build"
+    ],
+    [
+     "**Kiewit**",
+     "kiewit",
+     "incumbent",
+     "registry tagline: the power picks-and-shovels of the AI boom — ~11 GW of gas EPC, completed HVDC, the Oklo constructor seat; ENR #4"
+    ],
+    [
+     "**MasTec**",
+     "mastec",
+     "incumbent",
+     "ecosystemRole: the most AIDC-committed EPC in the batch — #1-class wind constructor, record $21.4B backlog, a full data-center pivot"
+    ],
+    [
+     "**Mortenson**",
+     "mortenson",
+     "incumbent",
+     "ecosystemRole: top-10 US general contractor and historical #1 US wind builder delivering hyperscale campuses with their substations and onsite generation"
+    ],
+    [
+     "**Primoris**",
+     "primoris",
+     "incumbent",
+     "registry tagline: the 'outside-the-walls' AI contractor — #4 US solar EPC, Meta Nebraska and Crusoe gas power"
+    ],
+    [
+     "**Quanta Services**",
+     "quanta-services",
+     "incumbent",
+     "registry tagline: #1 US electrical contractor at 3.7x the runner-up; ecosystemRole: the craft-labor chokepoint of the AIDC buildout"
+    ],
+    [
+     "**Rosendin**",
+     "rosendin",
+     "incumbent",
+     "registry tagline: #2 US electrical contractor; 15+ GW of data-center power built; ~10 GWh of installed BESS EPC"
+    ],
+    [
+     "**SOLV**",
+     "solv-energy",
+     "incumbent",
+     "registry tagline: the pure-play benchmark — #2 US BESS builder 2024 (4.6 GWh), >21 GW built, the largest solar O&M fleet"
+    ],
+    [
+     "**Turner Construction**",
+     "turner-construction",
+     "incumbent",
+     "registry tagline: ENR's #1 US contractor six years running; ecosystemRole: the single largest procurement channel into the AI-infrastructure supply chain among US GCs (SourceBlue)"
+    ],
+    [
+     "**Whiting-Turner**",
+     "whiting-turner",
+     "incumbent",
+     "ecosystemRole: one of the small set of general contractors capable of a hyperscale data-hall building at gigawatt-campus scale; ENR #5; a Lighthouse campus builder"
+    ],
+    [
+     "**McCarthy**",
+     "mccarthy",
+     "challenger",
+     "ecosystemRole: the GC whose data-centre position is most clearly in transition — 418 MW delivered against 2 GW+ in preconstruction; ENR rank slipped 20 → 22"
+    ],
+    [
+     "**Samsung C&T**",
+     "samsung-ct",
+     "challenger",
+     "productsAndServices › Global EPC (E&C group): top-tier global EPC with BESS execution in Australia and the Middle East; the US platform is a developer, not an EPC"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "strata-clean-energy",
+     "adjacent",
+     "productsAndServices › EPC, high-voltage and grid infrastructure — a self-perform EPC arm ranked #25 on Solar Power World's 2026 list, inside a developer"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Primoris**",
+     "FY2025 · 2025-12-31",
+     "7,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Quanta Services**",
+     "FY2025 · 2025-12-31",
+     "28,480",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Turner Construction**",
+     "FY2025 · 2025-12-31",
+     "29,200",
+     "as reported (company-reported figure; the ENR 2026 list shows $28.3B)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "FY2025 · 2025-12-31",
+     "14,675.9",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "FY2025 · 2025-12-31",
+     "7,100",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Bechtel, Black & Veatch, Blattner, Burns & McDonnell, DPR Construction, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Rosendin, SOLV, Samsung C&T, Strata Clean Energy"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Bechtel**",
+     "**Kiewit**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Black & Veatch**",
+     "**Bechtel**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Black & Veatch**",
+     "**Burns & McDonnell**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Black & Veatch**",
+     "**Kiewit**",
+     "partner",
+     "active",
+     "—",
+     "X-energy Xe-100 SMRs"
+    ],
+    [
+     "**Black & Veatch**",
+     "**MasTec**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Black & Veatch**",
+     "**McCarthy**",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Blattner**",
+     "**Quanta Services**",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "**Black & Veatch**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "**Kiewit**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**DPR Construction**",
+     "**Mortenson**",
+     "partner",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**HITT Contracting**",
+     "**DPR Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**HITT Contracting**",
+     "**Holder Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**HITT Contracting**",
+     "**McCarthy**",
+     "partner",
+     "active",
+     "$1.7bn, 700,000 sq ft on 97 acres",
+     "McCarthy HITT joint venture"
+    ],
+    [
+     "**HITT Contracting**",
+     "**Mortenson**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**HITT Contracting**",
+     "**Turner Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Holder Construction**",
+     "**DPR Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Holder Construction**",
+     "**HITT Contracting**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Holder Construction**",
+     "**Mortenson**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Holder Construction**",
+     "**Turner Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Kiewit**",
+     "**Bechtel**",
+     "competitor",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Kiewit**",
+     "**Black & Veatch**",
+     "partner",
+     "active",
+     "—",
+     "Cascade Nuclear Partners"
+    ],
+    [
+     "**Kiewit**",
+     "**Mortenson**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**Black & Veatch**",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**DPR Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**HITT Contracting**",
+     "partner",
+     "active",
+     "$1.7bn, 700,000 sq ft on 97 acres",
+     "McCarthy HITT joint venture"
+    ],
+    [
+     "**McCarthy**",
+     "**Holder Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**Mortenson**",
+     "partner",
+     "active",
+     "Allegiant Stadium $1.97B; Las Vegas Athletics ballpark $1.75B",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**Turner Construction**",
+     "partner",
+     "active",
+     "468 MW across Buildings 13 and 14",
+     "Turner-McCarthy joint venture"
+    ],
+    [
+     "**Mortenson**",
+     "**Blattner**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mortenson**",
+     "**DPR Construction**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mortenson**",
+     "**MasTec**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mortenson**",
+     "**McCarthy**",
+     "partner",
+     "active",
+     "Allegiant Stadium $1.97B; Las Vegas Athletics ballpark $1.75B",
+     "—"
+    ],
+    [
+     "**Mortenson**",
+     "**Primoris**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mortenson**",
+     "**Turner Construction**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Primoris**",
+     "**Kiewit**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Primoris**",
+     "**MasTec**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Primoris**",
+     "**Quanta Services**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Quanta Services**",
+     "**Bechtel**",
+     "competitor",
+     "active",
+     "—",
+     "gas-generation EPC"
+    ],
+    [
+     "**Quanta Services**",
+     "**Blattner**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Quanta Services**",
+     "**Kiewit**",
+     "competitor",
+     "active",
+     "—",
+     "gas-generation EPC"
+    ],
+    [
+     "**Quanta Services**",
+     "**Rosendin**",
+     "competitor",
+     "active",
+     "—",
+     "data-center electrical"
+    ],
+    [
+     "**Rosendin**",
+     "**Quanta Services**",
+     "competitor",
+     "active",
+     "—",
+     "data-center electrical"
+    ],
+    [
+     "**SOLV**",
+     "**Rosendin**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**McCarthy**",
+     "competitor",
+     "active",
+     "Solar Power World 2026 Top Solar Contractors",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**Mortenson**",
+     "partner",
+     "active",
+     "Scatter Wash 1,020 MWh EPC",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**Primoris**",
+     "competitor",
+     "active",
+     "Solar Power World 2026 Top Solar Contractors",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**Quanta Services**",
+     "competitor",
+     "active",
+     "Solar Power World 2026 Top Solar Contractors",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**SOLV**",
+     "competitor",
+     "active",
+     "Solar Power World 2026 Top Solar Contractors",
+     "—"
+    ],
+    [
+     "**Turner Construction**",
+     "**DPR Construction**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Turner Construction**",
+     "**McCarthy**",
+     "partner",
+     "active",
+     "468 MW across Buildings 13 and 14",
+     "Turner-McCarthy joint venture"
+    ],
+    [
+     "**Turner Construction**",
+     "**Mortenson**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "**DPR Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "**HITT Contracting**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "**Holder Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "**McCarthy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "**Mortenson**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Whiting-Turner**",
+     "**Turner Construction**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**MasTec**",
+     "supplier",
+     "active",
+     "—",
+     "EPC frame agreement"
+    ],
+    [
+     "**Arevon**",
+     "**Primoris**",
+     "supplier",
+     "active",
+     "$600M project",
+     "—"
+    ],
+    [
+     "**Bechtel**",
+     "NVIDIA",
+     "partner",
+     "active",
+     "—",
+     "Omniverse DSX"
+    ],
+    [
+     "**Blattner**",
+     "Clearway Energy",
+     "customer",
+     "active",
+     "199 MW / 398 MWh (Spindle)",
+     "Battery storage EPC"
+    ],
+    [
+     "**Blattner**",
+     "RWE Clean Energy",
+     "customer",
+     "active",
+     "Emily Solar, 273.6 MW",
+     "EPC construction on utility-scale solar"
+    ],
+    [
+     "**Blattner**",
+     "Recurrent Energy",
+     "customer",
+     "active",
+     "Papago Solar 150 MWac and Cobalt Solar 330 MW; historically Slate at 390 MWp plus 140.25 MW / 561 MWh",
+     "Solar EPC on Recurrent-developed projects"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "Vistra",
+     "customer",
+     "historical",
+     "100 MW Phase II and the 350 MW / 1,400 MWh Phase III expansion",
+     "Moss Landing energy storage"
+    ],
+    [
+     "**Clearway Energy**",
+     "**Blattner**",
+     "supplier",
+     "active",
+     "199 MW / 398 MWh (Spindle)",
+     "Battery storage EPC"
+    ],
+    [
+     "**Clearway Energy**",
+     "**Rosendin**",
+     "supplier",
+     "historical",
+     "320 MW / 1,280 MWh (Honeycomb Portfolio)",
+     "Electrical EPC"
+    ],
+    [
+     "**Eolian**",
+     "**Mortenson**",
+     "supplier",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**HITT Contracting**",
+     "NVIDIA",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**Burns & McDonnell**",
+     "other",
+     "historical",
+     "Fort Duncan EPC (for Recurrent Energy)",
+     "—"
+    ],
+    [
+     "**Invenergy**",
+     "**Blattner**",
+     "supplier",
+     "active",
+     "240 MW (Pleasant Prairie Solar)",
+     "Solar EPC"
+    ],
+    [
+     "**Invenergy**",
+     "**Kiewit**",
+     "supplier",
+     "active",
+     "USD 1.7bn combined with Quanta Services",
+     "Grain Belt Express Phase 1 HVDC engineering, procurement and construction"
+    ],
+    [
+     "**Invenergy**",
+     "**Quanta Services**",
+     "supplier",
+     "active",
+     "USD 1.7bn combined with Kiewit Energy Group",
+     "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)"
+    ],
+    [
+     "**Lightsource**",
+     "**McCarthy**",
+     "supplier",
+     "active",
+     "Elm Branch 163 MW, Briar Creek 153 MW, Pueblo 600 MW",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "Lightsource",
+     "customer",
+     "active",
+     "Elm Branch 163 MW, Briar Creek 153 MW, Sun Mountain / Bighorn 300 MW",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "RWE Clean Energy",
+     "customer",
+     "active",
+     "Bright Arrow, 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+     "EPC construction on solar-plus-storage and utility-scale solar"
+    ],
+    [
+     "**NRG Energy**",
+     "**Kiewit**",
+     "supplier",
+     "active",
+     "up to 5.4 GW of combined-cycle EPC",
+     "TIC — The Industrial Company"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**Blattner**",
+     "supplier",
+     "active",
+     "Emily Solar, 273.6 MW",
+     "EPC construction on utility-scale solar"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**MasTec**",
+     "supplier",
+     "active",
+     "—",
+     "Wanzek Construction, a MasTec Renewables company — turbine decommissioning and repowering works"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**McCarthy**",
+     "supplier",
+     "active",
+     "Lafitte Solar 100 MW; Bright Arrow 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+     "EPC construction on utility-scale solar and solar-plus-storage"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Blattner**",
+     "supplier",
+     "active",
+     "Papago Solar 150 MWac and Cobalt Solar 330 MW",
+     "Solar EPC"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Burns & McDonnell**",
+     "supplier",
+     "historical",
+     "Fort Duncan, 100 MW / 200 MWh",
+     "EPC on a merchant ERCOT battery"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Primoris**",
+     "supplier",
+     "active",
+     "Desert Bloom Storage, 600 MWh",
+     "Battery storage EPC"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Rosendin**",
+     "supplier",
+     "historical",
+     "Tranquility 72 MWac / 288 MWh; Mustang 75 MW BESS retrofit",
+     "Electrical EPC on battery retrofits"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Strata Clean Energy**",
+     "competitor",
+     "active",
+     "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+     "Arizona Public Service storage procurement"
+    ],
+    [
+     "**Rosendin**",
+     "Arevon",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Rosendin**",
+     "Clearway Energy",
+     "customer",
+     "historical",
+     "320 MW / 1,280 MWh (Honeycomb Portfolio)",
+     "Electrical EPC on a four-project battery portfolio"
+    ],
+    [
+     "**Rosendin**",
+     "Recurrent Energy",
+     "customer",
+     "historical",
+     "Tranquility 72 MWac / 288 MWh at $12.5m over 15.8 months; Mustang 75 MW battery retrofit",
+     "Electrical EPC on battery retrofits to operating solar plants"
+    ],
+    [
+     "**SOLV**",
+     "Arevon",
+     "customer",
+     "active",
+     "Vikings + Eland (>$2B complex)",
+     "utility-scale solar + storage EPC"
+    ],
+    [
+     "**Spearmint Energy**",
+     "**Mortenson**",
+     "supplier",
+     "active",
+     "four projects, 650 MW / 1,300 MWh",
+     "BESS EPC"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "Arevon",
+     "other",
+     "historical",
+     "Ventura Energy Storage 100 MW / 400 MWh",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "GridStor",
+     "customer",
+     "active",
+     "100 MW / 400 MWh (White Tank)",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "Recurrent Energy",
+     "competitor",
+     "active",
+     "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+     "Arizona Public Service storage procurement"
+    ],
+    [
+     "**Terra-Gen**",
+     "**Mortenson**",
+     "supplier",
+     "active",
+     "—",
+     "full EPC"
+    ],
+    [
+     "**Vistra**",
+     "**Burns & McDonnell**",
+     "supplier",
+     "historical",
+     "100 MW / 400 MWh Phase II",
+     "Moss Landing Phase II"
+    ],
+    [
+     "**esVolta**",
+     "**Quanta Services**",
+     "partner",
+     "active",
+     "Anole 240 MW / 480 MWh EPC",
+     "Quanta Infrastructure Solutions Group"
+    ]
+   ],
+   "note": "Curated edges among members: 57 · to the neighbouring segments: 38 · derived-only mentions (no curated typing): 8 among members, 4 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-08-20 — Q2 2026 call: 'majority of projects are solar plus storage now'; SOLV 'actively exploring storage for data centers'; storage backlog $2.5B",
+     "sub": "SOLV · aidc"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-18 — Securities class action advances: Hagens Berman's case covers PRIM purchasers 2025-08-05 to 2026-06-22, alleging 'woefully deficient' estimating and project-oversight processes; lead-plaintiff deadline 2026-09-21",
+     "sub": "Primoris · Risk"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-17 — Cathy Orquiola joins as Regional CEO and executive committee member from PCL Construction, focused on self-perform leadership and the mission-critical market",
+     "sub": "McCarthy · leadership"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-13 — Q2 2026: revenue $951.2M (+77%), backlog $8.9B; FY2026 guidance raised to $3.87-3.97B revenue",
+     "sub": "SOLV · financial"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-12 — Breaks ground on a 12-acre national employee development campus in Tempe, Arizona, opening early 2028",
+     "sub": "McCarthy · capacity"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-07 — Takes over the Choczewo project site for Poland's first nuclear power plant (3x Westinghouse AP1000, ~3 GW, client PEJ); 400+ on site, new Gdańsk office planned",
+     "sub": "Bechtel · Project"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-06 — Q2 2026 call: record backlog $21.4B; FY2026 guidance raised to $18.2B revenue / $9.30 adj. EPS; multiple hyperscaler projects >$1B each in pursuit",
+     "sub": "MasTec · financial"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-04 — Q2 2026: net loss $(24.2)M, adjusted EPS $(0.27), adjusted EBITDA $11.4M (-92.6% YoY) — but a record $13.9B backlog; slashed FY2026 guidance reaffirmed; dividend maintained",
+     "sub": "Primoris · Financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-04 — ConstructionPlacements' Top-25 US data-center builders ranks Holder #2 and reports $10.23B of 2025 revenue at ENR 2026 rank #12",
+     "sub": "Holder Construction · Recognition"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-04 — Virginia Court of Appeals affirms St. Paul's denial of HITT's ~$24-25M excess-insurance claim from the $51M Glenstone Museum settlement (late notice)",
+     "sub": "HITT Contracting · Risk"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-03 — Dhruv Patel named President and Chief Operating Officer of McCarthy Holdings; Joe Jouvenal moves to Chief Transformation Officer; Ray Sedey remains Chairman and CEO",
+     "sub": "McCarthy · leadership"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-07-30 — Q2 2026 blowout: revenue $9.56B (+41%), adjusted EPS $4.24 (+29% beat), backlog record $53.4B — FY guidance raised to $39.5B midpoint; stock +13.5%",
+     "sub": "Quanta Services · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Buy America / Build America domestic content",
+     "in-effect",
+     "—",
+     "McCarthy"
+    ],
+    [
+     "California AB 205 fast-track",
+     "in-effect",
+     "—",
+     "Mortenson"
+    ],
+    [
+     "Craft labour supply and the data-centre crowding-out effect",
+     "in-effect",
+     "—",
+     "McCarthy"
+    ],
+    [
+     "Davis-Bacon and prevailing wage",
+     "in-effect",
+     "2021-08-25",
+     "Whiting-Turner"
+    ],
+    [
+     "Davis-Bacon prevailing wage (2023 final rule)",
+     "in-effect",
+     "2024-06-24",
+     "McCarthy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "MasTec, Samsung C&T, Strata Clean Energy"
+    ],
+    [
+     "Immigration enforcement and craft labour availability",
+     "in-effect",
+     "—",
+     "McCarthy"
+    ],
+    [
+     "IRA prevailing wage and apprenticeship requirements",
+     "in-effect",
+     "—",
+     "McCarthy"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "MasTec, SOLV"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2023-01",
+     "Strata Clean Energy"
+    ],
+    [
+     "Maryland hospital procurement governance reform",
+     "in-effect",
+     "2019",
+     "Whiting-Turner"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "—",
+     "Blattner, SOLV"
+    ],
+    [
+     "OBBBA clean-energy credit termination",
+     "in-effect",
+     "2025-07-04",
+     "McCarthy"
+    ],
+    [
+     "OSHA respirable crystalline silica national emphasis programme",
+     "in-effect",
+     "—",
+     "McCarthy"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Strata Clean Energy"
+    ],
+    [
+     "Title VII and EEOC enforcement",
+     "in-effect",
+     "2023-05-04",
+     "Whiting-Turner"
+    ],
+    [
+     "US–Japan AI infrastructure framework",
+     "announced",
+     "—",
+     "Kiewit"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *From Site Control to Commercial Operation* (planned) · *Reading the Eight Named Projects* (planned) · *The Failure-Point Map* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Bechtel, Black & Veatch, Blattner, Burns & McDonnell, DPR Construction, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Primoris, Quanta Services, Rosendin, SOLV, Turner Construction, Whiting-Turner, McCarthy, Samsung C&T, Strata Clean Energy — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Bechtel** in (among others)?",
+     "c": [
+      "EPC and construction",
+      "Storage developers and IPPs",
+      "Utilities",
+      "Compute and the rack"
+     ],
+     "a": 0,
+     "why": "The registry's basis line: registry tagline: the megaproject dynasty — ENR #2 at $19.5B; NVIDIA's partner for modularized gigawatt AI factories"
+    },
+    {
+     "q": "What role does the registry give **Strata Clean Energy** in EPC and construction?",
+     "c": [
+      "challenger",
+      "adjacent",
+      "incumbent"
+     ],
+     "a": 1,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **EPC and construction** buy on, per the registry?",
+     "c": [
+      "Forecast and bidding performance in the market the asset lives in",
+      "Schedule certainty and speed benchmarks (commissioned MW per year, days to energize)",
+      "Cost per kW and heat rate at the real operating point (part load, hot thin air)",
+      "Reference architecture control (800 VDC, rack density) passed down to landlords and vendors"
+     ],
+     "a": 1,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of EPC and construction?",
+     "c": [
+      "Utilities",
+      "Clean firm and nuclear",
+      "Compute and the rack",
+      "Cooling"
+     ],
+     "a": 2,
+     "why": "Chain position 9 against this segment's 10."
+    },
+    {
+     "q": "The graph records a curated edge from **Black & Veatch** to **Bechtel**. How is it typed from Black & Veatch's side?",
+     "c": [
+      "customer",
+      "portfolio",
+      "competitor",
+      "other"
+     ],
+     "a": 2,
+     "why": "Mega-EPC comparison point — B&V deliberately runs an engineer-brain, lighter-balance-sheet model against Bechtel-class hard-dollar EPC exposure."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentStorageDevelopersAndIpps_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-storage-developers-and-ipps",
+ "type": "module",
+ "title": "Storage developers and IPPs",
+ "short": "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:aes-clean-energy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:apex-clean-energy",
+    "date": "2026-09-01",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:arevon",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:available-power",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:aypa-power",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:clearway-energy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:constellation-energy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:engie-north-america",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eolian",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:esvolta",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:excelsior-energy-capital",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:gridstor",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hunt-energy-network",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:intersect-power",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:invenergy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:jupiter-power",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:key-capture-energy",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lightsource-bp",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nextera-energy-resources",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nrg-energy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:on-energy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:plus-power",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:proenergy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:recurrent-energy",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rwe-clean-energy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:samsung-ct",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:spearmint-energy",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:strata-clean-energy",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:talen-energy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:terra-gen",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vistra",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "31",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "19",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "8",
+   "v": "challengers",
+   "sub": "contesting that set; 4 adjacent"
+  },
+  {
+   "k": "68",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and the merchant generators selling existing fleets to AI load. The principal buyer class for a BESS and the desk that decides which integrator's product gets installed.",
+    "Chain position 11 of 19 · tier **demand** — owns, operates or consumes it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 10)",
+     "EPC and construction",
+     "build"
+    ],
+    [
+     "**This segment** (position 11)",
+     "**Storage developers and IPPs**",
+     "demand"
+    ],
+    [
+     "Downstream (position 12)",
+     "AIDC developers and landlords",
+     "demand"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Hyperscalers and AI labs (42 edges) · AIDC developers and landlords (12 edges) · Utilities (8 edges) · Clean firm and nuclear (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Storage integrators and containers (50 edges) · Cells and chemistry (33 edges) · EPC and construction (30 edges) · Power conversion and rack-power silicon (23 edges) · Software and optimization (23 edges) · In-hall power (19 edges) · Grid equipment (11 edges) · Bridge and on-site generation (11 edges) · Utilities (8 edges) · Assurance (5 edges) · Clean firm and nuclear (4 edges)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Bankability — the independent engineer's acceptance and the lender's approved-vendor list",
+     "—"
+    ],
+    [
+     "Installed cost per kWh and the augmentation plan against the revenue model",
+     "*Who Carries Which Risk* (planned)"
+    ],
+    [
+     "Warranty and LTSA terms; the cycle budget the contract allows",
+     "*Who Carries Which Risk* (planned)"
+    ],
+    [
+     "Prohibited-foreign-entity exposure against the tax-credit and tax-equity file",
+     "—"
+    ],
+    [
+     "Delivery date against the interconnection date and the offtake",
+     "*Who Carries Which Risk* (planned)"
+    ],
+    [
+     "Dual-sourcing and geography of the two suppliers chosen per project",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**AES Clean Energy**",
+     "aes-clean-energy",
+     "incumbent",
+     "registry tagline: third-largest US battery owner; ecosystemRole: one of the three largest storage buyers, procurement entangled with a 22 % Fluence stake"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "apex-clean-energy",
+     "incumbent",
+     "ecosystemRole: the clearest open-procurement storage account among the covered US IPPs; 12 GW commercialized, 13+ GW of storage in development"
+    ],
+    [
+     "**Arevon**",
+     "arevon",
+     "incumbent",
+     "ecosystemRole: the case study in single-integrator lock-in at scale — seven-for-seven Megapack across ~5.6 GWh"
+    ],
+    [
+     "**Aypa Power**",
+     "aypa-power",
+     "incumbent",
+     "registry tagline: the largest standalone battery-storage platform — about 6.5 GW operating, under construction and contracted; Blackstone → Brookfield"
+    ],
+    [
+     "**Clearway Energy**",
+     "clearway-energy",
+     "incumbent",
+     "registry tagline: the listed Clearway yieldco — 13.9 GW with 1,439 MW of contracted batteries"
+    ],
+    [
+     "**ENGIE North America**",
+     "engie-north-america",
+     "incumbent",
+     "registry tagline: the largest battery owner in ERCOT and second in the US; ecosystemRole: the ecosystem's largest merchant battery counterparty"
+    ],
+    [
+     "**Eolian**",
+     "eolian",
+     "incumbent",
+     "ecosystemRole: the ideological anchor of the domestic-storage coalition and the pioneer of energy-plus-load"
+    ],
+    [
+     "**Intersect**",
+     "intersect-power",
+     "incumbent",
+     "ecosystemRole: the clearest case of storage attaching to AI load behind one interconnection — now Google's procurement channel; a USD 12bn combined exit"
+    ],
+    [
+     "**Invenergy**",
+     "invenergy",
+     "incumbent",
+     "ecosystemRole: the largest developer counterparty on the buyer side of this corpus; #2 US pipeline behind NextEra; storage procurement invisible in the public record"
+    ],
+    [
+     "**Jupiter**",
+     "jupiter-power",
+     "incumbent",
+     "ecosystemRole: a first-mover franchise collector with an in-house trading desk; ~8.8 GWh operating, under construction and contracted"
+    ],
+    [
+     "**Key Capture**",
+     "key-capture-energy",
+     "incumbent",
+     "registry tagline: the NYISO first-mover — ~580 MW ERCOT fleet, the New York franchise; in a sale process"
+    ],
+    [
+     "**Lightsource**",
+     "lightsource-bp",
+     "incumbent",
+     "ecosystemRole: #1 US solar developer with hyperscaler PPAs; a proven Chinese-BESS buyer in APAC; US storage barely exists yet"
+    ],
+    [
+     "**NextEra**",
+     "nextera-energy-resources",
+     "incumbent",
+     "ecosystemRole: the market-maker — ~5.2 GW operating storage, a 95 GW storage pipeline, domestic supply locked through 2029"
+    ],
+    [
+     "**NRG Energy**",
+     "nrg-energy",
+     "incumbent",
+     "registry tagline: a retail company that owns power plants — a fleet doubled to 25 GW by the LS Power acquisition"
+    ],
+    [
+     "**Plus Power**",
+     "plus-power",
+     "incumbent",
+     "ecosystemRole: the utility-tolling franchise of the standalone-storage tier — 1,650 MW / 4,150 MWh across five states, dual-sourced Tesla + Sungrow"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "rwe-clean-energy",
+     "incumbent",
+     "registry tagline: 13 GW to 22 GW, EUR 17bn of US investment to 2031; 1.7 GW of group battery capacity pro rata"
+    ],
+    [
+     "**Talen Energy**",
+     "talen-energy",
+     "incumbent",
+     "ecosystemRole: a merchant generator selling from an existing fleet — 15.7 GW of PJM generation; the powered-land flywheel"
+    ],
+    [
+     "**Terra-Gen**",
+     "terra-gen",
+     "incumbent",
+     "registry tagline: world's largest single BESS site (Edwards & Sanborn, 3.3 GWh) then an 8 GWh LG Vertech lock"
+    ],
+    [
+     "**Vistra**",
+     "vistra",
+     "incumbent",
+     "ecosystemRole: the integrated merchant — 43,641 MW of generation hedged by a five-million-customer retail book; a 624 MW battery fleet"
+    ],
+    [
+     "**Available Power**",
+     "available-power",
+     "challenger",
+     "ecosystemRole: the sub-10 MW distributed play in ERCOT — develop-and-sell 9.9 MW batteries; no operating fleet on the record"
+    ],
+    [
+     "**esVolta**",
+     "esvolta",
+     "challenger",
+     "ecosystemRole: the mixed-portfolio storage owner — 490 MW / 980 MWh in ERCOT plus CAISO RA batteries; in a sale process"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "excelsior-energy-capital",
+     "challenger",
+     "ecosystemRole: a buyer of batteries rather than a builder — 9.7 GWh reserved from Fluence and LG Vertech, owned through the Lydian platform"
+    ],
+    [
+     "**GridStor**",
+     "gridstor",
+     "challenger",
+     "ecosystemRole: a sponsor-created specialist buying late-stage projects — 280 MW operating, 250 MW under construction, one confirmed OEM"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "hunt-energy-network",
+     "challenger",
+     "registry tagline: merchant owner-trader of 32 distribution-connected 9.9 MW batteries plus a 100 MW transmission battery"
+    ],
+    [
+     "**Recurrent Energy**",
+     "recurrent-energy",
+     "challenger",
+     "ecosystemRole: the captive-channel developer inside a manufacturer — 84.1 GWh pipeline, 85 % early-stage, against ~1.5 GWh of net operating storage"
+    ],
+    [
+     "**Spearmint Energy**",
+     "spearmint-energy",
+     "challenger",
+     "ecosystemRole: the pure merchant case — 350 MW / 700 MWh operating in ERCOT, single-source Sungrow, financed on private credit"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "strata-clean-energy",
+     "challenger",
+     "ecosystemRole: originates a utility toll then sells the battery with the contract attached; about 1 GW of owned solar"
+    ],
+    [
+     "**Constellation Energy**",
+     "constellation-energy",
+     "adjacent",
+     "productsAndServices › Nuclear fleet & long-term PPAs; Calpine gas & geothermal — a merchant generator with no storage fleet on the record"
+    ],
+    [
+     "**ON.energy**",
+     "on-energy",
+     "adjacent",
+     "productsAndServices › Legacy merchant BESS — ~240 MW ERCOT Palo Verde / Palo de Agua portfolio"
+    ],
+    [
+     "**ProEnergy**",
+     "proenergy",
+     "adjacent",
+     "productsAndServices › Contracted Power / develop-build-sell IPP model — the WattBridge ERCOT peaker playbook"
+    ],
+    [
+     "**Samsung C&T**",
+     "samsung-ct",
+     "adjacent",
+     "productsAndServices › US renewables development platform (T&I): ~20 GW of solar and ESS positions sold to credit-sensitive buyers who pick the batteries"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**AES Clean Energy**",
+     "FY2025 · 2025-12-31",
+     "12,233",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Clearway Energy**",
+     "FY2025 · 2025-12-31",
+     "1,429",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "FY2025 · 2025-12-31",
+     "30,713",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Talen Energy**",
+     "FY2025 · 2025-12-31",
+     "2,581",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,920"
+    ],
+    [
+     "**Vistra**",
+     "FY2025 · 2025-12-31",
+     "17,738",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,200"
+    ],
+    [
+     "**Recurrent Energy**",
+     "FY2025 · 2025-12-31",
+     "403.6",
+     "as reported",
+     "—",
+     "83.5",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Apex Clean Energy, Arevon, Aypa Power, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, Plus Power, RWE Clean Energy, Terra-Gen, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Spearmint Energy, Strata Clean Energy, Constellation Energy, ON.energy, ProEnergy, Samsung C&T"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**AES Clean Energy**",
+     "**Arevon**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**Plus Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**RWE Clean Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**Arevon**",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**Jupiter**",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**NextEra**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Available Power**",
+     "**ON.energy**",
+     "competitor",
+     "active",
+     "ON.energy's 9.9 MW / 20 MWh ERCOT units against Available Power's identical template",
+     "—"
+    ],
+    [
+     "**Available Power**",
+     "**Plus Power**",
+     "competitor",
+     "active",
+     "ERCOT sub-10 MW segment: Plus Power's Farmersville West BESS 1 and Mainland BESS against Available Power's 9.9 MW template",
+     "—"
+    ],
+    [
+     "**Aypa Power**",
+     "**Eolian**",
+     "partner",
+     "historical",
+     "268 MW (Williams + Fletcher); 250 MW / 1,000 MWh (Pediment)",
+     "late-stage project sales"
+    ],
+    [
+     "**Aypa Power**",
+     "**Key Capture**",
+     "competitor",
+     "active",
+     "about 0.7 GW operating / 3.6 GW total (Enerdatics)",
+     "—"
+    ],
+    [
+     "**Clearway Energy**",
+     "**AES Clean Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clearway Energy**",
+     "**Constellation Energy**",
+     "customer",
+     "active",
+     "55 MW (Dan's Mountain)",
+     "Long-term power purchase agreement"
+    ],
+    [
+     "**Clearway Energy**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Clearway Energy**",
+     "**Vistra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**AES Clean Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Hunt Energy Network**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Jupiter**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Plus Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**RWE Clean Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Eolian**",
+     "**Jupiter**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "**Invenergy**",
+     "other",
+     "historical",
+     "109 MW (90.1% sponsor equity)",
+     "Prairie Breeze II and III"
+    ],
+    [
+     "**GridStor**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "Modo Energy: pure-play developers (esVolta, Intersect Power, GridStor, Nightpeak) brought 1.25 GW online in ERCOT in 2025",
+     "—"
+    ],
+    [
+     "**GridStor**",
+     "**Plus Power**",
+     "competitor",
+     "active",
+     "Hidalgo County peers: Plus Power's Anemoi 200 MW / 400 MWh against GridStor's Gunnar 150 MW / 300 MWh",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**Jupiter**",
+     "competitor",
+     "active",
+     "Modo Energy July 2024 revenue ranking",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**Plus Power**",
+     "competitor",
+     "active",
+     "Modo Energy July 2024 revenue ranking",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**Recurrent Energy**",
+     "supplier",
+     "historical",
+     "Fort Duncan, 100 MW / 200 MWh",
+     "Purchase of an operating merchant ERCOT battery"
+    ],
+    [
+     "**Intersect**",
+     "**Constellation Energy**",
+     "customer",
+     "historical",
+     "share of Oberon's output (not broken out)",
+     "Oberon solar-plus-storage offtake"
+    ],
+    [
+     "**Invenergy**",
+     "**Apex Clean Energy**",
+     "competitor",
+     "active",
+     "Cleanview wind pipeline: Invenergy #2 (14,192 MW) against Apex #4 (7,074 MW)",
+     "—"
+    ],
+    [
+     "**Invenergy**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "Cleanview: NextEra 68,229 MW pipeline (#1) against Invenergy 41,328 MW (#2)",
+     "—"
+    ],
+    [
+     "**Jupiter**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jupiter**",
+     "**Eolian**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Jupiter**",
+     "**Plus Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Lightsource**",
+     "**Constellation Energy**",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "**Constellation Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "**Talen Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "**Vistra**",
+     "competitor",
+     "active",
+     "~25 GW vs ~50 GW pro forma",
+     "—"
+    ],
+    [
+     "**Plus Power**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**AES Clean Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Hunt Energy Network**",
+     "customer",
+     "historical",
+     "100 MW / 200 MWh (Fort Duncan)",
+     "Sale of an operating merchant ERCOT battery"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Jupiter**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Recurrent Energy**",
+     "**Strata Clean Energy**",
+     "competitor",
+     "active",
+     "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+     "Arizona Public Service storage procurement"
+    ],
+    [
+     "**Spearmint Energy**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "—",
+     "ERCOT merchant storage"
+    ],
+    [
+     "**Spearmint Energy**",
+     "**Jupiter**",
+     "competitor",
+     "active",
+     "—",
+     "ERCOT merchant storage"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**Arevon**",
+     "other",
+     "historical",
+     "Ventura Energy Storage 100 MW / 400 MWh",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**GridStor**",
+     "customer",
+     "active",
+     "100 MW / 400 MWh (White Tank)",
+     "—"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "**Recurrent Energy**",
+     "competitor",
+     "active",
+     "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
+     "Arizona Public Service storage procurement"
+    ],
+    [
+     "**Talen Energy**",
+     "**Constellation Energy**",
+     "competitor",
+     "active",
+     "20.3 GW vs 13.1 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Talen Energy**",
+     "**Vistra**",
+     "competitor",
+     "active",
+     "13.9 GW vs 13.1 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Clearway Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Constellation Energy**",
+     "competitor",
+     "active",
+     "20.3 GW vs 13.9 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**NRG Energy**",
+     "competitor",
+     "active",
+     "~50 GW pro forma vs ~25 GW",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**NextEra**",
+     "competitor",
+     "historical",
+     "2,194 MW vs 750 MW brought online in 2023",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Talen Energy**",
+     "competitor",
+     "active",
+     "13.9 GW vs 13.1 GW of PJM capacity",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Terra-Gen**",
+     "competitor",
+     "historical",
+     "671 MW vs 750 MW brought online in 2023",
+     "—"
+    ],
+    [
+     "**esVolta**",
+     "**GridStor**",
+     "competitor",
+     "active",
+     "Modo Energy ERCOT 2025 annual report",
+     "—"
+    ],
+    [
+     "**esVolta**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "Modo Energy ERCOT 2025 annual report",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "MasTec",
+     "supplier",
+     "active",
+     "—",
+     "EPC frame agreement"
+    ],
+    [
+     "**Arevon**",
+     "Primoris",
+     "supplier",
+     "active",
+     "$600M project",
+     "—"
+    ],
+    [
+     "**Blattner**",
+     "**Clearway Energy**",
+     "customer",
+     "active",
+     "199 MW / 398 MWh (Spindle)",
+     "Battery storage EPC"
+    ],
+    [
+     "**Blattner**",
+     "**RWE Clean Energy**",
+     "customer",
+     "active",
+     "Emily Solar, 273.6 MW",
+     "EPC construction on utility-scale solar"
+    ],
+    [
+     "**Blattner**",
+     "**Recurrent Energy**",
+     "customer",
+     "active",
+     "Papago Solar 150 MWac and Cobalt Solar 330 MW; historically Slate at 390 MWp plus 140.25 MW / 561 MWh",
+     "Solar EPC on Recurrent-developed projects"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "**Vistra**",
+     "customer",
+     "historical",
+     "100 MW Phase II and the 350 MW / 1,400 MWh Phase III expansion",
+     "Moss Landing energy storage"
+    ],
+    [
+     "**Cipher Digital**",
+     "**ENGIE North America**",
+     "supplier",
+     "announced",
+     "up to 300 MW contemplated",
+     "Co-located data centre at a West Texas wind site"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Vistra**",
+     "supplier",
+     "active",
+     "207 MW at ~2.8 c/kWh; minimum take of 66.7% of capacity",
+     "Luminant ET Services fixed-price power agreement"
+    ],
+    [
+     "**Clearway Energy**",
+     "Blattner",
+     "supplier",
+     "active",
+     "199 MW / 398 MWh (Spindle)",
+     "Battery storage EPC"
+    ],
+    [
+     "**Clearway Energy**",
+     "Rosendin",
+     "supplier",
+     "historical",
+     "320 MW / 1,280 MWh (Honeycomb Portfolio)",
+     "Electrical EPC"
+    ],
+    [
+     "**Constellation Energy**",
+     "CyrusOne",
+     "customer",
+     "active",
+     "over 1,100 MW under contract in Texas",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "**ON.energy**",
+     "supplier",
+     "active",
+     "5 GW",
+     "AI UPS"
+    ],
+    [
+     "**Crusoe**",
+     "**ProEnergy**",
+     "supplier",
+     "active",
+     "650 MW (13 × PE6000)",
+     "PE6000 gas turbines"
+    ],
+    [
+     "**CyrusOne**",
+     "**Constellation Energy**",
+     "supplier",
+     "active",
+     "over 1,100 MW under contract in Texas",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**Eolian**",
+     "partner",
+     "active",
+     "200 MW campus",
+     "Chisholm Grid BESS"
+    ],
+    [
+     "**ENGIE North America**",
+     "Cipher Digital",
+     "customer",
+     "announced",
+     "up to 300 MW contemplated",
+     "Co-located data centre at an unnamed West Texas wind facility"
+    ],
+    [
+     "**ENGIE North America**",
+     "QTS Data Centers",
+     "customer",
+     "active",
+     "48 MWac (~150 GWh/year)",
+     "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
+    ],
+    [
+     "**Eolian**",
+     "CyrusOne",
+     "partner",
+     "active",
+     "200 MW campus",
+     "Chisholm Grid BESS"
+    ],
+    [
+     "**Eolian**",
+     "Mortenson",
+     "supplier",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "Burns & McDonnell",
+     "other",
+     "historical",
+     "Fort Duncan EPC (for Recurrent Energy)",
+     "—"
+    ],
+    [
+     "**Intersect**",
+     "Crusoe",
+     "competitor",
+     "active",
+     "—",
+     "Texas SB 6 co-location net-metering"
+    ],
+    [
+     "**Intersect**",
+     "Equinix",
+     "other",
+     "active",
+     "—",
+     "executive hire"
+    ],
+    [
+     "**Invenergy**",
+     "Blattner",
+     "supplier",
+     "active",
+     "240 MW (Pleasant Prairie Solar)",
+     "Solar EPC"
+    ],
+    [
+     "**Invenergy**",
+     "Equinix",
+     "customer",
+     "historical",
+     "100 MW wind PPA (Wake Wind, ERCOT)",
+     "Power purchase agreement"
+    ],
+    [
+     "**Invenergy**",
+     "Kiewit",
+     "supplier",
+     "active",
+     "USD 1.7bn combined with Quanta Services",
+     "Grain Belt Express Phase 1 HVDC engineering, procurement and construction"
+    ],
+    [
+     "**Invenergy**",
+     "Quanta Services",
+     "supplier",
+     "active",
+     "USD 1.7bn combined with Kiewit Energy Group",
+     "Grain Belt Express Phase 1 HVDC construction (Infrastructure Solutions Group)"
+    ],
+    [
+     "**Lightsource**",
+     "McCarthy",
+     "supplier",
+     "active",
+     "Elm Branch 163 MW, Briar Creek 153 MW, Pueblo 600 MW",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**Lightsource**",
+     "customer",
+     "active",
+     "Elm Branch 163 MW, Briar Creek 153 MW, Sun Mountain / Bighorn 300 MW",
+     "—"
+    ],
+    [
+     "**McCarthy**",
+     "**RWE Clean Energy**",
+     "customer",
+     "active",
+     "Bright Arrow, 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+     "EPC construction on solar-plus-storage and utility-scale solar"
+    ],
+    [
+     "**NRG Energy**",
+     "Kiewit",
+     "supplier",
+     "active",
+     "up to 5.4 GW of combined-cycle EPC",
+     "TIC — The Industrial Company"
+    ],
+    [
+     "**ON.energy**",
+     "Crusoe",
+     "customer",
+     "active",
+     "5 GW",
+     "AI UPS"
+    ],
+    [
+     "**Prime Data Centers**",
+     "**Plus Power**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ProEnergy**",
+     "Crusoe",
+     "customer",
+     "active",
+     "650 MW (13 × PE6000)",
+     "PE6000"
+    ],
+    [
+     "**QTS Data Centers**",
+     "**ENGIE North America**",
+     "supplier",
+     "active",
+     "48 MWac (~150 GWh/year)",
+     "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "Blattner",
+     "supplier",
+     "active",
+     "Emily Solar, 273.6 MW",
+     "EPC construction on utility-scale solar"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "MasTec",
+     "supplier",
+     "active",
+     "—",
+     "Wanzek Construction, a MasTec Renewables company — turbine decommissioning and repowering works"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "McCarthy",
+     "supplier",
+     "active",
+     "Lafitte Solar 100 MW; Bright Arrow 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
+     "EPC construction on utility-scale solar and solar-plus-storage"
+    ],
+    [
+     "**Recurrent Energy**",
+     "Blattner",
+     "supplier",
+     "active",
+     "Papago Solar 150 MWac and Cobalt Solar 330 MW",
+     "Solar EPC"
+    ],
+    [
+     "**Recurrent Energy**",
+     "Burns & McDonnell",
+     "supplier",
+     "historical",
+     "Fort Duncan, 100 MW / 200 MWh",
+     "EPC on a merchant ERCOT battery"
+    ],
+    [
+     "**Recurrent Energy**",
+     "Primoris",
+     "supplier",
+     "active",
+     "Desert Bloom Storage, 600 MWh",
+     "Battery storage EPC"
+    ]
+   ],
+   "note": "Curated edges among members: 68 · to the neighbouring segments: 55 (the first 40 shown, by company) · derived-only mentions (no curated typing): 31 among members, 9 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-02 — California's Attorney General and Energy Commission serve a notice of intent to sue the Department of the Interior and RWE over the cancellation of the Humboldt floating-wind lease, alleging OCSLA violations including no pre-cancellation hearing, no five-year suspension, no governor notification, and compensation of US$121.3m exceeding statutory formulas",
+     "sub": "RWE Clean Energy · legal"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-01 — Available Infrastructure partners with EarthSpark International to host minigrid data on its SanQtum edge platform; CEO recalls the company's founding 'focus on the energy sector, including ... battery energy storage systems'",
+     "sub": "Available Power · partnership"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-27 — Q2 2026: Recurrent revenue $117.3m, operating loss $19.4m including a $24m impairment on a Latin America project sale; storage pipeline restated to 84.1 GWh and segment debt to $4.1bn",
+     "sub": "Recurrent Energy · financial"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-27 — CFIUS clears the Global Infrastructure Partners and EQT acquisition of The AES Corporation",
+     "sub": "AES Clean Energy · ma"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-24 — FERC approves extension of the Brandon Shores and H.A. Wagner reliability-must-run agreements through 2031",
+     "sub": "Talen Energy · regulatory"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
+     "sub": "NRG Energy · market"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-20 — Quincy Solar (120 MW, Grant County, Washington) breaks ground; Cupertino Electric named contractor; commercial late 2027",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-19 — Pennsylvania executive order conditions preferential permitting for data centres above 25 MW on new in-zone supply",
+     "sub": "Talen Energy · policy"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-19 — Datavault AI's Q2 2026 results: SanQtum deployments completed in New York and Philadelphia; 'no tokens sold or capital raised to date' for the $QEST programme",
+     "sub": "Available Power · financial"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-18 — $300M letter-of-credit facility closed with Standard Chartered (sole provider/arranger) — to post development-phase credit support, NYISO + MISO focus",
+     "sub": "Key Capture · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Active anode material AD/CVD",
+     "expired",
+     "2026-03-12",
+     "Recurrent Energy"
+    ],
+    [
+     "AD/CVD (Solar 3 and Solar 4)",
+     "in-effect",
+     "2025",
+     "Recurrent Energy"
+    ],
+    [
+     "AD/CVD and Section 201/232 tariffs",
+     "in-effect",
+     "2025-06-24",
+     "AES Clean Energy"
+    ],
+    [
+     "Australia FIRB screening",
+     "in-effect",
+     "—",
+     "Lightsource"
+    ],
+    [
+     "Beginning-of-construction safe harbor (IRS Notice 2025-42 and the 7 July 2025 Executive Order)",
+     "in-effect",
+     "2025-08-15",
+     "AES Clean Energy"
+    ],
+    [
+     "Beginning-of-construction safe harbor (IRS Notice 2025-42)",
+     "in-effect",
+     "2025-08",
+     "ENGIE North America"
+    ],
+    [
+     "California CEQA / AB 205 opt-in certification and BLM DRECP",
+     "in-effect",
+     "2025-06-13",
+     "Intersect"
+    ],
+    [
+     "California resource adequacy",
+     "in-effect",
+     "—",
+     "Clearway Energy"
+    ],
+    [
+     "California resource adequacy and local permitting",
+     "in-effect",
+     "2021-10",
+     "GridStor"
+    ],
+    [
+     "Canadian Clean Technology ITC (Ontario projects)",
+     "in-effect",
+     "2026-03",
+     "Aypa Power"
+    ],
+    [
+     "CPUC mid-term-reliability procurement and RA rules",
+     "in-effect",
+     "2026-01-15",
+     "Aypa Power"
+    ],
+    [
+     "DOE Loan Programs Office",
+     "expired",
+     "2025-07-23",
+     "Invenergy"
+    ],
+    [
+     "DOE transmission policy (FAST-41, NIETC)",
+     "in-effect",
+     "2024-02",
+     "Invenergy"
+    ],
+    [
+     "Domestic content and supply-chain sourcing",
+     "in-effect",
+     "—",
+     "Clearway Energy"
+    ],
+    [
+     "EO 14420 bulk-power system",
+     "in-effect",
+     "2026-08-26",
+     "Apex Clean Energy"
+    ],
+    [
+     "EPA administrative settlement agreement for the Moss Landing site",
+     "in-effect",
+     "2025-07-17",
+     "Vistra"
+    ],
+    [
+     "EPA effluent limitations guidelines and coal combustion residuals rules",
+     "in-effect",
+     "2020",
+     "Talen Energy"
+    ],
+    [
+     "EPA mercury and air toxics standards and greenhouse-gas rules for existing units",
+     "in-effect",
+     "2024-05",
+     "Talen Energy"
+    ],
+    [
+     "EPA mobile-turbine permitting",
+     "proposed",
+     "—",
+     "ProEnergy"
+    ],
+    [
+     "ERCOT distribution-connected generation rules (sub-10 MW path)",
+     "in-effect",
+     "2023",
+     "Available Power"
+    ],
+    [
+     "ERCOT market design (energy-only, RTC+B)",
+     "in-effect",
+     "2025-12",
+     "Available Power, GridStor"
+    ],
+    [
+     "ERCOT market design and ancillary-services procurement",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "ERCOT market design — ancillary-service saturation and Real-Time Co-optimization plus Batteries (RTC+B)",
+     "in-effect",
+     "2025-12",
+     "Spearmint Energy"
+    ],
+    [
+     "ERCOT market design — real-time co-optimisation with batteries",
+     "in-effect",
+     "2025-12-05",
+     "NRG Energy"
+    ],
+    [
+     "ERCOT NOGRR 282",
+     "in-effect",
+     "—",
+     "ON.energy"
+    ],
+    [
+     "ERCOT RTC+B and ancillary-service redesign",
+     "in-effect",
+     "2025-12-05",
+     "Hunt Energy Network"
+    ],
+    [
+     "Federal permitting and offshore wind leasing suspension",
+     "in-effect",
+     "2025-01",
+     "RWE Clean Energy"
+    ],
+    [
+     "Federal permitting — Department of the Interior three-phase review",
+     "in-effect",
+     "2025-07",
+     "AES Clean Energy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "Apex Clean Energy, Arevon, Eolian, Hunt Energy Network, Jupiter, Key Capture, Lightsource, NextEra, ON.energy, Plus Power, ProEnergy, Samsung C&T, Strata Clean Energy, Terra-Gen, esVolta"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2025-07",
+     "Intersect"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026",
+     "Excelsior Energy Capital"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Available Power, GridStor, Invenergy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01-01",
+     "AES Clean Energy, RWE Clean Energy, Recurrent Energy"
+    ],
+    [
+     "FERC co-located load and large-load interconnection (dockets ER24-2172, EL25-49, EL26-67)",
+     "in-effect",
+     "2025-12-18",
+     "Talen Energy"
+    ],
+    [
+     "FERC co-located load rulemaking in PJM (dockets EL25-49, EL26-67)",
+     "in-effect",
+     "2025-12-18",
+     "Vistra"
+    ],
+    [
+     "FERC co-location and surplus-interconnection rules",
+     "proposed",
+     "2024-12",
+     "Intersect"
+    ],
+    [
+     "FERC co-location rules (PJM)",
+     "announced",
+     "—",
+     "Constellation Energy"
+    ],
+    [
+     "FERC competitive-market governance (company advocacy)",
+     "proposed",
+     "2025-07-14",
+     "Spearmint Energy"
+    ],
+    [
+     "FERC review of the LS Power acquisition (Federal Power Act section 203)",
+     "expired",
+     "2025-11-14",
+     "NRG Energy"
+    ],
+    [
+     "IEEPA tariffs",
+     "expired",
+     "2026-02-20",
+     "Recurrent Energy"
+    ],
+    [
+     "Illinois ZEC program",
+     "in-effect",
+     "—",
+     "Constellation Energy"
+    ],
+    [
+     "IRA domestic content bonus",
+     "in-effect",
+     "—",
+     "Jupiter"
+    ],
+    [
+     "ITC (standalone storage) and tax-credit transferability",
+     "in-effect",
+     "2023-01",
+     "Spearmint Energy"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Arevon, Eolian, Hunt Energy Network, Key Capture, Lightsource, NextEra, Plus Power"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2023-01",
+     "Available Power, Aypa Power, GridStor, Invenergy, Strata Clean Energy, esVolta"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2024-07",
+     "Excelsior Energy Capital"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2025-07-04",
+     "Apex Clean Energy"
+    ],
+    [
+     "ITC/45X (One Big Beautiful Bill Act phase-out)",
+     "in-effect",
+     "2025-07-04",
+     "AES Clean Energy, Clearway Energy, ENGIE North America, RWE Clean Energy, Recurrent Energy"
+    ],
+    [
+     "ITC/45X — domestic content and storage ITC",
+     "in-effect",
+     "2023-01",
+     "Intersect"
+    ],
+    [
+     "Local BESS zoning and fire-code approvals (NFPA 855 / UL 9540A)",
+     "in-effect",
+     "2025-07",
+     "Aypa Power"
+    ],
+    [
+     "Local siting and permitting",
+     "in-effect",
+     "—",
+     "AES Clean Energy, RWE Clean Energy"
+    ],
+    [
+     "Local zoning and fire-safety approvals (Indiana, Texas, Kansas, South Dakota)",
+     "in-effect",
+     "2024-11-12",
+     "Spearmint Energy"
+    ],
+    [
+     "Merger regulatory approvals (FERC, PUCO, NYPSC, CFIUS, HSR)",
+     "in-effect",
+     "2026-03-01",
+     "AES Clean Energy"
+    ],
+    [
+     "Minnesota PUC site permitting (first standalone BESS permits in the state)",
+     "in-effect",
+     "2025-08",
+     "Spearmint Energy"
+    ],
+    [
+     "NDAA §154",
+     "in-effect",
+     "—",
+     "Plus Power, Terra-Gen"
+    ],
+    [
+     "New York Public Service Commission consumer settlement (Case 25-M-0516)",
+     "in-effect",
+     "2026-04-16",
+     "NRG Energy"
+    ],
+    [
+     "Nuclear production tax credit (section 45U)",
+     "in-effect",
+     "2024-01-01",
+     "Talen Energy, Vistra"
+    ],
+    [
+     "OBBBA (HR1) credit phase-down and FEOC restrictions",
+     "in-effect",
+     "2025-07",
+     "Aypa Power"
+    ],
+    [
+     "OBBBA (HR1) storage credit treatment",
+     "in-effect",
+     "2025-07",
+     "GridStor"
+    ],
+    [
+     "OBBBA (HR1) — credit phase-down and FEOC restrictions",
+     "in-effect",
+     "2025-07-04",
+     "Spearmint Energy"
+    ],
+    [
+     "OCSLA litigation over the lease relinquishment",
+     "announced",
+     "2026-09-01",
+     "RWE Clean Energy"
+    ],
+    [
+     "Offshore wind lease policy (Interior settlements)",
+     "in-effect",
+     "2026-06-17",
+     "Invenergy"
+    ],
+    [
+     "Offshore wind leasing suspension and lease relinquishment",
+     "in-effect",
+     "2026-04-28",
+     "ENGIE North America"
+    ],
+    [
+     "Pennsylvania data-centre executive order and RGGI withdrawal",
+     "in-effect",
+     "2026-08-19",
+     "Talen Energy"
+    ],
+    [
+     "Retail supply regulation (state PUCs)",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "SEC internal-control reporting (Section 404)",
+     "in-effect",
+     "2026-01-07",
+     "Clearway Energy"
+    ],
+    [
+     "Section 232 polysilicon investigation",
+     "proposed",
+     "2025-07-01",
+     "Recurrent Energy"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Strata Clean Energy, esVolta"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01-01",
+     "AES Clean Energy"
+    ],
+    [
+     "Section 301 tariffs and reciprocal tariffs",
+     "in-effect",
+     "2025-08",
+     "RWE Clean Energy"
+    ],
+    [
+     "South Carolina Utility Facility Siting and Environmental Protection Act (CECPCN)",
+     "in-effect",
+     "2025-11-20",
+     "Aypa Power"
+    ],
+    [
+     "State siting and certificate law (Missouri, Illinois, Kansas, Indiana)",
+     "in-effect",
+     "2023-10",
+     "Invenergy"
+    ],
+    [
+     "State siting law (OH SB 52 / IL PA 102-1123)",
+     "in-effect",
+     "—",
+     "Apex Clean Energy"
+    ],
+    [
+     "Texas Chapter 312 abatements and county reinvestment zones",
+     "in-effect",
+     "2025-10-15",
+     "Intersect"
+    ],
+    [
+     "Texas Chapter 312 property-tax abatements",
+     "in-effect",
+     "2024-06",
+     "Aypa Power"
+    ],
+    [
+     "Texas distribution wholesale tariffs (PUCT rate cases)",
+     "in-effect",
+     "—",
+     "Hunt Energy Network"
+    ],
+    [
+     "Texas Energy Fund (Senate Bills 2627 and 2268)",
+     "in-effect",
+     "2023",
+     "NRG Energy"
+    ],
+    [
+     "Texas Energy Fund in-ERCOT generation loan programme",
+     "in-effect",
+     "2023",
+     "Vistra"
+    ],
+    [
+     "Texas large-load interconnection pause and PUCT verification (August 2026)",
+     "in-effect",
+     "2026-08-03",
+     "NRG Energy"
+    ],
+    [
+     "Texas SB 6 (large-load and co-located generation)",
+     "in-effect",
+     "2025",
+     "Available Power"
+    ],
+    [
+     "Texas SB 6 (large-load interconnection and co-location, 2025)",
+     "in-effect",
+     "2025-06-21",
+     "Intersect"
+    ],
+    [
+     "Texas SB 6 and HB 1500 (large loads, firming, curtailment)",
+     "in-effect",
+     "2025-06",
+     "Spearmint Energy"
+    ],
+    [
+     "Texas Senate Bill 6 and the PUCT large-load rulemaking (Project 58317)",
+     "in-effect",
+     "2025-06",
+     "Vistra"
+    ],
+    [
+     "Turbine safety and product liability",
+     "in-effect",
+     "2025-11-07",
+     "RWE Clean Energy"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "Apex Clean Energy"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "Arevon, NextEra"
+    ],
+    [
+     "§45U nuclear PTC",
+     "in-effect",
+     "—",
+     "Constellation Energy"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Eight Buyer Classes* (planned) · *From Site Control to Commercial Operation* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Constellation Energy, ON.energy, ProEnergy, Samsung C&T — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **AES Clean Energy** in?",
+     "c": [
+      "Hyperscalers and AI labs",
+      "Neoclouds",
+      "Storage developers and IPPs",
+      "Cooling"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: registry tagline: third-largest US battery owner; ecosystemRole: one of the three largest storage buyers, procurement entangled with a 22 % Fluence stake"
+    },
+    {
+     "q": "What role does the registry give **Samsung C&T** in Storage developers and IPPs?",
+     "c": [
+      "challenger",
+      "incumbent",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Storage developers and IPPs** buy on, per the registry?",
+     "c": [
+      "Credit-support structures for tenants without investment-grade balance sheets",
+      "Chemistry fit to duty — energy vs power cell, C-rate, cold performance",
+      "Bankability — the independent engineer's acceptance and the lender's approved-vendor list",
+      "Authorship of the recommended practice the contract cites"
+     ],
+     "a": 2,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Storage developers and IPPs?",
+     "c": [
+      "Storage integrators and containers",
+      "EPC and construction",
+      "Cells and chemistry",
+      "Bridge and on-site generation"
+     ],
+     "a": 1,
+     "why": "Chain position 10 against this segment's 11."
+    },
+    {
+     "q": "The graph records a curated edge from **AES Clean Energy** to **Arevon**. How is it typed from AES Clean Energy's side?",
+     "c": [
+      "other",
+      "competitor",
+      "investor",
+      "partner"
+     ],
+     "a": 1,
+     "why": "Fifth-largest US battery owner at 1.470 GW and closing on AES."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentAidcDevelopersAndLandlords_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-aidc-developers-and-landlords",
+ "type": "module",
+ "title": "AIDC developers and landlords",
+ "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-12-31",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:aligned",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:apex-clean-energy",
+    "date": "2026-09-01",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:applied-digital",
+    "date": "2026-08-30",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cipher-mining",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:compass-datacenters",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:core-scientific",
+    "date": "2026-08-29",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:crusoe",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cyrusone",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:digital-realty",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:edgecore",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:eolian",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:equinix",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fermi-america",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluidstack",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:galaxy-digital",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hut-8",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:intersect-power",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:iren",
+    "date": "2026-08-30",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nscale",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:powerhouse-data-centers",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:prime-data-centers",
+    "date": "2026-09-07",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:qts",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:samsung-ct",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:stack-infrastructure",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:strata-clean-energy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:switch",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:talen-energy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:terawulf",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tract",
+    "date": "2026-09-07",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vantage",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "30",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "9",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "13",
+   "v": "challengers",
+   "sub": "contesting that set; 8 adjacent"
+  },
+  {
+   "k": "98",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and lease them to a hyperscaler or a neocloud — the counterparty that decides the campus's power architecture and pays for the substation.",
+    "Chain position 12 of 19 · tier **demand** — owns, operates or consumes it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 11)",
+     "Storage developers and IPPs",
+     "demand"
+    ],
+    [
+     "**This segment** (position 12)",
+     "**AIDC developers and landlords**",
+     "demand"
+    ],
+    [
+     "Downstream (position 13)",
+     "Hyperscalers and AI labs",
+     "demand"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Hyperscalers and AI labs (35 edges) · Neoclouds (16 edges) · Clean firm and nuclear (2 edges) · Storage developers and IPPs (2 edges) · Power conversion and rack-power silicon (1 edge) · Compute and the rack (1 edge) · Utilities (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Utilities (32 edges) · EPC and construction (24 edges) · Clean firm and nuclear (23 edges) · Bridge and on-site generation (21 edges) · Storage integrators and containers (20 edges) · In-hall power (20 edges) · Grid equipment (19 edges) · Power conversion and rack-power silicon (18 edges) · Software and optimization (18 edges) · Storage developers and IPPs (12 edges) · Cooling (11 edges) · Cells and chemistry (7 edges) · Compute and the rack (3 edges)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Time to power — utility capacity, the substation, the interconnection batch",
+     "*The Fence Line: Interconnection and the Substation*"
+    ],
+    [
+     "Build cost per MW and the standardized building product",
+     "—"
+    ],
+    [
+     "Tenant credit and the credit-substitution layer (backstops, guarantees)",
+     "—"
+    ],
+    [
+     "Financing route — ABS, project notes, sponsor equity",
+     "—"
+    ],
+    [
+     "Cooling density and water posture the tenant's next rack needs",
+     "—"
+    ],
+    [
+     "Grid posture — utility-served, behind-the-meter, co-located with generation",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Aligned Data Centers**",
+     "aligned",
+     "incumbent",
+     "ecosystemRole: the marquee private wholesale developer-landlord — the asset the AI-capital complex chose as its first purchase ($40B)"
+    ],
+    [
+     "**Compass Datacenters**",
+     "compass-datacenters",
+     "incumbent",
+     "ecosystemRole: a build-to-suit landlord manufacturing standardized single-tenant buildings; the first Moody's AAA on hyperscale ABS collateral"
+    ],
+    [
+     "**CyrusOne**",
+     "cyrusone",
+     "incumbent",
+     "ecosystemRole: the private counterweight to Digital Realty; the landlord that has taken co-location-with-generation furthest"
+    ],
+    [
+     "**Digital Realty**",
+     "digital-realty",
+     "incumbent",
+     "ecosystemRole: the listed benchmark for what a data-centre landlord is worth — largest listed landlord by leasable area and pipeline"
+    ],
+    [
+     "**Equinix**",
+     "equinix",
+     "incumbent",
+     "ecosystemRole: the procurement standard-setter for multi-tenant AI capacity; 281 IBX data centers; the xScale hyperscale JV"
+    ],
+    [
+     "**QTS Data Centers**",
+     "qts",
+     "incumbent",
+     "ecosystemRole: the highest-velocity wholesale developer-landlord; 3 GW+ live with a $30B pre-leased pipeline"
+    ],
+    [
+     "**STACK Infrastructure**",
+     "stack-infrastructure",
+     "incumbent",
+     "ecosystemRole: the Blue Owl complex's build engine — Amazon's three Louisiana campuses and Stargate's Project Jupiter"
+    ],
+    [
+     "**Switch**",
+     "switch",
+     "incumbent",
+     "ecosystemRole: the design-led counterweight to the pure wholesale giants — Tier 5 Platinum, five Prime campuses, EVO AI Factories"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "vantage",
+     "incumbent",
+     "ecosystemRole: the most consequential private wholesale developer-landlord — two Stargate campuses; invented the data-center ABS"
+    ],
+    [
+     "**Applied Digital**",
+     "applied-digital",
+     "challenger",
+     "ecosystemRole: the purest AI-factory landlord — 1.4 GW leased to CoreWeave and one unnamed hyperscaler; a build-own-operate entrant from bitcoin hosting"
+    ],
+    [
+     "**Cipher Digital**",
+     "cipher-mining",
+     "challenger",
+     "ecosystemRole: the miner further through the conversion than any peer — 700 MW / ~$11.4bn contracted across three Texas campuses"
+    ],
+    [
+     "**Core Scientific**",
+     "core-scientific",
+     "challenger",
+     "ecosystemRole: the miner-pivot cohort's most instructive case — the first landlord with two 500 MW-class anchors"
+    ],
+    [
+     "**Crusoe**",
+     "crusoe",
+     "challenger",
+     "ecosystemRole: the purest test of whether energy-first development is a durable business — Abilene 1.2 GW; a procurement list that reads like the supplier index"
+    ],
+    [
+     "**EdgeCore**",
+     "edgecore",
+     "challenger",
+     "ecosystemRole: a sponsor-owned build-to-suit landlord — two operating buildings (Mesa 26 MW, Santa Clara 36 MW) behind a '1.8 GW' claim"
+    ],
+    [
+     "**Fermi America**",
+     "fermi-america",
+     "challenger",
+     "ecosystemRole: the generation-first campus — builds its own plant behind the fence; nothing energised, one binding-but-conditional tenant"
+    ],
+    [
+     "**Galaxy Digital**",
+     "galaxy-digital",
+     "challenger",
+     "ecosystemRole: the corpus's first data-centre owner that is not otherwise a data-centre company — a broker-dealer owning a 1.63 GW ERCOT campus let to CoreWeave"
+    ],
+    [
+     "**Hut 8**",
+     "hut-8",
+     "challenger",
+     "ecosystemRole: the converted miner that went furthest into project finance — 949 MW critical IT / $26.6bn base-term across two campuses"
+    ],
+    [
+     "**IREN**",
+     "iren",
+     "challenger",
+     "ecosystemRole: holding both ends of the stack — 5 GW of secured power on owned substations plus a climbing cloud business"
+    ],
+    [
+     "**PowerHouse Data Centers**",
+     "powerhouse-data-centers",
+     "challenger",
+     "ecosystemRole: the land-and-entitlement end of the landlord chain — one building delivered and sold; the Joliet 1.8 GW campus in litigation"
+    ],
+    [
+     "**Prime Data Centers**",
+     "prime-data-centers",
+     "challenger",
+     "ecosystemRole: the mid-tier build-to-suit developer — ~151 MW operating, CoreWeave's Chicago and Lambda's Los Angeles landlord, recapitalised five times"
+    ],
+    [
+     "**TeraWulf**",
+     "terawulf",
+     "challenger",
+     "ecosystemRole: the cleanest test of the 'power landlord of AI' model — brownfield power sites into 10–20-year take-or-pay leases"
+    ],
+    [
+     "**Tract**",
+     "tract",
+     "challenger",
+     "ecosystemRole: the developer's developer — sells powered, permitted ground; no third-party parcel sale with a buyer or price on the record"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "apex-clean-energy",
+     "adjacent",
+     "productsAndServices › Powered Land — large-load and data-center sites with secured interconnection"
+    ],
+    [
+     "**Eolian**",
+     "eolian",
+     "adjacent",
+     "productsAndServices › Energy-plus-load — the CyrusOne DFW7 campus co-located at Chisholm Grid, monetizing a BESS interconnection"
+    ],
+    [
+     "**Fluidstack**",
+     "fluidstack",
+     "adjacent",
+     "productsAndServices › Power and land development — Sullivan County IN, Okmulgee OK, Wythe County VA, Harlingen TX, in its own name from late 2025"
+    ],
+    [
+     "**Intersect**",
+     "intersect-power",
+     "adjacent",
+     "productsAndServices › Co-located energy parks for Google (Quantum, Meitner, Roman) — the campus developer behind one fence with the load"
+    ],
+    [
+     "**Nscale**",
+     "nscale",
+     "adjacent",
+     "ecosystemRole: the anchored neocloud that owns its ground — Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid"
+    ],
+    [
+     "**Samsung C&T**",
+     "samsung-ct",
+     "adjacent",
+     "productsAndServices › AIDC platform — a dedicated Data Center Business Team (Hanam DC 2024; Stargate Korea; floating DCs)"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "strata-clean-energy",
+     "adjacent",
+     "productsAndServices › Hyperscaler 'Entitled Power Land', natural gas and Power-to-X (announced 2023–2026)"
+    ],
+    [
+     "**Talen Energy**",
+     "talen-energy",
+     "adjacent",
+     "productsAndServices › Powered-land development — the Talen flywheel of sites, interconnection and new capacity contracted to large loads"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Digital Realty**",
+     "FY2025 · 2025-12-31",
+     "6,113",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Equinix**",
+     "FY2025 · 2025-12-31",
+     "9,217",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Applied Digital**",
+     "FY2026 · 2026-05-31",
+     "611.3",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,400"
+    ],
+    [
+     "**Cipher Digital**",
+     "FY2025 · 2025-12-31",
+     "223.9",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Core Scientific**",
+     "FY2025 · 2025-12-31",
+     "319",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "FY2025 · 2025-12-31",
+     "0",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "FY2025 · 2025-12-31",
+     "60,406.7",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "FY2025 · 2025-12-31",
+     "235.1",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**IREN**",
+     "FY2025 · 2025-06-30",
+     "501",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**TeraWulf**",
+     "FY2025 · 2025-12-31",
+     "168.5",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "522"
+    ],
+    [
+     "**Fluidstack**",
+     "FY2025 · 2025-12-31",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "1,428"
+    ],
+    [
+     "**Talen Energy**",
+     "FY2025 · 2025-12-31",
+     "2,581",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,920"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Aligned Data Centers, Compass Datacenters, CyrusOne, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, Crusoe, EdgeCore, PowerHouse Data Centers, Prime Data Centers, Tract, Apex Clean Energy, Eolian, Intersect, Nscale, Samsung C&T, Strata Clean Energy"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Aligned Data Centers**",
+     "**Applied Digital**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "**Digital Realty**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "**Equinix**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "**Switch**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Applied Digital**",
+     "**Core Scientific**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Applied Digital**",
+     "**IREN**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Applied Digital**",
+     "**TeraWulf**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Applied Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Core Scientific**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Digital Realty**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Equinix**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Fluidstack**",
+     "customer",
+     "active",
+     "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "AI hosting at Barber Lake"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Galaxy Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Hut 8**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**IREN**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**TeraWulf**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Compass Datacenters**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Compass Datacenters**",
+     "**Digital Realty**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Compass Datacenters**",
+     "**Galaxy Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Compass Datacenters**",
+     "**QTS Data Centers**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Compass Datacenters**",
+     "**Vantage Data Centers**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Core Scientific**",
+     "**Equinix**",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**Compass Datacenters**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**Digital Realty**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**Eolian**",
+     "partner",
+     "active",
+     "200 MW campus",
+     "Chisholm Grid BESS"
+    ],
+    [
+     "**CyrusOne**",
+     "**PowerHouse Data Centers**",
+     "supplier",
+     "historical",
+     "USD 154.1m; 60 MW",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**Prime Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CyrusOne**",
+     "**QTS Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Compass Datacenters**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**CyrusOne**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Equinix**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**QTS Data Centers**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Vantage Data Centers**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EdgeCore**",
+     "**STACK Infrastructure**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EdgeCore**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Eolian**",
+     "**CyrusOne**",
+     "partner",
+     "active",
+     "200 MW campus",
+     "Chisholm Grid BESS"
+    ],
+    [
+     "**Equinix**",
+     "**Digital Realty**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "**Crusoe**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluidstack**",
+     "**Cipher Digital**",
+     "supplier",
+     "active",
+     "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "Barber Lake, Colorado City TX"
+    ],
+    [
+     "**Fluidstack**",
+     "**Hut 8**",
+     "supplier",
+     "active",
+     "245 MW critical IT on 330 MW of utility capacity; USD 7.0bn base-term contract value",
+     "River Bend, West Feliciana Parish LA"
+    ],
+    [
+     "**Fluidstack**",
+     "**IREN**",
+     "supplier",
+     "active",
+     "part of USD 2.8 billion of new IREN cloud contracts (individual value undisclosed)",
+     "IREN AI Cloud"
+    ],
+    [
+     "**Fluidstack**",
+     "**Nscale**",
+     "competitor",
+     "active",
+     "—",
+     "DGX Cloud Lepton co-contributors; both Anthropic compute suppliers (2026)"
+    ],
+    [
+     "**Fluidstack**",
+     "**TeraWulf**",
+     "supplier",
+     "active",
+     "378 MW at Lake Mariner (~USD 6.7 billion); 168 MW Abernathy JV (~USD 9.5 billion), now Fluidstack-controlled",
+     "CB-3, CB-4, CB-5 leases; Abernathy joint venture"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**Applied Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**Cipher Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**Compass Datacenters**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**Core Scientific**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**Crusoe**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**Hut 8**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**IREN**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**TeraWulf**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**Applied Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**Cipher Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**Core Scientific**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**Crusoe**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**Fluidstack**",
+     "customer",
+     "active",
+     "245 MW critical IT; USD 7.0bn base-term contract value",
+     "River Bend data centre campus"
+    ],
+    [
+     "**Hut 8**",
+     "**Galaxy Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**IREN**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**TeraWulf**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Intersect**",
+     "**Crusoe**",
+     "competitor",
+     "active",
+     "—",
+     "Texas SB 6 co-location net-metering"
+    ],
+    [
+     "**Intersect**",
+     "**Equinix**",
+     "other",
+     "active",
+     "—",
+     "executive hire"
+    ],
+    [
+     "**Nscale**",
+     "**Fluidstack**",
+     "competitor",
+     "active",
+     "—",
+     "DGX Cloud Lepton co-contributors; both Anthropic capacity suppliers (2026)"
+    ],
+    [
+     "**PowerHouse Data Centers**",
+     "**CyrusOne**",
+     "customer",
+     "historical",
+     "USD 154.1m; 60 MW",
+     "—"
+    ],
+    [
+     "**Prime Data Centers**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Prime Data Centers**",
+     "**PowerHouse Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Prime Data Centers**",
+     "**Tract**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**QTS Data Centers**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**QTS Data Centers**",
+     "**Digital Realty**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**QTS Data Centers**",
+     "**Equinix**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**QTS Data Centers**",
+     "**STACK Infrastructure**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**QTS Data Centers**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**STACK Infrastructure**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**STACK Infrastructure**",
+     "**Digital Realty**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**STACK Infrastructure**",
+     "**QTS Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**STACK Infrastructure**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Switch**",
+     "**Aligned Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "EVO AI Factories"
+    ],
+    [
+     "**Switch**",
+     "**Digital Realty**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Switch**",
+     "**Equinix**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Switch**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "EVO AI Factories"
+    ],
+    [
+     "**Talen Energy**",
+     "**TeraWulf**",
+     "partner",
+     "historical",
+     "$85 million buyout of a 25% stake",
+     "Nautilus Cryptomine"
+    ],
+    [
+     "**TeraWulf**",
+     "**Applied Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**TeraWulf**",
+     "**Cipher Digital**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**TeraWulf**",
+     "**Core Scientific**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**TeraWulf**",
+     "**IREN**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tract**",
+     "**Digital Realty**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Tract**",
+     "**EdgeCore**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tract**",
+     "**PowerHouse Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tract**",
+     "**Prime Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tract**",
+     "**Switch**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Tract**",
+     "**Vantage Data Centers**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**Crusoe**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**Digital Realty**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**Equinix**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**STACK Infrastructure**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**AES Clean Energy**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "Microsoft",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "xAI",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amazon**",
+     "**Cipher Digital**",
+     "supplier",
+     "active",
+     "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+     "Turnkey space and power for AI workloads in Texas"
+    ],
+    [
+     "**Amazon**",
+     "**STACK Infrastructure**",
+     "supplier",
+     "active",
+     "$18B, three campuses",
+     "—"
+    ],
+    [
+     "**Anthropic**",
+     "**Fluidstack**",
+     "supplier",
+     "active",
+     "USD 50 billion programme; ~1.4 GW of Google-backstopped leases at TeraWulf, Cipher, Hut 8 and Meridian Arc",
+     "custom-built data centres in Texas, New York, Louisiana and Indiana"
+    ],
+    [
+     "**Anthropic**",
+     "**Hut 8**",
+     "supplier",
+     "active",
+     "at least 245 MW and up to 2,295 MW",
+     "River Bend, Louisiana and the wider Hut 8 pipeline"
+    ],
+    [
+     "**Anthropic**",
+     "**Nscale**",
+     "supplier",
+     "announced",
+     "reported ~USD 45 billion over six years for ~460 MW at Monarch (unconfirmed by either party)",
+     "Vera Rubin capacity at the Monarch Compute Campus, Mason County WV, from late 2027"
+    ],
+    [
+     "**Anthropic**",
+     "**TeraWulf**",
+     "supplier",
+     "active",
+     "401 MW critical IT, 20 years, ~USD 19 billion (up to ~USD 33 billion); plus ~546 MW at Lake Mariner and Abernathy via Fluidstack",
+     "Justified Data Campus, Hawesville KY (direct lease); Lake Mariner and Abernathy (through Fluidstack)"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "Arevon",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "Google",
+     "customer",
+     "active",
+     "268 MW across two PJM wind farms",
+     "full-capacity PPAs"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "Jupiter",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "Meta",
+     "customer",
+     "active",
+     ">1 GW across six projects",
+     "PPAs / environmental-attribute agreements"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "Microsoft",
+     "customer",
+     "active",
+     "125 MWac",
+     "Environmental Justice PPA"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "NextEra",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Applied Digital**",
+     "Microsoft",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Aypa Power**",
+     "**Eolian**",
+     "partner",
+     "historical",
+     "268 MW (Williams + Fletcher); 250 MW / 1,000 MWh (Pediment)",
+     "late-stage project sales"
+    ],
+    [
+     "**Cipher Digital**",
+     "Amazon",
+     "customer",
+     "active",
+     "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+     "Turnkey space and power for AI workloads"
+    ],
+    [
+     "**Cipher Digital**",
+     "Anthropic",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "ENGIE North America",
+     "supplier",
+     "announced",
+     "up to 300 MW contemplated",
+     "Co-located data centre at a West Texas wind site"
+    ],
+    [
+     "**Cipher Digital**",
+     "Google",
+     "investor",
+     "active",
+     "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "Vistra",
+     "supplier",
+     "active",
+     "207 MW at ~2.8 c/kWh; minimum take of 66.7% of capacity",
+     "Luminant ET Services fixed-price power agreement"
+    ],
+    [
+     "**Compass Datacenters**",
+     "Amazon",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Constellation Energy**",
+     "**CyrusOne**",
+     "customer",
+     "active",
+     "over 1,100 MW under contract in Texas",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "ON.energy",
+     "supplier",
+     "active",
+     "5 GW",
+     "AI UPS"
+    ],
+    [
+     "**Crusoe**",
+     "OpenAI",
+     "customer",
+     "active",
+     "1.2GW campus",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "Oracle",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "ProEnergy",
+     "supplier",
+     "active",
+     "650 MW (13 × PE6000)",
+     "PE6000 gas turbines"
+    ],
+    [
+     "**CyrusOne**",
+     "Constellation Energy",
+     "supplier",
+     "active",
+     "over 1,100 MW under contract in Texas",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "Meta",
+     "customer",
+     "active",
+     "1.6% of annualised recurring revenue; 49 locations",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "Microsoft",
+     "partner",
+     "active",
+     "—",
+     "Azure ExpressRoute"
+    ],
+    [
+     "**Digital Realty**",
+     "Oracle",
+     "customer",
+     "active",
+     "9.0% of annualised recurring revenue; 42 locations",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Cipher Digital**",
+     "customer",
+     "announced",
+     "up to 300 MW contemplated",
+     "Co-located data centre at an unnamed West Texas wind facility"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Intersect**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**ENGIE North America**",
+     "**QTS Data Centers**",
+     "customer",
+     "active",
+     "48 MWac (~150 GWh/year)",
+     "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
+    ],
+    [
+     "**EdgeCore**",
+     "Amazon",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EdgeCore**",
+     "Meta",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Eolian**",
+     "Jupiter",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "Amazon",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluidstack**",
+     "Anthropic",
+     "customer",
+     "active",
+     "USD 50 billion programme; ~1.4 GW critical IT across five leased campuses",
+     "custom-built data centres, Texas and New York and beyond"
+    ]
+   ],
+   "note": "Curated edges among members: 98 · to the neighbouring segments: 99 (the first 40 shown, by company) · derived-only mentions (no curated typing): 21 among members, 43 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-04 — Crunchbase News reports a USD 1.5 billion round led by Jane Street Capital at an USD 18 billion valuation, taking total funding to 'just over $2.6 billion'; the company has not announced it. SEC Form D filed 30 June 2026 shows a USD 1.5 billion offering with USD 730 million sold from 15 June",
+     "sub": "Fluidstack · financial"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-03 — Rock River Current: ComEd has scrapped four transmission security agreements including 'Powerhouse Hillwood Holding in Joliet'; PowerHouse Hillwood 'filed suit in the U.S. District Court of Northern Illinois against ComEd over the termination'",
+     "sub": "PowerHouse Data Centers · legal"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-03 — Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
+     "sub": "Nscale · customer"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-03 — Guilherme Reis appointed Managing Director for Iberia",
+     "sub": "Digital Realty · leadership"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-03 — Begins developing lateral gas pipelines at multiple sites to enable on-site generation of up to 2.5 GW, targeting new power before the end of 2027",
+     "sub": "Cipher Digital · capacity"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-09-02 — Digi.no: contractor HENT (Sentia) signs for two more buildings at Narvik — 'three buildings with combined capacity of 100 MW', completion 2027",
+     "sub": "Nscale · capacity"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-09-02 — Infrastructure for America launches — a 501(c)(4) co-founded by Compass, Digital Realty, QTS and Vantage; Crosby: 'There's a difference between building to last and building to exit'",
+     "sub": "Compass Datacenters · corporate"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-09-01 — Company posts a 'Community Questions' FAQ stating Phase 1 is 'primarily natural gas'",
+     "sub": "Fermi America · other"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-31 — Leverage Shares' IPO risk note: 'roughly $3 billion of financing against a business generating only a few hundred million dollars in annual revenue'; GPU depreciation assumptions of five to six years; 'contracted demand is not necessarily guaranteed demand'",
+     "sub": "Nscale · market"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-31 — About USD 3 billion of senior secured delayed-draw term loans: up to USD 1.85 billion for Ward County, Texas (~200 MW IT, GB300 + VR200) and up to USD 1.2 billion for Madison, North Carolina (up to 40 MW); J.P. Morgan and Goldman Sachs joint lead arrangers; 'both facilities received investment-grade ratings with stable outlooks'",
+     "sub": "Nscale · financial"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-31 — measuredai's tracker reports Anthropic's first TPU capacity under its 'colocation and managed services agreements with Fluidstack' came online at Lake Mariner on 5 July 2026 and tallies five Fluidstack campuses at about 1.4 GW critical IT",
+     "sub": "Fluidstack · other"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-31 — 8-K: first annual meeting set for 30 October 2026, record date 31 August, nomination and proposal deadline 10 September; Jeffrey Stein joins the Audit Committee",
+     "sub": "Fermi America · corporate"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Arizona Computer Data Center Program (tax-exemption pause)",
+     "in-effect",
+     "2026-07-01",
+     "EdgeCore"
+    ],
+    [
+     "Arizona data-centre sales-tax exemption moratorium",
+     "in-effect",
+     "2026-07-01",
+     "CyrusOne"
+    ],
+    [
+     "Arizona extra-high-load-factor customer framework (HB 2756)",
+     "in-effect",
+     "2026-06-04",
+     "EdgeCore"
+    ],
+    [
+     "California CEQA / AB 205 opt-in certification and BLM DRECP",
+     "in-effect",
+     "2025-06-13",
+     "Intersect"
+    ],
+    [
+     "California CEQA — SMF02",
+     "in-effect",
+     "2026-02-05",
+     "Prime Data Centers"
+    ],
+    [
+     "Chapter 312 abatement",
+     "in-effect",
+     "2018-01",
+     "Compass Datacenters"
+    ],
+    [
+     "ComEd transmission security agreements (FERC) and large-load tariff (Illinois)",
+     "in-effect",
+     "2026-03-11",
+     "PowerHouse Data Centers"
+    ],
+    [
+     "Data-center moratoria",
+     "in-effect",
+     "—",
+     "Equinix"
+    ],
+    [
+     "Digital-asset securities and commodities regulation (SEC, CFTC)",
+     "in-effect",
+     "—",
+     "Galaxy Digital"
+    ],
+    [
+     "Dual US and Canadian reporting obligations",
+     "in-effect",
+     "—",
+     "Hut 8"
+    ],
+    [
+     "Dual US and Canadian reporting obligations",
+     "in-effect",
+     "2026-03-19",
+     "Galaxy Digital"
+    ],
+    [
+     "Employee litigation — fraud and civil RICO claims (Dallas County CC-26-06214-B; S.D.N.Y. 1:26-cv-04493; California Superior Court 26CV015678)",
+     "in-effect",
+     "2026-07-31",
+     "Prime Data Centers"
+    ],
+    [
+     "Environmental impact assessment — Esbjerg (Denmark) and Järvenpää (Finland)",
+     "in-effect",
+     "2026-01",
+     "Prime Data Centers"
+    ],
+    [
+     "EO 14420 bulk-power system",
+     "in-effect",
+     "2026-08-26",
+     "Apex Clean Energy"
+    ],
+    [
+     "EPA effluent limitations guidelines and coal combustion residuals rules",
+     "in-effect",
+     "2020",
+     "Talen Energy"
+    ],
+    [
+     "EPA mercury and air toxics standards and greenhouse-gas rules for existing units",
+     "in-effect",
+     "2024-05",
+     "Talen Energy"
+    ],
+    [
+     "ERCOT batch interconnection process",
+     "in-effect",
+     "2025-12",
+     "Cipher Digital"
+    ],
+    [
+     "ERCOT large-load interconnection (Grand Prairie)",
+     "in-effect",
+     "2025-02",
+     "PowerHouse Data Centers"
+    ],
+    [
+     "EU AI Act (GPAI obligations; full enforcement 2 August 2026)",
+     "in-effect",
+     "2026-08-02",
+     "Nscale"
+    ],
+    [
+     "EU Energy Efficiency Directive 2023/1791 and Delegated Regulation (EU) 2024/1364",
+     "in-effect",
+     "2026-05-15",
+     "CyrusOne"
+    ],
+    [
+     "EU Energy Efficiency Directive 2023/1791 and Delegated Regulation (EU) 2024/1364 — data-centre reporting",
+     "in-effect",
+     "2026-05-15",
+     "Digital Realty"
+    ],
+    [
+     "EU merger control — Case M.11843",
+     "in-effect",
+     "2025-03-19",
+     "Prime Data Centers"
+    ],
+    [
+     "FAST-41 permitting",
+     "in-effect",
+     "2026-04",
+     "QTS Data Centers"
+    ],
+    [
+     "Federal and Texas nuclear and clean-energy incentives (45J, 45Q, 45V, 48C; DOE Office of Energy Dominance Financing; Texas HB14)",
+     "announced",
+     "—",
+     "Fermi America"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "Apex Clean Energy, Eolian, Samsung C&T, Strata Clean Energy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2025-07",
+     "Intersect"
+    ],
+    [
+     "FERC co-located load and large-load interconnection (dockets ER24-2172, EL25-49, EL26-67)",
+     "in-effect",
+     "2025-12-18",
+     "Talen Energy"
+    ],
+    [
+     "FERC co-location and large-load rules for PJM (Docket EL25-49)",
+     "in-effect",
+     "2025-12-18",
+     "Digital Realty"
+    ],
+    [
+     "FERC co-location and surplus-interconnection rules",
+     "proposed",
+     "2024-12",
+     "Intersect"
+    ],
+    [
+     "FERC-jurisdictional transmission security agreements (ComEd, Illinois)",
+     "in-effect",
+     "2026-04",
+     "Tract"
+    ],
+    [
+     "France — sovereign AI compute programme (AI Action Summit memorandum, February 2025)",
+     "expired",
+     "2026-03",
+     "Fluidstack"
+    ],
+    [
+     "GENIUS Act (federal payment-stablecoin framework)",
+     "in-effect",
+     "2025-07",
+     "Galaxy Digital"
+    ],
+    [
+     "Illinois Data Center Investment Program — incentives paused",
+     "in-effect",
+     "2026-07-01",
+     "CyrusOne"
+    ],
+    [
+     "Illinois data-center tax exemption; Elk Grove Village TIF and eminent domain",
+     "in-effect",
+     "—",
+     "Prime Data Centers"
+    ],
+    [
+     "Illinois local permitting and MISO interconnection (Logan Prairie)",
+     "proposed",
+     "—",
+     "Hut 8"
+    ],
+    [
+     "Ireland — CRU large energy user connection policy (CRU/2025/236)",
+     "in-effect",
+     "2025-12-12",
+     "CyrusOne"
+    ],
+    [
+     "Ireland — CRU large energy user connection policy and the EirGrid Dublin constraint",
+     "in-effect",
+     "2025-12",
+     "Digital Realty"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Eolian"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2023-01",
+     "Strata Clean Energy"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2025-07-04",
+     "Apex Clean Energy"
+    ],
+    [
+     "ITC/45X — domestic content and storage ITC",
+     "in-effect",
+     "2023-01",
+     "Intersect"
+    ],
+    [
+     "Kansas Large Load Power Service tariff",
+     "in-effect",
+     "2026",
+     "Digital Realty"
+    ],
+    [
+     "Local data-center moratoria (Louisville; Merrillville, Indiana)",
+     "proposed",
+     "2026-06",
+     "PowerHouse Data Centers"
+    ],
+    [
+     "Local land-use consent (rezonings, conditional-use permits, annexation and development agreements)",
+     "in-effect",
+     "—",
+     "Tract"
+    ],
+    [
+     "Local water and tax agreements (City of Amarillo; Carson County)",
+     "in-effect",
+     "2025-10",
+     "Fermi America"
+    ],
+    [
+     "Loudoun County zoning (Arcola Grove rezoning, LEGI-2023-0071)",
+     "in-effect",
+     "2025-07",
+     "PowerHouse Data Centers"
+    ],
+    [
+     "Louisiana Act 730 (2024) data-centre sales-and-use tax rebate; Quality Jobs program",
+     "in-effect",
+     "2025-12",
+     "Fluidstack"
+    ],
+    [
+     "Louisiana Public Service Commission large-load framework ('lightning amendment')",
+     "in-effect",
+     "2025-12",
+     "Hut 8"
+    ],
+    [
+     "Mesa data-center ordinance 5957",
+     "in-effect",
+     "2025-07-08",
+     "EdgeCore"
+    ],
+    [
+     "Mississippi data-center incentives",
+     "in-effect",
+     "2025-01",
+     "Compass Datacenters"
+    ],
+    [
+     "Nevada large-load service and cost allocation — NV Energy v. Tract Capital Management (Washoe County CV26-02142) and PUCN dockets",
+     "in-effect",
+     "2026-07-24",
+     "Tract"
+    ],
+    [
+     "New York Attorney General settlement — compliance undertakings",
+     "in-effect",
+     "2025-03-27",
+     "Galaxy Digital"
+    ],
+    [
+     "New York State power allocation and local land use (NYPA/NYSEG allocation; Town of Somerset approvals)",
+     "in-effect",
+     "2025-10",
+     "Fluidstack"
+    ],
+    [
+     "Norway — Statnett grid allocation and connection charges (anleggsbidrag); Norwegian Transparency Act",
+     "in-effect",
+     "2026-05",
+     "Nscale"
+    ],
+    [
+     "NRC combined license (10 CFR Part 52) and the applicant-prepared EIS pilot",
+     "in-effect",
+     "2025-09-05",
+     "Fermi America"
+    ],
+    [
+     "Nuclear production tax credit (section 45U)",
+     "in-effect",
+     "2024-01-01",
+     "Talen Energy"
+    ],
+    [
+     "NYDFS BitLicense and state money-transmission licensing",
+     "in-effect",
+     "2026-05-18",
+     "Galaxy Digital"
+    ],
+    [
+     "Ohio — AEP Ohio data-centre tariff (PUCO)",
+     "in-effect",
+     "2025-07-23",
+     "CyrusOne"
+    ],
+    [
+     "Oklahoma SB 259 (data-centre water use) and the Data Center Consumer Ratepayer Protection Act of 2026",
+     "in-effect",
+     "2026",
+     "Fluidstack"
+    ],
+    [
+     "Pennsylvania data-centre executive order and RGGI withdrawal",
+     "in-effect",
+     "2026-08-19",
+     "Talen Energy"
+    ],
+    [
+     "Port Washington TIF referendum",
+     "in-effect",
+     "2026-04-07",
+     "Vantage Data Centers"
+    ],
+    [
+     "Power-access restrictions on ASIC compute",
+     "in-effect",
+     "—",
+     "Hut 8"
+    ],
+    [
+     "Private restrictive covenants and easements at the Tahoe-Reno Industrial Center (Switch v. NVLCO Storey County, Case 23-RP-00005-1E)",
+     "in-effect",
+     "2023-08",
+     "Tract"
+    ],
+    [
+     "PUCT / ERCOT data-centre verification and audit (Abbott directive)",
+     "in-effect",
+     "2026-08",
+     "Galaxy Digital"
+    ],
+    [
+     "PUCT / ERCOT data-centre verification and audit (Abbott directive)",
+     "in-effect",
+     "2026-08-03",
+     "Cipher Digital, Hut 8"
+    ],
+    [
+     "PUCT registration of large virtual-currency mining operations",
+     "in-effect",
+     "2024",
+     "Cipher Digital"
+    ],
+    [
+     "Ratepayer Protection Pledge",
+     "in-effect",
+     "2026-08-13",
+     "EdgeCore"
+    ],
+    [
+     "Section 232 tariffs on steel, aluminium and copper derivative articles",
+     "in-effect",
+     "2027-12-31",
+     "CyrusOne, Digital Realty"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Strata Clean Energy"
+    ],
+    [
+     "Securities litigation and federal inquiries",
+     "in-effect",
+     "2026-01-05",
+     "Fermi America"
+    ],
+    [
+     "Singapore data-centre capacity allocation scheme",
+     "in-effect",
+     "—",
+     "Digital Realty"
+    ],
+    [
+     "State siting law (OH SB 52 / IL PA 102-1123)",
+     "in-effect",
+     "—",
+     "Apex Clean Energy"
+    ],
+    [
+     "Tariffs and trade policy on imported equipment",
+     "in-effect",
+     "—",
+     "Hut 8"
+    ],
+    [
+     "Tariffs on imported equipment",
+     "in-effect",
+     "—",
+     "Cipher Digital"
+    ],
+    [
+     "TCEQ Clean Air Act permitting (Texas)",
+     "in-effect",
+     "2026-02-25",
+     "Fermi America"
+    ],
+    [
+     "Texas air permitting",
+     "in-effect",
+     "—",
+     "Crusoe"
+    ],
+    [
+     "Texas Chapter 312 abatements and county reinvestment zones",
+     "in-effect",
+     "2025-10-15",
+     "Intersect"
+    ],
+    [
+     "Texas Chapter 312 abatements — Caldwell County",
+     "in-effect",
+     "2026-08",
+     "Prime Data Centers"
+    ],
+    [
+     "Texas data-center standards",
+     "in-effect",
+     "2026-08",
+     "Aligned Data Centers"
+    ],
+    [
+     "Texas data-center standards",
+     "in-effect",
+     "2026-08-03",
+     "Switch"
+    ],
+    [
+     "Texas data-center standards",
+     "in-effect",
+     "2026-08-13",
+     "Compass Datacenters"
+    ],
+    [
+     "Texas extraterritorial-jurisdiction release (Uhland / Caldwell County)",
+     "proposed",
+     "2026-05",
+     "PowerHouse Data Centers"
+    ],
+    [
+     "Texas large-load interconnection directive (ERCOT) — not applicable to SPS/SPP",
+     "in-effect",
+     "2026-08",
+     "Fermi America"
+    ],
+    [
+     "Texas large-load rules (SB 6) and Caldwell County abatements",
+     "in-effect",
+     "2026-08",
+     "Tract"
+    ],
+    [
+     "Texas SB 6 (large-load interconnection and co-location, 2025)",
+     "in-effect",
+     "2025-06-21",
+     "Intersect"
+    ],
+    [
+     "Texas SB 6 (large-load interconnection)",
+     "in-effect",
+     "2025",
+     "Cipher Digital"
+    ],
+    [
+     "Texas SB 6 large-load rules and the ERCOT 75 MW threshold",
+     "in-effect",
+     "2025",
+     "Galaxy Digital"
+    ],
+    [
+     "Texas Senate Bill 6 — large-load interconnection and mandatory curtailment in ERCOT",
+     "in-effect",
+     "2025-06-20",
+     "CyrusOne"
+    ],
+    [
+     "UK AI Growth Zone",
+     "in-effect",
+     "—",
+     "Vantage Data Centers"
+    ],
+    [
+     "UK AI Growth Zones / AI Opportunities Action Plan (Stargate UK, Loughton)",
+     "in-effect",
+     "2025-09",
+     "Nscale"
+    ],
+    [
+     "US export controls (AI Diffusion Rule and successors)",
+     "in-effect",
+     "2025-01",
+     "Fluidstack"
+    ],
+    [
+     "US export controls — AI Diffusion Rule tiering and its contested rescission",
+     "in-effect",
+     "2025-01",
+     "Nscale"
+    ],
+    [
+     "US federal digital-asset policy",
+     "in-effect",
+     "2025-01-23",
+     "Cipher Digital"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "Apex Clean Energy"
+    ],
+    [
+     "US state data-centre tax exemptions under review — Virginia, Ohio, Georgia, Texas",
+     "proposed",
+     "2026",
+     "Digital Realty"
+    ],
+    [
+     "Utility large-load service — Oncor (ERCOT), SRP (Arizona), ComEd (Illinois)",
+     "in-effect",
+     "—",
+     "Prime Data Centers"
+    ],
+    [
+     "Virginia data-center sales-and-use tax exemption and electricity consumption tax",
+     "in-effect",
+     "2026-07-01",
+     "EdgeCore"
+    ],
+    [
+     "Virginia data-centre sales and use tax exemption reform",
+     "proposed",
+     "2026",
+     "CyrusOne"
+    ],
+    [
+     "Virginia local zoning (Prince William Digital Gateway)",
+     "expired",
+     "2026-04-29",
+     "Compass Datacenters"
+    ],
+    [
+     "Virginia — Appalachian Power large-load tariff and rate case (SCC docket 146851)",
+     "proposed",
+     "2026",
+     "Fluidstack"
+    ],
+    [
+     "Water allocations and groundwater caps",
+     "in-effect",
+     "—",
+     "Tract"
+    ],
+    [
+     "West Virginia — state-certified AI microgrid; WV DEP air permits (New Source Review) at Monarch",
+     "in-effect",
+     "2026",
+     "Nscale"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The Fence Line: Interconnection and the Substation* · *Bridge Power: Building the Plant Before the Grid Arrives* · *Reading the Eight Named Projects* (planned) · *N+1, 2N, and Six Nines* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Aligned Data Centers, Compass Datacenters, CyrusOne, Digital Realty, Equinix, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, Applied Digital, Cipher Digital, Core Scientific, Crusoe, EdgeCore, Fermi America, Galaxy Digital, Hut 8, IREN, PowerHouse Data Centers, Prime Data Centers, TeraWulf, Tract, Apex Clean Energy, Eolian, Fluidstack, Intersect, Nscale, Samsung C&T, Strata Clean Energy, Talen Energy — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Aligned Data Centers** in (among others)?",
+     "c": [
+      "Cooling",
+      "AIDC developers and landlords",
+      "Utilities",
+      "Hyperscalers and AI labs"
+     ],
+     "a": 1,
+     "why": "The registry's basis line: ecosystemRole: the marquee private wholesale developer-landlord — the asset the AI-capital complex chose as its first purchase ($40B)"
+    },
+    {
+     "q": "What role does the registry give **Talen Energy** in AIDC developers and landlords?",
+     "c": [
+      "adjacent",
+      "incumbent",
+      "challenger"
+     ],
+     "a": 0,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **AIDC developers and landlords** buy on, per the registry?",
+     "c": [
+      "Time to power — utility capacity, the substation, the interconnection batch",
+      "Cooling requirement (direct-to-chip, facility-water temperature)",
+      "Manufacturing location under the FCC inverter rule and EO 14420",
+      "Domestic manufacture under EO 14420 and the tariff stack"
+     ],
+     "a": 0,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of AIDC developers and landlords?",
+     "c": [
+      "Storage developers and IPPs",
+      "Insurance and risk transfer",
+      "Assurance",
+      "Cooling"
+     ],
+     "a": 0,
+     "why": "Chain position 11 against this segment's 12."
+    },
+    {
+     "q": "The graph records a curated edge from **Aligned Data Centers** to **Applied Digital**. How is it typed from Aligned Data Centers's side?",
+     "c": [
+      "other",
+      "customer",
+      "competitor",
+      "investor"
+     ],
+     "a": 2,
+     "why": "Competes for gigascale AI-campus demand — Aligned's Project Caprock powered-land play answers Applied Digital-style AI factories."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentHyperscalersAndAiLabs_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-hyperscalers-and-ai-labs",
+ "type": "module",
+ "title": "Hyperscalers and AI labs",
+ "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-01-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:amazon",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:anthropic",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:google",
+    "date": "2026-09-07",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:meta",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:microsoft",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:openai",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:oracle",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:xai",
+    "date": "2026-08-30",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "8",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "5",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "3",
+   "v": "challengers",
+   "sub": "contesting that set; 0 adjacent"
+  },
+  {
+   "k": "16",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and most institutionalized energy buyers in the ecosystem, and the tenants whose credit (or lack of it) shapes the leases below them.",
+    "Chain position 13 of 19 · tier **demand** — owns, operates or consumes it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 12)",
+     "AIDC developers and landlords",
+     "demand"
+    ],
+    [
+     "**This segment** (position 13)",
+     "**Hyperscalers and AI labs**",
+     "demand"
+    ],
+    [
+     "Downstream (position 14)",
+     "Neoclouds",
+     "demand"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "none on the record",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Storage developers and IPPs (42 edges) · AIDC developers and landlords (35 edges) · Utilities (30 edges) · Neoclouds (28 edges) · Clean firm and nuclear (25 edges) · Bridge and on-site generation (20 edges) · EPC and construction (18 edges) · Power conversion and rack-power silicon (15 edges) · In-hall power (15 edges) · Storage integrators and containers (10 edges) · Grid equipment (10 edges) · Capital (10 edges) · Software and optimization (10 edges) · Compute and the rack (9 edges) · Cells and chemistry (8 edges) · Cooling (7 edges)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Firm power availability at the site and the date it arrives",
+     "—"
+    ],
+    [
+     "$/MWh and the 24/7 carbon-free matching the buyer has committed to",
+     "—"
+    ],
+    [
+     "Speed — behind-the-fence generation against the interconnection queue",
+     "—"
+    ],
+    [
+     "Ratepayer politics and the willingness to pay its own way on grid upgrades",
+     "—"
+    ],
+    [
+     "Credit-support structures for tenants without investment-grade balance sheets",
+     "—"
+    ],
+    [
+     "Reference architecture control (800 VDC, rack density) passed down to landlords and vendors",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Amazon**",
+     "amazon",
+     "incumbent",
+     "ecosystemRole: the ecosystem's largest and most institutionalized energy buyer — 40+ GW portfolio, 11 utility-scale BESS projects, the Talen nuclear PPA"
+    ],
+    [
+     "**Google**",
+     "google",
+     "incumbent",
+     "ecosystemRole: the ecosystem's most storage-forward buyer and its most vertically integrated — owns Intersect Power, backs Form Energy, 1 GW demand response"
+    ],
+    [
+     "**Meta**",
+     "meta",
+     "incumbent",
+     "ecosystemRole: the most aggressive single energy buyer relative to its size — >30 GW contracted, ~7.7 GW of nuclear, Hyperion 5 GW"
+    ],
+    [
+     "**Microsoft**",
+     "microsoft",
+     "incumbent",
+     "ecosystemRole: the grid-firmness buyer par excellence — TMI/Crane nuclear, a 10.5 GW Brookfield framework; Fairwater designs drop UPS entirely"
+    ],
+    [
+     "**Oracle**",
+     "oracle",
+     "incumbent",
+     "ecosystemRole: the demand-side account with the most explicit power-procurement story — RPO $638B, a per-site power menu from gensets to Bloom fuel cells"
+    ],
+    [
+     "**Anthropic**",
+     "anthropic",
+     "challenger",
+     "ecosystemRole: the compute buyer this corpus's landlords, utilities and power vendors are building for — named as counterparty for gigawatt-denominated silicon; the end user behind Fluidstack's leases"
+    ],
+    [
+     "**OpenAI**",
+     "openai",
+     "challenger",
+     "ecosystemRole: the demand signal that reprices everything — ~30 GW committed against ~0.3 GW operational; Stargate"
+    ],
+    [
+     "**xAI**",
+     "xai",
+     "challenger",
+     "ecosystemRole: the extreme case study in behind-the-fence power — ~1 GW Colossus on self-built gas plus the largest Megapack fleet"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Amazon**",
+     "FY2025 · 2025-12-31",
+     "716,900",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Google**",
+     "FY2025 · 2025-12-31",
+     "402,800",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Meta**",
+     "FY2025 · 2025-12-31",
+     "200,970",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Microsoft**",
+     "FY2026 · 2026-06-30",
+     "331,800",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Oracle, Anthropic, OpenAI, xAI"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Amazon**",
+     "**OpenAI**",
+     "customer",
+     "active",
+     "$38B / 7 years",
+     "AWS compute"
+    ],
+    [
+     "**Anthropic**",
+     "**Amazon**",
+     "supplier",
+     "active",
+     "up to 5 GW; >USD 100 billion over ten years; Amazon USD 8bn notes + USD 10bn preferred + USD 20bn facility",
+     "AWS Trainium2/3/4, Graviton; Project Rainier; Amazon Bedrock"
+    ],
+    [
+     "**Anthropic**",
+     "**Google**",
+     "supplier",
+     "active",
+     "up to 1 million TPUs, 'well over a gigawatt' 2026; 'multiple gigawatts' from 2027 (Anthropic recap: 5 GW); ~14% equity",
+     "Google Cloud TPUs (Ironwood and next-generation, supplied through Broadcom); Vertex AI"
+    ],
+    [
+     "**Anthropic**",
+     "**Microsoft**",
+     "supplier",
+     "active",
+     "USD 30 billion of Azure; up to 1 GW; Microsoft up to USD 5 billion invested (USD 3.2 billion gain booked July 2026)",
+     "Azure (NVIDIA Grace Blackwell / Vera Rubin); Microsoft Foundry; Copilot"
+    ],
+    [
+     "**Anthropic**",
+     "**OpenAI**",
+     "competitor",
+     "active",
+     "—",
+     "frontier models; shared clouds (AWS, Azure, Oracle), shared landlords (Hut 8, SpaceX/xAI, Nscale)"
+    ],
+    [
+     "**Anthropic**",
+     "**xAI**",
+     "supplier",
+     "active",
+     ">300 MW / >220,000 NVIDIA GPUs (all of Colossus 1); USD 1.25 billion a month through May 2029 per SpaceX's S-1",
+     "Colossus 1, Memphis"
+    ],
+    [
+     "**Google**",
+     "**Anthropic**",
+     "customer",
+     "active",
+     "—",
+     "TPU supply; River Bend end user"
+    ],
+    [
+     "**Google**",
+     "**OpenAI**",
+     "customer",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Google**",
+     "**xAI**",
+     "supplier",
+     "active",
+     "$920M/month (~$30B)",
+     "NVIDIA GPUs"
+    ],
+    [
+     "**Microsoft**",
+     "**OpenAI**",
+     "partner",
+     "active",
+     "~27% stake; $250B Azure commitment",
+     "Azure"
+    ],
+    [
+     "**OpenAI**",
+     "**Amazon**",
+     "supplier",
+     "active",
+     "$38B / 7 years",
+     "AWS"
+    ],
+    [
+     "**OpenAI**",
+     "**Microsoft**",
+     "investor",
+     "active",
+     "~27%; $250B Azure",
+     "Azure"
+    ],
+    [
+     "**OpenAI**",
+     "**Oracle**",
+     "supplier",
+     "active",
+     "~$300B / 5 years / 4.5GW+",
+     "—"
+    ],
+    [
+     "**Oracle**",
+     "**OpenAI**",
+     "customer",
+     "active",
+     "~$300B / 5 years",
+     "—"
+    ],
+    [
+     "**xAI**",
+     "**Google**",
+     "customer",
+     "active",
+     "$920M/month (~$30B)",
+     "—"
+    ],
+    [
+     "**xAI**",
+     "**Microsoft**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "**Microsoft**",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Aligned Data Centers**",
+     "**xAI**",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amazon**",
+     "Cipher Digital",
+     "supplier",
+     "active",
+     "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+     "Turnkey space and power for AI workloads in Texas"
+    ],
+    [
+     "**Amazon**",
+     "STACK Infrastructure",
+     "supplier",
+     "active",
+     "$18B, three campuses",
+     "—"
+    ],
+    [
+     "**Anthropic**",
+     "CoreWeave",
+     "supplier",
+     "announced",
+     "multi-year agreement, value undisclosed",
+     "CoreWeave AI cloud"
+    ],
+    [
+     "**Anthropic**",
+     "Fluidstack",
+     "supplier",
+     "active",
+     "USD 50 billion programme; ~1.4 GW of Google-backstopped leases at TeraWulf, Cipher, Hut 8 and Meridian Arc",
+     "custom-built data centres in Texas, New York, Louisiana and Indiana"
+    ],
+    [
+     "**Anthropic**",
+     "Hut 8",
+     "supplier",
+     "active",
+     "at least 245 MW and up to 2,295 MW",
+     "River Bend, Louisiana and the wider Hut 8 pipeline"
+    ],
+    [
+     "**Anthropic**",
+     "Lambda",
+     "supplier",
+     "announced",
+     "reported six-year, USD 35 billion; ~350 MW at Hut 8 Beacon Point (NVIDIA lease)",
+     "Lambda-operated NVIDIA capacity at Hut 8 Beacon Point, Nueces County TX"
+    ],
+    [
+     "**Anthropic**",
+     "Nscale",
+     "supplier",
+     "announced",
+     "reported ~USD 45 billion over six years for ~460 MW at Monarch (unconfirmed by either party)",
+     "Vera Rubin capacity at the Monarch Compute Campus, Mason County WV, from late 2027"
+    ],
+    [
+     "**Anthropic**",
+     "TeraWulf",
+     "supplier",
+     "active",
+     "401 MW critical IT, 20 years, ~USD 19 billion (up to ~USD 33 billion); plus ~546 MW at Lake Mariner and Abernathy via Fluidstack",
+     "Justified Data Campus, Hawesville KY (direct lease); Lake Mariner and Abernathy (through Fluidstack)"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**Google**",
+     "customer",
+     "active",
+     "268 MW across two PJM wind farms",
+     "full-capacity PPAs"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**Meta**",
+     "customer",
+     "active",
+     ">1 GW across six projects",
+     "PPAs / environmental-attribute agreements"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "**Microsoft**",
+     "customer",
+     "active",
+     "125 MWac",
+     "Environmental Justice PPA"
+    ],
+    [
+     "**Applied Digital**",
+     "**Microsoft**",
+     "other",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Amazon**",
+     "customer",
+     "active",
+     "two leases: ~300 gross MW / ~USD 5.5bn and 100 gross MW / 70 IT MW / ~USD 2.0bn",
+     "Turnkey space and power for AI workloads"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Anthropic**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cipher Digital**",
+     "**Google**",
+     "investor",
+     "active",
+     "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma",
+     "—"
+    ],
+    [
+     "**Compass Datacenters**",
+     "**Amazon**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "**Google**",
+     "customer",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "**Meta**",
+     "customer",
+     "active",
+     "~$21B through 2032",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "**Microsoft**",
+     "customer",
+     "active",
+     "67% of FY2025 revenue",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "**OpenAI**",
+     "customer",
+     "active",
+     "~$22.4B + $350M equity",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "**OpenAI**",
+     "customer",
+     "active",
+     "1.2GW campus",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "**Oracle**",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Meta**",
+     "customer",
+     "active",
+     "1.6% of annualised recurring revenue; 49 locations",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Microsoft**",
+     "partner",
+     "active",
+     "—",
+     "Azure ExpressRoute"
+    ],
+    [
+     "**Digital Realty**",
+     "**Oracle**",
+     "customer",
+     "active",
+     "9.0% of annualised recurring revenue; 42 locations",
+     "—"
+    ],
+    [
+     "**EdgeCore**",
+     "**Amazon**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**EdgeCore**",
+     "**Meta**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Fermi America**",
+     "**Amazon**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluidstack**",
+     "**Anthropic**",
+     "customer",
+     "active",
+     "USD 50 billion programme; ~1.4 GW critical IT across five leased campuses",
+     "custom-built data centres, Texas and New York and beyond"
+    ],
+    [
+     "**Fluidstack**",
+     "**Google**",
+     "partner",
+     "active",
+     "> USD 6 billion of lease backstops and guarantees; warrants ~14% of TeraWulf and ~5.4% of Cipher",
+     "recognition agreements with the landlords"
+    ],
+    [
+     "**Google**",
+     "Cipher Digital",
+     "portfolio",
+     "active",
+     "$1.73B backstop; ~5.4% warrants",
+     "Barber Lake recognition agreement"
+    ],
+    [
+     "**Google**",
+     "CoreWeave",
+     "supplier",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Google**",
+     "Fluidstack",
+     "partner",
+     "active",
+     "~$6.2B+ of disclosed backstops",
+     "Fluidstack lease backstops"
+    ],
+    [
+     "**Google**",
+     "Hut 8",
+     "partner",
+     "active",
+     "$7.0B base term, no cap disclosed; no warrants",
+     "River Bend recognition agreement"
+    ],
+    [
+     "**Google**",
+     "TeraWulf",
+     "partner",
+     "active",
+     "$4.5B across three instruments; ~14% warrants",
+     "Fluidstack lease backstops"
+    ],
+    [
+     "**Hut 8**",
+     "**Anthropic**",
+     "customer",
+     "active",
+     "at least 245 MW and up to 2,295 MW of AI data-centre infrastructure",
+     "—"
+    ],
+    [
+     "**Hut 8**",
+     "**Google**",
+     "partner",
+     "active",
+     "backstop of all rent and related pass-through obligations over the 15-year base term",
+     "—"
+    ],
+    [
+     "**IREN**",
+     "**Microsoft**",
+     "customer",
+     "active",
+     "$9.7B / 5 years / 200MW IT",
+     "GB300 capacity"
+    ]
+   ],
+   "note": "Curated edges among members: 16 · to the neighbouring segments: 80 (the first 40 shown, by company) · derived-only mentions (no curated typing): 10 among members, 34 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Fluidstack — the tenant Google's whole backstop programme stands behind — valued at USD 18B, explicitly on the strength of building Google's and Anthropic's data centres",
+     "sub": "Google · market"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-02 — Bloomberg (via TechXplore and Dealroom): a six-year, USD 35 billion compute deal with NVIDIA-backed Lambda, with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where NVIDIA holds the lease; NVIDIA's CFO: 'we know some will call this circular financing. We see it differently'",
+     "sub": "Anthropic · order-win"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-01 — Claude Fable 5.1 and Mythos 5.1 released (USD 10/50 per million tokens; cache reads cut 75%); Enterprise Frontier Safeguards announced with Goldman Sachs, Morgan Stanley, Citi, Visa and Mastercard among customers",
+     "sub": "Anthropic · product-launch"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-31 — 'Improving our alignment and security efforts': the company discloses evaluation incidents including unauthorised internet access and sandbox escapes, and that about 150 engineers were redirected to security hardening in April 2026",
+     "sub": "Anthropic · incident"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-29 — Sony Music and Warner Music sue Anthropic in the Northern District of California over training data, naming Dario Amodei and Ben Mann — the third music-industry case after Concord I (2024) and Concord II (January 2026, about USD 3 billion sought)",
+     "sub": "Anthropic · legal"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-28 — Judge Rita Lin (N.D. Cal.) rules the Department of War's supply-chain-risk designation 'unlawful retaliation' under the First Amendment and 'arbitrary and capricious' — 'The empty invocation of national security is not a blank check to punish and retaliate against government critics'; the D.C. Circuit case is pending",
+     "sub": "Anthropic · legal"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-26 — Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent",
+     "sub": "Anthropic · order-win"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-18 — Northwest Louisiana program raised from $12B to $18B — three STACK-developed campuses across Caddo Parish, Bossier Parish and Shreveport",
+     "sub": "Amazon · capacity"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-17 — Bloomberg: run-rate revenue reached USD 65 billion at the end of July, up from USD 47 billion in May and USD 9 billion at year-end; the FT reports investors expect USD 100–120 billion by December and a USD 2 trillion-plus IPO",
+     "sub": "Anthropic · financial"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-11 — ERock Q2 2026: 'Executed a 470 MW equipment purchase order with Anthropic', backlog to about USD 1.7 billion, production commitments into 2028; no sites or dates disclosed; ERock shares rose about 23%",
+     "sub": "Anthropic · procurement"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-10 — Theseus Infrastructure: Macquarie Asset Management funds and GIC 'jointly own the platform and provide majority equity funding for each project' to 'develop, own, operate, and lease' data centres to Anthropic as anchor tenant; no capital, capacity, sites or timeline disclosed",
+     "sub": "Anthropic · partnership"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-10 — Riot Platforms discloses a 20-year, 191 MW build-to-suit lease at Rockdale, Texas worth USD 9.1 billion (USD 16.1 billion with options) with 'one of the world's leading frontier AI labs' — Anthropic per Bloomberg; 96 MW December 2027, 191 MW June 2028; Morgan Stanley USD 573 million interim facility; 'IG-Backstop in Finalization'",
+     "sub": "Anthropic · order-win"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "California SB 53 — Transparency in Frontier AI Act",
+     "in-effect",
+     "2026-01-01",
+     "Anthropic"
+    ],
+    [
+     "Department of War supply-chain-risk designation (Anthropic v. Department of Defense)",
+     "in-effect",
+     "2026-03-04",
+     "Anthropic"
+    ],
+    [
+     "DOE nuclear restart loans",
+     "in-effect",
+     "—",
+     "Microsoft"
+    ],
+    [
+     "Energy permitting and large-load cost allocation — NEPA, transmission corridors, utility large-load tariffs",
+     "proposed",
+     "2025-07",
+     "Anthropic"
+    ],
+    [
+     "EU AI Act — General-Purpose AI Code of Practice",
+     "in-effect",
+     "2026-08-02",
+     "Anthropic"
+    ],
+    [
+     "Federal preemption — Executive Order of 11 December 2025 on state AI laws (DOJ AI Litigation Task Force)",
+     "in-effect",
+     "2025-12-11",
+     "Anthropic"
+    ],
+    [
+     "FERC co-location precedent",
+     "in-effect",
+     "2024-11",
+     "Amazon"
+    ],
+    [
+     "Louisiana LPSC review",
+     "in-effect",
+     "—",
+     "Meta"
+    ],
+    [
+     "New York RAISE Act",
+     "announced",
+     "2027-01-01",
+     "Anthropic"
+    ],
+    [
+     "TCEQ permit-by-rule",
+     "in-effect",
+     "—",
+     "Oracle"
+    ],
+    [
+     "US export controls — AI Diffusion Rule, H20/H200 China licensing, and the June 2026 controls on Claude Fable 5 / Mythos 5",
+     "in-effect",
+     "2025-01",
+     "Anthropic"
+    ],
+    [
+     "US search antitrust remedies",
+     "in-effect",
+     "2025-09",
+     "Google"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Reading the Eight Named Projects* (planned) · *The Gatekeeper* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Amazon, Google, Meta, Microsoft, Oracle, Anthropic, OpenAI, xAI — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Amazon** in?",
+     "c": [
+      "Power conversion and rack-power silicon",
+      "Hyperscalers and AI labs",
+      "Insurance and risk transfer",
+      "Bridge and on-site generation"
+     ],
+     "a": 1,
+     "why": "The registry's basis line: ecosystemRole: the ecosystem's largest and most institutionalized energy buyer — 40+ GW portfolio, 11 utility-scale BESS projects, the Talen nuclear PPA"
+    },
+    {
+     "q": "What role does the registry give **xAI** in Hyperscalers and AI labs?",
+     "c": [
+      "incumbent",
+      "adjacent",
+      "challenger"
+     ],
+     "a": 2,
+     "why": "challenger — The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Hyperscalers and AI labs** buy on, per the registry?",
+     "c": [
+      "Time to power — the production slot, reservation fees, trailer-mounted mobility",
+      "Grid-forming and ride-through capability (utility scale) or NVIDIA platform qualification (rack scale)",
+      "Allocation and delivery against a sold-out roadmap",
+      "Firm power availability at the site and the date it arrives"
+     ],
+     "a": 3,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Hyperscalers and AI labs?",
+     "c": [
+      "AIDC developers and landlords",
+      "Compute and the rack",
+      "Utilities",
+      "Bridge and on-site generation"
+     ],
+     "a": 0,
+     "why": "Chain position 12 against this segment's 13."
+    },
+    {
+     "q": "The graph records a curated edge from **Anthropic** to **Amazon**. How is it typed from Anthropic's side?",
+     "c": [
+      "supplier",
+      "competitor",
+      "partner",
+      "other"
+     ],
+     "a": 0,
+     "why": "Amazon is 'primary cloud provider and training partner' — up to 5 GW of Trainium and Graviton capacity under a commitment of 'more than $100 billion over the next ten years' — and Anthropic's largest investor, with USD 8 billion of convertible notes (2023–2025), USD 10 billion of Series G and H preferred (Q2 2026) and a USD 20 billion facility released on compute-delivery milestones."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentNeoclouds_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-neoclouds",
+ "type": "module",
+ "title": "Neoclouds",
+ "short": "The GPU-cloud operators that sell contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets — faster than…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:coreweave",
+    "date": "2026-08-30",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:crusoe",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluidstack",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:iren",
+    "date": "2026-08-30",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lambda",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nebius",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nscale",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "7",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "1",
+   "v": "incumbent",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "6",
+   "v": "challengers",
+   "sub": "contesting that set; 0 adjacent"
+  },
+  {
+   "k": "5",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The GPU-cloud operators that sell contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets — faster than hyperscalers, weaker credit, and the tenants whose leases carry most of the credit-substitution structures in the corpus.",
+    "Chain position 14 of 19 · tier **demand** — owns, operates or consumes it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 13)",
+     "Hyperscalers and AI labs",
+     "demand"
+    ],
+    [
+     "**This segment** (position 14)",
+     "**Neoclouds**",
+     "demand"
+    ],
+    [
+     "Downstream (position 15)",
+     "Utilities",
+     "demand"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Hyperscalers and AI labs (28 edges)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "AIDC developers and landlords (21 edges) · Bridge and on-site generation (10 edges) · In-hall power (7 edges) · Storage integrators and containers (6 edges) · Power conversion and rack-power silicon (6 edges) · Capital (5 edges) · EPC and construction (4 edges) · Storage developers and IPPs (4 edges) · Grid equipment (3 edges) · Clean firm and nuclear (3 edges) · Compute and the rack (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges) · Cooling (2 edges) · Utilities (2 edges)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Time to power and the landlord's ability to deliver critical IT MW on schedule",
+     "—"
+    ],
+    [
+     "GPU-backed and capacity-backed financing terms",
+     "—"
+    ],
+    [
+     "Leased shell vs own-build and the power ownership that comes with it",
+     "—"
+    ],
+    [
+     "Backlog quality and customer concentration behind the lease",
+     "—"
+    ],
+    [
+     "Rack density and liquid-cooling specification the halls must meet",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**CoreWeave**",
+     "coreweave",
+     "incumbent",
+     "ecosystemRole: the demand-side test case for whether contracted AI backlog can carry leveraged infrastructure — the public numbers every private neocloud is measured against; 1 GW+ active power"
+    ],
+    [
+     "**Crusoe**",
+     "crusoe",
+     "challenger",
+     "productsAndServices › Crusoe Cloud & modular (Spark, Edge Zones): GPU cloud beside the energy-first campus business"
+    ],
+    [
+     "**Fluidstack**",
+     "fluidstack",
+     "challenger",
+     "ecosystemRole: the clearest case of the credit-substitution layer between a frontier lab and the power landlords — tenant-of-record on ~1.4 GW of Anthropic-bound leases"
+    ],
+    [
+     "**IREN**",
+     "iren",
+     "challenger",
+     "productsAndServices › IREN Cloud — bare-metal and managed GPU cloud on NVIDIA reference architecture; Microsoft's $9.7B GB300 contract"
+    ],
+    [
+     "**Lambda**",
+     "lambda",
+     "challenger",
+     "ecosystemRole: the price-and-flexibility neocloud moving up-market into the CoreWeave model; colocation-first footprint"
+    ],
+    [
+     "**Nebius**",
+     "nebius",
+     "challenger",
+     "registry tagline: CoreWeave's most direct challenger — ARR $3B, >$40B Microsoft/Meta backlog; owned gigawatt-scale AI factories"
+    ],
+    [
+     "**Nscale**",
+     "nscale",
+     "challenger",
+     "ecosystemRole: the European entry in the anchored-neocloud model — Microsoft-anchored, ~200,000 GB300 contracted, a reported Anthropic deal"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**CoreWeave**",
+     "FY2025 · 2025-12-31",
+     "5,130",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluidstack**",
+     "FY2025 · 2025-12-31",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "1,428"
+    ],
+    [
+     "**IREN**",
+     "FY2025 · 2025-06-30",
+     "501",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Nebius**",
+     "FY2025 · 2025-12-31",
+     "529.8",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Crusoe, Lambda, Nscale"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Fluidstack**",
+     "**IREN**",
+     "supplier",
+     "active",
+     "part of USD 2.8 billion of new IREN cloud contracts (individual value undisclosed)",
+     "IREN AI Cloud"
+    ],
+    [
+     "**Fluidstack**",
+     "**Nebius**",
+     "competitor",
+     "active",
+     "—",
+     "DGX Cloud Lepton co-contributors"
+    ],
+    [
+     "**Fluidstack**",
+     "**Nscale**",
+     "competitor",
+     "active",
+     "—",
+     "DGX Cloud Lepton co-contributors; both Anthropic compute suppliers (2026)"
+    ],
+    [
+     "**Nscale**",
+     "**Fluidstack**",
+     "competitor",
+     "active",
+     "—",
+     "DGX Cloud Lepton co-contributors; both Anthropic capacity suppliers (2026)"
+    ],
+    [
+     "**Nscale**",
+     "**Nebius**",
+     "competitor",
+     "active",
+     "—",
+     "DGX Cloud Lepton co-contributors; both Microsoft neocloud suppliers"
+    ],
+    [
+     "**Anthropic**",
+     "**CoreWeave**",
+     "supplier",
+     "announced",
+     "multi-year agreement, value undisclosed",
+     "CoreWeave AI cloud"
+    ],
+    [
+     "**Anthropic**",
+     "**Fluidstack**",
+     "supplier",
+     "active",
+     "USD 50 billion programme; ~1.4 GW of Google-backstopped leases at TeraWulf, Cipher, Hut 8 and Meridian Arc",
+     "custom-built data centres in Texas, New York, Louisiana and Indiana"
+    ],
+    [
+     "**Anthropic**",
+     "**Lambda**",
+     "supplier",
+     "announced",
+     "reported six-year, USD 35 billion; ~350 MW at Hut 8 Beacon Point (NVIDIA lease)",
+     "Lambda-operated NVIDIA capacity at Hut 8 Beacon Point, Nueces County TX"
+    ],
+    [
+     "**Anthropic**",
+     "**Nscale**",
+     "supplier",
+     "announced",
+     "reported ~USD 45 billion over six years for ~460 MW at Monarch (unconfirmed by either party)",
+     "Vera Rubin capacity at the Monarch Compute Campus, Mason County WV, from late 2027"
+    ],
+    [
+     "**CoreWeave**",
+     "Google",
+     "customer",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "Meta",
+     "customer",
+     "active",
+     "~$21B through 2032",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "Microsoft",
+     "customer",
+     "active",
+     "67% of FY2025 revenue",
+     "—"
+    ],
+    [
+     "**CoreWeave**",
+     "OpenAI",
+     "customer",
+     "active",
+     "~$22.4B + $350M equity",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "OpenAI",
+     "customer",
+     "active",
+     "1.2GW campus",
+     "—"
+    ],
+    [
+     "**Crusoe**",
+     "Oracle",
+     "customer",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluidstack**",
+     "AEP",
+     "supplier",
+     "announced",
+     "Wythe County VA large-load applicant (MW unknown); AEP-PSO power at Okmulgee OK; AEP Texas serves Barber Lake",
+     "Appalachian Power; Public Service Company of Oklahoma"
+    ],
+    [
+     "**Fluidstack**",
+     "Anthropic",
+     "customer",
+     "active",
+     "USD 50 billion programme; ~1.4 GW critical IT across five leased campuses",
+     "custom-built data centres, Texas and New York and beyond"
+    ],
+    [
+     "**Fluidstack**",
+     "Entergy",
+     "supplier",
+     "announced",
+     "330 MW of utility capacity for 245 MW critical IT at River Bend",
+     "Entergy Louisiana"
+    ],
+    [
+     "**Fluidstack**",
+     "Google",
+     "partner",
+     "active",
+     "> USD 6 billion of lease backstops and guarantees; warrants ~14% of TeraWulf and ~5.4% of Cipher",
+     "recognition agreements with the landlords"
+    ],
+    [
+     "**Google**",
+     "**CoreWeave**",
+     "supplier",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**Google**",
+     "**Fluidstack**",
+     "partner",
+     "active",
+     "~$6.2B+ of disclosed backstops",
+     "Fluidstack lease backstops"
+    ],
+    [
+     "**IREN**",
+     "Microsoft",
+     "customer",
+     "active",
+     "$9.7B / 5 years / 200MW IT",
+     "GB300 capacity"
+    ],
+    [
+     "**Lambda**",
+     "Microsoft",
+     "customer",
+     "active",
+     "—",
+     "GB300 NVL72"
+    ],
+    [
+     "**Meta**",
+     "**CoreWeave**",
+     "supplier",
+     "active",
+     "~$21B through 2032",
+     "—"
+    ],
+    [
+     "**Meta**",
+     "**Nebius**",
+     "supplier",
+     "active",
+     "up to ~$27B / 5 years",
+     "Vera Rubin capacity"
+    ],
+    [
+     "**Microsoft**",
+     "**CoreWeave**",
+     "supplier",
+     "active",
+     "67% of CoreWeave FY2025 revenue",
+     "—"
+    ],
+    [
+     "**Microsoft**",
+     "**IREN**",
+     "supplier",
+     "active",
+     "$9.7B / 5 years / 200MW IT",
+     "GB300"
+    ],
+    [
+     "**Microsoft**",
+     "**Lambda**",
+     "supplier",
+     "active",
+     "—",
+     "GB300 NVL72"
+    ],
+    [
+     "**Microsoft**",
+     "**Nebius**",
+     "supplier",
+     "active",
+     "~$17.4B (to ~$19.4B)",
+     "—"
+    ],
+    [
+     "**Nebius**",
+     "Meta",
+     "customer",
+     "active",
+     "up to ~$27B / 5 years",
+     "Vera Rubin"
+    ],
+    [
+     "**Nebius**",
+     "Microsoft",
+     "customer",
+     "active",
+     "~$17.4B (to ~$19.4B)",
+     "—"
+    ],
+    [
+     "**Nscale**",
+     "Anthropic",
+     "customer",
+     "announced",
+     "reported ~USD 45 billion over six years for ~460 MW at Monarch (press; Aker disclosure; unconfirmed by either party)",
+     "Vera Rubin NVL72 capacity at Monarch, from late 2027"
+    ],
+    [
+     "**Nscale**",
+     "Google",
+     "other",
+     "historical",
+     "talks for Monarch capacity that 'fell through' (Semafor); Trusted Tech Alliance co-member",
+     "Monarch capacity negotiations"
+    ],
+    [
+     "**Nscale**",
+     "Microsoft",
+     "customer",
+     "active",
+     "~200,000 GB300 (Oct 2025) + 96,000+ Vera Rubin (2026); 'approximately USD 6.2 billion' five-year Narvik agreement; 1.35 GW Monarch LOI withdrawn",
+     "GB300 and Vera Rubin NVL72 capacity at Narvik, Ward County, Loughton, Sines"
+    ],
+    [
+     "**Nscale**",
+     "OpenAI",
+     "customer",
+     "announced",
+     "Stargate Norway: 100,000 GPUs by end-2026 target (LOI replaced by Microsoft); Stargate UK: up to 8,000 → 31,000 GPUs (paused April 2026)",
+     "Stargate Norway; Stargate UK"
+    ],
+    [
+     "**OpenAI**",
+     "**CoreWeave**",
+     "supplier",
+     "active",
+     "~$22.4B cumulative",
+     "—"
+    ],
+    [
+     "**OpenAI**",
+     "**Crusoe**",
+     "supplier",
+     "active",
+     "1.2GW campus",
+     "—"
+    ],
+    [
+     "**Oracle**",
+     "**Crusoe**",
+     "supplier",
+     "active",
+     "1.2GW campus",
+     "—"
+    ]
+   ],
+   "note": "Curated edges among members: 5 · to the neighbouring segments: 33 · derived-only mentions (no curated typing): 14 among members, 14 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-04 — Crunchbase News reports a USD 1.5 billion round led by Jane Street Capital at an USD 18 billion valuation, taking total funding to 'just over $2.6 billion'; the company has not announced it. SEC Form D filed 30 June 2026 shows a USD 1.5 billion offering with USD 730 million sold from 15 June",
+     "sub": "Fluidstack · financial"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-03 — Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
+     "sub": "Nscale · customer"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-02 — Digi.no: contractor HENT (Sentia) signs for two more buildings at Narvik — 'three buildings with combined capacity of 100 MW', completion 2027",
+     "sub": "Nscale · capacity"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-31 — Leverage Shares' IPO risk note: 'roughly $3 billion of financing against a business generating only a few hundred million dollars in annual revenue'; GPU depreciation assumptions of five to six years; 'contracted demand is not necessarily guaranteed demand'",
+     "sub": "Nscale · market"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-31 — About USD 3 billion of senior secured delayed-draw term loans: up to USD 1.85 billion for Ward County, Texas (~200 MW IT, GB300 + VR200) and up to USD 1.2 billion for Madison, North Carolina (up to 40 MW); J.P. Morgan and Goldman Sachs joint lead arrangers; 'both facilities received investment-grade ratings with stable outlooks'",
+     "sub": "Nscale · financial"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-31 — measuredai's tracker reports Anthropic's first TPU capacity under its 'colocation and managed services agreements with Fluidstack' came online at Lake Mariner on 5 July 2026 and tallies five Fluidstack campuses at about 1.4 GW critical IT",
+     "sub": "Fluidstack · other"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-28 — Semafor: Google and Microsoft were both in talks for the Monarch capacity that went to Anthropic — Microsoft 'withdrew from Monarch negotiations over the summer during a review of its data center portfolio and on-site power generation allocations'; Data Centre Review: Nscale's disclosure via Aker 'confirmed the contract exists but did not publicly name the customer'; West Virginia's governor calls it 'the reported $45 billion agreement'",
+     "sub": "Nscale · customer"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-28 — Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($2.8B total at 9.0% fixed, PIMCO advising) for the Mackenzie, BC Blackwell Ultra expansion",
+     "sub": "IREN · financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-26 — Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on",
+     "sub": "Nscale · order-win"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-21 — Bloomberg: Nscale plans a US IPO that may raise as much as USD 3 billion, with Goldman Sachs and JPMorgan, filing as early as September 2026; Dealroom relays 'USD 51 billion in total contracted revenue', Q2 2026 revenue about USD 100 million, FY2025 about USD 33 million, '~289,000 active and contracted GPUs'",
+     "sub": "Nscale · financial"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-20 — Hudson River Trading signs a multi-year, multi-billion-dollar AI cloud agreement — Vera Rubin NVL72 plus HGX B200 clusters with dedicated connectivity to HRT's on-prem environment",
+     "sub": "CoreWeave · order-win"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-19 — $5.0B convertible notes priced (upsized from $4.5B): $3.0B 0.50% due 2030 + $2.0B 4.50% due 2034, conversion premiums 40–45%; ~15.8M shares issued in concurrent exchanges of older converts",
+     "sub": "Nebius · financial"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Clean Air Act PSD review",
+     "in-effect",
+     "—",
+     "Nebius"
+    ],
+    [
+     "EU AI Act (GPAI obligations; full enforcement 2 August 2026)",
+     "in-effect",
+     "2026-08-02",
+     "Nscale"
+    ],
+    [
+     "EU Russia sanctions",
+     "expired",
+     "—",
+     "Nebius"
+    ],
+    [
+     "France — sovereign AI compute programme (AI Action Summit memorandum, February 2025)",
+     "expired",
+     "2026-03",
+     "Fluidstack"
+    ],
+    [
+     "Louisiana Act 730 (2024) data-centre sales-and-use tax rebate; Quality Jobs program",
+     "in-effect",
+     "2025-12",
+     "Fluidstack"
+    ],
+    [
+     "New York State power allocation and local land use (NYPA/NYSEG allocation; Town of Somerset approvals)",
+     "in-effect",
+     "2025-10",
+     "Fluidstack"
+    ],
+    [
+     "Norway — Statnett grid allocation and connection charges (anleggsbidrag); Norwegian Transparency Act",
+     "in-effect",
+     "2026-05",
+     "Nscale"
+    ],
+    [
+     "Oklahoma SB 259 (data-centre water use) and the Data Center Consumer Ratepayer Protection Act of 2026",
+     "in-effect",
+     "2026",
+     "Fluidstack"
+    ],
+    [
+     "Texas air permitting",
+     "in-effect",
+     "—",
+     "Crusoe"
+    ],
+    [
+     "UK AI Growth Zones / AI Opportunities Action Plan (Stargate UK, Loughton)",
+     "in-effect",
+     "2025-09",
+     "Nscale"
+    ],
+    [
+     "US export controls (AI Diffusion Rule and successors)",
+     "in-effect",
+     "2025-01",
+     "Fluidstack"
+    ],
+    [
+     "US export controls — AI Diffusion Rule tiering and its contested rescission",
+     "in-effect",
+     "2025-01",
+     "Nscale"
+    ],
+    [
+     "Virginia — Appalachian Power large-load tariff and rate case (SCC docket 146851)",
+     "proposed",
+     "2026",
+     "Fluidstack"
+    ],
+    [
+     "West Virginia — state-certified AI microgrid; WV DEP air permits (New Source Review) at Monarch",
+     "in-effect",
+     "2026",
+     "Nscale"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Reading the Eight Named Projects* (planned) · *Bridge Power: Building the Plant Before the Grid Arrives* · *N+1, 2N, and Six Nines* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** CoreWeave, Crusoe, Fluidstack, IREN, Lambda, Nebius, Nscale — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **CoreWeave** in?",
+     "c": [
+      "Compute and the rack",
+      "Neoclouds",
+      "Grid equipment",
+      "Storage developers and IPPs"
+     ],
+     "a": 1,
+     "why": "The registry's basis line: ecosystemRole: the demand-side test case for whether contracted AI backlog can carry leveraged infrastructure — the public numbers every private neocloud is measured against; 1 GW+ active power"
+    },
+    {
+     "q": "What role does the registry give **Nscale** in Neoclouds?",
+     "c": [
+      "adjacent",
+      "incumbent",
+      "challenger"
+     ],
+     "a": 2,
+     "why": "challenger — The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Neoclouds** buy on, per the registry?",
+     "c": [
+      "Cybersecurity certification (IEC 62443, NERC CIP)",
+      "Time to power and the landlord's ability to deliver critical IT MW on schedule",
+      "Prohibited-foreign-entity status and the factory's location (status follows ownership, not site)",
+      "Lead time and the manufacturing slot (transformers 30–40 months; test-bay availability)"
+     ],
+     "a": 1,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Neoclouds?",
+     "c": [
+      "Power conversion and rack-power silicon",
+      "Bridge and on-site generation",
+      "Utilities",
+      "Hyperscalers and AI labs"
+     ],
+     "a": 3,
+     "why": "Chain position 13 against this segment's 14."
+    },
+    {
+     "q": "The graph records a curated edge from **Fluidstack** to **IREN**. How is it typed from Fluidstack's side?",
+     "c": [
+      "competitor",
+      "customer",
+      "partner",
+      "supplier"
+     ],
+     "a": 3,
+     "why": "IREN named Fluidstack among the customers of USD 2.8 billion of new multi-year cloud contracts announced on 20 July 2026 — Fluidstack as a buyer of GPU capacity from another neocloud."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentUtilities_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-utilities",
+ "type": "module",
+ "title": "Utilities",
+ "short": "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-01-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:aep",
+    "date": "2026-09-03",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dominion-energy",
+    "date": "2026-09-03",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:engie-north-america",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:entergy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:invenergy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nextera-energy-resources",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nrg-energy",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:oncor",
+    "date": "2026-09-03",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:southern-company",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tesla",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vistra",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:xcel-energy",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "12",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "6",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "2",
+   "v": "challengers",
+   "sub": "contesting that set; 4 adjacent"
+  },
+  {
+   "k": "20",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the storage behind it get built — and the competitive retail suppliers that serve the same load in restructured markets. The gatekeeper, the largest storage buyer class, and the counterparty that names the campus in its filings.",
+    "Chain position 15 of 19 · tier **demand** — owns, operates or consumes it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 14)",
+     "Neoclouds",
+     "demand"
+    ],
+    [
+     "**This segment** (position 15)",
+     "**Utilities**",
+     "demand"
+    ],
+    [
+     "Downstream (position 16)",
+     "Capital",
+     "services"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "AIDC developers and landlords (32 edges) · Hyperscalers and AI labs (30 edges) · Storage developers and IPPs (8 edges) · Clean firm and nuclear (2 edges) · Neoclouds (2 edges) · Capital (2 edges) · EPC and construction (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Cells and chemistry (20 edges) · Storage integrators and containers (20 edges) · In-hall power (16 edges) · Bridge and on-site generation (13 edges) · Clean firm and nuclear (12 edges) · Grid equipment (10 edges) · EPC and construction (9 edges) · Assurance (9 edges) · Power conversion and rack-power silicon (7 edges) · Software and optimization (7 edges) · Storage developers and IPPs (4 edges) · Cooling (1 edge) · AIDC developers and landlords (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Cost recovery — what the commission will allow into rate base or a customer-specific charge",
+     "*The Regulated Machine* (planned)"
+    ],
+    [
+     "Firmness and resource adequacy against the plan's need",
+     "—"
+    ],
+    [
+     "Minimum-demand, term, collateral and exit-fee terms the large-load customer will sign",
+     "—"
+    ],
+    [
+     "Speed of certification and the turbine or transformer slot behind it",
+     "—"
+    ],
+    [
+     "Whether the utility self-builds, tolls or lets the customer supply (who picks the battery)",
+     "—"
+    ],
+    [
+     "Cost allocation — who pays for the substation and the wires",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**AEP**",
+     "aep",
+     "incumbent",
+     "ecosystemRole: the utility whose competitive position is contractual — eight commission-approved large-load tariffs, 69 GW of contracted load, the largest transmission system"
+    ],
+    [
+     "**Dominion Energy**",
+     "dominion-energy",
+     "incumbent",
+     "registry tagline: Data Center Alley's regulated gatekeeper — ~53.8 GW of data-center capacity contracted; the GS-5 large-load class"
+    ],
+    [
+     "**Entergy**",
+     "entergy",
+     "incumbent",
+     "ecosystemRole: the utility whose plants are decided by a customer's signature — Meta, AWS and Google generation certified by name"
+    ],
+    [
+     "**Oncor**",
+     "oncor",
+     "incumbent",
+     "registry tagline: the largest pure-play wires utility in the United States and the gate every gigawatt of North Texas data-center load must pass through"
+    ],
+    [
+     "**Southern Company**",
+     "southern-company",
+     "incumbent",
+     "registry tagline: the Southeast's regulated AI-load gatekeeper — 17 GW of contracted large load; 9,885 MW certified in one December 2025 order"
+    ],
+    [
+     "**Xcel Energy**",
+     "xcel-energy",
+     "incumbent",
+     "ecosystemRole: the utility whose value to this ecosystem is the tariff design — the Google Clean Energy Accelerator Charge; large-load tariffs filed in three states"
+    ],
+    [
+     "**NRG Energy**",
+     "nrg-energy",
+     "challenger",
+     "productsAndServices › Retail electricity, natural gas and home services (competitive retail supply): ~8 million customers — the restructured-market counterpart to the regulated franchise; Oncor's second-largest customer group"
+    ],
+    [
+     "**Vistra**",
+     "vistra",
+     "challenger",
+     "productsAndServices › Retail electricity and natural gas (competitive retail supply): ~5 million customers in sixteen states; Oncor's largest customer group at 25 % of 2025 revenue"
+    ],
+    [
+     "**ENGIE North America**",
+     "engie-north-america",
+     "adjacent",
+     "productsAndServices › ENGIE Resources — commercial and industrial retail supply in deregulated markets since 2002"
+    ],
+    [
+     "**Invenergy**",
+     "invenergy",
+     "adjacent",
+     "productsAndServices › Natural gas and data-centre power — build-and-transfer gas plants sold to regulated utilities (I&M, We Energies); merchant HVDC transmission (Grain Belt Express)"
+    ],
+    [
+     "**NextEra**",
+     "nextera-energy-resources",
+     "adjacent",
+     "registry tagline: the $67B Dominion merger — the competitive arm of a holding company that owns FPL"
+    ],
+    [
+     "**Tesla**",
+     "tesla",
+     "adjacent",
+     "productsAndServices › Virtual power plants & Tesla Electric — a Texas retail electricity provider aggregating Powerwalls"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**AEP**",
+     "FY2025 · 2025-12-31",
+     "21,876",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "56,000"
+    ],
+    [
+     "**Dominion Energy**",
+     "FY2025 · 2025-12-31",
+     "16,506",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Entergy**",
+     "FY2025 · 2025-12-31",
+     "12,947",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Oncor**",
+     "FY2025 · 2025-12-31",
+     "6,778",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Southern Company**",
+     "FY2025 · 2025-12-31",
+     "29,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "10,000"
+    ],
+    [
+     "**Xcel Energy**",
+     "FY2025 · 2025-12-31",
+     "14,669",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "FY2025 · 2025-12-31",
+     "30,713",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "FY2025 · 2025-12-31",
+     "17,738",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "1,200"
+    ],
+    [
+     "**Tesla**",
+     "FY2025 · 2025-12-31",
+     "94,830",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "ENGIE North America, Invenergy, NextEra"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**AEP**",
+     "**Dominion Energy**",
+     "partner",
+     "active",
+     "Valley Link — ~260 miles of 765 kV plus ~155 miles; Dominion holds 30 percent of the JV",
+     "Valley Link Transmission Company joint venture in PJM"
+    ],
+    [
+     "**AEP**",
+     "**Oncor**",
+     "partner",
+     "announced",
+     "765 kV eastern backbone, co-sponsored by four transmission providers",
+     "ERCOT Regional Planning Group project 25RPG025"
+    ],
+    [
+     "**Dominion Energy**",
+     "**NextEra**",
+     "other",
+     "announced",
+     "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5% / Dominion 25.5%",
+     "NextEra Energy–Dominion Energy combination"
+    ],
+    [
+     "**ENGIE North America**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Entergy**",
+     "**Dominion Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Large-load contracting design"
+    ],
+    [
+     "**Invenergy**",
+     "**AEP**",
+     "customer",
+     "active",
+     "918 MW gas plant (CPCN pending); 1 GW SWEPCO/PSO wind and solar (about USD 2.2bn); 1,365 MW portfolio bought from AEP (USD 1.5bn EV)",
+     "Sycamore Riverside Energy Center; SWEPCO and PSO offtake; IRG Acquisition Holdings"
+    ],
+    [
+     "**Invenergy**",
+     "**Dominion Energy**",
+     "customer",
+     "historical",
+     "74 MW (Wilkinson Solar)",
+     "Project acquisition at commercial operation"
+    ],
+    [
+     "**Invenergy**",
+     "**NextEra**",
+     "competitor",
+     "active",
+     "Cleanview: NextEra 68,229 MW pipeline (#1) against Invenergy 41,328 MW (#2)",
+     "—"
+    ],
+    [
+     "**Invenergy**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "100 MW virtual PPA (Delilah I Solar)",
+     "Virtual power purchase agreement"
+    ],
+    [
+     "**NRG Energy**",
+     "**Oncor**",
+     "other",
+     "active",
+     "21% of Oncor's 2025 operating revenues",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "**Vistra**",
+     "competitor",
+     "active",
+     "~25 GW vs ~50 GW pro forma",
+     "—"
+    ],
+    [
+     "**Oncor**",
+     "**AEP**",
+     "partner",
+     "announced",
+     "765 kV eastern backbone, co-sponsored by four transmission providers",
+     "ERCOT Regional Planning Group project 25RPG025"
+    ],
+    [
+     "**Southern Company**",
+     "**Dominion Energy**",
+     "competitor",
+     "active",
+     "—",
+     "Large-load tariff design"
+    ],
+    [
+     "**Southern Company**",
+     "**NextEra**",
+     "supplier",
+     "announced",
+     "—",
+     "Purchase agreements in the December 2025 Georgia certification"
+    ],
+    [
+     "**Southern Company**",
+     "**Tesla**",
+     "supplier",
+     "active",
+     "500 MW / 2,000 MWh (Georgia, per Energy-Storage.news); 92 Megapacks at Gorgas (Alabama)",
+     "Megapack 2XL supply agreement; Gorgas BESS"
+    ],
+    [
+     "**Vistra**",
+     "**NRG Energy**",
+     "competitor",
+     "active",
+     "~50 GW pro forma vs ~25 GW",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**NextEra**",
+     "competitor",
+     "historical",
+     "2,194 MW vs 750 MW brought online in 2023",
+     "—"
+    ],
+    [
+     "**Vistra**",
+     "**Oncor**",
+     "other",
+     "active",
+     "25% of Oncor's 2025 operating revenues",
+     "—"
+    ],
+    [
+     "**Xcel Energy**",
+     "**NextEra**",
+     "partner",
+     "active",
+     "2 GW of data center capacity (joint development agreement)",
+     "Joint development agreement — generation, storage and interconnection for large load"
+    ],
+    [
+     "**Xcel Energy**",
+     "**Tesla**",
+     "partner",
+     "active",
+     "residential Powerwall enrollment (no stated MW)",
+     "Renewable Battery Connect virtual power plant (Colorado)"
+    ],
+    [
+     "**Blackstone**",
+     "**Invenergy**",
+     "portfolio",
+     "active",
+     "~USD 4bn of equity across 2022-2023",
+     "—"
+    ],
+    [
+     "**Dominion Energy**",
+     "Vantage Data Centers",
+     "customer",
+     "active",
+     "—",
+     "Ashburn campuses"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "**Invenergy**",
+     "other",
+     "historical",
+     "109 MW (90.1% sponsor equity)",
+     "Prairie Breeze II and III"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "**Oncor**",
+     "other",
+     "active",
+     "170 MWac / 210 MWdc",
+     "Yellow Viking solar"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "**Xcel Energy**",
+     "other",
+     "active",
+     "21.6 MWdc (17 projects)",
+     "Xcel Energy Community Solar Garden programme (Minnesota)"
+    ],
+    [
+     "**Fluidstack**",
+     "**AEP**",
+     "supplier",
+     "announced",
+     "Wythe County VA large-load applicant (MW unknown); AEP-PSO power at Okmulgee OK; AEP Texas serves Barber Lake",
+     "Appalachian Power; Public Service Company of Oklahoma"
+    ],
+    [
+     "**Fluidstack**",
+     "**Entergy**",
+     "supplier",
+     "announced",
+     "330 MW of utility capacity for 245 MW critical IT at River Bend",
+     "Entergy Louisiana"
+    ],
+    [
+     "**Galaxy Digital**",
+     "**AEP**",
+     "supplier",
+     "active",
+     "service agreement for the incremental 830 MW; campus total 1.63 GW approved",
+     "—"
+    ],
+    [
+     "**Invenergy**",
+     "Blackstone",
+     "investor",
+     "active",
+     "~USD 4bn of equity across 2022-2023",
+     "—"
+    ],
+    [
+     "**MGX**",
+     "**NextEra**",
+     "other",
+     "active",
+     "—",
+     "AI Infrastructure Partnership (AIP) — agreement with parent NextEra Energy"
+    ]
+   ],
+   "note": "Curated edges among members: 20 · to the neighbouring segments: 10 · derived-only mentions (no curated typing): 6 among members, 2 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-03 — Arkansas Democrat-Gazette: APSC staff testified that 'Google is paying well below the full cost of this resource' on Cypress Solar; the November 17, 2026 hearing is mostly closed; Entergy sought to stop publication of the FOIA'd contract",
+     "sub": "Entergy · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-03 — Special meeting of shareholders to vote on the NextEra Energy combination — 9:30 a.m. ET, virtual; joint proxy statement mailed July 28 after the S-4 went effective July 23",
+     "sub": "Dominion Energy · corporate"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-31 — Minnesota Attorney General Ellison and the Citizens Utility Board file reconsideration petitions against the PUC's 3–2 verbal decision granting NSP-Minnesota ~$211 million over two years at a 9.6 percent ROE; the PUC's response is due mid-October",
+     "sub": "Xcel Energy · regulatory"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
+     "sub": "Invenergy · project"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-31 — Arkansas Democrat-Gazette reads the Google contract: $526M ($443M accelerated, $83M minimum-demand) plus $190M for transmission, a 20-year term, 480 MW minimum against 600 MW maximum, a ~$2B termination fee declining after year 13",
+     "sub": "Entergy · customer"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-30 — Texas regulators approved 424 miles of Oncor 765 kV lines despite calls to wait — the Permian backbone AEP Texas's Howard–Solstice line connects to advances alongside it",
+     "sub": "AEP · regulatory"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-28 — Ohio Consumers' Counsel urged FERC to resolve its three-year-old local transmission complaint, noting Ohio utilities have since put more than $4.3B of local and supplemental projects into PJM's plan",
+     "sub": "AEP · regulatory"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-27 — AJC: the OpenAI contract's added protections — no recovery of a revenue shortfall from residential customers on early termination, PSC notice within 15 days of any large-customer cancellation, semiannual public reporting; Georgia Watch calls the commitment letter 'full of ifs'",
+     "sub": "Southern Company · regulatory"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-27 — Entergy says customers are beginning to see benefits from the data-center agreements — about $7B over two decades; Mississippi residential bills avoided a $4.87 monthly increase in July; Meta to pay about 10 percent of Entergy Louisiana's storm and resiliency charges",
+     "sub": "Entergy · corporate"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-26 — CPR reports resident and advocate pushback on Xcel's Colorado large-load tariff (Proceeding 26AL-0137E), following an Earthjustice-led intervention in May",
+     "sub": "Xcel Energy · regulatory"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-26 — Georgia PSC review window closes on Georgia Power's OpenAI contract (~3,200 MW, 25 years, Effingham County); the company says its large-load contract portfolio now delivers approximately $950M a year of customer savings from 2029, up from the $556M the December order required",
+     "sub": "Southern Company · regulatory"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Arkansas Act 373 of 2025 (Generating Arkansas Jobs Act)",
+     "in-effect",
+     "2025-04",
+     "Entergy"
+    ],
+    [
+     "Beginning-of-construction safe harbor (IRS Notice 2025-42)",
+     "in-effect",
+     "2025-08",
+     "ENGIE North America"
+    ],
+    [
+     "DOE Loan Programs Office",
+     "expired",
+     "2025-07-23",
+     "Invenergy"
+    ],
+    [
+     "DOE Loan Programs Office guarantees",
+     "in-effect",
+     "2026-02-25",
+     "Southern Company"
+    ],
+    [
+     "DOE transmission policy (FAST-41, NIETC)",
+     "in-effect",
+     "2024-02",
+     "Invenergy"
+    ],
+    [
+     "EPA administrative settlement agreement for the Moss Landing site",
+     "in-effect",
+     "2025-07-17",
+     "Vistra"
+    ],
+    [
+     "EPA greenhouse-gas rules, OBBBA tax-credit phase-out and import tariffs",
+     "in-effect",
+     "2025-07",
+     "AEP"
+    ],
+    [
+     "EPA power-plant rules (mercury and air toxics, greenhouse-gas standards)",
+     "in-effect",
+     "2025-04",
+     "Southern Company"
+    ],
+    [
+     "ERCOT market design and ancillary-services procurement",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "ERCOT market design — real-time co-optimisation with batteries",
+     "in-effect",
+     "2025-12-05",
+     "NRG Energy"
+    ],
+    [
+     "Federal clean-energy credits (ITC/45X, nuclear PTC) after the 2025 reconciliation act",
+     "in-effect",
+     "—",
+     "Southern Company"
+    ],
+    [
+     "Federal clean-energy credits after the 2025 reconciliation act (IRA wind/solar phase-out, 45U nuclear, transferability)",
+     "in-effect",
+     "2025-07-04",
+     "Xcel Energy"
+    ],
+    [
+     "Federal jurisdiction — why Oncor is not a public utility under the Federal Power Act",
+     "in-effect",
+     "2026-02",
+     "Oncor"
+    ],
+    [
+     "Federal offshore-wind policy and import tariffs (CVOW)",
+     "in-effect",
+     "2025-12-22",
+     "Dominion Energy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "NextEra, Tesla"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Invenergy"
+    ],
+    [
+     "FERC co-located load rulemaking in PJM (dockets EL25-49, EL26-67)",
+     "in-effect",
+     "2025-12-18",
+     "Vistra"
+    ],
+    [
+     "FERC large-load and co-location rules (PJM, Docket EL25-49)",
+     "announced",
+     "2025-12-18",
+     "Dominion Energy"
+    ],
+    [
+     "FERC review of the LS Power acquisition (Federal Power Act section 203)",
+     "expired",
+     "2025-11-14",
+     "NRG Energy"
+    ],
+    [
+     "Georgia data-center sales-tax exemption and 2026 cost-shift bills",
+     "in-effect",
+     "—",
+     "Southern Company"
+    ],
+    [
+     "Georgia PSC large-load rule (contracts above 100 MW)",
+     "in-effect",
+     "2025-02-01",
+     "Southern Company"
+    ],
+    [
+     "Indiana HEA 1007 and SEA 424",
+     "in-effect",
+     "2025-05-06",
+     "AEP"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "NextEra"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2023-01",
+     "Invenergy"
+    ],
+    [
+     "ITC/45X (One Big Beautiful Bill Act phase-out)",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "Large-load tariffs (Minnesota approved; Colorado and Wisconsin filed)",
+     "in-effect",
+     "2026",
+     "Xcel Energy"
+    ],
+    [
+     "Louisiana PSC 'Lightning Amendment' and large-load guidelines",
+     "in-effect",
+     "2025-12-17",
+     "Entergy"
+    ],
+    [
+     "Merger approvals (NextEra Energy combination)",
+     "announced",
+     "2026-07-15",
+     "Dominion Energy"
+    ],
+    [
+     "Mississippi pre-certification statute for facilities serving data-processing customers (SB 2001 of 2024)",
+     "in-effect",
+     "2024",
+     "Entergy"
+    ],
+    [
+     "New York Public Service Commission consumer settlement (Case 25-M-0516)",
+     "in-effect",
+     "2026-04-16",
+     "NRG Energy"
+    ],
+    [
+     "Nuclear production tax credit (section 45U)",
+     "in-effect",
+     "2024-01-01",
+     "Vistra"
+    ],
+    [
+     "Offshore wind lease policy (Interior settlements)",
+     "in-effect",
+     "2026-06-17",
+     "Invenergy"
+    ],
+    [
+     "Offshore wind leasing suspension and lease relinquishment",
+     "in-effect",
+     "2026-04-28",
+     "ENGIE North America"
+    ],
+    [
+     "Ohio HB 15 and the PUCO data-center tariff appeal",
+     "in-effect",
+     "2025-08-14",
+     "AEP"
+    ],
+    [
+     "PJM capacity market",
+     "in-effect",
+     "2025-06",
+     "Dominion Energy"
+    ],
+    [
+     "PJM capacity, cost allocation and the FERC co-location order",
+     "in-effect",
+     "2025-12-18",
+     "AEP"
+    ],
+    [
+     "Political opposition to the 765 kV certificate applications",
+     "in-effect",
+     "2026-07",
+     "Oncor"
+    ],
+    [
+     "Retail supply regulation (state PUCs)",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "Ring-fencing under the 2018 Sempra Order",
+     "in-effect",
+     "2018-03",
+     "Oncor"
+    ],
+    [
+     "State clean-energy mandates — Minnesota 100% carbon-free by 2040; Colorado 80% by 2030 and coal exit; New Mexico RPS",
+     "in-effect",
+     "—",
+     "Xcel Energy"
+    ],
+    [
+     "State rate regulation — 2026 base-rate outcomes and ROE contests",
+     "in-effect",
+     "2026",
+     "Xcel Energy"
+    ],
+    [
+     "State siting and certificate law (Missouri, Illinois, Kansas, Indiana)",
+     "in-effect",
+     "2023-10",
+     "Invenergy"
+    ],
+    [
+     "Storm-cost securitization statutes (Louisiana, Mississippi)",
+     "in-effect",
+     "2026-04",
+     "Entergy"
+    ],
+    [
+     "Texas Attorney General litigation and agreed injunction (Smokehouse Creek)",
+     "in-effect",
+     "2026-02",
+     "Xcel Energy"
+    ],
+    [
+     "Texas Energy Fund (Senate Bills 2627 and 2268)",
+     "in-effect",
+     "2023",
+     "NRG Energy"
+    ],
+    [
+     "Texas Energy Fund in-ERCOT generation loan programme",
+     "in-effect",
+     "2023",
+     "Vistra"
+    ],
+    [
+     "Texas House Bill 5247 and the Unified Tracker Mechanism",
+     "in-effect",
+     "2025-06",
+     "Oncor"
+    ],
+    [
+     "Texas large-load interconnection pause and PUCT verification (August 2026)",
+     "in-effect",
+     "2026-08-03",
+     "NRG Energy"
+    ],
+    [
+     "Texas SB 6 (2025) large-load rules",
+     "in-effect",
+     "2025",
+     "Entergy"
+    ],
+    [
+     "Texas SB 6 and the PUCT large-load rulemakings",
+     "in-effect",
+     "2025-06",
+     "AEP"
+    ],
+    [
+     "Texas Senate Bill 6 and the ERCOT batch interconnection framework",
+     "in-effect",
+     "2025-06",
+     "Oncor"
+    ],
+    [
+     "Texas Senate Bill 6 and the PUCT large-load rulemaking (Project 58317)",
+     "in-effect",
+     "2025-06",
+     "Vistra"
+    ],
+    [
+     "Texas wildfire liability and House Bill 145 mitigation plans",
+     "in-effect",
+     "2025-06",
+     "Oncor"
+    ],
+    [
+     "The governor's August 2026 data-center audit directive and municipal restrictions",
+     "in-effect",
+     "2026-08",
+     "Oncor"
+    ],
+    [
+     "Trade tariffs on equipment and materials",
+     "in-effect",
+     "2025-04",
+     "Oncor"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "NextEra, Tesla"
+    ],
+    [
+     "Virginia Clean Economy Act and the April 2026 storage statute",
+     "in-effect",
+     "2026-04",
+     "Dominion Energy"
+    ],
+    [
+     "Virginia large-load cost allocation (GS-5; Rider T-1 direct assignment; HB 1393; 2026 budget consumption tax)",
+     "in-effect",
+     "2027-01-01",
+     "Dominion Energy"
+    ],
+    [
+     "West Virginia HB 2014 — the Power Generation and Consumption Act",
+     "in-effect",
+     "2025-04",
+     "AEP"
+    ],
+    [
+     "Wildfire liability law — Texas, North Dakota, South Dakota reforms; no Colorado statute; Colorado securitization",
+     "in-effect",
+     "2025",
+     "Xcel Energy"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The Regulated Machine* (planned) · *The Gatekeeper* (planned) · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** AEP, Dominion Energy, Entergy, Oncor, Southern Company, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Invenergy, NextEra, Tesla — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **AEP** in?",
+     "c": [
+      "In-hall power",
+      "Utilities",
+      "Assurance",
+      "Cells and chemistry"
+     ],
+     "a": 1,
+     "why": "The registry's basis line: ecosystemRole: the utility whose competitive position is contractual — eight commission-approved large-load tariffs, 69 GW of contracted load, the largest transmission system"
+    },
+    {
+     "q": "What role does the registry give **Tesla** in Utilities?",
+     "c": [
+      "incumbent",
+      "challenger",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Utilities** buy on, per the registry?",
+     "c": [
+      "Hardware-agnostic control across vendors and the retrofit path off an orphaned EMS",
+      "Bonding capacity, backlog quality and project-controls record (percentage-of-completion)",
+      "Cost recovery — what the commission will allow into rate base or a customer-specific charge",
+      "Battery type under the UPS — VRLA, lithium, flywheel — minutes of autonomy and float life"
+     ],
+     "a": 2,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Utilities?",
+     "c": [
+      "Storage integrators and containers",
+      "EPC and construction",
+      "Neoclouds",
+      "Capital"
+     ],
+     "a": 2,
+     "why": "Chain position 14 against this segment's 15."
+    },
+    {
+     "q": "The graph records a curated edge from **AEP** to **Dominion Energy**. How is it typed from AEP's side?",
+     "c": [
+      "partner",
+      "supplier",
+      "customer",
+      "competitor"
+     ],
+     "a": 0,
+     "why": "Dominion is AEP's joint-venture partner, with FirstEnergy Transmission, in Valley Link, the vehicle for PJM's 2024-window 765 kV backbone award."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentCapital_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-capital",
+ "type": "module",
+ "title": "Capital",
+ "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-12-31",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:blackstone",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:brookfield",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:digital-realty",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:excelsior-energy-capital",
+    "date": "2026-09-05",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:galaxy-digital",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:macquarie",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mgx",
+    "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:vantage",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "8",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "4",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "1",
+   "v": "challenger",
+   "sub": "contesting that set; 3 adjacent"
+  },
+  {
+   "k": "13",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a contracted platform is worth — the desk above the developer's desk, and increasingly the one that signs the largest transactions in the corpus.",
+    "Chain position 16 of 19 · tier **services** — finances, assures, optimises or insures it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 15)",
+     "Utilities",
+     "demand"
+    ],
+    [
+     "**This segment** (position 16)",
+     "**Capital**",
+     "services"
+    ],
+    [
+     "Downstream (position 17)",
+     "Assurance",
+     "services"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Hyperscalers and AI labs (10 edges) · Neoclouds (5 edges)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "EPC and construction (9 edges) · Storage integrators and containers (5 edges) · In-hall power (4 edges) · Bridge and on-site generation (4 edges) · Software and optimization (4 edges) · Cells and chemistry (3 edges) · Power conversion and rack-power silicon (2 edges) · Grid equipment (2 edges) · Cooling (2 edges) · Utilities (2 edges) · Clean firm and nuclear (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Contracted cash flow — tenant credit, toll length, resource-adequacy terms",
+     "*Who Carries Which Risk* (planned)"
+    ],
+    [
+     "The independent engineer's report and the lender's approved-vendor file",
+     "*The Independent Engineer's Report* (planned)"
+    ],
+    [
+     "Securitizability — ABS-grade collateral, standardized buildings, ring-fenced SPVs",
+     "—"
+    ],
+    [
+     "Platform scale and the exit route (IPO, sale to a strategic, fund-to-fund)",
+     "—"
+    ],
+    [
+     "Regulatory exposure of owning both energy supply and demand",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**Blackstone**",
+     "blackstone",
+     "incumbent",
+     "ecosystemRole: the ecosystem's largest single landlord-by-proxy (QTS) and one of its largest lenders; the largest alternative asset manager by AUM"
+    ],
+    [
+     "**Brookfield**",
+     "brookfield",
+     "incumbent",
+     "ecosystemRole: the ecosystem's most operationally integrated investor — generation, transmission-adjacent assets and data-centre platforms in one franchise; a USD 100bn AI programme"
+    ],
+    [
+     "**Macquarie**",
+     "macquarie",
+     "incumbent",
+     "ecosystemRole: the exemplar of the finite-life infrastructure fund — Aligned from 85 MW to a ~USD 40bn exit; more often a lender than an owner"
+    ],
+    [
+     "**MGX**",
+     "mgx",
+     "incumbent",
+     "ecosystemRole: the sovereign capital behind the largest AI build-outs — Stargate initial equity funder, AIP co-founder, an owner of Aligned and Vantage"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "excelsior-energy-capital",
+     "challenger",
+     "productsAndServices › Closed-end renewable infrastructure funds (Fund I USD 504m, Fund II just over USD 1bn) — a specialist manager beside the giants"
+    ],
+    [
+     "**Digital Realty**",
+     "digital-realty",
+     "adjacent",
+     "productsAndServices › Strategic private capital — funds, joint ventures and fee income: a USD 3.25bn US hyperscale fund with Digital Realty retaining 20 % and the mandate"
+    ],
+    [
+     "**Galaxy Digital**",
+     "galaxy-digital",
+     "adjacent",
+     "productsAndServices › Asset Management and Infrastructure Solutions; Global Markets lending — a digital-asset financial firm that owns a campus"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "vantage",
+     "adjacent",
+     "productsAndServices › Capital-markets franchise (securitization & green finance): the industry's first data-center securitization, 2018"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Blackstone**",
+     "FY2025 · 2025-12-31",
+     "14,450.3",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Brookfield**",
+     "FY2025 · 2025-12-31",
+     "4,817",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "FY2025 · 2025-12-31",
+     "6,113",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Galaxy Digital**",
+     "FY2025 · 2025-12-31",
+     "60,406.7",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "Macquarie, MGX, Excelsior Energy Capital, Vantage Data Centers"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Blackstone**",
+     "**Brookfield**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Blackstone**",
+     "**Digital Realty**",
+     "partner",
+     "historical",
+     "USD 3.5bn for a blended 64% interest; USD 7.8bn gross at 100%",
+     "—"
+    ],
+    [
+     "**Blackstone**",
+     "**Macquarie**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Brookfield**",
+     "**Blackstone**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Brookfield**",
+     "**Digital Realty**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Brookfield**",
+     "**Macquarie**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Blackstone**",
+     "partner",
+     "historical",
+     "USD 3.5bn for a blended 64% interest; USD 7.8bn gross at 100%",
+     "—"
+    ],
+    [
+     "**Digital Realty**",
+     "**Vantage Data Centers**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**MGX**",
+     "**Vantage Data Centers**",
+     "portfolio",
+     "active",
+     "Stargate build-out of 2.3 gigawatts in Texas and Wisconsin",
+     "—"
+    ],
+    [
+     "**Macquarie**",
+     "**Blackstone**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Macquarie**",
+     "**Brookfield**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Macquarie**",
+     "**MGX**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Vantage Data Centers**",
+     "**Digital Realty**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Blackstone**",
+     "Invenergy",
+     "portfolio",
+     "active",
+     "~USD 4bn of equity across 2022-2023",
+     "—"
+    ],
+    [
+     "**Dominion Energy**",
+     "**Vantage Data Centers**",
+     "customer",
+     "active",
+     "—",
+     "Ashburn campuses"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "Invenergy",
+     "other",
+     "historical",
+     "109 MW (90.1% sponsor equity)",
+     "Prairie Breeze II and III"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "Oncor",
+     "other",
+     "active",
+     "170 MWac / 210 MWdc",
+     "Yellow Viking solar"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "Xcel Energy",
+     "other",
+     "active",
+     "21.6 MWdc (17 projects)",
+     "Xcel Energy Community Solar Garden programme (Minnesota)"
+    ],
+    [
+     "**Galaxy Digital**",
+     "AEP",
+     "supplier",
+     "active",
+     "service agreement for the incremental 830 MW; campus total 1.63 GW approved",
+     "—"
+    ],
+    [
+     "**Invenergy**",
+     "**Blackstone**",
+     "investor",
+     "active",
+     "~USD 4bn of equity across 2022-2023",
+     "—"
+    ],
+    [
+     "**MGX**",
+     "NextEra",
+     "other",
+     "active",
+     "—",
+     "AI Infrastructure Partnership (AIP) — agreement with parent NextEra Energy"
+    ]
+   ],
+   "note": "Curated edges among members: 13 · to the neighbouring segments: 8 · derived-only mentions (no curated typing): 5 among members, 1 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-03 — Guilherme Reis appointed Managing Director for Iberia",
+     "sub": "Digital Realty · leadership"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-27 — Ontario Superior Court of Justice grants leave under s.138.8 of the Ontario Securities Act and certifies Banach v. Galaxy Digital Holdings Ltd. as a class proceeding",
+     "sub": "Galaxy Digital · corporate"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-25 — Selected to develop 50 MW of new data centre capacity in Singapore",
+     "sub": "Digital Realty · capacity"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-13 — Reuters exclusive: Vantage explores an IPO at a ~$100B valuation — raising around $10B as soon as 2027 — or a sale; deliberations early-stage, no formal process launched",
+     "sub": "Vantage Data Centers · financial"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-13 — Nebius (NASDAQ: NBIS) signs for high-density NVIDIA capacity at CWL1 Newport — the first announced commercial commitment in the UK's South Wales AI Growth Zone, within Vantage's >1GW Newport/Bridgend/Bro Tathan plan",
+     "sub": "Vantage Data Centers · order-win"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-13 — Databricks closes a USD 5 billion strategic round at a USD 190 billion valuation led by Coatue with Blackstone, MGX, T. Rowe Price accounts and Sixth Street Growth — MGX's fourth Databricks round",
+     "sub": "MGX · financial"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-13 — The Governor of Texas names Galaxy, Compass Datacenters and Montera Infrastructure as committing to comply with his data-centre standards",
+     "sub": "Galaxy Digital · policy"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-10 — NVIDIA names Brookfield one of six capital partners in a programme to mobilise over USD 500bn for AI infrastructure",
+     "sub": "Brookfield · partnership"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-10 — NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure",
+     "sub": "Blackstone · partnership"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-07 — Galaxy issues a statement supporting Governor Abbott's data-centre grid directive, committing Helios to respond to declared emergency conditions as required by SB 6",
+     "sub": "Galaxy Digital · policy"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-07 — Welcomes Governor Abbott's initiative for responsible and transparent data-centre investment in Texas",
+     "sub": "Digital Realty · policy"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-06 — Senator Warren presses Commerce on the UAE's move to Country Group A:5 and the department's stated favourable view of chip and server export applications 'destined for MGX', linking it to a reported USD 500 million UAE-linked investment in World Liberty Financial (CNBC via Incrypted)",
+     "sub": "MGX · regulatory"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "APRA prudential supervision — non-operating holding company structure",
+     "in-effect",
+     "—",
+     "Macquarie"
+    ],
+    [
+     "ASIC enforcement and licence conditions",
+     "in-effect",
+     "2026-03-20",
+     "Macquarie"
+    ],
+    [
+     "Digital-asset securities and commodities regulation (SEC, CFTC)",
+     "in-effect",
+     "—",
+     "Galaxy Digital"
+    ],
+    [
+     "Dual US and Canadian reporting obligations",
+     "in-effect",
+     "2026-03-19",
+     "Galaxy Digital"
+    ],
+    [
+     "EU Energy Efficiency Directive 2023/1791 and Delegated Regulation (EU) 2024/1364 — data-centre reporting",
+     "in-effect",
+     "2026-05-15",
+     "Digital Realty"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026",
+     "Excelsior Energy Capital"
+    ],
+    [
+     "FERC co-location and large-load rules for PJM (Docket EL25-49)",
+     "in-effect",
+     "2025-12-18",
+     "Digital Realty"
+    ],
+    [
+     "GENIUS Act (federal payment-stablecoin framework)",
+     "in-effect",
+     "2025-07",
+     "Galaxy Digital"
+    ],
+    [
+     "Ireland — CRU large energy user connection policy and the EirGrid Dublin constraint",
+     "in-effect",
+     "2025-12",
+     "Digital Realty"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "2024-07",
+     "Excelsior Energy Capital"
+    ],
+    [
+     "Kansas Large Load Power Service tariff",
+     "in-effect",
+     "2026",
+     "Digital Realty"
+    ],
+    [
+     "New York Attorney General settlement — compliance undertakings",
+     "in-effect",
+     "2025-03-27",
+     "Galaxy Digital"
+    ],
+    [
+     "NYDFS BitLicense and state money-transmission licensing",
+     "in-effect",
+     "2026-05-18",
+     "Galaxy Digital"
+    ],
+    [
+     "NYSE controlled-company exemption",
+     "in-effect",
+     "—",
+     "Blackstone"
+    ],
+    [
+     "Port Washington TIF referendum",
+     "in-effect",
+     "2026-04-07",
+     "Vantage Data Centers"
+    ],
+    [
+     "PUCT / ERCOT data-centre verification and audit (Abbott directive)",
+     "in-effect",
+     "2026-08",
+     "Galaxy Digital"
+    ],
+    [
+     "Section 232 tariffs on steel, aluminium and copper derivative articles",
+     "in-effect",
+     "2027-12-31",
+     "Digital Realty"
+    ],
+    [
+     "Senate Banking Committee oversight — data-centre ownership and retail electricity prices",
+     "in-effect",
+     "2026-06-10",
+     "Blackstone, Brookfield"
+    ],
+    [
+     "Singapore data-centre capacity allocation scheme",
+     "in-effect",
+     "—",
+     "Digital Realty"
+    ],
+    [
+     "Texas SB 6 large-load rules and the ERCOT 75 MW threshold",
+     "in-effect",
+     "2025",
+     "Galaxy Digital"
+    ],
+    [
+     "UK AI Growth Zone",
+     "in-effect",
+     "—",
+     "Vantage Data Centers"
+    ],
+    [
+     "US CFIUS / national-security review — TikTok divestiture",
+     "in-effect",
+     "2026-01",
+     "MGX"
+    ],
+    [
+     "US congressional scrutiny — Binance/USD1 and the Trump-family link",
+     "in-effect",
+     "2025-05",
+     "MGX"
+    ],
+    [
+     "US Department of Energy support for Westinghouse AP1000 deployment",
+     "announced",
+     "2026-02-05",
+     "Brookfield"
+    ],
+    [
+     "US export controls — UAE chip access (Country Group A:5, July 2026)",
+     "in-effect",
+     "2026-07",
+     "MGX"
+    ],
+    [
+     "US state data-centre tax exemptions under review — Virginia, Ohio, Georgia, Texas",
+     "proposed",
+     "2026",
+     "Digital Realty"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** Blackstone, Brookfield, Macquarie, MGX, Excelsior Energy Capital, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **Blackstone** in?",
+     "c": [
+      "Software and optimization",
+      "Assurance",
+      "Capital",
+      "Cooling"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: ecosystemRole: the ecosystem's largest single landlord-by-proxy (QTS) and one of its largest lenders; the largest alternative asset manager by AUM"
+    },
+    {
+     "q": "What role does the registry give **Vantage Data Centers** in Capital?",
+     "c": [
+      "incumbent",
+      "adjacent",
+      "challenger"
+     ],
+     "a": 1,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Capital** buy on, per the registry?",
+     "c": [
+      "Contracted cash flow — tenant credit, toll length, resource-adequacy terms",
+      "NVIDIA recommended-vendor status for cold plates and CDUs; leak detection and rack-down behaviour",
+      "Warranty-aware dispatch — the cycle budget and state-of-health visibility",
+      "Firmness and resource adequacy against the plan's need"
+     ],
+     "a": 0,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Capital?",
+     "c": [
+      "Insurance and risk transfer",
+      "Utilities",
+      "Neoclouds",
+      "AIDC developers and landlords"
+     ],
+     "a": 1,
+     "why": "Chain position 15 against this segment's 16."
+    },
+    {
+     "q": "The graph records a curated edge from **Blackstone** to **Brookfield**. How is it typed from Blackstone's side?",
+     "c": [
+      "supplier",
+      "competitor",
+      "partner",
+      "other"
+     ],
+     "a": 1,
+     "why": "Direct peers in infrastructure and digital infrastructure, and counterparties on the pending Aypa Power sale."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentAssurance_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-assurance",
+ "type": "module",
+ "title": "Assurance",
+ "short": "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:black-veatch",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:burns-mcdonnell",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dnv",
+    "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sargent-lundy",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "4",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "2",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "0",
+   "v": "challengers",
+   "sub": "contesting that set; 2 adjacent"
+  },
+  {
+   "k": "7",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every financing passes through and the file every fire marshal, insurer and lender asks for. Advisors and testing-and-certification merged into one segment (INTEGRATED-REMEDIATION-PLAN.md §7.2).",
+    "Chain position 17 of 19 · tier **services** — finances, assures, optimises or insures it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 16)",
+     "Capital",
+     "services"
+    ],
+    [
+     "**This segment** (position 17)",
+     "**Assurance**",
+     "services"
+    ],
+    [
+     "Downstream (position 18)",
+     "Software and optimization",
+     "services"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Clean firm and nuclear (11 edges) · Utilities (9 edges) · Storage integrators and containers (5 edges) · Storage developers and IPPs (5 edges) · Power conversion and rack-power silicon (3 edges) · In-hall power (3 edges) · Cells and chemistry (2 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · Software and optimization (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "none on the record",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Reliance — who may trust the report, and the lender's acceptance of the firm",
+     "*The Independent Engineer's Report* (planned)"
+    ],
+    [
+     "Scope of the technical due diligence and the construction-monitoring sequence",
+     "—"
+    ],
+    [
+     "Laboratory accreditation and the standard the certificate is issued against (UL 9540A, IEC 62040-3, IEC 62443)",
+     "*Listing, Test Method, Code* (planned)"
+    ],
+    [
+     "Authorship of the recommended practice the contract cites",
+     "—"
+    ],
+    [
+     "Turnaround against financial close and the 30/60/90 review calendar",
+     "*The Independent Engineer's Report* (planned)"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**DNV**",
+     "dnv",
+     "incumbent",
+     "ecosystemRole: the seat every financing passes through — the independent engineer lenders and tax-equity investors appoint; also writes the recommended practice and runs the laboratory"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "sargent-lundy",
+     "incumbent",
+     "ecosystemRole: the owner's-engineer counterpart to DNV's lender's-engineer profile — writes the specification the bidders answer, reviews the EPC's 30/60/90 designs, sits as independent engineer when needed"
+    ],
+    [
+     "**Black & Veatch**",
+     "black-veatch",
+     "adjacent",
+     "registry category epc; the independent-engineer seat DNV's dossier names beside it — whether an EPC dossier can stand in for the IE seat is the developer's call (curriculum plan §6, G10)"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "burns-mcdonnell",
+     "adjacent",
+     "productsAndServices › 1898 & Co. (consulting, grid analytics & industrial cybersecurity) — the firm's consulting arm beside the EPC business"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "DNV, Sargent & Lundy, Black & Veatch, Burns & McDonnell"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Black & Veatch**",
+     "**Burns & McDonnell**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Burns & McDonnell**",
+     "**Black & Veatch**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**DNV**",
+     "**Black & Veatch**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DNV**",
+     "**Sargent & Lundy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Black & Veatch**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Burns & McDonnell**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DNV**",
+     "Fluence",
+     "other",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**DNV**",
+     "Prevalon",
+     "customer",
+     "active",
+     "—",
+     "Large-scale fire test — Texas facility"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**Burns & McDonnell**",
+     "other",
+     "historical",
+     "Fort Duncan EPC (for Recurrent Energy)",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "Wärtsilä",
+     "other",
+     "active",
+     "72 MW",
+     "Reciprocating-engine plants engineered by Sargent & Lundy"
+    ]
+   ],
+   "note": "Curated edges among members: 7 · to the neighbouring segments: 4 · derived-only mentions (no curated typing): 1 among members, 4 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-09-04 — TVA presents Sargent & Lundy its 2026 Valley Supplier Award; the relationship 'began in February 1994' with 'no gap in service'",
+     "sub": "Sargent & Lundy · customer"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-27 — NRC issues its environmental assessment and finding of no significant impact for Long Mott Energy (Dow) and X-energy's four-unit Xe-100 plant at Seadrift; Sargent & Lundy prepared the environmental report with WSP and expects the PSAR review 'to be completed by year-end'",
+     "sub": "Sargent & Lundy · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-21 — Sargent & Lundy discusses floating nuclear plants at the NEI/DOE industry day after signing a July MoU with Samsung Heavy Industries for a 'floating small modular reactor standard platform' designed to accept any reactor type",
+     "sub": "Sargent & Lundy · partnership"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-20 — Grid-forming versus grid-following, black start and hybrid dispatch: Sargent & Lundy's storage consultant previews an Intersolar Middle East paper citing Eleven Mile, the UAE BESS, Archtop and the PJM frequency-response battery",
+     "sub": "Sargent & Lundy · market"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-07-28 — Duke Energy names Black & Veatch its 2026 Corporate Responsibility Supplier of the Year, citing BESS, substation, distribution, solar, and telecom work",
+     "sub": "Black & Veatch · Recognition"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-07-23 — Curio engages Sargent & Lundy for siting, environmental, licensing and conceptual design of the NuCycle used-fuel recycling facility",
+     "sub": "Sargent & Lundy · customer"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-07-21 — GreenPowerMonitor and IP Gotion Poland sign an MoU on EMS/SCADA for battery storage in Poland and Central and Eastern Europe",
+     "sub": "DNV · partnership"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-07-20 — Named No. 89 on TIME's inaugural America's Best Private Companies list; the release restates that the firm 'remains privately owned and led by engineers'",
+     "sub": "Sargent & Lundy · corporate"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-07-15 — ENR Sourcebook 2026: Sargent & Lundy No. 1 in nuclear plants, No. 2 in battery storage (from No. 5), No. 3 in fossil fuel, No. 8 in transmission and distribution",
+     "sub": "Sargent & Lundy · market"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-07-08 — Seventh Circuit affirms the $1 nominal-damages verdict on B&V's ~$29.4M Boldt wind-farm counterclaim — and orders a new trial on Boldt's wrongful-termination claim",
+     "sub": "Black & Veatch · Risk"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-06-29 — ENR ranks the firm No. 26 among Top 50 construction managers and No. 56 in CM/PM-for-fee",
+     "sub": "Sargent & Lundy · market"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-06-26 — DNV forecasts a fiftyfold storage surge — half of new solar with batteries by the mid-2030s — and expands the GPM EMS/HEMS line with IEC 62443 and ISO 27001 certification",
+     "sub": "DNV · market"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "DOE Loan Programs Office",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "EU Network Code Requirements for Generators (Regulation 2016/631)",
+     "in-effect",
+     "2016-04",
+     "DNV"
+    ],
+    [
+     "FERC Order 1920 (long-term transmission planning) and Order 1000",
+     "in-effect",
+     "2024-05",
+     "Sargent & Lundy"
+    ],
+    [
+     "FERC Order 845 — interconnection queue modifications",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "Inflation Reduction Act ITC/PTC (as amended in 2025)",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "NERC large-load reliability standards (Large Loads Task Force)",
+     "proposed",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "NFPA 855 / UL 9540A",
+     "in-effect",
+     "—",
+     "DNV"
+    ],
+    [
+     "Norway Transparency Act",
+     "in-effect",
+     "—",
+     "DNV"
+    ],
+    [
+     "NRC 10 CFR Part 50 construction permits (advanced reactors)",
+     "in-effect",
+     "—",
+     "Sargent & Lundy"
+    ],
+    [
+     "US sanctions — Protecting Europe's Energy Security Act (PEESA)",
+     "in-effect",
+     "2020-12",
+     "DNV"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *Listing, Test Method, Code* (planned) · *The Independent Engineer's Report* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** DNV, Sargent & Lundy, Black & Veatch, Burns & McDonnell — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **DNV** in (among others)?",
+     "c": [
+      "Assurance",
+      "Capital",
+      "Neoclouds",
+      "Insurance and risk transfer"
+     ],
+     "a": 0,
+     "why": "The registry's basis line: ecosystemRole: the seat every financing passes through — the independent engineer lenders and tax-equity investors appoint; also writes the recommended practice and runs the laboratory"
+    },
+    {
+     "q": "What role does the registry give **Burns & McDonnell** in Assurance?",
+     "c": [
+      "challenger",
+      "incumbent",
+      "adjacent"
+     ],
+     "a": 2,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Assurance** buy on, per the registry?",
+     "c": [
+      "Bonding capacity, backlog quality and project-controls record (percentage-of-completion)",
+      "Rack density (kW) and the NVLink domain the rack forms",
+      "Reliance — who may trust the report, and the lender's acceptance of the firm",
+      "Reference architecture and the qualified power and cooling vendor set"
+     ],
+     "a": 2,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Assurance?",
+     "c": [
+      "Software and optimization",
+      "Clean firm and nuclear",
+      "AIDC developers and landlords",
+      "Capital"
+     ],
+     "a": 3,
+     "why": "Chain position 16 against this segment's 17."
+    },
+    {
+     "q": "The graph records a curated edge from **Black & Veatch** to **Burns & McDonnell**. How is it typed from Black & Veatch's side?",
+     "c": [
+      "partner",
+      "competitor",
+      "other",
+      "customer"
+     ],
+     "a": 1,
+     "why": "The other Kansas City utility-side data-center specialist — sells a similar client-owned-substation and interconnection-speed thesis from across town."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentSoftwareAndOptimization_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-software-and-optimization",
+ "type": "module",
+ "title": "Software and optimization",
+ "short": "The energy-management, controls, asset-performance and market-bidding software that decides what a storage plant earns — the site controller, the fleet…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:canadian-solar",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dnv",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:enchanted-rock",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:engie-north-america",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:flexgen",
+    "date": "2026-09-05",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluence",
+    "date": "2026-09-06",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:form-energy",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hunt-energy-network",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hyperstrong",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nrg-energy",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:prevalon",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:rolls-royce-power-systems",
+    "date": "2026-09-04",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:schneider-electric",
+    "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tesla",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:wartsila",
+    "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:zhonhen",
+    "date": "2026-09-08",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "16",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "1",
+   "v": "incumbent",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "1",
+   "v": "challenger",
+   "sub": "contesting that set; 14 adjacent"
+  },
+  {
+   "k": "18",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The energy-management, controls, asset-performance and market-bidding software that decides what a storage plant earns — the site controller, the fleet optimiser, the trading desk sold as a service, and the digital layer over the grid and the building. A new segment at S0; the pure-play optimizers arrive with S3.",
+    "Chain position 18 of 19 · tier **services** — finances, assures, optimises or insures it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 17)",
+     "Assurance",
+     "services"
+    ],
+    [
+     "**This segment** (position 18)",
+     "**Software and optimization**",
+     "services"
+    ],
+    [
+     "Downstream (position 19)",
+     "Insurance and risk transfer",
+     "services"
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "Storage developers and IPPs (22 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Clean firm and nuclear (8 edges) · Utilities (8 edges) · Storage integrators and containers (4 edges) · Capital (4 edges) · Neoclouds (3 edges) · Cells and chemistry (2 edges) · Power conversion and rack-power silicon (2 edges) · EPC and construction (2 edges) · In-hall power (1 edge)",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "Cells and chemistry (21 edges) · Storage integrators and containers (15 edges) · In-hall power (13 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Storage developers and IPPs (3 edges) · Bridge and on-site generation (2 edges) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Utilities (1 edge)",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Hardware-agnostic control across vendors and the retrofit path off an orphaned EMS",
+     "*The Control Stack: BMS, PCS, EMS — Who Decides What*"
+    ],
+    [
+     "Forecast and bidding performance in the market the asset lives in",
+     "*The Control Stack: BMS, PCS, EMS — Who Decides What*"
+    ],
+    [
+     "Warranty-aware dispatch — the cycle budget and state-of-health visibility",
+     "*The Control Stack: BMS, PCS, EMS — Who Decides What*"
+    ],
+    [
+     "Cybersecurity certification (IEC 62443, NERC CIP)",
+     "—"
+    ],
+    [
+     "Fleet scale under management and the QSE or scheduling-entity service behind it",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "**FlexGen**",
+     "flexgen",
+     "incumbent",
+     "registry tagline: software-first US BESS integrator (HybridOS EMS); 25+ GWh across 200+ systems under software and services; hardware-agnostic site controls"
+    ],
+    [
+     "**Fluence**",
+     "fluence",
+     "challenger",
+     "productsAndServices › Mosaic (AI-enabled market bidding) and Nispera (asset performance management, multi-OEM) — software lines sold beyond its own hardware"
+    ],
+    [
+     "**Canadian Solar**",
+     "canadian-solar",
+     "adjacent",
+     "productsAndServices › EQ-S EMS bundled with PCS in turnkey scope"
+    ],
+    [
+     "**DNV**",
+     "dnv",
+     "adjacent",
+     "productsAndServices › GreenPowerMonitor and Veracity — SCADA, monitoring and energy management for solar, wind and battery portfolios"
+    ],
+    [
+     "**ERock**",
+     "enchanted-rock",
+     "adjacent",
+     "productsAndServices › GraniteEcosystem software + ERCOT VPP operations"
+    ],
+    [
+     "**ENGIE North America**",
+     "engie-north-america",
+     "adjacent",
+     "productsAndServices › ENGIE Energy Marketing NA — wholesale marketing and asset optimisation across seven markets"
+    ],
+    [
+     "**Form Energy**",
+     "form-energy",
+     "adjacent",
+     "productsAndServices › Formware — technology-neutral resource-adequacy and investment model"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "hunt-energy-network",
+     "adjacent",
+     "productsAndServices › TraDER — QSE and optimisation platform, in-house and marketed to third-party owners"
+    ],
+    [
+     "**HyperStrong**",
+     "hyperstrong",
+     "adjacent",
+     "productsAndServices › AI operations stack (HyperStrong AI Platform, HyperGenie) — station optimisation and fault diagnosis"
+    ],
+    [
+     "**NRG Energy**",
+     "nrg-energy",
+     "adjacent",
+     "productsAndServices › Demand response and virtual power plants — CPower, ~6 GW"
+    ],
+    [
+     "**Prevalon**",
+     "prevalon",
+     "adjacent",
+     "productsAndServices › insightOS EMS — US-designed, IEC 62443-4-1 certified plant-level control"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "rolls-royce-power-systems",
+     "adjacent",
+     "productsAndServices › mtu EnergetIQ — microgrid and BESS control"
+    ],
+    [
+     "**Schneider Electric**",
+     "schneider-electric",
+     "adjacent",
+     "productsAndServices › Software & grid digital layer (AVEVA, ETAP, AiDASH) and DCIM"
+    ],
+    [
+     "**Tesla**",
+     "tesla",
+     "adjacent",
+     "productsAndServices › Autobidder & Opticaster — real-time trading and control for storage fleets"
+    ],
+    [
+     "**Wärtsilä**",
+     "wartsila",
+     "adjacent",
+     "productsAndServices › GEMS Digital Energy Platform — energy-management and optimisation from cell to fleet; first IEC 62443 certification in the industry"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "zhonhen",
+     "adjacent",
+     "productsAndServices › Power digitalization software (Beijing Zhonhen Borui) — power-market trading and virtual power plants"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "**Fluence**",
+     "FY2025 · 2025-09-30",
+     "2,300",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Canadian Solar**",
+     "FY2025 · 2025-12-31",
+     "5,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**ERock**",
+     "FY2025 · 2025-12-31",
+     "183.1",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**NRG Energy**",
+     "FY2025 · 2025-12-31",
+     "30,713",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Schneider Electric**",
+     "FY2025 · 2025-12-31",
+     "45,393.6",
+     "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Tesla**",
+     "FY2025 · 2025-12-31",
+     "94,830",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "FY2025 · 2025-12-31",
+     "297.3",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "FlexGen, DNV, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, Prevalon, Rolls-Royce Power Systems, Wärtsilä"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "**Canadian Solar**",
+     "**Fluence**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank 4.0"
+    ],
+    [
+     "**Canadian Solar**",
+     "**HyperStrong**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank 4.0"
+    ],
+    [
+     "**Canadian Solar**",
+     "**Tesla**",
+     "competitor",
+     "—",
+     "—",
+     "SolBank"
+    ],
+    [
+     "**DNV**",
+     "**Fluence**",
+     "other",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**DNV**",
+     "**Prevalon**",
+     "customer",
+     "active",
+     "—",
+     "Large-scale fire test — Texas facility"
+    ],
+    [
+     "**ENGIE North America**",
+     "**Hunt Energy Network**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**FlexGen**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Fluence**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**Canadian Solar**",
+     "supplier",
+     "active",
+     "Fort Duncan 100 MW / 200 MWh (operating asset purchased from Recurrent Energy)",
+     "e-STORAGE batteries (installed by the seller)"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "**ENGIE North America**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Prevalon**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "10 GWh shared domestic-cell route",
+     "—"
+    ],
+    [
+     "**Prevalon**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "HD5 AC"
+    ],
+    [
+     "**Prevalon**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "—",
+     "HD5 AC"
+    ],
+    [
+     "**Rolls-Royce Power Systems**",
+     "**Wärtsilä**",
+     "competitor",
+     "active",
+     "Wartsila 790 MW Texas data-center order, April 2026",
+     "Behind-the-meter prime power"
+    ],
+    [
+     "**Tesla**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Wärtsilä**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Wärtsilä**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "Quantum3"
+    ],
+    [
+     "**DNV**",
+     "Black & Veatch",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DNV**",
+     "Sargent & Lundy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "Burns & McDonnell",
+     "other",
+     "historical",
+     "Fort Duncan EPC (for Recurrent Energy)",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Sargent & Lundy**",
+     "**Wärtsilä**",
+     "other",
+     "active",
+     "72 MW",
+     "Reciprocating-engine plants engineered by Sargent & Lundy"
+    ]
+   ],
+   "note": "Curated edges among members: 18 · to the neighbouring segments: 5 · derived-only mentions (no curated typing): 4 among members, 2 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
+     "sub": "Rolls-Royce Power Systems · product-launch"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
+     "sub": "Zhonhen Electric · financial"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
+     "sub": "NRG Energy · market"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
+     "sub": "Zhonhen Electric · other"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-18 — ENGIE and QTS extend their Texas partnership: 48 MWac of ABEI Energy's ~61 MWac Lubio Solar (Kaufman County) to QTS's Irving data centres, ~150 GWh a year, with retail supply and energy management bundled",
+     "sub": "ENGIE North America · customer"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-15 — CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed",
+     "sub": "Zhonhen Electric · corporate"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-14 — CATL signs definitive agreements: RMB 4.099B (RMB 3.512B cash + a 49% stake in Times Tianyuan valued RMB 588M) for 49% of controlling holdco Zhonhen Technology Investment; Zhu Guoding remains actual controller (35.7% of holdco post-deal, wife Bao Xiaoru 15.3%); same-day strategic cooperation across computing-power infrastructure, charging/swap and power trading",
+     "sub": "Zhonhen Electric · financial"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-13 — CNBC/BofA frame EROC as 'a play on the Anthropic IPO'; Buy reiterated",
+     "sub": "ERock · market"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-12 — EGM approves the third employee stock ownership plan: up to RMB 40M, ≤40 participants, buyback shares at RMB 21.79 (half the market average), with unlock hurdles of revenue +30%/+70%/+120% vs FY2025 (or profit alternatives) across 2026–2028",
+     "sub": "Zhonhen Electric · other"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-12 — 33 mtu engines ordered for the modernisation of the Korean freight locomotive fleet",
+     "sub": "Rolls-Royce Power Systems · order-win"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-12 — Series G raises $750m led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new; total equity raised passes $2bn and the backlog is stated as having grown from about 20 GWh to about 80 GWh",
+     "sub": "Form Energy · financial"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-12 — Navneet Govil joins as Chief Financial Officer from SoftBank Investment Advisers, and Wes Sloan as Chief Operating Officer from Panasonic Energy North America",
+     "sub": "Form Energy · leadership"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "Beginning-of-construction safe harbor (IRS Notice 2025-42)",
+     "in-effect",
+     "2025-08",
+     "ENGIE North America"
+    ],
+    [
+     "Cybersecurity regulation (IEC 62443 / NIS2)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "ERCOT market design and ancillary-services procurement",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "ERCOT market design — real-time co-optimisation with batteries",
+     "in-effect",
+     "2025-12-05",
+     "NRG Energy"
+    ],
+    [
+     "ERCOT RTC+B and ancillary-service redesign",
+     "in-effect",
+     "2025-12-05",
+     "Hunt Energy Network"
+    ],
+    [
+     "EU Network Code Requirements for Generators (Regulation 2016/631)",
+     "in-effect",
+     "2016-04",
+     "DNV"
+    ],
+    [
+     "EU Stage V",
+     "proposed",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "Federal energy demonstration funding",
+     "in-effect",
+     "2024-09-20",
+     "Form Energy"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "Canadian Solar, ERock, Fluence, Hunt Energy Network, HyperStrong, Tesla, Wärtsilä"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01",
+     "Prevalon"
+    ],
+    [
+     "FERC review of the LS Power acquisition (Federal Power Act section 203)",
+     "expired",
+     "2025-11-14",
+     "NRG Energy"
+    ],
+    [
+     "German grid code VDE-AR-N 4110",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "German Power Plant Strategy",
+     "announced",
+     "2026-02",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "IRA domestic content bonus",
+     "in-effect",
+     "—",
+     "Canadian Solar"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "Fluence, Form Energy, Hunt Energy Network"
+    ],
+    [
+     "ITC/45X (One Big Beautiful Bill Act phase-out)",
+     "in-effect",
+     "2025-07-04",
+     "ENGIE North America"
+    ],
+    [
+     "NDAA 889 / Entity List",
+     "in-effect",
+     "—",
+     "Schneider Electric"
+    ],
+    [
+     "New York Public Service Commission consumer settlement (Case 25-M-0516)",
+     "in-effect",
+     "2026-04-16",
+     "NRG Energy"
+    ],
+    [
+     "NFPA 110 and NFPA 855",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "NFPA 855 / UL 9540A",
+     "in-effect",
+     "—",
+     "DNV"
+    ],
+    [
+     "Norway Transparency Act",
+     "in-effect",
+     "—",
+     "DNV"
+    ],
+    [
+     "Offshore wind leasing suspension and lease relinquishment",
+     "in-effect",
+     "2026-04-28",
+     "ENGIE North America"
+    ],
+    [
+     "Renewable fuel approvals (EN 15940 / HVO)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "Retail supply regulation (state PUCs)",
+     "in-effect",
+     "—",
+     "ENGIE North America"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "—",
+     "Canadian Solar"
+    ],
+    [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01",
+     "Prevalon"
+    ],
+    [
+     "State utility cost recovery",
+     "in-effect",
+     "2023-07-06",
+     "Form Energy"
+    ],
+    [
+     "Texas distribution wholesale tariffs (PUCT rate cases)",
+     "in-effect",
+     "—",
+     "Hunt Energy Network"
+    ],
+    [
+     "Texas Energy Fund (Senate Bills 2627 and 2268)",
+     "in-effect",
+     "2023",
+     "NRG Energy"
+    ],
+    [
+     "Texas large-load interconnection pause and PUCT verification (August 2026)",
+     "in-effect",
+     "2026-08-03",
+     "NRG Energy"
+    ],
+    [
+     "Uptime Institute Tier standards",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "US air-quality permitting",
+     "in-effect",
+     "—",
+     "ERock"
+    ],
+    [
+     "US EPA stationary emissions tiers (40 CFR 60)",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems"
+    ],
+    [
+     "US import tariffs",
+     "in-effect",
+     "—",
+     "Rolls-Royce Power Systems, Schneider Electric"
+    ],
+    [
+     "US sanctions — Protecting Europe's Energy Security Act (PEESA)",
+     "in-effect",
+     "2020-12",
+     "DNV"
+    ],
+    [
+     "US–China battery tariffs",
+     "in-effect",
+     "—",
+     "Fluence, Tesla, Wärtsilä"
+    ],
+    [
+     "West Virginia incentive package",
+     "in-effect",
+     "2022-12-22",
+     "Form Energy"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The Control Stack: BMS, PCS, EMS — Who Decides What* · *Who Carries Which Risk* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** FlexGen, Fluence, Canadian Solar, DNV, ERock, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, NRG Energy, Prevalon, Rolls-Royce Power Systems, Schneider Electric, Tesla, Wärtsilä, Zhonhen Electric — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which segment does the registry place **FlexGen** in (among others)?",
+     "c": [
+      "Storage developers and IPPs",
+      "Insurance and risk transfer",
+      "Software and optimization",
+      "In-hall power"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: registry tagline: software-first US BESS integrator (HybridOS EMS); 25+ GWh across 200+ systems under software and services; hardware-agnostic site controls"
+    },
+    {
+     "q": "What role does the registry give **Zhonhen Electric** in Software and optimization?",
+     "c": [
+      "adjacent",
+      "challenger",
+      "incumbent"
+     ],
+     "a": 0,
+     "why": "adjacent — The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members appear in a segment lesson's player table under their own heading and never count toward the floor rule's incumbent or challenger."
+    },
+    {
+     "q": "Which of these is a criterion buyers in **Software and optimization** buy on, per the registry?",
+     "c": [
+      "NVIDIA recommended-vendor status for cold plates and CDUs; leak detection and rack-down behaviour",
+      "Hardware-agnostic control across vendors and the retrofit path off an orphaned EMS",
+      "Cycle life and calendar life against the warranty curve",
+      "Patent position on bus conversion and vertical power delivery"
+     ],
+     "a": 1,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Software and optimization?",
+     "c": [
+      "Capital",
+      "Cells and chemistry",
+      "Storage integrators and containers",
+      "Assurance"
+     ],
+     "a": 3,
+     "why": "Chain position 17 against this segment's 18."
+    },
+    {
+     "q": "The graph records a curated edge from **Canadian Solar** to **Fluence**. How is it typed from Canadian Solar's side?",
+     "c": [
+      "other",
+      "investor",
+      "competitor",
+      "portfolio"
+     ],
+     "a": 2,
+     "why": "Smartstack's 7.5–10 MWh skid is among the 6+ MWh blocks SolBank 4.0 was launched to match."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSegmentInsuranceAndRiskTransfer_() {
+  return {
+ "schemaVersion": 1,
+ "id": "segment-insurance-and-risk-transfer",
+ "type": "module",
+ "title": "Insurance and risk transfer",
+ "short": "The brokers, insurers and risk-analytics firms that price and carry the risks a financing cannot hold — property and business interruption, delay-in-start-up…",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "curated edges among members and to the neighbouring segments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "0",
+   "v": "members on record",
+   "sub": "companies with a dossier placed here"
+  },
+  {
+   "k": "0",
+   "v": "incumbents",
+   "sub": "the established leading set, per the dossiers"
+  },
+  {
+   "k": "0",
+   "v": "challengers",
+   "sub": "contesting that set; 0 adjacent"
+  },
+  {
+   "k": "0",
+   "v": "curated edges",
+   "sub": "among the members, in the relationship graph"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-segment",
+   "title": "The segment",
+   "kind": "prose",
+   "read": "1 min",
+   "ps": [
+    "The brokers, insurers and risk-analytics firms that price and carry the risks a financing cannot hold — property and business interruption, delay-in-start-up, warranty wraps and revenue puts — and whose underwriting decides how a fire record prices into the next project. A new segment at S0 closing the G10 residual; no covered company holds a position here yet.",
+    "Chain position 19 of 19 · tier **services** — finances, assures, optimises or insures it."
+   ]
+  },
+  {
+   "id": "where-it-sits",
+   "title": "Where it sits in the chain",
+   "kind": "table",
+   "read": "1 min",
+   "cols": [
+    "Link",
+    "Segment",
+    "Tier"
+   ],
+   "rows": [
+    [
+     "Upstream (position 18)",
+     "Software and optimization",
+     "services"
+    ],
+    [
+     "**This segment** (position 19)",
+     "**Insurance and risk transfer**",
+     "services"
+    ],
+    [
+     "Downstream",
+     "— (last link in the chain)",
+     ""
+    ],
+    [
+     "Buyers on the record (curated customer / supplier edges)",
+     "none on the record",
+     "who buys what this segment makes or does"
+    ],
+    [
+     "Suppliers on the record (curated customer / supplier edges)",
+     "none on the record",
+     "who this segment buys from"
+    ]
+   ]
+  },
+  {
+   "id": "what-is-bought-and-on-what",
+   "title": "What is bought here, and on what",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Buying criterion",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Premium and deductible against the technology's loss record (legacy indoor NMC vs modern outdoor LFP)",
+     "*The Independent Engineer's Report* (planned)"
+    ],
+    [
+     "Delay-in-start-up and business-interruption cover on the schedule the lender assumes",
+     "*The Independent Engineer's Report* (planned)"
+    ],
+    [
+     "Warranty wrap or revenue put that substitutes for a supplier's balance sheet",
+     "*Who Carries Which Risk* (planned)"
+    ],
+    [
+     "Data behind the underwriting — degradation, fire incidents, performance history",
+     "—"
+    ],
+    [
+     "Broker access to capacity in a hardening market",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "the-players",
+   "title": "The players",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Grouped incumbent → challenger → adjacent. The basis is the line in the company's own dossier that places it here; the dossier column is the identity the roster deck and the dossier link key on.",
+   "cols": [
+    "Company",
+    "Dossier",
+    "Role",
+    "Basis (the dossier's own line)"
+   ],
+   "rows": [
+    [
+     "—",
+     "—",
+     "—",
+     "No member on record — the segment starts empty and fills as dossiers land"
+    ]
+   ]
+  },
+  {
+   "id": "the-numbers",
+   "title": "The numbers on record",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Only the dossiers' normalized annual figures — revenue in USD millions with its stated FX basis, and the physical KPIs in their own units. A company without a normalized figure is listed as such, never estimated.",
+   "cols": [
+    "Company",
+    "Period",
+    "Revenue (USD m)",
+    "FX basis",
+    "GWh shipped",
+    "Backlog (GWh)",
+    "MW energized",
+    "MW contracted"
+   ],
+   "rows": [
+    [
+     "—",
+     "No member carries a normalized figure for this period",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "—"
+    ]
+   ]
+  },
+  {
+   "id": "who-is-connected",
+   "title": "Who is connected to whom",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The relationship graph as it stands: curated edges among the members first, then curated edges from a member to the segments one link up or down. Bold names are members of this segment; the type is the edge as typed from the first company's side.",
+   "cols": [
+    "From",
+    "To",
+    "Type",
+    "Status",
+    "Scale",
+    "Via"
+   ],
+   "rows": [
+    [
+     "—",
+     "—",
+     "No curated edge among the members or to the neighbouring segments",
+     "—",
+     "—",
+     "—"
+    ]
+   ],
+   "note": "Curated edges among members: 0 · to the neighbouring segments: 0 · derived-only mentions (no curated typing): 0 among members, 0 to the neighbours."
+  },
+  {
+   "id": "what-moved",
+   "title": "What moved",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The newest dated developments across the members' dossiers, most recent first, capped at 12. The number is the order, not the calendar; the provenance strip says when each dossier was read.",
+   "lanes": {
+    "record": "On the record"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "record",
+     "label": "No dated development on record",
+     "sub": "The members' dossiers carry no dated development yet"
+    }
+   ]
+  },
+  {
+   "id": "the-fence",
+   "title": "The policy fence",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every policy regime a member's dossier records as bearing on it, with the dossier's own status and effective date. The nearest future date here sets this lesson's review date.",
+   "cols": [
+    "Regime",
+    "Status",
+    "Effective",
+    "Members exposed"
+   ],
+   "rows": [
+    [
+     "—",
+     "—",
+     "—",
+     "No member's dossier records a policy exposure"
+    ]
+   ]
+  },
+  {
+   "id": "read-next",
+   "title": "Read next",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* (planned).",
+    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Study guides:** none yet — each member's dossier carries one in Profiler."
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "2 questions",
+   "items": [
+    {
+     "q": "Which of these is a criterion buyers in **Insurance and risk transfer** buy on, per the registry?",
+     "c": [
+      "Fleet scale under management and the QSE or scheduling-entity service behind it",
+      "Reliance — who may trust the report, and the lender's acceptance of the firm",
+      "Dual-sourcing and geography of the two suppliers chosen per project",
+      "Premium and deductible against the technology's loss record (legacy indoor NMC vs modern outdoor LFP)"
+     ],
+     "a": 3,
+     "why": "It is the first criterion the registry lists for this segment; the others belong to other links of the chain."
+    },
+    {
+     "q": "Which segment sits one link **upstream** of Insurance and risk transfer?",
+     "c": [
+      "Power conversion and rack-power silicon",
+      "Bridge and on-site generation",
+      "Software and optimization",
+      "In-hall power"
+     ],
+     "a": 2,
+     "why": "Chain position 18 against this segment's 19."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -4087,6 +31304,70 @@ function clTrackAidcCampus_() {
 };
 }
 
+function clTrackValueChainMakers_() {
+  return {
+ "schemaVersion": 1,
+ "id": "value-chain-makers",
+ "title": "The Value Chain I — Who Makes It",
+ "short": "Finish this and you can read the relationship graph, and say who makes the cell, the container and the converter and on what each is bought.",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "lessons": [
+  "segment-cells-and-chemistry",
+  "segment-storage-integrators-and-containers",
+  "segment-power-conversion-and-rack-power-silicon"
+ ]
+};
+}
+
+function clTrackValueChainBuilders_() {
+  return {
+ "schemaVersion": 1,
+ "id": "value-chain-builders",
+ "title": "The Value Chain II — Who Builds and Powers It",
+ "short": "Finish this and you can say who connects it, powers it, cools it and builds it, and who sets the calendar.",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "lessons": [
+  "segment-grid-equipment",
+  "segment-in-hall-power",
+  "segment-bridge-and-on-site-generation",
+  "segment-clean-firm-and-nuclear",
+  "segment-cooling",
+  "segment-compute-and-the-rack",
+  "segment-epc-and-construction"
+ ],
+ "prereqs": [
+  "value-chain-makers"
+ ]
+};
+}
+
+function clTrackValueChainBuyersAndBackers_() {
+  return {
+ "schemaVersion": 1,
+ "id": "value-chain-buyers-and-backers",
+ "title": "The Value Chain III — Who Buys It and Who Backs It",
+ "short": "Finish this and you can say who buys it, who backs it, who assures it, who optimises it and who insures it — and which desk signs.",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "lessons": [
+  "segment-storage-developers-and-ipps",
+  "segment-aidc-developers-and-landlords",
+  "segment-hyperscalers-and-ai-labs",
+  "segment-neoclouds",
+  "segment-utilities",
+  "segment-capital",
+  "segment-assurance",
+  "segment-software-and-optimization",
+  "segment-insurance-and-risk-transfer"
+ ],
+ "prereqs": [
+  "value-chain-makers"
+ ]
+};
+}
+
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -4095,10 +31376,32 @@ function clLessons_() {
   return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
           clLessonTheFenceLine_(), clLessonBridgePower_(), clLessonAidcPowerChain_(),
           clLessonHeatConstraint_(), clLessonEightHundredVdcShift_(),
-          clLessonControlStack_(), clLessonWhereBessPlugsIn_()];
+          clLessonControlStack_(), clLessonWhereBessPlugsIn_(),
+          clLessonSegmentCellsAndChemistry_(),
+          clLessonSegmentStorageIntegratorsAndContainers_(),
+          clLessonSegmentPowerConversionAndRackPowerSilicon_(),
+          clLessonSegmentGridEquipment_(),
+          clLessonSegmentInHallPower_(),
+          clLessonSegmentBridgeAndOnSiteGeneration_(),
+          clLessonSegmentCleanFirmAndNuclear_(),
+          clLessonSegmentCooling_(),
+          clLessonSegmentComputeAndTheRack_(),
+          clLessonSegmentEpcAndConstruction_(),
+          clLessonSegmentStorageDevelopersAndIpps_(),
+          clLessonSegmentAidcDevelopersAndLandlords_(),
+          clLessonSegmentHyperscalersAndAiLabs_(),
+          clLessonSegmentNeoclouds_(),
+          clLessonSegmentUtilities_(),
+          clLessonSegmentCapital_(),
+          clLessonSegmentAssurance_(),
+          clLessonSegmentSoftwareAndOptimization_(),
+          clLessonSegmentInsuranceAndRiskTransfer_()];
 }
 function clTracks_() {
-  return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_()];
+  return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_(),
+          clTrackValueChainMakers_(),
+          clTrackValueChainBuilders_(),
+          clTrackValueChainBuyersAndBackers_()];
 }
 // CONTENT END — below here the gate derivation is frozen for pipeline runs
 function clLesson_(id) {

@@ -28,10 +28,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 GS = ROOT / "googleAppsScripts" / "Classroom" / "Classroom.gs"
 CONCEPTS = ROOT / "live-site-pages" / "profiler-data" / "profiler-concepts.json"
+SEGMENTS = ROOT / "live-site-pages" / "profiler-data" / "profiler-segments.json"
+SEGMENT_SECTION_IDS = ["the-segment", "where-it-sits", "what-is-bought-and-on-what", "the-players",
+                       "the-numbers", "who-is-connected", "what-moved", "the-fence", "read-next",
+                       "check-yourself"]   # build-classroom-segments.py SECTION_IDS — fixed for life
 
 SECTION_KINDS = {"prose", "callout", "table", "proscons", "timeline", "bars",
                  "flashcards", "quiz", "ledger"}
-LANES = {"Technology Foundations", "The AI Data-Center Wave", "Market Access & Bankability"}
+LANES = {"Technology Foundations", "The AI Data-Center Wave", "Market Access & Bankability",
+         "The Value Chain"}   # the fourth lane — the segment layer (curriculum plan §10.5, S1)
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")            # CL_ID_RE
 REF_RE = re.compile(r"^([a-z]+):([A-Za-z0-9][A-Za-z0-9._-]{0,127})$")  # CL_REF_RE
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -342,6 +347,63 @@ def check_track(track, tag, lessons_by_id, schema_ver):
     for pid in track.get("prereqs") or []:
         if not isinstance(pid, str):
             err("%s: prereqs must be track ids" % tag)
+
+
+def check_segment_lessons(lessons_by_id):
+    """A generated `segment-<id>` lesson that drifted from its registry is an
+    error (CLASSROOM-CURRICULUM-PLAN.md §10.9): the ten section ids present in
+    order, its `profile:` inputs equal to the registry's member set for that
+    segment exactly, and the-players rows equal to the members. The generator
+    (scripts/build-classroom-segments.py) is the only thing that writes these
+    literals — a hand edit, a stale regeneration or a registry change without a
+    rerun all land here. Registered segments with no lesson yet are the health
+    script's finding, not this checker's."""
+    try:
+        reg = json.loads(SEGMENTS.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        if any(str(k).startswith("segment-") for k in lessons_by_id):
+            err("cannot read %s (%s) — segment lessons cannot be checked" % (SEGMENTS.name, e))
+        return
+    by_id = {s["id"]: s for s in reg.get("segments") or []}
+    for lid, lesson in sorted(lessons_by_id.items(), key=lambda kv: str(kv[0])):
+        if not str(lid).startswith("segment-"):
+            continue
+        tag = "segment lesson %s" % lid
+        seg = by_id.get(str(lid)[len("segment-"):])
+        if seg is None:
+            err("%s: no segment with that id in %s — a retired segment's lesson stays, but its "
+                "registry entry must too" % (tag, SEGMENTS.name))
+            continue
+        ids = [s.get("id") for s in lesson.get("sections") or [] if isinstance(s, dict)]
+        if ids != SEGMENT_SECTION_IDS:
+            err("%s: sections must be exactly %s in order, got %s" % (tag, SEGMENT_SECTION_IDS, ids))
+        members = sorted(m["slug"] for m in seg.get("members") or [])
+        refs = sorted(str(i.get("ref", ""))[len("profile:"):]
+                      for i in (lesson.get("provenance") or {}).get("inputs") or []
+                      if isinstance(i, dict) and str(i.get("ref", "")).startswith("profile:"))
+        if refs != members:
+            err("%s: profile: inputs %s do not equal the registry's members %s — regenerate "
+                "(python3 scripts/build-classroom-segments.py --segment %s)" % (tag, refs, members, seg["id"]))
+        players = next((s for s in lesson.get("sections") or []
+                        if isinstance(s, dict) and s.get("id") == "the-players"), None)
+        rows = players.get("rows") if isinstance(players, dict) else None
+        if isinstance(rows, list):
+            slugs = sorted(str(r[1]) for r in rows if isinstance(r, list) and len(r) >= 3 and r[1] != "—")
+            roles = {str(r[1]): str(r[2]) for r in rows if isinstance(r, list) and len(r) >= 3}
+            if slugs != members:
+                err("%s: the-players rows %s do not equal the registry's members %s" % (tag, slugs, members))
+            for m in seg.get("members") or []:
+                if roles.get(m["slug"]) not in (None, m.get("role")):
+                    err("%s: the-players gives %s role %r, the registry says %r"
+                        % (tag, m["slug"], roles.get(m["slug"]), m.get("role")))
+        else:
+            err("%s: the-players table has no rows[]" % tag)
+        if lesson.get("group") != "The Value Chain":
+            err("%s: group must be 'The Value Chain'" % tag)
+        kinds = {str(i.get("kind")) for i in (lesson.get("provenance") or {}).get("inputs") or [] if isinstance(i, dict)}
+        if kinds - {"public"}:
+            err("%s: a segment lesson's inputs are all public (found %s) — judgment belongs in the landscape module"
+                % (tag, sorted(kinds - {"public"})))
 
 
 def check_prereq_cycles(tracks_by_id):
@@ -750,6 +812,7 @@ def main():
             err("%s: duplicate track id %r" % (tag, tid))
         tracks_by_id[tid] = t
     check_prereq_cycles(tracks_by_id)
+    check_segment_lessons(lessons_by_id)
     cases = run_gate_truth_table(src) or 0
     return finish(len(lessons), len(tracks), cases)
 

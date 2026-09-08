@@ -16,6 +16,8 @@ Fields synced per company:
     srcTotal     — number of cited sources
     srcFirstPct  — first-party share (company + disclosure), percent, rounded
     kpiNorm      — true when a schema-v4 normalized annual revenue exists
+    segments     — [{id, role}] mirror of profiler-segments.json, in the registry's
+                   segment order (S1, 2026-09-08 — PROFILER-SCHEMA.md → companies[].segments[])
 
 It also asserts a REFRESH-CALENDAR BIJECTION: every active company on the roster
 has a row in repository-information/profiler-refresh-calendar.json, and every row
@@ -39,6 +41,7 @@ import json, sys, re
 REG_PATH = 'live-site-pages/profiler-data/profiler-companies.json'
 PROFILE_PATH = 'live-site-pages/profiler-data/{slug}.profile.json'
 CALENDAR_PATH = 'repository-information/profiler-refresh-calendar.json'
+SEGMENTS_PATH = 'live-site-pages/profiler-data/profiler-segments.json'
 
 WIRE_HOSTS = ['prnewswire.com', 'businesswire.com', 'globenewswire.com', 'newswire.ca',
               'accesswire.com', 'prnasia.com', 'acnnewswire.com', 'jcnnewswire.com', 'presseportal.de']
@@ -72,6 +75,22 @@ def has_norm_revenue(profile):
             if m.get('kpi') == 'revenue' and isinstance(m.get('usdMillions'), (int, float)):
                 return True
     return False
+
+def segment_mirror():
+    """slug -> [{id, role}] from the segments registry, in segment (position) order.
+    The registry is the source of truth (PROFILER-SCHEMA.md, Segments registry);
+    this mirror exists so the roster can filter and chip by segment from its
+    one fetch. A member slug the roster does not know is reported, not mirrored."""
+    try:
+        seg = json.load(open(SEGMENTS_PATH))
+    except (OSError, ValueError) as e:
+        print('  WARN  segments registry unreadable (%s) — segments[] not synced' % e)
+        return None
+    out = {}
+    for s in sorted(seg.get('segments') or [], key=lambda x: x.get('position', 0)):
+        for m in s.get('members') or []:
+            out.setdefault(m['slug'], []).append({'id': s['id'], 'role': m['role']})
+    return out
 
 def check_calendar(reg):
     """Assert the roster <-> refresh-calendar bijection and the row schema.
@@ -129,6 +148,11 @@ def check_calendar(reg):
 def main():
     check = '--check' in sys.argv
     reg = json.load(open(REG_PATH))
+    mirror = segment_mirror()
+    if mirror is not None:
+        known = {c['slug'] for c in reg['companies']}
+        for slug in sorted(set(mirror) - known):
+            print(f'  WARN  segments registry names {slug}, which is not on the roster')
     changed = []
     for c in reg['companies']:
         slug = c['slug']
@@ -146,6 +170,8 @@ def main():
             'srcFirstPct': round(fp / len(srcs) * 100) if srcs else 0,
             'kpiNorm': has_norm_revenue(p),
         }
+        if mirror is not None:
+            want['segments'] = mirror.get(slug, [])
         diffs = {k: (c.get(k), v) for k, v in want.items() if c.get(k) != v}
         if diffs:
             changed.append((slug, diffs))

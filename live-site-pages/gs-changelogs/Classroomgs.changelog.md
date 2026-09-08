@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18g] — 2026-09-08 06:32:46 AM EST — v05.17r
+
+### Added
+- **A new lane, The Value Chain, with nineteen market-structure lessons and three tracks** — one lesson per link of the value chain, from cells to insurance, each stating who sits where, what is bought there and on what, the comparable figures on record, who is connected to whom, what moved recently and which policy regimes bear on it, with a structure self-test. Every one is readable by every admitted tier
+- Curriculum updated
+
+### Changed
+- The lesson index now groups four lanes instead of three
 
 ## [v01.17g] — 2026-09-07 07:44:48 PM EST — v05.10r
 

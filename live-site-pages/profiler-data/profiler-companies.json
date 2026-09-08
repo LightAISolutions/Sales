@@ -32,7 +32,21 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 68,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "incumbent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "aep",
@@ -59,7 +73,13 @@
       ],
       "srcTotal": 143,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "aes-clean-energy",
@@ -80,7 +100,13 @@
       ],
       "srcTotal": 56,
       "srcFirstPct": 45,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "aligned",
@@ -97,7 +123,17 @@
       ],
       "srcTotal": 40,
       "srcFirstPct": 78,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cooling",
+          "role": "adjacent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "amazon",
@@ -116,7 +152,13 @@
       ],
       "srcTotal": 24,
       "srcFirstPct": 58,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "anthropic",
@@ -136,7 +178,13 @@
       ],
       "srcTotal": 150,
       "srcFirstPct": 56,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "apex-clean-energy",
@@ -154,7 +202,17 @@
       ],
       "srcTotal": 77,
       "srcFirstPct": 47,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "applied-digital",
@@ -172,7 +230,13 @@
       ],
       "srcTotal": 24,
       "srcFirstPct": 62,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "arevon",
@@ -189,7 +253,13 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 74,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "available-power",
@@ -208,7 +278,13 @@
       ],
       "srcTotal": 42,
       "srcFirstPct": 26,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "aypa-power",
@@ -228,7 +304,13 @@
       ],
       "srcTotal": 92,
       "srcFirstPct": 45,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "bechtel",
@@ -245,7 +327,17 @@
       ],
       "srcTotal": 31,
       "srcFirstPct": 55,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "black-veatch",
@@ -262,7 +354,21 @@
       ],
       "srcTotal": 31,
       "srcFirstPct": 52,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        },
+        {
+          "id": "assurance",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "blackstone",
@@ -282,7 +388,13 @@
       ],
       "srcTotal": 32,
       "srcFirstPct": 75,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "blattner",
@@ -300,7 +412,13 @@
       ],
       "srcTotal": 21,
       "srcFirstPct": 52,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "bloom-energy",
@@ -318,7 +436,13 @@
       ],
       "srcTotal": 17,
       "srcFirstPct": 59,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "brookfield",
@@ -341,7 +465,13 @@
       ],
       "srcTotal": 36,
       "srcFirstPct": 92,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "burns-mcdonnell",
@@ -358,7 +488,17 @@
       ],
       "srcTotal": 29,
       "srcFirstPct": 62,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        },
+        {
+          "id": "assurance",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "byd",
@@ -377,7 +517,17 @@
       ],
       "srcTotal": 53,
       "srcFirstPct": 19,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "canadian-solar",
@@ -395,7 +545,21 @@
       ],
       "srcTotal": 29,
       "srcFirstPct": 59,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "caterpillar",
@@ -415,7 +579,21 @@
       ],
       "srcTotal": 128,
       "srcFirstPct": 46,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "catl",
@@ -433,7 +611,17 @@
       ],
       "srcTotal": 51,
       "srcFirstPct": 37,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "clearway-energy",
@@ -454,7 +642,13 @@
       ],
       "srcTotal": 46,
       "srcFirstPct": 83,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "compass-datacenters",
@@ -471,7 +665,13 @@
       ],
       "srcTotal": 105,
       "srcFirstPct": 43,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "constellation-energy",
@@ -489,7 +689,17 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 64,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "coolit",
@@ -508,7 +718,13 @@
       ],
       "srcTotal": 151,
       "srcFirstPct": 65,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cooling",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "core-scientific",
@@ -527,7 +743,13 @@
       ],
       "srcTotal": 25,
       "srcFirstPct": 64,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "coreweave",
@@ -545,7 +767,13 @@
       ],
       "srcTotal": 22,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "neoclouds",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "crrc-zhuzhou",
@@ -564,7 +792,13 @@
       ],
       "srcTotal": 21,
       "srcFirstPct": 38,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "crusoe",
@@ -582,7 +816,17 @@
       ],
       "srcTotal": 18,
       "srcFirstPct": 44,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "cummins",
@@ -602,7 +846,21 @@
       ],
       "srcTotal": 96,
       "srcFirstPct": 60,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "cyrusone",
@@ -619,7 +877,13 @@
       ],
       "srcTotal": 69,
       "srcFirstPct": 38,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "delta-electronics",
@@ -638,7 +902,21 @@
       ],
       "srcTotal": 16,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "cooling",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "digital-realty",
@@ -659,7 +937,17 @@
       ],
       "srcTotal": 79,
       "srcFirstPct": 72,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        },
+        {
+          "id": "capital",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "dnv",
@@ -678,7 +966,17 @@
       ],
       "srcTotal": 101,
       "srcFirstPct": 32,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "dominion-energy",
@@ -700,7 +998,17 @@
       ],
       "srcTotal": 123,
       "srcFirstPct": 48,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "dpr",
@@ -717,7 +1025,13 @@
       ],
       "srcTotal": 30,
       "srcFirstPct": 43,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "eaton",
@@ -735,7 +1049,33 @@
       ],
       "srcTotal": 17,
       "srcFirstPct": 65,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "adjacent"
+        },
+        {
+          "id": "cooling",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "edgecore",
@@ -752,7 +1092,13 @@
       ],
       "srcTotal": 107,
       "srcFirstPct": 53,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "enchanted-rock",
@@ -770,7 +1116,17 @@
       ],
       "srcTotal": 23,
       "srcFirstPct": 39,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "engie-north-america",
@@ -792,7 +1148,25 @@
       ],
       "srcTotal": 61,
       "srcFirstPct": 59,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "entergy",
@@ -818,7 +1192,17 @@
       ],
       "srcTotal": 95,
       "srcFirstPct": 57,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "envision-energy",
@@ -836,7 +1220,17 @@
       ],
       "srcTotal": 24,
       "srcFirstPct": 25,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "eolian",
@@ -853,7 +1247,17 @@
       ],
       "srcTotal": 21,
       "srcFirstPct": 48,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "equinix",
@@ -871,7 +1275,13 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "esvolta",
@@ -889,7 +1299,13 @@
       ],
       "srcTotal": 108,
       "srcFirstPct": 31,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "eve-energy",
@@ -907,7 +1323,17 @@
       ],
       "srcTotal": 38,
       "srcFirstPct": 39,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "excelsior-energy-capital",
@@ -926,7 +1352,17 @@
       ],
       "srcTotal": 108,
       "srcFirstPct": 55,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        },
+        {
+          "id": "capital",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "fermi-america",
@@ -946,7 +1382,17 @@
       ],
       "srcTotal": 132,
       "srcFirstPct": 52,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "flex",
@@ -974,7 +1420,29 @@
       ],
       "srcTotal": 91,
       "srcFirstPct": 68,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        },
+        {
+          "id": "cooling",
+          "role": "adjacent"
+        },
+        {
+          "id": "compute-and-the-rack",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "flexgen",
@@ -991,7 +1459,21 @@
       ],
       "srcTotal": 25,
       "srcFirstPct": 72,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "fluence",
@@ -1009,7 +1491,17 @@
       ],
       "srcTotal": 33,
       "srcFirstPct": 61,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "fluidstack",
@@ -1029,7 +1521,17 @@
       ],
       "srcTotal": 136,
       "srcFirstPct": 47,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "form-energy",
@@ -1046,7 +1548,21 @@
       ],
       "srcTotal": 59,
       "srcFirstPct": 37,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "ge-vernova",
@@ -1064,7 +1580,25 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 57,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "incumbent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "google",
@@ -1084,7 +1618,13 @@
       ],
       "srcTotal": 43,
       "srcFirstPct": 58,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "gotion",
@@ -1106,7 +1646,17 @@
       ],
       "srcTotal": 61,
       "srcFirstPct": 25,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "gridstor",
@@ -1124,7 +1674,13 @@
       ],
       "srcTotal": 97,
       "srcFirstPct": 44,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "hitachi-energy",
@@ -1142,7 +1698,17 @@
       ],
       "srcTotal": 16,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "hithium",
@@ -1160,7 +1726,21 @@
       ],
       "srcTotal": 52,
       "srcFirstPct": 44,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "hitt",
@@ -1178,7 +1758,13 @@
       ],
       "srcTotal": 33,
       "srcFirstPct": 55,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "holder-construction",
@@ -1195,7 +1781,13 @@
       ],
       "srcTotal": 30,
       "srcFirstPct": 17,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "huawei-digital-power",
@@ -1213,7 +1805,21 @@
       ],
       "srcTotal": 27,
       "srcFirstPct": 22,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "hunt-energy-network",
@@ -1233,7 +1839,17 @@
       ],
       "srcTotal": 87,
       "srcFirstPct": 32,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "hyperstrong",
@@ -1252,7 +1868,17 @@
       ],
       "srcTotal": 26,
       "srcFirstPct": 38,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "infineon",
@@ -1271,7 +1897,13 @@
       ],
       "srcTotal": 77,
       "srcFirstPct": 53,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "intersect-power",
@@ -1294,7 +1926,17 @@
       ],
       "srcTotal": 116,
       "srcFirstPct": 51,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "invenergy",
@@ -1314,7 +1956,21 @@
       ],
       "srcTotal": 135,
       "srcFirstPct": 55,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "iren",
@@ -1334,7 +1990,17 @@
       ],
       "srcTotal": 33,
       "srcFirstPct": 67,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "jinko",
@@ -1352,7 +2018,13 @@
       ],
       "srcTotal": 15,
       "srcFirstPct": 40,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "jupiter-power",
@@ -1369,7 +2041,13 @@
       ],
       "srcTotal": 21,
       "srcFirstPct": 29,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "key-capture-energy",
@@ -1386,7 +2064,13 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 21,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "kiewit",
@@ -1403,7 +2087,17 @@
       ],
       "srcTotal": 30,
       "srcFirstPct": 20,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "lambda",
@@ -1420,7 +2114,13 @@
       ],
       "srcTotal": 29,
       "srcFirstPct": 48,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "lg-energy-solution",
@@ -1438,7 +2138,21 @@
       ],
       "srcTotal": 15,
       "srcFirstPct": 53,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "lightsource-bp",
@@ -1455,7 +2169,13 @@
       ],
       "srcTotal": 24,
       "srcFirstPct": 38,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "liteon",
@@ -1473,7 +2193,17 @@
       ],
       "srcTotal": 15,
       "srcFirstPct": 53,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        },
+        {
+          "id": "cooling",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "ls-energy-solutions",
@@ -1492,7 +2222,21 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 60,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "macquarie",
@@ -1512,7 +2256,13 @@
       ],
       "srcTotal": 28,
       "srcFirstPct": 75,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "mainspring-energy",
@@ -1529,7 +2279,13 @@
       ],
       "srcTotal": 22,
       "srcFirstPct": 36,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "mastec",
@@ -1548,7 +2304,13 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 40,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "mccarthy",
@@ -1566,7 +2328,13 @@
       ],
       "srcTotal": 100,
       "srcFirstPct": 56,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "megmeet",
@@ -1584,7 +2352,13 @@
       ],
       "srcTotal": 38,
       "srcFirstPct": 58,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "meta",
@@ -1604,7 +2378,13 @@
       ],
       "srcTotal": 23,
       "srcFirstPct": 43,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "mgx",
@@ -1621,7 +2401,13 @@
       ],
       "srcTotal": 103,
       "srcFirstPct": 42,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "microsoft",
@@ -1639,7 +2425,13 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 32,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "mitsubishi-electric",
@@ -1662,7 +2454,21 @@
       ],
       "srcTotal": 78,
       "srcFirstPct": 60,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "incumbent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        },
+        {
+          "id": "cooling",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "mitsubishi-power",
@@ -1683,7 +2489,13 @@
       ],
       "srcTotal": 77,
       "srcFirstPct": 68,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "mortenson",
@@ -1701,7 +2513,13 @@
       ],
       "srcTotal": 32,
       "srcFirstPct": 38,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "narada",
@@ -1721,7 +2539,21 @@
       ],
       "srcTotal": 25,
       "srcFirstPct": 32,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "nebius",
@@ -1739,7 +2571,13 @@
       ],
       "srcTotal": 29,
       "srcFirstPct": 45,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "nextera-energy-resources",
@@ -1758,7 +2596,21 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 40,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "nrg-energy",
@@ -1777,7 +2629,25 @@
       ],
       "srcTotal": 72,
       "srcFirstPct": 33,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "utilities",
+          "role": "challenger"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "nscale",
@@ -1795,7 +2665,17 @@
       ],
       "srcTotal": 126,
       "srcFirstPct": 51,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "nvidia",
@@ -1813,7 +2693,17 @@
       ],
       "srcTotal": 23,
       "srcFirstPct": 61,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "compute-and-the-rack",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "oklo",
@@ -1831,7 +2721,13 @@
       ],
       "srcTotal": 99,
       "srcFirstPct": 58,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "on-energy",
@@ -1849,7 +2745,21 @@
       ],
       "srcTotal": 18,
       "srcFirstPct": 33,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "oncor",
@@ -1869,7 +2779,13 @@
       ],
       "srcTotal": 113,
       "srcFirstPct": 61,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "openai",
@@ -1886,7 +2802,13 @@
       ],
       "srcTotal": 24,
       "srcFirstPct": 46,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "oracle",
@@ -1904,7 +2826,13 @@
       ],
       "srcTotal": 16,
       "srcFirstPct": 44,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "panasonic",
@@ -1923,7 +2851,17 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 50,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "piller",
@@ -1942,7 +2880,17 @@
       ],
       "srcTotal": 186,
       "srcFirstPct": 65,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "plus-power",
@@ -1959,7 +2907,13 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 40,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "powell-industries",
@@ -1980,7 +2934,13 @@
       ],
       "srcTotal": 68,
       "srcFirstPct": 74,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "power-electronics",
@@ -1997,7 +2957,13 @@
       ],
       "srcTotal": 85,
       "srcFirstPct": 61,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "powerhouse-data-centers",
@@ -2016,7 +2982,13 @@
       ],
       "srcTotal": 114,
       "srcFirstPct": 52,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "prevalon",
@@ -2034,7 +3006,21 @@
       ],
       "srcTotal": 22,
       "srcFirstPct": 50,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "prime-data-centers",
@@ -2051,7 +3037,13 @@
       ],
       "srcTotal": 173,
       "srcFirstPct": 29,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "primoris",
@@ -2069,7 +3061,13 @@
       ],
       "srcTotal": 26,
       "srcFirstPct": 69,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "proenergy",
@@ -2086,7 +3084,17 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 45,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "qts",
@@ -2103,7 +3111,13 @@
       ],
       "srcTotal": 47,
       "srcFirstPct": 55,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "quanta-services",
@@ -2121,7 +3135,17 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "recurrent-energy",
@@ -2143,7 +3167,13 @@
       ],
       "srcTotal": 48,
       "srcFirstPct": 79,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "rehlko",
@@ -2165,7 +3195,17 @@
       ],
       "srcTotal": 91,
       "srcFirstPct": 66,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "rept",
@@ -2184,7 +3224,13 @@
       ],
       "srcTotal": 52,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "rolls-royce-power-systems",
@@ -2203,7 +3249,25 @@
       ],
       "srcTotal": 103,
       "srcFirstPct": 71,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "challenger"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "rosendin",
@@ -2220,7 +3284,17 @@
       ],
       "srcTotal": 16,
       "srcFirstPct": 50,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        },
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "rwe-clean-energy",
@@ -2240,7 +3314,13 @@
       ],
       "srcTotal": 60,
       "srcFirstPct": 57,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "samsung-ct",
@@ -2259,7 +3339,21 @@
       ],
       "srcTotal": 21,
       "srcFirstPct": 33,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "samsung-sdi",
@@ -2277,7 +3371,21 @@
       ],
       "srcTotal": 15,
       "srcFirstPct": 60,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "sargent-lundy",
@@ -2294,7 +3402,17 @@
       ],
       "srcTotal": 158,
       "srcFirstPct": 71,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "assurance",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "schneider-electric",
@@ -2312,7 +3430,29 @@
       ],
       "srcTotal": 18,
       "srcFirstPct": 67,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        },
+        {
+          "id": "cooling",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "siemens-energy",
@@ -2330,7 +3470,17 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 47,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "incumbent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "sinexcel",
@@ -2348,7 +3498,17 @@
       ],
       "srcTotal": 52,
       "srcFirstPct": 56,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "solv-energy",
@@ -2366,7 +3526,13 @@
       ],
       "srcTotal": 17,
       "srcFirstPct": 53,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "southern-company",
@@ -2391,7 +3557,17 @@
       ],
       "srcTotal": 119,
       "srcFirstPct": 63,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "spearmint-energy",
@@ -2409,7 +3585,13 @@
       ],
       "srcTotal": 114,
       "srcFirstPct": 23,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "stack-infrastructure",
@@ -2426,7 +3608,13 @@
       ],
       "srcTotal": 41,
       "srcFirstPct": 80,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "strata-clean-energy",
@@ -2444,7 +3632,21 @@
       ],
       "srcTotal": 104,
       "srcFirstPct": 50,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "challenger"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "sungrow",
@@ -2463,7 +3665,17 @@
       ],
       "srcTotal": 62,
       "srcFirstPct": 45,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "sunwoda",
@@ -2484,7 +3696,21 @@
       ],
       "srcTotal": 21,
       "srcFirstPct": 29,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "switch",
@@ -2501,7 +3727,13 @@
       ],
       "srcTotal": 43,
       "srcFirstPct": 79,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "talen-energy",
@@ -2520,7 +3752,21 @@
       ],
       "srcTotal": 81,
       "srcFirstPct": 51,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "terawulf",
@@ -2538,7 +3784,13 @@
       ],
       "srcTotal": 29,
       "srcFirstPct": 62,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "terra-gen",
@@ -2555,7 +3807,13 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 47,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "tesla",
@@ -2573,7 +3831,29 @@
       ],
       "srcTotal": 30,
       "srcFirstPct": 20,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        },
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "tract",
@@ -2592,7 +3872,13 @@
       ],
       "srcTotal": 155,
       "srcFirstPct": 33,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "trane-technologies",
@@ -2614,7 +3900,13 @@
       ],
       "srcTotal": 77,
       "srcFirstPct": 51,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cooling",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "trina-storage",
@@ -2632,7 +3924,17 @@
       ],
       "srcTotal": 32,
       "srcFirstPct": 47,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "turner-construction",
@@ -2649,7 +3951,13 @@
       ],
       "srcTotal": 25,
       "srcFirstPct": 32,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "vantage",
@@ -2666,7 +3974,17 @@
       ],
       "srcTotal": 46,
       "srcFirstPct": 83,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "incumbent"
+        },
+        {
+          "id": "capital",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "vertiv",
@@ -2684,7 +4002,21 @@
       ],
       "srcTotal": 16,
       "srcFirstPct": 50,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        },
+        {
+          "id": "cooling",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "vicor",
@@ -2703,7 +4035,13 @@
       ],
       "srcTotal": 136,
       "srcFirstPct": 57,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "vistra",
@@ -2723,7 +4061,21 @@
       ],
       "srcTotal": 83,
       "srcFirstPct": 37,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "incumbent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "incumbent"
+        },
+        {
+          "id": "utilities",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "voltagrid",
@@ -2740,7 +4092,13 @@
       ],
       "srcTotal": 20,
       "srcFirstPct": 50,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "wartsila",
@@ -2758,7 +4116,21 @@
       ],
       "srcTotal": 30,
       "srcFirstPct": 70,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "incumbent"
+        },
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "whiting-turner",
@@ -2775,7 +4147,13 @@
       ],
       "srcTotal": 62,
       "srcFirstPct": 34,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "x-energy",
@@ -2795,7 +4173,13 @@
       ],
       "srcTotal": 139,
       "srcFirstPct": 62,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "xai",
@@ -2812,7 +4196,13 @@
       ],
       "srcTotal": 19,
       "srcFirstPct": 32,
-      "kpiNorm": false
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "xcel-energy",
@@ -2836,7 +4226,17 @@
       ],
       "srcTotal": 142,
       "srcFirstPct": 54,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "clean-firm-and-nuclear",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
     },
     {
       "slug": "zhonhen",
@@ -2856,7 +4256,25 @@
       ],
       "srcTotal": 50,
       "srcFirstPct": 44,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "incumbent"
+        },
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
     },
     {
       "slug": "cipher-mining",
@@ -2875,7 +4293,13 @@
       ],
       "srcTotal": 47,
       "srcFirstPct": 45,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "hut-8",
@@ -2893,7 +4317,13 @@
       ],
       "srcTotal": 71,
       "srcFirstPct": 48,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
     },
     {
       "slug": "galaxy-digital",
@@ -2911,7 +4341,17 @@
       ],
       "srcTotal": 61,
       "srcFirstPct": 66,
-      "kpiNorm": true
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "capital",
+          "role": "adjacent"
+        }
+      ]
     }
   ]
 }

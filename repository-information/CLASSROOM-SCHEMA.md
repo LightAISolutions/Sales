@@ -54,7 +54,7 @@ A lesson is one teachable unit: a **module** (lives in tracks, taught once, refr
 | `type` | string | no | `module` (default) · `briefing`. Tracks may list modules only; briefings are surfaced as a dated feed and carry `edition` |
 | `title` | string | yes | Display title |
 | `short` | string | yes | One-line card summary (≤160 chars) |
-| `group` | string | yes | Topic lane the index groups by — reuse the guidance lanes (`Technology Foundations`, `The AI Data-Center Wave`, `Market Access & Bankability`); add a lane only when none fits |
+| `group` | string | yes | Topic lane the index groups by — reuse the guidance lanes (`Technology Foundations`, `The AI Data-Center Wave`, `Market Access & Bankability`) or the segment layer's `The Value Chain` (the fourth lane, added at S0/S1 because no guidance lane fits a segment — `CLASSROOM-CURRICULUM-PLAN.md` §10.5); add a lane only when none fits |
 | `updated` | string | yes | `YYYY-MM-DD` of this revision |
 | `reviewBy` | string | yes | `YYYY-MM-DD` — set from the lesson's **own nearest dated gate** (a regulatory effective date, a milestone, a scheduled rate change), not a fixed cadence; slow-moving fundamentals default to ~6 months from `updated` (guidance freshness discipline) |
 | `edition` | string | briefings only | `YYYY-MM-DD` the briefing covers through; required when `type` = `briefing`, forbidden otherwise |

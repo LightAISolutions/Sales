@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.17r] — 2026-09-08 06:32:46 AM EST
+
+> Picking up from my last session, I should be at "run S1". However, per the attached screenshot, you broke up S1 into Fable 5.1 High (code) and Opus 5 xhigh (lesson). Thus, run the Fable 5.1 High (code) portion in this Fable 5.1 High session. Then, give me a prompt to paste into a new Opus 5 xhigh session to execute the "lesson" portion, then remember session.
+
+### Added
+
+- **`scripts/build-classroom-segments.py` — the segment-lesson generator** (`CLASSROOM-CURRICULUM-PLAN.md` §10.3–10.4, S1 code half). One public `segment-<id>` lesson per segment in `profiler-segments.json`, written as a `clLessonSegment<CamelId>_()` literal inside the `Classroom.gs` content fence: ten fixed section ids in order (`the-segment` · `where-it-sits` · `what-is-bought-and-on-what` · `the-players` · `the-numbers` · `who-is-connected` · `what-moved` · `the-fence` · `read-next` · `check-yourself`), `group` `The Value Chain`, stamp = every member `profile:<slug>` at the dossier's own `lastUpdated` (slug identity-matched, G7) + `graph:profiler-graph` at `built` + `concepts:profiler-concepts` at the file's commit date on `origin/main`, `reviewBy` = the earliest future `policyExposure[].effectiveDate` among members else +6 months. Deterministic — sorted members / edges / developments, fixed key order; a forced `--all` rerun immediately after generation rewrote nothing. `--check` lists due segments (exit 1 if any); `--segment` / `--all` / `--today` / `--base` / `--dry-run`. A regeneration replaces the literal in place and appends one `revisions[]` entry whose `changed[]` is the P8 differs set; a pin that would move backwards aborts the run. Nineteen lessons generated at `--today 2026-09-08`: 283 `the-players` rows, `who-is-connected` capped at 40 neighbour-segment rows (all in-segment edges kept, totals in the section `note`), `what-moved` capped at 12, `the-numbers` restricted to the normalized KPI overlay (`revenue` USD m + `fxBasis`, `gwh-shipped`, `backlog-gwh`, `mw-energized`, `mw-contracted`) for the latest annual period that carries one
+- **Three Value Chain tracks** — `value-chain-makers` (3 lessons), `value-chain-builders` (7, prereq makers), `value-chain-buyers-and-backers` (9, prereq makers) with the §10.5 `short` lines, appended at the end of `clTracks_()`; `reading-the-graph` (the Opus half) is to be inserted at position 1 of `value-chain-makers` when authored
+- **`scripts/check-classroom-curriculum.py` — the curriculum health report** (§10.9): lessons per lane and per track with the gate distribution (analyst-visible share), segment coverage against the floor rule (members · incumbents · challengers · floor · lesson · landscape), stale pins per hand-authored lesson with live dates read off the sources (26 today, all real corpus drift — the pipeline's candidate list), segment lessons due for regeneration via the generator's `--check`, drill pool sizes (`sf` 766 + `ss` 1,154 = 1,920 against `CL_DRILL_INV_CAP` 2,400; `lc` 62 + `lq` 141; `rc` 283 roster rows, K2 not built), review dates within 30 days (1: `bess-bankability-2026-08`, 2026-10-01). `--strict` exits 1 on a landscape below the floor, a registered segment with no lesson, or a member slug with no profile — clean today
+- **`companies[].segments[]` mirror** — `scripts/sync-profiler-registry.py` now writes `[{ id, role }]` per company from the segments registry in position order (`PROFILER-SCHEMA.md`); 154 / 154 roster entries carry it, `--check` clean
+
+### Changed
+
+- **`scripts/check-classroom-content.py`** — the fourth lane `The Value Chain` admitted to `LANES`, and a new `check_segment_lessons()` assertion: every `segment-<id>` lesson must carry exactly the ten section ids in order, `profile:` inputs equal to the registry's member set, `the-players` rows (the new `Dossier` slug column) equal to the members with the registry's roles, `group` `The Value Chain`, and all-public inputs — a generated lesson that drifted from its registry fails the commit. 29 lessons / 6 tracks / 134 gate cases, 0 errors, 0 warnings
+- **`googleAppsScripts/Classroom/Classroom.gs`** v01.17g → **v01.18g** (content-only: nineteen lesson literals + three track literals inside the fence, both registries appended). `gateDigest` unchanged — the pipeline checker reports P1 (developer files) and P10 (nineteen modules / three tracks in one run — the documented developer-run cap breach) only, **no P3, no P5**; `--selftest` 13 / 0; `node --check` and `check-gas-inner-scripts.js` clean
+- **Docs:** `INTEGRATED-REMEDIATION-PLAN.md` §6 S1 row → code half Done, K2 row and §7.3 S1 row annotated; `CLASSROOM-CURRICULUM-PLAN.md` §10 provenance note, §10.3 `the-players` (the Dossier column — the renderer has no chip syntax, a clickable chip is a K2/C3 renderer feature), §10.4 and §10.9 headings → built; `PROFILER-SCHEMA.md` `segments[]` mirror and verification notes → landed; `CLASSROOM-SCHEMA.md` `group` lanes name the fourth lane; README tree (+2 scripts, sync description)
+
+### Notes
+
+- **Deviation recorded:** the plan places the three tracks "after `market-access`" — that track does not exist yet, so they sit at the end of `clTracks_()`; the session that creates `market-access` may insert it before them (a developer session is not bound by P5, and no account holds progress on the new tracks)
+- **Session context** is written in the same push commit rather than a separate `Remember session context` commit — the push-once rule forbids a second push while the auto-merge is in flight, and the single-commit-per-interaction rule folds it in
 
 ## [v05.16r] — 2026-09-08 05:51:52 AM EST
 
