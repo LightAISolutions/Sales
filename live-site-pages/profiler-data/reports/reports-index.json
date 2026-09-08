@@ -2,6 +2,22 @@
  "schemaVersion": 1,
  "reports": [
   {
+   "id": "named-project-bess-attach--opportunity--2026-09-08",
+   "title": "Named-Project Pipeline — BESS Attach",
+   "type": "opportunity",
+   "topic": "BESS attach opportunities across the registered named-project web",
+   "date": "2026-09-08",
+   "scopeLabel": "25 companies across the 9 registered named projects",
+   "companies": 25,
+   "citations": 40,
+   "status": "current",
+   "supersedes": "named-project-bess-attach--opportunity--2026-08-30",
+   "overlayModules": [
+    "power-infra-aidc-2026-08",
+    "utility-aidc-procurement-2026-08"
+   ]
+  },
+  {
    "id": "named-project-bess-attach--opportunity--2026-08-30",
    "title": "Named-Project Pipeline — BESS Attach",
    "type": "opportunity",
@@ -10,7 +26,7 @@
    "scopeLabel": "15 companies across the 8 registered named projects",
    "companies": 15,
    "citations": 18,
-   "status": "current"
+   "status": "superseded"
   },
   {
    "id": "aidc-power-conversion--competitive--2026-08-29",

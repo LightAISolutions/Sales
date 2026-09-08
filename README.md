@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-08 12:00:01 AM EST` · Repo version: `v05.12r`
+Last updated: `2026-09-08 02:12:19 AM EST` · Repo version: `v05.13r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -393,7 +393,8 @@ Last updated: `2026-09-08 12:00:01 AM EST` · Repo version: `v05.12r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/reports-index.json">reports-index.json</a>  — Reports library index (the Reports view renders from this alone)
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/aidc-power-conversion--competitive--2026-08-29.report.json">aidc-power-conversion--competitive--2026-08-29.report.json</a> — Competitive report: AIDC power-conversion suppliers
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/grid-scale-bess--competitive--2026-08-29.report.json">grid-scale-bess--competitive--2026-08-29.report.json</a> — Competitive report: 12 grid-scale BESS system players, 42 dossier citations
-│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/named-project-bess-attach--opportunity--2026-08-30.report.json">named-project-bess-attach--opportunity--2026-08-30.report.json</a> — Opportunity report: BESS attach across the named-project web (baseline edition for the monthly drift check)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/named-project-bess-attach--opportunity--2026-08-30.report.json">named-project-bess-attach--opportunity--2026-08-30.report.json</a> — Opportunity report: BESS attach across the named-project web (superseded by the 2026-09-08 edition)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/named-project-bess-attach--opportunity--2026-09-08.report.json">named-project-bess-attach--opportunity--2026-09-08.report.json</a> — Opportunity report: BESS attach across the 9 registered named projects, 25 companies, 40 dossier citations (current edition; supersedes 2026-08-30)
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/reports/s154-listed-bess-suppliers--risk--2026-08-29.report.json">s154-listed-bess-suppliers--risk--2026-08-29.report.json</a> — Risk report: the five covered NDAA §154(b)-listed suppliers
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/archive">archive/</a>                — Superseded dossier versions, archived on each profile revision
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/abb.profile.v5.json">abb.profile.v5.json</a> — Archived v5 dossier (ABB)

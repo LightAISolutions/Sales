@@ -1,0 +1,1007 @@
+{
+ "schemaVersion": 1,
+ "id": "named-project-bess-attach--opportunity--2026-09-08",
+ "title": "Named-Project Pipeline — BESS Attach",
+ "type": "opportunity",
+ "topic": "BESS attach opportunities across the registered named-project web",
+ "generated": "2026-09-08",
+ "style": "intel-briefing",
+ "scope": {
+  "kind": "slugs",
+  "value": [
+   "aep",
+   "anthropic",
+   "bloom-energy",
+   "caterpillar",
+   "crusoe",
+   "dpr",
+   "ge-vernova",
+   "google",
+   "hithium",
+   "hut-8",
+   "jupiter-power",
+   "kiewit",
+   "mccarthy",
+   "meta",
+   "mortenson",
+   "openai",
+   "oracle",
+   "samsung-ct",
+   "stack-infrastructure",
+   "tesla",
+   "turner-construction",
+   "vantage",
+   "voltagrid",
+   "whiting-turner",
+   "xai"
+  ],
+  "rationale": "Derived on the day by resolving every dossier's relationships[].project against profiler-projects.json: twenty-four dossiers pin the nine registered projects. Tesla is added as the attached supplier of record — its Colossus Megapacks are cited through xAI and its Enbridge Cowboy blocks through Meta rather than pinned by its own relationships[]. The rule, not the list, is the scope: it is re-derived for each edition, and it grew from fifteen companies over eight projects at the 2026-08-30 edition to twenty-five over nine here."
+ },
+ "coverage": {
+  "companies": [
+   {
+    "slug": "aep",
+    "name": "American Electric Power",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-03",
+    "srcTotal": 143,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "anthropic",
+    "name": "Anthropic",
+    "profileVersion": 3,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 150,
+    "srcFirstPct": 56,
+    "kpiNorm": false
+   },
+   {
+    "slug": "bloom-energy",
+    "name": "Bloom Energy",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 17,
+    "srcFirstPct": 59,
+    "kpiNorm": true
+   },
+   {
+    "slug": "caterpillar",
+    "name": "Caterpillar",
+    "profileVersion": 2,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 128,
+    "srcFirstPct": 46,
+    "kpiNorm": true
+   },
+   {
+    "slug": "crusoe",
+    "name": "Crusoe",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 18,
+    "srcFirstPct": 44,
+    "kpiNorm": false
+   },
+   {
+    "slug": "dpr",
+    "name": "DPR Construction",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 30,
+    "srcFirstPct": 43,
+    "kpiNorm": false
+   },
+   {
+    "slug": "ge-vernova",
+    "name": "GE Vernova",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 14,
+    "srcFirstPct": 57,
+    "kpiNorm": true
+   },
+   {
+    "slug": "google",
+    "name": "Google",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 43,
+    "srcFirstPct": 58,
+    "kpiNorm": true
+   },
+   {
+    "slug": "hithium",
+    "name": "Hithium",
+    "profileVersion": 13,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 52,
+    "srcFirstPct": 44,
+    "kpiNorm": true
+   },
+   {
+    "slug": "hut-8",
+    "name": "Hut 8",
+    "profileVersion": 2,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 71,
+    "srcFirstPct": 48,
+    "kpiNorm": true
+   },
+   {
+    "slug": "jupiter-power",
+    "name": "Jupiter Power",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 21,
+    "srcFirstPct": 29,
+    "kpiNorm": false
+   },
+   {
+    "slug": "kiewit",
+    "name": "Kiewit",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 30,
+    "srcFirstPct": 20,
+    "kpiNorm": false
+   },
+   {
+    "slug": "mccarthy",
+    "name": "McCarthy",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 100,
+    "srcFirstPct": 56,
+    "kpiNorm": true
+   },
+   {
+    "slug": "meta",
+    "name": "Meta",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 23,
+    "srcFirstPct": 43,
+    "kpiNorm": true
+   },
+   {
+    "slug": "mortenson",
+    "name": "Mortenson",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 32,
+    "srcFirstPct": 38,
+    "kpiNorm": false
+   },
+   {
+    "slug": "openai",
+    "name": "OpenAI",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 24,
+    "srcFirstPct": 46,
+    "kpiNorm": false
+   },
+   {
+    "slug": "oracle",
+    "name": "Oracle",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 16,
+    "srcFirstPct": 44,
+    "kpiNorm": false
+   },
+   {
+    "slug": "samsung-ct",
+    "name": "Samsung C&T",
+    "profileVersion": 4,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 21,
+    "srcFirstPct": 33,
+    "kpiNorm": false
+   },
+   {
+    "slug": "stack-infrastructure",
+    "name": "STACK Infrastructure",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 41,
+    "srcFirstPct": 80,
+    "kpiNorm": false
+   },
+   {
+    "slug": "tesla",
+    "name": "Tesla",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 30,
+    "srcFirstPct": 20,
+    "kpiNorm": true
+   },
+   {
+    "slug": "turner-construction",
+    "name": "Turner Construction",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 25,
+    "srcFirstPct": 32,
+    "kpiNorm": true
+   },
+   {
+    "slug": "vantage",
+    "name": "Vantage Data Centers",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 46,
+    "srcFirstPct": 83,
+    "kpiNorm": false
+   },
+   {
+    "slug": "voltagrid",
+    "name": "VoltaGrid",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 20,
+    "srcFirstPct": 50,
+    "kpiNorm": false
+   },
+   {
+    "slug": "whiting-turner",
+    "name": "Whiting-Turner",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 62,
+    "srcFirstPct": 34,
+    "kpiNorm": true
+   },
+   {
+    "slug": "xai",
+    "name": "xAI",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 19,
+    "srcFirstPct": 32,
+    "kpiNorm": false
+   }
+  ],
+  "gaps": [
+   "Named storage suppliers and counterparties that sit outside this scope: ON.energy, Form Energy and Entergy are covered dossiers that pin no registered project, and Jacobs, BorderPlex Digital Assets and Enbridge are not covered at all.",
+   "Only two BESS suppliers (Hithium, Tesla) are in scope. This report maps project attach, not supplier rankings — the grid-scale competitive report covers those.",
+   "Most scoped companies are private (Crusoe, Vantage, STACK Infrastructure, VoltaGrid, Jupiter Power, xAI and the five general contractors) with no comparable financials; no normalised comparison is attempted.",
+   "Oracle is the oldest pin in the set (profileVersion 4, lastUpdated 2026-08-30); its Q1 FY2027 result was expected 2026-09-10 and is not in the record this edition was built from.",
+   "Fluidstack is the River Bend lessee and end user but is reached only through Hut 8's and Google's filings; it pins no project of its own."
+  ],
+  "dataWindow": {
+   "oldest": "2026-08-30",
+   "newest": "2026-09-07"
+  }
+ },
+ "bluf": "Storage is in the plan at four of the nine registered named projects — Lighthouse, Project Jupiter, Stargate Abilene and, on the utility's side of the meter, Hyperion — and a battery supplier is named at none of them [c:c9] [c:c13] [c:c17] [c:c24]. We assess the whitespace this corpus can see is supplier whitespace, not storage whitespace, and that the party to court is the storage-scope holder — the developer, the power-scope contractor or the utility — which is the hyperscaler at only one of the nine [c:c4].",
+ "keyJudgments": [
+  {
+   "confidence": "high",
+   "cites": [
+    "c9",
+    "c13",
+    "c17",
+    "c24"
+   ],
+   "text": "We assess the whitespace across the registered named-project web is supplier whitespace, not storage whitespace. Storage is in the plan at Lighthouse (70% of supply from new solar, wind and battery storage), at Project Jupiter (battery energy storage in the dedicated microgrid), at Stargate Abilene (BESS and solar in the campus power record) and, utility-side, at Hyperion (three grid-scale batteries in the Entergy package) — and no battery supplier is named at any of the four."
+  },
+  {
+   "confidence": "high",
+   "cites": [
+    "c1",
+    "c3",
+    "c4",
+    "c16",
+    "c25"
+   ],
+   "text": "We assess four attach lanes are now on the record rather than two: owner-led (Jupiter Power carrying Hithium into Trimount), vendor-led (Tesla riding the operator relationship into Colossus), utility-tolled (a Wyoming utility tolling a 200 MW / 1,600 MWh Tesla battery against Meta's load at Enbridge Cowboy), and developer-fleet (Crusoe contracting ON.energy and Form Energy across campuses rather than for one)."
+  },
+  {
+   "confidence": "high",
+   "cites": [
+    "c28",
+    "c30",
+    "c34",
+    "c36"
+   ],
+   "text": "We assess project-level visibility remains the right altitude for BESS business development, and that the map has widened rather than changed shape: twenty-four dossiers now pin nine registered projects against fifteen pinning eight at the last edition, with a new campus (River Bend), a new class of participant (the utility, in AEP and Entergy) and a new tenancy layer (Anthropic on all of Colossus 1) all reached through the same derivation."
+  },
+  {
+   "confidence": "moderate",
+   "cites": [
+    "c19",
+    "c20",
+    "c21",
+    "c22",
+    "c25"
+   ],
+   "text": "We assess the storage-scope holder — not the hyperscaler — is the party to court, and that it differs per campus: Crusoe at Abilene, Vantage with the McCarthy half of the Turner–McCarthy joint venture at Lighthouse, STACK with BorderPlex at Project Jupiter, and Entergy plus Mortenson at Hyperion. Two of those four have delivered utility-scale storage in their own right."
+  },
+  {
+   "confidence": "moderate",
+   "cites": [
+    "c8",
+    "c12"
+   ],
+   "text": "We assess Frontier has moved from the most open of the nine to the least. Its microgrid operator markets the AI-data-centre product line as running with zero reliance on battery storage, holding 40–70% load swings through engine injection, synchronous condensers and flywheels; only the legacy mobile fleet carries a BESS, undisclosed as to supplier, chemistry and capacity."
+  },
+  {
+   "confidence": "moderate",
+   "cites": [
+    "c32",
+    "c33",
+    "c39"
+   ],
+   "text": "We assess the owner-led lane that produced Trimount has a covered channel already inside the Stargate programme, in Samsung C&T (a Stargate participant with a Hithium partnership claimed at a 10 GWh pipeline and its own US BESS EPC book) and in Caterpillar (a Colossus and Stargate turbine supplier that sells its own energy-storage blocks). Neither has been reported selling storage into a registered project."
+  }
+ ],
+ "sections": [
+  {
+   "id": "changed",
+   "title": "What changed since the last edition",
+   "kind": "prose",
+   "read": "The corpus movement that made this edition necessary, before any of it is interpreted.",
+   "cites": [
+    "c9",
+    "c13",
+    "c16",
+    "c25",
+    "c28"
+   ],
+   "ps": [
+    "The project web is wider. The 2026-08-30 edition scoped fifteen companies against eight registered projects; the same derivation today resolves twenty-four dossiers against nine. River Bend is the new project — a 245 MW critical-IT campus in West Feliciana Parish, Louisiana, leased for fifteen years to Fluidstack with Google backstopping the USD 7.0 billion base term [c:c28] [c:c30], drawing 330 MW of Entergy capacity from 1 July 2026 with a path to 1,000 MW [c:c29]. Ten participants are new to scope: American Electric Power, Caterpillar, Crusoe, GE Vernova and Samsung C&T at Stargate [c:c34] [c:c38] [c:c39]; Anthropic at Colossus [c:c36]; McCarthy and Whiting-Turner at Lighthouse [c:c21] [c:c23]; Google and Hut 8 at River Bend [c:c28] [c:c30].",
+    "Storage moved into the plan at three campuses the last edition recorded as having none. Lighthouse's power commitment is 70% of supply from new zero-emission resources — solar, wind and battery storage — built for the project [c:c9]. Project Jupiter's dedicated on-site microgrid is recorded with battery energy storage alongside the Bloom solid-oxide fuel cells that serve as prime power [c:c13] [c:c15]. And the Stargate flagship at Abilene, whose developer-operator Crusoe entered scope this edition, carries BESS and solar in its Campus 1 power record [c:c24] [c:c27] — with the adjacent Abilene campus Crusoe announced for Microsoft in March 2026 specified as a 900 MW on-site plant plus medium-voltage battery storage [c:c40], which is what the same developer's design language looks like when it is written into an announcement. In none of the three is a battery supplier named at the campus.",
+    "A supplier is now named one level up from the campus. Crusoe contracted ON.energy in July 2026 for 5 GW of medium-voltage 'AI UPS' storage across multiple hyperscale campuses [c:c25], and Form Energy in March 2026 for 12 GWh of iron-air capacity from 2027 [c:c26]. The corpus does not assign either to a named building at Abilene — but the developer of the program's flagship campus is buying storage at fleet scale, which is not what a 'None named' cell implied.",
+    "Two more lanes surfaced. Meta's clearest battery exposure is Enbridge Cowboy — 365 MW of solar with a 200 MW / 1,600 MWh Tesla battery, tolled through the Wyoming utility rather than sited on a campus [c:c16] — and its Entergy Louisiana package carries three grid-scale batteries with the megawatts undisclosed [c:c17]. Tesla remains in scope as the attached supplier of record without pinning a project of its own: its Colossus position is cited through xAI [c:c4] [c:c5] and its Cowboy blocks through Meta [c:c16].",
+    "One prior reading now cuts the other way. VoltaGrid, the microgrid operator at Frontier, advertises its AI-data-centre product line as running with zero reliance on battery storage, holding 40–70% load swings with engine injection, synchronous condensers and flywheels; only its legacy mobile units carry a BESS on the switchgear bus, and its supplier, chemistry and megawatt-hours are undisclosed in every source the corpus holds [c:c12]. Frontier was the last edition's leading whitespace candidate. On the record as it now stands it is the least likely of the nine."
+   ]
+  },
+  {
+   "id": "pipeline",
+   "title": "The pipeline at a glance",
+   "kind": "table",
+   "read": "The nine registered projects, who leads them, and what the public record says about storage.",
+   "intro": "'In the plan' means a sourced statement that storage is part of the campus's power design. 'Supplier named' means a battery vendor identified in this corpus's sourced content — an empty cell is a corpus observation, not proof of absence in the market.",
+   "cols": [
+    "Project",
+    "Operator / lead",
+    "Power architecture on record",
+    "Storage in the plan",
+    "BESS supplier named"
+   ],
+   "rows": [
+    [
+     "Stargate (program; Abilene flagship)",
+     "OpenAI-led with Oracle [c:c35] [c:c37]; Crusoe develops and operates Abilene, DPR lead contractor [c:c27]; AEP Texas delivers [c:c34]",
+     "ERCOT grid plus an on-site plant with GE Vernova turbines [c:c38]; 1.2 GW across eight buildings [c:c24]",
+     "Yes — BESS and solar in the Campus 1 power record [c:c24]; Crusoe's adjacent Abilene campus for Microsoft is announced with medium-voltage battery storage [c:c40]",
+     "None at the campus; Crusoe's fleet names ON.energy [c:c25] and Form Energy [c:c26]"
+    ],
+    [
+     "Frontier (Shackelford Co., TX)",
+     "Vantage, for Oracle/OpenAI [c:c7]",
+     "700 MW VoltaGrid off-grid natural-gas microgrid, 210 Jenbacher engines [c:c8]",
+     "No — the AIDC line advertises zero reliance on battery storage [c:c12]",
+     "None"
+    ],
+    [
+     "Lighthouse (Port Washington, WI)",
+     "Vantage, for Oracle/OpenAI [c:c10]; Turner–McCarthy JV on Buildings 13 and 14, Whiting-Turner on a fourth [c:c21] [c:c23]",
+     "Grid-served, 902 MW critical IT; referendum and TIF contested locally [c:c11]",
+     "Yes — 70% of supply from new solar, wind and battery storage built for the project [c:c9]",
+     "None"
+    ],
+    [
+     "Project Jupiter (Doña Ana Co., NM)",
+     "STACK Infrastructure with BorderPlex; Oracle lease, OpenAI tenant [c:c14]",
+     "Bloom solid-oxide fuel cells as prime power [c:c15]; dedicated on-site microgrid [c:c13]",
+     "Yes — battery energy storage in the microgrid record [c:c13]",
+     "None"
+    ],
+    [
+     "Hyperion (Richland Parish, LA)",
+     "Meta [c:c17]; Turner/DPR/Mortenson bench, Mortenson holding the power scopes [c:c18] [c:c19]",
+     "Entergy gas: ~2.3 GW Phase 1 approved, ~5.2 GW Phase 2 proposed [c:c17]",
+     "Yes, utility-side — three grid-scale batteries in the Entergy package, megawatts undisclosed [c:c17]",
+     "None"
+    ],
+    [
+     "Colossus (Memphis, TN)",
+     "xAI; Anthropic contracted all of Colossus 1's capacity from May 2026 [c:c36]",
+     "Gas turbines with battery buffering; over 240 Megapacks at Colossus 1 [c:c5]",
+     "Yes",
+     "Tesla — $430M of Megapacks in 2025 [c:c4]"
+    ],
+    [
+     "Homer City (Homer City, PA)",
+     "Homer City Redevelopment; Kiewit EPC [c:c31]",
+     "4.5 GW natural-gas campus on the retired coal site [c:c31]",
+     "Not on record",
+     "None"
+    ],
+    [
+     "River Bend (West Feliciana Parish, LA)",
+     "Hut 8 lessor, Fluidstack lessee, Google backstop [c:c28] [c:c30]",
+     "330 MW of Entergy capacity from 1 July 2026, scalable to 1,000 MW [c:c29]",
+     "Not on record",
+     "None"
+    ],
+    [
+     "Trimount (Everett, MA)",
+     "Jupiter Power [c:c2]",
+     "Standalone BESS — the project is storage",
+     "Yes — the whole asset",
+     "Hithium 5.015 MWh units, 2.8 GWh, EFSB-approved [c:c1]"
+    ]
+   ]
+  },
+  {
+   "id": "lanes",
+   "title": "Four attach lanes, not two",
+   "kind": "prose",
+   "read": "How storage actually got into this web where it did — the sourced route in each case.",
+   "cites": [
+    "c1",
+    "c3",
+    "c4",
+    "c16",
+    "c25"
+   ],
+   "ps": [
+    "**Owner-led.** Jupiter Power signed a 3 GWh supply agreement for Hithium ∞Block containers in June 2024 [c:c3]; the relationship then materialised as Trimount — 2.8 GWh in Everett, Massachusetts, approved by the state siting board in February 2026 with Hithium's 5.015 MWh units confirmed [c:c1] [c:c2]. The supplier never had to win a campus; it won the owner who brings it to one.",
+    "**Vendor-led.** Tesla sold $430M of Megapacks to xAI in 2025 [c:c4], and over 240 units now sit at Colossus 1 [c:c5] — the integrator's operator relationship carried the product into the project, and the Megapack 3 / Megablock generation extends the portfolio [c:c6].",
+    "**Utility-tolled.** Meta's Enbridge Cowboy pairs 365 MW of solar with a 200 MW / 1,600 MWh Tesla battery that the Wyoming utility tolls, serving Meta data centres without sitting on a Meta campus [c:c16]; the Entergy Louisiana package behind Hyperion carries three more grid-scale batteries with the megawatts undisclosed [c:c17]. The battery is bought by a utility against a hyperscaler's load, not by the hyperscaler.",
+    "**Developer-fleet.** Crusoe — the developer-operator of the Stargate flagship at Abilene [c:c24] [c:c27] — contracted ON.energy for 5 GW of medium-voltage AI UPS storage across multiple hyperscale campuses [c:c25] and Form Energy for 12 GWh of iron-air capacity from 2027 [c:c26]. Storage here is procured once, at fleet scale, and allocated to campuses afterwards; nothing in the corpus assigns a block to a named building."
+   ]
+  },
+  {
+   "id": "absent",
+   "title": "Where storage is in the plan and no supplier is named",
+   "kind": "prose",
+   "read": "The sourced facts behind the whitespace call, stated at the precision the record supports.",
+   "cites": [
+    "c9",
+    "c13",
+    "c17",
+    "c24"
+   ],
+   "ps": [
+    "Lighthouse commits 70% of the campus's power to new zero-emission resources built for the project — solar, wind and battery storage — with 30% of that new capacity offered to Wisconsin consumers [c:c9]; the campus is 902 MW of critical IT load and its local approvals remain contested through a referendum and a disputed TIF district [c:c11]. No battery supplier appears anywhere in the record.",
+    "Project Jupiter runs a dedicated on-site microgrid recorded with battery energy storage, sized in reporting at 700–900 MW for a first phase against a campus above 1 GW [c:c13], with Bloom solid-oxide fuel cells as the prime-power layer under a master agreement of up to 2.8 GW [c:c15]. No battery supplier is named.",
+    "Stargate Abilene lists BESS and solar in its Campus 1 power record beside the grid connection and the on-site plant [c:c24]; the eight buildings topped out in November 2025 [c:c27]. The distinction worth holding is that Crusoe's *other* Abilene campus — the 900 MW build announced for Microsoft in March 2026, outside this project scope — is specified with medium-voltage battery storage in the announcement itself [c:c40]. No battery supplier is named at either, and the two Crusoe has contracted are fleet-level commitments [c:c25] [c:c26].",
+    "Hyperion's storage is on the utility's side of the meter: three grid-scale batteries inside the Entergy package that also carries roughly 2.3 GW of approved and 5.2 GW of proposed gas [c:c17]. Megawatts are undisclosed and no supplier is named — the disclosure sits in the Louisiana commission's docket rather than in Meta's own posts.",
+    "Homer City and River Bend hold no storage record at all. Homer City is a 4.5 GW gas campus on a retired coal site with Kiewit as EPC [c:c31]; River Bend is grid-served, 330 MW from Entergy on 1 July 2026 against a path to 1,000 MW [c:c29], with Vertiv and Jacobs named as the infrastructure and EPCM partners [c:c28]."
+   ]
+  },
+  {
+   "id": "frontier",
+   "title": "The Frontier counter-case",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "A prior whitespace candidate that the record now argues against.",
+   "cites": [
+    "c8",
+    "c12"
+   ],
+   "ps": [
+    "Frontier runs off-grid on a 700 MW VoltaGrid natural-gas microgrid built from 210 Jenbacher engines [c:c8]. VoltaGrid's AI-data-centre product line advertises stability without battery storage: 40–70% load swings absorbed through engine high-pressure injection, synchronous condensers and flywheels, and its own control layer, at ±5% voltage and ±2% frequency [c:c12].",
+    "Only the legacy mobile fleet carries a BESS, on the switchgear bus for backup and transients, and its supplier, chemistry and megawatt-hours are undisclosed in every source held here [c:c12]. Selling buffering into Frontier means displacing a vendor whose product claim is that buffering is unnecessary."
+   ]
+  },
+  {
+   "id": "scopeholders",
+   "title": "Who holds the storage scope",
+   "kind": "table",
+   "read": "Per project, the party this corpus shows making the equipment-level storage decision, and what storage that party has actually delivered.",
+   "intro": "The storage-scope holder is the party a seller has to reach. It is the hyperscaler at only one of the nine.",
+   "cols": [
+    "Project",
+    "Storage-scope holder on record",
+    "That party's storage capability in this corpus"
+   ],
+   "rows": [
+    [
+     "Stargate (Abilene)",
+     "Crusoe — developer-operator of the campus energy fleet [c:c24] [c:c27]",
+     "5 GW of ON.energy medium-voltage AI UPS across hyperscale campuses [c:c25]; 12 GWh of Form Energy iron-air from 2027 [c:c26]"
+    ],
+    [
+     "Frontier",
+     "VoltaGrid — owner-operator of the behind-the-meter microgrid [c:c8]",
+     "BESS on the switchgear bus of the legacy mobile fleet only; the AIDC line is sold as needing none [c:c12]"
+    ],
+    [
+     "Lighthouse",
+     "Vantage, with the Turner–McCarthy joint venture on Buildings 13 and 14 [c:c9] [c:c21]",
+     "McCarthy's renewables practice claims 17 GW-plus of solar and roughly 9 GWh of battery storage across 114-plus projects [c:c22]; the fourth building's contractor carries no storage record [c:c23]"
+    ],
+    [
+     "Project Jupiter",
+     "STACK Infrastructure with BorderPlex Digital Assets [c:c14]",
+     "Microgrid scope stated with battery energy storage [c:c13]; no storage-EPC record of its own in this corpus"
+    ],
+    [
+     "Hyperion",
+     "Entergy for the utility batteries [c:c17]; Mortenson for the campus power scopes [c:c19]",
+     "Mortenson: 45,000-plus MWh of battery storage across 60 projects, with vendor experience spanning Tesla, Samsung, BYD, LG, Fluence, Powin and Wärtsilä [c:c20]"
+    ],
+    [
+     "Colossus",
+     "xAI, buying direct [c:c4]",
+     "Tesla Megapack, over 240 units at Colossus 1 [c:c5]; Megapack 3 / Megablock generation [c:c6]"
+    ],
+    [
+     "Homer City",
+     "Kiewit, as EPC on the 4.5 GW gas campus [c:c31]",
+     "No storage record in this corpus"
+    ],
+    [
+     "River Bend",
+     "Hut 8 as lessor, with Entergy on the interconnection [c:c29]",
+     "Vertiv and Jacobs named as the custom-infrastructure and EPCM partners [c:c28]; no storage record"
+    ],
+    [
+     "Trimount",
+     "Jupiter Power, as owner [c:c2]",
+     "The buyer itself — Hithium ∞Block containers under a 3 GWh agreement [c:c3]"
+    ]
+   ]
+  },
+  {
+   "id": "openlanes",
+   "title": "The open lanes — our read",
+   "kind": "callout",
+   "analysis": true,
+   "read": "Analysis — inference from the sourced facts above, not company statements.",
+   "cites": [
+    "c9",
+    "c13",
+    "c20",
+    "c22",
+    "c25",
+    "c33"
+   ],
+   "ps": [
+    "We assess the whitespace this report can see is **supplier** whitespace, not storage whitespace. Storage is in the plan at Lighthouse, Project Jupiter and Stargate Abilene, and on the utility's side of the meter at Hyperion; what is missing at all four is a named battery vendor. The commercial question is therefore not whether these campuses will buy storage but who signs for it — and the record answers that question differently at each one.",
+    "We assess the party to court is the storage-scope holder, and it is the hyperscaler at only one of the nine projects. At Abilene it is Crusoe, already buying at fleet scale. At Lighthouse it is Vantage and, practically, the McCarthy half of the Turner–McCarthy joint venture — the one contractor on that campus with a utility-scale storage practice of its own. At Hyperion it is Entergy for the tolled batteries and Mortenson for anything behind the meter. At Project Jupiter it is STACK with BorderPlex. Selling to the hyperscaler at these campuses reaches the party least likely to specify the equipment.",
+    "We assess Frontier is now the hardest of the nine rather than the most open. Displacing a vendor whose AI-data-centre product is marketed as needing no battery storage is a different sale from filling an unspecified gap, and nothing in the record suggests VoltaGrid's position there is contested.",
+    "We assess the owner-led template that produced Trimount already has a covered channel partner inside the Stargate programme. Samsung C&T is a Stargate participant through the floating-data-centre work and separately holds a global partnership with Hithium claimed at a 10 GWh pipeline, alongside its own US BESS EPC book — the combination that carried Chinese cells into a US project through an owner rather than through a campus. Caterpillar is the second such position: a Colossus and Stargate turbine supplier that also sells its own energy-storage blocks and pairs them with fast-response gen-sets.",
+    "We assess the indicator that matters most is no longer 'the first named BESS award at a Stargate campus' but the narrower question of whether ON.energy's or Form Energy's capacity is publicly assigned to Abilene. A fleet-level contract that never resolves to a named campus leaves the attach map exactly where the last edition left it; an assignment converts the developer-fleet lane from an inference into a route."
+   ]
+  }
+ ],
+ "indicators": [
+  {
+   "date": "2026-H2",
+   "text": "ON.energy or Form Energy capacity publicly assigned to a named Crusoe campus at Abilene",
+   "confirms": "the developer-fleet lane (Judgment 2) as a route rather than an inference — and the first named battery vendor at a Stargate campus"
+  },
+  {
+   "date": "2026-H2",
+   "text": "A named BESS supplier at Lighthouse or Project Jupiter",
+   "confirms": "the supplier-whitespace call (Judgment 1) closing, and which attach lane won it"
+  },
+  {
+   "date": "2026-Q4",
+   "text": "Entergy's Louisiana filings naming the supplier and megawatts of the three grid-scale batteries in the Meta package",
+   "confirms": "the utility-tolled lane (Judgment 2) as a repeatable channel at Hyperion scale"
+  },
+  {
+   "date": "2026-Q4",
+   "text": "Port Washington TIF and referendum litigation outcome",
+   "confirms": "whether local-consent friction moves the Lighthouse schedule the storage commitment sits inside"
+  },
+  {
+   "date": "2026-H2",
+   "text": "Frontier first-building delivery on the announced schedule",
+   "confirms": "VoltaGrid microgrid performance under AI load — and, if it slips, reopens the buffering question Judgment 5 closes"
+  },
+  {
+   "date": "2027",
+   "text": "Trimount construction milestones toward energisation",
+   "confirms": "the owner-led Chinese-cell lane surviving beyond permitting (Judgment 2)"
+  },
+  {
+   "date": "2027",
+   "text": "River Bend scaling past 330 MW toward the 1,000 MW Entergy path, and whether storage enters the interconnection",
+   "confirms": "whether the newest campus follows Hyperion's utility-side pattern or holds no storage at all"
+  },
+  {
+   "date": "2027",
+   "text": "Homer City first power",
+   "confirms": "the gas-campus timeline that any storage-augmentation decision there would trail"
+  }
+ ],
+ "limitations": [
+  "Built from covered dossiers only, at the pinned versions, with no fresh research. 'No supplier named' is an observation about this corpus, not proof of absence in the market.",
+  "Campus capacity and dollar figures are operator, utility and trade-press statements quoted from cited sources, not comparable KPIs; no normalised cross-company comparison is attempted and none of the twenty-five is compared on financials.",
+  "Tesla is in scope as the attached supplier of record but pins no project through its own relationships[]; its Colossus position is cited through xAI and its Enbridge Cowboy blocks through Meta.",
+  "Several parties central to the storage question are outside this scope: ON.energy, Form Energy and Entergy are covered dossiers that pin no registered project, and Jacobs, BorderPlex Digital Assets and Enbridge are not covered at all. Their side of each project is unpinned.",
+  "Most scoped companies are private — Crusoe, Vantage, STACK Infrastructure, VoltaGrid, Jupiter Power, xAI and the five general contractors — and publish no comparable financials.",
+  "The 'storage in the plan' readings come from campus technical records and product descriptions rather than from awards or filings; they establish design intent, not procurement. Stargate Abilene's Campus 1 line is the weakest of the four on provenance — the campus power record carries it, no announcement states it — while the neighbouring Microsoft campus, which is out of scope, carries it in the announcement.",
+  "Oracle carries the oldest pin in the set at profileVersion 4 and a 2026-08-30 lastUpdated. Its Q1 FY2027 result was expected 2026-09-10 and had not been reported when this edition was cut.",
+  "The previous edition's coverage pins were themselves cut two days after the project-pin layer was backfilled; scope growth between the two editions reflects corpus depth as well as ecosystem movement."
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "Energy-Storage.News — Jupiter's Trimount 2.8 GWh wins Massachusetts EFSB approval (Hithium 5.015 MWh units)",
+   "url": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
+   "date": "2026-02-27",
+   "party": "independent"
+  },
+  {
+   "id": "c2",
+   "slug": "jupiter-power",
+   "company": "Jupiter Power",
+   "label": "Energy-Storage.News — Jupiter receives approval for 2.8 GWh Massachusetts BESS (Hithium 5.015 MWh units confirmed)",
+   "url": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
+   "date": "2026-03-04",
+   "party": "independent"
+  },
+  {
+   "id": "c3",
+   "slug": "jupiter-power",
+   "company": "Jupiter Power",
+   "label": "Solarbe Global — Hithium signs 3 GWh battery storage supply deal with Jupiter Power",
+   "url": "https://www.solarbeglobal.com/hithium-signs-3-gwh-battery-storage-supply-deal-with-jupiter-power/",
+   "date": "2024-06-20",
+   "party": "independent"
+  },
+  {
+   "id": "c4",
+   "slug": "xai",
+   "company": "xAI",
+   "label": "CNBC — Tesla sold $430M of Megapacks to xAI in 2025",
+   "url": "https://www.cnbc.com/2026/01/29/tesla-sold-430-million-worth-of-its-megapack-batteries-to-xai-in-2025.html",
+   "date": "2026-01-29",
+   "party": "independent"
+  },
+  {
+   "id": "c5",
+   "slug": "xai",
+   "company": "xAI",
+   "label": "SpaceX Form S-1 (consolidates xAI/X; infrastructure, KPIs, financials, related-party)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001181412/000162828026036936/spaceexplorationtechnologi.htm",
+   "date": "2026-05-20",
+   "party": "disclosure"
+  },
+  {
+   "id": "c6",
+   "slug": "tesla",
+   "company": "Tesla",
+   "label": "ESS News — Megapack 3 and Megablock unveiling",
+   "url": "https://www.ess-news.com/2025/09/09/tesla-unveils-new-generation-of-utility-scale-batteries-megapack-3-and-megablock/",
+   "date": "2025-09-09",
+   "party": "independent"
+  },
+  {
+   "id": "c7",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "Vantage — Frontier unveiled: $25B+, 1.4GW mega-campus in Shackelford County, TX",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-unveils-plans-for-frontier-a-25b-mega-campus-in-texas-to-meet-unprecedented-ai-demand/",
+   "date": "2025-08-19",
+   "party": "company"
+  },
+  {
+   "id": "c8",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "Vantage/VoltaGrid — >1GW natural-gas microgrid partnership",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-more-than-one-gigawatt-of-power-generation/",
+   "date": "2025-02-11",
+   "party": "company"
+  },
+  {
+   "id": "c9",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "Vantage — Port Washington campus page (Lighthouse specs, 902MW)",
+   "url": "https://vantage-dc.com/data-center-locations/north-america/port-washington-wisconsin",
+   "party": "company"
+  },
+  {
+   "id": "c10",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "OpenAI/Oracle/Vantage — Stargate Wisconsin site announcement (Lighthouse)",
+   "url": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+   "date": "2025-10-22",
+   "party": "company"
+  },
+  {
+   "id": "c11",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "Wisconsin Watch — Port Washington referendum and the $458M Lighthouse TIF",
+   "url": "https://wisconsinwatch.org/2026/04/port-washington-data-center-project-voters-referendum-tif-district-wisconsin/",
+   "date": "2026-04",
+   "party": "independent"
+  },
+  {
+   "id": "c12",
+   "slug": "voltagrid",
+   "company": "VoltaGrid",
+   "label": "Thunder Said Energy — VoltaGrid patent/tech teardown (38 MWe clusters; BESS on switchgear bus; ~$4B Apr 2025)",
+   "url": "https://thundersaidenergy.com/",
+   "date": "2025",
+   "party": "independent"
+  },
+  {
+   "id": "c13",
+   "slug": "stack-infrastructure",
+   "company": "STACK Infrastructure",
+   "label": "El Paso Matters — Project Jupiter part of Stargate; four buildings, 1,400 acres, microgrid details",
+   "url": "https://elpasomatters.org/2025/09/25/stargate-open-ai-oracle-project-jupiter-data-center-dona-ana-new-mexico-el-paso-texas/",
+   "date": "2025-09-25",
+   "party": "independent"
+  },
+  {
+   "id": "c14",
+   "slug": "stack-infrastructure",
+   "company": "STACK Infrastructure",
+   "label": "STACK — delivers digital infrastructure for 1GW+ data center campus in Doña Ana County, New Mexico (Oracle Stargate)",
+   "url": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
+   "date": "2025-09-26",
+   "party": "company"
+  },
+  {
+   "id": "c15",
+   "slug": "bloom-energy",
+   "company": "Bloom Energy",
+   "label": "Oracle Project Jupiter fuel-cell announcement",
+   "url": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/",
+   "date": "2026-04-27",
+   "party": "independent"
+  },
+  {
+   "id": "c16",
+   "slug": "meta",
+   "company": "Meta",
+   "label": "Utility Dive — Enbridge/Meta Cowboy solar+storage",
+   "url": "https://www.utilitydive.com/news/enbridge-meta-build-365-mw200-mw-solarstorage-project/820905/",
+   "date": "2026-05-21",
+   "party": "independent"
+  },
+  {
+   "id": "c17",
+   "slug": "meta",
+   "company": "Meta",
+   "label": "Meta — Richland Parish 5 GW expansion + Entergy package",
+   "url": "https://about.fb.com/news/2026/07/teachers-local-businesses-win-as-meta-expands-louisiana-data-center/",
+   "date": "2026-07-13",
+   "party": "company"
+  },
+  {
+   "id": "c18",
+   "slug": "turner-construction",
+   "company": "Turner Construction",
+   "label": "ENR — Meta picks Turner-DPR-Mortenson for $10B Louisiana campus",
+   "url": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
+   "date": "2024-12",
+   "party": "independent"
+  },
+  {
+   "id": "c19",
+   "slug": "mortenson",
+   "company": "Mortenson",
+   "label": "Mortenson — Richland Parish data center project page (scope; 7,500+ craft workers)",
+   "url": "https://www.mortenson.com/projects/richland-parish-data-center",
+   "party": "company"
+  },
+  {
+   "id": "c20",
+   "slug": "mortenson",
+   "company": "Mortenson",
+   "label": "Mortenson — Energy & battery storage EPC (45,000+ MWh, 60 projects)",
+   "url": "https://www.mortenson.com/industries/energy-storage",
+   "party": "company"
+  },
+  {
+   "id": "c21",
+   "slug": "mccarthy",
+   "company": "McCarthy",
+   "label": "The Daily Reporter — Turner and McCarthy announce a partnership for the $15B Port Washington project (Buildings 13 and 14, 468 MW)",
+   "url": "https://dailyreporter.com/2026/01/22/turner-mccarthy-port-washington-data-center/",
+   "date": "2026-01-22",
+   "party": "independent"
+  },
+  {
+   "id": "c22",
+   "slug": "mccarthy",
+   "company": "McCarthy",
+   "label": "McCarthy — Renewable Energy (17 GW-plus solar, 9 GWh storage, 114-plus projects, 4,600 craft)",
+   "url": "https://www.mccarthy.com/projects/renewable-energy",
+   "party": "company"
+  },
+  {
+   "id": "c23",
+   "slug": "whiting-turner",
+   "company": "Whiting-Turner",
+   "label": "infraUS — Vantage selects the build team for the USD 15bn Port Washington campus",
+   "url": "https://infraus.org/vantage-selects-build-team-for-15-billion-port-washington-data-center-campus/",
+   "date": "2025-11-03",
+   "party": "independent"
+  },
+  {
+   "id": "c24",
+   "slug": "crusoe",
+   "company": "Crusoe",
+   "label": "Crusoe — Abilene 1.2 GW expansion",
+   "url": "https://www.crusoe.ai/resources/newsroom/crusoe-expands-ai-data-center-campus-in-abilene-to-1-2-gigawatts",
+   "date": "2025-03",
+   "party": "company"
+  },
+  {
+   "id": "c25",
+   "slug": "crusoe",
+   "company": "Crusoe",
+   "label": "Crusoe — ON.energy 5 GW AI UPS",
+   "url": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-multiple-hyperscale-campuses",
+   "date": "2026-07-21",
+   "party": "company"
+  },
+  {
+   "id": "c26",
+   "slug": "crusoe",
+   "company": "Crusoe",
+   "label": "Crusoe — Form Energy 12 GWh",
+   "url": "https://www.crusoe.ai/resources/newsroom/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers",
+   "date": "2026-03-24",
+   "party": "company"
+  },
+  {
+   "id": "c27",
+   "slug": "dpr",
+   "company": "DPR Construction",
+   "label": "W.Media — Crusoe tops off final AI data center building in Abilene, Texas (8 buildings, 1.2 GW)",
+   "url": "https://w.media/crusoe-tops-off-final-ai-data-center-in-abilene-texas/",
+   "date": "2025-11-18",
+   "party": "independent"
+  },
+  {
+   "id": "c28",
+   "slug": "hut-8",
+   "company": "Hut 8",
+   "label": "Hut 8 Signs 15-Year, 245 MW AI Data Center Lease at River Bend Campus with Total Contract Value of $7.0 Billion (8-K Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d1.htm",
+   "date": "2025-12-17",
+   "party": "disclosure"
+  },
+  {
+   "id": "c29",
+   "slug": "hut-8",
+   "company": "Hut 8",
+   "label": "Hut 8 — River Bend Data Center Campus Transaction investor presentation (8-K Ex-99.2)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217xex99d2.htm",
+   "date": "2025-12-17",
+   "party": "disclosure"
+  },
+  {
+   "id": "c30",
+   "slug": "google",
+   "company": "Google",
+   "label": "Hut 8 Corp. Form 8-K — River Bend lease, Fluidstack tenant, Google backstop (Items 8.01/9.01)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465925122052/hut-20251217x8k.htm",
+   "date": "2025-12-17",
+   "party": "disclosure"
+  },
+  {
+   "id": "c31",
+   "slug": "kiewit",
+   "company": "Kiewit",
+   "label": "GE Vernova — Homer City Redevelopment & Kiewit announce country's largest natural-gas-powered data center campus",
+   "url": "https://www.gevernova.com/news/press-releases/homer-city-redevelopment-kiewit-announce-country-largest-natural-gas-powered-data-center-support-ai-hpc-demand",
+   "date": "2025-04-02",
+   "party": "independent"
+  },
+  {
+   "id": "c32",
+   "slug": "caterpillar",
+   "company": "Caterpillar",
+   "label": "Cat — energy storage systems campaign page",
+   "url": "https://www.cat.com/en_US/campaigns/npi/cat-energy-storage-systems.html",
+   "party": "company"
+  },
+  {
+   "id": "c33",
+   "slug": "samsung-ct",
+   "company": "Samsung C&T",
+   "label": "Energy-Storage.News — Hithium, Samsung C&T claim 10 GWh pipeline for global BESS partnership",
+   "url": "https://www.energy-storage.news/hithium-samsung-ct-claim-10gwh-pipeline-for-global-bess-project-partnership/",
+   "date": "2025-01-08",
+   "party": "independent"
+  },
+  {
+   "id": "c34",
+   "slug": "aep",
+   "company": "American Electric Power",
+   "label": "Edison Electric Institute — List of Large Customer Projects and Tariffs",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-08-28",
+   "party": "independent"
+  },
+  {
+   "id": "c35",
+   "slug": "openai",
+   "company": "OpenAI",
+   "label": "Stargate scaling update (10 GW surpassed)",
+   "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/",
+   "date": "2026-04",
+   "party": "company"
+  },
+  {
+   "id": "c36",
+   "slug": "anthropic",
+   "company": "Anthropic",
+   "label": "Anthropic — higher usage limits and a compute deal with SpaceX (Colossus 1)",
+   "url": "https://www.anthropic.com/news/higher-limits-spacex",
+   "date": "2026-05-06",
+   "party": "company"
+  },
+  {
+   "id": "c37",
+   "slug": "oracle",
+   "company": "Oracle",
+   "label": "Bloomberg — record ~$38B debt package for Oracle-tied Vantage campuses",
+   "url": "https://www.bloomberg.com/news/articles/2025-10-23/record-38-billion-debt-sale-nears-for-oracle-tied-data-centers",
+   "date": "2025-10-23",
+   "party": "independent"
+  },
+  {
+   "id": "c38",
+   "slug": "ge-vernova",
+   "company": "GE Vernova",
+   "label": "Utility Dive — slot/backlog analysis",
+   "url": "https://www.utilitydive.com/news/ge-vernova-gas-turbine-investor/807662/",
+   "date": "2025-12",
+   "party": "independent"
+  },
+  {
+   "id": "c39",
+   "slug": "samsung-ct",
+   "company": "Samsung C&T",
+   "label": "OpenAI — Samsung and SK join Stargate (C&T + SHI floating data centers)",
+   "url": "https://openai.com/index/samsung-and-sk-join-stargate/",
+   "date": "2025-10-01",
+   "party": "independent"
+  },
+  {
+   "id": "c40",
+   "slug": "crusoe",
+   "company": "Crusoe",
+   "label": "Crusoe — Microsoft 900 MW campus",
+   "url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure",
+   "date": "2026-03-27",
+   "party": "company"
+  }
+ ],
+ "supersedes": "named-project-bess-attach--opportunity--2026-08-30",
+ "guidanceOverlays": [
+  {
+   "moduleId": "power-infra-aidc-2026-08",
+   "sectionId": "sockets",
+   "title": "Named projects: what the sockets look like in practice",
+   "ps": [
+    "Across the nine registered named projects the corpus now shows **four** distinct routes a battery takes into an AI campus, and only one of them is a sale to the campus owner. *Owner-led*: a battery-buying project owner carries its supplier in (Jupiter Power and Hithium at Trimount). *Vendor-led*: an integrator rides an existing operator relationship (Tesla into Colossus). *Utility-tolled*: a utility owns and tolls the asset against the hyperscaler's load, so the storage never sits on the campus at all (Enbridge Cowboy for Meta; three more batteries inside the Entergy Louisiana package). *Developer-fleet*: the campus developer contracts storage once at fleet scale and allocates it afterwards (Crusoe with ON.energy and Form Energy).",
+    "The socket framing holds, but the *buyer* behind each socket is not who a first pass would guess. Storage is in the plan at four of the nine campuses with no supplier named at any of them — so the open question at those sites is procurement, not design. Treat the **storage-scope holder** as the account: the developer at Abilene, the developer plus the storage-capable half of the contractor joint venture at Lighthouse, the utility plus the power-scope GC at Hyperion."
+   ]
+  },
+  {
+   "moduleId": "utility-aidc-procurement-2026-08",
+   "sectionId": "buyermap",
+   "title": "Named projects: who actually signs for storage",
+   "ps": [
+    "On the nine registered named projects, the party holding the storage scope is the hyperscaler at exactly one — Colossus, where xAI buys Megapacks directly. Everywhere else it sits with the developer (Crusoe at Abilene; STACK with BorderPlex at Project Jupiter), the developer plus its contractor bench (Vantage with the Turner–McCarthy joint venture at Lighthouse, where McCarthy carries a utility-scale storage practice and the fourth building's contractor carries none), the utility (Entergy for the batteries inside Meta's Louisiana package), or the microgrid operator (VoltaGrid at Frontier, whose product line is sold as needing no battery at all).",
+    "The practical consequence for a seller working this map: the **buyer map is per campus, not per programme**. Two campuses inside the same Stargate programme — Abilene and Frontier — have different storage-scope holders with opposite dispositions toward buying a battery, and a third, Lighthouse, routes through a general contractor rather than either the landlord or the tenant."
+   ]
+  }
+ ]
+}

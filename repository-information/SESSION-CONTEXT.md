@@ -6,6 +6,48 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-08 02:12:19 AM EST
+**Repo version:** v05.13r — one push commit on `claude/phase-6-session-1-opus5-sbiw8p`
+**Branch:** `claude/phase-6-session-1-opus5-sbiw8p`
+**Model:** Opus 5 xhigh — **Phase 6 session 1 of `INTEGRATED-REMEDIATION-PLAN.md` §7.8 (the named-project opportunity edition), authoring only.**
+
+### What was done
+
+**Phase 6 session 1 — v05.13r.** `named-project-bess-attach--opportunity--2026-09-08` published, superseding the 2026-08-30 id. **Scope re-derived on the day** from every `relationships[].project` that resolves in `profiler-projects.json` — 24 dossiers over all nine registered projects, plus `tesla` as the attached supplier of record = **25** (against 15 over 8). Fresh pins for all 25, **40 citations** verbatim from the cited dossiers' `sources[]`, six confidence-tagged judgments, eight indicators, eight limitations, `intel-briefing` style. Body opens with "What changed since the last edition": River Bend registered (245 MW critical IT, Fluidstack lessee, Google backstopping USD 7.0bn, Entergy 330 MW → 1,000 MW); the ten new participants; storage **in the plan** at Lighthouse, Project Jupiter and Stargate Abilene Campus 1 with **no supplier named at any**; Meta's utility-tolled Enbridge Cowboy lane plus three undisclosed Entergy batteries; Tesla cited through `xai` and `meta`. Index: new entry first, 2026-08-30 → `superseded`; the **13** superseded rows removed from `report-pins-verified.json` (38 → 25). Plan §6 Phase 6 → **1 of 3 done**; **§5 caveat LIFTED** (struck through, provenance kept). Two overlays, anchors validated: `power-infra-aidc-2026-08` → `sockets`, `utility-aidc-procurement-2026-08` → `buyermap`.
+
+### Where we left off
+
+v05.13r pushed as one commit. Nothing half-done. **Next: Phase 6 session 2** — the grid-scale and §154 editions together (§7.8 "Session 2"), which needs the `byd` (H1 2026, due 2026-08-29) and `eve-energy` (due 2026-08-20) refreshes first or the staleness stated. S1 can interleave (§7.4 puts Phase 5 → S1 → Phase 6).
+
+### Key decisions and findings
+
+- **The whitespace is supplier whitespace, and the edition now says so** — storage is in the plan at four of the nine projects (Lighthouse 70% solar/wind/battery; Project Jupiter's microgrid BESS; Stargate Abilene Campus 1 BESS/solar; Hyperion's three utility-side Entergy batteries) with no battery vendor named at any. The §5 caveat lifted on that basis.
+- **A fourth attach lane, new to this edition — developer-fleet.** Crusoe (developer-operator of the Stargate flagship) contracted **ON.energy** for 5 GW of MV "AI UPS" storage across hyperscale campuses (Jul 2026) and **Form Energy** for 12 GWh of iron-air from 2027. Storage bought once at fleet scale, allocated afterwards; the corpus assigns no block to a named building. The lanes are now owner-led (Trimount/Hithium), vendor-led (Colossus/Tesla), utility-tolled (Enbridge Cowboy) and developer-fleet.
+- **Frontier inverted** — the 2026-08-30 edition's leading whitespace candidate is now the hardest of the nine: VoltaGrid markets its AIDC line as running with **zero reliance on battery storage** (40–70% swings held by engine injection, syncons/flywheels), and only the legacy mobile fleet carries an undisclosed BESS on the switchgear bus.
+- **The storage-scope holder is the hyperscaler at one project of nine** (xAI at Colossus). Elsewhere: Crusoe (Abilene), Vantage + the **McCarthy** half of the Turner–McCarthy JV (Lighthouse — McCarthy carries ~9 GWh of storage EPC; Whiting-Turner's building carries none), STACK/BorderPlex (Jupiter), Entergy + **Mortenson** (Hyperion — 45,000+ MWh across 60 projects), VoltaGrid (Frontier), Kiewit (Homer City), Hut 8 + Entergy (River Bend).
+- **`verify-profiler-roles.py` carries two pre-existing failures** — `progress: admin tick did not persist` and `progress: admin lost its own progress after the other account signed in`. **Confirmed by stashing to a clean `origin/main` tree and re-running: identical.** The Role + Access matrix itself passes exactly (4 tiers × 13 surfaces) and the Technical Annex audit is 154/154 with 0 blank rows. Not this session's to fix (authoring-only; the DO NOT list forbids opening `Profiler.html` / `Profiler.gs`) — **standing, unassigned**.
+- **Nothing was owed a refresh.** All 25 scoped dossiers are fresh (≤45d); `oracle` v4 (2026-08-30, 9 days) is the oldest pin and its Q1 FY2027 row is dated **2026-09-10** — the result had not happened, so carrying it was correct, with the position stated in `coverage.gaps[]`.
+
+### Active context
+
+- **Branch:** `claude/phase-6-session-1-opus5-sbiw8p` · **repo version:** v05.13r · **Profiler page:** v01.83w (indirect affect, data-only, no bump) · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges / 9 named projects / 8 guidance modules / **5 reports (4 current, 1 superseded)** / 19 segments / 283 memberships / drill pool 1,920
+- **Classroom live:** 10 lessons · 3 tracks · 134 gate cases · `check-classroom-content.py` 0/0 · pipeline no P3
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** **100 sections, 2 dated 2026-09-08** (`v05.12r`, `v05.13r`). Same EST day → 100 − 2 = 98 → no rotation. **A later EST day → 100 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 79; budget ~10 extra minutes and run `git fetch --unshallow` before any SHA lookup.
+- **Checker state:** reports **0 errors / 6 warnings** (sungrow v9, catl v7 ×2, zhonhen v7, hithium v13 ×2 — all on the three untouched current editions, **none on the new one**; 13 superseded pins skipped, 19 quiet); content 10/3/134 0/0; pipeline P1 on out-of-write-set paths only, no P3.
+- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · 5 Done · **6 — 1 of 3 done (v05.13r)**; next Phase 6 session 2 (grid-scale + §154, after `byd` / `eve-energy`), then session 3 (AIDC, after `megmeet` / `zhonhen` / `sinexcel`) · S1 · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
+- **Standing, unassigned:** the two `verify-profiler-roles.py` progress-isolation failures above; `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; the v04.94r post-publication edit of the §154 report file (mooted when session 2 supersedes it); the overdue desk rows (`sinexcel` 08-11, `eve-energy` 08-20, `iren` / `jinko` 08-27, `byd` 08-29; `megmeet` / `zhonhen` H1 interims absent with rows dated 30 Oct).
+- **Routine note:** the 2026-10-01 drift-check fire now reads **this** edition, so it will not author on churn. Its gate replacement is still recorded-only in §7.7 — the developer applies it.
+
+### Recommendation for next session
+
+- Run **Phase 6 session 2 on Opus 5 xhigh**: paste the "Session 2" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the grid-scale competitive and §154 risk editions in one session, deciding the `byd` / `eve-energy` preflight first (refresh both under the Profiler Command, or proceed and state the staleness in each edition's `coverage.gaps[]`).
+
+**To continue:** type `run Phase 6 session 2`
+
+## Previous Sessions
+
 **Date:** 2026-09-08 12:00:01 AM EST
 **Repo version:** v05.12r — one push commit on `claude/phase-5-report-evaluation-cs27yo`
 **Branch:** `claude/phase-5-report-evaluation-cs27yo`
@@ -43,48 +85,3 @@ v05.12r pushed as one commit. Nothing half-done. **Next: Phase 6 session 1 on Op
 - Run **Phase 6 session 1 on Opus 5 xhigh**: paste the "Session 1" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the named-project opportunity edition (25 in scope, `supersedes` the 2026-08-30 id, the 13 superseded pin rows removed), landed before the Routine's 2026-10-01 fire.
 
 **To continue:** type `run Phase 6 session 1`
-
-## Previous Sessions
-
-**Date:** 2026-09-07 11:30:55 PM EST
-**Repo version:** v05.11r — **two** push commits this session: `bdca7ac` (v05.10r, K1 — merged to `main`, branch deleted by the workflow) and this one (v05.11r, the taxonomy decision + the Phase 5 brief + this context), on `claude/k1-fable-5-1-high-y5wuyn`
-**Branch:** `claude/k1-fable-5-1-high-y5wuyn`
-**Model:** Fable 5.1 High — **K1 of `INTEGRATED-REMEDIATION-PLAN.md` §7 (the study-pool fix), then the developer's taxonomy review of `profiler-segments.json` (S0's "done when"), then the Phase 5 paste-in brief.**
-
-### What was done
-
-**K1 — v05.10r.** `clDrillStudyItems_()` in `Classroom.gs` reads each guide's top-level `flashcards[]` **and** every `sections[]` entry of kind `flashcards`, emitting the new item kind `ss:<slug>:<sectionId>:<n>` beside the unchanged `sf:`. **Study pool 766 → 1,920** (766 `sf:` + 1,154 `ss:`), verified by running the real builder under Node shims against the local Pages tree. `CL_DRILL_INV_CAP` 1200 → 2400; `CL_DRILL_ID_RE` admits `ss`; `CL_DRILL_SECTION_ID_RE` keeps ungradable section ids out of the pool. **One deviation from §10.7, forced by measurement:** the cache holds the compact `{ id: hash }` map (60,705 bytes) under the new key `cl_drillstudy_v2` and `clDrillStudyExpand_()` restores `{ kind, slug, hash }` on read — the full shape measured ~146 KB, past the 100 KB `CacheService` cap. `Classroom.html` resolves `ss:` from the fetched guide's sections; the drill card's source line links the company in Profiler and names the section. `CLASSROOM-SCHEMA.md` gains the `ss` identity row; `check-classroom-content.py`'s documented-cap assertion moved to 2400. Playwright read: landing card "0 of 1920 cards started", `ss:aep:drill:0` rendering its exact question and answer. Classroom **GAS v01.17g · page v01.08w**. No guide touched, no `sf:` id or `study:` pin moved. `gateDigest` untouched (no P3).
-
-**Taxonomy review — v05.11r.** The developer chose **Option B** for `compute-and-the-rack`: fill it, not fold it. **AMD** (challenger to NVIDIA) and **Supermicro** (the rack/server OEM) are Phase E group **E7** in `PROFILER-COVERAGE-PLAN.md` §8/§10, both public → Opus 5 xhigh; Phase E is now nineteen companies / seven groups / eight sessions, E7 running with E1–E3 (below-floor segments first). Recorded in the registry's `notes` for the segment (no membership changed — the dossiers do not exist yet), curriculum plan §10.2 row 9 / §10.11 / §8 item 11 / §9 row, remediation plan §6 (S0's "done when" closed; S3 nineteen) and §7.2. The fold was rejected because NVIDIA and Flex already sit in `power-conversion-and-rack-power-silicon`, so a fold would only have deleted the load's own buying criteria.
-
-**Phase 5 brief.** Written into `INTEGRATED-REMEDIATION-PLAN.md` **§7.6** on the §7.5 pattern — evaluation only, one decision per report, the Routine gate decided but not applied, the §5 caveat lifted or restated, §7.7 decisions and §7.8 Phase 6 brief to be written by that session; CHANGELOG rotation arithmetic for a later EST day included.
-
-### Where we left off
-
-v05.11r pushed as one commit. Nothing half-done. **Next: Phase 5 on Fable 5.1 xhigh — paste `INTEGRATED-REMEDIATION-PLAN.md` §7.6.** Then S1 (generator + Value Chain tracks + health checker + `reading-the-graph`), then Phase 6, per §7.4.
-
-### Key decisions and findings
-
-- **The §10.7 cache arithmetic was wrong** (~30 bytes/item assumed; ~76 measured). Compact map chosen over the spec's split-by-slug-initial fallback; the split stays documented as the next step past ~90 KB.
-- **Profiler has no deep link to a study-guide section**, so the `ss:` source line links `Profiler.html#<slug>` and names the section as text.
-- **Option B over A/C** for `compute-and-the-rack`; the "fold" was really a deletion since both members are already in power conversion.
-- **The content checker hard-codes the documented cap** and must move with the schema; it caught the 1200 → 2400 change as designed.
-
-### Active context
-
-- **Branch:** `claude/k1-fable-5-1-high-y5wuyn` · **repo version:** v05.11r · **Profiler page:** v01.83w · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
-- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges (built 2026-09-07) / 9 named projects / 8 guidance modules / 4 reports; 19 segments / 283 memberships; **drill study pool 1,920**
-- **Classroom live:** 10 lessons · 3 tracks · 134 gate cases · `check-classroom-content.py` 0/0 · pipeline no P3 · selftest 13/0
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG: 111 sections, 13 dated 2026-09-07.** Same EST day → 112 − 14 = 98 → no rotation. **A later EST day → 112 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`) → 99. `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
-- **Checker state:** content 10/3/134 0/0; pipeline P1/P2 noise on developer commits, no P3; reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — `report-pins-verified.json` untouched).
-- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** 0 · 1 · 2a · 2b · 3 · S0 Done (v05.09r, "done when" closed v05.11r) · **K1 Done (v05.10r)** · **5 next** · S1 · 6 · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
-- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; do not act on the `named-project` report's whitespace call until Phase 5 restates it; the stale "802 of ~855" figures were rewritten in `Classroom.html`'s drill comment, and `CLASSROOM-SCHEMA.md` line "855 items × a scheduling row" (the C4 sizing argument) was left as history.
-
-### Recommendation for next session
-
-- Run **Phase 5 on Fable 5.1 xhigh**: open `INTEGRATED-REMEDIATION-PLAN.md` §7.6 and paste the blockquote as the opening prompt — the report-strategy evaluation (one decision per report, the Routine gate, the §5 caveat), writing §7.7 and the Phase 6 brief §7.8, no report authored.
-
-**To continue:** type `run Phase 5`
-
-Developed by: LightAISolutions
