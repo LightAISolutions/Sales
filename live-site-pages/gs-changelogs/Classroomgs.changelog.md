@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19g] — 2026-09-08 06:59:28 AM EST — v05.18r
+
+### Added
+- **A new lesson opens the Value Chain lane** — it teaches how to read the relationship map before the market-structure lessons that use it, with flashcards and a five-question self-test. Readable by every admitted tier
+- Curriculum updated
+
+### Changed
+- The first Value Chain track now opens with that lesson
 
 ## [v01.18g] — 2026-09-08 06:32:46 AM EST — v05.17r
 

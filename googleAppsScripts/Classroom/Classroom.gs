@@ -1,4 +1,4 @@
-var VERSION = "v01.18g";
+var VERSION = "v01.19g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -31246,6 +31246,525 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
 };
 }
 
+function clLessonReadingTheGraph_() {
+  return {
+ "schemaVersion": 1,
+ "id": "reading-the-graph",
+ "type": "module",
+ "title": "Reading the Relationship Graph",
+ "short": "What an edge is, the seven types and their inverses, the chips that carry the deal — and how to read a player table without mistaking a mention for a deal.",
+ "group": "The Value Chain",
+ "updated": "2026-09-08",
+ "reviewBy": "2027-03-08",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-08",
+    "note": "the edge shape, the curated/derived split, and every edge quoted in the worked example"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-07",
+    "note": "term resolution for the {{term}} tooltips"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluidstack",
+    "date": "2026-09-06",
+    "note": "worked example — the tenant of record; its curated typings of Hut 8, TeraWulf, Google, Entergy and AEP"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hut-8",
+    "date": "2026-09-06",
+    "note": "worked example — a landlord; its customer typing of Fluidstack, its competitor typing of TeraWulf, and the five undated cross-mentions"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:terawulf",
+    "date": "2026-09-06",
+    "note": "worked example — a landlord; its investor typing of Google and the five links it does curate"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:google",
+    "date": "2026-09-07",
+    "note": "worked example — the backstop; its partner typings across the chain and its portfolio typing of Cipher Digital"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "1,260",
+   "v": "edges in the graph",
+   "sub": "one per company pair with a curated link or a cross-mention"
+  },
+  {
+   "k": "7",
+   "v": "relationship types",
+   "sub": "customer · supplier · partner · competitor · investor · portfolio · other"
+  },
+  {
+   "k": "2",
+   "v": "sides to every edge",
+   "sub": "each dossier types the link from where it stands"
+  },
+  {
+   "k": "3",
+   "v": "roles in a segment",
+   "sub": "incumbent · challenger · adjacent — position, not a relationship"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what-an-edge-is",
+   "title": "What an edge is",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Every covered company has a dossier, and every dossier states who it works with, who it buys from, who it sells to and who it competes against. Read one dossier and you get one company's account of its own world. The {{relationship graph}} exists so you can read the other direction too: it merges all of those stated relationships with the mentions detected across the whole corpus into one file, so a company's connections can be seen from both ends at once. It is **built, never hand-edited** — regenerated from the registry and the profiles after any dossier write — which means it can say nothing that a dossier does not.",
+    "The unit is the {{edge}}: one company pair, stored once, with the two slugs in alphabetical order. Fluidstack and Hut 8 are one edge, not two, and it holds everything either side has to say. At the last build there were **1,260 edges** across the corpus.",
+    "An edge carries two different kinds of content, and confusing them is the single most common way to misread the graph. A {{curated edge}} is a relationship a dossier *states*: it has a type, a note, the context, a cited source, and the deal chips. Someone read a filing and wrote it down. A {{derived edge}} is a pair the builder found because one dossier's prose happens to name the other company. It carries the sentence — the {{cross-mention}} — and nothing else. No type, no chips, no claim about a transaction. The Profiler calls these *Detected*, which is exactly the right word: something was noticed, not classified.",
+    "One more field sits on the edge itself rather than on either side: **last**, the date of the newest dated evidence on the pair. It tells you how fresh the *record* is, not how current the *relationship* is — and it is empty whenever none of the evidence carries a date at all.",
+    "So the honest reading of an edge is narrow and useful: **an edge is a claim that the record connects these two names.** Whether it connects them as a deal, a rivalry, an investment, or a single sentence of comparison is what the type and the chips are for — and if there is no type, nobody has answered that question yet."
+   ]
+  },
+  {
+   "id": "seven-types-two-directions",
+   "title": "Seven types, two directions",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "A curated relationship carries exactly one of seven types, and the type **reads from the stating side's perspective** — the dossier is saying \"the other company is my *type*\". Because an edge holds both sides, the same relationship can be typed twice, once from each end, and the two typings should be an {{inverse pair}}.",
+   "cols": [
+    "Type",
+    "The stating dossier is saying",
+    "Inverse",
+    "What you should find on the other side"
+   ],
+   "rows": [
+    [
+     "**customer**",
+     "the other company buys from me",
+     "**supplier**",
+     "the counterparty typing me **supplier**"
+    ],
+    [
+     "**supplier**",
+     "I buy from the other company",
+     "**customer**",
+     "the counterparty typing me **customer**"
+    ],
+    [
+     "**investor**",
+     "the other company put money or credit into me",
+     "**portfolio**",
+     "the counterparty typing me **portfolio**"
+    ],
+    [
+     "**portfolio**",
+     "I hold a position in the other company",
+     "**investor**",
+     "the counterparty typing me **investor**"
+    ],
+    [
+     "**partner**",
+     "we work together and neither side is simply buying",
+     "**partner**",
+     "the counterparty typing me **partner** too"
+    ],
+    [
+     "**competitor**",
+     "we contest the same buyers",
+     "**competitor**",
+     "the counterparty typing me **competitor** too"
+    ],
+    [
+     "**other**",
+     "a link the six above do not describe",
+     "**other**",
+     "the counterparty typing me **other**, if it curates it at all"
+    ]
+   ],
+   "note": "**\"Should\" is not \"will\".** Three things routinely break the symmetry, and none of them is a data error. A **one-sided edge** is normal — only one of the two dossiers has been written or last revised, so only one side has typed anything. A **pair of types that are not inverses** is a signal worth reading rather than a fault to discard: each dossier types the link as it experiences it, and the disagreement usually means the two sides are describing different halves of the same arrangement. And a **pair with no curated typing at all** is not a relationship the corpus denies — it is one no dossier has stated yet."
+  },
+  {
+   "id": "reading-the-chips",
+   "title": "Reading the chips",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Beside the type, a curated relationship carries a handful of small fields — the chips the Profiler renders as pills beneath the link. They are where the substance of a deal lives, and each of them is narrower than it looks. Every example below is read off the worked chain in the next section.",
+   "cols": [
+    "Chip",
+    "What it carries",
+    "What it does not mean"
+   ],
+   "rows": [
+    [
+     "**status**",
+     "One of **active**, **announced** or **historical** — the state of the relationship as the dossier last recorded it. Fluidstack's links to its two landlords are both active; its links to Entergy and to AEP are announced.",
+     "Not a live feed. It is the state at the dossier's last revision, and **announced** in particular means reported or signed, not flowing."
+    ],
+    [
+     "**since**",
+     "When the relationship began, as a year or a year and month — 2025-12 for Fluidstack and Hut 8 at River Bend, 2025-08 for Fluidstack and TeraWulf at Lake Mariner.",
+     "Not when the record was last checked, and not when the contract ends. A relationship can be years old and its edge stated last week, or the reverse."
+    ],
+    [
+     "**scale**",
+     "The size of the engagement in the stating dossier's own words — for River Bend, \"245 MW critical IT on 330 MW of utility capacity; USD 7.0bn base-term contract value\".",
+     "Not a normalized figure. Two edges' scale strings are written by two different dossiers about two different things and are not comparable with each other."
+    ],
+    [
+     "**via**",
+     "The product line, site or instrument the engagement runs through. Each side may name it differently: Fluidstack writes \"River Bend, West Feliciana Parish LA\" and Hut 8 writes \"River Bend data centre campus\" for the same lease.",
+     "Not a controlled vocabulary. Matching two edges by their via strings will miss as often as it hits."
+    ],
+    [
+     "**project**",
+     "A pin to a registered named project, so an engagement can be attached to the campus or programme it serves. Hut 8's side of the River Bend lease pins river-bend-campus; Fluidstack's side does not.",
+     "Not required, and not symmetric. One side pinning a project does not mean the other side failed to — it means only one of them chose to record it that way."
+    ],
+    [
+     "**source**",
+     "The URL the dossier cites for the link — for the River Bend lease, the filed 8-K exhibit both sides point at.",
+     "Not a guarantee that every clause in the note is in that one document. The note is the dossier's reading; the source is where the reading started."
+    ],
+    [
+     "**last** *(on the edge, not on a side)*",
+     "The date of the newest dated evidence anywhere on the pair — 2026-08-05 for Fluidstack and TeraWulf, 2026-02-25 for Fluidstack and Hut 8.",
+     "Not the relationship's currency. It is empty when no evidence carries a date at all, which is the case for Hut 8 and TeraWulf despite five mentions on the pair."
+    ]
+   ],
+   "note": "A curated side also carries a **note** (one line naming what the link is) and a **context** (the paragraphs behind it). Those are prose, and prose is where the qualifications live — the note tells you a thing happened, the context tells you what was and was not disclosed about it."
+  },
+  {
+   "id": "one-chain-three-typings",
+   "title": "One chain, three typings",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Here is one arrangement, read through the graph. A neocloud signs leases with data-centre landlords, a hyperscaler {{backstop}}s the rent so the unrated tenant's covenant becomes bankable, and an AI lab is the end user of the capacity. It is a credit-substitution chain, and the segments registry places the tenant in it in exactly those words. **The companies are the worked example, not the material** — what you are learning is that one arrangement produces different types at different ends, and that reading only one end gives you one of them.",
+   "cols": [
+    "Stating dossier",
+    "About",
+    "Type",
+    "Chips",
+    "What that side records"
+   ],
+   "rows": [
+    [
+     "Fluidstack",
+     "Hut 8",
+     "**supplier**",
+     "active · since 2025-12 · 245 MW critical IT on 330 MW of utility capacity; USD 7.0bn base term · via River Bend, West Feliciana Parish LA",
+     "\"Landlord at River Bend under a 15-year {{triple-net lease}}, with Google backstopping Fluidstack's rent.\""
+    ],
+    [
+     "Hut 8",
+     "Fluidstack",
+     "**customer**",
+     "active · since 2025-12 · 245 MW critical IT; USD 7.0bn base term · via River Bend data centre campus · project river-bend-campus",
+     "\"Lessee of record under the 15-year triple-net River Bend lease, with Google backstopping its payment obligations.\""
+    ],
+    [
+     "Fluidstack",
+     "TeraWulf",
+     "**supplier**",
+     "active · since 2025-08 · 378 MW at Lake Mariner (~USD 6.7bn); 168 MW Abernathy JV (~USD 9.5bn), now Fluidstack-controlled · via CB-3, CB-4, CB-5 leases; Abernathy joint venture",
+     "\"TeraWulf is Fluidstack's largest landlord\" — three 10-year leases at Lake Mariner plus the Abernathy {{joint venture}} whose 50.1% TeraWulf sold to a Fluidstack-led group in July 2026."
+    ],
+    [
+     "TeraWulf",
+     "Fluidstack",
+     "*(no curated entry)*",
+     "23 cross-mentions on the pair, latest 2026-08-05",
+     "TeraWulf's dossier curates five relationships and its largest tenant is not among them. The link is fully stated — from the other end only."
+    ],
+    [
+     "Hut 8",
+     "TeraWulf",
+     "**competitor**",
+     "active · no since, no scale, no via · edge last is empty",
+     "\"The other Fluidstack landlord with a Google backstop — and the one that paid for it in equity.\""
+    ],
+    [
+     "TeraWulf",
+     "Google",
+     "**investor**",
+     "active · since 2025-08 · via lease credit backstops",
+     "The backstops were bought with {{penny warrant}}s now representing about 14% of TeraWulf pro forma."
+    ],
+    [
+     "Google",
+     "TeraWulf",
+     "**partner**",
+     "—",
+     "\"USD 3.2bn of backstops across two tranches, bought with penny warrants now ~14% of TeraWulf — plus USD 1.3bn at Abernathy that cost nothing.\""
+    ],
+    [
+     "Google",
+     "Hut 8",
+     "**partner**",
+     "—",
+     "\"Backstops the full 15-year, USD 7.0bn River Bend base term for no warrants and no equity — the largest instrument in the programme and the clearest of the three that carried no consideration.\""
+    ]
+   ],
+   "note": "**Three typings, one chain.** The tenant calls both landlords **supplier**; a landlord calls the tenant **customer**; and one landlord calls the other **competitor** — because from where Hut 8 stands, TeraWulf is not part of its deal, it is the comparable. All three are correct, and none of them is the whole thing.\n\n**The backstop is the sharper case.** Google's dossier types Fluidstack, Hut 8 and TeraWulf all **partner**. TeraWulf's own dossier types Google **investor**, because the support there was paid for in warrants; Hut 8 records no warrants and no equity for the same service. Same instrument, two economics — and **partner** on Google's side hides the difference. The corpus even holds the corrected version of the identical pair: Google's dossier types Cipher Digital **portfolio**, the coherent inverse of the **investor** Cipher states. When you find a **partner** where you expected an {{inverse pair}}, read the other side before you use it."
+  },
+  {
+   "id": "the-explorer",
+   "title": "Where the graph is rendered",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The graph has two rendered surfaces in Profiler, and one capability gates both of them — they are deliberately one surface with two doors, so they can never drift apart. **Both are open to contributors and administrators only.** If your tier is analyst, the door you actually have is this one: the *Who is connected to whom* table in each of the nineteen segment lessons is generated from the same graph file, so the edges reach you here even when the explorer does not.",
+    "**The Ecosystem Network** is the standalone explorer, reached from the masthead or the #network route. It is the whole graph in one flat list: every relationship across the covered companies, curated links read from both sides plus the cross-mentions detected in the corpus. Four filters sit across the top — a company, a link kind, a counterparty category, and a *New in 30d* toggle that carries its own count. The link-kind filter is the one worth understanding, because it is the curated-against-derived split rendered as a control: *Working with* gathers customer, supplier, partner, investor and portfolio; *Competing with* is competitor; *Other links* is everything else that someone typed; and *Detected only* is the edges nobody typed at all.",
+    "A row shows the two companies as buttons that open their dossiers, one word for the tie — **Working**, **Competing**, **Linked** or **Detected** — and a meta line reading *latest <date> · N mentions*. Beneath it, the typed link is spelled out from each side that curated it (\"B is A's customer.\", or \"Competitors — both dossiers agree.\") followed by the note. Then exactly one quote: the **freshest dated cross-mention**, labelled with the dossier it lives in, the section it sits in and its date. Rows are ordered newest evidence first, and a count line above them reads *N links shown · M in the graph* — so you always know how much of the graph your filters just hid.",
+    "Pick one company and a second control appears: **Compare with…**. That switches the view to common ground — the direct link between the two if there is one, then every counterparty both are connected to, with each side's tie spelled out separately. It is the fastest way to answer \"what do these two actually share?\" without reading two dossiers end to end.",
+    "**The Relationships tab** on a dossier is the same data narrowed to one company. A dossier that curates its links groups them under *Working with*, *Competing with* and *Other links*; a dossier that curates none shows *Detected in this dossier* instead. Either way a final group always follows — **Detected in other dossiers** — and that group is the reason the graph exists: it is the inbound view, the sentences that live in *other* companies' records and name this one, which no single dossier read can ever show you. A formation timeline built from the curated links' since-dates sits alongside, answering whether a company's ecosystem is long-standing or newly assembled."
+   ]
+  },
+  {
+   "id": "segments-and-roles",
+   "title": "Segments, roles, and the two tables",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The nineteen lessons that follow this one in the Value Chain lane are generated from the segments registry, and each of them puts the same two tables in front of you: **The players** and **Who is connected to whom**. Both are readable at a glance once you know what each column is claiming — and, just as importantly, what it is not.",
+   "cols": [
+    "What you are reading",
+    "What it means",
+    "What it is not"
+   ],
+   "rows": [
+    [
+     "**A {{segment}}**",
+     "One link of the value chain: what is made or done there, what its buyers buy on, and which covered companies sit in it. Nineteen run in chain order across four tiers — **supply** (makes the thing), **build** (builds, powers and cools the plant or the hall), **demand** (owns, operates or consumes it) and **services** (finances, assures, optimises or insures it).",
+     "Not a market-size bucket and not a browsing filter. The position number is chain order, not rank — position 1 is upstream of position 2, nothing more."
+    ],
+    [
+     "Role: **{{incumbent}}**",
+     "\"The dossier places the company in the segment's established leading set — ranked top-tier by a third party, or described by the dossier as the incumbent, the benchmark, the reference, or the leader for what the segment makes or does.\"",
+     "Not \"the biggest company on the page\". It is a placement inside **one** segment, made from that company's own record."
+    ],
+    [
+     "Role: **{{challenger}}**",
+     "\"The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves.\"",
+     "Not \"small\". A giant in an adjacent market attacking this one is a challenger here, and a company converting an existing asset base into the segment carries it too."
+    ],
+    [
+     "Role: **{{adjacent}}**",
+     "\"The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it.\" Adjacent members render under their own heading.",
+     "Not a lesser member. Adjacent counts toward a segment's three-member floor and never toward its incumbent or challenger requirement."
+    ],
+    [
+     "The players — **Company** and **Dossier**",
+     "The display name and the permanent dossier slug, grouped incumbent, then challenger, then adjacent.",
+     "The slug is not a link the page draws for you — it is the stable identity that the roster deck and any cross-reference key on, printed so you can find the dossier yourself."
+    ],
+    [
+     "The players — **Basis**",
+     "The one line in the company's **own** dossier that supports the placement: an ecosystem-role sentence, a named product line, or the registered tagline.",
+     "Not the registry's category label. A membership checked against a filter is not checked at all — and if a dossier revision removes the basis, the membership goes with it."
+    ],
+    [
+     "Who is connected to whom — the six columns",
+     "**From · To · Type · Status · Scale · Via.** Curated edges among the members come first, then curated edges out to the segments one link up or down. Bold names are members of that segment, and the type is the edge as typed **from the first company's side**.",
+     "Not the whole relationship picture. Derived-only pairs are reported as a count rather than as rows, precisely because nobody typed them."
+    ],
+    [
+     "**Role against edge type**",
+     "A role says where the registry places a company **inside one segment**. An edge type says what one dossier records about **another company**.",
+     "Not the same axis, and neither implies the other. A challenger in a segment can be a customer on an edge; being someone's supplier says nothing about your standing in your own segment."
+    ]
+   ],
+   "note": "**Multiple membership is normal, and the role changes with the segment.** Fluidstack sits in two: **adjacent** in AIDC developers and landlords, on a power-and-land development line it runs in its own name, and **challenger** in Neoclouds, where its dossier calls it \"the clearest case of the credit-substitution layer between a frontier lab and the power landlords\". Hut 8 and TeraWulf are both **challenger** in AIDC developers and landlords; Google is **incumbent** in Hyperscalers and AI labs. A membership is never inferred from another membership.\n\n**The floor rule, which is why some segments have no judgment layer yet:** \"A landscape module is authored for a segment only when it holds at least three members with a dossier, including at least one incumbent and one challenger. Adjacent members count toward the three but not toward the roles.\" A thin segment still gets its lesson — an honest, thin one — because stating what the record holds is always safe; ranking a field the record cannot see is not."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Four ways to read this data wrongly, each one shown on the chain above rather than invented. Every one of them produces a confident, specific, wrong sentence in a meeting — which is worse than saying nothing.",
+   "cols": [
+    "The misread",
+    "What the record actually says",
+    "The check"
+   ],
+   "rows": [
+    [
+     "**A cross-mention read as a deal.** You search a dossier, find the other company's name, and report a relationship.",
+     "Hut 8's dossier names TeraWulf five times — twice in its summary, once in its key judgments, once in a capability line — and **every one is a comparison**: contracted book against contracted book, warrants given against warrants withheld. The graph carries all five as evidence on the pair. The only typing on that edge is Hut 8's **competitor**, and TeraWulf's dossier does not curate Hut 8 at all.",
+     "Before you call a mention a deal, look for a **type**. *Detected* is the corpus's word for \"nobody has classified this\", and a benchmark sentence is the most common thing hiding behind it."
+    ],
+    [
+     "**A partner edge taken at face value.** Partner reads as a relationship of equals, so you file it as one and move on.",
+     "Google's dossier types Fluidstack, Hut 8 and TeraWulf all **partner** for the same service. TeraWulf's own dossier types Google **investor**, because the {{backstop}}s there were bought with {{penny warrant}}s now around 14% of TeraWulf pro forma. Hut 8's records no warrants and no equity for the same instrument. Same programme, two very different economics, and **partner** on the stating side shows neither.",
+     "**Partner** is the softest type in the vocabulary and the one that most often stands in for a purchase or a position. Read the other side's typing and its scale before you use it; where the pair is not an {{inverse pair}}, the disagreement is the finding."
+    ],
+    [
+     "**One counterparty read as \"the customer\".** A landlord's dossier lists a customer, so you name it as the buyer.",
+     "Hut 8 types **two** counterparties **customer** at the same campus: Fluidstack, the {{tenant of record}} under the lease, and Anthropic, the end user of the capacity. Its own summary spells the chain out — the utility supplies the site, Fluidstack is the tenant of record, Anthropic is the end user.",
+     "Ask which question you are answering. **Who signs** and **who consumes** are different companies in a credit-substitution chain, and the covenant that makes the lease bankable may belong to a third party who signs nothing at all."
+    ],
+    [
+     "**Status read as current.** The edge says active, so you treat the arrangement as live and unchanged.",
+     "Status is the state at the dossier's **last revision**, and the vocabulary has three values, not two: Fluidstack's links to its two landlords are **active**, and its links to Entergy and to AEP are **announced** — reported, not flowing. Worse, an edge can stay **active** while its substance moves underneath: the Fluidstack–TeraWulf note records that July 2026 changed the relationship twice, with TeraWulf exiting the Abernathy joint venture to a Fluidstack-led group and signing an AI lab directly elsewhere. The type is still supplier and the since is still 2025-08.",
+     "Read **last** — the newest dated evidence on the pair — beside **status**, and then read the note, which is where movement is written. An empty last is its own warning: the Hut 8 and TeraWulf edge carries five mentions and **not one of them is dated**."
+    ]
+   ],
+   "note": "The common thread: every one of these misreads comes from taking a single field as the whole answer. The graph is built so that no field has to carry that weight — there is always a second side, a chip, a note and a date to check it against."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is the difference between a curated edge and a derived one?",
+     "a": "A curated edge is a relationship a dossier states: it has a type, a note, a cited source and the deal chips. A derived edge is a pair the builder found because one dossier's prose names the other company — it carries the sentence and nothing else. One was classified by a person; the other was only noticed."
+    },
+    {
+     "q": "An edge's type is stated by one dossier. Whose point of view is it, and what does that imply?",
+     "a": "The stating side's — the dossier is saying \"the other company is my type\". It implies you have half the answer until you read the other side, and that the two typings should be inverses of each other."
+    },
+    {
+     "q": "Which relationship types come in pairs, and which are their own inverse?",
+     "a": "Customer pairs with supplier and investor pairs with portfolio. Partner, competitor and other are their own inverses — both sides should use the same word."
+    },
+    {
+     "q": "An edge's status reads announced. What has happened and what has not?",
+     "a": "Something has been signed or reported; nothing is necessarily flowing. Status is also the state at the dossier's last revision, not a live feed — so announced is a floor on what is true, never a ceiling."
+    },
+    {
+     "q": "What does an empty last field on an edge tell you?",
+     "a": "That no evidence on the pair carries a date at all — not that the relationship is old or dormant. It is a statement about the record's dating, not about the relationship."
+    },
+    {
+     "q": "A company appears in two segments with two different roles. Is the registry contradicting itself?",
+     "a": "No. A role is a placement inside one segment, made from that company's own dossier, so multiple membership with different roles is normal and expected. A membership is never inferred from another membership."
+    },
+    {
+     "q": "Why is a partner typing the one to check hardest?",
+     "a": "Because it is the softest word in the vocabulary and routinely stands in for a purchase or an equity position. The other side often types the same relationship customer, supplier or investor — and that side is where the economics are visible."
+    },
+    {
+     "q": "You need the relationship map for a segment and your tier cannot open the ecosystem explorer. Where do you read it?",
+     "a": "The Who is connected to whom table inside that segment's lesson. It is generated from the same graph file, so the edges are the same ones the explorer would show."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A dossier types a counterparty supplier. If that counterparty curates the same link, what type should it carry?",
+     "c": [
+      "customer",
+      "supplier",
+      "partner",
+      "portfolio"
+     ],
+     "a": 0,
+     "why": "Type reads from the stating side. \"I buy from them\" on one side is \"they buy from me\" on the other, so supplier inverts to customer."
+    },
+    {
+     "q": "An edge holds eleven cross-mentions and no curated entry on either side. What may you conclude from it?",
+     "c": [
+      "That both dossiers' prose names the other company, and nothing about a transaction",
+      "That the two companies have an active commercial relationship",
+      "That the two companies are competitors",
+      "That one company invested in the other"
+     ],
+     "a": 0,
+     "why": "Cross-mentions are sentences, not classifications. With no curated entry, nobody has said what the connection is — the Profiler labels exactly this case Detected."
+    },
+    {
+     "q": "A segment's player table lists a company as adjacent. What does that tell you?",
+     "c": [
+      "The segment is not its primary business, but its dossier records a line or position touching it — and it cannot satisfy the floor rule's role requirement",
+      "It is a smaller version of an incumbent",
+      "It was placed there because the registry category matched",
+      "It has no dossier evidence for the placement"
+     ],
+     "a": 0,
+     "why": "Adjacent is defined by the dossier recording a product line, division, channel, or buyer or supplier position that touches the segment. Adjacent members count toward the three-member floor and never toward the incumbent or challenger requirement."
+    },
+    {
+     "q": "An edge is typed active with since 2025-08. What does since record?",
+     "c": [
+      "When the relationship began",
+      "When the dossier was last revised",
+      "When the contract expires",
+      "When the newest evidence was published"
+     ],
+     "a": 0,
+     "why": "Since is the start of the relationship. The record's own freshness is carried elsewhere — by the edge's last field and by the dossier's revision date."
+    },
+    {
+     "q": "Two dossiers curate the same pair and their types are not inverses. What is the right next step?",
+     "c": [
+      "Read both notes — the disagreement usually means each side is describing a different half of the same arrangement",
+      "Discard the edge as corrupt data",
+      "Keep the type from the larger company",
+      "Treat the pair as merely detected"
+     ],
+     "a": 0,
+     "why": "A non-inverse pair is information, not an error. Each dossier types the link as it experiences it, and the gap between the two typings is often exactly where the economics of the arrangement sit."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "relationship graph",
+   "d": "One built file that merges every dossier's stated relationships with the cross-mentions detected across the corpus, so a company's connections can be read from both directions at once. It is regenerated from the registry and the profiles after any dossier write and is never hand-edited — it can therefore say nothing a dossier does not."
+  },
+  {
+   "t": "edge",
+   "d": "One company pair in the relationship graph. The pair is stored once, with the two slugs in alphabetical order, and carries whatever either dossier states about the other plus every cross-mention between them."
+  },
+  {
+   "t": "curated edge",
+   "d": "A relationship a dossier states in its own record: a type, a note, the context, a cited source, and the deal chips. Curated is the corpus's word for \"someone read the filing and wrote this down\"."
+  },
+  {
+   "t": "derived edge",
+   "d": "A pair the graph builder found because one dossier's prose names the other covered company. It carries evidence sentences and no type — nobody classified it, and a mention is not a deal. The Profiler labels these Detected."
+  },
+  {
+   "t": "cross-mention",
+   "d": "A sentence in one company's dossier that names another covered company. The graph carries it on the pair as evidence, with the dossier it came from, the section it sits in, and its date where the sentence has one."
+  },
+  {
+   "t": "inverse pair",
+   "d": "The two typings that describe one relationship from its two ends — customer against supplier, investor against portfolio. Partner, competitor and other are their own inverses."
+  },
+  {
+   "t": "segment",
+   "d": "One link of the value chain as the segments registry defines it: what is made or done there, what its buyers buy on, and which covered companies sit in it. Nineteen segments run in chain order across four tiers."
+  },
+  {
+   "t": "incumbent",
+   "d": "A segment role. The dossier places the company in the segment's established leading set — ranked top-tier by a third party, or described by the dossier as the incumbent, the benchmark, the reference, or the leader for what the segment makes or does."
+  },
+  {
+   "t": "challenger",
+   "d": "A segment role. The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves."
+  },
+  {
+   "t": "adjacent",
+   "d": "A segment role. The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members never count toward a segment's incumbent or challenger requirement."
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -31313,6 +31832,7 @@ function clTrackValueChainMakers_() {
  "group": "The Value Chain",
  "updated": "2026-09-08",
  "lessons": [
+  "reading-the-graph",
   "segment-cells-and-chemistry",
   "segment-storage-integrators-and-containers",
   "segment-power-conversion-and-rack-power-silicon"
@@ -31395,7 +31915,8 @@ function clLessons_() {
           clLessonSegmentCapital_(),
           clLessonSegmentAssurance_(),
           clLessonSegmentSoftwareAndOptimization_(),
-          clLessonSegmentInsuranceAndRiskTransfer_()];
+          clLessonSegmentInsuranceAndRiskTransfer_(),
+          clLessonReadingTheGraph_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_(),
