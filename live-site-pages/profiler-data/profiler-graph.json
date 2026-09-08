@@ -13275,14 +13275,28 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Zhonhen Electric is China's data-center HVDC power leader — #1 at 31% share per Kezhi Consulting's 2025 count, the co-developer of Alibaba's Panama power architecture, and the lead drafter of the national 240V/336V DC standard — now converting that fifteen-year domestic franchise into an 800VDC/AI story while CATL capital-increases RMB 4.1B into its controlling holdco for 49%; the unpublished H1 2026 report (due by 31 August 2026) is the near-term checkpoint.",
+     "text": "CATL's RMB 4.1B capital increase for 49% of the controlling holdco has signed definitive documents (2026-08-14) but has NOT closed; closing must occur within six months of signing.",
      "src": "",
      "from": "b"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "(High confidence) We assess the CATL transaction as a re-rating of what Zhonhen is: RMB 4.1B for 49% of the holdco, with nomination rights reaching into listco management, converts a data-center power vendor into the equipment arm of a 'compute-electricity coordination' platform spanning AIDC power, charging/swap and power trading.",
+     "text": "(High confidence) We assess the CATL transaction as a re-rating of what Zhonhen is, and the definitive terms make the reach clearer than the headline.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "RMB 4,099,858,823.53 for 49.00% of the holdco — RMB 3.51B cash plus CATL's 49% of Times Tianyuan at RMB 588M — leaves Zhu Guoding and Bao Xiaoru with 51% and, on the filing's own account, changes no controlling shareholder.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "But the shareholders' agreement gives CATL a nominated director, a deputy general manager and the finance department manager of the listed company, plus a quorum veto at the parent, locked for 60 months.",
      "src": "",
      "from": "b"
     },
@@ -13291,6 +13305,13 @@
      "date": "",
      "text": "Customers include State Grid, Sinopec, China Tower, CNOOC; custom high-power equipment supplied to Envision Energy and CATL's charging-service arm Times Electric Service branded stations.",
      "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-15",
+     "text": "CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed — RMB 4,099,858,823.53 for 49.00% of the controlling holdco: RMB 3.51B cash plus CATL's own 49% of Times Tianyuan valued at RMB 588M. Zhu Guoding and Bao Xiaoru retain 51%. The shareholders' agreement gives CATL a nominated director, a deputy general manager and the finance department manager of the LISTED company plus a quorum veto at the parent, locked for 60 months — set against the filing's own statement that there is 'no impact on the Company's independence in personnel, assets, finance, business or organisation'. Closing must occur within six months of signing.",
+     "src": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
      "from": "b"
     },
     {
@@ -13315,7 +13336,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-08-14"
+   "last": "2026-08-15"
   },
   {
    "a": "cipher-mining",
@@ -29573,13 +29594,6 @@
      "from": "b"
     },
     {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Basis: Kehua Data's independently reported 800V order momentum 'narrowing the gap'; NVIDIA's published 800VDC partner rosters naming Delta and Megmeet among mainland-linked vendors but not Zhonhen; the company's own August 2025 denial of NVIDIA/Meta/Google agreements.",
-     "src": "",
-     "from": "b"
-    },
-    {
      "where": "Recent Reporting",
      "date": "2025-08-19",
      "text": "Abnormal-fluctuation clarification after the stock rose >20% in three sessions: rumors of partnerships with NVIDIA, Meta and Google are false; no cooperation agreements or sales contracts signed with these overseas cloud vendors — The stock trades on an AI-export narrative the company itself has formally disavowed — any Western-partnership claim after this date needs primary-source verification.",
@@ -35021,6 +35035,20 @@
      "text": "Basis: Chinese-press reports of Megmeet displacing LITEON at #2 on NVL72 shelves conflict with LITEON's record shipments and AVL additions (two new North American CSPs this year); both can be true if the market is growing faster than share shifts — but the sidecar power-rack segment LITEON is tooling Texas for is the same one Megmeet claims first-mover position in, and independent analysis projects that TAM peaking around 2028.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against Delta and LITEON it is the challenger in the same NVIDIA power-system-components tier; against the hall-edge specialists it is a rack vendor reaching upward.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Trade reporting that it displaced LITEON as the #2 NVIDIA power-shelf source remains UNSOURCED and is now weaker, not stronger: the H1 2026 interim names no competitor and claims no rank, 36Kr's supplier account names LITEON as the second supplier with Megmeet the mainland entrant, and TrendForce's June 2026 800 V HVDC supplier note and DigiTimes' Computex 2026 AI-power coverage name Delta and LITEON without mentioning Megmeet.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -36247,21 +36275,35 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Megmeet is deliberately sacrificing near-term profit to buy early position in NVIDIA's 800VDC data-center power architecture ahead of the projected 2027 rack transition; whether AI data-center revenue materializes at scale becomes verifiable with the 27 August 2026 half-year report.",
+     "text": "Basis: the H1 2026 interim states in the company's own words that it is 「英伟达（NVIDIA Corporation）指定的数据中心电源推荐提供商之一」 — one of NVIDIA's designated recommended data-centre power suppliers — participating in the Blackwell and Vera Rubin power and HVDC programmes.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Summary",
      "date": "",
-     "text": "Basis: it is a member of NVIDIA's 800V HVDC ecosystem — the only mainland-China power vendor NVIDIA has named for GB200 NVL72 power — and is building the full grid-to-GPU chain (solid-state transformers, 800VDC sidecar cabinets, power/BBU/supercapacitor shelves, server PSUs) that adjoins BESS players on the compute-power-coordination side.",
+     "text": "It is the only mainland-China power vendor NVIDIA has named for GB200 NVL72 power, and it publishes the full grid-to-GPU chain (edge cabinets rectifying 380–480 VAC directly to 800 VDC at over 1 MW per rack, a solid-state transformer still in development at a target above 98.5%, power/BBU/supercapacitor shelves, CRPS with 800 VDC input, PDB and Power Brick).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against Delta and LITEON it is the challenger in the same NVIDIA power-system-components tier; against the hall-edge specialists it is a rack vendor reaching upward.",
      "src": "",
      "from": "a"
     },
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "(Moderate confidence) We assess its wedge into the Delta-dominated (~41% share) server-power market is architecture timing, not price: it moved first among mainland vendors on the 800VDC sidecar/SST full chain and is the only mainland supplier NVIDIA named for GB200 power.",
+     "text": "(Moderate confidence) We assess its wedge into the Delta-dominated server-power market is architecture timing, not price: it moved first among mainland vendors on the 800VDC sidecar/SST full chain and is the only mainland supplier NVIDIA named for GB200 power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Trade reporting that it displaced LITEON as the #2 NVIDIA power-shelf source remains UNSOURCED and is now weaker, not stronger: the H1 2026 interim names no competitor and claims no rank, 36Kr's supplier account names LITEON as the second supplier with Megmeet the mainland entrant, and TrendForce's June 2026 800 V HVDC supplier note and DigiTimes' Computex 2026 AI-power coverage name Delta and LITEON without mentioning Megmeet.",
      "src": "",
      "from": "a"
     },
@@ -36464,13 +36506,6 @@
      "where": "Summary",
      "date": "",
      "text": "For US-facing AIDC work its relevance is prospective, not present: exports are 4.1% of revenue, no US entity is on record, it is absent from NVIDIA's published 800VDC partner rosters (whose power-component tier names Delta, Flex Power, Lead Wealth, LiteOn and Megmeet — Hopewind, contrary to Chinese trade coverage, is not on NVIDIA's lists either), and the company itself denied signed agreements with NVIDIA, Meta or Google in August 2025.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Basis: Kehua Data's independently reported 800V order momentum 'narrowing the gap'; NVIDIA's published 800VDC partner rosters naming Delta and Megmeet among mainland-linked vendors but not Zhonhen; the company's own August 2025 denial of NVIDIA/Meta/Google agreements.",
      "src": "",
      "from": "b"
     }
@@ -37315,13 +37350,6 @@
      "where": "Summary",
      "date": "",
      "text": "For US-facing AIDC work its relevance is prospective, not present: exports are 4.1% of revenue, no US entity is on record, it is absent from NVIDIA's published 800VDC partner rosters (whose power-component tier names Delta, Flex Power, Lead Wealth, LiteOn and Megmeet — Hopewind, contrary to Chinese trade coverage, is not on NVIDIA's lists either), and the company itself denied signed agreements with NVIDIA, Meta or Google in August 2025.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Basis: Kehua Data's independently reported 800V order momentum 'narrowing the gap'; NVIDIA's published 800VDC partner rosters naming Delta and Megmeet among mainland-linked vendors but not Zhonhen; the company's own August 2025 denial of NVIDIA/Meta/Google agreements.",
      "src": "",
      "from": "b"
     },
@@ -40863,6 +40891,20 @@
    "b": "sinexcel",
    "evid": [
     {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The interim report establishes the unit (an AIDC 关键电源业务部 created in 2026, 'from grid to server') but the string '800V' does not appear once in its 212 pages; the entire 800 VDC roadmap — the three-tier retrofit / row-level HVDC / native-800V path read off NVIDIA's OCP white paper 2.0 — lives only in the 2026-08-14 IR record.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The company has never confirmed a direct NVIDIA relationship in any disclosure.",
+     "src": "",
+     "from": "b"
+    },
+    {
      "where": "Capabilities · AI data-center (AIDC) power",
      "date": "",
      "text": "Current shipping exposure is a 36 kW HVDC rectifier module - third-party reporting says it is supplied to Vertiv, giving indirect NVIDIA-ecosystem exposure - plus power-quality equipment (AHF/SVG/AVC-RTS) already deployed in AIDCs.",
@@ -41341,6 +41383,13 @@
     {
      "where": "Summary",
      "date": "",
+     "text": "BOTTOM LINE UP FRONT: The H1 2026 interim landed on 2026-08-27 and it separates the two questions cleanly — the domestic data-centre power business nearly doubled (RMB 807.59M, +98.48%, now 63.97% of group revenue) and carried more than the whole of group growth, while the 800 VDC story it is credited with converted into nothing disclosable: across 187 pages the interim contains no order, no backlog, no customer, no capacity commitment, and does not use the words NVIDIA, SST or transformer-rectifier at all.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
      "text": "We assess Zhonhen as the strongest pure claim on the thesis that NVIDIA's 800VDC transition validates an architecture China already runs at scale — its Panama one-stage 10kV-to-DC conversion predates the Western 800VDC push by six years, and its BAT/operator installed base is the largest HVDC field record anywhere.",
      "src": "",
      "from": "b"
@@ -41362,15 +41411,15 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: Kehua Data's independently reported 800V order momentum 'narrowing the gap'; NVIDIA's published 800VDC partner rosters naming Delta and Megmeet among mainland-linked vendors but not Zhonhen; the company's own August 2025 denial of NVIDIA/Meta/Google agreements.",
+     "text": "The architecture Zhonhen pioneered is globally validated — NVIDIA's August 2026 execution paper names the Panama Architecture as a transformer-rectifier implementation, verified against the source document in this corpus — yet the company's own interim converts none of that into disclosed commercial traction: no order, no backlog, no named data-centre customer, no NVIDIA mention.",
      "src": "",
      "from": "b"
     },
     {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Updated August 2026: NVIDIA's execution paper names the Panama Architecture in its own engineering text (pp.",
-     "src": "",
+     "where": "Recent Reporting",
+     "date": "2026-08-27",
+     "text": "H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed — Revenue RMB 1.2624B (+41.67%) with attributable profit up only 15.81%. Data-centre power is now 63.97% of revenue at a falling 18.25% margin. The interim mentions no order, backlog, customer, NVIDIA reference, SST or TRU anywhere in 187 pages — the architectural validation has not converted into disclosed commercial traction.",
+     "src": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514125.PDF",
      "from": "b"
     },
     {
@@ -41402,7 +41451,7 @@
      "from": "b"
     }
    ],
-   "last": "2026-08-21"
+   "last": "2026-08-27"
   },
   {
    "a": "oklo",
@@ -44858,6 +44907,20 @@
      "where": "Key Judgments",
      "date": "",
      "text": "(Moderate confidence) We assess the AI data-center power line (built on the APF/SVG heritage; HVDC modules third-party-reported shipping to Vertiv) is optionality, pre-revenue as of early 2026 — treat AI-exposure claims as forward-looking until revenue is disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "COLLECTION NOTE: a cluster of specific claims circulating in search summaries — Vertiv OEM manufacture of HVDC modules, a 36 kW module at 100 W/in³, ripple ≤0.5%, a jointly developed 'AI dynamic load adapter' — is traceable to no citable source and appears in neither page said to carry it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Two pre-window third-party placements also contradict each other: CNESA (Nov 2025) asserts a named Vertiv power-quality relationship without disclosing sourcing, while a July 2026 self-media roundup asserts technology-adjacency and no customer relationship.",
      "src": "",
      "from": "a"
     },

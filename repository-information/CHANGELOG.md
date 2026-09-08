@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.15r] — 2026-09-08 05:43:06 AM EST
+
+> continue with your recommendation
+>
+> *(resolving the recommendation put to the developer earlier in the session: run Phase 6 session 3 on Opus 5 xhigh — paste the "Session 3" blockquote from INTEGRATED-REMEDIATION-PLAN.md §7.8, the AIDC power-conversion edition, deciding the megmeet / zhonhen / sinexcel preflight first exactly as session 2 did: establish reachability before committing to the refresh path. Developer decisions taken the same turn: leave the `byd` segment `basis` line alone and let the edition's ranking-basis table carry the nuance; correct §7.8's "six added members" to eight with the provenance kept.)*
+
+### Added
+
+- **`aidc-power-conversion--competitive--2026-09-08` published** (`live-site-pages/profiler-data/reports/`), superseding the 2026-08-29 id and **closing Phase 6**. Scope re-derived on the day to the **15**-name covered 800 VDC roster cut **by layer** rather than as one peer family — silicon and the last centimetre (`infineon`, `vicor`); the rack (`delta-electronics`, `liteon`, `megmeet`, `flex`); the sidecar and hall-edge block (`zhonhen`, `sungrow`, `sinexcel`, with `delta-electronics` appearing twice); facility and grid (`vertiv`, `eaton`, `schneider-electric`, `abb`, `ge-vernova`, `hitachi-energy`). The like-for-like rule is met **within each layer's table** — four layer tables instead of one field table. 31 citations, seven sections, eight confidence-tagged judgments, three overlays re-authored on `nvidia-800vdc-2026-08` (`options`, `trusst`, `suppliers`) with anchors validated.
+- **A normalized whole-company scale section the prior edition could not carry.** That edition recorded "the normalized-KPI overlay is unused"; all 15 dossiers now carry one, so the edition compares latest-full-fiscal-year revenue in USD millions with the fiscal-year misalignment stated in the note and in `limitations[]`.
+
+### Changed
+
+- **Preflight taken, not deferred — and decided empirically before any refresh work began.** All three H1 2026 interims were confirmed published and retrievable first (`sinexcel` 2026-08-11, `zhonhen` 2026-08-27, `megmeet` 2026-08-28), with `cninfo.com.cn` answering and `szse.cn` failing TLS. Only then were all three refreshed under the full Profiler Command: **`megmeet` v6 → v7** (30 → 38 sources), **`zhonhen` v7 → v8** (45 → 50), **`sinexcel` v7 → v8** (43 → 52). All three archived, registry synced, relationship graph rebuilt (3,681 → **3,690** evidence items), calendar rows advanced to the 2026-10-30/31 statutory backstops with rewritten `source` and `watch[]`.
+- **§7.8's "six added members" corrected to eight with the provenance kept** — struck through rather than overwritten, with §7.7 finding 5's arithmetic (11 kept + 8 added − 1 removed = 19) recorded inline, per the developer's decision and matching how the plan handled the §5 caveat.
+- **Plan §6 Phase 6 row → Done (v05.15r)**, with the session-3 record written in full; a duplicated `**(3)** **(3)**` fragment left by session 2 removed in the same edit.
+- **Reports index**: new entry first, the 2026-08-29 entry flipped to `superseded`. **`report-pins-verified.json` 8 → 0** — the superseded edition's eight AIDC rows removed.
+
+### Fixed
+
+- **`zhonhen` does not run late.** Both research agents independently established that the H1 2026 interim was filed four days inside the 31 August statutory deadline, and that the 2024–2026 periodic record is consistent (2024 interim 08-27, 2025 interim 08-21, 2025 annual on its pre-announced date). The calendar's "runs late against the statutory window" inference rested on the dossier not yet holding the filing, not on the filing being late; the row now says so.
+- **`sinexcel`'s OVERDUE row was a desk false positive.** The interim published on its scheduled date of 2026-08-11; the 2026-08-12 one-shot fired SUCCEEDED and landed no commit, leaving the row overdue against a report that was never late. The row records the distinction, and notes that only cninfo's date is authoritative — the company's own site back-stamps its results infographic 2026-08-10 while the asset was uploaded 2026-08-24.
+- **`megmeet`'s segment taxonomy migrated to current naming.** The dossier carried the legacy six-group names; the interim uses 电源产品 / 智慧生活 / 新能源交通 / 工业自动化 / 智能装备 / 磁电精造, and there is no separate industrial-power reporting segment — it sits inside power products.
+
+### Security
+
+- **Three contaminated claim clusters identified and deliberately excluded**, each recorded in the dossier so a future session recognises and rejects them rather than re-importing them: for `sinexcel`, a Vertiv-OEM / 36 kW / 100 W/in³ / "+US$500 AI dynamic load adapter" cluster traceable to no citable source and absent from both pages said to carry it, plus a stale FY2026 profit forecast originating in a 2024-03-26 note on the FY2023 annual; for `megmeet`, a search-summarizer confabulation asserting the H1 met or slightly beat expectations when no underlying source said so.
+- **The FX discipline held for a third session.** No H1 2026 figure entered a normalized table: no sourced CNY/USD rate for the period was located and the schema forbids an unsourced conversion, so all three interims are reported in RMB as filed and the cross-company comparison stays on the latest full fiscal year. The `sungrow` v9 precedent now covers five companies across three sessions.
 
 ## [v05.14r] — 2026-09-08 02:58:30 AM EST
 

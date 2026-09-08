@@ -14,8 +14,8 @@
   "type": "public",
   "ticker": "SZSE: 002364"
  },
- "summary": "BOTTOM LINE UP FRONT: The H1 2026 interim landed on 2026-08-27 and it separates the two questions cleanly — the domestic data-centre power business nearly doubled (RMB 807.59M, +98.48%, now 63.97% of group revenue) and carried more than the whole of group growth, while the 800 VDC story it is credited with converted into nothing disclosable: across 187 pages the interim contains no order, no backlog, no customer, no capacity commitment, and does not use the words NVIDIA, SST or transformer-rectifier at all. Growth was bought with margin and balance sheet — data-centre power gross margin fell 1.87pp, operating cash flow was RMB −268.80M (−370.44%), short-term borrowings rose about 25×, and the asset-liability ratio moved 40.83% → 47.97%. CATL's RMB 4.1B capital increase for 49% of the controlling holdco has signed definitive documents (2026-08-14) but has NOT closed; closing must occur within six months of signing. BACKGROUND: Founded 1996 in Hangzhou by Zhu Guoding; listed on the Shenzhen Stock Exchange March 2010. Four reported businesses: data-center power (36.3% of FY2025 revenue), telecom/station energy, grid power-supply systems, and power-digitalization software via subsidiary Beijing Zhonhen Borui, plus an EV charging line. FY2025 revenue RMB 2.137B (+8.9%), attributable net profit RMB 126.4M (+15.3%) — a miss against the ~RMB 164M institutional consensus, per company filings and consensus data from Tonghuashun (the Chinese financial-data platform 10jqka.com.cn). Exports were 4.1% of FY2025 revenue; overseas expansion runs through Singapore — wholly-owned Enervell Power Pte. Ltd. (est. 2024) and the 20%-held SuperX Digital Power JV (est. September 2025, mandate: global HVDC excluding Greater China). Governance requires explicit note: founder and actual controller Zhu Guoding (40.12% voting control) was convicted of securities-market manipulation by the Hangzhou Intermediate Court on 31 December 2025 (three years imprisonment suspended for four, RMB 1M fine); he resigned the chair in 2021 and holds no board or officer seat. His wife Bao Xiaoru has chaired the company since November 2021. Collection gap: no H1 2026 report or profit alert as of 22 August 2026, nine days before the filing deadline.",
- "ecosystemRole": "We assess Zhonhen as the strongest pure claim on the thesis that NVIDIA's 800VDC transition validates an architecture China already runs at scale — its Panama one-stage 10kV-to-DC conversion predates the Western 800VDC push by six years, and its BAT/operator installed base is the largest HVDC field record anywhere. That validation is now explicit rather than inferred: NVIDIA's August 2026 execution paper names the Panama Architecture as a transformer-rectifier-unit implementation of its own data-hall DC power block (pp. 21–23). Architectural endorsement and commercial inclusion remain separate questions, and only the first has been answered. For US-facing AIDC work its relevance is prospective, not present: exports are 4.1% of revenue, no US entity is on record, it is absent from NVIDIA's published 800VDC partner rosters (whose power-component tier names Delta, Flex Power, Lead Wealth, LiteOn and Megmeet — Hopewind, contrary to Chinese trade coverage, is not on NVIDIA's lists either), and the company itself denied signed agreements with NVIDIA, Meta or Google in August 2025. The competitive read-through: Zhonhen entering the West via the Enervell/SuperX structure tests whether a Chinese HVDC incumbent can sell architecture leadership into markets whose policy stack is being built to exclude Chinese electronics. The H1 2026 interim is the first hard test of the gap between architectural endorsement and commercial inclusion, and it widens it: the company restates a product matrix (HVDC at 240V/336V/800V; Panama at 240V/400V/800V, converting 10 kV directly to DC in one stage at over 97.5% efficiency, 2.5 MW of IT load per system) and a 2025-dated statement that it 'laid out and expanded its 800V DC product line', but discloses no order, no named customer, no 800V revenue and no capacity commitment against any of it. Treat the product matrix as capability and the silence as the finding.",
+ "summary": "BOTTOM LINE UP FRONT: Zhonhen Electric is China's data-center HVDC power leader — #1 at 31% share per Kezhi Consulting's 2025 count, the co-developer of Alibaba's Panama power architecture, and the lead drafter of the national 240V/336V DC standard — now converting that fifteen-year domestic franchise into an 800VDC/AI story while CATL capital-increases RMB 4.1B into its controlling holdco for 49%; the unpublished H1 2026 report (due by 31 August 2026) is the near-term checkpoint. BACKGROUND: Founded 1996 in Hangzhou by Zhu Guoding; listed on the Shenzhen Stock Exchange March 2010. Four reported businesses: data-center power (36.3% of FY2025 revenue), telecom/station energy, grid power-supply systems, and power-digitalization software via subsidiary Beijing Zhonhen Borui, plus an EV charging line. FY2025 revenue RMB 2.137B (+8.9%), attributable net profit RMB 126.4M (+15.3%) — a miss against the ~RMB 164M institutional consensus, per company filings and consensus data from Tonghuashun (the Chinese financial-data platform 10jqka.com.cn). Exports were 4.1% of FY2025 revenue; overseas expansion runs through Singapore — wholly-owned Enervell Power Pte. Ltd. (est. 2024) and the 20%-held SuperX Digital Power JV (est. September 2025, mandate: global HVDC excluding Greater China). Governance requires explicit note: founder and actual controller Zhu Guoding (40.12% voting control) was convicted of securities-market manipulation by the Hangzhou Intermediate Court on 31 December 2025 (three years imprisonment suspended for four, RMB 1M fine); he resigned the chair in 2021 and holds no board or officer seat. His wife Bao Xiaoru has chaired the company since November 2021. Collection gap: no H1 2026 report or profit alert as of 22 August 2026, nine days before the filing deadline.",
+ "ecosystemRole": "We assess Zhonhen as the strongest pure claim on the thesis that NVIDIA's 800VDC transition validates an architecture China already runs at scale — its Panama one-stage 10kV-to-DC conversion predates the Western 800VDC push by six years, and its BAT/operator installed base is the largest HVDC field record anywhere. That validation is now explicit rather than inferred: NVIDIA's August 2026 execution paper names the Panama Architecture as a transformer-rectifier-unit implementation of its own data-hall DC power block (pp. 21–23). Architectural endorsement and commercial inclusion remain separate questions, and only the first has been answered. For US-facing AIDC work its relevance is prospective, not present: exports are 4.1% of revenue, no US entity is on record, it is absent from NVIDIA's published 800VDC partner rosters (whose power-component tier names Delta, Flex Power, Lead Wealth, LiteOn and Megmeet — Hopewind, contrary to Chinese trade coverage, is not on NVIDIA's lists either), and the company itself denied signed agreements with NVIDIA, Meta or Google in August 2025. The competitive read-through: Zhonhen entering the West via the Enervell/SuperX structure tests whether a Chinese HVDC incumbent can sell architecture leadership into markets whose policy stack is being built to exclude Chinese electronics.",
  "productsAndServices": [
   {
    "name": "Data-center power — HVDC, Panama and 800V",
@@ -198,20 +198,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-08-27",
-   "category": "financial",
-   "headline": "H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
-   "read": "Revenue RMB 1.2624B (+41.67%) with attributable profit up only 15.81%. Data-centre power is now 63.97% of revenue at a falling 18.25% margin. The interim mentions no order, backlog, customer, NVIDIA reference, SST or TRU anywhere in 187 pages — the architectural validation has not converted into disclosed commercial traction.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514125.PDF"
-  },
-  {
-   "date": "2026-08-15",
-   "category": "corporate",
-   "headline": "CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed",
-   "read": "RMB 4,099,858,823.53 for 49.00% of the controlling holdco: RMB 3.51B cash plus CATL's own 49% of Times Tianyuan valued at RMB 588M. Zhu Guoding and Bao Xiaoru retain 51%. The shareholders' agreement gives CATL a nominated director, a deputy general manager and the finance department manager of the LISTED company plus a quorum veto at the parent, locked for 60 months — set against the filing's own statement that there is 'no impact on the Company's independence in personnel, assets, finance, business or organisation'. Closing must occur within six months of signing.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF"
-  },
-  {
    "date": "2026-08-21",
    "category": "other",
    "headline": "NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
@@ -312,9 +298,9 @@
  ],
  "strategyRead": [
   "(High confidence) We assess Zhonhen's domestic HVDC leadership as real and structural, not narrative. Basis: independent share data (Kezhi Consulting 2025: #1 at 31%, CR3 72%), lead authorship of the national 240V/336V DC standard, MIIT single-champion designation, the Alibaba Panama co-development record, and FY2025 wins spanning Alibaba, Tencent, ByteDance, Bank of China and China Mobile Energy. Customer-validation cycles of three-plus years function as the moat.",
-  "(High confidence) We assess the 800VDC/AI transition remains double-edged, and H1 2026 sharpened rather than resolved it. The architecture Zhonhen pioneered is globally validated — NVIDIA's August 2026 execution paper names the Panama Architecture as a transformer-rectifier implementation, verified against the source document in this corpus — yet the company's own interim converts none of that into disclosed commercial traction: no order, no backlog, no named data-centre customer, no NVIDIA mention. Meanwhile the domestic line it does have grew 98.48% at a falling margin, which is what re-opened competition looks like from the inside. Basis: the H1 2026 interim read in full, and the company's own risk section naming new entrants and margin compression.",
+  "(High confidence) We assess the 800VDC/AI transition as double-edged for Zhonhen: it globally validates the DC-for-compute architecture the company pioneered, yet re-opens domestic competition and exposes its absence from the Western ecosystem. Basis: Kehua Data's independently reported 800V order momentum 'narrowing the gap'; NVIDIA's published 800VDC partner rosters naming Delta and Megmeet among mainland-linked vendors but not Zhonhen; the company's own August 2025 denial of NVIDIA/Meta/Google agreements. Updated August 2026: NVIDIA's execution paper names the Panama Architecture in its own engineering text (pp. 21–23) while the vendor rosters still omit the company — the sharpest available statement of the split between architectural credit and commercial access.",
   "(Moderate confidence) We assess the overseas expansion as deliberately structured for speed and insulation rather than commitment: a Singapore brand (Enervell), a JV whose Nasdaq-listed partner bears three years of operating costs, and personal 10% stakes for the controller's son and the GM. This binds the family's next generation to the international outcome but keeps the listco's capital exposure minimal — and routes part of any overseas upside outside the listed company. US footprint as of August 2026: no entity, no certifications beyond TÜV CE, exports 4.1% of revenue.",
-  "(High confidence) We assess the CATL transaction as a re-rating of what Zhonhen is, and the definitive terms make the reach clearer than the headline. RMB 4,099,858,823.53 for 49.00% of the holdco — RMB 3.51B cash plus CATL's 49% of Times Tianyuan at RMB 588M — leaves Zhu Guoding and Bao Xiaoru with 51% and, on the filing's own account, changes no controlling shareholder. But the shareholders' agreement gives CATL a nominated director, a deputy general manager and the finance department manager of the listed company, plus a quorum veto at the parent, locked for 60 months. The filing asserts 'no impact on independence in personnel, assets, finance…' in the same document that grants the finance-manager nomination; we record the tension rather than resolve it. The deal has NOT closed — closing falls due within six months of the 2026-08-14 signing, and no completion, payment or registration is on the record.",
+  "(High confidence) We assess the CATL transaction as a re-rating of what Zhonhen is: RMB 4.1B for 49% of the holdco, with nomination rights reaching into listco management, converts a data-center power vendor into the equipment arm of a 'compute-electricity coordination' platform spanning AIDC power, charging/swap and power trading. Basis: the definitive agreements and strategic-cooperation scope of 14 August 2026.",
   "(Moderate confidence) We assess that a governance and quality discount is warranted alongside the growth story. Basis: the founder's December 2025 manipulation conviction; receivables at roughly nine times profit with negative Q1 operating cash flow; a FY2025 profit miss against consensus; and a stock that required a formal rumor denial in August 2025. Indicator to watch: the H1 2026 report (due by 31 August 2026) — data-center power revenue growth and cash conversion are the tests of whether the ESOP hurdles (+30% revenue in 2026) are credible.",
   "(Moderate confidence) We assess Zhonhen's Western go-to-market as aimed at AI-native cloud operators rather than at the hyperscalers or the retail colocation base — and that the split inside that segment matters more than the target list. Basis: first-hand context relayed to us by the company's commercial side in August 2026 — unsourced, not a public statement — that speed of deployment and technical capability outrank incumbency in its customer screen; set against the public record, which divides the category sharply. Operators that build and own their halls control the medium-voltage-to-DC decision this product addresses; operators that lease shells from colocation landlords can influence rack-side choices only, whatever their compute scale. Indicator to watch: whether the first Enervell or SuperX reference customer outside Greater China is a self-building operator or a tenant."
  ],
@@ -452,56 +438,6 @@
   "currency": "RMB",
   "type": "public",
   "periods": [
-   {
-    "period": "H1 2026 (latest interim; disclosed evening 2026-08-26, dated 2026-08-27 — four days inside the 31 August statutory deadline)",
-    "periodType": "interim",
-    "periodEnd": "2026-06-30",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "RMB 1.2624B / 12.62亿元 (+41.67%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "No published beat-or-miss verdict on the interim was located in any outlet"
-     },
-     {
-      "name": "Net profit (attributable)",
-      "actual": "RMB 54.99M / 5,498.78万元 (+15.81%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Profit growth ran at roughly a third of revenue growth"
-     },
-     {
-      "name": "Ex-non-recurring net profit",
-      "actual": "RMB 49.95M / 4,994.88万元 (+11.61%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "—"
-     },
-     {
-      "name": "Data-centre power revenue",
-      "actual": "RMB 807.59M / 8.076亿元 (+98.48%), 63.97% of group revenue, gross margin 18.25% (−1.87pp)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Carried the entire group — other product lines net-declined"
-     },
-     {
-      "name": "Operating cash flow",
-      "actual": "RMB −268.80M / −2.688亿元 (−370.44%)",
-      "expected": "",
-      "verdict": "miss",
-      "result": "Inventory and receivables build; short-term borrowings rose from RMB 16.15M to RMB 417.08M"
-     },
-     {
-      "name": "R&D investment",
-      "actual": "RMB 91.50M / 9,150.24万元 (+27.31%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "—"
-     }
-    ],
-    "commentary": "Growth is real, concentrated and margin-funded. Data-centre power revenue nearly doubled to RMB 807.59M and is now 63.97% of the group, contributing more than the whole of group revenue growth while its own gross margin fell 1.87pp to 18.25%; blended gross margin computed from the printed revenue and cost lines is 21.51% against 23.35% (the report prints no consolidated margin, and 界面新闻's 21.51%/2.22% differ slightly from the filing's weighted 2.20% ROE because the outlet computes simple averages). The balance sheet absorbed it: cash fell from RMB 967.83M to RMB 502.99M, inventory rose to RMB 1.224B, short-term borrowings rose about 25× to RMB 417.08M, and the asset-liability ratio moved from 40.83% to 47.97%. Impairments of RMB 29.93M were charged. Management's own risk section names new entrants and margin compression. No interim dividend. Note on comparability: no sourced CNY/USD rate for H1 2026 was located, so this period is deliberately left out of the normalized-KPI overlay. Next report: Q3 2026, due by the 2026-10-31 CSRC deadline."
-   },
    {
     "period": "FY2024 (reported April 2025)",
     "metrics": [
@@ -797,33 +733,8 @@
   {
    "label": "10jqka F10 — consensus data (FY2025E ~164M; FY2026E ~311M)",
    "url": "http://basic.10jqka.com.cn/002364/worth.html"
-  },
-  {
-   "label": "Zhonhen Electric — 2026年半年度报告 (H1 2026 interim report, SZSE 002364, 187pp): the segment and product split, the data-centre power line, and the complete absence of any order, backlog, NVIDIA, SST or TRU disclosure",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514125.PDF",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Zhonhen Electric — 2026年半年度报告摘要 (H1 2026 interim summary, announcement 2026-30)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514124.PDF",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Zhonhen Electric — 关于计提资产减值准备及核销资产的公告 (announcement 2026-31): RMB 29.93M of impairments charged in H1 2026, unaudited",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514128.PDF",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "界面新闻 — Zhonhen H1 2026 net profit 5,498.78万元: the outlet-computed ratio set (gross margin 21.51%, ROE 2.22%, asset-liability ratio 47.97%)",
-   "url": "https://m.jiemian.com/article/15001901.html",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "东方财富 (原载 蓝鲸财经) — Zhonhen H1 2026 segment detail: communications 9.35亿元 +61.69%, data-centre power 8.08亿元 +98.48%, legacy site power −25.67%",
-   "url": "https://wap.eastmoney.com/a/202608273856140519.html",
-   "date": "2026-08-27"
   }
  ],
- "lastUpdated": "2026-09-08",
- "profileVersion": 8
+ "lastUpdated": "2026-09-07",
+ "profileVersion": 7
 }

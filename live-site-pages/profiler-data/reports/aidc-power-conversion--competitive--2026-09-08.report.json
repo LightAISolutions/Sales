@@ -1,0 +1,970 @@
+{
+ "schemaVersion": 1,
+ "id": "aidc-power-conversion--competitive--2026-09-08",
+ "title": "AIDC Power Conversion — The 800 VDC Race",
+ "type": "competitive",
+ "topic": "Who is winning the AI data-centre power-conversion transition, layer by layer — silicon, the rack, the sidecar and hall-edge block, and the facility and grid tier",
+ "generated": "2026-09-08",
+ "style": "intel-briefing",
+ "scope": {
+  "kind": "slugs",
+  "value": [
+   "infineon",
+   "vicor",
+   "delta-electronics",
+   "liteon",
+   "megmeet",
+   "flex",
+   "zhonhen",
+   "sungrow",
+   "sinexcel",
+   "vertiv",
+   "eaton",
+   "schneider-electric",
+   "abb",
+   "ge-vernova",
+   "hitachi-energy"
+  ],
+  "rationale": "The covered NVIDIA 800 VDC roster, cut by layer rather than as one peer family. Fifteen dossiers across four layers: silicon and the last centimetre (infineon, vicor); the rack — shelves, PSUs, BBUs (delta-electronics, liteon, megmeet, flex); the sidecar and the hall-edge block, TRU and SST (zhonhen, sungrow, sinexcel, with delta-electronics again); and the facility and grid tier (vertiv, eaton, schneider-electric, abb, ge-vernova, hitachi-energy). Ten are named on NVIDIA's own published 800 VDC rosters; the other five (vicor, zhonhen, sungrow, sinexcel, schneider-electric) are in because the corpus holds substantive 800 VDC records for them, not because NVIDIA lists them — a distinction the tables keep visible. Fifteen names across four layers is not one peer family, so the like-for-like rule is met within each layer's table rather than across the report. huawei-digital-power is covered but out of scope on the prior edition's own reason: sanctions fence it from the ecosystem assessed."
+ },
+ "coverage": {
+  "companies": [
+   {
+    "slug": "infineon",
+    "name": "Infineon Technologies",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 77,
+    "srcFirstPct": 53,
+    "kpiNorm": true
+   },
+   {
+    "slug": "vicor",
+    "name": "Vicor",
+    "profileVersion": 2,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 136,
+    "srcFirstPct": 57,
+    "kpiNorm": true
+   },
+   {
+    "slug": "delta-electronics",
+    "name": "Delta Electronics",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 16,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "liteon",
+    "name": "LITEON",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 15,
+    "srcFirstPct": 53,
+    "kpiNorm": true
+   },
+   {
+    "slug": "megmeet",
+    "name": "Megmeet",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 38,
+    "srcFirstPct": 58,
+    "kpiNorm": true
+   },
+   {
+    "slug": "flex",
+    "name": "Flex",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 91,
+    "srcFirstPct": 68,
+    "kpiNorm": true
+   },
+   {
+    "slug": "zhonhen",
+    "name": "Zhonhen Electric",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 50,
+    "srcFirstPct": 44,
+    "kpiNorm": true
+   },
+   {
+    "slug": "sungrow",
+    "name": "Sungrow",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 62,
+    "srcFirstPct": 45,
+    "kpiNorm": true
+   },
+   {
+    "slug": "sinexcel",
+    "name": "Sinexcel",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 52,
+    "srcFirstPct": 56,
+    "kpiNorm": true
+   },
+   {
+    "slug": "vertiv",
+    "name": "Vertiv",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 16,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "eaton",
+    "name": "Eaton",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 17,
+    "srcFirstPct": 65,
+    "kpiNorm": true
+   },
+   {
+    "slug": "schneider-electric",
+    "name": "Schneider Electric",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 18,
+    "srcFirstPct": 67,
+    "kpiNorm": true
+   },
+   {
+    "slug": "abb",
+    "name": "ABB",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 19,
+    "srcFirstPct": 68,
+    "kpiNorm": true
+   },
+   {
+    "slug": "ge-vernova",
+    "name": "GE Vernova",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 14,
+    "srcFirstPct": 57,
+    "kpiNorm": true
+   },
+   {
+    "slug": "hitachi-energy",
+    "name": "Hitachi Energy",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 16,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   }
+  ],
+  "gaps": [
+   "huawei-digital-power is covered but excluded from scope: sanctions place it outside the NVIDIA/US ecosystem this report assesses. Its dossier is cited once, for the FCC action, which bears on the whole roster rather than on Huawei.",
+   "mitsubishi-electric (800 V named as a development target, May 2026) and power-electronics (utility-scale PCS) belong to the conversion layer and carry no dossier; they are named here rather than scoped.",
+   "The Option A/B/C slot definitions and the TRU-now / SST-2029 timing frame come from internal research on NVIDIA's white papers (the Industry Guidance NVIDIA module), not from dossier citations — passages leaning on them are marked as analysis.",
+   "The normalized-KPI overlay covers whole-company revenue only, and fiscal years differ across the set (Infineon's FY2025 ended 30 September 2025; Flex's FY2026 ended 31 March 2026; Hitachi Energy's FY2025 ended 31 March 2026). No company in the set discloses an audited AI-data-centre power-conversion revenue line, so no share-of-market table is possible from dossier data.",
+   "Delta and LITEON share figures are trade and brokerage estimates (WAWT, fiisual, CommonWealth, KGI), not company disclosures."
+  ],
+  "dataWindow": {
+   "oldest": "2026-09-04",
+   "newest": "2026-09-08"
+  }
+ },
+ "bluf": "BOTTOM LINE UP FRONT: Twelve months into NVIDIA's 800 VDC architecture the field separates into four layers, not one race, and the H1 2026 interims this edition's preflight landed draw the line sharply: the vendors winning are the ones that already owned the adjacent business — Delta on the rack, Sungrow with the only solid-state transformer a filing describes as supplying the market, Infineon in the silicon, and the grid tier holding the transformer and turbine capacity everyone else waits on. The vendors for whom 800 VDC IS the thesis disclose the least: Zhonhen's interim contains no order, backlog, customer or NVIDIA mention across 187 pages despite NVIDIA's own paper naming its Panama Architecture; Sinexcel's management states four times that AIDC products are samples with no formal sales; and Megmeet's interim declines to claim the supplier rank trade press assigned it. Architectural validation is not commercial inclusion, and this is the cycle in which the difference became measurable.",
+ "keyJudgments": [
+  {
+   "text": "We assess Delta remains the benchmark the rack layer is measured against, and nothing this cycle challenged it: #1 in NVIDIA AI-server power per WAWT, the deepest published 800 VDC portfolio including 660 kW in-row racks with embedded BBU, and TrendForce's named primary beneficiary of the 800 V HVDC shift with first volume shipments called for 3Q26. The share figures are trade and brokerage estimates, not disclosures, which is why this is not a higher-confidence claim about magnitude.",
+   "confidence": "high",
+   "cites": [
+    "c7",
+    "c8",
+    "c9"
+   ]
+  },
+  {
+   "text": "We assess the prior edition's framing that the solid-state-transformer roster for the ~2029 slot is 'still forming' is now retired by a covered company it did not scope. Sungrow's H1 2026 interim describes the EnerNeo SST as launched and supplying the market at 10–13.8 kV MVAC to 800 V DC, 1.5–4.5 MW, 98.5% — a productised device on an exchange filing, not a roadmap.",
+   "confidence": "high",
+   "cites": [
+    "c15",
+    "c16"
+   ]
+  },
+  {
+   "text": "We assess Zhonhen holds the widest gap in the corpus between architectural endorsement and disclosed commerce, and the H1 2026 interim widened rather than closed it. NVIDIA's August 2026 execution paper names the Panama Architecture as a transformer-rectifier implementation, yet the company's own 187-page interim contains no order, no backlog, no named customer, no capacity commitment and no occurrence of the words NVIDIA, SST or transformer-rectifier. Its data-centre power line nearly doubled to RMB 807.59M and carried more than the whole of group growth — at a gross margin falling 1.87 points, with operating cash flow at RMB −268.80M and the asset-liability ratio moving 40.83% to 47.97%. The growth is real and it is being bought.",
+   "confidence": "high",
+   "cites": [
+    "c29"
+   ]
+  },
+  {
+   "text": "We assess Sinexcel is pre-revenue in AI data-centre power on its own record rather than by inference. Management states across four separate post-results investor-relations records that AIDC critical-power products are samples in the development stage with formal sales not yet realised, and the string '800V' does not appear once in the 212-page interim. The AIDC-linked revenue that exists runs through power quality inside industrial supporting power, which grew 57.81% at a 61.94% margin — and management attributes the same AI build-out that drives it to the raw-material cost inflation compressing its charging margin by 4.43 points.",
+   "confidence": "high",
+   "cites": [
+    "c30",
+    "c31"
+   ]
+  },
+  {
+   "text": "We assess the trade report that Megmeet displaced LITEON as the #2 NVIDIA power-shelf source should be treated as a contested market narrative with no supporting source located. Megmeet's own interim claims only membership of a set — 'one of NVIDIA's designated recommended data-centre power suppliers' — names no competitor across 238 pages, and discloses no AI-data-centre revenue at any granularity, while LITEON's record Q2 2026 and its USD 919m McKinney commitment are both on the record. Membership and rank are different claims; conflating them is how a low-confidence item gets promoted on circular evidence.",
+   "confidence": "moderate",
+   "cites": [
+    "c27",
+    "c10",
+    "c11"
+   ]
+  },
+  {
+   "text": "We assess the silicon layer's leverage is not proportional to its scale, and Vicor is the demonstration. It appears on no published NVIDIA roster, sells neither shelf nor block, and has whole-company revenue roughly one fortieth of Delta's — yet it converted its bus-converter patents into a February 2025 ITC exclusion order and then into royalties that reached a fifth of its June 2026 quarter. Infineon, by contrast, holds a strong named position among fourteen silicon providers, which is a good place to be and not a chokepoint.",
+   "confidence": "moderate",
+   "cites": [
+    "c4",
+    "c5",
+    "c6",
+    "c1",
+    "c2"
+   ]
+  },
+  {
+   "text": "We assess the facility and grid tier is hedging the same shrinking-UPS arithmetic in five different directions, and that the grid-tier members' real position is upstream of the contest this report scores. Vertiv leads on data-centre concentration and backlog, Eaton has bought adjacent scope, Schneider sells the reference design rather than the box, ABB is pushing UPS function up to 34.5 kV medium voltage, and GE Vernova and Hitachi Energy hold turbine slots and transformer capacity whose lead times set the energization date for every campus the rack vendors are selling into.",
+   "confidence": "moderate",
+   "cites": [
+    "c17",
+    "c18",
+    "c19",
+    "c20",
+    "c21",
+    "c22",
+    "c23",
+    "c24"
+   ]
+  },
+  {
+   "text": "We assess CATL's move on Zhonhen reaches further into the listed company than the headline consideration implies, and that it remains unconsummated. RMB 4,099,858,823.53 buys 49.00% of the controlling holdco — RMB 3.51bn cash plus CATL's own 49% of Times Tianyuan at RMB 588M — leaving the founders with 51% and, on the filing's account, no change of control. The shareholders' agreement nonetheless gives CATL a nominated director, a deputy general manager and the finance department manager of the listed company plus a parent-level quorum veto, locked for 60 months, in the same document that asserts no impact on independence in finance or personnel. Definitive documents were signed 2026-08-14; closing has not occurred.",
+   "confidence": "moderate",
+   "cites": [
+    "c25",
+    "c29"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "what-changed",
+   "kind": "prose",
+   "title": "What changed since the last edition",
+   "ps": [
+    "**The scope nearly doubled, and the layer cut is the reason.** The 2026-08-29 edition assessed eight companies as one peer family. This edition covers **fifteen across four layers**, because the corpus now holds substantive 800 VDC records for seven more — including the two deepest in the file (`vicor`, `infineon`) and the one that made the old edition's central framing untenable.",
+    "**\"The SST roster for the ~2029 slot is still forming\" no longer holds.** Sungrow's H1 2026 interim describes the EnerNeo solid-state transformer as launched and supplying the market [c:c15], and the 3 MW unit was launched publicly in July 2026 [c:c16]. A covered company the prior edition left out of scope had already productised the device that edition said the field was still assembling. The SST question is now about who else follows, not whether anyone has shipped.",
+    "**The three H1 2026 interims the preflight landed answer the prior edition's two open indicators — and the answer is the same in both cases: capability without disclosed commerce.** Zhonhen's interim contains no order, no backlog, no named customer and no capacity commitment, and does not use the words NVIDIA, SST or transformer-rectifier anywhere in 187 pages [c:c29]; what it does show is a domestic data-centre power line that nearly doubled to RMB 807.59M at a *falling* margin. Megmeet's interim states only that it is 「英伟达指定的数据中心电源推荐提供商之一」 — one of NVIDIA's designated recommended data-centre power suppliers — names no competitor in 238 pages, and discloses no AI-data-centre revenue line at any granularity [c:c27]. Sinexcel's management says it plainly four separate times: AIDC critical-power products are samples in development with formal sales not yet realised [c:c31]. The string \"800V\" appears zero times in Sinexcel's 212-page interim [c:c30].",
+    "**The silicon layer is new to this edition and it changes where the leverage sits.** Infineon is one of fourteen named silicon providers in NVIDIA's MGX 800 VDC ecosystem [c:c1] and publishes reference designs at the rack boundary [c:c3]; Vicor sells neither shelf nor block but owns the last centimetre, and has re-based its revenue on patent enforcement rather than volume [c:c6][c:c5]. Neither is a rack vendor, and neither can be ranked in the same table as one.",
+    "**Judgment 4 of the prior edition survives with better sourcing, and the reach is wider than the headline.** CATL's RMB 4,099,858,823.53 for 49.00% of Zhonhen's controlling holdco now has definitive documents, signed 2026-08-14 [c:c25]. The transaction has **not closed**. Beyond the money, the shareholders' agreement gives CATL a nominated director, a deputy general manager and the finance department manager of the *listed* company, locked for 60 months — set against the filing's own statement that there is no impact on the company's independence in finance or personnel.",
+    "**One regulatory prong narrowed, and it is worth stating because it does not reach this roster.** The FCC's DA 26-870 modified the Covered List entry for foreign-produced power inverters [c:c26], narrowing the test to UL 1741 utility-interactive inverters. No covered rack-power vendor in this report is reached by it. The AIDC power-conversion layer is, for now, outside that fence.",
+    "**Flex is here for the first time and will not be here in this shape for long.** It launched an 800 VDC power rack for NVIDIA infrastructure in March 2026 [c:c12] and agreed on 3 September 2026 to buy EPC Power for USD 4.4bn [c:c13] — while the board has approved separating the whole Cloud and Power Infrastructure segment out, targeted for the first calendar quarter of 2027 [c:c14]."
+   ],
+   "cites": [
+    "c15",
+    "c16",
+    "c29",
+    "c27",
+    "c31",
+    "c30",
+    "c1",
+    "c3",
+    "c5",
+    "c6",
+    "c25",
+    "c26",
+    "c12",
+    "c13",
+    "c14"
+   ]
+  },
+  {
+   "id": "layer-silicon",
+   "kind": "table",
+   "title": "Layer 1 — Silicon and the last centimetre",
+   "intro": "Two covered vendors sit below every box in the chain. Like-for-like within the layer: both sell components into other people's shelves and blocks, and neither sells a rack.",
+   "cols": [
+    "",
+    "On NVIDIA's published roster?",
+    "The 800 VDC position",
+    "The constraint"
+   ],
+   "rows": [
+    [
+     "Infineon",
+     "Yes — named among silicon providers [c:c1]",
+     "One of fourteen named silicon providers in the MGX 800 VDC ecosystem [c:c1]; published an 18 kW three-phase PSU reference design and a 30 kW PFC evaluation board for the 800 VDC rack [c:c3]; Gartner called it \"the company to beat\" in AI data-centre power semiconductors [c:c2]",
+     "Named among fourteen, not sole-sourced [c:c1]. The AI business that carries the story is roughly a tenth of revenue"
+    ],
+    [
+     "Vicor",
+     "No — not on a published NVIDIA roster",
+     "The last centimetre: fixed-ratio bus converters from an 800 V or 400 V rack bus to 48 V, and current multipliers taking 48 V to about one volt beside the processor [c:c4]",
+     "Sells the converter, not the shelf. Revenue re-based by patent enforcement — the February 2025 ITC exclusion order over its bus-converter patents [c:c6] turned royalties into a fifth of the June 2026 quarter [c:c5]"
+    ]
+   ],
+   "cites": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6"
+   ]
+  },
+  {
+   "id": "layer-rack",
+   "kind": "table",
+   "title": "Layer 2 — The rack: shelves, PSUs, battery backup",
+   "intro": "Four covered vendors contest the power shelf and the sidecar power rack. All four appear on NVIDIA's own power-system-components tier, which makes this the one layer where the roster is the peer family rather than a judgement call.",
+   "cols": [
+    "",
+    "On NVIDIA's published roster?",
+    "The 800 VDC position",
+    "The constraint"
+   ],
+   "rows": [
+    [
+     "Delta Electronics",
+     "Yes — power system components",
+     "The volume incumbent: #1 in NVIDIA AI-server power per WAWT [c:c7], with the deepest published portfolio — 660 kW in-row power racks with embedded BBU announced at GTC 2026 [c:c9]. TrendForce names it the primary beneficiary of the 800 V HVDC shift, with first volume shipments called for 3Q26 [c:c8]",
+     "Share figures are trade and brokerage estimates, not disclosures [c:c7]"
+    ],
+    [
+     "LITEON",
+     "Yes — power system components",
+     "The second source, strongest in battery backup: a record Q2 2026 on the AI ramp [c:c10] and USD 919m committed to a McKinney, Texas plant for HVDC power racks [c:c11]",
+     "US capacity is announced, not producing. The GPU-side 800 V timeline trails Delta's"
+    ],
+    [
+     "Megmeet",
+     "Yes — the mainland-China exception on both published lists",
+     "Publishes the most complete mainland chain: edge cabinets rectifying 380–480 VAC directly to 800 VDC at over 1 MW per rack, an 800 VDC BBU rack, CRPS with 800 VDC input, and a 570 kW side rack combining BBU and PCS functions [c:c28]. Its interim claims only membership — 「英伟达指定的数据中心电源推荐提供商之一」, one of NVIDIA’s designated recommended data-centre power suppliers — participating in Blackwell and Vera Rubin [c:c27]",
+     "No rank claim and no competitor named anywhere in 238 pages; no AI-data-centre revenue disclosed at any granularity, the finest line being power products at RMB 1.841B (+60.92%) [c:c27]. Its solid-state transformer is stated as still in development. Headline profit rose 45.21% while ex-non-recurring profit FELL 16.13% [c:c27]"
+    ],
+    [
+     "Flex",
+     "Yes — Flex Power, power system components",
+     "Launched an 800 VDC Power Rack for NVIDIA AI infrastructure in March 2026 [c:c12], and on 3 September 2026 agreed to buy EPC Power for USD 4.4bn, adding power conversion outright [c:c13]",
+     "The business assessed here is being separated: the board approved spinning out Cloud and Power Infrastructure, targeted for the first calendar quarter of 2027 [c:c14]. The company in this table has about two quarters left in its present shape"
+    ]
+   ],
+   "cites": [
+    "c7",
+    "c8",
+    "c9",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c14",
+    "c27",
+    "c28"
+   ]
+  },
+  {
+   "id": "layer-halledge",
+   "kind": "table",
+   "title": "Layer 3 — The sidecar and the hall-edge block (TRU now, SST later)",
+   "intro": "Three covered vendors contest the block between the medium-voltage entry and the rack, plus Delta appearing again from Layer 2. Like-for-like within the layer: all four claim a device that takes MV or 380–480 VAC to 800 V DC. The H1 2026 interims make this the layer where the gap between published capability and disclosed commerce is widest — and it is now measured, not asserted.",
+   "cols": [
+    "",
+    "The device claimed",
+    "What the H1 2026 interim disclosed",
+    "Where that leaves it"
+   ],
+   "rows": [
+    [
+     "Sungrow",
+     "EnerNeo solid-state transformer, 3 MW, launched July 2026 [c:c16]",
+     "**Launched and supplying the market**, per its own interim: 10–13.8 kV MVAC to 800 V DC, 1.5–4.5 MW, 98.5% [c:c15]",
+     "The only vendor in this layer whose SST is on the record as shipping rather than in development. Retires the prior edition's \"roster still forming\" framing single-handedly"
+    ],
+    [
+     "Zhonhen",
+     "Panama Architecture — 10 kV directly to 240/400/800 V DC in one stage, over 97.5%, 2.5 MW of IT load per system; HVDC at 240/336/800 V [c:c29]",
+     "**No order, no backlog, no customer, no capacity, no revenue attribution.** Zero occurrences of NVIDIA, SST or transformer-rectifier across 187 pages [c:c29]",
+     "The widest gap in the set between architectural validation and disclosed commerce. NVIDIA's August 2026 paper names the Panama Architecture as a TRU implementation; the company's own filing converts none of it. Data-centre power revenue nearly doubled to RMB 807.59M — but at a *falling* 18.25% margin"
+    ],
+    [
+     "Sinexcel",
+     "AIDC critical-power business unit created 2026, roadmap covering medium-voltage UPS and HVDC [c:c30]",
+     "**\"800V\" appears zero times in the 212-page interim** [c:c30]. Management states four times that AIDC products are samples in development with formal sales not yet realised [c:c31]",
+     "Declared intent with zero AIDC revenue, on the company's own record. The AIDC-linked revenue that exists runs through power quality inside industrial supporting power, which grew 57.81% [c:c30]"
+    ],
+    [
+     "Delta Electronics",
+     "A published 98.5% solid-state transformer inside the deepest grid-to-chip portfolio in the set [c:c9]",
+     "Not a Chinese A-share issuer; no H1 interim in this cycle. TrendForce calls it the primary beneficiary of the 800 V HVDC shift with first volume shipments in 3Q26 [c:c8]",
+     "Present in this layer and in Layer 2 — the only vendor in the report that appears twice, which is itself the competitive fact"
+    ]
+   ],
+   "cites": [
+    "c15",
+    "c16",
+    "c29",
+    "c30",
+    "c31",
+    "c8",
+    "c9"
+   ]
+  },
+  {
+   "id": "layer-facility",
+   "kind": "table",
+   "title": "Layer 4 — The facility and the grid tier",
+   "intro": "Six covered incumbents sell the power train around the hall rather than inside the rack. Like-for-like within the layer: all six were named in NVIDIA's October 2025 800 VDC announcements, and all six face the same arithmetic — the architecture moves conversion toward the rack and shrinks the centralized UPS franchise.",
+   "cols": [
+    "",
+    "NVIDIA tier",
+    "The 800 VDC move",
+    "The hedge"
+   ],
+   "rows": [
+    [
+     "Vertiv",
+     "Founding power/cooling partner",
+     "800 VDC platform designs co-engineered with NVIDIA, announced as engineering readiness rather than a product [c:c17]",
+     "Scale and backlog: the pure-play with the highest data-centre revenue concentration in the set [c:c18]"
+    ],
+    [
+     "Eaton",
+     "Founding power-infrastructure partner",
+     "A next-generation 800 VDC reference architecture unveiled at OCP 2025 [c:c19]",
+     "Buying the adjacent scope rather than defending the UPS — prefab power, liquid cooling, solid-state transformers"
+    ],
+    [
+     "Schneider Electric",
+     "Not on the founding roster; announced in support",
+     "An 800 VDC sidecar announced in support of NVIDIA's next-generation GPUs [c:c20]",
+     "Reference-design-led selling: co-authored grid-to-chip blueprints, which is the procurement template rather than the box"
+    ],
+    [
+     "ABB",
+     "Grid tier (added at OCP 2025)",
+     "Development agreement with NVIDIA for next-generation AI data centres [c:c21]",
+     "Medium voltage: HiPerGuard, the first static MV UPS, extended to a 34.5 kV direct-grid-connect class [c:c22]"
+    ],
+    [
+     "GE Vernova",
+     "Grid tier",
+     "Published AI-factory 800 VDC reference designs [c:c23]",
+     "Holds the scarce upstream resource — turbine slots and North American transformer capacity — rather than the conversion box"
+    ],
+    [
+     "Hitachi Energy",
+     "Grid tier",
+     "Co-designed grid-to-rack architecture with NVIDIA [c:c24]",
+     "The transformer delivery calendar. Its own large-transformer waits exceed 30–40 months, which sets the energization date the rack layer depends on"
+    ]
+   ],
+   "cites": [
+    "c17",
+    "c18",
+    "c19",
+    "c20",
+    "c21",
+    "c22",
+    "c23",
+    "c24"
+   ]
+  },
+  {
+   "id": "scale",
+   "kind": "bars",
+   "title": "Whole-company scale — and why it does not rank the layer",
+   "unit": "USD millions, latest full fiscal year, normalized",
+   "intro": "The only figure the corpus can compare across all fifteen is whole-company revenue from the normalized-KPI overlay. It is a scale indicator, not a position in this race: no company in the set discloses an AI-data-centre power-conversion revenue line.",
+   "note": "Denominator: whole-company revenue for the latest full fiscal year in each dossier's normalized-KPI overlay, converted at the rate each dossier records. Fiscal years are not aligned — Infineon's FY2025 ended 30 September 2025, Flex's FY2026 ended 31 March 2026, Hitachi Energy's FY2025 ended 31 March 2026; the rest are calendar 2025. Read the ordering, not the gaps.",
+   "items": [
+    {
+     "label": "Schneider Electric",
+     "slug": "schneider-electric",
+     "kpi": "revenue",
+     "v": 45393.6
+    },
+    {
+     "label": "GE Vernova",
+     "slug": "ge-vernova",
+     "kpi": "revenue",
+     "v": 38100
+    },
+    {
+     "label": "ABB",
+     "slug": "abb",
+     "kpi": "revenue",
+     "v": 33200
+    },
+    {
+     "label": "Flex (FY2026)",
+     "slug": "flex",
+     "kpi": "revenue",
+     "v": 27914
+    },
+    {
+     "label": "Eaton",
+     "slug": "eaton",
+     "kpi": "revenue",
+     "v": 27400
+    },
+    {
+     "label": "Hitachi Energy",
+     "slug": "hitachi-energy",
+     "kpi": "revenue",
+     "v": 19800
+    },
+    {
+     "label": "Delta Electronics",
+     "slug": "delta-electronics",
+     "kpi": "revenue",
+     "v": 17801.8
+    },
+    {
+     "label": "Infineon (FY2025, Sep)",
+     "slug": "infineon",
+     "kpi": "revenue",
+     "v": 16217.6
+    },
+    {
+     "label": "Sungrow",
+     "slug": "sungrow",
+     "kpi": "revenue",
+     "v": 12408
+    },
+    {
+     "label": "Vertiv",
+     "slug": "vertiv",
+     "kpi": "revenue",
+     "v": 10230
+    },
+    {
+     "label": "LITEON",
+     "slug": "liteon",
+     "kpi": "revenue",
+     "v": 5328.7
+    },
+    {
+     "label": "Megmeet",
+     "slug": "megmeet",
+     "kpi": "revenue",
+     "v": 1308.3
+    },
+    {
+     "label": "Sinexcel",
+     "slug": "sinexcel",
+     "kpi": "revenue",
+     "v": 481.8
+    },
+    {
+     "label": "Vicor",
+     "slug": "vicor",
+     "kpi": "revenue",
+     "v": 452.7
+    },
+    {
+     "label": "Zhonhen",
+     "slug": "zhonhen",
+     "kpi": "revenue",
+     "v": 297.3
+    }
+   ]
+  },
+  {
+   "id": "four-contests",
+   "kind": "prose",
+   "analysis": true,
+   "title": "Four contests, not one — and only two of them are being won",
+   "ps": [
+    "The prior edition called this \"three contests, not one.\" Adding the silicon layer makes it four, and separating them is what makes the field legible: a vendor cannot lose the rack and win the hall, because the buyers, the qualification cycles and the incumbents differ at every level.",
+    "**Layer 1 (silicon) is not contested on volume — it is contested on position.** Infineon is one of fourteen named providers, which is a strong position and not a moat. Vicor is on no NVIDIA roster at all and is nonetheless the vendor with the most defensible economics in the report, because it converted an architectural claim into an ITC exclusion order and then into royalties. Scale does not predict leverage here: Vicor's whole-company revenue is roughly one fortieth of Delta's.",
+    "**Layer 2 (the rack) is the only layer with a settled leader and a live second place.** Delta is the benchmark on volume and portfolio depth. The contest is for second source, and the evidence this cycle moved *against* the challenger narrative rather than for it — Megmeet's own interim declines to claim a rank, names no competitor in 238 pages, and discloses no AI-data-centre revenue line, while LITEON's record Q2 2026 and its USD 919m McKinney commitment are both on the record. The \"Megmeet displaced LITEON\" report should be treated as a contested market narrative with no supporting source located, not as a finding.",
+    "**Layer 3 (the hall-edge block) is where this edition's central judgment sits, and the H1 2026 interims settled it in an unexpected direction.** Every vendor in this layer publishes a credible device. Only one — Sungrow — states in a filing that the device is supplying the market. The other two disclose, in their own words, either nothing at all (Zhonhen: no order, no backlog, no customer, no NVIDIA mention in 187 pages) or explicitly pre-commercial status (Sinexcel: samples in development, no formal sales). Architectural validation and commercial inclusion are separate questions, and this layer is now the clearest demonstration in the corpus that the first does not produce the second.",
+    "**Layer 4 (facility and grid) is contested on scope, not on the box.** All six incumbents face the same arithmetic — 800 VDC moves conversion toward the rack and shrinks the centralized UPS franchise — and each is hedging with something the rack vendors cannot sell: Vertiv with backlog and concentration, Eaton with acquired adjacent scope, Schneider with reference designs that set the procurement template, ABB with medium voltage, and GE Vernova and Hitachi Energy with the two genuinely scarce upstream resources, turbine slots and transformer capacity. The grid tier's constraint is not competitive position; it is delivery lead time, and it gates every layer beneath it.",
+    "**The cross-layer read.** Winning the 800 VDC transition is currently being done by vendors that already had the adjacent business: Delta had the shelf, Sungrow had the power electronics and the inverter franchise, Infineon had the silicon, and the grid tier had the transformers. The vendors making the transition itself the thesis — Zhonhen, Sinexcel, and Megmeet on the rank claim — are the ones whose own filings disclose the least. That is not evidence they will fail; it is evidence that, twelve months into the architecture, the disclosure record still separates the incumbents from the challengers cleanly."
+   ],
+   "cites": [
+    "c4",
+    "c5",
+    "c6",
+    "c1",
+    "c7",
+    "c10",
+    "c11",
+    "c27",
+    "c29",
+    "c30",
+    "c31",
+    "c15",
+    "c18",
+    "c22"
+   ]
+  }
+ ],
+ "indicators": [
+  {
+   "date": "3Q26",
+   "text": "First 800 V HVDC volume shipments, per TrendForce's call carried in the Delta dossier",
+   "confirms": "Would convert the architecture from optional configuration to shipping product and start the clock on share measurement"
+  },
+  {
+   "date": "Q1 2027",
+   "text": "LITEON's GPU-side 800 V mass production per its own timeline, and first output from the USD 919m McKinney plant",
+   "confirms": "Would settle whether the second-source contest is decided on US capacity rather than on qualification order"
+  },
+  {
+   "date": "by 2026-10-31",
+   "text": "Q3 2026 reports from Megmeet, Zhonhen and Sinexcel (CSRC statutory deadline)",
+   "confirms": "Whether any of the three converts published 800 VDC capability into a disclosed order, named customer or revenue line. Continued silence from Zhonhen would make the absence a pattern rather than a timing artefact"
+  },
+  {
+   "date": "by ~2027-02-14",
+   "text": "Closing of CATL's capital increase into Zhonhen's controlling holdco, within six months of the 2026-08-14 signing",
+   "confirms": "Would activate CATL's nomination rights over a listed-company director, a deputy GM and the finance department manager"
+  },
+  {
+   "date": "Q1 2027",
+   "text": "Completion of Flex's separation of the Cloud and Power Infrastructure segment",
+   "confirms": "Would remove the entity assessed in Layer 2 and create a pure-play data-centre power company in its place"
+  },
+  {
+   "date": "2026-2027",
+   "text": "Any covered name appearing on — or vanishing from — NVIDIA's next published 800 VDC partner roster",
+   "confirms": "The roster is the only public membership signal in this ecosystem; five of the fifteen names here are in scope on dossier depth rather than on a published NVIDIA edge"
+  },
+  {
+   "date": "toward 2029",
+   "text": "A second covered vendor stating in a filing that a 34.5 kV-class or MV-direct SST is supplying the market, as Sungrow now does",
+   "confirms": "Would turn a one-vendor fact into a roster and re-open the layer-3 contest on commercial rather than architectural terms"
+  }
+ ],
+ "limitations": [
+  "The Option A/B/C slot definitions and the TRU-now / SST-2029 timing frame are summarized from internal research on NVIDIA's white papers (the Industry Guidance NVIDIA module), not from dossier citations; passages leaning on them are marked as analysis.",
+  "Delta and LITEON share figures are trade and brokerage estimates (WAWT, fiisual, CommonWealth, KGI), not company disclosures. No company in this report discloses an audited AI-data-centre power-conversion revenue line, so no share-of-market table is possible from dossier data.",
+  "No H1 2026 figure in this report enters the normalized-KPI comparison. No sourced CNY/USD rate for the period was located and the schema forbids an unsourced conversion, so the three interims are reported in RMB as filed and the only cross-company figure is whole-company revenue for the latest full fiscal year — on fiscal years that are not aligned (Infineon to 30 September 2025; Flex and Hitachi Energy to 31 March 2026; the rest calendar 2025).",
+  "Zhonhen's and Megmeet's H1 items rest substantially on Chinese-language exchange filings read in the original; the corresponding trade-press renderings disagree with each other on several ratios and at least one outlet printed an internally impossible inventory figure. Where a figure is carried it is the filing's, not an outlet's.",
+  "Sinexcel's 800 VDC roadmap is sourced to an investor-relations activity record served from a third-party document host, because the SZSE origin was unreachable from the research egress. The document is company-authored and company-numbered, but its provenance tier reflects the delivery host rather than the origin.",
+  "The prior edition's limitation that Flex and BizLink sit in NVIDIA's component tier without dossiers is retired for Flex, which is now covered and in scope. BizLink and Lead Wealth remain uncovered.",
+  "mitsubishi-electric (800 V named as a development target, May 2026) and power-electronics (utility-scale PCS) belong to this conversion layer and carry no dossiers; they are named rather than scoped.",
+  "huawei-digital-power is covered but excluded on the prior edition's own reason — sanctions fence it from the ecosystem assessed. It is cited once, for the FCC action, which bears on the roster rather than on Huawei."
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "slug": "infineon",
+   "company": "Infineon Technologies",
+   "label": "Infineon — Infineon joins NVIDIA's MGX AI Factory ecosystem",
+   "url": "https://www.infineon.com/press-release/2026/infxx202605-092",
+   "date": "2026-05-28",
+   "party": "company"
+  },
+  {
+   "id": "c2",
+   "slug": "infineon",
+   "company": "Infineon Technologies",
+   "label": "Semiconductor Today — Gartner names Infineon the company to beat in AI data-centre power semiconductors",
+   "url": "https://www.semiconductor-today.com/news_items/2026/jun/infineon2-300626.shtml",
+   "date": "2026-06-30",
+   "party": "independent"
+  },
+  {
+   "id": "c3",
+   "slug": "infineon",
+   "company": "Infineon Technologies",
+   "label": "Infineon — 18 kW three-phase PSU reference design and 30 kW PFC evaluation board for 800 VDC rack architectures",
+   "url": "https://www.infineon.com/market-news/2026/infpss202606-094",
+   "date": "2026-06",
+   "party": "company"
+  },
+  {
+   "id": "c4",
+   "slug": "vicor",
+   "company": "Vicor",
+   "label": "Power Electronics News — Power Corner: Vicor's Maury Wood on vertical power delivery for AI data centers",
+   "url": "https://www.powerelectronicsnews.com/power-corner-vicors-maury-wood-on-vertical-power-delivery-for-ai-data-centers/",
+   "date": "2026-07-16",
+   "party": "independent"
+  },
+  {
+   "id": "c5",
+   "slug": "vicor",
+   "company": "Vicor",
+   "label": "Vicor — Q2 2026 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526309538/d115827dex991.htm",
+   "date": "2026-07-21",
+   "party": "disclosure"
+  },
+  {
+   "id": "c6",
+   "slug": "vicor",
+   "company": "Vicor",
+   "label": "Vicor — ITC bars importation of power modules and unlicensed computing systems that infringe Vicor patents (release)",
+   "url": "https://www.vicorpower.com/press-room/itc-bars-importation-of-power-modules",
+   "date": "2025-02-14",
+   "party": "company"
+  },
+  {
+   "id": "c7",
+   "slug": "delta-electronics",
+   "company": "Delta Electronics",
+   "label": "WAWT — Delta #1 in NVIDIA AI server power",
+   "url": "https://wawt.tech/2026/04/20/how-delta-electronics-built-a-competitive-edge-in-nvidias-ai-server-power-ecosystem/",
+   "date": "2026-04-20",
+   "party": "independent"
+  },
+  {
+   "id": "c8",
+   "slug": "delta-electronics",
+   "company": "Delta Electronics",
+   "label": "TrendForce — 800V HVDC adoption timeline",
+   "url": "https://www.trendforce.com/news/2026/06/15/news-nvidia-google-may-be-first-to-adopt-800v-hvdc-initial-3q26-shipments-may-boost-delta-and-infrastructure-suppliers/",
+   "date": "2026-06-15",
+   "party": "independent"
+  },
+  {
+   "id": "c9",
+   "slug": "delta-electronics",
+   "company": "Delta Electronics",
+   "label": "GTC 2026 announcements (660 kW rack)",
+   "url": "https://www.deltaww.com/en-US/press/40273",
+   "date": "2026-03-17",
+   "party": "company"
+  },
+  {
+   "id": "c10",
+   "slug": "liteon",
+   "company": "LITEON",
+   "label": "LITEON Q2 2026 results",
+   "url": "https://www.liteon.com/en/news/press-center/content/quarterly-second-eps-2026",
+   "date": "2026-07-31",
+   "party": "company"
+  },
+  {
+   "id": "c11",
+   "slug": "liteon",
+   "company": "LITEON",
+   "label": "McKinney, Texas investment",
+   "url": "https://www.liteon.com/en/news/press-center/content/liteon-mckinney-investment",
+   "date": "2026-07-13",
+   "party": "company"
+  },
+  {
+   "id": "c12",
+   "slug": "flex",
+   "company": "Flex",
+   "label": "Flex — launch of the 800 VDC Power Rack for next-generation NVIDIA AI infrastructure",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx",
+   "date": "2026-03-16",
+   "party": "company"
+  },
+  {
+   "id": "c13",
+   "slug": "flex",
+   "company": "Flex",
+   "label": "Flex — agreement to acquire EPC Power for $4.4bn, adding power conversion for AI data centres and grid applications",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-to-Acquire-EPC-Power-Adding-Leading-Power-Conversion-Capabilities-for-AI-Data-Centers-and-Grid-Applications/default.aspx",
+   "date": "2026-09-03",
+   "party": "company"
+  },
+  {
+   "id": "c14",
+   "slug": "flex",
+   "company": "Flex",
+   "label": "Flex — intention to spin off the Cloud and Power Infrastructure segment into a new independent publicly traded company",
+   "url": "https://investors.flex.com/news/news-details/2026/Flex-Announces-Intention-to-Spin-Off-its-Cloud-and-Power-Infrastructure-Segment-into-a-New-Independent-Publicly-Traded-Company/default.aspx",
+   "date": "2026-05-05",
+   "party": "company"
+  },
+  {
+   "id": "c15",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "Sungrow — 2026年半年度报告 (H1 2026 interim report, SZSE 300274, 205pp): EnerNeo SST launched and supplying the market, the AIDC power business unit's SST + 800 V HVDC routes, and the full segment, margin and geographic split",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
+   "date": "2026-08-29",
+   "party": "disclosure"
+  },
+  {
+   "id": "c16",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "pv magazine — Sungrow launches the 3 MW EnerNeo solid-state transformer at an AIDC product event in Hefei (Vincent Shaw)",
+   "url": "https://www.pv-magazine.com/2026/07/10/sungrow-launches-3-mw-solid-state-transformer/",
+   "date": "2026-07-10",
+   "party": "independent"
+  },
+  {
+   "id": "c17",
+   "slug": "vertiv",
+   "company": "Vertiv",
+   "label": "800 VDC engineering readiness with NVIDIA",
+   "url": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vertiv-collaborates-with-nvidia-to-advance-800-vdc-platform-designs-to-power-the-next-generation-of-ai-factories/",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c18",
+   "slug": "vertiv",
+   "company": "Vertiv",
+   "label": "Vertiv Q2 2026 results (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026050323/q22026exhibit991vrt07292026.htm",
+   "date": "2026-07-29",
+   "party": "disclosure"
+  },
+  {
+   "id": "c19",
+   "slug": "eaton",
+   "company": "Eaton",
+   "label": "800 VDC reference architecture (OCP)",
+   "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-unveils-next-generation-architecture.html",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c20",
+   "slug": "schneider-electric",
+   "company": "Schneider Electric",
+   "label": "800 VDC sidecar announcement",
+   "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c21",
+   "slug": "abb",
+   "company": "ABB",
+   "label": "ABB — NVIDIA 800 VDC collaboration announcement",
+   "url": "https://new.abb.com/news/detail/129805/abb-to-develop-next-generation-ai-data-centers-with-nvidia",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c22",
+   "slug": "abb",
+   "company": "ABB",
+   "label": "ABB — Q2 2026 press release (record orders, Rotork offer, HiPerGuard 34.5 kV)",
+   "url": "https://resources.news.e.abb.com/attachments/published/137496/en-US/9123465FF532/ABB_Q2_2026_Press_release_English.pdf",
+   "date": "2026-07-16",
+   "party": "company"
+  },
+  {
+   "id": "c23",
+   "slug": "ge-vernova",
+   "company": "GE Vernova",
+   "label": "AI Factory 800 VDC reference designs whitepaper",
+   "url": "https://library.grid.gevernova.com/white-papers-case-studies/ai-factory-800vdc-reference-designs",
+   "date": "2025-10-24",
+   "party": "company"
+  },
+  {
+   "id": "c24",
+   "slug": "hitachi-energy",
+   "company": "Hitachi Energy",
+   "label": "Hitachi Energy — NVIDIA 800 VDC collaboration press release",
+   "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/nvidia-800-vdc-collaboration",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c25",
+   "slug": "catl",
+   "company": "CATL",
+   "label": "Zhonhen Electric (SZSE 002364) Announcement 2026-28 — the definitive Capital Increase Agreement, Shareholders Agreement and four-party Strategic Cooperation Agreement of 14 August 2026; consideration, governance rights, closing conditions and the Times Tianyuan appraisal",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
+   "date": "2026-08-15",
+   "party": "disclosure"
+  },
+  {
+   "id": "c26",
+   "slug": "huawei-digital-power",
+   "company": "Huawei Digital Power",
+   "label": "FCC PSHSB — DA 26-870: modification of the power inverters entry on the Covered List (second national security determination)",
+   "url": "https://docs.fcc.gov/public/attachments/DA-26-870A1.pdf",
+   "date": "2026-08-20",
+   "party": "independent"
+  },
+  {
+   "id": "c27",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "Megmeet — 2026年半年度报告 (H1 2026 interim report, SZSE 002851, 238pp): the full segment, margin and geography split, the non-recurring reconciliation, the 800 VDC product architecture and the NVIDIA recommended-supplier language",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522762.PDF",
+   "date": "2026-08-27",
+   "party": "disclosure"
+  },
+  {
+   "id": "c28",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "Megmeet — 800V/570kW side rack product page: 800 V DC output, up to 1 MW per rack, integrated BBU and PCS functions",
+   "url": "https://www.megmeet.com/products/info.html?id=326",
+   "date": "2026-09-08",
+   "party": "company"
+  },
+  {
+   "id": "c29",
+   "slug": "zhonhen",
+   "company": "Zhonhen Electric",
+   "label": "Zhonhen Electric — 2026年半年度报告 (H1 2026 interim report, SZSE 002364, 187pp): the segment and product split, the data-centre power line, and the complete absence of any order, backlog, NVIDIA, SST or TRU disclosure",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514125.PDF",
+   "date": "2026-08-27",
+   "party": "disclosure"
+  },
+  {
+   "id": "c30",
+   "slug": "sinexcel",
+   "company": "Sinexcel",
+   "label": "Sinexcel — 2026年半年度报告 (H1 2026 interim report, SZSE ChiNext 300693, 212pp): the complete four-line segment and gross-margin table, the AIDC critical-power business unit, and the #3 cumulative ranking in >250kW charging guns. The string '800V' does not appear in the document",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466306.PDF",
+   "date": "2026-08-11",
+   "party": "disclosure"
+  },
+  {
+   "id": "c31",
+   "slug": "sinexcel",
+   "company": "Sinexcel",
+   "label": "Sinexcel — 投资者关系活动记录表 2026-016 (2026-08-14): the three-tier 800 VDC deployment roadmap read off NVIDIA's OCP white paper 2.0, and management's statement that AIDC samples are in development with no formal sales realised",
+   "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-14/12496921.PDF",
+   "date": "2026-08-14",
+   "party": "independent"
+  }
+ ],
+ "supersedes": "aidc-power-conversion--competitive--2026-08-29",
+ "guidanceOverlays": [
+  {
+   "moduleId": "nvidia-800vdc-2026-08",
+   "sectionId": "options",
+   "title": "Which architectures the covered vendors can actually serve today",
+   "ps": [
+    "**The four deployment architectures map unevenly onto the covered roster, and the H1 2026 filings show where.** The AC-baseline and retrofit options are served by everyone in the rack layer. The sidecar option is where Megmeet publishes the most complete mainland chain — edge cabinets rectifying 380–480 VAC directly to 800 VDC at over 1 MW per rack, with an 800 VDC BBU rack alongside — but its interim discloses no AI-data-centre revenue at any granularity, so read the portfolio as capability rather than as installed base.",
+    "**For the native-800 VDC option, one covered vendor states in a filing that the device is supplying the market and the others do not.** Sungrow's H1 2026 interim describes its EnerNeo solid-state transformer as launched and supplying, at 10–13.8 kV MVAC to 800 V DC. Sinexcel's management, by contrast, states four separate times that its AIDC critical-power products are samples in development with formal sales not yet realised, and the string 800V does not appear in its 212-page interim at all. When a customer asks who can supply the native architecture now, that distinction is the answer."
+   ]
+  },
+  {
+   "moduleId": "nvidia-800vdc-2026-08",
+   "sectionId": "trusst",
+   "title": "The Panama name-check, one year on",
+   "ps": [
+    "**The paper names an architecture, not a company — and the covered vendor most associated with that architecture has disclosed nothing against it.** Zhonhen's own H1 2026 interim restates the Panama product matrix (10 kV directly to 240/400/800 V DC in a single stage, over 97.5% efficiency, 2.5 MW of IT load per system) and then contains no order, no backlog, no named customer, no capacity commitment, and no occurrence of the words NVIDIA, SST or transformer-rectifier across 187 pages. Treat the name-check as validation of the device class and not as evidence of any company's pipeline.",
+    "**The TRU-now / SST-later framing has acquired one exception worth knowing.** A covered vendor now states in an exchange filing that a megawatt-class solid-state transformer is supplying the market, ahead of the timeline the paper implies. That does not move the 2029 date for the industry, but it does mean a buyer asking for an SST today has at least one covered vendor to ask."
+   ]
+  },
+  {
+   "moduleId": "nvidia-800vdc-2026-08",
+   "sectionId": "suppliers",
+   "title": "What the H1 2026 filings changed for supplier conversations",
+   "ps": [
+    "**The single most useful discipline this cycle is separating membership from rank.** One covered vendor's interim claims only to be 'one of NVIDIA's designated recommended data-centre power suppliers' — membership of a set, with no competitor named anywhere in 238 pages. Trade reporting that assigns it second place behind Delta has no supporting source in the record, and the vendor it supposedly displaced published a record quarter and a USD 919m US plant commitment in the same window. In a customer conversation, membership is defensible and rank is not.",
+    "**Published capability and disclosed commerce diverged measurably this half, and the filings are the place to check.** Across the three Chinese A-share vendors in the conversion layer, the interims disclose: no order, no backlog and no named customer in one case; no AI-data-centre revenue line in the second; and an explicit management statement of samples-in-development-no-formal-sales in the third. That is not a reason to discount any of them, but it does mean a supplier claim sourced to a product page or a partner roster should be checked against the most recent filing before it is repeated.",
+    "**Scale does not rank this chain.** The whole-company revenue spread across the covered roster runs from roughly USD 0.3bn to USD 45bn, and the ordering bears almost no relation to position in the 800 VDC transition — the vendor with arguably the most defensible economics in the report is among the three smallest, because it enforced patents rather than won volume."
+   ]
+  }
+ ]
+}

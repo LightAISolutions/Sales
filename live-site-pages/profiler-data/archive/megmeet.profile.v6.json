@@ -14,8 +14,8 @@
   "type": "public",
   "ticker": "SZSE: 002851"
  },
- "summary": "BOTTOM LINE UP FRONT: The verification point has arrived and it split. Megmeet's H1 2026 interim (27 August 2026) shows the AI-power leg working — power products RMB 1.841B, +60.92%, the only segment with an expanding gross margin (25.06%, +2.62pp) — while group earnings quality deteriorated: attributable net profit rose 45.21% but ex-non-recurring net profit FELL 16.13%, the difference being RMB 133.88M of non-recurring items dominated by fair-value gains on the wealth-management products holding the January placement proceeds, with operating cash flow down 84.62%. BACKGROUND: Shenzhen-based power-electronics and electrical-automation manufacturer, now organised into six business groups under current naming — 电源产品 power products (including AI data-centre power), 智慧生活 smart living, 新能源交通 new-energy transport, 工业自动化 industrial automation, 智能装备 intelligent equipment, and 磁电精造 magnetics/precision. There is no separate industrial-power reporting segment; industrial power sits inside power products. FY2025 revenue ¥9.40B (+15.1%); H1 2026 revenue RMB 6.061B (+29.68%) with direct overseas revenue RMB 2.180B (+45.49%, 35.97% of the total) and direct-plus-indirect overseas above 43% per the interim. About 3,400 R&D engineers, 34.6% of headcount, of whom more than 1,000 are AIDC-power technical staff. Founded 2003 by Huawei Electric and Emerson Network Power alumni; listed on the Shenzhen Stock Exchange 2017; A1 filed with HKEX 26 June 2026 for an A+H dual listing.",
- "ecosystemRole": "We assess Megmeet's ecosystem position as a power-conversion supplier converting an industrial base into AI data-centre power capability — qualified but, on the public record, unranked. Basis: the H1 2026 interim states in the company's own words that it is 「英伟达（NVIDIA Corporation）指定的数据中心电源推荐提供商之一」 — one of NVIDIA's designated recommended data-centre power suppliers — participating in the Blackwell and Vera Rubin power and HVDC programmes. That is membership of a set, not a position within it: the interim names no competitor anywhere in 238 pages and makes no share or rank claim. It is the only mainland-China power vendor NVIDIA has named for GB200 NVL72 power, and it publishes the full grid-to-GPU chain (edge cabinets rectifying 380–480 VAC directly to 800 VDC at over 1 MW per rack, a solid-state transformer still in development at a target above 98.5%, power/BBU/supercapacitor shelves, CRPS with 800 VDC input, PDB and Power Brick). Against Delta and LITEON it is the challenger in the same NVIDIA power-system-components tier; against the hall-edge specialists it is a rack vendor reaching upward.",
+ "summary": "BOTTOM LINE UP FRONT: Megmeet is deliberately sacrificing near-term profit to buy early position in NVIDIA's 800VDC data-center power architecture ahead of the projected 2027 rack transition; whether AI data-center revenue materializes at scale becomes verifiable with the 27 August 2026 half-year report. BACKGROUND: Shenzhen-based power-electronics and electrical-automation manufacturer organized into six business groups — smart home appliance electric controls, power products (including AI data-center power), new energy vehicle and rail transit components, industrial automation, intelligent equipment (welding, industrial microwave, oil equipment), and precision connection. FY2025 revenue ¥9.40B (+15.1%), approximately 40% overseas, with 10 R&D centers and 8 manufacturing bases across China, Thailand, India, the US, and Germany, per company filings. Founded 2003 by Huawei Electric and Emerson Network Power alumni; listed on the Shenzhen Stock Exchange 2017; filed for a Hong Kong A+H dual listing June 2026.",
+ "ecosystemRole": "We assess Megmeet's ecosystem position as a power-conversion supplier converting an industrial base into AI data-center power capability. Basis: it is a member of NVIDIA's 800V HVDC ecosystem — the only mainland-China power vendor NVIDIA has named for GB200 NVL72 power — and is building the full grid-to-GPU chain (solid-state transformers, 800VDC sidecar cabinets, power/BBU/supercapacitor shelves, server PSUs) that adjoins BESS players on the compute-power-coordination side. It also supplies PV/storage/EV-charging core components and storage PCS-adjacent power electronics.",
  "productsAndServices": [
   {
    "name": "Power Products — AI Data-Center & Network Power",
@@ -93,20 +93,6 @@
   }
  ],
  "recentDevelopments": [
-  {
-   "date": "2026-08-27",
-   "category": "financial",
-   "headline": "H1 2026 interim: revenue +29.68%, headline profit +45.21%, ex-non-recurring profit −16.13%",
-   "read": "The half the dossier had flagged as the verification point. The AI leg is real — power products +60.92% with margin up 2.62pp, overseas +45.49% — but the profit headline is majority non-recurring and operating cash flow fell 84.62%. The company reports volume delivery to North American major customers began in Q1 2026 and names no AI customer.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522762.PDF"
-  },
-  {
-   "date": "2026-08-27",
-   "category": "corporate",
-   "headline": "Headquarters-base project deferred from September 2026 to December 2027",
-   "read": "Not a capacity or AIDC slip: the project is a Shenzhen Nanshan district government-coordinated multi-party build, and the interim states the property has not been delivered to the company. Funded from the 2019 convertible bond, not the 2026 placement.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522768.PDF"
-  },
   {
    "date": "2026-07-31",
    "category": "product-launch",
@@ -215,9 +201,9 @@
  ],
  "strategyRead": [
   "(High confidence) We assess Megmeet is running an incumbent-funded pivot: the mature appliance-controls business (38% of revenue, declining) and diversified industrial lines bankroll the AI data-center power push. Basis: R&D held near 11–12% of revenue for a decade per filings, and FY2025 profit was deliberately sacrificed (ex-non-recurring profit −93%) concurrent with the 800VDC build-out.",
-  "(Moderate confidence) We assess its wedge into the Delta-dominated server-power market is architecture timing, not price: it moved first among mainland vendors on the 800VDC sidecar/SST full chain and is the only mainland supplier NVIDIA named for GB200 power. Trade reporting that it displaced LITEON as the #2 NVIDIA power-shelf source remains UNSOURCED and is now weaker, not stronger: the H1 2026 interim names no competitor and claims no rank, 36Kr's supplier account names LITEON as the second supplier with Megmeet the mainland entrant, and TrendForce's June 2026 800 V HVDC supplier note and DigiTimes' Computex 2026 AI-power coverage name Delta and LITEON without mentioning Megmeet. Treat the rank claim as a contested market narrative with no supporting source located; the recommended-supplier status and Blackwell/Vera Rubin participation are separately confirmed first-party and should not be conflated with it.",
+  "(Moderate confidence) We assess its wedge into the Delta-dominated (~41% share) server-power market is architecture timing, not price: it moved first among mainland vendors on the 800VDC sidecar/SST full chain and is the only mainland supplier NVIDIA named for GB200 power. The judgment that the AC-to-800VDC transition (Kyber/Rubin-class, 1MW racks from ~2027) reshuffles supplier share before incumbents consolidate it is our inference, not company guidance.",
   "(Moderate confidence) We assess the geographic build-out (Thailand phase II, Dallas test lab, India localization, HK listing) is supply-chain de-risking aimed at US hyperscaler procurement — a mainland company packaging itself to be buyable by American AI-infrastructure buyers despite tariff and geopolitical friction.",
-  "(High confidence) The front-loaded expectation has now been partly tested and the answer is mixed. The 27 August 2026 interim landed: AI-adjacent power products grew 60.92% with an expanding margin and volume delivery to North American majors began in Q1 2026, but no AI-data-centre revenue line is disclosed at any granularity, order backlog is stated only as 「在手订单充裕」 with no figure, and H1 attributable profit of RMB 252M is roughly 30% of the RMB 832M FY2026 consensus carried on 同花顺 after the interim — implying brokers model a materially H2-weighted year. No published beat-or-miss verdict on the interim was located; the only 「略超市场预期」 broker verdict in the record covers FY2025 plus Q1 2026 and must not be carried forward to this half.",
+  "(High confidence) Expectations are front-loaded relative to disclosure: the company itself stated AI orders were immaterial through 2025, yet FY2026 consensus embeds a roughly six-fold profit rebound. The 27 August 2026 H1 report is the first hard test of whether AI-DC power revenue materialized at scale.",
   "(Moderate confidence) We assess the EV/rail segment's doubling at 15% gross margin is a volume-share land-grab in commoditizing auto power electronics — strategically consistent (same power-electronics platform) but dilutive to mix. The durable margin engines are welding/intelligent equipment (38.5% GM) and industrial automation (28% GM), per segment disclosures."
  ],
  "relationships": [
@@ -421,56 +407,6 @@
   "currency": "RMB (¥)",
   "type": "public",
   "periods": [
-   {
-    "period": "H1 2026 (latest interim; reported 2026-08-27, filed 2026-08-28)",
-    "periodType": "interim",
-    "periodEnd": "2026-06-30",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "RMB 6.061B / 60.61亿元 (+29.68%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "No published consensus verdict on the interim was located; brokers' post-interim FY2026 consensus is RMB 832M attributable net profit"
-     },
-     {
-      "name": "Net profit (attributable)",
-      "actual": "RMB 252.07M / 25,207.04万元 (+45.21%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Headline growth is majority non-recurring — see commentary"
-     },
-     {
-      "name": "Ex-non-recurring net profit",
-      "actual": "RMB 118.19M / 11,819.15万元 (−16.13%)",
-      "expected": "",
-      "verdict": "miss",
-      "result": "Underlying operating profitability contracted while the headline rose"
-     },
-     {
-      "name": "Operating cash flow",
-      "actual": "RMB 29.55M / 2,954.51万元 (−84.62%)",
-      "expected": "",
-      "verdict": "miss",
-      "result": "Company attributes it to reduced discounting of notes receivable and higher payment of matured notes payable"
-     },
-     {
-      "name": "R&D spend",
-      "actual": "RMB 621.38M / 6.21亿元 (+20.91%), 10.25% of revenue",
-      "expected": "",
-      "verdict": "inline",
-      "result": "—"
-     },
-     {
-      "name": "Operating profit",
-      "actual": "RMB 272.98M / 27,297.77万元 (+27.03%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Grew below revenue; company cites tight upstream raw-material supply compressing gross margin"
-     }
-    ],
-    "commentary": "Quality of earnings is the story, not the headline. Attributable net profit rose 45.21% while ex-non-recurring net profit fell 16.13%; the gap is RMB 133.88M of non-recurring items, dominated by RMB 137.35M of fair-value and disposal gains on financial assets — the wealth-management products holding RMB 1.65B of the January 2026 private placement. Operating cash flow fell 84.62%. Segment mix is where the AI leg shows: power products RMB 1.841B (+60.92%, 30.38% of revenue) with gross margin UP 2.62pp to 25.06%, against smart living RMB 2.557B (42.19%) with margin DOWN 4.33pp to 18.39%. Direct overseas revenue RMB 2.180B (+45.49%, 35.97% of revenue, 25.89% margin) grew at roughly double the domestic rate; the company puts direct plus indirect overseas above 43%. No AI-data-centre or data-centre revenue line is disclosed anywhere in the interim — the finest granularity published is the power-products aggregate. Consolidated gross margin is not printed; computed from the disclosed revenue and cost lines it is 21.21% against 22.07% a year earlier. No interim dividend. Next report: Q3 2026, due by the 2026-10-31 CSRC deadline."
-   },
    {
     "period": "Q1 2026 (latest interim)",
     "metrics": [
@@ -720,48 +656,8 @@
   {
    "label": "TradingView — estimates & next earnings date",
    "url": "https://www.tradingview.com/symbols/SZSE-002851/forecast-actuals-and-estimates/"
-  },
-  {
-   "label": "Megmeet — 2026年半年度报告 (H1 2026 interim report, SZSE 002851, 238pp): the full segment, margin and geography split, the non-recurring reconciliation, the 800 VDC product architecture and the NVIDIA recommended-supplier language",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522762.PDF",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Megmeet — 2026年半年度募集资金存放、管理与使用情况公告 (2026-081): the January 2026 private placement and its project-by-project drawdown at 30 June 2026",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522764.PDF",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Megmeet — 关于公司部分募投项目延期的公告 (2026-079): the Shenzhen Nanshan headquarters-base project deferred to December 2027, a government-run build outside company control",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522768.PDF",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Megmeet — 800V/570kW side rack product page: 800 V DC output, up to 1 MW per rack, integrated BBU and PCS functions",
-   "url": "https://www.megmeet.com/products/info.html?id=326",
-   "date": "2026-09-08"
-  },
-  {
-   "label": "Megmeet — power shelf product page (IPU433K-AA1616): 27.5 kW N+1 / 16.5 kW N+N, six 5.5 kW rectifier slots, 1U, 19-inch with 21-inch compatibility",
-   "url": "https://www.megmeet.com/products/info.html?id=323",
-   "date": "2026-09-08"
-  },
-  {
-   "label": "Megmeet — BBU shelf product page: 1U, 180 s of backup at 16.5 kW, 240 s at 13.2 kW, peak support to 26.4 kW",
-   "url": "https://www.megmeet.com/products/info.html?id=324",
-   "date": "2026-09-08"
-  },
-  {
-   "label": "中国基金报 — Megmeet H1 2026: revenue 60.61亿元 +29.68%, attributable net profit 2.52亿元 +45.21%, ex-non-recurring 1.18亿元 −16.13%",
-   "url": "https://www.chnfund.com/article/979f37f0-48ba-d3b0-6422-3a23556143fb",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "36Kr / Zhike — NVIDIA's displayed power suppliers are Delta, Lite-On and Megmeet, with Lite-On named the second supplier and Megmeet the only mainland entrant",
-   "url": "https://eu.36kr.com/en/p/3130828011132937",
-   "date": "2025-01-20"
   }
  ],
- "lastUpdated": "2026-09-08",
- "profileVersion": 7
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 6
 }

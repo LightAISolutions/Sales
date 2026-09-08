@@ -14,8 +14,8 @@
   "type": "public",
   "ticker": "SZSE ChiNext: 300693"
  },
- "summary": "BOTTOM LINE UP FRONT: The 11 August 2026 checkpoint landed and it was good — revenue RMB 1.759B (+29.16%), attributable profit RMB 228M (+44.11%) with ex-non-recurring profit growing FASTER at +50.45%, gross margin 40.7% (up 1.7 percentage points), positive operating cash flow of RMB 166M (+37%) and a ~45% interim payout — and Soochow Securities titled its note 「Q2业绩超市场预期」, the only independent beat verdict on any of this session's three interims. But the AI data-centre leg is still optionality rather than revenue: no third-party report, design win or ranking names Sinexcel in AI data-centre power on or after 2026-08-01, no data-centre customer is named anywhere, and the AIDC evidence is entirely sell-side inference from an industrial-supporting-power segment (+58%, 61.9% margin) that brokers attribute partly to data-centre build-out. The company has established an AIDC critical-power business unit with a roadmap covering medium-voltage UPS and HVDC. BACKGROUND: Sinexcel is a Chinese power-electronics company built around modular power conversion technology, listed on the Shenzhen Stock Exchange ChiNext board since August 2017. It operates four reported business lines: EV charging and battery-swap equipment (its largest segment since 2024), new-energy power conversion (bi-directional energy storage PCS and containerized storage systems), industrial supporting power supplies (active harmonic filters, static var generators, UPS), and battery formation & test equipment. The company claims 5,000+ energy storage projects, 200,000+ EV charging systems, 20,000+ power quality projects, and 300,000+ battery test channels deployed, with manufacturing in Huizhou, Suzhou, California, and Malaysia and subsidiaries across the US, Europe, and Asia-Pacific.",
- "ecosystemRole": "We assess Sinexcel as one of China's leading third-party PCS (power conversion system) suppliers for battery energy storage, with grid-forming capability and a fast-growing, high-margin overseas storage business (StellaON platform certified for multiple European grids). Also a merchant supplier of EV DC fast chargers and 20/40 kW charging modules, and a long-established power-quality vendor increasingly levered to AI data-center (AIDC) power demand. Two independent readings of its storage position point different ways and the corpus carries both rather than resolving them: BloombergNEF named it a Tier 1 power-inverter manufacturer for Q1 2026 — a bankability designation, though every visible trace of it is the company's own PR Newswire release rather than independent journalism — while CNESA's 2025 China PCS shipment Top 10 does not list Sinexcel in either the domestic or the global Chinese-vendor ranking. A bankability tier and a shipment-volume ranking measure different things, and Sinexcel's disclosed strength is C&I and microgrid rather than utility-scale GW, so absence from a volume table is consistent with a differentiated niche. The H1 2026 storage gross margin expanding 10.3 percentage points to 38.1% while China's grid-scale additions FELL 18% year on year argues for the niche reading — the growth is overseas and C&I, not domestic utility-scale.",
+ "summary": "BOTTOM LINE UP FRONT: Sinexcel's high-margin overseas storage PCS line is the earnings engine over a commoditizing domestic base, with AI data-center power as pre-revenue optionality; the 11 August 2026 H1 report is the near-term checkpoint. BACKGROUND: Sinexcel is a Chinese power-electronics company built around modular power conversion technology, listed on the Shenzhen Stock Exchange ChiNext board since August 2017. It operates four reported business lines: EV charging and battery-swap equipment (its largest segment since 2024), new-energy power conversion (bi-directional energy storage PCS and containerized storage systems), industrial supporting power supplies (active harmonic filters, static var generators, UPS), and battery formation & test equipment. The company claims 5,000+ energy storage projects, 200,000+ EV charging systems, 20,000+ power quality projects, and 300,000+ battery test channels deployed, with manufacturing in Huizhou, Suzhou, California, and Malaysia and subsidiaries across the US, Europe, and Asia-Pacific.",
+ "ecosystemRole": "We assess Sinexcel as one of China's leading third-party PCS (power conversion system) suppliers for battery energy storage, with grid-forming capability and a fast-growing, high-margin overseas storage business (StellaON platform certified for multiple European grids). Also a merchant supplier of EV DC fast chargers and 20/40 kW charging modules, and a long-established power-quality vendor increasingly levered to AI data-center (AIDC) power demand.",
  "productsAndServices": [
   {
    "name": "Energy storage PCS & containerized systems",
@@ -102,20 +102,6 @@
   }
  ],
  "recentDevelopments": [
-  {
-   "date": "2026-08-11",
-   "category": "financial",
-   "headline": "H1 2026 interim: revenue +29.16%, ex-non-recurring profit +50.45%, gross margin up 1.7 percentage points to 40.7%",
-   "read": "The strongest of the three power-conversion interims this cycle, and filed exactly on schedule — the calendar's OVERDUE flag was a false positive. Industrial supporting power +57.81% at a 61.94% margin and storage +35.32% with margin up 10.29 points carried a mix-driven expansion; the largest line, EV charging at 42.50% of revenue, grew slowest (+18.25%) and de-rated 4.43 points on raw-material costs management attributes to the same AI compute build-out that is driving the industrial line. Ex-non-recurring profit grew FASTER than the headline (+50.45%) — non-recurring items were a small net loss. Soochow called Q2 a beat; Guosen, five days later, rated only Accumulate with the lowest out-year EPS of the three notes.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466306.PDF"
-  },
-  {
-   "date": "2026-07-21",
-   "category": "commercial",
-   "headline": "List prices raised 10–30% across all product lines",
-   "read": "Reported by Lanjing Finance from channel checks rather than company confirmation, and effective ten days AFTER the H1 period closed — it explains none of the interim's margin expansion and is an H2 2026 variable.",
-   "source": "https://www.lanjinger.com/d/1783743093467764121"
-  },
   {
    "date": "2026-07-22",
    "category": "product-launch",
@@ -212,8 +198,7 @@
   "(High confidence) We assess overseas utility PCS is Sinexcel's margin engine — 61.3% FY2025 gross margin on the storage export line versus commoditized domestic pricing, with StellaON grid certifications (Poland, Nordics, Japan) functioning as queue-jumps into tender shortlists. Basis: filings as relayed by broker summaries.",
   "(Moderate confidence) We assess the third-party PCS position benefits from integrator-versus-vertical dynamics: developers seeking non-captive conversion suppliers keep a durable lane open despite vertically integrated giants.",
   "(Moderate confidence) We assess the AI data-center power line (built on the APF/SVG heritage; HVDC modules third-party-reported shipping to Vertiv) is optionality, pre-revenue as of early 2026 — treat AI-exposure claims as forward-looking until revenue is disclosed.",
-  "(Moderate confidence) We assess the EV-charging segment — largest since 2024 but lower-margin — is moving up the value chain toward fleet-infrastructure solutions to escape charger commoditization.",
-  "(High confidence) We assess Sinexcel's AI data-centre position as declared intent with zero revenue, and the company says so itself. Basis: across four separate post-results investor-relations records (2026-08-11, 08-13, 08-14, 08-18) management states in near-identical words that AIDC critical-power products are 「样品处于开发阶段，尚未实现正式销售」 — samples in the development stage, formal sales not yet realised. The interim report establishes the unit (an AIDC 关键电源业务部 created in 2026, 'from grid to server') but the string '800V' does not appear once in its 212 pages; the entire 800 VDC roadmap — the three-tier retrofit / row-level HVDC / native-800V path read off NVIDIA's OCP white paper 2.0 — lives only in the 2026-08-14 IR record. No AIDC customer is named anywhere, and management declines to name any, citing contract confidentiality. What is generating AIDC-linked revenue today is the power-quality line inside industrial supporting power, which grew 57.81%. COLLECTION NOTE: a cluster of specific claims circulating in search summaries — Vertiv OEM manufacture of HVDC modules, a 36 kW module at 100 W/in³, ripple ≤0.5%, a jointly developed 'AI dynamic load adapter' — is traceable to no citable source and appears in neither page said to carry it. Excluded deliberately. Two pre-window third-party placements also contradict each other: CNESA (Nov 2025) asserts a named Vertiv power-quality relationship without disclosing sourcing, while a July 2026 self-media roundup asserts technology-adjacency and no customer relationship. The company has never confirmed a direct NVIDIA relationship in any disclosure."
+  "(Moderate confidence) We assess the EV-charging segment — largest since 2024 but lower-margin — is moving up the value chain toward fleet-infrastructure solutions to escape charger commoditization."
  ],
  "relationships": [
   {
@@ -838,63 +823,6 @@
   "type": "public",
   "periods": [
    {
-    "period": "H1 2026 (latest interim; board 2026-08-10, disclosed on cninfo 2026-08-11 — exactly the scheduled date)",
-    "periodType": "interim",
-    "periodEnd": "2026-06-30",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "RMB 1.759B / 17.59亿元 (+29.16%)",
-      "expected": "No numeric H1 or Q2 consensus is published anywhere in the public record",
-      "verdict": "beat",
-      "result": "Soochow Securities' 2026-08-12 note is titled 「Q2业绩超市场预期」 — an independent broker's qualitative beat verdict; Guosen's 2026-08-17 note carried only 增持 with the lowest out-year EPS of the three, so the reaction was positive but not unanimous"
-     },
-     {
-      "name": "Net profit (attributable)",
-      "actual": "RMB 228M / 2.28亿元 (+44.11%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "—"
-     },
-     {
-      "name": "Ex-non-recurring net profit",
-      "actual": "RMB 228M / 2.28亿元 (+50.45%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "Non-recurring items netted to MINUS RMB 23,514 — a small net loss — so ex-non-recurring profit is marginally HIGHER than the headline. There is no non-recurring boost in this half, the opposite of the Megmeet pattern"
-     },
-     {
-      "name": "Q2 2026 revenue",
-      "actual": "RMB 1.015B / 10.15亿元 (+33.96%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "—"
-     },
-     {
-      "name": "Q2 2026 net profit (attributable)",
-      "actual": "RMB 143M / 1.43亿元 (+67.43%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "—"
-     },
-     {
-      "name": "Gross margin",
-      "actual": "40.7%, up 1.7 percentage points YoY (equivalently +4.36% in relative terms)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "UNITS TRAP: the aggregator prints the relative form (+4.36%) and the broker the absolute form (+1.7pct). Same fact; written bare as '+4.36%' it overstates the gain 2.6×"
-     },
-     {
-      "name": "Operating cash flow",
-      "actual": "RMB 166M / 1.66亿元 (+37%)",
-      "expected": "",
-      "verdict": "inline",
-      "result": "POSITIVE and growing — a circulating claim that operating cash flow was negative is false and is contradicted by the same article said to carry it"
-     }
-    ],
-    "commentary": "The half is a mix story, not a broad margin story, and the segment split is now on primary sourcing. From the interim's own 占比10%以上 table: industrial supporting power (which since 2021 includes power quality) RMB 441,383,754.17 (+57.81%) at a 61.94% gross margin (+3.28pp); new-energy power conversion — the ESS PCS line — RMB 383,879,378.46 (+35.32%) at 38.08% (+10.29pp); EV charging RMB 747,685,090.94 (+18.25%) at 30.43% (−4.43pp); battery testing and formation RMB 132,989,671.57 (−0.18%) at 30.98% (−8.32pp). Group margin expansion is carried by mix plus the storage recovery, not by breadth: the largest line, charging at 42.50% of revenue, is the slowest-growing and de-rating. Management's own explanation of that de-rating is the finding worth carrying — AI compute-infrastructure demand is simultaneously the demand driver for the industrial power line and the raw-material COST driver compressing charging margins. R&D was RMB 157,808,944.97, 8.97% of revenue. An interim dividend of RMB 102,974,082.09 (RMB 3.30 per 10 shares) was declared, a 45.21% payout, and was paid 2026-09-07. Domestic-versus-overseas revenue is NOT disclosed: the segment note is filed empty and there is no by-region table. A 10–30% list-price increase took effect 2026-07-21, ten days AFTER the period closed — it contributed nothing to this half and is an H2 variable. Note on comparability: no sourced CNY/USD rate for H1 2026 was located, so this period is deliberately left out of the normalized-KPI overlay. Next report: Q3 2026, due by the 2026-10-31 CSRC deadline."
-   },
-   {
     "period": "FY2024 (reported April 2025)",
     "metrics": [
      {
@@ -1168,53 +1096,8 @@
   {
    "label": "CharIN — Sinexcel core membership announcement",
    "url": "https://www.charin.global/news/sinexcel-becomes-a-core-member-of-charin-e-v/"
-  },
-  {
-   "label": "东吴证券 (Soochow Securities) — 盛弘股份 2026年半年报点评：「Q2业绩超市场预期」, industrial supporting power + storage growth, with the four-segment revenue and gross-margin table",
-   "url": "https://www.fxbaogao.com/detail/5599385",
-   "date": "2026-08-12"
-  },
-  {
-   "label": "国信证券 (Guosen Securities) — 盛弘股份: 「AIDC与储能业务共振，全球化布局加速推进」, rated 增持 (Accumulate) with the lowest out-year EPS of the three post-interim notes",
-   "url": "https://reportapi.eastmoney.com/report/list?pageSize=60&beginTime=2026-01-01&endTime=2026-09-08&pageNo=1&qType=0&code=300693",
-   "date": "2026-08-17"
-  },
-  {
-   "label": "Sinexcel — 关于2026年半年度利润分配预案的公告 (announcement 2026-046): interim dividend of RMB 3.30 per 10 shares, RMB 102,974,082.09 in total",
-   "url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-11/acc08901-5b46-4b5e-8ea6-d418c7da9e41.PDF",
-   "date": "2026-08-11"
-  },
-  {
-   "label": "CNESA 中关村储能产业技术联盟 — 2025 China PCS shipment Top 10, domestic and global Chinese-vendor lists (via 中国高新网): Sinexcel appears in neither",
-   "url": "http://www.chinahightech.com/yaowen/2026-04/01/content_496256.html",
-   "date": "2026-04-01"
-  },
-  {
-   "label": "新华网 — CNESA H1 2026 storage data: China new grid-scale additions 21.81 GW / 58.60 GWh, down 18% / 16% year on year; sector-level only, no company rankings",
-   "url": "https://www.news.cn/energy/20260828/9a63f0b477f247eab756720e16ab7bd3/c.html",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "蓝鲸财经 — Sinexcel raised list prices 10–30% across all product lines effective 2026-07-21; sourced to channel checks, not company confirmation",
-   "url": "https://www.lanjinger.com/d/1783743093467764121",
-   "date": "2026-07-11"
-  },
-  {
-   "label": "Sinexcel — 2026年半年度报告 (H1 2026 interim report, SZSE ChiNext 300693, 212pp): the complete four-line segment and gross-margin table, the AIDC critical-power business unit, and the #3 cumulative ranking in >250kW charging guns. The string '800V' does not appear in the document",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466306.PDF",
-   "date": "2026-08-11"
-  },
-  {
-   "label": "Sinexcel — 投资者关系活动记录表 2026-016 (2026-08-14): the three-tier 800 VDC deployment roadmap read off NVIDIA's OCP white paper 2.0, and management's statement that AIDC samples are in development with no formal sales realised",
-   "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-14/12496921.PDF",
-   "date": "2026-08-14"
-  },
-  {
-   "label": "Sinexcel — 投资者关系活动记录表 2026-014 (2026-08-11): management on the 4.43-point charging gross-margin decline, attributed to AI compute-infrastructure demand lifting raw-material and component prices",
-   "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-11/12489175.PDF",
-   "date": "2026-08-11"
   }
  ],
- "lastUpdated": "2026-09-08",
- "profileVersion": 8
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 7
 }

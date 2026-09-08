@@ -1578,12 +1578,12 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002851",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-08",
       "domains": [
         "megmeet.com"
       ],
-      "srcTotal": 30,
-      "srcFirstPct": 53,
+      "srcTotal": 38,
+      "srcFirstPct": 58,
       "kpiNorm": true
     },
     {
@@ -2342,12 +2342,12 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 300693",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-08",
       "domains": [
         "en.sinexcel.com"
       ],
-      "srcTotal": 43,
-      "srcFirstPct": 63,
+      "srcTotal": 52,
+      "srcFirstPct": 56,
       "kpiNorm": true
     },
     {
@@ -2848,14 +2848,14 @@
       "hq": "Hangzhou, China",
       "ticker": "SZSE: 002364",
       "status": "active",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-09-08",
       "domains": [
         "en.hzzh.com",
         "hzzh.com",
         "zhonhen.com"
       ],
-      "srcTotal": 45,
-      "srcFirstPct": 42,
+      "srcTotal": 50,
+      "srcFirstPct": 44,
       "kpiNorm": true
     },
     {
