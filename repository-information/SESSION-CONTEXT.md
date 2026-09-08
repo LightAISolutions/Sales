@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-08 12:00:01 AM EST
+**Repo version:** v05.12r — one push commit on `claude/phase-5-report-evaluation-cs27yo`
+**Branch:** `claude/phase-5-report-evaluation-cs27yo`
+**Model:** Fable 5.1 xhigh — **Phase 5 of `INTEGRATED-REMEDIATION-PLAN.md` §7 (the report-strategy evaluation, F10 / F11), evaluation only.**
+
+### What was done
+
+**Phase 5 — v05.12r.** A written decision per report in the plan's new **§7.7**: all four reports **re-scoped and regenerated**, none retired, none regenerated as-is — the defect is scope, not fact. `named-project-bess-attach` → the live project web (24 dossiers pinning 9 projects, plus `tesla` cited through `xai`; River Bend and ten new participants missing from the 15-company edition). `grid-scale-bess` → the registry's integrator incumbents + challengers (18) plus `flexgen` as the adjacent comparator; `eve-energy` out (cells / in-hall per the registry). `s154-listed-bess-suppliers` → the statutory six (`gotion` added; `rept`'s not-named record as a limitation). `aidc-power-conversion` → the covered 800 VDC roster **by layer** (15: silicon, rack, sidecar/SST, facility + grid tier; `huawei` out on the stated reason). The seven checker warnings read again against what each report cites — every cited figure holds; none re-pinned. **The drift-gated monthly Routine's gate is REPLACED** (recorded only — the developer applies it): keep monthly / fresh session / opportunity-series-only; replace the ≥10-versions-moved count with any of (a) an indicator fired, (b) scope drift — a project the edition does not cover, or the project-pinning set differing from `scope.value` by ≥3, (c) ≥5 scoped dossiers with a development absent from the archived pinned version. Evidence: 13 of 15 scoped dossiers already past their pins while 0 of 15 carry a development since the edition — the gate trips on housekeeping and would have missed F10. **The §5 caveat is RESTATED** as *supplier* whitespace (storage is in the plan at Lighthouse and Project Jupiter; no supplier named anywhere but Trimount and Colossus); it lifts with Phase 6 session 1. **§7.8** carries three Phase 6 paste-in briefs (sessions: named-project → grid-scale + §154 → AIDC). §6 Phase 5 Done / Phase 6 next with the order; §7.1 and §7.4 updated.
+
+### Where we left off
+
+v05.12r pushed as one commit. Nothing half-done. **Next: Phase 6 session 1 on Opus 5 xhigh — paste `INTEGRATED-REMEDIATION-PLAN.md` §7.8 "Session 1"** (the named-project edition, before the Routine's 2026-10-01 fire). Then S1 (§7.4 puts Phase 5 → S1 → Phase 6; Phase 6 sessions 2–3 wait on desk refreshes and can interleave with S1).
+
+### Key decisions and findings
+
+- **Overlays cannot reach a landscape from a Phase 6 edition** — `guidanceOverlays[]` live in the report and must name a module that exists in `Profiler.gs`, so the "reports feed the landscapes' admin extras" sequencing is resolved as: Phase 6 editions overlay the existing eight modules; S2 landscapes cite the edition id in their claims ledger; the overlay onto a landscape arrives with the *next* edition after S2 (§7.7 finding 8).
+- **`s154-listed-bess-suppliers--risk--2026-08-29.report.json` was edited after publication** at v04.94r (commit `e1324c7`, its `scope.rationale`) — an immutability breach the checker cannot see; recorded, not reverted; Phase 6's supersession moots it; restoring the published text is the developer's call.
+- **The earnings desk is leaving rows overdue**: `sinexcel` (08-11), `eve-energy` (08-20), `iren` and `jinko` (08-27), `byd` (08-29); the 7 Sep run `SUCCEEDED` in 19 minutes with no commit. Three of those are report indicators — Phase 6's preflight inherits them (refresh first or state the staleness). `megmeet` / `zhonhen` H1 2026 interims are also absent, with rows dated 30 Oct.
+- **No Phase E row changes any report's answer** (E6 is cells, E7 is the load).
+- **Until the Routine's gate is changed, the 2026-10-01 fire authors an edition on churn** unless Phase 6 session 1 lands first — land it, or pause the Routine.
+
+### Active context
+
+- **Branch:** `claude/phase-5-report-evaluation-cs27yo` · **repo version:** v05.12r · **Profiler page:** v01.83w (unaffected) · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges / 9 named projects / 8 guidance modules / 4 reports (all current; 3 to be superseded per session) / 19 segments / 283 memberships / drill pool 1,920
+- **Classroom live:** 10 lessons · 3 tracks · 134 gate cases · `check-classroom-content.py` 0/0 · pipeline no P3
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** **99 sections, 1 dated 2026-09-08** (the thirteen 2026-09-01 sections rotated at v05.12r). Same EST day → 100 − 2 = 98 → no rotation. **A later EST day → 100 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 79; budget ~10 extra minutes. `git fetch --unshallow` MUST run before any SHA lookup.
+- **Checker state:** reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — `report-pins-verified.json` untouched, no report file edited); content 10/3/134 0/0; pipeline P1 on the plan file only.
+- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · **5 Done (v05.12r)** · **6 next** (three sessions, §7.8) · S1 · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
+- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; the v04.94r edit of the §154 report file; the overdue desk rows above.
+
+### Recommendation for next session
+
+- Run **Phase 6 session 1 on Opus 5 xhigh**: paste the "Session 1" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the named-project opportunity edition (25 in scope, `supersedes` the 2026-08-30 id, the 13 superseded pin rows removed), landed before the Routine's 2026-10-01 fire.
+
+**To continue:** type `run Phase 6 session 1`
+
+## Previous Sessions
+
 **Date:** 2026-09-07 11:30:55 PM EST
 **Repo version:** v05.11r — **two** push commits this session: `bdca7ac` (v05.10r, K1 — merged to `main`, branch deleted by the workflow) and this one (v05.11r, the taxonomy decision + the Phase 5 brief + this context), on `claude/k1-fable-5-1-high-y5wuyn`
 **Branch:** `claude/k1-fable-5-1-high-y5wuyn`
@@ -46,51 +86,5 @@ v05.11r pushed as one commit. Nothing half-done. **Next: Phase 5 on Fable 5.1 xh
 - Run **Phase 5 on Fable 5.1 xhigh**: open `INTEGRATED-REMEDIATION-PLAN.md` §7.6 and paste the blockquote as the opening prompt — the report-strategy evaluation (one decision per report, the Routine gate, the §5 caveat), writing §7.7 and the Phase 6 brief §7.8, no report authored.
 
 **To continue:** type `run Phase 5`
-
-## Previous Sessions
-
-**Date:** 2026-09-07 07:24 PM EST
-**Repo version:** v05.09r — **one** push commit this session (S0 + this context, the v05.08r precedent), on `claude/s0-segment-design-gate-y8us8d`
-**Branch:** `claude/s0-segment-design-gate-y8us8d`
-**Model:** Fable 5.1 xhigh — **S0 of `INTEGRATED-REMEDIATION-PLAN.md` §7: the segment-layer design gate.** Design only: registries, specs and plan sections. No lesson authored, no generator code, no dossier / guide / report / `report-pins-verified.json` touched, `Classroom.gs` and `Profiler.gs` untouched, no registry sync or graph rebuild, §6 register not re-run beyond the G6 wording.
-
-### What was done
-
-**The segments registry — `live-site-pages/profiler-data/profiler-segments.json` (schema v1).** Nineteen segments in chain order across four tiers (supply · build · demand · services), each with a definition, buying criteria, notes and members. **283 memberships across all 154 dossiers, none unassigned**, every one verified against the company's own `ecosystemRole` / `productsAndServices` (never the registry category) with a `basis` line quoting the dossier. Roles: incumbent / challenger / adjacent, self-described in the file with the floor rule. **Floor at S0: sixteen at it, three below** — `assurance` (2·0·2) and `insurance-and-risk-transfer` (0) as §7.2 predicted, **and `compute-and-the-rack` (NVIDIA + Flex only), which §7.2 counted above the floor and the dossiers do not support**. `software-and-optimization` is not at zero (FlexGen incumbent, Fluence's Mosaic/Nispera challenger) but its landscape waits for S3 batch 1. Taxonomy strains recorded in the registry's `notes` and in the curriculum plan §10.11 for the developer's review — the one S0 "done when" clause a session cannot close.
-
-**Schema and rules.** `PROFILER-SCHEMA.md`: a "Segments registry" section, the `companies[].segments[]` mirror row (sync-script change is S1's), the revision-signals section extended. `profiler-app.md`: Profiler Command step 5 gains the segment assignment (same commit, dossier not category, unassigned rather than guessed). `CLASSROOM-SCHEMA.md` content contract amended (mechanism: never trivia; segment lessons may drill structure; roster deck opt-in and separate); `classroom-app.md` gains the matching section (generator writes segment lessons; the pipeline never revises one). `industry-guidance.md`: the landscape-module exception to the 2026-08-29 content-scope rule, recorded so the two rules do not contradict.
-
-**Curriculum plan.** **§10 added** — five-layer model, floor rule with the S0 floor table, segment-lesson template (ten fixed section ids, all-public stamp of every member `profile:` + `graph:` + `concepts:`, `reviewBy` from the fence), generator spec (`scripts/build-classroom-segments.py` — deterministic, regenerate only what moved, developer-session tool, no P3 by construction), the fourth lane's three tracks (`value-chain-makers` 4 · `value-chain-builders` 7 · `value-chain-buyers-and-backers` 9, contiguous position ranges, `reading-the-graph` as opener — S1 authors it), landscape-module spec (guidance shape, contributor tier, claims ledger citing `profile:` at `profileVersion`), K1 (`ss:` item kind, pool builder not lift), K2 (roster deck `rc:`), health script, two role paths, 10.11 review notes. **§3** two specs: `reading-the-numbers` (`market-access` 4) and `interconnection-for-large-loads` (`aidc-grid-to-chip` 2, the G6 lesson). **§7** rows 25–26; positions re-numbered. **§4** re-numbered (built ids untouched). **§6** G6 re-classified as research synthesis, Opus 5 xhigh, no longer developer-blocked (trail kept, S0 note appended). §2.2/§2.3/§8/§9 updated. Curriculum: **36 authored + the opener = 37; 10 built · 26 remaining; 19 generated segment lessons in the fourth lane.**
-
-**Coverage plan.** **§10 Phase E** (seven sessions E1a–E6 by default) and **seventeen §8 rows** with proposed slugs, categories, segment · role hypotheses, models per §7.2, and the chat's notes verbatim in `Why`. Remediation plan §6: S0 Done (v05.09r); **K1 and Phase 5 next** (either order); S1/S3/G6/Phase 4 rows point at the specs.
-
-### Where we left off
-
-v05.09r pushed as one commit. Nothing half-done. **Next: K1 (Fable 5.1 High, spec §10.7) or Phase 5 (Fable 5.1 xhigh, the report-strategy evaluation) — either order; S1 (generator + tracks + checker + `reading-the-graph`) after Phase 5 per §7.4.** The developer's taxonomy review of `profiler-segments.json` (especially `compute-and-the-rack`) can happen at any time and changes nothing in the run order.
-
-### Key decisions and findings
-
-- **Roles follow the dossier's characterisation, not geography** — CRRC and HyperStrong are integrator incumbents with no US channel; the basis says so; the landscape carries the US reading.
-- **The role vocabulary strains on the demand tier** and the strain is written into `basis`: the AI labs are hyperscaler `challenger`s (new buyers), the utilities' challengers are the competitive retailers (NRG, Vistra), Galaxy is a landlord challenger despite being a broker-dealer.
-- **The three Value Chain tracks are contiguous position ranges (1–3, 4–10, 11–19)**, not tier-balanced — each reads as one stretch of the chain; 4/7/9 lessons.
-- **K1 decided: pool builder, not lift script** — lifting would touch 95 public guides and move every `study:` pin.
-- **Checker behaviour on a stale `origin/main` ref**: `check-classroom-pipeline.py` showed 767 findings on a clean tree until `git fetch origin main` (a forced update); after the fetch, "nothing changed". Fetch before trusting the pipeline checker.
-
-### Active context
-
-- **Branch:** `claude/s0-segment-design-gate-y8us8d` · **repo version:** v05.09r · **Profiler page:** v01.83w · **Classroom page:** v01.07w · **Classroom GAS:** v01.16g (all unchanged — no page affected; the registry has no consumer until S1)
-- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges (built 2026-09-07) / 9 named projects / 8 guidance modules / 4 reports; **19 segments / 283 memberships (new)**
-- **Classroom live:** 10 lessons · 3 tracks · 134 gate cases · `check-classroom-content.py` 0/0
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG: 109 sections, 11 dated 2026-09-07.** Same EST day → 110 − 12 = 98 → no rotation. **A later EST day → 110 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`). `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
-- **Checker state:** content 10/3/134 0/0; pipeline "nothing changed" on a clean fetched tree, P1 noise on plan-file commits, no P3; reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — all left loud, `report-pins-verified.json` untouched). Graph digest unchanged.
-- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** 0 · 1 · 2a · 2b · 3 · **S0 Done (v05.09r)** · **K1 next** · **5 next** · S1 · 6 · S3 (0/7) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
-- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; do not act on the `named-project` report's whitespace call until Phase 5.
-
-### Recommendation for next session
-
-- Run **K1 on Fable 5.1 High** from the curriculum plan §10.7: `clDrillStudyItems_()` reads every `flashcards`-kind section under a new `ss:<slug>:<sectionId>:<n>` item kind, `CL_DRILL_INV_CAP` → 2400, the schema's item-identity table gains the `ss` row, `Classroom.html` resolves `ss:` from the fetched guide; both checkers, `node --check`, `check-classroom-pipeline.py --base origin/main` (refresh `gateDigest` only if P3), Playwright read of the drill showing ≈1,920 study items; GAS + page bump. Phase 5 is the equally valid alternative if a Fable xhigh session is what is open.
-
-**To continue:** type `run K1`
 
 Developed by: LightAISolutions

@@ -3,11 +3,48 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 111/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.12r] — 2026-09-08 12:00:01 AM EST
+
+> **Prompt:** "Run Phase 5 of INTEGRATED-REMEDIATION-PLAN.md — the report-strategy evaluation — on Fable 5.1 xhigh as a fresh session. Phase 5 is EVALUATION: it writes a decision per report and the plan sections that carry it. It authors no report (that is Phase 6, Opus 5 xhigh), edits no published report file (reports are immutable), touches no dossier, guide or lesson, and does not open Classroom.gs or Profiler.gs.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest Session), then INTEGRATED-REMEDIATION-PLAN.md §1 (F10, F11), §2–§3 (the Phase 5 and Phase 6 rows and paragraphs), §5 (the standing caveat on the named-project report's whitespace call), §6 (the ledger), §7.3–7.4 (Phase 5 before S1 and Phase 6 — the reports feed the landscape modules' admin extras), then .claude/rules/profiler-app.md → the Profiler Command's "profiler report" section in full (report shape, the four types, `supersedes` and the index `status` field, immutability, and item 8 — the drift-gated monthly Routine, read its gate as written), PROFILER-SCHEMA.md → the report schema and `report-pins-verified.json`, PROFILER-STYLES.md (the active style), scripts/check-profiler-reports.py (what a pin, a warning and an error are), live-site-pages/profiler-data/reports/reports-index.json and all four report files, CLASSROOM-CURRICULUM-PLAN.md §10.6 (what a landscape module will cite from a report), and PROFILER-COVERAGE-PLAN.md §8 + §10 (the nineteen Phase E companies, E7's AMD and Supermicro included, that will land before Phase 6 could re-run).
+>
+> THE WORK — one push commit, evaluation only:
+> 1. For each of the four reports (`named-project-bess-attach--opportunity--2026-08-30`, `aidc-power-conversion--competitive--2026-08-29`, `grid-scale-bess--competitive--2026-08-29`, `s154-listed-bess-suppliers--risk--2026-08-29`): read it against today's corpus (154 dossiers, 9 named projects, the segments registry) and write a decision — regenerate as-is, re-scope (state the new scope: the company set, the question, the type), or retire — with the reason, the evidence (which dossiers moved under it, per check-profiler-reports.py's 7 warnings and F10/F11), what an S2 landscape module would need from it, and whether it should wait for a Phase E group to land first. Name the Phase E rows, if any, that change the answer.
+> 2. Decide the drift-gated monthly Routine's gate for a 154-company corpus: keep, re-tune (state the threshold), or replace — with the reason. Do NOT create, update or delete any Routine; record the decision only — the developer applies it.
+> 3. Lift or restate the §5 caveat on the named-project report's whitespace call, in the plan's own words.
+> 4. Write the decisions where they live: INTEGRATED-REMEDIATION-PLAN.md — a new §7.7 "Phase 5 decisions (date)" with one block per report (decision · scope · reason · evidence · Phase 6 order), the Routine decision and the caveat outcome; §6 Phase 5 → Done with the version and Phase 6 → next with the report list and order it inherits; §5 caveat updated; and §7.8, the Phase 6 paste-in brief on the §7.5 pattern (one per report or one for all), naming for each the `supersedes` id, the scope and the pins it must refresh.
+> 5. reports-index.json: no change (status flips are Phase 6's, when the new edition exists). report-pins-verified.json: untouched. No report file edited.
+>
+> DO NOT: author or regenerate a report; edit any report file or report-pins-verified.json; flip an index status; create, update or delete a Routine; touch a dossier, guide, lesson, Classroom.gs, Profiler.gs or profiler-segments.json; run a registry sync or graph rebuild.
+>
+> VERIFY: `python3 scripts/check-profiler-reports.py` — 0 errors / exactly 7 warnings (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7), identical before and after — any other output is a finding, stop and say so; `python3 scripts/check-classroom-content.py` 10 / 3 / 134 with 0 / 0, unchanged; `git fetch origin main` then `python3 scripts/check-classroom-pipeline.py --base origin/main` — P1 on the edited plan file is expected, no P3; every internal link in the edited plan files resolves.
+>
+> CHANGELOG — check, do not assume: at v05.11r the file holds 111 sections, 13 dated 2026-09-07. On a LATER EST day none is exempt, so with your section it reads 112 → rotation fires on the oldest whole date group, the thirteen 2026-09-01 sections (v04.01r–v04.13r) → 99; run `git fetch --unshallow` before any SHA lookup and budget ~10 extra minutes. Verify with `grep -c '^## \[v[0-9]' repository-information/CHANGELOG.md` and `TZ=America/New_York date '+%Y-%m-%d'`.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch (`git ls-remote` first). No page is affected (plan files only — no Profiler page bump). End with "remember session"."
+
+### Added
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.7 — Phase 5 decisions (F10, F11).** Nine cross-cutting findings, then one block per report (decision · scope · reason · evidence · S2 needs · wait-for · Phase 6 order): **all four re-scoped and regenerated, none retired, none regenerated as-is.** `named-project-bess-attach` → the live project web (24 dossiers whose `relationships[].project` resolve, over 9 projects, plus `tesla` cited through `xai`; the 2026-08-30 edition covered 15 over 8 and lacks River Bend and ten participants). `grid-scale-bess` → the registry's `storage-integrators-and-containers` incumbents + challengers (18) plus `flexgen` as the adjacent comparator; `eve-energy` out with the reason. `s154-listed-bess-suppliers` → the statutory six (`gotion` added; `rept`'s not-named record as a limitation). `aidc-power-conversion` → the covered NVIDIA 800 VDC roster by layer (15 — silicon `infineon` / `vicor`; rack `delta-electronics` / `liteon` / `megmeet` / `flex`; sidecar and hall-edge `zhonhen` / `sungrow` / `sinexcel`; facility and grid tier `vertiv` / `eaton` / `schneider-electric` / `abb` / `ge-vernova` / `hitachi-energy`), `huawei-digital-power` out on the report's own reason, like-for-like within each layer's table. The seven warnings were read against what each report cites: every cited figure holds; none re-pinned. **The drift-gated monthly Routine (`trig_01TvnXREVHsQ4QCrtveYjvZM`) — gate REPLACED, recorded only:** keep monthly / fresh session / opportunity series; replace "fewer than 10 scoped dossiers past their pins" with any of (a) an indicator fired, (b) scope drift (a project the edition does not cover, or the project-pinning set differing from `scope.value` by ≥3 companies), (c) ≥5 scoped dossiers carrying a development absent from the archived pinned version. Evidence: 13 of 15 scoped dossiers are already past their pins while 0 of 15 carry a development since the edition and 35 of 38 pins held at X3 — the count trips on housekeeping and would have missed F10. Timing note: until changed, the 2026-10-01 fire authors an edition on churn unless Phase 6 session 1 lands first. **Findings the brief did not anticipate, recorded not fixed:** the §154 report file was edited after publication at v04.94r (`e1324c7`, `scope.rationale`) — an immutability breach the checker cannot see; and the earnings desk has left `sinexcel`, `eve-energy`, `iren`, `jinko` and `byd` rows overdue (three are report indicators), the 7 Sep run landing no commit. **A §10.6 sequencing gap resolved:** a Phase 6 edition cannot overlay a landscape S2 has not written (the anchor is validated against live modules), so editions overlay the existing modules, landscapes cite the edition id, and the landscape overlay arrives with the next edition after S2. No Phase E row changes any answer.
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.8 — three Phase 6 paste-in briefs (Opus 5 xhigh)** on the §7.5 pattern: session 1 the named-project edition (before the Routine's 2026-10-01 fire); session 2 the grid-scale and §154 editions together after the `byd` / `eve-energy` H1 2026 refreshes; session 3 the AIDC edition after the `megmeet` / `zhonhen` / `sinexcel` H1 2026 refreshes. Each names the `supersedes` id, the scope rule, the pins to refresh, the overlays to re-author, the index flip, the removal of the superseded edition's rows from `report-pins-verified.json`, the expected checker output, and the CHANGELOG arithmetic.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md`** — §5 caveat **restated** (supplier whitespace, not storage whitespace: storage is in the plan at Lighthouse per `vantage` v9 and Project Jupiter per `stack-infrastructure` v7, and tolled at Meta per `meta` v9; no BESS supplier named anywhere but Trimount and Colossus; lifts with Phase 6 session 1); §6 Phase 5 → **Done — v05.12r** (closed against the §2 criterion X3 wrote, not by the session that wrote it) and Phase 6 → **next** with the report list and order; §7.1 row 5/6 and the §7.4 standing-caveat sentence updated.
+- **`SESSION-CONTEXT.md`** — Latest Session rewritten for this session; the v05.11r entry moved to Previous Sessions; the v05.09r entry dropped (2-session cap). Recommendation: Phase 6 session 1 from §7.8.
+- **`README.md`** — `Last updated:` line.
+
+### Verified
+
+- `python3 scripts/check-profiler-reports.py` — **0 errors / 7 warnings, byte-identical before and after** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7; 31 aged pins quiet); `check-classroom-content.py` 10 / 3 / 134, 0 / 0; `check-classroom-pipeline.py --base origin/main` — P1 on the plan file only, no P3. No report file, `reports-index.json`, `report-pins-verified.json`, dossier, guide, lesson, `Classroom.gs`, `Profiler.gs`, `profiler-segments.json` or Routine touched; no registry sync or graph rebuild. The plan carries no markdown links (backtick references only), so the link check is vacuous.
+- **CHANGELOG rotation checked, not assumed:** `grep -c` returned 111 before this section and `TZ=America/New_York date` returned 2026-09-08 — a later EST day than every existing section — so with this section the file held 112 sections, **none exempt → rotation fired** on the oldest whole date group, the thirteen `2026-09-01` sections (`v04.01r`–`v04.13r`), moved verbatim to `CHANGELOG-archive.md` above `v04.00r` with SHA enrichment after `git fetch --unshallow` (13 of 13 resolved; post-rotation grep clean) → 99 sections, 1 exempt → 98 non-exempt, below the trigger; the counter reads `Sections: 99/100`.
 
 ## [v05.11r] — 2026-09-07 11:30:55 PM EST
 
@@ -4661,448 +4698,4 @@ the described behaviour is the shipped behaviour.
 
 - **`repository-information/ENTERPRISE-SETUP.md`'s "Current GAS Auto-Deploy Token" record is stale and internally inconsistent** — its header says "5 GAS projects", its list names three, and its **Repository access** row reads `LightAISolutions/lightaisolutions` (the template repo) even though every `.gs` in this repo pulls from `LightAISolutions/Sales`. Profiler and Scraper, both deployed and self-updating, are absent from the list. Left unedited on purpose: correcting it means knowing which token each project actually holds, which is a Script-Property fact only the developer can read
 
-## [v04.13r] — 2026-09-01 11:14:26 PM EST
 
-> **Prompt:** "Picking up from my last session, assemble the first tracks from the existing corpus on Opus 5 Extra: author public-stamped modules from the study guides and concepts registry plus one guidance-stamped module that deep-links pre-C3, register them in clLessons_() / clTracks_(), pass check-classroom-content.py, then port the guidance renderer into Classroom.html so the index and lesson views render through the new action=classroom ops."
-
-### Added
-
-**Classroom C1, content + renderer slice — the first tracks, and the guidance engine ported onto them.** The schema slice shipped empty registries on purpose; this fills them from the corpus that already exists and gives the page something to render. Every `provenance.inputs[]` entry names a source that was actually read while authoring — the stamp is a record, not a citation of convenience — and one lesson is deliberately guidance-derived so the fold is exercised by real content rather than only by fixtures.
-
-**`googleAppsScripts/Classroom/Classroom.gs` (v01.01g → v01.02g)**
-
-- **Five lesson literals, four public-stamped and one guidance-stamped.** `cell-to-container` and `duration-and-degradation` (from `study:catl`, `study:sungrow`, `study:fluence`, `study:tesla`), `the-aidc-power-chain` and `heat-is-the-constraint` (from `study:eaton`, `study:vertiv`, `study:nvidia`), each with `concepts:profiler-concepts`; and `spec-sheet-decoded`, built on `guidance:bess-tech-fundamentals-2026-08` plus public inputs, which folds to `guidance` and so is contributor+ only. The schema doc's worked example is now a real lesson
-- **Two track literals** — `bess-foundations` (3 lessons, Technology Foundations) and `aidc-power-primer` (2 lessons, The AI Data-Center Wave) — registered with the lessons in `clLessons_()` / `clTracks_()`, ordered by lane as `guidanceDocs_()` is in `Profiler.gs`
-- **The gate now runs on real content, not only fixtures:** analyst sees `bess-foundations` with two lessons and `withheld: 1`, and `spec-sheet-decoded` never appears in their lesson index at all; contributor and admin see all five
-
-**`live-site-pages/Classroom.html` (v01.00w → v01.01w)**
-
-- **The guidance renderer, ported.** `clRenderSection` and the per-kind primitives (`clTable`, `clProsCons`, `clTimeline`, `clBars`, `clFlashcards`, `clQuiz`, `clBindTermTips`, `clFmt`, `clReviewChip`) are Profiler's `gd*` engine on a light palette, so one section vocabulary now serves study guides, guidance modules, reports and lessons. Progress ticks are deliberately absent — that is the next slice, and the nav marker is a bullet rather than an empty checkbox so the page does not promise an interaction it lacks
-- **Index and lesson views over the `action=classroom` ops** — `clApi` rides the existing `_gasPost` transport (POST `action=classroom`, GET `api`/`op=classroom` fallback), so no new transport was introduced. The index groups tracks by lane, badges guidance/corpus/report-derived lessons, and shows a track's withheld count; `#lesson/<id>` hash routing makes a lesson bookmarkable and the browser's back button return to the index
-- **A provenance strip** renders a lesson's stamp as typed identities rather than URLs; a `guidance:` input deep-links to `Profiler.html#guidance`, matching the masthead's own pre-C3 link, so no data depends on another app's routes
-- **`--cl-measure`** unifies the masthead and curriculum column widths (C0 set the masthead to 900px when it was alone on the page); `#cl-app` paints above the template's fixed GAS iframe, which is left exactly as the template injects it because it carries the auth plumbing
-
-### Fixed
-
-- **Tooltip handlers were bound once per render onto a reused shell**, so a second lesson view stacked a click handler that re-hid the tip the instant the first showed it. Bound once per shell now — Profiler builds a fresh shell per document, which is why the original never hit this
-- **The tooltip hid on any nested scroll.** The scroll-to-hide listener was capture-phase on `window`, so scrolling a table's horizontal wrapper — which happens when hovering a term inside a wide table — dismissed the tip immediately. Non-capture on `window` catches document scroll only, which is the intent (the tip is positioned from viewport coordinates and must not float away)
-- **`{{Cycle life}}` in `spec-sheet-decoded` resolved to no definition**, rendering as a dotted term with nothing behind it. Added to that lesson's glossary, and `{{CRAC}}` / `{{CRAH}}` wired into the drill that names them
-
-### Changed
-
-- **`scripts/check-classroom-content.py`** now reads `profiler-data/profiler-concepts.json` and warns on any `{{term}}` that resolves in neither the lesson's glossary nor the public registry — the exact defect above, invisible in review and easy for C2's pipeline to reintroduce. Verified by probe: the warning fires and the run stays clean once the term resolves
-- **`repository-information/diagrams/Classroom-diagram.md`** gains the curriculum sequence (index → gated lesson fetch → stamp enforcement → concepts fallback) and a Key Design Note for the ops, matching how `profiler-diagram.md` and `Scraper-diagram.md` document their data ops. The mermaid.live pako URL was regenerated and verified by decompression
-
-## [v04.12r] — 2026-09-01 10:31:20 PM EST
-
-> **Prompt:** "Picking up from my last session, build C1's track/lesson schema and its provenance stamp first, on Fable 5.1 High, before any renderer or progress work — it is the one irreversible decision in v1 (Phase 5 showed study.json v1 stays renderable forever behind an adapter), it must slot into clGateForProvenance_()'s existing vocabulary, and every lesson C2 later auto-authors inherits it."
-
-### Added
-
-**Classroom C1, schema slice — the track/lesson schema and its provenance stamp.** The one irreversible decision in v1, made before any renderer or progress code exists to lean on it. The stamp is designed to be *checked*, not trusted: a lesson declares its corpus inputs as typed refs whose prefix fixes the provenance kind, so the fold `clGateForProvenance_()` already performs runs on a vocabulary the data cannot misstate. Registries ship empty by design — the first tracks, the renderer, progress, and study-next are the remaining C1 slices, and every lesson C2 later auto-authors inherits this shape.
-
-- `repository-information/CLASSROOM-SCHEMA.md` (new) — single source of truth: id rules, the provenance stamp (`provenance.inputs[]{kind, ref, date}`, the ref-prefix → kind table, fold semantics, no `note:` prefix by design), lesson schema v1 (`module` / `briefing`, guidance section-kind vocabulary, `reviewBy`, `revisions[].changed[]`), track schema v1 (gate is its lessons'; withheld counts; unreadable tracks are not enumerable), the freshness hooks C2 relies on, the `action=classroom` op contract, a worked example, verification and extension rules
-- `scripts/check-classroom-content.py` (new) — parses every `clLesson<Name>_()` / `clTrack<Name>_()` strict-JSON literal out of `Classroom.gs`, validates both schemas and every stamp against the prefix table read from the `.gs` itself, checks registry membership and prerequisite cycles, then loads the PROJECT region into Node and asserts a 97-case truth table: stamp → gate fold, per-tier visibility, per-tier index filtering, card metadata never carrying sections, and every denial path throwing and audit-logging
-- `.claude/rules/classroom-app.md` (new, path-scoped) + a CLAUDE.md Reference Files row — the authoring contract C2's pipeline sessions inherit: where content lives, never fabricate an input, never invent a parallel gate, freshness pins, verification before push
-
-#### `Classroom.gs` — v01.01g
-
-- `CL_PROVENANCE_REF_KINDS` — the ref-prefix table (`profile` / `study` / `project` / `graph` / `concepts` → public; `guidance` → guidance; `corpus` / `briefing` → briefing; `report` → report) and `clStampKinds_()`, which reads a lesson's stamp into the list the C0 gate folds and returns `[]` (→ deny) on a missing or empty stamp, a malformed ref, an unknown prefix, or a kind/prefix mismatch — a stamp is fully well-formed or it does not exist
-- `clLessons_()` / `clTracks_()` registries (empty), `clLessonCard_()` metadata cards, and per-tier filtering (`clLessonIndexFor_`, `clTrackFor_`, `clTrackIndexFor_`) — a track is served with the lessons the tier may read plus a withheld count, and a track with nothing readable is not listed
-- `handleClassroomOp_()` — read-only `action=classroom` ops (`cop=index|track|lesson`, mirrored on the GET `api` route) in the guidance-ops transport: session → `clRequire_(sess, 'tracks')` at the app door → `clRequireLesson_()` on the lesson's own stamp before any section text leaves the server
-
-### Changed
-
-- `PHASE6-CLASSROOM-DESIGN.md` — C1 carries a status note for the schema slice; `README.md` tree lists the three new files and Classroom's GAS version
-
-## [v04.11r] — 2026-09-01 10:08:49 PM EST
-
-> **Prompt:** "Start building Classroom v1 C0. When you are ready to start C1, then remember session, so I can build C1 on Fable 5.1 High in a new session."
-
-### Added
-
-**Classroom scaffolded as its own federated app — Phase 6, C0.** The design gate's first build phase: `setup-gas-project.sh` spawned the app from the auth template (own sign-in wall, Master ACL, deploy webhook, version and changelog files), then the v1 access matrix and the cross-links to Profiler were built on top. C0's other slice, the Profiler access retune, shipped ahead of schedule on 2026-08-31 as v01.75w / v01.30g and needed nothing here.
-
-#### `Classroom.gs` — v01.00g (new)
-
-- `CL_ROLE_CAPS` — the server half of the v1 matrix: admin holds `tracks`/`guidance`/`briefing`/`reports`/`pipeline`, contributor drops `reports` and `pipeline`, analyst keeps `tracks` alone, and viewer is not admitted to the app at all (decision 2). An unrecognised role collapses to viewer, so an unknown tier fails closed rather than inheriting the reading surface
-- `CL_PROVENANCE_CAPS` + `clGateForProvenance_()` encode the provenance-gating rule before any content exists to gate: a lesson inherits the strictest gate of its inputs, folding a list of provenances down to the one capability its strictest input demands. An empty list, an unknown provenance, or a field-note provenance (deliberately absent from the map, per notes-are-not-sources) returns `''`, which callers must treat as deny
-- `clRequire_()` / `clRequireLesson_()` — the gates C1's data ops call after `validateSessionForData`. Both throw rather than returning false, so a forgotten return value cannot serve gated content, and both write an audit-log entry naming the tier and capability
-
-#### `Classroom.html` — v01.00w (new)
-
-- Client half of the matrix mirroring `CL_ROLE_CAPS`, with `?as=<tier>` preview that only ever intersects with the real capabilities — it can subtract a tier's surface but never grant one
-- A masthead (`#cl-header`) that renders only after a validated session and stays hidden entirely for viewer. It carries a link back to Profiler for every admitted tier, and, for guidance-capable tiers, a deep link into Profiler's guidance hub — the pre-C3 arrangement decision 6 called for, with no interim guidance route built
-- The masthead is wired by wrapping the auth layer's `showApp()` from the project region rather than editing the AUTH region, so template propagation stays conflict-free, and the only call sits inside a `try`/`catch` so a cosmetic masthead can never break sign-in
-
-#### `Profiler.html` — v01.77w
-
-- A `🎓 Classroom` cross-link in the masthead, gated on the existing `study` capability rather than a new one: the three tiers holding `study` are exactly the three Classroom admits, so the two apps' matrices cannot drift apart at this seam
-- The masthead stack was re-slotted so the least restrictive button sits innermost — Classroom at 4px, guidance at 44px, network at 84px, reports at 124px — preserving the existing invariant that a tier missing the outer buttons sees a contiguous stack rather than a gap
-
-#### `scripts/verify-profiler-roles.py`
-
-- Extended with a `classroom` surface across all four tiers, as the design document's verification expectations require of any C0 access-matrix change
-
-### Verified
-
-- `scripts/verify-profiler-roles.py` — all checks pass across the four tiers including the new Classroom column: shown for admin, contributor and analyst, hidden for viewer. Per-account isolation and the Technical Annex audit (89 of 89 dossiers) still pass
-- `node --check` on `Classroom.gs` and `Profiler.gs`; `scripts/check-gas-inner-scripts.js` — 86 inner script blocks across 9 files parse cleanly
-- Headless Chromium against `Classroom.html`: the capability matrix resolves correctly for all four tiers plus an unrecognised role, which fails closed; the masthead renders for admin, contributor and analyst and stays hidden for viewer; the guidance deep link appears only for guidance-capable tiers; an analyst requesting an admin capability is refused. No page errors on load
-- Screenshot reads of both mastheads. The first Classroom render was near-illegible — the masthead had been styled for a dark shell after the version modal's colours were mistaken for the page's, on a page whose body is white — and was restyled dark-on-paper before commit. Profiler's re-slotted stack measures a clean 40px pitch with no overlap
-
-### Notes
-
-- `DEPLOYMENT_ID` remains a placeholder, which is the expected bootstrap gap: the ID does not exist until the GAS project is created and deployed once. The workflow's deploy step reads it at merge time and no-ops silently until it is filled in
-- The scaffold labelled Classroom's README and architecture entries `[template]`. That matches Scraper but not Profiler, which carries no label — the repo holds both conventions today, so the script's output was left alone rather than settled unilaterally mid-phase
-
-## [v04.10r] — 2026-09-01 09:22:14 PM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Fixed
-
-**Twenty dossiers reported "its profile has not been generated" when the profile had loaded and the renderer had crashed.** The developer's screenshot showed Arevon's header — tag, as-of date, sourcing bar, 19 cited — above that message, which is the tell: everything above it is painted from the loaded JSON. A headless render of all 89 profiles through the page's own paint function reproduced it exactly: 69 rendered, 20 threw `x.background.forEach is not a function`.
-
-- **Root cause, data side.** The schema has always specified `decisionMakers[].background` as `string[]`, but one authoring batch (the 20 dossiers revised 2026-08-30 — all eight pre-existing IPPs, four EPCs, four on-site-power suppliers, four supplier/integrators) stored it as a single prose string, and their archived snapshots have carried that shape since v2. Apex Clean Energy, written 2026-09-01 in the array form, was the only IPP that rendered — the pattern the developer noticed
-- **Root cause, page side.** The dossier loader re-enters the render inside the fetch promise's `.then()`, so a render exception rejected the promise and landed in the `.catch` written for a missing JSON file — the message was true for a 404 and false for a crash
-
-#### `Profiler.html` — v01.76w
-
-- `ovBackgroundList(b)` — one reader for both shapes, used by the dossier card loop and the Word/PDF export loop. An array passes through (blank entries dropped); a string splits on line breaks, or, failing that, on sentence and clause boundaries (`. ` / `; ` followed by a capital, only after a lowercase letter, digit or closing bracket so `U.S. Army` and `Inc. and` stay whole), with trailing semicolons stripped. Fixed in the renderer rather than the 20 files because the Versions view renders archived snapshots, which keep the string form forever
-- The cached-profile render path now runs inside `try`/`catch`; a render exception paints "loaded but failed to render — <error>" and logs the error to the console, so the next bad field cannot masquerade as an ungenerated profile. A genuinely missing file still gets the original message
-
-### Verified
-
-- Headless Chromium (the pre-installed `/opt/pw-browsers` build) rendering every profile through `ovPaintCompany`: **89 of 89** after the change, 69 of 89 before; the 20 previously-crashing dossiers now render their executive cards with the prose split into 1–3 bullets per executive; a deliberately malformed profile produces the new "loaded but failed to render — <error>" message on the cached path. No page errors on load; both inline script blocks parse
-
-## [v04.09r] — 2026-09-01 08:40:12 PM EST
-
-> **Prompt:** "Profiler Apex Clean Energy"
-
-### Added
-
-**Apex Clean Energy dossier (profileVersion 1)** — `live-site-pages/profiler-data/apex-clean-energy.profile.json`, schema v7, written in the active `intel-briefing` style from a two-agent research pass (Stage 1 first-party: ~80 company URLs including the newsroom back to 2016, the 2025 Impact Report PDF and the leadership page; Stage 2 third-party: 71 pages across trade press, ACP, Cleanview, law-firm and lender releases, county and PUC records, Ohio Supreme Court and bankruptcy-docket coverage). 77 cited sources, 47% first-party by the registry's provenance tiering.
-
-- **What the dossier establishes.** A wind-heritage developer converted into a farmdown IPP under Ares Management: 12 GW commercialized, 3+ GW operating or under construction, 2 GW under management, $4.08B of project financing in 2025 plus $2.79B in January 2026 and a $1.05B corporate refinancing (October 2025) — all on traditional tax equity from J.P. Morgan, Wells Fargo, Goldman Sachs and Bank of America. The storage finding is the one that matters for this repo's lens: every operating Apex battery (Great Kiskadee 100 MW/200 MWh, Angelo Storage 100 MW/200 MWh, Cameron 16.4 MW) is a Powin system, Powin entered Chapter 11 in June 2025, and the first post-Powin award (Coldwater Storage, 75 MW/381 MWh, June 2026) went to Canadian Solar e-STORAGE — with Raven Storage (100 MW, financed January 2026) still unnamed. No incumbent integrator, a demonstrated willingness to buy Chinese-manufactured LFP, and a FEOC due-diligence framework stated in the 2025 Impact Report
-- Seven product lines (wind, solar, storage, distributed energy, Powered Land, build/operate/trade services, dormant green fuels) with the v2 depth fields; three banded spec groups (battery fleet, 2024–2028 wind fleet with turbine OEMs, finance stack); 21 developments (September 2024 → August 2026); five confidence-tagged key judgments; 12 curated relationships (Meta, Google, Microsoft, Canadian Solar, FlexGen, GE Vernova, MasTec, Siemens Energy, NextEra Energy Resources, Arevon, Jupiter Power, Hithium — the last three as explicit non-links or conflation warnings); five policy regimes including a new `EO 14420 bulk-power system` entry and a state-siting entry, because county and state siting — not federal policy — is the demonstrated loss mechanism (Discovery Wind, Goose Creek, Emerson Creek)
-- **Seven company-published leadership portraits** downloaded to `live-site-pages/images/execs/apex-clean-energy-<lastname>.jpg` (Young, Chernauskas, Perrel, Friesen, Case, O'Shaughnessy, Tetrault), each verified as an individual headshot before wiring. Three further decision makers (Hahn, Haug, Koziar) render as initials avatars
-- Registered in `profiler-companies.json` (category `ipp`, domains `apexcleanenergy.com` + `apexcleanenergyproject.com`); `sync-profiler-registry.py` populated `srcTotal 77 / srcFirstPct 47 / kpiNorm false`; `build-profiler-graph.py` rebuilt `profiler-graph.json` (490 edges, 18 touching the new dossier, including derived edges to CATL, Tesla, Terra-Gen, Lightsource bp, VoltaGrid and ProEnergy from the dossier's own prose)
-- `README.md` — new profile registered in the structure tree
-
-### Note
-
-- **Honesty flags carried in the dossier rather than resolved:** the Powin docket motion to reject Apex affiliates' supply and service agreements (17 June 2025) is known only from a search summary; the Plug Power PPA reportedly passing to NextEra is a single local-press item; the Ares minority-stake sale process is a single Infralogic report; the April 2025 Chief Development Officer no longer appears on the company leadership page with no announcement. Each is stated as unverified where it appears
-- **Session start:** `SESSION-CONTEXT.md` was stale (v04.03r vs v04.08r) and was auto-reconstructed from this changelog in a separate `Session start: reconstruct stale session context` commit, bundled into this push per the Session Start Checklist
-
-## [v04.08r] — 2026-09-01 05:38:51 PM EST
-
-> **Prompt:** "I build a fresh manual build and clicked \"Why Thin?\" and got the attached screenshot. For what it's worth, I have never once successfully ran \"Why Thin?\" since it was created. It always gave me some excuse as to why it cannot deliver anything. Analyze what's going on and fix it."
-
-### Fixed
-
-**"Never once" was literally true, and the reason is on one line.** The report's 25-second client deadline set `settled = true`, and the success handler's first line was `if (settled) return;`. A reply landing at second 26 was **thrown away unread**. The comment on that very deadline promised the opposite — *"the request is left to finish; only the message stops pretending progress is being made"* — and the code did the reverse. Intent and implementation contradicted each other; the implementation won.
-
-The history explains why nobody caught it. The first version read the entire intake tab and hung into the transport's 90 s + 90 s abort. The fix narrowed the read and added the deadline. So the report went from *hangs forever* to *gives up at 25 s and discards the answer* — never once through to a render, across two fixes. Each fix moved the wall; neither removed the discard.
-
-**Why 25 s was too short is an inference, stated as one.** `Scraper.gs` is ~820 KB, and a cold Apps Script container compiles all of it before `doPost` runs — 10–20 s is plausible, and the transport's POST-then-GET fallback can pay it twice. The developer tests immediately after a deploy, which is precisely when every container is cold. Every other call in the app tolerates this because none of them has a deadline; "Why thin?" was the only one honest enough to give up, and the only one that punished the honesty by discarding the result.
-
-#### `Scraper.html` — v01.71w
-
-- The timer no longer settles anything. It rewrites the note with a **live elapsed count** from 8 s on ("Still reading — 14s. The desk may be waking up after a deploy…"), so a wait is visibly a wait and not a hang. The only things that end the request are its own resolution or the transport's rejection after its retries
-- A transport abort (`no reply after 90s`) is now explained as the transport, with a retry hint — a second call after a deploy usually lands on a warm container
-- The subtitle shows **desk time and round-trip time** side by side (`16 relevant of 112 scanned · desk 1.8s · round trip 10s`), so the next slow case is diagnosable from the panel: a large desk number is the sheet read, a large gap between the two is the transport
-
-#### `Scraper.gs` — v01.98g
-
-- `scDigestScoreRows_` **bounded to the newest `SCRAPER_ARCHIVE_SCAN_ROWS` (8 000) intake rows.** That constant's own comment lists "Why thin?" among the paths it already fixed — but this reader still read column 1 from row 2 to the end. With `SCRAPER_INTAKE_KEEP_EDITIONS = 240` and three editions a day, that column heads toward ~30 000 cells for a report that needs the newest hundred. Builds append, so a recent edition is in the tail by construction; one older than the window reports `no_intake` exactly as the other archive paths do
-- `ms` — server-side wall time in the payload, feeding the subtitle above
-
-### Verified
-
-- **Late-result path, headless:** a mocked 10-second reply shows the live count at 9 s (no give-up wording), then **renders** with the source table, FERC row and silent-source list; a 1.5-second reply renders directly; a mocked `no reply after 90s` rejection shows the transport explanation. No page errors
-- **Bounded reader, mock sheet:** a 30 000-row tab with the edition in the tail — all 51 rows found, id read capped at 8 000 cells starting at sheet row 22 002, span reads at the edition's true row; an edition older than the window returns nothing; today's ~1 500-row tab reads the whole column as before
-- `node --check` on the `.gs`; both page inline blocks parse; `check-gas-inner-scripts.js` clean
-
-## [v04.07r] — 2026-09-01 04:30:02 PM EST
-
-> **Prompt:** "Unrelated to what you are asking me to do:
->
-> * See attached screenshot. I am starting to accumulate more and more Editions on Scraper. I want a more organized, easier way to see, filter, and choose which type of Edition on which day I want to see on the main screen.
->
-> Back to what you asked me to do:
->
-> * I confirmed the five new sources and two new topics landed and are toggled on. Then, I ran a manual Morning Digest build and did not see any Federal Register notices amongst the relevant articles. That may not be a mistake though if there simply weren't valuable articles in the last 24 hours. How can you tell if it's working correctly?"
-
-### Added
-
-**"Is that feed working?" was unanswerable, and that is what the developer actually hit.** A source that fetched nothing and a source that fetched plenty of sub-threshold material both show up as *absent from the edition* — and they need opposite fixes. The score report already read `source` on every scored row and then aggregated it away, so the only questions it could answer were "how many came in" and "how many cleared the bar".
-
-#### `Scraper.gs` — v01.97g
-
-- `bySource` — per-source tally on the existing pass (no second read): items in, best score reached, how many cleared, and how many were backstop. **`best` is the discriminator**: a source with items and a best of 30 is being read and judged, not ignored
-- `silentSources` — roster sources that produced no row at all this run, named from the roster rather than the tally, because an empty tally is invisible by construction: a loop can only count rows that exist. Retired sources are excluded
-- Sorted by contribution then by how close the source came, which is the order a reader debugs in
-
-#### `Scraper.html` — v01.70w
-
-- **Source contribution table** in "Why thin?", with the silent-source list underneath and an explicit note that silence is normal for one window and a concern only across several builds
-- **Edition picker rebuilt.** With one edition the flat `<date> · N relevant` list was legible; with three it produced rows of chips reading `2026-09-01 · 16 relevant` three times over, identical apart from a number that says nothing about which paper it is. Thirteen issues, unidentifiable. Now: grouped under an edition heading, **issue number first** (the thing that actually identifies an issue), weekday shown, and an edition filter with counts that re-renders from the cached list rather than re-fetching
-- Weekend builds display **"unnumbered"** in the picker, matching the v04.01r numbering change
-- `wdDigestMarkChip_` extracted from `wdDigestShow_` — the filter re-renders the list and throws the `on` class away, so the highlight has to be reapplied from a remembered id
-- `wdDgDate_` parses the date key through `Date.UTC`, never the local timezone: `new Date('2026-09-01')` is UTC midnight, which west of Greenwich renders as Aug 31 and would label every chip a day early — the same trap as the delivery-gate helper in v04.00r
-
-### Verified
-
-- `node --check` on the `.gs`; both `Scraper.html` inline blocks parse; `check-gas-inner-scripts.js` clean
-- Picker rendered headless against the page's real stylesheet using a 13-issue / 3-edition fixture matching the developer's screenshot: 4 filter chips with correct counts (All 13 · Morning 5 · BESS 4 · AIDC 4), 3 edition groups, 13 chips, 4 correctly marked unnumbered, 1 marked as open. Clicking the BESS filter narrowed to 4 chips and one group, with the filter chip active. No page errors
-
-### Note
-
-**No live-data conclusion is claimed here.** Whether the Federal Register feeds are contributing is a question this release makes *answerable in the app*; it does not answer it. Probed at authoring time, the FERC feed did carry items dated the same day, while the White House and DOE feeds' newest items were several days old — so those two legitimately had nothing inside a 24-hour window.
-
-## [v04.06r] — 2026-09-01 03:41:19 AM EST
-
-> **Prompt:** "The GAS shows v01.95g and nothing appeared, so everything's fine now.
->
-> I know that Scraper only started building digests on 8/28/26, but on 8/26/26, the White House \"declared a national emergency\"(https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/) that directly impacts the US BESS/AIDC industry. I want Scraper to be able to scan press releases from the White House, IRS, and other relevant government agencies as well, so as to not miss these kinds of TOP-PRIORITY news when they come out.
->
-> I also want Profiler to build an Industry Guidance module based on this article as well."
-
-### Added
-
-**The roster was entirely secondary — thirty outlets reporting *on* government action, none reading it.** EO 14420 of 2026-08-26 names battery energy storage systems, grid-connected inverters and critical-infrastructure UPS as in-scope bulk-power-system equipment, and it reached the desk through trade coverage days later and only partially. A federal action is the one class of story where the primary text is both freely available and more useful than the coverage, because the operative detail lives in the definitions section trade pieces summarise away.
-
-#### `Scraper.gs` — v01.96g
-
-Five primary federal feeds, **every URL probed live on 2026-09-01** per `.claude/rules/scraper-sources.md` — status, XML body, item recency — never adopted from memory:
-
-| Feed | Probe result |
-|---|---|
-| White House — Presidential Actions | `200`, XML, 30 items, newest 2026-08-28 |
-| Federal Register — FERC | `200`, XML, 148 items, newest 2026-08-31 |
-| Federal Register — IRS | `200`, XML, 33 items, newest 2026-08-31 |
-| US DOE — Newsroom | `200`, XML, 10 items, newest 2026-08-24 |
-| EIA — Today in Energy | `200`, XML, 21 items, newest 2026-08-28 |
-
-**Validation that the gap is closed:** the White House feed was confirmed to contain the exact article the developer cited, at the exact URL. That feed would have caught it on 2026-08-26.
-
-- Two topic seeds: `topic-bps-security` (the guidance-module seed required by `industry-guidance.md` step 9, using the order's **own** defined terms — "bulk-power system", "Covered Foreign Entity" — because implementing rules and trade write-ups quote them verbatim, making them far better discriminators than "grid security") and `topic-federal-action`, a standing seed kept **separate on purpose**: the guidance seed ages with its module, this one has to keep scoring the next executive order, which nobody has written yet
-
-**Three federal sources retired rather than added**, with `SCRAPER_RETIRED_SOURCES` entries and rows in the rules-file table:
-
-- `ferc.gov` — `403` with `cf-mitigated: challenge` and `server: cloudflare`, the exact blocked signature. **Not uncovered**: FERC orders are carried by the Federal Register feed, which is where they take legal effect anyway
-- IRS newsroom — every documented address returns `404`; no feed is published. Covered via the Federal Register IRS feed
-- EPA news releases — answers automated clients with an empty `202`, repeatably. Covered via the Federal Register
-
-Per the rules file, no workaround was attempted for the Cloudflare-blocked feed.
-
-#### `Profiler.gs` — v01.32g
-
-New guidance module **`eo14420-bulk-power-2026-08`** (lane: Market Access & Bankability), authored from the primary text — nine sections (`prose`, `table`, `timeline`, `prose`, `proscons`, `callout`, `flashcards`, `quiz`, `ledger`), 4 tiles, 6 glossary terms, 7 flashcards, 5 quiz items, and a 14-row claims ledger where every row cites a section of the order rather than a secondary report.
-
-- `reviewBy: 2026-12-24` — set from the module's **own nearest dated gate** (the §3(b) 120-day implementing-rules deadline), per the freshness rule, not a fixed cadence
-- Timeline lane keys are `gen`/`deploy` so they resolve against `GD_LANE_COLORS`; verified in the browser as gold `#b18f35` and blue `#4f83e6` with **zero grey dots**
-- Content-scope rule observed: guidance is to supplier and buyer **groups** (BESS suppliers and integrators, inverter/PCS suppliers, data-center developers and hyperscalers, developers and EPCs) — no single-company analysis. The order names no companies, so no statutory-list exception was needed
-
-#### `repository-information/industry-guidance/`
-
-- `eo14420-bulk-power-system-analysis.md` — the source of truth, with a claims ledger and an explicit "what the order does NOT say" section
-- `sources/eo14420-bulk-power-system-2026-08.html` + `.txt` — the archived page and the extracted text the analysis was written against
-
-### Verified
-
-- `node --check` on both `.gs` files; `check-gas-inner-scripts.js` clean (8 files, 76 blocks)
-- Statutory deadlines computed with `date -d`, not inferred: 120 days → **2026-12-24**, 180 days → **2027-02-22**, +90 → **2027-05-23**
-- Playwright render via direct `gdRenderDoc(doc, host)`: 24 327 chars of markup, 25 table rows, 4 timeline dots in the two CVD-validated hues, glossary tooltips resolving, review chip rendering, **no page errors**
-
-## [v04.05r] — 2026-09-01 03:24:56 AM EST
-
-> **Prompt:** "I opened Scraper after GAS updated and I don't see a tile called \"5 errors logged\". Does that mean I have no errors now and everything's ok?"
-
-### Fixed
-
-**No — and the missing tile was a bug shipped in v01.94g, not a clean bill of health.** The developer opened the app expecting to read the five faults from the previous session and found no tile at all, which reads as "resolved". It was not.
-
-`v01.94g` split the fault trail into two stores — `scDigestErrLog` (detail, capped at 20) and `scDigestErrTally` (hourly counts, exact) — and pointed `recentErrorCount` at the tally alone, because the tally is the accurate one. **The tally property did not exist before that release.** So on the first load after deploy it read empty, the count came back `0`, and the tile — which renders only on a non-zero count — hid. The five entries were still in `scDigestErrLog`, still filtered to the 24h window, still serialized into the `goLiveStatus` payload and sent to the browser. They were simply unreachable: the tile is the only thing that opens the panel that displays them.
-
-Shipped the diagnostic surface and hid the diagnosis in the same release.
-
-#### `Scraper.gs` — v01.95g
-
-- `recentErrorCount` is now `Math.max(scDigestErrCount_(24), errInWindow.length)` — the greater of the hourly tally and the in-window length of the detail log
-- The in-window filter is hoisted so the count sees **all** matching entries while `recentErrors` keeps its `slice(-SCRAPER_ERRLOG_SERVE)` cap for the payload. Counting the sliced array is what made the *original* `5 err/24h` a ceiling, so the fix must not reintroduce it at the other end
-- **Right beyond the migration**, which is why it is `max()` rather than a one-off backfill: the tally is more accurate (it survives detail eviction) but more losable — cleared, corrupted, or newer than the log — and *every* failure mode of reading it alone points the same way, at silence where there are faults. The log's in-window length can only ever understate (it evicts at `SCRAPER_ERRLOG_KEEP`), so the larger of the two is never an overstatement and is never zero while any entry remains visible
-
-### Verified
-
-- `node --check` clean; `check-gas-inner-scripts.js` clean (8 files, 76 blocks)
-- **11 cases**, opening with a reproduction of the developer's exact post-deploy state — a populated `scDigestErrLog` with no tally property at all: tally-only reports `0` (the shipped bug), the fix reports `5`, the 5 entries are still served, and the tile therefore renders. Then: 50 faults still counted exactly while only 20 details are kept and 8 served; a wiped tally cannot zero the tile while the log holds entries; an evicted log cannot zero it while the tally holds counts; and a genuinely clean install still reports `0` so no tile is drawn
-
-### Note
-
-The **`tick 20m ago`** in the developer's screenshot is real and is good news, independent of the above: the run tile is green and no longer `overdue`, so the hourly tick is completing again after having last reported eight hours earlier.
-
-## [v04.04r] — 2026-09-01 03:16:00 AM EST
-
-> **Prompt:** "Improve the syntax from \"5+ err/24h\" to something that actually explains what it is. Then, continue with your recommendation. I would prefer to be able to resolve any issues in-app rather than here in Claude."
-
-### Changed
-
-**One tile was answering two questions, and so answered neither.** `tick 8h ago · 5 err/24h` packed run freshness and a fault count into a single value line, sharing one amber — so a punctual tick with one logged hiccup rendered identically to a tick that had stopped running eight hours earlier. They are separate signals and are now separate tiles.
-
-The developer asked for wording that explains itself, and for faults to be resolvable **in the app rather than here**. That second requirement is what shaped the rest of this change: a diagnosis that requires opening the Apps Script console is not resolvable in-app, so the trail had to become readable, copyable and clearable from the page.
-
-#### `Scraper.html` — v01.69w
-
-- **`err/24h` retired.** The window moved into the tile *label* (`BACKGROUND FAULTS · LAST 24H`), which frees the value line to be a plain count and a plain noun — `5 errors logged`, correctly singular at one. The two surviving occurrences of the old string in the file are inside the comment explaining why it was replaced
-- **Run tile now says `overdue`** when the last scheduled run is older than the server's `tickOverdueMin`. The threshold is served, not re-derived in the browser, so the two cannot drift. The `Scheduler: Healthy` tile beside it only ever proved *the trigger is installed* — a different claim from "it completed", which is how a tick throwing every hour left both tiles green while nothing ran
-- **The fault tile opens a panel** (`role="button"`, `tabindex="0"`, answering Enter and Space) listing each entry's time, originating step and message. `goLiveStatus` had always shipped `w` and `m`; the strip used nothing but `.length`, so the diagnosis was already crossing the wire with nowhere to be shown
-- **Copy all** and, for digest managers, **Mark resolved & clear** — the action that lets a fixed problem return the tile to green. A health signal nobody can reset stops being read
-- The panel reuses the held-back overlay's shell (`wd-hb-*`) rather than growing a second copy of the same rules; Escape closes it first, being the topmost layer
-
-### Added
-
-#### `Scraper.gs` — v01.94g
-
-- **`scDigestErrCount_(hours)` — the count is no longer a ceiling.** `goLiveStatus` served `recentErrors.slice(-5)` and the tile printed its `.length`, so "5 err/24h" was a cap wearing the costume of a measurement: five and fifty rendered the same. Detail and count are now separate stores — the ring buffer keeps 20 entries because a Script Property value caps near 9 KB, while an hourly tally (48 buckets, pruned) gives an exact 24h total however many details had to be dropped
-- **`clearDigestErrLog`** — manager-gated via `scCanManageDigest_`, audit-logged, registered in the allowed-ops list and the router
-- New payload fields: `recentErrorCount` (exact), `tickOverdueMin`, `canClearErrors`; the served detail slice widened to 8
-
-### Fixed
-
-- **The silent-throw path in `scSchedulerTick`, closed — but not swallowed.** `scraperSs_()`, `ensureScraperTabs_()` and `scDigestScheduledTick_()` ran bare inside a `try`/**`finally`** with no `catch`. A throw from any of them skipped `scDigestNoteRun_('tick', 'ok')`, so the run stamp stopped advancing — and with nothing catching it, nothing reached the error trail either. The app then showed a stale run age with no error to explain it: precisely the "did it just not run?" question the Phase 2 trail exists to answer. Now logged as `tick.fatal` **and rethrown** — catching it outright would trade a visible failure for a hidden one, since a throwing execution is what triggers Google's own failure notification. `var` being function-scoped, the later `scDigestDeliverPending_(ss)` still resolves
-
-### Verified
-
-- `node --check` clean; `check-gas-inner-scripts.js` clean (8 files, 76 blocks); both `Scraper.html` inline script blocks parse
-- **14 cases**: 50 errors in one hour counted exactly (the old path would have said 5) while the detail buffer stays bounded at 20; buckets outside the window excluded and included at 48h; tally pruning; both property values well inside the 9 KB cap; and the tile branch re-run against the screenshot's own numbers — `tick 8h ago · overdue` + `5 errors logged`, correct singular, no error tile when clean, and a punctual tick with faults no longer marking the run tile amber
-- Panel rendered headless in Chromium against the page's real stylesheet — 5 rows, correct tile text, styling consistent with the existing overlays
-
-## [v04.03r] — 2026-09-01 02:20:46 AM EST
-
-> **Prompt:** "set up acl health monitoring"
-
-### Added
-
-**The sign-in outage is monitored now.** All three incidents were discovered the same way — the developer hitting a wall — and the v04.02r probe that would have caught each of them a morning earlier had nothing watching it.
-
-#### `scripts/check-acl-health.sh`
-
-- Probes `?action=api&op=aclhealth` on every deployed project that serves it and answers "can sign-in read the Master ACL right now?" in about two seconds. Exit **0** healthy, **1** unhealthy, **2** nothing-probed.
-- **Exit 2 is a failure, not a pass.** A monitor that reports success when it checked nothing is worse than no monitor, because it is trusted. Nothing probed means either the probe reached no deployed project or the config files lost their deployment ids — both worth investigating.
-- **The probed set is discovered, not hardcoded** — any `.gs` dispatching `op=aclhealth` is picked up, so adding the probe to another project enrolls it with no edit here. Projects whose `DEPLOYMENT_ID` is still the placeholder are skipped as not-deployed rather than counted as failures.
-- **A non-JSON or empty body counts as a failure.** The probe is unauthenticated and always answers when the deployment is alive, so no answer means the deployment is unreachable — which blocks sign-in just as thoroughly as an unreadable ACL, and would otherwise have been swallowed as a parse error.
-- Reports each project's **grace snapshot state** (users covered, age, armed or not) and exits **3** internally for armed-but-empty, surfaced as a non-fatal warning. Sign-in can be perfectly healthy while the safety net is not, and that specific combination is what turns the next lapse back into a hard lockout — it deserves to be visible before the lapse, not after.
-- Optional project-name filter (`bash scripts/check-acl-health.sh receipts`, case-insensitive) for checking one app by hand.
-- On failure it prints the repair inline — `diagnoseAuthorization()`, private window as the script account, approve every checkbox — and states plainly that an `acl_unreachable` permissions message is account-level, so the spreadsheet, its tabs and its rows are not worth checking. Past incidents lost hours to exactly that.
-
-#### Routine — `ACL health check (daily)`
-
-- `trig_01GeTqB8xp5nG8FCC139Bgr9`, cron `0 10 * * *` (06:00 ET), fresh session per fire, push + email notifications. Runs the script and is instructed to stay **silent** on a healthy run: noise on the ~364 quiet days is what trains someone to ignore the one alert that matters.
-- **Deliberately outside Google.** A GAS-side time-driven check was considered and rejected: it would sit in the same account whose grant keeps lapsing — the one failure domain a monitor must not share with what it monitors — and `script.scriptapp` is systemically missing on pre-v01.82r projects, so such a trigger could silently never install and the absence would look exactly like health.
-
-### Changed
-
-- `.claude/rules/gas-scripts-reference.md` — the "Partial OAuth Grants" section now points at the monitor, so the next person diagnosing this checks it before re-deriving the mechanism.
-- `README.md` — new script registered in the structure tree. `REPO-ARCHITECTURE.md` deliberately **not** changed: its diagram depicts the three *template* scripts only, and six existing utility scripts are already absent by that same convention.
-
-### Verified
-
-- `bash -n` clean; run live against both deployments — `Profiler v01.31g acl_ok`, `Receipts v01.29g acl_ok [grace: 16 users, 333s old, armed]`, exit 0.
-- Every branch exercised against synthetic payloads rather than assumed: unhealthy (exit 1, renders stage/reason/detail), empty response (exit 1, `<empty response>`), healthy-but-unarmed-snapshot (exit 3), and the case-insensitive project filter.
-
-## [v04.02r] — 2026-09-01 01:51:37 AM EST
-
-> **Prompt:** "see attached screenshot. this is the third time this has happened to me with the Receipts app. fix it." *(with a screenshot of the Receipts sign-in screen showing "The sign-in service could not reach the access list, so it could not confirm your account. This is usually temporary — please try again in a moment. (code: acl_unavailable/acl_unreachable)")*
-
-### Fixed
-
-**An unreadable Master ACL no longer locks every user out.** Third incident of this shape; the first two were each diagnosed and closed environment-side, and nothing in the repo changed to stop the next one turning into a total outage.
-
-**Live diagnosis, taken before any code was touched.** The Profiler deployment's `aclhealth` probe — a *different* Apps Script project reading the *same* ACL spreadsheet — answered `stage: "open"`, `reason: "acl_unreachable"`, `detail: "You do not have permission to call SpreadsheetApp.openById. Required permissions: .../auth/spreadsheets"`. Three things follow, and only the last one is repo-actionable:
-- The spreadsheet is **not** the problem. The call never reaches it — it is refused before dispatch, so file sharing, tab names, the page column and row contents are all irrelevant here.
-- It is **not Receipts-specific**. A second project on the same owning account fails identically, so the missing grant is account-level and every auth app in the fleet was denying every user simultaneously.
-- It is **not fixable from this repo**. No commit can grant an OAuth scope; that is a one-time re-consent in Google (`diagnoseAuthorization()` → open the printed URL → approve **every** checkbox). This matches the partial-grant mechanism already documented in `.claude/rules/gas-scripts-reference.md`.
-
-So the defect this push fixes is not the grant — it is that a grant gap produces a **total, silent, undiagnosable lockout**.
-
-#### Shared AUTH block — `checkSpreadsheetAccess` (auth template + all 7 auth projects)
-
-- **Last-known-good ACL snapshot.** Every successful read now stores the page's allow-list (`email → role`) in Script Properties; a read that fails on **both** attempts consults it before reporting an outage. `hasAccess: true` with `aclDegraded: true` where it vouches, the previous `acl_unavailable` denial where it does not.
-- **Script Properties, not CacheService** — a cache entry can evaporate at any moment, and the snapshot is only ever worth having at the exact moment the ACL is unreachable.
-- **Boundaries chosen so this can only ever reproduce a "yes" the real ACL already gave:**
-  - An email **absent** from the snapshot is still denied. A user added during an outage waits — the safe direction to fail.
-  - It **never denies** from the snapshot, so a removal is honoured the moment the list is readable again (within the existing 10-minute access cache).
-  - A revoked user can therefore retain access for at most `ACL_GRACE_MAX_AGE_SEC` (24h) past the last good read. `ACL_GRACE_ENABLED = false` restores strict denial for compliance, accepting total lockouts. **This is a deliberate availability-for-security trade and is the one part of this push worth a second opinion** — Receipts runs the `hipaa` preset.
-  - Every grace grant writes a `security_alert` / `acl_grace_grant` audit row carrying the reason, role and snapshot age, so a degraded period is reconstructable rather than silent.
-- **The grace verdict is deliberately not cached.** A cached grant would outlive the outage by the full 10-minute access-cache TTL; leaving it uncached means the real ACL wins back the moment it can be read.
-- **Snapshot writes are throttled** to roughly one per ten minutes by a cache marker — without it this would write a Script Property on every sign-in. The allow-list is built by a separate pass over the sheet data already in memory, because the existing lookup loop `break`s on the matched user and so never sees the whole column.
-- Applied to `gas-minimal-auth-template-code.js.txt` and propagated to all seven auth projects per [PC-TEMPLATE-PROP] #19. The function was byte-identical across all eight files before the change (verified by hash) and is byte-identical after it.
-
-### Added
-
-#### `Receipts.gs` — v01.29g
-
-- **`aclHealthProbe_()` + `GET ?action=api&op=aclhealth`**, ported from Profiler, which has had it since the last Profiler incident. Receipts did not — which is precisely why all three Receipts incidents cost an Apps Script editor round-trip to diagnose. It runs the same read sequence sign-in performs (`openById` → tab → data → page column) and names the failing stage. Unauthenticated on the same trust model as the deploy fallback: it returns only reason codes the sign-in screen already shows any visitor, plus the exception message with the spreadsheet ID redacted and capped at 200 chars — never emails, rows, or ACL contents. 60-second result cache so anonymous callers cannot burn Sheets quota.
-- The probe also reports `grace` — whether a snapshot exists, how many users it covers, its age, and whether it is currently usable. Counts and ages only, never the emails. This puts "is anyone actually locked out right now?" in the same response as the failure reason.
-
-### Changed
-
-- `Profiler.gs` v01.31g, `Scraper.gs` v01.93g, `MasterACL.gs` v01.14g, `globalacl.gs` v01.08g, `testauthgas1.gs` v01.07g, `testauthhtml1.gs` v01.07g — shared AUTH block only; no project logic touched.
-
-### Verified
-
-- `node --check` (via stdin, since Node 22 refuses the `.gs` extension — it fails identically on an untouched file, so the extension error is not a syntax signal) clean on all seven `.gs` files.
-- `scripts/check-gas-inner-scripts.js` clean — 8 files, 76 inner `<script>` blocks.
-- The patched `checkSpreadsheetAccess` hashes identically across the template and all seven projects (`ef876136e831`, 11360 bytes), as it did before the change — so no project drifted.
-
-### Notes
-
-- **`CHANGELOG.md` rotated** — the file stood at 101/100, so the oldest date group (2026-08-27, 20 sections: v03.01r–v03.20r) moved to `CHANGELOG-archive.md` with commit-SHA enrichment on all 20 headers. Active file now at `Sections: 82/100`; archive at 220 sections.
-- Session start reconstructed the stale `SESSION-CONTEXT.md` (recorded v03.99r vs actual v04.01r), bundled into this push.
-
-## [v04.01r] — 2026-09-01 12:26:40 AM EST
-
-> **Prompt:** "Don't count weekend builds as real archived issues. Then continue with your recommendation."
-
-### Changed
-
-**Weekend builds are stored editions, not issues of the paper.** `scIssueNumbers_` now ranks run-day dates only; an off-day date resolves to `0` (unnumbered) rather than being rounded up into the sequence.
-
-#### `Scraper.gs` — v01.92g (numbering)
-
-- `scIssueNumbers_` filters its date order through `scDigestDeliverableDate_`, and the `|| 1` fallback on the per-row lookup is gone — it would have turned every unnumbered edition into No. 001
-- `scNextIssueNo_` returns `0` for an off-day build before touching the sheet, and off-day dates no longer advance the sequence for anyone else
-- `scRenumberIssues_` treats `0` as a **real target** via `hasOwnProperty` rather than truthiness. This is what makes the fix retroactive: the pass already runs before every delivery, so the stored 2026-08-29 and 2026-08-30 builds lose their numbers and **Monday 2026-08-31 moves from No. 004 to No. 002** without anything being edited by hand
-- `scRewriteIssueNo_` strips the `· No. XXX` segment when the number is `0` instead of returning the html untouched — the old early-return was right while `0` only meant "unknown", but `0` is now a decision, and it would have left a stale number printed on the stored weekend rows
-- Masthead omits the issue segment when unnumbered; the delivery subject drops its `(No. XXX)` on the same condition (unreachable for a weekend build, which the off-day gate stops long before, but the subject must not lie if any other route reaches it)
-- **Numbers stay dense.** Dropping Saturday does not leave a hole in the sequence — it closes one. A reader uses the number to tell whether they missed an issue, and 001 → 004 said "you missed two" when nothing was missed
-
-### Added
-
-**Same-story clustering** — the answer to the developer's third question from the v04.00r session. Their Monday edition carried the Microsoft DataOne turbine story and Vertiv's Q1 results several times over, each from a different outlet, each printed in full.
-
-Two collapse passes already existed and neither could catch it: corroboration groups on a *loose* 8-word title signature but only to award a score boost — and it made the problem **worse**, because it promotes every copy, so the more outlets carry a story the more section slots it eats; the exact-normalized-title dedupe collapses only byte-identical headlines, which is the syndication case, not the same-story case.
-
-#### `Scraper.gs` — v01.92g (clustering)
-
-- `scStoryKey_` — the bucket: `section | anchor | publication day`, where anchor is a matched company slug, else a company name, else a topic. **No anchor means no clustering**, so an entity-less market story is never collapsed — the safe direction to fail
-- `scStorySameEvent_` — event category (`sig.evt`) is a **separator, never a requirement**: two items with different non-empty categories can never merge, while two items with no category fall back to a stricter token test. Making it a required key component would have silently disabled the entire pass in `$0` fallback mode, where nothing is classified
-- The lexical test counts **shared distinctive tokens**, not a similarity ratio. The real pair — *"Microsoft-backed AI data center faces backlash over alleged unpermitted turbines"* and *"DataOne AI campus ran unpermitted turbines, regulators say"* — shares three content words out of fourteen, a Jaccard of ~0.2. Any ratio threshold high enough to be safe would have missed the exact case this was built for
-- `scSourceRankOf_` / `scRankBetter_` — representative picked on a lexicographic tuple, not a blended score: non-backstop first, then roster tier, then the outlet's hit rate (only once it has ≥20 intake rows, so one lucky article cannot outrank a tier-1 desk), then item score. **Click counts deliberately excluded** — too sparse, and the winning outlet would jitter between editions for no reason a reader could see
-- `scClusterStories_` re-elects the representative on rank rather than keeping the top scorer, and carries the highest score in the cluster forward so collapsing can never demote a story out of its section
-- Hit rates are tallied from the intake rows `scDigestItems_` **has already read** — `sourceStats()` computes the same figure with its own bounded read, and doing it again here would be a second pass over a tab just loaded in full
-- Ordering is load-bearing: the pass runs *after* corroboration (before it, the boost would starve of group members — the trap the dedupe comment already warns about) and *after* the exact-title dedupe (before it, cluster slots would go to syndication copies that are not additional coverage)
-- **Nothing is destroyed.** `alsoIn` renders each collapsed outlet as a link; `merged` carries the full items so `scDigestRenderStep_` puts them back into the held-back list and the weekly rollup — the one place a bad merge can be *noticed* rather than silently swallowed. `intake` and `relevant` counts stay **pre-cluster** so they remain comparable with earlier editions and with the Scraper UI, and a new `clustered` count states the difference in the footer
-
-#### `repository-information/diagrams/Scraper-diagram.md`
-
-- The Morning Edition pipeline arrow depicts the render step sequence this change inserts into, so the clustering stage was added between the AI-summary step and `sections`. The `pako` URL was regenerated per the mandatory procedure and verified by decompression — the decoded code matches the file's block byte for byte
-
-### Verified
-
-- `node --check` clean; `scripts/check-gas-inner-scripts.js` clean (8 files, 76 blocks)
-- **15 clustering cases**: the three-outlet turbine story collapses to the tier-1 desk; same company + different event categories never merge; same company + same event + unrelated subject stays separate; entity-less stories never cluster; incidents never merge across sections; `$0` fallback mode still clusters on the stricter floor; a 5-article source cannot outrank a tier-1 desk; a backstop republication never wins; cluster size capped; different days never merge; a lone story is returned untouched
-- **12 numbering cases** against the developer's actual August rows: Friday 001, Saturday and Sunday unnumbered, Monday **002 not 004**; a second week stays dense with no holes; editions number independently; `scNextIssueNo_` returns 0 for a weekend build and reuses the number on a same-day weekday rebuild; the masthead rewrite strips a stale number, renumbers 004 → 002, and leaves an already-unnumbered masthead alone
-- The v04.00r off-day harness re-run clean, including both 2026 DST boundaries and the 365-day weekday sweep
