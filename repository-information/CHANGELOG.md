@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.11r] — 2026-09-07 11:30:55 PM EST
+
+> **Prompt:** "Regarding the taxonomy decision, I would prefer Option B, adding AMD and Supermicro. Fold the resulting actions into the action plan. Then, give me a prompt to paste into a new Fable 5.1 xhigh session to run Phase 5, then remember session."
+
+### Added
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.6 — the paste-in brief for Phase 5 (Fable 5.1 xhigh)**, on the §7.5 pattern: evaluation only; one decision per report (regenerate / re-scope / retire, with scope, reason, evidence, what an S2 landscape needs, and whether a Phase E group should land first); the drift-gated monthly Routine's gate decided but never applied by the session; the §5 caveat lifted or restated; §7.7 decisions and the §7.8 Phase 6 brief to be written; the checkers' expected output; the CHANGELOG rotation arithmetic for a later EST day.
+- **`PROFILER-COVERAGE-PLAN.md` — Phase E group E7**: `amd` (`compute-and-the-rack` · challenger) and `supermicro` (`compute-and-the-rack` · incumbent or challenger; Dell, HPE as alternates), both public → Opus 5 xhigh, in the §8 ledger and the §10 session table; E7 runs with E1–E3 (below-floor segments first). Phase E is now **nineteen companies, seven groups, eight sessions**; the intro, §8 header and §10 paragraphs updated.
+
+### Changed
+
+- **The developer's taxonomy review of `profiler-segments.json` — S0's one open "done when" clause — closed:** `compute-and-the-rack` is **filled, not folded** (Option B). Recorded in the registry's `notes` for the segment (no membership changed — the dossiers do not exist yet), `CLASSROOM-CURRICULUM-PLAN.md` §10.2 row 9, §10.11 first bullet, §8 item 11 and one §9 row, and `INTEGRATED-REMEDIATION-PLAN.md` §6 (S0 row closed; S3 nineteen dossiers, 7–8 sessions) and §7.2. The fold was rejected because NVIDIA and Flex already sit in `power-conversion-and-rack-power-silicon`, so a fold would only have deleted the load's own buying criteria.
+- **`SESSION-CONTEXT.md`** — Latest Session rewritten for this session (K1, the taxonomy decision, the Phase 5 brief); the v05.09r S0 entry moved to Previous Sessions; the v05.08r entry dropped (2-session cap). Recommendation: Phase 5 from §7.6.
+- **`README.md`** — `Last updated:` line.
+
+### Verified
+
+- `profiler-segments.json` parses after the raw-text `notes` edit (no re-serialisation; 283 memberships untouched). Every internal link in the four edited plan files still resolves. No page affected — plan, registry-notes and context files only.
+- **CHANGELOG rotation checked, not assumed:** `grep -c` returned 110 before this section and `TZ=America/New_York date` returned 2026-09-07 — the same EST day as the twelve `v04.99r`–`v05.10r` sections — so with this section the file holds 111 sections of which **13 are exempt → 98 non-exempt → no rotation**; the counter reads `Sections: 111/100`.
 
 ## [v05.10r] — 2026-09-07 07:44:48 PM EST
 

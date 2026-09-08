@@ -6,6 +6,49 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-07 11:30:55 PM EST
+**Repo version:** v05.11r — **two** push commits this session: `bdca7ac` (v05.10r, K1 — merged to `main`, branch deleted by the workflow) and this one (v05.11r, the taxonomy decision + the Phase 5 brief + this context), on `claude/k1-fable-5-1-high-y5wuyn`
+**Branch:** `claude/k1-fable-5-1-high-y5wuyn`
+**Model:** Fable 5.1 High — **K1 of `INTEGRATED-REMEDIATION-PLAN.md` §7 (the study-pool fix), then the developer's taxonomy review of `profiler-segments.json` (S0's "done when"), then the Phase 5 paste-in brief.**
+
+### What was done
+
+**K1 — v05.10r.** `clDrillStudyItems_()` in `Classroom.gs` reads each guide's top-level `flashcards[]` **and** every `sections[]` entry of kind `flashcards`, emitting the new item kind `ss:<slug>:<sectionId>:<n>` beside the unchanged `sf:`. **Study pool 766 → 1,920** (766 `sf:` + 1,154 `ss:`), verified by running the real builder under Node shims against the local Pages tree. `CL_DRILL_INV_CAP` 1200 → 2400; `CL_DRILL_ID_RE` admits `ss`; `CL_DRILL_SECTION_ID_RE` keeps ungradable section ids out of the pool. **One deviation from §10.7, forced by measurement:** the cache holds the compact `{ id: hash }` map (60,705 bytes) under the new key `cl_drillstudy_v2` and `clDrillStudyExpand_()` restores `{ kind, slug, hash }` on read — the full shape measured ~146 KB, past the 100 KB `CacheService` cap. `Classroom.html` resolves `ss:` from the fetched guide's sections; the drill card's source line links the company in Profiler and names the section. `CLASSROOM-SCHEMA.md` gains the `ss` identity row; `check-classroom-content.py`'s documented-cap assertion moved to 2400. Playwright read: landing card "0 of 1920 cards started", `ss:aep:drill:0` rendering its exact question and answer. Classroom **GAS v01.17g · page v01.08w**. No guide touched, no `sf:` id or `study:` pin moved. `gateDigest` untouched (no P3).
+
+**Taxonomy review — v05.11r.** The developer chose **Option B** for `compute-and-the-rack`: fill it, not fold it. **AMD** (challenger to NVIDIA) and **Supermicro** (the rack/server OEM) are Phase E group **E7** in `PROFILER-COVERAGE-PLAN.md` §8/§10, both public → Opus 5 xhigh; Phase E is now nineteen companies / seven groups / eight sessions, E7 running with E1–E3 (below-floor segments first). Recorded in the registry's `notes` for the segment (no membership changed — the dossiers do not exist yet), curriculum plan §10.2 row 9 / §10.11 / §8 item 11 / §9 row, remediation plan §6 (S0's "done when" closed; S3 nineteen) and §7.2. The fold was rejected because NVIDIA and Flex already sit in `power-conversion-and-rack-power-silicon`, so a fold would only have deleted the load's own buying criteria.
+
+**Phase 5 brief.** Written into `INTEGRATED-REMEDIATION-PLAN.md` **§7.6** on the §7.5 pattern — evaluation only, one decision per report, the Routine gate decided but not applied, the §5 caveat lifted or restated, §7.7 decisions and §7.8 Phase 6 brief to be written by that session; CHANGELOG rotation arithmetic for a later EST day included.
+
+### Where we left off
+
+v05.11r pushed as one commit. Nothing half-done. **Next: Phase 5 on Fable 5.1 xhigh — paste `INTEGRATED-REMEDIATION-PLAN.md` §7.6.** Then S1 (generator + Value Chain tracks + health checker + `reading-the-graph`), then Phase 6, per §7.4.
+
+### Key decisions and findings
+
+- **The §10.7 cache arithmetic was wrong** (~30 bytes/item assumed; ~76 measured). Compact map chosen over the spec's split-by-slug-initial fallback; the split stays documented as the next step past ~90 KB.
+- **Profiler has no deep link to a study-guide section**, so the `ss:` source line links `Profiler.html#<slug>` and names the section as text.
+- **Option B over A/C** for `compute-and-the-rack`; the "fold" was really a deletion since both members are already in power conversion.
+- **The content checker hard-codes the documented cap** and must move with the schema; it caught the 1200 → 2400 change as designed.
+
+### Active context
+
+- **Branch:** `claude/k1-fable-5-1-high-y5wuyn` · **repo version:** v05.11r · **Profiler page:** v01.83w · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges (built 2026-09-07) / 9 named projects / 8 guidance modules / 4 reports; 19 segments / 283 memberships; **drill study pool 1,920**
+- **Classroom live:** 10 lessons · 3 tracks · 134 gate cases · `check-classroom-content.py` 0/0 · pipeline no P3 · selftest 13/0
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG: 111 sections, 13 dated 2026-09-07.** Same EST day → 112 − 14 = 98 → no rotation. **A later EST day → 112 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`) → 99. `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
+- **Checker state:** content 10/3/134 0/0; pipeline P1/P2 noise on developer commits, no P3; reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — `report-pins-verified.json` untouched).
+- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** 0 · 1 · 2a · 2b · 3 · S0 Done (v05.09r, "done when" closed v05.11r) · **K1 Done (v05.10r)** · **5 next** · S1 · 6 · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
+- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; do not act on the `named-project` report's whitespace call until Phase 5 restates it; the stale "802 of ~855" figures were rewritten in `Classroom.html`'s drill comment, and `CLASSROOM-SCHEMA.md` line "855 items × a scheduling row" (the C4 sizing argument) was left as history.
+
+### Recommendation for next session
+
+- Run **Phase 5 on Fable 5.1 xhigh**: open `INTEGRATED-REMEDIATION-PLAN.md` §7.6 and paste the blockquote as the opening prompt — the report-strategy evaluation (one decision per report, the Routine gate, the §5 caveat), writing §7.7 and the Phase 6 brief §7.8, no report authored.
+
+**To continue:** type `run Phase 5`
+
+## Previous Sessions
+
 **Date:** 2026-09-07 07:24 PM EST
 **Repo version:** v05.09r — **one** push commit this session (S0 + this context, the v05.08r precedent), on `claude/s0-segment-design-gate-y8us8d`
 **Branch:** `claude/s0-segment-design-gate-y8us8d`
@@ -49,49 +92,5 @@ v05.09r pushed as one commit. Nothing half-done. **Next: K1 (Fable 5.1 High, spe
 - Run **K1 on Fable 5.1 High** from the curriculum plan §10.7: `clDrillStudyItems_()` reads every `flashcards`-kind section under a new `ss:<slug>:<sectionId>:<n>` item kind, `CL_DRILL_INV_CAP` → 2400, the schema's item-identity table gains the `ss` row, `Classroom.html` resolves `ss:` from the fetched guide; both checkers, `node --check`, `check-classroom-pipeline.py --base origin/main` (refresh `gateDigest` only if P3), Playwright read of the drill showing ≈1,920 study items; GAS + page bump. Phase 5 is the equally valid alternative if a Fable xhigh session is what is open.
 
 **To continue:** type `run K1`
-
-## Previous Sessions
-
-**Date:** 2026-09-07 05:01 PM EST
-**Repo version:** v05.08r — **two** push commits this session: `184416c` (v05.07r, Phase 3 — merged to `main`, branch deleted by the workflow) and this one (v05.08r, the program extension + this context)
-**Branch:** `claude/phase-3-curriculum-review-8pj5lw` (fast-forwarded to `origin/main` after the v05.07r merge, which freed push-once for the second push)
-**Model:** Fable 5.1 xhigh — **Phase 3 of the integrated remediation plan (F12), then the developer's review of it, which produced the program extension in `INTEGRATED-REMEDIATION-PLAN.md` §7.** No lesson authored, no track created, no dossier/guide/report touched, Classroom.gs untouched.
-
-### What was done
-
-**v05.07r — Phase 3, the curriculum re-plan.** `CLASSROOM-CURRICULUM-PLAN.md` §1 re-verified from the filesystem and re-dated (154 dossiers / 154 guides / 1,210 concepts / 1,260 edges / 8 modules / 9 projects / 4 reports; Classroom 10 lessons / 3 tracks / 134 gate cases; 26 of the 56 built-lesson pins have moved). All eight §2.2 exclusions re-tested with a written reason: **nuclear reversed** as a public `clean-firm-power`; **utility reversed as a split** (public `how-a-utility-buys` carries the machinery the six utility guides cover section by section, `utility-procurement-meets-ai-load` stays guidance-gated as the playbook); **cooling cap kept**, lesson deepened on `coolit`/`trane-technologies`; five kept. **§2.3 added**: the remediation plan's skeleton counted "20 remaining" but named four register unlocks (`backup-generation`, `the-ups-room`, `how-a-utility-buys`, `clean-firm-power`) that §3 never specified — all four admitted, so the curriculum is **34 lessons / 10 built / 24 remaining**. §3 four new specs + input notes on twenty specs; §4 rebuilt; **§7 re-ranked as the 24-row Phase 4 order with stamps and reasons** (`four-machines` first, it creates `electrical-foundations`; `how-a-utility-buys` second, creates `market-access`; guidance lessons last, rows 23–24 gated on the bankability module's review due 2026-10-01); §8 updated; §9 revision log added. Remediation plan §6: Phase 3 Done, Phase 4 0 of 24 → then 0 of 26 (below).
-
-**Found in Phase 3:** the drill's study pool (`clDrillStudyItems_`) reads a guide's top-level `flashcards[]` only; the 95 guides authored since September carry 1,154 cards in a `flashcards` *section* the pool never sees → **K1**.
-
-**v05.08r — the program extension (developer review of Phase 3, same day).** Proposal made and approved: Classroom gains a generated **segment layer** (one public segment lesson per value-chain segment from registry + dossiers + graph, regenerated when members move) and a **landscape layer** (one contributor-tier module per segment, Opus-authored in guidance shape). Three fences moved with approval: the content contract amended (segment lessons may drill structure; roster deck opt-in), landscapes at **contributor** tier, and **segments become a registry layer** (`profiler-segments.json`) the Profiler Command must populate. Taxonomy: the seventeen proposed segments **plus** software-and-optimization and insurance-and-risk-transfer as new segments, testing-and-certification **merged with advisors as "assurance"**, upstream materials and transmission developers as adjacent roles → **nineteen segments**. **Seventeen dossiers approved for S3** (hypotheses to verify): Stem · Habitat Energy · Gridmatic; Marsh · Aon · kWh Analytics; UL Solutions · CSA Group · Intertek; Albemarle · Mitra Chem (ICL alternate, Nano One fallback) · Novonix (Syrah Vidalia alternate, Westwater Kellyton alternate); Grid United · Pattern Energy; CALB · Cornex · Great Power. **G6 reclassified**: research-synthesis accepted on the G4 precedent (six of eight modules have no ingested document) — Opus 5 xhigh, one session, no longer developer-blocked. Everything persisted in **`INTEGRATED-REMEDIATION-PLAN.md` §7** (7.1 what landed vs the original plan, 7.2 decisions, 7.3 run order with model/effort per phase, 7.4 sequencing, **7.5 the paste-in brief for S0**) and the §6 ledger (S0 next; K1, S1, S3, C3, S2, K2, C5, C6 rows added; Phase 4 0 of 26; Phase 5/6 moved before S2; G6 row rewritten).
-
-### Where we left off
-
-v05.08r pushed. **The next unit of work is S0 on Fable 5.1 xhigh** — the segment-layer design gate — with the brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.5. Nothing is half-done. K1 (the study-pool fix, Fable 5.1 High) can run before or after S0.
-
-### Key decisions and findings
-
-- **34 mechanism lessons is the right size for the mechanism layer; the market-structure layer was missing entirely** and cannot be hand-authored at 154+ companies — it is generated from the dossiers (every one carries `strategyRead` and `financials`; 126 carry `policyExposure`), with a human-authored judgment layer on top.
-- **Phase 4 is 26 sessions, not 20**: the four unlocks the skeleton never specified, plus `reading-the-numbers` (row 25) and the G6 lesson (row 26). `reading-the-graph` is authored inside S1.
-- **Phases 5 and 6 move before S2** — landscape modules cite the reports for admin extras, so F10/F11 staleness must not propagate.
-- **~73 sessions from here** (C6 excluded): ~50 Opus 5 xhigh, ~12 Fable 5.1 High, 4 Fable 5.1 xhigh.
-- **Checker behaviour on plan-only commits:** `check-classroom-pipeline.py` reports P1 findings on edited plan files (expected noise per classroom-app.md); no P3. Content checker and report checker identical before and after.
-
-### Active context
-
-- **Branch:** `claude/phase-3-curriculum-review-8pj5lw` · **repo version:** v05.08r · **Profiler page:** v01.83w · **Classroom page:** v01.07w · **Classroom GAS:** v01.16g (all unchanged — documentation only)
-- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges (built 2026-09-07) / 9 named projects / 8 guidance modules / 4 reports (0 superseded); registry categories 12 (11 populated: advisor 2, investor 5, utility 6, …)
-- **Classroom live:** 10 lessons · 3 tracks (`bess-foundations`, `aidc-grid-to-chip`, `aidc-campus`) · 134 gate cases · `check-classroom-content.py` 0/0
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG: 108 sections, 10 dated 2026-09-07.** Same EST day → 109 − 11 = 98 → no rotation. **A later EST day → 109 non-exempt → ROTATION FIRES**; oldest whole date group is the **thirteen** `2026-09-01` sections (`v04.01r`–`v04.13r`). `git fetch --unshallow` MUST run before any SHA lookup; budget ~10 extra minutes.
-- **Checker state:** reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — all left loud, `report-pins-verified.json` untouched) / 31 quiet. Content 10/3/134 0/0. Pipeline: "nothing changed" on a clean tree; P1 noise on plan-file commits. Graph digest `bf085b3f790f785a331a85b134513b23bbf25f3703ae9ea9ebd3b3a7dc27aa08`.
-- **Plan ledger (`INTEGRATED-REMEDIATION-PLAN.md` §6):** 0 · 1 · 2a · 2b · **3 Done (v05.07r)** · **S0 next** · K1 · 5 · S1 · 6 · S3 (0/6–7) · G6 (research-based) · C3 · S2 (0/~19) · 4 (0/26) · K2 · C5 · C6 deferred. Run order and critical path: §7.3–7.4.
-- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; do not act on the `named-project` report's whitespace call until Phase 5.
-
-### Recommendation for next session
-
-- Run **S0 on Fable 5.1 xhigh** by pasting `INTEGRATED-REMEDIATION-PLAN.md` §7.5 as the opening prompt: it writes `profiler-segments.json` (nineteen segments, memberships verified against each dossier's `ecosystemRole`), curriculum plan §10 and rows 25–26, the content-contract amendment, the registry `segments[]` schema and Profiler Command step, the coverage plan's Phase E ledger for the seventeen approved dossiers, and the corrected G6 row — design only, no code, no lesson, no dossier.
-
-**To continue:** type `design the segment layer`
 
 Developed by: LightAISolutions

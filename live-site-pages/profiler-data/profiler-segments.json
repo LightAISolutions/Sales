@@ -896,7 +896,7 @@
     "Reference architecture and the qualified power and cooling vendor set",
     "Cooling requirement (direct-to-chip, facility-water temperature)"
    ],
-   "notes": "Below the floor at S0 (2026-09-07): one incumbent, no challenger. AMD, the rack and server OEMs (Dell, HPE, Supermicro) and the ASIC programmes are not covered; Flex is the only system builder on record. INTEGRATED-REMEDIATION-PLAN.md §7.2 counted this segment above the floor — the dossiers do not support that count. Recorded for the developer's taxonomy review; no coverage row scheduled.",
+   "notes": "Below the floor at S0 (2026-09-07): one incumbent, no challenger. AMD, the rack and server OEMs (Dell, HPE, Supermicro) and the ASIC programmes are not covered; Flex is the only system builder on record. INTEGRATED-REMEDIATION-PLAN.md §7.2 counted this segment above the floor — the dossiers do not support that count. Recorded for the developer's taxonomy review. Developer's taxonomy review, 2026-09-07 PM — Option B chosen: fill the segment rather than fold it or leave it thin. AMD (the challenger to NVIDIA) and Supermicro (the rack/server OEM) are added to the coverage plan as Phase E group E7 (PROFILER-COVERAGE-PLAN.md §8/§10, both public → Opus 5 xhigh); the segment reaches the floor when both dossiers land. Folding was rejected because both current members already sit in power-conversion-and-rack-power-silicon, so a fold would only have deleted the load's own buying criteria.",
    "members": [
     {
      "slug": "nvidia",
