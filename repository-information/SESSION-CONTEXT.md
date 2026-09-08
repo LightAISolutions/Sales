@@ -6,12 +6,83 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-08 06:43:34 PM EST
+**Repo version:** v05.19r — **two push commits** on `claude/s1-reading-graph-lesson-t0hhe4` (v05.18r, then a rebase onto the merged main, then v05.19r)
+**Branch:** `claude/s1-reading-graph-lesson-t0hhe4`
+**Model:** Opus 5 xhigh — **S1's lesson half (CLOSED, S1 is done) followed by S3's action-plan split (planning only, no dossier written).**
+
+### What was done
+
+**Two pieces of work in one session, in this order.**
+
+**1 · S1's lesson half — v05.18r.** `clLessonReadingTheGraph_()` authored by hand inside the `Classroom.gs` content fence and inserted at **position 1** of `value-chain-makers`, which **closes S1**. A public `module` in the lane `The Value Chain` with the nine section ids §10.5 fixed (`what-an-edge-is` · `seven-types-two-directions` · `reading-the-chips` · `one-chain-three-typings` · `the-explorer` · `segments-and-roles` · `where-it-fails` · `drill` 8 cards · `check-yourself` 5 items), a ten-entry `glossary[]` for the graph vocabulary the concepts registry lacks, four tiles, `reviewBy` 2027-03-08, and a six-input all-public stamp folding to `tracks` (`graph:profiler-graph`@2026-09-08 · `concepts:profiler-concepts`@2026-09-07 · `profile:fluidstack`/`hut-8`/`terawulf`@2026-09-06 · `profile:google`@2026-09-07). Classroom GAS **v01.18g → v01.19g**; page unchanged at v01.08w. Content checker **30 / 6 / 134 at 0 / 0**; curriculum `--strict` clean with **The Value Chain at 20 lessons, 20/20 analyst-visible**; pipeline P1 + P5 only, **no P3**; `--selftest` 13 / 0.
+
+**2 · S3's action plan, split by model — v05.19r.** `PROFILER-COVERAGE-PLAN.md` §10 rewritten into **§10.1–10.4**: the nineteen Phase E companies run as **ten single-model sessions**, not seven or eight mixed ones. Six public on **Opus 5 xhigh** (11 companies), four private on **Fable 5.1 High** (8). §8's twelve mixed-model rows re-tagged with the model-half id; `INTEGRATED-REMEDIATION-PLAN.md` §6 S3 row, §7.3 S3 row, §7.4's sequencing bullet and the "about 75 sessions" line updated. No dossier, no registry write, no code — planning only, and the checkers are untouched by it.
+
+### Where we left off
+
+v05.19r pushed. **S1 is closed; S3 is planned and at 0 of 10.** The paste-in prompt for **S3 P1 (group E7 — AMD · Supermicro, Opus 5 xhigh)** is at the bottom of this entry, ready to paste into a fresh session. Nothing is half-done: the working tree was clean at both pushes and every checker ran green before each commit.
+
+### Key decisions and findings
+
+- **The floor arithmetic reorders S3, and it is the session's main finding.** §10 said "E1–E3 and E7 first" without saying which *half*. Read off `profiler-segments.json`: `assurance` holds 4 members, 2 incumbents (DNV, Sargent & Lundy) and **0 challengers**, and `insurance-and-risk-transfer` holds **0 members**. Both are blocked specifically on a **challenger**, and in both groups the challenger is the **private** company. So the Fable session **`E2b+E3b` (kWh Analytics · CSA Group) gates two landscapes that no number of Opus sessions can unblock** — and P4 (UL Solutions · Intertek) adds two more incumbents to a segment that already has two, leaving the floor exactly where it was. Recorded as §10.3; if only one S3 session runs before S2 starts, it is that one
+- **The group is not the session — the model half is.** Six of the seven Phase E groups split across models, so each group's public half is `Ea` and its private half `Eb` (extending the naming S0 started with E1a/E1b). Twelve half-sessions, four of them one company, so the two pairs of one-company Fable halves run merged as **`E2b+E3b`** and **`E4b+E6b`**, each with a real shared frame. Ten sessions; either merge may be split back if a budget is tight, and nothing downstream depends on it
+- **P1 is `E7`, not `E1a`** — E7 (AMD · Supermicro) is the only S3 session that clears a segment floor **by itself**, with no cross-lane dependency. **Sessions 1–5 of §10.4 are the critical path**: after them all four blocked landscapes (compute, insurance, assurance, software) are writable and S2 may start on any of the nineteen; 6–10 deepen segments already at the floor
+- **`reading-the-graph` says plainly that the surfaces it describes are contributor+.** One `network` capability gates both the `#network` explorer and the per-dossier Relationships tab, and the lesson itself is analyst-visible — so `the-explorer` names the gate and points analysts at the segment lessons' `who-is-connected` tables, generated from the same graph file, as their route to the same edges. Flagged to the developer as the one paragraph to review if that reads wrong
+- **A fourth `profile:` ref was added deliberately** (§10.5 allows three or four): `profile:google`, because the lesson takes the **partner** typings of all three chain members and the **portfolio** typing of Cipher Digital from Google's own dossier — the material that makes the partner/investor disagreement legible. No fifth dossier opened
+- **P5 fired once and was accepted, not worked around** — the `value-chain-makers` insert is a reorder, which the pipeline checker forbids for an *unattended* run because it moves every account's study-next pointer. Developer session, track three commits old, no account holds progress. **No P3**, so `gateDigest` was left untouched. A consequence worth remembering: **an unattended run can never make an insert like this**, so the lane's teaching order is effectively frozen once accounts start ticking sections
+- **Two renderer facts learned the hard way.** `clFmt` supports only `**bold**`, `*italic*` and `{{term}}` — backticks render literally, so a first draft's field names had to be bolded instead. And the graph vocabulary is almost absent from `profiler-concepts.json` (`relationship graph`, `edge`, `curated`, `derived`, `cross-mention`, `inverse`, `segment`, `incumbent`, `challenger`, `adjacent` all miss), which is why the lesson carries its own glossary
+- **The CHANGELOG prompt-blockquote format has drifted** — `v05.14r`–`v05.17r` open with a bare `>` line where `.claude/rules/changelogs.md` specifies `> **Prompt:** "…"`. Both v05.18r and v05.19r follow the rule. Flagged to the developer; not backfilled
+
+### Active context
+
+- **Branch:** `claude/s1-reading-graph-lesson-t0hhe4` · **repo version:** v05.19r · **Classroom GAS:** v01.19g · **Classroom page:** v01.08w · **Profiler page:** v01.83w (untouched this session)
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges, 3,690 evidence items / 9 named projects / 8 guidance modules / 8 reports (4 current) / 19 segments · **Classroom:** **30 lessons** (11 mechanism + 19 segment), 6 tracks, 4 lanes; The Value Chain at 20 lessons, 20/20 analyst-visible
+- **Segments below the floor (3):** `compute-and-the-rack` 2 · 1 · 0 → cleared by S3 P1 · `assurance` 4 · 2 · 0 → cleared by S3 V1 · `insurance-and-risk-transfer` 0 · 0 · 0 → cleared by S3 P2 **and** V1. `software-and-optimization` meets the floor on the letter but its landscape is held for E1 (P3 + V2)
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** **106 sections, 8 dated 2026-09-08** (`v05.12r`–`v05.19r`) → 98 non-exempt, no rotation on that EST day. **A later EST day → 106 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 85 in one group; run `git fetch --unshallow` before any SHA lookup and budget ~10 extra minutes
+- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · 5 · 6 · **S1 Done (both halves)**; **S3 planned, 0 of 10**; then G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred
+- **Standing, unassigned:** unchanged from v05.17r — the two `verify-profiler-roles.py` progress-isolation failures; `archive/nvidia.profile.v2.json` missing; one archive gap per dossier touched; README archive-tree drift ~61 entries; `huawei`'s FCC `policyExposure` over 900 chars; `byd` segment `basis` line (developer chose to leave it); overdue desk rows `iren` / `jinko` 08-27. New this session: **the Classroom renderer still has no dossier-chip syntax** (K2/C3); **an unattended pipeline run can never reorder a track's `lessons[]`**; **the CHANGELOG prompt-blockquote format drift**
+- **Egress note carried forward (matters for S3 P1):** **SEC EDGAR was blocked as recently as v05.16r**, and both AMD and Supermicro are SEC filers — unlike C12's subjects. Probe the route before committing the research plan, three samples on any failing host
+- **Routine note:** unchanged — none created, updated or deleted
+
+### Recommendation for next session
+
+- Run **S3 P1 — group E7, AMD · Supermicro, on Opus 5 xhigh** (paste-in prompt below). It is the natural next step because it is the only S3 session that clears a segment floor by itself: `compute-and-the-rack` goes from 2 members / 1 incumbent / 0 challengers to four members with both roles filled, which makes its landscape module writable with no dependency on any other session in either lane.
+
+**To continue:** paste the brief below into a new Opus 5 xhigh session.
+
+### Paste-in brief for the next session — S3 P1 · group E7 (AMD · Supermicro, Opus 5 xhigh)
+
+> Run S3's first public-coverage session — **P1 · group E7** of `repository-information/PROFILER-COVERAGE-PLAN.md` §10.1 — on Opus 5 xhigh as a fresh session: **AMD** and **Supermicro (Super Micro Computer)**. This is the one S3 session that clears a segment floor by itself: `compute-and-the-rack` stands at 2 members / 1 incumbent (NVIDIA) / 0 challengers, and these two take it to four members with both roles filled, so its landscape module becomes writable the moment this lands.
+>
+> READ FIRST: `repository-information/SESSION-CONTEXT.md` (Latest Session); `PROFILER-COVERAGE-PLAN.md` §2 (the model rule), §7 (what every session does — the six checkers, the reachability probe, the calendar row, the §8 flip, the segment assignment) and §10.1–10.4 (the S3 run order and the floor arithmetic), plus the two `E7` rows in its §8; `.claude/rules/profiler-app.md` (Profiler Command, Profiler Prep Command, Scheduled Refreshes, and step 5's segment assignment); `repository-information/PROFILER-SCHEMA.md` (profile schema v7, study schema v2, the Segments registry and its `basis` rule, the relationship-graph edge shape); `repository-information/PROFILER-STYLES.md` (active style: `intel-briefing`).
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, `profileVersion` 1, categories per the §8 row: `supplier` proposed for both) and study guide (schema v2) — then the registry sync, the graph rebuild, the study validator, the relationships / cross-refs / reports checkers, a `profiler-refresh-calendar.json` row each (both are public filers, so a researched `nextReport` / `confirmed` / `source` / `watch[]`, not the quarterly cadence), README tree entries for both `<slug>.profile.json` and `<slug>.study.json`, and flip both `E7` rows in §8. One push commit.
+>
+> Then assign each company's segments and roles in `live-site-pages/profiler-data/profiler-segments.json` with a `basis` line per `PROFILER-SCHEMA.md` → Segments registry (the §8 `Segment · role` cell is a hypothesis — write what the dossier supports), and rewrite the §8 `E7` rows' `Why` and `Checked` cells.
+>
+> THE §8 ROWS ARE HYPOTHESES, NOT A BRIEF. Treat every claim in their `Why` cells as unverified and rewrite both cells with what you actually found. Specifically: AMD is expected `compute-and-the-rack` · **challenger** and `power-conversion-and-rack-power-silicon` · adjacent *if the record supports it*; Supermicro is expected `compute-and-the-rack` · incumbent **or** challenger — the session decides on the rank it finds — and `cooling` · adjacent *if the record supports it* (direct-liquid-cooled racks). Do not force either optional assignment. **The floor needs at least one challenger**, so if the record makes both companies incumbents, say so and record that the segment is still short a challenger rather than typing one to fit. Dell and HPE are the named alternates if Supermicro's record disappoints.
+>
+> BEFORE PLANNING STAGE 2 RESEARCH: run `python3 scripts/check-source-reachability.py`, then probe the hosts this session actually needs (both file with the SEC, so `sec.gov` and `data.sec.gov` matter here where they did not for C12 — and both were blocked as recently as v05.16r; find the route that works before committing the research plan, and say so plainly if none does). Sample any failing host **at least three times** before recording it as blocked — a one-shot probe cannot tell intermittent from blocked, and a false "blocked" silently narrows the plan and is never contradicted.
+>
+> VERSIONING: repo `v05.19r` → `v05.20r`; README `Last updated:`. **No page or GAS bump** — this is a data-only change; Profiler's page is an indirect affect at `v01.83w` and does not move, and no `.gs` is touched. CHANGELOG: the file holds **106 sections, 8 dated 2026-09-08** which are exempt on that EST day → 98 non-exempt, no rotation. **On any later EST day the count is 106 non-exempt and rotation fires** on the oldest whole date group — the **twenty-one sections dated 2026-09-02** (`v04.14r`–`v04.34r`) → 85; run `git fetch --unshallow` before any SHA lookup and budget ~10 extra minutes. Check the counter yourself with `grep -c '^## \[v' repository-information/CHANGELOG.md` and `TZ=America/New_York date '+%Y-%m-%d'` rather than trusting this line.
+>
+> VERIFY BEFORE COMMIT: `python3 scripts/sync-profiler-registry.py --check` clean (it enforces the roster / refresh-calendar bijection, so a missing calendar row fails here); `python3 scripts/build-profiler-graph.py` run so the graph is not stale; `python3 scripts/check-profiler-study.py`, `check-profiler-relationships.py`, `check-profiler-crossrefs.py` and `check-profiler-reports.py` (the last is warning-only, but a warning on a **current** report is actionable); `python3 scripts/check-classroom-curriculum.py --strict` to see `compute-and-the-rack` move to `floor yes`; the dossier and guide render in Playwright with zero page errors. Do **not** run `scripts/build-classroom-segments.py` — regenerating the segment lesson is a developer/S1 session's job, and this session only feeds it.
+>
+> Normal Pre-Commit and Pre-Push checklists; one push commit on a `claude/*` branch (check `git ls-remote` first). Affected page: none directly — Profiler is a data-only indirect affect. End with "remember session".
+
+
+## Previous Sessions
+
+### Session — 2026-09-08 06:32:46 AM EST (v05.17r)
+
 **Date:** 2026-09-08 06:32:46 AM EST
 **Repo version:** v05.17r — one push commit on `claude/fable-5-1-high-code-ht15vb` (session context folded into the same commit)
 **Branch:** `claude/fable-5-1-high-code-ht15vb`
 **Model:** Fable 5.1 High — **S1, the code half. CODE HALF IS CLOSED; the lesson half (`reading-the-graph`, Opus 5 xhigh) is OPEN and has a paste-in brief below.**
 
-### What was done
+#### What was done
 
 - **`scripts/build-classroom-segments.py`** written and run: nineteen `segment-*` lessons generated into `Classroom.gs` inside the content fence at `--today 2026-09-08` (ten fixed sections, `group` `The Value Chain`, all-public stamps read off the fetched files — member dossiers' `lastUpdated`, graph `built` 2026-09-08, concepts commit date 2026-09-07 on `origin/main`). Deterministic: a forced `--all` rerun rewrote nothing; `--check` at 0 due
 - **Three Value Chain tracks** created and registered at the end of `clTracks_()`: `value-chain-makers` (3), `value-chain-builders` (7, prereq makers), `value-chain-buyers-and-backers` (9, prereq makers)
@@ -20,11 +91,11 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **`scripts/sync-profiler-registry.py`**: `segments[]` mirror written into `profiler-companies.json` (154 / 154; `--check` clean)
 - Classroom GAS **v01.17g → v01.18g** (page unchanged at v01.08w); docs updated (plan §6 / §7.3, curriculum §10, `PROFILER-SCHEMA.md`, `CLASSROOM-SCHEMA.md`, README tree)
 
-### Where we left off
+#### Where we left off
 
 v05.17r pushed. Content checker 0 / 0; pipeline checker P1 (developer files) + P10 (nineteen modules — the documented developer-run cap breach) only, **no P3, no P5**; `--selftest` 13 / 0; `node --check`, inner scripts, sync `--check`, health `--strict`, generator `--check` all clean. **Next: the Opus 5 xhigh session authors `reading-the-graph` and inserts it at position 1 of `value-chain-makers`** (brief below). Then the §6 ledger continues: S3 (0/19), G6 (ready), C3, S2 (0/19), 4 (0/26), K2, C5, C6 deferred.
 
-### Key decisions and findings
+#### Key decisions and findings
 
 - **Tracks appended at the end of `clTracks_()`, not "after `market-access`"** — that track does not exist yet. Recorded in the plan; the session that creates `market-access` may insert it before the three (developer session, not P5-bound; nobody holds progress on them yet)
 - **`the-players` carries a `Dossier` slug column** instead of the planned "dossier chip" — the Classroom renderer (`clFmt`) has no chip or link syntax, only bold / italic / `{{term}}`. The slug is what the content checker's assertion and K2's roster deck key on; a clickable chip is a renderer feature for K2 or C3
@@ -34,7 +105,7 @@ v05.17r pushed. Content checker 0 / 0; pipeline checker P1 (developer files) + P
 - **Session context folded into the push commit** rather than a separate `Remember session context` commit — push-once + single-commit-per-interaction
 - **Checker facts worth keeping:** the 26 stale pins on the hand-authored lessons are real corpus drift (concepts 08-31/09-03 → 09-07, `study:vertiv` 08-21 → 09-04, `bridge-power`'s seven dossiers and four projects) — the C2 pipeline's candidate list, untouched here; `check-profiler-reports.py` still 0 / 0 with 2 aged pins quiet
 
-### Active context
+#### Active context
 
 - **Branch:** `claude/fable-5-1-high-code-ht15vb` · **repo version:** v05.17r · **Classroom GAS:** v01.18g · **Classroom page:** v01.08w · **Profiler page:** v01.83w (data-only indirect affect — `profiler-companies.json` gained `segments[]`, no bump)
 - **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges, 3,690 evidence items / 9 named projects / 8 guidance modules / 8 reports (4 current) / 19 segments · **Classroom:** 29 lessons (10 mechanism + 19 segment), 6 tracks, 4 lanes
@@ -44,13 +115,13 @@ v05.17r pushed. Content checker 0 / 0; pipeline checker P1 (developer files) + P
 - **Standing, unassigned:** unchanged from v05.16r (the two `verify-profiler-roles.py` progress-isolation failures; `archive/nvidia.profile.v2.json` missing; one archive gap per dossier touched last session; README archive-tree drift ~61 entries; `huawei`'s FCC `policyExposure` over 900 chars; `byd` segment `basis` line; overdue desk rows `iren` / `jinko` 08-27). New: **the Classroom renderer has no dossier-chip syntax** (K2/C3); **`market-access` will land after the Value Chain tracks in registry order unless inserted**
 - **Routine note:** unchanged — none created, updated or deleted
 
-### Recommendation for next session
+#### Recommendation for next session
 
 - Run the **S1 lesson half on Opus 5 xhigh**: author `reading-the-graph`, the Value Chain lane's opener, and insert it at position 1 of `value-chain-makers`. It is the natural next step because the nineteen segment lessons already assume it — every `who-is-connected` table and every player table reads on the vocabulary this lesson teaches — and nothing upstream moves under it (all inputs public, checkers at 0 / 0).
 
 **To continue:** paste the brief below into a new Opus 5 xhigh session.
 
-### Paste-in brief for the Opus 5 xhigh session — `reading-the-graph` (S1 lesson half)
+#### Paste-in brief for the Opus 5 xhigh session — `reading-the-graph` (S1 lesson half)
 
 > Run the S1 lesson half: author `reading-the-graph`, the opener of the Value Chain lane, and insert it at position 1 of the `value-chain-makers` track. The code half landed at v05.17r (Fable 5.1 High): the nineteen `segment-*` lessons and the three Value Chain tracks are in `Classroom.gs`, the content checker now asserts segment lessons and admits the lane `The Value Chain`, and `scripts/check-classroom-curriculum.py` reports the curriculum.
 >
@@ -67,58 +138,3 @@ v05.17r pushed. Content checker 0 / 0; pipeline checker P1 (developer files) + P
 > VERIFY BEFORE COMMIT: `python3 scripts/check-classroom-content.py` (0 errors, no new warnings — 29 → 30 lessons); `python3 scripts/check-classroom-pipeline.py --base origin/main` (expect P1 on developer files and P5 on the `value-chain-makers` insert — **never P3**; refresh `gateDigest` only if P3 reports); `--selftest` (13 / 0); `node --check` on a `.js` copy of `Classroom.gs`; `node scripts/check-gas-inner-scripts.js`; `python3 scripts/check-classroom-curriculum.py --strict` (The Value Chain lane should read 20 lessons, 20/20 analyst-visible); the analyst-view test is the content checker's gate truth table plus a Playwright read of the Classroom index as an analyst if credentials are at hand (optional).
 >
 > Normal Pre-Commit and Pre-Push checklists; one push commit on a `claude/*` branch (check `git ls-remote` first). Affected page: Classroom (`v01.19g`, page unchanged). End with "remember session".
-
-
-## Previous Sessions
-
-### Session — 2026-09-08 06:08:41 AM EST (v05.16r)
-
-**Date:** 2026-09-08 06:08:41 AM EST
-**Repo version:** v05.16r — three push commits on `claude/phase-6-session-3-preflight-zpgtsw` (v05.15r, session-context, v05.16r)
-**Branch:** `claude/phase-6-session-3-preflight-zpgtsw`
-**Model:** Opus 5 xhigh — **Phase 6 session 3 (the AIDC power-conversion edition) followed by the BYD specified-foreign-entity write-up. PHASE 6 IS CLOSED and the BYD item is CLOSED.**
-
-### What was done
-
-**Two pieces of work in one session, in this order.**
-
-**1 · Phase 6 session 3 — v05.15r.** The preflight was decided empirically before any refresh work started, exactly as session 2 did: all three H1 2026 interims were confirmed published and retrievable first (`sinexcel` 2026-08-11, `zhonhen` 2026-08-27, `megmeet` 2026-08-28), with `cninfo.com.cn` answering and `szse.cn` failing TLS, and only then were ~45 minutes committed. Six research subagents ran (Stage 1 first-party / Stage 2 third-party per company), each scoped to the missing period rather than a full re-sweep because all three dossiers had been refreshed 1–4 days earlier. `megmeet` v6 → **v7**, `zhonhen` v7 → **v8**, `sinexcel` v7 → **v8**; all archived, registry synced, graph rebuilt (3,681 → **3,690** evidence items), calendar rows advanced. `aidc-power-conversion--competitive--2026-09-08` published over the **15**-name 800 VDC roster cut **by layer**, 31 citations, seven sections, eight judgments, three overlays re-authored on `nvidia-800vdc-2026-08`; 8 superseded AIDC pins removed. Plan §6 Phase 6 → **Done**.
-
-**2 · The BYD SFE write-up — v05.16r.** `byd` v8 → **v9** (v8 archived). The `policyExposure[]` entry for OBBBA §45X/§48E moved from "UNRESOLVED, AND RECORDED AS SUCH" to resolved on two independent statutory prongs, closed against **IRS Notice 2026-15** read in full (95pp from irs.gov) rather than inferred from counsel summaries. Both 2026-09-08 editions' `byd` pins re-verified at v9 **in the same commit** — the step that keeps the checker at 0 / 0 instead of regressing to 0 / 2.
-
-### Where we left off
-
-v05.16r pushed and merged; nothing half-done, nothing pending. **`check-profiler-reports.py` is at 0 errors / 0 warnings with 2 aged pins verified and quiet.** Next in the §6 ledger: **S1**, then S3 (0/19), G6 (ready), C3, S2 (0/19), 4 (0/26), K2, C5, C6 deferred.
-
-### Key decisions and findings
-
-- **The edition's central finding is a sourced negative: architectural validation is not commercial inclusion.** Zhonhen's 187-page interim contains no order, no backlog, no named customer, no capacity commitment and zero occurrences of NVIDIA, SST or transformer-rectifier — despite NVIDIA's August 2026 paper naming its Panama Architecture. Sinexcel's management states **four times** that AIDC products are 「样品处于开发阶段，尚未实现正式销售」 and "800V" appears **zero times** in its 212-page interim. Megmeet's interim claims only membership — 「英伟达指定的数据中心电源推荐提供商之一」 — and names no competitor in 238 pages.
-- **The prior edition's "SST roster still forming" is retired** by `sungrow` v9's EnerNeo, described in Sungrow's own interim as launched and supplying.
-- **The winners already owned the adjacent business** — Delta the shelf, Sungrow the power electronics, Infineon the silicon, the grid tier the transformers. The vendors for whom 800 VDC *is* the thesis disclose the least.
-- **BYD IS a specified foreign entity, on two independent prongs**: §7701(a)(51)(B)(iv) via the NDAA FY2024 §154(b) naming, and (ii) via the 8 June 2026 §1260H listing. **The §154(b) prong carries the first taxable year** — Notice 2026-15's footnote 21 puts the determination for the first taxable year beginning after 4 July 2025 at the **first day** of that year (1 January 2026 for a calendar-year filer, five months before the §1260H addition), so the judgment prose was reordered to lead with §154(b). Exposure is a **ratio test, not a ban**: 55% non-prohibited content for an EST beginning construction in calendar 2026 rising toward 75% by 2030, with a **pre-16-June-2025 binding-contract carve-out** excluding those costs from the MACR entirely. Two traps recorded: the notice publishes **no list** of entities, and its "as in effect on January 1, 2025" clauses attach to the **beginning-of-construction** rules, not to the SFE lists.
-- **`zhonhen` does NOT run late — the calendar was wrong.** H1 filed four days inside the 31 August deadline with a consistent 2024–2026 record; the old inference rested on the dossier not yet holding the filing.
-- **`sinexcel`'s OVERDUE row was a desk false positive** — the report published on its scheduled 2026-08-11 date; the 08-12 one-shot fired SUCCEEDED and landed no commit. Only cninfo's date is authoritative.
-- **The Megmeet #2-supplier claim eroded rather than confirmed.** Membership and rank are different claims; restated as a contested narrative with no supporting source located.
-- **A subagent's "contradiction" was checked rather than accepted** — Zhonhen's Stage 2 agent reported NVIDIA's Panama name-check as "not established", but that was a WAF block on `bjx.com.cn` / `xueqiu.com`. A bounded null is not a refutation; the claim stands.
-- **Three contaminated claim clusters excluded and recorded** so a future session rejects rather than re-imports them (Sinexcel's untraceable Vertiv-OEM / 36 kW / +US$500 cluster; a stale FY2026 forecast from a 2024 note on the FY2023 annual; a search-summarizer confabulation about Megmeet's H1 meeting expectations).
-- **The FX discipline held for a third session** — no H1 2026 figure entered a normalized table; the `sungrow` v9 precedent now covers five companies across three sessions.
-- **Developer decisions:** leave the `byd` segment `basis` line untouched (the edition's ranking-basis table carries the nuance); correct §7.8's "six added members" to eight **with the provenance kept** (struck through, not overwritten).
-
-### Active context
-
-- **Branch:** `claude/phase-6-session-3-preflight-zpgtsw` · **repo version:** v05.16r · **Profiler page:** v01.83w (indirect affect, data-only, no bump) · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
-- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / **1,260 edges, 3,690 evidence items** / 9 named projects / 8 guidance modules / **8 reports (4 current, 4 superseded)** / 19 segments
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG:** **103 sections, 5 dated 2026-09-08** (`v05.12r`–`v05.16r`). Same EST day → 103 − 5 = 98 → no rotation. **A later EST day → 103 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 82; budget ~10 extra minutes and run `git fetch --unshallow` before any SHA lookup.
-- **Checker state:** reports **0 errors / 0 warnings, 2 aged pins verified and quiet** (both `byd` at v9 on the two 2026-09-08 editions); all six profiler checkers exit 0; content 10 / 3 / 134, 0 / 0; pipeline P1 on out-of-write-set paths only, no P3.
-- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · 5 · **6 Done (v05.13r, v05.14r, v05.15r)**; next **S1** · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
-- **Standing, unassigned:** the two `verify-profiler-roles.py` progress-isolation failures (pre-existing, confirmed against a clean tree); `archive/nvidia.profile.v2.json` missing and unreconstructable; **one archive gap per dossier touched this session** (`megmeet` v3, `zhonhen` v4, `sinexcel` v4, `byd` v4 — pre-existing, not created here); the README archive-tree drift, now ~61 entries behind after this session's four new archive files; `huawei`'s FCC `policyExposure` entry over the 900-char convention; the `byd` segment `basis` line (developer chose to leave it); the overdue desk rows that remain (`iren` / `jinko` 08-27). **The BYD SFE item is CLOSED — do not re-open it.** The one live consequence is that `s154-listed-bess-suppliers--risk--2026-09-08` still states the status as unresolved; reports are immutable, the drift is recorded in its coverage pin, and the corrected finding reaches readers with that report's next edition.
-- **Egress notes:** `cninfo.com.cn` REACHABLE and the route that matters for SZSE issuers; **`szse.cn` root fails TLS** but **`disc.static.szse.cn` serves disclosure PDFs directly (HTTP 200)**; `irs.gov` reachable (Notice 2026-15 fetched, 95pp / 528 KB) and `taxlawcenter.org` now answers where it 403'd in session 2; `hkexnews.hk` reachable; newly blocked: `bjx.com.cn` and `xueqiu.com` article pages (WAF), `21jingji.com` (503), `simplywall.st` (403). OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org remain blocked.
-- **Routine note:** unchanged — none created, updated or deleted.
-
-### Recommendation for next session
-
-- Run **S1** — the next open row in the §6 ledger now that Phase 6 is closed and no report work is outstanding. It is the natural next step because S2's nineteen landscape modules depend on it, and the reports those landscapes will cite are all freshly regenerated and at 0 errors / 0 warnings, so nothing upstream will move under them.
-
-**To continue:** type `run S1`
-

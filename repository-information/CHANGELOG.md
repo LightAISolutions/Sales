@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.19r] — 2026-09-08 06:43:34 PM EST
+
+> **Prompt:** "Break down S3's action plan, split between public coverage (Opus 5 xhigh) and private coverage (Fable 5.1 High) into actionable sessions. Then, give me a prompt to paste into a new Opus 5 xhigh session to start S3's public coverage, then remember session.
+>
+> [Attached: a screenshot of the §7.3 S3 row — "S3 · Coverage fill, 17 dossiers in 6 groups · Opus 5 xhigh (public) · Fable 5.1 High (private) · 6–7 · S0; interleaves with S2".]"
+
+### Changed
+
+- **S3's action plan split by model into ten sessions** — `PROFILER-COVERAGE-PLAN.md` §10 rewritten as **§10.1–10.4**. Six of the seven Phase E groups split across models, so **the group is not the session — the model half is**: each group's public half is `Ea` and its private half `Eb`, extending the naming S0 started with `E1a`/`E1b`. That gives twelve half-sessions, four of them a single company, so the two pairs of one-company Fable halves run merged as **`E2b+E3b`** (kWh Analytics · CSA Group — the private counterparty in a diligence stack) and **`E4b+E6b`** (Mitra Chem · Cornex — private cathode and cell makers), each with a real shared frame. **Ten sessions: six public on Opus 5 xhigh (11 companies), four private on Fable 5.1 High (8).** Either merge may be run as its two halves; nothing downstream depends on it
+  - **§10.1 — public lane, Opus 5 xhigh:** P1 `E7` AMD · Supermicro → P2 `E2a` Marsh (Marsh McLennan) · Aon → P3 `E1a` Stem → P4 `E3a` UL Solutions · Intertek → P5 `E4a` Albemarle · Novonix → P6 `E6a` CALB · Great Power
+  - **§10.2 — private lane, Fable 5.1 High:** V1 `E2b+E3b` kWh Analytics · CSA Group → V2 `E1b` Habitat Energy · Gridmatic → V3 `E5` Grid United · Pattern Energy → V4 `E4b+E6b` Mitra Chem · Cornex
+  - **§10.3 — the floor arithmetic**, read off `profiler-segments.json` at v05.18r: `compute-and-the-rack` (2 · 1 · 0) is cleared by **P1 alone**; `insurance-and-risk-transfer` (0 members) needs **P2 and V1**; `assurance` (4 · 2 · 0) is cleared by **V1 alone** and **not** by P4; `software-and-optimization` needs P3 and V2
+  - **§10.4 — the recommended sequence** interleaving both lanes, with the milestone stated: **after session 5 all four blocked landscapes are writable and S2 may start on any of the nineteen segments**; sessions 6–10 deepen segments already at the floor and interleave freely with S2 and the Phase 4 lesson sessions
+- **`PROFILER-COVERAGE-PLAN.md` §8** — the twelve mixed-model Phase E rows re-tagged with their model-half session id (`E2`→`E2a`/`E2b`, `E3`→`E3a`/`E3b`, `E4`→`E4a`/`E4b`, `E6`→`E6a`/`E6b`); `E1a`, `E1b`, `E5` and `E7` were already single-model. The ledger's Phase E intro rewritten to say the `Session` column now carries the model half and to point at §10.1–10.4 for the order
+- **`INTEGRATED-REMEDIATION-PLAN.md`** — §6's S3 row rewritten from "0 of 7 sessions" to **0 of 10** with both lanes named in run order and the floor arithmetic summarised; §7.3's S3 row updated (session count `10 (6 public · 4 private)`, the ten sessions listed, the critical path in its "done when"); §7.4's sequencing bullet 4 rewritten from "batches 1–3 … batches 4–6" to the critical-path form; the programme total moved from "about 73 sessions" to **about 75** with the reason stated
+- **`repository-information/SESSION-CONTEXT.md`** — "Remember Session" run: the outgoing v05.17r entry demoted to `## Previous Sessions` and the 2-session cap applied (the v05.16r entry dropped; its history stays in the CHANGELOG). The new Latest Session covers both of this session's pushes and carries the paste-in brief for S3 P1
+
+### Notes
+
+- **The finding that reorders the plan, and the reason this was worth doing as its own session.** §10 said "E1–E3 and E7 first" without saying which *half*, and the halves do not rank the way the group letters do. `assurance` holds 4 members, 2 incumbents (DNV, Sargent & Lundy) and **zero challengers**; `insurance-and-risk-transfer` holds **zero members**. The floor rule needs one incumbent **and** one challenger, and in both groups the only challenger is the **private** company — CSA Group and kWh Analytics. So the single Fable session `E2b+E3b` gates two landscapes that **no number of Opus sessions can unblock**, while P4 (UL Solutions · Intertek) adds two more incumbents to a segment that already has two and leaves the floor exactly where it was. Recorded as §10.3 with the arithmetic shown per segment, and as the §7.4 sequencing note
+- **P1 is `E7`, not `E1a`.** AMD · Supermicro is the only S3 session that clears a segment floor **by itself** — `compute-and-the-rack` goes from 2 members / 1 incumbent / 0 challengers to four members with both roles filled — with no dependency on the other lane. That is why the public lane opens there rather than at the lowest group number
+- **Ten rather than twelve, and why not seven.** Splitting every mixed group strictly gives twelve sessions, four of them one company — E2b (kWh Analytics), E3b (CSA Group), E4b (Mitra Chem), E6b (Cornex). Merging them in pairs that share a research frame gives ten and keeps every session single-model, which is the property the §2 model rule actually needs. Running them as the old seven mixed-model groups was rejected because a group like E3 would have to run UL Solutions and Intertek (deep public filers) and CSA Group (a private non-profit) under one model, and §2 assigns those opposite ways for a stated reason
+- **Nothing was executed.** No dossier, no study guide, no registry or graph write, no `.gs` and no page — this session's second push is planning and bookkeeping only. `profiler-segments.json`, `profiler-companies.json` and `profiler-graph.json` are byte-identical to v05.18r, so no Profiler or Classroom checker was re-run for it; the floor figures quoted in §10.3 were read out of the registry, not computed into it
+- **Session shape:** the first push (v05.18r) merged to `main` and the auto-merge workflow swept the branch, so this second push commit follows a `git fetch origin main` + `git rebase origin/main` onto `ca17193` — the documented exception to one-commit-per-interaction (a prior push in the same session already merged). `git ls-remote origin claude/s1-reading-graph-lesson-t0hhe4` came back empty before pushing
+- **CHANGELOG rotation checked, not assumed.** `grep -c '^## \[v'` returned **105** before this section and `TZ=America/New_York date` returned **2026-09-08**, the same EST day as the seven existing sections `v05.12r`–`v05.18r` — so with this section the file holds **106 sections of which 8 are exempt → 98 non-exempt → no rotation**; the counter reads `Sections: 106/100`. No SHA lookup was needed, so no `git fetch --unshallow` was run. **The next push on a later EST day rotates** the twenty-one `2026-09-02` sections in one group → 85
 
 ## [v05.18r] — 2026-09-08 06:59:28 AM EST
 
