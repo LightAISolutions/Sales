@@ -1,5 +1,22 @@
 {
  "schemaVersion": 1,
  "note": "Report coverage pins that a human has re-verified by reading after the cited dossier moved past the pin. Reports are immutable once published (PROFILER-SCHEMA.md → Report schema), so an aged pin is never edited; this list records that the drift was checked. scripts/check-profiler-reports.py stays quiet on a pin while the dossier sits at verifiedAt and warns again once it moves past it — the re-warning is intended, not a bug. One entry per (report, slug). verifiedAt is the dossier profileVersion the pin was verified against; pinnedVersion is what the report still carries. Superseded reports are not tracked here (the checker skips their pin drift). Record: PROFILER-COVERAGE-PLAN.md §9.3 (X3b).",
- "verified": []
+ "verified": [
+  {
+   "report": "grid-scale-bess--competitive--2026-09-08",
+   "slug": "byd",
+   "pinnedVersion": 8,
+   "verifiedAt": 9,
+   "when": "2026-09-08",
+   "why": "Short-gap pin (v8 -> v9, 1 version): all six cited byd sources compared and unchanged (label, url and date identical); the v9 revision touched only policyExposure, strategyRead, recentDevelopments and one added source, none of which this edition cites. Every cited figure holds exactly."
+  },
+  {
+   "report": "s154-listed-bess-suppliers--risk--2026-09-08",
+   "slug": "byd",
+   "pinnedVersion": 8,
+   "verifiedAt": 9,
+   "when": "2026-09-08",
+   "why": "Short-gap pin (v8 -> v9, 1 version): all three cited byd sources compared and unchanged. NOTE THE SUBSTANTIVE DRIFT, which the pin exists to make visible: this edition records BYD's specified-foreign-entity status as unresolved, and v9 resolves it against IRS Notice 2026-15 on two prongs. The edition is immutable and its snapshot stands; the corrected finding reaches readers with the next edition of this report."
+  }
+ ]
 }

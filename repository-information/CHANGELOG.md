@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.16r] — 2026-09-08 05:51:52 AM EST
+
+> Run the BYD SFE write-up as a short dedicated session — amend byd v8 → v9 with the two-prong determination and the first-day timing rule, fix the judgment prose, and re-verify both editions' byd pins in the same commit so the checker stays at 0 errors / 0 warnings.
+
+### Fixed
+
+- **BYD's specified-foreign-entity status resolved and written into the corpus** (`byd` v8 → **v9**, v8 archived). The dossier's `policyExposure[]` entry for the OBBBA §45X/§48E regime carried "UNRESOLVED, AND RECORDED AS SUCH" with a `mitigation` reading "Not determinable until the SFE question is closed against Notice 2026-15 itself." It is now closed against that notice, read in full (95pp, fetched from irs.gov): §7701(a)(51)(B) reaches both entities named in **NDAA FY2024 §154(b)** and entities on the **§1260H** list, and BYD is on both — two independent sufficient prongs.
+- **The judgment prose reordered so the load-bearing instrument leads.** `strategyRead` previously framed the June 2026 §1260H listing as the sharper US item. For §45X/§48E purposes it is the §154(b) prong that carries the **first** taxable year: Notice 2026-15's footnote 21 places the determination for the first taxable year beginning after 4 July 2025 at the **first day** of that year — 1 January 2026 for a calendar-year filer, five months before the §1260H addition. From the second year the last-day rule applies and both prongs bite.
+- **The exposure is stated as a ratio test rather than a ban**, with the arithmetic and the grandfather both recorded: 55% non-prohibited content for an energy storage technology beginning construction in calendar 2026 rising toward 75% by 2030, and the §7701(a)(52)(D)(iv) carve-out excluding costs under binding written contracts entered into before 16 June 2025 from the material assistance cost ratio entirely.
+- **Two traps in the notice recorded so a later reader does not fall into them**: it publishes **no list** of specified foreign entities — §3.01(5)(b) puts the determination on the taxpayer — and its two "as in effect on January 1, 2025" clauses attach to the **beginning-of-construction** rules, not to the SFE lists, which are referenced dynamically.
+- **`byd`'s refresh-calendar `watch[]` line flipped from open question to settled finding**, redirected at Treasury's forthcoming proposed PFE regulations and the anti-circumvention rules the notice signals.
+
+### Changed
+
+- **Both 2026-09-08 editions' `byd` coverage pins re-verified at v9 in the same commit** (`report-pins-verified.json` 0 → 2 rows), which is what keeps `check-profiler-reports.py` at **0 errors / 0 warnings** rather than regressing to 0 / 2. The re-verification was an actual read: all six cited `byd` sources in the grid-scale edition and all three in the §154 edition were compared and are unchanged in label, url and date, and the v9 revision touched only `policyExposure`, `strategyRead`, `recentDevelopments` and one added source — none of which either edition cites.
+- **The §154 edition's substantive drift is recorded rather than smoothed over.** That edition states BYD's SFE status as unresolved; v9 resolves it. Reports are immutable, so the snapshot stands and the `why` field says plainly that the corrected finding reaches readers with the next edition — which is precisely what coverage pins exist to make visible.
+- Registry synced (`byd` srcTotal 52 → 53) and the relationship graph rebuilt.
 
 ## [v05.15r] — 2026-09-08 05:43:06 AM EST
 

@@ -96,13 +96,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-09-08",
-   "category": "regulatory",
-   "headline": "BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
-   "read": "Closed against IRS Notice 2026-15 itself rather than inferred from counsel summaries. The notice publishes no list of entities; it quotes the §7701(a)(51)(B) definition, which reaches both entities named in NDAA FY2024 §154(b) and entities on the §1260H list. BYD is on both. The consequence is a ratio test, not a ban: US storage projects on BYD kit must hold non-prohibited content at 55% for construction beginning in calendar 2026, rising toward 75% by 2030, with a carve-out for binding contracts entered into before 16 June 2025.",
-   "source": "https://www.irs.gov/pub/irs-drop/n-26-15.pdf"
-  },
-  {
    "date": "2026-08-28",
    "category": "financial",
    "headline": "H1 2026: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%); Q2 net profit RMB 8.2B (+29.8%), the first quarterly growth in five quarters; overseas revenue above half of the total for the first time",
@@ -214,7 +207,7 @@
   "(High confidence) We assess BYD's storage performance is structurally invisible in its own accounts and will stay that way. The H1 2026 interim disclosed no standalone energy-storage revenue line, as no prior period has: storage sits inside 'automobiles and related products'. The consequence is that BYD is excluded from like-for-like interim comparisons of listed Chinese BESS players — the August 2026 Energy-Storage.News review of CATL, EVE, CALB, Gotion, Great Power, REPT and Desay does not mention BYD at all — while every one of those peers grew net profit sharply in the same half and BYD's group profit fell 20.54%. Basis: the disclosure record and the peer review. Any BESS revenue figure attributed to BYD is a third-party estimate; only shipment volumes and ranks exist.",
   "(Moderate confidence) We assess the HaoHan/Masdar RTC award and three repeat MC Cube-T purchases from the same Chilean developer indicate field-performance credibility at gigascale; the 2027 delivery schedule is the verification point.",
   "(Moderate confidence) We assess Latin America is the template for BYD's non-China storage growth — following tender demand with local assembly (Brazil) mirrors the Chile SEC/Grenergy sequence.",
-  "(Moderate confidence) We assess the regulatory fence around BYD is now three-layered and asymmetric, and that the US layer has hardened since the last revision. For §45X/§48E purposes BYD IS a specified foreign entity — verified against IRS Notice 2026-15 itself — and the load-bearing instrument is the NDAA FY2024 §154(b) naming, not the §1260H listing: the notice’s first-day rule for the first taxable year beginning after 4 July 2025 places the determination at 1 January 2026, before the 8 June 2026 §1260H addition took effect. The two procurement instruments remain what they were — §154(b) bars DoD battery procurement from October 2027, the §1260H listing brings §805 contracting bars from June 2026 and June 2027, neither is an import ban, and BYD is verified absent from the UFLPA Entity List — but the tax layer is now the one with commercial reach into the US storage market, because it prices BYD content into every project’s material assistance cost ratio rather than merely excluding BYD from federal counterparties. It is a ratio test, so the effect is on competitiveness and on legacy contracts grandfathered before 16 June 2025, not on market access outright. In Brazil — the market BYD is building a US$98M BESS line for ahead of the December 2026 capacity auctions — BYD sits on the forced-labour 'dirty list' from April 2026, which blocks government loans and triggers bank credit review, with an R$257m labour suit unresolved. Basis: Notice 2026-15 read in full, the legal-alert record and Brazilian state sources."
+  "(Moderate confidence) We assess the regulatory fence around BYD is now three-layered and asymmetric, and that the sharpest near-term item is not American. In the US, statutory naming in NDAA §154(b) bars DoD procurement from October 2027 and the June 2026 §1260H listing brings §805 contracting bars from June 2026 and June 2027 — both procurement instruments, neither an import ban, and BYD is verified absent from the UFLPA Entity List. Whether BYD is a specified foreign entity for §45X/§48E purposes is unresolved and recorded as unresolved. In Brazil — the market BYD is building a US$98M BESS line for ahead of the December 2026 capacity auctions — BYD sits on the forced-labour 'dirty list' from April 2026, which blocks government loans and triggers bank credit review, with an R$257m labour suit unresolved. Basis: the legal-alert record and Brazilian state sources."
  ],
  "relationships": [
   {
@@ -897,15 +890,10 @@
   {
    "label": "VP Solar — Battery-Box Premium HVS/HVM capacities & inverter compatibility",
    "url": "https://www.vpsolar.com/en/product/byd-battery-box-premium-hvs-hvm/"
-  },
-  {
-   "label": "IRS / Treasury — Notice 2026-15: interim guidance on material assistance from a prohibited foreign entity, quoting the §7701(a)(51)(B) specified-foreign-entity definition, the first-day timing rule for the first taxable year after 4 July 2025 (fn 21), the 55% EST threshold for calendar 2026, and the pre-16-June-2025 binding-contract carve-out",
-   "url": "https://www.irs.gov/pub/irs-drop/n-26-15.pdf",
-   "date": "2026-02"
   }
  ],
  "lastUpdated": "2026-09-08",
- "profileVersion": 9,
+ "profileVersion": 8,
  "policyExposure": [
   {
    "regime": "NDAA §154 Department of Defense procurement ban",
@@ -925,11 +913,11 @@
   },
   {
    "regime": "US prohibited foreign entity rules (OBBBA §45X / §48E / §45Y)",
-   "status": "in-effect",
+   "status": "announced",
    "effectiveDate": "2026-01-01",
-   "exposure": "RESOLVED AGAINST THE PRIMARY DOCUMENT: BYD is a specified foreign entity, on two independent statutory prongs. IRS Notice 2026-15 (Treasury/IRS, February 2026, 95pp) quotes the definition OBBBA §70512(c) added at §7701(a)(51)(B), under which “specified foreign entity” means, among others, “(ii) an entity identified as a Chinese military company operating in the United States in accordance with section 1260H of the 2021 NDAA” or “(iv) an entity specified under section 154(b) of the National Defense Authorization Act for Fiscal Year 2024 (Public Law 118-31)”. BYD satisfies BOTH: it is named in NDAA FY2024 §154(b) alongside CATL, Envision Energy, EVE Energy, Gotion High-tech and Hithium, and it was added to the §1260H list on 8 June 2026. Either prong alone is sufficient. TIMING — and it decides which prong carries the first year: §7701(a)(51)(A)(ii)(I) determines PFE status as of the LAST day of the entity’s taxable year, except that “for purposes of the first taxable year beginning after July 4, 2025, the determination of whether an entity is a PFE because it is a specified foreign entity described in §7701(a)(51)(B)(i) through (iv) is made as of the FIRST day of the first taxable year” (Notice 2026-15 fn 21, citing §7701(a)(51)(A)(ii)(II)). For a calendar-year entity that is 1 January 2026 — five months before the §1260H listing — so in the first year BYD’s status rests on the §154(b) prong, which has held since that Act’s enactment. From the second year the last-day rule applies and both prongs bite. Calendar taxable year is assumed for BYD, standard for a PRC A-share issuer but not stated in the notice. CONSEQUENCE: a US storage project using BYD systems must clear a material assistance cost ratio of 55% non-prohibited content for an energy storage technology beginning construction in calendar 2026 (Notice 2026-15 §3.01(6) worked example, citing §7701(a)(52)(B)(ii)), rising toward 75% by 2030. This is a ratio test, not a ban: BYD content counts against the ratio rather than disqualifying a project outright. NOTE ON THE LISTS: the notice publishes NO list of specified foreign entities — §3.01(5)(b) puts the burden on the taxpayer to apply the §7701(a)(51) definition to the entity that mined, produced or manufactured each component. Its two “as in effect on January 1, 2025” clauses attach to the beginning-of-construction rules (Notices 2013-29 / 2018-59), NOT to the SFE lists, which are referenced dynamically; Notice 2025-42’s begin-construction guidance is expressly inapplicable to the PFE restrictions (fn 11).",
-   "mitigation": "Two mitigations exist and both are arithmetic rather than argument. (1) The material assistance cost ratio is a threshold, not a prohibition — a project stays eligible while non-prohibited content holds at or above the applicable percentage, so BYD content is a budget line rather than a disqualification. (2) A grandfather bounds legacy exposure: under §7701(a)(52)(D)(iv), costs under a binding written contract entered into BEFORE 16 June 2025 are excluded from the MACR entirely where the property is placed in service before 1 January 2030 in a facility whose construction began before 1 August 2025 (for §45X eligible components, “sold before January 1, 2027” substitutes). Notice 2026-15 also provides a Certification Safe Harbor (§4.03) for determining whether a component is PFE-produced — that is a substantiation route for the taxpayer, not something a specified foreign entity can certify its way out of.",
-   "source": "https://www.irs.gov/pub/irs-drop/n-26-15.pdf"
+   "exposure": "UNRESOLVED, AND RECORDED AS SUCH. A US storage project using BYD systems must clear a material assistance cost ratio of 55% non-prohibited content in 2026, rising toward 75% by 2030, with construction started before 1 January 2026 exempt; Treasury and IRS issued Notice 2026-15 in February 2026. Whether BYD is itself a specified foreign entity is the open question. No fetched primary or law-firm document names BYD as an SFE. What is established is that BYD is named in NDAA §154(b), and that counsel describe the SFE definition as importing entities on certain national-security lists — including, per one summary, entities ineligible for Department of Defense contracts — without enumerating which lists or naming companies. The final link is therefore an inference, not a verified fact, and the document most likely to settle it was unreachable from this session's egress. Treat as a well-supported inference with a documented gap.",
+   "mitigation": "Not determinable until the SFE question is closed against Notice 2026-15 itself.",
+   "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
   },
   {
    "regime": "Lists BYD is NOT on",

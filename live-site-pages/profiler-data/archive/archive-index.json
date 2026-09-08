@@ -295,6 +295,12 @@
    "profileVersion": 7,
    "archivedAt": "2026-09-08",
    "supersededBy": 8
+  },
+  {
+   "file": "byd.profile.v8.json",
+   "profileVersion": 8,
+   "archivedAt": "2026-09-08",
+   "supersededBy": 9
   }
  ],
  "canadian-solar": [
