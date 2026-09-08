@@ -6,6 +6,60 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-08 05:43:06 AM EST
+**Repo version:** v05.15r — one push commit on `claude/phase-6-session-3-preflight-zpgtsw`
+**Branch:** `claude/phase-6-session-3-preflight-zpgtsw`
+**Model:** Opus 5 xhigh — **Phase 6 session 3 of `INTEGRATED-REMEDIATION-PLAN.md` §7.8 (the AIDC power-conversion edition). PHASE 6 IS CLOSED.**
+
+### What was done
+
+**The preflight was decided empirically before any refresh work started, exactly as session 2 did.** Reachability and existence first: all three H1 2026 interims had in fact published — `sinexcel` 2026-08-11, `zhonhen` 2026-08-27, `megmeet` 2026-08-28 — and `cninfo.com.cn` answered while `szse.cn` failed TLS. Only then were ~45 minutes committed to the refresh path. Six research subagents ran (Stage 1 first-party / Stage 2 third-party per company, the Command's prescribed vehicle), each scoped to the missing period rather than a full re-sweep, because all three dossiers had been refreshed 1–4 days earlier and were current on everything except the interim.
+
+**Dossiers.** `megmeet` v6 → **v7** (30 → 38 sources), `zhonhen` v7 → **v8** (45 → 50), `sinexcel` v7 → **v8** (43 → 52). All archived, registry synced, graph rebuilt (3,681 → **3,690** evidence items), calendar rows advanced to the 2026-10-30/31 statutory backstops with rewritten `source` and `watch[]`.
+
+**One edition published.** `aidc-power-conversion--competitive--2026-09-08` supersedes the 2026-08-29 id. Scope re-derived on the day to the **15**-name 800 VDC roster cut **by layer** — silicon (`infineon`, `vicor`); the rack (`delta-electronics`, `liteon`, `megmeet`, `flex`); the sidecar and hall-edge block (`zhonhen`, `sungrow`, `sinexcel`, with `delta-electronics` again); facility and grid (`vertiv`, `eaton`, `schneider-electric`, `abb`, `ge-vernova`, `hitachi-energy`). Like-for-like met **within each layer's table** — four layer tables, not one field table. 31 citations, seven sections, eight judgments, three overlays re-authored on `nvidia-800vdc-2026-08` (`options`, `trusst`, `suppliers`). Index rebuilt, 8 superseded AIDC pins removed (8 → 0). **Plan §6 Phase 6 → Done.**
+
+### Where we left off
+
+v05.15r pushed as one commit; the auto-merge workflow was in flight. Nothing half-done. **Phase 6 is complete — all three sessions landed (v05.13r, v05.14r, v05.15r).** `check-profiler-reports.py` is at **0 errors / 0 warnings**, the target Phase 6 was written against. Next in the §6 ledger: **S1**, then S3 (0/19), G6 (ready), C3, S2 (0/19), 4 (0/26), K2, C5, C6 deferred.
+
+### Key decisions and findings
+
+- **The edition's central finding, and it is a sourced negative rather than an absence of research: architectural validation is not commercial inclusion, and this cycle made the difference measurable.** Zhonhen's 187-page interim contains no order, no backlog, no named customer, no capacity commitment, and zero occurrences of NVIDIA, SST or transformer-rectifier — despite NVIDIA's August 2026 paper naming its Panama Architecture as a TRU implementation. Sinexcel's management states **four separate times** that AIDC critical-power products are 「样品处于开发阶段，尚未实现正式销售」 (samples in development, no formal sales), and "800V" appears **zero times** in its 212-page interim — the entire 800 VDC roadmap lives only in post-results IR activity records. Megmeet's interim claims only membership — 「英伟达指定的数据中心电源推荐提供商之一」 — and names no competitor in 238 pages.
+- **The prior edition's "SST roster for the ~2029 slot is still forming" is retired** by a company it left out of scope: `sungrow` v9's EnerNeo, described in Sungrow's own interim as launched and supplying the market.
+- **The winners are the vendors that already owned the adjacent business** — Delta had the shelf, Sungrow the power electronics, Infineon the silicon, the grid tier the transformers. The vendors for whom 800 VDC *is* the thesis disclose the least.
+- **`zhonhen` does NOT run late — the calendar was wrong.** Both agents independently established the H1 filed four days inside the 31 August deadline, with a consistent 2024–2026 record. The old inference rested on the dossier not yet holding the filing.
+- **`sinexcel`'s OVERDUE row was a desk false positive** — the report published on its scheduled 2026-08-11 date; the 08-12 one-shot fired SUCCEEDED and landed no commit. Only cninfo's date is authoritative; the company back-stamps its own website.
+- **The Megmeet #2-supplier claim eroded rather than confirmed.** Membership and rank are different claims. Restated as a contested narrative with no supporting source located; the confirmed first-party part kept separate so it cannot be promoted on circular evidence.
+- **Megmeet's earnings quality inverted the headline**: +45.21% attributable but **−16.13% ex-non-recurring**, the gap being fair-value gains on the wealth-management products holding the placement proceeds; OCF −84.62%. Sinexcel was the opposite — ex-non-recurring grew *faster* (+50.45%) with non-recurring items a small net loss.
+- **A third agent-reported "contradiction" was correctly rejected.** Zhonhen's Stage 2 agent reported NVIDIA's Panama name-check as "not established" — that was a **host block** (`bjx.com.cn`, `xueqiu.com` WAF), and the corpus already carries the quote verified against the source PDF by two independent extraction passes in the guidance module. A bounded null is not a refutation.
+- **Three contaminated claim clusters excluded and recorded** so a future session rejects rather than re-imports them: the Sinexcel Vertiv-OEM / 36 kW / 100 W/in³ / +US$500 cluster (untraceable); a stale FY2026 forecast from a 2024 note on the FY2023 annual; a search-summarizer confabulation that Megmeet's H1 met expectations when no source said so.
+- **The FX discipline held for a third session** — no H1 2026 figure entered a normalized table; the `sungrow` v9 precedent now covers five companies across three sessions.
+- **Developer decisions this session:** leave the `byd` segment `basis` line untouched (the edition's ranking-basis table carries the nuance); correct §7.8's "six added members" to eight **with the provenance kept** (struck through, not overwritten).
+
+### Active context
+
+- **Branch:** `claude/phase-6-session-3-preflight-zpgtsw` · **repo version:** v05.15r · **Profiler page:** v01.83w (indirect affect, data-only, no bump) · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / **1,260 edges, 3,690 evidence items** / 9 named projects / 8 guidance modules / **8 reports (4 current, 4 superseded)** / 19 segments
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** **102 sections, 4 dated 2026-09-08** (`v05.12r`–`v05.15r`). Same EST day → 102 − 4 = 98 → no rotation. **A later EST day → 102 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 81; budget ~10 extra minutes and run `git fetch --unshallow` before any SHA lookup.
+- **Checker state:** reports **0 errors / 0 warnings** (the Phase 6 target); all six profiler checkers exit 0; content 10 / 3 / 134, 0 / 0; pipeline 14 findings all P1 on out-of-write-set paths, no P3.
+- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · 5 · **6 Done (v05.13r, v05.14r, v05.15r)**; next **S1** · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
+- **Standing, unassigned:** BYD's specified-foreign-entity status is now **RESOLVED as a research question but NOT YET WRITTEN** — IRS Notice 2026-15 was fetched and read this session (irs.gov reachable, 95 pages, 528 KB) and §7701(a)(51)(B) makes BYD an SFE on two independent prongs, (iv) NDAA FY2024 §154(b) naming and (ii) the 8 June 2026 §1260H listing, with prong (iv) carrying the first taxable year under the first-day rule in footnote 21. Writing it requires a `byd` v8 → v9 amendment **plus** re-verification of the two 2026-09-08 editions' byd pins in `report-pins-verified.json`, or reports regress from 0/0 to 0/2. Also: the two `verify-profiler-roles.py` progress-isolation failures (pre-existing); `archive/nvidia.profile.v2.json` missing; **one archive gap per refreshed dossier this session** (`megmeet` v3, `zhonhen` v4, `sinexcel` v4 — pre-existing, same class as `byd` v6); OSHA IMIS, SEC EDGAR, primedatacenters.com, web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; the README archive-tree drift (~57 entries); the `byd` segment `basis` line (developer chose to leave it); the remaining overdue desk rows (`iren` / `jinko` 08-27).
+- **Egress notes from this session:** `cninfo.com.cn` REACHABLE and the route that matters for SZSE issuers; **`szse.cn` root fails TLS** but **`disc.static.szse.cn` serves disclosure PDFs directly (HTTP 200)**; `irs.gov` and `taxlawcenter.org` both reachable (taxlawcenter was 403 in session 2); `hkexnews.hk` reachable; newly blocked: `bjx.com.cn` and `xueqiu.com` article pages (WAF), `21jingji.com` (503), `simplywall.st` (403).
+- **Routine note:** unchanged — none created, updated or deleted.
+
+### Recommendation for next session
+
+- Write the **BYD specified-foreign-entity finding into the corpus** in a short dedicated session: amend `byd` v8 → v9 with the two-prong SFE determination and the first-day timing rule from IRS Notice 2026-15, correct the judgment prose that currently leads with §1260H (for §45X/§48E it is the §154(b) prong that carries the first taxable year), and **re-verify byd's pins on both 2026-09-08 editions in `report-pins-verified.json` in the same commit** so the checker stays at 0 errors / 0 warnings. The research is done and recorded above; only the write remains.
+
+**To continue:** type `write the BYD SFE finding into the corpus`
+
+
+## Previous Sessions
+
+### Session — 2026-09-08 02:58:30 AM EST (v05.14r)
+
 **Date:** 2026-09-08 02:58:30 AM EST
 **Repo version:** v05.14r — one push commit on `claude/phase-6-session-2-opus5-287k9t`
 **Branch:** `claude/phase-6-session-2-opus5-287k9t`
@@ -51,8 +105,6 @@ v05.14r pushed as one commit; the auto-merge workflow was in flight. Nothing hal
 - Run **Phase 6 session 3 on Opus 5 xhigh**: paste the "Session 3" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the AIDC power-conversion edition, deciding the `megmeet` / `zhonhen` / `sinexcel` preflight first exactly as session 2 did (establish reachability *before* committing to the refresh path). It closes Phase 6 and clears the last standing report warning, taking `check-profiler-reports.py` to 0 errors / 0 warnings.
 
 **To continue:** type `run Phase 6 session 3`
-
-## Previous Sessions
 
 ### Session — 2026-09-08 02:12:19 AM EST (v05.13r)
 
