@@ -6,6 +6,56 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-08 02:58:30 AM EST
+**Repo version:** v05.14r — one push commit on `claude/phase-6-session-2-opus5-287k9t`
+**Branch:** `claude/phase-6-session-2-opus5-287k9t`
+**Model:** Opus 5 xhigh — **Phase 6 session 2 of `INTEGRATED-REMEDIATION-PLAN.md` §7.8 (the grid-scale competitive + §154 risk editions), with the preflight refreshes taken.**
+
+### What was done
+
+**The preflight decision came first, and it was decided empirically rather than by preference.** The §7.8 brief offered refresh-or-flag. The desk had landed neither `byd` (due 2026-08-29) nor `eve-energy` (due 2026-08-20) — both rows still read `lastRefreshed: 2026-08-30` with "the one-shot fired SUCCEEDED but landed no commit". Because BYD's H1 2026 is a **fired indicator of both reports** (§7.7 blocks 2 and 3) and a FY2025 BYD next to a fresh H1 Sungrow breaks the head-to-head's like-for-like, refreshing was the better path *if the data existed* — so `check-source-reachability.py` plus two targeted searches confirmed both interims were published and retrievable **before** committing ~40 minutes to it. Four research subagents ran (Stage 1 first-party / Stage 2 third-party per company, the Command's prescribed vehicle).
+
+**Dossiers.** `byd` v7 → **v8** (33 → 52 sources, `srcFirstPct` 15 → 19); `eve-energy` v5 → **v6** (16 → 38, 44 → 39). Both archived, registry synced, graph rebuilt (3,677 → 3,681 evidence items), calendar rows advanced from overdue to the 2026-10-31 CSRC backstop with rewritten `source` and `watch[]`.
+
+**Two editions published.** `grid-scale-bess--competitive--2026-09-08` — scope re-derived on the day from the `storage-integrators-and-containers` roster to **19** (10 incumbents + 8 challengers + `flexgen`), registry role as a table column, a **new ranking-basis table** recording each claim's instrument, 36 citations, overlays on `bess-bankability-2026-08` → `counterparty` and `power-infra-aidc-2026-08` → `markets`. `s154-listed-bess-suppliers--risk--2026-09-08` — the **statutory six** with `gotion` added, 22 citations, `rept`'s not-named record in `limitations[]`, the CATL/Zhonhen RMB 4.1bn capital increase as the new line in the fence, five overlays. Index rebuilt deterministically from the report files; **17** superseded pins removed (12 + 5), 25 → 8. Plan §6 → **2 of 3 done**.
+
+### Where we left off
+
+v05.14r pushed as one commit; the auto-merge workflow was in flight. Nothing half-done. **Next: Phase 6 session 3** — the AIDC power-conversion edition (§7.8 "Session 3"), which needs the `megmeet` / `zhonhen` / `sinexcel` H1 2026 refreshes first or the staleness stated. That session clears the last standing report warning.
+
+### Key decisions and findings
+
+- **The brief's "six added members" is wrong — it is eight.** §7.7 finding 5's own list names eight, and set arithmetic against the live registry confirms it: 11 kept + 8 added − 1 removed (`eve-energy`) = 19. Per §7.7 finding 9 the registry on the day decides, so the edition states eight. **Correct the §7.8 brief text if session 3 touches it.**
+- **A trap avoided: no H1 2026 figure enters either normalized table.** `sungrow` v9 already records why — "no sourced CNY/USD rate for H1 2026 was located, and the schema forbids an unsourced conversion" — so the same discipline was applied to the new BYD and EVE periods (`kpi`/`usdMillions` deliberately omitted) and the head-to-head stays on FY2025 for all 19. **Session 3 must do the same** for any `megmeet` / `zhonhen` / `sinexcel` H1 period it lands.
+- **"The §154 six" is not a uniform status.** `gotion` is caught on *two* independent statutory grounds (the §154(b) list plus clause (B)(v) foreign control, which is what reaches its US subsidiaries) yet is **absent from §1260H** — unlike CATL, BYD and EVE. That negative is citable from the `gotion` dossier's WilmerHale source, which is also what **retired the old edition's "EVE 1260H is reported, not established" limitation**.
+- **BYD's FY2025 integrator crown is disputed, not merely scope-dependent.** Benchmark #1; Wood Mackenzie and InfoLink #3; Wood Mackenzie's *own* two 2025 instruments place BYD differently (#3 share, #4 scorecard). None states its metric precisely enough to reconcile. The new edition carries a ranking-basis table instead of an ordinal.
+- **BYD's FEOC/specified-foreign-entity status is UNRESOLVED and recorded as such** in both the dossier and the edition. No fetched primary or law-firm document names BYD as an SFE; the document most likely to settle it (taxlawcenter.org) was 403. **Highest-value open item** — one fetch of IRS Notice 2026-15 converts an inference into a verified risk line or retracts it.
+- **EVE's "storage is now the largest segment" is a split answer.** True by shipments (44.46 vs 35.76 GWh), **false by revenue** (RMB 15.094bn vs 17.278bn) because power sells at ~1.42× revenue per GWh. And the crossover is not new — storage already out-shipped power in FY2025; H1's movement is power closing the gap.
+- **`profiler-segments.json` re-read, deliberately not edited** (the DO NOT list forbids it). Both roles stand. **One finding for the developer:** `byd`'s integrator-membership `basis` cites the disputed Benchmark FY2025 #1 claim — role unaffected, wording stale.
+- **README archive tree is 57 entries behind disk** (330 listed vs 387 present) — pre-existing drift from earlier sessions. This session added only its own four files plus the adjacent `byd.profile.v6` gap; the remaining ~54 are unclaimed.
+- **Egress corrections from the agents:** `cninfo.com.cn` and `szse.cn` **are** reachable (the prompt assumed otherwise); `bydglobal.com` is reachable but a stale legacy site (IR stops 2017–2018); `hkexnews.hk` is fully reachable including an undocumented JSON search API. Newly blocked this session: `media.defense.gov`, `usitc.gov`, `taxlawcenter.org`, `cnbc.com` article bodies (403).
+
+### Active context
+
+- **Branch:** `claude/phase-6-session-2-opus5-287k9t` · **repo version:** v05.14r · **Profiler page:** v01.83w (indirect affect, data-only, no bump) · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
+- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / **1,260 edges, 3,681 evidence items** / 9 named projects / 8 guidance modules / **7 reports (4 current, 3 superseded)** / 19 segments
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** **101 sections, 3 dated 2026-09-08** (`v05.12r`, `v05.13r`, `v05.14r`). Same EST day → 101 − 3 = 98 → no rotation. **A later EST day → 101 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 80; budget ~10 extra minutes and run `git fetch --unshallow` before any SHA lookup.
+- **Checker state:** reports **0 errors / 1 warning** (`zhonhen` v7 on the untouched AIDC edition — session 3 clears it); all six profiler checkers exit 0; content 10/3/134 0/0; pipeline 12 findings all P1 on out-of-write-set paths, no P3.
+- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · 5 Done · **6 — 2 of 3 done (v05.13r, v05.14r)**; next Phase 6 session 3 (AIDC, after `megmeet` / `zhonhen` / `sinexcel`) · S1 · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
+- **Standing, unassigned:** the two `verify-profiler-roles.py` progress-isolation failures (pre-existing, confirmed against a clean `origin/main` tree at v05.13r); `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com, web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; the README archive-tree drift above; the `byd` segment `basis` line above; BYD's unresolved SFE status; the overdue desk rows that remain (`sinexcel` 08-11, `iren` / `jinko` 08-27; `megmeet` / `zhonhen` H1 interims absent with rows dated 30 Oct).
+- **Routine note:** unchanged — none created, updated or deleted. The 2026-10-01 drift-check fire reads the named-project edition, not these two.
+
+### Recommendation for next session
+
+- Run **Phase 6 session 3 on Opus 5 xhigh**: paste the "Session 3" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the AIDC power-conversion edition, deciding the `megmeet` / `zhonhen` / `sinexcel` preflight first exactly as session 2 did (establish reachability *before* committing to the refresh path). It closes Phase 6 and clears the last standing report warning, taking `check-profiler-reports.py` to 0 errors / 0 warnings.
+
+**To continue:** type `run Phase 6 session 3`
+
+## Previous Sessions
+
+### Session — 2026-09-08 02:12:19 AM EST (v05.13r)
+
 **Date:** 2026-09-08 02:12:19 AM EST
 **Repo version:** v05.13r — one push commit on `claude/phase-6-session-1-opus5-sbiw8p`
 **Branch:** `claude/phase-6-session-1-opus5-sbiw8p`
@@ -45,43 +95,3 @@ v05.13r pushed as one commit. Nothing half-done. **Next: Phase 6 session 2** —
 - Run **Phase 6 session 2 on Opus 5 xhigh**: paste the "Session 2" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the grid-scale competitive and §154 risk editions in one session, deciding the `byd` / `eve-energy` preflight first (refresh both under the Profiler Command, or proceed and state the staleness in each edition's `coverage.gaps[]`).
 
 **To continue:** type `run Phase 6 session 2`
-
-## Previous Sessions
-
-**Date:** 2026-09-08 12:00:01 AM EST
-**Repo version:** v05.12r — one push commit on `claude/phase-5-report-evaluation-cs27yo`
-**Branch:** `claude/phase-5-report-evaluation-cs27yo`
-**Model:** Fable 5.1 xhigh — **Phase 5 of `INTEGRATED-REMEDIATION-PLAN.md` §7 (the report-strategy evaluation, F10 / F11), evaluation only.**
-
-### What was done
-
-**Phase 5 — v05.12r.** A written decision per report in the plan's new **§7.7**: all four reports **re-scoped and regenerated**, none retired, none regenerated as-is — the defect is scope, not fact. `named-project-bess-attach` → the live project web (24 dossiers pinning 9 projects, plus `tesla` cited through `xai`; River Bend and ten new participants missing from the 15-company edition). `grid-scale-bess` → the registry's integrator incumbents + challengers (18) plus `flexgen` as the adjacent comparator; `eve-energy` out (cells / in-hall per the registry). `s154-listed-bess-suppliers` → the statutory six (`gotion` added; `rept`'s not-named record as a limitation). `aidc-power-conversion` → the covered 800 VDC roster **by layer** (15: silicon, rack, sidecar/SST, facility + grid tier; `huawei` out on the stated reason). The seven checker warnings read again against what each report cites — every cited figure holds; none re-pinned. **The drift-gated monthly Routine's gate is REPLACED** (recorded only — the developer applies it): keep monthly / fresh session / opportunity-series-only; replace the ≥10-versions-moved count with any of (a) an indicator fired, (b) scope drift — a project the edition does not cover, or the project-pinning set differing from `scope.value` by ≥3, (c) ≥5 scoped dossiers with a development absent from the archived pinned version. Evidence: 13 of 15 scoped dossiers already past their pins while 0 of 15 carry a development since the edition — the gate trips on housekeeping and would have missed F10. **The §5 caveat is RESTATED** as *supplier* whitespace (storage is in the plan at Lighthouse and Project Jupiter; no supplier named anywhere but Trimount and Colossus); it lifts with Phase 6 session 1. **§7.8** carries three Phase 6 paste-in briefs (sessions: named-project → grid-scale + §154 → AIDC). §6 Phase 5 Done / Phase 6 next with the order; §7.1 and §7.4 updated.
-
-### Where we left off
-
-v05.12r pushed as one commit. Nothing half-done. **Next: Phase 6 session 1 on Opus 5 xhigh — paste `INTEGRATED-REMEDIATION-PLAN.md` §7.8 "Session 1"** (the named-project edition, before the Routine's 2026-10-01 fire). Then S1 (§7.4 puts Phase 5 → S1 → Phase 6; Phase 6 sessions 2–3 wait on desk refreshes and can interleave with S1).
-
-### Key decisions and findings
-
-- **Overlays cannot reach a landscape from a Phase 6 edition** — `guidanceOverlays[]` live in the report and must name a module that exists in `Profiler.gs`, so the "reports feed the landscapes' admin extras" sequencing is resolved as: Phase 6 editions overlay the existing eight modules; S2 landscapes cite the edition id in their claims ledger; the overlay onto a landscape arrives with the *next* edition after S2 (§7.7 finding 8).
-- **`s154-listed-bess-suppliers--risk--2026-08-29.report.json` was edited after publication** at v04.94r (commit `e1324c7`, its `scope.rationale`) — an immutability breach the checker cannot see; recorded, not reverted; Phase 6's supersession moots it; restoring the published text is the developer's call.
-- **The earnings desk is leaving rows overdue**: `sinexcel` (08-11), `eve-energy` (08-20), `iren` and `jinko` (08-27), `byd` (08-29); the 7 Sep run `SUCCEEDED` in 19 minutes with no commit. Three of those are report indicators — Phase 6's preflight inherits them (refresh first or state the staleness). `megmeet` / `zhonhen` H1 2026 interims are also absent, with rows dated 30 Oct.
-- **No Phase E row changes any report's answer** (E6 is cells, E7 is the load).
-- **Until the Routine's gate is changed, the 2026-10-01 fire authors an edition on churn** unless Phase 6 session 1 lands first — land it, or pause the Routine.
-
-### Active context
-
-- **Branch:** `claude/phase-5-report-evaluation-cs27yo` · **repo version:** v05.12r · **Profiler page:** v01.83w (unaffected) · **Classroom page:** v01.08w · **Classroom GAS:** v01.17g
-- **Corpus:** 154 companies / 154 profiles / 154 study guides / 1,210 concepts / 1,260 edges / 9 named projects / 8 guidance modules / 4 reports (all current; 3 to be superseded per session) / 19 segments / 283 memberships / drill pool 1,920
-- **Classroom live:** 10 lessons · 3 tracks · 134 gate cases · `check-classroom-content.py` 0/0 · pipeline no P3
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
-- **CHANGELOG:** **99 sections, 1 dated 2026-09-08** (the thirteen 2026-09-01 sections rotated at v05.12r). Same EST day → 100 − 2 = 98 → no rotation. **A later EST day → 100 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → 79; budget ~10 extra minutes. `git fetch --unshallow` MUST run before any SHA lookup.
-- **Checker state:** reports **0 errors / 7 warnings** (hithium v13 ×3, sungrow v9, catl v7 ×2, zhonhen v7 — `report-pins-verified.json` untouched, no report file edited); content 10/3/134 0/0; pipeline P1 on the plan file only.
-- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · **5 Done (v05.12r)** · **6 next** (three sessions, §7.8) · S1 · S3 (0/19) · G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred.
-- **Standing, unassigned:** `archive/nvidia.profile.v2.json` missing and unreconstructable; OSHA IMIS, SEC EDGAR, primedatacenters.com and web.archive.org network-blocked; `huawei`'s FCC `policyExposure` entry over the 900-char convention; the v04.94r edit of the §154 report file; the overdue desk rows above.
-
-### Recommendation for next session
-
-- Run **Phase 6 session 1 on Opus 5 xhigh**: paste the "Session 1" blockquote from `INTEGRATED-REMEDIATION-PLAN.md` §7.8 — the named-project opportunity edition (25 in scope, `supersedes` the 2026-08-30 id, the 13 superseded pin rows removed), landed before the Routine's 2026-10-01 fire.
-
-**To continue:** type `run Phase 6 session 1`
