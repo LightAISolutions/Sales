@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.24r] — 2026-09-09 01:39:02 AM EST
+
+> **Prompt:** *(continuation of the v05.23r prompt — "…can you update them to make them not stale?" — completing the identity sweep that was still running when v05.23r was pushed. No new developer prompt; the stop hook required the pending work to be committed.)*
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §8 — all sixteen unauthored Phase E companies identity-checked as a batch, and each row's `Checked` cell filled.** Thirteen table rows plus the three alternates named inside the E4 rows (`icl-group`, `syrah-resources`, `westwater-resources`), verified by two parallel research agents against filing covers, exchange announcements, Companies House, HKEXnews, SZSE/CSRC filings and company IR. The cells record an **identity check only** — legal name, ticker, exchange, ownership, change of control — not the authoring session's premise verdict, which is still owed when each dossier lands
+- **The §8 preamble rewritten** from "the remaining rows have **not** been re-verified as a batch" to what actually happened, with the failure rate, the three dated re-check triggers, the two numeric scale traps, and an explicit statement that a batch check **resets the clock on these rows and does not retire step 1a** — a `Checked` cell dated 2026-09-09 is evidence about 2026-09-09, not about the day the dossier gets written
+- **§10's P5 sequence row** no longer presents ICL, Syrah and Westwater as interchangeable alternates; it names which one is out, which is at-risk, and which is clean, and points at the §8 rows for the evidence
+- **`.claude/rules/profiler-app.md` step 1a** gained the measured failure rate and a rule for scheduled events: where a fact turns on a court sanction, a compliance deadline or a shareholder vote, record the date and re-verify on it, **because such a row does not drift, it flips**
+
+### Fixed
+
+- **Ten of the sixteen rows carried something wrong, dead or missing** — a higher rate than the three-session record in the preamble implied, and the batch was worth running rather than trusting step 1a alone to catch them one at a time:
+  - **`cornex`** — the native-script name in the row, `中比新能源`, is **CBAK Energy Technology (Nasdaq: CBAT)**, a different, US-listed company. Cornex is `楚能新能源` / CORNEX NEW ENERGY CO., LTD. Authoring from the row as written would have produced a dossier about the wrong business. Also settled: no IPO and no IPO filing exists, checked against HKEXnews, the CSRC overseas-listing route, Chinese-language filing searches and a sector round-up of ~50 storage IPOs
+  - **`icl-group`** (E4b's public alternate) — **premise dead**: ICL discontinued its US LFP cathode-active-material project (St. Louis) on 2025-11-11 after the DOE withdrew a $197m grant, and terminated its Spain LFP JV with Shenzhen Dynanonic. The entity is unchanged and sound; it is simply no longer a US LFP-cathode entrant. Fall back to `nano-one`
+  - **`syrah-resources`** (E4a's "operating-US alternate") — **both words fail**: Vidalia has not reached commercial AAM sales, and the auditor flagged a material uncertainty on going concern in the HY-2026 report released **on the day of the check**, with unresolved events of default under both the DFC and DOE loans and the rescue package's financial close slipped to 1H-2027
+  - **`intertek`** — **time-bombed, not drifting**: a shareholder-approved scheme (98.72%, 2026-08-06) takes it private at £61.077/share; court sanction expected Q4 2026 – Q1 2027, then delisting
+  - **`habitat-energy`** — "private" is misleading: a **Quinbrook subsidiary since 2021-11-30** (Companies House PSC still active), and **currently for sale** with JLL and BCG engaged since 2026-03-17
+  - **`mitra-chem`** — the registrant is **Mitra Future Technologies, Inc.** (CIK 0001887663); a corpus grepping "Mitra Chem" would match no SEC record
+  - **`calb`** — ticker right, name string wrong: "China Aviation Lithium Battery" and "CALB Co., Ltd." are both pre-2022-12-28 and appear in no current filing. Also became controlling shareholder of SZSE-listed `苏奥传感` (300507) on 2025-11-21
+  - **`great-power`** — board missing (ChiNext, not SZSE generally) and a live **A+H dual-listing** absent: HKEX Main Board application filed 2026-01-30, CSRC supplementary-materials request 2026-05-15, and the application proof now 404s — "filed, not listed", status unconfirmed
+  - **`pattern-energy`** — CPP majority holds, but the row omits the APG/Australian Retirement Trust purchase of Riverstone's founding stake (closed 2025-06-09) and the share-based Cordelio Power acquisition (completed 2026-04-02) that increased CPP's stake
+  - **`gridmatic`** — HQ is **Houston, TX**; Cupertino is only the registered address of the fund and marketer vehicles. The top-level holding company's legal name could **not** be established and the row now says so rather than guessing
+- **Two rows carry numeric scale traps** that would silently corrupt any per-share prose written from older sources: **Stem's 1-for-20 reverse split (2025-06-23)** and **Novonix's 1:4 → 1:40 ADS ratio change (2026-08-27)**. Novonix also carries an open **Nasdaq minimum-bid cure deadline of 2026-09-14** and a going-concern material uncertainty; whether compliance was regained is recorded as **not established** rather than assumed either way
+- **Four rows verified clean and recorded as such** — `albemarle` (two completed divestitures make the row's "(lithium)" descriptor more accurate than when written), `grid-united` (all activity is project-level, not corporate), `westwater-resources` (EXIM approved a $25m Kellyton loan 2026-08-10), and `ul-solutions`, with the one qualifier that it is a **controlled company**: ULSE Inc. holds the Class B supermajority, so "public" is only half true
 
 ## [v05.23r] — 2026-09-09 01:30:00 AM EST
 
