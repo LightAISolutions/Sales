@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-09 06:00:20 AM EST
+**Repo version:** v05.28r — **one push commit** on `claude/jolly-dijkstra-ybdikq` (plus this session-context commit, the sanctioned second because the first push had already merged)
+**Branch:** `claude/jolly-dijkstra-ybdikq`
+**Model:** Opus 5 xhigh — **S3 P5 · group `E4a` (Albemarle · NOVONIX)**, then the P6 paste-in prompt
+
+### What was done
+
+1. **P5 shipped (v05.28r).** `albemarle` (75 sources, 52% first-party) and `novonix` (69 sources, 71%), each with a 13-section schema-v2 study guide and a full-depth lesson plan. `cells-and-chemistry` went 16 members / 4 incumbents / 8 challengers / 4 adjacent → **18 / 4 / 8 / 6**. Thirty concepts registered (1,358 → 1,388) and eighteen company-published executive photographs downloaded
+2. **The adjacency hypothesis held, and was tested rather than assumed.** Both typed **adjacent**. `compute-and-the-rack` and `storage-integrators-and-containers` were read against Albemarle's bromine line and **rejected** — a flame-retardant additive is not a rack, a system integrator or a factory-assembled block. NOVONIX **could not** have been typed challenger: continuing-operations revenue is **US$0** and no commercial anode volume has shipped, against a 2024 market of 2.11 Mt whose ten largest producers are all Chinese
+3. **The Nasdaq question resolved harder than "unannounced" — it is arithmetically unresolvable on 2026-09-09.** The ten-consecutive-business-day cure test began at the 2026-08-27 ADS ratio change; excluding Labor Day (2026-09-07), the tenth session cannot fall before **2026-09-10**, one day after authoring, against a **2026-09-14** deadline. Eight qualifying closes had completed. No announcement exists on EDGAR (newest filing 2026-09-02) or the ASX list (newest 2026-09-04)
+4. **Four findings no §8 row carried.** NOVONIX is being **removed from the S&P/ASX 300** on 2026-09-21; the **AD/CVD case it petitioned for FAILED** on a 2-1 ITC vote, after which it cut its own assumed selling price from US$10–12/kg to US$7–11/kg; **Riverside full capacity slipped to September 2031** against a Section 48C deadline of 2028-04-07; and the **Harper furnace licence lapsed unpaid** on 2026-01-01. On the other side, **Albemarle announced a CEO succession on 2026-09-02** — six days before the batch identity sweep that missed it
+
+### Where we left off
+
+All work committed, pushed and merged. The **P6 paste-in prompt was handed to the developer in chat** — the next session is a fresh Opus 5 xhigh session, not a continuation of this one.
+
+### Key decisions and findings
+
+- **`check-source-reachability.py` was wrong about the SEC for the THIRD consecutive session, and the cause is now identified.** It is **not a network block — it is a User-Agent format failure.** SEC hosts return 403 to a UA without a contact email and **200** to one containing it; `LightAISolutions Research jonyang92@gmail.com` returned 200 on three consecutive attempts against both `sec.gov` and `data.sec.gov`, and the entire first-party financial record for both companies came from them. **This retires two sessions of "SEC is blocked" folklore.** Separately, `ir.novonixgroup.com` served 200 here while **both** research agents recorded it 403 — probe hosts yourself rather than inheriting a verdict
+- **I used a primary source over an agent's verdict once, and was right to.** The third-party agent explicitly discarded the "five of seven consecutive trading days" Amortization Event trigger as belonging to an unrelated issuer. It is in NOVONIX's own HY-2026 Note 8, which I had already read. The two agents also disagreed on the $245.6m impairment (Kemerton vs the Refining Solutions held-for-sale write-down); the 10-K settles it as Refining Solutions, Q4-2025
+- **The P4 indent trap cost nothing, because a helper replaced memory.** A read-detect-write helper was proved **byte-identical on a round-trip of all five shared JSON files before any write**. Diffs were 60 lines on the roster and 34 on the calendar against P4's reverted 2,350. **One correction to the standing instruction: `profiler-concepts.json` is SORTED ALPHABETICALLY BY SLUG, not append-at-end** — the append-at-end convention applies to `profiler-companies.json` and the refresh calendar only
+- **The intel-briefing style's bold markers render as literal asterisks, corpus-wide.** `Profiler.html` passes `summary` and `ecosystemRole` through as plain text, so `**BOTTOM LINE UP FRONT:**` displays its asterisks — in the shipped `intertek` dossier as much as in this session's. Fourteen dossiers carry it. This session brought its own prose within corpus norms rather than touching the page; **the fix, if the developer wants one, is a `Profiler.html` change and therefore not a dossier session's to make**
+- **The pacing rule held.** Nothing was staged until both first-party agents returned, and it mattered: the NOVONIX first-party report overturned the premise that the company still has a battery-testing business, and the Albemarle one corrected the divestiture structure and the segment count
+
+### Active context
+
+- **Repo version** `v05.28r`; CHANGELOG at **94/100** sections — rotation due at 100, so roughly **six pushes of headroom**
+- **S3 progress: 6 of 10 sessions** (P1, P2, V1, P3, P4, P5 done). Remaining order: **P6 → V2 → V3 → V4**. The public lane is **five of six done**
+- **`software-and-optimization` remains the only held landscape**, and only V2 clears it. P6, V3 and V4 are pure deepening
+- **Two dated triggers now live in calendar rows:** `novonix` on **2026-09-14** (Nasdaq cure deadline — the row FLIPS rather than drifts, and should convert to the quarterly cadence, ~2026-10-29, once the outcome lands; the S&P/ASX 300 removal on **2026-09-21** is a second item in the same window), and `albemarle` on **2026-11-04** (cadence-inferred Q3, unconfirmed) with a **live Chilean strike** unresolved at authoring — 97.49% strike authorisation on 2026-08-31, mediation requested 2026-09-01
+- **`cells-and-chemistry` is the corpus's largest segment at 18 members**, and its `notes` field now records the upstream-materials adjacent role as **partly filled** — still open for the private cathode and cell names of E4b/E6b (`mitra-chem`, `cornex`)
+- **Offered and not taken** (needs developer approval, carried from four sessions): adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit developer directive 2026-08-30. Would require a page version bump. P5 strengthens it again — Albemarle's fifteen aliases include Ketjen, Talison, Greenbushes, Wodgina and SAYTEX, and NOVONIX's eleven include GX-23, Avrion Battery Labs and Dryve Battery Materials, none of which the roster can currently find
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **S3 P6 — group `E6a` (CALB · Great Power) on Opus 5 xhigh**, as a fresh session using the paste-in prompt handed over in chat. It is the **last public-lane session**, and finishing it leaves **V2 as the sole remaining gate** on the one held landscape. Two things make it different from P5 and should shape the research plan: **the role is genuinely undecided** — the §8 cell says the session decides incumbent or challenger *on the rank it finds*, so the third-party ranking work is the deliverable rather than a check — and **neither company files with the SEC**, so this session's User-Agent finding is irrelevant and the hosts that matter are `cninfo.com.cn` and `hkexnews.hk` (both 200 at C12) plus `szse.cn`, which is **intermittent rather than blocked** and must be probed at least three times. Both §8 identity cells carry grep traps: CALB must never be searched as "China Aviation Lithium Battery", and Great Power's A+H application appears to have **lapsed unfiled** around 2026-07-30 without ever listing
+
+**To continue:** type `continue with your recommendation`
+
+## Previous Sessions
+
+### Session — 2026-09-09 04:38:11 AM EST (v05.27r)
+
 **Date:** 2026-09-09 04:38:11 AM EST
 **Repo version:** v05.27r — **one push commit** on `claude/amazing-knuth-h4tidu` (plus this session-context commit, which is the sanctioned second because the first push had already merged)
 **Branch:** `claude/amazing-knuth-h4tidu`
@@ -46,47 +90,3 @@ All work committed, pushed and merged. The **P5 paste-in prompt was handed to th
 - Run **S3 P5 — group `E4a` (Albemarle · Novonix) on Opus 5 xhigh**, as a fresh session using the paste-in prompt handed over in chat. It is position 6 in the sequence and is **deepening, not unblocking** — `cells-and-chemistry` already stands at 16 members / 4 incumbents / 8 challengers / 4 adjacent, far past the floor. The reason to run it next rather than later is **Novonix's Nasdaq minimum-bid-price cure deadline of Monday 2026-09-14**, which was still open on 2026-09-09 and whose outcome is not established either way: running the session near it means the dossier records a settled fact rather than an inference. Two more traps the row carries — the **ADS ratio changed 1:4 → 1:40 on 2026-08-27**, so any per-ADS price before that date is stale by 10×, and the auditor flagged a **material uncertainty on going concern** in the HY-2026 report. And do not swap in an alternate without reading the §8 evidence: **ICL is out** (US LFP project cancelled 2025-11-11), **Syrah is at-risk and pre-commercial**, and **Westwater alone is clean**
 
 **To continue:** type `continue with your recommendation`
-
-## Previous Sessions
-
-### Session — 2026-09-09 02:54:52 AM EST (v05.26r)
-
-**Date:** 2026-09-09 02:54:52 AM EST
-**Repo version:** v05.26r — **two push commits** on `claude/elegant-clarke-etxlwc` (v05.26r landed and merged; this session-context commit is the second). Two commits because the first push merged and the branch was deleted before the second — the sanctioned multi-commit case
-**Branch:** `claude/elegant-clarke-etxlwc`
-**Model:** Opus 5 xhigh — **S3 P3 · group `E1a` (Stem)**, then the P4 paste-in prompt
-
-### What was done
-
-1. **P3 shipped (v05.26r).** `stem` (90 sources, 80% first-party) with a 16-section study guide and a nine-module lesson plan. `software-and-optimization` went 16 members / 1 incumbent / 1 challenger → **17 / 2 / 1**; Stem also took `storage-developers-and-ipps` · **adjacent** on its consolidated DevCo storage-origination joint ventures. Fourteen shared concepts registered (1,311 → 1,325) and six company-published headshots downloaded
-2. **The §8 premise held but its basis did not.** `incumbent` is right — on **solar and hybrid asset-performance management** (38.3 GW under management, $62.4m ARR), **not** on storage bidding, where the fleet has been flat at 1.7–1.8 GWh for two years. Stem appears on **none** of the 2024 Guidehouse VPP / Grid DERMS / grid-edge DERMS leaderboards nor S&P Global's 2026 Tier 1 list; Modo Energy's 2025 directory quantifies six peers and not Stem. Its only ranking is Guidehouse's **2022** first place for AlsoEnergy; its only contemporary recognition is **The smarter E AWARD 2026** for PowerTrack EMS
-3. **A date error found in Stem's own FY2025 10-K.** The filing dates the Athena → PowerTrack Optimizer rebrand to "September 2024"; the press release is datelined **5 September 2025**, says "today announced", launches the refreshed site "live on Sept. 5", and quotes a CEO appointed in January 2025. Resolved against the filing, with the three grounds recorded in the dossier
-4. **Two of my own research-brief premises were wrong and the agents corrected them** — there was no 2024 restatement (an in-period $38.7m variable-consideration reduction plus a $104.1m bad-debt charge; ICFR effective, no material weakness), and there is no going-concern qualification at either filing
-
-### Where we left off
-
-All work committed, pushed and merged. The **P4 paste-in prompt was handed to the developer in chat** and is reproduced in the recommendation below — the next session is a fresh Opus 5 xhigh session, not a continuation of this one.
-
-### Key decisions and findings
-
-- **The reachability probe was wrong for this session, and the §7 rule caught it.** `check-source-reachability.py` reported `sec.gov` and `data.sec.gov` **BLOCKED**, but a direct probe with a declared non-personal User-Agent returned **200** on EDGAR company search, filing indexes and full 10-K/10-Q documents — and the entire first-party financial record came from them. The roster's verdict bounded the roster's URL, not the filing route. **`businesswire.com` is genuinely blocked** (403 on three attempts) and every affected citation was substituted with the identical release on `investors.stem.com`, which is a better tier anyway
-- **The corpus reconciliation changed nothing, deliberately, and the reasoning is on the record.** Six inbound files reviewed. `dnv` and `kwh-analytics` both name **"Also Energy"** — Stem's own subsidiary since February 2022 — as an independent competitor platform. Those claims are **accurate as written** (alsoenergy.com still resolves), so neither dossier was revised; the alias went into `aka[]` instead, so the next reconciliation finds the link by search rather than by luck. `sungrow` was a false positive ("Stem Cell Grid-Forming" is Sungrow's own technology name)
-- **Two incidental changes were made and reverted before committing.** I had reformatted `profiler-concepts.json` and `profiler-companies.json` from indent 2 to indent 1 (a 22,000-line spurious diff) and re-sorted the registry — which is **appended-at-end** by convention, not sorted. Both restored. **For future sessions: match each JSON file's existing indent, and append new registry entries at the end.**
-- **A pacing lesson for dossier sessions:** the first-party agent returned **last** (14m 47s against 10m 16s) and invalidated more of the already-written draft than the third-party agent did — a missing product line, the rebrand date, the debt structure and three executives. Wait for the first-party report before merging anything
-
-### Active context
-
-- **Repo version** `v05.26r`; CHANGELOG at **92/100** sections — rotation due at 100, so roughly **eight pushes of headroom**, i.e. around the end of the remaining S3 sessions
-- **S3 progress: 4 of 10 sessions** (P1, P2, V1, P3 done). Remaining order: **P4 → P5 → P6 → V2 → V3 → V4**
-- **Segments at the floor:** compute-and-the-rack, insurance-and-risk-transfer, assurance, software-and-optimization (on the letter). **Held:** `software-and-optimization`'s landscape, on V2 — and P3 sharpened why it will stay hard: **both** of its incumbents reach the segment from an adjacent business (FlexGen from integration, Stem from solar APM), so every pure-play merchant optimizer is on the private side
-- **The `software-and-optimization` segment lesson is flagged DUE for regeneration** by `check-classroom-curriculum.py --strict`. Not run here — §7 assigns the generator to an S1/developer session
-- **Dated re-check triggers now live in §8 rows:** `novonix` on **2026-09-14** (Nasdaq minimum-bid cure deadline), `intertek` on **court sanction** (Q4 2026 – Q1 2027, then delisting), `habitat-energy` **quarterly** while Quinbrook's sale process runs. Stem's own calendar row carries `nextReport` **2026-11-04**, unconfirmed
-- **Offered and not taken** (needs developer approval, carried from last session): adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit developer directive 2026-08-30. Would require a page version bump. P3 made the case slightly stronger — Stem's fourteen aliases include PowerTrack, Athena and AlsoEnergy, none of which the roster can currently find
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **S3 P4 — group `E3a` (UL Solutions · Intertek) on Opus 5 xhigh**, as a fresh session using the paste-in prompt handed over in chat. It is position 5 in the reordered sequence and is **deepening, not unblocking** — `assurance` was cleared by V1 at v05.21r, so P4 takes it from 4 members / 2 incumbents to 6 / 4. The reason to run it now rather than later is **Intertek**: its shareholder-approved take-private by Isotope Bidco (EQT X, ADIA/Luxinva, Mubadala) at £61.077 per share was approved 98.72% on 2026-08-06 and completes **on court sanction in Q4 2026 – Q1 2027**, so running it sooner records a clean signed-but-not-closed deal rather than one straddling the sanction date. Both §8 identity cells were checked on 2026-09-09 and both carry traps the session must use — UL Solutions is a **controlled company** (ULSE Inc. holds 123,755,000 Class B shares and the majority of voting power) whose December 2025 offering was a **selling-stockholder secondary** that raised the company nothing, and "UL" must never be grepped bare because three distinct UL entities exist
-
-**To continue:** type `continue with your recommendation`
-
