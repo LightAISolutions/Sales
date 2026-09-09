@@ -533,8 +533,8 @@
    "regime": "Section 301 tariffs",
    "status": "in-effect",
    "effectiveDate": "2026-01-01",
-   "exposure": "The 10-K records Section 301 tariffs on Chinese-made lithium-ion batteries and related components used for energy storage 'currently set at 25% effective January 1, 2026', up from 7.5%. The 10-K also recorded ongoing AD/CVD investigations into Chinese natural and synthetic graphite for lithium-ion anode material, with final determinations expected in the first quarter of 2026, which 'could result in price increases'. **That question is now closed, and it closed against the petitioners.** Commerce issued final determinations on 13 February 2026 — antidumping of 93.5% for specified companies and 102.72% China-wide, countervailing of 66.82–66.86% — but all of it was conditional on an affirmative injury finding, and on **12 March 2026 the US International Trade Commission voted 2-1 that the imports do not materially retard the establishment of a United States industry**. No antidumping or countervailing duty order issued and none of those rates took effect, so the anode-material price increase this risk factor anticipated did not arrive from this source. Established at the novonix dossier's authoring on 2026-09-09; NOVONIX was a named petitioner in the case and records the outcome in its own filings.",
-   "mitigation": "AES states it accelerated imports into the US and increased contracting for domestically manufactured solar panels, batteries, wind turbines and trackers; for its 2026 backlog it has contracted and received delivery of all wind turbines, and for 2027 it is fully contracted with US suppliers or suppliers with primarily US-manufactured turbines. On the graphite question specifically no mitigation was required: the duties were never imposed.",
+   "exposure": "The 10-K records Section 301 tariffs on Chinese-made lithium-ion batteries and related components used for energy storage 'currently set at 25% effective January 1, 2026', up from 7.5%. Ongoing AD/CVD investigations into Chinese natural and synthetic graphite for lithium-ion anode material, with final determinations expected in the first quarter of 2026, 'could result in price increases'.",
+   "mitigation": "AES states it accelerated imports into the US and increased contracting for domestically manufactured solar panels, batteries, wind turbines and trackers; for its 2026 backlog it has contracted and received delivery of all wind turbines, and for 2027 it is fully contracted with US suppliers or suppliers with primarily US-manufactured turbines.",
    "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
   },
   {
@@ -934,11 +934,6 @@
  ],
  "sources": [
   {
-   "label": "Federal Register — Active Anode Material from China; Determinations: the ITC negative injury finding, so no antidumping or countervailing duty orders issue",
-   "url": "https://www.federalregister.gov/documents/2026/04/03/2026-06488/active-anode-material-from-china-determinations",
-   "date": "2026-04-03"
-  },
-  {
    "label": "GCN — AES Bellefield phase two as the US grid passes 52 GW of storage",
    "url": "https://gcn.com/battery-storage-aes-bellefield-phase-two/21206",
    "date": "2026-08-29"
@@ -1208,6 +1203,6 @@
    "url": "https://www.aesindiana.com/rate-review"
   }
  ],
- "lastUpdated": "2026-09-09",
- "profileVersion": 2
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
 }

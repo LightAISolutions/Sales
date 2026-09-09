@@ -1,0 +1,425 @@
+{
+ "schemaVersion": 2,
+ "slug": "albemarle",
+ "title": "Albemarle — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "sections": [
+  {
+   "id": "start-here-two-elements",
+   "title": "Start here: one company, two unrelated elements, one building",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "Most guides in this corpus teach a device — a cell, a rack, an inverter. This one teaches **two elements from the periodic table** and why both of them end up inside the same battery-storage installation.",
+    "The first is **lithium**, and it is the obvious one: it is the ion that moves back and forth inside every cell in this corpus. The second is **{{bromine}}**, and it is not obvious at all. Bromine's industrial job is to stop plastic burning, and a storage container is full of plastic — circuit boards, cable insulation, connectors, enclosures.",
+    "So the useful mental model is not \"lithium company\". It is: *this company sells the thing that stores the energy, and the thing that stops the box around it catching fire.* Those are different businesses with different customers, different cycles and different competitors, and they are joined only by the fact that both are chemistry done at industrial scale.",
+    "What follows teaches, in order: what lithium physically does in a cell; where lithium comes from and why the source decides the cost; why there are two different lithium chemicals and which one grid storage buys; what a flame retardant actually does to a flame; and why a company like this cannot control its own selling price."
+   ]
+  },
+  {
+   "id": "what-lithium-does",
+   "title": "What lithium actually does in a battery",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A battery is not a tank of electricity. It is two materials that both want lithium ions, separated so that the ions can only travel between them through a liquid, while the electrons have to go the long way round — through your device. Charging pushes the ions one way; discharging lets them come back, and the electrons doing the long journey are the current you use.",
+    "The trick that makes this rechargeable is **{{intercalation}}**: the ions slot into gaps in a host material's structure without wrecking it. Slide in, slide out, thousands of times. If the ion instead reacted with the host and changed it permanently, you would have a battery that works once.",
+    "Why lithium in particular? Two reasons, both from its position in the periodic table. It is the lightest metal — third element, three protons — so you carry very little dead weight per unit of charge. And it gives up its outer electron more readily than almost anything else, which is what sets the cell's voltage. Light plus high voltage is exactly the combination {{energy density}} rewards, which is why the industry converged on it and has stayed there for thirty years.",
+    "One consequence matters commercially. Lithium is the *ion*, not the *structure*. It is a small fraction of a cell's mass and often under a tenth of its cost, and every chemistry — LFP, NMC, NCA, sodium-ion excepted — needs it. A lithium producer is therefore selling into total battery demand rather than betting on which chemistry wins. That is a comfortable position when volumes grow and a brutal one when everyone builds supply at once, because the product is a commodity that nobody differentiates on."
+   ]
+  },
+  {
+   "id": "brine-versus-rock",
+   "title": "Two ways to get lithium out of the ground, and why the choice decides the cost",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Almost all commercial lithium comes from one of two sources. They are not variants of the same process — they are different industries with different capital, different timescales and different political problems. Understanding which one an asset is tells you most of what you need to know about its economics.",
+   "cols": [
+    "",
+    "Hard rock ({{spodumene}})",
+    "{{lithium brine}}"
+   ],
+   "rows": [
+    [
+     "What it physically is",
+     "A mineral in granite-like rock, mined conventionally with drilling and blasting",
+     "Salty groundwater under a desert salt flat, with lithium dissolved in it at a few hundred parts per million"
+    ],
+    [
+     "First step",
+     "Crush the rock and concentrate the mineral on site, usually to a 6% product, using density and surface-chemistry separations",
+     "Pump the brine into **{{evaporation pond}}s** and wait twelve to twenty-four months for the sun to remove the water"
+    ],
+    [
+     "Second step",
+     "Ship the concentrate — often across an ocean — to a chemical plant that converts it into battery-grade lithium",
+     "Finish the concentrate into carbonate or hydroxide at a plant near the salt flat"
+    ],
+    [
+     "Time to respond to price",
+     "Fast. A concentrator can raise or cut output within a quarter",
+     "Slow. The ponds are a pipeline eighteen months long; today's output was decided a year and a half ago"
+    ],
+    [
+     "Capital shape",
+     "Two plants, often two owners, two countries. Mining margin and conversion margin are separately competed",
+     "One integrated operation, but tied to a specific salt flat you cannot move"
+    ],
+    [
+     "The political question",
+     "Mining permits, indigenous land, and who owns the conversion step",
+     "**Water.** Evaporation consumes the brine and, arguably, the aquifer around it — which is why extraction and local water rights become the same argument"
+    ],
+    [
+     "Cost position",
+     "Varies enormously with ore grade. The best hard-rock mines sit at the bottom of the {{cost curve}}; marginal ones sit at the top",
+     "Generally the lowest cash cost of all, because the sun does the concentrating for free"
+    ]
+   ]
+  },
+  {
+   "id": "carbonate-or-hydroxide",
+   "title": "Why there are two lithium chemicals, and which one grid storage buys",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A cell maker does not buy \"lithium\". It buys one of two specific compounds, and which one depends entirely on the cathode it is building.",
+    "**{{lithium carbonate}}** is the input for **{{LFP}}** — lithium iron phosphate — the chemistry that dominates stationary storage. **{{lithium hydroxide}}** is the input for nickel-rich cathodes like {{NMC}} and {{NCA}}, the chemistries used where energy density per kilogram matters most, which historically meant premium electric vehicles.",
+    "The reason is a manufacturing detail with very large commercial consequences. Nickel-rich cathode material is baked at a lower temperature than LFP, and at that lower temperature carbonate does not react cleanly — it needs the hotter conditions to break down properly. Hydroxide reacts at the lower temperature, so hydroxide is what nickel-rich needs. It is not a preference; it is the furnace.",
+    "Now put that against what the storage market actually does. Grid storage is overwhelmingly LFP, because LFP is cheaper, tolerates heat better, and lasts more cycles — and cycle life matters far more to a battery that charges and discharges every single day than to one in a car. **So stationary storage demand is carbonate demand.**",
+    "This is why the same company can have one product line growing and another shrinking in the same year, and why watching which conversion plants a producer *closes* tells you more than any strategy slide: closing hydroxide plants while running carbonate plants at record output is a statement about where the demand went."
+   ]
+  },
+  {
+   "id": "the-price-scenarios",
+   "title": "What it means to be a price-taker, in one table",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "FY2026 adjusted EBITDA, US$ billion, midpoint of Albemarle's own guidance range",
+   "intro": "Albemarle publishes its annual outlook not as a number but as three numbers, one per lithium price. That is unusual and it is honest: it concedes that the single biggest determinant of the year's profit is a price the company does not set. The bars are the midpoints of its own published ranges.",
+   "items": [
+    {
+     "label": "At about US$10/kg LCE",
+     "sub": "The FY2025 average price. Guidance range US$0.9–1.0bn of adjusted EBITDA on US$4.1–4.3bn of net sales",
+     "v": 0.95
+    },
+    {
+     "label": "At about US$20/kg LCE",
+     "sub": "The Q1-2026 average, and roughly where the price sat in September 2026. Range US$2.4–2.6bn on US$5.7–6.0bn of sales",
+     "v": 2.5
+    },
+    {
+     "label": "At about US$30/kg LCE",
+     "sub": "The 2021–2025 average. Range US$4.2–4.4bn on US$7.5–7.8bn of sales",
+     "v": 4.3
+    }
+   ]
+  },
+  {
+   "id": "why-the-price-moves",
+   "title": "Why the price does that: the marginal tonne",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Tripling profit between two plausible prices is not a sign of a badly run business. It is what happens to any producer of an undifferentiated commodity, and the mechanism is worth understanding because it applies to cells, to modules and to graphite as well.",
+    "Line every producer up from cheapest to most expensive — that is the **{{cost curve}}**. Now draw demand as a vertical line. The price settles near the cost of the *last* producer you need in order to meet demand: the marginal tonne. Everyone to the left of that line makes money; everyone to the right shuts down.",
+    "Two things follow. First, a low-cost producer's margin is set by *someone else's* costs. If the marginal producer is a high-cost operation, the low-cost producer earns an enormous spread; if demand falls back onto cheaper supply, the spread collapses even though nothing changed at the low-cost mine.",
+    "Second, this is why capacity closures are the signal to watch rather than announcements. When a producer idles a plant, it is telling you that plant sits to the right of the price. When several producers idle plants at once, supply leaves the curve and the price rises — which is the mechanism behind almost every commodity recovery, including the lithium one that ran through 2026.",
+    "The practical reading rule: for a commodity producer, treat the **published price assumption** as the real guidance and everything else as detail. A company guiding on a US$20/kg assumption when spot is US$19.75/kg has no cushion at all."
+   ]
+  },
+  {
+   "id": "pond-or-plant",
+   "title": "Pond or plant: the direct-extraction argument",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "The oldest technology in lithium is a pond and the sun. The newest is a chemical plant that does the same job in hours. The industry is midway through arguing about which it wants, and both sides of the argument are legitimate.",
+   "cards": [
+    {
+     "t": "Evaporation ponds",
+     "meta": "The incumbent method. Cheap, proven, and increasingly politically expensive.",
+     "adv": [
+      "**The energy is free.** Solar evaporation costs nothing to run once the ponds exist, which is why brine sits at the bottom of the cost curve",
+      "Mechanically simple: pumps, ponds, time. Very little to break",
+      "Decades of operating history, so the recovery rates and product quality are known quantities"
+     ],
+     "dis": [
+      "**Twelve to twenty-four months** from pumping to product — you cannot respond to a price move",
+      "Recovery is poor: a large share of the lithium never makes it out of the brine",
+      "Consumes the water. In the driest deserts on earth this is the entire social licence question, and it is what most litigation about lithium is really about",
+      "Takes enormous land area"
+     ]
+    },
+    {
+     "t": "Direct lithium extraction",
+     "meta": "A material that grabs lithium selectively out of the brine, then releases it.",
+     "adv": [
+      "**Hours instead of months.** Output can follow demand",
+      "Recovers far more of the lithium in the same brine — more product from the same resource",
+      "Most of the water can be returned underground, which changes the political conversation",
+      "Smaller footprint"
+     ],
+     "dis": [
+      "It is a chemical plant, with the capital cost, energy demand and operating complexity that implies — the free sunlight is replaced by something you pay for",
+      "The selective materials are consumables and degrade",
+      "Each brine is chemically different, so a process proven on one salt flat is not automatically transferable",
+      "Still unproven at the scale ponds already operate at"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "what-a-flame-retardant-does",
+   "title": "Switching elements: what a flame retardant physically does",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Now the second business, and it has nothing to do with batteries — it is about the plastic everything else is made of.",
+    "Start with what a flame is. Burning is not simply \"hot\": it is a self-sustaining chain reaction. Heat breaks molecules into extremely reactive fragments called radicals — mostly hydrogen and hydroxyl radicals — and those fragments attack more fuel, producing more radicals and more heat. Remove the radicals and the chain breaks, even if the fuel and the heat are still there.",
+    "That is exactly what a **{{brominated flame retardant}}** does. Mixed into the plastic, it is inert at normal temperatures. When the plastic gets hot enough to start decomposing, the additive releases bromine-containing species into the gas just above the surface, and those species mop up the radicals. This is **{{radical scavenging}}**, and it works *in the flame* rather than in the plastic.",
+    "Notice what this is not. It is not insulation, and it is not something that makes the plastic refuse to melt. The plastic still degrades under enough heat. What changes is that a small ignition — a spark at a connector, an overheating trace — fails to grow into a self-sustaining fire and goes out on its own.",
+    "This is the only reason plastic is permitted in electrical equipment at all. **{{UL 94}}**, the standard that classifies how a plastic part behaves when you hold a flame to it, is what a circuit board, a connector housing or a cable jacket has to satisfy — and for most engineering plastics, satisfying it means a flame retardant is present.",
+    "The commercial consequence: this additive follows electronics manufacturing, not battery manufacturing. Circuit boards, cable, connectors, enclosures — which means data centres and grid-storage installations both, since both are full of exactly those things."
+   ]
+  },
+  {
+   "id": "bromine-into-the-building",
+   "title": "Where the two elements meet again: one storage container",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Follow both product lines into a single containerised battery system and they arrive at different parts of the same box. This is the clearest way to see why a company with two unrelated chemistries is nonetheless coherent for this corpus.",
+   "cols": [
+    "Part of the installation",
+    "Which element",
+    "What it is doing there"
+   ],
+   "rows": [
+    [
+     "The cells themselves",
+     "Lithium, as {{lithium carbonate}}",
+     "The ion that moves between electrodes. Carbonate specifically, because storage cells are overwhelmingly {{LFP}}"
+    ],
+    [
+     "The anode in those cells",
+     "Neither — this is graphite",
+     "Covered in the NOVONIX guide: the other electrode, and a different supply chain entirely"
+    ],
+    [
+     "Printed circuit boards in the battery management system",
+     "Bromine, as a {{brominated flame retardant}}",
+     "Board laminate has to pass a flammability rating; the retardant is what lets an epoxy-glass board do so"
+    ],
+    [
+     "Cable insulation and connectors",
+     "Bromine",
+     "Same mechanism, different polymer. A cable fire propagating along a tray is the classic failure this prevents"
+    ],
+    [
+     "The enclosure and internal plastic parts",
+     "Bromine",
+     "Engineering plastics used near live electrical parts carry a flammability requirement"
+    ],
+    [
+     "Thermal management and fire suppression",
+     "Neither",
+     "A separate discipline — the retardant reduces the chance of ignition, it does not manage a cell already in thermal runaway"
+    ]
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where this reasoning fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**A low-cost asset is not a low-cost company.** A producer can own a mine at the bottom of the cost curve and still lose money, because the mine is one step and the conversion plant is another. Western conversion plants closing while Western mines keep running is exactly this: the resource is competitive, the chemical processing is not.",
+    "**Volume growth and revenue growth are different things by an order of magnitude.** In a commodity, a 10% volume increase against a 50% price fall is a bad year. Read tonnes and prices separately, never revenue alone.",
+    "**A royalty on the sale price is invisible until the price rises.** Where an extraction agreement takes a percentage that increases with price, a producer's participation in a recovery is capped in a way the income statement never shows as a line item. Always look for what the resource-holder takes.",
+    "**\"Number two producer\" claims can outlive the disclosure that supported them.** When a company stops publishing production tonnage, third-party rankings become estimates dressed as facts. Check whether the number has a source or only a history.",
+    "**A flame retardant faces regulatory risk that a battery material does not.** The specific molecules have been under environmental review for years, and a ban does not care how well the chemistry works. This is a category of risk with no equivalent on the lithium side."
+   ]
+  },
+  {
+   "id": "where-albemarle-slots-in",
+   "title": "Where Albemarle slots in, and against whom",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The dossier's own segment placement is upstream materials, adjacent to the cell segment rather than in it. This table places each activity against the layer it serves.",
+   "cols": [
+    "Activity",
+    "Layer of the chain",
+    "Who else is there"
+   ],
+   "rows": [
+    [
+     "Mining spodumene and pumping brine",
+     "Resource",
+     "Named by Albemarle itself: SQM, Sichuan Tianqi Lithium, Jiangxi Ganfeng Lithium, Rio Tinto, Pilbara Minerals — and Tesla, which refines its own"
+    ],
+    [
+     "Converting to carbonate and hydroxide",
+     "Chemical processing",
+     "Chinese converters, structurally lower-cost, which is why Western conversion has been shutting"
+    ],
+    [
+     "Selling carbonate to LFP cathode makers",
+     "One layer above the cell",
+     "The cathode makers, then the cell makers in this corpus's cells-and-chemistry segment"
+    ],
+    [
+     "Making bromine and flame retardants",
+     "Specialty chemicals",
+     "Named by Albemarle: Lanxess, Israel Chemicals, Rio Tinto. Four producers hold roughly 90% of world bromine capacity"
+    ],
+    [
+     "Selling flame retardants into electronics",
+     "Two layers above the rack",
+     "Board laminators, cable makers, enclosure moulders — who then sell to everyone in the compute and in-hall-power segments"
+    ],
+    [
+     "What it does not do",
+     "—",
+     "It makes no cells, no modules, no containers and no electronics. It is a materials supplier at both ends"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does intercalation mean, and why does a rechargeable battery depend on it?",
+     "a": "Slotting an ion into gaps in a host material's structure without breaking the host. Lithium slides between graphite layers, then back out, and the graphite is unchanged — so the process repeats thousands of times. If the lithium reacted with and altered the host instead, the battery would work once."
+    },
+    {
+     "q": "Why lithium rather than some other metal?",
+     "a": "Two properties from its place in the periodic table: it is the lightest metal, so very little dead weight per unit of charge, and it gives up its outer electron very readily, which sets a high cell voltage. Light plus high voltage is what energy density rewards."
+    },
+    {
+     "q": "Which lithium chemical does an LFP cell need, and which does a nickel-rich cell need? Why the difference?",
+     "a": "LFP needs lithium carbonate; nickel-rich cathodes need lithium hydroxide. The reason is the baking temperature: nickel-rich cathode material is fired at a lower temperature, and at that temperature carbonate does not break down and react cleanly, whereas hydroxide does."
+    },
+    {
+     "q": "Why does that distinction matter for grid storage specifically?",
+     "a": "Because stationary storage is overwhelmingly LFP — cheaper, more heat-tolerant, and far better on cycle life, which is what matters for a battery cycling every day. So storage demand is carbonate demand, not hydroxide demand."
+    },
+    {
+     "q": "Why does a brine operation respond to price more slowly than a hard-rock mine?",
+     "a": "Because solar evaporation takes twelve to twenty-four months. Today's brine output was set in motion a year and a half ago. A hard-rock concentrator can change output within a quarter."
+    },
+    {
+     "q": "What sets the price of a commodity, in one sentence?",
+     "a": "The cost of the last, most expensive producer needed to meet demand — the marginal tonne. Every cheaper producer's margin is therefore set by someone else's costs, not by its own."
+    },
+    {
+     "q": "Why are plant closures a more reliable signal than announcements?",
+     "a": "Because idling a plant is a company stating that the plant sits above the current price on the cost curve. Several producers idling at once removes supply, which is the mechanism behind most commodity price recoveries."
+    },
+    {
+     "q": "How does a brominated flame retardant actually stop a fire?",
+     "a": "Burning is a self-sustaining chain reaction driven by highly reactive radicals. When the plastic gets hot, the additive releases bromine species into the gas above the surface that mop up those radicals, breaking the chain. It works in the flame, not in the plastic."
+    },
+    {
+     "q": "What does UL 94 test, and why does it drive flame-retardant demand?",
+     "a": "It classifies how a plastic part behaves when a flame is applied — whether it self-extinguishes, and whether it drips. Electrical equipment has to meet a rating, and for most engineering plastics meeting it requires a flame retardant. That is what permits plastic near live parts at all."
+    },
+    {
+     "q": "What is direct lithium extraction trading away in exchange for speed?",
+     "a": "The free energy of the sun. DLE recovers more lithium in hours rather than months and returns most of the water, but replaces a pond with a chemical plant that has capital cost, energy demand, consumable materials and brine-specific tuning."
+    },
+    {
+     "q": "Why can a company own a bottom-of-the-cost-curve mine and still be uncompetitive?",
+     "a": "Because mining and chemical conversion are separate steps with separate economics. A cheap resource feeding an expensive conversion plant produces an expensive final product — which is why conversion plants close while the mines feeding them keep running."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A storage developer switches its project from NMC cells to LFP cells. What happens to the lithium chemical demanded?",
+     "c": [
+      "It shifts from lithium carbonate to lithium hydroxide",
+      "It shifts from lithium hydroxide to lithium carbonate",
+      "No change — both use the same lithium compound",
+      "It falls to zero; LFP contains no lithium"
+     ],
+     "a": 1,
+     "why": "LFP is built from lithium carbonate; nickel-rich chemistries like NMC are built from hydroxide, because their lower cathode firing temperature is too low for carbonate to react cleanly. The switch moves demand from hydroxide to carbonate — which is why growth in stationary storage is growth in carbonate."
+    },
+    {
+     "q": "A lithium producer publishes an annual outlook as three profit figures, one for each of three possible market prices. What is it telling you?",
+     "c": [
+      "That it has three different production plans for the year",
+      "That its profit is dominated by a price it does not control, so a single forecast would be false precision",
+      "That it expects the price to be all three at different times",
+      "That it is hedged against price movement"
+     ],
+     "a": 1,
+     "why": "A price-scenario table is a producer conceding that the largest single determinant of the year is exogenous. It is more honest than a point estimate, and it means the price assumption is the real guidance — a company guiding on a price the market is already at has no cushion."
+    },
+    {
+     "q": "Two lithium producers have identical costs. One is on a salt flat using evaporation ponds; the other runs a hard-rock concentrator. The price doubles in three months. Which captures more of it this year?",
+     "c": [
+      "The brine producer, because its costs are lower",
+      "The hard-rock producer, because it can raise output within a quarter while the brine pipeline is eighteen months long",
+      "Both equally — price applies to everyone",
+      "Neither; both are on long-term contracts"
+     ],
+     "a": 1,
+     "why": "Evaporation is a pipeline twelve to twenty-four months long, so current brine output was determined long before the price moved. A concentrator can respond within a quarter. Low cash cost and fast response are different advantages, and only the second one pays in a spike."
+    },
+    {
+     "q": "Why is a flame retardant described as working in the gas phase rather than in the plastic?",
+     "c": [
+      "Because it evaporates before the plastic gets hot",
+      "Because it releases species into the flame that scavenge the radicals sustaining the combustion chain reaction",
+      "Because it forms a gas barrier that excludes oxygen from the surface",
+      "Because it cools the flame below the ignition temperature"
+     ],
+     "a": 1,
+     "why": "Combustion is a radical chain reaction. The additive releases bromine-containing species into the gas just above the decomposing surface, where they mop up hydrogen and hydroxyl radicals and break the chain. The plastic still degrades under enough heat; what changes is that a small ignition fails to become self-sustaining."
+    },
+    {
+     "q": "A producer's extraction agreement takes a percentage of the final sale price that rises steeply above a threshold. The market price doubles from just under that threshold. What happens to the producer's participation in the upside?",
+     "c": [
+      "It doubles in line with the price",
+      "It is capped — a rising share of each incremental dollar goes to the resource-holder rather than the producer",
+      "It is unaffected, since royalties are fixed per tonne",
+      "It improves, because higher prices spread the fixed royalty over more revenue"
+     ],
+     "a": 1,
+     "why": "A progressive royalty on sale price means the resource-holder's share increases as the price rises, so the producer keeps a shrinking fraction of each additional dollar. It is invisible on an income statement as a separate line and is one of the least-read constraints on a commodity producer's upside."
+    },
+    {
+     "q": "A company that has repeatedly been called the world's number-two lithium producer stops publishing its production tonnage. What should a reader conclude about subsequent rankings?",
+     "c": [
+      "Nothing changes; the ranking is well established",
+      "That third-party rankings for that company are now estimates, and should be cited as such rather than as measured output",
+      "That the company must have fallen in the rankings",
+      "That the ranking bodies will have obtained the data privately"
+     ],
+     "a": 1,
+     "why": "A ranking is only as good as its inputs. When the company stops disclosing, its position in any league table becomes an inference — one published table marks its second place explicitly as 'not disclosed'. The claim may still be true; it is simply no longer measured, and should not be repeated as though it were."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "index-referenced pricing",
+   "d": "A contract that sets the price by reference to a published market index at the time of delivery rather than at a fixed number agreed in advance. It moves the price risk from the buyer to the seller, and is why a producer's realised price tracks the spot market even under long-term agreements."
+  },
+  {
+   "t": "technical grade",
+   "d": "A purity specification good enough for industrial uses — greases, glass, ceramics — but below what a battery needs. Battery grade is a tighter specification on specific impurities, and the difference in price between the two is a large part of why the battery market is worth chasing."
+  }
+ ]
+}

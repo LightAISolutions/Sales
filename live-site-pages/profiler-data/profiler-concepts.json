@@ -94,6 +94,14 @@
       ]
     },
     {
+      "slug": "acheson-furnace",
+      "term": "Acheson furnace",
+      "def": "The traditional way to graphitise carbon: pack the material in a long open trench, run an enormous current through it for days, then let it cool for days more. It is a batch process, it is slow, and it dominates Chinese graphite production.",
+      "aliases": [
+        "Acheson process"
+      ]
+    },
+    {
       "slug": "active-front-end",
       "term": "active front end",
       "def": "A rectifier built from switching transistors rather than plain diodes, so the equipment behind it can draw a near-sinusoidal current at close to unity power factor instead of pulling in gulps. It is what lets a modern UPS or drive stop being a dirty load on the supply feeding it, at the cost of more silicon and more control software.",
@@ -301,6 +309,16 @@
       ]
     },
     {
+      "slug": "american-depositary-share",
+      "term": "American depositary share",
+      "def": "A US-traded certificate representing a fixed number of shares in a non-US company, so the shares can be bought on a US exchange in dollars. Changing how many underlying shares each certificate represents changes its price without changing the company at all.",
+      "aliases": [
+        "ADS",
+        "American depositary receipt",
+        "ADR"
+      ]
+    },
+    {
       "slug": "ammonia",
       "term": "ammonia",
       "def": "A carbon-free fuel, easier to store and ship than hydrogen because it liquefies under mild conditions. It burns reluctantly and slowly, and because the nitrogen is in the fuel itself it opens a NOx pathway that cooling the flame does not address.",
@@ -384,6 +402,23 @@
       "slug": "annuity-style-income",
       "term": "annuity-style income",
       "def": "Revenue a financial firm expects to repeat each year — management fees, lending margins, service charges. Contrasted with income that depends on market conditions, and valued more highly because it is predictable."
+    },
+    {
+      "slug": "anode",
+      "term": "anode",
+      "def": "The electrode a battery's lithium ions move into when it charges. In almost every lithium-ion cell it is graphite, and its job is to hold ions cheaply and give them back for thousands of cycles without changing shape.",
+      "aliases": [
+        "negative electrode"
+      ]
+    },
+    {
+      "slug": "anode-active-material",
+      "term": "anode active material",
+      "def": "The powder that does the ion-storing work in the anode, as distinct from the copper foil it is coated onto and the binder holding it together. Usually shortened to AAM, and in practice almost always graphite.",
+      "aliases": [
+        "AAM",
+        "active anode material"
+      ]
     },
     {
       "slug": "anti-islanding",
@@ -967,6 +1002,19 @@
       ]
     },
     {
+      "slug": "brominated-flame-retardant",
+      "term": "brominated flame retardant",
+      "def": "A bromine-containing additive mixed into plastic so that, if the plastic gets hot enough to burn, the bromine is released into the flame and interrupts it chemically. It is what lets plastic be used in circuit boards, cable and electrical enclosures at all.",
+      "aliases": [
+        "BFR"
+      ]
+    },
+    {
+      "slug": "bromine",
+      "term": "bromine",
+      "def": "A heavy halogen extracted from very salty water, most of it from the Dead Sea and from underground brine in Arkansas. Its main industrial use is making plastics harder to set alight."
+    },
+    {
       "slug": "brownfield",
       "term": "brownfield",
       "def": "A site that already carries industrial infrastructure — most valuably an existing grid connection and substation from a retired plant. In a market where interconnection is the long pole, inheriting energized wires can move a project years ahead of an equivalent greenfield, which is why retired coal and industrial sites are being bought for their electrical position rather than their land.",
@@ -1082,6 +1130,11 @@
       "slug": "c-rate",
       "term": "C-rate",
       "def": "How fast a battery charges or discharges relative to its capacity: 1C empties it in one hour, 0.25C in four. Grid storage typically runs at low C-rates — multi-hour durations rather than sprints."
+    },
+    {
+      "slug": "c-sample",
+      "term": "C-sample",
+      "def": "The last and largest sample stage before a customer commits: tonnes of material, made on the real production equipment rather than in a laboratory, so the customer is testing the factory as much as the powder. Feedback typically takes six to twelve months."
     },
     {
       "slug": "cable-charging-current",
@@ -1308,6 +1361,15 @@
         "cat model",
         "cat modelling",
         "catastrophe modeling"
+      ]
+    },
+    {
+      "slug": "cathode-active-material",
+      "term": "cathode",
+      "def": "The electrode holding the lithium when a cell is discharged, and the part that sets a battery's chemistry name — LFP, NMC, NCA. It is where most of a cell's cost and most of its performance differences sit.",
+      "aliases": [
+        "cathode active material",
+        "CAM"
       ]
     },
     {
@@ -2212,6 +2274,11 @@
       ]
     },
     {
+      "slug": "cost-curve",
+      "term": "cost curve",
+      "def": "Every producer of a commodity lined up cheapest to most expensive. The price tends to settle near the cost of the last producer needed to meet demand, so a producer's position on this line, not its own efficiency in isolation, decides whether it makes money."
+    },
+    {
       "slug": "cost-of-service",
       "term": "cost of service",
       "def": "The ratemaking method behind almost every US regulated utility: customers pay the utility's prudent costs of serving them — operations, fuel, depreciation, taxes — plus a return on the rate base. Rates are set by customer class, so the cost-of-service study is where the argument over who pays for a data center's substation is actually fought.",
@@ -3042,6 +3109,14 @@
       ]
     },
     {
+      "slug": "direct-lithium-extraction",
+      "term": "direct lithium extraction",
+      "def": "Pulling lithium straight out of brine with a material that grabs it selectively, instead of waiting for the sun to evaporate the water away. Faster, recovers more of the lithium, and returns most of the water — at the cost of a chemical plant where there used to be a pond.",
+      "aliases": [
+        "DLE"
+      ]
+    },
+    {
       "slug": "disinfection",
       "term": "disinfection",
       "def": "The final treatment step that inactivates pathogens — chlorine, ozone or ultraviolet light. Which method is used changes what residual protection the water carries downstream."
@@ -3813,6 +3888,11 @@
       ]
     },
     {
+      "slug": "evaporation-pond",
+      "term": "evaporation pond",
+      "def": "A shallow artificial lake where lithium brine sits for twelve to twenty-four months while the sun removes the water and the lithium concentrates. The cheapest way to concentrate brine and the reason lithium extraction and local water supply became the same argument."
+    },
+    {
       "slug": "evaporator",
       "term": "evaporator",
       "def": "The heat exchanger where the refrigerant boils and takes heat out of the water being chilled. In a chiller it is where the useful cooling actually happens."
@@ -4234,6 +4314,11 @@
         "first article",
         "FAI"
       ]
+    },
+    {
+      "slug": "first-cycle-efficiency",
+      "term": "first-cycle efficiency",
+      "def": "The share of the lithium put into a cell on its very first charge that comes back out on the first discharge. The rest is spent forming the protective skin on the anode. A percentage point here is worth real money, so anode makers compete on it."
     },
     {
       "slug": "first-of-a-kind",
@@ -4811,6 +4896,19 @@
       "def": "Government funding recognised in a company's income statement as work under a cooperative agreement is performed; for a pre-revenue reactor developer it can be the largest line above the loss.",
       "aliases": [
         "government grant income"
+      ]
+    },
+    {
+      "slug": "graphite",
+      "term": "graphite",
+      "def": "Carbon arranged in flat sheets stacked loosely enough that lithium ions can slide between them and back out again. That layered structure is why it became the standard anode material: it stores ions without dissolving, swelling much, or falling apart."
+    },
+    {
+      "slug": "graphitisation",
+      "term": "graphitisation",
+      "def": "Heating carbon to roughly 3,000°C so its jumbled atomic structure rearranges into the ordered, layered form that stores lithium well. It is the single most energy-intensive step in making a battery anode, and the step that decides what the material costs.",
+      "aliases": [
+        "graphitization"
       ]
     },
     {
@@ -5577,6 +5675,11 @@
       ]
     },
     {
+      "slug": "intercalation",
+      "term": "intercalation",
+      "def": "Slotting an ion in between the layers of a host material without breaking the host apart. It is what makes a rechargeable battery rechargeable: the lithium goes in, comes out, and the graphite is unchanged."
+    },
+    {
       "slug": "interconnection-agreement",
       "term": "interconnection agreement",
       "def": "The signed contract between a project and the grid operator or utility that fixes the connection point, the capacity allowed, the upgrades the project must pay for and the date it must be ready. Signing it ends the study phase and is one of the rungs a buyer pays most for.",
@@ -6168,6 +6271,29 @@
       "slug": "listed-affiliate",
       "term": "listed affiliate",
       "def": "A separately stock-exchange-listed company that an asset manager controls or manages, holding a slice of the same assets its private funds hold. It gives the manager permanent capital and gives public investors access to private assets."
+    },
+    {
+      "slug": "lithium-brine",
+      "term": "lithium brine",
+      "def": "Salty groundwater under a desert salt flat with lithium dissolved in it. Pumped to the surface and concentrated, historically by leaving it in ponds to evaporate for a year or more, which is slow and cheap and uses a great deal of water."
+    },
+    {
+      "slug": "lithium-carbonate",
+      "term": "lithium carbonate",
+      "def": "One of the two chemicals a cell maker actually buys. It is the lithium source for LFP cells, which is why it, rather than lithium hydroxide, is the compound that tracks grid-storage demand."
+    },
+    {
+      "slug": "lithium-carbonate-equivalent",
+      "term": "lithium carbonate equivalent",
+      "def": "A common unit that restates any lithium product — hydroxide, metal, concentrate — as the amount of lithium carbonate it corresponds to, so quantities can be added up and compared. Written LCE.",
+      "aliases": [
+        "LCE"
+      ]
+    },
+    {
+      "slug": "lithium-hydroxide",
+      "term": "lithium hydroxide",
+      "def": "The other lithium chemical a cell maker buys. Nickel-rich cathodes are made with it rather than with carbonate because they are baked at a lower temperature, where carbonate does not react properly. Its demand therefore follows high-nickel electric-vehicle cells, not storage."
     },
     {
       "slug": "llc-converter",
@@ -6941,9 +7067,23 @@
       "def": "Fluid moving through a loop because hot fluid is less dense than cold, with no pump. A reactor that can remove decay heat this way keeps cooling itself after losing all electrical power."
     },
     {
+      "slug": "natural-graphite",
+      "term": "natural graphite",
+      "def": "Graphite mined from the ground and then purified and shaped for battery use. Cheaper than the synthetic kind and lower in embodied energy, but more variable, which shows up as shorter cycle life in a demanding cell."
+    },
+    {
       "slug": "natural-hedge",
       "term": "natural hedge",
       "def": "An offset that comes from owning two businesses whose exposures point in opposite directions, rather than from buying a financial contract. A company that both generates electricity and sells it to retail customers is long supply and short demand at the same time, so a price move that hurts one side helps the other."
+    },
+    {
+      "slug": "nca",
+      "term": "NCA",
+      "def": "Nickel cobalt aluminium oxide, a nickel-rich cathode chemistry used where energy per kilogram matters most. Like NMC it is built from lithium hydroxide rather than carbonate, and like NMC it trades cycle life and cost for range.",
+      "aliases": [
+        "nickel cobalt aluminium",
+        "lithium nickel cobalt aluminium oxide"
+      ]
     },
     {
       "slug": "ndaa-154",
@@ -6953,6 +7093,11 @@
         "Section 154",
         "§154"
       ]
+    },
+    {
+      "slug": "needle-coke",
+      "term": "needle coke",
+      "def": "A premium grade of petroleum coke whose carbon is already partly lined up in long needle-like domains, so it converts to well-ordered graphite more easily. Better anode material, tighter supply, higher price."
     },
     {
       "slug": "negative-pressure-containment",
@@ -7778,6 +7923,14 @@
       "def": "A fund with no fixed end date, so it never has to sell an asset to return capital to investors. The opposite of a closed-end fund with a ten-year life, and the reason two owners of similar assets can face completely different pressure to exit."
     },
     {
+      "slug": "petroleum-coke",
+      "term": "petroleum coke",
+      "def": "A solid, almost pure carbon left over at the bottom of an oil refinery. Cheap, abundant, and the usual starting material for synthetic graphite — which is why a graphite plant is often built near, or funded by, a refiner.",
+      "aliases": [
+        "petcoke"
+      ]
+    },
+    {
       "slug": "pfc",
       "term": "power factor correction",
       "def": "A stage at the front of an AC supply that forces the current it draws to follow the shape of the mains voltage. Without it the supply draws current in short peaks, which wastes capacity in every transformer and cable upstream and is limited by standards.",
@@ -8494,6 +8647,11 @@
       "def": "An electrochemical route to separating usable material from spent metallic fuel in molten salt, developed alongside metallic-fuel fast reactors. It recovers fuel without the aqueous chemistry of conventional reprocessing."
     },
     {
+      "slug": "qualification",
+      "term": "qualification",
+      "def": "The multi-year process by which a cell maker proves a new material behaves in its cells, at its factory, at production scale. It runs through progressively larger samples and is why a materials supplier can have a finished plant and still no revenue."
+    },
+    {
       "slug": "qualified-scheduling-entity",
       "term": "qualified scheduling entity",
       "def": "The ERCOT-registered entity that submits offers, bids and telemetry for a generator or battery and settles its charges — the trading desk's licence. An owner can be its own QSE or hire one; a 'Level 4' QSE handles the full energy and ancillary-service settlement.",
@@ -8567,6 +8725,11 @@
       "aliases": [
         "RU"
       ]
+    },
+    {
+      "slug": "radical-scavenging",
+      "term": "radical scavenging",
+      "def": "How a halogen flame retardant actually works. A flame sustains itself through highly reactive fragments called radicals; the additive releases species that mop them up, so the chain reaction starves and the fire goes out rather than spreading."
     },
     {
       "slug": "ramp-period",
@@ -9066,6 +9229,11 @@
       ]
     },
     {
+      "slug": "reverse-split",
+      "term": "reverse split",
+      "def": "Combining several shares into one, so the price per share rises in proportion while the total value held is unchanged. Usually done to satisfy an exchange rule that sets a minimum share price."
+    },
+    {
       "slug": "revolving-credit-facility",
       "term": "revolving credit facility",
       "def": "A bank line a company can draw, repay and redraw up to a limit — working-capital liquidity rather than project debt. A large syndicated revolver is a sign banks treat the company as an established borrower.",
@@ -9407,6 +9575,11 @@
         "exclusion order",
         "limited exclusion order"
       ]
+    },
+    {
+      "slug": "section-48c",
+      "term": "Section 48C",
+      "def": "A US tax credit for building qualifying clean-energy manufacturing facilities, awarded as an allocation up front and earned only once the plant is actually in service by a stated deadline. It can be sold to another taxpayer, which makes it a financing tool as well as a tax break."
     },
     {
       "slug": "securitization",
@@ -9879,6 +10052,14 @@
       ]
     },
     {
+      "slug": "solid-electrolyte-interphase",
+      "term": "solid electrolyte interphase",
+      "def": "A thin protective skin that forms on the anode the first time a cell is charged, built out of decomposed electrolyte. It is necessary — without it the electrolyte keeps decomposing — but forming it permanently consumes some lithium, which is why a cell never gives back quite all of its first charge.",
+      "aliases": [
+        "SEI"
+      ]
+    },
+    {
       "slug": "solid-oxide-fuel-cell",
       "term": "solid-oxide fuel cell",
       "def": "A fuel cell with a ceramic electrolyte that works only when very hot, roughly 700 to 1,000 degrees Celsius. The heat is the point: at that temperature natural gas breaks down into hydrogen right at the electrode, so the cell runs on pipeline gas rather than purified hydrogen. There is no flame, so nitrogen oxides and particulates are near zero — but the ceramics dislike being cycled and prefer steady output.",
@@ -9993,6 +10174,11 @@
       "aliases": [
         "spinning reserves"
       ]
+    },
+    {
+      "slug": "spodumene",
+      "term": "spodumene",
+      "def": "The hard rock most of the world's lithium is mined from. It is crushed and concentrated at the mine, then shipped to a separate plant that chemically converts it into battery-grade lithium — two industries, usually on two continents."
     },
     {
       "slug": "sponsor-created-platform",
@@ -10455,6 +10641,14 @@
         "motor generator"
       ],
       "def": "An AC machine whose rotor turns in exact step with the grid frequency — 1,500 or 1,800 rpm for a four-pole machine at 50 or 60 Hz — carrying a magnetic field set by its excitation. Driven one way it is a motor, the other way a generator; in a rotary UPS it does both, and because its output is made by a spinning magnet rather than by switching, the waveform is inherently a sine wave."
+    },
+    {
+      "slug": "synthetic-graphite",
+      "term": "synthetic graphite",
+      "def": "Graphite made by heating a carbon feedstock, usually petroleum coke, until its disordered structure rearranges into ordered graphite sheets. More consistent and longer-lasting in a cell than mined graphite, and considerably more expensive because the heat has to be paid for.",
+      "aliases": [
+        "artificial graphite"
+      ]
     },
     {
       "slug": "system-impact-study",

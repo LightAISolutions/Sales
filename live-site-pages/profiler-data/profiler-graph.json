@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-09",
- "companies": 163,
+ "companies": 165,
  "edges": [
   {
    "a": "abb",
@@ -2111,6 +2111,21 @@
   },
   {
    "a": "aes-clean-energy",
+   "b": "novonix",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Not a commercial relationship — a shared policy exposure. AES Clean Energy's dossier records the antidumping and countervailing investigations into Chinese graphite as pending; NOVONIX was a petitioner in those cases and its filings carry the outcome.",
+     "context": "AES Clean Energy's dossier states that the AD/CVD investigations into Chinese natural and synthetic graphite for lithium-ion anode material had \"final determinations expected in the first quarter of 2026\" and could result in price increases. NOVONIX's own filings close that question from the petitioner's side.\n\nCommerce issued final determinations on 13 February 2026 — 93.5% antidumping for specified companies, 102.72% China-wide, and 66.82–66.86% countervailing. On 12 March 2026 the International Trade Commission voted 2-1 that the imports do not materially retard the establishment of a United States industry, so **no antidumping or countervailing duty order was issued and none of those rates took effect**. NOVONIX records the result plainly: \"previously proposed antidumping and countervailing duties will not be implemented.\"\n\nThe two companies sit on opposite sides of the same measure — a battery buyer that would have paid the duty, and a domestic producer that petitioned for it. Recording the link makes the corpus's answer to the open question findable from either end.",
+     "source": "https://www.federalregister.gov/documents/2026/04/03/2026-06488/active-anode-material-from-china-determinations",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
    "b": "plus-power",
    "curated": {
     "a": {
@@ -2144,6 +2159,43 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "albemarle",
+   "b": "flex",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Richburg, South Carolina \"Mega-Flex\" plant announced in March 2023 appears in neither the FY2024 nor the FY2025 10-K properties tables — it is undisclosed, which is not the same as cancelled.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "albemarle",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Albemarle names Tesla in its FY2025 10-K list of major competitors in lithium compounds — the only vehicle maker on that list.",
+     "context": "The FY2025 10-K's Energy Storage competition paragraph reads: \"Major competitors in lithium compounds include Sociedad Quimica y Minera de Chile S.A., Sichuan Tianqi Lithium, Jiangxi Ganfeng Lithium, Rio Tinto plc, Pilbara Minerals, Tesla and a large number of additional Chinese companies.\" Tesla appears there because of its own lithium refinery at Corpus Christi, Texas, not because of its cell or vehicle business.\n\nThe relationship is one-directional in the record and worth stating as such: Albemarle names Tesla as a competitor, and Albemarle does not disclose Tesla as a customer. A search of the FY2025 10-K, the Q2-2026 10-Q and the trailing press-release archive returns no named offtake or supply agreement with any cell maker or automaker at all — customer relationships are described only in the generic form \"long-term supply agreements with key strategic customers\". Any claim that Albemarle supplies a specific covered company would therefore have to come from that company's side, not this one.",
+     "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Energy Storage — basic lithium compounds",
+     "date": "",
+     "text": "Albemarle names its own lithium competitors in the FY2025 10-K: \"Sociedad Quimica y Minera de Chile S.A., Sichuan Tianqi Lithium, Jiangxi Ganfeng Lithium, Rio Tinto plc, Pilbara Minerals, Tesla and a large number of additional Chinese companies\", and says competition is \"increasingly based on index-based market pricing and differentiated via product quality, product diversity, reliability of supply and customer service\".",
+     "src": "",
+     "from": "a"
+    }
+   ],
    "last": ""
   },
   {
@@ -37139,6 +37191,31 @@
   },
   {
    "a": "lg-energy-solution",
+   "b": "novonix",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "LG Energy Solution holds US$30m of NOVONIX convertible loan notes and is described by NOVONIX as a joint-development-agreement counterparty — not as an offtake customer.",
+     "context": "On 21 June 2023 LG Energy Solution subscribed for 45,221,586 convertible loan notes of A$1.00 face, carrying a 4% coupon and maturing 7 June 2028, for proceeds of US$30 million, with a conversion price of A$1.60. The FY2025 20-F describes the commercial side of the relationship as a \"joint development agreement with LGES\", not an offtake.\n\nThe instrument's own terms make a point the prose does not. The notes **mandatorily convert upon acceptance of the first purchase order under the purchase agreement with LGES** — and they remained outstanding at 30 June 2026. It follows from the notes' continued existence that no purchase order has ever been accepted. This is an inference from the conversion trigger and the balance-sheet position, both first-party disclosures, rather than a statement either party has made.\n\nThe notes are classified as current because the company cannot defer settlement, so they sit alongside the Yorkville debentures in the near-term liability stack rather than as patient strategic capital.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm",
+     "status": "active",
+     "since": "2023-06",
+     "scale": "US$30m convertible notes"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The LG Energy Solution notes mandatorily convert on acceptance of the first purchase order under the purchase agreement and remain outstanding, from which it follows that no purchase order has ever been accepted.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023-06"
+  },
+  {
+   "a": "lg-energy-solution",
    "b": "openai",
    "evid": [
     {
@@ -42557,6 +42634,74 @@
    },
    "evid": [],
    "last": "2026-02"
+  },
+  {
+   "a": "novonix",
+   "b": "panasonic",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Panasonic Energy is NOVONIX's lead customer under a binding offtake for at least 10,000 tonnes of anode active material for its US plants; the half-year report names it as \"our lead customer\".",
+     "context": "The offtake was signed on 8 February 2024 for at least 10,000 tonnes of synthetic graphite anode active material for Panasonic Energy's United States plants. The volume commitment was conditioned on NOVONIX achieving mass-production qualification milestones before the fourth quarter of 2025; if missed, Panasonic may reduce the volume by up to 20%, or terminate if the delay is substantial.\n\nThat milestone was not met. Panasonic mass production was pushed from 2026 to the second half of 2027 on 16 January 2026 and reaffirmed at that date since. NOVONIX delivered a C-sample on 11 June 2026 — the first known synthetic graphite AAM C-sample produced in North America — and states that its own internal testing indicates the material meets Panasonic's specifications, with formal validation by Panasonic still outstanding as at 31 August 2026. No public exercise of Panasonic's reduction or termination rights has been announced.\n\nThe dependency runs deeper than a supply contract. The first of the four conditions the directors list in their going-concern assessment is \"the Company achieving qualification status (being able to mass produce qualifying products for Panasonic and other future offtake customers and achieve the respective customer's quality standards)\". Panasonic's validation decision is therefore a solvency input, not merely a commercial one.",
+     "source": "https://www.novonixgroup.com/wp-content/uploads/2025/09/Panasonic-Energy-and-NOVONIX-Sign-Binding-Off-Take-Agreement.pdf",
+     "status": "active",
+     "since": "2024-02",
+     "scale": "at least 10,000 tonnes",
+     "via": "synthetic graphite anode active material"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Both live offtakes — Panasonic Energy and PowerCo SE, Volkswagen's cell arm — are for vehicle cells.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A near-four-year slip changes the character of every dated obligation around it: the Section 48C credit requires 11,000 tpa in service before 7 April 2028, the PowerCo offtake runs 2027 to 2031, and the Panasonic offtake's original window was 2025 to 2028.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Panasonic milestone that conditioned its volume commitment was missed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "But **both binding offtakes are with electric-vehicle cell makers** — Panasonic Energy for US vehicle plants and PowerCo for Volkswagen — and no storage-specific agreement is disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Panasonic's formal validation of the June C-sample:* the single event that would convert the qualification record from three failures to one success, expected on a six-to-twelve-month feedback cycle.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "First known North-American-produced synthetic graphite anode active material C-sample delivered to Panasonic Energy; internal testing indicates it meets Panasonic's specifications — The single most important technical milestone the company has reached, and the gate the going-concern assessment turns on. A C-sample is 5–30 tonnes produced on production equipment, with customer feedback typically taking 6–12 months — which lands the answer in roughly mid-2027 against a second-half-2027 start of production, leaving essentially no slack.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526266701/nvx-ex99_1.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-02-08",
+     "text": "Binding offtake agreement with Panasonic Energy for at least 10,000 tonnes of anode material for its US plants — The volume commitment was conditioned on NOVONIX meeting mass-production qualification milestones before the fourth quarter of 2025. That milestone was not met; Panasonic may reduce the volume by up to 20% or terminate if the delay is substantial, and no public exercise of either right has been announced.",
+     "src": "https://www.novonixgroup.com/wp-content/uploads/2025/09/Panasonic-Energy-and-NOVONIX-Sign-Binding-Off-Take-Agreement.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-11"
   },
   {
    "a": "nrg-energy",

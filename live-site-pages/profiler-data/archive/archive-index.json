@@ -2582,5 +2582,13 @@
    "archivedAt": "2026-09-09",
    "supersededBy": 2
   }
+ ],
+ "aes-clean-energy": [
+  {
+   "file": "aes-clean-energy.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-09",
+   "supersededBy": 2
+  }
  ]
 }

@@ -1,0 +1,493 @@
+{
+ "schemaVersion": 2,
+ "slug": "novonix",
+ "title": "NOVONIX — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "sections": [
+  {
+   "id": "start-here-the-other-electrode",
+   "title": "Start here: the electrode nobody argues about",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "Battery chemistry arguments are almost always about the **{{cathode}}** — LFP against nickel-rich, cobalt content, sodium-ion. The {{anode}} is where the argument stops, because for thirty years the answer has been the same: graphite.",
+    "That makes an anode-material supplier an unusual thing to study. It is not exposed to a chemistry bet, because **{{LFP}}** cells for grid storage and nickel-rich cells for vehicles both use a graphite anode. It is exposed to total lithium-ion demand, whatever wins.",
+    "But being chemistry-agnostic is not the same as being easy. Graphite is where the hardest manufacturing problem in the cell supply chain lives, and it is the step most completely concentrated in one country: China and Chinese-controlled companies are forecast to hold roughly **99.1% of global anode capacity in 2026**, on the market data NOVONIX itself cites.",
+    "This guide teaches, in order: what the anode physically does and why graphite is so hard to displace; why there are two kinds of graphite and what separates them; what {{graphitisation}} costs and why it is the whole game; how a battery material gets **{{qualification}}** and why that takes years; and what a trade case does to the economics when it fails."
+   ]
+  },
+  {
+   "id": "why-graphite",
+   "title": "Why graphite, and why nothing has replaced it",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Charge a lithium-ion cell and the lithium ions move to the anode; discharge it and they move back. The anode's job is to hold them in the meantime, cheaply, and to give every one of them back, thousands of times, without changing shape.",
+    "Graphite does this by **{{intercalation}}**: it is carbon in flat sheets stacked loosely enough that lithium slides into the gaps between layers. Fully loaded, the arrangement is one lithium for every six carbon atoms — the reason the theoretical capacity works out at 372 milliamp-hours per gram, a number worth remembering because everything else is measured against it.",
+    "What makes graphite so difficult to beat is not that number, which is modest. Silicon stores roughly ten times as much. It is that graphite barely changes size while doing it — a few per cent. Silicon swells by around 300%, and a material that swells and shrinks by that much every cycle grinds itself and everything touching it to powder. That is why silicon appears as a small percentage additive rather than as a replacement, and why every silicon-anode announcement should be read as *how much* silicon, not *whether*.",
+    "So the anode is a boring, cheap, physically well-behaved material — and precisely because it is boring, competition happens entirely on cost, consistency and where it is made. There is no performance story to hide behind."
+   ]
+  },
+  {
+   "id": "natural-versus-synthetic",
+   "title": "Two kinds of graphite, and why they are not substitutes",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Anode graphite comes from a mine or from a furnace, and the industry treats these as different products rather than as grades of one product. On 2024 shipments the split was decisive: of 2.11 million tonnes of anode material worldwide, artificial graphite was 83.2%.",
+   "cols": [
+    "",
+    "{{natural graphite}}",
+    "{{synthetic graphite}}"
+   ],
+   "rows": [
+    [
+     "Where it comes from",
+     "Mined, then purified and rounded into spheres",
+     "Made by heating a carbon feedstock — usually **{{petroleum coke}}** — until it rearranges into graphite"
+    ],
+    [
+     "Purification",
+     "Typically acid treatment to remove mineral impurities, which is chemically messy",
+     "No chemical purification needed if the process is hot enough and the feedstock is clean"
+    ],
+    [
+     "Consistency",
+     "Varies with the orebody; every deposit is slightly different",
+     "Set by the process, so batch-to-batch variation is much lower"
+    ],
+    [
+     "Cycle life in a demanding cell",
+     "Shorter — the structural variability shows up over thousands of cycles",
+     "Longer, which is why premium and long-duration applications pay for it"
+    ],
+    [
+     "Cost driver",
+     "Mining and purification",
+     "**Energy.** The heat is the product"
+    ],
+    [
+     "Embodied carbon",
+     "Lower — no 3,000°C step",
+     "Higher, and the reason process efficiency claims are worth money"
+    ],
+    [
+     "Where it is made",
+     "Concentrated in China, with African and other mines feeding Chinese processing",
+     "Overwhelmingly China; almost no large-scale Western capacity exists"
+    ]
+   ]
+  },
+  {
+   "id": "what-graphitisation-costs",
+   "title": "The 3,000-degree step that is the whole business",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Petroleum coke is nearly pure carbon already, but the carbon is disordered — sheets exist in small fragments pointing in every direction. Lithium cannot move through that usefully. **{{graphitisation}}** is heating it until the atoms have enough energy to rearrange into large, flat, aligned sheets.",
+    "The temperature required is around 3,000°C. For scale, steel melts at about 1,500°C. Sustaining twice that, in bulk, for days, is the reason a tonne of synthetic graphite costs what it does — and it is why the whole industry's economics are an energy-price argument dressed up as a materials one.",
+    "The dominant method is the **{{Acheson furnace}}**, essentially unchanged in principle since the 1890s: pack the material into a long open trench, bury it in insulation, pass an enormous electric current directly through it for days, then wait days more for it to cool enough to unpack. It is a **batch** process. Every cycle you heat the furnace, the packing material and the insulation, and then throw all that heat away.",
+    "The alternative NOVONIX pursues is a **continuous induction** furnace: material moves through continuously and is heated by induction rather than by direct current through a packed bed. In principle continuous processing wins on three fronts at once — the furnace stays hot so the heat-up energy is spent once, throughput is not limited by cooling cycles, and process conditions can be held steady instead of drifting through a batch.",
+    "There is a second reason the choice matters, and it is not thermodynamic. Graphitisation furnaces, granulation and coating equipment are themselves subject to Chinese export controls. A producer whose furnace design comes from outside that supply chain is making a sourcing claim as much as an efficiency claim — which is exactly what rules excluding prohibited foreign entities are written to reward."
+   ]
+  },
+  {
+   "id": "purity-and-the-first-cycle",
+   "title": "Why purity is worth paying for: the first charge you never get back",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The first time a cell is charged, something irreversible happens. The electrolyte in contact with the anode decomposes and forms a thin film across its surface — the **{{solid electrolyte interphase}}**, or SEI.",
+    "This film is necessary. It is electrically insulating but lets lithium ions through, so once formed it stops the electrolyte decomposing further. Without it the cell would consume itself.",
+    "The cost is that building it permanently locks up lithium. That is why a cell never returns quite all of the first charge you put in, and the fraction it does return is the **{{first-cycle efficiency}}**. A good graphite anode gives back somewhere in the mid-90s of a per cent; a poor one considerably less.",
+    "The lithium lost here is lost forever, and it is expensive lithium. So a percentage point of first-cycle efficiency translates directly into cells that need less lithium for the same delivered capacity — which is why anode makers compete hard on a number that looks like a rounding error.",
+    "Impurities make it worse in two ways: they catalyse extra electrolyte decomposition, and metallic impurities can eventually cause internal short circuits. This is the practical reason a cell maker cannot simply switch anode suppliers on price. The material interacts with the electrolyte, the binder, the cathode and the formation protocol, and none of that is transferable. Which brings us to why qualification takes years."
+   ]
+  },
+  {
+   "id": "the-qualification-ladder",
+   "title": "The qualification ladder: why a finished plant can have no revenue",
+   "kind": "timeline",
+   "read": "7 min",
+   "intro": "A cell maker will not buy a new anode material because it tests well. It buys when it has proved the material works in its cells, on its lines, at scale — a staged process that runs for years. The horizontal axis is grams of material per stage, on a logarithmic scale, because the size step is the point.",
+   "unit": "log10 of sample size in kilograms",
+   "lanes": {
+    "gate": "What the customer receives",
+    "ask": "What is being proved"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "gate",
+     "label": "Pre-A sample",
+     "sub": "Under 1 kg. Feedback in under two months"
+    },
+    {
+     "x": 0,
+     "lane": "ask",
+     "label": "Does the chemistry work at all",
+     "sub": "Basic electrochemical behaviour in a coin or small pouch cell"
+    },
+    {
+     "x": 0.7,
+     "lane": "gate",
+     "label": "A sample",
+     "sub": "1–5 kg. Feedback in under two months"
+    },
+    {
+     "x": 0.7,
+     "lane": "ask",
+     "label": "Does it work in our cell design",
+     "sub": "Tested against the customer's own electrolyte, binder and cathode"
+    },
+    {
+     "x": 2.5,
+     "lane": "gate",
+     "label": "B sample",
+     "sub": "50–10,000 kg. Feedback around six months"
+    },
+    {
+     "x": 2.5,
+     "lane": "ask",
+     "label": "Can you make it consistently",
+     "sub": "Batch-to-batch variation, and performance over meaningful cycle counts"
+    },
+    {
+     "x": 4.2,
+     "lane": "gate",
+     "label": "C sample",
+     "sub": "5–30 tonnes, on production equipment. Feedback six to twelve months"
+    },
+    {
+     "x": 4.2,
+     "lane": "ask",
+     "label": "Can your FACTORY make it",
+     "sub": "The customer is now qualifying the plant, not the powder — which is why the material must come off the real line"
+    },
+    {
+     "x": 5,
+     "lane": "gate",
+     "label": "Start of production",
+     "sub": "Commercial volumes under the offtake"
+    },
+    {
+     "x": 5,
+     "lane": "ask",
+     "label": "Contract volumes begin",
+     "sub": "The first revenue the plant has ever earned"
+    }
+   ]
+  },
+  {
+   "id": "who-actually-makes-it",
+   "title": "Who actually makes anode material",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "2024 anode material shipments, thousand tonnes (SNE Research)",
+   "intro": "The scale question, answered with the only independent shipment data available. Total 2024 shipments were 2.11 million tonnes across all anode types, and every one of the ten largest producers is Chinese. The final bar is a single large Western plant, drawn to the same scale, and that comparison is the point of the section.",
+   "items": [
+    {
+     "label": "BTR New Material",
+     "sub": "Largest producer worldwide in 2024",
+     "v": 432
+    },
+    {
+     "label": "Shanshan",
+     "sub": "Second",
+     "v": 340
+    },
+    {
+     "label": "Shinzoom",
+     "sub": "Third",
+     "v": 213
+    },
+    {
+     "label": "Shangtai",
+     "sub": "Fourth",
+     "v": 208
+    },
+    {
+     "label": "Kaijin",
+     "sub": "Fifth",
+     "v": 158
+    },
+    {
+     "label": "Zichen",
+     "sub": "Sixth",
+     "v": 135
+    },
+    {
+     "label": "A 20,000 tpa Western plant at full capacity",
+     "sub": "For comparison: under 1% of 2024 global shipments, and about 4.6% of the single largest producer's volume",
+     "v": 20
+    }
+   ]
+  },
+  {
+   "id": "the-policy-stack",
+   "title": "When the customer is partly the government: the policy stack",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "A Western anode plant does not exist because the economics work unaided — it exists because policy is trying to make them work. Each instrument does a different job, and each fails in a different way, which is worth separating.",
+   "cols": [
+    "Instrument",
+    "What it does",
+    "How it can fail you"
+   ],
+   "rows": [
+    [
+     "A construction grant",
+     "Reimburses capital spending against verified invoices, usually requiring matching company funding",
+     "It is paid in arrears, so it funds nothing up front; and an award can be reviewed or cancelled after it is made"
+    ],
+    [
+     "**{{Section 48C}}** investment tax credit",
+     "A credit for building the plant, allocated in advance and earned when the plant is placed in service",
+     "It vests on a **deadline**. If the plant is late, a certified credit simply lapses — which puts a construction schedule and a tax asset in direct conflict"
+    ],
+    [
+     "**{{45X}}** production tax credit",
+     "Pays per unit produced, for years",
+     "It rewards output, so it is worth nothing to a plant that has not started. It also carries sourcing tests that determine whether the *customer's* cells qualify"
+    ],
+    [
+     "A government loan commitment",
+     "Very large, long-tenor debt at a rate the private market will not offer",
+     "It is *conditional*. Conditions precedent can take years, and until they are met the money is not available — so a company can hold a headline commitment and still be unable to spend a dollar of it"
+    ],
+    [
+     "**{{AD/CVD}}** trade duties",
+     "Raises the price of imports, lifting the domestic price the producer can charge",
+     "Two separate agencies must both agree. One sets the duty rates; the other must find the domestic industry is actually being harmed. **If the second says no, the first's rates never take effect at all**"
+    ],
+    [
+     "Import tariffs",
+     "A blunter, unconditional levy",
+     "Set by policy that can change; and a tariff on a competitor's product raises the domestic price only as much as the tariff, which may be far less than a duty would have"
+    ]
+   ]
+  },
+  {
+   "id": "what-a-failed-trade-case-does",
+   "title": "What a failed trade case does to a business plan",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "The trade-remedy row above is not hypothetical, and it is the single most instructive thing in this company's record.",
+    "In February 2026 the US Commerce Department set final duties on Chinese anode active material: **93.5% antidumping** for named companies, 102.72% for the rest of China, and **66.82–66.86% countervailing** — a stacked total above 160%. Domestic producers, NOVONIX among the petitioners, publicised it.",
+    "Every one of those rates was conditional on a second decision. In March 2026 the International Trade Commission voted **2-1** that the imports do not materially retard the establishment of a US industry. **No duty order issued, and none of those rates ever took effect.**",
+    "The consequence is visible in the company's own accounts four months later. The price assumption in its impairment model — the price it expects to sell its own product for — was cut from **US$10–12/kg to US$7–11/kg**, naming the Commerce ruling as the reason, against operating costs of US$6–8/kg. A 20–30% cut to the assumed selling price of the only product a company makes is not a news item; it is a different business plan.",
+    "The lesson generalises well beyond this company. **A regulatory process with two gates is not decided at the first gate**, however loudly the first gate is announced. When a plan depends on a trade remedy, find out how many independent bodies have to agree, and treat the announcement of any one of them as an option rather than an outcome."
+   ]
+  },
+  {
+   "id": "the-price-floor-mechanism",
+   "title": "A financing structure that turns a share price into a cash call",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "One more mechanism worth understanding, because it appears throughout small-cap industrial finance and is routinely misread as ordinary debt.",
+    "A convertible debenture is a loan the lender can convert into shares instead of being repaid. For a company with no revenue, that is attractive: if the shares do well, the debt turns into equity and never has to be repaid in cash.",
+    "The lender protects itself with a **floor price**. Below that level the lender will not convert — the shares are worth too little — and instead a clause activates requiring the company to redeem part of the loan **in cash**, typically a fixed percentage of the outstanding balance, often repeating at intervals while the price stays low.",
+    "Read what that does. The instrument is cheap and flexible while the share price is healthy. When the share price falls it silently inverts: exactly when raising equity is hardest and dilution most painful, the structure starts demanding cash instead. A financing designed to avoid cash repayment becomes a cash obligation at the worst possible moment.",
+    "The general rule for reading any convertible: **find the floor, and find what happens below it.** The conversion price tells you the upside; the floor clause tells you the downside, and only one of those two appears in the headline when the deal is announced."
+   ]
+  },
+  {
+   "id": "where-novonix-slots-in",
+   "title": "Where an anode maker slots in",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Placing the activity against the layer it serves, and against what this corpus covers elsewhere.",
+   "cols": [
+    "Activity",
+    "Layer of the chain",
+    "Relationship to this corpus"
+   ],
+   "rows": [
+    [
+     "Sourcing petroleum coke",
+     "Feedstock",
+     "An oil-refining by-product. The refiner is often a strategic investor as well as a supplier"
+    ],
+    [
+     "Graphitisation and shaping",
+     "Materials processing",
+     "The energy-intensive step, and the one concentrated in China"
+    ],
+    [
+     "Selling anode material to cell makers",
+     "One layer above the cell",
+     "Sells to the cells-and-chemistry segment. Chemistry-agnostic: LFP storage cells and nickel-rich vehicle cells both need it"
+    ],
+    [
+     "Cathode material",
+     "A different supply chain",
+     "Made from lithium carbonate or hydroxide — see the Albemarle guide. Anode and cathode are unrelated industries that meet only inside the cell"
+    ],
+    [
+     "Cells, modules, containers",
+     "Downstream",
+     "The customer, not the competitor"
+    ],
+    [
+     "What an anode maker does not do",
+     "—",
+     "No cells, no modules, no systems. Its entire commercial existence is a qualified powder and a plant that can make it repeatedly"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does the anode do in a lithium-ion cell, and what material almost always does it?",
+     "a": "It holds the lithium ions while the cell is charged and releases them on discharge, thousands of times, without changing shape. It is graphite in almost every commercial cell — and unlike the cathode, it is not a chemistry choice that varies between LFP and nickel-rich cells."
+    },
+    {
+     "q": "Graphite stores about a tenth as much lithium per gram as silicon. Why is it still the standard?",
+     "a": "Because it barely changes size while doing it — a few per cent, against roughly 300% for silicon. A material that swells and shrinks by that much every cycle destroys itself and the electrode around it. Silicon therefore appears as a small additive, not a replacement."
+    },
+    {
+     "q": "What physically happens during graphitisation, and why is it expensive?",
+     "a": "Disordered carbon is heated to around 3,000°C so the atoms rearrange into large, flat, aligned sheets that lithium can move between. Sustaining twice the melting point of steel, in bulk, for days, is the cost — the heat is effectively the product."
+    },
+    {
+     "q": "What is the key inefficiency of the Acheson furnace?",
+     "a": "It is a batch process. Each cycle heats the material, the packing and the insulation, then everything cools and that heat is thrown away, before the furnace is unpacked and repacked. A continuous furnace stays hot, so the heat-up energy is spent once."
+    },
+    {
+     "q": "What is the SEI, and why does it cost lithium?",
+     "a": "The solid electrolyte interphase: a thin film formed on the anode during the first charge from decomposed electrolyte. It is necessary — it stops further decomposition — but forming it permanently consumes lithium, which is why a cell never returns all of its first charge."
+    },
+    {
+     "q": "Why do anode makers compete over a percentage point of first-cycle efficiency?",
+     "a": "Because the lithium consumed forming the SEI is lost permanently and is expensive. A higher first-cycle efficiency means less lithium is needed for the same delivered capacity, so a fraction of a per cent translates into real cost per kilowatt-hour."
+    },
+    {
+     "q": "Why can't a cell maker just switch anode suppliers on price?",
+     "a": "Because the anode material interacts with the electrolyte, the binder, the cathode and the formation protocol. None of that transfers between suppliers, so a new material has to be re-proved through the whole qualification ladder — which takes years."
+    },
+    {
+     "q": "What is a C-sample actually testing?",
+     "a": "The factory, not the powder. It is 5–30 tonnes made on production equipment rather than in a laboratory, so the customer is proving the plant can make the qualified material repeatably at scale. Feedback typically takes six to twelve months."
+    },
+    {
+     "q": "Why is an anode supplier chemistry-agnostic in a way a cathode supplier is not?",
+     "a": "Because LFP cells and nickel-rich cells both use graphite anodes. The chemistry argument is about the cathode. An anode maker is therefore exposed to total lithium-ion demand rather than to which chemistry wins."
+    },
+    {
+     "q": "A trade case sets duties above 160% and the shares rise. What has actually been decided?",
+     "a": "Only half of it. One agency sets the rates; a second must separately find the domestic industry is being harmed. Until that second finding, the rates are conditional and can end up never taking effect at all."
+    },
+    {
+     "q": "What does a floor price in a convertible debenture do when the share price falls below it?",
+     "a": "It inverts the instrument. Instead of converting to equity, a clause requires the company to redeem part of the loan in cash, often repeating at intervals while the price stays low — turning a structure designed to avoid cash repayment into a cash demand exactly when funding is hardest."
+    },
+    {
+     "q": "Why does an investment tax credit with an in-service deadline conflict with capital conservation?",
+     "a": "Because slowing construction to preserve cash pushes the in-service date out, and if it passes the deadline the credit lapses entirely. Spending less can therefore cost more than it saves."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A cell maker announces it is moving from LFP to a high-nickel chemistry. What happens to its anode material requirement?",
+     "c": [
+      "It switches from graphite to a nickel-based anode",
+      "It is broadly unchanged — both chemistries use a graphite anode",
+      "It falls to zero, since nickel-rich cells have no anode",
+      "It switches from synthetic to natural graphite by necessity"
+     ],
+     "a": 1,
+     "why": "Chemistry names describe the cathode. Both LFP and nickel-rich cells use graphite anodes, which is what makes an anode supplier exposed to total lithium-ion demand rather than to a chemistry bet. The cathode supply chain changes completely; the anode one does not."
+    },
+    {
+     "q": "A new anode material shows excellent performance in coin cells. How close is it to revenue?",
+     "c": [
+      "Very close — the electrochemistry is the hard part",
+      "Years away: it must still be proved in the customer's own cell design, made consistently at scale, and finally produced on real production equipment for the customer to qualify the factory",
+      "One qualification step away, since the chemistry is settled",
+      "It depends only on plant construction, not on the customer"
+     ],
+     "a": 1,
+     "why": "Coin-cell performance is roughly the pre-A or A stage. Beyond it lie B samples proving batch consistency and C samples of 5–30 tonnes made on production equipment, where the customer qualifies the plant rather than the powder — with six to twelve months of feedback on that stage alone."
+    },
+    {
+     "q": "A producer's furnace design uses no Chinese equipment or licensed technology. Beyond energy efficiency, what does that buy?",
+     "c": [
+      "Nothing commercial — it is a marketing point",
+      "Eligibility under rules that exclude prohibited foreign entities, and insulation from export controls that cover graphitisation furnaces and coating equipment themselves",
+      "Lower capital cost, since Western equipment is cheaper",
+      "Exemption from import tariffs on the finished product"
+     ],
+     "a": 1,
+     "why": "Chinese export controls cover not just the material but the equipment, processes and technology to make it. A furnace sourced outside that chain is both a supply-security position and a sourcing claim — and sourcing rules that exclude prohibited foreign entities are precisely what determine whether a customer's cells qualify for production credits."
+    },
+    {
+     "q": "Commerce sets antidumping duties above 90% on a competitor's imports. The domestic producer's shares rise. Six weeks later the trade commission votes that the domestic industry is not being materially harmed. What is the effect on the duties?",
+     "c": [
+      "They are halved",
+      "They take effect at a reduced rate pending appeal",
+      "No duty order issues and none of the rates take effect at all",
+      "They take effect but expire after one year"
+     ],
+     "a": 2,
+     "why": "The two determinations are independent and both are required. Commerce sets the rate; the commission must separately find injury. A negative injury finding means no order is issued and the rates never apply — which is why a first-gate announcement should be read as an option, not an outcome."
+    },
+    {
+     "q": "A pre-revenue company holds a US$103m investment tax credit that vests only when its first production line is in service before a fixed date. It then slows construction to conserve cash. What has it done?",
+     "c": [
+      "Reduced risk unambiguously, since less cash is spent",
+      "Traded a near-term cash saving against the risk that a certified credit lapses entirely",
+      "Nothing material — tax credits do not expire",
+      "Improved its position, because the credit can be claimed at any time"
+     ],
+     "a": 1,
+     "why": "An in-service deadline puts the construction schedule and the tax asset in direct conflict. Conserving cash extends the schedule, and if the date passes the credit is not reduced — it is lost. This is the specific way capital conservation can cost more than it saves."
+    },
+    {
+     "q": "A convertible debenture carries a floor price. The share price falls well below it. What is the most likely consequence for the borrower?",
+     "c": [
+      "The lender converts early, reducing the debt",
+      "The interest rate falls, since conversion is now unlikely",
+      "A clause activates requiring cash redemption of part of the balance, potentially repeating at intervals",
+      "Nothing until maturity"
+     ],
+     "a": 2,
+     "why": "Below the floor the lender will not convert, so the protective clause requires the company to redeem a percentage of the outstanding balance in cash, often recurring while the condition persists. The structure inverts from equity-settled to cash-hungry exactly when equity is hardest to raise."
+    },
+    {
+     "q": "Why does synthetic graphite command a premium over natural graphite despite higher embodied carbon?",
+     "c": [
+      "It stores substantially more lithium per gram",
+      "It is more consistent batch to batch, which shows up as longer cycle life in demanding cells",
+      "It requires no purification of any kind",
+      "It is cheaper to ship"
+     ],
+     "a": 1,
+     "why": "Both are graphite and both intercalate lithium similarly, so capacity per gram is not the differentiator. The premium is for consistency: a furnace-set structure varies far less than an orebody, and that variability is what limits cycle life in cells that are cycled hard."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "tap density",
+   "d": "How much powder fits into a given volume once it has been settled by tapping. It matters because an electrode has a fixed thickness, so a denser powder puts more active material — and therefore more energy — into the same cell."
+  },
+  {
+   "t": "offtake agreement",
+   "d": "A contract in which a customer commits in advance to buy a stated volume, usually over several years. For a plant that does not yet exist it is the document lenders read, which is why it is signed long before the first tonne is made — and why its conditions precedent matter as much as its volumes."
+  }
+ ]
+}

@@ -1,0 +1,1226 @@
+{
+ "schemaVersion": 7,
+ "slug": "novonix",
+ "name": "NOVONIX Limited",
+ "shortName": "NOVONIX",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.novonixgroup.com",
+ "headquarters": "Brisbane, Queensland, Australia (registered); operating base 1029 West 19th Street, Chattanooga, Tennessee, USA",
+ "founded": 2012,
+ "employees": "192 at 31 December 2025 (126 United States, 66 Canada); the 66 Canadian roles left with the Battery Technology Solutions divestiture on 30 April 2026 and no updated total has been published",
+ "ownership": {
+  "type": "public",
+  "ticker": "ASX: NVX · Nasdaq: NVX"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** NOVONIX is a pre-revenue synthetic graphite anode developer whose entire investment case now rests on qualifying one plant for one lead customer, and whose auditor has flagged a material uncertainty over its ability to continue as a going concern. Continuing-operations revenue for the half year to 30 June 2026 was **zero**; the date for Riverside to reach full production capacity has moved from December 2027 to **September 2031**; and a Nasdaq minimum-bid-price cure deadline falls on **Monday 14 September 2026**, five days after this dossier was written, with the outcome unresolved.\n\n**BACKGROUND.** An Australian company, dual-listed as ASX: NVX (ordinary shares) and Nasdaq: NVX (American depositary shares), with its operating centre in Chattanooga, Tennessee. It files a Form 20-F as a foreign private issuer and furnishes every ASX announcement as a Form 6-K. Following the sale of the Battery Technology Solutions division on 30 April 2026 it is a single-business company: synthetic graphite anode active material, made in a continuous induction furnace process it developed with Harper International, aimed at the North American battery supply chain. Auditor PricewaterhouseCoopers, Brisbane. ABN 54 157 690 830.",
+ "ecosystemRole": "NOVONIX would sit one layer above the cell makers in this corpus if it were shipping — it makes the anode active material that goes into the negative electrode of a lithium-ion cell, in the same upstream position that a lithium producer occupies on the cathode side. Graphite is chemistry-agnostic in a way cathode material is not: an LFP cell built for grid storage and a nickel-rich cell built for a vehicle both use a graphite anode, so an anode supplier is exposed to total lithium-ion demand rather than to a chemistry bet.\n\nWhat makes the company interesting to a storage and datacentre corpus is not scale but structure. It claims to be \"the only qualified U.S.-based supplier of battery-grade synthetic graphite anode material\", in a market where China and Chinese-controlled companies are forecast to hold about 99.1% of global anode capacity in 2026 and North America is forecast to move from near zero to roughly 4% by 2035 (both figures Benchmark Mineral Intelligence, cited by the company). It is a policy-created business: a US$100m Department of Energy grant, a US$103m Section 48C investment tax credit and a conditional Department of Energy loan commitment of up to US$754.8m are what stand between the plant and the capital markets.\n\nIts commercial commitments, however, are electric-vehicle-first. Both live offtakes — Panasonic Energy and PowerCo SE, Volkswagen's cell arm — are for vehicle cells. The company names energy storage among its target segments and cites storage-installation growth as a demand driver, but no storage-specific offtake is disclosed. The honest description is an upstream materials supplier with stated but uncontracted exposure to grid storage.",
+ "productsAndServices": [
+  {
+   "name": "Synthetic graphite anode active material — the Riverside plant",
+   "category": "Battery raw materials",
+   "description": "The whole of the continuing business. Battery-grade synthetic graphite anode active material (AAM) made at the Riverside facility in Chattanooga, Tennessee, acquired in July 2021 for US$42.6m. The only publicly named grade is GX-23. Nameplate is 20,000 tonnes per annum; four graphitisation furnaces are fully installed and in calibration and raw-material testing. Revenue from this business to date is US$0 — the plant has produced industrial-grade material and customer samples, not commercial battery-grade sales.",
+   "highlights": [
+    "First mass-production, commercial-grade industrial sample shipped in late September 2025 to what the company describes as \"one of North America's largest value-added carbon processors\", unnamed",
+    "First known North-American-produced synthetic graphite AAM C-sample delivered to Panasonic Energy on 11 June 2026; internal testing indicates it meets Panasonic's specifications, subject to formal validation",
+    "Battery-grade mass production targeted for the second half of 2027, moved from 2026 on 16 January 2026 and reaffirmed since",
+    "A Minviro life-cycle assessment of GX-23 found roughly 60% lower global warming potential than conventional anode-grade synthetic graphite from Inner Mongolia and roughly 30% lower than natural graphite from Heilongjiang Province",
+    "Over 100 samples went to 15 customers and prospects during 2025; the FY2025 20-F states 13 prospective customers were receiving samples",
+    "Contractual agreements to supply up to 157,000 tonnes of anode material from 2027 to 2034, per the company's own impairment-model disclosure"
+   ],
+   "positioning": "The company's claim is categorical: \"To our knowledge, we are the only qualified U.S.-based supplier of battery-grade synthetic graphite anode material.\" It names no competitor anywhere in its first-party materials, framing competition in four categories instead — Asian synthetic producers, natural graphite miners, other graphitisation companies and US entrants, and disruptive chemistries such as silicon anodes. Independent data puts that claim in proportion: SNE Research counted 2.11 million tonnes of global anode shipments in 2024, of which artificial graphite was 1.76 Mt or 83.2%, and all ten of the largest producers are Chinese — BTR at 432 kt-plus and Shanshan at 340 kt, with POSCO Future M falling to eleventh. A 20,000 tpa plant is under 1% of that market and about 4.6% of BTR's single-company volume. Against Western peers, Syrah Resources' Vidalia is further along at 11,250 tpa with production since early 2024. The defensible typing is aspirant rather than incumbent or challenger — there is no shipped commercial volume to contest anyone with.",
+   "soldThrough": "Direct, under binding offtake agreements conditioned on qualification milestones, with an agreed market-based price formula in each case. No contract price is public; the company's own impairment model assumes a realised US$7–11/kg, cut from US$10–12/kg a year earlier, against operating costs of US$6–8/kg.",
+   "targetSegments": "Electric-vehicle cells, stationary energy storage, defence, drones, aerospace, telecommunications, medical devices, consumer electronics, and industrial non-battery graphite",
+   "roadmap": "Full production capacity at Riverside is now targeted for September 2031, extended from December 2027 — the company's stated reason is \"management's conscious decision to conserve capital and reduce near-term spending\". A second site, NOVONIX Enterprise South, is a 182-acre parcel in the Enterprise South Industrial Park with an initial 31,500 tpa design and 450–500 jobs, taking Chattanooga capacity above 50,000 tpa; NOVONIX will not close on the land until the conditions precedent to the US$754.8m Department of Energy loan commitment are satisfied, and it had not done so as at the half-year report. The longer-range ambition stated in the going-concern note is at least 150,000 tpa. An option over 17.5 acres adjacent to Riverside, taken on 10 March 2026 at a US$26.5m purchase price and pitched as saving more than US$200m of capital by consolidating the build onto one site, was abandoned on 30 July 2026."
+  },
+  {
+   "name": "Continuous induction furnace graphitisation — the process technology",
+   "category": "Process technology",
+   "description": "The technical basis of the whole company: NOVONIX Generation 3 Continuous Induction Furnace Systems, developed with Harper International Corporation under a December 2020 exclusive-use agreement in which Harper develops and exclusively supplies the thermal-processing systems for the battery anode market and NOVONIX commits to buy from Harper. It replaces the batch Acheson furnace that dominates Chinese graphitisation with a continuous, induction-heated process.",
+   "highlights": [
+    "Continuous rather than batch operation, with claimed increased energy efficiency and no chemical purification step",
+    "The company states the process \"does not depend on any Chinese equipment, IP, or know-how\" — the core of its non-FEOC positioning",
+    "Claimed \"virtually zero emissions and limited use of chemicals\", higher charge rate and longer cycle life, and \"highest purity in the market… essentially no contaminants\"",
+    "Marketed as drop-in: \"can be integrated into current cell designs with no material additional costs to cell manufacturers\"",
+    "Energy input stated as 57% carbon-free, of which 15% renewable; net-zero target 2050",
+    "Process flow: petroleum coke → crushing → milling → shaping → [agglomeration] → [calcination] → graphitisation → calcination → [particle coating] → [deagglomeration] → sieving and magnetic separation → packaging"
+   ],
+   "positioning": "The differentiation is as much geopolitical as technical — a graphitisation route that carries no Chinese equipment or licensed technology is what makes the output eligible under sourcing rules that exclude prohibited foreign entities. A material qualification applies to the ownership of that technology. In January 2025 NOVONIX signed a separate exclusive *licence* agreement with Harper for the right to design and develop the furnace technology for its own internal use. It was required to make an initial payment no later than 31 December 2025, did not make it, and the licence agreement automatically expired on 1 January 2026. The December 2020 exclusive supply agreement survives, so the company retains exclusive access — but as a purchaser of Harper's furnaces rather than as a holder of rights to build them, and the 20-F flags the dependency explicitly.",
+   "soldThrough": "Not sold — an internal process technology, supplied to NOVONIX by Harper International under the 2020 exclusive-use agreement",
+   "targetSegments": "Internal use at Riverside and, if built, Enterprise South",
+   "roadmap": "No published furnace-technology roadmap beyond the installed Generation 3 systems; the half-year report notes an expected reduction in furnace consumable parts \"due to improvements in furnace component technology\""
+  },
+  {
+   "name": "Feedstock and upstream supply",
+   "category": "Raw material supply",
+   "description": "Synthetic graphite is made from petroleum coke, a by-product of oil refining, and NOVONIX's feedstock position runs through its largest shareholder. Phillips 66 invested US$150m for roughly 15% of the company in September 2021, held 90,931,263 shares or about 10.57% at 31 December 2025 after dilution, holds a board seat, and is a key supplier of petroleum coke.",
+   "highlights": [
+    "Technology Development Agreement with Phillips 66 signed January 2022 to identify improved feedstocks",
+    "Phillips 66's Lake Charles, Louisiana refinery is identified as a coke source",
+    "The Phillips 66 board nominee is Suresh Vaidyanathan, Vice President, Renewable Fuels at Phillips 66",
+    "The FY2025 20-F notes that Phillips 66 \"has certain rights as a shareholder that are not equal to those of other shareholders\"",
+    "A domestic petroleum-coke supply is part of the non-Chinese sourcing claim, not merely a commercial convenience"
+   ],
+   "positioning": "A strategic-investor supply relationship rather than an arm's-length one; it gives NOVONIX a US feedstock route but concentrates a critical input and roughly a tenth of the register in the same counterparty",
+   "soldThrough": "Not applicable — an inbound supply relationship",
+   "targetSegments": "Not applicable",
+   "roadmap": "No dated milestones disclosed for the feedstock programme"
+  },
+  {
+   "name": "Divested and retained interests",
+   "category": "Former business lines",
+   "description": "Two businesses left the group in eight months, and one small equity interest came back. Battery Technology Solutions — the Nova Scotia battery-testing-equipment and R&D services division founded in 2013 by Dr Chris Burns out of Dr Jeff Dahn's Dalhousie University group and acquired in 2017 — was sold to Burns himself, effective 30 April 2026, for US$1.00, with a US$2m cash balance at close and a trademark licence to 31 December 2026. It now trades as Avrion Battery Labs Inc. and Dryve Battery Materials Inc., and NOVONIX retains a 15% non-dilutable equity stake in Dryve's cathode business.",
+   "highlights": [
+    "BTS made the Ultra-High Precision Coulometry (UHPC) battery-testing systems invented in Jeff Dahn's Dalhousie laboratory, which measure cell cycle life \"in weeks instead of years\"; a UHPC Calibration Module completed development in November 2025",
+    "BTS was the source of all of NOVONIX's reported revenue: US$5.6m in FY2025, US$5.9m in FY2024, US$8.1m in FY2023 — which is why continuing-operations revenue is zero from 2026",
+    "The retained 15% stake in Dryve covers an all-dry, zero-waste, precursor-free cathode synthesis platform with foundational patents granted in the US and Europe during 2025 and in China in December 2025, and a pilot line of up to 10 tpa",
+    "Dryve's cathode programme carried a Natural Resources Canada award of up to C$5m announced in August 2025",
+    "The Mount Dromedary natural graphite project in Northern Queensland was sold to Lithium Energy Limited in September 2025 for A$2m plus repayment of A$250,000, after the planned Axon Graphite IPO was abandoned on 1 August 2025 for market conditions"
+   ],
+   "positioning": "The divestitures are consistent with the company's stated aim of streamlining \"around its core synthetic graphite business\" and reducing funding requirements — but they also removed every source of revenue the group had",
+   "soldThrough": "Not applicable — disposed interests",
+   "targetSegments": "Not applicable",
+   "roadmap": "The 15% Dryve interest is a passive holding; no licensing revenue from it is disclosed or guided"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Riverside synthetic graphite facility, Chattanooga, Tennessee",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Nameplate",
+     "value": "20,000 tonnes per annum"
+    },
+    {
+     "band": "Capacity",
+     "label": "Furnaces installed",
+     "value": "four graphitization furnaces fully installed"
+    },
+    {
+     "band": "Process",
+     "label": "Current stage",
+     "value": "furnace calibration and raw-material testing ongoing"
+    },
+    {
+     "band": "Design",
+     "label": "Site acquired",
+     "value": "July 2021, land and buildings for US$42.6m"
+    },
+    {
+     "band": "Compliance",
+     "label": "48C vesting condition",
+     "value": "the first 11,000 tpa must be placed in service before 2028-04-07"
+    },
+    {
+     "band": "Capacity",
+     "label": "Full capacity date",
+     "value": "September 2031, extended from December 2027"
+    },
+    {
+     "band": "Process",
+     "label": "Battery-grade mass production",
+     "value": "second half of 2027, subject to successful completion of the qualification process by Panasonic and its customers"
+    }
+   ],
+   "notes": "The company describes Riverside as \"expected to become the first large-scale synthetic graphite production site in North America\". Values are quoted from the FY2025 20-F, the quarterly activities reports and the half-year report to 30 June 2026."
+  },
+  {
+   "product": "GX-23 synthetic graphite anode active material",
+   "specs": [
+    {
+     "band": "Chemical",
+     "label": "Product type",
+     "value": "battery-grade synthetic graphite anode active material"
+    },
+    {
+     "band": "Compliance",
+     "label": "Global warming potential vs Chinese synthetic",
+     "value": "approximately 60% lower global warming potential than conventional anode-grade synthetic graphite produced in Inner Mongolia, China"
+    },
+    {
+     "band": "Compliance",
+     "label": "Global warming potential vs Chinese natural",
+     "value": "approximately 30% lower than anode-grade natural graphite from Heilongjiang Province, China"
+    },
+    {
+     "band": "Purity",
+     "label": "Company claim",
+     "value": "highest purity in the market… essentially no contaminants"
+    },
+    {
+     "band": "Electrical",
+     "label": "Cell performance claim",
+     "value": "higher coulombic efficiency and capacity retention versus industry-leading materials in head-to-head testing"
+    },
+    {
+     "band": "Design",
+     "label": "Integration",
+     "value": "can be integrated into current cell designs with no material additional costs to cell manufacturers"
+    }
+   ],
+   "notes": "The life-cycle comparisons were commissioned by NOVONIX from Minviro Ltd. Performance claims are the company's own and are not independently verified; formal customer validation of the Panasonic C-sample was still pending as at 31 August 2026."
+  },
+  {
+   "product": "NOVONIX Generation 3 Continuous Induction Furnace System",
+   "specs": [
+    {
+     "band": "Process",
+     "label": "Operating mode",
+     "value": "fully continuous operation"
+    },
+    {
+     "band": "Process",
+     "label": "Contrast with incumbent route",
+     "value": "replaces the batch Acheson furnace used in conventional Chinese graphitisation"
+    },
+    {
+     "band": "Process",
+     "label": "Chemical purification",
+     "value": "no chemical purification"
+    },
+    {
+     "band": "Compliance",
+     "label": "Supply-chain independence",
+     "value": "does not depend on any Chinese equipment, IP, or know-how"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions claim",
+     "value": "virtually zero emissions and limited use of chemicals"
+    },
+    {
+     "band": "Electrical",
+     "label": "Energy input",
+     "value": "57% carbon-free, of which 15% renewable"
+    },
+    {
+     "band": "Design",
+     "label": "Supplier",
+     "value": "Harper International Corporation, under a December 2020 exclusive use and supply agreement"
+    }
+   ],
+   "notes": "A separate January 2025 exclusive licence to design and develop the furnace technology for internal use expired automatically on 1 January 2026 when NOVONIX did not make the required initial payment by 31 December 2025. The supply agreement is unaffected."
+  },
+  {
+   "product": "Riverside impairment model assumptions, 30 June 2026",
+   "specs": [
+    {
+     "band": "Financial",
+     "label": "Revenue sales prices",
+     "value": "USD $7-$11/kg reduced from 2025 (USD $10-$12/kg)"
+    },
+    {
+     "band": "Financial",
+     "label": "Operating costs",
+     "value": "USD $6–$8/kg, based on the current Riverside Project Plan and adjusted for inflation"
+    },
+    {
+     "band": "Financial",
+     "label": "Post-tax discount rate",
+     "value": "13.5%, raised from 11.5% at June 2025"
+    },
+    {
+     "band": "Financial",
+     "label": "Terminal growth rate",
+     "value": "2.0%, reduced from 2.5%"
+    },
+    {
+     "band": "Financial",
+     "label": "Projection horizon",
+     "value": "a 10.5-year period, reflecting binding customer contracts and the anticipated production ramp-up to full capacity by September 2031"
+    },
+    {
+     "band": "Financial",
+     "label": "Headroom sensitivity",
+     "value": "the recoverable amount equals the carrying amount if the discount rate moves from 13.5% to 14.5%"
+    },
+    {
+     "band": "Financial",
+     "label": "Goodwill tested",
+     "value": "US$11,975,024 on the NOVONIX Anode Materials cash-generating unit, not impaired at 30 June 2026"
+    }
+   ],
+   "notes": "The stated reason for the price cut is \"the U.S. Department of Commerce's preliminary antidumping ruling issued in March related to imported Chinese graphite, partially offset by the impact of current tariffs (37.5%)\". This is the single most revealing disclosure in the half-year report: it prices the company's own product and shows a goodwill balance with one percentage point of discount-rate headroom."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-04",
+   "category": "market",
+   "headline": "S&P Dow Jones Indices announces the September 2026 quarterly rebalance of the S&P/ASX indices: NOVONIX (NVX) is listed for removal from the S&P/ASX 300, effective prior to the open of trading on Monday 21 September 2026",
+   "read": "Forced index-fund selling arrives in the same fortnight as the Nasdaq cure deadline and while the ASX price sits below the A$0.12 Yorkville floor — three pressures on the same share price, converging. The removal was read directly from the S&P DJI announcement PDF lodged on the company's investor-relations site; NVX appears in the Removal column of the S&P/ASX 300 section.",
+   "source": "https://ir.novonixgroup.com/static-files/28fc2f5e-2d34-4b52-8115-a2eb339eb7d5"
+  },
+  {
+   "date": "2026-08-31",
+   "category": "financial",
+   "headline": "Half-year report to 30 June 2026 lodged with the ASX: net loss US$24.6m, operating cash outflow US$23.1m, cash US$59.5m, net current liabilities US$2.5m, and a PwC review report flagging a material uncertainty over going concern",
+   "read": "The report also carries the disclosure the market has least priced: the date for Riverside to reach full production capacity moved out by nearly four years, to September 2031. Furnished to the SEC as a Form 6-K on 2 September.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526378825/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-08-27",
+   "category": "corporate",
+   "headline": "The American depositary share ratio changes from one ADS per four ordinary shares to one ADS per forty, taking effect",
+   "read": "Economically a one-for-ten reverse split of the ADSs. Every per-ADS price dated before this day is stale by a factor of ten; ordinary-share prices on the ASX are unaffected because the ordinary share count did not change. Confirmed effective by a Form 424B3 filed 17 August 2026 by the depositary registrant.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1905601/000101915526000393/novonix424b3.htm"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "corporate",
+   "headline": "Change to the American depositary share ratio announced, agreed with The Bank of New York Mellon, expressly to help regain compliance with the Nasdaq minimum bid price requirement",
+   "read": "The company disclaims the outcome in the same sentence: \"there can be no assurance that the change in the ADS ratio will result in the Company regaining or maintaining compliance\". Authorised by Chairman Admiral Robert J. Natter.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526345642/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "financial",
+   "headline": "Q2-2026 quarterly activities report: capital expenditure cut to US$2.2m from US$6.8m in Q1, the 17.5-acre Riverside land option abandoned, and the Department of Energy grant confirmed still under review by CMEI",
+   "read": "A 68% quarter-on-quarter capex cut is the clearest measure of the capital-conservation posture that later shows up as the 2031 capacity date.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526324831/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-07-22",
+   "category": "financial",
+   "headline": "Share purchase plan closes having raised A$962,600 from 6,016,250 shares at A$0.16",
+   "read": "Against a placement of A$20.7m at the same price days earlier, retail take-up of under A$1m is a weak signal on existing-shareholder appetite. The close had been brought forward from 14 August to 17 July.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526310937/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "regulatory",
+   "headline": "ASX grants waivers of Listing Rules 7.1 and 10.11 for the June placement",
+   "read": "The waivers were needed because the A$0.16 offer price was below 80% of the five-day volume-weighted average price — a mechanical disclosure that quantifies how deep the discount was.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526298588/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "leadership",
+   "headline": "Ron Edmonds takes the interim Chief Financial Officer role and steps aside as Chair; Admiral Robert J. Natter resumes as Chairman",
+   "read": "A director serving as interim CFO while the company carries a going-concern material uncertainty is a governance point a counterparty would weigh. Edmonds was Chief Accounting Officer of Dow; he remains a director. The company's own leadership page still shows Natter as Deputy Chairman and is stale on this point.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526292757/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "financial",
+   "headline": "Institutional placement completed: 129,334,163 shares at A$0.16 raising A$20.7m, about US$14.5m, through Bell Potter",
+   "read": "The raise price is 73% below the A$0.60 Phillips 66 placement of January 2025 and a third below the pre-halt trade. Dilution is the recurring cost of a pre-revenue build.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526276683/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "product-launch",
+   "headline": "First known North-American-produced synthetic graphite anode active material C-sample delivered to Panasonic Energy; internal testing indicates it meets Panasonic's specifications",
+   "read": "The single most important technical milestone the company has reached, and the gate the going-concern assessment turns on. A C-sample is 5–30 tonnes produced on production equipment, with customer feedback typically taking 6–12 months — which lands the answer in roughly mid-2027 against a second-half-2027 start of production, leaving essentially no slack.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526266701/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "leadership",
+   "headline": "Chief Financial Officer Robert Long to depart in July; board leadership rearranged in consequence",
+   "read": "Long had been CFO since September 2024 and interim chief executive from January to May 2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526262881/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-05-29",
+   "category": "policy",
+   "headline": "United States Senator Marsha Blackburn tours the Riverside facility",
+   "read": "Political support is a real asset for a company whose economics depend on federal grants, credits and a loan commitment — and whose trade case has just failed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526324831/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "ma",
+   "headline": "Sale of NOVONIX Battery Technology Solutions Inc. to former chief executive Dr Chris Burns completes, effective 30 April 2026, for US$1.00 plus a retained 15% stake in the cathode business",
+   "read": "The transaction that made NOVONIX a single-business, zero-revenue company. BTS now operates as Avrion Battery Labs and Dryve Battery Materials; the US$1.00 price is the clearest available statement of what the divested business was worth on a standalone basis after funding requirements.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526198319/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "regulatory",
+   "headline": "Q1-2026 quarterly activities report records that the International Trade Commission's March decision means the proposed antidumping and countervailing duties on Chinese anode material will not be implemented",
+   "read": "In the company's own words: \"As a result, previously proposed antidumping and countervailing duties will not be implemented.\" The annual general meeting on 15 April passed all resolutions and Nick Liveris retired from the board.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526188770/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-04-14",
+   "category": "policy",
+   "headline": "The United States government certifies the Riverside project in connection with the US$103m Section 48C investment tax credit, certification dated 8 April 2026",
+   "read": "The credit is payable when the first 11,000 tpa is placed in service, provided that happens before 7 April 2028 — a deadline that sits awkwardly beside a September 2031 full-capacity date. The credits are transferable and can be sold to a third party, which makes them a financing instrument as well as a tax asset.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526153833/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-03-18",
+   "category": "regulatory",
+   "headline": "Nasdaq Listing Qualifications notifies NOVONIX that the closing bid price of its ADSs has been below US$1.00 for 30 consecutive business days; 180 calendar days to regain compliance",
+   "read": "The cure test is a closing bid of at least US$1.00 for ten consecutive business days within the period. 180 days from 18 March 2026 is Monday 14 September 2026. Authorised by Chairman Ron Edmonds.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526111479/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "regulatory",
+   "headline": "The US International Trade Commission votes 2-1 that imports of active anode material from China do not materially retard the establishment of a United States industry — so no antidumping or countervailing duty orders are issued",
+   "read": "The most consequential event of the period, and it went against the company. NOVONIX was a named petitioner through the American Active Anode Material Producers coalition. Commerce had set final duties in February at 93.5% antidumping (102.72% China-wide) and 66.82–66.86% countervailing, all conditional on an affirmative injury finding that never came. The financial consequence is quantified in NOVONIX's own June impairment model, which cut the assumed selling price from US$10–12/kg to US$7–11/kg and named the Commerce ruling as the reason.",
+   "source": "https://www.federalregister.gov/documents/2026/04/03/2026-06488/active-anode-material-from-china-determinations"
+  },
+  {
+   "date": "2026-03-10",
+   "category": "project",
+   "headline": "Exclusive access agreement with Aerisyn Opportunity Zone Business, LLC to assess purchase of 17.5 acres adjacent to Riverside at US$26.5m",
+   "read": "Pitched as saving more than US$200m of capital by consolidating the 50,000 tpa build onto one site. Abandoned four and a half months later.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526098860/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-02-26",
+   "category": "financial",
+   "headline": "FY2025 Form 20-F filed: revenue US$5.6m, net loss US$92.7m, cash US$79.9m; PwC's audit report carries a going-concern explanatory paragraph and management reports material weaknesses in internal control over financial reporting",
+   "read": "Two separate red flags in one document. The audit opinion itself is unqualified, but disclosure controls were reported not effective at 31 December 2025 and a segregation-of-duties material weakness remained unremediated.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm"
+  },
+  {
+   "date": "2026-02-18",
+   "category": "ma",
+   "headline": "Binding term sheet to divest Battery Technology Solutions to former chief executive Dr Chris Burns for US$1.00",
+   "read": "Framed as a portfolio decision — \"to focus on synthetic graphite\" — and reducing ongoing funding requirements.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526055257/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-02-13",
+   "category": "policy",
+   "headline": "Commerce issues final antidumping and countervailing determinations on Chinese active anode material: 93.5% antidumping for specified companies, 102.72% China-wide, 66.82–66.86% countervailing, a stacked total above 160%",
+   "read": "NOVONIX publicised this as vindication. It was conditional on the ITC injury finding that failed four weeks later, so none of it took effect — a case study in why a Commerce determination is not a duty.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526049078/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-01-16",
+   "category": "customer",
+   "headline": "Panasonic mass production pushed from 2026 to the second half of 2027",
+   "read": "An eighteen-month slip in the start of revenue, and past the Q4-2025 qualification milestone that conditioned the Panasonic offtake's volume commitment.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526014629/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2026-01-01",
+   "category": "corporate",
+   "headline": "The January 2025 exclusive licence agreement with Harper International for the continuous induction furnace technology expires automatically, the required initial payment not having been made by 31 December 2025",
+   "read": "The company forgoes the right to design and develop its own furnaces and remains dependent on Harper to manufacture and supply them under the separate 2020 agreement. A capital-conservation decision with a long tail, and one that no press release announced.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm"
+  },
+  {
+   "date": "2025-12-15",
+   "category": "leadership",
+   "headline": "Michael O'Kronley appointed Managing Director, joining the board",
+   "read": "Consolidates the chief executive he had been since May 2025 with a board seat.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525318329/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "customer",
+   "headline": "Stellantis terminates its offtake agreement with immediate effect, the parties \"unable to agree upon the unique battery cell product specifications and milestones for mass production qualification\"",
+   "read": "The largest contracted volume NOVONIX ever held — a minimum 86,250 tonnes and a target of 115,000 tonnes over six years, signed November 2024 with supply targeted from January 2026 — is gone. It is also the clearest precedent for how a qualification failure ends.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525262911/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2025-09-29",
+   "category": "product-launch",
+   "headline": "First mass-production, commercial-grade sample of synthetic graphite shipped for industrial applications",
+   "read": "Proves the furnace line at production scale, though for a lower-value non-battery product and to an unnamed customer with no supply agreement announced.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525221255/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2025-07-24",
+   "category": "financial",
+   "headline": "Funding agreement with YA II PN, Ltd, an affiliate of Yorkville Advisors Global, for up to US$100m face of unsecured convertible debentures issued at 95% of face",
+   "read": "Introduces the A$0.12 floor price and the Amortization Event that now dominates the balance-sheet risk. Fully drawn within three months. Goldman Sachs was exclusive financial adviser.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025098146/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2025-01-24",
+   "category": "leadership",
+   "headline": "Founder Dr Chris Burns steps down as chief executive",
+   "read": "He remained a special adviser to the board until January 2026 and became the buyer of Battery Technology Solutions in April 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025059002/nvx-ex99_1.htm"
+  },
+  {
+   "date": "2024-12-16",
+   "category": "policy",
+   "headline": "Department of Energy conditional commitment of up to US$754.8m for the second facility",
+   "read": "US$692.0m of principal plus US$62.8m of capitalised interest. Still conditional in every filing through 31 August 2026, and the reason the Enterprise South land purchase has not closed.",
+   "source": "https://www.utilitydive.com/news/novonix-secures-755m-doe-loan-tennessee-synthetic-graphite-facility/736179/"
+  },
+  {
+   "date": "2024-11-24",
+   "category": "customer",
+   "headline": "Binding offtake agreement with PowerCo SE, Volkswagen's cell company: a minimum 32,000 tonnes over five years from 2027",
+   "read": "Conditioned on qualification milestones, compliance criteria and — the condition that matters now — NOVONIX \"securing financing commitments for the production facilities\", failing which PowerCo may terminate.",
+   "source": "https://www.novonixgroup.com/news/novonix-and-powerco-agreement/"
+  },
+  {
+   "date": "2024-02-08",
+   "category": "customer",
+   "headline": "Binding offtake agreement with Panasonic Energy for at least 10,000 tonnes of anode material for its US plants",
+   "read": "The volume commitment was conditioned on NOVONIX meeting mass-production qualification milestones before the fourth quarter of 2025. That milestone was not met; Panasonic may reduce the volume by up to 20% or terminate if the delay is substantial, and no public exercise of either right has been announced.",
+   "source": "https://www.novonixgroup.com/wp-content/uploads/2025/09/Panasonic-Energy-and-NOVONIX-Sign-Binding-Off-Take-Agreement.pdf"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "panasonic",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-02",
+   "scale": "at least 10,000 tonnes",
+   "via": "synthetic graphite anode active material",
+   "note": "Panasonic Energy is NOVONIX's lead customer under a binding offtake for at least 10,000 tonnes of anode active material for its US plants; the half-year report names it as \"our lead customer\".",
+   "context": "The offtake was signed on 8 February 2024 for at least 10,000 tonnes of synthetic graphite anode active material for Panasonic Energy's United States plants. The volume commitment was conditioned on NOVONIX achieving mass-production qualification milestones before the fourth quarter of 2025; if missed, Panasonic may reduce the volume by up to 20%, or terminate if the delay is substantial.\n\nThat milestone was not met. Panasonic mass production was pushed from 2026 to the second half of 2027 on 16 January 2026 and reaffirmed at that date since. NOVONIX delivered a C-sample on 11 June 2026 — the first known synthetic graphite AAM C-sample produced in North America — and states that its own internal testing indicates the material meets Panasonic's specifications, with formal validation by Panasonic still outstanding as at 31 August 2026. No public exercise of Panasonic's reduction or termination rights has been announced.\n\nThe dependency runs deeper than a supply contract. The first of the four conditions the directors list in their going-concern assessment is \"the Company achieving qualification status (being able to mass produce qualifying products for Panasonic and other future offtake customers and achieve the respective customer's quality standards)\". Panasonic's validation decision is therefore a solvency input, not merely a commercial one.",
+   "source": "https://www.novonixgroup.com/wp-content/uploads/2025/09/Panasonic-Energy-and-NOVONIX-Sign-Binding-Off-Take-Agreement.pdf"
+  },
+  {
+   "slug": "lg-energy-solution",
+   "type": "investor",
+   "status": "active",
+   "since": "2023-06",
+   "scale": "US$30m convertible notes",
+   "note": "LG Energy Solution holds US$30m of NOVONIX convertible loan notes and is described by NOVONIX as a joint-development-agreement counterparty — not as an offtake customer.",
+   "context": "On 21 June 2023 LG Energy Solution subscribed for 45,221,586 convertible loan notes of A$1.00 face, carrying a 4% coupon and maturing 7 June 2028, for proceeds of US$30 million, with a conversion price of A$1.60. The FY2025 20-F describes the commercial side of the relationship as a \"joint development agreement with LGES\", not an offtake.\n\nThe instrument's own terms make a point the prose does not. The notes **mandatorily convert upon acceptance of the first purchase order under the purchase agreement with LGES** — and they remained outstanding at 30 June 2026. It follows from the notes' continued existence that no purchase order has ever been accepted. This is an inference from the conversion trigger and the balance-sheet position, both first-party disclosures, rather than a statement either party has made.\n\nThe notes are classified as current because the company cannot defer settlement, so they sit alongside the Yorkville debentures in the near-term liability stack rather than as patient strategic capital.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm"
+  },
+  {
+   "slug": "aes-clean-energy",
+   "type": "other",
+   "status": "active",
+   "note": "Not a commercial relationship — a shared policy exposure. AES Clean Energy's dossier records the antidumping and countervailing investigations into Chinese graphite as pending; NOVONIX was a petitioner in those cases and its filings carry the outcome.",
+   "context": "AES Clean Energy's dossier states that the AD/CVD investigations into Chinese natural and synthetic graphite for lithium-ion anode material had \"final determinations expected in the first quarter of 2026\" and could result in price increases. NOVONIX's own filings close that question from the petitioner's side.\n\nCommerce issued final determinations on 13 February 2026 — 93.5% antidumping for specified companies, 102.72% China-wide, and 66.82–66.86% countervailing. On 12 March 2026 the International Trade Commission voted 2-1 that the imports do not materially retard the establishment of a United States industry, so **no antidumping or countervailing duty order was issued and none of those rates took effect**. NOVONIX records the result plainly: \"previously proposed antidumping and countervailing duties will not be implemented.\"\n\nThe two companies sit on opposite sides of the same measure — a battery buyer that would have paid the duty, and a domestic producer that petitioned for it. Recording the link makes the corpus's answer to the open question findable from either end.",
+   "source": "https://www.federalregister.gov/documents/2026/04/03/2026-06488/active-anode-material-from-china-determinations"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "AD/CVD — active anode material from China",
+   "status": "expired",
+   "effectiveDate": "2026-03-12",
+   "exposure": "NOVONIX was a named petitioner, through the American Active Anode Material Producers coalition, in the antidumping and countervailing duty cases against Chinese active anode material, filed December 2024. Commerce set final rates on 13 February 2026 — antidumping 93.5% for specified companies and 102.72% China-wide, countervailing 66.82–66.86%, a stacked total the company publicised as above 160%. All of it was conditional on an affirmative injury determination. On 12 March 2026 the International Trade Commission voted 2-1 that the imports do not materially retard the establishment of a United States industry, so no duty order issued and none of the rates took effect. The company states it plainly: \"previously proposed antidumping and countervailing duties will not be implemented\", and elsewhere \"ultimately unsuccessful following a split decision (2-1) by the ITC on the question of material retardation\". The financial consequence is quantified in NOVONIX's own June 2026 impairment model, which cut the assumed realised price from US$10–12/kg to US$7–11/kg and names the Commerce ruling as the reason.",
+   "mitigation": "The company notes that the two commissioners who voted against have since been replaced and that with a full complement of six only three affirmative votes are needed, and states that it \"intends to consider filing a new AD/CVD petition at an appropriate time\", subject to market conditions and the factual record.",
+   "source": "https://www.federalregister.gov/documents/2026/04/03/2026-06488/active-anode-material-from-china-determinations"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "exposure": "Three layers, and the company's own two published totals differ because they describe different dates. A 25% Section 301 tariff on battery-grade graphite from China was reinstated in June 2024. The US Trade Representative then completed a forced-labour investigation and imposed 10%–12.5% tariffs on most goods including synthetic graphite from 59 countries and the European Union. A second Section 301 investigation, into structural excess manufacturing capacity across 16 countries and the EU, remains open; NOVONIX has submitted comments and testified in support. A Section 122 tariff of 10% was in place until the second half of July 2026. The two figures the company publishes are 35% and 37.5% — the Q1-2026 quarterly report and the half-year highlights say \"existing tariffs of 35% remain in place\", while the half-year impairment note assumes \"current tariffs (37.5%)\". Both appear in first-party documents; the difference is the date each describes, and neither is corrected here.",
+   "mitigation": "NOVONIX positions itself as the domestic alternative and lobbies for measures that \"address this structural price imbalance\", including product-specific tariff classifications for graphite anode material.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526378825/nvx-ex99_1.htm"
+  },
+  {
+   "regime": "Section 48C Advanced Energy Project Credit",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-08",
+   "exposure": "A US$103m investment tax credit allocated in April 2024 under the Qualifying Advanced Energy Project Allocation Program, with the Riverside project certified by the United States government on 8 April 2026. Nothing has been claimed. The credit vests only when the first 11,000 tonnes per annum is placed in service, and only if that happens before 7 April 2028. Against a full-capacity date of September 2031 and a second-half-2027 start of mass production, the 2028 condition is the binding constraint on a US$103m asset.",
+   "mitigation": "The credits are transferable and can be sold to a third party, which makes them a financing instrument rather than only a tax asset — but only once earned.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526153833/nvx-ex99_1.htm"
+  },
+  {
+   "regime": "Section 45X Advanced Manufacturing Production Credit",
+   "status": "in-effect",
+   "exposure": "Graphite, including synthetic graphite, remains eligible for the 45X credit, worth 10% of eligible production costs for critical minerals; the Enterprise South site is described as eligible for a potential 45X credit. The credit for battery cells is US$35 per kilowatt-hour, and eligibility depends on increasing limits on material assistance from prohibited foreign entities, measured as the proportion of direct material and production costs from non-prohibited sources: 65% for cells sold in 2027, rising to a maximum of 85% in 2030 and thereafter. Under current law the credit is reduced 25% in 2030, 50% in 2031 and 75% in 2032 before expiring for cells after 2032. NOVONIX's commercial argument to customers is that non-Chinese anode material is what lets *their* cells qualify.",
+   "mitigation": "The company is lobbying Treasury for revisions to the material cost ratio tables and methodologies, clarification of the \"prohibited foreign entity\" definition and related ownership and control concepts, and anti-circumvention measures.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm"
+  },
+  {
+   "regime": "FEOC restrictions — NDAA FY2026 Section 842",
+   "status": "announced",
+   "effectiveDate": "2028-01-01",
+   "exposure": "Phased sourcing requirements for advanced batteries procured by the United States Department of Defense. From 2028, for new acquisition programs, the Department generally may procure only advanced batteries and cells whose functional cell components and technology are not owned, sourced, refined or produced by a foreign entity of concern, with a limited exception where final assembly occurs outside an FEOC, more than 95% of the cost of functional cell components is attributable to non-FEOC sources, and the battery is produced without FEOC-licensed technology. The requirements expand to standard batteries in 2029 and to existing acquisition programs in 2031. This is the regime NOVONIX's claim that its process \"does not depend on any Chinese equipment, IP, or know-how\" is written against.",
+   "mitigation": "The company states that it and the industry \"have been working closely with Department of Defense personnel on implementing regulations to ensure that the interests of the U.S. domestic graphite AAM industry are properly addressed\". Note a naming inconsistency across two first-party documents four weeks apart: the half-year report calls the procuring agency the Department of War, the Q2 quarterly report the Department of Defense.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526378825/nvx-ex99_1.htm"
+  },
+  {
+   "regime": "Section 232 — processed critical minerals",
+   "status": "proposed",
+   "effectiveDate": "2026-01-14",
+   "exposure": "Commerce concluded that imports of processed critical minerals and their derivatives threaten to impair national security; the President concurred and on 14 January 2026 issued a proclamation directing Commerce and the Trade Representative to negotiate agreements with trading partners, specifically contemplating price floors for trade in processed critical minerals. A price floor would be a more direct remedy for NOVONIX's economics than a tariff, because the problem it describes is a price set by subsidised competitors rather than a volume of imports.",
+   "mitigation": "A 180-day status report to the President was due on 13 July 2026 and, in the company's words, \"no public announcement has been made regarding that report\". If satisfactory agreements are not reached, the administration may impose tariffs, minimum import prices or other remedies.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526378825/nvx-ex99_1.htm"
+  },
+  {
+   "regime": "Chinese export controls on graphite and graphitisation equipment",
+   "status": "in-effect",
+   "effectiveDate": "2023-12-01",
+   "exposure": "China imposed export controls on certain graphite items from 1 December 2023, tightened them in December 2024, and again in October 2025 — the October round covering synthetic and blended graphite anode material and the equipment, processes and technology used to make it, including graphitisation furnaces, granulation machines and coating equipment. For a Western entrant this cuts both ways: it restricts the competing supply and it restricts the equipment route most entrants would otherwise use.",
+   "mitigation": "NOVONIX's furnace technology is supplied by Harper International in the United States and the company states it depends on no Chinese equipment, intellectual property or know-how. Per the company's November 2025 investor presentation the October 2025 controls have since been suspended until November 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525304167/nvx-ex99_1.htm"
+  },
+  {
+   "regime": "Critical minerals designation — US Geological Survey",
+   "status": "in-effect",
+   "exposure": "Synthetic graphite is on the United States Geological Survey critical minerals list, which is the predicate for the Department of Energy grant, the Section 48C allocation, the Department of Energy loan commitment and the Section 232 proceeding. The company's framing is that designation alone is insufficient: \"U.S. producers must still compete with imported materials whose prices may be influenced by significant foreign government support and other non-market factors.\"",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm"
+  },
+  {
+   "regime": "Nasdaq Listing Rule 5450(a)(1) — minimum bid price",
+   "status": "in-effect",
+   "effectiveDate": "2026-03-18",
+   "exposure": "On 18 March 2026 Nasdaq's Listing Qualifications Department notified NOVONIX that the closing bid price of its American depositary shares had been below US$1.00 for 30 consecutive business days, opening a 180-calendar-day compliance period that ends on Monday 14 September 2026. To cure, the closing bid must be at least US$1.00 for a minimum of ten consecutive business days within the period. The ASX listing of the ordinary shares is unaffected. The outcome is unresolved as at 9 September 2026, and it is unresolved for an arithmetic reason as well as an evidentiary one: the ADS ratio change that raised the price took effect on 27 August 2026, and counting business days from that date — with the United States market closed on Monday 7 September for Labor Day — the tenth consecutive qualifying session cannot fall before Thursday 10 September 2026, one day after this dossier was written. Eight qualifying closes had completed, from 27 August to 8 September inclusive. No announcement of regained compliance exists on EDGAR, whose most recent NOVONIX filing of any kind is the 2 September 6-K, or on the company's ASX announcements list, whose most recent item is dated 4 September.",
+   "mitigation": "The ADS ratio change from 1:4 to 1:40, effective 27 August 2026 — economically a one-for-ten reverse split of the ADSs — was made expressly to raise the per-ADS price, with the company disclaiming any assurance that it would work.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526111479/nvx-ex99_1.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Michael (Mike) O'Kronley",
+   "title": "Chief Executive Officer and Managing Director",
+   "photo": "images/execs/novonix-okronley.jpg",
+   "background": [
+    "Chief Executive Officer — NOVONIX Limited (from 19 May 2025); Managing Director from 15 December 2025",
+    "Chief Executive Officer — Ascend Elements",
+    "Senior roles at A123 Systems, Metaldyne Corporation and Robert Bosch",
+    "More than 30 years in automotive, 15 of them in lithium-ion batteries and battery materials; led nine plant start-ups, brownfield and greenfield",
+    "BSE and MSE, University of Michigan"
+   ]
+  },
+  {
+   "name": "Ronald (Ron) Edmonds",
+   "title": "Interim Chief Financial Officer and Non-executive Director",
+   "photo": "images/execs/novonix-edmonds.jpg",
+   "background": [
+    "Interim Chief Financial Officer — NOVONIX Limited (from 1 July 2026), while remaining a director",
+    "Chairman — NOVONIX Limited (1 July 2025 – 30 June 2026); interim Executive Officer, Finance (August 2024 – June 2025); director since October 2022",
+    "Chief Accounting Officer — The Dow Chemical Company; earlier Controller and Vice President of Controllers and Tax (2009 – June 2024)",
+    "Co-Controller — DowDuPont",
+    "Led an organisation of about 1,250 people covering accounting, reporting, internal controls, finance systems and tax across some 500 legal entities",
+    "CPA; BBA in Accounting"
+   ]
+  },
+  {
+   "name": "Admiral Robert J. Natter, USN (Ret.)",
+   "title": "Chairman of the Board",
+   "photo": "images/execs/novonix-natter.jpg",
+   "background": [
+    "Chairman — NOVONIX Limited (resumed 1 July 2026); previously Chairman 30 November 2021 – 30 June 2025, then Deputy Chairman; director since 2017",
+    "Commander in Chief, US Atlantic Fleet and first Commander of US Fleet Forces Command — United States Navy, as a four-star admiral",
+    "Commander, US Seventh Fleet — United States Navy; retired from active service 2003",
+    "Board member and chair of the Governance and Compensation and Government Security committees — Allied Universal",
+    "US Naval Academy Foundation Board; former Chairman of the Academy Alumni Association"
+   ]
+  },
+  {
+   "name": "Kimberly Heimert",
+   "title": "Chief Legal and Risk Officer",
+   "photo": "images/execs/novonix-heimert.png",
+   "background": [
+    "Chief Legal and Risk Officer — NOVONIX Limited (from 2 September 2025)",
+    "Chief Executive Officer — Energy Transition Advisory Group LLC",
+    "General Counsel — Overseas Private Investment Corporation, now the US International Development Finance Corporation",
+    "General Counsel — Africa50, an US$880m pan-African infrastructure platform",
+    "Deputy Chief Counsel — US Department of Energy Loan Programs Office",
+    "Managing Director — GE Energy Financial Services; earlier at White & Case and Chadbourne & Parke",
+    "Non-executive director — AltEnergy Acquisition Corp. J.D. cum laude, Harvard Law School; B.A. summa cum laude, American University"
+   ]
+  },
+  {
+   "name": "Suzanne Yeates",
+   "title": "Financial Controller and Company Secretary",
+   "photo": "images/execs/novonix-yeates.jpg",
+   "background": [
+    "Financial Controller and Company Secretary — NOVONIX Limited",
+    "Signed the June 2026 ASX trading-halt request as Company Secretary",
+    "Chartered Accountant; Bachelor of Business"
+   ]
+  },
+  {
+   "name": "Anthony (Tony) Bellas",
+   "title": "Non-executive Director; Chair of the Audit and Risk Management Committee",
+   "photo": "images/execs/novonix-bellas.jpg",
+   "background": [
+    "Non-executive Director — NOVONIX Limited; inaugural Chairman from 11 August 2015; Deputy Chairman 30 November 2021 – 30 June 2025",
+    "Chief Executive Officer — Seymour Group",
+    "Chief Executive Officer — Ergon Energy",
+    "Chief Executive Officer — CS Energy, a generator of more than 3,500 MW",
+    "Deputy Under Treasurer — Queensland Treasury",
+    "Director and Deputy Chairman — State Gas Limited; Director and Chairman — Green & Gold Minerals Limited"
+   ]
+  },
+  {
+   "name": "Sharan Burrow AC",
+   "title": "Non-executive Director",
+   "photo": "images/execs/novonix-burrow.jpg",
+   "background": [
+    "Non-executive Director — NOVONIX Limited (from 28 February 2024)",
+    "General Secretary — International Trade Union Confederation (2010–2022)",
+    "President — Australian Council of Trade Unions (2000–2010)",
+    "Twice Co-Chair of the World Economic Forum Davos Annual Meeting",
+    "Visiting Professor in Practice, LSE Grantham Institute; Vice Chair, European Climate Foundation; Co-Chair, IEA Labour Council"
+   ]
+  },
+  {
+   "name": "Jean Oelwang",
+   "title": "Non-executive Director",
+   "photo": "images/execs/novonix-oelwang.jpg",
+   "background": [
+    "Non-executive Director — NOVONIX Limited (from March 2022)",
+    "Founding Chief Executive Officer and Trustee — Virgin Unite, the Virgin Group's non-profit foundation",
+    "Helped incubate The Elders, The B Team, Planetary Guardians, Carbon War Room and Ocean Unite",
+    "Eighteen years starting and leading telecommunications businesses across South Africa, Colombia, Bulgaria, Singapore, Hong Kong, Australia and the United States, including as a chief executive"
+   ]
+  },
+  {
+   "name": "Suresh Vaidyanathan",
+   "title": "Non-executive Director — Phillips 66 nominee",
+   "photo": "images/execs/novonix-vaidyanathan.jpg",
+   "background": [
+    "Non-executive Director — NOVONIX Limited (from September 2023), succeeding Zhanna Golodryga as the Phillips 66 nominee",
+    "Vice President, Renewable Fuels — Phillips 66",
+    "Vice President and Chief Engineer, Refining Business Improvement — Phillips 66",
+    "More than 30 years in oil and gas across technical, operations and business functions",
+    "MTech in Chemical Engineering; MBA"
+   ]
+  },
+  {
+   "name": "Dr Jeff Dahn",
+   "title": "Chief Scientific Advisor",
+   "background": [
+    "Chief Scientific Advisor — NOVONIX Limited (from 1 July 2021)",
+    "Professor, Dalhousie University (from 1996); inventor of the Ultra-High Precision Coulometry technique",
+    "Simon Fraser University (1990–1996); Moli Energy (1985–1990); National Research Council Canada (1982–1984)",
+    "Named inventor on more than 70 patents and applications; Gerhard Herzberg Gold Medal 2017; Officer of the Order of Canada 2020; Fellow of the Royal Society of Canada 2001",
+    "B.Sc. Physics, Dalhousie University 1978; Ph.D., University of British Columbia 1982"
+   ]
+  },
+  {
+   "name": "Andrew N. Liveris AO",
+   "title": "Strategic Advisor",
+   "photo": "images/execs/novonix-liveris.jpg",
+   "background": [
+    "Strategic Advisor — NOVONIX Limited; non-executive director 2018 – April 2024",
+    "Chief Executive Officer — The Dow Chemical Company, for more than a decade of a 40-year career there",
+    "Non-executive director — Lucid Motors, Saudi Aramco, Worley and IBM",
+    "Chair — Brisbane Organising Committee for the 2032 Olympic and Paralympic Games"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Reported in US dollars under IFRS as issued by the IASB, by an Australian company dual-listed on the ASX and Nasdaq. Two presentation breaks matter. First, the Battery Technology Solutions divestiture on 30 April 2026 moved that division to discontinued operations under AASB 5, and comparatives were re-presented — so continuing-operations revenue is zero in both halves shown, and the US$5–8m revenue lines in the annual columns are the divested equipment business, not the graphite business. Second, the ADS ratio changed from 1:4 to 1:40 on 27 August 2026, so per-ADS figures are not comparable across that date; per-share figures below are per ordinary share and are unaffected.\n\nCollection gap on expectations. There is no usable published analyst consensus for FY2024, FY2025 or H1-2026. The one aggregator carrying broker entries shows two, both stale by more than eighteen months and both stated on the old 1:4 ADS — a Jefferies Buy at US$2.60 from November 2024 and a Chardan Buy at US$4.00 from May 2024, which on the current ratio would be US$26.00 and US$40.00. Any current \"consensus target\" that mixes those with a post-27-August ADS price is arithmetically corrupt. Every `expected` field below is therefore left empty rather than reconstructed.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "As reported in the FY2025 20-F, before the BTS reclassification. Revenue is entirely the battery-testing-equipment business. The loss widened by 62% on a US$15.3m write-down of the KORE Power investment to zero and rising employee and administrative costs against the Riverside build.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "US$5,854,424, down from US$8,054,528 in FY2023",
+      "expected": "",
+      "verdict": "inline",
+      "result": "All from the Battery Technology Solutions division, divested in April 2026. No analyst consensus was published for the period.",
+      "kpi": "revenue",
+      "usdMillions": 5.854,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "US$(74,822,141)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Includes a US$15,308,187 loss on the KORE Power equity investment, written down to zero at 31 December 2024.",
+      "kpi": "net-income",
+      "usdMillions": -74.822,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Loss per share, basic and diluted",
+      "actual": "US$(0.15) on 496,862,010 weighted-average ordinary shares",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Per ordinary share, not per ADS.",
+      "kpi": "eps",
+      "usdMillions": null
+     },
+     {
+      "name": "Cash and net operating cash flow",
+      "actual": "Cash US$42,557,621 at year end; net operating cash outflow US$(40.4)m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Net current assets US$11.1m; total borrowings US$64,444,081."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "PwC's audit report carries an explanatory paragraph headed \"Substantial Doubt about the Company's Ability to Continue as a Going Concern\", while the opinion itself is unqualified. Management separately reported that disclosure controls and procedures were not effective and that material weaknesses in internal control over financial reporting existed at the year end, including an unremediated segregation-of-duties weakness.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "US$5,617,119, down 4%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Softer demand for consulting services partially offset by higher hardware sales in the BTS segment. No analyst consensus was published.",
+      "kpi": "revenue",
+      "usdMillions": 5.617,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "US$(92,725,187), a 24% wider loss",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Dominated by a US$(32,940,662) loss on extinguishment of convertible notes and a US$(7,349,147) impairment of property, plant and equipment; borrowing costs more than tripled to US$11.9m as the Yorkville facility was drawn.",
+      "kpi": "net-income",
+      "usdMillions": -92.725,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Loss per share, basic and diluted",
+      "actual": "US$(0.14) on 681,677,490 weighted-average ordinary shares",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The loss per share improved slightly while the absolute loss widened — the share count rose 37% year on year.",
+      "kpi": "eps",
+      "usdMillions": null
+     },
+     {
+      "name": "Cash and operating cash flow",
+      "actual": "Cash US$79,865,999 at year end, up from US$42.6m; net operating cash outflow US$(42.2)m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The cash increase is financing, not operations: the US$100m Yorkville facility was fully drawn between July and October 2025. Net current assets US$5.6m; total borrowings US$93,848,698; net assets US$161,671,072."
+     },
+     {
+      "name": "Government funding drawn",
+      "actual": "US$23,136,626 claimed against the US$100m Department of Energy grant during FY2025, after US$19,148,237 in FY2024",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Cumulative claims of about US$42.3m to the year end. The grant requires matching company funding and is paid against verified expenses."
+     }
+    ]
+   },
+   {
+    "period": "H1-2026 (six months ended 30 June 2026)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "The first period presented on a continuing-operations basis after the BTS divestiture, and it shows the company as it now is: no revenue, a widening loss and a balance sheet that has crossed into net current liabilities. PwC's review report flags a material uncertainty over going concern but states \"our conclusion is not modified in respect of this matter\". Reviewed, not audited.",
+    "metrics": [
+     {
+      "name": "Revenue from continuing operations",
+      "actual": "US$0, unchanged from US$0 in H1-2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The synthetic graphite business has never recorded commercial revenue. Discontinued operations contributed US$1,320,309 to 30 April 2026 (H1-2025: US$3,661,934).",
+      "kpi": "revenue",
+      "usdMillions": 0.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "US$(24,634,013) against US$(20,135,547)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Loss from continuing operations US$(23,582,909) against US$(17,461,027); loss from discontinued operations US$(1,051,104) after a US$134,302 profit on disposal. Research and development doubled to US$3,697,915 and borrowing costs nearly doubled to US$3,114,880.",
+      "kpi": "net-income",
+      "usdMillions": -24.634,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Loss per share, basic and diluted",
+      "actual": "US$(0.03), unchanged",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Per ordinary share. Shares on issue rose to 991,561,920 at 30 June 2026 from 840,073,798 at 31 December 2025.",
+      "kpi": "eps",
+      "usdMillions": null
+     },
+     {
+      "name": "Cash and operating cash flow",
+      "actual": "Cash US$59,534,916 at 30 June, from US$79,865,999; net operating cash outflow US$(23,055,782)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "About twenty million dollars of cash consumed in six months, against a June placement that raised US$14.5m and a July share purchase plan that raised a further US$0.7m."
+     },
+     {
+      "name": "Net current position",
+      "actual": "Net current liabilities US$(2,531,821), against net current assets of US$5,601,197 at 31 December 2025",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The crossing point. Total current assets US$73,748,581 against total current liabilities US$76,280,402; net assets fell US$4.3m to US$157,337,005 and net tangible asset backing to US$0.15 per share from US$0.21 a year earlier."
+     },
+     {
+      "name": "Borrowings and convertible instruments",
+      "actual": "Total borrowings US$85,114,757, of which US$59,339,435 current; Yorkville convertible debentures US$35,000,000 face outstanding; LGES convertible notes US$30m face",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Only US$5.0m of debentures converted during the half, into 18,700,876 ordinary shares. Conversion of the whole remaining balance at 30 June would have issued 360,163,110 shares, a 36% increase on the shares then on issue. A subsidiary breached the debt-service-coverage ratio on the US$26.6m Riverside property loan during FY2025 and had not received written confirmation of compliance as at 30 June 2026."
+     },
+     {
+      "name": "Government funding remaining",
+      "actual": "US$51.3m of the US$100m Department of Energy grant remained to be claimed at 30 June 2026",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The company \"intends to continue to claim\" against it — a statement of intent, not of entitlement. Both the Q1 and Q2 2026 quarterly reports disclose that the grant is under review by the Office of Critical Minerals and Energy Innovation and that NOVONIX \"continues to comply with all requests\". No first-party statement says the review has concluded."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**KEY JUDGMENTS** — analysis by the author, not sourced fact. Confidence bands follow the intelligence-community convention: high, moderate, low.",
+  "1. **(High confidence)** We assess that NOVONIX is best typed as a pre-commercial aspirant rather than an incumbent or a challenger in anode materials, and that the gap is one of scale rather than of technology. Basis: continuing-operations revenue is zero and has never been otherwise; the Riverside nameplate of 20,000 tpa is under 1% of the 2.11 million tonnes of global anode shipments SNE Research counted for 2024, and about 4.6% of BTR's single-company volume; all ten of the largest producers are Chinese, with POSCO Future M having fallen to eleventh. The company's own claim — \"the only qualified U.S.-based supplier of battery-grade synthetic graphite anode material\" — is a claim about a national market with almost no production in it, and it is compatible with holding no share of the global one.",
+  "2. **(High confidence)** We assess that the September 2031 full-capacity date is the most important disclosure in the half-year report, and that it has not been absorbed by the surrounding commentary. Basis: the revised ramp-up timeline \"extends the expected date to achieve full production capacity from December 2027 to September 2031\", stated in Note 6 as a conscious decision to conserve capital. A near-four-year slip changes the character of every dated obligation around it: the Section 48C credit requires 11,000 tpa in service before 7 April 2028, the PowerCo offtake runs 2027 to 2031, and the Panasonic offtake's original window was 2025 to 2028. A capital-conservation decision taken to protect solvency has moved the plant past the deadlines that make the plant worth financing.",
+  "3. **(High confidence)** We assess that the Yorkville floor price converts a share-price problem into a cash-solvency problem, and that this is the mechanism most likely to determine the company's near-term outcome. Basis: an Amortization Event occurs where the daily volume-weighted average price on the ASX is below the A$0.12 floor on any five of any seven consecutive trading days, and on occurrence NOVONIX \"may be required to redeem in cash 20%\" of the US$35.0m outstanding — about US$7.0m — with the requirement recurring at 30-day intervals while the circumstances continue. The ordinary shares closed at about A$0.098 on 9 September 2026, roughly 18% below the floor. Against a cash balance of US$59.5m consuming about US$23m a half, a recurring 20% redemption is material rather than nominal, and the directors list \"funding any cash redemption requirements that may arise under the Yorkville funding agreement\" as one of the four conditions on which going concern depends.",
+  "4. **(Moderate confidence)** We assess that the failure of the trade case is the most under-reported event in this company's year, and that it did more damage than the Nasdaq notice it preceded by six days. Basis: Commerce set final duties above 160% in February 2026 and the company publicised them; on 12 March 2026 the International Trade Commission voted 2-1 that the imports do not materially retard the establishment of a US industry, so no order issued and none of the rates took effect. NOVONIX itself priced the consequence four months later, cutting the assumed realised price in its impairment model from US$10–12/kg to US$7–11/kg and naming the Commerce ruling as the reason. A roughly 20–30% cut to the assumed selling price of the only product the company makes is a larger event than a listing-compliance notice, and it received a fraction of the attention.",
+  "5. **(Moderate confidence)** We assess that the qualification record, not the technology, is the binding constraint — and that there is a precedent for how qualification failure ends. Basis: Stellantis terminated its offtake on 4 November 2025 because the parties were \"unable to agree upon the unique battery cell product specifications and milestones for mass production qualification\", removing a minimum 86,250 tonnes and a target of 115,000. The Panasonic milestone that conditioned its volume commitment was missed. The LG Energy Solution notes mandatorily convert on acceptance of the first purchase order under the purchase agreement and remain outstanding, from which it follows that no purchase order has ever been accepted. Three counterparty relationships, three qualification gates, and not one crossed. The C-sample delivered in June 2026 is genuine progress against that record, but the feedback window on a C-sample is typically six to twelve months, which lands the answer around mid-2027 against a second-half-2027 production start.",
+  "6. **(Moderate confidence)** We assess that this is a policy-created business whose policy support is real but conditional at every point, and that the conditionality is systematically understated in summaries of it. Basis: of the roughly US$958m of headline government support, only about US$48.7m has actually been received. The US$100m Department of Energy grant has US$51.3m still to claim and is disclosed in two consecutive quarterly reports as **under review** by the Office of Critical Minerals and Energy Innovation, with no first-party statement that the review has concluded. The US$103m Section 48C credit is certified but unclaimed and vests only on 11,000 tpa in service before April 2028. The US$754.8m Department of Energy loan is a conditional commitment whose conditions precedent have not been satisfied — which is why the Enterprise South land has not been bought. A useful comparison is that a peer petitioner, Anovion, had its Department of Energy grant cancelled in October 2025 while NOVONIX's survived.",
+  "7. **(Low confidence)** We assess that the lapse of the Harper licence signals capital rationing reaching into strategic assets rather than a change of technical direction. Basis: the January 2025 exclusive licence to design and develop the continuous induction furnace technology for internal use expired automatically on 1 January 2026 because NOVONIX did not make the required initial payment by 31 December 2025. The December 2020 exclusive use and supply agreement survives, so exclusivity is retained; what was given up is the option to build furnaces independently of Harper. Confidence is low because no company statement explains the decision and the omission of a payment could equally reflect a renegotiation, a change of plan, or a judgement that the supply agreement suffices.",
+  "8. **(Moderate confidence)** We assess that NOVONIX's exposure to grid-scale storage is real at the level of the chemistry and absent at the level of the contracts, and that a storage-focused reader should hold both facts at once. Basis: graphite anodes are chemistry-agnostic, so the LFP cells that make up roughly 90% of battery storage use them as surely as vehicle cells do, and third-party estimates put energy storage at about 18% of anode-material demand in 2026 against about 69% for vehicles. NOVONIX names energy storage among its target segments and cites storage-installation growth as a demand driver. But **both binding offtakes are with electric-vehicle cell makers** — Panasonic Energy for US vehicle plants and PowerCo for Volkswagen — and no storage-specific agreement is disclosed. The exposure is to total lithium-ion demand, of which storage is the fastest-growing minority.",
+  "**Collection gaps.** Whether Nasdaq compliance has been regained is unresolved and, as at 9 September 2026, arithmetically incapable of resolution — see the policy exposure entry for the day count. No NOVONIX securities class action or short-seller report was identified; the correct record is \"none identified\". No analyst consensus exists for any period covered. The outcome of the Department of Energy grant review is not stated in any filing. The status of Dwayne Johnson, appointed Chief Operating Officer on 3 November 2025, cannot be established: he is absent from the current leadership page and from the half-year report, with no departure announcement located, so the record here is \"no longer listed\" rather than \"departed\". NOVONIX's own FY2025 20-F gives two different registered-office addresses — Level 38, 71 Eagle Street in Item 4.A and a care-of address at Level 11, Central Plaza Two, 66 Eagle Street in the corporate directory — and which it regards as authoritative could not be determined. No contract pricing is public for either offtake.",
+  "**INDICATORS TO WATCH.** *Thursday 10 September 2026 — the tenth qualifying session:* the earliest date on which the ten-consecutive-business-day test can complete, counting from the 27 August ratio change and excluding Labor Day. *Monday 14 September 2026 — the Nasdaq cure deadline:* compliance regained, an extension granted, or a delisting determination; there is no fourth outcome, and the margin between the earliest possible cure and the deadline is two business days. *Monday 21 September 2026 — removal from the S&P/ASX 300 takes effect:* forced index selling into a price already below the Yorkville floor. *Any Amortization Event notice:* five sub-floor closes in seven trading days triggers it, and the ASX price has been below A$0.12 since before this dossier was written. *Panasonic's formal validation of the June C-sample:* the single event that would convert the qualification record from three failures to one success, expected on a six-to-twelve-month feedback cycle. *The Department of Energy grant review:* any statement that it has concluded, in either direction, moves US$51.3m. *7 April 2028 — the Section 48C in-service deadline:* against a September 2031 full-capacity date, the first 11,000 tpa either lands in time or a certified US$103m credit lapses."
+ ],
+ "sources": [
+  {
+   "label": "S&P Dow Jones Indices — September 2026 quarterly rebalance of the S&P/ASX indices, lodged on the NOVONIX investor site: NVX listed for Removal from the S&P/ASX 300 effective prior to the open on 21 September 2026",
+   "url": "https://ir.novonixgroup.com/static-files/28fc2f5e-2d34-4b52-8115-a2eb339eb7d5",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "NOVONIX investor relations — ASX announcements list, most recent item dated 4 September 2026 and carrying no Nasdaq compliance announcement",
+   "url": "https://ir.novonixgroup.com/financial-information/asx-announcements",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "stockanalysis.com — NOVONIX ASX quote and 52-week range, A$0.098 close",
+   "url": "https://stockanalysis.com/quote/asx/NVX/",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "stockanalysis.com — NVX American depositary share daily price history, 27 August to 8 September 2026 (post-ratio-change basis)",
+   "url": "https://stockanalysis.com/stocks/nvx/history/",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "stockanalysis.com — ASX:NVX statistics: market capitalisation, enterprise value, total debt and Altman Z-score",
+   "url": "https://stockanalysis.com/quote/asx/NVX/statistics/",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "NOVONIX half-year report and Appendix 4D for the half-year ended 30 June 2026 (Form 6-K Exhibit 99.1) — going concern, Yorkville terms, the September 2031 capacity date, impairment assumptions, DOE grant balance",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526378825/nvx-ex99_1.htm",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "NOVONIX Form 6-K cover for the half-year report",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526378825/nvx-20260630.htm",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "NewsChannel 9 Chattanooga — NOVONIX backs off land purchase next to Chattanooga plant, slows production ramp-up",
+   "url": "https://newschannel9.com/news/local/novonix-backs-off-land-purchase-next-to-chattanooga-plant-slows-production-ramp-up-riverside-synthetic-graphite-panasonic-battery-materials-175-acres",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Nasdaq Trader — company event ECA2026-601, NOVONIX ADS ratio change and new CUSIP effective 27 August 2026",
+   "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-601",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "NOVONIX Form 424B3 (depositary registrant) — revised form of American depositary receipt recording the ratio change from four shares to forty, effective 27 August 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1905601/000101915526000393/novonix424b3.htm",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Application for quotation of securities (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526349335/nvx-ex99_1.htm",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Change to American Depositary Share Ratio (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526345642/nvx-ex99_1.htm",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "NOVONIX Q2-2026 quarterly activities report and Appendix 4C (Form 6-K Exhibit 99.1) — capex, land option abandoned, DOE grant under review, 48C certification, tariff figures",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526324831/nvx-ex99_1.htm",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Results of Share Purchase Plan Offer (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526310937/nvx-ex99_1.htm",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Share Purchase Plan updated timetable (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526299938/nvx-ex99_1.htm",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "NOVONIX ASX announcement — ASX grants waivers of Listing Rules 7.1 and 10.11 (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526298588/nvx-ex99_1.htm",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Interim Chief Financial Officer remuneration arrangements (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526292757/nvx-ex99_1.htm",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Share Purchase Plan opens; institutional placement of 129,334,163 shares at A$0.16 completed (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526276683/nvx-ex99_1.htm",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Sharecafe — NOVONIX secures A$20.7m in placement and launches a share purchase plan at a 33% discount",
+   "url": "https://www.sharecafe.com.au/2026/06/17/novonix-secures-a20-7-million-in-placement-launches-share-purchase-plan/",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "NOVONIX ASX announcement — request for trading halt pending a proposed material capital raising (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526273345/nvx-ex99_1.htm",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "NOVONIX news — delivers mass production anode active material C-sample to Panasonic Energy",
+   "url": "https://www.novonixgroup.com/news/novonix-delivers-mass-production-aam-sample-to-panasonic/",
+   "date": "2026-06-19"
+  },
+  {
+   "label": "NOVONIX ASX announcement — delivers mass production AAM sample to Panasonic (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526266701/nvx-ex99_1.htm",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "NOVONIX ASX announcement — management update: CFO departure and board leadership changes (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526262881/nvx-ex99_1.htm",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "NOVONIX ASX announcement — divestiture of Battery Technology Solutions completed effective 30 April 2026 (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526198319/nvx-ex99_1.htm",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "NOVONIX news — divests non-core business to focus on synthetic graphite",
+   "url": "https://www.novonixgroup.com/news/novonix-divests-non-core-business-to-focus-on-synthetic-graphite/",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "NOVONIX Q1-2026 quarterly activities report and Appendix 4C (Form 6-K Exhibit 99.1) — ITC outcome, AGM, cash position, DOE grant review",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526188770/nvx-ex99_1.htm",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "NOVONIX ASX announcement — US$103m Section 48C tax credits certified for the Riverside facility (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526153833/nvx-ex99_1.htm",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "NOVONIX news — US$103 million 48C tax credits certified for synthetic graphite facility",
+   "url": "https://www.novonixgroup.com/news/novonix-us103-million-48c-tax-credits-certified-for-synthetic-graphite-facility/",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Federal Register — Active Anode Material from China; Determinations: the ITC negative injury finding and the consequence that no antidumping or countervailing duty orders issue",
+   "url": "https://www.federalregister.gov/documents/2026/04/03/2026-06488/active-anode-material-from-china-determinations",
+   "date": "2026-04-03"
+  },
+  {
+   "label": "Kalkine — NOVONIX Nasdaq warning, the 180-day cure period and delisting risk commentary",
+   "url": "https://kalkine.com.au/news/general-news/is-novonix-asxnvx-stock-rally-sustainable-after-nasdaq-warning",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Nasdaq notice of minimum bid price deficiency (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526111479/nvx-ex99_1.htm",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "The Globe and Mail — NOVONIX stays course on US graphite expansion after the ITC rejects new duties on Chinese anode active material",
+   "url": "https://www.theglobeandmail.com/investing/markets/stocks/NVX/pressreleases/750762/novonix-stays-course-on-us-graphite-expansion-after-itc-rejects-new-duties-on-chinese-aam/",
+   "date": "2026-03-13"
+  },
+  {
+   "label": "NOVONIX ASX announcement — secures rights to purchase 17.5 acres adjacent to Riverside (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526098860/nvx-ex99_1.htm",
+   "date": "2026-03-09"
+  },
+  {
+   "label": "NOVONIX Form 20-F for the fiscal year ended 31 December 2025 — going concern, material weaknesses, Harper licence expiry, Yorkville and LGES instruments, Phillips 66 holding, policy exposure, product and competition framing",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526072814/nvx-20251231.htm",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "TipRanks — NOVONIX narrows annual loss as revenue slips and the asset base erodes",
+   "url": "https://www.tipranks.com/news/company-announcements/novonix-narrows-annual-loss-as-revenue-slips-and-asset-base-erodes",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "NOVONIX ASX announcement — to divest non-core business; binding term sheet for Battery Technology Solutions (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526055257/nvx-ex99_1.htm",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "Federal Register — Active Anode Material from the People's Republic of China: final affirmative countervailing duty determination",
+   "url": "https://www.federalregister.gov/documents/2026/02/17/2026-02999/active-anode-material-from-the-peoples-republic-of-china-final-affirmative-countervailing-duty",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "ESS News — US hikes duties on Chinese battery-grade graphite",
+   "url": "https://www.ess-news.com/2026/02/17/us-hikes-duties-on-chinese-battery-grade-graphite/",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Commerce increases duties on Chinese graphite above 160%; final determinations (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526049078/nvx-ex99_1.htm",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "NOVONIX ASX announcement — operations update: Panasonic mass production moved to the second half of 2027 (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312526014629/nvx-ex99_1.htm",
+   "date": "2026-01-16"
+  },
+  {
+   "label": "NOVONIX ASX announcement — appointment of Michael O'Kronley to the board (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525318329/nvx-ex99_1.htm",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "NOVONIX November 2025 investor presentation (Form 6-K Exhibit 99.1) — furnace technology, qualification gate structure, Benchmark market data, Chinese export-control suspension",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525304167/nvx-ex99_1.htm",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "NOVONIX ASX announcement — notice of termination of the Stellantis offtake agreement (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525262911/nvx-ex99_1.htm",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "NOVONIX Q3-2025 quarterly activities report (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525257602/nvx-ex99_1.htm",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Utility Dive — Department of Energy cancels more than US$700m of battery and manufacturing grants, including Anovion's; NOVONIX is not among them",
+   "url": "https://www.utilitydive.com/news/department-energy-project-grants-cancelled-battery-manufacturing-trump/803347/",
+   "date": "2025-10-21"
+  },
+  {
+   "label": "NOVONIX ASX announcement — achieves critical operational milestone with the first mass-production industrial-grade sample (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000119312525221255/nvx-ex99_1.htm",
+   "date": "2025-09-29"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Yorkville funding agreement terms including the A$0.12 floor price and fixed conversion price (announcement PDF)",
+   "url": "https://announcements.asx.com.au/asxpdf/20250822/pdf/06n64sytmmkt88.pdf",
+   "date": "2025-08-22"
+  },
+  {
+   "label": "NOVONIX ASX announcement — market conditions lead Axon Graphite to withdraw its IPO (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025101076/nvx-ex99_1.htm",
+   "date": "2025-08-01"
+  },
+  {
+   "label": "NOVONIX ASX announcement — entry into the funding agreement with Yorkville for up to US$100m of convertible debentures (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025098146/nvx-ex99_1.htm",
+   "date": "2025-07-24"
+  },
+  {
+   "label": "GlobeNewswire — NOVONIX announces entry into a funding agreement for up to US$100 million of convertible debentures",
+   "url": "https://www.globenewswire.com/news-release/2025/07/23/3120701/0/en/NOVONIX-Announces-Entry-into-Funding-Agreement-for-up-to-US-100Million-of-Convertible-Debentures.html",
+   "date": "2025-07-23"
+  },
+  {
+   "label": "S&P Global Commodity Insights — US determines China is dumping graphite and imposes a 93.5% preliminary rate",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/metals/071725-us-determines-china-is-dumping-graphite-imposes-935-tariff",
+   "date": "2025-07-17"
+  },
+  {
+   "label": "NOVONIX ASX announcement — board leadership changes (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025084653/nvx-ex99_1.htm",
+   "date": "2025-06-11"
+  },
+  {
+   "label": "Federal Register — Active Anode Material from the People's Republic of China: preliminary affirmative countervailing duty determination",
+   "url": "https://www.federalregister.gov/documents/2025/05/28/2025-09563/active-anode-material-from-the-peoples-republic-of-china-preliminary-affirmative-countervailing-duty",
+   "date": "2025-05-28"
+  },
+  {
+   "label": "SNE Research — global anode material shipments for calendar 2024: 2.11 million tonnes, artificial graphite 83.2%, top ten all Chinese",
+   "url": "https://sneresearch.com/en/insight/release_view/430/page/84",
+   "date": "2025-05-01"
+  },
+  {
+   "label": "NOVONIX ASX announcement — Enterprise South land purchase and sale agreement (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025060622/nvx-ex99_1.htm",
+   "date": "2025-04-30"
+  },
+  {
+   "label": "NOVONIX ASX announcement — appointment of Michael O'Kronley as Chief Executive Officer (Form 6-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025059002/nvx-ex99_1.htm",
+   "date": "2025-04-28"
+  },
+  {
+   "label": "NOVONIX Form 20-F for the fiscal year ended 31 December 2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/1859795/000095017025029488/nvx-20241231.htm",
+   "date": "2025-02-28"
+  },
+  {
+   "label": "Utility Dive — NOVONIX secures a US$755m Department of Energy conditional loan commitment for a Tennessee synthetic graphite facility",
+   "url": "https://www.utilitydive.com/news/novonix-secures-755m-doe-loan-tennessee-synthetic-graphite-facility/736179/",
+   "date": "2025-01-10"
+  },
+  {
+   "label": "Benchmark Mineral Intelligence — NOVONIX inks offtake with PowerCo amid supply-chain diversification",
+   "url": "https://source.benchmarkminerals.com/article/novonix-inks-offtake-with-powerco-amid-supply-chain-diversification",
+   "date": "2024-11-25"
+  },
+  {
+   "label": "NOVONIX news — NOVONIX and PowerCo SE sign a binding offtake agreement for a minimum 32,000 tonnes over five years from 2027",
+   "url": "https://www.novonixgroup.com/news/novonix-and-powerco-agreement/",
+   "date": "2024-11-24"
+  },
+  {
+   "label": "Benchmark Mineral Intelligence — infographic: China controls three quarters of the graphite anode supply chain",
+   "url": "https://source.benchmarkminerals.com/article/infographic-china-controls-three-quarters-of-graphite-anode-supply-chain",
+   "date": "2024-06-01"
+  },
+  {
+   "label": "NOVONIX — Panasonic Energy and NOVONIX sign a binding off-take agreement for at least 10,000 tonnes (announcement PDF)",
+   "url": "https://www.novonixgroup.com/wp-content/uploads/2025/09/Panasonic-Energy-and-NOVONIX-Sign-Binding-Off-Take-Agreement.pdf",
+   "date": "2024-02-08"
+  },
+  {
+   "label": "Syrah Resources — Vidalia active anode material facility, 11,250 tpa with a Phase 3 expansion to at least 45,000 tpa",
+   "url": "https://www.syrahresources.com.au/our-business/vidalia-active-anode-material-facility",
+   "date": "2024-01-01"
+  },
+  {
+   "label": "NOVONIX news — finalises the US$100m grant award from the US Department of Energy",
+   "url": "https://www.novonixgroup.com/news/novonix-finalizes-us100-million-grant-award-from-u-s-department-of-energy/",
+   "date": "2023-11-01"
+  },
+  {
+   "label": "NOVONIX Form F-6 (depositary registrant) — deposit agreement registration establishing the original one-ADS-per-four-ordinary-shares ratio",
+   "url": "https://www.sec.gov/Archives/edgar/data/1905601/000101915522000011/novonixf6.htm",
+   "date": "2022-01-20"
+  },
+  {
+   "label": "NOVONIX — Our Materials: the GX-23 grade, the continuous induction furnace technology and the Minviro life-cycle assessment",
+   "url": "https://www.novonixgroup.com/anode-materials/"
+  },
+  {
+   "label": "NOVONIX — leadership page, titles and executive photographs (stale on the chairmanship as at 9 September 2026)",
+   "url": "https://www.novonixgroup.com/about/leadership/"
+  },
+  {
+   "label": "US Securities and Exchange Commission EDGAR — NOVONIX Ltd submissions index (CIK 0001859795)",
+   "url": "https://data.sec.gov/submissions/CIK0001859795.json"
+  },
+  {
+   "label": "US Securities and Exchange Commission EDGAR — NOVONIX Limited/ADR submissions index (CIK 0001905601)",
+   "url": "https://data.sec.gov/submissions/CIK0001905601.json"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

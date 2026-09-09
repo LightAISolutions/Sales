@@ -28,7 +28,7 @@
     "Factory capacity and delivery slots; yield record",
     "Safety certification (UL 9540A at cell level) and the fire record"
    ],
-   "notes": "Reserved adjacent role: upstream materials (lithium, LFP cathode, graphite/anode — S3 batch 4: Albemarle, Mitra Chem or ICL, Novonix or Syrah) join here as adjacent members, not as a segment of their own (INTEGRATED-REMEDIATION-PLAN.md §7.2).",
+   "notes": "Reserved adjacent role for upstream materials (lithium, LFP cathode, graphite/anode), which join here as adjacent members rather than as a segment of their own (INTEGRATED-REMEDIATION-PLAN.md §7.2). PARTLY FILLED at S3 P5 (2026-09-09, v05.28r): albemarle joined on lithium and novonix on synthetic graphite anode material, both adjacent. Still reserved for the private cathode and cell names of E4b/E6b — mitra-chem and cornex. Note that the two public alternates named in the original plan are no longer interchangeable: ICL discontinued its US LFP cathode project on 2025-11-11 so the premise is dead, and Syrah is pre-commercial at Vidalia with a going-concern flag; westwater-resources is the clean graphite alternate. Both members added here are pre-cell suppliers and neither counts toward the floor's incumbent or challenger requirement.",
    "members": [
     {
      "slug": "catl",
@@ -109,6 +109,16 @@
      "slug": "canadian-solar",
      "role": "adjacent",
      "basis": "ecosystemRole: a domestic cell plant announced before the rules bit (Shelbyville KY ramp unconfirmed); cells feed SolBank"
+    },
+    {
+     "slug": "albemarle",
+     "role": "adjacent",
+     "basis": "ecosystemRole: \"Albemarle sits one layer above every cell maker in this corpus: it sells the lithium compounds that the cell is built from, not the cell\" — and productsAndServices › Energy Storage quotes the company's own grid-storage page calling lithium carbonate \"the primary raw material to make LFP\", the chemistry it puts at under 90% of energy-storage cells. Upstream materials, not a cell maker."
+    },
+    {
+     "slug": "novonix",
+     "role": "adjacent",
+     "basis": "ecosystemRole: \"it makes the anode active material that goes into the negative electrode of a lithium-ion cell, in the same upstream position that a lithium producer occupies on the cathode side\" — and productsAndServices › synthetic graphite anode active material records binding offtakes with Panasonic Energy, itself a member of this segment, and with PowerCo SE. Adjacent rather than challenger: continuing-operations revenue is zero and no commercial anode volume has shipped."
     }
    ]
   },

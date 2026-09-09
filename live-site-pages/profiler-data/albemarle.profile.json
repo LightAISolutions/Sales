@@ -1,0 +1,1216 @@
+{
+ "schemaVersion": 7,
+ "slug": "albemarle",
+ "name": "Albemarle Corporation",
+ "shortName": "Albemarle",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.albemarle.com",
+ "headquarters": "Charlotte, North Carolina, USA",
+ "founded": 1993,
+ "employees": "~7,800 (31 December 2025, per the FY2025 10-K; the company's own leadership page says ~8,300, undated)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: ALB"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Albemarle is a lithium and bromine producer whose 2026 results have inverted the distressed picture of the prior two years — H1-2026 net income attributable to the company was US$799.1m against a US$510.6m full-year loss in 2025 — and whose relevance to storage and AI-datacentre infrastructure runs through two independent legs: lithium carbonate into the LFP cells that dominate grid-scale storage, and brominated flame retardants into the circuit boards, cable and enclosures of the same installations.\n\n**BACKGROUND.** Incorporated in Virginia in 1993, headquartered in Charlotte, North Carolina. Listed on the NYSE as ALB, with depositary shares on the 7.25% Series A Mandatory Convertible Preferred Stock trading separately as ALB PR A; 117,847,220 common shares outstanding at 2026-02-04 and 118,005,057 at 2026-07-29 per the filing covers. Following the 2026-03-02 sale of a controlling interest in the Refining Solutions business, the Q2-2026 10-Q reports **two** segments — Energy Storage and Specialties — where the FY2025 10-K still showed three. Approximately 1,900 customers in about 70 countries; more than 25 production and R&D sites; net sales shipped to or within China were 39% of the FY2025 total. Auditor PricewaterhouseCoopers LLP, Charlotte, engaged since 1994.",
+ "ecosystemRole": "Albemarle sits one layer above every cell maker in this corpus: it sells the lithium compounds that the cell is built from, not the cell. Its Energy Storage segment produces lithium carbonate — which the company's own grid-storage page identifies as \"the primary raw material to make LFP\" — plus lithium hydroxide for high- and mid-nickel cathodes, lithium chloride, spodumene concentrate, lithium metal and lithium sulfide for solid-state electrolytes. That places it as an upstream materials supplier adjacent to the cell segment rather than a participant in it.\n\nThe second leg is less obvious and is not lithium at all. The Specialties segment's SAYTEX brominated flame retardants go into \"plastic enclosures for consumer electronics, printed circuit boards, wire and cable products, electrical connectors, textiles and foam insulation\", and the company states that \"in energy, infrastructure for renewable grid and electrified transport is enabled by our fire safety solutions\". Albemarle therefore reaches a battery-storage installation twice — through the cell and through the enclosure around it — and reaches an AI datacentre through the same flame-retardant chain in electronics. Management names the link directly: demand drivers include \"increasing demand for data management capacity\", and the Q2-2026 Specialties end-market ranking is led by semiconductors.\n\nIt is not a lithium pure-play and the company does not present itself as one. The incoming chief executive's own framing is to build on \"both its Energy Storage and Specialties business segments\", and the Specialties outlook was raised twice during 2026.",
+ "productsAndServices": [
+  {
+   "name": "Energy Storage — basic lithium compounds",
+   "category": "Battery raw materials",
+   "description": "The larger of two reporting segments: lithium carbonate, lithium hydroxide and lithium chloride in technical and battery grades, plus spodumene concentrate sold as feedstock. FY2025 net sales US$2,710.0m and adjusted EBITDA US$697.2m; Q2-2026 net sales US$1,276.7m (+77.9%) on 65 kt LCE sold at an average realised price of US$19.53/kg LCE (+60.5%).",
+   "highlights": [
+    "Lithium carbonate is described by the company as \"the primary raw material to make LFP\" — the chemistry it puts at under 90% of energy-storage system cells",
+    "Lithium hydroxide is \"the key source of lithium for high and mid-nickel cathodes for EVs\"; technical grade also goes into greases, dyes, pH control and CO2 scrubbing in rebreathers",
+    "Lithium carbonate is also produced as an active pharmaceutical ingredient under GMP conditions",
+    "Spodumene concentrate processed \"via gravity, heavy media, flotation and magnetic processes\"",
+    "Bulk lithium metal marketed as \"the purest form of lithium metal available on the market\" — ingots, rods and powders for aerospace, defence and nuclear power",
+    "Lithium sulfide sold as \"a precursor for sulfidic solid-state electrolytes (SSE)\"",
+    "Ultra-thin lithium metal anode films for energy-density gains"
+   ],
+   "positioning": "Albemarle names its own lithium competitors in the FY2025 10-K: \"Sociedad Quimica y Minera de Chile S.A., Sichuan Tianqi Lithium, Jiangxi Ganfeng Lithium, Rio Tinto plc, Pilbara Minerals, Tesla and a large number of additional Chinese companies\", and says competition is \"increasingly based on index-based market pricing and differentiated via product quality, product diversity, reliability of supply and customer service\". Independent ranking is harder than it looks: Albemarle stopped disclosing production tonnage, so a 2026 producer league table (list.solar, 2026-08-01, built on USGS and company reports) ranks SQM first on 233 kt LCE disclosed and marks Albemarle's second place \"not disclosed\". Treat \"world number two in lithium\" as a widely repeated claim that the company itself no longer supplies the data for.",
+   "soldThrough": "Direct, on a mix of index-referenced variable pricing and long-term agreements; the Q2-2026 outlook states the Energy Storage contract book \"includes approximately 40% of salts volume (or one-third of total volumes) on long-term agreements\". Tolling is used — Talison output \"can be used by tolling entities in China\". One unnamed Energy Storage customer paid a US$350m prepayment in January 2025 for spodumene and lithium salts through 2029.",
+   "targetSegments": "Grid storage, automotive and EV, consumer electronics, aerospace, defence, nuclear power, pharmaceuticals, specialty glass and greases",
+   "roadmap": "Kings Mountain, North Carolina: federal permitting for the lithium material processing plant completed 2026-03-26 under FAST-41; the concentrator is designed for ~420,000 t/yr of spodumene concentrate, and the mine — idled in the early 1990s — remains at exploration stage. Chile: environmental review filed 2026-03-25 for a first direct-lithium-extraction project inside the Atacama concession. Salar recovery is targeted to rise from 43% to 60% by 2027. Antofalla, Argentina is held undeveloped."
+  },
+  {
+   "name": "Specialties — bromine and fire safety",
+   "category": "Flame retardants and bromine derivatives",
+   "description": "Brominated flame retardants and bromine derivatives, and the leg of the business that reaches electronics and datacentre equipment. FY2025 segment net sales US$1,366.4m and adjusted EBITDA US$275.7m; Q2-2026 net sales US$423.5m (+20.5%, price +11% and volume +8%) with adjusted EBITDA US$117.7m (+61.3%). The FY2026 Specialties outlook was raised to US$1.4–1.6bn of net sales and US$275–325m of adjusted EBITDA.",
+   "highlights": [
+    "SAYTEX brominated flame retardants — named grades 621, 8010, BT-93W, CP-2000, HP-3010, HP-7010, RB-49, RB-79, RB-7980 and RB-9170",
+    "SAYTEX ALERO, a \"next-generation versatile polymeric flame retardant… with demonstrated recyclability\", extended in February 2026 toward EV battery systems, electronics and datacentre infrastructure",
+    "End uses named by the company: plastic enclosures for consumer electronics, printed circuit boards, wire and cable, electrical connectors, textiles and foam insulation",
+    "Other bromine: elemental bromine, alkyl bromides, inorganic bromides and brominated powdered activated carbon, under STABROM, ABZOL, MAXXIS, ADMA, AVIBROM, SANIBROM, WELLBROM, PORCIBROM and BOVIBROM",
+    "Attributable bromine production 126 kt in 2025 (121 kt 2024, 123 kt 2023) from Magnolia, Arkansas and the 50%-held Jordan Bromine Company"
+   ],
+   "positioning": "Albemarle names Lanxess AG, Israel Chemicals Ltd and Rio Tinto as its principal Specialties competitors, plus producers in India and China. A numeric, independently published bromine market share for Albemarle could not be established: the available aggregates say four producers — Albemarle, Chemtura/LANXESS, Jordan Bromine and ICL — hold roughly 90% of global capacity, with ICL at about 40% of supply per Omdia (2026-04-20). One correction worth carrying: Chemours is not a bromine producer; the lineage is Great Lakes Chemical to Chemtura to LANXESS in 2017.",
+   "soldThrough": "Direct to compounders, resin producers and electronics manufacturers; product performance, quality, price and contract terms are the stated award criteria",
+   "targetSegments": "Semiconductors and electronics, oil and gas, flame retardants, pharmaceuticals, water treatment, agriculture and food safety, automotive",
+   "roadmap": "The commercial answer to European regulatory pressure on legacy brominated chemistry is the polymeric SAYTEX ALERO line. The FY2025 10-K states that EU agencies \"continue to evaluate the risks… associated with certain brominated fire safety solutions such as tetrabromobisphenol A and decabromodiphenyl ethane, both of which we manufacture\", and that limitations or bans \"could result in a decline in our net sales\"."
+  },
+  {
+   "name": "Specialties — lithium specialties and fine chemicals",
+   "category": "Organometallics and specialty inorganics",
+   "description": "Value-added lithium chemistry and non-lithium specialty inorganics reported inside the Specialties segment. Butyllithium is manufactured at New Johnsonville, Tennessee; Langelsheim, Germany; and Taichung, Taiwan.",
+   "highlights": [
+    "Butyllithium as an anionic initiator for polyisoprene, polybutadiene and butadiene/styrene copolymers, and in active-pharmaceutical-ingredient synthesis",
+    "Lithium aluminium hydride, lithium chloride and lithium hydrides",
+    "Caesium products for the chemical and pharmaceutical industries",
+    "Zirconium, barium and titanium products for pyrotechnics including airbag initiators, and energetic materials",
+    "Technical services for handling reactive lithium products, and recycling of lithium-containing by-products from organolithium synthesis"
+   ],
+   "positioning": "Sold on product performance, quality and contract terms into cyclical end markets — the company names consumer electronics and oil field as cyclical exposures within this line",
+   "soldThrough": "Direct, with technical service and by-product recycling offered alongside the material",
+   "targetSegments": "Synthetic rubber and polymers, pharmaceuticals and life sciences, automotive safety systems, specialty chemicals",
+   "roadmap": "No dated roadmap items are disclosed for this line"
+  },
+  {
+   "name": "Retained catalysts — Performance Catalyst Solutions",
+   "category": "Specialty catalysts",
+   "description": "What is left of the former Ketjen segment after the 2026 divestitures: the performance catalyst solutions business, primarily organometallics and curatives, retained 100% and reported inside \"Corporate and All Other\", which the Q2-2026 10-Q states \"is not considered to be a segment\". The company expects its contribution to be immaterial post-transaction.",
+   "highlights": [
+    "Retained in full while the Clean Fuels Technologies and FCC catalyst lines went with the Refining Solutions sale",
+    "Albemarle also holds 49% of the common units of ChemCat Holdings, LP, the vehicle holding the divested business",
+    "Historic PCS competitors named by the company: Nouryon, Lanxess AG and Arxada",
+    "Carries a US$6.8m accumulated goodwill impairment now sitting in Corporate and All Other"
+   ],
+   "positioning": "A residual line rather than a strategic one; the 10-K flags that determining a reintegration plan for PCS may itself be an impairment triggering event",
+   "soldThrough": "Direct to polymer and chemical producers",
+   "targetSegments": "Polymer production, specialty chemicals",
+   "roadmap": "Reintegration into the wider Albemarle portfolio, with no date given"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "SAYTEX ALERO polymeric flame retardant",
+   "specs": [
+    {
+     "band": "Chemical",
+     "label": "Type",
+     "value": "next-generation versatile polymeric flame retardant"
+    },
+    {
+     "band": "Process",
+     "label": "In ABS",
+     "value": "lower loading, better performance and better appearance versus competitive flame retardants"
+    },
+    {
+     "band": "Process",
+     "label": "In polypropylene",
+     "value": "Melt-blendable properties enhance product uniformity and formulation flexibility and allow PTFE-free formulations"
+    },
+    {
+     "band": "Process",
+     "label": "In PC/ABS",
+     "value": "No synergist is needed while providing superior impact strength"
+    },
+    {
+     "band": "Compliance",
+     "label": "Circularity",
+     "value": "demonstrated recyclability"
+    }
+   ],
+   "notes": "Extended in February 2026 toward EV battery systems, electronics and datacentre infrastructure. Values are quoted verbatim from Albemarle's product pages."
+  },
+  {
+   "product": "Butyllithium — commercial solution grades",
+   "specs": [
+    {
+     "band": "Purity",
+     "label": "n-BuLi in hexane",
+     "value": "typ. 15 % solution in Hexane (1.6 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "n-BuLi in hexane",
+     "value": "typ. 23 % solution in Hexane (2.5 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "n-BuLi in hexane",
+     "value": "typ. 30 % solution in Hexane (3.3 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "n-BuLi in hexane",
+     "value": "typ. 90 % solution in Hexane (10.7 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "n-BuLi in cyclohexane",
+     "value": "typ. 20 % solution in Cyclohexane (2.3 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "n-BuLi in toluene",
+     "value": "typ. 20 % solution in Toluene (2.7 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "n-BuLi in heptane",
+     "value": "typ. 29 % solution in Heptane (typ. 3.2 M)"
+    },
+    {
+     "band": "Purity",
+     "label": "tert-BuLi",
+     "value": "typ. 18 % solution in Pentane (typ. 1.9 M)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Manufacturing sites",
+     "value": "New Johnsonville, Tennessee; Langelsheim, Germany; Taichung, Taiwan"
+    }
+   ],
+   "notes": "Concentrations and molarities as published on Albemarle's butyllithium product page."
+  },
+  {
+   "product": "Lithium sulfide for solid-state electrolytes",
+   "specs": [
+    {
+     "band": "Chemical",
+     "label": "Function",
+     "value": "a precursor for sulfidic solid-state electrolytes (SSE)"
+    },
+    {
+     "band": "Purity",
+     "label": "Impurity profile",
+     "value": "Ultra-low impurity profile"
+    },
+    {
+     "band": "Purity",
+     "label": "Consistency",
+     "value": "High lot-to-lot consistency"
+    },
+    {
+     "band": "Process",
+     "label": "Handling",
+     "value": "Free flowing; easy to dose; non-dusting"
+    },
+    {
+     "band": "Compliance",
+     "label": "Requirement met",
+     "value": "fulfills the stringent requirements of high conductivity solid electrolytes"
+    }
+   ],
+   "notes": "A pre-commercial-scale line relative to carbonate and hydroxide; no capacity figure is published."
+  },
+  {
+   "product": "Jordan Bromine Company plant, Safi — reserve-model parameters",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Plant output",
+     "value": "approximately 125,000 metric tonnes per year"
+    },
+    {
+     "band": "Process",
+     "label": "Process recovery",
+     "value": "plant process recovery of 82 percent (bromine from bromide)"
+    },
+    {
+     "band": "Chemical",
+     "label": "Feed concentration",
+     "value": "approximately 8,775 ppm"
+    },
+    {
+     "band": "Chemical",
+     "label": "Cut-off grade",
+     "value": "1,000 ppm"
+    },
+    {
+     "band": "Compliance",
+     "label": "Concession horizon",
+     "value": "the end of 2058, when the APC concession agreement ends"
+    },
+    {
+     "band": "Capacity",
+     "label": "Reserve, Albemarle 50% share",
+     "value": "approximately 2.1 million metric tonnes of bromine"
+    }
+   ],
+   "notes": "A 50% consolidated joint venture with Arab Potash Company, established 1999, drawing bromine from the Dead Sea."
+  },
+  {
+   "product": "Wodgina spodumene operation, Western Australia",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Plant",
+     "value": "750ktpa spodumene plant"
+    },
+    {
+     "band": "Purity",
+     "label": "Product grade",
+     "value": "6% spodumene concentrate"
+    },
+    {
+     "band": "Process",
+     "label": "Process route",
+     "value": "gravity, heavy media, flotation and magnetic processes"
+    },
+    {
+     "band": "Design",
+     "label": "Ownership",
+     "value": "50% through the MARBL Lithium Joint Venture with Mineral Resources Limited, which operates the mine"
+    }
+   ],
+   "notes": "Attributable production 8 kt of lithium metal in 2025 (6 kt in 2024). Albemarle's stated conversion factor is 0.1878 t of lithium metal per tonne of lithium carbonate equivalent."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-02",
+   "category": "leadership",
+   "headline": "Board appoints Ragnar Udd to succeed J. Kent Masters, Jr. as President and Chief Executive Officer effective 1 February 2027 or a mutually agreed earlier date; Masters becomes Executive Chair",
+   "read": "The first chief-executive change since April 2020, and an outsider hire from mining rather than chemicals — Udd is BHP's Chief Commercial Officer and ran its Americas copper and potash business. Terms disclosed: US$1.3m base, 135% target bonus, a US$1.4m cash sign-on and US$11.0m of make-whole equity.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000114036126035623/ef20081522_8k.htm"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "leadership",
+   "headline": "Max W. Hood appointed Chief Accounting Officer effective 24 August 2026, joining from The ODP Corporation where he was co-Chief Financial Officer",
+   "read": "Closes a principal-accounting-officer vacancy the CFO had been covering personally since 2 June — the third senior finance or board change in four months.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000107/alb-20260819.htm"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "Q2-2026 results: net sales US$1,743.3m (+31%), net income attributable to Albemarle US$480.0m, adjusted EBITDA US$858.1m (+155%), free cash flow US$638m; Specialties outlook raised and capex cut to about US$500m",
+   "read": "The quarter that settles the distress question: adjusted EBITDA nearly tripled year on year and Energy Storage realised US$19.53/kg LCE, up 60.5% year on year. Guidance is published as a price-scenario table rather than a point estimate, which is the honest form for this business.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000101/a2q26earningsreleaseex991.htm"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "leadership",
+   "headline": "Eduardo De Salles Bartolomeo appointed an independent director, joining the Audit and Finance and the Safety, Sustainability, Operations and Capital committees",
+   "read": "A third 2026 board addition after Michelle T. Collins and Mark R. Widmar in March, continuing a refresh that runs alongside the chief-executive search.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000095/alb-20260721.htm"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "financial",
+   "headline": "Quarterly common dividend raised to US$0.41 per share, an annualised US$1.64, payable 1 October 2026",
+   "read": "The first increase after holding US$0.405 through 2025 — a capital-allocation signal that management considers the trough passed.",
+   "source": "https://investors.albemarle.com/news-and-events/news/news-details/2026/Albemarle-Announces-Quarterly-Common-Stock-Dividend/default.aspx"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "incident",
+   "headline": "Fire at the Talison CGP3 chemical-grade plant, Greenbushes",
+   "read": "Delays the CGP3 ramp, with remediation and return to normal expected in the second half of 2026; Albemarle states the impact on Energy Storage sales volume will be minimal, partly because Wodgina ran ahead of plan. CGP1 and CGP2 were unaffected.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000102/alb-20260630.htm"
+  },
+  {
+   "date": "2026-06-05",
+   "category": "corporate",
+   "headline": "2025 Sustainability Report published, carrying the company's fullest statement of the grid-storage and datacentre demand thesis",
+   "read": "The source for the claim that energy storage systems are \"currently also the only form of energy storage that can be installed in the same time frame as data centers\" and that more than 50% of 2025 business was aligned with energy-transition activity.",
+   "source": "https://www.albemarle.com/sites/default/files/2026-06/albemarle-sustainability-report-2025-final.pdf"
+  },
+  {
+   "date": "2026-06-05",
+   "category": "leadership",
+   "headline": "Chief Accounting Officer Donald J. LaBauve Jr. retired on 1 June 2026 after 36 years; CFO Neal Sheorey served as interim principal accounting officer",
+   "read": "Explicitly not a disagreement over accounting or disclosure; the vacancy ran roughly twelve weeks until Hood's appointment.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000087/alb-20260601.htm"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "financial",
+   "headline": "Moody's affirms Baa3 and Prime-3 and moves the outlook back from negative to stable on adjusted leverage of 1.8x against 4.5x a year earlier",
+   "read": "The deleveraging is real and sourced: about US$1.3bn of gross debt was retired in H1-2026 using divestiture proceeds and operating cash, leaving total debt of US$1.9bn at 30 June against US$3.2bn at year-end.",
+   "source": "https://www.investing.com/news/stock-market-news/moodys-changes-albemarle-outlook-to-stable-on-improved-metrics-93CH-4682848"
+  },
+  {
+   "date": "2026-03-30",
+   "category": "regulatory",
+   "headline": "Kings Mountain Lithium Material Processing Plant completes federal permitting under FAST-41 — the twelfth mining project through the programme and the first completed in North Carolina",
+   "read": "Removes the federal permitting variable from the only US hard-rock lithium resource Albemarle owns outright; the mine itself has been idle since the early 1990s and remains at exploration stage.",
+   "source": "https://www.permitting.gov/newsroom/press-releases/kings-mountain-lithium-material-processing-plant-completes-federal"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "project",
+   "headline": "Environmental review filed for Albemarle's first direct-lithium-extraction project in Chile, inside the Atacama concession, with an associated transmission line",
+   "read": "DLE is the route to raising Salar recovery from 43% toward the 60% target for 2027 without proportionally increasing brine extraction — the technical answer to the water-use criticism the Atacama operation attracts.",
+   "source": "https://www.miningweekly.com/article/albemarle-starts-enviro-review-process-for-lithium-extraction-project-in-chile-2026-03-25"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "financial",
+   "headline": "Third Amendment to the 2022 Credit Agreement extends the US$1.5bn revolver to 28 October 2028",
+   "read": "Deletes the 0.10% SOFR credit-spread adjustment and cuts available extension requests from two to one; agent Bank of America, N.A.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000057/alb-20260319.htm"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "financial",
+   "headline": "Automatic shelf registration statement on Form S-3ASR filed",
+   "read": "A routine well-known-seasoned-issuer shelf refresh replacing the 2023 registration — unallocated, no dollar amount, and not evidence of a pending transaction.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000041/alb-sx3asrmarch2026.htm"
+  },
+  {
+   "date": "2026-03-06",
+   "category": "ma",
+   "headline": "Sale of the controlling interest in the Refining Solutions business to ChemCat AcquisitionCo, LLC, an affiliate of KPS Capital Partners, completes on 2 March 2026; debt tender offers and the 4.650% 2027 notes redemption launched the same day",
+   "read": "Portfolio reset and balance-sheet reset in one motion. Albemarle sold its 51% interest in Ketjen Corporation and contributed the remainder to ChemCat Holdings, LP, retaining 49% of the common units and 100% of the performance catalyst solutions business.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000032/alb-20260302.htm"
+  },
+  {
+   "date": "2026-03-04",
+   "category": "leadership",
+   "headline": "Michelle T. Collins and Mark R. Widmar appointed to the board of directors",
+   "read": "Widmar was First Solar's chief executive — a renewables-industry perspective added as the lithium cycle turned.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000029/alb-20260226.htm"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "capacity",
+   "headline": "Kemerton Train 1 placed into care and maintenance, completing the shutdown of the Western Australian hydroxide conversion complex",
+   "read": "Chief executive Masters: \"Recent lithium price improvements alone are not enough to offset the challenges facing Western hard-rock lithium conversion operations.\" Train 2 went to care and maintenance in 2024 and construction of Trains 3 and 4 was stopped; with the Chengdu plant also idled, Albemarle has exited most of the conversion capacity it could not run competitively against Chinese converters.",
+   "source": "https://investors.albemarle.com/news-and-events/news/news-details/2026/Albemarle-Announces-Plans-to-Idle-its-Kemerton-Lithium-Hydroxide-Processing-Plant/default.aspx"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "financial",
+   "headline": "FY2025 results: net sales US$5,142.7m (−4%), net loss attributable to Albemarle US$510.6m, adjusted EBITDA US$1,098.0m; cost and productivity programme delivered about US$450m against a US$300–400m target",
+   "read": "A second consecutive annual loss, but a much smaller one, and driven by two non-cash divestiture write-downs rather than operations: a US$181.1m goodwill impairment in Q3 and a US$245.6m long-lived asset impairment in Q4, both against the Refining Solutions business being sold.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "date": "2026-01-23",
+   "category": "ma",
+   "headline": "Sale of the 50% interest in Eurecat S.A. to Axens SA completes for EUR 105 million, about US$123 million in cash",
+   "read": "Recorded a US$42.3m pre-tax gain. No press release was issued for the closing — the transaction is documented only in the filings, which is why it is easy to miss.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "ma",
+   "headline": "Agreement signed on 25 October 2025 to divest the controlling interest in Ketjen's Refining Solutions business to KPS Capital Partners",
+   "read": "Triggered held-for-sale classification and the two impairment charges that dominate the FY2025 loss.",
+   "source": "https://investors.albemarle.com/news-and-events/news/news-details/2025/Albemarle-Announces-Sale-of-a-Controlling-Stake-in-Ketjen-to-KPS-Capital-Partners/default.aspx"
+  },
+  {
+   "date": "2025-08-11",
+   "category": "leadership",
+   "headline": "Enhanced organisational structure announced: Mummert to Chief Operations Officer, Gagarinas to Chief People and Workplace Transformation Officer, Anderson to Chief Business Transformation Officer; Netha Johnson departs",
+   "read": "The functional-model reorganisation that carries the cost programme, following the October 2024 move away from two global business units.",
+   "source": "https://investors.albemarle.com/news-and-events/news/news-details/2025/Albemarle-Announces-Enhanced-Organizational-Structure/default.aspx"
+  },
+  {
+   "date": "2025-04-30",
+   "category": "legal",
+   "headline": "US Department of Justice terminates Albemarle's three-year Foreign Corrupt Practices Act non-prosecution agreement early, about halfway through its term",
+   "read": "The September 2023 resolution totalled US$218.5m across DOJ and SEC over third-party agent conduct in Vietnam, Indonesia and India from 2009 to 2017. Early termination is a favourable compliance signal and is easily missed because it was not company-announced.",
+   "source": "https://www.complianceweek.com/anti-bribery/in-continuing-re-evaluation-of-fcpa-cases-doj-ends-albemarle-fcpa-reporting/35991.article"
+  },
+  {
+   "date": "2025-02-25",
+   "category": "financial",
+   "headline": "Moody's affirms Baa3 and changes the outlook from stable to negative, citing 4.3x year-end leverage and negative free cash flow",
+   "read": "The low point of the credit narrative; the same agency reversed it fifteen months later.",
+   "source": "https://www.investing.com/news/stock-market-news/outlook-on-albemarle-corporation-changed-to-negative-by-moodys-ratings-93CH-3890482"
+  },
+  {
+   "date": "2024-10-07",
+   "category": "corporate",
+   "headline": "New operating structure replaces two global business units with an integrated functional model",
+   "read": "The structural origin of the cost programme that has now delivered roughly US$450m in 2025 and US$100m year-to-date in 2026.",
+   "source": "https://investors.albemarle.com/news-and-events/news/news-details/2024/Albemarle-Announces-New-Operating-Structure-to-Increase-Agility-Drive-Cost-Efficiencies-and-Maintain-Long-Term-Competitiveness/default.aspx"
+  },
+  {
+   "date": "2024-07-31",
+   "category": "capacity",
+   "headline": "Comprehensive review of cost and operating structure: Kemerton Train 3 construction stopped, Train 2 into care and maintenance, and a 6–7% global workforce reduction",
+   "read": "Charges since inception reached US$726.0m of asset write-offs, US$53.4m of severance, US$38.4m of contract cancellation and US$13.2m of decommissioning; the company does not expect further material costs on this programme.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "tesla",
+   "type": "competitor",
+   "status": "active",
+   "note": "Albemarle names Tesla in its FY2025 10-K list of major competitors in lithium compounds — the only vehicle maker on that list.",
+   "context": "The FY2025 10-K's Energy Storage competition paragraph reads: \"Major competitors in lithium compounds include Sociedad Quimica y Minera de Chile S.A., Sichuan Tianqi Lithium, Jiangxi Ganfeng Lithium, Rio Tinto plc, Pilbara Minerals, Tesla and a large number of additional Chinese companies.\" Tesla appears there because of its own lithium refinery at Corpus Christi, Texas, not because of its cell or vehicle business.\n\nThe relationship is one-directional in the record and worth stating as such: Albemarle names Tesla as a competitor, and Albemarle does not disclose Tesla as a customer. A search of the FY2025 10-K, the Q2-2026 10-Q and the trailing press-release archive returns no named offtake or supply agreement with any cell maker or automaker at all — customer relationships are described only in the generic form \"long-term supply agreements with key strategic customers\". Any claim that Albemarle supplies a specific covered company would therefore have to come from that company's side, not this one.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Chile — CORFO Salar de Atacama agreement",
+   "status": "in-effect",
+   "effectiveDate": "2044-01-01",
+   "exposure": "Albemarle's right to extract lithium brine at the Salar de Atacama runs under an agreement with CORFO, the Chilean state production development agency. The original contract permitted 200,000 tonnes of lithium metal equivalent; a 2017 annex added a further 262,132 t LME and extended the duration to the earlier of quota exhaustion or 1 January 2044. The agreement requires commission payments to the Chilean government calculated on sales price per tonne — the Q2-2026 EBITDA commentary cites \"higher CORFO commissions\" as a cost of the higher realised price — plus research and development and local-community support obligations. Ownership of the Salar facilities reverts to the Chilean government once the remaining quota is sold. The company separately flags risk around \"our rights to use water and our usage of water, particularly with respect to our early warning plan at our facilities in Chile\".",
+   "mitigation": "Environmental review filed 2026-03-25 for a first direct-lithium-extraction project inside the concession, with the stated aim of raising recovery while reducing brine extraction; Salar recovery is targeted to move from 43% to 60% by 2027.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "regime": "Section 301 tariffs and 2025 US–China measures",
+   "status": "in-effect",
+   "exposure": "Albemarle never uses the phrase \"Section 301\" in its filings. Its disclosure is deliberately generic: \"at this time, we do not expect a material, direct impact to our financial statements from the tariffs proposed or imposed by the U.S. and internationally to date. The potential direct exposure of the Energy Storage segment… is expected to be minimal as most of our China production is sold into China or other Asian countries, and some critical materials are fully or partially exempt.\" The scale of the underlying exposure is nonetheless large — net sales shipped to or within China were 39% of the FY2025 total, and the company operates three China conversion sites. It also notes that US and Chinese tariffs on Chinese electric vehicles and lithium-ion batteries initiated in 2025 \"have resulted in, and may continue to cause, shifting trade flows\".",
+   "mitigation": "Stated as \"our global footprint and planned mitigation actions\"; production for the Chinese market is largely made in China.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000102/alb-20260630.htm"
+  },
+  {
+   "regime": "EU restrictions on brominated flame retardants",
+   "status": "proposed",
+   "exposure": "\"Agencies in the European Union continue to evaluate the risks to human health and the environment associated with certain brominated fire safety solutions such as tetrabromobisphenol A and decabromodiphenyl ethane, both of which we manufacture. Additional government regulations, including limitations or bans on the use of brominated flame retardants, could result in a decline in our net sales.\" This is the principal regulatory threat to the Specialties leg, and the company names the two molecules at risk itself.",
+   "mitigation": "The polymeric SAYTEX ALERO line, marketed on \"demonstrated recyclability\" and extended in February 2026 into electronics and datacentre infrastructure, is the commercial answer.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "regime": "EU Digital Battery Passport",
+   "status": "announced",
+   "effectiveDate": "2027-02",
+   "exposure": "\"As of February 2027, all electric vehicle and industrial batteries (with a capacity >2kWh) in the EU market will require the Digital Battery Passport.\" The obligation falls on the battery producer, but the data has to come from up the chain, which puts a reporting requirement on the material supplier.",
+   "mitigation": "\"By sharing PCF data with our customers, we enable their compliance with regulations such as the European Union's Battery Passport and Carbon Border Adjustment\" — product carbon footprints derived from life-cycle assessments.",
+   "source": "https://www.albemarle.com/sites/default/files/2026-06/albemarle-sustainability-report-2025-final.pdf"
+  },
+  {
+   "regime": "US critical-minerals funding — DOE grant and DoD award",
+   "status": "in-effect",
+   "effectiveDate": "2022-01-01",
+   "exposure": "Albemarle holds a US Department of Energy grant of approximately US$150m toward the Kings Mountain concentrator, received over the construction period \"projected through 2028\" as capital-expenditure reimbursement, and a US$90m US Department of Defense critical materials award made in 2023 to support the mine restart. Cumulative receipts were US$25.2m through 31 December 2025 and US$28.3m through 30 June 2026, booked as reductions to property, plant and equipment rather than as income.",
+   "mitigation": "Not applicable — this is support rather than exposure, but it ties a material part of the Kings Mountain economics to programmes whose disbursement schedules the company does not control.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "regime": "Jordan — Arab Potash Company concession",
+   "status": "in-effect",
+   "effectiveDate": "2058-12-31",
+   "exposure": "The Jordan Bromine Company bromine reserve estimate is expressly bounded by \"the end of 2058, when the APC concession agreement ends\". Roughly 45% of Albemarle's attributable bromine production came from Safi in 2025 (57 kt of 126 kt), so the concession horizon is a hard boundary on nearly half the bromine business.",
+   "mitigation": "The Magnolia, Arkansas operation is supported by an active brine-rights leasing programme and provided the other 69 kt in 2025.",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "regime": "OECD Pillar Two global minimum tax",
+   "status": "in-effect",
+   "effectiveDate": "2024-01-01",
+   "exposure": "The 15% global minimum tax, phased in from 1 January 2024 in the European Union, \"could have a material impact to our results of operations, but it is dependent on our ongoing mix of earnings\".",
+   "source": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+   "regime": "Inflation Reduction Act sourcing requirements",
+   "status": "in-effect",
+   "effectiveDate": "2022-08-16",
+   "exposure": "This entry records a near-absence deliberately. Albemarle makes exactly one first-party IRA claim, and it is a marketing statement on a product page: \"Our footprint in North America and Australia also provides pathways for the supply of lithium that is compliant with U.S. Inflation Reduction Act (IRA) requirements.\" Neither the FY2025 10-K nor the Q2-2026 10-Q contains the phrase \"Inflation Reduction Act\", \"FEOC\" or \"foreign entity of concern\", and neither contains \"Section 45X\" or \"advanced manufacturing production credit\". **Albemarle does not disclose claiming the 45X credit.** Any source asserting otherwise is not relying on the company's filings.",
+   "source": "https://www.albemarle.com/us/en/what-we-offer/featured-products/lithium-hydroxide"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "J. Kent Masters, Jr.",
+   "title": "Chairman and Chief Executive Officer; becomes Executive Chair on his successor's start date",
+   "photo": "images/execs/albemarle-masters.webp",
+   "background": [
+    "Chairman and Chief Executive Officer — Albemarle Corporation (April 2020–present)",
+    "Lead independent director — Albemarle Corporation (2018–2020); director since 2015, joining with the Rockwood Holdings acquisition",
+    "Operating partner — Advent International",
+    "Chief Executive Officer — Foster Wheeler AG (2011–2014)",
+    "Executive board member — Linde AG",
+    "Director — Vibrantz Technologies; member, Charlotte Executive Leadership Council",
+    "Age 65 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Ragnar Udd",
+   "title": "Incoming President and Chief Executive Officer, effective 1 February 2027 or a mutually agreed earlier date",
+   "background": [
+    "Chief Commercial Officer — BHP (March 2024–present), responsible for sales and marketing, procurement, maritime activities and commodities market strategy",
+    "President Americas — BHP (November 2020–March 2024), leading the copper and potash businesses",
+    "Interim Chief Technology Officer — BHP",
+    "BHP Mitsubishi Alliance Asset President; Vice President Logistics and Infrastructure, Western Australia Iron Ore",
+    "More than 25 years leading global resources businesses across Australia, Asia and the Americas",
+    "Age 54 at appointment"
+   ]
+  },
+  {
+   "name": "Neal R. Sheorey",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/albemarle-sheorey.jpg",
+   "background": [
+    "Executive Vice President and Chief Financial Officer — Albemarle Corporation (November 2023–present)",
+    "Interim principal accounting officer — Albemarle Corporation (June–August 2026)",
+    "Vice President, Coatings and Performance Monomers — The Dow Chemical Company",
+    "Vice President, Investor Relations — Dow; Senior Director, Corporate Development — Dow",
+    "Global Finance Director, Chemicals business group — Dow; more than 20 years at Dow in total",
+    "Age 49 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Eric W. Norris",
+   "title": "Executive Vice President and Chief Commercial Officer",
+   "photo": "images/execs/albemarle-norris.webp",
+   "background": [
+    "Executive Vice President and Chief Commercial Officer — Albemarle Corporation",
+    "President, Lithium — later Energy Storage — Albemarle Corporation (August 2018–2025)",
+    "Chief Strategy Officer — Albemarle Corporation (January 2018)",
+    "President, Health and Nutrition — FMC Corporation; Vice President and Global Business Director, FMC Lithium (16 years at FMC)",
+    "Earlier career at Rohm and Haas Company",
+    "Age 59 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Mark R. Mummert",
+   "title": "Executive Vice President and Chief Operations Officer",
+   "photo": "images/execs/albemarle-mummert.jpg",
+   "background": [
+    "Executive Vice President and Chief Operations Officer — Albemarle Corporation (August 2025–present)",
+    "Senior Vice President, Chief Capital, Resources and Supply Chain Officer — Albemarle (November 2024)",
+    "Chief Operating Officer, Energy Storage — Albemarle Corporation (from 2019)",
+    "Supply chain and global operations leadership — FMC Corporation",
+    "Twenty years at Rohm and Haas Company in manufacturing and engineering; earlier work at Dow",
+    "Serves on the board of the Talison spodumene mine at Greenbushes, Western Australia",
+    "Age 58 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Melissa H. Anderson",
+   "title": "Executive Vice President and Chief Business Transformation Officer",
+   "photo": "images/execs/albemarle-anderson.jpg",
+   "background": [
+    "Chief Business Transformation Officer — Albemarle Corporation (from November 2024)",
+    "Chief Human Resources Officer — Albemarle Corporation (January 2021–2024)",
+    "Executive Vice President, Administration and Chief Human Resources Officer — Duke Energy (January 2015–August 2020)",
+    "Senior leadership roles at Domtar Corporation, The Pantry, Inc. and IBM Corporation",
+    "Director — Vulcan Materials; board member and former chair, Society for Human Resource Management",
+    "Age 61 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Autumn M. Gagarinas",
+   "title": "Senior Vice President, Chief People and Workplace Transformation Officer",
+   "photo": "images/execs/albemarle-gagarinas.png",
+   "background": [
+    "Chief People and Workplace Transformation Officer — Albemarle Corporation (August 2025–present)",
+    "Vice President, Human Resources — Albemarle Corporation (from 2023)",
+    "Senior human-resources roles including EMEA operations and HR analytics — Honeywell International",
+    "Earlier roles at SpaceX; Stanford Graduate School of Business",
+    "Age 52 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Ander C. Krupa",
+   "title": "Senior Vice President, General Counsel and Corporate Secretary",
+   "photo": "images/execs/albemarle-krupa.jpg",
+   "background": [
+    "General Counsel and Corporate Secretary — Albemarle Corporation (August 2025–present)",
+    "Deputy General Counsel — Albemarle Corporation (from 2017)",
+    "Assistant General Counsel, Governance and Securities — BWX Technologies and Babcock & Wilcox",
+    "Associate — Greenberg Traurig LLP",
+    "Age 47 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Cynthia R. Lima",
+   "title": "Senior Vice President, Chief External Affairs and Communications Officer",
+   "photo": "images/execs/albemarle-lima.jpg",
+   "background": [
+    "Chief External Affairs and Communications Officer — Albemarle Corporation",
+    "Chief Communications Officer — Albemarle Corporation (from 2023)",
+    "Founder of a communications and public-affairs consultancy",
+    "Principal media advisor to the Secretary — U.S. Department of State",
+    "Senate-confirmed appointee — U.S. Department of Veterans Affairs",
+    "Age 64 at the FY2025 10-K"
+   ]
+  },
+  {
+   "name": "Max W. Hood",
+   "title": "Chief Accounting Officer and principal accounting officer, effective 24 August 2026",
+   "background": [
+    "Chief Accounting Officer — Albemarle Corporation (from 24 August 2026)",
+    "co-Chief Financial Officer — The ODP Corporation (December 2024–2026)",
+    "Chief Accounting Officer and Controller — The ODP Corporation",
+    "Vice President, Accounting and Treasury — The ODP Corporation (joined 2018)",
+    "Earlier career at General Electric and Deloitte",
+    "Age 47 at appointment"
+   ]
+  },
+  {
+   "name": "Gerald A. Steiner",
+   "title": "Lead Independent Director",
+   "background": [
+    "Lead Independent Director — Albemarle Corporation (from 2025); director since 2013",
+    "Led the chief-executive search that selected Ragnar Udd and continues as Lead Independent Director",
+    "Co-founder and Chief Executive Officer — CoverCress Inc. (2015–2021), then Executive Chair (2021–2022)",
+    "Executive Vice President, Sustainability and Corporate Affairs — Monsanto Company (2003–2014)",
+    "Executive Chair — Pluton Biosciences"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Three periods on a two-segment basis for 2026 and a three-segment basis for the prior years — the Refining Solutions sale on 2 March 2026 removed Ketjen as a reportable segment, and prior-period segment amounts were recast in the Q2-2026 10-Q. The arc is a violent cycle: FY2023 net sales of US$9,617.2m and net income of US$1,573.5m, then two loss years, then H1-2026 net income attributable to Albemarle of US$799.1m on US$3,172.0m of sales. Neither divestiture qualified for discontinued-operations treatment — management \"did not consider these sales as representing a strategic shift that had or will have a major effect\" — so the comparatives are continuous.\n\n**Collection gap on expectations.** Vendor consensus for this name is not uniform: for Q2-2026 the Zacks consensus was US$3.35 of adjusted EPS while the Investing.com consensus was US$3.03, and the two are not interchangeable. No published full-year revenue consensus could be found for FY2024 or FY2025, so those `expected` fields are left empty rather than reconstructed.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The trough. A US$1,134.3m restructuring and asset write-off charge — the Kemerton Trains 3 and 4 stoppage, Train 2 into care and maintenance and a 6–7% workforce reduction — drove an operating loss of US$1,776.5m.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "US$5,377.5m, down 44% from US$9,617.2m in FY2023",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No published full-year revenue consensus was found for FY2024; no benchmark is asserted.",
+      "kpi": "revenue",
+      "usdMillions": 5377.526,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss attributable to Albemarle Corporation",
+      "actual": "US$(1,179.4)m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Driven by the US$1,134.3m restructuring and asset write-off charge; gross profit collapsed to US$62.5m, a 1.2% margin.",
+      "kpi": "net-income",
+      "usdMillions": -1179.449,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted loss per share attributable to common shareholders",
+      "actual": "US$(11.20)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "After US$136.6m of mandatory convertible preferred dividends. Basic and diluted are equal because the loss made potential shares anti-dilutive.",
+      "kpi": "eps",
+      "usdMillions": null
+     },
+     {
+      "name": "Total adjusted EBITDA",
+      "actual": "US$1,139.8m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Segment split: Energy Storage US$757.5m, Specialties US$228.5m, Ketjen US$131.1m, Corporate +US$22.7m."
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "US$687.9m against capital expenditure of US$1,680.5m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Free cash flow deeply negative — the condition Moody's cited in February 2025 when it moved the outlook to negative.",
+      "kpi": "capex",
+      "usdMillions": 1680.529,
+      "fxBasis": "as reported"
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "A second loss year, but the composition changed: operating charges gave way to two non-cash divestiture write-downs — a US$181.1m goodwill impairment in Q3 taking the full Refining Solutions reporting-unit goodwill, and a US$245.6m long-lived asset impairment in Q4 on classification as held for sale. Both relate to the business being sold, not to lithium operations. The cost and productivity programme delivered about US$450m against a US$300–400m target.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "US$5,142.7m, down 4%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "A US$615.5m decrease from lower lithium carbonate and hydroxide market pricing in Energy Storage, offset by US$368.6m of higher volume across all businesses. Segment split: Energy Storage US$2,710.0m (−10%), Specialties US$1,366.4m (+3%), Ketjen US$1,066.3m (+3%). No full-year revenue consensus was found.",
+      "kpi": "revenue",
+      "usdMillions": 5142.733,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss attributable to Albemarle Corporation",
+      "actual": "US$(510.6)m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Less than half the prior year's loss. Gross profit recovered to US$668.7m, a 13.0% margin, from 1.2%.",
+      "kpi": "net-income",
+      "usdMillions": -510.628,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted loss per share attributable to common shareholders",
+      "actual": "US$(5.76)",
+      "expected": "US$(1.10) full-year consensus diluted loss per share, per a Barchart summary in January 2026",
+      "verdict": "miss",
+      "result": "After US$166.8m of preferred dividends. The consensus figure is a single-source aggregate and is not a like-for-like measure against the GAAP loss, which carries the two impairments; treat the comparison as indicative only.",
+      "kpi": "eps",
+      "usdMillions": null
+     },
+     {
+      "name": "Adjusted diluted loss per share, Q4-2025",
+      "actual": "US$(0.53)",
+      "expected": "US$(0.40) Zacks consensus at the print",
+      "verdict": "miss",
+      "result": "Revenue for the quarter beat, at about US$1.4bn against a US$1.34bn consensus — an EPS miss on a revenue beat. A pre-announcement estimate had drifted to US$(0.62) in mid-January before settling at US$(0.40)."
+     },
+     {
+      "name": "Total adjusted EBITDA",
+      "actual": "US$1,098.0m, down 4%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Energy Storage US$697.2m (−8%), Specialties US$275.7m (+21%), Ketjen US$150.4m (+15%), Corporate US$(25.4)m. Specialties and Ketjen both grew while lithium fell."
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "US$1,282.3m against capital expenditure of US$589.8m",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Company-defined free cash flow of US$692m — a swing of roughly US$1.7bn from the prior year, on lower capex and working-capital release.",
+      "kpi": "capex",
+      "usdMillions": 589.801,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Attributable production",
+      "actual": "42 kt of lithium metal and 126 kt of bromine",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Lithium: Greenbushes 19 kt (49% share), Wodgina 8 kt, Salar de Atacama 14 kt, Silver Peak 1 kt. Bromine: Magnolia 69 kt, Safi 57 kt (50% share). Aggregate plant utilisation about 81%. Albemarle's stated conversion is 0.1878 t of lithium metal per tonne of LCE."
+     }
+    ]
+   },
+   {
+    "period": "H1-2026 (six months ended 30 June 2026)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "The turn. Higher realised lithium prices, a recovering Specialties business and roughly US$1.3bn of gross debt retirement produced net income of US$799.1m against US$64.2m a year earlier — despite absorbing a US$95.0m loss on the Refining Solutions sale. Q2-2026 alone contributed US$480.0m of that, with adjusted EBITDA of US$858.1m against US$336.5m, and both the Zacks and Investing.com consensus EPS figures were beaten.",
+    "metrics": [
+     {
+      "name": "Net sales",
+      "actual": "US$3,172.0m against US$2,406.9m in H1-2025; Q2-2026 alone US$1,743.3m, up 31.1%",
+      "expected": "About US$1.58bn Q2 revenue consensus per Zacks and US$1.59bn per Investing.com",
+      "verdict": "beat",
+      "result": "Q2 revenue beat both vendor consensus figures. Growth was price-led in Energy Storage (+73% price) and both price and volume in Specialties (price +11%, volume +8%).",
+      "kpi": "revenue",
+      "usdMillions": 3172.044,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to Albemarle Corporation",
+      "actual": "US$799.1m against US$64.2m",
+      "expected": "",
+      "verdict": "beat",
+      "result": "After a US$95.0m pre-tax loss on the Refining Solutions sale and a US$42.3m pre-tax gain on Eurecat — a net US$52.7m drag. Q2-2026 alone was US$480.0m against US$22.9m.",
+      "kpi": "net-income",
+      "usdMillions": 799.05,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share attributable to common shareholders",
+      "actual": "US$5.87 for the half; US$3.52 for Q2-2026, and US$3.75 on an adjusted basis",
+      "expected": "US$3.35 Q2 adjusted EPS per Zacks; US$3.03 per Investing.com",
+      "verdict": "beat",
+      "result": "A beat of 11.9% against Zacks and 23.8% against Investing.com on the adjusted figure. The diluted share count rose to 136.2m from 117.7m as the mandatory convertible preferred became dilutive.",
+      "kpi": "eps",
+      "usdMillions": null
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "US$1,521.9m against US$603.6m; Q2-2026 US$858.1m, up 155.0%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Q2 segment adjusted EBITDA: Energy Storage US$723.5m (+229.3%), Specialties US$117.7m (+61.3%). The Q2 adjusted EBITDA margin was 49%."
+     },
+     {
+      "name": "Energy Storage volume and realised price",
+      "actual": "65 kt LCE sold in Q2-2026, up 11.0%, at an average realised price of US$19.53/kg LCE, up 60.5%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Full-year volume guidance is 225–235 kt LCE. For scale, Benchmark Mineral Intelligence assessed lithium carbonate at US$19,750/t on 2026-09-02 — essentially at the realised price, so there is no cushion above the guidance basis.",
+      "kpi": "shipments",
+      "usdMillions": null
+     },
+     {
+      "name": "Operating cash flow and balance sheet",
+      "actual": "Operating cash flow US$1,056.2m against US$538.2m; capital expenditure US$170.4m against US$302.3m; Q2 free cash flow US$638m at 83% conversion",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Total debt fell to US$1.9bn at 30 June from US$3.2bn at year-end, on roughly US$1.3bn of H1 debt actions including full redemption of the 4.65% 2027 notes; liquidity about US$3.2bn and net debt to adjusted EBITDA about 0.5x on the credit-agreement definition.",
+      "kpi": "capex",
+      "usdMillions": 170.407,
+      "fxBasis": "as reported"
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**KEY JUDGMENTS** — analysis by the author, not sourced fact. Confidence bands follow the intelligence-community convention: high, moderate, low.",
+  "1. **(High confidence)** We assess that Albemarle's 2024–25 distress was a price-cycle event that has now reversed, and that the company's own guidance format is the most honest available statement of how little of that is within its control. Basis: FY2023 net income of US$1,573.5m became a US$1,179.4m loss in FY2024 and a US$510.6m loss in FY2025 on net sales that fell 44% then 4%, and H1-2026 produced US$799.1m of net income on a 32% sales increase — with realised Energy Storage pricing up 60.5% year on year in Q2. The FY2026 outlook is published as three price scenarios rather than a point estimate: at about US$10/kg LCE, adjusted EBITDA of US$0.9–1.0bn; at about US$20/kg, US$2.4–2.6bn; at about US$30/kg, US$4.2–4.4bn. A business whose profit quadruples across the observed price band is a price-taker, and the company says so in the shape of its own disclosure.",
+  "2. **(High confidence)** We assess that the operational strategy of the last two years is best read as retreat from the midstream and defence of the upstream, and that it is close to complete. Basis: Kemerton Trains 3 and 4 were stopped in 2024, Train 2 went to care and maintenance in 2024 and Train 1 in February 2026; the Chengdu conversion plant went to care and maintenance in the first half of 2025. Masters' own words on the Kemerton decision — \"Recent lithium price improvements alone are not enough to offset the challenges facing Western hard-rock lithium conversion operations\" — concede that Western conversion cannot compete with Chinese converters at any price the company expects to see. What is being defended is the resource position: Greenbushes, the Atacama brine, Wodgina, and the Kings Mountain option. Independent assessment supports the asymmetry — SMM places Greenbushes \"at the lowest end of the global cost curve\" with ore grades about twice the industry average.",
+  "3. **(Moderate confidence)** We assess that the CORFO royalty structure caps Albemarle's participation in a lithium price recovery more than headline revenue growth suggests, and that this is the least visible economic fact about the company. Basis: the Chilean agreement requires commission payments to the government on a progressive scale keyed to final sale price, reported to reach roughly 40% at prices above US$10,000/t; the Q2-2026 EBITDA commentary itself cites \"higher CORFO commissions\" as a cost of higher realised prices. Confidence is moderate rather than high because the clearest published statement of the band boundaries is an academic paper the host blocked, and Albemarle does not publish the schedule.",
+  "4. **(Moderate confidence)** We assess that Albemarle is now more exposed to LFP and stationary storage than to nickel-rich EV chemistry, and that the evidence for this is in what it closed rather than in anything it announced. Basis: lithium carbonate is the LFP feedstock and hydroxide is the high-nickel feedstock; the assets idled — Kemerton and Chengdu — are hydroxide plants, while Meishan hydroxide runs at record output and Qinzhou also makes carbonate. Independently, LFP passed 80% of Chinese battery production by June 2026 and storage battery demand grew 51% in 2025 against 26% for transport. The company's own grid-storage page puts LFP at under 90% of energy-storage cells and names carbonate as the primary raw material. No single source states the thesis; it is the synthesis.",
+  "5. **(Moderate confidence)** We assess that the bromine leg is a second and largely independent route into AI-datacentre demand, and that it is underweighted in most readings of this company. Basis: Albemarle's flame retardants go into printed circuit boards, wire and cable, connectors and enclosures; the SAYTEX ALERO line was extended in February 2026 explicitly toward electronics and datacentre infrastructure; the Q2-2026 Specialties end-market ranking is led by semiconductors; and Specialties grew 20.5% with a 61.3% adjusted EBITDA increase in a quarter when everyone was watching lithium. Omdia reported in April 2026 that bromine \"surged to $12,000 per metric ton\", is \"essential for etching circuits and flame retardancy\", and that ICL's roughly 40% share makes it \"a strategic liability\" for AI supply chains. Confidence is moderate because Albemarle discloses no datacentre customer and the exposure is inferred from product application rather than from contracts.",
+  "6. **(Moderate confidence)** We assess that the two 2026 divestitures were executed for balance-sheet reasons rather than for value, and that the accounting says so more plainly than the press releases. Basis: the Refining Solutions transaction produced a US$95.0m pre-tax loss and was preceded by US$426.7m of impairments taken specifically to write the business down to its sale value; the Eurecat gain of US$42.3m offsets less than half of it. The company also states that neither sale \"represent[ed] a strategic shift that had or will have a major effect on the Company's operations\", which is why neither was treated as a discontinued operation — an awkward disclosure to hold alongside a pure-play narrative. What the proceeds bought is unambiguous: about US$1.3bn of gross debt retired in H1-2026, leverage from 4.5x to 1.8x, and a Moody's outlook restored to stable in May 2026.",
+  "7. **(Low confidence)** We assess that the chief-executive succession signals a shift in how the company intends to be run, from chemicals-portfolio management toward resource and commercial management. Basis: Ragnar Udd comes from BHP, where he is Chief Commercial Officer and previously ran the Americas copper and potash businesses; his own framing on appointment is to build on \"both its Energy Storage and Specialties business segments\", which reads as continuity rather than reinvention. Confidence is low because a successor who does not start until February 2027 has said very little, and because the appointment could equally reflect the board's view that the portfolio work is finished and the remaining problem is commercial execution against an index price.",
+  "**Collection gaps.** No Albemarle securities class action from 2023 to 2026 could be identified; the correct record is \"none identified\", not \"none exist\". No S&P Global Ratings action after 2025-04-04 was found, so its current outlook is unknown and is not asserted here; no Fitch rating was found at all. No full-year revenue consensus exists in the sources checked for FY2024 or FY2025. The Chilean State Defence Council environmental case filed in January 2022 against Albemarle, Antofagasta and BHP over the Monturaqui–Negrillar–Tilopozo aquifer has no locatable current status. The Richburg, South Carolina \"Mega-Flex\" plant announced in March 2023 appears in neither the FY2024 nor the FY2025 10-K properties tables — it is undisclosed, which is not the same as cancelled. Per-plant nameplate capacity in LCE is not published for any conversion site.",
+  "**INDICATORS TO WATCH.** *Chilean labour, immediately:* the Albemarle Chile union voted 97.49% to authorise strike action on 2026-08-31 and the company requested mediation on 2026-09-01; SMM sizes the exposure at roughly 1,400 t of lithium carbonate a week against 2026 Atacama guidance of about 70,700 t LCE. A strike would confirm that the cost programme has reached the point of industrial friction. *H2-2026 — Talison CGP3 return to normal operation:* slippage past the stated second-half window would move the CGP3 ramp into 2027 and put the 225–235 kt LCE volume guidance at risk. *2027-03-01 — mandatory conversion of the Series A preferred:* 2,299,826 preferred shares convert into between 7.618 and 9.140 common shares each, ending US$166.8m a year of preferred dividends and permanently enlarging the common count; the diluted share base has already moved to 136.2m. *2027-02-01 — Udd takes office:* the first capital-allocation decision under a mining executive is the test of Judgment 7. *2028-04-07 and beyond — Kings Mountain:* the mine is at exploration stage with federal permitting complete; a construction decision would be the first genuine capacity addition since the retreat began. *February 2027 — EU Digital Battery Passport:* the first hard regulatory demand for product-carbon-footprint data to flow up the chain from cell makers to material suppliers."
+ ],
+ "sources": [
+  {
+   "label": "Benchmark Mineral Intelligence — lithium price assessments: carbonate US$19,750/t, hydroxide US$18,750/t, spodumene 6% US$2,254/t FOB Australia",
+   "url": "https://www.benchmarkminerals.com/lithium/prices",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Albemarle Form 8-K — CEO succession: Ragnar Udd appointed President and CEO effective 1 February 2027; Masters to Executive Chair",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000114036126035623/ef20081522_8k.htm",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Albemarle press release — Albemarle Announces CEO Succession Plan (8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000114036126035623/ef20081522_ex99-1.htm",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "MINING.COM — Albemarle taps BHP veteran Udd as next CEO",
+   "url": "https://www.mining.com/albemarle-taps-bhp-veteran-udd-as-next-ceo",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "SMM — Albemarle Chile labour dispute escalates; 97.49% strike authorisation and the tonnage at risk",
+   "url": "https://news.metal.com/newscontent/104086921-albemarle-chile-labour-dispute-escalates-market-may-first-price-strike-risk-smm-analysis",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "SMM — daily review: lithium carbonate spot prices drifted lower on 4 September; China domestic RMB 141,900/t",
+   "url": "https://news.metal.com/newscontent/104099087-smm-daily-review-lithium-carbonate-spot-prices-drifted-lower-on-september-4",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "ad-hoc-news — Albemarle stock holds steady as Chilean strike vote and 2026 guidance shape outlook",
+   "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/albemarle-stock-holds-steady-as-chilean-strike-vote-and-2026-lithium/70033968",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Albemarle article — Grid Energy Storage 101: what it is and why it matters",
+   "url": "https://www.albemarle.com/us/en/news/grid-energy-storage-101-what-it-and-why-it-matters",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Albemarle Form 8-K — Max W. Hood appointed Chief Accounting Officer effective 24 August 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000107/alb-20260819.htm",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "MarketBeat — Albemarle short interest: 10,236,285 shares, 8.71% of float, 4.2 days to cover (settlement date)",
+   "url": "https://www.marketbeat.com/stocks/NYSE/ALB/short-interest/",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Albemarle Investor Relations — quarterly common stock dividend raised to US$0.41 per share",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2026/Albemarle-Announces-Quarterly-Common-Stock-Dividend/default.aspx",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Albemarle Form 10-Q for the quarterly period ended 30 June 2026 — two-segment structure, divestiture accounting, debt reduction, CGP3 fire",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000102/alb-20260630.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Albemarle Q2-2026 earnings release (8-K Exhibit 99.1) — adjusted EBITDA US$858.1m, FY2026 price-scenario outlook, Specialties raised, capex cut",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000101/a2q26earningsreleaseex991.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Albemarle Q2 earnings and revenues surpass estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/albemarle-alb-q2-earnings-revenues-221012338.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Investing.com — Albemarle Q2 2026 slides: lithium pricing lifts margins to 49%",
+   "url": "https://www.investing.com/news/company-news/albemarle-q2-2026-slides-lithium-pricing-lifts-margins-to-49-93CH-4842751",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Investing.com — RBC cuts Albemarle price target to US$157 on revised earnings outlook, Outperform maintained",
+   "url": "https://www.investing.com/news/analyst-ratings/rbc-cuts-albemarle-stock-price-target-on-revised-earnings-outlook-93CH-4849470",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "list.solar — Top lithium mining companies ranked by 2025 output; Albemarle's position marked \"not disclosed\"",
+   "url": "https://list.solar/news/top-lithium-mining-companies/",
+   "date": "2026-08-01"
+  },
+  {
+   "label": "Albemarle Form 8-K — Eduardo De Salles Bartolomeo appointed to the board of directors",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000095/alb-20260721.htm",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Panorama Minero — Fastmarkets raises lithium forecasts to US$23.80/kg for 2026 and US$31.40/kg for 2027 on ESS and LFP demand",
+   "url": "https://www.panorama-minero.com/en/news/fastmarkets-says-lithium-is-entering-a-new-phase-as-demand-outpaces-supply",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "SMM — Greenbushes CGP3 fire and how Australian lithium mines shape the price cycle; Greenbushes at the lowest end of the global cost curve",
+   "url": "https://news.metal.com/newscontent/103953083-SMM-AnalysisGreenbushes-CGP3-Fire-How-Australian-Lithium-Mines-Shape-the-Lithium-Price-Cycle",
+   "date": "2026-06-12"
+  },
+  {
+   "label": "Albemarle 2025 Sustainability Report — grid storage and datacentre demand thesis, Battery Passport, renewable electricity share",
+   "url": "https://www.albemarle.com/sites/default/files/2026-06/albemarle-sustainability-report-2025-final.pdf",
+   "date": "2026-06-05"
+  },
+  {
+   "label": "Albemarle Form 8-K — CAO Donald J. LaBauve Jr. retirement; CFO Sheorey as interim principal accounting officer",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000087/alb-20260601.htm",
+   "date": "2026-06-05"
+  },
+  {
+   "label": "Investing.com — Moody's changes Albemarle outlook to stable on improved metrics; Baa3 affirmed, leverage 1.8x",
+   "url": "https://www.investing.com/news/stock-market-news/moodys-changes-albemarle-outlook-to-stable-on-improved-metrics-93CH-4682848",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Albemarle Q1-2026 earnings release (8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000070/a1q26earningsreleaseex991.htm",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Albemarle Form 10-Q for the quarterly period ended 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000072/alb-20260331.htm",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Simply Wall St via Yahoo Finance — Baird downgrade to Neutral and the lithium-outlook debate",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/does-baird-downgrade-recast-albemarle-050441450.html",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Manufacturing Dive / Omdia — bromine at US$12,000 per tonne, essential for etching circuits and flame retardancy; ICL's ~40% share as a strategic liability for AI supply chains",
+   "url": "https://www.manufacturingdive.com/news/opinion-omdia-ai-semiconductor-chip-scarcity/817172/",
+   "date": "2026-04-20"
+  },
+  {
+   "label": "Albemarle Form 8-K — CAO retirement notice",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000064/alb-20260413.htm",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "US Permitting Council — Kings Mountain Lithium Material Processing Plant completes federal permitting under FAST-41",
+   "url": "https://www.permitting.gov/newsroom/press-releases/kings-mountain-lithium-material-processing-plant-completes-federal",
+   "date": "2026-03-30"
+  },
+  {
+   "label": "Albemarle Form 8-K — Third Amendment to the 2022 Credit Agreement; revolver extended to 28 October 2028",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000057/alb-20260319.htm",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Mining Weekly — Albemarle starts environmental review for a direct-lithium-extraction project in Chile",
+   "url": "https://www.miningweekly.com/article/albemarle-starts-enviro-review-process-for-lithium-extraction-project-in-chile-2026-03-25",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Albemarle DEF 14A proxy statement — board composition, committees and lead independent director",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000050/alb-20260323.htm",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Albemarle Form S-3ASR automatic shelf registration statement",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000041/alb-sx3asrmarch2026.htm",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Albemarle Form 8-K — completion of the Refining Solutions sale to a KPS affiliate, debt tender offers and 2027 notes redemption",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000032/alb-20260302.htm",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "Albemarle Investor Relations — completes sale of controlling stake in Ketjen to KPS Capital Partners",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2026/Albemarle-Completes-Sale-of-Controlling-Stake-in-Ketjen-to-KPS-Capital-Partners/default.aspx",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Albemarle Form 8-K — Michelle T. Collins and Mark R. Widmar appointed to the board",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000029/alb-20260226.htm",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "battery-news.de — Albemarle to shut down the Kemerton lithium hydroxide plant in Australia",
+   "url": "https://battery-news.de/en/2026/02/18/albemarle-to-shut-down-kemerton-lithium-hydroxide-plant-in-australia/",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "Investing News Network — Albemarle lifts lithium demand forecast as energy storage surges",
+   "url": "https://investingnews.com/albemarle-lifts-lithium-demand-forecast/",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Albemarle Investor Relations — plans to idle the Kemerton lithium hydroxide processing plant",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2026/Albemarle-Announces-Plans-to-Idle-its-Kemerton-Lithium-Hydroxide-Processing-Plant/default.aspx",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Albemarle Form 10-K for the fiscal year ended 31 December 2025 — segments, properties, reserves, competitors, impairments, CORFO terms, policy risk factors",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Albemarle Q4 and FY2025 earnings release (8-K Exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000016/a4q25earningsreleaseex991.htm",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Investing.com — Albemarle Q4 2025 slides: revenue growth amid EPS challenges",
+   "url": "https://www.investing.com/news/company-news/albemarle-q4-2025-slides-revenue-growth-amid-eps-challenges-strategic-cost-cutting-93CH-4503493",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "pv magazine — global BESS demand jumps 51% in 2025 as installations top 300 GWh",
+   "url": "https://www.pv-magazine.com/2026/01/20/global-bess-demand-jumps-51-in-2025-as-installations-top-300-gwh/",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "Barchart — Albemarle's Q4 2025 earnings preview, carrying the full-year consensus loss-per-share figure",
+   "url": "https://www.barchart.com/story/news/37060984/albemarles-q4-2025-earnings-what-to-expect",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Investing News Network — lithium market 2025, a year of volatility: the price path from below US$9,550/t to US$14,131/t",
+   "url": "https://investingnews.com/daily/resource-investing/battery-metals-investing/lithium-investing/lithium-market-update/",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "Yahoo Finance — RBC sees improving lithium fundamentals lifting the Albemarle outlook; price target raised to US$159",
+   "url": "https://finance.yahoo.com/news/rbc-sees-improving-lithium-fundamentals-000948898.html",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "Caixin Global — China grants conditional approval for the Codelco–SQM lithium joint venture",
+   "url": "https://www.caixinglobal.com/2025-11-11/china-grants-conditional-approval-for-codelco-sqm-lithium-joint-venture-102381446.html",
+   "date": "2025-11-11"
+  },
+  {
+   "label": "Albemarle Investor Relations — announces sale of a controlling stake in Ketjen to KPS Capital Partners",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2025/Albemarle-Announces-Sale-of-a-Controlling-Stake-in-Ketjen-to-KPS-Capital-Partners/default.aspx",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "Albemarle Investor Relations — enhanced organisational structure; executive role changes",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2025/Albemarle-Announces-Enhanced-Organizational-Structure/default.aspx",
+   "date": "2025-08-11"
+  },
+  {
+   "label": "Compliance Week — DOJ ends the Albemarle FCPA non-prosecution agreement early",
+   "url": "https://www.complianceweek.com/anti-bribery/in-continuing-re-evaluation-of-fcpa-cases-doj-ends-albemarle-fcpa-reporting/35991.article",
+   "date": "2025-05-05"
+  },
+  {
+   "label": "cbonds — S&P affirms Albemarle at BBB- with a negative outlook (last located S&P action)",
+   "url": "https://cbonds.com/news/3343259/",
+   "date": "2025-04-04"
+  },
+  {
+   "label": "Investing.com — Moody's changes the Albemarle outlook to negative on 4.3x leverage and negative free cash flow",
+   "url": "https://www.investing.com/news/stock-market-news/outlook-on-albemarle-corporation-changed-to-negative-by-moodys-ratings-93CH-3890482",
+   "date": "2025-02-25"
+  },
+  {
+   "label": "Albemarle Form 10-K for the fiscal year ended 31 December 2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000026/alb-20241231.htm",
+   "date": "2025-02-12"
+  },
+  {
+   "label": "cbonds — S&P downgrades Albemarle to BBB- with a negative outlook",
+   "url": "https://cbonds.com/news/3178645/",
+   "date": "2024-11-25"
+  },
+  {
+   "label": "Albemarle Investor Relations — new operating structure replacing two global business units with an integrated functional model",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2024/Albemarle-Announces-New-Operating-Structure-to-Increase-Agility-Drive-Cost-Efficiencies-and-Maintain-Long-Term-Competitiveness/default.aspx",
+   "date": "2024-10-07"
+  },
+  {
+   "label": "S&P Global Commodity Insights — Commodities 2025: global surplus and declining lithium prices; the 2023–2025 price path",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/metals/122024-commodities-2025-global-surplus-declining-prices-weigh-on-europes-lithium-ambitions",
+   "date": "2024-12-20"
+  },
+  {
+   "label": "Mugglehead — Chile to offer preferential pricing on Albemarle lithium to domestic producers under the CORFO arrangement",
+   "url": "https://mugglehead.com/chile-to-offer-lithium-producers-to-preferential-pricing-on-albemarle-lithium/",
+   "date": "2024-05-16"
+  },
+  {
+   "label": "US Department of Justice — Albemarle to pay over US$218m to resolve the Foreign Corrupt Practices Act investigation",
+   "url": "https://www.justice.gov/archives/opa/pr/albemarle-pay-over-218m-resolve-foreign-corrupt-practices-act-investigation",
+   "date": "2023-09-28"
+  },
+  {
+   "label": "US Securities and Exchange Commission — Albemarle to pay the SEC more than US$103m to settle FCPA violations",
+   "url": "https://www.sec.gov/newsroom/press-releases/2023-209",
+   "date": "2023-09-28"
+  },
+  {
+   "label": "Albemarle Investor Relations — announces new US lithium Mega-Flex processing facility in South Carolina (subsequently absent from the FY2024 and FY2025 10-K properties tables)",
+   "url": "https://investors.albemarle.com/news-and-events/news/news-details/2023/Albemarle-Corporation-Announces-New-U.S.-Lithium-Mega-Flex-Processing-Facility-in-South-Carolina/default.aspx",
+   "date": "2023-03-22"
+  },
+  {
+   "label": "Business & Human Rights Resource Centre — Chile: legal action against Albemarle, Antofagasta and BHP over alleged environmental damage in the Salar de Atacama",
+   "url": "https://www.business-humanrights.org/en/latest-news/chile-legal-action-against-albemarle-antofagasta-and-bhp-for-alleged-environmental-damage-in-salar-de-atacama/",
+   "date": "2022-04-11"
+  },
+  {
+   "label": "Benchmark Source — lithium prices hit a record high as market pricing takes hold: 2022 in review, the December 2022 peak above RMB 575,000/t",
+   "url": "https://source.benchmarkminerals.com/article/lithium-prices-hit-record-high-as-market-pricing-takes-hold-2022-in-review",
+   "date": "2022-12-14"
+  },
+  {
+   "label": "US Securities and Exchange Commission EDGAR — Albemarle Corporation submissions index (CIK 0000915913)",
+   "url": "https://data.sec.gov/submissions/CIK0000915913.json"
+  },
+  {
+   "label": "Albemarle — Grid Storage industry page: LFP at under 90% of ESS cells, lithium carbonate as the primary LFP raw material, behind-the-meter backup for data centres",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/industries/grid-storage"
+  },
+  {
+   "label": "Albemarle — leadership page and executive photographs",
+   "url": "https://www.albemarle.com/us/en/who-we-are/leadership"
+  },
+  {
+   "label": "Albemarle — SAYTEX product family and grade roster",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/featured-products/saytex"
+  },
+  {
+   "label": "Albemarle — SAYTEX ALERO polymeric flame retardant",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/featured-products/saytex-alero"
+  },
+  {
+   "label": "Albemarle — butyllithium product page with commercial solution grades and manufacturing sites",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/featured-products/butyllithium"
+  },
+  {
+   "label": "Albemarle — lithium sulfide product page (solid-state electrolyte precursor)",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/featured-products/lithium-sulfide"
+  },
+  {
+   "label": "Albemarle — lithium hydroxide product page carrying the sole first-party Inflation Reduction Act claim",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/featured-products/lithium-hydroxide"
+  },
+  {
+   "label": "Albemarle — lithium carbonate product page",
+   "url": "https://www.albemarle.com/us/en/what-we-offer/featured-products/lithium-carbonate"
+  },
+  {
+   "label": "Albemarle — Kings Mountain site page",
+   "url": "https://www.albemarle.com/us/en/kings-mountain"
+  },
+  {
+   "label": "Albemarle — Magnolia, Arkansas site page",
+   "url": "https://www.albemarle.com/us/en/magnolia-site"
+  },
+  {
+   "label": "MarketsandMarkets — bromine market and top bromine manufacturers (capacity-share aggregates)",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/bromine-market.asp"
+  },
+  {
+   "label": "Grand View Research — brominated flame retardants market report",
+   "url": "https://www.grandviewresearch.com/industry-analysis/brominated-flame-retardants-market-report"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

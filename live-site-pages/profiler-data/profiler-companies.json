@@ -92,14 +92,14 @@
       "hq": "Arlington, Virginia, United States",
       "ticker": "NYSE: AES (parent)",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-09",
       "domains": [
         "aes.com",
         "aescleanenergy.com",
         "s202.q4cdn.com"
       ],
-      "srcTotal": 56,
-      "srcFirstPct": 45,
+      "srcTotal": 57,
+      "srcFirstPct": 44,
       "kpiNorm": true,
       "segments": [
         {
@@ -4701,6 +4701,84 @@
         {
           "id": "assurance",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "albemarle",
+      "name": "Albemarle",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Lithium and bromine upstream of the cell — carbonate into the LFP that dominates grid storage, SAYTEX flame retardants into the boards and enclosures around it; H1-2026 net income US$799m after two loss years.",
+      "hq": "Charlotte, North Carolina, USA",
+      "ticker": "NYSE: ALB",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Albemarle Corporation",
+        "ALB",
+        "Ketjen",
+        "Rockwood Holdings",
+        "Rockwood Lithium",
+        "Talison Lithium",
+        "Windfield Holdings",
+        "Jordan Bromine Company",
+        "SAYTEX",
+        "MARBL Lithium Joint Venture",
+        "Greenbushes",
+        "Wodgina",
+        "Kemerton",
+        "Salar de Atacama",
+        "Performance Catalyst Solutions"
+      ],
+      "domains": [
+        "albemarle.com"
+      ],
+      "srcTotal": 75,
+      "srcFirstPct": 52,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "novonix",
+      "name": "NOVONIX",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Pre-revenue US synthetic graphite anode developer under a going-concern material uncertainty: Riverside full capacity slipped to September 2031, the trade case lost, and a Nasdaq cure deadline on 14 September 2026.",
+      "hq": "Brisbane, Australia (operating base Chattanooga, Tennessee, USA)",
+      "ticker": "ASX: NVX · Nasdaq: NVX",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "NOVONIX Limited",
+        "NVX",
+        "NVNXF",
+        "NOVONIX Anode Materials",
+        "NOVONIX Battery Technology Solutions",
+        "GX-23",
+        "Avrion Battery Labs",
+        "Dryve Battery Materials",
+        "Axon Graphite",
+        "Enterprise South",
+        "Mount Dromedary"
+      ],
+      "domains": [
+        "novonixgroup.com"
+      ],
+      "srcTotal": 69,
+      "srcFirstPct": 71,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
         }
       ]
     }
