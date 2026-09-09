@@ -6,6 +6,42 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-09 07:18:49 AM EST
+**Repo version:** v05.29r
+**Branch:** `claude/*` (P6 session)
+**Model:** Opus 5 xhigh — **S3 P6 · group `E6a` (CALB · Great Power)**
+**Reconstructed:** Auto-recovered from CHANGELOG (the P6 session did not save context; reconstructed 2026-09-09 06:11 PM EST during the v05.30r budget-review session)
+
+### What was done
+
+1. **P6 shipped (v05.29r) and the public lane is finished, six of six.** `calb` (60 sources, 57% first-party) and `great-power` (57 sources, 61%), each with a 13-section schema-v2 study guide and a full lesson plan. Sixteen concepts registered (1,388 → 1,404), inserted alphabetically per the P5 correction
+2. **The role was genuinely undecided and the evidence decided it: both `challenger`.** SNE Research H1-2026 puts CALB 5th (31.5 GWh / 6.8%) and Great Power 10th (20.5 GWh / 4.4%) of a 461.3 GWh market. Incumbency was not arguable — the bar is top-three plus leader language and `eve-energy` is a challenger at 2nd. `cells-and-chemistry` went 18 members / 4 inc / 8 cha / 6 adj → **20 / 4 / 10 / 6**; both also took `storage-integrators-and-containers` · adjacent
+3. **The row's own claim was wrong: P6 does NOT complete the SNE top twelve.** Coverage went nine of twelve → **eleven**. The twelfth is **`cornex` at 7th on 30.2 GWh — ranked above both companies P6 landed — and it is V4's**
+4. **A new reusable primary source.** Great Power's HK application is **definitively `Lapsed`** on HKEX's own daily-regenerated consolidated listing-application index (`sehkconsolidatedindex.xlsx`), not on the 404 that suggested it — a control test showed Deye's proof 404s identically. Prefer the index over probing document URLs
+
+### Where we left off
+
+All P6 work committed, pushed and merged. **A separate v05.30r session then reviewed S3 against the developer's token budget** and added **§10.5** to `PROFILER-COVERAGE-PLAN.md` — see below.
+
+### Key decisions and findings
+
+- **S3 is seven of ten. The public lane is complete; V2, V3 and V4 remain and all three are Fable 5.1 High**
+- **The v05.25r reorder's budget premise has inverted.** It ran the public lane first because Fable was 96% consumed against **13%** of all-models. Sixteen hours later all-models is **95%** and Fable still 96%, so there is no cheap lane left. §10.5 measures a Phase E session at **~20 points of the weekly all-models allowance** (82 points across P3–P6) and concludes **no Phase E session fits in the ~5% remaining** — and that splitting V2 rescues neither the arithmetic nor the landscape gate
+- **`software-and-optimization` remains the only held landscape, and V2 is the sole gate on it.** V3 and V4 are pure deepening
+- **Four cheap non-session items are queued in §10.5**, in order: (A) rotate the CHANGELOG pre-emptively — it buys Fable budget by moving rotation out of a Fable session; (B) the literal-asterisk render bug, now measured at **60 affected profile files** rather than the 14 P5 recorded, fixable at `Profiler.html:3848`/`:5992`; (C) the `eve-energy` / `hithium` typing tension, registry-only; (D) `aka[]` in the roster haystack at `Profiler.html:2202` — **needs developer approval**, narrowed to names-only by directive on 2026-08-30
+- **CHANGELOG at 96/100 after v05.30r** — rotation due about four pushes out
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run the **cheap consolidation pass — §10.5 items A, B and C** in one session: rotate the CHANGELOG pre-emptively, fix the literal-asterisk render in `Profiler.html` (60 dossiers affected), and resolve the `eve-energy` / `hithium` typing tension in `profiler-segments.json`. It costs a fraction of a Phase E session, fits the remaining allowance, and item A directly buys back Fable budget for V2. Do **not** start V2 until the weekly allowance resets.
+
+**To continue:** type `run the S3 cheap consolidation pass`
+
+## Previous Sessions
+
+### Session — 2026-09-09 06:00:20 AM EST (v05.28r)
+
 **Date:** 2026-09-09 06:00:20 AM EST
 **Repo version:** v05.28r — **one push commit** on `claude/jolly-dijkstra-ybdikq` (plus this session-context commit, the sanctioned second because the first push had already merged)
 **Branch:** `claude/jolly-dijkstra-ybdikq`
@@ -46,47 +82,4 @@ All work committed, pushed and merged. The **P6 paste-in prompt was handed to th
 
 **To continue:** type `continue with your recommendation`
 
-## Previous Sessions
-
-### Session — 2026-09-09 04:38:11 AM EST (v05.27r)
-
-**Date:** 2026-09-09 04:38:11 AM EST
-**Repo version:** v05.27r — **one push commit** on `claude/amazing-knuth-h4tidu` (plus this session-context commit, which is the sanctioned second because the first push had already merged)
-**Branch:** `claude/amazing-knuth-h4tidu`
-**Model:** Opus 5 xhigh — **S3 P4 · group `E3a` (UL Solutions · Intertek)**, then the P5 paste-in prompt
-
-### What was done
-
-1. **P4 shipped (v05.27r).** `ul-solutions` (50 sources, 58% first-party) and `intertek` (91 sources, 41%), each with a 14-section schema-v2 study guide and a full-depth lesson plan. `assurance` went 5 members / 2 incumbents / 1 challenger / 2 adjacent → **7 / 4 / 1 / 2**; UL Solutions also took `software-and-optimization` · **adjacent** on the ULTRUS renewable suite. Thirty-three shared concepts registered (1,325 → 1,358) and eight company-published executive photographs downloaded for UL Solutions
-2. **The §8 rows were wrong twice, in opposite directions.** The UL Solutions segment claim was **backwards** — Industrial / Consumer / Software & Advisory were the **OLD** segments to 2025-12-31, and from Q1 2026 the set is Industrial / Consumer / **Risk & Compliance Software**, with Advisory moved *into* Industrial and prior periods restated. Verified independently in the Q2-2026 10-Q rather than on the agent's word. And Intertek does not report through Products / Trade / Resources — it has **five** divisions and a **paused demerger** whose Energy & Infrastructure half holds Intertek CEA
-3. **Neither company is an incumbent in global TIC, and the segment note now says so.** Aventis Advisors ranks Intertek **5th of ten** and UL Solutions **8th**, in a market where the top ten hold under a quarter. Both are typed `incumbent` on **battery-storage TIC** specifically, where MarketsandMarkets names them the two leading key players. UL Solutions ranks **first** of the ten on operating margin and revenue per employee
-4. **Four agent findings the plan did not carry:** UL Solutions **withdrew as FCC Cyber Trust Mark Lead Administrator** on 2025-12-19 during a national-security probe of its CCIC joint venture; its **FY2025 10-K deleted the competitor names** the FY2024 edition carried; a **class action (N.D. Ill. 1:26-cv-01561)** against all four UL entities has **no press coverage anywhere**; and Intertek's OSHA NRTL scope covered **UL 9540 only from 2025-08-22**, 4.5 years after applying
-
-### Where we left off
-
-All work committed, pushed and merged. The **P5 paste-in prompt was handed to the developer in chat** — the next session is a fresh Opus 5 xhigh session, not a continuation of this one.
-
-### Key decisions and findings
-
-- **`investegate.co.uk` serves complete RNS documents at `?print=1`** where the default view truncates them. That single discovery recovered Appendix 1 of the Rule 2.7 — nine merger-control jurisdictions, eight FDI regimes including the **UK NSIA**, a **joint** Bidco-and-Intertek **CFIUS** filing, and an **ITAR notification to the State Department's DDTC** that establishes part of the Intertek group is DDTC-registered. **Any UK RNS the corpus previously wrote off as truncated is probably recoverable this way.**
-- **`check-source-reachability.py` was wrong about `sec.gov` for the second session running** — 200 on three consecutive attempts against each SEC host with a declared User-Agent. Genuinely blocked: `intertek.com` and `osha.gov`, 403 on six attempts each across two user agents and two tools. Working substitutes: **federalregister.gov's JSON API and `full_text` endpoints** are open where its HTML is not (a complete substitute for a 403'd osha.gov), and **`intertekcea.com` is fully open** while its parent is not
-- **I made the indent mistake P3 recorded, caught it, and fixed the cause.** Writing the calendar at indent 2 produced a 2,350-line spurious diff. The files do not share a convention: `profiler-companies.json` and `profiler-concepts.json` are **indent 2 with a trailing newline**; `profiler-segments.json` and the refresh calendar are **indent 1 without one**; profile and study files are **indent 1 without one**. A read-detect-write helper now handles it rather than memory
-- **A pacing lesson that cost about sixteen minutes.** P3's rule — wait for the first-party agent — predicts *what* to wait for but not the cost of a correction arriving after staging has begun. On a two-company session, **stage nothing until both first-party agents have returned**: the Intertek specs and policy arrays were rewritten after the NRTL finding, and the UL Solutions segment framing after the first-party correction
-- **Step-7 reconciliation: 9 dossiers reviewed, 0 revised.** Nothing in the corpus was contradicted. Four corpus-carried engagements — Trina Storage's bankability report and EPD, Hithium's and Sungrow's fire tests, Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded in `relationships[]` from the counterparties and trade press, with that provenance stated in each `context`
-
-### Active context
-
-- **Repo version** `v05.27r`; CHANGELOG at **93/100** sections — rotation due at 100, so roughly **seven pushes of headroom**
-- **S3 progress: 5 of 10 sessions** (P1, P2, V1, P3, P4 done). Remaining order: **P5 → P6 → V2 → V3 → V4**. The public lane is four of six done
-- **`software-and-optimization` remains the only held landscape**, and only V2 clears it. P5, P6, V3 and V4 are pure deepening
-- **The `assurance` segment is at the floor but is the least stable in the corpus** — three of its seven members are mid-transaction: CSA's testing arm to Kiwa (close Q4 2026), Intertek to EQT on court sanction (Q4 2026 – Q1 2027), and EQT's stated intent to revisit the split of the Intertek division holding CEA about twelve months after that
-- **Both `assurance` and `software-and-optimization` segment lessons are flagged DUE for regeneration** by `check-classroom-curriculum.py --strict`. Not run here — §7 assigns the generator to an S1/developer session
-- **Dated re-check triggers now live in §8 rows and calendar rows:** `novonix` on **2026-09-14** (Nasdaq minimum-bid cure deadline, five days out), `intertek` on **court sanction** (its calendar row is set to 2026-10-01 as a window opening, not an earnings date — the row does not drift, it flips), `ul-solutions` `nextReport` **2026-11-03** unconfirmed, `habitat-energy` **quarterly** while Quinbrook's sale process runs
-- **Offered and not taken** (needs developer approval, carried from three sessions): adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit developer directive 2026-08-30. Would require a page version bump. P4 strengthens the case again — UL Solutions' 23 aliases include ULTRUS, MET Labs, HOMER Pro and Openwind, and Intertek's 20 include ETL, cETL and Clean Energy Associates, none of which the roster can currently find
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **S3 P5 — group `E4a` (Albemarle · Novonix) on Opus 5 xhigh**, as a fresh session using the paste-in prompt handed over in chat. It is position 6 in the sequence and is **deepening, not unblocking** — `cells-and-chemistry` already stands at 16 members / 4 incumbents / 8 challengers / 4 adjacent, far past the floor. The reason to run it next rather than later is **Novonix's Nasdaq minimum-bid-price cure deadline of Monday 2026-09-14**, which was still open on 2026-09-09 and whose outcome is not established either way: running the session near it means the dossier records a settled fact rather than an inference. Two more traps the row carries — the **ADS ratio changed 1:4 → 1:40 on 2026-08-27**, so any per-ADS price before that date is stale by 10×, and the auditor flagged a **material uncertainty on going concern** in the HY-2026 report. And do not swap in an alternate without reading the §8 evidence: **ICL is out** (US LFP project cancelled 2025-11-11), **Syrah is at-risk and pre-commercial**, and **Westwater alone is clean**
-
-**To continue:** type `continue with your recommendation`
+Developed by: LightAISolutions

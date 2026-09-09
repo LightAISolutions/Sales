@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.30r] — 2026-09-09 06:16:23 PM EST
+
+> **Prompt:** "Evaluate where I am in the overall S3 action plan, update the S3 action plan, understand that I am currently at 95% weekly all model limit and 96% weekly fable limit, and recommend me an updated action plan to maximize my remaining tokens." *(accompanied by a screenshot of §10.1–10.4 of the S3 action plan.)*
+
+### Added
+
+- **`PROFILER-COVERAGE-PLAN.md` §10.5 — "Budget state and the revised action plan".** A token-budget reading of S3 at seven of ten sessions: the measured cost of a Phase E session, the arithmetic that rules one out on the current allowance, why splitting V2 does not rescue it, a four-item table of cheap non-session work worth the remainder, and the revised sequence
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §10.4 — the v05.25r reorder is marked executed and its premise superseded.** The reorder ran the public lane first because Fable stood at 96% consumed against **13%** of the all-models allowance. It is now complete (six of six at v05.29r) and that premise has **inverted**: all-models reads **95%**, Fable still 96%, so the three remaining sessions have no cheap lane to fall back on
+- **`PROFILER-COVERAGE-PLAN.md` §10.4 — the CHANGELOG-headroom paragraph corrected.** It read "the remaining seven" at **90/100** after v05.24r; the counter is **95/100** and this push takes it to **96**, against **three** remaining sessions, so rotation now falls inside a Fable session rather than after the last one
+- **`SESSION-CONTEXT.md` reconstructed.** The P6 session (v05.29r) ended without saving context, leaving the file one version stale at v05.28r. `## Latest Session` rebuilt for P6 from CHANGELOG, the P5 entry demoted to `## Previous Sessions`, and the P4 entry dropped under the 2-session cap
+
+### Notes
+
+- **S3 stands at seven of ten and the public lane is finished.** P1–P6 all shipped between v05.20r and v05.29r; the private lane is one of four (V1, v05.21r). **V2, V3 and V4 all run on Fable 5.1 High** — the pool that was already the scarce one before the reorder spent the other
+- **A Phase E session costs ~20 points of the weekly all-models allowance, measured rather than assumed.** Four Opus 5 xhigh Phase E sessions ran between the 13% reading at 01:49 AM and the 95% reading sixteen hours later — P3, P4, P5, P6 — for **82 points across four sessions**. Recorded in §10.5 with its confidence caveat: it assumes no substantial non-repo usage in the window, and the conclusion holds even at half the figure
+- **The conclusion is that no Phase E session fits, and the reasoning is the all-or-nothing commit shape rather than the raw arithmetic alone.** Five points of all-models and four of Fable is roughly a quarter of a session; a Phase E session writes two dossiers, two guides, a registry sync, a graph rebuild, six checkers and a §8 flip **in one commit**, so exhausting the allowance mid-research leaves nothing committed and costs more to redo than a clean start
+- **Splitting V2 fails twice over, and the second failure is the interesting one.** Half a session is ~10 points against a 5-point budget — but even if it fit, §10.3 holds the software landscape for the **pure-play optimizers plural**, and the plan has never established that one of Habitat Energy or Gridmatic releases it alone. The §10 split permission covers the two *merged* Fable sessions (V1, V4); **V2 is a genuine two-company group and was never offered as splittable**
+- **The literal-asterisk render defect is four times worse than the corpus recorded.** P5 logged fourteen affected dossiers; `grep -l '\*\*' live-site-pages/profiler-data/*.profile.json` returns **60**. `Profiler.html` passes `ecosystemRole` into a plain text node at `:3848` and `:5992`, confirmed by reading, so all sixty render raw asterisks on the deployed page. **No dossier session can fix it** — it is not their file, which is why P5 correctly declined and why it has survived every session since
+- **Two further items can only ever be done outside a session, for the same structural reason.** The `eve-energy` / `hithium` typing tension (challenger at 2nd on 48.0 GWh above an incumbent at 3rd on 46.2 GWh, same SNE table) is unfixable by a session because a session types only its own companies — P6 declined correctly. And `aka[]` in the roster haystack (`Profiler.html:2202`) stays flagged rather than done because the developer narrowed it to names-only by explicit directive on 2026-08-30; P5 and P6 have since added **79 aliases across four companies** that the roster cannot find
+- **The one item that buys budget back is the pre-emptive CHANGELOG rotation**, and that is why §10.5 ranks it first of the four rather than by size
+- **No code, page or GAS file was touched** — documentation and planning only, so no HTML/GAS version bumps, no page changelog entries and no README tree changes were due
+- **`Sections: 96/100`** — below the rotation threshold, so no rotation was due on this push
 
 ## [v05.29r] — 2026-09-09 07:18:49 AM EST
 
