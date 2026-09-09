@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.31r] — 2026-09-09 07:08:03 PM EST
+
+> **Prompt:** "run the S3 cheap consolidation pass"
+
+### Fixed
+
+- **`Profiler.html` v01.83w → v01.84w — the intel-briefing style's `**bold**` markers reached the DOM as literal asterisks, and the fix is one chokepoint rather than the two call sites the corpus had recorded.** `ovEl` now routes text through a new `ovSetText`, which renders `**…**` as real `<strong>` runs; a companion `ovPlain` strips the markers from prose mined by `ovRelDerive`, so sentences quoted as relationship evidence no longer carry them. Text containing no `**` takes the original `textContent` path unchanged, so every non-prose call site — labels, tags, buttons, links — behaves byte-identically
+- **The segment `notes` for `cells-and-chemistry` now record the `eve-energy` / `hithium` examination and its outcome**, replacing the open "NOTE FOR THE DEVELOPER, not acted on here" that P6 left, so the S2 landscape author does not re-open it
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §10.5 — all three consolidation items rewritten against what the pass actually found**, and a results paragraph added above the reset guidance. Item A is struck through and marked **WITHDRAWN**; item B is marked done with the corrected scope; item C is marked examined and dismissed
+
+### Notes
+
+- **All three items in the §10.5 table were misdescribed when it was written one push earlier, and each failed differently on contact with the primary source.** The common cause is worth recording: every one had been written from a *summary* of the evidence rather than the evidence itself
+- **Item A was wrong on the rule and is withdrawn without being run.** It compared the raw section count against the rotation threshold; `CHANGELOG-archive.md` step 1 is explicit that the test is the **non-exempt** count — total minus sections dated today — and says so because the raw-total reading was reconciled out at **v05.01r** for **firing rotations early**. Measured: **96 total − 9 dated today = 87 non-exempt against a trigger of 100.** Rotation is **thirteen sections away, not four pushes**, and worked forward it lands on the **push after V4** — not inside V2 and not inside any Fable session. The premise that it would buy Fable budget back was therefore false, and rotating anyway would have been an off-spec early fire for no gain
+- **Item B was wrong on the field and understated the scope by roughly 120×.** The corpus had recorded the defect against `ecosystemRole`. A field-by-field census puts `ecosystemRole` **last of fourteen, at 4 occurrences in 4 files**; the real surface is **483 occurrences across 14 fields in 60 dossiers** — `strategyRead[]` 379 in 50 files, `relationships[].context` 28 in 19, `summary` 18 in 18, then eleven more. **Patching the two named `ecosystemRole` call sites would have fixed under 1% of it**, which is why the fix went to `ovEl` instead of to the call sites
+- **The XSS-safe property of the original `textContent` write is preserved, and this was proved rather than asserted.** Both helpers build DOM nodes (`createTextNode` / `createElement('strong')`); neither uses `innerHTML`. Verified in-browser: `ovEl('p', null, '**bold** <img src=x onerror=alert(1)> <script>…')` yields `<strong>bold</strong>` followed by **escaped** markup, with **zero live `img`/`script` nodes**. Unbalanced (`a ** b ** c ** d`) and empty (`****`) marker runs neither throw nor drop text
+- **Item C was not a defect.** P6 flagged that on the SNE H1-2026 table EVE Energy ranks 2nd (48.0 GWh) as a `challenger` while HiThium ranks 3rd (46.2 GWh) as an `incumbent`, and correctly declined to act. Reading both `ecosystemRole` fields dissolves it: the roles rest on **different axes and different evidence, not one table**. HiThium is typed on a multi-house full-year record — No. 3 in 2024, **Top 2 on InfoLink, SMM and ICC for 2025**, cumulative shipments past 100 GWh — which places it *above* EVE on its own sources and clears the segment's top-three-plus-leader-language bar. **EVE's dossier never claims the leader position**, assessing it as "the aggressive-challenger cell supplier … forcing the 600Ah+ transition" — the challenger definition verbatim. The apparent inversion is an artifact of a **1.8 GWh (~4%) gap that reverses between houses and periods**. **Neither role was changed**; `cells-and-chemistry` stands unchanged at 20 members / 4 incumbents / 10 challengers / 6 adjacent
+- **Verification:** `sync-profiler-registry.py --check` 0 of 167 out of sync, roster and calendar in bijection; `check-profiler-study.py` 167 guides + 1,404 concepts, 0 errors 0 warnings; `check-profiler-relationships.py` 0 findings; `check-profiler-crossrefs.py` exit 0. `profiler-segments.json` was round-tripped and proved **byte-identical** before any write, per the P5 indent rule (indent 1, no trailing newline). Playwright against a local server: **zero page errors**, helpers verified in page scope
+- **Playwright could not reach a rendered dossier** — `ov-authwall` intercepts pointer events on the roster without credentials, so the end-to-end view is unverified. The transformation itself was verified directly in page scope instead, which tests the exact function every render path funnels through
+- **Item D was not touched.** `aka[]` in the roster search haystack (`Profiler.html:2202`) still awaits developer approval, narrowed to names-only by directive on 2026-08-30
+- **`Sections: 97/100`** — **87 non-exempt** after excluding the ten sections dated today, so no rotation was due, and none was forced
 
 ## [v05.30r] — 2026-09-09 06:16:23 PM EST
 

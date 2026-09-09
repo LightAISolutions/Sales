@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.84w] — 2026-09-09 07:08:03 PM EST — v05.31r
+
+### Fixed
+- Emphasis in dossier text now displays as **bold** instead of showing the surrounding asterisks. The asterisks were visible in company summaries, strategy judgments, relationship context, product descriptions, financial commentary and policy notes — across sixty dossiers — and are now rendered as intended everywhere they appear
+- Sentences quoted as evidence on the relationships view no longer carry stray asterisks picked up from the text they were drawn from
 
 ## [v01.83w] — 2026-09-06 08:33:03 AM EST — v04.85r
 

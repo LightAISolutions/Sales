@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.83w">
+  <meta name="build-version" content="v01.84w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1848,10 +1848,32 @@ function ovReloadFresh() {
       return [key];
     }
 
+    // Dossier prose is authored in the intel-briefing style, which marks its
+    // signposts as **BOLD** (PROFILER-STYLES.md). Those markers reached the DOM
+    // as literal asterisks because every element is built with textContent --
+    // 483 occurrences across 14 fields in 60 dossiers at v01.83w. ovPlain strips
+    // the markers for text destined for matching or narration; ovSetText renders
+    // them as real <strong> runs. Both build DOM nodes and neither uses
+    // innerHTML, so the XSS-safe property of the original textContent write is
+    // preserved exactly. Text with no '**' takes the original fast path
+    // unchanged, so every non-prose call site behaves byte-identically.
+    function ovPlain(text) { return String(text === undefined || text === null ? '' : text).replace(/\*\*/g, ''); }
+    function ovSetText(e, text) {
+      var s = String(text);
+      if (s.indexOf('**') < 0) { e.textContent = s; return e; }
+      var parts = s.split(/\*\*([\s\S]+?)\*\*/g);
+      // split() with one capture group alternates plain, bold, plain, bold, ...
+      parts.forEach(function(part, i) {
+        if (part === '') return;
+        if (i % 2) { var b = document.createElement('strong'); b.textContent = part; e.appendChild(b); }
+        else e.appendChild(document.createTextNode(part));
+      });
+      return e;
+    }
     function ovEl(tag, cls, text) {
       var e = document.createElement(tag);
       if (cls) e.className = cls;
-      if (text !== undefined && text !== null && text !== '') e.textContent = text;
+      if (text !== undefined && text !== null && text !== '') ovSetText(e, text);
       return e;
     }
     function ovLink(url, cls, text) {
@@ -2967,16 +2989,16 @@ function ovReloadFresh() {
       // Prose fields are mined per full sentence; developments are their own
       // natural unit (headline + read), carrying the event's date and source.
       var prose = [];
-      if (p.summary) prose.push([ovSecLabel('snapshot'), String(p.summary)]);
-      if (p.ecosystemRole) prose.push([ovSecLabel('snapshot'), String(p.ecosystemRole)]);
-      (p.strategyRead || []).forEach(function(b) { prose.push([ovSecLabel('strategy'), ovStratText(b)]); });
+      if (p.summary) prose.push([ovSecLabel('snapshot'), ovPlain(p.summary)]);
+      if (p.ecosystemRole) prose.push([ovSecLabel('snapshot'), ovPlain(p.ecosystemRole)]);
+      (p.strategyRead || []).forEach(function(b) { prose.push([ovSecLabel('strategy'), ovPlain(ovStratText(b))]); });
       (p.productsAndServices || []).forEach(function(prod) {
         ['description', 'positioning'].forEach(function(k) {
-          if (prod[k]) prose.push([ovSecLabel('products') + (prod.name ? ' · ' + prod.name : ''), String(prod[k])]);
+          if (prod[k]) prose.push([ovSecLabel('products') + (prod.name ? ' · ' + prod.name : ''), ovPlain(prod[k])]);
         });
       });
       var devs = (p.recentDevelopments || []).map(function(ev) {
-        return { date: ev.date || '', src: ev.source || '', text: [ev.headline || '', ev.read || ''].filter(Boolean).join(' — ') };
+        return { date: ev.date || '', src: ev.source || '', text: ovPlain([ev.headline || '', ev.read || ''].filter(Boolean).join(' — ')) };
       });
       ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) {
         if (c.slug === p.slug) return;
