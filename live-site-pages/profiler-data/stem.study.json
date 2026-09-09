@@ -1,0 +1,521 @@
+{
+ "schemaVersion": 2,
+ "slug": "stem",
+ "title": "Stem — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: what this guide teaches, and what it deliberately leaves out",
+   "kind": "callout",
+   "tone": "info",
+   "read": "2 min",
+   "ps": [
+    "This guide teaches **the technology under Stem's products** — how you find out what a solar or battery plant is actually doing, how the control layers stack from the cell to the fleet, what a plant controller must do to satisfy a grid operator, and how software decides what a battery earns. It is not a guide to Stem's corporate history, its executives or its share price; those live in the dossier.",
+    "Three neighbouring guides in this app cover ground this one needs and will not repeat. **Fluence's** and **FlexGen's** guides cover storage integration — the hardware this software controls. **Sungrow's**, **Sinexcel's** and **Delta's** cover {{power conversion system}}s — the equipment that actually moves current when this software issues an instruction. **DNV's** covers independent assurance of the same assets. This guide is the layer over all of them: it starts at the sensor and ends at the market bid, and treats the battery and the inverter as things that already exist.",
+    "**Read the section called 'The ladder' first if you read only one.** Almost every acronym in this industry is ambiguous until you have the control hierarchy in your head, and most confusion in a vendor conversation is two people using {{EMS}} to mean different layers of it."
+   ]
+  },
+  {
+   "id": "what-is-there-to-manage",
+   "title": "A solar plant has no moving parts. So what is there to manage?",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A solar plant is a field of panels wired through inverters to a substation. Nothing burns, almost nothing moves, and no one shovels anything into it. It is a fair question why an entire software industry exists around operating one.",
+    "There are three answers, and each becomes a section of this guide. **You cannot see it.** A hundred-megawatt plant is a few hundred thousand modules across several square kilometres, and the difference between one performing normally and one quietly losing eight per cent of its output is invisible to a person standing in it. Somebody has to instrument it.",
+    "**You must control it to be allowed to connect at all.** A grid operator does not simply accept whatever a plant produces. It specifies how the plant must behave when the grid's voltage sags or its frequency drops, how fast output may change, and when the plant must produce less than it could. Meeting those obligations is a continuous control problem, not a one-time certification.",
+    "**What it earns depends on decisions made every few seconds.** For a solar plant alone this is nearly true — it produces when the sun shines and the price is whatever it is. Add a battery and it stops being true entirely, because a battery introduces a fourth property none of the others have: it is a **finite, depleting resource within each day**. Every megawatt-hour discharged now is one not available later. That single property is the reason storage software is harder than solar software, and it is where most of the value in this field sits."
+   ]
+  },
+  {
+   "id": "telemetry",
+   "title": "Telemetry: how you find out what a plant is doing",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Everything downstream depends on measurement, and the measurement chain is where the unglamorous engineering lives. At the site you measure irradiance — how much sunlight is arriving — plus module and ambient temperature, wind, AC and DC voltages and currents, inverter status codes, and, for a battery, cell voltages, temperatures and {{state of charge}}.",
+    "One instrument is different from the rest. A **revenue-grade meter** is the one whose reading money changes hands on, so it carries an accuracy class, a calibration record and tamper-evidence, and costs accordingly. Everything else is diagnostic; the meter is financial.",
+    "A {{data logger}} sits at the site and does the collecting: it polls each device on a schedule, timestamps what it reads, buffers when the network drops, and forwards upstream. The buffer is not a detail. A communications outage that becomes a permanent gap in the record becomes an unbillable period and an unresolvable dispute, so loggers are specified by how long they can survive offline as much as by how fast they poll.",
+    "Devices do not speak one language. {{Modbus}} is simple, old and everywhere. {{DNP 3.0}} was built for utility networks over unreliable links. {{IEC 61850}} is substation-native and self-describing. {{OPC-UA}} is the modern typed and secured option. A given inverter speaks one or two of these; the logger has to speak all of them.",
+    "And speaking the protocol is only half of it. Every make and model exposes its data at different register addresses with different scaling, so the platform needs a {{point map}} per device type — a translation table saying which number means what. This is the least interesting engineering in the entire field and it is the actual barrier to entry: a platform with a library of thousands of these can monitor a mixed fleet that a newcomer simply cannot read.",
+    "Finally, **polling rate costs money**. Sub-second data is needed for control loops. Minute-resolution data is enough for performance analysis. Fifteen-minute data settles the bill. Collecting everything at the fastest rate is bandwidth, storage and expense spent for nothing, so a real system runs several rates at once."
+   ]
+  },
+  {
+   "id": "protocols",
+   "title": "The protocols, and why there are several",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "None of these is obsolete and none has won. They coexist because each was designed for a different problem, and a plant built over ten years contains equipment from every era. A control platform's job includes speaking all of them at once.",
+   "cols": [
+    "Protocol",
+    "Designed for",
+    "What it is good at",
+    "Where you meet it"
+   ],
+   "rows": [
+    [
+     "Modbus (RTU / TCP)",
+     "Simple industrial device polling, 1979 onward",
+     "Universality and simplicity — almost every device supports it",
+     "Inverters, meters, sensors; the default fallback everywhere"
+    ],
+    [
+     "DNP 3.0",
+     "Electric utility networks over unreliable links",
+     "Time-stamped reporting, so a device can say what happened while the link was down",
+     "Substations, plant controllers, utility control rooms"
+    ],
+    [
+     "IEC 61850",
+     "Substation automation, self-describing data",
+     "Devices publish what their data means, not just numbers; fast peer-to-peer messaging",
+     "Modern substations and utility-scale plant control"
+    ],
+    [
+     "IEC 60870",
+     "European utility telecontrol",
+     "Long-established supervisory links to control centres",
+     "European grid operator interfaces"
+    ],
+    [
+     "OPC-UA",
+     "Modern industrial integration",
+     "Typed, secure, self-documenting; bridges plant systems to enterprise software",
+     "Newer control platforms exposing data to third parties"
+    ]
+   ]
+  },
+  {
+   "id": "reading-a-solar-plant",
+   "title": "What 'underperforming' actually means",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A plant never produces its nameplate rating, and that is not a fault. The rating is measured under standard test conditions that outdoor daylight rarely reproduces. So the first task of performance software is to establish what the plant *should* have produced given the sunlight it actually received, and only then to ask about the difference.",
+    "The standard measure is the {{performance ratio}}: measured output divided by expected output given available irradiance, temperature-corrected. It is used everywhere and it has real weaknesses — it is sensitive to how irradiance is measured, and it can mask a fault that happens to coincide with poor weather.",
+    "Distinguish it from **availability**, which asks only whether equipment was in service. A plant can be one hundred per cent available and badly underperforming, which is exactly why contracts that guarantee availability guarantee less than owners often assume.",
+    "The loss mechanisms each leave a different signature in the data, and telling them apart is the craft. {{Soiling}} builds gradually and reverses with rain. Shading is periodic and locked to time of day. {{Degradation}} is slow and buried in seasonal noise. A stuck tracker shows a curve of the wrong shape. A failed string shows a step change in one part of the plant and nowhere else.",
+    "{{Clipping}} is the instructive one, because it looks like a loss and usually is not. If the panel field can produce more than the inverters are rated to pass, the excess is simply not converted — a flat top on a sunny midday curve. Designers do this deliberately, because oversizing the field earns more energy in the mornings and evenings than it forfeits at noon. A monitoring system that raises an alarm for it is wrong, and a buyer evaluating one should check.",
+    "The best fault detection compares a string against its neighbours rather than against a model, because neighbours share the weather and the model does not. That single change removes most false alarms — which matters more than it sounds, because **alarm fatigue is a real failure mode**. A threshold set too sensitively trains operators to ignore alarms, and the cost is paid later in a real fault nobody looked at."
+   ]
+  },
+  {
+   "id": "loss-signatures",
+   "title": "Reading the loss from the curve",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Six things that reduce a solar plant's output, what each looks like in the data, and what a competent platform does about it. The last column is the point: half of these are not faults, and treating them as faults is how a monitoring system loses its operators' trust.",
+   "cols": [
+    "Mechanism",
+    "Signature in the data",
+    "Is it a fault?",
+    "Correct response"
+   ],
+   "rows": [
+    [
+     "Soiling",
+     "Gradual decline across the whole plant; reverses after rain",
+     "No — an operating cost",
+     "Schedule washing when the lost revenue exceeds the cost of cleaning"
+    ],
+    [
+     "Shading",
+     "Repeats at the same time each day; seasonal drift",
+     "No — a design consequence",
+     "Note it; only actionable if vegetation is growing"
+    ],
+    [
+     "Clipping",
+     "Flat top on the sunniest hours, at exactly the inverter rating",
+     "No — usually deliberate",
+     "Recognise it; if a battery is added, it becomes recoverable energy"
+    ],
+    [
+     "Degradation",
+     "Very slow decline over years, buried in seasonal noise",
+     "No — expected, and warranted",
+     "Track against the warranty curve; a claim needs years of clean data"
+    ],
+    [
+     "Stuck tracker",
+     "Output curve the wrong shape for the time of day, one block only",
+     "Yes",
+     "Dispatch a technician; quantify the loss while it waits"
+    ],
+    [
+     "Failed string or combiner",
+     "Step change confined to part of the plant",
+     "Yes",
+     "Alarm immediately; this is what fault detection exists for"
+    ]
+   ]
+  },
+  {
+   "id": "the-ladder",
+   "title": "The ladder: the control hierarchy from cell to fleet",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "This is the section to remember. Every product in this industry sits on one ladder, each layer talking only to its neighbours, and nearly all terminological confusion comes from not having it.",
+    "**1. Cell and module** — the electrochemistry itself. Nothing in this guide controls it directly. **2. {{BMS}}, the battery management system** — supplied with the battery. It keeps every cell inside a safe voltage, current and temperature envelope, balances them against each other, and estimates {{state of charge}} and {{state of health}}. Crucially, **it has veto power over everything above it**: it will refuse an instruction that would damage cells, no matter who sent it.",
+    "**3. {{PCS}}, the power conversion system, or the inverter** — converts direct current to alternating current and back, and is what physically delivers real and reactive power. It executes a setpoint. It does not decide one.",
+    "**4. {{EMS}}, the energy management system** — the site's brain. It decides what the site should be doing right now and issues setpoints to the conversion layer, within whatever the battery management system permits. **5. {{power plant controller}}** — enforces what the *grid* requires at the {{point of interconnection}}: voltage support, frequency response, power factor, ramp limits, {{curtailment}}. The next section is entirely about this layer.",
+    "**6. {{SCADA}}** — the operator's window and hands: visualisation, alarms, manual override. **7. The fleet or portfolio application** — the layer above any single site, spanning many plants, where performance analytics, reporting and the optimisation in later sections happen.",
+    "Now the part that makes this market confusing: **the boundaries move between vendors**. Some suppliers sell layers 2 through 5 as one box and call the whole thing an EMS. Others sell layer 4 alone. Others sell only layer 7. The same three letters describe a different scope depending on who is selling, which is why a specification that says 'EMS' without saying which functions is not a specification.",
+    "**Vendor lock-in is concrete here, not rhetorical.** If layer 4 only speaks to layer 3 from the same manufacturer, replacing the inverters means replacing the controller too. Worse is an **orphaned EMS** — one whose vendor has exited the market, been acquired, or quietly stopped supporting the product. The plant still runs; it just cannot be changed, extended or properly diagnosed. This is why {{hardware-agnostic}} appears as a purchasing criterion rather than a marketing adjective, and why a retrofit path off an orphaned system is a product in its own right."
+   ]
+  },
+  {
+   "id": "bundled-or-independent",
+   "title": "Two ways to sell this software, and why both are defensible",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "The structural division in this segment is not between technologies but between business models. Almost every control and optimisation platform is either an equipment manufacturer's software arm or an independent platform, and the difference decides who can buy it and what happens when circumstances change.",
+   "cards": [
+    {
+     "t": "The equipment maker's software arm",
+     "meta": "Sold with the vendor's own batteries or inverters — to make the hardware more valuable and to keep the customer",
+     "adv": [
+      "Developed and tested against known hardware, so behaviour is predictable and the vendor can guarantee it",
+      "One supplier is accountable for the whole stack, which shortens integration and simplifies a warranty claim",
+      "The software can use manufacturer-internal data the equipment does not expose to anyone else",
+      "Commercially it can be priced as an attach rather than standing on its own, which is a real advantage in a price-sensitive tender"
+     ],
+     "dis": [
+      "It ties the plant to one manufacturer for the life of the asset",
+      "A fleet assembled from several brands needs several of these, and none of them sees the whole fleet",
+      "If the vendor exits the market or drops the product, the plant is stranded with an orphaned system",
+      "The vendor's incentive is to make its own hardware look good, which is not the same as making the plant earn the most"
+     ]
+    },
+    {
+     "t": "The independent platform",
+     "meta": "Sold on working across everyone's equipment; its entire proposition is that it does not care what you bought",
+     "adv": [
+      "It is the only option for a fleet assembled over a decade from several manufacturers — which is most real fleets",
+      "It survives the hardware changing, so the software outlives any one procurement decision",
+      "Its incentive is aligned with the asset's earnings rather than with any manufacturer's sales",
+      "It can be retrofitted onto an existing plant, including one whose original system has been orphaned"
+     ],
+     "dis": [
+      "It must build and maintain a {{point map}} library for every device it supports — expensive, endless, and invisible to the buyer",
+      "Without manufacturer-internal access it may see less about a device than that manufacturer's own tool does",
+      "It has no hardware margin to subsidise the software price, so it must be sold on its own value",
+      "Support becomes a three-way conversation when something fails at an interface"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "what-a-ppc-does",
+   "title": "What a power plant controller actually does",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Start with the physics. In an alternating-current system you can push energy — **real power**, measured in watts — and you can separately support voltage — **reactive power**, in volt-amperes reactive — using the same hardware. A grid operator cares about both, and a modern inverter can supply reactive power even at night when it is generating nothing.",
+    "The {{point of interconnection}} is the boundary that matters. Everything the grid operator specifies applies *there*, at the single point where the plant meets the network — not at any individual inverter. So the controller's real job is co-ordinating many devices to produce one required behaviour at one place.",
+    "**Frequency** is the grid's shared heartbeat, and it falls when demand exceeds supply anywhere on the system. Hence a family of control modes: {{frequency containment reserve}} and fast frequency response arrest a fall within seconds or less; frequency-watt control varies output as a defined function of measured frequency; power oscillation damping actively counteracts oscillations between regions. Batteries are extraordinarily good at the fast end of this, which is why frequency service was storage's first genuinely profitable market.",
+    "**Voltage** has its own family: automatic voltage regulation, volt-VAR control that adjusts reactive power against measured voltage, and fixed power factor operation. **Power** has a third: active power limiting and {{curtailment}} — deliberately producing less, either on instruction or to respect a physical constraint — plus ramp-rate limits that cap how fast output may change.",
+    "For storage there is a fourth family the others do not need: **state-of-charge management**, including day-ahead targeting and waypoint scheduling, so the battery holds the right amount of energy at the time it will be asked for it.",
+    "**Speed is specified in cycles, and this is worth internalising.** At 60 Hz one cycle is about 16.7 milliseconds. A controller that acts 'in less than a cycle' is responding faster than the waveform repeats. That is a genuine requirement for the fast frequency products, and it is the reason this control loop runs on hardware at the plant rather than in a data centre somewhere — the round trip would eat the entire budget.",
+    "One vocabulary note that trips people up. The reserve products have different names in different places for the same ladder of timescales: **primary** or FCR responds in seconds, automatically; **secondary** or aFRR follows over seconds to minutes, also automatically; **tertiary** or mFRR is dispatched over minutes. Learn the ladder once and the regional names map onto it."
+   ]
+  },
+  {
+   "id": "the-revenue-stack",
+   "title": "What a battery is actually paid for",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The same battery earns very different amounts under different market designs, which is why optimisation software has value at all. The constraint running through all of it: you cannot sell the same megawatt-hour twice. Committing capacity to one of these forecloses the others.",
+   "cols": [
+    "Revenue stream",
+    "What is being sold",
+    "Timescale",
+    "The catch"
+   ],
+   "rows": [
+    [
+     "Energy arbitrage",
+     "Buying energy cheaply and selling it dearly within the day",
+     "Hours",
+     "The price spread must exceed the {{round-trip efficiency}} loss before a cycle is worth doing at all"
+    ],
+    [
+     "Frequency services",
+     "Being available to respond, paid whether or not you are called",
+     "Seconds",
+     "The first battery into a market earns extraordinarily; the twentieth earns very little. These saturate"
+    ],
+    [
+     "Operating reserves (aFRR / mFRR)",
+     "Held capability, dispatched when needed",
+     "Minutes",
+     "Capacity held in reserve cannot simultaneously be arbitraged"
+    ],
+    [
+     "Capacity",
+     "Being counted on to exist at system peak",
+     "Seasonal or annual",
+     "A short-duration battery is accredited at a discount, and the discount deepens as more storage joins"
+    ],
+    [
+     "Demand charge management",
+     "Reducing a specific customer's own electricity bill",
+     "Monthly billing cycle",
+     "Value depends entirely on the tariff, so it varies by utility and evaporates if the tariff is reformed"
+    ],
+    [
+     "Congestion and locational value",
+     "Energy being worth more at one point on the network than another",
+     "Real time",
+     "Requires the asset to be in the right place; nothing the software can fix after the fact"
+    ]
+   ]
+  },
+  {
+   "id": "the-optimisation-problem",
+   "title": "Optimisation: turning forecasts into instructions",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Stated plainly, the problem is: choose a charge and discharge schedule that maximises expected revenue, subject to physics, chemistry, contract and market rules. Each of those four constraints does real work.",
+    "**Physics** sets power and energy limits and imposes {{round-trip efficiency}}: if twelve per cent of every stored unit is lost, the price spread must clear that before a cycle earns anything. **Chemistry** is the {{BMS}}'s envelope, which the optimiser cannot argue with. **Market rules** set bid formats and {{gate closure}} times, which determine how far ahead a decision must be committed.",
+    "**Contract** is the constraint that surprises people, and it is the one worth understanding properly. A battery warranty limits cycles or energy throughput per year. An optimiser that maximises this month's revenue by cycling hard can void the warranty — destroying far more value than it created. So **degradation cost belongs inside the objective function**, as a real price on each cycle, not as a compliance check bolted on afterwards. This is called warranty-aware dispatch and its absence is a genuine product deficiency.",
+    "{{State of charge}} is what couples the decisions together. Without a battery, each hour is an independent question. With one, today's final discharge sets tomorrow's starting point, so the optimiser is solving a path over time rather than a sequence of separate choices. That is the whole reason this is hard.",
+    "**{{Forecast error}} dominates.** Price forecasting is genuinely difficult, and an optimiser fed a poor forecast will make confident, well-solved, wrong decisions. Most of the measurable performance difference between competing optimisers turns out to be forecast quality rather than solver sophistication — which is an uncomfortable finding for vendors who market the solver.",
+    "Finally, the mechanics. Bids are submitted as curves — quantities at prices — not as single numbers, because the market clears against everyone's curves at once. After gate closure the bid is a promise, and failing to deliver what was offered incurs an {{imbalance charge}}. That is the mechanism converting a forecasting error directly into cash.",
+    "One structural point often missed: in many markets a registered entity — a scheduling co-ordinator or {{qualified scheduling entity}} — must submit on the asset's behalf. Whether an optimiser holds that registration itself or relies on a partner for it is a real commercial distinction between apparently similar products."
+   ]
+  },
+  {
+   "id": "hybridisation",
+   "title": "Adding storage to a plant that already exists",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The most active engineering problem in this field right now is not building new storage. It is bolting storage onto solar plants that are already running — and it is a distinct problem, not a smaller version of a greenfield build.",
+    "The reason to do it is that the slow, expensive things already exist: the land, the grid connection, the permits, the substation. Reusing them removes years from a schedule that is otherwise dominated by an interconnection queue.",
+    "**The shared {{point of interconnection}} is a hard ceiling, and it is the defining constraint.** If the connection is rated for forty megawatts, then solar plus battery together must respect forty megawatts there, no matter what either could do alone. The plant controller now has to arbitrate between two sources against one limit, continuously, and decide which one gets the headroom at each moment.",
+    "**{{Clipping}} recapture is often the largest single value item**, and it is invisible in any greenfield analysis. A panel field that was throwing energy away at midday because the inverters could not pass it can now put that energy into a battery instead. Nothing new is generated; something previously discarded is kept.",
+    "The engineering choice is **{{AC-coupled}} against {{DC-coupled}}**: whether the battery sits on its own inverter beside the plant, or shares the direct-current bus with the panels. DC coupling captures clipped energy more efficiently because it never converts it twice; AC coupling is simpler to retrofit and easier to operate independently.",
+    "What changes in the control layer is substantial. A site that needed only monitoring now needs an {{EMS}}. The {{power plant controller}} acquires storage-specific modes. The {{SCADA}} display has to represent two asset classes with different failure modes. And commercially, the plant stops being a price-taking generator and becomes a participant that chooses when to deliver — which is the moment everything in the optimisation section starts to matter for an asset that never needed it."
+   ]
+  },
+  {
+   "id": "where-products-slot-in",
+   "title": "Where each product line sits on the ladder",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Mapping Stem's product lines onto the control hierarchy from the earlier section. The pattern is worth noticing on its own: the company sells at almost every layer above the hardware, and nothing at or below the conversion layer.",
+   "cols": [
+    "Product line",
+    "Ladder layer",
+    "What it does",
+    "Who competes there"
+   ],
+   "rows": [
+    [
+     "PowerTrack Software",
+     "7 — fleet application",
+     "Monitoring, analytics and {{asset performance management}} across a multi-vendor fleet of solar, storage and hybrid sites",
+     "Independent monitoring platforms and the assurance houses' own monitoring arms"
+    ],
+    [
+     "PowerTrack EMS",
+     "4 — site energy management",
+     "Decides charge and discharge for a storage or hybrid site, on hardware-agnostic unit controllers",
+     "Integrators' bundled energy management systems"
+    ],
+    [
+     "PowerTrack Power Plant Controller",
+     "5 — grid compliance",
+     "Enforces voltage, frequency, power factor and ramp obligations at the {{point of interconnection}}, in under one cycle",
+     "Inverter manufacturers' own plant controllers"
+    ],
+    [
+     "PowerTrack SCADA",
+     "6 — supervisory control",
+     "Operator visualisation, alarm hierarchy and manual override, on site and remote",
+     "Standalone industrial SCADA vendors"
+    ],
+    [
+     "PowerTrack Logger and edge hardware",
+     "1 — measurement",
+     "Polls devices, buffers offline, timestamps, and forwards; carries local compute for edge analytics",
+     "Data-logger specialists and inverter makers' own gateways"
+    ],
+    [
+     "PowerTrack Optimizer",
+     "7 — market-facing decisions",
+     "Forecasting, value stacking, dispatch and settlement — sold inside the managed service rather than standalone",
+     "Merchant optimisers and trading desks sold as a service"
+    ],
+    [
+     "Managed Services",
+     "Operations, not a layer",
+     "Stem operates the asset rather than selling the tool: design, procurement, commissioning, operation",
+     "Owner-operators' in-house teams and independent service providers"
+    ]
+   ]
+  },
+  {
+   "id": "where-it-goes-wrong",
+   "title": "Where this goes wrong in practice",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Alarm thresholds set too sensitively.** The failure is social, not technical: operators learn to dismiss alarms, and the cost is paid months later in a real fault nobody investigated. A platform that raises fewer, better alarms outperforms one that raises more.",
+    "**Confusing availability with performance.** A contract guaranteeing availability guarantees that equipment was switched on. It does not guarantee the plant produced what it should have. Owners discover the difference during a dispute.",
+    "**An optimiser without a degradation cost in its objective.** It will find genuinely more revenue this quarter by cycling harder, and it will spend warranty coverage worth more than it earned. Ask where the cycle cost enters the model.",
+    "**Assuming the data is right.** Every downstream conclusion inherits the measurement chain's errors — a mis-scaled register, an uncalibrated irradiance sensor, a clock drifting out of sync. Reconciling against the revenue meter is the sanity check that catches most of it.",
+    "**Treating {{clipping}} as a fault.** It is usually a design choice, and a system that flags it is telling you it does not know how the plant was designed.",
+    "**Buying a control layer that speaks only to one manufacturer** and discovering the constraint five years later, when that manufacturer's product line has moved on and the plant needs new inverters."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "7 min",
+   "cards": [
+    {
+     "q": "What single property makes storage software harder than solar software?",
+     "a": "A battery is a finite, depleting resource within each day. Every megawatt-hour discharged now is one unavailable later, so the decisions are coupled over time rather than independent hour by hour. Solar output is largely determined by the weather; battery output is a choice with consequences."
+    },
+    {
+     "q": "Why does a monitoring platform need a point map for every device model?",
+     "a": "Because each manufacturer exposes its data at different register addresses with different scaling, so the same measurement lives in a different place on every make and model. The library of these translations is dull to build, endless to maintain, and the main practical barrier to a newcomer reading a mixed fleet."
+    },
+    {
+     "q": "What does the battery management system's veto mean in practice?",
+     "a": "It sits below the energy management system on the control ladder and enforces the cells' safe voltage, current and temperature envelope. It will refuse an instruction that would damage cells regardless of what layer above sent it — so no optimiser can outrun the chemistry."
+    },
+    {
+     "q": "Why is clipping usually not a fault?",
+     "a": "It happens when the panel field can produce more than the inverters are rated to pass. Designers oversize the field deliberately because the extra energy captured in mornings and evenings exceeds what is forfeited at midday. A system that alarms on clipping is revealing that it does not know the plant's design."
+    },
+    {
+     "q": "What is the point of interconnection and why does the plant controller care about it?",
+     "a": "It is the single point where the plant meets the grid, and every obligation the grid operator specifies applies there rather than at any individual inverter. The controller's job is co-ordinating many devices to produce one required behaviour at that one point."
+    },
+    {
+     "q": "Why is control-loop speed specified in cycles?",
+     "a": "One cycle at 60 Hz is about 16.7 milliseconds. Fast frequency products need a response quicker than the waveform repeats, which is faster than a round trip to a remote data centre. That requirement is why this control loop runs on hardware at the plant."
+    },
+    {
+     "q": "What is the constraint that governs value stacking?",
+     "a": "You cannot sell the same megawatt-hour twice. Capacity committed to a reserve product cannot simultaneously be arbitraged, so optimisation is fundamentally the allocation of one finite resource across competing claims."
+    },
+    {
+     "q": "Why does round-trip efficiency set a floor on arbitrage?",
+     "a": "Because energy is lost in both conversion directions. If twelve per cent is lost per round trip, the price spread between charging and discharging must exceed twelve per cent before the cycle earns anything at all — before considering wear on the cells."
+    },
+    {
+     "q": "What is warranty-aware dispatch, and why does its absence matter?",
+     "a": "It is putting the cost of degradation inside the optimiser's objective function, so each cycle carries a price. Without it, an optimiser maximises near-term revenue by cycling hard and can consume warranty coverage worth more than the revenue it earned."
+    },
+    {
+     "q": "Which usually explains more of the performance gap between two optimisers — the solver or the forecast?",
+     "a": "The forecast. Price forecasting is genuinely hard, and an optimiser fed a poor forecast makes confident, correctly-solved, wrong decisions. Solver sophistication cannot recover a bad input."
+    },
+    {
+     "q": "What is an orphaned energy management system, and why is it a commercial opportunity?",
+     "a": "One whose vendor has exited, been acquired, or stopped supporting the product. The plant still runs but cannot be extended, changed or properly diagnosed. Providing a retrofit path off such a system is a product in its own right, and it is why hardware-agnostic design is a purchasing criterion."
+    },
+    {
+     "q": "In a solar-plus-storage retrofit, what does the shared connection limit force the controller to do?",
+     "a": "Arbitrate. If the connection is rated for forty megawatts, solar and battery together must respect that at the interconnection point, so the controller continuously decides which source gets the available headroom."
+    },
+    {
+     "q": "Why is clipping recapture often the largest value item in a hybridisation project?",
+     "a": "Because the energy already exists and is currently being discarded — the panels produce more than the inverters can pass at midday. Storing it generates nothing new; it keeps something previously thrown away, which is why it does not appear in a greenfield analysis."
+    },
+    {
+     "q": "What does an imbalance charge do to a forecast error?",
+     "a": "It converts it directly into cash. After gate closure a bid is a promise; delivering more or less than committed incurs the charge, which is the mechanism that makes forecast quality a financial rather than an academic property."
+    },
+    {
+     "q": "Why do frequency-service revenues saturate?",
+     "a": "The system needs a fixed quantity of fast response. The first battery into that market earns extraordinary returns because supply is scarce; as more storage arrives the price falls toward the cost of providing it. Revenue stacks migrate, and software that cannot follow them ages badly."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "6 min",
+   "items": [
+    {
+     "q": "A solar plant shows a flat top on its output curve on the sunniest days, at exactly the inverter rating. What is the correct conclusion?",
+     "c": [
+      "The inverters are failing and should be replaced",
+      "This is clipping — probably a deliberate design choice, and it becomes recoverable energy if storage is added",
+      "The irradiance sensor is mis-calibrated",
+      "The plant is being curtailed by the grid operator"
+     ],
+     "a": 1,
+     "e": "Clipping at exactly the inverter rating on the sunniest hours is the signature of an oversized panel field, which designers choose deliberately. It is not a fault. It is, however, the energy a battery retrofit can capture — which is why it matters in a hybridisation analysis."
+    },
+    {
+     "q": "Two vendors both offer 'an EMS'. What is the first question to ask?",
+     "c": [
+      "Which programming language it is written in",
+      "Which layers of the control ladder it actually covers",
+      "How many customers it has",
+      "Whether it runs in the cloud"
+     ],
+     "a": 1,
+     "e": "The boundaries between energy management, plant control, SCADA and the fleet application move between vendors: some sell layers two through five as one box, others sell layer four alone. Until you know the scope, the acronym conveys nothing, and most confusion in vendor conversations comes from skipping this."
+    },
+    {
+     "q": "An optimiser reports the highest revenue of any product evaluated in a three-month trial. What should be checked before concluding it is the best?",
+     "c": [
+      "Whether it was cycling the battery harder than the warranty permits",
+      "Whether it uses a faster solver",
+      "Whether its user interface is preferred by operators",
+      "Whether it supports more protocols"
+     ],
+     "a": 0,
+     "e": "Near-term revenue is trivially increased by cycling harder, and the cost — consumed warranty coverage and accelerated degradation — falls outside a three-month window. Without a degradation cost inside the objective function, the comparison is not measuring what it appears to measure."
+    },
+    {
+     "q": "A plant's data logger loses its network connection for six hours. What is the consequence if it has no local buffer?",
+     "c": [
+      "Nothing — the data is reconstructed by interpolation",
+      "A permanent gap in the record, which can become an unbillable and disputed period",
+      "The inverters shut down",
+      "The plant controller stops responding to the grid"
+     ],
+     "a": 1,
+     "e": "The control loop runs locally and is unaffected, but the record is not recoverable after the fact — interpolated data is not revenue-grade. This is why loggers are specified by how long they survive offline as much as by how fast they poll."
+    },
+    {
+     "q": "A battery earns well from frequency services in its first year and much less in its third, with no change in its own performance. Why?",
+     "c": [
+      "Its cells have degraded to the point of uselessness",
+      "The market saturated as more storage joined, and the price fell toward the cost of providing the service",
+      "Its optimiser stopped working",
+      "Frequency services were abolished"
+     ],
+     "a": 1,
+     "e": "The system needs a fixed quantity of fast response. Early entrants earn scarcity rents; as capacity arrives the price falls. This is a predictable market dynamic rather than an asset problem, and it is why the ability to follow revenue as it migrates to other stacks is a durable requirement of the software."
+    },
+    {
+     "q": "Why can a plant be one hundred per cent available and still be badly underperforming?",
+     "c": [
+      "Availability measures whether equipment was in service, not whether it produced what the sunlight should have yielded",
+      "Availability is measured only at night",
+      "The two terms are synonymous",
+      "Underperformance is only possible when equipment fails"
+     ],
+     "a": 0,
+     "e": "Availability is an equipment-uptime measure. Soiling, shading, degradation and mis-configuration all reduce output while everything remains switched on — which is exactly why a contract guaranteeing availability guarantees less than owners often assume."
+    }
+   ]
+  }
+ ]
+}

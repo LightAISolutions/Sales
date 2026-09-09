@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-08",
+ "updated": "2026-09-09",
  "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
  "companies": [
   {
@@ -2294,6 +2294,24 @@
     "Health and Wealth Solutions. Health organic decelerated to 2 percent for FY2025 from 6 percent in Q2 and Q3 2025, and Wealth grew 1 percent in Q1 2026 against 2.9 percent expected. This is where the company's organic weakness actually sits — not in the consolidated number, which beat Marsh McLennan's",
     "A second documented battery-storage placement, and any current battery capacity figure. The Pulse Clean Energy deal of 2026-07-07 is the only one located, and the only megawatt-scale BESS figure the company publishes comes from a brochure coded June 2018 that also states a headcount half again the current one",
     "Chesterton check: the company publishes NO leverage ratio or debt-to-EBITDA target in its results releases or its 10-K — every leverage figure in the dossier comes from S&P or from management commentary relayed by third parties. Also unresolved: sources give Reese's CFO start date as 2022, as 'two years' before his exit, and as July 2024; and the buyback authorisation jumped from USD 1.3bn at end-2025 to USD 7.7bn by Q2 2026 with no board authorisation announcement located"
+   ]
+  },
+  {
+   "slug": "stem",
+   "nextReport": "2026-11-04",
+   "confirmed": false,
+   "source": "Cadence inference from Stem's own EDGAR 8-K series, not from a tracker. Every Item 2.02 earnings 8-K lands on a WEDNESDAY and the 10-Q follows on the Thursday one day later, without exception: 8-K 2025-10-29 / 10-Q 2025-10-30 (Q3 2025), 8-K 2026-03-04 (FY2025), 8-K 2026-05-06 / 10-Q 2026-05-07 (Q1 2026), 8-K 2026-08-12 / 10-Q 2026-08-13 (Q2 2026) — all five weekdays verified with date -d. Days after quarter end vary and have drifted LATER through 2026: 29 days for Q3 2025, then 36 for Q1 2026 and 43 for Q2 2026 (63 for the annual). Q3 2026 ends 2026-09-30; 2026-11-04 is the Wednesday 35 days after it, between last year's Q3 cadence and this year's drift. The alternative is 2026-10-28, the Wednesday at 28 days, if the company reverts to last year's Q3 timing. NOT COMPANY-CONFIRMED: no 'Stem to Report Third Quarter 2026 Financial Results' release had been issued as of 2026-09-09, and the last SEC filing of any kind is the 10-Q of 2026-08-13 — confirm at https://investors.stem.com when the date comes within seven days. SEC registrant CIK 0001758766; fiscal year ends 31 December. SCALE TRAP FOR THE DESK: a 1-for-20 reverse split took effect 2025-06-23, so any per-share figure from a source dated before that is stale by 20x. NAME TRAP: searching 'Stem' returns Stemtech Corporation (Nasdaq: STEK), a different and distressed company — qualify every query with 'NYSE: STEM' or CIK 1758766.",
+   "lastRefreshed": "2026-09-09",
+   "watch": [
+    "THE ONE NUMBER THAT SETTLES THE THESIS: ARR against the FY2026 year-end guide of $65-70m. ARR grew 15.7% in FY2025 and then only about 2% sequentially in each of Q1 and Q2 2026 ($61.1m to $61.2m to $62.4m). At that run-rate the guide needs acceleration that has not appeared, and CARR at $69.0m is flat year on year, so the not-yet-operating pipeline is thinning rather than filling",
+    "Q3 2026 revenue against the reaffirmed FY2026 guide of $140-190m ($130-150m of it software, services and edge; 40-50% non-GAAP gross margin; $10-15m adjusted EBITDA; $0-10m operating cash flow). The guidance midpoint sits BELOW the sell-side consensus, so a reaffirmation is not neutral here",
+    "WHICH CONSENSUS PANEL. Q2 2026 was simultaneously a 6.50% beat against the Zacks panel ($31.62m) and a roughly $3.1m miss against the Investing.com panel ($36.76m), on five to seven analysts. Never write a beat or a miss for this company without naming the panel",
+    "Storage operating AUM, flat at 1.7-1.8 GWh since 2024 while solar AUM went 29.9 to 38.3 GW. Whether the storage book ever grows again is the difference between an incumbent of storage optimisation and an incumbent of solar asset-performance management that also sells a storage optimiser",
+    "Cash and the at-the-market programme. Cash was $38.4m at 2026-06-30 against $18.4m of interest paid in the half; the $30.0m ATM under the $200m shelf established 2026-03-06 drew $5.6m in H1. At a $5.64 share price the remaining authorisation would issue roughly 4.3m shares against 9.6m outstanding — watch the share count, not just the cash line",
+    "The 2030 Senior Secured PIK Toggle Notes: whether interest keeps being paid in kind ($4.6m had accrued into face value by 2026-06-30) and whether the 2030 Convertible Notes, marked at about 39 cents on the dollar, are repurchased or exchanged again",
+    "Data-centre adjacency, currently a clean negative. The only mention located anywhere is one exploratory sentence by the chief executive on the Q1 2026 call about supporting 'data center developers and operators'; it was not repeated on the Q2 call and no product, pilot or counterparty exists. Treat any future mention as new information, not as continuity",
+    "Trade-press salience. Energy-Storage.news has published nothing on Stem since 2025-05-05 and Utility Dive nothing substantive since 2024-11-04, so every 2026 customer announcement has reached the record only through the company's own newsroom. Watch for the first independently reported win — or the first reported loss among the quiet legacy names (SB Energy, REX, ENGIE North America, CleanCapital)",
+    "Whether Wood Mackenzie's paywalled 'Global BESS software landscape 2026' places Stem. It is the single source that would convert this dossier's ranking section from an absence into a placement"
    ]
   }
  ]

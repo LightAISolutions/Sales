@@ -4554,6 +4554,51 @@
         "MMC",
         "MRSH"
       ]
+    },
+    {
+      "slug": "stem",
+      "name": "Stem",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Listed pure-play energy-optimisation software — the hardware-agnostic PowerTrack suite over 38.3 GW of solar and 1.8 GWh of storage",
+      "hq": "Houston, United States",
+      "ticker": "NYSE: STEM",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Stem",
+        "Stem, Inc.",
+        "STEM",
+        "Star Peak Energy Transition Corp.",
+        "Star Peak Energy Acquisition Corp.",
+        "Star Peak",
+        "AlsoEnergy",
+        "Also Energy",
+        "PowerTrack",
+        "PowerTrack Optimizer",
+        "Athena",
+        "PowerBidder",
+        "raicoon",
+        "AIONA"
+      ],
+      "domains": [
+        "stem.com",
+        "alsoenergy.com"
+      ],
+      "srcTotal": 90,
+      "srcFirstPct": 80,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "incumbent"
+        }
+      ]
     }
   ]
 }

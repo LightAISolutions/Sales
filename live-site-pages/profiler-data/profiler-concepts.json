@@ -346,6 +346,14 @@
       ]
     },
     {
+      "slug": "annual-recurring-revenue",
+      "term": "annual recurring revenue",
+      "def": "The annualised value of subscription contracts currently in force — what a software business would earn over the next year if nothing were added or lost. Used because subscription revenue arrives slowly and leaves slowly, so the recurring base describes the business better than any single period's revenue.",
+      "aliases": [
+        "ARR"
+      ]
+    },
+    {
       "slug": "annuity-style-income",
       "term": "annuity-style income",
       "def": "Revenue a financial firm expects to repeat each year — management fees, lending margins, service charges. Contrasted with income that depends on market conditions, and valued more highly because it is predictable."
@@ -505,6 +513,14 @@
       "def": "A firm that invests other people's money — pension funds, insurers, sovereign funds — through funds it manages for a fee. Goldman Sachs Asset Management is the arm of the bank that runs such funds; when it 'owns' GridStor, the owners are really the fund's investors.",
       "aliases": [
         "GSAM"
+      ]
+    },
+    {
+      "slug": "asset-performance-management",
+      "term": "asset performance management",
+      "def": "Software that monitors an operating power plant, measures how it is performing against how it should be performing, and finds the gap. Distinct from control software, which tells equipment what to do; asset performance management watches and diagnoses.",
+      "aliases": [
+        "APM"
       ]
     },
     {
@@ -1542,6 +1558,14 @@
       "def": "Generation that is both low-carbon and available on demand around the clock — nuclear, geothermal, hydro, or a fuel-burning plant with capture. It is what a load with a flat, continuous profile actually needs."
     },
     {
+      "slug": "clipping",
+      "term": "clipping",
+      "def": "When a solar plant's panels can produce more power than its inverters are rated to pass, so the excess is simply not converted. It looks like a loss on an output curve — a flat top on a sunny midday — but is usually a deliberate design choice, because oversizing the panel field earns more in the mornings and evenings than it loses at noon.",
+      "aliases": [
+        "inverter clipping"
+      ]
+    },
+    {
       "slug": "closed-end-fund",
       "term": "closed-end fund",
       "def": "An investment fund that raises a fixed pool of commitments from investors over a limited fundraising period, invests it over a few years and returns the money as assets are sold, then winds up; investors cannot withdraw early, so the manager can hold illiquid assets like power plants.",
@@ -2462,6 +2486,15 @@
       ]
     },
     {
+      "slug": "data-logger",
+      "term": "data logger",
+      "def": "A small industrial computer installed at a power plant that polls the site's equipment for readings, timestamps them, stores them locally when the network connection drops, and forwards them to a central platform. Also called a gateway. The local buffer matters because a communications outage must not become a permanent hole in the record.",
+      "aliases": [
+        "gateway",
+        "edge gateway"
+      ]
+    },
+    {
       "slug": "day-ahead-market",
       "term": "day-ahead market",
       "def": "The wholesale auction held the day before delivery, in which generators and buyers commit to quantities and prices for each hour of the following day. Commitments made here are financially binding, so a resource that fails to deliver must buy the shortfall back in the real-time market."
@@ -3011,6 +3044,15 @@
         "DLN",
         "dry low-NOx combustor",
         "lean premixed combustion"
+      ]
+    },
+    {
+      "slug": "dnp3",
+      "term": "DNP 3.0",
+      "def": "A communication protocol built for electric utility networks and designed to work over unreliable links, with time-stamped reporting so a device can tell a control centre what happened while the connection was down. Common between substations, plant controllers and utility control rooms.",
+      "aliases": [
+        "DNP3",
+        "DNP 3"
       ]
     },
     {
@@ -4251,6 +4293,12 @@
       "def": "The share of time a generating unit is unavailable because something broke, as opposed to planned maintenance. Capacity markets use it to discount what a plant is credited with: a unit that fails often is worth fewer accredited megawatts than its nameplate."
     },
     {
+      "slug": "forecast-error",
+      "term": "forecast error",
+      "def": "The gap between a predicted value — of price, generation or demand — and what actually happened. In storage optimisation it is usually the dominant source of lost revenue: an optimiser fed a poor forecast makes confident decisions that turn out wrong, and no amount of solver sophistication recovers it.",
+      "aliases": []
+    },
+    {
       "slug": "foreign-private-issuer",
       "term": "foreign private issuer",
       "def": "A non-US company listed in the United States that reports under a lighter regime than a domestic filer — annually on Form 20-F or 40-F rather than quarterly on 10-K and 10-Q, and often under international rather than US accounting rules."
@@ -4319,6 +4367,15 @@
       "aliases": [
         "free piston",
         "free-piston generator"
+      ]
+    },
+    {
+      "slug": "frequency-containment-reserve",
+      "term": "frequency containment reserve",
+      "def": "The fastest class of frequency-support service, responding automatically within seconds to arrest a change in grid frequency before it worsens. Known as FCR or primary control in Europe and as primary frequency response or fast frequency response in North America. Batteries are unusually well suited to it because they can change output almost instantly.",
+      "aliases": [
+        "FCR",
+        "primary frequency control"
       ]
     },
     {
@@ -4464,6 +4521,12 @@
         "Qg",
         "gate drive charge"
       ]
+    },
+    {
+      "slug": "gate-closure",
+      "term": "gate closure",
+      "def": "The deadline before a trading period after which bids into an electricity market can no longer be changed. It sets how far ahead a decision must be committed, and therefore how much of the decision rests on a forecast rather than on observation.",
+      "aliases": []
     },
     {
       "slug": "gen-set",
@@ -4769,6 +4832,15 @@
       "aliases": [
         "hardening market",
         "hardening"
+      ]
+    },
+    {
+      "slug": "hardware-agnostic",
+      "term": "hardware-agnostic",
+      "def": "Software designed to work across equipment from many manufacturers rather than only the vendor's own. In energy it is a purchasing criterion rather than a marketing phrase: a fleet assembled over a decade contains several brands, and software tied to one of them cannot see the rest.",
+      "aliases": [
+        "vendor-agnostic",
+        "OEM-agnostic"
       ]
     },
     {
@@ -5184,6 +5256,15 @@
         "IGBTs"
       ],
       "def": "Insulated-gate bipolar transistor: the silicon switch that static UPS inverters, drives and grid inverters have been built on for three decades — fast enough to chop DC into a clean sine wave thousands of times a second and rugged enough for megawatts. Silicon carbide is displacing it where the last points of efficiency matter."
+    },
+    {
+      "slug": "imbalance-charge",
+      "term": "imbalance charge",
+      "def": "A penalty paid when a market participant delivers more or less energy than it committed to deliver. It is the mechanism that makes a bid a promise rather than an intention, and it is why forecast quality has a direct cash consequence.",
+      "aliases": [
+        "imbalance",
+        "imbalance cost"
+      ]
     },
     {
       "slug": "in-house-optimisation",
@@ -7081,6 +7162,14 @@
       "def": "Using fuel once and then storing it, which is what the United States does. Recycling changes the volume and the heat load of what is left, and does not remove the need to store something."
     },
     {
+      "slug": "opc-ua",
+      "term": "OPC-UA",
+      "def": "A modern industrial communication standard in which devices describe their own data — what each value means, its units and its type — rather than exposing bare numbered registers. It is more secure and self-documenting than older protocols, which is why newer control systems offer it alongside them rather than instead of them.",
+      "aliases": [
+        "OPC Unified Architecture"
+      ]
+    },
+    {
       "slug": "open-access-transmission-tariff",
       "term": "open access transmission tariff",
       "def": "The FERC-approved rate schedule under which a transmission owner must let anyone buy capacity on its line on published terms. A merchant line needs one before it can sell service.",
@@ -7482,6 +7571,14 @@
       ]
     },
     {
+      "slug": "performance-ratio",
+      "term": "performance ratio",
+      "def": "A solar plant's measured output divided by the output the sunlight actually available should have produced, after correcting for temperature. Expressed as a percentage; the most widely used single measure of whether a solar plant is healthy.",
+      "aliases": [
+        "PR"
+      ]
+    },
+    {
       "slug": "permanent-capital",
       "term": "permanent capital",
       "def": "Investment money with no fixed date on which it must be returned — the opposite of a closed-end fund. At asset level it means a sponsor buying into specific stabilized campuses and committing to future ones without a change of control or a sale.",
@@ -7619,6 +7716,14 @@
       "slug": "point-load",
       "term": "point load",
       "def": "A concentrated load applied over a small area — a rack foot, a jack, a transformer wheel. A floor can satisfy a uniform load rating and still fail a point-load check under the same equipment."
+    },
+    {
+      "slug": "point-map",
+      "term": "point map",
+      "def": "The translation table that says which numeric register on a particular make and model of equipment holds which measurement, and how to scale it. Every manufacturer arranges these differently, so a monitoring platform needs one per device type — an unglamorous library that is difficult to reproduce and therefore commercially valuable.",
+      "aliases": [
+        "device driver library"
+      ]
     },
     {
       "slug": "point-of-interconnection",
@@ -9513,6 +9618,12 @@
       "slug": "soil-resistivity",
       "term": "soil resistivity",
       "def": "How strongly the ground resists electrical current, measured before design and expressed per unit length. It sets the design of the grounding system and the corrosion allowance on anything buried — two twenty-year decisions taken from a survey done in the first weeks of a project."
+    },
+    {
+      "slug": "soiling",
+      "term": "soiling",
+      "def": "Dirt, dust, pollen, salt or bird droppings accumulating on solar modules and blocking light. It builds gradually, is reversed by rain or washing, and is one of the loss mechanisms a monitoring platform is expected to distinguish from an equipment fault.",
+      "aliases": []
     },
     {
       "slug": "solar-peaker",

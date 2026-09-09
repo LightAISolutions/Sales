@@ -1207,6 +1207,11 @@
      "slug": "on-energy",
      "role": "adjacent",
      "basis": "productsAndServices › Legacy merchant BESS — ~240 MW ERCOT Palo Verde / Palo de Agua portfolio"
+    },
+    {
+     "slug": "stem",
+     "role": "adjacent",
+     "basis": "productsAndServices › Project and Professional Services, and the DevCo storage-development joint ventures: since January 2022 Stem has run joint ventures through wholly-owned development subsidiaries 'with the purpose of originating potential battery storage facility projects', consolidated as variable interest entities with third-party minority owners as non-controlling interests; it also carried $34.0m of energy storage systems on its own balance sheet at 2026-06-30 earning Host Customer and merchant revenue. Both positions are in run-off — a $6.4m DevCo project-asset impairment in FY2025 and $2.8m of held-for-sale impairment in H1 2026 — but both are documented in the current filing."
     }
    ]
   },
@@ -1674,12 +1679,17 @@
     "Cybersecurity certification (IEC 62443, NERC CIP)",
     "Fleet scale under management and the QSE or scheduling-entity service behind it"
    ],
-   "notes": "INTEGRATED-REMEDIATION-PLAN.md §7.2 recorded this segment as starting at zero; the dossiers place one incumbent (FlexGen's software-first business) and one challenger (Fluence's Mosaic and Nispera) here, so the floor is met on the letter — but the incumbent set is an integrator's software arm, and the landscape module should wait for S3 batch 1 (Stem, Habitat Energy, Gridmatic) so it does not describe a segment without its pure-play optimizers.",
+   "notes": "INTEGRATED-REMEDIATION-PLAN.md §7.2 recorded this segment as starting at zero. It now holds two incumbents (FlexGen's software-first business and Stem) and one challenger (Fluence's Mosaic and Nispera). S3 P3 landed Stem on 2026-09-09; the landscape module is still held for the E1 private half (V2 — Habitat Energy and Gridmatic), because both incumbents reach the segment from an adjacent business — FlexGen from integration, Stem from solar asset-performance management — and the pure-play merchant optimizers are all on the private side. A finding for whoever writes that landscape: no third party reachable in the P3 research ranks any player in storage bidding except Modo Energy, whose 2025 US directory quantifies Habitat, Gridmatic, Equilibrium, Tesla, Tierra and Caerus and does not quantify Stem. Wood Mackenzie's 'Global BESS software landscape 2026' is the one source that would settle the ranking and it is paywalled.",
    "members": [
     {
      "slug": "flexgen",
      "role": "incumbent",
      "basis": "registry tagline: software-first US BESS integrator (HybridOS EMS); 25+ GWh across 200+ systems under software and services; hardware-agnostic site controls"
+    },
+    {
+     "slug": "stem",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the corpus's first listed pure-play energy-optimisation software company, selling a hardware-agnostic suite against vendor-bundled EMS arms; productsAndServices › PowerTrack Software: 38.3 GW of solar and 1.8 GWh of storage operating assets under management at 2026-06-30 and $62.4m of ARR — the largest fleet under management in this segment, which is its fifth buying criterion. Incumbency is on SOLAR AND HYBRID ASSET-PERFORMANCE MANAGEMENT, not on merchant storage bidding: the only third-party rank found is Guidehouse Insights' 2022 first place for AlsoEnergy in Solar and Storage Monitoring and Control, and Modo Energy's 2025 US optimizer directory lists Stem with no quantified revenue-performance claim while naming one for every peer. Storage AUM has been flat at 1.7-1.8 GWh for two years against the 25+ GWh FlexGen records under HybridOS."
     },
     {
      "slug": "fluence",

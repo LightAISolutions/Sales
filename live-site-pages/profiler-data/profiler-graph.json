@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-09",
- "companies": 160,
+ "companies": 161,
  "edges": [
   {
    "a": "abb",
@@ -6644,20 +6644,6 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Recent Reporting",
-     "date": "2025-07-02",
-     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
-     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
-     "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
      "text": "That is the structural line between it and kWh Analytics: kWh is a managing general agent that binds risk, Aon is the channel that reaches it, and this research found no evidence of Aon operating a renewables or storage managing general agency of its own.",
      "src": "",
      "from": "a"
@@ -6682,6 +6668,20 @@
      "text": "At kWh Analytics' 2025 Broker Council readout, John Katilus reports that 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms' — Verified verbatim and correctly attributed. It is also the company's only published statement of battery loss experience anywhere: this research found no counterpart in its own publications, so either it shares loss data in industry fora without publishing it, or the observation never became a company publication.",
      "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-02",
+     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
+     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+     "from": "b"
     }
    ],
    "last": "2026-06-09"
@@ -8207,6 +8207,38 @@
     }
    ],
    "last": "2026-03-05"
+  },
+  {
+   "a": "available-power",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Available Power selected Stem to supply hardware and the then-Athena software for up to 100 front-of-meter sites in Texas, per the milestone record in Available Power's own dossier.",
+     "context": "Recorded here because Available Power's dossier carries it from the other side and dates it February 2022, alongside Stem's own statement that the 100-site, 1 GW / 2 GWh Texas portfolio was 'expected to have a value of more than $500 million'.\n\nTwo things about it need saying plainly. The software is named 'Athena' in that record, which was correct in February 2022 and has been PowerTrack Optimizer since 5 September 2025. And the portfolio's fate is unresolved: Available Power's dossier tracks the associated Greenport project slipping from mid-2024 to Q1 2025 to February 2026, Stem's battery hardware resale line has since fallen 96%, and no source located in either dossier's citations states whether the 100-site award was delivered. Neither dossier should be read as asserting that it was.",
+     "source": "Available Power dossier milestone record (Stem award, February 2022); no current Stem-side source located",
+     "status": "historical",
+     "since": "2022-02",
+     "scale": "up to 100 front-of-meter sites"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "No sponsor, fund, lender, tax-equity investor or offtaker is named in any release, filing or article read; the only dollar figure attached to the storage business is Stem's February 2022 statement that a 100-site, 1 GW / 2 GWh Texas portfolio was 'expected to have a value of more than $500 million'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-05",
+     "text": "Athena, the registered-trademark flagship enterprise platform, rebranded to PowerTrack Optimizer alongside a full website relaunch — and the FY2025 10-K dates this event a year earlier, in September 2024 — THE DATE IS A FIRST-PARTY CONFLICT AND THIS DOSSIER RESOLVES IT AGAINST THE FILING. The press release is datelined 5 September 2025, says 'today announced the rebranding', launches the website 'live on Sept. 5', and quotes chief executive Arun Narayanan, who did not take office until January 2025. The 10-K's 'In September 2024' cannot be reconciled with the quote. Separately, the corpus should note the consequence: three other dossiers here still describe Stem's software under retired names — Available Power records the February 2022 award as 'Athena software', and DNV and kWh Analytics both list 'Also Energy' as an independent competitor. No dossier in this corpus mentioned PowerTrack before this one.",
+     "src": "https://investors.stem.com/news-events/press-releases/detail/95/stem-unveils-powertrack-optimizer-flagship-enterprise-platform-powering-managed-services-strategically-rebranded-to-integrate-into-comprehensive-product-stack",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-05"
   },
   {
    "a": "aypa-power",
@@ -14553,16 +14585,6 @@
    "a": "cipher-mining",
    "b": "engie-north-america",
    "curated": {
-    "b": {
-     "type": "customer",
-     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
-     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
-     "status": "announced",
-     "since": "2025-05",
-     "scale": "up to 300 MW contemplated",
-     "via": "Co-located data centre at an unnamed West Texas wind facility"
-    },
     "a": {
      "type": "supplier",
      "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
@@ -14572,6 +14594,16 @@
      "since": "2025-05",
      "scale": "up to 300 MW contemplated",
      "via": "Co-located data centre at a West Texas wind site"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at an unnamed West Texas wind facility"
     }
    },
    "evid": [],
@@ -14596,16 +14628,6 @@
    "a": "cipher-mining",
    "b": "fluidstack",
    "curated": {
-    "b": {
-     "type": "supplier",
-     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
-     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
-     "via": "Barber Lake, Colorado City TX"
-    },
     "a": {
      "type": "customer",
      "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
@@ -14615,6 +14637,16 @@
      "since": "2025-09",
      "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
      "via": "AI hosting at Barber Lake"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
+     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "Barber Lake, Colorado City TX"
     }
    },
    "evid": [
@@ -14717,6 +14749,15 @@
    "a": "cipher-mining",
    "b": "google",
    "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
+    },
     "b": {
      "type": "portfolio",
      "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
@@ -14726,15 +14767,6 @@
      "since": "2025-09",
      "scale": "$1.73B backstop; ~5.4% warrants",
      "via": "Barber Lake recognition agreement"
-    },
-    "a": {
-     "type": "investor",
-     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
-     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
     }
    },
    "evid": [
@@ -14940,18 +14972,18 @@
    "a": "cipher-mining",
    "b": "terawulf",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
-     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
      "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
      "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
+     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
      "status": "active"
     }
    },
@@ -20866,6 +20898,36 @@
   },
   {
    "a": "dnv",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "DNV's own dossier positions GreenPowerMonitor against 'Power Factors, Also Energy and the OEM EMS layer' — naming Stem's platform under the pre-acquisition brand it has not carried since the PowerTrack consolidation.",
+     "context": "This is a competitor relationship the corpus already recorded without knowing it was about Stem. AlsoEnergy has been Stem's since February 2022 and its platform is now PowerTrack; DNV's positioning line, written before this dossier existed, names it as an independent rival to GreenPowerMonitor in solar asset-performance monitoring.\n\nThe claim is accurate as written — alsoenergy.com still resolves and the brand persists in the market — so this dossier does not revise DNV's. What it does instead is register 'AlsoEnergy' and 'Also Energy' in Stem's alias list, so the next corpus reconciliation finds the connection by search rather than by luck. kWh Analytics' dossier carries the same 'Also Energy' name in its own positioning but explicitly lists those platforms as Solar Risk Assessment contributors 'rather than as rivals', so no competitor link to kWh Analytics is asserted here.",
+     "source": "DNV dossier, productsAndServices positioning line (GreenPowerMonitor); no Stem-side source names DNV",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · PowerTrack Software (solar and storage monitoring, analytics and asset performance management)",
+     "date": "",
+     "text": "Two other dossiers in this corpus name the product as a competitor under its pre-acquisition brand: DNV positions GreenPowerMonitor against 'Power Factors, Also Energy and the OEM EMS layer', and kWh Analytics lists 'Raptor Maps, Power Factors, Also Energy' as the asset-management platforms its data product sits beside.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-05",
+     "text": "Athena, the registered-trademark flagship enterprise platform, rebranded to PowerTrack Optimizer alongside a full website relaunch — and the FY2025 10-K dates this event a year earlier, in September 2024 — THE DATE IS A FIRST-PARTY CONFLICT AND THIS DOSSIER RESOLVES IT AGAINST THE FILING. The press release is datelined 5 September 2025, says 'today announced the rebranding', launches the website 'live on Sept. 5', and quotes chief executive Arun Narayanan, who did not take office until January 2025. The 10-K's 'In September 2024' cannot be reconciled with the quote. Separately, the corpus should note the consequence: three other dossiers here still describe Stem's software under retired names — Available Power records the February 2022 award as 'Athena software', and DNV and kWh Analytics both list 'Also Energy' as an independent competitor. No dossier in this corpus mentioned PowerTrack before this one.",
+     "src": "https://investors.stem.com/news-events/press-releases/detail/95/stem-unveils-powertrack-optimizer-flagship-enterprise-platform-powering-managed-services-strategically-rebranded-to-integrate-into-comprehensive-product-stack",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-05"
+  },
+  {
+   "a": "dnv",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -22897,6 +22959,34 @@
   },
   {
    "a": "enchanted-rock",
+   "b": "stem",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For Hithium the company is not a battery rival but a demand-shaper: every campus that signs an ERock bridge defers or shrinks a containerized-storage purchase, while ERock's own post-bridge narrative ('permanent utility feeds supplemented by battery storage') and its ex-Stem CEO leave a visible storage-attach socket open.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Medium confidence) The storage-attach socket is real and dated: ERock's own bridge narrative concedes sites transition to 'permanent utility feeds supplemented by battery storage' after the ~5-year bridge, GraniteEcosystem already dispatches third-party storage, the Texas Backup Power Package forces solar+battery+gas hybrids, and the CEO is the former CEO of Stem.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-10",
+     "text": "John Carrington named CEO (ex-Stem CEO; exec chairman since Jun 2025); Corey Amthor returns to President; founder McAndrew to board/strategic advisor — A public-market operator with BESS-software DNA now runs a pure gas-genset company — we read the hire as IPO preparation and a live signal on eventual storage attach.",
+     "src": "PRNewswire",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-10"
+  },
+  {
+   "a": "enchanted-rock",
    "b": "voltagrid",
    "curated": {
     "a": {
@@ -23239,6 +23329,21 @@
      "context": "Both are American platforms whose capital competes internally against European projects, both signed multi-project Meta solar PPAs in Texas over the same window, and both exited US offshore leases for federal payments in 2026 — ENGIE through the Ocean Winds joint venture in April, RWE through RWE U.S. Offshore in August. They diverge on storage: S&P Global's Q2 2026 US owner table lists ENGIE second at 3.662 GW and does not list RWE.",
      "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
      "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "ENGIE North America partnered with Stem to integrate storage management with electric-vehicle charging, reported by Utility Dive.",
+     "context": "Recorded with its status set to historical and a gap stated. The partnership is real and independently reported, but it predates the software pivot — the Utility Dive item is undated on its page and belongs to the Athena era around 2022 — and neither company has published anything about it since.\n\nThis sits inside a broader unresolved question about Stem's legacy customer base. The names attached to the pre-2024 business — ENGIE North America, SB Energy with a 10 GWh partnership cited in 2023, CleanCapital as a preferred storage provider, and REX with a $400m ERCOT pipeline — have all gone quiet, and no source located in this research confirms whether any remains a customer or was lost. The 10-K discloses customer concentration only as unnamed Customers A through D.",
+     "source": "https://www.utilitydive.com/news/stem-engie-north-america-partner-to-integrate-storage-management-and-ev-ch/616730/",
+     "status": "historical"
     }
    },
    "evid": [],
@@ -25756,6 +25861,22 @@
   },
   {
    "a": "excelsior-energy-capital",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Stem, Regis Energy Partners and Excelsior Energy Capital jointly announced a $400m portfolio of Texas energy-storage projects, announced through Stem's own investor-relations newsroom.",
+     "context": "The most concretely documented tie between Stem and another covered company. Excelsior's own dossier cites this same Stem release and records a partner quoted on 'the Fluence, LG Energy Solution Vertech, Stem/REX, Unico, Stella and Lydian' announcements, so the relationship is registered from both sides of the corpus.\n\nIt is typed historical rather than active deliberately. The announcement is from December 2022, when Stem still sold batteries — battery hardware resale was $360.2m of revenue that year and is $0.3m in the first half of 2026 — and neither company has published anything about the portfolio since. No source located in this research states whether the portfolio was built, sold or abandoned, and this dossier does not infer one.\n\nStem's Managed Services page separately quotes Daniel Senneff, co-founder and managing partner of Regis Energy Partners, about the Texas portfolio, which establishes the commercial relationship continued past the announcement without dating its end.",
+     "source": "https://investors.stem.com/news-events/press-releases/detail/159/stem-regis-energy-partners-and-excelsior-energy-capital-announce-400m-portfolio-of-energy-storage-projects-in-texas",
+     "status": "historical",
+     "since": "2022-12"
+    }
+   },
+   "evid": [],
+   "last": "2022-12"
+  },
+  {
+   "a": "excelsior-energy-capital",
    "b": "terra-gen",
    "evid": [
     {
@@ -26843,6 +26964,43 @@
   },
   {
    "a": "flexgen",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The other incumbent of this corpus's software-and-optimization segment, and the closer competitor on storage specifically — FlexGen's HybridOS is a hardware-agnostic EMS sold on the same premise as PowerTrack EMS.",
+     "context": "Both companies sell a vendor-independent control layer into storage plants, which is the segment's first buying criterion, and both are typed incumbent in this corpus. On the storage fleet the gap is large and runs the other way from the solar comparison: FlexGen's dossier records 25+ GWh across 200+ systems under software against Stem's 1.8 GWh.\n\nNO THIRD-PARTY SOURCE LOCATED IN THIS RESEARCH NAMES THE TWO AS HEAD-TO-HEAD COMPETITORS, and Stem's own 10-K names no competitor at all — only categories, of which 'energy monitoring and optimization software providers' is the one FlexGen occupies. This link is therefore recorded on the overlap of the two dossiers' documented product positions rather than on an external assertion, and the basis is stated so a reader can discount it accordingly.",
+     "source": "Product-position overlap between this dossier's PowerTrack EMS entry and the flexgen dossier's HybridOS record; no third-party source names them head-to-head",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Every other software position in this corpus's software-and-optimization segment except FlexGen is a division of something else — Fluence's Mosaic and Nispera, Wartsila's GEMS, Tesla's Autobidder, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ, Schneider's AVEVA layer — sold with, or to protect, the vendor's own equipment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its weight is heavily on the solar side of that fleet — 38.3 GW of solar assets under management against 1.8 GWh of storage, a storage figure that has been flat for two years and sits an order of magnitude below the 25+ GWh FlexGen records under HybridOS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "On storage that claim is weaker than on solar — 1.8 GWh under management is an order of magnitude below the 25+ GWh FlexGen's dossier records under HybridOS, and Fluence disclosed 22.0 GW of renewable assets on its digital offerings at 2025-09-30.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flexgen",
    "b": "sungrow",
    "curated": {
     "a": {
@@ -27170,6 +27328,43 @@
      "where": "Capabilities · Powtrix containerised storage systems",
      "date": "",
      "text": "Places REPT against system vendors rather than only cell makers, though it does not appear in Wood Mackenzie's first global BESS integrator ranking of July 2026, whose top ten are Sungrow, Tesla, CATL, BYD, Envision, Trina Storage, Fluence, LG, Canadian Solar and Wärtsilä.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fluence",
+   "b": "stem",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The nearest listed comparator — Fluence's Mosaic bidding software and Nispera asset-performance management address the same two jobs as PowerTrack Optimizer and PowerTrack Software.",
+     "context": "The comparison is instructive in both directions. Fluence disclosed 22.0 GW of renewable assets on its digital offerings at 30 September 2025 against Stem's 36.1 GW of solar and 1.7 GWh of storage at 31 December 2025 — so on fleet Stem is larger, and on storage specifically Fluence's Mosaic page claims over 10 GW against Stem's 1.8 GWh.\n\nThe structural difference is that Fluence's software attaches to Fluence's own hardware while Stem's is sold explicitly against vendor lock-in, and the commercial difference is that Fluence has the data-centre exposure Stem does not: it disclosed master supply agreements with two hyperscalers and a record $5.6bn backlog in May 2026. Fluence also holds S&P Global Commodity Insights Tier 1 status for a second year, a list on which Stem does not appear.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Every other software position in this corpus's software-and-optimization segment except FlexGen is a division of something else — Fluence's Mosaic and Nispera, Wartsila's GEMS, Tesla's Autobidder, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ, Schneider's AVEVA layer — sold with, or to protect, the vendor's own equipment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "On storage that claim is weaker than on solar — 1.8 GWh under management is an order of magnitude below the 25+ GWh FlexGen's dossier records under HybridOS, and Fluence disclosed 22.0 GW of renewable assets on its digital offerings at 2025-09-30.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack SCADA, Power Plant Controller and Logger (the site control layer)",
+     "date": "",
+     "text": "The corpus's software-and-optimization segment is dominated by exactly those bundled arms — Fluence's Mosaic, Wartsila's GEMS, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ — and the segment's first buying criterion is 'hardware-agnostic control across vendors and the retrofit path off an orphaned EMS'.",
      "src": "",
      "from": "b"
     }
@@ -28615,29 +28810,22 @@
    "a": "galaxy-digital",
    "b": "hut-8",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
-     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
-     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
      "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
      "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
      "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
+     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
     }
    },
    "evid": [
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
-     "src": "",
-     "from": "b"
-    },
     {
      "where": "Key Judgments",
      "date": "",
@@ -28665,6 +28853,13 @@
      "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -30692,6 +30887,20 @@
      "where": "Key Judgments",
      "date": "",
      "text": "(Moderate confidence) We assess the AIDC angle as forming, not formed: 'actively exploring storage for data centers,' the Roberson Waite urban-BESS/substation capability, and O&M relationships with Stargate-linked SB Energy and Google-partnered Intersect Power put SOLV one contract away from AIDC-adjacent storage construction — worth monitoring for the first named award.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "google",
+   "b": "stem",
+   "evid": [
+    {
+     "where": "Capabilities · AIONA (AI consulting and implementation practice)",
+     "date": "",
+     "text": "We identify the right problems to solve, engineer purpose-built agents, integrate them into operations, and deliver measurable outcomes.' Its technical stance is model-agnostic and integration-led: 'we build custom MCP servers that connect AI directly to your ERP, CRM, monitoring platform, and document systems', with more than ten in production, built on 'OpenAI, Azure, Google, or any open-source model'.",
      "src": "",
      "from": "b"
     }
@@ -36030,6 +36239,27 @@
    },
    "evid": [],
    "last": "2017-12"
+  },
+  {
+   "a": "kwh-analytics",
+   "b": "stem",
+   "evid": [
+    {
+     "where": "Capabilities · PowerTrack Software (solar and storage monitoring, analytics and asset performance management)",
+     "date": "",
+     "text": "Two other dossiers in this corpus name the product as a competitor under its pre-acquisition brand: DNV positions GreenPowerMonitor against 'Power Factors, Also Energy and the OEM EMS layer', and kWh Analytics lists 'Raptor Maps, Power Factors, Also Energy' as the asset-management platforms its data product sits beside.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-05",
+     "text": "Athena, the registered-trademark flagship enterprise platform, rebranded to PowerTrack Optimizer alongside a full website relaunch — and the FY2025 10-K dates this event a year earlier, in September 2024 — THE DATE IS A FIRST-PARTY CONFLICT AND THIS DOSSIER RESOLVES IT AGAINST THE FILING. The press release is datelined 5 September 2025, says 'today announced the rebranding', launches the website 'live on Sept. 5', and quotes chief executive Arun Narayanan, who did not take office until January 2025. The 10-K's 'In September 2024' cannot be reconciled with the quote. Separately, the corpus should note the consequence: three other dossiers here still describe Stem's software under retired names — Available Power records the February 2022 award as 'Athena software', and DNV and kWh Analytics both list 'Also Energy' as an independent competitor. No dossier in this corpus mentioned PowerTrack before this one.",
+     "src": "https://investors.stem.com/news-events/press-releases/detail/95/stem-unveils-powertrack-optimizer-flagship-enterprise-platform-powering-managed-services-strategically-rebranded-to-integrate-into-comprehensive-product-stack",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-05"
   },
   {
    "a": "lambda",
@@ -43912,6 +44142,20 @@
   },
   {
    "a": "openai",
+   "b": "stem",
+   "evid": [
+    {
+     "where": "Capabilities · AIONA (AI consulting and implementation practice)",
+     "date": "",
+     "text": "We identify the right problems to solve, engineer purpose-built agents, integrate them into operations, and deliver measurable outcomes.' Its technical stance is model-agnostic and integration-led: 'we build custom MCP servers that connect AI directly to your ERP, CRM, monitoring platform, and document systems', with more than ten in production, built on 'OpenAI, Azure, Google, or any open-source model'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "openai",
    "b": "turner-construction",
    "curated": {
     "b": {
@@ -47104,6 +47348,57 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "stem",
+   "b": "sungrow",
+   "evid": [
+    {
+     "where": "Capabilities · Storage PCS & grid-forming technology",
+     "date": "",
+     "text": "The umbrella 'Stem Cell Grid-Forming' technology provides seamless switching between grid-following and grid-forming modes, 0 ms grid transitions, active harmonic absorption, inertia support, and black-start capability across PV, wind, and storage product lines.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "stem",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Autobidder occupies the merchant-bidding position PowerTrack Optimizer competes for, and Modo Energy's US optimizer directory lists both.",
+     "context": "Modo Energy's April 2025 directory of seventeen US battery optimizers and operators includes both companies, and the asymmetry in how it describes them is the substance of this link: Tesla's Autobidder is recorded as number one in Modo's ERCOT rankings for 2022 and 2023, while Stem appears in capability-only language with no quantified revenue-performance claim and a qualified-scheduling-entity service delivered through third-party partners.\n\nAs with every software position in this corpus except FlexGen and Stem, Autobidder is a division of a hardware manufacturer and is sold alongside Tesla's own Megapack fleet — the structural distinction Stem sells against.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Every other software position in this corpus's software-and-optimization segment except FlexGen is a division of something else — Fluence's Mosaic and Nispera, Wartsila's GEMS, Tesla's Autobidder, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ, Schneider's AVEVA layer — sold with, or to protect, the vendor's own equipment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "a"
+    }
+   ],
    "last": ""
   },
   {
