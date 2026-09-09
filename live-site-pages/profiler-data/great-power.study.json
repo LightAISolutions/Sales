@@ -1,0 +1,417 @@
+{
+ "schemaVersion": 2,
+ "slug": "great-power",
+ "title": "Great Power — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "sections": [
+  {
+   "id": "start-here-five-businesses",
+   "title": "Start here: one chemistry set, five different businesses",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "Most cell makers in this corpus do one thing at scale. Great Power does five: grid storage, residential storage, consumer electronics cells, light-vehicle and tool cells, and — uniquely in this corpus — **{{primary battery}}** production, the non-rechargeable kind.",
+    "That breadth is why it is the right company to learn the *shape* of battery technology from rather than one corner of it. The CALB guide covers what happens when a storage cell gets very large. This one covers the rest of the map: what separates a rechargeable cell from a disposable one, why {{sodium-ion}} keeps almost arriving, what a battery has to do to back up a data centre for ninety seconds, and why the real barrier to selling a home battery in Germany is a certificate rather than a cell.",
+    "The one sentence to hold onto: **the cell is rarely the hard part — the hard parts are the duty cycle it has to survive and the paperwork that lets it be sold.**"
+   ]
+  },
+  {
+   "id": "primary-versus-secondary",
+   "title": "The battery that only works once, and why it still exists",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Every battery converts stored chemical energy into electrical energy. The division that matters commercially is whether that conversion runs backwards.",
+    "A **{{secondary battery}}** — rechargeable — uses reactions that reverse cleanly when you push current back in. Lithium-ion does this by {{intercalation}}: ions physically slide into and out of host structures without either electrode being consumed or rebuilt. Nothing is destroyed, so the cycle repeats thousands of times.",
+    "A **{{primary battery}}** uses reactions that do not reverse. Something is genuinely consumed — an electrode dissolves, or a metal oxidises — and no practical amount of current puts it back. Great Power makes three kinds: lithium iron disulphide, lithium manganese dioxide, and **{{zinc-air}}**, which is the most elegant of them because it does not carry its own oxidant at all. A zinc-air cell breathes oxygen from the surrounding air and oxidises zinc against it, which means most of the cell's volume is fuel rather than packaging. That is why hearing-aid batteries — tiny and long-lasting — are almost always zinc-air, and why they start running down once you peel the tab off and let air in.",
+    "Why would anyone still buy a battery that works once? Because primary cells beat rechargeables on the three things a low-drain device actually needs: **{{shelf life}}** measured in years rather than months, very low {{self-discharge}}, and higher energy per unit cost when the device will only ever draw a trickle. A smoke alarm, a water meter, a remote sensor, a hearing aid — none of them wants a cell that must be recharged, and all of them want one that still works in a decade.",
+    "It was RMB 335.5m of Great Power's FY2025 revenue, 2.81% — small, but it is the only non-lithium-ion line the company sizes separately, and it is a reminder that the battery industry is much wider than the storage and vehicle markets that dominate the news."
+   ]
+  },
+  {
+   "id": "form-factors",
+   "title": "Four shapes, and what each one is for",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A cell's shape is not cosmetic — it determines how heat leaves, how the cell is manufactured, and how efficiently a pack of them fills a box. Great Power makes all four, which is unusual.",
+   "cols": [
+    "Format",
+    "How it is built",
+    "Strengths",
+    "Where it goes"
+   ],
+   "rows": [
+    [
+     "Cylindrical",
+     "Electrodes wound into a roll and sealed in a metal can",
+     "Cheapest and most mature process; the round can resists internal pressure without bracing; excellent mechanical robustness",
+     "Power tools, two-wheelers, portable power, Great Power's HOME residential line, and its 21700 consumer cell"
+    ],
+    [
+     "{{prismatic cell}}",
+     "Flat rectangular case, electrodes either stacked or wound flat",
+     "Fills a rectangular pack efficiently, so highest volume utilisation at system level; the standard for grid storage",
+     "Great Power's 587Ah/588Ah Fengpeng storage cell, the 122Ah residential cell and the 85Ah AIDC cell"
+    ],
+    [
+     "Pouch",
+     "Electrodes sealed in a flexible laminated foil, no rigid case",
+     "Lightest and thinnest for a given energy; conforms to awkward spaces",
+     "Phones, tablets, drones — Great Power's 400 Wh/kg Sky drone cell"
+    ],
+    [
+     "{{coin cell}}",
+     "A tiny sealed disc",
+     "Miniature; long shelf life; usually primary rather than rechargeable",
+     "Watches, hearing aids, memory backup"
+    ]
+   ],
+   "note": "Notice the trade-off running across the row: the more rigid the case, the better it handles internal pressure and the worse it fills odd spaces. A pouch cell has no case to resist swelling, which is why a swollen phone battery visibly deforms while a swollen prismatic cell vents instead."
+  },
+  {
+   "id": "home-versus-grid",
+   "title": "A home battery and a grid battery are not the same product",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Great Power ranks somewhere between eighth and tenth in the world in storage cells overall, and first, second or third in **residential** storage cells depending on which house you ask. Understanding how one company can sit in two such different places means understanding that these are different products sold to different buyers under different constraints.",
+    "**Scale changes the engineering problem completely.** A grid installation is measured in megawatt-hours and lives in a shipping container on a fenced pad with {{liquid cooling}}, professional commissioning and a maintenance contract. A home system is five to twenty kilowatt-hours — a thousandth of the size — and hangs on a garage wall next to a car, cooled by nothing but air, installed by an electrician who will not return, and operated by someone who will never read the manual.",
+    "**That inverts the priorities.** Grid buyers optimise cost per kilowatt-hour across a twenty-year cycling life; a fraction of a cent per watt-hour decides a tender. Home buyers cannot evaluate any of that. What they and their installers care about is physical size, whether it fits alongside a mainstream inverter, how quiet it is, how it looks, and whether it is certifiably safe in an occupied building.",
+    "**Safety standards are stricter, not looser, at the small end** — precisely because the battery is inside a home rather than behind a fence, and because nobody is monitoring it. This is why Great Power's residential cells lead on integration density and certification breadth rather than on cost: a 122Ah cell at more than 200 Wh/kg exists to let an all-in-one wall unit hold more energy in the same cabinet.",
+    "**And the channel is different.** Great Power does not sell home batteries under its own brand. It sells cells and packs to residential-storage brands and inverter makers, who assemble and sell the finished product. That is why its end demand is overwhelmingly German, British and Australian while only 15.5% of its revenue is booked overseas — the export happens one step downstream, in someone else's accounts.",
+    "The reading rule: **when a cell maker's rank differs sharply between segments, look for a channel difference before assuming a technology difference.** Great Power is not better at chemistry than its larger rivals. It is better positioned in a channel they entered later."
+   ]
+  },
+  {
+   "id": "sodium-ion",
+   "title": "Sodium-ion: the chemistry that keeps almost arriving",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Great Power reached sodium-ion mass production in 2023, earlier than most of the industry. Sodium-ion has been perennially about to matter for a decade. The physics explains both halves of that sentence.",
+    "**The appeal is the periodic table.** Sodium sits directly below lithium in group 1, so it behaves similarly — it gives up one electron easily and moves as a positive ion. But sodium is about the sixth most abundant element in the earth's crust, extractable from seawater and ordinary salt deposits, while lithium is scarce, geographically concentrated and violently price-volatile. Sodium-ion cells also use aluminium current collectors on both electrodes instead of copper on one, because sodium does not alloy with aluminium at low voltage the way lithium does — another real cost saving.",
+    "**The penalty is also the periodic table.** A sodium ion is substantially larger and about three times heavier than a lithium ion, and sodium's electrode potential is less favourable. Bigger, heavier ions carrying less voltage means less energy stored per kilogram: commercial sodium-ion runs roughly 100 to 160 Wh/kg against 160 to 200 for {{LFP}}. The larger ion also does not fit comfortably into graphite the way lithium does, so the anode has to be **{{hard carbon}}** — a disordered carbon that stores sodium in pores and between misaligned layers rather than in neat graphite galleries.",
+    "**Two cathode families, and Great Power runs both.** **{{layered oxide}}** cathodes stack sheets of transition-metal oxide with sodium between them, giving higher energy but more sensitivity to moisture and to over-discharge. **{{polyanion}}** cathodes lock the metal into a rigid framework of phosphate or sulphate groups, which sacrifices energy density for a structure that barely changes shape as sodium moves in and out — hence very long cycle life. Great Power's disclosed figures follow exactly that pattern: layered oxide above 150 Wh/kg with more than 3,000 cycles, polyanion with more than 6,000.",
+    "**Where sodium genuinely wins is temperature and abuse tolerance.** Sodium-ion holds usable capacity far below freezing where lithium iron phosphate degrades badly, and — uniquely — it can be discharged to zero volts and stored there safely, which makes shipping and long idle periods far less hazardous.",
+    "**So why has it not displaced lithium?** Because the case for sodium was strongest when lithium carbonate was expensive, and lithium prices then collapsed. A technology whose entire argument is raw-material cost loses that argument when the raw material gets cheap, regardless of how good the engineering is. That is the real lesson here, and it generalises far beyond batteries: **a substitute technology justified on input cost is hostage to the price of the thing it substitutes for.**"
+   ]
+  },
+  {
+   "id": "sodium-versus-lfp",
+   "title": "Sodium-ion against LFP, honestly",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "The comparison that decides whether sodium-ion is a business or a research programme. Both are cheap, safe, long-life chemistries competing for the same stationary and light-mobility jobs.",
+   "note": "Great Power's position illustrates the gap between technical readiness and commercial traction. It has been in mass production since 2023 across both cathode families and is developing an anode-free route — yet it appears in no third-party sodium-ion shipment ranking, and sodium-ion has no separate revenue line in any of its filings. Technical readiness and a market are different things.",
+   "cards": [
+    {
+     "t": "Where sodium-ion wins",
+     "meta": "Sodium-ion's genuine structural advantages",
+     "adv": [
+      "Raw material is abundant and geographically dispersed — sodium from salt and seawater rather than lithium from a handful of countries",
+      "Aluminium current collectors on both electrodes instead of copper on one, a genuine bill-of-materials saving",
+      "Materially better low-temperature performance; usable capacity well below freezing where LFP falls away",
+      "Can be safely discharged to zero volts and stored and shipped that way, which LFP cannot",
+      "Very long cycle life on the polyanion route — Great Power discloses more than 6,000, and more than 10,000 on its prismatic cell"
+     ],
+     "dis": []
+    },
+    {
+     "t": "Where LFP still wins",
+     "meta": "Why LFP still holds the stationary market",
+     "adv": [
+      "Energy density: roughly 100–160 Wh/kg for sodium-ion against 160–200 for LFP, so a sodium pack is bigger and heavier for the same energy",
+      "Manufacturing scale: LFP runs on fully depreciated lines at enormous volume, and sodium-ion has to buy its cost curve from scratch",
+      "The anode must be hard carbon rather than graphite, a less mature and currently more expensive supply chain",
+      "Layered-oxide cathodes are moisture-sensitive, which raises dry-room and handling costs",
+      "And the decisive one: sodium's case was built on expensive lithium. Lithium got cheap, and the saving it was supposed to deliver largely evaporated"
+     ],
+     "dis": []
+    }
+   ]
+  },
+  {
+   "id": "high-rate-discharge",
+   "title": "Ninety seconds of power: the data-centre backup problem",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Great Power's Hanhai 85Ah cell is built for one job, and it is a job that inverts every priority in grid storage. Understanding it teaches {{C-rate}} properly.",
+    "{{C-rate}} expresses current relative to capacity. At 1C a cell delivers its full rated capacity in one hour. At 10C it delivers that energy in six minutes — ten times the current. The Hanhai cell is rated at 10C sustained and 12C instantaneous, and retains more than 97.5% of its capacity when discharged at 10C.",
+    "That last figure is the interesting one. Pushing current ten times harder does not normally get you the same energy out. Internal resistance turns a fraction of the stored energy into heat, and voltage sags under load, so the cell hits its cut-off voltage earlier and delivers less. Losing under 2.5% at 10C means the cell's internal resistance has been engineered down very hard — thicker current collectors, more tabs, thinner electrodes, higher-conductivity electrolyte. All of that costs energy density, which is why a **{{high-rate discharge}}** cell is a different design, not a tuned version of a storage cell.",
+    "**Why a data centre needs this.** When mains power fails, the standby generators need somewhere between ten seconds and a couple of minutes to start, come up to speed and take load. The {{UPS}} has to carry the entire hall through that window with no interruption. So the requirement is enormous power for a very short time, and the total energy needed is trivially small.",
+    "Now compare the two jobs. A grid storage cell discharges at perhaps 0.25C to 0.5C for two to four hours, thousands of times, and is optimised for energy per dollar. A backup cell discharges at 10C for ninety seconds, and in a well-run facility it may do that only a handful of times in its life — while sitting fully charged and idle for years in between.",
+    "That idle-at-full-charge duty is why {{calendar life}} matters more than {{cycle life}} for backup, and it is the opposite of the grid case. **The lesson: 'battery' is not one product. Ask what the duty cycle is before comparing two cells, because the duty cycle determines which specifications are even relevant.**"
+   ]
+  },
+  {
+   "id": "certification-as-moat",
+   "title": "The real barrier to entry is a filing cabinet",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "A cell that works is necessary and nowhere near sufficient. Every market a residential or storage battery is sold into demands its own certification, each takes months, and each must be repeated for material design changes. This, more than chemistry, is what protects an incumbent residential-cell supplier.",
+   "cols": [
+    "Market",
+    "Principal standards",
+    "Typical lead time",
+    "What it actually tests"
+   ],
+   "rows": [
+    [
+     "European Union",
+     "VDE 2510-50, CE-RED, {{IEC 62619}}",
+     "6–12 months",
+     "Functional safety, electromagnetic compatibility, and abuse tolerance for industrial and stationary cells"
+    ],
+    [
+     "United States",
+     "{{UL 1973}}, {{UL 9540A}}, FCC",
+     "6–10 months",
+     "Stationary battery construction, plus full-scale fire propagation behaviour at system level"
+    ],
+    [
+     "Australia",
+     "AS/NZS 62619",
+     "4–8 months",
+     "The IEC standard as adopted locally, with additional installation rules for occupied buildings"
+    ],
+    [
+     "Japan",
+     "JIS C 8715, PSE",
+     "8–12 months",
+     "Japanese industrial standards plus mandatory electrical product safety marking"
+    ],
+    [
+     "China",
+     "GB/T 36276-2018, GB 31241",
+     "varies",
+     "National standards for stationary storage cells and for portable-device lithium batteries"
+    ]
+   ],
+   "note": "Two consequences. First, a new entrant with a superb cell is still a year away from selling it in four markets, which is why the residential cell rankings have been stable. Second, this explains a move that looks like housekeeping: Great Power obtained TUV Rheinland Witness Testing Laboratory status on 13 May 2026, which lets its own laboratory's data feed directly into TUV Rheinland certification instead of queueing for the certifier's bench. That compresses the lead times in this table — and four months later a full UL 9540A:2026 fire test on its 5 MWh container was published, certified by TUV Rheinland."
+  },
+  {
+   "id": "reading-capacity-disclosure",
+   "title": "Ampere-hours, gigawatt-hours and the utilisation trap",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Great Power discloses its manufacturing capacity in **ampere-hours** and never in gigawatt-hours. That is unusual, it is not an accident, and learning to handle it is a genuinely transferable skill.",
+    "An {{ampere-hour}} measures charge; a watt-hour measures energy. To convert you must multiply by voltage — and voltage depends on chemistry. An LFP cell sits near 3.2 volts, a nickel-based cell near 3.7, a sodium-ion cell near 3.0. So a company making several chemistries in one plant genuinely cannot state a single meaningful GWh number without telling you the mix, and the mix is commercially sensitive.",
+    "Do the arithmetic anyway, carefully. Great Power's H1 2026 nameplate was 10.121 billion Ah annualised. At an LFP-like 3.2 volts that is roughly 32 GWh a year. Its own website claims more than 100 GWh of capacity achieved in 2025 — a figure that appears in no filing and cannot be reconciled with the ampere-hour disclosure on any plausible voltage. **When an audited filing and a marketing page disagree by a factor of three, the filing is the number.**",
+    "Then there is **{{capacity utilisation}}**, which moved from 68.39% in FY2024 to 126.46% in FY2025 to 165.72% in H1 2026. A figure above 100% looks impossible and is not. Utilisation here is measured against *annualised opening* nameplate — the capacity in place at the start of the period, scaled to a full year — while new lines were commissioned throughout it. Output from lines that did not exist in January still counts in the numerator.",
+    "So 165.72% does not mean the plant is being flogged at two-thirds beyond its design limit. It means **capacity was added fast and filled immediately**, which is a genuinely bullish operational signal and also an explanation for why a company with 75% gearing committed another RMB 3.3bn to new lines. But it is not a productivity number, and reading it as one would be wrong.",
+    "The rule: **before comparing any capacity or utilisation figure between two companies, find out what the denominator is.** Opening capacity, average capacity and closing capacity give three different answers from the same plant."
+   ]
+  },
+  {
+   "id": "the-cycle-turns",
+   "title": "How a cell maker's cycle actually turns",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Commodity manufacturing moves in cycles, and Great Power ran through a complete one in twenty-four months. The sequence is worth learning because it repeats across every commodity industry, not just batteries.",
+   "cols": [
+    "Period",
+    "What happened",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "FY2024",
+     "The trough — the first loss since listing",
+     "Cell prices at or below production cost, an attributable loss of RMB 252.5m, negative operating cash flow of RMB 244.4m, and roughly a third of the plant idle at 68.39% utilisation. This is what overcapacity looks like from inside a producer."
+    ],
+    [
+     "Mid 2025",
+     "Still losing money, and investing anyway",
+     "Q1 and Q2 2025 were both loss-making. In July 2025 the company launched a share-option plan and an employee share ownership plan — locking in staff at the bottom, when they are cheapest to retain and most likely to leave."
+    ],
+    [
+     "September 2025",
+     "The pivot: the first tier-one maker to raise prices",
+     "314Ah cells up about 11% and small-storage cells up about 14%. Gross margin moved from 11.38% in Q2 to 18.07% in Q3, and orders rose about 40% quarter on quarter. Note which came first — the price rise, then the margin, then the volume."
+    ],
+    [
+     "H2 2025",
+     "Demand outruns rigid supply",
+     "Storage demand accelerated while the industry was mid-transition from 314Ah to 500Ah-plus formats, and a new cell line takes twelve to eighteen months to build. Supply could not respond quickly, so prices held."
+    ],
+    [
+     "FY2025",
+     "Back to profit, thinly",
+     "Revenue RMB 11.94bn, up 50.04%; attributable profit RMB 206.0m. But excluding non-recurring items it was RMB 98.3m — less than half the headline. Utilisation reached 126.46%."
+    ],
+    [
+     "H1 2026",
+     "The step change",
+     "Revenue RMB 10.98bn in six months, 91.9% of the whole prior year. Attributable profit RMB 816.4m, four times FY2025. Gross margin 19.59%. Utilisation 165.72%, with a further 39% of capacity under construction."
+    ],
+    [
+     "2027",
+     "The scheduled headwind",
+     "China's battery export tax rebate falls from 6% to zero on 1 January 2027, and analysts attribute part of the 2026 export surge to a pull-forward ahead of it. Some of the growth in the row above is borrowed from the row below."
+    ]
+   ],
+   "note": "The transferable pattern: a commodity cycle turns when demand meets supply that cannot respond quickly, and the first producer to raise prices captures the most margin. What it does not tell you is whether the recovery is structural. Watch whether margin holds through 2027 once the rebate is gone."
+  },
+  {
+   "id": "who-paid-for-the-research",
+   "title": "Who paid for the ranking?",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "Great Power's most striking claim is that it is **first in the world in residential storage cells, with 28% share**. It is worth working through why that number needs a qualifier, because the reasoning applies to every company-quoted ranking you will ever read.",
+    "The claim comes from a Frost & Sullivan report. Frost & Sullivan is a real research house and there is no suggestion the work is wrong. But the report was **commissioned in connection with the company's Hong Kong listing application** — the sponsor engages an industry expert to write an independent market section for the prospectus, which is standard and disclosed practice, not a scandal. It does mean the scope of the study was defined in a context where one particular company's position was the point.",
+    "Now look at what the uncommissioned houses say about the same segment in the same half-year. **TrendForce places Great Power second**, behind REPT BATTERO. **InfoLink places it third at 17.3%**, behind EVE and REPT. Three houses, three different answers, and the one giving first place is the one that was paid to look.",
+    "The honest reading is not that the claim is false. It is that **'top three globally in residential storage cells' is supportable by every source, and 'first' is supportable by one.** A dossier should say the former.",
+    "**The transferable test, and it takes ten seconds:** when a company cites a favourable ranking, ask (1) which house, (2) over what scope and period, and (3) who commissioned it. If any of the three is missing from the disclosure, treat the rank as a marketing claim until you can supply the answer yourself."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What physically distinguishes a primary battery from a secondary one?",
+     "a": "Whether the chemical reaction reverses. A secondary (rechargeable) cell uses reactions that run backwards cleanly — lithium-ion works by intercalation, where ions slide in and out of host structures without consuming either electrode. A primary cell consumes something irreversibly: an electrode dissolves or a metal oxidises, and no practical current puts it back."
+    },
+    {
+     "q": "Why is a zinc-air cell unusually energy-dense, and what is its trade-off?",
+     "a": "Because it does not carry its own oxidant — it breathes oxygen from the surrounding air and oxidises zinc against it, so most of the cell's volume is fuel rather than packaging. The trade-off is that it begins running down once air reaches it, which is why hearing-aid batteries start their life when you peel off the tab."
+    },
+    {
+     "q": "Why do primary batteries still have a market when rechargeables exist?",
+     "a": "Because low-drain devices need shelf life measured in years, very low self-discharge, and low cost per unit of energy for a trickle load — not cycling. A smoke alarm, water meter, remote sensor or hearing aid wants a cell that still works in a decade and never needs recharging."
+    },
+    {
+     "q": "Sodium sits below lithium in group 1. Give one consequence that helps sodium-ion and one that hurts it.",
+     "a": "Helps: sodium is roughly the sixth most abundant element in the crust, available from salt and seawater rather than from a few concentrated lithium deposits, and it allows aluminium current collectors on both electrodes because it does not alloy with aluminium at low voltage. Hurts: the sodium ion is larger and about three times heavier with a less favourable electrode potential, so energy density is lower — roughly 100–160 Wh/kg against LFP's 160–200."
+    },
+    {
+     "q": "Why must a sodium-ion cell use hard carbon rather than graphite as its anode?",
+     "a": "Because the sodium ion is too large to intercalate comfortably between graphite's stacked layers the way lithium does. Hard carbon is a disordered carbon that stores sodium in pores and between misaligned layers instead, which works but rests on a less mature and currently more expensive supply chain."
+    },
+    {
+     "q": "What is the difference between a layered-oxide and a polyanion sodium cathode?",
+     "a": "Layered oxide stacks sheets of transition-metal oxide with sodium between them: higher energy, but more sensitive to moisture and over-discharge. Polyanion locks the metal into a rigid phosphate or sulphate framework: less energy, but the structure barely changes shape as sodium moves in and out, giving very long cycle life. Great Power's own figures follow the pattern — layered oxide above 150 Wh/kg and 3,000 cycles, polyanion above 6,000 cycles."
+    },
+    {
+     "q": "Sodium-ion's core commercial argument has been undermined. By what?",
+     "a": "By cheap lithium. Sodium-ion's case rested mainly on escaping expensive, volatile lithium raw material. When lithium carbonate prices collapsed, the saving largely evaporated — and a substitute technology justified on input cost is hostage to the price of the thing it substitutes for."
+    },
+    {
+     "q": "A cell is rated 10C. What does that mean, and why is retaining 97.5% of capacity at 10C impressive?",
+     "a": "10C means it delivers its full rated capacity in one tenth of an hour — six minutes — at ten times the 1C current. Normally that high a current wastes energy as heat in the internal resistance and sags the voltage so the cell hits cut-off early, delivering less. Losing under 2.5% means internal resistance has been engineered down hard, via thicker collectors, more tabs and thinner electrodes — all of which cost energy density."
+    },
+    {
+     "q": "Why does a data-centre backup cell need enormous power but almost no energy?",
+     "a": "Because it only has to carry the load through the gap between a mains failure and the standby generators taking over — roughly ten seconds to a couple of minutes. The power demand is the whole hall; the total energy is trivial. It then sits fully charged and idle for years, which is why calendar life matters more than cycle life for backup, the reverse of the grid case."
+    },
+    {
+     "q": "Why is certification, rather than cell technology, the main barrier to entry in residential storage?",
+     "a": "Because each market demands its own approvals — VDE 2510-50 and IEC 62619 in the EU, UL 1973 and UL 9540A in the US, AS/NZS 62619 in Australia, JIS C 8715 and PSE in Japan — each taking four to twelve months and each repeatable on a material design change. A new entrant with an excellent cell is still about a year from selling it across four markets."
+    },
+    {
+     "q": "What does a witness-testing-laboratory qualification actually buy a manufacturer?",
+     "a": "It lets the manufacturer's own laboratory generate data that the certification body accepts directly, instead of queueing for the certifier's bench. That compresses certification lead times — which, in a market where certification is the entry barrier, is a competitive move rather than a compliance one."
+    },
+    {
+     "q": "A company reports capacity in ampere-hours, not gigawatt-hours. Why might that be legitimate?",
+     "a": "Because ampere-hours measure charge and watt-hours measure energy, and converting between them requires voltage — which depends on chemistry. A plant making LFP at about 3.2 V, nickel-based cells near 3.7 V and sodium-ion near 3.0 V cannot state one meaningful GWh figure without disclosing its product mix, which is commercially sensitive."
+    },
+    {
+     "q": "How can capacity utilisation legitimately exceed 100%?",
+     "a": "When it is measured against annualised opening nameplate — the capacity in place at the start of the period, scaled to a full year — while new lines are commissioned throughout it. Output from lines that did not exist in January still counts in the numerator. It signals capacity added fast and filled immediately, not a plant running beyond its design limit."
+    },
+    {
+     "q": "Three questions to ask whenever a company cites a favourable market ranking.",
+     "a": "Which research house produced it; over what scope and period; and who commissioned it. If any of the three is missing from the disclosure, treat the rank as a marketing claim until you can answer it yourself."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "Why can a zinc-air cell pack more energy into a given volume than most sealed primary chemistries?",
+     "c": [
+      "Zinc stores more charge per atom than lithium",
+      "It draws its oxidant from the surrounding air, so more of the cell is fuel rather than stored oxidant",
+      "It operates at a much higher voltage",
+      "Its reaction is partially reversible, extending usable life"
+     ],
+     "a": 1,
+     "why": "A zinc-air cell breathes oxygen from the atmosphere and oxidises zinc against it, so it does not have to carry an oxidant internally. That frees volume for active material. The trade-off is that the cell begins discharging once air reaches it — hence the tab on a hearing-aid battery."
+    },
+    {
+     "q": "A sodium-ion maker reports 145 Wh/kg against an LFP competitor's 180 Wh/kg. What is the most useful conclusion?",
+     "c": [
+      "The sodium cell is defective — sodium-ion should match LFP",
+      "The gap is expected from the chemistry; sodium ions are larger and heavier at a less favourable potential, so the question is whether cost or temperature performance compensates",
+      "Energy density is irrelevant for stationary storage, so the figures do not matter",
+      "The sodium maker is measuring at a different temperature"
+     ],
+     "a": 1,
+     "why": "Roughly 100–160 Wh/kg against 160–200 is the normal, physics-driven gap. Sodium-ion never competes on energy density; it competes on raw-material abundance, aluminium collectors on both sides, low-temperature performance and safe zero-volt storage. Whether those outweigh the density penalty depends mostly on the lithium price."
+    },
+    {
+     "q": "A vendor offers one cell for both grid storage and UPS backup, citing 10C capability and 8,000 cycles. What should you suspect?",
+     "c": [
+      "Nothing — a high-rate cell with long cycle life is simply a better product",
+      "That the two claims pull against each other: high-rate design means thicker collectors, more tabs and thinner electrodes, which cost the energy density a cost-per-kilowatt-hour storage cell needs",
+      "That the cycle-life figure must be measured at 10C",
+      "That UPS duty and grid duty are essentially the same"
+     ],
+     "a": 1,
+     "why": "They are opposite designs. A backup cell optimises for enormous power over ninety seconds and then sits idle for years, so calendar life dominates. A grid cell optimises for cost per kilowatt-hour cycled twice daily for twenty years. Engineering resistance down for high rate sacrifices energy density; one cell doing both well should prompt questions about which spec was measured under which conditions."
+    },
+    {
+     "q": "A company's website claims 100+ GWh of capacity while its audited filings disclose 10.121 billion Ah of annualised nameplate. What should a reader conclude?",
+     "c": [
+      "Both are right — they measure different things that cannot be compared",
+      "The filing governs; at any plausible cell voltage the ampere-hour figure implies roughly 32 GWh, so the website number is unsupported",
+      "The website is right because it is more recent",
+      "Ampere-hours cannot be converted to watt-hours at all"
+     ],
+     "a": 1,
+     "why": "Ampere-hours convert to watt-hours by multiplying by voltage. At an LFP-like 3.2 V, 10.121 billion Ah is about 32 GWh — roughly a third of the website claim, and no plausible chemistry mix closes a threefold gap. Where an audited filing and a marketing page disagree, the filing is the number."
+    },
+    {
+     "q": "Utilisation moves from 68% to 126% to 166% across three periods. What is the single most likely explanation?",
+     "c": [
+      "The plant is being run destructively beyond its design limit",
+      "The denominator is annualised opening capacity while new lines were commissioned during each period, so output from new lines counts against old capacity",
+      "The company changed from a two-shift to a three-shift pattern",
+      "The figures include output bought in from contract manufacturers"
+     ],
+     "a": 1,
+     "why": "Utilisation above 100% almost always signals a denominator convention rather than heroic manufacturing. Measured against opening nameplate scaled to a full year, output from lines commissioned mid-period inflates the ratio. It is a real signal — capacity added fast and filled immediately — but it is not a productivity measure and cannot be compared across companies without checking the denominator."
+    },
+    {
+     "q": "A prospectus cites a commissioned Frost & Sullivan study ranking the issuer first in a segment, while two uncommissioned houses rank it second and third. What is the appropriate treatment?",
+     "c": [
+      "Use the commissioned figure — it is the most detailed and specific",
+      "Discard the commissioned figure entirely as conflicted",
+      "State the range all sources support and note that first place rests on the commissioned study alone",
+      "Average the three rankings"
+     ],
+     "a": 2,
+     "why": "Commissioning an expert market section is standard, disclosed prospectus practice and does not make the work wrong — but the scope was defined in a context where one company's position was the point. With TrendForce at second and InfoLink at third, 'top three globally' is supportable by every source while 'first' is supportable by one. Saying so is more useful than either adopting or discarding the claim."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "witness testing laboratory",
+   "d": "A manufacturer's own laboratory that a certification body has accredited to generate test data the body will accept directly, rather than requiring the tests to be repeated on the certifier's own bench. It shortens certification lead times without lowering the standard."
+  }
+ ]
+}

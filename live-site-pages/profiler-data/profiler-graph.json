@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-09",
- "companies": 165,
+ "companies": 167,
  "edges": [
   {
    "a": "abb",
@@ -11598,6 +11598,20 @@
   },
   {
    "a": "byd",
+   "b": "calb",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The consequence is that BYD is excluded from like-for-like interim comparisons of listed Chinese BESS players — the August 2026 Energy-Storage.News review of CATL, EVE, CALB, Gotion, Great Power, REPT and Desay does not mention BYD at all — while every one of those peers grew net profit sharply in the same half and BYD's group profit fell 20.54%.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "byd",
    "b": "catl",
    "curated": {
     "a": {
@@ -11832,6 +11846,27 @@
      "where": "Capabilities · Power (EV) battery systems",
      "date": "",
      "text": "Fifth globally in EV battery installations at 4.6% share in H1 2026, in a peer band with CALB and EVE Energy and far behind CATL and BYD, which hold 54.3% combined.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "byd",
+   "b": "great-power",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The consequence is that BYD is excluded from like-for-like interim comparisons of listed Chinese BESS players — the August 2026 Energy-Storage.News review of CATL, EVE, CALB, Gotion, Great Power, REPT and Desay does not mention BYD at all — while every one of those peers grew net profit sharply in the same half and BYD's group profit fell 20.54%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · GreatCom, GreatOne and GreatE — storage systems and platform",
+     "date": "",
+     "text": "It does not appear in Wood Mackenzie's 2026 global BESS integrator ranking or Benchmark's H1 2026 system-integrator top ten, both of which are dominated by Sungrow, Tesla, CATL and BYD.",
      "src": "",
      "from": "b"
     }
@@ -12409,6 +12444,228 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "calb",
+   "b": "catl",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Plaintiff against CALB in three patent-infringement suits announced in January 2025, and the storage-cell market leader at roughly four times CALB's share.",
+     "context": "CATL filed three separate patent-infringement claims against CALB that CALB announced on 3 January, 17 January and 28 January 2025 — in the Hangzhou Intermediate People's Court over a secondary-battery top-cover assembly patent seeking RMB 90m, in the Quanzhou Intermediate People's Court over a battery-module utility patent seeking RMB 60m, and in the Hunan High People's Court over a second top-cover patent seeking RMB 110m, RMB 263m in aggregate plus costs.\n\nCALB denies infringement in each and has filed CNIPA invalidation requests against the asserted patents in the first two, both accepted for review. No progress announcement, settlement or judgment has appeared on any of the three in the 21 months since, and CALB reversed its litigation provision in full from RMB 8.155m to nil during FY2025 — a management judgment that the claims will fail.\n\nSeparately the two are the extremes of the same market: SNE Research put CATL at 125.0 GWh and 27.1% of global storage-cell shipments for H1 2026 against CALB's 31.5 GWh and 6.8%.",
+     "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0128/2025012800758_c.pdf",
+     "status": "active",
+     "since": "2025",
+     "scale": "RMB 263m claimed across three suits"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Commercial-vehicle batteries (Tectrans / Tianxing)",
+     "date": "",
+     "text": "Competes with EVE Energy and CALB in commercial-vehicle cells; differentiates on charge speed plus the only nationwide charge-and-swap network purpose-built for freight.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** CALB is the fifth-largest energy-storage cell maker in the world on the modal third-party reading and the fourth-largest EV traction battery maker, but it is a challenger in storage and not an incumbent: its 6.8% share sits at roughly a quarter of CATL's, three rivals are clustered within 0.6 percentage points of it, and one serious research house omits it from the top ten altogether.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is one of the four Chinese makers clustered between 6.5% and 7.7% of global storage-cell shipments behind CATL, EVE and Hithium, and unlike its Korean peers it reaches overseas storage demand almost entirely by export rather than by local manufacture: overseas revenue was 2.1% of FY2025 and 4.4% of H1 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: SNE Research, TrendForce and InfoLink each rank it fifth globally in H1 2026 storage cells at 31.5 GWh and 6.8%, roughly a quarter of CATL's 27.1%, with REPT 0.1 GWh behind and Cornex 1.3 GWh behind; EVTank ranked it sixth for FY2025 and SPIR seventh for H1 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gap:** the three CATL patent suits announced in January 2025, claiming RMB 263m in aggregate, have produced no progress announcement, settlement or judgment in 21 months, and CALB reversed its litigation provision in full to nil during FY2025.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "- *Any judgment or settlement in the CATL suits:* a first adverse ruling against a nil provision would be a direct earnings event and would test the FY2025 reversal.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ZHIYUAN (至远) commercial-vehicle and marine batteries",
+     "date": "",
+     "text": "CATL's dossier names CALB as a competitor in commercial-vehicle cells specifically.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-28",
+     "text": "CATL sues in the Hunan High People's Court over a battery top-cover patent, seeking RMB 110m — The largest of three CATL claims announced in 26 days. CALB denies infringement in each.",
+     "src": "HKEX litigation announcement",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-17",
+     "text": "CATL sues in the Quanzhou Intermediate People's Court over a battery module utility patent, seeking RMB 60m — CALB denies infringement and has filed an accepted CNIPA invalidation request against the asserted patent.",
+     "src": "HKEX litigation announcement",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-03",
+     "text": "CATL sues in the Hangzhou Intermediate People's Court over a top-cover assembly patent, seeking RMB 90m — CALB denies infringement and has filed an accepted CNIPA invalidation request. No progress, settlement or judgment has been announced on any of the three suits in the 21 months since.",
+     "src": "HKEX litigation announcement",
+     "from": "a"
+    }
+   ],
+   "last": "2025-01-28"
+  },
+  {
+   "a": "calb",
+   "b": "gotion",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Direct rival in both markets; Gotion's dossier records that CALB passed it in the Chinese EV battery ranking during 2026.",
+     "context": "The two sit in the same Chinese second tier. On SNE's H1 2026 figures CALB is fourth in global EV battery installations at 31.2 GWh and 5.1% while Gotion is fifth at 28.0 GWh and 4.6%; in storage cells CALB is fifth at 6.8% and Gotion ninth at 4.5%.\n\nGotion's dossier states that it was passed by CALB in the Chinese ranking during 2026 and places itself in a peer band with CALB and EVE Energy. It also records that CALB, unlike Gotion, is named on the US Department of Defense Section 1260H list — a divergence in policy exposure that this dossier independently confirms.",
+     "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+     "status": "active",
+     "since": "2026",
+     "scale": "31.2 GWh vs 28.0 GWh EV installs, H1 2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: it is NOT on the UFLPA Entity List as of the 31 July 2026 update despite a congressional demand that it be added; it is NOT on the Department of Defense §1260H list as of 8 June 2026, unlike CATL, BYD, CALB and EVE, so it escapes the §805 contracting bans that catch them; and the NO GOTION Act was never enacted — H.R.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) battery systems",
+     "date": "",
+     "text": "Fifth globally in EV battery installations at 4.6% share in H1 2026, in a peer band with CALB and EVE Energy and far behind CATL and BYD, which hold 54.3% combined.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) battery systems",
+     "date": "",
+     "text": "In China it is fourth at roughly 6.3% and was passed by CALB during 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Volkswagen unified cell programme",
+     "date": "",
+     "text": "The anchor-OEM differentiator against CALB's GAC and Xpeng book and EVE's BMW cylindrical programme.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Materials, resources and recycling",
+     "date": "",
+     "text": "Vertical integration is Gotion's answer to per-watt-hour cost compression in the Chinese second tier, where it competes with CALB, EVE and SVOLT rather than with CATL.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-21",
+     "text": "Mass production and first delivery of Volkswagen's unified cell in Hefei, received by Volkswagen's chief technology officer and PowerCo's chief executive; supply runs 2026 to 2032 — The anchor-OEM programme reaching volume — and the clearest reason Gotion's customer structure differs from CALB's or EVE's.",
+     "src": "electrive, 2025-11-21",
+     "from": "b"
+    }
+   ],
+   "last": "2026"
+  },
+  {
+   "a": "calb",
+   "b": "great-power",
+   "evid": [
+    {
+     "where": "Capabilities · Fengpeng (风鹏) large-format energy-storage cells",
+     "date": "",
+     "text": "Note the industry split: Great Power and CATL push 587Ah while CALB, Ganfeng and REPT push 588Ah — a one amp-hour differentiation on essentially the same format.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "calb",
+   "b": "hithium",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is one of the four Chinese makers clustered between 6.5% and 7.7% of global storage-cell shipments behind CATL, EVE and Hithium, and unlike its Korean peers it reaches overseas storage demand almost entirely by export rather than by local manufacture: overseas revenue was 2.1% of FY2025 and 4.4% of H1 2026.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "calb",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The adjacent rank in storage cells — SNE separates them by 0.1 GWh on an identical 6.8% share.",
+     "context": "SNE Research's H1 2026 global storage-cell table places CALB fifth at 31.5 GWh and REPT BATTERO sixth at 31.4 GWh, both on 6.8% share of a 461.3 GWh market. REPT's own dossier records the same figures and states that fifth and sixth are therefore both defensible for it.\n\nThe two are not otherwise commercially linked: no supply, customer or partnership relationship appears in either company's disclosure. They differ in where their storage volume sits — REPT is ranked first globally in residential storage cells by SNE, while CALB's residential line is a small part of a business dominated by utility-scale cells and EV traction.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active",
+     "since": "2026",
+     "scale": "31.5 GWh vs 31.4 GWh, H1 2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Wending (问顶) cell platform",
+     "date": "",
+     "text": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Wending (问顶) cell platform",
+     "date": "",
+     "text": "REPT sits fifth to sixth globally in storage cell shipments depending on the research house — SNE put it at 31.4 GWh and 6.8% for H1 2026, 0.1 GWh behind CALB, which is why 'fifth' and 'sixth' are both defensible.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power (EV) batteries",
+     "date": "",
+     "text": "Third tier in Chinese EV batteries at roughly 2.5% national share — 19.50 GWh installed in FY2025 per CABIA — behind CATL, BYD, CALB and Gotion.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · ZHIJIU (至久) energy-storage cells",
+     "date": "",
+     "text": "SNE puts CALB 0.1 GWh ahead of REPT BATTERO and 1.3 GWh ahead of Cornex, so the rank is contested rather than held.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026"
   },
   {
    "a": "canadian-solar",
@@ -13793,6 +14050,48 @@
      "where": "Capabilities · Materials, resources and recycling",
      "date": "",
      "text": "Vertical integration is Gotion's answer to per-watt-hour cost compression in the Chinese second tier, where it competes with CALB, EVE and SVOLT rather than with CATL.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "catl",
+   "b": "great-power",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "But there is no separate revenue line, no disclosed shipment volume, and no third-party sodium-ion ranking names Great Power at all — the houses that rank sodium-ion name HiNa, CATL, EVE and Vecko.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Fengpeng (风鹏) large-format energy-storage cells",
+     "date": "",
+     "text": "Great Power entered the 587Ah class roughly 12 to 18 months after CATL and EVE, whose 587Ah and 628Ah cells were shipping in 2025.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Fengpeng (风鹏) large-format energy-storage cells",
+     "date": "",
+     "text": "Note the industry split: Great Power and CATL push 587Ah while CALB, Ganfeng and REPT push 588Ah — a one amp-hour differentiation on essentially the same format.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · GreatCom, GreatOne and GreatE — storage systems and platform",
+     "date": "",
+     "text": "It does not appear in Wood Mackenzie's 2026 global BESS integrator ranking or Benchmark's H1 2026 system-integrator top ten, both of which are dominated by Sungrow, Tesla, CATL and BYD.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Sodium-ion batteries",
+     "date": "",
+     "text": "Where independent sources name sodium-ion leaders they name HiNa, CATL, EVE and Vecko; Great Power does not appear.",
      "src": "",
      "from": "b"
     }
@@ -17614,6 +17913,32 @@
     }
    ],
    "last": "2026-01-06"
+  },
+  {
+   "a": "crrc-zhuzhou",
+   "b": "great-power",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Jointly developed the 688Ah WindPeng (风鹏) cell with CRRC Zhuzhou Institute for 6.9 MWh systems.",
+     "context": "CRRC Zhuzhou Institute and Great Power launched the 688Ah WindPeng cell on 21 January, taking single-cell capacity above 600Ah and system energy above 6 MWh — what the Chinese trade press called the Dual-Six era. Great Power's chairman Xia Xinde attended alongside CRRC Zhuzhou's integrated-energy business head.\n\nCRRC Zhuzhou's own dossier records the relationship from its side, noting that it is not vertically integrated into cells and lists Great Power among the makers it sources from. The 688Ah cell is a separate and larger product from Great Power's 587Ah/588Ah Fengpeng line; CRRC Zhuzhou runs a parallel 688Ah programme with REPT BATTERO, so the partnership is not exclusive on either side.",
+     "source": "https://www.energy-x.org/news/crrc-great-power-688ah-windpeng-battery.html",
+     "status": "active",
+     "since": "2026",
+     "scale": "688Ah cell for 6.9 MWh systems",
+     "via": "688Ah WindPeng cell"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Cell procurement (Hithium ≥120 GWh; CATL 20 GWh)",
+     "date": "",
+     "text": "Co-developed the 688 Ah 'WindPeng' cell with Great Power for 6.9 MWh systems.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026"
   },
   {
    "a": "crrc-zhuzhou",
@@ -31845,6 +32170,27 @@
   },
   {
    "a": "gotion",
+   "b": "great-power",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: EV installations rose 43.3% in H1 2026 to hold fifth globally, while storage share fell about a point to 4.5% and ninth, with Great Power growing five times faster off a similar base.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy storage systems — the Gotion Grid line",
+     "date": "",
+     "text": "Ninth globally in storage cell shipments at 4.5% for H1 2026 and losing about a point of share, in a field where Great Power is growing five times faster off a similar base.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "gotion",
    "b": "hithium",
    "curated": {
     "a": {
@@ -31964,6 +32310,119 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "great-power",
+   "b": "hithium",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Both shortlisted as candidate winners on NARI Technology's 2026 cell framework of about 4 GWh.",
+     "context": "NARI Technology published a shortlist on 2 July 2026 naming Hithium, Cornex and Great Power as candidate winners on a 2026 energy-storage cell framework procurement of roughly 4 GWh, split between about 2 GWh of cells of at least 314Ah and about 2 GWh of at least 587Ah.\n\nThe two are otherwise far apart in scale: SNE places Hithium third globally in H1 2026 storage-cell shipments at 46.2 GWh and 10.0%, against Great Power tenth at 20.5 GWh and 4.4%. Appearing on the same Chinese utility-scale shortlist is the first hard evidence located that Great Power competes for tier-one framework slots rather than only for residential and commercial volume.",
+     "source": "https://www.energytrend.com/news/20260703-51698.html",
+     "status": "announced",
+     "since": "2026",
+     "scale": "~4 GWh framework"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-02",
+     "text": "Shortlisted as a candidate winner with Hithium and Cornex on NARI Technology's 2026 cell framework of about 4 GWh — The first hard evidence that it can win Chinese utility-scale framework slots against tier-one peers, on a tender split between cells of at least 314Ah and at least 587Ah.",
+     "src": "EnergyTrend reporting the NARI tender notice",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-02"
+  },
+  {
+   "a": "great-power",
+   "b": "lg-energy-solution",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "SNE Research places Great Power tenth in global storage-cell shipments for H1 2026 at 20.5 GWh and 4.4%, with growth of 202% — The fastest growth in the global top ten, and share up from 2.5%. It now outships LG Energy Solution and Samsung SDI individually in storage cells.",
+     "src": "CnEVPost reporting SNE Research",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-04"
+  },
+  {
+   "a": "great-power",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Direct rival in residential storage cells, where the two are ranked first by different research houses for the same period.",
+     "context": "REPT BATTERO's dossier states that SNE ranks it first globally in residential storage cells for H1 2026 and that REPT, EVE and Great Power together held about 63% of that segment. Great Power's own H1 2026 report states that Frost & Sullivan ranks Great Power first globally in residential storage cells at 28% share.\n\nBoth claims are sourced and neither is obviously wrong: they come from different research houses with different segment definitions, and TrendForce independently places Great Power second behind REPT while InfoLink places it third at 17.3% behind EVE and REPT. No source reconciles them, and the segment definitions — residential-only against small storage including telecom — are nowhere stated side by side. In aggregate storage cells the two are further apart: SNE has REPT sixth at 31.4 GWh and Great Power tenth at 20.5 GWh.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active",
+     "since": "2026",
+     "scale": "REPT 31.4 GWh vs Great Power 20.5 GWh, H1 2026"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Residential and C&I storage cells",
+     "date": "",
+     "text": "REPT, EVE and Great Power together held about 63% of the residential segment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Residential and portable storage — HOME and POLAR lines",
+     "date": "",
+     "text": "TrendForce places it second behind REPT BATTERO for the same half.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026"
+  },
+  {
+   "a": "great-power",
+   "b": "samsung-sdi",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "SNE Research places Great Power tenth in global storage-cell shipments for H1 2026 at 20.5 GWh and 4.4%, with growth of 202% — The fastest growth in the global top ten, and share up from 2.5%. It now outships LG Energy Solution and Samsung SDI individually in storage cells.",
+     "src": "CnEVPost reporting SNE Research",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-04"
+  },
+  {
+   "a": "great-power",
+   "b": "sungrow",
+   "evid": [
+    {
+     "where": "Capabilities · GreatCom, GreatOne and GreatE — storage systems and platform",
+     "date": "",
+     "text": "It does not appear in Wood Mackenzie's 2026 global BESS integrator ranking or Benchmark's H1 2026 system-integrator top ten, both of which are dominated by Sungrow, Tesla, CATL and BYD.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "great-power",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · GreatCom, GreatOne and GreatE — storage systems and platform",
+     "date": "",
+     "text": "It does not appear in Wood Mackenzie's 2026 global BESS integrator ranking or Benchmark's H1 2026 system-integrator top ten, both of which are dominated by Sungrow, Tesla, CATL and BYD.",
+     "src": "",
+     "from": "a"
+    }
+   ],
    "last": ""
   },
   {

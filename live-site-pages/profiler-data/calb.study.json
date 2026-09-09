@@ -1,0 +1,440 @@
+{
+ "schemaVersion": 2,
+ "slug": "calb",
+ "title": "CALB — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "sections": [
+  {
+   "id": "start-here-one-factory-two-markets",
+   "title": "Start here: one factory, two different markets",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "A lithium-ion cell factory can sell into two completely different businesses, and the same company can be strong in one and ordinary in the other.",
+    "CALB is the clearest example in this corpus. In **electric-vehicle traction batteries** it is a stable fourth in the world. In **energy-storage cells** it is a contested fifth, where three rivals sit within 0.6 percentage points and one research house leaves it out of the top ten entirely.",
+    "Same company, same chemistry, largely the same factories — two different competitive positions. This guide teaches why: what a storage cell has to do that a car cell does not, why storage cells have been getting physically enormous, and what a buyer of grid storage is actually purchasing when the invoice says 'battery'.",
+    "The one sentence to hold onto: **in cars you sell energy per kilogram; in grid storage you sell energy per dollar, and the kilograms barely matter.**"
+   ]
+  },
+  {
+   "id": "what-a-storage-cell-must-do",
+   "title": "What a storage cell has to do that a car cell does not",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Both are lithium-ion. Both work by {{intercalation}} — lithium ions sliding into and out of layered structures at each electrode while electrons take the external circuit. The difference is the duty cycle and the constraint.",
+    "A car battery is weight-constrained and power-hungry. Every kilogram it carries is a kilogram the motor must accelerate, so the figure of merit is **gravimetric** {{energy density}} — watt-hours per kilogram. It must also deliver large bursts for acceleration and accept them back under braking, and it does perhaps one deep cycle a day at most.",
+    "A grid storage battery sits on a concrete pad and never moves. Weight is nearly free. What it must do is cycle — charge and discharge once or twice every single day for fifteen or twenty years — and do it for the lowest possible cost per unit of energy delivered over that whole life.",
+    "That reverses the priorities completely. Storage buyers care about **volumetric** energy density (watt-hours per litre, because land and container volume cost money), about {{cycle life}}, and above all about capital cost per kilowatt-hour. They will happily accept a heavier, less power-dense chemistry if it is cheaper and lasts longer.",
+    "This is why {{LFP}} — lithium iron phosphate — took over grid storage almost completely while higher-energy nickel chemistries like {{NMC}} held on longer in cars. LFP stores less energy per kilogram, but it is cheaper, uses no cobalt or nickel, tolerates more cycles, and is markedly more stable when abused. In a vehicle those trade-offs are arguable. On a concrete pad they are not."
+   ]
+  },
+  {
+   "id": "three-numbers",
+   "title": "Three numbers, and which one the buyer actually pays for",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Battery marketing quotes all three of these and readers routinely mix them up. They measure different things and different buyers weight them differently.",
+   "cols": [
+    "Measure",
+    "What it means",
+    "Who cares most",
+    "CALB example"
+   ],
+   "rows": [
+    [
+     "Gravimetric energy density (Wh/kg)",
+     "Energy stored per kilogram of cell or pack",
+     "Vehicles, aircraft, robotics — anything that must carry its own battery",
+     "CALB's eVTOL flight cell at 360 Wh/kg; its solid-state development system at 450 Wh/kg"
+    ],
+    [
+     "Volumetric energy density (Wh/L)",
+     "Energy stored per litre of physical volume",
+     "Grid storage, where a 20-foot container is a fixed box and land costs money",
+     "The ZHIJIU 588Ah and 684Ah storage cells at 440–450 Wh/L"
+    ],
+    [
+     "Cost per kilowatt-hour",
+     "Capital cost of the energy the system can store",
+     "Everyone in grid storage; it is the dominant term in {{LCOE}}",
+     "Not disclosed by CALB; storage cell prices industry-wide fell to about RMB 0.26–0.31/Wh in late 2025 before recovering above RMB 0.36/Wh in 2026"
+    ]
+   ],
+   "note": "Notice that CALB's highest Wh/kg numbers come from aviation and robotics products with no revenue, while its storage cells are quoted in Wh/L. That is not inconsistency — it is each product being described on the axis its buyer actually pays for."
+  },
+  {
+   "id": "why-cells-got-huge",
+   "title": "Why storage cells got enormous, and what an amp-hour actually buys",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "In 2020 the standard grid-storage cell was around 280 {{ampere-hour}}. By 2026 the industry was shipping 314Ah, arguing about 587 against 588Ah, and launching 684Ah, 688Ah and larger. CALB's own storage range runs 314Ah, 392Ah, 588Ah and 684Ah. Understanding why is the single most useful thing in this guide.",
+    "An amp-hour is a measure of charge, not energy. Multiply amp-hours by the cell's voltage and you get watt-hours, which is energy. An LFP cell sits at about 3.2 volts nominal, so a 314Ah cell holds roughly 1.0 kWh and a 628Ah cell roughly 2.0 kWh.",
+    "So why not just use more small cells? Because **every cell has fixed costs that do not shrink with it**. Each one needs a case, two terminals, a vent, a safety device, welding operations, a slot in a module, wiring to a {{busbar}}, and a channel on the {{BMS}} that monitors it. Doubling the cell's capacity roughly halves the number of all of those per megawatt-hour.",
+    "The gains compound through the whole system. Fewer cells means fewer welds and fewer failure points, less inactive material as a share of the box, less assembly labour, and more energy in the same 20-foot container. This is why the industry describes moving from a 5 MWh to a 6.25 MWh container as an economic event rather than a product refresh — it is the same steel box holding a quarter more energy.",
+    "The catch is that a bigger cell is harder to make well. Heat generated in the middle has further to travel to reach a surface, so temperature gradients inside the cell grow. Electrode sheets get longer, so any coating defect has more chances to appear. And when a very large cell does fail, it releases much more energy in one place — which is why the safety engineering in the next section scaled up alongside the capacity.",
+    "One detail that shows how competitive this has become: CALB, Ganfeng and REPT push a **588Ah** cell while Great Power and CATL push **587Ah**. A one amp-hour difference is not physics — it is two groups optimising against slightly different system-level constraints and then differentiating on the label."
+   ]
+  },
+  {
+   "id": "stacking-versus-winding",
+   "title": "Two ways to build the inside of a cell",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Inside a prismatic case, the electrode sheets and {{separator}} have to be arranged somehow. There are two industrial answers and the choice has real consequences at large capacities. CALB calls its 684Ah a stacked cell; Great Power chose winding for its 587Ah line and said so explicitly.",
+   "note": "Neither is simply better. Winding is the cost-and-yield answer, stacking is the performance-at-scale answer, and a maker's choice tells you which constraint is binding on it. A company with new capital to deploy can buy stacking lines; one protecting its balance sheet extends the winding lines it already owns.",
+   "cards": [
+    {
+     "t": "Stacking (叠片) — cut sheets, lay them flat in a pile",
+     "meta": "The performance-at-scale route — CALB calls its 684Ah a stacked cell",
+     "adv": [
+      "Rectangular electrodes fill a rectangular case efficiently, so volumetric energy density is higher",
+      "Current path is short and uniform, so internal resistance is lower and heat is spread more evenly",
+      "No tightly curved regions, so no stress concentration where sheets bend — better for cycle life at large formats",
+      "Scales more gracefully as cells get very large, which is why it appears on the biggest cells"
+     ],
+     "dis": []
+    },
+    {
+     "t": "Winding (卷绕) — one long sheet rolled into a flattened coil",
+     "meta": "The cost-and-yield route — Great Power chose it for its 587Ah line and said so",
+     "adv": [
+      "Much faster and cheaper: one continuous process rather than cutting and aligning hundreds of layers",
+      "Mature, high-yield equipment that is already installed and paid for",
+      "Fewer alignment steps means fewer defect opportunities per cell in a proven line",
+      "But the tight bends at each end of the flattened roll are mechanically stressed and thermally awkward, and the curved ends waste some of the case volume"
+     ],
+     "dis": []
+    }
+   ]
+  },
+  {
+   "id": "thermal-runaway-and-propagation",
+   "title": "The failure mode everything else is designed around",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "{{thermal runaway}} is the event that governs battery safety engineering. Above roughly 130–200 °C, depending on chemistry, the {{electrolyte}} and the electrode materials begin reacting with each other exothermically. The heat released raises the temperature, which speeds the reaction, which releases more heat. Once started it cannot be stopped — only contained.",
+    "The critical distinction is between one cell failing and the failure spreading. A single cell venting is a contained industrial incident. {{thermal propagation}} — the failure moving to its neighbours and then across the module and the container — is a fire that destroys a substation.",
+    "So the engineering effort goes into breaking the heat path between neighbours. CALB's architecture, which it calls TPP, combines two things: **thermo-electric separation**, which routes the electrical connections and the hot gas venting path away from each other so that a venting cell does not use its own busbars as a fuse to its neighbours; and {{aerogel}} barriers between cells, aerogel being an extremely low-density solid whose structure traps air so effectively that it is among the best solid insulators known.",
+    "LFP helps here too. Its cathode is thermally more stable than nickel-rich alternatives and releases less oxygen when it decomposes, which is part of why grid storage standardised on it.",
+    "How do you prove any of this works? You deliberately destroy a cell and watch what the neighbours do. The {{nail penetration test}} drives a spike through a fully charged cell to force an internal short. At system scale, {{UL 9540A}} is the standard test method: a full container is made to fail with the doors closed and the fire suppression disabled, and the question is whether the fire spreads to the container next to it.",
+    "A worked example from CALB's direct competitor makes the standard concrete. In a UL 9540A:2026 test on a 5 MWh container certified by TÜV Rheinland and published on 8 September 2026, the initiating unit burned for sixteen hours and self-extinguished, while cells in adjacent modules stayed below 70 °C — far under their venting threshold — and no adjacent container ignited. That result, not a datasheet number, is what a project financier reads."
+   ]
+  },
+  {
+   "id": "cell-to-container",
+   "title": "From cell to container: what a storage buyer actually purchases",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Nobody buys cells to put on a pad. They buy a factory-assembled box. Each level up adds function and adds inactive mass, and the industry's whole cost effort is about removing levels or making them lighter.",
+   "cols": [
+    "Level",
+    "What it adds",
+    "Why it exists",
+    "Typical CALB figure"
+   ],
+   "rows": [
+    [
+     "Cell",
+     "The electrochemistry itself, in a sealed prismatic case with a vent and terminals",
+     "The only part that actually stores energy",
+     "314Ah / 392Ah / 588Ah / 684Ah, about 3.2 V nominal"
+    ],
+    [
+     "Module (battery box)",
+     "Cells clamped in series and parallel, cell-level thermal barriers, sensing wiring, a cold plate",
+     "Mechanical support, heat removal, and per-cell voltage and temperature monitoring",
+     "392Ah-1P104S box: 104 cells in series, one parallel string, cold plate holding the spread to 2.5 °C"
+    ],
+    [
+     "Rack / DC block",
+     "Modules stacked to system voltage with fusing and a {{BMS}}",
+     "Gets to a usable DC voltage and provides protection",
+     "1500 V system voltage, 4380 VDC withstand on the 314Ah box"
+    ],
+    [
+     "Container",
+     "A 20-foot enclosure with {{liquid cooling}}, fire detection and suppression, and environmental sealing",
+     "The unit that ships, gets craned onto a pad and is warranted",
+     "20-ft 6.25MWh+ at 424 kWh/m², {{round-trip efficiency}} on the DC side at least 95%, 8,000+ cycles"
+    ]
+   ],
+   "note": "Watch the pattern: the container specification quotes area (kWh/m²), not mass. That single choice of unit tells you the buyer is optimising land and footprint, not weight — the point the first section made."
+  },
+  {
+   "id": "what-fifteen-thousand-cycles-means",
+   "title": "What '15,000 cycles' and 'zero degradation' actually claim",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Storage datasheets carry two durability claims that sound absolute and are not. Learning to read them is the most practical skill in this guide.",
+    "**Cycle life.** CALB quotes 15,000 cycles for its 588Ah and 684Ah cells. A cycle count is meaningless without three qualifiers: to what end-of-life threshold (usually 70% or 80% of original capacity), at what {{depth of discharge}}, and at what temperature and {{C-rate}}. The same cell honestly rated at 15,000 shallow cycles at 25 °C might manage a third of that if cycled deeply, hot and fast. Cycling once a day, 15,000 cycles is about forty-one years — comfortably longer than the twenty-year design life of the container it sits in, which tells you the cell is not the life-limiting component.",
+    "**Zero degradation.** CALB claims 'three years zero degradation' on the 588Ah and 'more than 1,000 cycles zero degradation' on the second-generation 314Ah. Taken literally this would violate thermodynamics — every cycle consumes some lithium into the growing interface layer on the anode. What it means is that capacity loss is masked for a period, and the mechanism CALB names is {{prelithiation}}: extra lithium is loaded into the cell at manufacture, beyond what the cathode supplies, specifically to be consumed by that interface reaction. The measured capacity holds flat while the reserve lasts, then declines normally once it is gone.",
+    "That is a real engineering achievement and a real commercial benefit — it front-loads the useful life and makes the warranty easier to underwrite. It is not, and cannot be, an absence of ageing.",
+    "**The third variable nobody quotes.** {{calendar life}} is degradation that happens with time regardless of cycling, driven mainly by temperature and by sitting at a high {{state of charge}}. A grid battery that is fully charged and idle in a hot climate ages even on the days it does nothing. This is why the thermal management in the container is a life-extension system, not merely a safety system.",
+    "The reading rule: whenever you see a durability number, ask **to what threshold, at what depth, at what temperature**. If the datasheet does not say, the number is marketing."
+   ]
+  },
+  {
+   "id": "who-ships-storage-cells",
+   "title": "Who actually ships storage cells",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "GWh shipped, H1 2026",
+   "intro": "SNE Research's first-half 2026 ranking of global energy-storage cell shipments, on a total market of 461.3 GWh that grew 71% year on year. Learn the shape of this list rather than the exact numbers: one dominant player, a cluster of Chinese challengers, and the Korean majors far down.",
+   "items": [
+    {
+     "label": "CATL",
+     "v": 125.0
+    },
+    {
+     "label": "EVE Energy",
+     "v": 48.0
+    },
+    {
+     "label": "Hithium",
+     "v": 46.2
+    },
+    {
+     "label": "BYD",
+     "v": 35.7
+    },
+    {
+     "label": "CALB",
+     "v": 31.5
+    },
+    {
+     "label": "REPT BATTERO",
+     "v": 31.4
+    },
+    {
+     "label": "Cornex",
+     "v": 30.2
+    },
+    {
+     "label": "Envision AESC",
+     "v": 21.2
+    },
+    {
+     "label": "Gotion High-tech",
+     "v": 20.8
+    },
+    {
+     "label": "Great Power",
+     "v": 20.5
+    },
+    {
+     "label": "LG Energy Solution",
+     "v": 12.0
+    },
+    {
+     "label": "Samsung SDI",
+     "v": 6.4
+    }
+   ],
+   "note": "Three things to take from this. CATL alone is more than the next three combined. Ranks five to seven — CALB, REPT and Cornex — are separated by 1.3 GWh in total, which is inside the error of any estimate. And the two Korean majors together ship less than the tenth-placed Chinese maker, which is the clearest single picture of where cell manufacturing actually sits."
+  },
+  {
+   "id": "why-the-houses-disagree",
+   "title": "Why four research houses give four different answers",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "The table above is one house's view. Others disagree, and the disagreement is instructive rather than embarrassing.",
+    "For the same half-year, the stated size of the global storage-cell market ranges from **461.3 GWh** (SNE) to **467.8 GWh** (InfoLink) to **490 GWh** (Benchmark Mineral Intelligence) to **507.8 GWh** (ICC) — a 10% spread on the denominator alone. Growth rates diverge further, from +71% to +97%, which means the houses disagree about the *previous* year even more than about this one.",
+    "The causes are definitional, not incompetence. Does a cell count when it is shipped, when it is invoiced, or when it is installed? Do cells a maker builds into its own containers count as cell shipments? Are residential and telecom cells in or out? Is the scope global, or China-only, or utility-scale-only?",
+    "Those choices move ranks. CALB is fifth on SNE, TrendForce and InfoLink; sixth on EVTank for the full year 2025; seventh on SPIR; **fourth** on InfoLink's utility-scale-only cut; and **absent from Benchmark's top ten altogether** — on a market Benchmark sizes 6% larger than SNE's, so it is not a smaller-universe artefact.",
+    "**The transferable rule: a market-share number is a claim about a definition as much as about a company.** Before comparing two ranks, check that they measure the same thing over the same scope in the same period. When a company quotes a rank without naming the house — as CALB does when its own results claim fourth place globally in storage cells — you cannot check it, and you should treat it as unverified."
+   ]
+  },
+  {
+   "id": "two-markets-one-factory",
+   "title": "Two markets, one factory — and why a rank in one tells you nothing about the other",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The structural point this company teaches better than any other in the corpus. These are the same cells, from largely the same plants, sold into two industries with different buyers, different specifications and different competitive dynamics.",
+   "cols": [
+    "",
+    "EV traction batteries",
+    "Grid energy storage"
+   ],
+   "rows": [
+    [
+     "What the buyer optimises",
+     "Energy per kilogram, fast-charge rate, pack integration into a vehicle floor",
+     "Cost per kilowatt-hour over twenty years, energy per litre, cycle and calendar life"
+    ],
+    [
+     "Typical chemistry",
+     "{{NMC}} for range, {{LFP}} for cost, {{LMFP}} emerging in between",
+     "{{LFP}} almost exclusively"
+    ],
+    [
+     "Who decides",
+     "An OEM engineering team, model by model, on multi-year qualification",
+     "A developer, EPC or utility, project by project, often on price and bankability"
+    ],
+    [
+     "Switching cost",
+     "Very high — a cell is designed into a specific vehicle platform",
+     "Low — cells are closer to a commodity, specified to a standard format"
+    ],
+    [
+     "How the seller is measured",
+     "Installed volume (裝機量) — energy in vehicles actually sold",
+     "Shipment volume (出貨量) — energy leaving the factory"
+    ],
+    [
+     "CALB's position, H1 2026",
+     "4th globally, 31.2 GWh, 5.1% share, and rising across three consecutive periods",
+     "5th globally, 31.5 GWh, 6.8% share, contested, with rivals 0.1 and 1.3 GWh away"
+    ]
+   ],
+   "note": "The two metrics in the fifth row are genuinely different quantities and are not comparable — installations lag shipments and exclude inventory. A company can honestly report a strong number in one and a weak one in the other. Conflating them is the most common error made about Chinese battery makers."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why did grid storage standardise on LFP when vehicles took longer to?",
+     "a": "Because the two applications weight the trade-offs oppositely. LFP stores less energy per kilogram than nickel chemistries, which matters in a vehicle that must carry its battery and barely matters on a concrete pad. In exchange LFP is cheaper, uses no cobalt or nickel, tolerates more cycles and is thermally more stable — all of which are exactly what a twenty-year, once-or-twice-daily cycling asset needs."
+    },
+    {
+     "q": "An amp-hour is a measure of what, and how do you get from amp-hours to energy?",
+     "a": "Charge, not energy. Multiply amp-hours by the cell's nominal voltage to get watt-hours. An LFP cell sits near 3.2 V, so a 314Ah cell holds roughly 1.0 kWh and a 628Ah cell roughly 2.0 kWh."
+    },
+    {
+     "q": "Why has the industry pushed cell capacity from 280Ah to 587Ah and beyond?",
+     "a": "Because a cell's overhead does not shrink with its size. Each cell needs a case, terminals, a vent, a safety device, welds, a module slot, busbar connections and a BMS channel. Doubling capacity roughly halves the count of all of them per megawatt-hour, so fewer, bigger cells means less inactive material, less assembly labour, fewer failure points and more energy in the same container."
+    },
+    {
+     "q": "What is the difference between thermal runaway and thermal propagation, and which one governs the engineering?",
+     "a": "Thermal runaway is one cell entering a self-sustaining exothermic reaction — unstoppable once started, only containable. Propagation is that failure spreading to neighbouring cells and containers. Propagation is what the engineering targets, because one cell venting is a contained incident while propagation is a substation fire."
+    },
+    {
+     "q": "What do thermo-electric separation and aerogel barriers each do?",
+     "a": "Thermo-electric separation routes the electrical connections and the hot-gas venting path away from each other, so a venting cell does not use its own busbars as a heat bridge to its neighbours. Aerogel is an extremely low-density solid that traps air in a fine structure, making it one of the best solid insulators available, placed between cells to break the conductive heat path."
+    },
+    {
+     "q": "Stacked versus wound cell construction — what is each one good for?",
+     "a": "Stacking lays cut rectangular sheets flat in a pile: better volume utilisation in a rectangular case, lower and more uniform internal resistance, no stressed bends, and it scales better to very large formats. Winding rolls one continuous sheet into a flattened coil: much faster, cheaper and higher-yield on mature equipment, but the tight bends are mechanically and thermally awkward and waste some case volume."
+    },
+    {
+     "q": "A datasheet says '15,000 cycles'. What three questions must you ask before believing it?",
+     "a": "To what end-of-life capacity threshold (usually 70% or 80%), at what depth of discharge, and at what temperature and C-rate. The same cell honestly rated at 15,000 shallow cycles at 25 °C may deliver a fraction of that cycled deeply, hot and fast."
+    },
+    {
+     "q": "How can a cell legitimately claim 'zero degradation' for three years?",
+     "a": "By prelithiation — loading extra lithium at manufacture beyond what the cathode supplies, specifically to feed the interface-layer reaction that consumes lithium on every cycle. Measured capacity holds flat while that reserve lasts, then declines normally. It defers and masks ageing rather than eliminating it, which is impossible."
+    },
+    {
+     "q": "What is calendar life and why does it make thermal management a life-extension system?",
+     "a": "Calendar life is degradation that happens with time regardless of cycling, driven mainly by temperature and by resting at a high state of charge. A grid battery sitting fully charged in a hot climate ages on days it does no work — so the container's cooling extends life, not just prevents fires."
+    },
+    {
+     "q": "Why do four research houses give four different storage-cell rankings for the same half-year?",
+     "a": "Because they define the market differently — shipped versus invoiced versus installed, whether captive cells built into a maker's own containers count, whether residential and telecom cells are in scope, and whether the cut is global, China-only or utility-scale-only. For H1 2026 the stated market ranged from 461 to 508 GWh, a 10% spread on the denominator alone, which moves ranks."
+    },
+    {
+     "q": "Why is 'installed volume' not comparable with 'shipment volume'?",
+     "a": "Installed volume counts energy in vehicles actually sold; shipment volume counts energy leaving the factory. Installations lag shipments and exclude anything sitting in inventory or in a customer's warehouse. They are different quantities, so a rank in one cannot be read across to the other."
+    },
+    {
+     "q": "Why does a storage container specification quote kWh per square metre rather than per kilogram?",
+     "a": "Because the buyer is optimising land and footprint, not weight. The container never moves once craned onto its pad, so mass is nearly free while the area of the site is a real cost. The choice of unit reveals whose problem the product is solving."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A maker announces a 684Ah storage cell to replace its 314Ah. Which benefit is NOT a direct consequence of the larger format?",
+     "c": [
+      "Fewer BMS monitoring channels per megawatt-hour",
+      "Fewer welds and terminals per megawatt-hour",
+      "Higher energy density of the underlying electrochemistry",
+      "More energy in the same 20-foot container"
+     ],
+     "a": 2,
+     "why": "Making the cell bigger does not change the chemistry's intrinsic energy density — a lithium iron phosphate cell stores the same energy per kilogram of active material whatever the case size. What scale changes is the ratio of inactive overhead to active material: fewer cases, terminals, vents, welds, module slots and BMS channels per megawatt-hour, which is why more energy fits in the same box."
+    },
+    {
+     "q": "A vendor's grid-storage datasheet leads with 260 Wh/kg. What should your first reaction be?",
+     "c": [
+      "Impressive — that is a strong figure for grid storage",
+      "Suspicious — grid buyers pay for cost per kilowatt-hour and volume, not mass, so this is the wrong axis to lead on",
+      "Irrelevant — energy density does not apply to stationary storage",
+      "Concerning — it implies the cell is too heavy for the container"
+     ],
+     "a": 1,
+     "why": "Gravimetric energy density is the vehicle metric. A stationary battery never moves, so kilograms are nearly free. Leading a grid datasheet with Wh/kg means either the product was designed for a different market or the more relevant numbers — cost per kilowatt-hour, Wh/L, cycle and calendar life — are less flattering."
+    },
+    {
+     "q": "Two houses rank the same company fourth and seventh in global storage-cell shipments for the same half-year. What is the most likely explanation?",
+     "c": [
+      "One of them has made an arithmetic error",
+      "They define the market differently — scope, timing basis, or which cell types are counted",
+      "One is using stale data from the prior year",
+      "The company changed its reporting during the period"
+     ],
+     "a": 1,
+     "why": "Definitional differences dominate. For H1 2026 the four main houses put the market between 461 and 508 GWh and disagreed more about the prior-year base than the current period. Scope choices — global versus China-only versus utility-scale-only, shipped versus installed, captive cells in or out — move a company several places without anyone being wrong."
+    },
+    {
+     "q": "Why does thermal propagation, rather than thermal runaway, drive the design of a storage container?",
+     "c": [
+      "Because runaway can be prevented entirely with good cell manufacturing",
+      "Because runaway in one cell is containable, while propagation across modules and containers is what destroys a site",
+      "Because propagation happens at lower temperatures than runaway",
+      "Because insurers only test for propagation"
+     ],
+     "a": 1,
+     "why": "Runaway cannot be stopped once initiated — only contained. The engineering therefore accepts that a cell may fail and concentrates on breaking the heat path to its neighbours, using aerogel barriers, thermo-electric separation and container-level suppression. The UL 9540A test is built around exactly this question."
+    },
+    {
+     "q": "A cell maker chooses winding over stacking for a new large-format line. What does that most likely tell you?",
+     "c": [
+      "Its cells will have higher volumetric energy density",
+      "It is prioritising yield, speed and capital efficiency on proven equipment",
+      "It has solved the bend-stress problem that limits wound cells",
+      "Its cells cannot pass nail-penetration testing"
+     ],
+     "a": 1,
+     "why": "Winding is the cost-and-yield answer: one continuous, fast, mature process on equipment that may already be installed. Stacking gives better volume utilisation, lower internal resistance and no stressed bends, but costs more to run. A maker choosing winding at large format is usually protecting capital and throughput rather than chasing peak performance."
+    },
+    {
+     "q": "A company's annual report states it ranked fourth globally in storage-cell shipments, and names no research house. How should a reader treat it?",
+     "c": [
+      "As fact, since annual reports are audited documents",
+      "As unverified, because a rank without a stated source and scope cannot be checked",
+      "As false, since companies always overstate their position",
+      "As equivalent to a fourth-place ranking from any named house"
+     ],
+     "a": 1,
+     "why": "Audit covers the financial statements, not a marketing claim in the business review. Without the house and the scope you cannot tell whether it refers to all cells or a sub-market, global or domestic, shipped or installed. In this case no independent house supports fourth on an all-cells global basis — the only fourth-place reading available is one house's utility-scale-only cut, which is a narrower claim than the one made."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "thermo-electric separation",
+   "d": "A cell and module design that routes the electrical connections and the hot-gas venting path away from each other, so that a cell in thermal runaway does not vent along its own busbars into its neighbours. CALB brands its implementation TPP."
+  },
+  {
+   "t": "installed volume",
+   "d": "Battery energy measured in vehicles that were actually sold in a period (裝機量), as distinct from shipment volume measured as energy leaving the factory. Installations lag shipments and exclude inventory, so the two are not comparable."
+  }
+ ]
+}

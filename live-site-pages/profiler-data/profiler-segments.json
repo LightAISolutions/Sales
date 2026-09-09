@@ -28,7 +28,7 @@
     "Factory capacity and delivery slots; yield record",
     "Safety certification (UL 9540A at cell level) and the fire record"
    ],
-   "notes": "Reserved adjacent role for upstream materials (lithium, LFP cathode, graphite/anode), which join here as adjacent members rather than as a segment of their own (INTEGRATED-REMEDIATION-PLAN.md §7.2). PARTLY FILLED at S3 P5 (2026-09-09, v05.28r): albemarle joined on lithium and novonix on synthetic graphite anode material, both adjacent. Still reserved for the private cathode and cell names of E4b/E6b — mitra-chem and cornex. Note that the two public alternates named in the original plan are no longer interchangeable: ICL discontinued its US LFP cathode project on 2025-11-11 so the premise is dead, and Syrah is pre-commercial at Vidalia with a going-concern flag; westwater-resources is the clean graphite alternate. Both members added here are pre-cell suppliers and neither counts toward the floor's incumbent or challenger requirement.",
+   "notes": "Reserved adjacent role for upstream materials (lithium, LFP cathode, graphite/anode), which join here as adjacent members rather than as a segment of their own (INTEGRATED-REMEDIATION-PLAN.md §7.2). PARTLY FILLED at S3 P5 (2026-09-09, v05.28r): albemarle joined on lithium and novonix on synthetic graphite anode material, both adjacent. Still reserved for the private cathode and cell names of E4b/E6b — mitra-chem and cornex. Note that the two public alternates named in the original plan are no longer interchangeable: ICL discontinued its US LFP cathode project on 2025-11-11 so the premise is dead, and Syrah is pre-commercial at Vidalia with a going-concern flag; westwater-resources is the clean graphite alternate. Both members added here are pre-cell suppliers and neither counts toward the floor's incumbent or challenger requirement. S3 P6 (2026-09-09, v05.29r) added calb and great-power, both CHALLENGER on the SNE H1-2026 storage-cell ranking (CALB 5th at 31.5 GWh / 6.8%; Great Power 10th at 20.5 GWh / 4.4%, +202%). Neither could be typed incumbent: this segment's incumbent bar is top-three plus explicit leader language, and EVE Energy is typed challenger at 2nd and 10.4%. NOTE FOR THE DEVELOPER, not acted on here: on the same SNE table EVE (2nd, 48.0 GWh) is a challenger while hithium (3rd, 46.2 GWh) is an incumbent - a pre-existing tension this session did not re-type, since only its own two companies are its to assign. The SNE H1-2026 top twelve is now ELEVEN of twelve covered; the twelfth is cornex at 7th, ranked ABOVE both companies added here, and it is a private E6b/V4 subject.",
    "members": [
     {
      "slug": "catl",
@@ -119,6 +119,16 @@
      "slug": "novonix",
      "role": "adjacent",
      "basis": "ecosystemRole: \"it makes the anode active material that goes into the negative electrode of a lithium-ion cell, in the same upstream position that a lithium producer occupies on the cathode side\" — and productsAndServices › synthetic graphite anode active material records binding offtakes with Panasonic Energy, itself a member of this segment, and with PowerCo SE. Adjacent rather than challenger: continuing-operations revenue is zero and no commercial anode volume has shipped."
+    },
+    {
+     "slug": "calb",
+     "role": "challenger",
+     "basis": "ecosystemRole: \"one of the four Chinese makers clustered between 6.5% and 7.7% of global storage-cell shipments behind CATL, EVE and Hithium\"; productsAndServices › ZHIJIU energy-storage cells positioning: fifth on SNE, TrendForce and InfoLink at 31.5 GWh and 6.8% for H1 2026, sixth on EVTank for FY2025, seventh on SPIR, and absent from Benchmark's top ten. Challenger not incumbent: its share is roughly a quarter of CATL's and REPT sits 0.1 GWh behind on the same 6.8%."
+    },
+    {
+     "slug": "great-power",
+     "role": "challenger",
+     "basis": "productsAndServices › Fengpeng large-format energy-storage cells and Residential and portable storage: eighth to tenth globally in storage-cell shipments across four houses (SPIR 8th, TrendForce 9th, SNE 10th at 20.5 GWh and 4.4%, Benchmark inside the top ten), growing 202% year on year — the fastest in the global top ten — with share up from 2.5%. A fast riser off a mid-tier base, which is the challenger definition; it is a leader only inside residential cells, a sub-segment."
     }
    ]
   },
@@ -282,6 +292,16 @@
      "slug": "sinexcel",
      "role": "adjacent",
      "basis": "productsAndServices › Energy storage PCS & containerized systems (StellaON); the core business is the PCS"
+    },
+    {
+     "slug": "calb",
+     "role": "adjacent",
+     "basis": "productsAndServices › ZHIJIU energy-storage systems: 20-foot 5MWh and 6.25MWh+ liquid-cooled containers, 373 kWh and 261 kWh commercial cabinets and a residential range, sold as a route to market for its own cells. Adjacent rather than challenger because CALB is named in neither Wood Mackenzie's 2026 global BESS integrator ranking nor Benchmark's H1 2026 system-integrator top ten — it has no independent standing as an integrator."
+    },
+    {
+     "slug": "great-power",
+     "role": "adjacent",
+     "basis": "productsAndServices › GreatCom, GreatOne and GreatE: MAX-20HC-6250 and MAX-20HC-5000 containers, Magna commercial and utility cabinets, and named deployments including Azerbaijan 500MWh and Sichuan Zhongfu 428.48MWh. Adjacent rather than challenger because it appears in no third-party BESS integrator ranking; the one exception, CNESA ranking it second among Chinese companies for commercial and industrial system shipments, is a national sub-segment rather than the global integrator set."
     }
    ]
   },

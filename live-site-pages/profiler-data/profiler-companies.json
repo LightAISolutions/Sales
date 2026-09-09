@@ -4781,6 +4781,117 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "calb",
+      "name": "CALB",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Fifth in global storage-cell shipments and fourth in EV traction, on a 13.08% float with no declared controlling shareholder",
+      "hq": "Changzhou, China",
+      "ticker": "HKEX: 3931",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "CALB Group Co., Ltd.",
+        "CALB Co., Ltd.",
+        "中创新航",
+        "中創新航",
+        "中创新航科技集团股份有限公司",
+        "中創新航科技集團股份有限公司",
+        "CALB Group",
+        "3931.HK",
+        "ZHIJIU",
+        "至久",
+        "DINGLIU",
+        "顶流",
+        "頂流",
+        "ZHIYUAN",
+        "至远",
+        "至遠",
+        "WUJIE",
+        "无界",
+        "無界",
+        "CALB (EUROPE), S.A.",
+        "中航锂电",
+        "中航鋰電",
+        "China Lithium Battery Technology"
+      ],
+      "domains": [
+        "calb-tech.com"
+      ],
+      "srcTotal": 60,
+      "srcFirstPct": 57,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "great-power",
+      "name": "Great Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Top-three in residential storage cells and eighth-to-tenth overall; its Hong Kong listing application lapsed unheard in July 2026",
+      "hq": "Guangzhou, China",
+      "ticker": "SZSE: 300438",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Guangzhou Great Power Energy & Technology Co., Ltd.",
+        "广州鹏辉能源科技股份有限公司",
+        "鹏辉能源",
+        "鵬輝能源",
+        "Great Power Energy",
+        "Penghui",
+        "300438",
+        "Fengpeng",
+        "风鹏",
+        "風鵬",
+        "WindPeng",
+        "GreatCom",
+        "GreatOne",
+        "GreatE",
+        "Great One",
+        "Great Com",
+        "Magna-UTL",
+        "LiqPack",
+        "AirPack",
+        "POLAR",
+        "Hanhai",
+        "瀚海",
+        "Qingtian 520",
+        "擎天520",
+        "河南省鹏辉电源有限公司",
+        "珠海鹏辉能源",
+        "佛山市实达科技",
+        "广州耐时电池科技"
+      ],
+      "domains": [
+        "greatpower.net"
+      ],
+      "srcTotal": 57,
+      "srcFirstPct": 61,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        }
+      ]
     }
   ]
 }

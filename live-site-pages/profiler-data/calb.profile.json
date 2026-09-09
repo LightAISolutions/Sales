@@ -1,0 +1,1239 @@
+{
+ "schemaVersion": 7,
+ "slug": "calb",
+ "name": "CALB Group Co., Ltd.",
+ "shortName": "CALB",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.calb-tech.com",
+ "headquarters": "No. 1 Jiangdong Avenue, Jintan District, Changzhou, Jiangsu, China",
+ "employees": "14,323 at 31 December 2025 (10,655 male / 3,668 female)",
+ "ownership": {
+  "type": "public",
+  "ticker": "HKEX: 3931"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** CALB is the fifth-largest energy-storage cell maker in the world on the modal third-party reading and the fourth-largest EV traction battery maker, but it is a challenger in storage and not an incumbent: its 6.8% share sits at roughly a quarter of CATL's, three rivals are clustered within 0.6 percentage points of it, and one serious research house omits it from the top ten altogether. \n\n**BACKGROUND.** Changzhou-based lithium-ion cell manufacturer listed on HKEX in October 2022 and renamed from CALB Co., Ltd. on 28 December 2022. FY2025 revenue RMB 44.40bn (+60.0%), gross margin 16.69%, profit attributable to owners RMB 1.476bn (+149.6%); H1 2026 revenue RMB 27.08bn (+65.0%) with attributable profit RMB 935.1m, per IFRS accounts filed with HKEX. EV traction is 60.9% of H1 2026 revenue and energy storage 39.1%, the storage half growing faster (+83.8% against +54.8%). The register has no declared controlling shareholder or actual controller: a Changzhou Jintan district concert group holds 26.02% of votes, Xiamen Jinyuan 13.42% and AVIC 9.25%, and the public float is 13.08%. The company was added to the US Department of Defense Section 1260H list of Chinese military companies on 8 June 2026.",
+ "ecosystemRole": "CALB sits at the cell layer of the storage chain, selling prismatic LFP cells and factory-assembled containers to Chinese state generators, grid companies and system integrators, and prismatic traction cells to seventeen named vehicle programmes. It is one of the four Chinese makers clustered between 6.5% and 7.7% of global storage-cell shipments behind CATL, EVE and Hithium, and unlike its Korean peers it reaches overseas storage demand almost entirely by export rather than by local manufacture: overseas revenue was 2.1% of FY2025 and 4.4% of H1 2026. Its second business, EV traction batteries, is larger and better ranked than its storage business and is what funds the storage capacity build.",
+ "productsAndServices": [
+  {
+   "name": "ZHIJIU (至久) energy-storage cells",
+   "category": "Energy storage — cells",
+   "description": "The energy-storage cell brand, one of four battery brands CALB names in its FY2025 results alongside DINGLIU (passenger vehicle), ZHIYUAN (commercial vehicle) and WUJIE (solid-state). Prismatic LFP. Four capacities are in the range: a second-generation 314Ah, a 392Ah, a 588Ah and a 684Ah. The H1 2026 interim states that 314Ah and 392Ah continue in volume delivery while 588Ah and 600+Ah large cells are in mass production. CALB discloses no shipment volume in GWh for this or any other product line, in any period.",
+   "highlights": [
+    "Second-generation 314Ah — described by the company as the first in the industry to reach mass production, with a stated 15,000-cycle life and more than 1,000 cycles of 'zero degradation'",
+    "392Ah — positioned by the company as the optimal cell for a 6.25MWh system, on fully line-compatible tooling",
+    "588Ah — 3 years zero degradation, 15,000+ cycles, volumetric energy density stated as at least 440 Wh/L on the product page and as 450 Wh/L in the FY2025 results announcement",
+    "684Ah — an all-new-generation large-capacity stacked cell, at least 440 Wh/L, supporting more than 6.8MWh in a 20-foot standard container",
+    "The 588Ah and 684Ah use thermo-electric separation and dual insulation for safety, with whole-life lithium replenishment cited as the mechanism behind the zero-degradation claim",
+    "Cathode chemistry is the company's own LiuJing LFP and a high-manganese LMFP line; no sodium-ion product appears anywhere in CALB's first-party materials"
+   ],
+   "positioning": "CALB names no competitor in any first-party document. Its own FY2025 results claim energy-storage cell shipments ranked fourth globally, without citing a research house. Independent houses do not support fourth on an all-cells basis: SNE Research, TrendForce and InfoLink each place CALB fifth for H1 2026, EVTank placed it sixth for FY2025 and SPIR seventh for H1 2026, while Benchmark Mineral Intelligence omits it from its H1 2026 top ten entirely on a larger stated market. SNE puts CALB 0.1 GWh ahead of REPT BATTERO and 1.3 GWh ahead of Cornex, so the rank is contested rather than held.",
+   "soldThrough": "Three routes, per the H1 2026 interim: direct to power groups, grid companies and generators; through system integrators and wind and solar developers; and through CALB's own storage-station development, where the company says it is using demonstration projects to open an independent-storage fund investment channel. Overseas sales run through supplier whitelists of regional storage developers and IPPs.",
+   "targetSegments": [
+    "Utility-scale storage",
+    "Commercial and industrial storage",
+    "Residential storage",
+    "Marine",
+    "AI data-centre backup"
+   ],
+   "roadmap": "The FY2025 outlook commits to industrialising a 360 Wh/kg high-nickel medium-silicon cylindrical cell and 200+ Wh/kg phosphate-based products, accelerating LMFP, rolling 10Ah-class all-solid-state cells into robotics, and batch-validating a 400 Wh/kg automotive all-solid-state product. A 450 Wh/kg all-solid-state system was reported as developed with first-batch prototype validation complete."
+  },
+  {
+   "name": "ZHIJIU energy-storage systems — containers, cabinets and residential",
+   "category": "Energy storage — systems",
+   "description": "Factory-assembled DC blocks built on CALB's own cells, spanning utility-scale containers, commercial and industrial outdoor cabinets, and residential units. CALB appears in no third-party BESS system-integrator ranking: it is named in neither Wood Mackenzie's 2026 global integrator ranking nor Benchmark's H1 2026 system-integrator top ten, so the systems business is a channel for its cells rather than an independently ranked integration business.",
+   "highlights": [
+    "20-foot 5MWh high-voltage liquid-cooled container — stated volumetric energy up 35%, cycle life up 20%, insert-box-level IP67, system-level immersion water fire suppression, self-consumption down 20%, LCOE down 15%, round-trip efficiency 95%",
+    "20-foot 6.25MWh+ high-voltage liquid-cooled container — areal energy density 424 kWh/m2, 8,000+ cycles, DC-side efficiency at least 95%, pack-level IP67, and what the company calls zero newly developed components",
+    "314Ah-1P104S liquid-cooled battery box — 1500 V system voltage, 4380 VDC withstand, seismic grade 8, independent per-box cold plate holding maximum temperature spread at or below 3 degrees C",
+    "392Ah-1P104S liquid-cooled battery box — dual-row large-module design, pack-level fuse protection, third-generation cell-level thermal barrier and fourth-generation intelligent liquid cooling at 2.5 degrees C spread",
+    "Overseas container variant — 22.5% footprint saving, 20-year design life, three-layer cell, pack and container explosion-proof design, key components UL-certified and stated to meet NFPA, UL, IEC and UN standards",
+    "Commercial and industrial cabinets at 373 kWh (high-voltage) and 261 kWh (low-voltage), one to ten units in parallel, 350 kW continuous output, 15-year life, scaling from 200 to 5,000 kWh",
+    "Residential CJ160F5AA and CJ160F10AA, with the H1 2026 interim widening the range to cover 2.7 kWh to 20 kWh; markets named are Europe, North America and Australia"
+   ],
+   "positioning": "Sold as a route to market for CALB cells rather than as a ranked integrator. The deployment list the company publishes is dominated by Chinese state generators and grid companies, with a small number of large overseas references it does not size in revenue terms.",
+   "soldThrough": "Direct to generators, grid companies and independent storage funds in China; through developer and IPP supplier whitelists overseas. New commercial models named for 2026 are battery banks and finance leasing.",
+   "targetSegments": [
+    "State generators and grid companies",
+    "Independent storage developers",
+    "Commercial and industrial sites",
+    "Households"
+   ],
+   "roadmap": "H1 2026 adds a first Japanese in-front-of-the-meter independent storage project on an ultra-high-voltage node, and 6C high-rate systems for AI data-centre backup. A green-power direct-connect project received first-batch government approval."
+  },
+  {
+   "name": "DINGLIU (顶流) passenger-vehicle traction batteries",
+   "category": "EV traction batteries",
+   "description": "The passenger-car cell and pack line, and CALB's largest business: EV traction was 68.2% of FY2025 revenue and 60.9% of H1 2026. Four sub-lines cover all-climate BEV, super-fast-charge range-extender, high-power plug-in hybrid and high-energy applications. CALB states installed volume ranked fourth globally and third in China for 2025, without naming the source; SNE Research independently places CALB fourth globally in H1 2026 at 31.2 GWh and 5.1%.",
+   "highlights": [
+    "All-climate sub-line — 1,000 km full-charge range, stated zero degradation at minus 20 degrees C, 400 km added in a 5-minute charge",
+    "Super-fast-charge sub-line — 10C+ continuous discharge on a 900 V high-voltage platform",
+    "High-power sub-line — LFP at 430 Wh/L and LMFP at 480 Wh/L, both described as industry firsts, with discharge above 20C",
+    "High-energy sub-line — 220 Wh/kg pack in a 120 kWh+ system, a solid-liquid hybrid at 280 Wh/kg pack, and a 310 Wh/kg R46 cylindrical cell",
+    "TPP GEN3.0 no-thermal-propagation architecture combining thermo-electric separation and third-generation aerogel insulation",
+    "Seventeen named vehicle programmes including Volvo EX30, smart #1 and #3, Xpeng G6 and X9, SAIC Audi E5 Sportback, GAC Toyota bZ3X, NIO ONVO L90, Lynk & Co 900 and Mazda EZ-6",
+    "More than 3,100,000 vehicles fitted across 39 passenger brands and 340+ model applications"
+   ],
+   "positioning": "CALB's stronger and more stable competitive position sits here rather than in storage: SNE has ranked it fourth globally in EV battery installations across FY2025, H1 2026 and January to July 2026, with share rising from 4.4% to 5.1% and growth of 34% to 40%. Gotion's dossier records that CALB passed it in the Chinese ranking during 2026.",
+   "soldThrough": "Direct to OEMs on model-by-model designated supply, including exclusive designations. Xiaomi Auto publicly named CALB an official power-battery strategic partner on 4 September 2026.",
+   "targetSegments": [
+    "Chinese OEMs",
+    "International OEM platforms (Toyota, Volkswagen, Hyundai groups)",
+    "Huawei HIMA brands"
+   ],
+   "roadmap": "Leapmotor A10 and A05 platforms in mass delivery from H2 2026; Huawei HIMA Zhijie RX targeted for H2 2026 delivery."
+  },
+  {
+   "name": "ZHIYUAN (至远) commercial-vehicle and marine batteries",
+   "category": "EV traction batteries",
+   "description": "A modular commercial platform spanning 30 kWh to 900 kWh across vans, micro and light trucks, buses, heavy trucks and construction machinery, plus a marine line. This is CALB's fastest-growing product area by its own reporting: commercial-vehicle shipments rose 225% year on year in H1 2026 after multiple-fold growth in FY2025.",
+   "highlights": [
+    "Heavy commercial standard system — 4C ultra-fast charge, 15-year life, 3,000,000 km stated life, system energy density 167 Wh/kg described as the industry's highest, enclosure volume utilisation at least 94%, 20 to 80% state of charge in 12 minutes",
+    "Bus systems warranted to 10 years or 1,000,000 km at 170 Wh/kg and above 260 Wh/L",
+    "Marine line — 12,000-cycle life, 3C charge and discharge, energy cells up to 588Ah, pack energy density at least 147 Wh/kg, type-approved by CCS, ABS, Lloyd's Register, Bureau Veritas, RINA and DNV",
+    "First to install a 400 Wh/kg solid-liquid hybrid battery in a new-energy commercial vehicle, per the FY2025 results",
+    "Named platforms include Xiamen King Long 18m BRT at 427 kWh, Geely Farizon Xingzhi at 101 kWh, Windrose at 705 and 730 kWh, SANY loaders and excavators, and exclusive supply to a UK bus programme where CALB claims the leading NCM share",
+    "468 new commercial model certifications in FY2025, up 96%, and 206 more in H1 2026"
+   ],
+   "positioning": "CATL's dossier names CALB as a competitor in commercial-vehicle cells specifically. CALB's China commercial-vehicle installations grew 144.4% in H1 2026 to a stated 9.6% global share of new-energy commercial vehicles, third globally.",
+   "soldThrough": "Direct to commercial OEMs and machinery makers; new for 2026 are heavy-truck battery swap, battery banks and finance leasing.",
+   "targetSegments": [
+    "Commercial vehicle OEMs",
+    "Construction machinery",
+    "Buses and BRT",
+    "Marine and inland waterway"
+   ],
+   "roadmap": "Fourth-generation GL-series stacked product for heavy commercial with an in-house CIR integrated architecture, per the H1 2026 interim."
+  },
+  {
+   "name": "WUJIE (无界) solid-state and emerging applications",
+   "category": "Next-generation cells",
+   "description": "The solid-state brand plus the eVTOL, robotics and light-power lines that CALB uses as early adopters for high-energy chemistry. These are pre-scale businesses: CALB reports no revenue for any of them and they are not separately disclosed.",
+   "highlights": [
+    "All-solid-state system developed at 450 Wh/kg with the industry's first batch of prototype validation completed, per the FY2025 results",
+    "eVTOL — first-generation flight battery at 300 Wh/kg with 6C charge; second-generation at 360 Wh/kg with stated 200 degrees C solid-liquid hybrid tolerance, aviation-grade fourfold safety redundancy and 1,500+ kW",
+    "Robotics — 9-series 4695 cylindrical cells at 310 to 360 Wh/kg and solid-state at 350 to 600 Wh/kg",
+    "Light power — LFP at 385+ Wh/L rising to 430+ Wh/L, 10 to 16C discharge, motorcycle range to 700 km",
+    "CALB claims the leading industry market share for its R46 310 Wh/kg eVTOL cylindrical cell, without citing a source"
+   ],
+   "positioning": "Positioned as a technology showcase feeding the traction and storage lines rather than as a business in its own right. Named eVTOL customers include XPeng AeroHT, GAC GOVY and Vertaxi.",
+   "soldThrough": "Direct to eVTOL and robotics developers, and to two-wheeler and light-vehicle makers.",
+   "targetSegments": [
+    "eVTOL developers",
+    "Robotics",
+    "Two-wheelers and light power",
+    "Marine"
+   ],
+   "roadmap": "10Ah-class all-solid-state cells into robotics, and batch validation of a large-capacity 400 Wh/kg automotive all-solid-state product, both named in the FY2025 outlook without a completion date."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "ZHIJIU 588Ah energy-storage cell",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal capacity",
+     "value": "588Ah"
+    },
+    {
+     "band": "Electrical",
+     "label": "Volumetric energy density",
+     "value": "at least 440 Wh/L (product page); 450 Wh/L (FY2025 results announcement)"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life",
+     "value": "15,000+ cycles"
+    },
+    {
+     "band": "Durability",
+     "label": "Degradation",
+     "value": "3 years zero degradation"
+    },
+    {
+     "band": "Design",
+     "label": "Safety architecture",
+     "value": "thermo-electric separation and dual-insulation technology"
+    },
+    {
+     "band": "Design",
+     "label": "Degradation mechanism",
+     "value": "whole-life-cycle lithium replenishment"
+    },
+    {
+     "band": "Design",
+     "label": "Chemistry",
+     "value": "LFP"
+    }
+   ],
+   "notes": "The two energy-density figures come from CALB's own materials and disagree by 2.3%; the filed results announcement carries the higher number. Both are recorded because no source reconciles them."
+  },
+  {
+   "product": "ZHIJIU 684Ah energy-storage cell",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal capacity",
+     "value": "684Ah"
+    },
+    {
+     "band": "Electrical",
+     "label": "Volumetric energy density",
+     "value": "at least 440 Wh/L"
+    },
+    {
+     "band": "Design",
+     "label": "Construction",
+     "value": "all-new-generation large-capacity stacked (laminated) cell"
+    },
+    {
+     "band": "Design",
+     "label": "System integration",
+     "value": "supports more than 6.8MWh in a 20-foot standard container"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life",
+     "value": "15,000+ cycles"
+    },
+    {
+     "band": "Durability",
+     "label": "Degradation",
+     "value": "3 years zero degradation"
+    }
+   ],
+   "notes": "CALB's largest published storage cell. Great Power and CRRC Zhuzhou jointly launched a separate 688Ah cell; the two are different products from different makers."
+  },
+  {
+   "product": "ZHIJIU second-generation 314Ah energy-storage cell",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal capacity",
+     "value": "314Ah"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life",
+     "value": "15,000 cycles"
+    },
+    {
+     "band": "Durability",
+     "label": "Zero-degradation window",
+     "value": "1,000+ cycles"
+    },
+    {
+     "band": "Design",
+     "label": "Status",
+     "value": "first in the industry to reach mass production, per the company"
+    }
+   ],
+   "notes": "Described in the H1 2026 interim as continuing in volume delivery alongside the 392Ah."
+  },
+  {
+   "product": "20-foot 6.25MWh+ high-voltage liquid-cooled container",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Rated energy",
+     "value": "6.25MWh and above"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC-side efficiency",
+     "value": "at least 95%"
+    },
+    {
+     "band": "Design",
+     "label": "Areal energy density",
+     "value": "424 kWh/m2"
+    },
+    {
+     "band": "Design",
+     "label": "Ingress protection",
+     "value": "IP67 at pack level"
+    },
+    {
+     "band": "Design",
+     "label": "Cabinet",
+     "value": "20HC standard, supporting back-to-back and side-by-side arrangement"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life",
+     "value": "8,000+ cycles"
+    },
+    {
+     "band": "Compliance",
+     "label": "Fire suppression",
+     "value": "pack-level, described by the company as best in class"
+    }
+   ],
+   "notes": "Paired with the 392Ah cell. CALB also publishes a 20-foot 5MWh container with a stated 95% round-trip efficiency and 15% LCOE reduction."
+  },
+  {
+   "product": "20-foot 314Ah ISO container (overseas version)",
+   "specs": [
+    {
+     "band": "Design",
+     "label": "Footprint",
+     "value": "22.5% saving"
+    },
+    {
+     "band": "Design",
+     "label": "Design life",
+     "value": "20 years"
+    },
+    {
+     "band": "Design",
+     "label": "Thermal",
+     "value": "integrated air cooling; environmentally friendly refrigerant"
+    },
+    {
+     "band": "Design",
+     "label": "Explosion protection",
+     "value": "three-layer cell, pack and container design"
+    },
+    {
+     "band": "Electrical",
+     "label": "Self-consumption",
+     "value": "down 20%"
+    },
+    {
+     "band": "Compliance",
+     "label": "Standards",
+     "value": "key components UL-certified; stated to meet and exceed NFPA, UL, IEC and UN standards"
+    }
+   ],
+   "notes": "The export configuration. CALB's overseas revenue was 2.1% of FY2025 and 4.4% of H1 2026, so this variant carries a small share of volume."
+  },
+  {
+   "product": "373 kWh commercial and industrial liquid-cooled cabinet",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Rated energy",
+     "value": "373 kWh"
+    },
+    {
+     "band": "Electrical",
+     "label": "Continuous output",
+     "value": "350 kW"
+    },
+    {
+     "band": "Design",
+     "label": "Parallel operation",
+     "value": "1 to 10 units"
+    },
+    {
+     "band": "Design",
+     "label": "Scaling range",
+     "value": "200 to 5,000 kWh via smart combiner and cloud AI"
+    },
+    {
+     "band": "Design",
+     "label": "Areal energy density",
+     "value": "210+ kWh/m2, footprint down 20%"
+    },
+    {
+     "band": "Durability",
+     "label": "Design life",
+     "value": "15 years"
+    }
+   ],
+   "notes": "Targeted by the company at frequency-regulation ancillary-service duty. A 261 kWh low-voltage variant is also published."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-09",
+   "category": "corporate",
+   "headline": "Hefei Research Institute project signed",
+   "read": "A sixth R&D centre, co-located with the Hefei production base whose minority CALB bought out six weeks earlier — R&D following equity consolidation rather than preceding it.",
+   "source": "CALB newsroom"
+  },
+  {
+   "date": "2026-09-04",
+   "category": "customer",
+   "headline": "Xiaomi Auto publicly names CALB an official power-battery strategic partner",
+   "read": "The most commercially significant customer event of the period, and it lands while CALB's two largest customers remain unnamed at 16.7% and 15.7% of FY2025 revenue.",
+   "source": "CALB newsroom"
+  },
+  {
+   "date": "2026-08-28",
+   "category": "financial",
+   "headline": "H1 2026 results: revenue RMB 27.08bn (+65.0%), profit attributable to owners RMB 935.1m (+100.7%)",
+   "read": "Gross margin held at 16.71% while revenue grew two-thirds. Non-controlling interests took 38.6% of profit, a direct consequence of financing production bases as local-government joint ventures.",
+   "source": "HKEX interim results announcement"
+  },
+  {
+   "date": "2026-08-28",
+   "category": "financial",
+   "headline": "First dividend since listing proposed — interim RMB 0.6 per 10 shares",
+   "read": "After four years of paying nothing, this signals management believes peak capex is passing. It is also proposed while a conversion of 11.69% of the share capital sits unapproved.",
+   "source": "HKEX announcement"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "ma",
+   "headline": "Bought 12.7230% of the Hefei subsidiary for RMB 690m at the Hefei Equity Exchange, lifting its stake to 42.1082%",
+   "read": "The second local-government minority buy-out in seven months. Together with Wuhan, RMB 1.35bn spent reclaiming earnings that were leaking to non-controlling interests.",
+   "source": "HKEX connected transaction announcement"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "corporate",
+   "headline": "State Science and Technology Progress Award, second class",
+   "read": "Recorded in the H1 2026 interim. State recognition matters commercially in a market where the buyers are state generators.",
+   "source": "CALB newsroom"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "policy",
+   "headline": "Added to the US Department of Defense Section 1260H list of Chinese military companies",
+   "read": "The most consequential policy event in the file. Section 805 of the FY2024 NDAA bars Department of War contracting with listed entities from 30 June 2026, and CALB has no US plant and no announced licensing structure to work around it.",
+   "source": "US Department of Defense 1260H update, reported by Holland & Knight and WilmerHale"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "corporate",
+   "headline": "Proposed replacing the H-share auditor RSM Hong Kong with Rongcheng (Hong Kong), the offshore affiliate of CALB's own PRC auditor",
+   "read": "Approved at the 2026-06-09 AGM. The stated rationale is unified audit management; the effect is that the independent second set of eyes on the HK-reported accounts is now an affiliate of the first.",
+   "source": "HKEX announcement"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "corporate",
+   "headline": "Board approves converting 207,102,914 domestic shares (11.69%) into H shares; CSRC filing submitted",
+   "read": "Round three of the H-share full circulation. As at 9 September 2026 it has produced no CSRC acceptance notice, no exchange approval and no completion — see the monthly returns.",
+   "source": "HKEX inside-information announcement"
+  },
+  {
+   "date": "2025-12-24",
+   "category": "ma",
+   "headline": "Bought 8.3155% of the Wuhan subsidiary for RMB 660.08m at the Beijing Equity Exchange, lifting its stake to 59.3155%",
+   "read": "First of the two minority buy-outs. The vendor was a substantial shareholder at subsidiary level, so it was a connected transaction.",
+   "source": "HKEX connected transaction announcement"
+  },
+  {
+   "date": "2025-11-21",
+   "category": "ma",
+   "headline": "Completed the acquisition of control of Jiangsu Aoliwei (SZSE: 300507) — board reconstituted, four of five directors CALB-nominated",
+   "read": "CALB became controlling shareholder of a listed auto-parts maker; the target is now formally declared to have no actual controller. A vertical-integration move into pack components and thermal management, bought at the statutory 80% price floor with the seller carrying the downside.",
+   "source": "HKEX voluntary announcement"
+  },
+  {
+   "date": "2025-10-10",
+   "category": "ma",
+   "headline": "Share transfer registered — 87,620,380 Aoliwei shares (10.94%) for RMB 510.83m",
+   "read": "The first of a two-stage completion; the voting-rights waiver over a further 19.55% took effect on 21 October. The RMB 673m share placement that would take CALB to about 22.61% has still not completed.",
+   "source": "HKEX announcement"
+  },
+  {
+   "date": "2025-09-04",
+   "category": "corporate",
+   "headline": "H-share full circulation round two completed — 149,831,290 domestic shares converted",
+   "read": "H shares rose from 611.7m to 761.5m, roughly a quarter added to the float in a day. This is the precedent against which round three's stall is measured.",
+   "source": "HKEX inside-information announcement"
+  },
+  {
+   "date": "2025-05-28",
+   "category": "capacity",
+   "headline": "Handan joint venture formed with two Handan municipal state-owned groups — RMB 4.0bn registered capital, CALB 60%",
+   "read": "The template for how CALB finances capacity: local government funds 40%, CALB consolidates, and buys the partner out later once the plant runs.",
+   "source": "HKEX discloseable transaction announcement"
+  },
+  {
+   "date": "2025-05-06",
+   "category": "ma",
+   "headline": "Agreed to acquire control of Jiangsu Aoliwei for RMB 511m plus a voting-rights waiver over 19.55%, with a conditional RMB 673m placement",
+   "read": "Classified as a major transaction under HKEX Chapter 14 and approved at the 2025-07-09 EGM. The seller gave a profit guarantee of RMB 178m for FY2025 and RMB 195m for FY2026, capped at RMB 80m and secured by an RMB 80m deposit.",
+   "source": "HKEX major transaction announcement"
+  },
+  {
+   "date": "2025-03-09",
+   "category": "corporate",
+   "headline": "Shares included in the Stock Connect southbound securities list",
+   "read": "Opens mainland institutional and retail flow — a precondition for index inclusion and a partial answer to a 13.08% public float.",
+   "source": "HKEX voluntary announcement"
+  },
+  {
+   "date": "2025-01-28",
+   "category": "legal",
+   "headline": "CATL sues in the Hunan High People's Court over a battery top-cover patent, seeking RMB 110m",
+   "read": "The largest of three CATL claims announced in 26 days. CALB denies infringement in each.",
+   "source": "HKEX litigation announcement"
+  },
+  {
+   "date": "2025-01-17",
+   "category": "legal",
+   "headline": "CATL sues in the Quanzhou Intermediate People's Court over a battery module utility patent, seeking RMB 60m",
+   "read": "CALB denies infringement and has filed an accepted CNIPA invalidation request against the asserted patent.",
+   "source": "HKEX litigation announcement"
+  },
+  {
+   "date": "2025-01-03",
+   "category": "legal",
+   "headline": "CATL sues in the Hangzhou Intermediate People's Court over a top-cover assembly patent, seeking RMB 90m",
+   "read": "CALB denies infringement and has filed an accepted CNIPA invalidation request. No progress, settlement or judgment has been announced on any of the three suits in the 21 months since.",
+   "source": "HKEX litigation announcement"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "market",
+   "headline": "SNE Research places CALB fifth in global storage-cell shipments for H1 2026 at 31.5 GWh and 6.8%",
+   "read": "0.1 GWh ahead of REPT and 1.3 GWh ahead of Cornex — a rank held by a margin inside any plausible methodology error.",
+   "source": "CnEVPost reporting SNE Research"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "market",
+   "headline": "Benchmark Mineral Intelligence publishes an H1 2026 BESS cell ranking that does not name CALB in its top ten",
+   "read": "On a stated market of 490 GWh, 6% larger than SNE's, so this is not a smaller-universe artefact. It is the single largest qualification on any claim that CALB is a top-five storage cell maker.",
+   "source": "Benchmark Mineral Intelligence"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "market",
+   "headline": "SNE Research places CALB fourth in global EV battery installations for H1 2026 at 31.2 GWh and 5.1%",
+   "read": "The contrast with the storage rank is the dossier's central structural fact: a stable, growing fourth in traction against a contested fifth in storage.",
+   "source": "CnEVPost reporting SNE Research"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "order-win",
+   "headline": "220 MWh energy-storage project signed in Japan",
+   "read": "One of the few overseas orders CALB sizes. Japan is the clearest non-China storage market in its order record.",
+   "source": "CALB newsroom"
+  },
+  {
+   "date": "2026-01-20",
+   "category": "capacity",
+   "headline": "Portuguese state incentives of EUR 350m signed for a EUR 2.067bn, 15 GWh battery plant at Sines",
+   "read": "CALB's only non-PRC plant, with first deliveries targeted for 2027. CALB's own filings name a Portuguese subsidiary but never name Sines, give a capacity or state a date — the detail is third-party.",
+   "source": "ESS News"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "corporate",
+   "headline": "An investor communication record is filed on the company's investor page with every field blank",
+   "read": "Participants, date, venue, attendees and the entire question-and-answer section are empty. A disclosure that discloses nothing, and it is the only investor-communication record published.",
+   "source": "CALB investor relations"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "catl",
+   "type": "competitor",
+   "status": "active",
+   "since": "2025",
+   "note": "Plaintiff against CALB in three patent-infringement suits announced in January 2025, and the storage-cell market leader at roughly four times CALB's share.",
+   "context": "CATL filed three separate patent-infringement claims against CALB that CALB announced on 3 January, 17 January and 28 January 2025 — in the Hangzhou Intermediate People's Court over a secondary-battery top-cover assembly patent seeking RMB 90m, in the Quanzhou Intermediate People's Court over a battery-module utility patent seeking RMB 60m, and in the Hunan High People's Court over a second top-cover patent seeking RMB 110m, RMB 263m in aggregate plus costs.\n\nCALB denies infringement in each and has filed CNIPA invalidation requests against the asserted patents in the first two, both accepted for review. No progress announcement, settlement or judgment has appeared on any of the three in the 21 months since, and CALB reversed its litigation provision in full from RMB 8.155m to nil during FY2025 — a management judgment that the claims will fail.\n\nSeparately the two are the extremes of the same market: SNE Research put CATL at 125.0 GWh and 27.1% of global storage-cell shipments for H1 2026 against CALB's 31.5 GWh and 6.8%.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0128/2025012800758_c.pdf",
+   "scale": "RMB 263m claimed across three suits"
+  },
+  {
+   "slug": "rept",
+   "type": "competitor",
+   "status": "active",
+   "since": "2026",
+   "note": "The adjacent rank in storage cells — SNE separates them by 0.1 GWh on an identical 6.8% share.",
+   "context": "SNE Research's H1 2026 global storage-cell table places CALB fifth at 31.5 GWh and REPT BATTERO sixth at 31.4 GWh, both on 6.8% share of a 461.3 GWh market. REPT's own dossier records the same figures and states that fifth and sixth are therefore both defensible for it.\n\nThe two are not otherwise commercially linked: no supply, customer or partnership relationship appears in either company's disclosure. They differ in where their storage volume sits — REPT is ranked first globally in residential storage cells by SNE, while CALB's residential line is a small part of a business dominated by utility-scale cells and EV traction.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "scale": "31.5 GWh vs 31.4 GWh, H1 2026"
+  },
+  {
+   "slug": "gotion",
+   "type": "competitor",
+   "status": "active",
+   "since": "2026",
+   "note": "Direct rival in both markets; Gotion's dossier records that CALB passed it in the Chinese EV battery ranking during 2026.",
+   "context": "The two sit in the same Chinese second tier. On SNE's H1 2026 figures CALB is fourth in global EV battery installations at 31.2 GWh and 5.1% while Gotion is fifth at 28.0 GWh and 4.6%; in storage cells CALB is fifth at 6.8% and Gotion ninth at 4.5%.\n\nGotion's dossier states that it was passed by CALB in the Chinese ranking during 2026 and places itself in a peer band with CALB and EVE Energy. It also records that CALB, unlike Gotion, is named on the US Department of Defense Section 1260H list — a divergence in policy exposure that this dossier independently confirms.",
+   "source": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+   "scale": "31.2 GWh vs 28.0 GWh EV installs, H1 2026"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "NDAA Section 1260H",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-08",
+   "exposure": "CALB Group Co. Ltd. was named on the US Department of Defense's Section 1260H list of Chinese military companies in the update published on 8 June 2026, one of 65 entities added that took the list to 188. Section 805 of the FY2024 NDAA bars the Department of War from entering into, renewing or extending contracts with listed entities for goods, services or technology from 30 June 2026. CALB was added alongside BYD, EVE Energy and NIO; Gotion was not added, and its dossier records that it therefore escapes the Section 805 bans that catch CALB.",
+   "mitigation": "None stated. CALB has announced no US manufacturing, no licensing structure and no response to the designation in any filing.",
+   "source": "https://www.hklaw.com/en/insights/publications/2026/07/department-of-war-updates-section-1260h"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The Section 301 duty on Chinese lithium-ion batteries for non-EV use, which is the grid-storage line, rose from 7.5% to 25% on 1 January 2026, taking the all-in duty on Chinese BESS cells from roughly 37.5% to roughly 55%. CALB's exposure to this is small in revenue terms and large in strategic terms: US revenue was RMB 1.479m in FY2025, effectively nil, having fallen from RMB 50.876m in FY2024.",
+   "source": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "Foreign-entity-of-concern rules under the One Big Beautiful Bill Act disqualify US projects from tax credits where material assistance from a prohibited foreign entity exceeds a threshold that begins at 55% for construction starting in 2026 and rises to 75% after 2029. Combined with the Section 301 increase and the 1260H listing, the practical position is that CALB has no credible route into the US storage tax-equity market, and its disclosed US revenue is consistent with that.",
+   "source": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/"
+  },
+  {
+   "regime": "EU Battery Regulation",
+   "status": "in-effect",
+   "effectiveDate": "2026-02-18",
+   "exposure": "Carbon-footprint declaration became mandatory for rechargeable industrial batteries placed on the EU market from 18 February 2026, with a digital battery passport carrying provenance, chemistry and recyclability data required for industrial batteries above 2 kWh from February 2027. CALB is one of five Chinese battery makers that explicitly cite EU battery-regulation impact in disclosure, naming recycling-rate and recycled-metal-utilisation requirements. Europe is its fastest-growing overseas region, at RMB 558.6m in H1 2026 against RMB 76.6m a year earlier.",
+   "mitigation": "CALB holds a Portuguese subsidiary, CALB (EUROPE), S.A., and third-party reporting describes a 15 GWh plant at Sines with first deliveries targeted for 2027 — which would place local production on the battery-passport clock. CALB's own filings name the subsidiary but never name Sines, state a capacity or give a date.",
+   "source": "https://www.ess-news.com/2026/01/28/portugal-signs-off-e350-million-incentives-for-calbs-e2-07-billion-sines-battery-plant/"
+  },
+  {
+   "regime": "UFLPA",
+   "status": "in-effect",
+   "effectiveDate": "2022-06-21",
+   "exposure": "No source located names CALB on the UFLPA Entity List or reports a CALB-specific detention. The exposure that exists is the rebuttable presumption applying generally to Chinese supply chains rather than anything established as specific to this company. Recorded as not established rather than as absent.",
+   "source": "https://www.hklaw.com/en/insights/publications/2026/07/department-of-war-updates-section-1260h"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Liu Jingyu (刘静瑜)",
+   "title": "Chairman, Executive Director and General Manager",
+   "background": [
+    "Chairman of CALB since 27 July 2018 and General Manager since 6 August 2018; director since 20 July 2018 and executive director since 10 December 2021",
+    "Chairs the Nomination Committee and the Strategy & Sustainability Committee created in October 2025, and sits on the Remuneration Committee",
+    "Chairman or director of substantially every CALB operating entity, including the Jiangsu, Wuhan, Hefei, Chengdu, Xiamen, Jiangmen, Handan and Shandong companies, Jiangsu Aoliwei and CALB (EUROPE), S.A.",
+    "Deputy to the 14th National People's Congress, elected January 2023",
+    "Certified Public Accountant (Shenzhen Institute of CPAs, 2007), Senior Accountant (2005), Certified Appraiser and Certified Tax Agent (2001)",
+    "Master's in Management (Accounting), Dongbei University of Finance and Economics, 2005"
+   ]
+  },
+  {
+   "name": "Dai Ying (戴颖)",
+   "title": "Executive Director, Deputy General Manager and Joint Company Secretary",
+   "background": [
+    "Deputy General Manager since April 2019, director since December 2020, executive director since December 2021 and Company Secretary since January 2022",
+    "Responsible for listed-company compliance and governance, capital operations, investment and financing, and brand",
+    "Assistant President and Board Secretary — Tianma Microelectronics (2014–2018)",
+    "Deputy General Manager and Board Secretary — Shenzhen Tongyi Industrial (2018–2019)",
+    "Earlier roles at Ping An Fund (2011–2014), Dacheng Fund (2009–2011), Ping An Life (2004–2009) and Yingda Securities (2000–2002)",
+    "BEcon in International Finance, Zhongnan University of Economics and Law, 1999"
+   ]
+  },
+  {
+   "name": "Pan Fangfang (潘芳芳)",
+   "title": "Deputy General Manager and Chief Technology Officer",
+   "background": [
+    "Deputy General Manager and CTO since September 2019; head of the Shanghai branch since July 2022; joined CALB December 2015",
+    "Head of the battery materials lab, battery design lab and battery design institute, then project chief engineer, deputy chief engineer and CTO at CALB's Luoyang predecessor (2011–2019)",
+    "Two Henan Provincial Science and Technology Progress Awards, second class (2016 and 2019); Jiangsu Youth May Fourth Medal (2023)",
+    "PhD, University of Science and Technology of China"
+   ]
+  },
+  {
+   "name": "Gao Yan (高艳)",
+   "title": "Deputy General Manager and Head of Finance",
+   "background": [
+    "Deputy General Manager and Head of Finance since April 2020; head of the Beijing branch",
+    "Chief Financial Officer — Tianma Microelectronics (2015–2020), having joined in 2008",
+    "MSc in Management, Central South University"
+   ]
+  },
+  {
+   "name": "Geng Yan'an (耿言安)",
+   "title": "Deputy General Manager",
+   "background": [
+    "Deputy General Manager since August 2018",
+    "Legal representative, director and general manager of the Chengdu and Sichuan companies and the materials company",
+    "Assistant President (2014–2018) and Chief Financial Officer (2012–2014) — Tianma Microelectronics, joined 2007",
+    "BMgt, Anhui University of Technology"
+   ]
+  },
+  {
+   "name": "He Fan (何凡)",
+   "title": "Deputy General Manager",
+   "background": [
+    "Deputy General Manager since November 2021",
+    "Legal representative and general manager of the Wuhan company, and of the Hefei company since August 2024",
+    "Facilities Director — Tianma Microelectronics (2007–2017)",
+    "Suzhou Institute of Urban Construction and Environmental Protection"
+   ]
+  },
+  {
+   "name": "Wang Xiaoqiang (王小强)",
+   "title": "Deputy General Manager and Deputy Party Secretary",
+   "background": [
+    "Deputy General Manager since November 2021; Deputy Party Secretary since August 2019",
+    "Legal representative and general manager of the Jiangsu company and the Jiangsu Research Institute",
+    "Legal representative, director and general manager of the Jiangsu Power and Energy Storage Battery Innovation Centre",
+    "MEng, University of Science and Technology Beijing"
+   ]
+  },
+  {
+   "name": "Xie Qiu (谢秋)",
+   "title": "Deputy General Manager",
+   "background": [
+    "Deputy General Manager since November 2021",
+    "Henan Provincial Science and Technology Progress Award, second class (2014); AVIC Science and Technology Award (2015); Luoyang Municipal Science and Technology Progress Award, first class (2016)",
+    "AVIC senior engineer (2016)",
+    "Harbin Engineering University"
+   ]
+  },
+  {
+   "name": "Hu Jing (胡婧)",
+   "title": "Non-executive Director",
+   "background": [
+    "Appointed 31 December 2024, representing the Jintan district shareholder group",
+    "Party Committee member and Deputy General Manager — Jiangsu Jintan Investment Group, since September 2024",
+    "Financial management specialist — Changzhou Jintan District Local Financial Regulatory Bureau (2019–2020)",
+    "Earlier roles at Yida Huijing Asset Management, Bank of East Asia (China) Nanjing and Agricultural Bank of China Xiamen",
+    "MSc Finance, Xiamen University"
+   ]
+  },
+  {
+   "name": "Li Jiancun (李建存)",
+   "title": "Non-executive Director",
+   "background": [
+    "Appointed 31 December 2024, representing the Jintan district shareholder group",
+    "Deputy General Manager — Jiangsu Jintan Investment Group, since October 2024",
+    "Deputy General Manager — Jiangsu Jintan Investment Holdings (2022–2024)",
+    "Earlier roles at Bank of China Changzhou and Bohai Bank Changzhou and Nanjing",
+    "LLM, Fudan University"
+   ]
+  },
+  {
+   "name": "Xie Jieping (谢洁平)",
+   "title": "Non-executive Director",
+   "background": [
+    "Appointed 31 December 2024, representing the Xiamen shareholder group",
+    "General Manager — Xiamen Venture Capital Co., Ltd. (February 2015 – May 2024), in overall charge",
+    "President of the Xiamen Venture and Investment Association; chairs the private-fund self-regulation committee of the Xiamen Securities, Futures and Fund Association",
+    "Chief Financial Officer — Xiamen Widia Technology (2002–2004); Xiamen International Bank (1993–2002)",
+    "MBA, Xiamen University"
+   ]
+  },
+  {
+   "name": "Wang Susheng (王苏生)",
+   "title": "Independent Non-executive Director and Chair of the Audit Committee",
+   "background": [
+    "Appointed 25 December 2021; chairs the Audit Committee and sits on the Nomination Committee",
+    "Professor and doctoral supervisor, Department of Finance, Southern University of Science and Technology, since April 2017",
+    "Professor, Harbin Institute of Technology Shenzhen Graduate School (2003–2017)",
+    "Independent non-executive director of Changyuan Technology Group; formerly of Tianma Microelectronics (2016–2022)",
+    "Post-doctorate in Management, Tsinghua University; non-practising CPA member since 1997"
+   ]
+  },
+  {
+   "name": "Chen Zetong (陈泽桐)",
+   "title": "Independent Non-executive Director and Chair of the Remuneration Committee",
+   "background": [
+    "Appointed 25 December 2021; chairs the Remuneration Committee and sits on the Nomination and Audit Committees",
+    "Managing Senior Partner — Junze Jun (Hong Kong) law firm, since August 2012",
+    "Counsel — King & Wood Mallesons (2010–2012)",
+    "Shenzhen Intermediate People's Court (1994–2010), rising to Deputy Chief Judge of the Company Liquidation and Bankruptcy Division",
+    "Registered foreign lawyer in Hong Kong and member of the Law Society of Hong Kong; qualified PRC lawyer",
+    "PhD in Civil and Commercial Law, Jilin University"
+   ]
+  },
+  {
+   "name": "Xiao Wen (肖文)",
+   "title": "Independent Non-executive Director",
+   "background": [
+    "The most recently appointed independent director, replacing a resigning INED in October 2025; sits on the Strategy & Sustainability, Audit and Remuneration Committees",
+    "Professor, School of Economics and Management and the Institute for Advanced Study in Humanities and Social Sciences, University of Electronic Science and Technology of China",
+    "Visiting full professor, ISCTE – University Institute of Lisbon; director of the UESTC–ISCTE joint management doctoral programme (2008–2024)",
+    "MBA (2002) and PhD in Management (2007), University of Electronic Science and Technology of China"
+   ]
+  },
+  {
+   "name": "Li Hui (李辉)",
+   "title": "Chairman of the Supervisory Committee",
+   "background": [
+    "Shareholder representative supervisor appointed 31 December 2024",
+    "Party Committee member and Secretary of the Discipline Inspection Commission — Jiangsu Jintan Investment Group, since September 2024",
+    "Deputy General Manager — Jiangsu Jintan Hua Luogeng Technology Development, since 2019",
+    "Law degree, China Central Radio and TV University"
+   ]
+  },
+  {
+   "name": "Cheng Yan (程雁)",
+   "title": "Supervisor",
+   "background": [
+    "Shareholder representative supervisor since August 2019",
+    "Party Committee member, Director, Chief Accountant, Board Secretary, General Counsel and Chief Compliance Officer — Chengfei Integration (SZSE: 002190), the AVIC-affiliated substantial shareholder",
+    "MBA, Southwestern University of Finance and Economics"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "RMB",
+  "type": "public",
+  "commentary": "Reported under IFRS Accounting Standards as issued by the IASB, audited by Rongcheng CPA (PRC) and RSM Hong Kong for FY2025; shareholders approved replacing RSM Hong Kong with Rongcheng (Hong Kong), the offshore affiliate of the PRC auditor, at the June 2026 AGM. CALB runs a SINGLE reportable operating segment — the split between EV traction and energy storage below is an IFRS 15 revenue-disaggregation note, and no gross profit, margin or asset split between the two is disclosed anywhere. No analyst consensus is published in a form this dossier could verify: a nine-analyst revenue-revision figure exists only on an aggregator that returned HTTP 403 on three probes, so 'expected' is left empty throughout rather than reconstructed. The company discloses NO shipment or installed volume in GWh for itself, in any period — the only first-party GWh figures are impairment-test sales-volume assumptions per production entity (Jiangsu 36 GWh, Wuhan 38.5 GWh, Chengdu 38 GWh long-run annual), and the headroom on the Jiangsu and Wuhan tests is about 4%.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "Revenue RMB 27.75bn on a 15.89% gross margin. EV traction was 70.4% of revenue and energy storage 29.6%. Overseas revenue was RMB 639.9m, 2.3% of the total.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 27,751,526 thousand",
+      "expected": "",
+      "verdict": "inline",
+      "result": "EV traction RMB 19,550,893k (70.4%); energy storage and other RMB 8,200,633k (29.6%).",
+      "kpi": "revenue",
+      "usdMillions": 3861.2,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Gross profit and margin",
+      "actual": "RMB 4,409,894 thousand, a 15.89% gross margin",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Computed from revenue and cost of sales as filed."
+     },
+     {
+      "name": "Profit attributable to owners",
+      "actual": "RMB 591,196 thousand",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Profit for the year was RMB 843,626k; non-controlling interests took RMB 252,430k, or 29.9%, reflecting the local-government joint ventures that own the production bases.",
+      "kpi": "net-income",
+      "usdMillions": 82.3,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "R&D expenses",
+      "actual": "RMB 1,417,611 thousand, 5.11% of revenue",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Basic earnings per share RMB 0.3336."
+     },
+     {
+      "name": "Overseas revenue",
+      "actual": "RMB 639,908 thousand, 2.3% of revenue",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Asia RMB 419.4m, Europe RMB 165.0m, USA RMB 50.9m."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Revenue RMB 44.40bn (+60.0%) with gross margin improving 0.8 points to 16.69% and attributable profit up 149.6%. Energy storage grew faster than EV traction (+71.9% against +55.0%) and reached 31.8% of revenue. US revenue collapsed to RMB 1.5m from RMB 50.9m. No dividend was declared.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 44,400,067 thousand, up 60.0%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "EV traction RMB 30,299,670k (68.2%, +55.0%); energy storage and other RMB 14,100,397k (31.8%, +71.9%). No published consensus was verifiable, so this verdict is against the company's own trajectory rather than an analyst benchmark.",
+      "kpi": "revenue",
+      "usdMillions": 6177.6,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Gross profit and margin",
+      "actual": "RMB 7,411,951 thousand, a 16.69% gross margin, up 0.80 points",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Independent commentary attributes much of the FY2025 margin and profit inflection to falling lithium-carbonate input costs rather than to a technology premium; CALB does not break the drivers out."
+     },
+     {
+      "name": "Profit attributable to owners",
+      "actual": "RMB 1,475,632 thousand, up 149.6%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Profit for the year RMB 2,095,223k (+148.4%); non-controlling interests took RMB 619,591k, or 29.6%. Basic EPS RMB 0.8326. Company-stated net margin 4.7%, up from 3.0%.",
+      "kpi": "net-income",
+      "usdMillions": 205.3,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "R&D expenses",
+      "actual": "RMB 2,142,560 thousand, up 51.1%, 4.83% of revenue",
+      "expected": "",
+      "verdict": "inline",
+      "result": "R&D grew more slowly than revenue, so intensity fell from 5.11% to 4.83%. Patent applications rose from 6,138 at year end to 8,098 by 30 June 2026."
+     },
+     {
+      "name": "Overseas revenue",
+      "actual": "RMB 919,234 thousand, 2.1% of revenue",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Down as a share of revenue despite growing in absolute terms. USA revenue fell to RMB 1,479 thousand from RMB 50,876 thousand — effectively an exit from the US market."
+     },
+     {
+      "name": "Employees",
+      "actual": "14,323 at 31 December 2025",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Staff cost RMB 1,761,387k; total director, supervisor and senior-management remuneration RMB 40,030k."
+     }
+    ]
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "Revenue RMB 27.08bn (+65.0%) with gross margin flat at 16.71% and attributable profit doubling. Energy storage reached 39.1% of revenue, up from 35.1%. Borrowings rose RMB 10.3bn in six months to RMB 67.55bn against RMB 13.17bn of cash. The first dividend since listing was proposed. USD overlays are omitted for this period because the corpus has no researched 2026 rate and an unsourced conversion would be fabricated precision.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 27,084,367 thousand, up 65.0%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "EV traction RMB 16,505,781k (60.9%, +54.8%); energy storage and other RMB 10,578,586k (39.1%, +83.8%). Storage is now growing at half again the rate of traction."
+     },
+     {
+      "name": "Gross profit and margin",
+      "actual": "RMB 4,527,008 thousand, a 16.71% gross margin",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Essentially unchanged from FY2025's 16.69% and below H1 2025's 17.53% — revenue grew two-thirds with no margin expansion."
+     },
+     {
+      "name": "Profit attributable to owners",
+      "actual": "RMB 935,106 thousand, up 100.7%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Profit for the period was RMB 1,522,773k (+102.2%), but non-controlling interests took RMB 587,667k — 38.6%, up from 38.1%. Any figure quoting 'RMB 1.52bn net profit' is the pre-NCI number. Basic EPS RMB 0.5276."
+     },
+     {
+      "name": "Finance costs",
+      "actual": "RMB 512,151 thousand",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Consumed a quarter of the RMB 2,096,856k operating profit. Total borrowings and bonds RMB 67,551.16m at 30 June 2026, of which RMB 30,094.96m falls due within a year, against cash and pledged deposits of RMB 13,165.76m."
+     },
+     {
+      "name": "Overseas revenue",
+      "actual": "RMB 1,184,581 thousand, 4.4% of revenue, up 262.9%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Europe RMB 558.6m (from RMB 76.6m), Asia RMB 616.0m, USA RMB 5.9m. The fastest-moving line in the accounts, from a very small base."
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "RMB 2,863,600 thousand inflow",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Up from RMB 2,557,990k. Positive but an order of magnitude below the six-month increase in borrowings."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**KEY JUDGMENTS**",
+  "1. **(High confidence)** We assess CALB is a challenger and not an incumbent in energy-storage cells, and that its incumbent-like position lies in EV traction instead. Basis: SNE Research, TrendForce and InfoLink each rank it fifth globally in H1 2026 storage cells at 31.5 GWh and 6.8%, roughly a quarter of CATL's 27.1%, with REPT 0.1 GWh behind and Cornex 1.3 GWh behind; EVTank ranked it sixth for FY2025 and SPIR seventh for H1 2026. In EV traction the same house ranks it a stable fourth across three consecutive periods with share rising from 4.4% to 5.1%. Two different competitive positions in two different markets, and only the traction one is durable.",
+  "2. **(Moderate confidence)** We assess CALB's own claim to fourth place in global storage-cell shipments is scope-shopped and should not be repeated without qualification. Basis: the FY2025 results state 'energy-storage cell shipments ranked fourth globally' and cite no research house; no independent house located supports fourth on an all-cells global basis. The only fourth-place reading available is InfoLink's utility-scale-only sub-metric, a narrower cut than the company's unqualified claim. Confidence is moderate rather than high because CALB may hold a subscription report this dossier could not open.",
+  "3. **(Moderate confidence)** We assess the 2026 H-share full circulation has stalled at the CSRC rather than merely being slow, and that this is the most decision-relevant unexplained item in CALB's disclosure record. Basis: the board approved converting 207,102,914 domestic shares on 5 February 2026 and said the filing had been submitted; 216 days later there is no acceptance notice, no exchange approval and no completion. The same company's two prior rounds took 39 days and 122 days to the CSRC notice. Eight consecutive monthly returns through 31 August 2026 show H shares unmoved at 761,499,395 and domestic shares at 1,010,802,463. No announcement states this — it is visible only in the returns.",
+  "4. **(Moderate confidence)** We assess the FY2025 and H1 2026 profit inflection is substantially cycle-driven rather than evidence of a widening competitive moat. Basis: gross margin improved just 0.80 points across a year in which revenue rose 60%, and then did not improve at all in H1 2026 (16.71% against 16.69%), while independent commentary attributes the earnings recovery to falling lithium-carbonate input costs and to a storage-cell price recovery that began in late 2025 and lifted the whole sector. A company converting scale into structural advantage would show margin expansion; CALB shows volume expansion at a constant margin.",
+  "5. **(High confidence)** We assess CALB is structurally weakest where the storage market is actually growing. Basis: overseas revenue was 2.1% of FY2025 and 4.4% of H1 2026, and US revenue was RMB 1.5m in FY2025, effectively nil. InfoLink reports that non-China shipments were 53.2% of global H1 2026 storage-cell volume, a majority for the first time, and CALB is outside InfoLink's non-China top five having been fourth in that cut for FY2025. Its one non-PRC plant is not due to deliver until 2027.",
+  "6. **(High confidence)** We assess the Section 1260H designation of 8 June 2026 forecloses the US market for the foreseeable future and that CALB has published no response to it. Basis: CALB Group Co. Ltd. appears on the Department of Defense list, Section 805 bars Department of War contracting from 30 June 2026, and the Section 301 duty on Chinese non-EV lithium-ion batteries rose to 25% on 1 January 2026. CALB has announced no US plant, no licensing structure and no mitigation in any filing. Its dossier peer Gotion is not listed and its dossier says so explicitly.",
+  "7. **(Moderate confidence)** We assess the pattern of local-government joint ventures is now being deliberately unwound at the margin, and that this is where near-term earnings quality improves. Basis: production bases are financed as JVs with municipal investment groups — Handan at RMB 4.0bn registered capital with CALB at 60% is the template — and non-controlling interests took 29.6% of FY2025 profit and 38.6% of H1 2026 profit. CALB then spent RMB 1.35bn in seven months buying minorities out of the Wuhan and Hefei companies through equity-exchange auctions. Reclaiming that leakage is a cheaper source of attributable earnings growth than margin expansion.",
+  "8. **(Low confidence)** Trade press reports a EUR 2.067bn, 15 GWh CALB plant at Sines, Portugal, with EUR 350m of state incentives and first deliveries in 2027. CALB's own filings name a Portuguese subsidiary, CALB (EUROPE), S.A., and describe a European industrial base as established, but never name Sines, state a capacity or give a date. Treat the Sines specifics as third-party and unconfirmed by the company.",
+  "**Collection gap:** CALB discloses no shipment or installed volume in GWh for itself in any period, and no gross margin, profit or asset split between EV traction and energy storage, because it reports a single operating segment. Every GWh figure in this dossier is therefore a third-party estimate. No published analyst consensus was verifiable — the one aggregator carrying nine-analyst revision figures returned HTTP 403 on three probes — so all 'expected' fields are left empty. CALB names no competitor anywhere in its own materials, and publishes no photographs of any director or executive.",
+  "**Collection gap:** the three CATL patent suits announced in January 2025, claiming RMB 263m in aggregate, have produced no progress announcement, settlement or judgment in 21 months, and CALB reversed its litigation provision in full to nil during FY2025. Chinese secondary sources describe a wider docket of eight suits and roughly RMB 700m claimed, plus RMB 1.007bn counterclaimed by CALB; none of that is in CALB's own filings and this dossier does not adopt it.",
+  "**INDICATORS TO WATCH**",
+  "- *A CSRC acceptance notice for the 207,102,914-share conversion:* arrival would show the stall was administrative; continued silence past the one-year mark in February 2027 would indicate the filing has failed. The monthly returns are the tell, not the announcements.",
+  "- *Completion of the RMB 673m Jiangsu Aoliwei placement:* the long-stop under the share transfer agreement runs to roughly 6 November 2026. Completion lifts CALB from 10.94% to about 22.61%; lapse would leave it a 10.94% controlling shareholder of a company with no actual controller.",
+  "- *Any judgment or settlement in the CATL suits:* a first adverse ruling against a nil provision would be a direct earnings event and would test the FY2025 reversal.",
+  "- *H1 2027 overseas revenue:* the Sines plant is due to deliver from 2027. Overseas revenue crossing into double-digit percentage would confirm the export-to-local-manufacture transition; another year near 4% would mean it has not started.",
+  "- *Gross margin in the FY2026 results:* a second consecutive period at about 16.7% on another 60% revenue increase would confirm judgment 4; expansion above 18% would weaken it.",
+  "- *Whether the interim dividend is paid and repeated:* the first distribution since the 2022 listing, proposed 28 August 2026. A repeat at the full year would corroborate the peak-capex reading; a one-off would not."
+ ],
+ "sources": [
+  {
+   "label": "CnEVPost — SNE Research global EV battery market share, January–July 2026",
+   "url": "https://cnevpost.com/2026/09/07/global-ev-battery-market-share-jan-jul-2026/",
+   "date": "2026-09-07"
+  },
+  {
+   "label": "CALB (English) — company news, including the Xiaomi power-battery partnership",
+   "url": "http://en.calb-tech.com/news/5/",
+   "date": "2026-09-07"
+  },
+  {
+   "label": "CALB — monthly return of equity issuer on movements in securities, month ended 31 August 2026",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400841_c.pdf",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "CALB newsroom — Xiaomi names CALB an official power-battery strategic partner",
+   "url": "https://www.calb-tech.com/ESGNews/1.html",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "pv magazine — Great Power completes a full-scale UL 9540A fire test (context for the peer set)",
+   "url": "http://www.pv-magazine.com/2026/09/08/great-power-successfully-completes-full-scale-fire-test/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "CALB — interim results announcement for the six months ended 30 June 2026",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082803039_c.pdf",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Tencent News — CALB H1 2026: profit doubles, customer roster widens",
+   "url": "https://news.qq.com/rain/a/20260831A0960900",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Benchmark Mineral Intelligence — who shipped the most BESS cells and systems in H1 2026",
+   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "InfoLink Consulting — energy storage cell shipment data for H1 2026 reveals three structural shifts",
+   "url": "https://www.ess-news.com/2026/08/17/energy-storage-cell-shipment-data-for-h1-2026-reveal-three-structural-shifts/",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "EnergyTrend / TrendForce — top 10 global energy storage cell manufacturers by H1 2026 shipments",
+   "url": "https://www.energytrend.com/research/20260814-51941.html",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "CALB — positive profit alert for the six months ended 30 June 2026",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081400987_c.pdf",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Jiemian — the storage cell top ten has no dark horses left",
+   "url": "https://www.jiemian.com/article/14915030.html",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Guolian Minsheng Securities — Q2 2026 continuing supervision opinion on the Jiangsu Aoliwei detailed equity change report",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-08/1225463618.PDF",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Jiangsu Aoliwei Sensing (SZSE: 300507) — 2026 half-year report",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-08/1225463612.PDF",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "CnEVPost — SNE Research global EV battery market share, H1 2026",
+   "url": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "SMM / Metal.com — H1 global lithium battery ESS shipments exceed 461 GWh",
+   "url": "https://news.metal.com/newscontent/104042179-h1-global-lithium-battery-ess-shipments-exceed-461-gwh-catl-eve-and-hithium-account-for-nearly-half",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "CnEVPost — SNE Research global ESS battery market share, H1 2026",
+   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "CALB — connected transaction: acquisition of 12.7230% of the Hefei company",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0728/2026072801448_c.pdf",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Holland & Knight — Department of War updates the Section 1260H Chinese military companies list",
+   "url": "https://www.hklaw.com/en/insights/publications/2026/07/department-of-war-updates-section-1260h",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Sina Finance / SPIR — global lithium-ion storage cell shipment top ten, H1 2026",
+   "url": "https://finance.sina.com.cn/wm/2026-07-11/doc-inihpche2772479.shtml",
+   "date": "2026-07-11"
+  },
+  {
+   "label": "Wood Mackenzie — global BESS integrator ranking 2026 (CALB is not named)",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "CALB — 2025 annual report",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042900020_c.pdf",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "CALB — 2025 environmental, social and governance report",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042900084_c.pdf",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "EnergyTrend — CALB releases its 2025 annual report: energy storage revenue exceeds RMB 14.1bn",
+   "url": "https://www.energytrend.com/news/20260331-51166.html",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "CALB — annual results announcement for the year ended 31 December 2025",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032703841_c.pdf",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "Sina Finance — CALB advances six projects in a single month",
+   "url": "https://finance.sina.com.cn/roll/2026-02-04/doc-inhkrtwp3712988.shtml",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "CALB — inside information: proposed H-share full circulation of 207,102,914 domestic shares",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0205/2026020502343_c.pdf",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "CnEVPost — SNE Research global EV battery market share, 2025",
+   "url": "https://cnevpost.com/2026/02/04/global-ev-battery-market-share-2025/",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "Battery网 / EVTank — 2025 global storage battery shipments: the top ten is now a Chinese home game",
+   "url": "https://www.itdcw.com/news/hangyebaogao/0205153ER026.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "InfoLink Consulting — 2025 shipment rankings of energy storage cells, global and non-China markets",
+   "url": "https://www.infolink-group.com/energy-article/energy-storage-topic-global-battery-shipment-ranking-2025",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "SNE Research — global LIB ESS market reaches 550 GWh in 2025",
+   "url": "https://www.sneresearch.com/en/insight/release_view/583/page/0",
+   "date": "2026-01-28"
+  },
+  {
+   "label": "ESS News — Portugal signs off EUR 350m of incentives for CALB's EUR 2.07bn Sines battery plant",
+   "url": "https://www.ess-news.com/2026/01/28/portugal-signs-off-e350-million-incentives-for-calbs-e2-07-billion-sines-battery-plant/",
+   "date": "2026-01-28"
+  },
+  {
+   "label": "Energy-Storage.News — EV slowdown creates a potential lifeline for US energy storage amid FEOC and tariffs",
+   "url": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "CALB — connected transaction: acquisition of 8.3155% of the Wuhan company",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1224/2025122401669_c.pdf",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "CALB — voluntary announcement: completion of the acquisition of the target company",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1121/2025112101260_c.pdf",
+   "date": "2025-11-21"
+  },
+  {
+   "label": "CALB — inside information: completion of the H-share full circulation (149,831,290 shares)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0904/2025090401492_c.pdf",
+   "date": "2025-09-04"
+  },
+  {
+   "label": "CALB — discloseable transaction: formation of a joint venture in Handan",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0528/2025052802031_c.pdf",
+   "date": "2025-05-28"
+  },
+  {
+   "label": "Time Weekly — CALB takes control of Suao Sensing for more than RMB 1.1bn",
+   "url": "https://time-weekly.com/post/320982",
+   "date": "2025-05-07"
+  },
+  {
+   "label": "CALB — major transaction: acquisition of the target company and subscription for new shares",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0506/2025050602882_c.pdf",
+   "date": "2025-05-06"
+  },
+  {
+   "label": "CALB — voluntary announcement: shares included in the Stock Connect securities list",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0309/2025030900014_c.pdf",
+   "date": "2025-03-09"
+  },
+  {
+   "label": "The Paper — three CALB announcements in one month on the CATL dispute",
+   "url": "https://m.thepaper.cn/newsDetail_forward_30061587",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "CALB — litigation announcement (Hunan High People's Court, RMB 110m)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0128/2025012800758_c.pdf",
+   "date": "2025-01-28"
+  },
+  {
+   "label": "CALB — litigation announcement (Quanzhou Intermediate People's Court, RMB 60m)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0117/2025011700951_c.pdf",
+   "date": "2025-01-17"
+  },
+  {
+   "label": "ip fray — CATL files a fresh infringement lawsuit, adding to China's battery patent docket",
+   "url": "https://ipfray.com/worlds-top-ev-battery-maker-catl-files-fresh-infringement-lawsuit-adds-to-chinas-lengthy-battery-patent-docket/",
+   "date": "2025-01-06"
+  },
+  {
+   "label": "CALB — litigation announcement (Hangzhou Intermediate People's Court, RMB 90m)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0103/2025010302161_c.pdf",
+   "date": "2025-01-03"
+  },
+  {
+   "label": "21st Century Business Herald — CALB proposes converting 346m domestic shares to H shares",
+   "url": "https://www.21jingji.com/article/20240130/herald/deb89dedfdd1b5a5b3b2c47febe13cf3.html",
+   "date": "2024-01-30"
+  },
+  {
+   "label": "CALB — energy storage products, cells, containers, cabinets and residential systems",
+   "url": "https://www.calb-tech.com/EnergyStorage.html"
+  },
+  {
+   "label": "CALB — passenger vehicle batteries (DINGLIU) and OEM programme list",
+   "url": "https://www.calb-tech.com/PassengerVehicle.html"
+  },
+  {
+   "label": "CALB — commercial vehicle batteries (ZHIYUAN)",
+   "url": "https://www.calb-tech.com/Commercial.html"
+  },
+  {
+   "label": "CALB — technology innovation: materials, structure and manufacturing",
+   "url": "https://www.calb-tech.com/TechInnovation.html"
+  },
+  {
+   "label": "CALB — about us, industrial bases and R&D centres",
+   "url": "https://www.calb-tech.com/AboutUs.html"
+  },
+  {
+   "label": "CALB — investor relations, director biographies and disclosure archive",
+   "url": "https://www.calb-tech.com/Investor.html"
+  },
+  {
+   "label": "CALB — marine batteries and classification-society approvals",
+   "url": "https://www.calb-tech.com/Marine.html"
+  },
+  {
+   "label": "CALB — eVTOL batteries",
+   "url": "https://www.calb-tech.com/eVTOL.html"
+  },
+  {
+   "label": "CALB — robotics batteries",
+   "url": "https://www.calb-tech.com/robot.html"
+  },
+  {
+   "label": "CALB — light power batteries",
+   "url": "https://www.calb-tech.com/lightPower.html"
+  },
+  {
+   "label": "CALB (English) — about, industrial bases and overseas entities",
+   "url": "http://en.calb-tech.com/about.html"
+  },
+  {
+   "label": "HKEX — list of securities, confirming stock code 03931 CALB, ISIN CNE100005LL8",
+   "url": "https://www.hkex.com.hk/eng/services/trading/securities/securitieslists/ListOfSecurities.xlsx"
+  },
+  {
+   "label": "HKEXnews — issuer index confirming stock code 03931 maps to CALB",
+   "url": "https://www1.hkexnews.hk/search/prefix.do?lang=EN&type=A&name=3931"
+  },
+  {
+   "label": "MarketScreener — CALB Group analyst consensus and target prices (aggregator; no last-updated date exposed)",
+   "url": "https://www.marketscreener.com/quote/stock/CALB-GROUP-CO-LTD-144912210/consensus/"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

@@ -1,0 +1,1246 @@
+{
+ "schemaVersion": 7,
+ "slug": "great-power",
+ "name": "Guangzhou Great Power Energy & Technology Co., Ltd.",
+ "shortName": "Great Power",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.greatpower.net",
+ "headquarters": "No. 912 Shiliang Road (Xicun section), Shawan Town, Panyu District, Guangzhou, Guangdong, China",
+ "founded": 2001,
+ "employees": "15,092 at 31 December 2025 (10,763 production, 3,123 technical)",
+ "ownership": {
+  "type": "public",
+  "ticker": "SZSE: 300438"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Great Power is a challenger in energy-storage cells — ranked eighth to tenth globally depending on the research house, at 20.5 GWh and 4.4% share — but it is a leader in one niche within that market, residential storage cells, where three houses place it first, second and third. Its Hong Kong listing application, filed 30 January 2026 to fund a RMB 3.3bn capacity programme, LAPSED without ever being heard: HKEX's own application index, regenerated on 9 September 2026, records its status as Lapsed with no refiling.\n\n**BACKGROUND.** Guangzhou-based lithium-ion maker listed on the Shenzhen ChiNext board since April 2015, founded and controlled by chairman Xia Xinde with 26.25% of the shares. FY2024 was its first loss since listing — RMB 252.5m attributable, with operating cash flow of negative RMB 244.4m — followed by a return to profit in FY2025 (revenue RMB 11.94bn, +50.04%; attributable profit RMB 206.0m) and a step change in H1 2026 (revenue RMB 10.98bn, +155.27%; attributable profit RMB 816.4m, +1,025.39%). SNE Research reports its H1 2026 storage-cell shipments up 202% year on year, the fastest growth in the global top ten. Capacity utilisation ran at 165.72% in the half.",
+ "ecosystemRole": "Great Power sells cells and factory-assembled storage systems into the same merchant market as the larger Chinese cell makers, but it reaches it from an unusual direction: its strength is in small-format and residential storage cells rather than in utility-scale volume, and the whole of its margin thesis is routing the same cell into higher-priced residential and commercial channels rather than into Chinese utility-scale tenders. It sells cells to residential-storage brands and system integrators who then export, which is why its end-demand is largely European, British and Australian while only 15.5% of its H1 2026 revenue was booked overseas. It also runs consumer, light-EV, primary-battery and sodium-ion lines that no other cell maker in this corpus carries in the same combination.",
+ "productsAndServices": [
+  {
+   "name": "Fengpeng (风鹏) large-format energy-storage cells",
+   "category": "Energy storage — cells",
+   "description": "The utility-scale storage cell line, branded Fengpeng. The FY2025 annual report and the February 2026 capex authorisation both call it 587Ah; the H1 2026 report and the container datasheet call the shipping product 588Ah. A 600+Ah cell is being defined jointly with what the company calls global leading storage integrators, which it does not name. The company discloses capacity only in ampere-hours, never in GWh, and discloses no shipment volume at all.",
+   "highlights": [
+    "587Ah: round-trip efficiency of 85% at 5 degrees C, above 94% at 25 degrees C and above 96% at 45 degrees C, with cycle life stated as exceeding 10,000 at 0.5C and room temperature",
+    "588Ah: passed nail-penetration, thermal-runaway and short-circuit testing, with efficiency restated at 85% / above 95% / above 96% across the same temperature points",
+    "Built on a winding (rolled) process rather than stacking — the company's stated reasoning is that the route is more mature on yield, cost control and line speed",
+    "600+Ah under joint definition with unnamed global storage integrators, extending the relationship from cell supply into joint product definition",
+    "The platform disclosure for its LFP range gives cell energy density of 150 to 300 Wh/kg and cycle life of 3,000 to 15,000, compliant with GB/T 36276-2018, IEC 62619 and UL 1973"
+   ],
+   "positioning": "Great Power entered the 587Ah class roughly 12 to 18 months after CATL and EVE, whose 587Ah and 628Ah cells were shipping in 2025. The company names no competitor in any of its own documents. Note the industry split: Great Power and CATL push 587Ah while CALB, Ganfeng and REPT push 588Ah — a one amp-hour differentiation on essentially the same format.",
+   "soldThrough": "Entirely direct sales — 100% of FY2025 revenue was booked as direct (直销), with no distributor channel. Cells go to system integrators and to project owners.",
+   "targetSegments": [
+    "Utility-scale storage",
+    "Commercial and industrial storage",
+    "Grid frequency regulation"
+   ],
+   "roadmap": "A 587Ah production line was authorised on 12 February 2026 as part of a RMB 1.2bn project at Zhumadian, Henan. No GWh capacity, start date or completion date was disclosed for it."
+  },
+  {
+   "name": "GreatCom, GreatOne and GreatE — storage systems and platform",
+   "category": "Energy storage — systems",
+   "description": "The system family: GreatCom containers, GreatOne outdoor commercial and industrial cabinets, and GreatE, an AI platform for whole-lifecycle charge and discharge optimisation and device monitoring. Great Power appears in no third-party BESS system-integrator ranking, so this is a channel for its cells rather than an independently ranked integration business — with the one exception that CNESA ranks it second among Chinese companies for commercial and industrial system shipments.",
+   "highlights": [
+    "MAX-20HC-6250 liquid-cooled container — 6.25 MWh, built on the in-house 588Ah cell, described by the company as cutting component and overall build cost",
+    "MAX-20HC-5000 liquid-cooled container — certified to UL 9540, UL 9540A, UL 1973, NFPA 855, NFPA 68, NFPA 69 and NFPA 72; DC-side round-trip efficiency of 96% at 0.25P and 95% at 0.5P; IP55 overall with IP67 packs",
+    "MAX-20HC-3720-1P — a one-hour-rate container aimed specifically at grid-side and generation-side frequency regulation",
+    "Magna-C&I-260 / -233 / -215 AC commercial cabinets, UL 9540A and NFPA 855, discharging more than 400 kWh and supporting off-grid parallel operation for critical loads",
+    "Magna-UTL-418 / -373 DC outdoor cabinets tested at UL 9540A unit level, string-PCS compatible, under four tonnes per unit, stated availability above 95%",
+    "LiqPack 280Ah and AirPack 150Ah / 280Ah packs and LiqRack / AirRack racks, with under 2 degrees C cell temperature spread, metal-shell thermal barriers rated to no propagation at 1000 degrees C, and operation from minus 40 to 60 degrees C",
+    "Qingtian 520 commercial cabinet — stated efficiency gain of 4.85% and footprint reduction of 54% against conventional designs",
+    "A full-scale UL 9540A:2026 fire test on the MAX-20HC-5000, certified by TUV Rheinland and published 8 September 2026: the initiating container burned for sixteen hours and self-extinguished, adjacent cells stayed below 70 degrees C and no adjacent container ignited"
+   ],
+   "positioning": "CNESA ranks Great Power second among Chinese companies for global commercial and industrial storage system shipments. It does not appear in Wood Mackenzie's 2026 global BESS integrator ranking or Benchmark's H1 2026 system-integrator top ten, both of which are dominated by Sungrow, Tesla, CATL and BYD.",
+   "soldThrough": "Direct to project owners, integrators and commercial and industrial customers; a smart PV-storage-charging-inspection package is sold into charging-station operators.",
+   "targetSegments": [
+    "Utility-scale project owners",
+    "Commercial and industrial sites",
+    "Charging-station operators",
+    "Overseas EPCs and developers"
+   ],
+   "roadmap": "The company obtained TUV Rheinland Witness Testing Laboratory status on 13 May 2026, which lets its own test data feed directly into TUV Rheinland certification — shortening international certification cycles for export products."
+  },
+  {
+   "name": "Residential and portable storage — HOME and POLAR lines",
+   "category": "Energy storage — residential",
+   "description": "The strongest part of the business by competitive position and the weakest by disclosure: residential storage has no separate revenue line in any filing. The range is built on large-cylindrical cells (HOME-II and HOME-III generations), a low-temperature POLAR line, and from June 2026 a 122Ah high-energy prismatic cell for all-in-one residential systems. The company states more than three million residential units installed with no accidents.",
+   "highlights": [
+    "122Ah residential cell — energy density above 200 Wh/kg, IEC and UN38.3 certified, first shown at SNEC in June 2026 and aimed at the integration-density problem in all-in-one home systems",
+    "HOME-III large-cylindrical generation — more than 30 patents, a top-and-bottom integrated one-piece explosion vent, laser through-wall welding, stress self-relief, and a low-temperature superconducting-path structure",
+    "POLAR series for low-temperature residential storage",
+    "Frost & Sullivan ranks Great Power first globally in residential storage cell shipments for H1 2026 at 28% share; ICC ranked it second globally in residential and portable storage batteries for FY2025",
+    "Sold as cells and packs into third-party residential brands rather than under its own retail brand, with end products going mainly to Europe and the United States"
+   ],
+   "positioning": "This is where the company's rank is highest and where the third-party evidence is most contested. Frost & Sullivan, in a report commissioned for the Hong Kong listing application, places Great Power first at 28%. TrendForce places it second behind REPT BATTERO for the same half. InfoLink places it third at 17.3% behind EVE and REPT. No source reconciles the three, and the segment definitions — residential-only against small storage including telecom — are not stated side by side anywhere.",
+   "soldThrough": "Cell and pack supply into residential-storage brands and inverter makers, who assemble and sell the end product.",
+   "targetSegments": [
+    "Residential storage brands",
+    "Inverter and all-in-one system makers",
+    "Portable power"
+   ],
+   "roadmap": "The RMB 3.3bn Henan programme authorised in February 2026 is dominated by 120Ah lines — one at Zhumadian and four at Zhengyang — which are the residential, distributed and telecom-base-station format."
+  },
+  {
+   "name": "Sodium-ion batteries",
+   "category": "Next-generation cells",
+   "description": "Great Power was an early sodium-ion promoter and reached mass production in 2023, which is ahead of most of the corpus. It runs both principal chemistries — layered oxide and polyanion — plus an anode-free line in development. The commercial reality is harder to see than the technical position: sodium-ion has no separate revenue line in any filing, no disclosed shipment volume, and Great Power appears in no third-party sodium-ion shipment ranking.",
+   "highlights": [
+    "Research from 2019; major layered-oxide and polyanion results by 2021; small-batch trial production and customer samples in 2022; formal mass production and commercial stage in 2023",
+    "Among the first nationally to pass sodium-ion battery evaluation in July 2023, alongside a demonstration project with the Qingdao Beian Holdings big-data centre",
+    "Layered oxide: energy density above 150 Wh/kg with cycle life above 3,000. Polyanion: cycle life above 6,000",
+    "Prismatic sodium-ion with interface optimisation: cycle life exceeding 10,000 and measured average round-trip efficiency above 95%",
+    "Cylindrical sodium-ion with a full-tab structure and a graphene and magnetic-nanoparticle composite conductor, sustaining 20C discharge, aimed at vehicle start-stop",
+    "An anode-free sodium-ion line in development, targeting substantial cost reduction while retaining cycle life and low-temperature performance"
+   ],
+   "positioning": "The third-party record does not corroborate a sodium-ion leadership position. Where independent sources name sodium-ion leaders they name HiNa, CATL, EVE and Vecko; Great Power does not appear. Its sodium-ion standing is company-stated rather than analyst-ranked, and the gap between the two is itself the finding.",
+   "soldThrough": "Direct to storage and light-power customers; no named sodium-ion customer appears in any source.",
+   "targetSegments": [
+    "Energy storage",
+    "Light EV and two-wheelers",
+    "Vehicle start-stop",
+    "Cold-climate applications"
+   ],
+   "roadmap": "Anode-free sodium-ion is in materials development with no stated commercialisation date."
+  },
+  {
+   "name": "Consumer, light-EV and primary batteries",
+   "category": "Other battery lines",
+   "description": "The legacy business and the reason Great Power's product mix looks unlike any other cell maker in this corpus. It spans consumer cells in every common format, a light-power division covering two-wheelers, forklifts, marine, drones and power tools, and a primary-battery line — lithium iron disulphide, lithium manganese dioxide and zinc-air — that no other covered cell maker carries. Primary batteries were RMB 335.5m, 2.81% of FY2025 revenue, the only non-lithium-ion line the company sizes.",
+   "highlights": [
+    "Consumer formats: large, small and micro cylindrical, pouch and coin cells, with leading positions claimed in Bluetooth speakers, TWS earbuds, power tools, personal care and power banks",
+    "21700 full-tab cell — 3C charge to full in 20 minutes, 15C sustained and 36C pulse discharge, minus 40 to 70 degrees C, at 4000, 5000 and 6000 mAh",
+    "Sky drone battery, developed with subsidiary Foshan Shida — energy density above 400 Wh/kg, more than 1,000 cycles, 15P instantaneous and 6P sustained discharge",
+    "Two-wheeler LFP cells at up to 173 Wh/kg with cycle life of at least 3,000, IP65 packs and level-6 seismic shock to the new national standard",
+    "Forklift packs to 942Ah with 300A sustained charge and discharge per module",
+    "EN 9100:2018 aerospace and defence quality certification obtained in FY2025",
+    "Hanhai (瀚海) 85Ah cell for AI data-centre backup — 10C sustained and 12C instantaneous discharge, above 97.5% capacity retention at 10C, 2,500W continuous, covering the mains-failure to generator-start window"
+   ],
+   "positioning": "SPIR ranks Great Power ninth in China by 3C lithium-battery revenue. The Hanhai AIDC cell is the company's newest adjacency and has no named customer, no disclosed volume and no revenue line — the same position REPT's comparable AIDC line occupies.",
+   "soldThrough": "Direct to appliance, tool and vehicle manufacturers; primary batteries are also sold under Great Power's own brand.",
+   "targetSegments": [
+    "Consumer electronics OEMs",
+    "Two-wheeler and light-EV makers",
+    "Power tools",
+    "Drones and marine",
+    "Data-centre backup"
+   ],
+   "roadmap": "A solid-state pilot line is built and operating, with a next-generation oxide-route cell targeted at energy density of at least 360 Wh/kg operating from minus 20 to 85 degrees C and passing nail penetration."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Fengpeng 587Ah / 588Ah energy-storage cell",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal capacity",
+     "value": "587Ah (FY2025 annual report and the February 2026 capex authorisation); 588Ah (H1 2026 report and the container datasheet)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Round-trip efficiency at 5 degrees C",
+     "value": "85%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Round-trip efficiency at 25 degrees C",
+     "value": "above 94% (587Ah, FY2025); above 95% (588Ah, H1 2026)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Round-trip efficiency at 45 degrees C",
+     "value": "above 96%"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life",
+     "value": "exceeding 10,000 at 0.5C and room temperature"
+    },
+    {
+     "band": "Design",
+     "label": "Construction",
+     "value": "winding (rolled) process, chosen by the company for yield, cost control and line speed"
+    },
+    {
+     "band": "Compliance",
+     "label": "Abuse testing",
+     "value": "nail penetration, thermal runaway and short circuit, all passed"
+    }
+   ],
+   "notes": "The 587Ah to 588Ah restatement runs across the company's own documents in the same year, and the capex line authorised in February 2026 is worded 587Ah while the shipping product is marketed as 588Ah. Both figures are recorded because no source reconciles them."
+  },
+  {
+   "product": "MAX-20HC-5000 liquid-cooled container",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Rated energy",
+     "value": "5 MWh"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC-side round-trip efficiency",
+     "value": "96% at 0.25P; 95% at 0.5P"
+    },
+    {
+     "band": "Electrical",
+     "label": "Cell efficiency",
+     "value": "at least 96%"
+    },
+    {
+     "band": "Design",
+     "label": "Energy density",
+     "value": "stated 50% improvement"
+    },
+    {
+     "band": "Design",
+     "label": "Ingress protection",
+     "value": "IP55 overall; pack IP67; high-voltage box IP54; electrical compartment IPX5"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification",
+     "value": "UL 9540, UL 9540A, UL 1973, NFPA 855, NFPA 68, NFPA 69, NFPA 72"
+    },
+    {
+     "band": "Compliance",
+     "label": "Full-scale fire test",
+     "value": "UL 9540A:2026, certified by TUV Rheinland, published 8 September 2026"
+    }
+   ],
+   "notes": "In the fire test the initiating container was run at 100% state of charge with the doors closed, at least 150 mm container separation and active suppression disabled. The fire self-extinguished after sixteen hours, peak adjacent cell temperature stayed below 70 degrees C, and no adjacent container ignited."
+  },
+  {
+   "product": "MAX-20HC-6250 liquid-cooled container",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Rated energy",
+     "value": "6.25 MWh"
+    },
+    {
+     "band": "Design",
+     "label": "Cell",
+     "value": "in-house Fengpeng 588Ah"
+    },
+    {
+     "band": "Design",
+     "label": "Thermal",
+     "value": "high-safety liquid-cooled pack"
+    }
+   ],
+   "notes": "Described by the company as reducing component cost and overall build cost against the 5 MWh generation."
+  },
+  {
+   "product": "Hanhai (瀚海) 85Ah AI data-centre backup cell",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal capacity",
+     "value": "85Ah"
+    },
+    {
+     "band": "Electrical",
+     "label": "Discharge rate",
+     "value": "10C sustained; 12C instantaneous"
+    },
+    {
+     "band": "Electrical",
+     "label": "Capacity retention at 10C",
+     "value": "above 97.5%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Continuous power",
+     "value": "2,500W"
+    },
+    {
+     "band": "Electrical",
+     "label": "Response",
+     "value": "20P millisecond instantaneous response"
+    },
+    {
+     "band": "Compliance",
+     "label": "Abuse testing",
+     "value": "nail penetration passed"
+    }
+   ],
+   "notes": "Designed to cover the minute-scale window between a mains failure and a generator starting. No named customer, no disclosed volume and no revenue line — the same position REPT's comparable AIDC cell occupies."
+  },
+  {
+   "product": "122Ah residential energy-storage cell",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Nominal capacity",
+     "value": "122Ah"
+    },
+    {
+     "band": "Electrical",
+     "label": "Energy density",
+     "value": "above 200 Wh/kg"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification",
+     "value": "IEC, UN38.3"
+    },
+    {
+     "band": "Design",
+     "label": "Application",
+     "value": "all-in-one residential systems, addressing integration density"
+    }
+   ],
+   "notes": "First shown at SNEC in June 2026. The 120Ah format is the subject of five of the six production lines authorised in the February 2026 Henan programme."
+  },
+  {
+   "product": "Sodium-ion cells",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Layered oxide energy density",
+     "value": "above 150 Wh/kg"
+    },
+    {
+     "band": "Durability",
+     "label": "Layered oxide cycle life",
+     "value": "above 3,000"
+    },
+    {
+     "band": "Durability",
+     "label": "Polyanion cycle life",
+     "value": "above 6,000"
+    },
+    {
+     "band": "Durability",
+     "label": "Prismatic cycle life",
+     "value": "exceeding 10,000"
+    },
+    {
+     "band": "Electrical",
+     "label": "Prismatic round-trip efficiency",
+     "value": "measured average above 95%"
+    },
+    {
+     "band": "Electrical",
+     "label": "Cylindrical discharge rate",
+     "value": "20C sustained, on a full-tab structure"
+    }
+   ],
+   "notes": "In mass production since 2023, which is early against the corpus. No separate revenue line, no disclosed shipment volume, and no third-party sodium-ion ranking names the company."
+  },
+  {
+   "product": "Group manufacturing capacity",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Nameplate, FY2024",
+     "value": "7.514 billion Ah annualised"
+    },
+    {
+     "band": "Capacity",
+     "label": "Nameplate, FY2025",
+     "value": "8.664 billion Ah annualised"
+    },
+    {
+     "band": "Capacity",
+     "label": "Nameplate, H1 2026",
+     "value": "10.121 billion Ah annualised"
+    },
+    {
+     "band": "Capacity",
+     "label": "Under construction, H1 2026",
+     "value": "3.969 billion Ah"
+    },
+    {
+     "band": "Capacity",
+     "label": "Utilisation, FY2024",
+     "value": "68.39%"
+    },
+    {
+     "band": "Capacity",
+     "label": "Utilisation, FY2025",
+     "value": "126.46%"
+    },
+    {
+     "band": "Capacity",
+     "label": "Utilisation, H1 2026",
+     "value": "165.72%"
+    },
+    {
+     "band": "Capacity",
+     "label": "Output, H1 2026",
+     "value": "8.386 billion Ah"
+    }
+   ],
+   "notes": "Capacity is disclosed only in ampere-hours, never in GWh, in any filing. The only GWh figure in first-party material is a website milestone claim of more than 100 GWh capacity in 2025, which appears in no filing. Utilisation above 100% is measured against annualised opening nameplate while capacity was being added through the year."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-08",
+   "category": "product-launch",
+   "headline": "Full-scale UL 9540A:2026 fire test on the MAX-20HC-5000 container certified by TUV Rheinland",
+   "read": "Published the day before this dossier was written. Sixteen hours to self-extinguish with no propagation to adjacent containers — the result a project financier reads, and the direct commercial return on the TUV Rheinland witness-lab qualification obtained in May.",
+   "source": "pv magazine"
+  },
+  {
+   "date": "2026-09-07",
+   "category": "corporate",
+   "headline": "Partial cancellation of granted 2025 share options completed",
+   "read": "Routine housekeeping, and the most recent filing on the company's record.",
+   "source": "cninfo announcement"
+  },
+  {
+   "date": "2026-08-31",
+   "category": "leadership",
+   "headline": "Sixth board of directors elected; Liu Ming replaces Song Xiaoning as independent director and Audit Committee chair",
+   "read": "A clean, uneventful succession. Xia Xinde continues as chairman, Zhen Shaoqiang as president and Lu Hongli as vice chairman, VP and board secretary.",
+   "source": "cninfo announcement 2026-067"
+  },
+  {
+   "date": "2026-08-27",
+   "category": "financial",
+   "headline": "H1 2026 results: revenue RMB 10.978bn (+155.27%), attributable profit RMB 816.4m (+1,025.39%) from a prior-year loss",
+   "read": "Half-year revenue alone reached 91.9% of the whole of FY2025. Gross margin rose 7.11 points to 19.59% and operating cash flow turned positive. The 185-page report does not mention the Hong Kong listing once.",
+   "source": "cninfo 2026 half-year report"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "regulatory",
+   "headline": "The Hong Kong listing application reaches the end of its six-month validity without a hearing",
+   "read": "HKEX's consolidated application index, regenerated 9 September 2026, records the status as Lapsed — a distinct status from Withdrawn or Rejected, and the standard consequence of an application proof expiring. There is a single index row, so no refiling has been posted.",
+   "source": "HKEX consolidated listing-application index"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "market",
+   "headline": "Global partner conference in Guangzhou; the company claims first place in emergency-power high-rate cells, first globally in residential storage cells and top two in commercial and industrial storage",
+   "read": "A brand and ecosystem offensive built on segment leadership rather than on aggregate scale — which is an accurate reading of where its rankings actually are.",
+   "source": "Great Power newsroom"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "financial",
+   "headline": "H1 2026 pre-announcement guides attributable profit to RMB 800–866m",
+   "read": "Delivered at RMB 816.4m, inside its own range. The FY2025 pre-announcement was equally accurate — guided RMB 170–230m against RMB 206.0m actual.",
+   "source": "cninfo announcement 2026-052"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "order-win",
+   "headline": "Strategic agreement with the Daqing municipal government, Huaneng Xinhua Power and Beijing Zhiping Energy for an oilfield storage base including mobile storage vehicles",
+   "read": "Opens an oilfield-decarbonisation vertical that no other company in this corpus occupies. Signed by chairman Xia Xinde with the Daqing Datong district party secretary and a Huaneng subsidiary.",
+   "source": "Great Power newsroom"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "corporate",
+   "headline": "2026 restricted-stock plan granted: 3,827,900 shares at RMB 49.98 to 162 employees",
+   "read": "The performance conditions are the sharpest forward-looking disclosure the company makes — see the FY2026 to FY2028 revenue targets below.",
+   "source": "cninfo announcement 2026-046"
+  },
+  {
+   "date": "2026-06-03",
+   "category": "product-launch",
+   "headline": "Three products launched at SNEC: the 122Ah residential cell above 200 Wh/kg, the Hanhai 85Ah AI data-centre backup cell, and the large-storage line",
+   "read": "A deliberate three-segment offensive. The AIDC cell is the newest adjacency and has no named customer or disclosed volume.",
+   "source": "Great Power newsroom"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "regulatory",
+   "headline": "TUV Rheinland Witness Testing Laboratory qualification obtained",
+   "read": "Lets the company's own test data feed directly into TUV Rheinland certification, shortening international certification cycles. Certification lead time is the entry barrier that protects incumbent residential-cell suppliers, so this is a competitive move rather than a compliance one.",
+   "source": "Great Power newsroom"
+  },
+  {
+   "date": "2026-05-15",
+   "category": "regulatory",
+   "headline": "The CSRC publishes a supplementary-materials request on the overseas listing filing, covering overseas subsidiaries' outbound-investment and foreign-exchange compliance, a possible controlling-shareholder change arising from share pledges, and the use of overseas proceeds",
+   "read": "Published by the regulator, not by the company: no Great Power disclosure references it. On the company's own record the pledge premise does not hold — the controlling shareholder's pledge has been falling and stands at 9.07% of his stake.",
+   "source": "CSRC supplementary-materials publication, reported by Sina Finance"
+  },
+  {
+   "date": "2026-04-28",
+   "category": "financial",
+   "headline": "FY2025 annual report and Q1 2026 report: FY2025 revenue RMB 11.944bn (+50.04%) with attributable profit RMB 206.0m after a loss year; Q1 2026 revenue RMB 4.768bn (+182.14%)",
+   "read": "The turn came in Q3 2025 — the first two quarters of 2025 were both loss-making. Q1 2026 alone earned more than the whole of FY2025.",
+   "source": "cninfo FY2025 annual report"
+  },
+  {
+   "date": "2026-04-24",
+   "category": "financial",
+   "headline": "Proceeds of the 2022 private placement fully deployed and the special account closed",
+   "read": "Clears the decks for a new raise — three months after the Hong Kong application was filed to fund the Henan programme.",
+   "source": "cninfo announcement"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "corporate",
+   "headline": "Controlling shareholder releases a further 1,710,000 pledged shares, taking cumulative pledge to 9.07% of his holding",
+   "read": "Every pledge announcement since April 2025 has been a release. Peak disclosed pledge was 12.41% of his holding in October 2024.",
+   "source": "cninfo announcement 2026-022"
+  },
+  {
+   "date": "2026-04-15",
+   "category": "corporate",
+   "headline": "2026 restricted-stock plan draft sets revenue-only performance conditions of RMB 20bn for 2026, RMB 50bn cumulative for 2026–27 and RMB 95bn cumulative for 2026–28",
+   "read": "Against FY2025 revenue of RMB 11.94bn this is roughly a 3.8-fold increase in three years, about a 56% compound rate. There is no profit, margin or return condition at all — management has tied 162 employees' compensation purely to market-share capture.",
+   "source": "cninfo restricted-stock plan draft"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "capacity",
+   "headline": "Two Henan cell projects approved on the same day — RMB 1.2bn at Zhumadian for one 587Ah and one 120Ah line, and RMB 2.1bn at Zhengyang for four 120Ah lines",
+   "read": "RMB 3.3bn committed twelve trading days after the Hong Kong application was filed, against a balance sheet already geared above 75%. The announcements contemplate a convertible bond, preferred shares, a rights issue or a placement, with no direction chosen and no financing agreement signed. Neither project discloses a GWh capacity or a schedule.",
+   "source": "cninfo announcements 2026-019 and 2026-020"
+  },
+  {
+   "date": "2026-02-01",
+   "category": "regulatory",
+   "headline": "Application submitted to the HKEX Main Board on 30 January 2026 and the application proof published the same day",
+   "read": "The high-water mark of the process. The announcement itself warns that the listing still required CSRC filing and SFC and HKEX approval and that uncertainty remained. Nothing further was ever disclosed.",
+   "source": "cninfo announcement 2026-017"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "corporate",
+   "headline": "Extraordinary general meeting approves the H-share package",
+   "read": "The last shareholder action on the listing. Neither the July nor the August 2026 EGM carried any H-share item, including any extension of the resolution's validity.",
+   "source": "cninfo EGM resolution announcement"
+  },
+  {
+   "date": "2026-01-05",
+   "category": "corporate",
+   "headline": "Board approves the H-share issue and Main Board listing, conversion to an overseas-fundraising joint-stock company, and appoints Ernst & Young Hong Kong as H-share auditor, alongside eighteen post-listing governance documents",
+   "read": "The most concentrated single-day filing event of the period. No sponsor is named in any company filing — trade press reports CITIC Securities as sole sponsor, and CITIC appears in the company's own record only in the unrelated A-share continuing-supervision role.",
+   "source": "cninfo announcements 2026-002 and 2026-006"
+  },
+  {
+   "date": "2025-12-12",
+   "category": "corporate",
+   "headline": "Hong Kong listing first flagged",
+   "read": "The announcement states the H-share issue will not cause a change in controlling shareholder or actual controller — the question the CSRC would raise five months later.",
+   "source": "cninfo announcement 2025-056"
+  },
+  {
+   "date": "2025-10-29",
+   "category": "corporate",
+   "headline": "Wholesale governance overhaul — the articles of association and twenty-seven internal policies revised or created",
+   "read": "With hindsight the pre-positioning for the Hong Kong application six weeks later. It also aligned the company with the new PRC Company Law.",
+   "source": "cninfo announcements"
+  },
+  {
+   "date": "2025-09",
+   "category": "market",
+   "headline": "First tier-one Chinese ESS cell maker to publicly raise prices — 314Ah up about 11% and small-storage cells up about 14%",
+   "read": "The pivot moment. Gross margin moved from 11.38% in Q2 2025 to 18.07% in Q3 2025 and orders rose about 40% quarter on quarter. Pricing power came from the residential niche rather than from scale.",
+   "source": "Eastmoney, quoting the board secretary"
+  },
+  {
+   "date": "2025-07-29",
+   "category": "corporate",
+   "headline": "2025 share-option plan and employee share ownership plan launched",
+   "read": "A dual retention package launched at the trough of the cycle, locking in staff immediately before the storage upturn.",
+   "source": "cninfo announcements"
+  },
+  {
+   "date": "2025-04-23",
+   "category": "financial",
+   "headline": "FY2024 results: first loss since the 2015 listing — attributable loss RMB 252.5m, ex-items loss RMB 322.4m, operating cash flow negative RMB 244.4m",
+   "read": "The base everything since is measured from. Gross margin fell 3.72 points to 12.79% as cell prices ran at or below production cost. The outturn missed the company's own guidance range on a statutory basis.",
+   "source": "cninfo FY2024 annual report"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "market",
+   "headline": "SNE Research places Great Power tenth in global storage-cell shipments for H1 2026 at 20.5 GWh and 4.4%, with growth of 202%",
+   "read": "The fastest growth in the global top ten, and share up from 2.5%. It now outships LG Energy Solution and Samsung SDI individually in storage cells.",
+   "source": "CnEVPost reporting SNE Research"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "order-win",
+   "headline": "Shortlisted as a candidate winner with Hithium and Cornex on NARI Technology's 2026 cell framework of about 4 GWh",
+   "read": "The first hard evidence that it can win Chinese utility-scale framework slots against tier-one peers, on a tender split between cells of at least 314Ah and at least 587Ah.",
+   "source": "EnergyTrend reporting the NARI tender notice"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "crrc-zhuzhou",
+   "type": "partner",
+   "status": "active",
+   "since": "2026",
+   "via": "688Ah WindPeng cell",
+   "note": "Jointly developed the 688Ah WindPeng (风鹏) cell with CRRC Zhuzhou Institute for 6.9 MWh systems.",
+   "context": "CRRC Zhuzhou Institute and Great Power launched the 688Ah WindPeng cell on 21 January, taking single-cell capacity above 600Ah and system energy above 6 MWh — what the Chinese trade press called the Dual-Six era. Great Power's chairman Xia Xinde attended alongside CRRC Zhuzhou's integrated-energy business head.\n\nCRRC Zhuzhou's own dossier records the relationship from its side, noting that it is not vertically integrated into cells and lists Great Power among the makers it sources from. The 688Ah cell is a separate and larger product from Great Power's 587Ah/588Ah Fengpeng line; CRRC Zhuzhou runs a parallel 688Ah programme with REPT BATTERO, so the partnership is not exclusive on either side.",
+   "source": "https://www.energy-x.org/news/crrc-great-power-688ah-windpeng-battery.html",
+   "scale": "688Ah cell for 6.9 MWh systems"
+  },
+  {
+   "slug": "rept",
+   "type": "competitor",
+   "status": "active",
+   "since": "2026",
+   "note": "Direct rival in residential storage cells, where the two are ranked first by different research houses for the same period.",
+   "context": "REPT BATTERO's dossier states that SNE ranks it first globally in residential storage cells for H1 2026 and that REPT, EVE and Great Power together held about 63% of that segment. Great Power's own H1 2026 report states that Frost & Sullivan ranks Great Power first globally in residential storage cells at 28% share.\n\nBoth claims are sourced and neither is obviously wrong: they come from different research houses with different segment definitions, and TrendForce independently places Great Power second behind REPT while InfoLink places it third at 17.3% behind EVE and REPT. No source reconciles them, and the segment definitions — residential-only against small storage including telecom — are nowhere stated side by side. In aggregate storage cells the two are further apart: SNE has REPT sixth at 31.4 GWh and Great Power tenth at 20.5 GWh.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "scale": "REPT 31.4 GWh vs Great Power 20.5 GWh, H1 2026"
+  },
+  {
+   "slug": "hithium",
+   "type": "competitor",
+   "status": "announced",
+   "since": "2026",
+   "note": "Both shortlisted as candidate winners on NARI Technology's 2026 cell framework of about 4 GWh.",
+   "context": "NARI Technology published a shortlist on 2 July 2026 naming Hithium, Cornex and Great Power as candidate winners on a 2026 energy-storage cell framework procurement of roughly 4 GWh, split between about 2 GWh of cells of at least 314Ah and about 2 GWh of at least 587Ah.\n\nThe two are otherwise far apart in scale: SNE places Hithium third globally in H1 2026 storage-cell shipments at 46.2 GWh and 10.0%, against Great Power tenth at 20.5 GWh and 4.4%. Appearing on the same Chinese utility-scale shortlist is the first hard evidence located that Great Power competes for tier-one framework slots rather than only for residential and commercial volume.",
+   "source": "https://www.energytrend.com/news/20260703-51698.html",
+   "scale": "~4 GWh framework"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The Section 301 duty on Chinese lithium-ion batteries for non-EV use rose from 7.5% to 25% on 1 January 2026, taking the all-in duty on Chinese storage cells to roughly 55 to 58%. Great Power's direct exposure is close to nil: it books only 15.5% of revenue overseas and names no United States customer, project or entity in any filing. Its disclosed overseas offices cover Germany, Turkey, Japan, Malaysia, Indonesia, Singapore and Chile, and its only overseas plant is in Bac Ninh, Vietnam. The consequence cuts both ways — it is insulated from the duty and excluded from the highest-margin storage market in the world.",
+   "source": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/"
+  },
+  {
+   "regime": "EU Battery Regulation",
+   "status": "in-effect",
+   "effectiveDate": "2026-02-18",
+   "exposure": "Carbon-footprint declaration became mandatory for rechargeable industrial batteries placed on the EU market from 18 February 2026, with a digital battery passport required for industrial batteries above 2 kWh from February 2027. This is the regime that matters most to Great Power, because its residential-storage end demand is concentrated in Germany, the United Kingdom and Australia while the revenue is booked domestically through Chinese integrators and inverter makers who export.",
+   "mitigation": "The company obtained TUV Rheinland Witness Testing Laboratory qualification on 13 May 2026, allowing its own test data to feed directly into TUV Rheinland certification and shortening international certification cycles. It holds a European branch in Germany but no European manufacturing.",
+   "source": "https://www.ess-news.com/2026/08/17/energy-storage-cell-shipment-data-for-h1-2026-reveal-three-structural-shifts/"
+  },
+  {
+   "regime": "China export tax rebate",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-01",
+   "exposure": "China cut the export tax rebate on batteries from 9% to 6% for April to December 2026 and abolishes it entirely on 1 January 2027. InfoLink attributes part of the 2026 export surge to a pull-forward ahead of that cliff, which means a share of the shipment growth reported across the sector — including Great Power's 202% — reverses in 2027. This bears directly on the company's own incentive-plan revenue targets, which assume continued compound growth.",
+   "source": "https://www.ess-news.com/2026/08/17/energy-storage-cell-shipment-data-for-h1-2026-reveal-three-structural-shifts/"
+  },
+  {
+   "regime": "CSRC overseas listing filing",
+   "status": "expired",
+   "effectiveDate": "2026-07-30",
+   "exposure": "A PRC company listing overseas must complete a filing with the CSRC, and the CSRC published a supplementary-materials request on 15 May 2026 covering overseas subsidiaries' outbound-investment and foreign-exchange compliance, a possible controlling-shareholder change arising from share pledges, and the use of overseas proceeds. No CSRC filing notice was ever issued, and the HKEX application lapsed at the end of its six-month validity. On the company's own record the pledge premise the regulator raised does not hold: the controlling shareholder's cumulative pledge has fallen from 12.41% of his holding in October 2024 to 9.07% by mid-2026, every announcement since April 2025 has been a release, and the FY2025 annual report answers the ChiNext 80% cumulative-pledge test with not applicable.",
+   "source": "https://www1.hkexnews.hk/app/documents/sehkconsolidatedindex.xlsx"
+  },
+  {
+   "regime": "UFLPA",
+   "status": "in-effect",
+   "effectiveDate": "2022-06-21",
+   "exposure": "No source located names Great Power on the UFLPA Entity List or reports a company-specific detention. The exposure that exists is the rebuttable presumption applying generally to Chinese supply chains. Recorded as not established rather than as absent.",
+   "source": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Xia Xinde (夏信德)",
+   "title": "Chairman, founder, controlling shareholder and actual controller",
+   "background": [
+    "Chairman since August 2011; President of the company from January 2001 to January 2021; born 1964, master's degree",
+    "Holds 132,145,444 shares, 26.25% of the company, and is its declared actual controller together with his elder brother Xia Rende (5.25%) and a Guangzhou Minto private fund as concert parties",
+    "Deputy Director — Guangzhou 555 Battery Research Institute (1988–1994)",
+    "Manager — Guangzhou Weili Power Supply Co. (1994–2001)",
+    "Legal representative and director across sixteen or more group subsidiaries, including the Henan, Zhuhai, Liuzhou, Changzhou and Foshan operating companies",
+    "Central South University alumnus; the company funds a Great Power scholarship there"
+   ]
+  },
+  {
+   "name": "Zhen Shaoqiang (甄少强)",
+   "title": "Director and President",
+   "background": [
+    "President since January 2021 and a director since August 2020; Executive President from February 2020; born 1964",
+    "Midea Group (1993–2018) — engineer, manager, plant director, then deputy general manager and general manager of a group division",
+    "Lecturer, Henan Normal University (1988–1993)",
+    "Granted 100,000 restricted shares in June 2026, 2.61% of the plan"
+   ]
+  },
+  {
+   "name": "Lu Hongli (鲁宏力)",
+   "title": "Vice Chairman, Vice President and Board Secretary",
+   "background": [
+    "Joined Great Power in October 2010 as head of finance; now vice chairman, vice president and board secretary; born 1968",
+    "Guangzhou Jinpeng Group (1998–2010) — finance department head, chief financial officer, group budget director, head of audit and group supervisor",
+    "Guangzhou Yuetong Group (1996–1998); Guangzhou Ocean Hotel (1991–1996), ending as chief financial officer",
+    "Chinese Certified Public Accountant; holds the Shenzhen Stock Exchange board-secretary qualification",
+    "Master's in probability and statistics, Sun Yat-sen University, 1991"
+   ]
+  },
+  {
+   "name": "Pan Li (潘丽)",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Joined Great Power in March 2020; management-accounting manager, then deputy finance director, now finance director; born 1988",
+    "Midea Group (2010–2020) — divisional factory cost and operations finance, then chief financial officer of a subsidiary",
+    "Chinese Certified Public Accountant",
+    "Bachelor's in financial management, Anhui Normal University, 2010"
+   ]
+  },
+  {
+   "name": "Xia Yang (夏杨)",
+   "title": "Director and business-division General Manager",
+   "background": [
+    "Director, and a member of the Nomination and Strategy Committees; born 1990",
+    "General Manager then Executive General Manager — Guangzhou Nice Battery Technology, from September 2015",
+    "MSc International Economics and Finance, Brandeis University, Boston, 2015",
+    "Shares a surname with the chairman; the filings do not state a family relationship and she is not listed among the actual controller's concert parties"
+   ]
+  },
+  {
+   "name": "Liang Zhaohui (梁朝晖)",
+   "title": "Director",
+   "background": [
+    "Director since August 2011; born 1973; engineer and economist",
+    "Member of the Audit Committee and the Remuneration and Appraisal Committee",
+    "Roles across MCC 19th Metallurgical Construction, Guangdong Nengda Traffic Engineering, Guangdong Feida Information Systems, Guangzhou Haite Tiangao Information Systems, Guangdong Nanyue Logistics and Guangzhou Xinyue Asphalt (1993–2013)"
+   ]
+  },
+  {
+   "name": "Xue Yanni (薛艳妮)",
+   "title": "Employee Representative Director",
+   "background": [
+    "Elected to the board in November 2025 under the employee-director requirement; born 1980",
+    "With the company's marketing centre since March 2003 — salesperson, deputy business manager, then business manager"
+   ]
+  },
+  {
+   "name": "Nan Junmin (南俊民)",
+   "title": "Independent Director and Chair of the Nomination Committee",
+   "background": [
+    "Independent director; chairs the Nomination Committee and sits on the Audit and Remuneration Committees; born 1969",
+    "Professor and doctoral supervisor, Chemistry Department, South China Normal University",
+    "Engineer — Hangzhou Narada Power; earlier a technician at State-owned Factory 755",
+    "Visiting scholar, Yonsei University, Korea; post-doctoral fellow in applied chemistry, Tianjin University",
+    "PhD in Science, Xiamen University"
+   ]
+  },
+  {
+   "name": "Peng Fangping (彭方平)",
+   "title": "Independent Director and Chair of the Remuneration and Appraisal Committee",
+   "background": [
+    "Independent director; chairs the Remuneration and Appraisal Committee and sits on the Nomination Committee; born 1977",
+    "Professor, Finance and Investment Department, School of Business, Sun Yat-sen University, from July 2007",
+    "Deputy Director, Economic Committee of the 16th Guangdong Provincial Committee of the China Democratic League",
+    "PhD in Quantitative Economics, Huazhong University of Science and Technology"
+   ]
+  },
+  {
+   "name": "Liu Ming (刘明)",
+   "title": "Independent Director and Chair of the Audit Committee",
+   "background": [
+    "Appointed to the sixth board on 31 August 2026, replacing Song Xiaoning",
+    "Identified in the nomination filings as the board's accounting professional, which is the basis for chairing the Audit Committee"
+   ]
+  },
+  {
+   "name": "Li Mingqiang (李明强)",
+   "title": "General Manager, light-power division",
+   "background": [
+    "Leads the light-EV and light-power business covering two-wheelers, forklifts, marine, drones and power tools",
+    "Launched the division's customised R&D, scale production and localised service strategy at the national partner summit in Hunan, June 2026"
+   ]
+  },
+  {
+   "name": "Jiang Maohui (江茂辉)",
+   "title": "Vice President, smart energy",
+   "background": [
+    "Leads the smart-energy business",
+    "Signed the Daqing oilfield storage-base strategic agreement with the Daqing municipal government, Huaneng Xinhua Power and Beijing Zhiping Energy in June 2026"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "RMB",
+  "type": "public",
+  "commentary": "Reported under PRC accounting standards, audited by Huaxing CPAs with a standard unqualified opinion for FY2025 (report 华兴审字[2026]25015980015, 29 April 2026); the H1 2026 report is unaudited. The company states there is no difference in net profit or net assets between PRC standards and IFRS. THERE IS NO STORAGE, CONSUMER OR LIGHT-EV REVENUE SPLIT IN ANY FILING — the company reports one product line, lithium-ion batteries, at 93% or more of revenue, and discusses the three businesses only qualitatively. Any three-way split attributed to the company is not a company disclosure. Capacity is disclosed only in ampere-hours and no shipment volume in GWh is disclosed anywhere. Both pre-announcements in the period proved accurate, so 'expected' is populated from the company's own guidance where it exists and left empty otherwise; there is no published analyst consensus this dossier could verify.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The first loss since the 2015 listing, and the base everything since is measured from. Cell prices ran at or below production cost and the loss was compounded by asset and credit impairments. Capacity utilisation was 68.39%.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 7,960,507,262.13, up 14.83%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Lithium-ion batteries RMB 7,363,323,331.24 at an 11.40% gross margin; overseas RMB 1,036,720,624.54, 13.02% of revenue, at a 25.00% gross margin.",
+      "kpi": "revenue",
+      "usdMillions": 1107.6,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Net profit attributable to shareholders",
+      "actual": "LOSS of RMB 252,455,728.32, down 685.72%",
+      "expected": "RMB -165m to -232m (company guidance, 23 January 2025)",
+      "verdict": "miss",
+      "result": "The outturn fell below the company's own guidance range on a statutory basis. Excluding non-recurring items the loss was larger still, at RMB 322,375,381.25.",
+      "kpi": "net-income",
+      "usdMillions": -35.1,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "12.79%, down 3.72 points",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Domestic gross margin was 10.97% against 25.00% overseas — a gap that persists in every period."
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "NEGATIVE RMB 244,423,466.18",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The clearest signal of the trough: a loss year with cash going out of the business."
+     },
+     {
+      "name": "Capacity and utilisation",
+      "actual": "7.514 billion Ah annualised nameplate; utilisation 68.39%",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Roughly a third of the plant stood idle."
+     },
+     {
+      "name": "Customer concentration",
+      "actual": "Top five customers RMB 2,376,869,951.13, 29.86% of revenue; largest 10.48%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No customer is ever named; related-party share of the top five is zero."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "The return to profit, and it arrived in the second half — Q1 and Q2 2025 were both loss-making and the turn came in Q3. Revenue rose 50.04% and utilisation went from a third idle to running above nameplate. Customer concentration fell sharply while revenue grew, which is genuine diversification rather than the loss of a large account.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 11,943,958,058.13, up 50.04%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Lithium-ion batteries RMB 11,117,025,102.46 (93.08%); primary lithium batteries RMB 335,485,653.80 (2.81%); other RMB 491,447,301.87 (4.11%). All sales were direct, with no distributor channel.",
+      "kpi": "revenue",
+      "usdMillions": 1661.8,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Net profit attributable to shareholders",
+      "actual": "RMB 206,022,522.25, up 181.61% from a loss",
+      "expected": "RMB 170m to 230m (company guidance, 21 January 2026)",
+      "verdict": "inline",
+      "result": "Delivered inside its own guidance range and near the top of it. Excluding non-recurring items, RMB 98,256,705.37 — less than half the headline, so the recovery was thinner than it looks.",
+      "kpi": "net-income",
+      "usdMillions": 28.7,
+      "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "14.60%, up 1.80 points",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Domestic 12.73% against overseas 25.14% — overseas margin runs roughly double domestic in every period, which is the single most useful mix insight the disclosure permits."
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "RMB 930,119,521.80 inflow, up 480.54%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "From negative RMB 244.4m the year before. The cash turn is more convincing than the profit turn."
+     },
+     {
+      "name": "Overseas revenue",
+      "actual": "RMB 1,793,320,853.46, 15.01% of revenue, up 72.98%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Growing faster than the group and at nearly double the margin, but still a sixth of revenue."
+     },
+     {
+      "name": "Capacity and utilisation",
+      "actual": "8.664 billion Ah annualised nameplate; utilisation 126.46%; output 10.173 billion Ah",
+      "expected": "",
+      "verdict": "beat",
+      "result": "From 68.39% to above 100% in a single year."
+     },
+     {
+      "name": "R&D spend",
+      "actual": "RMB 520,845,536.49, up 35.56%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Raw materials were 75.61% of cost of sales, up from 70.10%."
+     },
+     {
+      "name": "Customer concentration",
+      "actual": "Top five customers RMB 2,425,325,887.86, 20.31% of revenue; largest 5.20%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Down from 29.86% and 10.48% respectively while revenue grew 50% — the base broadened materially."
+     }
+    ]
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "A step change rather than a continuation: half-year revenue alone reached 91.9% of the whole of FY2025, and half-year profit was four times the prior full year. Gross margin rose 7.11 points. USD overlays are omitted for this period because the corpus has no researched 2026 rate.",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB 10,978,445,693.16, up 155.27%",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Lithium-ion batteries RMB 10,295,065,811.93 (93.77%), up 163.97%. Domestic RMB 9,275,452,426.94; overseas RMB 1,702,993,266.22, 15.51% of revenue — the report explicitly ticks the box confirming overseas sales are NOT above 30%."
+     },
+     {
+      "name": "Net profit attributable to shareholders",
+      "actual": "RMB 816,440,418.25, up 1,025.39% from a prior-period loss of RMB 88,226,713.49",
+      "expected": "RMB 800m to 866m (company guidance, 15 July 2026)",
+      "verdict": "inline",
+      "result": "Delivered inside its own range. Unusually, the ex-non-recurring figure of RMB 819,809,047.19 is HIGHER than the headline — non-recurring items were a net drag, the opposite of the pattern seen at several Chinese peers."
+     },
+     {
+      "name": "Gross margin",
+      "actual": "19.59%, up 7.11 points",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Lithium-ion battery products at 17.71%, up 7.61 points. Domestic 18.64% against overseas 24.74%."
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "RMB 169,400,457.52 inflow",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Positive, but an order of magnitude smaller than profit — the working-capital cost of growing revenue 155%."
+     },
+     {
+      "name": "Capacity and utilisation",
+      "actual": "10.121 billion Ah annualised nameplate; 3.969 billion Ah under construction; utilisation 165.72%; output 8.386 billion Ah",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Running at roughly 1.66 times nameplate, with a further 39% of capacity being built. This is the operational fact behind the RMB 3.3bn Henan commitment."
+     },
+     {
+      "name": "Basic earnings per share",
+      "actual": "RMB 1.6220 (diluted RMB 1.5903)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Weighted-average return on equity 14.17%, from negative 1.69%."
+     },
+     {
+      "name": "Impairments and fair value",
+      "actual": "Credit impairment RMB 124,208,021.28; asset impairment RMB 105,871,605.94; fair-value loss RMB 22,886,982.56 on futures",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The asset impairment is an inventory write-down; the fair-value loss arises on the lithium-carbonate hedging programme."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "**KEY JUDGMENTS**",
+  "1. **(High confidence)** We assess Great Power is a challenger in energy-storage cells and an incumbent only in one niche of that market. Basis: four independent houses place it eighth to tenth globally for H1 2026 — SPIR eighth, TrendForce ninth, SNE tenth at 20.5 GWh and 4.4%, Benchmark inside the top ten — while in residential storage cells Frost & Sullivan places it first at 28%, TrendForce second and InfoLink third. Its FY2025 utility-scale shipments were 9.82 GWh against 14.36 GWh of small storage. The defensible formulation is bottom-of-top-ten in cells overall, top-three in residential.",
+  "2. **(High confidence)** We assess the Hong Kong listing application lapsed rather than being withdrawn or refused, and that no refiling has been posted. Basis: HKEX's consolidated listing-application index, regenerated on 9 September 2026, carries a single row for the company — first posted 30 January 2026, status Lapsed. Lapsed is a distinct value in that index's vocabulary from Withdrawn and Rejected, and a refiling generates a second row, as it did for peers in the same cohort. The company's own conduct corroborates it: no progress announcement, no extension of the resolution's validity at either of two subsequent extraordinary meetings, and no mention of the listing anywhere in the 185-page H1 2026 report published a month after the lapse date.",
+  "3. **(Moderate confidence)** We assess the regulator's stated concern about a change of controlling shareholder arising from share pledges is not supported by the company's own record. Basis: the controlling shareholder's cumulative pledge peaked at 16,400,000 shares, 12.41% of his holding, in October 2024 and has fallen to 11,990,000, or 9.07% of his holding and 2.38% of share capital; every pledge announcement since April 2025 has been a release rather than a new pledge; the FY2025 annual report answers the ChiNext 80% cumulative-pledge test with 'not applicable'; and no shares are frozen or marked. Confidence is moderate rather than high only because the CSRC's own file is not public and its reasoning cannot be read.",
+  "4. **(Moderate confidence)** We assess the balance sheet, not demand, was the binding constraint that the listing was meant to relieve — and that the constraint is now materially eased by trading rather than by financing. Basis: gearing above 75% at Q1 2026, RMB 3.3bn of Henan capex authorised twelve trading days after the application was filed with the funding route explicitly undecided, and no convertible bond or placement announced since. Against that, H1 2026 delivered RMB 816m of attributable profit and positive operating cash flow, and consensus for FY2026 clusters at RMB 1.84bn to 2.01bn — enough to fund the RMB 1.2bn Zhumadian project from earnings within a year, though not the full RMB 3.3bn programme alongside a 44 to 100 GWh capacity ramp.",
+  "5. **(High confidence)** We assess the company's margin thesis is channel mix rather than cost leadership. Basis: overseas gross margin has run at roughly double domestic in every disclosed period — 25.14% against 12.73% in FY2025 and 24.74% against 18.64% in H1 2026 — and the company was the first tier-one Chinese storage-cell maker to raise prices, in September 2025, with margin moving from 11.38% to 18.07% in a quarter. Pricing power came from the residential niche, where certification lead times of six to twelve months per market are the entry barrier, not from scale.",
+  "6. **(Moderate confidence)** We assess the 2026 incentive plan's targets are the sharpest forward-looking statement the company makes, and that they are aggressive to the point of being informative about intent rather than expectation. Basis: the plan sets revenue-only conditions of RMB 20bn for 2026, RMB 50bn cumulative for 2026 to 2027 and RMB 95bn cumulative for 2026 to 2028, against FY2025 revenue of RMB 11.94bn — roughly 3.8 times in three years. There is no profit, margin or return condition at all. Management has tied 162 employees' compensation purely to market-share capture, which is a deliberate choice in a market where the company's own gross margin is half the leader's.",
+  "7. **(Low confidence)** The sodium-ion position is technically real and commercially unproven. The company reached mass production in 2023, ahead of most of the corpus, and discloses credible specifications across layered-oxide, polyanion and anode-free routes. But there is no separate revenue line, no disclosed shipment volume, and no third-party sodium-ion ranking names Great Power at all — the houses that rank sodium-ion name HiNa, CATL, EVE and Vecko. Treat the sodium-ion narrative as company-stated until a volume or a customer appears.",
+  "**Collection gap:** the company reports a single product line, lithium-ion batteries, at 93% or more of revenue, and never quantifies the storage, consumer and light-EV split it discusses qualitatively. Capacity is disclosed only in ampere-hours; the sole GWh figure in first-party material is a website milestone claim of more than 100 GWh that appears in no filing. No shipment volume in GWh is disclosed anywhere, no customer is ever named, and no director photograph exists on any company channel.",
+  "**Collection gap:** two claims widely attached to the Hong Kong application could not be confirmed from the company's own filings. No filing names a sponsor for the H-share issue — trade press reports CITIC Securities as sole sponsor, and CITIC appears in the company's own record only in the unrelated A-share continuing-supervision role, which is an easy conflation. And the CSRC's 15 May 2026 supplementary-materials request appears in the regulator's publication and in trade press but in no company disclosure; a company is not necessarily required to disclose one.",
+  "**INDICATORS TO WATCH**",
+  "- *A second row for the company in HKEX's consolidated application index:* that index is regenerated daily and a refiling appears as a new row with a later first-posting date. Its absence past the end of 2026 would make the listing a closed chapter rather than a pause.",
+  "- *Any convertible bond, preferred share or placement announcement:* the RMB 3.3bn Henan programme was authorised with the funding route explicitly undecided. How it is financed now that the equity route has lapsed is the most consequential open question.",
+  "- *FY2026 revenue against RMB 20bn:* the first incentive-plan gate. H1 2026 revenue of RMB 10.98bn puts it within reach on a simple run-rate, so a miss would signal a sharp second-half slowdown.",
+  "- *Gross margin after 1 January 2027:* the export tax rebate falls from 6% to zero, and InfoLink attributes part of the 2026 shipment surge to a pull-forward ahead of it. Margin holding near 19% through 2027 would confirm the channel-mix thesis; a reversion toward FY2025's 14.6% would refute it.",
+  "- *A named customer, anywhere:* the company has never named one in any filing. The first named residential brand or integrator would allow the 28% residential share claim to be tested from the buyer's side.",
+  "- *The first Hanhai AIDC order:* an 85Ah data-centre backup cell with no customer, no volume and no revenue line sits exactly where REPT's comparable line sits. A named counterparty would make the adjacency real."
+ ],
+ "sources": [
+  {
+   "label": "HKEX — consolidated Main Board listing-application index (English), recording Great Power's 30 January 2026 application as Lapsed",
+   "url": "https://www1.hkexnews.hk/app/documents/sehkconsolidatedindex.xlsx",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "HKEX — consolidated Main Board listing-application index (Chinese), status 失效",
+   "url": "https://www1.hkexnews.hk/app/documents/sehkconsolidatedindex_c.xlsx",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "pv magazine — Great Power completes a full-scale UL 9540A fire test on the Max-20HC-5000",
+   "url": "http://www.pv-magazine.com/2026/09/08/great-power-successfully-completes-full-scale-fire-test/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Great Power — announcement 2026-067: completion of the board re-election and appointment of senior management",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-31/1225538943.PDF",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Great Power — 2026 half-year report",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-28/1225518569.PDF",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Great Power — 2026 half-year report summary",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-28/1225518568.PDF",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Xinhua — Great Power H1 revenue passes RMB 10bn; residential storage cell share 28%",
+   "url": "https://www.news.cn/energy/20260828/dcdf803f3d054bef8765eda09a954b8a/c.html",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Benchmark Mineral Intelligence — who shipped the most BESS cells and systems in H1 2026",
+   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "InfoLink Consulting — energy storage cell shipment data for H1 2026 reveals three structural shifts",
+   "url": "https://www.ess-news.com/2026/08/17/energy-storage-cell-shipment-data-for-h1-2026-reveal-three-structural-shifts/",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "EnergyTrend / TrendForce — top 10 global energy storage cell manufacturers by H1 2026 shipments",
+   "url": "https://www.energytrend.com/research/20260814-51941.html",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Jiemian — the storage cell top ten has no dark horses left; Great Power rises from eighth to fifth in overseas shipments",
+   "url": "https://www.jiemian.com/article/14915030.html",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "SMM / Metal.com — H1 global lithium battery ESS shipments exceed 461 GWh",
+   "url": "https://news.metal.com/newscontent/104042179-h1-global-lithium-battery-ess-shipments-exceed-461-gwh-catl-eve-and-hithium-account-for-nearly-half",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "CnEVPost — SNE Research global ESS battery market share, H1 2026",
+   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "EnergyTrend — nearly 40 GWh of storage orders, including NARI's ~4 GWh cell framework shortlist",
+   "url": "https://www.energytrend.com/news/20260703-51698.html",
+   "date": "2026-07-03"
+  },
+  {
+   "label": "Great Power — announcement 2026-052: H1 2026 results pre-announcement",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-07-15/1225426382.PDF",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Great Power newsroom — letter to 2026 global partners, with Q1 2026 figures and segment rankings",
+   "url": "https://www.greatpower.net/news/715.html",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Sina Finance / SPIR — global lithium-ion storage cell shipment top ten, H1 2026",
+   "url": "https://finance.sina.com.cn/wm/2026-07-11/doc-inihpche2772479.shtml",
+   "date": "2026-07-11"
+  },
+  {
+   "label": "Great Power — announcement 2026-046: first grant under the 2026 restricted-stock incentive plan",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-06-18/1225378754.PDF",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "Great Power newsroom — strategic agreement with the Daqing municipal government, Huaneng Xinhua Power and Beijing Zhiping Energy",
+   "url": "https://www.greatpower.net/news/711.html",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "Great Power newsroom — light-power division national partner summit",
+   "url": "https://www.greatpower.net/news/710.html",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "Great Power newsroom — three product launches at SNEC 2026: large storage, residential and AIDC",
+   "url": "https://www.greatpower.net/news/709.html",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Great Power newsroom — Central South University president and CAE academician Li Jiancheng visits",
+   "url": "https://www.greatpower.net/news/708.html",
+   "date": "2026-05-19"
+  },
+  {
+   "label": "Sina Finance — the CSRC requires Great Power to supplement three items on its Hong Kong listing filing",
+   "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-05-19/doc-inhymqcm7443550.shtml",
+   "date": "2026-05-19"
+  },
+  {
+   "label": "China Finance Online — CSRC asks Great Power to explain its overseas fundraising projects",
+   "url": "http://xg.stock.cnfol.com/xinguyaowen/20260515/32228628.shtml",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Great Power newsroom — TUV Rheinland Witness Testing Laboratory qualification obtained",
+   "url": "https://www.greatpower.net/news/707.html",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Great Power — 2025 annual report",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225243780.PDF",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "Great Power — announcement 2026-022: partial release of the controlling shareholder's pledged shares",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-04-21/1225134937.PDF",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Great Power — 2026 restricted-stock incentive plan (draft), with the FY2026–FY2028 revenue conditions",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-04-15/1225106938.PDF",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Great Power — announcement 2026-020: RMB 2.1bn 120Ah cell project at Zhengyang County, Henan",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-02-12/1224978921.PDF",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Great Power — announcement 2026-019: RMB 1.2bn 587Ah and 120Ah cell project at Zhumadian, Henan",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-02-12/1224978920.PDF",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Great Power — announcement 2026-017: application submitted to the HKEX Main Board and application materials published",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-02-02/1224960979.PDF",
+   "date": "2026-02-01"
+  },
+  {
+   "label": "Energy-Storage.News — Great Power, Sunwoda and Deye Technology file Hong Kong listing applications",
+   "url": "https://www.energy-storage.news/energy-storage-players-great-power-sunwoda-and-deye-technology-file-hong-kong-listing-applications/",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "Great Power — announcement 2026-011: FY2025 results pre-announcement",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-01-21/1224944482.PDF",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "Great Power — announcement 2026-006: appointment of Ernst & Young Hong Kong as H-share auditor",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-01-06/1224920870.PDF",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Great Power — announcement 2026-002: board approval of the H-share issue and HKEX Main Board listing",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-01-06/1224920869.PDF",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Great Power — announcement 2025-056: first notice of the planned H-share issue and Hong Kong listing",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-12-12/1224874302.PDF",
+   "date": "2025-12-12"
+  },
+  {
+   "label": "Eastmoney — Great Power fires the first shot on storage cell prices, 314Ah up 11% and small cells up 14%",
+   "url": "https://caifuhao.eastmoney.com/news/20251109192440050175440",
+   "date": "2025-11-09"
+  },
+  {
+   "label": "Great Power — announcement 2025-046 (2024): extension and supplementary pledge of the controlling shareholder's shares",
+   "url": "http://static.cninfo.com.cn/finalpage/2024-10-21/1221450119.PDF",
+   "date": "2024-10-21"
+  },
+  {
+   "label": "Great Power — 2024 annual report",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-04-24/1223245174.PDF",
+   "date": "2025-04-23"
+  },
+  {
+   "label": "Sina Finance — Great Power posts a 2024 loss of RMB 252m, down 685.7%",
+   "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-04-24/doc-ineuhchv3463391.shtml",
+   "date": "2025-04-24"
+  },
+  {
+   "label": "EnergyX — CRRC Zhuzhou and Great Power jointly develop the 688Ah WindPeng cell",
+   "url": "https://www.energy-x.org/news/crrc-great-power-688ah-windpeng-battery.html",
+   "date": "2025-01-21"
+  },
+  {
+   "label": "DoNews / Kanjian Finance — gearing above 75% and RMB 3.3bn of expansion: Great Power's storage gamble",
+   "url": "https://www.donews.com/article/detail/8779/102434.html",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "Energy-Storage.News — EV slowdown creates a potential lifeline for US energy storage amid FEOC and tariffs",
+   "url": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "Battery网 / EVTank — 2025 global storage battery shipments, Great Power a new top-ten entrant",
+   "url": "https://www.itdcw.com/news/hangyebaogao/0205153ER026.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "世纪新能源网 / InfoLink — 2025 storage cell shipment rankings; Great Power eighth in overseas and third in small storage",
+   "url": "https://www.ne21.com/news/show-224621.html",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Tencent News / Ruiyin Capital — Great Power files its Hong Kong prospectus, with the Frost & Sullivan FY2024 rank",
+   "url": "https://news.qq.com/rain/a/20260131A06B2L00",
+   "date": "2026-01-31"
+  },
+  {
+   "label": "SZSE — company generalisation for 300438, confirming the ChiNext plate and the 24 April 2015 listing date",
+   "url": "https://www.szse.cn/api/report/index/companyGeneralization?secCode=300438"
+  },
+  {
+   "label": "cninfo — issuer record for stock 300438, confirming the company is listed and not delisted",
+   "url": "http://www.cninfo.com.cn/new/information/topSearch/query"
+  },
+  {
+   "label": "Great Power — energy storage cell and product catalogue",
+   "url": "https://www.greatpower.net/product/index.html"
+  },
+  {
+   "label": "Great Power — large-scale storage: MAX-20HC containers and Magna cabinets",
+   "url": "https://www.greatpower.net/product/largeenergystorage.html"
+  },
+  {
+   "label": "Great Power — commercial and industrial storage: GreatOne, GreatCom and GreatE",
+   "url": "https://www.greatpower.net/product/commercialenergystorage.html"
+  },
+  {
+   "label": "Great Power — consumer batteries",
+   "url": "https://www.greatpower.net/product/consumerbatteries.html"
+  },
+  {
+   "label": "Great Power — light power: forklift, marine, two-wheeler and power-tool cells",
+   "url": "https://www.greatpower.net/product/power.html"
+  },
+  {
+   "label": "Great Power — smart PV, storage, charging and inspection",
+   "url": "https://www.greatpower.net/product/charging.html"
+  },
+  {
+   "label": "Great Power — about us, manufacturing bases and global footprint",
+   "url": "https://www.greatpower.net/about/index.html"
+  },
+  {
+   "label": "Great Power — investor relations",
+   "url": "https://www.greatpower.net/investor/index.html"
+  },
+  {
+   "label": "Wood Mackenzie — global BESS integrator ranking 2026 (Great Power is not named)",
+   "url": "https://www.woodmac.com/press-releases/global-bess-integrator-2026-ranking/"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

@@ -171,6 +171,15 @@
       ]
     },
     {
+      "slug": "aerogel",
+      "term": "aerogel",
+      "def": "An extremely low-density solid whose fine internal structure traps air so effectively that it is among the best solid thermal insulators available. In battery packs, thin aerogel sheets are placed between cells to break the conductive heat path and slow thermal propagation.",
+      "aliases": [
+        "aerogel barrier",
+        "aerogel insulation"
+      ]
+    },
+    {
       "slug": "affo",
       "term": "AFFO",
       "def": "Adjusted funds from operations: funds from operations minus the recurring capital spending and leasing costs needed just to keep the existing buildings earning. It is the closest published approximation of cash actually available to pay dividends.",
@@ -1271,6 +1280,15 @@
       ]
     },
     {
+      "slug": "capacity-utilisation",
+      "term": "capacity utilisation",
+      "def": "Actual output as a percentage of manufacturing capacity. Figures above 100% usually mean the denominator is annualised opening capacity while new lines were commissioned during the period — a signal that capacity was added and filled quickly, not that a plant is running beyond its design limit.",
+      "aliases": [
+        "capacity utilization",
+        "产能利用率"
+      ]
+    },
+    {
       "slug": "capital-light-model",
       "term": "capital-light model",
       "def": "A business that sells technology, engineering, licences and fuel without owning the plants that use them, so it needs far less capital than an owner-operator but depends on others' investment decisions.",
@@ -1786,6 +1804,14 @@
       "slug": "coefficient-of-performance",
       "term": "coefficient of performance",
       "def": "Coefficient of performance: heat moved divided by work put in. A chiller at a COP of 6 moves six units of heat per unit of electricity — it is moving heat, not making it, which is why the number exceeds one."
+    },
+    {
+      "slug": "coin-cell",
+      "term": "coin cell",
+      "def": "A small sealed disc-shaped cell, usually a primary (non-rechargeable) chemistry, used where miniature size and years of shelf life matter more than capacity — watches, hearing aids and memory backup.",
+      "aliases": [
+        "button cell"
+      ]
     },
     {
       "slug": "coincident-peak",
@@ -3514,6 +3540,14 @@
       ]
     },
     {
+      "slug": "electrolyte",
+      "term": "electrolyte",
+      "def": "The ion-conducting medium that lets lithium ions travel between the two electrodes while blocking electrons, which must go round the external circuit instead. In a conventional lithium-ion cell it is a flammable organic liquid, which is why its decomposition is central to thermal runaway.",
+      "aliases": [
+        "liquid electrolyte"
+      ]
+    },
+    {
       "slug": "electronics-manufacturing-services",
       "term": "electronics manufacturing services",
       "def": "The industry of building electronics for other companies, spanning bare circuit-board assembly through full product assembly, test, distribution and repair. Its economics are volume and purchasing scale, so margins are thin and the winners are large.",
@@ -5057,6 +5091,14 @@
       ]
     },
     {
+      "slug": "hard-carbon",
+      "term": "hard carbon",
+      "def": "A disordered, non-graphitising carbon used as the anode in sodium-ion cells. Sodium ions are too large to slot between graphite's stacked layers as lithium does, so they are stored in hard carbon's pores and between its misaligned layers instead.",
+      "aliases": [
+        "non-graphitising carbon"
+      ]
+    },
+    {
       "slug": "hard-market",
       "term": "hard market",
       "def": "Conditions in which insurers have less appetite than the market wants: prices rise, deductibles rise, limits shrink and terms narrow. Buyers feel it as a scramble for capacity; brokers earn more because commission is a percentage of a bigger premium.",
@@ -5201,6 +5243,15 @@
       "aliases": [
         "high-performance computing",
         "supercomputing"
+      ]
+    },
+    {
+      "slug": "high-rate-discharge",
+      "term": "high-rate discharge",
+      "def": "Delivering a cell's energy over a very short period, expressed as a high C-rate. It requires low internal resistance — thicker current collectors, more tabs, thinner electrodes — which costs energy density, so a high-rate cell is a different design rather than a tuned storage cell.",
+      "aliases": [
+        "high rate",
+        "high-rate"
       ]
     },
     {
@@ -6089,6 +6140,15 @@
       "aliases": [
         "LPD",
         "lateral power"
+      ]
+    },
+    {
+      "slug": "layered-oxide",
+      "term": "layered oxide",
+      "def": "A cathode structure of stacked transition-metal oxide sheets with alkali ions held between them. In sodium-ion cells it gives higher energy density than the polyanion route but is more sensitive to moisture and to over-discharge.",
+      "aliases": [
+        "layered oxide cathode",
+        "层状氧化物"
       ]
     },
     {
@@ -7048,6 +7108,15 @@
       "aliases": [
         "N+1 redundancy",
         "2N"
+      ]
+    },
+    {
+      "slug": "nail-penetration-test",
+      "term": "nail penetration test",
+      "def": "An abuse test that drives a spike through a fully charged cell to force an internal short circuit, used to show whether the cell vents safely or enters thermal runaway. It is a cell-level test; the system-level equivalent is a full-scale fire test such as UL 9540A.",
+      "aliases": [
+        "nail penetration",
+        "needle penetration test"
       ]
     },
     {
@@ -8082,6 +8151,15 @@
       ]
     },
     {
+      "slug": "polyanion",
+      "term": "polyanion",
+      "def": "A cathode structure that locks the transition metal into a rigid framework of phosphate or sulphate groups. It stores less energy than a layered oxide but barely changes shape as ions move in and out, which is why polyanion sodium-ion cells achieve very long cycle life.",
+      "aliases": [
+        "polyanionic",
+        "聚阴离子"
+      ]
+    },
+    {
       "slug": "postage-stamp-rate",
       "term": "postage-stamp rate",
       "def": "A transmission charge spread evenly across every customer in a region regardless of where the line was built — the same price to send a letter anywhere. ERCOT allocates its transmission cost of service this way across all load, which is why a 765 kV line in West Texas is paid for by customers in Dallas and Houston, and why Texas has built transmission faster than regions that argue about who benefits.",
@@ -8297,6 +8375,17 @@
       ]
     },
     {
+      "slug": "prelithiation",
+      "term": "prelithiation",
+      "def": "Loading extra lithium into a cell during manufacture, beyond what the cathode supplies, to feed the interface-layer reaction that consumes lithium on every cycle. It defers measurable capacity loss — the basis of 'zero degradation' claims — rather than eliminating ageing.",
+      "aliases": [
+        "lithium replenishment",
+        "pre-lithiation",
+        "補鋰",
+        "补锂"
+      ]
+    },
+    {
       "slug": "prepayment",
       "term": "prepayment",
       "def": "Paying for capacity before it is delivered. In compute contracts a prepayment funds the supplier's build and shifts delivery risk onto the buyer, who has paid for something that does not yet exist.",
@@ -8345,6 +8434,16 @@
         "dollars per MW",
         "$ per MW",
         "per-MW value"
+      ]
+    },
+    {
+      "slug": "primary-battery",
+      "term": "primary battery",
+      "def": "A non-rechargeable cell, whose chemical reaction does not usefully reverse — an electrode is consumed rather than merely emptied. Primary cells win on shelf life, low self-discharge and cost per unit of energy for low-drain devices such as smoke alarms, meters and hearing aids.",
+      "aliases": [
+        "primary cell",
+        "disposable battery",
+        "一次电池"
       ]
     },
     {
@@ -9521,6 +9620,16 @@
       "def": "A compressor formed by two interleaved spirals, one orbiting inside the other, sweeping gas inward. Simple, quiet, and the standard building block of small and modular machines."
     },
     {
+      "slug": "secondary-battery",
+      "term": "secondary battery",
+      "def": "A rechargeable cell, whose reactions reverse cleanly when current is driven back in. Lithium-ion achieves this by intercalation, where ions move into and out of host structures without consuming either electrode.",
+      "aliases": [
+        "secondary cell",
+        "rechargeable battery",
+        "二次电池"
+      ]
+    },
+    {
       "slug": "secondary-fluid-network",
       "term": "secondary fluid network",
       "def": "The closed loop of clean coolant that runs between a distribution unit and the cold plates in the racks, kept separate from the building's own chilled-water loop. Separating them lets the rack loop be filtered, treated and pressure-controlled independently of the facility.",
@@ -9652,6 +9761,14 @@
       ]
     },
     {
+      "slug": "self-discharge",
+      "term": "self-discharge",
+      "def": "The gradual loss of stored charge while a cell sits unused, caused by slow internal side reactions. Low self-discharge is what lets a primary battery still work years after manufacture.",
+      "aliases": [
+        "self discharge"
+      ]
+    },
+    {
       "slug": "self-mining",
       "term": "self-mining",
       "def": "Operating mining machines you own, for your own account, and keeping the bitcoin. Contrast with hosting, where you sell power, space and operations to someone else who owns the machines and takes the price risk.",
@@ -9699,6 +9816,14 @@
       "slug": "sensible-heat-ratio",
       "term": "sensible heat ratio",
       "def": "The share of a cooling load that lowers air temperature rather than condensing moisture out of it. IT heat is almost entirely sensible, which is why equipment for data halls is built differently from comfort air conditioning."
+    },
+    {
+      "slug": "separator",
+      "term": "separator",
+      "def": "A thin porous membrane that keeps the two electrodes from touching while letting lithium ions pass through the electrolyte between them. If it is punctured or melts, the electrodes short directly, which is the initiating event in most internal-short failures.",
+      "aliases": [
+        "cell separator"
+      ]
     },
     {
       "slug": "sequence-of-operations",
@@ -9786,6 +9911,14 @@
       "def": "The one-way hashing function bitcoin mining uses. It turns any input into a fixed 256-bit output that cannot be run backwards, so the only way to hit a target output is to try inputs until one works.",
       "aliases": [
         "SHA256"
+      ]
+    },
+    {
+      "slug": "shelf-life",
+      "term": "shelf life",
+      "def": "How long a cell remains usable in storage before self-discharge and ageing render it unfit for its job — distinct from cycle life, which counts charge and discharge cycles, and from calendar life, which measures degradation in service.",
+      "aliases": [
+        "shelf-life"
       ]
     },
     {
@@ -11852,6 +11985,15 @@
       "aliases": [
         "zero-crossing",
         "zero cross"
+      ]
+    },
+    {
+      "slug": "zinc-air",
+      "term": "zinc-air",
+      "def": "A primary chemistry that oxidises zinc against oxygen drawn from the surrounding air rather than from an oxidant carried inside the cell. Because it does not have to store its own oxidant, more of its volume is fuel, giving unusually high energy density for its size.",
+      "aliases": [
+        "zinc air",
+        "锌空"
       ]
     }
   ]
