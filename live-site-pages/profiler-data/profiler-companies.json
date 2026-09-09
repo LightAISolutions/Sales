@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "categories": [
     "supplier",
     "developer",
@@ -184,6 +184,10 @@
           "id": "compute-and-the-rack",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "Advanced Micro Devices",
+        "Advanced Micro Devices, Inc."
       ]
     },
     {
@@ -647,6 +651,11 @@
           "id": "storage-integrators-and-containers",
           "role": "incumbent"
         }
+      ],
+      "aka": [
+        "Contemporary Amperex Technology",
+        "Contemporary Amperex Technology Co., Limited",
+        "宁德时代"
       ]
     },
     {
@@ -3765,6 +3774,11 @@
           "id": "compute-and-the-rack",
           "role": "challenger"
         }
+      ],
+      "aka": [
+        "Super Micro Computer",
+        "Super Micro Computer, Inc.",
+        "Super Micro"
       ]
     },
     {
@@ -4418,7 +4432,7 @@
       "hq": "San Francisco, California, United States",
       "ticker": "LSE: BEZ (parent)",
       "status": "active",
-      "lastUpdated": "2026-09-08",
+      "lastUpdated": "2026-09-09",
       "domains": [
         "kwhanalytics.com",
         "beazley.com"
@@ -4482,6 +4496,16 @@
           "id": "insurance-and-risk-transfer",
           "role": "incumbent"
         }
+      ],
+      "aka": [
+        "Aon plc",
+        "Aon Corporation",
+        "Aon Benfield",
+        "Aon Securities",
+        "Aon Reinsurance Solutions",
+        "NFP",
+        "USI",
+        "Aon Risk Services"
       ]
     },
     {
@@ -4512,6 +4536,23 @@
           "id": "insurance-and-risk-transfer",
           "role": "incumbent"
         }
+      ],
+      "aka": [
+        "Marsh",
+        "Marsh & McLennan",
+        "Marsh & McLennan Companies",
+        "Marsh Risk",
+        "Marsh Re",
+        "Guy Carpenter",
+        "Mercer",
+        "Marsh People and Investments",
+        "Oliver Wyman",
+        "Marsh Management Consulting",
+        "Marsh McLennan Agency",
+        "McGriff",
+        "Victor",
+        "MMC",
+        "MRSH"
       ]
     }
   ]

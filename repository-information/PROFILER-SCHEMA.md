@@ -16,11 +16,33 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 - The slug is the company's **permanent identity**: it names the profile file (`<slug>.profile.json`), forms the page URL (`Profiler.html#<slug>`), and keys the registry entry. Never change a slug once published — revise the profile in place instead
 - One slug per corporate entity. Subsidiaries only get their own slug when they are genuinely distinct actors in the ecosystem
 
+## Naming and renames
+
+The slug is permanent; names are not. Companies rebrand, and three sessions in a row have found a coverage-plan row carrying a name or ticker the company had already retired. These rules keep a rename from becoming a corpus-wide problem.
+
+**Four fields, four different jobs.**
+
+| Field | Holds | Changes when |
+|-------|-------|--------------|
+| `slug` | The permanent identity. Names the file, forms the URL, keys the registry | **Never** |
+| `name` (profile) | The **full legal name** — the registrant on the filing, the entity in the charter | Only when the legal entity is actually renamed, which is rarer than a rebrand |
+| `shortName` (profile) and `name` (registry) | The **display name**, shown on the roster card and the dossier header | On a rebrand, subject to the collision test below |
+| `aka[]` (registry) | Every **other** name the corpus should search for | Additively, forever — an alias is never removed, because old dossiers keep using old names |
+
+**Choosing a display name on a rebrand.** Default to the name the market currently uses. Override it, and keep the prior name, when the new brand fails the **collision test**: is it a common word, a personal surname, or a string that already appears in the corpus meaning something else? Run `grep -rE '\b<NewName>\b' live-site-pages/profiler-data/*.profile.json` before deciding. A brand that collides makes every future corpus reconciliation noisier for as long as the company is covered, and the display name is the cheapest thing to trade away.
+
+*Worked example, and the reason this section exists.* Marsh & McLennan Companies, Inc. rebranded to **Marsh** in January 2026 and moved its ticker from MMC to MRSH. The legal name did not change, so `name` did not change. The display name stayed **"Marsh McLennan"** because "Marsh" fails the collision test twice over — Clearway's Marsh Landing generating station and Entergy's chief executive Drew Marsh both already appear in the corpus. The rebrand, the new brand, the renamed businesses (Marsh Risk, Marsh Re, Marsh People and Investments) and the retired names (Guy Carpenter, Mercer) all went into `aka[]`, where the reconciliation grep can find them. **Nothing was lost by declining the new brand as a label, and a permanent search problem was avoided.**
+
+*And the measured reason the alias list is not optional.* Grepping the corpus for the display name `Marsh McLennan` returns **two** dossiers. Grepping the `aka[]` entries returns **six**, and the four extra ones include `dnv` — which carries the single most important inbound claim about the company, that its battery guidance names no certifier — reached only through the alias `Marsh`, plus `csa-group` reached only through `Oliver Wyman`. A session reconciling on the display name alone would have missed both. Some aliases return pure noise (`Victor`, `MMC`); that costs a few files to read and is the correct trade.
+
+**What a rebrand always requires**, whichever way the display name goes: the ticker updated in `ownership.ticker` and the registry `ticker`; the old and new brands added to `aka[]`; the old domain added to `domains[]` if it still resolves or redirects; and the rebrand itself recorded as a `recentDevelopments[]` entry with its date, because a reader who knew the company under the old name needs to be told when it changed.
+
+
 ## Registry schema — `profiler-companies.json`
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
-| `schemaVersion` | number | yes | Registry schema version (currently `2` — v2 added `companies[].domains`) |
+| `schemaVersion` | number | yes | Registry schema version (currently `3` — v3 added `companies[].aka`; v2 added `companies[].domains`). Nothing reads this value at runtime — neither `Profiler.html` nor any script gates on it — so it is documentation of intent rather than a compatibility switch |
 | `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `epc`, `gc`, `ipp`, `utility`, `investor`, `hyperscaler`, `neocloud`, `advisor`, `other` (`epc` renders as "EPC", `gc` as "General Contractor", `ipp` as "IPP", `utility` as "Utility"). `utility` (added 2026-09-03 with the Dominion Energy dossier) is the regulated, rate-based electric utility — the commission-supervised gatekeeper whose IRP, rate case, large-load tariff and interconnection process decide whether AI load and the storage behind it get built; it is its own compare peer family and is never filed under `ipp` or `other` |
 | `companies[]` | object[] | yes | One entry per covered company |
 | `companies[].slug` | string | yes | Per Slug rules; must have a matching `<slug>.profile.json` |
@@ -31,6 +53,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 | `companies[].ticker` | string | no | `EXCHANGE: SYMBOL` for public companies |
 | `companies[].status` | string | yes | `active` (normal) or `archived` (kept but de-emphasized) |
 | `companies[].lastUpdated` | string | yes | `YYYY-MM-DD` of the profile's last revision — keep in sync with the profile's `lastUpdated` |
+| `companies[].aka` | string[] | no | **Registry v3.** Every other name this company is known by, for **text search** — former names, the operating brand when it differs from the display name, short forms, the native-script name, and the names of subsidiaries the corpus will meet under their own branding. It is a mechanical field like `domains`: nothing renders it, and its only consumer is the corpus-reconciliation grep in the Profiler Command step 7, which searches these instead of guessing. Include the display `name` itself only if a grep for it would otherwise be missed. **Entries may legitimately be ambiguous** — "Marsh" collides with a power plant and a chief executive — and that is fine, because step 7 requires reading each hit rather than counting them; an ambiguous alias that surfaces a real claim is doing its job. Omitting the field is safe and simply means the reconciliation grep searches the display name alone |
 | `companies[].domains` | string[] | no | **Registry v2.** The company's own web domains, used to classify source provenance (see "Source provenance" below). Bare hostnames, no scheme and no `www.` — a subdomain match is implied, so `abb.com` covers `new.abb.com`. Include the host from the profile's `website`, plus any other domain the company itself publishes on: parent-company domains for subsidiaries (`hitachi.com` for Hitachi Energy), regional or sub-brand sites (`bydenergy.com`, `delta-americas.com`), separate newsrooms (`about.fb.com`, `atmeta.com` for Meta), brand TLDs (`blog.google`), and IR-platform hosts serving the company's own filings (`iren.gcs-web.com`). Omitting the field is safe — every source then falls to `disclosure` or `independent`, which understates rather than overstates first-party sourcing |
 | `companies[].srcTotal` | number | auto | **Denormalized** — number of cited sources in the profile. Written by `scripts/sync-profiler-registry.py`; never hand-edit. Powers the roster coverage line |
 | `companies[].srcFirstPct` | number | auto | **Denormalized** — first-party share (company + disclosure tiers), percent. Written by the sync script from the profile's `sources[]` and this entry's `domains` |

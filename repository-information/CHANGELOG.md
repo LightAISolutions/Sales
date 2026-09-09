@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.23r] — 2026-09-09 01:30:00 AM EST
+
+> **Prompt:** "Regarding the 'Two of your plan's identity premises expired before the session that used them. V1 found it for kWh and CSA; P2 found it for Marsh (rebrand + ticker) and Aon (a $17bn acquisition nine days old). That is three consecutive sessions where §8's ownership and identity fields were stale at authoring' issue, can you update them to make them not stale? Regarding the 'Marsh McLennan' and 'Marsh' label issue, can you resolve it in a way that doesn't create systematic issues down the line? I don't care that much about how it's labeled, but I don't want to create future problems. When in my greater action plan will we regenerate the three segment lessons that are queued?"
+
+### Added
+
+- **`companies[].aka[]` — a registry field for every other name a company is known by** (PROFILER-SCHEMA.md, registry schemaVersion 2 → 3). Former names, the operating brand where it differs from the display name, short forms, native-script names and separately branded subsidiaries. It is mechanical and unrendered, exactly like `domains`: nothing in `Profiler.html` reads it, and its only consumer is the corpus-reconciliation grep in Profiler Command step 7, which now searches a **recorded** list instead of a guessed one
+- **A "Naming and renames" section in `PROFILER-SCHEMA.md`** setting out four fields with four jobs — `slug` never changes, `name` is the legal name, `shortName` / registry `name` is the display name, `aka[]` grows forever — plus a **collision test** for choosing a display name on a rebrand: default to the name the market uses, override it when the new brand is a common word, a surname, or a string already meaning something else in the corpus, and `grep -rE '\b<NewName>\b'` before deciding
+- **Profiler Command step 1a — mandatory identity verification before research.** Ticker and exchange read off a filing cover or exchange notice; legal name against operating brand; an eighteen-month search for a change of control; confirmation the registrant exists as assumed; and a requirement to **correct the source you were working from** in the same commit
+
+### Changed
+
+- **`aka[]` populated for five companies.** `marsh-mclennan` (15 entries) and `aon` (8) from this session's research; and a bounded backfill of the only three companies in the corpus whose legal name diverges materially from their display name — `amd` (Advanced Micro Devices), `catl` (Contemporary Amperex Technology) and `supermicro` (Super Micro Computer). No mass migration: the schema's opportunistic-backfill rule stands, and step 1a now populates the field at authoring
+- **`PROFILER-COVERAGE-PLAN.md` §8 preamble** now warns that the identity cells are a 2026-09-07 snapshot rather than facts, names the three consecutive sessions in which they were wrong, and points at step 1a as the mechanism
+- **`CLASSROOM-CURRICULUM-PLAN.md` §10.4** gained three findings on segment-lesson regeneration (below)
+
+### Fixed
+
+- **The display-name question is resolved structurally rather than by picking a label, and the label was never the systematic risk.** The risk is that corpus reconciliation greps a display name and misses inbound claims. Measured on this corpus: grepping `Marsh McLennan` returns **two** dossiers; grepping the `aka[]` set returns **six**, and the extras include **`dnv`** — which carries the most important inbound claim about the company, that its battery guidance names no certifier — reachable only through the alias `Marsh`, plus `csa-group` reachable only through `Oliver Wyman`. A session reconciling on the display name alone would have missed both. The display name stays "Marsh McLennan" because "Marsh" fails the collision test twice over (Clearway's Marsh Landing generating station, Entergy's chief executive Drew Marsh)
+- **`kwh-analytics` registry `lastUpdated` drift**, caught by `sync-profiler-registry.py`: the entry still read 2026-09-08 after v05.22r bumped the profile to profileVersion 2 on 2026-09-09. Now synced; the roster's coverage line was stale for one commit
+
+### Worth noting
+
+- **A correction to what v05.22r's response told the developer: it is not three segment lessons queued, it is all nineteen.** `build-classroom-segments.py --check` reports `19 segment(s), 19 due`. The previous count came from reading the curriculum checker's output through a grep filter and reporting the filtered view as the whole
+- **And the nineteen are structural, not neglect.** Every segment lesson pins `concepts:profiler-concepts` and `graph:profiler-graph`, and **every dossier session moves both** — S3 P2 alone added 44 concepts and rebuilt the graph. So "regenerate only what moved" currently degenerates to "regenerate everything, always", and the due signal no longer discriminates. The backlog is far smaller than 19 suggests: **3 differ in no section at all**, **11 differ in exactly one** (`where-it-sits`), and only **5** differ substantively — `cooling`, `compute-and-the-rack`, `assurance`, `software-and-optimization`, `insurance-and-risk-transfer`
+- **Ownership of a regeneration run was mis-recorded three times and is now corrected.** v05.20r, v05.21r and v05.22r all state it is "a developer/S1 job"; §10.4 actually says "the developer **(or the S1/S3 session)**". On the wrong reading nobody owns it, because S1 is closed and S2 authors a different artefact. **The right home is per segment inside its own S2 session** — §10.6 requires the segment lesson's `read-next` to deep-link to the landscape module, so the lesson must be regenerated *after* the module exists. One `--segment <id>` run per S2 session, inside the pipeline checker's caps
+- **Pre-existing collision risks in the roster, reported not changed:** the display names that are ordinary English words — `Switch`, `Flex`, `Tract`, `Lambda`, `Meta`. Distinctive single-word names (`NVIDIA`, `Fluence`, `Hithium`) are not a risk however often they appear
+- **`Profiler.html` was deliberately not edited.** Adding `aka[]` to the roster search haystack would let a reader type "Guy Carpenter" and find the company, but that haystack was narrowed to names-only by explicit developer directive on 2026-08-30, and widening a directive-set behaviour is the developer's call. Offered rather than taken
+- **Identity re-verification of the thirteen remaining Phase E companies is in flight** and is not in this commit; the §8 preamble states plainly that the rows have not been re-verified as a batch, rather than claiming a pass that had not finished
+- Registry rendering re-verified after the schema change: Playwright reads 160 dossiers, all with specs sections, no blank rows, role matrix correct, and only the two progress-isolation failures carried since v05.17r
 
 ## [v05.22r] — 2026-09-09 12:58:08 AM EST
 
