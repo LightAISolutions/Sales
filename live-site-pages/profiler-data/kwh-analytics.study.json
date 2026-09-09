@@ -1,0 +1,620 @@
+{
+ "schemaVersion": 2,
+ "slug": "kwh-analytics",
+ "title": "kWh Analytics — Technology Study Guide",
+ "lastUpdated": "2026-09-08",
+ "glossary": [
+  {
+   "t": "Indifference Structure",
+   "d": "kWh Analytics' proprietary term for the way it sets a parametric wind hedge's trigger and payout so that the sponsor's expected return is the same with or without the hedge — the premium is recovered through the extra debt the floor supports. Not defined publicly beyond the debt-uplift figures."
+  },
+  {
+   "t": "Solar Revenue Put",
+   "d": "kWh Analytics' production-insurance product: a policy guaranteeing up to 95 percent of a solar plant's expected (P50) output for 10 to 25 years (30 under SRP+), paid within 30 days of a shortfall, sold as a credit enhancement so lenders size more debt."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-the-counterparty-nobody-covered",
+   "title": "Start here: the counterparty the corpus had not covered",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The DNV and Sargent & Lundy guides taught who decides whether a battery or solar plant is **{{bankability}}**-grade: the engineer who tests the design and reads the warranty. This guide teaches the seat beside that one at financial close — the **insurer**. A lender can make the developer buy an engineer's opinion; it cannot make a hailstorm, a fire or a bad irradiance year go away. Someone has to hold those risks for a fee, and the terms on which they hold them change how much debt the project can carry.",
+    "kWh Analytics is the worked example because it occupies an unusual position: it is a **{{managing general agent}}** — an underwriter with no balance sheet, writing policies on other companies' capital — that built its authority on data rather than on capital. Through it you meet the whole tower: the broker who brings the risk, the MGA who prices it, the carrier whose paper it is written on, the reinsurer behind the carrier, and the lender who reads the policy before it lends.",
+    "**What this guide deliberately leaves out:** the mechanics of the independent engineer's report (DNV guide), the owner's engineer and design review (Sargent & Lundy guide), and how a battery degrades (Fluence and Tesla guides). It assumes you know what a P50 forecast is and what a lender's debt-service coverage ratio does; both are defined again briefly where they first appear.",
+    "**One idea carries this guide.** Insurance converts a risk the lender cannot size into a fee the sponsor can budget. Every product here — the property policy, the revenue put, the parametric hedge — is a different way of making that conversion, and the difference between them is *what triggers the payment*."
+   ]
+  },
+  {
+   "id": "what-insurance-does-in-a-financing",
+   "title": "What insurance does in a project financing",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**A financing is a promise to repay debt out of a plant's cash flows.** The lender sizes the loan so that, in a bad-but-plausible year, the plant still earns enough to pay interest and principal with a margin to spare — the **{{DSCR}}**. The three things that break that promise are that the plant produces less than forecast, that the plant is damaged and stops earning, and that the counterparties who owe it money or warranties fail. The engineer's report addresses the first and the contracts the third. Insurance is how the second is handled, and — in the products this guide is about — it can be extended to the first.",
+    "**Property insurance** pays to repair or replace physical damage from named or all perils — hail, wind, fire, flood, earthquake, equipment breakdown — up to a limit per location, after a deductible. A lender requires it as a condition of the loan because a damaged plant that cannot be rebuilt cannot repay. Alongside it sits **{{business interruption}}** cover (the revenue lost while the plant is down) and, during construction, **{{delay-in-start-up}}** cover for the revenue lost if commissioning slips because of an insured event.",
+    "**Performance or revenue insurance** is a different animal. It pays not when something breaks but when the plant *earns less than expected* for reasons inside the policy's list — low sun, snow, equipment failure, design error. Because it turns a variable cash flow into a floored one, the lender can treat the floor as near-certain and size more debt against it. That is why this class of product is called a **{{credit enhancement}}**: it improves the credit quality of the borrower without changing the plant.",
+    "**Who buys and who pays.** The sponsor buys every policy and pays every premium; the lender is named as loss payee and its counsel and insurance adviser review the terms before close. The engineer, the lawyer and the insurance adviser therefore form a ring around the financing, each answering a question the credit committee will ask. An insurer's willingness to write a risk at a price is itself evidence to that committee: 'without it, insurance just won't participate,' as one broker put it about resilience measures in 2025.",
+    "**The number that ties it together.** kWh Analytics reports that its solar put lets sponsors raise 'approximately 10% more debt', and that its wind hedge generated 'approximately $6' and then '$7' of additional loan proceeds per dollar of premium. Read those as exchange rates between two things the sponsor can spend: premium today against cheaper capital for the life of the loan."
+   ]
+  },
+  {
+   "id": "the-insurance-tower",
+   "title": "Who is who in the insurance tower",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Seven parties touch a single renewable-energy property placement. Each earns a different way and holds a different risk. The right-hand column locates kWh Analytics.",
+   "cols": [
+    "Party",
+    "What it does",
+    "How it is paid",
+    "Risk it holds",
+    "kWh's position"
+   ],
+   "rows": [
+    [
+     "**Sponsor / asset owner**",
+     "Owns the plant; buys the cover the lender requires",
+     "Pays premium and deductibles",
+     "Everything above the limits and inside the deductibles",
+     "The insured"
+    ],
+    [
+     "**Broker**",
+     "Gathers the submission (values, loss runs, site plans, O&M), markets the risk, negotiates terms",
+     "Commission from the premium",
+     "None — an intermediary",
+     "Distribution channel: kWh's Broker Council seats AmWins, McGriff, Renewable Guard, WTW, Aon, CAC, Alliant, Marsh, Brown & Brown"
+    ],
+    [
+     "**{{Managing general agent}}**",
+     "Prices the risk and binds the policy under **{{delegated authority}}** from a carrier; handles submissions and often claims",
+     "A share of premium (commission) and sometimes a profit share",
+     "None on its own balance sheet — reputational and contractual only",
+     "kWh's licensed entity, Solar Energy Insurance Services, Inc. (California surplus-lines licence 0L00900)"
+    ],
+    [
+     "**Carrier (insurer)**",
+     "Issues the policy on its paper; pays claims",
+     "Premium net of commissions",
+     "The insured risk, to the limit",
+     "Aspen Specialty for property — 'full delegated authority' up to USD 100 million per location"
+    ],
+    [
+     "**Reinsurer**",
+     "Takes a share of the carrier's risk in exchange for a share of premium",
+     "Reinsurance premium",
+     "Its share of losses",
+     "Swiss Re and Everest on the Solar Revenue Put; Munich Re Trading on the wind hedge; '15 global reinsurers' on the panel (company claim)"
+    ],
+    [
+     "**Lloyd's syndicate**",
+     "A pool of capital at Lloyd's that underwrites through managing agents; participates in layers",
+     "Premium share",
+     "Its line on the risk",
+     "Reported behind the USD 20 million excess layer; Beazley, the new owner, manages six syndicates"
+    ],
+    [
+     "**Lender / tax-equity investor**",
+     "Requires the cover, reviews the wording, is named loss payee",
+     "Nothing — a beneficiary",
+     "Residual: uninsured, under-insured or disputed losses",
+     "The audience for the revenue put: '30+ major lenders' recognise it (company claim)"
+    ]
+   ]
+  },
+  {
+   "id": "how-an-mga-works",
+   "title": "How a managing general agent works, and why data is its licence",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**An MGA is an underwriter that rents a balance sheet.** A carrier grants it **{{delegated authority}}** — the right to quote, bind and often adjust claims on the carrier's paper, inside limits and rules the carrier sets: which asset classes, what share of an account, what maximum per location. The MGA does the specialist work the carrier does not want to staff — here, understanding hail stow angles, inverter fire rates and thermal-runaway analyses — and is paid a commission on the premium it writes, sometimes with a profit share if the book performs.",
+    "**Capacity is the product.** For an MGA, 'capacity' means the limit its carriers will let it put on one risk. kWh's history is a capacity ladder: a property programme launched in 2023 at USD 75 million of limits, 'USD 75 million per renewable energy project location' with full authority for solar and battery accounts and half of wind or construction accounts in 2024, 'up to $100 million per renewable energy project location' with 'minority asset classes' added in February 2026, plus a USD 20 million excess layer for storms since August 2025. Each rung was a carrier deciding the MGA's judgment could be trusted with more.",
+    "**Why the data is the licence.** A carrier delegates authority to an MGA that knows something it does not. kWh's claim is a database of '300,000+ zero-carbon projects and $150B in loss data' and a performance record 'assessing 30% of U.S. solar assets' — company figures, never audited. Whether or not the numbers are exact, the logic is what matters: the MGA's data lets it argue that a plant with 3.2 mm tempered glass and a verified 53-degree hail stow deserves a 72 percent lower catastrophe rate, and the carrier accepts the argument because the MGA has seen the losses.",
+    "**Surplus lines.** kWh's policies are '**{{surplus lines}}** products written by surplus lines insurers' — coverage placed with insurers not licensed in the state on an admitted basis, permitted for risks the admitted market will not write. The trade-off is stated on kWh's own site: 'surplus lines insurance carriers do not generally participate in state guaranty funds and insureds are therefore not protected by such funds'. A lender's counsel reads that line.",
+    "**What an MGA is not.** It is not a broker (the broker works for the insured; the MGA works for the carrier), not a carrier (it holds no risk), and not a reinsurer. When Beazley — a Lloyd's-managing specialty insurer — bought kWh in 2026, it bought the underwriting judgment and the data; the question the sale leaves open is whether it keeps renting Aspen's balance sheet or writes the risk on its own."
+   ]
+  },
+  {
+   "id": "anatomy-of-a-renewables-property-policy",
+   "title": "Anatomy of a renewables property policy",
+   "kind": "ledger",
+   "read": "7 min",
+   "cols": [
+    "Term",
+    "What it means",
+    "kWh's published instance",
+    "Why the lender cares"
+   ],
+   "rows": [
+    [
+     "**Limit per location**",
+     "The most the policy pays for one site in one occurrence",
+     "'Up to $100 million per renewable energy project location' (Aspen, 2026); product page still says USD 70 million",
+     "Must cover replacement cost of the plant the loan is secured on"
+    ],
+    [
+     "**Perils**",
+     "Which causes of loss are covered — 'all-risk' with exclusions, or named perils",
+     "'Flood, Hail, Fire, Earthquake, Hurricane, Winter Storm, Physical Damage, Equipment Breakdown'",
+     "An excluded peril is an uninsured loss the lender absorbs"
+    ],
+    [
+     "**{{Deductible}}**",
+     "The first slice of every loss, borne by the insured",
+     "Cut by '50%' on an Arkansas project that enabled automatic hail stow",
+     "A large percentage deductible on hail can exceed a year's cash flow"
+    ],
+    [
+     "**Sublimit**",
+     "A lower cap for a specific peril inside the policy",
+     "Brokers report sponsors pushing back on grouping wind, tornado and lightning under the hail sublimit",
+     "Sublimits are where the headline limit quietly shrinks"
+    ],
+    [
+     "**{{Attachment point}}** and **{{excess layer}}**",
+     "Where a higher layer starts paying; the layer above the primary policy",
+     "'Up to $20M per location with flexible attachment points' for severe convective storms and named windstorms",
+     "Bigger plants need limits no single primary layer offers"
+    ],
+    [
+     "**Resilience credit**",
+     "A pricing reduction for demonstrated risk reduction",
+     "'72% reduction in the natural catastrophe insurance rate' for hail-hardened glass and verified stow; '25% discount in attritional rating'",
+     "Cheaper premium is cash flow; the credit also documents the mitigation the engineer wanted"
+    ],
+    [
+     "**Term**",
+     "Policy period",
+     "'1-year policy terms' against assets 'built to last 35' — 'that tension is real' (kWh's own words)",
+     "Renewal risk: capacity and price reset every year of a 20-year loan"
+    ],
+    [
+     "**Paper**",
+     "Whose balance sheet stands behind the promise",
+     "Aspen Specialty; 'A-rated carrier backing' on the excess layer; surplus lines",
+     "Rating and guaranty-fund status decide what the promise is worth"
+    ]
+   ]
+  },
+  {
+   "id": "hail-the-peril-that-prices-solar",
+   "title": "Hail: the peril that prices utility-scale solar",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**Why hail and not fire.** kWh's loss database says 'hail accounts for 73% of total solar industry losses by damage amount' while being only 6 percent of incidents; GCube's competing study puts hail at 1.4 percent of claims and 54 percent of losses, and VDE Americas at 2 percent of claims. The shares disagree; the shape does not: hail is rare, and when it comes it destroys whole fields of glass at once. A **{{severe convective storm}}** is the meteorological label for the thunderstorm complexes that produce it, and those storms 'drove $60 billion in insured losses in 2025' across all lines.",
+    "**The physics an underwriter needs.** A hailstone's damage depends on its kinetic energy at impact, which rises with the cube of its diameter, and on the angle at which it strikes the glass. Two levers follow. **Glass**: thicker, fully tempered front glass survives more energy — kWh's model says '3.2mm/2mm glass/glass modules sustain up to 1.7x higher impact energies' than the standard 3.2 mm glass-polymer build, and pv magazine reports heat-strengthened glass 'generates claims $50,000/MW higher on average'. **Angle**: tilting the tracker to a steep **{{hail stow}}** so stones strike obliquely — a 75-degree stow 'would have reduced damage probability by 87%' against 60 degrees in a 2022 event, per kWh's Longroad case study.",
+    "**Why models are argued over.** Physics-based models, kWh reports, 'may be overestimating the benefit of hail stow by 48% for ~3in hail' — large stones at steep stow angles still break glass. The 2026 Solar Risk Assessment's headline is that 'hail-hardened modules plus robust stow' are both needed for 13 percent of the United States. For the underwriter this is not academic: the resilience credit is only worth giving if the mitigation actually moves the loss curve, so the MGA's data is also its argument with its own carrier.",
+    "**Telematics closes the loop.** In April 2026 kWh began taking live stow data from Nextpower trackers directly into its pricing model — the first time a renewables policy has been priced on an equipment feed rather than on a submission form. It is the same logic as a telematics box in a car: the insurer rewards behaviour it can see."
+   ]
+  },
+  {
+   "id": "the-solar-revenue-put",
+   "title": "The Solar Revenue Put: insuring the forecast",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Start from the forecast.** An engineer models a solar plant's output as a distribution: the **{{P-50}}** is the level exceeded half the time, the P90 the level exceeded nine years in ten, the **{{P-99}}** almost always. Lenders size debt to the downside — typically the P90 or a one-year P99 — because they are paid the same whether the sun shines or not and lose if it does not. The gap between P50 and P90 is revenue the sponsor expects to earn but the lender will not count.",
+    "**What the put does.** kWh's Solar Revenue Put 'guarantees up to 95% of a solar project's expected energy output' for 10 to 25 years (30 under the SRP+ variant), against 'equipment failure, irradiance deficiency, weather, wildfire smoke, and other risks'. If output falls below the insured level, the policy pays the shortfall 'within 30 days to ensure timely debt service payments'. The lender can therefore size to 95 percent of P50 instead of to P90 — a shallower downside case, hence more debt: 'average debt sizing increases of 10%'.",
+    "**Why it is called a put.** In finance a put option gives its holder the right to sell at a fixed price; here the project 'sells' its shortfall to the insurer at the insured production level. The economics are those of an **{{insurance wrap}}** on the forecast rather than on the equipment: the insurer is betting that its data on 300,000 systems prices the forecast risk better than the lender's blanket haircut does. The premium is the sponsor's cost; the extra debt at a lower rate than equity is its gain.",
+    "**What lenders check before accepting it.** The carrier's rating ('investment grade financial ratings' — Swiss Re, then Everest); the tenor matching the loan (the 26-year Matrix Renewables policy was the first to cover a full amortisation); the perils list against the engineer's risk register; the exclusions; and the claims record, of which the only independent statement is a customer's in 2020: 'a reliable claims process'. Adoption figures — 'more than 40%' of lenders in 2019, 'over 50%' in 2020, '30+ major lenders' today — are the company's own.",
+    "**The pattern to notice.** Named put financings cluster in 2018–2023 and the company's own forward statements favour parametric structures. A credit enhancement is most valuable when lenders are conservative and capital is dear; in a soft market with cheap debt, the 10 percent uplift buys less."
+   ]
+  },
+  {
+   "id": "parametric-versus-indemnity",
+   "title": "Two ways to pay: indemnity versus parametric",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "The property policy and the revenue put are indemnity products: they pay what you actually lost, after a claim is adjusted. The Wind Proxy Hedge is parametric: it pays a pre-agreed amount when a measured index — wind speed at the site — crosses a threshold, whether or not the project lost money. Each fits a different problem.",
+   "cards": [
+    {
+     "t": "Indemnity (property policy, Solar Revenue Put)",
+     "meta": "Pays the measured loss up to the limit, after deductible, once the claim is adjusted.",
+     "adv": [
+      "**No basis risk** — if the plant is damaged or under-produces for a covered reason, the payment matches the loss.",
+      "**Familiar to lenders** — loss-payee clauses, adjusters and policy wordings are standard project-finance furniture.",
+      "**Covers the causes that matter** — equipment failure and design error, which no weather index captures."
+     ],
+     "dis": [
+      "**Slow and contestable** — a claim must be documented, adjusted and sometimes disputed; the 30-day promise on the put is a company claim, not an industry norm.",
+      "**Moral hazard and exclusions** — the insurer needs O&M records, maintenance proof and exclusions to avoid paying for neglect.",
+      "**Capacity-hungry** — the carrier takes the full loss distribution, so limits and rates move with the catastrophe market."
+     ]
+    },
+    {
+     "t": "Parametric (Wind Proxy Hedge with Munich Re)",
+     "meta": "Pays a formula amount when measured wind speed falls below a threshold; the 'Indifference Structure' sets the threshold so the sponsor is indifferent between hedged and unhedged cases.",
+     "adv": [
+      "**Fast and objective** — the trigger is a measurement, so payment does not wait on adjustment or argument.",
+      "**Prices cleanly** — a reinsurer or weather-derivatives desk can price a wind-speed distribution without underwriting the project's O&M.",
+      "**Improves the P99 directly** — 'adding investment-grade cash flow above the P99 wind speed', which is exactly the case the lender sizes to: '$7 of additional debt for every dollar of premium'."
+     ],
+     "dis": [
+      "**Basis risk** — the wind can blow while a turbine is broken; the hedge pays for weather, not for the plant.",
+      "**Only for resource risk** — it cannot cover equipment failure, hail or fire.",
+      "**Bespoke** — two deals in two years; the structure is proprietary and each is negotiated with the arranger."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "insuring-a-battery",
+   "title": "Insuring a battery: what the underwriter actually looks at",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "kWh insures storage as property only — there is no storage revenue product — so this is the property underwriter's checklist as its own staff have described it. The last column is the industry figure or event that set the question.",
+   "cols": [
+    "Question",
+    "Why it decides the price",
+    "What a good submission shows",
+    "The reference point"
+   ],
+   "rows": [
+    [
+     "**Chemistry and enclosure**",
+     "'Most underwriters are hesitant to insure indoor installations'; legacy NMC indoors carries the loss record, outdoor LFP does not",
+     "Outdoor containerised LFP with unit separation; chemistry stated",
+     "Moss Landing: 'older nickel manganese cobalt (NMC) battery chemistry in a retrofitted indoor setting' — 'an impactful but not defining loss'"
+    ],
+    [
+     "**{{Thermal runaway}} propagation**",
+     "'The biggest thing that we're looking at as an insurer is thermal runaway risk'",
+     "**{{UL 9540A}}** unit and installation data; a large-scale fire test showing no unit-to-unit spread",
+     "Rates 'stable at approximately 30-40 cents per US$100 of insured value for technology risk' (2025)"
+    ],
+    [
+     "**Code compliance**",
+     "**{{NFPA 855}}** spacing, deflagration control, suppression; 'explosion relief systems must conform to NFPA standards'",
+     "Hazard Mitigation Analysis and Emergency Response Plan — 'the best submissions will have' both",
+     "NFPA 855-2026 makes large-scale fire testing mandatory"
+    ],
+    [
+     "**Commissioning**",
+     "Early-life failures dominate: '72% of BESS failures occurred within first 2 years'",
+     "Commissioning records; HVAC and fire-suppression checks ('28% of system-level defects were in fire detection and suppression')",
+     "Aon reports 'a small number of hot commissioning losses'"
+    ],
+    [
+     "**Operations data**",
+     "State-of-charge and HVAC anomalies predict loss",
+     "Monitoring exports; '75% of sites show early HVAC-related risk signals' is the 2026 SRA finding",
+     "SOC error 'can cost BESS operators more than $1 million per GWh annually'"
+    ],
+    [
+     "**Incident trend**",
+     "The market prices the trend, not the headline",
+     "Reference to EPRI's database",
+     "'Incident rate decreased 98% from 2018 to 2024'"
+    ]
+   ]
+  },
+  {
+   "id": "when-insurance-enters-the-financing",
+   "title": "When insurance enters the financing",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "Months relative to financial close. The engineer's work (DNV guide) and the insurance work run side by side; the lender's insurance adviser reviews what the broker places. Lanes: the sponsor and its broker; the insurer and the lender's adviser.",
+   "unit": "months relative to financial close (negative = before)",
+   "lanes": {
+    "sp": "Sponsor / broker",
+    "ins": "Insurer / lender's insurance adviser"
+   },
+   "items": [
+    {
+     "x": -18,
+     "lane": "sp",
+     "label": "Term sheet sets the insurance covenant",
+     "sub": "Required covers, limits and loss-payee terms written into the loan conditions"
+    },
+    {
+     "x": -12,
+     "lane": "sp",
+     "label": "Broker builds the submission",
+     "sub": "Statement of values, loss runs, site plans, equipment specs, O&M plan, hail-stow and thermal-runaway evaluation forms"
+    },
+    {
+     "x": -9,
+     "lane": "ins",
+     "label": "MGA quotes; credit enhancement structured",
+     "sub": "Property terms and resilience credits; revenue put or wind hedge modelled into the lender's case"
+    },
+    {
+     "x": -6,
+     "lane": "ins",
+     "label": "Lender's insurance adviser reviews wording",
+     "sub": "Perils, sublimits, deductibles, carrier rating, surplus-lines status, tenor against the loan"
+    },
+    {
+     "x": -3,
+     "lane": "sp",
+     "label": "Construction cover bound",
+     "sub": "Builder's risk and delay-in-start-up for the build phase"
+    },
+    {
+     "x": 0,
+     "lane": "ins",
+     "label": "Operational policy and put bound at close",
+     "sub": "Policies are conditions precedent to first drawdown; put tenor set to the amortisation"
+    },
+    {
+     "x": 12,
+     "lane": "sp",
+     "label": "First renewal",
+     "sub": "'1-year policy terms' — capacity and rate reset against a 20-year loan"
+    },
+    {
+     "x": 24,
+     "lane": "ins",
+     "label": "Claim or shortfall",
+     "sub": "Indemnity claim adjusted; put pays 'within 30 days'; parametric pays on the index"
+    }
+   ]
+  },
+  {
+   "id": "how-much-capacity",
+   "title": "How much capacity: the limits ladder",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "USD millions of limit per project location (published programme limits, 2023–2026)",
+   "intro": "Every bar is a stated capacity figure from the renewables property market. Read the ladder as what a single placement can carry before it needs a tower of layers — and note that a 500 MW plant's replacement value can exceed the top rung.",
+   "items": [
+    {
+     "label": "kWh excess NatCat layer (2025)",
+     "sub": "'up to $20M per location with flexible attachment points'; severe convective storms and named windstorms",
+     "v": 20
+    },
+    {
+     "label": "NARDAC standalone SCS facility (2025)",
+     "sub": "'up to $20 million in standalone severe convective storm (SCS) coverage'",
+     "v": 20
+    },
+    {
+     "label": "kWh property programme at launch (2023)",
+     "sub": "'launched the facility in 2023 with $75 million in policy limits'",
+     "v": 75
+    },
+    {
+     "label": "kWh / Aspen per location (2024)",
+     "sub": "'USD$75 million per renewable energy project location'",
+     "v": 75
+    },
+    {
+     "label": "kWh / Aspen per location (2026)",
+     "sub": "'Up to $100 million per renewable energy project location'",
+     "v": 100
+    },
+    {
+     "label": "GCube Lloyd's BESS consortium (2024)",
+     "sub": "'up to $100 million in insurance capacity for individual battery energy storage system projects globally'",
+     "v": 100
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The soft market erodes the thesis.** kWh's edge is pricing resilience. Its own 2026 Broker Council found 'property insurance rates for renewable energy assets have been reducing' and that 'the urgency to build more weather-resilient assets has somewhat diminished'. When capacity is abundant, a discount for stow angles is worth less — and a data-driven MGA competes with everyone else's cheap capacity.",
+    "**Sublimits and groupings.** Sponsors are 'pushing back against applying the same sublimits and restrictions to straight-line wind (derecho), tornadoes, and lightning' as to hail. A policy whose headline limit is USD 100 million can pay far less for the peril that actually strikes.",
+    "**Surplus lines.** No state guaranty fund stands behind a surplus-lines carrier. The promise is worth the carrier's rating and nothing more.",
+    "**Company claims that no one audits.** 'Over $50 billion of assets insured', '15 global reinsurers', '30% of U.S. solar assets', 'claims paid within 30 days' — all the company's own; the hail-share figure is contested by GCube and VDE; headcount is 39, 42 or 100–250 depending on the vendor. A reader should carry these as claims, exactly as the dossier does.",
+    "**Integration risk.** Beazley bought kWh in 2026 and Zurich is buying Beazley. The Aspen programme, the Swiss Re and Munich Re relationships and the kWh brand all sit inside a company that is being absorbed twice; nothing has been published since June 2026.",
+    "**Basis risk on the parametric side.** A wind hedge pays for weather, not for the plant. A broken turbine in a windy year is the sponsor's problem."
+   ]
+  },
+  {
+   "id": "where-kwh-slots-in",
+   "title": "Where kWh Analytics' products slot into the risk-transfer chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The same seats every renewables insurer competes for, with kWh's published instance of each. The right-hand column is what the reader should take from the row.",
+   "cols": [
+    "Seat",
+    "kWh's instance",
+    "Evidence in the record",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**Primary property underwriter**",
+     "Solar Energy Insurance Services on Aspen Specialty paper, USD 100 million per location",
+     "Company release and Business Insurance, February 2026",
+     "The core book: the delegated authority a carrier granted to data"
+    ],
+    [
+     "**Excess catastrophe layer**",
+     "USD 20 million SCS and named-wind layer, non-coastal",
+     "Company release, August 2025",
+     "Where big plants and hail zones need more than the primary"
+    ],
+    [
+     "**Credit enhancement (solar)**",
+     "Solar Revenue Put and SRP+, up to 95 percent of P50, 10–30 years",
+     "Deal releases 2018–2025 with Swiss Re and Everest",
+     "Turns the forecast into an insurable promise the lender can size to"
+    ],
+    [
+     "**Parametric hedge (wind)**",
+     "Wind Proxy Hedge with Munich Re Trading — Greenbacker 59 MW, Apex 79 MW",
+     "Reinsurance News, Artemis 2024–2025",
+     "Pays on the index; 'USD 6–7 of debt per dollar of premium'"
+    ],
+    [
+     "**Data and research**",
+     "HelioStats, the Solar Risk Assessment, the Resilient Power Report",
+     "Annual editions 2019–2026",
+     "The evidence base that justifies the credits — and the marketing"
+    ],
+    [
+     "**Distribution**",
+     "Broker Council and Brokerscape",
+     "Insurance Journal 2025, pv magazine 2026",
+     "An MGA sells through brokers; convening them is the sales force"
+    ],
+    [
+     "**Balance sheet**",
+     "None of its own — Aspen, Swiss Re, Everest, Munich Re, Lloyd's; owner Beazley from 2026",
+     "Company disclaimers; Beazley release",
+     "The MGA model in one line: judgment for rent"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a managing general agent, and what does it not hold?",
+     "a": "An underwriter that prices and binds policies under delegated authority from a carrier, paid by commission; it holds no insurance risk on its own balance sheet."
+    },
+    {
+     "q": "Define delegated authority and give kWh's 2024 instance.",
+     "a": "The carrier's grant of power to an MGA to quote and bind on its paper inside limits — 'USD 75 million per location', full authority for solar and BESS, half for wind and construction (Aspen, 2024)."
+    },
+    {
+     "q": "Why is a revenue put called a credit enhancement?",
+     "a": "It floors the project's revenue so the lender can size debt to a shallower downside case — better credit without changing the plant."
+    },
+    {
+     "q": "What does the Solar Revenue Put guarantee, for how long, and who paid the first one's claims?",
+     "a": "Up to 95 percent of expected (P50) output for 10–25 years (30 under SRP+); Swiss Re Corporate Solutions carried the early puts, Everest later."
+    },
+    {
+     "q": "State the difference between an indemnity policy and a parametric hedge in one sentence each.",
+     "a": "Indemnity pays the measured loss after adjustment; parametric pays a pre-agreed amount when a measured index crosses a threshold, regardless of the actual loss."
+    },
+    {
+     "q": "What is basis risk?",
+     "a": "The gap between what a parametric trigger pays and what the insured actually lost — the wind blew, but the turbine was broken."
+    },
+    {
+     "q": "Why does hail dominate solar losses despite being rare?",
+     "a": "A single storm damages whole fields of glass at once; kinetic energy rises with the cube of stone diameter, so a few large-stone events carry most of the loss amount."
+    },
+    {
+     "q": "Name the two levers a solar owner has against hail, and the trade-off in each.",
+     "a": "Thicker fully tempered glass (cost per module) and a steep hail stow (needs trackers that stow fast enough, and models overstate its benefit for very large stones)."
+    },
+    {
+     "q": "What is an excess layer and what is an attachment point?",
+     "a": "A layer of cover above the primary policy; the attachment point is the loss level at which it starts paying."
+    },
+    {
+     "q": "What does 'surplus lines' mean for the insured?",
+     "a": "Cover from an insurer not admitted in the state — allowed for hard-to-place risks — with no state guaranty-fund protection if the carrier fails."
+    },
+    {
+     "q": "What three things does a BESS property underwriter want in a submission?",
+     "a": "Chemistry and enclosure (outdoor LFP, spacing), UL 9540A and large-scale fire-test data showing no propagation, and a Hazard Mitigation Analysis with an Emergency Response Plan."
+    },
+    {
+     "q": "Why does a one-year policy on a 35-year asset create tension?",
+     "a": "Capacity and price reset annually against a loan of 15–20 years; the lender's covenant assumes cover it cannot guarantee will renew."
+    },
+    {
+     "q": "Who buys the policy and who benefits?",
+     "a": "The sponsor buys and pays; the lender is loss payee and reviews the wording before it lends."
+    },
+    {
+     "q": "What did Beazley buy when it bought kWh Analytics?",
+     "a": "Underwriting judgment and a loss-and-performance database — not a balance sheet or a premium volume large enough to matter to a USD 6 billion insurer."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A lender sizes debt to the P90 case. A sponsor buys a put insuring 95 percent of P50 output for the loan's term. The most accurate description of what changed is:",
+     "c": [
+      "The plant will now produce more energy",
+      "The lender can size to a shallower downside case, so more debt fits the same plant",
+      "The lender no longer needs an independent engineer",
+      "The premium is deducted from the P50 forecast"
+     ],
+     "a": 1,
+     "why": "Nothing physical changed. The insurer now stands behind the gap between the P90 haircut and 95 percent of P50, so the lender's stress case is shallower and the debt sizing rises — kWh reports about 10 percent."
+    },
+    {
+     "q": "A wind project buys a parametric hedge that pays when measured wind speed falls below a threshold. In a windy year its gearbox fails for four months. The hedge:",
+     "c": [
+      "Pays the lost revenue because the project earned less",
+      "Pays nothing, because the index did not trigger — that is basis risk",
+      "Pays half, as parametric hedges always split the loss",
+      "Voids because the project was not operating"
+     ],
+     "a": 1,
+     "why": "Parametric products pay on the index, not the loss. Equipment failure is the indemnity products' domain — which is why kWh sells both."
+    },
+    {
+     "q": "An MGA's carrier withdraws its delegated authority at renewal. What happens to the policies already in force?",
+     "c": [
+      "They are cancelled immediately",
+      "They continue to their expiry on the carrier's paper; the MGA can bind no new business on it",
+      "They transfer automatically to the MGA's own balance sheet",
+      "The insureds must refund the premium"
+     ],
+     "a": 1,
+     "why": "The MGA never held the risk; the carrier did and still does until expiry. What the MGA loses is the ability to write — its capacity, which is its product."
+    },
+    {
+     "q": "The company reports hail as 73 percent of solar losses by amount and 6 percent of incidents; GCube reports 54 percent and 1.4 percent. The right reading for an underwriter is:",
+     "c": [
+      "One of the studies is fraudulent",
+      "Both show the same shape — a rare peril carrying most of the loss amount — and the shares depend on whose book is measured",
+      "Hail is not a material peril",
+      "GCube's book must be in a different country"
+     ],
+     "a": 1,
+     "why": "Loss shares are properties of a portfolio. Different books give different shares; the underwriting conclusion — price the tail, reward mitigation — is the same."
+    },
+    {
+     "q": "A submission for an indoor NMC battery installation from 2018 arrives. Based on the post-Moss Landing market commentary, the likeliest outcome is:",
+     "c": [
+      "Standard terms, since incident rates have fallen 98 percent",
+      "Heavy scrutiny or declinature — indoor legacy NMC is where the loss record is; outdoor LFP is priced normally",
+      "A parametric hedge instead",
+      "Cover only if the site adopts NFPA 855-2026 retroactively"
+     ],
+     "a": 1,
+     "why": "The market's stated line: 'indoor BESS installations, particularly those using NMC chemistry, will face significantly higher scrutiny' while rates for current technology stayed 'stable at approximately 30-40 cents per US$100'."
+    },
+    {
+     "q": "A surplus-lines carrier writing a solar plant's property cover becomes insolvent after a hailstorm. The insured's position is:",
+     "c": [
+      "The state guaranty fund pays the claim",
+      "The lender pays the claim",
+      "No guaranty fund applies; the insured is an unsecured creditor of the failed carrier",
+      "The MGA pays the claim from its commission"
+     ],
+     "a": 2,
+     "why": "kWh's own disclaimer: 'surplus lines insurance carriers do not generally participate in state guaranty funds and insureds are therefore not protected by such funds'."
+    },
+    {
+     "q": "Which statement about the Beazley acquisition is best supported by the record?",
+     "c": [
+      "Beazley bought kWh for its premium volume",
+      "Beazley bought underwriting capability and data, and whether kWh keeps renting Aspen's balance sheet is unresolved",
+      "The deal has a published price and completion date",
+      "Zurich blocked the deal"
+     ],
+     "a": 1,
+     "why": "Beazley's CEO framed it as building 'transition underwriting capability'; no price, premium or completion release exists; Kaminsky's 'business as usual … with $100M per location capacity' describes March 2026, not the post-integration book."
+    }
+   ]
+  }
+ ]
+}

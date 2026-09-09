@@ -1,0 +1,1528 @@
+{
+ "schemaVersion": 7,
+ "slug": "csa-group",
+ "name": "Canadian Standards Association (operating as CSA Group), including its commercial subsidiary CSA Group Testing & Certification Inc. — the latter under an agreement to be sold to Kiwa Group",
+ "shortName": "CSA Group",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://www.csagroup.org/",
+ "headquarters": "178 Rexdale Boulevard, Toronto, Ontario, Canada (corporate head office); US head office at 8501 East Pleasant Valley Road, Independence, Ohio (moving to Brecksville, Ohio, in 2028); European head office in Plattling, Germany",
+ "founded": 1919,
+ "employees": "About 2,000 across both organisations per the CEO's own biography; the testing, inspection and certification subsidiary alone employs 'approximately 2,100' per its buyer (Kiwa, August 2026); 11,407 standards members; third-party counts conflict from 808 (Canada-only, Mediacorp) to 3,538 (ZoomInfo)",
+ "ownership": {
+  "type": "private",
+  "ticker": "",
+  "notes": "Member-based not-for-profit federal corporation (Corporations Canada 350893). Its wholly owned commercial arm, CSA Group Testing & Certification Inc. (CBCA 10558257), is under an agreement announced 28 August 2026 to be sold to Kiwa Group (owned by SHV Holdings, Netherlands) for approximately C$2.1 billion in cash (€1.3 billion enterprise value), subject to a two-thirds member vote in early October 2026 and regulatory approvals, closing targeted for the fourth quarter of 2026."
+ },
+ "summary": "BOTTOM LINE UP FRONT: CSA Group is the Canadian standards body that wrote the large-scale fire test the battery industry's codes now require — CSA TS-800:24, made a consensus national standard as CSA/ANSI C800:25 and referenced by NFPA 855-2026 — and it is about to split in two: on 28 August 2026 the not-for-profit Canadian Standards Association agreed to sell its entire testing, inspection and certification subsidiary, including the CSA certification mark, the OSHA-recognised laboratory status and the twenty laboratories that run those fire tests, to Kiwa Group for about C$2.1 billion, keeping only the standards, research and policy organisation. BACKGROUND. Founded 21 January 1919 as the Canadian Engineering Standards Association; published the first Canadian Electrical Code in 1927 and has written every edition since (the 26th, C22.1:24, runs to 973 pages and was adopted by British Columbia, Alberta and Ontario in 2025); began certifying electrical products in 1940; accredited by the Standards Council of Canada as a standards developer in 1974 and as a certification body since 28 June 1983 (renewed 5 May 2026 to 2031); recognised by OSHA as a Nationally Recognized Testing Laboratory since 1992, today at 23 sites with UL 9540, UL 1973, UL 1741, UL 2580 and UL 347A in scope. The association reports more than 3,000 published standards, 11,407 members, 411 standards published in fiscal 2024/25 and '60% referenced in legislation and regulations across Canada' (per its annual report); the commercial arm reports 20 laboratories in 12 countries, about 2,100 employees and around 11,000 customers (per Kiwa). Revenue is disclosed to members only; the only public figures are the sale price, a US affiliate's USD 2.9 million Form 990, and one executive's biography recording a US-and-Mexico region growing from USD 35 million to USD 75 million of revenue between 2010 and 2016. Collection gap: the company's website returned HTTP 403 to every request from this environment; its pages were read through Wayback Machine snapshots dated 2024–2026 and are cited by their original URLs, and the fiscal 2025/26 annual report is cited by title only.",
+ "ecosystemRole": "The certification body in this corpus's assurance segment and the second source to UL Solutions for the North American energy-storage listing — the laboratory that issues a UL 9540 or UL 1973 certificate under an OSHA NRTL scope and the witness at a large-scale fire test — but its distinctive contribution to the battery chain is as an author rather than a tester: CSA wrote the TS-800 large-scale fire test procedure in 2024 'to fill in a critical gap', turned it into the CSA/ANSI C800:25 consensus standard whose stated purpose is 'an assessment of bankability and insurability of energy storage systems', and saw NFPA 855's 2026 edition reference it as the test distinct from UL 9540A. It also writes the Canadian Electrical Code every three years and so decides how storage, inverters and EV chargers are installed in Canada. Its trade-press record places it among the 'major companies' in battery testing, inspection and certification behind the named leaders (UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD, DNV), which is the registry's definition of a challenger; after the Kiwa sale closes, the tester and the author will be different organisations.",
+ "productsAndServices": [
+  {
+   "name": "Standards development — the Canadian Electrical Code and a 3,000-standard portfolio",
+   "category": "Standards development",
+   "description": "The not-for-profit association's core activity: an accredited, consensus-based standards programme drawing on 'over 1,600 in-house technical experts and more than 9,000 volunteer subject-matter experts', with more than 3,000 published codes and standards in 14 areas of focus, of which the Canadian Electrical Code, Part I (CSA C22.1 — 26th edition, 2024, 973 pages) is the flagship: it has been published by CSA since 1927, is adopted by every province and territory, and sets the installation rules for energy storage (Section 64), inverters, EV charging and the rest of the electrical plant. Standards are sold as PDFs, print, the CSA Advantage three-year subscription and the CSA OnDemand enterprise database; 'View Access' is free in Canada with an account.",
+   "highlights": [
+    "Scale per the fiscal 2024/25 annual report: '411 Standards published, including 63 new standards topics', '20 Research reports', '10 Public policy reports', '71 Education courses supporting over 29,000 learners', 11,407 members; '80% of our standards are currently adopted by industry and 60% are referenced in legislation and regulations across Canada'.",
+    "The Canadian Electrical Code C22.1:24: PDF and paper editions at CAD 190, bundles with training from CAD 240, the Canadian Electrical Practice Exam with 'over 2,400 questions' from CAD 95; adopted as the BC Electrical Code on 4 March 2025, in Alberta on 1 April 2025 and as Ontario's 2024 OESC on 1 May 2025 (per Technical Safety BC, Alberta Municipal Affairs and Electrical Industry News Week); the 27th edition follows the three-year cycle in 2027.",
+    "Electrical portfolio 'of more than 700 electrical standards', including the C22.2 product-standard series that North American certificates cite alongside UL numbers (C22.2 No. 107.1 for power conversion, No. 280/281/346 for EV charging, No. 62109 for PV converters, No. 340 for battery management systems, No. 350 for thermal barriers in batteries).",
+    "Accreditation: 'the largest number of published standards accredited by the Standards Council of Canada' and ANSI-accredited as a US standards developer, which is how CSA/ANSI C800:25 became an American National Standard; a 2022 memorandum with UL Standards & Engagement frames joint bi-national standards work.",
+    "Funding of access is shifting to regulators: the Canada Energy Regulator, BC Energy Regulator, Alberta Energy Regulator and Saskatchewan renewed 'a financial investment' in April 2026 for five more years of free public access to CSA pipeline standards, and the Canadian Nuclear Safety Commission funds read-only access to nuclear standards.",
+    "Internal AI: the 'Standards Assistant' launched in 2024 — '140M documents searched; 7,500+ clause titles created; 518 documents summarized; 180+ draft standards generated' in one year (annual report)."
+   ],
+   "positioning": "In Canada CSA is the standards developer with the largest SCC-accredited portfolio and the author of the electrical, gas, nuclear, bridge and pipeline codes that regulators adopt; its competitors for a given standard are UL Standards & Engagement (bi-national UL/ULC documents), IEC/ISO adoptions and, for the Electrical Code itself, the copy-cat publisher P.S. Knight, which Canadian courts enjoined (2016 FC 294, affirmed 2018 FCA 222) but which the US Fifth Circuit allowed to reprint in the United States on the ground that codes incorporated into Canadian law are 'the law' (No. 23-50081, 2024).",
+   "soldThrough": "CSA Store (single documents, subscriptions, OnDemand for organisations needing 'access to 10 or more standards for 10 or more users'), training and certification products, and member dues; government and regulator funding for public access; after the Kiwa sale, an endowment-style entity holding the proceeds 'alongside continued member, government, and industry funding support'.",
+   "targetSegments": [
+    "Provincial and territorial electrical-safety authorities and inspectors",
+    "Electrical contractors and engineers",
+    "Manufacturers seeking a Canadian product standard",
+    "Federal and provincial regulators (nuclear, pipelines, transit)",
+    "Utilities and grid operators"
+   ],
+   "roadmap": "Priorities for the year ahead (annual report): a new parallel research stream, a first North American credentialling programme, clean-energy standards including hydrogen and ground-source heat pumps, transit and passenger rail (Canada's first national transit and passenger rail code announced November 2025), and advocacy on interprovincial trade barriers (a Vice President, Internal Trade appointed June 2026). The 27th Canadian Electrical Code is due in 2027."
+  },
+  {
+   "name": "Energy-storage standards — CSA TS-800:24 and CSA/ANSI C800:25 large-scale fire testing, C801, C22.2 No. 340 and No. 350",
+   "category": "Standards development — energy storage",
+   "description": "The documents that make CSA a named actor in the battery safety chain rather than one certifier among several: CSA TS-800:24, an interim technical specification published in 2024 'to serve as an interim guidance' and 'fill in a critical gap in the industry by providing a standardized method for evaluating fire hazards associated with energy storage systems'; its successor CSA/ANSI C800:25 (first edition, 73 pages, USD 350), a consensus national standard in both the US and Canada whose scope is a testing protocol for 'quality assurance and reliability programs' intended for 'code officials, financial institutions and insurers, first responders, developers, independent engineers, manufacturers', with data 'intended to be used as part of an assessment of bankability and insurability of energy storage systems'; and the companion documents C801 (detection and mitigation systems), C22.2 No. 340:23 (battery management systems) and C22.2 No. 350 (thermal barriers).",
+   "highlights": [
+    "C800 tests four hazard classes: 'extreme weather conditions (e.g., snow, freezing rain, flooding, and high temperatures); mechanical impacts (e.g., vehicular collisions and structural impacts); ballistics exposure (e.g., projectile testing); large-scale fire events (e.g., thermal runaway and propagation testing)'; the large-scale fire test is Section 9.7, run 'with all fire suppression technologies switched off in order to ensure complete fire consumption of the BESS enclosure'.",
+    "Code adoption: NFPA 855's 2026 edition 'will distinguish UL 9540A from large-scale fire testing as two distinct test requirements' (CSA's own article) and references 'large-scale fire testing in accordance with Section 9.7 of ANSI/CSA C800' (NFPA TIA text); Energy-Storage.news reports LSFT 'becomes mandatory in the 2026 edition of NFPA 855' and that UL 9540A's sixth edition (13 March 2026) 'adds requirements for large-scale fire testing (LSFT) alongside cell and module level tests'.",
+    "CSA's stated rationale: 'existing standards (such as UL 9540A) are capable of testing for thermal runaway, but they do not adequately simulate fire propagation scenarios' (Marvin Peng); 'manufacturers and authorities having jurisdiction (AHJs) had requested the development of a test protocol' (Michael Becker).",
+    "Uptake by product, per OEM releases and trade press: Wärtsilä Quantum High Energy and Quantum 2 (first, November 2024) and Quantum 3 (2025); BYD MC Cube (December 2024); Prevalon HD5 and CLOU Aqua-C2.5 (April 2025, TS-800); Canadian Solar SolBank 3.0 (June 2025, C800 §9.7); Envision 5 MWh (July 2025, C800); Chint C&I (November 2025); HyperStrong HyperBlock III (January 2026, C800:2025); Trina Storage Elementa 2 Pro (January 2026, C800-2025, certified by TÜV Rheinland); Jinko SunTera (April 2026).",
+    "TS-800 'is not a consensus document. It has not been formally reviewed or approved by a CSA Technical Committee' — it was a task-group product under the C800 committee, and the store page for C800 already notes 'an update to this product is available'.",
+    "C22.2 No. 340:23 'provides requirements for the design, performance, and safety of battery management systems' — a BMS standard, not a system-level BESS standard, contrary to how it is sometimes described; the bi-national system standard remains ANSI/CAN/UL 9540, which CSA certifies to but does not author."
+   ],
+   "positioning": "The one North American ESS test method authored outside UL: UL 9540A (cell-to-installation thermal-runaway propagation) and UL 9540 (system listing) are UL Standards & Engagement documents, so C800 gives CSA a standards-side role in BESS that no other certifier has. Its acceptance is now written into NFPA 855-2026 and the UL 9540A sixth edition, which means competitors (UL Solutions, TÜV Rheinland) run CSA's protocol too — the Trina, e-STORAGE KuBank and Sungrow PowerKeeper tests of 2026 were witnessed by TÜV Rheinland or UL, not CSA.",
+   "soldThrough": "Standard sold through the CSA Store (C800 at USD 350); the test itself sold as a laboratory service by the TIC subsidiary or run by any laboratory the AHJ and insurer accept.",
+   "targetSegments": [
+    "BESS integrators and cell makers seeking NFPA 855-2026 compliance",
+    "Authorities having jurisdiction and fire services",
+    "Insurers and lenders assessing bankability",
+    "Independent engineers"
+   ],
+   "roadmap": "An update to C800:25 is listed on the CSA Store; NFPA 800 (energy-storage lifecycle) and NFPA 68/69 deflagration guidance are the subjects of CSA's LSFT Hub articles; after the Kiwa sale, C800 stays with the association while the laboratories that run it go to Kiwa."
+  },
+  {
+   "name": "Testing, inspection and certification — the CSA mark, OSHA NRTL and SCC-accredited certification (the business being sold to Kiwa)",
+   "category": "Testing, inspection and certification",
+   "description": "CSA Group Testing & Certification Inc.: 20 specialised laboratories in 12 countries, about 2,100 employees and around 11,000 customers (per Kiwa), operating under recognition by OSHA as a Nationally Recognized Testing Laboratory (since 1992; 23 recognised sites; scope including UL 9540, UL 1973, UL 1741, UL 2202, UL 2594, UL 2580, UL 347A, UL 891, UL 1558, UL 508A), accreditation by the Standards Council of Canada as a certification body (ISO/IEC 17065, since 28 June 1983, renewed 5 May 2026 to 28 June 2031) and inspection body, ANSI accreditation, IECEE CB Scheme national certification body status, IECEx, EU notified-body designations, NVLAP, and energy-efficiency recognitions from the US EPA, DOE, California Energy Commission and NRCan. The CSA mark (with 'US' or 'C-US' indicators) is accepted as proof of conformity by Canadian and US inspectors, retailers and insurers.",
+   "highlights": [
+    "Footprint per the company's locations page: laboratories and offices in Toronto, Independence (Ohio), Irvine, Alpharetta, Plano, Edmonton, Richmond (BC), Pointe-Claire, Plattling and Frankfurt, Agrate Brianza, Arnhem, Hawarden, Bangalore, Guangzhou, Kunshan, Shanghai, Seoul, Yongin, Tokyo, Taipei, Taoyuan and Singapore; the Chinese laboratories operate as a majority-owned joint venture with China Certification & Inspection Group (CCIC/CSA International Certification Co.).",
+    "OSHA's dated record: NRTL renewal effective 5 March 2021; ten standards and a second Cleveland building added 17 July 2024 after assessors 'found some nonconformances with the requirements of 29 CFR 1910.7' that CSA 'addressed … sufficiently'; UL 347A added 25 October 2024; the Singapore site 26 June 2025; UL 2580 (EV batteries) and seven power-tool standards 3 February 2026 — an application filed 30 June 2022.",
+    "Mark equivalence in Canada: 'because CSA Group, UL Solutions/ULC, and Intertek (ETL) are SCC-accredited, their marks carry equivalent weight as proof of conformity to Canadian requirements', while 'a US-only UL mark by itself is not enough in Canada' (PrimeCables, 2026); Ontario's Electrical Safety Authority recognises 26 certification bodies' marks and lists CSA among SPE-1000 field-evaluation agencies.",
+    "The subsidiary's performance is described qualitatively only: 'our TIC subsidiary … had its best year ever, generating the income required to support and grow our Standards initiatives' (fiscal 2024/25 annual report); one executive biography records the US-and-Mexico region growing 'from $35M in Revenues to $75M in revenues' with net margin 'from $13M to $26M' between November 2010 and June 2016.",
+    "The sale: 'cash proceeds of approximately C$2.1 billion, subject to customary adjustments for cash, indebtedness, working capital' (CSA, 28 August 2026); enterprise value €1.3 billion (Kiwa); Kiwa committed to 'maintaining the TIC business' Canadian headquarters, continuity of employee pensions'; CEO David Weinstein 'will remain with the TIC business'; advisers Jefferies, Stikeman Elliott and Freshfields for CSA, BofA Securities, Eversheds Sutherland and Borden Ladner Gervais for Kiwa.",
+    "Investment continues through the sale: a 290,000-square-foot US headquarters and laboratory in Brecksville, Ohio, broke ground in March 2026 for completion in early 2028 (USD 9.2 million of new annual payroll, 97 positions), the Guangzhou global testing centre opened January 2026, and a Yongin automotive EMC laboratory in April 2026."
+   ],
+   "positioning": "A mid-tier global TIC company by revenue — absent from Aventis Advisors' 2026 top ten (SGS USD 8.8 billion down to ALS USD 2.1 billion) and unnamed in UL Solutions' 10-K list of competitors — but the second North American mark after UL and the SCC-accredited certifier with the deepest Canadian code relationship. MarketsandMarkets (July 2026) lists CSA among the 'major companies' in battery energy-storage TIC while naming UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders.",
+   "soldThrough": "Direct to manufacturers under certification agreements with factory surveillance; witnessed manufacturer testing at the client's laboratory (Gotion's laboratory was designated a CSA authorised testing laboratory in 2021); field evaluation on site; Global Market Access packages bundling foreign approvals.",
+   "targetSegments": [
+    "Electrical and electronic product manufacturers selling into Canada and the United States",
+    "Battery, ESS, inverter and EV-charger makers",
+    "Gas appliance, plumbing, hazardous-location and medical-device manufacturers",
+    "Retailers (OnSpeX consumer-product evaluation)",
+    "Asian exporters seeking North American and European approvals through the China, Korea, Taiwan and Japan laboratories"
+   ],
+   "roadmap": "Change of control to Kiwa Group targeted for the fourth quarter of 2026 after the member vote; OSHA requires notice 'as soon as possible, in writing, of any change of ownership' under the NRTL recognition; Brecksville completion 2028."
+  },
+  {
+   "name": "Battery and energy-storage testing, UL 9540A and large-scale fire testing services",
+   "category": "Testing — energy storage",
+   "description": "The laboratory line that serves this corpus most directly: cell, pack and system testing to UN 38.3, IEC 62133, UL 1642, UL 2054, UL 1973, UL 9540 and UL 9540A; UL 9540A unit and installation-level tests 'at our Cleveland, Ohio facility'; large-scale fire testing to TS-800/C800 'at North Carolina, U.S., and Suzhou, China facilities'; battery electrical, mechanical and fire testing at Cleveland and Kunshan; and field evaluation of installed systems for 'low-volume installed systems and custom-engineered projects'. The Independence, Ohio Distributed Energy Resource laboratory is a '40,000 square foot technology lab' offering 'electrical safety evaluation, megawatt scale fire testing, environmental simulations, energy efficiency verification, performance testing, cybersecurity and grid interoperability evaluation'.",
+   "highlights": [
+    "CSA-witnessed or CSA-supervised large-scale fire tests in the corpus: Fluence Gridstack Pro 5000 at SAFE Laboratories, North Carolina — 'CSA Group witnessed and verified the results' (June 2025); Canadian Solar e-STORAGE SolBank 3.0 — 'witnessed and independently verified by both CSA Group, the testing agency, and Energy Safety Response Group' (June 2025); Envision's four 5 MWh cabinets at 5 cm spacing 'under the supervision of the Canadian Standards Association' with the fire 'persisting over 49 hours' (July 2025); Wärtsilä Quantum 3, 22 hours with suppression deactivated (November 2025); HyperStrong HyperBlock III, five units at 100 percent state of charge, 16-hour burn (January 2026); Jinko SunTera, 'first UL 9540A 6th Edition (2026 Draft) Large-Scale Fire Testing certification from CSA Group' (April 2026).",
+    "The witness roster is split: Hithium's 2025 test was 'conducted' by UL Solutions; Trina's Elementa 2 Pro (January 2026), e-STORAGE's KuBank 3.0 (August 2026) and Sungrow's PowerKeeper (April 2026) were witnessed by TÜV Rheinland; Prevalon's HD5 TS-800 test ran 'at DNV's test facility in Texas' with the witness unnamed.",
+    "Test-data points OEMs publish from CSA-supervised tests: CLOU Aqua-C2.5 burned '59 hours 10 minutes' with the ignited cabinet above 1,300 °C and the adjacent cabinet at 15 cm reaching 80.71 °C; BYD MC Cube 'peak heat release of 5.43MW' with 'no fire spread between cabinets'.",
+    "The LSFT Hub (2026) convenes Jensen Hughes, Hiller Companies, PNNL and the Brighton Area Fire Department and publishes on NFPA 68/69 deflagration control, NFPA 800 and wind effects in testing; a BESS Fire Safety Forum was held at the North Carolina laboratory on 26 February 2025.",
+    "Kunshan (opened October 2024, 'nearly 8,000 square meters') tests 'photovoltaic modules and components; grid-tied inverters and Power Conversion Systems (PCS); EV chargers; batteries; energy storage systems' for Chinese exporters; Plattling (16,900 m², expanded September 2024) covers EMC, EV high-voltage equipment and batteries in Europe."
+   ],
+   "positioning": "CSA calls itself 'one of the few testing laboratories worldwide capable of providing large-scale fire testing services' and holds the authorship advantage on C800; UL Solutions, TÜV Rheinland, TÜV SÜD, Intertek and DNV compete on the same tests, and the 2026 record shows Chinese OEMs spreading their witnesses across UL, TÜV and CSA. The North Carolina LSFT site's address is not published and does not appear on OSHA's recognised-site list.",
+   "soldThrough": "Laboratory service contracts with OEMs and integrators; witnessed testing at client or partner facilities (SAFE Laboratories, North Carolina; DNV Texas); certificates issued under the NRTL and SCC scopes.",
+   "targetSegments": [
+    "BESS integrators and container makers (Chinese and Western)",
+    "Cell and pack manufacturers",
+    "Inverter and PCS makers",
+    "EV and e-mobility battery makers",
+    "Developers and AHJs commissioning installation-level tests"
+   ],
+   "roadmap": "Goes to Kiwa with the rest of the TIC business; Brecksville replaces the 1969 Independence building in 2028 while the 2022 DER laboratory 'remains operational'."
+  },
+  {
+   "name": "Field evaluation, functional safety, cybersecurity, management systems and data-centre compliance services",
+   "category": "Inspection and evaluation services",
+   "description": "Installation-side and system-level services: North American field evaluation and special inspection ('over 20 years of experience') to SPE-1000, SPE-3000, NFPA 791 and UL 508A for 'distributed generation, energy storage systems, PV, and microgrid systems', with a serialised CSA label applied on site; functional-safety evaluation to IEC 61508, IEC 61511, ISO 26262 and UL/CSA 60730 'since the release of the first edition of IEC 61508 in 2001'; cybersecurity testing to IEC 62443, UL 2900, ETSI EN 303 645, EN 18031 and the EU Radio Equipment Directive; ISO 13485 and ISO 9001 management-system certification; and a 'Data Center Compliance & Evaluation Services' line applying 'system-level compliance and field evaluation expertise to address installation-specific conditions commonly encountered in mission-critical data center environments' for IT equipment, power and cable systems and HVAC.",
+   "highlights": [
+    "Field evaluation is the route by which a one-off or imported energy-storage installation gets an accepted mark in Canada without full certification — Ontario's limit is fewer than 500 units per model per inspection body.",
+    "The data-centre service page offers new-product-introduction evaluations, performance testing, EMC, wireless, functional safety and cybersecurity assessment for OEMs, engineers and MEP contractors; no specific data-centre engagement is reported by any third party.",
+    "Functional safety and cybersecurity are the services CSA lists for 'energy storage, smart grids, building automation' — the layer IEC 62443-certified controls (Prevalon's differentiation in this corpus) are evaluated against."
+   ],
+   "positioning": "Commodity services where CSA competes with every SCC-recognised field-evaluation agency (26 marks recognised by Ontario's ESA) and the global functional-safety houses (TÜV, exida, UL); the data-centre line is a marketing category rather than a documented book of work.",
+   "soldThrough": "Direct service contracts; goes to Kiwa with the TIC business.",
+   "targetSegments": [
+    "Data-centre equipment OEMs and MEP contractors",
+    "Industrial-control and ESS controls makers",
+    "Medical-device manufacturers (ISO 13485)",
+    "Owners of custom or imported installations needing a field label"
+   ],
+   "roadmap": "No announced roadmap beyond the sale."
+  },
+  {
+   "name": "Global market access and product-area certification — EV charging, PV and inverters, fuel cells and hydrogen, hazardous locations, EMC",
+   "category": "Certification — product areas",
+   "description": "The certification lines adjacent to storage: EV supply equipment to UL 2202/CSA C22.2 No. 346, UL 2594/No. 280 and UL 2231, with vehicle-to-grid interoperability to UL 1741 SB, IEEE 1547.1 and CSA C22.3 No. 9; photovoltaic modules and trackers to UL 1703, IEC/UL 61730 and 61215, UL 3703 and IEC 62817; inverters to UL 1741, UL/IEC 62109 and C22.2 No. 107.1 as an IEC 62109 CB test laboratory; fuel-cell power systems to ANSI/CSA FC1 and FC3 ('the world's first standard for fuel cells in 1998'); hazardous-location equipment under IECEx and ATEX; EMC and radio testing at Plattling, Yongin and Kunshan; and Global Market Access packages promising 'certification services to help you access up to 200 countries' through '34 offices across 13 countries' and 'laboratories and recognized affiliates in over 25 countries'.",
+   "highlights": [
+    "Hydrogen: CSA is committee manager for ISO/TC 197/SC 1, published the CSA/ANSI R124:25 / BNQ 1789-200 harmonised hydrogen carbon-intensity reporting methodology in May 2025 with Québec, SCC and NRCan support, and runs a Hydrogen Fuel System Inspector certification.",
+    "EV: NRTL scope gained UL 2580 (EV batteries) on 3 February 2026; the Yongin, Korea automotive EMC laboratory (April 2026) tests 'ICCU, LDC, OBC, BMS' high-voltage components; CSA authored the C22.2 No. 280 and No. 282 installation requirements the Canadian Electrical Code references and is developing wireless-charging standards (C22.2 No. 317).",
+    "Global Market Access added a 'service for Mexico and other Latin American countries' in November 2025 and publishes a 'Navigating Tariffs and Global Certification' resource for exporters."
+   ],
+   "positioning": "The one-stop-shop pitch — 'our accreditations and recognitions make us a one-stop solution for testing & certifying products for markets around the globe' — against UL Solutions, Intertek, TÜV SÜD, TÜV Rheinland and SGS, all of which are larger and hold the same CB Scheme recognitions.",
+   "soldThrough": "Direct certification agreements and GMA project fees; goes to Kiwa with the TIC business.",
+   "targetSegments": [
+    "EV charger and component makers",
+    "PV module, tracker and inverter manufacturers",
+    "Fuel-cell and hydrogen equipment makers",
+    "Exporters seeking multi-market approvals"
+   ],
+   "roadmap": "No announced roadmap beyond the sale and the new laboratories."
+  },
+  {
+   "name": "Research, public policy and education — the CSA Research Centre, Public Policy Centre and learning programmes",
+   "category": "Research, policy and education",
+   "description": "The activities the association keeps after the sale and that the sale is meant to fund: a Core and an Explore research programme with a library of 185 reports (fiscal 2024/25 topics included recovering lithium and rare-earth elements from waste, smart manufacturing and climate-smart circularity), the CSA Public Policy Centre ('10 new public policy reports' including 'Chip Shot: A Semiconductor Strategy for Canada' and 'Aging Canada 2040', an annual Policy Pathways conference, a government-relations team registered as an in-house lobbyist), and education (71 courses, 29,000 learners, professional certifications for EV technicians and hydrogen fuel-system inspectors, a first North American credentialling programme).",
+   "highlights": [
+    "Energy-sector framing in the annual report: 'our wind, solar and storage capacity is now more than 24 gigawatts, which includes a 92% increase in capacity of solar energy, a 35% increase of wind energy, and a 192% increase of energy storage capacity over the past five years'.",
+    "Advocacy focus: interprovincial trade barriers ('could add as much as $200 billion to the Canadian economy'), digital-services trade and AI, and 'a renewed sense of patriotism across Canada' after the 2025 tariff shock — the association's own words.",
+    "The post-sale plan: proceeds 'placed in a newly-formed, dedicated legal entity that is wholly-owned by, but governed separately from, the Canadian Standards Association' as 'a diversified, lower-risk source of funding for the standards activities'."
+   ],
+   "positioning": "In Canada the nearest comparables are the Standards Council of Canada (the accreditor, not a developer), ULC Standards, BNQ and the provincial code bodies; the policy centre competes for attention with think tanks rather than certifiers.",
+   "soldThrough": "Member dues, course fees, government contribution agreements and, after the sale, investment income from the C$2.1 billion.",
+   "targetSegments": [
+    "Federal and provincial policymakers",
+    "Standards members and technical committees",
+    "Tradespeople and inspectors (courses and exams)",
+    "Researchers and universities"
+   ],
+   "roadmap": "Mary Cianchetti, President of Standards, to become President and CEO of the Canadian Standards Association at the sale's close; a new parallel research stream and the credentialling programme are the stated priorities."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "CSA/ANSI C800:25 — Testing protocol for energy storage system reliability and quality assurance program (first edition, 2025)",
+   "specs": [
+    {
+     "band": "Document",
+     "label": "Identity",
+     "value": "'Testing protocol for energy storage system reliability and quality assurance program — SKU: 2431843 — Published by CSA Group — Publication Year 2025 — 73 pages'; 'This is the first edition of CSA/ANSI C800'"
+    },
+    {
+     "band": "Document",
+     "label": "Status and price",
+     "value": "'published as a National Standard of Canada … approved by the American National Standards Institute (ANSI) as an American National Standard'; '$350.00 USD'; 'An update to this product is available.'"
+    },
+    {
+     "band": "Scope",
+     "label": "Clause 1.1",
+     "value": "'This Standard provides an electrical energy storage system (EESS) testing protocol for quality assurance and reliability programs. It is intended to be used by code officials, financial institutions and insurers, first responders, developers, independent engineers, manufacturers, and other relevant stakeholders'"
+    },
+    {
+     "band": "Scope",
+     "label": "Clause 1.3",
+     "value": "'Data generated from testing will reflect the behaviour, reliability, and durability of the system and its components during natural or accidental occurrences of conflagration, inundation, convulsion, or other related incidences … This data is intended to be used as part of an assessment of bankability and insurability of energy storage systems.'"
+    },
+    {
+     "band": "Scope",
+     "label": "Clause 1.4 exclusions",
+     "value": "UPS 'under the scope of UL 1778 and CSA C22.2 No. 107.3; or use lead-acid or nickel-cadmium batteries'"
+    },
+    {
+     "band": "Tests",
+     "label": "Hazard classes",
+     "value": "'Extreme weather conditions (e.g., snow, freezing rain, flooding, and high temperatures); Mechanical impacts (e.g., vehicular collisions and structural impacts); Ballistics exposure (e.g., projectile testing); Large-scale fire events (e.g., thermal runaway and propagation testing)'"
+    },
+    {
+     "band": "Tests",
+     "label": "Large-scale fire test",
+     "value": "Section 9.7 — 'all fire suppression technologies are switched off in order to ensure complete fire consumption of the BESS enclosure'; NFPA 855-2026 references 'large-scale fire testing in accordance with Section 9.7 of ANSI/CSA C800'"
+    },
+    {
+     "band": "Governance",
+     "label": "Committee",
+     "value": "'Subcommittee on Energy Storage System Reliability and Quality Assurance, under the jurisdiction of the Technical Committee on Energy Storage Equipment and Systems, the Strategic Steering Committee on Performance, Energy Efficiency, and Renewables, and the Strategic Steering Committee on Requirements for Electrical Safety'"
+    }
+   ],
+   "notes": "Predecessor CSA TS-800:24: 'a standardized procedure to observe and document the effects of a fire in one battery energy storage system (BESS) on surrounding units and external exposures'; 'the test procedure is adaptable to any ESS chemistry'; 'not a consensus document … prepared by a task group under the CSA C800 standards committee … to serve as an interim guidance'."
+  },
+  {
+   "product": "CSA C22.1:24 — Canadian Electrical Code, Part I (26th edition)",
+   "specs": [
+    {
+     "band": "Document",
+     "label": "Identity",
+     "value": "'CSA C22.1:24 — Canadian Electrical Code, Part I (26th Edition), Safety Standard for Electrical Installations — English, French — Publication Year 2024 — Published by CSA Group'"
+    },
+    {
+     "band": "Document",
+     "label": "Length",
+     "value": "'Pages: 973' (English PDF); 'Pages: 1066' (French PDF)"
+    },
+    {
+     "band": "Document",
+     "label": "Price and formats",
+     "value": "PDF or paper '$190.00 CAD'; 'CSA Advantage™ 3-year subscription … Includes two editions'; 'CSA OnDemand™ annual subscription … 10 or more standards for 10 or more users'; 'Code & Training Package From $240.00 CAD'; 'Code, Handbook & Training Package From $349.00 CAD'"
+    },
+    {
+     "band": "Document",
+     "label": "Access",
+     "value": "'View Access for this document is only available for viewers in Canada. A free user account is required'; PDFs carry 'Digital Rights Management protection'"
+    },
+    {
+     "band": "Adoption",
+     "label": "Provincial in-force dates",
+     "value": "British Columbia 'Effective March 4, 2025'; Alberta 1 April 2025; Ontario (2024 OESC, 29th edition) 'Effective Date: May 1, 2025'"
+    },
+    {
+     "band": "Adoption",
+     "label": "Storage content",
+     "value": "Section 64 'contains major revisions for energy storage and renewable energy systems' (ANSI Blog); Section 64 drafters 'reviewed … the requirements then being developed for NFPA 855'"
+    },
+    {
+     "band": "Cycle",
+     "label": "Next edition",
+     "value": "27th edition due 2027 on the three-year cycle (trade-press synthesis; no company statement of a date was reachable)"
+    }
+   ],
+   "notes": "The Code has been published by CSA since 1927; 60 percent of CSA standards are 'referenced in legislation and regulations across Canada' (annual report). The P.S. Knight 'Electrical Code Simplified' copy is enjoined in Canada and lawful in the United States (Fifth Circuit, 2024)."
+  },
+  {
+   "product": "Laboratories — Independence (Ohio) DER laboratory, large-scale fire test sites, Kunshan, Plattling, Brecksville",
+   "specs": [
+    {
+     "band": "Independence, Ohio",
+     "label": "DER laboratory",
+     "value": "'40,000 square foot technology lab providing solutions that include electrical safety evaluation, megawatt scale fire testing, environmental simulations, energy efficiency verification, performance testing, cybersecurity and grid interoperability evaluation solutions' (commissioned 2022)"
+    },
+    {
+     "band": "Independence, Ohio",
+     "label": "UL 9540A",
+     "value": "'We do perform the standard UL 9540A tests at our Cleveland, Ohio facility'"
+    },
+    {
+     "band": "Large-scale fire testing",
+     "label": "Sites",
+     "value": "'Large-scale fire testing at North Carolina, U.S., and Suzhou, China facilities, with measures in place to align the China laboratory with North American testing standards'"
+    },
+    {
+     "band": "Large-scale fire testing",
+     "label": "Facility",
+     "value": "'large outdoor fire and explosion testing area equipped with advanced monitoring systems for real-time data analysis'"
+    },
+    {
+     "band": "Battery testing",
+     "label": "Sites",
+     "value": "'Battery electrical, mechanical, and fire testing at our Cleveland, U.S., and Kunshan, China laboratories'"
+    },
+    {
+     "band": "Kunshan, China",
+     "label": "Laboratory (opened 2024-10-28)",
+     "value": "'Spanning nearly 8,000 square meters … Photovoltaic modules and components; Grid-tied inverters and Power Conversion Systems (PCS); EV chargers; Batteries; Energy Storage Systems; Light vehicles; Products for hazardous locations'"
+    },
+    {
+     "band": "Plattling, Germany",
+     "label": "Laboratory (expanded 2024-09-18)",
+     "value": "'4,600 square-meter EMC and Automotive testing laboratory … total of 16,900 square meters … anechoic chambers up to 10-meter … high-voltage equipment testing for electric vehicles'; workforce 'from 160 to more than 270 employees' since 2021"
+    },
+    {
+     "band": "Guangzhou, China",
+     "label": "Global testing centre (opened 2026-01-13)",
+     "value": "Electrical and electronics laboratory '~8,400 square meters' (October 2025) plus gas, plumbing and water-treatment laboratory '~5,500 square meters' (2008, renovated 2025)"
+    },
+    {
+     "band": "Brecksville, Ohio",
+     "label": "US headquarters and laboratory (2028)",
+     "value": "'over 290,000 square feet … testing laboratories and office space … Enabling work begins in March 2026, with substantial completion expected in early 2028'; 'New annual payroll: $9.2 million'; 97 positions"
+    },
+    {
+     "band": "Recognition",
+     "label": "OSHA NRTL sites",
+     "value": "23 recognised sites including Toronto, Edmonton, Richmond (BC), Pointe-Claire, Cleveland (two buildings), Irvine, Alpharetta, Plano, Frankfurt, Plattling, Agrate Brianza, Arnhem, Hawarden, Bangalore, Guangzhou, Kunshan, Shanghai, Seoul, Taichung, Taipei, Taoyuan, Tokyo and Singapore"
+    }
+   ],
+   "notes": "The North Carolina LSFT site's address is not published and is absent from OSHA's site list; Fluence's June 2025 test was run at SAFE Laboratories in North Carolina with CSA as witness, which is consistent with a partner facility rather than a CSA-owned one. The China laboratories are a majority-owned joint venture with CCIC."
+  },
+  {
+   "product": "OSHA NRTL scope — energy-storage, power-conversion and EV standards CSA may certify to (OSHA-2006-0042)",
+   "specs": [
+    {
+     "band": "Storage",
+     "label": "Listing standards",
+     "value": "'UL 9540 Standard for Energy Storage Systems and Equipment'; 'UL 1973 Standard for Batteries for Use in Stationary, Vehicle Auxiliary Power and Light Electric Rail (LER) Applications'; 'UL 2054 Standard for Household and Commercial Batteries'"
+    },
+    {
+     "band": "Power conversion",
+     "label": "Listing standards",
+     "value": "'UL 1741 Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources'; 'UL 347A Medium Voltage Power Conversion Equipment' (added 2024-10-25); 'UL 61800-5-1 … Power Drive Systems'"
+    },
+    {
+     "band": "Switchgear",
+     "label": "Listing standards",
+     "value": "'UL 891 Dead-Front Electrical Switchboards'; 'UL 1558 Metal Enclosed Low-Voltage Power Circuit Breaker Switchgear'; 'UL 508A Standard for Industrial Control Panels'; 'UL 1008 Automatic-Transfer Switches'"
+    },
+    {
+     "band": "EV",
+     "label": "Listing standards",
+     "value": "'UL 2202 Electric Vehicle (EV) Charging System Equipment'; 'UL 2594 Standard for Electric Vehicle Supply Equipment'; 'UL 2580 Batteries for Use in Electric Vehicles' (added 2026-02-03)"
+    },
+    {
+     "band": "Recognition",
+     "label": "History",
+     "value": "Recognised 1992; renewal 'becomes effective on March 5, 2021'; 'CSA must inform OSHA as soon as possible, in writing, of any change of ownership'"
+    },
+    {
+     "band": "Canada",
+     "label": "SCC accreditation",
+     "value": "'ISO/IEC 17065:2012 … Initial Accreditation: 1983-06-28 … Most Recent Accreditation 2026-05-05 … Accreditation Valid to 2031-06-28'; ICS scope includes '29.220 Galvanic cells and batteries', '29.200 Rectifiers. Convertors. Stabilized power supply', '27.070 Fuel Cells'"
+    }
+   ],
+   "notes": "UL 9540A is a test method rather than a listing standard and does not appear on OSHA's list for any NRTL; CSA runs it under its laboratory accreditations. UL 9540 and UL 9540A are UL Standards & Engagement documents that CSA certifies to but does not author."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-28",
+   "category": "ma",
+   "headline": "CSA Group agrees to sell CSA Group Testing & Certification Inc. — 20 laboratories, about 2,100 employees, the CSA mark and the NRTL and SCC accreditations — to Kiwa Group for approximately C$2.1 billion in cash (€1.3 billion enterprise value); two-thirds member vote in early October, closing targeted for the fourth quarter of 2026",
+   "read": "The standards author and the certifier separate: after close, the C800 protocol stays with a Canadian non-profit and the laboratories that run it belong to a Dutch family-owned TIC group.",
+   "source": "https://www.newswire.ca/news-releases/csa-group-focuses-on-standards-mission-with-sale-of-testing-inspection-and-certification-business-to-kiwa-group-860019959.html"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "market",
+   "headline": "Canadian Solar's e-STORAGE runs its KuBank 3.0 large-scale fire test under UL 9540A:2026 with TÜV Rheinland, not CSA — fourteen months after CSA witnessed its SolBank 3.0 test",
+   "read": "A repeat customer choosing a rival witness for the newer UL edition shows CSA's protocol authorship does not lock in the test work.",
+   "source": "https://www.prnewswire.com/news-releases/e-storages-kubank-3-0-for-ci-applications-successfully-passes-large-scale-fire-testing-302850286.html"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "market",
+   "headline": "MarketsandMarkets sizes battery-storage testing, inspection and certification at USD 0.66 billion in 2026 growing to USD 1.30 billion by 2032, listing CSA Group among the 'major companies' and UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders",
+   "read": "The only independent ranking available places CSA in the second tier of the segment the corpus cares about — the challenger typing in one sentence.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "leadership",
+   "headline": "Ryan Greer appointed Vice President, Government Relations; Doug Morton moves to a new Vice President, Internal Trade post",
+   "read": "The association staffs up on interprovincial trade advocacy ahead of becoming a standalone standards body.",
+   "source": "https://rocketreach.co/doug-morton-email_65207827"
+  },
+  {
+   "date": "2026-05-20",
+   "category": "partnership",
+   "headline": "CSA Group and ASTM International sign an agreement to develop a joint biomass supply-chain risk standard building on CSA W209; public review in autumn 2026, publication in early 2027",
+   "read": "Bi-national standards partnerships are the growth line for the post-sale association.",
+   "source": "https://biomassmagazine.com/articles/astm-and-csa-group-sign-agreement-to-develop-biomass-supply-chain-risk-standard"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "regulatory",
+   "headline": "Standards Council of Canada renews CSA Group Testing & Certification Inc.'s ISO/IEC 17065 certification-body accreditation (file 10004) to 28 June 2031",
+   "read": "The Canadian accreditation that gives the CSA mark its standing is secured through the change of ownership.",
+   "source": "https://scc-ccn.ca/system/files/2026-05/ASB_SOA_10004_v68_2026-05-06_EN.pdf"
+  },
+  {
+   "date": "2026-04-26",
+   "category": "customer",
+   "headline": "Jinko ESS's SunTera receives the 'first UL 9540A 6th Edition (2026 Draft) Large-Scale Fire Testing certification from CSA Group', announced at the Energy Storage International Conference in Beijing",
+   "read": "CSA China issuing the first sixth-edition LSFT certificate shows where the certification volume sits — Chinese integrators exporting to North America.",
+   "source": "https://www.energy-storage.news/industry-updates/jinko-ess-suntera-receives-first-ul-9540a-6th-edition-2026-draft-large-scale-fire-testing-certification-from-csa-group/"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "capacity",
+   "headline": "Opens an automotive EMC laboratory in Yongin, South Korea — three EMC chambers, three shield rooms and a reverberation chamber for EV high-voltage components (ICCU, LDC, OBC, BMS)",
+   "read": "Capital keeps going into Asian EV testing capacity four months before the sale is announced.",
+   "source": "https://www.csagroup.org/news/csa-group-expands-automotive-testing-capabilities-with-new-emc-laboratory-in-south-korea/"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "policy",
+   "headline": "The Canada Energy Regulator, BC Energy Regulator, Alberta Energy Regulator and Saskatchewan renew a 'financial investment' giving Canadians free access to CSA pipeline standards for another five years",
+   "read": "Regulators paying the standards body for public access is the model the Knight litigation pushed toward — and a revenue line that survives the sale.",
+   "source": "https://www.cer-rec.gc.ca/en/about/news-room/whats-new/2026/csa-technical-standards-available-for-free-download-2026.html"
+  },
+  {
+   "date": "2026-03-24",
+   "category": "capacity",
+   "headline": "Breaks ground on a 290,000-square-foot US headquarters and laboratory in Brecksville, Ohio, for completion in early 2028; the 1969 Independence building is replaced, the 2022 DER laboratory retained; USD 9.2 million of new annual payroll and 97 positions",
+   "read": "The largest US investment in the company's history, five months before it agreed to sell the business making it — Kiwa inherits the commitment.",
+   "source": "https://neo-trans.blog/2026/03/24/csa-group-to-relocate-to-valor-acres/"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "regulatory",
+   "headline": "UL 9540A sixth edition published (13 March 2026) 'adds requirements for large-scale fire testing (LSFT) alongside cell and module level tests'; NFPA 855-2026 makes LSFT mandatory with CSA C800 as the companion protocol",
+   "read": "The codes now require the test CSA wrote — the moment its 2024 interim specification became industry infrastructure.",
+   "source": "https://www.energy-storage.news/ul9540a-new-edition-of-key-bess-fire-safety-standard-establishes-new-precedent/"
+  },
+  {
+   "date": "2026-02-03",
+   "category": "regulatory",
+   "headline": "OSHA grants expansion of CSA's NRTL recognition to UL 2580 (batteries for use in electric vehicles) and seven UL 62841 power-tool standards — an application filed 30 June 2022",
+   "read": "Three and a half years from application to grant is the pace of the US recognition system CSA's buyers will inherit.",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-02-03/html/2026-02157.htm"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "market",
+   "headline": "Trina Storage's Elementa 2 Pro passes large-scale fire testing to CSA/ANSI C800-2025, NFPA 855-2026 and the November 2025 UL 9540A revision — certified by TÜV Rheinland in Hebei, China",
+   "read": "CSA's standard run by CSA's competitor: the protocol's success is not CSA's laboratory revenue.",
+   "source": "https://www.ess-news.com/2026/01/22/trina-storages-elementa-2-pro-passes-large-scale-fire-safety-and-propagation-tests/"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "capacity",
+   "headline": "Opens the Guangzhou Global Testing and Certification Center — an 8,400 m² electrical and electronics laboratory plus a renovated 5,500 m² gas and plumbing laboratory, with functional-safety, EMC, HVAC and lighting laboratories",
+   "read": "China is where CSA's export-certification volume is; the centre opened before the CCIC joint venture's future under Kiwa was decided.",
+   "source": "https://www.motionandmechatronics.ca/news/csa-group-opens-new/"
+  },
+  {
+   "date": "2025-11-28",
+   "category": "customer",
+   "headline": "Wärtsilä's Quantum 3 (5 MWh) completes UL 9540A unit-level testing and a large-scale fire test with CSA Group — a unit 'burned for 22 hours with fire suppression equipment deactivated' and 'the fire was contained within the initiated unit'",
+   "read": "The first TS-800 customer returning for its next platform — the repeat business the LSFT line depends on.",
+   "source": "https://www.energy-storage.news/battery-storage-fire-safety-sungrow-wartsila-chint-power-products-put-through-lsft/"
+  },
+  {
+   "date": "2025-11-05",
+   "category": "product-launch",
+   "headline": "Announces development of Canada's first national transit and passenger rail code, alongside CSA TS-601 (hydrogen fuel-cell power for rolling stock) and seven further rail standards in development",
+   "read": "A new code family for the association — the standards business diversifying away from the electrical code that funds it.",
+   "source": "https://www.csagroup.org/about-csa-group/news/"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "product-launch",
+   "headline": "Publishes CSA S6:25, the Canadian Highway Bridge Design Code — 13th edition, 'the first edition to use predictive modelling to account for future climate change risks'",
+   "read": "The bridge code was CSA's first standard in 1920; the climate-modelling edition shows how the core codes are being repositioned.",
+   "source": "https://www.csagroup.org/news/canadas-new-highway-bridge-design-code-first-in-canada-to-provide-guidance-for-future-climate-change-risks/"
+  },
+  {
+   "date": "2025-08-18",
+   "category": "legal",
+   "headline": "The US District Court for the Western District of Texas awards P.S. Knight just USD 1,707.35 in costs on remand from the Fifth Circuit's 2024 reversal, denying its USD 252,283 fee application",
+   "read": "The US copyright fight ends with CSA's claim dismissed but Knight's fee bid rejected; in the United States, CSA's incorporated codes are copyable.",
+   "source": "https://www.courtlistener.com/opinion/10656059/canadian-standards-association-v-ps-knight-co-ltd/"
+  },
+  {
+   "date": "2025-07-03",
+   "category": "customer",
+   "headline": "Envision Energy's four 5 MWh cabinets at 5 cm spacing pass a CSA C800 large-scale fire test 'under the supervision of the Canadian Standards Association' — Cabinet A reached 1,297 °C and burned for over 49 hours with no propagation",
+   "read": "The most severe configuration yet run under the protocol, and a covered-corpus integrator choosing CSA as the witness.",
+   "source": "https://www.ess-news.com/2025/07/03/envision-proves-bess-fire-resilience-in-csa-certified-test/"
+  },
+  {
+   "date": "2025-06-26",
+   "category": "regulatory",
+   "headline": "OSHA adds CSA's Singapore Science Park laboratory to its NRTL recognition (90 FR 27345)",
+   "read": "Twenty-three recognised sites — the NRTL footprint is the asset Kiwa is paying for.",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2025-06-26/html/2025-11763.htm"
+  },
+  {
+   "date": "2025-06-16",
+   "category": "customer",
+   "headline": "Fluence's Gridstack Pro 5000 completes UL 9540A and NFPA 855/68/69 large-scale fire testing at SAFE Laboratories, North Carolina — 'CSA Group witnessed and verified the results'; Hithium's test the same month was conducted by UL Solutions",
+   "read": "Two covered integrators, two witnesses: the LSFT market is contested from the start.",
+   "source": "https://www.energy-storage.news/fluence-hithium-canadian-solar-bess-units-undergo-large-scale-fire-testing-without-flames-spreading/"
+  },
+  {
+   "date": "2025-06-03",
+   "category": "customer",
+   "headline": "Canadian Solar's e-STORAGE SolBank 3.0 passes the CSA C800:25 §9.7 large-scale fire test, 'witnessed and independently verified by both CSA Group, the testing agency, and Energy Safety Response Group'",
+   "read": "The first covered-corpus product tested to the consensus C800 rather than the interim TS-800.",
+   "source": "https://www.prnewswire.com/news-releases/e-storages-solbank-3-0-successfully-passes-large-scale-fire-testing-lsft-302471489.html"
+  },
+  {
+   "date": "2025-05-14",
+   "category": "product-launch",
+   "headline": "CSA/ANSI C800:25 published as a national standard in the United States (ANSI) and Canada (SCC) — 'the first consensus standard that establishes a robust testing protocol for ESS reliability and quality assurance programs — including an approved test method for large-scale fire testing'",
+   "read": "The interim TS-800 becomes a consensus document in fourteen months — fast for a standards body, and timed for the NFPA 855-2026 cycle.",
+   "source": "https://www.energy-storage.news/the-energy-storage-industrys-new-standard-for-safety-and-reliability-csa-c800-2025/"
+  },
+  {
+   "date": "2025-05-12",
+   "category": "product-launch",
+   "headline": "CSA and BNQ publish CSA/ANSI R124:25 / CAN/BNQ 1789-200, a harmonised methodology for reporting the production pathway and carbon intensity of hydrogen, with support from Québec, the SCC and NRCan",
+   "read": "Hydrogen carbon-intensity accounting is the standards work that the DOE and provincial funding programmes underwrite.",
+   "source": "https://www.newswire.ca/news-releases/bnq-and-csa-group-publish-a-new-standard-for-measuring-the-environmental-impact-of-hydrogen-production-861486664.html"
+  },
+  {
+   "date": "2025-04-21",
+   "category": "customer",
+   "headline": "Prevalon Energy's HD5 and CLOU's Aqua-C2.5 complete CSA TS-800 large-scale fire tests — Prevalon's 'at DNV's test facility in Texas', CLOU's 'in California under CSA Group supervision', burning 'more than 48 hours'",
+   "read": "The protocol is being run at other laboratories' sites — a sign that TS-800 was becoming the industry's procedure rather than CSA's product.",
+   "source": "https://www.energy-storage.news/fire-safety-ul-solutions-tests-thermal-runaway-to-new-ul9540a-standard-prevalon-and-clou-conduct-ts-800-large-scale-fire-testing/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "fluence",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-06",
+   "scale": "Gridstack Pro 5000 (5.6 MWh)",
+   "via": "Large-scale fire test witness",
+   "note": "CSA Group witnessed and verified Fluence's Gridstack Pro 5000 large-scale fire test at SAFE Laboratories in North Carolina in June 2025 — all six deflagration panels deployed, no enclosure-to-enclosure propagation.",
+   "context": "Energy-Storage.news reported on 16 June 2025 that the test was run to UL 9540A with NFPA 855, 68 and 69 in view and that 'CSA Group witnessed and verified the results'. The same report records that Hithium's test the same month was conducted by UL Solutions, so Fluence's choice of witness was a choice among competitors.\n\nFluence's own dossier carries the test as a product highlight; CSA appears there as the witnessing body rather than as a supplier.",
+   "source": "https://www.energy-storage.news/fluence-hithium-canadian-solar-bess-units-undergo-large-scale-fire-testing-without-flames-spreading/"
+  },
+  {
+   "slug": "canadian-solar",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-06",
+   "scale": "SolBank 3.0",
+   "via": "CSA C800:25 §9.7 large-scale fire test",
+   "note": "Canadian Solar's e-STORAGE SolBank 3.0 passed the CSA C800:25 large-scale fire test in June 2025 with CSA Group as the testing agency; its KuBank 3.0 test in August 2026 was run with TÜV Rheinland instead.",
+   "context": "e-STORAGE's PR Newswire release of 3 June 2025 states the test 'was witnessed and independently verified by both CSA Group, the testing agency, and Energy Safety Response Group (ESRG)', with no unit-to-unit propagation. The August 2026 KuBank 3.0 release names TÜV Rheinland as the body that conducted the UL 9540A:2026 large-scale test, ESRG again verifying.\n\nThe two releases together are the corpus's clearest evidence that C800 authorship and test work are separable: a repeat customer used CSA's standard once and a rival witness the next time.",
+   "source": "https://www.prnewswire.com/news-releases/e-storages-solbank-3-0-successfully-passes-large-scale-fire-testing-lsft-302471489.html"
+  },
+  {
+   "slug": "envision-energy",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-07",
+   "scale": "Four 5 MWh cabinets at 5 cm spacing",
+   "via": "CSA C800 large-scale fire test",
+   "note": "Envision Energy's July 2025 large-scale fire test — four fully charged 5 MWh cabinets at 5 cm spacing, a 49-hour burn with no propagation — was conducted under CSA Group supervision to CSA C800.",
+   "context": "ESS News reported on 3 July 2025 that the test was 'conducted under the supervision of the Canadian Standards Association (CSA)' with 'CSA's on-site observers', that Cabinet A reached 1,297 °C and that the fire persisted over 49 hours. Envision's dossier records the same test as a record-setting configuration.",
+   "source": "https://www.ess-news.com/2025/07/03/envision-proves-bess-fire-resilience-in-csa-certified-test/"
+  },
+  {
+   "slug": "hyperstrong",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "HyperBlock III, five units at 100% SOC",
+   "via": "CSA/ANSI C800:2025 and UL 9540A draft large-scale fire test",
+   "note": "HyperStrong's HyperBlock III passed a five-unit, 100 percent state-of-charge, no-suppression large-scale fire test in January 2026 under CSA/ANSI C800:2025 and the latest UL 9540A draft, overseen by CSA Group.",
+   "context": "HyperStrong's 6 March 2026 release, as carried in its dossier, records a 16-hour burn with a 1,400 °C peak, no propagation and an adjacent-unit peak cell temperature of 56 °C, with the programme 'overseen by CSA Group'. It is the most recent covered-corpus test under the protocol before Jinko's April 2026 certificate.",
+   "source": "https://www.hyperstrong.com/en/news/company-news/87"
+  },
+  {
+   "slug": "wartsila",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-11",
+   "scale": "Quantum High Energy, Quantum 2, Quantum 3",
+   "via": "CSA TS-800 / large-scale fire tests",
+   "note": "Wärtsilä was the first integrator to run CSA's TS-800 large-scale fire test (November 2024, Quantum High Energy and Quantum 2) and returned for Quantum 3 in November 2025; it co-presented CSA's LSFT webinar and says it has 'successfully executed four large-scale fire tests' with CSA.",
+   "context": "Energy-Storage.news reported on 11 November 2024 that Wärtsilä completed 'worst-case scenario' fire tests under 'a new large-scale fire testing procedure devised by CSA Group', quoting CSA fire-test specialist Josh Dinaburg; on 28 November 2025 it reported Quantum 3's 22-hour burn with suppression deactivated and the fire contained to the initiating unit. Wärtsilä's Christopher Groves said on CSA's webinar that the company 'has worked with industry leaders like CSA Group and successfully executed four large-scale fire tests'.",
+   "source": "https://www.energy-storage.news/wartsila-completes-worst-case-scenario-fire-tests-on-battery-storage-under-new-procedure/"
+  },
+  {
+   "slug": "byd",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-12",
+   "scale": "MC Cube (403 Ah Blade)",
+   "via": "CSA TS-800 large-scale fire test",
+   "note": "BYD's MC Cube passed a TS-800 large-scale fire test supervised by CSA Group in December 2024 — a peak heat release of 5.43 MW with no fire spread between cabinets.",
+   "context": "EVLithium's 28 December 2024 report states that 'the Canadian Standards Association (CSA Group) supervised the testing' and gives the heat-release and no-propagation results. The source is a trade site rather than BYD's own release; BYD's dossier does not carry the test, so the claim rests on this report alone.",
+   "source": "https://www.evlithium.com/lifepo4-battery-news/byd-energy-storage-ts-800-fire-test-safety.html"
+  },
+  {
+   "slug": "jinko",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-04",
+   "scale": "SunTera",
+   "via": "UL 9540A 6th edition (2026 draft) large-scale fire test certificate",
+   "note": "Jinko ESS's SunTera received the first UL 9540A sixth-edition (2026 draft) large-scale fire testing certification from CSA Group in April 2026, issued by CSA's China industrial unit.",
+   "context": "Energy-Storage.news' industry update of 26 April 2026 quotes Wu Wei, commercial director of CSA Group China's industrial unit: 'This validates that Jinko ESS's system-level fire safety design meets the applicable global standards and regulatory requirements.' The test was run to 'the CSA C800 standard and the recently released UL 9540A 6th edition draft'.",
+   "source": "https://www.energy-storage.news/industry-updates/jinko-ess-suntera-receives-first-ul-9540a-6th-edition-2026-draft-large-scale-fire-testing-certification-from-csa-group/"
+  },
+  {
+   "slug": "sungrow",
+   "type": "customer",
+   "status": "historical",
+   "since": "2025-01",
+   "scale": "SBH modular battery",
+   "via": "UL 9540A module- and system-level certification",
+   "note": "Sungrow's SBH modular battery achieved module- and system-level UL 9540A certification through CSA Group in January 2025; its PowerKeeper triple UL 9540A certification in April 2026 was witnessed by TÜV Rheinland and its SBH residential UL 9540B test by UL Solutions.",
+   "context": "Sungrow's 7 January 2025 PR Newswire release describes the certification 'as certified by CSA Group'; the April 2026 PowerKeeper release names TÜV Rheinland as witness and Energy-Storage.news' November 2025 round-up records UL Solutions on the residential test. Sungrow's dossier lists CSA among its certifiers alongside DNV and TÜV — a multi-sourced relationship, not an exclusive one.",
+   "source": "https://www.prnewswire.com/apac/news-releases/sungrow-sbh-modular-battery-achieves-ul9540a-certification-redefining-energy-storage-safety-standards-302343855.html"
+  },
+  {
+   "slug": "prevalon",
+   "type": "other",
+   "status": "historical",
+   "since": "2025-04",
+   "scale": "HD5 (6 MWh), four-unit array",
+   "via": "CSA TS-800 protocol",
+   "note": "Prevalon Energy ran its HD5 large-scale fire test in April 2025 'in accordance with CSA TS-800' at DNV's Texas facility; CSA's own role as witness is not stated by either party, so the link is to CSA's protocol rather than to its laboratory.",
+   "context": "Power Engineering and ESS News (April 2025) report the test 'at DNV's test facility in Texas' under 'NFPA 855 and UL 9540A-aligned conditions' and Prevalon's own release says it was 'conducted at a certified facility in accordance with CSA TS-800'. Prevalon's dossier records the test as CSA TS-800 large-scale fire testing with contract manufacturer CLOU. The relationship is typed `other` because the only documented connection is the use of CSA's procedure.",
+   "source": "https://www.power-eng.com/energy-storage/mitsubishi-power-battery-spinoff-completes-large-scale-fire-testing-of-its-hd5-energy-storage-platform/"
+  },
+  {
+   "slug": "trina-storage",
+   "type": "other",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "Elementa 2 Pro",
+   "via": "CSA/ANSI C800-2025 protocol",
+   "note": "Trina Storage's Elementa 2 Pro passed large-scale fire testing to CSA/ANSI C800-2025, NFPA 855-2026 and the November 2025 UL 9540A revision in January 2026 — certified by TÜV Rheinland, not CSA.",
+   "context": "ESS News' 22 January 2026 report places the test in Hebei province under TÜV Rheinland and Hiller supervision at beyond-standard 10 cm spacing. The link is to CSA as author of the standard; there is no CSA laboratory or witness role. Trina's dossier records the same test with the same supervising bodies.",
+   "source": "https://www.ess-news.com/2026/01/22/trina-storages-elementa-2-pro-passes-large-scale-fire-safety-and-propagation-tests/"
+  },
+  {
+   "slug": "gotion",
+   "type": "customer",
+   "status": "historical",
+   "since": "2021-10",
+   "scale": "27 Ah and 100 Ah storage cells",
+   "via": "UL 1973 certification and UL 9540A testing; CSA authorised testing laboratory",
+   "note": "Gotion High-Tech's 27 Ah and 100 Ah energy-storage cells received ANSI/CAN/UL 1973 certification through CSA Group and passed UL 9540A (fourth edition) in 2021, and Gotion's own laboratory was designated a CSA authorised testing laboratory under the witnessed manufacturer's testing programme.",
+   "context": "Gotion's 29 October 2021 release states the certifications and the laboratory designation. It is the oldest documented CSA link in the corpus and shows the witnessed-testing model CSA uses with Chinese cell makers; no later Gotion certification through CSA has been reported.",
+   "source": "https://en.gotion.com.cn/news/company-news-149.html"
+  },
+  {
+   "slug": "dnv",
+   "type": "competitor",
+   "status": "active",
+   "note": "DNV is named alongside CSA Group among the major battery-storage testing, inspection and certification companies — DNV among the leaders, CSA among the majors — and DNV's Texas facility hosted Prevalon's CSA TS-800 test.",
+   "context": "MarketsandMarkets' July 2026 assessment lists 'UL Solutions (US), Intertek Group plc (UK), TÜV Rheinland (Germany), TÜV SÜD (Germany), DNV (Norway), and CSA Group (Canada)' as the major companies and the first five as leading players. In this corpus's assurance segment the two sit as incumbent (DNV) and challenger (CSA); their overlap is in fire-test witnessing and laboratory services rather than in DNV's independent-engineer and recommended-practice work, which CSA does not do.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "NFPA 855 / UL 9540A",
+   "status": "in-effect",
+   "effectiveDate": "2026-03",
+   "exposure": "CSA is an author inside the regime rather than a regulated party: NFPA 855's 2026 edition makes large-scale fire testing mandatory and references 'large-scale fire testing in accordance with Section 9.7 of ANSI/CSA C800', and UL 9540A's sixth edition (13 March 2026) 'adds requirements for large-scale fire testing (LSFT) alongside cell and module level tests'. CSA's own statement is that NFPA 855 'will distinguish UL 9540A from large-scale fire testing as two distinct test requirements' and that 'TS-800 basically mirrors what's in that 855 material'; its staff sit on NFPA 855 and the UL 9540 and 9540A standards technical panels. In Canada the Electrical Code's Section 64 was drafted with NFPA 855 in view and NFPA 855 applies by reference, not by provincial adoption.",
+   "mitigation": "CSA's stated response is to keep the protocol current — an update to C800:25 is already listed — and to run the LSFT Hub with AHJs, fire services and consultants.",
+   "source": "https://www.energy-storage.news/ul9540a-new-edition-of-key-bess-fire-safety-standard-establishes-new-precedent/"
+  },
+  {
+   "regime": "OSHA NRTL recognition (29 CFR 1910.7)",
+   "status": "in-effect",
+   "effectiveDate": "2021-03-05",
+   "exposure": "The testing subsidiary's US certification business exists under OSHA's recognition of CSA Group Testing & Certification Inc. as a Nationally Recognized Testing Laboratory (renewed effective 5 March 2021; 23 sites; UL 9540, UL 1973, UL 1741, UL 2580 and UL 347A in scope). The recognition carries the condition that 'CSA must inform OSHA as soon as possible, in writing, of any change of ownership' — which the Kiwa sale triggers — and OSHA's 2023 site review 'found some nonconformances with the requirements of 29 CFR 1910.7' at the second Cleveland building, resolved before the 2024 grant.",
+   "mitigation": "Kiwa has committed to 'maintaining the TIC business' Canadian headquarters' and the sale is conditioned on regulatory approvals; neither party has published its OSHA notification.",
+   "source": "https://www.osha.gov/laws-regs/federalregister/2025-01-23-0"
+  },
+  {
+   "regime": "Crown copyright and the government-edicts doctrine (Canadian Electrical Code)",
+   "status": "in-effect",
+   "effectiveDate": "2024-07-16",
+   "exposure": "CSA's revenue from the Canadian Electrical Code rests on copyright in a code that provinces adopt into law. Canadian courts upheld that copyright against P.S. Knight's copy-cat edition (2016 FC 294; 2018 FCA 222, which held the Code 'is not itself a regulation'; Supreme Court leave dismissed 23 May 2019) and jailed-in-principle the publisher for contempt (2021 FC 1346: six months suspended, a C$100,000 fine and C$50,000 costs). In the United States the Fifth Circuit reversed CSA's summary judgment in 2024, holding that all seven codes 'fully incorporated by reference into at least one Canadian statute or regulation' are 'the law' and copyable under Veeck; on remand Knight recovered only USD 1,707.35 in costs (August 2025).",
+   "mitigation": "Regulators now pay for public access — the Canada Energy Regulator and provincial regulators fund free pipeline standards (renewed April 2026) and the CNSC funds nuclear-standard access — and 'View Access' is free in Canada with an account; the post-sale endowment is designed to reduce dependence on document sales.",
+   "source": "https://caselaw.findlaw.com/court/us-5th-circuit/116383873.html"
+  },
+  {
+   "regime": "Canadian Electrical Code adoption (provincial and territorial)",
+   "status": "in-effect",
+   "effectiveDate": "2025-03-04",
+   "exposure": "The 26th edition (C22.1:24) was adopted as the BC Electrical Code effective 4 March 2025, in Alberta on 1 April 2025 and as Ontario's 2024 Electrical Safety Code on 1 May 2025; adoption by every province and territory on a three-year cycle is what makes CSA's code the installation law for energy storage, inverters and EV chargers in Canada. Ontario's Electrical Safety Authority treats the CSA mark as one of 26 recognised marks — 'their marks carry equivalent weight as proof of conformity to Canadian requirements' — so the code, not the mark, is the exclusive asset.",
+   "source": "https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/information-bulletin-adoption-of-bc-electrical-code-2024-edition"
+  },
+  {
+   "regime": "Standards Council of Canada accreditation and federal funding",
+   "status": "in-effect",
+   "effectiveDate": "2026-05-05",
+   "exposure": "The association is SCC-accredited as a standards developer (since 1974) and the subsidiary as a certification body (ISO/IEC 17065, since 1983, renewed 5 May 2026 to 2031); the SCC 'has had discussions regarding funding to be provided to Standards Development Organizations, including Canadian Standards Association' (lobby registry), and the hydrogen carbon-intensity standard was funded by Québec, the SCC and NRCan. The 2025 tariff shock is acknowledged in the annual report as forcing the organisation 'to reconsider long-held assumptions about the economy, global trade and international relations'.",
+   "mitigation": "A Vice President, Internal Trade was appointed in June 2026 to pursue the elimination of interprovincial trade barriers; Global Market Access publishes a 'Navigating Tariffs and Global Certification' resource.",
+   "source": "https://scc-ccn.ca/system/files/2026-05/ASB_SOA_10004_v68_2026-05-06_EN.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "David Weinstein",
+   "title": "President and Chief Executive Officer, CSA Group (to remain with the testing, inspection and certification business after its sale to Kiwa)",
+   "background": [
+    "President and CEO since November 2015, 'responsible for … both the non-profit standards development association and the commercial testing, inspection, and certification subsidiaries – with 2,000 employees, 11,000 members'; director of both the association and the subsidiary; registered in-house lobbyist for the association",
+    "CEO, ABS Group (before 2015)",
+    "Partner at Accenture and at Oliver Wyman",
+    "M.B.A., Wharton School; M.S. and B.S., Massachusetts Institute of Technology"
+   ]
+  },
+  {
+   "name": "Mary Cianchetti",
+   "title": "President of Standards; President and CEO-designate of the Canadian Standards Association on completion of the Kiwa sale",
+   "photo": "images/execs/csa-group-cianchetti.jpg",
+   "background": [
+    "President of Standards since 31 August 2016 — 'provides leadership for approximately 10,000 active expert members within Canada and the U.S. and oversees a portfolio of 3,000 codes and standards'; President of CSA America Inc. per its Form 990",
+    "Joined CSA Group in 2004; energy efficiency, oil and gas and nuclear standards; Director of Health and Safety Standards and Membership",
+    "Earlier career in the wire and cable industry",
+    "B.A.Sc. Mechanical Engineering, University of Toronto; licensed Professional Engineer (Ontario); ICD.D"
+   ]
+  },
+  {
+   "name": "Jane Peverett",
+   "title": "Chair of the Board, Canadian Standards Association (since 2019)",
+   "background": [
+    "Chair of the boards of both the association and CSA Group Testing & Certification Inc.; quoted on the Kiwa sale: 'The proposed transaction honours our obligation to protect the standards mandate that has served Canadians for over a century'",
+    "Director, Canadian Pacific Kansas City, NW Natural, Capital Power and Suncor; formerly CIBC, Encana, Hydro One, BC Ferries Authority and Postmedia",
+    "President and CEO, BC Transmission Corporation (2006–2009); President and CEO, Union Gas (2001–2003)",
+    "B.Comm., McMaster University; M.B.A., Queen's University; FCPA; ICD.D"
+   ]
+  },
+  {
+   "name": "Farhan Imam",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/csa-group-imam.jpg",
+   "background": [
+    "Chief Financial Officer since April 2017",
+    "Vice President Finance, Shawcor (Houston)",
+    "EY and Deloitte; CPA, CA"
+   ]
+  },
+  {
+   "name": "Rich Weiser",
+   "title": "Executive Vice President, Global Operations (testing, inspection and certification)",
+   "photo": "images/execs/csa-group-weiser.jpg",
+   "background": [
+    "Executive Vice President, Global Operations since 1 June 2016; leads the Brecksville, Ohio headquarters and laboratory project — 'This project represents an exciting next chapter for CSA Group in Northeast Ohio'",
+    "Regional Vice President, US and Mexico (15 November 2010 – 2016): 'helped to grow the business in his region from $35M in Revenues to $75M in revenues and increased the net margin in his region from $13M to $26M'",
+    "Director of Operations, OnSpeX (CSA's consumer-product evaluation division)"
+   ]
+  },
+  {
+   "name": "Gianluca Arcari",
+   "title": "Executive Vice President and Chief Commercial Officer (testing, inspection and certification)",
+   "photo": "images/execs/csa-group-arcari.jpg",
+   "background": [
+    "Chief Commercial Officer for the TIC business; appointed Vice President, Home & Commercial in 2016 before the wider role",
+    "Earlier career at Bell Northern Research and Nortel"
+   ]
+  },
+  {
+   "name": "Michael Becker",
+   "title": "Global Business Director, Energy and Power",
+   "background": [
+    "Leads the energy and power business line and fronts CSA's large-scale fire testing programme — presented the on-demand LSFT webinar with Wärtsilä and told Energy-Storage.news that manufacturers and authorities having jurisdiction 'had requested the development of a test protocol'",
+    "On NFPA 855-2026: 'there should be intentional ignition of vent gasses … and there should not be any active system to mitigate the fire during this testing'"
+   ]
+  },
+  {
+   "name": "Jody Leber",
+   "title": "Global Business Manager, Energy Storage (Independence, Ohio)",
+   "background": [
+    "Runs the energy-storage business from the Independence DER laboratory; presented 'CSA Group Introduction' to NAATBatt in February 2025",
+    "Committee seats per that deck: NFPA 855; UL standards technical panels for UL 1642, 1973, 2054, 2271, 2272, 2580, 2738, 2743, 2849, 8139, 9540 and 9540A; US TAG for IEC TC 21, TC 35, TC 120 and SC 21A"
+   ]
+  },
+  {
+   "name": "Kathryn Yung",
+   "title": "Executive Vice President, Chief Legal, Ethics and Compliance Officer and Corporate Secretary",
+   "background": [
+    "General Counsel and Corporate Secretary since 27 January 2017, Chief Legal Officer since June 2017; Secretary of CSA America Inc.; sole director of the subsidiary's 2015 predecessor corporation at incorporation",
+    "Joined CSA Group in January 2005; previously Imperial Oil"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "CAD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2023/24 (year to 31 March 2024, inferred)",
+    "periodType": "annual",
+    "periodEnd": "2024-03-31",
+    "metrics": [
+     {
+      "name": "Consolidated revenue and surplus",
+      "actual": "Not published — 'Registered Members of the Association can view our audited, consolidated financial results through the online CSA Communities platform'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Not-for-profit member association; no consensus, no guidance; the 2023/2024 annual report was released 20 May 2024 and is cited by title only"
+     },
+     {
+      "name": "CSA America Inc. revenue (US standards affiliate, Form 990)",
+      "actual": "USD 2,481,033 (year to March 2024)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ProPublica Nonprofit Explorer — a small affiliate, not the group; confirms a March fiscal year-end"
+     },
+     {
+      "name": "Employees",
+      "actual": "'2,000 employees' (CEO biography); Plattling grew 'from 160 to more than 270 employees' since 2021",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company statements"
+     }
+    ],
+    "commentary": "Kunshan (October 2024) and Yongin (October 2024) laboratories and the Plattling expansion (September 2024) were the year's capital projects."
+   },
+   {
+    "period": "FY2024/25 (year to 31 March 2025, inferred)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "Consolidated revenue and surplus",
+      "actual": "Not published; qualitative only — 'Our TIC subsidiary … had its best year ever, generating the income required to support and grow our Standards initiatives in the coming year'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2024/25 (44 pages, read in full via Wayback): no income-statement figures; 'Our revenue and profit growth have enabled ongoing investments in TIC operations'"
+     },
+     {
+      "name": "Standards published",
+      "actual": "'411 Standards published, including 63 new standards topics'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2024/25 p.15"
+     },
+     {
+      "name": "Members",
+      "actual": "11,407 ('+1,100 New members onboarded')",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2024/25 p.15"
+     },
+     {
+      "name": "Education and research output",
+      "actual": "'71 Education courses supporting over 29,000 learners'; '20 Research reports'; '10 Public policy reports released and 4 policy events held'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2024/25 p.15"
+     },
+     {
+      "name": "CSA America Inc. revenue (Form 990)",
+      "actual": "USD 2,875,985; expenses USD 2,959,072 (year to March 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "ProPublica Nonprofit Explorer, filed 2025-08-13"
+     },
+     {
+      "name": "Employee retention",
+      "actual": "'voluntary turnover was only 4.04%'; 'national average retention rate is 11.02 years'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Annual Report 2024/25 pp.34–35"
+     }
+    ],
+    "commentary": "The year the interim TS-800 became CSA/ANSI C800:25 and the Independence DER laboratory began witnessing the corpus's large-scale fire tests. The board 'approved additional funding to support programs aimed at addressing our most pressing stakeholder priorities' on the strength of the TIC result."
+   },
+   {
+    "period": "FY2025/26 and the sale (year to 31 March 2026, inferred; transaction announced 28 August 2026)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Consolidated revenue and surplus",
+      "actual": "Not published; the 'Annual Report 2025-2026 Improving Quality of Life for Canadians' exists but was unreachable (HTTP 403, no archive capture) and is cited by title only",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Third-party estimates only: LeadIQ 'USD 750M' (July 2025) and 'USD 1B–10B' (July 2026) — vendor estimates, not audited figures"
+     },
+     {
+      "name": "Sale of the TIC business — consideration",
+      "actual": "'cash proceeds of approximately C$2.1 billion, subject to customary adjustments for cash, indebtedness, working capital'; enterprise value '€1.3 billion' (Kiwa)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "CSA release on Canada Newswire and Kiwa release, both 2026-08-28; fairness opinion by Jefferies Securities"
+     },
+     {
+      "name": "TIC business at sale",
+      "actual": "'20 specialized laboratories across 12 countries; Approximately 2,100 employees; Around 11,000 customers'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Kiwa release 2026-08-28"
+     },
+     {
+      "name": "US headquarters investment",
+      "actual": "Brecksville, Ohio: over 290,000 sq ft, completion early 2028; 'New annual payroll: $9.2 million'; 97 positions; an eight-year 1.619 percent Job Creation Tax Credit and a USD 10 million Transformational Mixed Use Development credit",
+      "expected": "",
+      "verdict": "inline",
+      "result": "NEOtrans 2026-03-24"
+     },
+     {
+      "name": "Historical regional revenue (only figure ever disclosed)",
+      "actual": "US and Mexico region 'from $35M in Revenues to $75M in revenues' with net margin 'from $13M to $26M', November 2010 to June 2016",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Rich Weiser biography on the company's leadership page — a decade old and one region"
+     }
+    ],
+    "commentary": "Post-sale, the proceeds go to 'a newly-formed, dedicated legal entity that is wholly-owned by, but governed separately from, the Canadian Standards Association' as 'a diversified, lower-risk source of funding for the standards activities'. Closing requires 'at least 66 2/3% of the votes cast by members … at a special meeting of members … expected to be held in early October 2026' and regulatory approvals, with completion targeted for the fourth quarter of 2026."
+   }
+  ],
+  "commentary": "CSA Group publishes no consolidated revenue, surplus or segment figures — its audited statements are available to registered members only — so every 'expected' field is empty by design and the financial record is built from operating metrics, a US affiliate's Form 990, one executive biography and the sale terms. The C$2.1 billion price is the only market valuation of the testing business that has ever been public; no third party has disclosed the revenue it is a multiple of. The fiscal year-end of 31 March is inferred from the annual-report labels and the affiliate's filings, not stated by the company. Figures are in Canadian dollars where the company states them and in the currency of the source otherwise; no conversion has been applied."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that the Kiwa sale separates the two things this corpus wanted from CSA Group — the author of the battery fire-test standard and the laboratory that runs it — and that after closing 'CSA Group' will be a standards body while the CSA mark, the NRTL recognition and the twenty laboratories belong to a Dutch family-owned TIC group. Basis: the 28 August 2026 release names the seller as the association and the asset as 'the TIC business, a large commercial subsidiary'; Kiwa's release lists the OSHA NRTL status and SCC accreditation among what it is buying; Mary Cianchetti becomes CEO of the association and David Weinstein 'will remain with the TIC business'. The corpus's assurance segment will need to decide at the first refresh whether the challenger is the association or Kiwa's CSA unit.",
+  "2. **(High confidence)** We assess that CSA's position in battery-storage assurance is that of a challenger to UL Solutions — the second North American source for a UL 9540 or UL 1973 listing and one witness among three for large-scale fire tests — and not a leader. Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper). That is the registry's challenger definition — a second source contesting the established set.",
+  "3. **(High confidence)** We assess that CSA's distinctive asset in this chain is authorship — TS-800 in 2024, C800:25 in 2025, and the NFPA 855-2026 and UL 9540A sixth-edition references to large-scale fire testing — and that the sale strips that asset of its laboratory. Basis: C800's scope names 'financial institutions and insurers' and 'bankability and insurability' as its purpose, which is the insurance segment's buying criterion written into a test standard; the repeat customers (Wärtsilä, Canadian Solar) came to CSA because it owned the protocol and the site; after the split the association keeps the protocol and no site. Whether Kiwa's CSA unit keeps preferential access to the standard's development is not stated.",
+  "4. **(Moderate confidence)** We assess that the authorship advantage is already eroding into an industry procedure that competitors run. Basis: Trina's January 2026 C800 test was certified by TÜV Rheinland; e-STORAGE's August 2026 KuBank test went to TÜV Rheinland after CSA witnessed its SolBank test in 2025; Prevalon ran TS-800 at DNV's Texas site; and UL 9540A's sixth edition now carries LSFT requirements of its own. A test written into the code belongs to everyone who can run it.",
+  "5. **(Moderate confidence)** We assess that the Knight litigation matters more for the standards business model than its Canadian wins suggest. Basis: Canadian courts enforced CSA's copyright in the Electrical Code all the way to a contempt sentence, but the Fifth Circuit held in 2024 that codes incorporated into Canadian law are 'the law' and freely copyable in the United States; regulators (CER, CNSC) now pay CSA for free public access rather than the public paying for documents; and the sale's stated purpose is 'a financial foundation that is not exposed to the pressures of a large commercial business'. The endowment replaces document sales as the funding logic.",
+  "6. **(High confidence)** We assess that CSA's home-market moat is the code, not the mark. Basis: Ontario's ESA recognises 26 certification marks and third-party guidance states that SCC-accredited marks 'carry equivalent weight as proof of conformity'; the one asymmetry — 'a US-only UL mark by itself is not enough in Canada' — favours every SCC-accredited body equally. What only CSA has is the Canadian Electrical Code and the three-year cycle that puts storage (Section 64), EV charging and inverters into provincial law.",
+  "7. **(Low confidence)** We assess that Kiwa ownership will keep the North American laboratories investing but shift the unit's strategic centre toward Europe. Basis: Kiwa's commitments cover the Canadian headquarters and pensions, and the Brecksville build was already funded; against this, Kiwa is a 12,000-person European group and the CSA unit's growth capital of the last two years went to Kunshan, Plattling, Yongin and Guangzhou. This is inference from ownership; no party has said it.",
+  "Collection gap: www.csagroup.org returned HTTP 403 to every request (three samples on each of five paths, two user agents, and the harness fetcher), so the company's pages were read from Wayback Machine snapshots dated 2024–2026 and are cited by their original URLs; the fiscal 2025/26 annual report and the 2026 news releases have no archive capture and are cited by title. Revenue, surplus and segment figures are members-only. The North Carolina large-scale fire test site's address and ownership, the fiscal year-end date, and the fate of the CCIC joint venture under Kiwa are not published. Third parties disagree on headcount (808, about 2,100, 3,538) because they count different entities.",
+  "**INDICATORS TO WATCH** — *Early October 2026 — the special meeting of members:* a two-thirds vote for the sale confirms Judgment 1; a failed vote leaves the group intact and this dossier's structure current. *Fourth quarter 2026 — closing:* the OSHA change-of-ownership notice and any renaming of the CSA mark or of CSA Group Testing & Certification Inc. would show what Kiwa keeps of the brand. *2027 — the 27th Canadian Electrical Code:* its Section 64 storage rules and whether it references C800 directly. *Each large-scale fire test announced by a covered integrator:* which body witnesses it — a continued drift to TÜV Rheinland and UL would confirm Judgment 4. *The next C800 edition:* whether it is still a CSA/ANSI consensus document or is folded into UL 9540A. *Early 2028 — Brecksville completion:* whether Kiwa finishes the building on the announced footprint."
+ ],
+ "sources": [
+  {
+   "label": "ManagementSystems.world — CSA Group to sell testing and certification business to Kiwa",
+   "url": "https://managementsystems.world/news-article/csa-group-to-sell-testing-and-certification-business-to-kiwa",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "CSA Group (Canada Newswire) — CSA Group focuses on standards mission with sale of testing, inspection and certification business to Kiwa Group",
+   "url": "https://www.newswire.ca/news-releases/csa-group-focuses-on-standards-mission-with-sale-of-testing-inspection-and-certification-business-to-kiwa-group-860019959.html",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Kiwa Group — CSA Group Testing & Certification to become part of Kiwa Group",
+   "url": "https://www.kiwa.com/en/news/csa-group-testing--certification-to-become-part-of-kiwa-group/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "SHV Holdings — CSA Group Testing and Certification to become part of Kiwa Group",
+   "url": "https://www.shv.nl/?post_type=news&p=14197",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "The Globe and Mail — CSA Group to sell testing, inspection and certification unit to Kiwa Group for $2.1-billion",
+   "url": "https://www.theglobeandmail.com/business/article-csa-group-testing-unit-kiwa-group-21-billion/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "CSA Group — CSA Group focuses on standards mission with sale of TIC business to Kiwa Group (company news page; cited by title, site unreachable)",
+   "url": "https://www.csagroup.org/news/csa-group-focuses-on-standards-mission-with-sale-of-testing-inspection-and-certification-business-to-kiwa-group/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "PR Newswire — e-STORAGE's KuBank 3.0 for C&I applications successfully passes large-scale fire testing (TÜV Rheinland)",
+   "url": "https://www.prnewswire.com/news-releases/e-storages-kubank-3-0-for-ci-applications-successfully-passes-large-scale-fire-testing-302850286.html",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "CSA Group — Standards development services (read via Wayback Machine snapshot 2026-08-13)",
+   "url": "https://www.csagroup.org/standards/services/develop-standards/",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "CSA Group — CSA Research Centre (read via Wayback Machine snapshot 2026-07-14)",
+   "url": "https://www.csagroup.org/standards/csa-research-centre/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "MarketsandMarkets — Battery energy storage system (BESS) testing, inspection and certification companies",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "LeadIQ — Canadian Standards Association company profile (revenue and headcount estimates)",
+   "url": "https://leadiq.com/c/canadian-standards-association/5a1d91eb540000510076e7c0",
+   "date": "2026-07"
+  },
+  {
+   "label": "Biomass Magazine — ASTM and CSA Group sign agreement to develop biomass supply chain risk standard",
+   "url": "https://biomassmagazine.com/articles/astm-and-csa-group-sign-agreement-to-develop-biomass-supply-chain-risk-standard",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "RocketReach — Doug Morton, Vice President, Internal Trade, CSA Group (appointment record)",
+   "url": "https://rocketreach.co/doug-morton-email_65207827",
+   "date": "2026-06"
+  },
+  {
+   "label": "Aventis Advisors — Top 10 largest testing, inspection and certification companies globally",
+   "url": "https://aventis-advisors.com/top-10-largest-testing-inspection-and-certification-companies-globally/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Standards Council of Canada — Scope of accreditation, CSA Group Testing & Certification Inc. (file 10004, v68)",
+   "url": "https://scc-ccn.ca/system/files/2026-05/ASB_SOA_10004_v68_2026-05-06_EN.pdf",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "CSA Group — About CSA Group (read via Wayback Machine snapshot 2026-05-06)",
+   "url": "https://www.csagroup.org/about-csa-group/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "CSA Group — Leadership team (read via Wayback Machine snapshot 2026-05-06)",
+   "url": "https://www.csagroup.org/about-csa-group/leadership-team/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "CSA Group — Electrical area of focus (read via Wayback Machine snapshot 2026-05-06)",
+   "url": "https://www.csagroup.org/standards/areas-of-focus/electrical/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Energy-Storage.news — Jinko ESS SunTera receives first UL 9540A 6th edition (2026 draft) large-scale fire testing certification from CSA Group",
+   "url": "https://www.energy-storage.news/industry-updates/jinko-ess-suntera-receives-first-ul-9540a-6th-edition-2026-draft-large-scale-fire-testing-certification-from-csa-group/",
+   "date": "2026-04-26"
+  },
+  {
+   "label": "CSA Group — CSA Group expands automotive testing capabilities with new EMC laboratory in South Korea (cited by title, site unreachable)",
+   "url": "https://www.csagroup.org/news/csa-group-expands-automotive-testing-capabilities-with-new-emc-laboratory-in-south-korea/",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Canada Energy Regulator — CSA technical standards available for free download (2026 renewal)",
+   "url": "https://www.cer-rec.gc.ca/en/about/news-room/whats-new/2026/csa-technical-standards-available-for-free-download-2026.html",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "PR Newswire — Sungrow PowerKeeper achieves industry-first triple UL 9540A certification (TÜV Rheinland witness)",
+   "url": "https://www.prnewswire.com/apac/news-releases/ace-safety-sungrow-powerkeeper-achieves-industry-first-triple-ul-9540a-certification-302735173.html",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "CSA Group — Battery and energy storage testing and certification (read via Wayback Machine snapshot 2026-04-06)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/battery-energy-storage/",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "CSA Group — Power generation and energy storage (read via Wayback Machine snapshot 2026-04-06)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "NEOtrans — CSA Group to relocate to Valor Acres (Brecksville headquarters and laboratory)",
+   "url": "https://neo-trans.blog/2026/03/24/csa-group-to-relocate-to-valor-acres/",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "ASPE Pipeline — CSA Group breaking ground on new US headquarters",
+   "url": "https://aspe.org/pipeline/csa-group-breaking-ground-on-new-u-s-headquarters/",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Energy-Storage.news — UL 9540A: new edition of key BESS fire safety standard establishes new precedent",
+   "url": "https://www.energy-storage.news/ul9540a-new-edition-of-key-bess-fire-safety-standard-establishes-new-precedent/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "CSA Group — Cybersecurity testing (read via Wayback Machine snapshot 2026-03-12)",
+   "url": "https://www.csagroup.org/testing-certification/testing/cybersecurity/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "CSA Store — CSA C22.1:24 Canadian Electrical Code, Part I (read via Wayback Machine snapshot 2026-03-11)",
+   "url": "https://www.csagroup.org/store/product/CSA_C22.1:24/",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "CSA Group — Hydrogen ecosystem (read via Wayback Machine snapshot 2026-03-10)",
+   "url": "https://www.csagroup.org/addressing-societal-challenges/hydrogen-ecosystem/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "HyperStrong — HyperBlock III CSA/UL 9540A large-scale fire test",
+   "url": "https://www.hyperstrong.com/en/news/company-news/87",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "CSA Group — North American field evaluation services (read via Wayback Machine snapshot 2026-03-02)",
+   "url": "https://www.csagroup.org/testing-certification/testing/north-american-field-evaluation-services/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "CSA Group — Annual reports page (read via Wayback Machine snapshot 2026-02-28)",
+   "url": "https://www.csagroup.org/about-csa-group/annual-reports/",
+   "date": "2026-02-28"
+  },
+  {
+   "label": "CSA Group — Accreditation and recognitions (read via Wayback Machine snapshot 2026-02-28)",
+   "url": "https://www.csagroup.org/accreditation/",
+   "date": "2026-02-28"
+  },
+  {
+   "label": "CSA Group — Global Market Access (read via Wayback Machine snapshot 2026-02-26)",
+   "url": "https://www.csagroup.org/testing-certification/certification/global-market-access/",
+   "date": "2026-02-26"
+  },
+  {
+   "label": "CSA Group — Functional safety evaluation and certification (read via Wayback Machine snapshot 2026-02-23)",
+   "url": "https://www.csagroup.org/testing-certification/certification/functional-safety-evaluation-services/",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "CSA Group — Locations (read via Wayback Machine snapshot 2026-02-19)",
+   "url": "https://www.csagroup.org/about-csa-group/locations/",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "Motion & Mechatronics — CSA Group opens new global testing and certification center in Guangzhou, China",
+   "url": "https://www.motionandmechatronics.ca/news/csa-group-opens-new/",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "PrimeCables — CSA vs UL vs ETL: the surprising truth about electrical safety labels in Canada",
+   "url": "https://blog.primecables.ca/2026/01/csa-vs-ul-vs-etl-the-surprising-truth-about-electrical-safety-labels-in-canada/",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Federal Register 91 FR 4966 — CSA Group Testing & Certification Inc.: grant of expansion of recognition (UL 2580 and UL 62841 series)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2026-02-03/html/2026-02157.htm",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "CSA Group — Large-Scale Fire Testing (LSFT) Hub (read via Wayback Machine snapshot 2026-02-03)",
+   "url": "https://www.csagroup.org/testing-certification/testing/lsft-hub/",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "CSA Group — News listing (read via Wayback Machine snapshot 2026-02-01)",
+   "url": "https://www.csagroup.org/about-csa-group/news/",
+   "date": "2026-02-01"
+  },
+  {
+   "label": "CSA Group — Careers (read via Wayback Machine snapshot 2026-02-01)",
+   "url": "https://www.csagroup.org/careers/",
+   "date": "2026-02-01"
+  },
+  {
+   "label": "ESS News — Trina Storage's Elementa 2 Pro passes large-scale fire safety and propagation tests",
+   "url": "https://www.ess-news.com/2026/01/22/trina-storages-elementa-2-pro-passes-large-scale-fire-safety-and-propagation-tests/",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "Energy-Storage.news — Large-scale fire testing (LSFT): from best practice to mandatory requirement",
+   "url": "https://www.energy-storage.news/large-scale-fire-testing-lsft-from-best-practice-to-mandatory-requirement/",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "CSA Group — CSA Group opens new global testing and certification center in Guangzhou (cited by title, site unreachable)",
+   "url": "https://www.csagroup.org/news/csa-group-opens-new-global-testing-and-certification-center-in-guangzhou-china/",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "The Globe and Mail — 2026 winners: Greater Toronto's Top Employers (CSA Group, 808 employees)",
+   "url": "https://www.theglobeandmail.com/business/adv/article-2026-winners-greater-torontos-top-employers/",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "MarketsandMarkets — North America testing, inspection and certification companies",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/north-america-testing-inspection-certification-companies.asp",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "Energy-Storage.news — Battery storage fire safety: Sungrow, Wärtsilä, Chint Power products put through LSFT",
+   "url": "https://www.energy-storage.news/battery-storage-fire-safety-sungrow-wartsila-chint-power-products-put-through-lsft/",
+   "date": "2025-11-28"
+  },
+  {
+   "label": "CSA Group — Homepage (read via Wayback Machine snapshot 2025-11-01; Global Market Access for Mexico and Latin America)",
+   "url": "https://www.csagroup.org/",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "Daily Commercial News — CSA Group unveils first bridge design code in Canada to reflect climate change",
+   "url": "https://canada.constructconnect.com/dcn/news/infrastructure/2025/10/csa-group-unveils-first-bridge-design-code-in-canada-to-reflect-climate-change",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "CSA Group — Canada's new Highway Bridge Design Code, first in Canada to provide guidance for future climate change risks (read via Wayback Machine snapshot 2026-01-12)",
+   "url": "https://www.csagroup.org/news/canadas-new-highway-bridge-design-code-first-in-canada-to-provide-guidance-for-future-climate-change-risks/",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "CSA Group — Our journey (history timeline; read via Wayback Machine snapshot 2025-10-01)",
+   "url": "https://www.csagroup.org/about-csa-group/our-journey/",
+   "date": "2025-10-01"
+  },
+  {
+   "label": "Canadian Nuclear Safety Commission — Public access to CSA nuclear standards",
+   "url": "https://www.cnsc-ccsn.gc.ca/eng/acts-and-regulations/regulatory-documents/csa-standards/",
+   "date": "2025-09-19"
+  },
+  {
+   "label": "CSA Store — CSA/ANSI C800:25 Testing protocol for energy storage system reliability and quality assurance program (read via Wayback Machine snapshot 2025-09-05)",
+   "url": "https://www.csagroup.org/store/product/2431843/",
+   "date": "2025-09-05"
+  },
+  {
+   "label": "EticaAG — UL 1973 certification for BESS through CSA Group",
+   "url": "https://eticaag.com/ul-1973-certification-for-bess/",
+   "date": "2025-09"
+  },
+  {
+   "label": "Federal Register 90 FR 41134 — CSA Group Testing & Certification Inc.: application for expansion of recognition",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2025-08-22/html/2025-16092.htm",
+   "date": "2025-08-22"
+  },
+  {
+   "label": "CSA Group — Large-scale fire testing (LSFT) procedure CSA TS-800:24 (read via Wayback Machine snapshot 2025-08-19)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/battery-energy-storage/large-scale-fire-testing-lsft-procedure-csa-ts-80024/",
+   "date": "2025-08-19"
+  },
+  {
+   "label": "CourtListener — Canadian Standards Association v. P.S. Knight Co. Ltd. (W.D. Tex., costs order on remand)",
+   "url": "https://www.courtlistener.com/opinion/10656059/canadian-standards-association-v-ps-knight-co-ltd/",
+   "date": "2025-08-18"
+  },
+  {
+   "label": "ProPublica Nonprofit Explorer — CSA America Inc (EIN 34-1738465) Form 990",
+   "url": "https://projects.propublica.org/nonprofits/organizations/341738465",
+   "date": "2025-08-13"
+  },
+  {
+   "label": "CSA Group — Standards for distributed renewable energy generation (read via Wayback Machine snapshot 2025-07-14)",
+   "url": "https://www.csagroup.org/standards/areas-of-focus/electrical/standards-for-distributed-renewable-energy-generation/",
+   "date": "2025-07-14"
+  },
+  {
+   "label": "ESS News — Envision proves BESS fire resilience in CSA-certified test",
+   "url": "https://www.ess-news.com/2025/07/03/envision-proves-bess-fire-resilience-in-csa-certified-test/",
+   "date": "2025-07-03"
+  },
+  {
+   "label": "Federal Register 90 FR 27345 — CSA Group Testing & Certification Inc.: grant of expansion of recognition (Singapore site)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2025-06-26/html/2025-11763.htm",
+   "date": "2025-06-26"
+  },
+  {
+   "label": "CSA Group — Inverters testing and certification (read via Wayback Machine snapshot 2025-06-20)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/inverters/",
+   "date": "2025-06-20"
+  },
+  {
+   "label": "CSA Group — Fuel cell power systems (read via Wayback Machine snapshot 2025-06-20)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/fuel-cell-power-systems/",
+   "date": "2025-06-20"
+  },
+  {
+   "label": "CLOU Global — CLOU's Aqua-C2.5 energy storage system passes rigorous CSA TS-800 fire safety test",
+   "url": "https://clouglobal.com/clous-aqua-c2-5-energy-storage-system-passes-rigorous-csa-ts-800-fire-safety-test/",
+   "date": "2025-06-18"
+  },
+  {
+   "label": "Energy-Storage.news — Fluence, Hithium, Canadian Solar BESS units undergo large-scale fire testing without flames spreading",
+   "url": "https://www.energy-storage.news/fluence-hithium-canadian-solar-bess-units-undergo-large-scale-fire-testing-without-flames-spreading/",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "PR Newswire — e-STORAGE's SolBank 3.0 successfully passes large-scale fire testing (LSFT) to CSA C800:25",
+   "url": "https://www.prnewswire.com/news-releases/e-storages-solbank-3-0-successfully-passes-large-scale-fire-testing-lsft-302471489.html",
+   "date": "2025-06-03"
+  },
+  {
+   "label": "Energy-Storage.news (CSA Group sponsored) — The energy storage industry's new standard for safety and reliability: CSA C800-2025",
+   "url": "https://www.energy-storage.news/the-energy-storage-industrys-new-standard-for-safety-and-reliability-csa-c800-2025/",
+   "date": "2025-05-14"
+  },
+  {
+   "label": "Canada Newswire (BNQ) — BNQ and CSA Group publish a new standard for measuring the environmental impact of hydrogen production",
+   "url": "https://www.newswire.ca/news-releases/bnq-and-csa-group-publish-a-new-standard-for-measuring-the-environmental-impact-of-hydrogen-production-861486664.html",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "CSA Group — Annual Report 2024/2025 (PDF, 44 pages; read via Wayback Machine snapshot 2026-02-28)",
+   "url": "https://www.csagroup.org/wp-content/uploads/Annual-Report-2024_25_EN.pdf",
+   "date": "2025-05"
+  },
+  {
+   "label": "ESS News — Battery storage providers highlight fire test results as industry continues focus on safety",
+   "url": "https://www.ess-news.com/2025/04/25/battery-storage-providers-highlight-fire-test-results-as-industry-continues-focus-on-safety/",
+   "date": "2025-04-25"
+  },
+  {
+   "label": "CSA Group — Electric vehicle supply equipment testing (read via Wayback Machine snapshot 2025-04-24)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/vehicle-power-fueling/electric-vehicle-supply-equipment/",
+   "date": "2025-04-24"
+  },
+  {
+   "label": "Energy-Storage.news — Fire safety: UL Solutions tests thermal runaway to new UL 9540A standard; Prevalon and CLOU conduct TS-800 large-scale fire testing",
+   "url": "https://www.energy-storage.news/fire-safety-ul-solutions-tests-thermal-runaway-to-new-ul9540a-standard-prevalon-and-clou-conduct-ts-800-large-scale-fire-testing/",
+   "date": "2025-04-24"
+  },
+  {
+   "label": "Power Engineering — Mitsubishi Power battery spinoff completes large-scale fire testing of its HD5 energy storage platform",
+   "url": "https://www.power-eng.com/energy-storage/mitsubishi-power-battery-spinoff-completes-large-scale-fire-testing-of-its-hd5-energy-storage-platform/",
+   "date": "2025-04-21"
+  },
+  {
+   "label": "Prevalon Energy — Prevalon Energy successfully completes large-scale fire testing for advanced energy storage systems (CSA TS-800)",
+   "url": "https://prevalonenergy.com/prevalon-energy-successfully-completes-large-scale-fire-testing-for-advanced-energy-storage-systems/",
+   "date": "2025-04-18"
+  },
+  {
+   "label": "CSA Group — CSA C800-2025: a new standard for ESS reliability and quality assurance (read via Wayback Machine snapshot 2025-03-25)",
+   "url": "https://www.csagroup.org/article/csa-c800-2025-a-new-standard-for-ess-reliability-and-quality-assurance/",
+   "date": "2025-03-25"
+  },
+  {
+   "label": "NAATBatt — CSA Group introduction, Jody Leber (deck)",
+   "url": "https://nac.naatbatt.org/wp-content/uploads/2025/02/3A-1-CSA-Group-20250120.pdf",
+   "date": "2025-02-19"
+  },
+  {
+   "label": "Federal Register 90 FR 8052 (via OSHA) — CSA Group Testing & Certification Inc.: grant of expansion of recognition (UL 60335-2-40)",
+   "url": "https://www.osha.gov/laws-regs/federalregister/2025-01-23-0",
+   "date": "2025-01-23"
+  },
+  {
+   "label": "CSA Group — On-demand webinar: evolving large-scale fire testing requirements for battery energy storage systems, with Wärtsilä (read via Wayback Machine snapshot 2025-01-15)",
+   "url": "https://www.csagroup.org/article/on-demand-webinar-evolving-large-scale-fire-testing-requirements-for-battery-energy-storage-systems-ess",
+   "date": "2025-01-15"
+  },
+  {
+   "label": "PR Newswire — Sungrow SBH modular battery achieves UL 9540A certification (CSA Group)",
+   "url": "https://www.prnewswire.com/apac/news-releases/sungrow-sbh-modular-battery-achieves-ul9540a-certification-redefining-energy-storage-safety-standards-302343855.html",
+   "date": "2025-01-07"
+  },
+  {
+   "label": "EVLithium — BYD energy storage MC Cube passes TS-800 fire test under CSA Group supervision",
+   "url": "https://www.evlithium.com/lifepo4-battery-news/byd-energy-storage-ts-800-fire-test-safety.html",
+   "date": "2024-12-28"
+  },
+  {
+   "label": "CSA Group — Photovoltaic (PV) testing and certification (read via Wayback Machine snapshot 2024-12-04)",
+   "url": "https://www.csagroup.org/testing-certification/product-areas/power-generation-energy-storage/photovoltaic-pv/",
+   "date": "2024-12-04"
+  },
+  {
+   "label": "China Daily — Canada-based CSA Group aims to open more facilities in China",
+   "url": "https://www.chinadaily.com.cn/a/202411/21/WS673eecc1a310f1265a1cee04.html",
+   "date": "2024-11-21"
+  },
+  {
+   "label": "Electrical Industry News Week — 2024 Ontario Electrical Safety Code (29th edition) in effect 1 May 2025",
+   "url": "https://electricalindustry.ca/latest-articles/2024-ontario-electrical-safety-code-29th-edition/",
+   "date": "2024-11-18"
+  },
+  {
+   "label": "Energy-Storage.news — Wärtsilä completes 'worst-case scenario' fire tests on battery storage under new CSA procedure",
+   "url": "https://www.energy-storage.news/wartsila-completes-worst-case-scenario-fire-tests-on-battery-storage-under-new-procedure/",
+   "date": "2024-11-11"
+  },
+  {
+   "label": "CSA Store — CSA TS-800:24 large-scale fire test procedure (read via Wayback Machine snapshot 2024-11-11)",
+   "url": "https://www.csagroup.org/store/product/CSA_TS-800:24/",
+   "date": "2024-11-11"
+  },
+  {
+   "label": "CSA Group — CSA Group expands testing capabilities with new laboratory in Kunshan, China (read via Wayback Machine snapshot 2025-09-16)",
+   "url": "https://www.csagroup.org/news/csa-group-expands-testing-capabilities-with-new-laboratory-in-kunshan-china/",
+   "date": "2024-10-28"
+  },
+  {
+   "label": "Federal Register 89 FR 85250 — CSA Group Testing & Certification Inc.: grant of expansion of recognition (UL 347A)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2024-10-25/html/2024-24790.htm",
+   "date": "2024-10-25"
+  },
+  {
+   "label": "CSA Group — CSA Group celebrates opening of new testing facility in South Korea (read via Wayback Machine snapshot 2025-07-14)",
+   "url": "https://www.csagroup.org/news/csa-group-celebrates-opening-of-new-testing-facility-in-south-korea/",
+   "date": "2024-10-24"
+  },
+  {
+   "label": "CSA Group — CSA Group celebrates grand opening of expanded laboratory in Plattling (read via Wayback Machine snapshot 2025-07-14)",
+   "url": "https://www.csagroup.org/news/csa-group-celebrates-grand-opening-of-expanded-state-of-the-art-laboratory-in-plattling/",
+   "date": "2024-09-18"
+  },
+  {
+   "label": "Federal Register 89 FR 58191 — CSA Group Testing & Certification Inc.: grant of expansion of recognition (ten standards and second Cleveland site)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2024-07-17/html/2024-15648.htm",
+   "date": "2024-07-17"
+  },
+  {
+   "label": "FindLaw — Canadian Standards Association v. P.S. Knight Co., US Court of Appeals for the Fifth Circuit, No. 23-50081",
+   "url": "https://caselaw.findlaw.com/court/us-5th-circuit/116383873.html",
+   "date": "2024-07-16"
+  },
+  {
+   "label": "Technical Safety BC — Information bulletin: adoption of the BC Electrical Code, 2024 edition",
+   "url": "https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/information-bulletin-adoption-of-bc-electrical-code-2024-edition",
+   "date": "2024-06-11"
+  },
+  {
+   "label": "Electrical Industry News Week — CSA Group releases 2023/2024 annual report",
+   "url": "https://electricalindustry.ca/latest-articles/csa-group-releases-2023-2024-annual-report/",
+   "date": "2024-05-27"
+  },
+  {
+   "label": "Federal Register 89 FR 34271 — CSA Group Testing & Certification Inc.: applications for expansion of recognition (Cleveland nonconformances note)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2024-04-30/html/2024-09190.htm",
+   "date": "2024-04-30"
+  },
+  {
+   "label": "Thompson Coburn — Summary judgment win for Canadian Standards Association (W.D. Tex.)",
+   "url": "https://thompsoncoburn.com/news-events/news/2023-03-21/summary-judgment-win-for-canadian-standards-association",
+   "date": "2023-03-21"
+  },
+  {
+   "label": "CSA Group — Response to US DOE Clean Hydrogen Production Standard draft guidance (PDF hosted by DOE)",
+   "url": "https://www.hydrogen.energy.gov/docs/hydrogenprogramlibraries/pdfs/chps/csa-group.pdf",
+   "date": "2022-11-14"
+  },
+  {
+   "label": "Smart & Biggar — Stiff penalty for copyright infringer in Canada: Federal Court hands out prison sentence (2021 FC 1346)",
+   "url": "https://www.smartbiggar.ca/insights/publication/stiff-penalty-for-copyright-infringer-in-canada-federal-court-hands-out-prison-sentence",
+   "date": "2022-01-12"
+  },
+  {
+   "label": "Electrical Industry News Week — CSA Group and Underwriters Laboratories sign a standards memorandum of understanding",
+   "url": "https://electricalindustry.ca/changing-scenes/9037-csa-group-and-underwriters-laboratories-sign-a-standards-memorandum-of-understanding/",
+   "date": "2022-01-05"
+  },
+  {
+   "label": "Gotion High-Tech — Energy storage products and laboratory obtain CSA certification",
+   "url": "https://en.gotion.com.cn/news/company-news-149.html",
+   "date": "2021-10-29"
+  },
+  {
+   "label": "CSA Group — Written submission to the House of Commons Standing Committee on Finance, pre-budget consultations (PDF hosted by Parliament)",
+   "url": "https://www.ourcommons.ca/Content/Committee/441/FINA/Brief/BR11512901/br-external/CanadianStandardsAssociation-e.pdf",
+   "date": "2021-08"
+  },
+  {
+   "label": "Goodmans IP — Federal Court finds Knight parties guilty of contempt of court (2021 FC 770)",
+   "url": "https://www.goodmansip.ca/post/federal-court-finds-knight-parties-guilty-of-contempt-of-court",
+   "date": "2021-07-27"
+  },
+  {
+   "label": "Federal Register 86 FR 12976 — CSA Group Testing & Certification Inc.: grant of renewal of recognition",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2021-03-05/html/2021-04556.htm",
+   "date": "2021-03-05"
+  },
+  {
+   "label": "International Accreditation Service — Certificate TL-464, CCIC CSA International Certification Co., Ltd (Guangzhou)",
+   "url": "https://www.iasonline.org/wp-content/uploads/2017/05/TL-464.pdf",
+   "date": "2020-01-06"
+  },
+  {
+   "label": "Supreme Court of Canada — Docket 38506, P.S. Knight Co. Ltd. v. Canadian Standards Association (leave dismissed)",
+   "url": "https://www.scc-csc.ca/cases-dossiers/search-recherche/38506/",
+   "date": "2019-05-23"
+  },
+  {
+   "label": "Gowling WLG — The Federal Court of Appeal in P.S. Knight Co. Ltd. v. CSA (2018 FCA 222)",
+   "url": "https://gowlingwlg.com/en/insights-resources/articles/2018/federal-court-of-appeal-in-ps-knight-co-ltd-v-csa",
+   "date": "2018-12-12"
+  },
+  {
+   "label": "Canada Newswire — CSA Group appoints Farhan Imam as Chief Financial Officer",
+   "url": "https://www.newswire.ca/news-releases/csa-group-appoints-farhan-imam-as-chief-financial-officer-617988073.html",
+   "date": "2017-04-03"
+  },
+  {
+   "label": "Canada Newswire — CSA Group appoints Kathryn Yung as General Counsel and Corporate Secretary",
+   "url": "https://www.newswire.ca/news-releases/csa-group-appoints-kathryn-yung-as-general-counsel--corporate-secretary-611985715.html",
+   "date": "2017-01-27"
+  },
+  {
+   "label": "Electrical Line — CSA Group appoints David Weinstein President and CEO",
+   "url": "https://electricalline.com/csa-group-appoints-david-weinstein-president-and-ceo",
+   "date": "2015-11-09"
+  },
+  {
+   "label": "Quality Digest — CSA Group acquires SIRA",
+   "url": "https://www.qualitydigest.com/inside/standards-news/company-news-csa-group-acquires-sira-070609.html",
+   "date": "2009-07-06"
+  },
+  {
+   "label": "OSHA — Nationally Recognized Testing Laboratory Program: CSA Group Testing and Certification Inc. (recognised sites and test standards)",
+   "url": "https://www.osha.gov/nationally-recognized-testing-laboratory-program/csa"
+  },
+  {
+   "label": "CSA Group — Annual Report 2025-2026: Improving Quality of Life for Canadians (PDF; cited by title, unreachable)",
+   "url": "https://www.csagroup.org/wp-content/uploads/Annual-Report-2025-26-EN.pdf"
+  },
+  {
+   "label": "CSA Group — Data center compliance and evaluation services (cited by title, site unreachable)",
+   "url": "https://www.csagroup.org/testing-certification/testing/data-center-services/"
+  },
+  {
+   "label": "OpenGovCA (Corporations Canada mirror) — CSA Group Testing & Certification Inc., corporation 10558257",
+   "url": "https://opengovca.com/corporation/10558257"
+  },
+  {
+   "label": "OpenGovCA (Corporations Canada mirror) — Canadian Standards Association, corporation 350893",
+   "url": "https://opengovca.com/corporation/350893"
+  },
+  {
+   "label": "Standards Council of Canada — Directory entry, CSA Group Testing & Certification Inc. (product, process and service certification)",
+   "url": "https://scc-ccn.ca/accreditation/product-process-and-service-certification/csa-group-testing-certification-inc"
+  },
+  {
+   "label": "Electrical Safety Authority (Ontario) — Recognized certification marks and field evaluation agencies",
+   "url": "https://esasafe.com/electrical-products/recognized-certification-marks/"
+  },
+  {
+   "label": "Office of the Commissioner of Lobbying of Canada — Canadian Standards Association in-house registration (David Weinstein)",
+   "url": "https://lobbycanada.gc.ca/app/secure/ocl/lrs/do/vwRg?cno=5290&regId=831673"
+  },
+  {
+   "label": "ANSI Blog — 2024 Canadian Electrical Code (CSA C22.1:24)",
+   "url": "https://blog.ansi.org/ansi/2024-canadian-electrical-code-csa-c22-1-cec/"
+  },
+  {
+   "label": "Wikipedia — CSA Group",
+   "url": "https://en.wikipedia.org/wiki/CSA_Group"
+  },
+  {
+   "label": "ZoomInfo — CSA Group Testing & Certification Inc. profile (headcount estimate)",
+   "url": "https://www.zoominfo.com/c/csa-group-testing--certification-inc/23088224"
+  }
+ ],
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 1
+}

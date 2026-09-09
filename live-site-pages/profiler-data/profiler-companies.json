@@ -4407,6 +4407,54 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "kwh-analytics",
+      "name": "kWh Analytics",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The renewable-energy managing general agent that turned a solar performance database into USD 100 million per-location property authority on Aspen paper, a Solar Revenue Put lenders size debt against, and a Munich Re-backed parametric wind hedge — agreed to be acquired by Beazley in March 2026, itself being bought by Zurich.",
+      "hq": "San Francisco, California, United States",
+      "ticker": "LSE: BEZ (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-08",
+      "domains": [
+        "kwhanalytics.com",
+        "beazley.com"
+      ],
+      "srcTotal": 121,
+      "srcFirstPct": 43,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "insurance-and-risk-transfer",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "csa-group",
+      "name": "CSA Group",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Canada's standards body and second North American certification mark after UL — author of the Canadian Electrical Code and of the CSA TS-800/C800 large-scale fire test that NFPA 855-2026 now requires — selling its entire testing and certification arm, marks and NRTL included, to Kiwa Group for about C$2.1 billion (member vote October 2026).",
+      "hq": "Toronto, Ontario, Canada",
+      "status": "active",
+      "lastUpdated": "2026-09-08",
+      "domains": [
+        "csagroup.org"
+      ],
+      "srcTotal": 122,
+      "srcFirstPct": 40,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "challenger"
+        }
+      ]
     }
   ]
 }

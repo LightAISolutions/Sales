@@ -2232,6 +2232,36 @@
     "Concentration: one customer at 28.1% of FY2026 net sales and one supplier at 63.1% of purchases, neither named; independent reporting put a single customer at 63% of Q2 FY2026 revenue",
     "Two unreconciled figures to resolve at the next refresh: FY2026 net income $2,230.5m against StockAnalysis's $2,196m, and Q4 FY2026 diluted EPS $1.62 against $1.70"
    ]
+  },
+  {
+   "slug": "kwh-analytics",
+   "cadence": "quarterly",
+   "source": "Private MGA until March 2026; its own disclaimers page now says 'a wholly owned subsidiary of Beazley plc' (LSE: BEZ) though no completion release exists and Insurance Business reported closing 'second half of 2026, subject to regulatory approvals'; Beazley itself is under an agreed takeover by Zurich (completion expected before end-2026). No earnings calendar of its own — Beazley reports half-yearly (H1 early August, FY early March) and will not break kWh out. Channels: kwhanalytics.com (renders via WebFetch; raw curl meets an Altcha challenge), BusinessWire releases (403 from this environment — read the company-hosted copies), Reinsurance News and Artemis for deals. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-08",
+   "watch": [
+    "Zurich's completion of the Beazley acquisition (expected before end-2026) and any statement placing renewables underwriting within Zurich's specialty structure — or the disappearance of the kWh brand",
+    "A completion release or regulatory record for the Beazley–kWh deal itself; the price and retention terms have never been published",
+    "The Q1 2027 Aspen Specialty renewal: does the USD 100 million per-location property programme stay on Aspen paper, move to Beazley syndicates, or lapse",
+    "The ninth Solar Risk Assessment (May 2027) — under whose brand, and whether the Broker Council and Resilient Power Report continue",
+    "Any launch of the tax-credit insurance product announced January 2025 with an 18-month target (overdue), and a third Wind Proxy Hedge (Apex said it is evaluating more projects)",
+    "Capacity-partner changes: Swiss Re/Everest on the Solar Revenue Put, Munich Re Trading on the wind hedge, the unnamed A-rated carrier (reportedly Lloyd's) on the USD 20 million excess layer",
+    "Chesterton check: the company has never published revenue, GWP, claims paid or headcount — do not import LeadIQ's 'USD 25M–50M' or Owler's '100–250 employees' as facts; its own site contradicts itself on the Series A date, the Series B year, the property limit (70 vs 100) and the loss-data figure (100 vs 150), and third parties disagree on whether Kaminsky is a co-founder"
+   ]
+  },
+  {
+   "slug": "csa-group",
+   "cadence": "quarterly",
+   "source": "Not-for-profit member association (Canadian Standards Association) with a commercial subsidiary (CSA Group Testing & Certification Inc.); audited results are members-only; no earnings calendar. An annual report appears each spring for the fiscal year ending about 31 March (inferred) — the 2025/26 edition exists at csagroup.org/wp-content/uploads/Annual-Report-2025-26-EN.pdf but www.csagroup.org returned 403 to every request from this environment (three samples, two user agents, WebFetch); read company pages through Wayback Machine snapshots and cite the original URLs; Canada Newswire (newswire.ca) serves the releases directly. PENDING CHANGE OF CONTROL: the TIC subsidiary is being sold to Kiwa Group (SHV) for ~C$2.1 billion — member vote early October 2026, close targeted Q4 2026. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-08",
+   "watch": [
+    "The special meeting of members (early October 2026) and the Q4 2026 closing of the Kiwa sale — on completion, decide whether this dossier's subject is the standards association, Kiwa's CSA testing unit, or both, and re-check the assurance-segment role",
+    "OSHA's record of the change-of-ownership notification and any renaming of the CSA mark or of CSA Group Testing & Certification Inc. under Kiwa; whether Mary Cianchetti takes the association CEO role and David Weinstein stays with the TIC business as announced",
+    "Which body witnesses each large-scale fire test announced by a covered integrator (CSA, UL Solutions or TÜV Rheinland) — the 2026 drift to TÜV on Trina, e-STORAGE and Sungrow is the trend to track",
+    "The next edition of CSA/ANSI C800 (an update is already listed on the CSA Store) and whether NFPA 855-2026 and the California Fire Code keep referencing Section 9.7 directly",
+    "The 27th Canadian Electrical Code (2027): Section 64 storage rules and provincial adoption dates",
+    "Brecksville, Ohio headquarters and laboratory completion (early 2028) and the fate of the CCIC China joint venture under Kiwa",
+    "Chesterton check: CSA publishes no revenue or surplus — do not import LeadIQ's USD 750M or 'USD 1B–10B' estimates; headcount figures (808 / ~2,100 / 3,538) count different entities; C22.2 No. 340 is a battery-management-system standard, not a BESS system standard"
+   ]
   }
  ]
 }

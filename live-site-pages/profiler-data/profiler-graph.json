@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-08",
- "companies": 156,
+ "built": "2026-09-09",
+ "companies": 158,
  "edges": [
   {
    "a": "abb",
@@ -1952,6 +1952,24 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "aes-clean-energy",
+   "b": "kwh-analytics",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "The AES Corporation, parent of AES Clean Energy, has used the Solar Revenue Put twice: a 41-project, 28 MW-DC distributed portfolio managed by AES Distributed Energy in 2019, and a 225 MW-DC project financed with HSBC, Citi and National Bank of Canada in 2023.",
+     "context": "Solar Power World listed 'AES Distributed Energy' among the sponsors of the first USD 500 million of puts in February 2019; the company's own February 2023 release names 'The AES Corporation (NYSE: AES)' as sponsor of the 225 MW-DC deal and describes the put as 'a credit enhancement that guarantees up to 95% of a solar project's expected energy output'.\n\nThe covered dossier is the AES Clean Energy unit; both puts were written at the parent or a sister distributed-energy subsidiary, so the link is parent-level.",
+     "source": "https://www.solarpowerworldonline.com/2019/02/kwh-analytics-structures-solar-revenue-puts-on-500-million-of-solar-assets/",
+     "status": "historical",
+     "since": "2019",
+     "scale": "225 MW-DC (2023); 28 MW-DC (2019)",
+     "via": "Solar Revenue Put"
+    }
+   },
+   "evid": [],
+   "last": "2019"
   },
   {
    "a": "aes-clean-energy",
@@ -6848,6 +6866,39 @@
   },
   {
    "a": "apex-clean-energy",
+   "b": "kwh-analytics",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Apex Clean Energy's Rocky Forge Wind (79 MW, Virginia) is the second and largest parametric Wind Proxy Hedge kWh Analytics has structured, with Munich Re Trading as hedge provider and MUFG and CIBC as arrangers.",
+     "context": "Reinsurance News reported on 18 September 2025 that the hedge 'generates approximately $7 of additional debt for every dollar of premium paid during the mini-perm period' and quoted an Apex representative: 'Implementation of the Wind Proxy Hedge structure went smoothly, and we are evaluating this product on additional projects.' The structure pays when measured wind speed falls below a threshold, adding investment-grade cash flow above the P99 case.\n\nApex is the only company on this corpus's roster with a live, named kWh product; the relationship is sponsor-to-structurer rather than insured-to-insurer, since Munich Re bears the risk.",
+     "source": "https://www.reinsurancene.ws/kwh-analytics-closes-munich-re-backed-parametric-wind-proxy-hedge-for-apex-clean-energy/",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "79 MW",
+     "via": "Wind Proxy Hedge"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded in 2012 in San Francisco by Richard Matsui as a solar data-and-analytics company (per the company's own history and Business Insurance); HelioStats data platform launched 2016; first Solar Revenue Put closed December 2017 on Swiss Re Corporate Solutions capacity for three Coronal Energy plants (per Swiss Re); property programme launched 2023 with Aspen Insurance at USD 75 million per location, raised to USD 100 million per location in the February 2026 renewal (per Business Insurance and the company); USD 20 million excess natural-catastrophe layer added August 2025; two parametric Wind Proxy Hedges closed with Munich Re Trading (Greenbacker, 59 MW, 2024; Apex Clean Energy, 79 MW, 2025).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-18",
+     "text": "Closes the second parametric Wind Proxy Hedge, for Apex Clean Energy's 79 MW Rocky Forge Wind in Virginia, with Munich Re Trading as hedge provider and MUFG and CIBC as coordinating lead arrangers — 'approximately $7 of additional debt for every dollar of premium' — A repeatable structure with a covered-corpus sponsor that says it is evaluating more projects.",
+     "src": "https://www.reinsurancene.ws/kwh-analytics-closes-munich-re-backed-parametric-wind-proxy-hedge-for-apex-clean-energy/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-09-18"
+  },
+  {
+   "a": "apex-clean-energy",
    "b": "lightsource-bp",
    "evid": [
     {
@@ -11215,6 +11266,32 @@
   },
   {
    "a": "byd",
+   "b": "csa-group",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "BYD's MC Cube passed a TS-800 large-scale fire test supervised by CSA Group in December 2024 — a peak heat release of 5.43 MW with no fire spread between cabinets.",
+     "context": "EVLithium's 28 December 2024 report states that 'the Canadian Standards Association (CSA Group) supervised the testing' and gives the heat-release and no-propagation results. The source is a trade site rather than BYD's own release; BYD's dossier does not carry the test, so the claim rests on this report alone.",
+     "source": "https://www.evlithium.com/lifepo4-battery-news/byd-energy-storage-ts-800-fire-test-safety.html",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "MC Cube (403 Ah Blade)",
+     "via": "CSA TS-800 large-scale fire test"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-12"
+  },
+  {
+   "a": "byd",
    "b": "envision-energy",
    "curated": {
     "b": {
@@ -11878,6 +11955,24 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "canadian-solar",
+   "b": "csa-group",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Canadian Solar's e-STORAGE SolBank 3.0 passed the CSA C800:25 large-scale fire test in June 2025 with CSA Group as the testing agency; its KuBank 3.0 test in August 2026 was run with TÜV Rheinland instead.",
+     "context": "e-STORAGE's PR Newswire release of 3 June 2025 states the test 'was witnessed and independently verified by both CSA Group, the testing agency, and Energy Safety Response Group (ESRG)', with no unit-to-unit propagation. The August 2026 KuBank 3.0 release names TÜV Rheinland as the body that conducted the UL 9540A:2026 large-scale test, ESRG again verifying.\n\nThe two releases together are the corpus's clearest evidence that C800 authorship and test work are separable: a repeat customer used CSA's standard once and a rival witness the next time.",
+     "source": "https://www.prnewswire.com/news-releases/e-storages-solbank-3-0-successfully-passes-large-scale-fire-testing-lsft-302471489.html",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "SolBank 3.0",
+     "via": "CSA C800:25 §9.7 large-scale fire test"
+    }
+   },
+   "evid": [],
+   "last": "2025-06"
   },
   {
    "a": "canadian-solar",
@@ -14163,16 +14258,6 @@
    "a": "cipher-mining",
    "b": "engie-north-america",
    "curated": {
-    "a": {
-     "type": "supplier",
-     "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
-     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment — rather than as a sustainability arrangement.\n\nIt remains preliminary. No megawatt figure is under contract, no definitive agreement has been announced by either party, and the arrangement appears in none of Cipher's contracted-capacity disclosures: the 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only. ENGIE's own dossier lists a definitive Cipher agreement among the indicators that would move its co-location judgment from announced to real, which is the correct reading from both sides.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
-     "status": "announced",
-     "since": "2025-05",
-     "scale": "up to 300 MW contemplated",
-     "via": "Co-located data centre at a West Texas wind site"
-    },
     "b": {
      "type": "customer",
      "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
@@ -14182,6 +14267,16 @@
      "since": "2025-05",
      "scale": "up to 300 MW contemplated",
      "via": "Co-located data centre at an unnamed West Texas wind facility"
+    },
+    "a": {
+     "type": "supplier",
+     "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment — rather than as a sustainability arrangement.\n\nIt remains preliminary. No megawatt figure is under contract, no definitive agreement has been announced by either party, and the arrangement appears in none of Cipher's contracted-capacity disclosures: the 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only. ENGIE's own dossier lists a definitive Cipher agreement among the indicators that would move its co-location judgment from announced to real, which is the correct reading from both sides.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at a West Texas wind site"
     }
    },
    "evid": [],
@@ -14206,16 +14301,6 @@
    "a": "cipher-mining",
    "b": "fluidstack",
    "curated": {
-    "a": {
-     "type": "customer",
-     "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
-     "context": "Fluidstack USA II Inc. leases all 300 gross MW / 207 critical IT MW of Barber Lake, taken in two tranches: 168 critical IT MW in September 2025 for about USD 3.0bn over ten years, and a further 39 critical IT MW in November 2025 for about USD 830m. Two five-year extension options would take the combined figure to about USD 9.0bn. The lease is modified-gross with annual escalators, and Cipher retains 100% ownership of the project.\n\nFluidstack is unrated, which is why the structure exists at all: Google LLC backstops USD 1.73bn of Fluidstack's lease obligations under a recognition agreement, and the 7.125% Cipher Compute notes amortise in line with that backstop rather than on a fixed schedule. Note the asymmetry — USD 1.73bn of support against about USD 3.8bn of contracted revenue covers roughly 46% of the base term, not the whole lease.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf (Lake Mariner and Abernathy) and Hut 8 (River Bend), which makes Fluidstack the single largest shared counterparty risk across the miner-landlord cohort in this corpus.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
-     "via": "AI hosting at Barber Lake"
-    },
     "b": {
      "type": "supplier",
      "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
@@ -14225,6 +14310,16 @@
      "since": "2025-09",
      "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
      "via": "Barber Lake, Colorado City TX"
+    },
+    "a": {
+     "type": "customer",
+     "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
+     "context": "Fluidstack USA II Inc. leases all 300 gross MW / 207 critical IT MW of Barber Lake, taken in two tranches: 168 critical IT MW in September 2025 for about USD 3.0bn over ten years, and a further 39 critical IT MW in November 2025 for about USD 830m. Two five-year extension options would take the combined figure to about USD 9.0bn. The lease is modified-gross with annual escalators, and Cipher retains 100% ownership of the project.\n\nFluidstack is unrated, which is why the structure exists at all: Google LLC backstops USD 1.73bn of Fluidstack's lease obligations under a recognition agreement, and the 7.125% Cipher Compute notes amortise in line with that backstop rather than on a fixed schedule. Note the asymmetry — USD 1.73bn of support against about USD 3.8bn of contracted revenue covers roughly 46% of the base term, not the whole lease.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf (Lake Mariner and Abernathy) and Hut 8 (River Bend), which makes Fluidstack the single largest shared counterparty risk across the miner-landlord cohort in this corpus.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "AI hosting at Barber Lake"
     }
    },
    "evid": [
@@ -14327,15 +14422,6 @@
    "a": "cipher-mining",
    "b": "google",
    "curated": {
-    "a": {
-     "type": "investor",
-     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
-     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
-    },
     "b": {
      "type": "portfolio",
      "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
@@ -14345,6 +14431,15 @@
      "since": "2025-09",
      "scale": "$1.73B backstop; ~5.4% warrants",
      "via": "Barber Lake recognition agreement"
+    },
+    "a": {
+     "type": "investor",
+     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
     }
    },
    "evid": [
@@ -14550,18 +14645,18 @@
    "a": "cipher-mining",
    "b": "terawulf",
    "curated": {
-    "a": {
-     "type": "competitor",
-     "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
-     "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
-     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
-     "status": "active"
-    },
     "b": {
      "type": "competitor",
      "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
      "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
+     "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
+     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
      "status": "active"
     }
    },
@@ -18227,6 +18322,339 @@
    "last": ""
   },
   {
+   "a": "csa-group",
+   "b": "dnv",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "DNV is named alongside CSA Group among the major battery-storage testing, inspection and certification companies — DNV among the leaders, CSA among the majors — and DNV's Texas facility hosted Prevalon's CSA TS-800 test.",
+     "context": "MarketsandMarkets' July 2026 assessment lists 'UL Solutions (US), Intertek Group plc (UK), TÜV Rheinland (Germany), TÜV SÜD (Germany), DNV (Norway), and CSA Group (Canada)' as the major companies and the first five as leading players. In this corpus's assurance segment the two sit as incumbent (DNV) and challenger (CSA); their overlap is in fire-test witnessing and laboratory services rather than in DNV's independent-engineer and recommended-practice work, which CSA does not do.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its trade-press record places it among the 'major companies' in battery testing, inspection and certification behind the named leaders (UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD, DNV), which is the registry's definition of a challenger; after the Kiwa sale closes, the tester and the author will be different organisations.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Trina's January 2026 C800 test was certified by TÜV Rheinland; e-STORAGE's August 2026 KuBank test went to TÜV Rheinland after CSA witnessed its SolBank test in 2025; Prevalon ran TS-800 at DNV's Texas site; and UL 9540A's sixth edition now carries LSFT requirements of its own.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Testing, inspection and certification — the CSA mark, OSHA NRTL and SCC-accredited certification (the business being sold to Kiwa)",
+     "date": "",
+     "text": "MarketsandMarkets (July 2026) lists CSA among the 'major companies' in battery energy-storage TIC while naming UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery and energy-storage testing, UL 9540A and large-scale fire testing services",
+     "date": "",
+     "text": "CSA calls itself 'one of the few testing laboratories worldwide capable of providing large-scale fire testing services' and holds the authorship advantage on C800; UL Solutions, TÜV Rheinland, TÜV SÜD, Intertek and DNV compete on the same tests, and the 2026 record shows Chinese OEMs spreading their witnesses across UL, TÜV and CSA.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "MarketsandMarkets sizes battery-storage testing, inspection and certification at USD 0.66 billion in 2026 growing to USD 1.30 billion by 2032, listing CSA Group among the 'major companies' and UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders — The only independent ranking available places CSA in the second tier of the segment the corpus cares about — the challenger typing in one sentence.",
+     "src": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-21",
+     "text": "Prevalon Energy's HD5 and CLOU's Aqua-C2.5 complete CSA TS-800 large-scale fire tests — Prevalon's 'at DNV's test facility in Texas', CLOU's 'in California under CSA Group supervision', burning 'more than 48 hours' — The protocol is being run at other laboratories' sites — a sign that TS-800 was becoming the industry's procedure rather than CSA's product.",
+     "src": "https://www.energy-storage.news/fire-safety-ul-solutions-tests-thermal-runaway-to-new-ul9540a-standard-prevalon-and-clou-conduct-ts-800-large-scale-fire-testing/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-08"
+  },
+  {
+   "a": "csa-group",
+   "b": "envision-energy",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Envision Energy's July 2025 large-scale fire test — four fully charged 5 MWh cabinets at 5 cm spacing, a 49-hour burn with no propagation — was conducted under CSA Group supervision to CSA C800.",
+     "context": "ESS News reported on 3 July 2025 that the test was 'conducted under the supervision of the Canadian Standards Association (CSA)' with 'CSA's on-site observers', that Cabinet A reached 1,297 °C and that the fire persisted over 49 hours. Envision's dossier records the same test as a record-setting configuration.",
+     "source": "https://www.ess-news.com/2025/07/03/envision-proves-bess-fire-resilience-in-csa-certified-test/",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "Four 5 MWh cabinets at 5 cm spacing",
+     "via": "CSA C800 large-scale fire test"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-03",
+     "text": "Envision Energy's four 5 MWh cabinets at 5 cm spacing pass a CSA C800 large-scale fire test 'under the supervision of the Canadian Standards Association' — Cabinet A reached 1,297 °C and burned for over 49 hours with no propagation — The most severe configuration yet run under the protocol, and a covered-corpus integrator choosing CSA as the witness.",
+     "src": "https://www.ess-news.com/2025/07/03/envision-proves-bess-fire-resilience-in-csa-certified-test/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-07-03"
+  },
+  {
+   "a": "csa-group",
+   "b": "fluence",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "CSA Group witnessed and verified Fluence's Gridstack Pro 5000 large-scale fire test at SAFE Laboratories in North Carolina in June 2025 — all six deflagration panels deployed, no enclosure-to-enclosure propagation.",
+     "context": "Energy-Storage.news reported on 16 June 2025 that the test was run to UL 9540A with NFPA 855, 68 and 69 in view and that 'CSA Group witnessed and verified the results'. The same report records that Hithium's test the same month was conducted by UL Solutions, so Fluence's choice of witness was a choice among competitors.\n\nFluence's own dossier carries the test as a product highlight; CSA appears there as the witnessing body rather than as a supplier.",
+     "source": "https://www.energy-storage.news/fluence-hithium-canadian-solar-bess-units-undergo-large-scale-fire-testing-without-flames-spreading/",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "Gridstack Pro 5000 (5.6 MWh)",
+     "via": "Large-scale fire test witness"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06"
+  },
+  {
+   "a": "csa-group",
+   "b": "gotion",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Gotion High-Tech's 27 Ah and 100 Ah energy-storage cells received ANSI/CAN/UL 1973 certification through CSA Group and passed UL 9540A (fourth edition) in 2021, and Gotion's own laboratory was designated a CSA authorised testing laboratory under the witnessed manufacturer's testing programme.",
+     "context": "Gotion's 29 October 2021 release states the certifications and the laboratory designation. It is the oldest documented CSA link in the corpus and shows the witnessed-testing model CSA uses with Chinese cell makers; no later Gotion certification through CSA has been reported.",
+     "source": "https://en.gotion.com.cn/news/company-news-149.html",
+     "status": "historical",
+     "since": "2021-10",
+     "scale": "27 Ah and 100 Ah storage cells",
+     "via": "UL 1973 certification and UL 9540A testing; CSA authorised testing laboratory"
+    }
+   },
+   "evid": [],
+   "last": "2021-10"
+  },
+  {
+   "a": "csa-group",
+   "b": "hithium",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-16",
+     "text": "Fluence's Gridstack Pro 5000 completes UL 9540A and NFPA 855/68/69 large-scale fire testing at SAFE Laboratories, North Carolina — 'CSA Group witnessed and verified the results'; Hithium's test the same month was conducted by UL Solutions — Two covered integrators, two witnesses: the LSFT market is contested from the start.",
+     "src": "https://www.energy-storage.news/fluence-hithium-canadian-solar-bess-units-undergo-large-scale-fire-testing-without-flames-spreading/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-16"
+  },
+  {
+   "a": "csa-group",
+   "b": "hyperstrong",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "HyperStrong's HyperBlock III passed a five-unit, 100 percent state-of-charge, no-suppression large-scale fire test in January 2026 under CSA/ANSI C800:2025 and the latest UL 9540A draft, overseen by CSA Group.",
+     "context": "HyperStrong's 6 March 2026 release, as carried in its dossier, records a 16-hour burn with a 1,400 °C peak, no propagation and an adjacent-unit peak cell temperature of 56 °C, with the programme 'overseen by CSA Group'. It is the most recent covered-corpus test under the protocol before Jinko's April 2026 certificate.",
+     "source": "https://www.hyperstrong.com/en/news/company-news/87",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "HyperBlock III, five units at 100% SOC",
+     "via": "CSA/ANSI C800:2025 and UL 9540A draft large-scale fire test"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01"
+  },
+  {
+   "a": "csa-group",
+   "b": "jinko",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Jinko ESS's SunTera received the first UL 9540A sixth-edition (2026 draft) large-scale fire testing certification from CSA Group in April 2026, issued by CSA's China industrial unit.",
+     "context": "Energy-Storage.news' industry update of 26 April 2026 quotes Wu Wei, commercial director of CSA Group China's industrial unit: 'This validates that Jinko ESS's system-level fire safety design meets the applicable global standards and regulatory requirements.' The test was run to 'the CSA C800 standard and the recently released UL 9540A 6th edition draft'.",
+     "source": "https://www.energy-storage.news/industry-updates/jinko-ess-suntera-receives-first-ul-9540a-6th-edition-2026-draft-large-scale-fire-testing-certification-from-csa-group/",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "SunTera",
+     "via": "UL 9540A 6th edition (2026 draft) large-scale fire test certificate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-04"
+  },
+  {
+   "a": "csa-group",
+   "b": "prevalon",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Prevalon Energy ran its HD5 large-scale fire test in April 2025 'in accordance with CSA TS-800' at DNV's Texas facility; CSA's own role as witness is not stated by either party, so the link is to CSA's protocol rather than to its laboratory.",
+     "context": "Power Engineering and ESS News (April 2025) report the test 'at DNV's test facility in Texas' under 'NFPA 855 and UL 9540A-aligned conditions' and Prevalon's own release says it was 'conducted at a certified facility in accordance with CSA TS-800'. Prevalon's dossier records the test as CSA TS-800 large-scale fire testing with contract manufacturer CLOU. The relationship is typed `other` because the only documented connection is the use of CSA's procedure.",
+     "source": "https://www.power-eng.com/energy-storage/mitsubishi-power-battery-spinoff-completes-large-scale-fire-testing-of-its-hd5-energy-storage-platform/",
+     "status": "historical",
+     "since": "2025-04",
+     "scale": "HD5 (6 MWh), four-unit array",
+     "via": "CSA TS-800 protocol"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-21",
+     "text": "Prevalon Energy's HD5 and CLOU's Aqua-C2.5 complete CSA TS-800 large-scale fire tests — Prevalon's 'at DNV's test facility in Texas', CLOU's 'in California under CSA Group supervision', burning 'more than 48 hours' — The protocol is being run at other laboratories' sites — a sign that TS-800 was becoming the industry's procedure rather than CSA's product.",
+     "src": "https://www.energy-storage.news/fire-safety-ul-solutions-tests-thermal-runaway-to-new-ul9540a-standard-prevalon-and-clou-conduct-ts-800-large-scale-fire-testing/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-04-21"
+  },
+  {
+   "a": "csa-group",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Sungrow's SBH modular battery achieved module- and system-level UL 9540A certification through CSA Group in January 2025; its PowerKeeper triple UL 9540A certification in April 2026 was witnessed by TÜV Rheinland and its SBH residential UL 9540B test by UL Solutions.",
+     "context": "Sungrow's 7 January 2025 PR Newswire release describes the certification 'as certified by CSA Group'; the April 2026 PowerKeeper release names TÜV Rheinland as witness and Energy-Storage.news' November 2025 round-up records UL Solutions on the residential test. Sungrow's dossier lists CSA among its certifiers alongside DNV and TÜV — a multi-sourced relationship, not an exclusive one.",
+     "source": "https://www.prnewswire.com/apac/news-releases/sungrow-sbh-modular-battery-achieves-ul9540a-certification-redefining-energy-storage-safety-standards-302343855.html",
+     "status": "historical",
+     "since": "2025-01",
+     "scale": "SBH modular battery",
+     "via": "UL 9540A module- and system-level certification"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy-storage standards — CSA TS-800:24 and CSA/ANSI C800:25 large-scale fire testing, C801, C22.2 No. 340 and No. 350",
+     "date": "",
+     "text": "Its acceptance is now written into NFPA 855-2026 and the UL 9540A sixth edition, which means competitors (UL Solutions, TÜV Rheinland) run CSA's protocol too — the Trina, e-STORAGE KuBank and Sungrow PowerKeeper tests of 2026 were witnessed by TÜV Rheinland or UL, not CSA.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-01"
+  },
+  {
+   "a": "csa-group",
+   "b": "trina-storage",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Trina Storage's Elementa 2 Pro passed large-scale fire testing to CSA/ANSI C800-2025, NFPA 855-2026 and the November 2025 UL 9540A revision in January 2026 — certified by TÜV Rheinland, not CSA.",
+     "context": "ESS News' 22 January 2026 report places the test in Hebei province under TÜV Rheinland and Hiller supervision at beyond-standard 10 cm spacing. The link is to CSA as author of the standard; there is no CSA laboratory or witness role. Trina's dossier records the same test with the same supervising bodies.",
+     "source": "https://www.ess-news.com/2026/01/22/trina-storages-elementa-2-pro-passes-large-scale-fire-safety-and-propagation-tests/",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "Elementa 2 Pro",
+     "via": "CSA/ANSI C800-2025 protocol"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-22",
+     "text": "Trina Storage's Elementa 2 Pro passes large-scale fire testing to CSA/ANSI C800-2025, NFPA 855-2026 and the November 2025 UL 9540A revision — certified by TÜV Rheinland in Hebei, China — CSA's standard run by CSA's competitor: the protocol's success is not CSA's laboratory revenue.",
+     "src": "https://www.ess-news.com/2026/01/22/trina-storages-elementa-2-pro-passes-large-scale-fire-safety-and-propagation-tests/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-22"
+  },
+  {
+   "a": "csa-group",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Wärtsilä was the first integrator to run CSA's TS-800 large-scale fire test (November 2024, Quantum High Energy and Quantum 2) and returned for Quantum 3 in November 2025; it co-presented CSA's LSFT webinar and says it has 'successfully executed four large-scale fire tests' with CSA.",
+     "context": "Energy-Storage.news reported on 11 November 2024 that Wärtsilä completed 'worst-case scenario' fire tests under 'a new large-scale fire testing procedure devised by CSA Group', quoting CSA fire-test specialist Josh Dinaburg; on 28 November 2025 it reported Quantum 3's 22-hour burn with suppression deactivated and the fire contained to the initiating unit. Wärtsilä's Christopher Groves said on CSA's webinar that the company 'has worked with industry leaders like CSA Group and successfully executed four large-scale fire tests'.",
+     "source": "https://www.energy-storage.news/wartsila-completes-worst-case-scenario-fire-tests-on-battery-storage-under-new-procedure/",
+     "status": "active",
+     "since": "2024-11",
+     "scale": "Quantum High Energy, Quantum 2, Quantum 3",
+     "via": "CSA TS-800 / large-scale fire tests"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: C800's scope names 'financial institutions and insurers' and 'bankability and insurability' as its purpose, which is the insurance segment's buying criterion written into a test standard; the repeat customers (Wärtsilä, Canadian Solar) came to CSA because it owned the protocol and the site; after the split the association keeps the protocol and no site.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-28",
+     "text": "Wärtsilä's Quantum 3 (5 MWh) completes UL 9540A unit-level testing and a large-scale fire test with CSA Group — a unit 'burned for 22 hours with fire suppression equipment deactivated' and 'the fire was contained within the initiated unit' — The first TS-800 customer returning for its next platform — the repeat business the LSFT line depends on.",
+     "src": "https://www.energy-storage.news/battery-storage-fire-safety-sungrow-wartsila-chint-power-products-put-through-lsft/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-28"
+  },
+  {
    "a": "cummins",
    "b": "enchanted-rock",
    "evid": [
@@ -19932,6 +20360,22 @@
    },
    "evid": [],
    "last": "2021-07"
+  },
+  {
+   "a": "dnv",
+   "b": "kwh-analytics",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "DNV is kWh Analytics' independent-engineering partner on the USD 2.4 million DOE MORE PV resilience programme (with NREL and STANCE Renewable Risk Partners), supplied the engineering analysis for the first Wind Proxy Hedge, and co-authored a 2026 Solar Risk Assessment article on module useful-life assumptions.",
+     "context": "Reinsurance News' September 2024 report on the DOE award lists 'National Renewable Energy Laboratory, DNV (independent engineering firm), STANCE Renewable Risk Partners' as partners; the company's July 2024 Maine hedge release credits DNV's engineering analysis; the 2026 SRA contributor list published by Solarplaza includes DNV.\n\nThe pairing is the insurance segment's dependence on the assurance segment in miniature: the underwriter prices the curve the independent engineer certifies.",
+     "source": "https://www.reinsurancene.ws/kwh-analytics-and-us-department-of-energy-launch-2-4m-solar-resilience-initiative/",
+     "status": "active",
+     "since": "2024-07"
+    }
+   },
+   "evid": [],
+   "last": "2024-07"
   },
   {
    "a": "dnv",
@@ -22258,6 +22702,23 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "engie-north-america",
+   "b": "kwh-analytics",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "ENGIE New Ventures participated in kWh Analytics' USD 5 million Series A in September 2016, led by Anthemis Group; ENGIE's venture arm still lists kWh in its portfolio.",
+     "context": "PR Newswire's September 2016 release states the round was 'led by Anthemis Group … with ENGIE, the world's largest independent power producer, also participating', and ENGIE New Ventures' portfolio page describes kWh as 'the market leader in solar risk management'. The stake, if retained through the Beazley sale, is undisclosed. Geoffrey Lehv, kWh's head of North American accounts, is a former ENGIE employee. The covered dossier is ENGIE North America; the investor is the group's venture arm, so the link is parent-level.",
+     "source": "https://www.prnewswire.com/news-releases/kwh-analytics-raises-5-million-series-a-launches-new-insurance-backed-production-guarantee-to-make-solar-bankable-300323640.html",
+     "status": "historical",
+     "since": "2016-09",
+     "scale": "USD 5 million Series A (round total)"
+    }
+   },
+   "evid": [],
+   "last": "2016-09"
   },
   {
    "a": "engie-north-america",
@@ -27822,22 +28283,29 @@
    "a": "galaxy-digital",
    "b": "hut-8",
    "curated": {
-    "a": {
-     "type": "competitor",
-     "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
-     "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
-     "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
-     "status": "active"
-    },
     "b": {
      "type": "competitor",
      "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
      "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
      "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
      "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
+     "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
+     "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
+     "status": "active"
     }
    },
    "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
+    },
     {
      "where": "Key Judgments",
      "date": "",
@@ -27865,13 +28333,6 @@
      "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
      "src": "",
      "from": "a"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
-     "src": "",
-     "from": "b"
     }
    ],
    "last": ""
@@ -33879,6 +34340,32 @@
   },
   {
    "a": "invenergy",
+   "b": "kwh-analytics",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Invenergy refinanced its Grand Ridge Solar project (23 MW-DC, La Salle County, Illinois) with MUFG in July 2019 using a Swiss Re-backed Solar Revenue Put.",
+     "context": "Reinsurance News quoted Meghan Schultz, Invenergy's SVP of finance and capital markets: 'Invenergy is pleased to work with kWh Analytics on the successful refinancing of our Grand Ridge Solar project.' Swiss Re's Brian Beebe called the put 'a new, multi-billion dollar insurtech category' in the same report. No later Invenergy transaction with kWh has been reported.",
+     "source": "https://www.reinsurancene.ws/kwh-analytics-closes-23-mw-solar-revenue-put-backed-by-swiss-re/",
+     "status": "historical",
+     "since": "2019-07",
+     "scale": "23 MW-DC",
+     "via": "Solar Revenue Put"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: named put financings cluster in 2018–2023 (Coronal, IGS, AES, Invenergy, Cal Flats, Matrix, Sunray, Pivot); the only 2025 put news is a bond-financed SRP+; the company's forward statements favour parametric structures ('gain major traction'); and the lender-adoption figures ('40%', '50%', '30+ lenders') are the company's own with no independent survey.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2019-07"
+  },
+  {
+   "a": "invenergy",
    "b": "meta",
    "curated": {
     "a": {
@@ -35117,6 +35604,40 @@
     }
    ],
    "last": "2025-10-23"
+  },
+  {
+   "a": "kwh-analytics",
+   "b": "lightsource-bp",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Lightsource bp co-authored a 2026 Solar Risk Assessment article with Univers on undersized fuses causing a 15 percent power loss, and is listed among the report's 21 contributing organisations.",
+     "context": "The Solarplaza repost of the 12 May 2026 release lists 'Lightsource bp' among contributors alongside DNV, Nextpower, Kiwa PVEL and others. A contributor relationship is a data-sharing and thought-leadership link, not an insurance placement; no Lightsource bp policy or put with kWh has been reported.",
+     "source": "https://www.solarplaza.com/resource/13473/press-release-kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-generation-and-battery-energy-storage-systems-2026/",
+     "status": "active",
+     "since": "2026-05"
+    }
+   },
+   "evid": [],
+   "last": "2026-05"
+  },
+  {
+   "a": "kwh-analytics",
+   "b": "panasonic",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "The first Solar Revenue Put ever written (December 2017, Swiss Re Corporate Solutions capacity) covered three Virginia solar plants owned by Coronal Energy, then a Panasonic affiliate.",
+     "context": "Swiss Re Corporate Solutions' January 2020 release records 'First transaction: December 2017 (three solar plants owned by Coronal Energy/Panasonic affiliate)'; pv magazine USA reported the deal as 'the industry's first solar revenue put for three solar projects totaling 30 MW-AC in Virginia'. Coronal was later sold; the link is historical and parent-level.",
+     "source": "https://corporatesolutions.swissre.com/insights/news/swiss-re-corporate-solutions-announces-insurtech-collaboration-to-accelerate-solar-adoption.html",
+     "status": "historical",
+     "since": "2017-12",
+     "scale": "30 MW-AC, three plants",
+     "via": "Solar Revenue Put"
+    }
+   },
+   "evid": [],
+   "last": "2017-12"
   },
   {
    "a": "lambda",

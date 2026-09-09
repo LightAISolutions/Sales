@@ -1,0 +1,650 @@
+{
+ "schemaVersion": 2,
+ "slug": "csa-group",
+ "title": "CSA Group — Technology Study Guide",
+ "lastUpdated": "2026-09-08",
+ "glossary": [
+  {
+   "t": "factory surveillance",
+   "d": "The certification body's periodic, often unannounced, inspections of a manufacturer's production after a product is certified, checking that shipped units still match the tested sample. A listing depends on it continuing."
+  },
+  {
+   "t": "Section 64",
+   "d": "The section of the Canadian Electrical Code, Part I, that carries the installation rules for renewable energy and energy-storage systems; revised substantially in the 2024 edition."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-who-says-it-is-safe",
+   "title": "Start here: who says a battery is safe, and how they earn the right to say it",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The DNV guide taught what a certificate proves and does not prove from the lender's chair. This guide goes inside the institution that issues the certificate — and, in CSA Group's case, also writes the standard the certificate is issued against and the code that says where the product may be installed. Those are three different jobs; in the United States they sit in three different organisations (UL Standards & Engagement writes, UL Solutions tests, NFPA and the states adopt), and in Canada CSA Group has done all three under one roof for a century.",
+    "It is the right moment to study it because the roof is coming off. In August 2026 CSA Group agreed to sell its entire testing and certification business — the laboratories, the CSA mark, the US laboratory recognition — to Kiwa Group, keeping only the standards body. So the guide teaches the whole system first and then asks what each half is worth on its own.",
+    "**What this guide leaves to others:** the mechanics of thermal runaway inside a cell (the cell-maker guides), how a fire marshal's spacing rules are applied on site (the integrator guides), and the lender's use of a certificate (DNV). It assumes high-school physics and no knowledge of standards.",
+    "**One idea carries this guide.** A standard is a sentence; a code is that sentence made law; a mark is a laboratory's signature saying a product met the sentence. The battery industry's argument of 2024–2026 was over which sentence a full-scale fire test should follow — and CSA wrote the winning one."
+   ]
+  },
+  {
+   "id": "standard-code-mark",
+   "title": "Standard, code and mark: three things that are not the same",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**A standard is a written requirement produced by a committee.** A **{{standards development organization}}** — CSA Group, UL Standards & Engagement, NFPA, the IEC — convenes engineers from manufacturers, users, regulators and laboratories, drafts requirements, opens them to public comment and votes them through. The output of that process is a **{{consensus standard}}**; a document that skips the full committee is a **{{technical specification}}**, published fast to fill a gap and superseded when the consensus version arrives. CSA's TS-800:24 large-scale fire-test procedure was exactly that: 'not a consensus document', 'prepared by a task group … to serve as an interim guidance', replaced within fourteen months by CSA/ANSI C800:25.",
+    "**A code is a standard a government has adopted.** On its own a standard binds no one. It acquires force by **{{incorporation by reference}}** — a province adopts CSA C22.1 as its electrical code, a state adopts NFPA 855 into its fire code, a fire code references a UL test method. The **{{Canadian Electrical Code}}** is the clearest example in this corpus: CSA writes it every three years, and British Columbia, Alberta and Ontario each adopted the 2024 edition in 2025 on their own dates, with their own amendments. The words are CSA's; the law is provincial.",
+    "**A mark is a laboratory's attestation about a product.** A certifier tests samples against the standard, inspects the factory, and licenses the manufacturer to apply its **{{certification mark}}** — CSA, UL, ETL — and lists the model in a public **{{product listing}}**. The mark means the product met the standard's tests on the day it was tested and is under surveillance; it does not mean the product will perform in a specific installation, which is why installation-level fire tests exist.",
+    "**Who is allowed to test.** Not anyone. In the United States, OSHA recognises laboratories as a **{{nationally recognized testing laboratory}}** for named standards at named sites — CSA has been one since 1992, with 23 recognised sites and UL 9540, UL 1973 and UL 1741 in scope. In Canada, the Standards Council of Canada holds the **{{laboratory accreditation}}** file: CSA's certification-body accreditation dates from 28 June 1983 and was renewed on 5 May 2026 to 2031. The accreditor sits above the certifier the way the certifier sits above the manufacturer.",
+    "**Why the distinction matters for a buyer.** 'UL 9540 listed' tells you a laboratory certified the system to a product standard. 'Passed a C800 large-scale fire test witnessed by CSA' tells you a full-scale burn was observed. 'Meets NFPA 855' tells you an installation rule was followed. A tender that asks for one and means another has left the other two unspecified — the trap the DNV guide's quiz set."
+   ]
+  },
+  {
+   "id": "the-north-american-conformity-system",
+   "title": "The North American conformity system, seat by seat",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Five seats, two countries. CSA Group is the only organisation that has sat in three of them at once; the last column shows what the Kiwa sale does to each.",
+   "cols": [
+    "Seat",
+    "United States instance",
+    "Canadian instance",
+    "CSA Group today",
+    "After the Kiwa sale"
+   ],
+   "rows": [
+    [
+     "**Standards developer**",
+     "UL Standards & Engagement (UL 9540, 9540A, 1973); NFPA (855); IEEE",
+     "CSA Group (C22.1, C22.2 series, C800); ULC Standards; BNQ",
+     "Writes 3,000-plus standards; author of C800",
+     "Stays with the Canadian Standards Association"
+    ],
+    [
+     "**Accreditor / recogniser**",
+     "OSHA (NRTL programme); ANSI (certifiers and developers)",
+     "Standards Council of Canada (developers, certifiers, laboratories)",
+     "Recognised NRTL (23 sites); SCC-accredited developer and certifier",
+     "The NRTL recognition and SCC certification accreditation transfer with the subsidiary; OSHA must be notified of the ownership change"
+    ],
+    [
+     "**Certifier / laboratory**",
+     "UL Solutions, Intertek (ETL), TÜV, CSA, DEKRA and others",
+     "The same bodies, each with an SCC-accredited scope",
+     "CSA Group Testing & Certification Inc. — 20 laboratories, ~2,100 staff",
+     "Becomes a Kiwa company"
+    ],
+    [
+     "**Code adopter**",
+     "States and cities adopting the IFC, NFPA 855, the NEC",
+     "Provinces and territories adopting C22.1 on their own dates",
+     "Works 'routinely' with AHJs on adoption",
+     "Unchanged — the association's advocacy work"
+    ],
+    [
+     "**Enforcer (AHJ)**",
+     "Fire marshals, building officials, electrical inspectors",
+     "Provincial safety authorities (ESA, Technical Safety BC) and municipal inspectors",
+     "Recognised mark; field-evaluation agency in Ontario",
+     "The mark is Kiwa's to license; the code CSA's to write"
+    ]
+   ]
+  },
+  {
+   "id": "what-a-listing-proves",
+   "title": "What a product listing proves — and the field label for everything else",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**The certification cycle.** A manufacturer submits samples and construction details; the laboratory tests to the standard — for a battery system, abuse tests such as 'vibration and shock, crush, impact and nail penetration, fire exposure, short circuit and overcharge, and environmental' — and, if it passes, issues a certificate, lists the model and licenses the mark. Then comes the part buyers forget: **factory surveillance**, periodic unannounced inspections to confirm shipped units still match the tested sample. Lose the surveillance and the listing lapses.",
+    "**Where the test happens.** At the certifier's laboratory, or at the manufacturer's under **{{witnessed manufacturer testing}}**: Gotion's laboratory was designated 'a CSA Authorized Testing Laboratory for the Witnessed Manufacturer's Testing for Certification (WMTC) Program' in 2021, so Gotion runs the tests and CSA's engineer watches. For a Chinese cell maker shipping to North America that is the practical route; it is also why a certifier's Kunshan or Guangzhou laboratory matters more than its Toronto one.",
+    "**Mutual recognition.** Under the IECEE **{{CB Scheme}}**, a test report from one recognised national certification body is accepted by the others, 'which allows you to access up to 70 countries' in CSA's words. The CB report is the passport; the local mark is the visa.",
+    "**What the listing does not prove.** Field reliability, degradation, behaviour at the specific site, or that a one-off installation built from certified parts is itself safe. For the last, there is **{{field evaluation}}**: an inspector evaluates the installed system on site to SPE-1000 and applies a serialised label — 'typically for low-volume installed systems and custom-engineered projects'. Ontario caps it at fewer than 500 units per model per agency; above that, the product must be certified.",
+    "**Mark equivalence.** In Canada 'any mark from an SCC-accredited certification body — CSA, cUL/cULus/ULC, or ETL — can serve as acceptable evidence', and Ontario's Electrical Safety Authority recognises 26 of them. The asymmetry runs one way: 'a US-only UL mark by itself is not enough in Canada'. So the CSA mark's home advantage is familiarity, not exclusivity — a point that decides what Kiwa actually bought."
+   ]
+  },
+  {
+   "id": "the-fire-test-family",
+   "title": "The fire-test family: who writes what, what triggers it, what it stops",
+   "kind": "ledger",
+   "read": "7 min",
+   "cols": [
+    "Document",
+    "Who writes it",
+    "What it tests or requires",
+    "What passing it gets you"
+   ],
+   "rows": [
+    [
+     "**{{UL 9540A}}**",
+     "UL Standards & Engagement",
+     "Thermal-runaway propagation from cell to module to unit to installation, with suppression allowed at unit level; sixth edition (March 2026) 'adds requirements for large-scale fire testing'",
+     "The data an AHJ and an installation-level analysis need; not a pass/fail listing"
+    ],
+    [
+     "**{{UL 9540}}**",
+     "UL Standards & Engagement (bi-national with Canada)",
+     "System-level product safety — electrical, mechanical, functional",
+     "A listing and a mark: the system may be sold and installed"
+    ],
+    [
+     "**{{UL 1973}}**",
+     "UL Standards & Engagement",
+     "Battery pack and module safety for stationary use",
+     "A component listing the system listing builds on"
+    ],
+    [
+     "**{{CSA C800}}** (from TS-800)",
+     "CSA Group — the one North American ESS test method written outside UL",
+     "Reliability and quality-assurance protocol: weather, mechanical impact, ballistics, and the Section 9.7 **{{large-scale fire test}}** with suppression off and neighbours at installation spacing",
+     "Data 'intended to be used as part of an assessment of bankability and insurability'; the test NFPA 855-2026 references"
+    ],
+    [
+     "**{{NFPA 855}}**",
+     "NFPA",
+     "Installation rules — spacing, size limits, explosion control (NFPA 68/69), and from the 2026 edition mandatory large-scale fire testing",
+     "Permission to install at a given spacing and size; 'NFPA 855 is NOT a certification standard'"
+    ],
+    [
+     "**Canadian Electrical Code Section 64**",
+     "CSA Group",
+     "Installation wiring and protection rules for renewable and storage systems in Canada; drafted with NFPA 855 in view",
+     "A legal installation in the adopting province"
+    ]
+   ]
+  },
+  {
+   "id": "anatomy-of-a-large-scale-fire-test",
+   "title": "Anatomy of a large-scale fire test",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Why it was invented.** UL 9540A tells you how a fire starts and spreads inside one unit under controlled ignition. It does not tell a fire chief what happens when a whole 5 MWh container burns beside three others at the spacing a developer wants to use. CSA's Marvin Peng put it plainly: existing standards 'are capable of testing for thermal runaway, but they do not adequately simulate fire propagation scenarios'. Manufacturers and 'authorities having jurisdiction (AHJs) had requested the development of a test protocol', and TS-800 was CSA's answer in 2024.",
+    "**The set-up.** A full production enclosure — the device under test — is placed in an outdoor test area with neighbouring units (or instrumented targets) at the installation spacing being qualified: 15 cm in CLOU's test, 5 cm in Envision's, back-to-back in Prevalon's four-unit array. Every fire-suppression system is switched off, 'in order to ensure complete fire consumption of the BESS enclosure'. Thermocouples cover the neighbours; heat-flux gauges, gas sensors and cameras record.",
+    "**The ignition and the burn.** A module is driven into **{{thermal runaway}}** and — under NFPA 855-2026's language — 'there should be intentional ignition of vent gasses'. Then everyone waits. Wärtsilä's Quantum 3 'burned for 22 hours'; CLOU's Aqua-C2.5 for '59 hours 10 minutes' with the ignited cabinet above 1,300 °C; Envision's 'over 49 hours' at 1,297 °C; HyperStrong's 16 hours at 1,400 °C. The question is not whether the unit is destroyed — it is — but whether the fire crosses to a neighbour and what temperature the neighbour's cells reach: 80.71 °C at 15 cm for CLOU, 56 °C for HyperStrong.",
+    "**What the report says.** A C800 Section 9.7 report records propagation (yes or no), heat exposure to neighbours over time, deflagration behaviour (Fluence's 'all six deflagration panels deployed as designed'), and the environmental conditions — 'why wind matters' is one of CSA's own LSFT Hub articles. The developer takes the report to the fire marshal to justify the spacing, to the insurer to justify the rate, and to the lender's engineer as evidence for the diligence file.",
+    "**Who watches.** The witness is a certification body's engineer; the site can be the body's own or a partner's. CSA runs large-scale tests 'at North Carolina, U.S., and Suzhou, China facilities', witnessed Fluence's at SAFE Laboratories, and its protocol was run at DNV's Texas site for Prevalon and under TÜV Rheinland for Trina. A code can require a test; it cannot give the author of the test a monopoly on running it."
+   ]
+  },
+  {
+   "id": "how-a-standard-is-made",
+   "title": "How a standard is made: TS-800 to C800 to the codes",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Months from the interim specification's release. Lanes: what CSA published; what the codes and the market did with it.",
+   "unit": "months from the release of CSA TS-800:24 (0 = late 2024)",
+   "lanes": {
+    "csa": "CSA Group",
+    "mkt": "Codes and market"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "csa",
+     "label": "TS-800:24 released",
+     "sub": "Task-group technical specification, 'not a consensus document', filling 'a critical gap'"
+    },
+    {
+     "x": 1,
+     "lane": "mkt",
+     "label": "Wärtsilä runs the first TS-800 tests",
+     "sub": "Quantum High Energy and Quantum 2; BYD's MC Cube follows in December"
+    },
+    {
+     "x": 5,
+     "lane": "mkt",
+     "label": "Prevalon, CLOU test to TS-800",
+     "sub": "At DNV's Texas site and in California under CSA supervision"
+    },
+    {
+     "x": 6,
+     "lane": "csa",
+     "label": "CSA/ANSI C800:25 published",
+     "sub": "First edition, 73 pages, national standard in Canada (SCC) and the United States (ANSI)"
+    },
+    {
+     "x": 7,
+     "lane": "mkt",
+     "label": "Canadian Solar, Fluence, Envision tested with CSA",
+     "sub": "C800 §9.7 and UL 9540A large-scale tests, June–July 2025"
+    },
+    {
+     "x": 13,
+     "lane": "mkt",
+     "label": "Trina tests to C800 with TÜV Rheinland",
+     "sub": "The standard run by a competitor"
+    },
+    {
+     "x": 15,
+     "lane": "mkt",
+     "label": "NFPA 855-2026 and UL 9540A 6th edition",
+     "sub": "Large-scale fire testing mandatory; C800 §9.7 referenced"
+    },
+    {
+     "x": 17,
+     "lane": "csa",
+     "label": "Jinko certified to the 6th-edition draft by CSA China",
+     "sub": "'First UL 9540A 6th Edition (2026 Draft) LSFT certification from CSA Group'"
+    },
+    {
+     "x": 21,
+     "lane": "csa",
+     "label": "TIC business sold to Kiwa",
+     "sub": "The laboratories leave; the standard stays"
+    }
+   ]
+  },
+  {
+   "id": "the-canadian-electrical-code",
+   "title": "The Canadian Electrical Code: the moat is the code, not the mark",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**What it is.** CSA C22.1 is 'the safety standard for electrical installations' — 973 pages in its 26th edition — that CSA has published every three years since 1927. Part I is the installation code; Part II is the C22.2 series of product standards that certificates cite (C22.2 No. 107.1 for power conversion, No. 340 for battery management systems, No. 280 for EV charging); Part III covers distribution. Section 64 is where storage and renewables live, and the 2024 edition 'contains major revisions for energy storage and renewable energy systems', drafted while NFPA 855 was being written.",
+    "**How it becomes law.** Each province and territory adopts the edition by regulation, with local amendments and on its own date — BC on 4 March 2025, Alberta on 1 April 2025, Ontario as its own 2024 Electrical Safety Code on 1 May 2025. CSA 'supports the timely adoption of these standards by routinely working with federal, provincial and territorial Authorities Having Jurisdiction'. Sixty percent of CSA's standards are 'referenced in legislation and regulations across Canada'.",
+    "**How it is paid for.** The code is sold — CAD 190 for the PDF, bundles with training from CAD 240, an exam with 'over 2,400 questions' — under digital-rights management, with free 'View Access' for readers in Canada. That model was tested in court for a decade. P.S. Knight's 'Electrical Code Simplified' became a copy of the code sold at a third of the price; Canadian courts enjoined it (2016), affirmed on appeal (2018 — the Code 'is not itself a regulation'), refused Supreme Court leave (2019) and sentenced the publisher for contempt (2021). Then the US Fifth Circuit held in 2024 that codes 'fully incorporated by reference into at least one Canadian statute or regulation' are 'the law' and freely copyable in the United States under the **{{government edicts doctrine}}**.",
+    "**The direction of travel.** Regulators now pay CSA for public access — the energy regulators renewed free pipeline standards for five years in April 2026, the nuclear regulator funds read-only nuclear standards — and the Kiwa proceeds are to become an endowment 'not exposed to the pressures of a large commercial business'. The code stays CSA's; the way it is funded is changing under it.",
+    "**Why this is the moat.** Every SCC-accredited mark is equal in Canada, so the CSA mark's advantage is familiarity. What only CSA has is authorship of the rules the inspectors enforce and the three-year cycle that puts storage, EV charging and inverters into provincial law. That asset does not go to Kiwa."
+   ]
+  },
+  {
+   "id": "who-tested-with-whom",
+   "title": "Who tested with whom: the large-scale fire-test witness roster, 2024–2026",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Every large-scale fire test a covered integrator or cell maker announced, with the protocol and the witnessing body. Read the last column as the market share of a test CSA wrote.",
+   "cols": [
+    "Product",
+    "Date",
+    "Protocol",
+    "Witness / certifier",
+    "Result headline"
+   ],
+   "rows": [
+    [
+     "Wärtsilä Quantum HE / Quantum 2",
+     "Nov 2024",
+     "CSA TS-800",
+     "CSA Group",
+     "First tests under the new procedure"
+    ],
+    [
+     "BYD MC Cube",
+     "Dec 2024",
+     "CSA TS-800",
+     "CSA Group (per trade site)",
+     "5.43 MW peak heat release, no spread"
+    ],
+    [
+     "Prevalon HD5",
+     "Apr 2025",
+     "CSA TS-800",
+     "Unnamed, at DNV's Texas facility",
+     "Four-unit array, fire contained"
+    ],
+    [
+     "CLOU Aqua-C2.5",
+     "Apr 2025",
+     "CSA TS-800",
+     "CSA Group (California)",
+     "59-hour burn, neighbour 80.71 °C at 15 cm"
+    ],
+    [
+     "Canadian Solar SolBank 3.0",
+     "Jun 2025",
+     "CSA C800:25 §9.7",
+     "CSA Group + ESRG",
+     "No unit-to-unit propagation"
+    ],
+    [
+     "Fluence Gridstack Pro 5000",
+     "Jun 2025",
+     "UL 9540A + NFPA 855/68/69",
+     "CSA Group witnessed, SAFE Labs NC",
+     "Six deflagration panels deployed"
+    ],
+    [
+     "Hithium ∞Block",
+     "Jun 2025",
+     "LSFT",
+     "UL Solutions",
+     "Not CSA"
+    ],
+    [
+     "Envision 5 MWh ×4",
+     "Jul 2025",
+     "CSA C800",
+     "CSA Group observers",
+     "5 cm spacing, 49 hours, 1,297 °C"
+    ],
+    [
+     "Wärtsilä Quantum 3",
+     "Nov 2025",
+     "UL 9540A + LSFT",
+     "CSA Group",
+     "22-hour burn, contained"
+    ],
+    [
+     "HyperStrong HyperBlock III",
+     "Jan 2026",
+     "CSA/ANSI C800:2025 + UL 9540A draft",
+     "CSA Group",
+     "Five units, 100% SOC, no suppression"
+    ],
+    [
+     "Trina Elementa 2 Pro",
+     "Jan 2026",
+     "C800-2025 + NFPA 855-2026 + UL 9540A",
+     "TÜV Rheinland",
+     "CSA's standard, competitor's witness"
+    ],
+    [
+     "Sungrow PowerKeeper",
+     "Apr 2026",
+     "Triple UL 9540A",
+     "TÜV Rheinland",
+     "Not CSA"
+    ],
+    [
+     "Jinko SunTera",
+     "Apr 2026",
+     "C800 + UL 9540A 6th ed. draft",
+     "CSA Group China",
+     "First 6th-edition LSFT certificate"
+    ],
+    [
+     "e-STORAGE KuBank 3.0",
+     "Aug 2026",
+     "UL 9540A:2026",
+     "TÜV Rheinland + ESRG",
+     "Repeat customer, different witness"
+    ]
+   ]
+  },
+  {
+   "id": "how-long-a-battery-burns",
+   "title": "How long a battery burns: the severity ladder",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "hours the initiating unit burned in a published large-scale fire test (suppression off)",
+   "intro": "Every bar is a burn duration an OEM published from a test run to CSA's protocol or witnessed by CSA. The lesson is not the number but its size: a fire marshal planning for a container fire is planning for a day or two, not an hour — which is why the test measures the neighbours, not the victim.",
+   "items": [
+    {
+     "label": "HyperStrong HyperBlock III (Jan 2026)",
+     "sub": "Five units back-to-back at 100% SOC; peak 1,400 °C; adjacent cells 56 °C",
+     "v": 16
+    },
+    {
+     "label": "Wärtsilä Quantum 3 (Nov 2025)",
+     "sub": "5 MWh unit; 'fire suppression equipment deactivated'; contained",
+     "v": 22
+    },
+    {
+     "label": "Envision 5 MWh cabinets (Jul 2025)",
+     "sub": "Four cabinets at 5 cm; Cabinet A 1,297 °C; no propagation",
+     "v": 49
+    },
+    {
+     "label": "CLOU Aqua-C2.5 (Apr 2025)",
+     "sub": "'59 hours 10 minutes'; ignited cabinet >1,300 °C; neighbour at 15 cm reached 80.71 °C",
+     "v": 59
+    }
+   ]
+  },
+  {
+   "id": "one-roof-or-two",
+   "title": "One roof or two: the standards body that also certifies",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "For a century CSA wrote the standard, tested to it and licensed the mark. UL split its writing arm (UL Standards & Engagement, a non-profit) from its testing company (UL Solutions, listed 2024) years ago; CSA is doing the same in 2026 by selling the testing arm outright. Each model has a case.",
+   "cards": [
+    {
+     "t": "One roof — standards and certification together (CSA until 2026)",
+     "meta": "The certifier funds the standards body: 'our TIC subsidiary … one of the principal sources of funding for our Standards organization'.",
+     "adv": [
+      "**A flywheel** — the body that sees test failures writes better standards; TS-800 came from the laboratory's own fire-test experience.",
+      "**Speed** — an interim specification can be drafted, tested and turned into a consensus standard in fourteen months when the drafters and the testers share a hallway.",
+      "**Funding independence** — commercial income pays for standards no one would otherwise fund (paramedic competencies, dementia care, bridge codes)."
+     ],
+     "dis": [
+      "**Conflict of interest, real or perceived** — the author of the test sells the test; the sale release itself speaks of 'the pressures of a large commercial business'.",
+      "**Capital starvation** — a non-profit parent cannot raise equity for laboratories in Kunshan, Plattling, Guangzhou and Brecksville the way a TIC group can.",
+      "**Concentration** — the association's mission rides on one business line's results ('its best year ever' was the good case)."
+     ]
+    },
+    {
+     "t": "Two roofs — a standards body with an endowment; a certifier owned by Kiwa (from Q4 2026)",
+     "meta": "Proceeds of about C$2.1 billion go to 'a newly-formed, dedicated legal entity … governed separately' to fund standards.",
+     "adv": [
+      "**Clean mandate** — the association 'focuses on standards mission' with income 'not exposed to the pressures of a large commercial business'.",
+      "**Scale for the laboratories** — Kiwa's 12,000 people and SHV's capital can fund what a non-profit could not.",
+      "**No author-tests-its-own-work objection** — the C800 committee no longer sits in the same company as the C800 laboratory."
+     ],
+     "dis": [
+      "**The flywheel stops** — the standards body loses its daily view of test results; competitors run C800 as readily as Kiwa's CSA unit will.",
+      "**Brand ambiguity** — two organisations called CSA, one writing the code and one licensing the mark, owned by different people in different countries.",
+      "**Endowment risk** — a standards programme funded by investment returns behaves like a foundation: fine in good markets, exposed in bad ones."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The witness is not the author.** A code can require CSA's test; it cannot require CSA. Trina, e-STORAGE and Sungrow all took 2026 tests to TÜV Rheinland or UL. The share of tests CSA witnesses is the number to watch, and it fell as the standard succeeded.",
+    "**The listing is not the installation.** 'UL 9540 listed' says nothing about propagation at the developer's spacing; the C800 report says nothing about the shipped units matching the tested one. A buyer needs both and the surveillance behind the first.",
+    "**Marks are equal; only codes are exclusive.** In Canada 26 marks are recognised. Anyone who thinks the CSA mark is a legal requirement — rather than one acceptable proof among many — has confused the mark with the code it is tested against.",
+    "**Copyright stops at the border.** In the United States, CSA's incorporated codes are 'the law' and copyable; the standards-sales model that funds Canadian code-writing has no US enforcement behind it.",
+    "**Opacity.** No revenue, surplus or segment figure is public — members only. The C$2.1 billion price is the only valuation datum, and three headcounts (808, ~2,100, 3,538) count three different entities. The company's website could not be read from this environment at all; every company page here came from an archive.",
+    "**Change of control.** Between the member vote (October 2026) and closing (Q4 2026), every statement about 'CSA Group's laboratories' is provisional — including which organisation OSHA's NRTL recognition names next year."
+   ]
+  },
+  {
+   "id": "where-csa-slots-in",
+   "title": "Where CSA Group's products slot into the assurance chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The same seats every certification body competes for, with CSA's published instance of each and what the reader should take from the row.",
+   "cols": [
+    "Seat",
+    "CSA's instance",
+    "Evidence in the record",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**Standard the code cites**",
+     "CSA/ANSI C800:25 (from TS-800:24) — the large-scale fire test NFPA 855-2026 references",
+     "CSA Store page; Energy-Storage.news 2026",
+     "Whoever writes the test shapes every fire-marshal conversation that follows"
+    ],
+    [
+     "**Installation law**",
+     "Canadian Electrical Code C22.1:24, Section 64; adopted BC, Alberta, Ontario 2025",
+     "Provincial notices; ANSI Blog",
+     "Decides how storage is wired and protected in Canada"
+    ],
+    [
+     "**Product listing and mark**",
+     "UL 9540, UL 1973, UL 1741, C22.2 No. 107.1 certificates; the CSA mark; NRTL at 23 sites",
+     "OSHA NRTL page; Sungrow, Gotion, EticaAG releases",
+     "The second North American source after UL for the listing a project needs"
+    ],
+    [
+     "**Large-scale fire-test witness**",
+     "Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko",
+     "OEM releases and trade press 2024–2026",
+     "The data an insurer and a fire marshal read; contested with UL and TÜV"
+    ],
+    [
+     "**Laboratory**",
+     "Independence DER lab (40,000 sq ft, MW-scale fire testing); North Carolina and Suzhou LSFT sites; Kunshan; Plattling; Guangzhou",
+     "Company pages via archive; NAATBatt deck",
+     "Where the certificate is earned; all of it goes to Kiwa"
+    ],
+    [
+     "**Field evaluation**",
+     "SPE-1000 field labels for one-off and custom installations",
+     "ESA Ontario list; company page",
+     "The route for installations that are not products"
+    ],
+    [
+     "**Research and policy**",
+     "185 research reports; Public Policy Centre; hydrogen and transit standards",
+     "Annual report 2024/25",
+     "What the endowment will fund"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "In one sentence each: what is a standard, a code and a certification mark?",
+     "a": "A standard is a committee-written requirement; a code is a standard a government has adopted into law; a mark is a laboratory's attestation that a product met a standard's tests and is under surveillance."
+    },
+    {
+     "q": "What is the difference between a technical specification and a consensus standard? Give CSA's example.",
+     "a": "A technical specification is an interim task-group document; a consensus standard passes a balanced committee, public review and formal approval. CSA TS-800:24 was the first; CSA/ANSI C800:25 the second."
+    },
+    {
+     "q": "What does 'UL 9540 listed' prove, and what does it not?",
+     "a": "That a laboratory certified the system to the UL 9540 product standard and it is under surveillance; not that a full-scale fire test was run at the installation's spacing, and not field reliability."
+    },
+    {
+     "q": "What is a large-scale fire test and how does it differ from UL 9540A?",
+     "a": "A full enclosure is burned with suppression off beside neighbours at installation spacing to see whether fire propagates and what heat the neighbours receive; UL 9540A characterises propagation from cell to installation and permits suppression at unit level."
+    },
+    {
+     "q": "Who recognises a testing laboratory in the United States, and who accredits certifiers in Canada?",
+     "a": "OSHA, through the Nationally Recognized Testing Laboratory programme, per standard and per site; the Standards Council of Canada."
+    },
+    {
+     "q": "Why can a competitor run CSA's own C800 test?",
+     "a": "A published consensus standard belongs to whoever can perform it; NFPA 855 requires the test, not the author — Trina's 2026 C800 test was certified by TÜV Rheinland."
+    },
+    {
+     "q": "What is incorporation by reference, and why does it matter for copyright?",
+     "a": "A law adopts a private standard by citing it, giving it legal force; US courts then treat the incorporated text as 'the law', which cannot be copyrighted — the Fifth Circuit's 2024 holding against CSA."
+    },
+    {
+     "q": "In Canada, is the CSA mark legally required on electrical products?",
+     "a": "No — any mark from an SCC-accredited certification body is acceptable evidence; Ontario recognises 26. What is required is compliance with the code CSA writes."
+    },
+    {
+     "q": "What is witnessed manufacturer testing?",
+     "a": "The manufacturer's own laboratory runs the tests with the certifier's engineer watching, so results count toward certification — how Gotion's cells were certified by CSA."
+    },
+    {
+     "q": "What is field evaluation for?",
+     "a": "One-off, custom or low-volume installations that were not factory-certified: an on-site evaluation to SPE-1000 ending in a serialised label."
+    },
+    {
+     "q": "What does the Kiwa sale split, and what stays with the Canadian Standards Association?",
+     "a": "The testing and certification subsidiary — laboratories, the CSA mark, NRTL and SCC certification accreditation — goes to Kiwa; the standards, research and policy organisation stays, funded by an endowment of the proceeds."
+    },
+    {
+     "q": "Why does a fire marshal care that a container burned for 49 hours?",
+     "a": "Because the plan for a battery fire is to let it burn out while protecting neighbours and responders; the test's value is the neighbour temperatures and the absence of propagation over that duration."
+    },
+    {
+     "q": "Name the three Canadian Electrical Code parts and where storage lives.",
+     "a": "Part I installation code, Part II the C22.2 product standards, Part III distribution; storage and renewables are in Part I, Section 64."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A developer's tender for a Canadian project requires 'CSA-certified battery containers'. A bidder offers containers with a cULus mark from UL Solutions. The correct reading is:",
+     "c": [
+      "The bid is non-compliant; only the CSA mark is legal in Canada",
+      "The bid is compliant on the mark — any SCC-accredited body's mark is equivalent — but the tender should specify the standard and any installation-level test it wants",
+      "The bid is compliant only if UL Solutions is also an NRTL",
+      "The containers need a field evaluation as well"
+     ],
+     "a": 1,
+     "why": "SCC-accredited marks 'carry equivalent weight as proof of conformity'; the tender's real gaps are which standard (UL 9540) and whether a large-scale fire test at the project's spacing is required."
+    },
+    {
+     "q": "NFPA 855-2026 makes large-scale fire testing mandatory and references CSA C800 Section 9.7. Which statement follows?",
+     "c": [
+      "Only CSA Group may witness the test",
+      "The test must be run to the C800 procedure, by any body the AHJ and insurer accept — as Trina's TÜV Rheinland-certified test shows",
+      "UL 9540A is no longer required",
+      "The test is required only in Canada"
+     ],
+     "a": 1,
+     "why": "A code requires a procedure, not a vendor. Competitors run C800; UL 9540A remains the cell-to-installation propagation test and now carries LSFT requirements of its own."
+    },
+    {
+     "q": "CSA's TS-800 was published in 2024 as 'not a consensus document'. Why publish it at all?",
+     "c": [
+      "To avoid ANSI fees",
+      "To fill a gap fast — manufacturers and AHJs were asking for a procedure — while the consensus C800 went through committee",
+      "Because consensus standards cannot include fire tests",
+      "It was a marketing brochure"
+     ],
+     "a": 1,
+     "why": "CSA's own description: 'interim guidance' from a task group, incorporated into C800 fourteen months later once the committee process finished."
+    },
+    {
+     "q": "The Fifth Circuit held in 2024 that CSA's codes incorporated into Canadian law are 'the law' and copyable in the United States. The practical consequence for CSA is:",
+     "c": [
+      "Canadian courts must now allow copying too",
+      "The document-sales model has no US enforcement, while Canadian enforcement (injunction, contempt) stands — one reason funding is shifting to regulator-paid access and the endowment",
+      "CSA lost the right to write the code",
+      "The code is now public domain in Canada"
+     ],
+     "a": 1,
+     "why": "The rulings diverge by jurisdiction. Canada enforced copyright to a contempt sentence; the US applied the government-edicts doctrine. CSA's response is structural, not legal."
+    },
+    {
+     "q": "After the Kiwa sale closes, a manufacturer receives a UL 9540 certificate bearing the CSA mark. Which organisation issued it?",
+     "c": [
+      "The Canadian Standards Association, the non-profit",
+      "CSA Group Testing & Certification Inc., then a Kiwa company holding the NRTL recognition and SCC certification accreditation",
+      "OSHA",
+      "Kiwa's Dutch parent directly"
+     ],
+     "a": 1,
+     "why": "The mark, the laboratories and the accreditations transfer with the subsidiary; the association keeps the standards. Two organisations, one name."
+    },
+    {
+     "q": "An Ontario owner installs a custom 2 MWh storage system assembled from certified modules and inverters. To satisfy the inspector it most likely needs:",
+     "c": [
+      "A new UL 9540 listing for the assembled system",
+      "A field evaluation to SPE-1000 with a serialised label, since the assembled system is not a certified product",
+      "Nothing — the component certificates suffice",
+      "A CSA C800 large-scale fire test"
+     ],
+     "a": 1,
+     "why": "Field evaluation exists 'for low-volume installed systems and custom-engineered projects'; component certificates do not certify the assembly."
+    },
+    {
+     "q": "Which statement about CSA's position in battery-storage certification is best supported by the record?",
+     "c": [
+      "It is the market leader; UL 9540A is a CSA document",
+      "It is a second source to UL Solutions and the author of the large-scale fire test the codes now require — listed among the majors, behind the named leaders",
+      "It does not certify batteries",
+      "It is a subsidiary of UL"
+     ],
+     "a": 1,
+     "why": "MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as leaders and CSA among the major companies; UL 9540 and 9540A are UL Standards & Engagement documents; C800 is CSA's."
+    }
+   ]
+  }
+ ]
+}

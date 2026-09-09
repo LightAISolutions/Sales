@@ -6,6 +6,56 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-08 08:57:52 PM EST
+**Repo version:** v05.21r — **one push commit** on `claude/relaxed-gates-7axlm4` (session context folded into the same commit)
+**Branch:** `claude/relaxed-gates-7axlm4`
+**Model:** Fable 5.1 High — **S3 V1 · group E2b+E3b (kWh Analytics · CSA Group). The session's stated objective was met: `assurance` is at the floor, and `insurance-and-risk-transfer` has its challenger.**
+
+### What was done
+
+**Two full dossiers and two study guides, plus the bookkeeping that makes them count.** `kwh-analytics.profile.json` (schema v7, `profileVersion` 1, **121 sources at 43% first-party**, 7 product lines, 3 spec groups, 23 developments, 7 relationships, 4 policy regimes, 8 people with 3 photos, 3 financial periods, 9 key judgments) and `csa-group.profile.json` (**122 sources at 40% first-party**, 7 product lines, 4 spec groups, 25 developments, 12 relationships, 5 policy regimes, 9 people with 4 photos, 3 periods, 9 judgments), both in the active `intel-briefing` style. Study guides at schema v2 — **15 sections each** — plus five-module lesson plans under `study-prep/`. **34 concepts** added (1,232 → 1,267): the registry had no insurance vocabulary at all.
+
+**The floor moved as forecast.** `assurance` went from **4 members / 2 incumbents / 0 challengers** to **5 / 2 / 1 (CSA Group) / 2 adjacent** — `check-classroom-curriculum.py --strict` reads `floor yes` and flags its segment lesson due for regeneration. `insurance-and-risk-transfer` went from **0** to **1 / 0 / 1 (kWh Analytics)** and now waits only on P2's two incumbents. **`build-classroom-segments.py` was deliberately not run** — a developer/S1 job.
+
+**Research vehicle:** four `general-purpose` subagents (first-party and third-party per company), ~1.4M subagent tokens, ~630 tool calls, 15–22 minutes wall-clock each.
+
+### Where we left off
+
+v05.21r pushed. **S3 is 2 of 10.** Both `E2b`/`E3b` rows in §8 are rewritten with what the research showed and `Checked` filled; §10.2's V1 row, §10.3's two segment rows and §10.4's session-3 row are marked done; `INTEGRATED-REMEDIATION-PLAN.md` §6 moved from `1 of 10 sessions` to `2 of 10` and its "next single session" guidance now names **P2**. All six checkers were green and Playwright rendered all four surfaces before the commit. Nothing is half-done.
+
+### Key decisions and findings
+
+- **TWO CHANGES OF CONTROL THE PLAN DID NOT KNOW ABOUT.** (1) **kWh Analytics is no longer private**: Beazley plc agreed to acquire it on 2026-03-10; the company's own disclaimers page says 'a wholly owned subsidiary of Beazley plc' and Beazley's H1 results say 'the addition of kWh Analytics in March', but Insurance Business reported closing 'second half of 2026, subject to regulatory approvals' and no completion release exists. Beazley is itself being bought by Zurich (£8.1bn, EC-cleared 2026-07-07). The dossier types ownership `subsidiary` on the company's word and states the gap. (2) **CSA Group agreed on 2026-08-28 — eleven days before this session — to sell its entire testing and certification subsidiary** (20 labs, ~2,100 staff, the CSA mark, the OSHA NRTL and SCC accreditations) **to Kiwa Group for ~C$2.1bn**; member vote early October, close Q4 2026. After close the author of C800 and the laboratory that runs it are different organisations. Both segment notes and both calendar rows carry a **re-read-at-first-refresh** instruction; the §8 rows record both.
+- **Both typed `challenger`, on the record.** kWh holds no balance sheet (Aspen, Swiss Re, Everest, Munich Re carry every risk). CSA is the second source to UL Solutions for the storage listing and the **author** of the large-scale fire test NFPA 855-2026 requires (TS-800:24 → CSA/ANSI C800:25), but MarketsandMarkets (July 2026) names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as leaders and CSA among the majors; UL's 10-K does not list it; the 2024–2026 witness roster splits three ways (CSA: Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko; UL: Hithium; TÜV Rheinland: Trina, e-STORAGE KuBank, Sungrow PowerKeeper). **A code can require a test but cannot give its author a monopoly on running it.**
+- **`advisor` kept for both** — the category vocabulary has no insurance category; keeping Marsh, Aon and kWh in one Compare family was judged more useful than exercising the empty `other` fall-through. Recorded in the E2b row for the developer to overrule.
+- **The v05.20r SEC finding did not reproduce.** The contact-email User-Agent that returned 200 last session returned the undeclared-automated-tool 403 nine times this session. Neither subject files with the SEC, so nothing was lost — but the "UA-keyed" invariant is now one data point for and one against. Do not rely on it without re-probing.
+- **`www.csagroup.org` is 403 to everything** (three samples, five paths, two UAs, WebFetch). The DNV precedent worked: ~40 company pages and the 44-page 2024/25 annual report were read through **Wayback Machine snapshots** and cited by original URL with the route in the label; the 2025/26 annual report has no capture and is cited by title. `kwhanalytics.com` renders through WebFetch but raw curl meets an Altcha challenge; `businesswire.com` is 403 (company-hosted copies used).
+- **Corpus reconciliation (step 7):** kWh has zero inbound mentions; CSA has 16 (10 spec-line mark citations, 6 substantive fire-test claims — Canadian Solar, Envision, Fluence, HyperStrong, Prevalon, Trina) and **none needed revising**; the TS-800:24 / C800:25 naming across them matches the standard's own history. Curated on CSA's side only; no reciprocal edges added (each would cost an archive and a version bump for an edge the graph already derives).
+- **C22.2 No. 340 is a battery-management-system standard, not a BESS system standard** — the S0 chat note had it wrong; recorded in the E3b row and the calendar Chesterton check.
+- **JSON formatting held:** registry indent 2 + newline, calendar indent 1 no newline, segments indent 1 + newline, concepts indent 2 + newline, profiles/studies indent 1 no newline — every diff proportionate (`git diff --numstat` read before staging).
+
+### Active context
+
+- **Branch:** `claude/relaxed-gates-7axlm4` · **repo version:** v05.21r · **Profiler page:** v01.83w (untouched — data-only, indirect affect) · no `.gs` touched
+- **Corpus:** **158 companies / 158 profiles / 158 study guides / 1,267 concepts / 1,303 edges** (was 1,283), 3,788 evidence items / 9 named projects / 8 guidance modules / 8 reports (4 current) / 19 segments · **Classroom:** 30 lessons, unchanged
+- **Segments below the floor (1, was 2):** `insurance-and-risk-transfer` 1 · 0 · 1 → cleared by **P2** (Marsh · Aon) alone now. `software-and-optimization` still held for P3 + V2. **`assurance` is now cleared.**
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off · `IS_TEMPLATE_REPO` No · `TEMPLATE_DEPLOY` Off
+- **CHANGELOG:** **108 sections, 10 dated 2026-09-08** (`v05.12r`–`v05.21r`) → 98 non-exempt, no rotation on that EST day. **A later EST day → 108 non-exempt → ROTATION FIRES** on the twenty-one `2026-09-02` sections (`v04.14r`–`v04.34r`) → **87**; the clone is shallow — run `git fetch --unshallow` before any SHA lookup and budget ~10 extra minutes
+- **Plan ledger (§6):** 0 · 1 · 2a · 2b · 3 · S0 · K1 · 5 · 6 · S1 Done; **S3 2 of 10** (P1, V1 done); then G6 (ready) · C3 · S2 (0/19) · 4 (0/26) · K2 · C5 · C6 deferred
+- **Remote-branch note:** the session branch `claude/relaxed-gates-7axlm4` pre-existed on the remote at the same commit as `main` when the session opened (created by the session infrastructure) and `git ls-remote` returned empty by push time — the auto-merge workflow's already-merged sweep had deleted it. Check `ls-remote` rather than `git branch -a` for the push-once test.
+- **Standing, unassigned (carried):** the 100-of-154 source-ordering violations (both dossiers written this session conform); `nvidia.profile.json`'s unsupported IDC attribution; the two `verify-profiler-roles.py` progress-isolation failures; `archive/nvidia.profile.v2.json` missing; README archive-tree drift ~61 entries; `huawei`'s FCC `policyExposure` over 900 chars; `byd` segment `basis` line; overdue desk rows `iren` / `jinko` 08-27; the Classroom renderer's missing dossier-chip syntax; the CHANGELOG prompt-blockquote drift at `v05.14r`–`v05.17r`; the `CLASSROOM-CURRICULUM-PLAN.md` §10.2 floor table still shows the S0 snapshot (compute and assurance now cleared — a phase-end register re-run, not a session edit)
+- **Routine note:** unchanged — none created, updated or deleted
+
+### Recommendation for next session
+
+- Run **S3 P2 — group `E2a` (Marsh McLennan · Aon) on Opus 5 xhigh**. It is now the single highest-leverage session left: with kWh Analytics in as the challenger, P2's two incumbents take `insurance-and-risk-transfer` from 1 · 0 · 1 to the floor by themselves, which makes three of the four blocked landscapes writable and leaves only `software-and-optimization` (P3 + V2) held. Resolve the E2a subject question first (the broker Marsh or the listed parent Marsh McLennan, NYSE: MMC — the C10 precedent), and read kWh's dossier before researching: its Broker Council names Marsh's and Aon's renewables brokers, and the Compare family depends on all three sharing `advisor`.
+
+**To continue:** type `continue with your recommendation`
+
+## Previous Sessions
+
+### Session — 2026-09-08 07:44:38 PM EST (v05.20r)
+
 **Date:** 2026-09-08 07:44:38 PM EST
 **Repo version:** v05.20r — **one push commit** on `claude/adoring-turing-qims2w`
 **Branch:** `claude/adoring-turing-qims2w`
@@ -52,8 +102,6 @@ v05.20r pushed and merged. **S3 is 1 of 10.** Both `E7` rows in §8 are rewritte
 - Run **S3 V1 — group `E2b+E3b` (kWh Analytics · CSA Group) on Fable 5.1 High**. It is the highest-leverage session remaining in either lane: it is the **only** session that unblocks `assurance` (4 members, 2 incumbents, 0 challengers — the challenger is CSA Group, and no number of Opus sessions can supply it), and it is half of what `insurance-and-risk-transfer` needs, the other half being P2. Running it next means two of the three remaining blocked landscapes move.
 
 **To continue:** type `continue with your recommendation`
-
-## Previous Sessions
 
 ### Session — 2026-09-08 06:43:34 PM EST (v05.19r)
 **Date:** 2026-09-08 06:43:34 PM EST

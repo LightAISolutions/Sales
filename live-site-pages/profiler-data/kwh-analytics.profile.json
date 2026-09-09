@@ -1,0 +1,1391 @@
+{
+ "schemaVersion": 7,
+ "slug": "kwh-analytics",
+ "name": "kWh Analytics, Inc. (licensed insurance entity: Solar Energy Insurance Services, Inc.; a wholly owned subsidiary of Beazley plc)",
+ "shortName": "kWh Analytics",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://kwhanalytics.com/",
+ "headquarters": "San Francisco, California, United States (wire datelines); the company publishes no headquarters city — its footer gives a Beaverton, Oregon suite for business mail and a Sacramento, California legal address, and the team is distributed",
+ "founded": 2012,
+ "employees": "Not published. 30 named staff plus 6 board members and advisors on the company's team page (2026); third-party estimates range from 39 (LeadIQ, July 2026) to 42 (Built In); zero open roles on the careers page at 2026-09-08",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "LSE: BEZ (parent, Beazley plc — itself under an agreed £8.1 billion all-cash takeover by Zurich Insurance Group, shareholder-approved April 2026, EC-cleared 7 July 2026, completion expected before the end of 2026)"
+ },
+ "summary": "BOTTOM LINE UP FRONT: kWh Analytics is the specialist managing general agent that turned a solar performance database into delegated underwriting authority — up to USD 100 million of property capacity per renewable-energy location on Aspen Specialty paper, a Solar Revenue Put that insures up to 95 percent of a plant's expected output so lenders will size more debt against it, and a Munich Re-backed parametric wind hedge — and on 10 March 2026 it agreed to be acquired by Beazley plc; both companies' sites now call it a wholly owned Beazley subsidiary, no completion release has been published, and Beazley itself is completing an £8.1 billion sale to Zurich, so the firm is entering two successive integrations at once. BACKGROUND. Founded in 2012 in San Francisco by Richard Matsui as a solar data-and-analytics company (per the company's own history and Business Insurance); HelioStats data platform launched 2016; first Solar Revenue Put closed December 2017 on Swiss Re Corporate Solutions capacity for three Coronal Energy plants (per Swiss Re); property programme launched 2023 with Aspen Insurance at USD 75 million per location, raised to USD 100 million per location in the February 2026 renewal (per Business Insurance and the company); USD 20 million excess natural-catastrophe layer added August 2025; two parametric Wind Proxy Hedges closed with Munich Re Trading (Greenbacker, 59 MW, 2024; Apex Clean Energy, 79 MW, 2025). Disclosed venture equity is USD 25 million — a USD 5 million Series A in 2016 led by Anthemis with ENGIE New Ventures and a USD 20 million Series B announced February 2022 led by Lacuna Sustainable Investments — plus at least four US Department of Energy and NYSERDA awards. The licensed entity is Solar Energy Insurance Services, Inc., a surplus-lines managing general agent holding California licence 0L00900; complaints route to 'the Lloyd's or Aspen market' (per the company's complaints page). Company claims, not independently verified: over USD 50 billion of assets insured, a database of 300,000-plus projects and USD 150 billion of loss data, and 15 global reinsurers on its panel. Collection gap: revenue, gross written premium, claims paid, headcount and the acquisition price are published nowhere.",
+ "ecosystemRole": "The first insurance-and-risk-transfer member of this corpus and the counterparty in a diligence stack the corpus had not yet covered: the underwriter whose property policy, revenue put or parametric hedge sits beside the independent engineer's report at financial close. kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers. For battery storage it underwrites property risk only — it publishes no storage revenue, availability or degradation product — and its stated underwriting view is that thermal runaway is the question, that Moss Landing was 'an impactful but not defining loss for the industry', and that legacy indoor NMC installations face the scrutiny outdoor LFP does not.",
+ "productsAndServices": [
+  {
+   "name": "Property insurance — primary layer (Solar Energy Insurance Services on Aspen Specialty paper)",
+   "category": "Property insurance — solar, BESS, wind",
+   "description": "All-risk physical-damage cover for utility-scale solar, battery energy storage and wind assets in the continental United States, underwritten by the licensed MGA under full delegated authority from Aspen Specialty: up to USD 100 million per renewable-energy project location since the February 2026 renewal (USD 75 million from 2024), operational and construction capacity for solar and BESS at up to 100 percent of an account and wind or construction at up to 50 percent, one-year policy terms, and pricing credits for demonstrated resilience — hail-stow capability, reinforced modules, documented O&M — that the company's loss database is claimed to justify.",
+   "highlights": [
+    "Aspen Specialty 'has backed the facility since its inception' in 2023; the 2024 authority was 'USD 75 million per renewable energy project location' with 'full delegated authority to cover accounts compromising up to 100% of operational solar and/or battery energy storage systems (BESS) projects and up to 50% of wind and/or construction accounts' (company release, 2024-04-07); the February 2026 renewal took the limit to 'up to $100 million per renewable energy project location' and extended authority 'to a broader mix of energy sources and minority asset classes' (company release and Business Insurance, 2026-02-05). The company's product page still says 'USD 70M capacity limit per location' — the page is stale against its own release.",
+    "Perils listed on the product page: flood, hail, fire, earthquake, hurricane, winter storm, physical damage and equipment breakdown; brokers submit a statement of values, loss runs, term sheets, quota-share details, business-income worksheet, equipment specifications, site plans and O&M plans, plus the company's Hail Risk Evaluation form (developed with VDE Americas) and a Thermal Runaway Risk Evaluation form for BESS.",
+    "Published resilience-pricing outcomes (company case studies): a '72% reduction in the natural catastrophe insurance rate' for a 140 MW, USD 100 million North-Central Texas plant with 3.2 mm tempered glass and a verified 53-degree hail stow (2024-09-03); a '50% reduction in deductible if auto-stow was enabled by the next hail season' for a 13 MW Arkansas municipal project using Nextracker NX Horizon Hail Pro and DTN forecasts (2025-04-22); a 40 percent NatCat-rate reduction and a 25 percent attritional discount cited with CAC Specialty (2025-08-27).",
+    "The company's loss data is the underwriting argument: 'hail accounts for 73% of total solar industry losses by damage amount' while representing 6 percent of incidents (Solar Risk Assessment 2025 and 2026); the 2026 edition shifts emphasis to fire — '84% of fire events are due to equipment-driven brushfire' and only 4 percent of PV fire losses occur in high-wildfire-risk areas (company release, 2026-05-11).",
+    "April 2026 telematics pilot: Nextpower's NX Horizon trackers share real-time and historical stow data into the company's risk model so that hail-ready projects receive lower premiums; a Longroad Energy case study found 75-degree stow would have cut the probability of damage in a 2022 event by 87 percent against 60-degree stow (company release, 2026-04-07).",
+    "For storage the same property programme applies — the company states 'insuring BESS installations presents unique challenges due to the technology's rapid development and the potential for catastrophic events like thermal runaway' and requires explosion-relief conformity to NFPA standards and container separation; there is no separate BESS product."
+   ],
+   "positioning": "Third parties describe the renewables property market as roughly USD 1 billion of US premium growing 20–30 percent a year (Kaminsky, Risk & Insurance, 2024). Named competing capacity: NARDAC's standalone USD 20 million severe-convective-storm facility (January 2025), GCube's USD 100 million Lloyd's BESS consortium (July 2024), AXIS, Swiss Re Corporate Solutions and the Lloyd's renewables underwriters (Ascot Renewco, Brit, Markel, Sciemus). The company's claimed differentiation is data — 'the largest in the industry, assessing 30% of U.S. solar assets' (company claim; an earlier statement said 20 percent) — and resilience credits. Hawaii Business called it 'the largest independent insurance company for solar, wind and batteries in North America' six days after the Beazley announcement, with no methodology; no independent ranking exists.",
+   "soldThrough": "Wholesale and retail specialist brokers only — 'available through select specialist energy brokers' (Reinsurance News, 2025-08-29); the company's Broker Council (2025–2026) seats AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty (Baldwin Group), Alliant, Marsh and Brown & Brown. Paper is surplus-lines: 'surplus lines insurance carriers do not generally participate in state guaranty funds' (company disclaimers).",
+   "targetSegments": [
+    "Utility-scale solar owners and developers",
+    "Battery energy storage owners (property risk only)",
+    "Wind project owners",
+    "Tax-equity investors and lenders requiring higher limits",
+    "Construction-phase accounts (up to 50 percent participation)"
+   ],
+   "roadmap": "Post-acquisition: Beazley said kWh would be 'integrated into Beazley's MAP (Marine, Accident & Political) Risks team' under its transition-underwriting strategy (2026-03-10); Kaminsky said 'for now, it is business as usual … with $100M per location capacity' (PV Tech, 2026-03-11). Whether Aspen remains the capacity lead after integration into a Lloyd's-managing insurer is not stated by either party."
+  },
+  {
+   "name": "Excess Natural Catastrophe layer — USD 20 million severe-convective-storm and named-windstorm capacity",
+   "category": "Property insurance — excess layer",
+   "description": "An excess layer launched 28 August 2025 that sits above the primary property policy: up to USD 20 million per location, with flexible attachment points, for severe convective storms (hail, wind, tornado) and named windstorms in non-coastal regions, supplementing the wildfire, earthquake and flood cover of the primary layer. Written through Solar Energy Insurance Services on 'A-rated carrier backing'; trade press reporting on the company's own interview attributes the backing to Lloyd's syndicates introduced in late 2024, which no register confirms.",
+   "highlights": [
+    "'Up to $20 million in additional excess capacity' for 'hail, severe convective storms, and named windstorms', aimed at 'high-hazard hail and hurricane zones' (CEO blog, 2025-08-28); Kaminsky: 'as renewable projects grow in size and tax-equity investors and lenders require higher insurance limits, we're addressing a critical market gap with this specialized excess layer solution' (pv magazine USA, 2025-09-02).",
+    "Isaac McLean, Chief Underwriting Officer: 'Resilience should be rewarded at every level of coverage' — the same hail-stow and glass-thickness credits apply to the excess layer (company release, 2025-08-28).",
+    "Market context from independent sources: severe convective storms drove about USD 60 billion of insured losses in 2025 and 'more than $200 billion, or 42%, of all insured losses in the United States since 2020' (pv magazine Global citing Gallagher Re and Swiss Re, 2026-05-12); AXIS reported USD 342 million of gross hail claims across 2.7 GW since 2019.",
+    "NARDAC launched a competing standalone USD 20 million SCS facility seven months earlier (January 2025) after 'a major hailstorm exhausted existing insurance limits' on a 2 GW Texas portfolio (Reinsurance News, 2025-01-29)."
+   ],
+   "positioning": "The company's own product page lists an older 'USD 90M excess capacity limit' on its legacy site; the current statement is USD 20 million with flexible attachment. Competes directly with NARDAC's SCS facility and with the London market's renewables writers; the capacity provider is not named by the company.",
+   "soldThrough": "Same specialist-broker channel as the primary layer; quoted alongside the primary policy or as a standalone excess placement.",
+   "targetSegments": [
+    "Solar, wind and BESS owners in hail and hurricane zones",
+    "Projects whose lender-required limits exceed the primary layer"
+   ],
+   "roadmap": "No announced roadmap. The February 2026 Aspen renewal, not this layer, is where per-location capacity moved."
+  },
+  {
+   "name": "Solar Revenue Put and Solar Revenue Put+ — production insurance as a credit enhancement",
+   "category": "Performance insurance — solar revenue firming",
+   "description": "An insurance policy that guarantees up to 95 percent of a solar project's expected (P50) energy output for a term of 10 to 25 years — extended to 30 years or the full amortisation period under the SRP+ variant — covering equipment failure, irradiance deficiency, weather, snow, wildfire smoke and system design flaws, with claims paid within 30 days to protect debt service. It is sold to sponsors so that lenders will accept a shallower downside case: the company reports 'average debt sizing increases of 10%' and lender adoption rising from 'more than 40%' of active lenders (2019) to 'over 50%' (2020) and '30+ major lenders' today (all company figures).",
+   "highlights": [
+    "Definition in the company's own words: 'The Solar Revenue Put is a credit enhancement that guarantees up to 95% of a solar project's expected energy output' (AES 225 MW release, 2023-02-23); capacity has come from Swiss Re Corporate Solutions (first deal December 2017; agency agreement announced 14 January 2020 with 'USD 1 billion of solar capacity' structured — per Swiss Re) and 'later Everest Re' (company history; Everest named as 'main carrier for production coverage' on the Pivot Energy 70 MW portfolio, Reinsurance News 2023-03-09).",
+    "Named financings: Coronal Energy, 30 MW-AC, Virginia — the first put (pv magazine USA, 2018-01-31); IGS Solar with Ares EIF, ING and Swiss Re, 35 MW-DC across 4,000 residential systems (2018) and a 32 MW repeat (2020); AES Distributed Energy, 41 projects and 28 MW-DC with SVB (2019); Invenergy Grand Ridge, 23 MW-DC, Illinois, refinanced with MUFG (2019); Cal Flats 130, 173 MW-DC, Capital Dynamics, lenders CBA and Rabobank (2020); Matrix Renewables Gaskell West 2 and 3, 143 MW, MUFG, HSBC, CBA and National Bank of Canada — the first 26-year full-amortisation cover (2022); Project Sunray, 270 MW-DC, Arava Power, Nomura-led USD 200 million facility (2023); AES, 225 MW-DC with HSBC, Citi and National Bank of Canada (2023).",
+    "SRP+: the first 20-year policy closed 27 September 2021 on Swiss Re capacity for a Southern-US project financed by private bond placement; the product 'extends Solar Revenue Put coverage from the typical ten years to up to 30 years, or the full amortization period of a project' (company release).",
+    "Debt effect as stated by third parties at the time: 'project financings supported by the Put are securing approximately 10% more debt', IRR uplift of '30+ bps' and bid improvement 'up to 5%' (Solar Power World, 2019-02-25); lenders the company lists as recognising the put: Wells Fargo, Siemens Financial, River City Bank, Nord LB, Needham Bank, East West Bank.",
+    "Claims record: the only third-party statement is IGS's chief operating officer in 2020 — 'kWh Analytics has proven out a reliable claims process for the Solar Revenue Put, enabling cashflow certainty' (Reinsurance News, 2020-04-01). No claims-paid total, loss ratio or dispute has been reported by any outlet.",
+    "Company aggregates: 'already applied on over $4B of solar assets, recognized by 30+ major lenders' and 'almost 3 GW of renewable generation capacity' insured under performance products (product page; 2023 release) — company claims."
+   ],
+   "positioning": "The company calls it 'North America's only solar production insurance incentivizing lenders to offer improved terms' and 'the market standard solution' (company claims). The nearest substitutes are not insurance products but structural ones — P90/P99 debt sizing, sponsor guarantees and OEM performance warranties — and the tax-credit and revenue-put products of New Energy Risk (Paragon; Lloyd's coverholder from April 2026) and Munich Re's own renewables performance covers. No independent survey of lender adoption exists; the '40%', '50%' and 'majority' figures are the company's.",
+   "soldThrough": "Direct to sponsors and their financial advisers at financing or refinancing, structured into the lender's model; capacity placed with a single reinsurer (Swiss Re, then Everest) under agency agreements.",
+   "targetSegments": [
+    "Solar project sponsors seeking higher leverage or lower spreads",
+    "Project-finance lenders and bond investors",
+    "Tax-equity investors (front and back leverage)",
+    "Portfolio owners refinancing operating assets"
+   ],
+   "roadmap": "No new SRP structure announced since the 2025 SRP+ bond deal. The company's 2026 predictions piece says parametric solutions will 'gain major traction' — the direction is the wind hedge model, not the put."
+  },
+  {
+   "name": "Wind Proxy Hedge with the 'Indifference Structure' — parametric wind-speed hedge",
+   "category": "Performance insurance — wind revenue firming",
+   "description": "A parametric hedge, structured by kWh Analytics and written by Munich Re Trading LLC, that pays when measured wind speed falls below a specified metres-per-second threshold, creating an investment-grade cash-flow floor above a project's P99 wind case so that lenders will size more debt; the company's proprietary 'Indifference Structure' sets the trigger so that the sponsor is indifferent between the hedged and unhedged cases. Two deals have closed, both with MUFG as arranger.",
+   "highlights": [
+    "First deal, July 2024: a 59 MW, 14-turbine Maine wind project owned by a Greenbacker Capital Management vehicle, MUFG sole lead arranger — 'approximately 20% additional debt capital raised' and 'each dollar of hedge premium generated approximately $6 in additional loan proceeds' (Reinsurance News, 2024-07-24; DNV provided the engineering analysis per the company release). Won InsuranceERM's Climate Risk Transfer Deal of the Year 2025.",
+    "Second deal, September 2025: Apex Clean Energy's Rocky Forge Wind, 79 MW, Virginia, MUFG and CIBC coordinating lead arrangers — 'approximately $7 of additional debt for every dollar of premium paid during the mini-perm period'; Apex: 'Implementation of the Wind Proxy Hedge structure went smoothly, and we are evaluating this product on additional projects' (Reinsurance News and Artemis, 2025-09-18).",
+    "Bill MacLauchlan, CEO of Munich Re Trading LLC: 'Deep project finance knowledge was crucial in structuring this transaction' (2024) and 'this transaction demonstrates the market's recognition of this innovative risk transfer solution' (2025).",
+    "Company claim: 'the only parametric wind hedge that is paired with the unique kWh Analytics Indifference Structure proven to unlock additional indebtedness of >20%'."
+   ],
+   "positioning": "A structuring-and-advisory role rather than a risk-bearing one — 'we provided a proprietary debt structure, applying modeling, analysis, and risk management expertise to assist MunichRe' (Geoffrey Lehv). Competes with conventional proxy revenue swaps from hedge providers (Munich Re's own, Nephila, REsurety — the latter two appear on deal-database peer lists) and with balance-of-hedge structures banks arrange themselves.",
+   "soldThrough": "Structured directly with the sponsor and its lead arranger; Munich Re Trading is the counterparty on both closed deals.",
+   "targetSegments": [
+    "Wind project sponsors at financing or refinancing",
+    "Lenders sizing debt on P99 wind cases",
+    "Mini-perm and construction-to-term lenders"
+   ],
+   "roadmap": "Apex said it is 'evaluating this product on additional projects'; no third deal had been reported by 2026-09-08."
+  },
+  {
+   "name": "HelioStats — data intelligence platform for solar investors and lenders",
+   "category": "Data and analytics",
+   "description": "The company's original product (launched October 2016): a document-ingestion and performance-benchmarking platform that parses operating reports, invoices and monitoring exports from lenders' and investors' solar portfolios, standardises them and benchmarks performance against the company's database. Sold to lenders, tax-equity investors and asset managers as a portfolio-oversight tool; pricing and user numbers are not published.",
+   "highlights": [
+    "Company description: 'the industry's leading risk management platform, Heliostats, provides data parsing, integration, analytics, and performance benchmarking to enable solar investors to deploy more capital, more intelligently' (company claim).",
+    "Feature claims: machine learning that processes documents '90% faster', ingestion from AWS S3, Box, Dropbox, email and API, a six-step pipeline from OCR to enriched export, 'enterprise-grade security' (company claims).",
+    "Named user: a US Bank vice-president of renewable-energy business development — 'through our use of HelioStats, we're working to get more thoughtful about how to synthesize and analyze information about our own portfolio' (company product page).",
+    "The same database feeds the company's public research: the Solar Generation Index found operating systems underperforming P50 estimates by 5–13 percent (2021) and 'PV sites around the country are underperforming by 8.6% on average' (Solar Risk Assessment 2025); the company co-developed NREL's open-source RdTools degradation package (NREL, 2018) and won a USD 1.25 million DOE award to quantify degradation rates (2018)."
+   ],
+   "positioning": "The data asset is the company's stated moat for underwriting; as a standalone software product it competes with asset-management platforms (Raptor Maps, Power Factors, Also Energy) that the company itself lists as Solar Risk Assessment contributors rather than as rivals.",
+   "soldThrough": "Direct subscription to financial institutions; also used internally for underwriting.",
+   "targetSegments": [
+    "Project-finance lenders",
+    "Tax-equity investors",
+    "Infrastructure funds with operating solar portfolios"
+   ],
+   "roadmap": "No announced roadmap; the April 2026 telematics pilot extends the data intake to tracker stow telemetry for underwriting rather than for the platform's subscribers."
+  },
+  {
+   "name": "Solar Risk Assessment, Resilient Power Report and SolarScape — published research and market directories",
+   "category": "Research publications",
+   "description": "An annual Solar Risk Assessment (eight editions, 2019–2026) written with 15–20 industry contributors, a companion Resilient Power Report (inaugural November 2025), a Solar Generation Index (2020–2022), and SolarScape/Brokerscape — free directories of renewable-energy property brokers and asset owners with an offer to make broker introductions 'free of charge'. Distributed free; the publications carry the company's loss-data findings into broker, lender and developer practice.",
+   "highlights": [
+    "Solar Risk Assessment 2026 (published 11 May 2026, 19 articles): 'Fire is the next big risk, and they often begin onsite'; 'Compliance is now a financial risk. Most developers aren't ready' — only 38 percent of developers feel prepared for the 2026 prohibited-foreign-entity rules (Crux finding); 75 percent of tax-insurance underwriters will not cover valuation step-ups above 25 percent (CAC finding); 'It's not all about stow: hail-hardened modules plus robust stow' are needed for 13 percent of the US (with GroundWork Renewables). Contributors include DNV, Lightsource bp, Nextpower, Kiwa PVEL, Array Technologies, Raptor Maps, ACCURE and Crux.",
+    "Solar Risk Assessment 2025: hail 73 percent of losses by amount against 6 percent of incidents; sites underperforming P50 by 8.6 percent; AI monitoring misclassifies up to 20 percent of issues without domain training; physics-based models overestimate hail-stow benefit by 48 percent for 3-inch hail; 72 percent of BESS failures occur within two years of installation (EPRI data cited).",
+    "The hail finding is contested by peers: GCube's study puts hail at 1.4 percent of claims and 54 percent of losses, and VDE Americas at 2 percent of claims (pv magazine, 2025-09-19 and 2025-09-02) — the direction agrees, the shares do not.",
+    "Broker Council readouts are published each year with Insurance Journal (2025) and pv magazine USA (2026); the 2026 readout records that '73% of inverter-driven brushfires involve a single manufacturer', which no outlet has named."
+   ],
+   "positioning": "Marketing in the form of research: the reports set the vocabulary brokers use ('resilience credits', 'hail stow') and are cited by pv magazine, PV Tech, Solar Power World and Insurance Journal each year. The 2026 edition has no public PDF, unlike every prior edition.",
+   "soldThrough": "Free download and broker distribution; SolarScape introductions are free.",
+   "targetSegments": [
+    "Brokers",
+    "Asset owners and developers",
+    "Lenders and tax-equity investors",
+    "Trade press"
+   ],
+   "roadmap": "Annual cadence: Solar Risk Assessment each May–June, Resilient Power Report each November."
+  },
+  {
+   "name": "Tax-credit insurance for distributed generation under 20 MW — announced, not launched",
+   "category": "Performance insurance — tax credit (roadmap)",
+   "description": "A product to insure transferable Inflation Reduction Act tax credits on small-scale distributed-generation projects under 20 MW, funded by a USD 500,000 InnSure Insurance Innovation Prize supported by NYSERDA and announced 15 January 2025 with an 'expected launch within 18 months'. In December 2025 the company still described it as 'development phase, targeting smaller credits'; no launch had been announced by 2026-09-08, twenty months after the award.",
+   "highlights": [
+    "Announced scope: 'tax credit insurance specifically for small-scale distributed generation (DG) renewable energy projects under 20 MW, designed to help projects monetize transferable tax credits' (company release, 2025-01-15; Solar Power World).",
+    "Competitor already in market: New Energy Risk (Paragon Insurance Group) bound its first tax-credit policy on a utility-scale Texas solar project in September 2025 and became a Lloyd's coverholder for the product on 1 April 2026 through Syndicate 2843 (Reinsurance Business, 2026-05-05).",
+    "The policy environment moved under it: the 2025 reconciliation law re-timed the credits and the 2026 prohibited-foreign-entity thresholds (40 percent for facilities, 55 percent for storage) raised the compliance risk the product would have to underwrite."
+   ],
+   "positioning": "A roadmap item whose target date has passed; the Beazley integration is the likelier home for it than a standalone kWh launch.",
+   "soldThrough": "Not yet sold.",
+   "targetSegments": [
+    "Distributed-generation developers under 20 MW",
+    "Tax-credit buyers"
+   ],
+   "roadmap": "Overdue against the company's own 18-month target (July 2026); no revised date published."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Property programme — primary layer and excess natural-catastrophe layer (Solar Energy Insurance Services on Aspen Specialty paper)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Primary limit per location",
+     "value": "'Up to $100 million per renewable energy project location' (Aspen Specialty renewal, 2026-02-05); product page still states '$70M capacity limit per location'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Prior limits",
+     "value": "'USD$75 million per renewable energy project location' (2024-04-07); facility launched 2023 'with $75 million in policy limits' (Business Insurance)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Excess NatCat layer",
+     "value": "'up to $20M per location with flexible attachment points'; 'A-rated carrier backing'"
+    },
+    {
+     "band": "Authority",
+     "label": "Delegated authority mix",
+     "value": "'full delegated authority to cover accounts compromising up to 100% of operational solar and/or battery energy storage systems (BESS) projects and up to 50% of wind and/or construction accounts'"
+    },
+    {
+     "band": "Authority",
+     "label": "2026 extension",
+     "value": "'Underwriting authority extends to a broader mix of energy sources and minority asset classes'"
+    },
+    {
+     "band": "Perils",
+     "label": "Primary layer",
+     "value": "Flood, Hail, Fire, Earthquake, Hurricane, Winter Storm, Physical Damage, Equipment Breakdown"
+    },
+    {
+     "band": "Perils",
+     "label": "Excess layer",
+     "value": "'Severe convective storms and named windstorms'; 'Non-coastal regions'"
+    },
+    {
+     "band": "Terms",
+     "label": "Policy term and territory",
+     "value": "'1-year policy terms'; 'Continental U.S. coverage' (legacy product page)"
+    },
+    {
+     "band": "Terms",
+     "label": "Paper",
+     "value": "'Solar Energy Insurance Services offers surplus lines products written by surplus lines insurers'; 'CA License number 0L00900'"
+    },
+    {
+     "band": "Underwriting inputs",
+     "label": "Submission requirements",
+     "value": "'statement of values, loss runs, term sheets, quota share details, business income worksheet, equipment specifications, site plans, and operation/maintenance plans'"
+    },
+    {
+     "band": "Underwriting inputs",
+     "label": "Resilience forms",
+     "value": "'Hail Risk Evaluations Form' (with VDE Americas), 'Submission Data Request', 'Thermal Runaway Risk Evaluation Form'"
+    },
+    {
+     "band": "Underwriting inputs",
+     "label": "Loss database",
+     "value": "'300,000+ zero-carbon projects and $150B in loss data' (2026); '$100B+ in physical loss data' (product page)"
+    }
+   ],
+   "notes": "Deductibles, rate cards, exclusions and policy wordings are not published. The only rate statement is market commentary co-authored with brokers: BESS technology-risk rates 'stable at approximately 30-40 cents per US$100 of insured value' (Energy-Storage.news, 2025-06-05)."
+  },
+  {
+   "product": "Solar Revenue Put and Solar Revenue Put+",
+   "specs": [
+    {
+     "band": "Coverage",
+     "label": "Guarantee level",
+     "value": "'guarantees up to 95% of a solar project's expected energy output'"
+    },
+    {
+     "band": "Coverage",
+     "label": "Perils",
+     "value": "'equipment failure, irradiance deficiency, weather, wildfire smoke, and other risks' (product page); 'irradiance shortfalls, panel failure, inverter failure, snow, and system design flaws' (2023 release)"
+    },
+    {
+     "band": "Coverage",
+     "label": "Tenor",
+     "value": "'protecting 10–25 years' production'; SRP+ 'up to 30 years, or the full amortization period of a project'; longest closed term 26 years (Matrix Renewables, Gaskell West 2 and 3)"
+    },
+    {
+     "band": "Coverage",
+     "label": "Claims",
+     "value": "'Claims paid out within 30 days to ensure timely debt service payments' (company claim)"
+    },
+    {
+     "band": "Financing effect",
+     "label": "Debt sizing",
+     "value": "'Solar portfolios utilizing the Solar Revenue Put are securing average debt sizing increases of 10%' (2021); '10% average increase in debt raised' (2023)"
+    },
+    {
+     "band": "Financing effect",
+     "label": "Return effect",
+     "value": "'increase IRRs by 30+ bps' and 'improve bids by up to 5%' (Solar Power World, 2019-02-25)"
+    },
+    {
+     "band": "Scale",
+     "label": "Assets covered",
+     "value": "'Already applied on over $4B of solar assets, recognized by 30+ major lenders'; 'Over 2.5 GW of solar assets have utilized Solar Revenue Put financing structures' (2023)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Carriers",
+     "value": "Swiss Re Corporate Solutions (from December 2017; 'USD 1 billion of solar capacity' structured by January 2020) and Everest ('main carrier for production coverage', Pivot Energy 2023); 'backed by insurance carriers with investment grade financial ratings'"
+    }
+   ],
+   "notes": "The put is an insurance policy, not a derivative: the company's structuring places it in the lender's downside case so that the P50-to-P90 gap the lender would otherwise size against is insured. Exclusions and premium levels are not published."
+  },
+  {
+   "product": "Wind Proxy Hedge with the Indifference Structure (Munich Re Trading LLC counterparty)",
+   "specs": [
+    {
+     "band": "Trigger",
+     "label": "Parametric index",
+     "value": "'Parametric coverage triggered when wind speeds fall below a specified meters-per-second threshold'"
+    },
+    {
+     "band": "Trigger",
+     "label": "Floor",
+     "value": "'Significantly improves a project's P99 scenario by adding investment-grade cash flow above the P99 wind speed'"
+    },
+    {
+     "band": "Financing effect",
+     "label": "Maine, 59 MW (2024)",
+     "value": "'approximately 20% additional debt capital raised'; 'Each dollar of hedge premium generated approximately $6 in additional loan proceeds'"
+    },
+    {
+     "band": "Financing effect",
+     "label": "Rocky Forge, 79 MW (2025)",
+     "value": "'Approximately $7 of additional debt generated per $1 of premium paid during the mini-perm period'"
+    },
+    {
+     "band": "Counterparties",
+     "label": "Hedge provider and arrangers",
+     "value": "Munich Re Trading LLC (both deals); MUFG sole lead arranger (2024); MUFG and CIBC coordinating lead arrangers (2025)"
+    },
+    {
+     "band": "Structure",
+     "label": "Company claim",
+     "value": "'the only parametric wind hedge that is paired with the unique kWh Analytics Indifference Structure proven to unlock additional indebtedness of >20%'"
+    }
+   ],
+   "notes": "kWh Analytics structures and models; Munich Re bears the risk. The 'Indifference Structure' is a proprietary term the company does not define publicly beyond the debt-uplift figures."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-05",
+   "category": "corporate",
+   "headline": "Beazley's H1 2026 results describe 'the addition of kWh Analytics in March' with its underwriters 'working alongside our broader team'; profit before tax fell to USD 237.7 million from USD 502.5 million",
+   "read": "The parent treats the deal as done and the business as absorbed — while no completion release exists and Beazley itself is months from being absorbed by Zurich.",
+   "source": "https://www.investegate.co.uk/announcement/rns/beazley--bez/beazley-plc-results-for-period-ended-30-june-2026/9704869"
+  },
+  {
+   "date": "2026-07-07",
+   "category": "corporate",
+   "headline": "European Commission clears Zurich Insurance Group's £8.1 billion all-cash acquisition of Beazley; completion expected before the end of 2026",
+   "read": "kWh's new owner has a new owner: a Swiss composite whose specialty ambitions will decide where a 30-person renewables MGA sits in a USD 15 billion specialty book.",
+   "source": "https://www.insurancebusinessmag.com/asia/news/breaking-news/european-commission-clears-zurichs-8-1-billion-acquisition-of-beazley-582097.aspx"
+  },
+  {
+   "date": "2026-06-15",
+   "category": "other",
+   "headline": "Wins Celent's Model Insurer Award for Innovation Execution; boilerplate now claims 'USD 150B in loss data' and 'trusted by 15 global reinsurers'",
+   "read": "The last item the company has published — nothing since mid-June, and the careers page shows no open roles, consistent with integration.",
+   "source": "https://kwhanalytics.com/kwh-analytics-wins-celent-model-insurer-innovation-execution-award/"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "market",
+   "headline": "Third annual Broker Council readout: rates 'reducing' in a soft market; '73% of inverter-driven brushfires involve a single manufacturer'; sponsors push back on grouping wind, tornado and lightning with hail sublimits",
+   "read": "Soft rates erode the resilience-pricing thesis the company is built on, and the unnamed inverter finding shows how far it will go in public with its own data.",
+   "source": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/"
+  },
+  {
+   "date": "2026-05-11",
+   "category": "other",
+   "headline": "Eighth Solar Risk Assessment: fire displaces hail as the headline risk ('84% of fire events are due to equipment-driven brushfire'); only 38 percent of developers ready for the 2026 prohibited-foreign-entity rules",
+   "read": "The report is where the company sets the market's vocabulary a year ahead of its pricing; this edition adds compliance as an insured peril in all but name.",
+   "source": "https://kwhanalytics.com/kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-generation-and-battery-energy-storage-systems/"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "corporate",
+   "headline": "Beazley shareholders approve the Zurich takeover with 99.9 percent of votes in favour",
+   "read": "Locks in the second integration before the first is announced complete.",
+   "source": "https://www.insurancejournal.com/news/international/2026/04/23/866994.htm"
+  },
+  {
+   "date": "2026-04-07",
+   "category": "product-launch",
+   "headline": "Launches a data-sharing pilot in which Nextpower NX Horizon trackers feed real-time and historical hail-stow telemetry into the underwriting model in exchange for lower premiums; Longroad Energy case study",
+   "read": "Telematics-priced solar insurance — the first time the company's pricing is tied to a live equipment feed rather than a submission form.",
+   "source": "https://kwhanalytics.com/kwh-analytics-launches-data-sharing-program-to-reward-hail-ready-solar-projects-with-lower-insurance-costs/"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "other",
+   "headline": "Hawaii Business profiles founder Richard Matsui, calling kWh 'the largest independent insurance company for solar, wind and batteries in North America' and recording his 2023–2025 stint at the DOE Loan Programs Office",
+   "read": "The founder has been outside the company since 2023; the 'largest' claim has no methodology behind it.",
+   "source": "https://www.hawaiibusiness.com/hb20-richard-matsui-kwh-analytics/"
+  },
+  {
+   "date": "2026-03-10",
+   "category": "ma",
+   "headline": "Beazley plc agrees to acquire kWh Analytics; terms undisclosed; the MGA to be integrated into Beazley's MAP Risks team with Kaminsky reporting to Tim Turner under Kelly Malynn's transition-underwriting strategy; closing expected in the second half of 2026 subject to regulatory approvals",
+   "read": "A specialty carrier buying its way into renewables underwriting data rather than building it — and the end of kWh as an independent MGA.",
+   "source": "https://www.insurancejournal.com/news/national/2026/03/10/861264.htm"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "partnership",
+   "headline": "Aspen Specialty renews the property programme at up to USD 100 million per location, with authority extended to 'a broader mix of energy sources and minority asset classes'",
+   "read": "Capacity is the product for an MGA; the renewal five weeks before the Beazley announcement is the last independent statement of it.",
+   "source": "https://kwhanalytics.com/kwh-analytics-expands-property-insurance-for-renewable-energy-assets-and-projects/"
+  },
+  {
+   "date": "2026-01-02",
+   "category": "market",
+   "headline": "Company predictions for 2026: renewables paired with storage 'the only scalable answer in this cycle'; parametric solutions to 'gain major traction'; regulatory policy 'minimal impact'",
+   "read": "Positions storage as the growth line for a book that insures it only as property.",
+   "source": "https://solarbuildermag.com/news/kwh-analytics-predicts-increase-in-electrical-demand-in-2026/"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "market",
+   "headline": "Insurance Innovation Reporter profile: Lloyd's syndicate capacity 'introduced late 2024'; four product categories plus tax-credit insurance 'in development'; Kaminsky: 'we think of ourselves as underwriters for the energy transition'",
+   "read": "The only first-hand statement that Lloyd's paper sits behind the excess layer — consistent with a Beazley (six Lloyd's syndicates) courtship already under way.",
+   "source": "https://iireporter.com/kwh-analytics-underwriting-renewable-energys-new-risk-reality/"
+  },
+  {
+   "date": "2025-11-12",
+   "category": "other",
+   "headline": "Publishes the inaugural Resilient Power Report with NREL, VDE Americas, Azimuth Advisory Services and Nextracker: 54 percent of developers cite weather damage as their top operational concern",
+   "read": "A second annual publication to carry the resilience-credit argument to developers rather than brokers.",
+   "source": "https://kwhanalytics.com/kwhanalytics-releases-inaugural-resilient-power-report-positive-case-studies-from-renewable-energy/"
+  },
+  {
+   "date": "2025-10-22",
+   "category": "other",
+   "headline": "InsuranceERM names kWh Sustainable Re/Insurer of the Year and the Maine Wind Proxy Hedge Climate Risk Transfer Deal of the Year — a third consecutive year of InsuranceERM awards",
+   "read": "Recognition from the insurance side, where the buyer's diligence was presumably being done.",
+   "source": "https://kwhanalytics.com/kwh-analytics-wins-sustainable-insurer-of-the-year-and-climate-risk-transfer-deal-of-the-year/"
+  },
+  {
+   "date": "2025-09-18",
+   "category": "order-win",
+   "headline": "Closes the second parametric Wind Proxy Hedge, for Apex Clean Energy's 79 MW Rocky Forge Wind in Virginia, with Munich Re Trading as hedge provider and MUFG and CIBC as coordinating lead arrangers — 'approximately $7 of additional debt for every dollar of premium'",
+   "read": "A repeatable structure with a covered-corpus sponsor that says it is evaluating more projects.",
+   "source": "https://www.reinsurancene.ws/kwh-analytics-closes-munich-re-backed-parametric-wind-proxy-hedge-for-apex-clean-energy/"
+  },
+  {
+   "date": "2025-08-28",
+   "category": "product-launch",
+   "headline": "Launches a USD 20 million excess natural-catastrophe layer for severe convective storms and named windstorms in non-coastal regions",
+   "read": "Follows NARDAC's standalone SCS facility by seven months; hail is where the losses and the competition are.",
+   "source": "https://kwhanalytics.com/kwh-analytics-launches-excess-natural-catastrophe-coverage-for-the-renewable-energy-industry/"
+  },
+  {
+   "date": "2025-07-02",
+   "category": "market",
+   "headline": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms",
+   "read": "The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
+   "source": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm"
+  },
+  {
+   "date": "2025-06-10",
+   "category": "other",
+   "headline": "Seventh Solar Risk Assessment: hail 73 percent of losses by amount against 6 percent of incidents; PV sites underperforming P50 by 8.6 percent; 72 percent of BESS failures within two years of installation",
+   "read": "The numbers that justify resilience pricing — and that peers (GCube, VDE Americas) dispute at the margin.",
+   "source": "https://kwhanalytics.com/kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-and-battery-energy-storage-systems/"
+  },
+  {
+   "date": "2025-06-05",
+   "category": "market",
+   "headline": "Publishes, with Renewable Guard and Brown & Brown, the company's view of the BESS insurance market after Moss Landing: rates 'stable at approximately 30-40 cents per US$100 of insured value for technology risk'; the fire was 'an impactful but not defining loss'",
+   "read": "The clearest public statement of how an underwriter separates legacy indoor NMC from outdoor LFP in pricing — the distinction the insurance segment's buying criteria turn on.",
+   "source": "https://www.energy-storage.news/beyond-the-headlines-the-bess-insurance-market-after-moss-landing/"
+  },
+  {
+   "date": "2025-05-30",
+   "category": "leadership",
+   "headline": "Anthemis founder and group CEO Amy Nauiokas joins the board, replacing a former Anthemis representative",
+   "read": "The Series A lead takes the seat ten months before the sale — a governance move that reads as sale preparation in hindsight.",
+   "source": "https://www.reinsurancene.ws/kwh-analytics-appoints-anthemis-founder-amy-nauiokas-to-board/"
+  },
+  {
+   "date": "2025-04-28",
+   "category": "partnership",
+   "headline": "Publishes a Hail Stow and Risk Evaluation form developed with VDE Americas; 'our evidence-based premium differentiation rewards projects with proven hail defense strategies'",
+   "read": "Standardising the submission so the resilience credit can be underwritten at scale.",
+   "source": "https://www.reinsurancene.ws/vde-americas-kwh-analytics-partner-to-increase-hail-resiliency-for-solar-assets/"
+  },
+  {
+   "date": "2025-04-23",
+   "category": "customer",
+   "headline": "Case study with Nextracker: a 13 MW Arkansas municipal solar project's severe-convective-storm deductible cut 50 percent for enabling automated hail stow",
+   "read": "The pricing mechanism in one number — resilience bought a deductible, not a rate.",
+   "source": "https://www.solarpowerworldonline.com/2025/04/kwh-analytics-halves-insurance-costs-on-arkansas-solar-project/"
+  },
+  {
+   "date": "2025-01-15",
+   "category": "product-launch",
+   "headline": "Awarded USD 500,000 from InnSure's Insurance Innovation Prize, supported by NYSERDA, to develop tax-credit insurance for distributed generation under 20 MW; 'expected launch within 18 months'",
+   "read": "The one announced product that has not appeared — overdue by September 2026.",
+   "source": "https://www.solarpowerworldonline.com/2025/01/kwh-analytics-wins-cash-prize-to-develop-tax-credit-insurance-for-dg-solar-projects/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "apex-clean-energy",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "79 MW",
+   "via": "Wind Proxy Hedge",
+   "note": "Apex Clean Energy's Rocky Forge Wind (79 MW, Virginia) is the second and largest parametric Wind Proxy Hedge kWh Analytics has structured, with Munich Re Trading as hedge provider and MUFG and CIBC as arrangers.",
+   "context": "Reinsurance News reported on 18 September 2025 that the hedge 'generates approximately $7 of additional debt for every dollar of premium paid during the mini-perm period' and quoted an Apex representative: 'Implementation of the Wind Proxy Hedge structure went smoothly, and we are evaluating this product on additional projects.' The structure pays when measured wind speed falls below a threshold, adding investment-grade cash flow above the P99 case.\n\nApex is the only company on this corpus's roster with a live, named kWh product; the relationship is sponsor-to-structurer rather than insured-to-insurer, since Munich Re bears the risk.",
+   "source": "https://www.reinsurancene.ws/kwh-analytics-closes-munich-re-backed-parametric-wind-proxy-hedge-for-apex-clean-energy/"
+  },
+  {
+   "slug": "aes-clean-energy",
+   "type": "customer",
+   "status": "historical",
+   "since": "2019",
+   "scale": "225 MW-DC (2023); 28 MW-DC (2019)",
+   "via": "Solar Revenue Put",
+   "note": "The AES Corporation, parent of AES Clean Energy, has used the Solar Revenue Put twice: a 41-project, 28 MW-DC distributed portfolio managed by AES Distributed Energy in 2019, and a 225 MW-DC project financed with HSBC, Citi and National Bank of Canada in 2023.",
+   "context": "Solar Power World listed 'AES Distributed Energy' among the sponsors of the first USD 500 million of puts in February 2019; the company's own February 2023 release names 'The AES Corporation (NYSE: AES)' as sponsor of the 225 MW-DC deal and describes the put as 'a credit enhancement that guarantees up to 95% of a solar project's expected energy output'.\n\nThe covered dossier is the AES Clean Energy unit; both puts were written at the parent or a sister distributed-energy subsidiary, so the link is parent-level.",
+   "source": "https://www.solarpowerworldonline.com/2019/02/kwh-analytics-structures-solar-revenue-puts-on-500-million-of-solar-assets/"
+  },
+  {
+   "slug": "invenergy",
+   "type": "customer",
+   "status": "historical",
+   "since": "2019-07",
+   "scale": "23 MW-DC",
+   "via": "Solar Revenue Put",
+   "note": "Invenergy refinanced its Grand Ridge Solar project (23 MW-DC, La Salle County, Illinois) with MUFG in July 2019 using a Swiss Re-backed Solar Revenue Put.",
+   "context": "Reinsurance News quoted Meghan Schultz, Invenergy's SVP of finance and capital markets: 'Invenergy is pleased to work with kWh Analytics on the successful refinancing of our Grand Ridge Solar project.' Swiss Re's Brian Beebe called the put 'a new, multi-billion dollar insurtech category' in the same report. No later Invenergy transaction with kWh has been reported.",
+   "source": "https://www.reinsurancene.ws/kwh-analytics-closes-23-mw-solar-revenue-put-backed-by-swiss-re/"
+  },
+  {
+   "slug": "dnv",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-07",
+   "note": "DNV is kWh Analytics' independent-engineering partner on the USD 2.4 million DOE MORE PV resilience programme (with NREL and STANCE Renewable Risk Partners), supplied the engineering analysis for the first Wind Proxy Hedge, and co-authored a 2026 Solar Risk Assessment article on module useful-life assumptions.",
+   "context": "Reinsurance News' September 2024 report on the DOE award lists 'National Renewable Energy Laboratory, DNV (independent engineering firm), STANCE Renewable Risk Partners' as partners; the company's July 2024 Maine hedge release credits DNV's engineering analysis; the 2026 SRA contributor list published by Solarplaza includes DNV.\n\nThe pairing is the insurance segment's dependence on the assurance segment in miniature: the underwriter prices the curve the independent engineer certifies.",
+   "source": "https://www.reinsurancene.ws/kwh-analytics-and-us-department-of-energy-launch-2-4m-solar-resilience-initiative/"
+  },
+  {
+   "slug": "lightsource-bp",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-05",
+   "note": "Lightsource bp co-authored a 2026 Solar Risk Assessment article with Univers on undersized fuses causing a 15 percent power loss, and is listed among the report's 21 contributing organisations.",
+   "context": "The Solarplaza repost of the 12 May 2026 release lists 'Lightsource bp' among contributors alongside DNV, Nextpower, Kiwa PVEL and others. A contributor relationship is a data-sharing and thought-leadership link, not an insurance placement; no Lightsource bp policy or put with kWh has been reported.",
+   "source": "https://www.solarplaza.com/resource/13473/press-release-kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-generation-and-battery-energy-storage-systems-2026/"
+  },
+  {
+   "slug": "engie-north-america",
+   "type": "investor",
+   "status": "historical",
+   "since": "2016-09",
+   "scale": "USD 5 million Series A (round total)",
+   "note": "ENGIE New Ventures participated in kWh Analytics' USD 5 million Series A in September 2016, led by Anthemis Group; ENGIE's venture arm still lists kWh in its portfolio.",
+   "context": "PR Newswire's September 2016 release states the round was 'led by Anthemis Group … with ENGIE, the world's largest independent power producer, also participating', and ENGIE New Ventures' portfolio page describes kWh as 'the market leader in solar risk management'. The stake, if retained through the Beazley sale, is undisclosed. Geoffrey Lehv, kWh's head of North American accounts, is a former ENGIE employee. The covered dossier is ENGIE North America; the investor is the group's venture arm, so the link is parent-level.",
+   "source": "https://www.prnewswire.com/news-releases/kwh-analytics-raises-5-million-series-a-launches-new-insurance-backed-production-guarantee-to-make-solar-bankable-300323640.html"
+  },
+  {
+   "slug": "panasonic",
+   "type": "customer",
+   "status": "historical",
+   "since": "2017-12",
+   "scale": "30 MW-AC, three plants",
+   "via": "Solar Revenue Put",
+   "note": "The first Solar Revenue Put ever written (December 2017, Swiss Re Corporate Solutions capacity) covered three Virginia solar plants owned by Coronal Energy, then a Panasonic affiliate.",
+   "context": "Swiss Re Corporate Solutions' January 2020 release records 'First transaction: December 2017 (three solar plants owned by Coronal Energy/Panasonic affiliate)'; pv magazine USA reported the deal as 'the industry's first solar revenue put for three solar projects totaling 30 MW-AC in Virginia'. Coronal was later sold; the link is historical and parent-level.",
+   "source": "https://corporatesolutions.swissre.com/insights/news/swiss-re-corporate-solutions-announces-insurtech-collaboration-to-accelerate-solar-adoption.html"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "kWh Analytics is exposed indirectly, through the compliance risk of the projects it insures and the tax-credit product it has not launched: its 2026 Solar Risk Assessment reports that 'only 38% of developers feel fully prepared for the new prohibited foreign entity (PFE) rules taking effect in 2026' and that non-compliance 'can trigger penalties of $1M per day' (a Crux finding the company headlined as 'Compliance is now a financial risk'). The 2026 thresholds are 40 percent for qualified facilities and 55 percent for energy storage technology; IRS Notice 2026-15 (February 2026) supplied the guidance.",
+   "mitigation": "None stated beyond publishing the finding; the company has not announced a compliance-risk product.",
+   "source": "https://solarbuildermag.com/energy-storage/report-top-risk-management-challenges-for-renewables-and-bess/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "The company's announced tax-credit insurance product targets 'transferable tax credits from the Inflation Reduction Act' on distributed-generation projects under 20 MW, funded by a USD 500,000 InnSure prize supported by NYSERDA; the 2025 reconciliation law re-timed the credits and the 2026 Solar Risk Assessment reports that '75% of underwriters won't cover above 25%' valuation step-ups. Kaminsky told Artemis in December 2025 that renewable economics 'have changed significantly, necessitating innovative risk-transfer solutions' as credits sunset.",
+   "mitigation": "The tax-credit product was to launch 'within 18 months' of January 2025; it has not launched.",
+   "source": "https://www.solarpowerworldonline.com/2025/01/kwh-analytics-wins-cash-prize-to-develop-tax-credit-insurance-for-dg-solar-projects/"
+  },
+  {
+   "regime": "NFPA 855 / UL 9540A",
+   "status": "in-effect",
+   "exposure": "As a property underwriter of battery storage, kWh Analytics prices to the fire-safety regime rather than being regulated by it: its sector page requires that 'explosion relief systems must conform to NFPA standards, with sufficient spatial separation between containers', its submission form is a 'Thermal Runaway Risk Evaluation Form', and its data-science lead has said 'the biggest thing that we're looking at as an insurer is thermal runaway risk'. Its published post-Moss Landing view is that 'the NFPA 855 standard has evolved greatly since its inception in 2020 and will continue to do so', that 'most underwriters are hesitant to insure indoor installations', and that technology-risk rates were 'stable at approximately 30-40 cents per US$100 of insured value'. UL 9540A is not mentioned on any company page.",
+   "mitigation": "Underwriting posture only — hazard-mitigation analyses and emergency-response plans are requested in submissions; no product change was announced after the fire.",
+   "source": "https://www.energy-storage.news/beyond-the-headlines-the-bess-insurance-market-after-moss-landing/"
+  },
+  {
+   "regime": "US state surplus-lines insurance regulation",
+   "status": "in-effect",
+   "exposure": "The licensed entity, Solar Energy Insurance Services, Inc., holds California insurance licence 0L00900 and 'offers surplus lines products written by surplus lines insurers'; the company's own disclaimer notes that 'surplus lines insurance carriers do not generally participate in state guaranty funds and insureds are therefore not protected by such funds'. The list of other states in which it is licensed is not published, and the Beazley acquisition's completion was reported as 'subject to regulatory approvals'.",
+   "source": "https://kwhanalytics.com/disclaimers/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jason Kaminsky",
+   "title": "Chief Executive Officer (reporting to Tim Turner, Group Head of MAP Risks, Beazley, post-acquisition)",
+   "photo": "images/execs/kwh-analytics-kaminsky.jpg",
+   "linkedin": "https://www.linkedin.com/in/jasonkam",
+   "background": [
+    "Chief Executive Officer, kWh Analytics — elevated January 2022 per third-party bios; joined the company as Vice President of Partnerships (company release, circa 2015–16). Third-party bios call him co-founder; the company's own history names Richard Matsui as founder",
+    "Vice President, Environmental Finance — Wells Fargo Bank (2011–c. 2015): originated, underwrote and financed tax-equity investments 'during a time when the bank added nearly $1bn of solar assets'",
+    "SPG Solar, supporting the CEO on strategic initiatives (before 2011)",
+    "M.B.A., Stanford Graduate School of Business; M.S. Environment and Resources, Stanford; B.S. Mathematics and B.S. Atmospheric, Oceanic and Environmental Sciences, UCLA"
+   ]
+  },
+  {
+   "name": "Isaac McLean",
+   "title": "Chief Underwriting Officer",
+   "photo": "images/execs/kwh-analytics-mclean.jpg",
+   "background": [
+    "Chief Underwriting Officer since 4 December 2023; previously Head of Property Insurance at kWh Analytics",
+    "ICAT Managers — 14 years building natural-catastrophe-exposed property programmes (residential, small commercial and middle-market) across the United States; over 20 years in insurance",
+    "B.B.A. Business Management and Leadership, New Mexico State University; based in Lakewood, Colorado"
+   ]
+  },
+  {
+   "name": "Michael Bachrodt",
+   "title": "Chief Operations Officer",
+   "photo": "images/execs/kwh-analytics-bachrodt.jpg",
+   "background": [
+    "Vice President, Structured Finance — OYO (three years, immediately before kWh)",
+    "Eleven years across renewable transactions: Senior Vice President managing a lending and tax-equity team at Bridge Bank (Western Alliance); debt and tax-equity structuring at SunEdison; power-purchase-agreement negotiation at Pacific Gas & Electric",
+    "Seven years valuing and negotiating insurance claims at Arthur Andersen and successor consultancies",
+    "M.B.A., Harvard Business School; B.B.A. Finance, University of Notre Dame"
+   ]
+  },
+  {
+   "name": "Geoffrey Lehv",
+   "title": "Senior Vice President, Head of North American Accounts",
+   "linkedin": "https://www.linkedin.com/in/geoffreylehv/",
+   "background": [
+    "Leads client accounts and moderates the company's Broker Council; co-author of the June 2025 Energy-Storage.news assessment of the BESS insurance market after Moss Landing and structurer on both Wind Proxy Hedges",
+    "Prior roles at AlphaStruxure, ENGIE and Natixis (company bio)",
+    "M.B.A., New York University; B.S. Mechanical Engineering, University of Michigan"
+   ]
+  },
+  {
+   "name": "Sarath Srinivasan",
+   "title": "Vice President, Head of Product and Strategy",
+   "background": [
+    "Over 15 years in energy finance, 'closed over $3 billion in transactions' (company bio)",
+    "IIT Madras; MIT Sloan"
+   ]
+  },
+  {
+   "name": "Darryl Harding",
+   "title": "Director, Technical Underwriting",
+   "background": [
+    "Eight years at Hartford Steam Boiler focused on renewable energy; began at The Hartford over a decade ago",
+    "B.A. Economics, University of Connecticut"
+   ]
+  },
+  {
+   "name": "Richard Matsui",
+   "title": "Founder (no current operating title published; not listed on the company's team page)",
+   "linkedin": "https://www.linkedin.com/in/richardmatsui/",
+   "background": [
+    "Founded kWh Analytics in San Francisco in 2012 and led it as CEO through at least early 2022 (company releases 2016–2022)",
+    "Senior Advisor / Senior Consultant, US Department of Energy Loan Programs Office (2023–2025), per Hawaii Business and ThriveHI",
+    "Founding member of McKinsey & Company's global solar practice, based in Taipei; Georgetown University",
+    "Board member, ThriveHI; Hawaii Business 'HB20' honoree, March 2026 — 'launched a pair of new companies in the last year'"
+   ]
+  },
+  {
+   "name": "Amy Nauiokas",
+   "title": "Board Member (from May 2025; pre-acquisition board)",
+   "background": [
+    "Founder and Group CEO, Anthemis — the venture firm that led kWh's 2016 Series A; 'investing in and supporting more than 250 companies'",
+    "Founder, Archer Gray",
+    "Joined the kWh board on 19 May 2025, replacing a former Anthemis representative; post-acquisition board composition is not published"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "CY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue / gross written premium",
+      "actual": "Not disclosed",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Private company; no revenue, premium, profit or headcount figure has ever been published. Third-party estimate only: LeadIQ 'USD 25M–50M' (July 2026), an unsourced database estimate"
+     },
+     {
+      "name": "Assets insured (cumulative, company claim)",
+      "actual": "'over $23 billion' (April 2024) → '$32B+' (July 2024) → 'over $30 billion' (September 2024)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company boilerplate figures; the sequence is not monotonic and no methodology is given"
+     },
+     {
+      "name": "Property capacity per location",
+      "actual": "USD 75 million (Aspen, April 2024)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company release 2024-04-07; Reinsurance News 2024-04-08"
+     },
+     {
+      "name": "Reinsurer panel (company claim)",
+      "actual": "'Four of the top ten' (April 2024) → '5 of the top 10' (September 2024)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company boilerplate"
+     },
+     {
+      "name": "Non-dilutive awards",
+      "actual": "USD 2.4 million DOE SETO MORE PV award (September 2024); DOE phase-two 'go' on a USD 2 million PV reliability award (November 2024)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company releases; Reinsurance News"
+     }
+    ],
+    "commentary": "The company reports growth through cumulative 'assets insured' and capacity milestones rather than accounts. The first Wind Proxy Hedge (Greenbacker, 59 MW, Munich Re) closed in July 2024."
+   },
+   {
+    "period": "CY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue / gross written premium",
+      "actual": "Not disclosed",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No figure published; no analyst coverage exists for a private MGA"
+     },
+     {
+      "name": "Assets insured (cumulative, company claim)",
+      "actual": "'over $50 billion' (from May 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company boilerplate — roughly 3.3 times the USD 15 billion claimed in December 2023"
+     },
+     {
+      "name": "Reinsurer panel (company claim)",
+      "actual": "'11 global (re)insurance carriers' (August–October 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company boilerplate"
+     },
+     {
+      "name": "New capacity",
+      "actual": "USD 20 million excess natural-catastrophe layer (August 2025); Lloyd's syndicate participation 'introduced late 2024' (per Insurance Innovation Reporter)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company release; iireporter 2025-12-19"
+     },
+     {
+      "name": "Deals closed",
+      "actual": "Apex Clean Energy Rocky Forge Wind Proxy Hedge, 79 MW (September 2025); first 20-year SRP+ on Swiss Re capacity via private bond (February 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Reinsurance News; company release"
+     },
+     {
+      "name": "Grant income",
+      "actual": "USD 500,000 InnSure / NYSERDA Insurance Innovation Prize (January 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Solar Power World"
+     }
+    ],
+    "commentary": "Awards: InsuranceERM Sustainable Re/Insurer of the Year and Climate Risk Transfer Deal of the Year (October 2025). Anthemis founder Amy Nauiokas joined the board in May. Tracxn records total equity raised of USD 32.5 million including grants; disclosed venture rounds sum to USD 25 million."
+   },
+   {
+    "period": "H1 2026 (to 30 June 2026)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Change of control",
+      "actual": "Beazley plc agreed to acquire kWh Analytics on 10 March 2026; consideration undisclosed; closing expected in the second half of 2026 subject to regulatory approvals (Insurance Business); Beazley's H1 results refer to 'the addition of kWh Analytics in March'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The company's disclaimers page now states it is 'a wholly owned subsidiary of Beazley plc'; no completion release has been found"
+     },
+     {
+      "name": "Property capacity per location",
+      "actual": "USD 100 million (Aspen Specialty renewal, February 2026)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company release; Business Insurance 2026-02-05"
+     },
+     {
+      "name": "Reinsurer panel and data (company claims)",
+      "actual": "'Trusted by 15 global reinsurers'; '$150B in loss data'; '300,000+ zero-carbon projects'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company boilerplate from March 2026"
+     },
+     {
+      "name": "Parent context — Beazley plc H1 2026",
+      "actual": "Profit before tax USD 237.7 million (H1 2025: USD 502.5 million); 2025 gross premiums USD 6,100.7 million; Zurich takeover at £8.1 billion approved by shareholders (99.9 percent) and cleared by the European Commission on 7 July 2026",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Investegate RNS 2026-08-05; Reinsurance News; Insurance Journal — parent figures, not kWh's"
+     }
+    ],
+    "commentary": "Publication stopped after 17 June 2026 and the careers page shows no open roles at 2026-09-08 — consistent with integration into Beazley. Whether kWh's numbers will ever be disclosed now depends on Beazley's, and then Zurich's, segment reporting."
+   }
+  ],
+  "commentary": "kWh Analytics has never published revenue, premium, claims or headcount; every figure here is a company claim, a capacity milestone or a third-party estimate, and all 'expected' fields are empty because no consensus or guidance exists. The financial record is therefore a record of capacity and structure — a USD 100 million per-location property authority on Aspen paper, an excess layer, two reinsurer-backed performance products — rather than of results. Beazley did not disclose the price; for scale, Beazley wrote USD 6.1 billion of gross premium in 2025 and the combined Zurich–Beazley specialty book is 'roughly $15 billion' pro forma, so kWh is a rounding error in its new parent's accounts and will not be broken out."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that kWh Analytics' business is delegated authority secured by proprietary data, and that the data is the asset Beazley bought. Basis: the company holds no balance sheet — Aspen, Swiss Re, Everest and Munich Re carry every risk it writes — and its authority has expanded on the strength of its loss and performance database (USD 75 million per location in 2024, USD 100 million in 2026, 'minority asset classes' added); Beazley's CEO framed the deal as building 'transition underwriting capability', not buying premium, and no outlet reported a premium figure large enough to matter to a USD 6.1 billion insurer.",
+  "2. **(High confidence)** We assess that the acquisition ends kWh's independence as an MGA and puts its Aspen-led capacity structure in question. Basis: Beazley manages six Lloyd's syndicates and stated kWh 'will be integrated into Beazley's MAP Risks team'; a Lloyd's-managing insurer has no reason to keep a competitor's paper behind its own MGA once it can write the risk itself. Kaminsky's 'business as usual … with $100M per location capacity' is a statement about March 2026, not about the post-integration book. Neither party has said whether Aspen stays.",
+  "3. **(Moderate confidence)** We assess the deal is complete in substance but its completion is undocumented, and we treat the ownership as 'subsidiary' on the company's own word. Basis: the company's disclaimers page says it 'is a wholly owned subsidiary of Beazley plc' and Beazley's H1 results describe 'the addition of kWh Analytics in March'; against this, Insurance Business reported closing 'second half of 2026, subject to regulatory approvals' and no completion release exists. Collection gap: the closing date, price and any retention terms are unpublished.",
+  "4. **(High confidence)** We assess that kWh's storage franchise is property-only and that the corpus should not read it as a BESS revenue underwriter. Basis: the performance-insurance page carries no storage product; the battery-storage sector page offers only property cover and data services; the company's own post-Moss Landing writing is about property rates ('30-40 cents per US$100 of insured value for technology risk') and thermal-runaway underwriting, not availability or degradation. The revenue-put idea has been applied to solar and, parametrically, to wind — never to storage, where the revenue risk is merchant price rather than resource.",
+  "5. **(Moderate confidence)** We assess that the resilience-pricing thesis — premium and deductible credits for hail stow and thicker glass — is the company's real product differentiation and that a soft market is eroding it. Basis: three published case studies (72 percent NatCat-rate cut, 50 percent deductible cut, 40 percent rate cut) and the 2026 Nextpower telematics pilot on one side; on the other, the company's own 2026 Broker Council found rates 'reducing' and 'the urgency to build more weather-resilient assets has somewhat diminished', and NARDAC expects 'further softening' in 2026. A pricing edge built on rewarding resilience is worth most when capacity is scarce.",
+  "6. **(Moderate confidence)** We assess that the Solar Revenue Put is a mature niche rather than a growth line. Basis: named put financings cluster in 2018–2023 (Coronal, IGS, AES, Invenergy, Cal Flats, Matrix, Sunray, Pivot); the only 2025 put news is a bond-financed SRP+; the company's forward statements favour parametric structures ('gain major traction'); and the lender-adoption figures ('40%', '50%', '30+ lenders') are the company's own with no independent survey. The Wind Proxy Hedge — two deals, one covered-corpus sponsor evaluating more — is where the structuring effort now goes.",
+  "7. **(Low confidence)** We assess that the announced tax-credit insurance product will launch, if at all, as a Beazley product rather than a kWh one. Basis: the 18-month target from January 2025 has passed, the December 2025 status was still 'development phase', New Energy Risk reached market first with Lloyd's backing, and Beazley already writes transactional-liability lines into which a tax-credit cover fits. This is inference from timing and fit; no source states it.",
+  "Collection gap: the company's own site contradicts itself on the Series A date (January against September 2016), the Series B year (2022 against 2023), the property limit (USD 70 million against USD 100 million) and the loss-data figure (USD 100 billion against USD 150 billion); third parties disagree on headcount (39, 42 or 100–250) and on whether Kaminsky is a co-founder. Where they conflict the dated release is used over the undated page, and the discrepancy is stated rather than resolved. No claims-paid record, rating-agency view, litigation or regulatory action exists in any reachable outlet.",
+  "**INDICATORS TO WATCH** — *By end-2026 — Zurich completes the Beazley acquisition:* a statement placing renewables underwriting within Zurich's specialty structure, or the disappearance of the kWh brand, would confirm Judgment 2; a renewed Aspen programme announcement would refute it. *Q1 2027 — Aspen renewal season:* whether the property programme renews on Aspen paper, moves to Beazley syndicates, or lapses. *May 2027 — ninth Solar Risk Assessment:* publication under the kWh name would show the research franchise survived integration; a Beazley-branded edition would show what was kept. *Any 2027 filing or release naming a tax-credit product:* confirms or retires Judgment 7. *A third Wind Proxy Hedge, with Apex or another sponsor:* the test of whether the parametric line is a franchise or two deals."
+ ],
+ "sources": [
+  {
+   "label": "Beazley plc — Results for the period ended 30 June 2026 (RNS via Investegate)",
+   "url": "https://www.investegate.co.uk/announcement/rns/beazley--bez/beazley-plc-results-for-period-ended-30-june-2026/9704869",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Reinsurance News — Beazley maintains underwriting discipline in H1'26",
+   "url": "https://www.reinsurancene.ws/beazley-maintains-underwriting-discipline-in-h126-amid-softer-market-conditions-and-active-loss-environment/",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Insurance Business — European Commission clears Zurich's £8.1 billion acquisition of Beazley",
+   "url": "https://www.insurancebusinessmag.com/asia/news/breaking-news/european-commission-clears-zurichs-8-1-billion-acquisition-of-beazley-582097.aspx",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "LeadIQ — kWh Analytics company profile (headcount and revenue estimates)",
+   "url": "https://leadiq.com/c/kwh-analytics/5a1d7f8824000024005aa92d",
+   "date": "2026-07"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics wins Celent Model Insurer Innovation Execution Award",
+   "url": "https://kwhanalytics.com/kwh-analytics-wins-celent-model-insurer-innovation-execution-award/",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "BusinessWire — kWh Analytics wins Celent Model Insurer Award",
+   "url": "https://www.businesswire.com/news/home/20260615730306/en/",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "pv magazine USA — Fire, hail and the hard lessons: brokers weigh in on the 2026 Solar Risk Assessment",
+   "url": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "kWh Analytics — Podcast: Which solar risks actually matter? (SunCast)",
+   "url": "https://kwhanalytics.com/podcast-which-solar-risks-actually-matter/",
+   "date": "2026-06-02"
+  },
+  {
+   "label": "Norton Rose Fulbright Currents — Ep348: Key risks shaping the solar industry (Kaminsky)",
+   "url": "https://www.projectfinance.law/podcasts/ep348-key-risks-shaping-the-solar-industry",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "PV Tech — Hailstorms, stow methods, fire lead US solar project risks: 2026 Solar Risk Assessment",
+   "url": "https://www.pv-tech.org/hailstorms-stow-methods-fire-lead-us-solar-project-risks-2026-solar-risk-assessment/",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "Solar Builder — Report: top risk management challenges for renewables and BESS",
+   "url": "https://solarbuildermag.com/energy-storage/report-top-risk-management-challenges-for-renewables-and-bess/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Solarplaza — Press release: kWh Analytics reveals top risk management challenges (2026 SRA, contributor list)",
+   "url": "https://www.solarplaza.com/resource/13473/press-release-kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-generation-and-battery-energy-storage-systems-2026/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "pv magazine — How hail is rewriting the solar insurance rulebook",
+   "url": "https://www.pv-magazine.com/2026/05/12/how-hail-is-rewriting-the-solar-insurance-rulebook/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics reveals top risk management challenges for renewable energy generation and BESS (8th Solar Risk Assessment)",
+   "url": "https://kwhanalytics.com/kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-generation-and-battery-energy-storage-systems/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Insurance Business (Reinsurance) — Tax credit insurance draws Lloyd's backing through New Energy Risk approval",
+   "url": "https://www.insurancebusinessmag.com/reinsurance/news/breaking-news/tax-credit-insurance-draws-lloyds-backing-through-new-energy-risk-approval-574083.aspx",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "kWh Analytics — 2026 Solar Risk Assessment landing page",
+   "url": "https://kwhanalytics.com/industry-reports/2026-solar-risk-assessment/",
+   "date": "2026-05"
+  },
+  {
+   "label": "Insurance Journal — Beazley shareholders approve £8.1 billion Zurich takeover",
+   "url": "https://www.insurancejournal.com/news/international/2026/04/23/866994.htm",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "PV Tech — kWh Analytics launches extreme weather insurance data-sharing scheme",
+   "url": "https://www.pv-tech.org/kwh-analytics-launches-extreme-weather-insurance-data-sharing-scheme/",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics introduces pilot programme to reward solar projects for extreme weather resilience",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-introduces-pilot-programme-to-reward-solar-projects-for-extreme-weather-resilience/",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics launches data sharing program to reward hail-ready solar projects with lower insurance costs",
+   "url": "https://kwhanalytics.com/kwh-analytics-launches-data-sharing-program-to-reward-hail-ready-solar-projects-with-lower-insurance-costs/",
+   "date": "2026-04-07"
+  },
+  {
+   "label": "Hawaii Business Magazine — HB20: Richard Matsui, kWh Analytics",
+   "url": "https://www.hawaiibusiness.com/hb20-richard-matsui-kwh-analytics/",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "PV Tech — Beazley acquires kWh Analytics",
+   "url": "https://www.pv-tech.org/beazley-acquires-kwh-analytics/",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "kWh Analytics — Beazley builds out transition underwriting capability with acquisition of kWh Analytics",
+   "url": "https://kwhanalytics.com/beazley-builds-out-transition-underwriting-capability-with-acquisition-of-kwh-analytics/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Beazley plc — Acquisition of kWh Analytics",
+   "url": "https://www.beazley.com/en-US/news-and-events/acquisition-of-kwh-analytics/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Insurance Journal — Beazley to acquire US renewable energy MGA kWh Analytics",
+   "url": "https://www.insurancejournal.com/news/national/2026/03/10/861264.htm",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Business Insurance — Beazley buys energy MGA kWh Analytics",
+   "url": "https://www.businessinsurance.com/beazley-buys-energy-mga-kwh-analytics/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Insurance Business — Beazley announces kWh Analytics swoop (closing expected H2 2026)",
+   "url": "https://www.insurancebusinessmag.com/us/news/mergers-acquisitions/beazley-announces-kwh-analytics-swoop-567934.aspx",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Artemis — Beazley reaches agreement to acquire US renewable energy MGA kWh Analytics",
+   "url": "https://www.artemis.bm/news/beazley-reaches-agreement-to-acquire-us-renewable-energy-mga-kwh-analytics/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Reinsurance News — Beazley to acquire US renewable energy MGA kWh Analytics",
+   "url": "https://www.reinsurancene.ws/beazley-to-acquire-us-renewable-energy-mga-kwh-analytics/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "pv magazine USA — Beazley acquires kWh Analytics to scale renewable energy underwriting",
+   "url": "https://pv-magazine-usa.com/2026/03/10/beazley-acquires-kwh-analytics-to-scale-renewable-energy-underwriting/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Renewable Energy World — Beazley to acquire climate insurance provider kWh Analytics",
+   "url": "https://www.renewableenergyworld.com/energy-business/energy-finance/beazley-to-acquire-climate-insurance-provider-kwh-analytics/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Insurance Journal — Zurich to buy Beazley for $10.9 billion",
+   "url": "https://www.insurancejournal.com/news/international/2026/03/02/860121.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "kWh Analytics — Video: The energy behind data center growth (Rowan Digital Infrastructure)",
+   "url": "https://kwhanalytics.com/video-the-energy-behind-data-center-growth/",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Insurance Journal — My New Markets: NARDAC nat-cat coverage for renewable energy projects",
+   "url": "https://www.insurancejournal.com/magazines/mag-newmarkets/2026/02/23/858374.htm",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics boosts renewable energy coverage with renewed Aspen Specialty partnership",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-boosts-renewable-energy-coverage-with-renewed-aspen-specialty-partnership/",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics expands property insurance for renewable energy assets and projects (Aspen Specialty renewal, USD 100 million per location)",
+   "url": "https://kwhanalytics.com/kwh-analytics-expands-property-insurance-for-renewable-energy-assets-and-projects/",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Business Insurance — Renewable energy MGA expands capacity",
+   "url": "https://www.businessinsurance.com/renewable-energy-mga-expands-capacity/",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Insurance Innovation Reporter — kWh Analytics expands property insurance capacity for renewable energy projects",
+   "url": "https://iireporter.com/kwh-analytics-expands-property-insurance-capacity-for-renewable-energy-projects/",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Solar Builder — kWh Analytics predicts increase in electrical demand in 2026",
+   "url": "https://solarbuildermag.com/news/kwh-analytics-predicts-increase-in-electrical-demand-in-2026/",
+   "date": "2026-01-02"
+  },
+  {
+   "label": "Artemis — Parametric solutions opening new pathways for renewable energy deployment: kWh Analytics CEO",
+   "url": "https://www.artemis.bm/news/parametric-solutions-opening-new-pathways-for-renewable-energy-deployment-kwh-analytics-ceo/",
+   "date": "2025-12-30"
+  },
+  {
+   "label": "kWh Analytics — Underwriting renewable energy's new risk reality (Insurance Innovation Reporter repost)",
+   "url": "https://kwhanalytics.com/underwriting-renewable-energys-new-risk-reality/",
+   "date": "2025-12-29"
+  },
+  {
+   "label": "Insurance Innovation Reporter — kWh Analytics: underwriting renewable energy's new risk reality",
+   "url": "https://iireporter.com/kwh-analytics-underwriting-renewable-energys-new-risk-reality/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics releases inaugural Resilient Power Report",
+   "url": "https://kwhanalytics.com/kwhanalytics-releases-inaugural-resilient-power-report-positive-case-studies-from-renewable-energy/",
+   "date": "2025-11-11"
+  },
+  {
+   "label": "kWh Analytics — Resilient Power Report 2025 (PDF)",
+   "url": "https://kwhanalytics.com/wp-content/uploads/2025/11/kWh-Analytics_Resilient_Power_Report_2025.pdf",
+   "date": "2025-11"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics wins Sustainable Insurer of the Year and Climate Risk Transfer Deal of the Year (InsuranceERM)",
+   "url": "https://kwhanalytics.com/kwh-analytics-wins-sustainable-insurer-of-the-year-and-climate-risk-transfer-deal-of-the-year/",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "pv magazine — Hail damage to solar projects: 1% of filed claims but over 50% of total losses (GCube study)",
+   "url": "https://www.pv-magazine.com/2025/09/19/hail-damage-to-solar-projects-1-of-filed-claims-but-over-50-of-total-losses/",
+   "date": "2025-09-19"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics closes Munich Re-backed parametric Wind Proxy Hedge for Apex Clean Energy",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-closes-munich-re-backed-parametric-wind-proxy-hedge-for-apex-clean-energy/",
+   "date": "2025-09-18"
+  },
+  {
+   "label": "Artemis — Munich Re backs kWh Analytics' parametric wind hedge product",
+   "url": "https://www.artemis.bm/news/munich-re-backs-kwh-analytics-parametric-wind-hedge-product/",
+   "date": "2025-09-18"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics closes parametric Wind Proxy Hedge for Apex Clean Energy (Rocky Forge Wind)",
+   "url": "https://kwhanalytics.com/kwh-analytics-closes-parametric-wind-proxy-hedge-for-apex-clean-energy/",
+   "date": "2025-09-17"
+  },
+  {
+   "label": "kWh Analytics — Mind the gap: are traditional models underestimating hail damage to PV? (PV Tech Power repost)",
+   "url": "https://kwhanalytics.com/mind-the-gap/",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "pv magazine USA — kWh Analytics launches excess natural catastrophe insurance for solar projects",
+   "url": "https://pv-magazine-usa.com/2025/09/02/kwh-analytics-launches-excess-natural-catastrophe-insurance-for-solar-projects/",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics adds new $20m capacity layer to nat cat solution for renewable energy industry",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-adds-new-20m-capacity-layer-to-nat-cat-solution-for-renewable-energy-industry/",
+   "date": "2025-08-29"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics launches Excess Natural Catastrophe coverage for the renewable energy industry",
+   "url": "https://kwhanalytics.com/kwh-analytics-launches-excess-natural-catastrophe-coverage-for-the-renewable-energy-industry/",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "kWh Analytics — Above and beyond: new excess natural catastrophe capacity for renewable energy (CEO blog)",
+   "url": "https://kwhanalytics.com/above-and-beyond-new-excess-natural-catastrophe-capacity-for-renewable-energy/",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "kWh Analytics — The behavior of solar project resilience (with CAC Specialty; pv magazine repost)",
+   "url": "https://kwhanalytics.com/the-behavior-of-solar-project-resilience/",
+   "date": "2025-08-27"
+  },
+  {
+   "label": "Insurance Journal — Broker's key takeaways from kWh Analytics' 2025 Solar Risk Assessment",
+   "url": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+   "date": "2025-07-02"
+  },
+  {
+   "label": "Energy-Storage.news — kWh Analytics: BESS safety concerns have risen following fires",
+   "url": "https://www.energy-storage.news/kwh-analytics-bess-safety-concerns-have-risen-following-fires/",
+   "date": "2025-06-11"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics reveals top risk management challenges for renewable energy and BESS (7th Solar Risk Assessment)",
+   "url": "https://kwhanalytics.com/kwh-analytics-reveals-top-risk-management-challenges-for-renewable-energy-and-battery-energy-storage-systems/",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "Insurance Business — Solar risks in 2025: report flags BESS and PV operational gaps",
+   "url": "https://www.insurancebusinessmag.com/us/news/risk-management/solar-risks-in-2025-report-flags-bess-and-pv-operational-gaps-538557.aspx",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "Energy-Storage.news — Beyond the headlines: the BESS insurance market after Moss Landing (Lehv, Kiddie, Mirek)",
+   "url": "https://www.energy-storage.news/beyond-the-headlines-the-bess-insurance-market-after-moss-landing/",
+   "date": "2025-06-05"
+  },
+  {
+   "label": "kWh Analytics — Solar Risk Assessment 2025 (PDF)",
+   "url": "https://kwhanalytics.com/wp-content/uploads/2025/06/Solar-Risk-Assessment-2025.pdf",
+   "date": "2025-06"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics appoints Anthemis founder Amy Nauiokas to board",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-appoints-anthemis-founder-amy-nauiokas-to-board/",
+   "date": "2025-05-30"
+  },
+  {
+   "label": "kWh Analytics — Fintech pioneer Amy Nauiokas joins kWh Analytics' board of directors",
+   "url": "https://kwhanalytics.com/fintech-pioneer-amy-nauiokas-joins-kwh-analytics-board-of-directors/",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "Reinsurance News — VDE Americas, kWh Analytics partner to increase hail resiliency for solar assets",
+   "url": "https://www.reinsurancene.ws/vde-americas-kwh-analytics-partner-to-increase-hail-resiliency-for-solar-assets/",
+   "date": "2025-04-28"
+  },
+  {
+   "label": "Solar Power World — kWh Analytics halves insurance costs on Arkansas solar project",
+   "url": "https://www.solarpowerworldonline.com/2025/04/kwh-analytics-halves-insurance-costs-on-arkansas-solar-project/",
+   "date": "2025-04-23"
+  },
+  {
+   "label": "kWh Analytics — Case study: hail stow tech cut insurance deductible by 50% (with Nextracker)",
+   "url": "https://kwhanalytics.com/case-study-hail-stow-tech-cut-insurance-deductible-by-50/",
+   "date": "2025-04-22"
+  },
+  {
+   "label": "Reinsurance News — NARDAC expands SCS coverage for US renewable energy projects",
+   "url": "https://www.reinsurancene.ws/nardac-expands-scs-coverage-for-us-renewable-energy-projects/",
+   "date": "2025-01-29"
+  },
+  {
+   "label": "Solar Power World — kWh Analytics wins cash prize to develop tax credit insurance for DG solar projects",
+   "url": "https://www.solarpowerworldonline.com/2025/01/kwh-analytics-wins-cash-prize-to-develop-tax-credit-insurance-for-dg-solar-projects/",
+   "date": "2025-01-15"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics awarded $500,000 to develop innovative tax credit insurance for renewable energy projects",
+   "url": "https://kwhanalytics.com/kwh-analytics-awarded-500000-to-develop-innovative-tax-credit-insurance-for-renewable-energy-projects-3/",
+   "date": "2025-01-14"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics receives 'go' decision from US Department of Energy for phase two of PV reliability award",
+   "url": "https://kwhanalytics.com/kwh-analytics-receives-go-decision-from-u-s-department-of-energy-for-phase-two-of-pv-reliability-award/",
+   "date": "2024-11-12"
+  },
+  {
+   "label": "Energy-Storage.news — Thermal runaway still the biggest topic in battery storage insurance, says kWh Analytics",
+   "url": "https://www.energy-storage.news/thermal-runaway-still-the-biggest-topic-in-battery-storage-insurance-says-kwh-analytics/",
+   "date": "2024-10-22"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics and US Department of Energy launch $2.4m solar resilience initiative",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-and-us-department-of-energy-launch-2-4m-solar-resilience-initiative/",
+   "date": "2024-09-23"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics leads $2.4M initiative to strengthen solar asset resilience with the US Department of Energy",
+   "url": "https://kwhanalytics.com/kwh-analytics-leads-2-4m-initiative-to-strengthen-solar-asset-resilience-with-the-u-s-department-of-energy/",
+   "date": "2024-09-23"
+  },
+  {
+   "label": "kWh Analytics — Case study: resilient assets command better coverage (140 MW Texas, 72% rate reduction)",
+   "url": "https://kwhanalytics.com/case-study-resilient-assets-command-better-coverage/",
+   "date": "2024-09-03"
+  },
+  {
+   "label": "Reinsurance News — Munich Re backs kWh Analytics' Wind Proxy Hedge product (Greenbacker, Maine)",
+   "url": "https://www.reinsurancene.ws/munich-re-backs-kwh-analytics-wind-proxy-hedge-product/",
+   "date": "2024-07-24"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics pioneers first-of-its-kind parametric Wind Proxy Hedge for Greenbacker with Munich Re, MUFG",
+   "url": "https://kwhanalytics.com/kwh-analytics-pioneers-first-of-its-kind-parametric-wind-proxy-hedge-for-greenbacker-with-munich-re-mufg/",
+   "date": "2024-07-23"
+  },
+  {
+   "label": "Risk & Insurance — Interview with kWh CEO Jason Kaminsky: renewable solar power insurance trends",
+   "url": "https://riskandinsurance.com/interview-with-kwh-ceo-jason-kaminsky-renewable-solar-power-insurance-trends/",
+   "date": "2024-07-23"
+  },
+  {
+   "label": "Reinsurance News — GCube unveils $100m Lloyd's consortium to support BESS sector",
+   "url": "https://www.reinsurancene.ws/gcube-unveils-100m-lloyds-consortium-to-support-bess-sector/",
+   "date": "2024-07"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics raises capacity with Aspen to support renewable energy growth",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-raises-capacity-with-aspen-to-support-renewable-energy-growth/",
+   "date": "2024-04-08"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics raises property insurance and BESS capacity for renewable energy projects with leading carrier Aspen Insurance (USD 75 million per location)",
+   "url": "https://kwhanalytics.com/kwh-analytics-raises-property-insurance-and-bess-capacity-for-renewable-energy-projects-with-leading-carrier-aspen-insurance/",
+   "date": "2024-04-07"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics appoints Isaac McLean Chief Underwriting Officer",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-appoints-isaac-mclean-cuo/",
+   "date": "2023-12-04"
+  },
+  {
+   "label": "Reinsurance News — kWh partners with Pivot Energy to provide Solar Revenue Put production insurance (Everest capacity)",
+   "url": "https://www.reinsurancene.ws/kwh-partners-with-pivot-energy-to-provide-solar-revenue-put-production-insurance/",
+   "date": "2023-03-09"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics closes Solar Revenue Put for 225 MW of solar power project with HSBC, Citi and National Bank of Canada (AES)",
+   "url": "https://www.kwhanalytics.com/blog-archive/kwh-analytics-closes-solar-revenue-put-for-225-mw-of-solar-power-project-with-hsbc-citi-and-national-bank-of-canada",
+   "date": "2023-02-23"
+  },
+  {
+   "label": "Reinsurance News — kWh provides Solar Revenue Put for solar investment deal (Project Sunray, Arava Power, Nomura)",
+   "url": "https://www.reinsurancene.ws/kwh-provides-solar-revenue-put-for-solar-investment-deal/",
+   "date": "2023-02-22"
+  },
+  {
+   "label": "BusinessWire — kWh Analytics closes 26-year Solar Revenue Put for Matrix Renewables' Gaskell West 2 and 3",
+   "url": "https://www.businesswire.com/news/home/20221108005454/en/",
+   "date": "2022-11-08"
+  },
+  {
+   "label": "Venture Capital Journal — kWh Analytics grabs $20m Series B",
+   "url": "https://www.venturecapitaljournal.com/kwh-analytics-grabs-20m-series-b/",
+   "date": "2022-02-08"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics raises $20M to deliver insurance for our climate, launches 2nd product to insure renewable energy (Series B, Lacuna)",
+   "url": "https://kwhanalytics.com/kwh-analytics-raises-20m-to-deliver-insurance-for-our-climate-launches-2nd-product-to-insure-renewable-energy-3/",
+   "date": "2022-02-08"
+  },
+  {
+   "label": "PV Tech — US solar asset underperformance worsened over last decade, prompting P50 estimate concerns (2021 Solar Generation Index)",
+   "url": "https://www.pv-tech.org/us-solar-asset-underperformance-worsened-over-last-decade-prompting-p50-estimate-concerns/",
+   "date": "2021-10-28"
+  },
+  {
+   "label": "kWh Analytics — kWh Analytics closes first 20-year Solar Revenue Put+ (Swiss Re capacity)",
+   "url": "https://kwhanalytics.com/kwh-analytics-closes-first-20-year-solar-revenue-put-3/",
+   "date": "2021-09-27"
+  },
+  {
+   "label": "Solar Power World — kWh Analytics closes Solar Revenue Put for refinancing of 173 MW California solar project (Cal Flats)",
+   "url": "https://www.solarpowerworldonline.com/2020/05/kwh-analytics-closes-solar-revenue-put-for-refinancing-of-173-mw-california-solar-project/",
+   "date": "2020-05-07"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics closes 32 MW Swiss Re-backed Solar Revenue Put (IGS Solar)",
+   "url": "https://www.reinsurancene.ws/khw-analytics-closes-32-mw-swiss-re-backed-solar-revenue-put/",
+   "date": "2020-04-01"
+  },
+  {
+   "label": "Swiss Re Corporate Solutions — Swiss Re Corporate Solutions announces insurtech collaboration to accelerate solar adoption (agency agreement with kWh Analytics)",
+   "url": "https://corporatesolutions.swissre.com/insights/news/swiss-re-corporate-solutions-announces-insurtech-collaboration-to-accelerate-solar-adoption.html",
+   "date": "2020-01-14"
+  },
+  {
+   "label": "Reinsurance News — kWh Analytics closes 23 MW Solar Revenue Put backed by Swiss Re (Invenergy Grand Ridge)",
+   "url": "https://www.reinsurancene.ws/kwh-analytics-closes-23-mw-solar-revenue-put-backed-by-swiss-re/",
+   "date": "2019-07-12"
+  },
+  {
+   "label": "BusinessWire — kWh Analytics closes Solar Revenue Put for AES Distributed Energy portfolio (41 projects, 28 MW-DC)",
+   "url": "https://www.businesswire.com/news/home/20190410005155/en/",
+   "date": "2019-04-10"
+  },
+  {
+   "label": "Solar Power World — kWh Analytics structures Solar Revenue Puts on $500 million of solar assets",
+   "url": "https://www.solarpowerworldonline.com/2019/02/kwh-analytics-structures-solar-revenue-puts-on-500-million-of-solar-assets/",
+   "date": "2019-02-25"
+  },
+  {
+   "label": "IGS — kWh Analytics closes Solar Revenue Put for 35 MW of solar power projects with IGS Solar, Ares Management, ING, Swiss Re",
+   "url": "https://www.igs.com/our-story/newsroom/kwh-analytics-closes-solar-revenue-put-for-35-mw-of-solar-power-projects-with-igs-solar-ares-management-ing-swiss-re",
+   "date": "2018-11-15"
+  },
+  {
+   "label": "Solar Power World — kWh Analytics wins $1.25 million DOE award to quantify solar degradation rates",
+   "url": "https://www.solarpowerworldonline.com/2018/10/kwh-analytics-wins-1-25-million-doe-award-to-quantify-solar-degradation-rates/",
+   "date": "2018-10-25"
+  },
+  {
+   "label": "pv magazine USA — kWh Analytics, Coronal close the first Solar Revenue Put",
+   "url": "https://pv-magazine-usa.com/2018/01/31/kwh-analytics-coronal-close-the-first-solar-revenue-put/",
+   "date": "2018-01-31"
+  },
+  {
+   "label": "PR Newswire — kWh Analytics raises $5 million Series A, launches new insurance-backed production guarantee to make solar bankable",
+   "url": "https://www.prnewswire.com/news-releases/kwh-analytics-raises-5-million-series-a-launches-new-insurance-backed-production-guarantee-to-make-solar-bankable-300323640.html",
+   "date": "2016-09-07"
+  },
+  {
+   "label": "kWh Analytics — Homepage",
+   "url": "https://kwhanalytics.com/"
+  },
+  {
+   "label": "kWh Analytics — About (history timeline, investors, panel claims)",
+   "url": "https://kwhanalytics.com/about/"
+  },
+  {
+   "label": "kWh Analytics — Team",
+   "url": "https://kwhanalytics.com/team/"
+  },
+  {
+   "label": "kWh Analytics — Team: executives (full bios)",
+   "url": "https://kwhanalytics.com/team-categories/executives/"
+  },
+  {
+   "label": "kWh Analytics — Team: board and advisors",
+   "url": "https://kwhanalytics.com/team-categories/board-and-advisors/"
+  },
+  {
+   "label": "kWh Analytics — Our Solutions",
+   "url": "https://kwhanalytics.com/our-solutions/"
+  },
+  {
+   "label": "kWh Analytics — Property Insurance",
+   "url": "https://kwhanalytics.com/solutions/property-insurance/"
+  },
+  {
+   "label": "kWh Analytics — Performance Insurance (Solar Revenue Put, Wind Proxy Hedge)",
+   "url": "https://kwhanalytics.com/solutions/performance-insurance/"
+  },
+  {
+   "label": "kWh Analytics — Data Intelligence Services (HelioStats)",
+   "url": "https://kwhanalytics.com/solutions/data-intelligence-services/"
+  },
+  {
+   "label": "kWh Analytics — Sector: Battery Storage",
+   "url": "https://kwhanalytics.com/sectors/battery-storage/"
+  },
+  {
+   "label": "kWh Analytics — Industry reports index (Solar Risk Assessment 2019–2026, Solar Generation Index)",
+   "url": "https://kwhanalytics.com/industry-report/"
+  },
+  {
+   "label": "kWh Analytics — SolarScape / Brokerscape",
+   "url": "https://kwhanalytics.com/solarscape-main/"
+  },
+  {
+   "label": "kWh Analytics — Solar Revenue Put lender recognition",
+   "url": "https://kwhanalytics.com/investor-details/values-solar-revenue-put/"
+  },
+  {
+   "label": "kWh Analytics — Careers",
+   "url": "https://kwhanalytics.com/careers/"
+  },
+  {
+   "label": "kWh Analytics — Contact us",
+   "url": "https://kwhanalytics.com/contact-us/"
+  },
+  {
+   "label": "kWh Analytics — Disclaimers (legal entities, licence 0L00900, Beazley ownership statement)",
+   "url": "https://kwhanalytics.com/disclaimers/"
+  },
+  {
+   "label": "kWh Analytics — Complaints (Lloyd's or Aspen market)",
+   "url": "https://kwhanalytics.com/complaints/"
+  },
+  {
+   "label": "ENGIE New Ventures — Portfolio: kWh Analytics",
+   "url": "https://www.engieventures.com/portfolio/kwh-analytics/"
+  },
+  {
+   "label": "Tracxn — kWh Analytics company profile (funding total)",
+   "url": "https://tracxn.com/d/companies/kwh-analyt/__eyqqg1wQHBkVa_ndqRKVzOU96q-4YxJl8PHCYuxG7B4"
+  },
+  {
+   "label": "Built In SF — kWh Analytics company profile",
+   "url": "https://www.builtinsf.com/company/kwh-analytics"
+  },
+  {
+   "label": "ThriveHI — Rich Matsui bio",
+   "url": "https://www.thrivehi.org/team-1/rich-matsui"
+  },
+  {
+   "label": "Lloyd's — Making renewables bankable (Lloyd's renewables underwriters)",
+   "url": "https://www.lloyds.com/news-and-insights/news/making-renewables-bankable"
+  }
+ ],
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 1
+}

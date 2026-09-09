@@ -224,6 +224,15 @@
       ]
     },
     {
+      "slug": "all-risk-policy",
+      "term": "all-risk policy",
+      "def": "A property policy that covers every cause of physical loss except those it lists as excluded, as opposed to a named-perils policy that covers only the causes it lists. Renewable-energy property programmes are usually written all-risk with sublimits for the perils that dominate losses.",
+      "aliases": [
+        "all risks",
+        "all-risks cover"
+      ]
+    },
+    {
       "slug": "allowed-return",
       "term": "allowed return",
       "def": "The return on equity a commission authorizes a utility to earn on its rate base — typically nine to ten percent in recent US decisions. Because it multiplies every dollar of plant, a tenth of a point moves tens of millions a year on a large utility, which is why the return is the most litigated number in a rate case.",
@@ -501,6 +510,15 @@
       "def": "Automatic transfer switch: the device that senses utility failure, signals the generators to start, and moves the load onto them once generation is stable — then manages the return trip when utility power comes back. It is the conductor of a data center's outage choreography.",
       "aliases": [
         "automatic transfer switch"
+      ]
+    },
+    {
+      "slug": "attachment-point",
+      "term": "attachment point",
+      "def": "The loss level at which a layer of insurance starts to pay. The primary policy attaches above the deductible; an excess layer attaches above the primary's limit or at a negotiated point below it.",
+      "aliases": [
+        "attachment",
+        "attaches at"
       ]
     },
     {
@@ -945,6 +963,15 @@
       ]
     },
     {
+      "slug": "business-interruption",
+      "term": "business interruption",
+      "def": "Insurance for the revenue a plant loses while it is out of action after an insured physical loss — the money side of a property claim, paid for the period repair takes.",
+      "aliases": [
+        "BI cover",
+        "business interruption insurance"
+      ]
+    },
+    {
       "slug": "busway",
       "term": "busway",
       "def": "Prefabricated bus bar running overhead along a row of racks, with tap-off boxes that branch power down to each cabinet. It replaces bundles of individually pulled feeders, so capacity can be added or moved without rewiring — which is why the 800 VDC designs distribute at the row on busway rather than conduit.",
@@ -1002,6 +1029,16 @@
       "term": "calendering",
       "def": "Compressing a coated electrode foil between rollers to a precise thickness and density before the cell is assembled. Too much compression damages the electrode structure and too little wastes volume, so the setting is a direct trade between energy density and how well the cell behaves over its life.",
       "aliases": []
+    },
+    {
+      "slug": "canadian-electrical-code",
+      "term": "Canadian Electrical Code",
+      "def": "CSA C22.1, the safety standard for electrical installations that CSA Group has published every three years since 1927 and that every province and territory adopts into law, usually with amendments. Section 64 carries the installation rules for renewable and energy-storage systems.",
+      "aliases": [
+        "CE Code",
+        "C22.1",
+        "CSA C22.1"
+      ]
     },
     {
       "slug": "cap-rate",
@@ -1148,6 +1185,16 @@
       ]
     },
     {
+      "slug": "cb-scheme",
+      "term": "CB Scheme",
+      "def": "The IECEE's mutual-recognition arrangement under which a test report and certificate from one recognised national certification body are accepted by the others, so a product tested once can be certified in dozens of countries without repeating the tests.",
+      "aliases": [
+        "IECEE CB Scheme",
+        "CB test report",
+        "CB certificate"
+      ]
+    },
+    {
       "slug": "cca",
       "term": "community choice aggregator",
       "def": "A California local-government body that buys electricity for its residents while the utility still owns the wires. CCAs sign resource-adequacy and storage contracts of their own, so they are buyers of batteries alongside the utilities.",
@@ -1271,6 +1318,15 @@
       "def": "The document that makes a building legally usable. Everything from a fire pump test to a landscaping condition can hold it up, and no amount of finished construction substitutes for it.",
       "aliases": [
         "CofO"
+      ]
+    },
+    {
+      "slug": "certification-mark",
+      "term": "certification mark",
+      "def": "The symbol a certification body licenses a manufacturer to put on a product that has passed its tests and stays under its factory surveillance — the CSA mark, the UL mark, ETL. Inspectors and retailers accept the mark as proof the product meets the standard it was certified to.",
+      "aliases": [
+        "listing mark",
+        "safety mark"
       ]
     },
     {
@@ -1683,6 +1739,15 @@
       "def": "What happens when the cheapest generation cannot reach the load because the wires between them are full. In most US markets it is priced rather than rationed, and it is the everyday form the transmission shortage takes."
     },
     {
+      "slug": "consensus-standard",
+      "term": "consensus standard",
+      "def": "A standard developed by a balanced technical committee under an accredited process with public review and formal approval, as distinct from a technical specification or a company procedure. Consensus status is what lets codes and regulators reference a document.",
+      "aliases": [
+        "consensus-based standard",
+        "national standard"
+      ]
+    },
+    {
       "slug": "consignment",
       "term": "consignment",
       "def": "A manufacturing contract in which the customer supplies some or all of the parts and pays only for the work. It keeps component pricing visible to the customer and keeps the inventory on the customer's books.",
@@ -2025,6 +2090,14 @@
       ]
     },
     {
+      "slug": "credit-enhancement",
+      "term": "credit enhancement",
+      "def": "Anything that improves a borrower's credit quality without changing the underlying asset — a guarantee, a reserve account, or an insurance policy that floors revenue — so that lenders will lend more or at a lower rate.",
+      "aliases": [
+        "credit enhancements"
+      ]
+    },
+    {
       "slug": "credit-support",
       "term": "credit support",
       "def": "The collateral a utility requires from a large new customer before it builds for it — a letter of credit, a cash deposit, a parent-company guaranty or a surety bond — sized to some months or years of the minimum bill, so that a customer that walks away leaves money behind rather than a stranded substation.",
@@ -2104,6 +2177,17 @@
       "aliases": [
         "M-CRPS",
         "common redundant power supply"
+      ]
+    },
+    {
+      "slug": "csa-c800",
+      "term": "CSA C800",
+      "def": "CSA/ANSI C800:25, the first consensus standard setting a testing protocol for energy-storage-system reliability and quality assurance, including a large-scale fire test (Section 9.7) with suppression switched off. It grew out of the interim technical specification CSA TS-800:24 and is referenced by NFPA 855's 2026 edition.",
+      "aliases": [
+        "C800",
+        "CSA/ANSI C800",
+        "TS-800",
+        "CSA TS-800"
       ]
     },
     {
@@ -2371,6 +2455,14 @@
       ]
     },
     {
+      "slug": "deductible",
+      "term": "deductible",
+      "def": "The first slice of each loss that the insured bears before the policy pays, set as a fixed amount or a percentage of insured value. Catastrophe perils such as hail often carry percentage deductibles large enough to matter to a lender.",
+      "aliases": [
+        "deductibles"
+      ]
+    },
+    {
       "slug": "deep-foundation",
       "term": "deep foundation",
       "def": "Piles or drilled shafts that carry load past unsuitable near-surface soil to competent material below. They are chosen when the ground near the surface cannot be made good enough."
@@ -2403,6 +2495,16 @@
       "def": "The value of the battery life consumed by one charge-discharge cycle, expressed as money per megawatt-hour moved. A dispatch decision is only profitable if the price spread captured exceeds this cost plus round-trip losses, which is why an optimizer will decline spreads that look positive on the price screen alone."
     },
     {
+      "slug": "delay-in-start-up",
+      "term": "delay-in-start-up",
+      "def": "Construction-phase insurance for the revenue a project loses if an insured event delays commissioning past the date the financing assumed — the builder's-risk counterpart of business-interruption cover.",
+      "aliases": [
+        "DSU",
+        "delay in start-up",
+        "DSU cover"
+      ]
+    },
+    {
       "slug": "delayed-draw-term-loan",
       "term": "delayed-draw term loan",
       "def": "A loan that is committed up front but drawn in tranches as the borrower needs cash — typically as equipment is ordered or construction milestones are hit. Common for GPU fleets and data-center builds, where spending is staged.",
@@ -2415,6 +2517,15 @@
       "slug": "delayed-neutrons",
       "term": "delayed neutrons",
       "def": "The small fraction of fission neutrons (under one percent) emitted seconds to minutes after the split rather than instantly. They are the reason a reactor responds on a human timescale and can be controlled at all."
+    },
+    {
+      "slug": "delegated-authority",
+      "term": "delegated authority",
+      "def": "A carrier's grant to an agent — a managing general agent or a Lloyd's coverholder — of the power to quote, bind and often adjust claims on the carrier's paper, inside limits and rules the carrier sets. The agent underwrites; the carrier holds the risk.",
+      "aliases": [
+        "delegated underwriting authority",
+        "binding authority"
+      ]
     },
     {
       "slug": "delivered-or-under-development",
@@ -3430,6 +3541,16 @@
       ]
     },
     {
+      "slug": "excess-layer",
+      "term": "excess layer",
+      "def": "A policy that sits above the primary property policy and pays only once losses exceed the layer beneath it. Large plants build a tower of such layers because no single insurer will carry the whole replacement value.",
+      "aliases": [
+        "excess of loss",
+        "excess cover",
+        "excess capacity"
+      ]
+    },
+    {
       "slug": "excitation",
       "term": "excitation",
       "aliases": [
@@ -3670,6 +3791,16 @@
         "FFO/Debt",
         "FFO to debt",
         "FFO leverage"
+      ]
+    },
+    {
+      "slug": "field-evaluation",
+      "term": "field evaluation",
+      "def": "An on-site inspection and test of an installed or one-off product that was not factory-certified, ending in a serialised label from a recognised evaluation agency — the route by which a custom or low-volume energy-storage installation gets an accepted mark in Canada or the United States.",
+      "aliases": [
+        "field label",
+        "SPE-1000",
+        "field evaluation agency"
       ]
     },
     {
@@ -4264,6 +4395,15 @@
       ]
     },
     {
+      "slug": "government-edicts-doctrine",
+      "term": "government edicts doctrine",
+      "def": "The US legal rule that the law cannot be copyrighted. In 2024 the Fifth Circuit applied it to hold that Canadian codes incorporated by reference into Canadian law could be reprinted in the United States without CSA's permission, even though Canadian courts had enforced CSA's copyright.",
+      "aliases": [
+        "edicts of government",
+        "Veeck doctrine"
+      ]
+    },
+    {
       "slug": "gp-fund",
       "term": "GP fund",
       "def": "A relatively small fund raised by a developer or fund manager to supply its own share — often 5–10% — of the equity in the joint ventures it forms with institutional partners. Its 'buying power' is the total project value that share can control.",
@@ -4403,6 +4543,15 @@
       "def": "Global warming potential: how much a kilogram of a gas warms the atmosphere over a period, relative to a kilogram of carbon dioxide. It is the number regulators use to rank refrigerants.",
       "aliases": [
         "global warming potential"
+      ]
+    },
+    {
+      "slug": "hail-stow",
+      "term": "hail stow",
+      "def": "Tilting a solar tracker to a steep angle ahead of a forecast hailstorm so that stones strike the glass obliquely and lose most of their energy. Its benefit depends on the stow angle, how fast the tracker moves and the stone size; underwriters reward documented stow capability with lower rates or deductibles.",
+      "aliases": [
+        "hail stow angle",
+        "stow position"
       ]
     },
     {
@@ -4885,6 +5034,15 @@
       ]
     },
     {
+      "slug": "incorporation-by-reference",
+      "term": "incorporation by reference",
+      "def": "A law or regulation adopting a privately written standard by citing it rather than reprinting it, so the standard's text becomes a legal requirement. It is how the Canadian Electrical Code, NFPA 855 and UL standards acquire legal force — and why their copyright is contested.",
+      "aliases": [
+        "incorporated by reference",
+        "adopted by reference"
+      ]
+    },
+    {
       "slug": "independent-engineer",
       "term": "independent engineer",
       "def": "The technical diligence firm lenders hire to review a project on their behalf — the design, the equipment, the contracts, the production estimate. Its report is the gate to financial close, which makes the independent engineer, not the buyer, the audience a supplier's certifications and track record ultimately have to satisfy.",
@@ -4958,6 +5116,15 @@
       "aliases": [
         "inrush current",
         "inrush surge"
+      ]
+    },
+    {
+      "slug": "insurance-capacity",
+      "term": "insurance capacity",
+      "def": "The amount of limit insurers are collectively willing to put on a risk or a class of risk. For a managing general agent, capacity is the limit its carriers allow it to bind per location; when capacity is scarce the market is 'hard' and prices rise, when abundant it is 'soft'.",
+      "aliases": [
+        "capacity (insurance)",
+        "underwriting capacity"
       ]
     },
     {
@@ -5288,6 +5455,16 @@
       ]
     },
     {
+      "slug": "laboratory-accreditation",
+      "term": "laboratory accreditation",
+      "def": "Formal recognition by an authority that a laboratory or certification body is competent to test or certify against named standards — the layer above certification. In Canada the Standards Council of Canada accredits; in the United States OSHA recognises testing laboratories and ANSI accredits certifiers.",
+      "aliases": [
+        "accredited laboratory",
+        "accreditation body",
+        "accredited certification body"
+      ]
+    },
+    {
       "slug": "land-bank",
       "term": "land bank",
       "def": "Sites a developer has bought or optioned ahead of any tenant, usually where utility capacity can be secured. Cheap to hold relative to the megawatts it can carry, and the raw material of every pipeline figure.",
@@ -5353,6 +5530,16 @@
       "def": "A transformer at transmission scale — hundreds of megavolt-amperes, custom-designed, built to order, shipped in pieces and assembled on site. Lead times run to years, and the binding constraint is test bays and skilled winders rather than steel.",
       "aliases": [
         "LPT"
+      ]
+    },
+    {
+      "slug": "large-scale-fire-test",
+      "term": "large-scale fire test",
+      "def": "A full-scale burn of a complete battery enclosure with suppression switched off, set beside neighbouring units at installation spacing, to observe whether fire propagates and what heat the neighbours receive. Distinct from UL 9540A's cell-to-installation propagation test; mandatory under NFPA 855's 2026 edition and specified by CSA C800.",
+      "aliases": [
+        "LSFT",
+        "large scale fire testing",
+        "full-scale burn test"
       ]
     },
     {
@@ -5551,6 +5738,16 @@
       ]
     },
     {
+      "slug": "lloyds-syndicate",
+      "term": "Lloyd's syndicate",
+      "def": "A pool of capital at Lloyd's of London that underwrites risks through a managing agent for one year at a time. Syndicates participate on layers of large placements and, through coverholders, delegate authority to agents such as renewables MGAs.",
+      "aliases": [
+        "Lloyd's",
+        "syndicate at Lloyd's",
+        "Lloyd's coverholder"
+      ]
+    },
+    {
       "slug": "lmfp",
       "term": "LMFP",
       "def": "Lithium manganese iron phosphate: lithium iron phosphate with manganese added to raise cell voltage and so energy density, while keeping most of the cost and stability advantages. It sits between standard iron-phosphate and nickel chemistries.",
@@ -5719,6 +5916,14 @@
       ]
     },
     {
+      "slug": "loss-ratio",
+      "term": "loss ratio",
+      "def": "Claims paid divided by premium earned over a period — the underwriter's report card. A book with a loss ratio persistently above what the carrier priced for loses its capacity at renewal.",
+      "aliases": [
+        "loss ratios"
+      ]
+    },
+    {
       "slug": "low-delta-t-syndrome",
       "term": "low delta-T syndrome",
       "def": "The chronic plant failure in which return water comes back too cool, so the plant must move far more water for the same cooling and stages on chillers it does not need. Almost always caused downstream, at coils and valves, not at the chiller.",
@@ -5824,6 +6029,16 @@
       "def": "The annual fee a fund manager charges investors on committed or invested capital — typically 1–2% — to run the firm regardless of performance.",
       "aliases": [
         "annual management fee"
+      ]
+    },
+    {
+      "slug": "managing-general-agent",
+      "term": "managing general agent",
+      "def": "A specialist underwriting agency that prices and binds insurance on a carrier's paper under delegated authority, paid by commission and sometimes a profit share, and holding no insurance risk on its own balance sheet. It sells expertise the carrier does not want to staff.",
+      "aliases": [
+        "MGA",
+        "managing general underwriter",
+        "MGU"
       ]
     },
     {
@@ -5999,6 +6214,15 @@
       "term": "Miller Act",
       "def": "A US law requiring contractors on federal construction projects to post payment and performance bonds, so subcontractors and suppliers have a surety to claim against if they are not paid. Because bonds are public, the resulting court records reveal which sureties back a private contractor.",
       "aliases": []
+    },
+    {
+      "slug": "mini-perm",
+      "term": "mini-perm",
+      "def": "A construction-plus-a-few-years loan that must be refinanced after a short term (often five to seven years) rather than amortising over the asset's life. Hedges and puts that lift debt 'during the mini-perm period' are sized to that first refinancing.",
+      "aliases": [
+        "mini-perm loan",
+        "miniperm"
+      ]
     },
     {
       "slug": "minimum-demand-charge",
@@ -6807,6 +7031,16 @@
       ]
     },
     {
+      "slug": "p99",
+      "term": "P-99",
+      "def": "The output level a wind or solar plant is expected to exceed 99 years in 100 — the deep downside case a lender sizes debt to when it wants near-certainty. A parametric hedge that adds cash flow above the P99 wind speed raises the floor the lender counts.",
+      "aliases": [
+        "p99",
+        "p-99",
+        "P99 case"
+      ]
+    },
+    {
       "slug": "paid-in-kind",
       "term": "paid-in-kind",
       "def": "A dividend or interest payment settled by increasing the amount owed rather than by paying cash. It preserves cash today at the cost of a claim that compounds, so a paid-in-kind preferred stake grows its share of the company for as long as it goes unpaid.",
@@ -6829,6 +7063,16 @@
         "paralleling",
         "paralleling gear",
         "paralleling controls"
+      ]
+    },
+    {
+      "slug": "parametric-insurance",
+      "term": "parametric insurance",
+      "def": "Cover that pays a pre-agreed amount when a measured index — wind speed, rainfall, an earthquake magnitude — crosses a threshold, rather than reimbursing an adjusted loss. Fast and objective, but it carries basis risk: the index can trigger without a loss, or a loss can occur without the index moving.",
+      "aliases": [
+        "parametric cover",
+        "parametric hedge",
+        "index insurance"
       ]
     },
     {
@@ -7507,6 +7751,16 @@
       "def": "The laboratory test that establishes the maximum dry density a given soil can reach and the moisture content at which it reaches it. Field compaction is then specified as a percentage of that number."
     },
     {
+      "slug": "product-listing",
+      "term": "product listing",
+      "def": "A certification body's public record that a specific product model has been tested to a standard and is under its surveillance, allowing the manufacturer to apply the body's mark. 'UL 9540 listed' means a laboratory has certified the system to that standard, not that it has been fire-tested at installation scale.",
+      "aliases": [
+        "listing",
+        "listed product",
+        "UL listed"
+      ]
+    },
+    {
       "slug": "productivity-factor",
       "term": "productivity factor",
       "def": "The ratio of planned hours to hours actually earned against installed quantity, tracked weekly. Because it measures work in place rather than time elapsed, it is the earliest honest signal a project gives — a job can look on schedule and be consuming its margin, and this is where that shows first."
@@ -7577,6 +7831,15 @@
       "def": "A rule that makes adding a block to a blockchain expensive on purpose: computers race to find a number that, when hashed with the block's data, produces an output below a target. There is no shortcut — only guessing — so the work is a real cost that an attacker would also have to pay.",
       "aliases": [
         "PoW"
+      ]
+    },
+    {
+      "slug": "proxy-revenue-swap",
+      "term": "proxy revenue swap",
+      "def": "A hedge in which a counterparty pays a wind or solar project a fixed amount and receives the project's proxy revenue — a formula of measured resource times price — so that both resource and price risk are swapped away. A parametric wind hedge is the resource-only cousin.",
+      "aliases": [
+        "proxy revenue hedge",
+        "PRS"
       ]
     },
     {
@@ -7994,6 +8257,16 @@
       "aliases": [
         "lag",
         "recovery lag"
+      ]
+    },
+    {
+      "slug": "reinsurance",
+      "term": "reinsurance",
+      "def": "Insurance bought by insurers: a reinsurer takes a share of a carrier's risk in exchange for a share of its premium, spreading catastrophe exposure across the global market. Named reinsurers behind a programme are a signal of its capacity and its credit quality.",
+      "aliases": [
+        "reinsurer",
+        "reinsurers",
+        "reinsurance capacity"
       ]
     },
     {
@@ -8663,6 +8936,16 @@
       ]
     },
     {
+      "slug": "severe-convective-storm",
+      "term": "severe convective storm",
+      "def": "A thunderstorm complex producing large hail, straight-line wind or tornadoes — the peril class that has driven the largest share of insured losses in the United States since 2020 and the one that prices utility-scale solar. Named windstorms (hurricanes) are treated as a separate peril.",
+      "aliases": [
+        "SCS",
+        "convective storm",
+        "severe convective storms"
+      ]
+    },
+    {
       "slug": "sf6",
       "term": "SF6",
       "def": "Sulphur hexafluoride: an exceptionally good electrical insulator and arc quencher, and one of the most potent greenhouse gases known. That combination is why it is used at all and why its leak rate is regulated.",
@@ -9100,6 +9383,16 @@
       ]
     },
     {
+      "slug": "standards-development-organization",
+      "term": "standards development organization",
+      "def": "A body accredited to write standards through a balanced consensus process — CSA Group, UL Standards & Engagement, NFPA, IEC, ISO. It is distinct from the laboratory that tests to the standard and from the government that adopts it, though one organisation can hold more than one role.",
+      "aliases": [
+        "SDO",
+        "standards developer",
+        "standards body"
+      ]
+    },
+    {
       "slug": "standby-rating",
       "term": "standby rating",
       "def": "The generator rating for carrying a varying load only while the normal supply is out, for a limited number of hours a year and with no overload allowance. It is the highest kilowatt number the same engine will carry — and the one a data center's backup fleet is bought against, which is why a standby set cannot simply be re-labelled prime.",
@@ -9372,6 +9665,17 @@
       ]
     },
     {
+      "slug": "surplus-lines",
+      "term": "surplus lines",
+      "def": "Insurance placed with a carrier that is not licensed (admitted) in the buyer's state, allowed for risks the admitted market will not write, through a specially licensed broker or agent. Freer on price and terms, but surplus-lines carriers do not participate in state guaranty funds.",
+      "aliases": [
+        "surplus lines insurance",
+        "non-admitted",
+        "excess and surplus lines",
+        "E&S"
+      ]
+    },
+    {
       "slug": "switchgear",
       "term": "switchgear",
       "def": "The assemblies of breakers, switches, and protective relays that route power and isolate faults at a substation or in a power room. It is where the electrical system decides which circuits go dark when something fails — and, built into factory-tested skids, it is how much of a data center's power room now arrives on site.",
@@ -9589,6 +9893,15 @@
       ]
     },
     {
+      "slug": "technical-specification",
+      "term": "technical specification",
+      "def": "A standards body's interim document — prepared by a task group rather than approved by a full technical committee — published quickly to fill a gap until a consensus standard exists. CSA TS-800:24 was one; CSA C800:25 is the consensus standard that replaced it.",
+      "aliases": [
+        "TS",
+        "interim specification"
+      ]
+    },
+    {
       "slug": "telecommunications-hotel",
       "term": "telecommunications hotel",
       "def": "An older land-use category, written for switching and carrier buildings, under which some cities still classify data centers. Where it survives, a campus can be approved by staff or a planning commission without the council vote a new category would require.",
@@ -9627,6 +9940,16 @@
         "forecast test year",
         "future test year",
         "test-year convention"
+      ]
+    },
+    {
+      "slug": "testing-inspection-certification",
+      "term": "testing, inspection and certification",
+      "def": "The industry of independent laboratories and certifiers — UL Solutions, Intertek, SGS, Bureau Veritas, TÜV, DEKRA, CSA Group's commercial arm — that tests products, inspects installations and issues the certificates and marks that markets and regulators accept.",
+      "aliases": [
+        "TIC",
+        "TIC industry",
+        "conformity assessment"
       ]
     },
     {
@@ -10460,6 +10783,16 @@
         "bus bracing",
         "momentary rating",
         "short-time withstand"
+      ]
+    },
+    {
+      "slug": "witnessed-manufacturer-testing",
+      "term": "witnessed manufacturer testing",
+      "def": "A certification arrangement in which the manufacturer's own laboratory runs the tests while the certification body's engineer witnesses them, so the results count toward certification without shipping samples to the certifier's lab. Used with large Asian cell and system makers.",
+      "aliases": [
+        "WMTC",
+        "witnessed testing",
+        "authorized testing laboratory"
       ]
     },
     {
