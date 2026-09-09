@@ -1,0 +1,1357 @@
+{
+ "schemaVersion": 7,
+ "slug": "intertek",
+ "name": "Intertek Group plc",
+ "shortName": "Intertek",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://www.intertek.com",
+ "headquarters": "London, United Kingdom",
+ "founded": 1885,
+ "employees": "44,000+ (12,000+ auditors, inspectors and technical staff)",
+ "ownership": {
+  "type": "public",
+  "ticker": "LSE: ITRK",
+  "notes": "Still publicly listed and trading as of 2026-09-09, and being taken private on a shareholder-approved scheme that has not yet been sanctioned. A recommended final cash offer from Isotope Bidco Limited at £60.00 per share plus the retained 107.7p FY2025 final dividend — £61.077 in total, about £9.5bn of equity value on £10.9bn enterprise value — was announced 2026-06-18 and approved at the Court Meeting and General Meeting on 2026-08-06 with 98.72 per cent of votes cast in favour. Court sanction is expected in Q4 2026 or Q1 2027, followed by suspension of trading at 07:30 on D+2, the Effective Date on D+2 and cancellation of listing by 08:00 on D+3; the long-stop is 23:59 on 2027-06-18. At completion the EQT Group is expected to own 76 per cent, Luxinva — a wholly owned subsidiary of the Abu Dhabi Investment Authority — 16 per cent and Mubadala 8 per cent, with a co-investment layer of about 25.9 per cent sitting inside those figures. 153,931,794 ordinary shares are in issue."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Intertek is a fifth-ranked global testing and inspection group being taken private by EQT at a price three independent benchmarks call fair-to-cheap, and its most valuable asset for this corpus — Intertek CEA, which audits battery factories for the people buying from them — sits in the half of the company that both the board and the buyer have said they intend to separate.\n\n**BACKGROUND.** London-headquartered testing, inspection and certification group of more than 135 years' standing, reporting through five divisions — Consumer Products, Corporate Assurance, Health and Safety, Industry and Infrastructure, and World of Energy — from over 1,000 locations in more than 100 countries with about 44,000 staff and 1,000 laboratories. FY2025 revenue was £3,431.6m, up 3.9 per cent like-for-like at constant currency, with adjusted operating profit of £619.6m at an 18.1 per cent margin and adjusted diluted earnings of 253.5p. H1 2026 revenue was £1,771.3m, up 4.9 per cent like-for-like, at a 17.5 per cent margin — with no interim dividend, because the offer terms would have deducted it from the cash consideration. The company announced a plan on 2026-04-14 to split itself in two, paused it on 2026-05-13 to let EQT in, and Bidco has said it intends to recommence the review about twelve months after completion.",
+ "ecosystemRole": "The other half of the assurance duopoly this corpus's battery chain runs through, and the one that reaches a project from the buyer's side rather than the manufacturer's. Its laboratory business issues the ETL and cETL marks against standards other bodies write — UL 9540, UL 9540A and UL 1973 belong to UL Standards & Engagement, IEC 62619 and IEC 62933-5-2 to the IEC — out of a battery centre of excellence at Cortland, New York. Its distinctive contribution, though, is Intertek CEA: the solar and storage quality-assurance business bought as Clean Energy Associates in 2022 and renamed in October 2025, which audits cell, module and integration factories to a 400-point checklist, monitors the line to 280 inspection points, witnesses factory acceptance tests, inspects before shipment and watches the containers load — for the developers, EPCs, IPPs and financiers buying the equipment. That is an owner's-engineer function in everything but the contractual title, and it is the reason a market assessment naming UL Solutions and Intertek as the two leading players in battery-storage TIC describes them as pursuing different strategies. Two things bound the position. Intertek's OSHA recognition for UL 9540 arrived only on 2025-08-22, four and a half years after it applied, so for most of the period this corpus covers it was a second source for conformity assessment but not for OSHA-recognised listing. And the division that holds CEA is the one being sold.",
+ "productsAndServices": [
+  {
+   "name": "Intertek CEA — solar and energy-storage quality assurance",
+   "category": "Supply-chain assurance",
+   "description": "The business Intertek bought in 2022 as Clean Energy Associates and renamed Intertek CEA in October 2025, and the part of the group that sits inside a battery project rather than inside a laboratory. It is a buyer-side assurance practice for solar and storage: it audits the factory before production, monitors the line during it, witnesses the factory acceptance test, inspects before shipment, watches the containers load, tracks the shipment, and then inspects the plant once it is operating — and it sells price forecasting and supplier intelligence to the same buyers. It sits in the World of Energy division, the half of the group the paused demerger would have separated.",
+   "highlights": [
+    "Seven service families: supply chain management, quality assurance, engineering and field testing, field inspection, market intelligence, ESG and traceability, and PV recycling verification",
+    "Pre-production factory audits run to a 400-plus-point checklist for battery storage, covering quality policy, facility certifications, R&D capability, laboratory management, raw-material control, production process and logistics",
+    "Inline production process monitoring runs 280-plus inspection points with weekly reports ranked by severity, at a cadence adjustable up to 24/7",
+    "Factory acceptance test witnessing covers functional and performance test verification, thermal imaging, laboratory oversight and pre-shipment inspection",
+    "Traceability reaches upstream to the source of raw materials including mines — polysilicon, lithium, graphite, copper and aluminium — against UFLPA and FEOC exposure, aligned to the Solar Energy Industries Association protocol",
+    "Its Global Energy Storage Manufacturing Quality Report 2026 found that more than one in eight inspected storage units carried a safety-critical issue in the battery management system, thermal management or water ingress"
+   ],
+   "positioning": "The differentiator against UL Solutions is not laboratory depth but position: CEA is engaged by the developer, integrator, IPP or financier buying the equipment, not by the manufacturer selling it. MarketsandMarkets' July 2026 assessment of battery-storage TIC names UL Solutions and Intertek as the leading key players and frames the competition as two strategies — battery-specific technical specialisation against lifecycle project assurance extending beyond the laboratory into procurement and asset operations. Intertek is the second of those. CEA performs the substantive functions of an owner's or independent engineer — technical and acquisition due diligence, design review, installation audit, performance forensics — but no first-party page uses either contractual title, so the functional equivalence is sourced and the title is not.",
+   "soldThrough": "Direct, on subscription for the research products and on engagement for the audit and inspection work",
+   "targetSegments": [
+    "Project developers",
+    "EPCs",
+    "IPPs",
+    "Financial institutions and investors",
+    "Integrators procuring battery energy storage systems"
+   ],
+   "roadmap": "Quarterly research cadence continues: the ESS and PV Price Forecasting Reports, the ESS Supply, Technology and Policy Report, the ESS Supplier Market Intelligence Report and the Supplier Market Intelligence Program covering PV module makers, battery cell manufacturers and ESS integrators."
+  },
+  {
+   "name": "Energy-storage and battery testing and certification",
+   "category": "Testing and certification",
+   "description": "Intertek's laboratory-side battery work, sold under the ETL and cETL marks and run out of a battery centre of excellence at Cortland, New York. It tests to standards written by other bodies — UL 9540, UL 9540A, UL 9540B and UL 1973 are UL Standards & Engagement documents and IEC 62619 and IEC 62933-5-2 are IEC documents — which is the defining structural fact of the business: Intertek issues a certification mark against someone else's rules.",
+   "highlights": [
+    "Tests to UL 9540, UL 9540A, UL 9540B, IEC 62933-5-2, UL 1973, IEC 62619 and other industry standards, plus performance, environmental, grid-compliance, functional-safety and fire and thermal-propagation testing",
+    "UL 9540A offered at cell, module and unit level",
+    "The Cortland, New York laboratory is described as a centre of excellence for battery energy storage testing, from thermal-runaway assessment through full-scale fire propagation analysis, part-funded by a USD 300,000 Empire State Development grant contracted in July 2022",
+    "OSHA added UL 9540 to Intertek's NRTL scope on 2025-08-22, four and a half years after the application of 2021-02-15",
+    "UL 6200, Controllers for Use in Power Production, was added to the NRTL scope on 2026-08-21 with no on-site review required",
+    "Publishes installation-side guidance on NFPA 855 fire mitigation alongside the test work"
+   ],
+   "positioning": "Second source rather than default. The standards the market names are UL-numbered, so the certifier with the same initials as the standard starts every conversation ahead; Intertek competes on price, turnaround and the breadth of the surrounding service. The four-and-a-half-year wait for UL 9540 NRTL scope is the concrete cost of that position: through the fastest part of the US storage build-out Intertek could issue an ETL certification to UL 9540 but not an NRTL certification to it, a distinction three parties formally complained to OSHA about in 2025 and which OSHA resolved in Intertek's favour.",
+   "soldThrough": "Direct to manufacturers and integrators",
+   "targetSegments": [
+    "Battery cell and module manufacturers",
+    "System integrators",
+    "Inverter and PCS makers"
+   ],
+   "roadmap": "Published guidance on the sixth edition of UL 9540A on 2026-03-23, ten days after the edition itself, positioning Cortland for the revised thermal-runaway, fire-propagation and explosion-risk evaluations."
+  },
+  {
+   "name": "Consumer Products — including Electrical & Connected World",
+   "category": "Testing and certification",
+   "description": "The largest and by far the most profitable division: FY2025 revenue of GBP 983.4m at a 30.4% adjusted operating margin, growing 6.3% like-for-like at constant currency. It holds softlines and hardlines consumer-goods testing, Government and Trade Services, and Electrical & Connected World — the electrical product-safety, EMC and performance business that carries the ETL Mark and the historic ETL SEMKO operation.",
+   "highlights": [
+    "FY2025 revenue GBP 983.4m at a 30.4% margin; H1 2026 GBP 504.6m at 29.4%, up 5.3% like-for-like",
+    "ETL SEMKO operates more than thirty offices and laboratories on six continents",
+    "Intertek is one of twenty OSHA-recognised NRTLs and operates 33 OSHA-recognised laboratories",
+    "Accredited by the Standards Council of Canada as both a testing organisation and a certification body, which is what the c in cETL denotes",
+    "An IECEE CB Scheme National Certification Body, with ISO/IEC 17025 accredited facilities in North America, Europe and Asia",
+    "The ETL Component Certification Programme, launched February 2026, certifies power supplies, switches and control modules so component approvals carry into finished-product certification"
+   ],
+   "positioning": "Intertek's own marketing runs a dedicated page arguing that the UL mark is not necessary and that ETL is equivalent, which is the clearest statement of the commercial position available: the ETL Mark is legally equivalent to the UL Mark for OSHA purposes and is sold as the cheaper, faster route to the same regulatory outcome. Independent compliance literature reports ETL at 25 to 50 per cent below UL pricing on comparable work. Whether ETL is the number-two mark in North America by volume is widely asserted and nowhere measured: OSHA does not publish NRTL market shares, and every share figure in circulation comes from a compliance consultancy with a commercial interest in the answer.",
+   "soldThrough": "Direct to manufacturers, brands and retailers",
+   "targetSegments": [
+    "Electrical and electronic manufacturers",
+    "Retailers and brands sourcing consumer goods",
+    "Importers needing market access"
+   ],
+   "roadmap": "The 2026 guidance cut on this division — from high-single-digit to mid-single-digit like-for-like growth — is the sharpest in the group and the proximate cause of the March 2026 de-rating."
+  },
+  {
+   "name": "World of Energy — Caleb Brett and Transportation Technologies",
+   "category": "Inspection and testing",
+   "description": "The cargo and fuels half of the energy division. Intertek Caleb Brett is the commodity inspection business — quantity and quality determination on oil, chemicals, minerals and agricultural cargoes at the point of transfer — and Transportation Technologies is the fuels and lubricants testing operation. Together with Intertek CEA this is the division that shrank 1.3% like-for-like in FY2025 and whose margin fell from 10.2% to 8.7%, then to 6.9% in H1 2026.",
+   "highlights": [
+    "FY2025 revenue GBP 729.0m, the only division to decline, at an 8.7% margin against the group's 18.1%",
+    "H1 2026 revenue GBP 358.9m, up 0.3% like-for-like, at a 6.9% margin — the only division to lose margin in the half",
+    "Intertek's own framing: a partner to the energy industry in wind, solar, hydro, energy storage, carbon capture and hydrogen for more than 135 years",
+    "Renewable-energy integration work includes more than twenty years of studying power-plant cycling costs, sold to utilities and regulators for rate cases and resource valuation"
+   ],
+   "positioning": "The commodity-inspection majors are SGS and Bureau Veritas, both larger and both weighted toward minerals and cargo work; no independent ranking places Intertek's cargo business against theirs. This division is roughly 46% of group revenue with about 27% of group profit when combined with Industry and Infrastructure, which is the arithmetic behind both the break-up plan and the buyout.",
+   "soldThrough": "Direct, at ports, terminals and refineries",
+   "targetSegments": [
+    "Oil and chemical traders",
+    "Refiners and terminal operators",
+    "Miners and agricultural shippers",
+    "Utilities and regulators"
+   ],
+   "roadmap": "Under the paused Strategic Review this division would have been separated into Intertek Energy & Infrastructure; Bidco has stated it intends to recommence the review about twelve months after the scheme becomes effective."
+  },
+  {
+   "name": "Corporate Assurance, Health and Safety, Industry and Infrastructure",
+   "category": "Assurance and inspection",
+   "description": "The remaining three of the five divisions. Corporate Assurance holds Business Assurance and Assuris — management-system certification, supply-chain audit and social compliance. Health and Safety holds AgriWorld, Food, and Chemicals and Pharma. Industry and Infrastructure holds Industry Services, Minerals and Building and Construction.",
+   "highlights": [
+    "Corporate Assurance is the fastest-growing division: FY2025 revenue GBP 514.0m up 6.8% like-for-like, H1 2026 GBP 276.4m up 10.0%, at a 22.3% margin",
+    "Industry and Infrastructure delivered the largest margin gain in H1 2026, from 8.7% to 11.0% on revenue of GBP 437.8m",
+    "Health and Safety is the smallest and lowest-margin of the three at GBP 347.1m and 13.0% in FY2025, improving to 13.9% in H1 2026",
+    "Data-centre services span design, build and commissioning, evaluating facilities under electrical load, thermal demand, environmental conditions and ICT requirements, and are sold to owners, developers, architects, engineers, contractors and operators"
+   ],
+   "positioning": "Social-compliance auditing sits inside Corporate Assurance and is also where the group's sharpest liabilities sit: a London High Court claim brought by 130 Burmese migrant workers turns on whether Intertek's audits of a Thai garment factory were negligent, and Global Standard partially suspended Intertek Testing Services NA as a GOTS-approved certification body in July 2024 over what it called serious lapses, with no reinstatement notice located.",
+   "soldThrough": "Direct, on multi-year audit and certification programmes",
+   "targetSegments": [
+    "Retailers and brand owners",
+    "Food and agricultural producers",
+    "Chemical and pharmaceutical manufacturers",
+    "Industrial and infrastructure asset owners",
+    "Data-centre owners and operators"
+   ],
+   "roadmap": "These three divisions plus nothing else would have formed Intertek Testing & Assurance under the paused separation: GBP 1,844.4m of FY2025 revenue at a 25.0% margin, against Energy & Infrastructure's GBP 1,587.2m at 10.0%."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Intertek CEA — battery energy storage quality assurance",
+   "specs": [
+    {
+     "band": "Audit scope",
+     "label": "Pre-production factory audit checklist",
+     "value": "400+ point checklist for BESS, covering quality policies, administrative practices, facility certifications, R&D capability, laboratory management, raw-material controls, production processes and logistics"
+    },
+    {
+     "band": "Audit scope",
+     "label": "Inline production process monitoring",
+     "value": "280+ inspection points, with comprehensive weekly reports detailing every issue and risk identified according to severity; cadence adjustable up to 24/7"
+    },
+    {
+     "band": "Audit scope",
+     "label": "Factory acceptance test witnessing",
+     "value": "functional test verification; performance test verification; thermal imaging tests; lab testing oversight; and pre-shipment inspection"
+    },
+    {
+     "band": "Audit scope",
+     "label": "Container loading monitoring",
+     "value": "comprehensive details covering every container, seal, and pallet number with accompanying photos"
+    },
+    {
+     "band": "Coverage",
+     "label": "Battery storage factories audited",
+     "value": "90+ ESS factories worldwide"
+    },
+    {
+     "band": "Coverage",
+     "label": "PV inspections performed",
+     "value": "80,000+ inspections across 340+ PV factories over nine years"
+    },
+    {
+     "band": "Coverage",
+     "label": "Production facilities engaged",
+     "value": "over 350"
+    },
+    {
+     "band": "Findings",
+     "label": "2025 defect rate",
+     "value": "more than 1 in 8 inspected ESS units had safety-critical issues relating to the battery management system, thermal management, or water ingress"
+    }
+   ],
+   "notes": "Figures are Intertek CEA's own, published on intertekcea.com — the only Intertek web property that answered this session. The defect rate comes from the Global Energy Storage Manufacturing Quality Report 2026 and describes units CEA inspected, which is a self-selected population of projects whose buyers commissioned an inspection; it is not a market-wide defect rate. CEA's about page renders its aggregate GW and GWh statistics as '0+' — those figures are not actually published and none is quoted here."
+  },
+  {
+   "product": "Energy-storage testing and certification (Intertek laboratories)",
+   "specs": [
+    {
+     "band": "Standards",
+     "label": "Battery and storage standards tested to",
+     "value": "UL 9540, UL 9540A, UL 9540B, IEC 62933-5-2, UL 1973, IEC 62619, and other industry standards"
+    },
+    {
+     "band": "Standards",
+     "label": "What UL 9540B actually is",
+     "value": "an Outline of Investigation for Large-Scale Fire Test for Residential Battery Energy Storage Systems, published 2024-05-10 — not a published safety standard, and scoped to residential systems only: its own requirements do not cover energy storage systems intended for non-residential use, commercial use, or industrial use that are greater than 20 kWh"
+    },
+    {
+     "band": "Standards",
+     "label": "UL 9540A test levels offered",
+     "value": "cell level test, module level test and unit level test"
+    },
+    {
+     "band": "Regulatory scope",
+     "label": "UL 1973 added to the NRTL scope",
+     "value": "2024-04-24, alongside UL 2271 (batteries for light electric vehicles), UL 2524 (in-building two-way emergency radio) and UL 2743 (portable power packs)"
+    },
+    {
+     "band": "Regulatory scope",
+     "label": "UL 9540 added to the NRTL scope",
+     "value": "2025-08-22, effective immediately — Energy Storage Systems and Equipment, added to the scope of Intertek Testing Services NA, Inc."
+    },
+    {
+     "band": "Regulatory scope",
+     "label": "Application-to-grant interval for UL 9540",
+     "value": "applied 2021-02-15; granted 2025-08-22 — four and a half years, with an OSHA on-site review of the Cortland facility on 2024-04-14/16 that found nonconformances with 29 CFR 1910.7, which Intertek addressed sufficiently"
+    },
+    {
+     "band": "Regulatory scope",
+     "label": "UL 9540A is not and cannot be NRTL-scoped",
+     "value": "no NRTL recognition notice in the Federal Register mentions UL 9540A — NRTLs are recognised to certify products against safety standards, and UL 9540A is a test method rather than a certification standard, so the commercial testing Intertek performs to it is not NRTL-scoped work for any laboratory"
+    },
+    {
+     "band": "Regulatory scope",
+     "label": "UL 1741",
+     "value": "no Intertek recognition notice located; the NRTL recognitions to UL 1741 in the Federal Register belong to Curtis-Straus, SGS, QPS and Japan Electrical Safety & Environment Technology Laboratories. Federal Register full-text indexing may not reach pre-2000 grants, so this is not evidenced rather than proven absent"
+    },
+    {
+     "band": "Regulatory scope",
+     "label": "Most recent scope expansion",
+     "value": "UL 6200, Controllers for Use in Power Production, granted 2026-08-21 with no on-site review and no comments received"
+    },
+    {
+     "band": "Facilities",
+     "label": "Flagship battery laboratory",
+     "value": "Cortland, New York — a Center of Excellence for testing of Battery Energy Storage Systems offering a comprehensive range of tests from cell level to unit level, from thermal runaway assessment to full-scale fire propagation analysis"
+    },
+    {
+     "band": "Facilities",
+     "label": "Cortland public funding",
+     "value": "USD 300,000 Empire State Development grant, CFA #112747, contract executed 2022-07-20"
+    },
+    {
+     "band": "Facilities",
+     "label": "OSHA-recognised testing laboratories",
+     "value": "33 across North America, Europe and Asia (Intertek's own figure; OSHA publishes the cumulative site list only on a page that did not answer this session, so the count is unverified)"
+    }
+   ],
+   "notes": "Read this table before writing that Intertek is simply a second source to UL Solutions, because the record is time-dependent and narrower than the claim. The ETL Mark is not one thing: Intertek issues it both as an NRTL certification, which carries the word NRTL on the Authorization to Mark, and as a private certification mark outside its NRTL scope, which does not. For UL 9540 every ETL and cETL mark issued before 2025-08-22 was the second kind. Two commenters put exactly that to OSHA during the comment period, attaching a product description and a certification directory and alleging 113 certificates issued without the accreditation; OSHA established that Intertek had not referenced the NRTL programme in its quotes or authorizations, that the example certifications did not reference NRTL, that the certifications were therefore not NRTL certifications and that Intertek had not misrepresented its scope, and took no further action. So the marks were legitimate and the complaint was dismissed — and the equivalence claim is still only true for UL 9540 from 2025-08-22, for UL 1973 from 2024-04-24, never for UL 9540A, and not on the evidence for UL 1741."
+  },
+  {
+   "product": "Group scale",
+   "specs": [
+    {
+     "band": "People",
+     "label": "Employees",
+     "value": "44,000+ — though Intertek's own pages also render 43,000 and over 45,000, so the company is not internally consistent on its own headcount"
+    },
+    {
+     "band": "People",
+     "label": "Auditors, inspectors and technical personnel",
+     "value": "12,000+"
+    },
+    {
+     "band": "Footprint",
+     "label": "Laboratories",
+     "value": "1,000 test labs"
+    },
+    {
+     "band": "Footprint",
+     "label": "Locations",
+     "value": "over 1,000"
+    },
+    {
+     "band": "Footprint",
+     "label": "Countries",
+     "value": "100+"
+    },
+    {
+     "band": "Throughput",
+     "label": "Inspections and technical visits a year",
+     "value": "340,000+"
+    },
+    {
+     "band": "Market position",
+     "label": "Global TIC revenue rank",
+     "value": "5th of ten, at USD 4,619m, behind SGS (8,758), Eurofins (8,567), Bureau Veritas (7,845) and DEKRA (5,045) and ahead of TUV SUD (4,029), TUV Rheinland (3,189) and UL Solutions (3,106)"
+    },
+    {
+     "band": "Market position",
+     "label": "Revenue per employee",
+     "value": "approximately USD 105,000, against UL Solutions' approximately USD 200,000"
+    },
+    {
+     "band": "Market position",
+     "label": "Age",
+     "value": "more than 135 years"
+    }
+   ],
+   "notes": "The Aventis Advisors ranking of 2026-05-11 is the only source located that ranks the TIC majors on a single stated measure with a stated methodology. Its USD 4,619m for Intertek does not tie to the reported FY2025 revenue of GBP 3,431.6m at prevailing rates, so the rank order is the finding and the absolute figure is indicative. The ranking omits DNV, CSA Group, TUV NORD, Element and Kiwa, for which no independent revenue ranking against this set was located."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-13",
+   "category": "market",
+   "headline": "Intertek CEA publishes its Q2 2026 ESS Price Forecasting Report, finding that 587Ah-class cells lift module- and rack-level energy density 60-80% while cell-level density gains only about 20%",
+   "read": "The research arm is the part of Intertek that speaks publicly about the battery market, and it speaks as a price forecaster rather than as a certifier — a different seat from the laboratory.",
+   "source": "https://www.intertekcea.com/cea-blog/ess-price-forecasting-report-q2-2026"
+  },
+  {
+   "date": "2026-08-06",
+   "category": "corporate",
+   "headline": "Court Meeting and General Meeting approve the Isotope Bidco scheme with 98.72% of votes cast in favour at both",
+   "read": "A 98.72% vote with 1.28% against removes shareholder opposition as a completion risk; what remains is the court and the regulators.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/results-of-court-meeting-and-general-meeting/9709222"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "financial",
+   "headline": "H1 2026 results: revenue £1,771.3m (+4.9% like-for-like at constant currency), adjusted operating profit £309.7m (+12.4%), margin 17.5% — and no interim dividend",
+   "read": "Guidance was maintained rather than withdrawn, so the only visible effect of the takeover on the accounts is the dividend the offer terms forbid.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/half-year-financial-report/9697054"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "financial",
+   "headline": "Bidco's Interim Facilities Agreement amended and restated to admit thirteen additional lenders alongside the five original mandated lead arrangers",
+   "read": "Eighteen banks on an interim facility is a syndication being built out, which is what a sponsor does when it expects to close.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/update-on-bidco-financing-arrangements/9699282"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "corporate",
+   "headline": "Scheme document published, setting the Court Meeting and General Meeting for 6 August 2026 and a Court sanction hearing expected in Q4 2026 or Q1 2027",
+   "read": "The timetable is expressed relative to an undated sanction hearing, so every downstream date — last trading day, suspension, delisting — floats with the court's diary.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/publication-of-scheme-document/9668964"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "ma",
+   "headline": "Recommended final cash offer from Isotope Bidco Limited at £60.00 per share plus the retained 107.7p FY2025 final dividend — £61.077 in total, about £9.5bn of equity value and £10.9bn enterprise value, a 59% premium to the undisturbed price",
+   "read": "Declaring the offer final under the Takeover Code closed off a raise, which is why the fourth bid was the last one.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/recommended-final-cash-offer/9625392"
+  },
+  {
+   "date": "2026-05-21",
+   "category": "leadership",
+   "headline": "Steve Mogford becomes Chairman as Andrew Martin steps down after about ten years; Gurnek Bains also leaves the board after nine years",
+   "read": "A chairman seventeen months into his own board tenure inherits the defence of a bid that arrived seven weeks earlier.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/directorate-change/9580566"
+  },
+  {
+   "date": "2026-05-20",
+   "category": "corporate",
+   "headline": "AGM passes all 23 resolutions; the 107.7p final dividend is approved with 99.91% support and Deloitte LLP is appointed auditor with 100%",
+   "read": "The 107.7p approved here is the same dividend the offer lets shareholders keep, so the AGM vote fixed part of the consideration.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/result-of-agm/9578391"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "ma",
+   "headline": "Board says it would be minded to recommend EQT's fourth proposal of £60.00 plus up to 107.7p, grants confirmatory due diligence, and pauses the standalone Strategic Review",
+   "read": "Pausing the demerger to let the bidder in is the moment the two futures stopped being alternatives and became sequential.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/statement-re-final-proposal-from-eqt/9565920"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "ma",
+   "headline": "Intertek confirms it received an unsolicited indicative proposal from EQT at £51.50 per share on 10 April and rejected it on 13 April as fundamentally undervaluing the company",
+   "read": "The rejected first bid is the floor of the negotiation; the agreed price is 16.5% above it.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/statement-re-possible-offer/9524033"
+  },
+  {
+   "date": "2026-04-14",
+   "category": "corporate",
+   "headline": "Strategic Review proposes separating Intertek into two listed ATIC businesses — Intertek Testing & Assurance (£1.9bn revenue) and Intertek Energy & Infrastructure (£1.6bn) — by sale or demerger, to be concluded by mid-2027",
+   "read": "The company's own answer to its rating was to split itself; the offer that arrived four days earlier is the alternative answer to the same question.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/strategic-review-initiation-trading-statement/9518185"
+  },
+  {
+   "date": "2026-04-10",
+   "category": "leadership",
+   "headline": "Laura Crespi, previously Regional CFO for Europe, Middle East and Africa, is promoted to Group Chief Financial Officer; Colm Deasy moves to Executive Vice President, Asia Pacific, based in Vietnam",
+   "read": "The finance chief changed in the same week the first bid arrived, so the entire defence was run by a CFO in her first month.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/strategic-review-initiation-trading-statement/9518185"
+  },
+  {
+   "date": "2026-04-10",
+   "category": "ma",
+   "headline": "Acquisition of a solar PV laboratory in Ahmedabad from Mitsui Chemicals India for £1.0m",
+   "read": "A third small solar-and-electrical bolt-on in ten weeks — the buying pattern is granular and pointed at the energy transition.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/half-year-financial-report/9697054"
+  },
+  {
+   "date": "2026-03-23",
+   "category": "regulatory",
+   "headline": "Intertek publishes guidance on the sixth edition of UL 9540A, published 2026-03-13, which it says changes how the industry evaluates thermal runaway, fire propagation and explosion risk in battery storage",
+   "read": "Intertek writes explainers for a standard it does not own, which is the whole shape of its position in battery safety.",
+   "source": "https://www.intertek.com/blog/2026/03-23-understanding-the-2026-update-to-ul-9540a/"
+  },
+  {
+   "date": "2026-03-03",
+   "category": "financial",
+   "headline": "FY2025 results: revenue £3,431.6m (+3.9% like-for-like at constant currency), adjusted operating profit £619.6m, margin 18.1%, adjusted diluted EPS 253.5p, and a completed £350m buyback",
+   "read": "A third consecutive year of double-digit adjusted EPS growth, delivered with World of Energy shrinking — the growth is in consumer and corporate testing, not in energy.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/final-results/9454689"
+  },
+  {
+   "date": "2026-02-26",
+   "category": "ma",
+   "headline": "Acquisition of QTEST, a Colombian electrical testing business, for £5.9m",
+   "read": "Electrical testing capacity bought in a market where certification demand follows grid build-out.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/half-year-financial-report/9697054"
+  },
+  {
+   "date": "2026-02-04",
+   "category": "product-launch",
+   "headline": "ETL Component Certification Programme launched, certifying power supplies, switches and control modules so that component approvals carry into finished-product certification",
+   "read": "Recognised-component programmes are how a mark compounds: certify the part once and every product using it certifies faster.",
+   "source": "https://www.intertek.com/news/2026/intertek-etl-unlocks-faster-certification-for-electrical-components/"
+  },
+  {
+   "date": "2026-02-04",
+   "category": "ma",
+   "headline": "Acquisition of AePVI, a solar PV inspection business, for £0.8m",
+   "read": "",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/half-year-financial-report/9697054"
+  },
+  {
+   "date": "2025-11-01",
+   "category": "ma",
+   "headline": "Acquisitions of Suplilab and Professional Testing Laboratory (PTL) complete, part of £157.0m spent on four acquisitions in FY2025 contributing £35.5m of revenue at a 34% margin",
+   "read": "Bolt-ons bought at a margin above the group's own is how the 18.5% target gets reached by arithmetic as well as by trading.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/final-results/9454689"
+  },
+  {
+   "date": "2025-10-01",
+   "category": "corporate",
+   "headline": "Clean Energy Associates is rebranded Intertek CEA, consolidating Intertek's solar and energy-storage businesses under one name",
+   "read": "Putting the Intertek name on a solar and storage advisory bought in 2022 is the point at which the group started selling assurance to battery buyers rather than only to battery makers.",
+   "source": "https://www.intertekcea.com/cea-blog/clean-energy-associates-becomes-intertek-cea"
+  },
+  {
+   "date": "2025-09-01",
+   "category": "ma",
+   "headline": "Acquisition of Envirolab completes",
+   "read": "",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/final-results/9454689"
+  },
+  {
+   "date": "2025-05-19",
+   "category": "market",
+   "headline": "Intertek CEA publishes an analysis of the most common battery-storage manufacturing defects of 2024, drawn from quality audits at more than seventy battery storage factories",
+   "read": "A defect census across seventy factories is a dataset no certifier collects from the laboratory side — it comes from standing on the production line.",
+   "source": "https://www.intertekcea.com/reports-white-papers"
+  },
+  {
+   "date": "2025-04-01",
+   "category": "ma",
+   "headline": "Acquisition of TESIS (Tecnologia e Qualidade de Sistemas em Engenharia) in Brazil completes",
+   "read": "",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/final-results/9454689"
+  },
+  {
+   "date": "2025-01-01",
+   "category": "leadership",
+   "headline": "Steve Mogford joins the board as an independent non-executive director",
+   "read": "",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/directorate-change/9580566"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "ul-solutions",
+   "type": "competitor",
+   "status": "active",
+   "note": "The two are named together as the leading players in battery-storage testing, inspection and certification, and UL Solutions named Intertek in its FY2024 10-K before removing every competitor name from the FY2025 edition.",
+   "context": "MarketsandMarkets' July 2026 assessment of the battery-storage TIC market names UL Solutions and Intertek as the leading key players and frames the two as pursuing different strategies: UL Solutions on battery-specific technical specialisation, Intertek on lifecycle project assurance extending beyond the laboratory into procurement and asset operations. That is a fair description of the difference — Intertek's distinctive asset here is Intertek CEA, which sits on the buyer's side of a project, while UL Solutions' is the mark and the fire-testing capacity.\n\nThe relationship is asymmetric in the filings. UL Solutions' FY2024 10-K names Intertek first among the large global public firms it competes with; its FY2025 10-K, filed 2026-02-19, removes every name. Intertek's own competitive positioning is expressed through marketing rather than filings: it runs a dedicated page arguing that the UL mark is not required and that the ETL Mark is equivalent, and independent compliance literature reports ETL at 25 to 50 per cent below UL pricing at up to half the turnaround.\n\nThe substitution claim is narrower than it sounds and is time-dependent. Intertek's OSHA NRTL scope did not include UL 9540 until 2025-08-22, four and a half years after it applied, and did not include UL 1973 until 2024-04-24; it has never included UL 9540A, because that is a test method rather than a certification standard and no laboratory holds NRTL scope for it.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp"
+  },
+  {
+   "slug": "csa-group",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both are Standards Council of Canada-accredited certification bodies whose marks carry equivalent legal weight in Canada, and both are named in the same battery TIC assessment — CSA Group among the majors, Intertek among the leaders.",
+   "context": "CSA Group's dossier in this corpus records that because CSA Group, UL Solutions/ULC and Intertek are all SCC-accredited, their marks carry equivalent weight as proof of conformity to Canadian requirements, while a US-only UL mark by itself is not enough in Canada. Intertek's own pages confirm the accreditation from its side: Intertek ETL is described as an accredited testing organisation and certification body of the Standards Council of Canada, which is what the c prefix on the cETL mark denotes.\n\nThe two also compete directly on large-scale fire testing. CSA Group's dossier names UL Solutions, TÜV Rheinland, TÜV SÜD, Intertek and DNV as competing on the same tests, and records a 2025-2026 witness roster split between CSA Group, UL Solutions and TÜV Rheinland. Intertek does not appear on that roster, which is a gap worth watching rather than a finding.\n\nThe relationship is about to change on both sides: CSA Group agreed on 2026-08-28 to sell its entire testing and certification subsidiary to Kiwa Group, and Intertek is being taken private by EQT. Neither dossier's competitive framing survives both completions unexamined.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp"
+  },
+  {
+   "slug": "dnv",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named alongside Intertek among the leading players in battery-storage testing, inspection and certification; the overlap is in laboratory work and project assurance rather than in DNV's recommended-practice authorship.",
+   "context": "MarketsandMarkets names DNV among the companies profiled in battery-storage TIC alongside UL Solutions, Intertek, TÜV Rheinland and TÜV SÜD. The competitive overlap is sharpest where Intertek CEA operates: technical and acquisition due diligence, design review and operational performance assessment are the same functions DNV's dossier describes as the independent engineer's seat, and both sell them to lenders and investors buying storage.\n\nNeither company documents a relationship with the other. Intertek publishes no client or competitor roster, and DNV's dossier names Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions as the firms it shares lender panels with — not Intertek. The competitive placement therefore rests on the third-party market assessment rather than on either party's account.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp"
+  },
+  {
+   "slug": "eaton",
+   "type": "partner",
+   "status": "active",
+   "since": "2024",
+   "note": "Both are involved in the Current/OS Foundation, which Eaton and Schneider Electric founded in 2021 to develop open standards for DC-based microgrids; Intertek joined as a partner in 2024.",
+   "context": "Intertek announced its partnership with the Current/OS Foundation in 2024. The foundation was established in 2021 by founding members Eaton and Schneider Electric to develop open standards for DC-based microgrids. This is a standards-body association rather than a commercial engagement, and it is the only documented link between Intertek and either company that a first-party source states.\n\nIt is worth recording because DC distribution is where the data-centre power chain is heading — UL Solutions' own framing puts system voltages at roughly 800 VDC today with the industry planning for 1,500 VDC — and a conformity-assessment body's presence in the standards work is how it positions for the testing that follows.",
+   "source": "https://www.intertek.com/news/2024/intertek-announces-partnership-with-the-currentos-foundation/"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "partner",
+   "status": "active",
+   "since": "2024",
+   "note": "Co-founder, with Eaton, of the Current/OS Foundation for open DC microgrid standards, of which Intertek is a partner.",
+   "context": "The same 2024 partnership announcement. Schneider Electric and Eaton founded the Current/OS Foundation in 2021; Intertek is a partner to it. No direct commercial relationship between Intertek and Schneider Electric is documented on either side.",
+   "source": "https://www.intertek.com/news/2024/intertek-announces-partnership-with-the-currentos-foundation/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "OSHA NRTL programme",
+   "status": "in-effect",
+   "effectiveDate": "2025-08-22",
+   "exposure": "Intertek Testing Services NA, Inc. is one of twenty Nationally Recognized Testing Laboratories on OSHA's current list, recognised since 1989 under the name Electrical Testing Laboratories, and operates 33 OSHA-recognised laboratories. Recognition is granted standard by standard, site by site: OSHA states that recognition is not a delegation or grant of government authority, but that it enables employers to use products approved by the NRTL to meet OSHA standards requiring product testing and certification. UL 9540, Energy Storage Systems and Equipment, was added to Intertek's scope on 2025-08-22 — four and a half years after the application of 2021-02-15, and after an on-site review of the Cortland, New York laboratory in April 2024 found nonconformances with 29 CFR 1910.7 that Intertek addressed. UL 6200, Controllers for Use in Power Production, followed on 2026-08-21.",
+   "mitigation": "Intertek states that products bearing the ETL Mark meet the same US safety standards as other NRTL-certified products, and maintains a high-cadence programme of scope-expansion applications — Federal Register records show grants or applications in each year from 2023 to 2026.",
+   "source": "https://www.federalregister.gov/documents/2025/08/22/2025-16094/intertek-testing-services-na-inc-grant-of-expansion-of-recognition"
+  },
+  {
+   "regime": "Standards Council of Canada accreditation",
+   "status": "in-effect",
+   "exposure": "Intertek ETL is accredited by the Standards Council of Canada as both a Testing Organization and a Certification Body, which is what the 'c' prefix on the cETL mark denotes. Because CSA Group, UL/ULC and Intertek are all SCC-accredited, their marks carry equivalent weight as proof of conformity to Canadian requirements.",
+   "mitigation": "Intertek maintains a dedicated Canadian testing and certification practice.",
+   "source": "https://www.intertek.com/canada-testing-certification/"
+  },
+  {
+   "regime": "UK City Code on Takeovers and Mergers",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-16",
+   "exposure": "Intertek has been in an offer period since the Rule 2.4 announcement of 2026-04-16. The Code governed the four-round bid sequence from EQT's rejected GBP 51.50 approach of 2026-04-10 through the GBP 60.00 offer of 2026-06-18, which was declared final and so foreclosed any increase. Rule 8 dealing disclosures now dominate the company's regulatory news feed daily. Bidco may terminate the Co-operation Agreement in defined circumstances including if the Intertek directors change their recommendation.",
+   "mitigation": "Not applicable — this is a process the company is subject to rather than one it manages a position in.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/recommended-final-cash-offer/9625392"
+  },
+  {
+   "regime": "UKCA marking",
+   "status": "in-effect",
+   "exposure": "Intertek is a designated UK Approved Body permitted to conduct UKCA conformity assessments and issue UKCA certificates for a range of active non-implantable and non-active medical devices, and for construction products. The divergence of UKCA from CE marking after Brexit created a second conformity route for the same products, which is demand for conformity-assessment capacity rather than a cost.",
+   "mitigation": "Dedicated UKCA service lines for medical devices and for construction products.",
+   "source": "https://www.intertek.com/assurance/ukca/"
+  },
+  {
+   "regime": "UFLPA",
+   "status": "in-effect",
+   "exposure": "The Uyghur Forced Labor Prevention Act is a direct revenue line rather than a compliance cost. Intertek CEA's traceability work reaches upstream to the source of raw materials including mines, covering polysilicon, lithium, graphite, copper and aluminium, and CEA reported tracking a significant spike in US Customs and Border Protection detentions in early 2026.",
+   "mitigation": "Four audit products — supply chain mapping, onsite traceability systems audit, production traceability audit and post-production traceability audit — aligned to the Solar Energy Industries Association's traceability protocol.",
+   "source": "https://www.intertekcea.com/services"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Foreign Entity of Concern conditionality on US tax credits is a second direct revenue line for Intertek CEA, which publishes guidance on what compliant sourcing looks like: clean polysilicon sourcing, willingness to accept chain-of-custody audits, and supply chains positioned to absorb Section 232 scrutiny.",
+   "mitigation": "Published the report Achieving FEOC Compliance on 2026-02-04 and sells chain-of-custody audit services against the regime.",
+   "source": "https://www.intertekcea.com/reports-white-papers"
+  },
+  {
+   "regime": "ITC/45X domestic content",
+   "status": "in-effect",
+   "exposure": "Intertek CEA states that investment tax credit eligibility now hinges on traceability, documentation and verification — the three things it sells. Domestic-content verification is a named service.",
+   "mitigation": "Domestic Content Insights Report (2025-02-12) and domestic-content verification services.",
+   "source": "https://www.intertekcea.com/reports-white-papers"
+  },
+  {
+   "regime": "Section 301 tariffs and AD/CVD",
+   "status": "in-effect",
+   "exposure": "Intertek CEA's quarterly PV Supply, Technology and Policy Report covers tariffs and duties likely to be enforced on imports of solar materials, and CEA publishes policy briefings on preliminary countervailing-duty rates and antidumping petitions. Exposure is to the volume of trade the group inspects rather than to duties Intertek itself pays.",
+   "mitigation": "Quarterly policy-report subscription products and ad-hoc policy statements.",
+   "source": "https://www.intertekcea.com/reports-white-papers"
+  },
+  {
+   "regime": "NFPA 855",
+   "status": "in-effect",
+   "exposure": "Intertek provides NFPA 855 compliance guidance on energy-storage installation safety and fire-mitigation strategy, alongside UL 9540 and UL 9540A testing. NFPA 855 is an installation standard adopted through state and municipal fire codes, so it drives demand for the test data rather than for a certificate.",
+   "mitigation": "Consultation service sold alongside the laboratory work.",
+   "source": "https://www.intertek.com/energy-storage/"
+  },
+  {
+   "regime": "GOTS certification-body approval",
+   "status": "in-effect",
+   "effectiveDate": "2024-07-25",
+   "exposure": "Global Standard gGmbH partially suspended Intertek Testing Services NA Inc. as a GOTS-approved certification body after finding what it called serious lapses in its operations. The suspension prohibits Intertek from issuing transaction certificates for ginning, spinning and the sale or trade of lint cotton and grey yarn, and from acquiring new clients, and permits scope-certificate renewals only for clients outside the restricted activities. It remains in force until Intertek demonstrates full compliance with its contractual and certification obligations. No reinstatement notice was located, so the status is unresolved on the public record.",
+   "mitigation": "Intertek was given 90 days to report its findings and actions to Global Standard and to its accreditation body; the outcome of that report is not public.",
+   "source": "https://global-standards.org/news/global-standard-partially-suspends-intertek-testing-services-na-inc-as-a-gots-approved-certification-body"
+  },
+  {
+   "regime": "Merger control — nine jurisdictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-18",
+   "exposure": "Appendix 1 of the Rule 2.7 announcement makes the scheme conditional on merger clearance in nine jurisdictions, named with their statutes: Australia (Part IVA, Competition and Consumer Act 2010, before the ACCC or the Competition Tribunal), Canada (Part IX, Competition Act), China (Chapter IV, Anti-Monopoly Law, before SAMR), the European Union (Council Regulation 139/2004, before the European Commission, with an Article 9 referral fallback to national authorities), Japan (Act No. 54 of 1947, before the JFTC), Korea (Monopoly Regulation and Fair Trade Act, before the KFTC), Turkiye (Law No. 4054 and Communique 2010/4, before the Competition Board), the United Kingdom (the CMA under the Enterprise Act 2002) and the United States (Hart-Scott-Rodino). The UK condition is drawn unusually tightly: it requires the CMA to confirm in writing that it does not intend to request further information and to have not commenced or indicated it will commence a Phase 1 review, including by offering a merger notice, an enquiry letter or pre-notification discussions.",
+   "mitigation": "Bidco has agreed to use all reasonable efforts to obtain the clearances and satisfy the regulatory conditions as soon as reasonably practicable and in any event in sufficient time for the Effective Date to occur by the long-stop date of 2027-06-18.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/recommended-final-cash-offer/9625392"
+  },
+  {
+   "regime": "Foreign direct investment and national security screening",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-18",
+   "exposure": "Eight further conditions cover investment screening: Australia's Foreign Acquisitions and Takeovers Act 1975, Canada's Investment Canada Act Part III, Denmark's Consolidated Act No. 1256 of 2023 before the Danish Business Authority, France's Monetary and Financial Code before the Minister for Economy, Italy's golden-power regime under Law Decree 21/2012 before the Presidency of the Council of Ministers, Sweden's Screening of Foreign Direct Investments Act 2023:560 before the Inspectorate of Strategic Products, the United Kingdom's National Security and Investment Act, and the United States' CFIUS review under Section 721 of the Defense Production Act. The UK NSIA condition is explicit and answers a question the public commentary did not: insofar as the acquisition is a notifiable acquisition, the notification must be made and the Secretary of State must either confirm no further action or, if a call-in notice is issued, clear it or make a final order allowing the acquisition to proceed on terms reasonably satisfactory to Bidco. The CFIUS condition requires a JOINT written notice from Bidco and Intertek, which is the structure used when the target itself carries US national-security-relevant business rather than only when the buyer is foreign.",
+   "mitigation": "None stated beyond the reasonable-efforts covenant; no Satisfaction of Condition announcement has appeared on the regulatory news feed, so no individual clearance has been announced as obtained.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/recommended-final-cash-offer/9625392"
+  },
+  {
+   "regime": "ITAR",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-18",
+   "exposure": "Condition 20 requires notification to the Directorate of Defense Trade Controls at the US State Department under 22 CFR 122.4(b) of the International Traffic in Arms Regulations. That notification obligation arises only for an entity registered with DDTC as a defense-article manufacturer or exporter, so its presence on the conditions list establishes that some part of the Intertek group is ITAR-registered — a fact disclosed nowhere else in the public record located here. Paired with a joint CFIUS filing and Abu Dhabi and Mubadala money in the buying consortium, this is the most plausible pacing constraint on the Q4 2026 to Q1 2027 sanction window, more so than any of the nine antitrust filings.",
+   "mitigation": "None stated.",
+   "source": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/recommended-final-cash-offer/9625392"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "André Lacroix",
+   "title": "Chief Executive Officer and executive director",
+   "background": [
+    "Chief Executive Officer — Intertek Group plc (May 2015–present)",
+    "Led the response to EQT's four approaches between April and June 2026 and announced the ETL Component Certification Programme personally in February 2026",
+    "Named as the principal Intertek spokesperson in the Rule 2.7 offer announcement of 2026-06-18",
+    "A shareholder letter of May 2026 stated that under the current chief executive's eleven-year tenure Intertek had underperformed its principal listed peers, SGS and Bureau Veritas, and the FTSE 100 and MSCI Europe on total shareholder return"
+   ]
+  },
+  {
+   "name": "Laura Crespi",
+   "title": "Group Chief Financial Officer and executive director",
+   "background": [
+    "Group Chief Financial Officer — Intertek Group plc (2026-04-10–present), joining the board and the Group Executive Committee",
+    "Regional Chief Financial Officer, Europe Middle East and Africa — Intertek",
+    "Elected as a director at the 2026 annual general meeting on 2026-05-20",
+    "Appointed in the same week EQT made its first approach, so the entire defence and the agreed offer were handled by a chief financial officer in her first months in the role"
+   ]
+  },
+  {
+   "name": "Steve Mogford",
+   "title": "Chairman (non-executive)",
+   "background": [
+    "Chairman — Intertek Group plc (2026-05-20–present), succeeding Andrew Martin after almost ten years",
+    "Independent non-executive director — Intertek Group plc (2025-01-01–2026-05-20); ceased to be a member of the Audit Committee on becoming chairman and now chairs the Nomination Committee",
+    "Senior Independent Director — QinetiQ Group plc",
+    "Non-executive director — Costain Group plc, sitting on the Audit, Nomination and Remuneration Committees",
+    "Took the chair seventeen months into his own board tenure and six days after the put-up-or-shut-up deadline on EQT's approach — a transition a shareholder letter of 2026-05-11 cited in criticising the timing of the board's break-up defence"
+   ]
+  },
+  {
+   "name": "Colm Deasy",
+   "title": "Executive Vice President, Asia Pacific",
+   "background": [
+    "Executive Vice President, Asia Pacific — Intertek Group plc (2026-04-10–present), based in Vietnam",
+    "Group Chief Financial Officer — Intertek Group plc, until 2026-04-10",
+    "Chief Executive, Asia — Intertek"
+   ]
+  },
+  {
+   "name": "Saranpal (Sunny) Rai",
+   "title": "President, Intertek CEA",
+   "background": [
+    "President — Intertek CEA, the solar and energy-storage quality-assurance business acquired as Clean Energy Associates in 2022 and rebranded in October 2025",
+    "Leads the business inside the World of Energy division that sells factory audits, production monitoring, factory acceptance test witnessing and price forecasting to storage buyers"
+   ]
+  },
+  {
+   "name": "Jeffrey Burkett",
+   "title": "Chief Operating Officer, Intertek CEA",
+   "background": [
+    "Chief Operating Officer — Intertek CEA"
+   ]
+  },
+  {
+   "name": "Paul Wormser",
+   "title": "Senior Vice President, Technology, Intertek CEA",
+   "background": [
+    "Senior Vice President, Technology — Intertek CEA, the technical lead for the PV and battery-storage quality programmes"
+   ]
+  },
+  {
+   "name": "Dan Shreve",
+   "title": "Vice President, Market Intelligence, Intertek CEA",
+   "background": [
+    "Vice President, Market Intelligence — Intertek CEA, responsible for the quarterly research franchise: the ESS and PV Price Forecasting Reports, the ESS Supply, Technology and Policy Report, the ESS Supplier Market Intelligence Report and the Supplier Market Intelligence Program",
+    "The Q2 2026 ESS Price Forecasting Report is the source of the 587Ah cell finding this corpus cites through the Hithium dossier"
+   ]
+  },
+  {
+   "name": "Casey Marshall",
+   "title": "Vice President, Business Development, Intertek CEA",
+   "background": [
+    "Vice President, Business Development — Intertek CEA"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "GBP",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024 (ended 2024-12-31)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "£3,393.2m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Prior-year comparative as restated in the FY2025 announcement; the five-division structure is the basis throughout.",
+      "kpi": "revenue",
+      "usdMillions": null
+     },
+     {
+      "name": "Adjusted operating profit",
+      "actual": "£590.1m (17.4% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company-defined adjusted measure."
+     },
+     {
+      "name": "Statutory operating profit",
+      "actual": "£535.7m",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Statutory profit before tax",
+      "actual": "£490.0m",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "240.6p",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Adjusted basic EPS 242.6p; statutory diluted 212.7p, statutory basic 214.4p."
+     },
+     {
+      "name": "Adjusted free cash flow",
+      "actual": "£408.8m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Adjusted operating cash flow £789.2m."
+     },
+     {
+      "name": "Capital expenditure",
+      "actual": "£135.0m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "",
+      "kpi": "capex"
+     },
+     {
+      "name": "Net financial debt",
+      "actual": "£499.8m (0.7x leverage)",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Dividend per share",
+      "actual": "156.5p",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Total for the year."
+     }
+    ],
+    "commentary": "The comparative year. Every FY2024 figure here is the company's own restated comparative in the FY2025 announcement of 2026-03-03, on the current five-division basis."
+   },
+   {
+    "period": "FY2025 (ended 2025-12-31)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "£3,431.6m (+1.1% statutory; +4.3% at constant currency; like-for-like +3.9% at constant currency)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No published consensus figure was located for the FY2025 print; the verdict is recorded as in line against the company's own guidance of mid-single-digit like-for-like growth rather than against a broker panel.",
+      "kpi": "revenue",
+      "usdMillions": 4527,
+      "fxBasis": "GBP 3,431.6m converted at 1.3193 USD/GBP, the 2025 calendar-year average (poundsterlinglive.com, which also records a 2025 high of 1.3789 on 1 July and a low of 1.21 on 13 January; a second source gives 1.3190 for the same average). Cross-check: Aventis Advisors' TIC league table of 2026-05-11 carries Intertek at USD 4,619m on its own unstated basis, about 2 per cent above this conversion."
+     },
+     {
+      "name": "Adjusted operating profit",
+      "actual": "£619.6m (+9.3% at constant currency), 18.1% margin (+70bps)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Margin against the company's stated medium-term target of 18.5%+."
+     },
+     {
+      "name": "Statutory operating profit",
+      "actual": "£542.3m",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Statutory profit before tax",
+      "actual": "£493.4m",
+      "expected": "",
+      "verdict": "inline",
+      "result": ""
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "253.5p (+10.1% at constant currency)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Third consecutive year of double-digit adjusted EPS growth, per the company. Adjusted basic 255.9p; statutory diluted 216.0p; statutory basic 218.1p."
+     },
+     {
+      "name": "Adjusted free cash flow",
+      "actual": "£352.2m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Down from £408.8m despite higher profit: adjusted operating cash flow fell to £762.3m from £789.2m even at 110% cash conversion, while capex rose. Recorded as a miss against the prior year, not against a consensus figure — none was located."
+     },
+     {
+      "name": "Capital expenditure",
+      "actual": "£144.5m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "",
+      "kpi": "capex"
+     },
+     {
+      "name": "Net financial debt",
+      "actual": "£996.8m (1.3x leverage)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Doubled from £499.8m: £300m invested in growth including £156m on four acquisitions, and £602m returned to shareholders through dividends and the completed £350m buyback."
+     },
+     {
+      "name": "Dividend per share",
+      "actual": "165.0p total (107.7p final)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The 107.7p final was approved at the AGM on 2026-05-20 with 99.91% support, and is the dividend shareholders retain on top of the £60.00 cash offer."
+     }
+    ],
+    "commentary": "The last full year Intertek will report as a listed company if the scheme completes on the expected timetable. Revenue by division: Consumer Products £983.4m (+6.3% like-for-like at constant currency, 30.4% margin), Industry and Infrastructure £858.1m (+4.7%, 11.1%), World of Energy £729.0m (-1.3%, 8.7%), Corporate Assurance £514.0m (+6.8%, 22.6%), Health and Safety £347.1m (+2.4%, 13.0%). World of Energy — the division holding Intertek CEA and Caleb Brett, and the division this corpus cares about — is the only one that shrank, and its margin fell from 10.2% to 8.7%."
+   },
+   {
+    "period": "Q1 2026 (three months ended 2026-03-31)",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "Group like-for-like +5.4% at constant currency",
+      "expected": "",
+      "verdict": "inline",
+      "result": "A trading statement, not a full income statement. By division: Consumer Products £232.6m (+6.5%), Industry and Infrastructure £207.6m (+5.5%), World of Energy £177.3m (+0.2%), Corporate Assurance £126.5m (+10.8%), Health and Safety £84.3m (+5.9%)."
+     }
+    ],
+    "commentary": "Published 2026-04-14 alongside the Strategic Review that proposed splitting the company in two. EQT's first approach had been made four days earlier and was rejected the day before this statement."
+   },
+   {
+    "period": "H1 2026 (six months ended 2026-06-30)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "£1,771.3m (+5.9% at actual rates; +6.1% at constant currency; like-for-like +4.9% at constant currency)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No broker consensus figure was located for the H1 2026 print.",
+      "kpi": "revenue",
+      "usdMillions": 2337,
+      "fxBasis": "GBP 1,771.3m converted at the same 1.3193 USD/GBP 2025 calendar-year average used for FY2025, so the two periods are comparable with each other; it is not the H1 2026 average rate."
+     },
+     {
+      "name": "Adjusted operating profit",
+      "actual": "£309.7m (+12.4%), 17.5% margin (+100bps)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Margin expansion in four of five divisions."
+     },
+     {
+      "name": "Statutory operating profit",
+      "actual": "£281.5m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Adjusted profit before tax £275.7m."
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "124.9p",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Statutory EPS 87.1p — the 37.8p gap is the largest in the period record and reflects separately disclosed items including transaction costs."
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "£138.5m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Capex £66.7m."
+     },
+     {
+      "name": "Net financial debt",
+      "actual": "£1,145.5m (1.4x leverage)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "FY2026 net debt guidance revised down to £800-850m from £930-980m, and capex guidance cut to £135-145m from £150-160m."
+     },
+     {
+      "name": "Interim dividend",
+      "actual": "None declared",
+      "expected": "57.3p implied by the FY2025 pattern",
+      "verdict": "miss",
+      "result": "NOT AN OPERATING MISS. The board stated that under the terms of the EQT offer any dividend other than the FY2025 final would reduce the cash consideration, and it therefore proposed no interim dividend. The comparison figure is the implied FY2025 interim, not a consensus estimate."
+     }
+    ],
+    "commentary": "Published 2026-07-31, sixteen days after the scheme document and six days before the shareholder vote. Guidance was maintained rather than withdrawn: mid-single-digit like-for-like revenue growth, continuous margin progression, strong earnings growth and strong free cash flow. By division: Consumer Products £504.6m (+5.3% like-for-like, 29.4% margin), Industry and Infrastructure £437.8m (+4.5%, 11.0%), World of Energy £358.9m (+0.3%, 6.9%), Corporate Assurance £276.4m (+10.0%, 22.3%), Health and Safety £193.6m (+6.3%, 13.9%). World of Energy's margin fell again, from 8.2% to 6.9% — the only division to lose margin, and the second consecutive period in which it did."
+   }
+  ],
+  "commentary": "Reported in sterling on a 31 December year-end, through five divisions since the pre-2023 Products/Trade/Resources structure was retired. Two features of this record are products of the takeover rather than of trading. There is no interim dividend for H1 2026, because paying one would have reduced the £60.00 cash consideration pound for pound. And there is no analyst-consensus column anywhere in this table: no published broker consensus figure could be located for FY2024, FY2025 or H1 2026, so every verdict here is taken against the company's own guidance or the prior period, and is labelled as such. That is a collection gap, not a finding about the results."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that Intertek is not an incumbent in global testing, inspection and certification, and that any incumbency claim must be made at sub-market level. Basis: the only league table located that ranks the majors on a single stated measure places Intertek **fifth of ten by revenue at USD 4,619m**, behind SGS, Eurofins, Bureau Veritas and DEKRA. The market is radically fragmented — the top ten hold under a quarter of global revenue and the top five about 11.7 per cent — which puts Intertek's world share at roughly 1.5 to 2 per cent. Nobody is an incumbent in global TIC. The claim survives only where a market is named: MarketsandMarkets' July 2026 assessment names UL Solutions and Intertek the leading key players in **battery-storage TIC**, a market it sizes at USD 0.66bn in 2026 rising to USD 1.30bn by 2032.",
+  "2. **(High confidence)** We assess that Intertek CEA, not the laboratory, is what makes this company matter to a grid-storage corpus. Basis: CEA audits more than ninety battery-storage factories to a 400-plus-point checklist, runs inline production monitoring at 280-plus inspection points at a cadence adjustable to 24/7, witnesses factory acceptance tests including thermal imaging, and traces raw materials upstream to the mine against UFLPA and FEOC exposure. Its Global Energy Storage Manufacturing Quality Report 2026 found more than one in eight inspected units carried a safety-critical issue in the battery management system, thermal management or water ingress — a dataset no certifier collects from the laboratory side. CEA is engaged by the buyer; the ETL mark is bought by the seller. The company occupies both ends of the same transaction.",
+  "3. **(High confidence)** We assess that the ETL Mark's equivalence to the UL Mark is real in law and narrower in scope than the marketing implies, and that the difference is dated. Basis: Intertek is one of twenty OSHA-recognised NRTLs and products bearing the ETL Mark meet the same US safety standards as any other NRTL-certified product. But the ETL Mark is not one thing: Intertek issues it both as an NRTL certification, which carries the word NRTL on the Authorization to Mark, and as a private certification mark outside its NRTL scope, which does not. **UL 9540 entered Intertek's NRTL scope only on 2025-08-22**, four and a half years after the 2021-02-15 application and after an OSHA on-site review of Cortland in April 2024 found nonconformances with 29 CFR 1910.7; **UL 1973 only on 2024-04-24**; **UL 9540A never, and structurally cannot**, because it is a test method rather than a certification standard. Two commenters put precisely this to OSHA during the 2025 comment period, alleging 113 certificates issued without the accreditation; OSHA established that Intertek had not referenced the NRTL programme in the relevant authorizations, found no misrepresentation and took no further action.",
+  "4. **(High confidence)** We assess that the takeover was a contested defence that failed on price rather than a negotiated sale, and that £60.00 was fair-to-cheap on every independent benchmark. Basis: EQT bid £51.50 on 2026-04-10 and was rejected as fundamentally undervaluing the company, then £54.00, then £58.00, then £60.00 declared final. Against that: UBS's published target was 6,000p — exactly the price the deal cleared; the four-bank average sum-of-the-parts equity value was £58, which the offer beat by about 3.5 per cent; and the entry multiple of about 12.1 times FY2025 EV/EBITDA sits roughly two turns below the sector's ten-year average of 14.2 times, on an EBITDA margin better than SGS's or Bureau Veritas's. The 59 to 62 per cent premium is measured against a price that had fallen about 18 per cent five weeks earlier on cut divisional guidance.",
+  "5. **(High confidence)** We assess that the shareholders who spoke publicly wanted the deal taken, not improved — which inverts the usual pattern and is the strongest governance signal in the record. Basis: holders of close to 10 per cent pressed the board to engage, led by PineStone Asset Management at about 4 per cent as third-largest shareholder, with Lost Coast Collective at about 1.2 per cent calling EQT's proposal superior risk-adjusted value against the company's own plan, and PrimeStone Capital publishing a letter attacking the strategic review as a reactive defence announced two working days after EQT's approach, noting the chairman transition mid-process and that seven directors held less than their annual board fees in shares. No public shareholder objected that the price was too low; no rival bidder emerged.",
+  "6. **(Moderate confidence)** We assess that the regulatory conditions rather than the court are the binding constraint on the completion timetable, and that the ITAR condition is the least-discussed and most telling of them. Basis: Appendix 1 makes the scheme conditional on merger clearance in nine jurisdictions and on eight investment-screening regimes including the UK National Security and Investment Act. Two structures stand out: the CFIUS condition requires a **joint** filing by Bidco and Intertek, which is what is used when the target itself carries US national-security-relevant business; and condition 20 requires a notification to the State Department's Directorate of Defense Trade Controls under 22 CFR 122.4(b), an obligation that arises only for a DDTC-registered defense-article manufacturer or exporter. Paired with Gulf sovereign money in the consortium, that is the likeliest source of slip in the Q4 2026 to Q1 2027 window. No individual clearance has been announced as obtained — which is not the same as none obtained, since clearances are not always separately announced.",
+  "7. **(Moderate confidence)** We assess that the division holding the storage business is the one most likely to be sold again, and that this is the single most important thing for a corpus reader to watch. Basis: the Strategic Review of 2026-04-14 proposed separating Intertek Energy & Infrastructure — World of Energy plus Industry and Infrastructure, £1,587.2m of FY2025 revenue at a 10.0 per cent margin — from Testing & Assurance at £1,844.4m and 25.0 per cent, with a sale preferred over a demerger and an encouraging level of interest already received from potential buyers. The board paused it for EQT; the Rule 2.7 says Bidco intends to recommence the detailed review within approximately twelve months of the Effective Date. Intertek CEA and Caleb Brett sit on the Energy & Infrastructure side. One analyst has publicly doubted the break-up will happen at all.",
+  "8. **(Moderate confidence)** We assess that the defining risk for this company is assurance integrity rather than trading, and that the current record is worse than its profile suggests. Basis: three live or recent matters, each attacking the work rather than the market. Global Standard **partially suspended** Intertek Testing Services NA as a GOTS-approved certification body on 2024-07-25 over what it called serious lapses, barring it from issuing transaction certificates in ginning, spinning and lint cotton and from taking new clients, with no reinstatement notice located. A London High Court claim brought by 130 Burmese migrant workers turns on whether Intertek's audits of a Thai garment factory were negligent, with Intertek denying liability on the basis that it had no contractual relationship with the claimants — a case reported as a landmark precisely because it would expand auditor liability across the industry. And OSHA found nonconformances at the flagship battery laboratory in April 2024. The historic precedent is heavier still: the Justice Department called the 1990s Richardson, Texas environmental-laboratory matter the biggest case of laboratory fraud in the nation's history, affecting 59,000 clean-up sites, resolved through a corporate guilty plea with a USD 9m criminal fine and a separate USD 8.7m civil False Claims Act settlement — with eight individual defendants acquitted on all counts.",
+  "9. **(Low confidence)** We assess that the World of Energy division's margin decline is structural rather than cyclical, and that it is the arithmetic behind both the break-up and the buyout. Basis: the division fell 1.3 per cent like-for-like in FY2025 with its margin down from 10.2 to 8.7 per cent, then grew 0.3 per cent in H1 2026 with the margin down again to 6.9 per cent — the only division to lose margin in either period, while the group as a whole expanded margin in four of five divisions. Guidance for 2026 is low-single-digit. Three small solar and electrical bolt-ons in ten weeks in early 2026 point at where management thought the growth was, but they total £7.7m and cannot move a £729m division. What no source establishes is whether the decline is trade-cycle exposure in cargo inspection or something durable in the business mix.",
+  "**Collection gap:** no published broker or company-compiled consensus figure was located for FY2024, FY2025 or H1 2026, so no beat-or-miss verdict in the financial record is struck against an analyst estimate; each is taken against company guidance or the prior period and labelled. The FY2025 Annual Report PDF, the executive-committee pages and the offer document library were unreachable — intertek.com returned 403 to six attempts across two user agents and three tools, and osha.gov to six — so there is no company-published photograph for any individual in this dossier and no verified LinkedIn profile, and the enumerated count of NRTL standards and recognised sites could not be obtained. Intertek's principal-risk register names eleven risks and **does not name** the EU Battery Regulation, CBAM, UKCA or CE marking, which for a conformity-assessment business is coherent: those regimes are its revenue rather than its threats."
+ ],
+ "sources": [
+  {
+   "label": "Intertek Group plc RNS — Form 8.3 dealing disclosures and Holding(s) in Company filings, 3-8 September 2026 (offer-period record showing no Court sanction, suspension or delisting)",
+   "url": "https://www.investegate.co.uk/company/ITRK",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Investegate — Intertek Group plc announcement feed (offer-period record; Rule 8 dealing disclosures through 2026-09-08, no Court sanction, suspension or delisting)",
+   "url": "https://www.investegate.co.uk/company/itrk",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Intertek Group plc RNS — Holding(s) in Company: Societe Generale, 8.854782% (13,630,325 voting rights)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/holdings-in-company/9754673",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Federal Register — Intertek Testing Services NA, Inc.: grant of expansion of recognition (UL 6200, Controllers for Use in Power Production)",
+   "url": "https://www.federalregister.gov/documents/2026/08/21/2026-17137/intertek-testing-services-na-inc-grant-of-expansion-of-recognition",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Intertek CEA — ESS Price Forecasting Report, Q2 2026 (587Ah cell architecture and BESS container pricing)",
+   "url": "https://www.intertekcea.com/cea-blog/ess-price-forecasting-report-q2-2026",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Intertek Group plc RNS — Results of Court Meeting and General Meeting (98.72% in favour at both)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/results-of-court-meeting-and-general-meeting/9709222",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Intertek Group plc RNS — Half-year Financial Report, six months ended 30 June 2026",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/half-year-financial-report/9697054",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Intertek Group plc RNS — Update on Bidco Financing Arrangements (Interim Facilities Agreement amended and restated; eighteen lenders)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/update-on-bidco-financing-arrangements/9699282",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Intertek Group plc RNS — Publication of Scheme Document, including the expected timetable to Court sanction, suspension and delisting",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/publication-of-scheme-document/9668964",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "ESS News — Intertek CEA says 587Ah cells could drive down BESS costs through 2027",
+   "url": "https://www.ess-news.com/2026/07/14/intertek-cea-says-587ah-cells-could-drive-down-bess-costs-through-2027/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "pv magazine — Intertek CEA says 587Ah cells could drive down BESS costs through 2027",
+   "url": "https://www.pv-magazine.com/2026/07/14/intertek-cea-says-587ah-cells-could-drive-down-bess-costs-through-2027/",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "MarketsandMarkets — battery energy storage system TIC market and company evaluation, naming UL Solutions and Intertek as the leading key players",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "Intertek Group plc RNS — Recommended Final Cash Offer for Intertek Group plc by Isotope Bidco Limited (Rule 2.7 announcement)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/recommended-final-cash-offer/9625392",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "Global Legal Post — Freshfields and Slaughter and May score lead roles on EQT's Intertek takeover",
+   "url": "https://www.globallegalpost.com/news/freshfields-slaughters-score-lead-roles-on-eqts-ps11bn-intertek-takeover-334859098",
+   "date": "2026-06"
+  },
+  {
+   "label": "Seeking Alpha — Intertek Group: the EQT takeover comes at a sane valuation (contributor analysis)",
+   "url": "https://seekingalpha.com/article/4907882-intertek-group-eqt-takeover-comes-at-a-sane-valuation",
+   "date": "2026-06"
+  },
+  {
+   "label": "Federal Register — Intertek Testing Services NA, Inc.: application for expansion of recognition",
+   "url": "https://www.federalregister.gov/documents/2026/05/22/2026-10273/intertek-testing-services-na-inc-application-for-expansion-of-recognition",
+   "date": "2026-05-22"
+  },
+  {
+   "label": "Intertek Group plc RNS — Directorate Change: Steve Mogford appointed Chairman; Andrew Martin and Gurnek Bains step down",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/directorate-change/9580566",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "Intertek Group plc RNS — Result of AGM 2026 (final dividend 107.7p approved with 99.91% support; 153,931,794 shares in issue)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/result-of-agm/9578391",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "Research and Markets via GlobeNewswire — testing, inspection and certification market opportunity analysis and forecasts 2026-2035",
+   "url": "https://www.globenewswire.com/news-release/2026/05/19/3297299/28124/en/541-12-bn-testing-inspection-and-certification-tic-market-opportunity-analysis-and-forecasts-2026-2035-featuring-major-players-sgs-bureau-veritas-and-intertek.html",
+   "date": "2026-05-19"
+  },
+  {
+   "label": "Intertek Group plc RNS — Statement re Final Proposal from EQT (£60.00 plus up to 107.7p; Strategic Review paused)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/statement-re-final-proposal-from-eqt/9565920",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "PitchBook via Yahoo Finance — EQT's pending £14.3bn Intertek take-private in context",
+   "url": "https://finance.yahoo.com/news/eqts-pending-14-3b-intertek-121756579.html",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "Intertek CEA — Global Energy Storage Manufacturing Quality Report 2026 (more than one in eight inspected ESS units carried a safety-critical issue)",
+   "url": "https://www.intertekcea.com/reports-white-papers",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Aventis Advisors — top ten largest testing, inspection and certification companies globally (Intertek 5th at USD 4,619m)",
+   "url": "https://aventis-advisors.com/top-10-largest-testing-inspection-and-certification-companies-globally/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Investing.com — Intertek shareholder PrimeStone Capital urges the board to engage with EQT's £59.1 takeover bid",
+   "url": "https://www.investing.com/news/stock-market-news/intertek-shareholder-urges-board-to-engage-with-eqts-591-takeover-bid-93CH-4677655",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Investing.com — Intertek stock falls after the board rejects EQT's £58 takeover bid",
+   "url": "https://www.investing.com/news/stock-market-news/intertek-stock-falls-after-board-rejects-eqts-58-takeover-bid-4671404",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "CNBC — EQT sweetens Intertek bid to $12 billion",
+   "url": "https://www.cnbc.com/2026/05/05/swedish-private-equity-firm-eqt-sweetens-intertek-bid-to-12-billion-.html",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "MAinsights — EQT submits a third takeover bid for Intertek at an improved £9.9bn valuation (12.1x FY25 EV/EBITDA)",
+   "url": "https://www.mainsights.io/ma-news/eqt-submits-third-takeover-bid-for-uk-testing-specialist-intertek-publ-at-an-improved-gbp-99bn-valuation",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Proactive Investors — Intertek rejects a third EQT approach at £58 per share as the break-up plan advances",
+   "url": "https://www.proactiveinvestors.co.uk/companies/news/1091953/intertek-rejects-third-eqt-takeover-approach-at-58-per-share-as-break-up-plan-advances-1091953.html",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Intertek Group plc RNS — Response to possible offer announcement by EQT",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/response-to-possible-offer-announcement-by-eqt/9524268",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Intertek Group plc RNS — Statement re Possible Offer (10 April indicative proposal at £51.50 rejected 13 April)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/statement-re-possible-offer/9524033",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Yahoo Finance / Sharecast — Intertek split into two could unlock value: UBS, Barclays, JPMorgan and Jefferies targets",
+   "url": "https://uk.finance.yahoo.com/news/intertek-split-two-could-unlock-131600498.html",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Intertek Group plc RNS — Strategic Review Initiation and Q1 2026 Trading Statement (proposed separation into two listed ATIC businesses)",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/strategic-review-initiation-trading-statement/9518185",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Intertek CEA — Global PV Manufacturing Quality Report 2026",
+   "url": "https://www.intertekcea.com/reports-white-papers",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Intertek — Advancing fire safety in energy storage: understanding the 2026 update to UL 9540A",
+   "url": "https://www.intertek.com/blog/2026/03-23-understanding-the-2026-update-to-ul-9540a/",
+   "date": "2026-03-23"
+  },
+  {
+   "label": "Morningstar — Intertek earnings: shares fall on a disappointing 2026 outlook",
+   "url": "https://global.morningstar.com/en-gb/stocks/intertek-earnings-shares-fall-disappointing-2026-outlook-we-see-value",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Intertek Group plc RNS — Final Results for the year ended 31 December 2025",
+   "url": "https://www.investegate.co.uk/announcement/rns/intertek-group--itrk/final-results/9454689",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "BusinessCloud — Intertek Group's shares plummet despite growth",
+   "url": "https://businesscloud.co.uk/news/intertek-groups-shares-plummet-despite-growth/",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "Intertek CEA — Achieving FEOC compliance: what every U.S. solar buyer should know",
+   "url": "https://www.intertekcea.com/reports-white-papers",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "Intertek — ETL unlocks faster certification for electrical components (ETL Component Certification Programme)",
+   "url": "https://www.intertek.com/news/2026/intertek-etl-unlocks-faster-certification-for-electrical-components/",
+   "date": "2026-02"
+  },
+  {
+   "label": "Intertek — ETL Recognized Components Certification fact sheet",
+   "url": "https://www.intertek.com/resources/fact-sheets/2026/etl-recognized-components-certification/",
+   "date": "2026-02"
+  },
+  {
+   "label": "Solar Power World — Clean Energy Associates rebrands as Intertek CEA",
+   "url": "https://www.solarpowerworldonline.com/2025/10/clean-energy-associates-rebrands-as-intertek-cea/",
+   "date": "2025-10"
+  },
+  {
+   "label": "Intertek CEA — Clean Energy Associates becomes Intertek CEA",
+   "url": "https://www.intertekcea.com/cea-blog/clean-energy-associates-becomes-intertek-cea",
+   "date": "2025-10"
+  },
+  {
+   "label": "Federal Register — Intertek Testing Services NA, Inc.: grant of expansion of recognition (UL 9540, Energy Storage Systems and Equipment), recording the 2021 application, the 2024 Cortland on-site nonconformances and the dismissal of three commenters' objections",
+   "url": "https://www.federalregister.gov/documents/2025/08/22/2025-16094/intertek-testing-services-na-inc-grant-of-expansion-of-recognition",
+   "date": "2025-08-22"
+  },
+  {
+   "label": "Intertek CEA — Most common BESS manufacturing defects of 2024 (quality audits from more than seventy battery storage factories)",
+   "url": "https://www.intertekcea.com/reports-white-papers",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "Oxebridge Quality Resources — new complaint filed against Intertek over questionable remote auditing (advocacy publisher; allegations, outcome unknown)",
+   "url": "https://www.oxebridge.com/emma/new-complaint-filed-against-intertek-for-questionable-remote-auditing/",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Intertek CEA — Domestic Content Insights Report",
+   "url": "https://www.intertekcea.com/reports-white-papers",
+   "date": "2025-02-12"
+  },
+  {
+   "label": "Bloomberg — Bureau Veritas and SGS end talks for a $33 billion combination",
+   "url": "https://www.bloomberg.com/news/articles/2025-01-27/bureau-veritas-sgs-end-talks-for-33-billion-combination",
+   "date": "2025-01-27"
+  },
+  {
+   "label": "SGS — discussions between SGS and Bureau Veritas have ended",
+   "url": "https://www.sgs.com/en/news/2025/01/discussions-between-sgs-and-bureau-veritas-have-ended",
+   "date": "2025-01"
+  },
+  {
+   "label": "IOSH Magazine — migrant factory workers pursue claims of forced labour and debt bondage against Tesco and Intertek",
+   "url": "https://www.ioshmagazine.com/2024/08/22/migrant-factory-workers-pursue-claims-forced-labour-and-debt-bondage-against-tesco-and",
+   "date": "2024-08-22"
+  },
+  {
+   "label": "Global Standard — Global Standard partially suspends Intertek Testing Services NA Inc. as a GOTS-approved certification body",
+   "url": "https://global-standards.org/news/global-standard-partially-suspends-intertek-testing-services-na-inc-as-a-gots-approved-certification-body",
+   "date": "2024-07-25"
+  },
+  {
+   "label": "UL Standards & Engagement — UL 9540B, Outline of Investigation for Large-Scale Fire Test for Residential Battery Energy Storage Systems",
+   "url": "https://www.shopulstandards.com/ProductDetail.aspx?UniqueKey=46454",
+   "date": "2024-05-10"
+  },
+  {
+   "label": "Intertek — Announcing partnership with the Current/OS Foundation (DC microgrid standards; founded by Eaton and Schneider Electric)",
+   "url": "https://www.intertek.com/news/2024/intertek-announces-partnership-with-the-currentos-foundation/",
+   "date": "2024"
+  },
+  {
+   "label": "Just Style — Tesco and Intertek face lawsuit over garment worker negligence",
+   "url": "https://www.just-style.com/news/tesco-intertek-face-lawsuit-over-garment-worker-negligence/",
+   "date": "2022-12-20"
+  },
+  {
+   "label": "Clean Clothes Campaign — Tesco and Intertek face claims of forced labour and debt bondage at a garment factory in Thailand",
+   "url": "https://cleanclothes.org/news/2022/tesco-and-intertek-face-claims-of-forced-labour-and-debt-bondage-at-garment-factory-in-thailand",
+   "date": "2022-12"
+  },
+  {
+   "label": "Electrical Industry News Week — safety concern with an Intertek-certified product: 2-in-1 photoelectric smoke, fire and carbon monoxide alarms, ETL US",
+   "url": "https://electricalindustry.ca/latest-articles/safety-concern-with-intertek-certified-product-2-in-1-photoelectric-smoke-fire-carbon-monoxide-alarms-etlus/",
+   "date": "2022-11-14"
+  },
+  {
+   "label": "PV Tech — Clean Energy Associates acquired by British quality assurance firm Intertek",
+   "url": "https://www.pv-tech.org/clean-energy-associates-acquired-by-british-quality-assurance-firm-intertek/",
+   "date": "2022-07-29"
+  },
+  {
+   "label": "Intertek — Intertek to acquire Clean Energy Associates",
+   "url": "https://www.intertek.com/news/2022/07-29-intertek-to-acquire-cea/",
+   "date": "2022-07-29"
+  },
+  {
+   "label": "China Labor Watch — complaint against Intertek",
+   "url": "https://chinalaborwatch.org/complaint-against-intertek/",
+   "date": "2011-11-09"
+  },
+  {
+   "label": "United States Department of Justice — Intertek Testing Services agrees to pay $8.7 million to settle False Claims Act allegations over environmental laboratory testing",
+   "url": "https://www.justice.gov/archive/opa/pr/2002/March/02_civ_179.htm",
+   "date": "2002-03-25"
+  },
+  {
+   "label": "Broden & Mickelsen — eight acquitted in the Intertek laboratory fraud case",
+   "url": "https://www.brodenmickelsen.com/news/8-acquitted-lab-fraud-case/",
+   "date": "2001-11-21"
+  },
+  {
+   "label": "CBS News — toxic tests faked, federal prosecutors say",
+   "url": "https://www.cbsnews.com/news/toxic-tests-faked-feds-say/",
+   "date": "2001"
+  },
+  {
+   "label": "Intertek — Nationally Recognized Testing Laboratory (NRTL) programme and the ETL Mark",
+   "url": "https://www.intertek.com/product-certification-marks/etl-nrtl/"
+  },
+  {
+   "label": "Intertek — ETL Listed Mark",
+   "url": "https://www.intertek.com/product-certification-marks/etl/"
+  },
+  {
+   "label": "Intertek — Energy storage testing and certification (UL 9540, UL 9540A, UL 9540B, IEC 62933-5-2, UL 1973, IEC 62619)",
+   "url": "https://www.intertek.com/energy-storage/"
+  },
+  {
+   "label": "Intertek — UL 9540A cell, module and unit level testing",
+   "url": "https://www.intertek.com/batteries/ul-9540a/"
+  },
+  {
+   "label": "Intertek — UL 9540 energy storage system testing",
+   "url": "https://www.intertek.com/batteries/ul-9540/"
+  },
+  {
+   "label": "Intertek — Cortland battery laboratory capabilities fact sheet (BESS thermal-runaway centre of excellence)",
+   "url": "https://www.intertek.com/form/batteries-cortland-battery-lab-capabilities-fs/"
+  },
+  {
+   "label": "Intertek — Data centre testing, inspection, commissioning and certification",
+   "url": "https://www.intertek.com/datacenters/"
+  },
+  {
+   "label": "Intertek — Electric vehicle supply equipment (EVSE) certification, including megawatt charging systems",
+   "url": "https://www.intertek.com/automotive/electric-vehicle/evse/"
+  },
+  {
+   "label": "Intertek — Solar PV testing and certification",
+   "url": "https://www.intertek.com/solar/"
+  },
+  {
+   "label": "Intertek — Inverter and converter testing and evaluation for UL 1741",
+   "url": "https://www.intertek.com/energy-commodities/renewable/inverter-and-converter/"
+  },
+  {
+   "label": "Intertek — Renewable energy integration costs and power plant cycling",
+   "url": "https://www.intertek.com/power-generation/renewable-energy-integration-costs/"
+  },
+  {
+   "label": "Intertek — World of Energy",
+   "url": "https://www.intertek.com/worldofenergy/"
+  },
+  {
+   "label": "Intertek — Wind energy services",
+   "url": "https://www.intertek.com/wind/"
+  },
+  {
+   "label": "Intertek — ICT and cabling product testing",
+   "url": "https://www.intertek.com/ict/"
+  },
+  {
+   "label": "Intertek — Canada testing and certification (cETL; Standards Council of Canada accreditation)",
+   "url": "https://www.intertek.com/canada-testing-certification/"
+  },
+  {
+   "label": "Intertek — UKCA marking for medical devices",
+   "url": "https://www.intertek.com/assurance/ukca/"
+  },
+  {
+   "label": "Intertek — UKCA marking for construction products",
+   "url": "https://www.intertek.com/building/ukca/"
+  },
+  {
+   "label": "Intertek — About Intertek (scale figures: 100+ countries, over 1,000 locations)",
+   "url": "https://www.intertek.com/about/"
+  },
+  {
+   "label": "Intertek CEA — About (44,000+ employees, 1,000 test labs, 340,000+ inspections a year, 350+ production facilities engaged)",
+   "url": "https://www.intertekcea.com/about"
+  },
+  {
+   "label": "Intertek CEA — Services overview (supply chain management, quality assurance, engineering and field testing, field inspection, market intelligence, ESG and traceability, PV recycling verification)",
+   "url": "https://www.intertekcea.com/services"
+  },
+  {
+   "label": "Intertek CEA — Battery energy storage systems overview",
+   "url": "https://www.intertekcea.com/battery-energy-storage-systems-overview"
+  },
+  {
+   "label": "Intertek CEA — Quality control and testing for battery energy storage systems (400+ point factory audit; 280+ point inline production monitoring)",
+   "url": "https://www.intertekcea.com/quality-control-testing-battery-energy-storage-systems-bess"
+  },
+  {
+   "label": "Intertek CEA — Quality control overview (80,000+ PV inspections across 340+ factories)",
+   "url": "https://www.intertekcea.com/quality-control-overview"
+  },
+  {
+   "label": "Intertek CEA — Reports and white papers",
+   "url": "https://www.intertekcea.com/reports-white-papers"
+  },
+  {
+   "label": "ANSI National Accreditation Board — product certification accreditation directory record for Intertek Testing Services NA, Inc.",
+   "url": "https://anabpd.ansi.org/Accreditation/product-certification/AllDirectoryDetails?prgID=1&OrgId=43&statusID=4"
+  },
+  {
+   "label": "New York Regional Economic Development Councils — project record 376311 (Intertek Cortland battery laboratory)",
+   "url": "https://regionalcouncils.ny.gov/cfa/project/376311"
+  },
+  {
+   "label": "NY-BEST — Intertek member spotlight (Cortland Center of Excellence for battery energy storage testing)",
+   "url": "https://ny-best.org/page/IntertekCECETMemberSpotlight"
+  },
+  {
+   "label": "OSHA — Nationally Recognized Testing Laboratory Program, current list of NRTLs",
+   "url": "https://www.osha.gov/nationally-recognized-testing-laboratory-program/current-list-of-nrtls"
+  },
+  {
+   "label": "Metalphoto of Cincinnati — guide to ETL certification, on manufacturers moving between UL and ETL for identical products",
+   "url": "https://mpofcinci.com/blog/what-is-etl-certification/"
+  },
+  {
+   "label": "Glassdoor — Intertek employee reviews (self-selected; 3.1 of 5 across about 2,514 reviews)",
+   "url": "https://www.glassdoor.com/Reviews/Intertek-Reviews-E15251.htm"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

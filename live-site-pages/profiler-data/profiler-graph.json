@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-09",
- "companies": 161,
+ "companies": 163,
  "edges": [
   {
    "a": "abb",
@@ -768,6 +768,53 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "abb",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "ABB's HiPerGuard was certified to UL 9540 in April 2026, the first system of its kind to earn it; ABB is separately a co-lead with UL Solutions on Open Compute Project standards work.",
+     "context": "UL Solutions describes the HiPerGuard certification as the first for a medium-voltage, multi-mode static inverter designed to perform as an uninterruptible power supply. ABB's multi-mode inverter power conversion unit had earlier been certified to UL 1741, which UL Solutions states is a prerequisite to UL 9540 certification.\n\nThe certification is notable beyond the customer relationship because it is a battery-standard listing applied to data-centre power equipment — the point at which the storage safety regime and the AI-infrastructure power chain meet. ABB is also named, with Eaton, as co-lead of the Codes and Standards workstream that UL Solutions leads inside the Open Compute Project's Power Distribution sub-project.",
+     "source": "https://www.ul.com/news/abb-achieves-first-certification-ul-solutions-system-designed-advance-data-center-safety-and",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "first UL 9540 certification for a medium-voltage multi-mode static inverter working as a UPS",
+     "via": "UL 9540"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its data-centre business is the newest edge — the first UL 9540 certification of a medium-voltage inverter working as a UPS was issued to ABB in April 2026 — and it is spending capital into that demand faster than the market currently wants.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data centre testing, certification and advisory",
+     "date": "",
+     "text": "What is externally verifiable is the ABB HiPerGuard certification of April 2026, the first UL 9540 certification for a medium-voltage multi-mode static inverter working as a UPS, and the co-lead of the Open Compute Project's Codes and Standards workstream alongside ABB and Eaton.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-21",
+     "text": "ABB's HiPerGuard certified to UL 9540 — the first medium-voltage, multi-mode static inverter designed to work as an uninterruptible power supply to earn it — The battery standard is now being used to certify data-centre power equipment, which is where the storage and AI-infrastructure chains meet.",
+     "src": "https://www.ul.com/news/abb-achieves-first-certification-ul-solutions-system-designed-advance-data-center-safety-and",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-13",
+     "text": "UL Solutions leads the Codes and Standards workstream of the Open Compute Project's new Power Distribution sub-project, co-led with ABB and Eaton — Influence over the rules for AI-data-centre power without owning any of them — the company's actual standards strategy in one line.",
+     "src": "https://www.ul.com/news/ul-solutions-and-open-compute-project-help-advance-safety-and-scalability-new-ai-data-center",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-21"
   },
   {
    "a": "abb",
@@ -6644,6 +6691,20 @@
     {
      "where": "Summary",
      "date": "",
+     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-02",
+     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
+     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
      "text": "That is the structural line between it and kWh Analytics: kWh is a managing general agent that binds risk, Aon is the channel that reaches it, and this research found no evidence of Aon operating a renewables or storage managing general agency of its own.",
      "src": "",
      "from": "a"
@@ -6668,20 +6729,6 @@
      "text": "At kWh Analytics' 2025 Broker Council readout, John Katilus reports that 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms' — Verified verbatim and correctly attributed. It is also the company's only published statement of battery loss experience anywhere: this research found no counterpart in its own publications, so either it shares loss data in industry fora without publishing it, or the observation never became a company publication.",
      "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
      "from": "a"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Recent Reporting",
-     "date": "2025-07-02",
-     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
-     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
-     "from": "b"
     }
    ],
    "last": "2026-06-09"
@@ -9162,6 +9209,20 @@
   },
   {
    "a": "black-veatch",
+   "b": "ul-solutions",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "black-veatch",
    "b": "x-energy",
    "curated": {
     "a": {
@@ -11425,6 +11486,20 @@
     }
    ],
    "last": "2026-03-31"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "ul-solutions",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "burns-mcdonnell",
@@ -14325,6 +14400,31 @@
   },
   {
    "a": "catl",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "CATL's energy storage laboratory is qualified under UL Solutions' Witnessed Test Data Program to test to UL 9540A, and its EnerOne and EnerC systems hold UL 9540A test reports.",
+     "context": "Announced 2023-01-18 as a memorandum of understanding for strategic cooperation. UL Solutions describes CATL as the first laboratory in China to launch its Witnessed Test Data Program for UL 9540A, having already been qualified to test to UL 1973, UL 9540 and UL 2580. Under the programme the tests are conducted at CATL's own facilities under the supervision of UL Solutions personnel, with all submitted data reviewed and audited before use in certification and the laboratory reassessed annually.\n\nThis is the clearest example in the dossier of how UL Solutions scales beyond its own benches, and it is worth reading against the corpus's existing description of the arrangement as a partnership under which CATL conducts UL 9540A tests: the mechanism is supervised witnessed testing with annual re-audit, not a delegation.",
+     "source": "https://www.ul.com/news/ul-solutions-and-catl-join-forces-advance-battery-energy-storage-system-and-ev-battery-safety",
+     "status": "active",
+     "since": "2023",
+     "via": "Witnessed Test Data Program"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023"
+  },
+  {
+   "a": "catl",
    "b": "wartsila",
    "curated": {
     "b": {
@@ -14585,16 +14685,6 @@
    "a": "cipher-mining",
    "b": "engie-north-america",
    "curated": {
-    "a": {
-     "type": "supplier",
-     "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
-     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment — rather than as a sustainability arrangement.\n\nIt remains preliminary. No megawatt figure is under contract, no definitive agreement has been announced by either party, and the arrangement appears in none of Cipher's contracted-capacity disclosures: the 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only. ENGIE's own dossier lists a definitive Cipher agreement among the indicators that would move its co-location judgment from announced to real, which is the correct reading from both sides.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
-     "status": "announced",
-     "since": "2025-05",
-     "scale": "up to 300 MW contemplated",
-     "via": "Co-located data centre at a West Texas wind site"
-    },
     "b": {
      "type": "customer",
      "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
@@ -14604,6 +14694,16 @@
      "since": "2025-05",
      "scale": "up to 300 MW contemplated",
      "via": "Co-located data centre at an unnamed West Texas wind facility"
+    },
+    "a": {
+     "type": "supplier",
+     "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment — rather than as a sustainability arrangement.\n\nIt remains preliminary. No megawatt figure is under contract, no definitive agreement has been announced by either party, and the arrangement appears in none of Cipher's contracted-capacity disclosures: the 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only. ENGIE's own dossier lists a definitive Cipher agreement among the indicators that would move its co-location judgment from announced to real, which is the correct reading from both sides.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at a West Texas wind site"
     }
    },
    "evid": [],
@@ -14628,16 +14728,6 @@
    "a": "cipher-mining",
    "b": "fluidstack",
    "curated": {
-    "a": {
-     "type": "customer",
-     "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
-     "context": "Fluidstack USA II Inc. leases all 300 gross MW / 207 critical IT MW of Barber Lake, taken in two tranches: 168 critical IT MW in September 2025 for about USD 3.0bn over ten years, and a further 39 critical IT MW in November 2025 for about USD 830m. Two five-year extension options would take the combined figure to about USD 9.0bn. The lease is modified-gross with annual escalators, and Cipher retains 100% ownership of the project.\n\nFluidstack is unrated, which is why the structure exists at all: Google LLC backstops USD 1.73bn of Fluidstack's lease obligations under a recognition agreement, and the 7.125% Cipher Compute notes amortise in line with that backstop rather than on a fixed schedule. Note the asymmetry — USD 1.73bn of support against about USD 3.8bn of contracted revenue covers roughly 46% of the base term, not the whole lease.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf (Lake Mariner and Abernathy) and Hut 8 (River Bend), which makes Fluidstack the single largest shared counterparty risk across the miner-landlord cohort in this corpus.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
-     "via": "AI hosting at Barber Lake"
-    },
     "b": {
      "type": "supplier",
      "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
@@ -14647,6 +14737,16 @@
      "since": "2025-09",
      "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
      "via": "Barber Lake, Colorado City TX"
+    },
+    "a": {
+     "type": "customer",
+     "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
+     "context": "Fluidstack USA II Inc. leases all 300 gross MW / 207 critical IT MW of Barber Lake, taken in two tranches: 168 critical IT MW in September 2025 for about USD 3.0bn over ten years, and a further 39 critical IT MW in November 2025 for about USD 830m. Two five-year extension options would take the combined figure to about USD 9.0bn. The lease is modified-gross with annual escalators, and Cipher retains 100% ownership of the project.\n\nFluidstack is unrated, which is why the structure exists at all: Google LLC backstops USD 1.73bn of Fluidstack's lease obligations under a recognition agreement, and the 7.125% Cipher Compute notes amortise in line with that backstop rather than on a fixed schedule. Note the asymmetry — USD 1.73bn of support against about USD 3.8bn of contracted revenue covers roughly 46% of the base term, not the whole lease.\n\nThe same Fluidstack-tenant, Google-backstop template appears at TeraWulf (Lake Mariner and Abernathy) and Hut 8 (River Bend), which makes Fluidstack the single largest shared counterparty risk across the miner-landlord cohort in this corpus.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "AI hosting at Barber Lake"
     }
    },
    "evid": [
@@ -14749,15 +14849,6 @@
    "a": "cipher-mining",
    "b": "google",
    "curated": {
-    "a": {
-     "type": "investor",
-     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
-     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
-    },
     "b": {
      "type": "portfolio",
      "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
@@ -14767,6 +14858,15 @@
      "since": "2025-09",
      "scale": "$1.73B backstop; ~5.4% warrants",
      "via": "Barber Lake recognition agreement"
+    },
+    "a": {
+     "type": "investor",
+     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
     }
    },
    "evid": [
@@ -14972,18 +15072,18 @@
    "a": "cipher-mining",
    "b": "terawulf",
    "curated": {
-    "a": {
-     "type": "competitor",
-     "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
-     "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
-     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
-     "status": "active"
-    },
     "b": {
      "type": "competitor",
      "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
      "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
      "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
+     "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
+     "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
      "status": "active"
     }
    },
@@ -18832,6 +18932,64 @@
   },
   {
    "a": "csa-group",
+   "b": "intertek",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Both are Standards Council of Canada-accredited certification bodies whose marks carry equivalent legal weight in Canada, and both are named in the same battery TIC assessment — CSA Group among the majors, Intertek among the leaders.",
+     "context": "CSA Group's dossier in this corpus records that because CSA Group, UL Solutions/ULC and Intertek are all SCC-accredited, their marks carry equivalent weight as proof of conformity to Canadian requirements, while a US-only UL mark by itself is not enough in Canada. Intertek's own pages confirm the accreditation from its side: Intertek ETL is described as an accredited testing organisation and certification body of the Standards Council of Canada, which is what the c prefix on the cETL mark denotes.\n\nThe two also compete directly on large-scale fire testing. CSA Group's dossier names UL Solutions, TÜV Rheinland, TÜV SÜD, Intertek and DNV as competing on the same tests, and records a 2025-2026 witness roster split between CSA Group, UL Solutions and TÜV Rheinland. Intertek does not appear on that roster, which is a gap worth watching rather than a finding.\n\nThe relationship is about to change on both sides: CSA Group agreed on 2026-08-28 to sell its entire testing and certification subsidiary to Kiwa Group, and Intertek is being taken private by EQT. Neither dossier's competitive framing survives both completions unexamined.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its trade-press record places it among the 'major companies' in battery testing, inspection and certification behind the named leaders (UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD, DNV), which is the registry's definition of a challenger; after the Kiwa sale closes, the tester and the author will be different organisations.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Testing, inspection and certification — the CSA mark, OSHA NRTL and SCC-accredited certification (the business being sold to Kiwa)",
+     "date": "",
+     "text": "MarketsandMarkets (July 2026) lists CSA among the 'major companies' in battery energy-storage TIC while naming UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery and energy-storage testing, UL 9540A and large-scale fire testing services",
+     "date": "",
+     "text": "CSA calls itself 'one of the few testing laboratories worldwide capable of providing large-scale fire testing services' and holds the authorship advantage on C800; UL Solutions, TÜV Rheinland, TÜV SÜD, Intertek and DNV compete on the same tests, and the 2026 record shows Chinese OEMs spreading their witnesses across UL, TÜV and CSA.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Global market access and product-area certification — EV charging, PV and inverters, fuel cells and hydrogen, hazardous locations, EMC",
+     "date": "",
+     "text": "The one-stop-shop pitch — 'our accreditations and recognitions make us a one-stop solution for testing & certifying products for markets around the globe' — against UL Solutions, Intertek, TÜV SÜD, TÜV Rheinland and SGS, all of which are larger and hold the same CB Scheme recognitions.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "MarketsandMarkets sizes battery-storage testing, inspection and certification at USD 0.66 billion in 2026 growing to USD 1.30 billion by 2032, listing CSA Group among the 'major companies' and UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders — The only independent ranking available places CSA in the second tier of the segment the corpus cares about — the challenger typing in one sentence.",
+     "src": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-08"
+  },
+  {
+   "a": "csa-group",
    "b": "jinko",
    "curated": {
     "a": {
@@ -18940,6 +19098,113 @@
     }
    ],
    "last": "2026-01-22"
+  },
+  {
+   "a": "csa-group",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "CSA Group is the second North American source for the energy-storage listings UL Solutions is the default for — but UL Solutions names CSA Group in neither of its two 10-Ks.",
+     "context": "This relationship is documented entirely from CSA Group's side. CSA Group's dossier describes itself as the second source to UL Solutions for the North American energy-storage listing and records that trade press places it among the major companies in battery testing, inspection and certification behind named leaders including UL Solutions. It also records that UL Solutions does not list CSA Group among its competitors, which this dossier's own reading of both filings confirms: the FY2024 10-K names Intertek, SGS, Bureau Veritas, Eurofins, Element, TUV Rheinland, TUV SUD, DEKRA and DNV, and CSA Group appears in neither that list nor anywhere else in either filing.\n\nThe asymmetry is the finding. The two organisations are the closest structural analogues in the corpus — each pairs a standards-writing body with a certification business — and only one of them treats the other as a competitor in writing.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The certification body in this corpus's assurance segment and the second source to UL Solutions for the North American energy-storage listing — the laboratory that issues a UL 9540 or UL 1973 certificate under an OSHA NRTL scope and the witness at a large-scale fire test — but its distinctive contribution to the battery chain is as an author rather than a tester: CSA wrote the TS-800 large-scale fire test procedure in 2024 'to fill in a critical gap', turned it into the CSA/ANSI C800:25 consensus standard whose stated purpose is 'an assessment of bankability and insurability of energy storage systems', and saw NFPA 855's 2026 edition reference it as the test distinct from UL 9540A.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its trade-press record places it among the 'major companies' in battery testing, inspection and certification behind the named leaders (UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD, DNV), which is the registry's definition of a challenger; after the Kiwa sale closes, the tester and the author will be different organisations.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that CSA's position in battery-storage assurance is that of a challenger to UL Solutions — the second North American source for a UL 9540 or UL 1973 listing and one witness among three for large-scale fire tests — and not a leader.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: MarketsandMarkets names UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leading players and CSA among the majors; UL Solutions' 10-K does not list CSA among its competitors; Aventis Advisors' 2026 top ten by revenue omits it; and the 2025–2026 witness roster splits between CSA (Wärtsilä, BYD, CLOU, Canadian Solar, Fluence, Envision, HyperStrong, Jinko), UL Solutions (Hithium, Sungrow SBH) and TÜV Rheinland (Trina, e-STORAGE KuBank, Sungrow PowerKeeper).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy-storage standards — CSA TS-800:24 and CSA/ANSI C800:25 large-scale fire testing, C801, C22.2 No. 340 and No. 350",
+     "date": "",
+     "text": "Its acceptance is now written into NFPA 855-2026 and the UL 9540A sixth edition, which means competitors (UL Solutions, TÜV Rheinland) run CSA's protocol too — the Trina, e-STORAGE KuBank and Sungrow PowerKeeper tests of 2026 were witnessed by TÜV Rheinland or UL, not CSA.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Testing, inspection and certification — the CSA mark, OSHA NRTL and SCC-accredited certification (the business being sold to Kiwa)",
+     "date": "",
+     "text": "A mid-tier global TIC company by revenue — absent from Aventis Advisors' 2026 top ten (SGS USD 8.8 billion down to ALS USD 2.1 billion) and unnamed in UL Solutions' 10-K list of competitors — but the second North American mark after UL and the SCC-accredited certifier with the deepest Canadian code relationship.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Testing, inspection and certification — the CSA mark, OSHA NRTL and SCC-accredited certification (the business being sold to Kiwa)",
+     "date": "",
+     "text": "MarketsandMarkets (July 2026) lists CSA among the 'major companies' in battery energy-storage TIC while naming UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery and energy-storage testing, UL 9540A and large-scale fire testing services",
+     "date": "",
+     "text": "CSA calls itself 'one of the few testing laboratories worldwide capable of providing large-scale fire testing services' and holds the authorship advantage on C800; UL Solutions, TÜV Rheinland, TÜV SÜD, Intertek and DNV compete on the same tests, and the 2026 record shows Chinese OEMs spreading their witnesses across UL, TÜV and CSA.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Global market access and product-area certification — EV charging, PV and inverters, fuel cells and hydrogen, hazardous locations, EMC",
+     "date": "",
+     "text": "The one-stop-shop pitch — 'our accreditations and recognitions make us a one-stop solution for testing & certifying products for markets around the globe' — against UL Solutions, Intertek, TÜV SÜD, TÜV Rheinland and SGS, all of which are larger and hold the same CB Scheme recognitions.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "MarketsandMarkets sizes battery-storage testing, inspection and certification at USD 0.66 billion in 2026 growing to USD 1.30 billion by 2032, listing CSA Group among the 'major companies' and UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD and DNV as the leaders — The only independent ranking available places CSA in the second tier of the segment the corpus cares about — the challenger typing in one sentence.",
+     "src": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-16",
+     "text": "Fluence's Gridstack Pro 5000 completes UL 9540A and NFPA 855/68/69 large-scale fire testing at SAFE Laboratories, North Carolina — 'CSA Group witnessed and verified the results'; Hithium's test the same month was conducted by UL Solutions — Two covered integrators, two witnesses: the LSFT market is contested from the start.",
+     "src": "https://www.energy-storage.news/fluence-hithium-canadian-solar-bess-units-undergo-large-scale-fire-testing-without-flames-spreading/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage system testing and certification",
+     "date": "",
+     "text": "UL Solutions does not claim to own UL 9540 or UL 9540A and says plainly that UL Standards & Engagement publishes them, so any OSHA-recognised laboratory may certify against them — Intertek, CSA Group, TUV Rheinland, TUV SUD and DEKRA all do.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-08"
   },
   {
    "a": "csa-group",
@@ -20579,6 +20844,22 @@
   },
   {
    "a": "digital-realty",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Board interlock: UL Solutions director Kevin J. Kennedy has served on Digital Realty Trust's board since 2013, where he chairs its Talent and Compensation Committee.",
+     "context": "Recorded from the 2026 proxy statement, filed 2026-04-02. This is a personnel link rather than a commercial one and no commercial relationship between the two companies is documented on either side. It is recorded because UL Solutions' data-centre certification business and Digital Realty's landlord business sit in the same corpus, and a shared director is the only documented connection between them.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1901440/000119312526140022/d65278ddef14a.htm",
+     "status": "active",
+     "since": "2013"
+    }
+   },
+   "evid": [],
+   "last": "2013"
+  },
+  {
+   "a": "digital-realty",
    "b": "vantage",
    "curated": {
     "a": {
@@ -20687,6 +20968,21 @@
    },
    "evid": [],
    "last": "2021-07"
+  },
+  {
+   "a": "dnv",
+   "b": "intertek",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside Intertek among the leading players in battery-storage testing, inspection and certification; the overlap is in laboratory work and project assurance rather than in DNV's recommended-practice authorship.",
+     "context": "MarketsandMarkets names DNV among the companies profiled in battery-storage TIC alongside UL Solutions, Intertek, TÜV Rheinland and TÜV SÜD. The competitive overlap is sharpest where Intertek CEA operates: technical and acquisition due diligence, design review and operational performance assessment are the same functions DNV's dossier describes as the independent engineer's seat, and both sell them to lenders and investors buying storage.\n\nNeither company documents a relationship with the other. Intertek publishes no client or competitor roster, and DNV's dossier names Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions as the firms it shares lender panels with — not Intertek. The competitive placement therefore rests on the third-party market assessment rather than on either party's account.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "dnv",
@@ -21021,6 +21317,78 @@
      "text": "Trina Storage says its Elementa 2 platform 'received independent bankability reports from both DNV and UL Solutions' — The Chinese integrator buys two Western stamps at once — DNV's certificate is necessary but no longer sufficient.",
      "src": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/",
      "from": "a"
+    }
+   ],
+   "last": "2025-05-02"
+  },
+  {
+   "a": "dnv",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named among the large private players UL Solutions competes with in its FY2024 10-K; a UL Solutions director is also a former DNV group chief executive.",
+     "context": "The FY2024 10-K names DNV among the large private players in its competitive set. Separately, UL Solutions board member Elisabeth Torstad is a former DNV executive — chief executive of DNV GL Digital Solutions in 2018-19, of DNV GL Oil and Gas from 2014 to 2017 and of DNV Americas and Sub-Saharan Africa from 2010 to 2013 — and is one of the four directors designated to the board by ULSE.\n\nDNV's own dossier in this corpus records the other side of the overlap: it names UL Solutions among the independent engineers lenders accept on storage alongside Sargent and Lundy, Black and Veatch, Burns and McDonnell and Leidos, and records that UL Solutions and TUV Rheinland compete with DNV for the witness-and-certify seat on manufacturer fire tests.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "DNV holds that seat alongside Sargent & Lundy, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions; what distinguishes it is that it also writes the recommended practice the contract cites, runs the laboratory that produces the degradation and safety data, and certifies the product, so it appears on both sides of the same transaction — as the OEM's certifier (Trina Storage, Sungrow, Prevalon, Huawei) and as the lender's engineer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: editions in 2018, 2019, 2020, 2022 and 2024, with no 2025 or 2026 edition found on any channel eighteen months after the fifth; DNV's own description of it as a starter kit for the paid Battery AI model; and the emergence of vendor-commissioned bankability reports (Trina Storage, with UL Solutions in parallel) as the revenue-bearing form of the same testing.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Contestable: UL Solutions and TÜV Rheinland compete for the same seat, which caps DNV's pricing power but also spreads the exposure.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Independent engineering, lender's technical advisory and technical due diligence",
+     "date": "",
+     "text": "2 in 2025), Burns & McDonnell, Leidos, UL Solutions and SgurrEnergy all sell the same report.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery testing, the Battery Scorecard and Battery AI",
+     "date": "",
+     "text": "The Scorecard is the only free, multi-vendor, test-based cell comparison the industry has; UL Solutions and TÜV Rheinland compete for the witness-and-certify seat on OEM fire tests (CATL's UL 9540A programme runs through UL Solutions; Sungrow's April 2026 PowerKeeper certification named TÜV Rheinland), so DNV's laboratory position is contested product by product.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-02",
+     "text": "Trina Storage says its Elementa 2 platform 'received independent bankability reports from both DNV and UL Solutions' — The Chinese integrator buys two Western stamps at once — DNV's certificate is necessary but no longer sufficient.",
+     "src": "https://www.trinasolar.com/en-glb/resources/newsroom/trina-storage-strengthens-global-position-with-upgraded-bankability-rating-and-recognition-as-major-market-supplier-in-europe/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Renewable-energy independent engineering and environmental claim verification",
+     "date": "",
+     "text": "The independent-engineering line is the one that places UL Solutions on the same panels as DNV and Sargent & Lundy, but the company publishes no panel roster and names no peer, so that placement rests on the other firms' accounts rather than on this one's.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": "2025-05-02"
@@ -21905,6 +22273,22 @@
   },
   {
    "a": "eaton",
+   "b": "intertek",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Both are involved in the Current/OS Foundation, which Eaton and Schneider Electric founded in 2021 to develop open standards for DC-based microgrids; Intertek joined as a partner in 2024.",
+     "context": "Intertek announced its partnership with the Current/OS Foundation in 2024. The foundation was established in 2021 by founding members Eaton and Schneider Electric to develop open standards for DC-based microgrids. This is a standards-body association rather than a commercial engagement, and it is the only documented link between Intertek and either company that a first-party source states.\n\nIt is worth recording because DC distribution is where the data-centre power chain is heading — UL Solutions' own framing puts system voltages at roughly 800 VDC today with the industry planning for 1,500 VDC — and a conformity-assessment body's presence in the standards work is how it positions for the testing that follows.",
+     "source": "https://www.intertek.com/news/2024/intertek-announces-partnership-with-the-currentos-foundation/",
+     "status": "active",
+     "since": "2024"
+    }
+   },
+   "evid": [],
+   "last": "2024"
+  },
+  {
+   "a": "eaton",
    "b": "microsoft",
    "curated": {
     "a": {
@@ -22438,6 +22822,37 @@
     }
    ],
    "last": "2026-08-17"
+  },
+  {
+   "a": "eaton",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Eaton co-leads, with ABB, the Codes and Standards workstream that UL Solutions leads within the Open Compute Project's Power Distribution sub-project.",
+     "context": "Announced 2026-01-13. The workstream is aimed at safety and scalability in new AI data centre power distribution, and the release carries a quote from Eaton's vice president and data centre chief architect. It is a standards-influence relationship rather than a commercial one: UL Solutions does not write the UL standards, and this is one of the routes by which it shapes the documents it will later test against.",
+     "source": "https://www.ul.com/news/ul-solutions-and-open-compute-project-help-advance-safety-and-scalability-new-ai-data-center",
+     "status": "active",
+     "since": "2026-01"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Data centre testing, certification and advisory",
+     "date": "",
+     "text": "What is externally verifiable is the ABB HiPerGuard certification of April 2026, the first UL 9540 certification for a medium-voltage multi-mode static inverter working as a UPS, and the co-lead of the Open Compute Project's Codes and Standards workstream alongside ABB and Eaton.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-13",
+     "text": "UL Solutions leads the Codes and Standards workstream of the Open Compute Project's new Power Distribution sub-project, co-led with ABB and Eaton — Influence over the rules for AI-data-centre power without owning any of them — the company's actual standards strategy in one line.",
+     "src": "https://www.ul.com/news/ul-solutions-and-open-compute-project-help-advance-safety-and-scalability-new-ai-data-center",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-13"
   },
   {
    "a": "eaton",
@@ -28810,22 +29225,29 @@
    "a": "galaxy-digital",
    "b": "hut-8",
    "curated": {
-    "a": {
-     "type": "competitor",
-     "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
-     "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
-     "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
-     "status": "active"
-    },
     "b": {
      "type": "competitor",
      "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
      "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
      "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
      "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
+     "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
+     "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
+     "status": "active"
     }
    },
    "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
+    },
     {
      "where": "Key Judgments",
      "date": "",
@@ -28853,13 +29275,6 @@
      "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
      "src": "",
      "from": "a"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
-     "src": "",
-     "from": "b"
     }
    ],
    "last": ""
@@ -33203,6 +33618,31 @@
   },
   {
    "a": "hithium",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Trade press reports that Hithium's 2025 large-scale fire test was conducted by UL Solutions.",
+     "context": "Recorded in this corpus from the CSA Group dossier, which cites Energy-Storage.news reporting of June 2025 that Hithium's test that month was conducted by UL Solutions, in contrast with Fluence's test which CSA Group witnessed. UL Solutions publishes nothing naming Hithium: a search of its sitemap and press archive returns no result. The claim rests on trade press and is recorded at that weight.",
+     "source": "https://www.energy-storage.news/",
+     "status": "historical",
+     "since": "2025",
+     "via": "UL 9540A testing"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four corpus-carried engagements — Trina Storage's bankability report and environmental product declaration, Hithium's and Sungrow's fire tests, and Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded from the counterparties and trade press instead.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "hithium",
    "b": "vertiv",
    "curated": {
     "a": {
@@ -34807,6 +35247,115 @@
      "text": "(Low confidence) We assess that Tract's 2026 moves toward on-site generation — the Fleet gas plants in Nevada, 'onsite power generation that will become grid connected' at Caldwell, a gas-supply desk on the team page — are the beginning of a shift from powered land to power-generating land, which would put it in Fermi America's and Intersect Power's business rather than PowerHouse's.",
      "src": "",
      "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "intertek",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder, with Eaton, of the Current/OS Foundation for open DC microgrid standards, of which Intertek is a partner.",
+     "context": "The same 2024 partnership announcement. Schneider Electric and Eaton founded the Current/OS Foundation in 2021; Intertek is a partner to it. No direct commercial relationship between Intertek and Schneider Electric is documented on either side.",
+     "source": "https://www.intertek.com/news/2024/intertek-announces-partnership-with-the-currentos-foundation/",
+     "status": "active",
+     "since": "2024"
+    }
+   },
+   "evid": [],
+   "last": "2024"
+  },
+  {
+   "a": "intertek",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named by UL Solutions in its FY2024 10-K as one of the large global public firms it competes with — and the naming was removed from the FY2025 10-K.",
+     "context": "The FY2024 10-K, filed 2025-02-20, states that the company is subject to competition from large and global public firms such as Intertek, SGS, Bureau Veritas and Eurofins, and that it also competes with large private players including Element, TUV Rheinland, TUV SUD, DEKRA and DNV. The FY2025 10-K, filed 2026-02-19, replaces that sentence with a generic formulation naming nobody: competition from a broad range of players including large and global public and private firms, as well as a broad number of smaller companies and new entrants.\n\nThe removal is a first-party fact; the reason for it is not stated. One plausible reading is that fourteen months after naming Eurofins as a competitor the company agreed to buy Eurofins' Electrical and Electronics division, and naming a target as a competitor in a live filing is the sort of language transaction counsel removes. That is inference, and the dossier records it as such.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "The two are named together as the leading players in battery-storage testing, inspection and certification, and UL Solutions named Intertek in its FY2024 10-K before removing every competitor name from the FY2025 edition.",
+     "context": "MarketsandMarkets' July 2026 assessment of the battery-storage TIC market names UL Solutions and Intertek as the leading key players and frames the two as pursuing different strategies: UL Solutions on battery-specific technical specialisation, Intertek on lifecycle project assurance extending beyond the laboratory into procurement and asset operations. That is a fair description of the difference — Intertek's distinctive asset here is Intertek CEA, which sits on the buyer's side of a project, while UL Solutions' is the mark and the fire-testing capacity.\n\nThe relationship is asymmetric in the filings. UL Solutions' FY2024 10-K names Intertek first among the large global public firms it competes with; its FY2025 10-K, filed 2026-02-19, removes every name. Intertek's own competitive positioning is expressed through marketing rather than filings: it runs a dedicated page arguing that the UL mark is not required and that the ETL Mark is equivalent, and independent compliance literature reports ETL at 25 to 50 per cent below UL pricing at up to half the turnaround.\n\nThe substitution claim is narrower than it sounds and is time-dependent. Intertek's OSHA NRTL scope did not include UL 9540 until 2025-08-22, four and a half years after it applied, and did not include UL 1973 until 2024-04-24; it has never included UL 9540A, because that is a test method rather than a certification standard and no laboratory holds NRTL scope for it.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the only third-party league table located that ranks the majors on a stated measure places UL Solutions **eighth of ten by revenue at USD 3,106m**, behind SGS, Eurofins, Bureau Veritas, DEKRA, Intertek, TÜV SÜD and TÜV Rheinland — and under 2 per cent of the outsourced TIC market in an industry where the top ten hold less than a quarter.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "In the same cohort it is **first on operating margin at 25.9 per cent and first on revenue per employee at about USD 209,000**, roughly double Intertek's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A separate assessment names it and Intertek the leading players in battery-storage TIC specifically, a market sized at USD 0.66bn in 2026 — about a fifth of UL Solutions' own revenue and split fifteen ways.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: independent compliance literature reports the ETL Mark at 25 to 50 per cent below UL pricing on comparable work and at up to half the turnaround, and Intertek runs a dedicated page arguing the UL mark is unnecessary.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage system testing and certification",
+     "date": "",
+     "text": "UL Solutions does not claim to own UL 9540 or UL 9540A and says plainly that UL Standards & Engagement publishes them, so any OSHA-recognised laboratory may certify against them — Intertek, CSA Group, TUV Rheinland, TUV SUD and DEKRA all do.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy storage system testing and certification",
+     "date": "",
+     "text": "The one third-party ranking of battery-storage TIC names UL Solutions and Intertek as the leading key players in a market sized at USD 0.66bn in 2026 — strategically central and financially small, at roughly a fifth of UL Solutions' own revenue and split fifteen ways.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That is an owner's-engineer function in everything but the contractual title, and it is the reason a market assessment naming UL Solutions and Intertek as the two leading players in battery-storage TIC describes them as pursuing different strategies.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The claim survives only where a market is named: MarketsandMarkets' July 2026 assessment names UL Solutions and Intertek the leading key players in **battery-storage TIC**, a market it sizes at USD 0.66bn in 2026 rising to USD 1.30bn by 2032.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Intertek CEA — solar and energy-storage quality assurance",
+     "date": "",
+     "text": "The differentiator against UL Solutions is not laboratory depth but position: CEA is engaged by the developer, integrator, IPP or financier buying the equipment, not by the manufacturer selling it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Intertek CEA — solar and energy-storage quality assurance",
+     "date": "",
+     "text": "MarketsandMarkets' July 2026 assessment of battery-storage TIC names UL Solutions and Intertek as the leading key players and frames the competition as two strategies — battery-specific technical specialisation against lifecycle project assurance extending beyond the laboratory into procurement and asset operations.",
+     "src": "",
+     "from": "a"
     }
    ],
    "last": ""
@@ -46460,6 +47009,31 @@
    "last": "2025-11-04"
   },
   {
+   "a": "samsung-sdi",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Samsung SDI claims a world-first pass of UL's Indoor Large-Scale Fire Test for uninterruptible power supply batteries, with no propagation and no sprinklers.",
+     "context": "The claim is made on Samsung SDI's own newsroom, dated 2026-07-14, and is carried in the Samsung SDI dossier in this corpus as a product highlight framed against hyperscaler procurement requirements. UL Solutions has no page, release or filing using the phrase Indoor Large-Scale Fire Test and none naming Samsung SDI in this context.\n\nWhat UL Solutions' own record does establish is that the thing described is almost certainly the installation-level large-scale fire test of the sixth edition of UL 9540A, run in the indoor configuration and sold commercially as the Large-Scale Fire Testing service launched 2026-04-23 — which covers indoor battery rooms explicitly and which the company says evaluates, for indoor systems, the effectiveness of building-based fire suppression. That is the axis a no-sprinklers claim would be made against. The identification is this dossier's inference from the two records and is labelled as such; the counterparty's claim is recorded as the counterparty's.",
+     "source": "https://news.samsungsdi.com/global/articleView?seq=435",
+     "status": "historical",
+     "since": "2026-07",
+     "via": "large-scale fire testing"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four corpus-carried engagements — Trina Storage's bankability report and environmental product declaration, Hithium's and Sungrow's fire tests, and Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded from the counterparties and trade press instead.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07"
+  },
+  {
    "a": "sargent-lundy",
    "b": "southern-company",
    "curated": {
@@ -46475,6 +47049,43 @@
    },
    "evid": [],
    "last": "2018"
+  },
+  {
+   "a": "sargent-lundy",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named alongside UL Solutions on the lender and independent-engineer panels for storage projects — documented from Sargent and Lundy's side and DNV's, not from UL Solutions'.",
+     "context": "Both the Sargent and Lundy and DNV dossiers in this corpus place UL Solutions on the same independent-engineer panels as themselves, Black and Veatch, Burns and McDonnell and Leidos, and the Sargent and Lundy dossier cites a UL Solutions page on wind and solar independent engineering services as the peer scope.\n\nUL Solutions confirms the service line exists and describes it in lender-facing terms — global bankability in the renewable energy industry, an approach vetted with some of the world's top lead arrangers and lenders, and about 500 wind and solar advisory experts — but it publishes no panel roster and names no peer firm. The competitive placement therefore rests on the other firms' accounts.",
+     "source": "https://www.ul.com/services/wind-and-solar-power-independent-engineering-services",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Independent engineering and due diligence for lenders, investors and buyers",
+     "date": "",
+     "text": "On lender panels alongside DNV, Black & Veatch, Burns & McDonnell, Leidos and UL Solutions.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Renewable-energy independent engineering and environmental claim verification",
+     "date": "",
+     "text": "The independent-engineering line is the one that places UL Solutions on the same panels as DNV and Sargent & Lundy, but the company publishes no panel roster and names no peer, so that placement rests on the other firms' accounts rather than on this one's.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "sargent-lundy",
@@ -46710,6 +47321,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "schneider-electric",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Schneider Electric's PowerPacT moulded case circuit breakers received the first ECOLOGO certification issued for an industrial product.",
+     "context": "Announced 2025-11-18, with a quote from Schneider Electric's executive vice president for power products. The certification is to UL 2711, the standard for sustainability of energy and industrial automation equipment, and is the first application of the ECOLOGO programme to an industrial product rather than a consumer one.",
+     "source": "https://www.ul.com/news/ul-solutions-issues-schneider-electric-first-ecologo-certification-industrial-product",
+     "status": "active",
+     "since": "2025-11",
+     "via": "ECOLOGO certification to UL 2711"
+    }
+   },
+   "evid": [],
+   "last": "2025-11"
   },
   {
    "a": "schneider-electric",
@@ -47620,6 +48248,31 @@
   },
   {
    "a": "sungrow",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Trade press reports that Sungrow's SBH residential unit was tested to UL 9540B by UL Solutions.",
+     "context": "Recorded in this corpus from the CSA Group dossier, which cites an Energy-Storage.news round-up of November 2025 placing UL Solutions on the Sungrow SBH residential test, while CSA Group certified the SBH modular battery to UL 9540A in January 2025 and TUV Rheinland witnessed the April 2026 PowerKeeper certification. UL Solutions publishes nothing naming Sungrow.\n\nThe UL 9540B detail is consistent with the standard's scope as UL Solutions describes it: an Outline of Investigation for residential systems of 20 kWh or less, created after authorities having jurisdiction found UL 9540A alone did not satisfy the 2022 California Fire Code. A residential unit is exactly what it applies to.",
+     "source": "https://www.energy-storage.news/",
+     "status": "historical",
+     "since": "2025",
+     "via": "UL 9540B testing"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four corpus-carried engagements — Trina Storage's bankability report and environmental product declaration, Hithium's and Sungrow's fire tests, and Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded from the counterparties and trade press instead.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "sungrow",
    "b": "vertiv",
    "evid": [
     {
@@ -48335,6 +48988,31 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "trina-storage",
+   "b": "ul-solutions",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Trina Storage states that its 4 MWh Elementa 2 platform received independent bankability reports from both DNV and UL Solutions, and separately claims a 20-year full-lifecycle environmental product declaration from UL Solutions.",
+     "context": "Both claims come from Trina Storage's own channel and from trade press reporting it, and both are carried in this corpus already — in the DNV dossier for the parallel bankability report and in the Trina Storage dossier for the environmental product declaration. Neither appears anywhere on UL Solutions' own channels: a search of the company's full sitemap and press archive returns no release naming Trina Storage, the Elementa 2, or a 20-year full-lifecycle storage EPD. The only Trina item UL Solutions publishes concerns Trina Solar, a different entity, and predates this window.\n\nThe relationship is recorded because the counterparty is a legitimate source for its own engagement and because both product categories — lender-facing independent engineering and ISO 14025 environmental product declarations — are confirmed UL Solutions service lines. What is not established is UL Solutions' own account of either engagement.",
+     "source": "https://www.trinastorage.com/",
+     "status": "historical",
+     "since": "2024",
+     "via": "bankability report and environmental product declaration"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Four corpus-carried engagements — Trina Storage's bankability report and environmental product declaration, Hithium's and Sungrow's fire tests, and Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded from the counterparties and trade press instead.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024"
   },
   {
    "a": "turner-construction",

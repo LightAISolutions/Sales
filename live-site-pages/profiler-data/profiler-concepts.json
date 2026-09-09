@@ -58,6 +58,15 @@
       ]
     },
     {
+      "slug": "abnormal-operation-testing",
+      "term": "abnormal operation testing",
+      "def": "Deliberately misusing a product to defined limits — blocking ventilation, stalling a motor, shorting an output, running at the wrong voltage — to check that it fails safely. The standard writes down which abuses count.",
+      "aliases": [
+        "abnormal operation",
+        "abnormal condition test"
+      ]
+    },
+    {
       "slug": "ac-block",
       "term": "AC block",
       "def": "A containerised battery unit with its power conversion built in, connecting straight to medium voltage. One supplier warrants energy, efficiency and response as a whole, and the site loses a separate direct-current collection system — at the cost of less energy per enclosure and lock-in on the conversion layer.",
@@ -72,6 +81,16 @@
       "def": "A plant design in which the solar array and the battery each have their own inverter and meet on the alternating-current side. Simpler to build and to contract for in parts, but energy moving from array to battery is converted twice.",
       "aliases": [
         "AC coupling"
+      ]
+    },
+    {
+      "slug": "acceptance-sampling",
+      "term": "acceptance sampling",
+      "def": "Judging a whole lot by inspecting a drawn sample and accepting or rejecting on the defect count. The sample size and threshold encode a chosen balance between rejecting good lots and accepting bad ones; the confidence depends far more on the sample size than on the lot size.",
+      "aliases": [
+        "sampling plan",
+        "AQL",
+        "acceptable quality level"
       ]
     },
     {
@@ -102,6 +121,14 @@
       "slug": "adiabatic-cooling",
       "term": "adiabatic cooling",
       "def": "Pre-wetting the air entering an air-cooled condenser or dry cooler so it arrives closer to wet-bulb. It buys much of a tower's efficiency on the hottest days while using water only on those days."
+    },
+    {
+      "slug": "adjusted-operating-profit",
+      "term": "adjusted operating profit",
+      "def": "Operating profit before items a company designates as separately disclosed — restructuring, amortisation of acquired intangibles, transaction costs. It is a company-defined measure, so it is comparable across periods of one company and not reliably across companies.",
+      "aliases": [
+        "adjusted operating margin"
+      ]
     },
     {
       "slug": "admitted-carrier",
@@ -1093,6 +1120,14 @@
       "aliases": []
     },
     {
+      "slug": "calorific-value",
+      "term": "calorific value",
+      "def": "The energy released per unit mass of a fuel when burned. For a coal, gas or biomass buyer it is the property actually being purchased, so it is measured on a sampled portion and written into the contract price.",
+      "aliases": [
+        "heating value"
+      ]
+    },
+    {
       "slug": "canadian-electrical-code",
       "term": "Canadian Electrical Code",
       "def": "CSA C22.1, the safety standard for electrical installations that CSA Group has published every three years since 1927 and that every province and territory adopts into law, usually with amendments. Section 64 carries the installation rules for renewable and energy-storage systems.",
@@ -1440,6 +1475,14 @@
       ]
     },
     {
+      "slug": "chain-of-custody",
+      "term": "chain of custody",
+      "def": "The documented, unbroken record of who held a sample, when, and under what seal. Without it a measurement cannot be defended against challenge, however precise the instrument — which is the reason third-party inspection exists as an industry.",
+      "aliases": [
+        "custody chain"
+      ]
+    },
+    {
       "slug": "chain-reaction",
       "term": "chain reaction",
       "def": "A self-sustaining sequence in which each fission releases neutrons that cause further fissions. A reactor is held at exactly one fission per fission — any more and power rises, any less and it falls."
@@ -1556,6 +1599,15 @@
       "slug": "clean-firm-power",
       "term": "clean firm power",
       "def": "Generation that is both low-carbon and available on demand around the clock — nuclear, geothermal, hydro, or a fuel-burning plant with capture. It is what a load with a flat, continuous profile actually needs."
+    },
+    {
+      "slug": "clearance-distance",
+      "term": "clearance",
+      "def": "The shortest distance through air between two conductors — the distance that governs whether a spark can jump. Always less than or equal to the creepage distance for the same pair.",
+      "aliases": [
+        "clearance distance",
+        "air clearance"
+      ]
     },
     {
       "slug": "clipping",
@@ -2042,6 +2094,14 @@
       "aliases": []
     },
     {
+      "slug": "controlled-company",
+      "term": "controlled company",
+      "def": "A listed company in which one holder or group controls a majority of the voting power, which under stock-exchange rules exempts it from several governance requirements such as requiring a majority-independent board. The exemptions are available whether or not the company uses them.",
+      "aliases": [
+        "controlled-company"
+      ]
+    },
+    {
       "slug": "conversion-efficiency",
       "term": "conversion efficiency",
       "def": "Output power divided by input power for a converter — the rest leaves as heat. Efficiency is a curve, not a number: it collapses at light load and peaks somewhere below full load, so where a unit is parked on that curve matters as much as its headline figure.",
@@ -2274,6 +2334,14 @@
       ]
     },
     {
+      "slug": "creepage",
+      "term": "creepage",
+      "def": "The shortest distance along the surface of an insulating material between two conductors. It governs whether a conductive track can gradually form across that surface as dust and moisture accumulate, so required creepage depends on the material and on the pollution expected in the environment.",
+      "aliases": [
+        "creepage distance"
+      ]
+    },
+    {
       "slug": "criteria-pollutant",
       "term": "criteria pollutant",
       "def": "One of the handful of pollutants for which federal law sets health-based outdoor air limits — ozone and fine particulates being the two that most constrain combustion plant. Every region is designated as meeting or failing each standard, and that designation, not the machine, decides how hard a new source is to permit.",
@@ -2463,6 +2531,16 @@
       "def": "Days away, restricted or transferred: the subset of recordable injuries serious enough to keep someone off their normal job, expressed on the same per-hundred-workers basis as the headline recordable rate. It is the better severity proxy of the two, because it ignores the minor treatments that inflate the headline figure.",
       "aliases": [
         "days away restricted or transferred"
+      ]
+    },
+    {
+      "slug": "data-acceptance-program",
+      "term": "data acceptance program",
+      "def": "An arrangement under which a certification body accepts test data generated outside its own laboratories — at a customer's or a third party's facility — in support of its mark, subject to qualifying the laboratory, supervising or witnessing the work, auditing every submission and re-assessing the laboratory annually. It is how a certifier scales beyond its own bench capacity.",
+      "aliases": [
+        "witnessed test data program",
+        "WTDP",
+        "client test data program"
       ]
     },
     {
@@ -2882,6 +2960,16 @@
       ]
     },
     {
+      "slug": "dielectric-withstand",
+      "term": "dielectric withstand",
+      "def": "A test applying a voltage far above normal operating voltage between conductors and the enclosure for a fixed time, requiring that essentially no current flows. It tests insulation margin rather than present function — whether the insulation will still hold after years of heat, vibration and contamination.",
+      "aliases": [
+        "hipot",
+        "hi-pot",
+        "dielectric strength test"
+      ]
+    },
+    {
       "slug": "diesel-exhaust-fluid",
       "term": "DEF",
       "def": "Diesel exhaust fluid: the urea-and-water solution injected into the exhaust ahead of an SCR catalyst, where it converts nitrogen oxides into nitrogen and water. A Tier 4 engine cannot meet its emissions limit without it, so DEF supply and freeze protection become part of the site's operating plan.",
@@ -3084,6 +3172,14 @@
         "true online"
       ],
       "def": "The UPS mode in which all power is rectified to DC and re-made as AC by the inverter, continuously, so the load always sees a synthesized waveform and never the raw supply. It is the highest grade of protection — VFI in the IEC classification — and costs a few percent of every megawatt-hour as conversion heat; eco-mode is the alternative that idles the conversion and accepts a transfer."
+    },
+    {
+      "slug": "draft-survey",
+      "term": "draft survey",
+      "def": "Determining a vessel's cargo weight from how deep it sits in the water, before and after loading. Draught marks are read at six points, corrected for trim, list and water density against the vessel's hydrostatic tables, and everything aboard that is not cargo — fuel, ballast, fresh water, stores — is deducted.",
+      "aliases": [
+        "draught survey"
+      ]
     },
     {
       "slug": "draw-out-breaker",
@@ -3688,6 +3784,16 @@
       ]
     },
     {
+      "slug": "etl-mark",
+      "term": "ETL Mark",
+      "def": "Intertek's electrical product certification mark, recognised in the United States for the same purpose as competing marks and accredited in Canada as cETL. Its recognition is granted standard by standard and site by site, so the mark may also be issued outside that recognised scope as a private certification.",
+      "aliases": [
+        "ETL",
+        "cETL",
+        "ETL Listed"
+      ]
+    },
+    {
       "slug": "eu-stage-v",
       "term": "EU Stage V",
       "def": "The European Union's emission stage for non-road and stationary engines — the counterpart to the US EPA tiers, and stricter than Tier 4 on particle number. A gen-set sold into both markets is certified twice, which is one reason European and American versions of the same product carry different after-treatment.",
@@ -3858,6 +3964,25 @@
       "def": "Testing assembled equipment at the manufacturer's works, with the customer present, before it ships. It catches wiring and logic errors while the fix is cheap and the gear is still accessible — but it can only prove what can be simulated in a shop, so an integrated test on site under real load is still the thing that proves the system.",
       "aliases": [
         "FAT"
+      ]
+    },
+    {
+      "slug": "factory-audit",
+      "term": "factory audit",
+      "def": "An examination of the system that makes a product rather than of the product itself — quality policy, facility certifications, research and development capability, laboratory management and measurement traceability, incoming material control, process control and logistics.",
+      "aliases": [
+        "supplier audit",
+        "pre-production audit"
+      ]
+    },
+    {
+      "slug": "factory-surveillance",
+      "term": "factory surveillance",
+      "def": "The periodic, often unannounced, inspection and sample testing a certification body performs at a manufacturer's plant to keep a certification valid. It is what converts a one-off test result into an ongoing claim about current production, and it is the recurring revenue behind a certification mark.",
+      "aliases": [
+        "follow-up service",
+        "follow-up inspection",
+        "ongoing certification"
       ]
     },
     {
@@ -4147,6 +4272,14 @@
       "aliases": [
         "laminar flame speed",
         "burning velocity"
+      ]
+    },
+    {
+      "slug": "flash-point",
+      "term": "flash point",
+      "def": "The lowest temperature at which the vapour above a liquid will ignite in the presence of an ignition source. It is a safety and transport-classification property that determines how a cargo may be carried and stored.",
+      "aliases": [
+        "flashpoint"
       ]
     },
     {
@@ -4835,6 +4968,14 @@
       ]
     },
     {
+      "slug": "hardlines",
+      "term": "hardlines",
+      "def": "Rigid consumer goods — toys, furniture, housewares, juvenile products — as a testing category, where mechanical and physical safety tests dominate.",
+      "aliases": [
+        "hard lines"
+      ]
+    },
+    {
       "slug": "hardware-agnostic",
       "term": "hardware-agnostic",
       "def": "Software designed to work across equipment from many manufacturers rather than only the vendor's own. In energy it is a purchasing criterion rather than a marketing phrase: a fleet assembled over a decade contains several brands, and software tied to one of them cannot see the rest.",
@@ -5371,6 +5512,15 @@
         "inlet chilling",
         "inlet fogging",
         "inlet cooling"
+      ]
+    },
+    {
+      "slug": "inline-production-monitoring",
+      "term": "inline production process monitoring",
+      "def": "Third-party inspection carried out while a production line is running, working through a fixed set of inspection points and reporting findings ranked by severity. Where a factory audit is a photograph of the system, monitoring is a film of the output.",
+      "aliases": [
+        "IPM",
+        "production monitoring"
       ]
     },
     {
@@ -5924,6 +6074,15 @@
       "aliases": [
         "lower heating value",
         "net calorific value"
+      ]
+    },
+    {
+      "slug": "like-for-like-growth",
+      "term": "like-for-like growth",
+      "def": "Revenue growth with acquisitions, disposals and currency movement stripped out, isolating what the existing business did. It is the smallest and most honest of the growth figures a group quotes, and is usually reported at constant currency.",
+      "aliases": [
+        "LFL",
+        "organic growth at constant currency"
       ]
     },
     {
@@ -6481,6 +6640,14 @@
       "slug": "microreactor",
       "term": "microreactor",
       "def": "A reactor in the single-digit-to-tens-of-megawatts class, small enough to be transported largely assembled and installed as equipment rather than constructed as a plant."
+    },
+    {
+      "slug": "migration-testing",
+      "term": "migration testing",
+      "def": "Measuring how much of a regulated substance moves out of a material under defined conditions — a simulated saliva, sweat or food contact for a set time and temperature — rather than how much the material contains. A material can exceed a content threshold and still pass a migration limit.",
+      "aliases": [
+        "migration limit"
+      ]
     },
     {
       "slug": "milestone-funding",
@@ -7077,6 +7244,15 @@
       ]
     },
     {
+      "slug": "octane-rating",
+      "term": "octane rating",
+      "def": "A petrol's resistance to pre-ignition in a spark-ignition engine, measured by comparison against reference fuel blends in a standardised variable-compression test engine.",
+      "aliases": [
+        "octane number",
+        "RON"
+      ]
+    },
+    {
       "slug": "odm",
       "term": "ODM",
       "def": "Original design manufacturer — a firm that designs the product as well as building it, then sells it to a brand or a buyer who puts their own label on it. The design, and the ability to sell it again to the next customer, stays with the manufacturer.",
@@ -7254,6 +7430,14 @@
         "ORing FET",
         "ORing controller",
         "oring"
+      ]
+    },
+    {
+      "slug": "outline-of-investigation",
+      "term": "Outline of Investigation",
+      "def": "A pre-consensus document a standards body publishes to fill a gap before a full consensus standard exists. It can be tested and certified against, but it has not passed the balanced committee and public review process that makes a document a consensus standard.",
+      "aliases": [
+        "OOI"
       ]
     },
     {
@@ -7918,6 +8102,15 @@
       "aliases": [
         "pre-NTP financing",
         "development credit facility"
+      ]
+    },
+    {
+      "slug": "pre-shipment-inspection",
+      "term": "pre-shipment inspection",
+      "def": "Inspection of finished goods on a statistically selected sample before they leave the factory, checking against the agreed specification. It is the last point at which a buyer can reject without freight and customs costs.",
+      "aliases": [
+        "PSI",
+        "pre-shipment"
       ]
     },
     {
@@ -8774,6 +8967,15 @@
       ]
     },
     {
+      "slug": "restricted-substances",
+      "term": "restricted substances",
+      "def": "Chemicals limited or banned in consumer products by regulation — heavy metals in coatings, plasticisers in flexible plastics, dyes that break down into regulated aromatic amines, formaldehyde in textile finishes. Testing is a defined extraction followed by an instrumental measurement against a stated limit.",
+      "aliases": [
+        "restricted substance list",
+        "RSL"
+      ]
+    },
+    {
       "slug": "retail-broker",
       "term": "retail broker",
       "def": "The insurance broker that holds the relationship with the buyer. It takes the client's risk to market, negotiates terms, places the cover and advocates on claims, and is paid by commission out of the premium or by a fee from the client. It is an agent of the buyer, not of the insurer — which is what separates it from an agent.",
@@ -9132,6 +9334,15 @@
       "def": "Recovering time by adding hours or crews rather than by moving the completion date. Its cost is not linear in the time recovered: sustained overtime returns less per hour as weeks accumulate and extra crews in a fixed area interfere with each other, so the productivity lost is real, expensive and very hard to evidence afterwards."
     },
     {
+      "slug": "scheme-of-arrangement",
+      "term": "scheme of arrangement",
+      "def": "The UK court-supervised procedure for taking a listed company private. Shareholders vote at a court meeting and a general meeting, a court then sanctions the arrangement, and only on sanction does it bind every shareholder including those who voted against — after which trading is suspended and the listing cancelled on a published day-count.",
+      "aliases": [
+        "scheme",
+        "court sanction"
+      ]
+    },
+    {
       "slug": "screw-compressor",
       "term": "screw compressor",
       "def": "A compressor in which two meshing helical rotors trap gas and squeeze it as it moves along them. Tolerant of high lift and of part load, and physically smaller than a centrifugal for the same duty."
@@ -9149,6 +9360,15 @@
         "technology cooling system",
         "TCS loop",
         "secondary loop"
+      ]
+    },
+    {
+      "slug": "secondary-offering",
+      "term": "secondary offering",
+      "def": "A sale of already-issued shares by an existing holder, in which the company itself issues nothing and receives no proceeds. It changes who owns the stock and how much of it trades, not the company's balance sheet — the opposite of a primary offering.",
+      "aliases": [
+        "secondary share sale",
+        "selling stockholder offering"
       ]
     },
     {
@@ -9489,6 +9709,15 @@
       ]
     },
     {
+      "slug": "single-fault-principle",
+      "term": "single-fault principle",
+      "def": "The core assumption in most electrical safety standards: any one component may fail in the worst plausible way, and the product must still not injure anyone. Not that it still works — that is reliability — but that it does not electrocute, ignite or eject anything. Two simultaneous unrelated faults are usually out of scope.",
+      "aliases": [
+        "single fault",
+        "single-fault condition"
+      ]
+    },
+    {
       "slug": "single-line-diagram",
       "term": "single-line diagram",
       "def": "The one-page electrical drawing that shows a facility's power path — utility service, transformers, switchgear, transfer switches, UPS and distribution — as single lines rather than individual conductors. It is the document a power-room conversation actually happens over, because every redundancy claim is visible on it.",
@@ -9612,6 +9841,14 @@
         "ZCS",
         "resonant switching",
         "hard switching"
+      ]
+    },
+    {
+      "slug": "softlines",
+      "term": "softlines",
+      "def": "Textiles, apparel, footwear and other flexible consumer goods, as a testing category. Distinguished from hardlines because the applicable tests are largely chemical and physical rather than electrical.",
+      "aliases": [
+        "soft lines"
       ]
     },
     {
@@ -10288,6 +10525,15 @@
       ]
     },
     {
+      "slug": "tank-calibration",
+      "term": "tank calibration",
+      "def": "A certified table converting a measured liquid depth in a specific tank into a volume, then corrected to a standard temperature. It is how a liquid cargo's quantity is established at a terminal, and the temperature correction matters because oil expands measurably in the sun.",
+      "aliases": [
+        "tank strapping",
+        "ullage table"
+      ]
+    },
+    {
       "slug": "tap-off-box",
       "term": "tap-off box",
       "def": "A plug-in unit that clamps onto an energised busway to take a circuit off it, usually carrying its own breaker or fuses. It is what makes busway reconfigurable, and it is also the point where a new load can be added without anyone re-checking the protection upstream.",
@@ -10391,6 +10637,14 @@
       "def": "The temperature difference a refrigeration machine has to pump heat across — condensing temperature minus evaporating temperature. Compressor work rises with lift, so every degree given back at either end is money."
     },
     {
+      "slug": "temperature-rise-test",
+      "term": "temperature rise test",
+      "def": "Running a product at rated load until temperatures stabilise and measuring how far each part rose above ambient. Limits are always expressed as a rise rather than an absolute temperature, so the same design is safe in different climates.",
+      "aliases": [
+        "temperature rise"
+      ]
+    },
+    {
       "slug": "tenant-concentration",
       "term": "tenant concentration",
       "def": "The share of a landlord's rent that comes from one or a few tenants. High concentration lowers the cost of debt while the tenant is strong and makes the landlord's fortunes track that tenant's capital spending.",
@@ -10461,6 +10715,16 @@
       "aliases": [
         "Zeldovich mechanism",
         "thermal NOx formation"
+      ]
+    },
+    {
+      "slug": "thermal-propagation",
+      "term": "thermal propagation",
+      "def": "The spread of thermal runaway from one cell to its neighbours, and onward from module to unit to installation. Battery fire testing is mostly a propagation question: a single cell failing is assumed, and what is measured is whether the neighbours follow.",
+      "aliases": [
+        "propagation",
+        "cell-to-cell propagation",
+        "thermal runaway propagation"
       ]
     },
     {
@@ -10795,6 +11059,15 @@
       ]
     },
     {
+      "slug": "type-testing",
+      "term": "type testing",
+      "def": "Testing a small number of units representative of production against a written standard, once, and inferring the safety of the whole production run from them. It only holds while the factory keeps building the same thing, which is why certification is paired with ongoing factory surveillance.",
+      "aliases": [
+        "type test",
+        "type-tested"
+      ]
+    },
+    {
       "slug": "ul-1741",
       "term": "UL 1741",
       "def": "The American safety and listing standard for inverters and converters interconnecting with the grid. It is the test-and-listing document rather than the requirement: IEEE 1547 says what a resource must do, and a UL 1741 listing demonstrates that a given product does it.",
@@ -10822,6 +11095,16 @@
       "def": "The North American safety standard for stationary batteries — construction, protection and abuse testing for a battery meant to live in a building or a container. Listing to it is usually the first thing a fire marshal asks for."
     },
     {
+      "slug": "ul-94",
+      "term": "UL 94",
+      "def": "The flammability classification for plastics used in electrical products. A bar of material is held vertically or horizontally, a defined flame is applied for a defined time, and the grade records how long it burns afterwards and whether it drips flaming particles. V-0 is the common demanding grade.",
+      "aliases": [
+        "UL94",
+        "flammability rating",
+        "V-0"
+      ]
+    },
+    {
       "slug": "ul-9540",
       "term": "UL 9540",
       "def": "The North American safety standard and system-level listing for a complete energy storage system — battery, conversion, controls and enclosure evaluated as one assembly. It is the certification that produces permission to install, as distinct from the test method that produces fire and propagation data.",
@@ -10831,6 +11114,14 @@
       "slug": "ul-9540a",
       "term": "UL 9540A",
       "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
+    },
+    {
+      "slug": "ul-9540b",
+      "term": "UL 9540B",
+      "def": "An Outline of Investigation, published 2024-05-10, for a large-scale fire test on residential battery storage of 20 kWh or less. It drops the module-level test, keeps the cell test, and adds purposeful ignition of vented gases. It is not a consensus standard and does not apply to commercial or industrial systems.",
+      "aliases": [
+        "9540B"
+      ]
     },
     {
       "slug": "un-38-3",

@@ -1,0 +1,634 @@
+{
+ "schemaVersion": 2,
+ "slug": "intertek",
+ "title": "Intertek — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "glossary": [
+  {
+   "t": "ATIC",
+   "d": "Assurance, Testing, Inspection and Certification — Intertek's own framing of its service span, alongside 'Total Quality Assurance'. Both are marketing language rather than reporting segments: the company reports through Consumer Products, Corporate Assurance, Health and Safety, Industry and Infrastructure, and World of Energy."
+  },
+  {
+   "t": "NRTL",
+   "d": "Nationally Recognized Testing Laboratory: a laboratory the US Occupational Safety and Health Administration has recognised to certify specific products against specific safety standards at specific sites. Recognition is granular and dated — a laboratory can hold it for one battery standard and not another."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-inspection-not-testing",
+   "title": "Start here: inspection is a different discipline from testing",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The CSA Group guide taught the institutional map — standard, code, mark. The UL Solutions guide taught the bench: what a safety test physically does to a sample. This guide teaches the third leg neither covers, which is **inspection** — what you do when the thing you must judge is a shipload, a factory or a construction site rather than a sample on a bench.",
+    "The idea underneath all of it: **you cannot examine everything, so every assurance product is a bet about how much sampling is enough** — and the sample size is a risk decision dressed up as a procedure. A measurement only moves money if its {{chain of custody}} survives challenge, which is why independence is a technical property rather than a marketing one.",
+    "Intertek is the worked example because it does all of it — commodity inspection at the flange, consumer-goods chemistry, electrical certification under the {{ETL Mark}}, and battery-factory surveillance through Intertek CEA — and because it is being taken private in the middle of splitting itself in two.",
+    "**One boundary held throughout.** intertek.com refused every request from the research environment across two user agents and two tools, six attempts; so did osha.gov. Everything here comes from exchange announcements, the US Federal Register, and intertekcea.com, which is Intertek-owned and open."
+   ]
+  },
+  {
+   "id": "you-cannot-inspect-everything",
+   "title": "You cannot inspect everything",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A shipment contains 40,000 modules. Inspecting all of them costs more than the defects would. Inspecting one tells you nothing. Between those extremes sits **{{acceptance sampling}}**: draw a sample, count defects, accept the lot at or below a threshold and reject above it.",
+    "What the threshold encodes is a trade between two errors. You can reject a good lot — the producer's risk — or accept a bad one, the consumer's risk. A sampling plan fixes an acceptable defect rate and the sample size follows from it. **So when two inspection quotes differ in price, they usually differ in risk rather than in diligence**, and the buyer who does not ask which is being sold a different product from the one they think.",
+    "The counter-intuitive result underneath every published sampling table: the confidence a sample gives you depends far more on the **sample** size than on the **lot** size. Doubling the lot barely changes the sample required. That is the only reason inspecting a 40,000-module shipment is affordable at all.",
+    "**{{chain of custody}}** is what makes the number usable. If a sample can be swapped, mislabelled or drawn unwitnessed, the measurement is worthless however precise the instrument. The documented, unbroken record of who held the sample and under what seal is the actual product — and it is why third-party inspection exists as an industry rather than as a line item inside the buyer or the seller.",
+    "Which is the real answer to why a buyer will not accept the seller's own measurement. Not that the seller is dishonest, but that the measurement cannot be **checked**. Third-party inspection converts a contested number into a referable one."
+   ]
+  },
+  {
+   "id": "measuring-a-cargo",
+   "title": "Measuring a cargo: where the number becomes money",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "At the flange, quantity and quality are two separate measurements, both contestable, and the contract says whose number wins. Every one of these is a comparison against a defined reference under defined conditions — the same logical structure as the electrical bench in the UL Solutions guide.",
+   "cols": [
+    "Measurement",
+    "How it is physically done",
+    "What the buyer is really paying for",
+    "Where the precision actually comes from"
+   ],
+   "rows": [
+    [
+     "**{{draft survey}}**",
+     "Read the draught marks at six points before and after loading; correct for trim, list and water density against the vessel's hydrostatic tables; deduct fuel, ballast, fresh water and stores",
+     "Cargo mass",
+     "The corrections, not the reading. A survey is arithmetic with a tape measure attached"
+    ],
+    [
+     "**{{tank calibration}}**",
+     "Measure liquid depth, convert to volume through a certified table for that specific tank, then correct to a standard temperature",
+     "Cargo volume",
+     "The temperature correction — oil expands measurably in the sun, so the same cargo measures differently morning and afternoon"
+    ],
+    [
+     "**{{calorific value}}**",
+     "Combust a sampled portion under controlled conditions and measure the energy released per unit mass",
+     "The energy, which is what a coal, gas or biomass buyer is actually purchasing",
+     "Sampling. The assay is only as good as the portion it was run on"
+    ],
+    [
+     "**{{flash point}}**",
+     "Heat a sample in a defined apparatus until the vapour above it ignites",
+     "Safety and transport classification — how the cargo may be carried and stored",
+     "The apparatus and heating rate, which is why the method is always cited with the number"
+    ],
+    [
+     "**{{octane rating}}**",
+     "Compare against reference fuel blends in a standardised variable-compression test engine",
+     "Resistance to pre-ignition in a spark engine",
+     "The reference fuels; the measurement is a comparison, not an absolute"
+    ],
+    [
+     "**Moisture and ash**",
+     "Dry and combust a sampled portion; weigh what is left",
+     "Not paying for water and rock",
+     "Representative sampling from a moving, segregating bulk"
+    ]
+   ]
+  },
+  {
+   "id": "chemistry-as-supply-chain-insurance",
+   "title": "Consumer-goods testing: chemistry bought as supply-chain insurance",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A retailer does not buy testing to learn about the product. It buys testing to bound a liability. The manufacturer makes the thing, but the retailer carries the brand and, in most regimes, the legal exposure for selling it — so the testing programme is specified by the retailer, paid for by the supplier, and used as evidence of due diligence.",
+    "**{{restricted substances}}** testing looks for named chemicals against named limits: heavy metals in surface coatings, plasticisers in flexible plastics, dyes that break down into regulated aromatic amines, formaldehyde in textile finishes. Each limit comes from a regulation somewhere and each test is a defined extraction followed by an instrumental measurement.",
+    "**The subtlety that catches people out is {{migration testing}}.** For many consumer products the regulated quantity is not how much of a substance the material *contains* but how much *migrates out* under defined conditions — a simulated saliva, sweat or food contact for a set time at a set temperature. A material can exceed a content threshold and pass, or sit under it and fail, depending on how tightly the substance is bound. A factory certificate showing content and a product report showing migration are not in contradiction; they are different quantities.",
+    "The other half is physical and mechanical: small-parts testing against a defined cylinder for choking, sharp-edge and sharp-point tests, tension and torque tests that mimic a child pulling, fabric flammability.",
+    "This is why {{softlines}} and {{hardlines}} testing volumes track **retail** cycles rather than manufacturing cycles — and why Intertek's Consumer Products division, its most profitable at about a 30 per cent margin, is also the one whose 2026 growth guidance was cut hardest."
+   ]
+  },
+  {
+   "id": "the-number-two-mark",
+   "title": "The number-two mark: equivalent in law, unequal in practice",
+   "kind": "ledger",
+   "read": "7 min",
+   "cols": [
+    "Claim",
+    "Status",
+    "The evidence",
+    "What it means for a tender"
+   ],
+   "rows": [
+    [
+     "ETL and UL marks are legally equivalent in the United States",
+     "**True**",
+     "Recognition lets an employer rely on any recognised laboratory's mark to satisfy the same workplace requirement. The regulator states that recognition is not a delegation or grant of government authority",
+     "A tender may not specify one mark on legal grounds. If it does, it is expressing a preference"
+    ],
+    [
+     "ETL is cheaper and faster",
+     "**Reported, consistently**",
+     "Independent compliance literature puts ETL at 25 to 50 per cent below UL pricing at up to half the turnaround, and records manufacturers moving between the two for identical products as price and schedule change",
+     "Price competition is real and the switching cost is low"
+    ],
+    [
+     "ETL is the number-two mark in North America",
+     "**Trade lore, not measured**",
+     "The regulator publishes no market shares and does not rank laboratories. Every share figure in circulation comes from a compliance consultancy with a commercial interest in the answer",
+     "Directionally probably right; do not write it as a fact"
+    ],
+    [
+     "Intertek can certify to {{UL 9540}} as a recognised laboratory",
+     "**True only from 2025-08-22**",
+     "Applied 2021-02-15; granted 2025-08-22 — four and a half years, with an on-site review of the Cortland battery laboratory in April 2024 that found nonconformances the company then addressed",
+     "For most of the period this corpus covers, an ETL mark to UL 9540 was a private certification, not a recognised one"
+    ],
+    [
+     "Intertek can certify to {{UL 1973}} as a recognised laboratory",
+     "**True from 2024-04-24**",
+     "Granted alongside UL 2271 for light electric vehicle batteries, UL 2524 and UL 2743",
+     "Recognition is granular — standard by standard — and dated"
+    ],
+    [
+     "Intertek is recognised for {{UL 9540A}}",
+     "**False, and structurally impossible**",
+     "No recognition notice mentions it. Recognition attaches to certifying products against safety standards, and 9540A is a test method",
+     "Anyone claiming recognised status for running 9540A has misread the system — and that is true of every laboratory, not just this one"
+    ],
+    [
+     "Intertek is recognised for {{UL 1741}}",
+     "**Not evidenced**",
+     "The recognitions to UL 1741 in the public record belong to other laboratories. Full-text indexing may not reach the oldest grants, so this is unevidenced rather than disproven",
+     "Ask; do not assume"
+    ]
+   ]
+  },
+  {
+   "id": "the-nrtl-clock",
+   "title": "The recognition clock: four and a half years for one standard",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Months from Intertek's application to add the grid-scale energy-storage standard to its recognised scope. Lanes: what the company and the regulator did; what the market did meanwhile. The gap is the concrete cost of being the second source.",
+   "unit": "months from February 2021 (0 = the UL 9540 application)",
+   "lanes": {
+    "reg": "Company and regulator",
+    "mkt": "Market"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "reg",
+     "label": "Application filed",
+     "sub": "2021-02-15: Intertek applies to add UL 9540, Energy Storage Systems and Equipment, to its recognised scope"
+    },
+    {
+     "x": 38,
+     "lane": "reg",
+     "label": "UL 1973 granted",
+     "sub": "2024-04-24: batteries for stationary and light electric rail use, alongside UL 2271, UL 2524 and UL 2743"
+    },
+    {
+     "x": 38,
+     "lane": "reg",
+     "label": "On-site review finds nonconformances",
+     "sub": "2024-04-14/16 at the Cortland, New York battery laboratory; assessors find nonconformances with the recognition regulation, which Intertek addresses sufficiently"
+    },
+    {
+     "x": 52,
+     "lane": "mkt",
+     "label": "Three parties complain",
+     "sub": "June-July 2025: commenters ask how Intertek can issue certifications and field evaluations to UL 9540 outside its recognised scope; one alleges 113 certificates"
+    },
+    {
+     "x": 54,
+     "lane": "reg",
+     "label": "Complaints dismissed and UL 9540 granted",
+     "sub": "2025-08-22: the regulator establishes the certifications never referenced the recognition programme, finds no misrepresentation, takes no further action — and grants the expansion the same day"
+    },
+    {
+     "x": 66,
+     "lane": "reg",
+     "label": "UL 6200 granted",
+     "sub": "2026-08-21: controllers for use in power production, with no on-site review required and no comments received — what a routine expansion looks like by comparison"
+    }
+   ]
+  },
+  {
+   "id": "standing-on-the-line",
+   "title": "Standing on the production line: what surveillance catches that a certificate cannot",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "A certificate describes a design; a gigawatt-hour order is manufactured over months across shifts, with material substitutions, tooling wear and staff turnover. The buyer's exposure is in that gap. These are Intertek CEA's named services and what each is actually looking for.",
+   "cols": [
+    "Service",
+    "Scale published",
+    "What it is looking for",
+    "Why a certificate cannot substitute"
+   ],
+   "rows": [
+    [
+     "**{{factory audit}}**",
+     "400+ point checklist for a battery-storage factory",
+     "The system that makes the product — quality policy, facility certifications, R&D capability, laboratory management and measurement traceability, incoming material control, process control, logistics",
+     "A certificate says the design passed. This asks whether the factory can build it repeatably"
+    ],
+    [
+     "**{{inline production process monitoring}}**",
+     "280+ inspection points; weekly reports ranked by severity; cadence adjustable to 24/7",
+     "What is happening on the line while your order is on it",
+     "An audit is a photograph; monitoring is a film"
+    ],
+    [
+     "**{{factory acceptance test}} witnessing**",
+     "Functional and performance verification, thermal imaging, laboratory oversight",
+     "Whether the tests were actually run as specified on calibrated instruments. Thermal imaging is there for a specific reason: a poor electrical connection is invisible and cool until it carries current",
+     "The manufacturer's own FAT report is the seller's account of the seller's test"
+    ],
+    [
+     "**{{pre-shipment inspection}}**",
+     "Statistically significant randomly selected sample",
+     "Finished goods against the agreed specification",
+     "The last point at which a buyer can reject without freight and customs costs"
+    ],
+    [
+     "**Container loading monitoring**",
+     "Every container, seal and pallet number, with photographs",
+     "That the approved lot is what was actually packed and loaded",
+     "Unglamorous, and the thing that makes a later dispute resolvable"
+    ],
+    [
+     "**Bill of materials verification**",
+     "—",
+     "That raw materials match the design documents",
+     "A substitution that passes every functional test can still void a warranty"
+    ],
+    [
+     "**Traceability and ESG audit**",
+     "Upstream to the source of raw materials, including mines — polysilicon, lithium, graphite, copper, aluminium",
+     "Forced-labour and tax-credit exposure under UFLPA and FEOC rules",
+     "Neither a certificate nor a laboratory can see two tiers up the supply chain"
+    ]
+   ]
+  },
+  {
+   "id": "where-the-margin-is",
+   "title": "Where the margin is: five divisions, one weighted average",
+   "kind": "bars",
+   "read": "5 min",
+   "unit": "FY2025 adjusted operating margin, per cent",
+   "intro": "A group margin is a weighted average of very different businesses, which is why it tells you almost nothing about any part of it. The spread here is the whole argument for splitting the company — and the whole argument for buying it.",
+   "items": [
+    {
+     "label": "Consumer Products",
+     "sub": "£983.4m revenue; softlines, hardlines, Electrical & Connected World, Government & Trade Services. The largest and most profitable — and the division whose 2026 growth guidance was cut hardest",
+     "v": 30.4
+    },
+    {
+     "label": "Corporate Assurance",
+     "sub": "£514.0m; Business Assurance and Assuris. The fastest-growing at +6.8% like-for-like in FY2025 and +10.0% in H1 2026",
+     "v": 22.6
+    },
+    {
+     "label": "Health and Safety",
+     "sub": "£347.1m; AgriWorld, Food, Chemicals & Pharma",
+     "v": 13.0
+    },
+    {
+     "label": "Industry and Infrastructure",
+     "sub": "£858.1m; Industry Services, Minerals, Building & Construction",
+     "v": 11.1
+    },
+    {
+     "label": "World of Energy",
+     "sub": "£729.0m; Caleb Brett, Transportation Technologies and Intertek CEA. The only division to shrink in FY2025 — and its margin fell again to 6.9% in H1 2026",
+     "v": 8.7
+    }
+   ]
+  },
+  {
+   "id": "break-up-or-hold",
+   "title": "Break up or hold: the argument the company made against itself",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "On 2026-04-14 Intertek proposed splitting into Testing & Assurance — £1,844.4m of FY2025 revenue at a 25.0% margin — and Energy & Infrastructure at £1,587.2m and 10.0%. Roughly equal revenue, wildly unequal profit. It paused the plan on 2026-05-13 to let EQT in, and the buyer says it intends to recommence the review about twelve months after completion.",
+   "cards": [
+    {
+     "t": "Split it",
+     "meta": "The conglomerate structure was itself the discount.",
+     "adv": [
+      "**A fifteen-point margin gap** between the two halves means one multiple is being applied to two businesses that deserve different ones.",
+      "**A broker put the case plainly**: Energy & Infrastructure is about 46 per cent of revenue and about 27 per cent of profit, and the structure 'contributed to a prolonged share price de-rating'.",
+      "**Buyers already existed** — the company reported an encouraging level of interest before it paused, and preferred a sale to a demerger.",
+      "**Different cycles.** Consumer testing tracks retail; cargo inspection tracks trade volumes; neither diversifies the other in a way an investor cannot do more cheaply."
+     ],
+     "dis": []
+    },
+    {
+     "t": "Hold it",
+     "meta": "The case against is thinner but it is not empty.",
+     "adv": [],
+     "dis": [
+      "**Timing made it look reactive.** The review was announced two working days after EQT's first approach, during a chairman handover — and a shareholder holding about 0.5 per cent said so publicly.",
+      "**At least one analyst bet against it**, arguing the share price implied a break-up that would not in fact happen.",
+      "**Shared infrastructure is real** — accreditations, laboratory networks and a single brand across 100-plus countries do not separate for free.",
+      "**And the shareholders wanted the other answer.** Holders of close to 10 per cent pressed the board to take the offer rather than to execute the split, which is the reverse of the usual pattern."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-four-round-bid",
+   "title": "The four-round bid, and what a premium actually measures",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "Weeks from EQT's first approach. The lesson is in the last two entries: a 59 per cent premium measured against a price that had just fallen 18 per cent is not the same as a 59 per cent premium to value.",
+   "unit": "weeks from 10 April 2026 (0 = EQT's first approach)",
+   "lanes": {
+    "bid": "The bid",
+    "tgt": "The company and its owners"
+   },
+   "items": [
+    {
+     "x": -5,
+     "lane": "tgt",
+     "label": "Shares fall about 18% on FY2025 results",
+     "sub": "2026-03-03: divisional guidance cut — Consumer Products from high- to mid-single-digit, Industry & Infrastructure from mid- to low-single-digit, World of Energy declining"
+    },
+    {
+     "x": -1,
+     "lane": "bid",
+     "label": "Consortium assembled before the target is approached",
+     "sub": "Platinum Ivy signs its standstill with EQT on 2 April, eight days before the first approach to Intertek"
+    },
+    {
+     "x": 0,
+     "lane": "bid",
+     "label": "£51.50 per share",
+     "sub": "2026-04-10, unsolicited and indicative"
+    },
+    {
+     "x": 0,
+     "lane": "tgt",
+     "label": "Rejected",
+     "sub": "2026-04-13, as fundamentally undervaluing the company"
+    },
+    {
+     "x": 1,
+     "lane": "tgt",
+     "label": "Strategic Review announced",
+     "sub": "2026-04-14, two working days after the approach: split into two listed ATIC businesses by mid-2027, sale preferred"
+    },
+    {
+     "x": 2,
+     "lane": "bid",
+     "label": "£54.00",
+     "sub": "Rejected"
+    },
+    {
+     "x": 4,
+     "lane": "bid",
+     "label": "£58.00",
+     "sub": "Rejected; about 12.1x FY2025 EV/EBITDA and a 54 per cent premium"
+    },
+    {
+     "x": 4,
+     "lane": "tgt",
+     "label": "Holders of about 10% go public",
+     "sub": "PineStone at about 4 per cent, Lost Coast Collective at about 1.2 per cent and PrimeStone press the board to engage — for the deal, not for a higher price"
+    },
+    {
+     "x": 5,
+     "lane": "bid",
+     "label": "£60.00, and the review is paused",
+     "sub": "2026-05-13: the board would be minded to recommend; confirmatory due diligence granted"
+    },
+    {
+     "x": 10,
+     "lane": "bid",
+     "label": "Rule 2.7: £60.00 plus the retained 107.7p dividend",
+     "sub": "2026-06-18. £61.077 in total; about £9.5bn equity on £10.9bn enterprise value; declared FINAL, which forecloses any raise"
+    },
+    {
+     "x": 17,
+     "lane": "tgt",
+     "label": "98.72 per cent in favour",
+     "sub": "2026-08-06 — on 54.55 per cent turnout, and 14 of 68 participating holders voted against by headcount"
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**Nobody is an incumbent in global TIC, including this company.** Intertek is fifth of ten by revenue at about USD 4.6bn, behind SGS, Eurofins, Bureau Veritas and DEKRA, in a market where the top ten hold under a quarter of global revenue — so its world share is roughly 1.5 to 2 per cent. Incumbency claims only survive when a specific market is named.",
+    "**Recognition is dated and granular, and the marketing is not.** Intertek's own pages list the battery standards it tests to without distinguishing which are inside its recognised scope and when they entered it. The honest statement is that the {{ETL Mark}} is legally equivalent, that its recognised scope covers UL 9540 only from August 2025 and UL 1973 only from April 2024, and that no laboratory is recognised for UL 9540A.",
+    "**The failures that define a certifier are its own.** A scheme owner **partially suspended** Intertek Testing Services NA as an approved certification body in July 2024 over what it called serious lapses, barring it from issuing transaction certificates in parts of the cotton chain and from taking new clients; no reinstatement notice has been found. A London High Court claim brought by 130 Burmese migrant workers turns on whether Intertek's social audits of a Thai factory were negligent — reported as a landmark because a finding for the claimants would expand auditor liability across the industry. And the historic precedent is heavier: the US Justice Department called a 1990s environmental-laboratory matter the biggest case of laboratory fraud in the nation's history, affecting 59,000 clean-up sites, resolved by a corporate guilty plea and two settlements totalling about USD 17.7m — with eight individual defendants acquitted on all counts.",
+    "**The division this corpus cares about is the one being sold.** Intertek CEA and Caleb Brett sit inside World of Energy, which sits inside the Energy & Infrastructure half that both the board and the buyer have said they intend to separate.",
+    "**The largest competitor to the whole industry is customers doing it themselves.** In-house testing is reported as the largest share of the TIC market and growing, as firms keep work internal to protect innovation pipelines and confidentiality. That competitor appears in nobody's league table."
+   ]
+  },
+  {
+   "id": "where-intertek-slots-in",
+   "title": "Where Intertek's services slot into the assurance chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The seats an assurance group can occupy, with Intertek's instance of each and what the reader should take from the row.",
+   "cols": [
+    "Seat",
+    "Intertek's instance",
+    "What to take from it"
+   ],
+   "rows": [
+    [
+     "**The mark**",
+     "The {{ETL Mark}} and, in Canada, cETL under Standards Council of Canada accreditation",
+     "Legally equivalent to competing marks; sold on price and turnaround rather than on recognition speed"
+    ],
+    [
+     "**The standard the code cites**",
+     "None. Intertek writes no standards — it tests to documents published by UL Standards & Engagement and the IEC",
+     "Unlike CSA Group, it has no authorship position anywhere in the battery chain"
+    ],
+    [
+     "**The bench**",
+     "A battery centre of excellence at Cortland, New York, part-funded by a USD 300,000 state grant, offering cell to unit level and full-scale fire propagation",
+     "The same laboratory where an on-site review found nonconformances in April 2024"
+    ],
+    [
+     "**The buyer's engineer**",
+     "Intertek CEA — factory audits, inline monitoring, FAT witnessing, pre-shipment inspection, container loading, traceability",
+     "The distinctive asset. It sits on the buyer's side of the transaction while the mark sits on the seller's"
+    ],
+    [
+     "**The research franchise**",
+     "Quarterly ESS and PV Price Forecasting Reports, the Supplier Market Intelligence Program, and annual manufacturing quality reports",
+     "Where this company speaks publicly about the battery market — as a price forecaster, not as a certifier"
+    ],
+    [
+     "**The cargo**",
+     "Intertek Caleb Brett — quantity and quality determination at the point of transfer",
+     "The oldest business and the one whose margin is falling"
+    ],
+    [
+     "**The consumer chain**",
+     "Softlines, hardlines and Government & Trade Services inside Consumer Products",
+     "The profit engine at about a 30 per cent margin, and the growth disappointment of 2026"
+    ],
+    [
+     "**The data centre**",
+     "Design, build and commissioning services evaluating facilities under electrical load, thermal demand, environmental conditions and ICT requirements",
+     "Sold to owners and operators rather than to equipment makers — a facility seat, not a product seat"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "In acceptance sampling, what does the accept/reject threshold actually encode?",
+     "a": "A chosen balance between two errors — rejecting a good lot (producer's risk) and accepting a bad one (consumer's risk). Fix the tolerable defect rate and the sample size follows. Two inspection quotes at different prices usually differ in risk, not diligence."
+    },
+    {
+     "q": "Why does a bigger lot not need a proportionally bigger sample?",
+     "a": "Because confidence depends far more on the sample size than on the lot size. Doubling the lot barely changes the sample required — which is the only reason inspecting a 40,000-unit shipment is affordable."
+    },
+    {
+     "q": "What is chain of custody and why does it exist?",
+     "a": "The documented, unbroken record of who held a sample, when, and under what seal. Without it a measurement cannot be defended against challenge however precise the instrument — and that, not the instrument, is what a buyer is paying a third party for."
+    },
+    {
+     "q": "How does a draft survey determine cargo weight?",
+     "a": "By measuring how deep the vessel sits before and after loading: read the draught marks at six points, correct for trim, list and water density against the hydrostatic tables, compute displacement each time and subtract — deducting fuel, ballast, fresh water and stores."
+    },
+    {
+     "q": "Why is a liquid cargo's temperature recorded alongside its volume?",
+     "a": "Because volume is temperature-dependent. Without correcting to a standard temperature, the same cargo measures differently in the morning and the afternoon."
+    },
+    {
+     "q": "A material's phthalate content exceeds a regulatory limit but the finished product passes. Contradiction?",
+     "a": "No, if the applicable limit is a migration limit. Migration testing measures how much moves out under defined conditions, not how much the material contains — a tightly bound substance can exceed a content threshold and still pass."
+    },
+    {
+     "q": "Are the ETL and UL marks legally equivalent in the United States?",
+     "a": "Yes. Products certified by any recognised laboratory satisfy the same workplace requirement, and the regulator states that recognition is not a delegation or grant of government authority. The difference is commercial: price, turnaround and how fast an inspector recognises the label."
+    },
+    {
+     "q": "When did UL 9540 enter Intertek's recognised scope, and how long did it take?",
+     "a": "2025-08-22, four and a half years after the application of 2021-02-15 — with an on-site review of the Cortland battery laboratory in April 2024 that found nonconformances the company then addressed."
+    },
+    {
+     "q": "Why can Intertek never be recognised for UL 9540A?",
+     "a": "Because recognition attaches to certifying products against safety standards, and UL 9540A is a test method. No laboratory holds recognition for it — the point is about the system, not about Intertek."
+    },
+    {
+     "q": "What is the difference between a factory audit and inline production process monitoring?",
+     "a": "An audit examines the system that makes the product — quality policy, material control, process control — at a point in time. Monitoring puts an inspector on the running line, working a fixed set of inspection points and reporting by severity. An audit is a photograph; monitoring is a film."
+    },
+    {
+     "q": "Why is thermal imaging part of factory acceptance test witnessing?",
+     "a": "Because a poor electrical connection is invisible and cool until it carries current. A thermal camera under load finds what a visual inspection cannot."
+    },
+    {
+     "q": "What is 'like-for-like growth at constant currency' and why does a group report three growth numbers?",
+     "a": "It strips out acquisitions, disposals and exchange movement to isolate what the existing business did — and it is always the smallest figure. Intertek's FY2025 was +1.1% as reported, +4.3% at constant currency and +3.9% like-for-like. All three are true."
+    },
+    {
+     "q": "What is a scheme of arrangement and when does it bind dissenting shareholders?",
+     "a": "The UK court-supervised route to taking a listed company private. Shareholders vote at a court meeting and a general meeting; a court then sanctions it; only on sanction does it bind everyone, including those who voted against — after which trading is suspended and the listing cancelled on a published day-count."
+    },
+    {
+     "q": "Why is a 59 per cent premium not necessarily a generous price?",
+     "a": "Because premium-to-undisturbed and premium-to-value are different measurements. Intertek's undisturbed price had fallen about 18 per cent five weeks earlier on cut guidance, and the agreed price equalled the most bullish published analyst target, beat the four-bank sum-of-the-parts by about 3.5 per cent, and sat about two turns of EBITDA below the sector's ten-year average."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A supplier offers to halve inspection cost by halving the sample size. What has changed?",
+     "c": [
+      "Nothing material — the inspector is the same",
+      "The consumer's risk has risen: the probability of accepting a lot with an unacceptable defect rate",
+      "The producer's risk has risen",
+      "The acceptable quality level has improved"
+     ],
+     "a": 1,
+     "why": "Sample size and accept threshold encode a chosen balance between rejecting good lots and accepting bad ones. Halving the sample raises the chance a defective lot is accepted; nothing about the product or the inspector's competence has changed."
+    },
+    {
+     "q": "A 2024 datasheet says an Intertek-certified container is 'ETL Listed to UL 9540'. What is the correct reading?",
+     "c": [
+      "It is an OSHA-recognised NRTL certification to UL 9540",
+      "It is a legitimate Intertek certification, but not a recognised NRTL certification — UL 9540 only entered Intertek's recognised scope on 2025-08-22",
+      "It is invalid and was withdrawn",
+      "It means the same as a UL Solutions listing in every respect"
+     ],
+     "a": 1,
+     "why": "The regulator examined exactly this and found that Intertek had never referenced the recognition programme in those authorizations, that the certifications were therefore not recognised certifications, and that no misrepresentation had occurred. The marks were legitimate; they were simply the private kind."
+    },
+    {
+     "q": "A buyer already holds the manufacturer's full certification package and is offered production monitoring. Is that duplicative?",
+     "c": [
+      "Yes — certification already covers manufacturing quality",
+      "No — the certificate is about the design, monitoring is about the units you will actually receive",
+      "Only if the certificate is more than a year old",
+      "Yes, unless the factory has changed tooling"
+     ],
+     "a": 1,
+     "why": "Type certification infers a whole production run from a representative sample. Monitoring observes the run itself. They answer different questions and only one of them is about your shipment — which is why the surveillance data finds defects the certificate cannot."
+    },
+    {
+     "q": "Intertek CEA reports that more than one in eight inspected storage units carried a safety-critical issue. The right way to read that is:",
+     "c": [
+      "The market defect rate for battery storage is above 12 per cent",
+      "It is what surveillance finds in a population of projects whose buyers commissioned an inspection — not a market-wide rate",
+      "It is a certification failure rate",
+      "It refers to units that failed factory acceptance testing"
+     ],
+     "a": 1,
+     "why": "The population is self-selected: these are projects where somebody paid to look. That does not weaken the finding — it sharpens what it is a finding about, which is what inspection uncovers rather than how common defects are overall."
+    },
+    {
+     "q": "Which fact best explains why Intertek was worth more to a private buyer than to the public market?",
+     "c": [
+      "Its global TIC ranking",
+      "A fifteen-point margin gap between two halves of roughly equal revenue, to which one multiple was being applied",
+      "The strength of the ETL Mark",
+      "Its battery laboratory investments"
+     ],
+     "a": 1,
+     "why": "Testing & Assurance earned a 25.0 per cent margin on £1,844m and Energy & Infrastructure 10.0 per cent on £1,587m. That gap is simultaneously the case for the demerger the company proposed and the case for the buyout that interrupted it."
+    },
+    {
+     "q": "Shareholders holding close to 10 per cent went public during the bid. What did they ask for?",
+     "c": [
+      "A higher price",
+      "That the board engage with the bidder rather than pursue its own break-up plan",
+      "A rival bidder to be sought",
+      "That the strategic review be accelerated"
+     ],
+     "a": 1,
+     "why": "This inverts the usual pattern and is the strongest governance signal in the record: no public shareholder objected that the price was too low, and none organised against the deal. One letter attacked the strategic review as a defence announced two working days after the approach."
+    },
+    {
+     "q": "Which condition on the scheme is most revealing about Intertek's own business, rather than about the buyer?",
+     "c": [
+      "The UK CMA merger condition",
+      "The ITAR notification to the US State Department's Directorate of Defense Trade Controls",
+      "The EU merger regulation condition",
+      "The China SAMR condition"
+     ],
+     "a": 1,
+     "why": "That notification obligation arises only for an entity registered with DDTC as a defense-article manufacturer or exporter, so its presence establishes that part of the Intertek group is ITAR-registered — a fact disclosed nowhere else in the public record. The CFIUS condition requiring a joint Bidco-and-Intertek filing points the same way."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1413 @@
+{
+ "schemaVersion": 7,
+ "slug": "ul-solutions",
+ "name": "UL Solutions Inc.",
+ "shortName": "UL Solutions",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://www.ul.com",
+ "headquarters": "333 Pfingsten Road, Northbrook, Illinois 60062, United States",
+ "founded": 1894,
+ "employees": "14,587 full-time and 264 part-time (2025-12-31), ~9,900 technical",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: ULS",
+  "notes": "A controlled company. ULSE Inc., operating as UL Standards & Engagement, holds all 123,755,000 Class B shares at ten votes each against 78,143,173 Class A shares at one vote (as of 2026-07-24), giving it about 61.6 per cent of the equity and 94.1 per cent of the voting power. ULSE's sole member is Underwriters Laboratories Inc., operating as UL Research Institutes. Control lapses on the Sunset Date — the earlier of 2031-04-16 or the date ULSE's Class B holding falls below 35 per cent of what it held immediately after the April 2024 IPO — at which point all Class B converts to Class A and the board becomes classified."
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** UL Solutions owns the UL Mark but not the UL standards, and the gap between those two facts is the whole company — it licenses the mark royalty-free to the two non-profits above it, pays them $22m a year for access to the standards library it tests against, and competes for every listing with any of roughly twenty other laboratories recognised to certify to the same documents.\n\n**BACKGROUND.** Northbrook, Illinois testing, inspection and certification company, founded 1894 as part of the nonprofit Underwriters Electrical Bureau and listed on the NYSE in April 2024 in an offering from which it received nothing. FY2025 revenue $3,053m, up 6.2 per cent organically, with adjusted EBITDA of $792m at a 25.9 per cent margin and free cash flow of $403m; net income was flat at $345m because the effective tax rate rose from 16.9 to 26.6 per cent under OECD Pillar Two. It serves more than 80,000 customers in over 110 countries from 87 laboratory sites in 27 countries, holds more than 650 technical accreditations, and can test against more than 4,000 standards. Its controlling shareholder, ULSE Inc., has sold shares three times in twenty months — at $28.00, $49.00 and $78.00 — and the stock closed at $73.19 on 2026-09-08.",
+ "ecosystemRole": "The default certifier of the battery and data-centre equipment this corpus tracks, and the one whose name is on the standards without owning them. When a fire code requires an energy storage system to be listed to UL 9540 and tested to UL 9540A, it is citing documents published by UL Standards & Engagement — a separate non-profit that UL Solutions does not control and pays for access to — and any OSHA-recognised laboratory may issue the listing. UL Solutions holds the largest share of that work through the mark, the accreditation breadth, fire-testing capacity it says needs no subcontracting, and standing with fire departments and building officials. In this corpus it appears from three directions: as the certifier or witness on manufacturers' large-scale fire tests, in competition with CSA Group, DNV and TÜV Rheinland; as an independent engineer on lender panels alongside DNV, Sargent & Lundy, Black & Veatch and Burns & McDonnell; and as the counterparty in a laboratory-qualification programme that lets CATL run UL 9540A tests in its own facility under supervision. Its data-centre business is the newest edge — the first UL 9540 certification of a medium-voltage inverter working as a UPS was issued to ABB in April 2026 — and it is spending capital into that demand faster than the market currently wants.",
+ "productsAndServices": [
+  {
+   "name": "Energy storage system testing and certification",
+   "category": "Testing and certification",
+   "description": "The battery estate, and the part of UL Solutions this corpus sits inside. It certifies complete storage systems to UL 9540, runs the UL 9540A thermal-runaway propagation test method at cell, module, unit and installation level, tests batteries to UL 1973 and inverters to UL 1741, and since April 2026 sells large-scale fire testing as a distinct service. Every one of those standards is published by UL Standards & Engagement, a separate non-profit that UL Solutions does not control; UL Solutions is the laboratory and the mark, not the author.",
+   "highlights": [
+    "UL 9540A is offered to both the fifth and sixth editions, so a customer can choose the edition matching its compliance strategy: the fifth has four test levels (cell, module, unit, installation) and the sixth has three, replacing the unit level with an installation-level large-scale fire test except for residential systems and non-residential systems carrying an active thermal-runaway propagation prevention system",
+    "The sixth edition's installation test introduces a challenging fire scenario and assumes a post-deflagration condition, evaluating enclosure design, separation distances and, for indoor systems, the effectiveness of building-based fire suppression",
+    "UL 9540A is run at laboratories in the United States, China, Korea, Taiwan, Germany and other countries",
+    "Six of the company's laboratories specialise in battery cell, pack and module testing, against more than 35 years of battery testing experience",
+    "Stated differentiator: full fire testing facilities, eliminating the need for subcontracting",
+    "UL 9540B is a separate residential product — an Outline of Investigation for systems of 20 kWh or less, created after authorities having jurisdiction determined that UL 9540A by itself did not adequately fulfil the 2022 California Fire Code, removing the module test and adding purposeful ignition of vented gases",
+    "NFPA 855's 2026 edition adds Annex G.11 setting expectations for large-scale fire testing, which is the demand engine for the service launched in April 2026"
+   ],
+   "positioning": "UL Solutions does not claim to own UL 9540 or UL 9540A and says plainly that UL Standards & Engagement publishes them, so any OSHA-recognised laboratory may certify against them — Intertek, CSA Group, TUV Rheinland, TUV SUD and DEKRA all do. What UL Solutions owns instead is the UL Mark itself, which it licenses royalty-free to the two non-profits rather than the other way round. The real advantages it claims are accreditation breadth, fire-testing capacity that does not need subcontracting, standing with fire departments and building officials, and a client-laboratory network that extends throughput beyond its own benches. The one third-party ranking of battery-storage TIC names UL Solutions and Intertek as the leading key players in a market sized at USD 0.66bn in 2026 — strategically central and financially small, at roughly a fifth of UL Solutions' own revenue and split fifteen ways.",
+   "soldThrough": "Direct to manufacturers and integrators, with certification testing typically leading into ongoing certification services",
+   "targetSegments": [
+    "Battery cell, module and pack manufacturers",
+    "Energy storage system integrators",
+    "Inverter and converter makers",
+    "Code authorities and fire departments, as the buyers of the evaluation reports"
+   ],
+   "roadmap": "Large-Scale Fire Testing launched 2026-04-23 and the NFPA 855, 68 and 69 evaluation services on 2026-06-22; the company's own sizing of the addressable build is about 1,010 utility-scale projects totalling 48.6 GW in operation as of June 2026, from 57.6 GW of utility-scale capacity in 2025, expected to exceed 600 GW by 2030."
+  },
+  {
+   "name": "The Data Acceptance Program and its sub-programmes",
+   "category": "Certification operating model",
+   "description": "The mechanism by which UL Solutions certifies more than its own laboratories could physically test. The Data Acceptance Program accepts externally generated test data in support of UL Mark certification, requiring participating facilities to hold physical resources, equipment and qualified personnel equivalent to what UL Solutions would use for the same testing, auditing all submitted data before use and reassessing each laboratory annually.",
+   "highlights": [
+    "Named sub-programmes: the Witnessed Test Data Program, under which tests run at the customer's facility under the supervision of UL Solutions personnel; the Client Test Data Program; the Third Party Test Data Program; the UL Total Certification Program; and the Preferred Partner Program",
+    "The Total Certification Program and Preferred Partner Program go further, letting the customer conduct a large portion of the engineering evaluations on UL Solutions' behalf",
+    "CATL's energy storage laboratory was qualified in January 2023 as the first laboratory in China to launch the Witnessed Test Data Program for UL 9540A, having already been qualified to test to UL 1973, UL 9540 and UL 2580",
+    "Under the same arrangement CATL's EnerOne and EnerC systems received UL 9540A test reports, which UL Solutions describes as making CATL the first company in China to complete cell, module, unit and installation level tests",
+    "Samsung's LED component test laboratory is separately named as approved under the UL Total Certification Program"
+   ],
+   "positioning": "This is the scalability answer to the question of how a company with 87 laboratory sites certifies against more than 4,000 standards in over 110 countries. It is neither a franchise nor blind data acceptance: UL Solutions supervises, audits every submission and re-assesses annually. It is also the structural reason a manufacturer's own laboratory can become part of the certification chain without the mark changing hands.",
+   "soldThrough": "Direct, as a qualification of the customer's or a third party's laboratory",
+   "targetSegments": [
+    "High-volume manufacturers with their own test laboratories",
+    "Third-party laboratories seeking to feed UL Mark certification"
+   ]
+  },
+  {
+   "name": "Ongoing Certification Services",
+   "category": "Recurring certification",
+   "description": "The annuity, and the largest of the four service categories at about 33 per cent of FY2025 revenue. It is the mandatory inspection and monitoring a customer must accept to keep the right to use the UL Mark — periodic factory inspections, initial and follow-up audits, sample testing and label usage control.",
+   "highlights": [
+    "FY2025 revenue $1,006m, up from $953m in FY2024 and $874m in FY2023",
+    "Certification testing, at $851m in FY2025, often leads into ongoing certification services, so the two categories compound",
+    "The recurring half of the business is what makes the UL Mark a subscription rather than a one-off transaction"
+   ],
+   "positioning": "This is where the mark's economics actually live, and it is also where the company's own most existential disclosed risk lands: the FY2025 10-K names, as a risk, any regulatory or private-sector change requiring the acceptance of third-party test results or reducing the inspections, tests or certifications required, or harmonising international benchmarks. A mutual-recognition regime does not attack the testing revenue so much as the annuity behind it.",
+   "soldThrough": "Direct, on recurring inspection and label programmes",
+   "targetSegments": [
+    "Every certified manufacturer holding a UL Mark listing"
+   ]
+  },
+  {
+   "name": "Data centre testing, certification and advisory",
+   "category": "Testing and certification",
+   "description": "The AI-demand line, organised around five pillars — power supply, computing infrastructure, cooling management, built environment and operational efficiency. It spans energy-storage certification, IEC 62368-1 for AV and IT equipment, low-GWP refrigerants and coolant distribution units, immersion cooling fluids, modular data centres to UL 2755:2025, power cables and cord sets, liquid cooling hoses and tubing, and an integrator qualification programme.",
+   "highlights": [
+    "The company's own framing of the problem: rack power densities of 100 kW to 1 MW against traditional levels of 5 to 10 kW, significantly raising available fault current",
+    "System voltages moving to roughly 800 VDC today with the industry planning for up to 1,500 VDC",
+    "Twenty-two high-profile data centre fire incidents publicly reported between 2014 and 2023",
+    "UL 2755:2025 for prefabricated modular data centres is described by the company as a proprietary edition of the outline that UL Solutions itself revised — one of the few documents in the battery and data-centre estate the commercial company, rather than the standards body, wrote",
+    "Modular data centre market sized by the company at $29.3bn in 2025 growing to $128bn by 2035",
+    "Participates in the Direct Current Safety Research Consortium, creating standardised methods to model DC arc-flash incident energy"
+   ],
+   "positioning": "The competitive position here is not independently measured — no analyst or trade assessment of UL Solutions' standing in data-centre certification was located, and nearly all the evidence is the company's own. What is externally verifiable is the ABB HiPerGuard certification of April 2026, the first UL 9540 certification for a medium-voltage multi-mode static inverter working as a UPS, and the co-lead of the Open Compute Project's Codes and Standards workstream alongside ABB and Eaton.",
+   "soldThrough": "Direct to equipment makers, and to owners, developers and operators for facility-level work",
+   "targetSegments": [
+    "Data centre equipment manufacturers",
+    "Colocation and hyperscale operators",
+    "Modular data centre builders"
+   ],
+   "roadmap": "Capital expenditure guided to about 8.5% of revenue in FY2026 against 6.5% in 2025, explicitly for AI data centres, energy storage and automotive electrification, with laboratories in Japan and Illinois and an EMC and wireless laboratory in Neu-Isenburg, Germany opening mid-2027."
+  },
+  {
+   "name": "ULTRUS software",
+   "category": "Software",
+   "description": "The software brand, launched January 2024, covering product compliance and stewardship, chemical and materials data, supply-chain risk, compliance training, ESG reporting and renewable-energy modelling. About 9 per cent of FY2025 revenue at $285m across the service taxonomy, and $254m as the Risk and Compliance Software segment on the new basis.",
+   "highlights": [
+    "Named products include WERCSmart and WERCS Studio for retail product compliance, ComplianceWire as an FDA CFR Part 11 validated learning and qualification system, UL 360 for ESG and sustainability data, Prospector for material discovery across more than 260,000 materials, and the SDS authoring and GHS labelling tools",
+    "The renewable-energy modelling suite is the part this corpus should care about: HOMER Pro and HOMER Grid for microgrid and distributed-energy optimisation at time steps from one minute to one hour, Openwind for wind-farm layout — which the company says is used by 70 per cent of the top global wind developers — Windographer for resource data analytics, and RAMP for renewable asset monitoring",
+    "CableBuilder covers wire and cable design including subsea umbilical, with an automated compliance pre-check against UL 44, UL 83 and UL 1277",
+    "About 65 per cent of global and strategic accounts cross-purchased software and advisory solutions alongside their core testing needs in 2025",
+    "1,200-plus software and technology employees; the company claims 10,000-plus organisations as users"
+   ],
+   "positioning": "Largely cross-sold into the testing installed base rather than won standalone, which is what the 65 per cent cross-purchase figure describes. The segment is smaller than it appeared before the 2026 restatement: what was reported as a $393m Software and Advisory segment in FY2025 is $254m of software once the advisory business is moved to Industrial.",
+   "soldThrough": "Software as a service, licence-based products, and content modules and plug-ins to enterprise platforms",
+   "targetSegments": [
+    "Retailers and consumer-goods brands",
+    "Chemical and materials manufacturers",
+    "Renewable-energy developers and asset owners",
+    "Regulated manufacturers needing qualification management"
+   ],
+   "roadmap": "Retail Total Access launched 2026-08-24 and AI-powered product carbon footprint software on 2026-05-13; the company describes embedded machine learning as an area where it is building what is next and does not yet claim shipped capability."
+  },
+  {
+   "name": "Renewable-energy independent engineering and environmental claim verification",
+   "category": "Advisory and verification",
+   "description": "Two non-certification lines that matter to this corpus because other dossiers already cite them. Wind and Solar Power Independent Engineering Services is the bankability product, sold to lenders; Environmental Product Declaration certification under ISO 14025 is the environmental-claim product, sold to manufacturers.",
+   "highlights": [
+    "The independent engineering report covers project overview, site layout, energy production and loss review, turbine technology and site suitability, balance-of-plant, foundation, geotechnical and electrical design review, curtailment and congestion, and a full contracts review across the power purchase agreement, interconnection, turbine supply, balance-of-plant, operations and maintenance and shared-facilities agreements",
+    "The company's own framing is lender-facing: global bankability in the renewable energy industry, and an approach vetted over time with some of the world's top lead arrangers and lenders",
+    "About 500 wind and solar energy advisory experts",
+    "EPDs are issued against ISO 14025 on life-cycle assessments developed to product category rules and verified independently, with the creator and the verifier kept as separate entities under ISO 14040 and 14044",
+    "EPD Optimization verifies at least a 10 per cent reduction in global warming potential and can be evaluated against LEED criteria"
+   ],
+   "positioning": "Both product categories are confirmed first-party service lines, and both are cited elsewhere in this corpus in ways UL Solutions' own channels do not corroborate — see the relationships and the open questions. The independent-engineering line is the one that places UL Solutions on the same panels as DNV and Sargent & Lundy, but the company publishes no panel roster and names no peer, so that placement rests on the other firms' accounts rather than on this one's.",
+   "soldThrough": "Direct, on engagement, to lenders, investors and developers",
+   "targetSegments": [
+    "Lenders and tax-equity investors",
+    "Renewable project developers and owners",
+    "Manufacturers making environmental claims"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Company scale and accreditation",
+   "specs": [
+    {
+     "band": "Reach",
+     "label": "Customers",
+     "value": "more than 80,000 customers across over 110 countries in 2025"
+    },
+    {
+     "band": "Reach",
+     "label": "Technical accreditations",
+     "value": "more than 650"
+    },
+    {
+     "band": "Reach",
+     "label": "Conformity assessment services",
+     "value": "over 350 independent third-party conformity assessment services around the world"
+    },
+    {
+     "band": "Reach",
+     "label": "Standards testable against",
+     "value": "capable of testing and certifying against over 4,000 global standards"
+    },
+    {
+     "band": "Reach",
+     "label": "Standards participation",
+     "value": "active in over 1,200 standards panels and technical committees globally"
+    },
+    {
+     "band": "Reach",
+     "label": "Commercial software solutions",
+     "value": "76"
+    },
+    {
+     "band": "Position",
+     "label": "Self-described market position",
+     "value": "the largest TIC services provider headquartered in North America (by revenue)"
+    },
+    {
+     "band": "Position",
+     "label": "The mark",
+     "value": "the owner of the iconic UL-in-a-circle certification mark (the 'UL Mark') that appears on billions of products around the world"
+    },
+    {
+     "band": "Position",
+     "label": "Global TIC revenue rank",
+     "value": "8th of ten at USD 3,106m, behind SGS (8,758), Eurofins (8,567), Bureau Veritas (7,845), DEKRA (5,045), Intertek (4,619), TUV SUD (4,029) and TUV Rheinland (3,189), and described as the only American company in the global top ten"
+    },
+    {
+     "band": "Position",
+     "label": "Revenue per employee",
+     "value": "approximately USD 209,000 — the highest of the ten, against Intertek's approximately USD 105,000"
+    },
+    {
+     "band": "Position",
+     "label": "Founded",
+     "value": "1894, as part of the nonprofit Underwriters Electrical Bureau"
+    }
+   ],
+   "notes": "The scale figures are the company's own from the FY2025 10-K. The ranking is from Aventis Advisors' TIC league table of 2026-05-11, the only source located that ranks the majors on a single stated measure. Read the two together: UL Solutions is eighth by revenue and first by margin and revenue per employee in the same cohort, which is the shape of a small, product-safety-concentrated business among diversified inspection groups rather than a global leader."
+  },
+  {
+   "product": "Laboratory and property footprint",
+   "specs": [
+    {
+     "band": "Sites",
+     "label": "Sites with laboratories",
+     "value": "87 — 17 owned, 70 leased"
+    },
+    {
+     "band": "Sites",
+     "label": "Dedicated office spaces",
+     "value": "58, all leased, in 26 countries"
+    },
+    {
+     "band": "Sites",
+     "label": "Total locations",
+     "value": "145 — 17 owned, 128 leased"
+    },
+    {
+     "band": "Sites",
+     "label": "Countries with laboratories",
+     "value": "27"
+    },
+    {
+     "band": "Sites",
+     "label": "Regional split",
+     "value": "36 in Asia, 31 in the Americas, 20 in EMEA"
+    },
+    {
+     "band": "Sites",
+     "label": "Under construction or expansion",
+     "value": "1 under construction; 3 undergoing expansion"
+    },
+    {
+     "band": "Capacity",
+     "label": "Laboratory floor area",
+     "value": "over 5 million square feet"
+    },
+    {
+     "band": "Capacity",
+     "label": "Test equipment",
+     "value": "more than 140,000 pieces of test equipment"
+    },
+    {
+     "band": "Capacity",
+     "label": "Laboratory employees",
+     "value": "approximately 3,400"
+    },
+    {
+     "band": "Capacity",
+     "label": "Battery-specialised laboratories",
+     "value": "six, specialising in battery cell, pack and module testing"
+    },
+    {
+     "band": "Capacity",
+     "label": "Headquarters",
+     "value": "Northbrook, Illinois — owned, approximately 979,000 square feet on a 110-acre campus"
+    },
+    {
+     "band": "People",
+     "label": "Employees",
+     "value": "14,587 full-time and 264 part-time, of whom approximately 9,900 are scientists, engineers and other specialised technical and regulatory experts"
+    },
+    {
+     "band": "People",
+     "label": "Average tenure",
+     "value": "9 years overall; 11 years for technical talent"
+    }
+   ],
+   "notes": "Laboratories are managed in two categories the company names: integrated laboratories, described as larger centres of excellence with capacity across multiple industries, and specialised industry laboratories serving specific industries with niche capability. Note one first-party inconsistency: the energy-storage service page says six of eighty laboratories specialise in batteries while the 10-K reports 87 sites with laboratories. The 87 is the audited figure; the useful number is the six."
+  },
+  {
+   "product": "Named battery, energy and EV laboratory network",
+   "specs": [
+    {
+     "band": "Battery",
+     "label": "North America Advanced Battery Laboratory",
+     "value": "Auburn Hills, Michigan — a new build, and a driver of 2024 capital expenditure"
+    },
+    {
+     "band": "Battery",
+     "label": "Europe Advanced Battery Laboratory",
+     "value": "Aachen, Germany — opened 2025-05-15, purpose-built from the ground up, described as the first in the EU solely focused on comprehensive battery testing, specialising in battery lifespan estimation"
+    },
+    {
+     "band": "Battery",
+     "label": "Advanced Battery Testing Laboratory",
+     "value": "Northbrook, Illinois"
+    },
+    {
+     "band": "Battery",
+     "label": "Consumer and Micromobility Battery Testing Center",
+     "value": "Warsaw, Poland"
+    },
+    {
+     "band": "Battery",
+     "label": "Advanced Battery Testing and Engineering Laboratory",
+     "value": "Pyeongtaek, South Korea"
+    },
+    {
+     "band": "Battery",
+     "label": "E-Mobility and Energy Laboratory",
+     "value": "Changzhou, China"
+    },
+    {
+     "band": "EV charging",
+     "label": "EV Charging Test Laboratories",
+     "value": "Fremont, California; Northbrook, Illinois; Frankfurt, Germany"
+    },
+    {
+     "band": "EV charging",
+     "label": "CHAdeMO EV Quick Charger Matching Center",
+     "value": "Ise, Mie, Japan"
+    },
+    {
+     "band": "EV charging",
+     "label": "EV and Micromobility Laboratory",
+     "value": "Luzhu, Taiwan"
+    },
+    {
+     "band": "Experience",
+     "label": "Battery testing history",
+     "value": "more than 35 years of battery testing"
+    }
+   ],
+   "notes": "No quantified bench capacity is published for any of these — no chamber counts, no kWh or kW test capability, no throughput or annual certification volumes. The company publishes capability and site lists and not test specifications, and that absence is uniform across every battery and energy-storage service page."
+  },
+  {
+   "product": "Data centre technical parameters, as the company states them",
+   "specs": [
+    {
+     "band": "Power",
+     "label": "Rack power density",
+     "value": "ranging from 100 kilowatts to 1 megawatt per rack, compared to traditional levels of 5 to 10 kilowatts — significantly raising the potential for available fault current"
+    },
+    {
+     "band": "Power",
+     "label": "System voltage",
+     "value": "from previously low levels to roughly 800 volts direct current today, with the industry planning for systems operating at up to 1,500 VDC"
+    },
+    {
+     "band": "Risk",
+     "label": "Fire incidents",
+     "value": "between 2014 and 2023, 22 high-profile data center fire incidents were publicly reported"
+    },
+    {
+     "band": "Market",
+     "label": "Modular data centre market",
+     "value": "growing from $29.3 billion in 2025 to a projected $128 billion by 2035, at a CAGR of 13.8%"
+    },
+    {
+     "band": "Standards",
+     "label": "Modular data centre standard",
+     "value": "UL 2755:2025, Outline of Investigation for Prefabricated Modular Data Center Systems and Related Modular Units — a proprietary edition of the outline, revised by UL Solutions in 2025, replacing UL 2755:2018"
+    },
+    {
+     "band": "Storage build",
+     "label": "Company sizing of the US storage build",
+     "value": "as of June 2026, about 1,010 utility-scale projects totaling 48.6 gigawatts were in operation; utility-scale capacity surpassed 26 gigawatts in 2024, up 66 percent from 2023, was 57.6 gigawatts in 2025 and is expected to reach more than 600 gigawatts by 2030"
+    }
+   ],
+   "notes": "These are the company's own figures, published on its data-centre hub and in the June 2026 service-launch release, and they are quoted here as the company's account of the demand it is building capacity against rather than as independent market sizing. UL 2755 is worth noting separately: it is one of the few documents in this estate that the commercial company revised rather than the standards body."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-01",
+   "category": "corporate",
+   "headline": "Chief executive Jennifer Scanlon sells 12,500 Class A shares at $73.21 to $74.72 under a Rule 10b5-1 plan adopted 2025-12-09, six days after the December secondary priced",
+   "read": "A plan adopted the week of the secondary is a scheduled sale, not a signal — but it prices at a fifth below where ULSE sold.",
+   "source": "https://www.investing.com/news/insider-trading-news/ul-solutions-ceo-jennifer-scanlon-sells-920799-in-company-stock-93CH-4888567"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: revenue $816m with 6.6% organic growth, record adjusted EBITDA of $219m at a record 26.8% margin — and the shares fall about 11 per cent",
+   "read": "The market is trading capital intensity and cash conversion, not the earnings line; a beat is no longer enough.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000023/uls-20260630.htm"
+  },
+  {
+   "date": "2026-06-24",
+   "category": "product-launch",
+   "headline": "First certification of a remotely operated robot for hazardous locations",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "product-launch",
+   "headline": "Launch of NFPA 855, 68 and 69 evaluation services — engineering assessments, modelling and simulation reports for explosion risk, explicitly not testing or certification",
+   "read": "Selling the permitting argument rather than the test extends the franchise from the laboratory into the code hearing, where the buyer is the authority having jurisdiction.",
+   "source": "https://www.ul.com/news/ul-solutions-launches-new-evaluation-services-advance-safer-more-efficient-battery-energy"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "leadership",
+   "headline": "Special performance award to the chief executive of 200,120 target performance share units, worth $20m at grant, vesting on share-price hurdles of $135.81 and $181.08 measured against a $90.54 base",
+   "read": "Management's own stated ambition is roughly 1.5 to 2 times the June 2026 price by 2031 — a usable read on internal expectations.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000119312526140022/d65278ddef14a.htm"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "product-launch",
+   "headline": "Launch of AI-powered product carbon footprint software for Scope 3 data",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "corporate",
+   "headline": "Segments reorganised: the Advisory business moves out of Software and Advisory into Industrial, the remainder is renamed Risk and Compliance Software, and corporate costs are reallocated across all three segments, with FY2024, FY2025 and every 2025 quarter restated",
+   "read": "The software business is $254m, not $393m — the old segment bundled roughly $139m a year of advisory revenue that was never software.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000009/exhibit992segmentreorganiz.htm"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "product-launch",
+   "headline": "Large-Scale Fire Testing launched as a distinct commercial service under the sixth edition of UL 9540A, covering outdoor containerised systems, indoor battery rooms and grouped or stacked enclosures",
+   "read": "Full fire-testing facilities without subcontracting is the sharpest capability claim on the battery estate, because few laboratories can set a container alight.",
+   "source": "https://www.ul.com/news/ul-solutions-launches-large-scale-fire-testing-battery-energy-storage-systems"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "customer",
+   "headline": "ABB's HiPerGuard certified to UL 9540 — the first medium-voltage, multi-mode static inverter designed to work as an uninterruptible power supply to earn it",
+   "read": "The battery standard is now being used to certify data-centre power equipment, which is where the storage and AI-infrastructure chains meet.",
+   "source": "https://www.ul.com/news/abb-achieves-first-certification-ul-solutions-system-designed-advance-data-center-safety-and"
+  },
+  {
+   "date": "2026-04-13",
+   "category": "ma",
+   "headline": "Agreement to acquire Eurofins Scientific's Electrical and Electronics division, including the MET Labs certification mark, for about €575m in cash — roughly 14.5 times estimated 2026 EBITDA on about $200m of revenue, closing expected Q4 2026",
+   "read": "Buying an independent NRTL removes a competitor from the North American recognition map and makes the company a consolidator for the first time.",
+   "source": "https://finance.yahoo.com/markets/stocks/articles/ul-solutions-uls-acquire-eurofins-010832073.html"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "ma",
+   "headline": "Employee Health and Safety software business sold to a Peak Rock Capital affiliate for about $202m in cash, producing a pre-tax gain of about $191m",
+   "read": "The gain flatters GAAP earnings for four quarters and the revenue loss is real; read the two together or neither.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000023/uls-20260630.htm"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "product-launch",
+   "headline": "First certifications issued under UL 3202-adjacent AI safety certification services, against the UL 3115 outline of investigation for AI-based products",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2026-03-11",
+   "category": "product-launch",
+   "headline": "First global certification of a public-facing commercial service robot",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "product-launch",
+   "headline": "Launch of a combined cybersecurity and safety certification programme for microgrids, described as the first of its kind",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "partnership",
+   "headline": "UL Solutions leads the Codes and Standards workstream of the Open Compute Project's new Power Distribution sub-project, co-led with ABB and Eaton",
+   "read": "Influence over the rules for AI-data-centre power without owning any of them — the company's actual standards strategy in one line.",
+   "source": "https://www.ul.com/news/ul-solutions-and-open-compute-project-help-advance-safety-and-scalability-new-ai-data-center"
+  },
+  {
+   "date": "2026-01-08",
+   "category": "product-launch",
+   "headline": "Testing and certification framework debuted for plug-in solar in the United States",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "regulatory",
+   "headline": "UL Solutions withdraws as Lead Administrator of the FCC's US Cyber Trust Mark programme, effective immediately, during an FCC national-security investigation into its Chinese joint venture and China-based laboratories; the ioXt Alliance is appointed in its place on 2026-04-13",
+   "read": "An assurance franchise awarded by a federal regulator and then given up is the cleanest available evidence that incumbency in this industry is contestable.",
+   "source": "https://www.nextgov.com/cybersecurity/2026/01/ul-solutions-withdraws-lead-admin-fcc-cyber-label-program-amid-probe-china-ties/410448/"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "financial",
+   "headline": "Underwriters exercise in full the 1,875,000-share option on the December secondary, taking the total sold to 14,375,000 Class A shares at $78.00 — about $1.121bn gross, all of it to ULSE",
+   "read": "ULSE held no Class A at all, so it converted Class B to create every share it sold; voting power fell only from 95.6% to 94.1%.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000162828025055468/ulsolutions-prosuppdecembe.htm"
+  },
+  {
+   "date": "2025-12-05",
+   "category": "financial",
+   "headline": "Secondary offering of 12,500,000 Class A shares at $78.00 closes; the company sells nothing and receives no proceeds",
+   "read": "The third ULSE monetisation in twenty months, at $28.00, then $49.00, then $78.00 — and the shares now trade below the last of them.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000162828025054757/ulsolutions-prosuppdecembe.htm"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "corporate",
+   "headline": "Restructuring announced: pre-tax charges of $42m to $47m, including $37m to $42m of cash separation costs covering about 3.5% of the workforce, plus exits from certain lines of business",
+   "read": "",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000044/uls-20251104.htm"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "product-launch",
+   "headline": "AI safety certification services launched against UL 3115, the outline of investigation for AI-based products",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "product-launch",
+   "headline": "ECOLOGO certification extended to industrial products",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-09-04",
+   "category": "product-launch",
+   "headline": "Life cycle assessment services launched or expanded",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-08-25",
+   "category": "capacity",
+   "headline": "First laboratory opened for commercial and service robot testing",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-07-02",
+   "category": "product-launch",
+   "headline": "Distributed energy resource systems safety certification debuts",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-06-17",
+   "category": "product-launch",
+   "headline": "Immersion cooling fluids testing and certification launched, covering immersion hardware, insulating liquids and installed IT equipment",
+   "read": "Liquid cooling is where the data-centre thermal problem is going, and the certification programme arrives before the volume does.",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-05-15",
+   "category": "capacity",
+   "headline": "Europe Advanced Battery Laboratory opens in Aachen, Germany — purpose-built, described as the first in the EU focused solely on comprehensive battery testing, specialising in battery lifespan estimation",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2025-04-16",
+   "category": "regulatory",
+   "headline": "Test methods updated for the fifth edition of ANSI/CAN/UL 9540A, published by UL Standards & Engagement",
+   "read": "The company describes the standard as published by the separate non-profit, which is the distinction the whole structure turns on.",
+   "source": "https://www.ul.com/news/ul-solutions-enhances-battery-energy-storage-system-safety-test-methods-address-industry"
+  },
+  {
+   "date": "2025-01-14",
+   "category": "product-launch",
+   "headline": "Non-PFAS certification launched for plastics suppliers",
+   "read": "",
+   "source": "https://www.ul.com/news/"
+  },
+  {
+   "date": "2024-12-18",
+   "category": "regulatory",
+   "headline": "Named Lead Administrator of the US Cyber Trust Mark, the first federal cybersecurity labelling programme",
+   "read": "Worth reading beside the December 2025 withdrawal twelve months later; the appointment and the surrender are one story.",
+   "source": "https://www.ul.com/news/ul-solutions-named-lead-administrator-first-ever-us-federal-cybersecurity-labeling-program"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "catl",
+   "type": "customer",
+   "status": "active",
+   "since": "2023",
+   "via": "Witnessed Test Data Program",
+   "note": "CATL's energy storage laboratory is qualified under UL Solutions' Witnessed Test Data Program to test to UL 9540A, and its EnerOne and EnerC systems hold UL 9540A test reports.",
+   "context": "Announced 2023-01-18 as a memorandum of understanding for strategic cooperation. UL Solutions describes CATL as the first laboratory in China to launch its Witnessed Test Data Program for UL 9540A, having already been qualified to test to UL 1973, UL 9540 and UL 2580. Under the programme the tests are conducted at CATL's own facilities under the supervision of UL Solutions personnel, with all submitted data reviewed and audited before use in certification and the laboratory reassessed annually.\n\nThis is the clearest example in the dossier of how UL Solutions scales beyond its own benches, and it is worth reading against the corpus's existing description of the arrangement as a partnership under which CATL conducts UL 9540A tests: the mechanism is supervised witnessed testing with annual re-audit, not a delegation.",
+   "source": "https://www.ul.com/news/ul-solutions-and-catl-join-forces-advance-battery-energy-storage-system-and-ev-battery-safety"
+  },
+  {
+   "slug": "abb",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-04",
+   "scale": "first UL 9540 certification for a medium-voltage multi-mode static inverter working as a UPS",
+   "via": "UL 9540",
+   "note": "ABB's HiPerGuard was certified to UL 9540 in April 2026, the first system of its kind to earn it; ABB is separately a co-lead with UL Solutions on Open Compute Project standards work.",
+   "context": "UL Solutions describes the HiPerGuard certification as the first for a medium-voltage, multi-mode static inverter designed to perform as an uninterruptible power supply. ABB's multi-mode inverter power conversion unit had earlier been certified to UL 1741, which UL Solutions states is a prerequisite to UL 9540 certification.\n\nThe certification is notable beyond the customer relationship because it is a battery-standard listing applied to data-centre power equipment — the point at which the storage safety regime and the AI-infrastructure power chain meet. ABB is also named, with Eaton, as co-lead of the Codes and Standards workstream that UL Solutions leads inside the Open Compute Project's Power Distribution sub-project.",
+   "source": "https://www.ul.com/news/abb-achieves-first-certification-ul-solutions-system-designed-advance-data-center-safety-and"
+  },
+  {
+   "slug": "eaton",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-01",
+   "note": "Eaton co-leads, with ABB, the Codes and Standards workstream that UL Solutions leads within the Open Compute Project's Power Distribution sub-project.",
+   "context": "Announced 2026-01-13. The workstream is aimed at safety and scalability in new AI data centre power distribution, and the release carries a quote from Eaton's vice president and data centre chief architect. It is a standards-influence relationship rather than a commercial one: UL Solutions does not write the UL standards, and this is one of the routes by which it shapes the documents it will later test against.",
+   "source": "https://www.ul.com/news/ul-solutions-and-open-compute-project-help-advance-safety-and-scalability-new-ai-data-center"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-11",
+   "via": "ECOLOGO certification to UL 2711",
+   "note": "Schneider Electric's PowerPacT moulded case circuit breakers received the first ECOLOGO certification issued for an industrial product.",
+   "context": "Announced 2025-11-18, with a quote from Schneider Electric's executive vice president for power products. The certification is to UL 2711, the standard for sustainability of energy and industrial automation equipment, and is the first application of the ECOLOGO programme to an industrial product rather than a consumer one.",
+   "source": "https://www.ul.com/news/ul-solutions-issues-schneider-electric-first-ecologo-certification-industrial-product"
+  },
+  {
+   "slug": "intertek",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named by UL Solutions in its FY2024 10-K as one of the large global public firms it competes with — and the naming was removed from the FY2025 10-K.",
+   "context": "The FY2024 10-K, filed 2025-02-20, states that the company is subject to competition from large and global public firms such as Intertek, SGS, Bureau Veritas and Eurofins, and that it also competes with large private players including Element, TUV Rheinland, TUV SUD, DEKRA and DNV. The FY2025 10-K, filed 2026-02-19, replaces that sentence with a generic formulation naming nobody: competition from a broad range of players including large and global public and private firms, as well as a broad number of smaller companies and new entrants.\n\nThe removal is a first-party fact; the reason for it is not stated. One plausible reading is that fourteen months after naming Eurofins as a competitor the company agreed to buy Eurofins' Electrical and Electronics division, and naming a target as a competitor in a live filing is the sort of language transaction counsel removes. That is inference, and the dossier records it as such.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm"
+  },
+  {
+   "slug": "dnv",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named among the large private players UL Solutions competes with in its FY2024 10-K; a UL Solutions director is also a former DNV group chief executive.",
+   "context": "The FY2024 10-K names DNV among the large private players in its competitive set. Separately, UL Solutions board member Elisabeth Torstad is a former DNV executive — chief executive of DNV GL Digital Solutions in 2018-19, of DNV GL Oil and Gas from 2014 to 2017 and of DNV Americas and Sub-Saharan Africa from 2010 to 2013 — and is one of the four directors designated to the board by ULSE.\n\nDNV's own dossier in this corpus records the other side of the overlap: it names UL Solutions among the independent engineers lenders accept on storage alongside Sargent and Lundy, Black and Veatch, Burns and McDonnell and Leidos, and records that UL Solutions and TUV Rheinland compete with DNV for the witness-and-certify seat on manufacturer fire tests.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm"
+  },
+  {
+   "slug": "csa-group",
+   "type": "competitor",
+   "status": "active",
+   "note": "CSA Group is the second North American source for the energy-storage listings UL Solutions is the default for — but UL Solutions names CSA Group in neither of its two 10-Ks.",
+   "context": "This relationship is documented entirely from CSA Group's side. CSA Group's dossier describes itself as the second source to UL Solutions for the North American energy-storage listing and records that trade press places it among the major companies in battery testing, inspection and certification behind named leaders including UL Solutions. It also records that UL Solutions does not list CSA Group among its competitors, which this dossier's own reading of both filings confirms: the FY2024 10-K names Intertek, SGS, Bureau Veritas, Eurofins, Element, TUV Rheinland, TUV SUD, DEKRA and DNV, and CSA Group appears in neither that list nor anywhere else in either filing.\n\nThe asymmetry is the finding. The two organisations are the closest structural analogues in the corpus — each pairs a standards-writing body with a certification business — and only one of them treats the other as a competitor in writing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm"
+  },
+  {
+   "slug": "digital-realty",
+   "type": "other",
+   "status": "active",
+   "since": "2013",
+   "note": "Board interlock: UL Solutions director Kevin J. Kennedy has served on Digital Realty Trust's board since 2013, where he chairs its Talent and Compensation Committee.",
+   "context": "Recorded from the 2026 proxy statement, filed 2026-04-02. This is a personnel link rather than a commercial one and no commercial relationship between the two companies is documented on either side. It is recorded because UL Solutions' data-centre certification business and Digital Realty's landlord business sit in the same corpus, and a shared director is the only documented connection between them.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000119312526140022/d65278ddef14a.htm"
+  },
+  {
+   "slug": "trina-storage",
+   "type": "customer",
+   "status": "historical",
+   "since": "2024",
+   "via": "bankability report and environmental product declaration",
+   "note": "Trina Storage states that its 4 MWh Elementa 2 platform received independent bankability reports from both DNV and UL Solutions, and separately claims a 20-year full-lifecycle environmental product declaration from UL Solutions.",
+   "context": "Both claims come from Trina Storage's own channel and from trade press reporting it, and both are carried in this corpus already — in the DNV dossier for the parallel bankability report and in the Trina Storage dossier for the environmental product declaration. Neither appears anywhere on UL Solutions' own channels: a search of the company's full sitemap and press archive returns no release naming Trina Storage, the Elementa 2, or a 20-year full-lifecycle storage EPD. The only Trina item UL Solutions publishes concerns Trina Solar, a different entity, and predates this window.\n\nThe relationship is recorded because the counterparty is a legitimate source for its own engagement and because both product categories — lender-facing independent engineering and ISO 14025 environmental product declarations — are confirmed UL Solutions service lines. What is not established is UL Solutions' own account of either engagement.",
+   "source": "https://www.trinastorage.com/"
+  },
+  {
+   "slug": "hithium",
+   "type": "customer",
+   "status": "historical",
+   "since": "2025",
+   "via": "UL 9540A testing",
+   "note": "Trade press reports that Hithium's 2025 large-scale fire test was conducted by UL Solutions.",
+   "context": "Recorded in this corpus from the CSA Group dossier, which cites Energy-Storage.news reporting of June 2025 that Hithium's test that month was conducted by UL Solutions, in contrast with Fluence's test which CSA Group witnessed. UL Solutions publishes nothing naming Hithium: a search of its sitemap and press archive returns no result. The claim rests on trade press and is recorded at that weight.",
+   "source": "https://www.energy-storage.news/"
+  },
+  {
+   "slug": "sungrow",
+   "type": "customer",
+   "status": "historical",
+   "since": "2025",
+   "via": "UL 9540B testing",
+   "note": "Trade press reports that Sungrow's SBH residential unit was tested to UL 9540B by UL Solutions.",
+   "context": "Recorded in this corpus from the CSA Group dossier, which cites an Energy-Storage.news round-up of November 2025 placing UL Solutions on the Sungrow SBH residential test, while CSA Group certified the SBH modular battery to UL 9540A in January 2025 and TUV Rheinland witnessed the April 2026 PowerKeeper certification. UL Solutions publishes nothing naming Sungrow.\n\nThe UL 9540B detail is consistent with the standard's scope as UL Solutions describes it: an Outline of Investigation for residential systems of 20 kWh or less, created after authorities having jurisdiction found UL 9540A alone did not satisfy the 2022 California Fire Code. A residential unit is exactly what it applies to.",
+   "source": "https://www.energy-storage.news/"
+  },
+  {
+   "slug": "samsung-sdi",
+   "type": "customer",
+   "status": "historical",
+   "since": "2026-07",
+   "via": "large-scale fire testing",
+   "note": "Samsung SDI claims a world-first pass of UL's Indoor Large-Scale Fire Test for uninterruptible power supply batteries, with no propagation and no sprinklers.",
+   "context": "The claim is made on Samsung SDI's own newsroom, dated 2026-07-14, and is carried in the Samsung SDI dossier in this corpus as a product highlight framed against hyperscaler procurement requirements. UL Solutions has no page, release or filing using the phrase Indoor Large-Scale Fire Test and none naming Samsung SDI in this context.\n\nWhat UL Solutions' own record does establish is that the thing described is almost certainly the installation-level large-scale fire test of the sixth edition of UL 9540A, run in the indoor configuration and sold commercially as the Large-Scale Fire Testing service launched 2026-04-23 — which covers indoor battery rooms explicitly and which the company says evaluates, for indoor systems, the effectiveness of building-based fire suppression. That is the axis a no-sprinklers claim would be made against. The identification is this dossier's inference from the two records and is labelled as such; the counterparty's claim is recorded as the counterparty's.",
+   "source": "https://news.samsungsdi.com/global/articleView?seq=435"
+  },
+  {
+   "slug": "sargent-lundy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Named alongside UL Solutions on the lender and independent-engineer panels for storage projects — documented from Sargent and Lundy's side and DNV's, not from UL Solutions'.",
+   "context": "Both the Sargent and Lundy and DNV dossiers in this corpus place UL Solutions on the same independent-engineer panels as themselves, Black and Veatch, Burns and McDonnell and Leidos, and the Sargent and Lundy dossier cites a UL Solutions page on wind and solar independent engineering services as the peer scope.\n\nUL Solutions confirms the service line exists and describes it in lender-facing terms — global bankability in the renewable energy industry, an approach vetted with some of the world's top lead arrangers and lenders, and about 500 wind and solar advisory experts — but it publishes no panel roster and names no peer firm. The competitive placement therefore rests on the other firms' accounts.",
+   "source": "https://www.ul.com/services/wind-and-solar-power-independent-engineering-services"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "OSHA NRTL recognition",
+   "status": "in-effect",
+   "exposure": "The company names credentials issued by the US Occupational Safety and Health Administration as among some of the key credentials for its operations. NRTL recognition is what allows a UL Mark listing to satisfy an OSHA standard requiring third-party testing and certification, and it is granted standard by standard and site by site rather than as a general authority. UL LLC is one of roughly twenty recognised NRTLs.",
+   "mitigation": "The company states it maintains a global governance structure to facilitate compliance, including the active management of successful renewal of such credentials, the expansion or consolidation of these credentials where warranted, and the pursuit of new credentials.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "Acceptance of third-party test results and harmonised standards",
+   "status": "proposed",
+   "exposure": "The 10-K names as a risk any change to the relevant regulatory frameworks or private sector requirements, including any requirement that the company accept third-party test results or certifications, or any change that reduces required inspections, tests or certifications, or that harmonises international or cross-industry benchmarks and standards. This bears directly on Ongoing Certification Services, the largest revenue category at about a third of the total and the recurring half of the business — a mutual-recognition regime attacks the annuity rather than the test.",
+   "mitigation": "None stated.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "US tariffs and trade restrictions",
+   "status": "in-effect",
+   "exposure": "The company describes significant new US tariffs on products manufactured in a wide range of countries including China, Mexico and countries in Southeast Asia, and a resulting cycle of retaliatory tariffs. Exposure runs three ways: customers adapting to tariffs may require the company to modify its operations; tariffs on tested products have raised and could further raise amounts paid for some or all of its services, which may result in the loss of customers; and supply-chain relocation creates a need to expand into and compete in new jurisdictions.",
+   "mitigation": "None stated. The 10-K describes the exposure without naming a mitigation, and the geographic spread of 87 laboratory sites across 27 countries is not claimed by the company as one.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "China operating regime, CNCA and SAFE",
+   "status": "in-effect",
+   "exposure": "UL-CCIC Company Limited is 70 per cent owned by UL LLC with 30 per cent held by China Certification and Inspection (Group) Co., a Chinese state-owned enterprise; the joint-venture contract dates from 2002 and was amended and restated in October 2022, currently expiring in January 2033. It is consolidated as a variable interest entity and distributed dividends of $39m in 2025, $34m in 2024 and $32m in 2023. The company names CNCA credentials alongside OSHA as key, and discloses that the Chinese government has the power to exercise significant oversight and discretion over and intervene in and influence business operations in China. State Administration of Foreign Exchange approval is required to pay dividends from UL-CCIC cash, to pay non-renminbi debts outside China, and to make non-renminbi capital expenditure outside China. Greater China is the second-largest revenue region at $761m in FY2025.",
+   "mitigation": "None stated beyond disclosure and the general credential-governance structure.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "FCC national-security review of the Cyber Trust Mark programme",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-19",
+   "exposure": "UL Solutions was named Lead Administrator of the US Cyber Trust Mark, the first federal cybersecurity labelling programme, in December 2024. In June 2025 the FCC chairman confirmed an investigation into the company's China ties — the CCIC joint venture and its China-based testing laboratories — and the programme was paused. UL Solutions withdrew as Lead Administrator effective immediately on 2025-12-19, and the ioXt Alliance was appointed in its place on 2026-04-13. This is the only documented instance located in which the company held and then gave up an assurance franchise awarded by a regulator.",
+   "mitigation": "The company said it had delivered many of the foundational elements and referred to ongoing discussions with the FCC about the future direction of the role, acknowledging other considerations. It has not published a mitigation for the underlying China-exposure question.",
+   "source": "https://www.nextgov.com/cybersecurity/2026/01/ul-solutions-withdraws-lead-admin-fcc-cyber-label-program-amid-probe-china-ties/410448/"
+  },
+  {
+   "regime": "OECD Pillar Two global minimum tax",
+   "status": "in-effect",
+   "effectiveDate": "2025-01-01",
+   "exposure": "Material and quantified. The effective tax rate rose from 16.9 per cent in FY2024 to 26.6 per cent in FY2025, which the company attributes primarily to the Qualified Domestic Minimum Top-up Tax, a subset of the Pillar Two rules effective 2025-01-01. That rise is the reason net income was flat at $345m despite operating income improving by $60m. OECD administrative guidance of 2026-01-05 introduces a side-by-side safe harbour for multinationals headquartered in countries with an eligible minimum tax system, most notably the United States, for fiscal years beginning on or after 2026-01-01.",
+   "mitigation": "The company states it does not currently expect the 2026 guidance to have a material impact and continues to monitor developments.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "EU AI Act",
+   "status": "in-effect",
+   "exposure": "Double-edged, and the company describes it as both. It must comply with a comprehensive risk-based governance framework covering transparency, conformity assessments, monitoring, risk assessment, human oversight, security, accuracy, general-purpose AI and foundation models, with fines for breach — and it sells into the conformity-assessment demand the same regime creates, having launched AI safety certification services in November 2025 and issued the first certifications in March 2026.",
+   "mitigation": "The company states only that uncertainty in the legal and regulatory regime relating to AI may require significant resources to modify and maintain business practices.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "Artificial intelligence as a disruption risk to the service itself",
+   "status": "proposed",
+   "exposure": "The 10-K names the potential disruption of the industries in which the company operates by technological advances in artificial intelligence, explicitly contemplating that AI-designed products become the more trusted norm against human-driven design, testing and inspection, and that customers or competitors could develop algorithms or other AI tools capable of replicating its services.",
+   "mitigation": "None stated.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  },
+  {
+   "regime": "EU Battery Regulation",
+   "status": "in-effect",
+   "exposure": "Carried as a named revenue line rather than as a risk: the company sells an EU Battery Regulation Compliance service to navigate requirements across battery categories. It does not appear among the risk factors.",
+   "mitigation": "Not applicable — this is a service line.",
+   "source": "https://www.ul.com/services/eu-battery-regulation-compliance"
+  },
+  {
+   "regime": "NFPA 855, NFPA 68, NFPA 69, IFC, IRC and the California Fire Code",
+   "status": "in-effect",
+   "exposure": "These are the demand engine rather than a compliance cost. The fire and building codes require electrochemical storage to be listed to UL 9540 and tested to UL 9540A, and NFPA 855's 2026 edition adds Annex G.11 setting expectations for large-scale fire testing. The 2022 California Fire Code is the stated origin of UL 9540B: authorities having jurisdiction determined that the UL 9540A test series by itself did not adequately fulfil its requirements.",
+   "mitigation": "Not applicable — the company sells the evaluation services these codes create demand for, including the NFPA 855, 68 and 69 assessments launched 2026-06-22.",
+   "source": "https://www.ul.com/services/ul-9540a-test-method"
+  },
+  {
+   "regime": "EU MDR, IVDD, UKCA medical devices and MDSAP",
+   "status": "in-effect",
+   "exposure": "UL Solutions acts as a Notified Body and Approved Body under these regimes, which imposes an impartiality constraint it states site-wide: it is unable to provide consultancy services to EU MDD, MDR or IVDD Notified Body, UKCA MD Approved Body or MDSAP customers.",
+   "mitigation": "The company states it structures this activity to be distinct and separate from its conformity assessment bodies — an explicit structural firewall, and the clearest published example of how it handles a conflict between advising and certifying.",
+   "source": "https://www.ul.com/"
+  },
+  {
+   "regime": "Russia and Belarus",
+   "status": "in-effect",
+   "effectiveDate": "2022-03",
+   "exposure": "Self-imposed rather than regulatory: the company decided in March 2022 to stop all work in Russia and Belarus and not to take on or pursue any new customer orders related to those countries for the foreseeable future.",
+   "mitigation": "Self-executing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Jennifer F. Scanlon",
+   "title": "President and Chief Executive Officer, and a director",
+   "photo": "images/execs/ul-solutions-scanlon.jpg",
+   "background": [
+    "President and Chief Executive Officer and a member of the board — UL Solutions (September 2019–present)",
+    "President and Chief Executive Officer — USG Corporation, a then publicly traded building-products manufacturer (November 2016–April 2019), after sixteen years at the company",
+    "Director — Norfolk Southern Corporation (January 2018–May 2024); USG Corporation (September 2016–April 2019)",
+    "Director — Federal Reserve Bank of Chicago (2022–present); University of Notre Dame (2020–present); Chicago Council on Global Affairs (2012–present)",
+    "Secretary-Treasurer of the board of the US-China Business Council; Vice President of the Global Board of the TIC Council",
+    "B.A. in Government and International Relations and Computer Applications, University of Notre Dame; M.B.A., University of Chicago Booth School of Business"
+   ]
+  },
+  {
+   "name": "Ryan D. Robinson",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "background": [
+    "Executive Vice President and Chief Financial Officer — UL Solutions (May 2017–present)",
+    "Chief Financial Officer and Chief Administrative Officer — Sears Hometown and Outlet Stores (2014–2017)",
+    "Chief Financial Officer, domestic segment — Best Buy (2007–2012); Treasurer — Best Buy (2002–2007), covering corporate development, treasury, tax and new business finance",
+    "B.B.A. in Finance and Marketing, University of Notre Dame; M.M., Northwestern University"
+   ]
+  },
+  {
+   "name": "Alex G. Dadakis",
+   "title": "Executive Vice President and President, Testing, Inspection and Certification",
+   "photo": "images/execs/ul-solutions-dadakis.jpg",
+   "background": [
+    "Executive Vice President and President, Testing, Inspection and Certification — UL Solutions (September 2025–present)",
+    "Executive Vice President and Chief Business Operations and Innovation Officer — UL Solutions (January–August 2025)",
+    "Senior Vice President and Global Head of Strategy and Corporate Development — Knauf Group, Gebr KG, Germany (January 2023–January 2025), responsible for mergers and acquisitions, strategic planning and global strategy rollouts",
+    "Senior Vice President and Chief Customer Experience and Strategy Officer — USG (January 2021–January 2023), after multiple roles from January 2017"
+   ]
+  },
+  {
+   "name": "Scott L. D’Angelo",
+   "title": "Executive Vice President, Chief Legal Officer and Corporate Secretary",
+   "photo": "images/execs/ul-solutions-dangelo.jpg",
+   "background": [
+    "Executive Vice President, Chief Legal Officer and Corporate Secretary — UL Solutions",
+    "Signs the company's proxy statement as Corporate Secretary; the role carries responsibility for the legal and governance interface with UL Standards & Engagement under the Stockholder Agreement"
+   ]
+  },
+  {
+   "name": "John A. Genovesi",
+   "title": "Executive Vice President and President, Risk and Compliance Software",
+   "background": [
+    "Executive Vice President and President, Risk and Compliance Software — UL Solutions (January 2026–present)",
+    "Executive Vice President and President, Software and Advisory — UL Solutions (July 2022–December 2025); the segment was renamed and the advisory business moved to Industrial in the 2026 reorganisation",
+    "Chief Operating Officer — Adapdix, an autonomous manufacturing software company (May 2021–July 2022)",
+    "Senior Vice President of Enterprise and Software and other roles across 32 years — Rockwell Automation (1989–2021), most recently scaling the company's Industry 4.0 software portfolio globally"
+   ]
+  },
+  {
+   "name": "Gitte Schjøtz",
+   "title": "Executive Vice President and Chief Business Operations and Innovation Officer",
+   "background": [
+    "Executive Vice President and Chief Business Operations and Innovation Officer — UL Solutions (September 2025–present), after a number of prior positions at the company"
+   ]
+  },
+  {
+   "name": "Alberto Uggetti",
+   "title": "Executive Vice President and Chief Commercial Officer",
+   "background": [
+    "Executive Vice President and Chief Commercial Officer — UL Solutions (July 2023–present), after a number of different positions at the company"
+   ]
+  },
+  {
+   "name": "Ken Boyce",
+   "title": "Vice President, Principal Engineering",
+   "photo": "images/execs/ul-solutions-boyce.jpg",
+   "background": [
+    "Vice President of Principal Engineering — UL Solutions; the company's principal named voice on energy-storage and data-centre safety",
+    "Quoted on the launch of the NFPA 855, 68 and 69 evaluation services (June 2026) and on the fifth-edition UL 9540A test-method update (April 2025)",
+    "Publishes the company's framing of the data-centre problem: rack densities of 100 kW to 1 MW against traditional levels of 5 to 10 kW, and system voltages moving to roughly 800 VDC with the industry planning for 1,500 VDC"
+   ]
+  },
+  {
+   "name": "James M. Shannon",
+   "title": "Chair of the Board of Directors — designated by UL Standards & Engagement",
+   "photo": "images/execs/ul-solutions-shannon.jpg",
+   "background": [
+    "Chair and member of the board — UL Solutions (2012–present), designated by UL Standards & Engagement under the Stockholder Agreement",
+    "Chair of the board of directors — UL Standards & Engagement (director since November 2021) — so the same person chairs both the company that tests and the body that writes the standards",
+    "Member of the board of trustees — UL Research Institutes (2009–present)",
+    "President — International Electrotechnical Commission (2017–2019); Executive Committee member (2016–2021)",
+    "President and Chief Executive Officer — National Fire Protection Association (2002–2014), the body that writes NFPA 855",
+    "Attorney General of the Commonwealth of Massachusetts (1987–1991); United States Representative, three terms from 1978"
+   ]
+  },
+  {
+   "name": "Elisabeth Tørstad",
+   "title": "Director — designated by UL Standards & Engagement",
+   "photo": "images/execs/ul-solutions-torstad.jpg",
+   "background": [
+    "Director — UL Solutions (November 2023–present), designated by UL Standards & Engagement under the Stockholder Agreement; Finance and Nominating Committees",
+    "Director — UL Standards & Engagement (2025–present); trustee — UL Research Institutes (2020–present), chairing its Governance and Compensation Committee",
+    "Chief Executive Officer — Asplan Viak AS (2019–2024)",
+    "DNV Group: Chief Executive of DNV GL Digital Solutions (2018–2019); Chief Executive of DNV GL Oil & Gas (2014–2017); Chief Executive of DNV Americas and Sub-Saharan Africa (2010–2013); Director of Operations, DNV Cleaner Energy and Utilities (2006–2010)"
+   ]
+  },
+  {
+   "name": "Friedrich Hecker",
+   "title": "Director",
+   "photo": "images/execs/ul-solutions-hecker.jpg",
+   "background": [
+    "Director — UL Solutions (2013–present); Audit and Finance Committees. Trustee of UL Research Institutes (2013–2017)",
+    "Chief Executive Officer — ROSEN Swiss AG (2012–2015)",
+    "Chief Executive Officer and Chief Operating Officer — TÜV Rheinland AG (2009–2011)",
+    "Executive Vice President and Chief Operating Officer — SGS SA (2002–2009)",
+    "Senior Advisor — Cobepa SA (2016–2020); director of Opus Group AB since 2006 and Dermagnostix GmbH since May 2023",
+    "Degree in Economics, Ludwig Maximilian University of Munich"
+   ]
+  },
+  {
+   "name": "Kevin J. Kennedy",
+   "title": "Director",
+   "photo": "images/execs/ul-solutions-kennedy.jpg",
+   "background": [
+    "Director — UL Solutions (February 2020–present); chairs the Human Capital and Compensation Committee and sits on Audit",
+    "Director — Digital Realty Trust (2013–present), chairing its Talent and Compensation Committee; KLA Corporation (2007–present), chairing audit",
+    "Chief Executive Officer — Quanergy Systems (March 2020–December 2022); the company filed a voluntary Chapter 11 restructuring plan in December 2022",
+    "Senior Managing Director — Blue Ridge Partners (2018–2020)",
+    "President, Chief Executive Officer and director — Avaya Holdings (2008–2017); Avaya filed a voluntary Chapter 11 restructuring plan in January 2017"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024 (ended 2024-12-31)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$2,870m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Revenue was in line and full-year EPS beat by 3.4% on the aggregator record; no named-broker consensus figure for the period could be located.",
+      "kpi": "revenue",
+      "usdMillions": 2870,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating income",
+      "actual": "$462m (16.1% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "",
+      "kpi": "operating-profit",
+      "usdMillions": 462
+     },
+     {
+      "name": "Net income",
+      "actual": "$345m (12.0% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Effective tax rate 16.9%.",
+      "kpi": "net-income",
+      "usdMillions": 345
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$656m (22.9% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company-defined non-GAAP measure."
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$1.62",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Adjusted diluted EPS $1.70.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "$287m (10.0% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Cash from operations $524m less capex $237m."
+     },
+     {
+      "name": "Capital expenditure",
+      "actual": "$237m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Driven in part by the Auburn Hills battery laboratory build.",
+      "kpi": "capex",
+      "usdMillions": 237
+     }
+    ],
+    "commentary": "The first full year as a listed company. Revenue by region: United States $1,178m, Greater China $710m, EMEA $496m, Asia Pacific $375m, other Americas $111m."
+   },
+   {
+    "period": "FY2025 (ended 2025-12-31)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$3,053m (+6.4% total, +6.2% organic)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Revenue in line. Growth decomposed as +6.2% organic, +0.4% currency, -0.3% acquisitions and divestitures.",
+      "kpi": "revenue",
+      "usdMillions": 3053,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating income",
+      "actual": "$522m (17.1% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "After $35m of restructuring charges against a $1m credit in FY2024.",
+      "kpi": "operating-profit",
+      "usdMillions": 522
+     },
+     {
+      "name": "Net income",
+      "actual": "$345m (11.3% margin)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Flat on FY2024 in absolute terms despite $60m more operating income, because the effective tax rate rose from 16.9% to 26.6%.",
+      "kpi": "net-income",
+      "usdMillions": 345
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$792m (25.9% margin, +300bps)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Adjusted net income $423m, up 17.2%."
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$1.60 GAAP; $1.99 adjusted (+17.1%)",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The two bases diverge and the verdict depends on which one the consensus was struck against: adjusted EPS rose 17.1% while GAAP diluted EPS fell from $1.62 to $1.60. The aggregator record shows a 2.8% EPS miss on the GAAP basis. No named-broker consensus was located, and the aggregators disagree with each other elsewhere in this table by as much as 45%, so this verdict is weakly held.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "$403m (13.2% margin)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Record cash from operations of $600m against capex of $197m, itself down from $237m."
+     },
+     {
+      "name": "Effective tax rate",
+      "actual": "26.6%",
+      "expected": "16.9% (prior year)",
+      "verdict": "miss",
+      "result": "The rise is attributed by the company primarily to the Qualified Domestic Minimum Top-up Tax under OECD Pillar Two, effective 2025-01-01. This is the single largest reason net income was flat on a materially better operating year."
+     }
+    ],
+    "commentary": "The last year reported on the old segment basis of Industrial, Consumer, and Software and Advisory. On that basis: Industrial $1,341m with $468m of adjusted EBITDA at a 34.9% margin, Consumer $1,319m and $249m at 18.9%, Software and Advisory $393m and $75m at 19.1%. Revenue by region: United States $1,253m, Greater China $761m, EMEA $529m, Asia Pacific $398m, other Americas $112m."
+   },
+   {
+    "period": "Q1 2026 (ended 2026-03-31)",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$758m (+7.5% total, +5.7% organic)",
+      "expected": "$748.5m per one aggregator panel",
+      "verdict": "beat",
+      "result": "Beat on revenue. On EPS the aggregators do not agree: the same quarter is recorded as a $0.08 beat against a $0.42 consensus and as a 47% surprise against a $0.34 consensus. Name the panel or state neither.",
+      "kpi": "revenue",
+      "usdMillions": 758,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$0.50",
+      "expected": "$0.42 or $0.34 depending on the aggregator",
+      "verdict": "beat",
+      "result": "Beat on every panel located; the size of the beat is not establishable.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$197m (26.0% margin, +320bps)",
+      "expected": "",
+      "verdict": "beat",
+      "result": ""
+     },
+     {
+      "name": "Operating income",
+      "actual": "$138m (18.2% margin)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "Against $109m and 15.5% in the recast prior-year quarter.",
+      "kpi": "operating-profit",
+      "usdMillions": 138
+     },
+     {
+      "name": "Net income",
+      "actual": "$97m (+36.6%)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 97
+     }
+    ],
+    "commentary": "The first quarter reported on the new segment basis. Industrial $375m (+8.2% organic), Consumer $318m (+3.0%), Risk and Compliance Software $65m (+4.9%). Shares rose about 3.5% on the print."
+   },
+   {
+    "period": "Q2 2026 (ended 2026-06-30)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "$816m (+5.2% total, +6.6% organic)",
+      "expected": "in line to modestly ahead",
+      "verdict": "beat",
+      "result": "Organic growth accelerated even as total growth slowed, because the EHS software divestiture removed $14m, or 1.8 points, from the reported line.",
+      "kpi": "revenue",
+      "usdMillions": 816,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$0.59",
+      "expected": "$0.56 (one aggregator panel); $0.51 (another)",
+      "verdict": "beat",
+      "result": "A 5.4% beat on the panel that reported one. Aggregator-sourced; no named broker located.",
+      "kpi": "eps"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$219m (26.8% margin)",
+      "expected": "",
+      "verdict": "beat",
+      "result": "A quarterly record on both the absolute figure and the margin."
+     },
+     {
+      "name": "Diluted EPS (GAAP)",
+      "actual": "$1.21",
+      "expected": "$0.45 (prior year)",
+      "verdict": "beat",
+      "result": "Inflated by a $191m pre-tax gain on the EHS software divestiture that closed 2026-04-01. This figure is not comparable and materially distorts any trailing GAAP multiple computed across it."
+     },
+     {
+      "name": "Free cash flow",
+      "actual": "H1 2026 $241m; free cash flow margin 11.2% against 13.5% a year earlier",
+      "expected": "",
+      "verdict": "miss",
+      "result": "H1 capex rose to $138m from $93m. The company guided FY2026 capex to about 8.5% of revenue against 6.5% in 2025, for laboratories in Japan and Illinois serving AI data centres, energy storage and automotive electrification."
+     },
+     {
+      "name": "Risk and Compliance Software revenue",
+      "actual": "$52m, down from $63m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "The only segment to shrink, and it shrank because the business was sold rather than lost: EHS software went to a Peak Rock Capital affiliate on 2026-04-01 for about $202m. Organic growth in the segment was +4.8%."
+     }
+    ],
+    "commentary": "A beat on revenue, adjusted EPS and adjusted EBITDA that the market marked down about 11 to 12 per cent on the day. The independent attribution is consistent across sources: capex guidance raised to roughly 8.5% of revenue, free cash flow margin deteriorating, second-half margin guidance softened on performance-based compensation and Eurofins integration costs, and forward revenue growth of about 4.9%. This is the second time in thirteen months that an EPS beat has been met with a double-digit share-price fall."
+   }
+  ],
+  "commentary": "Reported in US dollars on a 31 December year-end. Two things must be held in view before any figure here is compared with an earlier source. First, the segments changed: through 2025-12-31 the company reported Industrial, Consumer, and Software and Advisory; from Q1 2026 it reports Industrial, Consumer, and Risk and Compliance Software, having moved the Advisory business out of the software segment into Industrial, renamed the remainder, and reallocated corporate costs across all three. Prior periods were restated in a dedicated recast exhibit, and on the new basis FY2025 Industrial is $1,480m and Risk and Compliance Software is $254m — so any pre-2026 Software and Advisory figure overstates the software business by roughly $139m a year. Second, there is no reliable analyst-consensus column: no named-broker consensus was located for any period, every verdict above rests on aggregator panels, and two of those panels disagree on the Q1 2026 estimate by 45 per cent."
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that the durable asset is the UL Mark and the recurring inspection programme behind it, not the standards. Basis: the company states it is the owner of the UL-in-a-circle certification mark and grants UL Research Institutes and UL Standards & Engagement exclusive, royalty-free licences to use it, while paying ULSE $22m in 2025 for access to the standards library, recorded in cost of revenue. Ongoing Certification Services — the mandatory inspection and monitoring required to keep the right to use the mark — is the largest of the four service categories at $1,006m, about a third of FY2025 revenue, and certification testing feeds it. The brand and the annuity sit in the listed company; the rules sit in the non-profits.",
+  "2. **(High confidence)** We assess that incumbency is real but confined to North American product safety listing, and does not extend to global TIC. Basis: the only third-party league table located that ranks the majors on a stated measure places UL Solutions **eighth of ten by revenue at USD 3,106m**, behind SGS, Eurofins, Bureau Veritas, DEKRA, Intertek, TÜV SÜD and TÜV Rheinland — and under 2 per cent of the outsourced TIC market in an industry where the top ten hold less than a quarter. In the same cohort it is **first on operating margin at 25.9 per cent and first on revenue per employee at about USD 209,000**, roughly double Intertek's. That is the profile of a small, product-safety-concentrated business among diversified inspection groups. A separate assessment names it and Intertek the leading players in battery-storage TIC specifically, a market sized at USD 0.66bn in 2026 — about a fifth of UL Solutions' own revenue and split fifteen ways.",
+  "3. **(High confidence)** We assess that the mark commands a price premium that is brand-defended rather than legally protected, and that the substitutes are marketed as equivalent by the competitors offering them. Basis: independent compliance literature reports the ETL Mark at 25 to 50 per cent below UL pricing on comparable work and at up to half the turnaround, and Intertek runs a dedicated page arguing the UL mark is unnecessary. Products certified by any OSHA-recognised NRTL satisfy the same OSHA requirement. Set against that, the chief executive told a March 2026 investor conference that the company really does not have peers in the United States. Both statements are on the record and they do not agree.",
+  "4. **(High confidence)** We assess that the company demonstrated in December 2025 that its assurance franchises are contestable, and did so in the one market where a US regulator had designated it. Basis: UL Solutions was named Lead Administrator of the FCC's US Cyber Trust Mark in December 2024; the FCC chairman confirmed an investigation into its Chinese joint venture and China-based laboratories in June 2025 and paused the programme; the company withdrew effective immediately on 2025-12-19 and the ioXt Alliance was appointed in its place on 2026-04-13. Greater China is the second-largest revenue region at $761m and the UL-CCIC joint venture is 30 per cent owned by a Chinese state-owned enterprise, so the exposure that cost this role is structural rather than incidental.",
+  "5. **(Moderate confidence)** We assess that the market is now pricing capital intensity and cash conversion rather than earnings, and that management has not yet won the argument. Basis: an EPS beat with record adjusted EBITDA margin in Q2 2026 was met with an 11 to 12 per cent share-price fall, the second double-digit fall on a beat in thirteen months. The independent attribution is consistent — capital expenditure guided up to about 8.5 per cent of revenue from 6.5 per cent, free cash flow margin down from 13.5 to 11.2 per cent, second-half margin guidance softened on compensation and Eurofins integration, and forward revenue growth of about 4.9 per cent. The spending is explicitly aimed at AI data centres, energy storage and automotive electrification, so the disagreement is about payback rather than direction.",
+  "6. **(Moderate confidence)** We assess that the December 2025 secondary changed liquidity and not control, and that a recurring supply overhang is now a disclosed feature of the equity. Basis: ULSE held no Class A shares and converted Class B to create the 14,375,000 it sold at $78.00 for about $1.121bn; voting power fell only from 95.6 to 94.1 per cent. The 10-K states plainly that ULSE may pursue such sales to fund its public-safety mission, that the timing and amount may be based on ULSE's funding needs, and that they could be executed at times not in the best interests of the company or its other stockholders. Three sales in twenty months at $28.00, $49.00 and $78.00, against a $73.19 close, is the pattern that disclosure describes.",
+  "7. **(Moderate confidence)** We assess that the 2026 segment reorganisation makes the software business look materially smaller and the industrial business materially larger, and that any comparison across it will mislead unless restated. Basis: from Q1 2026 the Advisory business moved out of Software and Advisory into Industrial, the remainder was renamed Risk and Compliance Software, and corporate costs were reallocated across all three segments, with prior periods restated in a dedicated exhibit. FY2025 Industrial goes from $1,341m to $1,480m and the software segment from $393m to $254m. Any pre-2026 Software and Advisory figure overstates the software business by roughly $139m a year.",
+  "8. **(Low confidence)** We assess that the conflict-of-interest critique of the standards-writer relationship is structurally obvious and evidentially thin. Basis: the criticism circulates widely as a paraphrase — that a for-profit laboratory could mark its own homework — but no substantial independent investigation, academic work or regulator finding examining the ULSE and UL Solutions relationship has been published since the April 2024 IPO. The most concrete named criticism located is a decade old and concerns paywalled access to UL 2900 cybersecurity standards rather than the testing business. Two structural facts cut in opposite directions and both are on the record: the same person, James M. Shannon, chairs the board of UL Solutions and the board of UL Standards & Engagement and was president of the NFPA from 2002 to 2014 — and the company discloses the relationship as a **risk**, warning that ULSE could publish standards that negatively affect its customers.",
+  "9. **(Low confidence)** We assess that mutual recognition, not competition, is the structural threat to the recurring half of the business. Basis: the FY2025 10-K names as a risk any change requiring the company to accept third-party test results or certifications, any reduction in required inspections, tests or certifications, and any harmonisation of international or cross-industry benchmarks. That risk is aimed at Ongoing Certification Services, which is the annuity rather than the test. The same filing separately contemplates that artificial intelligence could replicate its services or that AI-designed products become the more trusted norm. No source located quantifies either.",
+  "**Collection gap:** no named-broker consensus figure was located for any period, so every beat-and-miss verdict in the financial record rests on aggregator panels, two of which disagree on the Q1 2026 estimate by 45 per cent. A putative class action filed 2026-02-11 in the Northern District of Illinois against all four UL entities, alleging that alarm control units were listed as compliant with UL and NFPA 72 standards when they were not, is known only from the quarterly filings and has attracted no press coverage; the docket was not retrieved. Four corpus-carried engagements — Trina Storage's bankability report and environmental product declaration, Hithium's and Sungrow's fire tests, and Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded from the counterparties and trade press instead."
+ ],
+ "sources": [
+  {
+   "label": "Stock Analysis — UL Solutions (ULS) quote and forecast (aggregator: $73.19 close, market cap $14.78bn, 201.90m shares, 52-week range $61.64-$107.54)",
+   "url": "https://stockanalysis.com/stocks/uls/",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Investing.com — UL Solutions CEO Jennifer Scanlon sells $920,799 in company stock under a Rule 10b5-1 plan",
+   "url": "https://www.investing.com/news/insider-trading-news/ul-solutions-ceo-jennifer-scanlon-sells-920799-in-company-stock-93CH-4888567",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Research and Markets — Battery Energy Storage System (BESS) testing, inspection and certification market report, naming fifteen providers",
+   "url": "https://finance.yahoo.com/energy/articles/battery-energy-storage-system-bess-115200592.html",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "UL Solutions Inc. — Form 10-Q for the quarterly period ended 30 June 2026 (cover: 78,143,173 Class A and 123,755,000 Class B shares as of 2026-07-24)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000023/uls-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — UL Solutions Q2 2026 earnings surprise (aggregator)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ul-solutions-inc-uls-q2-122505803.html",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — UL Solutions Q2 2026 slides: record margins clash with investor concerns",
+   "url": "https://www.investing.com/news/company-news/ul-solutions-q2-2026-slides-record-margins-clash-with-investor-concerns-93CH-4835014",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "StockStory via The Globe and Mail — why UL Solutions shares are trading lower today",
+   "url": "https://www.theglobeandmail.com/investing/markets/stocks/ULS/pressreleases/3641362/why-ul-solutions-uls-shares-are-trading-lower-today/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "MarketsandMarkets — battery energy storage system TIC market and company evaluation, naming UL Solutions and Intertek as the leading key players",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "UL Solutions — new evaluation services for NFPA 855, NFPA 68 and NFPA 69 compliance",
+   "url": "https://www.ul.com/news/ul-solutions-launches-new-evaluation-services-advance-safer-more-efficient-battery-energy",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Aventis Advisors — TIC industry analysis 2026: market size, growth drivers and consolidation trends",
+   "url": "https://aventis-advisors.com/tic-industry-analysis-2026-market-size-growth-drivers-and-consolidation-trends/",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Aventis Advisors — top ten largest testing, inspection and certification companies globally (UL Solutions 8th at USD 3,106m)",
+   "url": "https://aventis-advisors.com/top-10-largest-testing-inspection-and-certification-companies-globally/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "UL Solutions — Form 8-K exhibit 99.2, recast segment information following the 2026 reorganisation",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000009/exhibit992segmentreorganiz.htm",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "UL Solutions Inc. — Form 10-Q for the quarterly period ended 31 March 2026 (Note 1, segment reorganisation)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000012/uls-20260331.htm",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "UL Solutions — large-scale fire testing launched for battery energy storage systems under the sixth edition of UL 9540A",
+   "url": "https://www.ul.com/news/ul-solutions-launches-large-scale-fire-testing-battery-energy-storage-systems",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "UL Solutions — ABB achieves first certification for a system designed to advance data centre safety (HiPerGuard, UL 9540)",
+   "url": "https://www.ul.com/news/abb-achieves-first-certification-ul-solutions-system-designed-advance-data-center-safety-and",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Yahoo Finance — UL Solutions to acquire Eurofins Scientific's Electrical and Electronics business, including the MET Labs mark",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ul-solutions-uls-acquire-eurofins-010832073.html",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "UL Solutions Inc. — Definitive Proxy Statement (DEF 14A) for the 2026 annual meeting",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000119312526140022/d65278ddef14a.htm",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "Cybersecurity Dive — FCC names the ioXt Alliance lead administrator of the Cyber Trust Mark programme",
+   "url": "https://www.cybersecuritydive.com/news/fcc-cyber-trust-mark-new-lead-administrator/817437/",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "UL Solutions Inc. — Form 10-K for the fiscal year ended 31 December 2025 (competitor names removed from Item 1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144026000005/uls-20251231.htm",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "UL Solutions — Open Compute Project collaboration on safety and scalability in new AI data centre power distribution",
+   "url": "https://www.ul.com/news/ul-solutions-and-open-compute-project-help-advance-safety-and-scalability-new-ai-data-center",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "Nextgov/FCW — UL Solutions withdraws as lead administrator of the FCC cyber label programme amid a probe of China ties",
+   "url": "https://www.nextgov.com/cybersecurity/2026/01/ul-solutions-withdraws-lead-admin-fcc-cyber-label-program-amid-probe-china-ties/410448/",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "UL Solutions — prospectus supplement for the December 2025 secondary offering of Class A common stock (424B7, option exercise)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000162828025055468/ulsolutions-prosuppdecembe.htm",
+   "date": "2025-12-05"
+  },
+  {
+   "label": "UL Solutions — prospectus supplement, December 2025 secondary offering of 12,500,000 Class A shares at $78.00 (424B7)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000162828025054757/ulsolutions-prosuppdecembe.htm",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "Yahoo Finance / Simply Wall St — UL Solutions is down 12.4% after a major secondary share sale boosts the public float (aggregator)",
+   "url": "https://finance.yahoo.com/news/ul-solutions-uls-down-12-101040158.html",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "UL Solutions — Form 8-K announcing the November 2025 restructuring programme",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000044/uls-20251104.htm",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "UL Solutions — Schneider Electric receives the first ECOLOGO certification for an industrial product (UL 2711)",
+   "url": "https://www.ul.com/news/ul-solutions-issues-schneider-electric-first-ecologo-certification-industrial-product",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "Cybersecurity Dive — FCC investigation into UL Solutions delays the Cyber Trust Mark programme",
+   "url": "https://www.cybersecuritydive.com/news/fcc-cyber-trust-mark-ul-investigation-delay/758507/",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "UL Solutions — Europe Advanced Battery Laboratory opens in Aachen, Germany",
+   "url": "https://www.ul.com/news/ul-solutions-opens-advanced-battery-laboratory-germany",
+   "date": "2025-05-15"
+  },
+  {
+   "label": "UL Solutions — enhanced battery energy storage system safety test methods for the fifth edition of ANSI/CAN/UL 9540A, published by UL Standards & Engagement",
+   "url": "https://www.ul.com/news/ul-solutions-enhances-battery-energy-storage-system-safety-test-methods-address-industry",
+   "date": "2025-04-16"
+  },
+  {
+   "label": "UL Solutions Inc. — Form 10-K for the fiscal year ended 31 December 2024 (Item 1 Competition, naming Intertek, SGS, Bureau Veritas, Eurofins, Element, TÜV Rheinland, TÜV SÜD, DEKRA and DNV)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "Kairos Research — UL Solutions: an independent analysis of the business and its ownership structure",
+   "url": "https://kairosresearch.substack.com/p/ul-solutions",
+   "date": "2025-01-07"
+  },
+  {
+   "label": "UL Solutions — named lead administrator of the first-ever US federal cybersecurity labeling program",
+   "url": "https://www.ul.com/news/ul-solutions-named-lead-administrator-first-ever-us-federal-cybersecurity-labeling-program",
+   "date": "2024-12-18"
+  },
+  {
+   "label": "Samsung SDI — world-first pass of UL's Indoor Large-Scale Fire Test for uninterruptible power supply batteries (counterparty claim)",
+   "url": "https://news.samsungsdi.com/global/articleView?seq=435",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "UL Solutions and CATL join forces to advance battery energy storage system and EV battery safety (Witnessed Test Data Program)",
+   "url": "https://www.ul.com/news/ul-solutions-and-catl-join-forces-advance-battery-energy-storage-system-and-ev-battery-safety",
+   "date": "2023-01-18"
+  },
+  {
+   "label": "City Index — UL Solutions IPO primer, on the standards-development relationship as a competitive advantage",
+   "url": "https://www.cityindex.com/en-uk/news-and-analysis/ul-solutions-ipo/",
+   "date": "2023-11-13"
+  },
+  {
+   "label": "The Security Ledger — UL's pay-to-see standards for cyber security draw scrutiny",
+   "url": "https://securityledger.com/2016/04/ul-charges-for-cyber-standards-draws-scrutiny/",
+   "date": "2016-04"
+  },
+  {
+   "label": "UL Solutions — UL 9540A test method for battery energy storage systems (fifth and sixth editions, test levels, laboratory locations)",
+   "url": "https://www.ul.com/services/ul-9540a-test-method"
+  },
+  {
+   "label": "UL Solutions — large-scale fire testing and UL 9540A",
+   "url": "https://www.ul.com/services/large-scale-fire-testing-and-ul-9540a"
+  },
+  {
+   "label": "UL Solutions — safety testing for residential energy storage systems (UL 9540B, 20 kWh scope, California Fire Code origin)",
+   "url": "https://www.ul.com/services/safety-testing-residential-energy-storage-systems-ess"
+  },
+  {
+   "label": "UL Solutions — energy storage system testing and certification",
+   "url": "https://www.ul.com/services/energy-storage-system-testing-and-certification"
+  },
+  {
+   "label": "UL Solutions — Data Acceptance Program (WTDP, CTDP, TPTDP, TCP and PPP)",
+   "url": "https://www.ul.com/services/data-acceptance-program-dap"
+  },
+  {
+   "label": "UL Solutions — wind and solar power independent engineering services",
+   "url": "https://www.ul.com/services/wind-and-solar-power-independent-engineering-services"
+  },
+  {
+   "label": "UL Solutions — Environmental Product Declaration certification under ISO 14025",
+   "url": "https://www.ul.com/services/environmental-product-declaration-epd-certification"
+  },
+  {
+   "label": "UL Solutions — EU Battery Regulation compliance",
+   "url": "https://www.ul.com/services/eu-battery-regulation-compliance"
+  },
+  {
+   "label": "UL Solutions — data centres industry hub (five pillars; rack density and 800 VDC figures)",
+   "url": "https://www.ul.com/industries/data-centers"
+  },
+  {
+   "label": "UL Solutions — ULTRUS software portfolio",
+   "url": "https://www.ul.com/software/ultrus"
+  },
+  {
+   "label": "UL Solutions — corporate site and Notified Body impartiality statement",
+   "url": "https://www.ul.com/"
+  },
+  {
+   "label": "Trina Storage — Elementa 2 bankability reports from DNV and UL Solutions (counterparty claim)",
+   "url": "https://www.trinastorage.com/"
+  },
+  {
+   "label": "Energy-Storage.news — large-scale fire test witness reporting on Hithium and Sungrow (trade press)",
+   "url": "https://www.energy-storage.news/"
+  },
+  {
+   "label": "OSHA — Nationally Recognized Testing Laboratory Program, current list of NRTLs",
+   "url": "https://www.osha.gov/nationally-recognized-testing-laboratory-program/current-list-of-nrtls"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

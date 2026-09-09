@@ -4599,6 +4599,110 @@
           "role": "incumbent"
         }
       ]
+    },
+    {
+      "slug": "ul-solutions",
+      "name": "UL Solutions",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Owner of the UL Mark but not the UL standards — the default North American product-safety certifier, 94% voting-controlled by the non-profit that writes the rules it tests against",
+      "hq": "Northbrook, Illinois, United States",
+      "ticker": "NYSE: ULS",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "UL Solutions Inc.",
+        "UL LLC",
+        "UL Inc.",
+        "ULSE",
+        "ULSE Inc.",
+        "UL Standards & Engagement",
+        "UL Standards and Engagement",
+        "Underwriters Laboratories",
+        "Underwriters Laboratories Inc.",
+        "UL Research Institutes",
+        "UL Mark",
+        "UL-CCIC",
+        "ULTRUS",
+        "MET Labs",
+        "ECOLOGO",
+        "HOMER Pro",
+        "HOMER Grid",
+        "Openwind",
+        "Windographer",
+        "WERCSmart",
+        "ComplianceWire",
+        "Prospector",
+        "BatterieIngenieure"
+      ],
+      "domains": [
+        "ul.com",
+        "ir.ul.com",
+        "ulse.org",
+        "ul.org",
+        "shopulstandards.com"
+      ],
+      "srcTotal": 50,
+      "srcFirstPct": 58,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "intertek",
+      "name": "Intertek",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Fifth-largest testing and inspection group and the ETL Mark's owner — being taken private by EQT on a shareholder-approved scheme awaiting court sanction",
+      "hq": "London, United Kingdom",
+      "ticker": "LSE: ITRK",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Intertek Group plc",
+        "Intertek Testing Services",
+        "Intertek Testing Services NA",
+        "ITSNA",
+        "ETL",
+        "ETL SEMKO",
+        "cETL",
+        "ETL Listed",
+        "Intertek CEA",
+        "Clean Energy Associates",
+        "CEA",
+        "Caleb Brett",
+        "Intertek Caleb Brett",
+        "Isotope Bidco",
+        "Isotope Bidco Limited",
+        "Assuris",
+        "AgriWorld",
+        "Transportation Technologies",
+        "Total Quality Assurance",
+        "Intertek Metoc"
+      ],
+      "domains": [
+        "intertek.com",
+        "intertekcea.com"
+      ],
+      "srcTotal": 91,
+      "srcFirstPct": 41,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "incumbent"
+        }
+      ]
     }
   ]
 }

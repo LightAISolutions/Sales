@@ -1637,7 +1637,7 @@
     "Authorship of the recommended practice the contract cites",
     "Turnaround against financial close and the 30/60/90 review calendar"
    ],
-   "notes": "Below the floor at S0 (2026-09-07): two incumbents, no challenger, as INTEGRATED-REMEDIATION-PLAN.md §7.2 records. S3 V1 (2026-09-08, v05.21r) landed CSA Group as the challenger — now 5 members · 2 incumbents · 1 challenger · 2 adjacent, AT THE FLOOR; S3 P4 (UL Solutions, Intertek) deepens it. Caveat recorded at assignment: CSA Group agreed on 2026-08-28 to sell its entire testing and certification subsidiary (the CSA mark, the NRTL and the laboratories) to Kiwa Group, closing targeted Q4 2026 — after close the standards author and the certifier are different organisations, and the challenger role should be re-read at the first refresh (the association keeps the C800 protocol; Kiwa gets the laboratories that run it).",
+   "notes": "At the floor since S3 V1 (2026-09-08, v05.21r) and deepened by S3 P4 (2026-09-09) to SEVEN members — 4 incumbents (DNV, Sargent & Lundy, UL Solutions, Intertek), 1 challenger (CSA Group), 2 adjacent (Black & Veatch, Burns & McDonnell). P4 did not change the floor state; it changed what the segment's incumbency rests on. Both new incumbents are typed on a named sub-market — MarketsandMarkets' July 2026 battery-storage TIC assessment, which names UL Solutions and Intertek the leading key players — and NEITHER is an incumbent in global TIC: Aventis Advisors' May 2026 league table ranks Intertek 5th of ten by revenue and UL Solutions 8th, in a market where the top ten hold under a quarter of global revenue. Any landscape module drawing on this segment should say which market it means. TWO PENDING CHANGES OF CONTROL, one on each side of the incumbent/challenger line. CSA Group agreed on 2026-08-28 to sell its entire testing and certification subsidiary to Kiwa Group, closing targeted Q4 2026 — after which the standards author and the certifier are different organisations. Intertek is being taken private by EQT on a shareholder-approved scheme awaiting court sanction in Q4 2026 or Q1 2027, and the buyer has said it intends to recommence a paused review of separating the division that holds Intertek CEA about twelve months after completion. Both roles should be re-read at first refresh. A third structural fact worth carrying into any landscape: UL Solutions does not own UL 9540, UL 9540A or UL 1973 — UL Standards & Engagement publishes them and UL Solutions pays $22m a year for library access — and Intertek's OSHA NRTL scope covered UL 9540 only from 2025-08-22 and UL 1973 only from 2024-04-24.",
    "members": [
     {
      "slug": "dnv",
@@ -1663,6 +1663,16 @@
      "slug": "csa-group",
      "role": "challenger",
      "basis": "ecosystemRole: the certification body and second source to UL Solutions for the North American energy-storage listing, and the author of the TS-800/C800 large-scale fire test that NFPA 855-2026 references; trade press places it among the 'major companies' in battery TIC behind the named leaders (UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD, DNV) — the registry's challenger definition"
+    },
+    {
+     "slug": "ul-solutions",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the default certifier of the battery and data-centre equipment this corpus tracks — when a fire code requires a system listed to UL 9540 and tested to UL 9540A it is citing documents UL Solutions tests against but does not own. Third-party basis for the role rather than the dossier's own language: MarketsandMarkets (2026-07-08) names UL Solutions and Intertek the leading key players in battery-storage TIC. NOT an incumbent by scale — Aventis Advisors ranks it 8th of ten in global TIC at USD 3,106m, under 2% of the outsourced market — so the incumbency is in North American product-safety listing and battery certification, not in TIC generally"
+    },
+    {
+     "slug": "intertek",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the other half of the assurance pair this corpus's battery chain runs through, reaching a project from the buyer's side through Intertek CEA — 400-point factory audits, 280-point inline production monitoring and factory acceptance test witnessing sold to developers, EPCs, IPPs and financiers — while the laboratory issues ETL and cETL marks against standards other bodies write. Third-party basis: MarketsandMarkets (2026-07-08) names Intertek and UL Solutions the leading key players in battery-storage TIC, framing Intertek's strategy as lifecycle project assurance rather than laboratory specialisation. NOT an incumbent by scale — Aventis Advisors ranks it 5th of ten in global TIC at USD 4,619m, roughly 1.5-2% world share"
     }
    ]
   },
@@ -1765,6 +1775,11 @@
      "slug": "hyperstrong",
      "role": "adjacent",
      "basis": "productsAndServices › AI operations stack (HyperStrong AI Platform, HyperGenie) — station optimisation and fault diagnosis"
+    },
+    {
+     "slug": "ul-solutions",
+     "role": "adjacent",
+     "basis": "productsAndServices > ULTRUS software: HOMER Pro and HOMER Grid for microgrid and distributed-energy optimisation at time steps from one minute to one hour, RAMP for renewable asset monitoring with real-time production KPIs and power forecasting, and Openwind and Windographer for wind resource and layout modelling — a documented software line touching the segment, but about 9% of revenue and cross-sold into the testing base rather than a primary business"
     }
    ]
   },

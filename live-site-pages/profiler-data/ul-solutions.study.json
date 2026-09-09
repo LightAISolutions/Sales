@@ -1,0 +1,549 @@
+{
+ "schemaVersion": 2,
+ "slug": "ul-solutions",
+ "title": "UL Solutions — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "glossary": [
+  {
+   "t": "NRTL",
+   "d": "Nationally Recognized Testing Laboratory: a laboratory the US Occupational Safety and Health Administration has recognised to certify specific products against specific safety standards at specific sites. Recognition is not a grant of government authority — it lets an employer rely on the mark to satisfy a workplace requirement."
+  },
+  {
+   "t": "AHJ",
+   "d": "Authority having jurisdiction: the official — usually an electrical inspector or fire marshal — who decides whether an installation may proceed. In a permitting-gated market the AHJ, not the manufacturer, is the party a test report has to convince."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-the-mark-and-the-rules",
+   "title": "Start here: the mark, the rules, and why they are not owned by the same organisation",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The CSA Group guide taught the institutional map — a standard is a committee's sentence, a code is that sentence made law, a mark is a laboratory's signature that a product met it. This guide goes to the bench: what a safety test physically does once that question is settled, and what a mark is worth as a business.",
+    "The single fact to carry through every section: **UL Solutions owns the UL Mark and does not own the UL standards.** {{UL 9540}}, {{UL 9540A}}, {{UL 9540B}} and {{UL 1973}} are published by UL Standards & Engagement, a separate non-profit that also holds 94 per cent of UL Solutions' votes. UL Solutions pays it $22 million a year for access to the library it tests against, and licenses the mark back to it royalty-free. The brand sits in the listed company; the rules sit in the charity.",
+    "The consequence is that any laboratory with the right regulatory recognition may certify against the same documents — CSA Group, Intertek, TÜV Rheinland, TÜV SÜD and DEKRA all do. So a code naming a UL standard does not hand the work to the company with the same initials. It creates a market that company leads on brand, laboratory capacity and its standing with fire marshals.",
+    "Read this after the CSA guide and before or after the Intertek guide from the same session; those two are interchangeable in order and cover the bench and the production line respectively."
+   ]
+  },
+  {
+   "id": "why-you-cannot-test-by-using-it",
+   "title": "Why you cannot test a product by using it",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A manufacturer ships a million units and you can test ten. Using them normally teaches you almost nothing, because the failures that matter are rare and rare events do not appear in small samples within a useful time. So safety testing does not sample failures. It samples *products* and applies conditions severe enough to turn a latent weakness into a present one.",
+    "**{{type testing}}** is the compromise that results: test a small number of units representative of production, to a written standard, once — then control the one thing that would invalidate the inference, which is the factory changing. That control is {{factory surveillance}}, and it is why a certificate without ongoing inspection decays into a historical fact about a sample.",
+    "**The {{single-fault principle}}** is the move underneath almost every electrical safety standard. Assume any one component fails in the worst plausible way, and require that the product still not injure anyone. Not that it still works — that is reliability, a different discipline — but that it does not electrocute, ignite or eject anything. Two simultaneous unrelated faults are usually out of scope, and that boundary is a committee's judgement rather than a law of nature.",
+    "**{{abnormal operation testing}}** applies the same logic to use rather than components. Block the ventilation, stall the motor, short the output, run it at the wrong voltage, leave it running for a week. The standard writes down which abuses count, which is another way of saying the standard is an argument about which misuse is foreseeable.",
+    "One consequence deserves stating plainly, because an incentive lives in it. The tested unit must be *representative of production*. A module built with a deliberately weak point may propagate less in a fire test than one built properly, and the representativeness requirement is the only thing standing against that."
+   ]
+  },
+  {
+   "id": "the-electrical-bench",
+   "title": "The electrical bench: four measurements and a plastic",
+   "kind": "ledger",
+   "read": "7 min",
+   "cols": [
+    "Measurement",
+    "What is physically done",
+    "What it is really testing",
+    "Where it bites"
+   ],
+   "rows": [
+    [
+     "**{{dielectric withstand}}**",
+     "Apply a voltage far above the operating voltage — often 1,000 V plus twice the working voltage — between conductors and enclosure for a fixed time; require that essentially no current flows",
+     "Insulation **margin**, not present function: whether it will still hold after years of heat, vibration and contamination",
+     "A design that passes at the factory and fails after three years in a humid plant room"
+    ],
+    [
+     "**{{clearance}}**",
+     "Measure the shortest distance through air between two conductors",
+     "Whether a spark can jump the gap",
+     "Compact designs; higher system voltages shrink the margin fastest"
+    ],
+    [
+     "**{{creepage}}**",
+     "Measure the shortest distance along the *surface* of the insulating material between two conductors",
+     "Whether a conductive track can gradually form as dust and moisture accumulate. Depends on the material and on the pollution expected",
+     "A rated part failing in a dirty installation it would have survived in a clean one"
+    ],
+    [
+     "**{{temperature rise test}}**",
+     "Run at rated load until temperatures stabilise; measure how far each part rose above ambient",
+     "Whether materials stay below their limits. Always a *rise*, never an absolute — so the design is safe in Phoenix and in Helsinki",
+     "Enclosures, insulation classes, and any surface a person can touch"
+    ],
+    [
+     "**{{IP rating}}**",
+     "Defined dust and water exposures; two digits, solids then liquids",
+     "Sealing against a **defined** exposure, not against your particular environment",
+     "IP67 is tested with a defined immersion, not with your pressure washer"
+    ],
+    [
+     "**{{UL 94}}**",
+     "Hold a bar of the plastic vertically or horizontally, apply a defined flame for a defined time",
+     "How long the material burns after the flame is removed, and whether it drips flaming particles. V-0 is the common demanding grade",
+     "A datasheet's flammability grade is a property of the *material*, tested and paid for by the material supplier — not of the finished product"
+    ]
+   ]
+  },
+  {
+   "id": "provoking-a-fire-on-purpose",
+   "title": "Provoking a fire on purpose",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A battery safety test is not asking whether a cell can fail. That is assumed. It is asking what the **neighbours** do when one does — which makes {{thermal propagation}}, not {{thermal runaway}}, the quantity every code cares about.",
+    "So the test needs a repeatable trigger that mimics a real failure without being one. Typically a film heater bonded to a cell; sometimes nail penetration or overcharge. **The initiation method shapes the energy and gas release**, which means a test is only comparable with another test that initiated the same way. This is the first question to ask of any propagation claim.",
+    "The most valuable output of the cell-level test is not the temperature at which runaway begins. It is the **composition and volume of the vent gas** — because that gas is the input to every explosion calculation downstream, and it is what NFPA 68 deflagration venting and NFPA 69 explosion prevention are sized against.",
+    "Note what the test method is *not*. {{UL 9540A}} produces a report, not a certificate. Nobody is 'UL 9540A certified', and no laboratory holds regulatory recognition to run it, because recognition attaches to certifying products against safety standards and 9540A is a method. If a tender asks for 9540A certification, it has asked for a document that does not exist.",
+    "The one place UL Solutions makes a hard capability claim is here: **full fire testing facilities, eliminating the need for subcontracting.** Setting a container alight under instrumentation is a capital-intensive, permit-heavy thing that few laboratories can do, and it is the sharpest differentiator on the whole battery estate."
+   ]
+  },
+  {
+   "id": "the-9540a-ladder",
+   "title": "The ladder: what each level asks and who reads the answer",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Each rung's output decides whether the next is needed. The sixth edition of the test method, published 2026-03-13, restructured the ladder — the last column is what changed.",
+   "cols": [
+    "Level",
+    "The question it answers",
+    "What comes off it",
+    "Who consumes it",
+    "Sixth edition"
+   ],
+   "rows": [
+    [
+     "**Cell**",
+     "How does a single cell behave when driven into runaway?",
+     "Onset temperature, total energy released, and the composition and volume of vent gas",
+     "Everyone downstream — the gas data feeds every explosion calculation",
+     "Retained"
+    ],
+    [
+     "**Module**",
+     "Does runaway propagate cell to cell inside the module?",
+     "Propagation yes or no; heat release rate; gas release rate; deflagration potential",
+     "Product designers; the module is where a fix is cheapest",
+     "Retained"
+    ],
+    [
+     "**Unit**",
+     "Does fire spread between modules inside one enclosure?",
+     "The same measurements at enclosure scale",
+     "Product designers and the certifier",
+     "**Dropped for most cases** — retained only for residential systems and non-residential systems with an active thermal-runaway propagation prevention system"
+    ],
+    [
+     "**Installation**",
+     "At the spacing you actually intend to build, does fire cross the gap — and indoors, does the building's suppression cope?",
+     "Flame spread, heat release, gas emission, suppression performance, validity of the separation distances",
+     "The authority having jurisdiction, the fire marshal and the insurer",
+     "**Now the decisive rung.** Assumes a post-deflagration condition and adds intentional ignition of the vented gases"
+    ]
+   ]
+  },
+  {
+   "id": "the-standard-moved-twice",
+   "title": "The standard moved twice in twelve months",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Months from the publication of UL 9540B. Lanes: what the standards body published; what the codes and the market did with it. The industry argued for years about whether the mandatory test was really a large-scale fire test — and the answer arrived by revision.",
+   "unit": "months from May 2024 (0 = publication of UL 9540B)",
+   "lanes": {
+    "std": "Standards published",
+    "mkt": "Codes and market"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "std",
+     "label": "UL 9540B published",
+     "sub": "An {{Outline of Investigation}} for a residential large-scale fire test — 20 kWh or less, module test dropped, purposeful ignition of vented gases added"
+    },
+    {
+     "x": 0,
+     "lane": "mkt",
+     "label": "Why it existed",
+     "sub": "Authorities having jurisdiction had determined that UL 9540A by itself did not adequately fulfil the 2022 California Fire Code for home batteries"
+    },
+    {
+     "x": 10,
+     "lane": "std",
+     "label": "UL 9540A fifth edition",
+     "sub": "Published 2025-03-12; adds sodium-ion and rooftop use cases; replaces the residential fire room with an instrumented wall assembly"
+    },
+    {
+     "x": 22,
+     "lane": "std",
+     "label": "UL 9540A sixth edition",
+     "sub": "Published 2026-03-13; large-scale fire testing becomes the third and decisive level; intentional ignition of off-gases added"
+    },
+    {
+     "x": 22,
+     "lane": "mkt",
+     "label": "NFPA 855 2026 edition",
+     "sub": "New Annex G.11 sets expectations for the large-scale fire test — fire spreading from one system to another, separation distances, active suppression"
+    },
+    {
+     "x": 23,
+     "lane": "mkt",
+     "label": "UL Solutions sells it as a service",
+     "sub": "Large-Scale Fire Testing launched 2026-04-23 covering outdoor containers, indoor battery rooms and grouped or stacked enclosures; co-quoted by a serving fire chief"
+    },
+    {
+     "x": 25,
+     "lane": "mkt",
+     "label": "And sells the argument as well as the test",
+     "sub": "NFPA 855, 68 and 69 evaluation services launched 2026-06-22 — engineering reports and modelling to support a permitting case, explicitly not testing or certification"
+    }
+   ]
+  },
+  {
+   "id": "three-documents-three-jobs",
+   "title": "Three documents, three jobs — and the confusion that costs money",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Tenders conflate these constantly. Each row is a different kind of document with a different output and a different reader.",
+   "cols": [
+    "Document",
+    "Kind",
+    "What it produces",
+    "What it does NOT tell you"
+   ],
+   "rows": [
+    [
+     "**{{UL 9540}}**",
+     "Product certification standard",
+     "A **listing** and a mark: the system may be sold and installed",
+     "Anything about propagation at your spacing, or about the site"
+    ],
+    [
+     "**{{UL 9540A}}**",
+     "**Test method**, not a standard to certify against",
+     "Test **reports** at each level attempted",
+     "Pass or fail. There is no such thing as 9540A certification"
+    ],
+    [
+     "**{{UL 9540B}}**",
+     "{{Outline of Investigation}}, residential only",
+     "A single report on fire propagation and thermal impact on surroundings, for systems of 20 kWh or less",
+     "Anything about commercial or industrial systems. If you meet it in a grid-scale context, the wrong document has been cited"
+    ],
+    [
+     "**NFPA 855**",
+     "Installation standard, adopted through fire codes",
+     "Rules for how and where a system may be installed",
+     "It is not a certification standard, and 'NFPA 855 compliant containers' asks for a product against an installation rule"
+    ],
+    [
+     "**{{UL 1973}}**",
+     "Product certification standard, battery level",
+     "A listing for the battery itself",
+     "System-level behaviour"
+    ]
+   ]
+  },
+  {
+   "id": "the-annuity-not-the-test",
+   "title": "The mark as a business: the annuity beats the test",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The test is the customer acquisition cost. The inspection is the product. Certification testing earns a fee once; **ongoing certification services** — periodic factory inspections, follow-up audits, sample testing, control of how the label is applied — earn a fee every year for as long as the manufacturer wants the mark. At UL Solutions the recurring line is the larger of the two at about a third of all revenue, and that ratio is the business model in one number.",
+    "The reason surveillance is not optional goes straight back to {{type testing}}: the inference from ten units to a million holds only while the factory keeps building the same thing.",
+    "**Capacity is the growth constraint, and there is a way around it.** A laboratory can only run so many tests, which caps a certifier's growth at the rate it can build benches — unless it can borrow someone else's. A {{data acceptance program}} does exactly that: qualify a customer's or third party's laboratory, supervise or witness the testing there, audit every submitted result, re-assess the laboratory annually. UL Solutions runs a family of these and qualified **CATL's own energy-storage laboratory** under the witnessed variant to test to UL 9540A, having already qualified it to UL 1973, UL 9540 and UL 2580. It is neither a franchise nor blind acceptance, and it is how a company with 87 laboratory sites certifies against more than 4,000 standards.",
+    "**Who the customer really is.** A manufacturer pays the invoice, but the mark's value is set by whoever must be convinced — the electrical inspector, the fire marshal, the insurer, the retailer that will not stock an uncertified product. That is why standing with code authorities is a commercial asset, and why a service launch is co-quoted by a fire chief rather than by a customer.",
+    "**And where the premium is exposed.** Any recognised laboratory may certify to the same standard, and the alternatives are marketed as equivalent: independent compliance literature reports the competing {{ETL Mark}} at 25 to 50 per cent below UL pricing at up to half the turnaround, for the same regulatory outcome. The premium is defended by brand and habit, not by law."
+   ]
+  },
+  {
+   "id": "one-roof-or-three",
+   "title": "One roof or three: when the standards writer is your controlling shareholder",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "UL split into three organisations in 2022: UL Research Institutes (research, non-profit), UL Standards & Engagement (standards, non-profit) and UL Solutions (commercial, listed 2024). ULSE holds every Class B share at ten votes each — 61.6 per cent of the equity and 94.1 per cent of the votes. Both readings of that structure are on the record.",
+   "cards": [
+    {
+     "t": "The separation works as designed",
+     "meta": "The rules sit in a charity; the laboratory cannot change them to suit itself.",
+     "adv": [
+      "**The commercial company cannot write its own exam.** UL Solutions pays ULSE $22m a year for library access and says plainly that ULSE publishes the standards.",
+      "**The standards process is externally accountable.** Standards technical panels are balanced across nine interest categories including authorities having jurisdiction and government; the standards body holds its own third-party accreditation.",
+      "**The mandate is not exclusive.** Any recognised laboratory certifies to the same documents, so a code citing a UL standard creates a market rather than a monopoly.",
+      "**The company treats the relationship as a hazard to itself.** Its risk factors warn that ULSE could publish standards forcing customers to redesign products, and that the research institute could publish findings damaging to customers — the opposite of a captured regulator."
+     ],
+     "dis": []
+    },
+    {
+     "t": "The separation is thinner than it looks",
+     "meta": "Ownership, board and history all still run through the same institution.",
+     "adv": [],
+     "dis": [
+      "**The same person chairs both boards.** The chair of UL Solutions is also chair of UL Standards & Engagement, a trustee of UL Research Institutes, a former president of the IEC and president of the NFPA from 2002 to 2014 — the body that writes NFPA 855.",
+      "**Four of twelve directors are ULSE designees**, and they may bring an observer to any board or committee meeting.",
+      "**ULSE holds consent rights** over new lines of business, large acquisitions and disposals, buybacks, debt that would cost the investment-grade rating — and over hiring any chief executive other than the incumbent.",
+      "**The critique is widely repeated and thinly evidenced.** No substantial independent investigation of the relationship has been published since the 2024 listing; the most concrete named criticism located is a decade old and concerns paywalled access to cybersecurity standards."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-the-money-is",
+   "title": "Where the money is: four service lines, FY2025",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "FY2025 revenue, USD millions",
+   "intro": "The shape to notice is not which line is biggest but which is *recurring*. Ongoing certification is mandatory inspection required to keep the mark — a subscription. Certification testing is the one-off that creates the subscription. Together they are 61 per cent of revenue.",
+   "items": [
+    {
+     "label": "Ongoing Certification Services",
+     "sub": "Periodic factory inspections, follow-up audits, sample testing, label control — the annuity",
+     "v": 1006
+    },
+    {
+     "label": "Non-certification Testing and Other Services",
+     "sub": "Performance, energy-efficiency, wireless and EMC, chemical and reliability testing; field engineering; advisory",
+     "v": 911
+    },
+    {
+     "label": "Certification Testing",
+     "sub": "Evaluation to regulatory requirements and design specs; the work that authorises use of the UL Mark",
+     "v": 851
+    },
+    {
+     "label": "Software",
+     "sub": "ULTRUS — product stewardship, chemical data, supply-chain, ESG reporting, and the renewable modelling suite",
+     "v": 285
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The mandate belongs to the standard, not to the certifier.** A code requiring a UL 9540 listing is satisfied by any recognised laboratory's listing. UL Solutions captures the largest share plus the brand rent on the mark it owns — not an exclusive.",
+    "**The recurring half is what a mutual-recognition regime attacks.** The company's own risk factors name any requirement to accept third-party test results, any reduction in required inspections, and any harmonisation of international benchmarks. None of those touches the test; all of them touch the annuity.",
+    "**Incumbency is market-specific and it has been lost once.** UL Solutions was named Lead Administrator of the FCC's US Cyber Trust Mark in December 2024, withdrew on 2025-12-19 during an FCC national-security investigation into its Chinese joint venture and China laboratories, and was replaced by the ioXt Alliance in April 2026. An assurance franchise awarded by a regulator and then surrendered is the cleanest evidence available that these positions are contestable.",
+    "**Scale and margin point in opposite directions.** Eighth of ten in global TIC by revenue at about USD 3.1bn and under 2 per cent of the outsourced market — but first of the ten on operating margin and on revenue per employee, at roughly double Intertek's. Any claim that UL Solutions is 'the global TIC leader' is false on revenue; any claim that it is a minor player misreads the margin.",
+    "**A {{secondary offering}} tells you nothing about the company's balance sheet.** All three UL Solutions offerings were sales by ULSE and the company received nothing from any of them. Because Class B carries ten votes and converts one-for-one, a $1.1bn sale moved voting control from 95.6 to 94.1 per cent. The filings disclose that further sales may come at times not in the company's interests.",
+    "**And a claim about the listing itself is being tested in court.** A putative class action filed 2026-02-11 in the Northern District of Illinois names all four UL entities and alleges alarm control units were listed as compliant with UL and NFPA 72 standards when they were not. It is known only from the quarterly filings and has attracted no press coverage."
+   ]
+  },
+  {
+   "id": "where-ul-solutions-slots-in",
+   "title": "Where UL Solutions' products slot into the assurance chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The seats a certification body can occupy, with UL Solutions' instance of each and what the reader should take from the row.",
+   "cols": [
+    "Seat",
+    "UL Solutions' instance",
+    "What to take from it"
+   ],
+   "rows": [
+    [
+     "**The mark**",
+     "The UL-in-a-circle certification mark, owned by UL Solutions and licensed royalty-free to the two non-profits",
+     "The brand asset sits in the listed company — the one part of the structure that is genuinely exclusive"
+    ],
+    [
+     "**The standard the code cites**",
+     "None. UL 9540, 9540A, 9540B and 1973 belong to UL Standards & Engagement",
+     "Influence without ownership: active in over 1,200 standards panels, and co-leads the Open Compute Project's codes workstream with ABB and Eaton"
+    ],
+    [
+     "**The bench**",
+     "87 laboratory sites in 27 countries, over 5 million square feet, more than 140,000 pieces of test equipment, six laboratories specialised in battery cell, pack and module testing",
+     "Capability is published; capacity is not — no chamber counts, no throughput, no kWh ratings anywhere"
+    ],
+    [
+     "**The large-scale burn**",
+     "Large-Scale Fire Testing, launched 2026-04-23, for outdoor containers, indoor battery rooms and grouped enclosures",
+     "'Full fire testing facilities, eliminating the need for subcontracting' is the sharpest capability claim in the estate"
+    ],
+    [
+     "**The permitting argument**",
+     "NFPA 855, 68 and 69 evaluation services, launched 2026-06-22 — modelling and engineering reports, explicitly not testing",
+     "Selling the argument as well as the test moves the customer from the manufacturer to the authority having jurisdiction"
+    ],
+    [
+     "**The annuity**",
+     "Ongoing Certification Services, $1,006m in FY2025 — about a third of revenue",
+     "The recurring inspection is worth more than the test that earned it"
+    ],
+    [
+     "**Borrowed capacity**",
+     "The {{data acceptance program}} family, including the witnessed variant that qualified CATL's laboratory for UL 9540A",
+     "How a certifier grows faster than it can build benches"
+    ],
+    [
+     "**The lender's chair**",
+     "Wind and Solar Power Independent Engineering Services, about 500 advisory experts, sold with explicit bankability language",
+     "Places UL Solutions on the same panels as DNV and Sargent & Lundy — though it publishes no panel roster and names no peer"
+    ],
+    [
+     "**The environmental claim**",
+     "EPD certification under ISO 14025, with the life-cycle assessment creator and verifier kept as separate entities",
+     "A different product from certification, and one this corpus meets through Trina Storage's account rather than UL Solutions'"
+    ]
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Who publishes UL 9540 and UL 9540A, and who owns the UL Mark?",
+     "a": "UL Standards & Engagement, a non-profit, publishes the standards. UL Solutions, the listed company, owns the UL Mark — and licenses it back to the non-profits royalty-free while paying $22m a year for access to the standards library."
+    },
+    {
+     "q": "What is the single-fault principle, and what does it deliberately not require?",
+     "a": "Assume any one component fails in the worst plausible way and require that the product still not injure anyone. It does not require that the product still works — that is reliability — and it does not usually cover two simultaneous unrelated faults."
+    },
+    {
+     "q": "Distinguish creepage from clearance.",
+     "a": "Clearance is the shortest distance through air between two conductors and governs whether a spark can jump. Creepage is the shortest distance along the insulating surface and governs whether a conductive track can form as dust and moisture accumulate. Creepage is always at least clearance."
+    },
+    {
+     "q": "Why is a temperature limit written as a rise above ambient rather than an absolute temperature?",
+     "a": "Because the same product must be safe in different climates. The rise is a property of the design; the absolute temperature is a property of the room."
+    },
+    {
+     "q": "What is the most valuable output of the cell-level test in UL 9540A, and why?",
+     "a": "The composition and volume of the vent gas, because it is the input to every explosion calculation downstream — including the NFPA 68 deflagration venting and NFPA 69 explosion prevention analyses."
+    },
+    {
+     "q": "Why can no laboratory hold regulatory recognition for UL 9540A?",
+     "a": "Because recognition attaches to certifying products against safety standards, and UL 9540A is a test method that produces a report rather than a certification. Nobody is '9540A certified'."
+    },
+    {
+     "q": "What changed at the fourth level of the ladder in the sixth edition of UL 9540A?",
+     "a": "The installation-level large-scale fire test became the decisive third rung — the unit level was dropped except for residential systems and non-residential systems with an active propagation prevention system — and it now assumes a post-deflagration condition and intentionally ignites the vented gases."
+    },
+    {
+     "q": "What does UL 9540B cover, and what is its document class?",
+     "a": "A large-scale fire test for residential battery storage of 20 kWh or less. It is an Outline of Investigation, not a consensus standard, and it does not cover commercial or industrial systems."
+    },
+    {
+     "q": "Why is ongoing certification worth more than certification testing?",
+     "a": "Type testing infers a million units from ten, and that inference holds only while the factory keeps building the same thing. Surveillance is what makes an old certificate a claim about current production — and it is billed every year."
+    },
+    {
+     "q": "What is a data acceptance programme and what problem does it solve?",
+     "a": "An arrangement in which a certifier accepts test data generated at a customer's or third party's laboratory, having qualified it, supervised or witnessed the work, audited every submission and re-assessed it annually. It solves the bench-capacity ceiling on growth."
+    },
+    {
+     "q": "In a secondary offering, how much does the company receive?",
+     "a": "Nothing. Existing shares change hands. All three UL Solutions offerings — April 2024, September 2024 and December 2025 — were sales by its controlling shareholder."
+    },
+    {
+     "q": "Why did selling $1.1bn of stock move ULSE's voting control by only 1.5 points?",
+     "a": "Because ULSE held no Class A shares and had to convert Class B — ten votes each — into Class A, one vote each, to create what it sold. A ten-vote structure lets a holder monetise for years without losing control."
+    },
+    {
+     "q": "What does 'controlled company' status permit, and does UL Solutions use it?",
+     "a": "It exempts the company from several NYSE governance requirements including a majority-independent board and fully independent nominating and compensation committees. UL Solutions states it has not relied on the exemptions and does not currently intend to."
+    },
+    {
+     "q": "Name the three UL entities and what each does.",
+     "a": "UL Solutions Inc. — the listed company that tests, certifies and sells software. ULSE Inc. / UL Standards & Engagement — the non-profit that publishes the standards and holds the controlling votes. Underwriters Laboratories Inc. / UL Research Institutes — the non-profit above ULSE and its sole member."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A tender requires 'UL 9540A certified containers'. The correct reading is:",
+     "c": [
+      "Compliant containers must carry a UL 9540A certificate from UL Solutions",
+      "No such certificate exists — 9540A is a test method producing reports, so the tender should ask for a UL 9540 listing plus 9540A reports at named levels",
+      "Any NRTL may issue the 9540A certificate, so the tender is fine as written",
+      "The tender is asking for NFPA 855 compliance in different words"
+     ],
+     "a": 1,
+     "why": "UL 9540A is a test method, not a certification standard; it produces reports at cell, module and installation level. The certification standard for the system is UL 9540, and the installation rule is NFPA 855 — three documents doing three jobs."
+    },
+    {
+     "q": "A supplier says its system passed installation-level fire testing with no propagation. What is the most important thing still missing?",
+     "c": [
+      "The name of the laboratory",
+      "The edition of the test method, the initiation method, and the spacing at which the installation test was run",
+      "Whether the laboratory is an NRTL",
+      "The UL 94 rating of the enclosure plastics"
+     ],
+     "a": 1,
+     "why": "The initiation method shapes the energy and gas release, so tests are only comparable when initiated the same way; the edition changed materially in March 2026; and an installation test at a spacing wider than yours does not answer your question."
+    },
+    {
+     "q": "UL Solutions' revenue rank among the ten largest TIC companies, and its rank on operating margin, are respectively:",
+     "c": [
+      "First and first",
+      "Eighth and first",
+      "Eighth and eighth",
+      "Fifth and second"
+     ],
+     "a": 1,
+     "why": "Eighth of ten by revenue at about USD 3.1bn, behind SGS, Eurofins, Bureau Veritas, DEKRA, Intertek, TÜV SÜD and TÜV Rheinland — and first on operating margin at 25.9 per cent and on revenue per employee at about USD 209,000. Small and high-quality, not large."
+    },
+    {
+     "q": "Why does the company disclose the relationship with UL Standards & Engagement as a risk factor?",
+     "c": [
+      "Because regulators require disclosure of any related party",
+      "Because ULSE could publish standards that force its customers to redesign products, and the research institute could publish findings damaging to customers",
+      "Because the standards fees are material to earnings",
+      "Because the sunset date could arrive early"
+     ],
+     "a": 1,
+     "why": "The filings frame the standards relationship as a hazard running toward the company, not away from it — which is the opposite of how the conflict-of-interest critique usually assumes it works, and both readings belong in an honest assessment."
+    },
+    {
+     "q": "A manufacturer switches from the UL Mark to a competing recognised mark and saves 30 per cent. What has it lost in law?",
+     "c": [
+      "The right to sell in the United States",
+      "Nothing — products certified by any recognised laboratory satisfy the same requirement",
+      "Its ability to claim NFPA 855 compliance",
+      "Access to the standards library"
+     ],
+     "a": 1,
+     "why": "Recognition is what makes marks legally interchangeable for the workplace-safety requirement. What the manufacturer risks is commercial rather than legal: the retailers, insurers and inspectors who recognise one label faster than the other."
+    },
+    {
+     "q": "The FCC Cyber Trust Mark episode is significant to this dossier because:",
+     "c": [
+      "It cost the company material revenue",
+      "It shows a regulator-awarded assurance franchise being won and then surrendered, which is direct evidence that incumbency here is contestable",
+      "It ended the UL-CCIC joint venture",
+      "It triggered the December 2025 secondary offering"
+     ],
+     "a": 1,
+     "why": "UL Solutions was named Lead Administrator in December 2024 and withdrew on 2025-12-19 during an FCC national-security investigation into its Chinese joint venture and laboratories; the ioXt Alliance replaced it in April 2026. The revenue was never the point — the precedent is."
+    },
+    {
+     "q": "Which change would most threaten UL Solutions' recurring revenue?",
+     "c": [
+      "A competitor opening a large-scale fire testing facility",
+      "A regime requiring acceptance of third-party test results or reducing how often re-inspection is needed",
+      "A rise in the standards access fee",
+      "A further ULSE share sale"
+     ],
+     "a": 1,
+     "why": "The company names exactly this in its own risk factors. Ongoing certification is mandatory inspection required to keep the mark; mutual recognition and reduced inspection frequency attack that annuity directly, while a competing laboratory only competes for the test."
+    }
+   ]
+  }
+ ]
+}
