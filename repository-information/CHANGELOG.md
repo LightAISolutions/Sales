@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.25r] — 2026-09-09 01:49:21 AM EST
+
+> **Prompt:** "I am done with 96% of my weekly Fable limit, but still have 87% of my weekly all models limit, so I would like to reorder the plan to do the Opus 5 xhigh sessions first as long as it does not cause any issues, structurally or otherwise. Then, assuming P3 is still the recommended next step, give me a prompt to paste into a new Opus 5 xhigh session to run P3, then remember session."
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §10.4 — the two S3 lanes no longer interleave.** The remaining order is **P3 → P4 → P5 → P6 → V2 → V3 → V4**: the four Opus 5 xhigh sessions run to completion, then the three Fable 5.1 High ones. The trigger was budget rather than arithmetic — the weekly Fable allowance stood at 96% consumed against 13% of the all-models allowance, making the Fable sessions the scarce resource
+- **The dependency check is recorded with the reorder, not just its conclusion.** Of the seven remaining sessions **only V2 gates anything**, because `software-and-optimization`'s landscape is held for both halves of E1 and neither clears it alone. P4, P5, P6, V3 and V4 are pure deepening — `assurance` was cleared by V1 and `cells-and-chemistry`, `grid-equipment` and `utilities` were already at the floor — so their order among themselves is free. **The one cost is bounded:** V2 moves from position 5 to position 8, holding the fourth landscape three sessions longer, and S2 is not stalled by it because compute, assurance and insurance are writable today
+- **Two dated facts weighed in the decision, one each way.** *For the reorder:* P4 carries **Intertek**, whose take-private completes on court sanction in Q4 2026 – Q1 2027, so running it sooner records a clean signed-but-not-closed deal instead of straddling the date. *Against:* P5 carries **Novonix**, whose Nasdaq cure deadline is 2026-09-14, and moving P5 earlier makes it likelier to run while that is unresolved — which the session must then state rather than infer
+- **`INTEGRATED-REMEDIATION-PLAN.md`'s S3 row** no longer asserts the old "sessions 1–5 are the critical path" split; it carries the reorder, its trigger and its one gate
+- **§10.1's P4 cell corrected** — it still said assurance's landscape was blocked on a challenger "which is E3b's". V1 landed that challenger at v05.21r, so P4 is deepening only; the cell now says so and names Intertek's court-sanction date as the one dated subject in the public lane
+
+### Fixed
+
+- **The "if only one S3 session runs next" line named V1, which shipped on 2026-09-08.** It now names **V2** — the sole remaining gate — with the supersession noted inline so the change is traceable rather than silent
+
+### Housekeeping
+
+- **Session context saved** to `repository-information/SESSION-CONTEXT.md` (Remember Session). The outgoing v05.21r entry moved to `## Previous Sessions` and the 2-session cap applied, dropping v05.20r. The new entry records P2, the naming resolution, the sixteen-row identity sweep and this reorder, plus the three dated re-check triggers and the two numeric scale traps that the next sessions inherit — **including a correction made in chat**: Habitat Energy · Gridmatic is **V2**, not V1, which I had called it twice
 
 ## [v05.24r] — 2026-09-09 01:39:02 AM EST
 
