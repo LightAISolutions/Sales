@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-09 04:38:11 AM EST
+**Repo version:** v05.27r — **one push commit** on `claude/amazing-knuth-h4tidu` (plus this session-context commit, which is the sanctioned second because the first push had already merged)
+**Branch:** `claude/amazing-knuth-h4tidu`
+**Model:** Opus 5 xhigh — **S3 P4 · group `E3a` (UL Solutions · Intertek)**, then the P5 paste-in prompt
+
+### What was done
+
+1. **P4 shipped (v05.27r).** `ul-solutions` (50 sources, 58% first-party) and `intertek` (91 sources, 41%), each with a 14-section schema-v2 study guide and a full-depth lesson plan. `assurance` went 5 members / 2 incumbents / 1 challenger / 2 adjacent → **7 / 4 / 1 / 2**; UL Solutions also took `software-and-optimization` · **adjacent** on the ULTRUS renewable suite. Thirty-three shared concepts registered (1,325 → 1,358) and eight company-published executive photographs downloaded for UL Solutions
+2. **The §8 rows were wrong twice, in opposite directions.** The UL Solutions segment claim was **backwards** — Industrial / Consumer / Software & Advisory were the **OLD** segments to 2025-12-31, and from Q1 2026 the set is Industrial / Consumer / **Risk & Compliance Software**, with Advisory moved *into* Industrial and prior periods restated. Verified independently in the Q2-2026 10-Q rather than on the agent's word. And Intertek does not report through Products / Trade / Resources — it has **five** divisions and a **paused demerger** whose Energy & Infrastructure half holds Intertek CEA
+3. **Neither company is an incumbent in global TIC, and the segment note now says so.** Aventis Advisors ranks Intertek **5th of ten** and UL Solutions **8th**, in a market where the top ten hold under a quarter. Both are typed `incumbent` on **battery-storage TIC** specifically, where MarketsandMarkets names them the two leading key players. UL Solutions ranks **first** of the ten on operating margin and revenue per employee
+4. **Four agent findings the plan did not carry:** UL Solutions **withdrew as FCC Cyber Trust Mark Lead Administrator** on 2025-12-19 during a national-security probe of its CCIC joint venture; its **FY2025 10-K deleted the competitor names** the FY2024 edition carried; a **class action (N.D. Ill. 1:26-cv-01561)** against all four UL entities has **no press coverage anywhere**; and Intertek's OSHA NRTL scope covered **UL 9540 only from 2025-08-22**, 4.5 years after applying
+
+### Where we left off
+
+All work committed, pushed and merged. The **P5 paste-in prompt was handed to the developer in chat** — the next session is a fresh Opus 5 xhigh session, not a continuation of this one.
+
+### Key decisions and findings
+
+- **`investegate.co.uk` serves complete RNS documents at `?print=1`** where the default view truncates them. That single discovery recovered Appendix 1 of the Rule 2.7 — nine merger-control jurisdictions, eight FDI regimes including the **UK NSIA**, a **joint** Bidco-and-Intertek **CFIUS** filing, and an **ITAR notification to the State Department's DDTC** that establishes part of the Intertek group is DDTC-registered. **Any UK RNS the corpus previously wrote off as truncated is probably recoverable this way.**
+- **`check-source-reachability.py` was wrong about `sec.gov` for the second session running** — 200 on three consecutive attempts against each SEC host with a declared User-Agent. Genuinely blocked: `intertek.com` and `osha.gov`, 403 on six attempts each across two user agents and two tools. Working substitutes: **federalregister.gov's JSON API and `full_text` endpoints** are open where its HTML is not (a complete substitute for a 403'd osha.gov), and **`intertekcea.com` is fully open** while its parent is not
+- **I made the indent mistake P3 recorded, caught it, and fixed the cause.** Writing the calendar at indent 2 produced a 2,350-line spurious diff. The files do not share a convention: `profiler-companies.json` and `profiler-concepts.json` are **indent 2 with a trailing newline**; `profiler-segments.json` and the refresh calendar are **indent 1 without one**; profile and study files are **indent 1 without one**. A read-detect-write helper now handles it rather than memory
+- **A pacing lesson that cost about sixteen minutes.** P3's rule — wait for the first-party agent — predicts *what* to wait for but not the cost of a correction arriving after staging has begun. On a two-company session, **stage nothing until both first-party agents have returned**: the Intertek specs and policy arrays were rewritten after the NRTL finding, and the UL Solutions segment framing after the first-party correction
+- **Step-7 reconciliation: 9 dossiers reviewed, 0 revised.** Nothing in the corpus was contradicted. Four corpus-carried engagements — Trina Storage's bankability report and EPD, Hithium's and Sungrow's fire tests, Samsung SDI's indoor large-scale fire test — appear nowhere on UL Solutions' own channels and are recorded in `relationships[]` from the counterparties and trade press, with that provenance stated in each `context`
+
+### Active context
+
+- **Repo version** `v05.27r`; CHANGELOG at **93/100** sections — rotation due at 100, so roughly **seven pushes of headroom**
+- **S3 progress: 5 of 10 sessions** (P1, P2, V1, P3, P4 done). Remaining order: **P5 → P6 → V2 → V3 → V4**. The public lane is four of six done
+- **`software-and-optimization` remains the only held landscape**, and only V2 clears it. P5, P6, V3 and V4 are pure deepening
+- **The `assurance` segment is at the floor but is the least stable in the corpus** — three of its seven members are mid-transaction: CSA's testing arm to Kiwa (close Q4 2026), Intertek to EQT on court sanction (Q4 2026 – Q1 2027), and EQT's stated intent to revisit the split of the Intertek division holding CEA about twelve months after that
+- **Both `assurance` and `software-and-optimization` segment lessons are flagged DUE for regeneration** by `check-classroom-curriculum.py --strict`. Not run here — §7 assigns the generator to an S1/developer session
+- **Dated re-check triggers now live in §8 rows and calendar rows:** `novonix` on **2026-09-14** (Nasdaq minimum-bid cure deadline, five days out), `intertek` on **court sanction** (its calendar row is set to 2026-10-01 as a window opening, not an earnings date — the row does not drift, it flips), `ul-solutions` `nextReport` **2026-11-03** unconfirmed, `habitat-energy` **quarterly** while Quinbrook's sale process runs
+- **Offered and not taken** (needs developer approval, carried from three sessions): adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit developer directive 2026-08-30. Would require a page version bump. P4 strengthens the case again — UL Solutions' 23 aliases include ULTRUS, MET Labs, HOMER Pro and Openwind, and Intertek's 20 include ETL, cETL and Clean Energy Associates, none of which the roster can currently find
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **S3 P5 — group `E4a` (Albemarle · Novonix) on Opus 5 xhigh**, as a fresh session using the paste-in prompt handed over in chat. It is position 6 in the sequence and is **deepening, not unblocking** — `cells-and-chemistry` already stands at 16 members / 4 incumbents / 8 challengers / 4 adjacent, far past the floor. The reason to run it next rather than later is **Novonix's Nasdaq minimum-bid-price cure deadline of Monday 2026-09-14**, which was still open on 2026-09-09 and whose outcome is not established either way: running the session near it means the dossier records a settled fact rather than an inference. Two more traps the row carries — the **ADS ratio changed 1:4 → 1:40 on 2026-08-27**, so any per-ADS price before that date is stale by 10×, and the auditor flagged a **material uncertainty on going concern** in the HY-2026 report. And do not swap in an alternate without reading the §8 evidence: **ICL is out** (US LFP project cancelled 2025-11-11), **Syrah is at-risk and pre-commercial**, and **Westwater alone is clean**
+
+**To continue:** type `continue with your recommendation`
+
+## Previous Sessions
+
+### Session — 2026-09-09 02:54:52 AM EST (v05.26r)
+
 **Date:** 2026-09-09 02:54:52 AM EST
 **Repo version:** v05.26r — **two push commits** on `claude/elegant-clarke-etxlwc` (v05.26r landed and merged; this session-context commit is the second). Two commits because the first push merged and the branch was deleted before the second — the sanctioned multi-commit case
 **Branch:** `claude/elegant-clarke-etxlwc`
@@ -45,46 +90,3 @@ All work committed, pushed and merged. The **P4 paste-in prompt was handed to th
 
 **To continue:** type `continue with your recommendation`
 
-## Previous Sessions
-
-### Session — 2026-09-09 01:49:21 AM EST (v05.25r)
-
-**Date:** 2026-09-09 01:49:21 AM EST
-**Repo version:** v05.25r — **three push commits** on `claude/upbeat-meitner-mphsur` (v05.22r, v05.23r, v05.24r landed; v05.25r is this one). Multiple commits because each push merged and the branch was deleted before the next — the sanctioned multi-commit case
-**Branch:** `claude/upbeat-meitner-mphsur`
-**Model:** Opus 5 xhigh — **S3 P2 · group `E2a` (Marsh McLennan · Aon)**, then three developer follow-ups: the stale-identity fix, the naming question, and the S3 reorder
-
-### What was done
-
-1. **P2 shipped (v05.22r).** `marsh-mclennan` (121 sources, 50% first-party) and `aon` (100 sources, 41%) with study guides; `insurance-and-risk-transfer` went 1 · 0 · 1 → **3 · 2 · 1, at the floor**, making three of four blocked landscapes writable
-2. **The naming question resolved structurally (v05.23r)**, not by picking a label. Added `companies[].aka[]` to the registry (schemaVersion 3), a "Naming and renames" section to `PROFILER-SCHEMA.md` with a grep-based collision test, and **Profiler Command step 1a — mandatory identity verification before research**
-3. **All sixteen unauthored Phase E companies identity-checked as a batch (v05.24r)** by two parallel agents. **Ten carried something wrong, dead or missing.** Each §8 row's `Checked` cell now records the result; the preamble states what was verified and that a batch check resets the clock rather than retiring step 1a
-4. **§10.4 reordered (v05.25r, this commit)** — the public and private lanes no longer interleave
-
-### Where we left off
-
-All work committed and pushed. The **P3 paste-in prompt was handed to the developer in chat** and is reproduced in the recommendation below — the next session is a fresh Opus 5 xhigh session, not a continuation of this one.
-
-### Key decisions made
-
-- **Display name stays "Marsh McLennan."** "Marsh" fails the collision test twice (Clearway's Marsh Landing plant, Entergy's CEO Drew Marsh). The label was never the systematic risk — the risk is reconciliation grepping a display name and missing inbound claims, which `aka[]` fixes. Measured: grepping `Marsh McLennan` returns **2** dossiers, the `aka[]` set returns **6**, and the extras include `dnv`, which carries the most important inbound claim
-- **The S3 lanes are de-interleaved on budget, not arithmetic** (developer directive, weekly Fable at 96% consumed against 13% of all-models). Four Opus sessions run first (P3 → P4 → P5 → P6), then three Fable (V2 → V3 → V4). The dependency check cleared it: **V2 is the only remaining session that gates anything**
-- **Identity verification is per-company at authoring, and a batch check does not retire it.** Written into the §8 preamble explicitly, because a `Checked` cell dated 2026-09-09 is evidence about that day only
-- **A correction the developer should know I made mid-session:** I twice referred to Habitat Energy · Gridmatic as "V1". It is **V2**; V1 was kWh Analytics · CSA Group and shipped 2026-09-08. The plan file was always correct
-
-### Active context
-
-- **Repo version** `v05.25r`; CHANGELOG at **91/100** sections — rotation due in ~9 pushes, i.e. around the last of the seven remaining S3 sessions
-- **S3 progress: 3 of 10 sessions** (P1, P2, V1 done). Remaining order: **P3 → P4 → P5 → P6 → V2 → V3 → V4**
-- **Segments at the floor:** compute-and-the-rack, insurance-and-risk-transfer, assurance. **Held:** `software-and-optimization` — needs both P3 and V2
-- **Three dated re-check triggers now live in §8 rows:** `novonix` on **2026-09-14** (Nasdaq minimum-bid cure deadline), `intertek` on **court sanction** (Q4 2026 – Q1 2027, then delisting), `habitat-energy` **quarterly** while Quinbrook's sale process runs
-- **Two numeric scale traps** recorded in §8: Stem's 1-for-20 reverse split (2025-06-23) and Novonix's 1:4 → 1:40 ADS ratio change (2026-08-27) — pre-date per-share figures are off by 20× and 10×
-- **P5's alternates are no longer interchangeable:** ICL is out (US LFP project cancelled 2025-11-11), Syrah is at-risk and pre-commercial, Westwater alone is clean
-- **Offered and not taken** (needs developer approval): adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit developer directive 2026-08-30. Would require a page version bump
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **S3 P3 — group `E1a` (Stem) on Opus 5 xhigh**, as a fresh session using the paste-in prompt below. It is position 4 in the reordered sequence and the first half of the last held landscape. Two things the §8 row now carries that the session must use: Stem's **1-for-20 reverse split (2025-06-23)** makes every pre-split per-share figure stale by 20×, and its HQ is **Houston**, not the Bay Area. Note that P3 alone does **not** unblock `software-and-optimization` — the landscape is held for both halves of E1 and V2 is the other one
-
-**To continue:** type `continue with your recommendation`
