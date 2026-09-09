@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-09",
- "companies": 158,
+ "companies": 160,
  "edges": [
   {
    "a": "abb",
@@ -6595,6 +6595,301 @@
     }
    ],
    "last": "2026-06-05"
+  },
+  {
+   "a": "aon",
+   "b": "dnv",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Adjacent seats at the same financial close rather than a commercial relationship — and the same documented absence found on the other incumbent's side.",
+     "context": "DNV certifies and writes recommended practice for grid-scale storage, including RP-0043; this company advises the buyer and places the risk. The DNV dossier in this corpus records that it found no insurer document citing RP-0043 or naming any certifier.\n\nThis research corroborates that from the other direction. Across every battery and renewables publication reviewed here — the two UK battery articles, the energy-transition roadmap, the clean-energy-lifecycle article, the renewable construction claims analysis, the Asia-Pacific construction-to-operations piece, the power and renewables capability pages and the Spring 2026 market update — no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC reference appears. The single standard cited anywhere is SCOR's 2022 handbook. What substitutes for a named standard is qualitative engineering criteria: three metres of enclosure spacing, wind-turbine fleet-leader operating hours, OEM facility provenance. Marsh McLennan's guidance does the same across seven documents. Two incumbent brokers, independently, state the requirement and leave the code unnamed.",
+     "source": "https://www.aon.com/unitedkingdom/insights/stakeholders-must-work-together-to-unlock-bess",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: across every battery and renewables publication reviewed for this dossier — two UK battery articles, the energy-transition roadmap, the clean-energy-lifecycle article, the renewable construction claims analysis, the Asia-Pacific construction-to-operations piece, the capability pages and the Spring 2026 market update — no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC reference appears; the single standard cited anywhere is SCOR's 2022 handbook.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Power, Renewables and Energy Transition",
+     "date": "",
+     "text": "Across every battery and renewables publication reviewed it names no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC; the single standard it cites is SCOR's 2022 handbook.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "aon",
+   "b": "kwh-analytics",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Holds a named seat on kWh Analytics' Renewable Energy Broker Council in both published years, represented both times by the same person — the only firm on the council with that continuity.",
+     "context": "John Katilus represents the company in the 2025 readout (Insurance Journal, 2 July 2025) and again in the 2026 readout (pv magazine USA, 9 June 2026). His 2025 contribution is the single most-cited battery observation in this corpus: 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms.' His 2026 contribution is a coverage-wording argument — that clients want the severe convective storm definition narrowed to exclude straight-line wind, tornado and lightning, because grouping them with hail overstates loss potential.\n\nThe relationship is distribution rather than rivalry, and the structural difference matters: kWh Analytics holds delegated underwriting authority and binds carrier paper, while this company is capital-light by stated strategy and assembles facilities from other people's capacity. This research found no evidence it operates a renewables or storage managing general agency of its own. That is why the challenger seats it on its council rather than competing with it.",
+     "source": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+     "status": "active",
+     "since": "2025",
+     "via": "Broker Council"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-02",
+     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
+     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That is the structural line between it and kWh Analytics: kWh is a managing general agent that binds risk, Aon is the channel that reaches it, and this research found no evidence of Aon operating a renewables or storage managing general agency of its own.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "kWh Analytics, by contrast, binds risk under delegated authority.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-09",
+     "text": "At kWh Analytics' third annual Broker Council readout, John Katilus says clients want the severe convective storm definition narrowed to exclude straight-line wind, tornado and lightning, arguing that grouping them with hail overstates loss potential and produces overly restrictive terms — The company's whole contribution to the 2026 readout is a coverage-wording argument on behalf of clients. It is not quoted on batteries in 2026 — the 2025 commissioning-loss observation is not repeated or updated.",
+     "src": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-02",
+     "text": "At kWh Analytics' 2025 Broker Council readout, John Katilus reports that 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms' — Verified verbatim and correctly attributed. It is also the company's only published statement of battery loss experience anywhere: this research found no counterpart in its own publications, so either it shares loss data in industry fora without publishing it, or the observation never became a company publication.",
+     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-09"
+  },
+  {
+   "a": "aon",
+   "b": "marsh-mclennan",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The other incumbent in this segment — second to it on every published revenue ranking for more than fifteen consecutive years, ahead of it on data-centre capacity and on organic growth, and adverse to it in court.",
+     "context": "AM Best's 2025 ranking puts Marsh McLennan first at USD 26.98bn against this company at USD 17.20bn, a gap of about USD 9.8bn, and Business Insurance ranks them first and second in both its global and its US-business tables. The measure is contested: Marsh McLennan's total bundles consulting revenue that is not broking, and AM Best's own 2018 table showed this company larger on a broking-only basis. No source published since offers a clean broking-only comparison.\n\nOn the two measures that matter to this corpus the ranking inverts. Organic growth for FY2025 was 6 percent here against Marsh McLennan's 4 percent. And on data-centre construction capacity this company's facility reached USD 5bn in July 2026 against Nimbus at USD 2.7bn, plus a first-of-its-kind data-centre reinsurance treaty; Marsh McLennan's answer came on the operational side with Stratus in August 2026.\n\nThey are also litigants. Marsh USA sued this company and Robert McDonough in federal court in New York in April 2025 after twenty employees resigned within a 38-minute window, McDonough becoming chief executive of its North American construction, infrastructure and surety group seven days later. It declined to comment.",
+     "source": "https://www.reinsurancene.ws/marsh-remains-worlds-largest-insurance-broker-with-2025-revenues-of-almost-27bn/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other incumbent in this segment: first and second in every independent global broker ranking located, and currently in litigation with each other.",
+     "context": "AM Best's ranking on 2025 total revenue puts Marsh first for a sixteenth consecutive year at USD 26.98bn against Aon at USD 17.20bn, and Business Insurance's 2026 Broker Profiles ranks them first and second. The measure matters: AM Best's total bundles this company's consulting businesses, which are not broking, and no source published since 2018 offers a clean broking-only comparison of the two.\n\nOn data-centre construction capacity Aon is ahead. Its Data Center Lifecycle Insurance Program went from USD 1.5bn at launch in July 2025 to USD 2.5bn in January 2026, USD 3.5bn in April and USD 5bn in July 2026, against Nimbus at USD 2.7bn — which is the context for Stratus being built on the operational side rather than the construction side.\n\nThey are also adverse in court. Marsh USA sued Aon and Robert McDonough in federal court in New York in April 2025 after McDonough and nineteen others — about 70 percent of his direct reports — resigned within a 38-minute window on 10 March 2025, with McDonough becoming chief executive of Aon's North American construction, infrastructure and surety group seven days later. Aon declined to comment.",
+     "source": "https://www.reinsurancene.ws/marsh-remains-worlds-largest-insurance-broker-with-2025-revenues-of-almost-27bn/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "FY2025 revenue USD 17,181m, up 9 percent with 6 percent organic growth — ahead of Marsh McLennan's 4 percent — adjusted operating margin 32.4 percent and adjusted EPS USD 17.07.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Like Marsh McLennan it is a broker rather than a carrier — the 10-K states the strategy plainly as focusing 'on higher-margin, capital-light professional services businesses', which is why its energy and digital-infrastructure vehicles are facilities assembled from other people's capacity rather than delegated underwriting on its own paper.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: AM Best has ranked it second globally on broker revenue for more than fifteen consecutive years, at USD 17.20bn for 2025 against Marsh McLennan's USD 26.98bn; Business Insurance ranks it second both globally and among the largest brokers of US business; and its reinsurance arm was first globally on FY2024 revenue inside a top four holding more than 85 percent of reinsurance premium.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Marsh McLennan's guidance does the same across seven documents.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: FY2025 organic growth was 6 percent against Marsh McLennan's 4 percent, Gallagher's 6 percent and WTW's 5 percent — ahead of every major listed competitor except Lockton at 13 percent.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Commercial Risk Solutions",
+     "date": "",
+     "text": "Unlike Marsh McLennan, this company names its competitors in its own filing: 'Marsh McLennan, Willis Towers Watson, Arthur J Gallagher & Company, and Lockton Companies, Inc.', plus insurers that market directly without brokers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Power, Renewables and Energy Transition",
+     "date": "",
+     "text": "Marsh McLennan's guidance does the same, so this is a feature of broker-authored guidance rather than of one firm.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · NFP, and the USI acquisition — the middle market",
+     "date": "",
+     "text": "This is the second debt-funded middle-market acquisition in thirty months, into a market Marsh McLennan entered with McGriff at USD 7.75bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · NFP, and the USI acquisition — the middle market",
+     "date": "",
+     "text": "On Business Insurance's 2025 brokerage-revenue basis it takes this company from about USD 16.99bn toward about USD 19.9bn against Marsh McLennan's USD 26.66bn — narrowing a gap that has been stable for over fifteen years, and widening the one Gallagher has been trying to close from third.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Health Solutions and Wealth Solutions",
+     "date": "",
+     "text": "If a criticism of this company's organic growth is to be made, this is where it belongs — not in the consolidated number, which at 6 percent for FY2025 beat Marsh McLennan's 4 percent and every major listed competitor except Lockton.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Analytics, AI platforms and published market research",
+     "date": "",
+     "text": "The research is the clearest first-party evidence in this corpus that a broker has connected the data-centre build to the storage and generation behind it — a connection Marsh McLennan makes through its power practice but not in its published battery guidance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-30",
+     "text": "FY2025 results: revenue USD 17,181m up 9 percent with 6 percent organic; adjusted operating margin 32.4 percent; adjusted EPS USD 17.07 up 9 percent; GAAP net income up 39 percent on the USD 1,199m NFP wealth disposal gain — Six percent organic against Marsh McLennan's 4 percent — the reverse of the assumption that this company lags on growth. The GAAP jump is a disposal, not operations.",
+     "src": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026004273/ex991prq42025.htm",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The larger of the two brokers this corpus places in insurance and risk transfer, and the counterparty that assembles the risk-transfer programme a project financing depends on — the seat kWh Analytics' own dossier identifies as 'the seat Marsh and Aon hold'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: AM Best ranks it first among global brokers on 2025 total revenue at USD 26.98bn for a sixteenth consecutive year, against Aon at USD 17.20bn — more than the third, fourth and fifth brokers combined; Business Insurance ranks it first in its 2026 Broker Profiles and first among the largest brokers of US business; and its reinsurance arm was second globally on FY2024 revenue inside a top tier holding more than 85 percent of reinsurance premium.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Both describe insurer requirements in engineering terms — Marsh on separation between enclosures and independent grid routing, Aon on 'three metres or more of spacing'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that Stratus was built on the operational side because the construction side had already been lost to Aon.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Nimbus went to USD 2.7bn in January 2026 and has not moved since, while Aon's Data Center Lifecycle Insurance Program went to USD 3.5bn in April 2026 and USD 5bn in July 2026, and Aon also claims a first-ever data-centre reinsurance treaty aligning up to USD 5bn of capital behind a single insurer.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Independent commentary put the FY2025 figure below every major listed competitor except Brown & Brown — Aon delivered 6 percent — and Goldman Sachs held an outright Sell until 20 October 2025, upgrading on logic that included the 2026 organic estimate sitting below expected US nominal GDP growth.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Insurify's ChatGPT-native comparison app took WTW down 12 percent in its worst session since 2008, Aon down 9.3 percent and this company down 7.51 percent, with Bank of America sizing about USD 15bn of low-complexity commissions at risk; Bloomberg Intelligence, Wolfe Research and Goldman Sachs all called it overdone on the grounds that the product was personal lines while the majors are commercial.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A broking business's asset is a relationship and a broker-of-record letter, both of which travel with people rather than brands — but the sector is simultaneously in a lateral-hire litigation wave in which this company is a plaintiff against Aon, Howden and Alliant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Marsh Risk — insurance broking and risk advisory",
+     "date": "",
+     "text": "Every comparison to Aon, WTW, Gallagher, Alliant, Brown & Brown, AmWins or CAC Specialty in this dossier is therefore third-party sourced.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-26",
+     "text": "Stratus launched — up to USD 10bn of property capacity on a single placement for operational digital infrastructure, drawing on 30 traditional and alternative capital providers on a prior-submit exchange basis — The most consequential product in this dossier and the answer to Aon overtaking Nimbus on construction capacity: rather than raise a construction facility, Marsh built an exchange on the operational side and admitted alternative capital to it. No first-party release was located.",
+     "src": "https://www.insurancebusinessmag.com/us/news/breaking-news/marsh-launches-10-billion-property-exchange-for-data-center-risk-587644.aspx",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-21",
+     "text": "Marsh Risk named Business Insurance's 2026 US Insurance Awards Broker Team of the Year, over Aon, EPIC, Spring Consulting and WTW, for the TerraPower Natrium placement at Kemmerer, Wyoming — A third-party jury judging capability rather than a revenue table. The placement was over USD 2bn and 128 percent oversubscribed with Munich Re leading, after two years spent educating more than 80 insurers on an advanced reactor — capability built for exactly the nuclear-for-data-centres demand this corpus tracks.",
+     "src": "https://www.businessinsurance.com/2026-us-insurance-awards-marsh-risk-broker-team-of-the-year/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Marsh McLennan Agency agrees to acquire Accel Holdings, Inc. of Waverly, Iowa — commercial and personal lines, employee benefits, agribusiness, wealth management and retirement advisory; terms undisclosed, expected to close in Q3 2026 — The middle-market bolt-on programme continues three weeks before Aon commits USD 17bn to the same market.",
+     "src": "https://www.businesswire.com/news/home/20260810851443/en/Marsh-McLennan-Agency-to-Acquire-Accel-Holdings-Inc.",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "Broker shares fall sharply on AI disintermediation fears after Insurify launched a ChatGPT-native insurance comparison app: Marsh McLennan down 7.51 percent, WTW down 12 percent in its worst session since 2008, Aon down 9.3 percent — Bank of America sized about USD 15bn of low-complexity commissions at risk. Analysts at Bloomberg Intelligence, Wolfe Research and Goldman Sachs all called the move overdone on the grounds that the product was personal lines while the majors are commercial — but the market repriced the whole sector in a session.",
+     "src": "https://www.insurancejournal.com/news/national/2026/02/10/857525.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-25",
+     "text": "Marsh USA sues Aon and Robert McDonough in federal court in New York after McDonough and nineteen other employees — about 70 percent of his direct reports — resigned within a 38-minute window on 10 March 2025; McDonough became chief executive of Aon's North American construction, infrastructure and surety group seven days later — The two companies this dossier types as the segment's incumbents are in litigation with each other over a construction and surety team. Aon declined to comment. Roughly 95 percent of such suits settle before trial, typically at one to three times the disputed revenue.",
+     "src": "https://www.claimsjournal.com/news/national/2025/04/25/330240.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-26"
   },
   {
    "a": "apex-clean-energy",
@@ -20376,6 +20671,43 @@
    },
    "evid": [],
    "last": "2024-07"
+  },
+  {
+   "a": "dnv",
+   "b": "marsh-mclennan",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Adjacent seats at the same financial close rather than a commercial relationship: DNV certifies and writes recommended practice, this company advises the buyer and places the risk. Recorded because each documents an absence on the other's side.",
+     "context": "The overlap is advisory rather than commercial. DNV certifies and writes recommended practices, including RP-0043 for grid-scale storage; Marsh advises the buyer and places the risk. The DNV dossier records that no insurer document it found cites RP-0043 and that 'Munich Re and Marsh name no certifier', citing Marsh's own battery-energy-storage page.\n\nThis dossier's research confirms and widens that finding: across seven Marsh battery-storage documents spanning 2021 to 2026 and four company web properties, no certification body or standard is named — not UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global. Marsh states insurer requirements in engineering terms — separation between enclosures, routing power to the grid independently of the battery, fire-protection features — while the codes that specify them go unnamed. Aon's published battery guidance does the same, naming only SCOR's 2022 handbook. The unnamed certification layer is the space DNV occupies, and neither broker points to it.",
+     "source": "https://www.marsh.com/en/industries/energy-and-power/expertise/battery-energy-storage-systems.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: seven Marsh battery documents across four company web properties spanning 2021 to 2026 name no certification body or standard — not UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global — and the closest the battery page comes is 'varying installation, operation, and engineering standards around the world', invoking standards as a problem while naming none.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy and Power — renewable energy, and the facilities that sit under it",
+     "date": "",
+     "text": "Seven company documents across four web properties spanning 2021 to 2026 were examined for this dossier and not one names UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy and Power — renewable energy, and the facilities that sit under it",
+     "date": "",
+     "text": "That unnamed certification layer is precisely the space DNV and kWh Analytics occupy.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "dnv",
@@ -35623,6 +35955,66 @@
   },
   {
    "a": "kwh-analytics",
+   "b": "marsh-mclennan",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Marsh holds a named seat on kWh Analytics' Renewable Energy Broker Council in both published years, and through McGriff it holds a second — two of the eight seats.",
+     "context": "Luke Slemeck represents Marsh on the council in both the 2025 readout (published by Insurance Journal on 2 July 2025) and the 2026 readout (published by pv magazine USA on 9 June 2026). Todd Burack represents McGriff in both. McGriff has been a Marsh McLennan subsidiary since the acquisition completed on 18 November 2024, so both readouts post-date the close — and neither discloses the common ownership. In 2026 that is a quarter of the challenger's own distribution advisory board held by one group.\n\nThe relationship is distribution, not competition: kWh Analytics is a managing general agent that binds carrier paper and reaches the market through specialist brokers, and Marsh is one of those brokers. Slemeck's contributions are on solar hail resilience and long-run insurability rather than on battery storage — in 2026: 'Resilience isn't really about cost savings. It's about continued insurability. If you do nothing and the market hardens, you're going to have a very hard time getting insurance.'",
+     "source": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/",
+     "status": "active",
+     "since": "2025",
+     "via": "Broker Council"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The larger of the two brokers this corpus places in insurance and risk transfer, and the counterparty that assembles the risk-transfer programme a project financing depends on — the seat kWh Analytics' own dossier identifies as 'the seat Marsh and Aon hold'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It also sits on the challenger's own distribution: Marsh and its subsidiary McGriff together hold two of the eight seats on kWh Analytics' Broker Council in both published years, a quarter of that council in 2026, and neither readout discloses the common ownership.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Against that, outside the two kWh Analytics Broker Council readouts, no independent source located names this company in a battery-storage placement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Marsh and McGriff each hold a named seat on kWh Analytics' Renewable Energy Broker Council in both published years — two of eight seats, a quarter of the 2026 council — and McGriff has been a subsidiary since 18 November 2024, so both readouts post-date the close.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy and Power — renewable energy, and the facilities that sit under it",
+     "date": "",
+     "text": "That unnamed certification layer is precisely the space DNV and kWh Analytics occupy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-18",
+     "text": "McGriff Insurance Services acquisition completed for USD 7.75bn in cash — about USD 1.3bn of annual revenue and more than 3,500 colleagues into Marsh McLennan Agency — funded with cash plus USD 7.25bn of senior notes and an assumed deferred tax asset of about USD 500m — Independent commentators called the price 'rich at almost 6 times revenue'. It is also why McGriff and Marsh hold two of the eight seats on kWh Analytics' Broker Council, which neither council readout discloses.",
+     "src": "https://www.marsh.com/en/corp/about/news/marsh-mclennan-completes-acquisition-of-mcgriff-insurance-services.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "kwh-analytics",
    "b": "panasonic",
    "curated": {
     "a": {
@@ -36944,6 +37336,46 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "marsh-mclennan",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Reported as providing project risk analysis and insurance services to Meta on the El Paso data-centre campus — and simultaneously as technical advisor to the BlackRock funds on the other side of the same transaction.",
+     "context": "The campus is a roughly USD 14bn development, about 1 GW of compute, structured as 80 percent BlackRock funds and 20 percent Meta, with roughly USD 4.9bn of BlackRock cash, a USD 12.5bn debt package, about USD 2.3bn of Meta land and construction-in-progress contribution, and a Meta residual-value guarantee of about USD 13bn. Meta is the sole initial occupant.\n\nInsurance Business headlined the arrangement 'Marsh on both sides of the table' — the company is reported acting for the tenant and advising the investor. The article frames specialist advisors as 'a precondition for getting the financing across the line', which is the clearest single statement in this corpus of why a broker sits inside an AI-infrastructure capital structure rather than beside it. This dossier records the arrangement as reported and does not adjudicate the governance question it raises.",
+     "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+     "status": "announced",
+     "since": "2026",
+     "scale": "about USD 14bn",
+     "via": "project risk analysis and insurance services"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its incumbency in the market this corpus covers is real but unevenly evidenced: independent sources name it repeatedly and specifically in AI data-centre risk — the Nimbus construction facility at USD 2.7bn, the Nimbus Casualty tower, the Stratus property exchange targeting USD 10bn on a single placement, and advisory roles on both sides of the USD 14bn Meta/BlackRock El Paso campus — while its battery-storage credentials appear only on its own website.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: independent trade press names this company repeatedly and specifically in AI-infrastructure risk — Nimbus at USD 2.7bn, Nimbus Casualty at USD 75m excess of USD 25m, Stratus targeting USD 10bn on a single placement, a dedicated Global Digital Infrastructure Contract Advisory Group established in January 2026, advisory roles on both sides of the USD 14bn Meta and BlackRock El Paso campus, and a Business Insurance award for a USD 2bn advanced-reactor placement.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "Marsh reported as advising both sides of the approximately USD 14bn Meta and BlackRock El Paso data-centre campus — project risk analysis and insurance services for Meta, and technical advisor to the BlackRock funds — Simultaneously the strongest evidence of incumbency in AI-infrastructure risk and an independently flagged governance question. The deal is 80 percent BlackRock funds and 20 percent Meta, about 1 GW of compute, with a USD 12.5bn debt package and a Meta residual-value guarantee of about USD 13bn.",
+     "src": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-31"
   },
   {
    "a": "mastec",

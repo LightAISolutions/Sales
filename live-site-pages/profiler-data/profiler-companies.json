@@ -4455,6 +4455,64 @@
           "role": "challenger"
         }
       ]
+    },
+    {
+      "slug": "aon",
+      "name": "Aon",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The world's second-largest insurance broker and the leader in data-centre risk capacity — a $5bn lifecycle facility plus the first data-centre reinsurance treaty; buying USI for $17bn takes leverage to ~4.8x.",
+      "hq": "Dublin, Ireland",
+      "ticker": "NYSE: AON",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "domains": [
+        "aon.com",
+        "aon.mediaroom.com",
+        "assets.aon.com",
+        "res.aon.com",
+        "ir.aon.com"
+      ],
+      "srcTotal": 100,
+      "srcFirstPct": 41,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "insurance-and-risk-transfer",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "marsh-mclennan",
+      "name": "Marsh McLennan",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The world's largest insurance broker for a sixteenth year, rebranded to Marsh in January 2026 (NYSE: MMC to MRSH) — Nimbus, Nimbus Casualty and the $10bn Stratus exchange for digital infrastructure.",
+      "hq": "New York, United States",
+      "ticker": "NYSE: MRSH",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "domains": [
+        "marsh.com",
+        "marshmclennan.com",
+        "corporate.marsh.com",
+        "marshcommercial.co.uk",
+        "guycarp.com",
+        "oliverwyman.com",
+        "mercer.com"
+      ],
+      "srcTotal": 121,
+      "srcFirstPct": 50,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "insurance-and-risk-transfer",
+          "role": "incumbent"
+        }
+      ]
     }
   ]
 }

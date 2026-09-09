@@ -2574,5 +2574,13 @@
    "archivedAt": "2026-09-06",
    "supersededBy": 2
   }
+ ],
+ "kwh-analytics": [
+  {
+   "file": "kwh-analytics.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-09",
+   "supersededBy": 2
+  }
  ]
 }

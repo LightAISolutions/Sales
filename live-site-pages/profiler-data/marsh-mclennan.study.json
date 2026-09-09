@@ -1,0 +1,672 @@
+{
+ "schemaVersion": 2,
+ "slug": "marsh-mclennan",
+ "title": "Marsh McLennan — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "glossary": [
+  {
+   "t": "XSellence",
+   "d": "Marsh Risk's proprietary excess casualty policy form, written so that every layer of an excess tower follows the same wording — which removes the gaps that appear when each layer is placed on a different form."
+  },
+  {
+   "t": "prior-submit exchange",
+   "d": "A placement venue where participating underwriters evaluate each risk individually and decide whether and how to support it, rather than committing a fixed share of every qualifying risk in advance. Capacity is therefore a target rather than a guarantee."
+  },
+  {
+   "t": "stow",
+   "d": "Rotating a solar tracker to a steep angle before a hailstorm so stones strike the glass at a glancing rather than a perpendicular angle. Its effectiveness depends on the forecast arriving in time and the trackers actually moving."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-the-seat-beside-the-underwriter",
+   "title": "Start here: the seat beside the underwriter",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "The **kWh Analytics guide** taught the underwriter's seat — how a {{managing general agent}} prices renewable risk on someone else's balance sheet, what a property policy actually covers, and why hail rather than fire prices utility-scale solar. That guide's own dossier draws the line this one starts from: kWh Analytics 'is not a broker (the seat Marsh and Aon hold)'.",
+    "**This guide teaches that seat.** A broker does not carry risk. It works for the buyer, assembles the case for a risk, takes it to market, structures the layers, and argues the claim. Everything it earns comes out of a premium it does not keep.",
+    "**Three ideas carry the guide.** First, a broker's product is a {{submission}} — the quality of the case it builds is most of what it sells. Second, the price of everything in this market is set by a cycle the broker does not control, so a broker's growth is partly a rate story and partly a broker story, and telling them apart is the whole analytical problem. Third, when the market will not offer enough capacity at any price, the broker's response is to manufacture it — which is what a facility is.",
+    "**One boundary, held throughout.** This guide teaches the mechanics of broking using Marsh McLennan as the worked example because it is the largest one. Where it quotes a company figure that no independent source corroborates — and its battery-storage credentials are entirely of that kind — it says so."
+   ]
+  },
+  {
+   "id": "who-pays-whom",
+   "title": "Who pays whom, and who works for whom",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Follow one dollar of premium from a project sponsor to the balance sheet that finally absorbs a loss. Every party in the chain takes a cut, and the two questions that matter at each step are *whose agent is this* and *whose capital is at risk*.",
+   "cols": [
+    "Party",
+    "What it does",
+    "How it is paid",
+    "Whose agent it is",
+    "Capital at risk"
+   ],
+   "rows": [
+    [
+     "**Sponsor / asset owner**",
+     "Owns the plant or the campus; buys the cover its lender requires",
+     "Pays the premium",
+     "Itself",
+     "Everything inside the deductible and above the limit"
+    ],
+    [
+     "**{{retail broker}}**",
+     "Holds the client relationship. Builds the {{submission}}, markets it, negotiates terms, binds the cover and runs {{claims advocacy}} after a loss",
+     "Commission out of the premium, or a fee from the client",
+     "**The buyer** — this is the definition, and it is what separates a broker from an agent",
+     "None"
+    ],
+    [
+     "**{{wholesale broker}}**",
+     "Reaches markets the retail broker has no appointment with — surplus lines, London, specialist underwriters",
+     "A second commission out of the same premium",
+     "The retail broker",
+     "None"
+    ],
+    [
+     "**{{managing general agent}}**",
+     "Prices and binds on a carrier's paper under delegated authority",
+     "Commission, sometimes a profit share",
+     "**The carrier** — the opposite of the broker",
+     "None. This is where kWh Analytics sits"
+    ],
+    [
+     "**Carrier / insurer**",
+     "Issues the policy and pays claims",
+     "Keeps the premium net of commission; earns investment income holding it",
+     "Itself",
+     "Its own {{solvency capital}}, up to the limit it wrote"
+    ],
+    [
+     "**{{reinsurance broker}}**",
+     "Designs and places the treaties that let the carrier write more than its own capital allows",
+     "Brokerage out of the reinsurance premium",
+     "**The carrier**, which is now the client",
+     "None. Marsh Re and Aon's Reinsurance Solutions sit here"
+    ],
+    [
+     "**Reinsurer**",
+     "Takes a share of the carrier's risk",
+     "A share of the premium",
+     "Itself",
+     "Its own capital"
+    ],
+    [
+     "**Retrocessionaire / capital markets**",
+     "Takes a share of the reinsurer's risk, or buys it as a {{catastrophe bond}}",
+     "Coupon, or a share of premium",
+     "Itself",
+     "Investor capital, usually collateralised"
+    ],
+    [
+     "**Lender**",
+     "Requires the cover, reviews the wording, sits as loss payee",
+     "Interest",
+     "Itself",
+     "The loan"
+    ]
+   ],
+   "ps": [
+    "**Read the chain twice.** Downwards it is a distribution channel: each step adds a commission and reaches a market the last one could not. Upwards it is a capital stack: each step exists because the one below it could not hold the whole risk alone. A hardening market is felt as the top of the stack withdrawing and the price of every step below it rising.",
+    "**Two firms occupy four of these rows at once.** Marsh McLennan is a {{retail broker}} (Marsh Risk), a {{reinsurance broker}} (Marsh Re), a middle-market retail agency, and — through Victor — a {{managing general agent}}. That last combination is the structurally awkward one: the same group represents the buyer in one room and binds the carrier's paper in another."
+   ]
+  },
+  {
+   "id": "what-a-broker-actually-does",
+   "title": "What a broker actually does: the placement cycle",
+   "kind": "timeline",
+   "read": "7 min",
+   "intro": "Weeks relative to the policy's inception date. This is the work a commission buys. Lanes: the broker, and the underwriters it is marketing to.",
+   "unit": "weeks relative to inception (negative = before)",
+   "lanes": {
+    "br": "Broker",
+    "uw": "Underwriters"
+   },
+   "items": [
+    {
+     "x": -16,
+     "lane": "br",
+     "label": "Exposure data collection",
+     "sub": "Statement of values, {{total insured value}}, site plans, loss runs, engineering reports, business-continuity plans"
+    },
+    {
+     "x": -12,
+     "lane": "br",
+     "label": "Build the {{submission}}",
+     "sub": "The narrative explaining why this account is better than its class — the part that is actually being sold"
+    },
+    {
+     "x": -10,
+     "lane": "br",
+     "label": "Market strategy",
+     "sub": "Which carriers, in which order, for which layers; who is asked to lead and who to follow"
+    },
+    {
+     "x": -8,
+     "lane": "uw",
+     "label": "Lead underwriter quotes",
+     "sub": "The lead sets terms, wording and price; followers price off it. A layer without a lead does not get placed"
+    },
+    {
+     "x": -6,
+     "lane": "uw",
+     "label": "Following market subscribes",
+     "sub": "Each underwriter takes a percentage line down the {{slip}} until the layer is full"
+    },
+    {
+     "x": -4,
+     "lane": "br",
+     "label": "Structure the tower",
+     "sub": "Primary, excess layers, {{sublimit}}s, {{aggregate limit}}s, deductibles, reinstatements — negotiated against price"
+    },
+    {
+     "x": -2,
+     "lane": "br",
+     "label": "Present to the client and the lender",
+     "sub": "The lender's insurance adviser reviews the wording against the loan covenant"
+    },
+    {
+     "x": 0,
+     "lane": "br",
+     "label": "{{binder}} issued, cover incepts",
+     "sub": "Temporary confirmation that cover is in force; the policy document follows weeks later"
+    },
+    {
+     "x": 8,
+     "lane": "br",
+     "label": "Policy issued and checked",
+     "sub": "Broker verifies the wording matches what was agreed — errors here are how brokers get sued"
+    },
+    {
+     "x": 30,
+     "lane": "br",
+     "label": "A loss occurs; {{claims advocacy}} begins",
+     "sub": "Documenting the claim, arguing coverage against the policy's own wording, pressing for payment. Unpriced at placement, and the part clients remember"
+    },
+    {
+     "x": 44,
+     "lane": "br",
+     "label": "Renewal marketing begins",
+     "sub": "With one year of loss experience the account is a different risk — better or worse"
+    }
+   ],
+   "ps": [
+    "**The whole cycle is at risk from one letter.** A {{broker of record}} letter transfers the client, and its commissions, to a competitor immediately. Most competition between brokers is a fight over these letters rather than over price, which is why the sector has spent 2025 and 2026 in a wave of lateral-hire litigation — Marsh McLennan is a plaintiff against Aon, Howden and Alliant, and in one case twenty employees resigned within a 38-minute window.",
+    "**Where the broker gets sued.** Two of the three failure points are clerical: the wording did not match what was agreed, or the notice was late. Marsh USA is defending a claim that it notified an insurer roughly 57 hours after a policy expired. The third is advice, and it is much larger: the USD 425m provision over Greensill is a broker errors-and-omissions exposure, not an underwriting one."
+   ]
+  },
+  {
+   "id": "how-brokers-get-paid",
+   "title": "How brokers get paid — and the conflict inside it",
+   "kind": "ledger",
+   "read": "7 min",
+   "cols": [
+    "Revenue line",
+    "How it works",
+    "Whose interest it serves",
+    "Why it matters here"
+   ],
+   "rows": [
+    [
+     "**Commission**",
+     "A percentage of the premium, deducted before the carrier is paid",
+     "Aligned only loosely — the broker earns more when the client pays more",
+     "This is why a {{soft market}} compresses broker revenue mechanically. Marsh McLennan's own index put global property rates down 12 percent year on year in Q2 2026, which is a roughly six-point drag on its underlying growth"
+    ],
+    [
+     "**Fee**",
+     "A negotiated amount for defined services, disclosed to the client, replacing commission",
+     "Aligned — the broker is paid for work, not for premium volume",
+     "The large-account norm. It is also the answer the sector gave to the 2004-05 scandal"
+    ],
+    [
+     "**{{contingent commission}}**",
+     "Extra payment from the carrier based on the volume, growth or profitability of what the broker placed with it",
+     "**Conflicted by construction** — it pays the buyer's agent to favour one seller",
+     "The sector's defining governance question. Marsh McLennan eliminated contingents from 1 January 2005 after an USD 850m settlement over bid rigging; its FY2025 10-K discloses that it takes them again, 'primarily driven by MMA and parts of Marsh Risk's international operations'"
+    ],
+    [
+     "**{{fiduciary investment income}}**",
+     "Interest earned on premium held in trust between collecting it from the client and paying the carrier",
+     "Neither — it is a function of interest rates",
+     "Real income that rises and falls with rates rather than with anything the broker did. It flatters results when rates rise and reverses when they fall"
+    ],
+    [
+     "**Consulting and advisory fees**",
+     "Paid for advice rather than placement",
+     "Aligned",
+     "The half of Marsh McLennan that is currently growing fastest: Consulting grew 8 percent underlying in Q2 2026 against broking's 3 percent"
+    ]
+   ],
+   "ps": [
+    "**The number to watch is {{organic revenue growth}}** — growth stripped of acquisitions, disposals and currency. Acquisitions can buy revenue indefinitely; organic growth cannot be bought. Marsh McLennan's halved from 7 percent in FY2024 to 4 percent in FY2025, which independent commentary put below every major listed competitor except one. Aon's was 6 percent.",
+    "**A test you can apply to any broker's results.** If underlying growth is falling while the rate index is also falling, the broker is being carried down by the {{underwriting cycle}}. If underlying growth falls while rates rise, something is wrong with the business. If it rises while rates fall, the broker is genuinely winning share or selling something new — which is the claim every facility in this guide is making."
+   ]
+  },
+  {
+   "id": "building-a-tower",
+   "title": "Building a tower: how a large risk gets covered at all",
+   "kind": "bars",
+   "read": "6 min",
+   "unit": "USD billions of published capacity for a single placement",
+   "intro": "No single insurer writes a hyperscale data centre. A large risk is covered by stacking layers, each attaching where the one below it stops, each subscribed by several carriers taking percentage lines. The bars are the published capacity of facilities assembled for exactly this purpose — read them as how much of a tower one arrangement can fill before the broker has to go back to the market.",
+   "items": [
+    {
+     "label": "Munich Re — single-project net capacity",
+     "sub": "About USD 250m for one data-centre construction project. Reaching USD 10bn on one site by stacking this means a tower across 40-plus carriers",
+     "v": 0.25
+    },
+    {
+     "label": "Marsh — Marsh Specialty Renewables Facility",
+     "sub": "Liability up to USD 25m, for solar and battery projects under 50 MW. An order of magnitude below the grid-scale systems this corpus's developers build",
+     "v": 0.025
+    },
+    {
+     "label": "Marsh — Nimbus Casualty (2026-02)",
+     "sub": "USD 75m of excess general liability attaching at a minimum of USD 25m. Contractor demands on these projects are reported reaching USD 600m",
+     "v": 0.075
+    },
+    {
+     "label": "Marsh — hydrogen facility (2022)",
+     "sub": "Up to USD 300m per risk, global, led by Liberty Specialty Markets and AIG",
+     "v": 0.3
+    },
+    {
+     "label": "Marsh — Nimbus construction (2026-01)",
+     "sub": "USD 2.7bn of construction all risks including delay-in-start-up and business interruption",
+     "v": 2.7
+    },
+    {
+     "label": "Willis — hyperscale construction capacity",
+     "sub": "USD 3bn",
+     "v": 3.0
+    },
+    {
+     "label": "Aon — Data Center Lifecycle Insurance Program (2026-07)",
+     "sub": "USD 5bn, the largest construction facility any broker has named",
+     "v": 5.0
+    },
+    {
+     "label": "Marsh — Stratus operational property exchange (2026-08)",
+     "sub": "Up to USD 10bn on a single placement, on a prior-submit basis drawing on traditional and alternative capital",
+     "v": 10.0
+    }
+   ],
+   "ps": [
+    "**Three vocabulary items do the work here.** The **{{attachment point}}** is where a layer starts paying. A **{{sublimit}}** is a cap inside a policy lower than its headline limit, applying to one peril — hail, flood, debris removal — and it is where a policy that looks adequate turns out not to be. An **{{aggregate limit}}** is the most the policy pays across all losses in a year; once exhausted the cover is gone however many months remain.",
+    "**The capacity race is legible in these bars.** Aon's facility passed Marsh's during 2026 — USD 3.5bn in April against Nimbus's USD 2.7bn, then USD 5bn in July. Marsh's answer was not to match it on construction but to open a different front: Stratus covers the *operational* phase Nimbus does not, at a limit nobody has matched, by admitting capital that is not traditional insurance at all."
+   ]
+  },
+  {
+   "id": "reinsurance-the-layer-behind-the-layer",
+   "title": "Reinsurance: the layer behind the layer",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**{{reinsurance}} is insurance bought by insurers.** The carrier that wrote your battery plant's property policy does not intend to keep all of it. It cedes part to a reinsurer, keeping a **retention** for its own account. In that transaction the carrier is the **{{cedent}}**, and everything about a reinsurance programme is described from the cedent's point of view.",
+    "**Why it exists is a capital constraint, not a nerve problem.** A regulator and the rating agencies require an insurer to hold **{{solvency capital}}** against what it writes. Reinsurance lets a carrier write more business than its own capital would support, because part of the risk — and part of the required capital — sits somewhere else. That is why a reinsurance broker's work is capital structuring dressed as broking.",
+    "**Two ways to buy it.** **{{treaty reinsurance}}** covers a whole book at once: every policy meeting the treaty's definition is automatically reinsured, no individual underwriting, usually renewed on 1 January, 1 April or 1 July. **{{facultative reinsurance}}** is bought one risk at a time and underwritten individually — a carrier uses it for a single account too large or too odd for its treaty, which is exactly what a first-of-its-kind battery plant or a USD 30bn hyperscale campus is.",
+    "**Two ways to share it.** A **{{quota share}}** is proportional: the reinsurer takes a fixed percentage of every premium and pays the same percentage of every loss, indifferent to how large any one loss is. **{{excess of loss}}** is not proportional: the reinsurer pays only above an attachment point, which is what a cedent buys to cap a catastrophe rather than to share routine claims. **{{rate on line}}** — premium divided by limit — is how the price of a catastrophe layer is compared across layers, years and markets.",
+    "**And a third layer above that.** Reinsurers buy **{{retrocession}}**. When retro capacity tightens, the effect works all the way back down to the price of a project's property policy — which is the mechanism by which a bad hurricane season in Florida changes what a solar plant in Texas pays.",
+    "**Why this matters for the corpus.** Reinsurance broking is where the money and the softening both are. The top four reinsurance brokers hold more than 85 percent of reinsurance premium — 'roughly six out of every seven dollars'. And in Q2 2026 Marsh Re's revenue **fell 2 percent** despite double-digit new business and high-90s client retention, purely because property-catastrophe rates fell 16 percent at the midyear renewal and commission is a percentage of a shrinking premium.",
+    "**One documented absence, and it is worth sitting with.** Across Marsh Re's two flagship September 2026 publications, battery storage and solar are named zero times in the extractable text, and renewable energy once — as a portfolio-boundary complication inside marine and energy. Data centres appear eleven times and are called 'the standout growth story', with cedents 'seeing two or three opportunities each week'. The reinsurance appetite behind this segment's largest broker is oriented to digital infrastructure, not to storage."
+   ]
+  },
+  {
+   "id": "the-underwriting-cycle",
+   "title": "The cycle nobody controls",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**The **{{underwriting cycle}}** is the single largest thing acting on every number in this guide, and no participant controls it.** Losses erode insurers' capital; capacity withdraws; prices rise; high prices attract new capital; capacity returns; prices fall; and the cycle begins again.",
+    "**In a {{hard market}}** insurers have less appetite than buyers want. Prices rise, deductibles rise, limits shrink, terms narrow, and buyers scramble for capacity. Brokers earn more, because commission is a percentage of a bigger premium — and they are more useful, because access to capacity is genuinely scarce.",
+    "**In a {{soft market}}** the opposite: capacity exceeds demand, prices fall, terms broaden, and underwriters compete on more than price. Broker commission compresses. And something subtler erodes — the value of anything sold as a way to *earn a discount*.",
+    "**That second effect is the one to understand,** because it is the mechanism eating the resilience thesis this corpus's challenger is built on. kWh Analytics prices resilience: stow your solar racking at 70 degrees, use thicker glass, and pay less. In a soft market you can decline to do any of that and still get insured cheaply. The 2026 Broker Council readout says exactly this — rates are 'reducing' and 'the urgency to build more weather-resilient assets has somewhat diminished'.",
+    "**Marsh's own representative gave the counter-argument, and it is the best line in the corpus on the subject.** Luke Slemeck, 2026: 'Resilience isn't really about cost savings. It's about continued insurability. If you do nothing and the market hardens, you're going to have a very hard time getting insurance. If you've built the best asset you can, you'll do alright, regardless of the market conditions.' The claim is not that resilience pays today. It is that insurability is an option you cannot buy back once the market turns.",
+    "**Where the cycle sits now.** Eight consecutive quarters of decline on Marsh's composite index; global property down 12 percent; property-catastrophe reinsurance down 16 percent at the 2026 midyear renewal; dedicated reinsurance capital up 9 percent and catastrophe-bond notional above USD 58bn. Casualty is the exception, up 2 percent globally and 7 percent in the United States. **Read any broker's 2026 results through this and half the story is explained before you look at the company.**"
+   ]
+  },
+  {
+   "id": "alternative-capital",
+   "title": "Where new capacity comes from when insurers run out",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "When a risk needs more limit than the traditional market will offer at any price — a USD 30bn campus, a technology with no loss history — the capacity has to come from somewhere else. There are two somewhere-elses, and they behave differently.",
+   "cards": [
+    {
+     "t": "Traditional insurance and reinsurance capital",
+     "meta": "An insurer's own balance sheet, rated by the agencies, regulated for solvency, renewed annually.",
+     "adv": [
+      "**Rated paper.** A lender's counsel checks the carrier's rating and is satisfied; there is no collateral question",
+      "**Discretionary underwriting.** A human can be persuaded that a novel risk is better than its class — which is the entire value of a good {{submission}}",
+      "**Relationship continuity.** A carrier that took a loss may still renew, because it is pricing a multi-year relationship",
+      "**No basis risk.** An indemnity policy pays what was actually lost"
+     ],
+     "dis": [
+      "**Cyclical.** Capacity withdraws exactly when losses make it most needed",
+      "**Finite per carrier.** Munich Re's net capacity for one data-centre project is about USD 250m; a USD 10bn tower needs 40-plus of them",
+      "**Slow for novel risk.** With 'little in the way of claims data' for grid-connected batteries, underwriters price with judgment and charge for the uncertainty",
+      "**Annually renewed.** A twelve-month contract against a thirty-five-year asset"
+     ]
+    },
+    {
+     "t": "Alternative capital — {{insurance-linked securities}}",
+     "meta": "Pension funds and hedge funds holding insurance risk directly, through {{catastrophe bond}}s, collateralised reinsurance and sidecars.",
+     "adv": [
+      "**Fully collateralised.** The money is in a trust; there is no counterparty credit question at all",
+      "**Multi-year.** A cat bond can run three years, against an annual policy",
+      "**Uncorrelated, so it is cheap.** A hurricane has nothing to do with the equity market, which is why this capital accepts a lower risk premium than an insurer's shareholders demand",
+      "**It is now structural.** Alternative capital reached USD 144.5bn, with catastrophe bonds outstanding above USD 63bn — no longer a fringe"
+     ],
+     "dis": [
+      "**Needs a definable trigger.** It works for wind and earthquake, where the hazard is modelled and measurable; it is far harder to point at a warehouse of batteries with no loss history",
+      "**{{basis risk}}** where the trigger is parametric — the index may not pay when the damage is real",
+      "**Investors can leave.** Capital that arrived for a return can go looking for a better one",
+      "**It prices the model, not the risk.** If the {{catastrophe model}}'s vulnerability curves are wrong — and for batteries there barely are any — the price is wrong with them"
+     ]
+    }
+   ],
+   "ps": [
+    "**Stratus is the reason this section exists.** Marsh's operational data-centre exchange draws on '30 traditional and alternative capital providers' and works on a **prior-submit basis**: underwriters assess each risk individually and may decline, rather than committing a fixed share in advance. That is a hybrid — the discretion of traditional underwriting with the depth of a capital-markets panel — and it is what a broker builds when neither pool is deep enough alone.",
+    "**Note which company got there first, and how.** Aon placed 'the first-ever data center-specific treaty, aligning up to $5 billion of capital behind a single leading insurer' — a reinsurance solution to a retail capacity problem. Marsh built an exchange. Two different answers to the same shortage."
+   ]
+  },
+  {
+   "id": "insuring-a-data-centre-build",
+   "title": "Insuring a data-centre build, line by line",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "A hyperscale campus is not one insurance problem; it is six, running on different clocks. This is the anatomy of the tower a broker assembles, and it is why the facilities in this guide are multi-line rather than property-only.",
+   "cols": [
+    "Cover",
+    "What it protects",
+    "When it bites",
+    "What makes it hard here"
+   ],
+   "rows": [
+    [
+     "**{{construction all risk}}**",
+     "Materials, works in progress and plant on site, from groundbreaking to handover",
+     "The riskiest months, when equipment is unprotected, untested and being energised for the first time",
+     "Values are enormous and concentrated. Average insured project values rose from about USD 150m to about USD 3bn in five years"
+    ],
+    [
+     "**{{delay in start-up}}**",
+     "Revenue and debt service lost because insured damage pushes commercial operation past its date",
+     "When a schedule slips for a physical reason",
+     "This is the cover the lender actually relies on. Aon's facility automatically reduces the delay-in-start-up sum as phases go live — a real engineering-to-policy link"
+    ],
+    [
+     "**Operational property and business interruption**",
+     "The finished asset and the income it earns",
+     "After handover, for thirty-plus years",
+     "Nobody had built a single-placement market for this until Stratus. Construction cover existed; operational cover at scale did not"
+    ],
+    [
+     "**{{contingent business interruption}}**",
+     "Income lost because something happened to *somebody else* — a transformer supplier, the grid connection",
+     "When a component shortage or an upstream fire stops a project that was never damaged",
+     "Transformer lead times run two to three years against a 30 percent availability shortfall. This is where a supply-chain problem becomes an insurance loss"
+    ],
+    [
+     "**Excess casualty**",
+     "Third-party injury and damage above the primary liability tower",
+     "Throughout construction and operation",
+     "Contractor demands are reported reaching USD 600m. Marsh's Nimbus Casualty offers USD 75m attaching at USD 25m — one storey of a much taller building"
+    ],
+    [
+     "**Cyber and physical cyber**",
+     "The real-world physical consequences of a cyber event, not just the data loss",
+     "When an attack on a control system becomes a property loss",
+     "Aon's tower carries USD 400m of cyber and technology errors and omissions. Its power leader lists 'battery thermal events' among the fault-propagation paths"
+    ],
+    [
+     "**Terrorism and political violence**",
+     "Deliberate damage",
+     "Site-specific",
+     "Aon's facility carries USD 1bn of terrorism capacity — a line item that tells you what class of asset this is now considered"
+    ]
+   ],
+   "ps": [
+    "**The accumulation problem is the one underwriters actually lose sleep over.** Aon's Asia-Pacific commercial risk head put it as advice: developers should be 'building six US$5 billion sites, physically separated and individually fire-protected' rather than concentrating. And: 'never bet against the climate.' 64 percent of 2026 data-centre capacity under construction sits outside traditional hubs, pushing it into severe-convective-storm country.",
+    "**Where storage enters.** Not usually as a separate policy — as a component of the campus and of the power arrangement behind it. Marsh's own Stratus lead names 'self-generating power systems' among the risks that make the operational phase harder. Aon's research names 'solar + battery storage' as supporting peak shaving and grid resilience, and concludes that 'data centers must be insured as utilities with distinct underwriting approaches'. **That sentence is the bridge between the two halves of this corpus.**"
+   ]
+  },
+  {
+   "id": "the-facility-and-the-exchange",
+   "title": "What a facility is, and why brokers build them",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**A facility is pre-negotiated capacity.** Instead of taking each risk to the market one at a time, the broker negotiates terms once with a panel of carriers for a defined class of risk, and then places qualifying accounts into it. The client gets speed and certainty; the carriers get flow they did not have to underwrite individually; the broker gets a product only it can sell.",
+    "**It is also, quietly, a different business model.** Ordinary broking earns a percentage of whatever the market charges. A facility earns from the *design* — from having assembled the panel, written the wording and defined the class. In a market where the price of everything is falling 12 percent a year, that difference is the whole strategy.",
+    "**Marsh's facility ladder shows the pattern clearly.** The Renewables Facility (2022) — solar and battery under 50 MW, liability to USD 25m, quotes in three to five business days. The hydrogen facility (2022) — up to USD 300m per risk, and the company called it the world's first for green and blue hydrogen. Nimbus (2025) — data-centre construction. Nimbus Casualty (2026) — the excess liability tower above it, written on Marsh's own **XSellence** follow-form so the whole tower reads consistently. Stratus (2026) — operational property, on a prior-submit exchange.",
+    "**Notice what a facility is really for: a class the open market underwrites badly.** Every one of those five is a technology or an asset class where underwriters lack loss history and price the uncertainty. That is the same condition **{{energy transition risk}}** describes, and it is the same reason kWh Analytics can exist as a {{managing general agent}} at all.",
+    "**A prior-submit exchange is the newest variant, and worth understanding precisely.** In a conventional facility the carriers commit a share in advance. On Stratus, per Marsh's own product page, 'underwriters are able to evaluate each risk individually and decide whether and how to support a placement'. The broker has built the venue and the rules; the capital shows up per risk. It is closer to a marketplace than an insurance policy — which is also why its USD 10bn is a *target* rather than bound capacity, and why 'more than USD 4bn in verbal commitments' at launch is the number that actually matters.",
+    "**One honest note on sourcing.** The capacity, the exchange structure, the relationship to Nimbus and the roadmap into inland marine, cyber and casualty are all on Marsh's own product page. The 'thirty capital providers' figure and the US-domiciled eligibility restriction are not — they come only from trade press. A USD 10bn product published as a page under the technology vertical, absent from the newsroom and not cross-referenced by that vertical's own data-centre page, is a curiosity worth noticing."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The named-standard gap.** Across seven Marsh battery-storage documents spanning 2021 to 2026 and four company web properties, no certification body or standard is named — not UL, UL 9540A, NFPA 855, DNV, CSA, TÜV, IEC, IEEE or FM Global. The closest the battery page comes is 'varying installation, operation, and engineering standards around the world' — invoking standards as a problem while naming none. It then states insurer requirements in engineering terms: separation between enclosures, routing power to the grid independently of the battery, fire-protection features. **NFPA 855 is the code that specifies separation.** Aon's guidance does the same, asking for 'three metres or more of spacing' and citing only SCOR's 2022 handbook. Two incumbent brokers, independently, state the requirement and leave the code unnamed — which is precisely the space a certifier or a data-priced MGA occupies.",
+    "**Company claims are not market evidence.** Marsh's battery credentials — a USD 200m Asia facility, 3.8 GW of UK grid-scale storage placed, 650 GW of renewables supported, a 60-strong London team — appear only on marsh.com. No independent source names Marsh in a battery-storage placement. Aon's only megawatt-scale battery figure comes from a brochure coded June 2018 that also states a headcount half again its current one. **When you read a broker's scale claim, check whether anyone else has ever repeated it.**",
+    "**The rate index has a hole in it exactly where you need it.** Marsh's Global Insurance Market Index breaks out property, casualty, financial and professional, and cyber. It publishes no energy, renewables or battery line. The company that supplies the market's benchmark price series does not publish a price for the assets this corpus covers.",
+    "**Conflicts are structural, not occasional.** The same group can represent the tenant and advise the investor on the same USD 14bn campus — as Marsh is reported to have done on the Meta and BlackRock El Paso project — and can own both a broker and a {{managing general agent}}. And two of the eight seats on the challenger's own Broker Council are the same owner under two brands, which no readout discloses.",
+    "**A methodological warning that nearly produced a false finding in this very research.** Counting mentions in a PDF with a naive string search returned 'renewables = 0' for a Marsh Re publication that in fact mentions renewables — the extractor had introduced letter-spacing artefacts ('r ene wables'). **Any 'X is never mentioned' claim from PDF-derived text needs normalised text before you trust it.** The absence findings in this guide that matter most were derived from HTML, not PDF."
+   ]
+  },
+  {
+   "id": "where-marsh-slots-in",
+   "title": "Where Marsh McLennan's businesses slot into the chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Mapping the four rebranded businesses onto the chain from the first section. The names changed in January 2026 and the last of them, Guy Carpenter, became Marsh Re on 1 September 2026.",
+   "cols": [
+    "Business (from January 2026)",
+    "Formerly",
+    "Position in the chain",
+    "FY2025 revenue",
+    "What it means here"
+   ],
+   "rows": [
+    [
+     "**Marsh Risk**",
+     "Marsh",
+     "{{retail broker}} — works for the buyer",
+     "USD 14,366m",
+     "The seat this whole guide describes. Where Nimbus, Nimbus Casualty, Stratus and the energy facilities live"
+    ],
+    [
+     "**Marsh Re**",
+     "Guy Carpenter",
+     "{{reinsurance broker}} — works for the carrier",
+     "USD 2,496m",
+     "The capital layer. Shrinking 2 percent, and oriented to data centres rather than storage"
+    ],
+    [
+     "**Marsh McLennan Agency**",
+     "(unchanged)",
+     "Retail broking for the middle market",
+     "About USD 5bn annualised",
+     "Where McGriff went, and where {{contingent commission}}s are concentrated"
+    ],
+    [
+     "**Victor**",
+     "(unchanged)",
+     "{{managing general agent}} — works for the carrier",
+     "Not disclosed",
+     "The same seat kWh Analytics occupies, inside a broker"
+    ],
+    [
+     "**Marsh People and Investments**",
+     "Mercer",
+     "Consulting",
+     "USD 6,190m",
+     "Not risk transfer"
+    ],
+    [
+     "**Marsh Management Consulting**",
+     "Oliver Wyman",
+     "Consulting",
+     "USD 3,604m",
+     "Not risk transfer — and growing 13 percent underlying, the fastest line in the company"
+    ]
+   ],
+   "ps": [
+    "**The group is now called Marsh, the broker is called Marsh Risk, and MMC is a retired ticker** — it became MRSH on 14 January 2026. The legal name, Marsh & McLennan Companies, Inc., did not change.",
+    "**The thing to carry away:** two of these six rows are not insurance at all, and they are the ones growing fastest. When you read this company's headline growth rate, ask which half produced it."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Whose agent is a retail broker, and whose agent is a managing general agent?",
+     "a": "The broker is the agent of the buyer. The MGA is the agent of the carrier — it binds the carrier's paper under delegated authority. That is the single most important distinction in the chain, and it is why a broker and an MGA are partners rather than competitors."
+    },
+    {
+     "q": "What is a cedent?",
+     "a": "The insurer that buys reinsurance — it cedes part of a risk it has written, keeping a retention for its own account. Every reinsurance programme is described from the cedent's point of view."
+    },
+    {
+     "q": "Treaty versus facultative reinsurance?",
+     "a": "Treaty covers a whole book automatically, with no individual underwriting, renewed annually. Facultative is bought one risk at a time and underwritten individually — used for accounts too large or too odd for the treaty."
+    },
+    {
+     "q": "Quota share versus excess of loss?",
+     "a": "Quota share is proportional: a fixed percentage of every premium and every loss, indifferent to loss size. Excess of loss pays only above an attachment point — bought to cap a catastrophe rather than to share routine claims."
+    },
+    {
+     "q": "What is retrocession, and why should a project sponsor care?",
+     "a": "Reinsurance bought by reinsurers. When retro capacity tightens the effect works back down the chain to the price of a project's own property policy — which is how a bad hurricane season changes what a solar plant elsewhere pays."
+    },
+    {
+     "q": "Why does a soft market compress broker revenue mechanically?",
+     "a": "Commission is a percentage of premium. When rates fall the same placement earns less, regardless of how well the broker performed. Marsh's global property index at minus 12 percent is roughly a six-point drag on its underlying growth."
+    },
+    {
+     "q": "What is a contingent commission and why is it contentious?",
+     "a": "Extra payment from a carrier based on the volume, growth or profitability of business the broker placed with it — not on service to the client. It pays the buyer's agent to favour one seller, which is why it was at the centre of the 2004-05 investigations and an USD 850m settlement."
+    },
+    {
+     "q": "What is fiduciary investment income?",
+     "a": "Interest a broker earns on premium held in trust between collecting it from the client and paying the carrier. It rises and falls with interest rates rather than with anything the broker did."
+    },
+    {
+     "q": "What does organic revenue growth strip out, and why is it the number to watch?",
+     "a": "Acquisitions, disposals and currency — leaving what the existing business did on its own. Acquisitions can buy revenue indefinitely; organic growth cannot be bought."
+    },
+    {
+     "q": "A policy has a USD 500m limit and a USD 25m hail sublimit. A hailstorm causes USD 80m of damage. What is recoverable?",
+     "a": "USD 25m, less the deductible. The sublimit governs, not the headline limit — which is how a policy that looks adequate turns out not to be."
+    },
+    {
+     "q": "What is an aggregate limit, and what is a reinstatement?",
+     "a": "The aggregate is the most a policy pays across all losses in a period; once exhausted the cover is gone for the rest of the term. A reinstatement restores a layer's limit after a loss, usually for extra premium and a limited number of times — which matters in a season with two events."
+    },
+    {
+     "q": "What is rate on line?",
+     "a": "Premium divided by the limit bought, as a percentage. Pay USD 10m for USD 100m of cover and the rate on line is 10 percent. It is the standard way to compare catastrophe pricing across layers, years and markets."
+    },
+    {
+     "q": "What is a broker of record letter, and why does it drive sector behaviour?",
+     "a": "A letter formally appointing a broker, which instantly transfers the client relationship and its commissions from the incumbent. Most competition between brokers is a fight over these letters — hence the 2025-26 lateral-hire litigation wave."
+    },
+    {
+     "q": "Why is a facility a different business model from ordinary broking?",
+     "a": "Ordinary broking earns a percentage of whatever the market charges. A facility earns from the design — from having assembled the panel, written the wording and defined the class. In a market where prices are falling, that difference is the strategy."
+    },
+    {
+     "q": "What is a prior-submit exchange?",
+     "a": "A venue where carriers evaluate each risk individually and decide whether and how to support it, rather than committing a fixed share in advance. It is why Stratus's USD 10bn is a target rather than bound capacity."
+    },
+    {
+     "q": "Delay-in-start-up cover protects against what, exactly?",
+     "a": "Revenue and debt service lost because insured physical damage during construction pushes commercial operation past its date. It is the cover the lender relies on when a schedule slips for a physical reason."
+    },
+    {
+     "q": "What is contingent business interruption?",
+     "a": "Cover for income lost because something happened to somebody else — a supplier's factory, a transformer maker, the grid connection. It is how a component shortage becomes an insurance loss for a project that was never damaged."
+    },
+    {
+     "q": "Name the standards Marsh's battery guidance cites.",
+     "a": "None. Across seven documents spanning 2021 to 2026 it names no UL 9540A, NFPA 855, DNV, CSA, TÜV or IEC — it states insurer requirements in engineering terms and leaves the code unnamed. Aon's guidance does the same."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A broker's underlying revenue growth falls from 7 percent to 4 percent in a year in which its own index reports commercial rates down 6 percent and property down 12 percent. The most defensible reading is:",
+     "c": [
+      "The broker lost significant market share",
+      "Part of the decline is the underwriting cycle acting on commission, and separating cycle from performance requires comparing against peers on the same measure",
+      "The broker's clients are buying less insurance",
+      "Organic growth is not a meaningful measure for brokers"
+     ],
+     "a": 1,
+     "why": "Commission is a percentage of premium, so falling rates compress revenue mechanically. The way to tell cycle from performance is a peer comparison on the same basis — which is exactly how it was established that Marsh McLennan's 4 percent trailed Aon's 6 percent while both faced the same rate environment."
+    },
+    {
+     "q": "kWh Analytics seats Marsh and Aon on its Broker Council rather than treating them as competitors. The structural reason is:",
+     "c": [
+      "The brokers are minority investors in kWh Analytics",
+      "kWh holds delegated underwriting authority and reaches the market through brokers, so brokers are its distribution rather than its rivals",
+      "Broker councils are a regulatory requirement for managing general agents",
+      "The brokers and kWh compete only outside the United States"
+     ],
+     "a": 1,
+     "why": "An MGA binds carrier paper and is sold through specialist brokers. The broker represents the buyer and the MGA represents the carrier — different seats in the same transaction. That is why the challenger convenes the incumbents instead of fighting them."
+    },
+    {
+     "q": "Marsh's Nimbus construction facility stood at USD 2.7bn from January 2026 while Aon's competing programme reached USD 5bn by July 2026. Marsh's published response was Stratus, at up to USD 10bn. The most accurate characterisation is:",
+     "c": [
+      "Marsh matched and exceeded Aon's construction capacity",
+      "Marsh opened a different front — Stratus covers the operational phase Nimbus does not, using a prior-submit exchange that admits alternative capital",
+      "Stratus replaced Nimbus",
+      "The two facilities cover the same risks at different limits"
+     ],
+     "a": 1,
+     "why": "Marsh's own product page states that Nimbus covers construction and Stratus 'the more permanent operational phase', and that the two can be used separately or together. The USD 10bn is also a target on a prior-submit basis rather than committed capacity — a different kind of number from Aon's USD 5bn facility."
+    },
+    {
+     "q": "A data-centre project's transformer supplier suffers a fire. The project itself is undamaged but commissioning slips nine months. The cover that responds is:",
+     "c": [
+      "Construction all risk",
+      "Delay in start-up alone",
+      "Contingent business interruption",
+      "The excess casualty tower"
+     ],
+     "a": 2,
+     "why": "Contingent business interruption covers income lost because something happened to somebody else. Construction all risk needs damage to the insured project; delay-in-start-up follows insured damage at the site. With two-to-three-year transformer lead times, this is a live rather than theoretical exposure."
+    },
+    {
+     "q": "Seven Marsh battery-storage documents across four web properties name no certification body or standard, while stating insurer requirements in engineering terms such as separation between enclosures. Aon's guidance behaves the same way. The best reading is:",
+     "c": [
+      "Both firms are unaware of NFPA 855 and UL 9540A",
+      "It is a property of broker-authored risk guidance: the brokers state the requirement and leave the code to the certifier, which is the space DNV and a data-priced MGA occupy",
+      "Standards do not apply to battery storage",
+      "The documents are too old to reference current codes"
+     ],
+     "a": 1,
+     "why": "Two incumbents arriving at the same posture independently, across documents spanning 2021 to 2026, is a structural feature rather than an oversight. The brokers describe what an underwriter wants to see; naming and enforcing the code is the certification layer's job — and neither broker points to it."
+    }
+   ]
+  }
+ ]
+}

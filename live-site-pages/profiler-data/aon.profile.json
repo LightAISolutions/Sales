@@ -1,0 +1,1579 @@
+{
+ "schemaVersion": 7,
+ "slug": "aon",
+ "name": "Aon plc",
+ "shortName": "Aon",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://www.aon.com/",
+ "headquarters": "Registered office 15 George's Quay, Dublin 2, Ireland D02 VR98 (about 29,000 sq ft, lease to 2044); the largest offices are 165 Broadway, New York (204,000 sq ft) and 200 East Randolph Street, Chicago (191,000 sq ft), with 122 Leadenhall Street, London at 178,000 sq ft. The company does not use the phrase 'operational headquarters' in its filings, so both the Irish registered office and the far larger US offices are stated rather than adjudicated",
+ "employees": "Approximately 60,000 employees in more than 120 countries as of 31 December 2025 (FY2025 10-K)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: AON"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Aon is the world's second-largest insurance broker and, on the evidence of this research, the leader in the one market this corpus most cares about — its Data Center Lifecycle Insurance Program quadrupled from USD 1.5bn to USD 5bn in twelve months, ahead of every competing facility, and it has placed what it calls the first-ever data-centre-specific reinsurance treaty aligning up to USD 5bn of capital behind a single insurer. Nine days before this dossier it agreed to buy USI for USD 17.0bn in cash, all debt-funded, which takes leverage to about 4.8x — above the roughly 3x at which S&P said it would consider a downgrade — with buybacks paused, earnings dilution through 2027, and an interim chief financial officer in post since 17 August 2026. BACKGROUND. Irish-domiciled and NYSE-listed, about 60,000 employees in more than 120 countries. FY2025 revenue USD 17,181m, up 9 percent with 6 percent organic growth — ahead of Marsh McLennan's 4 percent — adjusted operating margin 32.4 percent and adjusted EPS USD 17.07. Two reportable segments: Risk Capital (USD 11,290m — Commercial Risk Solutions USD 8,497m, Reinsurance Solutions USD 2,793m) and Human Capital (USD 5,907m — Health Solutions USD 3,839m, Wealth Solutions USD 2,068m). GAAP net income rose 39 percent, but that is the USD 1,199m gain on selling the majority of NFP's wealth business, not operations. Total debt fell from USD 17,016m at end-2024 to USD 14,967m at 30 June 2026 before the USI commitment reversed the deleveraging. Collection gaps: the company publishes no leverage ratio or debt-to-EBITDA target; no first-party founding date or merger history appears in the FY2025 filing; and its only published battery-storage capacity figure is an eight-year-old regional brochure claim.",
+ "ecosystemRole": "The second incumbent of this corpus's insurance-and-risk-transfer segment, and the one whose published position sits closest to the AI build-out itself. Like Marsh McLennan it is a broker rather than a carrier — the 10-K states the strategy plainly as focusing 'on higher-margin, capital-light professional services businesses', which is why its energy and digital-infrastructure vehicles are facilities assembled from other people's capacity rather than delegated underwriting on its own paper. That is the structural line between it and kWh Analytics: kWh is a managing general agent that binds risk, Aon is the channel that reaches it, and this research found no evidence of Aon operating a renewables or storage managing general agency of its own. Its distinctive contribution here is capital assembly for data centres — a USD 5bn multi-line lifecycle facility, a first-of-its-kind data-centre reinsurance treaty, and a stated ability to structure individual projects to USD 13-15bn using alternative capital — set against a battery-storage record that is real but thin: one documented first-of-its-kind UK storage placement, a named seat on the challenger's broker council, and published guidance that names engineering criteria but no standard.",
+ "productsAndServices": [
+  {
+   "name": "Data Center Lifecycle Insurance Program — and the first data-centre reinsurance treaty",
+   "category": "Risk Capital — proprietary facility",
+   "description": "A multi-line facility covering a data centre from construction through operations, elevated into the 10-K's own business description — a rare signal of where the company wants its growth story read. The filing calls it a programme 'designed to support data center projects from construction through ongoing operations by bringing together traditionally fragmented risk classes into a single coordinated insurance solution'. Alongside it, and separate from it, the chief executive's shareholder letter records the placement of a first-ever data-centre-specific reinsurance treaty.",
+   "highlights": [
+    "Capacity quadrupled in twelve months: USD 1.5bn at launch on 9 July 2025, USD 2.5bn on 14 January 2026, USD 3.5bn on 15 April 2026 and USD 5bn on 20 July 2026",
+    "At USD 5bn the tower is construction all risks, delay-in-start-up and property damage and business interruption up to USD 5bn; third-party liability USD 200m outside the United States and USD 100m within it; cyber and technology errors and omissions USD 400m; project cargo USD 500m; terrorism USD 1bn — all on A-rated or higher security across Lloyd's and company markets",
+    "The structural feature that matters for a project financing: 'seamless cover with explicit embedded commissioning coverage, and automatic delay-in-start-up sum reduction as phases go live' — the company has solved for phased energisation in data centres in a way its battery guidance has not",
+    "THE FIRST-EVER DATA-CENTRE REINSURANCE TREATY, from the chief executive's shareholder letter: 'designing and placing the first-ever data center-specific treaty, aligning up to $5 billion of capital behind a single leading insurer while also engaging other markets to expand capacity for clients'. This is a second and separate USD 5bn — a retail facility and a reinsurance treaty behind a carrier",
+    "Management stated at Q2 2026 that it can now support individual projects up to USD 13-15bn using alternative capital sources, and that the data-centre pipeline is three times the prior year",
+    "Reinsurance Solutions held 5 percent organic growth in Q2 2026 despite a 15 to 20 percent decline in reinsurance treaty rates, with management citing data-centre new business as the offset"
+   ],
+   "positioning": "On construction capacity this is the largest facility any broker has named: USD 5bn against Marsh's Nimbus at USD 2.7bn and Willis's USD 3bn. Joe Peiser, chief executive of Risk Capital: 'Digital infrastructure has become one of the most important and capital-intensive asset classes in the global economy.' The competitive answer from Marsh came on the operational side, with Stratus, rather than by matching the construction number.",
+   "soldThrough": "Retail broking into the facility, placed through the company's Global Broking Centres in London, Bermuda and Singapore, with the reinsurance treaty executed through Reinsurance Solutions.",
+   "targetSegments": [
+    "Data centre developers",
+    "Investors and lenders",
+    "Contractors controlling construction cover",
+    "Data centre owners and operators"
+   ],
+   "roadmap": "The 'Reliable by Design' approach was announced with the July 2026 expansion; no further capacity step or line extension has been published."
+  },
+  {
+   "name": "Commercial Risk Solutions",
+   "category": "Risk Capital",
+   "description": "The largest solution line at USD 8,497m of FY2025 revenue: insurance and specialty broking, global risk consulting, captives management and affinity programmes. The 10-K describes it as using 'Risk Capital's extensive data and analytics capabilities to provide brokerage and consulting services that help organizations develop, improve, and implement their risk management strategies', organised around industry and product 'including but not limited to property, casualty, financial and professional lines, construction, transportation, energy, cyber, surety, trade credit, crisis management, transaction liability, and climate'.",
+   "highlights": [
+    "FY2025 revenue USD 8,497m, up 8 percent with 6 percent organic growth; Q2 2026 USD 2,295m, up 5 percent with 5 percent organic",
+    "Energy is named as one of the organising verticals in the 10-K itself, alongside construction and climate",
+    "Reaches the market through the Global Broking Centres in London, Bermuda and Singapore and through proprietary facilities including the Aon Client Treaty, which the 10-K describes as giving clients access to capital 'regardless of insurance carrier, placement structure or geography'",
+    "The only solution line to beat consensus organic growth in Q1 2026 — 7 percent against 5.6 percent expected, while Reinsurance, Health and Wealth all missed"
+   ],
+   "positioning": "Unlike Marsh McLennan, this company names its competitors in its own filing: 'Marsh McLennan, Willis Towers Watson, Arthur J Gallagher & Company, and Lockton Companies, Inc.', plus insurers that market directly without brokers. It does not name Alliant, Brown & Brown, AmWins, McGriff or CAC Specialty.",
+   "soldThrough": "Retail broking and advisory, with placement through the Global Broking Centres and into proprietary facilities. The company is a large captive manager but this research found no evidence it operates a renewables or storage managing general agency on its own paper.",
+   "targetSegments": [
+    "Large corporate and multinational risk buyers",
+    "Middle-market businesses through NFP and, on completion, USI",
+    "Energy, construction and digital-infrastructure project sponsors"
+   ],
+   "roadmap": "Totalis Specialty Group was announced on 25 August 2026 to launch on 1 January 2027. Aon DPX, a digital placement exchange, was announced on 18 May 2026."
+  },
+  {
+   "name": "Reinsurance Solutions — including Aon Securities",
+   "category": "Risk Capital",
+   "description": "Treaty and facultative reinsurance broking, the Strategy and Technology Group, and a capital-markets arm the 10-K describes without hedging as 'a global investment bank with expertise in insurance-linked securities, capital raising, strategic advice, restructuring, and mergers and acquisitions'. FY2025 revenue USD 2,793m. This is the line through which the data-centre treaty was placed, and the line whose rates are falling fastest.",
+   "highlights": [
+    "FY2025 revenue USD 2,793m, up 5 percent with 6 percent organic growth; ranked first globally among reinsurance brokers on FY2024 revenue at USD 2.656bn — but overtaken by Guy Carpenter in H1 2025, USD 1.877bn against USD 1.952bn, and no source located reports the FY2025 outcome",
+    "The top tier of this company, Marsh Re, Gallagher Re and Howden Re holds more than 85 percent of reinsurance premium per The Insurer — 'roughly six out of every seven dollars'",
+    "Aon Securities' twentieth annual insurance-linked securities report (28 August 2026): alternative capital USD 144.5bn, catastrophe-bond issuance USD 24.9bn, outstanding catastrophe bonds USD 63.4bn, sidecars USD 23bn, 78 sponsors including 16 first-timers, investor return 12.5 percent",
+    "Modelling tools named in the 10-K: Capital Insights Explorer, ReMetrica and PathWise",
+    "Held 5 percent organic growth in Q2 2026 against a 15 to 20 percent fall in treaty rates — the data-centre treaty is what management credited"
+   ],
+   "positioning": "The capital-markets arm is what distinguishes this line from a pure broking desk, and it is the mechanism behind the claim that individual data-centre projects can be structured to USD 13-15bn. Where Marsh Re's September 2026 publications name battery storage and solar zero times, this company's reinsurance arm is the one that placed a purpose-built treaty for the asset class this corpus tracks.",
+   "soldThrough": "Direct broking to insurance and reinsurance carriers, with capital-markets execution through Aon Securities as a broker-dealer.",
+   "targetSegments": [
+    "Primary insurance carriers and cedents",
+    "Insurance-linked securities investors",
+    "Sponsors seeking multi-year collateralised capacity"
+   ],
+   "roadmap": "Aon Securities forecasts catastrophe-bond issuance above USD 20bn for a second consecutive year in 2026."
+  },
+  {
+   "name": "Power, Renewables and Energy Transition",
+   "category": "Risk Capital — industry practice",
+   "description": "The practice through which this company meets batteries and renewables. The power practice claims 'more than 300 power and utility specialists worldwide' and the renewables practice states the company is 'the risk manager and broker to over 1,000 renewable energy projects globally' with 'an integrated team of specialists across broking, risk, engineering, claims, and advisory'. Battery energy storage is named on both pages as a covered technology.",
+   "highlights": [
+    "Sub-sectors named on the renewables page: biomass, geothermal, hydroelectric, onshore wind, offshore wind, solar, wave and tidal, green hydrogen, battery storage, pump storage, and carbon capture and storage; the power page adds gravity storage",
+    "Products named: property damage, machinery breakdown, forced outage, business interruption, natural catastrophe, parametric, general liability, delay in start-up, advance loss of profit, contractors all risks, erection all risks, pandemic, political violence and cyber, plus risk engineering, captive studies and claims recovery consulting",
+    "DOCUMENTED BATTERY PLACEMENT: on 7 July 2026 Pulse Clean Energy reached financial close on two UK battery projects at Plymouth and Dowlais backed by Ariel Green's Technology Performance Insurance offering up to 13 years of protection, with this company as broker — described as the first such policies placed for energy storage projects in the UK market",
+    "A Cyber Property Damage Facility offering 'up to $50M (with additional capacity available if required)' for property damage and business interruption arising from malicious cyber acts, explicitly pitched at battery-storage owners",
+    "COLLECTION GAP: the only megawatt-scale battery figure the company publishes — '+150MW BESS projects insured' — comes from an Australia and Pacific brochure coded June 2018 that also states 'more than 72,000 colleagues' against about 60,000 today. No current global battery portfolio figure, project count or premium is published anywhere located"
+   ],
+   "positioning": "Its published battery guidance is broker-engineering-led rather than standards-referenced. It asks for 'three metres or more of spacing to mitigate the risk and spread of fire' where 'developers... specify only two metres'; it warns that 'the current fire protection systems can do more damage and cause more losses in BESS than a fire itself'; and it states the underwriting problem plainly — 'there is little in the way of claims data for BESS that are plugged into the grid, unlike comparable renewable technologies such as wind or solar'. Across every battery and renewables publication reviewed it names no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC; the single standard it cites is SCOR's 2022 handbook. Marsh McLennan's guidance does the same, so this is a feature of broker-authored guidance rather than of one firm.",
+   "soldThrough": "Retail broking and advisory, into facilities assembled from carrier capacity. No renewables or storage managing general agency on own paper was found — the contrast with kWh Analytics, which holds delegated authority, is structural rather than one of scale.",
+   "targetSegments": [
+    "Renewable energy developers, utilities and independent power producers",
+    "Battery storage owners",
+    "Construction contractors on energy projects"
+   ],
+   "roadmap": "The Low-Carbon Transition Framework for Insurers, launched 17 November 2025, forecasts energy-transition premiums above USD 9bn by 2030, battery storage above USD 1bn of gross written premium by 2027 at about 25 percent compound growth, hydrogen at USD 5bn by 2027, and renewable power insurance up about USD 3bn globally between 2024 and 2030. These are the company's own forecasts, published to help carriers size the market rather than as a commitment of its own capital."
+  },
+  {
+   "name": "NFP, and the USI acquisition — the middle market",
+   "category": "Risk Capital and Human Capital",
+   "description": "The middle-market platform. NFP, acquired for about USD 13bn in April 2024, is not a reporting segment: its revenue is absorbed into the solution lines and it runs as a distinct client-facing brand with its own bolt-on programme. On 30 August 2026 the company agreed to acquire USI Advantage Corp. from KKR and other shareholders for USD 17.0bn in cash — the largest acquisition in its history, agreed thirteen days after its chief financial officer left.",
+   "highlights": [
+    "USI: 'the tenth largest U.S. insurance broker with approximately $3 billion in annual revenue and more than 10,500 team members across nearly 200 U.S. offices', headquartered in Valhalla, New York",
+    "Price USD 17.0bn, or USD 16.7bn net of about USD 278m of tax attributes — about 14.5 times synergized trailing-twelve-month adjusted EBITDA, or roughly 22 times pre-synergy — funded with new debt across a range of maturities, subject to downward adjustment for leakage since 30 June 2026",
+    "Synergies of USD 395m of annual run-rate net adjusted EBITDA, phased USD 92m in 2027, USD 310m in 2028 and USD 373m in 2029; accretive to adjusted EPS only in 2028; integration and transaction expenses about USD 710m plus up to USD 400m of retention incentives over three years",
+    "Leverage expected to reach about 4.8x at closing against a 2.8-3.0x target, returning to target in about 24 months, with share repurchases paused; the company expects to maintain Baa2 with Moody's and A- with S&P",
+    "Mike Sicard, USI's chairman and chief executive, becomes President of Aon plc and global chief executive of Middle Market. Closing expected in Q4 2026; the parties are not required to close before 19 October 2026 and the outside date is 1 June 2027, extendable twice by three months for regulatory approvals",
+    "The management structure came first: Doug Hammond became Global Executive Chairman of Middle Market on 19 August 2026, twelve days before the deal was announced",
+    "The substantial majority of NFP's wealth business was sold to Madison Dearborn Partners, agreed 3 September 2025, producing a USD 1,199m gain and more than USD 2bn of proceeds — which is why Wealth Solutions revenue prints minus 18 percent while running 3 to 5 percent organic"
+   ],
+   "positioning": "This is the second debt-funded middle-market acquisition in thirty months, into a market Marsh McLennan entered with McGriff at USD 7.75bn. On Business Insurance's 2025 brokerage-revenue basis it takes this company from about USD 16.99bn toward about USD 19.9bn against Marsh McLennan's USD 26.66bn — narrowing a gap that has been stable for over fifteen years, and widening the one Gallagher has been trying to close from third.",
+   "soldThrough": "Retail agency distribution across US offices, with USI adding wholesale and excess-and-surplus capability and its own USI One analytics platform.",
+   "targetSegments": [
+    "US middle-market businesses — a segment the company sizes above USD 40bn and at more than a third of US commercial property and casualty premium",
+    "Employee-benefits and retirement buyers",
+    "Excess and surplus lines buyers"
+   ],
+   "roadmap": "Closing expected Q4 2026 subject to regulatory approvals. No financing announcement, bridge facility or notes offering had been published as at 9 September 2026."
+  },
+  {
+   "name": "Health Solutions and Wealth Solutions",
+   "category": "Human Capital",
+   "description": "The people half of the firm: health and benefits consulting and broking, consumer benefits, compensation and talent advisory on one side; retirement consulting, pension administration, pension risk transfer and investment consulting on the other. FY2025 revenue USD 3,839m and USD 2,068m. Not risk transfer for physical assets, and included here because the 10-K's Human Capital segment is a third of the company and because Health and Wealth are where its organic growth is genuinely weak.",
+   "highlights": [
+    "FY2025 organic growth of 5 percent in both lines, but Q1 2026 missed consensus in both — Health 4 percent against 5.3 percent expected, Wealth 1 percent against 2.9 percent",
+    "Health Solutions organic growth decelerated to 2 percent for FY2025 from 6 percent in both Q2 and Q3 2025, attributed to slower discretionary spend in talent solutions and delayed closed sales",
+    "Wealth includes pension risk transfer, delegated and outsourced chief investment officer mandates, master trusts and pooled employer plans; the pooled employer plan passed USD 5bn in August 2025",
+    "Benefits programme design is delivered across more than 120 countries with a proprietary digital enrolment platform"
+   ],
+   "positioning": "If a criticism of this company's organic growth is to be made, this is where it belongs — not in the consolidated number, which at 6 percent for FY2025 beat Marsh McLennan's 4 percent and every major listed competitor except Lockton.",
+   "soldThrough": "Consulting and broking engagements, with NFP as the middle-market benefits channel.",
+   "targetSegments": [
+    "Corporate and institutional employers",
+    "Pension trustees and scheme sponsors",
+    "Multinationals consolidating benefits programmes"
+   ],
+   "roadmap": "Not published."
+  },
+  {
+   "name": "Analytics, AI platforms and published market research",
+   "category": "Cross-segment",
+   "description": "The analytics layer the company presents as its differentiation, delivered through Aon Business Services, plus the research it publishes to set the terms of the markets it brokers.",
+   "highlights": [
+    "Named platforms: the Risk Analyzer family, with Property Risk Analyzer cited on the digital-infrastructure page; Aon Inpoint for insurer-facing analytics; Climate Risk Monitor, upgraded to version 3.0 on 7 May 2026 to quantify extreme heat and cooling demand; and the Resilience Quotient risk-maturity diagnostic",
+    "AI launches through the window: Aon Broker Copilot (23 June 2025), Claims Copilot (11 November 2025, expanded globally 13 May 2026), Contract AI for reinsurance coverage analysis (16 June 2026), an AI Risk Diagnostic (27 July 2026) and Aon DPX, a digital placement exchange (18 May 2026)",
+    "Published data-centre research with dated figures: data-centre energy consumption from 82 GW in 2025 to 220 GW by 2030; more than USD 1.3 trillion of global data-centre investment over five years; 165 percent projected growth in global data-centre power demand by 2030; data centres at about 11 percent of US power demand by 2030; water use from 560 billion litres a year to 1.2 trillion by 2030",
+    "The battery-to-data-centre bridge, stated by the company itself: 'Solar + Battery Storage: Supports peak shaving and sustainability objectives while enhancing grid resilience', with five named insurance consequences including stranded-asset risk from speculative grid applications, bridge power during interconnection delays, and that 'data centers must be insured as utilities with distinct underwriting approaches'",
+    "Sam Beaver, Power Leader in the Global Broking Centre, on interdependency: 'Power, cooling and control systems are increasingly interdependent, creating pathways for rapid fault propagation. Critical risks include coolant distribution failure, electrical instability within inverter-based systems, shared infrastructure faults, battery thermal events and control system errors'"
+   ],
+   "positioning": "The research is the clearest first-party evidence in this corpus that a broker has connected the data-centre build to the storage and generation behind it — a connection Marsh McLennan makes through its power practice but not in its published battery guidance.",
+   "soldThrough": "Bundled with broking and consulting engagements; the research is published free as an agenda-setting instrument.",
+   "targetSegments": [
+    "Existing broking and consulting clients",
+    "Insurers and reinsurers, through Aon Inpoint",
+    "Data-centre developers and their lenders"
+   ],
+   "roadmap": "Aon Business Services is the stated vehicle for accelerating NFP onto a common platform and for further AI deployment; 2026 is the final year of the three-year 3x3 Plan."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Data Center Lifecycle Insurance Program — the USD 5bn tower",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Construction all risks, delay-in-start-up, property damage and business interruption",
+     "value": "Up to USD 5 billion"
+    },
+    {
+     "band": "Capacity",
+     "label": "Third-party liability",
+     "value": "USD 200m outside the United States; USD 100m within the United States"
+    },
+    {
+     "band": "Capacity",
+     "label": "Cyber and technology errors and omissions",
+     "value": "USD 400m"
+    },
+    {
+     "band": "Capacity",
+     "label": "Project cargo",
+     "value": "USD 500m"
+    },
+    {
+     "band": "Capacity",
+     "label": "Terrorism",
+     "value": "USD 1 billion"
+    },
+    {
+     "band": "Security",
+     "label": "Market",
+     "value": "A-rated or higher security through a combination of Lloyd's and company markets"
+    },
+    {
+     "band": "Structure",
+     "label": "Commissioning",
+     "value": "Seamless cover with explicit embedded commissioning coverage, and automatic delay-in-start-up sum reduction as phases go live"
+    },
+    {
+     "band": "Growth",
+     "label": "Capacity history",
+     "value": "USD 1.5bn at launch 9 July 2025; USD 2.5bn 14 January 2026; USD 3.5bn 15 April 2026; USD 5bn 20 July 2026"
+    },
+    {
+     "band": "Reach",
+     "label": "Stated per-project capability",
+     "value": "Individual projects up to USD 13-15bn using alternative capital sources (management statement, Q2 2026)"
+    }
+   ],
+   "notes": "Set against the competing facilities: Marsh's Nimbus stood at USD 2.7bn from January 2026 and Willis's hyperscale construction capacity at USD 3bn. Separately and in addition, the chief executive's FY2025 shareholder letter records the first-ever data-centre-specific reinsurance treaty, 'aligning up to $5 billion of capital behind a single leading insurer' — a different USD 5bn from the one above."
+  },
+  {
+   "product": "Published battery energy storage underwriting criteria",
+   "specs": [
+    {
+     "band": "Engineering",
+     "label": "Enclosure spacing",
+     "value": "'Insurers look for three metres or more of spacing to mitigate the risk and spread of fire, but developers... specify only two metres'"
+    },
+    {
+     "band": "Engineering",
+     "label": "Fire protection",
+     "value": "'The current fire protection systems can do more damage and cause more losses in BESS than a fire itself'"
+    },
+    {
+     "band": "Engineering",
+     "label": "Design review",
+     "value": "Independent design reviews evaluating 'BESS battery module layout and separation, redundancy of main power transformers, and potential risks associated with selected technology platforms'"
+    },
+    {
+     "band": "Data",
+     "label": "The underwriting problem",
+     "value": "'There is little in the way of claims data for BESS that are plugged into the grid, unlike comparable renewable technologies such as wind or solar where there are already substantial data sets of claims information'"
+    },
+    {
+     "band": "Capacity",
+     "label": "Market condition",
+     "value": "'Insurance capacity is... limited' but the industry is 'in a much better position than five years ago', with 'currently enough insurance to cover most projects today as insurers get more comfortable'"
+    },
+    {
+     "band": "Standards",
+     "label": "Certification bodies named",
+     "value": "None. Across every battery and renewables publication reviewed no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC reference appears; the only standard cited is the SCOR Stationary Battery Energy Storage Systems Handbook 2022"
+    },
+    {
+     "band": "Cyber",
+     "label": "Cyber Property Damage Facility",
+     "value": "'Up to $50M (with additional capacity available if required)' for property damage and business interruption from malicious cyber acts"
+    }
+   ],
+   "notes": "The criteria are qualitative and engineering-led rather than code-referenced. NFPA 855 is the code that specifies separation distances; the guidance states the requirement and leaves the code unnamed. Marsh McLennan's battery guidance does the same across seven documents, so the pattern is the segment's rather than this company's."
+  },
+  {
+   "product": "Renewables and power market conditions, as the company reports them",
+   "specs": [
+    {
+     "band": "Rates",
+     "label": "Direction",
+     "value": "'Abundant capacity, combined with strong financial results for both insurers and reinsurers, has contributed to a continued softening of rates through Q1 across the sector' for grid-scale wind, solar and battery storage"
+    },
+    {
+     "band": "Underwriting discipline",
+     "label": "New technology",
+     "value": "'In the case of wind turbines, Type Certification alone isn't enough for many insurers. New and larger wind turbine generator models require fleet leaders to show a significant amount of problem-free, real-world operating hours'"
+    },
+    {
+     "band": "Underwriting discipline",
+     "label": "Component quality",
+     "value": "OEM manufacturing quality of wind turbine blades, solar panels, inverters and BESS modules"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Main power transformers",
+     "value": "'Replacement after a catastrophic breakdown may take several years'"
+    },
+    {
+     "band": "Perils",
+     "label": "Secondary natural catastrophe",
+     "value": "Earthquake, wildfire, windstorm, hail and flood"
+    },
+    {
+     "band": "Claims",
+     "label": "Renewable construction claims 2025",
+     "value": "Up 40 percent on the prior year and above pre-pandemic levels; average claim duration 11-13 months, complex claims beyond 24 months"
+    },
+    {
+     "band": "Claims",
+     "label": "Loss distribution by technology",
+     "value": "Wind 83 percent, hydro 10 percent, solar 7 percent — battery storage is not broken out"
+    },
+    {
+     "band": "Claims",
+     "label": "Data quality",
+     "value": "26 percent of claims categorised 'Other/Unknown'"
+    }
+   ],
+   "notes": "The claims analysis is the company's most quantified renewables publication and it excludes battery storage entirely, saying only that batteries, hydrogen and floating wind 'add underwriting uncertainty before operational performance and repair pathways are established'. Mona Barnes, Global Chief Claims Officer, on the 26 percent unknown: 'A high proportion of unknown causes isn't just a data quality issue. It's a signal about documentation discipline, accountability and how construction risks are being governed on site.'"
+  },
+  {
+   "product": "USI Advantage Corp. acquisition — terms",
+   "specs": [
+    {
+     "band": "Price",
+     "label": "Purchase price",
+     "value": "USD 17.0 billion in cash; USD 16.7 billion net of approximately USD 278 million of tax attributes"
+    },
+    {
+     "band": "Price",
+     "label": "Multiple",
+     "value": "Approximately 14.5 times synergized trailing-twelve-month adjusted EBITDA; about 22 times pre-synergy"
+    },
+    {
+     "band": "Price",
+     "label": "Adjustment",
+     "value": "Subject to downward adjustments for leakage since 30 June 2026"
+    },
+    {
+     "band": "Target",
+     "label": "Scale",
+     "value": "'The tenth largest U.S. insurance broker with approximately $3 billion in annual revenue and more than 10,500 team members across nearly 200 U.S. offices'"
+    },
+    {
+     "band": "Target",
+     "label": "Seller",
+     "value": "KKR and other shareholders"
+    },
+    {
+     "band": "Funding",
+     "label": "Source",
+     "value": "New debt raised across a range of maturities, subject to market conditions"
+    },
+    {
+     "band": "Funding",
+     "label": "Leverage",
+     "value": "Expected to reach about 4.8x at closing against a 2.8-3.0x target, returning to target in about 24 months; share repurchases paused near-term"
+    },
+    {
+     "band": "Funding",
+     "label": "Ratings expectation",
+     "value": "Company expects to maintain Baa2 with Moody's and A- with S&P"
+    },
+    {
+     "band": "Synergies",
+     "label": "Run-rate",
+     "value": "USD 395 million of annual run-rate net adjusted EBITDA — USD 115m from USD 321m of net revenue synergies plus USD 280m of cost savings"
+    },
+    {
+     "band": "Synergies",
+     "label": "Phasing",
+     "value": "USD 92m in 2027, USD 310m in 2028, USD 373m in 2029; accretive to adjusted EPS in 2028"
+    },
+    {
+     "band": "Costs",
+     "label": "One-off",
+     "value": "Integration and transaction expenses approximately USD 710 million, plus up to USD 400 million of retention incentives over three years"
+    },
+    {
+     "band": "Timing",
+     "label": "Closing",
+     "value": "Expected Q4 2026; parties not required to close before 19 October 2026; outside date 1 June 2027 at 5pm New York time, extendable by three months twice if regulatory approvals are pending"
+    },
+    {
+     "band": "Structure",
+     "label": "Vehicles",
+     "value": "Aon North America, Inc. as acquirer and Cortlandt Acquisition Corp. as merger sub"
+    }
+   ],
+   "notes": "Announced nine days before this dossier. S&P's stated downgrade trigger when it revised the outlook to stable on 14 November 2025 was leverage sustained at about 3x or above; this deal takes it to about 4.8x. No post-announcement rating action by either agency had been reported as at 9 September 2026, and no financing announcement, bridge facility or notes offering had been published."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "other",
+   "headline": "Underwriting analytics offering positioned to help insurers avoid concentration risk; company to speak at the KBW insurance conference",
+   "read": "Routine, but the concentration-risk framing is the same problem data-centre accumulation creates for its own carriers.",
+   "source": "https://aon.mediaroom.com/news-releases"
+  },
+  {
+   "date": "2026-08-31",
+   "category": "ma",
+   "headline": "Agreement announced to acquire USI Advantage Corp. for USD 17.0bn in cash — about USD 3bn of revenue, 10,500 people and 200 US offices — funded entirely with new debt, closing expected Q4 2026",
+   "read": "The largest acquisition in the company's history and the defining fact of this dossier: it reverses two years of deleveraging, pauses buybacks, defers accretion to 2028, and was signed with an interim chief financial officer in post.",
+   "source": "https://www.sec.gov/Archives/edgar/data/315293/000119312526375328/d108801d8k.htm"
+  },
+  {
+   "date": "2026-08-28",
+   "category": "market",
+   "headline": "Aon Securities' twentieth annual insurance-linked securities report: alternative capital USD 144.5bn, catastrophe-bond issuance USD 24.9bn, outstanding USD 63.4bn, sidecars USD 23bn, 78 sponsors including 16 first-timers, investor return 12.5 percent",
+   "read": "The alternative-capital pool this company can reach is what makes a USD 13-15bn single-project structure credible.",
+   "source": "https://aon.mediaroom.com/2026-08-28-ILS-Becomes-Foundational-Reinsurance-Capital"
+  },
+  {
+   "date": "2026-08-25",
+   "category": "product-launch",
+   "headline": "Totalis Specialty Group announced, to launch 1 January 2027",
+   "read": "The only forward-dated product commitment in the window.",
+   "source": "https://aon.mediaroom.com/news-releases"
+  },
+  {
+   "date": "2026-08-19",
+   "category": "leadership",
+   "headline": "Doug Hammond, previously chief executive of NFP, becomes Global Executive Chairman of Middle Market including NFP, with a dedicated North American middle-market leadership tier named beneath him",
+   "read": "Twelve days before the USI announcement. The management structure was built before the acquisition that would fill it — which reads as sequencing, not coincidence.",
+   "source": "https://aon.mediaroom.com/2026-08-19-Aon-Announces-Doug-Hammond-as-Global-Executive-Chairman-of-Middle-Market"
+  },
+  {
+   "date": "2026-08-17",
+   "category": "leadership",
+   "headline": "Chief Financial Officer Edmund Reese departs effective immediately to pursue opportunities outside the firm; Nadin Virani, Global Head of Corporate Planning and Analytics, appointed interim Chief Financial Officer with an external search under way; 2026 guidance reaffirmed the same day",
+   "read": "Reese stays as senior advisor to the chief executive through 16 August 2027. Virani's base salary rises USD 50,000 a month until a permanent appointment, with a matching cash bonus. Thirteen days later the company committed USD 17bn. No source connects the two events; the sequence is on the public record.",
+   "source": "https://www.sec.gov/Archives/edgar/data/315293/000119312526354083/d376816d8k.htm"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "financial",
+   "headline": "Q2 2026 results: revenue USD 4,246m up 2 percent with 5 percent organic growth; adjusted EPS USD 3.81 up 9 percent; GAAP diluted EPS USD 2.58 down 3 percent; free cash flow USD 483m, down 34 percent",
+   "read": "An adjusted beat of a cent on a GAAP miss of eleven percent, with free cash flow down a third. Guidance was reaffirmed. Wealth Solutions printed minus 18 percent on divestitures while growing 5 percent organically.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026050367/ex991prq22026.htm"
+  },
+  {
+   "date": "2026-07-20",
+   "category": "product-launch",
+   "headline": "Data Center Lifecycle Insurance Program expanded to USD 5bn with a 'Reliable by Design' approach — the fourth capacity step in twelve months",
+   "read": "The largest data-centre facility any broker has named, and nearly twice Marsh's Nimbus. Joe Peiser: 'Digital infrastructure has become one of the most important and capital-intensive asset classes in the global economy.'",
+   "source": "https://aon.mediaroom.com/2026-07-20-Aon-expands-Data-Center-Lifecycle-Insurance-Program-to-5-billion-with-Reliable-by-Design-Approach-to-Digital-Infrastructure,1"
+  },
+  {
+   "date": "2026-07-07",
+   "category": "order-win",
+   "headline": "Pulse Clean Energy reaches financial close on two UK battery storage projects at Plymouth and Dowlais backed by Ariel Green Technology Performance Insurance offering up to 13 years of cover, with this company as broker — described as the first such policies placed for energy storage in the UK market",
+   "read": "The single documented battery-storage placement in this dossier, and the answer to whether the company's storage franchise is real: it is, but it is one deal and no executive is quoted in the release.",
+   "source": "https://www.stocktitan.net/news/AON/pulse-clean-energy-closes-two-uk-energy-storage-projects-with-o0iay4skkxo6.html"
+  },
+  {
+   "date": "2026-06-26",
+   "category": "market",
+   "headline": "Terence Williams, Head of Commercial Risk for Asia Pacific, on data-centre construction: campuses valued at USD 30-40bn each, developers advised to build 'six US$5 billion sites, physically separated and individually fire-protected' rather than concentrate, and 'never bet against the climate'",
+   "read": "The accumulation problem stated plainly by the broker that has to place it. The company is also reported supporting Factory Mutual in sourcing an additional USD 5bn of data-centre capacity.",
+   "source": "https://www.insurancebusinessmag.com/us/news/construction/data-centers-are-rewriting-construction-insurance-aon-580245.aspx"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "market",
+   "headline": "At kWh Analytics' third annual Broker Council readout, John Katilus says clients want the severe convective storm definition narrowed to exclude straight-line wind, tornado and lightning, arguing that grouping them with hail overstates loss potential and produces overly restrictive terms",
+   "read": "The company's whole contribution to the 2026 readout is a coverage-wording argument on behalf of clients. It is not quoted on batteries in 2026 — the 2025 commissioning-loss observation is not repeated or updated.",
+   "source": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "market",
+   "headline": "Renewable-energy construction claim activity up 40 percent in 2025 and above pre-pandemic levels; loss distribution wind 83 percent, hydro 10 percent, solar 7 percent, with 26 percent of claims categorised 'Other/Unknown'",
+   "read": "The company's most quantified renewables loss publication, and battery storage is not broken out of it at all.",
+   "source": "https://www.aon.com/en/insights/articles/managing-renewable-construction-claims-with-confidence"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "financial",
+   "headline": "Q1 2026 results: revenue USD 5.0bn up 6 percent with 5 percent organic; adjusted EPS USD 6.48 up 14 percent; operating margin 34.1 percent, up 320 basis points",
+   "read": "Commercial Risk carried the quarter at 7 percent organic against 5.6 percent expected while Reinsurance, Health and Wealth all missed consensus.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026029093/ex991prq12026.htm"
+  },
+  {
+   "date": "2026-04-15",
+   "category": "capacity",
+   "headline": "Data Center Lifecycle Insurance Program raised to USD 3.5bn",
+   "read": "The step that took the facility past Marsh's Nimbus at USD 2.7bn.",
+   "source": "https://www.insurancebusinessmag.com/us/news/technology/aon-raises-data-center-insurance-program-to-3-5-billion-571850.aspx"
+  },
+  {
+   "date": "2026-04-10",
+   "category": "financial",
+   "headline": "Quarterly cash dividend increased 10 percent — the sixth consecutive year of double-digit increase",
+   "read": "Four months before the USI commitment paused buybacks. The dividend was not paused.",
+   "source": "https://aon.mediaroom.com/news-releases"
+  },
+  {
+   "date": "2026-04-02",
+   "category": "leadership",
+   "headline": "Senior digital-infrastructure appointments: Stephen Fox as Managing Director, Digital Infrastructure Lifecycle Solutions Advisory — 30 years of property risk engineering, previously at Marsh, JLT Specialty, GlobalFoundries, Intel, Samsung and FM — and Brian Hearst as Global Digital Infrastructure Builders Risk Leader, both reporting to Joe Peiser",
+   "read": "Hiring a property risk engineer out of the fab and factory-mutual world, rather than a broker, is a statement about where the binding constraint on these projects sits.",
+   "source": "https://aon.mediaroom.com/2026-04-02-Aon-advances-digital-infrastructure-capabilities"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "leadership",
+   "headline": "Joe Peiser appointed Chief Executive of Risk Capital, leading both Commercial Risk Solutions and Reinsurance Solutions",
+   "read": "The executive the company puts forward on digital infrastructure now runs both halves of the segment that builds it. He spent nineteen years at Johnson & Higgins and Marsh, and led an MGA at Wright Risk Specialty.",
+   "source": "https://aon.mediaroom.com/news-releases"
+  },
+  {
+   "date": "2026-01-30",
+   "category": "financial",
+   "headline": "FY2025 results: revenue USD 17,181m up 9 percent with 6 percent organic; adjusted operating margin 32.4 percent; adjusted EPS USD 17.07 up 9 percent; GAAP net income up 39 percent on the USD 1,199m NFP wealth disposal gain",
+   "read": "Six percent organic against Marsh McLennan's 4 percent — the reverse of the assumption that this company lags on growth. The GAAP jump is a disposal, not operations.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026004273/ex991prq42025.htm"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "financial",
+   "headline": "Aon Global Limited redeems in full and delists its 2.875 percent senior notes due 2026 from the New York Stock Exchange; the Resilience Quotient risk-maturity diagnostic launched",
+   "read": "Part of the USD 1.9bn of debt repaid across 2025 and the deleveraging the USI deal then reversed.",
+   "source": "https://aon.mediaroom.com/news-releases"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "capacity",
+   "headline": "Data Center Lifecycle Insurance Program expanded to USD 2.5bn",
+   "read": "The second step in the arc, twelve days before Marsh expanded Nimbus to USD 2.7bn.",
+   "source": "https://aon.mediaroom.com/news-releases"
+  },
+  {
+   "date": "2026-01-02",
+   "category": "leadership",
+   "headline": "Greg Case's employment agreement extended from 31 December 2026 to 31 December 2030; previously it had been due to expire 1 April 2028",
+   "read": "Chief executive since April 2005, and now contracted for a twenty-five-year tenure. No succession commentary accompanied the extension.",
+   "source": "https://www.reinsurancene.ws/aon-president-and-ceo-greg-cases-employment-agreement-extended/"
+  },
+  {
+   "date": "2025-11-17",
+   "category": "market",
+   "headline": "Low-Carbon Transition Framework for Insurers launched, forecasting energy-transition premiums above USD 9bn by 2030, battery storage above USD 1bn of gross written premium by 2027 at about 25 percent compound growth, and hydrogen at USD 5bn by 2027",
+   "read": "The company sizing a market for carriers rather than committing its own capital — which is what a capital-light broker does. These are its forecasts, not independent estimates.",
+   "source": "https://aon.mediaroom.com/news-releases?item=138527"
+  },
+  {
+   "date": "2025-11-14",
+   "category": "financial",
+   "headline": "S&P Global Ratings revises the outlook to stable from negative and affirms A-/A-2 on improved leverage: post-NFP leverage peaked at 3.7x in Q2 2024, reached 2.8x for the twelve months to 30 September 2025, and 2.5x pro forma for the USD 2.2bn of NFP wealth proceeds",
+   "read": "S&P's stated downgrade trigger was leverage sustained at about 3x or above. The USI deal announced nine months later takes it to about 4.8x.",
+   "source": "https://uk.investing.com/news/stock-market-news/aons-outlook-revised-to-stable-by-sp-on-improved-leverage-metrics-93CH-4372883"
+  },
+  {
+   "date": "2025-10-20",
+   "category": "market",
+   "headline": "'Securing Power: global strategies for data center energy resilience' published — data-centre consumption from 82 GW in 2025 to 220 GW by 2030, with solar plus battery storage named as supporting peak shaving and grid resilience, and five insurance consequences including stranded-asset risk, bridge power during interconnection delays, and that data centres must be insured as utilities",
+   "read": "The clearest first-party statement by any broker in this corpus connecting the data-centre build to the storage and generation behind it.",
+   "source": "https://www.aon.com/en/insights/articles/securing-power-global-strategies-for-data-center-energy-resilience"
+  },
+  {
+   "date": "2025-09-03",
+   "category": "ma",
+   "headline": "Definitive agreement to sell the significant majority of NFP's wealth business to Madison Dearborn Partners",
+   "read": "Produced a USD 1,199m gain and more than USD 2bn of proceeds, funding the deleveraging that earned the S&P outlook change — and explaining why Wealth Solutions revenue prints minus 18 percent while growing organically.",
+   "source": "https://aon.mediaroom.com/2025-09-03-Aon-Signs-Definitive-Agreement-to-Sell-Significant-Majority-of-NFPs-Wealth-Business-to-Madison-Dearborn-Partners"
+  },
+  {
+   "date": "2025-07-09",
+   "category": "product-launch",
+   "headline": "Data Center Lifecycle Insurance Program launched at USD 1.5bn — a full-lifecycle facility for cloud and AI infrastructure bringing traditionally fragmented risk classes into a single coordinated solution",
+   "read": "The origin of the arc, and the product the FY2025 10-K later elevated into its own business description.",
+   "source": "https://aon.mediaroom.com/2025-07-09-Aon-unveils-full-life-cycle-insurance-facility-to-help-clients-manage-risk-and-deliver-cloud-and-AI-infrastructure-faster"
+  },
+  {
+   "date": "2025-07-02",
+   "category": "market",
+   "headline": "At kWh Analytics' 2025 Broker Council readout, John Katilus reports that 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms'",
+   "read": "Verified verbatim and correctly attributed. It is also the company's only published statement of battery loss experience anywhere: this research found no counterpart in its own publications, so either it shares loss data in industry fora without publishing it, or the observation never became a company publication.",
+   "source": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm"
+  },
+  {
+   "date": "2025-06-23",
+   "category": "market",
+   "headline": "'An insurer roadmap for navigating the energy transition' published, sizing battery storage above USD 1bn of gross written premium by 2027 at about 25 percent compound growth and enumerating seven product categories including warranty and performance cover, parametric outage triggers, residual value guarantees and battery-health-linked premiums",
+   "read": "A catalogue of products for a market the company expects rather than a description of one it serves — most of the seven categories are not offerings it publishes.",
+   "source": "https://www.aon.com/en/insights/articles/reinsurance-roadmap-for-energy-transition"
+  },
+  {
+   "date": "2025-06-09",
+   "category": "corporate",
+   "headline": "2025 Investor Day: guidance reaffirmed at mid-single-digit or greater organic revenue growth, double-digit free cash flow growth, and a double-digit free cash flow compound growth rate across 2023 to 2026",
+   "read": "Greg Case: 'By structurally changing our model to put clients at the center of everything we do, we've built a truly differentiated platform — Aon United.'",
+   "source": "https://aon.mediaroom.com/2025-06-09-Aon-Details-a-Powerful-Platform-for-Growth-at-2025-Investor-Day"
+  },
+  {
+   "date": "2025-03-17",
+   "category": "leadership",
+   "headline": "Eric Andersen steps down as President after 28 years with the company, becoming senior advisor to the chief executive through June 2026; Greg Case assumes the President title",
+   "read": "Case has since held both titles. Andersen joined through the Minet acquisition in 1997 and was credited with integrating Risk Capital and Human Capital and operationalising the 3x3 Plan.",
+   "source": "https://riskandinsurance.com/aons-eric-andersen-transitions-to-senior-advisor-role-to-ceo-greg-case/"
+  },
+  {
+   "date": "2024-03-28",
+   "category": "market",
+   "headline": "'Stakeholders must work together to unlock the promise in battery energy storage systems' published: insurers look for three metres or more of enclosure spacing where developers specify two, current fire protection systems 'can do more damage and cause more losses in BESS than a fire itself', and there is 'little in the way of claims data for BESS that are plugged into the grid'",
+   "read": "The company's most substantive battery publication, and the one that states the underwriting problem this corpus exists around. It names no standard and no certification body.",
+   "source": "https://www.aon.com/unitedkingdom/insights/stakeholders-must-work-together-to-unlock-bess"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "kwh-analytics",
+   "type": "partner",
+   "status": "active",
+   "since": "2025",
+   "via": "Broker Council",
+   "note": "Holds a named seat on kWh Analytics' Renewable Energy Broker Council in both published years, represented both times by the same person — the only firm on the council with that continuity.",
+   "context": "John Katilus represents the company in the 2025 readout (Insurance Journal, 2 July 2025) and again in the 2026 readout (pv magazine USA, 9 June 2026). His 2025 contribution is the single most-cited battery observation in this corpus: 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms.' His 2026 contribution is a coverage-wording argument — that clients want the severe convective storm definition narrowed to exclude straight-line wind, tornado and lightning, because grouping them with hail overstates loss potential.\n\nThe relationship is distribution rather than rivalry, and the structural difference matters: kWh Analytics holds delegated underwriting authority and binds carrier paper, while this company is capital-light by stated strategy and assembles facilities from other people's capacity. This research found no evidence it operates a renewables or storage managing general agency of its own. That is why the challenger seats it on its council rather than competing with it.",
+   "source": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm"
+  },
+  {
+   "slug": "marsh-mclennan",
+   "type": "competitor",
+   "status": "active",
+   "note": "The other incumbent in this segment — second to it on every published revenue ranking for more than fifteen consecutive years, ahead of it on data-centre capacity and on organic growth, and adverse to it in court.",
+   "context": "AM Best's 2025 ranking puts Marsh McLennan first at USD 26.98bn against this company at USD 17.20bn, a gap of about USD 9.8bn, and Business Insurance ranks them first and second in both its global and its US-business tables. The measure is contested: Marsh McLennan's total bundles consulting revenue that is not broking, and AM Best's own 2018 table showed this company larger on a broking-only basis. No source published since offers a clean broking-only comparison.\n\nOn the two measures that matter to this corpus the ranking inverts. Organic growth for FY2025 was 6 percent here against Marsh McLennan's 4 percent. And on data-centre construction capacity this company's facility reached USD 5bn in July 2026 against Nimbus at USD 2.7bn, plus a first-of-its-kind data-centre reinsurance treaty; Marsh McLennan's answer came on the operational side with Stratus in August 2026.\n\nThey are also litigants. Marsh USA sued this company and Robert McDonough in federal court in New York in April 2025 after twenty employees resigned within a 38-minute window, McDonough becoming chief executive of its North American construction, infrastructure and surety group seven days later. It declined to comment.",
+   "source": "https://www.reinsurancene.ws/marsh-remains-worlds-largest-insurance-broker-with-2025-revenues-of-almost-27bn/"
+  },
+  {
+   "slug": "dnv",
+   "type": "other",
+   "status": "active",
+   "note": "Adjacent seats at the same financial close rather than a commercial relationship — and the same documented absence found on the other incumbent's side.",
+   "context": "DNV certifies and writes recommended practice for grid-scale storage, including RP-0043; this company advises the buyer and places the risk. The DNV dossier in this corpus records that it found no insurer document citing RP-0043 or naming any certifier.\n\nThis research corroborates that from the other direction. Across every battery and renewables publication reviewed here — the two UK battery articles, the energy-transition roadmap, the clean-energy-lifecycle article, the renewable construction claims analysis, the Asia-Pacific construction-to-operations piece, the power and renewables capability pages and the Spring 2026 market update — no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC reference appears. The single standard cited anywhere is SCOR's 2022 handbook. What substitutes for a named standard is qualitative engineering criteria: three metres of enclosure spacing, wind-turbine fleet-leader operating hours, OEM facility provenance. Marsh McLennan's guidance does the same across seven documents. Two incumbent brokers, independently, state the requirement and leave the code unnamed.",
+   "source": "https://www.aon.com/unitedkingdom/insights/stakeholders-must-work-together-to-unlock-bess"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Irish domicile and OECD Pillar Two",
+   "status": "in-effect",
+   "effectiveDate": "2024-01-01",
+   "exposure": "The 10-K states the company is 'subject to income taxes in Ireland, the U.K., the U.S., Singapore and many other jurisdictions' and could be taxed more heavily 'as a result of changes in eligibility for the benefits of current income tax treaties'. On Pillar Two it is specific: the OECD's 15 percent country-by-country minimum tax has been enacted by 'Ireland, the U.K., Singapore, and many E.U. member states', the company's net income 'is subject to the 15% minimum tax in countries that have enacted Pillar Two, and in Ireland (Aon's parent company location) with respect to countries that have not enacted a qualifying minimum tax', and there remains 'significant uncertainty as to how Pillar Two applies to Aon in prior years'. The GAAP effective tax rate was 21.2 percent in FY2025 against 21.4 percent in FY2024.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000119312526187633/aon_plc_2025_ars.pdf"
+  },
+  {
+   "regime": "Irish corporate law and enforcement of judgments",
+   "status": "in-effect",
+   "exposure": "A distinct risk factor states that 'We are incorporated in Ireland, and Irish law differs from the laws in effect in the U.S. and may afford less protection to holders of our securities', and that 'It may not be possible to enforce court judgments obtained in the U.S. against us in Ireland' because 'the U.S. currently does not have a treaty with Ireland providing for the reciprocal recognition and enforcement of judgments'. Distributions to shareholders require distributable profits obtained through intercompany dividends or a reduction in share capital 'approved by the High Court of Ireland' — a structural constraint on the buyback and dividend policy that a US-incorporated peer does not carry.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000119312526187633/aon_plc_2025_ars.pdf"
+  },
+  {
+   "regime": "Climate change and insurability",
+   "status": "in-effect",
+   "exposure": "The most directly relevant risk factor in this dossier, because it is the risk of having nothing to broker: 'If access to underwriting markets for certain lines of coverage becomes unavailable or difficult due to the impact of climate change on the claims environment, this may have a negative impact on our clients' access to coverage, which could in turn reduce our ability to place certain lines of coverage and negatively impact our business.' A companion sentence states that 'Climate change may increase the likelihood or severity of a natural or human-caused disaster.' Battery storage and utility-scale renewables sit inside exactly that exposure — the company's own battery guidance records that capacity 'is... limited' and that grid-connected storage has 'little in the way of claims data'.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000119312526187633/aon_plc_2025_ars.pdf"
+  },
+  {
+   "regime": "Artificial intelligence regulation and AI operational risk",
+   "status": "in-effect",
+   "exposure": "The 10-K names 'additional requirements related to the use of artificial intelligence, and the use, access, privacy, protection, management, localization and transfer of data' as a compliance burden, and carries a separate operational risk factor: the company 'continue[s] to invest in artificial intelligence, particularly in generative artificial intelligence tools', and certain use cases 'could pose strategic, operational, legal, ethical, regulatory' risks 'where there is inadequate human oversight'. AI also appears as a competitive threat — 'new and non-traditional competitors (including InsurTech firms utilizing artificial intelligence or other emerging technologies)' — which the market priced on 9 February 2026 when broker shares fell across the sector on an AI-native comparison app.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000119312526187633/aon_plc_2025_ars.pdf"
+  },
+  {
+   "regime": "Antitrust — the terminated Willis Towers Watson combination",
+   "status": "expired",
+   "effectiveDate": "2021-07-26",
+   "exposure": "The 2021 attempt to combine with Willis Towers Watson, at about USD 30bn, was abandoned on 26 July 2026 to end Department of Justice litigation, with a USD 1bn termination fee paid. The European Commission had granted conditional approval on 12 July 2021 subject to divestitures to Arthur J. Gallagher, and Turkey and South Africa had cleared it; the DOJ alone stopped it. In the FY2025 10-K the matter survives in only two places — WTW as a named competitor, and an interest accrual for income tax reserves 'related to the termination fee payment made in connection with the Company's terminated proposed combination with Willis Towers Watson'. No WTW-specific antitrust risk factor remains. The precedent is still cited as the benchmark for broker-deal scrutiny, and it is the reason the USI acquisition's regulatory path is worth watching.",
+   "source": "https://www.justice.gov/archives/opa/pr/attorney-general-merrick-b-garland-s-statement-aon-and-willis-towers-watson-decision"
+  },
+  {
+   "regime": "Data protection, sanctions and financial crime",
+   "status": "in-effect",
+   "exposure": "The 10-K enumerates the perimeter in one paragraph: businesses are 'subject to extensive legal and regulatory oversight throughout the world, including the Irish Companies Act, the U.S. securities laws... the rules and regulations promulgated by the FCA and a variety of other laws' addressing 'licensing, data privacy, data management and data protection, artificial intelligence, trade sanctions laws, restrictions and export controls, anti-money laundering... antitrust and competition, anti-corruption'. Named extraterritorial statutes: the Foreign Corrupt Practices Act, FATCA, the UK Bribery Act 2010 and the EU General Data Protection Regulation. The company transacts inside sanctioned-adjacent theatres with government support — a USD 25m war-risk facility for Ukraine with KNIAZHA Vienna Insurance Group and the US Development Finance Corporation was announced on 9 February 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000315293/000119312526187633/aon_plc_2025_ars.pdf"
+  },
+  {
+   "regime": "SEC enforcement — Aon Investments USA and the PSERS matter",
+   "status": "in-effect",
+   "effectiveDate": "2024-01",
+   "exposure": "In January 2024 the SEC charged Aon Investments USA Inc., formerly Aon Hewitt Investment Consulting, and a former partner with misleading the Pennsylvania Public School Employees' Retirement System about discrepancies in investment-return calculations. It settled for a USD 1m civil penalty plus USD 542,187 of disgorgement and prejudgment interest. A Fair Fund distribution plan was approved by SEC order on 7 April 2026, so the matter remains live administratively. Separately, the company recognised USD 197m of legal settlement expense in Q4 2023 over transactions where capital was arranged by Vesttoo, primarily involving letters of credit alleged to be fraudulent; its Bermuda segregated-account vehicle White Rock sued China Construction Bank in August 2024 seeking at least USD 140m, and that litigation was still live in 2026.",
+   "source": "https://www.sec.gov/enforcement-litigation/distributions-harmed-investors/matter-aon-investments-usa-inc-fka-aon-hewitt-investment-consulting-inc"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Greg Case",
+   "title": "President and Chief Executive Officer",
+   "photo": "images/execs/aon-case.jpg",
+   "background": [
+    "Chief Executive Officer since April 2005; assumed the additional title of President in March 2025 when Eric Andersen stepped down",
+    "Employment agreement extended on 2 January 2026 from 31 December 2026 to 31 December 2030 — a contracted tenure approaching twenty-five years, with no succession commentary published alongside it",
+    "Seventeen years at McKinsey & Company, latterly head of the Financial Services Practice, previously responsible for the Global Insurance Practice and a member of the Shareholders' Council",
+    "Earlier: Piper, Jaffray and Hopwood in investment banking, and the Federal Reserve Bank of Kansas City",
+    "MBA, Harvard Business School; summa cum laude, Kansas State University",
+    "Age 63"
+   ]
+  },
+  {
+   "name": "Nadin Virani",
+   "title": "Interim Chief Financial Officer",
+   "photo": "images/execs/aon-virani.jpg",
+   "background": [
+    "Appointed interim on 17 August 2026, the day Edmund Reese departed; an external and internal search for a permanent appointment is under way",
+    "Global Head of Corporate Planning and Analytics immediately before, and an Executive Committee member",
+    "Eighteen years at American Express in chief financial officer roles across London, Frankfurt and New York",
+    "Head of Corporate Planning and Analytics at Broadridge Financial",
+    "Compensation while interim: base salary increased by USD 50,000 per month until a permanent chief financial officer assumes the role, plus a cash bonus equal to the total additional salary earned",
+    "Age 49",
+    "Was in post as interim when the company committed USD 17.0bn to the USI acquisition thirteen days later"
+   ]
+  },
+  {
+   "name": "Joe Peiser",
+   "title": "Chief Executive, Risk Capital",
+   "photo": "images/execs/aon-peiser.jpg",
+   "background": [
+    "Appointed 12 February 2026, leading both Commercial Risk Solutions and Reinsurance Solutions — the single most relevant executive to this dossier and the company's named voice on digital infrastructure",
+    "On the data-centre facility: 'Digital infrastructure has become one of the most important and capital-intensive asset classes in the global economy'",
+    "The reporting line for the April 2026 digital-infrastructure advisory hires",
+    "Previously Global Chief Executive of Commercial Risk Solutions, and Commercial Risk Leader for North America; joined in 2021",
+    "Prior: Head of Broking at Willis Towers Watson Corporate Risk and Broking; President of Wright Risk Consulting; led Wright Risk Specialty, a managing general agency — so he has run the kind of business kWh Analytics is",
+    "Nineteen years at Johnson & Higgins and Marsh from 1986 to 2005, in New York, London and Bermuda",
+    "Inducted into Insurance Business America's Insurance Hall of Fame in 2022"
+   ]
+  },
+  {
+   "name": "Andy Marcell",
+   "title": "Deputy Chief Executive and Senior Executive Vice President, Risk Capital and Human Capital",
+   "photo": "images/execs/aon-marcell.jpg",
+   "background": [
+    "Joined in 2015; Chief Executive of Global Solutions from June 2025, Chief Executive of Risk Capital from 2023 to June 2025, and Chief Executive of Reinsurance from 2018 to 2023",
+    "Twenty-five years at Guy Carpenter — now Marsh Re — as Chief Executive of US Operations, Head of Global Facultative and a Board of Managers member, starting in its London office in 1990",
+    "Began as a convertible equity trader at Hoare Govett in London",
+    "Age 58"
+   ]
+  },
+  {
+   "name": "Edmund Reese",
+   "title": "Senior Advisor (Executive Vice President and Chief Financial Officer until 17 August 2026)",
+   "background": [
+    "Departed the chief financial officer role effective immediately on 17 August 2026 'to pursue opportunities outside the firm'; serving as senior advisor to the chief executive through 16 August 2027",
+    "Sources disagree on when he became chief financial officer — one report says 2022, another says he exited 'after two years', and two others place his arrival in July 2024 succeeding Christa Davies. This dossier records the discrepancy rather than choosing",
+    "Prior: Chief Financial Officer of Broadridge Financial Solutions from 2020 to 2024; before that Senior Vice President and Chief Financial Officer of American Express's Global Consumer Services Group from April 2019"
+   ]
+  },
+  {
+   "name": "Anne Corona",
+   "title": "Chief Executive of North America and Global Chief Commercial Officer",
+   "photo": "images/execs/aon-corona.jpg",
+   "background": [
+    "Named Chief Executive of North America on 10 March 2026",
+    "Previously Chief Executive of Enterprise Clients and Global Chief Commercial Officer from December 2024; before that Chief Executive, Asia Pacific; President of the Financial Services Group; and Chief of Staff to the global chief executive",
+    "With the company since 2000",
+    "Age 48"
+   ]
+  },
+  {
+   "name": "Byron Beebe",
+   "title": "Chief Executive, Human Capital",
+   "photo": "images/execs/aon-beebe.jpg",
+   "background": [
+    "Appointed 15 October 2025, leading Health Solutions and Wealth Solutions",
+    "Runs the segment where the company's organic growth is genuinely weak — Health at 2 percent for FY2025 and Wealth at 1 percent in Q1 2026 against 2.9 percent expected"
+   ]
+  },
+  {
+   "name": "Alison Clarke",
+   "title": "Head of Renewables, Global Broking Centre (United Kingdom)",
+   "background": [
+    "Co-author of the company's most substantive battery-storage publication, 'Stakeholders must work together to unlock the promise in battery energy storage systems' (28 March 2024)",
+    "The three-metre spacing finding is hers and Jon Wiegand's: 'Insurers look for three metres or more of spacing to mitigate the risk and spread of fire, but developers... specify only two metres'",
+    "Also cited in the October 2025 data-centre energy-resilience research"
+   ]
+  },
+  {
+   "name": "Jon Wiegand",
+   "title": "Head of Power, Global Broking Centre (United Kingdom)",
+   "background": [
+    "Co-author of the 2024 battery-storage publication",
+    "The counter-intuitive underwriting finding is his and Alison Clarke's: 'The current fire protection systems can do more damage and cause more losses in BESS than a fire itself'",
+    "And the data problem this corpus exists around: 'There is little in the way of claims data for BESS that are plugged into the grid, unlike comparable renewable technologies such as wind or solar'"
+   ]
+  },
+  {
+   "name": "John Katilus",
+   "title": "The company's representative on kWh Analytics' Renewable Energy Broker Council",
+   "background": [
+    "Named for the company in both published council readouts — Insurance Journal, 2 July 2025, and pv magazine USA, 9 June 2026 — the only firm on the council represented by the same person in both years",
+    "2025, and the most-cited battery observation in this corpus: 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms'",
+    "2026, on coverage wording: 'clients would like to see the very broad, all-encompassing definition of SCS changed to exclude straight-line wind, tornado, and lightning. Asset owners and Aon feel that grouping these perils with hail overstates their loss potential and leads to overly restrictive terms that don't reflect the underlying risk'"
+   ]
+  },
+  {
+   "name": "Carol Stark",
+   "title": "Managing Director, Renewable Energy Practice Leader, North America",
+   "background": [
+    "The named North American renewables practice leader, cited on the June 2026 tax-credit and credit-insurance research for US digital infrastructure and on the October 2025 data-centre energy-resilience work",
+    "Collection note: the company publishes no consolidated Natural Resources leadership page and names no global head of the practice, so the energy leadership recorded in this dossier is assembled from article bylines"
+   ]
+  },
+  {
+   "name": "Sam Beaver",
+   "title": "Power Leader, Global Broking Centre",
+   "background": [
+    "Author of the July 2026 analysis of data-centre operational risk, and the source of the clearest statement anyone at either incumbent has published on how storage fails inside a data centre: 'Power, cooling and control systems are increasingly interdependent, creating pathways for rapid fault propagation. Critical risks include coolant distribution failure, electrical instability within inverter-based systems, shared infrastructure faults, battery thermal events and control system errors'"
+   ]
+  },
+  {
+   "name": "Brian Hearst",
+   "title": "Global Digital Infrastructure Builders Risk Leader",
+   "background": [
+    "Appointed to the role on 2 April 2026; previously Data Center and Life Sciences Builders Risk Leader for North America",
+    "About forty years of experience; with the company since 2018",
+    "Named at the data-centre facility's launch in July 2025, and the source of the observation that hyperscale campuses run 'in the billions of dollars on a 30-month construction schedule or less'"
+   ]
+  },
+  {
+   "name": "Stephen Fox",
+   "title": "Managing Director, Digital Infrastructure Lifecycle Solutions Advisory",
+   "background": [
+    "Appointed 2 April 2026, reporting to Joe Peiser",
+    "More than thirty years in property risk engineering",
+    "Prior: Marsh, JLT Specialty, GlobalFoundries, Intel, Samsung and FM — hired out of semiconductor fabs and a property mutual rather than out of broking, which is a statement about where the binding constraint on these projects sits"
+   ]
+  },
+  {
+   "name": "Wouter Bosschaart",
+   "title": "Director, Strategy and Technology Group; global climate and net-zero transition leader for insurers and reinsurers",
+   "background": [
+    "Lead author of the June 2025 insurer roadmap for the energy transition, and the named voice on the November 2025 Low-Carbon Transition Framework",
+    "The source of the company's published market sizing: energy-transition premiums above USD 9bn by 2030, battery storage above USD 1bn of gross written premium by 2027 at about 25 percent compound growth, and hydrogen at USD 5bn by 2027"
+   ]
+  },
+  {
+   "name": "Mona Barnes",
+   "title": "Global Chief Claims Officer",
+   "background": [
+    "Author of the June 2026 renewable construction claims analysis",
+    "On the 26 percent of claims recorded as 'Other/Unknown': 'A high proportion of unknown causes isn't just a data quality issue. It's a signal about documentation discipline, accountability and how construction risks are being governed on site'"
+   ]
+  },
+  {
+   "name": "Lester B. Knight",
+   "title": "Chairman of the Board",
+   "background": [
+    "Chairs the Governance and Nominating Committee",
+    "Founding Partner, Roundtable Healthcare Partners"
+   ]
+  },
+  {
+   "name": "Jin-Yong Cai",
+   "title": "Independent Director; Chair of the Finance Committee",
+   "background": [
+    "Partner, Global Infrastructure Partners — the infrastructure manager now inside BlackRock, and the board seat closest to the asset class this corpus covers",
+    "Chairs the committee that would have overseen the financing structure for the USI acquisition"
+   ]
+  },
+  {
+   "name": "Jeffrey C. Campbell",
+   "title": "Independent Director; Chair of the Audit Committee",
+   "background": [
+    "Retired Vice Chairman and Chief Financial Officer, American Express — the same company both the departing and the interim chief financial officer came from"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Fiscal year ends 31 December; figures are as filed in the 8-K earnings exhibits and the FY2025 10-K. Two things to hold on to. First, the GAAP and adjusted lines diverge sharply in FY2025 and the reason is a disposal, not operations: net income rose 39 percent and GAAP diluted EPS 36 percent because of a USD 1,199m gain on selling the majority of NFP's wealth business, while adjusted EPS rose 9 percent. The same disposal is why Wealth Solutions revenue prints minus 18 or 19 percent while growing 3 to 5 percent organically. Second, the company publishes no leverage ratio or debt-to-EBITDA target in its results releases or its 10-K; the leverage figures below come from S&P and from management commentary relayed by third parties, and are labelled accordingly.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The peak-leverage year: total debt closed at USD 17,016m after funding the roughly USD 13bn NFP acquisition, which completed in April 2024. S&P recorded leverage peaking at 3.7x in Q2 2024.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$15,698m",
+      "expected": "",
+      "verdict": "",
+      "result": "Organic revenue growth 6%.",
+      "kpi": "revenue",
+      "usdMillions": 15698,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating income (GAAP)",
+      "actual": "$3,835m, margin 24.4%",
+      "expected": "",
+      "verdict": "",
+      "result": "Adjusted operating income $4,939m at a 31.5% adjusted margin."
+     },
+     {
+      "name": "Net income attributable to shareholders",
+      "actual": "$2,654m",
+      "expected": "",
+      "verdict": "",
+      "result": "",
+      "kpi": "net-income",
+      "usdMillions": 2654,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "GAAP $12.49; adjusted $15.60",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Cash flow and debt",
+      "actual": "Cash flow from operations $3,035m; free cash flow $2,817m; total debt $17,016m",
+      "expected": "",
+      "verdict": "",
+      "result": "Buybacks were cut hard to fund deleveraging — about $1bn in 2024 against an average above $3bn a year across 2021 to 2023."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "Six percent organic growth against Marsh McLennan's 4 percent — the fact that most cleanly refutes the assumption that this company lags its larger rival on growth. Independent commentary put Marsh McLennan's 4 percent below every major listed competitor except Brown & Brown.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$17,181m, up 9%",
+      "expected": "",
+      "verdict": "",
+      "result": "Organic revenue growth 6%, the second consecutive year at that rate. Risk Capital $11,290m (up 7%); Human Capital $5,907m (up 13%).",
+      "kpi": "revenue",
+      "usdMillions": 17181,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Revenue by solution line",
+      "actual": "Commercial Risk $8,497m (+8%, 6% organic); Reinsurance $2,793m (+5%, 6% organic); Health $3,839m (+15%, 5% organic); Wealth $2,068m (+10%, 5% organic)",
+      "expected": "",
+      "verdict": "",
+      "result": "Health's full-year organic of 5% masks a Q4 collapse to 2%, attributed to slower discretionary spend in talent solutions and delayed closed sales."
+     },
+     {
+      "name": "Operating income (GAAP)",
+      "actual": "$4,344m, up 13%; margin 25.3%, up 90 basis points",
+      "expected": "",
+      "verdict": "",
+      "result": "Adjusted operating income $5,563m, up 13%, at a 32.4% adjusted margin, also up 90 basis points."
+     },
+     {
+      "name": "Net income attributable to shareholders",
+      "actual": "$3,695m, up 39%",
+      "expected": "",
+      "verdict": "",
+      "result": "The increase is the $1,199m gain on the NFP wealth disposal, not operations.",
+      "kpi": "net-income",
+      "usdMillions": 3695,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$17.07, up 9%",
+      "expected": "",
+      "verdict": "",
+      "result": "GAAP diluted EPS $17.02, up 36%. Q4 2025 adjusted EPS of $4.85 beat a $4.75 consensus by 2.11%, while Q4 revenue of $4.3bn missed a $4.38bn consensus by 1.83%."
+     },
+     {
+      "name": "Cash flow and capital",
+      "actual": "Cash flow from operations $3,481m, up 15%; free cash flow $3,218m, up 14%; buybacks 2.7m shares for $1.0bn at an average $365.91; dividends paid $629m",
+      "expected": "",
+      "verdict": "",
+      "result": "Total debt fell to $15,249m from $17,016m — $1.9bn repaid in the year — with $2.0bn of available revolving credit across two facilities. Remaining buyback authorisation $1.3bn at year end."
+     },
+     {
+      "name": "Restructuring",
+      "actual": "Accelerating Aon United expense $365m (FY2024 $389m, 2023 $135m); NFP integration costs $77m",
+      "expected": "",
+      "verdict": "",
+      "result": "The programme is expected to cost about $1.3bn cumulatively for about $450m of annualised savings by the end of 2027; roughly $1,077m had been spent by mid-2026."
+     }
+    ]
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "commentary": "The strongest margin quarter in the window, carried by one solution line. Three of the four missed consensus organic growth.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$5.0bn, up 6% with 5% organic",
+      "expected": "$4.96bn (Zacks)",
+      "verdict": "beat",
+      "result": "Beat by 1.48%."
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$6.48, up 14%",
+      "expected": "$6.33 (Zacks)",
+      "verdict": "beat",
+      "result": "Beat by 2.36%. GAAP diluted EPS $5.63 against $4.43."
+     },
+     {
+      "name": "Segment organic growth against consensus",
+      "actual": "Commercial Risk 7%, Reinsurance 4%, Health 4%, Wealth 1%; consolidated 5%",
+      "expected": "Commercial Risk 5.6%, Reinsurance 4.5%, Health 5.3%, Wealth 2.9%; consolidated 5%",
+      "verdict": "mixed",
+      "result": "Only Commercial Risk beat. Wealth missed by nearly two points. Zacks Rank 3 (Hold)."
+     },
+     {
+      "name": "Margins and cash",
+      "actual": "Operating margin 34.1% against 30.9%, up 320 basis points; adjusted margin 39.1%; operating cash flow $430m, up 207%; free cash flow $363m, up 332%",
+      "expected": "",
+      "verdict": "",
+      "result": "Wealth Solutions revenue fell 19% on the NFP wealth divestiture while growing 1% organically."
+     },
+     {
+      "name": "Capital",
+      "actual": "$500m of buybacks (1.5m shares); $162m of dividends; quarterly dividend raised 10% on 10 April 2026",
+      "expected": "",
+      "verdict": "",
+      "result": "The sixth consecutive year of double-digit dividend increase."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026 (and H1 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "The last reported quarter before the USI commitment. Organic growth normalised to 5 percent across all four lines, margins expanded, and free cash flow fell a third. Reinsurance Solutions held 5 percent organic against a 15 to 20 percent decline in treaty rates, which management attributed to data-centre new business.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$4,246m, up 2% with 5% organic; H1 $9,280m, up 4% with 5% organic",
+      "expected": "$4.27bn (also reported as $4.28bn)",
+      "verdict": "miss",
+      "result": "Missed by about 0.5%. Divestitures were a 4% revenue headwind in the quarter.",
+      "kpi": "revenue",
+      "usdMillions": 4246,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted diluted EPS",
+      "actual": "$3.81, up 9%; H1 $10.29, up 12%",
+      "expected": "$3.80 (Investing.com); Zacks records a 1.1% beat against its own consensus",
+      "verdict": "beat",
+      "result": "A beat of a single cent on one basis. Sources disagree on the magnitude and both are recorded. The shares fell about 2.35% pre-market."
+     },
+     {
+      "name": "Revenue by solution line",
+      "actual": "Commercial Risk $2,295m (+5%, 5% organic); Reinsurance $711m (+3%, 5% organic); Health $818m (+6%, 5% organic); Wealth $426m (-18%, 5% organic)",
+      "expected": "",
+      "verdict": "",
+      "result": "H1: Commercial Risk $4,518m (6% organic), Reinsurance $1,990m (4%), Health $1,937m (5%), Wealth $846m (3%)."
+     },
+     {
+      "name": "GAAP measures",
+      "actual": "Operating income $915m, up 7%, margin 21.5%; net income $551m, down 5%; GAAP diluted EPS $2.58, down 3%",
+      "expected": "$2.89 GAAP EPS",
+      "verdict": "miss",
+      "result": "A GAAP miss of about 10.8% against an adjusted beat. Adjusted operating income $1,227m, up 5%, at a 28.9% adjusted margin."
+     },
+     {
+      "name": "Cash flow",
+      "actual": "Operating cash flow $556m, down 30%; free cash flow $483m, down 34%; H1 free cash flow $846m, up 4%",
+      "expected": "",
+      "verdict": "",
+      "result": "The quarterly decline is the sharpest reversal in the window against a full-year guide of double-digit free cash flow growth."
+     },
+     {
+      "name": "Balance sheet and capital",
+      "actual": "Total debt $14,967m ($2,020m short-term, $12,947m long-term); cash $1,062m; fiduciary assets $20,698m; total shareholders' equity $9,598m; leverage 2.7x",
+      "expected": "",
+      "verdict": "",
+      "result": "H1 buybacks $1.1bn — already past the full-year $1bn objective — with remaining authorisation of $7.7bn against $1.3bn at the end of 2025. No board authorisation announcement for that increase was located. The USI acquisition announced on 30 August 2026 takes leverage to about 4.8x and pauses buybacks."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that this company is an incumbent of the insurance-and-risk-transfer segment, and specifically the second incumbent rather than a co-equal of the first. Basis: AM Best has ranked it second globally on broker revenue for more than fifteen consecutive years, at USD 17.20bn for 2025 against Marsh McLennan's USD 26.98bn; Business Insurance ranks it second both globally and among the largest brokers of US business; and its reinsurance arm was first globally on FY2024 revenue inside a top four holding more than 85 percent of reinsurance premium. The gap to first is about USD 9.8bn and has been stable for over a decade. The corpus should not present the two incumbents as equals.",
+  "2. **(High confidence)** We assess that this company currently leads the market this corpus exists to track, and that the lead is in data centres rather than in storage. Basis: its Data Center Lifecycle Insurance Program went from USD 1.5bn to USD 5bn in twelve months — larger than Marsh's Nimbus at USD 2.7bn and Willis's USD 3bn — with a published multi-line tower, embedded commissioning cover and automatic delay-in-start-up reduction as phases energise. Separately, the chief executive's shareholder letter records placing 'the first-ever data center-specific treaty, aligning up to $5 billion of capital behind a single leading insurer'. Management states it can structure individual projects to USD 13-15bn using alternative capital, and that its data-centre pipeline is three times the prior year. The 10-K elevated the facility into its own business description, which no other product receives.",
+  "3. **(High confidence)** We assess that neither incumbent broker in this segment anchors its battery-storage guidance to a named standard, and that this is a property of broker-authored guidance rather than of one firm. Basis: across every battery and renewables publication reviewed for this dossier — two UK battery articles, the energy-transition roadmap, the clean-energy-lifecycle article, the renewable construction claims analysis, the Asia-Pacific construction-to-operations piece, the capability pages and the Spring 2026 market update — no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC reference appears; the single standard cited anywhere is SCOR's 2022 handbook. What substitutes is qualitative engineering criteria: three metres of enclosure spacing against the two developers specify, wind-turbine fleet-leader operating hours, OEM facility provenance. Marsh McLennan's guidance does the same across seven documents. Two incumbents, independently, state the requirement and leave the code unnamed.",
+  "4. **(High confidence)** We assess that the USI acquisition is the dominant fact about this company for the next two years and that it reverses its own recently completed deleveraging. Basis: leverage peaked at 3.7x after NFP, was brought to 2.8x by September 2025 and 2.5x pro forma for the NFP wealth proceeds, earning an S&P outlook revision to stable on 14 November 2025 at A-/A-2 — with a stated downgrade trigger of leverage sustained at about 3x. The USD 17.0bn all-debt USI purchase takes leverage to about 4.8x at closing, pauses buybacks, defers adjusted-EPS accretion to 2028, and carries about USD 710m of integration and transaction expense plus up to USD 400m of retention incentives. The company expects to hold Baa2 and A-; neither agency had published a view as at 9 September 2026.",
+  "5. **(Moderate confidence)** We assess that the structural difference between this company and the segment's challenger is delegated authority, not scale, and that it is the reason they are partners rather than rivals. Basis: the 10-K states the strategy as focusing 'on higher-margin, capital-light professional services businesses', and every energy and digital-infrastructure vehicle located is a facility assembled from carrier capacity rather than delegated underwriting on own paper. kWh Analytics, by contrast, binds risk under delegated authority. This research found no renewables or storage managing general agency operated by this company. That is why the challenger seats it on its own broker council. Confidence is moderate because managing general agency arrangements are frequently unpublicised, so absence of evidence is weaker here than usual.",
+  "6. **(Moderate confidence)** We assess that its battery-storage franchise is real but thin, and that the dossier should not inflate it. Basis: one documented placement — Pulse Clean Energy's Plymouth and Dowlais projects on 7 July 2026, backed by Ariel Green Technology Performance Insurance for up to thirteen years and described as the first such policies placed for UK energy storage — plus a named council seat and substantive published guidance. Against that: the only megawatt-scale battery figure it publishes comes from a brochure coded June 2018 that also states a headcount half again its current one; no current global battery portfolio figure, project count or premium exists; its most quantified renewables claims analysis breaks out wind at 83 percent, hydro at 10 percent and solar at 7 percent and excludes storage entirely; and it is not named at all in the most substantive independent renewables-pricing article of 2026.",
+  "7. **(Moderate confidence)** We assess that the common criticism of this company's organic growth is misdirected, and that the real weakness is in Human Capital. Basis: FY2025 organic growth was 6 percent against Marsh McLennan's 4 percent, Gallagher's 6 percent and WTW's 5 percent — ahead of every major listed competitor except Lockton at 13 percent. Insurance Journal made the comparison explicitly on the day of the print. The weakness is elsewhere: Health Solutions organic decelerated to 2 percent for FY2025 from 6 percent in both Q2 and Q3 2025, and Wealth Solutions grew 1 percent in Q1 2026 against 2.9 percent expected. Three of four solution lines missed consensus organic growth that quarter; only Commercial Risk carried it.",
+  "8. **(Moderate confidence)** We assess that the adjusted-versus-GAAP gap and the cash-flow reversal are the numbers a reader should watch rather than the headline beats. Basis: the company has beaten adjusted EPS by a hair and missed revenue in three consecutive prints — Q4 2025 adjusted EPS beat 2.11 percent on a 1.83 percent revenue miss, Q2 2026 adjusted EPS beat by a single cent on a 0.47 percent revenue miss and a 10.8 percent GAAP EPS miss. Free cash flow fell 34 percent in Q2 2026 against full-year guidance of double-digit growth. FY2025's 39 percent net income increase is a disposal gain. None of this is deterioration on its own, but the adjusted line is doing more work than usual.",
+  "9. **(Low confidence)** We assess that the sequence of the chief financial officer's departure and the USI announcement is worth watching but does not yet support an inference. Basis: Edmund Reese left effective immediately on 17 August 2026 'to pursue opportunities outside the firm', an interim was appointed the same day from the corporate planning function, guidance was reaffirmed, and thirteen days later the company committed USD 17.0bn of new debt. No source connects the two events, no explanation for the departure has been published, and no permanent appointment has been announced. Sources also disagree on when Reese became chief financial officer — 2022, 'two years ago', or July 2024. The sequence is recorded; the inference is not drawn.",
+  "10. **(Low confidence)** We assess that the AI-disintermediation repricing of February 2026 was directionally right about the mechanism and wrong about the timing. Basis: an AI-native insurance comparison app took this company's shares down 9.3 percent and WTW's down 12 percent in a single session, with Bank of America sizing about USD 15bn of low-complexity commissions at risk; three research houses called it overdone because the product was personal lines while the majors are commercial. The company's own 10-K names 'InsurTech firms utilizing artificial intelligence' as competitors and flags AI use cases as an operational risk 'where there is inadequate human oversight'. Its answer is to build the tools itself — Broker Copilot, Claims Copilot, Contract AI, an AI Risk Diagnostic and a digital placement exchange, all launched inside fourteen months.",
+  "INDICATORS TO WATCH.",
+  "A rating action from Moody's or S&P on the USI financing. S&P's stated downgrade trigger is leverage sustained at about 3x; the deal takes it to about 4.8x. The company expects to hold Baa2 and A-. Whichever way this resolves, it settles Judgment 4.",
+  "The financing itself: a bridge facility, a commitment letter or a notes offering. As at 9 September 2026 none had been published for a USD 17.0bn all-debt purchase.",
+  "A permanent chief financial officer. An appointment, and any explanation of the August departure, would close the open question in Judgment 9.",
+  "Q3 2026 results, expected around 30 October 2026 (unconfirmed — six consecutive Friday prints ended when Q2 2026 landed on a Wednesday). Watch whether Reinsurance Solutions holds 5 percent organic against still-falling treaty rates, and whether Health and Wealth recover.",
+  "Any published battery-storage capacity figure, project count or premium that is not the 2018 brochure. Its absence is currently the strongest evidence for Judgment 6.",
+  "A second documented battery placement. One first-of-its-kind UK deal is a franchise only if it repeats.",
+  "Regulatory review of the USI acquisition. The 2021 Department of Justice challenge that killed the Willis Towers Watson combination — at a USD 1bn termination fee — is the benchmark commentators still apply, and Gallagher's AssuredPartners deal drew a second request in March 2025. No second request on USI had been reported nine days in."
+ ],
+ "sources": [
+  {
+   "label": "Aon newsroom — news releases listing",
+   "url": "https://aon.mediaroom.com/news-releases",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Investing.com — Piper Sandler cuts Aon price target on USI acquisition concerns",
+   "url": "https://www.investing.com/news/analyst-ratings/piper-sandler-cuts-aon-stock-price-target-on-usi-acquisition-concerns-93CH-4884213",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Investing.com — Mizuho cuts Aon price target on the $17bn USI acquisition",
+   "url": "https://www.investing.com/news/analyst-ratings/mizuho-cuts-aon-stock-price-target-on-17b-usi-acquisition-93CH-4883641",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Aon paying $17B for USI: synergies, leverage and costs",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aon-aon-paying-17b-usi-162842766.html",
+   "date": "2026-09"
+  },
+  {
+   "label": "TIKR — Aon acquires USI Insurance Services from KKR for $17 billion",
+   "url": "https://www.tikr.com/blog/aon-stock-acquires-usi-insurance-services-kkr-17-billion",
+   "date": "2026-09"
+  },
+  {
+   "label": "Insurance Business — Aon strikes $17 billion deal for USI, doubling down on the middle market",
+   "url": "https://www.insurancebusinessmag.com/us/news/benefits/aon-strikes-17-billion-deal-for-usi-doubling-down-on-the-middle-market-587920.aspx",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "SEC 8-K — Item 1.01 entry into a material definitive agreement: USI merger agreement",
+   "url": "https://www.sec.gov/Archives/edgar/data/315293/000119312526375328/d108801d8k.htm",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — press release announcing the USI acquisition",
+   "url": "https://www.sec.gov/Archives/edgar/data/315293/000119312526375328/d108801dex991.htm",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Aon newsroom — Aon to acquire USI to establish the premier U.S. middle-market platform",
+   "url": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Insurance Journal — Aon to acquire USI Insurance Services from KKR for $17B",
+   "url": "https://www.insurancejournal.com/news/national/2026/08/31/883334.htm",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Claims Journal — Aon/USI/KKR transaction",
+   "url": "https://www.claimsjournal.com/news/national/2026/08/31/339866.htm",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Reinsurance News — Aon confirms it will acquire USI for $17bn to advance its US middle-market platform",
+   "url": "https://www.reinsurancene.ws/aon-confirms-it-will-acquire-usi-for-17bn-to-advance-its-u-s-middle-market-platform/",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Investing.com — UBS reiterates Aon rating on the potential USI acquisition",
+   "url": "https://www.investing.com/news/analyst-ratings/ubs-reiterates-aon-stock-rating-on-potential-usi-acquisition-93CH-4882634",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Aon newsroom — ILS becomes 'foundational reinsurance capital': Aon Securities 20th annual ILS report",
+   "url": "https://aon.mediaroom.com/2026-08-28-ILS-Becomes-Foundational-Reinsurance-Capital",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Aon newsroom — Doug Hammond named Global Executive Chairman of Middle Market",
+   "url": "https://aon.mediaroom.com/2026-08-19-Aon-Announces-Doug-Hammond-as-Global-Executive-Chairman-of-Middle-Market",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "Insurance Business — Aon CFO departs as broker reaffirms 2026 guidance",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/aon-cfo-departs-as-broker-reaffirms-2026-guidance-586463.aspx",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Insurance Journal — People Moves: Reese out, Virani interim CFO at Aon",
+   "url": "https://www.insurancejournal.com/news/international/2026/08/18/882020.htm",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "SEC 8-K — Item 5.02 CFO transition: Edmund Reese departs, Nadin Virani appointed interim",
+   "url": "https://www.sec.gov/Archives/edgar/data/315293/000119312526354083/d376816d8k.htm",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "Aon — Global insurance market insights, Q2 2026 overview",
+   "url": "https://www.aon.com/en/insights/reports/global-insurance-market-insights/q2-2026-overview",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "TIKR — Aon's Q2 earnings show a bigger data center bet, and why it matters",
+   "url": "https://www.tikr.com/blog/aons-q2-earnings-show-a-bigger-data-center-bet-heres-why-it-matters",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Assurex Global — 21 partner firms rank in Business Insurance's 2026 list of 100 largest brokers of US business (methodology)",
+   "url": "https://www.assurexglobal.com/21-partner-firms-rank-in-business-insurances-2026-list-of-100-largest-brokers-of-u-s-business/news/7585/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Q2 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026050367/ex991prq22026.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "SEC Form 10-Q — quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026050610/aon-20260630.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Investing.com — Q2 2026 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-aon-tops-q2-2026-eps-forecast-shares-slip-93CH-4820562",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Investing.com — Q2 2026 slides: 5% organic growth, margins expand despite FCF dip",
+   "url": "https://www.investing.com/news/company-news/aon-q2-2026-slides-5-organic-growth-margins-expand-despite-fcf-dip-93CH-4820625",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Aon Q2 earnings beat estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aon-q2-earnings-beat-estimates-175200758.html",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Aon — Data center operational risks: people, power and water (Sam Beaver)",
+   "url": "https://www.aon.com/en/insights/articles/data-center-operational-risks-power-water-people",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Aon newsroom — Data Center Lifecycle Insurance Program expanded to $5 billion with a Reliable by Design approach",
+   "url": "https://aon.mediaroom.com/2026-07-20-Aon-expands-Data-Center-Lifecycle-Insurance-Program-to-5-billion-with-Reliable-by-Design-Approach-to-Digital-Infrastructure,1",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Insurance Business — Aon expands data center insurance program to $5bn amid capacity crunch",
+   "url": "https://www.insurancebusinessmag.com/us/news/technology/aon-expands-data-center-insurance-program-to-5bn-amid-capacity-crunch-582902.aspx",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Reinsurance News — Marsh remains world's largest insurance broker with 2025 revenues of almost $27bn",
+   "url": "https://www.reinsurancene.ws/marsh-remains-worlds-largest-insurance-broker-with-2025-revenues-of-almost-27bn/",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "StockTitan — Pulse Clean Energy closes two UK energy storage projects with Ariel Green technology performance insurance, Aon as broker",
+   "url": "https://www.stocktitan.net/news/AON/pulse-clean-energy-closes-two-uk-energy-storage-projects-with-o0iay4skkxo6.html",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Risk & Insurance — Renewable energy insurance market softens, but data quality separates winners from the rest (Aon not named)",
+   "url": "https://riskandinsurance.com/renewable-energy-insurance-market-softens-but-data-quality-separates-winners-from-the-rest/",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "Insurance Business — Data centers are rewriting construction insurance (Terence Williams, Aon)",
+   "url": "https://www.insurancebusinessmag.com/us/news/construction/data-centers-are-rewriting-construction-insurance-aon-580245.aspx",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "Business Insurance — 2026 brokers profiles: world's 10 largest insurance brokers",
+   "url": "https://www.businessinsurance.com/2026-brokers-profiles-worlds-10-largest-insurance-brokers/",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "Aon — Navigating risk across the clean energy lifecycle",
+   "url": "https://www.aon.com/en/insights/articles/managing-risk-across-the-clean-energy-lifecycle",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "pv magazine USA — Fire, hail, and the hard lessons: brokers weigh in on the 2026 Solar Risk Assessment",
+   "url": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Aon — Tax credit and credit insurance as financing enablers for US digital infrastructure",
+   "url": "https://www.aon.com/en/insights/articles/tax-credit-and-credit-insurance-as-financing-enablers-for-us-digital-infrastructure",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Aon — Managing renewable construction claims with confidence",
+   "url": "https://www.aon.com/en/insights/articles/managing-renewable-construction-claims-with-confidence",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Yahoo Finance / Barchart — Aon stock underperforming the Nasdaq",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aon-stock-underperforming-nasdaq-210228921.html",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Risk & Insurance — Data center insurance capacity strained as average project values surge from $150 million to $3 billion",
+   "url": "https://riskandinsurance.com/data-center-insurance-capacity-strained-as-average-project-values-surge-from-150-million-to-3-billion/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Aon newsroom — Digital infrastructure is redefining construction insurance risk; 2026 Global Construction Insurance and Surety Market Report",
+   "url": "https://aon.mediaroom.com/2026-05-07-Aon-Digital-Infrastructure-is-Redefining-Construction-Insurance-Risk",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Q1 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026029093/ex991prq12026.htm",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Aon Q1 earnings: taking a closer look at segment organic growth against consensus",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/aon-aon-q1-earnings-taking-133007171.html",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Insurance Business — The brokerage industry's litigation epidemic: when poaching becomes a business model",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/the-brokerage-industrys-litigation-epidemic-when-poaching-becomes-a-business-model-572495.aspx",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Insurance Business — Aon raises data center insurance program to $3.5 billion",
+   "url": "https://www.insurancebusinessmag.com/us/news/technology/aon-raises-data-center-insurance-program-to-3-5-billion-571850.aspx",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Carrier Management — Aon lifts data center program capacity to $3.5bn",
+   "url": "https://www.carriermanagement.com/news/2026/04/15/286753.htm",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "365247 Capital — Marsh McLennan: scale, slow growth and the next phase of value creation (cross-broker organic growth table)",
+   "url": "https://365247esp.substack.com/p/marsh-mclennan-scale-slow-growth",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "Aon newsroom — Aon advances digital infrastructure capabilities (Stephen Fox, Brian Hearst)",
+   "url": "https://aon.mediaroom.com/2026-04-02-Aon-advances-digital-infrastructure-capabilities",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "SEC Form 10-K and Annual Report for the fiscal year ended 31 December 2025 (includes the CEO shareholder letter)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000315293/000119312526187633/aon_plc_2025_ars.pdf",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 31 December 2025 (HTML)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026008116/aon-20251231.htm",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "Insurance Journal — Insurance broker stocks sink as AI app sparks disruption fears",
+   "url": "https://www.insurancejournal.com/news/national/2026/02/10/857525.htm",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Q4 and FY2025 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000315293/000162828026004273/ex991prq42025.htm",
+   "date": "2026-01-30"
+  },
+  {
+   "label": "Insurance Journal — Aon reports 6% organic growth for 2025, ahead of Marsh's 4%",
+   "url": "https://www.insurancejournal.com/news/international/2026/01/30/856337.htm",
+   "date": "2026-01-30"
+  },
+  {
+   "label": "Investing.com — Q4 2025 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-aon-q4-2025-beats-eps-estimates-stock-edges-up-93CH-4476516",
+   "date": "2026-01-30"
+  },
+  {
+   "label": "Insurance Journal — Alliant v. Howden 'smash-and-grab' poaching suit",
+   "url": "https://www.insurancejournal.com/news/national/2026/01/12/853956.htm",
+   "date": "2026-01-12"
+  },
+  {
+   "label": "Reinsurance News — Aon president and CEO Greg Case's employment agreement extended",
+   "url": "https://www.reinsurancene.ws/aon-president-and-ceo-greg-cases-employment-agreement-extended/",
+   "date": "2026-01-02"
+  },
+  {
+   "label": "TipRanks / TheFly — Aon plc price target lowered to $325 from $412 at BofA",
+   "url": "https://www.tipranks.com/news/the-fly/aon-plc-price-target-lowered-to-325-from-412-at-bofa-thefly",
+   "date": "2026"
+  },
+  {
+   "label": "Insurance Business — Aon uses a Hong Kong bribery case to press a Chinese lender in the Vesttoo lawsuit",
+   "url": "https://www.insurancebusinessmag.com/reinsurance/news/breaking-news/aon-uses-hong-kong-bribery-case-to-press-chinese-lender-in-vesttoo-lawsuit-576759.aspx",
+   "date": "2026"
+  },
+  {
+   "label": "Insurance Business — The coverage ceiling arrives for hyperscale data centers (Aon $5bn vs Marsh $2.7bn vs Willis $3bn)",
+   "url": "https://www.insurancebusinessmag.com/us/news/property/the-coverage-ceiling-arrives-for-hyperscale-data-centers-579429.aspx",
+   "date": "2026"
+  },
+  {
+   "label": "Artemis — ILS capital is foundational in reinsurance, grows to $144.5bn with a 5-year CAGR of 8.3%",
+   "url": "https://www.artemis.bm/news/ils-capital-is-foundational-in-reinsurance-grows-to-144-5bn-with-5-year-cagr-8-3-aon/",
+   "date": "2026"
+  },
+  {
+   "label": "Aon — Insurance market report, Spring 2026 update (renewables and BESS rate softening; design reviews)",
+   "url": "https://assets.aon.com/-/media/files/aon/reports/2026/aon-insurance-market-report-2026-spring-update-en.pdf",
+   "date": "2026"
+  },
+  {
+   "label": "Aon — From construction to operations: where transition risk really bites (Asia Pacific)",
+   "url": "https://www.aon.com/apac/insights/blog/default/from-construction-to-operations",
+   "date": "2026"
+  },
+  {
+   "label": "Artemis — Parametric solutions opening new pathways for renewable energy deployment (kWh Analytics CEO)",
+   "url": "https://www.artemis.bm/news/parametric-solutions-opening-new-pathways-for-renewable-energy-deployment-kwh-analytics-ceo/",
+   "date": "2025-12-30"
+  },
+  {
+   "label": "Insurance Journal — Aon adds to list of brokers suing Howden US",
+   "url": "https://www.insurancejournal.com/news/national/2025/12/15/851060.htm",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "Aon newsroom — Energy transition premiums projected to surpass $9 billion by 2030; Low-Carbon Transition Framework launched",
+   "url": "https://aon.mediaroom.com/news-releases?item=138527",
+   "date": "2025-11-17"
+  },
+  {
+   "label": "Reinsurance News — Aon unveils framework to accelerate reinsurer investment in sustainable energy",
+   "url": "https://www.reinsurancene.ws/aon-unveils-framework-to-accelerate-re-insurer-investment-in-sustainable-energy/",
+   "date": "2025-11-17"
+  },
+  {
+   "label": "Investing.com — Aon's outlook revised to stable by S&P on improved leverage metrics",
+   "url": "https://uk.investing.com/news/stock-market-news/aons-outlook-revised-to-stable-by-sp-on-improved-leverage-metrics-93CH-4372883",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "Insurance Journal — Aon Q3 2025 results: 7% organic growth",
+   "url": "https://www.insurancejournal.com/news/international/2025/10/31/845962.htm",
+   "date": "2025-10-31"
+  },
+  {
+   "label": "Aon — Securing power: global strategies for data center energy resilience",
+   "url": "https://www.aon.com/en/insights/articles/securing-power-global-strategies-for-data-center-energy-resilience",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "The Insurer — Top 10 reinsurance brokers",
+   "url": "https://www.theinsurer.com/ti/reinsurancemonth/top-10-reinsurance-brokers-2025-09-08/",
+   "date": "2025-09-08"
+  },
+  {
+   "label": "Reinsurance News — Aon tops reinsurance broker ranking on 2024 revenues, but Guy Carpenter ahead in 2025",
+   "url": "https://www.reinsurancene.ws/aon-tops-reinsurance-broker-ranking-on-2024-revenues-but-guy-carpenter-ahead-in-2025/",
+   "date": "2025-09-07"
+  },
+  {
+   "label": "Aon newsroom — Aon signs definitive agreement to sell the significant majority of NFP's wealth business to Madison Dearborn Partners",
+   "url": "https://aon.mediaroom.com/2025-09-03-Aon-Signs-Definitive-Agreement-to-Sell-Significant-Majority-of-NFPs-Wealth-Business-to-Madison-Dearborn-Partners",
+   "date": "2025-09-03"
+  },
+  {
+   "label": "Insurance Journal — Arthur J. Gallagher completes $13.5 billion acquisition of AssuredPartners; FTC second request context",
+   "url": "https://www.insurancejournal.com/news/national/2025/08/18/836091.htm",
+   "date": "2025-08-18"
+  },
+  {
+   "label": "Reinsurance News — Marsh McLennan maintains top global broker spot by revenue for 15th year",
+   "url": "https://www.reinsurancene.ws/marsh-mclennan-maintains-top-global-broker-spot-by-revenue-for-15th-year/",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "MarshBerry — Big deals drive bigger revenue for the top 100 insurance brokers",
+   "url": "https://www.marshberry.com/resource/big-deals-drive-bigger-revenue-for-the-top-100-insurance-brokers/",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Aon newsroom — Aon unveils full-lifecycle insurance facility to help clients manage risk and deliver cloud and AI infrastructure faster",
+   "url": "https://aon.mediaroom.com/2025-07-09-Aon-unveils-full-life-cycle-insurance-facility-to-help-clients-manage-risk-and-deliver-cloud-and-AI-infrastructure-faster",
+   "date": "2025-07-09"
+  },
+  {
+   "label": "Insurance Journal — Viewpoint: broker's key takeaways from kWh Analytics' 2025 Solar Risk Report",
+   "url": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+   "date": "2025-07-02"
+  },
+  {
+   "label": "Aon — An insurer roadmap for navigating the energy transition",
+   "url": "https://www.aon.com/en/insights/articles/reinsurance-roadmap-for-energy-transition",
+   "date": "2025-06-23"
+  },
+  {
+   "label": "Aon newsroom — Aon details a powerful platform for growth at the 2025 Investor Day",
+   "url": "https://aon.mediaroom.com/2025-06-09-Aon-Details-a-Powerful-Platform-for-Growth-at-2025-Investor-Day",
+   "date": "2025-06-09"
+  },
+  {
+   "label": "Claims Journal — Marsh sues Aon and ex-team leader over exit of 20 construction surety employees",
+   "url": "https://www.claimsjournal.com/news/national/2025/04/25/330240.htm",
+   "date": "2025-04-25"
+  },
+  {
+   "label": "Risk & Insurance — Aon's Eric Andersen transitions to senior advisor role to CEO Greg Case",
+   "url": "https://riskandinsurance.com/aons-eric-andersen-transitions-to-senior-advisor-role-to-ceo-greg-case/",
+   "date": "2025-03-17"
+  },
+  {
+   "label": "Reinsurance News — Aon names Greg Case as President as Eric Andersen moves into an advisory role",
+   "url": "https://www.reinsurancene.ws/aon-names-greg-case-as-president-eric-andersen-moves-into-advisory-role/",
+   "date": "2025-03-17"
+  },
+  {
+   "label": "Aon — The AI data center boom: strategies for sustainable growth and risk management",
+   "url": "https://www.aon.com/en/insights/articles/the-ai-data-center-boom-strategies-for-sustainable-growth-and-risk-management",
+   "date": "2025-01-20"
+  },
+  {
+   "label": "Reinsurance News — Aon's White Rock sues Chinese bank over Vesttoo letter-of-credit fraud",
+   "url": "https://www.reinsurancene.ws/aons-white-rock-sues-chinese-bank-over-vesttoo-loc-fraud/",
+   "date": "2024-08"
+  },
+  {
+   "label": "Aon — Stakeholders must work together to unlock the promise in battery energy storage systems",
+   "url": "https://www.aon.com/unitedkingdom/insights/stakeholders-must-work-together-to-unlock-bess",
+   "date": "2024-03-28"
+  },
+  {
+   "label": "Artemis — Aon recognises $197m Vesttoo-related legal settlement expense charge",
+   "url": "https://www.artemis.bm/news/aon-recognises-197m-vesttoo-related-legal-settlement-expense-charge/",
+   "date": "2024-02"
+  },
+  {
+   "label": "SEC — In the matter of Aon Investments USA Inc. (formerly Aon Hewitt Investment Consulting), Fair Fund distribution",
+   "url": "https://www.sec.gov/enforcement-litigation/distributions-harmed-investors/matter-aon-investments-usa-inc-fka-aon-hewitt-investment-consulting-inc",
+   "date": "2024-01"
+  },
+  {
+   "label": "Infosecurity Magazine — Aon hack exposed sensitive information of 145,889 North American customers",
+   "url": "https://www.infosecurity-magazine.com/news/aon-hack-sensitive-information/",
+   "date": "2022"
+  },
+  {
+   "label": "US Department of Justice — Attorney General Merrick B. Garland's statement on the Aon and Willis Towers Watson decision",
+   "url": "https://www.justice.gov/archives/opa/pr/attorney-general-merrick-b-garland-s-statement-aon-and-willis-towers-watson-decision",
+   "date": "2021-07-26"
+  },
+  {
+   "label": "HR Dive — Aon and Willis Towers Watson terminate merger amid DOJ litigation; $1bn termination fee",
+   "url": "https://www.hrdive.com/news/aon-willis-towers-watson-terminate-merger-amid-doj-litigation/604047/",
+   "date": "2021-07-26"
+  },
+  {
+   "label": "Aon — Renewable energy brochure, Australia and Pacific (document code ARS0341 0618; the '+150MW BESS projects insured' claim)",
+   "url": "https://www.aon.com/getmedia/Renewable-Energy-Brochure-Pacific.aspx",
+   "date": "2018-06"
+  },
+  {
+   "label": "Reinsurance News — Top global insurance and reinsurance brokers (AM Best directory)",
+   "url": "https://www.reinsurancene.ws/top-global-insurance-reinsurance-brokers/"
+  },
+  {
+   "label": "Aon — Renewables practice (over 1,000 renewable energy projects; battery and pump storage named)",
+   "url": "https://www.aon.com/en/capabilities/risk-transfer/renewables"
+  },
+  {
+   "label": "Aon — Power and utilities practice (more than 300 specialists; BESS named)",
+   "url": "https://www.aon.com/en/capabilities/risk-transfer/power-insurance-and-risk-management"
+  },
+  {
+   "label": "Aon — Energy transition practice",
+   "url": "https://www.aon.com/en/capabilities/risk-transfer/energy-transition"
+  },
+  {
+   "label": "Aon — Natural resources industry practice",
+   "url": "https://www.aon.com/en/industries/natural-resources"
+  },
+  {
+   "label": "Aon — Data Center Lifecycle Insurance Program capability page",
+   "url": "https://www.aon.com/en/capabilities/risk-transfer/data-center-lifecycle-insurance"
+  },
+  {
+   "label": "Aon — Digital infrastructure solutions",
+   "url": "https://www.aon.com/en/capabilities/digital-infrastructure-solutions"
+  },
+  {
+   "label": "Aon — BESS asset owners must prepare for cyber threats (Cyber Property Damage Facility)",
+   "url": "https://www.aon.com/unitedkingdom/insights/bess-asset-owners-must-prepare-for-cyber-threats"
+  },
+  {
+   "label": "Aon — Leadership and governance (Executive Committee and board)",
+   "url": "https://www.aon.com/en/about/leadership-and-governance"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}

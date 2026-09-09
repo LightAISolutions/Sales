@@ -30,7 +30,7 @@
     "For storage the same property programme applies — the company states 'insuring BESS installations presents unique challenges due to the technology's rapid development and the potential for catastrophic events like thermal runaway' and requires explosion-relief conformity to NFPA standards and container separation; there is no separate BESS product."
    ],
    "positioning": "Third parties describe the renewables property market as roughly USD 1 billion of US premium growing 20–30 percent a year (Kaminsky, Risk & Insurance, 2024). Named competing capacity: NARDAC's standalone USD 20 million severe-convective-storm facility (January 2025), GCube's USD 100 million Lloyd's BESS consortium (July 2024), AXIS, Swiss Re Corporate Solutions and the Lloyd's renewables underwriters (Ascot Renewco, Brit, Markel, Sciemus). The company's claimed differentiation is data — 'the largest in the industry, assessing 30% of U.S. solar assets' (company claim; an earlier statement said 20 percent) — and resilience credits. Hawaii Business called it 'the largest independent insurance company for solar, wind and batteries in North America' six days after the Beazley announcement, with no methodology; no independent ranking exists.",
-   "soldThrough": "Wholesale and retail specialist brokers only — 'available through select specialist energy brokers' (Reinsurance News, 2025-08-29). The Broker Council seats EIGHT firms in each published year, and the roster CHANGED between them: 2025 (Insurance Journal, 2 July 2025) — AmWins (Rob Battenfield), McGriff (Todd Burack), Renewable Guard (Mike Cosgrave), WTW (Brian Fitzgerald), Aon (John Katilus), CAC Specialty (Geraldine Kerrigan), Alliant (Alex Post) and Marsh (Luke Slemeck); 2026 (pv magazine USA, 9 June 2026) — AmWins (Battenfield), McGriff (Burack), Renewable Guard (Andy Glickfeld), WTW (Alex Forand), Aon (Katilus), CAC, part of the Baldwin Group (Amanda Lania), Marsh (Slemeck) and Brown & Brown (Bridget Quell). Brown & Brown joined only in 2026 and Alliant dropped out; the 'Baldwin Group' attribution is correct only for 2026. Aon is the one firm represented by the same person in both years. TWO OF THE EIGHT SEATS ARE THE SAME OWNER: McGriff has been a Marsh McLennan subsidiary since 18 November 2024, so both readouts post-date the close and Marsh McLennan holds a quarter of the 2026 council under two brands — a fact neither readout discloses. Paper is surplus-lines: 'surplus lines insurance carriers do not generally participate in state guaranty funds' (company disclaimers).",
+   "soldThrough": "Wholesale and retail specialist brokers only — 'available through select specialist energy brokers' (Reinsurance News, 2025-08-29); the company's Broker Council (2025–2026) seats AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty (Baldwin Group), Alliant, Marsh and Brown & Brown. Paper is surplus-lines: 'surplus lines insurance carriers do not generally participate in state guaranty funds' (company disclaimers).",
    "targetSegments": [
     "Utility-scale solar owners and developers",
     "Battery energy storage owners (property risk only)",
@@ -1386,6 +1386,6 @@
    "url": "https://www.lloyds.com/news-and-insights/news/making-renewables-bankable"
   }
  ],
- "lastUpdated": "2026-09-09",
- "profileVersion": 2
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 1
 }

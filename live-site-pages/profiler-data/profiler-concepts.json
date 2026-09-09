@@ -104,6 +104,16 @@
       "def": "Pre-wetting the air entering an air-cooled condenser or dry cooler so it arrives closer to wet-bulb. It buys much of a tower's efficiency on the hottest days while using water only on those days."
     },
     {
+      "slug": "admitted-carrier",
+      "term": "admitted carrier",
+      "def": "An insurer licensed by the state where it writes, whose rates and forms are filed with the regulator and whose policyholders are protected by a state guaranty fund. New or volatile risks are usually refused by admitted markets and go to surplus lines instead, where none of those protections apply.",
+      "aliases": [
+        "admitted market",
+        "admitted paper",
+        "non-admitted carrier"
+      ]
+    },
+    {
       "slug": "admixture",
       "term": "admixture",
       "def": "A chemical added to a concrete mix to change how it behaves — plasticisers for flow, retarders and accelerators for setting time, air entrainment for freeze resistance. It is how one mix serves many conditions."
@@ -147,6 +157,15 @@
       "def": "Executing a customer's order in the market for a fee, without taking ownership or price risk. Revenue is a commission rather than a spread, and it does not consume balance-sheet capacity.",
       "aliases": [
         "agency"
+      ]
+    },
+    {
+      "slug": "aggregate-limit",
+      "term": "aggregate limit",
+      "def": "The most a policy will pay across all losses in a period, as distinct from the most it will pay for any one loss. Once the aggregate is exhausted the cover is gone for the rest of the term, however many months remain.",
+      "aliases": [
+        "annual aggregate",
+        "aggregate"
       ]
     },
     {
@@ -573,6 +592,15 @@
       ]
     },
     {
+      "slug": "average-annual-loss",
+      "term": "average annual loss",
+      "def": "The expected loss per year averaged over a long simulated record — a hundred-million-dollar loss once every hundred years is an average annual loss of one million. It is the technical core of a catastrophe premium, and it says nothing about whether the loss lands this year.",
+      "aliases": [
+        "AAL",
+        "expected annual loss"
+      ]
+    },
+    {
       "slug": "average-remaining-contract-life",
       "term": "average remaining contract life",
       "def": "The capacity-weighted number of years left on a portfolio's contracts. A buyer of a contracted platform is buying those years of fixed cash flow; the shorter the average, the sooner the assets become merchant.",
@@ -747,6 +775,15 @@
       ]
     },
     {
+      "slug": "binder",
+      "term": "binder",
+      "def": "Temporary confirmation that cover is in force before the full policy is issued, and — in delegated underwriting — the agreement setting the limits within which an agency may commit a carrier's paper. The second sense is what turns an analytics firm into an underwriter.",
+      "aliases": [
+        "bound",
+        "binders"
+      ]
+    },
+    {
       "slug": "bipolar-device",
       "term": "bipolar device",
       "def": "A switch that floods its drift region with both kinds of charge carrier to conduct, like an IGBT. The flooding gives a low voltage drop at high current regardless of rating, but the stored charge has to be removed at turn-off, which costs time and energy.",
@@ -876,6 +913,15 @@
       "slug": "bring-your-own-power",
       "term": "bring-your-own-power",
       "def": "Building dedicated generation for a data centre rather than waiting for the grid to supply it. It turns a multi-year interconnection queue into a construction problem the developer controls."
+    },
+    {
+      "slug": "broker-of-record",
+      "term": "broker of record",
+      "def": "The broker a client has formally appointed to handle its insurance, named in a letter that instantly transfers the relationship and its commissions from the previous broker. Most competition between brokers is a fight over these letters rather than over price.",
+      "aliases": [
+        "BOR",
+        "broker of record letter"
+      ]
     },
     {
       "slug": "brownfield",
@@ -1157,6 +1203,15 @@
       ]
     },
     {
+      "slug": "captive-insurer",
+      "term": "captive insurer",
+      "def": "An insurance company a business owns to insure its own risks. It converts premium into retained capital, gives direct access to the reinsurance market, and only makes sense when the parent is large enough to absorb its own losses in a bad year.",
+      "aliases": [
+        "captives",
+        "captive insurance"
+      ]
+    },
+    {
       "slug": "carnot-limit",
       "term": "Carnot limit",
       "def": "The ceiling on any engine that turns heat into work, set by the ratio of the temperatures it works between — which is why raising turbine firing temperature is the whole history of turbine development. A fuel cell converts chemical energy directly to electricity with no intermediate heat step, so this ceiling does not apply to it.",
@@ -1182,6 +1237,26 @@
         "spin-out",
         "spun off",
         "spin-off"
+      ]
+    },
+    {
+      "slug": "catastrophe-bond",
+      "term": "catastrophe bond",
+      "def": "A security that transfers catastrophe risk to capital-market investors instead of a reinsurer. Investors take a coupon and lose principal if a defined event occurs; the sponsor gets multi-year, fully collateralised cover that does not depend on any insurer's credit.",
+      "aliases": [
+        "cat bond",
+        "cat bonds",
+        "catastrophe bonds"
+      ]
+    },
+    {
+      "slug": "catastrophe-model",
+      "term": "catastrophe model",
+      "def": "Software that simulates thousands of years of hazard events, applies each to a portfolio's exposure through vulnerability curves, and returns a loss distribution. Its four layers are hazard, exposure, vulnerability and financial terms — and its answers are only as good as the vulnerability curves, which is where new technologies such as batteries have almost no data.",
+      "aliases": [
+        "cat model",
+        "cat modelling",
+        "catastrophe modeling"
       ]
     },
     {
@@ -1235,6 +1310,16 @@
       "def": "Arkansas's certificate of environmental compatibility and public need — the state's version of a CPCN, the commission order a utility must obtain before building a major generating plant or transmission line and putting it in rate base.",
       "aliases": [
         "certificate of environmental compatibility and public need"
+      ]
+    },
+    {
+      "slug": "cedent",
+      "term": "cedent",
+      "def": "The insurer that buys reinsurance — it cedes part of a risk it has written to a reinsurer, keeping a retention for its own account. Everything in a reinsurance programme is described from the cedent's point of view.",
+      "aliases": [
+        "ceding company",
+        "cede",
+        "ceded"
       ]
     },
     {
@@ -1438,6 +1523,15 @@
       ]
     },
     {
+      "slug": "claims-advocacy",
+      "term": "claims advocacy",
+      "def": "The broker's work after a loss: documenting the claim, arguing coverage against the policy's own wording and pressing the carrier to pay. It is unpriced at placement and is the part of the service a client actually remembers.",
+      "aliases": [
+        "claims advocate",
+        "claims management"
+      ]
+    },
+    {
       "slug": "clarification",
       "term": "clarification",
       "def": "The treatment step in which suspended solids are allowed or induced to settle out of water. It is the workhorse ahead of filtration in nearly every water and wastewater train."
@@ -1607,6 +1701,11 @@
       "slug": "combined-licence",
       "term": "combined licence",
       "def": "The one-step US route in which permission to build and permission to operate are granted together, against inspections and tests agreed in advance. It removes the risk of a finished plant that cannot be allowed to run."
+    },
+    {
+      "slug": "combined-ratio",
+      "term": "combined ratio",
+      "def": "Losses plus expenses as a percentage of premium earned. Below 100 the insurer made money on underwriting alone; above 100 it lost money underwriting and must earn it back on the investment income from holding premiums before claims are paid."
     },
     {
       "slug": "commissioning",
@@ -1781,6 +1880,18 @@
       ]
     },
     {
+      "slug": "construction-all-risk",
+      "term": "construction all risk",
+      "def": "The property policy that covers a project while it is being built — materials, works in progress and plant on site — from groundbreaking to handover. On a battery or data-centre project it is the cover in force during the riskiest months, when equipment is unprotected, untested and being energised for the first time.",
+      "aliases": [
+        "CAR",
+        "builder's risk",
+        "builders risk",
+        "erection all risk",
+        "EAR"
+      ]
+    },
+    {
       "slug": "construction-management-agreement",
       "term": "construction-management agreement",
       "def": "A contract under which a project's former developer or a specialist manages construction for the new owner for a fee, without taking the EPC's fixed-price risk. It is how a seller keeps a role and a fee stream after selling the project.",
@@ -1835,6 +1946,24 @@
       "slug": "contingency",
       "term": "contingency",
       "def": "Money held inside a budget for the work that is certain to be needed and not yet identified. Whose contingency it is, and who keeps what is unspent, is a negotiated term rather than an accounting detail."
+    },
+    {
+      "slug": "contingent-business-interruption",
+      "term": "contingent business interruption",
+      "def": "Cover for income lost because something happened to somebody else — a supplier's factory, a customer's site, the grid connection. It is how a single cell-plant fire or a transformer shortage becomes an insurance loss for projects that were never damaged.",
+      "aliases": [
+        "CBI",
+        "contingent BI"
+      ]
+    },
+    {
+      "slug": "contingent-commission",
+      "term": "contingent commission",
+      "def": "Extra money a carrier pays a broker based on the volume, growth or profitability of the business the broker placed with it — not on the service given to the client. Because it pays the buyer's agent to favour one seller, it has been the sector's defining conflict-of-interest question since the 2004-05 US investigations.",
+      "aliases": [
+        "contingent commissions",
+        "market services agreement"
+      ]
     },
     {
       "slug": "continuation-vehicle",
@@ -3353,6 +3482,15 @@
       ]
     },
     {
+      "slug": "energy-transition-risk",
+      "term": "energy transition risk",
+      "def": "The class of exposures created by deploying technologies faster than their loss history exists — batteries, hydrogen, floating wind, grid-scale power electronics. Underwriters price it with engineering judgment and standards compliance because the actuarial record they normally rely on has not been written yet.",
+      "aliases": [
+        "new technology risk",
+        "transition risk"
+      ]
+    },
+    {
       "slug": "engine-core",
       "term": "engine core",
       "def": "The compressor, combustor and high-pressure turbine at the heart of a gas turbine — in an aeroderivative machine, the same core that powered an airliner. Because it is removed and replaced as a module, an overhaul is a swap measured in days rather than a rebuild measured in weeks, and whoever holds spare cores holds the plant's availability.",
@@ -3541,6 +3679,16 @@
       ]
     },
     {
+      "slug": "exceedance-probability",
+      "term": "exceedance probability",
+      "def": "The chance that a loss of a given size or larger occurs in a year, usually drawn as a curve from small frequent losses to rare enormous ones. A '1-in-100-year loss' is a point on this curve, not a schedule — it means a 1% chance each year.",
+      "aliases": [
+        "EP curve",
+        "exceedance probability curve",
+        "return period"
+      ]
+    },
+    {
       "slug": "excess-layer",
       "term": "excess layer",
       "def": "A policy that sits above the primary property policy and pays only once losses exceed the layer beneath it. Large plants build a tower of such layers because no single insurer will carry the whole replacement value.",
@@ -3590,6 +3738,14 @@
       "slug": "expansive-soil",
       "term": "expansive soil",
       "def": "Clay that swells when it takes on water and shrinks when it dries, moving whatever sits on it. It is treated by removing it, stabilising it, or spanning over it — never by ignoring it."
+    },
+    {
+      "slug": "expense-ratio",
+      "term": "expense ratio",
+      "def": "The share of premium consumed by acquisition costs — broker commission above all — plus administration. It is the half of the combined ratio a carrier controls by choosing its distribution, which is why a delegated-authority or direct model is an expense-ratio argument before it is anything else.",
+      "aliases": [
+        "acquisition cost ratio"
+      ]
     },
     {
       "slug": "experience-modification-rate",
@@ -3666,6 +3822,15 @@
       "slug": "facts",
       "term": "FACTS",
       "def": "Flexible AC transmission systems: the family of power-electronic devices — shunt and series compensation, STATCOMs, phase shifters — that make power flow in an AC network controllable instead of merely the arithmetic consequence of impedance."
+    },
+    {
+      "slug": "facultative-reinsurance",
+      "term": "facultative reinsurance",
+      "def": "Reinsurance bought one risk at a time, underwritten individually. A carrier uses it for a single account too large or too odd for its treaty — a first-of-its-kind battery plant, a hyperscale campus — and pays for the bespoke look.",
+      "aliases": [
+        "facultative",
+        "fac"
+      ]
     },
     {
       "slug": "family-office",
@@ -3791,6 +3956,15 @@
         "FFO/Debt",
         "FFO to debt",
         "FFO leverage"
+      ]
+    },
+    {
+      "slug": "fiduciary-investment-income",
+      "term": "fiduciary investment income",
+      "def": "Interest a broker earns on premium it is holding in trust between collecting it from the client and paying it to the carrier. It is real income that rises and falls with short-term interest rates rather than with anything the broker did, so it flatters results when rates rise and reverses when they fall.",
+      "aliases": [
+        "fiduciary income",
+        "fiduciary interest"
       ]
     },
     {
@@ -4175,6 +4349,15 @@
         "FOM",
         "front of meter",
         "in front of the meter"
+      ]
+    },
+    {
+      "slug": "fronting-carrier",
+      "term": "fronting carrier",
+      "def": "A licensed, rated insurer that issues the policy paper for a risk it does not intend to keep, passing the risk on to a captive, an MGA's capacity providers or reinsurers for a fee. The buyer gets a policy from a rated carrier; the economics sit elsewhere.",
+      "aliases": [
+        "fronting",
+        "fronted paper"
       ]
     },
     {
@@ -4577,6 +4760,15 @@
       "aliases": [
         "the halving",
         "halvening"
+      ]
+    },
+    {
+      "slug": "hard-market",
+      "term": "hard market",
+      "def": "Conditions in which insurers have less appetite than the market wants: prices rise, deductibles rise, limits shrink and terms narrow. Buyers feel it as a scramble for capacity; brokers earn more because commission is a percentage of a bigger premium.",
+      "aliases": [
+        "hardening market",
+        "hardening"
       ]
     },
     {
@@ -5125,6 +5317,15 @@
       "aliases": [
         "capacity (insurance)",
         "underwriting capacity"
+      ]
+    },
+    {
+      "slug": "insurance-linked-securities",
+      "term": "insurance-linked securities",
+      "def": "The asset class covering catastrophe bonds, collateralised reinsurance and sidecars — insurance risk packaged so pension funds and hedge funds can hold it. It is the alternative capital that now competes with traditional reinsurers on price.",
+      "aliases": [
+        "ILS",
+        "alternative capital"
       ]
     },
     {
@@ -6938,6 +7139,15 @@
       ]
     },
     {
+      "slug": "organic-revenue-growth",
+      "term": "organic revenue growth",
+      "def": "Revenue growth stripped of acquisitions, disposals and currency — what the existing business did on its own. For brokers it is the single most-watched number, because acquisitions can buy revenue indefinitely and organic growth cannot be bought.",
+      "aliases": [
+        "organic growth",
+        "underlying revenue growth"
+      ]
+    },
+    {
       "slug": "originator",
       "term": "originator",
       "def": "The developer that finds the site, secures the land and grid position, wins the contract and carries the project to a saleable stage — and then may sell rather than build and own. Its product is a de-risked project, not electricity.",
@@ -7073,6 +7283,16 @@
         "parametric cover",
         "parametric hedge",
         "index insurance"
+      ]
+    },
+    {
+      "slug": "parametric-trigger",
+      "term": "parametric trigger",
+      "def": "The measured index that decides whether a parametric policy pays — a wind speed at a station, a hail-stone diameter, an earthquake magnitude. Choosing it is the whole design problem: a tight trigger pays reliably and costs more, a loose one is cheap and may not pay when the damage is real.",
+      "aliases": [
+        "trigger",
+        "index trigger",
+        "payout trigger"
       ]
     },
     {
@@ -7326,6 +7546,16 @@
       "slug": "pjm",
       "term": "PJM",
       "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
+    },
+    {
+      "slug": "placement",
+      "term": "placement",
+      "def": "The act of getting a risk covered: marketing the submission, collecting quotes, structuring the layers, allocating shares among insurers and binding. A programme is 'placed' when every layer is full — and a layer that cannot be filled is where a project's financing stalls.",
+      "aliases": [
+        "placed",
+        "placing",
+        "risk placement"
+      ]
     },
     {
       "slug": "plan-of-arrangement",
@@ -7732,6 +7962,15 @@
       ]
     },
     {
+      "slug": "probable-maximum-loss",
+      "term": "probable maximum loss",
+      "def": "The largest loss a site is expected to suffer from a defined event under stated assumptions. It sets how much cover is bought and how much capital a carrier holds against the risk, and it is an engineering estimate, not an observed number.",
+      "aliases": [
+        "PML",
+        "maximum foreseeable loss"
+      ]
+    },
+    {
       "slug": "process-heat",
       "term": "process heat",
       "def": "Heat delivered to an industrial plant as steam or hot gas to run chemical, refining or manufacturing processes — a product a reactor or gas plant can sell alongside or instead of electricity.",
@@ -7764,6 +8003,15 @@
       "slug": "productivity-factor",
       "term": "productivity factor",
       "def": "The ratio of planned hours to hours actually earned against installed quantity, tracked weekly. Because it measures work in place rather than time elapsed, it is the earliest honest signal a project gives — a job can look on schedule and be consuming its margin, and this is where that shows first."
+    },
+    {
+      "slug": "program-business",
+      "term": "program business",
+      "def": "Insurance designed for one narrow class of risk and sold as a package — every solar plant, every battery site, every dental practice — usually underwritten by a specialist agency on a carrier's paper. It is how a market gets built for a risk class too new or too small for individual underwriting.",
+      "aliases": [
+        "programme business",
+        "insurance program"
+      ]
     },
     {
       "slug": "programmatic-joint-venture",
@@ -7977,6 +8225,15 @@
       ]
     },
     {
+      "slug": "quota-share",
+      "term": "quota share",
+      "def": "A proportional reinsurance structure: the reinsurer takes a fixed percentage of every premium and pays the same percentage of every loss. Simple, capital-efficient for the cedent, and indifferent to how large any one loss is.",
+      "aliases": [
+        "quota-share",
+        "proportional reinsurance"
+      ]
+    },
+    {
       "slug": "ra-contract",
       "term": "RA contract",
       "def": "A resource-adequacy contract: a California load-serving entity pays a battery a fixed monthly amount per megawatt for being available to meet the buyer's capacity obligation, whoever dispatches it. The contract is the reason most CAISO batteries get financed.",
@@ -8081,6 +8338,15 @@
         "rate moratorium",
         "frozen rates",
         "rate stay-out"
+      ]
+    },
+    {
+      "slug": "rate-on-line",
+      "term": "rate on line",
+      "def": "Premium divided by the limit of cover bought, expressed as a percentage — pay 10 million for 100 million of cover and the rate on line is 10%. It is the standard way to compare the price of catastrophe cover between layers, years and markets.",
+      "aliases": [
+        "ROL",
+        "rate-on-line"
       ]
     },
     {
@@ -8260,6 +8526,15 @@
       ]
     },
     {
+      "slug": "reinstatement",
+      "term": "reinstatement",
+      "def": "A term that restores a catastrophe layer's limit after a loss has used it, usually for an extra premium and usually a limited number of times. Whether a layer has one, several or none is a material difference in a season with two events.",
+      "aliases": [
+        "reinstatement premium",
+        "reinstatements"
+      ]
+    },
+    {
       "slug": "reinsurance",
       "term": "reinsurance",
       "def": "Insurance bought by insurers: a reinsurer takes a share of a carrier's risk in exchange for a share of its premium, spreading catastrophe exposure across the global market. Named reinsurers behind a programme are a signal of its capacity and its credit quality.",
@@ -8267,6 +8542,15 @@
         "reinsurer",
         "reinsurers",
         "reinsurance capacity"
+      ]
+    },
+    {
+      "slug": "reinsurance-broker",
+      "term": "reinsurance broker",
+      "def": "A broker whose client is an insurance company rather than a policyholder. It designs and places the treaties and facultative cover that let a carrier write more risk than its own capital would allow, and it advises on how much risk to keep. The work is capital structuring dressed as broking.",
+      "aliases": [
+        "reinsurance broking",
+        "reinsurance intermediary"
       ]
     },
     {
@@ -8385,6 +8669,15 @@
       ]
     },
     {
+      "slug": "retail-broker",
+      "term": "retail broker",
+      "def": "The insurance broker that holds the relationship with the buyer. It takes the client's risk to market, negotiates terms, places the cover and advocates on claims, and is paid by commission out of the premium or by a fee from the client. It is an agent of the buyer, not of the insurer — which is what separates it from an agent.",
+      "aliases": [
+        "retail brokerage",
+        "retail broking"
+      ]
+    },
+    {
       "slug": "retail-choice",
       "term": "retail choice",
       "def": "A restructured market in which the wires company delivers power but customers buy the energy from competing retailers, and generation is not in rate base. Most of Texas works this way inside ERCOT; the Southeast and MISO South do not, which is why a data center there signs with one integrated utility rather than a retailer and a wires company.",
@@ -8404,6 +8697,15 @@
       "aliases": [
         "retention",
         "retention money"
+      ]
+    },
+    {
+      "slug": "retrocession",
+      "term": "retrocession",
+      "def": "Reinsurance bought by reinsurers. It is the last layer of the chain that moves a catastrophe loss off any single balance sheet, and when retro capacity tightens the effect works back down through reinsurance to the price of a project's property policy.",
+      "aliases": [
+        "retro",
+        "retrocessional"
       ]
     },
     {
@@ -8524,6 +8826,23 @@
       "slug": "ripple-current",
       "term": "ripple current",
       "def": "The small alternating current superimposed on a battery's direct current by the charger or the inverter. It heats the cell from the inside and ages it, which is why the acceptable level is a published specification rather than an afterthought."
+    },
+    {
+      "slug": "risk-capital",
+      "term": "risk capital",
+      "def": "Money set aside to absorb losses rather than to earn a return — an insurer's surplus, a captive's reserves, a cat bond's collateral, a developer's contingency. Framing insurance as risk capital makes visible that every policy is somebody's balance sheet rented for a year.",
+      "aliases": [
+        "risk capital allocation"
+      ]
+    },
+    {
+      "slug": "risk-retention",
+      "term": "risk retention",
+      "def": "The share of a loss a business decides to carry itself, through deductibles, self-insured layers or a captive, rather than transfer to an insurer. Raising it is the cheapest way to cut premium and the fastest way to turn a bad year into a very bad one.",
+      "aliases": [
+        "retained risk",
+        "self-insured retention"
+      ]
     },
     {
       "slug": "rng",
@@ -9124,6 +9443,16 @@
       "def": "A pipe cast through a concrete wall or slab so that conduit, piping or busway can pass through it later without cutting structure. Sleeves are set from coordinated drawings before the pour, not afterwards."
     },
     {
+      "slug": "slip",
+      "term": "slip",
+      "def": "The document that records the terms of a placement and the shares each underwriter has taken, signed line by line down the market. A subscription market places one risk across many insurers this way rather than asking one to take it whole.",
+      "aliases": [
+        "slip policy",
+        "subscription slip",
+        "line slip"
+      ]
+    },
+    {
       "slug": "slot-reservation",
       "term": "slot reservation",
       "def": "A payment that holds a place in a manufacturer's production schedule before the equipment has been specified, sometimes before it has been designed. In a shortage it is the queue position, not the price, that is being bought.",
@@ -9156,6 +9485,15 @@
       "def": "A battery chemistry replacing lithium with abundant sodium — cheaper materials and better cold-weather performance at lower energy density; an emerging challenger for stationary storage.",
       "aliases": [
         "Na-ion"
+      ]
+    },
+    {
+      "slug": "soft-market",
+      "term": "soft market",
+      "def": "The opposite of a hard market: capacity exceeds demand, prices fall, terms broaden and underwriters compete on more than price. It squeezes commission income and it quietly erodes the value of anything sold as a way to earn a discount.",
+      "aliases": [
+        "softening market",
+        "softening"
       ]
     },
     {
@@ -9208,6 +9546,15 @@
       "aliases": [
         "all-solid-state",
         "solid state battery"
+      ]
+    },
+    {
+      "slug": "solvency-capital",
+      "term": "solvency capital",
+      "def": "The capital a regulator and the rating agencies require an insurer to hold against the risks it has written. It is the real constraint on how much cover exists in a market — capacity is not appetite, it is somebody's balance-sheet capital priced and allocated.",
+      "aliases": [
+        "risk-based capital",
+        "solvency requirement"
       ]
     },
     {
@@ -9548,6 +9895,24 @@
       "slug": "subcooling",
       "term": "subcooling",
       "def": "How many degrees below its condensing temperature the liquid refrigerant is when it leaves the condenser. More subcooling means more useful cooling per kilogram circulated."
+    },
+    {
+      "slug": "sublimit",
+      "term": "sublimit",
+      "def": "A cap inside a policy that is lower than the policy's overall limit and applies to one peril or one category of loss — hail, flood, debris removal. Sublimits are where a policy that looks adequate at the headline limit turns out not to be.",
+      "aliases": [
+        "sub-limit",
+        "sublimits"
+      ]
+    },
+    {
+      "slug": "submission",
+      "term": "submission",
+      "def": "The package a broker takes to market for a risk: exposure schedules, loss history, engineering reports, certifications and the narrative explaining why this account is better than its class. The quality of a submission is most of what a broker is actually selling.",
+      "aliases": [
+        "risk submission",
+        "underwriting submission"
+      ]
     },
     {
       "slug": "submittal",
@@ -10123,6 +10488,15 @@
       ]
     },
     {
+      "slug": "total-insured-value",
+      "term": "total insured value",
+      "def": "The declared replacement cost of everything a property policy covers at a location, plus the business income at risk. It is the denominator behind a rate, so an understated figure quietly turns a good-looking rate into an inadequate limit.",
+      "aliases": [
+        "TIV",
+        "total insurable value"
+      ]
+    },
+    {
       "slug": "total-recordable-incident-rate",
       "term": "total recordable incident rate",
       "def": "Recordable injuries multiplied by two hundred thousand and divided by hours worked — the constant being one hundred workers at forty hours for fifty weeks, so the result reads as recordables per hundred workers per year. The arithmetic is unstable at small scale: on a small firm's hours a single incident moves the rate by a whole point, which is why the same threshold means very different things for a large contractor and a small one.",
@@ -10215,6 +10589,15 @@
       "aliases": [
         "digital asset treasury",
         "DAT"
+      ]
+    },
+    {
+      "slug": "treaty-reinsurance",
+      "term": "treaty reinsurance",
+      "def": "Reinsurance bought for a whole book of business at once: every policy meeting the treaty's definition is automatically covered for its term, with no individual underwriting. It is how a carrier buys capacity in bulk, usually renewed annually on 1 January, 1 April or 1 July.",
+      "aliases": [
+        "treaty",
+        "reinsurance treaty"
       ]
     },
     {
@@ -10345,6 +10728,15 @@
       "aliases": [
         "UN38.3",
         "UN 38.3 transport test"
+      ]
+    },
+    {
+      "slug": "underwriting-cycle",
+      "term": "underwriting cycle",
+      "def": "The insurance market's swing between hard and soft conditions. Losses erode capital, capacity withdraws, prices rise, high prices attract new capital, capacity returns and prices fall again. Almost every broker revenue trend is partly this cycle rather than the broker.",
+      "aliases": [
+        "insurance cycle",
+        "market cycle"
       ]
     },
     {
@@ -10732,6 +11124,15 @@
       "slug": "white-space",
       "term": "white space",
       "def": "The floor area of a data hall where racks actually stand, as distinct from the plant rooms, switchrooms and battery rooms that serve it. It is what gets leased, so every square metre spent on plant is measured against it."
+    },
+    {
+      "slug": "wholesale-broker",
+      "term": "wholesale broker",
+      "def": "A broker that does not deal with the insured directly but places business the retail broker cannot reach — surplus-lines markets, specialist underwriters, London. It adds a second commission to the chain, which is the price of access to capacity the retail broker has no appointment with.",
+      "aliases": [
+        "wholesale brokerage",
+        "wholesaler"
+      ]
     },
     {
       "slug": "wholesale-distribution-service",

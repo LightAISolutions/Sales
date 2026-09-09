@@ -1,0 +1,568 @@
+{
+ "schemaVersion": 2,
+ "slug": "aon",
+ "title": "Aon — Technology Study Guide",
+ "lastUpdated": "2026-09-09",
+ "glossary": [
+  {
+   "t": "fleet leader",
+   "d": "An early unit of a new equipment model that has accumulated a substantial record of problem-free operating hours. Underwriters use fleet-leader hours as a substitute for a loss history when deciding whether a new wind turbine or inverter model is insurable — type certification alone is not enough."
+  },
+  {
+   "t": "bridge power",
+   "d": "Temporary on-site generation installed to run a facility while it waits for a grid connection. It is insured as its own exposure because it is often rented, often gas-fired, and often operating far outside the duty cycle it was designed for."
+  },
+  {
+   "t": "prior-submit exchange",
+   "d": "A placement venue where participating underwriters evaluate each risk individually and decide whether and how to support it, rather than committing a fixed share of every qualifying risk in advance."
+  }
+ ],
+ "sections": [
+  {
+   "id": "start-here-risk-is-priced-capital",
+   "title": "Start here: an insurance policy is somebody's balance sheet, rented for a year",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "**The Marsh McLennan guide taught the broking chain** — who works for whom, how a placement is built, and what a facility is. **The kWh Analytics guide taught the underwriter's product.** This guide teaches the thing underneath both: **{{risk capital}}**, and how its price is set.",
+    "**One idea reframes everything.** When a project buys insurance it is not buying a document. It is renting a claim on somebody's capital for twelve months. That capital is held by an insurer against regulatory and rating-agency requirements, it earns a return, and its owners will move it if the return is inadequate. 'Capacity' is not appetite or willingness — **capacity is priced capital, and it goes where it is paid best.**",
+    "**Why Aon is the right worked example.** Its own 10-K states the strategy as focusing 'on higher-margin, capital-light professional services businesses'. It holds no underwriting capital of its own. Everything it sells in this space is other people's balance sheets, assembled: a USD 5bn data-centre facility, and what it calls the first-ever data-centre reinsurance treaty aligning up to USD 5bn behind a single insurer. **A firm that owns no capital and whose entire product is arranging capital is the clearest lens on how capital is arranged.**",
+    "**Three ideas carry the guide.** The price of insurance is an arithmetic identity — losses plus expenses against premium and investment income — and you can read a market from it. A catastrophe price is a model output, so where the model has no data the price is a judgment wearing a number. And the deepest structural problem in this corpus is that grid-connected batteries have almost no loss history, which is a *modelling* problem before it is a safety one."
+   ]
+  },
+  {
+   "id": "where-a-policy-comes-from",
+   "title": "Where a policy comes from: solvency, ratings and the cost of capital",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**An insurer's promise is only as good as the capital behind it**, so regulators require it to hold **{{solvency capital}}** against everything it writes — more for volatile lines, more for concentrated exposures, more for long-tail liabilities that take a decade to settle. This is the hard constraint on how much insurance exists in the world.",
+    "**Rating agencies apply a second, often tighter, constraint.** A lender's counsel will not accept paper below a threshold rating, so an insurer's rating is a licence to participate, not a nice-to-have. Watch what this does in practice: Aon's facilities are advertised as placed on 'A-rated or higher security through a combination of Lloyd's and company markets', because the rating is part of the product.",
+    "**Admitted and non-admitted are the third constraint, and they are not about quality.** An **{{admitted carrier}}** is licensed in the state where it writes, files its rates and forms with the regulator, and its policyholders are protected by a state guaranty fund. New, volatile or unusual risks are routinely refused by admitted markets and go to **{{excess and surplus lines}}** instead — where the underwriter has freedom of rate and form, and **none of those protections apply**. kWh Analytics' own disclaimer states it plainly: 'surplus lines insurance carriers do not generally participate in state guaranty funds.' Nearly every genuinely new energy technology is insured this way.",
+    "**Now the capital's own economics.** An insurer's shareholders demand a return; if underwriting a class does not earn it, capital leaves that class. This is why 'the market has no appetite' is never a statement about courage — it is a statement about price relative to the capital a regulator makes you hold.",
+    "**And why alternative capital changed the arithmetic permanently.** A pension fund holding a **{{catastrophe bond}}** is not seeking an insurer's return on equity; it is seeking a return uncorrelated with its equity book. It will therefore accept a lower risk premium for the same risk. That structural difference — not cleverness — is why **{{insurance-linked securities}}** have grown to USD 144.5bn of capital with catastrophe bonds outstanding above USD 63bn, and why a broker can now assemble towers no traditional market could fill."
+   ]
+  },
+  {
+   "id": "underwriting-arithmetic",
+   "title": "The arithmetic every rate decision comes from",
+   "kind": "ledger",
+   "read": "7 min",
+   "cols": [
+    "Measure",
+    "How it is computed",
+    "What it tells you",
+    "Where it bites in this corpus"
+   ],
+   "rows": [
+    [
+     "**{{loss ratio}}**",
+     "Claims incurred divided by premium earned",
+     "How the underwriting judgment actually performed",
+     "For grid-connected batteries there is barely a credible loss ratio to compute — which is the whole problem"
+    ],
+    [
+     "**{{expense ratio}}**",
+     "Acquisition costs — broker commission above all — plus administration, over premium",
+     "The half of the cost base the carrier controls by choosing its distribution",
+     "This is the number that makes delegated underwriting attractive: an MGA that brings pre-underwritten flow can be cheaper than a broker relationship"
+    ],
+    [
+     "**{{combined ratio}}**",
+     "Loss ratio plus expense ratio",
+     "Below 100 the insurer made money on underwriting alone; above 100 it lost money underwriting",
+     "A combined ratio of 103 can still be a good year if investment income on held premium exceeds the 3 points — which is why rate cuts persist longer than they intuitively should"
+    ],
+    [
+     "**Investment income**",
+     "Return earned on premium held between collection and claim payment",
+     "Why insurers can accept an underwriting loss",
+     "Rising rates make soft markets softer. The same mechanism gives brokers {{fiduciary investment income}}"
+    ],
+    [
+     "**{{rate on line}}**",
+     "Premium divided by limit purchased",
+     "The comparable price of catastrophe cover across layers and years",
+     "How you tell whether a renewal at 'the same premium' was actually a rate rise — if the limit fell, it was"
+    ],
+    [
+     "**{{average annual loss}}**",
+     "Expected loss per year averaged over a long simulated record",
+     "The technical core of a catastrophe premium",
+     "A USD 100m loss once a century is an AAL of USD 1m. It says nothing about whether the loss lands this year"
+    ],
+    [
+     "**{{probable maximum loss}}**",
+     "The largest loss expected from a defined event under stated assumptions",
+     "How much cover to buy and how much capital to hold",
+     "An engineering estimate, not an observation. Marsh's own council representative noted that solar 'insurance limits are sized well above the stowed PMLs' — buyers paying for limit the engineering says they do not need"
+    ]
+   ],
+   "ps": [
+    "**Put the identity together and you can read the 2026 market from first principles.** Insurers earned near-record returns, capital flowed in, capacity rose, and prices fell for eight consecutive quarters — property down 12 percent globally, property-catastrophe reinsurance down 16 percent at the midyear renewal. Nothing about batteries or data centres got safer. **The price moved because the capital moved.**",
+    "**The corollary that matters to a developer.** In this market you can decline to build a resilient asset and still get insured cheaply. That is a genuine and temporary discount — and it is exactly what Marsh's council representative was warning about when he said resilience 'isn't really about cost savings. It's about continued insurability.'"
+   ]
+  },
+  {
+   "id": "the-loss-that-nobody-can-hold-alone",
+   "title": "How a single very large loss is actually absorbed",
+   "kind": "bars",
+   "read": "6 min",
+   "unit": "USD billions of capacity available from one source",
+   "intro": "A hyperscale campus can cost more to build than the entire net capacity of the world's largest reinsurer for that class. Read these bars as the size of the largest single bite each source can take — and then consider that a USD 20bn site has to be assembled from them.",
+   "items": [
+    {
+     "label": "Munich Re — net capacity, one data-centre construction project",
+     "sub": "About USD 250m. Reaching USD 10bn on one site means stacking a tower across 40-plus carriers",
+     "v": 0.25
+    },
+    {
+     "label": "Aon — Cyber Property Damage Facility",
+     "sub": "Up to USD 50m for property damage and business interruption from malicious cyber acts, pitched at BESS owners",
+     "v": 0.05
+    },
+    {
+     "label": "Aon — cyber and technology errors and omissions within the data-centre tower",
+     "sub": "USD 400m",
+     "v": 0.4
+    },
+    {
+     "label": "Aon — project cargo within the same tower",
+     "sub": "USD 500m",
+     "v": 0.5
+    },
+    {
+     "label": "Aon — terrorism capacity within the same tower",
+     "sub": "USD 1bn",
+     "v": 1.0
+    },
+    {
+     "label": "Marsh — Nimbus construction facility",
+     "sub": "USD 2.7bn including delay-in-start-up",
+     "v": 2.7
+    },
+    {
+     "label": "Aon — Data Center Lifecycle Insurance Program",
+     "sub": "USD 5bn of construction all risks, delay-in-start-up and property damage and business interruption",
+     "v": 5.0
+    },
+    {
+     "label": "Aon — the first data-centre-specific reinsurance treaty",
+     "sub": "'Aligning up to $5 billion of capital behind a single leading insurer' — a separate USD 5bn, sitting behind a carrier rather than in front of a client",
+     "v": 5.0
+    },
+    {
+     "label": "Marsh — Stratus operational property exchange",
+     "sub": "Up to USD 10bn on a single placement, prior-submit, traditional and alternative capital",
+     "v": 10.0
+    },
+    {
+     "label": "Aon — stated single-project capability using alternative capital",
+     "sub": "USD 13-15bn, per management at Q2 2026",
+     "v": 14.0
+    }
+   ],
+   "ps": [
+    "**The two USD 5bn bars are doing different jobs, and the difference is the lesson.** The facility sits in front of the client: it is capacity a broker assembled so a buyer can be covered. The treaty sits behind a carrier: it is capacity a broker assembled so an *insurer* can afford to lead. Solving a shortage from the demand side and the supply side at once is what an integrated Risk Capital business means in practice.",
+    "**Against these numbers, one industry estimate that puts them in proportion:** Engineering News-Record has reported that 'billions of dollars in data center construction risk is uninsured'. Zurich's global head of construction and surety put it more directly — 'there simply isn't sufficient insurance capacity in the market to insure these projects to their full value.'"
+   ]
+  },
+  {
+   "id": "catastrophe-modelling",
+   "title": "How a catastrophe price is actually made",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**A {{catastrophe model}} has four layers, and knowing them tells you exactly where a price can be wrong.** *Hazard*: simulate tens of thousands of years of events — where hurricanes form, where hail falls, how hard the ground shakes. *Exposure*: what is where, and what is it worth. *Vulnerability*: for a given intensity at a given location, what fraction of the asset's value is destroyed. *Financial*: apply the policy's deductibles, {{sublimit}}s and limits to the damage.",
+    "**Run that a hundred thousand times and you get a loss distribution.** From it come the numbers underwriters actually quote: the **{{average annual loss}}**, and the **{{exceedance probability}}** curve — the chance that a loss of a given size or larger occurs in a year. A '1-in-100-year loss' is a point on that curve. **It is a 1 percent chance each year, not a schedule**, and two of them can arrive in consecutive years without anything being wrong with the model.",
+    "**The vulnerability layer is where new technology breaks the machinery.** Hazard science is shared: everyone models hail the same way. Exposure is bookkeeping. But a vulnerability curve is built from observed damage — you need a population of assets that have been hit, and a record of what fraction was destroyed. **For grid-connected battery storage that population barely exists.** Aon says so directly: 'there is little in the way of claims data for BESS that are plugged into the grid, unlike comparable renewable technologies such as wind or solar where there are already substantial data sets of claims information.'",
+    "**Even where data does exist, the models have been wrong recently and in a knowable direction.** kWh Analytics' published research finds that physics-based models overestimate the benefit of {{hail stow}} by 48 percent for three-inch hail — the mitigation works less well than the model says. And the peers disagree on the magnitude of the peril itself: kWh puts hail at 73 percent of solar losses by amount, GCube at 54 percent of losses from 1.4 percent of claims, VDE Americas at 2 percent of claims. **The direction agrees; the shares do not.** When you see a confident catastrophe number for renewables, ask whose loss data built it.",
+    "**What substitutes for a model when there isn't one.** Engineering judgment, applied as binary conditions. Aon asks for 'three metres or more of spacing' where developers specify two. Marsh asks for separation between enclosures and for power to be routed to the grid independently of the battery. Aon requires wind-turbine 'fleet leaders' to show 'a significant amount of problem-free, real-world operating hours' before it will treat a new model as insurable. **None of this is actuarial. It is an underwriter substituting a rule for a distribution** — and charging for the uncertainty that remains.",
+    "**And here is the finding that ties this guide to the assurance segment.** Neither incumbent broker names a standard. Across seven Marsh battery documents and every Aon battery and renewables publication reviewed, no UL 9540A, NFPA 855, DNV, CSA, TÜV or IEC reference appears; Aon's single cited standard is SCOR's 2022 handbook. NFPA 855 is the code that specifies the separation both firms ask for. **The brokers state the requirement and leave the code unnamed** — which is exactly the gap a certification body and a data-priced MGA exist to fill."
+   ]
+  },
+  {
+   "id": "parametric-and-basis-risk",
+   "title": "Two ways to pay, and the risk hiding in the cheaper one",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "An indemnity policy pays what you actually lost, after the claim is adjusted. A parametric contract pays a pre-agreed amount when a measured index crosses a threshold. Both are risk transfer; they fail in opposite directions, and the whole design problem is choosing the {{parametric trigger}}.",
+   "cards": [
+    {
+     "t": "Indemnity",
+     "meta": "Pays the assessed loss, up to the limit, after the deductible and after adjustment.",
+     "adv": [
+      "**No {{basis risk}}.** If the covered thing happened and you lost money, the policy responds",
+      "**Lenders understand it.** It is what a loan covenant is written against without special drafting",
+      "**Scales to the actual loss** rather than to a proxy for it"
+     ],
+     "dis": [
+      "**Slow.** Adjustment on a complex energy loss runs 11 to 13 months on Aon's own figures, and beyond 24 for complex claims — a long time to service debt without revenue",
+      "**Contestable.** The argument is over the wording, which is why {{claims advocacy}} is a service at all",
+      "**Needs a loss history to price**, which new technology does not have",
+      "**Documentation-dependent.** 26 percent of the renewable construction claims Aon analysed were categorised 'Other/Unknown'"
+     ]
+    },
+    {
+     "t": "Parametric",
+     "meta": "Pays a fixed amount when a measured index — wind speed, hail diameter, quake magnitude, an outage duration — crosses a stated threshold.",
+     "adv": [
+      "**Fast.** Payment follows the measurement, not an adjuster",
+      "**No dispute about causation.** The index either crossed or it did not",
+      "**Insurable where indemnity is not.** You can write a contract on a measurable index even with no vulnerability curve for the asset",
+      "**Efficient as a credit enhancement.** kWh's chief executive: 'For every dollar of premium paid, the project realized approximately six dollars in additional loan proceeds'"
+     ],
+     "dis": [
+      "**{{basis risk}} is the whole problem.** The index can fail to trigger while the asset is destroyed, or trigger while nothing happened",
+      "**Trigger design is the product.** A tight trigger pays reliably and costs more; a loose one is cheap and may not pay when it matters",
+      "**Needs a trustworthy independent measurement** — a station, a satellite, a settled index",
+      "**Thinly used where you might expect it.** Of a record USD 11.3bn of catastrophe-bond issuance in Q2 2026, under 1 percent used a parametric trigger"
+     ]
+    }
+   ],
+   "ps": [
+    "**Where each incumbent actually is.** Aon publishes parametric outage triggers as one of seven product categories it expects the energy transition to need — but this research found no independent source naming it on a parametric renewables or battery structure in 2025 or 2026. Marsh publishes parametric solutions for cyclone, earthquake, drought, wind speed and rainfall, and its current parametrics page names no renewables application at all.",
+    "**The challenger is the one doing it.** kWh Analytics structures a Munich Re-backed parametric wind hedge and sells a revenue put. This is the sharpest illustration in the corpus of the difference between a broker and an MGA: the incumbents publish the *category*, the challenger writes the *contract*."
+   ]
+  },
+  {
+   "id": "how-a-catastrophe-bond-is-built",
+   "title": "How a catastrophe bond is built",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "Months relative to the bond coming to market. This is the mechanism by which pension-fund money ends up paying a hurricane claim — and the route by which a data-centre tower reaches limits no insurer could offer. Lanes: the sponsor and its investment bank; the investors and the collateral trust.",
+   "unit": "months relative to issuance (negative = before)",
+   "lanes": {
+    "sp": "Sponsor / structuring bank",
+    "inv": "Investors / collateral"
+   },
+   "items": [
+    {
+     "x": -9,
+     "lane": "sp",
+     "label": "Decide what to transfer",
+     "sub": "Which peril, which region, which layer of the loss distribution — usually a remote layer the traditional market prices expensively"
+    },
+    {
+     "x": -7,
+     "lane": "sp",
+     "label": "Choose the trigger",
+     "sub": "Indemnity (the sponsor's actual losses), industry-loss index, parametric, or modelled loss. Each trades {{basis risk}} against investor comfort"
+    },
+    {
+     "x": -6,
+     "lane": "sp",
+     "label": "Independent modelling",
+     "sub": "A modelling firm produces the expected loss and attachment probability. This number is the price"
+    },
+    {
+     "x": -4,
+     "lane": "sp",
+     "label": "Special purpose vehicle established",
+     "sub": "A bankruptcy-remote entity issues the notes and writes a reinsurance contract to the sponsor"
+    },
+    {
+     "x": -2,
+     "lane": "inv",
+     "label": "Marketing and book-building",
+     "sub": "Spread negotiated against the modelled expected loss; a multiple of expected loss is the pricing convention"
+    },
+    {
+     "x": 0,
+     "lane": "inv",
+     "label": "Issuance; proceeds into a collateral trust",
+     "sub": "The cash sits in the trust. This is why there is no counterparty credit question — unlike a reinsurance promise"
+    },
+    {
+     "x": 6,
+     "lane": "sp",
+     "label": "Cover in force",
+     "sub": "Multi-year, typically three — against an annually renewed insurance policy"
+    },
+    {
+     "x": 18,
+     "lane": "inv",
+     "label": "An event occurs, or does not",
+     "sub": "If the trigger is breached, principal is written down and paid to the sponsor. If not, investors keep the coupon"
+    },
+    {
+     "x": 36,
+     "lane": "inv",
+     "label": "Maturity; principal returns",
+     "sub": "Aon Securities recorded a 12.5 percent investor return across the market for the year"
+    }
+   ],
+   "ps": [
+    "**The scale is no longer marginal.** Alternative capital reached USD 144.5bn, catastrophe-bond issuance USD 24.9bn in a year with outstanding notional above USD 63bn, sidecars USD 23bn, and 78 sponsors including 16 first-timers. This is a permanent second market, not a supplement.",
+    "**Why it matters for data centres specifically.** Their problem is limit — no single insurer can take a USD 20bn site. Aon's Q2 2026 statement that it can now support individual projects to USD 13-15bn 'using alternative capital sources' is this machinery pointed at a new asset class, and Marsh's Stratus exchange admits the same capital on a prior-submit basis. **What this capital will not yet do is price a warehouse of batteries with no loss history** — it needs a modelled, definable trigger, which is precisely what battery storage lacks."
+   ]
+  },
+  {
+   "id": "retention-and-captives",
+   "title": "The cheapest insurance is the insurance you do not buy",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Every risk-transfer decision starts with how much to keep. Raising retention is the fastest way to cut premium and the fastest way to turn a bad year into a very bad one. These are the rungs, cheapest first.",
+   "cols": [
+    "Mechanism",
+    "How it works",
+    "What it costs",
+    "When it makes sense"
+   ],
+   "rows": [
+    [
+     "**Deductible**",
+     "The first slice of every loss, paid by the insured",
+     "Nothing up front; everything in a bad year",
+     "Always — the question is only how large"
+    ],
+    [
+     "**Self-insured retention**",
+     "A larger layer retained deliberately, sometimes with its own claims handling",
+     "Working capital and volatility",
+     "When your loss history is better than your class's, so the market is overcharging you for predictable losses"
+    ],
+    [
+     "**{{captive insurer}}**",
+     "An insurance company the business owns, insuring its own risks",
+     "Capital, licensing, a domicile, management fees",
+     "At scale. It converts premium into retained capital and gives **direct access to the reinsurance market**, cutting out a layer of margin. Marsh manages captives holding USD 79.1bn of gross written premium"
+    ],
+    [
+     "**Protected cell**",
+     "A ring-fenced cell inside someone else's captive structure",
+     "A fee, no separate capital",
+     "When a full captive is too much. Marsh's Nexus, launched June 2026, targets multinationals with over USD 3m of annual non-US benefits spend"
+    ],
+    [
+     "**{{fronting carrier}}**",
+     "A rated, licensed insurer issues the paper for risk it passes straight to a captive or reinsurers",
+     "A fronting fee",
+     "When you need rated paper for a lender or a regulator but intend to hold the economics yourself"
+    ],
+    [
+     "**Full transfer**",
+     "Buy the cover",
+     "Premium, every year, forever",
+     "When the loss is large, rare and would break you — which is exactly the shape of a battery fire or a data-centre total loss"
+    ]
+   ],
+   "ps": [
+    "**The reason this matters for the corpus is a mismatch of clocks.** As kWh Analytics' council moderator put it: 'The undiscounted payback period on these assets is 12-plus years. They're built to last 35. Insurance is renewed annually.' A thirty-five-year asset cannot lock in a price, so **retention is the only lever an owner fully controls.**",
+    "**A structural note on who is allowed to do what.** Aon manages captives but, on this research, operates no renewables or storage {{managing general agent}} on its own paper — its energy vehicles are all facilities assembled from carrier capacity. That is the line between it and kWh Analytics, and it is a strategy rather than an oversight: the 10-K commits the firm to 'capital-light professional services businesses'."
+   ]
+  },
+  {
+   "id": "insuring-a-data-centre-as-a-utility",
+   "title": "Why a data centre is now insured as a utility",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**Aon's own research contains the sentence that connects the two halves of this corpus.** Discussing on-site generation, it concludes that 'data centers must be insured as utilities with distinct underwriting approaches'. That is a category change, and it follows directly from the power problem.",
+    "**The scale of that problem, from the company's published figures.** Data-centre energy consumption goes from 82 GW in 2025 to 220 GW by 2030 — a 165 percent increase in global data-centre power demand, reaching about 11 percent of US power demand. Grid connection takes 'roughly 12 to 24 months' in the UK and 'at least three years' in the US. Transformer lead times run two to three years against a 30 percent availability shortfall.",
+    "**So developers build their own power.** And when they do, five insurance consequences follow, all named in Aon's research: speculative grid applications create **stranded-asset risk**; **bridge power** — temporary on-site generation during interconnection delays — has to be insured as its own thing; the facility must be underwritten as a utility; '**battery storage and backup systems** require contingency planning and tailored insurance solutions'; and emerging build models 'lack historical performance data'.",
+    "**Solar plus battery storage is named explicitly** as supporting 'peak shaving and sustainability objectives while enhancing grid resilience'. This is the mechanism by which a corpus about batteries and a corpus about AI data centres turn out to be one corpus.",
+    "**And the failure mode has a technical shape, given by Aon's power leader.** 'Power, cooling and control systems are increasingly interdependent, creating pathways for rapid fault propagation. Critical risks include coolant distribution failure, electrical instability within inverter-based systems, shared infrastructure faults, **battery thermal events** and control system errors.' Read that as an underwriter's list: the campus is not a building with servers in it, it is a tightly coupled electrical system in which one subsystem's failure propagates into the others.",
+    "**The commercial consequence sits on the other side of the meter.** Marsh's research on the same problem notes that power purchase agreements run 15 to 25 years while data-centre tenant commitments are much shorter, leaving the power provider exposed to 'stranded assets — facilities that become underutilized long before the investment has paid for itself'. The instruments brokered against that are not property policies at all — they are **surety guarantees, letters of credit and trade credit insurance**. When you ask who insures the power behind a data centre, part of the answer is a credit desk."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**The model is only as good as its worst layer, and for batteries that layer is empty.** Hazard science is shared and exposure is bookkeeping, but vulnerability curves need observed damage to a population of assets. Grid-connected storage does not have one. Any confident-sounding catastrophe number for a battery portfolio is a judgment with a decimal point on it.",
+    "**Company scale claims are not market evidence.** Aon's only megawatt-scale battery figure — '+150MW BESS projects insured' — comes from a regional brochure coded June 2018 that also claims 'more than 72,000 colleagues' against about 60,000 today. It publishes no current global battery portfolio figure, project count or premium, despite claiming more than 1,000 renewable projects overall. Marsh's battery credentials are similarly self-published and uncorroborated. **Check whether anyone other than the company has ever repeated a number before you use it.**",
+    "**Forecasts published by a market participant are marketing with arithmetic.** Aon's projections — energy-transition premiums above USD 9bn by 2030, battery storage above USD 1bn of gross written premium by 2027 at about 25 percent compound growth, hydrogen at USD 5bn by 2027 — are its own, published in a framework designed to help insurers 'capture growth'. They may well be right. They are not independent estimates and should never be cited as if they were.",
+    "**Rated paper and collateral are not the same protection, and lenders sometimes conflate them.** A cat bond's money sits in a trust — there is no counterparty credit question. A reinsurance promise is a promise from a balance sheet. And a surplus-lines policy, which is how most new energy technology is insured, carries **no state guaranty fund** behind it at all.",
+    "**Leverage is a risk-transfer question about the broker itself.** Aon deleveraged from 3.7x after NFP to 2.5x pro forma, earned an S&P outlook upgrade to stable in November 2025 whose stated downgrade trigger was leverage sustained at about 3x — and then committed USD 17.0bn of new debt for USI, taking leverage to about 4.8x, with buybacks paused, accretion deferred to 2028 and an interim chief financial officer in post. **The firm that arranges everyone else's capital has just materially rearranged its own**, and neither rating agency had published a view nine days later."
+   ]
+  },
+  {
+   "id": "where-aon-slots-in",
+   "title": "Where Aon's businesses slot into the capital chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Two reportable segments, four solution lines. Note that the segments and the solution lines are not the same thing — the lines sit inside the segments, which is the structure most summaries get wrong.",
+   "cols": [
+    "Solution line",
+    "Segment",
+    "Position in the capital chain",
+    "FY2025 revenue",
+    "What it means here"
+   ],
+   "rows": [
+    [
+     "**Commercial Risk Solutions**",
+     "Risk Capital",
+     "{{retail broker}} — works for the buyer",
+     "USD 8,497m",
+     "Where the Data Center Lifecycle Insurance Program and the energy practices sit. The 10-K names energy and climate as organising verticals"
+    ],
+    [
+     "**Reinsurance Solutions**",
+     "Risk Capital",
+     "{{reinsurance broker}} — works for the carrier — plus Aon Securities as a capital-markets arm",
+     "USD 2,793m",
+     "Where the first data-centre reinsurance treaty was placed, and where the alternative capital is reached. Held 5 percent organic against treaty rates down 15 to 20 percent"
+    ],
+    [
+     "**Health Solutions**",
+     "Human Capital",
+     "Advisory and benefits broking",
+     "USD 3,839m",
+     "Not risk transfer for physical assets. Organic growth decelerated to 2 percent for FY2025"
+    ],
+    [
+     "**Wealth Solutions**",
+     "Human Capital",
+     "Retirement, pension risk transfer, investment consulting",
+     "USD 2,068m",
+     "Prints minus 18 percent on the NFP wealth disposal while growing organically. Grew 1 percent in Q1 2026 against 2.9 percent expected"
+    ]
+   ],
+   "ps": [
+    "**NFP is not a segment.** Its revenue is absorbed into the lines above and it runs as a distinct brand. USI, at USD 17.0bn, will be absorbed the same way — so neither middle-market acquisition will ever appear as its own reported line.",
+    "**The one-sentence contrast with the other incumbent.** Marsh McLennan is about USD 9.8bn larger and has been first for sixteen consecutive years; Aon grew organically faster in FY2025 (6 percent against 4 percent) and leads on data-centre capacity. **They are both incumbents and they are not equals**, and which one is 'ahead' depends entirely on which measure you pick — which is the honest answer, not a hedge."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does 'capacity' actually mean in insurance?",
+     "a": "Somebody's capital, priced. Not appetite or willingness — capital held against regulatory and rating-agency requirements, which will move to wherever it is paid best. That is why capacity withdraws after losses and returns after price rises."
+    },
+    {
+     "q": "Name the four layers of a catastrophe model and say which one breaks for new technology.",
+     "a": "Hazard, exposure, vulnerability and financial terms. Vulnerability breaks — it needs observed damage to a population of assets, and grid-connected battery storage does not have one."
+    },
+    {
+     "q": "What is an exceedance probability curve, and what does '1-in-100-year loss' actually mean?",
+     "a": "The curve gives the chance that a loss of a given size or larger occurs in a year. A 1-in-100-year loss is a 1 percent chance each year — not a schedule. Two can arrive in consecutive years with nothing wrong with the model."
+    },
+    {
+     "q": "Distinguish average annual loss from probable maximum loss.",
+     "a": "AAL is the expected loss per year averaged over a long simulated record — the technical core of a premium. PML is the largest loss expected from a defined event under stated assumptions — it sets how much cover to buy and how much capital to hold. Both are model outputs, not observations."
+    },
+    {
+     "q": "An insurer runs a combined ratio of 103. Did it lose money?",
+     "a": "It lost money on underwriting. Whether it lost money overall depends on investment income earned on premium held between collection and claim payment. This is why soft markets persist longer than intuition suggests."
+    },
+    {
+     "q": "What is the expense ratio, and why does it favour delegated underwriting?",
+     "a": "Acquisition costs — broker commission above all — plus administration, over premium. It is the half of the combined ratio a carrier controls by choosing its distribution, which is why pre-underwritten MGA flow can be cheaper than a broker relationship."
+    },
+    {
+     "q": "What is basis risk?",
+     "a": "The risk that a parametric contract's index fails to trigger while the asset is damaged, or triggers when nothing happened. It is the price paid for speed and for insurability where indemnity underwriting has no data."
+    },
+    {
+     "q": "Why does a catastrophe bond have no counterparty credit risk?",
+     "a": "The proceeds sit in a collateral trust from issuance. A reinsurance recoverable is a promise from a balance sheet; a cat bond's money is already there."
+    },
+    {
+     "q": "Why does alternative capital accept a lower risk premium than an insurer's shareholders?",
+     "a": "Because it is seeking a return uncorrelated with its equity book rather than an insurance company's return on equity. That structural difference — not cleverness — is why ILS has grown to about USD 144.5bn."
+    },
+    {
+     "q": "What protection does a buyer lose in the surplus lines market?",
+     "a": "State guaranty fund protection, and the regulator's review of rates and forms. Non-admitted carriers have freedom of rate and form — which is why new technologies can be insured there at all, and why a lender checks the carrier's rating instead."
+    },
+    {
+     "q": "What is a fronting carrier?",
+     "a": "A rated, licensed insurer that issues the policy paper for risk it passes on to a captive, an MGA's capacity providers or reinsurers, for a fee. The buyer gets rated paper; the economics sit elsewhere."
+    },
+    {
+     "q": "Why does a captive give a large corporate access to cheaper risk transfer?",
+     "a": "It converts premium into retained capital and buys reinsurance directly, cutting out a layer of margin. It only makes sense at a scale where the parent can absorb its own losses in a bad year."
+    },
+    {
+     "q": "Aon asks for three metres of spacing between battery enclosures where developers specify two. What kind of requirement is that?",
+     "a": "An engineering rule substituting for a statistical distribution. With no vulnerability curve for grid-connected storage, the underwriter replaces a model with a binary condition — and charges for the uncertainty that remains."
+    },
+    {
+     "q": "Which standards do Aon's battery publications cite?",
+     "a": "None of the sector's — no UL 9540A, NFPA 855, DNV, CSA, TÜV or IEC. The only standard cited anywhere is SCOR's 2022 handbook. Marsh's guidance behaves the same way across seven documents."
+    },
+    {
+     "q": "Why is a data centre now 'insured as a utility'?",
+     "a": "Because grid delay pushes developers into on-site generation and storage, and once a campus generates its own power it carries a generator's risks — stranded assets, bridge power, battery thermal events and fault propagation across coupled electrical systems."
+    },
+    {
+     "q": "What instruments are brokered against a power provider's stranded-asset risk behind a data centre?",
+     "a": "Surety guarantees, letters of credit and trade credit insurance — not property cover. The exposure is a mismatch between 15-to-25-year power purchase agreements and much shorter tenant commitments."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "Property rates fell for eight consecutive quarters through Q2 2026 while insurers earned near-record returns. The most complete explanation is:",
+     "c": [
+      "Underwriters became more confident about climate risk",
+      "Capital flowed into the market because returns were high, capacity rose, and price fell — the cycle acting on supply, not a change in the risk",
+      "Losses fell sharply across all perils",
+      "Regulators reduced solvency capital requirements"
+     ],
+     "a": 1,
+     "why": "Nothing about the underlying risks improved. Near-record insurer returns attracted capital, dedicated reinsurance capital rose 9 percent and catastrophe-bond notional passed USD 58bn, and price fell accordingly. Reading a rate move as a risk signal is the commonest error in this market."
+    },
+    {
+     "q": "A catastrophe model produces a confident-looking price for a 400 MWh battery portfolio. The layer most likely to be wrong is:",
+     "c": [
+      "Hazard — the meteorology of hail and windstorm",
+      "Exposure — the schedule of what is where",
+      "Vulnerability — the curve translating event intensity into fraction of value destroyed",
+      "The financial module applying deductibles and limits"
+     ],
+     "a": 2,
+     "why": "Hazard science is shared across the industry and exposure is bookkeeping. Vulnerability requires observed damage to a population of similar assets, and Aon states plainly that there is 'little in the way of claims data for BESS that are plugged into the grid'."
+    },
+    {
+     "q": "Aon holds no underwriting capital, yet says it can support individual data-centre projects to USD 13-15bn. This is possible because:",
+     "c": [
+      "It has quietly become an insurer",
+      "It assembles other parties' capital — towers of carriers, reinsurance treaties behind a lead insurer, and alternative capital from the ILS market",
+      "It uses its balance sheet to guarantee the tower",
+      "Regulators permit brokers to hold risk above a threshold"
+     ],
+     "a": 1,
+     "why": "Its 10-K commits it to 'capital-light professional services businesses'. The USD 5bn facility, the USD 5bn reinsurance treaty behind a single insurer and the alternative-capital market are three different pools, and assembling them is the product."
+    },
+    {
+     "q": "A sponsor is offered a parametric wind contract at half the price of the indemnity equivalent. The question to ask first is:",
+     "c": [
+      "Which carrier is behind it",
+      "How tightly the trigger index correlates with the sponsor's own loss experience — the basis risk",
+      "Whether the payout is taxable",
+      "How long the adjustment period is"
+     ],
+     "a": 1,
+     "why": "Basis risk is the entire economics of the discount. A loose trigger is cheap precisely because it may not pay when the damage is real; a tight one costs more because it pays reliably. The carrier and the adjustment period matter far less."
+    },
+    {
+     "q": "Aon's leverage went from 3.7x after NFP to 2.5x pro forma, earning an S&P outlook revision to stable whose stated downgrade trigger was about 3x — and then it committed USD 17.0bn of new debt for USI. The correct reading is:",
+     "c": [
+      "The rating is unaffected because Aon expects to maintain Baa2 and A-",
+      "A company's own expectation is not an agency's verdict; leverage of about 4.8x is above the stated trigger and no agency had opined nine days after announcement",
+      "S&P's trigger no longer applies after an outlook revision",
+      "Leverage is irrelevant for a capital-light business"
+     ],
+     "a": 1,
+     "why": "The company's expectation and the agencies' decision are different things, and the dossier records both without conflating them. This is the single most consequential open item on Aon's refresh calendar row."
+    }
+   ]
+  }
+ ]
+}

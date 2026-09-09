@@ -1,0 +1,1721 @@
+{
+ "schemaVersion": 7,
+ "slug": "marsh-mclennan",
+ "name": "Marsh & McLennan Companies, Inc. (operating and branded since January 2026 as Marsh)",
+ "shortName": "Marsh McLennan",
+ "categories": [
+  "advisor"
+ ],
+ "website": "https://www.marsh.com/en/corp/",
+ "headquarters": "1166 Avenue of the Americas, New York, NY 10036-2774, United States; incorporated in Delaware",
+ "employees": "Over 95,000 colleagues as of 31 December 2025 across 130 countries (FY2025 10-K). By segment: Risk and Insurance Services about 55,700 (Marsh Risk about 52,000, Marsh Re about 3,700); Consulting about 29,100 (Marsh People and Investments about 21,900, Marsh Management Consulting about 7,200)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: MRSH"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Marsh McLennan is the world's largest insurance broker by revenue for the sixteenth consecutive year, and in January 2026 it retired the brand architecture that made it legible — the group now trades as Marsh, the broking arm is Marsh Risk, Mercer is Marsh People and Investments, and on 1 September 2026 the century-old Guy Carpenter name became Marsh Re. Its incumbency in the market this corpus covers is real but unevenly evidenced: independent sources name it repeatedly and specifically in AI data-centre risk — the Nimbus construction facility at USD 2.7bn, the Nimbus Casualty tower, the Stratus property exchange targeting USD 10bn on a single placement, and advisory roles on both sides of the USD 14bn Meta/BlackRock El Paso campus — while its battery-storage credentials appear only on its own website. BACKGROUND. Delaware-incorporated, headquartered at 1166 Avenue of the Americas, New York; over 95,000 colleagues in 130 countries; FY2025 revenue USD 26,981m (up 10 percent reported, 4 percent underlying) with adjusted EPS of USD 9.75. Two reportable segments: Risk and Insurance Services (USD 17,265m — Marsh Risk USD 14,366m, Marsh Re USD 2,496m) and Consulting (USD 9,794m — Marsh People and Investments USD 6,190m, Marsh Management Consulting USD 3,604m). The NYSE ticker changed from MMC to MRSH on 14 January 2026; the legal name and CUSIP did not change. McGriff Insurance Services was acquired for USD 7.75bn in cash, completed 18 November 2024 and funded with USD 7.25bn of senior notes. The Thrive programme, launched 16 October 2025, targets USD 400m of annual run-rate savings against about USD 500m of charges. Collection gap: no company-published history page exists at the company's own URL and no founding date is asserted here; the Global Insurance Market Index publishes no energy or renewables rate line; and the company names no competitor in any of its own materials reviewed for this dossier.",
+ "ecosystemRole": "The larger of the two brokers this corpus places in insurance and risk transfer, and the counterparty that assembles the risk-transfer programme a project financing depends on — the seat kWh Analytics' own dossier identifies as 'the seat Marsh and Aon hold'. It works for the buyer, not the carrier: it builds the submission, markets it, structures the layers and advocates the claim, and is paid by commission out of the premium. Its distinctive contribution to this ecosystem is not placement volume but the construction of capacity where none existed — Nimbus for data-centre construction, Stratus for operational data-centre property at up to USD 10bn on one placement drawing on traditional and alternative capital, a renewables facility for sub-50 MW solar and storage, and the world's first green and blue hydrogen facility. It also sits on the challenger's own distribution: Marsh and its subsidiary McGriff together hold two of the eight seats on kWh Analytics' Broker Council in both published years, a quarter of that council in 2026, and neither readout discloses the common ownership.",
+ "productsAndServices": [
+  {
+   "name": "Marsh Risk — insurance broking and risk advisory",
+   "category": "Risk and Insurance Services",
+   "description": "The retail insurance broking and risk-advisory business, and the single largest revenue line in the company: USD 14,366m in FY2025, 54 percent of group revenue, about 52,000 colleagues. The 10-K calls it the 'world's leading insurance broker and risk advisor', selling 'risk management, insurance broking, insurance program design, risk consulting, analytical modeling and alternative risk financing services'. It works for the buyer of insurance, not the seller, and is paid by commission out of the premium or by a client fee. Until January 2026 this business was itself called Marsh; the group took that name and the broking arm became Marsh Risk.",
+   "highlights": [
+    "FY2025 revenue USD 14,366m, up 15 percent GAAP and 4 percent underlying; Q2 2026 USD 4,071m, up 6 percent GAAP and 4 percent underlying",
+    "Compensation includes contingent commissions, which the 10-K says are taken 'primarily driven by MMA and parts of Marsh Risk's international operations' — the residue of the 2004-05 contingent-commission settlements",
+    "John Donnelly, President of Global Placement, is the named voice of the quarterly Global Insurance Market Index",
+    "Nick Studer became President and CEO on 1 April 2026, moving across from Oliver Wyman; Martin South, who held the seat, became Chief Client Officer of the group"
+   ],
+   "positioning": "Self-described in the FY2025 10-K as the 'world's leading insurance broker and risk advisor'. Marsh names no competitor anywhere in its 10-K or in roughly fifty company pages reviewed for this dossier — the competitive framing in its own materials is generic ('competitive pressures... disintermediation'). Every comparison to Aon, WTW, Gallagher, Alliant, Brown & Brown, AmWins or CAC Specialty in this dossier is therefore third-party sourced.",
+   "soldThrough": "Direct retail broking to large corporate and institutional buyers, with Marsh McLennan Agency as the separate middle-market retail channel and Victor Insurance Managers as the delegated-underwriting arm. Specialist risks are placed into the London and Lloyd's markets through Marsh Specialty.",
+   "targetSegments": [
+    "Large corporate and multinational risk buyers",
+    "Public entities and institutions",
+    "Project sponsors, developers and contractors",
+    "Middle-market businesses (through Marsh McLennan Agency)"
+   ],
+   "roadmap": "The Thrive programme, announced 16 October 2025, targets USD 400m of annual run-rate savings over three years against about USD 500m of restructuring charges, with part of the saving reinvested in talent and AI. USD 103m of those charges were taken in the first half of 2026."
+  },
+  {
+   "name": "Digital infrastructure facilities — Nimbus, Nimbus Casualty and Stratus",
+   "category": "Risk and Insurance Services — facilities and exchanges",
+   "description": "Three purpose-built structures covering the data-centre lifecycle, all launched inside fifteen months, and the clearest evidence in this dossier of an incumbent broker building capacity products rather than only placing risk. Nimbus covers construction, Nimbus Casualty the excess liability tower above it, and Stratus the operational phase. Marsh calls Nimbus 'the first insurance facility built specifically for large-scale data center construction'.",
+   "highlights": [
+    "Nimbus launched 16 June 2025 at EUR 1bn construction all-risks plus EUR 350m delay-in-start-up for the UK and Europe, on a panel of Lloyd's and company-market insurers",
+    "Nimbus expanded 26 January 2026 to USD 2.7bn inclusive of delay-in-start-up and business interruption, and widened to the UK, US, Canada, Europe, Australia and New Zealand",
+    "Nimbus Casualty launched 19 February 2026: up to USD 75m of excess general liability for US digital-infrastructure construction attaching at a minimum of USD 25m, on an A+ rated Lloyd's and London panel, written on Marsh Risk's proprietary XSellence follow-form",
+    "Stratus launched 26 August 2026: up to USD 10bn of property capacity on a single placement for the global exposures of US-domiciled companies, drawing on 30 traditional and alternative capital providers, structured as an exchange on a prior-submit basis rather than fixed committed shares",
+    "Mike Mathews was appointed to the newly created role of Global Digital Infrastructure Leader on 18 December 2025, two months before Nimbus Casualty and eight before Stratus"
+   ],
+   "positioning": "Stratus is the structure that distinguishes this line: an exchange admitting alternative capital alongside traditional insurers for operational data-centre property risk, at a limit no single tower has previously offered for the class. It is the operational-phase extension of Nimbus and it is how a broker earns from placement design in a market where the property rate index fell 12 percent year on year.",
+   "soldThrough": "Placed through Marsh Risk's own broking teams into panel facilities and, for Stratus, into an exchange where underwriters assess each submission and may decline rather than committing a fixed share.",
+   "targetSegments": [
+    "Hyperscale and colocation data-centre developers",
+    "US-domiciled digital-infrastructure owners with global exposures",
+    "Construction contractors on large-scale data-centre projects"
+   ],
+   "roadmap": "Marsh states that Stratus will expand into inland marine, cyber and casualty, aiming at 'a single point of access for clients across a project's full lifecycle from construction through operation'. No delivery date has been published."
+  },
+  {
+   "name": "Marsh Re — reinsurance broking and capital (formerly Guy Carpenter)",
+   "category": "Risk and Insurance Services",
+   "description": "The reinsurance intermediary, and the business whose client is an insurance company rather than a policyholder: it designs and places the treaties that let a carrier write more risk than its own capital would allow, and advises on how much risk to keep. The 10-K describes 'specialized reinsurance broking, strategic advisory and actuarial services, and analytics solutions'. FY2025 revenue USD 2,496m from about 3,700 colleagues. The Guy Carpenter name, in use for over a century, was retired on 1 September 2026 — eight days before this dossier was written.",
+   "highlights": [
+    "Second globally on FY2024 reinsurance broking revenue (USD 2.544bn) behind Aon Reinsurance Solutions (USD 2.656bn), but ahead of it in H1 2025 (USD 1.952bn against USD 1.877bn) per Reinsurance News",
+    "The top tier of Aon, Marsh Re, Gallagher Re and Howden Re holds more than 85 percent of reinsurance premium per The Insurer — though Reinsurance News cautions that its own revenue basis is not clean broking revenue and no source reconciles a market-share figure",
+    "Revenue fell 2 percent in Q2 2026 on both a reported and an underlying basis, to USD 664m, despite double-digit new business and high-90s retention — the decline is commission compression as property-catastrophe rates fell 16 percent at the midyear renewal",
+    "Reported double-digit risk-adjusted rate reductions on loss-free programmes at the January 2026 renewal, with dedicated reinsurance capital up 9 percent and catastrophe-bond notional outstanding above USD 58bn",
+    "Dean Klisura, its President and CEO, called data centres 'the single biggest new business opportunity in 2026 for both cedents and reinsurers', with up to USD 10bn of new premium entering the market",
+    "Platforms: GC AdvantagePoint catastrophe analytics, Edge, Marketplace, Structured Solutions, and Marsh Securities for insurance-linked securities and catastrophe bonds"
+   ],
+   "positioning": "The reinsurance seat is where this company touches the capital that ultimately absorbs a battery or data-centre loss, and it is also the line the softening market is hurting most. Its Marine and Energy page names London Market Excess Loss and global retrocession but names no renewable energy, offshore wind, battery storage or power product, and GC AdvantagePoint publishes no renewables module — so a renewables reinsurance capability, if one exists, is not on its website.",
+   "soldThrough": "Direct broking to insurance and reinsurance companies, mutuals, agencies and captives, with capital-markets execution through Marsh Securities.",
+   "targetSegments": [
+    "Primary insurance carriers",
+    "Mutuals, agencies and captives",
+    "Insurance-linked securities investors"
+   ],
+   "roadmap": "The rename to Marsh Re was originally reported as taking effect from 2027 and was pulled forward to 1 September 2026; no source explains the acceleration."
+  },
+  {
+   "name": "Energy and Power — renewable energy, and the facilities that sit under it",
+   "category": "Risk and Insurance Services — industry practice",
+   "description": "The industry practice through which this company meets battery storage and renewables. It publishes sub-sector pages for battery energy storage, solar, onshore and offshore wind, hydrogen, hydropower, geothermal, biomass, carbon capture, oil and gas, and power and utility, plus risk engineering and due-diligence advisory. The scale figures are the company's own and are not independently corroborated: more than 700 Energy and Power specialists, more than 400 renewable-energy specialists, more than 650 GW of renewable projects supported and more than 162 GW of solar.",
+   "highlights": [
+    "Marsh Specialty Renewables Facility, launched 2 May 2022: mid-scale solar and battery storage under 50 MW per project in the United States, covering construction all risk, operational all risk and general and excess liability with optional replacement cost and business interruption, liability up to USD 25m, quotes in three to five business days",
+    "Hydrogen facility, launched 22 August 2022 and described by the company as the world's first for green and blue hydrogen: up to USD 300m per risk globally, led by Liberty Specialty Markets and AIG, covering construction, start-up and the first year of operation including contingent delay-in-start-up",
+    "Tax Investment Default Insurance (2024) protects renewable developers against tax-credit investor default under Inflation Reduction Act transferability, with lenders nameable as loss payee; the separate ITC and PTC tax-insurance line covers begun-construction, continuity, qualified-basis, structural and repowering disallowance, and storage where 'battery storage integrated into solar facilities' is covered while 'standalone storage discussions remain ongoing'",
+    "Amy Barnes has been Global Head of Energy and Power since 19 March 2025, holding that role jointly with Head of Climate and Sustainability Strategy — the energy practice and the climate mandate sit with one person",
+    "COLLECTION GAP: no independent source located in this research names this company as a protagonist in any battery-storage placement. Its BESS credentials — a USD 200m Asia facility, 3.8 GW of UK grid-scale storage placed, a 60-strong London power and renewables team — appear only on its own website"
+   ],
+   "positioning": "Its published battery-storage guidance describes insurer requirements in engineering terms — separation between enclosures, routing power to the grid separately from the battery, fire-protection features — while naming no code, standard or certification body. Seven company documents across four web properties spanning 2021 to 2026 were examined for this dossier and not one names UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global. The closest the battery page comes is 'varying installation, operation, and engineering standards around the world' — invoking standards as a problem while naming none. That unnamed certification layer is precisely the space DNV and kWh Analytics occupy.",
+   "soldThrough": "Retail broking through Marsh Risk's energy and power teams, into panel facilities for mid-scale and specialist risks and into the open London market for large accounts.",
+   "targetSegments": [
+    "Renewable developers and asset owners",
+    "Independent power producers and utilities",
+    "Contractors on energy projects",
+    "Lenders and tax-equity investors requiring insurance conditions"
+   ],
+   "roadmap": "Standalone-storage tax insurance is stated as under discussion and not yet offered. Collection note: this dossier could not locate the company's onshore wind, offshore wind or carbon-capture expertise pages at any URL, and the Wayback Machine holds no snapshot of the paths tried — so the company's wind and carbon-capture positioning is uncovered here rather than absent."
+  },
+  {
+   "name": "Marsh McLennan Agency — the middle market",
+   "category": "Risk and Insurance Services",
+   "description": "The middle-market retail platform, a wholly owned subsidiary selling business insurance, employee health and benefits, retirement and private-client solutions to small and midsize organisations in the United States and Canada. The company describes it as the fifth-largest insurance broker in the United States with annualised revenues of approximately USD 5bn. It is the vehicle through which McGriff was absorbed, and the part of the business where contingent commissions are concentrated.",
+   "highlights": [
+    "McGriff Insurance Services acquired for USD 7.75bn in cash, completed 18 November 2024, bringing about USD 1.3bn of annual revenue and more than 3,500 colleagues; funded with cash plus USD 7.25bn of senior notes issued in November 2024, with an assumed deferred tax asset of about USD 500m",
+    "The chief executive declared the McGriff integration complete in the FY2025 results, though USD 215m of integration and retention costs were charged in FY2025 and a further USD 89m in the first half of 2026",
+    "No McGriff-named entity appears in the FY2025 subsidiary list, consistent with full absorption",
+    "Bolt-ons continued through 2026: TriBridge Partners completed 1 June 2026, and Accel Holdings agreed 10 August 2026 with terms undisclosed",
+    "The 10-K states that contingent commissions are taken 'primarily driven by MMA and parts of Marsh Risk's international operations' — the residue of the 2004-05 settlements, and a live conflict surface for a broker advising project developers"
+   ],
+   "positioning": "Independent commentators called the McGriff consideration 'rich at almost 6 times revenue' and questioned whether it will prove value-creative. Aon's agreement on 30 August 2026 to buy USI for USD 17.0bn is a direct answer in the same market, and it is the competitive fact this dossier is closest in time to.",
+   "soldThrough": "Retail agency distribution across US and Canadian regional offices, acquired and organic.",
+   "targetSegments": [
+    "Small and midsize US and Canadian businesses",
+    "Employee-benefits buyers",
+    "Private clients"
+   ],
+   "roadmap": "The Accel Holdings acquisition was expected to close in the third quarter of 2026; no completion has been published."
+  },
+  {
+   "name": "Risk analytics and data platforms",
+   "category": "Risk and Insurance Services — analytics",
+   "description": "The proprietary analytics layer the company sells as its differentiation from a pure placement broker, and the layer its own strategy statements now put at the centre. It spans the Blue[i] suite on the broking side, Sentrisk on supply chain, catastrophe analytics on the reinsurance side, and a loss-data library assembled from the company's own claims record.",
+   "highlights": [
+    "Blue[i] modules published: Risk Program Analytics, Risk Finance Optimization, Risk Appetite, Property, D&O, Cyber, Claims, Casualty, Cost of Risk Analytics and PEMA Insights",
+    "Sentrisk, launched 2 May 2024, maps supply chains with AI and geospatial satellite imaging and models natural hazard, geopolitical, climate, reputational, single-supplier and geographic-concentration risk; built jointly by the broking and consulting arms",
+    "Marsh BLAST Powered by MaxLoss for catastrophe and loss modelling on the power and utility side; Natural Catastrophe Analytics; a Global Loss Data Library; and an Economic Cost of Risk measure",
+    "GC AdvantagePoint on the reinsurance side, with Event Impact and Underwriter+ modules",
+    "Over 46,000 colleagues had completed AI Academy credentials by the FY2025 10-K, against a workforce of over 95,000 — roughly half the firm credentialed on AI since the programme launched in August 2024"
+   ],
+   "positioning": "Analytics is the answer this company gives to two different pressures at once: a softening rate cycle that shrinks commission, and the February 2026 fear that AI could disintermediate broking altogether. Whether it answers either is not yet visible in the organic growth rate.",
+   "soldThrough": "Bundled with broking and consulting engagements rather than licensed standalone; no published pricing.",
+   "targetSegments": [
+    "Existing broking and consulting clients",
+    "Risk managers building a cost-of-risk case",
+    "Reinsurance cedents"
+   ],
+   "roadmap": "The Business and Client Services unit created in the October 2025 reorganisation centralises technology, data and operations under the Chief Information and Operations Officer, and is the stated delivery vehicle for expanded AI deployment funded out of the Thrive savings."
+  },
+  {
+   "name": "Captives, delegated underwriting and alternative risk",
+   "category": "Risk and Insurance Services — alternative risk",
+   "description": "The routes around a conventional policy: a captive the client owns, a protected cell it rents, or an underwriting agency that binds a carrier's paper. This is the part of the business that converts premium into retained capital, and it is the structural answer for risks the open market will not price — which is the position new energy technology usually starts from.",
+   "highlights": [
+    "Marsh Captive Solutions reports USD 79.1bn of gross written premium across the captives it manages in its 2026 benchmarking report",
+    "Marsh Nexus Captive Solution launched 16 June 2026, a protected cell structure through the company's Mangrove Protected Cell Company domiciled in Washington DC, for multinationals with more than USD 3m of annual non-US employee-benefits spend",
+    "Victor Insurance Managers is the delegated-underwriting arm — a managing general agent inside a broker, which is the same seat kWh Analytics occupies from outside. The 10-K does not break out Victor's premium volume; third-party reporting of USD 3-4bn is not company-sourced",
+    "Parametric solutions are published for cyclone, earthquake, drought, wind speed and rainfall triggers and for supply-chain disruption — but the current parametrics page names no renewables, solar, wind-generation or hail application"
+   ],
+   "positioning": "Owning both a broker and a managing general agent is the structural tension in this line: Victor binds carrier paper in the same market where Marsh Risk represents the buyer. The company does not address the conflict in its published materials.",
+   "soldThrough": "Captive management fees, cell rental, and delegated underwriting commission through Victor.",
+   "targetSegments": [
+    "Large corporates with sufficient loss experience to retain risk",
+    "Multinationals pooling employee benefits",
+    "Programme sponsors in classes the open market underserves"
+   ],
+   "roadmap": "Not published."
+  },
+  {
+   "name": "Marsh People and Investments, and Marsh Management Consulting",
+   "category": "Consulting",
+   "description": "The Consulting segment — the former Mercer and Oliver Wyman — at USD 9,794m of FY2025 revenue and about 29,100 colleagues. Mercer, renamed Marsh People and Investments, advises on the health, wealth and career needs of a workforce and runs an investment business; Marsh Management Consulting, which includes Oliver Wyman, Lippincott and NERA, sells management consulting, brand strategy and economic analysis. It is not a risk-transfer business, and it is the half of the company that is currently growing fastest.",
+   "highlights": [
+    "FY2025: Mercer USD 6,190m (up 8 percent GAAP, 4 percent underlying); Marsh Management Consulting USD 3,604m (up 6 percent GAAP and underlying)",
+    "Q2 2026: Consulting underlying growth of 8 percent against Risk and Insurance Services at 3 percent, with Marsh Management Consulting alone at 13 percent underlying — growth has moved from broking to consulting",
+    "Oliver Wyman contributed the supply-chain modelling behind Sentrisk and was one of four businesses credited on the July 2026 digital-infrastructure research",
+    "Nick Studer moved from chief executive of Oliver Wyman to run Marsh Risk on 1 April 2026, and Ted Moynihan took the consulting seat"
+   ],
+   "positioning": "For this corpus the consulting arm matters mainly as the source of the company's published research on data-centre power economics and as the reason a broker can be engaged as technical advisor on a financing rather than only as a placement agent — the role it took for the BlackRock funds on the El Paso campus.",
+   "soldThrough": "Direct consulting engagements and retained advisory.",
+   "targetSegments": [
+    "Corporate and institutional employers",
+    "Investors and infrastructure funds",
+    "Regulators and litigants (NERA)"
+   ],
+   "roadmap": "Under the rebrand the individual business names migrate through 2027; Oliver Wyman goes to market as 'Oliver Wyman, a Marsh business' rather than being renamed outright."
+  },
+  {
+   "name": "Market intelligence — the published research that sets the vocabulary",
+   "category": "Risk and Insurance Services — research",
+   "description": "A quarterly rate index, an annual global risk survey run with the World Economic Forum, and a body of sector research. For a broker this is marketing in the form of measurement, and it matters here because the rate index is one of the few public series against which the cost of insuring an energy asset can be tracked.",
+   "highlights": [
+    "Global Insurance Market Index, Q2 2026 published 23 July 2026: composite rates down 6 percent, an eighth consecutive quarterly decline; property down 12 percent globally and 13 percent in the United States; casualty up 2 percent globally and 7 percent in the United States; financial and professional down 3 percent; cyber down 4 percent",
+    "John Donnelly, President of Global Placement: 'Current market conditions are likely to persist absent a severe northern hemisphere storm season or string of major natural catastrophes'",
+    "COLLECTION GAP: the index breaks out property, casualty, financial and professional, and cyber. It publishes no energy, renewables or battery-storage line, so no company-sourced rate series exists for the assets this corpus covers",
+    "Global Risks Report 2026 with the World Economic Forum, published 14 January 2026 from 1,300 experts and 11,000 business leaders: extreme weather third among immediate risks, environmental risks dominating the ten-year horizon, and 57 percent of respondents predicting a turbulent decade",
+    "100 Largest Losses in the Hydrocarbon Industry, 29th edition, published 15 June 2026"
+   ],
+   "positioning": "The rate index is quoted across the trade press as a market benchmark, which gives the company agenda-setting weight no competitor's research matches at the same cadence. Its silence on renewables rates is therefore conspicuous rather than neutral.",
+   "soldThrough": "Published free; a client-acquisition and agenda-setting instrument, not a product.",
+   "targetSegments": [
+    "Risk managers and chief financial officers",
+    "The trade and financial press",
+    "Regulators and policymakers"
+   ],
+   "roadmap": "Not published."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Stratus — operational digital-infrastructure property exchange",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Property capacity",
+     "value": "Up to USD 10bn in property insurance capacity on a single-placement basis"
+    },
+    {
+     "band": "Structure",
+     "label": "Mechanism",
+     "value": "A prior-submit exchange in which 'underwriters are able to evaluate each risk individually and decide whether and how to support a placement'"
+    },
+    {
+     "band": "Structure",
+     "label": "Relationship to Nimbus",
+     "value": "'Nimbus is Marsh's insurance solution for the construction phase of digital infrastructure projects. Stratus is designed for the more permanent operational phase. The two can be used separately or together.'"
+    },
+    {
+     "band": "Scope",
+     "label": "Audience",
+     "value": "Digital infrastructure operators, developers and investors with operational property risks associated with data centres and related assets"
+    },
+    {
+     "band": "Scope",
+     "label": "At launch",
+     "value": "Focused on operational property risks"
+    },
+    {
+     "band": "Roadmap",
+     "label": "Announced expansion",
+     "value": "'Over time, it is expected to expand into additional lines, including inland marine, cyber, and casualty'"
+    },
+    {
+     "band": "Trade-press only",
+     "label": "Capital providers",
+     "value": "30 traditional and alternative capital providers, about 80 carriers and syndicates approached, more than USD 4bn in verbal commitments at launch — reported by trade press and NOT stated on the company's own page"
+    },
+    {
+     "band": "Trade-press only",
+     "label": "Eligibility",
+     "value": "Global exposures of US-domiciled companies — reported by trade press and NOT stated on the company's own page"
+    },
+    {
+     "band": "Timing",
+     "label": "Launched",
+     "value": "26 August 2026"
+    }
+   ],
+   "notes": "The capacity, the prior-submit exchange structure, the relationship to Nimbus and the roadmap are first-party, from the company's product page at marsh.com/en/industries/technology/expertise/stratus.html. The capital-provider count and the US-domiciled eligibility scope appear only in trade press and are labelled above accordingly. No company press release for Stratus was located — the product is published as a page under the company's technology vertical rather than announced through its newsroom, and the technology vertical's own data-centre services page still does not cross-reference it."
+  },
+  {
+   "product": "Nimbus and Nimbus Casualty — data-centre construction",
+   "specs": [
+    {
+     "band": "Nimbus — capacity",
+     "label": "At launch (16 June 2025)",
+     "value": "EUR 1bn construction all risks plus EUR 350m delay-in-start-up"
+    },
+    {
+     "band": "Nimbus — capacity",
+     "label": "After expansion (26 January 2026)",
+     "value": "USD 2.7bn inclusive of delay-in-start-up and business interruption"
+    },
+    {
+     "band": "Nimbus — scope",
+     "label": "Territory at launch",
+     "value": "United Kingdom and Europe"
+    },
+    {
+     "band": "Nimbus — scope",
+     "label": "Territory after expansion",
+     "value": "United Kingdom, United States, Canada, Europe, Australia and New Zealand"
+    },
+    {
+     "band": "Nimbus — market",
+     "label": "Panel",
+     "value": "Lloyd's and company-market insurers"
+    },
+    {
+     "band": "Nimbus Casualty",
+     "label": "Limit",
+     "value": "Up to USD 75m excess general liability"
+    },
+    {
+     "band": "Nimbus Casualty",
+     "label": "Attachment",
+     "value": "Attaching at a minimum of USD 25m"
+    },
+    {
+     "band": "Nimbus Casualty",
+     "label": "Form",
+     "value": "Marsh Risk's proprietary XSellence excess casualty form, following form across the tower"
+    },
+    {
+     "band": "Nimbus Casualty",
+     "label": "Panel and territory",
+     "value": "A+ rated Lloyd's and London panel; United States digital-infrastructure construction"
+    },
+    {
+     "band": "Nimbus Casualty",
+     "label": "Launched",
+     "value": "19 February 2026"
+    }
+   ],
+   "notes": "Marsh describes Nimbus as 'the first insurance facility built specifically for large-scale data center construction'. For scale against the competing facility: Aon's Data Center Lifecycle Insurance Program stood at USD 3.5bn in April 2026 and USD 5bn in July 2026, so on construction capacity alone Aon passed Marsh during 2026 — which is the context for Stratus being built on the operational side rather than the construction side."
+  },
+  {
+   "product": "Marsh Specialty Renewables Facility and the hydrogen facility",
+   "specs": [
+    {
+     "band": "Renewables Facility",
+     "label": "Project size",
+     "value": "Mid-scale solar and battery energy storage under 50 MW per project"
+    },
+    {
+     "band": "Renewables Facility",
+     "label": "Liability limit",
+     "value": "Up to USD 25m"
+    },
+    {
+     "band": "Renewables Facility",
+     "label": "Lines",
+     "value": "Construction all risk, operational all risk, general liability and excess liability, with optional replacement cost and business interruption"
+    },
+    {
+     "band": "Renewables Facility",
+     "label": "Service standard",
+     "value": "Quotes in three to five business days"
+    },
+    {
+     "band": "Renewables Facility",
+     "label": "Launched",
+     "value": "2 May 2022"
+    },
+    {
+     "band": "Hydrogen facility",
+     "label": "Limit",
+     "value": "Up to USD 300m per risk, global"
+    },
+    {
+     "band": "Hydrogen facility",
+     "label": "Lead markets",
+     "value": "Liberty Specialty Markets and AIG"
+    },
+    {
+     "band": "Hydrogen facility",
+     "label": "Scope",
+     "value": "Green and blue hydrogen; construction, start-up and first year of operations, including contingent delay-in-start-up"
+    },
+    {
+     "band": "Hydrogen facility",
+     "label": "Launched",
+     "value": "22 August 2022"
+    }
+   ],
+   "notes": "The Renewables Facility is the only published Marsh structure that names battery energy storage in its own scope, and it is capped at 50 MW per project — an order of magnitude below the grid-scale systems this corpus's developers build. Marsh separately claims a USD 200m Asia battery-storage facility and 3.8 GW of UK grid-scale storage placed; both figures appear only on marsh.com and no independent source corroborates either."
+  },
+  {
+   "product": "Global Insurance Market Index — Q2 2026 composite",
+   "specs": [
+    {
+     "band": "Composite",
+     "label": "Global composite rate change",
+     "value": "Down 6 percent — the eighth consecutive quarterly decline"
+    },
+    {
+     "band": "By line",
+     "label": "Property",
+     "value": "Down 12 percent globally; United States down 13 percent, IMEA down 19 percent, Pacific down 15 percent, Latin America and Caribbean down 14 percent, UK down 11 percent, Europe down 9 percent, Canada down 8 percent, Asia down 5 percent"
+    },
+    {
+     "band": "By line",
+     "label": "Casualty",
+     "value": "Up 2 percent globally; United States up 7 percent, with decreases in every other region"
+    },
+    {
+     "band": "By line",
+     "label": "Financial and professional",
+     "value": "Down 3 percent globally; United States up 1 percent"
+    },
+    {
+     "band": "By line",
+     "label": "Cyber",
+     "value": "Down 4 percent globally; IMEA down 14 percent, Latin America and Caribbean down 10 percent, United States down 2 percent"
+    },
+    {
+     "band": "Coverage gap",
+     "label": "Energy and renewables",
+     "value": "Not published — the index carries no energy, renewables or battery-storage line"
+    },
+    {
+     "band": "Timing",
+     "label": "Published",
+     "value": "23 July 2026"
+    }
+   ],
+   "notes": "This is the closest thing to a public price series for the risk this corpus's assets carry, and its silence on renewables is the point: the company that publishes the market's benchmark rate index does not publish a rate for the assets in question. Marsh Re separately reported double-digit risk-adjusted rate reductions on loss-free reinsurance programmes at the January 2026 renewal, with dedicated reinsurance capital up 9 percent."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-01",
+   "category": "corporate",
+   "headline": "Guy Carpenter formally becomes Marsh Re, retiring a reinsurance broking name in use for over a century; marked by two publications ahead of the Rendez-Vous de Septembre",
+   "read": "Eight days before this dossier was written. The rename was originally reported as taking effect from 2027 and was pulled forward; no source explains the acceleration. Nine of the top ten reinsurance brokers now trade under their group's primary broking name.",
+   "source": "https://www.insurancejournal.com/news/international/2026/09/01/883528.htm"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "product-launch",
+   "headline": "Stratus launched — up to USD 10bn of property capacity on a single placement for operational digital infrastructure, drawing on 30 traditional and alternative capital providers on a prior-submit exchange basis",
+   "read": "The most consequential product in this dossier and the answer to Aon overtaking Nimbus on construction capacity: rather than raise a construction facility, Marsh built an exchange on the operational side and admitted alternative capital to it. No first-party release was located.",
+   "source": "https://www.insurancebusinessmag.com/us/news/breaking-news/marsh-launches-10-billion-property-exchange-for-data-center-risk-587644.aspx"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "other",
+   "headline": "Marsh Risk named Business Insurance's 2026 US Insurance Awards Broker Team of the Year, over Aon, EPIC, Spring Consulting and WTW, for the TerraPower Natrium placement at Kemmerer, Wyoming",
+   "read": "A third-party jury judging capability rather than a revenue table. The placement was over USD 2bn and 128 percent oversubscribed with Munich Re leading, after two years spent educating more than 80 insurers on an advanced reactor — capability built for exactly the nuclear-for-data-centres demand this corpus tracks.",
+   "source": "https://www.businessinsurance.com/2026-us-insurance-awards-marsh-risk-broker-team-of-the-year/"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "market",
+   "headline": "Katie Burke, US specialty energy and power growth leader at Marsh Risk, describes 'unprecedented' new-business growth as hyperscalers become power-generation companies; the same report describes battery storage as an increasingly popular means to stabilise data-centre loads",
+   "read": "The only independent source that bridges this corpus's two halves through Marsh: its storage relevance runs through data-centre power procurement, not through utility-scale renewables. Marsh's power practice is reported working closely with its construction team on the data-centre build.",
+   "source": "https://www.businessinsurance.com/data-centers-spur-power-generation-demand/"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "ma",
+   "headline": "Marsh McLennan Agency agrees to acquire Accel Holdings, Inc. of Waverly, Iowa — commercial and personal lines, employee benefits, agribusiness, wealth management and retirement advisory; terms undisclosed, expected to close in Q3 2026",
+   "read": "The middle-market bolt-on programme continues three weeks before Aon commits USD 17bn to the same market.",
+   "source": "https://www.businesswire.com/news/home/20260810851443/en/Marsh-McLennan-Agency-to-Acquire-Accel-Holdings-Inc."
+  },
+  {
+   "date": "2026-07-31",
+   "category": "customer",
+   "headline": "Marsh reported as advising both sides of the approximately USD 14bn Meta and BlackRock El Paso data-centre campus — project risk analysis and insurance services for Meta, and technical advisor to the BlackRock funds",
+   "read": "Simultaneously the strongest evidence of incumbency in AI-infrastructure risk and an independently flagged governance question. The deal is 80 percent BlackRock funds and 20 percent Meta, about 1 GW of compute, with a USD 12.5bn debt package and a Meta residual-value guarantee of about USD 13bn.",
+   "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "market",
+   "headline": "Global Insurance Market Index for Q2 2026: composite commercial rates down 6 percent, an eighth consecutive quarterly decline, with property down 12 percent globally and 13 percent in the United States",
+   "read": "The softening is the central pressure on this business model: commission is a percentage of a shrinking premium, and the property line falling 12 percent is a roughly six-percentage-point drag on underlying growth.",
+   "source": "https://www.marsh.com/en/corp/about/news/global-commercial-insurance-falls-6-percent-q2-2026.html"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "financial",
+   "headline": "Q2 2026 results: revenue USD 7,404m up 6 percent (5 percent underlying), adjusted EPS USD 2.96 up 9 percent; Marsh Re revenue fell 2 percent to USD 664m; quarterly dividend raised 10 percent to USD 0.990",
+   "read": "Consulting grew 8 percent underlying against Risk and Insurance Services at 3 percent — growth has moved from broking to consulting. The reinsurance arm is now contracting despite double-digit new business, purely on commission compression as property-catastrophe rates fell 16 percent at the midyear renewal.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000193/mmc2q2026ex991newsrelease.htm"
+  },
+  {
+   "date": "2026-07-13",
+   "category": "market",
+   "headline": "Two digital-infrastructure research pieces published — 'The power equation' on what the boom means for utilities and IPPs, and 'Protecting power investments during the data center boom'",
+   "read": "The clearest statement of the company's own thesis on the corpus's subject: power is the binding constraint, power purchase agreements run 15 to 25 years against much shorter tenant commitments, and the resulting stranded-asset exposure is brokered with surety, letters of credit and trade credit rather than property cover. One placement is said to have exceeded USD 5bn.",
+   "source": "https://www.marsh.com/en/industries/energy-and-power/insights/protecting-power-investments.html"
+  },
+  {
+   "date": "2026-06-16",
+   "category": "product-launch",
+   "headline": "Marsh Nexus Captive Solution launched — a protected cell structure through the company's Mangrove Protected Cell Company in Washington DC, for multinationals with more than USD 3m of annual non-US employee-benefits spend",
+   "read": "Captive use for international employee benefits has more than doubled in five years per the company, with more than 140 companies now holding over USD 3bn in premium.",
+   "source": "https://www.marsh.com/en/about/media/marsh-launches-marsh-nexus-captive-solution.html"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "ma",
+   "headline": "Marsh McLennan Agency completes the acquisition of TriBridge Partners, an independent benefits broker and retirement and wealth advisor in Columbia, Maryland",
+   "read": "Routine middle-market consolidation; terms not disclosed.",
+   "source": "https://www.businesswire.com/news/home/20260601096026/en/Marsh-McLennan-Agency-completes-acquisition-of-TriBridge-Partners"
+  },
+  {
+   "date": "2026-06",
+   "category": "legal",
+   "headline": "Marsh Ltd, Marsh Pty Ltd and other parties settle with Greensill Bank and its insolvency administrator",
+   "read": "One strand of an eleven-proceeding Australian action closes; the wider claims, including Credit Suisse's, continue.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000195/mrsh-20260630.htm"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "financial",
+   "headline": "Q1 2026 results: revenue USD 7.6bn up 8 percent, adjusted EPS USD 3.29 up 8 percent, but GAAP operating income down 12 percent and GAAP diluted EPS down to USD 2.36 from USD 2.79 on a USD 425m Greensill litigation charge",
+   "read": "The gap between the adjusted and GAAP lines is the entire Greensill provision, booked in Risk and Insurance Services and described by the company as provisional.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000096/mmc1q2026ex991newsrelease.htm"
+  },
+  {
+   "date": "2026-04-15",
+   "category": "leadership",
+   "headline": "Mark McGivney appointed Executive Vice President, Chief Operating Officer and Chief Financial Officer — a role expansion, not a succession",
+   "read": "Consolidating the operating role into the finance seat, with a USD 10m stock unit grant vesting in three annual instalments from May 2027 alongside a USD 1.25m salary, USD 3.45m bonus target and USD 6.3m long-term incentive target.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000195/mmc0630202610qex_102.htm"
+  },
+  {
+   "date": "2026-04-02",
+   "category": "legal",
+   "headline": "Match Group sues Marsh USA in New York Supreme Court, alleging the broker notified Beazley of a claim roughly 57 hours after the policy expired; about USD 3.9m sought",
+   "read": "A small figure but a pure broker errors-and-omissions allegation — the risk factor the 10-K names and the Greensill charge instantiates at scale.",
+   "source": "https://www.insurancebusinessmag.com/us/news/breaking-news/tinder-swipes-left-on-marsh-blaming-broker-for-lost-coverage-570600.aspx"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "leadership",
+   "headline": "Nick Studer moves from chief executive of Oliver Wyman to President and CEO of Marsh Risk; Martin South becomes Chief Client Officer of the group; Ted Moynihan takes the consulting seat",
+   "read": "Announced 10 March 2026. The broking business is now run by a consultant, at the moment the company is arguing that its differentiation is advice and analytics rather than placement.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000071/ex_991martinsouthpressrele.htm"
+  },
+  {
+   "date": "2026-02-25",
+   "category": "leadership",
+   "headline": "Peter Harrison, former chief executive of Schroders, appointed to the board",
+   "read": "Adds asset-management depth to a board that already holds two energy directors — Lloyd Yates, chief executive of NiSource, and Judith Hartmann, former deputy chief executive and finance director of ENGIE.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000035/"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "product-launch",
+   "headline": "Nimbus Casualty launched — up to USD 75m of excess general liability for US digital-infrastructure construction, attaching at a minimum of USD 25m on an A+ rated Lloyd's and London panel",
+   "read": "Written on the company's own XSellence follow-form so the tower reads consistently. Contractor demands on these projects are reported reaching USD 600m, so a USD 75m layer is one storey of a much taller building.",
+   "source": "https://www.marsh.com/en/about/media/marsh-risk-launches-excess-casualty-insurance-facility-us-digital-infrastructure-projects.html"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "financial",
+   "headline": "Senior notes offering (8-K carrying an underwriting agreement, an indenture and a legal opinion)",
+   "read": "A debt raise five months before the dividend was lifted 10 percent, against USD 20.6bn of total debt carried since the McGriff notes.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000119312526059544/0001193125-26-059544-index.htm"
+  },
+  {
+   "date": "2026-02-09",
+   "category": "market",
+   "headline": "Broker shares fall sharply on AI disintermediation fears after Insurify launched a ChatGPT-native insurance comparison app: Marsh McLennan down 7.51 percent, WTW down 12 percent in its worst session since 2008, Aon down 9.3 percent",
+   "read": "Bank of America sized about USD 15bn of low-complexity commissions at risk. Analysts at Bloomberg Intelligence, Wolfe Research and Goldman Sachs all called the move overdone on the grounds that the product was personal lines while the majors are commercial — but the market repriced the whole sector in a session.",
+   "source": "https://www.insurancejournal.com/news/national/2026/02/10/857525.htm"
+  },
+  {
+   "date": "2026-01-29",
+   "category": "financial",
+   "headline": "FY2025 results: revenue USD 26,981m up 10 percent GAAP and 4 percent underlying; adjusted EPS USD 9.75 up 9 percent; an eighteenth consecutive year of reported margin expansion; free cash flow above USD 5bn for the first time",
+   "read": "Underlying growth halved from 7 percent in FY2024 to 4 percent. The chief executive's summary named three things: the new brand, the completed McGriff integration and the Thrive programme.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000014/mmc4q2025ex991newsrelease.htm"
+  },
+  {
+   "date": "2026-01-26",
+   "category": "product-launch",
+   "headline": "Nimbus expanded to USD 2.7bn inclusive of delay-in-start-up and business interruption, and widened from the UK and Europe to the United States, Canada, Australia and New Zealand",
+   "read": "Early submissions had come in near or above USD 2bn against a EUR 1bn facility — the expansion was demand-led. Aon's competing programme reached USD 3.5bn three months later and USD 5bn in July.",
+   "source": "https://www.marsh.com/en/about/media/nimbus-insurance-facility-to-support-rapid-development-of-next-generation-digital-infrastructure.html"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "corporate",
+   "headline": "The rebrand takes effect: the group trades as Marsh and the NYSE ticker changes from MMC to MRSH; the legal name and CUSIP are unchanged",
+   "read": "The event that dissolved the distinction this dossier's own coverage plan was built to resolve. The parent is now the one called Marsh; the broker is Marsh Risk; MMC is a retired ticker.",
+   "source": "https://www.corporate.marsh.com/news-events/2025/december/marsh-mclennan-to-change-nyse-symbol-to-mrsh.html"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "market",
+   "headline": "Global Risks Report 2026 published with the World Economic Forum from 1,300 experts and 11,000 business leaders: extreme weather third among immediate risks, environmental risks dominating the ten-year horizon, 57 percent predicting a turbulent decade",
+   "read": "The company's principal agenda-setting instrument, and the reason its climate posture is expressed through research rather than through an underwriting commitment it does not have to make.",
+   "source": "https://www.marsh.com/en/corp/about/news/global-risks-report-2026.html"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "leadership",
+   "headline": "Mike Mathews appointed to the newly created role of Global Digital Infrastructure Leader; 25 years across data centres, advanced computing, digital mining, renewable energy and wireless infrastructure; at the company since 2020",
+   "read": "Creating the role two months before Nimbus Casualty and eight before Stratus is the clearest signal of where the growth budget went.",
+   "source": "https://www.marsh.com/en/corp/about/news/marsh-mclennan-appoints-mike-mathews-digital-infrastructure-lead.html"
+  },
+  {
+   "date": "2025-10-16",
+   "category": "corporate",
+   "headline": "Thrive programme launched alongside Q3 2025 results — USD 400m of annual run-rate savings targeted over three years against about USD 500m of restructuring charges",
+   "read": "Announced on the day of a consensus beat that the market answered by marking the stock down 8.25 percent pre-market. Part of the saving is explicitly earmarked for reinvestment in talent and AI.",
+   "source": "https://www.theinsurer.com/ti/news/marsh-mclennan-launches-thrive-program-to-save-400-million-a-year-and-accelerate-2025-10-16/"
+  },
+  {
+   "date": "2025-10-14",
+   "category": "corporate",
+   "headline": "Rebrand announced: the company and its businesses will go to market as Marsh from January 2026, with Guy Carpenter becoming Marsh Re, Mercer becoming Marsh People and Investments and Oliver Wyman going to market as 'Oliver Wyman, a Marsh business'; a new Business and Client Services unit is created under the Chief Information and Operations Officer",
+   "read": "John Doyle framed it as clients seeking 'advice, solutions and insights that draw on expertise from across our firm'. Individual business rebranding completes in 2027.",
+   "source": "https://www.marsh.com/en/about/media/marshmclennan-and-its-businesses-will-brand-as-marsh.html"
+  },
+  {
+   "date": "2025-10-10",
+   "category": "legal",
+   "headline": "The Federal Court of Australia grants an anti-anti-suit injunction blocking Marsh Ltd and Marsh Pty Ltd from pursuing English High Court proceedings, holding that proceeding in England would frustrate litigation properly under way in Australia",
+   "read": "The procedural turning point in the Greensill matter. Claimants across eleven consolidated proceedings seek figures variously reported as about USD 5bn plus interest and about A$7bn; no source reconciles them.",
+   "source": "https://www.insurancebusinessmag.com/uk/news/breaking-news/marsh-blocked-from-uk-court-action-over-3-4-billion-claim-552861.aspx"
+  },
+  {
+   "date": "2025-07-11",
+   "category": "incident",
+   "headline": "Climate activists picket the company's Manchester offices over its role as insurance broker to the East African Crude Oil Pipeline, part of coordinated UK-wide action; the company did not respond publicly",
+   "read": "More than 100 employees across the group had signed a 2023 letter urging it to stay away from the project. A firm being positioned as a clean-energy risk incumbent carries an active fossil-fuel brokerage campaign against it.",
+   "source": "https://www.insurancebusinessmag.com/uk/news/breaking-news/marsh-offices-targeted-by-climate-activists-over-east-african-oil-pipeline-542249.aspx"
+  },
+  {
+   "date": "2025-06-16",
+   "category": "product-launch",
+   "headline": "Nimbus launched — EUR 1bn of construction all risks plus EUR 350m of delay-in-start-up for the UK and Europe, described by the company as the first insurance facility built specifically for large-scale data-centre construction",
+   "read": "The first of the three digital-infrastructure structures, and the one the others extend.",
+   "source": "https://www.marsh.com/en-gb/about/media/insurance-large-scale-data-centre-construction-projects-uk-europe.html"
+  },
+  {
+   "date": "2025-05-21",
+   "category": "product-launch",
+   "headline": "Data Centre Insurance and Risk Management Services launched — property damage and business interruption, physical cyber covering the real-world effects of cyber events, and construction, with whole-lifecycle risk assessment",
+   "read": "The advisory wrapper that preceded the capacity. Physical cyber is the coverage that matters where an attack on a control system becomes a property loss.",
+   "source": "https://www.marsh.com/en/about/media/insurance-risk-management-services-support-global-clients-data-centre-digital-infrastructure-lifecycle.html"
+  },
+  {
+   "date": "2025-04-25",
+   "category": "legal",
+   "headline": "Marsh USA sues Aon and Robert McDonough in federal court in New York after McDonough and nineteen other employees — about 70 percent of his direct reports — resigned within a 38-minute window on 10 March 2025; McDonough became chief executive of Aon's North American construction, infrastructure and surety group seven days later",
+   "read": "The two companies this dossier types as the segment's incumbents are in litigation with each other over a construction and surety team. Aon declined to comment. Roughly 95 percent of such suits settle before trial, typically at one to three times the disputed revenue.",
+   "source": "https://www.claimsjournal.com/news/national/2025/04/25/330240.htm"
+  },
+  {
+   "date": "2025-03-19",
+   "category": "leadership",
+   "headline": "Amy Barnes appointed Global Head of Energy and Power while retaining the role of Head of Climate and Sustainability Strategy; based in London, reporting to Andrew George, President of Specialty; joined the company in 2001 as an environmental consultant",
+   "read": "Holding the energy practice and the climate mandate in one pair of hands is a statement about how the company reads the transition — as one market rather than two.",
+   "source": "https://www.marsh.com/en/about/media/appoints-amy-barnes-global-head-energy-power.html"
+  },
+  {
+   "date": "2024-11-18",
+   "category": "ma",
+   "headline": "McGriff Insurance Services acquisition completed for USD 7.75bn in cash — about USD 1.3bn of annual revenue and more than 3,500 colleagues into Marsh McLennan Agency — funded with cash plus USD 7.25bn of senior notes and an assumed deferred tax asset of about USD 500m",
+   "read": "Independent commentators called the price 'rich at almost 6 times revenue'. It is also why McGriff and Marsh hold two of the eight seats on kWh Analytics' Broker Council, which neither council readout discloses.",
+   "source": "https://www.marsh.com/en/corp/about/news/marsh-mclennan-completes-acquisition-of-mcgriff-insurance-services.html"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "kwh-analytics",
+   "type": "partner",
+   "status": "active",
+   "since": "2025",
+   "via": "Broker Council",
+   "note": "Marsh holds a named seat on kWh Analytics' Renewable Energy Broker Council in both published years, and through McGriff it holds a second — two of the eight seats.",
+   "context": "Luke Slemeck represents Marsh on the council in both the 2025 readout (published by Insurance Journal on 2 July 2025) and the 2026 readout (published by pv magazine USA on 9 June 2026). Todd Burack represents McGriff in both. McGriff has been a Marsh McLennan subsidiary since the acquisition completed on 18 November 2024, so both readouts post-date the close — and neither discloses the common ownership. In 2026 that is a quarter of the challenger's own distribution advisory board held by one group.\n\nThe relationship is distribution, not competition: kWh Analytics is a managing general agent that binds carrier paper and reaches the market through specialist brokers, and Marsh is one of those brokers. Slemeck's contributions are on solar hail resilience and long-run insurability rather than on battery storage — in 2026: 'Resilience isn't really about cost savings. It's about continued insurability. If you do nothing and the market hardens, you're going to have a very hard time getting insurance.'",
+   "source": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/"
+  },
+  {
+   "slug": "aon",
+   "type": "competitor",
+   "status": "active",
+   "note": "The other incumbent in this segment: first and second in every independent global broker ranking located, and currently in litigation with each other.",
+   "context": "AM Best's ranking on 2025 total revenue puts Marsh first for a sixteenth consecutive year at USD 26.98bn against Aon at USD 17.20bn, and Business Insurance's 2026 Broker Profiles ranks them first and second. The measure matters: AM Best's total bundles this company's consulting businesses, which are not broking, and no source published since 2018 offers a clean broking-only comparison of the two.\n\nOn data-centre construction capacity Aon is ahead. Its Data Center Lifecycle Insurance Program went from USD 1.5bn at launch in July 2025 to USD 2.5bn in January 2026, USD 3.5bn in April and USD 5bn in July 2026, against Nimbus at USD 2.7bn — which is the context for Stratus being built on the operational side rather than the construction side.\n\nThey are also adverse in court. Marsh USA sued Aon and Robert McDonough in federal court in New York in April 2025 after McDonough and nineteen others — about 70 percent of his direct reports — resigned within a 38-minute window on 10 March 2025, with McDonough becoming chief executive of Aon's North American construction, infrastructure and surety group seven days later. Aon declined to comment.",
+   "source": "https://www.reinsurancene.ws/marsh-remains-worlds-largest-insurance-broker-with-2025-revenues-of-almost-27bn/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026",
+   "scale": "about USD 14bn",
+   "via": "project risk analysis and insurance services",
+   "note": "Reported as providing project risk analysis and insurance services to Meta on the El Paso data-centre campus — and simultaneously as technical advisor to the BlackRock funds on the other side of the same transaction.",
+   "context": "The campus is a roughly USD 14bn development, about 1 GW of compute, structured as 80 percent BlackRock funds and 20 percent Meta, with roughly USD 4.9bn of BlackRock cash, a USD 12.5bn debt package, about USD 2.3bn of Meta land and construction-in-progress contribution, and a Meta residual-value guarantee of about USD 13bn. Meta is the sole initial occupant.\n\nInsurance Business headlined the arrangement 'Marsh on both sides of the table' — the company is reported acting for the tenant and advising the investor. The article frames specialist advisors as 'a precondition for getting the financing across the line', which is the clearest single statement in this corpus of why a broker sits inside an AI-infrastructure capital structure rather than beside it. This dossier records the arrangement as reported and does not adjudicate the governance question it raises.",
+   "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx"
+  },
+  {
+   "slug": "dnv",
+   "type": "other",
+   "status": "active",
+   "note": "Adjacent seats at the same financial close rather than a commercial relationship: DNV certifies and writes recommended practice, this company advises the buyer and places the risk. Recorded because each documents an absence on the other's side.",
+   "context": "The overlap is advisory rather than commercial. DNV certifies and writes recommended practices, including RP-0043 for grid-scale storage; Marsh advises the buyer and places the risk. The DNV dossier records that no insurer document it found cites RP-0043 and that 'Munich Re and Marsh name no certifier', citing Marsh's own battery-energy-storage page.\n\nThis dossier's research confirms and widens that finding: across seven Marsh battery-storage documents spanning 2021 to 2026 and four company web properties, no certification body or standard is named — not UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global. Marsh states insurer requirements in engineering terms — separation between enclosures, routing power to the grid independently of the battery, fire-protection features — while the codes that specify them go unnamed. Aon's published battery guidance does the same, naming only SCOR's 2022 handbook. The unnamed certification layer is the space DNV occupies, and neither broker points to it.",
+   "source": "https://www.marsh.com/en/industries/energy-and-power/expertise/battery-energy-storage-systems.html"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US state insurance licensing and surplus lines",
+   "status": "in-effect",
+   "exposure": "The FY2025 10-K states that 'All U.S. states and most foreign jurisdictions require insurance market intermediaries and related service providers (such as insurance brokers, agents and consultants, reinsurance brokers and managing general agents) to hold an individual or company license.' The licensing perimeter covers the broking arm, the reinsurance arm, the middle-market agency and Victor Insurance Managers as a delegated underwriter. It is also the regime under which the company's facilities reach non-admitted capacity: the Nimbus and Nimbus Casualty towers sit on Lloyd's and London-market paper, which is surplus-lines from a US buyer's perspective and therefore outside state guaranty-fund protection.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000022/mrsh-20251231.htm"
+  },
+  {
+   "regime": "Contingent commission disclosure (the 2004-05 settlements)",
+   "status": "in-effect",
+   "exposure": "The 10-K discloses that the broking arm 'receives other compensation from insurance companies, which includes... contingent commissions, based on factors such as volume or profitability of Marsh Risk's placements, primarily driven by MMA and parts of Marsh Risk's international operations.' That carve-out is the residue of the 2004-05 New York Attorney General matter, in which the company was found to have designated which insurer's bid would win and to have instructed insurers to submit inflated, intentionally uncompetitive bids, funded by undisclosed contingent commissions; it settled with an USD 850m policyholder fund covering inceptions from 1 January 2001 to 31 December 2004 and eliminated contingent compensation from 1 January 2005, with further state settlements in 2008. The practice has since returned in the middle market — which is where McGriff sits.",
+   "mitigation": "The company's own stated position is disclosure rather than abstention: contingent commissions are described in the 10-K and confined to the middle-market agency and parts of international operations rather than the large-account US broking business.",
+   "source": "https://www.naag.org/multistate-case/in-re-marsh-mclennan/"
+  },
+  {
+   "regime": "UK Financial Conduct Authority",
+   "status": "in-effect",
+   "exposure": "'Our business is regulated by the Financial Conduct Authority in the U.K. The FCA licenses insurance and reinsurance intermediaries and evaluates related criteria such as professional competence, financial capacity and professional indemnity insurance requirements.' The UK perimeter matters disproportionately here because the London market is where the digital-infrastructure facilities are placed and where Marsh Re trades.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000022/mrsh-20251231.htm"
+  },
+  {
+   "regime": "Errors and omissions and fiduciary duty",
+   "status": "in-effect",
+   "exposure": "The 10-K's risk-factor summary states: 'We are subject to significant uninsured exposures arising from errors and omissions, breach of fiduciary duty and other claims.' This is the risk factor with a live number attached. In Q1 2026 the company recorded a gross liability of USD 425m over Australian proceedings related to Greensill, after court-sponsored mediation in March 2026, and called the figure provisional with additional charges possible. Claimants across eleven consolidated Federal Court proceedings — the Greensill administrators, Credit Suisse and two of its funds, White Oak, Greensill Bank AG, Insurance Australia Limited and the BCC/Tokio Marine parties — seek figures reported both as about USD 5bn plus interest and as about A$7bn; no source reconciles the two.",
+   "source": "https://www.gtreview.com/news/global/marsh-books-us425mn-charge-ahead-of-greensill-trial/",
+   "mitigation": "Marsh Ltd settled with White Oak in May 2025 for an undisclosed sum the company states was recovered through its own errors-and-omissions insurance, and Marsh Ltd, Marsh Pty Ltd and other parties settled with Greensill Bank and its insolvency administrator in June 2026. A separate and far smaller matter — Match Group's April 2026 New York suit alleging a claim was notified to the insurer roughly 57 hours after the policy expired — seeks about USD 3.9m."
+  },
+  {
+   "regime": "Data protection and AI regulation",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The 10-K names the EU General Data Protection Regulation, the California Consumer Privacy Act as amended by the California Privacy Rights Act, Australia's CPS 234, and 'emerging AI-related laws such as the EU's AI Act'. The exposure is unusually concrete for this company because its stated differentiation is analytics: the Blue[i] suite, the Sentrisk supply-chain platform built with the consulting arm, and an AI Academy through which more than 46,000 of about 95,000 colleagues had been credentialed by the FY2025 10-K. A risk factor states the business 'could be negatively affected if we are not able to develop and implement improvements in technology or respond effectively to the threat of digital disruption and other technological change such as AI' — and on 9 February 2026 the market priced exactly that threat, marking the shares down 7.51 percent in a session.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000022/mrsh-20251231.htm"
+  },
+  {
+   "regime": "Sanctions, export control and anti-corruption",
+   "status": "in-effect",
+   "exposure": "The 10-K states the company is 'subject to various financial crime laws and regulations through our activities of associated persons, the products and services we provide and our business and client relationships... relate to, among other areas, sanctions and export control, anti-bribery, anti-corruption, anti-money-laundering and counter-terrorist financing', and its forward-looking statements name the US Foreign Corrupt Practices Act, the UK Anti Bribery Act and 'domestic and international sanctions regimes'. For a broker the exposure runs through placement: the identity of every carrier on a tower and every party to a reinsurance treaty is a compliance question as much as a credit one.",
+   "source": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000022/mrsh-20251231.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "John Q. Doyle",
+   "title": "President and Chief Executive Officer",
+   "photo": "images/execs/marsh-mclennan-doyle.jpg",
+   "background": [
+    "President and Chief Executive Officer since 2023; a director since 2023",
+    "Group President and Chief Operating Officer, Marsh McLennan (2022-2023)",
+    "President and Chief Executive Officer, Marsh, the group's risk advisory and insurance broking business (2017-2021)",
+    "Named to succeed Daniel S. Glaser on 26 September 2022",
+    "Described by the company as 'an industry veteran with more than 40 years of leadership experience'",
+    "Age 62 per the 2026 proxy"
+   ]
+  },
+  {
+   "name": "Mark C. McGivney",
+   "title": "Executive Vice President, Chief Operating Officer and Chief Financial Officer",
+   "photo": "images/execs/marsh-mclennan-mcgivney.jpg",
+   "background": [
+    "The operating role was added to the finance seat effective 15 April 2026 — an expansion, not a succession",
+    "Compensation set at the appointment: base salary USD 1,250,000, annual bonus target USD 3,450,000, long-term incentive target USD 6,300,000, plus a USD 10,000,000 stock unit grant vesting in three equal annual instalments from 15 May 2027",
+    "Chief Financial Officer of the group before the expansion"
+   ]
+  },
+  {
+   "name": "Nick Studer",
+   "title": "President and Chief Executive Officer, Marsh Risk",
+   "photo": "images/execs/marsh-mclennan-studer.jpg",
+   "background": [
+    "Appointed 1 April 2026, announced 10 March 2026",
+    "Chief Executive Officer of Oliver Wyman immediately before",
+    "On appointment: 'I am honored to lead Marsh Risk and delighted to be carrying forward our mission to grow a paradigm-shifting risk advisor'",
+    "Remains on the Executive Committee, reporting to John Doyle"
+   ]
+  },
+  {
+   "name": "Dean Klisura",
+   "title": "President and Chief Executive Officer, Marsh Re",
+   "photo": "images/execs/marsh-mclennan-klisura.jpg",
+   "background": [
+    "Leads the reinsurance broking business, renamed from Guy Carpenter to Marsh Re on 1 September 2026",
+    "On the data-centre opportunity: called it 'the single biggest new business opportunity in 2026 for both cedents and reinsurers', with up to USD 10bn of new premium entering the market"
+   ]
+  },
+  {
+   "name": "Martin South",
+   "title": "Chief Client Officer",
+   "photo": "images/execs/marsh-mclennan-south.jpg",
+   "background": [
+    "Moved into this enterprise-wide role on 1 April 2026",
+    "President and Chief Executive Officer of Marsh Risk immediately before",
+    "On the move: 'A touchstone of Marsh is that we put clients at the center of everything we do'",
+    "Remains on the Executive Committee, reporting to John Doyle"
+   ]
+  },
+  {
+   "name": "Amy Barnes",
+   "title": "Global Head of Energy and Power, and Head of Climate and Sustainability Strategy",
+   "background": [
+    "Appointed Global Head of Energy and Power on 19 March 2025 while retaining the climate and sustainability mandate — the two roles are held jointly",
+    "Most recently US and Canada Energy and Power Leader, based in Houston",
+    "Joined the company in 2001 as an environmental consultant",
+    "Based in London; reports to Andrew George, President of Specialty",
+    "Member of the group's climate group"
+   ]
+  },
+  {
+   "name": "Mike Mathews",
+   "title": "Global Digital Infrastructure Leader",
+   "background": [
+    "Appointed 18 December 2025 to a newly created role",
+    "Joined the company in 2020 as Managing Director for digital infrastructure",
+    "More than 25 years across data centres, advanced computing, digital mining, renewable energy, wireless and communication infrastructure",
+    "Based in Boston",
+    "Named spokesperson on the Nimbus expansion to USD 2.7bn and on Nimbus Casualty"
+   ]
+  },
+  {
+   "name": "Michael Kolodner",
+   "title": "Managing Director, Energy and Power, Marsh Risk (United States)",
+   "background": [
+    "The named contact on the company's battery energy storage, renewable energy, solar power and power and utility pages — the single person most directly attached to this corpus's subject matter",
+    "Historically US Renewable Energy Practice Leader, appointed April 2020, based in Philadelphia",
+    "Also described as global nuclear practice leader",
+    "Prior: Vice President of Underwriting, Nuclear Electric Insurance Limited — an underwriter before a broker"
+   ]
+  },
+  {
+   "name": "Joe Macejak",
+   "title": "US Property Digital Infrastructure Leader, Marsh Risk",
+   "background": [
+    "The named voice on Stratus at its August 2026 launch",
+    "On the operational-phase problem Stratus addresses: 'As large digital infrastructure projects shift from construction to operation, the associated risks become larger and more complex, driven by multi-billion-dollar campuses, self-generating power systems, and emerging technologies used in processing units and critical equipment'",
+    "The reference to self-generating power systems is the clearest statement by anyone at this company that on-site generation and storage are now part of the property risk it underwrites around"
+   ]
+  },
+  {
+   "name": "Katie Burke",
+   "title": "US Specialty Energy and Power Growth Leader, Marsh Risk",
+   "background": [
+    "Author of 'Powering the data surge: Addressing the energy squeeze' (8 April 2026)",
+    "On the demand this corpus tracks: described new-business growth as 'unprecedented' and said 'The amount of traffic that we're seeing is huge', noting that technology companies and hyperscalers 'will effectively also be power generation companies'",
+    "Reports the power practice working closely with the construction team on the data-centre build",
+    "Based in Phoenix"
+   ]
+  },
+  {
+   "name": "John Donnelly",
+   "title": "President, Global Placement, Marsh Risk",
+   "background": [
+    "The named voice of the quarterly Global Insurance Market Index",
+    "On the Q2 2026 reading of minus 6 percent: 'Current market conditions are likely to persist absent a severe northern hemisphere storm season or string of major natural catastrophes'"
+   ]
+  },
+  {
+   "name": "Andrew George",
+   "title": "President, Specialty, Marsh Risk",
+   "background": [
+    "Amy Barnes reports to him as Global Head of Energy and Power",
+    "Previously Global Head of Energy and Power at Marsh Specialty and, before that, at Marsh JLT Specialty",
+    "On the 2022 hydrogen facility, the company's clearest published statement of transition intent: 'Marsh's facility is an important development for the insurance industry that will help enable the acceleration of the global energy transition to renewables'"
+   ]
+  },
+  {
+   "name": "Luke Slemeck",
+   "title": "The company's representative on kWh Analytics' Renewable Energy Broker Council",
+   "background": [
+    "Named for Marsh in both published council readouts — Insurance Journal, 2 July 2025, and pv magazine USA, 9 June 2026",
+    "2026, on why resilience investment survives a soft market: 'Resilience isn't really about cost savings. It's about continued insurability. If you do nothing and the market hardens, you're going to have a very hard time getting insurance. If you've built the best asset you can, you'll do alright, regardless of the market conditions'",
+    "2025, on the gap between engineering and limits: 'Today, asset owners invest in hail resilience with racking systems that stow at 50 degrees or greater, and have independent engineers run PML loss studies to show their benefits, yet insurance limits are sized well above the stowed PMLs'",
+    "Not quoted on battery storage in either year — the council contribution is solar hail and insurability"
+   ]
+  },
+  {
+   "name": "Paul Beswick",
+   "title": "Senior Vice President and Chief Information and Operations Officer",
+   "background": [
+    "Role expanded on 15 January 2025; Chief Information Officer since 2021",
+    "Leads the Business and Client Services unit created in the October 2025 reorganisation, which centralises technology, data and operations and is the stated delivery vehicle for AI deployment funded from the Thrive savings",
+    "On the rebrand: 'AI and insights from our data will help unlock new opportunities for our clients and colleagues'"
+   ],
+   "photo": "images/execs/marsh-mclennan-beswick.jpg"
+  },
+  {
+   "name": "H. Edward Hanway",
+   "title": "Independent Chair of the Board",
+   "background": [
+    "A director since 2010; chairs the Executive Committee and sits on Business Responsibility, Compensation, Directors and Governance, and Finance",
+    "Former Chairman and Chief Executive Officer, CIGNA Corporation",
+    "Age 74 per the 2026 proxy"
+   ]
+  },
+  {
+   "name": "Lloyd M. Yates",
+   "title": "Independent Director",
+   "background": [
+    "A director since 2011; sits on Compensation and Finance",
+    "President and Chief Executive Officer, NiSource Inc. — a US regulated gas and electric utility, and one of two sitting directors drawn from the energy sector",
+    "Age 65 per the 2026 proxy"
+   ]
+  },
+  {
+   "name": "Judith Hartmann",
+   "title": "Independent Director",
+   "background": [
+    "A director since 2023; sits on Audit, Business Responsibility and Finance",
+    "Executive Board Member, Bayer AG",
+    "Former Deputy Chief Executive Officer and Chief Financial Officer, ENGIE — the second energy director on this board, and the one whose prior employer is itself covered in this corpus",
+    "Age 56 per the 2026 proxy"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "commentary": "Fiscal year ends 31 December; figures are as filed in the 8-K earnings exhibits and the 10-Q. Two cautions. First, FY2024 adjusted EPS is reported two ways: USD 8.80 as originally reported on 30 January 2025 and USD 8.95 as the recast comparative in the FY2025 release. This dossier gives both and does not blend them; the reconciling item is not established. Second, the GAAP and adjusted lines diverge sharply in 2026 and the whole of the difference in the first half is operating adjustments of USD 926m — the USD 425m Greensill litigation charge, USD 89m of McGriff integration and retention, USD 103m of Thrive restructuring and smaller items. Consensus figures are third-party and are labelled as such; where sources disagree on the consensus, both are given.",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The last year before the underlying growth rate halved. Total debt closed at USD 19.9bn after USD 7.25bn of senior notes were issued in November 2024 to fund McGriff.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$24,458m, up 8% GAAP and 7% underlying",
+      "expected": "",
+      "verdict": "",
+      "result": "Risk and Insurance Services $15.4bn (Marsh $12.5bn, Guy Carpenter $2.4bn); Consulting $9.1bn (Mercer $5.7bn, Oliver Wyman $3.4bn).",
+      "kpi": "revenue",
+      "usdMillions": 24458,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Operating income (GAAP)",
+      "actual": "$5,817m",
+      "expected": "",
+      "verdict": "",
+      "result": "Adjusted operating income $6,548m as recast in the FY2025 release; $6.2bn as originally reported."
+     },
+     {
+      "name": "Net income attributable to the company",
+      "actual": "$4,060m",
+      "expected": "",
+      "verdict": "",
+      "result": "Up 9%.",
+      "kpi": "net-income",
+      "usdMillions": 4060,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS (GAAP)",
+      "actual": "$8.18",
+      "expected": "",
+      "verdict": "",
+      "result": ""
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "$8.80 as originally reported; $8.95 as the FY2025 comparative",
+      "expected": "",
+      "verdict": "",
+      "result": "Up 10% on the original basis. The two figures are both the company's; no source located reconciles them."
+     },
+     {
+      "name": "Cash flow and capital",
+      "actual": "Operating cash flow $4.3bn; share repurchases $900m / 4.3m shares; dividends $1.5bn; total debt $19.9bn",
+      "expected": "",
+      "verdict": "",
+      "result": "McGriff: $7.75bn cash, funded with $7.25bn of senior notes issued November 2024."
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "An eighteenth consecutive year of reported margin expansion, and the year underlying growth fell from 7% to 4%. Free cash flow passed USD 5bn for the first time. Independent commentary put the 4% below every major listed competitor except Brown & Brown, and Goldman Sachs — which had held an outright Sell until 20 October 2025 — noted that the 2026 organic estimate sat below expected US nominal GDP growth.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$26,981m, up 10% GAAP and 4% underlying",
+      "expected": "",
+      "verdict": "",
+      "result": "AM Best ranks this first among global brokers on total revenue for a sixteenth consecutive year, against Aon at $17.20bn.",
+      "kpi": "revenue",
+      "usdMillions": 26981,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Risk and Insurance Services revenue",
+      "actual": "$17,265m, up 12% GAAP and 4% underlying",
+      "expected": "",
+      "verdict": "",
+      "result": "Marsh Risk $14,366m (up 15% GAAP, 4% underlying); Guy Carpenter, now Marsh Re, $2,496m (up 6% GAAP, 5% underlying). Operating income $4,636m; adjusted $5,513m."
+     },
+     {
+      "name": "Consulting revenue",
+      "actual": "$9,794m, up 7% GAAP and 5% underlying",
+      "expected": "",
+      "verdict": "",
+      "result": "Mercer $6,190m (up 8% GAAP, 4% underlying); Oliver Wyman, now Marsh Management Consulting, $3,604m (up 6% on both bases). Operating income $1,896m; adjusted $2,065m."
+     },
+     {
+      "name": "Operating income (GAAP)",
+      "actual": "$6,223m",
+      "expected": "",
+      "verdict": "",
+      "result": "Adjusted operating income $7,297m."
+     },
+     {
+      "name": "Net income attributable to the company",
+      "actual": "$4,160m",
+      "expected": "",
+      "verdict": "",
+      "result": "Up from $4,060m.",
+      "kpi": "net-income",
+      "usdMillions": 4160,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "$9.75, up 9%",
+      "expected": "About $9.61 (third-party summary, untraced to a primary source)",
+      "verdict": "beat",
+      "result": "GAAP diluted EPS $8.43. Q4 2025 adjusted EPS of $2.12 beat the Zacks consensus by 7.6% and revenue by 1.2%. The FY beat magnitude is not independently verified."
+     },
+     {
+      "name": "Cash flow and capital",
+      "actual": "Operating cash flow $5,292m; share repurchases $2,012m / 10.1m shares; dividends paid $1,699m; total debt $19,587m ($1,267m short-term, $18,320m long-term)",
+      "expected": "",
+      "verdict": "",
+      "result": "Management described the buyback as the largest in company history and free cash flow as passing $5bn for the first time, up 25%. $600m of senior notes mature in 2026."
+     },
+     {
+      "name": "Noteworthy items",
+      "actual": "McGriff integration and retention costs $215m for the year, $49m in Q4",
+      "expected": "",
+      "verdict": "",
+      "result": "The chief executive declared the McGriff integration complete in this release; costs continued into 2026."
+     }
+    ]
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "commentary": "The quarter the Greensill provision landed. Adjusted measures grew 8% across the board; the GAAP lines fell.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$7.6bn, up 8% GAAP and 4% underlying",
+      "expected": "About $7.4bn",
+      "verdict": "beat",
+      "result": "Risk and Insurance Services $5.1bn (Marsh Risk $3.7bn, Guy Carpenter $1.2bn); Consulting $2.6bn."
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "$3.29, up 8%",
+      "expected": "$3.24 (also reported as $3.22)",
+      "verdict": "beat",
+      "result": "Sources differ on the consensus; both are given. Shares rose about 4-5% in early trading despite the charge."
+     },
+     {
+      "name": "Operating income (GAAP)",
+      "actual": "$1.8bn, down 12%",
+      "expected": "",
+      "verdict": "",
+      "result": "Adjusted operating income $2.4bn, up 8%. GAAP diluted EPS $2.36 against $2.79. The entire decline is the $425m Greensill litigation charge, booked in Risk and Insurance Services."
+     },
+     {
+      "name": "Capital",
+      "actual": "Repurchases 4.2m shares for $750m; total debt $20.6bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Restructuring charges $45m ($27m Risk and Insurance Services, $13m Consulting)."
+     }
+    ]
+   },
+   {
+    "period": "Q2 2026 (and H1 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "commentary": "Underlying growth ticked up to 5% but the composition moved: Consulting grew 8% underlying against Risk and Insurance Services at 3%, and the reinsurance arm contracted. The property rate index at minus 12% is a roughly six-percentage-point drag on underlying growth.",
+    "metrics": [
+     {
+      "name": "Total revenue",
+      "actual": "$7,404m, up 6% (5% underlying); H1 $15,001m, up 7% (4% underlying)",
+      "expected": "About $7.25bn",
+      "verdict": "beat",
+      "result": "Beat by about 2%.",
+      "kpi": "revenue",
+      "usdMillions": 7404,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "$2.96, up 9%; H1 $6.25, up 8%",
+      "expected": "$2.88 (Zacks); also reported as $2.96, i.e. in line",
+      "verdict": "beat",
+      "result": "Sources disagree on whether this was a beat or in line, and one transcript states no consensus was available. Both readings are recorded. The shares were flat at $158.30 on the print, about 13.4% below the 52-week high."
+     },
+     {
+      "name": "Risk and Insurance Services",
+      "actual": "$4,823m, up 4% (3% underlying)",
+      "expected": "",
+      "verdict": "",
+      "result": "Marsh Risk $4,071m, up 6% (4% underlying). MARSH RE $664m, DOWN 2% on both a reported and an underlying basis, despite double-digit new business and high-90s retention — commission compression as property-catastrophe rates fell 16% at the midyear renewal."
+     },
+     {
+      "name": "Consulting",
+      "actual": "$2,602m, up 10% (8% underlying)",
+      "expected": "",
+      "verdict": "",
+      "result": "Mercer $1,598m (up 7%, 5% underlying); Marsh Management Consulting $1,004m, up 15% GAAP and 13% underlying — the fastest-growing line in the company."
+     },
+     {
+      "name": "H1 2026 GAAP measures",
+      "actual": "Operating income $3,653m, down 5%; net income $2,412m, down 7%; GAAP diluted EPS $4.99, down 5%",
+      "expected": "",
+      "verdict": "",
+      "result": "Adjusted operating income $4,579m, up 7%. Total H1 operating adjustments $926m: Greensill $425m, restructuring $103m, McGriff integration and retention $89m, contingent and deferred consideration $31m, a restrictive-covenant legal matter $8m, acquisition costs $2m, less $7m of disposal gains."
+     },
+     {
+      "name": "Balance sheet and capital",
+      "actual": "Cash $1,700m; total debt $20,561m ($1,670m short-term, $18,891m long-term); operating cash flow $835m for the half; repurchases $1,512m / 8.7m shares",
+      "expected": "",
+      "verdict": "",
+      "result": "The half's operating cash flow is seasonally low and was depressed by the Greensill outflow. Quarterly dividend raised 10% to $0.990 effective Q3 2026, a second consecutive 10% increase. A $600m single-tranche 4.950% senior note due 19 February 2036 was issued in February 2026, matching the $600m maturing in 2026 — refinancing rather than new leverage."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that this company is the incumbent of the insurance-and-risk-transfer segment on every independent measure available, and that its position is not in doubt. Basis: AM Best ranks it first among global brokers on 2025 total revenue at USD 26.98bn for a sixteenth consecutive year, against Aon at USD 17.20bn — more than the third, fourth and fifth brokers combined; Business Insurance ranks it first in its 2026 Broker Profiles and first among the largest brokers of US business; and its reinsurance arm was second globally on FY2024 revenue inside a top tier holding more than 85 percent of reinsurance premium. No independent source located disputes the leadership position.",
+  "2. **(High confidence)** We assess that its incumbency in the market this corpus actually covers is evidenced by data centres, not by batteries, and that the dossier's claim should be scoped accordingly. Basis: independent trade press names this company repeatedly and specifically in AI-infrastructure risk — Nimbus at USD 2.7bn, Nimbus Casualty at USD 75m excess of USD 25m, Stratus targeting USD 10bn on a single placement, a dedicated Global Digital Infrastructure Contract Advisory Group established in January 2026, advisory roles on both sides of the USD 14bn Meta and BlackRock El Paso campus, and a Business Insurance award for a USD 2bn advanced-reactor placement. Against that, outside the two kWh Analytics Broker Council readouts, no independent source located names this company in a battery-storage placement. Its BESS credentials — a USD 200m Asia facility, 3.8 GW of UK grid-scale storage placed, a 60-strong London team — appear only on its own website.",
+  "3. **(High confidence)** We assess that neither of this segment's two incumbents anchors its battery-storage guidance to a named standard, and that this is a structural feature of broker-authored risk guidance rather than an oversight by one firm. Basis: seven Marsh battery documents across four company web properties spanning 2021 to 2026 name no certification body or standard — not UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global — and the closest the battery page comes is 'varying installation, operation, and engineering standards around the world', invoking standards as a problem while naming none. Aon's battery guidance does the same, citing only SCOR's 2022 handbook. Both describe insurer requirements in engineering terms — Marsh on separation between enclosures and independent grid routing, Aon on 'three metres or more of spacing'. NFPA 855 is the code that specifies separation. The brokers state the requirement and leave the code unnamed, which is precisely the space a certifier or a data-priced managing general agent occupies.",
+  "4. **(Moderate confidence)** We assess that the facility-and-exchange model is this company's answer to a softening market, and that it is a durable one. Basis: its own index reports an eighth consecutive quarterly decline with property down 12 percent globally, which is a roughly six-percentage-point drag on underlying growth, and commission is a percentage of a shrinking premium. Its response has been to build capacity products that earn from placement design rather than from rate — the Renewables Facility, the hydrogen facility, Nimbus, Nimbus Casualty and Stratus, which admits alternative capital alongside traditional insurers on a prior-submit basis. Confidence is moderate rather than high because no source discloses what these facilities earn.",
+  "5. **(Moderate confidence)** We assess that Stratus was built on the operational side because the construction side had already been lost to Aon. Basis: Nimbus went to USD 2.7bn in January 2026 and has not moved since, while Aon's Data Center Lifecycle Insurance Program went to USD 3.5bn in April 2026 and USD 5bn in July 2026, and Aon also claims a first-ever data-centre reinsurance treaty aligning up to USD 5bn of capital behind a single insurer. Stratus followed on 26 August 2026, addressing the operational phase Nimbus does not cover, at a limit no competitor has matched. The sequence is consistent with a competitive response; no source states the motive, so this is inference and is labelled as such.",
+  "6. **(Moderate confidence)** We assess that this company's reinsurance arm has no published renewables or storage franchise, and that its stated appetite is digital infrastructure instead. Basis: across Marsh Re's two flagship September 2026 publications — the 2027 Renewal Outlook and the Global Specialties 2026 Market Update — battery storage and solar are named zero times in the extractable text and renewable energy once, as a portfolio-boundary complication inside marine and energy; data centres appear eleven times and are called 'the standout growth story', with cedents 'seeing two or three opportunities each week'. Its Marine and Energy practice page names no renewables, wind, storage or power product. Confidence is moderate on the zeros rather than high because the counts come from locally extracted PDF text, which can under-capture image-rendered sections.",
+  "7. **(Moderate confidence)** We assess that the group's growth has moved from broking to consulting, and that this cuts against the segment's own framing of the company. Basis: underlying growth halved from 7 percent in FY2024 to 4 percent in FY2025, and in Q2 2026 Consulting grew 8 percent underlying against Risk and Insurance Services at 3 percent, with Marsh Management Consulting alone at 13 percent. The reinsurance arm shrank 2 percent. Independent commentary put the FY2025 figure below every major listed competitor except Brown & Brown — Aon delivered 6 percent — and Goldman Sachs held an outright Sell until 20 October 2025, upgrading on logic that included the 2026 organic estimate sitting below expected US nominal GDP growth.",
+  "8. **(Moderate confidence)** We assess that the group holds a structurally unusual position inside the challenger's own distribution, and that no party has disclosed it. Basis: Marsh and McGriff each hold a named seat on kWh Analytics' Renewable Energy Broker Council in both published years — two of eight seats, a quarter of the 2026 council — and McGriff has been a subsidiary since 18 November 2024, so both readouts post-date the close. Neither readout, and no source located, notes the common ownership. The relationship is distribution rather than rivalry: kWh binds carrier paper and reaches the market through specialist brokers, and this company is two of them.",
+  "9. **(Low confidence)** We assess that the February 2026 AI-disintermediation repricing was an overreaction to a personal-lines event, but that the underlying question is not settled. Basis: Insurify's ChatGPT-native comparison app took WTW down 12 percent in its worst session since 2008, Aon down 9.3 percent and this company down 7.51 percent, with Bank of America sizing about USD 15bn of low-complexity commissions at risk; Bloomberg Intelligence, Wolfe Research and Goldman Sachs all called it overdone on the grounds that the product was personal lines while the majors are commercial. The company's own answer is analytics and an AI Academy through which more than 46,000 of about 95,000 colleagues have been credentialed. Confidence is low because no evidence yet exists either way on whether commercial broking is exposed to the same mechanism.",
+  "10. **(Low confidence)** We assess that the January 2026 rebrand carries an unpriced execution risk that will not be visible in reported numbers for some time. Basis: the group retired four established professional-services brands at once, two of them more than a century old, and moved its ticker in the same month; Guy Carpenter became Marsh Re on 1 September 2026, eight days before this dossier, and the remaining migrations run through 2027. A broking business's asset is a relationship and a broker-of-record letter, both of which travel with people rather than brands — but the sector is simultaneously in a lateral-hire litigation wave in which this company is a plaintiff against Aon, Howden and Alliant. No source connects the rebrand to attrition, and this is flagged as a thing to watch rather than a finding.",
+  "INDICATORS TO WATCH.",
+  "Q3 2026 results, expected mid-October 2026 (unconfirmed): whether Marsh Re's revenue decline deepens past the 2 percent of Q2, and whether Risk and Insurance Services underlying growth stays below Consulting's. A third consecutive quarter of that pattern would confirm Judgment 7; a reinsurance recovery would refute it.",
+  "Stratus placement disclosure: any statement of capacity actually bound rather than targeted. More than USD 4bn of verbal commitments against a USD 10bn target was reported at launch; conversion is the test of Judgment 4.",
+  "Aon's completion of the USI acquisition, expected Q4 2026: a competitor at about USD 19.9bn of brokerage revenue against this company's USD 26.66bn narrows a gap that has been stable for sixteen years. Watch also whether the middle-market contest changes what contingent commissions this company discloses.",
+  "Any Marsh publication that names a battery-storage standard — UL 9540A, NFPA 855 or a certification body. That would refute Judgment 3 and would signal that broker guidance is converging on the certification layer.",
+  "The Greensill provision: the USD 425m is explicitly provisional against claims reported at about USD 5bn plus interest and about A$7bn. Any revision moves the GAAP line materially and tests the errors-and-omissions risk factor.",
+  "Whether a first-party press release for Stratus ever appears. A USD 10bn product published as a page under the technology vertical, absent from the newsroom and uncross-referenced by the vertical's own data-centre services page, is either a soft launch or an organisational seam."
+ ],
+ "sources": [
+  {
+   "label": "Insurance Business — The man who invented modern reinsurance just had his name deleted",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/the-man-who-invented-modern-reinsurance-just-had-his-name-deleted-588753.aspx",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "Insurance Journal — Guy Carpenter Rebranded as Marsh Re",
+   "url": "https://www.insurancejournal.com/news/international/2026/09/01/883528.htm",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "The Insurer — From Guy Carpenter to Marsh Re: why reinsurance brands keep giving way to group",
+   "url": "https://www.theinsurer.com/ti/reinsurancemonth/from-guy-carpenter-to-marsh-re-why-reinsurance-brands-keep-giving-way-to-group-2026-09-01/",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Insurance Business — Aon strikes $17 billion deal for USI, doubling down on the middle market",
+   "url": "https://www.insurancebusinessmag.com/us/news/benefits/aon-strikes-17-billion-deal-for-usi-doubling-down-on-the-middle-market-587920.aspx",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Insurance Business — Marsh launches $10 billion property exchange for data center risk (Stratus)",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/marsh-launches-10-billion-property-exchange-for-data-center-risk-587644.aspx",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Insurance Journal — Marsh launches Stratus property exchange",
+   "url": "https://www.insurancejournal.com/news/national/2026/08/27/883036.htm",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Reinsurance News — Marsh addresses digital infrastructure risks with new $10bn property insurance exchange (Joe Macejak quoted)",
+   "url": "https://www.reinsurancene.ws/marsh-addresses-digital-infrastructure-risks-with-new-10bn-property-insurance-exchange/",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Artemis — Marsh to bring alternative capital into data centre risks with $10bn Stratus exchange",
+   "url": "https://www.artemis.bm/news/marsh-to-bring-alternative-capital-into-data-centre-risks-with-10bn-stratus-exchange/",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Business Insurance — 2026 US Insurance Awards: Marsh Risk, Broker Team of the Year (TerraPower Natrium)",
+   "url": "https://www.businessinsurance.com/2026-us-insurance-awards-marsh-risk-broker-team-of-the-year/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Business Insurance — Data centers spur power generation demand (Katie Burke, Marsh Risk)",
+   "url": "https://www.businessinsurance.com/data-centers-spur-power-generation-demand/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Why Is Marsh (MRSH) Up 7.5% Since Last Earnings Report?",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/why-marsh-mrsh-7-5-153006995.html",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Businesswire — Marsh McLennan Agency to Acquire Accel Holdings, Inc.",
+   "url": "https://www.businesswire.com/news/home/20260810851443/en/Marsh-McLennan-Agency-to-Acquire-Accel-Holdings-Inc.",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Insurance Business — $14 billion El Paso data center puts Marsh on both sides of the table",
+   "url": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Marsh — Global commercial insurance rates fall 6% in Q2 2026 (Global Insurance Market Index)",
+   "url": "https://www.marsh.com/en/corp/about/news/global-commercial-insurance-falls-6-percent-q2-2026.html",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Insurance Business — Marsh Q2 revenue climbs 6% but reinsurance broking slips",
+   "url": "https://www.insurancebusinessmag.com/asia/news/breaking-news/marsh-q2-revenue-climbs-6-but-reinsurance-broking-slips-583103.aspx",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Q2 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000193/mmc2q2026ex991newsrelease.htm",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "SEC Form 10-Q — quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000195/mrsh-20260630.htm",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "SEC 10-Q Exhibit 10.2 — Mark McGivney letter agreement, EVP/COO/CFO effective 15 April 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000195/mmc0630202610qex_102.htm",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Marsh Q2 earnings beat estimates on Consulting strength",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/marsh-q2-earnings-beat-estimates-154600063.html",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Investing.com — Q2 2026 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-marsh--mclennan-posts-solid-q2-2026-growth-as-shares-stay-flat-93CH-4803579",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Marsh — Protecting power investments during the data center boom",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/insights/protecting-power-investments.html",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "Marsh — The power equation: what the digital infrastructure boom means for utilities and IPPs",
+   "url": "https://www.marsh.com/en-gb/industries/energy-and-power/insights/what-the-digital-infrastructure-boom-means-for-utilities-and-ipps.html",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "Reinsurance News — Marsh remains world's largest insurance broker with 2025 revenues of almost $27bn",
+   "url": "https://www.reinsurancene.ws/marsh-remains-worlds-largest-insurance-broker-with-2025-revenues-of-almost-27bn/",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Insurance Journal — Cedents find competitive market conditions at midyear renewals",
+   "url": "https://www.insurancejournal.com/news/international/2026/07/02/876137.htm",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "The Insurer — Exclusive: Marsh builds Stratus exchange targeting over $10 billion in capacity",
+   "url": "https://www.theinsurer.com/ti/news/exclusive-marsh-builds-stratus-exchange-targeting-over-10-billion-in-capacity-2026-06-30/",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "Risk & Insurance — Renewable energy insurance market softens, but data quality separates winners from the rest",
+   "url": "https://riskandinsurance.com/renewable-energy-insurance-market-softens-but-data-quality-separates-winners-from-the-rest/",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "Business Insurance — 2026 brokers profiles: world's 10 largest insurance brokers",
+   "url": "https://www.businessinsurance.com/2026-brokers-profiles-worlds-10-largest-insurance-brokers/",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "Marsh — Marsh launches Marsh Nexus Captive Solution",
+   "url": "https://www.marsh.com/en/about/media/marsh-launches-marsh-nexus-captive-solution.html",
+   "date": "2026-06-16"
+  },
+  {
+   "label": "Marsh — 100 largest losses in the hydrocarbon industry, 29th edition",
+   "url": "https://www.marsh.com/en-gb/industries/energy-and-power/insights/100-largest-losses.html",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "pv magazine USA — Fire, hail, and the hard lessons: brokers weigh in on the 2026 Solar Risk Assessment",
+   "url": "https://pv-magazine-usa.com/2026/06/09/fire-hail-and-the-hard-lessons-brokers-weigh-in-on-the-2026-solar-risk-assessment/",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Businesswire — Marsh McLennan Agency completes acquisition of TriBridge Partners",
+   "url": "https://www.businesswire.com/news/home/20260601096026/en/Marsh-McLennan-Agency-completes-acquisition-of-TriBridge-Partners",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Risk & Insurance — Data center insurance capacity strained as average project values surge from $150 million to $3 billion",
+   "url": "https://riskandinsurance.com/data-center-insurance-capacity-strained-as-average-project-values-surge-from-150-million-to-3-billion/",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Yahoo Finance / Barchart — Marsh & McLennan stock: analyst estimates and ratings",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/marsh-mclennan-stock-analyst-estimates-125221763.html",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Insurance Business — The brokerage industry's litigation epidemic: when poaching becomes a business model",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/the-brokerage-industrys-litigation-epidemic-when-poaching-becomes-a-business-model-572495.aspx",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "GTR — Marsh books US$425mn charge ahead of Greensill trial",
+   "url": "https://www.gtreview.com/news/global/marsh-books-us425mn-charge-ahead-of-greensill-trial/",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Q1 2026 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000096/mmc1q2026ex991newsrelease.htm",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "SEC Form 10-Q — quarter ended 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000098/mrsh-20260331.htm",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "Motley Fool — MRSH Q1 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/marsh-mclennan-mrsh-q1-2026-earnings-transcript/",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "SEC 8-K — Mark McGivney appointment as EVP, COO and CFO",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000095010326005674/dp245126_8k.htm",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Insurance Business — Tinder swipes left on Marsh, blaming broker for lost coverage",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/tinder-swipes-left-on-marsh-blaming-broker-for-lost-coverage-570600.aspx",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "Insurance Business — Marsh realigns leadership across consulting and risk businesses",
+   "url": "https://www.insurancebusinessmag.com/us/news/breaking-news/marsh-realigns-leadership-across-consulting-and-risk-businesses-570494.aspx",
+   "date": "2026-04"
+  },
+  {
+   "label": "SEC DEF 14A — 2026 proxy statement (board roster, committees, ages, tenure)",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000119312526133303/d94896ddef14a.htm",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Studer, South and Moynihan leadership appointments effective 1 April 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000071/ex_991martinsouthpressrele.htm",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Insurance Journal — Beazley to acquire kWh Analytics",
+   "url": "https://www.insurancejournal.com/news/national/2026/03/10/861264.htm",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Insurance Journal — Data center boom expected to boost growth opportunities for global brokers",
+   "url": "https://www.insurancejournal.com/magazines/mag-features/2026/03/09/860645.htm",
+   "date": "2026-03-09"
+  },
+  {
+   "label": "Insurance Journal — Zurich Insurance and Beazley agree to $10.9bn cash acquisition",
+   "url": "https://www.insurancejournal.com/news/international/2026/03/02/860121.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Finviz — MRSH downgraded by Mizuho following insurance sector selloff",
+   "url": "https://finviz.com/news/326277/marsh-mclennan-mrsh-downgraded-by-mizuho-following-insurance-sector-selloff",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "SEC 8-K — Peter Harrison appointed to the board, effective immediately",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000035/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Marsh — Marsh Risk launches excess casualty insurance facility for US digital infrastructure projects (Nimbus Casualty)",
+   "url": "https://www.marsh.com/en/about/media/marsh-risk-launches-excess-casualty-insurance-facility-us-digital-infrastructure-projects.html",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "SEC 8-K — $600m 4.950% senior notes due 2036 (underwriting agreement, indenture, opinion)",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000119312526059544/0001193125-26-059544-index.htm",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "The Insurer — Marsh's Woodward and Fairhead: Nimbus Casualty aligns hyperscale data center",
+   "url": "https://www.theinsurer.com/ti/interview/marshs-woodward-and-fairhead-nimbus-casualty-aligns-hyperscale-data-center-2026-02-19/",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "Insurance Journal — Insurance broker stocks sink as AI app sparks disruption fears",
+   "url": "https://www.insurancejournal.com/news/national/2026/02/10/857525.htm",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "SEC Form 10-K — fiscal year ended 31 December 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000022/mrsh-20251231.htm",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "SEC Form 10-K Exhibit 21.1 — subsidiaries of the registrant",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000022/mmc12312025ex_211.htm",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Insurance Journal — Data center boom offers organic growth opportunities for brokers like Aon, Marsh",
+   "url": "https://www.insurancejournal.com/news/national/2026/02/03/856553.htm",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — Q4 and FY2025 earnings release",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000014/mmc4q2025ex991newsrelease.htm",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Insurance Journal — Marsh reports organic growth of 4% for Q4 and full-year 2025",
+   "url": "https://www.insurancejournal.com/news/national/2026/01/29/856155.htm",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Motley Fool — MRSH Q4 2025 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/01/29/marsh-mclennan-mrsh-q4-2025-earnings-transcript/",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Insurance Business — Marsh takes aim at AI data center deal flow with new advisory group",
+   "url": "https://www.insurancebusinessmag.com/us/news/technology/marsh-takes-aim-at-ai-data-center-deal-flow-with-new-advisory-group-563394.aspx",
+   "date": "2026-01-28"
+  },
+  {
+   "label": "Marsh — Nimbus insurance facility expanded to $2.7bn to support next-generation digital infrastructure",
+   "url": "https://www.marsh.com/en/about/media/nimbus-insurance-facility-to-support-rapid-development-of-next-generation-digital-infrastructure.html",
+   "date": "2026-01-26"
+  },
+  {
+   "label": "Insurance Journal — Marsh Risk expands Nimbus facility",
+   "url": "https://www.insurancejournal.com/news/international/2026/01/26/855556.htm",
+   "date": "2026-01-26"
+  },
+  {
+   "label": "Marsh — Global Risks Report 2026, published with the World Economic Forum",
+   "url": "https://www.marsh.com/en/corp/about/news/global-risks-report-2026.html",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "The Insurer — Marsh NYSE ticker switch from MMC to MRSH goes live",
+   "url": "https://www.theinsurer.com/ti/news/marsh-nyse-ticker-switch-from-mmc-to-mrsh-goes-live-2026-01-14/",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "MIAX exchange notice — MMC/2MMC new symbols MRSH/2MRSH, effective 01/14/2026",
+   "url": "https://www.miaxglobal.com/sites/default/files/alert-files/MMC_Symbol_Name_Change_58135.pdf",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "Insurance Journal — Abundant reinsurance capacity accelerates market softening at 1/1",
+   "url": "https://www.insurancejournal.com/news/international/2025/12/30/852636.htm",
+   "date": "2025-12-30"
+  },
+  {
+   "label": "Artemis — January reinsurance renewal: accelerated softening drives double-digit declines, Guy Carpenter",
+   "url": "https://www.artemis.bm/news/january-reinsurance-renewal-accelerated-softening-drives-double-digit-declines-guy-carpenter/",
+   "date": "2025-12-29"
+  },
+  {
+   "label": "Marsh — Marsh McLennan to change NYSE symbol to MRSH on January 14",
+   "url": "https://www.corporate.marsh.com/news-events/2025/december/marsh-mclennan-to-change-nyse-symbol-to-mrsh.html",
+   "date": "2025-12-29"
+  },
+  {
+   "label": "Marsh — Marsh McLennan appoints Mike Mathews Global Digital Infrastructure Leader",
+   "url": "https://www.marsh.com/en/corp/about/news/marsh-mclennan-appoints-mike-mathews-digital-infrastructure-lead.html",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "Insurance Journal — Aon adds to list of brokers suing Howden US",
+   "url": "https://www.insurancejournal.com/news/national/2025/12/15/851060.htm",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "TipRanks / TheFly — Marsh McLennan upgraded to Neutral from Sell at Goldman Sachs",
+   "url": "https://www.tipranks.com/news/the-fly/marsh-mclennan-upgraded-to-neutral-from-sell-at-goldman-sachs-thefly",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "The Insurer — Marsh McLennan launches Thrive program to save $400 million a year",
+   "url": "https://www.theinsurer.com/ti/news/marsh-mclennan-launches-thrive-program-to-save-400-million-a-year-and-accelerate-2025-10-16/",
+   "date": "2025-10-16"
+  },
+  {
+   "label": "Investing.com — Q3 2025 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-marsh--mclennan-q3-2025-earnings-beat-expectations-93CH-4292557",
+   "date": "2025-10-16"
+  },
+  {
+   "label": "Marsh — Marsh McLennan and its businesses will brand as Marsh",
+   "url": "https://www.marsh.com/en/about/media/marshmclennan-and-its-businesses-will-brand-as-marsh.html",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Insurance Business — Marsh blocked from UK court action over £3.4 billion Greensill claim",
+   "url": "https://www.insurancebusinessmag.com/uk/news/breaking-news/marsh-blocked-from-uk-court-action-over-3-4-billion-claim-552861.aspx",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Reinsurance News — Marsh McLennan to rebrand as Marsh, Guy Carpenter to become Marsh Re",
+   "url": "https://www.reinsurancene.ws/marsh-mclennan-to-rebrand-as-marsh-guy-carpenter-to-become-marsh-re/",
+   "date": "2025-10"
+  },
+  {
+   "label": "The Insurer — Top 10 reinsurance brokers",
+   "url": "https://www.theinsurer.com/ti/reinsurancemonth/top-10-reinsurance-brokers-2025-09-08/",
+   "date": "2025-09-08"
+  },
+  {
+   "label": "Reinsurance News — Aon tops reinsurance broker ranking on 2024 revenues, but Guy Carpenter ahead in 2025",
+   "url": "https://www.reinsurancene.ws/aon-tops-reinsurance-broker-ranking-on-2024-revenues-but-guy-carpenter-ahead-in-2025/",
+   "date": "2025-09-07"
+  },
+  {
+   "label": "Reinsurance News — Marsh McLennan maintains top global broker spot by revenue for 15th year",
+   "url": "https://www.reinsurancene.ws/marsh-mclennan-maintains-top-global-broker-spot-by-revenue-for-15th-year/",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "MarshBerry — Big deals drive bigger revenue for the top 100 insurance brokers",
+   "url": "https://www.marshberry.com/resource/big-deals-drive-bigger-revenue-for-the-top-100-insurance-brokers/",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Insurance Business — Marsh offices targeted by climate activists over East African oil pipeline",
+   "url": "https://www.insurancebusinessmag.com/uk/news/breaking-news/marsh-offices-targeted-by-climate-activists-over-east-african-oil-pipeline-542249.aspx",
+   "date": "2025-07-11"
+  },
+  {
+   "label": "Insurance Journal — Viewpoint: broker's key takeaways from kWh Analytics' 2025 Solar Risk Report",
+   "url": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+   "date": "2025-07-02"
+  },
+  {
+   "label": "Marsh — Insurance for large-scale data centre construction projects in the UK and Europe (Nimbus launch)",
+   "url": "https://www.marsh.com/en-gb/about/media/insurance-large-scale-data-centre-construction-projects-uk-europe.html",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "Insurance Business — Marsh McLennan settles giant Greensill-related lawsuit with White Oak",
+   "url": "https://www.insurancebusinessmag.com/us/news/legal-insights/marsh-mclennan-settles-giant-lawsuit-536578.aspx",
+   "date": "2025-05-22"
+  },
+  {
+   "label": "Marsh — Insurance and risk management services support global clients across the data centre lifecycle",
+   "url": "https://www.marsh.com/en/about/media/insurance-risk-management-services-support-global-clients-data-centre-digital-infrastructure-lifecycle.html",
+   "date": "2025-05-21"
+  },
+  {
+   "label": "Claims Journal — Marsh sues Aon, ex-team leader over exit of 20 construction surety employees",
+   "url": "https://www.claimsjournal.com/news/national/2025/04/25/330240.htm",
+   "date": "2025-04-25"
+  },
+  {
+   "label": "Marsh Commercial — Understanding battery energy storage risks",
+   "url": "https://www.marshcommercial.co.uk/articles/battery-energy-storage-risks-explained.html",
+   "date": "2025-04-14"
+  },
+  {
+   "label": "Marsh — Battery energy storage systems: growth, safety and challenges (UK)",
+   "url": "https://www.marsh.com/en-gb/industries/energy-and-power/insights/battery-energy-storage-systems-growth-challenges-safety.html",
+   "date": "2025-04-01"
+  },
+  {
+   "label": "Marsh — Marsh appoints Amy Barnes Global Head of Energy and Power",
+   "url": "https://www.marsh.com/en/about/media/appoints-amy-barnes-global-head-energy-power.html",
+   "date": "2025-03-19"
+  },
+  {
+   "label": "SEC 8-K Exhibit 99.1 — FY2024 earnings release (McGriff funding, original FY2024 adjusted EPS)",
+   "url": "https://www.sec.gov/Archives/edgar/data/62709/000006270925000006/mmc4q2024ex991newsrelease.htm",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Reinsurance News — Marsh McLennan completes $7.75bn acquisition of McGriff",
+   "url": "https://www.reinsurancene.ws/marsh-mclennan-completes-7-75bn-acquisition-of-mcgriff/",
+   "date": "2024-11-18"
+  },
+  {
+   "label": "Marsh — Marsh McLennan completes acquisition of McGriff Insurance Services",
+   "url": "https://www.marsh.com/en/corp/about/news/marsh-mclennan-completes-acquisition-of-mcgriff-insurance-services.html",
+   "date": "2024-11-15"
+  },
+  {
+   "label": "Marsh — Marsh McLennan launches AI-powered solution to transform supply chain risk management (Sentrisk)",
+   "url": "https://www.corporate.marsh.com/news-events/2024/may/marsh-mclennan-launches-ai-powered-solution-to-transform-supply-chain-risk-management.html",
+   "date": "2024-05-02"
+  },
+  {
+   "label": "Marsh — The unique construction risks of long-duration energy storage system projects",
+   "url": "https://www.marsh.com/en/industries/construction/insights/the-unique-construction-risks-of-long-duration-energy-storage-system-projects.html",
+   "date": "2023-03-06"
+  },
+  {
+   "label": "Marsh — World's first insurance facility for green and blue hydrogen projects",
+   "url": "https://www.marsh.com/en/about/media/worlds-first-insurance-facility-for-green-and-blue-hydrogen-project.html",
+   "date": "2022-08-22"
+  },
+  {
+   "label": "Marsh — New renewable energy facility for mid-scale solar and BESS risks",
+   "url": "https://www.marsh.com/en/about/media/new-renewable-energy-facility-for-midscale-solar-bess-risks.html",
+   "date": "2022-05-02"
+  },
+  {
+   "label": "Marsh — Making BESS bankable",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/insights/making-bess-bankable.html",
+   "date": "2021-10-07"
+  },
+  {
+   "label": "Marsh — Battery energy storage systems and the rising risk of thermal runaway",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/insights/battery-energy-storage-systems-and-rising-risk-of-thermal-runaway.html",
+   "date": "2021-07-21"
+  },
+  {
+   "label": "Marsh — Rise in battery energy storage systems: growing demand presents new risks",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/insights/rise-in-battery-energy-storage-systems.html",
+   "date": "2021-06-13"
+  },
+  {
+   "label": "Marsh — Marsh boosts renewable energy capabilities with key appointments",
+   "url": "https://www.marsh.com/en-gb/about/media/marsh-renewable-energy-capabilities-with-key-appointments.html",
+   "date": "2020-04-26"
+  },
+  {
+   "label": "Marsh — Stratus product page",
+   "url": "https://www.marsh.com/en/industries/technology/expertise/stratus.html"
+  },
+  {
+   "label": "Marsh — Digital infrastructure (technology vertical)",
+   "url": "https://www.marsh.com/en/industries/technology/expertise/digital-infrastructure.html"
+  },
+  {
+   "label": "Marsh — Data centre insurance and risk management services (technology vertical)",
+   "url": "https://www.marsh.com/en/industries/technology/expertise/data-center-insurance-and-risk-management-services.html"
+  },
+  {
+   "label": "Marsh — Battery energy storage systems (solutions page; contact Michael Kolodner)",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/battery-energy-storage-systems.html"
+  },
+  {
+   "label": "Marsh — Energy and power practice",
+   "url": "https://www.marsh.com/en/industries/energy-and-power.html"
+  },
+  {
+   "label": "Marsh — Renewable energy",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/renewable-energy.html"
+  },
+  {
+   "label": "Marsh — Solar power",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/solar-power.html"
+  },
+  {
+   "label": "Marsh — Marsh Specialty Renewables Facility",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/renewables-facility.html"
+  },
+  {
+   "label": "Marsh — Powering renewable energy projects with tax insurance (ITC/PTC, storage)",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/powering-renewable-energy-projects-tax-insurance.html"
+  },
+  {
+   "label": "Marsh — Tax investment default insurance",
+   "url": "https://www.marsh.com/en/services/trade-credit/expertise/tax-investor-default-insurance.html"
+  },
+  {
+   "label": "Marsh — Power and utility (Marsh BLAST Powered by MaxLoss)",
+   "url": "https://www.marsh.com/en/industries/energy-and-power/expertise/power-and-utility.html"
+  },
+  {
+   "label": "Marsh — Leadership (Executive Committee and board)",
+   "url": "https://www.marsh.com/en/corp/about/leadership.html"
+  },
+  {
+   "label": "Marsh — About (the company's own 'more than 150 years' heritage statement)",
+   "url": "https://www.marsh.com/en/corp/about.html"
+  },
+  {
+   "label": "Marsh — Risk analytics (Blue[i], Sentrisk, Loss Data Library, Economic Cost of Risk)",
+   "url": "https://www.marsh.com/en/services/risk-analytics.html"
+  },
+  {
+   "label": "Marsh — Marsh McLennan Agency (fifth-largest US broker, about $5bn annualised revenue)",
+   "url": "https://www.marsh.com/en/services/marsh-mclennan-agency.html"
+  },
+  {
+   "label": "Marsh — Captive benchmarking report ($79.1bn of gross written premium under management)",
+   "url": "https://www.marsh.com/en/services/captive-insurance/insights/captive-benchmarking-report.html"
+  },
+  {
+   "label": "Marsh — Parametric solutions",
+   "url": "https://www.marsh.com/en/services/parametrics.html"
+  },
+  {
+   "label": "Marsh Re (formerly Guy Carpenter) — homepage",
+   "url": "https://www.guycarp.com/"
+  },
+  {
+   "label": "Marsh Re — Marine and energy practice (no renewables, wind, storage or power product named)",
+   "url": "https://www.guycarp.com/solutions/risks/marine-and-energy.html"
+  },
+  {
+   "label": "Reinsurance News — Top global insurance and reinsurance brokers (AM Best directory)",
+   "url": "https://www.reinsurancene.ws/top-global-insurance-reinsurance-brokers/"
+  },
+  {
+   "label": "National Association of Attorneys General — In re Marsh & McLennan (bid rigging, contingent commissions, $850m fund)",
+   "url": "https://www.naag.org/multistate-case/in-re-marsh-mclennan/"
+  },
+  {
+   "label": "MarketBeat — MRSH stock forecast and price target (aggregator)",
+   "url": "https://www.marketbeat.com/stocks/NYSE/MRSH/forecast/"
+  }
+ ],
+ "lastUpdated": "2026-09-09",
+ "profileVersion": 1
+}
