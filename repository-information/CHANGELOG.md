@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.34r] — 2026-09-10 06:52:29 AM EST
+
+> **Prompt:** "audit the README tree version displays"
+
+### Added
+
+- **`scripts/check-readme-tree.py`** — compares every `vXX.XXw` and `vXX.XXg` display in the README tree against `live-site-pages/html-versions/` and `gs-versions/`, reporting three problem classes: **drift** (tree disagrees with the source file), **missing** (a version file exists but no tree entry links to its changelog) and **orphan** (a tree entry links to a changelog with no version file behind it). `--json` for machine-readable output; `--fix` syncs drifted displays to their version file — never the reverse, and never `missing` or `orphan`, which are structural and need a human. Exit 0 clean, 1 on any finding
+
+### Fixed
+
+- **Five stale GAS version displays in the README tree**, each behind by exactly one bump: `MasterACL` v01.13g → **v01.14g**, `Receipts` v01.28g → **v01.29g**, `globalacl` v01.07g → **v01.08g**, `testauthgas1` v01.06g → **v01.07g**, `testauthhtml1` v01.06g → **v01.07g**
+
+### Changed
+
+- **[PC-README-TREE] #7 now specifies a verification step, not only an instruction** — run `python3 scripts/check-readme-tree.py` before committing any commit that bumped a page or GAS version. The rule records *why* the change was made, so a future reader does not undo it as redundant
+- **The obligation is now restated at both triggers, [PC-GS-VERSION] #1 and [PC-HTML-VERSION] #2** — with the reason it is duplicated rather than left as a cross-reference
+- **README tree** gains an entry for the new script
+
+### Notes
+
+- **The audit's finding is lopsided in a way that identifies the cause.** All **ten** page displays matched; **five of eight** GAS displays were stale. The page side was clean only because v05.33r had swept it by hand the day before, so the honest reading is not "HTML is fine and GAS is not" — it is that **the display sync is missed on both paths, and only a manual sweep had recently corrected one of them**
+- **Every drift was exactly one bump (0.01), never more.** That rules out a systemic gap that had been accumulating for months, and points instead at a per-session miss: each of the five was the most recent `.gs` bump for its project, made by a session that updated the two files [PC-GS-VERSION] #1 names and stopped there
+- **The structural cause is that the obligation and its trigger lived in different rules.** [PC-GS-VERSION] #1 and [PC-HTML-VERSION] #2 say what to bump; only [PC-README-TREE] #7 — a long rule about tree structure, link format and origin labels — says the tree display must move too. **A session bumping a `.gs` has no reason to open #7 at all.** That is why the fix restates the obligation at both triggers rather than only adding the checker
+- **The instruction was not unclear, and that is the point.** #7's sentence was specific and named both trigger rules by ID. It was still missed five times out of eight. Per the Think Before Asserting gate's Trigger D — *"'I'll remember next time' is NOT a structural fix"* — a clear instruction that does not hold needs a mechanism, which is what the repo's other `scripts/check-*.py` checkers already are for their rules
+- **The checker found itself.** Adding `scripts/check-readme-tree.py` is a new file, which [PC-README-TREE] #7 requires be added to the tree — so the script's own arrival was the first change its rule governed
+- **Verification:** `check-readme-tree.py` reproduced the hand audit exactly (5 drift, 0 missing, 0 orphan), `--fix` corrected all five, and re-runs in both readable and `--json` modes return **0 findings, exit 0**. `git diff` confirms **exactly five changed lines in README.md**, all GAS displays, each +0.01, with nothing else touched
+- **No page or GAS source file was modified**, so no page/GAS version bumps and no page changelog entries were due
+- **`Sections: 100/100`** — **98 non-exempt** after excluding the **two** sections dated today (this one and v05.33r), so rotation is **not** due on this push despite the counter reading at capacity. It fires on the next push that lands on a later EST day, when both stop being exempt and the count reaches 100. **Deepen the clone before that push** — SHA enrichment needs history the shallow clone does not have
 
 ## [v05.33r] — 2026-09-10 03:31:19 AM EST
 
