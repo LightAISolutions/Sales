@@ -627,6 +627,65 @@ jobs:
           fi
       # ──────────────
 
+      # [PC-README-TREE] #7 requires the tree's vXX.XXw / vXX.XXg displays to be
+      # updated whenever a page or GAS version is bumped. The obligation is easy
+      # to miss because it lives in a different rule from the bump itself, and it
+      # WAS missed: the v05.34r audit found five of eight GAS displays stale by
+      # exactly one bump each. scripts/check-readme-tree.py makes it verifiable;
+      # this step makes it automatic.
+      #
+      # Deliberately post-merge and auto-fixing rather than a pre-merge gate.
+      # A blocking gate would strand a real page or GAS fix behind a wrong number
+      # in a README table — the drift is cosmetic, the deploy is not. And this
+      # step must never FAIL: every step after it (Delete branch, Sweep) is gated
+      # on success(), so a failure here would leave the claude branch on the
+      # remote and collide with push-once enforcement on the next push. Structural
+      # findings that --fix cannot resolve are raised as ::error:: annotations,
+      # which surface red in the run summary without breaking the chain.
+      #
+      # Runs unconditionally rather than guarding on changed version files (as the
+      # AHK step does) so that it also sweeps drift left behind by pushes that
+      # predate this gate. The script is stdlib-only and takes about a second.
+      - name: Sync README tree version displays
+        if: steps.guard.outputs.skip != 'true' && success()
+        run: |
+          python3 scripts/check-readme-tree.py --fix || true
+          STRUCTURAL=0
+          python3 scripts/check-readme-tree.py || STRUCTURAL=1
+          if [ "$STRUCTURAL" = "1" ]; then
+            echo "::error::README tree has structural findings that --fix cannot resolve — a version file exists with no tree entry, or a tree entry has no version file behind it. Fix by hand; see the listing above."
+          fi
+          if git diff --quiet README.md; then
+            echo "README tree version displays already in sync — nothing to commit"
+          else
+            git add README.md
+            git commit -m "Sync README tree version displays [skip ci]" || echo "No changes to commit"
+
+            # Same retry/rebase pattern as the AHK version-file push above.
+            PUSHED=false
+            for attempt in 1 2 3 4; do
+              if git push origin main; then
+                PUSHED=true
+                break
+              fi
+              if [ "$attempt" -eq 4 ]; then
+                break
+              fi
+              SLEEP=$((2 ** attempt))
+              echo "::warning::README tree push failed (attempt $attempt/4) — retrying in ${SLEEP}s"
+              sleep "$SLEEP"
+              git fetch origin main 2>/dev/null || true
+              if ! git merge-base --is-ancestor origin/main HEAD; then
+                echo "::warning::origin/main advanced — rebasing README tree commit onto new base"
+                git rebase origin/main || break
+              fi
+            done
+            if [ "$PUSHED" = false ]; then
+              echo "::warning::README tree push failed after 4 attempts — displays will be re-synced on the next merge"
+            fi
+          fi
+      # ──────────────
+
       - name: Delete branch
         if: steps.guard.outputs.skip != 'true' && success()
         run: |

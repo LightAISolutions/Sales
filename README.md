@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-10 06:52:29 AM EST` · Repo version: `v05.34r`
+Last updated: `2026-09-10 07:07:18 AM EST` · Repo version: `v05.35r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -901,7 +901,7 @@ Last updated: `2026-09-10 06:52:29 AM EST` · Repo version: `v05.34r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-reports.py">check-profiler-reports.py</a> — Profiler report verification (citation resolution against dossier sources, provenance tiers, KPI figure checks, index reconciliation) — required after any report write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-crossrefs.py">check-profiler-crossrefs.py</a> — Cross-dossier contradiction checker (differing figures, open questions one dossier answers for another, opt-in grouped attributions) — makes Profiler Command step 7 verifiable rather than self-reported
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-relationships.py">check-profiler-relationships.py</a> — Mechanical guard over every dossier's relationships[] (slug resolution, coherent reciprocal types, relationship URLs registered in sources[], project pins in the named-projects registry) — required after any profile write; exits non-zero while a finding is unreviewed
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-readme-tree.py">check-readme-tree.py</a>     — README tree version-display checker — compares every page and GAS version shown in the tree against html-versions/ and gs-versions/; --fix syncs drifted displays to source — makes [PC-README-TREE] #7 verifiable rather than self-reported
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-readme-tree.py">check-readme-tree.py</a>     — README tree version-display checker — compares every page and GAS version shown in the tree against html-versions/ and gs-versions/; --fix syncs drifted displays to source — makes [PC-README-TREE] #7 verifiable rather than self-reported, and is run post-merge by the auto-merge workflow
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-source-reachability.py">check-source-reachability.py</a> — Disclosure-tier reachability probe (are the filing hosts answering from this session?) plus the corpus provenance mix; run it BEFORE planning research — always exits 0, it reports a condition rather than asserting an invariant
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/scan-project-candidates.py">scan-project-candidates.py</a> — Named-project candidate scanner (counts distinct-dossier mentions per watchlisted project; flags unregistered names at ≥3 dossiers for registry review)

@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.35r] — 2026-09-10 07:07:18 AM EST
+
+> **Prompt:** "wire check-readme-tree into the workflow"
+
+### Added
+
+- **`Sync README tree version displays` — a new step in the `auto-merge` job of `.github/workflows/auto-merge-claude.yml`**, running post-merge between `Update auto-update HTML payload version files` and `Delete branch`. It runs `check-readme-tree.py --fix`, commits any correction to `main` as `Sync README tree version displays [skip ci]`, and pushes with the same four-attempt backoff-and-rebase pattern the AHK version-file step uses
+- **`.claude/rules/workflows.md` — "Post-Merge Derived-Value Sync Steps"**, documenting the shape the three derived-value steps share (AHK versions, auto-update payload versions, README tree displays) and the two constraints a future change to any of them must preserve
+
+### Changed
+
+- **[PC-README-TREE] #7 records that the workflow now runs the check**, and says to keep running it by hand anyway — the workflow's correction lands as a separate commit on `main`, outside your push, and its structural findings surface only as a run-summary annotation
+- **README tree** entry for `check-readme-tree.py` notes it is run post-merge by the workflow
+
+### Notes
+
+- **It is wired in as a post-merge auto-fix, not the pre-merge gate the previous session's recommendation implied — and the change of design is the substance of this push.** A blocking gate would strand a real page or GAS fix behind a wrong number in a README table. The repo's one pre-merge blocking check, `Validate GAS served inner <script> syntax`, earns that position because a broken inner script breaks the running app in a way that is invisible until it is expensive; cosmetic display drift is not that
+- **The step must never fail, and the reason is concrete rather than stylistic.** `Delete branch` and `Sweep stale claude branches` are both gated on `success()`, so a non-zero exit here would leave the `claude/*` branch on the remote — and the next push in that session would collide with Pre-Push Checklist item #5's push-once enforcement. **A cosmetic check would have broken branch cleanup.** Structural findings are therefore raised as `::error::` annotations, which render red in the run summary without failing the step
+- **Verified against that exact failure mode.** The step body was run under `bash -e` — the shell GitHub Actions uses, where an unguarded non-zero exit aborts the step — across three cases in a sandboxed copy: **(A)** clean tree → no fix, no error, **exit 0**; **(B)** a drifted GAS display → `--fix` corrected it, second pass clean, **exit 0**; **(C)** a version file with no tree entry → `--fix` could not resolve it, `::error::` emitted, and the step still **reached its end and exited 0**. Case C is the one that matters: it proves a structural finding cannot break branch deletion
+- **The step deviates from its two siblings by running unconditionally.** The AHK and payload steps guard on whether a `.ahk` or payload `.html` changed in the merge, because regeneration is meaningless otherwise. This one must also sweep drift left by pushes that predate it — v05.34r found five such displays — so a changed-files guard would leave exactly the backlog the step exists to clear
+- **No new job permissions or setup were needed.** `git config user.name/email` is set in the merge step and is repo-local, so it persists across steps in the same job; `python3` is pre-installed on `ubuntu-latest` and the script is stdlib-only
+- **Confirmed the step cannot conflict with the AHK sync**: the README tree carries **zero** `ahk.changelog.md` version displays, so the post-merge AHK regeneration has nothing in the tree to disagree with
+- **Verification:** `yaml.safe_load` parses the workflow; the step resolves to position **16 of 18** in the `auto-merge` job, between the payload sync and `Delete branch`, carrying the same `if: steps.guard.outputs.skip != 'true' && success()` as its siblings. `check-readme-tree.py` on the real tree returns **0 findings** across 10 page + 8 GAS displays
+- **`Sections: 101/100`** — **98 non-exempt** after excluding the three sections dated today, so rotation is **not** due on this push despite the counter reading past capacity. It fires on the next push landing on a later EST day. The clone is **already unshallowed** (1,096 commits, deepened at v05.33r), so SHA enrichment will resolve when it does
 
 ## [v05.34r] — 2026-09-10 06:52:29 AM EST
 

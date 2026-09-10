@@ -64,6 +64,18 @@ deploy:
 
 **Full case study:** `repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md` — "Fix 4 — Pages deploy job failing with 'Repository not found' on private forks"
 
+## Post-Merge Derived-Value Sync Steps
+
+Three steps in `auto-merge-claude.yml` run **after** the merge and regenerate values that are derived from a source of truth elsewhere in the repo: **Update AHK version files**, **Update auto-update HTML payload version files**, and **Sync README tree version displays** (added v05.35r). They share a deliberate shape, and a change to any one of them should preserve it.
+
+**They run after the merge, not before it.** A pre-merge gate on a derived value blocks the real change behind a bookkeeping mismatch. The precedent for a pre-merge *blocking* check is `Validate GAS served inner <script> syntax`, and it earns that position because a broken inner script breaks the running app — fresh sign-ins hang while already-open tabs keep working, so the failure is invisible until it is expensive. A wrong version number in a README table is not that.
+
+**None of them may fail the step, and this is a hard constraint rather than a preference.** Every step after them — `Delete branch` and `Sweep stale claude branches` — is gated on `success()`. A step that exits non-zero therefore leaves the `claude/*` branch on the remote, and the next push in that session collides with Pre-Push Checklist item #5's push-once enforcement. The AHK and payload steps express this by ending their retry loops with `::warning::` and continuing. The README tree step has an extra case: findings its `--fix` cannot resolve (a version file with no tree entry, or a tree entry with no version file) are raised as `::error::`, which renders red in the run summary **without** failing the step. Anything that needs a human is annotated, never thrown.
+
+**They push to `main` with `[skip ci]`** and share one retry pattern: four attempts, exponential backoff (2s/4s/8s/16s), and a `git rebase origin/main` between attempts when `origin/main` has advanced — the narrow race where a concurrent workflow lands between the merge push and this one. On exhaustion they warn and move on, because the value is derived and the next run regenerates it idempotently.
+
+**The README tree step deviates from the other two in one respect, on purpose:** it runs unconditionally rather than guarding on whether the relevant files changed in this merge. The AHK and payload steps only fire when a `.ahk` or a payload `.html` changed, because regeneration is meaningless otherwise. The README tree step also has to sweep drift left behind by pushes that predate the gate — the v05.34r audit found five such displays — so a changed-files guard would leave exactly the backlog the step exists to clear. It is stdlib-only Python and takes about a second.
+
 ## WORKFLOW_PAT Safety Net
 
 **Rule:** The `auto-merge` job's checkout step uses an opt-in `WORKFLOW_PAT` fallback, gated on the repo variable `USE_WORKFLOW_PAT`. Do NOT remove this fallback as "cleanup" during an unrelated fix — it is a deliberate safety net. Modifications to the token selection require user approval (see Chesterton's Fence gate in `.claude/rules/behavioral-rules.md`).
