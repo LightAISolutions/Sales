@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-10 07:12:18 AM EST
+**Repo version:** v05.35r — **six push commits** on `claude/adoring-euler-3a855i` (v05.30r → v05.35r), each merged before the next
+**Branch:** `claude/adoring-euler-3a855i`
+**Model:** Opus 5 — S3 budget review, then a chain of fixes that grew out of verifying the first one
+
+### What was done
+
+1. **v05.30r — the S3 action plan was evaluated against the developer's token budget, and `PROFILER-COVERAGE-PLAN.md` §10.5 was added.** S3 stands at **7 of 10**: the public lane is finished (P1–P6), the private lane is 1 of 4 (V1), and **V2, V3 and V4 are all Fable 5.1 High**
+2. **v05.31r — dossier `**bold**` markers rendered as literal asterisks; fixed at the chokepoint.** `ovEl` now routes through `ovSetText` (real `<strong>` runs) and `ovPlain` strips markers from prose mined for relationship evidence
+3. **v05.32r — the bold fix appeared not to work, and the cause was a deeper bug.** The page was cached; the version pill fetches `no-store` while the HTML document does not. Added a **first-load staleness check** to `Profiler.html`
+4. **v05.33r — promoted to both templates and all ten pages.** The templates never had the cache-busting reload *either*, so this promoted **two dependent fixes**. Also rotated `Profilerhtml.changelog.md`
+5. **v05.34r — audited the README tree's version displays.** Five of eight GAS displays were stale, each by exactly one bump. Added `scripts/check-readme-tree.py` and turned [PC-README-TREE] #7's instruction into a verification step
+6. **v05.35r — wired the checker into `auto-merge-claude.yml`** as a post-merge auto-fix, and verified it on run #537
+
+### Where we left off
+
+All six pushes merged. The workflow step was **verified on real infrastructure** (run #537, success, step 17 of 19, ~0.23 s, `Delete branch` and `Sweep` ran after it). Nothing is in flight.
+
+### Key decisions and findings
+
+- **S3's blocker is budget, not arithmetic, and §10.5 records the measurement.** A Phase E session costs **~20 points of the weekly all-models allowance** (82 points across P3–P6 in sixteen hours). At **95% all-models / 96% Fable** the remainder was about a quarter of one session, and Phase E is **single-push-commit**, so a session that runs dry leaves nothing committed. **Do not start V2, V3 or V4 on a near-exhausted allowance.** Splitting V2 rescues neither the arithmetic nor the landscape gate — §10.3 holds the software landscape for the pure-play optimizers *plural*
+- **All three §10.5 consolidation items were misdescribed when written, and each failed differently against the primary source.** **A** (pre-emptive CHANGELOG rotation) was **withdrawn** — it compared the raw section count against a threshold the spec tests on a **non-exempt** basis, the exact reading reconciled out at v05.01r for firing rotations early. **B** was real but **~120× understated** — recorded against `ecosystemRole` (4 occurrences, last of fourteen fields) when the true surface was **483 across 60 dossiers**, led by `strategyRead[]` at 379. **C** was **not a defect** — the EVE/HiThium inversion is an artifact of one house's half-year table against another's full-year one across a 4% gap; neither role changed. **The common cause: each had been written from a summary of the evidence rather than the evidence**
+- **The `<meta build-version>` tag is now load-bearing on every page.** It was documented in three places as informational and never read; all three were amended. A page reads its own stamp on the first poll and reloads once when the version file is ahead. **Bumping `html.version.txt` without the meta tag now costs every visitor one wasted reload.** Two guards are mandatory and present: a single-attempt `sessionStorage` loop guard (the two values are bumped by hand and *can* drift) and a null-safe read
+- **The workflow step is deliberately a post-merge auto-fix, not a pre-merge gate.** A blocking gate would strand a real page fix behind a wrong number in a README table. More concretely, **it must never fail**: `Delete branch` and `Sweep` are gated on `success()`, so a red step would leave the `claude/*` branch on the remote and collide with push-once enforcement on the next push. Structural findings emit `::error::` and the step still exits 0 — verified under `bash -e` across three cases
+- **A rule missed five times out of eight was not unclear — it was unread.** [PC-README-TREE] #7 named both trigger rules by ID. The structural cause is that the obligation and its trigger lived in **different rules**: a session bumping a `.gs` reads [PC-GS-VERSION] #1, updates two files, and never opens #7. The fix restates the obligation **at both triggers** as well as adding the checker
+- **Untested path, stated plainly:** run #537 took the "already in sync" branch, so the step's `git add` / `commit [skip ci]` / four-attempt retry-and-rebase code **has not executed on a runner**. It is copied line-for-line from the AHK step, which runs regularly, so risk is low — but low is not verified. It will exercise itself the first time a session leaves drift
+
+### Active context
+
+- **Repo version** `v05.35r`; **CHANGELOG at 101/100 — 98 non-exempt**, so rotation is **not** due but fires on the next push landing on a later EST day. The clone is **already unshallowed** (1,096 commits, deepened at v05.33r), so SHA enrichment will resolve
+- **S3: 7 of 10.** Remaining: **V2 · `E1b` (Habitat Energy · Gridmatic)**, **V3 · `E5` (Grid United · Pattern Energy)**, **V4 · `E4b+E6b` (Mitra Chem · Cornex)** — all Fable 5.1 High. **V2 is the sole remaining gate**; V3 and V4 are pure deepening. **V4, not P6, completes the SNE H1-2026 storage-cell top twelve** — `cornex` sits 7th at 30.2 GWh
+- **Page versions after this session:** Profiler `v01.86w`, Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
+- **Still awaiting developer approval (§10.5 item D, offered six sessions running):** adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit directive 2026-08-30. P5 and P6 added **79 aliases across four companies** the roster cannot find
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **S3 V2 · group `E1b` (Habitat Energy · Gridmatic) on Fable 5.1 High** as a fresh session — **but only once the weekly Fable allowance has actually reset.** It is the sole remaining gate on `software-and-optimization`, the one held landscape, and clearing it unblocks S2 on all nineteen segments. Two things shape the research: **both subjects are private optimizers whose value is inference from a thin public record** — the §2 model rule's reason for putting them on Fable — and **§10.3 holds the landscape for the pure-play optimizers plural**, so a half-session on one company may not release it. P3 sharpened why they matter: both of the segment's incumbents reach it from an adjacent business (FlexGen from integration, Stem from solar asset-performance management), so the pure-play merchant optimizers are still entirely on the private side. Check the allowance before starting — §10.5 measures a Phase E session at ~20 points and the format is all-or-nothing.
+
+**To continue:** type `run S3 V2`
+
+## Previous Sessions
+
+### Session — 2026-09-09 07:18:49 AM EST (v05.29r)
+
 **Date:** 2026-09-09 07:18:49 AM EST
 **Repo version:** v05.29r
 **Branch:** `claude/*` (P6 session)
@@ -37,49 +82,5 @@ All P6 work committed, pushed and merged. **A separate v05.30r session then revi
 - Run the **cheap consolidation pass — §10.5 items A, B and C** in one session: rotate the CHANGELOG pre-emptively, fix the literal-asterisk render in `Profiler.html` (60 dossiers affected), and resolve the `eve-energy` / `hithium` typing tension in `profiler-segments.json`. It costs a fraction of a Phase E session, fits the remaining allowance, and item A directly buys back Fable budget for V2. Do **not** start V2 until the weekly allowance resets.
 
 **To continue:** type `run the S3 cheap consolidation pass`
-
-## Previous Sessions
-
-### Session — 2026-09-09 06:00:20 AM EST (v05.28r)
-
-**Date:** 2026-09-09 06:00:20 AM EST
-**Repo version:** v05.28r — **one push commit** on `claude/jolly-dijkstra-ybdikq` (plus this session-context commit, the sanctioned second because the first push had already merged)
-**Branch:** `claude/jolly-dijkstra-ybdikq`
-**Model:** Opus 5 xhigh — **S3 P5 · group `E4a` (Albemarle · NOVONIX)**, then the P6 paste-in prompt
-
-### What was done
-
-1. **P5 shipped (v05.28r).** `albemarle` (75 sources, 52% first-party) and `novonix` (69 sources, 71%), each with a 13-section schema-v2 study guide and a full-depth lesson plan. `cells-and-chemistry` went 16 members / 4 incumbents / 8 challengers / 4 adjacent → **18 / 4 / 8 / 6**. Thirty concepts registered (1,358 → 1,388) and eighteen company-published executive photographs downloaded
-2. **The adjacency hypothesis held, and was tested rather than assumed.** Both typed **adjacent**. `compute-and-the-rack` and `storage-integrators-and-containers` were read against Albemarle's bromine line and **rejected** — a flame-retardant additive is not a rack, a system integrator or a factory-assembled block. NOVONIX **could not** have been typed challenger: continuing-operations revenue is **US$0** and no commercial anode volume has shipped, against a 2024 market of 2.11 Mt whose ten largest producers are all Chinese
-3. **The Nasdaq question resolved harder than "unannounced" — it is arithmetically unresolvable on 2026-09-09.** The ten-consecutive-business-day cure test began at the 2026-08-27 ADS ratio change; excluding Labor Day (2026-09-07), the tenth session cannot fall before **2026-09-10**, one day after authoring, against a **2026-09-14** deadline. Eight qualifying closes had completed. No announcement exists on EDGAR (newest filing 2026-09-02) or the ASX list (newest 2026-09-04)
-4. **Four findings no §8 row carried.** NOVONIX is being **removed from the S&P/ASX 300** on 2026-09-21; the **AD/CVD case it petitioned for FAILED** on a 2-1 ITC vote, after which it cut its own assumed selling price from US$10–12/kg to US$7–11/kg; **Riverside full capacity slipped to September 2031** against a Section 48C deadline of 2028-04-07; and the **Harper furnace licence lapsed unpaid** on 2026-01-01. On the other side, **Albemarle announced a CEO succession on 2026-09-02** — six days before the batch identity sweep that missed it
-
-### Where we left off
-
-All work committed, pushed and merged. The **P6 paste-in prompt was handed to the developer in chat** — the next session is a fresh Opus 5 xhigh session, not a continuation of this one.
-
-### Key decisions and findings
-
-- **`check-source-reachability.py` was wrong about the SEC for the THIRD consecutive session, and the cause is now identified.** It is **not a network block — it is a User-Agent format failure.** SEC hosts return 403 to a UA without a contact email and **200** to one containing it; `LightAISolutions Research jonyang92@gmail.com` returned 200 on three consecutive attempts against both `sec.gov` and `data.sec.gov`, and the entire first-party financial record for both companies came from them. **This retires two sessions of "SEC is blocked" folklore.** Separately, `ir.novonixgroup.com` served 200 here while **both** research agents recorded it 403 — probe hosts yourself rather than inheriting a verdict
-- **I used a primary source over an agent's verdict once, and was right to.** The third-party agent explicitly discarded the "five of seven consecutive trading days" Amortization Event trigger as belonging to an unrelated issuer. It is in NOVONIX's own HY-2026 Note 8, which I had already read. The two agents also disagreed on the $245.6m impairment (Kemerton vs the Refining Solutions held-for-sale write-down); the 10-K settles it as Refining Solutions, Q4-2025
-- **The P4 indent trap cost nothing, because a helper replaced memory.** A read-detect-write helper was proved **byte-identical on a round-trip of all five shared JSON files before any write**. Diffs were 60 lines on the roster and 34 on the calendar against P4's reverted 2,350. **One correction to the standing instruction: `profiler-concepts.json` is SORTED ALPHABETICALLY BY SLUG, not append-at-end** — the append-at-end convention applies to `profiler-companies.json` and the refresh calendar only
-- **The intel-briefing style's bold markers render as literal asterisks, corpus-wide.** `Profiler.html` passes `summary` and `ecosystemRole` through as plain text, so `**BOTTOM LINE UP FRONT:**` displays its asterisks — in the shipped `intertek` dossier as much as in this session's. Fourteen dossiers carry it. This session brought its own prose within corpus norms rather than touching the page; **the fix, if the developer wants one, is a `Profiler.html` change and therefore not a dossier session's to make**
-- **The pacing rule held.** Nothing was staged until both first-party agents returned, and it mattered: the NOVONIX first-party report overturned the premise that the company still has a battery-testing business, and the Albemarle one corrected the divestiture structure and the segment count
-
-### Active context
-
-- **Repo version** `v05.28r`; CHANGELOG at **94/100** sections — rotation due at 100, so roughly **six pushes of headroom**
-- **S3 progress: 6 of 10 sessions** (P1, P2, V1, P3, P4, P5 done). Remaining order: **P6 → V2 → V3 → V4**. The public lane is **five of six done**
-- **`software-and-optimization` remains the only held landscape**, and only V2 clears it. P6, V3 and V4 are pure deepening
-- **Two dated triggers now live in calendar rows:** `novonix` on **2026-09-14** (Nasdaq cure deadline — the row FLIPS rather than drifts, and should convert to the quarterly cadence, ~2026-10-29, once the outcome lands; the S&P/ASX 300 removal on **2026-09-21** is a second item in the same window), and `albemarle` on **2026-11-04** (cadence-inferred Q3, unconfirmed) with a **live Chilean strike** unresolved at authoring — 97.49% strike authorisation on 2026-08-31, mediation requested 2026-09-01
-- **`cells-and-chemistry` is the corpus's largest segment at 18 members**, and its `notes` field now records the upstream-materials adjacent role as **partly filled** — still open for the private cathode and cell names of E4b/E6b (`mitra-chem`, `cornex`)
-- **Offered and not taken** (needs developer approval, carried from four sessions): adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit developer directive 2026-08-30. Would require a page version bump. P5 strengthens it again — Albemarle's fifteen aliases include Ketjen, Talison, Greenbushes, Wodgina and SAYTEX, and NOVONIX's eleven include GX-23, Avrion Battery Labs and Dryve Battery Materials, none of which the roster can currently find
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **S3 P6 — group `E6a` (CALB · Great Power) on Opus 5 xhigh**, as a fresh session using the paste-in prompt handed over in chat. It is the **last public-lane session**, and finishing it leaves **V2 as the sole remaining gate** on the one held landscape. Two things make it different from P5 and should shape the research plan: **the role is genuinely undecided** — the §8 cell says the session decides incumbent or challenger *on the rank it finds*, so the third-party ranking work is the deliverable rather than a check — and **neither company files with the SEC**, so this session's User-Agent finding is irrelevant and the hosts that matter are `cninfo.com.cn` and `hkexnews.hk` (both 200 at C12) plus `szse.cn`, which is **intermittent rather than blocked** and must be probed at least three times. Both §8 identity cells carry grep traps: CALB must never be searched as "China Aviation Lithium Battery", and Great Power's A+H application appears to have **lapsed unfiled** around 2026-07-30 without ever listing
-
-**To continue:** type `continue with your recommendation`
 
 Developed by: LightAISolutions
