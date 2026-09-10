@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 51/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.85w] — 2026-09-09 10:07:11 PM EST — v05.32r
+
+### Fixed
+- Opening the page straight after an update no longer shows the previous version's content. The page now checks, on load, whether the copy it is running matches the version it is reporting, and refreshes itself once if it does not — previously this only corrected itself if you happened to have the page open at the moment an update landed, so opening it fresh could show old content while the version badge already read the new number
 
 ## [v01.84w] — 2026-09-09 07:08:03 PM EST — v05.31r
 

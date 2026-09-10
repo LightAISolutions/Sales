@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.32r] — 2026-09-09 10:07:11 PM EST
+
+> **Prompt:** "I hard refreshed and can see the bold text now. Add the first-load staleness check."
+
+### Added
+
+- **`Profiler.html` v01.84w → v01.85w — a first-load staleness check, inside the existing `PROJECT OVERRIDE: cache-busting reload` block.** On the first poll the page compares `html.version.txt` against its own `<meta name="build-version">`; when the version file is ahead, the document it is running predates the deploy the version file describes, and `ovReloadFresh()` fires once to replace it. A new `ovDocVersion()` reads the meta tag back, normalised to the `parseVersionTxt()` shape
+
+### Changed
+
+- **`CLAUDE.md` [PC-HTML-SOURCE] #3 amended** — the meta tag was documented as "informational only … never read by the polling logic", which is no longer true on a page carrying the override. The rule now separates the two questions the two artefacts answer, states the normalisation trap, and makes the loop guard and the null-safe read mandatory for any page adopting it
+- **`CLAUDE.md` [PC-HTML-VERSION] #2 amended** — it claimed that "changing only html.version.txt still triggers a reload correctly". On an override page that now costs every visitor one wasted reload before the guard gives up, so the rule says to bump both in the same commit
+- **`.claude/rules/html-pages.md` reconciled** — its build-version bullet asserted the meta tag "is never involved in the reload mechanism". Split into three bullets covering what each artefact is for, why the baseline path could not catch this case, and the two guards adoption requires
+
+### Notes
+
+- **The gap was structural, not a bug in `ovReloadFresh()`.** That helper fires when the version *changes while the page is open*; a page opened fresh **after** a deploy sees no change at all, because the first fetch takes the version file as its baseline unconditionally. A stale document therefore reported itself current and nothing fired. **This is exactly how the v01.84w bold fix appeared not to work** on a device whose pill already read v01.84w — the same symptom the override block's own comment records for v01.30w's import bar, which is why the fix belongs in that block
+- **The normalisation trap is real and would have inverted the feature.** `parseVersionTxt()` strips the leading `v`, so `parsed.version` is `01.85w` while the meta tag carries `v01.85w`. Comparing them raw marks **every** load stale. Verified by test A below, which passes only because `ovDocVersion()` strips it too
+- **The loop guard is the load-bearing part, because the two values are bumped by hand and can drift.** [PC-HTML-VERSION] #2 requires both, but a session that bumps `html.version.txt` and forgets the `<meta>` creates a **permanent** mismatch that no reload can fix. The guard records the target version in `sessionStorage` and allows **one** attempt per version per tab, then falls through and lets the document run stale rather than reloading forever
+- **A missing meta tag disables the check rather than triggering it.** `ovDocVersion()` returns `null` when the tag is absent, so older copies and any page that has not adopted the override are unaffected
+- **Verified in Chromium against a routed version file, four cases, zero page errors in all:** **(A)** file matches the document → **0** reloads, proving normalisation; **(B)** file ahead of the document → exactly **1** corrective reload with the guard key set; **(C)** file *permanently* ahead across **26 s / two full poll cycles** → still exactly **1** reload, proving the guard holds rather than merely not having polled yet; **(D)** meta tag stripped from the served HTML → **0** reloads, check disabled
+- **Scope is one page.** `ovReloadFresh` exists only in `Profiler.html` and not in `live-site-pages/templates/`, so [PC-TEMPLATE-PROP] #19 does not fire and the other nine pages are untouched. They keep the pre-existing behaviour, and the amended rules say so explicitly rather than implying the corpus changed
+- **`Sections: 98/100`** — **87 non-exempt** after excluding the eleven sections dated today, so no rotation was due. The page changelog stands at 51 total / **49 non-exempt** against its cap of 50, so no page rotation was due either
 
 ## [v05.31r] — 2026-09-09 07:08:03 PM EST
 
