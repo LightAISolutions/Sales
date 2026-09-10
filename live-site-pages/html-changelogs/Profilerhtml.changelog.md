@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 51/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.86w] — 2026-09-10 03:31:19 AM EST — v05.33r
+
+### Changed
+- The load-time version check added in the previous update is now part of the shared page framework, so every page on the site behaves the same way. No change to how this page works
 
 ## [v01.85w] — 2026-09-09 10:07:11 PM EST — v05.32r
 
@@ -297,49 +302,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Added
 - New "IPP" company category — power producers that buy and operate battery systems now have their own colored tag and roster filter, alongside eight new company profiles in that category
-
-## [v01.41w] — 2026-08-22 10:57:17 PM EST — v02.90r
-
-### Changed
-- Technical Annex rebuilt in a clearer format across every company dossier. Long run-on spec lines are now separated into individual attributes, each with its own name, and grouped under category headings such as Power, Electrical and Design — so a specific figure can be found by heading instead of by reading the whole block
-- Every product table in a dossier now shares the same column alignment, and the same format carries through to exported documents
-- Spec wording is unchanged — the figures read exactly as they did before; only the grouping and labelling are new
-
-## [v01.40w] — 2026-08-22 10:24:05 PM EST — v02.89r
-
-### Fixed
-- Technical Annex sections that appeared as headings with empty rows now show their content. Around two thirds of dossiers were affected; the same content was also missing from exported documents, which are fixed with them
-- A dossier with no technical detail to show now omits the Technical Annex entirely instead of printing an empty heading
-- Reading progress in Industry Guidance is now kept separately for each signed-in account, so signing a second account into the same browser starts it with a clean module instead of inheriting the first account's ticked sections. Progress recorded before this change is cleared once, since there is no record of which account earned it
-
-## [v01.39w] — 2026-08-22 08:01:32 PM EST — v02.88r
-
-### Changed
-- The app now tailors what it shows to each signed-in account's access level. Administrators continue to see every feature; other access levels see a reduced set, with anything they are not entitled to hidden rather than shown and refused
-- Access levels can be previewed from the address bar (add `?as=viewer` to the page URL) to check how the app looks to another level. Previewing can only ever show less than the account already has, never more
-
-## [v01.38w] — 2026-08-22 07:05:31 PM EST — v02.86r
-
-### Added
-- New Industry Guidance area for administrators — a reading-room button in the page header opens a library of interactive study modules with section navigation, reading-progress tracking, timelines, comparison tables, flashcards, self-tests and a hoverable glossary
-
-## [v01.37w] — 2026-08-22 04:39:06 AM EST — v02.81r
-
-### Added
-- Executive headshots now appear on 40 more leadership entries across 17 company dossiers, with photo credits shown where a photo requires attribution
-
-## [v01.36w] — 2026-08-22 03:25:08 AM EST — v02.80r
-
-### Fixed
-- Key Judgments now display correctly on every dossier — seven company profiles (and their archived versions) previously showed their analytical judgments as unreadable placeholders or appeared to have none
-
-## [v01.35w] — 2026-08-22 03:15:24 AM EST — v02.79r
-
-### Added
-- Dossiers are now organized into labeled tabs (Overview, Products, Developments, Key Judgments, Leadership, Financials, Sources) with a pinned tab bar — no more scrolling one long page to find a section
-- Tab views are shareable: the page address updates as you switch tabs, so a saved link opens directly on that tab
-- Exported documents now open with a cover page and a hyperlinked table of contents, and every section starts on its own page; Word exports can fill in real page numbers via "Update Field"
-
-### Fixed
-- Company overviews now display as properly spaced paragraphs on every dossier (one dossier previously ran its opening sections together)
-

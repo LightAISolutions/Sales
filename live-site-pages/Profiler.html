@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.85w">
+  <meta name="build-version" content="v01.86w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1160,15 +1160,14 @@
 
 // ══════════════
 // TEMPLATE START
+// ══════════════
 
-// PROJECT OVERRIDE START: cache-busting reload
-// window.location.reload() is permitted to reuse the cached document. The
+// ── Cache-busting reload + first-load staleness ──────────────────────────
+// window.location.reload() is permitted to reuse the cached document, while the
 // version pill is fetched separately with cache:'no-store' plus a cache-bust
-// param, so it can report a new version while the page around it is still the
-// old HTML — which is exactly how v01.30w's import bar stayed invisible on a
-// device whose pill already read v01.30w. Navigating to a URL that differs by
-// one query param forces a real fetch. The hash is preserved because dossier
-// routing lives there.
+// param -- so the pill can report a new version while the page around it is
+// still the old HTML. Navigating to a URL that differs by one query param
+// forces a real fetch. The hash is preserved because routing can live there.
 // Split out so the URL rule is testable without stubbing window.location,
 // whose properties are non-configurable and cannot be replaced.
 function ovFreshUrl(href, stamp) {
@@ -1182,23 +1181,19 @@ function ovReloadFresh() {
   var u = ovFreshUrl(window.location.href, Date.now());
   if (u) window.location.replace(u); else window.location.reload();
 }
-// First-load staleness: ovReloadFresh above only fires when the version CHANGES
-// while the page is open. It never fired for the v01.84w bold fix, because that
-// page was opened fresh from cache AFTER the deploy -- the poller took the
-// version file as its baseline and so a stale document reported itself current.
-// The document's own build stamp is the only in-page evidence of what code is
+// ovReloadFresh only fires when the version CHANGES while the page is open. It
+// cannot catch a page opened fresh from cache AFTER a deploy: the poller takes
+// the version file as its baseline, so a stale document reports itself current.
+// The document's own build stamp is the only in-page evidence of which code is
 // actually running, so read it back and compare. Returns null when the meta tag
-// is absent (older copies, other pages), which disables the check rather than
-// guessing. Normalised to the parseVersionTxt() shape, which strips the leading
-// 'v' -- comparing 'v01.84w' against '01.84w' would call every load stale.
+// is absent, which disables the check rather than guessing. Normalised to the
+// parseVersionTxt() shape, which strips the leading 'v' -- comparing 'v01.00w'
+// against '01.00w' would mark every load stale.
 function ovDocVersion() {
   var m = document.querySelector('meta[name="build-version"]');
   var c = m && m.getAttribute('content');
   return c ? String(c).trim().replace(/^v/, '') : null;
 }
-// PROJECT OVERRIDE END
-
-// ══════════════
 
     // Set splash logo from config variable
     document.getElementById('splash-logo').src = SPLASH_LOGO_URL;
@@ -1408,18 +1403,12 @@ function ovDocVersion() {
             var maintenanceSplash = document.getElementById('splash-maintenance');
 
             if (!currentVersion) {
-              // PROJECT OVERRIDE START: first-load staleness check
-              // Before trusting the version file as the baseline, check it against
-              // the build stamp of the document we are actually running. A mismatch
-              // means this document is older than the deploy the version file
-              // describes -- the cached-HTML case ovReloadFresh could not catch.
-              // GUARDED AGAINST A RELOAD LOOP: one attempt per target version per
-              // tab. If the document still does not match after that reload, the
-              // cause is not caching -- most likely html.version.txt was bumped
-              // without the <meta build-version> beside it (they are bumped by hand
-              // together under [PC-HTML-VERSION] #2, so they can drift) -- and a
-              // second reload would never fix it. Fall through and run stale rather
-              // than reload forever.
+              // First-load staleness: is the document we are running actually the
+              // build the version file describes? GUARDED AGAINST A RELOAD LOOP --
+              // one attempt per target version per tab. html.version.txt and the
+              // <meta build-version> are bumped by hand together ([PC-HTML-VERSION]
+              // #2) and can drift; a drift is a permanent mismatch no reload fixes,
+              // so after one attempt fall through and run stale rather than loop.
               var docV = ovDocVersion();
               if (docV && parsed.version && docV !== parsed.version) {
                 if (sessionStorage.getItem('ov-stale-reload') !== parsed.version) {
@@ -1430,7 +1419,7 @@ function ovDocVersion() {
               } else {
                 sessionStorage.removeItem('ov-stale-reload');
               }
-              // PROJECT OVERRIDE END
+
               // First fetch — establish baseline version from html.version.txt
               currentVersion = parsed.version;
               createIndicator(currentVersion);

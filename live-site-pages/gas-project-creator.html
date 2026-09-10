@@ -6,7 +6,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://logoipsum.com https://www.shadowaisolutions.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.03w">
+  <meta name="build-version" content="v01.04w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>GAS Project Creator</title>
   <style>
@@ -821,6 +821,40 @@
 // TEMPLATE START
 // ══════════════
 
+// ── Cache-busting reload + first-load staleness ──────────────────────────
+// window.location.reload() is permitted to reuse the cached document, while the
+// version pill is fetched separately with cache:'no-store' plus a cache-bust
+// param -- so the pill can report a new version while the page around it is
+// still the old HTML. Navigating to a URL that differs by one query param
+// forces a real fetch. The hash is preserved because routing can live there.
+// Split out so the URL rule is testable without stubbing window.location,
+// whose properties are non-configurable and cannot be replaced.
+function ovFreshUrl(href, stamp) {
+  try {
+    var u = new URL(href);
+    u.searchParams.set('_v', String(stamp));
+    return u.toString();
+  } catch (e) { return null; }
+}
+function ovReloadFresh() {
+  var u = ovFreshUrl(window.location.href, Date.now());
+  if (u) window.location.replace(u); else window.location.reload();
+}
+// ovReloadFresh only fires when the version CHANGES while the page is open. It
+// cannot catch a page opened fresh from cache AFTER a deploy: the poller takes
+// the version file as its baseline, so a stale document reports itself current.
+// The document's own build stamp is the only in-page evidence of which code is
+// actually running, so read it back and compare. Returns null when the meta tag
+// is absent, which disables the check rather than guessing. Normalised to the
+// parseVersionTxt() shape, which strips the leading 'v' -- comparing 'v01.00w'
+// against '01.00w' would mark every load stale.
+function ovDocVersion() {
+  var m = document.querySelector('meta[name="build-version"]');
+  var c = m && m.getAttribute('content');
+  return c ? String(c).trim().replace(/^v/, '') : null;
+}
+
+
     // Set splash logo from config variable
     document.getElementById('splash-logo').src = SPLASH_LOGO_URL;
     document.getElementById('splash-code-logo').src = SPLASH_LOGO_URL;
@@ -1020,6 +1054,23 @@
             var maintenanceSplash = document.getElementById('splash-maintenance');
 
             if (!currentVersion) {
+              // First-load staleness: is the document we are running actually the
+              // build the version file describes? GUARDED AGAINST A RELOAD LOOP --
+              // one attempt per target version per tab. html.version.txt and the
+              // <meta build-version> are bumped by hand together ([PC-HTML-VERSION]
+              // #2) and can drift; a drift is a permanent mismatch no reload fixes,
+              // so after one attempt fall through and run stale rather than loop.
+              var docV = ovDocVersion();
+              if (docV && parsed.version && docV !== parsed.version) {
+                if (sessionStorage.getItem('ov-stale-reload') !== parsed.version) {
+                  sessionStorage.setItem('ov-stale-reload', parsed.version);
+                  ovReloadFresh();
+                  return;
+                }
+              } else {
+                sessionStorage.removeItem('ov-stale-reload');
+              }
+
               currentVersion = parsed.version;
               createIndicator(currentVersion);
               if (parsed.maintenance && indicator) indicator.querySelector('.label').textContent = '\uD83D\uDD27 v' + currentVersion;
@@ -1038,7 +1089,7 @@
                 if (dot) dot.className = 'dot found';
                 if (indicator) indicator.querySelector('.label').textContent = 'Updating...';
                 if (sessionStorage.getItem('maint-bypassed')) sessionStorage.setItem('web-pending-sound', '1');
-                setTimeout(function() { window.location.reload(); }, 2000);
+                setTimeout(function() { ovReloadFresh(); }, 2000);
                 return;
               }
               if (indicator) indicator.querySelector('.label').textContent = '\uD83D\uDD27 v' + currentVersion;
@@ -1050,7 +1101,7 @@
               if (dot) dot.className = 'dot found';
               if (indicator) indicator.querySelector('.label').textContent = 'Updating...';
               sessionStorage.setItem('web-pending-sound', '1');
-              setTimeout(function() { window.location.reload(); }, 2000);
+              setTimeout(function() { ovReloadFresh(); }, 2000);
             } else {
               sessionStorage.removeItem('maint-bypassed');
               if (maintenanceSplash && maintenanceSplash.style.display === 'flex') {
@@ -1125,7 +1176,7 @@
               if (dot) dot.className = 'dot found';
               if (pillLabel) pillLabel.textContent = 'GAS updated — reloading...';
               sessionStorage.setItem('gas-pending-sound', '1');
-              setTimeout(function() { window.location.reload(); }, 1500);
+              setTimeout(function() { ovReloadFresh(); }, 1500);
               return;
             }
             if (dot) setTimeout(function() { dot.className = 'dot'; }, 800);

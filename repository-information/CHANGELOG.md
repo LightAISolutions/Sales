@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.33r] — 2026-09-10 03:31:19 AM EST
+
+> **Prompt:** "promote the staleness check to the templates"
+
+### Added
+
+- **The cache-busting reload and the first-load staleness check are now TEMPLATE code in both `HtmlAndGasTemplateAutoUpdate-auth.html.txt` and `-noauth.html.txt`, and are propagated to all ten versioned pages.** `ovFreshUrl`, `ovReloadFresh` and `ovDocVersion` sit together in the template region, and the first-poll guard sits in the `if (!currentVersion)` branch. Every page created from either template inherits both from now on
+
+### Changed
+
+- **All ten versioned pages bumped** — Classroom v01.09w, MasterACL v01.06w, Profiler v01.86w, Receipts v01.37w, Scraper v01.72w, gas-project-creator v01.04w, globalacl v01.06w, testauthgas1 v01.04w, testauthhtml1 v01.04w, text-compare v01.02w — each with its `<meta build-version>` and page changelog entry
+- **`Profiler.html`'s two `PROJECT OVERRIDE` blocks removed and the code realigned to the template text.** The page carried this logic as a deliberate deviation; now that it is template code the markers would make a future propagation stop for no reason. Both blocks were verified **byte-identical to the template** afterwards, and the page's override count fell 10 → 6
+- **The "currently `Profiler.html` only" scoping removed from all three rules** — [PC-HTML-SOURCE] #3 and [PC-HTML-VERSION] #2 in `CLAUDE.md`, and the build-version bullet in `.claude/rules/html-pages.md`. The meta tag is now load-bearing corpus-wide, and #2 says so at the point where the bump is specified
+- **`Profilerhtml.changelog.md` rotated** — the oldest whole date group (**seven sections dated 2026-08-22**) moved to `Profilerhtml.changelog-archive.md` with SHA enrichment on all seven headers
+
+### Notes
+
+- **The templates never had the cache-busting reload either, so this promoted two dependent fixes rather than one.** Both templates carried three bare `window.location.reload()` calls and zero `ovReloadFresh` — the v01.30w cache fix had been a Profiler-only override since the day it was written. The staleness check *calls* `ovReloadFresh`, so promoting it alone would not have compiled. **Three reload sites were converted per file across all eleven files** (maintenance-mode version change, ordinary version change, GAS version change)
+- **Ordering mattered in the edit itself:** the reload-site replacement had to run **before** the helper block was inserted, because `ovReloadFresh`'s own fallback line contains `window.location.reload()` and a blanket replacement would have made it call itself
+- **[PC-TEMPLATE-PROP] #19's override scan was run and cleared all nine pages.** Four carry `PROJECT OVERRIDE` markers — Receipts (9), testauthhtml1 (9), testauthgas1 (5), Scraper (4) — and **none sits in the reload or polling region**: they are CSP tags, a themed logo, OAuth scopes, a notification panel, test session durations, UI toggle lists and SSO-indicator removals. No propagation was blocked and no page needed the user's adjudication
+- **Two pages did not match the standard shape and were handled rather than skipped.** `text-compare.html` has its whole polling block **minified onto single lines**, so the exact-string anchors used elsewhere matched nothing; the promoter anchors on `if (!currentVersion) {` and on the reload call text instead, which is shape-independent. `gas-project-creator.html` carries **three** `build-version` matches because **line 1551 is a generator that writes a meta tag into pages it creates** — that string was deliberately left at `v01.00w`, since bumping it would stamp every newly created page with this repo's version
+- **`404.html` and `index.html` were excluded and this is correct** — neither has the polling block, a version file, or a `build-version` meta tag, so neither is a tracked page
+- **Verified in Chromium across all ten pages, twenty page loads, zero page errors.** For each page: the helpers resolve as functions; `ovDocVersion()` returns that page's **newly bumped** version, which proves both the meta bump landed and the leading-`v` normalisation is right; a matching version file produces **0** reloads; a version file ahead of the document produces **exactly 1**
+- **The cost of this promotion is nine more places where a forgotten meta bump costs a wasted reload.** The loop guard bounds that to one reload per visitor per version, and [PC-HTML-VERSION] #2 already required both bumps — but the obligation is now real on every page rather than one, which is why the rule was amended at the point of the bump rather than only in #3
+- **`Sections: 99/100`** — 98 non-exempt after excluding the one section dated today, so no repo rotation was due. The **page** rotation that did fire was Profiler's, which crossed its cap of 50 when yesterday's sections stopped being exempt
 
 ## [v05.32r] — 2026-09-09 10:07:11 PM EST
 

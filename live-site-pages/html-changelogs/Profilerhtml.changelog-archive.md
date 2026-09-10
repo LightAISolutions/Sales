@@ -251,3 +251,48 @@ Developed by: LightAISolutions
 - Export to Word (downloads a .doc file) or PDF (opens the print dialog — choose "Save as PDF")
 
 Developed by: LightAISolutions
+
+## [v01.41w] — 2026-08-22 10:57:17 PM EST — v02.90r — [`b53b9ea`](https://github.com/LightAISolutions/Sales/commit/b53b9ea)
+
+### Changed
+- Technical Annex rebuilt in a clearer format across every company dossier. Long run-on spec lines are now separated into individual attributes, each with its own name, and grouped under category headings such as Power, Electrical and Design — so a specific figure can be found by heading instead of by reading the whole block
+- Every product table in a dossier now shares the same column alignment, and the same format carries through to exported documents
+- Spec wording is unchanged — the figures read exactly as they did before; only the grouping and labelling are new
+
+## [v01.40w] — 2026-08-22 10:24:05 PM EST — v02.89r — [`a9182c8`](https://github.com/LightAISolutions/Sales/commit/a9182c8)
+
+### Fixed
+- Technical Annex sections that appeared as headings with empty rows now show their content. Around two thirds of dossiers were affected; the same content was also missing from exported documents, which are fixed with them
+- A dossier with no technical detail to show now omits the Technical Annex entirely instead of printing an empty heading
+- Reading progress in Industry Guidance is now kept separately for each signed-in account, so signing a second account into the same browser starts it with a clean module instead of inheriting the first account's ticked sections. Progress recorded before this change is cleared once, since there is no record of which account earned it
+
+## [v01.39w] — 2026-08-22 08:01:32 PM EST — v02.88r — [`9660334`](https://github.com/LightAISolutions/Sales/commit/9660334)
+
+### Changed
+- The app now tailors what it shows to each signed-in account's access level. Administrators continue to see every feature; other access levels see a reduced set, with anything they are not entitled to hidden rather than shown and refused
+- Access levels can be previewed from the address bar (add `?as=viewer` to the page URL) to check how the app looks to another level. Previewing can only ever show less than the account already has, never more
+
+## [v01.38w] — 2026-08-22 07:05:31 PM EST — v02.86r — [`19ac4d3`](https://github.com/LightAISolutions/Sales/commit/19ac4d3)
+
+### Added
+- New Industry Guidance area for administrators — a reading-room button in the page header opens a library of interactive study modules with section navigation, reading-progress tracking, timelines, comparison tables, flashcards, self-tests and a hoverable glossary
+
+## [v01.37w] — 2026-08-22 04:39:06 AM EST — v02.81r — [`3443ee3`](https://github.com/LightAISolutions/Sales/commit/3443ee3)
+
+### Added
+- Executive headshots now appear on 40 more leadership entries across 17 company dossiers, with photo credits shown where a photo requires attribution
+
+## [v01.36w] — 2026-08-22 03:25:08 AM EST — v02.80r — [`c4935d7`](https://github.com/LightAISolutions/Sales/commit/c4935d7)
+
+### Fixed
+- Key Judgments now display correctly on every dossier — seven company profiles (and their archived versions) previously showed their analytical judgments as unreadable placeholders or appeared to have none
+
+## [v01.35w] — 2026-08-22 03:15:24 AM EST — v02.79r — [`b6be1cd`](https://github.com/LightAISolutions/Sales/commit/b6be1cd)
+
+### Added
+- Dossiers are now organized into labeled tabs (Overview, Products, Developments, Key Judgments, Leadership, Financials, Sources) with a pinned tab bar — no more scrolling one long page to find a section
+- Tab views are shareable: the page address updates as you switch tabs, so a saved link opens directly on that tab
+- Exported documents now open with a cover page and a hyperlinked table of contents, and every section starts on its own page; Word exports can fill in real page numbers via "Update Field"
+
+### Fixed
+- Company overviews now display as properly spaced paragraphs on every dossier (one dossier previously ran its opening sections together)
