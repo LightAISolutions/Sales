@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 156" width="740" height="156" font-family="Arial,Helvetica,sans-serif">
+  <defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6d6758"/></marker></defs>
+  <!-- ladder rungs -->
+  <g font-size="8.5" fill="#23211c">
+    <rect x="20" y="30" width="130" height="40" rx="4" fill="#f4f8fb" stroke="#0b62a4"/><text x="85" y="47" text-anchor="middle" font-weight="bold">Transmission</text><text x="85" y="60" text-anchor="middle" fill="#6d6758">69–345 kV</text>
+    <rect x="170" y="30" width="130" height="40" rx="4" fill="#f4f8fb" stroke="#0b62a4"/><text x="235" y="47" text-anchor="middle" font-weight="bold">Campus substation</text><text x="235" y="60" text-anchor="middle" fill="#6d6758">HV → 34.5 / 13.8 kV</text>
+    <rect x="320" y="30" width="130" height="40" rx="4" fill="#f4f8fb" stroke="#0b62a4"/><text x="385" y="47" text-anchor="middle" font-weight="bold">MV distribution</text><text x="385" y="60" text-anchor="middle" fill="#6d6758">34.5 · 24.9 · 13.8 · 12.47 kV</text>
+    <rect x="470" y="30" width="130" height="40" rx="4" fill="#fbf3ea" stroke="#c2622a"/><text x="535" y="47" text-anchor="middle" font-weight="bold">Unit substation</text><text x="535" y="60" text-anchor="middle" fill="#6d6758">MV → 480 V (today)</text>
+    <rect x="620" y="30" width="110" height="40" rx="4" fill="#fbf3ea" stroke="#c2622a"/><text x="675" y="47" text-anchor="middle" font-weight="bold">Hall / rack</text><text x="675" y="60" text-anchor="middle" fill="#6d6758">415 V AC → 54 V</text>
+  </g>
+  <g stroke="#6d6758" stroke-width="1.2" marker-end="url(#ar4)"><line x1="150" y1="50" x2="170" y2="50"/><line x1="300" y1="50" x2="320" y2="50"/><line x1="450" y1="50" x2="470" y2="50"/><line x1="600" y1="50" x2="620" y2="50"/></g>
+  <!-- SST insertion point -->
+  <path d="M385 70 v30" stroke="#0b62a4" stroke-width="2" marker-end="url(#ar4)"/>
+  <rect x="300" y="100" width="170" height="44" rx="4" fill="#fff" stroke="#0b62a4" stroke-width="2"/>
+  <text x="385" y="118" text-anchor="middle" font-size="9" font-weight="bold" fill="#08496f">SST slot</text>
+  <text x="385" y="131" text-anchor="middle" font-size="8" fill="#6d6758">replaces unit substation + UPS + PDU</text>
+  <text x="385" y="141" text-anchor="middle" font-size="8" fill="#0b62a4">→ 800 V DC busway → hall</text>
+</svg>
+<!-- Developed by: LightAISolutions -->

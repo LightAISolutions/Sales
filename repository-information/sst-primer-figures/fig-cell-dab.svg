@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 260" width="740" height="260" font-family="Arial,Helvetica,sans-serif">
+  <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6d6758"/></marker></defs>
+  <text x="20" y="22" font-size="11" font-weight="bold" fill="#08496f">ONE CELL, UNROLLED — what each of the N series cells contains</text>
+  <!-- AC side terminals -->
+  <text x="20" y="150" font-size="9" fill="#6d6758">cell AC</text><text x="20" y="162" font-size="9" fill="#6d6758">terminals</text>
+  <line x1="20" y1="120" x2="70" y2="120" stroke="#6d6758" stroke-width="1.5"/><line x1="20" y1="190" x2="70" y2="190" stroke="#6d6758" stroke-width="1.5"/>
+  <text x="20" y="112" font-size="7.5" fill="#6d6758">(to cell above)</text><text x="20" y="204" font-size="7.5" fill="#6d6758">(to cell below)</text>
+  <!-- H-bridge 1 -->
+  <rect x="70" y="80" width="120" height="150" rx="4" fill="#fff" stroke="#0b62a4" stroke-width="1.4"/>
+  <text x="130" y="97" text-anchor="middle" font-size="9" font-weight="bold" fill="#08496f">AFE H-bridge</text>
+  <g stroke="#23211c" stroke-width="1.2" fill="none">
+    <path d="M100 108 v18 M100 138 v18 M160 108 v18 M160 138 v18"/>
+    <path d="M94 126 h12 M94 156 h12 M154 126 h12 M154 156 h12"/>
+    <path d="M100 126 l6 12 h-12 z M100 156 l6 12 h-12 z M160 126 l6 12 h-12 z M160 156 l6 12 h-12 z"/>
+    <path d="M100 106 h60 M100 170 h60 M100 138 h-30 M160 138 h-14"/>
+  </g>
+  <text x="130" y="215" text-anchor="middle" font-size="7.5" fill="#6d6758">4 × SiC MOSFET, 1.7–3.3 kV</text>
+  <text x="130" y="226" text-anchor="middle" font-size="7.5" fill="#6d6758">PWM at 1–5 kHz per cell</text>
+  <!-- DC link cap -->
+  <line x1="190" y1="120" x2="230" y2="120" stroke="#6d6758" stroke-width="1.5"/><line x1="190" y1="190" x2="230" y2="190" stroke="#6d6758" stroke-width="1.5"/>
+  <g stroke="#23211c" stroke-width="2"><line x1="204" y1="150" x2="224" y2="150"/><line x1="204" y1="160" x2="224" y2="160"/></g>
+  <line x1="214" y1="120" x2="214" y2="150" stroke="#23211c" stroke-width="1.2"/><line x1="214" y1="160" x2="214" y2="190" stroke="#23211c" stroke-width="1.2"/>
+  <text x="214" y="240" text-anchor="middle" font-size="7.5" fill="#6d6758">cell DC link</text><text x="214" y="251" text-anchor="middle" font-size="7.5" fill="#6d6758">~0.9–2 kV</text>
+  <!-- DAB primary -->
+  <rect x="230" y="80" width="110" height="150" rx="4" fill="#fff" stroke="#0b62a4" stroke-width="1.4"/>
+  <text x="285" y="97" text-anchor="middle" font-size="9" font-weight="bold" fill="#08496f">DAB primary</text>
+  <g stroke="#23211c" stroke-width="1.2" fill="none">
+    <path d="M258 108 v18 M258 138 v18 M312 108 v18 M312 138 v18 M252 126 h12 M252 156 h12 M306 126 h12 M306 156 h12"/>
+    <path d="M258 126 l6 12 h-12 z M258 156 l6 12 h-12 z M312 126 l6 12 h-12 z M312 156 l6 12 h-12 z M258 106 h54 M258 170 h54 M258 138 h-6 M312 138 h-12"/>
+  </g>
+  <text x="285" y="215" text-anchor="middle" font-size="7.5" fill="#6d6758">square-wave drive</text><text x="285" y="226" text-anchor="middle" font-size="7.5" fill="#6d6758">5–50 kHz</text>
+  <!-- MFT -->
+  <g stroke="#c2622a" stroke-width="2" fill="none">
+    <path d="M372 118 q10 8 0 16 q10 8 0 16 q10 8 0 16 M408 118 q-10 8 0 16 q-10 8 0 16 q-10 8 0 16 M386 112 v60 M394 112 v60"/>
+  </g>
+  <line x1="340" y1="138" x2="372" y2="138" stroke="#6d6758" stroke-width="1.5"/><line x1="408" y1="138" x2="440" y2="138" stroke="#6d6758" stroke-width="1.5"/>
+  <text x="390" y="100" text-anchor="middle" font-size="9" font-weight="bold" fill="#8a4318">MFT</text>
+  <text x="390" y="200" text-anchor="middle" font-size="7.5" fill="#6d6758">nanocrystalline or</text><text x="390" y="211" text-anchor="middle" font-size="7.5" fill="#6d6758">ferrite core, dry or</text><text x="390" y="222" text-anchor="middle" font-size="7.5" fill="#6d6758">oil/liquid-cooled;</text><text x="390" y="233" text-anchor="middle" font-size="7.5" fill="#6d6758">MV insulation on primary</text>
+  <!-- DAB secondary -->
+  <rect x="440" y="80" width="110" height="150" rx="4" fill="#fff" stroke="#0b62a4" stroke-width="1.4"/>
+  <text x="495" y="97" text-anchor="middle" font-size="9" font-weight="bold" fill="#08496f">DAB secondary</text>
+  <g stroke="#23211c" stroke-width="1.2" fill="none">
+    <path d="M468 108 v18 M468 138 v18 M522 108 v18 M522 138 v18 M462 126 h12 M462 156 h12 M516 126 h12 M516 156 h12"/>
+    <path d="M468 126 l6 12 h-12 z M468 156 l6 12 h-12 z M522 126 l6 12 h-12 z M522 156 l6 12 h-12 z M468 106 h54 M468 170 h54 M468 138 h-6 M522 138 h-12"/>
+  </g>
+  <text x="495" y="215" text-anchor="middle" font-size="7.5" fill="#6d6758">1.2 kV SiC, phase-shift</text><text x="495" y="226" text-anchor="middle" font-size="7.5" fill="#6d6758">controls power flow</text>
+  <!-- output -->
+  <line x1="550" y1="120" x2="600" y2="120" stroke="#0b62a4" stroke-width="2.5" marker-end="url(#ar2)"/><line x1="550" y1="190" x2="600" y2="190" stroke="#0b62a4" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <text x="606" y="118" font-size="9" font-weight="bold" fill="#0b62a4">800 V DC</text><text x="606" y="194" font-size="9" font-weight="bold" fill="#0b62a4">RTN</text>
+  <text x="606" y="132" font-size="7.5" fill="#6d6758">(NVIDIA: unipolar; OCP: ±400 V)</text>
+  <text x="606" y="150" font-size="7.5" fill="#6d6758">paralleled with</text><text x="606" y="161" font-size="7.5" fill="#6d6758">every other cell</text><text x="606" y="172" font-size="7.5" fill="#6d6758">→ hall busway</text>
+</svg>
+<!-- Developed by: LightAISolutions -->

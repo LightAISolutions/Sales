@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 318" width="740" height="318" font-family="Arial,Helvetica,sans-serif">
+  <defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6d6758"/></marker></defs>
+  <!-- row labels -->
+  <g font-size="9.5" font-weight="bold" fill="#23211c">
+    <text x="12" y="62">A · Today</text><text x="12" y="76" font-size="8" font-weight="normal" fill="#6d6758">415/480 V AC hall</text>
+    <text x="12" y="172">B · 2027</text><text x="12" y="186" font-size="8" font-weight="normal" fill="#6d6758">800 V DC via TRU</text>
+    <text x="12" y="282">C · ~2029+</text><text x="12" y="296" font-size="8" font-weight="normal" fill="#6d6758">800 V DC via SST</text>
+  </g>
+  <!-- row A boxes -->
+  <g stroke="#6d6758" stroke-width="1.2" fill="#fff">
+    <rect x="112" y="40" width="82" height="46" rx="4"/><rect x="208" y="40" width="82" height="46" rx="4"/><rect x="304" y="40" width="82" height="46" rx="4"/><rect x="400" y="40" width="82" height="46" rx="4"/><rect x="496" y="40" width="82" height="46" rx="4"/><rect x="592" y="40" width="82" height="46" rx="4"/>
+  </g>
+  <g font-size="7.8" fill="#23211c" text-anchor="middle">
+    <text x="153" y="58">MV 60 Hz</text><text x="153" y="69">transformer</text><text x="153" y="80" fill="#6d6758">13.8→0.48 kV</text>
+    <text x="249" y="58">UPS</text><text x="249" y="69">AC-DC-AC</text><text x="249" y="80" fill="#6d6758">+ battery</text>
+    <text x="345" y="58">PDU /</text><text x="345" y="69">RPP</text><text x="345" y="80" fill="#6d6758">480→415 V</text>
+    <text x="441" y="58">Rack PSU</text><text x="441" y="69">AC-DC</text><text x="441" y="80" fill="#6d6758">415 V→54 V</text>
+    <text x="537" y="58">Busbar</text><text x="537" y="69">54 V DC</text><text x="537" y="80" fill="#6d6758">up to 18 kA/MW</text>
+    <text x="633" y="58">Board</text><text x="633" y="69">DC-DC</text><text x="633" y="80" fill="#6d6758">54 V→0.8 V</text>
+  </g>
+  <text x="700" y="66" font-size="8" fill="#b03a34" font-weight="bold">6 stages</text>
+  <!-- row B -->
+  <g stroke="#7a3f7d" stroke-width="1.2" fill="#fff">
+    <rect x="112" y="150" width="82" height="46" rx="4"/><rect x="208" y="150" width="82" height="46" rx="4"/><rect x="304" y="150" width="82" height="46" rx="4" stroke-dasharray="3 2"/><rect x="496" y="150" width="82" height="46" rx="4"/><rect x="592" y="150" width="82" height="46" rx="4"/>
+  </g>
+  <g font-size="7.8" fill="#23211c" text-anchor="middle">
+    <text x="153" y="168">MV 60 Hz</text><text x="153" y="179">transformer</text><text x="153" y="190" fill="#6d6758">13.8 kV→LV</text>
+    <text x="249" y="168">Rectifier</text><text x="249" y="179">(12/24-pulse or AFE)</text><text x="249" y="190" fill="#6d6758">→ 800 V DC</text>
+    <text x="345" y="168">Sidecar</text><text x="345" y="179">BBU / DC-DC</text><text x="345" y="190" fill="#6d6758">energy storage</text>
+    <text x="441" y="172" fill="#6d6758">800 V DC busway</text><text x="441" y="184" fill="#6d6758">≈1.25 kA/MW</text>
+    <text x="537" y="168">Rack DC-DC</text><text x="537" y="179">800 V→54 V</text><text x="537" y="190" fill="#6d6758">or direct to board</text>
+    <text x="633" y="168">Board</text><text x="633" y="179">DC-DC</text><text x="633" y="190" fill="#6d6758">→ 0.8 V</text>
+  </g>
+  <rect x="112" y="150" width="178" height="46" rx="4" fill="none" stroke="#7a3f7d" stroke-width="2"/>
+  <text x="201" y="212" text-anchor="middle" font-size="8" fill="#7a3f7d" font-weight="bold">= "TRU" (transformer-rectifier unit)</text>
+  <text x="700" y="176" font-size="8" fill="#7a3f7d" font-weight="bold">4 stages</text>
+  <!-- row C -->
+  <g stroke="#0b62a4" stroke-width="1.2" fill="#fff">
+    <rect x="112" y="260" width="178" height="46" rx="4" stroke-width="2"/><rect x="304" y="260" width="82" height="46" rx="4" stroke-dasharray="3 2"/><rect x="496" y="260" width="82" height="46" rx="4"/><rect x="592" y="260" width="82" height="46" rx="4"/>
+  </g>
+  <g font-size="7.8" fill="#23211c" text-anchor="middle">
+    <text x="201" y="278" font-weight="bold">Solid-state transformer</text><text x="201" y="289">MV AC → 800 V DC in one box</text><text x="201" y="300" fill="#6d6758">13.8 / 34.5 kV in · isolation · regulation</text>
+    <text x="345" y="278">Sidecar</text><text x="345" y="289">BBU / DC-DC</text><text x="345" y="300" fill="#6d6758">or DC-coupled BESS</text>
+    <text x="441" y="282" fill="#6d6758">800 V DC busway</text><text x="441" y="294" fill="#6d6758">≈1.25 kA/MW</text>
+    <text x="537" y="278">Rack DC-DC</text><text x="537" y="289">800 V→54 V</text><text x="537" y="300" fill="#6d6758">or direct to board</text>
+    <text x="633" y="278">Board</text><text x="633" y="289">DC-DC</text><text x="633" y="300" fill="#6d6758">→ 0.8 V</text>
+  </g>
+  <text x="700" y="286" font-size="8" fill="#0b62a4" font-weight="bold">3 stages</text>
+  <!-- arrows -->
+  <g stroke="#6d6758" stroke-width="1.2" marker-end="url(#ar3)">
+    <line x1="194" y1="63" x2="208" y2="63"/><line x1="290" y1="63" x2="304" y2="63"/><line x1="386" y1="63" x2="400" y2="63"/><line x1="482" y1="63" x2="496" y2="63"/><line x1="578" y1="63" x2="592" y2="63"/>
+    <line x1="194" y1="173" x2="208" y2="173"/><line x1="290" y1="173" x2="304" y2="173"/><line x1="386" y1="173" x2="496" y2="173"/><line x1="578" y1="173" x2="592" y2="173"/>
+    <line x1="290" y1="283" x2="304" y2="283"/><line x1="386" y1="283" x2="496" y2="283"/><line x1="578" y1="283" x2="592" y2="283"/>
+  </g>
+</svg>
+<!-- Developed by: LightAISolutions -->
