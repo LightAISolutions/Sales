@@ -6,6 +6,48 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-12 05:16:08 PM EST
+**Repo version:** v05.36r — **one push commit** on `claude/festive-cori-b9nt85` (v05.35r → v05.36r), merged; this remember-session commit follows on the same branch after a rebase onto the merged `main`
+**Branch:** `claude/festive-cori-b9nt85`
+**Model:** Fable 5.1 as the orchestrator; the four research subagents ran on **Opus 5** after the first four runs on Fable 5.1 terminated on the usage cap (the session spanned 2026-09-11 evening to 2026-09-12 afternoon)
+
+### What was done
+
+1. **v05.36r — the Solid-State Transformers educational primer.** A 38-page PDF (`repository-information/SOLID-STATE-TRANSFORMERS-PRIMER.pdf`) with 10 chapters, 14 figures, 9 tables and 133 numbered sources tagged FIRST-PARTY / SECONDARY / REPO, plus its HTML source (`sst-primer-print.html`), a figures directory (`sst-primer-figures/`, 4 hand-drawn SVG schematics + 10 matplotlib charts) and two build scripts (`scripts/build-sst-primer-figures.py`, `scripts/build-sst-primer-pdf.mjs`). Delivered to the developer as a downloadable file and committed
+2. **CHANGELOG rotation fired on schedule** — the 2026-09-03 date group (**13 sections, v04.35r–v04.47r**) moved to the archive with SHA enrichment (13 of 13 resolved after `git fetch --unshallow`). Active file now **`Sections: 89/100`**. A first pass caught only 12 of the 13 because the grep pattern skipped v04.40r–v04.45r's neighbours; v04.47r was moved in a second pass before the commit
+3. **Answered the model question for the Heron Power dossier** (research response, nothing committed): **Fable 5.1 Medium**, falling back to **Opus 5 xhigh** if the weekly Fable allowance has not reset — not High. Reasoning is §2 of `PROFILER-COVERAGE-PLAN.md`: effort buys reading depth, not care; Heron has no long filings to read; the budget is tight (yesterday's Fable agents died on the cap); the primer already holds the six first-party Heron documents
+
+### Where we left off
+
+The v05.36r push merged (auto-merge run landed `bda21bb Update last-processed-commit.sha to 83fcdda`). This remember-session commit is the only thing after it. Nothing is in flight. **Heron Power still has no Profiler dossier** and no §8 ledger row — the primer covers it from first-party sources only.
+
+### Key decisions and findings
+
+- **The primer pins five findings the corpus previously carried secondhand:** (1) NVIDIA's Oct 2025 white paper specifies **single-ended 800 V DC** (POS/RTN/PE) and explicitly rejects OCP's ±400 V bipolar bus for lack of three-pole DC breakers — the rack accepts either; (2) NVIDIA rates the **MV rectifier and the SST at the same 98.5%+**, so "up to 5% efficiency / 45% copper" is an architecture-vs-legacy-AC claim from the Oct 2025 blog, not an SST-vs-TRU claim; (3) the **Aug 2026 execution paper held in the repo** (`industry-guidance/sources/nvidia-800vdc-white-paper-2026-08.pdf`) names **three TRU families for the first Option C block, including Zhonhen's Panama Architecture (p. 22)**, and attaches "toward 2029" specifically to the next-generation 34.5 kV-direct SST — confirming the competitive report's framing first-hand; (4) the **GE Vernova dossier's hyperscaler commitment to buy 1,000 SSTs from 2027** if spec is met is the tier's most important commercial datapoint; (5) the **US gating item is the DC arc-flash model** — NFPA FPRF's Phase 1 is focused on 800 Vdc data centers, sponsored by Siemens/Schneider/Eaton/ABB/Mersen, "around three years" — a ~2029 deliverable against a 2027 Kyber ship date
+- **Two rendering rules for the Chromium PDF pipeline, now commented in the script and stylesheet:** page margins must be declared in the stylesheet's `@page` rule, not passed to `Page.printToPDF` — with `preferCSSPageSize:true`, passing both made a page-spanning table's repeated `<thead>` overprint the running header; and long prose belongs in `<figcaption>`, not SVG `<text>` (a false alarm worth remembering: SVG text appeared to vanish in headless screenshots only because `--window-size` includes ~80 px of browser chrome that crops the viewport — the PDF renderer was never affected)
+- **Research provenance discipline:** four aggregator domains the agents judged AI-generated (`mgrid.org`, `enkiai.com`, `gridreadiness.com`, `hiitio.com`) are cited only twice, both flagged secondary and corroborated; domains that refuse automated retrieval (opencompute.org, nerc.com HTML, ferc.gov, se.com, eaton.com press) are named in the Sources chapter
+- **Developer branding applied to generated SVGs:** the figure script appends `<!-- Developed by: LightAISolutions -->` after each chart's root element; the PDF is binary and carries none, matching the existing AIDC PDFs
+- **Heron Power model choice — Fable 5.1 Medium** (see item 3 above). By §2's letter a private thin-record subject is a High subject, but §2's own evidence (Xcel head-to-head: Opus's only clear edge was 10-K reading depth; F5: Medium caught all three premises) and the budget make Medium the better call; Opus 5 xhigh is the §2-sanctioned fallback when the Fable cap binds, recorded in the §8 Model column as B2 did
+
+### Active context
+
+- **Repo version** `v05.36r`; **CHANGELOG at 89/100** — no rotation due until it climbs back to 100 non-exempt. The clone was **unshallowed this session** (1,104 commits), so SHA enrichment resolves without a deepen step for the rest of the session only; the next session starts shallow again
+- **S3: still 7 of 10** — untouched this session. Remaining: **V2 · `E1b` (Habitat Energy · Gridmatic)**, **V3 · `E5` (Grid United · Pattern Energy)**, **V4 · `E4b+E6b` (Mitra Chem · Cornex)**, all Fable 5.1 High per the plan; V2 is the sole remaining landscape gate
+- **Primer follow-ups not yet actioned:** the 2026-09-08 `aidc-power-conversion` report cites StorageReview for Option A/B/C — it could be re-pointed at the repo's own Aug 2026 NVIDIA paper on its next edition; the primer's SolarEdge/Infineon SST entry rests on an aggregator and would be better anchored on a SolarEdge press release
+- **Page versions (unchanged this session):** Profiler `v01.86w`, Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
+- **Still awaiting developer approval (§10.5 item D, offered seven sessions running):** adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit directive 2026-08-30
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Create the **Heron Power dossier and study guide on Fable 5.1 Medium** as a fresh session (Opus 5 xhigh only if the Fable allowance has not reset, recorded as a §2 substitution): it is the only startup on NVIDIA's facility-tier 800 VDC roster, the US-relevant candidate for the first 34.5 kV SST energisation, absent from the corpus that both the `aidc-power-conversion` report and the new primer draw on, and the primer's chapter 7.3 plus sources 22 and 97–101 already hold its six first-party documents. Add a new §8 ledger row (no Phase E row exists for it) and make the 4.2 MW (blueprint) versus 5 MW (Aug 2026 factory release) rating discrepancy the first premise check.
+
+**To continue:** paste the §7 template with `Fable 5.1 Medium as a fresh session: Heron Power`
+
+## Previous Sessions
+
+### Session — 2026-09-10 07:12:18 AM EST (v05.35r)
+
 **Date:** 2026-09-10 07:12:18 AM EST
 **Repo version:** v05.35r — **six push commits** on `claude/adoring-euler-3a855i` (v05.30r → v05.35r), each merged before the next
 **Branch:** `claude/adoring-euler-3a855i`
@@ -47,40 +89,5 @@ All six pushes merged. The workflow step was **verified on real infrastructure**
 
 **To continue:** type `run S3 V2`
 
-## Previous Sessions
-
-### Session — 2026-09-09 07:18:49 AM EST (v05.29r)
-
-**Date:** 2026-09-09 07:18:49 AM EST
-**Repo version:** v05.29r
-**Branch:** `claude/*` (P6 session)
-**Model:** Opus 5 xhigh — **S3 P6 · group `E6a` (CALB · Great Power)**
-**Reconstructed:** Auto-recovered from CHANGELOG (the P6 session did not save context; reconstructed 2026-09-09 06:11 PM EST during the v05.30r budget-review session)
-
-### What was done
-
-1. **P6 shipped (v05.29r) and the public lane is finished, six of six.** `calb` (60 sources, 57% first-party) and `great-power` (57 sources, 61%), each with a 13-section schema-v2 study guide and a full lesson plan. Sixteen concepts registered (1,388 → 1,404), inserted alphabetically per the P5 correction
-2. **The role was genuinely undecided and the evidence decided it: both `challenger`.** SNE Research H1-2026 puts CALB 5th (31.5 GWh / 6.8%) and Great Power 10th (20.5 GWh / 4.4%) of a 461.3 GWh market. Incumbency was not arguable — the bar is top-three plus leader language and `eve-energy` is a challenger at 2nd. `cells-and-chemistry` went 18 members / 4 inc / 8 cha / 6 adj → **20 / 4 / 10 / 6**; both also took `storage-integrators-and-containers` · adjacent
-3. **The row's own claim was wrong: P6 does NOT complete the SNE top twelve.** Coverage went nine of twelve → **eleven**. The twelfth is **`cornex` at 7th on 30.2 GWh — ranked above both companies P6 landed — and it is V4's**
-4. **A new reusable primary source.** Great Power's HK application is **definitively `Lapsed`** on HKEX's own daily-regenerated consolidated listing-application index (`sehkconsolidatedindex.xlsx`), not on the 404 that suggested it — a control test showed Deye's proof 404s identically. Prefer the index over probing document URLs
-
-### Where we left off
-
-All P6 work committed, pushed and merged. **A separate v05.30r session then reviewed S3 against the developer's token budget** and added **§10.5** to `PROFILER-COVERAGE-PLAN.md` — see below.
-
-### Key decisions and findings
-
-- **S3 is seven of ten. The public lane is complete; V2, V3 and V4 remain and all three are Fable 5.1 High**
-- **The v05.25r reorder's budget premise has inverted.** It ran the public lane first because Fable was 96% consumed against **13%** of all-models. Sixteen hours later all-models is **95%** and Fable still 96%, so there is no cheap lane left. §10.5 measures a Phase E session at **~20 points of the weekly all-models allowance** (82 points across P3–P6) and concludes **no Phase E session fits in the ~5% remaining** — and that splitting V2 rescues neither the arithmetic nor the landscape gate
-- **`software-and-optimization` remains the only held landscape, and V2 is the sole gate on it.** V3 and V4 are pure deepening
-- **Four cheap non-session items are queued in §10.5**, in order: (A) rotate the CHANGELOG pre-emptively — it buys Fable budget by moving rotation out of a Fable session; (B) the literal-asterisk render bug, now measured at **60 affected profile files** rather than the 14 P5 recorded, fixable at `Profiler.html:3848`/`:5992`; (C) the `eve-energy` / `hithium` typing tension, registry-only; (D) `aka[]` in the roster haystack at `Profiler.html:2202` — **needs developer approval**, narrowed to names-only by directive on 2026-08-30
-- **CHANGELOG at 96/100 after v05.30r** — rotation due about four pushes out
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run the **cheap consolidation pass — §10.5 items A, B and C** in one session: rotate the CHANGELOG pre-emptively, fix the literal-asterisk render in `Profiler.html` (60 dossiers affected), and resolve the `eve-energy` / `hithium` typing tension in `profiler-segments.json`. It costs a fraction of a Phase E session, fits the remaining allowance, and item A directly buys back Fable budget for V2. Do **not** start V2 until the weekly allowance resets.
-
-**To continue:** type `run the S3 cheap consolidation pass`
 
 Developed by: LightAISolutions
