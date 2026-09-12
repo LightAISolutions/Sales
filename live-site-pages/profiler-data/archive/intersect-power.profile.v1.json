@@ -498,16 +498,6 @@
       "note": "Latitude Media describes the Crusoe–Google campus at Goodnight as Texas's first SB 6 co-location net-metering test case under the rules the PUCT adopted in March 2026 — the same regime Intersect's Google parks operate under.",
       "context": "Crusoe and Intersect are the two developers in this corpus building behind-the-meter campuses for Google in ERCOT. Latitude Media's April 2026 report on the Goodnight case explains the PUCT's 60-day review of net-metering arrangements for merchant generators registered before 1 September 2025 that co-locate with new load, and notes ERCOT has required transmission studies for co-location since 2022. Intersect does not appear in the docket; the link is the shared customer and the shared rule, not a stated commercial tie.",
       "source": "https://www.latitudemedia.com/news/how-a-crusoe-google-campus-became-texas-co-location-test-case/"
-    },
-    {
-      "slug": "heron-power",
-      "type": "supplier",
-      "note": "Chief executive Sheldon Kimber is quoted endorsing Heron Link in Heron Power's February 2026 Series B release; trade press names Intersect as one of Heron's two disclosed customers.",
-      "context": "Heron Power's 18 February 2026 Series B release carries a customer quote from Intersect's CEO, and Latitude Media (August 2026) names Intersect Power and Crusoe as the two customers Heron has disclosed. No order, product configuration (the 5 MW solar/storage inverter or the 4.2 MW 800 V DC data-center unit) or delivery date is public, and Intersect has announced nothing; Heron Link is pre-production with mass production slated for late 2027. Recorded one-sidedly from Heron's side as an announced engagement.",
-      "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
-      "status": "announced",
-      "since": "2026-02",
-      "via": "Heron Link"
     }
   ],
   "policyExposure": [
@@ -852,11 +842,6 @@
       "label": "Intersect — IPX Power launch (historical release copy)",
       "url": "https://www.intersect.com/historical-releases/ipx-power-launches-as-independent-power-producer-following-intersect-acquisition-by-google",
       "date": "2026-03-10"
-    },
-    {
-      "label": "GlobeNewswire — Heron Power raises $140 million Series B (Intersect Power CEO Sheldon Kimber quoted as a customer)",
-      "url": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
-      "date": "2026-02-18"
     },
     {
       "label": "Alphabet Form 10-K, FY2025 — agreement to acquire Intersect for USD 4.8 billion plus debt",
@@ -1290,6 +1275,6 @@
       "url": "https://www.intersect.com/team/john-k-martinez"
     }
   ],
-  "lastUpdated": "2026-09-12",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

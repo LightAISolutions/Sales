@@ -399,7 +399,7 @@
    "slug": "crusoe",
    "cadence": "quarterly",
    "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
-   "lastRefreshed": "2026-08-30",
+   "lastRefreshed": "2026-09-12",
    "watch": [
     "Campus/power contracts",
     "Funding/valuation",
@@ -913,7 +913,7 @@
    "slug": "intersect-power",
    "cadence": "quarterly",
    "source": "Google subsidiary since 10 March 2026 (acquisition announced 22 December 2025; USD 4.75bn cash plus debt; USD 5,868m in Alphabet's Q2 2026 10-Q). Company channels: intersect.com (news, portfolio pages, about — intersectpower.com redirects), Kimber's blog; parent channels: abc.xyz IR, blog.google, datacenters.google, Alphabet 10-Q/10-K acquisition notes; sellers: TPG, Greenbelt, CAI; the carved-out fleet reports as IPX Power (ipxpower.com). Campus facts come from Gray County minutes (The Pampa News, High Plains Observer), New Project Media and trade press; no FERC, ERCOT or PUCT filing names Intersect. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
-   "lastRefreshed": "2026-09-05",
+   "lastRefreshed": "2026-09-12",
    "watch": [
     "The first published data-centre MW for Quantum or Meitner (Google, Intersect, an ERCOT large-load report or a PUCT SB 6 net-metering filing) and Meitner Phase 1 dates against 'late 2028'",
     "Any Intersect entity in a PUCT co-location net-metering review, an ERCOT curtailment or large-load filing, or a FERC docket — which SB 6 path the parks take",

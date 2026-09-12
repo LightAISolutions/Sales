@@ -6,6 +6,79 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-12 06:17:31 PM EST
+**Repo version:** v05.38r — **two push commits** on `claude/focused-pascal-ks3o2e` (v05.37r Heron Power dossier + guide; v05.38r primer update, Crusoe/Intersect revisions, S3 evaluation, this remember-session), the first merged before the second was pushed
+**Branch:** `claude/focused-pascal-ks3o2e`
+**Model:** Fable 5.1 Medium as the orchestrator; the two research subagents inherited it (32 first-party + 58 third-party sources, ~19 minutes wall-clock, no cap hit — the weekly Fable allowance had reset)
+
+### What was done
+
+1. **v05.37r — Heron Power dossier (`heron-power`, profileVersion 1, 52 sources, 37% first-party) and study guide (13 sections) + eight-module lesson plan**, six new concepts (cascaded H-bridge, dual active bridge, medium-frequency transformer, transformer-rectifier unit, hall-edge block, overload), registry/calendar/segments entries (challenger on `power-conversion-and-rack-power-silicon`, adjacent on `in-hall-power`), graph rebuild, and a new §8 Phase E row **E8**. All six checkers clean; rendered in Playwright (sign-in wall bypassed in a scratch copy with `_e = ''` and the `analyst` role in localStorage — the repo page was untouched)
+2. **The first premise check resolved:** 4.2 MW is the 800 V DC data-center configuration (Blueprint ×3; product page "800V Power: 4.2MW", 45 °C) and 5 MW is the solar/storage DC-to-MV inverter configuration of the same platform (product page, 50 °C, 98.6%); the Aug/Sep 2026 releases use the round solar figure. No company document states both; none of nine outlets noticed
+3. **v05.38r — SST primer revised and the PDF rebuilt (38 pages)**: chapter 7.3 Heron entry, positioning-matrix row, judgment 8.1, five new sources [134]–[138] (the dossier is a REPO source), closing note cites corpus v05.37r. **Crusoe → v6 and Intersect Power → v2** each gained a one-sided `heron-power` supplier relationship (announced; LOI 2025-06 / CEO endorsement 2026-02) with its source; v5 and v1 archived; the `named-project-bess-attach` report's Crusoe pin re-verified at v6; README archive entries added (including the previously missing `crusoe.profile.v4.json`)
+4. **S3 evaluated** (§10.5 dated note added): **seven of ten unchanged**; V2 · E1b is the sole remaining gate; the Fable allowance has reset, so V2 runs next and alone; paste-in prompt handed to the developer (also below)
+
+### Where we left off
+
+Both pushes merged in order (the v05.37r auto-merge landed before v05.38r was pushed). Nothing in flight. Heron Power is fully in the corpus; the `aidc-power-conversion` report's next edition can now pin it and drop its primer-only framing.
+
+### Key decisions and findings
+
+- **Identity facts the plan and primer could not carry:** legal name Heron Power Electronics Company (Form D: "Heron Power Electronics Co", former name Accelerate Power Co., Delaware, 2024; the company's own legal pages say "Heron Power, Inc." — all in `aka[]`); HQ Scotts Valley (Santa Cruz County), not the Bay Area; factory 850 Jarvis Drive, Morgan Hill; USD 60M J.P. Morgan / TriplePoint credit facility + Kirkhorn board seat (2026-09-10); LG Energy Solution Vertech collaboration (June 2026); data centers ≈ one third of current business (TechCrunch)
+- **Environment:** `sec.gov`/`data.sec.gov` still 403, but **`efts.sec.gov` full-text search answers** and both Form D XMLs were retrieved through it — a route worth reusing for US private subjects; `www.globenewswire.com` fails at TCP level (Wayback mirrors, cite originals)
+- **Formatting rule re-learned the hard way:** `profiler-segments.json`, the refresh calendar, `archive-index.json` and some dossiers (e.g. `crusoe`) are written at `indent=1`; the registry and most dossiers at `indent=2`; always `ensure_ascii=False`; never re-sort the roster (it is append-ordered). A first pass produced 10,000-line diffs before this was caught — check `git diff --stat` before staging
+- **Primer chapter 7.3's "the two documents disagree" line was replaced**, not merely annotated, since the resolution is now first-party sourced
+- **Model call held:** Fable 5.1 Medium was sufficient for a thin-record private subject; the premise checks were prompt-driven, as §2 predicted
+
+### Active context
+
+- **Repo version** `v05.38r`; **CHANGELOG at 91/100** total, 11 dated 2026-09-12 and exempt → ~80 non-exempt; no rotation inside any Fable session
+- **S3: 7 of 10.** Remaining, in order: **V2 · `E1b` (Habitat Energy · Gridmatic)** — the sole landscape gate — then **V3 · `E5` (Grid United · Pattern Energy)**, then **V4 · `E4b+E6b` (Mitra Chem · Cornex)**; all Fable 5.1 High. Identity corrections for all six are already in their §8 rows (Habitat is Quinbrook-owned and for sale; Gridmatic HQ is Houston; Mitra Chem's legal name is Mitra Future Technologies, Inc.; Cornex is 楚能新能源, not 中比新能源)
+- **Page versions (unchanged):** Profiler `v01.86w`, Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
+- **Still awaiting developer approval (§10.5 item D):** `aka[]` in the `Profiler.html` roster search haystack (~line 2202); Heron added eight more aliases the roster cannot find
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **S3 V2 · E1b (Habitat Energy · Gridmatic) on Fable 5.1 High** as a fresh session — the only unfinished item that blocks a segment lesson (`software-and-optimization`); dossier + study guide for both in one push commit, segments assigned with a `basis` line each, both §8 rows rewritten, then V3 only if the Fable pool recovers enough for two.
+
+**To continue:** paste the V2 prompt below into a new Fable 5.1 High session (the same text was handed to the developer in the v05.38r response):
+
+```text
+Picking up from my last session, run Phase E of repository-information/PROFILER-COVERAGE-PLAN.md on
+Fable 5.1 High as a fresh session: S3 V2 · E1b — Habitat Energy, Gridmatic.
+READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §2, §7, §10.3–10.5 and the two
+E1b rows in §8 (both carry identity corrections from 2026-09-09 — Habitat Energy Limited is a Quinbrook
+Infrastructure Partners subsidiary under a live sale process; Gridmatic is private, HQ Houston, operating
+entities Gridmatic Rosa LLC and Gridmatic Equisetum LLC); .claude/rules/profiler-app.md (Profiler Command incl.
+step 1a identity verification and step 7 corpus reconciliation, Profiler Prep Command, Scheduled Refreshes);
+repository-information/PROFILER-SCHEMA.md; repository-information/PROFILER-STYLES.md (active style: intel-briefing).
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
+category supplier per the §8 rows) and study guide (schema v2) — then the registry sync, the graph build, the study
+validator, the relationships and crossrefs checkers, a calendar row each (Habitat: quarterly cadence with the
+Quinbrook sale as the first watch item; Gridmatic: quarterly), README tree entries, and flip both §8 rows.
+Then assign each company's segments and roles in live-site-pages/profiler-data/profiler-segments.json with a
+basis line per PROFILER-SCHEMA.md → Segments registry (the §8 Segment · role cell — software-and-optimization ·
+challenger for both — is a hypothesis: write what the dossier supports), and rewrite the §8 Phase E rows.
+THE §8 ROW IS A HYPOTHESIS, NOT A BRIEF: treat every claim in its `Why` cell as unverified, re-run step 1a on both
+identities (Habitat's sale may have signed or closed since 2026-09-09), and rewrite that cell plus the `Checked`
+column with what you actually found before you commit.
+SESSION NOTES: this is the sole remaining S3 landscape gate — landing both companies unblocks the
+software-and-optimization landscape for S2. Before Stage 2 research run python3 scripts/check-source-reachability.py
+and probe Companies House (find-and-update.company-information.service.gov.uk) for Habitat; sec.gov is blocked
+from this environment but efts.sec.gov full-text search answers for any Form D. One push commit; do not start V3 in
+this session. JSON formatting: profiler-segments.json and the refresh calendar are indent=1, the registry indent=2,
+always ensure_ascii=False, never re-sort the roster — check git diff --stat before staging.
+VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, check-profiler-relationships.py and
+check-profiler-crossrefs.py clean, the dossiers and guides render (Playwright; the sign-in wall can be bypassed in a
+scratch copy with `var _e = ''` and localStorage ov_note_role = 'analyst' — never edit the repo's Profiler.html for
+this), zero page errors. Normal Pre-Commit and Pre-Push checklists; push on a claude/* branch.
+```
+
+## Previous Sessions
+
+### Session — 2026-09-12 05:16:08 PM EST (v05.36r)
+
 **Date:** 2026-09-12 05:16:08 PM EST
 **Repo version:** v05.36r — **one push commit** on `claude/festive-cori-b9nt85` (v05.35r → v05.36r), merged; this remember-session commit follows on the same branch after a rebase onto the merged `main`
 **Branch:** `claude/festive-cori-b9nt85`
@@ -43,51 +116,5 @@ The v05.36r push merged (auto-merge run landed `bda21bb Update last-processed-co
 - Create the **Heron Power dossier and study guide on Fable 5.1 Medium** as a fresh session (Opus 5 xhigh only if the Fable allowance has not reset, recorded as a §2 substitution): it is the only startup on NVIDIA's facility-tier 800 VDC roster, the US-relevant candidate for the first 34.5 kV SST energisation, absent from the corpus that both the `aidc-power-conversion` report and the new primer draw on, and the primer's chapter 7.3 plus sources 22 and 97–101 already hold its six first-party documents. Add a new §8 ledger row (no Phase E row exists for it) and make the 4.2 MW (blueprint) versus 5 MW (Aug 2026 factory release) rating discrepancy the first premise check.
 
 **To continue:** paste the §7 template with `Fable 5.1 Medium as a fresh session: Heron Power`
-
-## Previous Sessions
-
-### Session — 2026-09-10 07:12:18 AM EST (v05.35r)
-
-**Date:** 2026-09-10 07:12:18 AM EST
-**Repo version:** v05.35r — **six push commits** on `claude/adoring-euler-3a855i` (v05.30r → v05.35r), each merged before the next
-**Branch:** `claude/adoring-euler-3a855i`
-**Model:** Opus 5 — S3 budget review, then a chain of fixes that grew out of verifying the first one
-
-### What was done
-
-1. **v05.30r — the S3 action plan was evaluated against the developer's token budget, and `PROFILER-COVERAGE-PLAN.md` §10.5 was added.** S3 stands at **7 of 10**: the public lane is finished (P1–P6), the private lane is 1 of 4 (V1), and **V2, V3 and V4 are all Fable 5.1 High**
-2. **v05.31r — dossier `**bold**` markers rendered as literal asterisks; fixed at the chokepoint.** `ovEl` now routes through `ovSetText` (real `<strong>` runs) and `ovPlain` strips markers from prose mined for relationship evidence
-3. **v05.32r — the bold fix appeared not to work, and the cause was a deeper bug.** The page was cached; the version pill fetches `no-store` while the HTML document does not. Added a **first-load staleness check** to `Profiler.html`
-4. **v05.33r — promoted to both templates and all ten pages.** The templates never had the cache-busting reload *either*, so this promoted **two dependent fixes**. Also rotated `Profilerhtml.changelog.md`
-5. **v05.34r — audited the README tree's version displays.** Five of eight GAS displays were stale, each by exactly one bump. Added `scripts/check-readme-tree.py` and turned [PC-README-TREE] #7's instruction into a verification step
-6. **v05.35r — wired the checker into `auto-merge-claude.yml`** as a post-merge auto-fix, and verified it on run #537
-
-### Where we left off
-
-All six pushes merged. The workflow step was **verified on real infrastructure** (run #537, success, step 17 of 19, ~0.23 s, `Delete branch` and `Sweep` ran after it). Nothing is in flight.
-
-### Key decisions and findings
-
-- **S3's blocker is budget, not arithmetic, and §10.5 records the measurement.** A Phase E session costs **~20 points of the weekly all-models allowance** (82 points across P3–P6 in sixteen hours). At **95% all-models / 96% Fable** the remainder was about a quarter of one session, and Phase E is **single-push-commit**, so a session that runs dry leaves nothing committed. **Do not start V2, V3 or V4 on a near-exhausted allowance.** Splitting V2 rescues neither the arithmetic nor the landscape gate — §10.3 holds the software landscape for the pure-play optimizers *plural*
-- **All three §10.5 consolidation items were misdescribed when written, and each failed differently against the primary source.** **A** (pre-emptive CHANGELOG rotation) was **withdrawn** — it compared the raw section count against a threshold the spec tests on a **non-exempt** basis, the exact reading reconciled out at v05.01r for firing rotations early. **B** was real but **~120× understated** — recorded against `ecosystemRole` (4 occurrences, last of fourteen fields) when the true surface was **483 across 60 dossiers**, led by `strategyRead[]` at 379. **C** was **not a defect** — the EVE/HiThium inversion is an artifact of one house's half-year table against another's full-year one across a 4% gap; neither role changed. **The common cause: each had been written from a summary of the evidence rather than the evidence**
-- **The `<meta build-version>` tag is now load-bearing on every page.** It was documented in three places as informational and never read; all three were amended. A page reads its own stamp on the first poll and reloads once when the version file is ahead. **Bumping `html.version.txt` without the meta tag now costs every visitor one wasted reload.** Two guards are mandatory and present: a single-attempt `sessionStorage` loop guard (the two values are bumped by hand and *can* drift) and a null-safe read
-- **The workflow step is deliberately a post-merge auto-fix, not a pre-merge gate.** A blocking gate would strand a real page fix behind a wrong number in a README table. More concretely, **it must never fail**: `Delete branch` and `Sweep` are gated on `success()`, so a red step would leave the `claude/*` branch on the remote and collide with push-once enforcement on the next push. Structural findings emit `::error::` and the step still exits 0 — verified under `bash -e` across three cases
-- **A rule missed five times out of eight was not unclear — it was unread.** [PC-README-TREE] #7 named both trigger rules by ID. The structural cause is that the obligation and its trigger lived in **different rules**: a session bumping a `.gs` reads [PC-GS-VERSION] #1, updates two files, and never opens #7. The fix restates the obligation **at both triggers** as well as adding the checker
-- **Untested path, stated plainly:** run #537 took the "already in sync" branch, so the step's `git add` / `commit [skip ci]` / four-attempt retry-and-rebase code **has not executed on a runner**. It is copied line-for-line from the AHK step, which runs regularly, so risk is low — but low is not verified. It will exercise itself the first time a session leaves drift
-
-### Active context
-
-- **Repo version** `v05.35r`; **CHANGELOG at 101/100 — 98 non-exempt**, so rotation is **not** due but fires on the next push landing on a later EST day. The clone is **already unshallowed** (1,096 commits, deepened at v05.33r), so SHA enrichment will resolve
-- **S3: 7 of 10.** Remaining: **V2 · `E1b` (Habitat Energy · Gridmatic)**, **V3 · `E5` (Grid United · Pattern Energy)**, **V4 · `E4b+E6b` (Mitra Chem · Cornex)** — all Fable 5.1 High. **V2 is the sole remaining gate**; V3 and V4 are pure deepening. **V4, not P6, completes the SNE H1-2026 storage-cell top twelve** — `cornex` sits 7th at 30.2 GWh
-- **Page versions after this session:** Profiler `v01.86w`, Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
-- **Still awaiting developer approval (§10.5 item D, offered six sessions running):** adding `aka[]` to the `Profiler.html` roster search haystack (~line 2202, currently `(c.name + ' ' + c.slug)`), narrowed to names-only by explicit directive 2026-08-30. P5 and P6 added **79 aliases across four companies** the roster cannot find
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **S3 V2 · group `E1b` (Habitat Energy · Gridmatic) on Fable 5.1 High** as a fresh session — **but only once the weekly Fable allowance has actually reset.** It is the sole remaining gate on `software-and-optimization`, the one held landscape, and clearing it unblocks S2 on all nineteen segments. Two things shape the research: **both subjects are private optimizers whose value is inference from a thin public record** — the §2 model rule's reason for putting them on Fable — and **§10.3 holds the landscape for the pure-play optimizers plural**, so a half-session on one company may not release it. P3 sharpened why they matter: both of the segment's incumbents reach it from an adjacent business (FlexGen from integration, Stem from solar asset-performance management), so the pure-play merchant optimizers are still entirely on the private side. Check the allowance before starting — §10.5 measures a Phase E session at ~20 points and the format is all-or-nothing.
-
-**To continue:** type `run S3 V2`
-
 
 Developed by: LightAISolutions

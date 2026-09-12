@@ -18437,6 +18437,15 @@
    "a": "crusoe",
    "b": "heron-power",
    "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Letter of intent for Heron Link solid-state transformers reported in June 2025, tied to the Abilene campus; Heron names Crusoe as one of its two disclosed customers.",
+     "context": "Bloomberg reported on 3 June 2025 that Heron Power had 'inked preliminary deals with firms including Crusoe', and DCD headlined a letter of intent tied to the Abilene, Texas campus; Latitude Media's August 2026 factory coverage names Crusoe and Intersect Power as the only two customers Heron has disclosed. Crusoe has announced nothing itself, no order size or delivery date is public, and Heron Link is pre-production (mass production slated for late 2027 at Morgan Hill, California). Recorded one-sidedly from Heron's side as an announced engagement; Crusoe's own 800 V DC power path at Abilene is not documented (collection gap).",
+     "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+     "status": "announced",
+     "since": "2025-06",
+     "via": "Heron Link"
+    },
     "b": {
      "type": "customer",
      "note": "Letter of intent reported by Bloomberg and DCD in June 2025, tied to Crusoe's Abilene, Texas campus; named again by Latitude Media in August 2026.",
@@ -32928,6 +32937,15 @@
    "a": "heron-power",
    "b": "intersect-power",
    "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Chief executive Sheldon Kimber is quoted endorsing Heron Link in Heron Power's February 2026 Series B release; trade press names Intersect as one of Heron's two disclosed customers.",
+     "context": "Heron Power's 18 February 2026 Series B release carries a customer quote from Intersect's CEO, and Latitude Media (August 2026) names Intersect Power and Crusoe as the two customers Heron has disclosed. No order, product configuration (the 5 MW solar/storage inverter or the 4.2 MW 800 V DC data-center unit) or delivery date is public, and Intersect has announced nothing; Heron Link is pre-production with mass production slated for late 2027. Recorded one-sidedly from Heron's side as an announced engagement.",
+     "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
+     "status": "announced",
+     "since": "2026-02",
+     "via": "Heron Link"
+    },
     "a": {
      "type": "customer",
      "note": "Intersect Power's CEO Sheldon Kimber is quoted in the Series B release; trade press names Intersect as one of two disclosed customers.",

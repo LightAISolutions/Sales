@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.38r] — 2026-09-12 06:17:31 PM EST
+
+> **Prompt:** "Update my SST Primer PDF with any relevant information from my newly created Heron Power dossier. Then, update Heron's Crusoe and Intersect Power engagements in their dossiers. Then, since my weekly Fable limits have reset, evaluate where I am in my overall S3 action plan and (assuming it's still the recommended next step), give me a prompt to paste into a new Fable 5.1 high session to run S3 V2, then remember session."
+>
+> **Follow-up prompt (same interaction):** "Also, make sure to output the updated SST Primer in a downloadable PDF afterwards."
+
+### Changed
+
+- **`repository-information/sst-primer-print.html`** and **`SOLID-STATE-TRANSFORMERS-PRIMER.pdf`** (rebuilt, 38 pages) — chapter 7.3's Heron Power entry revised from the new dossier: the 4.2 MW / 5 MW figures explained as one platform's two configurations (800 V DC data-center unit at 4.2 MW; solar/storage DC-to-MV inverter at 5 MW, about two-thirds of current business), legal name and HQ, equity restated at about $183M plus the 10 Sep 2026 $60M J.P. Morgan / TriplePoint credit facility and Kirkhorn board seat, the 850 Jarvis Drive site and CalCompetes terms, the two disclosed customers (Intersect Power endorsement; Crusoe letter of intent) and the LG Energy Solution Vertech collaboration; the positioning-matrix row and judgment 8.1 updated to match; five sources added ([134]–[138], including the dossier as a REPO source); the closing note now cites corpus version v05.37r
+- **`live-site-pages/profiler-data/crusoe.profile.json`** — revised to profileVersion 6 (v5 archived): `heron-power` supplier relationship (letter of intent, announced, since 2025-06) with its Latitude Media source
+- **`live-site-pages/profiler-data/intersect-power.profile.json`** — revised to profileVersion 2 (v1 archived): `heron-power` supplier relationship (CEO endorsement in the Series B release, announced, since 2026-02) with the GlobeNewswire source
+- **`live-site-pages/profiler-data/archive/`** — `crusoe.profile.v5.json` and `intersect-power.profile.v1.json` added; `archive-index.json` updated
+- **`repository-information/report-pins-verified.json`** — the `named-project-bess-attach--opportunity--2026-09-08` pin on `crusoe` re-verified at v6 (only a one-sided relationship was added)
+- **`repository-information/profiler-refresh-calendar.json`** — `lastRefreshed` for `crusoe` and `intersect-power` set to 2026-09-12
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — §10.5 dated note: the Fable allowance has reset, S3 stands at seven of ten, V2 · E1b (Habitat Energy · Gridmatic) is next and alone
+- **`repository-information/SESSION-CONTEXT.md`** — session context saved (Remember Session)
+- **`README.md`** — archive tree entries for `crusoe.profile.v4.json` (previously missing), `crusoe.profile.v5.json` and `intersect-power.profile.v1.json`; timestamp and repo version
 
 ## [v05.37r] — 2026-09-12 05:48:03 PM EST
 

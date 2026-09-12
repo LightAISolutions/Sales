@@ -196,16 +196,6 @@
    "note": "Crusoe reserved 12 GWh of Form Energy iron-air capacity for its AI data centres, with deliveries starting in 2027.",
    "context": "Announced at CERAWeek on 24 March 2026, with Crusoe securing reserved volume, pricing and delivery terms and all systems to be built at Form Factory 1 in Weirton, West Virginia. It is the only Form agreement publicly described as binding on volume and price, and at 12 GWh it is the second largest in Form's order book after the 30 GWh Google and Xcel project. For this dossier it is the long-duration leg of the deepest energy stack any data-centre developer here has assembled, alongside the GE Vernova turbines, Bergen engines and ON.energy medium-voltage batteries already recorded. The technology is a different product from those: 100-hour discharge at 35–50% round-trip efficiency, cycling roughly eight to thirteen times a year, bought for multi-day firming rather than ride-through.",
    "source": "https://formenergy.com/form-energy-crusoe-announce-agreement-for-12-gigawatt-hours-of-iron-air-batteries-for-ai-data-centers/"
-  },
-  {
-   "slug": "heron-power",
-   "type": "supplier",
-   "note": "Letter of intent for Heron Link solid-state transformers reported in June 2025, tied to the Abilene campus; Heron names Crusoe as one of its two disclosed customers.",
-   "context": "Bloomberg reported on 3 June 2025 that Heron Power had 'inked preliminary deals with firms including Crusoe', and DCD headlined a letter of intent tied to the Abilene, Texas campus; Latitude Media's August 2026 factory coverage names Crusoe and Intersect Power as the only two customers Heron has disclosed. Crusoe has announced nothing itself, no order size or delivery date is public, and Heron Link is pre-production (mass production slated for late 2027 at Morgan Hill, California). Recorded one-sidedly from Heron's side as an announced engagement; Crusoe's own 800 V DC power path at Abilene is not documented (collection gap).",
-   "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
-   "status": "announced",
-   "since": "2025-06",
-   "via": "Heron Link"
   }
  ],
  "policyExposure": [
@@ -363,11 +353,6 @@
  },
  "sources": [
   {
-   "label": "Latitude Media — How Heron Power plans to scale its first transformer factory to 40 GW (names Crusoe and Intersect Power as disclosed customers)",
-   "url": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
-   "date": "2026-08-24"
-  },
-  {
    "label": "Crusoe — ON.energy 5 GW AI UPS",
    "url": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-multiple-hyperscale-campuses",
    "date": "2026-07-21"
@@ -457,6 +442,6 @@
    "date": "2026-03-24"
   }
  ],
- "lastUpdated": "2026-09-12",
- "profileVersion": 6
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 5
 }

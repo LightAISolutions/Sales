@@ -845,12 +845,12 @@
       "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle, ~4.9 GW contracted of a 40+ GW pipeline; the deepest private-developer energy stack.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-12",
       "domains": [
         "crusoe.ai"
       ],
-      "srcTotal": 18,
-      "srcFirstPct": 44,
+      "srcTotal": 19,
+      "srcFirstPct": 42,
       "kpiNorm": false,
       "segments": [
         {
@@ -1950,7 +1950,7 @@
       "tagline": "Google-owned since March 2026 (USD 4.75bn plus debt) — the co-located energy-park developer behind the Quantum and Meitner Texas campuses; its grid-tied fleet was carved out as IPX Power",
       "hq": "San Francisco, United States",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-12",
       "domains": [
         "intersect.com",
         "intersectpower.com",
@@ -1959,7 +1959,7 @@
         "datacenters.google",
         "storage.googleapis.com"
       ],
-      "srcTotal": 116,
+      "srcTotal": 117,
       "srcFirstPct": 51,
       "kpiNorm": false,
       "segments": [

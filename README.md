@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-12 05:48:03 PM EST` · Repo version: `v05.37r`
+Last updated: `2026-09-12 06:17:31 PM EST` · Repo version: `v05.38r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -487,6 +487,8 @@ Last updated: `2026-09-12 05:48:03 PM EST` · Repo version: `v05.37r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/crusoe.profile.v1.json">crusoe.profile.v1.json</a> — Archived v1 dossier (Crusoe)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/crusoe.profile.v2.json">crusoe.profile.v2.json</a> — Archived v2 dossier (Crusoe)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/crusoe.profile.v3.json">crusoe.profile.v3.json</a> — Archived v3 dossier (Crusoe)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/crusoe.profile.v4.json">crusoe.profile.v4.json</a> — Archived v4 dossier (Crusoe)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/crusoe.profile.v5.json">crusoe.profile.v5.json</a> — Archived v5 dossier (Crusoe)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v1.json">delta-electronics.profile.v1.json</a> — Archived v1 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v3.json">delta-electronics.profile.v3.json</a> — Archived v3 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v4.json">delta-electronics.profile.v4.json</a> — Archived v4 dossier (Delta Electronics)
@@ -563,6 +565,7 @@ Last updated: `2026-09-12 05:48:03 PM EST` · Repo version: `v05.37r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hyperstrong.profile.v2.json">hyperstrong.profile.v2.json</a> — Archived v2 dossier (HyperStrong)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hyperstrong.profile.v3.json">hyperstrong.profile.v3.json</a> — Archived v3 dossier (HyperStrong (Beijing HyperStrong Technology))
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/invenergy.profile.v1.json">invenergy.profile.v1.json</a> — Archived v1 dossier (Invenergy LLC (Invenergy Renewables Holdings LLC · Invenergy Renewables LLC · Invenergy Clean Power LLC · Invenergy Transmission LLC · Invenergy Power))
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/intersect-power.profile.v1.json">intersect-power.profile.v1.json</a> — Archived v1 dossier (Intersect Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v1.json">iren.profile.v1.json</a> — Archived v1 dossier (IREN)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v2.json">iren.profile.v2.json</a> — Archived v2 dossier (IREN)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v3.json">iren.profile.v3.json</a> — Archived v3 dossier (IREN)

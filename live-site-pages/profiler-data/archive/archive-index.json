@@ -437,6 +437,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-06",
    "supersededBy": 5
+  },
+  {
+   "file": "crusoe.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-12",
+   "supersededBy": 6
   }
  ],
  "delta-electronics": [
@@ -2588,6 +2594,14 @@
    "file": "aes-clean-energy.profile.v1.json",
    "profileVersion": 1,
    "archivedAt": "2026-09-09",
+   "supersededBy": 2
+  }
+ ],
+ "intersect-power": [
+  {
+   "file": "intersect-power.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-12",
    "supersededBy": 2
   }
  ]
