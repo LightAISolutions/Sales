@@ -4892,6 +4892,43 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "heron-power",
+      "name": "Heron Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The only startup on NVIDIA's facility-tier 800 V DC roster — Drew Baglino's (ex-Tesla) 34.5 kV-to-800 V DC solid-state transformer, Heron Link, with a Morgan Hill factory named for late-2027 mass production, two disclosed customers and no shipped unit.",
+      "hq": "Scotts Valley, California, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Heron Power Electronics Company",
+        "Heron Power Electronics Co",
+        "Heron Power, Inc.",
+        "Accelerate Power Co.",
+        "Heron Link",
+        "SuperBBU",
+        "HeronCare",
+        "Heron Factory One"
+      ],
+      "domains": [
+        "heronpower.com"
+      ],
+      "srcTotal": 52,
+      "srcFirstPct": 37,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        }
+      ]
     }
   ]
 }

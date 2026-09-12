@@ -1,0 +1,766 @@
+{
+  "schemaVersion": 7,
+  "slug": "heron-power",
+  "name": "Heron Power Electronics Company",
+  "shortName": "Heron Power",
+  "categories": [
+    "supplier"
+  ],
+  "website": "https://heronpower.com",
+  "headquarters": "Scotts Valley, California, United States (factory: Morgan Hill, California)",
+  "founded": 2024,
+  "employees": "~118 (LinkedIn, Sept 2026); 28 California FTE in 2025 per the CalCompetes base year",
+  "ownership": {
+    "type": "private",
+    "ticker": ""
+  },
+  "summary": "BOTTOM LINE UP FRONT: Heron Power is the only startup on NVIDIA's facility-tier 800 V DC roster and holds the most completely specified hall-edge solid-state transformer in the public record — 34.5 kV AC to 800 V DC, 4.2 MW per Heron Link — but it has shipped no unit, names two customers (Intersect Power and a Crusoe letter of intent), and does not begin mass production until late 2027, after NVIDIA's first 800 V halls are built on transformer-rectifier units; whether the Morgan Hill factory ramps on schedule against roughly USD 243M of equity and credit is the whole thesis. BACKGROUND. Founded 2024 by Drew Baglino (Tesla 2006–2024, SVP Powertrain & Energy Engineering) as Accelerate Power Co., renamed Heron Power Electronics Company, a Delaware corporation headquartered in Scotts Valley, California, per SEC Form D and the California GO-Biz agreement. One product platform, Heron Link, marketed in two configurations: a 5 MW DC-to-medium-voltage inverter for utility solar and storage, and a 4.2 MW medium-voltage-to-800 V DC solid-state transformer with an integrated SuperBBU battery for AI data centers. Funding per Form D and company releases: USD 43.2M through the May 2025 Series A (Capricorn lead), USD 138.3M sold of the February 2026 Series B (a16z American Dynamism and Breakthrough Energy Ventures co-leads), and a USD 60M credit facility from J.P. Morgan and TriplePoint Capital in September 2026. In August 2026 it selected a 286,000 sq ft former warehouse in Morgan Hill as Heron Factory One — up to 10,000 Links and more than 40 GW a year, mass production late 2027 — backed by a USD 26.375M California Competes tax credit tied to 601 jobs and USD 140.9M of investment by 2030. Collection gap: the company publishes no revenue, backlog, valuation or shipped-unit figure; 'more than 40 gigawatts of customer interest' is the only demand statement and is not an order book.",
+  "ecosystemRole": "We assess Heron Power as the hall-edge challenger in the power-conversion layer: a solid-state transformer whose specification maps one-to-one onto the medium-voltage-to-800 V DC block NVIDIA's August 2026 execution paper reserves for the next generation, sold against the transformer-rectifier units and sidecars the 2027 halls will use and against the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) that are hedged on both. It is not a battery, switchgear or rack-power vendor; its adjacency to in-hall power is that the SuperBBU on its 800 V bus takes the UPS's job.",
+  "productsAndServices": [
+    {
+      "name": "Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+      "category": "Hall-edge power conversion (solid-state transformer)",
+      "description": "A 4.2 MW solid-state transformer that connects directly to 34.5 kV and delivers 800 V DC at over 98.5% conversion efficiency, per the company's Blueprint for 800 VDC. Thirty 140 kW power cells, ten in series per phase, tolerate two cell failures per phase with sub-cycle bypass; the unit integrates medium-voltage protection and disconnect (UL-listed current-limiting fuses and a disconnect rated 40 kA at 34.5 kV), a 40-channel DC distribution panel with per-channel overcurrent protection, and a solid-state circuit breaker per rack output limiting let-through current below 2 kA and clearing in under 5 µs. The SuperBBU is a high-C-rate battery skid coupled directly to the 800 V bus with no DC-DC stage, giving 30 seconds of full-load backup matched to generator start, grid-forming operation with under 1% ripple at medium voltage, and ride-through to IEEE 2800 and ERCOT NOGRR 282. Both are NEMA 3R-rated for outdoor siting. The company's 12 MW block is four Links on a four-to-make-three basis feeding forty 270 kW racks, eliminating four MV transformers, four LV switchboards, twelve UPS, four PDUs and twenty RPPs, on a single 24-week lead time against the 46–48 weeks it quotes for switchgear.",
+      "highlights": [
+        "Rating discrepancy resolved from the company's own pages: 4.2 MW is the 800 V DC data-center configuration (product page: '800V Power: 4.2MW', 'no derating up to 45°C'); the '5-megawatt' in the August and September 2026 releases is the solar/storage DC-to-MV configuration of the same platform. No company document states both figures together (analysis).",
+        "Company cost model: medium-voltage-to-rack electrical cost from roughly USD 1.77M/MW to USD 0.42M/MW, labour from about USD 0.73M/MW to USD 0.08M/MW, 'cost calculations supported by WSP' — a vendor model with vendor-chosen boundaries; the Blueprint itself states the saving as 75% in the text and 65% equipment / 90% labour in its graphic.",
+        "Company loss model: 6.4% (transformer 1.0% + UPS 3.0% + rack PSU 2.4%) against 3.0% (SST plus SuperBBU 1.5% + DC-DC PSU 1.5%), 'or 3.4 MW more electricity at 100 MW'.",
+        "Declared compatible with NVIDIA's 800 V DC rack architecture and 1 MW-plus Kyber racks 'with no changes'; 'natively designed to support 1500 VDC'.",
+        "Datasheets are 'contact us' only and the white papers are form-gated — no independently checkable datasheet exists in the public record (collection gap)."
+      ],
+      "positioning": "The specification maps onto the medium-voltage-to-800 V DC hall-edge block that NVIDIA's August 2026 execution paper builds first from transformer-rectifier units (naming Zhonhen's Panama architecture among them) and reserves 34.5 kV-direct SSTs for the generation 'toward 2029'. Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand. NVIDIA rates the MV rectifier and the SST at the same 98.5%+, so the contest is lead time, footprint and grid behaviour, not efficiency (analysis).",
+      "soldThrough": "Direct to campus developers, hyperscalers and neoclouds; the company says it 'will partner with hyperscalers, accelerated computing providers, utilities, and data center builders'. Two customers are public: Intersect Power (CEO quoted in the Series B release) and a Crusoe letter of intent reported by trade press. HeronCare covers ten-year parts and service with predictive analytics.",
+      "targetSegments": [
+        "AI data-center campuses on 800 V DC racks",
+        "Hyperscalers and neoclouds",
+        "Data-center developers and EPCs",
+        "Utilities"
+      ],
+      "roadmap": "Internal pilot in 2026 and partner installations in early 2027 (Series A release, May 2025); ten engineering prototypes built in summer 2026, first data-center pilots 'closer to 2027' (Axios interview reproduced on the company site, June 2026); Heron Factory One site preparation from August 2026, mass production late 2027, up to 10,000 Links and more than 40 GW a year."
+    },
+    {
+      "name": "Heron Link for Solar & Storage — 5 MW medium-voltage inverter",
+      "category": "Utility-scale power conversion",
+      "description": "The same platform configured as a 5 MW DC-to-medium-voltage inverter for utility solar and storage: 98.6% DC-to-MV efficiency (98.4% CEC), 99.5% availability, no derating up to 50°C, ten times lower night-time consumption, grid-forming including black start, native IEC 61850 and Modbus, planar magnetics and automotive-grade components, and a twenty-year HeronCare warranty. The company claims a 5% net-present-value uplift for a project (its white paper title says 6.0%). A June 2026 design and engineering collaboration with LG Energy Solution Vertech pairs the Link with LG's DC block, claiming 30% lower DC-block footprint, 2.4% higher round-trip efficiency and up to 6% NPV, with a pilot targeted for late 2026.",
+      "highlights": [
+        "This is the configuration the '5-megawatt' headline in the factory and credit-facility releases describes; it is listed first in the company's navigation and was the original application before the October 2025 AI data-center launch.",
+        "The first engineering prototype was to be tested on a ground-mounted solar system near the Scotts Valley headquarters in summer 2026 (Axios, June 2026); no commissioning has been announced.",
+        "An open 'Head of Sales' role posted July 2026 is for this segment — the solar and storage channel is being staffed now, the data-center channel is founder-led (analysis)."
+      ],
+      "positioning": "Competes with the central and string inverter incumbents (Sungrow, Power Electronics, SMA) at the medium-voltage block level on efficiency, footprint and grid-forming capability; the medium-voltage direct connection removes the step-up transformer from the block.",
+      "soldThrough": "Direct to solar and storage developers and through battery-block partners (LG Energy Solution Vertech).",
+      "targetSegments": [
+        "Utility-scale solar developers",
+        "Storage developers and integrators",
+        "Independent power producers"
+      ],
+      "roadmap": "Pilot deployment with LG Energy Solution Vertech targeted for late 2026; volume from Heron Factory One in late 2027."
+    },
+    {
+      "name": "OpenIBR — open-source inverter controls",
+      "category": "Software",
+      "description": "An open-source inverter-based-resource control initiative the company introduced in a white paper ('Introducing OpenIBR for Open-Source Inverter Controls') and lists as a contact-form topic; no release, repository or adopter is named on company channels (collection gap).",
+      "highlights": [
+        "Positions the company on grid-forming control standards rather than only hardware (analysis)."
+      ],
+      "soldThrough": "Open source; not sold.",
+      "targetSegments": [
+        "Inverter-based-resource developers",
+        "Grid operators and researchers"
+      ]
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Heron Link (data-center configuration) with SuperBBU",
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Input",
+          "value": "connects directly to 34.5 kV"
+        },
+        {
+          "band": "Power",
+          "label": "Output",
+          "value": "800 VDC output"
+        },
+        {
+          "band": "Power",
+          "label": "Rating",
+          "value": "4.2 MW per Link"
+        },
+        {
+          "band": "Power",
+          "label": "Efficiency",
+          "value": "over 98.5% conversion efficiency"
+        },
+        {
+          "band": "Power",
+          "label": "Thermal",
+          "value": "no derating up to 45°C"
+        },
+        {
+          "band": "Architecture",
+          "label": "Cells",
+          "value": "thirty 140 kW power cells, with ten cells connected in series per phase"
+        },
+        {
+          "band": "Architecture",
+          "label": "Fault tolerance",
+          "value": "can tolerate up to two power cell failures per phase; fast-acting bypass devices with sub-cycle response times"
+        },
+        {
+          "band": "Architecture",
+          "label": "Future voltage",
+          "value": "natively designed to support 1500 VDC"
+        },
+        {
+          "band": "Protection",
+          "label": "MV protection",
+          "value": "UL-listed current-limiting fuses and an integrated disconnect rated for 40 kA at 34.5 kV"
+        },
+        {
+          "band": "Protection",
+          "label": "DC distribution",
+          "value": "40-channel DC power distribution panel with per-channel overcurrent protection"
+        },
+        {
+          "band": "Protection",
+          "label": "Rack SSCB",
+          "value": "solid-state circuit breaker (SSCB) per rack output that limits fault let through current to less than 2 kA and clears faults in under 5 microseconds"
+        },
+        {
+          "band": "SuperBBU",
+          "label": "Coupling",
+          "value": "direct on 800 VDC bus (no DC-DC)"
+        },
+        {
+          "band": "SuperBBU",
+          "label": "Backup",
+          "value": "30 seconds of full-load backup power; 40 seconds in 4-to-make-3 config; 2 minutes controlled ramp-down"
+        },
+        {
+          "band": "SuperBBU",
+          "label": "Grid",
+          "value": "grid-forming capable; <1% ripple on MV AC; fault ride-through IEEE 2800, ERCOT NOGRR 282"
+        },
+        {
+          "band": "Design",
+          "label": "Enclosure",
+          "value": "NEMA 3R–rated for outdoor installation"
+        },
+        {
+          "band": "Design",
+          "label": "Footprint",
+          "value": "shrinks electrical equipment footprint by 70%; 2.5 times the power density per square foot"
+        },
+        {
+          "band": "Design",
+          "label": "Lead time",
+          "value": "a single 24-week procurement lead time"
+        },
+        {
+          "band": "Block",
+          "label": "12 MW block",
+          "value": "4 Links, 4 to make 3 redundancy; 40 compute racks up to 270 kW; 10,800 kW compute + 800 kW networking + 400 kW CDU"
+        },
+        {
+          "band": "Service",
+          "label": "HeronCare",
+          "value": "10-year parts & service with predictive analytics"
+        }
+      ],
+      "notes": "All values verbatim from the Blueprint for 800 VDC and the Data Centers product page. The 5 MW, 98.6%, 50°C and 20-year-warranty figures belong to the solar/storage configuration (product page). No datasheet is public; the 5 MW configuration's cell rating is not stated."
+    },
+    {
+      "product": "Heron Link (solar & storage configuration)",
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Rating",
+          "value": "5 MW with no derating up to 50C"
+        },
+        {
+          "band": "Power",
+          "label": "Efficiency",
+          "value": "98.6% DC-to-MV efficiency, with a CEC efficiency of 98.4%"
+        },
+        {
+          "band": "Power",
+          "label": "Availability",
+          "value": "99.5%"
+        },
+        {
+          "band": "Grid",
+          "label": "Controls",
+          "value": "grid-forming including blackstart; native IEC61850 and Modbus"
+        },
+        {
+          "band": "Service",
+          "label": "Warranty",
+          "value": "20 year warranty: HeronCare"
+        }
+      ]
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-10",
+      "category": "financial",
+      "headline": "USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
+      "read": "Venture debt before a first shipment funds the Morgan Hill conversion without repricing the equity; the Tesla finance bench now sits on the board as the company moves 'from engineering to scale'.",
+      "source": "https://www.prnewswire.com/news-releases/heron-power-secures-60-million-credit-facility-and-adds-ex-tesla-cfo-zach-kirkhorn-to-its-board-302874549.html"
+    },
+    {
+      "date": "2026-08-13",
+      "category": "capacity",
+      "headline": "Heron Factory One: 286,000 sq ft former distribution warehouse at 850 Jarvis Drive, Morgan Hill, CA — more than USD 100M, 600-plus jobs, up to 10,000 Links and over 40 GW a year, mass production late 2027",
+      "read": "A factory named before a customer is: the 40 GW figure is an order of magnitude above any disclosed competitor target (trade press), which makes the ramp the thesis and the schedule the risk.",
+      "source": "https://www.prnewswire.com/news-releases/heron-power-selects-first-factory-location-to-build-next-generation-power-electronics-in-the-united-states-302850318.html"
+    },
+    {
+      "date": "2026-08-13",
+      "category": "capacity",
+      "headline": "Reuters: Baglino declines to name customers, citing 'strong interest from electric utilities and data center developers'; Latitude Media names Intersect Power and Crusoe and reports demand 'well north of' 40 GW",
+      "read": "The demand statement remains company-sourced and uncorroborated by any customer; two names are public and neither has confirmed a purchase order.",
+      "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/"
+    },
+    {
+      "date": "2026-06-04",
+      "category": "product-launch",
+      "headline": "Ten engineering prototypes built in summer 2026, some to deploy with early customers; first on a ground-mounted solar system near Scotts Valley; data-center pilots 'closer to 2027' (Axios interview reproduced on the company site)",
+      "read": "The May 2025 language of an 'internal pilot in 2026' has become 'engineering prototypes this summer' — a visible if modest slip that puts field runtime, which the CEO calls the bankability gate, into 2027.",
+      "source": "https://heronpower.com/news-stories/axios-drew-baglino-on-herons-big-prototype-summer"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "partnership",
+      "headline": "Design and engineering collaboration with LG Energy Solution Vertech pairing Heron Link with LG's DC block — 30% smaller DC-block footprint, 2.4% higher round-trip efficiency, up to 6% NPV; pilot targeted late 2026",
+      "read": "The first named integrator channel is on the solar/storage side, not the data-center side — consistent with two-thirds of current business being solar and storage.",
+      "source": "https://heronpower.com/news-stories/lg-vertech-collaboration"
+    },
+    {
+      "date": "2026-05-06",
+      "category": "policy",
+      "headline": "California Competes tax credit of USD 26,375,000 approved (30 April) against 601 net new jobs and USD 140.9M of investment in Morgan Hill and Scotts Valley by 2030",
+      "read": "The state locked the factory to California before the site was public; the milestones (82 FTE in 2026 rising to 629 in 2030) are now the most concrete external check on the ramp.",
+      "source": "https://business.ca.gov/wp-content/uploads/Heron-Power-Electronics-Company-CCTC-Agreement.pdf"
+    },
+    {
+      "date": "2026-02-18",
+      "category": "financial",
+      "headline": "USD 140M Series B co-led by a16z American Dynamism and Breakthrough Energy Ventures, with Capricorn, Energy Impact Partners, Valor Atreides AI Fund and Gigascale; Form D shows USD 138.3M sold to 11 investors; 'more than 40 gigawatts of early interest'; Intersect Power's CEO quoted",
+      "read": "Valuation undisclosed by the company; a data vendor's certificate-of-incorporation estimate puts the post-money near USD 648M and a paywalled report put the target 'up to USD 1 billion' — neither is a company figure.",
+      "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html"
+    },
+    {
+      "date": "2025-10-13",
+      "category": "partnership",
+      "headline": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day",
+      "read": "The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+      "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/"
+    },
+    {
+      "date": "2025-06-03",
+      "category": "customer",
+      "headline": "Bloomberg and DCD report a letter of intent with Crusoe, tied to its Abilene, Texas campus",
+      "read": "A letter of intent is not an order; it remains the only data-center customer engagement in the public record fifteen months later.",
+      "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/"
+    },
+    {
+      "date": "2025-05-29",
+      "category": "financial",
+      "headline": "USD 38M Series A led by Capricorn's Technology Impact Fund with Breakthrough Energy Ventures, Energy Impact Partners, Gigascale, Powerhouse, Valor Equity Partners, JB Straubel and Zach Kirkhorn — total funding USD 43M; 'internal pilot in 2026, partner installations in early 2027'",
+      "read": "The Tesla energy leadership reassembled as a cap table; the timeline set here is the one against which every later statement slips or holds.",
+      "source": "https://www.globenewswire.com/news-release/2025/05/29/3090121/0/en/Heron-Power-Raises-38M-Series-A-to-Accelerate-an-All-Electric-Future.html"
+    }
+  ],
+  "strategyRead": [
+    "(High confidence) We assess Heron Power's specification is the most complete hall-edge SST in the public record and maps one-to-one onto NVIDIA's Option C block, but that it has no shipped unit, no independently checkable datasheet, no UL listing on the record, and two named customer engagements (an Intersect Power quote and a Crusoe letter of intent). Basis: the company's Blueprint and product pages; SemiAnalysis (May 2026) 'no vendor has completed datacenter SST certification yet'; Reuters (August 2026) customers seen 'prototype equipment' in the lab.",
+    "(High confidence) We assess the 4.2 MW / 5 MW discrepancy is a rating per configuration, not an error: 4.2 MW is the 800 V DC data-center unit (product page and Blueprint, thirty 140 kW cells) and 5 MW the solar/storage DC-to-MV inverter (product page), with the round figure adopted as the headline from February 2026. No company document states both together and no outlet noticed; 10,000 units × 4.2 MW ≈ 42 GW is the reading that makes 'over 40 GW' arithmetic close.",
+    "(Moderate confidence) We assess the company is selling into the second wave of the 800 V transition, not the first: NVIDIA's August 2026 execution paper builds the 2027 hall-edge blocks on transformer-rectifier units and attaches 34.5 kV-direct SSTs to 'toward 2029', and Heron's mass production begins late 2027. That timing is survivable if the factory holds schedule and fatal to the data-center thesis if it slips a year, because the adjacent incumbents — GE Vernova with a hyperscaler's conditional 1,000-unit commitment from 2027, ABB, Eaton, Siemens, Hitachi Energy — are hedged across the TRU bridge and the SST target.",
+    "(Moderate confidence) We assess the near-term revenue is solar and storage, not data centers: TechCrunch reports data centers at about a third of current business, the first named channel partner is LG Energy Solution Vertech, the first prototype went on a solar array, and the open Head of Sales role is for that segment. The data-center positioning is the valuation story; the utility inverter is the likelier first shipment.",
+    "(Moderate confidence) We assess the schedule argument, not efficiency, is the sale: NVIDIA rates the MV rectifier and the SST at the same 98.5%+, so the company's 'single 24-week lead time' against 46–48 weeks for switchgear (and multi-year transformer waits reported by Reuters and Wood Mackenzie) is the claim customers are buying — and it is the one no third-party source has yet stated or tested.",
+    "(Low confidence) We assess roughly USD 243M of equity and credit against a USD 100M-plus factory and USD 140.9M of committed investment is adequate to reach pilot production but not to fund a 40 GW ramp; a Series C or project-level financing before the end of 2027 is the expected tripwire. Collection gap: no valuation, revenue, backlog or burn figure is disclosed by the company.",
+    "INDICATORS TO WATCH — Late 2026: LG Vertech pilot commissioned (confirms the solar/storage channel). Early 2027: a data-center pilot energised at a named campus, and any UL listing of Heron Link (converts the roster line into a bankable product). 2026–2027 tax years: CalCompetes milestones of 82 and 157 FTE (external check on the ramp). Late 2027: first Morgan Hill production units (confirms or refutes the factory schedule). Any 2027 SST purchase order at GE Vernova's hyperscaler (the incumbent taking the tier before Heron ships)."
+  ],
+  "relationships": [
+    {
+      "slug": "nvidia",
+      "type": "partner",
+      "note": "Named among nine 'data center power system providers' in NVIDIA's 800 V DC ecosystem at the October 2025 OCP Global Summit — the only startup in that tier.",
+      "context": "NVIDIA's 13 October 2025 blog lists the facility-tier partners as ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv. Heron's own release the same day says NVIDIA 'recognized Heron as a data center power system provider within its Open Innovation Ecosystem' and that Heron Link is 'natively compatible with the 800V DC rack architecture'. The relationship is a roster recognition, not a purchase or a co-development: NVIDIA's August 2026 execution paper does not name Heron, and builds its first Option C blocks on transformer-rectifier units.",
+      "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "status": "active",
+      "since": "2025-10",
+      "via": "Heron Link"
+    },
+    {
+      "slug": "intersect-power",
+      "type": "customer",
+      "note": "Intersect Power's CEO Sheldon Kimber is quoted in the Series B release; trade press names Intersect as one of two disclosed customers.",
+      "context": "The February 2026 Series B release carries a customer endorsement from Intersect Power's chief executive, and Latitude Media (August 2026) names Intersect Power and Crusoe as the two customers the company has disclosed. No order size, product configuration or delivery date is public, and Intersect has not announced a purchase; the engagement is recorded as announced rather than active.",
+      "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
+      "status": "announced",
+      "since": "2026-02"
+    },
+    {
+      "slug": "crusoe",
+      "type": "customer",
+      "note": "Letter of intent reported by Bloomberg and DCD in June 2025, tied to Crusoe's Abilene, Texas campus; named again by Latitude Media in August 2026.",
+      "context": "Bloomberg reported on 3 June 2025 that Heron had 'inked preliminary deals with firms including Crusoe', and DCD headlined a letter of intent; the company's own site links the DCD story by title. Latitude Media's August 2026 factory coverage names Crusoe alongside Intersect Power as the two disclosed customers. A letter of intent is not an order, and Crusoe has announced nothing; the Texas siting makes ERCOT's NOGRR 282 ride-through rule the relevant hook for Heron's integrated 30-second battery claim (analysis).",
+      "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+      "status": "announced",
+      "since": "2025-06"
+    },
+    {
+      "slug": "lg-energy-solution",
+      "type": "partner",
+      "note": "June 2026 design and engineering collaboration with LG Energy Solution Vertech pairing Heron Link with LG's DC battery block; pilot targeted late 2026.",
+      "context": "The 2 June 2026 release, with a quote from LGES Vertech CEO Jaehong Park, claims the combination cuts DC-block project footprint by 30%, raises round-trip efficiency by 2.4% and lifts project NPV by up to 6%, marketed as American-made. It is the company's first named integrator channel and sits on the solar/storage configuration of the platform, not the data-center one.",
+      "source": "https://heronpower.com/news-stories/lg-vertech-collaboration",
+      "status": "announced",
+      "since": "2026-06",
+      "via": "Heron Link for Solar & Storage"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "competitor",
+      "note": "The incumbent SST developer at the same hall-edge layer, carrying a hyperscaler's conditional commitment to buy 1,000 solid-state transformers from 2027.",
+      "context": "GE Vernova's December 2025 investor update describes an R&D sharing arrangement with a hyperscaler and 'a commitment from them to buy 1,000 solid state transformers from us in 2027 and beyond' if the specification is met — the tier's most important commercial datapoint, and it belongs to an incumbent that also ships the transformer-rectifier bridge. Heron's own dossier judges that a GE Vernova order in 2027 would take the tier before Heron's late-2027 mass production (analysis).",
+      "source": "https://www.gevernova.com/sites/default/files/gev_webcast_transcript_12092025.pdf",
+      "status": "active"
+    },
+    {
+      "slug": "abb",
+      "type": "competitor",
+      "note": "Facility-tier peer on the same NVIDIA roster with the only orderable solid-state medium-voltage product (a 34.5 kV static UPS).",
+      "context": "ABB sits beside Heron on NVIDIA's October 2025 list of data center power system providers and, per the corpus's SST primer, holds the only orderable solid-state MV product in the tier. It also backs DG Matrix, a rival SST startup (trade press).",
+      "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "status": "active"
+    },
+    {
+      "slug": "eaton",
+      "type": "competitor",
+      "note": "Facility-tier peer that bought SST intellectual property (Resilient Power Systems, August 2025) and sells the 800 V DC skid around it.",
+      "context": "Eaton is on the same NVIDIA roster and completed its acquisition of Resilient Power Systems in August 2025, giving an adjacent incumbent an SST line and the switchgear, busway and UPS business Heron's block proposes to delete.",
+      "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "status": "active"
+    },
+    {
+      "slug": "hitachi-energy",
+      "type": "competitor",
+      "note": "Facility-tier peer and the world's largest transformer maker — the incumbent of the machine Heron Link replaces.",
+      "context": "Hitachi Energy is named on the same NVIDIA roster; its engineers are quoted in trade press cautioning that compact 34.5 kV SSTs present 'significant design and manufacturing challenges'. It is hedged on both sides of the transition: it sells the transformer that Heron's schedule argument is made against and develops the SST.",
+      "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "status": "active"
+    },
+    {
+      "slug": "sungrow",
+      "type": "competitor",
+      "note": "Ships a 3 MW EnerNeo SST (10–13.8 kV to 800 V DC, 98.5%) and is the incumbent in the utility inverter market Heron's solar/storage configuration enters.",
+      "context": "Sungrow's July 2026 EnerNeo launch is a shipping hall-edge SST at 13.8 kV, while Heron's is pre-production at 34.5 kV; on the solar side Sungrow is the No. 1 inverter maker whose central and string products the 5 MW Heron Link competes with on efficiency and footprint (analysis).",
+      "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+      "status": "active"
+    },
+    {
+      "slug": "zhonhen",
+      "type": "competitor",
+      "note": "Its Panama one-stage 10 kV-to-DC transformer-rectifier architecture is among the TRU families NVIDIA's August 2026 paper names for the first Option C blocks — the bridge Heron's SST must displace.",
+      "context": "NVIDIA's execution paper builds the first hall-edge blocks on transformer-rectifier units and names Zhonhen's Panama architecture among them; the SST generation is attached to 'toward 2029'. Zhonhen is therefore the incumbent of the 2027 wave that Heron's late-2027 production competes against (analysis).",
+      "source": "https://heronpower.com/blueprint-for-800-vdc",
+      "status": "active"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "other",
+      "note": "Facility-tier peer on the NVIDIA roster whose reference designs the Heron Blueprint cites for the legacy chain it compares against.",
+      "context": "Schneider Electric appears beside Heron on the October 2025 roster and owns the AI-factory reference-design franchise; Heron's Blueprint cites a Schneider reference design when quantifying the transformer-UPS-PDU chain its block replaces.",
+      "source": "https://heronpower.com/blueprint-for-800-vdc",
+      "status": "active"
+    },
+    {
+      "slug": "tesla",
+      "type": "other",
+      "note": "Founder heritage: Drew Baglino (Tesla 2006–2024, SVP Powertrain & Energy), board member Zach Kirkhorn (ex-CFO) and investor JB Straubel (co-founder) are all Tesla alumni.",
+      "context": "The company describes its team as having 'collectively designed and deployed over 80 gigawatts of grid-connected power electronics', a Tesla Energy lineage (Powerwall, Powerpack, Megapack under Baglino). No commercial relationship with Tesla is on the record.",
+      "source": "https://www.globenewswire.com/news-release/2025/05/29/3090121/0/en/Heron-Power-Raises-38M-Series-A-to-Accelerate-an-All-Electric-Future.html",
+      "status": "historical"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "California Competes Tax Credit",
+      "status": "in-effect",
+      "effectiveDate": "2026-04-10",
+      "exposure": "A USD 26,375,000 credit against California net tax under RTC 17059.2/23689, allocated USD 2.0M / 3.5M / 5.0M / 8.0M / 7.875M across tax years 2026–2030 against milestones of 82, 157, 374, 557 and 629 California FTE (base year 2025: 28), a minimum wage of USD 55,000, a cumulative average wage of USD 115,000, and USD 140,923,991 of investment; employee milestones must be maintained for three subsequent taxable years or the credit is recaptured. The agreement records that 'absent award of the California Competes Tax Credit, its project may occur in another state'.",
+      "mitigation": "The company sited Heron Factory One in Morgan Hill and states manufacturing 'near Heron's engineering headquarters'.",
+      "source": "https://business.ca.gov/wp-content/uploads/Heron-Power-Electronics-Company-CCTC-Agreement.pdf"
+    },
+    {
+      "regime": "Domestic-content and import restrictions on power conversion",
+      "status": "in-effect",
+      "exposure": "The company markets the Link as 'manufactured in the USA' with a 'domestic supply chain' and states that 'over 80% of critical grid components such as transformers and inverters is imported'. Latitude Media reports the CEO citing the FCC's ban on new foreign inverter models and tariffs 'as high as 55%' on imported power-conversion components as reasons it expects no price premium. No FEOC, 45X or tariff statement appears on company channels, and no source ties 45X eligibility to Heron (collection gap).",
+      "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/"
+    },
+    {
+      "regime": "ERCOT NOGRR 282",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-09",
+      "exposure": "The company's Blueprint claims fault ride-through to 'IEEE 2800, ERCOT NOGRR 282' with grid-forming operation and 30 seconds of full-load battery backup on the 800 V bus. The rule, approved by the Texas PUC on 9 July 2026, applies to large electronic loads of 75 MW and above with stricter voltage ride-through from 1 January 2028 (trade press); the only disclosed data-center engagement (Crusoe, Abilene) is in ERCOT.",
+      "source": "https://heronpower.com/blueprint-for-800-vdc"
+    },
+    {
+      "regime": "DC arc-flash and 800 V DC listings",
+      "status": "proposed",
+      "exposure": "No consensus standard computes DC arc-flash incident energy (IEEE 1584 is AC only) and no source states a UL listing for Heron Link; the company says only that it uses 'UL-listed current-limiting fuses'. SemiAnalysis (May 2026): 'no vendor has completed datacenter SST certification yet'. The NFPA Fire Protection Research Foundation's DC arc-flash model, sponsored by Siemens, Schneider, Eaton, ABB and Mersen, is a roughly three-year programme begun in 2026 (corpus SST primer).",
+      "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Drew (Andrew) Baglino",
+      "title": "Founder & Chief Executive Officer (also Secretary and CFO of record per the California Statement of Information)",
+      "background": [
+        "Founder & CEO — Heron Power (2024–present); signs the Form D filings and the CalCompetes agreement as CEO",
+        "SVP Powertrain & Energy Engineering — Tesla (Oct 2019–Apr 2024): 4680 cell, dry electrode, the 50 GWh Texas cell factory, Supercharging; one of Tesla's named executive officers; resigned effective 14 April 2024",
+        "Led the energy engineering organisation (Powerwall, Powerpack, Megapack) from 2014 and the motor, battery and power-electronics organisations from 2018 — Tesla",
+        "Electrical engineer, Powertrain Architect for Model S — Tesla (joined March 2006)",
+        "BS Electrical Engineering — Stanford University"
+      ]
+    },
+    {
+      "name": "Zach Kirkhorn",
+      "title": "Board Director (from September 2026); investor since the Series A",
+      "background": [
+        "Board Director — Heron Power (Sept 2026–present); 'backed Heron Power since its Series A in 2025'",
+        "Chief Financial Officer — Tesla (2019–2023); thirteen years at Tesla"
+      ]
+    },
+    {
+      "name": "Dipender Saluja",
+      "title": "Board Director",
+      "background": [
+        "Co-Managing Partner, Technology Impact Fund — Capricorn Investment Group (Series A lead); listed as a director on the Form D filings and the California Statement of Information"
+      ]
+    },
+    {
+      "name": "David Danielson",
+      "title": "Board Director",
+      "background": [
+        "Partner — Breakthrough Energy Ventures (Series A investor, Series B co-lead); added as a director between the May 2025 and February 2026 Form D filings"
+      ]
+    },
+    {
+      "name": "Michael Wang",
+      "title": "Vice President, Finance & Operations",
+      "background": [
+        "VP Finance & Operations — Heron Power; listed as Vice President on the California Statement of Information (collection gap: no company biography published)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Funding to date (Form D and company releases)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Equity raised",
+            "actual": "USD 43,249,960 sold to 14 investors (Form D, first sale 2025-05-13 — the USD 38M Series A plus earlier seed) and USD 138,299,870 sold to 11 investors of USD 139,999,853 offered (Form D, first sale 2026-02-06 — the USD 140M Series B); about USD 181.5M sold in total, USD 183M by the company's round figures",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No valuation disclosed; a data vendor's certificate-of-incorporation estimate gives a Series B post-money of about USD 648M and a paywalled report a target of up to USD 1B — neither is a company figure"
+          },
+          {
+            "name": "Debt",
+            "actual": "USD 60M credit facility from J.P. Morgan and TriplePoint Capital (10 September 2026) for the Morgan Hill conversion and production ramp",
+            "expected": "",
+            "verdict": "inline",
+            "result": "First debt; brings total capital to about USD 243M"
+          }
+        ],
+        "commentary": "The company reports no revenue, backlog, orders or burn. 'More than 40 gigawatts of customer interest' (Series B and credit-facility releases) and '50 gigawatts of orders' (Canary Media, February 2026) are company statements no customer has corroborated. Expected fields are left empty: no consensus exists for a private company."
+      },
+      {
+        "period": "Committed investment (CalCompetes agreement)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Capital investment milestones",
+            "actual": "USD 24,613,150 (2026), 74,547,548 (2027), 27,013,607 (2028), 8,685,685 (2029), 6,064,001 (2030) — USD 140,923,991 in total",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Committed to the State of California; the 2027 tranche is the factory build"
+          },
+          {
+            "name": "Headcount milestones",
+            "actual": "82 (2026), 157 (2027), 374 (2028), 557 (2029), 629 (2030) California FTE from a 2025 base of 28",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Recapture applies if milestones are not held for three subsequent years"
+          }
+        ],
+        "commentary": "The CalCompetes schedule is the only externally enforceable set of numbers the company has published, and it is the best available proxy for the factory ramp."
+      }
+    ],
+    "commentary": "Private and pre-revenue on the public record. Funding is fully documented through two Form D filings and three releases; everything else — valuation, orders, unit cost, gross margin — is undisclosed. Analysis: about USD 243M of capital against a USD 100M-plus factory and USD 140.9M of committed investment reaches pilot production; a 40 GW ramp will need a further raise."
+  },
+  "sources": [
+    {
+      "label": "PR Newswire — Heron Power secures $60 million credit facility and adds ex-Tesla CFO Zach Kirkhorn to its board",
+      "url": "https://www.prnewswire.com/news-releases/heron-power-secures-60-million-credit-facility-and-adds-ex-tesla-cfo-zach-kirkhorn-to-its-board-302874549.html",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "Heron Power — Credit facility and Kirkhorn board release (company copy)",
+      "url": "https://heronpower.com/news-stories/heron-power-secures-60-million-credit-facility-and-adds-ex-tesla-cfo-zach-kirkhorn-to-its-board",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "Yahoo Finance — Heron Power secures $60 million credit facility (PR Newswire syndication)",
+      "url": "https://finance.yahoo.com/energy/articles/heron-power-secures-60-million-110000438.html",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "Data Center Knowledge — Solid-state transformers power next-gen AI data centers (Hitachi Energy and SPOC Energy cautions on SST maturity)",
+      "url": "https://www.datacenterknowledge.com/energy-power-supply/solid-state-transformers-power-next-gen-ai-data-centers",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "Latitude Media — How Heron Power plans to scale its first transformer factory to 40 GW",
+      "url": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+      "date": "2026-08-24"
+    },
+    {
+      "label": "Morgan Hill Times — Heron Power will build electronics factory in Morgan Hill (850 Jarvis Drive)",
+      "url": "https://morganhilltimes.com/heron-power-will-build-electronics-factory-in-morgan-hill/",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "Energy-Storage.News — Startup Heron Power to build 40 GW solid-state transformer factory",
+      "url": "https://www.energy-storage.news/startup-heron-power-to-build-40gw-solid-state-transformer-factory-in-california/",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "StorageReview — NVIDIA moves 800 VDC power architecture from concept to production (OCP LVDC SST specification v0.3; Option C SST targeted 2029)",
+      "url": "https://www.storagereview.com/news/nvidia-moves-800-vdc-power-architecture-from-concept-to-production-with-partners",
+      "date": "2026-08-15"
+    },
+    {
+      "label": "PR Newswire — Heron Power selects first factory location to build next-generation power electronics in the United States",
+      "url": "https://www.prnewswire.com/news-releases/heron-power-selects-first-factory-location-to-build-next-generation-power-electronics-in-the-united-states-302850318.html",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Heron Power — Factory release (company copy)",
+      "url": "https://heronpower.com/news-stories/press-release-heron-power-selects-first-factory-location-to-build-next-generation-power-electronics-in-the-united-states",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Reuters via GV Wire — Heron Power plans $100M California factory for advanced electric grid equipment",
+      "url": "https://gvwire.com/2026/08/13/heron-power-plans-100m-california-factory-for-advanced-electric-grid-equipment/",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "pv magazine — Sungrow launches 3 MW solid-state transformer (EnerNeo)",
+      "url": "https://www.pv-magazine.com/2026/07/10/sungrow-launches-3-mw-solid-state-transformer/",
+      "date": "2026-07-10"
+    },
+    {
+      "label": "Power Electronics News — The evolution in data center power distribution, panel part 2: SSTs (PCIM)",
+      "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-panel-part-2-ssts/",
+      "date": "2026-06-29"
+    },
+    {
+      "label": "Data Center Knowledge — NVIDIA on 800 VDC safety, standards and workforce challenges (Heron quoted)",
+      "url": "https://www.datacenterknowledge.com/energy-power-supply/solid-state-transformers-power-next-gen-ai-data-centers",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "Heron Power — Axios: Drew Baglino on Heron's big prototype summer (company copy of the interview)",
+      "url": "https://heronpower.com/news-stories/axios-drew-baglino-on-herons-big-prototype-summer",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "New Equipment Digest — Heron Power, LG Energy team up on grid storage",
+      "url": "https://www.newequipment.com/industry-trends/article/55311436/heron-power-lg-energy-team-up-on-grid-storage",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "Heron Power — LG Energy Solution Vertech design and engineering collaboration",
+      "url": "https://heronpower.com/news-stories/lg-vertech-collaboration",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "SemiAnalysis — Inside the 800VDC Revolution, Part 1 (4.2 MW Heron Link; no vendor has completed datacenter SST certification)",
+      "url": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Power Electronics News — Real-world solid-state transformers overcome barriers (Heron Link HV SiC; 4.2 MW and 5 MW both printed)",
+      "url": "https://www.powerelectronicsnews.com/real-world-solid-state-transformers-overcome-barriers-to-drive-data-center-power/",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Office of Governor Gavin Newsom — $1B in private investment generated through California Competes tax credits (Heron: 601 jobs, $140.9M)",
+      "url": "https://www.gov.ca.gov/2026/05/06/governor-newsom-announces-1b-in-private-investment-generated-through-california-competes-tax-credits-driving-business-expansion-in-key-industry-sectors/",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "California GO-Biz — California Competes Tax Credit Committee meeting approvals (Heron Power Electronics Company: $26,375,000)",
+      "url": "https://business.ca.gov/wp-content/uploads/CCTC-Meeting-Approval-4-30-26.pdf",
+      "date": "2026-04-30"
+    },
+    {
+      "label": "Power Electronics News — Solid-state transformers: path from concept to common (TDK: 'double the price')",
+      "url": "https://www.powerelectronicsnews.com/solid-state-transformers-path-from-concept-to-common/",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "California GO-Biz — Heron Power Electronics Company CCTC allocation agreement (milestones, credit schedule, recapture)",
+      "url": "https://business.ca.gov/wp-content/uploads/Heron-Power-Electronics-Company-CCTC-Agreement.pdf",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "Power Electronics News — NVIDIA GTC 2026: 800 VDC power partnerships from grid to processor ('the only SST startup on Nvidia's list')",
+      "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "SEC EDGAR — Form D, Heron Power Electronics Co (Series B: $139,999,853 offered, $138,299,870 sold, 11 investors; directors Baglino, Saluja, Danielson)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2069722/000206972226000002/primary_doc.xml",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Latitude Media — Catalyst podcast: the rise of grid power electronics with Drew Baglino",
+      "url": "https://www.latitudemedia.com/news/catalyst-the-rise-of-grid-power-electronics-with-drew-baglino/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "GlobeNewswire — Heron Power raises $140 million Series B co-led by Andreessen Horowitz and Breakthrough Energy Ventures",
+      "url": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "TechCrunch — Heron Power raises $140M to ramp production of grid-altering tech (valuation not disclosed; data centers about a third of business)",
+      "url": "https://techcrunch.com/2026/02/18/heron-power-raises-140m-to-ramp-production-of-grid-altering-tech/",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "Canary Media — Heron Power raises $140M for electrical transformers ('50 gigawatts of orders'; 'not asking for any premium')",
+      "url": "https://www.canarymedia.com/articles/climatetech-finance/heron-power-raises-140m-electrical-transformers",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "a16z — Investing in Heron Power (Erin Price-Wright, Ryan McEntush)",
+      "url": "https://a16z.com/announcement/investing-in-heron-power/",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "Heron Power — (Super)power electronics: the hero the grid needs (Drew Baglino essay, originally on a16z's American Dynamism blog)",
+      "url": "https://heronpower.com/news-stories/americas-greatest-energy-problem-is-delivering-power",
+      "date": "2026-02"
+    },
+    {
+      "label": "GE Vernova — 2025 Investor Update webcast transcript (hyperscaler commitment to buy 1,000 solid-state transformers from 2027)",
+      "url": "https://www.gevernova.com/sites/default/files/gev_webcast_transcript_12092025.pdf",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "GlobeNewswire — Heron Power reinvents the power foundation for gigascale AI (NVIDIA ecosystem recognition; white paper)",
+      "url": "https://www.globenewswire.com/news-release/2025/10/13/3165715/0/en/Heron-Power-Reinvents-the-Power-Foundation-for-Gigascale-AI.html",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "NVIDIA Blog — NVIDIA, partners drive next-gen efficient gigawatt AI factories in buildup for Vera Rubin (800 VDC partner roster)",
+      "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "NVIDIA Technical Blog — Building the 800 VDC ecosystem for efficient, scalable AI factories",
+      "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Heron Power — Privacy Policy (Heron Power, Inc.; 4742 Scotts Valley Dr, Scotts Valley, CA 95066)",
+      "url": "https://heronpower.com/legal/privacy-policy",
+      "date": "2025-10-10"
+    },
+    {
+      "label": "T&D World — Eaton acquires Resilient Power Systems",
+      "url": "https://www.tdworld.com/substations/article/55310215/eaton-acquires-resilient-power-systems",
+      "date": "2025-08-20"
+    },
+    {
+      "label": "Latitude Media — Inside Heron Power's plan to transform the grid",
+      "url": "https://www.latitudemedia.com/news/inside-heron-powers-plan-to-transform-the-grid/",
+      "date": "2025-06-17"
+    },
+    {
+      "label": "GlobeNewswire — Heron Power raises $38M Series A to accelerate an all-electric future",
+      "url": "https://www.globenewswire.com/news-release/2025/05/29/3090121/0/en/Heron-Power-Raises-38M-Series-A-to-Accelerate-an-All-Electric-Future.html",
+      "date": "2025-05-29"
+    },
+    {
+      "label": "TechCrunch — Tesla alums' Heron Power closes $38M Series A to transform key grid technology",
+      "url": "https://techcrunch.com/2025/05/29/tesla-alums-heron-power-closes-38m-series-a-to-transform-key-grid-technology/",
+      "date": "2025-05-29"
+    },
+    {
+      "label": "SEC EDGAR — Form D, Heron Power Electronics Co (Series A: $43,249,960 sold, 14 investors; former name Accelerate Power Co.; incorporated 2024, Delaware)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2069722/000206972225000001/primary_doc.xml",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "TechCrunch — Former Tesla exec Drew Baglino's new startup is rethinking the electrical transformer",
+      "url": "https://techcrunch.com/2025/04/07/former-tesla-exec-drew-baglinos-new-startup-is-rethinking-the-electrical-transformer/",
+      "date": "2025-04-07"
+    },
+    {
+      "label": "CNBC — Tesla execs Drew Baglino and Rohan Patel depart",
+      "url": "https://www.cnbc.com/2024/04/15/tesla-execs-drew-baglino-and-rohan-patel-depart-as-company-cuts-jobs.html",
+      "date": "2024-04-15"
+    },
+    {
+      "label": "Heron Power — Blueprint for 800 VDC (Heron Link specification, 12 MW block, cost and loss models)",
+      "url": "https://heronpower.com/blueprint-for-800-vdc"
+    },
+    {
+      "label": "Heron Power — Heron Link for Data Centers (product page: 800V Power 4.2 MW, 98.5%, 70% smaller footprint)",
+      "url": "https://heronpower.com/product/data-centers"
+    },
+    {
+      "label": "Heron Power — Heron Link for Solar & Storage (product page: 5 MW, 98.6%, 99.5% availability)",
+      "url": "https://heronpower.com/product/solar"
+    },
+    {
+      "label": "Heron Power — About (leadership biography; advisors and backers)",
+      "url": "https://heronpower.com/about"
+    },
+    {
+      "label": "Heron Power — Careers (Ashby job board: 45 open roles, Scotts Valley)",
+      "url": "https://heronpower.com/careers"
+    },
+    {
+      "label": "Heron Power — Resources (white papers: 800 VDC blueprint, gigascale AI, utility-scale solar, OpenIBR)",
+      "url": "https://heronpower.com/resources"
+    },
+    {
+      "label": "Forge Global — Heron Power (data-vendor estimate: Series B post-money about $648M, from certificates of incorporation)",
+      "url": "https://forgeglobal.com/heron-power_ipo/"
+    },
+    {
+      "label": "The Org — Heron Power org chart (VP Finance & Operations; Head of Product; Policy & New Markets Director)",
+      "url": "https://theorg.com/org/heron-power"
+    },
+    {
+      "label": "Wikipedia — Drew Baglino",
+      "url": "https://en.wikipedia.org/wiki/Drew_Baglino"
+    }
+  ],
+  "lastUpdated": "2026-09-12",
+  "profileVersion": 1
+}

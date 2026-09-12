@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 2,
+  "slug": "heron-power",
+  "title": "Heron Power — Technology Study Guide",
+  "lastUpdated": "2026-09-12",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: replacing the most trusted object on the grid",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A solid-state transformer asks a data centre to swap tonnes of iron and copper that fail almost never for a cabinet of semiconductors that must be actively controlled every microsecond. This guide explains why anyone would.",
+      "ps": [
+        "The 60 Hz {{transformer}} is the oldest and most reliable machine in electricity. It has no moving parts, no software, tolerates abuse for minutes at a time, and a well-made one lasts forty years. Every campus in this corpus receives its power through several of them.",
+        "The {{SST}} proposes to replace that machine at the edge of the data hall with a stack of {{SiC}} converter cells that takes {{medium voltage}} AC straight to a regulated {{800 VDC}} bus. In exchange for giving up the iron's forgiveness it collapses four separate conversions into one, shrinks the electrical room, and — the argument that actually sells — can be built in months rather than the year-plus a large transformer now takes.",
+        "This guide teaches the physics that makes the swap possible, the three-stage architecture every serious SST uses, what the converter still cannot do that iron can, and where a hall-edge SST such as Heron Link slots into the 800 V DC data centre NVIDIA has specified. It assumes high-school physics and nothing about power electronics."
+      ]
+    },
+    {
+      "id": "why-800-vdc",
+      "title": "Why the rack outgrew alternating current",
+      "kind": "prose",
+      "read": "Power is voltage times current. When a rack's power rose fifty-fold, only one of those could be raised without melting the building.",
+      "ps": [
+        "A server rack in 2015 drew 5–10 kW. An NVIDIA GB200 rack draws about 120–140 kW, and the Kyber rack planned for 2027 approaches a megawatt. Power is voltage multiplied by current, and the losses in a wire rise with the square of the current. Feeding a megawatt at the traditional 54 V bus would need roughly 18,000 amperes — a copper busbar the size of a railway rail. Raising the voltage is the only way to move that power through a cable a person can lift.",
+        "NVIDIA's answer, published in 2025 and specified in detail in its October 2025 white paper and August 2026 execution paper, is a single-ended **800 V DC** distribution bus to the rack (positive, return and protective earth — not the bipolar ±400 V bus the Open Compute Project also allows), with the rack's own shelves stepping it down to the chips. At 800 V the same megawatt moves at about 1,250 A, and the copper falls by roughly 45% against the legacy chain.",
+        "The second consequence is subtler. Today's hall converts power repeatedly: the utility's medium voltage steps down through a {{transformer}} to 480 V, is rectified to DC inside a {{UPS}}, inverted back to AC, distributed through {{PDU}}s, and rectified once more inside every rack's power shelf. Each stage costs a percent or two and occupies floor. A DC hall needs only one conversion from medium voltage to the bus — and the question becomes what machine performs it. There are two candidates, and the SST is the more ambitious one."
+      ]
+    },
+    {
+      "id": "frequency-is-the-lever",
+      "title": "Frequency is the lever: why a kilohertz transformer fits in a suitcase",
+      "kind": "prose",
+      "read": "One equation explains the entire product category.",
+      "ps": [
+        "A transformer changes voltage by coupling two coils through a magnetic core. The core must be large enough to absorb the magnetic flux that the primary voltage pushes into it during each half-cycle before the voltage reverses. The governing relation is **V ≈ 4.44 × f × N × B × A**: voltage equals frequency, times turns, times flux density, times core cross-section. At 60 Hz, f is tiny, so for a multi-megawatt unit A must be enormous — tonnes of laminated steel.",
+        "Raise the frequency from 60 Hz to 10 kHz and, holding V, N and B constant, the core area shrinks by the ratio of the two frequencies — roughly 170 times. The isolation transformer becomes a block of nanocrystalline alloy or ferrite the size of a suitcase instead of a substation yard. That single relation is the whole reason a solid-state transformer exists.",
+        "Making the voltage alternate at kilohertz is exactly what power electronics does. So an SST is not one component but a converter *system*: rectify the medium-voltage AC into DC, chop that DC into a kilohertz square wave, pass it through the small {{medium-frequency transformer}}, and rectify it again on the low-voltage side. Three stages, each built from semiconductor switches, each controllable — and that controllability is what turns a passive machine into an active one."
+      ]
+    },
+    {
+      "id": "three-stages",
+      "title": "The three stages every serious SST uses",
+      "kind": "table",
+      "read": "Input-series on the medium-voltage side, output-parallel on the DC side. Each stage has one job and one hard problem.",
+      "intro": "Almost every medium-voltage SST in the public record — including Heron Link's thirty-cell design — follows the same input-series / output-parallel pattern. Many identical cells share the high input voltage in series and pool their low-voltage outputs in parallel.",
+      "cols": [
+        "Stage",
+        "What it does",
+        "The hard part"
+      ],
+      "rows": [
+        [
+          "**1 · Cascaded H-bridge {{active front end}}**",
+          "N single-phase converter cells are connected in series on each phase, so each cell sees only a fraction of the line voltage. Together they draw a clean sinusoidal current at unity {{power factor}} and charge each cell's {{DC link}}.",
+          "No production {{SiC}} device blocks 34.5 kV — parts are rated 1.2, 1.7 and 3.3 kV — so the count of cells is set by the silicon, not the designer. Every cell adds a capacitor bank, gate drivers, sensors and failure points."
+        ],
+        [
+          "**2 · {{Dual active bridge}} through a {{medium-frequency transformer}}**",
+          "Each cell chops its DC link into a 5–50 kHz square wave, couples it through the small transformer that provides {{galvanic isolation}} and the step-down, and rectifies it back to DC. Power flow is set by the phase shift between the two bridges, so the stage is bidirectional by construction.",
+          "The medium-frequency transformer is the component with the fewest suppliers: it must hold medium-voltage insulation in a small volume while being hammered by fast-edged square waves for twenty years without partial discharge eating the insulation."
+        ],
+        [
+          "**3 · The paralleled 800 V bus**",
+          "Every cell's isolated output is tied in parallel into one stiff, low-impedance DC bus whose voltage the controller holds regardless of which cells carry the load. Batteries, capacitors and even on-site generation can couple to it directly with no further conversion.",
+          "Stiffness cuts both ways: the {{DC link}} capacitors of every cell can dump into a fault on the bus in microseconds, so the bus needs semiconductor breakers, not fuses, to protect itself (see the limitations ledger)."
+        ]
+      ]
+    },
+    {
+      "id": "surviving-medium-voltage",
+      "title": "Surviving 34.5 kV with 1.7 kV silicon",
+      "kind": "prose",
+      "read": "The service voltage a customer offers decides how many cells the vendor must build — and 34.5 kV is the expensive end.",
+      "ps": [
+        "US utilities serve large customers at 12.47, 13.2 or 13.8 kV (the 15 kV class), at 24.9 kV, or at 34.5 kV; gigawatt campuses in Texas and the Southeast increasingly take 34.5 kV because it moves more power on fewer feeders. The peak line-to-neutral voltage at 34.5 kV is about 28 kV, and after a customary derating of the device — roughly half its rating on the cell's {{DC link}}, to survive cosmic-ray-induced failures and switching overshoot — a 1.7 kV design needs on the order of ten cells in series per phase, thirty across three phases. A 13.8 kV design needs about 2.5 times fewer.",
+        "That arithmetic is visible in the products. A 34.5 kV hall-edge unit built from thirty 140 kW cells, ten per phase, rates 4.2 MW; the cell count is the cost driver, and it multiplies parts, gate drivers, cooling paths and things that can fail. Moving to 3.3 kV devices roughly halves the count, and the still-immature 10 kV {{SiC}} class would bring a phase down to a handful of cells — which is why research programmes chase it.",
+        "Redundancy comes almost free from the same structure. Because the cells are identical and in series, a failed cell can be bypassed in less than a cycle and its neighbours share the voltage it was holding — provided the design carried a spare or two per phase. Vendors state this as a tolerance (\"two cell failures per phase\") and it is the SST's answer to the iron transformer's brute robustness: not indestructibility, but graceful degradation."
+      ]
+    },
+    {
+      "id": "sst-vs-tru",
+      "title": "Two ways to make 800 V from medium voltage",
+      "kind": "proscons",
+      "read": "The transformer-rectifier unit is the 2027 bridge; the SST is the target. Both feed the same rack.",
+      "intro": "An 800 V DC hall does not need a solid-state transformer to exist. A conventional 60 Hz transformer feeding a bank of active rectifiers — a {{transformer-rectifier unit}} — makes the same bus today, and NVIDIA's own staging builds the first 800 V halls that way. The SST competes against it on schedule, footprint and grid behaviour, not on efficiency, because NVIDIA rates both at the same 98.5%.",
+      "cards": [
+        {
+          "t": "**{{Transformer-rectifier unit}} (TRU)**",
+          "meta": "Iron transformer plus active rectifiers; the bridge NVIDIA's partners build to for 2027",
+          "adv": [
+            "**Proven parts** — a standard transformer and rectifiers that already carry listings and decades of field data.",
+            "**Iron's forgiveness** — inrush, overload and fault currents are absorbed by thermal and magnetic mass.",
+            "**Ships now** — Chinese and Western vendors have units in production; the first 800 V halls use them."
+          ],
+          "dis": [
+            "*Still waits on the transformer* — the 46–48-week lead time the whole industry is fighting is inside the product.",
+            "*Two machines, two rooms* — the transformer yard and the rectifier hall both remain.",
+            "*Passive at the grid* — the transformer cannot form a grid, limit a fault, or supply reactive power on command."
+          ]
+        },
+        {
+          "t": "**{{Solid-state transformer}} (SST)**",
+          "meta": "Medium-voltage AC to 800 V DC in one converter; the target for the next generation, ~2029 at 34.5 kV",
+          "adv": [
+            "**One conversion, one box** — deletes the transformer, the UPS rectifier, the PDU and the electrical room; outdoor-rated units sit at the hall edge.",
+            "**Active at the grid** — unity power factor, reactive support, ride-through to a specified curve, {{grid-forming}} operation, and current limiting on command.",
+            "**A native DC bus** — batteries couple straight to 800 V with no extra converter; storage becomes part of the overload strategy.",
+            "**Schedule** — a factory-built converter can be delivered in months; vendors quote 24 weeks against 46–48."
+          ],
+          "dis": [
+            "*Microseconds of thermal margin* — no overload reservoir, so it is sized for peak, not average.",
+            "*Must actively detect, limit and interrupt faults* — a control task iron never had.",
+            "*Hundreds of SiC modules per unit* — reliability must be engineered, and no first-party overload curve or field history yet exists.",
+            "*Standards lag* — DC arc-flash has no validated model; UL and IEC are unharmonised on 800 V DC; medium voltage at the row is a permitting unknown."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-iron-still-does-better",
+      "title": "What the converter cannot yet do that iron can",
+      "kind": "ledger",
+      "read": "Five limitations in the order a customer's engineer will raise them, and what a vendor does about each.",
+      "cols": [
+        "Limitation",
+        "Why it exists",
+        "What the design does about it"
+      ],
+      "rows": [
+        [
+          "**{{Overload}} and {{inrush}}**",
+          "A liquid-filled transformer tolerates 200% load for half an hour because tonnes of oil and iron take time to heat. Silicon has microseconds of margin, so surge tolerance collapses to transient events and the continuous rating sits near nameplate.",
+          "Size for peak rather than average, and put energy storage on the DC bus — which the GPU load swings already demand — so the battery absorbs what the iron used to."
+        ],
+        [
+          "**{{Fault current}} handling**",
+          "Iron survives a short circuit by its mass; a converter must detect, limit and interrupt the fault within the semiconductor's safe-operating time. On the DC side every cell's {{DC link}} capacitor dumps into the fault at hundreds of amperes per microsecond, and DC has no natural current zero for a mechanical breaker to open at.",
+          "Semiconductor breakers ({{SSCB}}) on every feeder or rack, limiting fault current to a stated ceiling and clearing in microseconds; medium-voltage current-limiting fuses ahead of the stack. Standards are catching up (UL 489i, IEC 60947-10)."
+        ],
+        [
+          "**Insulation, surge and partial discharge**",
+          "The {{medium-frequency transformer}} must hold medium-voltage insulation in a small volume while driven by fast-edged square waves. Fast voltage edges make voltage sharing depend on stray capacitances and drive partial discharge that ages insulation; the surge frameworks were written for iron.",
+          "Electrostatic shielding, graded insulation, semiconductive screens, fibre-coupled gate drives; a 35 kV interface may need about three times the insulation a 60 Hz design would."
+        ],
+        [
+          "**Reliability of thousands of parts**",
+          "A 4 MW unit holds on the order of a hundred or more {{SiC}} modules plus capacitors, drivers and sensors, and operators want 20 years at 99.9–99.999% availability. Series stacks want a failed die to fail *short* and keep conducting, which press-pack silicon achieves and SiC's small die area makes an open research problem.",
+          "Modular cells with spares per phase and sub-cycle bypass; device-level qualification data from the silicon suppliers; but no vendor yet has fleet-years to show."
+        ],
+        [
+          "**Codes, listings and the arc-flash hole**",
+          "No consensus standard gives a validated way to compute DC {{arc flash}} incident energy — IEEE 1584 is AC only — while labelling rules apply to DC anyway. UL, CSA and IEC are at different stages on 800 V DC, and medium voltage terminated at the row turns white space into medium-voltage-classified space.",
+          "Conservative table-based protective equipment, de-energised work rules and project-by-project negotiation with the authority having jurisdiction until the industry's DC arc-flash model lands (a roughly three-year programme begun in 2026)."
+        ]
+      ]
+    },
+    {
+      "id": "what-the-converter-does-better",
+      "title": "What the converter does better than iron",
+      "kind": "prose",
+      "read": "The efficiency argument is weaker than it sounds; the grid-behaviour and schedule arguments are stronger.",
+      "ps": [
+        "**Efficiency is a chain argument, not a component argument.** A good liquid-cooled 60 Hz transformer is 99.0–99.5% efficient; an SST with three switching stages clusters at 97–98.5%, so as a transformer it is *worse*. The comparison that matters is chain against chain: an SST feeding 800 V replaces transformer plus UPS {{double conversion}} plus PDU plus rack rectifier, and it is that stacked 6–9% loss that the 'up to 5% better' claims are made against. Demand the boundary before comparing two vendors' percentages.",
+        "**Grid behaviour is where the SST has genuine leverage.** Because stage 1 is an {{active front end}}, the unit draws sinusoidal current at unity {{power factor}}, can supply reactive power, can ride through voltage dips to a specified curve — NVIDIA asks for ride-through beyond the ITIC curve by reference to ERCOT's requirements — and can operate {{grid-forming}}, holding its own voltage and frequency. A gigawatt campus is a grid participant, and interconnection rules such as IEEE 2800 and ERCOT NOGRR 282 increasingly demand exactly these behaviours from large loads.",
+        "**A native DC bus** lets a battery sit directly on 800 V with no extra DC-DC stage, giving seconds of full-load backup for the GPU transients and the overload margin the silicon lacks. DC-coupled solar or fuel cells couple the same way, which makes the SST the natural hub of a DC microgrid.",
+        "**Footprint and schedule are the arguments that close sales.** A converter is a fraction of the weight and volume of the transformer-plus-UPS chain it replaces; outdoor-rated units ({{NEMA 3R}}) remove the electrical room entirely; and a factory-built product can be delivered in roughly half the lead time of a large transformer. Every SST vendor in the market sells against transformer lead time in efficiency clothing."
+      ]
+    },
+    {
+      "id": "heron-link-in-the-chain",
+      "title": "Where Heron Link slots in, and what it displaces",
+      "kind": "table",
+      "read": "One hall-edge block replaces a chain of six pieces of equipment. The table maps the product onto the chain it competes with.",
+      "intro": "Heron Link is a hall-edge SST: 34.5 kV AC in, regulated 800 V DC out, rated 4.2 MW per unit in the company's design blueprint (its August 2026 factory release states 5 MW — the two documents disagree and the dossier records both). Four units make a 12 MW block on a four-to-make-three basis feeding forty 270 kW racks. Read each row as: what the legacy hall used, and which part of the block now does that job.",
+      "cols": [
+        "Function in a legacy AC hall",
+        "Legacy equipment",
+        "Inside the hall-edge block"
+      ],
+      "rows": [
+        [
+          "Step down from the utility's medium voltage",
+          "Pad-mount or unit-substation {{transformer}} (60 Hz, 46–48-week lead time)",
+          "Stages 1–2 of the SST: the cascaded {{active front end}} and the {{medium-frequency transformer}}"
+        ],
+        [
+          "Protect the medium-voltage feed",
+          "Medium-voltage switchgear in an electrical room",
+          "Integrated current-limiting fuses and disconnect on the unit; outdoor {{NEMA 3R}} siting removes the room"
+        ],
+        [
+          "Ride through grid disturbances",
+          "{{UPS}} double conversion plus its battery room",
+          "Grid-forming control on the front end plus a battery coupled directly to the 800 V bus (tens of seconds of full-load backup)"
+        ],
+        [
+          "Distribute and protect the feeders",
+          "{{PDU}}s, panelboards and moulded-case breakers",
+          "A multi-channel DC distribution panel with per-channel overcurrent protection and a per-rack {{SSCB}} limiting fault current to a stated ceiling and clearing in microseconds"
+        ],
+        [
+          "Rectify for the rack",
+          "The rack's AC power shelf",
+          "Not displaced: the rack keeps a DC-DC shelf stepping 800 V to the chips — the shelf and sidecar vendors (Delta, LITEON, Megmeet) remain in the chain"
+        ],
+        [
+          "Survive an equipment failure",
+          "2N transformers or N+1 UPS modules",
+          "Cell-level redundancy (spares per phase, sub-cycle bypass) inside the unit, and unit-level {{N+1}} across the block"
+        ]
+      ],
+      "note": "The block-level cost and loss figures the company publishes — about a quarter of the legacy cost per megawatt from medium voltage to rack, and roughly half the losses — are vendor models with vendor-chosen boundaries. They are recorded in the dossier as company claims, not as independent measurements."
+    },
+    {
+      "id": "industry-map",
+      "title": "The industry map: who buys, who competes, why the timing matters",
+      "kind": "prose",
+      "read": "The 800 V transition is four contests, not one. The hall-edge block is the contest where nobody has shipped yet.",
+      "ps": [
+        "**Who buys.** The rack owner sets the architecture — NVIDIA specifies the bus, publishes the reference block, and names the vendors it has qualified — but the buyer of a hall-edge block is the campus developer, hyperscaler or neocloud, purchasing through its EPC and electrical contractor. That buyer is procuring against a schedule, and the transformer lead time is the item most likely to be on its critical path.",
+        "**The four layers.** Silicon (SiC and GaN devices, the point-of-load converters at the chip); the rack shelf and the sidecar (where money moves first, from 2026–2027, shipped by the incumbents of server power); the hall-edge block — SST or {{transformer-rectifier unit}} — where the first 800 V halls use TRUs and the SST is the next generation; and the facility and grid tier (switchgear, substation, utility interconnection), owned by the same industrial groups that make transformers today.",
+        "**Who competes at the hall edge.** The adjacent incumbents — ABB, Eaton, GE Vernova, Siemens, Hitachi Energy, Schneider — arrived from medium-voltage switchgear, UPS and transformers and are hedged on both sides: they sell the TRU bridge now and develop the SST. Chinese and Taiwanese conversion specialists (Sungrow, Zhonhen, Delta, Megmeet) bring inverter-scale manufacturing. The startups — Heron Power, DG Matrix, Amperesand — hold specifications and factories but no shipped fleets. A hyperscaler's conditional commitment to buy a thousand SSTs from 2027 if the specification is met is the tier's most important commercial datapoint, and it belongs to an incumbent.",
+        "**Why the timing matters economically.** NVIDIA's staging attaches 34.5 kV-direct SSTs to roughly 2029, with 2027 halls built on TRUs and sidecars. A vendor whose mass production begins in late 2027 is therefore selling into the second wave, not the first — and a schedule slip of a year moves it from early to late. The reward for arriving on time is a product that removes the single longest-lead item from a campus build; the risk is that the incumbents' hedged position lets them win the bridge and the target both."
+      ]
+    },
+    {
+      "id": "the-clock",
+      "title": "The 800 V DC transition on one clock",
+      "kind": "timeline",
+      "read": "Upper lane: what the architecture's owner specified and when. Lower lane: what the hall-edge vendors say they will ship.",
+      "intro": "Years across the bottom. Read the lanes against each other: the architecture arrives in generations, and every vendor's promise is a bet on which generation it will catch.",
+      "unit": "calendar year",
+      "lanes": {
+        "arch": "Architecture (NVIDIA)",
+        "vend": "Hall-edge vendors"
+      },
+      "items": [
+        {
+          "x": 2025,
+          "lane": "arch",
+          "label": "800 V DC announced (May) and specified (Oct)",
+          "sub": "Single-ended 800 V bus; OCP roster adds the facility tier — ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Siemens"
+        },
+        {
+          "x": 2025,
+          "lane": "vend",
+          "label": "Specifications published",
+          "sub": "Heron Link blueprint; GE Vernova reference designs with a 1,000-unit conditional commitment"
+        },
+        {
+          "x": 2026,
+          "lane": "arch",
+          "label": "Execution paper (Aug)",
+          "sub": "Names TRU families for the first hall-edge blocks; pins 34.5 kV-direct SSTs to the next generation"
+        },
+        {
+          "x": 2026,
+          "lane": "vend",
+          "label": "Factories named",
+          "sub": "Heron selects a Morgan Hill, CA site for up to 10,000 units a year; DG Matrix and Amperesand announce capacity"
+        },
+        {
+          "x": 2027,
+          "lane": "arch",
+          "label": "Kyber racks ship on TRUs and sidecars",
+          "sub": "The first 800 V halls are built with iron transformers plus rectifiers"
+        },
+        {
+          "x": 2027,
+          "lane": "vend",
+          "label": "Pilots, then mass production",
+          "sub": "Heron pilot early 2027, mass production late 2027 — the test of whether a startup can catch the second wave"
+        },
+        {
+          "x": 2029,
+          "lane": "arch",
+          "label": "34.5 kV-direct SST generation",
+          "sub": "The window the hall-edge SST is actually specified for; the DC arc-flash model is due around the same time"
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "Frequency, stages, faults and where the block sits.",
+      "cards": [
+        {
+          "q": "Why does raising the switching frequency shrink a transformer?",
+          "a": "The core must absorb the flux the voltage pushes into it each half-cycle. Voltage ≈ 4.44 × f × turns × flux density × core area, so for the same voltage a core at 10 kHz needs about 1/170th the area of one at 60 Hz."
+        },
+        {
+          "q": "Why does a 34.5 kV SST need so many cells?",
+          "a": "No production {{SiC}} device blocks more than 3.3 kV, and each cell's {{DC link}} is held near half the device rating. The line voltage must be shared across many cells in series per phase — roughly 2.5 times as many at 34.5 kV as at 13.8 kV."
+        },
+        {
+          "q": "What does the {{dual active bridge}} do, and why is it bidirectional?",
+          "a": "It chops a cell's DC into a kilohertz square wave, couples it through the {{medium-frequency transformer}} and rectifies it again. Power flow is set by the phase shift between the two active bridges, so it can push power either way."
+        },
+        {
+          "q": "Why is a DC fault harder to clear than an AC fault?",
+          "a": "AC current passes through zero a hundred and twenty times a second, which is when a mechanical breaker can open. DC has no natural zero, and every cell's capacitor dumps into the fault in microseconds — so a semiconductor breaker ({{SSCB}}) must limit and interrupt it."
+        },
+        {
+          "q": "Why is the SST's efficiency claim a chain argument?",
+          "a": "As a transformer it is less efficient than iron (97–98.5% against 99%+). It wins only when compared as a chain: one conversion replacing transformer, UPS double conversion, PDU and rack rectifier, whose stacked losses run 6–9%."
+        },
+        {
+          "q": "What is a {{transformer-rectifier unit}} and why does it matter to an SST vendor?",
+          "a": "An iron transformer feeding active rectifiers, making the same 800 V bus with proven parts. It is the bridge NVIDIA's first 800 V halls are built on, so it is the competitor an SST must displace before the incumbents ship their own SSTs."
+        },
+        {
+          "q": "Which limitation of an SST does energy storage on the DC bus address?",
+          "a": "The missing thermal reservoir. Silicon has microseconds of {{overload}} margin, so a battery coupled directly to the 800 V bus supplies the surges and transients that iron used to absorb."
+        },
+        {
+          "q": "What is a hall-edge block, and what part of the legacy chain does it NOT replace?",
+          "a": "A medium-voltage-to-800 V conversion unit sited at the edge of the data hall, replacing the transformer, switchgear room, UPS and PDUs. It does not replace the rack's own DC-DC power shelf, which still steps 800 V down to the chips."
+        },
+        {
+          "q": "What does 'four-to-make-three' mean for a 12 MW block?",
+          "a": "Four units are installed where three carry the load, so any one can fail or be serviced without the block losing capacity — unit-level {{N+1}} redundancy on top of the cell-level spares inside each unit."
+        },
+        {
+          "q": "What is the sharpest standards gap for an 800 V DC hall today?",
+          "a": "DC {{arc flash}}: no consensus method computes DC incident energy, so operators label conservatively and negotiate with the authority having jurisdiction until the industry's DC arc-flash model is finished."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "Seven questions on the physics, the architecture and the market.",
+      "items": [
+        {
+          "q": "The core of a transformer running at 10 kHz can be much smaller than one at 60 Hz because:",
+          "c": [
+            "Higher frequency reduces the current",
+            "The core area needed scales inversely with frequency for the same voltage",
+            "Semiconductors do not need a core",
+            "Ferrite is stronger than steel"
+          ],
+          "a": 1,
+          "why": "V ≈ 4.44 × f × N × B × A. Raise f and A can fall in proportion — about 170 times between 60 Hz and 10 kHz."
+        },
+        {
+          "q": "A cascaded H-bridge front end connects many cells in series on each phase mainly so that:",
+          "c": [
+            "Each cell sees only a fraction of the medium voltage, within what commercial SiC devices can block",
+            "The unit can run at higher frequency",
+            "The output bus is stiffer",
+            "Fewer capacitors are needed"
+          ],
+          "a": 0,
+          "why": "No production SiC device blocks 34.5 kV or even 13.8 kV; series cells share the line voltage."
+        },
+        {
+          "q": "Compared with an iron transformer, a solid-state transformer is worse at:",
+          "c": [
+            "Drawing current at unity power factor",
+            "Absorbing a half-hour overload",
+            "Supplying reactive power",
+            "Riding through a voltage dip"
+          ],
+          "a": 1,
+          "why": "Silicon has microseconds of thermal margin; oil and iron take minutes to heat. The other three are things the active front end does better."
+        },
+        {
+          "q": "On an 800 V DC bus, a short circuit is dangerous mainly because:",
+          "c": [
+            "The voltage is above the medium-voltage threshold",
+            "Every cell's DC-link capacitor discharges into it in microseconds and DC has no current zero",
+            "The battery cannot disconnect",
+            "The fuses are too slow to install"
+          ],
+          "a": 1,
+          "why": "That is why per-feeder or per-rack solid-state breakers are in every serious 800 V design."
+        },
+        {
+          "q": "NVIDIA rates the medium-voltage rectifier and the SST at the same efficiency. The SST's efficiency case therefore rests on:",
+          "c": [
+            "Better silicon",
+            "Replacing the whole legacy chain of conversions with one",
+            "Higher switching frequency",
+            "Running cooler"
+          ],
+          "a": 1,
+          "why": "Chain against chain: transformer + UPS + PDU + rack rectifier stack 6–9% of loss; one conversion does not."
+        },
+        {
+          "q": "In NVIDIA's staging, the first 800 V DC halls in 2027 are fed by:",
+          "c": [
+            "34.5 kV solid-state transformers",
+            "Transformer-rectifier units and sidecars",
+            "Bipolar ±400 V buses",
+            "Fuel cells"
+          ],
+          "a": 1,
+          "why": "The execution paper names TRU families for the first hall-edge blocks and attaches 34.5 kV-direct SSTs to the next generation, around 2029."
+        },
+        {
+          "q": "A hall-edge SST block replaces all of the following EXCEPT:",
+          "c": [
+            "The medium-voltage step-down transformer",
+            "The UPS double conversion",
+            "The PDUs and panelboards",
+            "The rack's DC-DC power shelf"
+          ],
+          "a": 3,
+          "why": "The rack still steps 800 V down to the chips; the shelf and sidecar vendors stay in the chain."
+        }
+      ]
+    }
+  ]
+}

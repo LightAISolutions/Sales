@@ -414,6 +414,11 @@
      "slug": "ls-energy-solutions",
      "role": "adjacent",
      "basis": "productsAndServices › String PCS: AiON-SIS and MSSP GEN 2.0 (in-house, Parker heritage) inside its own AC block"
+    },
+    {
+     "slug": "heron-power",
+     "role": "challenger",
+     "basis": "ecosystemRole: the hall-edge challenger in the power-conversion layer — a 34.5 kV-to-800 V DC solid-state transformer sold against the transformer-rectifier units and the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider); the only startup on NVIDIA's facility-tier roster, pre-production"
     }
    ]
   },
@@ -644,6 +649,11 @@
      "slug": "flexgen",
      "role": "adjacent",
      "basis": "productsAndServices › Integrated systems & data-center energy solutions; the BESSUPS product with Rosendin"
+    },
+    {
+     "slug": "heron-power",
+     "role": "adjacent",
+     "basis": "productsAndServices › Heron Link for Data Centers with SuperBBU: the battery on the 800 V bus gives 30 seconds of full-load backup and takes the UPS's job; the 12 MW block eliminates twelve UPS, four PDUs and twenty RPPs — conversion is the primary business"
     }
    ]
   },

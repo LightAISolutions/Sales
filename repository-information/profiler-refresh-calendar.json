@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-09",
+ "updated": "2026-09-12",
  "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
  "companies": [
   {
@@ -2412,6 +2412,21 @@
     "THE RESIDENTIAL #1 CLAIM NEEDS A SECOND SOURCE. Frost & Sullivan — commissioned for the lapsed HK application — ranks Great Power first globally in residential storage cells at 28%. TrendForce ranks it SECOND behind REPT and InfoLink THIRD at 17.3% behind EVE and REPT for the same half. The dossier states top-three. Watch for an uncommissioned house putting it first.",
     "A NAMED CUSTOMER, anywhere. The company has NEVER named one in any filing — top five are anonymised in both FY2024 and FY2025. Concentration fell sharply while revenue grew 50% (top five 29.86% -> 20.31%, largest 10.48% -> 5.20%), which reads as genuine diversification. Named counterparties that do appear are projects, not customers: Azerbaijan's national power company (500MWh, largest in the CIS), Sichuan Zhongfu (107.12MW/428.48MWh, China's largest user-side), Xinjiang Mulei (300MW/1200MWh), Dali Xiangyun (200MW/400MWh).",
     "Chesterton check: there is NO storage/consumer/light-EV revenue split in ANY filing — one product line, 锂离子电池, at 93%+ of revenue. Capacity is disclosed ONLY in ampere-hours (10.121bn Ah annualised at H1 2026, utilisation 165.72%); the website's '100+GWh' claim appears in no filing and cannot be reconciled at any plausible voltage. Two claims widely attached to the HK application are NOT in company filings: CITIC Securities as sole sponsor (CITIC appears only in the unrelated A-share continuing-supervision role — an easy conflation) and the CSRC's 2026-05-15 supplementary-materials request (published by the regulator, never by the company)."
+   ]
+  },
+  {
+   "slug": "heron-power",
+   "cadence": "quarterly",
+   "source": "Private, pre-revenue; no earnings clock. Public record is the company newsroom (heronpower.com/news), PR Newswire/GlobeNewswire releases and SEC Form D filings (CIK 2069722; sec.gov blocked from this environment at v05.37r — efts.sec.gov full-text search answered). Legal name Heron Power Electronics Company (formerly Accelerate Power Co.); the 5 MW figure in releases is the solar/storage configuration, 4.2 MW the 800 V DC one. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-12",
+   "watch": [
+    "LG Energy Solution Vertech pilot commissioning (targeted late 2026) and any first data-center pilot energised at a named campus in early 2027 — the CEO's own bankability gate is field runtime",
+    "Any UL listing or certification announcement for Heron Link (no vendor had completed data-center SST certification as of May 2026 per SemiAnalysis)",
+    "Crusoe: whether the June 2025 letter of intent converts to an order at Abilene; Intersect Power: any purchase announcement",
+    "Morgan Hill factory: site-preparation milestones, equipment installation, and the CalCompetes 2026 milestone of 82 California FTE (base 28) — the first externally enforceable check on the ramp; mass production slated late 2027",
+    "A Series C or project financing before end-2027 — about USD 243M of capital against a USD 100M-plus factory and USD 140.9M of committed investment",
+    "GE Vernova's hyperscaler SST commitment (1,000 units from 2027 if spec is met) and any OCP LVDC SST specification milestone — the incumbent taking the tier before Heron ships",
+    "Chesterton check: do not import Heatmap's April 2026 funding figures (Heron/DG Matrix transposed); Forge's USD 648M post-money and Axios's 'up to USD 1B' are vendor/paywalled estimates, not company figures; 'over 40 GW of interest' and '50 GW of orders' are uncorroborated company statements"
    ]
   }
  ]

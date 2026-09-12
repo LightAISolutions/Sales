@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.37r] — 2026-09-12 05:48:03 PM EST
+
+> **Prompt:** "Picking up from my last session, create the Heron Power dossier and study guide on Fable 5.1 Medium as a fresh session: it is the only startup on NVIDIA's facility-tier 800 VDC roster, the US-relevant candidate for the first 34.5 kV SST energisation, absent from the corpus that both the aidc-power-conversion report and the new primer draw on, and the primer's chapter 7.3 plus sources 22 and 97–101 already hold its six first-party documents. Add a new §8 ledger row and make the 4.2 MW versus 5 MW rating discrepancy the first premise check."
+
+### Added
+
+- **`live-site-pages/profiler-data/heron-power.profile.json`** — Heron Power dossier (schema v7, profileVersion 1, `supplier`, intel-briefing style): 52 sources (first-party share 37%), 12 curated relationships (NVIDIA roster, Intersect Power and Crusoe as announced customers, LG Energy Solution Vertech, the facility-tier competitors, Zhonhen as the TRU bridge, Tesla heritage), four `policyExposure[]` entries (CalCompetes agreement terms, domestic-content and import restrictions, ERCOT NOGRR 282, the DC arc-flash / listing gap), the full Heron Link specification in banded `technicalSpecs[]` for both configurations, and Form D-documented financials
+- **`live-site-pages/profiler-data/heron-power.study.json`** — technology study guide (schema v2, 13 sections): why the rack outgrew AC, the transformer equation, the three-stage cascaded SST as a table, surviving 34.5 kV with 1.7 kV silicon, SST versus transformer-rectifier unit (pros/cons), a five-row limitations ledger, what the converter does better, a function-by-function map of where a hall-edge block slots in, the industry map, a two-lane 800 V DC timeline, ten flashcards and a seven-item quiz
+- **`repository-information/study-prep/heron-power/heron-power-lesson-plan.md`** — eight-module lesson plan with pacing
+- **`live-site-pages/profiler-data/profiler-concepts.json`** — six concepts registered: cascaded H-bridge, dual active bridge, medium-frequency transformer, transformer-rectifier unit, hall-edge block, overload
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — new §8 Phase E row **E8 · `heron-power`** (no row existed) recording the premise verdicts, the identity corrections and the model (Fable 5.1 Medium, no substitution)
+
+### Changed
+
+- **`live-site-pages/profiler-data/profiler-companies.json`** — Heron Power registered (`aka[]`: Heron Power Electronics Company / Co, Heron Power, Inc., Accelerate Power Co., Heron Link, SuperBBU, HeronCare, Heron Factory One; domain `heronpower.com`); denormalized fields synced
+- **`live-site-pages/profiler-data/profiler-segments.json`** — `heron-power` added as **challenger** on `power-conversion-and-rack-power-silicon` and **adjacent** on `in-hall-power`, each with a dossier-verified `basis`
+- **`repository-information/profiler-refresh-calendar.json`** — quarterly-cadence row for `heron-power` with seven watch items (LG Vertech pilot, UL listing, Crusoe/Intersect conversion, CalCompetes 82-FTE milestone, Series C, GE Vernova's 1,000-unit commitment, a Chesterton check on transposed and vendor-estimated figures)
+- **`live-site-pages/profiler-data/profiler-graph.json`** — rebuilt (1,377 edges)
+- **`README.md`** — tree entries for the two data files and the study-prep directory; timestamp and repo version
+
+### Fixed
+
+- **The 4.2 MW versus 5 MW rating discrepancy is resolved, not merely recorded**: the company's Data Centers product page rates the 800 V DC configuration at 4.2 MW ('800V Power: 4.2MW', 45°C) and the Solar & Storage page rates the DC-to-MV inverter configuration of the same platform at 5 MW (50°C, 98.6%); the August and September 2026 releases use the round solar/storage figure. The SST primer's chapter 7.3 line "the two documents disagree" remains literally true and is left as published (a dated snapshot); the dossier carries the resolution
+
+### Notes
+
+- **Identity checks that the primer could not carry**: legal name Heron Power Electronics Company (SEC Form D: 'Heron Power Electronics Co', former name Accelerate Power Co., incorporated 2024, Delaware; the company's own legal pages say 'Heron Power, Inc.'); HQ Scotts Valley, California, not the Bay Area; factory at 850 Jarvis Drive, Morgan Hill. New since the primer: the USD 60M J.P. Morgan / TriplePoint credit facility and Zach Kirkhorn's board seat (2026-09-10), the LG Energy Solution Vertech collaboration (2026-06-02), and TechCrunch's report that data centers are about a third of current business
+- **Corpus reconciliation (Profiler Command step 7)**: three inbound mentions read (`ge-vernova`, `nvidia`, `vicor`), all roster or roster-derived and accurate; zero dossiers changed; the `aka[]` grep returned no further hits. `check-profiler-crossrefs.py` reported 0 findings
+- **Environment**: `sec.gov` and `data.sec.gov` blocked (403) as at v04.91r, but `efts.sec.gov` full-text search answered and both Form D XML documents were retrieved through it; `www.globenewswire.com` failed at the TCP level and the three GlobeNewswire releases were read via Wayback mirrors and cited at their original URLs
+- **Research**: two parallel `general-purpose` subagents on Fable 5.1 (32 first-party and 58 third-party sources evaluated); AI-aggregator domains encountered were excluded; Heatmap's April 2026 piece transposes Heron's and DG Matrix's rounds and is not cited
 
 ## [v05.36r] — 2026-09-12 04:24:32 PM EST
 

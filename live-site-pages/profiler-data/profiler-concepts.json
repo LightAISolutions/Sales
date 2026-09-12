@@ -1362,6 +1362,17 @@
       ]
     },
     {
+      "slug": "cascaded-h-bridge",
+      "term": "cascaded H-bridge",
+      "def": "A converter front end built from many identical single-phase cells connected in series on each phase, so that each cell sees only a fraction of the medium voltage. It is how a solid-state transformer survives 13.8 or 34.5 kV with semiconductors rated at a few kilovolts, and the cell count is its cost driver.",
+      "aliases": [
+        "CHB",
+        "input-series output-parallel",
+        "ISOP",
+        "series-connected cells"
+      ]
+    },
+    {
       "slug": "catastrophe-bond",
       "term": "catastrophe bond",
       "def": "A security that transfers catastrophe risk to capital-market investors instead of a reinsurer. Investors take a coupon and lose principal if a defined event occurs; the sponsor gets multi-year, fully collateralised cover that does not depend on any insurer's credit.",
@@ -3391,6 +3402,16 @@
       ]
     },
     {
+      "slug": "dual-active-bridge",
+      "term": "dual active bridge",
+      "def": "An isolated DC-DC converter with a full switching bridge on each side of a transformer. The primary chops DC into a kilohertz square wave, the secondary rectifies it back, and power flow is set by the phase shift between the two bridges — so it works in either direction.",
+      "aliases": [
+        "DAB",
+        "dual-active bridge",
+        "CLLC"
+      ]
+    },
+    {
       "slug": "dual-class-shares",
       "term": "dual-class shares",
       "def": "Two classes of stock with different votes per share, so founders can keep control of the company while owning a minority of its economic value.",
@@ -5082,6 +5103,16 @@
       ]
     },
     {
+      "slug": "hall-edge-block",
+      "term": "hall-edge block",
+      "def": "A medium-voltage-to-800 V DC conversion unit — a solid-state transformer or a transformer-rectifier unit — sited at the edge of the data hall, replacing the transformer, switchgear room, UPS and PDUs of a legacy hall. The rack's own DC-DC shelf remains downstream of it.",
+      "aliases": [
+        "hall-edge SST",
+        "Option C block",
+        "hall edge"
+      ]
+    },
+    {
       "slug": "halving",
       "term": "halving",
       "def": "A scheduled event, roughly every four years, that cuts the new bitcoin paid to miners per block in half. It is a step change in industry revenue with no offsetting change in cost, so it forces the least efficient capacity out.",
@@ -6740,6 +6771,16 @@
       ]
     },
     {
+      "slug": "medium-frequency-transformer",
+      "term": "medium-frequency transformer",
+      "def": "The small transformer inside a solid-state transformer cell that provides galvanic isolation and step-down at 5–50 kHz instead of 60 Hz. Its core shrinks by the ratio of the frequencies, but it must hold medium-voltage insulation in a small volume under fast-edged square waves, which makes it the component with the fewest suppliers.",
+      "aliases": [
+        "MFT",
+        "high-frequency transformer",
+        "HFT"
+      ]
+    },
+    {
       "slug": "medium-voltage",
       "term": "medium voltage",
       "def": "Distribution-level voltage, roughly the single-digit to tens of kilovolts — the tier data centers and storage plants connect at before power is stepped down to usable levels.",
@@ -7661,6 +7702,15 @@
       "aliases": [
         "OTA update",
         "remote firmware update"
+      ]
+    },
+    {
+      "slug": "overload",
+      "term": "overload",
+      "def": "Load above a machine's continuous rating for a limited time. An oil-filled transformer tolerates large overloads for minutes because its mass takes time to heat; a semiconductor converter has microseconds of margin and must be sized for peak or backed by storage.",
+      "aliases": [
+        "overload margin",
+        "surge tolerance"
       ]
     },
     {
@@ -11264,6 +11314,16 @@
       "def": "A device that changes AC voltage through two magnetically coupled windings, stepping transmission voltage down through substation, medium-voltage, and unit tiers until equipment can use it. Every step costs a little efficiency, a data-center power chain passes through several, and the lead time on large units is one of the buildout's hardest constraints.",
       "aliases": [
         "transformers"
+      ]
+    },
+    {
+      "slug": "transformer-rectifier-unit",
+      "term": "transformer-rectifier unit",
+      "def": "A conventional 60 Hz transformer feeding a bank of active rectifiers to make a DC bus from medium voltage. It is the proven-parts way to build an 800 V DC data hall, and the bridge the first 800 V halls use while solid-state transformers mature.",
+      "aliases": [
+        "TRU",
+        "MV rectifier",
+        "transformer rectifier unit"
       ]
     },
     {

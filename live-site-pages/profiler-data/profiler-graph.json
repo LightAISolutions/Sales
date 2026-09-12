@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-09",
- "companies": 167,
+ "built": "2026-09-12",
+ "companies": 168,
  "edges": [
   {
    "a": "abb",
@@ -204,6 +204,50 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "abb",
+   "b": "heron-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Facility-tier peer on the same NVIDIA roster with the only orderable solid-state medium-voltage product (a 34.5 kV static UPS).",
+     "context": "ABB sits beside Heron on NVIDIA's October 2025 list of data center power system providers and, per the corpus's SST primer, holds the only orderable solid-state MV product in the tier. It also backs DG Matrix, a rival SST startup (trade press).",
+     "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Heron Power as the hall-edge challenger in the power-conversion layer: a solid-state transformer whose specification maps one-to-one onto the medium-voltage-to-800 V DC block NVIDIA's August 2026 execution paper reserves for the next generation, sold against the transformer-rectifier units and sidecars the 2027 halls will use and against the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) that are hedged on both.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "That timing is survivable if the factory holds schedule and fatal to the data-center thesis if it slips a year, because the adjacent incumbents — GE Vernova with a hyperscaler's conditional 1,000-unit commitment from 2027, ABB, Eaton, Siemens, Hitachi Energy — are hedged across the TRU bridge and the SST target.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
   },
   {
    "a": "abb",
@@ -18391,6 +18435,51 @@
   },
   {
    "a": "crusoe",
+   "b": "heron-power",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Letter of intent reported by Bloomberg and DCD in June 2025, tied to Crusoe's Abilene, Texas campus; named again by Latitude Media in August 2026.",
+     "context": "Bloomberg reported on 3 June 2025 that Heron had 'inked preliminary deals with firms including Crusoe', and DCD headlined a letter of intent; the company's own site links the DCD story by title. Latitude Media's August 2026 factory coverage names Crusoe alongside Intersect Power as the two disclosed customers. A letter of intent is not an order, and Crusoe has announced nothing; the Texas siting makes ERCOT's NOGRR 282 ride-through rule the relevant hook for Heron's integrated 30-second battery claim (analysis).",
+     "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+     "status": "announced",
+     "since": "2025-06"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Heron Power is the only startup on NVIDIA's facility-tier 800 V DC roster and holds the most completely specified hall-edge solid-state transformer in the public record — 34.5 kV AC to 800 V DC, 4.2 MW per Heron Link — but it has shipped no unit, names two customers (Intersect Power and a Crusoe letter of intent), and does not begin mass production until late 2027, after NVIDIA's first 800 V halls are built on transformer-rectifier units; whether the Morgan Hill factory ramps on schedule against roughly USD 243M of equity and credit is the whole thesis.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Heron Power's specification is the most complete hall-edge SST in the public record and maps one-to-one onto NVIDIA's Option C block, but that it has no shipped unit, no independently checkable datasheet, no UL listing on the record, and two named customer engagements (an Intersect Power quote and a Crusoe letter of intent).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-13",
+     "text": "Reuters: Baglino declines to name customers, citing 'strong interest from electric utilities and data center developers'; Latitude Media names Intersect Power and Crusoe and reports demand 'well north of' 40 GW — The demand statement remains company-sourced and uncorroborated by any customer; two names are public and neither has confirmed a purchase order.",
+     "src": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-03",
+     "text": "Bloomberg and DCD report a letter of intent with Crusoe, tied to its Abilene, Texas campus — A letter of intent is not an order; it remains the only data-center customer engagement in the public record fifteen months later.",
+     "src": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-13"
+  },
+  {
+   "a": "crusoe",
    "b": "hithium",
    "evid": [
     {
@@ -22545,6 +22634,50 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "eaton",
+   "b": "heron-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Facility-tier peer that bought SST intellectual property (Resilient Power Systems, August 2025) and sells the 800 V DC skid around it.",
+     "context": "Eaton is on the same NVIDIA roster and completed its acquisition of Resilient Power Systems in August 2025, giving an adjacent incumbent an SST line and the switchgear, busway and UPS business Heron's block proposes to delete.",
+     "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Heron Power as the hall-edge challenger in the power-conversion layer: a solid-state transformer whose specification maps one-to-one onto the medium-voltage-to-800 V DC block NVIDIA's August 2026 execution paper reserves for the next generation, sold against the transformer-rectifier units and sidecars the 2027 halls will use and against the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) that are hedged on both.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "That timing is survivable if the factory holds schedule and fatal to the data-center thesis if it slips a year, because the adjacent incumbents — GE Vernova with a hyperscaler's conditional 1,000-unit commitment from 2027, ABB, Eaton, Siemens, Hitachi Energy — are hedged across the TRU bridge and the SST target.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
   },
   {
    "a": "eaton",
@@ -29711,6 +29844,64 @@
   },
   {
    "a": "ge-vernova",
+   "b": "heron-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The incumbent SST developer at the same hall-edge layer, carrying a hyperscaler's conditional commitment to buy 1,000 solid-state transformers from 2027.",
+     "context": "GE Vernova's December 2025 investor update describes an R&D sharing arrangement with a hyperscaler and 'a commitment from them to buy 1,000 solid state transformers from us in 2027 and beyond' if the specification is met — the tier's most important commercial datapoint, and it belongs to an incumbent that also ships the transformer-rectifier bridge. Heron's own dossier judges that a GE Vernova order in 2027 would take the tier before Heron's late-2027 mass production (analysis).",
+     "source": "https://www.gevernova.com/sites/default/files/gev_webcast_transcript_12092025.pdf",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a hyperscaler-funded development deal with a 1,000-unit purchase commitment from 2027 — if the spec lands, GEV leapfrogs the AC-switchboard incumbents into the 800 VDC perimeter; if it slips, the referenced ~$13B SST market forms around Heron Power-class challengers instead.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Heron Power as the hall-edge challenger in the power-conversion layer: a solid-state transformer whose specification maps one-to-one onto the medium-voltage-to-800 V DC block NVIDIA's August 2026 execution paper reserves for the next generation, sold against the transformer-rectifier units and sidecars the 2027 halls will use and against the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) that are hedged on both.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "That timing is survivable if the factory holds schedule and fatal to the data-center thesis if it slips a year, because the adjacent incumbents — GE Vernova with a hyperscaler's conditional 1,000-unit commitment from 2027, ABB, Eaton, Siemens, Hitachi Energy — are hedged across the TRU bridge and the SST target.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Any 2027 SST purchase order at GE Vernova's hyperscaler (the incumbent taking the tier before Heron ships).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "ge-vernova",
    "b": "hitachi-energy",
    "curated": {
     "a": {
@@ -32688,6 +32879,383 @@
     }
    ],
    "last": "2026-05"
+  },
+  {
+   "a": "heron-power",
+   "b": "hitachi-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Facility-tier peer and the world's largest transformer maker — the incumbent of the machine Heron Link replaces.",
+     "context": "Hitachi Energy is named on the same NVIDIA roster; its engineers are quoted in trade press cautioning that compact 34.5 kV SSTs present 'significant design and manufacturing challenges'. It is hedged on both sides of the transition: it sells the transformer that Heron's schedule argument is made against and develops the SST.",
+     "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Heron Power as the hall-edge challenger in the power-conversion layer: a solid-state transformer whose specification maps one-to-one onto the medium-voltage-to-800 V DC block NVIDIA's August 2026 execution paper reserves for the next generation, sold against the transformer-rectifier units and sidecars the 2027 halls will use and against the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) that are hedged on both.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "That timing is survivable if the factory holds schedule and fatal to the data-center thesis if it slips a year, because the adjacent incumbents — GE Vernova with a hyperscaler's conditional 1,000-unit commitment from 2027, ABB, Eaton, Siemens, Hitachi Energy — are hedged across the TRU bridge and the SST target.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "intersect-power",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Intersect Power's CEO Sheldon Kimber is quoted in the Series B release; trade press names Intersect as one of two disclosed customers.",
+     "context": "The February 2026 Series B release carries a customer endorsement from Intersect Power's chief executive, and Latitude Media (August 2026) names Intersect Power and Crusoe as the two customers the company has disclosed. No order size, product configuration or delivery date is public, and Intersect has not announced a purchase; the engagement is recorded as announced rather than active.",
+     "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
+     "status": "announced",
+     "since": "2026-02"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Heron Power is the only startup on NVIDIA's facility-tier 800 V DC roster and holds the most completely specified hall-edge solid-state transformer in the public record — 34.5 kV AC to 800 V DC, 4.2 MW per Heron Link — but it has shipped no unit, names two customers (Intersect Power and a Crusoe letter of intent), and does not begin mass production until late 2027, after NVIDIA's first 800 V halls are built on transformer-rectifier units; whether the Morgan Hill factory ramps on schedule against roughly USD 243M of equity and credit is the whole thesis.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Heron Power's specification is the most complete hall-edge SST in the public record and maps one-to-one onto NVIDIA's Option C block, but that it has no shipped unit, no independently checkable datasheet, no UL listing on the record, and two named customer engagements (an Intersect Power quote and a Crusoe letter of intent).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-13",
+     "text": "Reuters: Baglino declines to name customers, citing 'strong interest from electric utilities and data center developers'; Latitude Media names Intersect Power and Crusoe and reports demand 'well north of' 40 GW — The demand statement remains company-sourced and uncorroborated by any customer; two names are public and neither has confirmed a purchase order.",
+     "src": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-18",
+     "text": "USD 140M Series B co-led by a16z American Dynamism and Breakthrough Energy Ventures, with Capricorn, Energy Impact Partners, Valor Atreides AI Fund and Gigascale; Form D shows USD 138.3M sold to 11 investors; 'more than 40 gigawatts of early interest'; Intersect Power's CEO quoted — Valuation undisclosed by the company; a data vendor's certificate-of-incorporation estimate puts the post-money near USD 648M and a paywalled report put the target 'up to USD 1 billion' — neither is a company figure.",
+     "src": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "lg-energy-solution",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "June 2026 design and engineering collaboration with LG Energy Solution Vertech pairing Heron Link with LG's DC battery block; pilot targeted late 2026.",
+     "context": "The 2 June 2026 release, with a quote from LGES Vertech CEO Jaehong Park, claims the combination cuts DC-block project footprint by 30%, raises round-trip efficiency by 2.4% and lifts project NPV by up to 6%, marketed as American-made. It is the company's first named integrator channel and sits on the solar/storage configuration of the platform, not the data-center one.",
+     "source": "https://heronpower.com/news-stories/lg-vertech-collaboration",
+     "status": "announced",
+     "since": "2026-06",
+     "via": "Heron Link for Solar & Storage"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the near-term revenue is solar and storage, not data centers: TechCrunch reports data centers at about a third of current business, the first named channel partner is LG Energy Solution Vertech, the first prototype went on a solar array, and the open Head of Sales role is for that segment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Solar & Storage — 5 MW medium-voltage inverter",
+     "date": "",
+     "text": "A June 2026 design and engineering collaboration with LG Energy Solution Vertech pairs the Link with LG's DC block, claiming 30% lower DC-block footprint, 2.4% higher round-trip efficiency and up to 6% NPV, with a pilot targeted for late 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-02",
+     "text": "Design and engineering collaboration with LG Energy Solution Vertech pairing Heron Link with LG's DC block — 30% smaller DC-block footprint, 2.4% higher round-trip efficiency, up to 6% NPV; pilot targeted late 2026 — The first named integrator channel is on the solar/storage side, not the data-center side — consistent with two-thirds of current business being solar and storage.",
+     "src": "https://heronpower.com/news-stories/lg-vertech-collaboration",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-02"
+  },
+  {
+   "a": "heron-power",
+   "b": "mitsubishi-electric",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Named among nine 'data center power system providers' in NVIDIA's 800 V DC ecosystem at the October 2025 OCP Global Summit — the only startup in that tier.",
+     "context": "NVIDIA's 13 October 2025 blog lists the facility-tier partners as ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv. Heron's own release the same day says NVIDIA 'recognized Heron as a data center power system provider within its Open Innovation Ecosystem' and that Heron Link is 'natively compatible with the 800V DC rack architecture'. The relationship is a roster recognition, not a purchase or a co-development: NVIDIA's August 2026 execution paper does not name Heron, and builds its first Option C blocks on transformer-rectifier units.",
+     "source": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "status": "active",
+     "since": "2025-10",
+     "via": "Heron Link"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "OCP Summit: Kyber rack detailed (576 Rubin Ultra GPUs, 2027), 800VDC ecosystem expanded (ABB, GE Vernova, Hitachi Energy, Siemens, Heron Power added) + whitepaper released — The grid-equipment tier joining the partner list moves 800VDC from server-vendor concern to utility-interconnection concern — where BESS lives.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Heron Power is the only startup on NVIDIA's facility-tier 800 V DC roster and holds the most completely specified hall-edge solid-state transformer in the public record — 34.5 kV AC to 800 V DC, 4.2 MW per Heron Link — but it has shipped no unit, names two customers (Intersect Power and a Crusoe letter of intent), and does not begin mass production until late 2027, after NVIDIA's first 800 V halls are built on transformer-rectifier units; whether the Morgan Hill factory ramps on schedule against roughly USD 243M of equity and credit is the whole thesis.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Heron Power as the hall-edge challenger in the power-conversion layer: a solid-state transformer whose specification maps one-to-one onto the medium-voltage-to-800 V DC block NVIDIA's August 2026 execution paper reserves for the next generation, sold against the transformer-rectifier units and sidecars the 2027 halls will use and against the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) that are hedged on both.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Heron Power's specification is the most complete hall-edge SST in the public record and maps one-to-one onto NVIDIA's Option C block, but that it has no shipped unit, no independently checkable datasheet, no UL listing on the record, and two named customer engagements (an Intersect Power quote and a Crusoe letter of intent).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the company is selling into the second wave of the 800 V transition, not the first: NVIDIA's August 2026 execution paper builds the 2027 hall-edge blocks on transformer-rectifier units and attaches 34.5 kV-direct SSTs to 'toward 2029', and Heron's mass production begins late 2027.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the schedule argument, not efficiency, is the sale: NVIDIA rates the MV rectifier and the SST at the same 98.5%+, so the company's 'single 24-week lead time' against 46–48 weeks for switchgear (and multi-year transformer waits reported by Reuters and Wood Mackenzie) is the claim customers are buying — and it is the one no third-party source has yet stated or tested.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "The specification maps onto the medium-voltage-to-800 V DC hall-edge block that NVIDIA's August 2026 execution paper builds first from transformer-rectifier units (naming Zhonhen's Panama architecture among them) and reserves 34.5 kV-direct SSTs for the generation 'toward 2029'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "NVIDIA rates the MV rectifier and the SST at the same 98.5%+, so the contest is lead time, footprint and grid behaviour, not efficiency (analysis).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded 2024 by Drew Baglino (Tesla 2006–2024, SVP Powertrain & Energy Engineering) as Accelerate Power Co., renamed Heron Power Electronics Company, a Delaware corporation headquartered in Scotts Valley, California, per SEC Form D and the California GO-Biz agreement.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Solar & Storage — 5 MW medium-voltage inverter",
+     "date": "",
+     "text": "Competes with the central and string inverter incumbents (Sungrow, Power Electronics, SMA) at the medium-voltage block level on efficiency, footprint and grid-forming capability; the medium-voltage direct connection removes the step-up transformer from the block.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "heron-power",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Facility-tier peer on the NVIDIA roster whose reference designs the Heron Blueprint cites for the legacy chain it compares against.",
+     "context": "Schneider Electric appears beside Heron on the October 2025 roster and owns the AI-factory reference-design franchise; Heron's Blueprint cites a Schneider reference design when quantifying the transformer-UPS-PDU chain its block replaces.",
+     "source": "https://heronpower.com/blueprint-for-800-vdc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ships a 3 MW EnerNeo SST (10–13.8 kV to 800 V DC, 98.5%) and is the incumbent in the utility inverter market Heron's solar/storage configuration enters.",
+     "context": "Sungrow's July 2026 EnerNeo launch is a shipping hall-edge SST at 13.8 kV, while Heron's is pre-production at 34.5 kV; on the solar side Sungrow is the No. 1 inverter maker whose central and string products the 5 MW Heron Link competes with on efficiency and footprint (analysis).",
+     "source": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Solar & Storage — 5 MW medium-voltage inverter",
+     "date": "",
+     "text": "Competes with the central and string inverter incumbents (Sungrow, Power Electronics, SMA) at the medium-voltage block level on efficiency, footprint and grid-forming capability; the medium-voltage direct connection removes the step-up transformer from the block.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "heron-power",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Founder heritage: Drew Baglino (Tesla 2006–2024, SVP Powertrain & Energy), board member Zach Kirkhorn (ex-CFO) and investor JB Straubel (co-founder) are all Tesla alumni.",
+     "context": "The company describes its team as having 'collectively designed and deployed over 80 gigawatts of grid-connected power electronics', a Tesla Energy lineage (Powerwall, Powerpack, Megapack under Baglino). No commercial relationship with Tesla is on the record.",
+     "source": "https://www.globenewswire.com/news-release/2025/05/29/3090121/0/en/Heron-Power-Raises-38M-Series-A-to-Accelerate-an-All-Electric-Future.html",
+     "status": "historical"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Founded 2024 by Drew Baglino (Tesla 2006–2024, SVP Powertrain & Energy Engineering) as Accelerate Power Co., renamed Heron Power Electronics Company, a Delaware corporation headquartered in Scotts Valley, California, per SEC Form D and the California GO-Biz agreement.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-10",
+     "text": "USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board — Venture debt before a first shipment funds the Morgan Hill conversion without repricing the equity; the Tesla finance bench now sits on the board as the company moves 'from engineering to scale'.",
+     "src": "https://www.prnewswire.com/news-releases/heron-power-secures-60-million-credit-facility-and-adds-ex-tesla-cfo-zach-kirkhorn-to-its-board-302874549.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-29",
+     "text": "USD 38M Series A led by Capricorn's Technology Impact Fund with Breakthrough Energy Ventures, Energy Impact Partners, Gigascale, Powerhouse, Valor Equity Partners, JB Straubel and Zach Kirkhorn — total funding USD 43M; 'internal pilot in 2026, partner installations in early 2027' — The Tesla energy leadership reassembled as a cap table; the timeline set here is the one against which every later statement slips or holds.",
+     "src": "https://www.globenewswire.com/news-release/2025/05/29/3090121/0/en/Heron-Power-Raises-38M-Series-A-to-Accelerate-an-All-Electric-Future.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-10"
+  },
+  {
+   "a": "heron-power",
+   "b": "vertiv",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
+     "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "heron-power",
+   "b": "zhonhen",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Its Panama one-stage 10 kV-to-DC transformer-rectifier architecture is among the TRU families NVIDIA's August 2026 paper names for the first Option C blocks — the bridge Heron's SST must displace.",
+     "context": "NVIDIA's execution paper builds the first hall-edge blocks on transformer-rectifier units and names Zhonhen's Panama architecture among them; the SST generation is attached to 'toward 2029'. Zhonhen is therefore the incumbent of the 2027 wave that Heron's late-2027 production competes against (analysis).",
+     "source": "https://heronpower.com/blueprint-for-800-vdc",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "hitachi-energy",
