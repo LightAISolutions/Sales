@@ -1,0 +1,438 @@
+{
+ "schemaVersion": 2,
+ "slug": "gridmatic",
+ "title": "Gridmatic — Technology Study Guide",
+ "lastUpdated": "2026-09-12",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: one forecast, three businesses",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Gridmatic is a company built around a single capability — predicting tomorrow's electricity prices better than the market does — and it has attached three businesses to it: trading, battery offtake and retail supply. This guide teaches what a price forecast is worth in each.",
+   "ps": [
+    "Wholesale electricity has a price for every hour and every location, set a day ahead and again in real time. Those prices move with weather, demand and what happens to be broken. A company that forecasts them better than the crowd can make money in three ways: by trading the gap between the day-ahead and real-time prices with no plant at all; by taking on a battery's revenue risk under a {{tolling agreement}} or a {{floor agreement}} and then bidding it well; and by selling power to customers whose bill depends on those same hours.",
+    "That is Gridmatic's shape. It owns no generation and, unlike the pure-play optimisers that sell a desk for a fee, it puts a fund's capital behind the batteries it optimises and runs a Texas-Ohio-Pennsylvania retail book on the same forecasts. Every performance claim it makes is its own; the guide flags what public data can and cannot check.",
+    "The sequence: why prices are partly forecastable, how a forecast becomes a bid, the menu of battery contracts and who carries the risk under each, what one filed offtake shows, retail supply as a forecasting business, how to read a leaderboard, and the industry map. Company history and people stay in the dossier."
+   ]
+  },
+  {
+   "id": "why-prices-move",
+   "title": "Why prices are forecastable — and why not entirely",
+   "kind": "prose",
+   "read": "Weather drives demand and renewable output; the grid's plumbing turns that into a different price at every node; the day-ahead auction then guesses at all of it a day early.",
+   "ps": [
+    "Electricity cannot be stored cheaply at scale, so its price is set every interval by whichever plant is needed last. In a grid with a lot of wind and solar that plant changes with the weather: a still evening pulls gas plants on and prices spike; a windy night pushes prices toward zero or below ({{negative pricing}}). Demand moves with temperature. So a good weather model is most of a good price model, and Gridmatic says its own weather models 'are the core of our power and price forecast models'.",
+    "Prices also differ by place. When a transmission line is full, the price on the far side is set by a more expensive local plant. Texas settles every resource at its own {{settlement point}}, so a forecast has to be nodal — 'thousands of locations' in the company's words — and a battery's revenue depends on where it sits as much as how it bids.",
+    "The market itself makes a forecast: the {{day-ahead market}} clears at prices that are the participants' collective guess for tomorrow. The {{real-time market}} then settles what actually happens. The gap between them is the {{DART spread}}, and a trader who forecasts real time better than the day-ahead crowd can sell where the day-ahead price is too high and buy where it is too low, without owning anything — this is {{convergence bidding}}, and it is the business Gridmatic ran for its first four years. ERCOT publishes every participant's day-ahead awards sixty days later, which is why the company can call itself the market's most profitable day-ahead trader and why no one has yet checked."
+   ]
+  },
+  {
+   "id": "forecast-to-bid",
+   "title": "From a forecast to a bid",
+   "kind": "prose",
+   "read": "A forecast is a distribution; a bid is a decision under it; a battery adds a memory.",
+   "ps": [
+    "A single predicted price is not enough to act on. Tomorrow at 6pm might be $40 or $4,000, and the plan that is best if it is $40 is wrong if it is $4,000. A {{probabilistic forecast}} — a distribution of outcomes with probabilities — lets the optimiser choose the plan that does best across the range. Gridmatic describes its storage scheduling to Texas regulators in exactly these terms: a look-ahead of about twenty-four hours 'with explicit uncertainty (scenario/probabilistic methods)'.",
+    "A battery turns the problem into a sequence. It can only discharge what it charged, so the {{state of charge}} links every interval to the next; it must keep enough energy back to honour any reserve it has sold; and each cycle consumes life, so the {{degradation cost}} is weighed against the spread. In Texas the optimiser also chooses, every five minutes since {{real-time co-optimization}} went live, whether the next megawatt is worth more as energy or as a reserve product.",
+    "The output is an {{offer curve}} for each interval — how much to buy or sell at each price — submitted through the {{qualified scheduling entity}} the company holds. Gridmatic says the process is fully automated, 'automation that surpasses human performance'. That is the difference between an optimiser and a trading floor: the same model runs the trading book, the batteries and the retail hedges, and the humans work on the model rather than the bids."
+   ]
+  },
+  {
+   "id": "the-offtake-menu",
+   "title": "The offtake menu: who carries the risk",
+   "kind": "proscons",
+   "read": "The same forecast can be sold as a service, rented as a toll, or pledged as a floor. Each shape moves the price risk — and the capital — a step further from the owner.",
+   "intro": "Gridmatic offers all three shapes to battery owners. The distinction from a fee-only optimiser is the last two, which need a balance sheet: that is what its USD 50 million storage fund is for.",
+   "cards": [
+    {
+     "t": "**Optimisation for a fee or share**",
+     "meta": "The owner keeps the revenue and pays the optimiser a share or a fee",
+     "adv": [
+      "No capital needed",
+      "Owner keeps the upside"
+     ],
+     "dis": [
+      "Owner keeps the merchant risk",
+      "Not bankable on its own"
+     ]
+    },
+    {
+     "t": "**{{tolling agreement}}**",
+     "meta": "The offtaker pays fixed rent for the dispatch rights",
+     "adv": [
+      "Owner's revenue is fixed for the term",
+      "Lender can size debt against the rent"
+     ],
+     "dis": [
+      "Offtaker carries all price risk and must post {{credit support}}",
+      "Owner forgoes the good years"
+     ]
+    },
+    {
+     "t": "**{{floor agreement}} with upside share**",
+     "meta": "The offtaker guarantees a minimum and shares what is earned above it",
+     "adv": [
+      "Bankable minimum plus a share of upside",
+      "Offtaker's forecasting skill raises both parties' return"
+     ],
+     "dis": [
+      "Offtaker still carries the downside and the collateral",
+      "The floor price and split are private — Energy Vault's filings disclose neither"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "one-filed-offtake",
+   "title": "What one filed offtake shows",
+   "kind": "table",
+   "read": "Because the owner is a listed company, Cross Trails is the only Gridmatic contract described in a regulator's filings. The rows are what those filings say and what they do not.",
+   "intro": "Energy Vault built a 57 MW, two-hour battery in west Texas and reported the contract to its shareholders. Read it as a worked example of a {{floor agreement}} and of what a counterparty's credit means to a lender.",
+   "cols": [
+    "Item",
+    "What the filings say",
+    "What is not disclosed"
+   ],
+   "rows": [
+    [
+     "**Asset**",
+     "57 MW / 114 MWh, Snyder, Scurry County, Texas; commercial operation 31 May 2025",
+     "—"
+    ],
+    [
+     "**Contract**",
+     "Ten-year 'physically settled revenue floor' with 'upside participation' — the first of its kind for a battery in ERCOT; Gridmatic also provides the QSE service",
+     "The floor level per MW and the upside split"
+    ],
+    [
+     "**What backs the floor**",
+     "'Gridmatic's previously announced Energy Storage Fund' — USD 50 million of commitments",
+     "Who the fund's investors are"
+    ],
+    [
+     "**What the floor bought the owner**",
+     "USD 18 million of project debt plus a USD 12 million-plus tax-credit sale, at about a 15% levered return",
+     "The lender's name and terms"
+    ],
+    [
+     "**How the lender rated the counterparty**",
+     "Non-investment-grade 'fixed toll plus upside' offtaker; the owner's bridge loan before the take-out cost 24% a year",
+     "—"
+    ],
+    [
+     "**How the battery then performed**",
+     "Company-relayed: 99% real-time {{TBx capture rate}} in August 2025. Independent: 43rd of 308 ERCOT batteries by revenue per kW-month in the first seven months of 2026",
+     "Whether the floor was above or below the revenue actually earned"
+    ]
+   ]
+  },
+  {
+   "id": "retail-with-a-forecast",
+   "title": "Retail supply as a forecasting business",
+   "kind": "prose",
+   "read": "A retailer buys power by the hour and sells it by the year; the difference is a forecast. A retailer that can also bid its customers' flexibility earns from the same hours twice.",
+   "ps": [
+    "In a {{retail choice}} state the wires company delivers power but the customer buys the energy from a competing supplier — a retail electric provider in Texas, a licensed supplier in Ohio and Pennsylvania. The supplier is a {{load-serving entity}}: it must buy, in the wholesale market, every hour of every customer's consumption, at prices it cannot control, and sell it at a price it fixed months earlier. Its margin is therefore a bet on hourly prices and hourly demand, which is the same bet the trading desk makes.",
+    "Gridmatic's retail products follow from that. Fixed, block-and-index and index contracts move different shares of the price risk between customer and supplier. A '24/7 carbon-free' option uses {{hourly matching}} — the supplier buys renewable output and transfers a {{T-EAC}} for each hour, so a data centre can claim clean power hour by hour rather than as an annual total; the company reports about 86% hourly coverage for one Houston data centre in 2023.",
+    "The distinctive product is the Load Optimizer. A bitcoin mine or a flexible data centre can stop consuming at short notice. Gridmatic bids that flexibility into the {{day-ahead market}} and the {{Emergency Response Service}} on the customer's behalf — the customer is paid to not consume in the hours the forecast says are expensive — and shares the proceeds, in some contracts guaranteeing the customer 'only upside'. That puts the forecast error on the supplier's book, and the collateral the wholesale market demands on its balance sheet; daily settlement partnerships exist to shrink that collateral. Registration as a {{load resource}} is the formal version of the same idea."
+   ]
+  },
+  {
+   "id": "reading-a-leaderboard",
+   "title": "How to read a battery leaderboard",
+   "kind": "table",
+   "read": "ERCOT publishes enough data for outsiders to rank batteries; California publishes less. The yardsticks measure different things and the company quotes the ones that flatter it, as every company does.",
+   "intro": "Three kinds of number appear in Gridmatic's materials and in the third-party record. Read what each is built from before comparing them.",
+   "cols": [
+    "Yardstick",
+    "Built from",
+    "What it proves",
+    "What it does not"
+   ],
+   "rows": [
+    [
+     "**{{TBx capture rate}}**",
+     "Modo Energy's model of each battery's perfect-foresight daily spread against its energy revenue",
+     "Bidding quality on energy — 115% and 99% for the two Gridmatic batteries in August 2025, by the company's account of Modo's table",
+     "Ignores reserves; one month; the table is paywalled, so the figure is company-relayed"
+    ],
+    [
+     "**Revenue per kW-month**",
+     "ERCOT's sixty-day disclosure of every resource's awards and dispatch, compiled by third parties",
+     "Total earnings rank — Endurance Park 11th and Cross Trails 43rd of 308 in January–July 2026",
+     "Mixes location, duration and outages with skill; a west-Texas node and a Houston node are not the same market"
+    ],
+    [
+     "**'Most profitable day-ahead trader'**",
+     "The company's own reading of the same sixty-day disclosures for all participants since 2019",
+     "That the company believes its cumulative day-ahead awards exceed everyone's",
+     "No third party has replicated it; ERCOT publishes no profit; real-time and retail results are invisible"
+    ],
+    [
+     "**Fleet size**",
+     "Company statements: '300 MW / 1 GWh' under management",
+     "Scale of the offtake business",
+     "Named assets sum to about 209 MW; the balance is unidentified and the basis (operating, contracted) shifts between releases"
+    ]
+   ]
+  },
+  {
+   "id": "where-gridmatic-slots-in",
+   "title": "Where Gridmatic slots in: three seats in one chain",
+   "kind": "table",
+   "read": "The same company occupies three positions that other firms hold separately. The table maps each seat to who normally holds it.",
+   "intro": "Read each row as: the seat, who usually fills it, and what Gridmatic does there.",
+   "cols": [
+    "Seat",
+    "Usually held by",
+    "Gridmatic"
+   ],
+   "rows": [
+    [
+     "**Optimiser and {{qualified scheduling entity}}**",
+     "A third-party optimiser (Habitat, Tesla's Autobidder, Fluence's Mosaic) or the owner's own desk",
+     "Its Equisetum affiliate schedules its ERCOT batteries; a CAISO scheduling coordinator affiliate does the same in California"
+    ],
+    [
+     "**Offtaker or toller**",
+     "Utilities, retailers and specialist funds — the counterparties on the other side of a {{floor agreement}}",
+     "Its storage fund guarantees the floor on Cross Trails and shares the upside; the fund's 500 MW target was set in 2023"
+    ],
+    [
+     "**{{load-serving entity}}**",
+     "Retail suppliers with hedging desks — the utilities' retail arms, independent retailers",
+     "Its retail affiliates supply commercial customers in three states and bid their flexible load"
+    ],
+    [
+     "**Forecasting desk**",
+     "Proprietary trading firms; the utilities' trading floors",
+     "The original business — day-ahead trading in all seven US markets under FERC {{market-based rate authority}}"
+    ],
+    [
+     "**What it does not hold**",
+     "The battery itself and the site controller — the integrator's {{EMS}}",
+     "None: it owns no plant and works above whatever controller the owner bought"
+    ]
+   ]
+  },
+  {
+   "id": "industry-map",
+   "title": "The industry map: who buys, who competes, why capital decides",
+   "kind": "prose",
+   "read": "The buyers are owners who need a bankable floor and loads that can flex; the competitors come from every seat in the chain; and the scarce input is not the algorithm but the collateral behind it.",
+   "ps": [
+    "**Who buys.** Two customers with little in common. Battery owners — developers and funds — who need a counterparty to guarantee revenue so a bank will lend, and who will accept a smaller share of the upside for it; Energy Vault is the documented case. And flexible loads — data centres, bitcoin miners, manufacturers — who want a supplier that will turn their ability to switch off into a lower bill, and who are reached through brokers rather than sold to directly.",
+    "**Who competes.** In optimisation, the pure-plays (Habitat Energy, Equilibrium, Tierra), the vendor bidders (Tesla, Fluence), the software licences (Stem) and the owner-traders (Hunt Energy Network, Jupiter Power). In offtake, the tollers with bigger balance sheets — retailers such as Octopus, the utilities, and infrastructure funds. In retail, every licensed supplier in Texas and PJM, including the retail arms of the same utilities. A fund-backed optimiser competes in all three at once, and its rivals in one are often its counterparties in another.",
+    "**Why capital decides.** A forecast is cheap to run and expensive to stand behind. A {{floor agreement}} needs collateral for the life of the contract; a retail book needs {{credit support}} posted to the market operator for every hour of load it has promised to serve; a trading desk needs margin. The company's own account — 'profitable without venture capital', two limited-partnership funds, and a 2026 hiring notice for someone to run 'upcoming debt and equity raises' and 'collateral posting requirements' — says where the constraint is. Whoever supplies that capital, and on what terms, will shape which of the three businesses grows."
+   ]
+  },
+  {
+   "id": "the-clock",
+   "title": "Nine years on one clock",
+   "kind": "timeline",
+   "read": "Upper lane: the market and regulatory events. Lower lane: the company's moves, which follow them by a year or so.",
+   "intro": "Years across the bottom. The pattern is a trading desk that added a seat each time the market created one worth holding.",
+   "unit": "calendar year",
+   "lanes": {
+    "mkt": "Markets and rules",
+    "co": "Gridmatic"
+   },
+   "items": [
+    {
+     "x": 2017,
+     "lane": "co",
+     "label": "Founded by a machine-learning researcher",
+     "sub": "Bay Area; entity dates from 2016"
+    },
+    {
+     "x": 2019,
+     "lane": "co",
+     "label": "Day-ahead trading begins in ERCOT",
+     "sub": "Convergence bidding — no plant"
+    },
+    {
+     "x": 2021,
+     "lane": "co",
+     "label": "First fund (USD 26.2M); CAISO scheduling seat",
+     "sub": "Trading capital from outside investors"
+    },
+    {
+     "x": 2022,
+     "lane": "mkt",
+     "label": "FERC market-based rate authority; Texas retail certificate",
+     "sub": "Winter Storm Elliott spikes ERCOT prices in December"
+    },
+    {
+     "x": 2023,
+     "lane": "co",
+     "label": "Retail launch; first battery under management; USD 50M storage fund",
+     "sub": "A data centre as launch customer"
+    },
+    {
+     "x": 2024,
+     "lane": "mkt",
+     "label": "ERCOT ancillary services saturate",
+     "sub": "Battery revenues fall by half"
+    },
+    {
+     "x": 2024,
+     "lane": "co",
+     "label": "Cross Trails floor signed; Caballero optimisation; '1 GWh'",
+     "sub": "First CAISO battery"
+    },
+    {
+     "x": 2025,
+     "lane": "mkt",
+     "label": "RTC+B goes live in ERCOT (5 Dec)",
+     "sub": "Energy and reserves co-optimised every five minutes"
+    },
+    {
+     "x": 2025,
+     "lane": "co",
+     "label": "Cross Trails online; Load Optimizer; Ohio retail",
+     "sub": "Bitcoin miners and a Texas lab as customers"
+    },
+    {
+     "x": 2026,
+     "lane": "co",
+     "label": "Pennsylvania retail; four new FERC entities; 'upcoming debt and equity raises'",
+     "sub": "'Profitable without venture capital'"
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Prices, forecasts, contracts and collateral.",
+   "cards": [
+    {
+     "q": "Why is a weather model most of a price model in a renewable-heavy grid?",
+     "a": "Because the price is set by the last plant needed, and wind and solar output plus temperature-driven demand decide which plant that is. Still evenings bring gas plants and spikes; windy nights bring {{negative pricing}}."
+    },
+    {
+     "q": "What is the DART spread and how does a trader earn from it without a plant?",
+     "a": "The gap between the day-ahead and real-time price for the same hour and node. {{convergence bidding}} sells where the day-ahead price looks too high and buys where it looks too low, settling the difference — pure forecasting."
+    },
+    {
+     "q": "Why does a battery need a probabilistic forecast rather than a single price?",
+     "a": "The plan that is best for the most likely price is wrong for the others, and {{state of charge}} links each interval's decision to the next. A distribution lets the optimiser choose the plan that does best on average."
+    },
+    {
+     "q": "What does real-time co-optimisation change for a battery in ERCOT?",
+     "a": "Energy and every reserve product are cleared together every five minutes and the battery is settled as one resource, so the choice between selling energy and selling a reserve is re-made each interval instead of the previous afternoon."
+    },
+    {
+     "q": "Under a floor agreement, what does each side get and give?",
+     "a": "The owner gets a guaranteed minimum revenue a lender will size debt against and gives up a share of the upside; the counterparty takes the downside and must post {{credit support}} for the term."
+    },
+    {
+     "q": "Why does a fund-backed optimiser need a fund?",
+     "a": "A fee-only optimiser needs no capital; a toll or a floor needs a balance sheet to stand behind the promise and to post collateral. The fund supplies that without the operating company raising equity."
+    },
+    {
+     "q": "What is a load-serving entity's core risk?",
+     "a": "It must buy every hour of its customers' consumption at wholesale prices it cannot control and sell at a price fixed months earlier — a bet on hourly prices and hourly demand, which is why a forecasting desk and a retailer fit together."
+    },
+    {
+     "q": "What is hourly matching and what certificate makes it possible?",
+     "a": "Supplying carbon-free power hour by hour rather than as an annual total; a {{T-EAC}} — a renewable certificate stamped with the hour of generation — is the unit transferred to prove it."
+    },
+    {
+     "q": "What does a TBx capture rate above 100% mean?",
+     "a": "The battery earned more energy revenue than a perfect-foresight top-x/bottom-x daily schedule would have — possible because the benchmark ignores reserves and intraday re-trading. It says nothing about total revenue rank."
+    },
+    {
+     "q": "What is the difference between 'most profitable day-ahead trader' and a revenue-per-kW leaderboard?",
+     "a": "The first is the company's own reading of ERCOT's sixty-day disclosures of day-ahead awards across all participants; the second is a third party ranking each battery's total earnings from the same disclosures. Neither measures profit, and only the second is independent."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on prices, bids, contracts, retail and leaderboards.",
+   "items": [
+    {
+     "q": "In a grid with a lot of wind and solar, wholesale prices are most directly driven by:",
+     "c": [
+      "Fuel contracts signed a year ahead",
+      "The weather, through renewable output and temperature-driven demand",
+      "The regulator's tariff",
+      "The number of retailers"
+     ],
+     "a": 1,
+     "why": "The price is set by the last plant needed, and weather decides which plant that is."
+    },
+    {
+     "q": "Convergence bidding earns from:",
+     "c": [
+      "Owning a battery",
+      "The gap between the day-ahead and real-time price at the same hour and node",
+      "Capacity payments",
+      "Transmission congestion rents"
+     ],
+     "a": 1,
+     "why": "A purely financial day-ahead bid settled against real time — the DART spread — needs no plant, only a better forecast."
+    },
+    {
+     "q": "A battery optimiser must track state of charge every interval because:",
+     "c": [
+      "Regulators require it",
+      "The battery can only sell what it stored, so each decision constrains the next",
+      "Cells overheat otherwise",
+      "Prices are published only once a day"
+     ],
+     "a": 1,
+     "why": "Storage turns a series of independent trades into a linked sequence with a memory."
+    },
+    {
+     "q": "Compared with a fee-only optimiser, an optimiser that offers tolls and floors additionally needs:",
+     "c": [
+      "A better weather model",
+      "A balance sheet or fund to carry the price risk and post collateral",
+      "Its own batteries",
+      "A retail licence"
+     ],
+     "a": 1,
+     "why": "The forecast is the same; standing behind a guaranteed revenue for ten years is what requires capital."
+    },
+    {
+     "q": "A retail electricity supplier's margin is fundamentally a bet on:",
+     "c": [
+      "The wires company's charges",
+      "Hourly wholesale prices and hourly customer demand against a price fixed in advance",
+      "The cost of billing software",
+      "Long-term fuel prices"
+     ],
+     "a": 1,
+     "why": "The supplier buys every hour at wholesale and sells at a contracted price — the same forecasting problem the trading desk faces."
+    },
+    {
+     "q": "Hourly matching of carbon-free supply differs from an annual renewable claim because:",
+     "c": [
+      "It uses nuclear power",
+      "Each hour of consumption is matched by a certificate stamped with the hour the power was generated",
+      "It is cheaper",
+      "It only applies to data centres"
+     ],
+     "a": 1,
+     "why": "A T-EAC carries the generation hour; an annual certificate does not."
+    },
+    {
+     "q": "A third-party leaderboard ranking ERCOT batteries by revenue per kW-month is built from:",
+     "c": [
+      "Company press releases",
+      "ERCOT's sixty-day disclosure of each resource's awards and dispatch",
+      "Survey responses",
+      "Weather data"
+     ],
+     "a": 1,
+     "why": "ERCOT publishes resource-level market data with a sixty-day lag; that transparency is why Texas rankings exist and California's are thinner."
+    }
+   ]
+  }
+ ]
+}

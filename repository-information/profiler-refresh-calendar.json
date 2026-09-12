@@ -2428,6 +2428,35 @@
     "GE Vernova's hyperscaler SST commitment (1,000 units from 2027 if spec is met) and any OCP LVDC SST specification milestone — the incumbent taking the tier before Heron ships",
     "Chesterton check: do not import Heatmap's April 2026 funding figures (Heron/DG Matrix transposed); Forge's USD 648M post-money and Axios's 'up to USD 1B' are vendor/paywalled estimates, not company figures; 'over 40 GW of interest' and '50 GW of orders' are uncorroborated company statements"
    ]
+  },
+  {
+   "slug": "habitat-energy",
+   "cadence": "quarterly",
+   "source": "Private, Quinbrook-owned subsidiary; no earnings clock. Audited figures only from Companies House (Habitat Energy Limited 10923911 — FY2025 accounts due by 2026-09-30; parent Renewable and Grid Services Limited 13250883 group accounts). Public record otherwise the company newsroom (habitat.energy), Business Wire releases (403 from this environment — use company copies) and Modo Energy benchmarks (monthly optimiser rankings paywalled). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-12",
+   "watch": [
+    "The Quinbrook sale: any Companies House PSC02/PSC07/TM01 filing, a Quinbrook portfolio-page status change from 'Operational & Expanding', or a release naming a buyer, price, signing, completion or withdrawal — the JLL/BCG mandate (New Project Media, 2026-03-17) is single-outlet and unconfirmed; comparable is Flexitricity to Drax at GBP 36M EV",
+    "FY2025 accounts at Companies House (due 2026-09-30): the group 'Optimisation services' line (FY2024 GBP 4.17M, +80%) and whether the directors' report mentions the sale process",
+    "Modo Energy ERCOT and GB optimiser tables: whether December 2025's first place (84% TBX capture vs 35% median) held through 2026 under RTC+B",
+    "PJM: a named customer or MW following the April 2026 market-participant registration; any CAISO or MISO entry (promised for 2023, never announced)",
+    "Gresham House: Habitat's residual MW after the 2024 Octopus toll and the July 2025 Statkraft/Markel floors — undisclosed; the Nephila floor link is inference from the ESIA 2025 citation",
+    "Chesterton check: the 5.5 GW figure is 'under contract' including pipeline and renewables — never restate it as operating; the GB operating fleet was 600 MW at January 2025 and ERCOT 'over 1.5 GW' at November 2025"
+   ]
+  },
+  {
+   "slug": "gridmatic",
+   "cadence": "quarterly",
+   "source": "Private, founder-owned; no earnings clock and no financial statements in any jurisdiction. Public record: gridmatic.com and gridmaticretail.com, Business Wire releases (403 from this environment — company and Yahoo copies), Energy Vault's SEC filings on Cross Trails, PUCT Interchange (REP 10307 annual reports, Project 58379), Federal Register FERC notices, GLEIF, and Amperical's public-settlement ERCOT leaderboard. sec.gov blocked at v05.39r; efts.sec.gov full-text search answered. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-12",
+   "watch": [
+    "A Form D for Gridmatic Inc. or any named equity or debt investor — the August 2026 capital-markets posting cites 'upcoming debt and equity raises', which would end 'profitable without venture capital'",
+    "A second SEC-filed or owner-announced tolling / revenue-floor offtake beyond Energy Vault's Cross Trails; progress toward the fund's 500 MW target (about 209 MW named)",
+    "Amperical and Modo ERCOT tables: Endurance Park (rank 11 of 308, Jan–Jul 2026) and Cross Trails (rank 43) through a full year of RTC+B; Modo's paywalled optimiser rankings if quoted",
+    "Purpose of the 2026 FERC market-based-rate vehicles (Mays, Nyssa, Isotria, Calliandra) — a PJM battery, a New England retail launch, or asset-specific tolling SPVs",
+    "Retail: any regulator-disclosed customer count or load; new states beyond Texas, Ohio and Pennsylvania; PUCT complaint or enforcement dockets (none found at v05.39r)",
+    "HQ: GLEIF, PUCT or LinkedIn address changes toward Houston; the Cupertino lease expires 2027-12-31 — 'HQ Houston' is true of the retail business only",
+    "Chesterton check: Tracxn's 'Series D USD 40M' is a mis-tag of the two fund Form Ds; the 'most profitable participant in ERCOT' claim has no third-party test; Solar Builder's 'Palo Alto HQ' is a single-outlet error"
+   ]
   }
  ]
 }

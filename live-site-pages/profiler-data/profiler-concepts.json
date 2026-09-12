@@ -740,6 +740,15 @@
       ]
     },
     {
+      "slug": "balancing-mechanism",
+      "term": "Balancing Mechanism",
+      "def": "Great Britain's real-time balancing market, run by the system operator after gate closure: registered units submit bids and offers to increase or reduce their output, and the operator accepts the ones it needs to keep the system in balance. For a battery it is a second revenue stream on top of wholesale trading, reachable only through a registered party.",
+      "aliases": [
+        "BM",
+        "balancing market"
+      ]
+    },
+    {
       "slug": "bankability",
       "term": "bankability",
       "def": "Whether lenders and investors will finance a project or accept a supplier — a function of certifications, warranties, balance-sheet strength, track record, and policy exposure rather than spec-sheet performance."
@@ -2201,6 +2210,15 @@
       ]
     },
     {
+      "slug": "convergence-bidding",
+      "term": "convergence bidding",
+      "def": "Placing a purely financial bid in the day-ahead market with no plant behind it, settled against the real-time price — a bet that the two prices will converge. It is how a forecasting desk earns from price prediction without owning a single battery.",
+      "aliases": [
+        "virtual bidding",
+        "virtual bid"
+      ]
+    },
+    {
       "slug": "conversion-efficiency",
       "term": "conversion efficiency",
       "def": "Output power divided by input power for a converter — the rest leaves as heat. Efficiency is a curve, not a number: it collapses at light load and peaks somewhere below full load, so where a unit is parked on that curve matters as much as its headline figure.",
@@ -2635,6 +2653,16 @@
       "def": "Days away, restricted or transferred: the subset of recordable injuries serious enough to keep someone off their normal job, expressed on the same per-hundred-workers basis as the headline recordable rate. It is the better severity proxy of the two, because it ignores the minor treatments that inflate the headline figure.",
       "aliases": [
         "days away restricted or transferred"
+      ]
+    },
+    {
+      "slug": "dart-spread",
+      "term": "DART spread",
+      "def": "The difference between the day-ahead price and the real-time price for the same hour and location. A trader who forecasts the real-time price better than the market buys or sells in the day-ahead auction and settles the difference — the core of day-ahead trading.",
+      "aliases": [
+        "DART",
+        "day-ahead real-time spread",
+        "DART arbitrage"
       ]
     },
     {
@@ -3454,6 +3482,16 @@
       "def": "How long a storage plant can discharge at full power (energy divided by power, MWh ÷ MW). Duration decides which grid jobs a battery can do — most US grid-scale projects run a few hours."
     },
     {
+      "slug": "dynamic-containment",
+      "term": "Dynamic Containment",
+      "def": "Great Britain's fastest frequency-response service, introduced in 2020: a battery must deliver its full contracted power within one second of a frequency deviation. It paid batteries handsomely until enough of them entered to saturate it, which is the pattern every fast ancillary service follows.",
+      "aliases": [
+        "Dynamic Moderation",
+        "Dynamic Regulation",
+        "frequency response services"
+      ]
+    },
+    {
       "slug": "e-house",
       "term": "e-house",
       "def": "A power room built and wired in a factory, tested as a unit, then shipped to site as a walk-in enclosure — switchgear, transformers, controls, lighting, HVAC and cable already in place. It converts skilled field electrical labour into factory labour and moves the schedule risk from the site to the shop, at the price of shipping weight, crane access and a design frozen much earlier.",
@@ -3596,6 +3634,14 @@
       "slug": "emergency-planning-zone",
       "term": "emergency planning zone",
       "def": "The area around a reactor within which off-site emergency plans must exist. Shrinking it is one of the concrete practical claims small designs make, and it is decided by the regulator against the source term, not by the vendor."
+    },
+    {
+      "slug": "emergency-response-service",
+      "term": "Emergency Response Service",
+      "def": "An ERCOT programme that pays a large customer to be available to cut its load within ten or thirty minutes when the grid operator declares an emergency. A flexible load such as a bitcoin mine can earn from it on top of avoiding high prices.",
+      "aliases": [
+        "ERS"
+      ]
     },
     {
       "slug": "eminent-domain",
@@ -4182,6 +4228,15 @@
       "def": "The current that flows into a short circuit before a breaker clears it — many times the normal load current. A protection scheme needs enough of it to be sure the right breaker trips fast: a rotating machine delivers a large surge from its stored magnetic energy, while an inverter can supply only a little more than its rating, which changes how the downstream protection must be designed."
     },
     {
+      "slug": "fcas",
+      "term": "FCAS",
+      "def": "Frequency Control Ancillary Services: the eight markets in Australia's National Electricity Market for raising or lowering output to hold frequency, from six-second contingency response to five-minute regulation. Batteries dominate the fast ones. Under 'Causer Pays', generators whose output deviates from schedule are charged a share of the regulation cost, so an optimiser manages that exposure as well as the revenue.",
+      "aliases": [
+        "frequency control ancillary services",
+        "Causer Pays"
+      ]
+    },
+    {
       "slug": "fee-earning-aum",
       "term": "fee-earning AUM",
       "def": "The portion of assets under management that actually pays a management fee. Total AUM includes money committed but not yet drawn, co-investment that pays nothing, and assets in wind-down — so fee-earning AUM is the number that drives revenue.",
@@ -4482,6 +4537,16 @@
       "aliases": [
         "float voltage",
         "floating"
+      ]
+    },
+    {
+      "slug": "floor-agreement",
+      "term": "floor agreement",
+      "def": "A contract in which a counterparty guarantees a battery owner a minimum revenue per megawatt per year and takes a share of anything earned above it. It converts merchant revenue into something a lender will size debt against; the counterparty carries the price risk and must post collateral to back the promise.",
+      "aliases": [
+        "minimum revenue guarantee",
+        "revenue floor contract",
+        "physically settled revenue floor"
       ]
     },
     {
@@ -6458,6 +6523,16 @@
       ]
     },
     {
+      "slug": "load-resource",
+      "term": "load resource",
+      "def": "An ERCOT registration that lets a large customer sell its ability to reduce consumption into the ancillary-service markets like a generator sells output. A controllable load resource follows a dispatch signal in real time; a non-controllable one drops load on a frequency trigger.",
+      "aliases": [
+        "controllable load resource",
+        "CLR",
+        "non-controllable load resource"
+      ]
+    },
+    {
       "slug": "load-serving-entity",
       "term": "load-serving entity",
       "def": "A utility or retail supplier responsible for procuring electricity and capacity for the end customers it serves; in California the buyers of most long-term solar and storage contracts.",
@@ -6720,6 +6795,15 @@
       "slug": "mark-to-market",
       "term": "mark-to-market",
       "def": "Restating an open contract at today's market price so that unrealised gains and losses appear in the accounts immediately. It makes a hedged generator's reported earnings swing with prices even when the underlying physical business has not changed."
+    },
+    {
+      "slug": "market-based-rate-authority",
+      "term": "market-based rate authority",
+      "def": "Permission from the US Federal Energy Regulatory Commission for a company to sell wholesale power at negotiated prices rather than cost-based tariffs. Every trading or retail affiliate that touches the FERC-regulated markets needs its own, which is why a power marketer's filings list a family of entities.",
+      "aliases": [
+        "MBR",
+        "market-based rate"
+      ]
     },
     {
       "slug": "market-making",
@@ -7213,6 +7297,14 @@
       "slug": "negative-pressure-containment",
       "term": "negative pressure containment",
       "def": "Sealing a work area and holding it at slightly lower pressure than its surroundings, with filtered exhaust, so dust and contaminants flow inward rather than out into the live space."
+    },
+    {
+      "slug": "negative-pricing",
+      "term": "negative pricing",
+      "def": "A wholesale price below zero: the market pays generators to stop, usually when renewable output and subsidies exceed what the grid can absorb. A renewable plant on a fixed-price contract keeps running into it; an optimiser's first job for such a plant is to curtail when the price says so.",
+      "aliases": [
+        "negative prices"
+      ]
     },
     {
       "slug": "negative-temperature-coefficient",
@@ -8011,6 +8103,15 @@
       ]
     },
     {
+      "slug": "percentage-of-perfect",
+      "term": "percentage of perfect",
+      "def": "The share of the revenue a battery would have earned with perfect foresight of prices that it actually earned. It measures the whole desk — forecast, bid and dispatch — against the theoretical ceiling for that exact asset and period, and it is the metric optimisers quote about themselves.",
+      "aliases": [
+        "perfect-foresight benchmark",
+        "percentage of perfect revenue"
+      ]
+    },
+    {
       "slug": "performance-per-watt",
       "term": "performance per watt",
       "def": "Useful work divided by the power it took. Once a site's electrical supply is fixed, this is the number that decides how much computing the site can ever contain, which is why it matters more to a data-centre buyer than peak performance does.",
@@ -8559,6 +8660,15 @@
         "co-located load",
         "co-location arrangement",
         "co-located generation"
+      ]
+    },
+    {
+      "slug": "probabilistic-forecast",
+      "term": "probabilistic forecast",
+      "def": "A forecast that gives a range of outcomes with probabilities rather than one number — a distribution of tomorrow's prices instead of a single price. An optimiser needs it because the decision that maximises average revenue is not the one that maximises revenue in the single most likely case.",
+      "aliases": [
+        "probabilistic forecasting",
+        "scenario forecast"
       ]
     },
     {
@@ -9347,6 +9457,15 @@
       ]
     },
     {
+      "slug": "revenue-share",
+      "term": "revenue share",
+      "def": "The commercial model in which a third-party optimiser is paid a percentage of what the battery earns, sometimes with a small fixed fee to cover operating costs. It aligns the optimiser with the owner and costs the owner nothing when the market is dead — which is also why optimisers' own revenues track the market cycle.",
+      "aliases": [
+        "revenue-share",
+        "revenue sharing"
+      ]
+    },
+    {
       "slug": "revenue-stack",
       "term": "revenue stack",
       "def": "The set of separate payments one asset earns at the same time — energy arbitrage, ancillary services, capacity payments, contracted fees — which together decide whether it is viable. The same battery in two different markets can have completely different stacks, and comparing projects on any single layer is misleading.",
@@ -9515,6 +9634,15 @@
       "def": "The share of energy put into a storage system that comes back out after conversion and thermal losses — typically in the high-80s percent range for lithium-ion. The gap is energy bought but never sold.",
       "aliases": [
         "RTE"
+      ]
+    },
+    {
+      "slug": "route-to-market",
+      "term": "route to market",
+      "def": "The service of getting a power asset's output sold: holding the market registrations, submitting the bids, managing the position and settling the accounts. An owner buys it from a third party — an optimiser, a utility desk or a retailer — because the registrations and the desk are expensive to build below a few gigawatts.",
+      "aliases": [
+        "route-to-market",
+        "RTM"
       ]
     },
     {
@@ -10875,6 +11003,15 @@
       ]
     },
     {
+      "slug": "t-eac",
+      "term": "T-EAC",
+      "def": "A time-based energy attribute certificate: a renewable-energy certificate stamped with the hour in which the power was generated, so a buyer can prove hourly matching rather than an annual total. It is the accounting unit behind 24/7 carbon-free supply contracts.",
+      "aliases": [
+        "time-based energy attribute certificate",
+        "hourly EAC"
+      ]
+    },
+    {
       "slug": "tail-current",
       "term": "tail current",
       "def": "The slow decay of current in an IGBT after its gate has been turned off, caused by charge stored in the device that has nowhere to go. It happens at full bus voltage, so it is a direct energy loss on every switching cycle and is the main reason IGBTs are run at low switching frequencies.",
@@ -10956,6 +11093,18 @@
         "bridge to tax equity",
         "ITC bridge loan",
         "tax credit transfer bridge loan"
+      ]
+    },
+    {
+      "slug": "tbx-capture-rate",
+      "term": "TBx capture rate",
+      "def": "A battery's actual energy revenue divided by what it would have earned by charging in the cheapest x hours and discharging in the dearest x hours of each day with perfect foresight — TB2 for a two-hour battery. Above 100% is possible because the benchmark ignores ancillary services and intraday re-trading. It is the standard public yardstick for bidding quality in ERCOT and CAISO.",
+      "aliases": [
+        "capture rate",
+        "TBx",
+        "TB2",
+        "TB1",
+        "top-bottom spread"
       ]
     },
     {
@@ -11716,6 +11865,14 @@
       "def": "The year a fund makes its first investment, used to compare funds that faced the same market conditions.",
       "aliases": [
         "fund vintage"
+      ]
+    },
+    {
+      "slug": "virtual-lead-party",
+      "term": "Virtual Lead Party",
+      "def": "The Great Britain market role, created in 2019, that lets a company that owns no plant register other people's assets and trade them in the Balancing Mechanism. It is the licence a third-party optimiser needs to reach that market, and only a handful of companies held it in the first years.",
+      "aliases": [
+        "VLP"
       ]
     },
     {

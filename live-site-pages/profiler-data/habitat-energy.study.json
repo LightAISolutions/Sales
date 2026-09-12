@@ -1,0 +1,477 @@
+{
+ "schemaVersion": 2,
+ "slug": "habitat-energy",
+ "title": "Habitat Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-12",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: the battery earns nothing by itself",
+   "kind": "callout",
+   "tone": "info",
+   "read": "A grid battery is a box that can hold a few hours of energy. Every pound or dollar it makes comes from a decision about when to buy, when to sell and which grid service to promise. This guide is about who makes that decision and how.",
+   "ps": [
+    "A modern grid-scale battery is a warehouse of cells, a set of {{inverter}}s and a site controller. Left alone it does nothing. It becomes an asset only when someone tells it, every few minutes, what to do — and in a market that pays different prices at different hours and pays extra for standing ready, the quality of that instruction is most of the value.",
+    "Habitat Energy is a company that sells that instruction. It owns no batteries. It holds the market registrations an owner would otherwise need, runs forecasting software and a 24-hour trading desk, and is paid a share of what the battery earns. The trade name for this is a third-party optimiser, and the service is called {{route to market}}.",
+    "The guide moves from what a battery is paid for, to why forecasting is the hard part, to how three very different market designs (Great Britain, Texas, Australia) reach the same desk, to how an optimiser is paid and measured, and finally to where this company sits among the utilities, hardware vendors and owner-traders competing for the same job. Company history stays in the dossier."
+   ]
+  },
+  {
+   "id": "what-a-battery-is-paid-for",
+   "title": "What a battery is paid for",
+   "kind": "prose",
+   "read": "Four kinds of money, in every market, in different proportions.",
+   "ps": [
+    "The first is {{energy arbitrage}}: buy energy when it is cheap, sell it when it is dear. In a solar-heavy grid that means charging in the midday trough of the {{duck curve}} and discharging into the evening peak; in a wind-heavy one it means reading the weather. The spread between the two prices, minus the round-trip loss and the wear on the cells, is the profit.",
+    "The second is {{ancillary services}}: payments for standing ready to correct the grid's frequency within seconds. Because a battery can go from zero to full power almost instantly, it is the best resource on the system for this, and for the first years of each market batteries earned most of their money here. The catch is that the grid only needs so much of it, so as batteries arrive the price collapses — Great Britain's {{Dynamic Containment}} in 2022–23, Texas's responsive reserves in 2024, Australia's {{FCAS}} markets in turn.",
+    "The third is availability: a {{capacity market}} payment in Great Britain for being there at peak, or a resource-adequacy contract in California. The fourth, in Great Britain only, is the {{Balancing Mechanism}} — the system operator's real-time market, where a battery is paid to move up or down after the wholesale market has closed.",
+    "Together these are the {{revenue stack}}. The optimiser's job is to earn from all of them at once without promising the same megawatt-hour twice, and the stack shifts under it: when the ancillary services saturate, the money moves to arbitrage, which needs a better forecast."
+   ]
+  },
+  {
+   "id": "the-forecast-problem",
+   "title": "Why forecasting is the hard part",
+   "kind": "prose",
+   "read": "A battery decision is a bet on the next few hours; a wrong bet costs twice.",
+   "ps": [
+    "Charge now and the price falls further: you paid too much. Wait, and the price spikes: you missed it. Discharge at 6pm and the peak comes at 8pm: you sold cheap and have nothing left. Every instruction depends on a view of prices a few hours ahead, and {{forecast error}} is the largest single source of lost revenue in the business — larger than hardware limits, which is why the same battery under two optimisers can earn very different amounts.",
+    "Two constraints make it harder than trading a commodity. The first is {{state of charge}}: the battery can only sell what it stored, so today's trades are linked to each other and to tomorrow's. The second is wear: each cycle consumes a little of the battery's life, and the {{degradation cost}} of a cycle has to be weighed against the spread it captures. An optimiser that ignores this earns more this year and hands the owner a dead battery early.",
+    "This is why serious optimisers produce a {{probabilistic forecast}} — a distribution of possible prices rather than a single number — and choose the plan that does best across the distribution. Habitat's public description of its own method matches this: 'real-time algorithmic probabilistic forecasting', five-minute optimisation in Texas, and warranty- and temperature-aware dispatch. Its one published accuracy claim is that its Australian forecasts beat the market operator's own pre-dispatch forecast 'by 11% in the critical front hour'. That is the company's figure; no third party has tested it."
+   ]
+  },
+  {
+   "id": "three-markets-one-desk",
+   "title": "Three markets, one desk",
+   "kind": "table",
+   "read": "Same battery, same physics, three rulebooks. The rows are what an optimiser must hold and do in each.",
+   "intro": "Habitat trades in Great Britain, in Texas's ERCOT and in Australia's National Electricity Market. Read the columns for how the design differs; read the last row for what it has in common.",
+   "cols": [
+    "",
+    "Great Britain",
+    "ERCOT (Texas)",
+    "NEM (Australia)"
+   ],
+   "rows": [
+    [
+     "**Registration the optimiser holds**",
+     "{{Virtual Lead Party}} and non-physical trader under the Balancing and Settlement Code — the licence to trade other people's assets",
+     "{{qualified scheduling entity}} (QSE) — the only entity that may submit offers and receive settlements for a resource",
+     "Registered market participant bidding on the owner's behalf"
+    ],
+    [
+     "**Where the money comes from**",
+     "Wholesale day-ahead and intraday; the {{Balancing Mechanism}}; frequency response ({{Dynamic Containment}}); the {{capacity market}}",
+     "{{day-ahead market}} and {{real-time market}} energy; ancillary services (responsive and contingency reserves, regulation)",
+     "Five-minute energy market; eight {{FCAS}} markets"
+    ],
+    [
+     "**Settlement clock**",
+     "Half-hourly",
+     "Five-minute real time; hourly day-ahead",
+     "Five-minute"
+    ],
+    [
+     "**What changed the game**",
+     "Ancillary saturation in 2023 pushed revenue to the Balancing Mechanism and wholesale trading, which only a full desk can reach",
+     "{{real-time co-optimization}} from December 2025 clears energy and reserves together every five minutes — every optimiser rebuilt its bidder",
+     "Batteries now large enough to set FCAS prices; 'Causer Pays' charges make renewables customers as well as batteries"
+    ],
+    [
+     "**Common to all three**",
+     "The battery cannot bid for itself. Someone with a registration, a forecast and a desk must do it, and the instruction has to respect {{state of charge}} and {{degradation cost}} every interval.",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "route-to-market",
+   "title": "Route to market: why an owner hires this",
+   "kind": "prose",
+   "read": "Registrations are slow, desks are expensive and the fleet has to be big before both pay for themselves.",
+   "ps": [
+    "An owner with one battery faces a choice: build the registrations, the forecasting and the round-the-clock desk itself, or rent them. The rental is {{route to market}}. Habitat's co-founder put the threshold in public in 2023: an owner needs roughly two gigawatts before {{in-house optimisation}} is cheaper than paying a share — and at that time twenty to twenty-five optimisers were competing for Great Britain's fleet.",
+    "The registration is the moat. Great Britain created the {{Virtual Lead Party}} role in 2019 precisely so that non-owners could trade; Habitat was the second company to use it, in September 2020. In Texas the {{qualified scheduling entity}} is a regulated seat with collateral and telemetry obligations; Habitat became one in 2023 and has since sold the seat on its own — Ørsted bought QSE services for its 250 MW battery in one contract and trading in another. An optimiser that holds the seat can be replaced, but not overnight.",
+    "The alternatives an owner weighs are a utility's trading desk (EDF, Statkraft and Shell hold the top GB positions after Tesla and Habitat), the hardware vendor's own software (Tesla's Autobidder, Fluence's Mosaic), a software licence run by the owner's staff, or — for the very large — an in-house desk such as Hunt Energy Network's in Texas. The pure-play optimiser's pitch is that it is none of these: it sells no hardware, so it is {{hardware-agnostic}} by construction, and it is paid only when the battery earns."
+   ]
+  },
+  {
+   "id": "how-the-optimiser-is-paid",
+   "title": "How the optimiser is paid, and who carries the risk",
+   "kind": "proscons",
+   "read": "Four contract shapes. Move down the list and the risk moves from the owner to the counterparty — and so does the need for capital.",
+   "intro": "A battery's revenue is uncertain. The contract between owner and optimiser decides who lives with that uncertainty. Habitat has sold all four shapes; the dossier records which and when.",
+   "cards": [
+    {
+     "t": "**{{revenue share}}**",
+     "meta": "The default: a percentage of what the battery earns, sometimes with a small fixed fee",
+     "adv": [
+      "Owner pays nothing in a dead market",
+      "Optimiser's incentive is exactly the owner's",
+      "No capital needed on either side"
+     ],
+     "dis": [
+      "Owner keeps all the price risk — a lender will not size debt against it",
+      "Optimiser's own revenue tracks the market cycle: Habitat's UK fees fell 43% in 2023"
+     ]
+    },
+    {
+     "t": "**{{floor agreement}}**",
+     "meta": "A guaranteed minimum per MW per year, with the upside shared",
+     "adv": [
+      "Turns merchant revenue into something bankable",
+      "Owner keeps a share of good years"
+     ],
+     "dis": [
+      "Someone must carry the floor and post collateral — an insurer, a utility, or the optimiser's own book",
+      "Habitat's accounts now show a bank charge over cash deposits: the desk has a book"
+     ]
+    },
+    {
+     "t": "**{{tolling agreement}}**",
+     "meta": "A retailer or trader pays a fixed rent for the right to dispatch the battery",
+     "adv": [
+      "Owner's revenue is fixed",
+      "The toller can hire an optimiser to run the asset — Habitat's first US tolling client was a retailer, not an owner"
+     ],
+     "dis": [
+      "Owner gives up the upside entirely",
+      "The optimiser's client becomes the toller: when Gresham House moved 568 MW to a toll in 2024, the sites' optimisers lost the owner as a customer"
+     ]
+    },
+    {
+     "t": "**Software licence**",
+     "meta": "The owner runs the bidder itself on a vendor's platform",
+     "adv": [
+      "Cheapest at scale",
+      "Owner keeps control and data"
+     ],
+     "dis": [
+      "Owner needs its own registrations and desk",
+      "This is the model Habitat explicitly sells against: 'unlike a software only solution'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "measuring-an-optimiser",
+   "title": "How to read an optimiser's scorecard",
+   "kind": "table",
+   "read": "Every yardstick in this business measures something narrower than it sounds. The table says what each one proves and what it hides.",
+   "intro": "Optimisers quote their own numbers; a few third parties publish rankings. Habitat's own August 2025 essay on leaderboards argues that a single month on a small fleet is mostly noise — a fair warning that applies to the numbers in its favour as much as against.",
+   "cols": [
+    "Yardstick",
+    "What it measures",
+    "What it hides"
+   ],
+   "rows": [
+    [
+     "**{{TBx capture rate}}**",
+     "Energy revenue actually earned against the perfect-foresight top-x/bottom-x spread for that battery's location and duration — the public benchmark in Texas and California; Modo Energy's table put Habitat first among ERCOT optimisers in December 2025 at 84% against a 35% median",
+     "Ignores ancillary revenue; one month's figure moves with weather and outages; another optimiser led the April 2026 table"
+    ],
+    [
+     "**{{percentage of perfect}}**",
+     "Total revenue against the perfect-foresight ceiling for the same asset — the whole desk, not only energy trading; the company claims 87% on an Australian hybrid site",
+     "Computed by the optimiser itself; the ceiling depends on modelling choices no outsider can check"
+    ],
+    [
+     "**Megawatts optimised**",
+     "Market share: Great Britain's public table (EDF 750, Tesla 680, Habitat 600 MW in January 2025) is the only one of its kind",
+     "Says nothing about performance; 'under contract' figures such as 5.5 GW include pipeline and are not comparable with operating MW"
+    ],
+    [
+     "**Awards and leaderboards**",
+     "Peer and judge recognition — two Optimiser of the Year awards, an LCP Enact top ranking the company cites",
+     "Judged on submissions; the LCP table itself is not public; awards rotate"
+    ],
+    [
+     "**Audited fees**",
+     "What the optimiser actually earned: GBP 4.2 million of optimisation fees across the group in 2024, up 80%",
+     "Two years old by the time it is filed; a small fee base against a large fleet headline means most contracted MW were not yet operating"
+    ]
+   ]
+  },
+  {
+   "id": "rtcb",
+   "title": "When the market changes the rules under you",
+   "kind": "prose",
+   "read": "Texas rebuilt its market in December 2025. What that did to every optimiser's software is the clearest lesson in the guide.",
+   "ps": [
+    "Until December 2025 ERCOT bought its reserves a day ahead and its energy in real time, so a battery's most valuable product was decided the previous afternoon. {{real-time co-optimization}} — RTC+B — clears energy and every reserve product together every five minutes and settles a battery as one resource instead of a separate generator and load. The best position yesterday can be the wrong one this interval.",
+    "Habitat's US managing director called it 'effectively a full reset of the system' and said the company had 'to effectively build our tech stack twice'; the desk gave its rebuilt bidder a name and ran a compliance bootcamp for clients. Modo's table for the first month of the new regime placed Habitat first among optimisers, which is either evidence that the rebuild worked or evidence that the first month of a new market rewards whoever moved first — the guide cannot tell you which, and neither can the data.",
+    "The general point survives the specific case: an optimiser's edge is a piece of software calibrated to one rulebook, and rulebooks change. Great Britain's new balancing platform, Australia's frequency-performance reforms and every ancillary-service redesign do the same thing on a smaller scale. A desk with people in it can adapt in weeks; a licence the owner runs alone may not."
+   ]
+  },
+  {
+   "id": "where-habitat-slots-in",
+   "title": "Where Habitat slots in, and what it displaces",
+   "kind": "table",
+   "read": "The control chain from cells to market has five layers. Habitat occupies one and rents another.",
+   "intro": "Read each row as: the layer, who normally provides it, and what Habitat does there. The site controller is never Habitat's — the segment's first buying criterion is that an optimiser works above any vendor's {{EMS}}.",
+   "cols": [
+    "Layer",
+    "Provided by",
+    "Habitat's role"
+   ],
+   "rows": [
+    [
+     "**Cells, inverters, site controller**",
+     "The integrator's {{EMS}} — Tesla, Fluence, Wärtsilä, Sungrow and their peers; at Energy Superhub Oxford, Wärtsilä's GEMS",
+     "None. Habitat sends set-points to whatever controller the owner bought — the {{hardware-agnostic}} position"
+    ],
+    [
+     "**Forecast and optimiser**",
+     "In-house software at a utility desk or owner-trader; Autobidder or Mosaic at a vendor; a licence at a software company",
+     "The EVOLVE platform: probabilistic price forecasting, degradation-aware dispatch, five-minute bid construction"
+    ],
+    [
+     "**Trading desk**",
+     "Utility trading floors (EDF, Statkraft, Shell); owners above ~2 GW",
+     "A 24-hour human desk in Oxford, Austin and Melbourne over the automation — the part sold against 'software only'"
+    ],
+    [
+     "**Market registration**",
+     "The owner, a utility, or a retailer holding the seat",
+     "{{Virtual Lead Party}} in Great Britain, {{qualified scheduling entity}} in ERCOT, market participant in the NEM — sold with the desk or, as with Ørsted, on its own"
+    ],
+    [
+     "**Capital behind the revenue**",
+     "The owner's balance sheet; tollers and insurers",
+     "Increasingly Habitat: floors backed by insurers, volatility swaps and a desk with 'the risk in our own book' — the layer it did not occupy until 2024"
+    ]
+   ]
+  },
+  {
+   "id": "industry-map",
+   "title": "The industry map: who buys, who competes, and why this year matters",
+   "kind": "prose",
+   "read": "The buyers are owners below the in-house threshold; the competitors come from four directions; the tolling wave and a sale process decide the shape of the next few years.",
+   "ps": [
+    "**Who buys.** Funds and developers that own batteries but not desks: listed storage funds, pension-backed developers, oil majors' and utilities' storage arms in markets where they lack a local desk, and — a newer buyer — retailers who tolled a battery and need someone to run it. The contract is typically three to seven years and increasingly signed before the battery is built.",
+    "**Who competes.** Four kinds of rival. Utility desks with their own generation books (EDF, Statkraft, Shell, Centrica in Great Britain; Engie and the Texas utilities' marketing arms). Hardware vendors bundling a bidder with their batteries (Tesla's Autobidder, Fluence's Mosaic). Other pure-plays — in Great Britain, Arenko and Flexitricity; in Texas, Gridmatic, Equilibrium and Tierra. And the owners big enough to trade themselves — Hunt Energy Network and Jupiter Power in Texas. A fifth force competes for the contract rather than the job: tollers and floor providers who take the dispatch rights and hire or replace the optimiser.",
+    "**Why the tolling wave matters.** When Great Britain's largest storage fund moved 568 MW to a retailer's toll in 2024 and 789 MW to utility and insurer floors in 2025, the optimiser's seat on those sites became a subcontract. The pure-play answer is to originate the floor itself — which is what the 2025 award citation says Habitat did — and that turns a fee business into one with a book, collateral and a bank charge.",
+    "**Why this year.** The company's owner is a private-equity fund that sold the sister optimiser in January 2026 and reportedly began marketing this one in March. Whoever buys it — a utility, an oil major, a retailer, a vendor, or another fund — settles the question of whether the segment's leading independent stays independent. Nothing on the record says who or when."
+   ]
+  },
+  {
+   "id": "the-clock",
+   "title": "The optimiser's decade on one clock",
+   "kind": "timeline",
+   "read": "Upper lane: what the markets did. Lower lane: what the company did in response.",
+   "intro": "Years across the bottom. The company's moves follow the market's rule changes and saturations by a year or two each time.",
+   "unit": "calendar year",
+   "lanes": {
+    "mkt": "Markets",
+    "co": "Habitat"
+   },
+   "items": [
+    {
+     "x": 2019,
+     "lane": "mkt",
+     "label": "GB creates the Virtual Lead Party role",
+     "sub": "Non-owners may trade the Balancing Mechanism"
+    },
+    {
+     "x": 2020,
+     "lane": "co",
+     "label": "Second company into the BM as a VLP",
+     "sub": "69 MW; Dynamic Containment's first year"
+    },
+    {
+     "x": 2021,
+     "lane": "co",
+     "label": "Acquired by Quinbrook",
+     "sub": "Largest Dynamic Containment provider at the time"
+    },
+    {
+     "x": 2022,
+     "lane": "co",
+     "label": "US launch in Austin",
+     "sub": "First client a sister company's 60 MW"
+    },
+    {
+     "x": 2023,
+     "lane": "mkt",
+     "label": "GB ancillary revenues collapse",
+     "sub": "UK fees fall 43%; 'no code to crack'"
+    },
+    {
+     "x": 2023,
+     "lane": "co",
+     "label": "Becomes an ERCOT QSE",
+     "sub": "Byrd Ranch commissioned in July"
+    },
+    {
+     "x": 2024,
+     "lane": "mkt",
+     "label": "GB fund tolls 568 MW; ERCOT reserves saturate",
+     "sub": "Dispatch rights move to tollers"
+    },
+    {
+     "x": 2024,
+     "lane": "co",
+     "label": "2 GW under contract; 730 MW UBS mandate",
+     "sub": "Optimiser of the Year"
+    },
+    {
+     "x": 2025,
+     "lane": "mkt",
+     "label": "ERCOT RTC+B goes live (5 Dec)",
+     "sub": "GB fund signs 789 MW of floors"
+    },
+    {
+     "x": 2025,
+     "lane": "co",
+     "label": "Floors, tolls and swaps; first in Modo's December table",
+     "sub": "Ørsted 250 MW; 4 GW claimed"
+    },
+    {
+     "x": 2026,
+     "lane": "mkt",
+     "label": "Sister optimiser sold to Drax",
+     "sub": "GBP 36M for ~0.9 GW"
+    },
+    {
+     "x": 2026,
+     "lane": "co",
+     "label": "Sale process reported; PJM entry; 5.5 GW claimed",
+     "sub": "No buyer on record"
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Revenue stacks, forecasts, registrations and contract shapes.",
+   "cards": [
+    {
+     "q": "Why can the same battery earn very different amounts under two optimisers?",
+     "a": "Because every instruction is a bet on prices a few hours ahead, and {{forecast error}} — not hardware — is the largest source of lost revenue. The battery only sells what it stored, so a wrong charge or discharge costs twice."
+    },
+    {
+     "q": "What happens to a fast ancillary service as batteries arrive?",
+     "a": "The grid needs only so much of it, so the price collapses — {{Dynamic Containment}} in Great Britain in 2022–23, Texas reserves in 2024, {{FCAS}} in Australia. Revenue then moves to {{energy arbitrage}}, which needs a better forecast."
+    },
+    {
+     "q": "Why does a serious optimiser use a probabilistic forecast?",
+     "a": "Because the plan that does best on the single most likely price path is not the plan that does best on average across the range of possible paths, and {{state of charge}} links today's trades to tomorrow's."
+    },
+    {
+     "q": "What is a Virtual Lead Party and why does it matter?",
+     "a": "The Great Britain role, created in 2019, that lets a company owning no plant register other people's assets and trade them in the {{Balancing Mechanism}}. It is the licence a third-party optimiser needs; Habitat was the second to use it."
+    },
+    {
+     "q": "What does a qualified scheduling entity do in ERCOT?",
+     "a": "It is the only entity that may submit offers, receive dispatch instructions and settle accounts for a resource — the regulated seat with collateral and telemetry duties. An optimiser that holds it can sell the seat separately from the trading."
+    },
+    {
+     "q": "Roughly how big must an owner's fleet be before running its own desk beats paying a share?",
+     "a": "About two gigawatts, by Habitat's co-founder's public estimate in 2023 — below that, registrations, forecasting and a 24-hour desk cost more than the {{revenue share}}."
+    },
+    {
+     "q": "Who carries the price risk under revenue share, a floor agreement and a toll?",
+     "a": "Revenue share: the owner. {{floor agreement}}: the counterparty that guarantees the minimum, which must post collateral. {{tolling agreement}}: the toller, who pays fixed rent and keeps the upside — and may hire an optimiser to run the asset."
+    },
+    {
+     "q": "What does a TBx capture rate measure, and what does it miss?",
+     "a": "Energy revenue against the perfect-foresight top-x/bottom-x daily spread for that battery. It ignores ancillary revenue, moves month to month, and can exceed 100% because the benchmark ignores intraday re-trading."
+    },
+    {
+     "q": "Why did ERCOT's December 2025 redesign force optimisers to rebuild their software?",
+     "a": "{{real-time co-optimization}} clears energy and every reserve product together every five minutes and settles a battery as one resource, so the day-ahead reserve position that used to be decided the previous afternoon is re-decided every interval."
+    },
+    {
+     "q": "What does the tolling wave do to a third-party optimiser?",
+     "a": "It moves the dispatch rights to the toller or floor provider, so the optimiser's client changes or its seat becomes a subcontract. The pure-play response is to originate the floor itself — which brings a book, collateral and market risk onto a fee business."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on the revenue stack, the forecast, the registrations and the contracts.",
+   "items": [
+    {
+     "q": "A battery's largest source of lost revenue relative to a perfect operator is usually:",
+     "c": [
+      "Round-trip efficiency loss",
+      "Forecast error in the timing of charge and discharge",
+      "Cell degradation",
+      "Transmission charges"
+     ],
+     "a": 1,
+     "why": "Efficiency and degradation are known and modelled; the timing bet on prices a few hours ahead is where operators diverge."
+    },
+    {
+     "q": "Fast frequency-response services tend to pay less over time because:",
+     "c": [
+      "Regulators cap the price",
+      "The grid needs a limited volume and each new battery competes for it",
+      "Batteries wear out",
+      "Gas plants undercut them"
+     ],
+     "a": 1,
+     "why": "Saturation: a fixed requirement met by a growing fleet. The same curve appeared in Great Britain, Texas and Australia in turn."
+    },
+    {
+     "q": "The Virtual Lead Party role in Great Britain exists so that:",
+     "c": [
+      "Owners can avoid the capacity market",
+      "Companies that own no plant can register others' assets and trade the Balancing Mechanism",
+      "Batteries can be exempted from imbalance charges",
+      "The system operator can dispatch batteries directly"
+     ],
+     "a": 1,
+     "why": "Created in 2019; it is the registration a third-party optimiser needs to reach the balancing market."
+    },
+    {
+     "q": "Under a revenue-share contract, who carries the merchant price risk?",
+     "c": [
+      "The optimiser",
+      "The owner",
+      "The system operator",
+      "The lender"
+     ],
+     "a": 1,
+     "why": "The optimiser is paid a percentage of whatever the battery earns; the owner lives with the total."
+    },
+    {
+     "q": "A floor agreement is attractive to an owner mainly because:",
+     "c": [
+      "It raises the battery's efficiency",
+      "It removes the need for an optimiser",
+      "A lender will size debt against a guaranteed minimum revenue",
+      "It exempts the asset from ancillary-service rules"
+     ],
+     "a": 2,
+     "why": "Bankability: merchant revenue becomes a contracted minimum, at the cost of sharing the upside and needing a counterparty that can post collateral."
+    },
+    {
+     "q": "A TBx capture rate above 100% is possible because:",
+     "c": [
+      "The formula is wrong",
+      "The benchmark counts only energy on a fixed daily top-x/bottom-x schedule and ignores ancillary revenue and re-trading",
+      "The battery was over-rated",
+      "Prices were negative"
+     ],
+     "a": 1,
+     "why": "Real desks earn from reserves and from re-trading within the day; the benchmark does neither."
+    },
+    {
+     "q": "ERCOT's real-time co-optimisation changed optimisers' software because:",
+     "c": [
+      "It banned batteries from ancillary services",
+      "It moved the market to hourly settlement",
+      "Energy and every reserve product are now cleared together every five minutes, so positions are re-decided each interval",
+      "It required all batteries to use the same bidder"
+     ],
+     "a": 2,
+     "why": "The day-ahead reserve award that used to fix a battery's best product for the next day no longer does."
+    }
+   ]
+  }
+ ]
+}

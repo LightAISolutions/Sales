@@ -4929,6 +4929,84 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "habitat-energy",
+      "name": "Habitat Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The Oxford-born, Quinbrook-owned battery optimiser — EVOLVE desk-plus-registration service on revenue share across GB (BM Virtual Lead Party), ERCOT (Level 4 QSE) and the NEM; 5.5 GW under contract by its count, third in GB and first in ERCOT's December 2025 capture-rate table by Modo's; for sale since March 2026 with no buyer on record.",
+      "hq": "Oxford, United Kingdom",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Habitat Energy Limited",
+        "Habitat",
+        "EVOLVE",
+        "PowerIQ",
+        "Habitat Energy Australia",
+        "Habitat Energy Pty Ltd",
+        "Habitat Energy, Inc",
+        "Habitat Energy USA",
+        "Renewable and Grid Services"
+      ],
+      "domains": [
+        "habitat.energy",
+        "quinbrook.com"
+      ],
+      "srcTotal": 72,
+      "srcFirstPct": 61,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "software-and-optimization",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "gridmatic",
+      "name": "Gridmatic",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The founder-owned 'AI-first power company' that tolls and floors ERCOT and CAISO batteries from its own USD 50M fund, sells retail power and day-ahead load bidding to data centres and miners in Texas, Ohio and Pennsylvania, and trades all seven ISOs — every ranking its own, one SEC-filed offtake (Energy Vault's Cross Trails), profitable without venture capital by its own account.",
+      "hq": "Cupertino, California, United States (retail headquarters Houston, Texas)",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Gridmatic Inc.",
+        "Gridmatic Inc",
+        "Gridmatic Retail",
+        "Gridmatic Rosa",
+        "Gridmatic Rosa LLC",
+        "Gridmatic Panicum",
+        "Gridmatic Equisetum",
+        "Gridmatic Equisetum LLC",
+        "Gridmatic Storage Fund",
+        "Gridmatic Energy Investment Fund",
+        "Gridmatic Cupressus",
+        "Gridmatic Isotria",
+        "AI Load Optimizer"
+      ],
+      "domains": [
+        "gridmatic.com",
+        "gridmaticretail.com"
+      ],
+      "srcTotal": 70,
+      "srcFirstPct": 44,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "challenger"
+        }
+      ]
     }
   ]
 }

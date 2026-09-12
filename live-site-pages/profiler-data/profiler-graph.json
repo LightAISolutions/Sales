@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-12",
- "companies": 168,
+ "companies": 170,
  "edges": [
   {
    "a": "abb",
@@ -12782,6 +12782,22 @@
    },
    "evid": [],
    "last": "2025-09"
+  },
+  {
+   "a": "canadian-solar",
+   "b": "habitat-energy",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Canadian Solar took an undisclosed minority stake in May 2021 and exited it into Quinbrook's acquisition on 30 November 2021.",
+     "context": "The May 2021 release framed the investment as a strategic partnership for storage optimisation in the UK and Australia. Companies House shows Quinbrook's vehicle as the sole 75%+ PSC from 30 November 2021, so the stake did not survive the acquisition.",
+     "source": "https://www.prnewswire.com/news-releases/canadian-solar-invests-in-strategic-partnership-with-ai-energy-storage-optimization-company-habitat-energy-301290585.html",
+     "status": "historical",
+     "since": "2021-05"
+    }
+   },
+   "evid": [],
+   "last": "2021-05"
   },
   {
    "a": "canadian-solar",
@@ -25878,6 +25894,20 @@
   },
   {
    "a": "esvolta",
+   "b": "gridmatic",
+   "evid": [
+    {
+     "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+     "date": "",
+     "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "esvolta",
    "b": "gridstor",
    "curated": {
     "a": {
@@ -25921,6 +25951,20 @@
     }
    ],
    "last": "2025-03-27"
+  },
+  {
+   "a": "esvolta",
+   "b": "habitat-energy",
+   "evid": [
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "esvolta",
@@ -27762,6 +27806,20 @@
   },
   {
    "a": "flexgen",
+   "b": "habitat-energy",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The segment's two incumbents reach it from adjacent businesses — FlexGen from integration and its HybridOS controls, Stem from solar asset-performance management — and its listed challenger, Fluence's Mosaic, is sold to protect a hardware franchise.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "flexgen",
    "b": "hithium",
    "curated": {
     "a": {
@@ -28071,6 +28129,87 @@
    },
    "evid": [],
    "last": "2018"
+  },
+  {
+   "a": "fluence",
+   "b": "gridmatic",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Fluence's dossier positions Mosaic against 'independent optimizers (Gridmatic, Habitat Energy et al.)'; both appear in Modo's US directory.",
+     "context": "Fluence sells Mosaic bidding software to owners of any hardware; Gridmatic competes for those owners with a toll or floor rather than a licence. No commercial link between them is on record.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Mosaic (AI-enabled market bidding software)",
+     "date": "",
+     "text": "Competes with Tesla Autobidder and independent optimizers (Gridmatic, Habitat Energy et al.); differentiates on degradation/warranty-aware optimization and hardware-agnosticism — Fluence monetizes rivals' hardware through software",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it at once an optimiser (competing with Tesla, Habitat, Fluence, Stem and Hunt for ERCOT and CAISO mandates), an offtaker (the counterparty Energy Vault reports to its shareholders, and the model Modo calls 'the first known battery in ERCOT operated under a revenue floor contract') and a load-serving entity for the data-centre and miner demand the rest of the corpus builds for.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+     "date": "",
+     "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "fluence",
+   "b": "habitat-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Fluence's Mosaic bidding software is positioned against 'independent optimizers (Gridmatic, Habitat Energy et al.)' in Fluence's own dossier; both appear in Modo's US directory.",
+     "context": "Fluence sells Mosaic to owners of any vendor's hardware, competing with Habitat for the same ERCOT and CAISO merchant fleets; no commercial link between the two is on record.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Mosaic (AI-enabled market bidding software)",
+     "date": "",
+     "text": "Competes with Tesla Autobidder and independent optimizers (Gridmatic, Habitat Energy et al.); differentiates on degradation/warranty-aware optimization and hardware-agnosticism — Fluence monetizes rivals' hardware through software",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The segment's two incumbents reach it from adjacent businesses — FlexGen from integration and its HybridOS controls, Stem from solar asset-performance management — and its listed challenger, Fluence's Mosaic, is sold to protect a hardware franchise.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it the counterparty on the other side of the tolls and floors this corpus already records from the owners' side — Octopus Energy US's tolled 50 MW in ERCOT, the Nephila-backed revenue floor the 2025 award judges cited, the 'innovative contracting structure' behind Constantine's 171 MW — and the named competitor in the Fluence, Stem, Tesla and Hunt Energy Network dossiers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "fluence",
@@ -30873,6 +31012,20 @@
   },
   {
    "a": "google",
+   "b": "gridmatic",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Founded 2017 by Matt Wytock (ex-Google, Carnegie Mellon PhD); the California corporation Gridmatic Inc.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "google",
    "b": "holder-construction",
    "curated": {
     "a": {
@@ -32626,6 +32779,196 @@
    "last": ""
   },
   {
+   "a": "gridmatic",
+   "b": "habitat-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The other pure-play merchant optimiser landed in this corpus's software segment; both are listed in Modo Energy's April 2025 US directory and both are quantified there, unlike Stem.",
+     "context": "Modo's directory carries Habitat's self-written entry ('over 1,300 MW... market leader in ERCOT', QSE/DME/auto-bidder, ERCOT only) beside Gridmatic's ('300+ MW... across ERCOT and CAISO', QSE/DME/auto-bidder in both). Gridmatic's model differs in kind: it tolls and floors batteries from its own fund and runs a Texas retail book, while Habitat sells optimisation on revenue share to third-party owners. Neither names the other on its own channels.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    },
+    "a": {
+     "type": "competitor",
+     "note": "The other pure-play merchant optimiser in this corpus; both are quantified in Modo Energy's April 2025 US directory, where Habitat claims 'over 1,300 MW' in ERCOT and Gridmatic '300+ MW' across ERCOT and CAISO.",
+     "context": "The two compete for the same ERCOT owners but on different terms: Habitat sells a desk on revenue share and originates floors backed by insurers, Gridmatic tolls and floors batteries from its own fund and adds a retail book. Neither names the other on its own channels; Modo's tolling explainer lists Habitat's Octopus toll and Gridmatic's Cross Trails floor in the same table of ERCOT offtake deals.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Habitat Energy sells a desk on revenue share to owners; Gridmatic puts its own fund's capital behind the battery — a tolling or revenue-floor offtake in which it takes the merchant risk and the QSE seat — and then uses the same forecasts to run a retail book that sells matched power and day-ahead bidding to flexible loads.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+     "date": "",
+     "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "gridmatic",
+   "b": "hunt-energy-network",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "An owner-trader with its own QSE (TraDER) beside a fund-backed optimiser-offtaker; both commented in PUCT Project 58379 and both sit in Modo's US directory.",
+     "context": "Hunt's TraDER is 'available for use by other 3rd party generation facilities', which puts it in the same ERCOT market for scheduling mandates as Gridmatic Equisetum's QSE. Modo's paywalled 2025 capture-rate benchmarks name both in their URL slugs; no commercial link exists.",
+     "source": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · TraDER — QSE and optimisation platform, in-house and for third parties",
+     "date": "",
+     "text": "Modo's optimiser directory lists HEN/TraDER as 'QSE + DME + Auto-bidder', ERCOT only, beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla; the 2026 release says TraDER 'is available for use by other 3rd party generation facilities'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+     "date": "",
+     "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Managed funds — Gridmatic Energy Investment Fund LP and Gridmatic Storage Fund LP",
+     "date": "",
+     "text": "An optimiser with its own balance sheet is unusual in this segment; the closest analogues are the owner-traders (Hunt Energy Network) and the utilities' tolling desks, not the software vendors.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-03",
+     "text": "Gridmatic Equisetum LLC files comments with the PUCT in Project 58379 as 'a Qualified Scheduling Entity that schedules wholesale energy storage resources in ERCOT', alongside Hunt Energy Network, Jupiter Power and Tesla — The only document in which the company describes its scheduling method in its own words and identifies its QSE entity.",
+     "src": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-03"
+  },
+  {
+   "a": "gridmatic",
+   "b": "jupiter-power",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-03",
+     "text": "Gridmatic Equisetum LLC files comments with the PUCT in Project 58379 as 'a Qualified Scheduling Entity that schedules wholesale energy storage resources in ERCOT', alongside Hunt Energy Network, Jupiter Power and Tesla — The only document in which the company describes its scheduling method in its own words and identifies its QSE entity.",
+     "src": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-08",
+     "text": "Energy Vault takes FID on Cross Trails with a 'ten-year offtake agreement with Gridmatic'; Energy Vault's Q3 2024 results cite 'new contracts in the U.S. with Jupiter Power and Gridmatic' for a 33% backlog rise — Gridmatic appears in a listed company's backlog for the first time — the one place its contracts are disclosed by someone else.",
+     "src": "https://www.energy-storage.news/energy-vault-and-gridmatic-sign-10-year-offtake-for-ercot-battery-project/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-03"
+  },
+  {
+   "a": "gridmatic",
+   "b": "stem",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Both listed in Modo's April 2025 directory; the Stem dossier records that Modo quantifies Gridmatic's performance and describes Stem in capability-only language. Gridmatic's CMO was an early marketing hire at Stem.",
+     "context": "Stem delivers QSE services through partners while Gridmatic holds its own QSE entity; they contest the same ERCOT and CAISO merchant fleets. Leesa Lee's bio cites 'successful IPOs at Enphase and Stem' — a career link, not a commercial one.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it at once an optimiser (competing with Tesla, Habitat, Fluence, Stem and Hunt for ERCOT and CAISO mandates), an offtaker (the counterparty Energy Vault reports to its shareholders, and the model Modo calls 'the first known battery in ERCOT operated under a revenue floor contract') and a load-serving entity for the data-centre and miner demand the rest of the corpus builds for.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+     "date": "",
+     "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "gridmatic",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Autobidder is the vendor-bundled alternative to a third-party optimiser in ERCOT and CAISO; Tesla and Gridmatic filed side by side in the PUCT's storage-scheduling project in October 2025.",
+     "context": "Modo's US directory lists both. The PUCT's Project 58379 order names Gridmatic among commenters alongside Tesla, Hunt Energy Network and Jupiter Power. No commercial link is on record.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it at once an optimiser (competing with Tesla, Habitat, Fluence, Stem and Hunt for ERCOT and CAISO mandates), an offtaker (the counterparty Energy Vault reports to its shareholders, and the model Modo calls 'the first known battery in ERCOT operated under a revenue floor contract') and a load-serving entity for the data-centre and miner demand the rest of the corpus builds for.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+     "date": "",
+     "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-03",
+     "text": "Gridmatic Equisetum LLC files comments with the PUCT in Project 58379 as 'a Qualified Scheduling Entity that schedules wholesale energy storage resources in ERCOT', alongside Hunt Energy Network, Jupiter Power and Tesla — The only document in which the company describes its scheduling method in its own words and identifies its QSE entity.",
+     "src": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-03"
+  },
+  {
    "a": "gridstor",
    "b": "hunt-energy-network",
    "evid": [
@@ -32888,6 +33231,172 @@
     }
    ],
    "last": "2026-05"
+  },
+  {
+   "a": "habitat-energy",
+   "b": "hunt-energy-network",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Hunt's in-house TraDER platform and QSE are listed beside Habitat in Modo's US directory; an owner-trader against a third-party desk.",
+     "context": "The Hunt Energy Network dossier records Modo's directory listing 'HEN/TraDER' beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla. Hunt offers TraDER to third-party owners, which puts it in the same ERCOT market for optimisation mandates.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it the counterparty on the other side of the tolls and floors this corpus already records from the owners' side — Octopus Energy US's tolled 50 MW in ERCOT, the Nephila-backed revenue floor the 2025 award judges cited, the 'innovative contracting structure' behind Constantine's 171 MW — and the named competitor in the Fluence, Stem, Tesla and Hunt Energy Network dossiers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "habitat-energy",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Eku Energy, the Macquarie-backed storage developer, contracts Habitat for Williamsdale in the ACT (250 MW/500 MWh, operational 2026) and Basildon in Essex (28 MW/56 MWh).",
+     "context": "Williamsdale is the ACT's largest battery, built under a 15-year ACT revenue swap; Habitat provides FCAS and energy trading. Basildon extended the relationship to the UK in April 2025. The counterparty is Eku, not Macquarie itself, so the link is to the sponsor.",
+     "source": "https://habitat.energy/habitat-energy-partners-with-eku-energy-to-optimise-basildon-battery-energy-storage-system/",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "250 MW/500 MWh + 28 MW/56 MWh"
+    }
+   },
+   "evid": [],
+   "last": "2024-12"
+  },
+  {
+   "a": "habitat-energy",
+   "b": "stem",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Both are in Modo's April 2025 US optimizer directory; Modo quantifies Habitat's ERCOT fleet and gives Stem capability-only language.",
+     "context": "Stem is the segment's listed incumbent on solar asset-performance management and delivers QSE services through partners; Habitat is a Level 4 QSE in its own right. They compete for the same owners' storage mandates in ERCOT.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The segment's two incumbents reach it from adjacent businesses — FlexGen from integration and its HybridOS controls, Stem from solar asset-performance management — and its listed challenger, Fluence's Mosaic, is sold to protect a hardware franchise.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it the counterparty on the other side of the tolls and floors this corpus already records from the owners' side — Octopus Energy US's tolled 50 MW in ERCOT, the Nephila-backed revenue floor the 2025 award judges cited, the 'innovative contracting structure' behind Constantine's 171 MW — and the named competitor in the Fluence, Stem, Tesla and Hunt Energy Network dossiers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "habitat-energy",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ranked directly above Habitat in Great Britain (680 MW to 600 MW, January 2025); Tesla's Autobidder is the vendor-bundled alternative to a third-party desk.",
+     "context": "Modo Energy's January 2025 share table places EDF, Tesla and Habitat as the top three GB optimisers by MW. The Tesla dossier names Habitat Energy among the 'third-party optimizers' Autobidder competes with. Habitat's March 2024 deck claims it outperformed Tesla by about 47% on LCP Enact's February 2023–January 2024 leaderboard; that table was not located and the claim is the company's.",
+     "source": "https://tamarindo.global/insight/analysis/10-battery-optimisers-with-the-biggest-gb-market-share/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Autobidder & Opticaster (energy software)",
+     "date": "",
+     "text": "Differentiates Tesla as hardware-plus-market-software integrator vs pure hardware vendors; competes with Fluence's Mosaic bidding platform and third-party optimizers (Habitat Energy, GridBeyond, Flexitricity) — Tesla's edge is vertical integration with its own fleet telemetry and the option to buy hardware, EPC, and merchant optimization from one counterparty.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it the counterparty on the other side of the tolls and floors this corpus already records from the owners' side — Octopus Energy US's tolled 50 MW in ERCOT, the Nephila-backed revenue floor the 2025 award judges cited, the 'innovative contracting structure' behind Constantine's 171 MW — and the named competitor in the Fluence, Stem, Tesla and Hunt Energy Network dossiers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In Great Britain Modo's January 2025 share table places it behind EDF and Tesla and ahead of Statkraft, Arenko, Shell, SMS, Flexitricity, Centrica and Conrad.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-23",
+     "text": "Modo Energy data (via Tamarindo) rank Habitat third in Great Britain by MW optimised — 600 MW behind EDF (750 MW) and Tesla (680 MW), after adding 280 MW in 2024 — The only public GB share table; it places the company as the leading pure-play independent behind two utility-scale incumbents.",
+     "src": "https://tamarindo.global/insight/analysis/10-battery-optimisers-with-the-biggest-gb-market-share/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-01-23"
+  },
+  {
+   "a": "habitat-energy",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "At Energy Superhub Oxford, Habitat's platform traded the 50 MW Wärtsilä battery and 2 MW/5 MWh Invinity flow battery for Pivot Power (EDF Renewables) with Wärtsilä's GEMS as the site controller.",
+     "context": "Wärtsilä's June 2021 release describes Habitat's PowerIQ platform trading the assets and GEMS controlling them — the software layering the segment's buying criteria describe (an optimiser above a vendor EMS). The current optimiser of the Oxford site is not on record.",
+     "source": "https://www.wartsila.com/media/news/23-06-2021-pivot-power-wartsila-and-habitat-energy-activate-50-mw-transmission-connected-battery-in-oxford-uk-3360579",
+     "status": "historical",
+     "since": "2021",
+     "scale": "50 MW/50 MWh"
+    }
+   },
+   "evid": [],
+   "last": "2021"
   },
   {
    "a": "heron-power",

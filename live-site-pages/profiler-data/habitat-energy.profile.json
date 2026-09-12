@@ -1,0 +1,1034 @@
+{
+  "schemaVersion": 7,
+  "slug": "habitat-energy",
+  "name": "Habitat Energy Limited",
+  "shortName": "Habitat Energy",
+  "categories": [
+    "supplier"
+  ],
+  "website": "https://habitat.energy/",
+  "headquarters": "Oxford, England, United Kingdom (3rd Floor Park Central, 40-41 Park End Street; registered office 3rd Floor, 24 Savile Row, London W1S 2ES); offices in Austin, Texas (300 W. 6th St) and Melbourne, Victoria (Level 7, 460 Collins St)",
+  "founded": 2017,
+  "employees": "'130 people' (company homepage and Who-we-are page, 2026); 147 listed on LinkedIn at 2026-09-12; the audited UK entity alone averaged 57 in FY2024 (54 in FY2023) — the US and Australian subsidiaries are not consolidated in that figure",
+  "ownership": {
+    "type": "subsidiary",
+    "ticker": "Private (Quinbrook Infrastructure Partners portfolio company; sale process reported March 2026)"
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** Habitat Energy is the largest specialist third-party battery optimiser in ERCOT by its own count and the third-largest in Great Britain by independently measured megawatts, it is the one optimiser in this corpus whose ERCOT performance a third party has ranked first (Modo Energy, December 2025, 84% capture against a 35% median), and it is for sale: its owner Quinbrook engaged JLL and Boston Consulting Group in March 2026 to sell it, ten weeks after selling its sister platform Flexitricity to Drax for GBP 36 million, and as of 2026-09-12 no buyer, signing, completion or withdrawal is on the public record. **BACKGROUND.** Founded in Oxford in 2017 by Andrew Luers, Ben Irons and Phil Robinson; wholly acquired by Quinbrook on 30 November 2021 (terms undisclosed; Canadian Solar's May 2021 minority stake exited into the deal). It sells one integrated service, branded EVOLVE, that combines probabilistic price forecasting, automated bid construction and a 24/7 human trading desk with the market registrations an owner would otherwise need itself — Balancing Mechanism Virtual Lead Party in Great Britain, Level 4 Qualified Scheduling Entity in ERCOT, NEM bidding in Australia — sold mainly on revenue share, and increasingly wrapped in floors, tolls and swaps. Company-stated scale: 5.5 GW under contract across the three markets (June 2026), 2 GW in the UK and over 1.8 GW in ERCOT, with PJM registration begun in April 2026. Audited scale is smaller than the headline: the UK entity booked GBP 1.99 million of turnover and a GBP 5.0 million loss in FY2024, and the Quinbrook group line that consolidates all three countries' optimisation fees was GBP 4.17 million, up 80% year on year.",
+  "ecosystemRole": "The pure-play merchant battery optimiser this corpus's software-and-optimization segment was missing. The segment's two incumbents reach it from adjacent businesses — FlexGen from integration and its HybridOS controls, Stem from solar asset-performance management — and its listed challenger, Fluence's Mosaic, is sold to protect a hardware franchise. Habitat sells nothing but the route to market: the QSE or Virtual Lead Party registration, the forecast, the bid and the trader, taken as a percentage of what the battery earns. That makes it the counterparty on the other side of the tolls and floors this corpus already records from the owners' side — Octopus Energy US's tolled 50 MW in ERCOT, the Nephila-backed revenue floor the 2025 award judges cited, the 'innovative contracting structure' behind Constantine's 171 MW — and the named competitor in the Fluence, Stem, Tesla and Hunt Energy Network dossiers. It is also the only member of the segment whose ranking rests on a third-party measurement rather than its own claim, and the only one currently in a sale process, so its next owner will decide whether the segment's leading independent stays independent.",
+  "productsAndServices": [
+    {
+      "name": "EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+      "category": "Storage optimisation and market representation (revenue-share service)",
+      "description": "The core service and, per the FY2024 accounts, the source of 93% of the UK entity's turnover ('optimisation fees' GBP 1.86 million of GBP 1.99 million). EVOLVE is described by the company as 'our fully integrated end-to-end optimization service' combining 'cutting-edge algorithmic forecasting and automation with an expert in-house trading team and unrivalled asset intelligence', and it is explicitly positioned against software-only rivals: 'Unlike a software only solution, Habitat Energy's fully integrated approach' (Plenitude release, April 2025); 'a fully-integrated one stop optimisation service rather than the simple Software-as-a-Service-model' (March 2024). In each market Habitat holds the registration the owner would otherwise need: in Great Britain it is a BSC Virtual Lead Party and Non-Physical Trader (the second company to enter the Balancing Mechanism as a VLP, September 2020) handling day-ahead, intraday, imbalance and Balancing Mechanism positions plus asset market registration; in ERCOT it offers 'Comprehensive Level 4 QSE Services' with five-minute optimisation and RTC+B-era bid construction (QSE since July 2023); in the NEM it bids energy and FCAS with warranty-, degradation- and temperature-aware dispatch and 'Causer Pays' cost management. The company's stated fleet: 5.5 GW under contract worldwide, 2 GW in the UK (June 2026), over 1.8 GW contracted in ERCOT (April 2026), and in Australia the 250 MW/500 MWh Williamsdale and 100 MW/200 MWh Mannum batteries plus 307 MW/614 MWh contracted for 2027–28.",
+      "highlights": [
+        "Independently measured position: third in Great Britain by MW optimised at January 2025 (600 MW, behind EDF 750 MW and Tesla 680 MW — Tamarindo citing Modo Energy); first among ERCOT optimisers in December 2025 at an 84% TBX capture rate against a 35% fleet median (Modo Energy, March 2026); Aypa led the April 2026 table and Habitat was not named that month",
+        "Named US mandates: UBS Asset Management 730 MW across four ERCOT projects (May 2024), Plenitude (Eni) Guajillo 200 MW/200 MWh (April 2025), Ørsted 250 MW/2-hour Fort Bend County — 'our largest battery to date', split into a QSE contract with Ørsted Asset Management and a trading contract with Ørsted Trading (November 2025), Octopus Energy US's tolled 50 MW/100 MWh (February 2025), Birch Creek's Honeycomb co-located solar-plus-storage (March 2026); the first US client was Quinbrook sister company Glidepath (60 MW, 2022)",
+        "Named UK mandates: Gresham House Energy Storage Fund framework of 'more than 500MW' (July 2023, client since 2019), Constantine Energy Storage 171 MW/462 MWh (February 2025), AGR Renewables 157 MW co-located with 133 MWp of solar on 'an initial 7-year, fully merchant agreement' (June 2026), Pulse Clean Energy's five operating diesel-to-battery sites, Low Carbon 45 MW, Eku Energy Basildon 28 MW",
+        "Commercial model per the company's Head of Contract Management (inspiratia, April 2025): 'revenue share, sometimes with a small base fee to cover operating costs', with floors provided through 'utilities and insurers'; the Quinbrook group accounts describe the revenue as 'a percentage of Revenues' from third-party owners",
+        "Performance claims are the company's own unless marked: '87% of the achievable revenues' on an Australian co-located site since September 2023 and forecasts that 'outperform AEMO pre-dispatch price forecasts by 11% in the critical front hour' (March 2024); top of LCP Enact's UK leaderboard February 2023–January 2024, 'outperforming EDF by 21%, Tesla by c. 47%' (company deck, March 2024 — the LCP table itself was not located); 'managed the first battery to pass ERCOT's signal-following test' ahead of RTC+B (August 2025)"
+      ],
+      "positioning": "Habitat names no competitor on its own site; the field is drawn by third parties. In Great Britain Modo's January 2025 share table places it behind EDF and Tesla and ahead of Statkraft, Arenko, Shell, SMS, Flexitricity, Centrica and Conrad. In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'. Its differentiation is the integrated desk against software-only optimisers and against owners' in-house desks: Irons told Energy-Storage.News in 2023 that around 2 GW is needed before in-house optimisation is cost-competitive and that 'there's no code to crack'.",
+      "soldThrough": "Direct contracts with asset owners, funds and IPPs, typically multi-year (three years for Eelpower in 2022; seven for AGR in 2026), on revenue share with optional floors; separate QSE-only contracts where the owner keeps trading in-house (Ørsted); tolled assets optimised for the toller rather than the owner (Octopus Energy US).",
+      "targetSegments": [
+        "Merchant and contracted battery owners in Great Britain, ERCOT and the NEM — investment funds (Gresham House, UBS AM, Railpen-backed AGR and Constantine), utilities' and oil majors' storage arms (Ørsted, Eni Plenitude), developer-owners (Eku, Pulse, Low Carbon, Epic Energy, Birch Creek)",
+        "Retailers and tollers who hold dispatch rights but not a desk (Octopus Energy US)",
+        "Co-located solar-plus-storage owners (Octopus Australia, AGR, Birch Creek)"
+      ],
+      "roadmap": "PJM: 'has begun its registration process to be a Market Participant with PJM' with entry across energy, ancillary and capacity markets plus load and renewables trading (April 2026; no PJM customer named). CAISO and MISO were named as targets 'by the end of 2023' in the 2022 US launch release and have not been announced since. Australian pipeline: Octopus Australia's Fulham (64 MW/128 MWh, 2027) and Blind Creek (243 MW/486 MWh, 2028)."
+    },
+    {
+      "name": "EVOLVE for Co-located Assets and EVOLVE for Renewables — solar, wind and hybrid optimisation",
+      "category": "Renewables and hybrid asset trading",
+      "description": "The same forecasting-and-desk service applied to generation and to shared-connection hybrids. For renewables the company pitches day-ahead/real-time trading and basis management: 'maximize revenue across both day-ahead and real-time markets while minimizing exposure to negative prices and system costs' (US), 'minimising exposure to negative prices, FCAS Causer Pays and FCAS contingency cost recovery' (Australia). A July 2026 company insight claims 'up to a 10-20% uplift' for a renewable asset from DA/RT trading and 'a $2-5 per MWh' offset from basis management, and states 'more than 5GW of battery storage and renewables under contract'. For co-located assets the desk co-optimises the two resources at one node — Birch Creek's Honeycomb in ERCOT South is the first US case, 'co-optimizing between two assets at a node within ERCOT's RTC+B environment', and the company built 'digital twins' of Octopus Australia's two DC-coupled sites before construction.",
+      "highlights": [
+        "Renewables-only references: Epic Energy's 39 MWp Mannum Stage 2 solar farm in South Australia (2023) — the first named renewables-only mandate",
+        "Co-located references: AGR's three UK sites (157 MW of batteries with 133 MWp of solar), Birch Creek Honeycomb (Bee County, Texas; solar COD August 2026, battery October 2026), Octopus Australia's Fulham and Blind Creek (380 MW of solar with 307 MW/614 MWh), Ørsted's Fort Bend battery sharing a point of interconnection with solar",
+        "PJM entry (April 2026) extends the offer to 'renewables and load including trading and risk management support for Day Ahead/Real Time energy and basis'"
+      ],
+      "positioning": "A newer line than the battery service and thinly evidenced: one renewables-only reference and four co-located mandates, all since 2023. The company's own framing is that renewables 'built for an old market' — contracted under PPAs before negative pricing and basis risk mattered — need the same trading discipline as batteries.",
+      "soldThrough": "Same contract forms as the battery service; co-located mandates are single agreements covering both assets.",
+      "targetSegments": [
+        "Owners of merchant or partly merchant solar and wind in ERCOT, the NEM and Great Britain",
+        "Developers adding storage to existing generation at a shared connection"
+      ],
+      "roadmap": "PJM renewables and load trading once the market-participant registration completes (no date given)."
+    },
+    {
+      "name": "Structured products and risk management — revenue floors, tolls, volatility swaps and QSE-only contracts",
+      "category": "Financial structuring around the optimisation contract",
+      "description": "Not a separately marketed product but the fastest-moving part of the offer, and the reason the 2024 and 2025 Optimiser of the Year awards were given: the 2024 judges cited 'the introduction of new financial products' and the 2025 judges 'Habitat's work on the Octopus toll in the ERCOT market in the US, as well as the Nephilia [Nephila] Capital floor'. The company's Head of Quantitative Analytics describes 'structuring and pricing innovative swaps, derivatives, and synthetic BESS/volatility products' (October 2025); an Origination Manager's January 2026 insight says 'we are actively participating in volatility swaps and options, both managing the risk in our own book and supporting our clients', describes a TB2 (top-two-hour spread) swap structure, and claims a hedge structured for August 2025 in which the counterparty earned 'some 8x more revenue from the hedge than they earned from the battery itself'. Constantine's 171 MW came with 'an innovative contracting structure created by Habitat Energy to offer Constantine Energy Storage enhanced revenue certainty' (February 2025).",
+      "highlights": [
+        "Revenue floor: a Nephila Capital-backed floor is cited by the award judges; Gresham House's July 2025 RNS records a Markel Bermuda swap originated by Nephila on 377 MW at GBP 52,000 per MW-year for over seven years, but no GRID document names the optimiser behind it — the link to Habitat is inference from the award citation and is recorded as such",
+        "Tolled-battery optimisation: Octopus Energy US's 50 MW/100 MWh in ERCOT — 'Habitat Energy's first BESS tolling optimization client in the US', onboarded in six weeks (February 2025)",
+        "QSE-only: Ørsted's 250 MW is 'structured across two deals' — QSE services to the asset-management division, trading to the trading division (November 2025)",
+        "Balance-sheet footprint: the UK entity's FY2024 accounts carry an HSBC UK charge over cash deposits (October 2024), GBP 18.0 million of other creditors and a 'client settlement provision' of GBP 59,397 — the only audited evidence of the desk's own book"
+      ],
+      "positioning": "The floors and swaps compete with the tolls that Octopus, Statkraft and the retailers offer owners directly: when Gresham House moved 568 MW to an Octopus toll in 2024 and 789 MW to Statkraft and Markel floors in 2025, the optimiser's role on those sites became a dispatch subcontract at best. Habitat's answer is to originate the floor itself and keep the trading.",
+      "soldThrough": "Bilateral with the asset owner, backed by insurers, utilities or Habitat's own book; ISDA-style swaps where a third party carries the floor.",
+      "targetSegments": [
+        "Lenders and funds needing minimum-revenue certainty on merchant batteries",
+        "Owners hedging summer scarcity exposure in ERCOT"
+      ],
+      "roadmap": "None stated."
+    },
+    {
+      "name": "Advisory services",
+      "category": "Consulting",
+      "description": "A small line — GBP 130,461 of UK turnover in FY2024 (GBP 157,794 in FY2023) — offered through the site's contact form ('I'm interested in advisory services') and described on LinkedIn as supporting 'the design and financing of new-build projects through our understanding of the revenue model'. It is the entry point through which the company reaches owners before their assets are built: Octopus Australia's digital twins and Birch Creek's pre-COD QSE work are examples of the same capability delivered inside an optimisation mandate.",
+      "highlights": [
+        "6.6% of UK entity turnover in FY2024 and falling as optimisation fees grow",
+        "Pre-COD services — market registration, commissioning and onboarding support, digital twins — are listed as EVOLVE features rather than sold separately"
+      ],
+      "positioning": "Competes with the revenue-forecasting consultancies (Aurora, LCP Delta, Modo) only tangentially; the value is in converting a study into a mandate.",
+      "soldThrough": "Direct.",
+      "targetSegments": [
+        "Developers and financiers of pre-construction storage and hybrid projects"
+      ],
+      "roadmap": "None stated."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "EVOLVE platform and trading desk (company-described capabilities)",
+      "specs": [
+        {
+          "band": "Forecasting",
+          "label": "Method",
+          "value": "'Real-time algorithmic probabilistic forecasting of prices, fundamentals and utilizations' (US); 'Real-time algorithmic probabilistic forecasting' (Australia)"
+        },
+        {
+          "band": "Forecasting",
+          "label": "Front-hour claim (Australia)",
+          "value": "'Our proprietary forecasts outperform AEMO pre-dispatch price forecasts by 11% in the critical front hour' (March 2024)"
+        },
+        {
+          "band": "Optimisation",
+          "label": "Granularity (ERCOT)",
+          "value": "'5 min granularity optimization'; RTC+B optimiser 'internally called the Quantimizer' (December 2025)"
+        },
+        {
+          "band": "Optimisation",
+          "label": "Asset modelling",
+          "value": "'Sophisticated modelling of operational parameters — Warranty, degradation and temperature'; 'dynamic approach to degradation cost management can extend the life of your battery asset' (LinkedIn)"
+        },
+        {
+          "band": "Optimisation",
+          "label": "Tooling",
+          "value": "'DCOPF... modeling framework for spot/DART trading and production cost modeling' (US quantitative analytics, October 2025); 'digital twins' of pre-COD sites (Octopus Australia, July 2026)"
+        },
+        {
+          "band": "Operations",
+          "label": "Desk",
+          "value": "'Human-in-the-loop trading and operations', 'Trading room services', 'Control room services', 'Real-time monitoring', 'Alerting and alarming based on live telemetry'"
+        },
+        {
+          "band": "Market access — Great Britain",
+          "label": "Registrations",
+          "value": "BSC Virtual Lead Party and Non-Physical Trader; entered the Balancing Mechanism as a VLP on 2 September 2020 with 69 MW/100 MWh (Red Scar and Roundponds)"
+        },
+        {
+          "band": "Market access — Great Britain",
+          "label": "Services",
+          "value": "'Position management – day-ahead, intraday, imbalance and Balancing Mechanism', 'Forward trading capabilities', 'Asset market registration', 'Route to market', 'Bid construction'; Dynamic Containment (the 'largest provider' at the 2021 acquisition, per Energy-Storage.News)"
+        },
+        {
+          "band": "Market access — ERCOT",
+          "label": "Registrations",
+          "value": "'Comprehensive Level 4 QSE Services'; QSE since the Byrd Ranch commissioning in July 2023; 'Bid/offer construction', 'Position management – day-ahead and real-time'"
+        },
+        {
+          "band": "Market access — ERCOT",
+          "label": "RTC+B",
+          "value": "Real-Time Co-optimization plus Batteries went live 5 December 2025; 'We've had to effectively build our tech stack twice' (Kirschner, November 2025); 'managed the first battery to pass ERCOT's signal-following test' (August 2025)"
+        },
+        {
+          "band": "Market access — NEM",
+          "label": "Services",
+          "value": "Energy and FCAS bidding with 'Bid bands', 'Volume optimisation', 'Dispatch instructions tailored to your asset and location'; renewables exposure management for 'FCAS Causer Pays and FCAS contingency cost recovery'"
+        },
+        {
+          "band": "Market access — PJM",
+          "label": "Status",
+          "value": "'has begun its registration process to be a Market Participant with PJM' (April 2026); no customer or MW named"
+        }
+      ],
+      "notes": "Every value is the company's own wording; no third-party test of the forecasting or optimisation claims exists beyond the Modo capture-rate benchmarks recorded under fleet metrics. The platform brand was 'PowerIQ' in 2020–21 sources (Wärtsilä release, Canadian Solar release) and is 'EVOLVE' on every current company page; no rename date is published."
+    },
+    {
+      "product": "Fleet and scale (company-stated figures, dated)",
+      "specs": [
+        {
+          "band": "Global",
+          "label": "Under contract",
+          "value": "'over 700MW' UK operating (September 2022) → 'over 1GW of contracted assets globally' (June 2023) → '>2 gigawatts' (May 2024) → '2.8GW' (December 2024) → '3.3GW' (April 2025) → 'over 4GW' (November 2025) → '5.5GW' worldwide (June 2026; homepage September 2026)"
+        },
+        {
+          "band": "Global",
+          "label": "Operating vs contracted",
+          "value": "Quinbrook's portfolio page: 'operating portfolio has grown more than elevenfold to 1.8 GW, with a contracted pipeline exceeding 3.9 GW' (undated, 2025–26)"
+        },
+        {
+          "band": "ERCOT",
+          "label": "Under contract / operating",
+          "value": "'1 gigawatt contracted' (May 2024) → 'over 1GW now in operation' (February 2025) → 'over 1.2GW' contracted (April 2025) → 'over 1.5 GW of storage under management' (November 2025) → 'over 1.8 GW of battery storage assets and renewable assets' contracted (April 2026)"
+        },
+        {
+          "band": "Great Britain",
+          "label": "Under contract",
+          "value": "'over 1.2GW in the UK' (February 2025) → '2GW of assets under contract' (June 2026); independently: 600 MW operating and optimised at January 2025 (Modo via Tamarindo), 280 MW added in 2024"
+        },
+        {
+          "band": "Australia",
+          "label": "Named assets",
+          "value": "Williamsdale 250 MW/500 MWh (Eku, ACT, operational 2026); Mannum 100 MW/200 MWh (Epic Energy, SA); Mannum Stage 2 solar 39 MWp; Yadlamalka 2 MW/8 MWh vanadium-flow plus 6 MWp (2021); Octopus Australia Fulham and Blind Creek (307 MW/614 MWh, 2027–28)"
+        },
+        {
+          "band": "People",
+          "label": "Headcount",
+          "value": "'40 strong' (November 2021) → 'over 80' (October 2023) → '~90' (March 2024) → 'over 130' (2026); audited UK entity average 57 (FY2024)"
+        }
+      ],
+      "notes": "The global series mixes bases — 'under contract' includes pipeline and renewables, 'under management' and 'operating' do not — so the 5.5 GW headline is not comparable with the 600 MW GB and 1.5 GW ERCOT operating figures. No fleet figure has been independently verified; the GB share and the ERCOT capture rate are the only third-party measurements."
+    },
+    {
+      "product": "Independent performance measurements",
+      "specs": [
+        {
+          "band": "ERCOT (Modo Energy)",
+          "label": "December 2025",
+          "value": "'Habitat Energy: 84% TBX capture rate versus a fleet median of 35%' — the leading optimiser that month (published 5 March 2026)"
+        },
+        {
+          "band": "ERCOT (Modo Energy)",
+          "label": "April 2026",
+          "value": "Optimiser leader Aypa Power at 74% TBX capture against an optimiser median of 39%; Habitat not named (published 1 May 2026)"
+        },
+        {
+          "band": "Great Britain (Modo via Tamarindo)",
+          "label": "January 2025 share",
+          "value": "EDF 750 MW; Tesla 680 MW; Habitat Energy 600 MW; Statkraft 433 MW; Arenko 350 MW; Shell 330 MW; SMS 290 MW; Flexitricity 230 MW; Centrica 130 MW; Conrad Energy 120 MW (sites of 7 MW and above)"
+        },
+        {
+          "band": "Awards",
+          "label": "Energy Storage Investment Awards (Tamarindo)",
+          "value": "'Optimiser of the Year' 2024 (inaugural) and 2025 ('second consecutive year')"
+        },
+        {
+          "band": "Awards",
+          "label": "Energy Storage Awards (Solar Media)",
+          "value": "'Trading & Optimisation Team of the Year' 2023 (inaugural); EDF won in 2024 and 2025"
+        }
+      ],
+      "notes": "Modo's monthly optimiser rankings are paywalled except where quoted in the free text of a report; only two months are therefore on the public record, and they point in different directions. A single month's capture rate on a small named fleet is a noisy measure, as the company's own August 2025 insight on leaderboards argues."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-07-24",
+      "category": "customer",
+      "headline": "Octopus Australia appoints Habitat to trade two DC-coupled solar-plus-storage projects — Fulham (80 MW solar, 64 MW/128 MWh, 2027) and Blind Creek (300 MW solar, 243 MW/486 MWh, 2028)",
+      "read": "The Australian book moves from standalone batteries to hybrids contracted years before COD, with digital twins built in advance — a pre-construction lock-in the standalone model never had.",
+      "source": "https://habitat.energy/habitat-energy-to-optimise-solar-and-storage-for-octopus-australia/"
+    },
+    {
+      "date": "2026-06-24",
+      "category": "customer",
+      "headline": "AGR Renewables (Railpen-backed) signs 'an initial 7-year, fully merchant agreement' for 157 MW of 2.5-hour batteries co-located with 133 MWp of solar; UK portfolio reaches 2 GW and global 5.5 GW under contract",
+      "read": "A seven-year merchant mandate on unbuilt assets is the longest tenor on record for the company and shows fund owners contracting the optimiser at financial close rather than at COD.",
+      "source": "https://habitat.energy/habitat-energy-selected-by-agr-renewables/"
+    },
+    {
+      "date": "2026-04-17",
+      "category": "market",
+      "headline": "Habitat announces PJM expansion — 'has begun its registration process to be a Market Participant with PJM' — citing over 1.8 GW contracted in ERCOT",
+      "read": "Four years after promising PJM, CAISO and MISO 'by the end of 2023', only PJM is being entered, and without a named customer; the ERCOT book is doing the growing.",
+      "source": "https://habitat.energy/habitat-energy-expands-into-pjm/"
+    },
+    {
+      "date": "2026-03-17",
+      "category": "ma",
+      "headline": "New Project Media reports Quinbrook is 'working with JLL and Boston Consulting Group' to sell Habitat Energy and would 'start sounding out the market over the coming weeks'; Quinbrook declined comment",
+      "read": "A single-outlet report, never confirmed by either company and not followed by any signing, price or bidder; the company's footer, Quinbrook's portfolio page and Companies House all still show Quinbrook ownership at 2026-09-12.",
+      "source": "https://newprojectmedia.com/ma-advisors-emerge-on-upcoming-quinbrook-habitat-energy-sale/"
+    },
+    {
+      "date": "2026-03-05",
+      "category": "market",
+      "headline": "Modo Energy's ERCOT benchmark records Habitat as the leading optimiser for December 2025 — '84% TBX capture rate versus a fleet median of 35%'",
+      "read": "The first independent ranking of the company's ERCOT performance, and the strongest third-party datapoint in the record; April 2026's table was led by Aypa and did not name Habitat.",
+      "source": "https://modoenergy.com/research/en/february-2026-ercot-bess-benchmark-rtcb-revenues-batteries-performance"
+    },
+    {
+      "date": "2026-03-04",
+      "category": "project",
+      "headline": "First US co-located solar-plus-storage mandate: Birch Creek's Honeycomb in Bee County (ERCOT South); Habitat is QSE and achieved the Production Load Date, with solar COD August 2026 and the battery October 2026",
+      "read": "Extends the ERCOT QSE role to hybrids under RTC+B — the co-optimisation of two assets at one node is the capability the PJM and renewables lines will sell.",
+      "source": "https://habitat.energy/habitat-energy-birch-creek-solar-storage-project-ercot/"
+    },
+    {
+      "date": "2026-01-21",
+      "category": "corporate",
+      "headline": "Quinbrook sells sister optimiser Flexitricity to Drax at a GBP 36 million enterprise value (about GBP 42 million proceeds) for roughly 0.9 GW under management and about 85 staff; completed by 1 April 2026",
+      "read": "The only hard comparable for a Habitat sale, and a low one: about GBP 40,000 per MW under management for a single-market platform against Habitat's three markets and larger fleet.",
+      "source": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/"
+    },
+    {
+      "date": "2026-01-04",
+      "category": "financial",
+      "headline": "FY2024 accounts filed at Companies House: UK turnover GBP 1.99 million (+52%), loss GBP 5.0 million (FY2023: GBP 7.9 million), net liabilities GBP 12.7 million, GBP 37.2 million owed to the parent, going concern resting on Renewable and Grid Services' support; 'no significant events' since year end (signed 19 December 2025)",
+      "read": "The audited entity is a loss-making UK company funded by intercompany debt — what a buyer would price is the group-level fee line and the contracted GW, not this balance sheet.",
+      "source": "https://find-and-update.company-information.service.gov.uk/company/10923911/filing-history/MzQ5NjU1OTA2M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-12-10",
+      "category": "leadership",
+      "headline": "Keith Gains, Quinbrook's UK Managing Director and Investment Committee member, appointed a Habitat director; Henry 'Hank' Jones, ex-Dynegy Chief Commercial Officer and Quinbrook senior adviser, had joined the board on 17 June 2025",
+      "read": "Two sponsor-side additions in six months — the UK deal lead who signed the Flexitricity sale and a US power-trading veteran — are consistent with a board being prepared for a process, though neither company has said so.",
+      "source": "https://find-and-update.company-information.service.gov.uk/company/10923911/officers"
+    },
+    {
+      "date": "2025-12-05",
+      "category": "regulatory",
+      "headline": "ERCOT's Real-Time Co-optimization plus Batteries (RTC+B) goes live; Habitat's US MD calls it 'effectively a full reset of the system' and the desk describes a rebuilt optimiser, the 'Quantimizer'",
+      "read": "The market redesign that resets every ERCOT optimiser's edge; Habitat's December 2025 capture-rate lead came in the first month of the new regime.",
+      "source": "https://www.energy-storage.news/its-effectively-a-full-reset-of-the-system-habitat-energy-on-ercots-rtcb-market-changes/"
+    },
+    {
+      "date": "2025-11-11",
+      "category": "other",
+      "headline": "'Optimiser of the Year' at the Energy Storage Investment Awards for the second consecutive year; judges cite 'the Octopus toll in the ERCOT market' and 'the Nephilia Capital floor'; assets under management 'over 4GW'",
+      "read": "The citation is the clearest public evidence that the company originates revenue floors itself, not only optimises under others' tolls.",
+      "source": "https://habitat.energy/habitat-wins-optimiser-of-the-year-energy-storage-investment-awards-2025/"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "customer",
+      "headline": "Ørsted appoints Habitat for its 250 MW/2-hour Fort Bend County, Texas battery — 'our largest battery to date' — as two contracts: QSE services to Ørsted Asset Management and optimisation and trading to Ørsted Trading; ERCOT under management 'over 1.5 GW'",
+      "read": "An owner with its own trading arm still buys the QSE and the desk; the split contract shows the service unbundling into registration and trading that can be sold separately.",
+      "source": "https://habitat.energy/habitat-energy-to-optimize-orsted-250-mw-battery-exas/"
+    },
+    {
+      "date": "2025-07-03",
+      "category": "customer",
+      "headline": "Gresham House Energy Storage Fund signs floors on 789 MW — Statkraft 412 MW across 13 sites and a Markel Bermuda swap originated by Nephila on 377 MW at GBP 52,000 per MW-year — replacing the Octopus toll expiring June 2026; no document names the optimiser under either floor",
+      "read": "Habitat's oldest and largest UK client has moved most of its fleet under third-party floors; several historic Habitat sites (Red Scar, Roundponds, Coupar Angus) sit in the Statkraft list, so the GRID mandate has shrunk — by how much is undisclosed.",
+      "source": "https://www.investegate.co.uk/announcement/rns/gresham-house-energy-storage-fund--grid/long-term-floor-agreements-on-789mw-of-projects/8961176"
+    },
+    {
+      "date": "2025-04-22",
+      "category": "corporate",
+      "headline": "Head of Contract Management describes the commercial model to inspiratia: 'revenue share, sometimes with a small base fee to cover operating costs', floors via 'utilities and insurers'; 3.3 GW under management globally, 1.5 GW in the UK",
+      "read": "The most explicit public statement of how the company is paid.",
+      "source": "https://inspiratia.com/article/qa-habitat-energy-optimising-gridscale-battery-in-a-changing-market"
+    },
+    {
+      "date": "2025-04-01",
+      "category": "order-win",
+      "headline": "Three mandates in one day: Plenitude (Eni) Guajillo 200 MW/200 MWh in Webb County, Texas; Epic Energy Mannum 100 MW/200 MWh in South Australia; Eku Energy Basildon 28 MW/56 MWh in Essex — ERCOT 'over 1.2GW', global 3.3 GW",
+      "read": "Utility- and oil-major-owned batteries in three markets on the same day; the ERCOT figure passes the 1.2 GW promised for end-2024 with a quarter's delay.",
+      "source": "https://habitat.energy/habitat-energy-collaborates-with-plenitude-to-optimize-guajillo-texas-battery/"
+    },
+    {
+      "date": "2025-02-17",
+      "category": "customer",
+      "headline": "Constantine Energy Storage (AIMCo/Railpen) appoints Habitat for 171 MW/462 MWh across Ocker Hill, Whitegate and Monk Fryston under 'an innovative contracting structure created by Habitat Energy to offer... enhanced revenue certainty'",
+      "read": "The first UK mandate sold on a Habitat-designed certainty structure rather than plain revenue share — the product the award judges later named.",
+      "source": "https://habitat.energy/habitat-energy-to-optimise-constantine-energy-storage-battery-portfolio/"
+    },
+    {
+      "date": "2025-02-10",
+      "category": "customer",
+      "headline": "Octopus Energy US appoints Habitat to optimise a tolled 50 MW/100 MWh battery in ERCOT — 'first BESS tolling optimization client in the US', onboarded in six weeks; ERCOT 'over 1GW now in operation'",
+      "read": "Habitat working for the toller rather than the owner: the tolling wave in ERCOT is a channel, not only a threat.",
+      "source": "https://habitat.energy/habitat-energy-optimizes-tolled-battery-for-octopus-energy-us-in-ercot/"
+    },
+    {
+      "date": "2025-01-23",
+      "category": "market",
+      "headline": "Modo Energy data (via Tamarindo) rank Habitat third in Great Britain by MW optimised — 600 MW behind EDF (750 MW) and Tesla (680 MW), after adding 280 MW in 2024",
+      "read": "The only public GB share table; it places the company as the leading pure-play independent behind two utility-scale incumbents.",
+      "source": "https://tamarindo.global/insight/analysis/10-battery-optimisers-with-the-biggest-gb-market-share/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "gridmatic",
+      "type": "competitor",
+      "status": "active",
+      "note": "The other pure-play merchant optimiser landed in this corpus's software segment; both are listed in Modo Energy's April 2025 US directory and both are quantified there, unlike Stem.",
+      "context": "Modo's directory carries Habitat's self-written entry ('over 1,300 MW... market leader in ERCOT', QSE/DME/auto-bidder, ERCOT only) beside Gridmatic's ('300+ MW... across ERCOT and CAISO', QSE/DME/auto-bidder in both). Gridmatic's model differs in kind: it tolls and floors batteries from its own fund and runs a Texas retail book, while Habitat sells optimisation on revenue share to third-party owners. Neither names the other on its own channels.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "tesla",
+      "type": "competitor",
+      "status": "active",
+      "note": "Ranked directly above Habitat in Great Britain (680 MW to 600 MW, January 2025); Tesla's Autobidder is the vendor-bundled alternative to a third-party desk.",
+      "context": "Modo Energy's January 2025 share table places EDF, Tesla and Habitat as the top three GB optimisers by MW. The Tesla dossier names Habitat Energy among the 'third-party optimizers' Autobidder competes with. Habitat's March 2024 deck claims it outperformed Tesla by about 47% on LCP Enact's February 2023–January 2024 leaderboard; that table was not located and the claim is the company's.",
+      "source": "https://tamarindo.global/insight/analysis/10-battery-optimisers-with-the-biggest-gb-market-share/"
+    },
+    {
+      "slug": "fluence",
+      "type": "competitor",
+      "status": "active",
+      "note": "Fluence's Mosaic bidding software is positioned against 'independent optimizers (Gridmatic, Habitat Energy et al.)' in Fluence's own dossier; both appear in Modo's US directory.",
+      "context": "Fluence sells Mosaic to owners of any vendor's hardware, competing with Habitat for the same ERCOT and CAISO merchant fleets; no commercial link between the two is on record.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "stem",
+      "type": "competitor",
+      "status": "active",
+      "note": "Both are in Modo's April 2025 US optimizer directory; Modo quantifies Habitat's ERCOT fleet and gives Stem capability-only language.",
+      "context": "Stem is the segment's listed incumbent on solar asset-performance management and delivers QSE services through partners; Habitat is a Level 4 QSE in its own right. They compete for the same owners' storage mandates in ERCOT.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "hunt-energy-network",
+      "type": "competitor",
+      "status": "active",
+      "note": "Hunt's in-house TraDER platform and QSE are listed beside Habitat in Modo's US directory; an owner-trader against a third-party desk.",
+      "context": "The Hunt Energy Network dossier records Modo's directory listing 'HEN/TraDER' beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla. Hunt offers TraDER to third-party owners, which puts it in the same ERCOT market for optimisation mandates.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "wartsila",
+      "type": "partner",
+      "status": "historical",
+      "since": "2021",
+      "scale": "50 MW/50 MWh",
+      "note": "At Energy Superhub Oxford, Habitat's platform traded the 50 MW Wärtsilä battery and 2 MW/5 MWh Invinity flow battery for Pivot Power (EDF Renewables) with Wärtsilä's GEMS as the site controller.",
+      "context": "Wärtsilä's June 2021 release describes Habitat's PowerIQ platform trading the assets and GEMS controlling them — the software layering the segment's buying criteria describe (an optimiser above a vendor EMS). The current optimiser of the Oxford site is not on record.",
+      "source": "https://www.wartsila.com/media/news/23-06-2021-pivot-power-wartsila-and-habitat-energy-activate-50-mw-transmission-connected-battery-in-oxford-uk-3360579"
+    },
+    {
+      "slug": "canadian-solar",
+      "type": "investor",
+      "status": "historical",
+      "since": "2021-05",
+      "note": "Canadian Solar took an undisclosed minority stake in May 2021 and exited it into Quinbrook's acquisition on 30 November 2021.",
+      "context": "The May 2021 release framed the investment as a strategic partnership for storage optimisation in the UK and Australia. Companies House shows Quinbrook's vehicle as the sole 75%+ PSC from 30 November 2021, so the stake did not survive the acquisition.",
+      "source": "https://www.prnewswire.com/news-releases/canadian-solar-invests-in-strategic-partnership-with-ai-energy-storage-optimization-company-habitat-energy-301290585.html"
+    },
+    {
+      "slug": "macquarie",
+      "type": "customer",
+      "status": "active",
+      "since": "2024-12",
+      "scale": "250 MW/500 MWh + 28 MW/56 MWh",
+      "note": "Eku Energy, the Macquarie-backed storage developer, contracts Habitat for Williamsdale in the ACT (250 MW/500 MWh, operational 2026) and Basildon in Essex (28 MW/56 MWh).",
+      "context": "Williamsdale is the ACT's largest battery, built under a 15-year ACT revenue swap; Habitat provides FCAS and energy trading. Basildon extended the relationship to the UK in April 2025. The counterparty is Eku, not Macquarie itself, so the link is to the sponsor.",
+      "source": "https://habitat.energy/habitat-energy-partners-with-eku-energy-to-optimise-basildon-battery-energy-storage-system/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ERCOT Real-Time Co-optimization plus Batteries (RTC+B)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12-05",
+      "exposure": "RTC+B clears energy and ancillary services together every five minutes and settles batteries as single resources, replacing the day-ahead ancillary awards that had supplied most ERCOT battery revenue. Habitat's US Managing Director called it 'effectively a full reset of the system' and said 'we've had to effectively build our tech stack twice'; the desk rebuilt its optimiser (the 'Quantimizer') and ran an 'RTC+B bootcamp' for clients in October 2025. Modo's benchmark placed Habitat first among optimisers in December 2025, the first month under the new design.",
+      "mitigation": "The company states it 'managed the first battery to pass ERCOT's signal-following test' and rebuilt its bid construction for the co-optimised market.",
+      "source": "https://www.energy-storage.news/its-effectively-a-full-reset-of-the-system-habitat-energy-on-ercots-rtcb-market-changes/"
+    },
+    {
+      "regime": "UK National Security and Investment Act and Ofgem consent on a change of control",
+      "status": "in-effect",
+      "exposure": "A sale of Habitat would pass through the same approvals its sister company did: Drax's acquisition of Flexitricity was 'conditional on Ofgem and NSIA approvals' and took ten weeks from signing (21 January 2026) to completion (by 1 April 2026). Habitat holds BSC party status and market registrations in three jurisdictions, so a change of control also engages ERCOT/PUCT and AEMO registrations.",
+      "source": "https://www.drax.com/news/acquisition-of-asset-optimisation-platform/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Andrew Luers",
+      "title": "Co-founder and Chief Executive Officer; director since incorporation (21 August 2017)",
+      "photo": "images/execs/habitat-energy-luers.jpg",
+      "background": [
+        "Co-founder and CEO, Habitat Energy (2017–); signed the FY2024 accounts; holds 200,000 B ordinary shares per the May 2026 confirmation statement",
+        "Helped 'start and lead a software and data company serving the US health-care industry' (company bio, undated)",
+        "Principal, Boston Consulting Group — distributed-energy business models and UK/US acquisitions",
+        "MSc Aerospace Engineering, MIT; DPhil Physics, University of Oxford"
+      ]
+    },
+    {
+      "name": "Ben Irons",
+      "title": "Co-founder and Director; bylined 'Chief Strategy Officer' on company insights and speaker pages (2024–26)",
+      "photo": "images/execs/habitat-energy-irons.jpg",
+      "background": [
+        "Co-founder and director, Habitat Energy (director 2018–; resident in New Zealand per Companies House); author of the August 2025 insight on optimiser leaderboards",
+        "Founded the consulting arm of Aurora Energy Research",
+        "Director, Centrica Energy; energy consultant, McKinsey & Company",
+        "PhD Economics, University of Oxford"
+      ]
+    },
+    {
+      "name": "Phil Robinson",
+      "title": "Co-founder and Director",
+      "photo": "images/execs/habitat-energy-robinson.jpg",
+      "background": [
+        "Co-founder and director, Habitat Energy (director 2018–); quoted on the September 2020 Balancing Mechanism entry; director of 20%-owned Quark Energy Trading until July 2025",
+        "Head of Commercial, Calon Energy (2 GW thermal portfolio)",
+        "Head of Energy Market and Credit Risk, EDF Energy; portfolio analysis, E.ON",
+        "MSc, University of Manchester; BSc, University of Nottingham"
+      ]
+    },
+    {
+      "name": "Michael Kirschner",
+      "title": "Managing Director, US",
+      "photo": "images/execs/habitat-energy-kirschner.jpg",
+      "background": [
+        "Managing Director, Habitat Energy USA (March 2022–); leads the Austin office and the ERCOT QSE; quoted on RTC+B, PJM entry and Birch Creek",
+        "Vice President, Markets and Analytics, Vistra — led Moss Landing optimisation per Quinbrook's appointment release; earlier GenOn and Dynegy",
+        "MS Electrical Engineering, Georgia Tech; MBA, Kellogg School of Management"
+      ]
+    },
+    {
+      "name": "Jon Doughty",
+      "title": "Managing Director, UK",
+      "photo": "images/execs/habitat-energy-doughty.jpg",
+      "background": [
+        "Managing Director, Habitat Energy UK (December 2021–); quoted on Constantine, AGR and the GB share table",
+        "Head of Trading, EP UK Investments (3 GW gas, 400 MW biomass)",
+        "Director of Commercial, Calon Energy; two decades at E.ON/Powergen"
+      ]
+    },
+    {
+      "name": "Greg Billman",
+      "title": "Managing Director, Australia",
+      "photo": "images/execs/habitat-energy-billman.jpg",
+      "background": [
+        "Joined 'to launch our Australian and New Zealand office in January 2020'; quoted on Williamsdale, Mannum and Octopus Australia",
+        "Executive General Manager, ENGIE Australia; Energy Trading Manager, ENGIE UK",
+        "MBA, University of Melbourne"
+      ]
+    },
+    {
+      "name": "Grace Toms",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/habitat-energy-toms.jpg",
+      "background": [
+        "CFO, Habitat Energy; 30,000 B ordinary shares per the May 2026 confirmation statement",
+        "Finance Director, Green Hedge Energy (battery storage developer)",
+        "Infrastructure and utilities M&A",
+        "MA Geography, University of Oxford"
+      ]
+    },
+    {
+      "name": "Richard Gormley",
+      "title": "Chief Technology Officer",
+      "photo": "images/execs/habitat-energy-gormley.jpg",
+      "background": [
+        "CTO, Habitat Energy (July 2023–); the largest management B-share holder at 40,000",
+        "Mercuria — technology, data science, gas and power trading and compliance",
+        "Computer Science and AI, University of Edinburgh; Data Science and AI, University of Oxford"
+      ]
+    },
+    {
+      "name": "Eleonora Pilla",
+      "title": "Executive Director of Trading Performance",
+      "photo": "images/execs/habitat-energy-pilla.jpg",
+      "background": [
+        "Oversees trading operations across the three markets; director of Quark Energy Trading since July 2025",
+        "Power trader, Neas Energy (three years)",
+        "Universities of Padova and Aalborg"
+      ]
+    },
+    {
+      "name": "David Scaysbrook",
+      "title": "Chairman (per Quinbrook's March 2022 release); Co-founder and Managing Partner, Quinbrook Infrastructure Partners; Habitat director since 30 November 2021",
+      "background": [
+        "Co-founder and Managing Partner, Quinbrook Infrastructure Partners (2015–); quoted on the 2021 acquisition",
+        "One of five Quinbrook-side directors alongside Rory Quinlan (co-founder and managing partner), James Allan (senior director, digital applications), Henry 'Hank' Jones (senior adviser; ex-EVP and Chief Commercial Officer of Dynegy, appointed June 2025) and Keith Gains (UK managing director, appointed December 2025); no independent non-executives are disclosed"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "GBP",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (Habitat Energy Limited, UK entity, audited; group optimisation line from parent's accounts)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Turnover — Habitat Energy Limited (UK)",
+            "actual": "GBP 1,990,658 (FY2023: GBP 1,307,349; +52%) — optimisation fees GBP 1,860,197, advisory GBP 130,461; 'All turnover arose within the United Kingdom'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Companies House full accounts filed 4 January 2026; no guidance or consensus exists for a private subsidiary"
+          },
+          {
+            "name": "Optimisation services — Renewable and Grid Services group (consolidates UK, US and Australia)",
+            "actual": "GBP 4,169,575 (FY2023: GBP 2,316,850; +80%); rest-of-world turnover GBP 1,108,624 (FY2023: GBP 599,837)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The parent's group accounts (filed 28 December 2025) describe 'one BESS Optimiser' among five operating assets; this line is the closest audited proxy for Habitat's three-country fee income"
+          },
+          {
+            "name": "Operating loss — UK entity",
+            "actual": "GBP (4,063,044) (FY2023: GBP (7,465,516)) after GBP 2,376,595 of intra-group recharges booked as other operating income",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Loss after tax GBP (5,010,705) (FY2023: GBP (7,948,606)); cumulative tax losses carried forward GBP 15,370,670"
+          },
+          {
+            "name": "Balance sheet — UK entity",
+            "actual": "Net liabilities GBP (12,705,300) (FY2023: GBP (7.7 million)); cash GBP 10,993,830; amounts owed to group undertakings GBP 37,218,683 (FY2023: GBP 18,455,856); other creditors GBP 18,014,853",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Going concern 'depends on the continuing support from the Company's financiers'; Renewable and Grid Services 'confirmed that they will continue to support Habitat Energy Limited and would not demand the loan'"
+          },
+          {
+            "name": "Employees — UK entity",
+            "actual": "Average 57 (FY2023: 54); staff costs GBP 6,211,945; directors' emoluments GBP 1,302,500",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Excludes Habitat Energy, Inc (Austin) and Habitat Energy Pty Ltd (Melbourne), both 100% subsidiaries"
+          },
+          {
+            "name": "Assets under contract (company-stated)",
+            "actual": "2.8 GW (December 2024); 3.3 GW (April 2025); over 4 GW (November 2025); 5.5 GW (June 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company statements repeated by press; basis mixes operating, contracted and pipeline"
+          }
+        ],
+        "commentary": "The audited picture is of a small, loss-making UK company carried by GBP 37 million of parent loans, growing fees fast from a low base. The group-level optimisation line (GBP 4.2 million, +80%) is the better measure of the business but still an order of magnitude below the fleet headlines would suggest — 5.5 GW under contract against roughly GBP 4 million of fees implies most of the contracted GW was not yet operating or earning in 2024. No revenue, profit or fee-rate figure exists for FY2025 or 2026; the FY2025 accounts are due at Companies House by 30 September 2026. Collection gap: no analyst coverage, no fund-level disclosure of optimiser fees (Gresham House's 2024 and 2025 annual reports name no optimiser), no US or Australian statutory filings retrieved."
+      },
+      {
+        "period": "FY2023 (UK entity, audited)",
+        "periodType": "annual",
+        "periodEnd": "2023-12-31",
+        "metrics": [
+          {
+            "name": "Turnover — UK entity",
+            "actual": "GBP 1,307,349 (FY2022: GBP 2,301,852) — optimisation fees GBP 1,149,555, advisory GBP 157,794",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Full accounts filed 7 January 2025 (67 pages); turnover fell 43% in the year Great Britain's battery revenues collapsed"
+          },
+          {
+            "name": "Loss after tax — UK entity",
+            "actual": "GBP (7,948,606) (FY2022: about GBP (3.0 million))",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Administrative expenses GBP 8,715,572; Innovate UK grant income GBP 2,104"
+          },
+          {
+            "name": "Group optimisation services",
+            "actual": "GBP 2,316,850",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Renewable and Grid Services group accounts"
+          }
+        ],
+        "commentary": "2023 was the year GB merchant battery revenues fell by roughly half; the UK entity's fees fell with them and the loss doubled. The company's co-founder told Energy-Storage.News that August that 'there's no code to crack' and that 20–25 UK optimisers were competing for the same fleet."
+      },
+      {
+        "period": "Ownership and funding history",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Acquisition",
+            "actual": "Wholly acquired by Quinbrook Infrastructure Partners on 30 November 2021; terms undisclosed; early investors Liger Holdings and Delph25 and Canadian Solar's May 2021 minority stake exited",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Ultimate parent per FY2024 accounts: Quinbrook Renewables Impact Fund (Jersey); immediate parent Renewable and Grid Services Limited"
+          },
+          {
+            "name": "Pre-acquisition funding",
+            "actual": "'Primarily self-funded with angel investor income' plus a GBP 10.26 million Innovate UK grant via Energy Superhub Oxford (2019); Canadian Solar strategic investment, amount undisclosed (May 2021)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The Oxford Trust interview (2019) and PR Newswire (2021)"
+          },
+          {
+            "name": "Share capital",
+            "actual": "2,247,181 A ordinary and 1,390,706 D ordinary held by Renewable and Grid Services; about 1,000,000 partly paid B ordinary (growth shares) held by management — Luers, Robinson and Irons 200,000 each; nominal capital GBP 4,637.887 after the 10 February 2026 allotment",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Confirmation statement dated 11 May 2026; no change-of-control transfer recorded"
+          },
+          {
+            "name": "Sale process",
+            "actual": "Quinbrook 'working with JLL and Boston Consulting Group' (New Project Media, March 2026); no price, bidder, signing, completion or withdrawal reported at 2026-09-12",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Comparable: Flexitricity sold to Drax at GBP 36 million enterprise value, about GBP 42 million proceeds, for about 0.9 GW under management (signed 21 January 2026, completed by 1 April 2026)"
+          }
+        ],
+        "commentary": "Collection gap: the JLL/BCG mandate rests on one subscriber-only report and neither company has confirmed it; Quinbrook's own site still lists Habitat as 'Operational & Expanding' while it updated Flexitricity to 'Exited', which is affirmative evidence that no exit has been recorded."
+      }
+    ],
+    "commentary": "Private subsidiary; the only audited figures are the UK entity's Companies House accounts and the parent group's consolidated line. Company-stated GW figures are the growth metric the market uses and none has been independently verified. No expectations exist, so the 'expected' fields are empty throughout."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Habitat's commercial position rests on being a registered market participant with a desk, not on software, and that this is why it keeps winning mandates from owners who could buy software. Basis: every product page positions EVOLVE 'unlike a software only solution'; Ørsted — an owner with its own trading arm — still contracted Habitat for QSE services in November 2025; the company's turnover is booked as 'optimisation fees', a percentage of asset revenue, per the audited accounts; and Irons' stated threshold of about 2 GW before in-house optimisation pays means the segment's addressable owners are those below it.",
+    "2. **(High confidence)** We assess that the company is for sale and that the process had not concluded by 2026-09-12. Basis: the New Project Media report of the JLL/BCG mandate (March 2026); Quinbrook's sale of Flexitricity to Drax ten weeks earlier; two sponsor-side board appointments in the preceding six months including the UK deal lead; and, on the other side, the unchanged Companies House PSC, the unchanged 'portfolio company of Quinbrook' footer, Quinbrook's 'Operational & Expanding' status against Flexitricity's 'Exited', and the absence of any release from either party. Collection gap: the mandate itself is single-outlet and unconfirmed.",
+    "3. **(Moderate confidence)** We assess that the ERCOT book, not Great Britain, is now the company's growth engine and the asset a buyer would price. Basis: ERCOT contracted capacity rose from 1 GW (May 2024) to over 1.8 GW (April 2026) on named mandates from UBS AM, Plenitude, Ørsted, Octopus and Birch Creek, while the GB fleet stood at 600 MW operating in January 2025 and the largest GB client moved 789 MW under third-party floors in July 2025; the group accounts show rest-of-world turnover nearly doubling in FY2024. Against this, the audited fee base is still overwhelmingly UK-booked and the US entity's own accounts were not retrieved.",
+    "4. **(Moderate confidence)** We assess that the floors, tolls and swaps are the company's response to the same tolling wave that is shrinking third-party optimisers' role elsewhere, and that they raise its balance-sheet risk. Basis: the 2025 award citation for the Nephila floor and the Octopus toll, the Constantine 'contracting structure', and the January 2026 insight that the desk manages 'the risk in our own book'; the FY2024 accounts show an HSBC charge over cash deposits, GBP 18 million of other creditors and a client settlement provision. A revenue-share optimiser carries no market risk; a floor originator does. No source quantifies the book.",
+    "5. **(Low confidence)** We assess that the Flexitricity comparable understates what a buyer would pay for Habitat but that no evidence supports a specific multiple. Basis: Flexitricity fetched about GBP 40,000 per MW under management for a single-market GB platform; Habitat has three markets, an independently ranked ERCOT desk and a larger contracted fleet, but a GBP 4 million audited fee line, GBP 12.7 million of net liabilities at the UK entity and a headline GW figure that mixes pipeline with operations. Trade-press valuation talk is absent, which is itself unusual six months into a process.",
+    "**Collection gaps.** No FY2025 financials; no third-party verification of any GW figure; Modo's monthly optimiser rankings are paywalled beyond two months; Habitat's current share of the Gresham House fleet after the 2024 toll and 2025 floors is undisclosed; the US and Australian subsidiaries' accounts were not retrieved; the LCP Enact leaderboard the company cites was not located; the live vacancy list (Workable) was blocked.",
+    "**Indicators to watch.** *Any Companies House PSC02/PSC07 filing or TM01 for the Quinbrook directors* — a completed sale shows here before any release. *Quinbrook's portfolio page status changing from 'Operational & Expanding'* — the signal it gave for Flexitricity. *FY2025 accounts (due by 30 September 2026)* — whether the group optimisation line kept growing at 2024's rate and whether the directors' report finally mentions the process. *A named PJM customer* — the April 2026 announcement converting to a mandate. *Modo's 2026 ERCOT and GB tables* — whether December 2025's lead was a regime-change effect or a durable edge."
+  ],
+  "sources": [
+    {
+      "label": "Habitat Energy — Q&A with Morgan Bemrose, Lead Data Scientist (Australia)",
+      "url": "https://habitat.energy/qa-with-morgan-bemrose-lead-data-scientist/",
+      "date": "2026-08-25"
+    },
+    {
+      "label": "Energy-Storage.News — Habitat Energy appointed to optimise DC-coupled 614MWh solar-plus-storage portfolio for Octopus Australia",
+      "url": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy to optimise solar and storage for Octopus Australia",
+      "url": "https://habitat.energy/habitat-energy-to-optimise-solar-and-storage-for-octopus-australia/",
+      "date": "2026-07-24"
+    },
+    {
+      "label": "Habitat Energy insight — How to get more from a renewable asset built for an old market",
+      "url": "https://habitat.energy/insight/how-to-get-more-from-a-renewable-asset-built-for-an-old-market/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Solar Power Portal — Habitat Energy to optimise AGR's 157MW UK solar-storage portfolio",
+      "url": "https://www.solarpowerportal.co.uk/solar-projects/habitat-energy-to-optimise-agr-s-157mw-uk-solar-storage-portfolio",
+      "date": "2026-06-26"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy selected by AGR Renewables",
+      "url": "https://habitat.energy/habitat-energy-selected-by-agr-renewables/",
+      "date": "2026-06-24"
+    },
+    {
+      "label": "Energy-Storage.News — 'Time to prove its potential': Gresham House UK BESS fund at a crossroads",
+      "url": "https://www.energy-storage.news/time-to-prove-its-potential-gresham-house-uk-bess-fund-at-a-crossroads/",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "Companies House — Habitat Energy Limited, confirmation statement made on 11 May 2026 with updates (shareholders)",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/filing-history/MzUyMzI3MjE0MGFkaXF6a2N4/document?format=pdf&download=0",
+      "date": "2026-05-26",
+      "party": "disclosure"
+    },
+    {
+      "label": "Modo Energy — ERCOT April 2026 BESS benchmark: three days of spread jump (Aypa led optimisers)",
+      "url": "https://modoenergy.com/research/en/ercot-april-2026-bess-benchmark-three-days-spread-jump",
+      "date": "2026-05-01"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy expands into PJM",
+      "url": "https://habitat.energy/habitat-energy-expands-into-pjm/",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "ESS News — Drax completes Flexitricity purchase, adding AI tools to its BESS operations",
+      "url": "https://www.ess-news.com/2026/04/01/drax-completes-flexitricity-purchase-adding-ai-tools-to-its-bess-operations/",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "Modo Energy — February 2026 ERCOT BESS benchmark: RTC+B revenues and battery performance (Habitat 84% TBX capture, December 2025)",
+      "url": "https://modoenergy.com/research/en/february-2026-ercot-bess-benchmark-rtcb-revenues-batteries-performance",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "Energy-Storage.News — Bimergen acquires 79.2MW of Texas BESS; Habitat advances Texas optimisation",
+      "url": "https://www.energy-storage.news/bimergen-acquires-79-2mw-total-of-texas-bess-habitat-advances-texas-optimisation/",
+      "date": "2026-03-05"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy and Birch Creek: first US co-located solar-plus-storage project in ERCOT",
+      "url": "https://habitat.energy/habitat-energy-birch-creek-solar-storage-project-ercot/",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "New Project Media — M&A advisors emerge on upcoming Quinbrook Habitat Energy sale (subscriber report)",
+      "url": "https://newprojectmedia.com/ma-advisors-emerge-on-upcoming-quinbrook-habitat-energy-sale/",
+      "date": "2026-03"
+    },
+    {
+      "label": "Habitat Energy insight — Route to market, route to performance: why batteries need dynamic QSEs (Liza Lebedev)",
+      "url": "https://habitat.energy/insight/dynamicqse/",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "Habitat Energy insight — You should be hedging with batteries this winter (Adam Krivisky)",
+      "url": "https://habitat.energy/insight/winterhedging/",
+      "date": "2026-01-23"
+    },
+    {
+      "label": "Quinbrook Infrastructure Partners — Quinbrook sells Flexitricity to Drax",
+      "url": "https://www.quinbrook.com/news-insights/quinbrook-sells-flexitricity-to-drax/",
+      "date": "2026-01-21"
+    },
+    {
+      "label": "Drax Group — Acquisition of asset optimisation platform (Flexitricity)",
+      "url": "https://www.drax.com/news/acquisition-of-asset-optimisation-platform/",
+      "date": "2026-01-21"
+    },
+    {
+      "label": "Companies House — Habitat Energy Limited, full accounts made up to 31 December 2024",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/filing-history/MzQ5NjU1OTA2M2FkaXF6a2N4/document?format=pdf&download=0",
+      "date": "2026-01-04",
+      "party": "disclosure"
+    },
+    {
+      "label": "Companies House — Renewable and Grid Services Limited, group accounts made up to 31 December 2024",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13250883/filing-history/MzQ5NjU0Nzc1N2FkaXF6a2N4/document?format=pdf&download=0",
+      "date": "2025-12-28",
+      "party": "disclosure"
+    },
+    {
+      "label": "Habitat Energy insight — A week into RTC+B: a trader's view from inside the launch (Ben Woodman)",
+      "url": "https://habitat.energy/insight/a-week-into-rtcb-a-traders-view-from-inside-the-launch/",
+      "date": "2025-12-12"
+    },
+    {
+      "label": "Energy-Storage.News — 'It's effectively a full reset of the system': Habitat Energy on ERCOT's RTC+B market changes",
+      "url": "https://www.energy-storage.news/its-effectively-a-full-reset-of-the-system-habitat-energy-on-ercots-rtcb-market-changes/",
+      "date": "2025-11-26"
+    },
+    {
+      "label": "Energy-Storage.News — Who won at the Energy Storage Awards 2025",
+      "url": "https://www.energy-storage.news/who-won-at-the-energy-storage-awards-2025/",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "Habitat Energy — Habitat wins Optimiser of the Year at the Energy Storage Investment Awards 2025",
+      "url": "https://habitat.energy/habitat-wins-optimiser-of-the-year-energy-storage-investment-awards-2025/",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy to optimize Ørsted's 250 MW battery in Texas",
+      "url": "https://habitat.energy/habitat-energy-to-optimize-orsted-250-mw-battery-exas/",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "Habitat Energy — Writing the book on batteries: Q&A with Adam Levey, Head of Quantitative Analytics",
+      "url": "https://habitat.energy/writing-the-book-batteries-adam-levey/",
+      "date": "2025-10-01"
+    },
+    {
+      "label": "Modo Energy — Part 1: The state of battery offtake and tolling agreements in ERCOT",
+      "url": "https://modoenergy.com/research/en/battery-bess-offtake-tolling-agreements-route-market-contracts-ercot-explainer-part-one",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Habitat Energy insight — Beyond the checkbox: turning RTC+B compliance into competitive advantage (Rebecca Miller)",
+      "url": "https://habitat.energy/insight/beyond-the-checkbox-turning-rtcb-compliance-into-competitive-advantage/",
+      "date": "2025-08-27"
+    },
+    {
+      "label": "Habitat Energy insight — Battery optimizer leaderboards: separating signal from noise (Ben Irons)",
+      "url": "https://habitat.energy/insight/battery-optimizer-leaderboards-separating-signal-from-noise/",
+      "date": "2025-08-26"
+    },
+    {
+      "label": "Statkraft — Statkraft signs multi-asset optimisation PPAs with Gresham House Energy Storage Fund",
+      "url": "https://www.statkraft.co.uk/newsroom/2025/statkraft-signs-multi-asset-optimisation-ppas-with-gresham-house-energy-storage-fund/",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "Gresham House Energy Storage Fund — Long-term floor agreements on 789MW of projects (RNS via Investegate)",
+      "url": "https://www.investegate.co.uk/announcement/rns/gresham-house-energy-storage-fund--grid/long-term-floor-agreements-on-789mw-of-projects/8961176",
+      "date": "2025-07-03"
+    },
+    {
+      "label": "inspiratia — Q&A: Habitat Energy on optimising grid-scale batteries in a changing market (Wilson Sink)",
+      "url": "https://inspiratia.com/article/qa-habitat-energy-optimising-gridscale-battery-in-a-changing-market",
+      "date": "2025-04-22"
+    },
+    {
+      "label": "Modo Energy — US battery energy storage operators and optimizers, and how to contact them",
+      "url": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "Energy-Storage.News — Roundup: Habitat Energy, FlexGen EMS, Nuvve's subscription (Plenitude Guajillo)",
+      "url": "https://www.energy-storage.news/roundup-habitat-energy-flexgen-ems-nuvves-subscription/",
+      "date": "2025-04-09"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy collaborates with Plenitude to optimize Guajillo Texas battery",
+      "url": "https://habitat.energy/habitat-energy-collaborates-with-plenitude-to-optimize-guajillo-texas-battery/",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy to optimise 100MW/200MWh Epic Energy Mannum battery",
+      "url": "https://habitat.energy/habitat-energy-to-optimise-100mw-200mwh-epic-energy-mannum-battery/",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy partners with Eku Energy to optimise Basildon battery energy storage system",
+      "url": "https://habitat.energy/habitat-energy-partners-with-eku-energy-to-optimise-basildon-battery-energy-storage-system/",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy to optimise Constantine Energy Storage battery portfolio",
+      "url": "https://habitat.energy/habitat-energy-to-optimise-constantine-energy-storage-battery-portfolio/",
+      "date": "2025-02-17"
+    },
+    {
+      "label": "Energy-Storage.News — Habitat to optimise 50MW/100MWh BESS for Octopus",
+      "url": "https://www.energy-storage.news/habitat-to-optimise-50mw-100mwh-bess-for-octopus/",
+      "date": "2025-02-13"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy optimizes tolled battery for Octopus Energy US in ERCOT",
+      "url": "https://habitat.energy/habitat-energy-optimizes-tolled-battery-for-octopus-energy-us-in-ercot/",
+      "date": "2025-02-10"
+    },
+    {
+      "label": "Tamarindo — 10 battery optimisers with the biggest GB market share (Modo Energy data)",
+      "url": "https://tamarindo.global/insight/analysis/10-battery-optimisers-with-the-biggest-gb-market-share/",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy wins Optimiser of the Year at the Energy Storage Investment Awards 2024",
+      "url": "https://habitat.energy/habitat-energy-wins-energy-storage-investment-awards-2024/",
+      "date": "2024-12-09"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy to optimise Eku Energy Williamsdale battery",
+      "url": "https://habitat.energy/habitat-energy-to-optimise-eku-energy-williamsdale-battery/",
+      "date": "2024-12-09"
+    },
+    {
+      "label": "Habitat Energy — 2GW milestone cements Habitat Energy as a leading global optimizer",
+      "url": "https://habitat.energy/2gw-milestone-cements-habitat-energy-leading-global-optimizer/",
+      "date": "2024-06-03"
+    },
+    {
+      "label": "pv magazine USA — Habitat Energy chosen to optimize 730 MW ERCOT battery storage portfolio (UBS Asset Management)",
+      "url": "https://pv-magazine-usa.com/2024/05/02/habitat-energy-chosen-to-optimize-730-mw-ercot-battery-storage-portfolio/",
+      "date": "2024-05-02"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy to optimize UBS Asset Management ERCOT battery storage portfolio",
+      "url": "https://habitat.energy/habitat-energy-to-optimize-ubs-asset-management-ercot-battery-storage-portfolio/",
+      "date": "2024-05-02"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy captures 87% of perfect revenue on solar-storage project",
+      "url": "https://habitat.energy/habitat-energy-captures-87-percent-perfect-revenue-solar-storage-project/",
+      "date": "2024-03-18"
+    },
+    {
+      "label": "Energy Global — Low Carbon signs optimisation agreements with Habitat Energy, Flexitricity and EDF",
+      "url": "https://www.energyglobal.com/energy-storage/31012024/low-carbon-signs-optimisation-agreements-with-habitat-energy-flexitricity-and-edf/",
+      "date": "2024-01-31"
+    },
+    {
+      "label": "Energy-Storage.News — The challenges for BESS optimisation firms",
+      "url": "https://www.energy-storage.news/the-challenges-for-bess-optimisation-firms/",
+      "date": "2023-08-22"
+    },
+    {
+      "label": "Gowling WLG — Energy team advises Habitat Energy on Gresham House framework agreement",
+      "url": "https://gowlingwlg.com/en/insights-resources/client-work/2023/energy-team-advises-habitat-energy",
+      "date": "2023-07-27"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy and Gresham House Energy Storage Fund partnership",
+      "url": "https://habitat.energy/habitat-energy-gresham-house-energy-storage-partnership/",
+      "date": "2023-06-30"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy launches battery optimization service in USA",
+      "url": "https://habitat.energy/habitat-energy-launches-battery-optimization-service-in-usa/",
+      "date": "2022-09-16"
+    },
+    {
+      "label": "Quinbrook Infrastructure Partners — Habitat Energy appoints Mike Kirschner as Managing Director, Habitat Energy USA",
+      "url": "https://www.quinbrook.com/news-insights/quinbrook-portfolio-company-habitat-energy-appoints-mike-kirschner-as-managing-director-habitat-energy-usa/",
+      "date": "2022-03-22"
+    },
+    {
+      "label": "Energy-Storage.News — Quinbrook acquires UK battery storage optimisation and trading specialist Habitat Energy",
+      "url": "https://www.energy-storage.news/quinbrook-acquires-uk-battery-storage-optimisation-and-trading-specialist-habitat-energy/",
+      "date": "2021-12-03"
+    },
+    {
+      "label": "Habitat Energy — Habitat Energy acquired by Quinbrook Infrastructure Partners",
+      "url": "https://habitat.energy/habitat-energy-acquired-by-quinbrook-infrastructure-partners/",
+      "date": "2021-11-30"
+    },
+    {
+      "label": "Wärtsilä — Pivot Power, Wärtsilä and Habitat Energy activate 50 MW transmission-connected battery in Oxford, UK",
+      "url": "https://www.wartsila.com/media/news/23-06-2021-pivot-power-wartsila-and-habitat-energy-activate-50-mw-transmission-connected-battery-in-oxford-uk-3360579",
+      "date": "2021-06-23"
+    },
+    {
+      "label": "PR Newswire — Canadian Solar invests in strategic partnership with AI energy storage optimization company Habitat Energy",
+      "url": "https://www.prnewswire.com/news-releases/canadian-solar-invests-in-strategic-partnership-with-ai-energy-storage-optimization-company-habitat-energy-301290585.html",
+      "date": "2021-05-13"
+    },
+    {
+      "label": "Solar Power Portal — Habitat Energy becomes second company to enter BM as a VLP",
+      "url": "https://www.solarpowerportal.co.uk/commercial-solar/habitat-energy-becomes-second-company-to-enter-bm-as-a-vlp",
+      "date": "2020-09-07"
+    },
+    {
+      "label": "The Oxford Trust — Five minutes with Habitat Energy (Andrew Luers)",
+      "url": "https://theoxfordtrust.co.uk/5_minutes-with/five-minutes-with-habitat-energy/",
+      "date": "2019-07-17"
+    },
+    {
+      "label": "Habitat Energy — Homepage (EVOLVE; '5.5GW under contract, 130 people, 3 countries'; Quinbrook footer)",
+      "url": "https://habitat.energy/"
+    },
+    {
+      "label": "Habitat Energy — What we do (EVOLVE for Battery Storage, Renewables and Co-located Assets; per-market features)",
+      "url": "https://habitat.energy/what-we-do/"
+    },
+    {
+      "label": "Habitat Energy — Who we are (leadership team)",
+      "url": "https://habitat.energy/who-we-are/"
+    },
+    {
+      "label": "Habitat Energy — Contact us (offices; advisory and optimisation services)",
+      "url": "https://habitat.energy/contact-us/"
+    },
+    {
+      "label": "Habitat Energy — Case studies",
+      "url": "https://habitat.energy/case-studies/"
+    },
+    {
+      "label": "Quinbrook Infrastructure Partners — Portfolio: Habitat Energy ('Operational & Expanding')",
+      "url": "https://www.quinbrook.com/portfolio/habitat-energy/"
+    },
+    {
+      "label": "Quinbrook Infrastructure Partners — People: Hank Jones",
+      "url": "https://www.quinbrook.com/people/hank-jones/"
+    },
+    {
+      "label": "Companies House — Habitat Energy Limited (10923911), company overview",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10923911",
+      "party": "disclosure"
+    },
+    {
+      "label": "Companies House — Habitat Energy Limited, persons with significant control",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/persons-with-significant-control",
+      "party": "disclosure"
+    },
+    {
+      "label": "Companies House — Habitat Energy Limited, officers",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/officers",
+      "party": "disclosure"
+    },
+    {
+      "label": "Companies House — Renewable and Grid Services Limited (13250883), company overview",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13250883",
+      "party": "disclosure"
+    },
+    {
+      "label": "LinkedIn — Habitat Energy company page",
+      "url": "https://www.linkedin.com/company/habitat_energy"
+    }
+  ],
+  "lastUpdated": "2026-09-12",
+  "profileVersion": 1
+}

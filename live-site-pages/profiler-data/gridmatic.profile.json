@@ -1,0 +1,946 @@
+{
+  "schemaVersion": 7,
+  "slug": "gridmatic",
+  "name": "Gridmatic Inc.",
+  "shortName": "Gridmatic",
+  "categories": [
+    "supplier"
+  ],
+  "website": "https://www.gridmatic.com/",
+  "headquarters": "Cupertino, California, United States — the registered corporate headquarters (20450 Stevens Creek Blvd, Suite 100; a 12,096 sq ft lease at The Towers at Cupertino City Center running to 31 December 2027) — with the retail headquarters and every press-release dateline since August 2025 in Houston, Texas (1201 Fannin St, Suite 262, a flexible-office suite); the company's own site publishes no address",
+  "founded": 2017,
+  "employees": "Not published. LinkedIn '51-200'; the retail site names 17 retail staff; aggregator estimates run from 34 (February 2024) to 74 (June 2026); 12 open roles across Cupertino, San Francisco and Houston in August 2026",
+  "ownership": {
+    "type": "private",
+    "ticker": "Private (founder-owned; no venture capital on record)"
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** Gridmatic is a founder-owned, self-described 'AI-first power company' that has turned an ERCOT day-ahead trading edge into three businesses — a battery optimiser that tolls and floors batteries from its own USD 50 million fund rather than only bidding them, a Texas-Ohio-Pennsylvania retail supplier selling to data centres and bitcoin miners through brokers, and a seven-market trading desk — and every scale claim it makes ('most profitable participant in ERCOT's wholesale market', 'top-performing battery asset in CAISO', '1000+ C&I customers', '300 MW / 1 GWh under management') is its own; the independent record consists of two ERCOT batteries under its QSE, one CAISO battery it optimises, one SEC-filed ten-year revenue-floor offtake, and a job posting that says the company is preparing 'upcoming debt and equity raises'. **BACKGROUND.** Founded 2017 by Matt Wytock (ex-Google, Carnegie Mellon PhD); the California corporation Gridmatic Inc. dates from March 2016. Trading since 2019; FERC market-based-rate authority since July 2022; Texas retail electric provider certificate 10307 since March 2022; ERCOT battery operations since 2023 and CAISO since 2024; PJM retail since October 2025. Structure per filings: Gridmatic Inc. manages two Delaware limited partnerships and at least ten plant-genus-named Delaware LLCs — Rosa (Texas REP), Panicum (PJM retail), Equisetum (ERCOT QSE), Cupressus (CAISO scheduling coordinator), Isotria (ISO-NE), and four with new FERC authority in 2026. Named assets: Energy Vault's Cross Trails (57 MW/114 MWh, ten-year 'physically settled revenue floor', COD May 2025), Alpha Omega Power's Caballero (100 MW/400 MWh, CAISO, optimiser since COD) and Endurance Park (52 MW, ERCOT West). No revenue, profit or customer count is disclosed by anyone but the company.",
+  "ecosystemRole": "The second pure-play merchant optimiser this corpus's software-and-optimization segment lacked, and a different animal from the first. Habitat Energy sells a desk on revenue share to owners; Gridmatic puts its own fund's capital behind the battery — a tolling or revenue-floor offtake in which it takes the merchant risk and the QSE seat — and then uses the same forecasts to run a retail book that sells matched power and day-ahead bidding to flexible loads. That makes it at once an optimiser (competing with Tesla, Habitat, Fluence, Stem and Hunt for ERCOT and CAISO mandates), an offtaker (the counterparty Energy Vault reports to its shareholders, and the model Modo calls 'the first known battery in ERCOT operated under a revenue floor contract') and a load-serving entity for the data-centre and miner demand the rest of the corpus builds for. Its ranking rests entirely on its own reading of ERCOT's public settlement data; no third party has verified the 'most profitable' claim, and the one independent leaderboard that can be read places its two ERCOT batteries eleventh and forty-third of 308.",
+  "productsAndServices": [
+    {
+      "name": "Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
+      "category": "Storage optimisation and offtake",
+      "description": "The company's own description: 'We use AI-driven forecasting and optimization to maximize the value of grid-scale battery storage across energy and ancillary service markets', and, to owners, 'We sign tolling agreements with grid-scale battery owners and perform market bidding and dispatch to optimize performance and revenues.' Services listed for owners: 'ISO scheduling coordination, market settlement, resource trading, and risk management' (CAISO report, June 2026) and, for Caballero, 'resource trading and risk management; ISO market settlement; and asset performance and market update reports'. The commercial models are 'a guaranteed revenue floor and shared revenue above the floor' and tolling, funded by the USD 50 million Energy Storage Fund closed in November 2023 and 'earmarked to oversee the management of up to 500 MW of battery capacity in the ERCOT and CAISO markets'. Named assets: Cross Trails (Energy Vault, 57 MW/114 MWh, Snyder, Texas — a ten-year 'physically settled revenue floor' offtake with 'upside participation', Gridmatic as QSE, COD 31 May 2025), Caballero (Alpha Omega Power and Fengate, 100 MW/400 MWh, Nipomo, California — optimiser from COD in 2025), Endurance Park (52 MW, ERCOT West, under Gridmatic Equisetum LLC's QSE; owner not stated by the company), and 'a 50MW / 100MWh battery storage system in Texas' operated through the fund since 2023. Scale claim: '300 MW / 1 GWh under management' (December 2024) and '300+ MW of storage assets under contract across ERCOT and CAISO' (Modo directory, April 2025). Operating footprint: ERCOT since 2023, CAISO since 2024, no batteries claimed in other markets.",
+      "highlights": [
+        "Independent measurement (Amperical's leaderboard built from ERCOT's 60-day settlement disclosures, January–July 2026, 308 resources): Endurance Park ranked 11th at USD 3.49/kW-month and Cross Trails 43rd at USD 2–3/kW-month — the only two ERCOT batteries whose QSE is a Gridmatic entity",
+        "Company-relayed benchmark: 'Endurance Park and Cross Trails systems, optimized by Gridmatic, topped the leaderboard with 115% and 99% Real-Time TBx capture rates, as reported by Modo Energy' for August 2025 (company blog, December 2025; the Modo table itself is paywalled)",
+        "Company claims: 'ERCOT BESS revenue in the first half of 2024 was $113/kW/year annualized — a 61% revenue uplift versus the average ERCOT revenue of $70/kW/year' (December 2024); Caballero 'achieved a 141% TBx capture rate, and 1.7x the median-performing asset's TBx capture rate' since COD (company CAISO Storage Report, June 2026); '#1 ranked 2 hour battery in TB2 uplift in ERCOT in 2025'",
+        "Energy Vault's SEC filings call Cross Trails 'the first physically settled revenue floor contract to be signed for a BESS in ERCOT', place Gridmatic in the non-investment-grade 'fixed toll plus upside' offtaker bucket, and record USD 18 million of project debt and a USD 12 million-plus ITC sale against the contract at about a 15% levered IRR; no floor price or upside split is disclosed",
+        "Modo Energy's April 2025 directory entry (self-written) claims '#1 leader in ERCOT day-ahead real-time energy trading' and a '48% revenue uplift over the weighted average BESS revenue in ERCOT, as tracked by Modo Energy' for one 2024 battery"
+      ],
+      "positioning": "The company names no competitor on its own channels. Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba. Its distinction in that list is capital: the fund lets it be the offtaker, so it competes with Equilibrium, Octopus and the utilities' tolls as much as with Autobidder or Habitat's desk. Its CAISO report argues the edge is bidding, not siting — 'the impact of trading strategy can rival that of siting decisions' (Miller, Modo podcast, April 2025).",
+      "soldThrough": "Direct with owners and developers: multi-year tolling or revenue-floor offtake backed by the Storage Fund (Cross Trails), or optimisation and QSE services for a fee or share (Caballero). Contact route assets@gridmatic.com.",
+      "targetSegments": [
+        "Owners of merchant batteries in ERCOT and CAISO seeking a revenue floor to finance the asset (Energy Vault)",
+        "Fund-owned batteries needing a scheduling coordinator and bidder (Alpha Omega Power/Fengate)",
+        "Developers pre-COD (the fund's stated 500 MW target)"
+      ],
+      "roadmap": "None dated. The fund's 500 MW target was set in November 2023 against roughly 200–300 MW named by mid-2026; four new FERC market-based-rate entities (Mays, Nyssa, Isotria, Calliandra; March–May 2026) and an August 2026 capital-markets posting citing 'upcoming debt and equity raises' imply expansion vehicles whose purpose the company has not stated."
+    },
+    {
+      "name": "Gridmatic Retail — commercial and industrial electricity supply with the AI Load Optimizer (Texas, Ohio, Pennsylvania)",
+      "category": "Retail electricity supply and flexible-load services",
+      "description": "A licensed retail supplier — Gridmatic Rosa LLC in Texas (REP certificate 10307, granted 16 March 2022, Option 1 since February 2024) and Gridmatic Panicum LLC d/b/a Gridmatic Retail in Ohio (CRES 25-140646E, launched October 2025) and Pennsylvania (EGS A-2025-3056545, launched February 2026) — selling fixed, block-and-index and index contracts to C&I customers, with three add-ons: '24/7 Carbon-free Energy' matched hourly through time-based environmental attribute certificates, demand response, and the patent-pending 'Gridmatic AI Load Optimizer', which bids a customer's flexible load into ERCOT's day-ahead market and Emergency Response Service on the customer's behalf ('greater than 5%' cost reduction; 'revenue share models... can include options with no downside exposure'). The retail business 'strictly refrain[s] from selling energy directly to consumers' and sells through brokers via a 'Deal Desk'. Named customers: EdgeConneX (a Houston data centre supplied with hourly-matched power since 2023 — 86.2% carbon-free in 2023 per the joint white paper — renewed in 2025), Data Factory (bitcoin miner, first Load Optimizer adopter, August 2025), Cholla Inc.'s 7 MW flexible-compute lab (November 2025, 'Gridmatic assumes all downside risk'). Scale claims: '1000+ C&I customers in two years, with 60% month-over-month growth' (June 2026); 'thousands of customers across ERCOT and PJM' (company podcast, August 2026).",
+      "highlights": [
+        "Segments named: 'Data Centers, Universities, State & Local Governments, Manufacturing, Retail, Hotels & Hospitality'; the site's solutions pages are Flexible Loads, Bitcoin Mining and Data Center, and the footer carries the Texas Blockchain Council logo",
+        "Partners: Vega Energy Advisors (broker, August 2025), Satoshi Energy (flexible-compute, November 2025), Synota (daily settlement for miners — '5–10% reductions in energy costs', November 2025), OBM (real-time settlement and automated load control replacing '45–60 days of collateral', March 2026)",
+        "Supply: a 15 MW share of Avangrid's 120 MW Barton Chapel wind farm (2023–24) and a 10 MW solar PPA with Sol Systems' Mars Solar (June 2025) — the only named generation behind the matched-power product",
+        "No customer count, load served or revenue has been published by a third party; ERCOT's monthly load-serving-entity reports keep the figures confidential"
+      ],
+      "positioning": "Sold on forecasting: 'As proof of the power of our forecasting, our AI has made us the #1 trader in the ERCOT day ahead market.' The Load Optimizer competes with the demand-response aggregators and the miners' own curtailment desks; the matched-power product competes with the hyperscalers' 24/7 procurement programmes for smaller data-centre loads. Ohio was entered explicitly on the data-centre thesis — 'AEP Ohio projects demand could surge from 600 MW in 2024 to 5 GW by 2030'.",
+      "soldThrough": "Brokers only ('strictly refrain from selling energy directly to consumers'); a Houston-based operations team with a Cupertino engineering team; VertexOne billing.",
+      "targetSegments": [
+        "Data centres and edge colocation in ERCOT and PJM (EdgeConneX)",
+        "Bitcoin miners and flexible-compute loads in Texas (Data Factory, Cholla)",
+        "Mid-size C&I — universities, manufacturers, hospitality — through brokers"
+      ],
+      "roadmap": "PJM expansion beyond Ohio and Pennsylvania is implied by the FERC filings but not announced; Gridmatic Isotria LLC has held an ISO-NE market-participant seat since 2021 with no New England retail launch."
+    },
+    {
+      "name": "Energy trading and power marketing (all seven US ISOs)",
+      "category": "Wholesale trading",
+      "description": "The original business: 'We build AI models to forecast energy prices and submit fully-automated bids into energy markets.' The company trades 'across all 7 U.S. ISOs' and states it is 'the most profitable ERCOT day-ahead trader since entering the market in 2019, according to public market disclosures' — a claim resting on ERCOT's 60-day disclosure of day-ahead awards, which the company reads and no third party has replicated. Its 2021 storage report said 'DART arbitrage is part of our core trading business already without control of battery storage resources'. Market-based-rate authority: Gridmatic Inc. (FERC ER22-2525, effective July 2022, with two refund reports suggesting sales before authorisation), Gridmatic Panicum LLC (December 2024), Gridmatic Mays, Nyssa and Isotria LLCs (March 2026) and Gridmatic Calliandra LLC (May 2026); CAISO convergence-bidding scheduling coordinator Gridmatic Cupressus LLC since July 2021.",
+      "highlights": [
+        "Forecasting stack as described: 'We build our own weather models that are the core of our power and price forecast models'; 'deep learning models to forecast prices in all 7 U.S. deregulated energy markets across thousands of locations'; 'operates at the nodal level'",
+        "Retail day-ahead cycle published for customers: bids by 10 AM Central, ERCOT clearing at 2 PM, hourly execution the next day",
+        "The trading edge is the input to the other two lines — the retail product 'as proof of the power of our forecasting' and the battery floors 'will provide both Energy Vault and Gridmatic with the benefit of Gridmatic's AI-based forecasts' (Energy Vault release)"
+      ],
+      "positioning": "A proprietary desk rather than a service; the company's rivals here are the merchant traders and QSE-marketers it does not name. 'Silicon Valley software innovation with deep energy industry expertise' is the retail site's framing.",
+      "soldThrough": "Not sold; proprietary trading through Gridmatic Inc. and its FERC-authorised affiliates, with the two limited partnerships supplying trading and collateral capital.",
+      "targetSegments": [
+        "Not applicable — proprietary"
+      ],
+      "roadmap": "None stated."
+    },
+    {
+      "name": "Managed funds — Gridmatic Energy Investment Fund LP and Gridmatic Storage Fund LP",
+      "category": "Fund management",
+      "description": "Gridmatic Inc. is investment manager and Gridmatic GP LLC general partner of two Delaware limited partnerships filed with the SEC as 'Pooled Investment Fund — Hedge Fund': the Energy Investment Fund (first sale 1 July 2021; USD 26.2 million sold to three investors at a USD 1 million minimum; 'The Investment Manager receives customary management fees') and the Storage Fund (first sale 27 December 2022; USD 24.95 million sold to one investor at the January 2023 filing; 'capital commitments to $50 million' by November 2023). The Storage Fund backs the tolling and floor contracts ('backed by Gridmatic's previously announced Energy Storage Fund' — Energy Vault) and the Energy Investment Fund is the parent of at least the PJM retail vehicle: Gridmatic Panicum LLC is 'a wholly owned, direct special purpose vehicle of Gridmatic Energy Investment Fund LP', of which Gridmatic Inc. is 'the general partner, majority investor, and investment manager' (Energy Choice Matters, December 2024). Investors are unnamed — 'a leading energy investor' funded the first storage tranche.",
+      "highlights": [
+        "Fund capital is the only outside money on record; the two Form Ds are the only Gridmatic filings on EDGAR and neither has been amended",
+        "The structure explains 'profitable without venture capital': the operating company takes fees and a majority interest while LPs carry the trading and offtake collateral",
+        "Job postings (August 2026) reference 'existing investors', 'board packages' and 'upcoming debt and equity raises' — outside capital exists at some level the company does not describe"
+      ],
+      "positioning": "An optimiser with its own balance sheet is unusual in this segment; the closest analogues are the owner-traders (Hunt Energy Network) and the utilities' tolling desks, not the software vendors.",
+      "soldThrough": "Rule 506(b) private placements; contact investors@gridmatic.com.",
+      "targetSegments": [
+        "Institutional and family-office investors seeking energy-trading and storage-offtake exposure"
+      ],
+      "roadmap": "A further raise is signalled by the August 2026 capital-markets posting; no fund, size or timing is stated."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Forecasting and optimisation platform (company-described)",
+      "specs": [
+        {
+          "band": "Forecasting",
+          "label": "Weather",
+          "value": "'We build our own weather models that are the core of our power and price forecast models'"
+        },
+        {
+          "band": "Forecasting",
+          "label": "Prices",
+          "value": "'We train deep learning models to forecast prices in all 7 U.S. deregulated energy markets across thousands of locations'; 'probabilistic machine learning forecasts of generation and energy prices'; 'operates at the nodal level'"
+        },
+        {
+          "band": "Optimisation",
+          "label": "Storage scheduling",
+          "value": "'ESR schedulers forecast energy and ancillary prices over a look-ahead horizon (e.g., ~24 hours) with explicit uncertainty (scenario/probabilistic methods)... optimized to charge in lower-priced hours and discharge in higher-priced hours while managing SOC' (Gridmatic Equisetum LLC comments to the PUCT, October 2025)"
+        },
+        {
+          "band": "Optimisation",
+          "label": "Automation",
+          "value": "'Gridmatic fully automates this decision-making'; '100% automated' battery operation (Modo case study); 'outage-aware scheduling'"
+        },
+        {
+          "band": "Optimisation",
+          "label": "Analysis tooling",
+          "value": "'proprietary shadow clearing engine' linking anonymised CAISO resource IDs to assets via OASIS bids and FERC EQR data (CAISO Storage Report, June 2026)"
+        },
+        {
+          "band": "Retail",
+          "label": "Load Optimizer cycle",
+          "value": "'(10 AM CT) Morning strategy... (2 PM CT) Market clearing... Awards notification... (Hourly) Next-day execution'; participation in the day-ahead market for ancillary services and real-time energy plus Emergency Response Service"
+        },
+        {
+          "band": "Stack",
+          "label": "Infrastructure and ML",
+          "value": "'Google Cloud, Kubernetes, Terraform, Flyte, Temporal, Datadog, Prometheus, Grafana'; 'Python, Typescript, React, NextJS, Go'; 'BigQuery, Postgres, DBT'; 'Pytorch, Weights & Biases' (careers page)"
+        }
+      ],
+      "notes": "All wording is the company's; the only independent tests are the settlement-derived leaderboards below. The 2021 storage report carried a DNV validation of its methodology, the one third-party review of the company's analytics on record."
+    },
+    {
+      "product": "Registrations and entities (from regulator and registry records)",
+      "specs": [
+        {
+          "band": "Corporate",
+          "label": "Parent",
+          "value": "Gridmatic Inc., California corporation, CA SOS entity 3881417, created 2016-03-02; LEI 254900SETDTLHJEKMT53; HQ of record 20450 Stevens Creek Blvd Ste 100, Cupertino (GLEIF, updated 2026-08-21)"
+        },
+        {
+          "band": "Corporate",
+          "label": "Office lease",
+          "value": "12,096 sq ft at The Towers at Cupertino City Center, USD 54.36/sq ft (USD 657,539 a year), expiring 31 December 2027 with one three-year renewal option (BBCMS 2026-5C41 CMBS annex, rent roll 11 February 2026)"
+        },
+        {
+          "band": "Texas",
+          "label": "Retail electric provider",
+          "value": "Gridmatic Rosa LLC, REP certificate 10307, certificated 16 March 2022 (Option 2), amended to Option 1 in February 2024; d/b/a Gridmatic Retail and Gridmatic Retail Energy; 2026 Emergency Operations Plan filed 4 March 2026 from 1201 Fannin St Ste 262, Houston"
+        },
+        {
+          "band": "Texas",
+          "label": "ERCOT QSE",
+          "value": "Gridmatic Equisetum LLC — 'a Qualified Scheduling Entity that schedules wholesale energy storage resources in ERCOT' (PUCT Project 58379 comments); QSE of record for Endurance Park and Cross Trails on Amperical's leaderboard"
+        },
+        {
+          "band": "FERC",
+          "label": "Market-based rate authority",
+          "value": "Gridmatic Inc. ER22-2525 (effective 30 July 2022); Gridmatic Panicum LLC ER25-802 (December 2024); Gridmatic Mays LLC ER26-1607, Gridmatic Nyssa LLC ER26-1608, Gridmatic Isotria LLC ER26-1611 (effective 5 March 2026); Gridmatic Calliandra LLC ER26-2439 (effective 2 May 2026)"
+        },
+        {
+          "band": "CAISO",
+          "label": "Scheduling coordinator",
+          "value": "Gridmatic Cupressus LLC, SCID GDMC, convergence bidding, effective 27 July 2021"
+        },
+        {
+          "band": "PJM / ISO-NE",
+          "label": "Retail and market participation",
+          "value": "Gridmatic Panicum LLC: Ohio CRES 25-140646E; Pennsylvania EGS A-2025-3056545 (licensed 9 October 2025, Duquesne, FirstEnergy PA, PECO and PPL territories). Gridmatic Isotria LLC: ISO-NE market participant and NEPOOL voting member (supplier sector), Matt Wytock on four committees"
+        },
+        {
+          "band": "Funds",
+          "label": "SEC Form D",
+          "value": "Gridmatic Energy Investment Fund LP (CIK 1877349; USD 26,200,000 sold to 3 investors; first sale 2021-07-01); Gridmatic Storage Fund LP (CIK 1963653; USD 24,950,000 sold to 1 investor; first sale 2022-12-27); both 'Pooled Investment Fund — Hedge Fund', Rule 506(b), signed by Matthew Wytock as CEO of the general partner"
+        }
+      ],
+      "notes": "sec.gov was blocked from this session's network; the Form D texts were read through EDGAR full-text search and archived copies. The purpose of Gridmatic Iseia, Euphrasia, Mays, Nyssa and Calliandra LLCs is not stated anywhere on the record."
+    },
+    {
+      "product": "Fleet and performance (company-stated and independently measured, dated)",
+      "specs": [
+        {
+          "band": "Fleet (company)",
+          "label": "Under management",
+          "value": "'50MW / 100MWh battery storage system in Texas' operating via the fund (November 2023) → 'more than 300 MW of battery storage across ERCOT and California' (November 2024) → '300 MW / 1 GWh under management' (December 2024) → '300+ MW... under contract across ERCOT and CAISO' (April 2025) → '300 MW / 800 MWh' (Modo case study, undated)"
+        },
+        {
+          "band": "Fleet (named)",
+          "label": "Assets",
+          "value": "Cross Trails 57 MW/114 MWh (Energy Vault, Scurry County TX, COD 2025-05-31, ten-year floor offtake); Caballero 100 MW/400 MWh (Alpha Omega Power/Fengate, Nipomo CA, COD 2025-06-24 per the owners, optimiser since COD); Endurance Park 52 MW (ERCOT West, QSE Gridmatic Equisetum; owner not stated)"
+        },
+        {
+          "band": "Independent (Amperical, ERCOT settlements)",
+          "label": "January–July 2026, 308 resources",
+          "value": "Endurance Park (ENDPARKS_ESR1, LZ_WEST, 52 MW): rank 11, USD 3.49/kW-month, 63% energy share; Cross Trails (CROSSTRL_ESR1, LZ_WEST): rank 43, USD 2–3/kW-month"
+        },
+        {
+          "band": "Company-relayed (Modo)",
+          "label": "August 2025",
+          "value": "'Endurance Park and Cross Trails... topped the leaderboard with 115% and 99% Real-Time TBx capture rates, as reported by Modo Energy' (company blog; Modo's table is paywalled)"
+        },
+        {
+          "band": "Company",
+          "label": "ERCOT battery revenue",
+          "value": "'ERCOT BESS revenue in the first half of 2024 was $113/kW/year annualized — a 61% revenue uplift versus the average ERCOT revenue of $70/kW/year' (December 2024); backtested uplift 'as high as 46%' on 2022 data (2022 report)"
+        },
+        {
+          "band": "Company",
+          "label": "CAISO",
+          "value": "Caballero '141% TBx capture rate, and 1.7x the median-performing asset's TBx capture rate' since COD; 'only 5 out of 30 batteries' hit the TBx benchmark; 'aggregate E&AS revenues would have been $98 million higher' had all matched Caballero (CAISO Storage Report, June 2026)"
+        },
+        {
+          "band": "Company",
+          "label": "Retail",
+          "value": "'1000+ C&I customers in two years, with 60% month-over-month growth' (June 2026); 'thousands of customers across ERCOT and PJM' (August 2026); EdgeConneX 2023 result 'CFE from T-EACs 78.7%; Est. CFE from Grid Mix 13.8%; Est. Total CFE 86.2%'"
+        }
+      ],
+      "notes": "The MW figures span 300 MW under three different bases (operating, under management, under contract) and two energy figures (800 MWh, 1 GWh); the named assets sum to about 209 MW, so roughly 100 MW of the claimed fleet is unidentified. Amperical's ranking is by revenue per kW-month on public settlements; Modo's TBx capture rate measures bidding quality against the theoretical top-spread benchmark — the two are not comparable and the company's own August 2025 figure and Amperical's 2026 rank can both be true."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-18",
+      "category": "corporate",
+      "headline": "'The Gridmatic Podcast' launches with three episodes; the retail president says the business 'scaled to thousands of customers across ERCOT and PJM in just two years'",
+      "read": "The company now markets itself as a retailer first; the customer count remains unaudited and unquantified beyond 'thousands'.",
+      "source": "https://www.gridmatic.com/news/"
+    },
+    {
+      "date": "2026-08",
+      "category": "financial",
+      "headline": "A Capital Markets Associate posting says the hire will 'support upcoming debt and equity raises: build the transaction model, manage the data room' and 'own the company's collateral posting requirements across market operators and counterparties'",
+      "read": "The first public sign that 'profitable without venture capital' is about to be qualified; collateral is the binding constraint on a trader-offtaker-retailer.",
+      "source": "https://job-boards.greenhouse.io/gridmaticinc"
+    },
+    {
+      "date": "2026-06-25",
+      "category": "market",
+      "headline": "Inaugural CAISO Storage Report: 30 batteries analysed with a 'proprietary shadow clearing engine'; Caballero, optimised by Gridmatic, 'is the top performer' at a 141% TBx capture rate; 'About Gridmatic' states '1000+ C&I customers in two years'",
+      "read": "Self-published research that ranks the company's own asset first is marketing as much as analysis, but it is the only CAISO fleet-level benchmark in the public record.",
+      "source": "https://www.gridmatic.com/reports/caiso-storage-report"
+    },
+    {
+      "date": "2026-05-01",
+      "category": "regulatory",
+      "headline": "Gridmatic Calliandra LLC files for FERC market-based-rate authority (ER26-2439), the fifth new Gridmatic entity to do so since December 2024",
+      "read": "Vehicles are being created faster than businesses are announced; the plant-genus names give no clue to purpose.",
+      "source": "https://www.federalregister.gov/documents/2026/05/06/2026-08965/combined-notice-of-filings-1"
+    },
+    {
+      "date": "2026-03-04",
+      "category": "regulatory",
+      "headline": "Gridmatic Mays, Nyssa and Isotria LLCs receive FERC market-based-rate authority; the same day Gridmatic Rosa files its Texas Emergency Operations Plan from the Houston office, with Hung (Jackson) Vo signing as 'President of Gridmatic Inc.'",
+      "read": "A retail executive attesting as the parent's president, from a coworking suite, while the corporate HQ remains a Cupertino lease — the company's centre of gravity has moved to Texas faster than its paperwork.",
+      "source": "https://interchange.puc.texas.gov/Documents/53385_4056_1596017.PDF"
+    },
+    {
+      "date": "2026-03-03",
+      "category": "partnership",
+      "headline": "OBM's daily settlement and automated load control combined with Gridmatic's forecasting for large flexible loads, replacing '45–60 days of collateral'",
+      "read": "Collateral, not price, is the product for miners; daily settlement lets Gridmatic serve loads its own balance sheet could not otherwise carry.",
+      "source": "https://www.gridmaticretail.com/gridmatic-launches-obms-daily-settlement-and-automated-load-control-solution-for-large-flexible-loads/"
+    },
+    {
+      "date": "2026-02-03",
+      "category": "market",
+      "headline": "Gridmatic Retail launches in Pennsylvania (PJM); first appearance of the boilerplate 'the most profitable participant in ERCOT's wholesale market... Profitable without venture capital'; dateline Houston",
+      "read": "The ownership claim and the profitability claim arrive together and are both unverifiable from outside; the dateline change from Cupertino (October 2025) to Houston is the visible fact.",
+      "source": "https://www.gridmaticretail.com/gridmatic-retail-expands-in-pjm-territory-to-support-load-growth-in-pennsylvania/"
+    },
+    {
+      "date": "2025-12-04",
+      "category": "market",
+      "headline": "Company blog: 'Endurance Park and Cross Trails systems, optimized by Gridmatic, topped the leaderboard with 115% and 99% Real-Time TBx capture rates, as reported by Modo Energy' for August 2025",
+      "read": "The first public naming of Endurance Park as a Gridmatic-optimised asset; the Modo table it cites is paywalled, so the figure is company-relayed.",
+      "source": "https://www.gridmatic.com/blog/beyond-the-benchmark-understanding-how-bess-assets-can-outperform-100-of-tbx/"
+    },
+    {
+      "date": "2025-11-04",
+      "category": "customer",
+      "headline": "Cholla Inc. selects Gridmatic 'through competitive bidding' for its 7 MW flexible-compute lab in Mitchell County, Texas, with Satoshi Energy; 'Gridmatic assumes all downside risk, guaranteeing Cholla only upside savings'",
+      "read": "The Load Optimizer sold as a no-lose proposition to the customer means Gridmatic's own book carries the forecast error.",
+      "source": "https://finance.yahoo.com/news/gridmatic-satoshi-energy-cholla-inc-130000441.html"
+    },
+    {
+      "date": "2025-10-15",
+      "category": "market",
+      "headline": "Gridmatic Retail launches in Ohio — 'first operations within PJM Interconnection' — citing AEP Ohio's data-centre forecast of 600 MW in 2024 to 5 GW by 2030; dateline Cupertino",
+      "read": "Entry into PJM is a retail entry aimed at data-centre load, not a storage entry; no PJM battery is claimed.",
+      "source": "https://finance.yahoo.com/news/gridmatic-retail-launches-ohio-support-120000629.html"
+    },
+    {
+      "date": "2025-10-03",
+      "category": "regulatory",
+      "headline": "Gridmatic Equisetum LLC files comments with the PUCT in Project 58379 as 'a Qualified Scheduling Entity that schedules wholesale energy storage resources in ERCOT', alongside Hunt Energy Network, Jupiter Power and Tesla",
+      "read": "The only document in which the company describes its scheduling method in its own words and identifies its QSE entity.",
+      "source": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF"
+    },
+    {
+      "date": "2025-08-06",
+      "category": "product-launch",
+      "headline": "AI Load Optimizer launched for large ERCOT consumers — day-ahead market and Emergency Response Service participation managed by Gridmatic, '>5%' cost reduction — with Vega Energy Advisors as broker partner and Data Factory as first adopter; first press release datelined Houston",
+      "read": "Turns the trading edge into a retail product for flexible load; the first release to name a bitcoin miner as a customer.",
+      "source": "https://www.gridmaticretail.com/gridmatic-launches-ai-load-optimizer-to-help-large-energy-users-capture-more-value-from-ercot-markets/"
+    },
+    {
+      "date": "2025-07-28",
+      "category": "financial",
+      "headline": "Energy Vault closes USD 18 million of project financing for Cross Trails 'supported by a 10 year offtake agreement with Gridmatic', plus a USD 12 million-plus ITC sale, at a levered IRR of about 15%",
+      "read": "A bank lent against Gridmatic's floor — the clearest external validation the offtake model has received, though the lender is unnamed and Gridmatic is unrated.",
+      "source": "https://www.energy-storage.news/energy-vault-closes-us18-million-financing-for-114mwh-texas-bess/"
+    },
+    {
+      "date": "2025-06-26",
+      "category": "procurement",
+      "headline": "10 MW solar PPA with Sol Systems' Mars Solar in Texas, with EdgeConneX renewing its hourly-matched supply",
+      "read": "Second named generation contract behind the 24/7 product; the matched-power book is still measured in tens of megawatts.",
+      "source": "https://www.gridmaticretail.com/1359-2/"
+    },
+    {
+      "date": "2025-05-31",
+      "category": "project",
+      "headline": "Cross Trails (57 MW/114 MWh, Snyder, Texas) reaches commercial operation under Energy Vault's ten-year offtake with Gridmatic — 'the first physically settled revenue floor contract to be signed for a BESS in ERCOT'; Gridmatic provides QSE services",
+      "read": "The model the fund was raised for, delivered: Gridmatic as toller, scheduler and forecaster on one asset, reported to Energy Vault's shareholders in SEC filings.",
+      "source": "https://www.energyvault.com/projects/cross-trails-bess"
+    },
+    {
+      "date": "2025-04-16",
+      "category": "market",
+      "headline": "Modo Energy's US optimizer directory lists Gridmatic (ERCOT and CAISO; QSE, DME and auto-bidder; '300+ MW... under contract'; '48% revenue uplift over the weighted average BESS revenue in ERCOT') beside fifteen peers",
+      "read": "Places the company in the optimiser peer set the corpus tracks; the entry is vendor-written and Modo ranks no one in it.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "date": "2024-12-10",
+      "category": "corporate",
+      "headline": "'Gridmatic Surpasses 1GWh of Energy Storage Under Management': '300 MW / 1 GWh under management' including Energy Vault's Texas system; H1 2024 ERCOT battery revenue 'USD 113/kW/year annualized — a 61% revenue uplift'; retail 'serving a diverse book of commercial and large data-center opportunities'",
+      "read": "The fleet headline the company still uses; named assets account for about two thirds of the megawatts.",
+      "source": "https://www.businesswire.com/news/home/20241210579395/en/"
+    },
+    {
+      "date": "2024-12-03",
+      "category": "customer",
+      "headline": "Alpha Omega Power (with Fengate) buys the 100 MW/400 MWh Caballero battery in Nipomo, California and 'has brought on Gridmatic... as the battery optimizer'",
+      "read": "The company's CAISO entry and its largest single optimisation mandate; a fee-for-service role rather than a fund-backed toll.",
+      "source": "https://www.ess-news.com/2024/12/04/alpha-omega-power-purchases-100mw-caiso-battery-storage-system/"
+    },
+    {
+      "date": "2024-11-08",
+      "category": "customer",
+      "headline": "Energy Vault takes FID on Cross Trails with a 'ten-year offtake agreement with Gridmatic'; Energy Vault's Q3 2024 results cite 'new contracts in the U.S. with Jupiter Power and Gridmatic' for a 33% backlog rise",
+      "read": "Gridmatic appears in a listed company's backlog for the first time — the one place its contracts are disclosed by someone else.",
+      "source": "https://www.energy-storage.news/energy-vault-and-gridmatic-sign-10-year-offtake-for-ercot-battery-project/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "habitat-energy",
+      "type": "competitor",
+      "status": "active",
+      "note": "The other pure-play merchant optimiser in this corpus; both are quantified in Modo Energy's April 2025 US directory, where Habitat claims 'over 1,300 MW' in ERCOT and Gridmatic '300+ MW' across ERCOT and CAISO.",
+      "context": "The two compete for the same ERCOT owners but on different terms: Habitat sells a desk on revenue share and originates floors backed by insurers, Gridmatic tolls and floors batteries from its own fund and adds a retail book. Neither names the other on its own channels; Modo's tolling explainer lists Habitat's Octopus toll and Gridmatic's Cross Trails floor in the same table of ERCOT offtake deals.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "tesla",
+      "type": "competitor",
+      "status": "active",
+      "note": "Autobidder is the vendor-bundled alternative to a third-party optimiser in ERCOT and CAISO; Tesla and Gridmatic filed side by side in the PUCT's storage-scheduling project in October 2025.",
+      "context": "Modo's US directory lists both. The PUCT's Project 58379 order names Gridmatic among commenters alongside Tesla, Hunt Energy Network and Jupiter Power. No commercial link is on record.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "fluence",
+      "type": "competitor",
+      "status": "active",
+      "note": "Fluence's dossier positions Mosaic against 'independent optimizers (Gridmatic, Habitat Energy et al.)'; both appear in Modo's US directory.",
+      "context": "Fluence sells Mosaic bidding software to owners of any hardware; Gridmatic competes for those owners with a toll or floor rather than a licence. No commercial link between them is on record.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "stem",
+      "type": "competitor",
+      "status": "active",
+      "note": "Both listed in Modo's April 2025 directory; the Stem dossier records that Modo quantifies Gridmatic's performance and describes Stem in capability-only language. Gridmatic's CMO was an early marketing hire at Stem.",
+      "context": "Stem delivers QSE services through partners while Gridmatic holds its own QSE entity; they contest the same ERCOT and CAISO merchant fleets. Leesa Lee's bio cites 'successful IPOs at Enphase and Stem' — a career link, not a commercial one.",
+      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc"
+    },
+    {
+      "slug": "hunt-energy-network",
+      "type": "competitor",
+      "status": "active",
+      "note": "An owner-trader with its own QSE (TraDER) beside a fund-backed optimiser-offtaker; both commented in PUCT Project 58379 and both sit in Modo's US directory.",
+      "context": "Hunt's TraDER is 'available for use by other 3rd party generation facilities', which puts it in the same ERCOT market for scheduling mandates as Gridmatic Equisetum's QSE. Modo's paywalled 2025 capture-rate benchmarks name both in their URL slugs; no commercial link exists.",
+      "source": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ERCOT Real-Time Co-optimization plus Batteries (RTC+B)",
+      "status": "in-effect",
+      "effectiveDate": "2025-12-05",
+      "exposure": "RTC+B replaced the day-ahead ancillary-service awards that Gridmatic's own reports showed supplying most ERCOT battery revenue (ancillary services 96.4% of the 2021 revenue stack; RRS 59% of 2022's) with five-minute co-optimised clearing and single-model battery settlement. The company's Equisetum QSE comments to the PUCT (October 2025) describe scheduling energy storage with 'a look-ahead horizon (e.g., ~24 hours) with explicit uncertainty' under the new design, and its December 2025 blog anticipates the 'RTC+B reforms'. Its two ERCOT batteries ranked 11th and 43rd of 308 on public settlements in the first seven months under the regime.",
+      "source": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF"
+    },
+    {
+      "regime": "PUCT Project 58379 — energy storage resource offer and scheduling rules ('small fish' exemption removal)",
+      "status": "in-effect",
+      "effectiveDate": "2026-06-01",
+      "exposure": "Gridmatic Equisetum LLC filed comments in the rulemaking as a QSE for wholesale storage resources; the commission's order lists it among commenters with Hunt Energy Network, Jupiter Power, Tesla, LCRA and the Independent Market Monitor, and removes the small-fish exemption with effect from 1 June 2026. The company has not stated how the rule affects its offers.",
+      "source": "https://interchange.puc.texas.gov/Documents/58379_26_1555387.PDF"
+    },
+    {
+      "regime": "Texas retail electric provider certification (PUCT Chapter 25)",
+      "status": "in-effect",
+      "effectiveDate": "2022-03-16",
+      "exposure": "Gridmatic Rosa LLC holds REP certificate 10307 (Option 2 at grant, Option 1 from February 2024, allowing service to all load sizes), with annual reports approved in 2024, 2025 and 2026 and an Emergency Operations Plan filed 4 March 2026. The retail book's growth to 'thousands of customers' is regulated here; no complaint or enforcement docket was found.",
+      "source": "https://www.puc.texas.gov/industry/electric/directories/rep/report_rep/?ID=RESQL01DB1245965500001"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Matt Wytock",
+      "title": "Founder and Chief Executive Officer; signs the funds' Form Ds as 'CEO of the General Partner'",
+      "photo": "images/execs/gridmatic-wytock.jpg",
+      "background": [
+        "Founded Gridmatic in 2017 'after realizing that electricity market reform is key to enabling the adoption of renewable energy'; NEPOOL committee representative for Gridmatic Isotria LLC",
+        "Google — core Search and Ads platforms; 'creator of Keywordless Ads (Dynamic Search Ads)' (company bio; third-party bios give 2005–15)",
+        "PhD in machine learning, Carnegie Mellon University — 'large-scale convex optimization methods for the grid'; Stanford postdoctoral work per third-party bios"
+      ]
+    },
+    {
+      "name": "David Miller",
+      "title": "Chief Commercial Officer (Vice President of Business Development until about 2024)",
+      "photo": "images/execs/gridmatic-miller.jpg",
+      "background": [
+        "Chief Commercial Officer, Gridmatic — quoted on the Energy Storage Fund, Cross Trails, Caballero and the CAISO Storage Report; the company's public voice on ERCOT ancillary-service saturation (2023–24)",
+        "Greensmith Energy, Wärtsilä and Shell — 'grid-scale battery systems across five US ISOs and nine countries'; head of US grid-scale storage development at Shell per Energy Choice Matters (2022)",
+        "MBA, Harvard Business School; BA Economics, Stanford"
+      ]
+    },
+    {
+      "name": "Jackson (Hung) Vo",
+      "title": "President, Gridmatic Retail (since January 2024); attested as 'President of Gridmatic Inc.' on the March 2026 PUCT emergency-operations filing",
+      "photo": "images/execs/gridmatic-vo.jpg",
+      "linkedin": "https://www.linkedin.com/in/jackson-vo-a789531/",
+      "background": [
+        "President, Gridmatic Retail (2024–); succeeded Michael Osowski, president at the January 2023 launch; quoted on every retail release and the 2026 podcast",
+        "Freepoint Energy Solutions (seven years); Direct Energy; Luminant Energy; TXU — 'serving customers across PJM, ERCOT, and NYISO'",
+        "BBA Finance, University of Texas at Austin"
+      ]
+    },
+    {
+      "name": "Anna Astretsova",
+      "title": "Head of Finance",
+      "background": [
+        "Head of Finance, Gridmatic; Erin Kogan was quoted as Chief Financial Officer in November 2023 and no longer appears on the company's leadership page — her status is not published",
+        "GridStor, Leeward Renewable Energy and First Solar — 'over 15 years' in finance leadership",
+        "MSc Financial Mathematics, Stanford; MSc Applied Mathematics, Moscow State University"
+      ]
+    },
+    {
+      "name": "Leesa Lee",
+      "title": "Chief Marketing Officer",
+      "photo": "images/execs/gridmatic-lee.jpg",
+      "background": [
+        "CMO, Gridmatic — 'leads Gridmatic's go-to-market efforts'; contributor to the CAISO Storage Report",
+        "'First marketing hire at several energy startups' — Enphase and Stem (through their IPOs), Greensmith (acquired by Wärtsilä)",
+        "MBA, UC Berkeley Haas"
+      ]
+    },
+    {
+      "name": "Kise Shannon",
+      "title": "Vice President, Business Development (retail); host of The Gridmatic Podcast",
+      "photo": "images/execs/gridmatic-shannon.jpg",
+      "background": [
+        "VP Business Development, Gridmatic Retail; signed the March 2026 Texas emergency-operations plan as 'VP of Business Development'",
+        "SVP Sales and Marketing, Mass Market, Shell Energy; Pulse Power; LifeEnergy"
+      ]
+    },
+    {
+      "name": "Parker Mott",
+      "title": "Vice President, Portfolio Management",
+      "photo": "images/execs/gridmatic-mott.jpg",
+      "linkedin": "https://www.linkedin.com/in/parker-mott-a153546b/",
+      "background": [
+        "VP Portfolio Management, Gridmatic Retail — pricing, load forecasting and financial actualisation of the retail book",
+        "Freepoint Energy Solutions (led pricing and load forecasting); EnerNOC; Direct Energy",
+        "MBA, Carnegie Mellon; BS Electrical Engineering and Economics, Iowa State"
+      ]
+    },
+    {
+      "name": "Jennifer Li",
+      "title": "Vice President, Retail Operations",
+      "photo": "images/execs/gridmatic-li.jpg",
+      "linkedin": "https://www.linkedin.com/in/jennifer-li-55a8b012/",
+      "background": [
+        "VP Retail Operations, Gridmatic — the Houston operations team; regulatory representative on the Texas REP record; signed the March 2026 emergency-operations plan",
+        "Tomorrow Energy, Entrust Energy, Spark Energy — 'over 25 years' in retail energy operations",
+        "BBA Finance, University of Texas at Austin; MBA, Tulane"
+      ]
+    },
+    {
+      "name": "Rice Lummis",
+      "title": "Senior Director, Asset Management",
+      "photo": "images/execs/gridmatic-lummis.jpg",
+      "background": [
+        "Senior Director, Asset Management — author of the company's 2026 analyses of ERCOT controllable load resources and Batch Zero; podcast co-host"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Funding and ownership (SEC Form D and company statements)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Gridmatic Energy Investment Fund LP",
+            "actual": "USD 26,200,000 sold to 3 investors (Form D filed 2021-08-16; first sale 2021-07-01; minimum investment USD 1,000,000; 'Pooled Investment Fund — Hedge Fund'); Gridmatic Inc. is investment manager, 'general partner, majority investor' and 'receives customary management fees'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The fund's wholly owned SPV Gridmatic Panicum LLC is the PJM retail supplier (Energy Choice Matters, December 2024)"
+          },
+          {
+            "name": "Gridmatic Storage Fund LP ('Energy Storage Fund')",
+            "actual": "USD 24,950,000 sold to 1 investor at the 2023-01-31 Form D (first sale 2022-12-27); 'second closing... bringing capital commitments to $50 million' (company release, 2023-11-15); 'earmarked to oversee the management of up to 500 MW'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Investors unnamed — 'a leading energy investor'; no amendment filed; backs the Cross Trails floor per Energy Vault"
+          },
+          {
+            "name": "Corporate equity",
+            "actual": "No Form D for Gridmatic Inc. on EDGAR; 'independently owned'; 'Profitable without venture capital' (company boilerplate from February 2026); 'multiple years of profitability without raising venture capital' (job postings); one named outside angel — Arun Majumdar, 'Investor and Advisor' (Silver Sustainable Solutions S-1, February 2022)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Data-vendor entries describing a 'Series D' of USD 40 million are a mis-tag of the fund Form Ds; August 2026 postings cite 'existing investors', 'board packages' and 'upcoming debt and equity raises'"
+          }
+        ],
+        "commentary": "Collection gap: no revenue, profit, trading P&L, headcount or customer count has ever been disclosed by the company or verified by a third party. 'The most profitable participant in ERCOT's wholesale market' rests on the company's reading of ERCOT's 60-day day-ahead disclosures; ERCOT publishes no per-participant profit and no analyst has replicated the claim. Aggregator revenue estimates ('USD 10–100 million') are model outputs and are not used here."
+      },
+      {
+        "period": "Operating scale (company-stated, dated)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Storage under management",
+            "actual": "'300 MW / 1 GWh' (2024-12-10); '300+ MW... under contract across ERCOT and CAISO' (April 2025); named assets Cross Trails 57 MW/114 MWh, Caballero 100 MW/400 MWh, Endurance Park 52 MW",
+            "expected": "",
+            "verdict": "inline",
+            "result": "About 209 MW is identifiable; the balance is unnamed"
+          },
+          {
+            "name": "Retail customers",
+            "actual": "'1000+ C&I customers in two years, with 60% month-over-month growth' (June 2026); 'thousands of customers across ERCOT and PJM' (August 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No load, revenue or customer count disclosed to regulators in public form; ERCOT's LSE reports are confidential for the company"
+          },
+          {
+            "name": "ERCOT battery revenue (company)",
+            "actual": "'$113/kW/year annualized' for H1 2024, 'a 61% revenue uplift versus the average ERCOT revenue of $70/kW/year'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; ERCOT fleet revenues fell by more than half in 2025 per Modo, so the figure is not a run-rate"
+          },
+          {
+            "name": "ERCOT battery revenue (independent — Amperical, public settlements)",
+            "actual": "Endurance Park USD 3.49/kW-month (rank 11 of 308) and Cross Trails USD 2–3/kW-month (rank 43), January–July 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Amperical's leaderboard, built from ERCOT 60-day SCED and DAM disclosures; QSE Gridmatic Equisetum LLC on both"
+          },
+          {
+            "name": "Cross Trails offtake economics (from Energy Vault's filings)",
+            "actual": "Ten-year 'physically settled revenue floor' with 'upside participation'; USD 18 million project financing plus a USD 12 million-plus ITC sale; 'levered IRR of ~15%'; Gridmatic classed as a non-investment-grade 'fixed toll plus upside' offtaker",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No floor price or upside split disclosed; Energy Vault's bridge loan on the project was at 24% before the take-out"
+          },
+          {
+            "name": "Office cost (CMBS disclosure)",
+            "actual": "Cupertino lease USD 657,539 a year for 12,096 sq ft to 31 December 2027",
+            "expected": "",
+            "verdict": "inline",
+            "result": "BBCMS 2026-5C41 annex; the only third-party financial figure about the company itself"
+          }
+        ],
+        "commentary": "The company reports growth through fleet and customer milestones, none reconcilable to filings. The independent ERCOT ranking is respectable rather than dominant, and covers two assets."
+      }
+    ],
+    "commentary": "Private; no financial statements are public in any jurisdiction. The two Form Ds and the counterparty's SEC filings are the only regulator-filed figures. 'Expected' is empty throughout because no guidance or consensus exists."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Gridmatic's strategy is to monetise one forecasting engine three ways — proprietary trading, fund-backed battery offtake and a retail book for flexible load — and that the fund structure, not venture equity, is what has financed the last two. Basis: the company's own four-line description of what it does; both Form Ds naming Gridmatic Inc. as manager and majority investor; Energy Vault's statement that the Cross Trails floor is 'backed by Gridmatic's previously announced Energy Storage Fund'; and the retail SPV's ownership by the Energy Investment Fund per Energy Choice Matters.",
+    "2. **(High confidence)** We assess that the company is independent and founder-controlled and that no change of control has occurred through 2026-09-12. Basis: no acquisition, stake or merger in SEC full-text search, the Federal Register, trade press or the registries; the CEO signing every filing; 'independently owned' on the retail site. Collection gap: the cap table and the LP investors are undisclosed, and August 2026 job postings reference 'upcoming debt and equity raises' — the independence claim should be re-read at the first refresh.",
+    "3. **(Moderate confidence)** We assess that 'HQ Houston' is true of the retail business and the press identity and false of the corporation, and that the distinction matters for the sale-side reader. Basis: GLEIF, LinkedIn, the PUCT record and both Form Ds give Cupertino as the corporate address; a CMBS rent roll shows a Cupertino lease to end-2027; the Houston address is a flexible-office suite and is described by the company itself as the 'retail headquarters'; engineering roles are posted in Cupertino and San Francisco, retail roles in Houston. The company's own site publishes no address at all.",
+    "4. **(Moderate confidence)** We assess that the offtake business is smaller than its rhetoric: roughly 200 MW named against a 500 MW fund target set in 2023, and two ERCOT batteries whose public-settlement revenue ranks 11th and 43rd of 308. Basis: Amperical's leaderboard, the named-asset list, and the three different bases on which the company states 300 MW. Against this, the December 2025 blog's Modo-attributed capture rates of 115% and 99% for August 2025 point to strong bidding on those assets; capture rate and revenue rank measure different things and both can be true.",
+    "5. **(Low confidence)** We assess that the retail book, not storage, is where the company's growth and its risk now sit. Basis: '1000+ C&I customers' and '60% month-over-month growth' in June 2026, three states in twelve months, products in which 'Gridmatic assumes all downside risk', and an OBM partnership aimed at collateral relief; the capital-markets posting names 'collateral posting requirements across market operators and counterparties' as the hire's first responsibility. No customer, load or margin figure exists to test this.",
+    "**Collection gaps.** No financial statements; no LP names; the purpose of Gridmatic Iseia, Euphrasia, Mays, Nyssa and Calliandra LLCs; the owner of Endurance Park; Erin Kogan's status as CFO; the content of Modo's paywalled optimiser rankings; sec.gov was blocked and Form D texts were read through EDGAR full-text search and archived copies; businesswire.com returned 403 and releases were read from company and Yahoo copies.",
+    "**Indicators to watch.** *A Form D for Gridmatic Inc. or a named investor* — the equity raise the August 2026 posting anticipates would end 'without venture capital'. *A second SEC-filed offtake* — any listed owner naming Gridmatic as toller would show the fund model repeating beyond Energy Vault. *Amperical's and Modo's 2026 full-year ERCOT tables* — whether Endurance Park and Cross Trails hold top-quartile revenue through a full year of RTC+B. *A PJM battery or a New England retail launch* — what the Isotria, Mays, Nyssa and Calliandra vehicles are for. *GLEIF or PUCT address changes* — whether the corporation follows the datelines to Houston when the Cupertino lease ends in December 2027."
+  ],
+  "sources": [
+    {
+      "label": "Gridmatic — News index (podcast episodes 'Batch Zero Explained', 'Transforming the Customer Journey', 'Gridmatic Retail Growth')",
+      "url": "https://www.gridmatic.com/news/",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "Energy-Storage.News — 'Set it and forget it': California BESS operators miss out on millions with static bidding strategies, Gridmatic reports",
+      "url": "https://www.energy-storage.news/set-it-and-forget-it-california-bess-operators-miss-out-on-millions-with-static-bidding-strategies-gridmatic-reports/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Energy-Storage.News — California batteries missing out on revenue due to suboptimal bidding strategies, Gridmatic analysis finds",
+      "url": "https://www.energy-storage.news/california-batteries-missing-out-on-revenue-due-to-suboptimal-bidding-strategies-gridmatic-analysis-finds/",
+      "date": "2026-07-17"
+    },
+    {
+      "label": "Gridmatic — CAISO Storage Report 2024–2025",
+      "url": "https://www.gridmatic.com/reports/caiso-storage-report",
+      "date": "2026-06-25"
+    },
+    {
+      "label": "Gridmatic blog — Why Load Resources (of both flavors) are poised for rapid growth in ERCOT (Rice Lummis)",
+      "url": "https://www.gridmatic.com/blog/why-load-resources-are-poised-for-rapid-growth-in-ercot",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "Federal Register — Combined notice of filings: Gridmatic Calliandra LLC market-based rate application (ER26-2439)",
+      "url": "https://www.federalregister.gov/documents/2026/05/06/2026-08965/combined-notice-of-filings-1",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "SEC EDGAR — BBCMS Mortgage Trust 2026-5C41 prospectus supplement (The Towers at Cupertino City Center tenant roll: Gridmatic 12,096 sq ft to 12/31/2027)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130435/000153949726001302/n5843_x13-424b2.htm",
+      "date": "2026-05-04"
+    },
+    {
+      "label": "SEC EDGAR — Energy Vault Holdings 10-K for fiscal 2025 (Cross Trails 'first physically settled revenue floor contract'; two tolling arrangements)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828536/000182853626000022/nrgv-20251231.htm",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "Federal Register — Combined notice of filings: Gridmatic Mays, Nyssa and Isotria LLC market-based rate applications",
+      "url": "https://www.federalregister.gov/documents/2026/03/09/2026-04541/combined-notice-of-filings-1",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "PUCT Project 53385 — Gridmatic Rosa LLC d/b/a Gridmatic Retail, 2026 Emergency Operations Plan (Houston retail headquarters; officer affidavits)",
+      "url": "https://interchange.puc.texas.gov/Documents/53385_4056_1596017.PDF",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "Gridmatic Retail — Gridmatic launches OBM's daily settlement and automated load control solution for large flexible loads",
+      "url": "https://www.gridmaticretail.com/gridmatic-launches-obms-daily-settlement-and-automated-load-control-solution-for-large-flexible-loads/",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "Gridmatic blog — Controllable Load Resources in ERCOT: why CLRs are back in focus (Rice Lummis)",
+      "url": "https://www.gridmatic.com/blog/controllable-load-resources-in-ercot/",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Gridmatic Retail — Gridmatic Retail expands in PJM territory to support load growth in Pennsylvania",
+      "url": "https://www.gridmaticretail.com/gridmatic-retail-expands-in-pjm-territory-to-support-load-growth-in-pennsylvania/",
+      "date": "2026-02-03"
+    },
+    {
+      "label": "Gridmatic blog — Beyond the Benchmark: understanding how BESS assets can outperform 100% of TBx (Marc Alvarez)",
+      "url": "https://www.gridmatic.com/blog/beyond-the-benchmark-understanding-how-bess-assets-can-outperform-100-of-tbx/",
+      "date": "2025-12-04"
+    },
+    {
+      "label": "Gridmatic and Synota — Powering flexibility: how AI forecasting and daily settlements unlock new value for bitcoin miners (case study)",
+      "url": "https://drive.google.com/file/d/1UQe7HVnysxbDmdhdNqnNZtC7GTWux-pd/view",
+      "date": "2025-11-10"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — Gridmatic, Satoshi Energy, and Cholla Inc. partner to advance flexible load innovation in Texas",
+      "url": "https://finance.yahoo.com/news/gridmatic-satoshi-energy-cholla-inc-130000441.html",
+      "date": "2025-11-04"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — Gridmatic Retail launches in Ohio to support load growth amid rising demand",
+      "url": "https://finance.yahoo.com/news/gridmatic-retail-launches-ohio-support-120000629.html",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "Pennsylvania PUC — Docket A-2025-3056545, application of Gridmatic Panicum LLC d/b/a Gridmatic Retail (electric generation supplier licence)",
+      "url": "https://www.puc.pa.gov/docket/A-2025-3056545",
+      "date": "2025-10-09"
+    },
+    {
+      "label": "Energy Choice Matters — Gridmatic receives retail supplier license in new state",
+      "url": "https://www.energychoicematters.com/stories/20251009c.html",
+      "date": "2025-10-09"
+    },
+    {
+      "label": "PUCT Project 58379 — Comments of Gridmatic Equisetum LLC (energy storage resource scheduling)",
+      "url": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF",
+      "date": "2025-10-03"
+    },
+    {
+      "label": "PUCT Project 58379 — Commission order (commenters; small-fish exemption removal effective 1 June 2026)",
+      "url": "https://interchange.puc.texas.gov/Documents/58379_26_1555387.PDF",
+      "date": "2025-10"
+    },
+    {
+      "label": "Modo Energy — Part 1: The state of battery offtake and tolling agreements in ERCOT (Cross Trails 'first known battery in ERCOT operated under a revenue floor contract')",
+      "url": "https://modoenergy.com/research/en/battery-bess-offtake-tolling-agreements-route-market-contracts-ercot-explainer-part-one",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Gridmatic Retail — Gridmatic launches AI Load Optimizer to help large energy users capture more value from ERCOT markets",
+      "url": "https://www.gridmaticretail.com/gridmatic-launches-ai-load-optimizer-to-help-large-energy-users-capture-more-value-from-ercot-markets/",
+      "date": "2025-08-06"
+    },
+    {
+      "label": "Energy Choice Matters — Texas retail provider launches AI Load Optimizer aimed at large users, collaboration with broker",
+      "url": "https://www.energychoicematters.com/stories/20250806b.html",
+      "date": "2025-08-06"
+    },
+    {
+      "label": "Energy-Storage.News — Energy Vault closes US$18 million financing for 114MWh Texas BESS",
+      "url": "https://www.energy-storage.news/energy-vault-closes-us18-million-financing-for-114mwh-texas-bess/",
+      "date": "2025-07-29"
+    },
+    {
+      "label": "SEC EDGAR — Energy Vault 8-K exhibit 99.1: USD 18 million project financing for Cross Trails",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828536/000182853625000093/ex991_crosstrailsfinancing.htm",
+      "date": "2025-07-28"
+    },
+    {
+      "label": "Gridmatic Retail — Gridmatic signs 10MW PPA with Sol Systems, serving edge data center provider EdgeConneX",
+      "url": "https://www.gridmaticretail.com/1359-2/",
+      "date": "2025-06-26"
+    },
+    {
+      "label": "SEC EDGAR — Energy Vault 8-K exhibit 99.1: Cross Trails BESS commercial operation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828536/000182853625000081/ex991_crosstrailspressrele.htm",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "Modo Energy — US battery energy storage operators and optimizers, and how to contact them",
+      "url": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "Gridmatic blog — Impact of location and optimization on maximizing BESS revenue (Marc Alvarez)",
+      "url": "https://www.gridmatic.com/blog/impact-of-location-and-optimization-on-maximizing-bess-revenue/",
+      "date": "2025-03-27"
+    },
+    {
+      "label": "Federal Register — Combined notice of filings: Gridmatic Panicum LLC market-based rate application (ER25-802)",
+      "url": "https://www.federalregister.gov/documents/2024/12/31/2024-31440/combined-notice-of-filings-1",
+      "date": "2024-12-31"
+    },
+    {
+      "label": "Energy Choice Matters — Affiliate of Texas retail provider to enter PJM retail markets (Gridmatic Panicum LLC ownership)",
+      "url": "http://www.energychoicematters.com/stories/20241224b.html",
+      "date": "2024-12-23"
+    },
+    {
+      "label": "Business Wire — Gridmatic surpasses 1GWh of energy storage under management and sees major growth in retail business",
+      "url": "https://www.businesswire.com/news/home/20241210579395/en/",
+      "date": "2024-12-10"
+    },
+    {
+      "label": "ESS News — Alpha Omega Power purchases 100MW CAISO battery storage system (Caballero; Gridmatic optimizer)",
+      "url": "https://www.ess-news.com/2024/12/04/alpha-omega-power-purchases-100mw-caiso-battery-storage-system/",
+      "date": "2024-12-04"
+    },
+    {
+      "label": "Business Wire — Alpha Omega Power purchases 100MW CAISO battery storage system and partners with Gridmatic",
+      "url": "https://www.businesswire.com/news/home/20241203971274/en/",
+      "date": "2024-12-03"
+    },
+    {
+      "label": "Gridmatic blog — Differences in battery participation in the CAISO and ERCOT markets (David Miller, Mia Nakajima)",
+      "url": "https://www.gridmatic.com/blog/differences-in-battery-participation-in-the-caiso-and-ercot-markets/",
+      "date": "2024-11-21"
+    },
+    {
+      "label": "SEC EDGAR — Energy Vault 8-K exhibit 99.1: third-quarter 2024 results (backlog 'new contracts in the U.S. with Jupiter Power and Gridmatic')",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828536/000182853624000188/ex991_evpressreleasex2024q3.htm",
+      "date": "2024-11-12"
+    },
+    {
+      "label": "Energy-Storage.News — Energy Vault, Gridmatic sign 10-year offtake for ERCOT battery project",
+      "url": "https://www.energy-storage.news/energy-vault-and-gridmatic-sign-10-year-offtake-for-ercot-battery-project/",
+      "date": "2024-11-11"
+    },
+    {
+      "label": "Latitude Media — ERCOT's battery owners lost out on 32% of potential revenue in 2023",
+      "url": "https://www.latitudemedia.com/news/ercots-battery-owners-lost-out-on-32-of-potential-revenue-in-2023/",
+      "date": "2024-05-17"
+    },
+    {
+      "label": "EdgeConneX and Gridmatic — Advancing toward sustainability: a year of operating a data center with 24/7 carbon-free energy goals (white paper)",
+      "url": "https://drive.google.com/file/d/1zNjaHc2Qch5rm_igSgZ9lVwRnOI3B72J/view",
+      "date": "2024-04-18"
+    },
+    {
+      "label": "Latitude Media — What does it take to make hourly matching work for a single data center?",
+      "url": "https://www.latitudemedia.com/news/what-does-it-take-to-make-hourly-matching-work-for-a-single-data-center/",
+      "date": "2024-03-22"
+    },
+    {
+      "label": "Gridmatic Retail — Gridmatic Retail welcomes Jackson Vo as President, secures Option 1 license",
+      "url": "https://www.gridmaticretail.com/gridmatic-retail-welcomes-jackson-vo-as-president-secures-option-1-license/",
+      "date": "2024-02-27"
+    },
+    {
+      "label": "Business Wire — Gridmatic closes $50 million Energy Storage Fund, underscoring importance of AI to optimizing batteries",
+      "url": "https://www.businesswire.com/news/home/20231115697337/en/",
+      "date": "2023-11-15"
+    },
+    {
+      "label": "Energy-Storage.News — Gridmatic launches US$50 million fund to manage BESS projects in ERCOT and CAISO",
+      "url": "https://www.energy-storage.news/gridmatic-launches-us50-million-fund-to-manage-bess-projects-in-ercot-and-caiso/",
+      "date": "2023-08-10"
+    },
+    {
+      "label": "Energy-Storage.News — Texas: market saturation and new ERCOT rules to hit BESS finances (Gridmatic 2022 report)",
+      "url": "https://www.energy-storage.news/texas-market-saturation-and-new-ercot-rules-to-hit-bess-finances/",
+      "date": "2023-06-26"
+    },
+    {
+      "label": "Gridmatic — Annual ERCOT Storage Report 2022",
+      "url": "https://drive.google.com/file/d/1RBmX_v2rNlV-YeFFaksPdnbL0F1fIkCD/view",
+      "date": "2023-05"
+    },
+    {
+      "label": "SEC EDGAR — Gridmatic Storage Fund LP, Form D",
+      "url": "https://www.sec.gov/Archives/edgar/data/1963653/000156761923001545/primary_doc.xml",
+      "date": "2023-01-31"
+    },
+    {
+      "label": "Energy Choice Matters — AI-enabled power marketer launching retail supplier, initially in Texas",
+      "url": "https://www.energychoicematters.com/stories/20230124a.html",
+      "date": "2023-01-24"
+    },
+    {
+      "label": "EnergyTech — GridMatic delivering AI-enabled renewable time matching to Texas data center demand",
+      "url": "https://www.energytech.com/renewables/article/21258582/",
+      "date": "2023-01-23"
+    },
+    {
+      "label": "PUCT Docket 53965 — Application of Gridmatic Rosa LLC to amend its REP certificate (address change effective 1 July 2022)",
+      "url": "https://interchange.puc.texas.gov/search/filings/?ControlNumber=53965",
+      "date": "2022-10-12"
+    },
+    {
+      "label": "Federal Register — Gridmatic Inc.: supplemental notice that initial market-based rate filing includes request for blanket Section 204 authorization (ER22-2525)",
+      "url": "https://www.federalregister.gov/documents/2022/08/05/2022-16829/",
+      "date": "2022-08-05"
+    },
+    {
+      "label": "Energy Choice Matters — AI and ML focused company, led by Google alum, receives Texas retail electric provider certificate",
+      "url": "https://www.energychoicematters.com/stories/20220317a.html",
+      "date": "2022-03-17"
+    },
+    {
+      "label": "SEC EDGAR — Silver Sustainable Solutions Corp. S-1 (Arun Majumdar listed as Gridmatic 'Investor and Advisor')",
+      "url": "https://www.sec.gov/Archives/edgar/data/1870079/000121390022008025/fs12022_silversustainable.htm",
+      "date": "2022-02-16"
+    },
+    {
+      "label": "SEC EDGAR — Gridmatic Energy Investment Fund LP, Form D",
+      "url": "https://www.sec.gov/Archives/edgar/data/1877349/000091957421005375/primary_doc.xml",
+      "date": "2021-08-16"
+    },
+    {
+      "label": "CAISO — Market notice: new market participant Gridmatic Cupressus, LLC (scheduling coordinator for convergence bidding, SCID GDMC)",
+      "url": "https://www.caiso.com/Documents/Notice-NewMarketParticipant-080321.html",
+      "date": "2021-08-03"
+    },
+    {
+      "label": "Gridmatic — Homepage ('The power company for an increasingly complex grid')",
+      "url": "https://www.gridmatic.com/"
+    },
+    {
+      "label": "Gridmatic — About (technology; leadership team)",
+      "url": "https://www.gridmatic.com/about/"
+    },
+    {
+      "label": "Gridmatic — Careers (team backgrounds; stack)",
+      "url": "https://www.gridmatic.com/careers/"
+    },
+    {
+      "label": "Gridmatic Retail — Homepage (products; Houston address; licences)",
+      "url": "https://www.gridmaticretail.com/"
+    },
+    {
+      "label": "Gridmatic Retail — Company ('a subsidiary of Gridmatic'; retail team)",
+      "url": "https://www.gridmaticretail.com/company/"
+    },
+    {
+      "label": "Gridmatic Retail — For brokers ('strictly refrain from selling energy directly to consumers')",
+      "url": "https://www.gridmaticretail.com/for-brokers/"
+    },
+    {
+      "label": "Gridmatic Retail — Flexible loads (AI Load Optimizer workflow)",
+      "url": "https://www.gridmaticretail.com/flex-loads/"
+    },
+    {
+      "label": "Greenhouse — Gridmatic Inc. job board (open roles; 'profitable without raising venture capital'; capital-markets posting)",
+      "url": "https://job-boards.greenhouse.io/gridmaticinc"
+    },
+    {
+      "label": "Energy Vault — Cross Trails BESS project page",
+      "url": "https://www.energyvault.com/projects/cross-trails-bess"
+    },
+    {
+      "label": "Modo Energy — Terminal case study: Gridmatic",
+      "url": "https://modoenergy.com/terminal/case-studies/gridmatic"
+    },
+    {
+      "label": "Amperical — ERCOT BESS revenue leaderboard, every battery ranked (public settlements, 2026)",
+      "url": "https://amperical.ai/ercot-leaderboard/"
+    },
+    {
+      "label": "PUCT — Retail electric provider record: Gridmatic Rosa LLC (certificate 10307)",
+      "url": "https://www.puc.texas.gov/industry/electric/directories/rep/report_rep/?ID=RESQL01DB1245965500001",
+      "party": "disclosure"
+    },
+    {
+      "label": "GLEIF — LEI records for Gridmatic entities (Gridmatic Inc. 254900SETDTLHJEKMT53)",
+      "url": "https://api.gleif.org/api/v1/lei-records?filter[entity.legalName]=Gridmatic"
+    },
+    {
+      "label": "ISO New England — Participant directory: Gridmatic Isotria LLC",
+      "url": "https://www.iso-ne.com/participate/participant-asset-listings/directory?type=customer&id=164664"
+    },
+    {
+      "label": "LinkedIn — Gridmatic company page",
+      "url": "https://www.linkedin.com/company/gridmatic"
+    }
+  ],
+  "lastUpdated": "2026-09-12",
+  "profileVersion": 1
+}
