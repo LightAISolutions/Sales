@@ -1,4 +1,4 @@
-var VERSION = "v01.35g";
+var VERSION = "v01.36g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -941,6 +941,7 @@ function guidanceDocs_() {
   // fundamentals first, then the AI data-center wave, then market access.
   return [guidanceDocBessTech_(), guidanceDocPowerInfra_(),
           guidanceDocNvidia800_(), guidanceDocUtilityAidc_(),
+          guidanceDocLargeLoadInterconnection_(),
           guidanceDocGridEquipment_(),
           guidanceDocChinaPolicy_(), guidanceDocBankability_(),
           guidanceDocEo14420_()];
@@ -3278,6 +3279,800 @@ function guidanceDocUtilityAidc_() {
   {
    "t": "kill switch",
    "d": "SB 6's requirement that ERCOT be able to isolate co-located (behind-the-meter) load in emergencies - a condition of the co-location review for ≥75 MW arrangements."
+  }
+ ]
+};
+}
+// Content: Large-Load Interconnection - The Federal Rulebook Above the Fence
+// (research synthesis, 2026-09-13). Derived from
+// repository-information/industry-guidance/large-load-interconnection-2026-09-analysis.md;
+// claims verified against the Federal Register text of Order No. 2023 and 2023-A, the six
+// Federal Register notices instituting the 2026 large-load section 206 proceedings, and
+// FERC's orders in the PJM co-location, SPP HILL/HILLGA and SPP CHILLS dockets. Composed
+// AGAINST the six utility study guides - the state tariff layer stays where it is taught.
+function guidanceDocLargeLoadInterconnection_() {
+  return {
+ "id": "large-load-interconnection-2026-09",
+ "group": "The AI Data-Center Wave",
+ "title": "Large-Load Interconnection: The Federal Rulebook Above the Fence",
+ "short": "The layer above the utility tariff - what FERC's 2023 interconnection reform did and did not cover, who pays for a study, the co-location record, and the six dockets that put every RTO's large-load rules under investigation on one day.",
+ "source": {
+  "doc": "Research synthesis - the Federal Register text of FERC Order No. 2023 (88 FR 61014) and Order No. 2023-A (89 FR 27006); the six Federal Register notices instituting the large-load section 206 proceedings (91 FR 37968-37975); FERC's orders in the PJM co-location, SPP HILL and SPP CHILLS dockets; FERC's own Unified Agenda entry for Docket RM26-4-000; and the Texas Legislature's record for SB 6",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 8,
+  "series": "Industry Guidance - regulatory module",
+  "repo": "repository-information/industry-guidance/large-load-interconnection-2026-09-analysis.md"
+ },
+ "updated": "2026-09-13",
+ "reviewBy": "2026-11-16",
+ "revisions": [
+  {
+   "date": "2026-09-13",
+   "note": "Authored as the federal counterpart to the utility-procurement module and to the six utility study guides, which own the state layer. No source document was ingested; this is research-based synthesis over public primary sources, and the analysis file carries the provenance line. Composed against those guides rather than restating them: the tariff anatomy, the minimum-demand arithmetic and SB 6's clauses stay where they are taught. Companies and grid operators are named only where the regulatory record names them - a docket caption and an accepted tariff are objective facts; there is no recommendation to buy from or avoid anyone."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "0",
+   "v": "mentions of load",
+   "sub": "\"large load\" and \"load interconnection\" each appear zero times in the 336 Federal Register pages of FERC Order No. 2023"
+  },
+  {
+   "k": "6 orders",
+   "v": "one day, every RTO",
+   "sub": "Section 206 investigations opened 18 June 2026 into PJM, SPP, NYISO, MISO, CAISO and ISO-NE - dockets EL26-67 through EL26-72"
+  },
+  {
+   "k": "$110,000",
+   "v": "to be studied in SPP",
+   "sub": "A $10,000 non-refundable application fee plus a $100,000 deposit - the first FERC-accepted study charge for a load"
+  },
+  {
+   "k": "20%",
+   "v": "of upgrade costs, uncapped",
+   "sub": "The late-stage generator withdrawal penalty under Order No. 2023; the caps the Commission proposed were not adopted"
+  }
+ ],
+ "sections": [
+  {
+   "id": "two-jurisdictions",
+   "title": "Two jurisdictions, and where the line actually runs",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "A large load answers to two regulators, and until 2026 only one of them had written it a rulebook. The state commission writes the retail tariff, the certificate and the terms of service - the layer the six utility guides in this app teach in detail. The Federal Energy Regulatory Commission writes the transmission tariff, the interconnection procedures and the rules on load sitting behind a generator's meter. **For load, the federal shelf was very nearly empty.**",
+    "**Three instruments, and knowing which one you are reading tells you what is happening.** {{FPA section 205}} is the utility's own filing: it proposes a tariff change and the Commission accepts, rejects or accepts it subject to condition. {{FPA section 206}} is the complaint route, and the Commission may open one on its own motion against an {{OATT}} whose owner has not volunteered to change it - it sets a {{refund effective date}} and puts the record to the test. And an interconnection service agreement is itself a filed rate: the most consequential co-location decision on the books began as an *amendment* to one.",
+    "**Why one grid operator is missing from every federal list in this module.** ERCOT's transmission providers are not FERC-jurisdictional public utilities, so section 206 does not reach them. That single fact explains a pattern the corpus already shows without explaining it: the Oncor guide spends fifteen sections inside a market that contains one FERC sentence, and that sentence is a hand-off. Texas did not go without a large-load rulebook - it wrote one as a **statute**, SB 6 of 2025, where other regions are now getting one as a tariff amendment. A utility can sit on both sides at once: Entergy Texas is in MISO, under a FERC tariff, and under Texas law simultaneously.",
+    "**The seam is contested, not settled.** In the co-location proceeding one generator argued that asserting jurisdiction over these arrangements on the theory that the co-located load receives jurisdictional transmission or ancillary service would *\"improperly federalize the entire electric system.\"* The Commission did not claim blanket jurisdiction over the arrangement. It acted on **PJM's tariff**, which is unambiguously its own, and on the terms under which an {{Eligible Customer}} takes transmission service on the load's behalf. In June 2026 it stated the boundary itself: exclusive jurisdiction over the rates, terms and conditions of interstate service taken on behalf of large loads connecting to the transmission system, with siting and retail terms expressly reserved to the states.",
+    "**Field note:** every tariff parameter in the utility guides - a 25 MW threshold, an 85% minimum, a fourteen-year term - is state law and is untouched by anything in this module. What the federal layer decides is *whose queue the campus stands in, at what assumed demand, whether a generator may sit behind its fence, and who carries the upgrade if the campus never arrives.*"
+   ],
+   "sales": "The question that separates someone who has read this from someone who has read a headline: **\"which regulator owns the thing that is delaying me?\"** A study queue in PJM, MISO, SPP, NYISO, CAISO or ISO-NE is federal and is being rewritten this quarter under dockets with dates on them. The same delay in ERCOT, or behind a vertically integrated utility's own queue, is a state matter on a different clock. A proposal aimed at the wrong clock has no deadline in it."
+  },
+  {
+   "id": "order-2023",
+   "title": "Order No. 2023: what it did, and the word that is not in it",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "*Improvements to Generator Interconnection Procedures and Agreements*, Order No. 2023, Docket No. RM22-14-000, 88 FR 61014, published 6 September 2023 across pages 61014-61349, effective 6 November 2023; set aside in part and clarified on rehearing by Order No. 2023-A, RM22-14-001, 89 FR 27006, effective 16 May 2024. It rebuilt the *pro forma* {{LGIP}} into a first-ready, first-served {{cluster study}} process. Read the last column first.",
+   "cols": [
+    "Reform",
+    "What it requires",
+    "The number",
+    "What it means for a LOAD"
+   ],
+   "rows": [
+    [
+     "First-ready, first-served **{{cluster study}}**",
+     "Serial study of one request at a time is replaced by clustered study of a window of requests, with cluster study costs allocated by a proportional impact method",
+     "Applies to all transmission providers, RTO and non-RTO alike",
+     "Nothing directly. This is the source of the \"batch studies replacing serial ones\" the utility guides mention without attribution - and it is about **generation**"
+    ],
+    [
+     "Increased **study deposits**",
+     "A single initial deposit collected once on entry to the cluster, sized by facility rating",
+     "**$35,000 + $1,000/MW** above 20 MW and below 80 MW; **$150,000** from 80 to under 200 MW; **$250,000** at 200 MW and above - a range the Commission described as $55,000 to $250,000",
+     "The only federal study-fee schedule that existed before 2026, and a load cannot use it. Compare SPP's load deposits in the next section"
+    ],
+    [
+     "**{{commercial readiness deposit}}**",
+     "Money that scales with the customer's assigned network upgrade cost as it advances through the study phases",
+     "**2x the study deposit** to enter the cluster study; topped up to **5%** of assigned network upgrade cost to enter the restudy; to **10%** to enter the facilities study",
+     "The model FERC's June 2026 orders reach for on the load side - a standardized cost recovery agreement with security posted toward the transmission owner's revenue requirement"
+    ],
+    [
+     "**{{withdrawal penalty}}**",
+     "A penalty for leaving the queue, rising with how far the request got - the greater of the study deposit or the figure at right",
+     "**2x study costs** at the initial cluster study; **5%** of network upgrade costs at restudy; **10%** at the facilities study; **20%** after LGIA execution if terminated before commercial operation. **The caps the Commission proposed - $1m / $1.5m / $2m - were expressly not adopted**",
+     "The sharpest asymmetry in this module. Speculation on the generation side is priced heavily and without a ceiling; on the load side it is barely priced at all"
+    ],
+    [
+     "**{{site control}}** at request",
+     "Demonstrated at the time the interconnection request is submitted, with a narrow affidavit route where a regulatory limitation makes it unobtainable",
+     "Exemptions from the withdrawal penalty exist where assigned upgrade costs rose **25%** against the previous cluster study report, or **more than 100%** against the cluster study at the facilities study stage",
+     "A discipline a load process has no federal analogue for - SB 6 and SPP's HILL are the nearest state and RTO equivalents"
+    ],
+    [
+     "**{{study delay penalty}}** on the transmission provider",
+     "The \"reasonable efforts\" standard for study deadlines is eliminated and replaced with money owed by the *provider*",
+     "**$1,000 per business day** late cluster study; **$2,000** cluster restudy; **$2,000** affected system study; **$2,500** facilities study - after a **10-business-day** grace period, and not until the **third** cluster cycle after compliance",
+     "The one reform a frustrated requester most wishes applied to them. It does not: no federal deadline penalty protects a load study anywhere"
+    ],
+    [
+     "**And the scope**",
+     "The rule amends the *pro forma* Large and Small Generator Interconnection Procedures and Agreements. Its predecessor, Order No. 2003, framed itself as covering generating facilities greater than 20 MW",
+     "In the full Federal Register text: **\"large load\" 0 occurrences. \"load interconnection\" 0 occurrences.** The two hits for \"co-location\" are about co-located *generating facilities* sharing one point of interconnection. Order No. 2023-A: 0 for all of them, and 0 for \"data cent\"",
+     "**The fact to carry.** Three federal rulemakings across twenty years standardised how a generator connects. None of them addressed how a load does - which is the space the state large-load tariff grew into"
+    ]
+   ],
+   "sales": "Saying \"FERC's 2023 interconnection reform\" to a large-load customer's counsel is a tell, because it is a generator rule and they know it. The accurate version is more useful: Order No. 2023 sets how fast **new supply** reaches the grid the campus wants to draw from, and the rulebook for the campus's own connection was empty until 2026. That reframing also explains why the campus's date moves for reasons its own study never mentions."
+  },
+  {
+   "id": "who-pays-the-study",
+   "title": "Who pays for the study - three ladders, side by side",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "The corpus has carried study-fee figures for exactly one jurisdiction - Texas, from the Oncor guide. Here they are beside the federal generator ladder and the first FERC-accepted study charges for a *load*, which are SPP's. Every figure is from the order or the statute, not from a vendor page.",
+   "cols": [
+    "Regime",
+    "What triggers the charge",
+    "The money",
+    "Refundable?"
+   ],
+   "rows": [
+    [
+     "**Federal, generation** - Order No. 2023 *pro forma* {{LGIP}}",
+     "Entry to a cluster study, once",
+     "**$35,000 + $1,000/MW** (>20 and <80 MW) · **$150,000** (80 to <200 MW) · **$250,000** (>=200 MW), plus {{commercial readiness deposit}}s at 2x, then 5% and 10% of assigned network upgrade cost",
+     "Deposits are applied to study costs; the exposure that is not refundable is the {{withdrawal penalty}}, which reaches **20% of network upgrade costs, uncapped**, after LGIA execution"
+    ],
+    [
+     "**Federal, load** - SPP's {{HILL}} process, accepted 14 January 2026",
+     "A requested HILL delivery point change: return the study agreement with the fee and deposit **within 30 calendar days** or the request is deemed withdrawn",
+     "**$10,000 non-refundable application fee + $100,000 deposit.** A further **$200,000** deposit if an {{EMT study}} is required. The host transmission owner may require a supplemental load connection study at **$25,000**, or may find it unnecessary",
+     "Excess deposit is refunded; study costs above the deposit are reimbursed by the customer. The **$10,000 application fee is not** refundable"
+    ],
+    [
+     "**State, load** - Texas SB 6 and the PUCT's implementing rule",
+     "A large-load interconnection request at the wires utility, at the statutory threshold",
+     "**At least $100,000 by statute**; the proposed rule scales it to **$100,000** for 75-250 MW and **$300,000** above 250 MW, plus actual costs - see the `oncor` guide, which teaches SB 6 clause by clause and owns the update when the rule is adopted",
+     "The rule was **published for comment in March 2026 and, as of the Oncor guide's date, not adopted.** Treat every figure in that column as proposed"
+    ]
+   ],
+   "sales": "Two things a buyer can act on. First, the study charge is almost never the number that matters - the deposits and penalties behind it are one to two orders of magnitude larger, and on the generation side they are uncapped at the late stages. Second, **nobody has published a study fee for a large load in PJM, NYISO, CAISO or ISO-NE, because no accepted process exists there to attach one to.** A quoted figure for those regions is not citable; SPP's is."
+  },
+  {
+   "id": "docket-trail",
+   "title": "The record, dated",
+   "read": "3 min",
+   "kind": "timeline",
+   "intro": "Three lanes running at once. Gold is the federal rulebook for **generators**, which was finished before any of this started. Rose is **co-location** - the question of a load behind a plant's meter. Blue is the **large-load rulebook**, which did not exist in 2024 and is being written now. The asymmetry is the lesson: the generator lane closed in 2023 and the load lane opened in 2026.",
+   "lanes": {
+    "gen": "The generator rulebook",
+    "eco": "The co-location record",
+    "deploy": "The large-load rulebook"
+   },
+   "items": [
+    {
+     "x": 2023.85,
+     "lane": "gen",
+     "label": "Order No. 2023 takes effect",
+     "sub": "Docket RM22-14-000, 88 FR 61014. Cluster studies, deposits, site control, withdrawal penalties - and not one mention of load"
+    },
+    {
+     "x": 2024.37,
+     "lane": "gen",
+     "label": "Order No. 2023-A takes effect",
+     "sub": "RM22-14-001, 89 FR 27006. Rehearing sets the rule aside in part and clarifies it; load is still absent"
+    },
+    {
+     "x": 2024.83,
+     "lane": "eco",
+     "label": "An amended interconnection agreement is rejected",
+     "sub": "1 November 2024, Docket ER24-2172, 189 FERC 61,078 - PJM had not shown the non-conforming provisions were necessary deviations. The question is left open"
+    },
+    {
+     "x": 2025.14,
+     "lane": "eco",
+     "label": "Section 206 show-cause proceeding opened",
+     "sub": "20 February 2025, Docket EL25-49-000, 190 FERC 61,115 - is PJM's tariff just and reasonable as to co-located load? Consolidated with AD24-11 and EL25-20"
+    },
+    {
+     "x": 2025.81,
+     "lane": "deploy",
+     "label": "DOE directs a large-load rulemaking",
+     "sub": "23 October 2025, under section 403 of the DOE Organization Act - large loads framed as demand above 20 MW. FERC opens Docket RM26-4-000 four days later"
+    },
+    {
+     "x": 2025.96,
+     "lane": "eco",
+     "label": "PJM's co-location tariff found unjust and unreasonable",
+     "sub": "18 December 2025, 193 FERC 61,217. Three transmission service options directed; the 2004 behind-the-meter netting rule ordered rewritten"
+    },
+    {
+     "x": 2026.04,
+     "lane": "deploy",
+     "label": "The first FERC-accepted large-load process",
+     "sub": "SPP's HILL and HILLGA effective 15 January 2026, Docket ER26-247-000, 194 FERC 61,031 - with the first study fees for a load"
+    },
+    {
+     "x": 2026.13,
+     "lane": "eco",
+     "label": "Compliance filings and a paper hearing",
+     "sub": "PJM's filings due 16 February 2026 and tariff revisions in ER26-1479-000; briefs, responses and replies run to 17 April 2026"
+    },
+    {
+     "x": 2026.46,
+     "lane": "deploy",
+     "label": "Six section 206 orders, one day",
+     "sub": "18 June 2026 - EL26-67 PJM, EL26-68 SPP, EL26-69 NYISO, EL26-70 MISO, EL26-71 CAISO, EL26-72 ISO-NE. 195 FERC 61,211-61,216"
+    },
+    {
+     "x": 2026.5,
+     "lane": "deploy",
+     "label": "A curtailable transmission service goes live",
+     "sub": "SPP's CHILLS effective 1 July 2026, Docket ER26-1323, 195 FERC 61,196 - one-year minimum, seven-year maximum, behind all firm service"
+    },
+    {
+     "x": 2026.63,
+     "lane": "deploy",
+     "label": "Show-cause responses due",
+     "sub": "17 August 2026 - justify the tariff or file changes. A 90-day abeyance was available on request by 3 August"
+    },
+    {
+     "x": 2026.87,
+     "lane": "deploy",
+     "label": "The next gate",
+     "sub": "16 November 2026 - filings from RTOs that took the abeyance, and the month FERC's own agenda projects for the next action in RM26-4. This module's review date"
+    }
+   ],
+   "sales": "Read the gap between the rose lane and the blue one. The co-location question was put to the Commission in 2024 by a single interconnection agreement and took fourteen months to produce a rule for one RTO. The large-load question was put to it in October 2025 and produced investigations in all six RTOs in eight months. **Nothing in this area is on a multi-year rulemaking clock any more**, which is why a proposal written against last quarter's rules ages badly."
+  },
+  {
+   "id": "co-location",
+   "title": "Co-location: the one place the federal layer has already decided",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**The arrangement.** A campus takes power from an adjacent generating plant on the generator's side of the point of interconnection, rather than as a network customer drawing across the grid. The Commission's operative definition, adopted in the February 2025 show-cause order from a PJM guidance document and carried forward, is worth memorising because it is the test: **{{Co-Located Load}} is end-use customer load that is physically connected to the facilities of an existing or planned Customer Facility on the Interconnection Customer's side of the Point of Interconnection to the PJM Transmission System.**",
+    "**What the December 2025 order actually found.** PJM's tariff is unjust and unreasonable because it *\"does not contain provisions addressing with sufficient clarity or consistency the rates, terms, and conditions of service that apply to generators serving Co-Located Load and {{Eligible Customer}}s taking transmission service on behalf of Co-Located Load\"* - and because it lacks **types of transmission service that reflect Eligible Customers taking service on behalf of Co-Located Loads that are willing and able to limit their use of the transmission system under certain conditions.**",
+    "**The three elections.** An Eligible Customer serving a co-located load must be able to choose: {{NITS}} billed on a **gross demand** basis; a new **Firm {{Contract Demand service}}**; or a new **Non-Firm Contract Demand service**. The last two let the customer contract and pay for grid service consistent with the load's actual net withdrawals, with curtailment where usage exceeds what was contracted. A paper hearing was established to set their rates - **so the services exist and their prices do not yet.**",
+    "**The second finding is the one that reaches beyond co-location.** PJM's {{BTMG}} netting rules were found *\"no longer just and reasonable because loads with BTMG are not fully accounted for in resource adequacy planning and shift costs onto other transmission customers contrary to the Commission's cost causation principles.\"* Those provisions were written in **2004** and netting is available only to entities taking NITS; PJM's own filing conceded that *\"20-years later cost causation principles may dictate a different outcome for co-located data center loads.\"* PJM must propose a **materiality threshold** for how much load at an electrical location a network customer may net with behind-the-meter generation, with a **three-year transition** and grandfathering for entities with existing contracts entered specifically to effectuate a BTMG arrangement.",
+    "**What the order did not decide.** It did not hold co-location lawful or unlawful in general, and it did not assert jurisdiction over the arrangement as such. It acted on a tariff and on the terms of a transmission service. The jurisdictional objection - that a broader assertion would *\"improperly federalize the entire electric system\"* - sits on the record unresolved.",
+    "**Field note:** the ancillary charges do not follow the service election. An Eligible Customer taking one of the new contract-demand services is still assessed **regulation service and black start on a gross demand basis** at the existing tariff rate. A co-located load's bill is therefore not a single basis; it is a firm-or-flexible transmission election with gross-demand ancillary obligations layered on top."
+   ],
+   "sales": "The commercially useful sentence: **whether a generator may serve a campus behind the fence, and what that campus then owes the grid, is a transmission-service election made in a FERC docket - not a term negotiated in a state rate case.** Anyone proposing a behind-the-meter configuration to a developer in PJM should know that the election exists in three flavours, that two of them are unpriced as of this writing, and that the behind-the-meter netting benefit that made some of these deals pencil is being narrowed with a three-year runway."
+  },
+  {
+   "id": "what-exists-today",
+   "title": "What exists today, region by region",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "An investigation is not a rule. Until the six section 206 dockets resolve, a campus faces whatever its region already put in its tariff - and only one region has a complete, FERC-accepted large-load interconnection process. Read the middle column as the only one that is currently enforceable.",
+   "cols": [
+    "Region",
+    "Large-load instrument in force",
+    "Under investigation since 18 June 2026"
+   ],
+   "rows": [
+    [
+     "**SPP**",
+     "**{{HILL}}** and HILLGA, accepted 14 January 2026 effective 15 January (ER26-247-000, 194 FERC 61,031). A HILL is **10 MW or more at 69 kV and below, or 50 MW or more above 69 kV**; an electric storage resource is not a HILL. SPP justified the sub-100 kV threshold by the prevalence of 69 kV lines below NERC's bulk-electric-system floor. Plus **{{CHILLS}}** from 1 July 2026",
+     "EL26-68-000, 195 FERC 61,213"
+    ],
+    [
+     "**MISO**",
+     "For **generation**, an expedited, capped, temporary study path tied to load growth. For **load**, the Commission's own finding is that the tariff still studies new load at its **maximum demand regardless of the load's willingness to be curtailed**, with the resulting {{network upgrade}}s rolled into the host transmission owner's base zonal rates. A large-load reliability-requirements filing and a proposed flexible non-firm service are the answer in progress",
+     "EL26-70-000, 195 FERC 61,212"
+    ],
+    [
+     "**PJM**",
+     "No large-load interconnection process as such - a large load arrives as network load of a transmission owner. The federal instruments that touch it are the December 2025 co-location order's three service elections and the BTMG materiality threshold, both still in compliance and paper hearing",
+     "EL26-67-000, 195 FERC 61,211"
+    ],
+    [
+     "**NYISO · CAISO · ISO-NE**",
+     "Nothing large-load-specific that this research could establish from a primary source before June 2026",
+     "EL26-69-000 (195 FERC 61,216) · EL26-71-000 (195 FERC 61,214) · EL26-72-000 (195 FERC 61,215)"
+    ],
+    [
+     "**ERCOT**",
+     "**SB 6** (89th Texas Legislature, 2025, effective 20 June 2025) and the PUCT rule implementing it - threshold, study fee, security, disclosure and curtailment terms. Taught clause by clause in the `oncor` guide, which owns it",
+     "**Not under investigation - and cannot be.** ERCOT's transmission providers are not FERC-jurisdictional, which is why the answer there was a statute"
+    ],
+    [
+     "**Vertically integrated, outside an RTO**",
+     "The utility's own load study process and its state-approved large-load tariff or contract. Georgia's utility keeps its own generation queue as well; Colorado has no RTO at all",
+     "Not reached by these six orders. The state commission remains the forum"
+    ]
+   ],
+   "sales": "This table is the fastest way to qualify a conversation. **If the campus is in SPP there is a named process with published fees and a published threshold, and a curtailable service it can elect.** If it is in PJM the co-location and behind-the-meter questions are live and partly unpriced. If it is in MISO the load is being studied at maximum demand today and that is exactly what is under investigation. If it is in ERCOT none of this applies and the Oncor guide is the reference."
+  },
+  {
+   "id": "flexibility-bargain",
+   "title": "The flexibility bargain: what a curtailable load is buying",
+   "read": "5 min",
+   "kind": "proscons",
+   "intro": "Three separate forums arrived at the same trade inside eighteen months, which is the strongest signal in this record: **speed in exchange for curtailability.** Read the left column of each card as what the load gives up and the right as what it gets - and note that in all three the flexible product is explicitly the lesser right.",
+   "cards": [
+    {
+     "t": "Firm service - the default",
+     "meta": "gross demand, full priority",
+     "adv": [
+      "Highest curtailment priority: in SPP's design all firm service ranks above the conditional product, and in PJM the gross-demand {{NITS}} election is the one that treats the load exactly like any other network customer",
+      "No term ceiling, no conditionality, no dependence on surplus transfer capability existing",
+      "The only election that needs no behind-the-meter capability to support it"
+     ],
+     "dis": [
+      "The load is studied and billed at its full contracted demand whether or not it is drawing it - which the Commission found MISO's tariff does today \"regardless of the load's operational capabilities or willingness to be curtailed\"",
+      "It waits for whatever network upgrades the study identifies, on the queue's clock",
+      "It maximises the stranded-cost exposure that the state large-load tariff then prices back through a minimum demand charge"
+     ]
+    },
+    {
+     "t": "Flexible and conditional service",
+     "meta": "net withdrawals, curtailable",
+     "adv": [
+      "**{{CHILLS}}** in SPP is served from transfer capability in excess of what firm load needs - a connection without waiting for the upgrades",
+      "PJM's directed **Firm and Non-Firm {{Contract Demand service}}s** let an {{Eligible Customer}} contract and pay consistent with the load's **actual net withdrawals** rather than gross demand, which the Commission framed as avoiding buildout that may not be necessary",
+      "It is the one lever that converts a physical capability - storage, on-site generation, genuine load shaping - directly into a schedule outcome",
+      "FERC's June 2026 orders make \"transmission services for flexible large loads\" one of the five things every RTO must now address"
+     ],
+     "dis": [
+      "Curtailable on a non-discriminatory basis when the system is constrained or in emergency; **all firm service has higher priority**, and CHILLS ranks only equal to monthly non-firm point-to-point service",
+      "**A term ceiling.** CHILLS runs a one-year minimum and a **seven-year maximum**, set deliberately so the customer must move to firm long-term service rather than live on it",
+      "Separate telemetry and billing per conditional load, plus curtailment requirements keyed to the type of supporting resource, and caps in the load forecast whose breach may itself trigger curtailment",
+      "It does not reduce anything the **state** tariff charges - the minimum demand charge, the term and the exit fee are untouched",
+      "Some ancillary obligations stay on gross demand regardless of the election"
+     ]
+    },
+    {
+     "t": "Curtailability as a statutory condition",
+     "meta": "the Texas variant",
+     "adv": [
+      "It is the price of connecting at all rather than an option - see the `oncor` guide, which teaches the clauses and owns them",
+      "It gives the grid operator a dispatchable response to a load class that would otherwise be pure inelastic demand"
+     ],
+     "dis": [
+      "No election and no discount: the load carries the equipment and the standing authority as a condition, not as a bargain",
+      "It sits outside FERC entirely, so nothing in the six section 206 dockets will change it"
+     ]
+    }
+   ],
+   "sales": "The honest pitch, and it is stronger than the dishonest one. A campus that wants the faster answer needs something behind the meter that lets it hold to a contract demand - which is a **physical** capability before it is a contractual one, and that is the commercial opening these dockets create for storage, on-site generation and load shaping. The discipline is to say what it does not buy: firm service keeps priority, the conditional product has a term ceiling where SPP's rules apply, some ancillary charges stay on gross demand, and none of it moves the state tariff. \"Batteries make the interconnection problem go away\" is not a claim this record supports."
+  },
+  {
+   "id": "tariff-as-a-class",
+   "title": "The large-load tariff as a class - and the column that is moving",
+   "read": "3 min",
+   "kind": "table",
+   "intro": "The state instruments are taught in detail elsewhere in this app and are not re-derived here; this is a one-screen reference so the federal question can be placed beside them. Every cell comes from the named study guide. **Read it for what is absent: not one of these parameters is set at FERC.**",
+   "cols": [
+    "Utility",
+    "Threshold",
+    "Minimum demand",
+    "Term",
+    "Exit / collateral",
+    "Taught in"
+   ],
+   "rows": [
+    [
+     "Dominion Energy (GS-5)",
+     "25 MW on a contiguous site at 75% load factor",
+     "85% of transmission-and-distribution, 60% of generation",
+     "14 years - a four-year ramp plus ten",
+     "Exit fees equal to remaining minimums; collateral up to 60% of minimum charges for weaker credits",
+     "`dominion-energy` - *where-dominion-slots-in*"
+    ],
+    [
+     "AEP (eight jurisdictions)",
+     "25 MW (Ohio) to 150 MW (Kentucky)",
+     "80% to 90%",
+     "12 to 20 years",
+     "Minimum bills for the remaining term, capped at three to five years",
+     "`aep` - *eight-tariffs-one-argument*"
+    ],
+    [
+     "Southern Company (Georgia)",
+     "Above 100 MW",
+     "In the filed contract, **not in the rule**",
+     "15 years",
+     "Termination payments and collateral per contract",
+     "`southern-company` - *the-large-load-rule*"
+    ],
+    [
+     "Xcel Energy (three drafts)",
+     "50 MW in Colorado - the lowest of the three",
+     "80% in Colorado - the highest of the three",
+     "Multi-year; no figure stated for any state",
+     "Exit fee and credit support provisions",
+     "`xcel-energy` - *a-tariff-in-three-drafts*"
+    ],
+    [
+     "Entergy",
+     "No class at all - a contract inside a certificate that names the customer",
+     "A revenue-requirement match rather than a percentage",
+     "15 years, then 20 in the second phase",
+     "Unrecovered cost or net book value; a parent guaranty",
+     "`entergy` - *anatomy-of-an-order-that-names-the-customer*"
+    ],
+    [
+     "Oncor",
+     "No tariff - **SB 6** at 75 MW",
+     "None; there is no minimum-demand construct",
+     "Not a tariffed term - an interconnection agreement plus a separate retail contract",
+     "$50,000 per MW of security; forfeiture split 80/20 on withdrawal",
+     "`oncor` - *sb-6-clause-by-clause*"
+    ],
+    [
+     "**What the federal layer reaches instead**",
+     "A **suggested** large-load definition under investigation, not a rule",
+     "Nothing. FERC did not modify regional wholesale cost allocation",
+     "Nothing",
+     "A **standardized cost recovery agreement** with the host load-serving entity posting security toward the transmission owner's revenue requirement, plus searchable public tracking of large-load network upgrade costs",
+     "This module - the June 2026 section 206 orders"
+    ]
+   ],
+   "sales": "The structural point, in one line each. **The state tariff answers: what does this customer pay if it does not show up. The federal layer is now answering: whose queue is it in, at what assumed demand, and who carries the upgrade if it never arrives.** Different questions, different forums, and a campus schedule can be broken by either - which is why a term sheet that covers only the first one is half a schedule."
+  },
+  {
+   "id": "notsay",
+   "title": "What the record does NOT say",
+   "read": "4 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - There is no federal large-load interconnection rule.** There is a directed {{ANOPR}}, an open docket whose next action FERC's own regulatory agenda records as *undetermined*, and six section 206 investigations. No notice of proposed rulemaking has issued and no *pro forma* large-load interconnection procedure exists. Anyone describing \"FERC's large-load interconnection rule\" is describing something that has not been written.",
+    "**2 - The six {{show cause order}}s were not read directly for this module.** FERC's own website returned HTTP 403 from the research environment for every path attempted. The orders are established from the Federal Register notices instituting each proceeding - which give docket, issue date, citation and refund effective date from a primary source - plus consistent professional summaries for their content. The five reform categories and the cost-recovery-agreement directive are therefore second-hand, and this module says so rather than hiding it.",
+    "**3 - The 50 MW / above-69 kV figure is a suggestion under investigation, and the summaries disagree about whether the orders state a threshold at all.** Two law-firm alerts report no megawatt or voltage threshold in the orders; two other summaries report 50 MW above 69 kV as the Commission's suggested definition. **This module never states it as a binding threshold.** The only load thresholds stated here as law are SPP's (10 MW at or below 69 kV, 50 MW above it, in an accepted tariff) and Texas's 75 MW.",
+    "**4 - One citation is inconsistent across sources and the primary one wins.** The Federal Register notice for the PJM large-load docket ties **195 FERC 61,211** to EL26-67-000 explicitly; one secondary summary gives 195 FERC 61,209. This module uses the Federal Register and records the discrepancy rather than smoothing it.",
+    "**5 - What each RTO actually filed on 17 August 2026 is not established here.** Two are reported to have taken the 90-day abeyance. The contents of the responses, and whether any grid operator filed its own section 205 reforms instead, could not be verified from a primary source and are deliberately absent.",
+    "**6 - No study-fee figure exists for a large load in PJM, NYISO, CAISO or ISO-NE.** SPP's are the only FERC-accepted load study charges this research could find anywhere. Generalising $10,000 plus $100,000 to another region would be inventing a number.",
+    "**7 - The two new PJM contract-demand services have no rates.** The December 2025 order created them and set a paper hearing to determine their rates, terms and conditions. Any specific price quoted today for firm or non-firm contract demand service in PJM is not a real number.",
+    "**8 - The {{BTMG}} materiality threshold is a directive, not a figure.** FERC told PJM to propose one. Any megawatt number attributed to the Commission for behind-the-meter netting is unsourced.",
+    "**9 - Nothing here says whether co-location is lawful in general.** The Commission acted on one grid operator's tariff and on the terms of transmission service taken on a co-located load's behalf. It expressly declined blanket jurisdiction over the arrangements, and the objection that a broader assertion would \"improperly federalize the entire electric system\" sits on the record unresolved.",
+    "**10 - This module does not forecast.** It states dockets, dates and the deadlines that follow from them. It does not predict what the six responses will produce, whether the rulemaking becomes a rule, or when any campus's connection date will move."
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What does FERC Order No. 2023 govern, and what does it not?",
+     "a": "It governs **generator** interconnection - it rebuilt the pro forma Large and Small Generator Interconnection Procedures into a first-ready, first-served cluster process (Docket RM22-14-000, 88 FR 61014, effective 6 November 2023). It does not govern load: in the full Federal Register text, \"large load\" and \"load interconnection\" each appear **zero** times."
+    },
+    {
+     "q": "Name the difference between an FPA section 205 proceeding and a section 206 proceeding.",
+     "a": "Section 205 is the utility's own filing - it proposes a change and FERC accepts, rejects, or accepts subject to condition. Section 206 is the complaint route, which FERC may open on its own motion against a tariff whose owner has not volunteered to change it; it carries a refund effective date and tests whether the existing tariff is unjust and unreasonable. SPP's HILL was a 205. The six large-load investigations of June 2026 are 206s."
+    },
+    {
+     "q": "Why is ERCOT absent from FERC's six large-load show-cause orders?",
+     "a": "Its transmission providers are not FERC-jurisdictional public utilities, so section 206 does not reach them. That is why Texas produced a **statute** - SB 6 of 2025 - where the other six regions are getting tariff amendments. It is a jurisdictional fact, not an oversight."
+    },
+    {
+     "q": "What is Co-Located Load, in the Commission's own definition?",
+     "a": "End-use customer load that is physically connected to the facilities of an existing or planned Customer Facility **on the Interconnection Customer's side of the Point of Interconnection** to the transmission system. The side of the point of interconnection is the whole test."
+    },
+    {
+     "q": "What three transmission service options must be available to an Eligible Customer serving a co-located load, and which of them have prices?",
+     "a": "Network Integration Transmission Service on a **gross demand** basis; a new **Firm Contract Demand** service; and a new **Non-Firm Contract Demand** service. The first has a rate. The other two were created by the December 2025 order with a paper hearing set to determine their rates - so they exist and are unpriced."
+    },
+    {
+     "q": "What does a HILL cost to study, and what is a HILL?",
+     "a": "In SPP - the only region with an accepted large-load process - a High Impact Large Load is 10 MW or more at 69 kV and below, or 50 MW or more above 69 kV. The study agreement must come back with a **$10,000 non-refundable application fee and a $100,000 deposit within 30 calendar days** or the request is deemed withdrawn; a further $200,000 if an electromagnetic-transient study is required, and $25,000 for a supplemental study at the host transmission owner's option."
+    },
+    {
+     "q": "What is the trade CHILLS offers, and what is its ceiling?",
+     "a": "An as-available service from transfer capability in excess of what firm load needs - a connection without waiting for network upgrades - in exchange for being curtailable behind **all** firm service. Minimum term one year, **maximum seven**, the ceiling set deliberately so the customer moves to firm long-term service rather than living on the conditional product."
+    },
+    {
+     "q": "Under Order No. 2023, what does a generator pay for withdrawing late from the queue?",
+     "a": "The greater of the study deposit or: 2x study costs at the initial cluster study, 5% of network upgrade costs at the restudy, 10% at the facilities study, and **20% of network upgrade costs** after executing the interconnection agreement if it is terminated before commercial operation - and the caps the Commission proposed were **not adopted**, so the late-stage figure is uncapped."
+    },
+    {
+     "q": "Which regulator sets a large-load tariff's threshold, minimum demand charge, term and exit fee?",
+     "a": "The **state** commission, in every case in this corpus - a rate case, a rule, or a certificate that names the customer. Nothing in the federal layer sets any of those four. What the federal layer reaches is the study process, the transparency of network upgrade costs, the service election for co-located and flexible load, and a cost recovery agreement with security posted by the host load-serving entity."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A developer says FERC's 2023 interconnection reform should speed up their data center's connection. What is the strongest correction?",
+     "c": [
+      "It only applies inside RTOs, and their campus is outside one",
+      "Order No. 2023 reformed generator interconnection; its Federal Register text contains zero mentions of large load or load interconnection",
+      "It was set aside entirely on rehearing in Order No. 2023-A",
+      "It applies only to facilities above 200 MW"
+     ],
+     "a": 1,
+     "why": "Order No. 2023 rebuilt the pro forma generator interconnection procedures and applies to all transmission providers, RTO and non-RTO alike; Order No. 2023-A set it aside only in part. The decisive point is scope: the rule is about generation, and a full-text search of the 336-page Federal Register publication returns zero occurrences of \"large load\" and zero of \"load interconnection.\" The federal rulebook for load did not begin to be written until 2026."
+    },
+    {
+     "q": "Which of these is a rule in force today rather than a proposal under investigation?",
+     "c": [
+      "A 50 MW threshold above 69 kV for large loads across all RTOs",
+      "A federal pro forma large-load interconnection procedure",
+      "SPP's HILL definition of 10 MW at or below 69 kV, or 50 MW above it",
+      "A materiality threshold for behind-the-meter generation netting in PJM"
+     ],
+     "a": 2,
+     "why": "SPP's HILL process was accepted by FERC on 14 January 2026 effective the next day, and its thresholds are tariff language. The 50 MW / 69 kV figure is a suggested definition inside an open section 206 investigation. No federal pro forma large-load procedure exists. And FERC directed PJM to **propose** a behind-the-meter netting threshold - it did not set one."
+    },
+    {
+     "q": "ERCOT is not among the six grid operators FERC ordered to justify their large-load tariffs. Why?",
+     "c": [
+      "It already has a compliant process, so no investigation was needed",
+      "Its transmission providers are not FERC-jurisdictional, so section 206 does not reach them",
+      "Texas received an exemption in the DOE rulemaking",
+      "It is not a regional transmission organization"
+     ],
+     "a": 1,
+     "why": "The reason is jurisdictional and statutory. Because FERC's reach does not extend to ERCOT's transmission providers, the same policy questions had to be answered by the Texas legislature instead - SB 6 of 2025 and the PUCT rule implementing it. A utility can straddle the seam: Entergy Texas sits in MISO, under a FERC tariff, and under Texas law at once."
+    },
+    {
+     "q": "A co-located load in PJM elects the new Non-Firm Contract Demand service. Which statement is accurate?",
+     "c": [
+      "It now pays for all grid services on a net-withdrawal basis",
+      "Its transmission service tracks net withdrawals, but regulation and black start are still assessed on gross demand",
+      "It is exempt from PJM charges because it is behind the point of interconnection",
+      "Its rate was fixed in the December 2025 order"
+     ],
+     "a": 1,
+     "why": "The order created the firm and non-firm contract demand services so an Eligible Customer can contract and pay consistent with the load's actual net withdrawals - and set a paper hearing to determine their rates, so those rates were not fixed. Ancillary obligations do not follow the election: regulation service and black start are assessed on a gross demand basis at the existing tariff rate."
+    },
+    {
+     "q": "Which exposure is larger for a 300 MW project: entering SPP's large-load study process, or withdrawing late from a generator interconnection queue under Order No. 2023?",
+     "c": [
+      "The study process, because of the $200,000 electromagnetic-transient deposit",
+      "They are comparable once the supplemental study deposit is included",
+      "The late withdrawal, because it is 20% of assigned network upgrade costs with no cap",
+      "Neither - both are refundable against actual study costs"
+     ],
+     "a": 2,
+     "why": "The SPP load study charges total $110,000, plus $200,000 contingently for an EMT study and $25,000 for a supplemental study, and the deposits are applied to actual costs with the excess refunded. A late generator withdrawal after executing the interconnection agreement is 20% of assigned network upgrade costs - and the Commission expressly declined to adopt the caps it had proposed. On the generation side speculation is priced heavily; on the load side it is barely priced at all."
+    },
+    {
+     "q": "A campus in MISO is told its connection date is set by how much power it might draw at peak. Which document is that, and is it settled?",
+     "c": [
+      "A state large-load tariff, and it is settled until the next rate case",
+      "MISO's tariff, and it is exactly what FERC put under section 206 investigation in June 2026",
+      "FERC Order No. 2023, which mandates maximum-demand study assumptions",
+      "The interconnection agreement, which cannot be changed once executed"
+     ],
+     "a": 1,
+     "why": "The Commission's finding is that MISO's tariff studies new load at its maximum demand regardless of the load's operational capabilities or willingness to be curtailed, with the resulting network upgrades rolled into the host transmission owner's base zonal rates. That is a tariff provision, it is federal, and it is one of the things Docket EL26-70-000 is investigating - with the response deferred to 16 November 2026 under a granted abeyance."
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Every load-bearing quantitative statement above, with its source. Primary sources are named first; anything second-hand is labelled. The full ledger, including the claims that were checked and rejected, is in the analysis file in the repo.",
+   "rows": [
+    [
+     "Order No. 2023: Docket RM22-14-000, 88 FR 61014, published 6 Sep 2023 (pp. 61014-61349), effective 6 Nov 2023",
+     "Federal Register document 2023-16628 - metadata and full text"
+    ],
+    [
+     "Order No. 2023-A: Docket RM22-14-001, 89 FR 27006, published 16 Apr 2024 (pp. 27006-27243), effective 16 May 2024",
+     "Federal Register document 2024-06563"
+    ],
+    [
+     "\"large load\" 0 occurrences, \"load interconnection\" 0 occurrences in Order No. 2023; its 2 \"co-location\" hits concern co-located generating facilities",
+     "Full-text search of the Federal Register text of 2023-16628"
+    ],
+    [
+     "\"large load\", \"load interconnection\", \"co-location\", \"data cent\" all 0 occurrences in Order No. 2023-A",
+     "Full-text search of the Federal Register text of 2024-06563"
+    ],
+    [
+     "Order No. 2003 covered generating facilities greater than 20 MW",
+     "194 FERC 61,031, Background, citing Order No. 2003, 104 FERC 61,103 (2003)"
+    ],
+    [
+     "Study deposits $35,000 + $1,000/MW, $150,000, $250,000; described as a $55,000-$250,000 range; a single initial deposit on cluster entry",
+     "Order No. 2023, pro forma LGIP s 3.1.1.1 as adopted; PP 491, 503"
+    ],
+    [
+     "Commercial readiness deposits: 2x the study deposit, then topped up to 5% and 10% of assigned network upgrade cost",
+     "Order No. 2023, PP 692-693"
+    ],
+    [
+     "Withdrawal penalty: 2x study costs, 5%, 10%, 20% of network upgrade costs by phase, greater of that or the study deposit",
+     "Order No. 2023, adopted withdrawal-penalty table, PP 791-792"
+    ],
+    [
+     "The proposed withdrawal-penalty caps ($1m / $1.5m / $2m) were not adopted",
+     "Order No. 2023, P 780"
+    ],
+    [
+     "Withdrawal-penalty exemptions at 25% and more than 100% cost increases",
+     "Order No. 2023, P 784"
+    ],
+    [
+     "Study delay penalties $1,000 / $2,000 / $2,000 / $2,500 per business day; 10-business-day grace; not before the third cluster cycle",
+     "Order No. 2023, PP 962-963; new pro forma LGIP s 3.9"
+    ],
+    [
+     "Susquehanna amended ISA rejected 1 Nov 2024, Docket ER24-2172, 189 FERC 61,078; the reasoning quoted at P 87",
+     "193 FERC 61,217, citing 189 FERC 61,078 at P 87"
+    ],
+    [
+     "Show-cause proceeding opened 20 Feb 2025, 190 FERC 61,115, Docket EL25-49-000; the Co-Located Load definition adopted there",
+     "193 FERC 61,217 at PP 2-3 and n.7"
+    ],
+    [
+     "Consolidated dockets AD24-11-000 and EL25-20-000",
+     "Caption of 193 FERC 61,217"
+    ],
+    [
+     "Co-location order issued 18 Dec 2025, 193 FERC 61,217, 'Order on Show Cause Proceeding, Directing Compliance Filings'",
+     "The order itself, 141 pages"
+    ],
+    [
+     "The unjust-and-unreasonable findings and the three transmission service elections; paper hearing on their rates",
+     "193 FERC 61,217, Commission determination"
+    ],
+    [
+     "BTMG rules no longer just and reasonable; provisions date from 2004; netting only for NITS takers; PJM's '20-years later' concession; materiality threshold, three-year transition, grandfathering",
+     "193 FERC 61,217"
+    ],
+    [
+     "30-day compliance filing on provisional interconnection service, below-nameplate requests, accelerated interconnection and surplus interconnection service",
+     "193 FERC 61,217"
+    ],
+    [
+     "Regulation and black start assessed on gross demand for the new services; 60-day compliance (16 Feb 2026); paper-hearing schedule to 17 Apr 2026",
+     "Professional analysis of 193 FERC 61,217 - secondary"
+    ],
+    [
+     "DOE directed the ANOPR 23 Oct 2025 under s 403 of the DOE Organization Act; large loads framed as demand above 20 MW",
+     "FERC Unified Agenda entry, RIN 1902-AG47, 91 FR 53150"
+    ],
+    [
+     "RM26-4-000 timetable: comments invited 27 Oct 2025, extended 7 Nov, comments close 21 Nov, replies close 5 Dec 2025, next action undetermined - November 2026",
+     "FERC Unified Agenda, 91 FR 53150"
+    ],
+    [
+     "RM26-4-000 was item E-1 and the PJM co-location dockets item E-2 at the 18 Jun 2026 open meeting",
+     "Sunshine Act Meeting Notice, 91 FR 36126, 16 Jun 2026"
+    ],
+    [
+     "Six section 206 orders of 18 Jun 2026: EL26-67 PJM (195 FERC 61,211), EL26-68 SPP (61,213), EL26-69 NYISO (61,216), EL26-70 MISO (61,212), EL26-71 CAISO (61,214), EL26-72 ISO-NE (61,215); refund effective date = publication; intervention within 21 days",
+     "Federal Register notices of institution, 91 FR 37968, 37970, 37972, 37973, 37974, 37975 (24 Jun 2026)"
+    ],
+    [
+     "The five reform categories; the suggested 50 MW / above-69 kV definition; no change to regional wholesale cost allocation; standardized cost recovery agreements with host-LSE security; searchable cost tracking",
+     "Professional analyses of the June 2026 orders - secondary, consistent across sources"
+    ],
+    [
+     "Deadlines of 21, 30, 45 and 60 days from 18 Jun 2026, and a 90-day abeyance ceiling",
+     "Day-count arithmetic from the issue date, cross-checked against three independent professional summaries"
+    ],
+    [
+     "SPP HILL/HILLGA accepted 14 Jan 2026 subject to condition, effective 15 Jan 2026, Docket ER26-247-000, 194 FERC 61,031; filed 24 Oct 2025 under FPA s 205",
+     "The order itself"
+    ],
+    [
+     "HILL = 10 MW or more at 69 kV or below, or 50 MW or more above 69 kV; an electric storage resource is not a HILL",
+     "194 FERC 61,031"
+    ],
+    [
+     "HILL fees: $10,000 non-refundable plus $100,000 deposit within 30 calendar days or deemed withdrawn; report within 90 calendar days; +$200,000 for an EMT study; $25,000 supplemental study deposit; excess refunded",
+     "194 FERC 61,031, on proposed Tariff attachment BA ss 2.1.3.4-2.1.3.5"
+    ],
+    [
+     "CHILLS accepted 5 Jun 2026 effective 1 Jul 2026, Dockets ER26-1323-000 and -001, 195 FERC 61,196; as-available from surplus transfer capability; one-year minimum, seven-year maximum; behind all firm service; equal priority to monthly non-firm point-to-point; separate telemetry and billing",
+     "The order itself"
+    ],
+    [
+     "MISO studies new load at maximum demand regardless of curtailability, with upgrades rolled into base zonal rates; FLITS proposed; response deferred to 16 Nov 2026",
+     "Professional coverage of MISO's July 2026 filings - secondary"
+    ],
+    [
+     "Texas SB 6, 89th Legislature Regular Session 2025, effective immediately 20 Jun 2025",
+     "Texas Legislature Online bill history, 89R SB 6"
+    ],
+    [
+     "Every state large-load tariff parameter in the comparison table",
+     "The study guide section named in the same row; no independent verification claimed"
+    ]
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "FPA section 205",
+   "d": "The Federal Power Act provision under which a public utility files its own rate or tariff change with FERC. The utility proposes an effective date; the Commission accepts, rejects, or accepts subject to condition, often with a compliance filing due in 30 days. SPP's HILL and CHILLS filings are section 205 filings."
+  },
+  {
+   "t": "FPA section 206",
+   "d": "The complaint route, which FERC may also open on its own motion, to determine whether an existing rate or tariff is unjust, unreasonable, unduly discriminatory or preferential. It carries a refund effective date and reaches a tariff whose owner has not volunteered to change it. The PJM co-location proceeding and all six 2026 large-load investigations are section 206 proceedings."
+  },
+  {
+   "t": "refund effective date",
+   "d": "The date set when a section 206 proceeding is instituted, from which any rate change the Commission ultimately orders may be made retroactive. In the six large-load dockets it is the date the notice was published in the Federal Register, 24 June 2026."
+  },
+  {
+   "t": "show cause order",
+   "d": "An order instituting a section 206 proceeding that directs the tariff's owner to demonstrate why the existing provisions remain just and reasonable, or to file changes. It is an investigation rather than a rule: nothing changes until the record closes and the Commission acts on it."
+  },
+  {
+   "t": "OATT",
+   "d": "Open Access Transmission Tariff - the FERC-approved tariff under which a transmission provider offers transmission service on non-discriminatory terms. Every instrument in this module that is federal lives in one, which is why FERC's route to changing large-load treatment runs through the tariff rather than through the customer's contract."
+  },
+  {
+   "t": "LGIP",
+   "d": "Large Generator Interconnection Procedures - the pro forma federal process a generating facility follows to interconnect, together with the Large Generator Interconnection Agreement (LGIA) it signs at the end. Order No. 2023 rebuilt both. There is no load-side equivalent."
+  },
+  {
+   "t": "cluster study",
+   "d": "Studying a window of interconnection requests together rather than one at a time in queue order, with network upgrade costs allocated among the cluster's members by a proportional impact method. Order No. 2023 made it the federal standard for generators. The utility guides refer to this as \"batch studies replacing serial ones\"; ERCOT uses \"batch\" for its own load process."
+  },
+  {
+   "t": "commercial readiness deposit",
+   "d": "Money an interconnection customer posts to show a project is real, scaling as it advances: under Order No. 2023, twice the study deposit to enter the cluster study, then topped up to 5% and 10% of the customer's assigned network upgrade cost at the restudy and facilities study. It is the federal analogue of the collateral a state large-load tariff requires."
+  },
+  {
+   "t": "withdrawal penalty",
+   "d": "What an interconnection customer owes for leaving the queue, rising with how far the request progressed: 2x study costs at the initial cluster study, then 5%, 10% and 20% of assigned network upgrade costs. The caps FERC proposed were not adopted, so the late-stage penalty is uncapped. The money funds studies in the same cluster and offsets cost increases for the customers left behind."
+  },
+  {
+   "t": "study delay penalty",
+   "d": "Money owed by the transmission provider, not the customer, for missing a tariff study deadline - $1,000 per business day for a cluster study, $2,000 for a restudy or an affected system study, $2,500 for a facilities study, after a 10-business-day grace period. It exists only on the generator side; no federal deadline penalty protects a load study anywhere."
+  },
+  {
+   "t": "site control",
+   "d": "Demonstrated rights over the land a project needs, required at the time an interconnection request is submitted under Order No. 2023, with a narrow affidavit route where a regulatory limitation makes it unobtainable. It exists to stop requests for projects that have no site."
+  },
+  {
+   "t": "Co-Located Load",
+   "d": "In FERC's operative definition, end-use customer load physically connected to the facilities of an existing or planned Customer Facility on the Interconnection Customer's side of the Point of Interconnection to the transmission system. Which side of the point of interconnection the load sits on is the entire test."
+  },
+  {
+   "t": "BTMG",
+   "d": "Behind-the-meter generation. In PJM's tariff, a network customer could net BTMG output against its peak demand when calculating transmission charges - a rule written in 2004 and available only to customers taking network service. FERC found in December 2025 that it is no longer just and reasonable for co-located data-center load and directed a materiality threshold, a three-year transition and grandfathering."
+  },
+  {
+   "t": "NITS",
+   "d": "Network Integration Transmission Service - the firm service a network customer takes to have its load served from the whole system. Billed on gross demand, it is the option a co-located load keeps if it wants to rely on the grid exactly as any other network customer does."
+  },
+  {
+   "t": "Contract Demand service",
+   "d": "The two new services FERC directed PJM to create in December 2025 - one firm, one non-firm - under which an Eligible Customer serving a co-located load contracts and pays for transmission consistent with the load's actual net withdrawals rather than its gross demand, with curtailment where usage exceeds the contracted level. Their rates were left to a paper hearing."
+  },
+  {
+   "t": "Eligible Customer",
+   "d": "The entity that takes transmission service under an OATT. It matters here because FERC's co-location order works through the customer taking service on the co-located load's behalf rather than through the load itself - which is how the Commission reached the arrangement without asserting jurisdiction over it."
+  },
+  {
+   "t": "HILL",
+   "d": "High Impact Large Load - SPP's tariff term, accepted by FERC in January 2026, for a load of 10 MW or more connected at 69 kV or below, or 50 MW or more above 69 kV. An electric storage resource is not a HILL. A companion process, HILLGA, studies the generation needed to serve one."
+  },
+  {
+   "t": "CHILLS",
+   "d": "Conditional High Impact Large Load Service - SPP's as-available transmission service, effective July 2026, provided from transfer capability in excess of what firm load needs. One-year minimum and seven-year maximum term, curtailable behind all firm service, with separate telemetry and billing for each conditional load."
+  },
+  {
+   "t": "EMT study",
+   "d": "An electromagnetic-transient study - a detailed time-domain simulation used where a facility's fast controls or the local system's strength make ordinary load-flow and stability studies insufficient. In SPP's large-load process it carries its own $200,000 deposit on top of the standard one."
+  },
+  {
+   "t": "ANOPR",
+   "d": "Advance Notice of Proposed Rulemaking - a stage before a proposed rule, used to gather a record on whether and how to regulate. The large-load ANOPR is unusual in its origin: the Secretary of Energy directed FERC to consider it under section 403 of the Department of Energy Organization Act in October 2025."
+  },
+  {
+   "t": "network upgrade",
+   "d": "Transmission system reinforcement identified by an interconnection or service study as necessary to accommodate a new generator or load. Who funds it, whether the cost is refunded or credited, and who carries it if the project never arrives are the questions that run through every section of this module and every large-load tariff in the corpus."
   }
  ]
 };

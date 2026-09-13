@@ -1,4 +1,4 @@
-var VERSION = "v02.01g";
+var VERSION = "v02.02g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -632,6 +632,18 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
   { key: 'topic-utility-procurement', label: 'Utility procurement & large-load interconnection',
     terms: ['interconnection', 'large load', 'tariff filing', 'ERCOT', 'PJM', 'co-location', 'behind-the-meter'],
     source: 'guidance:utility-aidc-procurement-2026-08' },
+  // Guidance seed for the large-load interconnection module (industry-guidance.md
+  // step 9). The terms are deliberately FEDERAL and deliberately narrow: the
+  // existing topic-utility-procurement seed already carries 'interconnection',
+  // 'large load', 'co-location' and the RTO names, so repeating them here would
+  // only split one band in two. What that seed cannot score is the docket layer
+  // — an order number, a section 206 caption, a named RTO tariff product — which
+  // is exactly where this module ages.
+  { key: 'topic-federal-interconnection', label: 'Federal interconnection rules — FERC dockets, orders & RTO tariffs',
+    terms: ['Order No. 2023', 'show cause order', 'section 206', 'co-located load',
+            'cluster study', 'withdrawal penalty', 'RM26-4', 'High Impact Large Load',
+            'Contract Demand', 'behind the meter generation'],
+    source: 'guidance:large-load-interconnection-2026-09' },
   { key: 'topic-bess-bankability', label: 'BESS bankability, certification & safety standards',
     terms: ['UL 9540A', 'NFPA 855', 'bankability', 'certification', 'warranty'],
     source: 'guidance:bess-bankability-2026-08' },
