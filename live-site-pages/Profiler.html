@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.87w">
+  <meta name="build-version" content="v01.88w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1016,7 +1016,7 @@
        dossiers get a "Covered in guidance modules" chip line. */
     .gd-co { border-bottom: 1px dotted #4f83e6; cursor: pointer; }
     .gd-co:hover { color: #4f83e6; }
-    .ov-gd-mentions { margin: 26px 0 8px; font: 12px var(--ov-mono); color: var(--ov-muted); }
+    .ov-gd-mentions { margin: 2px 0 16px; font: 12px var(--ov-mono); color: var(--ov-muted); }
     .ov-gd-mentions .lbl { margin-right: 8px; }
     .ov-gd-mentions .chip { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-paper);
       border-radius: 6px; padding: 4px 9px; margin: 0 6px 6px 0; cursor: pointer; font: 11px var(--ov-mono); }
@@ -6535,7 +6535,15 @@ function ovDocVersion() {
           chip.addEventListener('click', function() { ovGuideOpenDoc(h.id); });
           line.appendChild(chip);
         });
-        main.appendChild(line);
+        // Sits directly under the dossier header, above the tab strip —
+        // where the other dossier-level affordances live. It used to be
+        // appended last, which put it below the tab panes AND below the
+        // field-note form: on a normal dossier that is ~1800px down a
+        // ~2000px page, so the line rendered correctly and was never seen.
+        // appendChild stays as the fallback — a dossier without a tab strip
+        // must still show the line rather than silently drop it.
+        var tabs = main.querySelector('.ov-tabs');
+        if (tabs) main.insertBefore(line, tabs); else main.appendChild(line);
       }
       if (gdMentionsCache) { paint(gdMentionsCache); return; }
       ovGuideApi('mentions', {}, function(res) {

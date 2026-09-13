@@ -3,12 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.88w] — 2026-09-13 01:40:31 AM EST — v05.47r
+
+### Fixed
+- The "✦ Covered in guidance modules" line on a dossier now appears directly under the company header, above the section tabs. It used to sit at the very bottom of the page — below the tabs and below the field-note box — so on a normal dossier it was roughly two screens down and effectively invisible. Nothing about what it shows has changed, only where it is
 ## [v01.87w] — 2026-09-12 10:25:27 PM EST — v05.42r
 
 ### Changed
