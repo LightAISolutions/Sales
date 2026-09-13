@@ -1,4 +1,4 @@
-var VERSION = "v01.25g";
+var VERSION = "v01.26g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -31765,6 +31765,323 @@ function clLessonReadingTheGraph_() {
 };
 }
 
+function clLessonFourMachines_() {
+  return {
+ "schemaVersion": 1,
+ "id": "four-machines",
+ "type": "module",
+ "title": "Rectifier, Inverter, DC-DC, Transformer",
+ "short": "Power is voltage times current, wires waste it as current squared, and four machines move it between the AC and DC worlds. Everything else is a stack of these.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-13",
+ "reviewBy": "2027-03-13",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:sinexcel",
+    "date": "2026-08-08",
+    "note": "P = V·I and I²R; the four machines named as four machines; the PCS as a rectifier and inverter in one bidirectional box; SiC switching and the 0.1 % argument; harmonics, reactive power and sags, and the filter, SVG and conditioner aimed at each"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sungrow",
+    "date": "2026-08-08",
+    "note": "the physics-first framing; why plants run 1,500 V DC strings and a 1,000–1,500 V battery bus; the plant chain from string to substation; conversion loss paid on both charge and discharge into the round-trip figure"
+   },
+   {
+    "kind": "public",
+    "ref": "study:delta-electronics",
+    "date": "2026-08-21",
+    "note": "why switch-mode beat linear; higher frequency shrinks the magnetics; efficiency as a curve rather than a number, and why the light-load tier is the hard spec"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vicor",
+    "date": "2026-09-03",
+    "note": "the amps-per-kilowatt ladder from the 13.8 kV feed to the one-volt rail, and the sixteen-to-one arithmetic worked through one milliohm of busbar"
+   },
+   {
+    "kind": "public",
+    "ref": "study:infineon",
+    "date": "2026-09-04",
+    "note": "what a power switch does and why chopping is efficient; conduction against switching loss; the four-device table and why voltage class is a gate you pass before frequency is an argument; on-resistance quoted cold"
+   },
+   {
+    "kind": "public",
+    "ref": "study:power-electronics",
+    "date": "2026-09-06",
+    "note": "the power triangle and why the box is rated in kVA; the capability curve, the temperature derating ladder, the overload tiers and peak against weighted efficiency"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "P = V·I",
+   "v": "and I²R",
+   "sub": "two lines, and the whole ladder falls out of them"
+  },
+  {
+   "k": "16×",
+   "v": "less loss",
+   "sub": "four times the voltage, the same copper, the same kilowatt"
+  },
+  {
+   "k": "four",
+   "v": "machines",
+   "sub": "rectifier · inverter · DC-DC · transformer"
+  },
+  {
+   "k": "0.1 %",
+   "v": "is real money",
+   "sub": "lost twice at utility scale, then paid for a third time in cooling"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "switch-mode",
+   "d": "The architecture behind essentially every modern converter: instead of regulating a voltage smoothly, the circuit turns a semiconductor switch fully on and fully off tens of thousands to millions of times a second, and a filter of inductors and capacitors averages the chopped waveform into the smooth output the load sees. A device that is fully on has almost no voltage across it and one that is fully off has almost no current through it, and power is voltage times current, so both states waste almost nothing."
+  },
+  {
+   "t": "linear regulator",
+   "d": "The older way of holding a voltage steady: a transistor is held part-way on and burns the difference between input and output as heat. Its efficiency is roughly the output voltage divided by the input voltage, which is hopeless for any large conversion. It survives only in small, noise-sensitive circuits where the waste is affordable and the quiet is worth paying for."
+  },
+  {
+   "t": "magnetics",
+   "d": "The transformers and inductors inside a converter — the components that store energy between switching cycles. Because a transformer only has to hold the energy for one cycle, raising the switching frequency shrinks it almost in proportion: double the frequency and the transformer roughly halves. That trade is why a modern kilowatt supply fits in a hand and a 1970s equivalent was a shoebox of copper and steel."
+  },
+  {
+   "t": "power quality",
+   "d": "The shape of the waveform rather than the amount of power in it. The grid wants a clean 50 or 60 Hz sine; three things spoil it — harmonics, reactive power and voltage sags — and each has its own symptom, its own measurement and its own bill. An entire product family exists to fix each one, built from the same fast converter hardware."
+  },
+  {
+   "t": "four-quadrant",
+   "d": "A converter that can push or pull real power — charge or discharge — and, independently, push or pull reactive power. All four combinations are available, which makes one enclosure electrically a controllable load, a controllable generator and a voltage-support machine at once. A solar inverter that only ever exports is a one-quadrant device by comparison."
+  },
+  {
+   "t": "active harmonic filter",
+   "d": "Noise-cancelling headphones for electricity. The unit measures the distorted current a site is drawing and injects its exact mirror image in real time, so the two cancel and what the grid sees is close to a clean sine. It is the same fast converter hardware as a storage inverter, pointed at the distortion instead of at a battery."
+  },
+  {
+   "t": "static var generator",
+   "d": "The same fast converter hardware again, aimed at reactive power: it supplies or absorbs magnetising current locally so the site's power factor can be corrected steplessly and in milliseconds, where an older capacitor bank switches in crude, slow steps."
+  }
+ ],
+ "sections": [
+  {
+   "id": "power-is-v-times-i",
+   "title": "One equation, and the ladder it forces",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Two lines of physics carry this entire lesson, and most of the two markets it opens onto. The first is that **power is voltage times current** — P = V·I — so a megawatt can be delivered as a lot of volts and a few amps, or as a few volts and a lot of amps, and the load cannot tell the difference. The second is that **a wire wastes power as heat in proportion to the square of the current** — {{I²R loss}} — and the load very much can tell the difference about that, because the waste is not delivered and the heat has to go somewhere. Put them together and you get the sentence to carry out of this section: *nearly every question about a power architecture turns out, underneath, to be a question about voltage.*",
+    "Do the arithmetic once and you will not need to do it again. One kilowatt at 12 volts is 83 amps; the same kilowatt at 48 volts is 21 amps. Push each through the same one-milliohm stretch of busbar and connector. The 12-volt version loses 83² × 0.001 ≈ **6.9 watts**; the 48-volt version loses 21² × 0.001 ≈ **0.43 watts**. Four times less current, **sixteen times less loss, through identical copper.** Read it the other way and it is a purchasing argument rather than a physics one: for the same loss, the higher voltage carries that kilowatt through a quarter of the copper cross-section — or four kilowatts through the copper that used to carry one. The voltage does not only save watts. It saves the metal, the weight, and the space the metal occupies.",
+    "That is why every generation of equipment in both markets raises the voltage, and why the number on a spec sheet keeps climbing. Solar plants wire panels into strings at about **1,500 V DC** rather than a few hundred. Grid batteries run a **1,000–1,500 V DC** bus, and a utility {{PCS}} publishes a DC window — 1,040–1,500 V is a current example — chosen to sit on it. A storage plant then steps up again on the way out: strings and racks feed the converter, the converter feeds a {{medium voltage}} transformer at 10–35 kV, and the substation steps it up once more for the grid. In the data hall the same ladder runs in the other direction, and the newest step on it is the move from a 415 V AC feed to an **800 V DC** bus — the same argument, a different building.",
+    "The ladder is easiest to see as amps per kilowatt delivered, which is the same kilowatt seen at each rung. A 13.8 kV utility feed carries it at about **0.04 A**; an 800 V DC rack bus at **1.25 A**; a 415 V AC feed at **1.39 A**; a 54-volt rack busbar at **18.5 A**; a 48-volt bus at **20.8 A**; the old 12-volt server bus at **83.3 A**; and the processor rail, at about one volt, at **1,000 A**. A modern accelerator draws more than one of those kilowatts, so multiply the last rung accordingly — and note what it means at the scale the 800-volt architecture is built for. At a megawatt per rack, a 12-volt bus would need more than eighty thousand amps and a 48-volt bus more than twenty thousand; the 800-volt bus needs 1,250.",
+    "And then the ladder stops, which is the part people miss. **The chip does not run at 800 volts, or 48.** It runs at roughly one volt, and at one volt the current is a thousand amps or more no matter how clever the rest of the chain was. The sixteen-to-one advantage is only ever available for the stretch *before* the last converter. So the whole design problem, in a data hall and in a battery plant alike, is to hold the voltage as high as possible for as long as possible and then convert at the last practical moment — and the machines that do that converting are the subject of the rest of this lesson.",
+    "One more fact decides which machine you meet where. **The grid is AC because transformers only work on AC** — changing an alternating voltage is cheap and nearly lossless, and for a century that was the only way to get up the ladder at all. But **batteries, solar cells and chips are all DC-native.** So every alternating-current segment between a battery and a chip is *inherited*, not required — a consequence of how the grid was built rather than of what the load needs. That is the tension the four machines exist to manage, and it is why deleting one of them is a real design move rather than a marketing one."
+   ],
+   "sales": "When a customer tells you their plant runs a 1,500-volt DC bus, or that a hall is going to 800 V DC, they have not told you a preference — they have told you their **copper budget and their heat budget**, which are usually the two numbers under the most pressure. Asking what voltage a thing runs at, and then asking where on the ladder the last conversion happens, gets you further into a technical conversation in two questions than a feature list does in twenty."
+  },
+  {
+   "id": "the-four-machines",
+   "title": "The four machines",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "There are exactly four things a box can do to electrical power, and every product either market sells is a stack of them. Learn the four and a vendor's catalogue stops being a list of names: a {{PCS}}, a {{UPS}}, a solar inverter, a power shelf, a fast charger and a {{SST}} are all the same four machines, stacked differently and sold to different rooms. Read a row across and the machine's job, its home in a battery plant and its home in a data hall line up — which is the point, because the whole argument of this curriculum is that they are the same chain seen from two ends.",
+   "cols": [
+    "Machine",
+    "Converts",
+    "Where you meet it in a BESS plant",
+    "Where you meet it in a data hall"
+   ],
+   "rows": [
+    [
+     "**{{Rectifier}}**",
+     "AC → DC",
+     "The **charging** half of the {{PCS}}: grid AC into the 1,000–1,500 V DC battery bus. Also the whole of a DC fast charger, which is essentially a one-way PCS — a stack of 20–40 kW modules, each a {{SiC}}-based AC→DC brick at about 97 % efficiency with a wide 50–1,000 V output so one part covers both 400 V and 800 V vehicle packs.",
+     "The front end of **every server power supply** in the building, and the input stage of a double-conversion {{UPS}}. In the new architecture it is also the big one: a medium-voltage rectifier or {{SST}} that makes the 800 V DC bus in a single stage where the AC chain used a transformer plus a UPS rectifier *and* a UPS inverter."
+    ],
+    [
+     "**{{Inverter}}**",
+     "DC → AC",
+     "The **discharging** half of the {{PCS}}, and the single most important box in the plant — no PCS, no storage plant. It is the gatekeeper: it decides how hard to charge or discharge, follows grid-operator commands in milliseconds, and rides through faults without tripping. The solar inverter beside it does the same job for the array.",
+     "The output stage of a double-conversion {{UPS}}, handing AC back to the hall after the battery has held it as DC. This is the machine the DC architecture is trying to delete: the legacy chain rectifies to DC to hold the battery, then inverts straight back to AC, and the next stages rectify it to DC all over again."
+    ],
+    [
+     "**{{DC-DC converter}}**",
+     "DC → a different DC",
+     "Deliberately rare on the main path, and that is the tell: the PCS's DC window is *chosen* to sit on the battery racks directly, so there is usually nothing between them to convert. You meet it instead at the edges — inside the fast-charging module that has to feed two different pack voltages, and in the battery-agnostic DC inputs that let one machine take lithium, sodium-ion or a flywheel.",
+     "Everywhere, and it is where the watts are. An 800 V → 48 V bus converter in the power shelf runs about **97.5 %**; the {{point of load}} stage that makes the roughly one-volt processor rail runs about **91 %** — the worst stage in the chain, because a few tens of millivolts dropped across a switch is a few per cent of a one-volt output. In-rack DC-DC is also a fifteen-year story of its own: 12 volts, then 48."
+    ],
+    [
+     "**{{Transformer}}**",
+     "AC → a different AC",
+     "The step-up between the converter and the network: PCS → {{medium voltage}} transformer at 10–35 kV → substation → grid. It is often sold inside the product rather than beside it — a 40-foot container packaging the PCS and its medium-voltage transformer into a 10 MW station that arrives as one plug-in object.",
+     "The substation transformer to 12.47–34.5 kV, the one that makes 480 V (or 400 V internationally), and the {{PDU}} transformer inside the hall. It is the only one of the four that is not a semiconductor — pure iron and copper, no switching — which is also why the {{SST}} is interesting: it is a transformer's job done by the other three machines."
+    ]
+   ],
+   "note": "**The one combination worth memorising is the {{PCS}}**, because it is the box this market is built on and its name hides what it is: *a rectifier and an inverter in the same bidirectional enclosure.* It inverts battery DC to grid AC when discharging and rectifies grid AC to battery DC when charging, and it is the interface between any battery and any grid. Once you see it that way, the rest of a converter catalogue reads itself — the harmonic filter, the var generator and the fast-charging module are the same hardware pointed at a different job, which is the subject of the power-quality section below.",
+   "sales": "Ask which of the four a product **deletes**, not which it contains. Deleting a machine is where the money is — it removes a box, its floor space, its conversion loss, its capital line and one way for the chain to fail. That single question separates an architecture story from a spec sheet, and the answer tells you whose budget a proposal is actually competing for."
+  },
+  {
+   "id": "switching-not-linear",
+   "title": "Why they chop, and what SiC and GaN changed",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Three of the four machines are built the same way, and it is not the way most people imagine. A converter does not hold a voltage steady by resisting it; it **chops**. A {{linear regulator}} — the older approach — holds a transistor part-way on and burns the difference between input and output as heat, so its efficiency is roughly the output voltage divided by the input voltage. That is hopeless for anything large, and it survives only in small noise-sensitive circuits. A {{switch-mode}} converter instead turns its switch **fully on and fully off**, tens of thousands to millions of times a second, and lets a filter of inductors and capacitors average the result into the smooth output the load sees.",
+    "The reason that is efficient is the same equation the lesson opened with. A device that is fully on has almost no voltage across it; a device that is fully off has almost no current through it; and power is voltage times current, so **in both states the device wastes almost nothing.** All of the loss lives in the imperfections of those two states and in the journey between them — which is why engineers talk about exactly two losses and why those two losses decide the shape of the whole industry.",
+    "**Conduction loss** is what the device wastes while it is on. For a {{MOSFET}} it is the current squared times its {{on-resistance}} — the same I²R from the first section, happening inside a component a few millimetres across instead of in a busbar. For an {{IGBT}} it is roughly the current times a nearly fixed forward drop of a volt or two, because an IGBT does not behave like a resistor at all. That difference has a consequence worth holding: at low current the MOSFET wastes far less, because its loss falls with the *square* of the current while the IGBT's fixed volt-and-a-half is always there; at very high current the IGBT can win, because a fixed drop beats a resistance the current is squaring.",
+    "**Switching loss** is what the device wastes while it is changing state. For the tens of nanoseconds in which the voltage across it is falling while the current through it is rising, it is dissipating both at once. One crossing costs very little; multiplied by the number of crossings per second it is often the larger of the two losses, and its cost is **directly proportional to {{switching frequency}}.**",
+    "Which raises the obvious question: if switching costs energy, why would anyone want to switch faster? Because the {{magnetics}} shrink almost in proportion to frequency — a transformer only stores energy for one switching cycle, so **double the frequency and the transformer roughly halves.** That is why a modern kilowatt supply fits in a hand where a 1970s equivalent was a shoebox of copper and steel, and in a building where the constraint is watts per litre it is a trade worth taking, right up to the point where the extra switching loss overtakes what the smaller magnetics saved. **Every power-semiconductor product is a bid to move that crossover point.**",
+    "That is what the wide-bandgap materials are for, and it is the honest version of a sales line you will hear constantly. **{{SiC}}** holds off roughly ten times the electric field of silicon, so the {{drift region}} for a given rating is about a tenth as thick — which makes a 1200-volt SiC MOSFET a practical, low-resistance device where a silicon one is not, and it conducts heat about three times better besides. **{{GaN}}** has the lowest switching charge of the common four, so the highest practical frequency and the smallest magnetics, and it grows on ordinary silicon wafers so it can ride existing fab economics. The catch is the one that surprises people: GaN is commonly available only to about 650 volts, so **an 800-volt bus cannot be blocked by a single GaN device** — and that is why the 800 V architecture leans on the slower SiC. *Speed does not help a device that cannot hold off the bus.* Voltage class is a gate you pass before frequency becomes an argument at all.",
+    "Now the reason a tenth of a per cent is worth an argument. At utility scale a storage plant pays its conversion loss **twice** — once putting energy in and once taking it out — which is why PCS efficiency compounds directly into the round-trip figure a buyer is actually sold on, in the low nineties for a modern system. Then it pays a third time: whatever was lost left as heat, and the heat has to be removed by a cooling system that is itself drawing power. That is also why the chain's stage count matters so much. **Efficiencies multiply** — five stages at 97 % each deliver about 86 % of what they started with — so the cheapest efficiency improvement available to anyone is always a stage that is not there.",
+    "Two last things to distrust on a datasheet, both of which follow from the above. **Efficiency is a curve, not a number**: supplies peak near half load and sag at light load where the fixed switching losses dominate, which is why the serious certification tiers specify efficiency at 10 % load — real servers spend much of their lives nearly idle. And a headline figure and a weighted figure are not the same claim: a converter quoted at **98.94 % maximum and 98.51 % weighted** is being honest about both. Compare weighted against weighted; a vendor quoting their peak against a rival's weighted number is not comparing anything."
+   ],
+   "sales": "\"Ninety-nine per cent efficient\" is the most repeated and least informative line in this market. The three follow-up questions that make it mean something: **at what load**, **peak or weighted**, and **at what ambient temperature** — and then, for storage specifically, whether the number quoted is the converter's or the system's round-trip, because those differ by a great deal and only one of them is what the plant gets paid on."
+  },
+  {
+   "id": "three-ways-to-ruin-a-wave",
+   "title": "Three ways to ruin a wave — and who gets the bill for each",
+   "kind": "callout",
+   "tone": "info",
+   "read": "7 min",
+   "intro": "Everything so far has been about the *amount* of power. {{Power quality}} is about its **shape**. The grid wants a clean 50 or 60 Hz sine, and three separate things spoil it. They have different symptoms, different measurements and — the part that makes this a commercial section rather than a technical one — different people paying for them.",
+   "ps": [
+    "**One · Harmonics — you pay, in your own building first.** Rectifiers, variable-speed drives, LED drivers and server power supplies do not draw current smoothly; they draw it in sharp gulps, because a rectifier only conducts near the peak of the wave. The distortion appears as current at multiples of the grid frequency, and it **overheats transformers and neutral wires, trips breakers and disturbs neighbouring equipment.** The score is {{total harmonic distortion}} — THD — and under 5 % is the usual target for a site, while a utility-grade converter is expected to hold its own injected current distortion below about 3 % under {{IEEE 519}}. The first bill is internal: your transformer runs hot for its load and your protection nuisance-trips. The second is external and larger, because **a distortion limit is a condition of the {{interconnection agreement}}, not a nicety.** The fix is an {{active harmonic filter}}.",
+    "**Two · Reactive power — the utility bills you, and a good converter gets paid.** Alternating current reverses fifty or sixty times a second, and anything with a magnetic field — a motor, a transformer, a long cable — stores energy on one half of the cycle and hands it back on the next. That sloshing flow does **zero** net work, and the grid cannot run without it, because it is what holds voltage up. The arithmetic is a right-angled triangle: real power P and reactive power Q combine as S² = P² + Q², where S is apparent power. **The wires and the semiconductors carry the current, and current is set by S, not by P** — which is why the box is rated in {{kVA}} rather than kW. {{Power factor}} is the ratio P/S, and utilities bill a penalty below about 0.9 because a poor one wastes their infrastructure. The correction used to be a capacitor bank switching in crude, slow steps; a {{static var generator}} does it steplessly in about fifteen milliseconds.",
+    "**And this is where the same physics turns into revenue.** A {{four-quadrant}} converter can push or pull real power and, independently, push or pull reactive power — so one enclosure is a controllable load, a controllable generator and a voltage-support machine at once. A datasheet line reading *0.5 leading to 0.5 lagging* means the machine can be commanded anywhere from supplying a great deal of reactive power to absorbing it; at a power factor of 0.5, half its current-carrying capacity is doing voltage support and half is left for energy. The sentence that makes it concrete is on solar inverter datasheets: **reactive power injection at night.** At three in the morning P is zero, so the machine's entire apparent-power rating is available as Q. The plant earns nothing from energy and still holds up the local voltage, at almost no extra cost, because the hardware is sitting there anyway.",
+    "**Three · Voltage sags — nobody bills you, and that is the problem.** A sag is a dip lasting a few cycles, caused by something ordinary: lightning on a line, or a large motor starting. It is invisible to a human and fatal to precision industry. **A 100-millisecond sag — six cycles at 60 Hz — can scrap an entire semiconductor batch or crash a data hall.** No meter records it against anyone, no tariff compensates it, and no contract clause is triggered. You simply eat the loss. Riding through one needs stored energy that reacts in milliseconds, which is why an active voltage conditioner uses supercapacitors and a standby inverter to inject the missing voltage within about two milliseconds, holding equipment at full voltage even through a dip to zero.",
+    "**The unifying observation, and the one worth carrying out of this lesson.** An {{active harmonic filter}}, a {{static var generator}}, a voltage conditioner, a storage {{PCS}} and an EV charging module are **the same building block**: a fast converter watching a current waveform and injecting the current it decides is needed. What differs is the target and the software, not the hardware family. That is why one company's catalogue can look like five unrelated product lines and be one product line, and why a power-quality conversation and a storage conversation are the same conversation held with different departments."
+   ],
+   "sales": "Power quality is the shortest route from an electrical conversation to a **budget that already exists**. A harmonics problem has a named owner and a compliance deadline, a power-factor penalty shows up on a monthly bill, and a sag has usually already cost somebody a batch. Any of the three gets you a technical meeting that a storage pitch alone would not — and the machine you would be selling into it is a near relative of the one you are already selling."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "7 min",
+   "intro": "Four machines, two losses and three distortions is enough to predict most of the ways a conversion layer disappoints the people who bought it. Every failure below is a number on a datasheet being read as a promise it was never making.",
+   "ps": [
+    "**Converters derate with heat, and the nameplate is a temperature-conditional promise.** A utility converter published at 5,360 kVA is also published at **5,240 / 5,020 / 4,800 / 4,360 kVA at 30 / 35 / 40 / 50 °C** — the same box is a smaller machine in Phoenix in August than in Valencia in March, because semiconductors have a maximum junction temperature and hotter air means less headroom. A plant sized on the 30 °C figure and built somewhere hot has silently bought less capacity than it thinks, and will discover it on the worst afternoon of the year.",
+    "**The same trap one level down, and it compounds.** A device's {{on-resistance}} is quoted at 25 °C and rises substantially — often by half again — at the {{junction temperature}} a real converter runs at. A design worked out on the cold number therefore loses more heat than it was budgeted for, which raises the temperature, which raises the resistance. The continuous current rating has the same problem: it is a statement about junction temperature, quoted with the case held cool by a laboratory heatsink that does not exist inside the product. It surfaces as hardware that passes on the bench and derates in the hall.",
+    "**Harmonic heating, which does not announce itself.** Distortion has no alarm. It shows up as a transformer running hot for the load it is carrying, neutral wires warmer than they should be, and breakers that nuisance-trip for no reason anyone can reproduce — and it is generated by the site's own rectifiers, drives and server supplies, so there is nobody else to blame or bill. The site usually finds it during a thermal survey, an unexplained outage, or an interconnection review that measures THD and holds up the project.",
+    "**A 100-millisecond sag with no owner.** The most expensive hundred milliseconds in a precision plant is caused by weather or by a neighbour's motor, recorded by nobody, and paid for entirely by the victim. Protection against it has to be bought *before* the event, against a risk with no invoice history — which is exactly why it is under-bought, and why the conversation about it usually begins the week after a batch is scrapped.",
+    "**Overload tiers read as capacity.** A line like **166 % for 100 ms · 150 % for 5 s · 120 % for 8 s · 110 % for 15 s** is a short, tiered permission to exceed the rating while thermal mass absorbs the heat — the shorter the excursion, the more you can take. It is not extra machine. What it is *for* is real and worth knowing: it is what lets an inverter contribute {{fault current}} during a disturbance instead of tripping, which is the difference between riding through a fault and becoming part of one. Read as headroom, it sizes a plant that fails at the first sustained overload.",
+    "**And the comparison that is not a comparison.** Peak efficiency against weighted efficiency, one vendor's best-case ambient against another's rated ambient, a converter's own figure against a system round-trip — each pair looks like two numbers of the same kind and is not. The discipline is boring and it is the whole defence: *compare like with like, and make the vendor state the conditions before you write the number down.*"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is almost every question about a power architecture really a question about voltage?",
+     "a": "Because power is voltage times current, so the same power at a higher voltage is a proportionally lower current — and conductor loss scales with the *square* of the current. Four times the voltage is a quarter of the current and a sixteenth of the loss. Worked once: a kilowatt is 83 amps at 12 volts and 21 amps at 48 volts; through the same one-milliohm stretch of busbar that is 6.9 watts against 0.43 watts, through identical copper. Read the other way, the higher voltage carries the same kilowatt through a quarter of the copper cross-section — so it saves the metal, the weight and the space as well as the watts."
+    },
+    {
+     "q": "Name the four machines, say what each converts, and say why there are exactly four.",
+     "a": "Rectifier: AC to DC. Inverter: DC to AC. DC-DC converter: DC to a different DC. Transformer: AC to a different AC. There are four because there are two kinds of electricity and therefore four possible conversions between and within them. The grid is AC because transformers only work on AC, while batteries, solar cells and chips are all DC-native — so every AC segment between a battery and a chip is inherited rather than required, and the four machines are what manage that mismatch."
+    },
+    {
+     "q": "What is a PCS in terms of the four machines, and why can a storage plant not exist without one?",
+     "a": "It is a rectifier and an inverter in one bidirectional box: it rectifies grid AC into the battery's DC bus when charging and inverts battery DC back into grid AC when discharging. The cells are dumb energy tanks; the PCS is the gatekeeper that decides how hard to charge or discharge, follows grid-operator commands in milliseconds, and rides through grid faults without tripping. No PCS, no storage plant — which is also why its efficiency and its grid-code certifications are the two lines on the datasheet that decide whether a plant can be built and sold at all."
+    },
+    {
+     "q": "Why does a converter chop the current instead of regulating it smoothly, and where does the loss actually live?",
+     "a": "A linear regulator holds a transistor part-way on and burns the difference between input and output as heat, so its efficiency is roughly output voltage over input voltage — hopeless for anything large. A switch-mode converter turns the device fully on and fully off tens of thousands to millions of times a second and filters the result. A fully-on device has almost no voltage across it and a fully-off device has almost no current through it, and power is voltage times current, so both states waste almost nothing. All the loss is in the imperfections of the two states — conduction loss, current squared times on-resistance — and in the tens of nanoseconds of the journey between them, switching loss, which is proportional to how often the journey is made."
+    },
+    {
+     "q": "If switching costs energy, why would any designer want to switch faster — and what do SiC and GaN change about that trade?",
+     "a": "Because the magnetics shrink almost in proportion to frequency: a transformer stores energy for only one switching cycle, so doubling the frequency roughly halves it. The trade is worth taking until switching loss overtakes what the smaller magnetics saved, and every power-semiconductor product is a bid to move that crossover. SiC holds off about ten times the field of silicon, so a 1200-volt device has a drift region about a tenth as thick — practical where silicon is not — and conducts heat about three times better. GaN has the lowest switching charge, so the highest frequency and smallest magnetics, but is commonly available only to about 650 volts. That is why the 800-volt architecture leans on the slower SiC: speed does not help a device that cannot hold off the bus. Voltage class is a gate you pass before frequency is an argument."
+    },
+    {
+     "q": "A converter is rated in kVA rather than kW. What is that number telling you, and what does it cost you?",
+     "a": "Real power P and reactive power Q combine as vectors at right angles, S² = P² + Q², where S is apparent power. The conductors, semiconductors and transformer all have to carry the *current*, and current is set by S, not by P — so the rating is a statement about how much current the hardware can survive, irrespective of how much of it is doing useful work. The cost is that reactive power comes out of the same budget as the megawatts you meant to sell: at a power factor of 0.5, half the machine's capacity is doing voltage support. The upside is the mirror image — a solar inverter at three in the morning has P of zero, so its entire rating is available as reactive support for nothing."
+    },
+    {
+     "q": "Three things ruin the shape of the wave rather than the amount of power. Name them, and say who pays for each.",
+     "a": "Harmonics — rectifiers, drives, LED drivers and server supplies draw current in gulps rather than a smooth sine, distorting it at multiples of the grid frequency; scored as THD, usually targeted under 5 % for a site. You pay first inside your own building, in overheated transformers and neutrals and nuisance-tripped breakers, and second at the fence, because a distortion limit is a condition of the interconnection agreement. Reactive power — magnetising current that does no net work but still occupies the wires; the utility bills a penalty below about 0.9 power factor. Voltage sags — a dip of a few cycles from lightning or a large motor start; nobody bills anybody, and a 100-millisecond sag can scrap a semiconductor batch or crash a data hall, so the victim absorbs it entirely."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "You move the same power through the same conductor at four times the voltage. What happens to the loss in that conductor?",
+     "c": [
+      "It falls to a sixteenth",
+      "It falls to a quarter",
+      "It falls to a half",
+      "It is unchanged — the power is the same"
+     ],
+     "a": 0,
+     "why": "Four times the voltage is a quarter of the current, and loss scales with the square of current, so a quarter of the current is a sixteenth of the loss. This is the single relationship behind 1,500-volt solar strings, 1,000–1,500-volt battery buses and the move from a 415-volt AC feed to an 800-volt DC bus in the data hall — and it is also why the advantage runs out at the processor rail, where the voltage is about one volt and the current is a thousand amps no matter what happened upstream."
+    },
+    {
+     "q": "Which pair of machines does a PCS contain?",
+     "c": [
+      "A rectifier and an inverter, in one bidirectional box",
+      "A transformer and a rectifier, so it can step down and charge",
+      "Two DC-DC converters, one per direction",
+      "An inverter and a transformer, so it can reach medium voltage"
+     ],
+     "a": 0,
+     "why": "Charging is rectification — grid AC into the battery's DC bus — and discharging is inversion, battery DC back out as grid-synchronised AC. Putting both in one bidirectional enclosure is what makes it the interface between any battery and any grid. The medium-voltage transformer is a separate machine that sits downstream of it, even when a vendor packages the two into a single container."
+    },
+    {
+     "q": "A datasheet gives 5,360 kVA apparent power, and separately 5,240 / 5,020 / 4,800 / 4,360 kVA at 30 / 35 / 40 / 50 °C. What have you actually been sold?",
+     "c": [
+      "Current-carrying capacity, and only at a stated temperature",
+      "5,360 kW of real power, with the other figures as a safety margin",
+      "A guaranteed output that the cooling system is required to maintain",
+      "Four selectable operating modes for different climates"
+     ],
+     "a": 0,
+     "why": "The kVA figure is the current ceiling of the semiconductors, busbars and transformer combined — every real-power and reactive-power command has to land inside a circle of that radius. And it is conditional on temperature, because semiconductors have a maximum junction temperature and hotter ambient air leaves less headroom. A plant sized on the 30 °C number and built somewhere hot has bought less machine than it thinks, and will find out on the hottest afternoon of the year."
+    },
+    {
+     "q": "GaN switches faster than SiC and needs smaller magnetics. Why does the 800-volt architecture lean on SiC anyway?",
+     "c": [
+      "GaN is commonly available only to about 650 V, so one device cannot hold off an 800 V bus",
+      "GaN cannot be manufactured in the volumes a data hall needs",
+      "SiC switches faster than GaN once the bus is above 400 V",
+      "GaN has a body diode whose reverse recovery makes it unusable at high voltage"
+     ],
+     "a": 0,
+     "why": "Voltage class is a gate you pass before frequency becomes an argument at all — speed does not help a device that cannot block the bus. And 800 volts is not an 800-volt requirement: add switching overshoot, add the bus tolerance, then derate to the customary 70–80 % of rating and the part needs to be comfortably above 1000 volts, in practice the 1200-volt class. Plain silicon is uncompetitive there and superjunction structures run out around 900 volts, which is what makes SiC close to a requirement rather than a preference."
+    },
+    {
+     "q": "A site is being billed a power-factor penalty. What is the utility actually charging for?",
+     "c": [
+      "Current that occupies its wires and transformers while doing no net work",
+      "Energy consumed outside the contracted hours",
+      "Distortion of the current waveform above the THD limit",
+      "The peak demand recorded in the billing period"
+     ],
+     "a": 0,
+     "why": "Power factor is the ratio of real power to apparent power. Magnetising current sloshes back and forth each cycle and transfers no net energy, but the wires, transformers and switchgear still have to carry it — so a poor power factor consumes the utility's infrastructure without buying anything, and utilities bill a penalty below about 0.9. Distortion is a separate defect with a separate measurement, THD, and a separate fix; conflating the two is the most common mistake in this conversation."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -31782,6 +32099,20 @@ function clTrackBessFoundations_() {
 };
 }
 
+function clTrackElectricalFoundations_() {
+  return {
+ "schemaVersion": 1,
+ "id": "electrical-foundations",
+ "title": "Electrical Foundations",
+ "short": "Finish this and you can follow a megawatt through a transformer, a breaker and a converter, explain why the grid needs inertia, and hold the electrical conversation both the storage and the data-center markets sit on.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-13",
+ "lessons": [
+  "four-machines"
+ ]
+};
+}
+
 function clTrackAidcGridToChip_() {
   return {
  "schemaVersion": 1,
@@ -31789,12 +32120,15 @@ function clTrackAidcGridToChip_() {
  "title": "The AIDC Power Chain, Grid to Chip",
  "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, and the case for converting it to DC once, early and high.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-03",
+ "updated": "2026-09-13",
  "lessons": [
   "the-fence-line",
   "bridge-power",
   "the-aidc-power-chain",
   "the-800-vdc-shift"
+ ],
+ "prereqs": [
+  "electrical-foundations"
  ]
 };
 }
@@ -31812,12 +32146,13 @@ function clTrackAidcCampus_() {
  "title": "The AI Campus: Heat, Water, Power Projects, and the BESS Socket",
  "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall — and where a battery does and does not plug into the buildout.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-03",
+ "updated": "2026-09-13",
  "lessons": [
   "heat-is-the-constraint",
   "where-bess-plugs-in"
  ],
  "prereqs": [
+  "electrical-foundations",
   "aidc-grid-to-chip"
  ]
 };
@@ -31916,10 +32251,12 @@ function clLessons_() {
           clLessonSegmentAssurance_(),
           clLessonSegmentSoftwareAndOptimization_(),
           clLessonSegmentInsuranceAndRiskTransfer_(),
-          clLessonReadingTheGraph_()];
+          clLessonReadingTheGraph_(),
+          clLessonFourMachines_()];
 }
 function clTracks_() {
-  return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_(),
+  return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
+          clTrackAidcGridToChip_(), clTrackAidcCampus_(),
           clTrackValueChainMakers_(),
           clTrackValueChainBuilders_(),
           clTrackValueChainBuyersAndBackers_()];
