@@ -6,6 +6,62 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-12 11:01:15 PM EST
+**Repo version:** v05.42r — **two push commits** on `claude/ecstatic-knuth-2jwso1` (v05.40r → v05.41r → v05.42r), both merged; this remember-session commit follows on the same branch after a rebase onto the merged `main`
+**Branch:** `claude/ecstatic-knuth-2jwso1`
+**Model:** Fable 5.1 High as the orchestrator; four research subagents (two per company, first-party then third-party) inherited it — ~63 minutes wall-clock for the v05.41r push commit, ~6 minutes for v05.42r, no cap hit
+
+### What was done
+
+1. **v05.41r — S3 V4 · E4b+E6b landed, and S3 CLOSED: Mitra Chem and Cornex dossiers (schema v7, profileVersion 1, intel-briefing), study guides (schema v2; 12 and 13 sections) and eight-module lesson plans**, 10 concepts registered (olivine, specific capacity, carbon coating, iron phosphate precursor, spray drying, sintering, hydrothermal synthesis, precursor-free synthesis, press density, D50), 14 company-published headshots, registry (5 and 27 aliases) and quarterly calendar rows, graph rebuilt (1,429 edges), all six checkers clean, both dossiers and guides rendered in Playwright with zero page errors
+2. **Segments:** `mitra-chem` **adjacent** on `cells-and-chemistry` (upstream cathode material, pre-commercial, plant unbuilt); `cornex` **challenger** there (SNE H1-2026 7th at 30.2 GWh / 6.5%; 6th InfoLink/TrendForce/ICC, 5th Benchmark, 3rd SPIR) and **adjacent** on `storage-integrators-and-containers` (M5/M6 containers, no third-party integrator rank — the CALB/Great Power precedent). `cells-and-chemistry` 22 members · 4 inc · 11 cha · 7 adj; the SNE H1-2026 storage-cell top twelve is now entirely covered. No floor moved
+3. **Both §8 rows rewritten from the evidence.** Mitra Chem: identity held (Mitra Future Technologies, Inc., CIK 0001887663, still private and operating) but the plant slipped to 'early 2027, commissioning 2028' at 'over $370M' (State of Michigan 2026-08-05; Michigan's support doubled to $50M), the DOE award is obligated and retained with only $2.25M outlaid, L&F (Korea) holds 3.3% and the 'joint venture' exists only in Korean headlines, the 2025 Form D ($15.6M of $50M) has no successor, and the company has said nothing since 2024-09-20. Cornex: identity held (楚能新能源股份有限公司, not 中比); 'top three in 2025' is SPIR's number (InfoLink/EVTank ninth), the '290 GWh Hubei DRC approval' could not be found, M5 mass production began 2024-02-01 not 2025, no CATL suit exists, no IPO filing anywhere (absent even from Hubei's 2026–28 listing-reserve roster), two RMB 6bn-class government funds entered and left the cap table, and the owner's separate 楚能汽车 car venture is self-funded at RMB 10bn
+4. **The §6 register in `CLASSROOM-CURRICULUM-PLAN.md` was re-run in full and dated 2026-09-13 (v05.41r)** — no status moved, G10's residual (the insurance seat) recorded closed by the `insurance-and-risk-transfer` segment, G6 still the only open row; the S3 ledger row in `INTEGRATED-REMEDIATION-PLAN.md` flipped to Done on that re-run
+5. **v05.42r — item D resolved and the action plan re-evaluated.** The developer chose option 1: `aka[]` joined the roster search haystack in `Profiler.html` (v01.86w → v01.87w; names, slugs and all 265 aliases; taglines still excluded; verified "楚能" → Cornex, "Guy Carpenter" → Marsh McLennan, "Mitra Future" → Mitra Chem, "中创新航" → CALB). `INTEGRATED-REMEDIATION-PLAN.md` §7.3 gained the post-S3 run order with every remaining phase tied to a model (G6 → C3 → bankability review → Phase 4 row 1 → S2 ∥ Phase 4 → K2 → rows 25–26 → C5 → plan clock; ~57 sessions, ~54 Opus 5 xhigh, 2–3 Fable 5.1 xhigh, none Fable 5.1 High), §7.4 re-sequenced, ledger rows updated, and a **§7.9 paste-in brief for G6**
+6. **Corpus reconciliation:** Mitra Chem 0 inbound files; Cornex 3 files, 3 substantive mentions (CALB's 1.3 GWh margin, the NARI 2026 shortlist), all consistent, 0 revised
+
+### Where we left off
+
+Both pushes merged (`v05.41r` 5eab070, `v05.42r` 5470b48). This remember-session commit is the only thing after them. Nothing in flight. **S3 is closed; the next session is G6 on Opus 5 xhigh** from the §7.9 brief (pasted below), then C3.
+
+### Key decisions and findings
+
+- **G6 before S2 — the developer's instinct, and the plan's own rule since S0.** G6 was gated on S0 (met 2026-09-07), never on S3; running it first closes the register's last open row, unlocks Phase 4 row 26, and gives C3 nine modules and zero landscapes to migrate
+- **Rank is a property of the house.** Cornex spans 3rd–7th across five houses for one half-year; the segment note tells the S2 author to type on SNE by name. The company and the Hubei/Wuhan governments quote SPIR
+- **Private-lane identity rows aged on the operating record this time**, not the identity — a plant date, a cost, an approval that does not exist, a lawsuit that does not exist
+- **Environment:** sec.gov Archives answered a declared research User-Agent ('Mozilla/5.0 (compatible; LightAISolutions research jonyang92@gmail.com)') while data.sec.gov stayed 403 — retry Archives before planning around the block; efts.sec.gov answered; cornexbattery.com needs a browser User-Agent and a 40-s timeout; fgw.hubei.gov.cn 412, yichang.gov.cn 407 (proxy policy); businesswire.com, woodtv.com, michigan.gov, lnfcorp.com blocked
+- **Render recipe unchanged** (scratch copy, `_e = ''`, analyst role, fresh page per company); scratchpad `render.py` and `search_test.py` are session-local
+- **The bankability module's `reviewBy` is 2026-10-01** — inside 30 days; it is order 3 in the run table and Phase 4 rows 23–24 wait on it
+- **Study-guide shape traps hit this session:** timeline items are `{x, lane, label, sub}` with `lanes` a dict; proscons cards need `t`, `adv[]`, `dis[]` — both caught by `check-profiler-study.py`
+
+### Active context
+
+- **Repo version** `v05.42r`; **CHANGELOG at 95/100** total, 15 dated 2026-09-12 and exempt → ~80 non-exempt; no rotation due
+- **S3: 10 of 10 — closed.** Next: **G6** (Opus 5 xhigh, §7.9 brief), then **C3** (Opus 5 xhigh, 2–3), then the bankability review (due 2026-10-01), then Phase 4 row 1 and the two long lanes
+- **Page versions:** Profiler `v01.87w` (bumped this session), Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
+- **§10.5 item D is done** — nothing awaits developer approval in the coverage plan
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **G6 on Opus 5 xhigh** from the `INTEGRATED-REMEDIATION-PLAN.md` §7.9 brief — the large-load interconnection guidance module as research synthesis: one push commit, the ninth module in `guidanceDocs_()`, register row G6 closed, no lesson and no migration.
+
+**To continue:** paste the G6 prompt below into a new Opus 5 xhigh session:
+
+```text
+Run G6 of INTEGRATED-REMEDIATION-PLAN.md — the large-load interconnection guidance module, research synthesis — on Opus 5 xhigh as a fresh session. G6 is guidance-module AUTHORING: it adds one module to `guidanceDocs_()` in googleAppsScripts/Profiler/Profiler.gs, writes its analysis markdown, seeds the Scraper interest topic, and closes register row G6; it edits no dossier, study guide, lesson, registry or report, and creates, updates or deletes no Routine.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md (Latest Session); INTEGRATED-REMEDIATION-PLAN.md §7.2 (the G6 paragraph), §7.3 (the 2026-09-13 re-evaluated order — G6 is order 1) and §6 (the G6 ledger row); CLASSROOM-CURRICULUM-PLAN.md §6 row G6 and §3.3 `interconnection-for-large-loads` (the lesson's outline names the sections the module must be able to support — two jurisdictions, Order 2023 and what it left for load, the large-load tariff as a class, who pays the studies, the co-location docket); .claude/rules/industry-guidance.md steps 4–10 (module shape, `group` meta, access model, GAS version bump, verification, Scraper seed, `reviewBy`); the six utility study guides (dominion-energy, oncor, aep, southern-company, xcel-energy, entergy) and burns-mcdonnell — the module is composed AGAINST them and must not restate them; the existing `**Provenance:**` line of any research-synthesis module (grid-equipment-shortage-2026-09 is the precedent) for the form.
+
+THE WORK — one push commit: (1) Research the federal layer from public primary sources only — FERC Order 2023 and 2023-A (the generator interconnection reforms and what they did not cover), FERC's large-load and co-location dockets (the PJM co-location proceeding and the Commission's 2025–2026 orders), the RTO large-load interconnection rules that exist today (PJM, MISO, SPP, ERCOT's SB 6 process via the Oncor guide), study-fee and readiness-deposit regimes, and the large-load tariff as a class of instrument across the six utilities — every quantitative claim with its docket, order or page; run scripts/check-source-reachability.py first and record blocked hosts. (2) Write repository-information/industry-guidance/large-load-interconnection-2026-09-analysis.md on the standard analysis shape, with a claims ledger. (3) Author `guidanceDocLargeLoadInterconnection_()` on the guidance section-kind vocabulary with id `large-load-interconnection-2026-09`, `group` = The AI Data-Center Wave, a `**Provenance:**` line naming it research synthesis with no ingested document, `reviewBy` set from its nearest dated gate (the next FERC compliance or effective date you find), registered in `guidanceDocs_()` immediately after `utility-aidc-procurement-2026-08`; contributor tier per the role matrix. (4) Scraper seed per industry-guidance step 9 (Scraper GAS bump applies). (5) Bump the Profiler GAS version and gs.version.txt per [PC-GS-VERSION] #1, `node --check` a .js copy, run scripts/check-gas-inner-scripts.js, and render the module in Playwright via gdRenderDoc(). (6) Close register row G6 in CLASSROOM-CURRICULUM-PLAN.md §6 with a dated re-check note (the row closes on the module's existence; the lesson is Phase 4 row 26), flip the G6 ledger row in INTEGRATED-REMEDIATION-PLAN.md §6, and note in §7.3 that order 1 is done and C3 is next. Do NOT author the lesson; do NOT migrate any module (that is C3).
+
+VERIFY: the module renders with zero page errors; the guidance index lists nine modules; `check-classroom-curriculum.py --strict` clean; CHANGELOG — check the counter, do not assume. Normal Pre-Commit and Pre-Push checklists; one push commit on a claude/* branch (`git ls-remote` first).
+```
+
+## Previous Sessions
+
+### Session — 2026-09-12 09:04:12 PM EST (v05.40r)
+
 **Date:** 2026-09-12 09:04:12 PM EST
 **Repo version:** v05.40r — **one push commit** on `claude/affectionate-wright-x9cng3` (v05.39r → v05.40r), merged; this remember-session commit follows on the same branch after a rebase onto the merged `main`
 **Branch:** `claude/affectionate-wright-x9cng3`
@@ -100,91 +156,6 @@ scratch copy served over local HTTP with `var _e = ''` and localStorage ov_note_
 repo's Profiler.html for this; dossier tab keys are overview/products/devs/policy/strategy/people/fin/sources; the
 study guide opens from the `#ov-study-btn` button — open a fresh page per company, or the first guide's overlay
 blocks the second button), zero page errors. Normal Pre-Commit and Pre-Push checklists; push on a claude/* branch.
-```
-
-## Previous Sessions
-
-### Session — 2026-09-12 08:03:41 PM EST (v05.39r)
-
-**Date:** 2026-09-12 08:03:41 PM EST
-**Repo version:** v05.39r — **one push commit** on `claude/admiring-brown-7nw598` (v05.38r → v05.39r), merged; this remember-session commit follows on the same branch after a rebase onto the merged `main`
-**Branch:** `claude/admiring-brown-7nw598`
-**Model:** Fable 5.1 High as the orchestrator; four research subagents (two per company, first-party then third-party) inherited it — ~51 minutes wall-clock for the push commit, no cap hit
-
-### What was done
-
-1. **v05.39r — S3 V2 · E1b landed: Habitat Energy and Gridmatic dossiers (schema v7, profileVersion 1, intel-briefing), study guides (schema v2; 13 and 12 sections) and eight-module lesson plans**, 17 concepts registered (Balancing Mechanism, convergence bidding, DART spread, Dynamic Containment, Emergency Response Service, FCAS, floor agreement, load resource, market-based rate authority, negative pricing, percentage of perfect, probabilistic forecast, revenue share, route to market, T-EAC, TBx capture rate, Virtual Lead Party), 17 company-published headshots, registry and quarterly calendar rows, both typed **challenger** on `software-and-optimization` (Gridmatic also **adjacent** on `storage-developers-and-ipps`), graph rebuilt, all six checkers clean, both dossiers and guides rendered in Playwright (scratch copy, `_e = ''`, analyst role) with zero page errors
-2. **The last S3 landscape gate is open** — `software-and-optimization` now 20 members · 2 incumbents · 3 challengers · 15 adjacent; §10.3 row cleared, §10.4 row 8 done, §10.5 dated note added. **S2 may start on any of the nineteen landscapes.** S3 stands at **eight of ten**
-3. **Both §8 E1b rows rewritten from the evidence.** Segment and role hypotheses held for both. Identity: Habitat's JLL/BCG sale (2026-03-17) is a single subscriber-only report with no signing, completion, buyer or withdrawal anywhere — Companies House PSC unchanged, footer unchanged, Quinbrook's page still 'Operational & Expanding' while Flexitricity flipped to 'Exited'. Gridmatic's parent is now established as **Gridmatic Inc., a California corporation** (CA SOS 3881417, LEI 254900SETDTLHJEKMT53); the 2026-09-09 'HQ is now Houston' correction was half wrong — Cupertino remains the registered corporate HQ (lease to 2027-12-31 in a CMBS annex), Houston is the retail HQ and the press dateline
-4. **Corpus reconciliation:** 5 inbound files, 8 substantive mentions (competitor lists, Modo's directory), 0 revised; `habitat-energy` ↔ `gridmatic` curated as reciprocal competitors; Energy Vault is not covered, so Cross Trails has no reciprocal
-
-### Where we left off
-
-The v05.39r push merged (`06813bf Update last-processed-commit.sha to 53a5366`). This remember-session commit is the only thing after it. Nothing in flight. **V3 · E5 (Grid United · Pattern Energy) is next**, then V4 · E4b+E6b (Mitra Chem · Cornex); both are pure deepening on segments already at the floor. The V3 paste-in prompt is below.
-
-### Key decisions and findings
-
-- **Audited scale versus headline is the Habitat lesson:** UK entity FY2024 turnover GBP 1.99M, loss GBP 5.0M, net liabilities GBP 12.7M, GBP 37.2M owed to the parent; the parent group's consolidated 'Optimisation services' line GBP 4.17M (+80%); 5.5 GW is 'under contract' including pipeline and renewables, against 600 MW operating in GB (Jan 2025) and 'over 1.5 GW' in ERCOT (Nov 2025). The platform is EVOLVE; PowerIQ (2020–21) appears on no current page — both in `aka[]`
-- **Gridmatic's rankings are all its own** ('most profitable participant in ERCOT'); the one independent leaderboard (Amperical, ERCOT 60-day settlements, Jan–Jul 2026) places its two QSE batteries 11th and 43rd of 308. Only fund Form Ds exist (USD 26.2M / 3 investors 2021; USD 24.95M / 1 investor 2023 → 'USD 50M'); an August 2026 posting cites 'upcoming debt and equity raises' — both companies' `ownership` must be re-read at the first quarterly sweep
-- **Concept alias collision:** 'revenue floor' was already an alias of the kWh-era 'revenue put', so the battery floor is registered as **floor agreement** (aliases minimum revenue guarantee, revenue floor contract, physically settled revenue floor); 'floor contract' had to be dropped as an alias
-- **Environment:** sec.gov / data.sec.gov 403; `efts.sec.gov` full-text search answered and Form D XMLs were read via archived copies; Companies House 200 on three probes (document PDFs downloadable via `/filing-history/<id>/document?format=pdf`); businesswire.com 403 (company / Yahoo copies cited with the wire URL where the wire is the source); Workable job boards blocked (429)
-- **Render recipe that worked:** copy `live-site-pages/` to the scratchpad, patch `var _e = '…'` to `''`, serve with `python3 -m http.server`, `add_init_script` setting `ov_note_role = 'analyst'`, navigate `#<slug>/<tab>` (keys overview/products/devs/policy/strategy/people/fin/sources — `rels` is denied to analysts by design), click `#ov-study-btn`; script at the scratchpad `render.py` (session-local, not committed)
-- **Model call held:** Fable 5.1 High as planned, no substitution; the identity step's value was in disproving two claims the batch check had recorded from summaries (Gridmatic's HQ and unestablished parent)
-
-### Active context
-
-- **Repo version** `v05.39r`; **CHANGELOG at 92/100** total, 12 dated 2026-09-12 and exempt → ~80 non-exempt; no rotation inside V3 or V4
-- **S3: 8 of 10.** Remaining, in order: **V3 · `E5` (Grid United · Pattern Energy)**, then **V4 · `E4b+E6b` (Mitra Chem · Cornex)**; both Fable 5.1 High; identity notes for all four are in their §8 rows (Pattern's owner set moved twice in 2025–26; Mitra Chem's legal name is Mitra Future Technologies, Inc.; Cornex is 楚能新能源)
-- **Page versions (unchanged):** Profiler `v01.86w`, Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
-- **Still awaiting developer approval (§10.5 item D):** `aka[]` in the `Profiler.html` roster search haystack (~line 2202); this session added 22 more aliases the roster cannot find
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **S3 V3 · E5 (Grid United · Pattern Energy) on Fable 5.1 High** as a fresh session — pure deepening on `grid-equipment` and `utilities` (adjacent), Pattern the thickest record left; dossier + study guide for both in one push commit, segments assigned with a `basis` line each, both §8 rows rewritten; V4 only in a later session.
-
-**To continue:** paste the V3 prompt below into a new Fable 5.1 High session:
-
-```text
-Picking up from my last session, run Phase E of repository-information/PROFILER-COVERAGE-PLAN.md on
-Fable 5.1 High as a fresh session: S3 V3 · E5 — Grid United, Pattern Energy.
-READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §2, §7, §10.3–10.5 and the two
-E5 rows in §8 (both carry identity notes from 2026-09-09 — Grid United, LLC is private and founder-led (Michael
-Skelly, John D. Arnold-backed), Houston, with North Plains Connector LLC a wholly owned project SPV whose partners
-(BHE U.S. Transmission MOU, ALLETE, Portland General Electric, MDU Resources) sit in the SPV, not the company;
-Pattern Energy Group LP is private with CPP Investments the majority owner, APG/ABP and Australian Retirement Trust
-having bought Riverstone's founding stake on 2025-06-09, and the Cordelio Power acquisition completed 2026-04-02);
-.claude/rules/profiler-app.md (Profiler Command incl. step 1a identity verification and step 7 corpus reconciliation,
-Profiler Prep Command, Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md;
-repository-information/PROFILER-STYLES.md (active style: intel-briefing).
-THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7, profileVersion 1,
-categories per the §8 rows: Grid United developer; Pattern Energy developer · ipp) and study guide (schema v2) — then
-the registry sync, the graph build, the study validator, the relationships and crossrefs checkers, a calendar row each
-(both private → quarterly cadence; Grid United's first watch item: North Plains Connector permitting and any binding
-partner agreement; Pattern's: any CPP stake change, secondary sale or IPO), README tree entries, and flip both §8 rows.
-Then assign each company's segments and roles in live-site-pages/profiler-data/profiler-segments.json with a basis
-line per PROFILER-SCHEMA.md → Segments registry (the §8 Segment · role cells — grid-equipment · adjacent and
-utilities · adjacent for both, plus storage-developers-and-ipps for Pattern if the record supports it — are
-hypotheses: write what the dossier supports), and rewrite the §8 Phase E rows.
-THE §8 ROW IS A HYPOTHESIS, NOT A BRIEF: treat every claim in its `Why` cell as unverified, re-run step 1a on both
-identities (Pattern's ownership moved twice in twelve months and may move again; Grid United's project partners may
-have signed binding agreements since January 2025), and rewrite that cell plus the `Checked` column with what you
-actually found before you commit.
-SESSION NOTES: V3 is pure deepening — no landscape is gated on it; do not start V4 in this session. Keep Grid United's
-corporate and project layers distinct. Pattern is the thickest record of the remaining subjects — verify its project
-anchors (SunZia, Western Spirit, the Cordelio fleet) from its own newsroom before trade press. Before Stage 2 research
-run python3 scripts/check-source-reachability.py; sec.gov is blocked from this environment but efts.sec.gov full-text
-search answers for Form D and 8-K text; businesswire.com returns 403 (use company copies, cite the wire URL);
-Companies House is irrelevant here. Company-published leadership headshots are permitted — download to
-live-site-pages/images/execs/<slug>-<lastname>.jpg. One push commit. JSON formatting: profiler-segments.json and the
-refresh calendar are indent=1, the registry indent=2, always ensure_ascii=False, never re-sort the roster — check git
-diff --stat before staging. CHANGELOG headroom: 92/100 after v05.39r, ~80 non-exempt — no rotation due.
-VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, check-profiler-relationships.py and
-check-profiler-crossrefs.py clean, the dossiers and guides render (Playwright; the sign-in wall can be bypassed in a
-scratch copy served over local HTTP with `var _e = ''` and localStorage ov_note_role = 'analyst' — never edit the
-repo's Profiler.html for this; dossier tab keys are overview/products/devs/policy/strategy/people/fin/sources; the
-study guide opens from the `#ov-study-btn` button), zero page errors. Normal Pre-Commit and Pre-Push checklists;
-push on a claude/* branch.
 ```
 
 Developed by: LightAISolutions
