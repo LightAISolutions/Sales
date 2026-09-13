@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.47r] — 2026-09-13 01:40:31 AM EST
+
+> See attached screenshot. What's wrong? Fix it.
+
+### Fixed
+
+**The guidance chips were rendering correctly the whole time — roughly two screens below the fold.** The console output in the developer's screenshot returned `{success: true, mentions: {…}, built: '2026-09-13T05:13:26.776Z'}`, and that `built` timestamp is **fifteen minutes before v05.46r deployed** — so the shared token had matched from the moment it was set, and neither the trim nor the error-reporting fix in that commit was the cause of what was reported. The fault was placement, and it is older than C3: `ovGuidanceMentionsLine`'s `paint()` ended in `main.appendChild(line)`, which puts the line after `.ov-panes` **and** after the field-note section.
+
+Measured on a real Tesla dossier rendered in Playwright against the live registry: the line sat at **y = 1817px on a 2035px document**. A dossier-level affordance below a form, two screens down, is one nobody finds.
+
+- **`live-site-pages/Profiler.html`** (v01.87w → v01.88w) — `paint()` now inserts before `.ov-tabs`, placing the line directly under the dossier header with the other dossier-level controls. `appendChild` is kept as the fallback so a dossier without a tab strip still shows it rather than silently dropping it — the same never-drop-content rule the Admin lens follows. `.ov-gd-mentions` margin retuned from `26px 0 8px` to `2px 0 16px` for the new position. Re-measured after the change: **y = 669px**, inside the first viewport
+- No backend change. `guidanceMentionsProxy_`, `clHandleGuidancePeer_` and `guidanceMentions_` are untouched by this commit
+
+### Changed
+
+- **`README.md`** — Profiler `v01.88w`; `Last updated:` and `Repo version:`
+- **`live-site-pages/html-versions/Profilerhtml.version.txt`** — `|v01.87w|` → `|v01.88w|`; `<meta name="build-version">` bumped with the page
+- **`live-site-pages/html-changelogs/Profilerhtml.changelog.md`** (`Sections: 47/50`)
+
+### Verified
+
+- `node --check` on the page's inline `<script>` block; `scripts/check-gas-inner-scripts.js` — 9 files, 86 inner blocks; `scripts/check-guidance-parity.py` clean
+- **Playwright render of the real Tesla and NVIDIA dossiers** against the real `profiler-data/`, transport stubbed so the genuine `ovGuidanceMentionsLine` → `paint` path runs: **zero page errors**, two chips on each, line at **y = 669** (was 1817), DOM order now `ov-back · ov-co-head · ov-gd-mentions · ov-tabs · ov-panes · ov-section`
+- **Screenshot read** confirms both module titles are legible in the chips — *Power Infrastructure & the AIDC Power Chain* and *NVIDIA 800 VDC: Industry Alignment & Execution* on the NVIDIA dossier
+- A first render showed **empty chips**, which was a fault in the verification fixture, not the page: it had been written with `JSON.stringify(m, Object.keys(m).sort(), 1)`, and the second argument is the **replacer** (a property allowlist), not `space` — so every hit object was stripped to `{}` and the titles never reached the page. Fixture regenerated with `JSON.stringify(m, null, 1)` and the render re-run before any claim was made from it
+- `scripts/check-readme-tree.py` 0 findings; `scripts/check-classroom-curriculum.py --strict` clean; `scripts/check-classroom-pipeline.py --selftest` 13 fixtures, 0 failures
+- **CHANGELOG rotation did not fire, and the raw counter is not what decides that.** `Sections: 100/100` is the raw total, but four of those sections are dated today (EST), so the **non-exempt** count is **96** — below the threshold. This is precisely the distinction `CHANGELOG-archive.md` step 1 was reconciled at v05.01r to make explicit. The clone was deepened anyway (`git fetch --unshallow`, 55 → 1,138 commits) so the next rotation has SHA enrichment available; the oldest whole date group is **thirteen sections dated 2026-09-04**
 
 ## [v05.46r] — 2026-09-13 01:24:48 AM EST
 
