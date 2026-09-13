@@ -6,6 +6,57 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-13 05:38:06 AM EST
+**Repo version:** v05.49r — **two push commits** on `claude/affectionate-galileo-rsr3k1` (v05.48r, v05.49r), both merged; this remember-session commit follows on the same branch
+**Branch:** `claude/affectionate-galileo-rsr3k1`
+**Model:** Opus 5 xhigh as the orchestrator; **no subagents** — Bash, Node VM harnesses and Playwright throughout. ~76 minutes for the C3 push, then a live-troubleshooting stretch with the developer, then ~20 minutes for the masthead push
+
+### What was done
+
+**C3 session 3 of 3 — the Guidance Homecoming, CLOSED (v05.48r). Then a developer-directed masthead change (v05.49r), and a long live-support stretch in between.**
+
+1. **The progress ticks migrated** — six one-shot admin functions, three per project, deliberately named without a trailing underscore because **Apps Script hides `_`-suffixed functions from the editor's Run dropdown**. Profiler: `exportGuidanceProgress` / `previewGuidanceProgressPrune` / `applyGuidanceProgressPrune`, filtering `gd_progress:<email>` to the nine module ids over a **frozen `GD_MIGRATED_MODULE_IDS` literal** (the registry it would otherwise walk is deleted in the same commit). Classroom: `previewGuidanceProgressImport` / `applyGuidanceProgressImport` / `verifyGuidanceProgressImport`, reading the payload from a `GUIDANCE_PROGRESS_IMPORT` Script Property because an editor-run function takes no arguments
+2. **The design's done-when is met** — `scripts/check-guidance-migration.js` (new) runs all six real functions in **two isolated VM contexts with one Script Property store each**, fixture built from the real registry. **44 assertions pass**: export read-only and deterministic, dry run writes nothing, verifier accounts for every tick per account with zero missing, second import writes 0 and leaves the store byte-identical, prune leaves `study-`/`dossier-` ticks and unrelated properties alone and is itself idempotent
+3. **The read-only window closed** — `clProgressValid_` admits every registered module behind `clCan_(sess,'guidance')` (**one map, not two**: progress is never a weaker gate than reading); modules render with mark-as-understood buttons and filling nav ticks; library cards carry a completion readout; `clDrillGuidanceItems_` puts **139 guidance items** into the C4 pool as `gc:`/`gq:` ids beside 216 lesson items. **Decision 6 at its target state**
+4. **Profiler's copy deleted** — twelve functions, the `gop=index|doc` branches, ten page-side functions, five dead CSS blocks, and `scripts/check-guidance-parity.py`. `Profiler.gs` 760 KB → 449 KB; `Profiler.html` 8,099 → 7,818 lines. **The `gd-*` renderer deliberately stayed** — study guides, the report view and the sign-in log all render through it
+5. **`.claude/rules/industry-guidance.md` re-targeted** at `Classroom.gs` (frontmatter + steps 4/5/6/7/10) as a file-target and op-name change, and the **quarterly review Routine's prompt updated in place** after the developer was asked in-session and approved — same trigger id `trig_01CrhxzfBV6uKQNKpUXLLMSZ`, same cron, run history intact
+6. **v05.49r — the masthead directive.** Profiler lost `🎓 Classroom` and `✦ Industry Guidance` (stack five slots → three at 4/44/84, `#ov-header` 194px → 114px); Classroom lost `← Profiler`. `verify-profiler-roles.py` moved with the code: the `classroom` column is retired and the `guidance` row now reads the **dossier chip line** instead of a button — a stronger assertion, because the line only paints once the server has answered. **12 × 4 from here**
+7. **`INTEGRATED-REMEDIATION-PLAN.md` §7.12** — the paste-in brief for the bankability review (order 3), written in this remember-session commit, with the §7.3 row 3 flipped to NEXT UP
+
+### Where we left off
+
+Both pushes merged and deployed. **C3 is closed and the plan's order 2 is done.** The developer confirmed Classroom's guidance surfaces work in production — library, ticks, drill — and the migration sequence itself **found an empty store**: `exportGuidanceProgress()` returned `accounts:{}`, `ticks:0`, `keptDocs:0`, so there was no history to move and the prune must not be run. **Open thread:** whether the developer's guidance ticks exist in browser `localStorage` under `ov_guide_progress_*`; a console snippet to recover them with their real dates was given and its result is not yet known.
+
+### Key decisions and findings
+
+- **A green `Deploy <Project>` workflow step does NOT mean the code landed.** Run #558's `Deploy Profiler` step reported success and ran 10 seconds — it genuinely called the web app — yet the Apps Script project was still on v01.38g until the developer ran `pullAndDeployFromGitHub()` by hand. **This is an unfixed defect in `.github/workflows/auto-merge-claude.yml`** and it has been shipping silently for every GAS change. It cost most of an hour of live troubleshooting. Worth its own session.
+- **The GAS version pill on a page is NOT evidence of what is deployed.** It reads `live-site-pages/gs-versions/*.gs.version.txt` off GitHub Pages — the repo's file — which the commit bumps whether or not the script project ever pulled. The only authoritative check is line 1 of the Apps Script editor.
+- **The merge rule is "an existing Classroom tick always stands", and it is correct in BOTH directions.** The brief only required not overwriting a newer Classroom tick; max-date-wins would satisfy that and is wrong, because when Profiler's date is the newer, Classroom's earlier date is the true first completion. Never overwriting also makes the import idempotent by construction.
+- **C3 created a new permanence constraint nobody has hit yet.** A guidance module's **section ids** are now progress-tick keys in `cl_progress:` AND are embedded in drill ids (`gc:<moduleId>:<sectionId>:<n>`). Renaming one silently orphans reading history, resets that section's SM-2 schedules, and breaks report overlay anchors. §7.12 names this as the bankability review's primary trap.
+- **`check-classroom-content.py` asserted `tickable == readable lessons` per tier**, so admitting modules broke it by design; the checker moved with the code and the new assertions are stronger (guidance drill pool gated per tier, every served id gradable, **lesson ids and module ids asserted disjoint**). 134 → 142 gate cases. `clProgressValid_` is a `GATE_SYMBOLS` member, so `gateDigest` was refreshed.
+- **Two Classroom render traps, both cost a debugging cycle:** `HTML_CONFIG.STORAGE_TYPE` is `sessionStorage` and the page's single-tab enforcement **clears it on load**, so a session seeded from `add_init_script` is wiped before `clAdmitted()` reads it; and `_gasPost` is a top-level `function` declaration, so an init-script assignment to `window._gasPost` is **overwritten** by it. Both stubs must be installed AFTER the page's own scripts run. Recorded in the rules file's step 7.
+- **`gis_load_failed` in a Profiler Playwright run is a harness artifact** — the harness aborts `accounts.google.com`. Confirmed identical on a pristine `HEAD` Profiler across three runs each.
+- **The masthead harness lesson:** the button stack is built by the auth wall's `pass()`, which a harness bypassing the wall never calls — so the buttons are genuinely absent and the test fails for the wrong reason. Call the `ov*BtnShow()` builders explicitly.
+- **CHANGELOG arithmetic, third push in a row:** 102 raw / **96 non-exempt**, because six sections are dated 2026-09-13. Rotation has correctly not fired all session. **It fires on the first push landing on a later EST day**, when all six stop being exempt. The clone was unshallowed (55 → 1,145 commits) so SHA enrichment is ready.
+
+### Active context
+
+- **Repo version** `v05.49r`; **CHANGELOG 102/100 raw / 96 non-exempt**; **`Profilerhtml.changelog.md` at 49/50 — one bump from mandatory rotation**; `Classroomhtml.changelog.md` 13/50, `Profilergs.changelog.md` 39/50, `Classroomgs.changelog.md` 23/50, `Scrapergs.changelog.md` 49/50 (untouched all session)
+- **GAS versions:** Classroom `v01.23g`, Profiler `v01.39g`, Scraper `v02.02g`. **Page versions:** Profiler `v01.90w`, Classroom `v01.13w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
+- **Operational state:** `GUIDANCE_PEER_TOKEN` set and working in both projects. The six one-shot migration functions are **deployed but effectively unused** — the export found an empty store. **The prune must not be run.** `GUIDANCE_PROGRESS_IMPORT` should be deleted from Classroom's Script Properties if it was created
+- **Run order from here:** **the bankability review (§7.12, order 3)** → Phase 4 row 1 (`four-machines`) → S2 ∥ Phase 4 rows 2–24 → K2 → rows 25–26 → C5 → the plan clock. **~54 sessions remain**
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run the **bankability review** — order 3 of the §7.3 run table, the only module inside the 30-day `reviewBy` horizon (2026-10-01) — on Opus 5 xhigh from the `INTEGRATED-REMEDIATION-PLAN.md` **§7.12** brief: re-verify `bess-bankability-2026-08`'s dated gates against primary sources, refresh `updated` and `reviewBy`, and **do not rename a single section id**, because since C3 they key the developer's reading history and the C4 drill schedules as well as three report overlay anchors.
+
+**To continue:** paste the bankability-review prompt (reproduced in chat, and stored as §7.12 of `INTEGRATED-REMEDIATION-PLAN.md`) into a new Opus 5 xhigh session.
+
+## Previous Sessions
+
+### Session — 2026-09-13 01:47:06 AM EST (v05.47r)
+
 **Date:** 2026-09-13 01:47:06 AM EST
 **Repo version:** v05.47r — **four push commits** on `claude/adoring-planck-nczbq5` (v05.44r → v05.47r), all merged; this remember-session commit follows on the same branch
 **Branch:** `claude/adoring-planck-nczbq5`
@@ -51,56 +102,4 @@ All four pushes merged and deployed; the token is set and the chips are live and
 - Run **C3 session 3, the Guidance Homecoming's final slice, on Opus 5 xhigh** from the `INTEGRATED-REMEDIATION-PLAN.md` §7.11 brief — in its stated order: migrate the guidance progress ticks (module ids **only**, verified against a pre-migration export, idempotent), re-point the dossier mention chips to `Classroom.html#guidance/<id>`, then delete Profiler's twelve functions and `check-guidance-parity.py`, re-target `.claude/rules/industry-guidance.md`, and ask before touching the quarterly Routine. The deletion goes last because everything else must be proven working while the fallback still exists.
 
 **To continue:** paste the C3 session 3 prompt (reproduced in chat, and stored as §7.11 of `INTEGRATED-REMEDIATION-PLAN.md`) into a new Opus 5 xhigh session.
-
-## Previous Sessions
-
-### Session — 2026-09-13 12:23:26 AM EST (v05.44r)
-
-**Date:** 2026-09-13 12:23:26 AM EST
-**Repo version:** v05.44r — **one push commit** on `claude/jolly-meitner-06wd3n` (v05.43r → v05.44r), merged; this remember-session commit follows on the same branch
-**Branch:** `claude/jolly-meitner-06wd3n`
-**Model:** Opus 5 xhigh as the orchestrator; **no subagents** — the whole migration was done in-session with Bash, Python extraction scripts and Playwright. ~31 minutes for the push commit against a 55-minute estimate, no cap hit
-
-#### What was done
-
-**C3 session 1 of 2–3 — the Guidance Homecoming. Order 2 of the §7.3 run table, now under way.**
-
-1. **The nine `guidanceDoc*_()` module literals and `guidanceDocs_` / `guidanceIndex_` / `guidanceDoc_` are in `Classroom.gs`, copied byte-for-byte from `Profiler.gs`** (5,583 lines of content; 5,622 with their `// Content:` comment blocks), placed **below `// CONTENT END`** and inside the `// PROJECT START`/`// PROJECT END` region. `handleGuidanceOp_(e)` answers `gop=index|doc` behind `clRequire_(sess,'guidance')`, and `action=guidance` is wired into both routers (the doPost fetch route and `action=api&op=guidance`). Classroom `v01.19g` → `v01.20g`
-2. **`Classroom.html` `v01.09w` → `v01.10w`** — the guidance surface: `#guidance` (lane-grouped library with review and revised chips), `#guidance/<id>[/<section>]`, `#guidance-glossary` (122 terms, each definition beside its source module), and cross-module search with snippet highlighting. Rendered entirely through the existing `cl*` primitives — **nothing was ported from `Profiler.html`'s `gd*` engine**, because C1 slice 2 had already brought every section kind across. `clRenderSection` gained `opts.readOnly`; `clApplyProgressUI` returns early on a guidance view so the study-next and drill cards cannot leak into a library page; the guidance nav marker is a plain bullet, not an unfillable checkbox
-3. **The slice plan is written into `PHASE6-CLASSROOM-DESIGN.md`** under the C3 bullet — the design's eight checklist items mapped to sessions 1/2/3 plus the two invariants, the file-layout decision with its full reasoning, the duplicate-window rationale, and why guidance is read-only until session 3
-4. **`scripts/check-guidance-parity.py` (new)** — the duplicate-window guard: all twelve functions byte-identical in both `.gs` files, and the module ids matching. Deleted in session 3 with Profiler's copy
-5. **`repository-information/diagrams/Classroom-diagram.md`** — the now-false pre-C3 sentence corrected and a new **Industry Guidance** design note added (ops, gate, routes, fence placement, read-only window, parity guard). The Mermaid sequence was left alone: it depicts neither guidance nor the C4 drill, so nothing in it was falsified and **no pako regeneration was needed**
-6. **`INTEGRATED-REMEDIATION-PLAN.md` §7.10 — the paste-in brief for C3 session 2** (written in this remember-session commit), plus run-table row 2 flipped to "session 1 done" and a dated v05.44r progress note
-7. **Verified:** `node --check` on `Classroom.gs` and both page script blocks; `check-gas-inner-scripts.js` (9 files / 86 blocks); a Playwright render + screenshot read of **every new surface** with **zero page errors**; the server gate proved per tier in Node; `check-guidance-parity.py`, `check-readme-tree.py`, `check-classroom-curriculum.py --strict` and `check-classroom-pipeline.py --selftest` all clean
-
-#### Where we left off
-
-The v05.44r push merged. Nothing in flight. **C3 session 2 is next** — its paste-in brief is `INTEGRATED-REMEDIATION-PLAN.md` **§7.10**, written in this commit at the developer's request and reproduced under *Recommendation* below.
-
-#### Key decisions and findings
-
-- **The file-layout question was decided by the deployer, not the checker.** `scripts/check-gas-inner-scripts.js` walks `googleAppsScripts/*/*.gs`, so a second `.gs` is fine *to the toolchain* — but `pullAndDeployFromGitHub()` fetches exactly `FILE_PATH` and PUTs `[{name:"Code", type:"SERVER_JS", source:newCode}, manifest]` to `projects/<id>/content`, an API call that **replaces the project's entire file set**. A second file would be deleted by the next merge-triggered deploy, taking `guidanceDocs_()` with it; it also has no `var VERSION` line, which is exactly what the deployer diffs to decide whether to deploy at all. Supporting one would mean rewriting the pull-deploy path all nine projects share, with no staging environment. **One `.gs`.**
-- **The isolation a second file was wanted for is what the `// CONTENT END` fence already gives.** Guidance sits below it, so the unattended C2 pipeline's write set stays exactly what `CLASSROOM-COMMITTER-CONTRACT.md` §3 says it is — the `clLesson*_` / `clTrack*_` literals and the two registries — and `check-classroom-pipeline.py` (P2) already enforces that.
-- **Function names kept byte-identical** (`guidanceDoc*_`, `guidanceDocs_`, `guidanceIndex_`, `guidanceDoc_`), so the move is diffable by a checker and session 3's `.claude/rules/industry-guidance.md` re-target is a one-line file change rather than a rewrite.
-- **The duplicate is deliberate and guarded.** Profiler must keep serving until its slice is cut over, and `guidanceMentions_()` (session 2) cannot answer without the content beside it. The named collision: **the bankability review (`bess-bankability-2026-08`, `reviewBy` 2026-10-01) is §7.3 order 3 and edits a module** — it must edit **both** copies or `check-guidance-parity.py` fails the build.
-- **Read-only on purpose.** Wiring guidance ticks now would open a second progress store (`cl_progress:`) beside Profiler's `gd_progress:` during the very window session 3's one-shot import exists to reconcile. Profiler stays the place guidance is *studied* until then; no guidance item enters the drill before that — decision 6 unchanged.
-- **Two pre-existing failures, confirmed byte-identical against a pristine `HEAD` worktree** (run this check before attributing either to a change): `check-classroom-content.py` exits 1 with **24 errors** — ten `segment-*` lessons whose `the-players` rows and `profile:` inputs no longer match their registry members after S3 added Cornex, Mitra Chem, Stem, Pattern Energy, Grid United, Heron Power, gridmatic and Supermicro; regenerating them is `build-classroom-segments.py` work owned by the **S2** sessions (curriculum plan §10.9). `verify-profiler-roles.py` reports **2 progress-persistence failures** in Profiler; its full 13-surface × 4-tier access matrix passes.
-- **The Classroom environment diagram is behind on C4** — the drill has no node and no design note. Not fixed here (C3 corrected only what it falsified), but worth a future sweep.
-- **Render recipe for Classroom (new, and it works):** scratch copy of `Classroom.html` in the scratchpad with `var _e = ''` and `AUTO_REFRESH = false`, opened `file://` with `bypass_csp`; then stub **the transport, not the caller** — override `window._gasPost` to answer `action=guidance` from module JSON dumped out of `Classroom.gs` by Node, and `window.loadSession` to return a 40-char token with the tier under test — so the real `clGuidanceApi` → `clRoute` → renderer path runs. **Hide `#auth-wall`** (and `.splash`, `#gas-pill`, `#verify-overlay`) or it intercepts every pointer event and `hover` times out. Then `clHeaderShow(); clAppMount();`. `file://` CORS errors for `sounds/*.mp3` and `profiler-data/profiler-concepts.json` are expected and are **not** page errors — count `pageerror` events only. Playwright installs with `pip install playwright`; browser at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`.
-- **Gate-proving recipe (stronger than a page render):** extract the `// PROJECT START` … `// PROJECT END` region with a regex, stub `auditLog`/`dataAuditLog`/`validateSessionForData`, and call `handleGuidanceOp_` in Node once per tier — the same technique `check-classroom-content.py` uses for the lesson gate. It proved analyst/viewer/unknown get `ROLE_DENIED` on `index` as well as `doc` (no titles leak into a filtered list), and that denials audit as `classroom_not_admitted` / `classroom_capability_denied`.
-- **CHANGELOG counter trap:** `Sections: 96/100` matched **three** places in the file (the header plus two historical notes quoting old counters). Anchor the replacement on the header's surrounding newlines, and verify the count empirically with `grep -c '^## \[v[0-9]'` rather than trusting the header.
-
-#### Active context
-
-- **Repo version** `v05.44r`; **CHANGELOG at 97/100** — three pushes of headroom, rotation is close; **`Scrapergs.changelog.md` at 49/50** (the next Scraper GAS bump is the last before mandatory rotation); `Classroomhtml.changelog.md` 10/50, `Classroomgs.changelog.md` 20/50, `Profilergs.changelog.md` 36/50
-- **GAS versions:** Classroom `v01.20g` (bumped), Profiler `v01.36g`, Scraper `v02.02g`. **Page versions:** Classroom `v01.10w` (bumped), Profiler `v01.87w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
-- **Facts session 2 will need, already established:** reports live at `live-site-pages/profiler-data/reports/` (`OV_BASE` and `CL_DATA_BASE` are both `profiler-data/`); **four `current` reports carry `overlayModules`, giving twelve overlay panels across five modules** — `nvidia-800vdc` 3, `power-infra-aidc` 3, `bess-bankability` 2, `china-policy-stack` 2, `utility-aidc-procurement` 2 — and the `bess-bankability/counterparty` and `power-infra-aidc/markets` anchors each take a panel from **two** different reports, so the renderer must append, not replace. `CL_ROLE_CAPS` already grants `reports` to admin only, so no access-matrix value should change. `gdApplyLens` inserts before `.gd-done-btn`; there is **no** `.cl-done-btn` on a read-only guidance section, so the port must not drop the panel on a missed selector. The mentions route mirrors `scHandleCorpus_` in `Scraper.gs` and needs a **new** shared Script Property, not `CORPUS_TOKEN`
-- **Run order from here:** **C3 session 2** (§7.10) → C3 session 3 → the **bankability review** (`reviewBy` 2026-10-01, and it must edit both copies while the duplicate stands) → Phase 4 row 1 → S2 ∥ Phase 4 → K2 → rows 25–26 → C5 → the plan clock. **~55 sessions remain**
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-#### Recommendation for next session
-
-- Run **C3 session 2, the Guidance Homecoming's middle slice, on Opus 5 xhigh** from the `INTEGRATED-REMEDIATION-PLAN.md` §7.10 brief — checklist items 2 and 3 only: the Admin lens re-hosted in Classroom under `clCan('reports')` reading the public `reports/*.report.json`, and `guidanceMentions_()` moved to Classroom behind one narrow token-gated route that `Profiler.gs` proxies on the `scHandleCorpus_` pattern, with the dossier chips still working through an unchanged `ovGuideApi('mentions')` call. Do not delete Profiler's copy and do not wire guidance ticks — both are session 3.
-
-**To continue:** paste the C3 session 2 prompt (reproduced in chat, and stored as §7.10 of `INTEGRATED-REMEDIATION-PLAN.md`) into a new Opus 5 xhigh session.
 Developed by: LightAISolutions
