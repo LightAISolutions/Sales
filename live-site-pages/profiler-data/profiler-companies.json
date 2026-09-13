@@ -5120,6 +5120,95 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "mitra-chem",
+      "name": "Mitra Chem",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The last DOE-funded US LFP cathode plant in the pipeline after ICL's exit — unbuilt, silent on its own channels since September 2024, groundbreaking guided to early 2027",
+      "hq": "Mountain View, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-13",
+      "aka": [
+        "Mitra Future Technologies, Inc.",
+        "Mitra Future Technologies",
+        "Mitra",
+        "MitraChem",
+        "AmPLIFI"
+      ],
+      "domains": [
+        "mitrachem.com"
+      ],
+      "srcTotal": 106,
+      "srcFirstPct": 38,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "cornex",
+      "name": "Cornex",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Seventh on SNE's H1-2026 storage-cell table at 30.2 GWh and 6.5%, from outside the top ten in 2024 — owner-financed, never audited, no listing filed; two 70–80 GWh plants commissioned in August 2026",
+      "hq": "Xiaogan / Wuhan, China",
+      "status": "active",
+      "lastUpdated": "2026-09-13",
+      "aka": [
+        "楚能新能源股份有限公司",
+        "楚能新能源",
+        "楚能",
+        "CORNEX NEW ENERGY CO., LTD.",
+        "Cornex New Energy",
+        "CORNEX",
+        "Chuneng",
+        "Chuneng New Energy",
+        "湖北楚能",
+        "武汉楚能新能源有限公司",
+        "武汉楚能",
+        "孝感楚能新能源创新科技有限公司",
+        "孝感楚能",
+        "宜昌楚能新能源创新科技有限公司",
+        "宜昌楚能",
+        "襄阳楚能",
+        "聚能π",
+        "浸默",
+        "Jinmo",
+        "珠峰",
+        "CORNEX M5",
+        "CORNEX M6",
+        "楚能汽车",
+        "Cornex Auto",
+        "恒信汽车集团",
+        "Hengxin Automobile Group",
+        "代德明",
+        "Dai Deming"
+      ],
+      "domains": [
+        "cornexbattery.com",
+        "cn-ne.cn",
+        "cn-np.com"
+      ],
+      "srcTotal": 139,
+      "srcFirstPct": 53,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        }
+      ]
     }
   ]
 }

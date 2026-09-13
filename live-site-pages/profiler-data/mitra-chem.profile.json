@@ -1,0 +1,1136 @@
+{
+ "schemaVersion": 7,
+ "slug": "mitra-chem",
+ "name": "Mitra Future Technologies, Inc.",
+ "shortName": "Mitra Chem",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.mitrachem.com",
+ "headquarters": "1245 Terra Bella Avenue, Mountain View, California, United States (the address on all four SEC Form D filings, 2021–2025, and on the DOE award record; a 17,000 sq ft cathode and cell R&D facility per the company, plus a Seoul office opened January 2024)",
+ "founded": 2021,
+ "employees": "Not published by the company. Aggregator estimate 58 (MyVisaJobs, 2026); two open roles in Mountain View on the company site in September 2026; the Muskegon plant is guided at up to 150 permanent jobs",
+ "ownership": {
+  "type": "private",
+  "ticker": "Private (VC-backed; SEC CIK 0001887663, Form D filer only)"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Mitra Chem is the last DOE-funded lithium-iron-phosphate cathode plant left in the United States pipeline after ICL cancelled its St. Louis project in November 2025 — and, as of 12 September 2026, it has not broken ground, has published nothing on its own channels since 20 September 2024, sold USD 15.6 million of a USD 50 million round in mid-2025 with no closing on record, and now carries a plant cost the State of Michigan puts at over USD 370 million against USD 150 million of public grants. Groundbreaking is guided to early 2027 and commissioning to 2028, a year later than the 2024 guidance.\n\n**BACKGROUND.** Mitra Future Technologies, Inc., trading as Mitra Chem, is a Delaware corporation founded in 2021 in Mountain View, California by Vivas Kumar (formerly Tesla's battery-materials supply chain and Benchmark Mineral Intelligence), Chirranjeevi Gopal and Stanford professor William Chueh. It develops lithium iron phosphate (LFP) and lithium manganese iron phosphate (LMFP) cathode active material — the powder that is roughly a third of a storage cell's cost and is made almost entirely in China — using an AI-driven process-development platform it says compresses lab-to-production time by 90%. Financing per SEC Form D: a USD 20 million Series A (2021, Social Capital), a USD 60 million Series B led by GM (USD 27.05 million sold at the July 2023 filing; 'nearly USD 80 million' cumulative by March 2024 per the company) and a 2025 round of USD 49,999,996 with USD 15,599,991 sold at 9 June 2025, into which L&F Co. of Korea put USD 10 million for a reported 3.3%. The US Department of Energy obligated a USD 100 million Manufacturing and Energy Supply Chains grant on 16 December 2024 for a 15,000 tonne-per-year LFP plant at Egelston Township, Muskegon County, Michigan, co-located with Sun Chemical; USD 2.25 million had been outlaid by July 2026 and the State of Michigan says the award was 'publicly confirmed as retained in May 2026'. Michigan's own support rose from USD 25 million to USD 50 million in August 2026. No revenue, customer or product specification has ever been disclosed; the 2026 website repositions the company as an 'AI-native materials scale-up platform' whose first product is LFP.",
+ "ecosystemRole": "Mitra Chem sits one layer above every cell maker in this corpus, in the same upstream position as Albemarle on lithium and NOVONIX on anode material: it would sell the LFP cathode active material that a storage cell is built from, not the cell. Its relevance to the AI-data-centre storage buyer is the prohibited-foreign-entity material-assistance test that took effect on 1 January 2026, which makes non-Chinese cathode the binding constraint on a credit-eligible battery — the State of Michigan now describes the Muskegon plant as the first large-scale domestic producer of FEOC-free LFP fully compliant with NDAA supply-chain requirements. That position is prospective: the company has shipped multi-ton samples and named no customer, and the plant that would make it a supplier is unbuilt.",
+ "productsAndServices": [
+  {
+   "name": "LFP cathode active material (the first product)",
+   "category": "Cathode active material — lithium iron phosphate",
+   "description": "High-press-density lithium iron phosphate cathode powder for energy-storage and EV cells, developed at the Mountain View facility and produced at multi-ton sample scale on a rented manufacturing line since February 2024. The company's own claim is a 1,000-fold scale-up in two years, from 1 kg per day in the lab to 1,000 kg per day in production, at roughly 20 times lower cost than industry incumbents. A precursor-free synthesis route is described in a company case study as cutting raw-material cost by up to 20% and the product design cycle by 75%. The commercial plant is the 15,000 tonne-per-year Muskegon line, unbuilt as of September 2026.",
+   "highlights": [
+    "Multi-ton LFP samples 'that meet industry-leading electric vehicle specifications' synthesised by February 2024 on a rented line, enabling large-scale customer cell builds and long-term cycling qualification (company)",
+    "First commercial-grade LFP samples shipped to 'a tier 1 global battery cell manufacturer' for qualification in September 2022, four months from project start (company)",
+    "'Under qualification with top EV and ESS customers' per the 2026 site; no customer has been named on any channel in five years",
+    "Muskegon plant: 15,000 t/yr by the original 2027 target, 30,000 t/yr in a second phase; DOE award description: 'ESTABLISH 15 KILO TONNES PER ANNUM (KTPA) OF DOMESTIC MANUFACTURING CAPABILITY OF IRA-COMPLIANT LITHIUM IRON PHOSPHATE (LFP) CATHODE ACTIVE MATERIALS'",
+    "State of Michigan (5 August 2026): total investment 'over $370 million', 'up to 150 permanent jobs and 600 construction jobs', 'breaking ground in early 2027, with commissioning in 2028'",
+    "Collection gap: no energy density, cycle life, particle size, press-density value or price has ever been published; the case-study charts show axes without values"
+   ],
+   "positioning": "Against Chinese LFP cathode incumbents (Hunan Yuneng, Dynanonic and the rest of a supply that is close to entirely Chinese), Mitra's proposition is provenance and tax-credit eligibility rather than a demonstrated cost or performance lead — the company's '20× lower cost' claim is unsourced and unaudited. Against North American entrants the field has thinned: ICL discontinued its DOE-backed St. Louis LFP plant on 11 November 2025 after DOE withdrew a USD 197 million grant; Nano One runs a pilot at Candiac, Quebec with an 800 t/yr expansion targeted for 2027 and a 25,000 t/yr Canadian plant at concept stage; L&F, Mitra's own 3.3% shareholder, will supply North American ESS customers from a 30,000 t/yr Korean line from 2026, which competes with the Muskegon plant for the same FEOC-free demand it is supposed to serve.",
+   "soldThrough": "Direct sales to cell manufacturers and automotive OEMs; lithium chemicals procured through TechMet-Mercuria as exclusive procurement agent (2023); iron phosphate precursor to be co-produced with Sun Chemical at the Muskegon site.",
+   "targetSegments": [
+    "Energy-storage cell makers (LFP)",
+    "EV cell makers and OEMs",
+    "Defense and critical-materials buyers (2026 positioning)"
+   ],
+   "roadmap": "Muskegon groundbreaking guided to early 2027 and commissioning to 2028 (State of Michigan, August 2026), a year later than the 'early 2026' groundbreaking guided in September 2024 and two years later than the 'commercial production by 2025' guided in 2022; second phase to 30,000 t/yr undated."
+  },
+  {
+   "name": "LMFP cathode active material",
+   "category": "Cathode active material — lithium manganese iron phosphate",
+   "description": "A manganese-substituted phosphate cathode that raises cell voltage and energy density over plain LFP, developed with General Motors for the Ultium platform under the 2023 Series B. Commercial-grade sample shipments to 'major global EV manufacturers and battery cell makers' began in December 2023; Saint-Gobain Ceramics was named in March 2024 as manufacturing partner for a solvent-free, sulphate-free, waste-water-free process with 'mass production of LMFP as early as 2026'. No evidence of LMFP production, a customer or a plant has appeared since.",
+   "highlights": [
+    "Synthesised 'in six weeks of project kick off' per the company's 2023 World Materials Forum statement",
+    "GM's stated purpose: 'accelerate our work on affordable battery chemistries like LMFP' (GM, August 2023)",
+    "Saint-Gobain Ceramics partnership (7 March 2024): 'solvent-free, sulphate-free and waste-water-free' manufacturing, 'mass production of LMFP as early as 2026' — no follow-up from either party",
+    "Collection gap: manganese fraction, voltage, energy density and cycle data are unpublished"
+   ],
+   "positioning": "LMFP is where Chinese cathode makers (Dynanonic, Hunan Yuneng, Ronbay) and CATL already ship; Mitra's differentiation is the same as for LFP — non-Chinese origin — plus GM's design-in. The GM relationship has produced no reported activity since 2023.",
+   "soldThrough": "Co-development with an OEM (GM) and samples to cell makers; manufacturing partner Saint-Gobain Ceramics.",
+   "targetSegments": [
+    "EV cell makers and OEMs seeking higher energy density than LFP"
+   ],
+   "roadmap": "'Mass production as early as 2026' per the March 2024 Saint-Gobain release; nothing since."
+  },
+  {
+   "name": "Iron phosphate precursor, co-located with Sun Chemical",
+   "category": "Cathode precursor — iron phosphate",
+   "description": "A joint development with Sun Chemical (DIC Corporation's US subsidiary) to build 'the first iron phosphate mass production capability in North America', co-located with Mitra's LFP production at the Muskegon site that Sun Chemical owns. Proof of concept was achieved by June 2024 and a 'waste-free process' was being optimised. Sun Chemical brings 'existing regulatory permitting, and extensive U.S. manufacturing infrastructure' but has disclosed no equity in the project.",
+   "highlights": [
+    "Joint development agreement announced 11–13 June 2024; Sun Chemical's CTO: 'cost effective LFP intermediates from locally sourced raw materials'",
+    "Sun Chemical is the site host at 4925 Evanston Avenue, Egelston Township (WOOD-TV via Yahoo, September 2024) and a named partner in the DOE award",
+    "Precursor-free LFP synthesis (a separate company case study) would reduce the plant's dependence on this intermediate"
+   ],
+   "positioning": "Domestic iron phosphate closes the one gap a US LFP plant cannot import around under the material-assistance rules; Section 301 modifications in 2024 covered iron phosphate and phosphoric acid from China.",
+   "soldThrough": "Captive supply into Mitra's own LFP line; no merchant sales announced.",
+   "targetSegments": [
+    "Mitra's own Muskegon LFP line"
+   ],
+   "roadmap": "Tied to the Muskegon plant schedule (groundbreaking early 2027)."
+  },
+  {
+   "name": "The Acceleration Platform and 'The Foundry' (AI-native materials scale-up)",
+   "category": "Process-development platform and services",
+   "description": "The company's 2026 website reframes Mitra Chem as 'the AI-native materials scale-up platform' and 'an AI-enabled innovator and manufacturer of materials critical for energy, AI, and defense', with LFP as its first product. The platform layers AI agents (named Sparky, Researcher Zero, Swefan and Pierre), specialised machine-learning models, a design studio and data infrastructure over instrumented pilot lines, and is described as deployed 'across the full TRL 3 → 8 workflow'. 'The Foundry' offers shared pilot equipment across chemistries, a process knowledge base and 'AI Super Engineers' to be 'deployed to customer factories', with the best programmes graduating 'into commercial JVs'.",
+   "highlights": [
+    "Company case-study claims: '25× acceleration in identifying failing formulations', '30%' shorter iteration cycles, '100× speedup on data access', '75% time reduction in product design cycle' — all unaudited and undated",
+    "Four stated demand drivers on the 2026 site: LFP for Western storage OEMs, hyperscaler power and compute, physical AI and humanoid robotics under rare-earth export controls, and critical-materials reshoring for defense",
+    "The 2021 description ('the first North American lithium-ion battery materials product company') and the 2026 description ('scale-up platform… for energy, AI, and defense') are the same company two funding narratives apart",
+    "No customer, contract or revenue for platform services has been disclosed"
+   ],
+   "positioning": "This is a services-and-platform framing that widens the addressable story beyond one cathode plant; it competes for attention with materials-informatics companies rather than cathode makers, and nothing in the public record shows it earning revenue.",
+   "soldThrough": "Not disclosed — described as programmes and JVs with 'equipment makers, R&D companies, and chemical majors'.",
+   "targetSegments": [
+    "Critical-materials developers seeking scale-up",
+    "Defense and AI-hardware supply chains (company framing)"
+   ],
+   "roadmap": "None published."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "LFP cathode active material — published claims (no numeric material specifications exist)",
+   "specs": [
+    {
+     "band": "Scale",
+     "label": "Scale-up claim",
+     "value": "1,000× scale-up in 2 years - from 1 kg/day in the lab to 1,000 kg/day in production"
+    },
+    {
+     "band": "Scale",
+     "label": "Cost claim",
+     "value": "at roughly 20× lower cost than industry incumbents"
+    },
+    {
+     "band": "Scale",
+     "label": "Sample scale reached",
+     "value": "multi-ton Lithium Iron Phosphate (LFP) samples that meet industry-leading electric vehicle (EV) specifications (February 2024)"
+    },
+    {
+     "band": "Process",
+     "label": "Precursor-free route",
+     "value": "Same target product, new process route, up to 20% raw material cost reduction"
+    },
+    {
+     "band": "Process",
+     "label": "Design-cycle claim",
+     "value": "75% time reduction in product design cycle compared to the traditional route"
+    },
+    {
+     "band": "Process",
+     "label": "Product attribute named",
+     "value": "high press density LFP"
+    },
+    {
+     "band": "Qualification",
+     "label": "Customer status",
+     "value": "Industry-leading spec, under qualification with top EV and ESS customers"
+    },
+    {
+     "band": "Qualification",
+     "label": "First sample shipment",
+     "value": "commercial-grade LFP materials to a tier 1 global battery cell manufacturer for customer approval and qualification (September 2022)"
+    }
+   ],
+   "notes": "Every value above is the company's own wording. Energy density (Wh/kg), cycle life, D50 particle size, tap or press density values, impurity limits and pricing have never been published on any company channel; the case-study pages show chart axes ('Capacity Retention / Cycle Index', 'Press Density', '1C Capacity', 'Crystallite Size (nm)') with no values. Treat the product as pre-commercial."
+  },
+  {
+   "product": "AmPLIFI — the Muskegon LFP plant (DOE award DEMS0000108)",
+   "specs": [
+    {
+     "band": "Capacity",
+     "label": "Phase 1",
+     "value": "15,000 tonnes of new LFP per year"
+    },
+    {
+     "band": "Capacity",
+     "label": "Phase 2",
+     "value": "30,000 tonnes per year"
+    },
+    {
+     "band": "Capacity",
+     "label": "Company framing",
+     "value": "nearly double the U.S.'s LFP production capacity"
+    },
+    {
+     "band": "Site",
+     "label": "Location",
+     "value": "Egelston Township (Muskegon County); place of performance MUSKEGON, MI 49442"
+    },
+    {
+     "band": "Site",
+     "label": "Host",
+     "value": "Sun Chemical property, 4925 Evanston Ave. (WOOD-TV via Yahoo, September 2024)"
+    },
+    {
+     "band": "Funding",
+     "label": "DOE obligation",
+     "value": "$100,000,000 signed 2024-12-16 (NEW); modifications 2025-05-13 and 2026-05-13 at $0"
+    },
+    {
+     "band": "Funding",
+     "label": "DOE outlays",
+     "value": "$2,248,131.67 through July 2026"
+    },
+    {
+     "band": "Funding",
+     "label": "Non-federal share on the award record",
+     "value": "$260,257,583"
+    },
+    {
+     "band": "Funding",
+     "label": "Period of performance (as recorded)",
+     "value": "2025-01-01 to 2026-06-30"
+    },
+    {
+     "band": "Funding",
+     "label": "State of Michigan",
+     "value": "$50 million from the Make It in Michigan Competitiveness Fund (August 2026; $25 million at the September 2024 selection)"
+    },
+    {
+     "band": "Economics",
+     "label": "Total investment",
+     "value": "over $370 million (State of Michigan, August 2026); '$125 million project' (Area Development, September 2024)"
+    },
+    {
+     "band": "Economics",
+     "label": "Jobs",
+     "value": "up to 150 permanent jobs and 600 construction jobs"
+    },
+    {
+     "band": "Schedule",
+     "label": "Groundbreaking",
+     "value": "anticipates breaking ground in early 2027, with commissioning in 2028 (August 2026); 'early 2026' (September 2024)"
+    }
+   ],
+   "notes": "The award record's period of performance ends 2026-06-30 and no extension was visible when the record was last modified on 2026-08-14; the State of Michigan's 5 August 2026 release treats the grant as live and 'retained'. The 2026-06-30 date most plausibly marks a budget period rather than the project — an inference, not a documented fact. Readable Egelston Township planning minutes for 2025–2026 contain no site-plan item for the parcel."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-14",
+   "category": "financial",
+   "headline": "DOE award record for the Muskegon plant last modified; cumulative outlays USD 2,248,131.67 against the USD 100 million obligation",
+   "read": "The federal money is real and moving, at about 2% — a signed grant agreement, not a headline selection; the recorded period of performance had ended six weeks earlier with no extension yet visible.",
+   "source": "https://www.usaspending.gov/award/ASST_NON_DEMS0000108_8900"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "project",
+   "headline": "State of Michigan: Mitra Chem to build the Egelston Township plant at over USD 370 million with USD 50 million of state support, groundbreaking early 2027 and commissioning 2028; DOE award 'publicly confirmed as retained in May 2026'",
+   "read": "The only 2026 statement on the project's status from any US party, and it comes from the state rather than the company: cost has roughly tripled from the USD 125 million reported in 2024, state support has doubled, and the schedule has slipped a year.",
+   "source": "https://www.michiganbusiness.org/press-releases/2026/08/fairlife-expansion-highlights-economic-growth/"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "regulatory",
+   "headline": "DOE modification 0002 to award DEMS0000108, retitled under the Infrastructure Investment and Jobs Act, USD 0 change",
+   "read": "Coincides with the month the State of Michigan says the award was confirmed as retained, after DOE told Congress in April that it would keep or modify 1,951 of 2,271 reviewed awards.",
+   "source": "https://www.usaspending.gov/award/ASST_NON_DEMS0000108_8900"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "partnership",
+   "headline": "Asia Business Daily: L&F to build a 15,000-tonne ESS-LFP cathode line at Muskegon with Mitra Chem, construction in 2026 and mass production in 2028; L&F says 'no specific details have been finalized'",
+   "read": "Korean press keeps assigning the plant to L&F; every US record assigns it to Mitra Chem — the structure is unresolved, and L&F's own denial is the more reliable statement.",
+   "source": "https://www.asiae.co.kr/en/article/2026011508400927034"
+  },
+  {
+   "date": "2025-12-11",
+   "category": "partnership",
+   "headline": "Seoul Economic Daily: L&F to build an LFP cathode plant in Michigan with Mitra Chem, groundbreaking in 2026, ownership 'not disclosed'; L&F sold 1 million treasury shares for KRW 128.1 billion",
+   "read": "L&F raising capital while Muskegon is described as its project is the strongest signal that the Korean partner, not the US start-up, may end up funding the line.",
+   "source": "https://en.sedaily.com/finance/2025/12/11/lf-to-build-lfp-cathode-plant-in-michigan-amid-surging"
+  },
+  {
+   "date": "2025-11-11",
+   "category": "market",
+   "headline": "ICL Group discontinues its US LFP cathode plant in St. Louis after DOE withdrew a USD 197 million grant, citing weak EV demand and regulatory change",
+   "read": "The only other DOE-funded US LFP cathode project is dead, leaving Mitra Chem alone in the pipeline — and its stated reasons apply to Mitra's market too.",
+   "source": "https://www.tipranks.com/news/company-announcements/icl-group-discontinues-lfp-cathode-activities-amid-funding-cuts"
+  },
+  {
+   "date": "2025-10-21",
+   "category": "policy",
+   "headline": "DOE cancels USD 718 million of battery-manufacturing awards (ICL, Ascend Elements, Anovion, ABTC, LuxWall); Mitra Chem's award is not on any 2025 cancellation list",
+   "read": "Survival through the cancellation rounds is the one clean positive in the 2025–2026 record; it is also consistent with a grant that had barely disbursed.",
+   "source": "https://www.utilitydive.com/news/department-energy-project-grants-cancelled-battery-manufacturing-trump/803347/"
+  },
+  {
+   "date": "2025-09-02",
+   "category": "other",
+   "headline": "CEO Vivas Kumar on the We The Builders podcast: company 'valued at $250M', 'raised $100M in equity', '$150M+ in grants'",
+   "read": "The last public appearance found for any Mitra Chem executive; the figures are the host's framing and do not match the SEC record (USD 62.6 million sold across four Form Ds).",
+   "source": "https://wethebuilders.us/p/vivas-kumar-building-mitra-chem-and"
+  },
+  {
+   "date": "2025-07-11",
+   "category": "partnership",
+   "headline": "L&F: North American LFP production 'will likely proceed through equity investment with Mitra Chem; specific details remain under discussion'; new Korean LFP subsidiary at 60,000 t/yr",
+   "read": "L&F's route to North America runs first through Korea and only 'likely' through Mitra — the partner is hedged.",
+   "source": "https://www.thelec.kr/news/articleView.html?idxno=38120"
+  },
+  {
+   "date": "2025-06-09",
+   "category": "financial",
+   "headline": "Form D: USD 49,999,996 equity offering, USD 15,599,991 sold to four investors, first sale 23 May 2025; TechCrunch reports the USD 50 million target and gets no reply from the company",
+   "read": "Roughly a third of the target sold at filing and no amendment since; the raise the plant needs is measured in hundreds of millions.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1887663/000188766325000002/primary_doc.xml"
+  },
+  {
+   "date": "2025-03-20",
+   "category": "financial",
+   "headline": "L&F Co. (KOSDAQ: 066970) invests KRW 14.5 billion (USD 10 million) in Series B-1 preferred shares for a reported 3.3% stake, after January due diligence of Mitra's technology and LFP site",
+   "read": "A Korean cathode incumbent buying a small stake and a 'foothold' for US production: validation of the site, and a partner whose own Korean capacity can substitute for it.",
+   "source": "https://www.landf.co.kr/company/hong_7.html?n=&board_db=news&num=206&page=1&action=read&column=&keyword="
+  },
+  {
+   "date": "2024-12-16",
+   "category": "financial",
+   "headline": "DOE obligates the USD 100 million AmPLIFI grant (DEMS0000108) to Mitra Future Technologies, Inc.; period of performance from 1 January 2025",
+   "read": "Selection became a signed agreement before the change of administration, which is why it survived the 2025 reviews as an obligated award rather than a pending one.",
+   "source": "https://www.usaspending.gov/award/ASST_NON_DEMS0000108_8900"
+  },
+  {
+   "date": "2024-09-20",
+   "category": "financial",
+   "headline": "DOE selects Mitra Chem for up to USD 100 million and Michigan adds up to USD 25 million for a 15,000 t/yr LFP cathode plant at Muskegon with Sun Chemical; groundbreaking guided to early 2026",
+   "read": "The company's last press release to date, and the framing every later statement has slipped from.",
+   "source": "https://www.mitrachem.com/post/us-department-of-energy-selects-mitra-chem-for-100-million-award-for-domestic-battery-manufacturing"
+  },
+  {
+   "date": "2024-06-13",
+   "category": "partnership",
+   "headline": "Joint development with Sun Chemical for the first North American iron phosphate mass production, co-located with Mitra's LFP line",
+   "read": "Closes the precursor gap a domestic LFP plant would otherwise import around, and brings a permitted industrial site.",
+   "source": "https://www.mitrachem.com/post/mitra-chem-and-sun-chemical-announce-joint-development-of-united-states-iron-phosphate-with-lithium-iron-phosphate-lfp-co-location"
+  },
+  {
+   "date": "2024-05-13",
+   "category": "financial",
+   "headline": "Alpha Wave Ventures invests in the Series B; Elan Frantz joins the board; company targets 'mass production of their iron-rich cathodes by 2026'",
+   "read": "The last named investor before the 2025 round; the 2026 target has since moved to 2028.",
+   "source": "https://www.mitrachem.com/post/alpha-wave-ventures-adds-elan-frantz-to-board"
+  },
+  {
+   "date": "2024-03-26",
+   "category": "leadership",
+   "headline": "Denise Gray (ex-LG Energy Solution Michigan, GM, National Academy of Engineering) joins the board; company states 'nearly $80 million' raised",
+   "read": "A Michigan battery-industry board seat six months before the Michigan plant announcement.",
+   "source": "https://www.mitrachem.com/post/https-www-prnewswire-com-news-releases-mitra-chem-adds-denise-gray-to-board-of-directors-302099267-html"
+  },
+  {
+   "date": "2024-03-07",
+   "category": "partnership",
+   "headline": "Saint-Gobain Ceramics named manufacturing partner for LMFP with a solvent-free, waste-water-free process; 'mass production of LMFP as early as 2026'",
+   "read": "The LMFP line's only manufacturing route, and neither party has mentioned it since.",
+   "source": "https://www.prnewswire.com/news-releases/mitra-chem-and-saint-gobain-ceramics-enter-a-strategic-partnership-to-commercialize-ira-compliant-lmfp-cathodes-with-a-low-wastewater-manufacturing-process-302083244.html"
+  },
+  {
+   "date": "2024-02-12",
+   "category": "product-launch",
+   "headline": "Multi-ton LFP cathode active material synthesised on a rented manufacturing line; commercial samples shipping for customer cell builds",
+   "read": "The largest production scale the company has disclosed — tonnes, against a plant planned in tens of thousands of tonnes.",
+   "source": "https://www.mitrachem.com/post/multi-ton-lfp-cam-production"
+  },
+  {
+   "date": "2024-01-24",
+   "category": "corporate",
+   "headline": "First international office opened in Seoul; Mountain View facility described as 17,000 sq ft",
+   "read": "The Korean office preceded L&F's investment by fourteen months — the customer and partner base is Korean cell makers as much as US ones.",
+   "source": "https://www.prnewswire.com/news-releases/mitra-chem-expands-global-presence-launches-first-international-office-in-seoul-to-prioritize-customer-reach-302042566.html"
+  },
+  {
+   "date": "2023-12-07",
+   "category": "product-launch",
+   "headline": "Commercial-grade LMFP cathode sample shipments begin to global EV makers and cell makers",
+   "read": "The GM-driven chemistry reached sample stage within four months of the Series B close.",
+   "source": "https://www.mitrachem.com/post/mitra-chem-announces-commercial-lmfp-cathode-active-material-sample-shipments-have-begun-to-global-customers"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "novonix",
+   "type": "other",
+   "status": "active",
+   "note": "The corpus's other DOE-funded, pre-revenue US battery-materials entrant — synthetic graphite anode in Chattanooga against LFP cathode in Muskegon — occupying the same upstream-materials position on the cell segment.",
+   "context": "The two companies do not transact; the link is structural. Both were selected in DOE's Manufacturing and Energy Supply Chains battery grant rounds (NOVONIX in 2022, Mitra Chem in September 2024), both have shipped samples without commercial volume, and both sell the FEOC-free provenance that the prohibited-foreign-entity material-assistance test made valuable from 1 January 2026. The contrast is the record: NOVONIX has a built plant with binding offtakes from Panasonic Energy and PowerCo, while Mitra Chem's plant is unbuilt and its customers unnamed. DOE's October 2025 cancellation of Anovion's USD 117 million synthetic-graphite award shows the anode side of this position was not spared by the 2025 reviews either.",
+   "source": "https://www.utilitydive.com/news/department-energy-project-grants-cancelled-battery-manufacturing-trump/803347/"
+  },
+  {
+   "slug": "lg-energy-solution",
+   "type": "other",
+   "status": "active",
+   "note": "LG Energy Solution's Holland, Michigan LFP storage-cell plant, producing since June 2025 and sourcing materials 'from outside China', is the nearest concrete demand for the cathode Muskegon would make; no supply relationship is documented.",
+   "context": "Canary Media reported in June 2025 that LGES's 16.5 GWh Holland plant was making LFP cells for stationary storage with battery materials sourced from outside China. Muskegon is about 90 miles from Holland and Mitra Chem's board includes Denise Gray, formerly president of LG Energy Solution Michigan's tech centre. Nothing in either company's record names the other as customer or supplier; the link is proximity and fit, recorded here so the reader does not infer a contract the sources do not contain.",
+   "source": "https://www.canarymedia.com/articles/energy-storage/lg-michigan-lfp-battery-factory"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The prohibited-foreign-entity rules enacted in July 2025 apply a material-assistance cost ratio to projects beginning construction from 2026 — 55% non-PFE content for energy storage under 48E in 2026 rising to 75% after 2029, and 60% rising to 85% for 45X manufacturers — with Treasury's interim guidance in Notice 2026-15 of 12 February 2026. Cells are roughly half of a storage system's equipment cost and cathode is the largest cost inside the cell, so a non-Chinese LFP cathode source is the scarce input the rule creates demand for. Mitra Future Technologies is a US-owned Delaware corporation with US, Korean and Swiss investors and is not a PFE.",
+   "mitigation": "The State of Michigan describes the Muskegon plant as producing 'Foreign Entity of Concern-free lithium iron phosphate (LFP) cathode material' and 'the first large scale domestic producer of these materials fully compliant with Department of War supply chain requirements included in the National Defense Authorization Act' (5 August 2026).",
+   "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Section 45X pays a credit equal to 10% of the production cost of electrode active materials, transferable, with a phase-down for critical minerals from 2031 and the PFE tests applied from 2026. Mitra Chem would qualify once it produces cathode in the United States; until Muskegon is built the credit is prospective.",
+   "source": "https://www.crux.com/insights/45x-tax-credit"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "exposure": "The State of Michigan's August 2026 release positions the plant's output as 'fully compliant with Department of War supply chain requirements included in the National Defense Authorization Act', and the company's 2026 site lists defense among four demand drivers; In-Q-Tel invested in the 2023 Series B. No defense contract or customer has been disclosed.",
+   "source": "https://www.michiganbusiness.org/press-releases/2026/08/fairlife-expansion-highlights-economic-growth/"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The Section 301 rate on Chinese non-EV lithium-ion batteries rose from 7.5% to 25% on 1 January 2026, taking stacked duties on Chinese storage batteries into the 50–58% range, and the 2024 modifications also covered iron phosphate and phosphoric acid. Chinese cathode active material itself has no dedicated AD/CVD case. The tariffs raise the landed cost of the imported cells Muskegon's cathode would displace without touching the cathode powder directly.",
+   "source": "https://www.morganlewis.com/pubs/2026/03/tariffs-and-trade-risk-in-energy-storage-projects-2026-and-beyond"
+  },
+  {
+   "regime": "DOE MESC battery-manufacturing grants",
+   "status": "in-effect",
+   "effectiveDate": "2024-12-16",
+   "exposure": "Award DEMS0000108 (USD 100 million) was obligated on 16 December 2024, survived the May and October 2025 cancellation rounds that terminated USD 718 million of peer battery awards including ICL's USD 197 million LFP cathode grant, was modified on 13 May 2026, and is described by the State of Michigan as 'publicly confirmed as retained in May 2026'. Only USD 2.25 million had been outlaid by July 2026 and the recorded period of performance ended 30 June 2026 without a visible extension.",
+   "source": "https://www.usaspending.gov/award/ASST_NON_DEMS0000108_8900"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Vivas (Vivaswath) Kumar",
+   "title": "Chief Executive Officer, Co-Founder and Director",
+   "photo": "images/execs/mitra-chem-kumar.jpg",
+   "background": [
+    "Co-founded Mitra Chem in 2021 and signs every Form D as Chief Executive Officer; the company's only public voice, last heard on a podcast in September 2025",
+    "Principal — Benchmark Mineral Intelligence, advising on battery raw materials",
+    "Senior manager, Battery Team — Tesla, 'lead commercial negotiator for strategic contracts' and manager of the battery-material supply chain",
+    "MBA — Stanford Graduate School of Business; subject of Stanford GSB case E890 on the US-versus-Korea plant decision"
+   ]
+  },
+  {
+   "name": "Chirranjeevi Gopal",
+   "title": "Chief Technology Officer and Co-Founder",
+   "photo": "images/execs/mitra-chem-gopal.jpg",
+   "background": [
+    "Co-founder (2021); quoted as CTO on the March 2024 Saint-Gobain Ceramics LMFP partnership",
+    "Postdoctoral researcher in William Chueh's group at Stanford University before founding the company"
+   ]
+  },
+  {
+   "name": "William (Will) Chueh",
+   "title": "Director, Co-Founder and Chief Scientific Advisor",
+   "photo": "images/execs/mitra-chem-chueh.jpg",
+   "background": [
+    "Professor of Materials Science and Engineering — Stanford University; the machine-learning process behind the company's platform is attributed to his group",
+    "Director on the 2023 and 2025 Form D filings"
+   ]
+  },
+  {
+   "name": "Vikas Kante",
+   "title": "Chief Financial Officer",
+   "photo": "images/execs/mitra-chem-kante.jpg",
+   "background": [
+    "Listed on the company's leadership page; no appointment announcement or prior-role disclosure on any company channel"
+   ]
+  },
+  {
+   "name": "Ross Kirschner",
+   "title": "Chief Legal Officer",
+   "photo": "images/execs/mitra-chem-kirschner.jpg",
+   "background": [
+    "Joined as General Counsel in September 2023; promotion to CLO undated",
+    "Led the legal department's global special investigations team — Meta/Facebook",
+    "Counsel — WilmerHale, Washington, D.C.; counsel to the US Senate Permanent Subcommittee on Investigations",
+    "University of Michigan; University of Pennsylvania Law School"
+   ]
+  },
+  {
+   "name": "Xiaofei Ye",
+   "title": "Chief Industrialization Engineer",
+   "photo": "images/execs/mitra-chem-ye.jpg",
+   "background": [
+    "Listed on the company's leadership page; no company-published biography"
+   ]
+  },
+  {
+   "name": "Scott Morehouse",
+   "title": "Head of Manufacturing",
+   "photo": "images/execs/mitra-chem-morehouse.jpg",
+   "background": [
+    "Listed on the company's leadership page; no company-published biography"
+   ]
+  },
+  {
+   "name": "Heather Medina",
+   "title": "Head of People & Grant Administration",
+   "photo": "images/execs/mitra-chem-medina.jpg",
+   "background": [
+    "Listed on the company's leadership page; the title pairs human resources with administration of the DOE and Michigan grants"
+   ]
+  },
+  {
+   "name": "Denise Gray",
+   "title": "Independent Director",
+   "photo": "images/execs/mitra-chem-gray.jpg",
+   "background": [
+    "Joined the board 26 March 2024",
+    "President — LG Energy Solution Michigan Inc. Tech Center",
+    "Three decades at General Motors; AVL List (Graz); Atieva (Redwood City)",
+    "Member — US National Academy of Engineering; Secretary of Energy Advisory Board"
+   ]
+  },
+  {
+   "name": "Will Drewery",
+   "title": "Independent Director",
+   "photo": "images/execs/mitra-chem-drewery.jpg",
+   "background": [
+    "Joined the board November 2021; on all four Form D filings",
+    "VP Supply Chain — Astra",
+    "Led Tesla's capital-equipment supply chain team for global manufacturing expansion"
+   ]
+  },
+  {
+   "name": "Elan Frantz",
+   "title": "Director (Alpha Wave Global, Entrepreneur in Residence)",
+   "photo": "images/execs/mitra-chem-frantz.jpg",
+   "background": [
+    "Joined the board 13 May 2024 with Alpha Wave Ventures' Series B investment; on the 2025 Form D"
+   ]
+  },
+  {
+   "name": "Chamath Palihapitiya",
+   "title": "Director per the June 2025 Form D; absent from the 2026 leadership page",
+   "background": [
+    "Founder and CEO — Social Capital, which led the 2021 Series A; joined the board November 2021 and is listed as a director on every Form D including 9 June 2025",
+    "Not shown on the company's current board page — a discrepancy the company has not explained"
+   ]
+  },
+  {
+   "name": "Jiang-Ling Du",
+   "title": "Director per the June 2025 Form D; absent from the 2026 leadership page",
+   "background": [
+    "Appears only as a related person on the 9 June 2025 Form D; no biography or affiliation on any company channel"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "commentary": "No revenue, income or balance-sheet figure has ever been published; every Form D declines to disclose a revenue range and the company has issued no financial statement. The periods below are the funding record as the SEC filings state it, with the company's cumulative claims beside them; aggregator totals conflict (Tracxn USD 95.6 million over four rounds; CB Insights USD 242.53 million including the DOE award; the Stanford GSB case USD 80 million; a September 2025 podcast host USD 100 million of equity and a USD 250 million valuation) and none is used as a figure here. 'Expected' is empty throughout — there is no consensus for a private company, and the company's own funding targets are recorded as targets.",
+  "periods": [
+   {
+    "period": "2025 round (Form D filed 2025-06-09; L&F's 'Series B-1')",
+    "periodType": "other",
+    "periodEnd": "2025-06-09",
+    "commentary": "TechCrunch reported the USD 50 million target the day the notice was filed; no amendment or later Form D exists, so there is no evidence the round closed.",
+    "metrics": [
+     {
+      "name": "Equity offering",
+      "actual": "USD 49,999,996 total offering; USD 15,599,991 sold to 4 investors; USD 34,400,005 remaining; first sale 2025-05-23; Rule 506(b); equity only",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Directors listed: Vivaswath Kumar, Will Drewery, Jiang-Ling Du, Elan Frantz, William Chueh, Denise Gray, Chamath Palihapitiya"
+     },
+     {
+      "name": "L&F Co. investment",
+      "actual": "KRW 14.5 billion (about USD 10 million) in Series B-1 preferred shares — '1.3 million preferred shares' for 'a 3.3% stake' per KED Global",
+      "expected": "",
+      "verdict": "inline",
+      "result": "USD 10 million for 3.3% implies a post-money value near USD 300 million — an arithmetic inference from a third-party stake figure, not a disclosed valuation; a September 2025 podcast host put the valuation at USD 250 million"
+     }
+    ]
+   },
+   {
+    "period": "Series B (Form D filed 2023-07-11; GM-led)",
+    "periodType": "other",
+    "periodEnd": "2023-07-11",
+    "commentary": "The company announced a USD 40 million first close of a USD 60 million round on 16 August 2023 and later investors (TechMet-Mercuria, In-Q-Tel, Alpha Wave) joined without a further Form D.",
+    "metrics": [
+     {
+      "name": "Equity offering",
+      "actual": "USD 59,999,968 total offering; USD 27,050,007 sold to 14 investors at filing; first sale 2023-06-26",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company statement March 2024: 'raised nearly $80 million' cumulative including the Series A"
+     }
+    ]
+   },
+   {
+    "period": "Series A (two Form Ds filed 2021-11-15; Social Capital-led)",
+    "periodType": "other",
+    "periodEnd": "2021-11-15",
+    "commentary": "Two tranches summing to USD 19,999,976 against the announced USD 20 million.",
+    "metrics": [
+     {
+      "name": "Equity offering",
+      "actual": "USD 12,999,986 sold to 6 investors (first sale 2021-06-28) and USD 6,999,990 sold to 3 investors (first sale 2021-09-30)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Participants named by the company: Social Capital (lead), Richard Tsai, Fontinalis Partners, Integrated Energy Materials, Earthshot Ventures, Boutique Venture Partners"
+     }
+    ]
+   },
+   {
+    "period": "Public funding (DOE award DEMS0000108 and State of Michigan)",
+    "periodType": "other",
+    "periodEnd": "2026-08-14",
+    "commentary": "Non-dilutive money is larger than all equity raised, and the award record's non-federal share of USD 260.3 million is the size of the private capital the plant still needs.",
+    "metrics": [
+     {
+      "name": "DOE grant obligation",
+      "actual": "USD 100,000,000 obligated 2024-12-16; outlays USD 2,248,131.67 through July 2026; non-federal share USD 260,257,583; period of performance 2025-01-01 to 2026-06-30 as recorded",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Modified 2025-05-13 and 2026-05-13 at USD 0; 'publicly confirmed as retained in May 2026' per the State of Michigan; not on any 2025 DOE cancellation list"
+     },
+     {
+      "name": "State of Michigan support",
+      "actual": "USD 50 million from the Make It in Michigan Competitiveness Fund (August 2026), up from 'up to $25 million' at the September 2024 selection",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Formal Michigan Strategic Fund board action not readable from this environment; Korean press dates the USD 50 million decision to 8 August 2026"
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that the Muskegon plant is Mitra Chem's project and not L&F's, whatever the Korean headlines say. Basis: the DOE award is obligated to Mitra Future Technologies, Inc. alone with no sub-award; the State of Michigan's 5 August 2026 release names only Mitra as the developer; L&F's own newsroom describes a 3.3% stake and a 'foothold', and L&F told Korean reporters in January and August 2026 that nothing about a US plant is finalized. The 'joint venture' exists in etnews and Newspim, not in any DART filing.",
+  "2. **(High confidence)** We assess that the company has gone quiet on its own channels while its counterparties speak for it, and that this is a risk signal rather than a style. Basis: the last company release is dated 20 September 2024; the 2025 round, the L&F investment, the DOE retention, the doubling of Michigan's support and the 2027–2028 schedule all reached the public through L&F, the State of Michigan, an SEC notice and TechCrunch — which got no reply for comment. A private company whose only near-term catalyst is a groundbreaking, and which has stopped announcing, is one whose status must be re-verified quarterly rather than assumed.",
+  "3. **(Moderate confidence)** We assess that private capital, not the grant, is the binding constraint on the plant. Basis: the stated cost has moved from 'a $125 million project' (2024) to 'over $370 million' (2026), the award record carries a non-federal share of USD 260.3 million, the 2025 round shows USD 15.6 million sold of USD 50 million with no closing on record, and the state doubled its support to USD 50 million in the same release that pushed groundbreaking to 2027. The grant survived every 2025 review precisely because so little of it had been drawn.",
+  "4. **(Moderate confidence)** We assess that ICL's exit is a positional advantage only if Muskegon is built, and that the demand ICL judged too weak is the demand Mitra must sell into. Basis: ICL cited DOE's withdrawal, weak EV demand and regulatory change when it cancelled St. Louis on 11 November 2025; the storage side of that demand is real (LGES Holland producing LFP storage cells with non-Chinese materials since June 2025, Ultium Spring Hill converting lines to LFP storage cells in 2026) but no cell maker has named Mitra as a supplier, and L&F will serve the same FEOC-free demand from Korea from 2026 with the Muskegon line as a later option.",
+  "5. **(Moderate confidence)** We assess that the 2026 repositioning from 'battery materials company' to 'AI-native materials scale-up platform' and 'Foundry' is a fundraising narrative built ahead of the plant financing rather than a change in what the company does. Basis: the site now lists hyperscaler compute, humanoid robotics and defense reshoring as demand drivers alongside LFP, and offers shared pilot lines and AI 'super engineers' to customers, with no disclosed platform customer or revenue; LFP remains 'the first product' and the only one with a plant, a grant and a site.",
+  "6. **(Low confidence)** We assess that GM's role has lapsed from partner to legacy investor. Basis: GM led the 2023 Series B to co-develop LMFP for Ultium, and no GM–Mitra activity, offtake or follow-on has been reported by either party since; the Saint-Gobain Ceramics LMFP manufacturing route promised 'mass production as early as 2026' and has not been mentioned again. Absence of announcement is weak evidence for a company that announces nothing.",
+  "**Collection gaps.** No numeric product specification, price or customer name exists on any channel. The Michigan Strategic Fund board memo behind the USD 50 million and the Egelston Township 2026 planning minutes (scanned images) could not be read, so no local land-use approval is evidenced. The DOE award's period of performance ended 30 June 2026 on the public record with no extension visible at the 14 August 2026 update — an inference that it is a budget period, not the project, is stated as such above. The June 2025 Form D lists Chamath Palihapitiya and Jiang-Ling Du as directors while the 2026 board page omits both, and the company has not explained the difference. Headcount is an aggregator figure. sec.gov answered a declared research User-Agent in this session while efts.sec.gov also answered; businesswire.com, woodtv.com, wzzm13.com, michigan.gov and the MSF board-packets page were blocked.",
+  "**Indicators to watch.** *Early 2027 — Muskegon groundbreaking:* a ceremony, a township site-plan approval or a DOE NEPA record would confirm Judgment 3's capital gap has been closed; a second slip would indicate it has not. *Any Form D or Form D/A after 9 June 2025:* the 2025 round closing at or near USD 50 million, or a larger round, is the first observable financing event. *A DOE award modification extending the period of performance past 30 June 2026:* absent by mid-2027, the 'retained' status needs re-reading. *A DART filing by L&F naming a US entity, a capital commitment or a stake above 3.3%:* would move Judgment 1 from 'Mitra's project' toward a joint venture. *A named offtake or qualification result from a cell maker (LGES Holland, Ultium Cells, a US integrator):* the first commercial evidence in five years. *Any post on mitrachem.com/news:* the end of the silence recorded in Judgment 2."
+ ],
+ "sources": [
+  {
+   "label": "StockTitan — Nano One advances development-company project for a 25,000 t/yr Canadian LFP cathode plant",
+   "url": "https://www.stocktitan.net/news/NNOMF/nano-one-advances-development-company-project-to-build-lfp-cathode-ie3k23p57end.html",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "L&F Co. newsroom — Q2 2026 results, North American ESS LFP supply from Q3 (Korean line)",
+   "url": "https://www.landf.co.kr/company/hong_7.html?n=&board_db=news&num=279&page=1&action=read&column=&keyword=",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "BusinessPost (Korea) — L&F–Mitra Chem 'joint plant', USD 370M / 30,000 t, MIMCF USD 50M; L&F: investment size and form not finalized",
+   "url": "https://www.businesspost.co.kr/BP?command=article_view&num=446011",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Crux — Section 45X advanced manufacturing production credit guide (electrode active materials, PFE tests)",
+   "url": "https://www.crux.com/insights/45x-tax-credit",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "energy.gov — MESC Battery Manufacturing and Recycling Grants page (Round 3 selections, no LFP cathode project)",
+   "url": "https://www.energy.gov/mesc/battery-manufacturing-and-recycling-grants",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "usaspending.gov — award DEMS0000108 to Mitra Future Technologies, Inc. (USD 100M obligated 2024-12-16; outlays USD 2,248,131.67; record modified 2026-08-14)",
+   "url": "https://www.usaspending.gov/award/ASST_NON_DEMS0000108_8900",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "CBC News (Korea) — L&F Q2 2026 results",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=595355",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "State of Michigan / MEDC — Gov. Whitmer release: Mitra Chem to build the Egelston Township LFP cathode plant (over USD 370M; USD 50M MIMCF; groundbreaking early 2027, commissioning 2028; DOE award retained May 2026)",
+   "url": "https://www.michiganbusiness.org/press-releases/2026/08/fairlife-expansion-highlights-economic-growth/",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Foley Hoag — the prohibited-foreign-entity (FEOC) rules and battery storage: material-assistance thresholds",
+   "url": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/",
+   "date": "2026-07"
+  },
+  {
+   "label": "L&F Co. newsroom — Coreshell LFP supply contract under NDAA terms",
+   "url": "https://www.landf.co.kr/company/hong_7.html?n=&board_db=news&num=276&page=1&action=read&column=&keyword=",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "usaspending.gov — transactions for award DEMS0000108 (NEW 2024-12-16; REVISION 2025-05-13; REVISION 2026-05-13 retitled IIJA)",
+   "url": "https://api.usaspending.gov/api/v2/transactions/",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "CATF — DOE circulates latest retain/modify awards list",
+   "url": "https://www.catf.us/2026/05/continued-uncertainty-department-energy-circulates-latest-retain-modify-awards-list/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Newspim — Daishin Securities morning note: L&F–Mitra Chem 'JV' agreed March 2025; FEOC-free positioning",
+   "url": "https://www.newspim.com/news/view/20260506000114",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "DOE Alumni Network — the DOE's partial grant retention (April 2026 list to Congress)",
+   "url": "https://doealumninetwork.substack.com/p/the-does-partial-grant-retention",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "Latitude Media — DOE sends a list of retained projects to Congress (1,951 of 2,271)",
+   "url": "https://www.latitudemedia.com/news/scoop-doe-sends-a-list-of-retained-projects-to-congress/",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Latitude Media — most of the projects DOE canceled are still in limbo",
+   "url": "https://www.latitudemedia.com/news/exclusive-most-of-the-projects-doe-canceled-are-still-in-limbo/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "Morgan Lewis — tariffs and trade risk in energy-storage projects, 2026 and beyond (Section 301 stacking; no AD/CVD on cathode active material)",
+   "url": "https://www.morganlewis.com/pubs/2026/03/tariffs-and-trade-risk-in-energy-storage-projects-2026-and-beyond",
+   "date": "2026-03"
+  },
+  {
+   "label": "CurrentCells — American Battery Factory 4.5 GWh binding offtake; LFP precursor from First Phosphate",
+   "url": "https://currentcells.com/article/american-battery-factory-45gwh-offtake-arizona-lfp-2026/",
+   "date": "2026-03"
+  },
+  {
+   "label": "TipRanks — Nano One targets 2026 LFP deals as Candiac plant ramps",
+   "url": "https://www.tipranks.com/news/company-announcements/nano-one-targets-2026-lfp-deals-as-candiac-plant-ramps-and-balance-sheet-strengthens",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "FAS — one year in: DOE awards cancelled, programs stalled (USD 718M of battery awards)",
+   "url": "https://fas.org/publication/doe-awards-cancelled-programs-stalled/",
+   "date": "2026-01-21"
+  },
+  {
+   "label": "Asia Business Daily — exclusive: L&F to build a 15,000-ton LFP cathode plant in Muskegon with Mitra Chem; L&F: no specific details finalized",
+   "url": "https://www.asiae.co.kr/en/article/2026011508400927034",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Stanford GSB — case E890, 'Mitra Chem: Charging Ahead with Battery Materials Manufacturing' (USD 80M raised; US-versus-Korea plant decision)",
+   "url": "https://www.gsb.stanford.edu/faculty-research/case-studies/mitra-chem-charging-ahead-battery-materials-manufacturing",
+   "date": "2025"
+  },
+  {
+   "label": "Seoul Economic Daily — L&F to build LFP cathode plant in Michigan amid surging demand; groundbreaking 2026, ownership not disclosed",
+   "url": "https://en.sedaily.com/finance/2025/12/11/lf-to-build-lfp-cathode-plant-in-michigan-amid-surging",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "St. Louis Public Radio — ICL battery plant in north St. Louis officially dead after grant cancellation",
+   "url": "https://www.stlpr.org/news-briefs/2025-11-12/battery-plant-north-st-louis-officially-dead-trump-administration-cancels-grants",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "TipRanks — ICL Group discontinues LFP cathode activities amid funding cuts (6-K summary)",
+   "url": "https://www.tipranks.com/news/company-announcements/icl-group-discontinues-lfp-cathode-activities-amid-funding-cuts",
+   "date": "2025-11-11"
+  },
+  {
+   "label": "House Appropriations Committee Democrats — DOE project terminations, October 2025 (PDF)",
+   "url": "https://democrats-appropriations.house.gov/sites/evo-subsites/democrats-appropriations.house.gov/files/evo-media-document/doe-project-terminations-oct-2025.pdf",
+   "date": "2025-10"
+  },
+  {
+   "label": "EFI Foundation — unpacking DOE's cancellations",
+   "url": "https://efifoundation.org/reports/unpacking-does-cancellations/",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "Utility Dive — DOE cancels USD 718M of battery-manufacturing grants (ICL, Ascend, Anovion, ABTC, LuxWall)",
+   "url": "https://www.utilitydive.com/news/department-energy-project-grants-cancelled-battery-manufacturing-trump/803347/",
+   "date": "2025-10-21"
+  },
+  {
+   "label": "TechCrunch — Trump DOE confirms it is canceling over USD 700M in manufacturing grants",
+   "url": "https://techcrunch.com/2025/10/20/trump-doe-confirms-its-canceling-over-700m-in-manufacturing-grants/",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "Heatmap — DOE grant terminations, second list (battery materials grants)",
+   "url": "https://heatmap.news/politics/doe-grant-terminations-hydrogen-hubs",
+   "date": "2025-10-07"
+  },
+  {
+   "label": "Latitude Media — the 321 awards DOE is canceling",
+   "url": "https://www.latitudemedia.com/news/scoop-these-are-the-321-awards-doe-is-canceling/",
+   "date": "2025-10-02"
+  },
+  {
+   "label": "We The Builders podcast — Vivas Kumar: building Mitra Chem (episode 6)",
+   "url": "https://wethebuilders.us/p/vivas-kumar-building-mitra-chem-and",
+   "date": "2025-09-02"
+  },
+  {
+   "label": "Battery-Tech Network — US raises Section 301 duties on Chinese ESS batteries (25% from 2026-01-01; stacked duties)",
+   "url": "https://battery-tech.net/battery-markets-news/u-s-raises-section-301-duties-on-chinese-ess-batteries/",
+   "date": "2025-09-01"
+  },
+  {
+   "label": "THE ELEC — L&F: North American LFP production 'likely through equity investment with Mitra Chem; details under discussion'; new 60,000 t Korean LFP subsidiary",
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=38120",
+   "date": "2025-07-11"
+  },
+  {
+   "label": "L&F Co. newsroom — SK On LFP MOU and the new LFP subsidiary",
+   "url": "https://www.landf.co.kr/company/hong_7.html?n=&board_db=news&num=224&page=1&action=read&column=&keyword=",
+   "date": "2025-07-11"
+  },
+  {
+   "label": "Canary Media — LG Energy Solution's Michigan LFP battery factory (Holland, 16.5 GWh, materials from outside China)",
+   "url": "https://www.canarymedia.com/articles/energy-storage/lg-michigan-lfp-battery-factory",
+   "date": "2025-06-25"
+  },
+  {
+   "label": "TechCrunch — exclusive: Mitra Chem is raising USD 50M; USD 15.6M sold; DOE award not yet paid out; no reply for comment",
+   "url": "https://techcrunch.com/2025/06/09/mitra-chem-is-raising-50m-for-its-cheaper-domestic-battery-materials/",
+   "date": "2025-06-09"
+  },
+  {
+   "label": "SEC Form D — Mitra Future Technologies, Inc., accession 0001887663-25-000002 (USD 49,999,996 offering; USD 15,599,991 sold; 4 investors; directors listed)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1887663/000188766325000002/primary_doc.xml",
+   "date": "2025-06-09"
+  },
+  {
+   "label": "energy.gov — Secretary Wright announces termination of 24 projects (May 2025 round)",
+   "url": "https://www.energy.gov/articles/secretary-wright-announces-termination-24-projects-generating-over-3-billion-taxpayer",
+   "date": "2025-05-30"
+  },
+  {
+   "label": "L&F Co. newsroom — KRW 14.5bn strategic investment in Mitra Chem's Series B-1 preferred shares; US LFP commercial production from 2027 (decision 2025-03-20)",
+   "url": "https://www.landf.co.kr/company/hong_7.html?n=&board_db=news&num=206&page=1&action=read&column=&keyword=",
+   "date": "2025-04-17"
+  },
+  {
+   "label": "KED Global — L&F to invest USD 10M in Mitra Chem for a 3.3% stake (1.3 million preferred shares)",
+   "url": "https://www.kedglobal.com/batteries/newsView/ked202503210005",
+   "date": "2025-03-21"
+  },
+  {
+   "label": "KIPOST — L&F Series B-1 investment in Mitra Chem; DART disclosure; ton-scale customer testing",
+   "url": "https://www.kipost.net/news/articleView.html?idxno=326802",
+   "date": "2025-03-20"
+  },
+  {
+   "label": "etnews — L&F to establish a US LFP joint venture with Mitra Chem (headline framing)",
+   "url": "https://www.etnews.com/20250320000079",
+   "date": "2025-03-20"
+  },
+  {
+   "label": "THE ELEC — L&F to move LFP pilot lines and technology to the US; production from December 2027",
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=33870",
+   "date": "2025-03-20"
+  },
+  {
+   "label": "Asia Economy (Korean) — L&F invests in Mitra Chem, US LFP production from 2027",
+   "url": "https://www.asiae.co.kr/article/2025032009505704196",
+   "date": "2025-03-20"
+  },
+  {
+   "label": "The Economist (Korea) — L&F investment in Mitra Chem",
+   "url": "https://economist.co.kr/article/view/ecn202503200017",
+   "date": "2025-03-20"
+  },
+  {
+   "label": "Utility Dive — CEA: possible tariff impacts on US LFP and NMC storage cell costs",
+   "url": "https://www.utilitydive.com/news/us-battery-storage-lfp-nmc-market-possible-significant-tariff-impacts-clean-energy/737317/",
+   "date": "2025-01-14"
+  },
+  {
+   "label": "Area Development — Mitra Chem plans Muskegon, Michigan facility (USD 125M project, 150 jobs)",
+   "url": "https://www.areadevelopment.com/newsitems/9-30-2024/mitra-chemplans-muskegon-michigan.shtml",
+   "date": "2024-09-30"
+  },
+  {
+   "label": "Metal Tech News — DOE and Michigan fund Mitra Chem cathodes",
+   "url": "https://www.metaltechnews.com/story/2024/09/25/tech-bytes/doe-and-michigan-fund-mitra-chem-cathodes/1959.html",
+   "date": "2024-09-25"
+  },
+  {
+   "label": "Plant Services — Mitra Chem awarded USD 125M to build battery-material facility in Michigan",
+   "url": "https://www.plantservices.com/industry-news/news/55141674/mitra-chem-awarded-125m-to-build-battery-material-manufacturing-facility-in-michigan",
+   "date": "2024-09-24"
+  },
+  {
+   "label": "Mitra Chem newsroom — US Department of Energy selects Mitra Chem for USD 100 million award for domestic battery manufacturing (Muskegon; Sun Chemical; 15,000 t/yr by 2027)",
+   "url": "https://www.mitrachem.com/post/us-department-of-energy-selects-mitra-chem-for-100-million-award-for-domestic-battery-manufacturing",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "PR Newswire — US Department of Energy selects Mitra Chem for USD 100 million award",
+   "url": "https://www.prnewswire.com/news-releases/us-department-of-energy-selects-mitra-chem-for-100-million-award-for-domestic-battery-manufacturing-302253860.html",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "Sun Chemical — release on the DOE award and the Muskegon co-location partnership",
+   "url": "https://www.sunchemical.com/mitrachem-release/",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "Michigan Infrastructure Office — Gov. Whitmer's Battery Challenge secures federal investment (Mitra Chem USD 100M + up to USD 25M; 154 permanent and 625 construction jobs)",
+   "url": "https://www.michigan.gov/whitmer/issues/michigan-infrastructure-office/mio-press-release/2024/09/20/gov-whitmers-battery-challenge-secures-federal-infrastructure-investment",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "WOOD-TV via Yahoo News — Muskegon-area battery-materials plant getting USD 100M; Sun Chemical site at 4925 Evanston Ave.; groundbreaking expected early 2026",
+   "url": "https://www.yahoo.com/news/muskegon-area-ev-battery-plant-202315351.html",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "TechCrunch — the 25 battery-tech start-ups that got a piece of USD 3B in federal funds",
+   "url": "https://techcrunch.com/2024/09/20/the-25-battery-tech-startups-that-just-got-a-piece-of-3b-in-federal-funds",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "Global Trade Alert — DOE awards Mitra Future Technologies USD 100 million (intervention record)",
+   "url": "https://www.globaltradealert.org/intervention/139725/financial-grant/united-states-of-america-doe-awards-mitra-future-technologies-inc-usd-100-million-to-support-the-company-s-lithium-iron-phosphate-cathode-material-production-plant-project",
+   "date": "2024-09-20"
+  },
+  {
+   "label": "C&EN — Sun Chemical and Mitra Chem partner on iron phosphate",
+   "url": "https://cen.acs.org/energy/energy-storage-/Sun-Chemical-Mitra-Chem-partner/102/i19",
+   "date": "2024-06-21"
+  },
+  {
+   "label": "Mitra Chem newsroom — Mitra Chem and Sun Chemical announce joint development of US iron phosphate with LFP co-location",
+   "url": "https://www.mitrachem.com/post/mitra-chem-and-sun-chemical-announce-joint-development-of-united-states-iron-phosphate-with-lithium-iron-phosphate-lfp-co-location",
+   "date": "2024-06-13"
+  },
+  {
+   "label": "FinSMEs — Mitra Chem receives investment from Alpha Wave Ventures",
+   "url": "https://www.finsmes.com/2024/05/mitra-chem-receives-investment-from-alpha-wave-ventures.html",
+   "date": "2024-05"
+  },
+  {
+   "label": "Mitra Chem newsroom — Alpha Wave Ventures invests; Elan Frantz joins the board",
+   "url": "https://www.mitrachem.com/post/alpha-wave-ventures-adds-elan-frantz-to-board",
+   "date": "2024-05-13"
+  },
+  {
+   "label": "Mitra Chem newsroom — Denise Gray joins the board; 'nearly $80 million' raised; investor list",
+   "url": "https://www.mitrachem.com/post/https-www-prnewswire-com-news-releases-mitra-chem-adds-denise-gray-to-board-of-directors-302099267-html",
+   "date": "2024-03-26"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem and Saint-Gobain Ceramics partner to commercialize IRA-compliant LMFP cathodes with a low-wastewater process",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-and-saint-gobain-ceramics-enter-a-strategic-partnership-to-commercialize-ira-compliant-lmfp-cathodes-with-a-low-wastewater-manufacturing-process-302083244.html",
+   "date": "2024-03-07"
+  },
+  {
+   "label": "Battery Technology — Mitra Chem multi-ton LFP CAM production completed, commercial samples shipping",
+   "url": "https://www.batterytechonline.com/materials/mitra-chem-multi-ton-lfp-cam-production-completed-commercial-samples-shipping",
+   "date": "2024-02"
+  },
+  {
+   "label": "Mitra Chem newsroom — multi-ton LFP cathode active material production; commercial samples shipping",
+   "url": "https://www.mitrachem.com/post/multi-ton-lfp-cam-production",
+   "date": "2024-02-12"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem launches first international office in Seoul",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-expands-global-presence-launches-first-international-office-in-seoul-to-prioritize-customer-reach-302042566.html",
+   "date": "2024-01-24"
+  },
+  {
+   "label": "EV Tech Insider — Mitra Chem shipping LMFP cathode samples to major EV OEMs and battery makers",
+   "url": "https://evtechinsider.com/mitra-chem-shipping-lmfp-cathode-active-materials-samples-to-major-global-ev-oem-and-battery-makers/",
+   "date": "2023-12"
+  },
+  {
+   "label": "KED Global — LG Chem's Tennessee cathode plant (NCMA, 60,000 t/yr)",
+   "url": "https://www.kedglobal.com/batteries/newsView/ked202312200013",
+   "date": "2023-12-20"
+  },
+  {
+   "label": "Mitra Chem newsroom — commercial LMFP cathode active material sample shipments have begun to global customers",
+   "url": "https://www.mitrachem.com/post/mitra-chem-announces-commercial-lmfp-cathode-active-material-sample-shipments-have-begun-to-global-customers",
+   "date": "2023-12-07"
+  },
+  {
+   "label": "Mitra Chem newsroom — named in C&EN's 10 Start-Ups to Watch (founding story; GM LMFP work)",
+   "url": "https://www.mitrachem.com/post/mitra-chem-named-in-top-10-start-ups-to-watch-list-on-cen",
+   "date": "2023-11-14"
+  },
+  {
+   "label": "Mitra Chem newsroom — In-Q-Tel joins the USD 60M Series B",
+   "url": "https://www.mitrachem.com/post/onshoring",
+   "date": "2023-11-08"
+  },
+  {
+   "label": "Mitra Chem newsroom — TechMet-Mercuria invests in Series B and becomes exclusive lithium chemicals procurement agent",
+   "url": "https://www.mitrachem.com/post/techmet-mercuria",
+   "date": "2023-09-13"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem announces new investment and partnership with TechMet-Mercuria",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-announces-new-investment-and-partnership-with-techmet-mercuria-301925160.html",
+   "date": "2023-09-13"
+  },
+  {
+   "label": "PR Newswire — Ross Kirschner joins Mitra Chem as General Counsel",
+   "url": "https://www.prnewswire.com/news-releases/ross-kirschner-joins-mitra-chem-as-general-counsel-301922107.html",
+   "date": "2023-09-11"
+  },
+  {
+   "label": "GM investor relations — GM invests in AI and battery-materials innovator Mitra Chem",
+   "url": "https://investor.gm.com/news-releases/news-release-details/gm-invests-ai-and-battery-materials-innovator-mitra-chem",
+   "date": "2023-08"
+  },
+  {
+   "label": "Orrick — Mitra Chem completes USD 40 million initial closing of USD 60M round led by GM (counsel release)",
+   "url": "https://www.orrick.com/en/News/2023/08/Enabling-Mass-Market-Electrification-For-EVs-Energy-Storage-and-Beyond",
+   "date": "2023-08-30"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem announces first close of USD 60 million Series B round led by GM (LMFP for Ultium)",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-announces-first-close-of-60-million-series-b-round-led-by-gm-301902451.html",
+   "date": "2023-08-16"
+  },
+  {
+   "label": "PR Newswire — Maxwell Kushner-Lenhoff named Head of Commercial",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-announces-maxwell-kushner-lenhoff-as-new-head-of-commercial-301892192.html",
+   "date": "2023-08-03"
+  },
+  {
+   "label": "SEC Form D — Mitra Future Technologies, Inc., accession 0001887663-23-000001 (USD 59,999,968 offering; USD 27,050,007 sold; 14 investors)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1887663/000188766323000001/primary_doc.xml",
+   "date": "2023-07-11"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem wins the World Materials Forum Start-Up Challenge (LMFP in six weeks)",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-wins-world-materials-forum-start-up-challenge-301873069.html",
+   "date": "2023-07-10"
+  },
+  {
+   "label": "Mitra Chem newsroom — Chamath Palihapitiya's 2022 annual letter names Mitra Chem (mass production by 2025 target)",
+   "url": "https://www.mitrachem.com/post/chamath-2022-annual-letter",
+   "date": "2023-04-05"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem ships first US-made LFP cathode samples to a tier-1 global cell manufacturer; commercial production by 2025",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-announces-shipment-of-first-lab-tested-and-approved-us-made-lithium-iron-phosphate-lfp-cathode-samples-to-tier-1-global-battery-cell-manufacturer-301625935.html",
+   "date": "2022-09-16"
+  },
+  {
+   "label": "Mitra Chem newsroom — The Information: the iron age for EVs arrives",
+   "url": "https://www.mitrachem.com/post/the-iron-age-for-evs-finally-arrives-with-a-rush-of-companies-in-the-u-s-and-europe",
+   "date": "2022-04-19"
+  },
+  {
+   "label": "Mitra Chem newsroom — CEO Vivas Kumar at the Stanford Energy Seminar (biography)",
+   "url": "https://www.mitrachem.com/post/mitra-chem-co-founder-and-ceo-vivas-kumar-featured-speaker-at-stanford-energy-seminar",
+   "date": "2022-02-28"
+  },
+  {
+   "label": "Mitra Chem newsroom — advisory board appointments (Gao, Mukherjee, Narayan, Nazar)",
+   "url": "https://www.mitrachem.com/post/mitra-chem-announces-appointment-of-global-leaders-in-battery-tech-automotive-sector-executive-leadership-and-academia-to-companys-advisory-board",
+   "date": "2022-02-17"
+  },
+  {
+   "label": "Mitra Chem newsroom — Jordan Lampert named Vice President of Product Development",
+   "url": "https://www.mitrachem.com/post/mitra-chem-announces-jordan-lampert-as-vice-president-of-product-development",
+   "date": "2022-01-26"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem announces USD 20 million Series A led by Social Capital",
+   "url": "https://www.prnewswire.com/news-releases/mitra-chem-announces-20-million-series-a-funding-round-led-by-social-capital-301423896.html",
+   "date": "2021-11-15"
+  },
+  {
+   "label": "Mitra Chem newsroom — WSJ: Social Capital leads USD 20 million round; Palihapitiya and Drewery join the board",
+   "url": "https://www.mitrachem.com/post/chamath-palihapitiyas-social-capital-leads-20-million-funding-round-for-battery-startup",
+   "date": "2021-11-15"
+  },
+  {
+   "label": "Mitra Chem newsroom — TechCrunch: Mitra Chem takes aim at Chinese dominance of battery-materials supply",
+   "url": "https://www.mitrachem.com/post/mitra-chem-takes-aim-at-chinese-dominance-of-battery-materials-supply-chain",
+   "date": "2021-11-15"
+  },
+  {
+   "label": "SEC Form D — Mitra Future Technologies, Inc., accession 0001887663-21-000001 (Series A tranche 1, USD 12,999,986)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1887663/000188766321000001/primary_doc.xml",
+   "date": "2021-11-15"
+  },
+  {
+   "label": "SEC Form D — Mitra Future Technologies, Inc., accession 0001887663-21-000002 (Series A tranche 2, USD 6,999,990)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1887663/000188766321000002/primary_doc.xml",
+   "date": "2021-11-15"
+  },
+  {
+   "label": "Mitra Chem — home page ('The AI-native materials scale-up platform'; The Foundry; four demand drivers)",
+   "url": "https://www.mitrachem.com/"
+  },
+  {
+   "label": "Mitra Chem — LFP cathode active material page (1,000× scale-up claim; 'roughly 20× lower cost'; DOE financing 'sustained across Biden and Trump administrations')",
+   "url": "https://www.mitrachem.com/lfp"
+  },
+  {
+   "label": "Mitra Chem — the Acceleration Platform (AI agents Sparky, Researcher Zero, Swefan, Pierre)",
+   "url": "https://www.mitrachem.com/platform"
+  },
+  {
+   "label": "Mitra Chem — case studies (precursor-free LFP; AI acceleration in LFP scale-up)",
+   "url": "https://www.mitrachem.com/case-studies"
+  },
+  {
+   "label": "Mitra Chem — leadership team and board",
+   "url": "https://www.mitrachem.com/team"
+  },
+  {
+   "label": "Mitra Chem — join us (open roles, Mountain View)",
+   "url": "https://www.mitrachem.com/join-us"
+  },
+  {
+   "label": "Mitra Chem — newsroom index (16 items, newest 2024-09-20)",
+   "url": "https://www.mitrachem.com/news"
+  },
+  {
+   "label": "PR Newswire — Mitra Chem release index (19 releases, 2021-11-15 to 2024-09-20)",
+   "url": "https://www.prnewswire.com/news/mitra-chem/"
+  },
+  {
+   "label": "SEC EDGAR full-text search — 'Mitra Future Technologies' (four Form D filings, CIK 0001887663)",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Mitra%20Future%20Technologies%22"
+  },
+  {
+   "label": "SEC EDGAR — company filing index for CIK 0001887663",
+   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001887663&type=&dateb=&owner=include&count=40&output=atom"
+  },
+  {
+   "label": "FormDs.com — issuer page for Mitra Future Technologies, Inc. (EDGAR mirror; no filing after 2025-06-09)",
+   "url": "https://formds.com/issuers/mitra-future-technologies-inc"
+  },
+  {
+   "label": "Egelston Township — Planning Commission agendas and minutes (2025–2026; no site-plan item for the parcel in readable minutes)",
+   "url": "https://www.egelstontwp.org/planning-commission/"
+  },
+  {
+   "label": "CB Insights — Mitra Chem profile (aggregator; funding total counts the DOE award)",
+   "url": "https://www.cbinsights.com/company/mitra-chem"
+  },
+  {
+   "label": "Tracxn — Mitra Chem profile (aggregator: USD 95.6M over four rounds)",
+   "url": "https://tracxn.com/d/companies/mitra-chem/__gRSnKxYTH9eg4nULG97pdctpH3JcdwVB4w1yuePgmF8"
+  },
+  {
+   "label": "MyVisaJobs — Mitra Future Technologies employer page (aggregator headcount)",
+   "url": "https://www.myvisajobs.com/employer/mitra-future-technologies/"
+  }
+ ],
+ "lastUpdated": "2026-09-13",
+ "profileVersion": 1
+}

@@ -1360,6 +1360,15 @@
       ]
     },
     {
+      "slug": "carbon-coating",
+      "term": "carbon coating",
+      "def": "A thin layer of carbon deposited around each cathode particle during manufacture, usually by charring a sugar during sintering, so that electrons can reach a material — such as LFP — that conducts poorly on its own.",
+      "aliases": [
+        "carbon-coated",
+        "carbon coat"
+      ]
+    },
+    {
       "slug": "carnot-limit",
       "term": "Carnot limit",
       "def": "The ceiling on any engine that turns heat into work, set by the ratio of the temperatures it works between — which is why raising turbine firing temperature is the whole history of turbine development. A fuel cell converts chemical energy directly to electricity with no intermediate heat step, so this ceiling does not apply to it.",
@@ -2662,6 +2671,16 @@
       "slug": "cylinder-break",
       "term": "cylinder break",
       "def": "The laboratory crushing of test cylinders cast from a concrete pour, typically at seven and twenty-eight days, to prove the concrete reached its specified strength. A failed break stops everything that was going to sit on it."
+    },
+    {
+      "slug": "d50",
+      "term": "D50",
+      "def": "The median particle size of a powder — half the particles by volume are smaller than it. With the spread around it, D50 decides whether a cathode powder coats evenly, packs densely and conducts well; typical LFP values are a fraction of a micrometre to a few micrometres.",
+      "aliases": [
+        "median particle size",
+        "particle size distribution",
+        "PSD"
+      ]
     },
     {
       "slug": "dangerous-goods",
@@ -5573,6 +5592,15 @@
       ]
     },
     {
+      "slug": "hydrothermal-synthesis",
+      "term": "hydrothermal synthesis",
+      "def": "Making a material by reacting its ingredients in hot, pressurised water, which gives fine control of particle shape at the cost of throughput and waste water; an alternative route to solid-state sintering for LFP cathode powder.",
+      "aliases": [
+        "hydrothermal",
+        "hydrothermal route"
+      ]
+    },
+    {
       "slug": "hyperscaler",
       "term": "hyperscaler",
       "def": "One of the giant cloud and platform operators that build and lease data-center capacity at gigawatt scale. Their capital spending sets the pace of the AI data-center buildout."
@@ -6026,6 +6054,17 @@
         "initial public offering",
         "lock-up",
         "lock-up period"
+      ]
+    },
+    {
+      "slug": "iron-phosphate-precursor",
+      "term": "iron phosphate precursor",
+      "def": "Ferric phosphate, the intermediate made by reacting an iron salt with phosphoric acid, which is then combined with lithium carbonate and a carbon source and sintered into LFP cathode powder. Making it domestically is what keeps an LFP supply chain's content local all the way down.",
+      "aliases": [
+        "ferric phosphate",
+        "iron phosphate",
+        "FePO4 precursor",
+        "precursor"
       ]
     },
     {
@@ -7753,6 +7792,15 @@
       ]
     },
     {
+      "slug": "olivine",
+      "term": "olivine",
+      "def": "The crystal structure of lithium iron phosphate, in which phosphate groups hold oxygen with strong covalent bonds. It is why LFP does not release oxygen when overheated and why it cycles for so long — and why it conducts poorly and needs small particles and a carbon coating.",
+      "aliases": [
+        "olivine structure",
+        "olivine cathode"
+      ]
+    },
+    {
       "slug": "on-load-tap-changer",
       "term": "on-load tap changer",
       "def": "A switch inside a transformer that changes the number of turns in use — and so the output voltage — without interrupting the load. It is the only substantial moving part in most transformers, which makes it the part most likely to need maintenance and one of the more common causes of transformer outages.",
@@ -8627,6 +8675,15 @@
       "def": "The estimating, planning, constructability review and procurement work done before construction starts. It is where a schedule is either made possible or quietly made impossible."
     },
     {
+      "slug": "precursor-free-synthesis",
+      "term": "precursor-free synthesis",
+      "def": "A cathode manufacturing route that skips the separate iron phosphate intermediate and forms LFP directly from simpler iron, phosphate and lithium inputs, claimed to cut raw-material cost; still a process-transfer risk until run at tonnes per day.",
+      "aliases": [
+        "precursor-free",
+        "precursor-free LFP"
+      ]
+    },
+    {
       "slug": "preferred-equity",
       "term": "preferred equity",
       "def": "Capital that sits between debt and ordinary equity: it is paid a fixed return before the owners receive anything, but it has no fixed maturity like a loan. Projects use it to take out construction debt when a long-term loan is not available or wanted.",
@@ -8653,6 +8710,16 @@
       "aliases": [
         "prepayments",
         "prepaid capacity"
+      ]
+    },
+    {
+      "slug": "press-density",
+      "term": "press density",
+      "def": "The mass of active material per unit volume in a coated electrode after it has been rolled (calendered), in grams per cubic centimetre. It sets how much powder fits into a cell and therefore the cell's watt-hours per litre; a headline specification for LFP cathode powder.",
+      "aliases": [
+        "compacted density",
+        "pressed density",
+        "calendered density"
       ]
     },
     {
@@ -10350,6 +10417,16 @@
       ]
     },
     {
+      "slug": "sintering",
+      "term": "sintering",
+      "def": "Heating a mixed powder for hours below its melting point, for cathode materials under an inert gas such as nitrogen, so the ingredients react into the target crystal and the carbon source chars into a coating. The furnace step is where lab-scale and plant-scale results most often diverge.",
+      "aliases": [
+        "calcination",
+        "solid-state sintering",
+        "sintered"
+      ]
+    },
+    {
       "slug": "site-acceptance-test",
       "term": "site acceptance test",
       "def": "Testing the installed equipment on site, energised and in its final configuration, before the owner accepts it. It proves the installation, where the works test proved the machine.",
@@ -10590,6 +10667,16 @@
       "def": "Independent third-party inspection and testing of specific structural work — welds, bolts, concrete, soils — required by code and scheduled in advance. Work covered up before its inspection gets uncovered."
     },
     {
+      "slug": "specific-capacity",
+      "term": "specific capacity",
+      "def": "The charge a battery material can store per unit of mass, in milliampere-hours per gram (mAh/g). Multiplied by the cell voltage it gives the energy per gram; LFP cathode is about 150–160 mAh/g, NMC 180–220 mAh/g.",
+      "aliases": [
+        "mAh/g",
+        "milliampere-hours per gram",
+        "gravimetric capacity"
+      ]
+    },
+    {
       "slug": "specific-power",
       "term": "specific power",
       "def": "How much power a cell delivers per kilogram of itself, in watts per kilogram. It is the figure of merit for a backup cell, where energy per litre is the figure of merit for a grid cell.",
@@ -10645,6 +10732,15 @@
         "Southwest Power Pool",
         "SPP footprint",
         "SPP region"
+      ]
+    },
+    {
+      "slug": "spray-drying",
+      "term": "spray drying",
+      "def": "A manufacturing step in which a slurry is sprayed into a hot chamber so the droplets dry into a free-flowing powder of controlled particle size, used between milling and sintering in cathode production.",
+      "aliases": [
+        "spray-dried",
+        "spray dryer"
       ]
     },
     {

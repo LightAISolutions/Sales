@@ -1,0 +1,1554 @@
+{
+ "schemaVersion": 7,
+ "slug": "cornex",
+ "name": "楚能新能源股份有限公司 (CORNEX NEW ENERGY CO., LTD.)",
+ "shortName": "Cornex",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.cornexbattery.com",
+ "headquarters": "No. 1 Cornex Avenue (楚能大道特1号), Linkong Economic Zone, Xiaogan (孝感), Hubei, China — the global headquarters inaugurated 22 November 2024; the company was founded in and runs its research, manufacturing and technology centres from Wuhan's Jiangxia district (武汉江夏), where its ICP filings are registered",
+ "founded": 2021,
+ "employees": "Not published. R&D staff 'over 2,200' (Wuhan municipal government, February 2026) and 'over 2,250, more than half with master's or doctoral degrees' (company product manual, October 2025); a job-board figure of 'over 10,000' total is unverified. Jobs promised per base: Xiangyang over 5,000, Yichang phase 2 6,000, Wuhan phase 2 about 6,000",
+ "ownership": {
+  "type": "private",
+  "ticker": "Private (founder-controlled: 代德明 / Dai Deming via 恒信汽车集团 and 湖北恒信德龙实业 — percentages are aggregator data the company has never published; no listing, no listing filing)"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Cornex (楚能新能源) is the fastest-rising storage-cell maker in this corpus — seventh on SNE Research's H1-2026 table at 30.2 GWh and 6.5% share, from outside the top ten two years earlier, and the last of the SNE top twelve to be profiled — built in five years on one car dealer's cash and Hubei's land, with two new 70–80 GWh plants commissioned in August 2026 ten months after groundbreaking. It has never published an audited financial statement, holds no listing and has filed for none anywhere, and its owner has just committed RMB 10 billion of his own money to a separate car-making venture.\n\n**BACKGROUND.** 楚能新能源股份有限公司 / CORNEX NEW ENERGY CO., LTD., a joint-stock company founded in Wuhan in August 2021 by 代德明 (Dai Deming), the founder of 恒信汽车集团 (Hengxin Automobile Group, China's fourth-largest car-dealer group, revenue RMB 78.5 billion on the 2025 China Top 500). Control runs through 恒信汽车集团 and 湖北恒信德龙实业有限公司; the widely repeated figures — 76.15% of equity and 92.5% of votes — are aggregator data, and an August 2026 investigative piece gives a different cut (55% / 25% / 12.5% / 7.5%); the company itself publishes no shareholder table, registered capital or accounts. Four Hubei bases: Wuhan Jiangxia (production from November 2022), Xiaogan (June 2023; global headquarters), Yichang phase 1 (65 GWh, August 2023) and phase 2 (80 GWh, RMB 22 billion, commissioned 9 August 2026), and Xiangyang (70 GWh, commissioned 30 August 2026); Wuhan phase 2 (80 GWh, RMB 22 billion) was signed on 8 February 2026 for production in Q1 2027, and the chairman's target is 'over 500 GWh' of capacity by the end of 2026 against 'over 110 GWh' effective, a figure the company has repeated unchanged since December 2024. Products run from 100Ah to 588Ah prismatic LFP storage cells (648Ah and 688Ah shown), the CORNEX M5 5 MWh and M6 6.26 MWh 20-foot containers, the 浸默 (Jinmo) immersion fire-suppression system, EV traction cells including the 珠峰 (Everest) 6C fast-charge cell, truck and marine cells, and sodium-ion. Shipments: 'over 20 GWh' in 2024 per the company, 'over 90 GWh' in 2025 per InfoLink and trade press, and 30.2 GWh for H1 2026 per SNE against 'over 40 GWh' per the company. Rank depends on the house — SNE seventh, InfoLink, TrendForce and ICC sixth, Benchmark fifth (+116% year on year), SPIR third, and the 'global top three' the company and the Wuhan and Hubei governments repeat rests on SPIR. Framework signings in 2026 total over 100 GWh (CIBF 50 GWh including CRRC Zhuzhou Institute 25 GWh; some 40 GWh overseas across Saudi Arabia, Egypt, Europe, Latin America and Southeast Asia), and supply commitments have been scaled to match (Longpan Technology 1.3 million tonnes of LFP cathode to 2030, over RMB 45 billion; Tinci 1.01 million tonnes of electrolyte). Financing is owner and bank money — a RMB 10 billion Bank of Communications facility (January 2024); two RMB 6 billion-class local government funds formed for the company in 2025–2026 no longer appear on its shareholder list, and a reported RMB 2 billion green bond cannot be found in any registry.",
+ "ecosystemRole": "Cornex is a challenger in energy-storage cells — seventh globally on SNE Research's H1-2026 table at 30.2 GWh and 6.5%, roughly a quarter of CATL's 27.1% and 1.3 GWh behind CALB, and the twelfth and last name from that table to enter this corpus — reached by capacity-led expansion and below-cost bidding rather than by an incumbent's balance sheet. It also integrates its own cells into 20-foot containers (M5 5 MWh, M6 6.26 MWh) and C&I cabinets with CSA Group UL 9540A/1973/9540 and TÜV SÜD IEC 62619 certificates, but appears in no third-party integrator ranking, so its system business is a route to market for the cell. Its relevance to the AI-data-centre buyer is double-edged: a 2 GWh DC-side framework with TECO for data centres in Malaysia and Thailand on one side, and on the other a Chinese-owned cell that fails the prohibited-foreign-entity test, pays 25% Section 301 duty from 2026 and loses China's export rebate in 2027 — which is why its export map is Europe, the Middle East, Latin America and Southeast Asia rather than the United States.",
+ "productsAndServices": [
+  {
+   "name": "Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+   "category": "Energy storage — prismatic LFP cells",
+   "description": "The core product and the basis of every ranking. The lineage the company states is 280Ah → 306/314Ah → 472Ah → 588Ah, with 625Ah, 648Ah, 684Ah and a 688Ah cell co-developed with CRRC Zhuzhou Institute shown or sampled since 2024. The 314Ah 聚能π (JuNeng Pi) cell went into the M5 container in mass production from February 2024; the 472Ah cell, defined with Huaneng's 华清储创, entered mass production on 30 June 2025 with 'up to 80 GWh' of capacity assigned; the 588Ah cell launched on 25 September 2025 with 'total planned capacity as high as 200 GWh' and mass delivery targeted for Q3 2026. A 100Ah cell serves residential and small storage. All are prismatic, liquid-cooled at pack level and sold with a 12,000-cycle rating.",
+   "highlights": [
+    "PF288-588A (588Ah): 12,000 cycles, energy efficiency ≥94.5% at 0.5P on the spec page; 190 Wh/kg and 419 Wh/L (417 Wh/L in August 2026) and 96.5% efficiency in releases; 10.1 kg; 'directional pressure-relief channel' design",
+    "PF220-472A (472Ah): 1,510.4 Wh, 195 Wh/kg, 'up 50% on 314Ah'; optional cathode pre-lithiation for 15,000 cycles and 'five years of zero degradation'; mass production from 30 June 2025",
+    "PF173-314A (314Ah): 12,000 cycles, 185 Wh/kg; the 'long π' variant claims 15,000 cycles and a 25-year cycle life (18,000 cycles in a September 2024 release)",
+    "688Ah with CRRC Zhuzhou Institute (first cells 24 January 2025): '2.2 kWh, 10,000 cycles, calendar life over 20 years, 95% round-trip efficiency, near 200 Wh/kg, over 430 Wh/L', stacked electrodes and double-sided ceramic separator",
+    "Rank for H1 2026: SNE 7th (30.2 GWh, 6.5%), InfoLink, TrendForce and ICC 6th, Benchmark 5th (+116%), SPIR 3rd (523.6 GWh universe); FY2025 InfoLink and EVTank 9th, Benchmark 'top five'; 2024 outside InfoLink's and EVTank's top ten",
+    "The August 2023 pledge to sell 280Ah cells at no more than RMB 0.5/Wh ex-tax — 'about 40% below' the market — is the origin of the company's reputation for price-led entry; its 2025 tender bids ran at RMB 0.27–0.28/Wh"
+   ],
+   "positioning": "Against CATL (27.1%), EVE (10.4%) and Hithium (10.0%) Cornex is a volume challenger whose share came from new capacity and price, and whose rank moves from third to seventh depending on which house counts; CALB and REPT sit 1.2–1.3 GWh above it on SNE's table and the three are separated by less than any house's methodology error. It is not named on the US Department of Defense 1260H list, unlike CATL, CALB, EVE and BYD, which is a distinction without a US market behind it. The 588Ah class puts it in the same format race as CATL's 587Ah, EVE's 628Ah and Hithium's 587Ah; the 688Ah programme with CRRC Zhuzhou runs in parallel with CRRC's 688Ah work with REPT and Great Power.",
+   "soldThrough": "Direct to Chinese utilities and integrators through tenders and framework agreements (CRRC Zhuzhou Institute, Dongfang Electric, CLOU, China Electrical Equipment Group, Huaneng, Goldwind) and to overseas integrators and developers through five European service centres and offices in the US, Brazil, Germany, the UK, Turkey, India, Singapore, Japan, Korea, South Africa and Australia.",
+   "targetSegments": [
+    "Utility-scale storage integrators and EPCs (China)",
+    "Overseas storage developers and integrators (Europe, Middle East, Latin America, Southeast Asia)",
+    "Residential and C&I storage brands (100Ah/314Ah)"
+   ],
+   "roadmap": "588Ah mass delivery from Q3 2026 with 200 GWh of planned capacity; 648Ah shown at CIBF and in Vietnam in 2026; Xiangyang scoped for '588Ah to 1,000Ah' cells; 'over 500 GWh' of planned capacity by end-2026 per the chairman."
+  },
+  {
+   "name": "CORNEX M5 and M6 containers, CTP packs and the 浸默 (Jinmo) immersion safety system",
+   "category": "Energy storage — containerised systems",
+   "description": "Factory-assembled 20-foot liquid-cooled DC blocks built on the company's own cells: the M5 (PF173-314A-C5015L, 5,015 kWh, 12 × 1P416S of 314Ah cells, 2,500 kW, 42.5 t) in mass production at Xiaogan since 1 February 2024, and the M6 (PF288-588A-C6262L, 6,262 kWh, 8 × 1P416S of 588Ah cells, 46 t), first shown on 472Ah cells at 6.28 MWh in 2025 and re-based on 588Ah cells from September 2025 with 'formal mass production this year' stated in June 2026. The CTP3.0 pack puts 104 588Ah cells in one 195.68 kWh box at 280 Wh/L without modules. 浸默 is a pack-level liquid-immersion fire-control system — a heat-runaway pack is flooded with a liquid extinguishing medium — first deployed at Three Gorges Energy's Qingyun phase 2 (201 MW / 402 MWh) in 2023; version 2.0 (2025) claims a six-second extinguish, 75% more cooling and 98% less stored liquid.",
+   "highlights": [
+    "M5: UL 1973, UL 9540A and UL 9540 certificates from CSA Group (September 2024) and IEC 62619, IEC 63056 and EMC certificates from TÜV SÜD (October 2024); IP55 container, IP67 pack, −30 to 55 °C",
+    "M6: 'land-use efficiency up 33%, containers down 20%, service life up 20%', maximum operating temperature ≤35 °C, under 65 dB; 60 jobs per hour on the pack line against an industry 15, per the company",
+    "First 5 MWh system in Xinjiang (Karamay 48 MW / 96 MWh, 20 M5 units, 2024); first river-sea 'one-box' export shipment from Wuhan's Yangluo port (September 2025)",
+    "Named overseas M5 buyers: Bison Energy 1.5 GWh (US/AU/JP/IT, 2024), YN Energy 1.1 GWh (US, 2024), Immersa 1.25–2.5 GWh (UK, 2025), an unnamed Indian partner 5 GWh (2024), Intermepro (Costa Rica's first M5 Apex, 2026)",
+    "No third-party integrator ranking names Cornex; Benchmark's H1-2026 integrator top five is BYD, Sungrow, CATL, Tesla and HyperStrong"
+   ],
+   "positioning": "A cell maker's system line, sold to give the cell a route to market where no integrator has yet designed it in — the same position CALB and Great Power occupy with their containers. It competes on the 20-foot 5–6 MWh format everyone now ships (CATL TENER, Hithium ∞Block, EVE Mr.Giant, Sungrow PowerTitan) and differentiates on the immersion safety system and price.",
+   "soldThrough": "Direct and through EPC/design-institute agreements (Shanghai Electric Power Design Institute for M5 procurement and EPC, 2024); overseas through distributors and developers under framework agreements.",
+   "targetSegments": [
+    "Utility-scale and grid-side storage owners (China)",
+    "Overseas developers and integrators buying DC blocks",
+    "AI data-centre DC-side storage (TECO framework, Malaysia and Thailand)"
+   ],
+   "roadmap": "M6 on 588Ah cells in mass production from 2026; a 2,000 V platform and 6.9–7.06 MWh variants shown in 2025; '百变金刚' modular 10-foot 3.13 MWh and 20-foot 6.26 MWh cabinets."
+  },
+  {
+   "name": "Commercial and industrial storage cabinets",
+   "category": "Energy storage — C&I",
+   "description": "Liquid-cooled outdoor cabinets on 280Ah and 314Ah cells: the OTS02-H233L (233 kWh, 110 kW, 1P260S of 280Ah) and OTS03-H261L (261 kWh, 130 kW, 1P260S of 314Ah), both 650–949 V DC, IP55, with pack-level and cabinet-level aerosol suppression, plus the 46.6 kWh PF173-280A-P46L liquid-cooled module. Sold in China through integrators and overseas through the household and C&I partners signed in 2026 (Growatt 5 GWh of 100Ah/314Ah cells, Sluxer, NKON).",
+   "highlights": [
+    "OTS03-H261L: 261 kWh, 130 kW, 1035 × 1300 × 2305 mm, 2,650 kg, Modbus-RTU/TCP",
+    "Sits beside the residential and small-storage cell line (314Ah, 100Ah and 20Ah 'delivered at scale'; 120Ah, 50Ah and 30Ah 'about to enter mass production', June 2026)",
+    "Cornex 'entered the top five' in small storage on InfoLink's Q1 and H1 2026 tables"
+   ],
+   "positioning": "A standard C&I cabinet in the 200–300 kWh class where Chinese competition is dense (Sungrow, HyperStrong, CATL's C&I lines); differentiation is the cell's price and the company's service network rather than a distinct architecture.",
+   "soldThrough": "Integrators and distributors; overseas partners under framework agreements.",
+   "targetSegments": [
+    "Commercial and industrial storage integrators",
+    "Residential and small-storage brands (cells)"
+   ],
+   "roadmap": "Not stated beyond the 2026 residential cell launches."
+  },
+  {
+   "name": "EV traction, commercial-vehicle and marine batteries (珠峰 6C, CTP3.0 superfast, 320Ah marine)",
+   "category": "Traction batteries — passenger, commercial vehicle, marine",
+   "description": "The second business: prismatic LFP traction cells for passenger cars (PF210-145A 6C, PF300-173A 3C, PF300-166A, all 185 Wh/kg, with the 珠峰 'Everest' 6C cell launched 27 October 2025 at 190 Wh/kg and 420 Wh/L, '10 minutes of charging for 600 km' on an 800 V CTP3.0 pack), heavy-truck and bus cells (PF173-230A, PF173-324A, PF200-324A, PF200-268A; H02 and H03 truck packs), cylindrical light-mobility cells (45Ah full-tab, 20/30/50Ah) and a 320Ah marine cell with China Classification Society approval fitted to the 13,700-tonne 'Gezhouba' river vessel (24,000 kWh). Customers named by the company: Dongfeng (Fengshen E70, SKY EV01, L7; Dongfeng Liuzhou over 30 GWh over five years), FAW Bestune (over 170,000 vehicles cumulatively), SAIC Hongyan, SANY and Xiamen King Long trucks and buses, Zero One heavy trucks.",
+   "highlights": [
+    "Cornex entered China's annual top fifteen for traction-battery installations for the first time in 2025 (13th in LFP), with 'over 300,000 vehicles and over 200 ships' fitted per Hubei Daily",
+    "珠峰 6C: double-sided ceramic separator, 'directional instant-venting sunroof', low-temperature electrolyte with ≥85% retention at −20 °C; range basis 'over 1,000 km'",
+    "Dongfeng Liuzhou nomination (August 2025): over 30 GWh of passenger and heavy-truck cells over five years",
+    "All three operating subsidiaries carry '道路机动车辆生产' (road motor vehicle production) as a licensed item in their business scope per a supplier's exchange filing (May 2025) — the first-party-adjacent trace of the owner's vehicle ambitions"
+   ],
+   "positioning": "A distant follower in EV cells — outside SNE's global EV top ten and around 13th in China's LFP installations — whose traction line exists to fill capacity and to serve the owner's dealer network and, from 2027, the owner's own car brand.",
+   "soldThrough": "OEM nominations (定点) and direct supply to bus, truck and shipbuilders.",
+   "targetSegments": [
+    "Chinese passenger-car OEMs (Dongfeng, FAW)",
+    "Commercial-vehicle and bus makers",
+    "Inland and coastal electric shipping"
+   ],
+   "roadmap": "楚能汽车 (Cornex Auto), a 50/50 venture of 恒信汽车集团 and 代德明 outside the listed-supplier chain, rolled out its first engineering prototype on 11 July 2026 and targets a mid-2027 launch of an extended-range SUV; the company's own site does not mention it."
+  },
+  {
+   "name": "Sodium-ion cells",
+   "category": "Energy storage and mobility — sodium-ion",
+   "description": "Cylindrical sodium-ion cells for light mobility (10Ah, 16Ah, 26.5Ah; '91% capacity retained at −40 °C, over 10,000 cycles at 1C') launched in March 2026, and 165Ah and 350Ah prismatic sodium-ion cells for storage and marine use shown in Brazil and Wuhan in August–September 2026, including a 20-foot 1,956 kWh sodium-ion marine system. Materials come under the August 2025 agreement with BTR covering 'sodium core materials and next-generation solid-state materials'.",
+   "highlights": [
+    "A '锂钠双系' (lithium and sodium dual-system) line for two-wheelers and ships",
+    "No shipment volume, customer or revenue disclosed; the product manual lists sodium-ion and solid-state as R&D routes"
+   ],
+   "positioning": "Follows CATL, HiNa and Great Power into sodium-ion with a cold-climate and marine pitch; technical readiness without a disclosed market, the same state Great Power's line is in.",
+   "soldThrough": "Not disclosed.",
+   "targetSegments": [
+    "Light electric mobility",
+    "Marine and cold-climate storage"
+   ],
+   "roadmap": "None published."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Energy-storage cells — PF288-588A / PF220-472A / PF173-314A / PF160-100A (company spec page and product manual V9.2-251022)",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Rated capacity",
+     "value": "588Ah; 472Ah; 314Ah; 100Ah"
+    },
+    {
+     "band": "Electrical",
+     "label": "Rated rate",
+     "value": "0.5P (588Ah, 472Ah, 314Ah); 0.5C/1C (100Ah)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Energy efficiency",
+     "value": "≥94.5% (0.5P) — 588Ah; ≥94.5% (1C) — 472Ah; ≥94.5% (0.5P) — 314Ah; ≥94% (1P) — 100Ah"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life",
+     "value": "12000 (588Ah, 472Ah, 314Ah); 6000 (100Ah)"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions W×L×H",
+     "value": "72.5*288*216.3mm (588Ah); 73.7*220.3*225.2mm (472Ah); 71.7*174.4*207.2mm (314Ah); 50*160.3*118.5mm (100Ah)"
+    },
+    {
+     "band": "Design",
+     "label": "Weight",
+     "value": "10.1kg (588Ah); ≤8kg (472Ah); 5.6kg (314Ah); 2kg (100Ah)"
+    },
+    {
+     "band": "Design",
+     "label": "588Ah energy density (releases)",
+     "value": "质量能量密度190Wh/kg、体积能量密度419Wh/L (September 2025 – June 2026); 417Wh/L (August 2026)"
+    },
+    {
+     "band": "Design",
+     "label": "472Ah nominal energy",
+     "value": "标称能量1510.4Wh、能量密度195Wh/kg、较314Ah提升50%"
+    },
+    {
+     "band": "Compliance",
+     "label": "Testing and certification",
+     "value": "GB、UN38.3、UL、IEC"
+    }
+   ],
+   "notes": "Spec-page values are the company's and carry its own disclaimer that all information 'may be updated at any time and does not constitute an offer or commitment'. The 588Ah efficiency reads ≥94.5% on the spec page and 96.5% in launch releases; volumetric density reads 419 Wh/L and 417 Wh/L in different months. No independent test data exists."
+  },
+  {
+   "product": "CORNEX M5 (PF173-314A-C5015L) and M6 (PF288-588A-C6262L) 20-foot containers",
+   "specs": [
+    {
+     "band": "Energy",
+     "label": "Nominal energy",
+     "value": "5015kWh (M5); 6262kWh (M6)"
+    },
+    {
+     "band": "Energy",
+     "label": "Cell and grouping",
+     "value": "314Ah, 12*1P416S (M5); 588Ah, 8*1P416S (M6)"
+    },
+    {
+     "band": "Power",
+     "label": "Rated power",
+     "value": "2500kW (M5); 1565kW (M6)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Voltage",
+     "value": "1331.2V nominal, 1040～1500V operating (M5); 1040~1500V operating (M6)"
+    },
+    {
+     "band": "Thermal",
+     "label": "Thermal management",
+     "value": "液冷+液热 (liquid cooling and heating); M6 maximum operating temperature ≤35℃"
+    },
+    {
+     "band": "Safety",
+     "label": "Fire system",
+     "value": "\"浸默\"电池安全系统 + 全氟己酮/七氟丙烷/气溶胶可选 (Jinmo immersion system plus optional Novec 1230, HFC-227ea or aerosol)"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions and weight",
+     "value": "6058*2438*2896mm (20ft); 42.5T (M5); 46T (M6)"
+    },
+    {
+     "band": "Design",
+     "label": "Protection and temperature",
+     "value": "IP55 container, IP67 pack; -30~55°C"
+    },
+    {
+     "band": "Design",
+     "label": "Communication",
+     "value": "RS485/CAN/Ethernet/IEC61850"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification (manual)",
+     "value": "GB/UL/IEC/UN/NFPA; M5 series: UL 1973, UL 9540A, UL 9540 (CSA Group, September 2024); IEC 62619, IEC 63056, EMC IEC 61000 (TÜV SÜD, October 2024)"
+    }
+   ],
+   "notes": "M5 has been in mass production at Xiaogan since 1 February 2024 (not 2025, as an earlier plan row recorded). M6 was first shown as a 472Ah-based 6.28 MWh unit in March 2025 and re-based on 588Ah cells at 6.26 MWh from September 2025; the company said in June 2026 that the 588Ah cell and M6 enter 'formal mass production this year'."
+  },
+  {
+   "product": "珠峰 (Everest) 6C fast-charge EV cell and CTP3.0 superfast pack",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Energy density",
+     "value": "190Wh/kg, 420Wh/L (珠峰 6C); PED≥190Wh/kg for the LFP platform"
+    },
+    {
+     "band": "Electrical",
+     "label": "Charge rate",
+     "value": "6C continuous / 8C pulse (PF210-145A, 145Ah); 3C / 8C (PF300-173A, 173Ah); 1.8C / 4C (PF300-166A, 166Ah)"
+    },
+    {
+     "band": "Performance",
+     "label": "Charging claim",
+     "value": "6C+800V…10%-80%充电时间仅需8min; 充电10分钟续航600公里; 每秒补能1.25km"
+    },
+    {
+     "band": "Performance",
+     "label": "Low temperature",
+     "value": "-20℃ ≥85% capacity retention; 1C at 20% SOC; operating -40℃至60℃"
+    },
+    {
+     "band": "Design",
+     "label": "Pack",
+     "value": "单大面液冷 (single large-face liquid cooling); 温度波动控制在4℃以内; 线束和铝排减少30%以上; 体积利用率超80%"
+    },
+    {
+     "band": "Design",
+     "label": "Safety features",
+     "value": "双面陶瓷隔膜 (double-sided ceramic separator); 定向瞬泄流道天窗 (directional instant-venting channel)"
+    },
+    {
+     "band": "Durability",
+     "label": "Cycle life and warranty",
+     "value": "≥2000 cycles (145Ah); ≥2500 (173Ah, 166Ah); 6年60万公里质保"
+    }
+   ],
+   "notes": "All figures are the company's launch claims (27 October 2025, Xiangyang) and product-page values; no vehicle-level test or OEM confirmation is published."
+  },
+  {
+   "product": "C&I liquid-cooled cabinets — OTS02-H233L and OTS03-H261L",
+   "specs": [
+    {
+     "band": "Energy",
+     "label": "Nominal energy / power",
+     "value": "233kWh / 110kW (280Ah, 1P260S); 261kWh / 130kW (314Ah, 1P260S)"
+    },
+    {
+     "band": "Electrical",
+     "label": "DC voltage range",
+     "value": "650V~949V@DC"
+    },
+    {
+     "band": "Thermal",
+     "label": "Thermal and temperature",
+     "value": "液冷+液热; -20～55℃"
+    },
+    {
+     "band": "Safety",
+     "label": "Fire system",
+     "value": "Pack级气溶胶+舱级气溶胶+主动监测"
+    },
+    {
+     "band": "Design",
+     "label": "Dimensions and weight",
+     "value": "1035*1300*2305mm; 2600kg (233kWh); 2650kg (261kWh); IP55"
+    },
+    {
+     "band": "Design",
+     "label": "Communication",
+     "value": "Modbus-RTU/TCP"
+    }
+   ],
+   "notes": "Spec-page values as of September 2026."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-04",
+   "category": "other",
+   "headline": "Awarded the 10th Changjiang Quality Award (长江质量奖), Hubei's top quality prize, presented by the vice-governor",
+   "read": "Provincial endorsement of a five-year-old company — the political capital behind the land, the funds and the bank line is visible in the awards as much as in the approvals.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1649.html"
+  },
+  {
+   "date": "2026-08-30",
+   "category": "capacity",
+   "headline": "Xiangyang 70 GWh lithium-battery park starts production ten months after groundbreaking, 'two months ahead of plan'; 100Ah, 588Ah and 648Ah storage cells and fast-charge EV cells; about 400,000 cells a day at full run",
+   "read": "The second 70–80 GWh plant commissioned in three weeks; speed of build is now the company's most verifiable competitive fact, and ramp is the thing to watch.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1647.html"
+  },
+  {
+   "date": "2026-08-28",
+   "category": "order-win",
+   "headline": "Four Latin American agreements in São Paulo, including a 1.5 GWh cell framework with Windey (运达) for its Camaçari, Bahia plant and MoUs with Intermepro, ION Energy and JSN Energia",
+   "read": "Brazil's local-content storage market reached through a Chinese wind-turbine maker's local plant — the export route that avoids the US entirely.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1646.html"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "market",
+   "headline": "Benchmark Mineral Intelligence: Cornex fifth in H1-2026 storage-cell shipments at 6.5% share, 'rose from the seventh to fifth' with 116% year-on-year growth",
+   "read": "The second independent house to put the company inside the top five; the growth rate, not the rank, is the figure every house agrees on.",
+   "source": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "corporate",
+   "headline": "Investigative piece '楚能的隐秘世界' (Tencent/赶碳号): no audited accounts ever published; two RMB 6 billion-class local government funds (宜昌楚宜新能, 武汉楚能股权投资基金) formed for the company and no longer on its shareholder list; a reported RMB 2 billion green bond untraceable in NAFMII or NDRC registries; RMB 66 billion of base capex against an estimated RMB 2.6–3.3 billion a year of Hengxin cash flow",
+   "read": "The only public attempt to reconcile the capex with the money; the company did not respond, and the claims are unverified — but they are the questions a lender or a customer would ask.",
+   "source": "https://news.qq.com/rain/a/20260813A0F5DW00"
+  },
+  {
+   "date": "2026-08-09",
+   "category": "capacity",
+   "headline": "Yichang phase 2 (80 GWh, RMB 22 billion) commissioned ten months after groundbreaking; 'single-line efficiency up over 60%, over 800,000 cells a day at full production'; H1 2026 Yichang output over RMB 7.5 billion, shipments up 222%",
+   "read": "The first hard output figure for any base — RMB 7.5 billion in a half from Yichang alone — and the only revenue-like number the company has let out.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1643.html"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "market",
+   "headline": "SNE Research H1-2026 global ESS cell table: Cornex seventh at 30.2 GWh and 6.5% share, its first appearance in the SNE top ten; market 461.3 GWh, +71%",
+   "read": "The table this segment is typed against: a quarter of CATL's share, 1.3 GWh behind CALB and 1.2 behind REPT — a challenger by any reading, and a rank held by less than a rounding error.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "corporate",
+   "headline": "经济观察报: the owner's separate 楚能汽车 (Cornex Auto, RMB 2 billion, 50/50 Hengxin Automobile Group and Dai Deming) rolled out its first engineering prototype on 11 July, targets a mid-2027 launch of an RMB 150,000–200,000 extended-range SUV, may take over the former WM Motor plant in Huanggang, and is 'self-funded at RMB 10 billion — no financing, no loans'",
+   "read": "RMB 10 billion of the owner's money committed outside the battery company, in the most crowded segment of the Chinese car market, while the battery company's own capex depends on the same owner.",
+   "source": "https://finance.sina.com.cn/wm/2026-07-16/doc-inihyyvy4401581.shtml"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "order-win",
+   "headline": "5 GWh European storage framework with KK Group, the new-energy subsidiary of Denmark's A.P. Moller Holding, covering design, supply, commissioning, O&M and recycling",
+   "read": "A Maersk-family counterparty is the most bankable European name on the company's list; the agreement is a framework, not a purchase order.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1632.html"
+  },
+  {
+   "date": "2026-07-07",
+   "category": "order-win",
+   "headline": "2 GWh DC-side storage framework with TECO Electric & Machinery for AI data centres in Malaysia and Thailand over two years",
+   "read": "The company's one named AI-data-centre exposure — Southeast Asian, DC-side and through a Taiwanese integrator, which is where a Chinese cell can still reach that buyer.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1631.html"
+  },
+  {
+   "date": "2026-06-25",
+   "category": "order-win",
+   "headline": "Over 12 GWh of agreements at The smarter E Europe: IKAV/MoveOn/Cubenergy 3.4 GWh (Germany), Takom 2 GWh (Poland), InterConti 2 GWh (Ukraine), Orshar 1.6 GWh (Israel), Energy Investment 1 GWh (Romania), NKON 1 GWh, Sluxer up to 1 GWh residential",
+   "read": "Europe is the export market of record; the counterparties are developers and distributors rather than utilities, and every figure is a framework ceiling.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1629.html"
+  },
+  {
+   "date": "2026-06-03",
+   "category": "order-win",
+   "headline": "12 GWh at SNEC: Dongfang Electric 8 GWh (314Ah and 588Ah framework), CHINT Electric 2 GWh and Alpha ESS 2 GWh of 588Ah cells; 588Ah 'total planned capacity as high as 200 GWh', pilot runs complete",
+   "read": "The 588Ah class has a state-owned integrator's framework behind it before mass delivery — the order book leads the plant, as it did for the 472Ah.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1622.html"
+  },
+  {
+   "date": "2026-06-01",
+   "category": "procurement",
+   "headline": "Tinci Materials (SZSE: 002709) raises its electrolyte supply commitment to Cornex's four bases from at least 550,000 t to at least 1,010,000 t through 2030",
+   "read": "A listed supplier's disclosed volume is the closest thing to an audited demand forecast the company has; one million tonnes of electrolyte implies several hundred GWh of cells.",
+   "source": "https://finance.sina.com.cn/wm/2026-06-01/doc-inhzxmek3790782.shtml"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "order-win",
+   "headline": "50 GWh of framework agreements at CIBF 2026: CRRC Zhuzhou Institute 25 GWh of large-capacity cells, CLOU 10 GWh, Wolong Storage 5 GWh, Cubenergy 5 GWh, Growatt 5 GWh (100Ah/314Ah residential)",
+   "read": "CRRC Zhuzhou Institute's 25 GWh is the largest single signing in the company's history and pairs with the joint 688Ah cell — a covered integrator that now buys cells from Cornex, Great Power and REPT in parallel.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1614.html"
+  },
+  {
+   "date": "2026-05-20",
+   "category": "market",
+   "headline": "InfoLink Q1-2026 table: Cornex sixth globally in storage-cell shipments (from ninth for 2025) and 'first into the top five' in small storage",
+   "read": "The rank climbed three places in a quarter on capacity that was still being built; InfoLink's H1 note reads the trajectory as 'a good chance of the top five by year-end'.",
+   "source": "https://finance.sina.com.cn/wm/2026-05-20/doc-inhyqcsf6874976.shtml"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "regulatory",
+   "headline": "Hubei's 2026–2028 listing-reserve roster (金种子/银种子 — 472 and 664 companies) published by the provincial financial regulator carries no Cornex entity",
+   "read": "The province's own IPO pipeline does not include its largest battery start-up — consistent with the chairman's 'no timetable' and the absence of any counselling filing.",
+   "source": "http://jrb.hubei.gov.cn/tzgg/202603/t20260331_5903049.shtml"
+  },
+  {
+   "date": "2026-03-27",
+   "category": "product-launch",
+   "headline": "Cylindrical product line launched in Tianjin: 45Ah full-tab LFP for electric motorcycles (2.5C fast charge) and sodium-ion 10/16/26.5Ah cells with 91% capacity at −40 °C",
+   "read": "The '锂钠双系' line widens the product count without a disclosed customer; sodium-ion remains an R&D route in the company's own manual.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1601.html"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "capacity",
+   "headline": "Two 100 GWh projects complete provincial filing (备案): Xiaogan phase 2 (2,348 mu, planned start May 2026) and Yichang phase 3 (1,468 mu, planned start February 2027), each adding drone, robot, semi-solid and solid-state lines",
+   "read": "Another 200 GWh on paper on top of the 500 GWh plan; the filings, not a DRC approval, are the public record of the expansion.",
+   "source": "https://finance.sina.com.cn/roll/2026-03-05/doc-inhpxnfr6623898.shtml"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "market",
+   "headline": "InfoLink FY2025 global storage-cell ranking: Cornex ninth, 'a new entrant to the global top ten', 2025 shipments 'over 90 GWh'; market 612.39 GWh, +94.59%",
+   "read": "The full-year 2025 rank was ninth, not the 'top three' the company and its provincial patrons repeat — that phrase comes from SPIR's half-year table.",
+   "source": "https://www.ne21.com/news/show-224621.html"
+  },
+  {
+   "date": "2026-02-08",
+   "category": "capacity",
+   "headline": "Wuhan phase 2 signed with the municipal government: 80 GWh of EV and storage cells and packs, about RMB 22 billion, a 'Cornex Science Park' with three research institutes on a 'vehicles + energy' model, production from Q1 2027; the company states 'over 500 GWh of planned capacity'",
+   "read": "The fourth RMB 22 billion-class base in eighteen months; the chairman's remark about 'intelligent connected vehicles' at the signing is the only first-party trace of the car plan.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1595.html"
+  },
+  {
+   "date": "2026-02-04",
+   "category": "order-win",
+   "headline": "5.5 GWh three-year storage framework in Dammam with Al Rajhi Electrical and Shanghai GreenGrid (亿电通) for Saudi local manufacturing; two weeks after a 6 GWh phased agreement with WeaCan and Kemet in Egypt witnessed by Egypt's electricity minister",
+   "read": "The Middle East and North Africa agreements come with local-assembly and ministerial witness clauses — the shape of a Chinese cell maker's export when tariffs close the US.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1589.html"
+  },
+  {
+   "date": "2026-01-09",
+   "category": "policy",
+   "headline": "China's Ministry of Finance and State Taxation Administration cut the battery export VAT rebate from 9% to 6% for April–December 2026 and to zero from 1 January 2027",
+   "read": "A direct margin cut on the overseas share the company has grown fastest — and a pull-forward incentive that flatters 2026 shipments at 2027's expense.",
+   "source": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5246745/content.html"
+  },
+  {
+   "date": "2026-01-01",
+   "category": "policy",
+   "headline": "US Section 301 duty on Chinese non-EV lithium-ion batteries rises from 7.5% to 25%",
+   "read": "Stacked with other duties this takes Chinese storage cells into the 50%-plus range at the US border; the company's US framework partners (Bison, YN Energy) signed in 2024 have not been followed by a 2026 US signing.",
+   "source": "https://ustr.gov/sites/default/files/Section%20301%20Modifications%20Determination%20FRN%20(Sept%2012%202024)%20(FINAL).pdf"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "procurement",
+   "headline": "Longpan Technology (SSE: 603906) discloses a second supplement raising LFP cathode supply to Wuhan, Xiaogan and Yichang Cornex from 150,000 t to 1,300,000 t for 2025–2030, 'total sales value over RMB 45 billion', with a buyer prepayment clause",
+   "read": "1.3 million tonnes of cathode at roughly 2.2 kg per kWh is close to 600 GWh of cells over five years — the supplier's filing is the largest single statement of the company's intended scale, and it carries the supplier's own warning that quantities 'do not constitute a business commitment'.",
+   "source": "https://file.finance.qq.com/finance/hs/pdf/2025/11/25/1224823880.PDF"
+  },
+  {
+   "date": "2025-10-28",
+   "category": "capacity",
+   "headline": "Xiangyang 70 GWh park breaks ground (1,608 mu; 588Ah–1,000Ah storage cells and 4–6C EV cells); company states 'over 400 GWh under construction, over 500 GWh planned'",
+   "read": "The plan doubled in a year — 350 GWh planned in January 2025, 500 GWh by October — while the effective figure stayed at 'over 110 GWh'.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1550.html"
+  },
+  {
+   "date": "2025-10-27",
+   "category": "product-launch",
+   "headline": "珠峰 (Everest) 6C fast-charge EV cell launched at Xiangyang: 190 Wh/kg, 420 Wh/L, '10 minutes of charging for 600 km' on an 800 V CTP3.0 pack",
+   "read": "A headline EV cell from a company outside the EV top ten — product for the owner's own car brand as much as for third-party OEMs.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1548.html"
+  },
+  {
+   "date": "2025-09-25",
+   "category": "product-launch",
+   "headline": "588Ah storage cell launched at Yichang with the CTP2.0 pack and the '百变金刚' modular cabinet platform; a 100 MW site 'uses 20% less land, 27% fewer containers, over 20% lower operating cost'",
+   "read": "Joins the 587/588Ah format race a year behind CATL and EVE; the pitch is site economics, not a new chemistry.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1534.html"
+  },
+  {
+   "date": "2025-09-26",
+   "category": "capacity",
+   "headline": "Yichang phase 2 (80 GWh) breaks ground before more than 2,000 attendees, with the target 'topped out by year-end, in production by 26 September next year'",
+   "read": "It beat its own target by seven weeks; land for the site (2,054 mu) had been delivered in 31 days.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1537.html"
+  },
+  {
+   "date": "2025-08-22",
+   "category": "order-win",
+   "headline": "Dongfeng Liuzhou Motor nominates Cornex for over 30 GWh of passenger and heavy-truck cells over five years",
+   "read": "The largest EV nomination on record and the traction line's anchor; Dongfeng is a state OEM in the same province.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1506.html"
+  },
+  {
+   "date": "2025-06-11",
+   "category": "product-launch",
+   "headline": "472Ah cell and 6.28 MWh M6 shown at SNEC with 浸默 2.0 (six-second extinguish), cathode pre-lithiation for 15,000 cycles and a 2,000 V platform; mass delivery of the 472Ah from 30 June with 'up to 80 GWh' of capacity",
+   "read": "An intermediate format between 314Ah and 588Ah that few competitors chose; it gave the company a 6 MWh container six months before its 588Ah cell was ready.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1473.html"
+  },
+  {
+   "date": "2025-05-08",
+   "category": "order-win",
+   "headline": "Immersa (UK) signs for 1.25–2.5 GWh of M5 systems over five years at The smarter E; 'over 60 countries' served",
+   "read": "The first named European volume customer; the range in the figure is typical of the company's framework announcements.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1451.html"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "crrc-zhuzhou",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-01",
+   "via": "688Ah and 588Ah storage cells",
+   "scale": "25 GWh framework",
+   "note": "CRRC Zhuzhou Institute co-developed the 688Ah cell with Cornex (first cells January 2025) and signed the largest agreement in Cornex's history — 25 GWh of large-capacity cells — at CIBF on 13 May 2026.",
+   "context": "The relationship has two layers. The engineering layer is the 688Ah 'dual-six' cell (2.2 kWh, over 6 MWh systems) that the two companies launched together in January 2025, with Cornex producing the first cells at Wuhan. The commercial layer is the 25 GWh cell framework of May 2026, the anchor of the 50 GWh CIBF signing. CRRC Zhuzhou's own dossier records that it is not vertically integrated into cells and sources from several makers; it runs a parallel 688Ah programme with Great Power and REPT, so the partnership is exclusive on neither side, and both Cornex and Great Power sit on NARI Technology's 2026 cell-framework shortlist with Hithium.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1614.html"
+  },
+  {
+   "slug": "catl",
+   "type": "competitor",
+   "status": "active",
+   "note": "The incumbent Cornex is measured against — 125.0 GWh and 27.1% on SNE's H1-2026 storage-cell table to Cornex's 30.2 GWh and 6.5%.",
+   "context": "Cornex's 2023 pledge to sell 280Ah cells at RMB 0.5/Wh ex-tax was the price move that dragged the whole Chinese storage-cell market down, and its 2024 China Electrical Equipment Group award (4.01 GWh) was nearly twice CATL's 2.12 GWh share of the same tender. In the 587/588Ah format race Cornex followed CATL's 587Ah by about a year. No litigation between the two exists in the public record — six targeted searches found CATL's suits against CALB, Hithium and others, and none against Cornex — a point worth stating because an earlier plan row assumed otherwise.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "eve-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Second on SNE's H1-2026 storage-cell table (48.0 GWh, 10.4%) and third on InfoLink's and TrendForce's, against Cornex seventh and sixth respectively.",
+   "context": "EVE and Cornex are both Hubei-linked large-format LFP cell makers (EVE in Jingmen, Cornex in Wuhan, Xiaogan, Yichang and Xiangyang) contesting the same 314Ah-to-600Ah-plus format transition; EVE's 628Ah and Cornex's 588Ah/648Ah are the competing answers. On SPIR's H1-2026 table EVE is second and Cornex third.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "hithium",
+   "type": "competitor",
+   "status": "active",
+   "note": "Third on SNE's H1-2026 table (46.2 GWh, 10.0%) and second on InfoLink's, TrendForce's and Benchmark's; shortlisted alongside Cornex and Great Power on NARI Technology's 2026 cell framework.",
+   "context": "Hithium is the storage-only pure play Cornex is most often compared with in Chinese trade press — both founded within a few years of each other, both grew on the 314Ah cell and the 5 MWh container, both filed nothing with any exchange until Hithium's Hong Kong listing. The NARI shortlist (about 4 GWh split between cells of at least 314Ah and at least 587Ah) is the one tender where the two are named side by side.",
+   "source": "https://www.energytrend.com/news/20260703-51698.html"
+  },
+  {
+   "slug": "calb",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fifth on SNE's H1-2026 table at 31.5 GWh and 6.8%, 1.3 GWh ahead of Cornex; CALB's own dossier records the margin as 'a rank contested rather than held'.",
+   "context": "Ranks five to seven on SNE's table — CALB 31.5, REPT 31.4, Cornex 30.2 GWh — are inside any house's methodology error, and the three swap places between houses: InfoLink and TrendForce put Cornex sixth above REPT, SPIR puts Cornex third above both. CALB is on the US Department of Defense 1260H list (added June 2026); Cornex is not.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "rept",
+   "type": "competitor",
+   "status": "active",
+   "note": "Sixth on SNE's H1-2026 table at 31.4 GWh and 6.8%, 1.2 GWh ahead of Cornex; the two were joint lowest bidders at RMB 0.27/Wh on China Energy Engineering's 6 GWh cell tender in March 2025.",
+   "context": "REPT and Cornex are the two challengers whose bidding set the floor of the 2025 Chinese cell price war, at or below the industry's cash cost of about RMB 0.28/Wh. Both also work with CRRC Zhuzhou on 688Ah cells. On InfoLink's H1-2026 table Cornex overtook REPT for sixth.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "great-power",
+   "type": "competitor",
+   "status": "active",
+   "note": "Tenth on SNE's H1-2026 table (20.5 GWh, 4.4%, +202%) — the only company on it growing faster than Cornex — and co-shortlisted with Cornex and Hithium on NARI Technology's 2026 cell framework.",
+   "context": "Great Power's dossier records the NARI shortlist (2 July 2026) as its first hard evidence of winning Chinese utility-scale framework slots against tier-one peers; the same shortlist is one of the few tenders that names Cornex among the candidate winners. Both companies also compete in residential cells, where Cornex 'entered the top five' on InfoLink's 2026 small-storage tables while Great Power claims first, second or third depending on the house.",
+   "source": "https://www.energytrend.com/news/20260703-51698.html"
+  },
+  {
+   "slug": "gotion",
+   "type": "competitor",
+   "status": "active",
+   "note": "Ninth on SNE's H1-2026 table (20.8 GWh, 4.5%) and eighth on InfoLink's, directly below Cornex.",
+   "context": "Gotion is the listed peer whose storage-cell share Cornex passed in 2025–2026; Gotion carries US-listed-exclusion exposure that Cornex does not, and a US plant that Cornex has never proposed.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "byd",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fourth on SNE's H1-2026 storage-cell table (35.7 GWh, 7.7%) and the largest system integrator by Benchmark's count; FinDreams (弗迪电池) is fifth on SPIR's table, two places below Cornex.",
+   "context": "BYD sells cells and systems from one vertically integrated group, which is the model Cornex's owner is now imitating from the other direction — a battery maker adding a car brand. On the DoD 1260H list since June 2026; Cornex is not.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "envision-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "AESC, Envision's cell arm, is eighth on SNE's H1-2026 table (21.2 GWh, 4.6%), one place below Cornex, and seventh on InfoLink's FY2025 table, two places above it.",
+   "context": "Envision won the 2023 Gansu Wuwei 100 MW tender from which Cornex's bid was disqualified for missing commissioning certificates — the one 'legal' episode in Cornex's record — and the two have swapped rank positions on successive tables since.",
+   "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+  },
+  {
+   "slug": "sungrow",
+   "type": "customer",
+   "status": "historical",
+   "since": "2024",
+   "note": "Listed by Cornex among its 2024 project customers (阳光电源), alongside SPIC, Three Gorges Energy, PetroChina and Canadian Solar, in its March 2025 ranking release.",
+   "context": "The company's own list of '2024 customers' names Sungrow as a buyer of its cells for projects; no volume, contract or product is given and Sungrow's own dossier does not record the supply. Recorded as a historical, company-stated link rather than a documented supply agreement.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1434.html"
+  },
+  {
+   "slug": "canadian-solar",
+   "type": "customer",
+   "status": "historical",
+   "since": "2024",
+   "note": "Listed by Cornex among its 2024 project customers (阿特斯) in its March 2025 ranking release; no volume or contract disclosed.",
+   "context": "Same basis and same caveat as the Sungrow entry: a one-line company statement of past custom, with nothing from the counterparty's side. Canadian Solar's storage arm buys cells from several Chinese makers, so a 2024 purchase is plausible and unconfirmed.",
+   "source": "https://www.cornexbattery.com/Index/news_detail/id/1434.html"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The Section 301 duty on Chinese non-EV lithium-ion batteries rose from 7.5% to 25% on 1 January 2026, taking stacked duties on Chinese storage cells into the 50%-plus range. Cornex's only US-facing agreements are the 2024 frameworks with Bison Energy (1.5 GWh of M5 systems for US, Australian, Japanese and Italian markets) and YN Energy (1.1 GWh); no US signing appears among the 2026 agreements and the company has no US plant or licensing structure. Its export list — Europe, Saudi Arabia, Egypt, Brazil, Malaysia and Thailand — reads as the map of markets the tariff does not reach.",
+   "source": "https://ustr.gov/sites/default/files/Section%20301%20Modifications%20Determination%20FRN%20(Sept%2012%202024)%20(FINAL).pdf"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "As a Chinese-owned manufacturer Cornex is a prohibited foreign entity for the 45Y, 48E and 45X credits. Projects beginning construction from 2026 must keep prohibited-entity content below 45% of storage equipment cost (55% non-PFE, rising to 75% after 2029), and cells are roughly half of that cost, so a Cornex cell in a US credit-eligible project is close to unworkable. The company has published no mitigation and no US supply chain.",
+   "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
+  },
+  {
+   "regime": "DoD 1260H listing",
+   "status": "in-effect",
+   "exposure": "Cornex, Chuneng and Hengxin are not on the US Department of Defense's Section 1260H list of Chinese military companies as of 12 September 2026 — an OpenSanctions search returns no match — while CATL (January 2025) and BYD, CALB and EVE (65 additions of 8 June 2026) are. The distinction bars nothing today, since Cornex has no US federal customers, but it separates it from four of the six companies above it on SNE's table.",
+   "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies"
+  },
+  {
+   "regime": "China export tax rebate",
+   "status": "in-effect",
+   "effectiveDate": "2026-04-01",
+   "exposure": "The Ministry of Finance and State Taxation Administration announcement of 9 January 2026 cut the export VAT rebate on batteries from 9% to 6% for 1 April to 31 December 2026 and to zero from 1 January 2027, after the 13% to 9% cut of December 2024. The company's overseas share is its fastest-growing line and every 2026 framework is priced against a rebate that disappears in 2027; InfoLink attributes part of the industry's 2026 export surge to a pull-forward ahead of the cliff.",
+   "source": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5246745/content.html"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Dai Deming (代德明)",
+   "title": "Chairman and founder; controlling shareholder",
+   "photo": "images/execs/cornex-dai.jpg",
+   "background": [
+    "Founded Cornex in 2021; legal representative of the Xiaogan and Yichang operating subsidiaries; deputy to the Hubei Provincial People's Congress",
+    "Founder and controller of 恒信汽车集团 (Hengxin Automobile Group) — China's fourth-largest car-dealer group on the 2025 top-100, over 300 4S stores, revenue RMB 78.5 billion on the 2025 China Top 500 (rank 315); the group Xinhua calls Cornex's 'parent company'",
+    "Chairman of 楚能汽车 (Cornex Auto), the RMB 2 billion vehicle venture he owns 50/50 with Hengxin, prototype July 2026",
+    "Career per trade press: former artilleryman; state-owned hardware salesman in Yichang from 1986; built Hubei's largest air-conditioner distributorship from 1994; founded Hengxin in 2000 and opened its first Guangzhou Honda dealership in 2002; from Yichang, aged 61 in 2026"
+   ]
+  },
+  {
+   "name": "Huang Feng (黄锋)",
+   "title": "President (总裁)",
+   "photo": "images/execs/cornex-huang.jpg",
+   "background": [
+    "Signs the company's bank and government agreements — the RMB 10 billion Bank of Communications facility (January 2024), the Xiangyang investment agreement (September 2025) and the Wuhan phase 2 agreement (February 2026)",
+    "Legal representative of 武汉楚能新能源有限公司, the Wuhan operating subsidiary, per Longpan Technology's May 2025 exchange filing — which also shows that entity was incorporated on 30 March 2017, four years before the company's stated founding",
+    "Delivers the annual results review and plan; keynote speaker at the GGII storage conference (2024, 2025), EESA (2025) and ESIE (2026)",
+    "No prior-career biography published by the company"
+   ]
+  },
+  {
+   "name": "Bu Xiangnan (卜相楠)",
+   "title": "Executive Vice President (执行副总裁), products and R&D",
+   "photo": "images/execs/cornex-bu.jpg",
+   "background": [
+    "Launched the 588Ah cell (September 2025) and the 珠峰 6C cell (October 2025); presents the R&D review at annual meetings and chairs the expert committee sessions",
+    "Present at the May 2022 launch of the company's first product ('楚能一号') per China Daily"
+   ]
+  },
+  {
+   "name": "Zheng Peng (郑鹏)",
+   "title": "Vice President; formerly General Manager of the sales company",
+   "background": [
+    "Commercial lead on the 2026 framework agreements (KK Group, Hefu Intelligent 5 GWh, Windey Smart Storage); attended the JA Solar, TECO and KK Group signings"
+   ]
+  },
+  {
+   "name": "Zhu Xiaoping (朱小平)",
+   "title": "Vice President, supply chain",
+   "background": [
+    "Signed every 2025 long-term materials contract — BTR (anode, sodium and solid-state materials), Capchem and Tinci (electrolyte), Shanshan (anode, over RMB 10 billion), Kedali (structural parts, over RMB 10 billion), Nuode and Huachuang (copper foil), Ruidefeng, Changzhou Lithium Source/Longpan (LFP cathode)",
+    "Opened the 2024 supplier conference (over 180 suppliers)"
+   ]
+  },
+  {
+   "name": "Wang Chuang (王创)",
+   "title": "Vice President",
+   "background": [
+    "Unveiled the Xiaogan municipal service office inside the company's headquarters (December 2024); attends the base signings"
+   ]
+  },
+  {
+   "name": "Du Yingying (杜莹莹)",
+   "title": "Vice President",
+   "background": [
+    "Received the TÜV Rheinland UL 1973 certificate (April 2023); attended the Wuhan phase 2 signing (February 2026)"
+   ]
+  },
+  {
+   "name": "Chen Qun (陈群)",
+   "title": "Vice President, Global Marketing; deputy general manager of the overseas sales company",
+   "background": [
+    "Signed the Cestari (Italy) and Shanghai Electric Power Design Institute M5 agreements (November 2024)"
+   ]
+  },
+  {
+   "name": "Li Ling (李玲)",
+   "title": "President, Global Sales",
+   "background": [
+    "Signed the Bison Energy 1.5 GWh M5 agreement at RE+ 2024 in Anaheim"
+   ]
+  },
+  {
+   "name": "Liang Wei (梁巍), Dr",
+   "title": "Dean of the Research Institute / Cell Research Institute",
+   "background": [
+    "Presents sodium-ion and solid-state progress to the expert committee (May 2025) and the Yichang academic symposium (May 2026); the institute is co-built with the Songshan Lake Materials Laboratory of the Chinese Academy of Sciences"
+   ]
+  },
+  {
+   "name": "Deng Xiaoqiang (邓小强)",
+   "title": "General Manager, Traction Battery Business Unit",
+   "background": [
+    "Signed the Dongfeng Liuzhou 30 GWh nomination (August 2025); collected the Dongfeng Passenger Vehicle 'outstanding contribution' award (January 2025)"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "CNY",
+  "type": "private",
+  "commentary": "The company has never published an audited financial statement, a revenue figure or a profit figure, and no filing with any exchange or regulator exists; there is no consensus and 'expected' is empty throughout. What can be recorded are shipment and output figures — the company's own, the research houses' and one base's H1 2026 output stated by its deputy general manager — and the funding record as far as it is public. Where two figures describe the same period (SNE's 30.2 GWh against the company's 'over 40 GWh' for H1 2026) both are stated and neither is reconciled. Registered capital is RMB 4.0 billion on Baidu Baike and RMB 4.94 billion (RMB 4.375 billion or 3.0 billion paid in, depending on the aggregator) in the August 2026 investigative piece; the company publishes neither. The three operating subsidiaries carry RMB 1 billion of registered capital each per Longpan Technology's May 2025 exchange filing.",
+  "periods": [
+   {
+    "period": "H1 2026 (no accounts — shipments and rankings)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "commentary": "The half in which the company entered SNE's top ten for the first time. Its own 'over 40 GWh' reached the public through trade press (海融网, July 2026), not through a filing.",
+    "metrics": [
+     {
+      "name": "Energy-storage cell shipments (SNE Research)",
+      "actual": "30.2 GWh, 6.5% share, seventh globally; market 461.3 GWh, +71%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Benchmark: fifth at 6.5% and +116% year on year; InfoLink, TrendForce and ICC: sixth; SPIR: third in a 523.6 GWh universe. The rank is a function of the house; the share is not.",
+      "kpi": "gwh-shipped",
+      "qty": 30.2
+     },
+     {
+      "name": "Energy-storage cell shipments (company, via trade press)",
+      "actual": "'over 40 GWh, up about 60%'; new orders in the half 'over 140 GWh'",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Ten GWh above SNE's count for the same period; no source reconciles the two. The order figure is a sum of framework agreements."
+     },
+     {
+      "name": "Yichang base output value (deputy general manager 焦林森)",
+      "actual": "'over RMB 7.5 billion' for H1 2026, shipments up 222% year on year",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The only revenue-like figure any company officer has stated; one base of four, before Yichang phase 2 and Xiangyang came on line in August."
+     }
+    ]
+   },
+   {
+    "period": "FY2025 (no accounts — shipments and rankings)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "commentary": "The year the company entered the global top ten on InfoLink's and EVTank's tables, at ninth; Benchmark placed it in the top five; SNE's release named only CATL. The chairman's 'global top three' for 2025, repeated by the Wuhan and Hubei governments, corresponds to SPIR's and a monthly TD table, not to the annual houses.",
+    "metrics": [
+     {
+      "name": "Energy-storage cell shipments (InfoLink)",
+      "actual": "'over 90 GWh', ninth globally, 'new entrant to the top ten'; market 612.39 GWh, +94.59%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "EVTank: ninth in a 651.5 GWh market; GGII: seventh as printed on a China top ten it equates with the global top ten; Benchmark: 'broke into the top five'; SMM: eleventh (second-hand)."
+     },
+     {
+      "name": "Profitability (company statement, unaudited)",
+      "actual": "'break-even reached in July 2025' per the chairman (汽车商业评论, June 2026)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No statement, auditor or figure supports it; 2025 tender bids of RMB 0.27–0.28/Wh sat at or below the industry cash cost the same sources cite, and the investigative press describes the pricing as 'a level at which the whole industry loses money'."
+     },
+     {
+      "name": "Capacity",
+      "actual": "'over 110 GWh' effective across three bases (unchanged from December 2024 through February 2026); 'over 400 GWh under construction, over 500 GWh planned' (October 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Hubei's industry department already cites 185 GWh after Yichang phase 2 and '300 GWh in future'; no post-August-2026 effective figure has been published by the company."
+     }
+    ]
+   },
+   {
+    "period": "FY2024 (no accounts — shipments and orders)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "commentary": "The year the company's own figures started to be quoted by the houses; it was outside InfoLink's and EVTank's top ten and eighth on CNESA's.",
+    "metrics": [
+     {
+      "name": "Energy-storage shipments and orders (company)",
+      "actual": "shipments 'over 20 GWh', orders 'over 30 GWh' (EESA release, March 2025); EESA ranked it second in effective ESS-cell capacity and seventh in shipments among Chinese companies",
+      "expected": "",
+      "verdict": "inline",
+      "result": "At about RMB 0.5/Wh the 2024 order book implied roughly RMB 10 billion of value, per trade press; CNESA placed it eighth globally for 2024."
+     }
+    ]
+   },
+   {
+    "period": "Capital, funding and commitments (2024–2026)",
+    "periodType": "other",
+    "periodEnd": "2026-08-13",
+    "commentary": "Owner-financed with bank and provincial support; the equity record is aggregator-only and the one investigative reconstruction of it is unverified but unanswered.",
+    "metrics": [
+     {
+      "name": "Ownership (aggregator data, never company-published)",
+      "actual": "代德明 76.15238% of shares and 92.5% of votes via 恒信汽车集团 and 湖北恒信德龙实业有限公司 (企查查-type data); alternative cut of 55% / 25% / 12.5% / 7.5% (赶碳号, August 2026); 73.33% / 16.66% in 2022 (经济观察网)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Two RMB 6 billion-class government funds — 宜昌楚宜新能股权投资基金 (formed September 2025, subscribed RMB 251.3 million per the 2025 annual filing) and 武汉楚能股权投资基金 (approved March 2026, RMB 6.003 billion) — appear to have entered and left the shareholder list within months, per the same August 2026 piece."
+     },
+     {
+      "name": "Bank and bond financing",
+      "actual": "RMB 10 billion strategic credit facility from Bank of Communications Hubei branch (24 January 2024) — the only financing the company has announced",
+      "expected": "",
+      "verdict": "inline",
+      "result": "A reported RMB 2 billion green corporate bond (Q3 2025) could not be found in NAFMII or NDRC registries by the investigative press; the claim is recorded as unverified."
+     },
+     {
+      "name": "Base capital expenditure (stated)",
+      "actual": "Yichang phase 2 RMB 22 billion (80 GWh); Xiangyang about RMB 22 billion (70 GWh, press); Wuhan phase 2 about RMB 22 billion (80 GWh); Wuhan phase 1 RMB 10 billion; Xiaogan park headline RMB 67.5 billion (2022) — 'RMB 66 billion' across the four bases per the investigative estimate, against Hengxin Automobile Group cash flow it puts at RMB 2.6–3.3 billion a year",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Hengxin's revenue fell from about RMB 80 billion to RMB 73.4 billion in 2025 (经济观察报) with net profit of about RMB 300 million (汽车商业评论); the owner has separately pledged RMB 10 billion to 楚能汽车."
+     },
+     {
+      "name": "Supplier volume commitments (listed suppliers' filings)",
+      "actual": "Longpan Technology: 1,300,000 t of LFP cathode 2025–2030, 'over RMB 45 billion', buyer prepayment clause (supplement 2, effective 24 November 2025); Tinci: at least 1,010,000 t of electrolyte through 2030 (June 2026); Nuode 160,000 t and Huachuang 150,000 t of copper foil over five years; Kedali and Shanshan 'over RMB 10 billion' each",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The suppliers' own risk notices say the quantities 'do not constitute a business commitment or performance forecast'; read as intent, the cathode volume alone implies several hundred GWh of cells over the term."
+     }
+    ]
+   }
+  ]
+ },
+ "strategyRead": [
+  "1. **(High confidence)** We assess that Cornex is a challenger and not an incumbent in energy-storage cells, and that its rank is a property of the counting house rather than of the company. Basis: SNE places it seventh for H1 2026 at 30.2 GWh and 6.5% — a quarter of CATL's share, 1.3 GWh behind CALB and 1.2 behind REPT; InfoLink, TrendForce and ICC place it sixth, Benchmark fifth, SPIR third; for FY2025 InfoLink and EVTank say ninth, Benchmark 'top five'. The 'global top three' the company and its provincial patrons repeat is SPIR's half-year and a monthly table. On every table it is the fastest riser (Benchmark +116%), which is the challenger definition, and on none does it carry leader language.",
+  "2. **(High confidence)** We assess that the company's financing model — one car dealer's cash flow, provincial land and a bank line funding RMB 60 billion-plus of plants — is the central risk, and that it is unexamined because nothing is audited. Basis: no financial statement, shareholder table or registered-capital figure has ever been published by the company; the RMB 10 billion Bank of Communications facility is its only announced financing; two RMB 6 billion-class local government funds formed for it in 2025–2026 no longer appear on its shareholder list; a reported RMB 2 billion green bond cannot be found in any registry; and the parent group's revenue fell in 2025 while its owner pledged RMB 10 billion to a car venture outside the battery company.",
+  "3. **(Moderate confidence)** We assess that speed of build is the company's real product and that its share has been bought with capacity and price rather than technology. Basis: two 70–80 GWh plants commissioned ten months after groundbreaking in August 2026; a 588Ah cell that follows CATL's and EVE's formats by about a year; tender bids of RMB 0.27–0.28/Wh in 2025 at or below industry cash cost; and a supplier commitment (1.3 million tonnes of cathode) sized for several hundred GWh. The claim of break-even from July 2025 is a chairman's sentence with no figure behind it and cuts against the pricing record.",
+  "4. **(Moderate confidence)** We assess that there is no IPO in preparation and that the absence is structural rather than pending. Basis: no application at HKEX, no CSRC overseas-listing filing, no counselling registration with the Hubei CSRC bureau, no entry on Hubei's own 2026–2028 listing-reserve roster of 1,136 companies, and a chairman on record that there is 'no clear timetable'. The company is already a joint-stock company, so the missing step is the counselling filing, not a reorganisation; the two government funds' departure is consistent with a pre-IPO round that did not proceed.",
+  "5. **(Moderate confidence)** We assess that the export book is real in direction and soft in quantity, and that it points away from the United States by design. Basis: roughly 40 GWh of 2026 overseas agreements across Saudi Arabia, Egypt, Germany, Poland, Ukraine, Romania, Israel, Denmark, Brazil, Argentina, Malaysia and Thailand — every one a framework or MoU — against no 2026 US signing; a Chinese-owned cell fails the prohibited-foreign-entity ratio, pays 25% Section 301 duty from 2026 and loses China's export rebate in 2027. The one AI-data-centre link, TECO's 2 GWh for Malaysia and Thailand, is DC-side and Southeast Asian for the same reasons.",
+  "6. **(Low confidence)** We assess that the owner's car venture will divert capital and attention from the cell business rather than feed it. Basis: 楚能汽车 sits outside Cornex (50/50 Hengxin and Dai), is 'self-funded at RMB 10 billion — no financing, no loans', targets a mid-2027 launch into the most crowded segment of the Chinese market, and all three Cornex operating subsidiaries already hold vehicle-production licences in their business scope; the Wuhan subsidiary was incorporated in 2017 under the president's name, which suggests the corporate history is longer and more vehicle-shaped than the 2021 founding story. The company's own channels do not mention the venture, so the assessment rests on trade press and a supplier's filing.",
+  "**Collection gaps.** No audited accounts, revenue, profit, debt, headcount or shareholder table exists from the company or any regulator; every ownership percentage is aggregator data and the three versions in circulation do not agree. The 'Hubei DRC approval of 20 May 2026 for three projects adding 290 GWh' carried in the prior plan row could not be found — fgw.hubei.gov.cn returned HTTP 412 on six probes, yichang.gov.cn was policy-denied, and no combination of the known phases sums to 290 GWh; the public record of the expansion is the February–March 2026 filings for two 100 GWh projects. No CATL litigation against Cornex exists in the public record. The exact Xiangyang commissioning day is 'end of August' in the company's release and 30 August in the plan row. SNE's own release page for the H1-2026 storage table was not located; the CnEVPost, Sina and Sohu copies agree. Prior-career biographies of the president and executive vice president are unpublished. The CSRC Hubei bureau's monthly counselling spreadsheets returned an anti-bot page and were read from the channel text only.",
+  "**Indicators to watch.** *Any listing-application proof at HKEXnews, a CSRC overseas-listing filing, or a 辅导备案 with the Hubei CSRC bureau:* would reverse Judgment 4 and convert the calendar row from quarterly to dated. *SNE's FY2026 and H1-2027 storage tables:* a rank inside the top five on SNE — not SPIR — would move the role question toward incumbent; a fall below REPT and CALB would confirm the rank is contested. *Ramp at Xiangyang and Yichang phase 2 and the Wuhan phase 2 start (Q1 2027):* a published post-August effective-capacity figure above 110 GWh is the first test of the 500 GWh plan. *An audited statement, a bond prospectus or a bank syndication document:* the first financial disclosure of any kind would resolve Judgment 2 one way or the other. *A 1260H addition or a US enforcement action naming Cornex:* would close the one US distinction it holds. *China's export-rebate cliff on 1 January 2027 and Section 301 stacking:* watch overseas signings and prices in Q4 2026 for pull-forward. *楚能汽车's mid-2027 launch and any Cornex-side vehicle production:* would confirm Judgment 6's diversion."
+ ],
+ "sources": [
+  {
+   "label": "Cornex newsroom — Vietnam battery expo: 100/120/314/588Ah cells, M5 and M6",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1652.html",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "Cornex newsroom — inland smart-shipping expo: 320Ah marine cell, 165Ah/350Ah marine sodium-ion, 1,956 kWh sodium-ion marine system",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1651.html",
+   "date": "2026-09-08"
+  },
+  {
+   "label": "Cornex newsroom — 10th Changjiang Quality Award",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1649.html",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "Gasgoo — Cornex's Xiangyang lithium-battery park begins production (ten months from groundbreaking)",
+   "url": "https://autonews.gasgoo.com/articles/news/cornexs-xiangyang-lithium-battery-industrial-park-project-begins-production-2094801779111059457",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "EnergyTrend — Cornex Latin America: Windey 1.5 GWh Brazil cell framework, Intermepro, ION Energia, JSN Energia",
+   "url": "https://www.energytrend.com/news/20260831-52048.html",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Cornex newsroom — Xiangyang 70 GWh lithium-battery park starts production",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1647.html",
+   "date": "2026-08-30"
+  },
+  {
+   "label": "Cornex newsroom — four Latin American agreements in São Paulo (Windey 1.5 GWh; Intermepro; ION Energy; JSN Energia)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1646.html",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Cornex newsroom — South American smart-energy expo: 588Ah at 417 Wh/L, M6, 165Ah sodium-ion",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1645.html",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Benchmark Source — who shipped the most BESS cells and systems in H1 2026 (Cornex fifth, 6.5%, +116%)",
+   "url": "https://source.benchmarkminerals.com/article/who-shipped-the-most-bess-cells-and-systems-in-h1-2026-",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "ess-news — InfoLink H1-2026 storage-cell shipment data: three structural shifts (467.84 GWh)",
+   "url": "https://www.ess-news.com/2026/08/17/energy-storage-cell-shipment-data-for-h1-2026-reveal-three-structural-shifts/",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "Tencent / 赶碳号 — 楚能的隐秘世界 (no audited accounts; two government funds entered and left; green bond untraceable; capex against Hengxin cash flow)",
+   "url": "https://news.qq.com/rain/a/20260813A0F5DW00",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "界面 / 华夏能源网 — 储能电芯十强已无黑马 (InfoLink H1 2026; Cornex ninth for 2025 to sixth)",
+   "url": "https://www.jiemian.com/article/14915030.html",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Sina — 海外首次成为储能电芯主战场 (ICC 鑫椤 H1-2026 ranking; overseas 53.2% of deliveries)",
+   "url": "https://finance.sina.com.cn/tech/roll/2026-08-13/doc-inineuqk3127604.shtml",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Cornex newsroom — Yichang phase 2 80 GWh park commissioned (RMB 22 billion; H1 Yichang output over RMB 7.5 billion)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1643.html",
+   "date": "2026-08-09"
+  },
+  {
+   "label": "科技日报 — 宜昌二期 80 GWh 投产",
+   "url": "https://www.stdaily.com/web/gdxw/2026-08/09/content_561536.html",
+   "date": "2026-08-09"
+  },
+  {
+   "label": "CnEVPost — SNE Research global ESS battery market share, H1 2026 (Cornex seventh, 30.2 GWh, 6.5%)",
+   "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Sina — SNE H1-2026 top-twelve storage-cell table (461 GWh; Chinese makers 89%)",
+   "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-08-04/doc-inimcxxf5711357.shtml",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "每财网 / 163 — 储能2026座次重排 (SPIR trajectory: eighth 2024, ninth 2025, sixth Q1 2026, third H1 2026)",
+   "url": "https://www.163.com/dy/article/L3DROEVL0519HF8U.html",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Foley Hoag — the prohibited-foreign-entity (FEOC) rules and battery storage",
+   "url": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/",
+   "date": "2026-07"
+  },
+  {
+   "label": "海融网 — 楚能 H1 2026: 'over 40 GWh, up about 60%'; new orders over 140 GWh; CABIA traction rankings",
+   "url": "https://www.hirohida.com/news/news_details/33098.html",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "经济观察网 — 楚能的跨界造车局 (楚能汽车: RMB 2 billion, 50/50; ET prototype 11 July 2026; mid-2027 launch; ex-WM Motor Huanggang plant)",
+   "url": "http://m.eeo.com.cn/2026/0716/960966.shtml",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Sina — 楚能的跨界造车局 (copy of the 经济观察网 report)",
+   "url": "https://finance.sina.com.cn/wm/2026-07-16/doc-inihyyvy4401581.shtml",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "CarNewsChina — a smaller battery maker enters the EV race (Cornex Auto; Dai Deming background)",
+   "url": "https://carnewschina.com/2026/07/16/as-if-the-china-ev-market-werent-crowded-enough-a-smaller-battery-maker-enters-the-race/",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Sina / 经济导报 — 又一造车新玩家入场 (analyst view of Cornex Auto)",
+   "url": "https://finance.sina.com.cn/wm/2026-07-15/doc-inihwvwy4695649.shtml",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Sina — SPIR / 起点研究院 H1-2026 global lithium storage-cell top ten (Cornex third; 523.6 GWh)",
+   "url": "https://finance.sina.com.cn/wm/2026-07-11/doc-inihpche2772479.shtml",
+   "date": "2026-07-11"
+  },
+  {
+   "label": "Cornex newsroom — 5 GWh European storage framework with Denmark's KK Group (A.P. Moller Holding)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1632.html",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "Cornex newsroom — 2 GWh Southeast Asian AIDC DC-side framework with TECO Electric & Machinery",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1631.html",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "EnergyTrend — NARI Technology 2026 cell framework shortlist (Hithium, Cornex, Great Power; about 4 GWh in ≥314Ah and ≥587Ah lots)",
+   "url": "https://www.energytrend.com/news/20260703-51698.html",
+   "date": "2026-07-03"
+  },
+  {
+   "label": "energy-storage.news — Benchmark 2025 cell and system shipments (Cornex 'broke into the top five'; over 400 GWh under construction)",
+   "url": "https://www.energy-storage.news/2025-bess-cell-and-system-shipments-byd-takes-bess-crown-no-korean-firms-in-top-10-cell-suppliers/",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "EnergyTrend — The smarter E Europe 2026 orders (Cornex over 12 GWh)",
+   "url": "https://www.energytrend.com/news/20260626-51666.html",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "Cornex newsroom — over 12 GWh of agreements at The smarter E Europe",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1629.html",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "Cornex newsroom — M6 at The smarter E; 588Ah 200 GWh capacity plan; delivery status by cell size",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1628.html",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "Cornex newsroom — after-sales NECAS five-star and CTEAS seven-star certifications; 60-plus countries",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1627.html",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "WilmerHale — Pentagon adds 65 entities to the 1260H list (BYD, CALB, EVE among them)",
+   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Cornex newsroom — CTP3.0 'module-free integration' wins the SNEC storage technology award (pack specifications)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1626.html",
+   "date": "2026-06-05"
+  },
+  {
+   "label": "Cornex newsroom — 湖北精品 recognition (over 100 products, about 6,000 patents filed, over 250 certification reports)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1624.html",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "腾讯 / 汽车商业评论 — 从电池到整车，楚能是下一个比亚迪吗 (IPO 'no clear timetable'; break-even July 2025; Hengxin profile)",
+   "url": "https://news.qq.com/rain/a/20260604A09EB200",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "虎嗅 — 61岁湖北商人代德明携百亿资金进军造车",
+   "url": "https://www.huxiu.com/article/4864299.html",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "Cornex newsroom — 12 GWh at SNEC 2026: Dongfang Electric 8 GWh, CHINT 2 GWh, Alpha ESS 2 GWh; 588Ah specifications",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1622.html",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Sina — Tinci Materials raises electrolyte supply to Cornex to at least 1,010,000 t through 2030 (announcement 2026-062)",
+   "url": "https://finance.sina.com.cn/wm/2026-06-01/doc-inhzxmek3790782.shtml",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "湖北省经信厅 — 又一万亿级风口 (Yichang phase 3 100 GWh from February 2027; orders to September; 'global top five')",
+   "url": "http://jxt.hubei.gov.cn/bmdt/rdjj/202605/t20260527_5945088.shtml",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "ess-news — Cornex signs 50 GWh of storage battery agreements at CIBF 2026",
+   "url": "https://www.ess-news.com/2026/05/26/cornex-signs-50-gwh-in-storage-battery-agreements-at-cibf-2026/",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "Sina — InfoLink Q1-2026 global storage-cell top ten (Cornex sixth; first into the top five in small storage)",
+   "url": "https://finance.sina.com.cn/wm/2026-05-20/doc-inhyqcsf6874976.shtml",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "湖北省经信厅 — Yichang cluster (185 GWh after phase 2; 50 GWh of orders; 300 GWh future)",
+   "url": "https://jxt.hubei.gov.cn/bmdt/rdjj/202605/t20260518_5938424.shtml",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "世纪新能源网 — 5连签 楚能CIBF狂揽50GWh (CRRC Zhuzhou Institute 25 GWh; CLOU 10; Wolong 5; Cubenergy 5; Growatt 5)",
+   "url": "https://m.ne21.com/news/show-227280.html",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Cornex newsroom — 50 GWh signed at CIBF 2026 with CRRC Zhuzhou Institute, CLOU, Wolong Storage, Cubenergy and Growatt",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1614.html",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Cornex newsroom — CIBF 2026 product matrix (珠峰 6C, H02/H03 truck packs, 45Ah cylindrical, sodium-ion, M6)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1609.html",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "Sina — 电池出口退税2027年将归零 储能高管评估",
+   "url": "https://finance.sina.com.cn/roll/2026-05-09/doc-inhximsx3337976.shtml",
+   "date": "2026-05-09"
+  },
+  {
+   "label": "EnergyTrend — BloombergNEF Q2-2026 energy-storage Tier 1 list (Cornex named)",
+   "url": "https://www.energytrend.com/news/20260507-51348.html",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Cornex newsroom — ESIE 2026 (588Ah, CTP3.0, M6; president's keynote)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1602.html",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "湖北省地方金融管理局 — 2026–2028 listing-reserve roster (金种子 472 / 银种子 664; no Cornex entity)",
+   "url": "http://jrb.hubei.gov.cn/tzgg/202603/t20260331_5903049.shtml",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Cornex newsroom — Tianjin cylindrical launch: 45Ah full-tab LFP; sodium-ion 10/16/26.5Ah",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1601.html",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "Sina / 电池网 — two 100 GWh Cornex projects complete provincial filing (Yichang phase 3; Xiaogan phase 2)",
+   "url": "https://finance.sina.com.cn/roll/2026-03-05/doc-inhpxnfr6623898.shtml",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "湖北日报 — 湖北省人大代表、楚能新能源董事长代德明 interview (500 GWh by end-2026; 300,000 vehicles; 200 ships)",
+   "url": "https://news.hubeidaily.net/pc/c_5208027.html",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "IRS — Notice 2026-15, material-assistance guidance for prohibited foreign entities",
+   "url": "https://www.irs.gov/newsroom/treasury-irs-provide-guidance-for-certain-energy-tax-credits-regarding-material-assistance-provided-by-prohibited-foreign-entities-under-the-one-big-beautiful-bill",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "世纪新能源网 — InfoLink FY2025 global storage-cell ranking (Cornex ninth, 'over 90 GWh'; 612.39 GWh)",
+   "url": "https://www.ne21.com/news/show-224621.html",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Cornex newsroom — 2025 annual meeting (2026 'the year of struggle, strength and surpassing')",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1594.html",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "武汉市人民政府 — 从武汉起步，跻身全球前三 (Wuhan phase 2: RMB 22 billion, 80 GWh, Q1 2027; 2,200 R&D staff; 'top three in 2025')",
+   "url": "https://www.wuhan.gov.cn/sy/whyw/202602/t20260209_2726243.shtml",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "ess-news — InfoLink: 2025 energy-storage cell shipments jump 95% to 612 GWh",
+   "url": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Cornex newsroom — Wuhan phase 2 80 GWh project signed (over 500 GWh planned; 'intelligent connected vehicles' remark)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1595.html",
+   "date": "2026-02-08"
+  },
+  {
+   "label": "腾讯 / 智通 — GGII 2025 China storage lithium-battery shipments 630 GWh and top ten (Cornex seventh as printed)",
+   "url": "https://news.qq.com/rain/a/20260206A0722T00",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "电池网 — EVTank FY2025 global ESS battery top ten (Cornex ninth; 651.5 GWh)",
+   "url": "https://www.itdcw.com/news/hangyebaogao/0205153ER026.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Cornex newsroom — 5 GWh framework with Hefu Intelligent Energy (Nanfu affiliate)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1593.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Cornex newsroom — 5.5 GWh Saudi framework with Al Rajhi Electrical and Shanghai GreenGrid in Dammam",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1589.html",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "ess-news — Cornex secures 11.5 GWh of orders from Saudi Arabia and Egypt",
+   "url": "https://www.ess-news.com/2026/02/04/cornex-secures-11-5-gwh-of-orders-from-saudi-arabia-egypt/",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "sohu / 电池工业网 — Xiangyang project progress (RMB 22 billion; 50 GWh storage plus 20 GWh traction split)",
+   "url": "https://www.sohu.com/a/981920791_122014422",
+   "date": "2026-01-30"
+  },
+  {
+   "label": "SNE Research — global LIB ESS market reaches 550 GWh in 2025 (top seven all Chinese; Cornex not named)",
+   "url": "https://www.sneresearch.com/en/insight/release_view/583/page/0",
+   "date": "2026-01-28"
+  },
+  {
+   "label": "Sina / 电池网 — 2025 China traction-battery installations top fifteen (Cornex's first annual appearance)",
+   "url": "https://finance.sina.cn/stock/jdts/2026-01-20/detail-inhhyfup7058388.d.html",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "Cornex newsroom — 6 GWh Egypt framework with WeaCan and Kemet; four regional service centres",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1582.html",
+   "date": "2026-01-16"
+  },
+  {
+   "label": "国家税务总局 — 关于调整光伏等产品出口退税政策的公告 (battery rebate 9% to 6% from April 2026, zero from 2027)",
+   "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5246745/content.html",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "Sina — 楚能新能源大手笔扩张 (三言科技: ownership 76.15% / 92.5%; 2024 CNESA eighth; RMB 159.5 billion plan)",
+   "url": "https://news.qq.com/rain/a/20251222A01P0200",
+   "date": "2025-12-22"
+  },
+  {
+   "label": "Cornex newsroom — GGII storage conference 2025: one headquarters, two R&D centres, four bases; 110 GWh effective, 500 GWh planned",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1563.html",
+   "date": "2025-12-09"
+  },
+  {
+   "label": "Cornex newsroom — Changjiang Maritime Safety Administration and CCS visit; 'Gezhouba' vessel 24,000 kWh",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1561.html",
+   "date": "2025-12-06"
+  },
+  {
+   "label": "Cornex — 产品手册 (Chinese product manual, data as of October 2025)",
+   "url": "https://oe-upload.dms.cn-np.com/uploads/affair/202511/6925137e8b79a.pdf",
+   "date": "2025-11"
+  },
+  {
+   "label": "龙蟠科技 SSE announcement 2025-143 — supplement 2: 1,300,000 t of LFP cathode 2025–2030, over RMB 45 billion",
+   "url": "https://file.finance.qq.com/finance/hs/pdf/2025/11/25/1224823880.PDF",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "每经 — 龙蟠科技签450亿元巨单",
+   "url": "https://www.nbd.com.cn/articles/2025-11-24/4155118.html",
+   "date": "2025-11-24"
+  },
+  {
+   "label": "Sina — 3.37亿电芯大单 (China Energy Storage Hohhot tender at RMB 0.2809/Wh; 588Ah launch)",
+   "url": "https://finance.sina.com.cn/roll/2025-11-14/doc-infxkpau4329017.shtml",
+   "date": "2025-11-14"
+  },
+  {
+   "label": "Cornex newsroom — global strategic agreement with JA Solar",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1556.html",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Cornex — product manual 'CORNEX PRODUCT SOLUTIONS' V9.2-251022 (English, PDF)",
+   "url": "https://oe-upload.dms.cn-np.com/uploads/affair/202511/6925137a605c5.pdf",
+   "date": "2025-10"
+  },
+  {
+   "label": "Cornex newsroom — Xiangyang 70 GWh project breaks ground (over 400 GWh under construction, over 500 GWh planned)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1550.html",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "Cornex newsroom — 珠峰 (Everest) 6C fast-charge cell launched",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1548.html",
+   "date": "2025-10-27"
+  },
+  {
+   "label": "OFweek — 10天内加注150GWh (Yichang phase 2 and Xiangyang; financing questions)",
+   "url": "https://libattery.ofweek.com/2025-10/ART-36008-8120-30671545.html",
+   "date": "2025-10-08"
+  },
+  {
+   "label": "Cornex newsroom — Xiangyang investment agreement signed 15 September 2025",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1540.html",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Cornex newsroom — Yichang phase 2 80 GWh project breaks ground (phase 1 65 GWh; park about 5,000 mu)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1537.html",
+   "date": "2025-09-26"
+  },
+  {
+   "label": "Cornex newsroom — 588Ah storage cell launched with CTP2.0 and the 百变金刚 platform",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1534.html",
+   "date": "2025-09-25"
+  },
+  {
+   "label": "Sina — 15家鄂企上榜2025中国企业500强 (Hengxin Automobile Group rank 315, RMB 78.51 billion)",
+   "url": "https://finance.sina.com.cn/roll/2025-09-17/doc-infqtywq4818316.shtml",
+   "date": "2025-09-17"
+  },
+  {
+   "label": "Cornex newsroom — Yichang phase 2 agreement (about 1,730 mu; 80 GWh)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1519.html",
+   "date": "2025-09-07"
+  },
+  {
+   "label": "Cornex newsroom — BTR long-term anode agreement (artificial graphite, silicon-carbon, sodium and solid-state materials)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1509.html",
+   "date": "2025-08-26"
+  },
+  {
+   "label": "Cornex newsroom — Dongfeng Liuzhou Motor over 30 GWh five-year nomination",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1506.html",
+   "date": "2025-08-22"
+  },
+  {
+   "label": "Cornex newsroom — EESA 2025 awards; 472Ah in mass production since June; 684Ah shown",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1499.html",
+   "date": "2025-08-13"
+  },
+  {
+   "label": "中国经营报 via SNBE — 代德明 on listing: 'no clear timetable'",
+   "url": "https://www.3c-ate.com/industry/533.html",
+   "date": "2025-06-23"
+  },
+  {
+   "label": "Sina — 楚能董事长代德明：预计未来两年储能电池厂仅剩十余家 (2024 shipments and orders)",
+   "url": "https://finance.sina.cn/2025-06-22/detail-infawrns4561640.d.html",
+   "date": "2025-06-22"
+  },
+  {
+   "label": "Cornex newsroom — SNEC 2025: 472Ah, M6 6.28 MWh, 浸默 2.0, 2,000 V platform, 500Ah-plus and 600Ah-plus roadmap",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1473.html",
+   "date": "2025-06-11"
+  },
+  {
+   "label": "Cornex newsroom — expert committee 2025 (members; about 5,000 patents; over 200 certifications)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1469.html",
+   "date": "2025-05-27"
+  },
+  {
+   "label": "Cornex newsroom — Changzhou Lithium Source / Longpan five-year LFP cathode agreement (about 150,000 t, about RMB 5 billion)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1463.html",
+   "date": "2025-05-22"
+  },
+  {
+   "label": "Cornex newsroom — 472Ah and 6.28 MWh at CLEANPOWER (Phoenix); 472Ah capacity up to 80 GWh",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1461.html",
+   "date": "2025-05-21"
+  },
+  {
+   "label": "龙蟠科技 SSE announcement 2025-064 — original LFP cathode contract; Cornex subsidiaries' registration data, legal representatives and business scope",
+   "url": "https://file.finance.qq.com/finance/hs/pdf/2025/05/10/1223512034.PDF",
+   "date": "2025-05-10"
+  },
+  {
+   "label": "Cornex newsroom — Immersa (UK) 2.5 GWh M5 framework at The smarter E",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1451.html",
+   "date": "2025-05-08"
+  },
+  {
+   "label": "Cornex newsroom — 472Ah launch with Huaneng's 华清储创; six MoUs; 80 GWh of capacity",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1433.html",
+   "date": "2025-03-28"
+  },
+  {
+   "label": "Cornex newsroom — EESA ranking (second in effective capacity, seventh in shipments among Chinese makers; 2024 orders over 30 GWh, shipments over 20 GWh; 2024 customers named)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1434.html",
+   "date": "2025-03-28"
+  },
+  {
+   "label": "湖北省经信厅 — Xiaogan base (15 lines; over 100,000 cells a day; 350 GWh plan)",
+   "url": "https://jxt.hubei.gov.cn/bmdt/qyfc/202502/t20250217_5545037.shtml",
+   "date": "2025-02-17"
+  },
+  {
+   "label": "Cornex newsroom — first 688Ah cells with CRRC Zhuzhou Institute",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1371.html",
+   "date": "2025-01-24"
+  },
+  {
+   "label": "OFweek — 楚能新能源跃升全球TOP7 (GGII/ICC 2024 composite: 20–25 GWh)",
+   "url": "https://libattery.ofweek.com/2025-01/ART-36001-8120-30656110.html",
+   "date": "2025-01-24"
+  },
+  {
+   "label": "Cornex newsroom — Hubei brand gold award (350 GWh planned, over 110 GWh effective, 80,000 jobs at full build)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1365.html",
+   "date": "2025-01-13"
+  },
+  {
+   "label": "Cornex newsroom — 浸默 immersion safety technology wins MIIT award (deployments)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1360.html",
+   "date": "2024-12-27"
+  },
+  {
+   "label": "Cornex newsroom — 5 GWh India M5 framework (unnamed partner)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1357.html",
+   "date": "2024-12-26"
+  },
+  {
+   "label": "Cornex newsroom — Guohua Energy Investment visit (source of the chairman's photograph)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1356.html",
+   "date": "2024-12-20"
+  },
+  {
+   "label": "Cornex newsroom — president Huang Feng's GGII storage conference keynote (over 30 GWh produced; photographs of the president and executive vice president)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1349.html",
+   "date": "2024-12-11"
+  },
+  {
+   "label": "Cornex newsroom — global headquarters inaugurated at Xiaogan",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1345.html",
+   "date": "2024-11-22"
+  },
+  {
+   "label": "Cornex newsroom — Cestari (Italy) strategic agreement (20–30 GWh over three to five years)",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1339.html",
+   "date": "2024-11-13"
+  },
+  {
+   "label": "Sina — 宜昌首富跨界储能 从废标到标王 (2023 Wuwei bid disqualification; 2024 tender wins)",
+   "url": "https://finance.sina.com.cn/roll/2024-10-24/doc-inctsewr9659012.shtml",
+   "date": "2024-10-24"
+  },
+  {
+   "label": "Cornex newsroom — BloombergNEF Q4-2024 Tier 1 energy-storage supplier list",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1331.html",
+   "date": "2024-10-23"
+  },
+  {
+   "label": "Cornex newsroom — TÜV SÜD IEC 62619, IEC 63056 and EMC certificates for the M5",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1334.html",
+   "date": "2024-10-23"
+  },
+  {
+   "label": "Cornex newsroom — All-Energy Australia: YN Energy 1.1 GWh (US) and Star Energy 500 MWh",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1333.html",
+   "date": "2024-10-23"
+  },
+  {
+   "label": "USTR — Section 301 modifications determination (non-EV lithium-ion batteries to 25% from 2026-01-01)",
+   "url": "https://ustr.gov/sites/default/files/Section%20301%20Modifications%20Determination%20FRN%20(Sept%2012%202024)%20(FINAL).pdf",
+   "date": "2024-09-12"
+  },
+  {
+   "label": "腾讯 — 2024 China Top 500 automotive entries (Hengxin Automobile Group rank 308, RMB 79.6 billion)",
+   "url": "https://news.qq.com/rain/a/20240911A07N4X00",
+   "date": "2024-09-11"
+  },
+  {
+   "label": "Cornex newsroom — Bison Energy 1.5 GWh M5 agreement at RE+ 2024",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1315.html",
+   "date": "2024-09-11"
+  },
+  {
+   "label": "Cornex newsroom — CSA Group UL 1973, UL 9540A and UL 9540 certificates for the M5 series",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1314.html",
+   "date": "2024-09-11"
+  },
+  {
+   "label": "Cornex newsroom — EESA 2024: 314Ah plus 5 MWh; 浸默 70-second extinguish",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1312.html",
+   "date": "2024-09-02"
+  },
+  {
+   "label": "Cornex newsroom — China Electrical Equipment Group tender award 4.01 GWh of 14.54 GWh",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1310.html",
+   "date": "2024-08-27"
+  },
+  {
+   "label": "新华网湖北 — 向新而行: 对话楚能新能源董事长代德明 (Hengxin as parent; RMB 10 billion Jiangxia base; 2,000-plus R&D staff)",
+   "url": "http://www.hb.xinhua.org/20240702/0736be602f8d4e958cd0456e73366a3f/c.html",
+   "date": "2024-07-02"
+  },
+  {
+   "label": "能源杂志 — 低价狂飙，一代楚商的储能新路 (RMB 0.5/Wh episode; Bank of Communications RMB 10 billion facility)",
+   "url": "https://www.inengyuan.com/chuneng/13062.html",
+   "date": "2024-02-06"
+  },
+  {
+   "label": "Cornex newsroom — CORNEX M5 20-foot 5 MWh container enters mass production at Xiaogan",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1237.html",
+   "date": "2024-02-01"
+  },
+  {
+   "label": "Cornex newsroom — Bank of Communications Hubei branch RMB 10 billion strategic credit facility",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1216.html",
+   "date": "2024-01-24"
+  },
+  {
+   "label": "Cornex newsroom — 280Ah cells at no more than RMB 0.5/Wh ex-tax ('about 40% below')",
+   "url": "https://www.cornexbattery.com/Index/news_detail/id/1146.html",
+   "date": "2023-08-03"
+  },
+  {
+   "label": "Cornex — energy-storage solutions page (cell, pack, container and C&I specifications)",
+   "url": "https://www.cornexbattery.com/Index/solutions_energy.html"
+  },
+  {
+   "label": "Cornex — commercial-application solutions page (commercial-vehicle and marine cells and modules)",
+   "url": "https://www.cornexbattery.com/Index/solutions_bussiness.html"
+  },
+  {
+   "label": "Cornex — passenger-vehicle solutions page (traction cells, CTP3.0)",
+   "url": "https://www.cornexbattery.com/Index/solutions_passenger.html"
+  },
+  {
+   "label": "Cornex — company profile",
+   "url": "https://www.cornexbattery.com/Index/introduction.html"
+  },
+  {
+   "label": "Cornex — innovation and technology page (patents filed and granted, expert committee)",
+   "url": "https://www.cornexbattery.com/Index/devlopment_technology.html"
+  },
+  {
+   "label": "Cornex — legal notice (legal name; Xiaogan jurisdiction)",
+   "url": "https://www.cornexbattery.com/Index/statement.html"
+  },
+  {
+   "label": "Cornex — contact page (global headquarters address)",
+   "url": "https://www.cornexbattery.com/Index/contact_us.html"
+  },
+  {
+   "label": "Cornex — news archive (23 list pages, 206 items)",
+   "url": "https://www.cornexbattery.com/Index/news.html"
+  },
+  {
+   "label": "Cornex — English site mirror",
+   "url": "https://www.cornexbattery.com/en/"
+  },
+  {
+   "label": "CSRC Hubei bureau — 辅导企业信息 channel (no Cornex counselling entry)",
+   "url": "https://www.csrc.gov.cn/hubei/c100911/common_list_zt.shtml?channelid=223eb48aa00e4f4ebab3fd0762d4d673"
+  },
+  {
+   "label": "HKEX — consolidated Main Board listing-application index (no Cornex row; checked 2026-09-12)",
+   "url": "https://www1.hkexnews.hk/app/documents/sehkconsolidatedindex.xlsx"
+  },
+  {
+   "label": "OpenSanctions — search 'Cornex New Energy' (no matching entities)",
+   "url": "https://www.opensanctions.org/search/?q=Cornex+New+Energy"
+  },
+  {
+   "label": "yancuan.com — 楚能 shareholder list (aggregator: 76.15238% / 92.5%)",
+   "url": "https://www.yancuan.com/gsgd/101282.html"
+  },
+  {
+   "label": "Baidu Baike — 楚能新能源股份有限公司 (aggregator: founded 2021-08-06; registered capital RMB 4.0 billion)",
+   "url": "https://baike.baidu.com/item/楚能新能源股份有限公司/58269963"
+  }
+ ],
+ "lastUpdated": "2026-09-13",
+ "profileVersion": 1
+}

@@ -1,0 +1,445 @@
+{
+ "schemaVersion": 2,
+ "slug": "mitra-chem",
+ "title": "Mitra Chem — Technology Study Guide",
+ "lastUpdated": "2026-09-13",
+ "sections": [
+  {
+   "id": "start-here-the-powder",
+   "title": "Start here: the battery is a powder before it is a cell",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "Every guide in this corpus that covers a cell maker starts at the cell. This one starts one step earlier, at the **{{cathode active material}}** — the black powder, roughly a third of a storage cell's cost, that is coated onto aluminium foil to make the positive electrode. Mitra Chem does not make cells. It wants to make this powder, in the United States, in a chemistry ({{LFP}}) that is made almost entirely in China.",
+    "That makes it the right company to learn three things from: what a cathode actually does inside a lithium-ion cell and why iron phosphate is the chemistry grid storage chose; how a cathode powder is manufactured and why 'making it' and 'making it at scale and on spec' are different problems; and why, since 1 January 2026, a US tax rule has turned the powder's country of origin into a commercial property worth paying for.",
+    "The one sentence to hold onto: **whoever makes the powder sets the cell's cost, its safety and — under the 2026 rules — its tax status; the hard part is not the chemistry but the tonnes.**"
+   ]
+  },
+  {
+   "id": "what-a-cathode-does",
+   "title": "What a cathode does, and why iron phosphate",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A lithium-ion cell stores energy by moving lithium ions between two host materials. On charge the ions leave the cathode and slide into the graphite anode; on discharge they return. The host structures are not consumed — the ions slip in and out of gaps in a crystal, which is what **{{intercalation}}** means, and it is why the reaction can repeat thousands of times.",
+    "The cathode decides two things the anode does not. First, **voltage**: the cell's voltage is the difference between the two hosts' electrochemical potentials, and since graphite sits near lithium metal, the cathode chemistry sets almost the whole number. Second, **most of the cost**: the anode is graphite, which is cheap; the cathode contains the lithium and, in nickel chemistries, the nickel and cobalt.",
+    "**{{LFP}}** — lithium iron phosphate, LiFePO4 — uses an **{{olivine}}** crystal structure in which the phosphate group holds oxygen with a strong covalent bond. That bond is the reason LFP does not release oxygen when it overheats the way a nickel-oxide cathode can, which is why it is the safer chemistry and why grid storage, which sits in containers next to other containers, chose it. The iron is cheap and everywhere. Cycle life is long because the crystal barely changes shape as lithium leaves and returns.",
+    "The price of that stability is voltage and density. LFP runs at about 3.2 V against roughly 3.7 V for **{{NMC}}**, and its **{{specific capacity}}** is around 150–160 mAh per gram of powder. Multiply the two and one gram of LFP powder stores about half a watt-hour; a kilowatt-hour of cells therefore needs somewhere between two and two-and-a-half kilograms of cathode powder once you allow for the electrode's binder, carbon and practical losses. Keep that ratio — it is the arithmetic that turns a plant's tonnes into a market's gigawatt-hours.",
+    "LFP also conducts electrons and lithium ions poorly on its own. The industry's fix is to make the particles very small and to wrap each one in a thin **{{carbon coating}}**, which is why an LFP plant is as much a particle-engineering business as a chemistry business.",
+    "**{{LMFP}}** — lithium manganese iron phosphate — swaps part of the iron for manganese. Manganese's reaction runs at about 4.1 V, so a cathode with a large manganese fraction stores 15–20% more energy per kilogram at LFP-like cost. The catch is that manganese is harder to keep in the crystal: it tends to dissolve into the electrolyte and it conducts even worse than iron, so LMFP is harder to synthesise and to keep alive over thousands of cycles. That is the chemistry GM asked Mitra Chem to develop in 2023."
+   ]
+  },
+  {
+   "id": "three-chemistries",
+   "title": "Three phosphate and oxide cathodes, side by side",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Approximate figures for the powder, not the finished cell. The point of the table is the trade: every step toward energy density gives up some stability and some cost.",
+   "cols": [
+    "Chemistry",
+    "Nominal voltage",
+    "Specific capacity",
+    "What it is good at",
+    "What it gives up",
+    "Where it goes"
+   ],
+   "rows": [
+    [
+     "{{LFP}} (LiFePO4)",
+     "~3.2 V",
+     "~150–160 mAh/g",
+     "Thermal stability, cycle life, cheap and abundant inputs",
+     "Energy density; poor conductivity, so needs nano-particles and carbon coating",
+     "Grid storage, most Chinese EVs, the storage cells every other maker in this segment ships"
+    ],
+    [
+     "{{LMFP}} (LiMnxFe1-xPO4)",
+     "~3.7–3.9 V blended",
+     "~150–160 mAh/g at higher voltage",
+     "15–20% more energy than LFP for similar cost",
+     "Manganese dissolution, harder synthesis, shorter demonstrated cycle life",
+     "Next-generation EV packs; Mitra Chem's GM-backed line, sampled in 2023"
+    ],
+    [
+     "{{NMC}} (LiNiMnCoO2)",
+     "~3.6–3.7 V",
+     "~180–220 mAh/g",
+     "Energy density, power",
+     "Cost (nickel, cobalt), thermal stability",
+     "Premium EVs, most Western EV packs, some UPS and BBU cells"
+    ]
+   ],
+   "note": "Mitra Chem publishes no numbers for its own powder — no mAh/g, no Wh/kg, no cycle count — so the figures above are the chemistries' textbook ranges, not the company's."
+  },
+  {
+   "id": "how-the-powder-is-made",
+   "title": "How LFP cathode powder is made, and what 'on spec' means",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "The standard route starts with an **{{iron phosphate precursor}}** — ferric phosphate, made by reacting an iron salt with phosphoric acid — plus **{{lithium carbonate}}** and a carbon source such as glucose or sucrose. The three are milled together into a slurry, dried into a free-flowing powder by **{{spray drying}}**, and then heated for hours in a furnace under nitrogen so no oxygen reaches the iron — a step called **{{sintering}}**. The carbon source chars into the carbon coating; the iron, phosphate and lithium react into olivine. The product is milled, classified by size and packed.",
+    "The alternative is **{{hydrothermal synthesis}}**: the reaction runs in hot pressurised water, which gives finer control of particle shape at the cost of throughput and waste water. Mitra Chem's own case study describes a third choice, a **{{precursor-free synthesis}}** that skips the separate iron phosphate step and, the company says, cuts raw-material cost by up to a fifth. Its Sun Chemical partnership is the opposite bet — making the precursor domestically and co-locating it with the LFP line — and the two hedges sit side by side in the record.",
+    "What does 'on spec' mean for a powder? Three numbers dominate. **{{specific capacity}}** in mAh/g tells you how much lithium the powder gives up and takes back. **{{press density}}** — grams per cubic centimetre after the coated electrode is rolled — tells you how much of that powder fits into a given volume, and it directly sets the cell's watt-hours per litre; it is the number Mitra Chem's Sun Chemical release singles out ('high press density LFP'). **{{D50}}**, the median particle size, with the spread around it, tells you whether the powder will coat evenly and conduct well. Behind those sit impurity limits measured in parts per million, moisture, surface area and the thickness of the carbon coat.",
+    "Two more facts explain why a cathode company can be four years old and still have no customer. A cell maker does not buy on a datasheet: it builds cells with the sample powder and cycles them for months — the **{{cell qualification}}** step — before it will sign, and it repeats that for every plant and every material change. And the numbers move with scale: a powder that hits spec at a kilogram a day in a lab reactor can miss it at a tonne a day in a production kiln, because heat, mixing and drying do not scale linearly. That is the gap Mitra Chem's whole 'lab-to-production' pitch is aimed at, and it is a real gap.",
+    "Read the company's claims with this in mind. 'From 1 kg/day to 1,000 kg/day in two years' describes process transfer, not a plant. 'Roughly 20× lower cost than industry incumbents' has no denominator and no product price attached. Neither claim is false on its face; both are unverifiable, and a buyer would treat them as an invitation to test, not as a result."
+   ]
+  },
+  {
+   "id": "why-the-powder-is-chinese",
+   "title": "Why the supply is Chinese, and what changed on 1 January 2026",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "China makes almost all of the world's LFP cathode powder, and it does so at a price no Western entrant has yet matched. The reasons are ordinary industrial ones: the phosphate and lithium-carbonate chemical industries are there, the cell makers who buy the powder are there, the plants were built at scale a decade ago, and a price war in 2023–2025 pushed LFP powder to a level at which several Chinese producers themselves lost money. A new plant elsewhere starts at higher cost and, until it ships, at zero volume.",
+    "Western policy answered with two instruments. The first is a payment: **{{45X}}**, the advanced manufacturing production credit, pays a US cathode producer 10% of its production cost. The second is a rule that turns provenance into a requirement. From 1 January 2026, a storage project that wants the investment tax credit must show that no more than a set share of its equipment cost came from a **{{prohibited foreign entity}}** — the **{{material assistance cost ratio}}**, starting at 55% non-PFE content for storage and rising to 75% after 2029, with a parallel and steeper ladder for the 45X manufacturer itself.",
+    "Do the arithmetic and the cathode falls out as the pinch point. Cells are about half of a storage system's equipment cost, and the cathode is the largest single cost inside the cell. A project can buy a US-assembled container with US steel, US inverters and US software, and still fail the ratio if the cell inside carries a Chinese cathode. That is why the State of Michigan now describes Mitra Chem's plant in the language of provenance — 'Foreign Entity of Concern-free' and compliant with defense supply-chain rules — rather than in the language of chemistry.",
+    "Provenance is a commercial property with a price, and the price is set by how few alternatives exist. In November 2025 ICL, the Israeli chemicals group, cancelled the only other DOE-funded US LFP cathode plant after its grant was withdrawn, citing weak EV demand. That left one project in the US pipeline. The same fact cuts both ways: an entrant with no competitor has a market to itself, and a market that could not support a well-capitalised incumbent's plant may not support a start-up's either."
+   ]
+  },
+  {
+   "id": "the-ratio-ladder",
+   "title": "The material-assistance ladder, and where the cathode sits in it",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The thresholds that make non-Chinese cathode valuable, as the July 2025 law and the February 2026 Treasury guidance set them out. A project or plant beginning construction in the year shown must have at least this share of its relevant cost from non-prohibited sources.",
+   "cols": [
+    "Construction begins",
+    "Storage project (48E credit) — non-PFE share required",
+    "Manufacturer (45X credit) — non-PFE share required",
+    "What it means for the cell"
+   ],
+   "rows": [
+    [
+     "2026",
+     "55%",
+     "60%",
+     "A Chinese cell in a US container is already marginal — cells are ~52% of system equipment cost"
+    ],
+    [
+     "2027",
+     "60%",
+     "65%",
+     "The cathode inside the cell becomes the decisive input"
+    ],
+    [
+     "2028",
+     "65%",
+     "70%",
+     "Muskegon's guided commissioning year"
+    ],
+    [
+     "2029",
+     "70%",
+     "80%",
+     "Only cells with non-Chinese cathode, anode and electrolyte clear the bar comfortably"
+    ],
+    [
+     "After 2029",
+     "75%",
+     "85%",
+     "The ladder's top — a domestic cathode plant's addressable market at its widest"
+    ]
+   ],
+   "note": "Percentages per the Foley Hoag and Crux summaries of the statute and Notice 2026-15; the cost-share figures for cells and cathode are industry rules of thumb, not company disclosures. The ladder rewards a plant that exists; it pays nothing to one that is planned."
+  },
+  {
+   "id": "anatomy-of-a-plant",
+   "title": "Anatomy of a cathode plant: turning tonnes into gigawatt-hours and dollars",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Mitra Chem's Muskegon project, read as an engineering and financing object rather than a headline. Every figure is public; the arithmetic is the guide's.",
+   "cols": [
+    "Dimension",
+    "Figure",
+    "How to read it"
+   ],
+   "rows": [
+    [
+     "Phase-1 capacity",
+     "15,000 tonnes of LFP cathode a year",
+     "At 2–2.5 kg of cathode per kWh, about 6–7 GWh of cells a year — a fraction of one large cell plant (LG Energy Solution's Holland, Michigan plant alone is 16.5 GWh)"
+    ],
+    [
+     "Phase-2 capacity",
+     "30,000 tonnes a year",
+     "Doubling would take it to roughly 12–15 GWh; still smaller than a single top-ten Chinese maker's half-year shipments"
+    ],
+    [
+     "Total investment",
+     "'over $370 million' (State of Michigan, 2026) against '$125 million project' (2024)",
+     "About $25,000 per tonne of annual capacity — a scope that grew threefold in two years, or two different scopes; either way the private capital required tripled"
+    ],
+    [
+     "Public money",
+     "$100M DOE grant obligated; $50M State of Michigan (up from $25M)",
+     "$150M covers roughly 40% of the stated cost; the DOE record's own non-federal share is $260.3M"
+    ],
+    [
+     "Private money on record",
+     "$62.6M sold across four SEC Form Ds since 2021; $15.6M of a $50M 2025 round",
+     "The gap between what the plant costs and what has been raised is the story"
+    ],
+    [
+     "Schedule",
+     "Groundbreaking 'early 2026' (2024) → 'early 2027, commissioning 2028' (2026)",
+     "Cathode plants take 12–24 months to build and another 12–24 to qualify with customers; first spec-compliant volume is realistically 2029"
+    ],
+    [
+     "Inputs",
+     "Lithium carbonate (via TechMet-Mercuria), iron phosphate (Sun Chemical, co-located), carbon, nitrogen, electricity",
+     "The precursor co-location is what makes the plant's output count as domestic content all the way down"
+    ],
+    [
+     "Customers",
+     "None named in five years",
+     "Cell qualification has to start before the plant is built if the plant is to sell on day one"
+    ]
+   ],
+   "note": "The kg-per-kWh conversion is a textbook range for LFP; the company itself has never stated its plant's GWh equivalent. The Michigan Infrastructure Office's 2024 phrase 'battery materials for over 300,000 EVs annually' implies about 50 kg of cathode per vehicle — a small pack — and is a state figure, not the company's."
+  },
+  {
+   "id": "how-a-grant-becomes-a-plant",
+   "title": "How a federal grant becomes a plant — selected, obligated, outlaid",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "The words matter. 'Selected' is a press release; 'obligated' is a signed agreement; 'outlaid' is money that left the Treasury. Mitra Chem's award passed through all three states, and the amounts at each are different numbers.",
+   "lanes": {
+    "fed": "Federal",
+    "state": "State and company"
+   },
+   "items": [
+    {
+     "x": 2024.719,
+     "lane": "state",
+     "label": "Selection announced",
+     "sub": "DOE names Mitra Chem for up to $100M under the Manufacturing and Energy Supply Chains battery grants; Michigan adds up to $25M. Nothing is yet owed."
+    },
+    {
+     "x": 2024.958,
+     "lane": "fed",
+     "label": "Obligation",
+     "sub": "The grant agreement is signed: $100,000,000 obligated, period of performance from 1 January 2025, non-federal share $260.3M recorded. This is the step that survives a change of administration — cancelling an obligated award means terminating a contract."
+    },
+    {
+     "x": 2025.366,
+     "lane": "fed",
+     "label": "First review modification ($0)",
+     "sub": "A revision during the new administration's award review; the May 2025 cancellation round hit industrial demonstrations, not this programme."
+    },
+    {
+     "x": 2025.805,
+     "lane": "fed",
+     "label": "Peers cancelled",
+     "sub": "DOE terminates $718M of battery awards including ICL's $197M LFP cathode grant and Anovion's $117M graphite grant. Mitra Chem's is not on the list — and it had drawn almost nothing."
+    },
+    {
+     "x": 2026.366,
+     "lane": "fed",
+     "label": "Second modification ($0), retitled IIJA",
+     "sub": "Coincides with the month the State of Michigan says the award was 'publicly confirmed as retained'. The period of performance on the record still ends 2026-06-30."
+    },
+    {
+     "x": 2026.5,
+     "lane": "fed",
+     "label": "Outlays reach $2,248,131.67",
+     "sub": "About 2% of the obligation, booked in May–July 2026: engineering and permitting money, not construction money."
+    },
+    {
+     "x": 2026.594,
+     "lane": "state",
+     "label": "State doubles its support",
+     "sub": "Michigan announces $50M from the Make It in Michigan Competitiveness Fund, a total investment 'over $370 million', groundbreaking early 2027 and commissioning 2028."
+    }
+   ],
+   "note": "A grant obligation is a ceiling, not a cheque: money is drawn against invoices as milestones are met, and a recorded period of performance that has ended without an extension is a question to ask, not a conclusion to draw.",
+   "unit": "calendar year"
+  },
+  {
+   "id": "reading-a-private-company",
+   "title": "Reading a private company from the outside",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A private US company owes the public almost nothing. What it does owe, when it sells shares to investors under the most common exemption, is a **{{Form D}}** — a short notice to the SEC that states the size of the offering, how much has been sold so far, how many investors bought, the date of the first sale, and the names of the directors and officers. It does not state the price per share, the valuation, revenue or profit. Mitra Chem has filed four: two in 2021 totalling $20 million, one in 2023 showing $27.05 million sold of a $60 million round, and one in June 2025 showing $15.6 million sold of a $50 million round.",
+    "Three habits make that record useful. First, add up what was actually sold, not what was targeted: $62.6 million across four filings, against a company that has said 'nearly $80 million' and a podcast host who said '$100 million'. Second, notice what is absent: no filing after June 2025 means no public evidence the 2025 round closed. Third, use a counterparty's disclosure to triangulate — L&F, a listed Korean company, said it paid about $10 million for 3.3%, which implies a post-money value near $300 million; that is arithmetic on someone else's number, and the guide labels it as such.",
+    "Then read the company's own channels for cadence. Mitra Chem issued nineteen press releases between November 2021 and September 2024 and none since. Every material fact of 2025 and 2026 — the round, the Korean investor, the grant's survival, the doubling of state support, the slip to 2027 — reached the public through the SEC, the State of Michigan, L&F or a reporter the company did not answer. Silence is not evidence of failure; it is evidence that the next fact will come from someone else, and that the status must be re-checked rather than assumed.",
+    "Finally, keep a list of the claims that travel further than their source. 'Joint venture' appears in Korean headlines and in no filing. 'Confirmed as retained' is the State of Michigan's phrase; no DOE document names the project. '$242 million raised' on an aggregator includes the government grant. 'Valued at $250 million' is a podcast introduction. None of these is a lie, and none should be repeated as a fact."
+   ]
+  },
+  {
+   "id": "for-and-against",
+   "title": "A US LFP cathode plant, honestly",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "The case a financier or a customer would weigh in 2026, with Mitra Chem's project as the worked example.",
+   "note": "The two columns are not symmetric. The case for is structural and durable — the rules exist, the demand is real, the competitor left. The case against is about one company's capital and time. Both can be true, and the second decides whether the first ever pays.",
+   "cards": [
+    {
+     "t": "A US LFP cathode plant, weighed",
+     "meta": "The structural case for the plant against the case against this company on this schedule",
+     "adv": [
+      "The material-assistance ladder makes non-Chinese cathode a requirement, not a preference, and it steepens every year through 2029",
+      "45X pays 10% of production cost to the producer — a subsidy that scales with volume",
+      "Storage demand for LFP cells in the US is now physical: LG Energy Solution's Holland plant has made LFP storage cells since June 2025 and Ultium Cells is converting Spring Hill lines",
+      "ICL's exit removed the only other DOE-funded US LFP cathode project",
+      "The DOE grant is obligated and has survived every 2025 review; state support doubled",
+      "A domestic precursor (Sun Chemical) keeps the content domestic all the way down"
+     ],
+     "dis": [
+      "Stated cost tripled to over $370M while equity raised since 2021 is $62.6M and the 2025 round shows $15.6M sold",
+      "Groundbreaking has slipped a year and first spec-compliant volume is realistically 2029; the ladder rewards plants that exist",
+      "No customer has been named in five years and qualification takes a year or more after the powder exists",
+      "Chinese LFP powder is cheaper by a margin no Western plant has closed; the provenance premium is the whole business case",
+      "L&F, the strategic shareholder, will serve the same FEOC-free demand from Korea from 2026 and calls the US plant 'not finalized'",
+      "The company has said nothing publicly since September 2024"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is cathode active material, and roughly what share of a storage cell's cost is it?",
+     "a": "The powder coated onto the positive electrode's aluminium foil — the host that lithium ions leave on charge and return to on discharge. It is the single largest cost inside a lithium-ion cell, roughly a third, because it carries the lithium and, in nickel chemistries, the nickel and cobalt."
+    },
+    {
+     "q": "Why is LFP the safer cathode, and what does it give up for that?",
+     "a": "The phosphate group in LFP's olivine crystal holds oxygen with a strong covalent bond, so an overheated LFP cell does not release oxygen the way a nickel-oxide cathode can. The price is a lower voltage (about 3.2 V against 3.7 V for NMC) and lower energy density."
+    },
+    {
+     "q": "Why does LFP powder need a carbon coating and nano-sized particles?",
+     "a": "Because the olivine structure conducts both electrons and lithium ions poorly. Small particles shorten the path the ions must travel and a thin carbon shell around each particle carries the electrons — which makes an LFP plant a particle-engineering business as much as a chemistry business."
+    },
+    {
+     "q": "What does LMFP change, and what is the cost of the change?",
+     "a": "It replaces part of the iron with manganese, whose reaction runs at about 4.1 V, raising energy per kilogram by 15–20% at similar material cost. Manganese is harder to keep in the crystal — it dissolves into the electrolyte and conducts worse — so LMFP is harder to make and to keep alive over thousands of cycles."
+    },
+    {
+     "q": "Name the three numbers that define whether a cathode powder is 'on spec'.",
+     "a": "Specific capacity (mAh per gram — how much lithium it gives up and takes back), press density (grams per cubic centimetre in the rolled electrode — how much powder fits in a volume, which sets Wh per litre) and D50 particle size with its distribution (whether it coats evenly and conducts well)."
+    },
+    {
+     "q": "Walk through the standard route for making LFP powder.",
+     "a": "Mill an iron phosphate precursor, lithium carbonate and a carbon source into a slurry; spray-dry it into a free-flowing powder; sinter it for hours under nitrogen so the iron is not oxidised while the carbon source chars into the coating and the olivine forms; then mill, classify and pack."
+    },
+    {
+     "q": "Why can a cathode powder hit spec in the lab and miss it in the plant?",
+     "a": "Heat transfer, mixing and drying do not scale linearly: a kiln handling a tonne a day has different temperature gradients and residence times from a lab reactor handling a kilogram, so particle size, coating thickness and impurities drift. Process transfer, not chemistry, is the usual failure point."
+    },
+    {
+     "q": "Why does a cathode company with good samples still have no customers after years?",
+     "a": "Cell makers qualify a material by building cells with it and cycling them for months, then repeat the exercise for every new plant or process change. Qualification lags the powder by a year or more, and it cannot finish for a plant that does not yet exist."
+    },
+    {
+     "q": "Roughly how many gigawatt-hours of LFP cells does 15,000 tonnes of cathode make, and why does that matter?",
+     "a": "At two to two-and-a-half kilograms of cathode per kilowatt-hour, about 6–7 GWh a year — a fraction of one large cell plant. It shows that a plant billed as 'nearly doubling US LFP capacity' is small against the cell makers it would supply."
+    },
+    {
+     "q": "What is the material assistance cost ratio and why does it make the cathode the pinch point?",
+     "a": "The share of a project's or manufacturer's relevant cost that must come from non-prohibited-foreign-entity sources to keep the tax credit — 55% for storage in 2026 rising to 75% after 2029. Cells are about half of a storage system's equipment cost and the cathode is the largest cost inside the cell, so a Chinese cathode can fail the ratio for an otherwise domestic system."
+    },
+    {
+     "q": "What does 45X pay a domestic cathode producer?",
+     "a": "A production credit equal to 10% of the cost of producing electrode active materials, transferable to other taxpayers, subject from 2026 to the prohibited-foreign-entity tests. It pays per unit produced, so it is worth nothing until the plant runs."
+    },
+    {
+     "q": "Distinguish 'selected', 'obligated' and 'outlaid' for a federal grant.",
+     "a": "Selected is an announcement that creates no obligation; obligated is a signed grant agreement that commits the money against milestones and is hard to cancel; outlaid is money actually paid out against invoices. Mitra Chem's award was selected in September 2024, obligated in December 2024 for $100M, and had outlaid about $2.25M by July 2026."
+    },
+    {
+     "q": "What does an SEC Form D tell you about a private company, and what does it not?",
+     "a": "It states the offering size, the amount sold so far, the number of investors, the date of first sale and the directors and officers. It does not state price per share, valuation, revenue or profit — and the absence of a later filing means there is no public evidence the round closed."
+    },
+    {
+     "q": "How would you estimate a private company's valuation from a strategic investor's disclosure?",
+     "a": "Divide the amount paid by the stake bought — $10 million for 3.3% implies a post-money value near $300 million — and label the result as arithmetic on a third party's figure, not a disclosed valuation."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A storage developer buys a container assembled in Texas with US steel, US inverters and US software, but the cells inside use Chinese LFP cathode. Under the 2026 rules, what is the most likely consequence for its tax credit?",
+     "c": [
+      "None — the container was assembled in the US",
+      "It may fail the material assistance cost ratio, because cells are about half of equipment cost and the cathode is the largest cost inside the cell",
+      "It loses the credit entirely regardless of other content",
+      "It qualifies for 45X instead"
+     ],
+     "a": 1,
+     "why": "The ratio is measured on cost, and the cell — with its cathode — is the largest block of it. Everything else in the container can be domestic and the project can still miss the 55% threshold. 45X is a manufacturer's credit, not a project's."
+    },
+    {
+     "q": "A company says its LFP powder scales 'from 1 kg/day to 1,000 kg/day in two years at roughly 20× lower cost than incumbents'. What is the best reading?",
+     "c": [
+      "A verified product specification",
+      "A claim about process transfer with no product price or denominator — an invitation to test, not a result",
+      "Proof the plant will be profitable",
+      "A statement about energy density"
+     ],
+     "a": 1,
+     "why": "Scale-up ratios describe the path from lab to production, which is real and hard, but neither claim carries a number a buyer could check. The correct response is a qualification programme."
+    },
+    {
+     "q": "Why does LFP need a carbon coating?",
+     "c": [
+      "To make it safer in a fire",
+      "To raise its voltage",
+      "Because the olivine structure conducts electrons poorly and the coating carries current between particles",
+      "To stop lithium from intercalating"
+     ],
+     "a": 2,
+     "why": "LFP's stability comes from the phosphate bond, but the same structure is a poor electronic conductor. Nano-sizing shortens the ion path and the carbon shell provides the electron path."
+    },
+    {
+     "q": "A federal award shows $100 million obligated and $2.25 million outlaid eighteen months later. Which statement is correct?",
+     "c": [
+      "The grant has been cancelled",
+      "The company has received $100 million",
+      "The agreement is signed and money is being drawn against early milestones; construction spending has not started",
+      "The award was never more than a selection"
+     ],
+     "a": 2,
+     "why": "Obligation is the signed ceiling; outlays track actual invoices. Two per cent drawn is consistent with engineering and permitting, not with building. It also explains why the award survived reviews — there was little to claw back."
+    },
+    {
+     "q": "Which of these is the strongest public evidence that Mitra Chem's 2025 round closed?",
+     "c": [
+      "TechCrunch's report of a $50 million target",
+      "L&F's disclosure of a $10 million investment",
+      "A Form D or Form D/A filed after 9 June 2025 showing the amount sold",
+      "The State of Michigan's 2026 release"
+     ],
+     "a": 2,
+     "why": "Only a later SEC notice would show the sold amount rising toward the target. TechCrunch reported the target, L&F reported its own slice, and Michigan's release does not mention the round. None exists on the public record as of September 2026."
+    },
+    {
+     "q": "Why might a competitor's exit (ICL, November 2025) be bad news as well as good for the remaining entrant?",
+     "c": [
+      "It is only good news — the market is now uncontested",
+      "ICL left citing weak demand and withdrawn funding, and those conditions apply to the remaining entrant's market and financing too",
+      "ICL will now supply from Israel instead",
+      "It means DOE will redirect ICL's grant to the survivor"
+     ],
+     "a": 1,
+     "why": "An incumbent chemicals group with its own balance sheet judged the plant unbuildable without the grant and against the demand it saw. The survivor inherits the position and the same question about demand, and DOE grants are not reassigned."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "provenance premium",
+   "d": "The extra price a buyer will pay for a material because of where and by whom it was made rather than what it is — in US battery storage since 2026, the value of cathode that keeps a project under the material-assistance cost ratio. A market term used in this guide, not a regulatory one."
+  }
+ ]
+}

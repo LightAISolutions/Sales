@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-13",
- "companies": 172,
+ "companies": 174,
  "edges": [
   {
    "a": "abb",
@@ -2215,6 +2215,20 @@
      "text": "The Richburg, South Carolina \"Mega-Flex\" plant announced in March 2023 appears in neither the FY2024 nor the FY2025 10-K properties tables — it is undisclosed, which is not the same as cancelled.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "albemarle",
+   "b": "mitra-chem",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Mitra Chem sits one layer above every cell maker in this corpus, in the same upstream position as Albemarle on lithium and NOVONIX on anode material: it would sell the LFP cathode active material that a storage cell is built from, not the cell.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -11844,6 +11858,29 @@
   },
   {
    "a": "byd",
+   "b": "cornex",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Fourth on SNE's H1-2026 storage-cell table (35.7 GWh, 7.7%) and the largest system integrator by Benchmark's count; FinDreams (弗迪电池) is fifth on SPIR's table, two places below Cornex.",
+     "context": "BYD sells cells and systems from one vertically integrated group, which is the model Cornex's owner is now imitating from the other direction — a battery maker adding a car brand. On the DoD 1260H list since June 2026; Cornex is not.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "It is not named on the US Department of Defense 1260H list, unlike CATL, CALB, EVE and BYD, which is a distinction without a US market behind it.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "byd",
    "b": "crrc-zhuzhou",
    "curated": {
     "b": {
@@ -12665,6 +12702,92 @@
   },
   {
    "a": "calb",
+   "b": "cornex",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Fifth on SNE's H1-2026 table at 31.5 GWh and 6.8%, 1.3 GWh ahead of Cornex; CALB's own dossier records the margin as 'a rank contested rather than held'.",
+     "context": "Ranks five to seven on SNE's table — CALB 31.5, REPT 31.4, Cornex 30.2 GWh — are inside any house's methodology error, and the three swap places between houses: InfoLink and TrendForce put Cornex sixth above REPT, SPIR puts Cornex third above both. CALB is on the US Department of Defense 1260H list (added June 2026); Cornex is not.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: SNE Research, TrendForce and InfoLink each rank it fifth globally in H1 2026 storage cells at 31.5 GWh and 6.8%, roughly a quarter of CATL's 27.1%, with REPT 0.1 GWh behind and Cornex 1.3 GWh behind; EVTank ranked it sixth for FY2025 and SPIR seventh for H1 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ZHIJIU (至久) energy-storage cells",
+     "date": "",
+     "text": "SNE puts CALB 0.1 GWh ahead of REPT BATTERO and 1.3 GWh ahead of Cornex, so the rank is contested rather than held.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "SNE Research places CALB fifth in global storage-cell shipments for H1 2026 at 31.5 GWh and 6.8% — 0.1 GWh ahead of REPT and 1.3 GWh ahead of Cornex — a rank held by a margin inside any plausible methodology error.",
+     "src": "CnEVPost reporting SNE Research",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Cornex is a challenger in energy-storage cells — seventh globally on SNE Research's H1-2026 table at 30.2 GWh and 6.5%, roughly a quarter of CATL's 27.1% and 1.3 GWh behind CALB, and the twelfth and last name from that table to enter this corpus — reached by capacity-led expansion and below-cost bidding rather than by an incumbent's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: SNE places it seventh for H1 2026 at 30.2 GWh and 6.5% — a quarter of CATL's share, 1.3 GWh behind CALB and 1.2 behind REPT; InfoLink, TrendForce and ICC place it sixth, Benchmark fifth, SPIR third; for FY2025 InfoLink and EVTank say ninth, Benchmark 'top five'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*SNE's FY2026 and H1-2027 storage tables:* a rank inside the top five on SNE — not SPIR — would move the role question toward incumbent; a fall below REPT and CALB would confirm the rank is contested.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "Against CATL (27.1%), EVE (10.4%) and Hithium (10.0%) Cornex is a volume challenger whose share came from new capacity and price, and whose rank moves from third to seventh depending on which house counts; CALB and REPT sit 1.2–1.3 GWh above it on SNE's table and the three are separated by less than any house's methodology error.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "It is not named on the US Department of Defense 1260H list, unlike CATL, CALB, EVE and BYD, which is a distinction without a US market behind it.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · CORNEX M5 and M6 containers, CTP packs and the 浸默 (Jinmo) immersion safety system",
+     "date": "",
+     "text": "A cell maker's system line, sold to give the cell a route to market where no integrator has yet designed it in — the same position CALB and Great Power occupy with their containers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "SNE Research H1-2026 global ESS cell table: Cornex seventh at 30.2 GWh and 6.5% share, its first appearance in the SNE top ten; market 461.3 GWh, +71% — The table this segment is typed against: a quarter of CATL's share, 1.3 GWh behind CALB and 1.2 behind REPT — a challenger by any reading, and a rank held by less than a rounding error.",
+     "src": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-04"
+  },
+  {
+   "a": "calb",
    "b": "gotion",
    "curated": {
     "a": {
@@ -12796,6 +12919,22 @@
     }
    ],
    "last": "2026"
+  },
+  {
+   "a": "canadian-solar",
+   "b": "cornex",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Listed by Cornex among its 2024 project customers (阿特斯) in its March 2025 ranking release; no volume or contract disclosed.",
+     "context": "Same basis and same caveat as the Sungrow entry: a one-line company statement of past custom, with nothing from the counterparty's side. Canadian Solar's storage arm buys cells from several Chinese makers, so a 2024 purchase is plausible and unconfirmed.",
+     "source": "https://www.cornexbattery.com/Index/news_detail/id/1434.html",
+     "status": "historical",
+     "since": "2024"
+    }
+   },
+   "evid": [],
+   "last": "2024"
   },
   {
    "a": "canadian-solar",
@@ -13862,6 +14001,106 @@
   },
   {
    "a": "catl",
+   "b": "cornex",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The incumbent Cornex is measured against — 125.0 GWh and 27.1% on SNE's H1-2026 storage-cell table to Cornex's 30.2 GWh and 6.5%.",
+     "context": "Cornex's 2023 pledge to sell 280Ah cells at RMB 0.5/Wh ex-tax was the price move that dragged the whole Chinese storage-cell market down, and its 2024 China Electrical Equipment Group award (4.01 GWh) was nearly twice CATL's 2.12 GWh share of the same tender. In the 587/588Ah format race Cornex followed CATL's 587Ah by about a year. No litigation between the two exists in the public record — six targeted searches found CATL's suits against CALB, Hithium and others, and none against Cornex — a point worth stating because an earlier plan row assumed otherwise.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Cornex is a challenger in energy-storage cells — seventh globally on SNE Research's H1-2026 table at 30.2 GWh and 6.5%, roughly a quarter of CATL's 27.1% and 1.3 GWh behind CALB, and the twelfth and last name from that table to enter this corpus — reached by capacity-led expansion and below-cost bidding rather than by an incumbent's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: SNE places it seventh for H1 2026 at 30.2 GWh and 6.5% — a quarter of CATL's share, 1.3 GWh behind CALB and 1.2 behind REPT; InfoLink, TrendForce and ICC place it sixth, Benchmark fifth, SPIR third; for FY2025 InfoLink and EVTank say ninth, Benchmark 'top five'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: two 70–80 GWh plants commissioned ten months after groundbreaking in August 2026; a 588Ah cell that follows CATL's and EVE's formats by about a year; tender bids of RMB 0.27–0.28/Wh in 2025 at or below industry cash cost; and a supplier commitment (1.3 million tonnes of cathode) sized for several hundred GWh.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "No CATL litigation against Cornex exists in the public record.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "Against CATL (27.1%), EVE (10.4%) and Hithium (10.0%) Cornex is a volume challenger whose share came from new capacity and price, and whose rank moves from third to seventh depending on which house counts; CALB and REPT sit 1.2–1.3 GWh above it on SNE's table and the three are separated by less than any house's methodology error.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "It is not named on the US Department of Defense 1260H list, unlike CATL, CALB, EVE and BYD, which is a distinction without a US market behind it.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "The 588Ah class puts it in the same format race as CATL's 587Ah, EVE's 628Ah and Hithium's 587Ah; the 688Ah programme with CRRC Zhuzhou runs in parallel with CRRC's 688Ah work with REPT and Great Power.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · CORNEX M5 and M6 containers, CTP packs and the 浸默 (Jinmo) immersion safety system",
+     "date": "",
+     "text": "It competes on the 20-foot 5–6 MWh format everyone now ships (CATL TENER, Hithium ∞Block, EVE Mr.Giant, Sungrow PowerTitan) and differentiates on the immersion safety system and price.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Commercial and industrial storage cabinets",
+     "date": "",
+     "text": "A standard C&I cabinet in the 200–300 kWh class where Chinese competition is dense (Sungrow, HyperStrong, CATL's C&I lines); differentiation is the cell's price and the company's service network rather than a distinct architecture.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Sodium-ion cells",
+     "date": "",
+     "text": "Follows CATL, HiNa and Great Power into sodium-ion with a cold-climate and marine pitch; technical readiness without a disclosed market, the same state Great Power's line is in.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "SNE Research H1-2026 global ESS cell table: Cornex seventh at 30.2 GWh and 6.5% share, its first appearance in the SNE top ten; market 461.3 GWh, +71% — The table this segment is typed against: a quarter of CATL's share, 1.3 GWh behind CALB and 1.2 behind REPT — a challenger by any reading, and a rank held by less than a rounding error.",
+     "src": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-25",
+     "text": "588Ah storage cell launched at Yichang with the CTP2.0 pack and the '百变金刚' modular cabinet platform; a 100 MW site 'uses 20% less land, 27% fewer containers, over 20% lower operating cost' — Joins the 587/588Ah format race a year behind CATL and EVE; the pitch is site economics, not a new chemistry.",
+     "src": "https://www.cornexbattery.com/Index/news_detail/id/1534.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-04"
+  },
+  {
+   "a": "catl",
    "b": "crrc-zhuzhou",
    "curated": {
     "b": {
@@ -14519,6 +14758,20 @@
      "where": "Capabilities · Procurement model & equipment interfaces",
      "date": "",
      "text": "No documented Tesla/Fluence/Powin/LG/Samsung/CATL/Hithium install surfaced — owner announcements, not MasTec's, carry supplier news.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "catl",
+   "b": "mitra-chem",
+   "evid": [
+    {
+     "where": "Capabilities · LMFP cathode active material",
+     "date": "",
+     "text": "LMFP is where Chinese cathode makers (Dynanonic, Hunan Yuneng, Ronbay) and CATL already ship; Mitra's differentiation is the same as for LFP — non-Chinese origin — plus GM's design-in.",
      "src": "",
      "from": "b"
     }
@@ -18059,6 +18312,253 @@
     }
    ],
    "last": "2026-01-06"
+  },
+  {
+   "a": "cornex",
+   "b": "crrc-zhuzhou",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "CRRC Zhuzhou Institute co-developed the 688Ah cell with Cornex (first cells January 2025) and signed the largest agreement in Cornex's history — 25 GWh of large-capacity cells — at CIBF on 13 May 2026.",
+     "context": "The relationship has two layers. The engineering layer is the 688Ah 'dual-six' cell (2.2 kWh, over 6 MWh systems) that the two companies launched together in January 2025, with Cornex producing the first cells at Wuhan. The commercial layer is the 25 GWh cell framework of May 2026, the anchor of the 50 GWh CIBF signing. CRRC Zhuzhou's own dossier records that it is not vertically integrated into cells and sources from several makers; it runs a parallel 688Ah programme with Great Power and REPT, so the partnership is exclusive on neither side, and both Cornex and Great Power sit on NARI Technology's 2026 cell-framework shortlist with Hithium.",
+     "source": "https://www.cornexbattery.com/Index/news_detail/id/1614.html",
+     "status": "active",
+     "since": "2025-01",
+     "scale": "25 GWh framework",
+     "via": "688Ah and 588Ah storage cells"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Framework signings in 2026 total over 100 GWh (CIBF 50 GWh including CRRC Zhuzhou Institute 25 GWh; some 40 GWh overseas across Saudi Arabia, Egypt, Europe, Latin America and Southeast Asia), and supply commitments have been scaled to match (Longpan Technology 1.3 million tonnes of LFP cathode to 2030, over RMB 45 billion; Tinci 1.01 million tonnes of electrolyte).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "The lineage the company states is 280Ah → 306/314Ah → 472Ah → 588Ah, with 625Ah, 648Ah, 684Ah and a 688Ah cell co-developed with CRRC Zhuzhou Institute shown or sampled since 2024.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-14",
+     "text": "50 GWh of framework agreements at CIBF 2026: CRRC Zhuzhou Institute 25 GWh of large-capacity cells, CLOU 10 GWh, Wolong Storage 5 GWh, Cubenergy 5 GWh, Growatt 5 GWh (100Ah/314Ah residential) — CRRC Zhuzhou Institute's 25 GWh is the largest single signing in the company's history and pairs with the joint 688Ah cell — a covered integrator that now buys cells from Cornex, Great Power and REPT in parallel.",
+     "src": "https://www.cornexbattery.com/Index/news_detail/id/1614.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-14"
+  },
+  {
+   "a": "cornex",
+   "b": "csa-group",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It also integrates its own cells into 20-foot containers (M5 5 MWh, M6 6.26 MWh) and C&I cabinets with CSA Group UL 9540A/1973/9540 and TÜV SÜD IEC 62619 certificates, but appears in no third-party integrator ranking, so its system business is a route to market for the cell.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "envision-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "AESC, Envision's cell arm, is eighth on SNE's H1-2026 table (21.2 GWh, 4.6%), one place below Cornex, and seventh on InfoLink's FY2025 table, two places above it.",
+     "context": "Envision won the 2023 Gansu Wuwei 100 MW tender from which Cornex's bid was disqualified for missing commissioning certificates — the one 'legal' episode in Cornex's record — and the two have swapped rank positions on successive tables since.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "eve-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Second on SNE's H1-2026 storage-cell table (48.0 GWh, 10.4%) and third on InfoLink's and TrendForce's, against Cornex seventh and sixth respectively.",
+     "context": "EVE and Cornex are both Hubei-linked large-format LFP cell makers (EVE in Jingmen, Cornex in Wuhan, Xiaogan, Yichang and Xiangyang) contesting the same 314Ah-to-600Ah-plus format transition; EVE's 628Ah and Cornex's 588Ah/648Ah are the competing answers. On SPIR's H1-2026 table EVE is second and Cornex third.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "gotion",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Ninth on SNE's H1-2026 table (20.8 GWh, 4.5%) and eighth on InfoLink's, directly below Cornex.",
+     "context": "Gotion is the listed peer whose storage-cell share Cornex passed in 2025–2026; Gotion carries US-listed-exclusion exposure that Cornex does not, and a US plant that Cornex has never proposed.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "great-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Tenth on SNE's H1-2026 table (20.5 GWh, 4.4%, +202%) — the only company on it growing faster than Cornex — and co-shortlisted with Cornex and Hithium on NARI Technology's 2026 cell framework.",
+     "context": "Great Power's dossier records the NARI shortlist (2 July 2026) as its first hard evidence of winning Chinese utility-scale framework slots against tier-one peers; the same shortlist is one of the few tenders that names Cornex among the candidate winners. Both companies also compete in residential cells, where Cornex 'entered the top five' on InfoLink's 2026 small-storage tables while Great Power claims first, second or third depending on the house.",
+     "source": "https://www.energytrend.com/news/20260703-51698.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-02",
+     "text": "Shortlisted as a candidate winner with Hithium and Cornex on NARI Technology's 2026 cell framework of about 4 GWh — The first hard evidence that it can win Chinese utility-scale framework slots against tier-one peers, on a tender split between cells of at least 314Ah and at least 587Ah.",
+     "src": "EnergyTrend reporting the NARI tender notice",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "The 588Ah class puts it in the same format race as CATL's 587Ah, EVE's 628Ah and Hithium's 587Ah; the 688Ah programme with CRRC Zhuzhou runs in parallel with CRRC's 688Ah work with REPT and Great Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · CORNEX M5 and M6 containers, CTP packs and the 浸默 (Jinmo) immersion safety system",
+     "date": "",
+     "text": "A cell maker's system line, sold to give the cell a route to market where no integrator has yet designed it in — the same position CALB and Great Power occupy with their containers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Sodium-ion cells",
+     "date": "",
+     "text": "Follows CATL, HiNa and Great Power into sodium-ion with a cold-climate and marine pitch; technical readiness without a disclosed market, the same state Great Power's line is in.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-14",
+     "text": "50 GWh of framework agreements at CIBF 2026: CRRC Zhuzhou Institute 25 GWh of large-capacity cells, CLOU 10 GWh, Wolong Storage 5 GWh, Cubenergy 5 GWh, Growatt 5 GWh (100Ah/314Ah residential) — CRRC Zhuzhou Institute's 25 GWh is the largest single signing in the company's history and pairs with the joint 688Ah cell — a covered integrator that now buys cells from Cornex, Great Power and REPT in parallel.",
+     "src": "https://www.cornexbattery.com/Index/news_detail/id/1614.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-02"
+  },
+  {
+   "a": "cornex",
+   "b": "hithium",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Third on SNE's H1-2026 table (46.2 GWh, 10.0%) and second on InfoLink's, TrendForce's and Benchmark's; shortlisted alongside Cornex and Great Power on NARI Technology's 2026 cell framework.",
+     "context": "Hithium is the storage-only pure play Cornex is most often compared with in Chinese trade press — both founded within a few years of each other, both grew on the 314Ah cell and the 5 MWh container, both filed nothing with any exchange until Hithium's Hong Kong listing. The NARI shortlist (about 4 GWh split between cells of at least 314Ah and at least 587Ah) is the one tender where the two are named side by side.",
+     "source": "https://www.energytrend.com/news/20260703-51698.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "Against CATL (27.1%), EVE (10.4%) and Hithium (10.0%) Cornex is a volume challenger whose share came from new capacity and price, and whose rank moves from third to seventh depending on which house counts; CALB and REPT sit 1.2–1.3 GWh above it on SNE's table and the three are separated by less than any house's methodology error.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
+     "date": "",
+     "text": "The 588Ah class puts it in the same format race as CATL's 587Ah, EVE's 628Ah and Hithium's 587Ah; the 688Ah programme with CRRC Zhuzhou runs in parallel with CRRC's 688Ah work with REPT and Great Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · CORNEX M5 and M6 containers, CTP packs and the 浸默 (Jinmo) immersion safety system",
+     "date": "",
+     "text": "It competes on the 20-foot 5–6 MWh format everyone now ships (CATL TENER, Hithium ∞Block, EVE Mr.Giant, Sungrow PowerTitan) and differentiates on the immersion safety system and price.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "hyperstrong",
+   "evid": [
+    {
+     "where": "Capabilities · Commercial and industrial storage cabinets",
+     "date": "",
+     "text": "A standard C&I cabinet in the 200–300 kWh class where Chinese competition is dense (Sungrow, HyperStrong, CATL's C&I lines); differentiation is the cell's price and the company's service network rather than a distinct architecture.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "rept",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Sixth on SNE's H1-2026 table at 31.4 GWh and 6.8%, 1.2 GWh ahead of Cornex; the two were joint lowest bidders at RMB 0.27/Wh on China Energy Engineering's 6 GWh cell tender in March 2025.",
+     "context": "REPT and Cornex are the two challengers whose bidding set the floor of the 2025 Chinese cell price war, at or below the industry's cash cost of about RMB 0.28/Wh. Both also work with CRRC Zhuzhou on 688Ah cells. On InfoLink's H1-2026 table Cornex overtook REPT for sixth.",
+     "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "cornex",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Listed by Cornex among its 2024 project customers (阳光电源), alongside SPIC, Three Gorges Energy, PetroChina and Canadian Solar, in its March 2025 ranking release.",
+     "context": "The company's own list of '2024 customers' names Sungrow as a buyer of its cells for projects; no volume, contract or product is given and Sungrow's own dossier does not record the supply. Recorded as a historical, company-stated link rather than a documented supply agreement.",
+     "source": "https://www.cornexbattery.com/Index/news_detail/id/1434.html",
+     "status": "historical",
+     "since": "2024"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · CORNEX M5 and M6 containers, CTP packs and the 浸默 (Jinmo) immersion safety system",
+     "date": "",
+     "text": "It competes on the 20-foot 5–6 MWh format everyone now ships (CATL TENER, Hithium ∞Block, EVE Mr.Giant, Sungrow PowerTitan) and differentiates on the immersion safety system and price.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Commercial and industrial storage cabinets",
+     "date": "",
+     "text": "A standard C&I cabinet in the 200–300 kWh class where Chinese competition is dense (Sungrow, HyperStrong, CATL's C&I lines); differentiation is the cell's price and the company's service network rather than a distinct architecture.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024"
   },
   {
    "a": "crrc-zhuzhou",
@@ -39218,6 +39718,29 @@
   },
   {
    "a": "lg-energy-solution",
+   "b": "mitra-chem",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "LG Energy Solution's Holland, Michigan LFP storage-cell plant, producing since June 2025 and sourcing materials 'from outside China', is the nearest concrete demand for the cathode Muskegon would make; no supply relationship is documented.",
+     "context": "Canary Media reported in June 2025 that LGES's 16.5 GWh Holland plant was making LFP cells for stationary storage with battery materials sourced from outside China. Muskegon is about 90 miles from Holland and Mitra Chem's board includes Denise Gray, formerly president of LG Energy Solution Michigan's tech centre. Nothing in either company's record names the other as customer or supplier; the link is proximity and fit, recorded here so the reader does not infer a contract the sources do not contain.",
+     "source": "https://www.canarymedia.com/articles/energy-storage/lg-michigan-lfp-battery-factory",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2024-03-26",
+     "text": "Denise Gray (ex-LG Energy Solution Michigan, GM, National Academy of Engineering) joins the board; company states 'nearly $80 million' raised — A Michigan battery-industry board seat six months before the Michigan plant announcement.",
+     "src": "https://www.mitrachem.com/post/https-www-prnewswire-com-news-releases-mitra-chem-adds-denise-gray-to-board-of-directors-302099267-html",
+     "from": "b"
+    }
+   ],
+   "last": "2024-03-26"
+  },
+  {
+   "a": "lg-energy-solution",
    "b": "novonix",
    "curated": {
     "b": {
@@ -43303,6 +43826,43 @@
     }
    ],
    "last": "2024-08-05"
+  },
+  {
+   "a": "mitra-chem",
+   "b": "novonix",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "The corpus's other DOE-funded, pre-revenue US battery-materials entrant — synthetic graphite anode in Chattanooga against LFP cathode in Muskegon — occupying the same upstream-materials position on the cell segment.",
+     "context": "The two companies do not transact; the link is structural. Both were selected in DOE's Manufacturing and Energy Supply Chains battery grant rounds (NOVONIX in 2022, Mitra Chem in September 2024), both have shipped samples without commercial volume, and both sell the FEOC-free provenance that the prohibited-foreign-entity material-assistance test made valuable from 1 January 2026. The contrast is the record: NOVONIX has a built plant with binding offtakes from Panasonic Energy and PowerCo, while Mitra Chem's plant is unbuilt and its customers unnamed. DOE's October 2025 cancellation of Anovion's USD 117 million synthetic-graphite award shows the anode side of this position was not spared by the 2025 reviews either.",
+     "source": "https://www.utilitydive.com/news/department-energy-project-grants-cancelled-battery-manufacturing-trump/803347/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Mitra Chem sits one layer above every cell maker in this corpus, in the same upstream position as Albemarle on lithium and NOVONIX on anode material: it would sell the LFP cathode active material that a storage cell is built from, not the cell.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitra-chem",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Mitra Future Technologies, Inc., trading as Mitra Chem, is a Delaware corporation founded in 2021 in Mountain View, California by Vivas Kumar (formerly Tesla's battery-materials supply chain and Benchmark Mineral Intelligence), Chirranjeevi Gopal and Stanford professor William Chueh.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "mitsubishi-electric",

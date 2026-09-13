@@ -1,0 +1,467 @@
+{
+ "schemaVersion": 2,
+ "slug": "cornex",
+ "title": "Cornex — Technology Study Guide",
+ "lastUpdated": "2026-09-13",
+ "sections": [
+  {
+   "id": "start-here-a-challenger-in-a-price-war",
+   "title": "Start here: what a challenger looks like from inside a price war",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "The CALB guide taught what happens when a storage cell gets very large, and the Great Power guide taught the rest of the battery map. This one teaches the **industrial economics** of the cell business — how a company with no audited accounts can go from nowhere to seventh in the world in three years, why every research house gives it a different rank, what a 5 MWh container actually is, and why a Chinese cell that is excellent on paper cannot be sold into a US tax-credit project at any price.",
+    "Cornex (楚能新能源) is the right company to learn this from because it is the purest case: founded in 2021 by a car dealer, financed by his cash flow and a province's land, it pledged in 2023 to sell cells 40% below the market, built plants in ten months, and rose through every ranking table while publishing nothing about its money.",
+    "The one sentence to hold onto: **in a commodity cell market, capacity and price buy share; what they cannot buy is the disclosure a customer, a lender or a landscape author needs to know whether the share will last.**"
+   ]
+  },
+  {
+   "id": "the-prismatic-lfp-cell-in-one-page",
+   "title": "The prismatic LFP storage cell, in one page",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A grid-storage cell is a sealed aluminium box, about the size of a hardback book and weighing five to ten kilograms, containing a stack of thin electrodes. The positive electrode is aluminium foil coated with **{{LFP}}** powder; the negative is copper foil coated with **{{graphite}}**; a porous **{{separator}}** keeps them apart; the whole is soaked in **{{electrolyte}}**. Lithium ions shuttle between the two coatings on charge and discharge by **{{intercalation}}**, and the box's job is to hold that reaction safely for fifteen years.",
+    "Three numbers describe the box. **{{ampere-hour}}** capacity — 314Ah, 472Ah, 588Ah in Cornex's line — says how much charge it holds; multiply by the cell's roughly 3.2 V and you get watt-hours (a 588Ah cell is about 1.9 kWh). **{{energy density}}** in Wh/kg and Wh/L says how heavy and how big that energy is; Cornex claims 190 Wh/kg and 419 Wh/L for its 588Ah. **{{cycle life}}** — 12,000 cycles on every Cornex storage cell — says how many charge-discharge rounds it survives before capacity falls to a threshold, usually 70 or 80% of new.",
+    "Why did cells grow from 280Ah to 588Ah in four years? Every cell carries fixed overhead — a can, terminals, a vent, a piece of the **{{BMS}}** watching it — and a container holds a fixed number of cells in series to reach its voltage. A bigger cell carries more energy per unit of overhead and fills the same container with more megawatt-hours: Cornex's 20-foot box went from 5.0 MWh on 314Ah cells to 6.26 MWh on 588Ah cells with the same footprint. The industry fought over the exact number — CATL 587Ah, Cornex and CALB 588Ah, EVE 628Ah, CRRC and Cornex 688Ah — because a one-amp-hour difference decides whose pack tooling the integrator standardises on.",
+    "The cost of size is safety engineering. A bigger cell stores more heat and a single failure releases more of it, so the design work moves to **{{thermal runaway}}** containment — how one cell's failure is stopped from spreading — which is why Cornex's headline feature is not a chemistry but a fire system."
+   ]
+  },
+  {
+   "id": "what-a-5-mwh-container-is",
+   "title": "What a 5 MWh container is, and what 'liquid immersion' adds",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The product a developer actually buys is a 20-foot steel box. Cornex's two, read from its own specification page, show what each line in a container datasheet means.",
+   "cols": [
+    "Line on the datasheet",
+    "CORNEX M5 (2024)",
+    "CORNEX M6 (2026)",
+    "What it tells a buyer"
+   ],
+   "rows": [
+    [
+     "Cell and grouping",
+     "314Ah, 12 × 1P416S",
+     "588Ah, 8 × 1P416S",
+     "416 cells in series make about 1,331 V; 12 or 8 such strings in parallel set the energy. Fewer, bigger cells mean fewer connections and fewer BMS channels"
+    ],
+    [
+     "Nominal energy",
+     "5,015 kWh",
+     "6,262 kWh",
+     "The same box holds 25% more energy on the larger cell — that is the whole reason for the format race"
+    ],
+    [
+     "Rated power",
+     "2,500 kW (0.5P)",
+     "1,565 kW (0.25P)",
+     "Power divided by energy is the C-rate; grid storage now buys two- and four-hour blocks, so the bigger box is deliberately slower"
+    ],
+    [
+     "Thermal management",
+     "Liquid cooling and heating",
+     "Liquid cooling and heating; ≤35 °C maximum",
+     "Coolant plates under the packs hold every cell within a few degrees of each other — the single biggest lever on cycle life"
+    ],
+    [
+     "Fire system",
+     "浸默 immersion + optional Novec/HFC/aerosol",
+     "Same, with 浸默 2.0",
+     "Immersion floods a failing pack with liquid to stop propagation; most competitors rely on gas suppression and venting"
+    ],
+    [
+     "Protection and weight",
+     "IP55 box, IP67 pack, 42.5 t",
+     "IP55 box, IP67 pack, 46 t",
+     "A 46-tonne box needs a crane pad and a road permit; density per acre is what the site engineer prices"
+    ],
+    [
+     "Certification",
+     "UL 1973, UL 9540A, UL 9540 (CSA); IEC 62619, 63056 (TÜV SÜD)",
+     "GB/UL/IEC/UN/NFPA (manual)",
+     "The {{UL 9540A}} test report is what a US fire marshal reads; without it the box cannot be permitted, with it the box can still be tariffed out"
+    ]
+   ],
+   "note": "Values are the company's own and carry its disclaimer. The lesson is structural: a container is a fixed volume, and the cell format decides how much energy, how many connections and how much heat go into it."
+  },
+  {
+   "id": "immersion-cooling-and-fire",
+   "title": "Immersion: the difference between cooling a cell and drowning it",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Two ideas share the word 'immersion' and it pays to separate them. **Immersion cooling** runs the cells permanently in a dielectric fluid so heat leaves every surface at once; it is the approach some data-centre and a few battery designs use, and it costs fluid, pumps and sealing on every pack. **Immersion suppression** — what Cornex's 浸默 (Jinmo, 'submerge and silence') system does — leaves the packs air-gapped and liquid-cooled through plates in normal operation, and only floods a pack with a liquid extinguishing medium when its sensors detect a **{{thermal runaway}}** starting.",
+    "The engineering claim is about **{{thermal propagation}}**: a single failing LFP cell releases gas and heat, and the danger is that its neighbours are pushed over their own trigger temperature one by one. Gas suppression (Novec 1230, HFC-227ea) starves a flame but does little to cool a cell that is generating its own oxygen-free heat; a liquid poured directly onto the pack removes heat by mass. Cornex's own figures — 70 seconds to extinguish in 2024, six seconds and 98% less stored liquid for version 2.0 in 2025 — are company claims, but the direction is consistent with the physics.",
+    "What a buyer should ask is what the guide's certification row implies: has the system passed a full-scale **{{UL 9540A}}** unit test with the immersion system active, and what does the test report say about propagation to adjacent containers? Cornex reports the CSA Group certificates for the M5 series and a first deployment at a 402 MWh Three Gorges Energy site; the test reports themselves are not published."
+   ]
+  },
+  {
+   "id": "seven-houses-seven-ranks",
+   "title": "Seven houses, seven ranks: how to read a shipment table",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Cornex's H1-2026 rank by research house. No company in this segment has a wider spread, which makes it the best case for learning why the houses disagree and which one a dossier should type against.",
+   "cols": [
+    "House",
+    "H1-2026 rank",
+    "Universe (GWh)",
+    "What it counts, and why the rank moves"
+   ],
+   "rows": [
+    [
+     "SNE Research",
+     "7th — 30.2 GWh, 6.5%",
+     "461.3",
+     "Korean house; counts lithium storage cells shipped globally by maker; the table this corpus types every cell maker against because it is the one every dossier already uses"
+    ],
+    [
+     "InfoLink",
+     "6th",
+     "467.8",
+     "Taiwanese house; similar universe, slightly different allocation of integrator-made cells; Cornex sits above REPT here"
+    ],
+    [
+     "TrendForce and ICC 鑫椤",
+     "6th",
+     "over 460",
+     "Same order as InfoLink; the two may share a data source"
+    ],
+    [
+     "Benchmark Mineral Intelligence",
+     "5th — 6.5%, +116%",
+     "over 490",
+     "Counts BESS cells including some the others exclude; note the identical 6.5% share at a different rank — the share is stable, the ordering above it is not"
+    ],
+    [
+     "SPIR 起点研究院",
+     "3rd",
+     "523.6",
+     "The largest universe (13% above SNE's); counts differently and places Cornex above Hithium, BYD, CALB and REPT. This is the house behind the company's and the Hubei government's 'global top three'"
+    ],
+    [
+     "Company (via trade press)",
+     "—  'over 40 GWh'",
+     "—",
+     "Ten GWh above SNE's count for the same half; no source reconciles them"
+    ]
+   ],
+   "note": "Two rules follow. First, always name the house and the period beside a rank — 'seventh' and 'third' are both true statements about H1 2026. Second, type a company's role on one house consistently across a segment, and treat a claim that names no house as marketing. The share figure moves less than the rank: 6.5% on SNE and 6.5% on Benchmark, at seventh and fifth."
+  },
+  {
+   "id": "the-half-yuan-per-watt-hour-move",
+   "title": "The half-yuan-per-watt-hour move: how a price war is started and what it costs",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "In August 2023 Cornex announced it would sell 280Ah storage cells at no more than RMB 0.5 per watt-hour before tax by year-end — about 40% below the market — and the Chinese press called it a 'suicide price'. Two years later the market price was below RMB 0.3/Wh and Cornex's own tender bids were at RMB 0.27–0.28/Wh, at or under the industry's cash cost. The episode is the cleanest illustration of how commodity share is bought.",
+    "The arithmetic a challenger runs: a cell's cost is dominated by materials — **{{cathode active material}}**, graphite, electrolyte, separator, copper and aluminium foil — and by the fixed cost of the line. **{{Capacity utilisation}}** decides the second term: an empty plant costs almost as much as a full one. A new entrant with new lines and no order book faces a choice between idle capacity and a price that fills it, and filling it at a loss can be rational if the loss is smaller than the fixed cost of standing idle, if scale lowers unit cost, and if the incumbents cannot follow without damaging their own margins.",
+    "The incumbents did follow. CATL, EVE and Hithium all cut, the whole industry's cell margin went to zero or below in 2024–2025, and several makers reported losses. That is the second half of the lesson: a price war started by a challenger is won by whoever can bleed longest — and that is usually the incumbent with the balance sheet, unless the challenger has an outside source of cash. Cornex's is its owner's car-dealership group and, the investigative press suggests, provincial money.",
+    "Read Cornex's 'break-even from July 2025' in that light. It is a chairman's sentence with no figure behind it, made by a company that has never published an income statement; the tender prices of the same period sit at cash cost. The claim may be true — a company that raised prices in late 2025, as Great Power did, could have crossed zero — but it is the kind of claim a reader should hold at low confidence until a number appears."
+   ]
+  },
+  {
+   "id": "who-pays-for-a-500-gwh-plan",
+   "title": "Who pays for a 500 GWh plan?",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The company's capacity plan against the money the public record can see. The point of the table is the gap between the two columns and the fact that no audited number exists to close it.",
+   "cols": [
+    "Item",
+    "Figure",
+    "Source and how firm it is"
+   ],
+   "rows": [
+    [
+     "Effective capacity claimed",
+     "'over 110 GWh' (three bases)",
+     "Company, repeated unchanged from December 2024 to February 2026 — before Yichang phase 2 and Xiangyang came on line in August 2026; no post-August figure exists"
+    ],
+    [
+     "Plants commissioned August 2026",
+     "Yichang phase 2 80 GWh (RMB 22 billion); Xiangyang 70 GWh (about RMB 22 billion)",
+     "Company releases; each ten months from groundbreaking to first cell"
+    ],
+    [
+     "Plants signed or filed",
+     "Wuhan phase 2 80 GWh (RMB 22 billion, Q1 2027); Xiaogan phase 2 100 GWh; Yichang phase 3 100 GWh",
+     "Company and provincial filings; the two 100 GWh projects are filings, not plants"
+    ],
+    [
+     "Plan",
+     "'over 500 GWh' by end-2026 (chairman); 350 GWh a year earlier",
+     "Company; the plan grew 150 GWh in nine months"
+    ],
+    [
+     "Capex implied",
+     "about RMB 66 billion across the four bases",
+     "Investigative press estimate (August 2026), not company"
+    ],
+    [
+     "Announced financing",
+     "RMB 10 billion Bank of Communications facility (January 2024)",
+     "Company — the only financing it has ever announced"
+    ],
+    [
+     "Owner's group",
+     "Hengxin Automobile Group: revenue RMB 78.5 billion (2025 China Top 500), profit about RMB 300 million, cash flow estimated at RMB 2.6–3.3 billion a year",
+     "China Top 500 list; trade press; the cash-flow figure is the investigative piece's estimate"
+    ],
+    [
+     "Government money",
+     "Two RMB 6 billion-class local funds formed for the company in 2025–2026, no longer on the shareholder list; land delivered in 31 days; 'over 80,000 jobs at full build' promised",
+     "Investigative press, unverified and unanswered; land and jobs from company and government pages"
+    ],
+    [
+     "What is missing",
+     "Any audited account, any shareholder table, any bond or loan document",
+     "The company publishes none and has filed with no regulator"
+    ]
+   ],
+   "note": "A landscape author should carry the gap, not resolve it. The honest sentence is 'the plan is RMB 60 billion-plus and the visible money is a tenth of that; how the rest is funded is not on the public record'."
+  },
+  {
+   "id": "ten-months-to-first-cell",
+   "title": "Ten months from groundbreaking to first cell — what that does and does not prove",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Two plants in one year, both built in ten months. Speed of build is Cornex's most verifiable competitive fact, and it is worth separating from the things it is often taken to prove.",
+   "lanes": {
+    "yc": "Yichang phase 2 (80 GWh)",
+    "xy": "Xiangyang (70 GWh)"
+   },
+   "items": [
+    {
+     "x": 2025.68,
+     "lane": "yc",
+     "label": "Agreement signed",
+     "sub": "About 1,730 mu of land; 2,054 mu delivered within 31 days — the provincial contribution in kind."
+    },
+    {
+     "x": 2025.735,
+     "lane": "yc",
+     "label": "Groundbreaking",
+     "sub": "Target set publicly: topped out by year-end, in production by 26 September 2026."
+    },
+    {
+     "x": 2025.824,
+     "lane": "xy",
+     "label": "Groundbreaking",
+     "sub": "Largest single plant over 30 GWh; scoped for 588Ah-to-1,000Ah cells and 4–6C EV cells."
+    },
+    {
+     "x": 2026.146,
+     "lane": "xy",
+     "label": "Main structure over 80%",
+     "sub": "Four months in; the city and company pulled the target forward to end-August."
+    },
+    {
+     "x": 2026.605,
+     "lane": "yc",
+     "label": "Commissioned",
+     "sub": "Ten months; 'single-line efficiency up over 60%, over 800,000 cells a day at full production'."
+    },
+    {
+     "x": 2026.663,
+     "lane": "xy",
+     "label": "Commissioned",
+     "sub": "Ten months, 'two months ahead of plan'; about 400,000 cells a day at full run."
+    }
+   ],
+   "note": "What it proves: the company can procure lines, build and staff a plant faster than any Western peer (Mitra Chem's cathode plant, a tenth the size, is on a four-year path from selection to commissioning). What it does not prove: that the lines are full. 'Commissioned' means the first cell came off; utilisation, yield and the cells' qualification with customers come after, and the company has published none of them.",
+   "unit": "calendar year"
+  },
+  {
+   "id": "why-the-us-is-closed",
+   "title": "Why the best cell in the world cannot be sold into a US tax-credit project",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Cornex holds the certificates a US fire marshal needs and signed two US framework partners in 2024. It signed none in 2026, and its 2026 export map is Germany, Poland, Romania, Ukraine, Israel, Saudi Arabia, Egypt, Brazil, Argentina, Malaysia and Thailand. Three rules explain the absence.",
+    "The first is the tariff. **{{Section 301 tariffs}}** on Chinese non-EV lithium-ion batteries rose from 7.5% to 25% on 1 January 2026, and stacked with other duties the landed cost of a Chinese storage cell rises by half or more — enough to erase the price advantage that is the company's whole proposition.",
+    "The second is the credit rule. Since 2026 a US storage project keeps its investment tax credit only if the share of its equipment cost from a **{{prohibited foreign entity}}** stays below a threshold — the **{{material assistance cost ratio}}**, 55% non-PFE content in 2026 rising to 75% after 2029. Cells are about half of a system's equipment cost, so a Chinese cell alone can push a project over the line. A Chinese-owned maker is a PFE by ownership, whatever it does about the tariff.",
+    "The third is the list. The US Department of Defense's **{{Section 1260H}}** list of 'Chinese military companies' now carries CATL, BYD, CALB and EVE; Cornex is not on it, which bars nothing today — it has no US federal customers — but marks the direction of travel for a company whose peers were added in 2025 and 2026.",
+    "On the other side of the ledger is China's own policy: the export VAT rebate on batteries fell from 13% to 9% in 2024, to 6% for April–December 2026, and goes to zero on 1 January 2027. A rebate is a margin, and its removal is a cost increase on every export the company makes — with a pull-forward incentive that makes 2026 shipments look better than 2027's will. Put together, the rules explain a company that signs its frameworks in Munich, Dammam and São Paulo, and reaches AI data centres only through a Taiwanese integrator's DC-side project in Malaysia and Thailand."
+   ]
+  },
+  {
+   "id": "reading-a-private-chinese-company",
+   "title": "Reading a private Chinese company from the outside",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "A private Chinese joint-stock company (股份有限公司) with no listing owes the public nothing beyond its business-registration record — a legal name, a unified social credit code, registered capital, legal representative and a business scope — and even that is read through aggregators (企查查, 天眼查) whose figures for Cornex disagree (registered capital RMB 4.0 or 4.94 billion; ownership 76%/92.5% of votes or 55/25/12.5/7.5). The company itself publishes no shareholder table. The dossier records all three versions and adopts none.",
+    "What fills the gap is other people's disclosure. A listed supplier that signs a large contract must announce it: Longpan Technology's exchange filings show 1.3 million tonnes of LFP cathode to Cornex through 2030 and, incidentally, the registration data of Cornex's three operating subsidiaries — including that the Wuhan one was incorporated in 2017 under the president's name and that all three hold vehicle-production licences. Tinci's filing shows a million tonnes of electrolyte. Multiply cathode tonnes by roughly 2.2 kg per kWh and you have the best available estimate of intended output: several hundred GWh over five years.",
+    "The other fill is government. Provincial and municipal pages record land, jobs and approvals, and their language — 'global top three', 'Hubei's largest' — is promotional; a province that delivered 2,054 mu of land in 31 days is a stakeholder, not a referee. Trade press adds the numbers the company lets out in interviews ('over 40 GWh in the half', 'break-even from July 2025') and the one investigative piece that tried to reconcile the capex with the money.",
+    "Then keep the Chesterton list — the claims that travelled further than their sources. There is no CATL patent suit against Cornex, though a plan row assumed one. The M5 entered mass production in February 2024, not 2025. A 'Hubei DRC approval adding 290 GWh' could not be found and no combination of known plants sums to it. And the 'global top three' is one house's half-year table, not the industry's verdict."
+   ]
+  },
+  {
+   "id": "for-and-against",
+   "title": "Cornex as a supplier, honestly",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "The case a buyer outside the United States would weigh in 2026.",
+   "note": "The two columns describe different time horizons: the case for is about the next order, the case against is about the fifteen-year warranty. A cell that is cheap and certified today from a company that publishes no accounts is a good spot purchase and a hard long-term supply decision.",
+   "cards": [
+    {
+     "t": "Cornex as a supplier, weighed",
+     "meta": "The next order against the fifteen-year warranty",
+     "adv": [
+      "Price: the company that started the 2023 price war still bids at the floor",
+      "Format currency: 314Ah and 588Ah cells and 5–6.26 MWh containers on the same platforms the incumbents ship",
+      "Certificates: CSA Group UL 1973/9540A/9540 and TÜV SÜD IEC 62619/63056 on the M5",
+      "Capacity: two new 70–80 GWh plants in August 2026 mean delivery slots exist",
+      "Speed: ten months from groundbreaking to first cell, twice",
+      "Not on the DoD 1260H list, unlike CATL, BYD, CALB and EVE"
+     ],
+     "dis": [
+      "No audited accounts, no shareholder table, no regulator filing of any kind in five years",
+      "Financing that runs through one owner's car-dealer group and provincial funds that appear and vanish",
+      "A rank that swings from third to seventh depending on the house, and a company that quotes the best one",
+      "Bids at or below cash cost; 'break-even' is a sentence, not a statement",
+      "The owner has just committed RMB 10 billion to a car venture outside the battery company",
+      "For US projects: PFE by ownership, 25% Section 301, and a warranty from a company with no US entity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why did storage cells grow from 280Ah to 588Ah in four years?",
+     "a": "Every cell carries fixed overhead — can, terminals, vent, a BMS channel — and a container holds a fixed number of cells in series. A larger cell carries more energy per unit of overhead and puts more megawatt-hours in the same box: Cornex's 20-foot container went from 5.0 MWh on 314Ah cells to 6.26 MWh on 588Ah cells."
+    },
+    {
+     "q": "A container is rated 6,262 kWh and 1,565 kW. What is its C-rate and what does it tell you?",
+     "a": "Power divided by energy is 0.25C — a four-hour block. Grid storage now buys two- and four-hour durations, so the bigger box is deliberately slower than the 0.5C M5; a buyer reads the rate to match the block to the tariff or contract it will serve."
+    },
+    {
+     "q": "What is the difference between immersion cooling and immersion suppression?",
+     "a": "Immersion cooling runs cells permanently in dielectric fluid so heat leaves every surface. Immersion suppression — Cornex's 浸默 system — cools normally through liquid plates and floods a pack with extinguishing liquid only when a thermal runaway is detected, removing heat by mass rather than starving a flame with gas."
+    },
+    {
+     "q": "Why does the same company rank third, fifth, sixth and seventh for the same half-year?",
+     "a": "Because each research house counts a different universe — SNE 461 GWh, InfoLink 468, Benchmark over 490, SPIR 524 — and allocates integrator-made and captive cells differently. Rank moves with the universe; share moves less (6.5% on both SNE and Benchmark). Always name the house and the period beside a rank."
+    },
+    {
+     "q": "Which house is behind Cornex's 'global top three' claim, and why does it matter?",
+     "a": "SPIR (起点研究院), whose H1-2026 table places Cornex third in a 523.6 GWh universe. SNE places it seventh and InfoLink sixth. The company and the Hubei and Wuhan governments quote SPIR; a dossier that types roles on SNE must say so, and must not adopt the best available rank as the industry's verdict."
+    },
+    {
+     "q": "What is the arithmetic behind a challenger's below-cost bid?",
+     "a": "A new plant's fixed cost is almost the same empty or full, so a price that fills it at a small loss can beat idling at a large one — if scale lowers unit cost and the incumbents cannot follow without hurting their own margins. The risk is that they do follow, and the war is then won by whoever can bleed longest."
+    },
+    {
+     "q": "Why is 'commissioned' not the same as 'producing at capacity'?",
+     "a": "Commissioned means the first cell came off the line. Utilisation, yield, and customer qualification of the cells come after, and each can take months. Cornex has commissioned two 70–80 GWh plants ten months after groundbreaking and published none of those three follow-on figures."
+    },
+    {
+     "q": "How can a listed supplier's filing tell you more about a private company than the company does?",
+     "a": "A listed company must announce a material contract. Longpan Technology's filings disclose 1.3 million tonnes of LFP cathode to Cornex through 2030 — at roughly 2.2 kg per kWh, several hundred GWh of intended cells — plus the registration data and business scope of Cornex's subsidiaries, none of which Cornex publishes."
+    },
+    {
+     "q": "Why can a Chinese cell fail a US project's tax credit even if the container is assembled in Texas?",
+     "a": "The material-assistance cost ratio counts prohibited-foreign-entity content by cost; cells are about half of a storage system's equipment cost and a Chinese-owned maker is a PFE by ownership. One Chinese cell can take a project past the 45% PFE ceiling regardless of where the steel and the inverter came from."
+    },
+    {
+     "q": "What does the removal of China's export VAT rebate do to a cell exporter's economics?",
+     "a": "The rebate (13% in 2024, 9% then 6% in 2026, zero from 2027) is refunded VAT on exports — effectively margin. Removing it raises the cost of every export by that amount, and the phased cut creates a pull-forward: 2026 shipments are flattered at 2027's expense."
+    },
+    {
+     "q": "What does the Section 1260H list do, and where does Cornex sit on it?",
+     "a": "It is the US Department of Defense's list of 'Chinese military companies'; it bars federal procurement and contracting with listed firms and signals broader restriction. CATL (2025), and BYD, CALB and EVE (June 2026) are on it; Cornex is not — a distinction that bars nothing today because it has no US federal customers."
+    },
+    {
+     "q": "Name three claims about Cornex that travelled further than their sources.",
+     "a": "A CATL patent suit against Cornex (none exists in the public record); M5 mass production in 2025 (it began in February 2024); a Hubei DRC approval adding 290 GWh on 20 May 2026 (not found, and no combination of known plants sums to 290). Each was carried in a planning note and none survived contact with primary sources."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A supplier says its 588Ah cell delivers 419 Wh/L and 190 Wh/kg. Its 314Ah cell is 185 Wh/kg. What does the near-identical gravimetric figure tell you?",
+     "c": [
+      "The larger cell uses a better chemistry",
+      "The chemistry is the same LFP; the larger format saves overhead per watt-hour and improves volumetric density inside a container, not the energy per kilogram of active material",
+      "The figures must be wrong",
+      "The 588Ah cell is a sodium-ion cell"
+     ],
+     "a": 1,
+     "why": "Both cells are LFP. Format growth improves packaging efficiency — more energy per can, fewer connections, more MWh per box — while the energy stored per kilogram of powder barely moves. The number that changes with format is the container's MWh, not the chemistry's Wh/kg."
+    },
+    {
+     "q": "Two research houses report the same company at 6.5% share, one at fifth place and one at seventh. What is the best conclusion?",
+     "c": [
+      "One of them made an error",
+      "The company's share is well established and the ordering of its near neighbours is inside the houses' methodology differences",
+      "The company shipped different amounts to different regions",
+      "Fifth is correct because it is the higher rank"
+     ],
+     "a": 1,
+     "why": "Share is measured against each house's own universe and is comparatively stable; rank depends on how the neighbours' volumes are allocated. When the companies above and below are separated by about a gigawatt-hour, the ordering is noise."
+    },
+    {
+     "q": "A cell maker's tender bid is RMB 0.27/Wh and the industry's cash cost is about RMB 0.28/Wh. Which reading is soundest?",
+     "c": [
+      "The company has a proprietary cost advantage",
+      "The company is buying share below cash cost, which is sustainable only with an outside source of funds or a later price rise",
+      "The tender must be for a different product",
+      "Cash cost figures are meaningless"
+     ],
+     "a": 1,
+     "why": "Bidding under cash cost fills a plant at a loss. It can be rational for a new entrant with idle lines, but it requires money from somewhere — an owner, a bank, a province — and it ends either with a price recovery or with the challenger running out of it."
+    },
+    {
+     "q": "A company announces two plants 'commissioned' in one month. Which of these does that announcement establish?",
+     "c": [
+      "That the plants are running at nameplate capacity",
+      "That the cells are qualified with customers",
+      "That construction is complete and the first cells have come off the lines",
+      "That the company is profitable"
+     ],
+     "a": 2,
+     "why": "Commissioning is a construction milestone. Utilisation, yield and customer qualification follow it and are the figures that turn capacity into shipments — and they are exactly the figures this company has not published."
+    },
+    {
+     "q": "Which document is the most reliable public statement of Cornex's intended output over the next five years?",
+     "c": [
+      "The chairman's 500 GWh target",
+      "The Wuhan government's 'global top three' article",
+      "Longpan Technology's exchange filing disclosing 1.3 million tonnes of LFP cathode to Cornex through 2030",
+      "A job-board headcount figure"
+     ],
+     "a": 2,
+     "why": "A listed supplier's contract disclosure is a regulated document with a risk notice attached. Converted at roughly 2.2 kg of cathode per kWh, it implies several hundred GWh of cells — a demand statement the company itself has never made in a filing. The other three are promotion, patronage and an aggregator."
+    },
+    {
+     "q": "Why does a Chinese cell maker with US fire certificates sign its 2026 frameworks in Munich, Dammam and São Paulo rather than in the United States?",
+     "c": [
+      "US buyers do not want 5 MWh containers",
+      "Section 301 duties, the prohibited-foreign-entity material-assistance ratio and the 1260H climate make a Chinese-owned cell uneconomic or ineligible in US credit-eligible projects, whatever its certificates say",
+      "The company has no English-language sales team",
+      "US certification lapsed"
+     ],
+     "a": 1,
+     "why": "Certification answers the fire marshal; it does not answer the tariff (25% from 2026), the tax-credit content test (a PFE by ownership) or the policy direction (its peers added to 1260H). The company's export map is the map of markets those rules do not reach."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "immersion suppression",
+   "d": "A fire-control approach in which a battery pack is flooded with a liquid extinguishing medium only when a thermal runaway is detected, removing heat by the mass of liquid rather than starving a flame with gas; distinct from immersion cooling, in which cells run permanently submerged in dielectric fluid. Cornex markets its version as 浸默 (Jinmo)."
+  }
+ ]
+}
