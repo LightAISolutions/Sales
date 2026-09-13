@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13w] — 2026-09-13 05:38:06 AM EST — v05.49r
+
+### Removed
+- **The “← Profiler” button is gone from the top of the page.** The ✦ Industry Guidance button moves left to take its place
 
 ## [v01.12w] — 2026-09-13 03:24:43 AM EST — v05.48r
 

@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.89w">
+  <meta name="build-version" content="v01.90w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -396,10 +396,12 @@
     .ov-rel-chips .ch.pj { color: var(--ov-gold); border-color: rgba(177,143,53,0.5); text-transform: none; letter-spacing: 0.04em; }
     .ov-rel-evhd.inb { color: #6ea8fe; }
     .ov-rel-type.det { background: transparent; color: var(--ov-faint); border: 1px solid var(--ov-line2); }
+    /* Inner slot (4px) — admin and contributor, so it is the least restrictive
+       of the three that remain after v01.90w removed the two cross-app
+       buttons. The ordering rule below is unchanged: least restrictive
+       innermost, most restrictive outermost. */
     #ov-network-btn {
-      /* Second slot (44px) — visible to every tier, so it sits flush under the
-         guidance button; the admin-only Reports button takes the outer slot. */
-      position: absolute; top: 84px; right: 0;
+      position: absolute; top: 4px; right: 0;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -859,27 +861,14 @@
     /* The masthead has to be at least as tall as the button stack it hosts, or
        the outermost slot overhangs the double rule. The slots are positioned
        against this box, so the value is simply the bottom of the last one:
-       164px (its top, in the block below) + 30px (button height) = 194. The
-       26px padding-bottom then keeps the rule clear of it. Adding a sixth
-       surface means raising this by another 40. */
-    #ov-header { position: relative; min-height: 194px; }
-    #ov-guide-btn {
-      position: absolute; top: 44px; right: 0; display: none; text-decoration: none;
-      background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
-      border-radius: 999px; padding: 8px 16px; cursor: pointer;
-      font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
-    }
-    #ov-guide-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
-    /* Inner slot (4px) — visible to admin, contributor and analyst, the three
-       tiers Classroom admits, so it is the least restrictive of the stack. */
-    #ov-classroom-btn {
-      position: absolute; top: 4px; right: 0;
-      display: inline-block; text-decoration: none;
-      background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
-      border-radius: 999px; padding: 8px 16px; cursor: pointer;
-      font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
-    }
-    #ov-classroom-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+       84px (its top, in the block below) + 30px (button height) = 114. The
+       26px padding-bottom then keeps the rule clear of it. Adding a fourth
+       surface means raising this by another 40.
+       v01.90w: was 194px for five slots. The two cross-app buttons
+       (#ov-classroom-btn at 4px, #ov-guide-btn at 44px) were removed on the
+       developer's direction, so the remaining three moved up by two slots and
+       80px of reserved height came back. */
+    #ov-header { position: relative; min-height: 114px; }
     /* ── Industry Reports (v01.52w) ─────────────────────────────────────
        In-page views (#reports / #report/<id>) reusing the gd-* section
        primitives; rp-* covers only what reports add — citation superscripts,
@@ -904,8 +893,8 @@
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
-    #ov-reports-btn { top: 124px; }
-    #ov-signins-btn { top: 164px; }
+    #ov-reports-btn { top: 44px; }
+    #ov-signins-btn { top: 84px; }
     #ov-signins-btn:hover,
     #ov-reports-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
     .rp-sec { margin: 14px 0; }
@@ -6309,52 +6298,24 @@ function ovDocVersion() {
         });
     }
 
-    // Role-gated masthead link — created only after a validated session that
-    // holds the capability (called from the auth wall's pass()), so signed-out
-    // visitors and tiers without it never have the element in the DOM at all.
+    // PROJECT: the two cross-app masthead buttons were REMOVED at v01.90w
+    // (developer directive). `🎓 Classroom` (added at Phase 6 C0) and
+    // `✦ Industry Guidance` (re-pointed at Classroom in C3 session 3) both
+    // existed only to navigate to the other app; the developer navigates
+    // between the two directly, so a permanent slot in the masthead stack for
+    // each was two slots of chrome for zero function on this page.
     //
-    // C3 session 3: this DEEP-LINKS to Classroom rather than opening an overlay
-    // here — the guidance library lives there now. Same ovCan('guidance') gate,
-    // same id and same slot in the masthead stack, so the access matrix and
-    // scripts/verify-profiler-roles.py see exactly what they saw before. It is
-    // an <a> because it navigates: middle-click and ctrl-click should open
-    // Classroom in a new tab the way every other link on this page does.
+    // **What was deliberately NOT removed with them**, because neither depends
+    // on a button: the dossier's `✦ Covered in guidance modules` chips still
+    // deep-link to `Classroom.html#guidance/<id>` — those are the load-bearing
+    // deep links C3's checklist asked for, and they point at a specific module
+    // rather than at the app — and `ovCan('guidance')` still gates them, so the
+    // capability and its tier list are unchanged.
     //
-    // gdProgressSync() stays: this is still the earliest point in a signed-in
-    // page load where the server progress map can be pre-warmed, and the
-    // dossier's "Mark as read" button reads that map. It is no longer about
-    // guidance — the ticks it pulls are study-guide and dossier ticks now.
-    function ovGuideBtnShow() {
-      if (!ovCan('guidance')) return;
-      gdProgressSync();   // pre-warm the server progress map at sign-in
-      if (document.getElementById('ov-guide-btn')) return;
-      var head = document.getElementById('ov-header');
-      if (!head) return;
-      var a = document.createElement('a');
-      a.id = 'ov-guide-btn';
-      a.href = 'Classroom.html#guidance';
-      a.textContent = '✦ Industry Guidance';
-      a.title = 'Document-analysis study modules — opens the Classroom library';
-      head.appendChild(a);
-      a.style.display = 'inline-block';
-    }
-
-    // Cross-link to the Classroom app (Phase 6 C0). Gated on 'study' rather
-    // than a new capability: admin, contributor and analyst all hold it and are
-    // exactly the three tiers Classroom admits, while viewer holds neither it
-    // nor Classroom access — so the two matrices cannot drift apart here.
-    function ovClassroomBtnShow() {
-      if (!ovCan('study')) return;
-      if (document.getElementById('ov-classroom-btn')) return;
-      var head = document.getElementById('ov-header');
-      if (!head) return;
-      var a = document.createElement('a');
-      a.id = 'ov-classroom-btn';
-      a.href = 'Classroom.html';
-      a.textContent = '🎓 Classroom';
-      a.title = 'Curriculum and retention layer built from this corpus';
-      head.appendChild(a);
-    }
+    // gdProgressSync() moved to pass() rather than dying here. It has nothing
+    // to do with guidance any more: it pre-warms the server progress map that
+    // the dossier's "Mark as read" button reads, and sign-in is still the
+    // earliest point in a signed-in load where that can happen.
 
 
     // PROJECT: company cross-links (v01.66w). Covered company names inside
@@ -7765,8 +7726,17 @@ function ovDocVersion() {
       function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
       function pass() {
         wall.style.display = 'none';
-        ovStyleBtnShow(); ovGuideBtnShow(); ovReportsBtnShow(); ovNetworkBtnShow();
-        ovClassroomBtnShow(); ovSigninsBtnShow();
+        ovStyleBtnShow(); ovReportsBtnShow(); ovNetworkBtnShow(); ovSigninsBtnShow();
+        // Pre-warm the account's server progress map. It used to ride on
+        // ovGuideBtnShow(); that button is gone (v01.90w) but the dossier
+        // "Mark as read" control still reads the map, so the call stays here —
+        // the same moment in the load, without the button attached to it.
+        //
+        // The ovCan('guidance') guard comes with it, unchanged. gop=progress is
+        // gated server-side by guidanceAllowed_, so a tier without the
+        // capability would fire one request that is always denied; it kept its
+        // localStorage fallback before this commit and it keeps it after.
+        if (ovCan('guidance')) gdProgressSync();
         // The first render can run before whoami resolves, so the role-gated
         // controls in it were decided without a tier. Repaint now that we have one.
         try { if (ovRegistry) ovRoute(); } catch (rErr) {}

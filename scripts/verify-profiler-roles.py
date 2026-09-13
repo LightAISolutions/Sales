@@ -16,23 +16,33 @@ localStorage directly — it arrives from the stubbed whoami and passes through
 ovNormalizeRole, so the test exercises the real sign-in path.
 
 The matrix under test (developer directives, 2026-08-22; Reports added
-2026-08-29; ecosystem retune 2026-08-31 per PHASE6-CLASSROOM-DESIGN.md):
+2026-08-29; ecosystem retune 2026-08-31 per PHASE6-CLASSROOM-DESIGN.md;
+Classroom column retired 2026-09-13 with the cross-link it tested):
 
-    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare  Classroom  Signins
-    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes       yes        yes
-    contributor    no    no   yes    yes      no      yes      yes      yes     yes       yes         no
-    analyst        no    no    no     no      no       no       no      yes     yes       yes         no
-    viewer         no    no    no     no      no       no       no       no      no        no         no
+    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare  Signins
+    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes       yes
+    contributor    no    no   yes    yes      no      yes      yes      yes     yes        no
+    analyst        no    no    no     no      no       no       no      yes     yes        no
+    viewer         no    no    no     no      no       no       no       no      no        no
 
 'signins' is the admin-only sign-in log (v01.78w/v01.33g). Unlike the
 static-JSON surfaces it is a real data boundary: handleSigninsOp_ reads the
 audit tab server-side and roleAllowed_(sess, []) admits nothing on a role
 name, so only the 'admin' permission passes and a denial is itself audited.
 
-'classroom' is the masthead cross-link to the Classroom app (Phase 6 C0).
-It is gated on 'study' rather than a capability of its own because the
-three tiers holding 'study' are exactly the three Classroom admits — so a
-drift between the two apps' matrices fails here.
+'classroom' was the masthead cross-link to the Classroom app (Phase 6 C0),
+gated on 'study'. It was REMOVED at v01.90w on the developer's direction,
+together with the '✦ Industry Guidance' button beside it, so the column is
+gone from this matrix: the surface no longer exists on this page and a
+column asserting 'hidden' for all four tiers would assert nothing.
+
+'guidance' therefore no longer reads a button. Its surface is the dossier's
+'✦ Covered in guidance modules' chip line, which is what C3 left behind as
+the real deep link into Classroom. That is a STRONGER assertion than the
+button was: the line only paints once gop=mentions has ANSWERED, so a denied
+tier failing to show it proves the server refused rather than proving a
+button was hidden. The tier list is unchanged — admin and contributor, the
+same two guidanceAllowed_ admits.
 
 'network' gates BOTH the per-dossier Relationships tab and the #network
 explorer — one capability, two doors, so they cannot drift apart. The probe
@@ -62,19 +72,19 @@ SHOTS.mkdir(exist_ok=True)
 EXPECT = {
     'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True,
                     'reports': True,  'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True,
-                    'classroom': True, 'signins': True},
+                    'signins': True},
     'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True,
                     'reports': False, 'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True,
-                    'classroom': True, 'signins': False},
+                    'signins': False},
     'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
                     'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': True,  'compare': True,
-                    'classroom': True, 'signins': False},
+                    'signins': False},
     'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
                     'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': False, 'compare': False,
-                    'classroom': False, 'signins': False},
+                    'signins': False},
 }
 CAPS = ('fieldNote', 'versions', 'guidance', 'export', 'reports',
-        'network', 'relTab', 'coverage', 'study', 'compare', 'classroom', 'signins')
+        'network', 'relTab', 'coverage', 'study', 'compare', 'signins')
 GUIDANCE_ALLOWED = {'admin', 'contributor'}   # mirrors guidanceAllowed_ in Profiler.gs
 COVERAGE_ALLOWED = {'admin', 'contributor'}   # mirrors coverageAllowed_ in Profiler.gs
 
@@ -112,11 +122,21 @@ def gas_stub(state):
             body = {'success': True, 'email': email,
                     'role': role, 'isAdmin': role == 'admin'}
         elif 'action=guidance' in url or 'op=guidance' in url:
-            if role in GUIDANCE_ALLOWED:
+            if role not in GUIDANCE_ALLOWED:
+                body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
+            elif 'gop=mentions' in url:
+                # The dossier's "Covered in guidance modules" chip line — the
+                # only guidance surface left on this page since v01.90w removed
+                # the masthead button. Keyed on the probe company so the line
+                # actually paints for an allowed tier.
+                body = {'success': True,
+                        'mentions': {'zhonhen': [{'id': 'nvidia-800vdc-2026-08',
+                                                  'title': 'Test module'}]}}
+            elif 'gop=progress' in url:
+                body = {'success': True, 'progress': {}}
+            else:
                 body = {'success': True, 'docs': [{'id': 'nvidia-800vdc', 'title': 'Test module',
                                                    'short': 'stub', 'sections': 1}]}
-            else:
-                body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
         elif 'action=news' in url or 'nop=' in url:
             # Mirrors handleNewsOp_'s server-side tier check (2026-08-31): the
             # corpus reaches the browser only through this proxy, so a denied
@@ -151,14 +171,19 @@ def probe(page):
         noteBtn:   vis('ov-note-btn'),
         noteBox:   vis('ov-qn'),
         versions:  vis('ov-vers-btn'),
-        guidance:  vis('ov-guide-btn'),
+        // v01.90w: the masthead guidance button was removed, so the tiered
+        // guidance surface on this page is the dossier's "Covered in guidance
+        // modules" chip line. It is a better assertion than the button was —
+        // the line only paints after gop=mentions ANSWERS, so a denied tier
+        // failing here means the server refused, not merely that a button was
+        // hidden.
+        guidance:  !!document.querySelector('.ov-gd-mentions'),
         export:    vis('ov-export-btn'),
         reports:   vis('ov-reports-btn'),
         network:   vis('ov-network-btn'),
         relTab:    vis('ov-tab-rels'),
         coverage:  vis('ov-cov-btn'),
         study:     vis('ov-study-btn'),
-        classroom: vis('ov-classroom-btn'),
         signins:   vis('ov-signins-btn'),
         wall:      vis('ov-authwall'),
         role:      localStorage.getItem('ov_note_role')
@@ -359,7 +384,7 @@ def run():
 
     mark = lambda b: 'shown ' if b else 'hidden'
     hdr = ('ROLE', 'NoteBtn', 'Cog', 'Versions', 'Guidance', 'Export', 'Reports',
-           'Network', 'RelTab', 'Coverage', 'Study', 'Compare', 'Classrm', 'Signins')
+           'Network', 'RelTab', 'Coverage', 'Study', 'Compare', 'Signins')
     fmt = '%-12s' + ' %-8s' * (len(hdr) - 1)
     print('\nRole + Access matrix')
     print('\n' + fmt % hdr)
@@ -369,7 +394,7 @@ def run():
             role, mark(g['noteBtn']), mark(g['cog']), mark(g['versions']),
             mark(g['guidance']), mark(g['export']), mark(g['reports']),
             mark(g['network']), mark(g['relTab']), mark(g['coverage']),
-            mark(g['study']), mark(g['compare']), mark(g['classroom']), mark(g['signins'])))
+            mark(g['study']), mark(g['compare']), mark(g['signins'])))
     print()
     if failures:
         print('FAILURES (%d):' % len(failures))

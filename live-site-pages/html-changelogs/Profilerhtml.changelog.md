@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.90w] — 2026-09-13 05:38:06 AM EST — v05.49r
+
+### Removed
+- **The 🎓 Classroom and ✦ Industry Guidance buttons are gone from the top-right stack.** Both only navigated to the other app. The three that remain — Network, Reports, Sign-ins — move up to fill the space, and the masthead is 80px shorter, so the dossier list starts higher on the page
+
+### Changed
+- A dossier's “✦ Covered in guidance modules” chips are unchanged and still open the module in Classroom. That is the link that points at something specific, and it stays
+- Who can see what is unchanged everywhere else
 
 ## [v01.89w] — 2026-09-13 03:24:43 AM EST — v05.48r
 

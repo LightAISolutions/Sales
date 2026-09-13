@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.49r] — 2026-09-13 05:38:06 AM EST
+
+> See attached screenshots. I confirmed that everything works as intended on Classroom. However, I would like Profiler to remove the circled Classroom and Industry Guidance buttons in the top right of the landing pageand I would like Classroom to remove the circled "<- Profiler" button in the top left of the landing page. For both apps, move the remaining buttons accordingly to fill the gap.
+>
+> Then, evaluate where I am in the overall action plan and give me a prompt to paste into a new Opus 5 xhigh session, then remember session.
+
+**The two apps stop advertising each other in their mastheads.** Developer directive, taken immediately after confirming C3's Classroom surfaces work in production.
+
+### Removed
+
+- **`live-site-pages/Profiler.html`** (v01.89w → v01.90w) — `ovClassroomBtnShow()` and `ovGuideBtnShow()`, their two CSS blocks, and the `🎓 Classroom` / `✦ Industry Guidance` elements they built. The stack went from five absolutely-positioned slots to three: `#ov-network-btn` 4px, `#ov-reports-btn` 44px, `#ov-signins-btn` 84px, with `#ov-header`'s reserved `min-height` cut from **194px to 114px**. The slot-ordering rule is unchanged — least restrictive innermost — and network (admin + contributor) correctly takes the inner slot from the two that left
+- **`live-site-pages/Classroom.html`** (v01.12w → v01.13w) — the `← Profiler` link. `#cl-links` is a flex row, so `✦ Industry Guidance` reflowed to the row start on its own; there is no slot arithmetic on this side
+- **`scripts/verify-profiler-roles.py`** — the `classroom` column, from `EXPECT`, `CAPS`, `probe()`, the printed table and the docstring's matrix. The surface it tested no longer exists on the page, and a column asserting `hidden` for all four tiers asserts nothing. **12 × 4 from here, not 13 × 4**
+
+### Changed
+
+- **The `guidance` row now reads the dossier chip line, not a button.** `probe()`'s `guidance` was `vis('ov-guide-btn')`; it is now `!!document.querySelector('.ov-gd-mentions')`, and the GAS stub answers `gop=mentions` (keyed on the probe company, `zhonhen`) and `gop=progress`. **This is a stronger assertion than the one it replaces**: the chip line only paints once the server has ANSWERED, so a denied tier failing it proves `guidanceAllowed_` refused rather than proving a button was hidden. The tier list did not move — admin and contributor, the same two — and the checker reports the same values it always did for that column
+- **`.claude/rules/profiler-app.md`**, **`repository-information/diagrams/profiler-diagram.md`**, **`Classroom-diagram.md`** — the Role + Access matrix note and both environment design notes record the removal, the retired column, and what the `guidance` row now reads. **No pako regeneration**: neither Mermaid body depicts the masthead
+
+### Worth noting
+
+- **The one thing that would have broken silently, and did not.** `gdProgressSync()` — the pre-warm of the account's server progress map — lived *inside* `ovGuideBtnShow()`, behind its `ovCan('guidance')` guard. Deleting the button would have taken the pre-warm with it, and the dossier's "Mark as read" control reads that map, so it would have fallen back to localStorage until a study guide happened to be opened. The call moved to the auth wall's `pass()` **with its capability guard intact** — `gop=progress` is gated server-side by `guidanceAllowed_`, so calling it unguarded would have made every analyst and viewer fire one request that is always denied. Same moment in the load, same tiers, no button attached
+- **What deliberately stayed.** The dossier's `✦ Covered in guidance modules` chips. They are the deep link C3's checklist actually asked for — they point at a *module*, not at an app — and `ovCan('guidance')` still gates them, so the capability is as live as it was yesterday. Removing the masthead entry removed an app-level shortcut, not the migration's deliverable
+- **A consequence of the directive, named rather than discovered later.** A Classroom tier without the `guidance` capability (analyst) now has **no link at all** in the masthead row, only its role badge. Verified in the render: `labels: []` for analyst, `["✦ Industry Guidance"]` for admin, both with zero page errors
+- **Verified by measurement, not by eye.** The Profiler render asserts the three surviving buttons compute to `top` 4 / 44 / 84, sit exactly 40px apart on screen in that order, that `#ov-header` reports `114px`, and that no button's bottom edge overhangs the masthead rule. 22 checks, zero page errors. The Classroom render asserts the guidance link's left edge equals `#cl-links`'s left edge — it reflowed into the gap rather than merely losing a sibling
+- **`Profilerhtml.changelog.md` is now at 49/50.** The next Profiler page bump is the last before mandatory archive rotation on that file
+- **Repo CHANGELOG rotation still did not fire**: 102 raw, but six sections are dated 2026-09-13 EST, leaving **96 non-exempt**. Third push in a row on the same EST day. Oldest whole date group remains thirteen sections dated 2026-09-04
 
 ## [v05.48r] — 2026-09-13 03:24:43 AM EST
 
