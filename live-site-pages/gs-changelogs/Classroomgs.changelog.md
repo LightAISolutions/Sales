@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24g] — 2026-09-13 06:28:51 AM EST — v05.50r
+
+### Changed
+- **One Industry Guidance module was refreshed against current sources.** Several dated items in it had moved on since it was written, so the text now says where they actually stand; two statements that had drifted from the record were corrected outright; and the module's review-by date moved forward to the next date its own subject matter is due to change
+- **Its reading sections keep the same names and order**, so any reading marks and review schedules already attached to them carry over untouched
+- The module's flashcards and self-test each gained one item, and several existing ones were reworded for the updated material. **A reworded card re-enters the review rotation as new** — the schedule built on the old wording no longer describes the new text, so it is not carried forward. This is intended, not a fault
 
 ## [v01.23g] — 2026-09-13 03:24:43 AM EST — v05.48r
 

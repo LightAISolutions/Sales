@@ -1,6 +1,6 @@
 # Bankability & Certification for Grid-Scale BESS — Analysis & Study Source
 
-**Provenance:** research synthesis, not a document ingest — compiled 2026-08-24 from ~50 primary and secondary sources (UL Solutions, NFPA/code analyses, CSA Group, FERC/NERC/ERCOT dockets, WECC's Moss Landing report, EPRI's failure database, DNV/CEA/BNEF methodology pages, insurer commentary, law-firm and IE publications). Feeds the in-app Industry Guidance module `bess-bankability-2026-08` in `Profiler.gs`. Claims carry sources in the ledger; unverified items flagged.
+**Provenance:** research synthesis, not a document ingest — compiled 2026-08-24 from ~50 primary and secondary sources (UL Solutions, NFPA/code analyses, CSA Group, FERC/NERC/ERCOT dockets, WECC's Moss Landing report, EPRI's failure database, DNV/CEA/BNEF methodology pages, insurer commentary, law-firm and IE publications). Feeds the in-app Industry Guidance module `bess-bankability-2026-08`, which lives in `googleAppsScripts/Classroom/Classroom.gs` below the `// CONTENT END` fence (it moved there from `Profiler.gs` at C3 session 3, v05.48r). Claims carry sources in the ledger; unverified items flagged. **The body below is the 2026-08-24 record; the 2026-09-13 quarterly re-verification section near the end carries every change since, and wins on any conflict.**
 
 ## What this is
 
@@ -74,6 +74,85 @@ A teaching document for Hithium's US sales team on the three approval gauntlets 
 | Hithium IPO lapsed Sep 25, 2025, refiled Oct 2025; GM 17.9→13.1%; CATL suit Jun 2025 | Energy-Storage.News; Bamboo Works; ess-news; pv magazine | 2025-26 |
 
 **[UNVERIFIED / do not quote]:** a dedicated PVEL/Kiwa BESS scorecard (not confirmed — their scorecard is PV modules); the "10-25% premium discount for complete 9540A data" (vendor source); "no 2025-26 US fire attributed to a Chinese containerized system" (absence of evidence in searches, not a verified negative); the reported Hithium executive arrest (moderate confidence, secondary Chinese-media-derived).
+
+## 2026-09-13 quarterly re-verification (module v `updated` 2026-09-13, `reviewBy` 2027-01-01)
+
+Every dated gate in the module was re-checked against the **primary instrument** — the standards body, the
+regulator's own public notice or docket, or the legislature's bill record. No secondary summary was accepted as
+the basis for a change. Five claims moved; the rest held.
+
+**CHANGED — UL 9540A is one edition behind.** A **6th edition** exists and UL Solutions tests to both the 5th and
+the 6th; UL's own Code Authority material gives the 6th an **effective date of January 1, 2027**. Substantively the
+6th **drops the unit-level test for non-residential BESS**, keeping it for residential systems and for
+non-residential systems carrying an active thermal-runaway propagation prevention system (TRPPS); runs the
+**installation-level large-scale fire test on every system regardless of unit-level result and applies pass/fail
+criteria to that test**; and adds the **intentional ignition of vented gases**. This falsifies the module's
+"cell + module + unit is the complete stack" advice for the 6th edition and makes naming the edition part of the
+completeness claim. *(Source: UL Solutions, UL 9540A test-method and Code Authority pages.)*
+
+**CHANGED — the LSFT procedure is ANSI/CSA C800:25, not TS-800:24, and NFPA 855-2026 names neither.** CSA Group's
+own Tentative Interim Amendment submission to NFPA (Log No. 1852) states that **CSA/ANSI C800:25 has been published
+and ANSI-approved** with the large-scale procedure at **Section 9.7**, and that because no consensus standard existed
+when 855's second draft closed, **the methods for large-scale fire testing are not currently defined in NFPA 855**.
+The 2026 edition adds **Annex G.11** on what the test must show; UL 9540A Ed. 6's installation test is the second
+route. Errata 855-26-1 (issue date October 13, 2025) confirms the 2026 edition is issued. No issued TIA on the 2026
+edition was found, so the C800 reference is proposed, not adopted — stated that way in the module.
+*(Sources: NFPA docinfo — proposed TIA 1852 and Errata 855-26-1.)*
+
+**CORRECTED — the FCC inverter action is not a China rule.** The module said the FCC barred new authorizations for
+*Chinese-made* inverters. The Covered List entry, added **July 28, 2026 (DA 26-786)** and modified **August 20, 2026
+(DA 26-870)** in WC Docket 18-89 / ET Docket 21-232 / EA Docket 21-233, reads **"Foreign-produced power inverters,
+except power inverters which have been granted a Conditional Approval by DoW or DHS"** — expressly *regardless of the
+nationality of the producer*. The adopted definitions: a **"power inverter"** is a UL 1741 utility-interactive
+inverter (UL 1741 §§2.1.23, 2.1.52) that **contains or is designed, equipped or configured to accept** a component
+enabling remote communication, control, sensing, data collection or monitoring over Ethernet, Wi-Fi, cellular,
+Bluetooth or similar, wired or wireless; **"foreign-produced"** excludes units that are **eligible for the §45X
+Advanced Manufacturing Tax Credit** or are a **domestic end product** under 48 CFR §25.101(a) (domestic component
+cost **>65% for CY2024–2028, >75% from CY2029**). Non-utility-interactive inverters are out of scope. The listing is
+prospective — existing authorizations stand — and OET's **DA 26-789** (July 28, 2026) waived the permissive-change
+prohibitions so harm-mitigating firmware updates can still reach already-authorised covered units. **The module's
+"pair Chinese DC blocks with non-Chinese PCS/EMS" advice was therefore wrong and has been replaced.** A second-order
+finding worth carrying: DoW reasoned the §45X carve-out from §45X(c)(1)(C)/§7701(a)(52), so **the FEOC document set
+and the FCC document set have converged**. *(Sources: FCC Public Notices DA 26-786 and DA 26-870, full text.)*
+
+**CORRECTED — AB 303 did not die in April 2025.** The official California bill record for AB-303 (2025–2026, Addis)
+shows the committee hearing **postponed on 2025-04-02**, the bill then sitting as a live two-year
+measure, and **"Died pursuant to Art. IV, Sec. 10(c) of the Constitution" on 2026-01-31**, filed with the Chief Clerk
+2026-02-02. Scope confirmed: projects with **200 MWh or more** within **3,200 feet of a sensitive receptor** or on an
+environmentally sensitive site. The California siting risk was live nine months longer than the module implied.
+*(Source: leginfo.legislature.ca.gov, AB-303 bill status.)*
+
+**CHANGED — BNEF Tier 1 criteria tightened on August 15, 2026.** Per BNEF's own published methodology of that date:
+six eligible projects in the last two years, at least three different buyers, each project at least **10 MW *or*
+10 MWh** (either threshold — the module's "10 MW/10 MWh" read as a conjunction), third-party buyer, manufacturer
+owning its plants — **plus, new: at least one of those projects financed with non-recourse financing from at least
+two different commercial banks.** BNEF states the classification "is purely a measure of industry acceptance," which
+strengthens the module's existing "screen, not an award" teaching. The ~85% Chinese share is the Q2 2026 list and is
+**not** re-verified — the list itself is not public — and is labelled as such in the module.
+*(Source: BNEF Tier 1 Energy Storage Methodology, August 15, 2026.)*
+
+**HELD, now citable to the instrument.** PRC-029-1: FERC **Order No. 909**, Docket **RM25-3-000**, **90 FR 35599**,
+published 2025-07-29, rule effective 2025-08-28; the standard's **US effective date of October 1, 2026** is carried in
+NERC's own Standards, Compliance and Enforcement Bulletin for **August 31 – September 7, 2026**, alongside PRC-024-4,
+PRC-030-1 and TOP-003-7. **New material added:** Order 909's twelve-month directive produced **PRC-029-2** under
+Project 2025-05, whose April 2026 implementation plan would **retire PRC-029-1** on the later of October 1, 2026 or
+the first calendar quarter after approval, and which sets the phased dates the module now carries (non-BES IBRs not
+before January 1, 2027; hardware-limitation documentation within 12 months of the effective date for in-service
+units, 90 days for later ones). ERCOT: **NOGRR 272 and PGRR 121 approved by the PUCT 2025-11-06, effective
+2025-12-01**, with PGRR 121's model-quality and validation duties attaching to storage resources whose SGIA is
+executed **on or after 2026-04-01**; NOGRR 245 effective 2024-10-01 as stated. FEOC: **IRS Notice 2026-15** confirms
+the **55%** Clean Electricity MACR floor for an energy storage technology beginning construction in calendar 2026
+(§7701(a)(52)(B)(ii)), as interim guidance with safe harbours pending proposed regulations. EPRI's failure database
+is tracked through 2025-12-31, so the 2018→2025 window and its media-derived caveat stand unchanged.
+*(Sources: federalregister.gov API record 2025-14304; NERC Project 2025-05 implementation plan and the Aug 31–Sep 7
+2026 bulletin; ercot.com issue pages NOGRR245 / NOGRR272 / PGRR121; IRS Notice 2026-15.)*
+
+**Not re-verified this cycle** (undated in the module, no dated gate attached): the CEA 72%-system-level defect
+finding and its 28/19/15 split; the insurer commentary on Moss Landing pricing; the IE-firm roster. Left as written.
+
+**Next dated gate, and therefore the new `reviewBy`: 2027-01-01** — UL 9540A Ed. 6's effective date, which is also the
+date non-BES inverter-based resources come inside PRC-029. October 1, 2026 is not the trigger because this revision
+states that date and the phasing behind it explicitly, so the module reads correctly on either side of it.
 
 ## What this analysis does NOT cover
 

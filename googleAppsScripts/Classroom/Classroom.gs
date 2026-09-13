@@ -1,4 +1,4 @@
-var VERSION = "v01.23g";
+var VERSION = "v01.24g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -37787,17 +37787,19 @@ function guidanceDocBankability_() {
   "series": "Industry Guidance - policy module 3 of 3",
   "repo": "repository-information/industry-guidance/bess-bankability-certification-analysis.md"
  },
- "updated": "2026-08-24",
- "reviewBy": "2026-10-01",
+ "updated": "2026-09-13",
+ "reviewBy": "2027-01-01",
  "revisions": [
   { "date": "2026-08-29",
-    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." },
+  { "date": "2026-09-13",
+    "note": "Quarterly freshness review against primary sources - UL 9540A 6th edition and its Jan 1, 2027 effective date, ANSI/CSA C800:25 as the published large-scale fire test procedure, the FCC inverter Covered List entry restated as foreign-produced rather than Chinese-made, PRC-029-1's confirmed Oct 1, 2026 date and the pending PRC-029-2, ERCOT's Dec 1, 2025 and Apr 1, 2026 advanced-grid-support dates, BNEF's Aug 15, 2026 Tier 1 criteria change, and AB 303's actual death date of Jan 31, 2026." }
  ],
  "tiles": [
   {
    "k": "UL 9540A",
    "v": "a test, not a cert",
-   "sub": "no pass/fail - it produces design data; never say '9540A certified'"
+   "sub": "no listing, no mark - it produces design data; the 6th edition (effective Jan 1, 2027) adds pass/fail to the installation test alone"
   },
   {
    "k": "NFPA 855-2026",
@@ -37824,8 +37826,8 @@ function guidanceDocBankability_() {
    "ps": [
     "Selling grid-scale BESS in the US means clearing **three overlapping approval gauntlets at once**: the **safety/code gauntlet** (UL listings + fire-test data + {{NFPA 855}}, enforced by fire marshals and {{AHJ}}s), the **grid gauntlet** (UL 1741/IEEE 1547 at distribution; IEEE 2800, NERC {{PRC-029-1}}, and ERCOT NOGRR 245 at transmission), and the **money gauntlet** ({{IE}} due diligence, warranty/{{LTSA}} structures, insurance underwriting, and - dominant in 2026 - FEOC/tariff compliance for tax-credit eligibility).",
     "The core thesis: **a product can be certified and still not be bankable.** Bankability is the lender's judgment that the *supplier* (balance sheet, factory quality, field record, warranty capacity, service network) and the *project paperwork* (test reports, guarantees, FEOC certifications) together de-risk twenty years of cash flow. Certifications are necessary inputs; the IE report is the gate.",
-    "Vocabulary discipline is a sales skill in this domain. Three traps that instantly mark a seller as a tourist: saying 'UL 9540A **certified**' (it is a test method with no pass/fail); confusing **NOGRR 282** (data-center load ride-through) with the storage rules (NOGRR 245, NOGRR 272/PGRR 121); and treating '**BNEF Tier 1**' as a quality award (it is a bank-financeability screen: ≥6 projects ≥10 MW/10 MWh in two years, to ≥3 independent buyers, with non-recourse financing).",
-    "**Field note:** Completeness is differentiation: buyers have been burned by cell-level-only 9540A submissions. Handing over the full stack unprompted - cell, module, AND unit reports plus LSFT - is the cheapest credibility win available."
+    "Vocabulary discipline is a sales skill in this domain. Four traps that instantly mark a seller as a tourist: saying 'UL 9540A **certified**' (it produces a report, never a listing) or quoting its levels without naming the edition; confusing **NOGRR 282** (data-center load ride-through) with the storage rules (NOGRR 245, NOGRR 272/PGRR 121); treating '**BNEF Tier 1**' as a quality award (it is a bank-financeability screen - six eligible projects in two years, each at least 10 MW or 10 MWh, three or more unaffiliated buyers, and since August 2026 one of them financed non-recourse by two different commercial banks); and reading the FCC's inverter listing as a **China** rule when it turns on **place of production** and says so in terms.",
+    "**Field note:** Completeness is differentiation: buyers have been burned by cell-level-only 9540A submissions. Handing over the full stack unprompted is still the cheapest credibility win available - but as of the 2026 review, 'the full stack' is edition-dependent. Under the 5th edition it is cell, module AND unit plus the large-scale test; under the 6th, in force from January 1, 2027, it is cell, module AND the installation-level large-scale test, with unit level kept only for residential systems and non-residential systems carrying an active TRPPS. State the edition and the large-scale procedure on the cover sheet; that sentence is now part of the completeness claim."
    ]
   },
   {
@@ -37860,20 +37862,20 @@ function guidanceDocBankability_() {
      "AHJs (NFPA 855/IFC require listed ESS), utilities, lenders, insurers"
     ],
     [
-     "UL 9540A (5th ed., Mar 2025)",
-     "Thermal-runaway propagation: cell → module → unit → installation",
-     "TEST METHOD - no pass/fail; produces the data AHJs use for spacing/venting/suppression design",
+     "UL 9540A (5th ed. 2025; 6th ed. effective Jan 1, 2027)",
+     "Thermal-runaway propagation. 5th ed.: cell → module → unit → installation. 6th ed.: cell → module → installation, with the unit-level test kept only for residential BESS and for non-residential BESS carrying an active thermal-runaway propagation prevention system",
+     "TEST METHOD - a report, never a listing or a mark. The 6th ed. runs the installation-level large-scale test on every system regardless of unit-level result and applies pass/fail criteria to that test",
      "AHJs, insurers, lenders, nearly every RFP"
     ],
     [
-     "CSA TS-800:24 / C800:25",
-     "Large-Scale Fire Test: one unit fully alight, suppression off, no propagation",
-     "Standardized test procedure",
+     "ANSI/CSA C800:25 (supersedes TS-800:24)",
+     "Large-Scale Fire Test, Section 9.7: one unit fully alight, suppression off, no propagation to neighbouring units",
+     "Published, ANSI-approved consensus test procedure - but the issued text of NFPA 855-2026 does not name it; a CSA-submitted TIA would put the reference into 9.2.1",
      "AHJs and developers under NFPA 855-2026; RFPs"
     ],
     [
      "NFPA 855 (2026 ed.) / IFC §1207",
-     "Siting, spacing, hazard mitigation analysis, detection, explosion control, emergency planning",
+     "Siting, spacing, hazard mitigation analysis, detection, explosion control, emergency planning; the new Annex G.11 sets out what a large-scale fire test is expected to demonstrate",
      "Installation standard / adopted fire code",
      "Fire marshals/AHJs; insurers; lenders check compliance"
     ],
@@ -37890,15 +37892,15 @@ function guidanceDocBankability_() {
      "Transmission interconnection"
     ],
     [
-     "NERC PRC-029-1",
+     "NERC PRC-029-1 (successor PRC-029-2 in flight)",
      "Mandatory IBR ride-through, explicitly including BESS",
-     "Enforceable NERC standard (FERC Order 909, Jul 2025; effective ~Oct 1, 2026)",
+     "Enforceable NERC standard - FERC Order No. 909, Docket RM25-3-000, issued Jul 24, 2025; US effective date Oct 1, 2026. PRC-029-2, drafted under Project 2025-05 to answer Order 909's twelve-month directive, would retire it on the later of Oct 1, 2026 or the first quarter after FERC approval",
      "NERC/FERC; generator owners"
     ],
     [
      "ERCOT NOGRR 245 (+272/PGRR 121)",
-     "ERCOT IBR ride-through; advanced grid support / grid-forming expectations",
-     "Nodal Operating Guide revisions (245 maximization deadline: Dec 31, 2025)",
+     "ERCOT IBR ride-through; advanced grid support (AGS) for inverter-based storage",
+     "Nodal Operating Guide and Planning Guide revisions. 245 effective Oct 1, 2024, firmware/settings maximization deadline Dec 31, 2025. 272 and PGRR 121 approved by the PUCT Nov 6, 2025 and effective Dec 1, 2025; the model-quality and unit-validation duties attach to storage resources whose interconnection agreement is executed on or after Apr 1, 2026",
      "ERCOT resource entities"
     ]
    ]
@@ -37906,12 +37908,16 @@ function guidanceDocBankability_() {
   {
    "id": "ninefortya",
    "title": "UL 9540A and NFPA 855-2026, precisely",
-   "read": "5 min",
+   "read": "8 min",
    "kind": "prose",
    "ps": [
-    "**What the 9540A test actually does:** the lab forces a cell into thermal runaway and observes, at four escalating levels (cell → module → unit → installation), whether runaway propagates, what gases vent and how flammable they are, flame extension, heat release, and whether deflagration occurs. **There is no 'pass.'** The output is a data report that a fire-protection engineer and the AHJ use to design and approve the installation - spacing deviations, deflagration venting or prevention, suppression. The correct sales claim: *'UL 9540A tested at cell, module and unit level, with reports available.'* A 5th edition published March 12, 2025, aligned to NFPA 855-2026's large-scale fire-testing expectations.",
-    "**NFPA 855-2026 - the changes that matter:** (1) **Large-Scale Fire Testing elevated from best practice to a central, effectively mandatory requirement** for lithium-ion installations - one unit fully involved, suppression and detection disabled, demonstrating no spread to neighbors; CSA TS-800:24 is the standardized procedure the industry uses to satisfy it. (2) **Hazard Mitigation Analysis becomes the default requirement.** (3) Fire-detection options broadened. (4) **Explosion-control philosophy shifts: NFPA 68 deflagration venting is no longer accepted as the primary strategy** - the push is toward gas-accumulation prevention and management. (5) Spacing, outdoor-exemption and listing requirements updated.",
-    "**The grid gauntlet hardens on Oct 1, 2026:** FERC Order 909 (Jul 24, 2025) approved NERC PRC-029-1 - mandatory ride-through for inverter-based resources *explicitly including BESS*, banning momentary cessation in must-ride-through zones, aligned with IEEE 2800. In ERCOT, NOGRR 245's firmware/settings maximization deadline passed Dec 31, 2025, and the advanced-grid-support rules (NOGRR 272 / PGRR 121) push grid-forming expectations for storage. Offer IEEE 2800-conformant PCS/controls documentation as part of the package, unprompted."
+    "**What the 9540A test actually does:** the lab forces a cell into thermal runaway and observes, at escalating levels, whether runaway propagates, what gases vent and how flammable they are, flame extension, heat release, and whether deflagration occurs. **The output is a data report, not a listing and not a mark** - a fire-protection engineer and the AHJ use it to design and approve the installation (spacing deviations, deflagration venting or prevention, suppression). 'Certified' is still the wrong word in every edition.",
+    "**The edition question is now a live one, and it changes what you hand over.** UL Solutions tests to **both the 5th and the 6th editions**, and the 6th carries an **effective date of January 1, 2027** - so a proposal written today has to say which edition its reports are to. The 5th edition's four levels are cell → module → unit → installation. The 6th **drops the unit-level test for most non-residential BESS**, keeping it for residential systems and for non-residential systems carrying an active thermal-runaway propagation prevention system (TRPPS); it runs the **installation-level large-scale fire test on every system regardless of unit-level result and applies pass/fail criteria to that test**; and it adds the **intentional ignition of vented gases** during a propagation event. The practical consequence for a seller: the old 'cell + module + unit is the complete stack' line is an artefact of the 5th edition. Under the 6th the complete stack is **cell + module + installation**, and a buyer's RFP that still demands unit-level reports for a non-residential system is asking for a 5th-edition document - answer it by naming the edition rather than by silently substituting.",
+    "**NFPA 855-2026 - the changes that matter:** (1) **Large-Scale Fire Testing elevated from best practice to a central, effectively mandatory requirement** for lithium-ion installations - one unit fully involved, suppression and detection disabled, demonstrating no spread to neighbours - with a **new Annex G.11** setting out what that test is expected to show. (2) **Hazard Mitigation Analysis becomes the default requirement.** (3) Fire-detection options broadened. (4) **Explosion-control philosophy shifts: NFPA 68 deflagration venting is no longer accepted as the primary strategy** - the push is toward gas-accumulation prevention and management. (5) Spacing, outdoor-exemption and listing requirements updated.",
+    "**Which LSFT procedure - and why the answer is unsettled.** The 2026 edition demands the test but was finalised before any consensus method existed, so **the issued text does not define one**. Two routes have since appeared and a seller should be able to name both: **ANSI/CSA C800:25**, which supersedes the interim TS-800:24 and carries the large-scale procedure at **Section 9.7** (CSA has submitted a Tentative Interim Amendment that would reference it directly in 855's 9.2.1); and **UL 9540A's 6th-edition installation-level test**, rewritten to align with Annex G.11. Neither is universally required today. The safe posture is to ask the AHJ and the owner's engineer which they will accept **before** booking lab time, and to say plainly in the proposal which procedure the report follows - a large-scale test to the wrong method is a six-figure retest.",
+    "**The grid gauntlet hardens on October 1, 2026 - the date is now fixed, not approximate.** FERC Order No. 909 (Docket RM25-3-000, issued July 24, 2025) approved NERC **PRC-029-1** - mandatory ride-through for inverter-based resources *explicitly including BESS*, banning momentary cessation in must-ride-through zones, aligned with IEEE 2800. NERC's own enforcement schedule carries it at **October 1, 2026**, alongside PRC-024-4, PRC-030-1 and TOP-003-7. It is **phased**, and the phasing is what a buyer will ask about: design compliance for BES resources at the effective date; **non-BES inverter-based resources not before January 1, 2027**; hardware-limitation exemption documentation for units already in service **within twelve months of the effective date**, and within 90 days of in-service for units energised after it.",
+    "**And a successor is already in flight.** Order 909 directed NERC to come back within twelve months on legacy-equipment exemptions, long-lead-time projects and HVDC-connected resources with choppers; NERC drafted **PRC-029-2** under Project 2025-05 to answer it, and that standard would **retire PRC-029-1** on the later of October 1, 2026 or the first quarter after FERC approves it. Nothing about October 1 changes for a resource owner today - but a proposal that promises compliance with 'the ride-through standard' without naming a version is writing a cheque against a moving target.",
+    "**In ERCOT the advanced-grid-support dates have arrived.** NOGRR 245 took effect October 1, 2024 and its firmware/settings maximization deadline passed December 31, 2025. **NOGRR 272 and PGRR 121 were approved by the PUCT on November 6, 2025 and took effect December 1, 2025**, and the model-quality and unit-validation duties they create attach to storage resources whose interconnection agreement is executed **on or after April 1, 2026** - which is to say, to essentially every project a seller is quoting now. Offer IEEE 2800-conformant PCS and controls documentation, and the ERCOT model package, as part of the bid rather than as a post-award deliverable."
    ]
   },
   {
@@ -37920,7 +37926,7 @@ function guidanceDocBankability_() {
    "read": "5 min",
    "kind": "prose",
    "ps": [
-    "**Moss Landing (Jan 16, 2025)** defined 2025-26 perception: Vistra's Phase 1 (300 MW) - **LG Energy Solution NMC batteries in a legacy indoor design** (a repurposed turbine hall) with an earlier-standards water-suppression scheme - burned, forcing evacuation of ~1,200-1,500 residents, with a Feb 18 flare-up. Vistra wrote off ~$400M; toxic-plume litigation followed; San Luis Obispo and Orange counties imposed moratoria. Policy outcome: the 3,200-ft-setback bill (AB 303) **died in committee** April 2025; the CPUC instead advanced maintenance/operation standards (SB 1383) and emergency-response oversight (SB 38) and opened an investigation. The honest sales framing, which insurers themselves reached: indoor, NMC, early-2020s vintage - **a categorically different risk object from modern outdoor containerized LFP** with unit-level propagation data.",
+    "**Moss Landing (Jan 16, 2025)** defined 2025-26 perception: Vistra's Phase 1 (300 MW) - **LG Energy Solution NMC batteries in a legacy indoor design** (a repurposed turbine hall) with an earlier-standards water-suppression scheme - burned, forcing evacuation of ~1,200-1,500 residents, with a Feb 18 flare-up. Vistra wrote off ~$400M; toxic-plume litigation followed; San Luis Obispo and Orange counties imposed moratoria. Policy outcome, and the date is worth getting right: the 3,200-ft-setback bill (**AB 303**, Addis) - which would have barred any development project with **200 MWh or more** of storage within **3,200 feet of a sensitive receptor** or on an environmentally sensitive site - had its committee hearing **postponed** on April 2, 2025 and then sat as a live two-year bill until it **died on the constitutional deadline of January 31, 2026**. Anyone who filed it away as a spring-2025 non-event was carrying an open California siting risk for nine months longer than they knew; check a two-year bill's status before telling a buyer a threat has passed. The CPUC meanwhile advanced maintenance/operation standards (SB 1383) and emergency-response oversight (SB 38) and opened an investigation. The honest sales framing, which insurers themselves reached: indoor, NMC, early-2020s vintage - **a categorically different risk object from modern outdoor containerized LFP** with unit-level propagation data.",
     "**The legacy incident behind the rules:** APS McMicken (Apr 2019) - internal cell failure, cascading runaway, flammable-gas accumulation, and an explosion that injured firefighters. DNV's investigation (missing thermal barriers, suppression that could not stop runaway, gas accumulation, responder-coordination gaps) is why 9540A data, deflagration management, and emergency-response planning are now table stakes.",
     "**The statistics are the good news:** analyses of EPRI's BESS Failure Incident Database show the failure rate per deployed GWh fell on the order of **~97-99% between 2018 and 2025** as early-generation lessons were designed out. State the caveat honestly - the database is media/report-derived and may undercount minor events - and the number still lands.",
     "**How incidents price:** brokers' consensus was that Moss Landing was *'not a market-moving event'* precisely because underwriters distinguish legacy indoor NMC from modern outdoor LFP; NMC-vs-LFP claims severity is now priced; premium softening continues but slower in 2026; the best deductibles go to operators demonstrating granular monitoring and disciplined O&M. Complete 9540A documentation is effectively an insurance prerequisite."
@@ -37929,13 +37935,14 @@ function guidanceDocBankability_() {
   {
    "id": "bankability",
    "title": "What 'bankable' concretely means",
-   "read": "6 min",
+   "read": "7 min",
    "kind": "prose",
    "ps": [
     "**The Independent Engineer report is the gate.** Lenders and tax equity will not close without one (DNV, Sargent & Lundy, Black & Veatch, Leidos, ICF, UL Solutions and peers). The IE tests: the revenue model against the equipment's real capability (cycling regime vs warranty limits - a two-cycles-per-day contract against a one-cycle warranty voids coverage, and IEs check for exactly this); technology and integration quality; **degradation and warranty terms** (do the guaranteed retention curves support the pro forma? is {{augmentation}} costed and physically provided for?); grid compliance; commercial agreements; and **supplier counterparty strength** - financial health, factory-audit results, field record, spares and service network.",
     "**The contractual skeleton:** commissioning guarantees (capacity + round-trip efficiency at COD); long-term energy-retention warranties conditioned on an operating envelope; **availability guarantees delivered through the LTSA** with liquidated damages - and suppliers generally will not give long-term warranties without holding the LTSA, since the LTSA controls the conditions the warranty depends on. Lenders now expect availability-anchored LTSA structures as standard.",
-    "**The scorecards buyers consult:** the {{BNEF Tier 1}} storage list (a financeability screen - Chinese firms held ~85% of the Q2 2026 list); DNV's annual Battery Performance Scorecard (independent lab degradation/safety testing); and CEA's factory-audit reporting - whose headline finding reframed diligence: **72% of BESS manufacturing defects are now found at system level** (fire detection & suppression 28% of system-level findings, auxiliary circuit panels 19%, thermal management 15%). Cell quality is no longer where most defects live - which is why factory-audit rights are in every serious RFP. (No dedicated PVEL/Kiwa BESS scorecard was confirmed - their famous scorecard is PV modules; do not cite one.)",
-    "**The China overlay:** lenders cannot avoid Chinese content (90-100% of US BESS carries some), so they price and paper it - MACR documentation, FEOC certifications, ITC-eligibility representations, recapture indemnities (mechanics in the companion China-policy module). The FCC moved mid-2026 to ban **new** equipment authorizations for Chinese-made inverters (prospective; DOE's January 2026 inspection of 30 units found no malicious hardware). The practical pairing: Chinese DC blocks with **non-Chinese PCS/EMS**, plus unprompted cybersecurity documentation (SBOM, firmware provenance, remote-access policy)."
+    "**The scorecards buyers consult:** the {{BNEF Tier 1}} storage list (a financeability screen - Chinese firms held ~85% of the Q2 2026 list), whose criteria **tightened on August 15, 2026**: six eligible projects in two years to at least three different buyers is no longer enough on its own, because at least one of those projects must now have been financed with **non-recourse debt from two or more different commercial banks**. That is a screen a supplier can fail while its shipment volumes rise, and it is worth checking against your own project list before a buyer checks it for you; DNV's annual Battery Performance Scorecard (independent lab degradation/safety testing); and CEA's factory-audit reporting - whose headline finding reframed diligence: **72% of BESS manufacturing defects are now found at system level** (fire detection & suppression 28% of system-level findings, auxiliary circuit panels 19%, thermal management 15%). Cell quality is no longer where most defects live - which is why factory-audit rights are in every serious RFP. (No dedicated PVEL/Kiwa BESS scorecard was confirmed - their famous scorecard is PV modules; do not cite one.)",
+    "**The China overlay:** lenders cannot avoid Chinese content (90-100% of US BESS carries some), so they price and paper it - MACR documentation, FEOC certifications, ITC-eligibility representations, recapture indemnities (mechanics in the companion China-policy module). **The inverter rule is not the rule most decks still describe, and the difference decides bids.** In July 2026 the FCC added power inverters to its Covered List and in August it narrowed the definition; the entry now reads **'foreign-produced power inverters, except power inverters which have been granted a Conditional Approval'**. Three things follow that a seller must have straight. First, **the test is place of production, not nationality of the producer** - a European or Korean-made inverter is caught on the same terms as a Chinese one, so 'pair the DC block with a non-Chinese PCS' is no longer an answer. Second, the covered class is narrow and specific: a **utility-interactive inverter as UL 1741 defines one**, that **contains or can accept** a component enabling remote communication, control, sensing, data collection or monitoring over Ethernet, Wi-Fi, cellular, Bluetooth or anything similar, wired or wireless - non-utility-interactive inverters are outside it. Third, **there are three ways out**, and they are documentary: the inverter is eligible for the **section 45X** advanced-manufacturing credit; or it is a **domestic end product** (US-manufactured with domestic component cost above 65% through calendar 2028, above 75% from 2029); or its producer holds a **Conditional Approval** from the Department of War or Homeland Security under the published evaluation process.",
+    "**The consequence is that the FEOC file and the FCC file have collapsed into one.** Section 45X eligibility itself requires that the component carry no material assistance from a prohibited foreign entity - which is the same MACR arithmetic the tax-credit analysis already demands - so the document set that proves ITC eligibility is now largely the document set that proves the inverter can be authorised for sale at all. Note also what the rule does **not** do: it is prospective, so **models already holding an FCC authorization are unaffected**, and the Commission separately waived its permissive-change rules so that harm-mitigating software and firmware updates can still be pushed to already-authorised covered units. The sales posture: lead with 45X or domestic-end-product status rather than with the supplier's flag, ask any PCS partner for its authorization and Conditional-Approval position in writing, and bring cybersecurity documentation (SBOM, firmware provenance, remote-access policy) unprompted - the national-security determination behind the listing is explicitly about remote connectivity, so that file is now responsive rather than decorative."
    ]
   },
   {
@@ -37950,7 +37957,7 @@ function guidanceDocBankability_() {
      "meta": "the proof points to quantify in every proposal",
      "adv": [
       "Shipment-volume rank from independent trackers (InfoLink, SMM) - scale implies process maturity",
-      "BNEF Tier 1 listing - the financeability screen lenders actually run",
+      "BNEF Tier 1 listing - the financeability screen lenders actually run, and since Aug 15, 2026 it also requires a project financed non-recourse by two or more different commercial banks",
       "A quantified US operating fleet: GWh delivered, availability achieved, named reference projects",
       "US assembly capacity and demonstrated delivery speed"
      ],
@@ -37964,7 +37971,7 @@ function guidanceDocBankability_() {
       "Financing dependency - an unclosed IPO or thin balance sheet reads as a flag against a 20-year warranty",
       "Margin compression despite fast revenue growth - IEs read it as pricing-war exposure",
       "Live litigation with competitors - injunction and reputational tail risk",
-      "For China-linked suppliers, the FEOC/tariff overlay per the companion module"
+      "The FEOC/tariff overlay per the companion module - and, for any supplier whose grid-tied inverter is produced outside the US, its FCC Covered List position, which turns on place of production rather than on the supplier's flag"
      ]
     },
     {
@@ -37973,6 +37980,7 @@ function guidanceDocBankability_() {
      "adv": [
       "Parent guarantees and warranty insurance/bonding",
       "Escrowed spare parts; availability-LD LTSAs backed by the US entity",
+      "For the inverter: section 45X eligibility, domestic-end-product status, or a Conditional Approval on file - offered as documents, not as assurances",
       "Named bank references; quantified US fleet performance (GWh delivered, availability achieved)",
       "Factory-audit invitations before they are demanded"
      ],
@@ -37993,11 +38001,11 @@ function guidanceDocBankability_() {
    "rows": [
     [
      "1",
-     "UL 1973 + UL 9540 listings (NRTL); PCS certs - UL 1741 SB / IEEE 1547 (distribution) or IEEE 2800 / PRC-029 conformance evidence (transmission)"
+     "UL 1973 + UL 9540 listings (NRTL); PCS certs - UL 1741 SB / IEEE 1547 (distribution) or IEEE 2800 / PRC-029 conformance evidence (transmission), the PRC-029 evidence naming the version it is written to"
     ],
     [
      "2",
-     "COMPLETE UL 9540A reports - cell, module, AND unit level (cell-only submissions are a known dodge) + large-scale fire test results (CSA TS-800 basis) + deflagration-management design data"
+     "COMPLETE UL 9540A reports, with the EDITION NAMED - 5th edition: cell, module AND unit level (cell-only submissions are a known dodge); 6th edition: cell, module AND installation, unit level only for residential or active-TRPPS systems. Plus large-scale fire test results, stating the procedure used (ANSI/CSA C800:25 Section 9.7, or the 6th-edition installation-level test), plus deflagration-management design data"
     ],
     [
      "3",
@@ -38029,7 +38037,7 @@ function guidanceDocBankability_() {
     ],
     [
      "10",
-     "Cybersecurity: EMS/BMS architecture, SBOM, firmware chain of custody, remote-access policy, FCC equipment-authorization status"
+     "Cybersecurity and equipment authorization: EMS/BMS architecture, SBOM, firmware chain of custody, remote-access policy - and for every grid-tied inverter, its FCC equipment-authorization status plus the ground it stands on (existing authorization predating the listing, section 45X eligibility, domestic-end-product status, or a Conditional Approval)"
     ]
    ]
   },
@@ -38039,12 +38047,12 @@ function guidanceDocBankability_() {
    "read": "2 min",
    "kind": "callout",
    "ps": [
-    "**1 - Lead with the complete safety dossier** - full 9540A stack (cell + module + unit, 5th-edition testing), LSFT results, listings, UN 38.3 summaries, NFPA 855-2026 package. Completeness IS differentiation.",
+    "**1 - Lead with the complete safety dossier, and name the edition** - the full 9540A stack (5th edition: cell + module + unit; 6th edition: cell + module + installation, unit level only for residential or active-TRPPS systems), LSFT results with the procedure stated, listings, UN 38.3 summaries, the NFPA 855-2026 package. Completeness IS differentiation, and from January 1, 2027 the 6th edition is the one in force - a proposal that says only '9540A tested' is now ambiguous where it used to be complete.",
     "**2 - Reframe Moss Landing proactively** - indoor, NMC, legacy design; cite the insurers' own 'not a market-moving event' verdict and the EPRI ~97-99% decline with its caveat stated honestly.",
-    "**3 - Own the FEOC/tariff conversation before diligence raises it** - the MACR narrative, the certifications a supplier can and cannot sign, and the indemnity/recapture structure on offer (companion module).",
+    "**3 - Own the FEOC/tariff conversation before diligence raises it** - the MACR narrative (55% non-PFE cost floor for storage beginning construction in 2026, under interim Treasury guidance and its safe harbours), the certifications a supplier can and cannot sign, and the indemnity/recapture structure on offer (companion module).",
     "**4 - Neutralize the counterparty file with structure** - guarantees, bonding, escrowed spares, US-entity-backed LTSAs, bank references, quantified US fleet performance.",
-    "**5 - Bundle for the grid gauntlet** - IEEE 2800-conformant PCS documentation, non-Chinese PCS/EMS pairing options, and cybersecurity documentation, all unprompted.",
-    "**6 - Enforce the vocabulary** - 9540A is a test, not a cert; NOGRR 282 is a load rule; Tier 1 is a financeability screen. Precision is credibility."
+    "**5 - Bundle for the grid gauntlet, and get the inverter argument right** - IEEE 2800-conformant PCS and controls documentation, the ERCOT model package where it applies, and cybersecurity documentation, all unprompted. On the FCC question, lead with section 45X eligibility, domestic-end-product status or a Conditional Approval; 'non-Chinese PCS' is not the answer any more, because the Covered List entry reads on place of production rather than on nationality.",
+    "**6 - Enforce the vocabulary** - 9540A is a test, not a cert; NOGRR 282 is a load rule; Tier 1 is a financeability screen, and since August 2026 a two-bank one at that; 'foreign-produced' is not a synonym for 'Chinese'. Precision is credibility, and every one of these traps has moved in the last twelve months."
    ]
   },
   {
@@ -38052,35 +38060,35 @@ function guidanceDocBankability_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "Load-bearing claims with sources. Full 30-row linked ledger: the analysis file in the repo.",
+   "intro": "Load-bearing claims with sources. Rows marked (re-verified 2026-09-13) were checked against the primary instrument - the standards body, the regulator's own docket or public notice, or the legislature's bill record - during the quarterly freshness review. Full linked ledger: the analysis file in the repo.",
    "rows": [
     [
-     "UL 9540A: test method, no pass/fail, 4 levels; 5th edition Mar 12, 2025",
-     "UL Solutions; ShopULStandards; Mayfield"
+     "UL 9540A: a test method producing a report, not a listing. 5th ed. four levels; 6th ed. drops unit level for non-residential BESS without an active TRPPS, runs the installation-level large-scale test on every system with pass/fail criteria, adds vent-gas ignition; 6th ed. effective Jan 1, 2027 (re-verified 2026-09-13)",
+     "UL Solutions - UL 9540A test method and Code Authority pages"
     ],
     [
-     "NFPA 855-2026: LSFT effectively mandatory; HMA default; NFPA 68 venting no longer primary",
-     "Telgian; Energy-Storage.News; EnergyTech"
+     "NFPA 855-2026: LSFT effectively mandatory; HMA default; NFPA 68 venting no longer primary; new Annex G.11 on the large-scale test; errata 855-26-1 issued Oct 13, 2025 (re-verified 2026-09-13)",
+     "NFPA docinfo - 855 2026 edition errata and TIA filings; UL Solutions"
     ],
     [
-     "CSA TS-800:24 LSFT procedure (one unit fully alight, no propagation)",
-     "CSA Group; ACP; Jensen Hughes"
+     "ANSI/CSA C800:25 published and ANSI-approved, large-scale procedure at Section 9.7, superseding TS-800:24; the issued NFPA 855-2026 text does not name a method, and a CSA-submitted TIA (Log 1852) would add the reference at 9.2.1 (re-verified 2026-09-13)",
+     "NFPA proposed TIA 1852 (CSA Group submission); CSA Group"
     ],
     [
-     "PRC-029-1 approved by FERC Order 909 (Jul 24, 2025); effective ~Oct 1, 2026; includes BESS",
-     "Federal Register; Keentel"
+     "PRC-029-1 approved by FERC Order No. 909 (Docket RM25-3-000, 90 FR 35599, issued Jul 24, 2025, rule effective Aug 28, 2025); standard effective Oct 1, 2026 and phased - non-BES IBRs not before Jan 1, 2027, in-service hardware-limitation documentation within 12 months. Successor PRC-029-2 drafted under Project 2025-05 would retire it (re-verified 2026-09-13)",
+     "Federal Register 2025-14304; NERC Project 2025-05 implementation plan (Apr 2026); NERC standards bulletin, Aug 31-Sep 7, 2026"
     ],
     [
-     "NOGRR 245 eff. Oct 1, 2024 (maximization Dec 31, 2025); NOGRR 282 = large electronic loads, not storage",
-     "ERCOT notices and dockets"
+     "NOGRR 245 eff. Oct 1, 2024 (maximization Dec 31, 2025); NOGRR 272 and PGRR 121 approved by the PUCT Nov 6, 2025, effective Dec 1, 2025, model-quality and validation duties attaching to storage resources with an SGIA executed on or after Apr 1, 2026; NOGRR 282 = large electronic loads, not storage (re-verified 2026-09-13)",
+     "ERCOT market-rules issue pages for NOGRR245, NOGRR272, PGRR121"
     ],
     [
      "Moss Landing: Jan 16, 2025; LG NMC, legacy indoor design; ~$400M Vistra write-off; SLO/Orange moratoria",
      "WECC report (Dec 2025); Energy-Storage.News; Canary Media"
     ],
     [
-     "AB 303 died Apr 2025; CPUC advanced SB 1383/SB 38 rules + investigation",
-     "Brownstein; Energy-Storage.News"
+     "AB 303 (3,200 ft of a sensitive receptor, projects of 200 MWh or more): hearing POSTPONED Apr 2, 2025, bill DIED Jan 31, 2026 on the Art. IV Sec. 10(c) deadline - not in committee in Apr 2025, as previously stated here; CPUC advanced SB 1383/SB 38 rules + investigation (corrected 2026-09-13)",
+     "California Legislature bill record, AB-303 (2025-2026) status page"
     ],
     [
      "McMicken 2019: runaway → explosion; DNV findings drove the modern rules",
@@ -38099,8 +38107,8 @@ function guidanceDocBankability_() {
      "Sargent & Lundy; DNV; Sunraise"
     ],
     [
-     "BNEF Tier 1 criteria (≥6 projects ≥10 MW/MWh, 2 yrs, ≥3 buyers); ~85% Chinese Q2 2026",
-     "BNEF methodology; EnergyTrend"
+     "BNEF Tier 1 criteria per the Aug 15, 2026 methodology: six eligible projects in two years, at least three different buyers, each project at least 10 MW OR 10 MWh (either threshold), third-party buyer, manufacturer owning its plants - and NEW, at least one project financed non-recourse by two or more different commercial banks. BNEF itself calls it a measure of industry acceptance, not of quality. ~85% Chinese share is the Q2 2026 list and is not re-verified here (the list is not public) (re-verified 2026-09-13)",
+     "BNEF Tier 1 Energy Storage Methodology, Aug 15, 2026"
     ],
     [
      "CEA: 72% of defects at system level - fire detection 28%, aux panels 19%, thermal 15% (680+ inspections)",
@@ -38111,8 +38119,16 @@ function guidanceDocBankability_() {
      "Foot Anstey; TWAICE"
     ],
     [
-     "FCC ban on new Chinese-inverter authorizations (mid-2026, prospective); DOE found no malicious hardware (Jan 2026)",
-     "pv magazine USA; Reuters/US News; Canary Media"
+     "FCC Covered List entry is 'foreign-produced power inverters, except power inverters which have been granted a Conditional Approval by DoW or DHS' - added Jul 28, 2026 (DA 26-786), definition narrowed Aug 20, 2026 (DA 26-870). NOT limited to Chinese-made, as previously stated here. Covered = a UL 1741 utility-interactive inverter that contains or can accept remote connectivity (Ethernet, Wi-Fi, cellular, Bluetooth, wired or wireless). 'Foreign-produced' excludes section 45X-eligible units and 48 CFR 25.101(a) domestic end products (>65% domestic component cost through CY2028, >75% from CY2029). Prospective: existing authorizations stand, and a Jul 28, 2026 OET waiver permits harm-mitigating firmware updates to them. DOE found no malicious hardware (Jan 2026) (corrected 2026-09-13)",
+     "FCC Public Notices DA 26-786 and DA 26-870, WC Docket 18-89 / ET Docket 21-232 / EA Docket 21-233"
+    ],
+    [
+     "FEOC: for an energy storage technology beginning construction in calendar year 2026, the Clean Electricity material assistance cost ratio may not be less than 55% - interim guidance with safe harbours, with proposed regulations still to come (re-verified 2026-09-13)",
+     "IRS Notice 2026-15, applying section 7701(a)(52)(B)(ii)"
+    ],
+    [
+     "The FEOC and FCC files converge: section 45X eligibility, one of the three grounds that takes an inverter out of 'foreign-produced', itself requires no material assistance from a prohibited foreign entity - so one document set now serves both tests (analysis, 2026-09-13)",
+     "DoW Second Power Inverter National Security Determination, reasoning from 26 U.S.C. 45X and section 7701(a)(52)"
     ]
    ]
   },
@@ -38123,12 +38139,12 @@ function guidanceDocBankability_() {
    "kind": "flashcards",
    "cards": [
     {
-     "q": "What does UL 9540A produce, and what may you never call it?",
-     "a": "A data report on thermal-runaway propagation at four levels (cell → module → unit → installation) used by fire-protection engineers and AHJs to design spacing, venting, and suppression. It has no pass/fail - never say '9540A certified'; say 'tested at cell, module and unit level, reports available.'"
+     "q": "What does UL 9540A produce, what may you never call it, and why does the edition now matter?",
+     "a": "A data report on thermal-runaway propagation used by fire-protection engineers and AHJs to design spacing, venting and suppression. It is never a listing or a mark - never say '9540A certified'. The 5th edition tests cell → module → unit → installation. The 6th, effective Jan 1, 2027, drops unit level for non-residential systems without an active TRPPS, runs the installation-level large-scale test on every system with pass/fail criteria, and adds vent-gas ignition. So say 'tested to the Nth edition at these levels, reports available' - the edition is now part of the claim."
     },
     {
-     "q": "The three biggest changes in NFPA 855-2026?",
-     "a": "Large-scale fire testing becomes effectively mandatory (CSA TS-800 procedure); hazard mitigation analysis becomes the default; NFPA 68 deflagration venting is no longer accepted as the primary explosion-control strategy."
+     "q": "The three biggest changes in NFPA 855-2026 - and the gap the edition left open?",
+     "a": "Large-scale fire testing becomes effectively mandatory; hazard mitigation analysis becomes the default; NFPA 68 deflagration venting is no longer accepted as the primary explosion-control strategy. The gap: the issued text demands the test but names no method, because none had been standardised when it closed. Annex G.11 says what the test must show; ANSI/CSA C800:25 Section 9.7 and UL 9540A's 6th-edition installation test are the two routes that have since appeared. Confirm which one the AHJ accepts before booking the lab."
     },
     {
      "q": "NOGRR 282 vs NOGRR 245 - who does each bind?",
@@ -38143,35 +38159,39 @@ function guidanceDocBankability_() {
      "a": "72% of BESS manufacturing defects are now found at SYSTEM level - fire detection & suppression 28%, auxiliary circuit panels 19%, thermal management 15%. Cell quality is no longer where most defects live; hence factory-audit rights in every serious RFP."
     },
     {
-     "q": "What is BNEF Tier 1, precisely?",
-     "a": "A bank-financeability screen: supply to ≥6 projects of ≥10 MW/10 MWh in the past two years, to ≥3 independent buyers, with tracked non-recourse financing. Not a quality award."
+     "q": "What is BNEF Tier 1, precisely, and what changed in August 2026?",
+     "a": "A bank-financeability screen, not a quality award - BNEF says so itself. Six eligible projects in the past two years, each at least 10 MW OR 10 MWh (either threshold suffices), across at least three different unaffiliated buyers, from a manufacturer that owns its plants. The Aug 15, 2026 methodology added the bite: at least one of those projects must have been financed with non-recourse debt from two or more DIFFERENT commercial banks."
     },
     {
      "q": "Why won't a supplier give a long-term warranty without holding the LTSA?",
      "a": "The LTSA controls the operating conditions the warranty depends on (cycling regime, maintenance, envelope). Lenders now expect availability-anchored LTSA structures as standard - and IEs check for warranty-vs-revenue-contract mismatches."
     },
     {
-     "q": "What hardens on October 1, 2026?",
-     "a": "NERC PRC-029-1 (FERC Order 909) - mandatory ride-through for inverter-based resources explicitly including BESS, banning momentary cessation, aligned with IEEE 2800. Bring conformant PCS documentation unprompted."
+     "q": "The FCC's inverter Covered List entry - who is caught, and what are the ways out?",
+     "a": "Caught: FOREIGN-PRODUCED power inverters, judged by place of production and not by the producer's nationality, where the unit is a UL 1741 utility-interactive inverter that contains or can accept remote connectivity (Ethernet, Wi-Fi, cellular, Bluetooth, wired or wireless). Non-utility-interactive inverters are outside it. Three ways out: eligibility for the section 45X advanced-manufacturing credit; domestic-end-product status (over 65% domestic component cost through 2028, over 75% from 2029); or a Conditional Approval from DoW or DHS. It is prospective - models already authorized keep their authorization."
+    },
+    {
+     "q": "What hardens on October 1, 2026, and what is phased behind it?",
+     "a": "NERC PRC-029-1 (FERC Order No. 909, Docket RM25-3-000) - mandatory ride-through for inverter-based resources explicitly including BESS, banning momentary cessation, aligned with IEEE 2800. Behind it: non-BES inverter-based resources not before Jan 1, 2027; hardware-limitation exemption documentation within 12 months of the effective date for units already in service, 90 days for later ones. A successor, PRC-029-2, is drafted and would retire PRC-029-1 once FERC approves - so name the version you are certifying to."
     }
    ]
   },
   {
    "id": "quiz",
    "title": "Self-test",
-   "read": "6 questions",
+   "read": "7 questions",
    "kind": "quiz",
    "items": [
     {
      "q": "A proposal draft says 'our system is UL 9540A certified.' You:",
      "c": [
       "Ship it - sounds strong",
-      "Correct it: 9540A is a test method with no pass/fail - claim 'tested at cell, module and unit level, reports available' and attach them",
+      "Correct it: 9540A produces a report, never a listing - claim 'tested to the [5th/6th] edition at these levels, reports available' and attach them",
       "Change it to 'UL 9540B certified'",
       "Delete all certification claims"
      ],
      "a": 1,
-     "why": "The mislabel is a credibility tell that IEs and AHJs notice immediately. The real differentiation is report completeness."
+     "why": "The mislabel is a credibility tell that IEs and AHJs notice immediately. The real differentiation is report completeness - and, since the 6th edition takes effect on Jan 1, 2027 with a different set of levels, naming the edition is now part of being complete."
     },
     {
      "q": "An AHJ asks how the design handles explosion control under NFPA 855-2026. The strongest answer leads with:",
@@ -38218,15 +38238,26 @@ function guidanceDocBankability_() {
      "why": "IEs score counterparty risk structurally. Raising the headwind first with the toolkit attached converts a weakness into a professionalism signal."
     },
     {
-     "q": "The FCC's mid-2026 inverter action means:",
+     "q": "A buyer asks whether your grid-tied inverter clears the FCC's 2026 Covered List entry. The correct framing is:",
      "c": [
-      "All Chinese BESS is banned",
-      "New equipment authorizations for Chinese-made inverters are barred prospectively - pair Chinese DC blocks with non-Chinese PCS/EMS and bring cyber documentation unprompted",
-      "Existing systems must be removed",
-      "Nothing - DOE found no malicious hardware"
+      "It is fine because the inverter is not Chinese-made",
+      "The entry reads on FOREIGN-PRODUCED inverters regardless of the producer's nationality - so answer with section 45X eligibility, domestic-end-product status, a Conditional Approval, or an authorization predating the listing",
+      "All existing installed systems must be replaced",
+      "Nothing applies - DOE found no malicious hardware in its January 2026 inspection"
      ],
      "a": 1,
-     "why": "Prospective scope; existing authorized models unaffected. The pairing strategy simultaneously helps MACR, the FCC issue, and utility cyber reviews."
+     "why": "Nationality is not the test; place of production is, with three documentary exits. The scope is also narrower than it first reads - a UL 1741 utility-interactive inverter that contains or can accept remote connectivity - and it is prospective, so models already authorized are unaffected. Answering with the supplier's flag is the tourist answer in 2026."
+    },
+    {
+     "q": "A 2027 RFP for a 200 MW outdoor containerized project demands 'complete UL 9540A reports including unit level.' Your system was tested to the 6th edition and has no active TRPPS. You:",
+     "c": [
+      "Withdraw - you cannot meet the requirement",
+      "Answer the requirement on its face: the 6th edition, in force from Jan 1, 2027, reserves the unit-level test for residential systems and non-residential systems with an active TRPPS, so supply cell, module and the installation-level large-scale test, and say which edition and which large-scale procedure the reports follow",
+      "Submit the cell-level report and hope nobody checks",
+      "Commission a unit-level test to the 5th edition and submit both"
+     ],
+     "a": 1,
+     "why": "The RFP is quoting the 5th edition's level set. Naming the edition and supplying its actual complete stack answers the buyer's real question - is this system fully characterised - without either a needless retest or a silent gap. Option 4 is not wrong, merely expensive; option 3 is the dodge the checklist exists to catch."
     }
    ]
   }
@@ -38242,7 +38273,7 @@ function guidanceDocBankability_() {
   },
   {
    "t": "LSFT",
-   "d": "Large-Scale Fire Test - one full BESS unit set fully alight with suppression disabled, demonstrating no propagation to adjacent units. CSA TS-800:24 is the standardized procedure."
+   "d": "Large-Scale Fire Test - one full BESS unit set fully alight with suppression disabled, demonstrating no propagation to adjacent units. NFPA 855-2026 demands it (Annex G.11 says what it must show) but names no method; the two available procedures are ANSI/CSA C800:25 Section 9.7, which supersedes the interim TS-800:24, and UL 9540A's 6th-edition installation-level test. Confirm which the AHJ accepts before testing."
   },
   {
    "t": "HMA",
@@ -38261,12 +38292,16 @@ function guidanceDocBankability_() {
    "d": "Planned addition of modules/containers in later years to restore capacity lost to degradation. IEs verify it is both costed in the pro forma and physically provided for (space, power, controls headroom)."
   },
   {
+   "t": "TRPPS",
+   "d": "Thermal-Runaway Propagation Prevention System - an active system that stops a cell failure spreading. Under UL 9540A's 6th edition it is the feature that decides whether a non-residential BESS still needs the unit-level test: with an active TRPPS the unit-level test stays required, without one it does not."
+  },
+  {
    "t": "BNEF Tier 1",
-   "d": "BloombergNEF's quarterly energy-storage financeability screen: ≥6 projects ≥10 MW/10 MWh in two years, ≥3 independent buyers, non-recourse financing. A screen, not a quality award."
+   "d": "BloombergNEF's quarterly energy-storage financeability screen: six eligible projects in two years, each at least 10 MW OR 10 MWh, across at least three unaffiliated buyers, from a manufacturer that owns its plants - and, per the Aug 15, 2026 methodology, at least one of them financed non-recourse by two or more different commercial banks. A screen, not a quality award; BNEF notes tier 1 firms have had quality failures and bankruptcies."
   },
   {
    "t": "PRC-029-1",
-   "d": "NERC's mandatory ride-through standard for inverter-based resources including BESS (FERC Order 909, Jul 2025; effective ~Oct 1, 2026). The transmission-level teeth behind IEEE 2800."
+   "d": "NERC's mandatory ride-through standard for inverter-based resources including BESS (FERC Order No. 909, Docket RM25-3-000, issued Jul 24, 2025; US effective date Oct 1, 2026, phased - non-BES resources not before Jan 1, 2027). The transmission-level teeth behind IEEE 2800. A successor, PRC-029-2, is drafted under Project 2025-05 and would retire it once approved, so name the version in any conformance claim."
   },
   {
    "t": "UN 38.3",

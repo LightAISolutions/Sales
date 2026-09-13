@@ -14,7 +14,7 @@ Checks per report: schema shape (required fields, type/kind/confidence enums),
 citation resolution (slug registered, URL present in that profile's sources[],
 party matches the derived tier), inline [c:id] token resolution, bars-figure
 verification against the profile KPI overlay, coverage-pin drift, Admin-lens
-guidanceOverlays[] anchors (moduleId/sectionId must exist in Profiler.gs's
+guidanceOverlays[] anchors (moduleId/sectionId must exist in Classroom.gs's
 guidance modules; ps required; no [c:id] tokens), and index reconciliation
 (entry per file, counts, status vs supersedes, overlayModules vs overlays).
 
@@ -94,10 +94,15 @@ def walk_strings(node):
         for v in node.values():
             yield from walk_strings(v)
 
-PROFILER_GS = 'googleAppsScripts/Profiler/Profiler.gs'
+# Guidance modules moved from Profiler.gs to Classroom.gs at C3 session 3
+# (v05.48r, 2026-09-13); this checker still owns the report half, so it reads
+# the anchors from their new home. Repointed 2026-09-13 during the bankability
+# quarterly review, which found the parse returning {} and every overlay in
+# every report erroring as a result.
+GUIDANCE_GS = 'googleAppsScripts/Classroom/Classroom.gs'
 
 def guidance_anchors():
-    """Map of guidance module id -> set of section ids, parsed from Profiler.gs.
+    """Map of guidance module id -> set of section ids, parsed from Classroom.gs.
 
     Each guidanceDoc<Name>_() returns an object literal whose first "id" string
     is the module id and whose remaining "id" strings are section ids (tiles,
@@ -105,7 +110,7 @@ def guidance_anchors():
     file is unreadable so callers can degrade to a warning instead of erroring.
     """
     try:
-        src = open(PROFILER_GS, encoding='utf-8').read()
+        src = open(GUIDANCE_GS, encoding='utf-8').read()
     except OSError:
         return None
     anchors = {}
@@ -127,7 +132,7 @@ def check_overlays(rep, anchors, err, warn):
                 err(f'{tag}: [c:id] citation tokens are not allowed in overlay ps '
                     '(the lens renderer does not resolve them — the report link is the citation path)')
         if anchors is None:
-            warn(f'{tag}: {PROFILER_GS} unreadable — anchor not verified'); continue
+            warn(f'{tag}: {GUIDANCE_GS} unreadable — anchor not verified'); continue
         if o.get('moduleId') not in anchors:
             err(f'{tag}: moduleId not among guidance modules {sorted(anchors)}')
         elif o.get('sectionId') not in anchors[o['moduleId']]:
