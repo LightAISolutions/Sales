@@ -3,12 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 36/50`
+`Sections: 37/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.37g] — 2026-09-13 12:52:01 AM EST — v05.45r
+
+### Changed
+- The "✦ Covered in guidance modules" line on a dossier now draws on the study library's new home rather than on this app's own copy. Nothing about who can see the line has changed
+- Until an administrator completes the one-time connection between the two apps, that line simply shows nothing on every dossier. No error appears, and no other part of a dossier is affected
 ## [v01.36g] — 2026-09-12 11:35:59 PM EST — v05.43r
 
 ### Added

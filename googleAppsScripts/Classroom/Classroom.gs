@@ -1,4 +1,4 @@
-var VERSION = "v01.20g";
+var VERSION = "v01.21g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -32737,6 +32737,79 @@ function guidanceDoc_(id) {
   return null;
 }
 
+// PROJECT: ── Guidance mentions + the peer route (C3 session 2) ────────────
+// `guidanceMentions_()` moved here from Profiler.gs at C3 session 2: it scans
+// the module JSON, so after session 1 it can only answer where the content
+// now lives. The function body is unchanged from Profiler's — the registry it
+// reads is the same public Pages file (both pages sit at the site root, so
+// EMBED_PAGE_URL's parent resolves identically), and its 6h script cache is
+// per-script, so no key collides with Profiler's.
+//
+// It is NOT reachable from a browser session here. Its only consumer is
+// Profiler's dossier line, and Profiler already owns that boundary
+// (`guidanceAllowed_` gates gop=mentions before the proxy call is made).
+// Adding a second browser-facing door for the same data would be a second
+// boundary to keep in step, so this is a peer route instead: token-gated,
+// mirroring `scHandleCorpus_` in Scraper.gs — the shared secret is a Script
+// Property, no default ever ships in code, an unset property is a flat
+// refusal rather than an open door, and the route is read-only and bounded to
+// one op. The property is GUIDANCE_PEER_TOKEN, deliberately NOT the
+// CORPUS_TOKEN the Scraper bridge uses: a different pair of peers rotates on
+// its own schedule and a leak of one must not open the other.
+function guidanceMentions_() {
+  var cache = CacheService.getScriptCache();
+  var hit = cache.get('gd_mentions_v1');
+  if (hit) return JSON.parse(hit);
+  var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '');
+  var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-data/profiler-companies.json',
+    { muteHttpExceptions: true }).getContentText());
+  var docs = guidanceDocs_();
+  var blobs = docs.map(function(d) { return JSON.stringify(d); });
+  var out = {};
+  (reg.companies || []).forEach(function(c) {
+    var name = String(c.name || '');
+    if (!name) return;
+    var ambiguous = name.indexOf(' ') < 0 && /^[A-Z][a-z]+$/.test(name);
+    var src = '\\b' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b';
+    var hits = [];
+    for (var i = 0; i < docs.length; i++) {
+      var re = new RegExp(src, 'g'), m, ok = false;
+      while ((m = re.exec(blobs[i]))) {
+        if (!ambiguous) { ok = true; break; }
+        var prev = blobs[i].slice(0, m.index).replace(/\s+$/, '').slice(-1);
+        if (prev && '"{[.!?:'.indexOf(prev) === -1) { ok = true; break; }
+      }
+      if (ok) hits.push({ id: docs[i].id, title: docs[i].title });
+    }
+    if (hits.length) out[c.slug] = hits;
+  });
+  var res = { mentions: out, built: new Date().toISOString() };
+  try { cache.put('gd_mentions_v1', JSON.stringify(res), 21600); } catch (ce) { /* oversized — serve uncached */ }
+  return res;
+}
+
+/** The guidance peer route (?action=guidancepeer&t=…&gpop=mentions).
+    Token-gated rather than session-gated for the same reason Scraper's corpus
+    route is: the consumer is a peer backend holding a shared Script Property,
+    not a browser sign-in. Refused outright while GUIDANCE_PEER_TOKEN is unset
+    or shorter than 16 chars, and refused on any token mismatch — the two
+    refusals are deliberately the same flat `denied`, so a probe cannot tell an
+    unconfigured project from a wrong guess. `not_configured` is reported by
+    the CALLING side (Profiler), which knows its own property is missing
+    without asking us. One op, read-only, no parameters that reach a store. */
+function clHandleGuidancePeer_(e) {
+  var p = (e && e.parameter) || {};
+  var want = PropertiesService.getScriptProperties().getProperty('GUIDANCE_PEER_TOKEN') || '';
+  if (want.length < 16 || String(p.t || '') !== want) {
+    return { success: false, error: 'denied' };
+  }
+  if (String(p.gpop || '') === 'mentions') {
+    var men = guidanceMentions_();
+    return { success: true, mentions: men.mentions, built: men.built };
+  }
+  return { success: false, error: 'unknown_gpop' };
+}
+
 // ── The nine modules, in guidanceDocs_() lane order ──────────────────────
 
 // Content: BESS Technology Fundamentals for the Sales Team (teaching synthesis, 2026-08-24).
@@ -40446,6 +40519,17 @@ function doGet(e) {
   // re-pull what GitHub already contains. Do NOT add guards, secrets, or auth here.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'deploy') {
     return ContentService.createTextOutput(pullAndDeployFromGitHub());
+  }
+
+  // PROJECT: guidance peer route (C3 session 2 of the guidance homecoming).
+  // Token-gated (GUIDANCE_PEER_TOKEN Script Property, shared with the Profiler
+  // backend and distinct from the Scraper bridge's CORPUS_TOKEN), read-only,
+  // one op; a missing or wrong token gets a flat refusal. Profiler's
+  // gop=mentions branch is its only caller — see clHandleGuidancePeer_ for the
+  // boundary rationale.
+  if (action === 'guidancepeer') {
+    return ContentService.createTextOutput(JSON.stringify(clHandleGuidancePeer_(e)))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
   // GET API fallback for the fetch transport — Google's serving can drop POST

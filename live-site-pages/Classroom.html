@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.10w">
+  <meta name="build-version" content="v01.11w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -659,6 +659,14 @@
       border-radius: 999px; padding: 3px 9px; margin-left: 8px; }
     .cl-gd-note { font: 12px/1.65 var(--cl-mono); color: var(--cl-faint); border-left: 3px solid var(--cl-line2);
       padding: 2px 0 2px 12px; margin: 0 0 16px; }
+    .cl-lens { border-left: 3px solid var(--cl-dis); background: rgba(163,58,76,0.055);
+      border-radius: 0 8px 8px 0; padding: 12px 15px; margin: 16px 0 0; }
+    .cl-lens .lb { font: 600 10px/1.5 var(--cl-mono); letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--cl-dis); margin-bottom: 8px; }
+    .cl-lens p { font: 14px/1.7 var(--cl-serif); color: var(--cl-ink); margin: 0 0 9px; }
+    .cl-lens .rpt { background: transparent; border: 1px solid rgba(163,58,76,0.5); color: var(--cl-dis);
+      border-radius: 999px; padding: 5px 13px; cursor: pointer; font: 11.5px/1 var(--cl-mono); }
+    .cl-lens .rpt:hover { background: rgba(163,58,76,0.1); }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -5822,10 +5830,97 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
     }
 
     clBindTermTips(shell);
+    clLoadAdminLens(doc, shell);
     var target = scrollTo ? document.getElementById('cl-' + scrollTo) : null;
     if (target) target.scrollIntoView({ block: 'start' });
     else window.scrollTo(0, 0);
   });
+}
+
+// PROJECT: ── Admin lens (C3 session 2 — re-hosted from Profiler) ──────────
+// Company-specific overlays inside guidance modules, sourced from admin-only
+// reports. Guidance modules speak to supplier/buyer groups only; a report may
+// declare guidanceOverlays[] ({moduleId, sectionId, title, ps}) and admins see
+// those panels rendered inside the anchored sections, with a link to the
+// source report. The `reports` capability is admin-only in CL_ROLE_CAPS, the
+// same tier Profiler's OV_ROLE_CAPS grants it to, so the gate follows the
+// content across apps and no access-matrix value changes.
+//
+// No new server route: the reports index and the report files are public Pages
+// data under CL_DATA_BASE, exactly what Profiler's ovFetchJson reads. What
+// gates the lens is the capability check below — the reports themselves are
+// the same bytes either app fetches.
+//
+// Two differences from Profiler's gdApplyLens, both deliberate:
+//   1. Guidance renders READ-ONLY here through C3 session 2, so a section has
+//      no .cl-done-btn to insert before. The lookup is kept anyway (session 3
+//      may add ticks) but a miss appends to the section — a missed selector
+//      must never drop admin content.
+//   2. Company names inside panel prose are not linked. Profiler's
+//      gdLinkCompanies walks the registry and rewrites text nodes; Classroom
+//      has no such helper and adding one would be a page-wide feature, not a
+//      lens port. Panel prose reads as prose here.
+// Term tooltips ARE bound on the panel, which Profiler's version does not do:
+// the module render binds tips before the lens resolves, so a {{term}} in a
+// future overlay would otherwise render unbound. No overlay uses one today.
+//
+// Fetch failures degrade silently — the lens is an enhancement, never a
+// blocker for the module itself.
+function clFetchJson(path) {
+  return fetch(CL_DATA_BASE + path + '?_cb=' + Date.now(), { cache: 'no-store' })
+    .then(function(res) { if (!res.ok) throw new Error('http_' + res.status); return res.json(); });
+}
+
+function clLoadAdminLens(doc, shell) {
+  if (!clCan('reports')) return;
+  clFetchJson('reports/reports-index.json').then(function(idx) {
+    var entries = (idx && idx.reports) || [];
+    for (var i = 0; i < entries.length; i++) (function(e) {
+      if (e.status !== 'current') return;
+      if ((e.overlayModules || []).indexOf(doc.id) === -1) return;
+      clFetchJson('reports/' + e.id + '.report.json').then(function(rep) {
+        clApplyAdminLens(doc, shell, rep);
+      }).catch(function() { /* report fetch failed — lens skipped */ });
+    })(entries[i]);
+  }).catch(function() { /* index unavailable — lens skipped */ });
+}
+
+// Two current reports can anchor a panel to the SAME section (today
+// bess-bankability/counterparty and power-infra-aidc/markets each take one
+// from two different reports), and each report resolves on its own promise —
+// so every insertion appends beside whatever is already there. Nothing here
+// replaces a section's contents.
+function clApplyAdminLens(doc, shell, rep) {
+  var ovs = (rep && rep.guidanceOverlays) || [];
+  for (var i = 0; i < ovs.length; i++) (function(o) {
+    if (o.moduleId !== doc.id) return;
+    var panel = clEl('div', 'cl-lens');
+    panel.appendChild(clEl('div', 'lb', '🔒 Admin lens — ' + (o.title || rep.title || 'Report')
+      + (rep.generated ? ' · ' + rep.generated : '')));
+    var sec = shell.querySelector('#cl-' + o.sectionId);
+    if (!sec) panel.appendChild(clP(clFmt('*The section this note was anchored to ("'
+      + o.sectionId + '") no longer exists in this module — shown here at the end instead.*')));
+    for (var pj = 0; pj < (o.ps || []).length; pj++) panel.appendChild(clP(clFmt(o.ps[pj])));
+    var lk = clEl('button', 'rpt', 'View source report →');
+    lk.type = 'button';
+    lk.addEventListener('click', function() {
+      // Reports are read in Profiler — Classroom hosts the modules, not the
+      // report library — so this is a deep link out, like the study-guide
+      // links in the drill.
+      window.location.href = 'Profiler.html#report/' + encodeURIComponent(rep.id);
+    });
+    panel.appendChild(lk);
+    clBindTermTips(panel);
+    if (sec) {
+      var btn = sec.querySelector('.cl-done-btn');
+      if (btn) sec.insertBefore(panel, btn); else sec.appendChild(panel);
+    } else {
+      // Stale anchor (module revised after the report) — never drop admin content.
+      var glossary = shell.querySelector('#cl-glossary');
+      if (glossary && glossary.parentNode) glossary.parentNode.insertBefore(panel, glossary);
+      else shell.appendChild(panel);
+    }
+  })(ovs[i]);
 }
 
 // Every term in every module, merged. A term defined in several modules keeps

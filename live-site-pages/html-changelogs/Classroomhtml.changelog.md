@@ -3,12 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.11w] — 2026-09-13 12:52:01 AM EST — v05.45r
+
+### Added
+- **The admin lens now works on guidance modules here.** For accounts that can read reports, a module shows the company-specific notes the current reports have written against it, each one sitting inside the section it was written about, with a button through to the report it came from. Twelve such notes exist today, across five of the nine modules; the others show none
+- A note whose section has since been rewritten away is still shown — it moves to the end of the module with a line saying which section it was written for, rather than disappearing
+
+### Changed
+- A section can now carry notes from more than one report at once; both are shown, one after the other
+- Accounts without report access see modules exactly as before — no notes, and nothing is fetched on their behalf
 ## [v01.10w] — 2026-09-13 12:13:40 AM EST — v05.44r
 
 ### Added

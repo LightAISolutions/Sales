@@ -3,12 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.21g] — 2026-09-13 12:52:01 AM EST — v05.45r
+
+### Added
+- Groundwork so that a company dossier in the other app can again list which study modules mention that company, now that the modules live here. Nothing changes in this app's own screens
+
+### Changed
+- Minor internal improvements
 ## [v01.20g] — 2026-09-13 12:13:40 AM EST — v05.44r
 
 ### Added

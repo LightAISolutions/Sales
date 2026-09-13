@@ -1,4 +1,4 @@
-var VERSION = "v01.36g";
+var VERSION = "v01.37g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -443,10 +443,7 @@ function handleGuidanceOp_(e) {
       if (!doc) return { success: false, error: 'UNKNOWN_DOC' };
       return { success: true, doc: doc };
     }
-    if (op === 'mentions') {
-      var men = guidanceMentions_();
-      return { success: true, mentions: men.mentions, built: men.built };
-    }
+    if (op === 'mentions') return guidanceMentionsProxy_();
     if (op === 'progress') return { success: true, progress: gdProgressRead_(sess) };
     if (op === 'setprogress') return gdProgressWrite_(sess, p);
     return { success: false, error: 'unknown_gop' };
@@ -495,6 +492,47 @@ function handleNewsOp_(e) {
     + (p.limit ? '&limit=' + encodeURIComponent(String(p.limit)) : '');
   try {
     var resp = UrlFetchApp.fetch(SCRAPER_CORPUS_EXEC + qs,
+      { muteHttpExceptions: true, followRedirects: true });
+    if (resp.getResponseCode() !== 200) {
+      return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
+    }
+    return JSON.parse(resp.getContentText());
+  } catch (fErr) {
+    return { success: false, error: 'upstream_unreachable' };
+  }
+}
+
+// PROJECT: ── Guidance mentions (Classroom peer proxy, C3 session 2) ───────
+// The dossier's "✦ Covered in guidance modules" line. `guidanceMentions_()`
+// scans the module JSON, and since C3 session 1 the modules live in
+// Classroom.gs, so the scan moved with them (PHASE6-CLASSROOM-DESIGN.md →
+// Phase plan → C3 slice plan, checklist item 3). This backend now relays the
+// answer instead of computing it: exactly the shape of handleNewsOp_'s
+// Scraper corpus proxy above — a server-to-server call on a shared Script
+// Property, never a browser hop.
+//
+// The boundary did not move. `guidanceAllowed_(sess)` in handleGuidanceOp_
+// still decides who may ask, before this function is reached, so no tier
+// gains sight of a module title it could not see before. The token is
+// GUIDANCE_PEER_TOKEN — a NEW shared property, deliberately not the
+// CORPUS_TOKEN of the Scraper bridge: different peers, different secret,
+// rotated independently. Set the SAME random value (16+ chars) in BOTH this
+// project's and Classroom's Script Properties. While it is unset the line
+// reports itself unconfigured and the page renders no chips at all, which is
+// what every other failure path here already does.
+//
+// Cached upstream, not here: Classroom holds the 6h script cache the scan
+// always had, and the page caches the answer for the life of a page load
+// (ovGuidanceMentionsLine's gdMentionsCache), so a dossier visit costs at
+// most one UrlFetch and usually none.
+var CLASSROOM_GUIDANCE_EXEC =
+  'https://script.google.com/macros/s/AKfycbzgrjTjU_lRoMsBzH2CIjZsqXmoN9PJMqSYawhARg9FkvjmxbyX0k85X0Q6Ud9mL3gy/exec';
+function guidanceMentionsProxy_() {
+  var token = PropertiesService.getScriptProperties().getProperty('GUIDANCE_PEER_TOKEN') || '';
+  if (token.length < 16) return { success: false, error: 'not_configured' };
+  try {
+    var resp = UrlFetchApp.fetch(CLASSROOM_GUIDANCE_EXEC
+      + '?action=guidancepeer&gpop=mentions&t=' + encodeURIComponent(token),
       { muteHttpExceptions: true, followRedirects: true });
     if (resp.getResponseCode() !== 200) {
       return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
@@ -968,44 +1006,6 @@ function guidanceDoc_(id) {
   return null;
 }
 
-// Which guidance modules mention each covered company (gop=mentions —
-// role-gated like index/doc, so module titles never reach tiers without
-// guidance access). The registry on public Pages is the name authority;
-// the scan mirrors the client's ovRelDerive ambiguity guard: one-word
-// common-word names only count mid-sentence (never right after a field
-// start or sentence-ending punctuation in the module JSON). Result is
-// cached 6h — module content only changes on deploys.
-function guidanceMentions_() {
-  var cache = CacheService.getScriptCache();
-  var hit = cache.get('gd_mentions_v1');
-  if (hit) return JSON.parse(hit);
-  var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '');
-  var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-data/profiler-companies.json',
-    { muteHttpExceptions: true }).getContentText());
-  var docs = guidanceDocs_();
-  var blobs = docs.map(function(d) { return JSON.stringify(d); });
-  var out = {};
-  (reg.companies || []).forEach(function(c) {
-    var name = String(c.name || '');
-    if (!name) return;
-    var ambiguous = name.indexOf(' ') < 0 && /^[A-Z][a-z]+$/.test(name);
-    var src = '\\b' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b';
-    var hits = [];
-    for (var i = 0; i < docs.length; i++) {
-      var re = new RegExp(src, 'g'), m, ok = false;
-      while ((m = re.exec(blobs[i]))) {
-        if (!ambiguous) { ok = true; break; }
-        var prev = blobs[i].slice(0, m.index).replace(/\s+$/, '').slice(-1);
-        if (prev && '"{[.!?:'.indexOf(prev) === -1) { ok = true; break; }
-      }
-      if (ok) hits.push({ id: docs[i].id, title: docs[i].title });
-    }
-    if (hits.length) out[c.slug] = hits;
-  });
-  var res = { mentions: out, built: new Date().toISOString() };
-  try { cache.put('gd_mentions_v1', JSON.stringify(res), 21600); } catch (ce) { /* oversized — serve uncached */ }
-  return res;
-}
 
 // PROJECT: ── Guidance reading progress (server-side, per account) ─────────
 // gop=progress / gop=setprogress — same role gate as index/doc. The account's
