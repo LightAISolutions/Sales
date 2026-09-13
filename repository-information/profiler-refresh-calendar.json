@@ -2457,6 +2457,37 @@
     "HQ: GLEIF, PUCT or LinkedIn address changes toward Houston; the Cupertino lease expires 2027-12-31 — 'HQ Houston' is true of the retail business only",
     "Chesterton check: Tracxn's 'Series D USD 40M' is a mis-tag of the two fund Form Ds; the 'most profitable participant in ERCOT' claim has no third-party test; Solar Builder's 'Palo Alto HQ' is a single-outlet error"
    ]
+  },
+  {
+   "slug": "grid-united",
+   "cadence": "quarterly",
+   "source": "Private, wholly owned by Centaurus Capital LP (Arnold family office) per the Three Corners Connector OCC application as reported January 2026; no earnings clock, no SEC filings (zero Form D). Public record: gridunited.com and the five project sites (WordPress REST APIs open), northplainsconnector.com news and RFP pages, DOE NEPA (EIS-0568) and GRIP notices, Montana DEQ, North Dakota PSC Case PU-26-82, Oklahoma OCC PUD2026-000004, partner utilities' SEC filings (NorthWestern, Avista, Portland General via StockTitan mirrors — sec.gov blocked at v05.40r), Business Wire releases (403; company and Yahoo/Nasdaq copies). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-12",
+   "watch": [
+    "North Plains Connector permitting: DOE record of decision (listed 'Summer 2026', reported for about October 2026) and the GRIP finalise-or-terminate decision DOE tied to it; Montana MFSA certificate; North Dakota PSC order in PU-26-82 after the 1–3 September 2026 hearings",
+    "Any BINDING partner agreement: Avista guided definitive agreements for September–December 2026; PGE, PSE, NorthWestern, BHE, MDU, Minnkota and Great River Energy are all on non-binding MOUs (2,550 of 3,000 MW); ALLETE's post-CPP/GIP position and NorthWestern's post-Black Hills-merger position",
+    "Corporate: any change to Centaurus Capital's sole ownership — an outside investor, Form D, sale process, or a company statement of ownership (none exists on any company page); a capital figure newer than Bloomberg's March 2023 'several hundred million dollars'",
+    "North Plains cost and schedule: the USD 6 billion figure against the USD 3.2 billion trade press still quotes; EPC contractor named ('onboarded 2026' on the company milestone strip); construction start late 2027/2028 vs COD 2032",
+    "Southline: executed DOE Transmission Facilitation Program capacity contract (still 'Selected'), a named transmission customer, financial close, construction start (now 2027); Three Corners: Pueblo County 1041 and Baca County agreement, the follow-on OCC cost docket, a first customer; Pecos West and Wyoming Intertie: any regulatory filing",
+    "Hitachi Energy: an equipment order under the 2024 capacity reservation; any second converter supplier",
+    "Chesterton check: the 'wholly owned by Centaurus' statement is second-hand (OK Energy Today reporting the OCC filing) — confirm from the filing or a company statement before relying on it further"
+   ]
+  },
+  {
+   "slug": "pattern-energy",
+   "cadence": "quarterly",
+   "source": "Private since the March 2020 take-private (formerly NASDAQ: PEGI); no earnings clock and no financial statements published. Public record: patternenergy.com (WordPress REST APIs open — 628 posts, 70 portfolio entries), patterncanada.ca, the annual sustainability report (September) and climate report (February), CPP Investments' quarterly and annual releases (the only ownership percentage), HASI and Quanta SEC filings (sec.gov blocked at v05.40r; investor-site and EFTS copies), WECC annual progress reports (March), CAISO notices, Louisiana and Mississippi PSC dockets, the Ninth Circuit/D. Ariz. NHPA case, S&P/Moody's (pages blocked). Business Wire 403 (company copies cited). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-12",
+   "watch": [
+    "Any CPP Investments stake change, secondary sale, recapitalisation or IPO: CPP's F2027 quarterly releases (next ~November 2026) and annual report (May 2027) for a Pattern line; APG/ABP and ART stake disclosures; any bank mandate in Bloomberg/Reuters/Infralogic; the CPP '69.1%' sentence is the only percentage on the record",
+    "Corporate debt: the S&P item dated 2026-08-08 on 'Pattern Energy Operations L.P.'s $700 Million Sen[ior notes]' — a refinancing of the 4.50% 2028 notes? — and the B+ rating (downgraded 2025-03-17); Moody's Ba3 status",
+    "SunZia: per-offtaker volumes beyond CPA 575 MW and SRP 600 MW; the pending NHPA summary-judgment ruling before Judge Zipps (motion filed 2026-03-13); final cost against the USD 11 billion financing; Bolo open solicitation (postponed) and RioSol participation; energisation/COD dates for the wind phases",
+    "Southern Spirit: Mississippi PSC decision (docket 2017-UA-79 continued through June 2026; target was end-2025); Louisiana landowner challenge; execution of the DOE TFP USD 360 million contract; right-of-way secured; the 2029/2032 schedule",
+    "Pipeline under OBBBA: begin-construction status by 2026-07-04 for Heritage Prairie, Palomas, Lenawee, Uplands, The Shoals, Perryville, Big Island and the ex-Cordelio Michigan/Missouri wind; Section 232 wind-turbine proclamation; any company statement on the tax law (none exists)",
+    "Silver Rock: BLM EIS scoping closes 2026-10-05; any data-centre offtaker; Puerto Rico: Amanecer construction and the gas-generation line on DOE's page that the company does not repeat",
+    "Leadership: appointment releases (none) for COO Pinto, CLO Glasspool, CPO Sundar; Cordelio CEO Chris Hind's post-close role; the sustainability report due September 2026 for FY2025 capacity, ownership share and headcount",
+    "Chesterton check: the 3,515 vs 3,650 MW SunZia capacity difference, the 25/30/40 GW pipeline figures, and the San Francisco-vs-Houston headquarters question are all unreconciled on the record — do not pick one silently"
+   ]
   }
  ]
 }

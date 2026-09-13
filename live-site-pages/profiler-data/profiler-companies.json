@@ -5007,6 +5007,119 @@
           "role": "challenger"
         }
       ]
+    },
+    {
+      "slug": "grid-united",
+      "name": "Grid United",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Houston's family-office-owned interregional HVDC developer — five pre-construction lines led by the 420-mile, 3,000 MW North Plains Connector (final EIS August 2026, eight utilities on non-binding MOUs for 2,550 MW, cost now ~USD 6B, operation 2032), Southline (1,000 MW, DOE anchor contracts 'selected'), Three Corners (Oklahoma certificate July 2026); wholly owned by John Arnold's Centaurus Capital per its own Oklahoma filing, Hitachi Energy holds its converter slots, no Form D, no operating asset.",
+      "hq": "Houston, Texas, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Grid United LLC",
+        "Grid United, LLC",
+        "Grid United Texas LLC",
+        "North Plains Connector",
+        "North Plains Connector LLC",
+        "GU Southline LLC",
+        "Southline Transmission",
+        "Southline",
+        "Three Corners Connector",
+        "Pecos West",
+        "Wyoming Intertie",
+        "Continental Connector",
+        "Skelly"
+      ],
+      "domains": [
+        "gridunited.com",
+        "northplainsconnector.com",
+        "southlinetransmission.com",
+        "threecornersconnector.com",
+        "pecoswest.com",
+        "wyomingintertie.com",
+        "continentalconnectorllc.com"
+      ],
+      "srcTotal": 96,
+      "srcFirstPct": 47,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "pattern-energy",
+      "name": "Pattern Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "CPP Investments' privately owned renewables-and-transmission platform — ~12 GW operating and in construction across the US, Canada and Mexico after the share-based Cordelio purchase (April 2026), owner-operator of SunZia (3,650 MW New Mexico wind on a 550-mile, 3,000 MW VSC HVDC line, fully operational June 2026, USD 11B financed), Western Spirit built and sold to PNM, Southern Spirit (ERCOT–Southeast HVDC) certificated in Louisiana but not Mississippi; APG/ABP and ART bought Riverstone's stake June 2025, CPP-led ownership 69.1%, no financials published.",
+      "hq": "San Francisco, California, United States (development headquarters and operations in Houston, Texas)",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Pattern Energy Group LP",
+        "Pattern Energy Group, LP",
+        "Pattern Energy Group Inc.",
+        "Pattern Energy Group Holdings 2 LP",
+        "Pattern Development",
+        "Pattern Transmission",
+        "Pattern Canada",
+        "Pattern Energy Operations",
+        "Pattern Renewables",
+        "PEGI",
+        "SunZia",
+        "SunZia Transmission",
+        "SunZia Wind",
+        "Western Spirit",
+        "Southern Spirit",
+        "Southern Cross Transmission",
+        "Silver Rock Transmission",
+        "Bolo Transmission",
+        "Cordelio",
+        "Cordelio Power",
+        "Solect",
+        "Solect Energy",
+        "Dynamic Energy",
+        "Amanecer Puerto Rico"
+      ],
+      "domains": [
+        "patternenergy.com",
+        "patterncanada.ca",
+        "solect.com",
+        "dynamicenergy.com",
+        "cordeliopower.com",
+        "bolo-os.com",
+        "sunzia.net",
+        "southernspirit.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 60,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        }
+      ]
     }
   ]
 }

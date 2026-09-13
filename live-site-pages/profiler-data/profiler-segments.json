@@ -436,7 +436,7 @@
     "Service, spares and the bushing supply chain",
     "Custom-engineered speed (ten-week MV switchgear from a domestic plant)"
    ],
-   "notes": "Reserved adjacent role: transmission developers (S3 batch 5 — Grid United, Pattern Energy) join here and in utilities as adjacent members (INTEGRATED-REMEDIATION-PLAN.md §7.2); Invenergy's merchant HVDC line is the one such role the corpus already holds.",
+   "notes": "Reserved adjacent role filled at V3 (v05.40r, 2026-09-12): the two transmission developers (grid-united, pattern-energy) sit here as adjacent — buyers of HVDC converter capacity — alongside Invenergy's Grain Belt Express; the segment's incumbents are unchanged.",
    "members": [
     {
      "slug": "hitachi-energy",
@@ -502,6 +502,16 @@
      "slug": "invenergy",
      "role": "adjacent",
      "basis": "productsAndServices › Transmission — Grain Belt Express and the HVDC portfolio (merchant HVDC transmission developer)"
+    },
+    {
+     "slug": "grid-united",
+     "role": "adjacent",
+     "basis": "productsAndServices › North Plains Connector: Hitachi Energy holds a portfolio-wide HVDC capacity reservation agreement (March 2024) and an Engineering Services Agreement for the converter-station specifications (October 2025) — the developer as the buyer that reserves converter slots years ahead of an order; no equipment order yet"
+    },
+    {
+     "slug": "pattern-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › SunZia Wind and Transmission: buyer of Hitachi Energy's HVDC Light voltage-source converters (±525 kV, 3,000 MW, the largest VSC HVDC installation in the US) and 674 GE Vernova turbines; Pattern Transmission has 'sponsored 30 percent of the HVDC transmission lines in the United States'"
     }
    ]
   },
@@ -1257,6 +1267,11 @@
      "slug": "gridmatic",
      "role": "adjacent",
      "basis": "productsAndServices › Battery storage optimisation, tolling and revenue-floor offtake: the offtaker on Energy Vault's Cross Trails — a ten-year physically settled revenue floor with upside participation backed by the Gridmatic Storage Fund, the buyer position on a merchant battery that Energy Vault's SEC filings report; the company owns no plants."
+    },
+    {
+     "slug": "pattern-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › Operating wind, solar and storage fleet: a ~12 GW wind-and-solar IPP whose storage book is McHenry (20 MW, 2015) and the 220 MW Amanecer Puerto Rico batteries under a USD 489.4 million DOE loan (August 2026) — an IPP at scale, adjacent rather than a storage position on the record"
     }
    ]
   },
@@ -1549,7 +1564,7 @@
     "Whether the utility self-builds, tolls or lets the customer supply (who picks the battery)",
     "Cost allocation — who pays for the substation and the wires"
    ],
-   "notes": "Reserved adjacent role: transmission developers (S3 batch 5 — Grid United, Pattern Energy) join here and in grid-equipment as adjacent members (INTEGRATED-REMEDIATION-PLAN.md §7.2). Regulated franchises have no challenger by construction; the competitive retail suppliers of restructured markets carry that role here.",
+   "notes": "Reserved adjacent role filled at V3 (v05.40r, 2026-09-12): transmission developers grid-united and pattern-energy join Invenergy as adjacent members — the developers utilities own through (Grid United's utility-owned slices) or buy from (Pattern's Subscriber PTO line and PNM build-own-transfer). Regulated franchises have no challenger by construction; the competitive retail suppliers of restructured markets carry that role here.",
    "members": [
     {
      "slug": "dominion-energy",
@@ -1610,6 +1625,16 @@
      "slug": "invenergy",
      "role": "adjacent",
      "basis": "productsAndServices › Natural gas and data-centre power — build-and-transfer gas plants sold to regulated utilities (I&M, We Energies); merchant HVDC transmission (Grain Belt Express)"
+    },
+    {
+     "slug": "grid-united",
+     "role": "adjacent",
+     "basis": "ecosystemRole: sells utilities ownership slices of interregional lines they would not have planned themselves — ALLETE (development agreements, ~35%, operator) and seven utilities on non-binding MOUs for 2,550 MW of North Plains Connector; 'these electric companies will be the ultimate owners'"
+    },
+    {
+     "slug": "pattern-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › Pattern Transmission: merchant transmission owner scheduled into CAISO as the first Subscriber Participating Transmission Owner, build-own-transfer of Western Spirit Transmission to PNM (USD 285 million, 2021), wholesale seller to SRP, LADWP and eight California CCAs, and the developer Entergy Mississippi opposes at the state commission"
     }
    ]
   },

@@ -1,0 +1,1408 @@
+{
+  "schemaVersion": 7,
+  "slug": "pattern-energy",
+  "name": "Pattern Energy Group LP",
+  "shortName": "Pattern Energy",
+  "categories": [
+    "developer",
+    "ipp"
+  ],
+  "website": "https://patternenergy.com/",
+  "headquarters": "San Francisco, California, United States (1088 Sansome Street — the legal, accounts-payable and FERC compliance address, and 'Global HQ' on the company's own pages) with the development headquarters, Operations Control Center and the chief executive in Houston, Texas (888 Westheimer Road); 2026 press releases are datelined Houston, San Francisco and Toronto",
+  "founded": 2009,
+  "employees": "'More than 800' (September 2025) — 670 Pattern Energy employees plus 186 at the Solect Energy and Dynamic Energy distributed-generation affiliates at 31 December 2024; 150 in Houston (June 2023)",
+  "ownership": {
+    "type": "private",
+    "ticker": "Private (CPP Investments majority shareholder since the March 2020 take-private; APG Asset Management for ABP and Australian Retirement Trust consortium since June 2025; Pattern management). Formerly NASDAQ: PEGI / TSX: PEG, 2013–2020"
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** Pattern Energy is the largest privately owned renewables and transmission developer in North America by its own account and, since 18 June 2026, the owner-operator of SunZia — 3,650 MW of New Mexico wind and the 550-mile, ±525 kV, 3,000 MW voltage-source HVDC line that carries it to Arizona and California, financed on USD 11 billion of non-recourse debt and about USD 2.7 billion of structured and preferred equity from HASI and Nuveen; its ownership moved twice in twelve months — an APG/ABP and Australian Retirement Trust consortium bought Riverstone's founding stake (closed 9 June 2025) and the share-based purchase of CPP Investments' Cordelio Power (closed 2 April 2026) took CPP-led institutional ownership to 69.1% by CPP's own statement — and no sale, secondary or IPO process is on the record, while the company publishes no revenue, earnings or leverage figure. **BACKGROUND.** Founded 2009 in San Francisco by Riverstone Holdings and a management team from Babcock & Brown's North American renewables business (Mike Garland, Hunter Armistead); listed the operating company as Pattern Energy Group Inc. in 2013 (USD 352 million IPO); taken private by CPP Investments on 16 March 2020 at USD 26.75 a share (enterprise value about USD 6.1 billion) and recombined with the development company. Fleet per the 2025 sustainability report: 32 utility-scale facilities, 6,047 MW installed (4,148 MW owned excluding tax equity) at end-2024 across the United States, Canada and Mexico; per the company after Cordelio, 'more than 40 facilities' and 'nearly 12,000 MW of operating and in-construction capacity' (46 facilities and about 12 GW installed on the About page), with a development portfolio the company variously states at 25 GW (December 2024), 30 GW (September 2025) and 40 GW (2026). Transmission: Western Spirit (155 miles, 345 kV) built and sold to PNM in 2021; SunZia operating; Southern Spirit (320 miles, ±525 kV HVDC, ERCOT to the Southeast, USD 2.6 billion) with Louisiana's certificate but no Mississippi decision and construction pushed to 2029; Bolo (24 miles, 800 MW) and Silver Rock (330 miles, Utah–Nevada, BLM scoping opened 2 September 2026) in development. Chief executive Hunter Armistead since 1 January 2023; CFO Matthew Rhodes since October 2024; a new chief operating officer, chief legal officer and chief people officer appeared on the leadership page in 2026 without releases. Collection gap: no ownership percentages beyond CPP's 69.1% sentence, no financial statements, no independent SunZia cost figure, and an S&P item dated 8 August 2026 on USD 700 million of Pattern Energy Operations senior notes that could not be read.",
+  "ecosystemRole": "The corpus's second transmission developer and its first at scale: Pattern is both a multi-gigawatt wind and solar owner in the storage-developers-and-IPP class and the sponsor of the one long-haul VSC HVDC corridor in the United States to reach commercial operation. On the grid-equipment side it is Hitachi Energy's reference customer for HVDC Light and the buyer of 674 GE Vernova turbines; on the utilities side it is the merchant transmission owner that California's grid operator absorbed through the Subscriber PTO model, a wholesale seller to SRP, Shell, the University of California, LADWP and eight community choice aggregators, and the developer Entergy Mississippi fought at the state commission. Its data-centre exposure is indirect — Microsoft (Winfield, Crossover), Amazon (Fowler Ridge) and Digital Realty (Phoenix) as offtakers and a Silver Rock line pitched at Utah and Nevada data-centre load — with no announced hyperscaler campus deal of its own. Against Grid United it is the comparable that has permits, customers, financing and an operating asset; against Invenergy it is the pension-owned, not founder-owned, version of the same integrated developer-transmission model.",
+  "productsAndServices": [
+    {
+      "name": "SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+      "category": "Integrated wind and merchant HVDC transmission (flagship)",
+      "description": "The company's description: 'SunZia, the largest renewable energy infrastructure project in U.S. history is fully operational' (18 June 2026) — 'an approximately 3,650-megawatt (MW) wind project' in Torrance, Lincoln and San Miguel counties and a '550-mile ±525 kV high-voltage direct current (HVDC) transmission line between central New Mexico and south-central Arizona with the capacity to transport 3,000 MW', 'the first overhead HVDC transmission line built in the United States in the last 30 years'. Pattern acquired the transmission project from SouthWestern Power Group on 18 July 2022, having already been awarded its full 3,000 MW of capacity for its wind; the BLM record of decision followed on 18 May 2023 'after over 16 years of development', notice to proceed and groundbreaking on 1 September 2023, and the USD 11 billion non-recourse financing closed 27 December 2023 — 'an integrated construction loan and letter of credit facility, two separate term facilities, an operating phase letter of credit facility, an innovative tax equity term loan facility and a holding company loan facility'. Suppliers and contractors: Hitachi Energy (HVDC Light voltage-source converters and MACH control), Quanta Services (turnkey line), Blattner (wind, 'more than 900 turbines, ten substations'), GE Vernova (674 turbines) and Vestas (242). Independent record of the in-service date: WECC's 2026 progress report says the line 'was energized in 2025 and has been undergoing testing through Q1 2026' with in-service planned March 2026; EIA dates commercial operation to June 2026 with 916 turbines and 2,131 MW designated for Southern California via Palo Verde; CAISO's allocation is 2,100 MW of the 3,650 MW and the line joined CAISO under the Subscriber Participating Transmission Owner model (3,021 MW, FERC Docket ER23-2917). Offtakers named by the company: Shell Energy North America and the University of California (May 2023), Clean Power Alliance (575 MW, 15 years, November 2023), Salt River Project (600 MW — 400 MW from autumn 2026 rising to 600 MW by summer 2027, July 2026), Ava Community Energy (over 250 MW), Central Coast Community Energy, CleanPowerSF, Riverside Public Utilities and Silicon Valley Clean Energy; per-offtaker volumes beyond CPA and SRP are not public. Capital beside the debt: HASI's USD 1.2 billion structured equity (closed October 2025, 'expected to ultimately finance over 2.6 GW') and Nuveen Energy Infrastructure Credit's USD 546 million preferred equity (1 July 2026; 'approached $1.5 billion across four investments' with co-investors, including 'the preferred tax equity for SunZia North').",
+      "highlights": [
+        "Capacity is stated two ways and both are real: 3,515 MW nameplate at order (674 GE 3.6-154 plus 242 Vestas V163-4.5) in 2023 financing documents and Quanta's 10-K, 3,650 MW in 2026 statements by Pattern, Hitachi, Nuveen and EIA (EIA's is net summer capacity from Form 860M)",
+        "On the CAISO side the line contributed to a wind record of 7,122 MW on 15 May 2026, 20% above the prior record, while still in test; CAISO's own blog calls it 'a plus for reliability and affordability' because the New Mexico wind 'strengthens during late afternoon and evening hours when solar declines'",
+        "The San Pedro Valley litigation is live but not injunctive: the Ninth Circuit reversed the dismissal of the Tohono O'odham Nation, San Carlos Apache Tribe, Archaeology Southwest and Center for Biological Diversity NHPA claim on 27 May 2025, holding the BLM's limited notices to proceed were final agency action; the plaintiffs' summary-judgment motion asking the court to 'nullify BLM decisions authorizing construction' has been pending before Judge Zipps since 13 March 2026, with the line operating throughout",
+        "Cost: the company says 'on time and on budget' against the USD 11 billion financing and cites a USD 20.5 billion lifetime economic benefit study; no independent final-cost figure exists. Collection gap: neither the exact energisation date of the line nor the wind phases' commercial-operation dates are published — only 'fully operational' on 18 June 2026",
+        "Follow-on lines in the same corridor: Bolo (24 miles, 345 kV, 800 MW, linking the Western Spirit switchyard on PNM's system to SunZia's Pete Heinrich switchyard; construction 2026 and operation 2027 per the open-solicitation site, but the January 2026 open solicitation 'has been postponed until further notice') and Pattern's stated intent to bid into the RioSol capacity solicitation (Southwestern Power Group's parallel 1,600 MW AC line, construction from late 2026)"
+      ],
+      "positioning": "The only privately financed long-haul VSC HVDC corridor operating in the United States; Invenergy's Grain Belt Express (5,000 MW, line-commutated, construction from 2026) and Grid United's North Plains Connector (3,000 MW, permitting) are the comparables, neither yet built. Champlain Hudson (Blackstone/TDI) and SunZia are the two lines Canary Media cites as the decade-plus precedents Grid United must repeat.",
+      "soldThrough": "Wind sold under long-term PPAs to utilities, CCAs, an energy major and a university; transmission capacity held by the wind project (full 3,000 MW awarded to Pattern) and scheduled into CAISO under the Subscriber PTO model; project financed non-recourse with tax-equity, structured-equity and preferred-equity layers",
+      "targetSegments": [
+        "California community choice aggregators and municipal utilities",
+        "Arizona utilities (Salt River Project via Pinal Central)",
+        "Corporate and institutional buyers (Shell Energy, University of California)",
+        "Institutional project-equity investors (HASI, Nuveen, CPP)"
+      ],
+      "roadmap": "SRP deliveries 400 MW from autumn 2026 and 600 MW by summer 2027; Bolo construction 2026 and operation 2027 (solicitation postponed); RioSol capacity solicitation participation; ruling on the pending NHPA summary-judgment motion"
+    },
+    {
+      "name": "Operating wind, solar and storage fleet — about 12 GW installed across the United States, Canada and Mexico after Cordelio",
+      "category": "Independent power production (wind, solar, storage)",
+      "description": "The company 'develops, constructs, owns, and operates high-quality wind, solar, transmission, and energy storage projects across North America'. The 2025 sustainability report's audited-style table gives 32 utility-scale facilities and 6,047 MW installed at 31 December 2024 (wind 5,664 MW; solar 383 MW; United States 3,768 MW, Canada 1,979 MW, Mexico 300 MW), of which 'Pattern Energy 3,695 MW (61%)' by ownership and, 'excluding tax equity, Pattern owns 4,148 MW'; generation 17,740 GWh in 2024 and 17,840 GWh in 2025. Named US wind (state, MW, COD): Western Spirit 1,051 MW, New Mexico, 2021 — four sites, 377 GE turbines, 'largest single-phase renewable energy project in U.S. history', offtakers including LADWP and Uniper; Broadview 324 MW, NM, 2017 (SCE, two 20-year PPAs); Gulf Wind 271 MW, Texas, repowered 2021 (Austin Energy, 20 years); Ocotillo 265 MW, California, 2012–13; Grady 221 MW, NM, 2019; Panhandle 1 and 2 400 MW, Texas, 2014; Post Rock 201 MW, Kansas (Evergy); Logan's Gap 200 MW, Texas; Lost Creek 168 MW, Missouri; Spring Valley 152 MW, Nevada (NV Energy); Amazon Wind Farm Fowler Ridge 150 MW, Indiana (AWS); Hatchet Ridge 101 MW, California (PG&E); Santa Isabel 101 MW, Puerto Rico; Stillwater 80 MW, Montana (NorthWestern, 25 years); plus SunZia. Canada (patterncanada.ca: '11 operating wind energy projects across 5 provinces', 'largest provider of wind to Ontario'): Henvey Inlet 300 MW (50/50 with Nigig Power, Henvey Inlet First Nation), Armow 180, South Kent 270, K2 270, Grand Renewable 149, Belle River 100, North Kent 99 (Ontario, with Samsung Renewable Energy and First Nation partners, IESO 20-year contracts); Meikle 179 MW, British Columbia (51% owned; BC Hydro 25 years); Mont Sainte-Marguerite 143 MW, Québec (Hydro-Québec 25 years); St. Joseph 138 MW, Manitoba (Manitoba Hydro 27 years); Lanfine 150 MW, Alberta, 2023 (West Fraser 10-year financial PPA for about half). Mexico: Tuli (2019) and Helios (2022) solar, 150 MW each, Zacatecas. Solar in the United States: Phoenix 83 MWac, Texas (2021; 65 MWac to Digital Realty, 12 years), Winfield 150 MWac, Missouri (September 2025; 100% to Microsoft, 15 years; Qcells modules), Silver State 50 MWac, Nevada, Box Canyon, Arizona. Storage: McHenry 20 MW, Illinois (2015) and, in development, the Amanecer Puerto Rico portfolio — a USD 489.4 million DOE Energy Dominance Financing loan closed in August 2026 for two standalone batteries totalling 220 MW at Arecibo and Santa Isabel with domestically sourced equipment. The Cordelio acquisition added 'approximately 1,550 megawatts of operating and in-construction assets, including 16 wind, solar, and energy storage projects'; the company does not list the sixteen, but fourteen are identifiable from portfolio pages added after closing — Glacier Sands 185 MW and Moraine Sands 171 MW (Illinois), Crossover 135 MW (Arkansas; 100% to Microsoft, 20 years, COD November 2025), Cedar Point (Colorado), McHenry, Box Canyon, Silver State, Winfield, and in Ontario Bluewater 60, Jericho 149, Summerhaven 124 and Conestogo 23 MW wind plus Sombra 20 and Moore 25 MW solar — with Axium Infrastructure holding 49% of the Ontario 'Denfield' portfolio since 2021.",
+      "highlights": [
+        "Owned capacity is about two-thirds of installed capacity: tax-equity partners, First Nation and community co-owners (Henvey Inlet, Broughton, Ontario JVs), Samsung and Axium hold the rest — the number a buyer of Pattern's equity would value is 4,148 MW, not 6,047 MW (end-2024)",
+        "Offtake is long-dated and diversified — IESO and Hydro-Québec contracts of 20–30 years, SCE, PG&E, LADWP, NV Energy, Austin Energy, Evergy, NorthWestern, BC Hydro, Manitoba Hydro — with three named data-centre-adjacent buyers (Microsoft, AWS, Digital Realty) and no announced hyperscaler campus deal",
+        "Community and landowner payments are the one hard cash figure the company publishes: USD 156 million to local economies in 2025 (USD 93 million to landowners, USD 56 million property tax) and USD 140 million-plus in 2024",
+        "Japan (Green Power Investment, 337 MW operating and 192 MW under construction) was sold to NTT Anode Energy and JERA on 3 August 2023; the Mexico joint venture with CEMEX (2015) still shows two operating solar farms and no announced exit",
+        "The DOE Puerto Rico page states Pattern 'is working to deliver new gas-fired generation' for PREPA — a line the company's own channels do not carry"
+      ],
+      "positioning": "Among the corpus's IPPs Pattern is the wind-heavy, Canada-heavy, pension-owned one: more Ontario wind than any other owner, a fleet whose median asset is a decade old, and a solar and storage book that is small next to Invenergy's or NextEra's. What sets it apart from every other IPP in the corpus is that it also owns the wires.",
+      "soldThrough": "Long-term utility, CCA and corporate PPAs; First Nation and community joint ventures in Canada; tax-equity partnerships in the United States; project-level non-recourse debt",
+      "targetSegments": [
+        "Regulated utilities and provincial buyers (IESO, Hydro-Québec, BC Hydro, Manitoba Hydro, NV Energy, SCE, PG&E)",
+        "California CCAs and municipal utilities",
+        "Corporate buyers including data-centre operators (Microsoft, AWS, Digital Realty)",
+        "Puerto Rico Electric Power Authority (storage, and per DOE, gas)"
+      ],
+      "roadmap": "Amanecer 220 MW Puerto Rico storage (DOE loan closed August 2026); Heritage Prairie Wind (Illinois, USD 2.1 billion, with Repsol; construction from June 2026, operation 2028) and Heritage Prairie Renewable (about 600 MW wind plus 300 MW solar with ConnectGen, 2027); Palomas Wind 800 MW, New Mexico (USD 2 billion; construction 2028, operation 2029); Lenawee 263 MW, Michigan (2028–29); Uplands two 300 MW wind, Wisconsin; The Shoals 500 MW wind plus 500 MW solar; Perryville 950 MW solar, Louisiana (2027–29); Big Island 440 MW solar, Arkansas (USD 750 million); Broughton 150 MW, Québec (30-year Hydro-Québec PPA, 2029); Osgood up to 200 MW, Québec (bid into Hydro-Québec's 2026 call, 2032); Argentia wind-to-hydrogen, Newfoundland (2030)"
+    },
+    {
+      "name": "Pattern Transmission — Southern Spirit, Silver Rock, Bolo and the completed lines",
+      "category": "Independent transmission development",
+      "description": "'Pattern Transmission is a highly experienced independent developer of high-voltage transmission infrastructure in North America... With the completion of SunZia, Pattern Transmission has now sponsored 30 percent of the high-voltage direct current (HVDC) transmission lines in the United States' and 'over 1,000 miles of high-voltage transmission developed and constructed'; the About page says '1100+ miles of transmission in operation and in development'. Completed: Western Spirit Transmission — a 155-mile 345 kV line developed with the New Mexico Renewable Energy Transmission Authority, energised 6 December 2021 and sold to PNM under a build-own-transfer agreement (PNM: closed 13 December 2021, USD 285 million net investment, 'up to 800 megawatts of new wind energy') with Pattern keeping the transmission rights; Henvey Inlet Transmission (104 km, 230 kV, Ontario, with Henvey Inlet First Nation); Western Interconnect (38 miles, New Mexico); and Trans Bay Cable (35-mile subsea HVDC, 400 MW, San Francisco) where 'the team at Pattern Transmission was an early sponsor and developer' but which Pattern does not own. In development: Southern Spirit — 'approximately 320-mile ±525 KV, ~3,000 MW high voltage direct current (HVDC) transmission line connecting Electric Reliability Council of Texas, Inc. (ERCOT) and Southeastern transmission grids', from Garland Power & Light's Rusk–Panola line in Texas to a converter station in Choctaw County, Mississippi, 'more than $2.6 billion', 'Projected Schedule: 2029 Target Full Construction Start; 2032 Target In-Service Date' (the 2023 fact sheet said 'as early as late 2029'; the Louisiana order said 2026–2029). The Louisiana PSC granted its certificate in Order U-36669 on 14 August 2024 by 3:2 on reconsideration, on condition that 'no design or construction costs... be borne by the ratepayers of the state of Louisiana'; Louisiana's SB 108 (August 2024) restricts expropriation for lines outside an RTO plan; the Mississippi PSC's docket 2017-UA-79 was still 'CONTINUED' on the June 2026 agenda, so no Mississippi certificate exists; Entergy Mississippi's testimony argued the line would 'very likely harm' its customers; DOE selected the line for a Transmission Facilitation Program capacity contract of up to USD 360 million in October 2024, execution unconfirmed. Silver Rock — 'an approximately 330-mile open-access transmission line... connecting the electric grids in Utah and Nevada and expand access to next-generation geothermal developments in central Utah', 'set to support growing data center expansion in Utah and Nevada'; FAST-41 coverage granted 9 December 2025 and BLM EIS scoping (up to two lines, up to 600 kV, Millard County to Clark County) opened 2 September 2026 with comments to 5 October 2026. Bolo — 24 miles, 345 kV double-circuit, 800 MW bidirectional, New Mexico (above).",
+      "highlights": [
+        "Southern Spirit is the one Pattern line with a regulatory fight: a 3:2 Louisiana vote after reconsideration, a state expropriation law written around it, an incumbent utility in opposition, more than half the Louisiana–Mississippi right-of-way unsecured as of January 2025 (Houston Chronicle) and a schedule that has slipped from 2029 to 2032",
+        "ERCOT's jurisdictional status is settled: FERC's May 2014 approval preserves ERCOT's independence and ERCOT and the PUCT confirmed in October 2024 that the DC tie does not bring Texas under FERC jurisdiction — the same problem Grid United's Pecos West could not get past a Texas certificate",
+        "Silver Rock is the first Pattern line framed around data-centre load and the first under the current administration's FAST-41 and Executive Order 14156 permitting track — the federal posture that has stalled onshore wind is being used to speed a wire",
+        "Derek Price's biography describes 'around 1,050 miles of new high-voltage transmission line that is planned to commence construction for Pattern over the next 2-3 years' — text that predates SunZia's completion and is the origin of the '1,100 miles' claim"
+      ],
+      "positioning": "The only US developer with a delivered merchant HVDC line and a second one certificated in one of two states; Grid United (five lines, none certificated beyond Oklahoma) and Invenergy (Grain Belt, construction from 2026) are the peers. Where SunZia rode a subscriber model into CAISO, Southern Spirit relies on FERC negotiated-rate authority (modified in November 2016 to allocate 100% of capacity by open solicitation) and a DOE anchor contract that the current administration has not confirmed.",
+      "soldThrough": "Merchant capacity under FERC negotiated-rate authority and open solicitations (Southern Spirit, Bolo, Silver Rock); build-own-transfer to a utility (Western Spirit to PNM); DOE Transmission Facilitation Program anchor contracts",
+      "targetSegments": [
+        "Southeastern utilities and ERCOT generators (Southern Spirit)",
+        "Utah geothermal developers and Nevada/Utah data-centre load (Silver Rock)",
+        "New Mexico wind and the PNM system (Bolo)"
+      ],
+      "roadmap": "Mississippi PSC decision on Southern Spirit (target was end-2025; still continued); MISO approval targeted 2028; construction 2029, in service 2032; Silver Rock EIS scoping to 5 October 2026; Bolo open solicitation (postponed)"
+    },
+    {
+      "name": "Solect Energy and Dynamic Energy — distributed commercial solar and storage affiliates",
+      "category": "Distributed generation (commercial solar, storage, EV charging)",
+      "description": "Solect Energy, 'a Pattern Energy company based in Hopkinton, Massachusetts, is a recognized leader in commercial solar... for commercial, light industrial, and institutional properties throughout the New England market'; at end-2024 it had 109 employees, 876 commercial projects completed, 177 MWdc installed, 15 MWh of storage, 540 customers and, per Solar Power World, the number-one commercial and industrial developer rank in Massachusetts by kilowatts installed in 2024, expanding into New York, New Jersey and Pennsylvania; its site now counts 180 MW-plus, 900-plus projects and 730-plus service customers with 99% O&M renewal. Offerings: rooftop and ground-mount solar, canopies, storage, O&M, EV charging, PPA and site-lease financing. Dynamic Energy (Philadelphia, acquired 2022) has 'nearly 300 commercial and community solar, battery storage, and EV charging projects, totaling 688 MW of installed capacity in 15 states' and provided EPC for 16 projects totalling more than 45 MW in 2024; the 2026 About page names only Solect ('750+ commercial solar projects completed through our affiliate Solect Energy').",
+      "highlights": [
+        "Acquired in 2021–22 as the take-private's diversification into distributed generation; the two affiliates are about 23% of group headcount (186 of 856) and a fraction of a percent of capacity",
+        "Solect's news feed is where Pattern's only tax-credit commentary appears — 'Town moves to quickly install Driscoll School solar project as Trump slashes clean energy tax credits' — the parent company has published nothing on the 2025 tax law"
+      ],
+      "positioning": "A regional C&I developer with a top-10 national ranking (Solar Power World 2025), competing with Nexamp, Ameresco and local EPCs rather than with anything else in this corpus.",
+      "soldThrough": "Direct sales to commercial, institutional and public-sector customers; PPA and site-lease financing; O&M contracts",
+      "targetSegments": [
+        "New England and Mid-Atlantic commercial, industrial and institutional property owners",
+        "Public entities via PowerOptions (over 200 projects)"
+      ],
+      "roadmap": "Geographic expansion into New York, New Jersey and Pennsylvania (from 2024); no capacity target published"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "SunZia Transmission (company, Hitachi Energy, WECC, CAISO and EIA figures)",
+      "specs": [
+        {
+          "band": "Line",
+          "label": "Technology",
+          "value": "'550-mile ±525 kV high-voltage direct current (HVDC) transmission line'; Hitachi Energy 'HVDC Light® technology (Voltage Source Converter-based)', '±525 kilovolt (kV) bipolar', 'Largest VSC-based HVDC installation in the United States'; MACH digital control platform"
+        },
+        {
+          "band": "Line",
+          "label": "Capacity",
+          "value": "'capacity to transport 3,000 MW'; WECC 'Accepted Rating of 3,000 MW' (Phase 3 status granted 22 May 2023); CAISO Subscriber PTO application 'transmission capacity of 3,021 MW'"
+        },
+        {
+          "band": "Line",
+          "label": "Endpoints",
+          "value": "SunZia East converter station, Corona, New Mexico, to Pinal Central 500 kV substation (SRP), Arizona; 'partially parallel the existing Western Spirit Transmission line for 35 miles'; route adjusted with the Department of Defense and White Sands Missile Range"
+        },
+        {
+          "band": "Market",
+          "label": "Scheduling",
+          "value": "CAISO 'allocation from the 550-mile line is 2,100 MW out of the total 3,650 MW capacity'; EIA: '2,131 MW designated for Southern California consumption via the Palo Verde Substation'; 'the first entity to utilize the new SPTO policy'"
+        },
+        {
+          "band": "Milestones",
+          "label": "Dates",
+          "value": "BLM ROD 23 January 2015 (original) and 18 May 2023; ROW grant 1 September 2016; construction from September 2023; 'energized in 2025 and has been undergoing testing through Q1 2026' (WECC); 'fully operational' 18 June 2026"
+        },
+        {
+          "band": "Cost",
+          "label": "Financing",
+          "value": "'$11 billion non-recourse financing' (27 December 2023): '$8.8 billion in construction and term facilities' plus 'a $2.25 billion tax equity term loan facility' (Utility Dive); HASI USD 1.2 billion structured equity; Nuveen USD 546 million preferred equity"
+        }
+      ],
+      "notes": "The line's owner is SunZia Transmission, LLC; third-party transmission providers operate the assets under FERC Standards of Conduct. No independent final cost has been published."
+    },
+    {
+      "product": "SunZia Wind (company, GE Vernova, EIA figures)",
+      "specs": [
+        {
+          "band": "Plant",
+          "label": "Capacity",
+          "value": "'approximately 3,650-megawatt (MW) wind project' (2026); '3,515 MW SunZia Wind facility' (2023 financing release); EIA '3,650 megawatts (MW)' net summer capacity from '916 wind turbines'"
+        },
+        {
+          "band": "Plant",
+          "label": "Turbines",
+          "value": "'674 of GE Vernova's workhorse turbines' (GE Vernova 3.6-154; 2.4 GW order, 2023) plus Vestas V163-4.5 (242 units per trade press)"
+        },
+        {
+          "band": "Plant",
+          "label": "Site",
+          "value": "Torrance, Lincoln and San Miguel counties, New Mexico; Blattner as EPC: 'more than 900 turbines, ten substations... more than 100 miles of wind generation transmission lines'"
+        },
+        {
+          "band": "Plant",
+          "label": "Offtake",
+          "value": "Clean Power Alliance '575 MW' 15-year; Salt River Project '600 megawatts (MW)... 400 MW... beginning this fall... 600 MW by summer of 2027'; Shell Energy North America; University of California; Ava Community Energy 'over 250 MW'; 3CE; CleanPowerSF; Riverside; SVCE"
+        },
+        {
+          "band": "Performance",
+          "label": "CAISO record",
+          "value": "7,122 MW hourly wind on 15 May 2026, 20% above the 2024 record, with SunZia contributing during testing"
+        }
+      ],
+      "notes": "Nameplate at order (3,515 MW) and reported operating capacity (3,650 MW) differ by 135 MW; no source reconciles them and both are quoted here."
+    },
+    {
+      "product": "Southern Spirit Transmission (company and Louisiana PSC figures)",
+      "specs": [
+        {
+          "band": "Line",
+          "label": "Technology and length",
+          "value": "'approximately 320-mile ±525 KV, ~3,000 MW high voltage direct current (HVDC) transmission line' (company); 'a 324-mile high voltage direct current (HVDC) transmission line that will traverse Louisiana from its Texas border to Entergy Mississippi LLC's Wolf Creek Substation in Choctaw, Mississippi' (LPSC Order U-36669)"
+        },
+        {
+          "band": "Line",
+          "label": "Stations",
+          "value": "'HVDC converter station located in Choctaw County, MS; 500kV alternating current transmission switching station in MS'; Texas connection 'by way of the Rusk to Panola Transmission Project in partnership with Garland Power & Light'"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Cost",
+          "value": "'more than $2.6 billion' (company); 'estimated total construction cost of $2.68 billion' (LPSC, 2024)"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Schedule",
+          "value": "'2029 Target Full Construction Start; 2032 Target In-Service Date' (company, 2025); 'target construction period of 2026-2029' (LPSC order, August 2024)"
+        },
+        {
+          "band": "Regulatory",
+          "label": "Authority",
+          "value": "FERC approval May 2014 'preserves ERCOT's independence'; modified negotiated-rate authority (November 2016) to allocate 100% of capacity by open solicitation; Louisiana certificate 14 August 2024 (3:2); Mississippi docket 2017-UA-79 continued; DOE TFP selection 'up to $360 million' (October 2024)"
+        }
+      ],
+      "notes": "Development began in 2015 as Southern Cross, paused around 2017 and was 'reinitiated' in 2021."
+    },
+    {
+      "product": "Western Spirit Wind and Transmission (company and PNM figures)",
+      "specs": [
+        {
+          "band": "Wind",
+          "label": "Capacity",
+          "value": "1,051 MW across Clines Corners 324 MW, Duran Mesa 105 MW, Red Cloud 350 MW and Tecolote 272 MW; '377 GE wind turbines ranging from 2.3 to 2.8 MW'; commercial operation announced 6 January 2022"
+        },
+        {
+          "band": "Transmission",
+          "label": "Line",
+          "value": "'155-mile 345 kV transmission line, developed jointly by Pattern Energy and RETA, will collect up to 800 megawatts (MW) of wind power'; energised 6 December 2021; sold to PNM — closed 13 December 2021, '$285 million net investment'"
+        }
+      ],
+      "notes": "The build-own-transfer structure — build the line, sell it to the utility, keep the transmission rights — is the template Pattern's chief development officer described for future lines."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-04",
+      "category": "project",
+      "headline": "Osgood Wind (up to 200 MW, Québec, with Connectif des Sommets and the W8banaki Nation) presented to local communities; to be bid into Hydro-Québec's 2026 call, construction 2030, operation 2032",
+      "read": "The Canadian pipeline keeps the community-ownership template that has delivered every Ontario and Québec project; Hydro-Québec's procurement is now the growth market Ontario was.",
+      "source": "https://patternenergy.com/osgood-wind-project-presented-to-local-communities/"
+    },
+    {
+      "date": "2026-09-02",
+      "category": "regulatory",
+      "headline": "BLM opens EIS scoping for Silver Rock Transmission — up to two lines, up to 600 kV, Millard County, Utah to Clark County, Nevada — with comments to 5 October 2026, after FAST-41 coverage in December 2025",
+      "read": "A data-centre-framed wire is moving on the federal fast track while the administration holds onshore wind; Pattern is reading the room.",
+      "source": "https://www.blm.gov/announcement/blm-proposes-utahnevada-transmission-line-strengthen-power-grid"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "financial",
+      "headline": "DOE's Energy Dominance Financing office closes a USD 489.4 million loan to Amanecer Puerto Rico LLC for two standalone batteries totalling 220 MW at Arecibo and Santa Isabel, with domestically sourced equipment; DOE says Pattern 'is working to deliver new gas-fired generation' for PREPA",
+      "read": "The first DOE loan to a Pattern entity, under a programme the administration re-branded — and a gas line the company's own channels do not repeat.",
+      "source": "https://www.energy.gov/edf/pattern-puerto-rico"
+    },
+    {
+      "date": "2026-07-20",
+      "category": "market",
+      "headline": "CAISO's blog calls SunZia 'a plus for reliability and affordability': the ISO's allocation is 2,100 MW of the 3,650 MW and the New Mexico wind 'strengthens during late afternoon and evening hours when solar declines'",
+      "read": "The buyer-side grid operator endorsing the merchant line's value is the best evidence SunZia's capacity will stay contracted.",
+      "source": "https://www.caiso.com/about/news/energy-matters-blog/new-sunzia-transmission-line-is-a-plus-for-reliability-and-affordability"
+    },
+    {
+      "date": "2026-07-08",
+      "category": "order-win",
+      "headline": "Salt River Project signs a 600 MW SunZia PPA — 400 MW from autumn 2026 rising to 600 MW by summer 2027 — 'one of the biggest renewable Power Purchase Agreements in America', tripling SRP's wind",
+      "read": "An Arizona anchor at the line's landing point; with CPA's 575 MW the two disclosed contracts cover about a third of the plant.",
+      "source": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/"
+    },
+    {
+      "date": "2026-07-01",
+      "category": "financial",
+      "headline": "Nuveen Energy Infrastructure Credit closes a USD 546 million preferred equity investment in SunZia, taking its and co-investors' commitments to about USD 1.5 billion across four investments including 'the preferred tax equity for SunZia North'",
+      "read": "Post-completion recapitalisation: the sponsor is replacing construction-phase capital with institutional preferred at the project level rather than at the company.",
+      "source": "https://www.prnewswire.com/news-releases/nuveen-energy-infrastructure-credit-completes-546m-preferred-equity-investment-in-sunzia-the-largest-clean-energy-project-in-us-history-302815157.html"
+    },
+    {
+      "date": "2026-06-18",
+      "category": "project",
+      "headline": "'SunZia... is fully operational': about 3,650 MW of wind and the 550-mile HVDC line, 'on time and on budget', with Hitachi Energy, GE Vernova, Vestas, Quanta, Blattner, HASI, Nuveen, RETA, CAISO and seven offtakers quoted",
+      "read": "The largest US clean-energy project completed on its 2023 schedule — the proof point every other merchant HVDC developer in the corpus now cites.",
+      "source": "https://patternenergy.com/sunzia-comes-online/"
+    },
+    {
+      "date": "2026-06-12",
+      "category": "market",
+      "headline": "EIA: SunZia is the largest US wind facility at 3,650 MW from 916 turbines, more than triple Alta Wind, with 2,131 MW designated for Southern California via Palo Verde; commercial operation slated for June 2026",
+      "read": "The independent capacity figure; it exceeds the 3,515 MW nameplate at order by 135 MW and no source explains why.",
+      "source": "https://www.eia.gov/todayinenergy/detail.php?id=67766"
+    },
+    {
+      "date": "2026-06-06",
+      "category": "policy",
+      "headline": "The US District Court for D.C. vacates IRS Notice 2025-42, restoring the 5% safe harbor for wind and solar begin-construction ahead of the 4 July 2026 OBBBA deadline",
+      "read": "Relief for the pipeline's 2026 starts (Heritage Prairie, Cordelio's Michigan and Missouri wind) — subject to appeal; the company has said nothing about the tax law on any channel.",
+      "source": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/federal-court-vacates-irs-notice-2025-42-restores-5-safe-harbor-for-wind-and-solar-projects/"
+    },
+    {
+      "date": "2026-04-02",
+      "category": "ma",
+      "headline": "Pattern completes the acquisition of Cordelio Power: about 1,550 MW across 16 wind, solar and storage projects in the US and Canada, the majority of Cordelio's US development pipeline and its team; combined capacity 'nearly 12,000 MW'; FERC-approved and effective 1 April",
+      "read": "A share-for-share purchase from the majority owner: fleet up by a quarter, CPP's stake up, no cash out — consolidation inside one pension fund's portfolio.",
+      "source": "https://patternenergy.com/pattern-energy-announces-completion-of-acquisition-of-cordelio-power/"
+    },
+    {
+      "date": "2026-03-18",
+      "category": "project",
+      "headline": "WECC's 2026 progress report: 'The SunZia Project was energized in 2025 and has been undergoing testing through Q1 2026', with in-service planned for March 2026",
+      "read": "The independent dating of energisation the company's release omits; the line was live months before the wind was declared complete.",
+      "source": "https://www.wecc.org/sites/default/files/documents/progress_report/2026/SunZia%202026%20APR.pdf"
+    },
+    {
+      "date": "2026-03-13",
+      "category": "legal",
+      "headline": "On remand from the Ninth Circuit, the Tohono O'odham Nation, San Carlos Apache Tribe, Archaeology Southwest and Center for Biological Diversity move for summary judgment asking the court to 'nullify BLM decisions authorizing construction' in the San Pedro Valley",
+      "read": "A pending remedy question over an operating line; the construction at issue is complete, so the practical exposure is mitigation, not shutdown — but no ruling exists.",
+      "source": "https://www.archaeologysouthwest.org/2026/03/18/sunzia-lawsuit-update-a-plea-for-prompt-action-by-the-u-s-district-court/"
+    },
+    {
+      "date": "2026-02-18",
+      "category": "financial",
+      "headline": "HASI's 8-K: 'our $1.2 billion investment in the Sunzia joint venture with Pattern Energy Group LP... is expected to ultimately finance over 2.6 GW of capacity and generate approximately 10 TWh annually' — the largest investment in HASI's history",
+      "read": "A listed partner's filing is the one SEC-grade disclosure of SunZia's capital stack; 2.6 GW of 3.65 is the contracted share HASI finances.",
+      "source": "https://investors.hasi.com/filings-financials/sec-filings/content/0001193125-26-056130/d21428d8k.htm"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "corporate",
+      "headline": "CPP Investments' quarterly release: the Cordelio sale 'will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing'",
+      "read": "The only ownership percentage on the record, and ambiguous — CPP alone or CPP with APG/ABP and ART; management holds the balance either way.",
+      "source": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html"
+    },
+    {
+      "date": "2026-01-06",
+      "category": "ma",
+      "headline": "Definitive agreement to acquire Cordelio Power from CPP Investments in a share-based transaction; Cordelio brings a 1,860 MW managed portfolio and an 18 GW US pipeline, of which Pattern takes about 1,550 MW and 'the majority'; advisers Evercore, Skadden and Osler (Pattern), JPMorgan (Cordelio)",
+      "read": "About 310 MW and part of the pipeline stayed behind; the deal was priced in Pattern shares, so its value is unknowable from outside.",
+      "source": "https://patternenergy.com/pattern-energy-announces-agreement-to-acquire-cordelio-power/"
+    },
+    {
+      "date": "2025-12-09",
+      "category": "regulatory",
+      "headline": "Silver Rock Transmission LLC gains FAST-41 coverage from the Federal Permitting Council — a line that 'could facilitate data center buildout in and around Las Vegas and Salt Lake City'",
+      "read": "Pattern's first explicitly data-centre-driven asset, and its first use of the accelerated federal track.",
+      "source": "https://www.permitting.gov/newsroom/press-releases/silver-rock-transmission-project-latest-gain-fast-41-coverage"
+    },
+    {
+      "date": "2025-11-18",
+      "category": "project",
+      "headline": "Cordelio's Crossover Wind (135 MW, Cross County, Arkansas) reaches commercial operation — the first operating wind project in Arkansas, 100% contracted to Microsoft for 20 years",
+      "read": "Now in Pattern's fleet: the one hyperscaler-contracted wind farm it owns, inherited rather than originated.",
+      "source": "https://www.prnewswire.com/news-releases/cordelio-power-achieves-commercial-operations-at-135-mw-crossover-wind-project-the-first-operating-wind-project-in-arkansas-302618392.html"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "financial",
+      "headline": "HASI reports closing its USD 1.2 billion structured equity investment in SunZia in October 2025, with funding expected in Q2 2026",
+      "read": "Institutional equity arrived before completion, which is why the sponsor could call the project 'on budget' without a public cost figure.",
+      "source": "https://www.hasi.com/press-release/pattern-energy-marks-full-operations-of-sunzia-with-hasi-as-a-1-2-billion-structured-equity-partner"
+    },
+    {
+      "date": "2025-09-01",
+      "category": "project",
+      "headline": "Winfield Solar (150 MWac, Lincoln County, Missouri; 100% to Microsoft for 15 years; Qcells modules made in Georgia) reaches commercial operation — an ex-Cordelio project now on Pattern's portfolio",
+      "read": "The second Microsoft contract in the fleet, and the domestic-content module choice the tax rules now reward.",
+      "source": "https://patternenergy.com/projects/winfield-solar/"
+    },
+    {
+      "date": "2025-06-09",
+      "category": "corporate",
+      "headline": "A consortium headed by APG Asset Management (for ABP) and Australian Retirement Trust closes on Riverstone Holdings' equity stake; the consortium 'is now an owner in Pattern Energy alongside Canada Pension Plan Investment Board (CPP Investments) and Pattern management'; terms undisclosed",
+      "read": "The founding private-equity backer is out after sixteen years and two pension funds are in — Pattern is now entirely long-horizon institutional and management money.",
+      "source": "https://patternenergy.com/pattern-energy-announces-closing-of-equity-investment-from-consortium-headed-by-apg-and-art/"
+    },
+    {
+      "date": "2025-05-27",
+      "category": "legal",
+      "headline": "The Ninth Circuit reverses the dismissal of the tribes' NHPA suit over SunZia: the BLM's limited notices to proceed 'constituted final agency actions' and the plaintiffs 'plausibly alleged' the Department violated the programmatic agreement",
+      "read": "The case is alive on the merits; SunZia's spokesperson said the San Pedro Valley work was 'already complete' and the project 'remains on track'.",
+      "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/05/27/24-3659.pdf"
+    },
+    {
+      "date": "2025-03-17",
+      "category": "financial",
+      "headline": "S&P Global Ratings downgrades Pattern Energy Operations L.P. to 'B+' from 'BB-' (per the ratings index; the rationale page is inaccessible from this environment)",
+      "read": "A one-notch cut on the USD 700 million 2028 notes during SunZia's peak construction spend; a further S&P item dated 8 August 2026 on USD 700 million of senior notes could not be read and may signal a refinancing.",
+      "source": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3338724"
+    },
+    {
+      "date": "2024-12-16",
+      "category": "corporate",
+      "headline": "APG (for ABP) and ART agree to buy Riverstone's stake; CPP's Bill Rogers: 'management has successfully developed 5.6 GW of renewable energy projects' since the 2020 acquisition; pipeline 'over 25 gigawatts'",
+      "read": "The pipeline figure has since been stated at 30 GW and 40 GW; the 5.6 GW developed since 2020 is the audited-feeling number.",
+      "source": "https://patternenergy.com/pattern-energy-announces-equity-investment-from-consortium-headed-by-apg-and-art/"
+    },
+    {
+      "date": "2024-10-07",
+      "category": "leadership",
+      "headline": "Matthew Rhodes joins as Chief Financial Officer from Essential Utilities (ex-Goldman Sachs managing director)",
+      "read": "A public-company CFO profile at a private company eighteen months before the ownership reshuffle — the market read it as an IPO tell; none has followed.",
+      "source": "https://patternenergy.com/pattern-energy-appoints-matthew-rhodes-as-chief-financial-officer/"
+    },
+    {
+      "date": "2024-10-03",
+      "category": "policy",
+      "headline": "DOE selects Southern Spirit for a Transmission Facilitation Program capacity contract of up to USD 360 million, one of four projects in a USD 1.5 billion round",
+      "read": "A federal anchor tenant for the ERCOT–Southeast line; whether the contract was ever executed under the next administration is not on the record.",
+      "source": "https://www.utilitydive.com/news/doe-pattern-energy-avangrid-invenergy-grid-united-transmission-facilitation-capacity/728913/"
+    },
+    {
+      "date": "2024-08-14",
+      "category": "regulatory",
+      "headline": "The Louisiana PSC certifies Southern Spirit in Order U-36669 — 3:2 on reconsideration — on condition that no design or construction cost falls on Louisiana ratepayers; the legislature's SB 108 restricting expropriation for such lines took effect the same month",
+      "read": "A certificate with a landowner law written around it; the Mississippi half is still undecided two years later.",
+      "source": "https://lpscpubvalence.lpsc.louisiana.gov/portal/PSC/ViewFile?fileId=W5uWomgBSYI%3D"
+    },
+    {
+      "date": "2024-06-18",
+      "category": "order-win",
+      "headline": "Broughton Wind (150 MW, Québec; about CAD 500 million; 50/50 with two regional municipalities and the Abenaki of Odanak and Wôlinak) signs a 30-year Hydro-Québec PPA; construction 2027, operation 2029",
+      "read": "Thirty-year provincial offtake with community co-ownership — the longest-dated contract shape in the corpus.",
+      "source": "https://patternenergy.com/pattern-energy-signs-power-purchase-agreement-for-broughton-wind-project-in-quebec/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "hitachi-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-05",
+      "via": "HVDC Light",
+      "scale": "3,000 MW",
+      "note": "HVDC converter supplier for SunZia — HVDC Light voltage-source converters at ±525 kV, 3,000 MW, 'the largest VSC-based HVDC installation in the United States'.",
+      "context": "Pattern named Hitachi Energy as SunZia's HVDC supplier in May 2023 alongside Quanta and Blattner as EPC contractors; Hitachi celebrated the line's inauguration in June 2026 as its reference for long-haul VSC HVDC in the United States. Hitachi also holds a capacity-reservation agreement with Grid United for the competing North Plains and Three Corners lines, so the same converter supplier sits behind both transmission developers in this corpus.",
+      "source": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/06/hitachi-energy-celebrates-the-inauguration-of-pattern-energy-s-sunzia-project-now-delivering-clean-reliable-power-to-millions-across-the-american-southwest"
+    },
+    {
+      "slug": "quanta-services",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-05",
+      "via": "SunZia Transmission EPC",
+      "note": "Turnkey EPC contractor for the 550-mile SunZia HVDC line; Quanta's 10-K names Pattern and SunZia among its flagship projects.",
+      "context": "Pattern's May 2023 release: 'Quanta Infrastructure Services Group' as the turnkey contractor for the 550-mile 525 kV HVDC line. Quanta's subsidiary Blattner built the wind farm, so the Quanta group delivered both halves of the project.",
+      "source": "https://patternenergy.com/pattern-energy-selects-epc-contractors-for-americas-largest-clean-energy-infrastructure-project/"
+    },
+    {
+      "slug": "blattner",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023-05",
+      "via": "SunZia Wind EPC",
+      "scale": "3,515 MW",
+      "note": "Turnkey EPC for SunZia Wind — 'more than 900 turbines, ten substations... more than 100 miles of wind generation transmission lines' — and builder of Western Spirit Wind (1,050 MW).",
+      "context": "Blattner's own record is triangulated through owners' releases, and Pattern is its largest documented customer: the 674 GE Vernova and 242 Vestas turbines at SunZia, and the four-phase Western Spirit project before it. The Blattner dossier records SunZia as fully online on 18 June 2026, consistent with Pattern's announcement.",
+      "source": "https://patternenergy.com/pattern-energy-selects-epc-contractors-for-americas-largest-clean-energy-infrastructure-project/"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "supplier",
+      "status": "active",
+      "since": "2023",
+      "via": "3.6-154 onshore turbines",
+      "scale": "674 turbines / 2.4 GW",
+      "note": "Supplier of 674 turbines (about 2.4 GW) to SunZia Wind and of the 377 turbines at Western Spirit; GE Vernova Financial Services was a joint lead arranger on SunZia's tax-equity term loan.",
+      "context": "GE Vernova's 2023 announcement of a 2.4 GW order for SunZia was its largest onshore order; Pattern's June 2026 release quotes GE Vernova on '674 of GE Vernova's workhorse turbines'. The financing role — a joint lead arranger on the USD 2.25 billion tax-equity term loan per trade coverage — makes GE Vernova both supplier and financier.",
+      "source": "https://www.gevernova.com/news/press-releases/ge-vernova-announces-2point4-gw-order-for-pattern-energy-sunzia-wind-project"
+    },
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "status": "active",
+      "since": "2025",
+      "scale": "150 MWac + 135 MW",
+      "note": "Buys 100% of Winfield Solar (150 MWac, Missouri, 15 years) and 100% of Crossover Wind (135 MW, Arkansas, 20 years) — both ex-Cordelio projects now owned by Pattern.",
+      "context": "Winfield 'sells 100% of its power to Microsoft under a 15-year contract' and reached commercial operation in September 2025; Cordelio's Crossover Wind, contracted to Microsoft for 20 years, reached commercial operation on 18 November 2025 and came to Pattern with the April 2026 acquisition. Neither was originated by Pattern; they are its only hyperscaler contracts on the record.",
+      "source": "https://patternenergy.com/projects/winfield-solar/"
+    },
+    {
+      "slug": "amazon",
+      "type": "customer",
+      "status": "active",
+      "since": "2015",
+      "scale": "150 MW",
+      "note": "Amazon Wind Farm Fowler Ridge (150 MW, Indiana, 2015) supplies Amazon Web Services under a long-term PPA.",
+      "context": "Pattern's project page describes the facility as 'helping Amazon Web Services achieve the goal of powering its operations with 100% renewable energy by 2025'. It is one of the earliest hyperscaler wind PPAs in the corpus and still in the fleet.",
+      "source": "https://patternenergy.com/portfolio/"
+    },
+    {
+      "slug": "digital-realty",
+      "type": "customer",
+      "status": "active",
+      "since": "2021",
+      "scale": "65 MWac",
+      "via": "Phoenix Solar",
+      "note": "Digital Realty takes 65 MWac of the 83 MWac Phoenix Solar facility in Fannin County, Texas, under a 12-year PPA — Pattern's first US solar project.",
+      "context": "Pattern's October 2021 release on Phoenix Solar's start of operations names 'a 65 MWac, 12-year power purchase agreement with Digital Realty'; First Solar Series 6 modules, Nextracker trackers and Mortenson as builder.",
+      "source": "https://patternenergy.com/pattern-energy-begins-operations-phoenix-solar-power-facility-texas/"
+    },
+    {
+      "slug": "grid-united",
+      "type": "competitor",
+      "status": "active",
+      "note": "The other private developer of interregional HVDC in the corpus — five pre-construction lines, family-office funded — against Pattern's operating SunZia and certificated Southern Spirit; Grid United's Southline and Pattern's SunZia and RioSol interest share the southern New Mexico–Arizona corridor, and Michael Skelly's Clean Line sold Western Spirit to Pattern.",
+      "context": "MIT Technology Review's account of Clean Line's wind-down records the sale of Western Spirit 'to Pattern Development' as one of the three asset sales before Skelly's prior company shut in 2019 — Pattern finished that line in 2021. Today both companies court the same HVDC converter capacity at Hitachi Energy and the same DOE Transmission Facilitation Program, and both have a Texas-seam line (Southern Spirit with FERC's 2014 order; Pecos West denied by the PUCT in 2023). No commercial relationship between the two is on the record.",
+      "source": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/"
+    },
+    {
+      "slug": "invenergy",
+      "type": "competitor",
+      "status": "active",
+      "note": "The other integrated renewables-and-transmission developer: Invenergy's Grain Belt Express (5,000 MW HVDC, construction from 2026) is the merchant comparable to SunZia and Southern Spirit, and both firms compete for the same DOE transmission programmes and Midwest wind sites.",
+      "context": "DOE's October 2024 Transmission Facilitation Program round selected Pattern's Southern Spirit (up to USD 360 million) and Invenergy's Cimarron Link (up to USD 306 million) in the same USD 1.5 billion package; Invenergy then lost Grain Belt's USD 4.9 billion DOE loan guarantee in July 2025 and is proceeding privately. Invenergy is founder-controlled with Blackstone and CDPQ as investors; Pattern is pension-controlled — the two ownership models for the same asset class.",
+      "source": "https://www.utilitydive.com/news/doe-pattern-energy-avangrid-invenergy-grid-united-transmission-facilitation-capacity/728913/"
+    },
+    {
+      "slug": "entergy",
+      "type": "other",
+      "status": "active",
+      "note": "Entergy Mississippi's Wolf Creek substation in Choctaw County is Southern Spirit's eastern terminus, and Entergy Mississippi testified against the line at the Mississippi PSC.",
+      "context": "The Louisiana PSC order describes Southern Spirit as running 'to Entergy Mississippi LLC's Wolf Creek Substation in Choctaw, Mississippi'. In October 2023 testimony Entergy Mississippi argued the line would 'very likely harm' its customers and that its Choctaw and Attala gas plants 'could not operate during periods with east-bound flow' — the incumbent utility as both interconnection host and opponent, which is why the Mississippi docket has been continued since 2017.",
+      "source": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/2/pattern-transmission-project-to-link-texas-grid-to-southeast-faces-hurdles-80279873"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "type": "partner",
+      "status": "active",
+      "note": "NextEra Energy Canadian Operating Services runs day-to-day operations at the ex-Cordelio Summerhaven wind and Moore solar facilities in Ontario that Pattern acquired in April 2026.",
+      "context": "Pattern Canada's project pages for Summerhaven (124 MW) say 'day-to-day operations run by NextEra Energy Canadian Operating Services' and describe Moore Solar as a 'joint venture operated by NextEra Energy Canadian Operating Services'. An operating-services relationship inherited with Cordelio, recorded because the NextEra dossier is the place a reader would look for NextEra's Canadian O&M business.",
+      "source": "https://patterncanada.ca/wp-json/wp/v2/projects?per_page=100"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC/45X — OBBBA §45Y/§48E phase-down and the begin-construction test",
+      "status": "in-effect",
+      "effectiveDate": "2025-07-04",
+      "exposure": "Under the One Big Beautiful Bill Act, wind and solar credits end for projects placed in service after 2027 unless they 'begin construction' by 4 July 2026; IRS Notice 2025-42 (August 2025) removed the 5% safe harbor for wind and large solar, and the D.C. district court vacated that notice on 6 June 2026, restoring it subject to appeal. Pattern's exposure is its US pipeline — Heritage Prairie Wind (construction from June 2026), Palomas, Lenawee, Uplands, The Shoals, Perryville, Big Island and the Michigan and Missouri wind projects it took from Cordelio. SunZia's credits are monetised through a USD 2.25 billion tax-equity term loan closed in 2023 and Nuveen's 'preferred tax equity for SunZia North'; the Nuveen release's risk language covers 'reduction, recapture, or disallowance of anticipated tax benefits'. Collection gap: no Pattern statement on OBBBA, the phase-down or FEOC exists on any company channel; the only tax-credit text is on the Solect affiliate's news feed.",
+      "source": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/federal-court-vacates-irs-notice-2025-42-restores-5-safe-harbor-for-wind-and-solar-projects/"
+    },
+    {
+      "regime": "Federal wind permitting posture (Interior secretarial orders, BLM, Pentagon/FAA reviews) and FAST-41",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "Interior's July–August 2025 orders subjected wind projects to secretarial review and a 'capacity density' test, BLM removed onshore wind projects from its pipeline in March 2026, and Pentagon and FAA reviews are reported to be holding about 250 onshore projects on private land; Third Way's tracker cites SunZia as the exception that got built. Pattern's federal-land exposure going forward is Silver State Solar (BLM land) and any New Mexico or Nevada wind and solar on public land. The same administration granted Silver Rock Transmission FAST-41 coverage in December 2025 and opened its BLM scoping in September 2026 under Executive Order 14156.",
+      "mitigation": "Pattern's stated advocacy posture — the chief executive on the American Clean Power Association board, positions at Advanced Energy United and ACORE, a political action committee — and a pipeline weighted to private land in Illinois, Michigan, Missouri, Arkansas, Louisiana and Canada.",
+      "source": "https://www.thirdway.org/blog/trumps-war-on-solar-and-wind-one-year-since-obbba"
+    },
+    {
+      "regime": "NHPA/NEPA litigation — Tohono O'odham Nation et al. v. U.S. Department of the Interior (SunZia)",
+      "status": "in-effect",
+      "effectiveDate": "2025-05-27",
+      "exposure": "The Ninth Circuit's 27 May 2025 opinion reversed the dismissal of the tribes' National Historic Preservation Act claim, holding that the BLM's two limited notices to proceed were final agency actions and that the plaintiffs plausibly alleged a failure to consult on a historic property treatment plan; on remand the plaintiffs' 13 March 2026 summary-judgment motion asks the court to nullify the BLM's construction authorisations in the San Pedro Valley. No injunction has ever issued; the line is operating. Archaeology Southwest also alleges the BLM granted the parallel RioSol line a right-of-way segment in May 2025 without tribal consultation.",
+      "mitigation": "SunZia's position, per its spokesperson: construction in the San Pedro Valley is 'already complete' and the project remains on track; the company has not published a position on remedy.",
+      "source": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/05/27/24-3659.pdf"
+    },
+    {
+      "regime": "State siting and expropriation law — Louisiana SB 108 and Mississippi PSC (Southern Spirit)",
+      "status": "in-effect",
+      "effectiveDate": "2024-08",
+      "exposure": "Louisiana's SB 108 (August 2024) restricts expropriation for transmission lines not in an RTO plan or needed for reliability and was, per Louisiana Illuminator, crafted to target Southern Spirit; the LPSC's certificate (Order U-36669, 14 August 2024) passed 3:2 on reconsideration with a landowner challenge pending and a condition that no cost falls on Louisiana ratepayers. Mississippi's docket 2017-UA-79 remained 'CONTINUED' on the PSC's March and June 2026 agendas, past the company's end-2025 target, with Entergy Mississippi in opposition. As of January 2025 Pattern had not secured rights to more than half the Louisiana–Mississippi route and had paid landowners more than USD 6 million.",
+      "mitigation": "Voluntary right-of-way acquisition; a Monroe, Louisiana office opened December 2023; the company's schedule now defers construction to 2029.",
+      "source": "https://lpscpubvalence.lpsc.louisiana.gov/portal/PSC/ViewFile?fileId=W5uWomgBSYI%3D"
+    },
+    {
+      "regime": "FERC negotiated-rate authority and the CAISO Subscriber PTO model (merchant transmission)",
+      "status": "in-effect",
+      "exposure": "SunZia's transmission is scheduled into California under the Subscriber Participating Transmission Owner model — 'the first entity to utilize the new SPTO policy' — with its capacity held by subscribers rather than allocated to all CAISO ratepayers (application January 2024, 3,021 MW; FERC Docket ER23-2917); SunZia Transmission LLC posts FERC Standards of Conduct because Pattern's marketing affiliates and the line's third-party operators must be separated, and on 1 April 2026 the line 'became affiliated with entities that employ marketing function employees' through the FERC-approved Cordelio acquisition. Southern Spirit holds FERC's May 2014 approval preserving ERCOT's independence and modified negotiated-rate authority (November 2016) to allocate all capacity by open solicitation; ERCOT and the PUCT confirmed in October 2024 that the DC tie does not bring Texas under FERC jurisdiction. Neither line sits in an Order 1920 regional plan, so neither receives regional cost allocation.",
+      "source": "https://www.caiso.com/notices/sunzia-transmission-llc-submits-new-participating-transmission-owner-application-to-california-iso"
+    },
+    {
+      "regime": "DOE Transmission Facilitation Program and Energy Dominance Financing",
+      "status": "announced",
+      "effectiveDate": "2024-10-03",
+      "exposure": "Southern Spirit was selected on 3 October 2024 for a Transmission Facilitation Program capacity contract of 'up to $360 million' — DOE as anchor customer for part of the line's capacity — and no source confirms execution under the current administration. Separately, DOE's Energy Dominance Financing office closed a USD 489.4 million loan to Amanecer Puerto Rico LLC in August 2026 for 220 MW of standalone storage, framed by DOE under 'Unleashing American Energy' with domestically sourced batteries.",
+      "mitigation": "Pattern describes Southern Spirit as 'privately funded' and has not made the federal contract a condition of the project on its own channels.",
+      "source": "https://www.energy.gov/edf/pattern-puerto-rico"
+    },
+    {
+      "regime": "Section 232 tariffs — steel and aluminium at 50%, transformer cores, and the wind-turbine investigation",
+      "status": "in-effect",
+      "effectiveDate": "2025-06-03",
+      "exposure": "Steel and aluminium duties rose to 50% on 3 June 2025 and were extended to distribution-transformer cores and laminations in August 2025; Commerce opened a Section 232 investigation into 'imports of wind turbines and their parts and components' on 13 August 2025, with analysts expecting 25–50%, and no proclamation had issued by September 2026. Exposure is the 2026–29 wind pipeline (Heritage Prairie, Palomas, Lenawee, Uplands, Broughton); SunZia's turbines were delivered before the measures. The company has not commented.",
+      "source": "https://www.utilitydive.com/news/commerce-Trump-import-tariffs-wind-turbine-probe/758375/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Hunter Armistead",
+      "title": "Chief Executive Officer (since 1 January 2023); co-founder",
+      "photo": "images/execs/pattern-energy-armistead.jpg",
+      "background": [
+        "Co-founded Pattern Energy with Mike Garland in 2009; Chief Development Officer before succeeding Garland as CEO; 'a special focus on strategy, growth, capital formation, and company culture'; board member, American Clean Power Association",
+        "Ten years overseeing Babcock & Brown's North American renewable energy business",
+        "Financing at Edison Mission Energy; project development at Conoco",
+        "BS electrical engineering, Rice University; based in Houston"
+      ]
+    },
+    {
+      "name": "Kristina Lund",
+      "title": "President (since 5 September 2023)",
+      "photo": "images/execs/pattern-energy-lund.jpg",
+      "background": [
+        "Oversees Power Operations, Commercial Origination, Distributed Generation and People",
+        "17 years at AES — President and CEO of AES Indiana and AES Ohio; Chief Product Officer, Carbon Free Energy (the Google strategic alliance); regional CFO",
+        "BA economics, Wellesley College; MBA, Harvard Business School; based in Houston"
+      ]
+    },
+    {
+      "name": "Cary Kottler",
+      "title": "Chief Development Officer",
+      "photo": "images/execs/pattern-energy-kottler.jpg",
+      "background": [
+        "Oversees 'development, origination and construction groups across the wind, solar, transmission, and energy storage sectors'; senior vice president of development for North America until 2022–23; the executive quoted on Southern Spirit's schedule",
+        "Executive Vice President, Clean Line Energy Partners — Michael Skelly's prior company, whose Western Spirit line Pattern bought and completed",
+        "Corporate attorney, Vinson & Elkins"
+      ]
+    },
+    {
+      "name": "Matthew Rhodes",
+      "title": "Chief Financial Officer (since 7 October 2024)",
+      "photo": "images/execs/pattern-energy-rhodes.jpg",
+      "background": [
+        "Corporate treasury, project finance, strategic finance, accounting, FP&A, tax and internal audit",
+        "EVP Strategy and Corporate Development, Essential Utilities (NYSE: WTRG)",
+        "Managing Director, Goldman Sachs investment banking — 'M&A and financing transactions totaling over $100Bn'; Bank of America; Duke Capital Partners",
+        "BA finance, University of Texas at Austin; MBA with honors, NYU Stern"
+      ]
+    },
+    {
+      "name": "Walter Pinto",
+      "title": "Chief Operating Officer (appeared on the leadership page April 2026; no appointment release)",
+      "photo": "images/execs/pattern-energy-pinto.jpg",
+      "background": [
+        "Focus on 'strengthening operational execution... including SunZia' and leading the Enterprise Excellence programme",
+        "Executive Vice President and COO, EnLink Midstream (chaired by Pattern's chairman Barry Davis's former company)",
+        "Career at LyondellBasell — Global Head of Capital Projects, Engineering, Turnarounds, Reliability and Maintenance; founder of PennPetChem",
+        "BE mechanical engineering, NIT Karnataka; MS, University of Wisconsin–Milwaukee; Houston"
+      ]
+    },
+    {
+      "name": "Christian Hackett",
+      "title": "Chief Investment Officer",
+      "photo": "images/execs/pattern-energy-hackett.jpg",
+      "background": [
+        "With Pattern since its 2009 founding; previously VP Finance – Head of Corporate Development, co-leading the finance execution team of M&A and project-finance professionals",
+        "Babcock & Brown North American energy business; Director at Enron",
+        "MBA finance, Kellogg School; Bachelor of Laws and Commerce, University of Queensland"
+      ]
+    },
+    {
+      "name": "Kimberly Glasspool",
+      "title": "Chief Legal Officer and Chief Compliance Officer (page updated January 2026)",
+      "photo": "images/execs/pattern-energy-glasspool.jpg",
+      "background": [
+        "Named FERC Standards of Conduct chief compliance officer for SunZia Transmission at 1088 Sansome Street, San Francisco",
+        "Managing Director, General Counsel and Chief Compliance Officer, Arroyo Investors",
+        "Managing Counsel, Cheniere Energy",
+        "JD and Bachelor of Civil Law, LSU Paul M. Hebert Law Center"
+      ]
+    },
+    {
+      "name": "Prat Sundar",
+      "title": "Chief People Officer (appeared on the leadership page March 2026)",
+      "photo": "images/execs/pattern-energy-sundar.jpg",
+      "background": [
+        "'Supporting Pattern's continued growth and the integration of Cordelio Power following the company's recent acquisition'",
+        "Ten years at ENGIE — most recently Chief Human Resources Officer for the US and Canadian business"
+      ]
+    },
+    {
+      "name": "Sarah Webster",
+      "title": "Senior Vice President, External Affairs and Market Development",
+      "photo": "images/execs/pattern-energy-webster.jpg",
+      "background": [
+        "Government affairs, communications, public engagement, regulatory and sustainability; with Pattern since 2013 and built its investor-relations function while listed (2013–2020)",
+        "InterGen; Shell; Wind Capital Group"
+      ]
+    },
+    {
+      "name": "Andre Walker",
+      "title": "Senior Vice President, Power Operations",
+      "photo": "images/execs/pattern-energy-walker.jpg",
+      "background": [
+        "'Responsible for the safe and reliable operations of Pattern's global fleet' from the Houston Operations Control Center",
+        "16 years at Calpine — VP Asset Management, VP Supply Chain, VP Investor Relations; Air Liquide America; Praxair",
+        "Chemical engineering, University of Texas at Austin; based in Houston"
+      ]
+    },
+    {
+      "name": "Justin Sabrsula",
+      "title": "Senior Vice President, Fundamentals and Enterprise Excellence",
+      "photo": "images/execs/pattern-energy-sabrsula.jpg",
+      "background": [
+        "Market fundamentals and new markets; the Enterprise Excellence programme with the COO",
+        "Head of Strategy, GE Renewable Energy Onshore Wind",
+        "Public policy, Duke University; two master's degrees, UNC Chapel Hill"
+      ]
+    },
+    {
+      "name": "Derek Price",
+      "title": "Senior Vice President, Engineering, Procurement and Construction",
+      "photo": "images/execs/pattern-energy-price.jpg",
+      "background": [
+        "With Pattern since 2013; 'more than 30 renewable energy facilities with a combined output of about four gigawatts' built; preconstruction planning for over five gigawatts and 'around 1,050 miles of new high-voltage transmission line', including SunZia and Southern Spirit",
+        "BS construction management and business administration, Minnesota State University, Mankato"
+      ]
+    },
+    {
+      "name": "Barry E. Davis",
+      "title": "Chairman of the Board (since 11 April 2024)",
+      "background": [
+        "Former Chairman and CEO, EnLink Midstream; appointed with independent director Carla Tully in April 2024 (Lord John Browne chaired at the 2022 CEO transition)",
+        "CPP Investments' Bill Rogers (Managing Director, Head of Sustainable Energies) speaks for the majority owner; no full board list is published"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Ownership and corporate capital (company, CPP Investments, rating agencies)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Take-private (2020)",
+            "actual": "CPP Investments acquired Pattern Energy Group Inc. at USD 26.75 per share in cash, 'implying an enterprise value of approximately $6.1 billion, including net debt'; closed 16 March 2020; recombined with Pattern Development (Riverstone-held) under common ownership",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Post-2020 split between CPP and Riverstone never disclosed"
+          },
+          {
+            "name": "Riverstone exit (2025)",
+            "actual": "APG Asset Management (for ABP) and Australian Retirement Trust consortium bought Riverstone's stake; agreed 16 December 2024, closed 9 June 2025; 'Financial details were not disclosed'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No CPP sell-down reported; APG and ART stake sizes unknown"
+          },
+          {
+            "name": "Cordelio share-based purchase (2026)",
+            "actual": "'This share-based transaction will increase our existing ownership stake in Pattern Energy, together with other institutional investors, to 69.1% upon closing' (CPP Investments, 13 February 2026); closed 2 April 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Ambiguous whether 69.1% is CPP alone or CPP with APG/ABP and ART; management holds the balance; share count and value undisclosed"
+          },
+          {
+            "name": "Corporate notes",
+            "actual": "USD 700 million 4.50% senior notes due 2028 issued July 2020 by Pattern Energy Operations LP (green use of proceeds; redeemed the 5.875% 2024 notes); Moody's Ba3 (2020); S&P 'BB-' affirmed March 2024, downgraded to 'B+' 17 March 2025 (index dates; pages inaccessible)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "An S&P item dated 8 August 2026 on 'Pattern Energy Operations L.P.'s $700 Million Sen[ior notes]' could not be read — possible refinancing, unverified; the 2028 notes still appear in fund holdings through August 2026"
+          }
+        ],
+        "commentary": "Collection gap: Pattern publishes no revenue, EBITDA, net income, debt or valuation. The 69.1% sentence is the only ownership number on the record, and it was written by CPP, not Pattern. Analyst consensus does not exist; 'expected' fields are left empty."
+      },
+      {
+        "period": "FY2025 (sustainability page, live 2026)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Generation",
+            "actual": "17,840 GWh, 'equal to 4.36 million people's needs'; 6,515,271 mtCO2e avoided",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Up from 17,740 GWh in 2024; SunZia was in test during the year"
+          },
+          {
+            "name": "Community payments",
+            "actual": "'$156 million total to local economies; $93 million landowner payments; $56 million property tax contributions; $7 million community sponsorships & donations'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Up from over USD 140 million in 2024 (USD 111.3 million landowner, USD 25.5 million property tax)"
+          },
+          {
+            "name": "Safety",
+            "actual": "TRIR 0.29 employees; 0.63 employees and contractors; 0.69 including affiliates",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company-reported"
+          }
+        ],
+        "commentary": "The sustainability disclosures are the only annual figures the company publishes; none is financial."
+      },
+      {
+        "period": "FY2024 (2025 Sustainability Report)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Installed capacity",
+            "actual": "6,047 MW across 32 utility-scale facilities (wind 5,664 MW; solar 383 MW; United States 3,768 MW, Canada 1,979 MW, Mexico 300 MW); 'Pattern Energy 3,695 MW (61%)' by ownership; 'excluding tax equity, Pattern owns 4,148 MW'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Pre-SunZia and pre-Cordelio; the About page now says 46 facilities and about 12 GW"
+          },
+          {
+            "name": "Generation",
+            "actual": "17,740 GWh; 6.6 million mtCO2e avoided; Scope 1 1,095 and Scope 2 9,927 mtCO2e",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company-reported"
+          },
+          {
+            "name": "Headcount",
+            "actual": "670 Pattern Energy employees plus 186 at Solect Energy and Dynamic Energy",
+            "expected": "",
+            "verdict": "inline",
+            "result": "'More than 800' in the September 2025 CEO letter"
+          },
+          {
+            "name": "Developed since 2020",
+            "actual": "'management has successfully developed 5.6 GW of renewable energy projects' since CPP's acquisition (CPP Investments, December 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The owner's own measure of the platform"
+          }
+        ],
+        "commentary": "The 61% ownership share of installed capacity, and 4,148 MW owned excluding tax equity, are the figures that describe the equity a buyer of Pattern would be valuing."
+      },
+      {
+        "period": "Project financings 2023–2026 (company and partner releases)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "SunZia",
+            "actual": "USD 11 billion non-recourse financing (27 December 2023: USD 8.8 billion construction and term facilities, USD 2.25 billion tax-equity term loan, holding-company facility with CPP participation; Deutsche Bank agent); HASI USD 1.2 billion structured equity (closed October 2025); Nuveen USD 546 million preferred equity (1 July 2026), about USD 1.5 billion across four investments with co-investors",
+            "expected": "",
+            "verdict": "inline",
+            "result": "'On time and on budget' per the company; no independent final cost"
+          },
+          {
+            "name": "Amanecer Puerto Rico",
+            "actual": "USD 489.4 million DOE Energy Dominance Financing loan (closed August 2026) for 220 MW of standalone storage",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Originally a conditional commitment for three batteries and a solar-plus-storage site"
+          },
+          {
+            "name": "Canada",
+            "actual": "Lanfine CAD 220 million project financing (2023; CAD 335 million total cost); Meikle CAD 276 million term loan plus CAD 31 million LC refinancing (December 2023); Broughton about CAD 500 million (2024, 30-year Hydro-Québec PPA)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Green-loan structures under the December 2023 Green Financing Framework"
+          },
+          {
+            "name": "Named pipeline capital (company project pages)",
+            "actual": "Heritage Prairie Wind USD 2.1 billion (with Repsol); Palomas USD 2 billion; Uplands USD 1 billion; Big Island USD 750 million; Lenawee USD 635 million; Southern Spirit 'more than $2.6 billion'; Western Spirit 'nearly $2 billion' (2021)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Developer estimates, not financings"
+          }
+        ],
+        "commentary": "Capital is raised at the project and platform level — non-recourse debt, tax equity, structured and preferred equity, DOE loans, First Nation and community co-investment — with CPP participating directly in SunZia's holding-company facility. Nothing on the record sizes corporate leverage."
+      }
+    ],
+    "commentary": "Private since March 2020; no financial statements published. Expectations fields are empty because no consensus exists."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Pattern's strategy is to own the wires as well as the plants — to originate transmission where it controls the generation that fills it — and that SunZia's completion converts that thesis from a claim into a track record. Basis: the company's own 'Pattern Transmission' framing ('30 percent of the HVDC transmission lines in the United States'), the acquisition of SunZia Transmission after being awarded its full 3,000 MW for its wind, the Western Spirit build-own-transfer precedent, and three further lines (Southern Spirit, Bolo, Silver Rock) in development.",
+    "2. **(High confidence)** We assess that Pattern is now a CPP Investments platform in substance — consolidating the fund's other North American renewables holdings (Cordelio) into it for shares — and that no exit process is under way. Basis: CPP's 69.1% statement; the share-based Cordelio deal from a wholly CPP-owned seller; the APG/ART entry as buyers of Riverstone's stake only; the absence of any sale, secondary, recapitalisation or IPO report in trade or financial press through September 2026. Collection gap: the precise split among CPP, APG/ABP, ART and management is not public.",
+    "3. **(Moderate confidence)** We assess that SunZia is financed to completion and contracted enough to service its debt, but that its equity returns are not knowable from outside. Basis: USD 11 billion of non-recourse facilities, HASI's USD 1.2 billion covering 'over 2.6 GW' of contracted capacity, Nuveen's USD 1.5 billion across four layers, and disclosed offtake of at least 1,175 MW (CPA 575, SRP 600) plus Shell, UC and six CCAs; against this, no final cost, no per-offtaker volumes, a rating-agency downgrade of the operating company in March 2025 and an unreadable August 2026 notes item.",
+    "4. **(Moderate confidence)** We assess that Southern Spirit will not start construction before 2029 and may not proceed at all in its current form. Basis: the company's own schedule slipped from 2029 in-service to 2029 construction start; no Mississippi certificate nine years after filing; an incumbent (Entergy Mississippi) opposing at the interconnection point; Louisiana's expropriation law; more than half the right-of-way unsecured as of January 2025; a DOE anchor contract no source confirms was executed. The ERCOT jurisdictional question, by contrast, is settled in the project's favour.",
+    "5. **(Moderate confidence)** We assess that the federal policy environment cuts both ways for Pattern and that the company has chosen silence over advocacy. Basis: onshore wind permitting and the OBBBA begin-construction test bear on a 2026–29 pipeline of at least 3.5 GW of named wind, while the same administration fast-tracked Silver Rock, lent USD 489 million to the Puerto Rico batteries and describes Pattern as delivering gas generation for PREPA; the company has published no statement on the tax law, tariffs or FEOC on any channel.",
+    "6. **(Low confidence)** We assess that the company's headline pipeline figure (40 GW in 2026, from 25 GW in December 2024) reflects the Cordelio addition and a broadened definition rather than 15 GW of new origination, and that the audited-feeling measure of the platform is CPP's '5.6 GW developed since 2020'. Basis: Cordelio's 'over 18,000 MW' US pipeline of which Pattern took 'the majority'; three different company figures (25, 30, 40 GW) within eighteen months with no technology or geography breakdown. Stated at low confidence because the company publishes no reconciliation."
+  ],
+  "sources": [
+    {
+      "label": "Pattern Energy — Osgood Wind project presented to local communities",
+      "url": "https://patternenergy.com/osgood-wind-project-presented-to-local-communities/",
+      "date": "2026-09-04"
+    },
+    {
+      "label": "BLM — BLM proposes Utah–Nevada transmission line to strengthen power grid (Silver Rock EIS scoping)",
+      "url": "https://www.blm.gov/announcement/blm-proposes-utahnevada-transmission-line-strengthen-power-grid",
+      "date": "2026-09-02"
+    },
+    {
+      "label": "Holland & Knight — Holland & Knight assists Pattern Energy's Amanecer Puerto Rico on $489.4 million DOE loan",
+      "url": "https://www.hklaw.com/en/news/pressreleases/2026/08/holland-knight-assists-pattern-energy-amanecer-puerto-rico",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "S&P Global Ratings — Pattern Energy Operations L.P.'s $700 million senior notes (page inaccessible from this environment)",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/11573413",
+      "date": "2026-08-08"
+    },
+    {
+      "label": "DOE Energy Dominance Financing — Pattern Puerto Rico ($489 million loan; 220 MW standalone BESS)",
+      "url": "https://www.energy.gov/edf/pattern-puerto-rico",
+      "date": "2026-08"
+    },
+    {
+      "label": "CAISO Energy Matters — New SunZia transmission line is a plus for reliability and affordability",
+      "url": "https://www.caiso.com/about/news/energy-matters-blog/new-sunzia-transmission-line-is-a-plus-for-reliability-and-affordability",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "Pattern Energy — Salt River Project to add 600 MW of wind energy to Arizona grid from SunZia",
+      "url": "https://patternenergy.com/salt-river-project-to-add-600-mw-of-wind-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "Salt River Project — SRP to add 600 MW of wind energy from Pattern Energy's SunZia project",
+      "url": "https://media.srpnet.com/salt-river-project-to-add-600-mw-of-win-d-energy-to-arizona-grid-from-pattern-energys-sunzia-project/",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "PR Newswire — Nuveen Energy Infrastructure Credit completes $546M preferred equity investment in SunZia",
+      "url": "https://www.prnewswire.com/news-releases/nuveen-energy-infrastructure-credit-completes-546m-preferred-equity-investment-in-sunzia-the-largest-clean-energy-project-in-us-history-302815157.html",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Third Way — Trump's war on solar and wind, one year since OBBBA",
+      "url": "https://www.thirdway.org/blog/trumps-war-on-solar-and-wind-one-year-since-obbba",
+      "date": "2026-07"
+    },
+    {
+      "label": "Pattern Energy — SunZia comes online, transforming power delivery in the United States",
+      "url": "https://patternenergy.com/sunzia-comes-online/",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "HA Sustainable Infrastructure Capital — Pattern Energy marks full operations of SunZia with HASI as a $1.2 billion structured equity partner",
+      "url": "https://www.hasi.com/press-release/pattern-energy-marks-full-operations-of-sunzia-with-hasi-as-a-1-2-billion-structured-equity-partner",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "Hitachi Energy — Hitachi Energy celebrates the inauguration of Pattern Energy's SunZia project",
+      "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/06/hitachi-energy-celebrates-the-inauguration-of-pattern-energy-s-sunzia-project-now-delivering-clean-reliable-power-to-millions-across-the-american-southwest",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "TechTimes — SunZia wind project goes live; single farm lifted California grid record 20 percent",
+      "url": "https://www.techtimes.com/articles/318375/20260615/sunzia-wind-project-goes-live-single-farm-lifted-california-grid-record-20-percent.htm",
+      "date": "2026-06-15"
+    },
+    {
+      "label": "EIA Today in Energy — Largest US wind farm slated to begin commercial operations (SunZia, 3,650 MW)",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67766",
+      "date": "2026-06-12"
+    },
+    {
+      "label": "RTO Insider — Massive SunZia wind project starts commercial operation",
+      "url": "https://www.rtoinsider.com/133829-massive-sunzia-wind-project-starts-commercial-operation/",
+      "date": "2026-06-05"
+    },
+    {
+      "label": "McGuireWoods — Federal court vacates IRS Notice 2025-42, restores 5% safe harbor for wind and solar",
+      "url": "https://www.mcguirewoods.com/client-resources/alerts/2026/6/federal-court-vacates-irs-notice-2025-42-restores-5-safe-harbor-for-wind-and-solar-projects/",
+      "date": "2026-06"
+    },
+    {
+      "label": "HVDC World — SunZia HVDC wind corridor reaches commercial operation",
+      "url": "https://hvdcworld.com/news/sunzia-hvdc-wind-corridor-reaches-commercial-operation",
+      "date": "2026-06"
+    },
+    {
+      "label": "Shaw Local — $2.6B Heritage Prairie renewable project in Kankakee and Livingston counties on schedule",
+      "url": "https://www.shawlocal.com/daily-journal/2026/05/30/26b-heritage-prairie-renewable-project-in-kankakee-and-livingston-counties-on-schedule/",
+      "date": "2026-05-30"
+    },
+    {
+      "label": "Windtech International — Pattern Energy completes acquisition of Cordelio Power",
+      "url": "https://www.windtech-international.com/company-news/pattern-energy-completes-acquisition-of-cordelio-power",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces completion of acquisition of Cordelio Power",
+      "url": "https://patternenergy.com/pattern-energy-announces-completion-of-acquisition-of-cordelio-power/",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Cordelio Power — Pattern Energy announces completion of acquisition of Cordelio Power",
+      "url": "https://cordeliopower.com/pattern_energy_announces_completion_of_acquisition_of_cordelio_power/",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Pattern Energy — Broughton Wind project: highlights from the open house and upcoming events",
+      "url": "https://patternenergy.com/broughton-wind-project-highlights-from-the-open-house-and-upcoming-events/",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "Archaeology Southwest — SunZia lawsuit update: a plea for prompt action by the U.S. District Court",
+      "url": "https://www.archaeologysouthwest.org/2026/03/18/sunzia-lawsuit-update-a-plea-for-prompt-action-by-the-u-s-district-court/",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "WECC — SunZia 2026 Annual Progress Report (energized 2025; testing through Q1 2026)",
+      "url": "https://www.wecc.org/sites/default/files/documents/progress_report/2026/SunZia%202026%20APR.pdf",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "HA Sustainable Infrastructure Capital — Form 8-K, Item 8.01 ($1.2 billion SunZia joint venture with Pattern Energy Group LP)",
+      "url": "https://investors.hasi.com/filings-financials/sec-filings/content/0001193125-26-056130/d21428d8k.htm",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "CPP Investments via Canada Newswire — Net assets total $780.7 billion at third quarter fiscal 2026 (Cordelio sale; 69.1%)",
+      "url": "https://www.newswire.ca/news-releases/cpp-investments-net-assets-total-780-7-billion-at-third-quarter-fiscal-2026-832201322.html",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Pattern Energy — 2025 Climate Risk and Resilience Report",
+      "url": "https://patternenergy.com/wp-content/uploads/2026/02/2025-Pattern-ClimateRiskandResilienceReport-Final.pdf",
+      "date": "2026-02"
+    },
+    {
+      "label": "Industrial Info — Pattern Energy obtains active renewables projects in Cordelio acquisition",
+      "url": "https://www.industrialinfo.com/iirenergy/industry-news/article/pattern-energy-obtains-active-renewables-projects-in-cordelio-acquisition--351533",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces agreement to acquire Cordelio Power",
+      "url": "https://patternenergy.com/pattern-energy-announces-agreement-to-acquire-cordelio-power/",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "Cordelio Power — Pattern Energy announces agreement to acquire Cordelio Power",
+      "url": "https://cordeliopower.com/pattern_energy_announces_agreement_to_acquire_cordelio_power/",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "Federal Permitting Improvement Steering Council — Silver Rock Transmission project latest to gain FAST-41 coverage",
+      "url": "https://www.permitting.gov/newsroom/press-releases/silver-rock-transmission-project-latest-gain-fast-41-coverage",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "PR Newswire — BrightNight and Cordelio Power announce financial close on Greenwater 200 MW / 800 MWh BESS",
+      "url": "https://www.prnewswire.com/news-releases/brightnight-and-cordelio-power-announce-financial-close-on-greenwater-200-mw--800-mwh-battery-energy-storage-system-in-pierce-county-washington-302631838.html",
+      "date": "2025-12-03"
+    },
+    {
+      "label": "PR Newswire — Cordelio Power achieves commercial operations at 135 MW Crossover Wind, the first operating wind project in Arkansas",
+      "url": "https://www.prnewswire.com/news-releases/cordelio-power-achieves-commercial-operations-at-135-mw-crossover-wind-project-the-first-operating-wind-project-in-arkansas-302618392.html",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "HA Sustainable Infrastructure Capital — Q3 2025 results ($1.2 billion SunZia structured equity closed)",
+      "url": "https://greenstocksresearch.com/hasi-sunzia-wind-1-2-billion-investment/",
+      "date": "2025-11"
+    },
+    {
+      "label": "Pattern Energy — 2025 Sustainability (ESG) Report (FY2024 data)",
+      "url": "https://patternenergy.com/wp-content/uploads/2025/09/Pattern-Energy-2025-ESG-Report.pdf",
+      "date": "2025-09"
+    },
+    {
+      "label": "Utility Dive — Commerce launches Section 232 tariff probe on wind turbines",
+      "url": "https://www.utilitydive.com/news/commerce-Trump-import-tariffs-wind-turbine-probe/758375/",
+      "date": "2025-08-22"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces closing of equity investment from consortium headed by APG and ART",
+      "url": "https://patternenergy.com/pattern-energy-announces-closing-of-equity-investment-from-consortium-headed-by-apg-and-art/",
+      "date": "2025-06-09"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — Pattern Energy announces closing of equity investment from consortium headed by APG and ART",
+      "url": "https://finance.yahoo.com/news/pattern-energy-announces-closing-equity-120000129.html",
+      "date": "2025-06-09"
+    },
+    {
+      "label": "KTAR — SunZia appeals court ruling: SunZia and Interior statements",
+      "url": "https://ktar.com/arizona-news/sunzia-project-appeals-court-energy/5711522/",
+      "date": "2025-05-30"
+    },
+    {
+      "label": "Ninth Circuit — Tohono O'odham Nation v. U.S. Department of the Interior, No. 24-3659, opinion",
+      "url": "https://cdn.ca9.uscourts.gov/datastore/opinions/2025/05/27/24-3659.pdf",
+      "date": "2025-05-27"
+    },
+    {
+      "label": "S&P Global Ratings — Pattern Energy Operations L.P. downgraded to 'B+' (page inaccessible from this environment)",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3338724",
+      "date": "2025-03-17"
+    },
+    {
+      "label": "WECC — SunZia 2025 Annual Progress Report (Accepted Rating 3,000 MW; in-service November 2025 plan)",
+      "url": "https://www.wecc.org/sites/default/files/documents/progress_report/2025/SunZia%202025%20APR.pdf",
+      "date": "2025-03"
+    },
+    {
+      "label": "Houston Chronicle — Southern Spirit could connect ERCOT to the Southeast (schedule, right-of-way, Mississippi target)",
+      "url": "https://www.houstonchronicle.com/projects/2025/southern-spirit-transmission-line-texas/",
+      "date": "2025"
+    },
+    {
+      "label": "Sidley Austin — Sidley represents consortium headed by APG and ART to acquire Riverstone Holdings' equity stake in Pattern Energy",
+      "url": "https://www.sidley.com/en/newslanding/newsannouncements/2024/12/sidley-represents-consortium-headed-by-apg-and-art-to-acquire-riverstone-holdings-equity-stake",
+      "date": "2024-12-16"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces equity investment from consortium headed by APG and ART",
+      "url": "https://patternenergy.com/pattern-energy-announces-equity-investment-from-consortium-headed-by-apg-and-art/",
+      "date": "2024-12-16"
+    },
+    {
+      "label": "Business Wire — Pattern Energy announces equity investment from consortium headed by APG and ART (wire URL; 403 from this environment)",
+      "url": "https://www.businesswire.com/news/home/20241216514741/en/Pattern-Energy-Announces-Equity-Investment-from-Consortium-Headed-by-APG-and-ART",
+      "date": "2024-12-16"
+    },
+    {
+      "label": "RTO Insider — ERCOT, PUC: Southern Spirit does not interconnect Texas",
+      "url": "https://www.rtoinsider.com/89538-ercot-puc-southern-spirit-does-not-interconnect-texas/",
+      "date": "2024-10-15"
+    },
+    {
+      "label": "Utility Dive — DOE selects Pattern, Avangrid, Invenergy, Grid United projects for $1.5B in transmission capacity contracts",
+      "url": "https://www.utilitydive.com/news/doe-pattern-energy-avangrid-invenergy-grid-united-transmission-facilitation-capacity/728913/",
+      "date": "2024-10-04"
+    },
+    {
+      "label": "MIT Technology Review — Why one developer won't quit fighting to connect the US's grids (Clean Line sold Western Spirit to Pattern Development)",
+      "url": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/",
+      "date": "2024-09-25"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy appoints Matthew Rhodes as Chief Financial Officer",
+      "url": "https://patternenergy.com/pattern-energy-appoints-matthew-rhodes-as-chief-financial-officer/",
+      "date": "2024-09-12"
+    },
+    {
+      "label": "Louisiana Public Service Commission — Order No. U-36669 (Southern Spirit Transmission certification)",
+      "url": "https://lpscpubvalence.lpsc.louisiana.gov/portal/PSC/ViewFile?fileId=W5uWomgBSYI%3D",
+      "date": "2024-08-14"
+    },
+    {
+      "label": "Utility Dive — FERC approves RioSol capacity solicitation plan (Pattern to participate)",
+      "url": "https://www.utilitydive.com/news/ferc-capacity-solicitation-riosol-transmission-sunzia-pattern-nextera-lake-erie/720818/",
+      "date": "2024-07-09"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy signs power purchase agreement for Broughton Wind project in Québec",
+      "url": "https://patternenergy.com/pattern-energy-signs-power-purchase-agreement-for-broughton-wind-project-in-quebec/",
+      "date": "2024-06-18"
+    },
+    {
+      "label": "Louisiana Illuminator — Law helps wealthy landowner in fight against power-line builder (SB 108)",
+      "url": "https://lailluminator.com/2024/05/30/power-line/",
+      "date": "2024-05-30"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy appoints Barry E. Davis and Carla Tully to board of directors",
+      "url": "https://patternenergy.com/pattern-energy-appoints-barry-e-davis-and-carla-tully-to-board-of-directors/",
+      "date": "2024-04-12"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy closes over CAD 300 million refinancing of Meikle Wind",
+      "url": "https://patternenergy.com/pattern-energy-closes-over-cad-300-million-refinancing-of-meikle-wind/",
+      "date": "2024-02-07"
+    },
+    {
+      "label": "S&P Global Market Intelligence — Pattern transmission project to link Texas grid to Southeast faces hurdles (Entergy Mississippi testimony)",
+      "url": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/2/pattern-transmission-project-to-link-texas-grid-to-southeast-faces-hurdles-80279873",
+      "date": "2024-02"
+    },
+    {
+      "label": "CAISO — SunZia Transmission LLC submits new Participating Transmission Owner application (Subscriber PTO, 3,021 MW)",
+      "url": "https://www.caiso.com/notices/sunzia-transmission-llc-submits-new-participating-transmission-owner-application-to-california-iso",
+      "date": "2024-01-24"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy closes $11 billion financing of largest clean energy infrastructure project in U.S. history",
+      "url": "https://patternenergy.com/pattern-energy-closes-11-billion-financing-of-largest-clean-energy-infrastructure-project-in-u-s-history/",
+      "date": "2023-12-27"
+    },
+    {
+      "label": "Utility Dive — Pattern Energy secures $11B in financing, starts full construction on SunZia wind, transmission projects",
+      "url": "https://www.utilitydive.com/news/pattern-energy-sunzia-transmission-wind/703508/",
+      "date": "2023-12-27"
+    },
+    {
+      "label": "Pattern Energy — Green Financing Framework (December 2023)",
+      "url": "https://patternenergy.com/wp-content/uploads/2023/12/Pattern-Energy-Green-Financing-Framework-Dec-2023.pdf",
+      "date": "2023-12"
+    },
+    {
+      "label": "Pattern Energy — CPA to serve Southern California with record amounts of wind power from SunZia (575 MW, 15 years)",
+      "url": "https://patternenergy.com/cpa-to-serve-southern-california-with-record-amounts-of-wind-power-secured-from-largest-renewable-energy-infrastructure-project-in-u-s-history/",
+      "date": "2023-11-06"
+    },
+    {
+      "label": "Pattern Energy — Southern Spirit Transmission general fact sheet",
+      "url": "https://patternenergy.com/wp-content/uploads/2023/11/10112023-SST_General_Factsheet.pdf",
+      "date": "2023-10"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy's SunZia Transmission project receives authorization to begin construction from U.S. Department of the Interior",
+      "url": "https://patternenergy.com/pattern-energys-sunzia-transmission-project-receives-authorization-to-begin-construction-from-u-s-department-of-interior/",
+      "date": "2023-09-01"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces the appointment of Kristina Lund as President",
+      "url": "https://patternenergy.com/pattern-energy-announces-the-appointment-of-kristina-lund-as-president/",
+      "date": "2023-08-10"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy closes sale of Japanese assets",
+      "url": "https://patternenergy.com/pattern-energy-closes-sale-of-japanese-assets/",
+      "date": "2023-08-04"
+    },
+    {
+      "label": "JERA — Completion of acquisition of Green Power Investment Corporation shares",
+      "url": "https://www.jera.co.jp/en/news/notice/20230803_1622",
+      "date": "2023-08-03"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy begins operations at Lanfine Wind project in Alberta",
+      "url": "https://patternenergy.com/pattern-energy-begins-operations-at-lanfine-wind-project-in-alberta/",
+      "date": "2023-07-11"
+    },
+    {
+      "label": "PR Newswire — Pattern Energy opens new Houston location in Montrose",
+      "url": "https://www.prnewswire.com/news-releases/pattern-energy-opens-new-houston-location-in-montrose-301850657.html",
+      "date": "2023-06-14"
+    },
+    {
+      "label": "Pattern Energy — Pattern receives route approval for SunZia Transmission project (BLM record of decision)",
+      "url": "https://patternenergy.com/pattern-receives-route-approval-for-sunzia-transmission-project/",
+      "date": "2023-05-18"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy signs power purchase agreements for largest wind project in U.S. history (Shell Energy, UC)",
+      "url": "https://patternenergy.com/pattern-energy-signs-power-purchase-agreements-for-largest-wind-project-in-u-s-history/",
+      "date": "2023-05-15"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy selects EPC contractors for America's largest clean energy infrastructure project (Quanta, Blattner, Hitachi Energy)",
+      "url": "https://patternenergy.com/pattern-energy-selects-epc-contractors-for-americas-largest-clean-energy-infrastructure-project/",
+      "date": "2023-05-04"
+    },
+    {
+      "label": "Hitachi Energy — Hitachi Energy the partner of choice for largest-ever HVDC wind energy project in U.S.",
+      "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2023/05/hitachi-energy-the-partner-of-choice-for-largest-ever-hvdc-wind-energy-project-in-u-s",
+      "date": "2023-05"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces $20.5 billion in anticipated economic impact from SunZia",
+      "url": "https://patternenergy.com/pattern-energy-announces-20-5-billion-in-anticipated-economic-impact-from-sunzia-transmission-and-wind-projects/",
+      "date": "2023-04-04"
+    },
+    {
+      "label": "GE Vernova — GE Vernova announces 2.4 GW order for Pattern Energy SunZia wind project",
+      "url": "https://www.gevernova.com/news/press-releases/ge-vernova-announces-2point4-gw-order-for-pattern-energy-sunzia-wind-project",
+      "date": "2023"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy announces appointment of Hunter Armistead as CEO",
+      "url": "https://patternenergy.com/pattern-energy-announces-appointment-of-hunter-armistead-as-ceo/",
+      "date": "2022-12-02"
+    },
+    {
+      "label": "Pattern Energy — SunZia Transmission receives key approvals in Arizona and New Mexico",
+      "url": "https://patternenergy.com/pattern-energys-sunzia-transmission-project-receives-key-approvals-in-arizona-and-new-mexico/",
+      "date": "2022-11-15"
+    },
+    {
+      "label": "PR Newswire — Pattern Energy acquires SunZia Transmission project",
+      "url": "https://www.prnewswire.com/news-releases/pattern-energy-acquires-sunzia-transmission-project-301587906.html",
+      "date": "2022-07-18"
+    },
+    {
+      "label": "Pattern Energy — Interview: Pattern executive outlines transmission development plans to connect wind farms in the Southwest (Kottler)",
+      "url": "https://patternenergy.com/interview-pattern-executive-outlines-transmission-development-plans-to-connect-wind-farms-in-the-southwest/",
+      "date": "2022-05-24"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy completes construction of largest single-phase renewable energy project in U.S. history (Western Spirit Wind)",
+      "url": "https://patternenergy.com/pattern-energy-completes-construction-largest-single-phase-renewable-energy-project-us-history/",
+      "date": "2022-01-06"
+    },
+    {
+      "label": "PR Newswire — PNM completes purchase of Western Spirit Transmission line ($285 million)",
+      "url": "https://www.prnewswire.com/news-releases/pnm-completes-purchase-of-western-spirit-transmission-line-301442855.html",
+      "date": "2021-12-13"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy and RETA announce energization of Western Spirit Transmission line",
+      "url": "https://patternenergy.com/pattern-energy-and-reta-announce-energization-western-spirit-transmission-line-new-mexico/",
+      "date": "2021-12-06"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy begins operations at Phoenix Solar power facility in Texas (Digital Realty PPA)",
+      "url": "https://patternenergy.com/pattern-energy-begins-operations-phoenix-solar-power-facility-texas/",
+      "date": "2021-10-12"
+    },
+    {
+      "label": "PR Newswire — Pattern Energy and Uniper sign long-term power purchase agreement for New Mexico wind project",
+      "url": "https://www.prnewswire.com/news-releases/pattern-energy-and-uniper-sign-long-term-power-purchase-agreement-for-new-mexico-wind-project-301297497.html",
+      "date": "2021-05-24"
+    },
+    {
+      "label": "PR Newswire — Cordelio Power sells 49% stake in Ontario renewable power portfolio to Axium Infrastructure",
+      "url": "https://www.prnewswire.com/news-releases/cordelio-power-sells-49-stake-in-ontario-renewable-power-portfolio-to-axium-infrastructure-301205508.html",
+      "date": "2021-01-12"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy Operations announces proposed offering of senior notes and conditional redemption of existing notes due 2024",
+      "url": "https://patternenergy.com/pattern-energy-operations-announces-proposed-offering-senior-notes-and-conditional-redemption-pattern-energy-group-incs-existing/",
+      "date": "2020-07-13"
+    },
+    {
+      "label": "Yahoo Finance / Moody's — Moody's assigns Ba3 to Pattern Energy Operations LP's senior notes",
+      "url": "https://finance.yahoo.com/news/pattern-energy-operations-lp-moodys-204608817.html",
+      "date": "2020-07"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy and Canada Pension Plan Investment Board complete transaction",
+      "url": "https://patternenergy.com/pattern-energy-and-canada-pension-plan-investment-board-complete-transaction/",
+      "date": "2020-03-16"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy enters agreement to be acquired by Canada Pension Plan Investment Board",
+      "url": "https://patternenergy.com/pattern-energy-enters-agreement-to-be-acquired-by-canada-pension-plan-investment-board/",
+      "date": "2019-11-04"
+    },
+    {
+      "label": "Pattern Energy — Pattern Energy Group Inc. completes US$352 million initial public offering",
+      "url": "https://patternenergy.com/pattern-energy-group-inc-completes-us352-million-initial-public-offering/",
+      "date": "2013-10-02"
+    },
+    {
+      "label": "Pattern Energy — Home",
+      "url": "https://patternenergy.com/"
+    },
+    {
+      "label": "Pattern Energy — About and executive leadership",
+      "url": "https://patternenergy.com/about/"
+    },
+    {
+      "label": "Pattern Energy — Careers ('Headquartered in San Francisco')",
+      "url": "https://patternenergy.com/careers/"
+    },
+    {
+      "label": "Pattern Energy — Vendor portal (Pattern Energy Group Services LP, 1088 Sansome Street)",
+      "url": "https://patternenergy.com/vendor-portal/"
+    },
+    {
+      "label": "Pattern Energy — SunZia FERC Standards of Conduct",
+      "url": "https://patternenergy.com/sunzia-ferc-standards-of-conduct/"
+    },
+    {
+      "label": "Pattern Energy — Pattern Transmission",
+      "url": "https://patternenergy.com/transmission/"
+    },
+    {
+      "label": "Pattern Energy — Sustainability (2025 metrics)",
+      "url": "https://patternenergy.com/sustainability/"
+    },
+    {
+      "label": "Pattern Energy — Portfolio",
+      "url": "https://patternenergy.com/portfolio/"
+    },
+    {
+      "label": "Pattern Energy — SunZia project page",
+      "url": "https://patternenergy.com/projects/sunzia/"
+    },
+    {
+      "label": "Pattern Energy — Southern Spirit Transmission project page",
+      "url": "https://patternenergy.com/projects/southern-spirit-transmission/"
+    },
+    {
+      "label": "Pattern Energy — Bolo Transmission project page",
+      "url": "https://patternenergy.com/projects/bolo-transmission/"
+    },
+    {
+      "label": "Bolo Transmission — Open solicitation (postponed until further notice)",
+      "url": "https://bolo-os.com/"
+    },
+    {
+      "label": "Pattern Energy — Silver Rock Transmission project page",
+      "url": "https://patternenergy.com/projects/silver-rock-transmission/"
+    },
+    {
+      "label": "Pattern Energy — Western Spirit Wind project page",
+      "url": "https://patternenergy.com/projects/western-spirit-wind/"
+    },
+    {
+      "label": "Pattern Energy — Winfield Solar project page (Microsoft, 15 years)",
+      "url": "https://patternenergy.com/projects/winfield-solar/"
+    },
+    {
+      "label": "Pattern Energy — Solect Energy affiliate page",
+      "url": "https://patternenergy.com/projects/solect/"
+    },
+    {
+      "label": "Pattern Energy — California presence page ('San Francisco, Global HQ')",
+      "url": "https://patternenergy.com/projects/california/"
+    },
+    {
+      "label": "Pattern Canada — Home",
+      "url": "https://patterncanada.ca/"
+    },
+    {
+      "label": "Pattern Canada — Projects (REST API: Bluewater, Jericho, Summerhaven, Conestogo, Moore)",
+      "url": "https://patterncanada.ca/wp-json/wp/v2/projects?per_page=100"
+    },
+    {
+      "label": "Solect Energy — Home",
+      "url": "https://solect.com/"
+    },
+    {
+      "label": "Cordelio Power — Glacier Sands project page",
+      "url": "https://cordeliopower.com/project/glacier-sands/"
+    },
+    {
+      "label": "ERCOT — Southern Cross Transmission: PUCT directives",
+      "url": "https://www.ercot.com/mktrules/puctDirectives/southernCross"
+    },
+    {
+      "label": "Mississippi PSC — June 2026 utility docket (2017-UA-79 continued)",
+      "url": "https://www.psc.ms.gov/sites/default/files/2026-07/June2026UtilityDocket.pdf"
+    },
+    {
+      "label": "Wikipedia — SunZia Wind and Transmission (permit and litigation timeline)",
+      "url": "https://en.wikipedia.org/wiki/SunZia_Wind_and_Transmission"
+    },
+    {
+      "label": "SEC EDGAR full-text search — 'Pattern Energy', Form D 2024–2026 (zero hits)",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22Pattern%20Energy%22&forms=D&dateRange=custom&startdt=2024-01-01&enddt=2026-09-12"
+    }
+  ],
+  "lastUpdated": "2026-09-12",
+  "profileVersion": 1
+}

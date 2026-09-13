@@ -1,0 +1,443 @@
+{
+ "schemaVersion": 2,
+ "slug": "grid-united",
+ "title": "Grid United — Technology Study Guide",
+ "lastUpdated": "2026-09-12",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: three grids, and the seams between them",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Grid United builds one product — a high-voltage direct-current line that joins two grids which cannot otherwise touch — and sells it in slices to the utilities on each side. This guide teaches why such a line is worth anything, why it is so hard to pay for, and what every step between a land option and an energised converter station actually is.",
+   "ps": [
+    "The United States does not have a national grid. It has {{three interconnections}} — East, West and Texas — each a single synchronised machine inside, each electrically deaf to the other two. Alternating current cannot cross the seam; only a {{DC tie}} can, and the country has a handful of them, most of them small and decades old.",
+    "A company that develops a 3,000 MW link across a seam is therefore selling something new: the ability for a winter storm in one grid to be met by spare capacity in another. Grid United owns no power plant and takes no view on what flows. Its product is a permitted, land-secured corridor with converter stations at each end, and its customers are the utilities that will own it.",
+    "The sequence: why the seams exist and why DC is the only way across; what a connector is worth and how that value is measured; the three ways a line gets paid for and why Grid United chose the hardest; what it costs to develop one before anyone commits; the permits, in order; how to read the partner agreements; and the industry map."
+   ]
+  },
+  {
+   "id": "three-grids",
+   "title": "Why alternating current stops at the seam",
+   "kind": "prose",
+   "read": "A synchronised grid is a machine spinning in lockstep. Two such machines cannot be wired together unless they spin identically, and the East, West and Texas grids do not.",
+   "ps": [
+    "Every generator on an alternating-current grid turns at a speed locked to the grid's frequency — sixty cycles a second in North America — and every one of them is pulled into step with the others by the wires between them. That lockstep is what makes a grid one machine: a plant tripping in Ohio is felt, instantly and slightly, in Florida. The Eastern Interconnection, the Western Interconnection and {{ERCOT}} each hold that lockstep internally, but they were never synchronised with each other, and connecting two out-of-step machines with an AC line would be like clutching two engines together at different speeds.",
+    "Direct current has no cycle to match. A {{converter station}} at one end turns the sending grid's AC into DC; a second station at the other end turns it back into AC in step with the receiving grid. The two grids never see each other — only the DC link, which can be a few metres of busbar in a {{DC tie}} or, in Grid United's case, four hundred miles of overhead line. That is why every project the company lists — North Plains, Three Corners, Pecos West, Wyoming Intertie — is a seam crossing, and why each one needs converter stations rather than transformers.",
+    "The asymmetry matters commercially. Inside an interconnection a new line is planned by the regional operator — {{MISO}}, {{SPP}}, the Western planners — and paid for by the customers it benefits. A line across the seam belongs to no single planner, sits in no one's plan and has no default way to be paid for. The scarcity is real (the {{interregional transfer capability}} between the East and West is a fraction of one per cent of either grid's peak) and so is the institutional gap."
+   ]
+  },
+  {
+   "id": "why-hvdc",
+   "title": "How an HVDC line works, and what the converter stations do",
+   "kind": "prose",
+   "read": "Over long distances DC moves more power through the same corridor with lower losses, and modern converters can hold the receiving grid up rather than lean on it. The price is two large, expensive stations.",
+   "ps": [
+    "An overhead line loses power as heat in proportion to the square of the current. Raising voltage cuts current for the same power, which is why bulk transmission runs at hundreds of kilovolts. AC lines pay a second cost that DC does not: the line's own capacitance and inductance soak up reactive current, so an AC line's useful reach shrinks with length and it needs compensating equipment every hundred miles or so. A ±525 kV {{HVDC}} line carries 3,000 MW on a single pair of conductors with none of that, which is why a 420-mile seam crossing is DC and why the company's Southline — a 280-mile line inside the Western grid — is AC.",
+    "The converters are the technology choice. A {{line-commutated converter}} is the older, cheaper type; it needs a strong AC grid at each end to switch against and cannot restart a dead grid. A {{voltage source converter}} switches on command, controls real and reactive power independently, can black-start and can feed a weak grid — which is what a converter landing in rural North Dakota or the Oklahoma Panhandle needs. North Plains and Three Corners are specified as VSC {{bipole}} links: two conductors at opposite polarity, each able to carry half the power alone, so the loss of one pole halves the flow instead of stopping it.",
+    "The stations are the long-lead item. Converter transformers, valve halls and control systems come from a handful of suppliers with order books measured in years, which is why Grid United signed a portfolio-wide capacity reservation with Hitachi Energy in March 2024 — before any of its lines held a permit — and an engineering agreement for the North Plains station specifications in October 2025. On the record, the reservation is the company's most valuable commercial asset after its land; its terms are not disclosed."
+   ]
+  },
+  {
+   "id": "what-a-connector-is-worth",
+   "title": "What a seam connector is worth, and how the value is counted",
+   "kind": "table",
+   "read": "The line earns nothing by itself. Its value is what the two grids save by leaning on each other, and each way of counting that value points at a different payer.",
+   "intro": "North Plains Connector's own benefits study credits it with more capacity value than the line's rating, because a 3,000 MW link counts in three regions at once. Read each row as: the kind of value, how it is measured, and who would pay for it if anyone did. Terms: {{weather diversity}}, {{ELCC}}, {{congestion}}, {{planning reserve margin}}.",
+   "cols": [
+    "Kind of value",
+    "How it is measured",
+    "What North Plains claims",
+    "Who captures it"
+   ],
+   "rows": [
+    [
+     "**Reliability during extreme weather**",
+     "Loss-of-load modelling with and without the line; the line's effective load carrying capability in each region",
+     "Astrapé's study: 1,800 MW of ELCC in the West, 1,350 MW in SPP, 400 MW in MISO — 'greater than 3,000 MW' in total, because cold snaps and heat waves do not hit all three at once",
+     "Every customer in each region, through a lower reserve requirement — none of whom pays for the line unless a regulator makes them"
+    ],
+    [
+     "**Cheaper energy**",
+     "Hourly price differences between the two ends; the volume that would flow from the cheap side to the dear side",
+     "DOE's 2026 needs study finds cross-interconnection links have 'some of the highest potential for transmission congestion value'",
+     "Whoever holds capacity rights on the line — the utilities that own a slice"
+    ],
+    [
+     "**Access to a resource the other side lacks**",
+     "Capacity factor and cost of generation on the far side versus new build at home",
+     "Pacific Northwest hydro and wind meeting Plains wind and coal-era transmission at Colstrip; the line 'will transport electrical power of all generation sources'",
+     "The subscribing utility, which avoids building a plant"
+    ],
+    [
+     "**Deferred grid investment**",
+     "Local upgrades and peakers the region can postpone",
+     "Named in the company's testimony as the benefit that 'accrues to customers who do not pay for the project'",
+     "Regional customers — the free-rider problem the developer cannot solve"
+    ]
+   ]
+  },
+  {
+   "id": "who-pays",
+   "title": "Three ways to pay for a line across a seam",
+   "kind": "proscons",
+   "read": "Inside a region the operator plans the line and allocates its cost. Across a seam nobody does, so the developer must choose between selling capacity, selling ownership, or persuading the government to be its first customer.",
+   "intro": "Grid United combines the second and third. Read each shape for who carries the risk before the line is built. Terms: {{Order 1920}}, {{cost allocation}}, {{merchant transmission}}, {{negotiated-rate authority}}, {{participant funding}}, {{Transmission Facilitation Program}}.",
+   "cards": [
+    {
+     "t": "**Regional planning and cost allocation**",
+     "meta": "The operator picks the line; every beneficiary pays through the tariff",
+     "adv": [
+      "Cost recovery is assured once the line is in the plan",
+      "No customer book to assemble"
+     ],
+     "dis": [
+      "Seam-crossing lines fall between planners and are rarely selected",
+      "Order 1920 governs regions, not the seams between them"
+     ]
+    },
+    {
+     "t": "**Merchant line under negotiated rates**",
+     "meta": "The developer sells capacity at contract prices after an open solicitation",
+     "adv": [
+      "No regulator decides who benefits",
+      "Upside if the price spread is wide"
+     ],
+     "dis": [
+      "Financing needs long-term subscribers before construction",
+      "Lenders discount merchant revenue; Grain Belt lost its federal loan guarantee"
+     ]
+    },
+    {
+     "t": "**Participant funding — utility-owned slices**",
+     "meta": "Utilities buy ownership shares sized to the capacity they want; the developer funds development",
+     "adv": [
+      "The line lands in each utility's rate base, so its customers pay through regulated rates",
+      "Sidesteps the interregional cost-allocation fight"
+     ],
+     "dis": [
+      "Every commitment is a non-binding memorandum until permits exist",
+      "The developer carries all the development capital and most of the schedule risk"
+     ]
+    },
+    {
+     "t": "**Federal anchor customer**",
+     "meta": "DOE buys up to half the capacity under the Transmission Facilitation Program, or grants part of the cost",
+     "adv": [
+      "An anchor lets a line be financed before it is fully subscribed",
+      "Grants (GRIP) lower the cost utilities must recover"
+     ],
+     "dis": [
+      "Awards are 'selected' or 'conditional' until executed and can be terminated",
+      "Programme survival depends on the administration"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "development-capital",
+   "title": "Development capital: what is spent before anyone commits",
+   "kind": "prose",
+   "read": "Land options, studies, permits and a sixty-person team are paid for years before a partner signs anything binding. That money is lost if the line dies, which is why the owner is a family office rather than a fund.",
+   "ps": [
+    "A transmission developer's work is to convert an idea into a bankable asset: a route with {{easement}} rights on nearly every parcel, interconnection studies at both grid operators, an environmental record, state certificates and a set of customers. Every item is {{development capital}} at risk — spent up front, recovered only if the line is built and sold. Grid United's chairman described the strategy in 2023 as 'acquiring the land position first', to break the 'chicken-and-egg cycle' in which no customer commits to an unpermitted line and no permit is granted to a line without customers, and said it 'comes with significantly greater financial risk'.",
+    "That is why the ownership matters. A venture fund wants an exit in years; an {{infrastructure fund}} wants operating cash flow; neither can carry a decade of losses on a corridor. A {{family office}} can — and on the record Grid United is wholly owned by one, with no outside investor and no Form D on file. The lesson from Michael Skelly's previous company, Clean Line, is the reason: it permitted several of the longest lines in the country, then ran out of patient money and sold them to others (Invenergy, NextEra, Pattern) who finished the work.",
+    "The customer instrument reflects the same asymmetry. A {{memorandum of understanding}} costs a utility nothing and commits it to nothing; every one of North Plains Connector's eight utility MOUs says the utility 'would invest when project regulatory approvals and permits are in place' and that 'Grid United will continue to fund the development'. Only ALLETE, the co-developer, has signed development agreements. The first definitive agreement — Avista guided late 2026 — is the moment the risk starts to move off the developer's balance sheet, and no such agreement exists yet."
+   ]
+  },
+  {
+   "id": "permit-gauntlet",
+   "title": "North Plains Connector: a decade on one clock",
+   "kind": "timeline",
+   "read": "Upper lane: federal and state permits. Lower lane: partners, money and engineering. The pattern is that customers were signed before the permits, and the permits are arriving now.",
+   "intro": "Years across the bottom. Terms: {{NEPA}}, {{record of decision}}, {{siting certificate}}, {{GRIP}}, {{CITAP}}, {{capacity subscription}}.",
+   "unit": "calendar year",
+   "lanes": {
+    "reg": "Permits and federal decisions",
+    "co": "Partners, money and engineering"
+   },
+   "items": [
+    {
+     "x": 2023,
+     "lane": "co",
+     "label": "ALLETE joins; USD 2.5 billion, in service 2029",
+     "sub": "Development agreements signed in December"
+    },
+    {
+     "x": 2024,
+     "lane": "co",
+     "label": "Hitachi capacity reservation; PGE, Avista, PSE, NorthWestern MOUs",
+     "sub": "Conditional USD 700 million DOE grant in August"
+    },
+    {
+     "x": 2024,
+     "lane": "reg",
+     "label": "Montana siting application; DOE notice of intent",
+     "sub": "NEPA starts in October under DOE's coordinated process"
+    },
+    {
+     "x": 2025,
+     "lane": "co",
+     "label": "BHE, MDU MOUs; Hitachi engineering agreement; nine RFPs",
+     "sub": "Grant survives DOE's October cancellations"
+    },
+    {
+     "x": 2025,
+     "lane": "reg",
+     "label": "Montana application complete; DOE adds grant decision to the EIS",
+     "sub": "Cost restated toward USD 6 billion"
+    },
+    {
+     "x": 2026,
+     "lane": "reg",
+     "label": "Draft EIS (January); North Dakota filing (February); final EIS (August); hearings (September)",
+     "sub": "Record of decision expected around October"
+    },
+    {
+     "x": 2026,
+     "lane": "co",
+     "label": "Minnkota eighth utility; 2,550 of 3,000 MW subscribed",
+     "sub": "Definitive agreements guided for late 2026"
+    },
+    {
+     "x": 2027,
+     "lane": "co",
+     "label": "EPC contractor; construction start hoped for late 2027",
+     "sub": "Montana and North Dakota schedule: Q3 2027"
+    },
+    {
+     "x": 2028,
+     "lane": "co",
+     "label": "Major construction",
+     "sub": "About 800 workers at peak, three years"
+    },
+    {
+     "x": 2032,
+     "lane": "co",
+     "label": "Commercial operation",
+     "sub": "Q4 2032 per the North Dakota application"
+    }
+   ]
+  },
+  {
+   "id": "reading-the-agreements",
+   "title": "How to read the partner instruments",
+   "kind": "table",
+   "read": "Five different pieces of paper appear in the project's record, and press coverage treats them as one. They are not.",
+   "intro": "Read each row as: the instrument, what it binds, and what it tells an outsider about the project's state. Terms: {{memorandum of understanding}}, {{capacity subscription}}, {{anchor tenant}}, {{GRIP}}.",
+   "cols": [
+    "Instrument",
+    "Who signed it",
+    "What it binds",
+    "What it signals"
+   ],
+   "rows": [
+    [
+     "**Development agreement**",
+     "ALLETE and North Plains Connector LLC (December 2023)",
+     "Roles, responsibilities and ALLETE's right to at least 35% and the operator seat",
+     "The one binding commercial relationship; ALLETE's owner changed in December 2025"
+    ],
+    [
+     "**Non-binding memorandum of understanding**",
+     "Seven utilities, 150–750 MW each (2024–26)",
+     "Nothing — an intent to negotiate 'definitive agreements' once permits exist",
+     "Demand signal and political support; investment deferred to 2032 in one partner's own guidance"
+    ],
+    [
+     "**Capacity reservation agreement**",
+     "Hitachi Energy (March 2024)",
+     "A manufacturing slot for converter equipment across several lines; terms undisclosed",
+     "The supply chain is treated as the scarce input"
+    ],
+    [
+     "**Conditional grant**",
+     "DOE to the Montana Department of Commerce, 'up to $700 million' (August 2024)",
+     "Phased disbursement subject to conditions; DOE may 'finalize... or terminate'",
+     "Money the project cannot yet count; survival of the 2025 cancellations is intent, not receipt"
+    ],
+    [
+     "**Federal capacity contract (Southline)**",
+     "DOE 'selected' Phases 1 and 2 (2023, 2024)",
+     "DOE as anchor customer for up to half the capacity — if executed",
+     "Listed as 'Selected' two years on; no source confirms execution"
+    ]
+   ]
+  },
+  {
+   "id": "where-grid-united-slots-in",
+   "title": "Where Grid United slots in: the seats it holds and the ones it does not",
+   "kind": "table",
+   "read": "A transmission developer sits between the equipment makers and the utilities without being either. The table maps each seat to who normally holds it.",
+   "intro": "Read each row as: the seat, who usually fills it, and what Grid United does there.",
+   "cols": [
+    "Seat",
+    "Usually held by",
+    "Grid United"
+   ],
+   "rows": [
+    [
+     "**Line originator and permit holder**",
+     "A regional grid operator's plan, or an incumbent utility",
+     "Grid United, through a project company per line (North Plains Connector LLC, GU Southline LLC, Three Corners Connector LLC)"
+    ],
+    [
+     "**Converter and line buyer**",
+     "The utility that will own the line",
+     "Grid United, ahead of ownership — the Hitachi reservation and engineering agreement, nine owner's-engineer and survey RFPs"
+    ],
+    [
+     "**Owner and operator**",
+     "The transmission owner in each region",
+     "Not Grid United: 'these electric companies will be the ultimate owners'; ALLETE expected to operate North Plains"
+    ],
+    [
+     "**Capacity seller**",
+     "A merchant line under negotiated rates",
+     "Only on Southline, where transmission rights are marketed; the seam lines sell ownership, not capacity"
+    ],
+    [
+     "**Generator**",
+     "An IPP or utility",
+     "Never — 'open to all sources of electric power generation'"
+    ]
+   ]
+  },
+  {
+   "id": "industry-map",
+   "title": "The industry map: who buys, who competes, and why the seams matter now",
+   "kind": "prose",
+   "read": "The customers are utilities that need firm capacity they cannot build fast enough; the competitors are the few developers with the patience to permit a seam crossing; the economic case is that a wire is cheaper than a plant when the weather on the other side is different.",
+   "ps": [
+    "The buyers are utilities facing load growth — data centres, electrification, coal retirements — with a {{planning reserve margin}} to meet and a queue of new plants that take as long to build as a line. A 300 MW slice of a seam connector gives a Pacific Northwest utility access to Plains generation at hours when its own hydro and wind are short, and counts toward its reserve at a fraction of a peaker's cost. That is why the North Plains subscriber list is western utilities buying eastern access: Puget, Portland General, Avista, NorthWestern, Berkshire's transmission arm.",
+    "The competitors are a short list. Invenergy is building Grain Belt Express — 5,000 MW across four regions — as a merchant line on its own balance sheet after losing a federal loan guarantee. Pattern Energy built SunZia, 3,000 MW of VSC HVDC, and is permitting Southern Spirit from Texas to the Southeast. NextEra, LS Power and the utilities' own transmission affiliates take regional lines inside the planning process. Grid United's differentiation is that it will not own the line: it is the only developer selling seam crossings as utility-owned slices, which makes its customers its investors and its permits its product.",
+    "Why the transition matters economically: DOE's 2026 draft needs study calls for interregional transfer capability to rise many-fold by 2035 and finds cross-interconnection links among the most valuable lines the country could build — while the same department has cancelled national-interest corridors, a Midwest transmission grant and a merchant line's loan, and let North Plains' grant stand. The policy is being decided project by project. What Grid United sells, in the end, is the claim that a permitted corridor with eight utilities behind it is the form of interregional transmission that survives that sorting."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Seams, converters, value, payment and paper.",
+   "cards": [
+    {
+     "q": "Why can't an AC line join the Eastern and Western grids?",
+     "a": "Each is a synchronised machine spinning at its own phase; the two are not in step, so a direct AC connection would fight them against each other. Only a {{DC tie}} — AC to DC to AC — can join them."
+    },
+    {
+     "q": "Why is a 420-mile seam crossing DC while a 280-mile line inside one grid is AC?",
+     "a": "Across a seam DC is the only option. Over long distances DC also carries more power per corridor with lower losses and no reactive compensation, so {{HVDC}} wins on length; inside a grid at 280 miles, AC is cheaper because it needs no {{converter station}}."
+    },
+    {
+     "q": "What does a voltage source converter do that a line-commutated one cannot?",
+     "a": "It switches on command, controls real and reactive power independently, can black-start and can feed a weak grid — so it can land in a rural substation without a strong AC system to lean on."
+    },
+    {
+     "q": "How can a 3,000 MW line have more than 3,000 MW of capacity value?",
+     "a": "Its {{ELCC}} is counted in each region it connects, and because the regions' peaks do not coincide, the same line provides capacity to all of them — 1,800, 1,350 and 400 MW in North Plains' study."
+    },
+    {
+     "q": "What is participant funding and why does Grid United use it?",
+     "a": "{{participant funding}}: utilities buy ownership slices sized to the capacity they want, so the cost lands in each utility's rate base and no interregional cost-allocation decision is needed. The price is that every slice is non-binding until permits exist."
+    },
+    {
+     "q": "What is the difference between a conditional grant and money the project has?",
+     "a": "A conditional {{GRIP}} award is disbursed in phases only as conditions are met, and DOE reserves the right to finalise or terminate it; until the record of decision and the grant agreement exist, the USD 700 million is intent, not cash."
+    },
+    {
+     "q": "Why does a transmission developer reserve converter capacity before it holds a permit?",
+     "a": "Converter stations are the long-lead item — a few suppliers, multi-year order books — so the slot, not the permit, sets the earliest energisation date; a {{capacity subscription}} of manufacturing capacity is the developer's hedge."
+    },
+    {
+     "q": "What is development capital, and who can afford to lose it?",
+     "a": "{{development capital}}: land options, studies, permits and staff, spent years before a binding customer exists and lost if the line dies. A {{family office}} with no exit clock can carry it; most funds cannot, which is why Clean Line sold its lines and Grid United is owned by one investor."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on seams, converters, value, payment and permits.",
+   "items": [
+    {
+     "q": "Power can cross the seam between the Eastern and Western interconnections only through:",
+     "c": [
+      "A 765 kV AC line",
+      "A direct-current converter link",
+      "A phase-shifting transformer",
+      "A larger substation"
+     ],
+     "a": 1,
+     "why": "The two grids are not synchronised; only a DC tie or HVDC line decouples them."
+    },
+    {
+     "q": "The main reason a converter station uses voltage source rather than line-commutated technology at a rural endpoint is that it:",
+     "c": [
+      "Is cheaper",
+      "Needs no cooling",
+      "Can operate into a weak grid and control reactive power",
+      "Uses lower voltage"
+     ],
+     "a": 2,
+     "why": "VSC switches on command and can support or black-start a weak receiving grid; LCC needs a strong grid to commutate against."
+    },
+    {
+     "q": "A bipole HVDC link losing one pole:",
+     "c": [
+      "Stops all flow",
+      "Halves the flow",
+      "Reverses the flow",
+      "Trips the receiving grid"
+     ],
+     "a": 1,
+     "why": "Each pole carries half the power on its own, so the loss of one halves rather than ends the transfer."
+    },
+    {
+     "q": "North Plains Connector's study credits the line with more than 3,000 MW of capacity value because:",
+     "c": [
+      "The line is overbuilt",
+      "Effective load carrying capability is counted in each of the three regions, whose peaks do not coincide",
+      "It carries wind and coal",
+      "DOE said so"
+     ],
+     "a": 1,
+     "why": "Weather diversity lets one line count toward reserves in the West, SPP and MISO at once."
+    },
+    {
+     "q": "Under Grid United's model, who ultimately owns North Plains Connector?",
+     "c": [
+      "Grid United",
+      "The Department of Energy",
+      "The partner utilities, each holding a slice",
+      "Hitachi Energy"
+     ],
+     "a": 2,
+     "why": "'These electric companies will be the ultimate owners – with each owning a slice'; Grid United funds development and sells the slices."
+    },
+    {
+     "q": "As of September 2026, the eight utilities' North Plains commitments are:",
+     "c": [
+      "Binding purchase agreements",
+      "Non-binding memoranda of understanding, with investment deferred until permits",
+      "Equity already invested",
+      "Tolling contracts"
+     ],
+     "a": 1,
+     "why": "Every MOU says the utility 'would invest when project regulatory approvals and permits are in place'; only ALLETE's development agreements bind."
+    },
+    {
+     "q": "The federal step that comes after a final environmental impact statement is:",
+     "c": [
+      "A state siting certificate",
+      "A record of decision",
+      "An interconnection agreement",
+      "A capacity reservation"
+     ],
+     "a": 1,
+     "why": "Under NEPA the agency's record of decision follows the final EIS and unlocks federal rights-of-way; state certificates run in parallel."
+    }
+   ]
+  }
+ ]
+}

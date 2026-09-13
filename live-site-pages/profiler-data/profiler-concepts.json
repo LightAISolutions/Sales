@@ -890,6 +890,15 @@
       ]
     },
     {
+      "slug": "bipole",
+      "term": "bipole",
+      "def": "An HVDC line built as two conductors at opposite polarities, positive and negative, sharing a return path. Each pole can carry half the power on its own, so the loss of one pole halves the flow rather than stopping it.",
+      "aliases": [
+        "bipolar link",
+        "bipolar HVDC"
+      ]
+    },
+    {
       "slug": "bitcoin-fair-value-accounting",
       "term": "bitcoin fair value accounting",
       "def": "The rule (effective for 2025 reporting) requiring companies to carry the bitcoin they hold at market value and run every price move through the income statement. It makes reported profit swing with the bitcoin price regardless of how the operating business performed.",
@@ -1278,6 +1287,14 @@
         "capacity price",
         "capacity markets",
         "capacity payment"
+      ]
+    },
+    {
+      "slug": "capacity-subscription",
+      "term": "capacity subscription",
+      "def": "A commitment by a utility or generator to take a stated share — so many megawatts — of a transmission line's capacity, whether as an ownership share or a long-term contract. The total subscribed against the line's rating is the developer's key sales number.",
+      "aliases": [
+        "subscribed capacity"
       ]
     },
     {
@@ -1679,6 +1696,14 @@
       "aliases": [
         "circularity",
         "circular deal"
+      ]
+    },
+    {
+      "slug": "citap",
+      "term": "CITAP",
+      "def": "The Department of Energy's Coordinated Interagency Transmission Authorizations and Permits process: one federal agency runs a single schedule and a single environmental record for a big transmission line so the other agencies do not each start from scratch, with a two-year target for the review.",
+      "aliases": [
+        "Coordinated Interagency Transmission Authorizations and Permits"
       ]
     },
     {
@@ -2765,6 +2790,15 @@
       "def": "The direct-current stage inside a static UPS between the rectifier and the inverter, where the battery connects. Every watt the load draws in double conversion passes through it as DC, which is why the batteries can take over without any switching event — they are already on the bus."
     },
     {
+      "slug": "dc-tie",
+      "term": "DC tie",
+      "def": "A converter station where two grids that are not synchronised meet: alternating current from one side is converted to direct current and immediately back to alternating current in step with the other side. A back-to-back tie has no line between the converters; a long HVDC line is the same idea with hundreds of miles in the middle.",
+      "aliases": [
+        "back-to-back converter",
+        "back-to-back HVDC"
+      ]
+    },
+    {
       "slug": "dcim",
       "term": "DCIM",
       "def": "Data centre infrastructure management: software that inventories the physical plant — racks, circuits, cooling units, sensors — and monitors it as one live system. Its practical purpose is capacity planning: finding the power, cooling, space and redundancy that have been paid for and cannot currently be used.",
@@ -3045,6 +3079,15 @@
         "develop and sell",
         "build-transfer",
         "flip the project"
+      ]
+    },
+    {
+      "slug": "development-capital",
+      "term": "development capital",
+      "def": "The money spent before a project can be financed — land options, studies, permits, engineering and the staff to run them — which is lost if the project never reaches construction. It is the riskiest capital in infrastructure, which is why developers who carry it expect either a large share of the finished asset or a fee from whoever ends up owning it.",
+      "aliases": [
+        "development spend",
+        "at-risk development capital"
       ]
     },
     {
@@ -4878,6 +4921,15 @@
       ]
     },
     {
+      "slug": "gen-tie",
+      "term": "gen-tie",
+      "def": "The private line that connects a wind or solar farm to the nearest grid substation. It carries only that project's output, so it is paid for by the project rather than by grid customers.",
+      "aliases": [
+        "generator tie line",
+        "generation tie"
+      ]
+    },
+    {
       "slug": "general-account",
       "term": "general account",
       "def": "A life insurer's own investment portfolio, funded by policyholder premiums, which must earn steady long-dated returns. Insurers put general-account money into infrastructure directly or through a captive fund, which is how a battery joint venture can be financed without a bank.",
@@ -5101,6 +5153,14 @@
       "def": "A UPS whose battery is also allowed to work for the building or the grid — shaving a peak, answering a demand-response call, holding frequency — rather than sitting at float. It turns a stranded asset into an earning one and puts the backup duty into competition with the earning duty.",
       "aliases": [
         "grid-interactive"
+      ]
+    },
+    {
+      "slug": "grip",
+      "term": "GRIP",
+      "def": "The Grid Resilience and Innovation Partnerships programme: a US Department of Energy grant scheme, funded by the 2021 infrastructure law, that pays part of the cost of grid projects — typically through a state agency — in phases, with each phase released only when the previous conditions are met.",
+      "aliases": [
+        "Grid Resilience and Innovation Partnerships"
       ]
     },
     {
@@ -5875,6 +5935,14 @@
       "slug": "intermediate-loop",
       "term": "intermediate loop",
       "def": "A second coolant circuit placed between the radioactive primary coolant and the water/steam side, so that a leak between sodium and water cannot happen inside the reactor. It costs efficiency and buys separation."
+    },
+    {
+      "slug": "interregional-transfer-capability",
+      "term": "interregional transfer capability",
+      "def": "How much power can be moved from one grid region to a neighbouring one at a given moment without overloading a line. Low transfer capability between regions is what turns a local shortage into a blackout, because the surplus next door cannot get through.",
+      "aliases": [
+        "transfer capability"
+      ]
     },
     {
       "slug": "interruptible",
@@ -7312,6 +7380,15 @@
       "def": "A core designed so that getting hotter makes the chain reaction weaker. Power then self-corrects without any operator or control system acting — the physical basis of a passive-safety claim."
     },
     {
+      "slug": "negotiated-rate-authority",
+      "term": "negotiated-rate authority",
+      "def": "Federal permission for a merchant transmission line to charge customers prices agreed in contracts rather than a regulated cost-based tariff, usually granted on condition that the developer offers the capacity openly to all bidders first.",
+      "aliases": [
+        "negotiated rates",
+        "negotiated-rate"
+      ]
+    },
+    {
       "slug": "nema-enclosure-rating",
       "term": "NEMA enclosure rating",
       "def": "The North American convention for describing what an electrical enclosure keeps out, covering dust and water plus ice, corrosion and outdoor exposure. It overlaps the international ingress-protection scale without mapping onto it cleanly, and officials tend to ask for whichever one their adopted code cites.",
@@ -7325,6 +7402,14 @@
       "slug": "neocloud",
       "term": "neocloud",
       "def": "A newer GPU-cloud provider renting AI compute capacity, typically growing faster than its capital base — a distinct buyer class from the hyperscalers."
+    },
+    {
+      "slug": "nepa",
+      "term": "NEPA",
+      "def": "The National Environmental Policy Act: the US law that requires a federal agency to study and publish the environmental effects of a project it approves, funds or permits before deciding. For a large line that means a draft and a final environmental impact statement, then a record of decision.",
+      "aliases": [
+        "National Environmental Policy Act"
+      ]
     },
     {
       "slug": "nerc",
@@ -7434,6 +7519,14 @@
       "slug": "nfpa-855",
       "term": "NFPA 855",
       "def": "The US fire-protection standard for stationary energy storage installations — spacing, enclosures, suppression, and the fire testing (UL 9540A) it references. Permitting officials work from it."
+    },
+    {
+      "slug": "nietc",
+      "term": "NIETC",
+      "def": "A National Interest Electric Transmission Corridor: a geographic strip the Department of Energy can designate as needing new transmission, which unlocks federal financing tools and, in limited cases, federal backstop siting when a state refuses to act.",
+      "aliases": [
+        "national interest electric transmission corridor"
+      ]
     },
     {
       "slug": "nmc",
@@ -7742,6 +7835,14 @@
       ]
     },
     {
+      "slug": "order-1920",
+      "term": "Order 1920",
+      "def": "A 2024 US federal rule requiring grid operators to plan transmission twenty years ahead across whole regions and to agree in advance how the cost of the lines they pick is shared. Lines built outside that regional plan — merchant and participant-funded lines — do not get that cost sharing and must find their own paying customers.",
+      "aliases": [
+        "FERC Order 1920"
+      ]
+    },
+    {
       "slug": "order-book",
       "term": "order book",
       "def": "The reactors, units or capacity a vendor counts as sold or reserved; the word covers everything from signed purchase orders to non-binding options, so the terms behind the number matter more than the number.",
@@ -7981,6 +8082,15 @@
       "def": "Duty in which a battery is cycled without ever being returned to full. It is normal in solar, telecom and grid work, and it is precisely the condition ordinary lead-acid tolerates worst.",
       "aliases": [
         "PSoC"
+      ]
+    },
+    {
+      "slug": "participant-funding",
+      "term": "participant funding",
+      "def": "A way of paying for a transmission line in which the utilities or generators that will use it buy and own shares of its capacity, instead of the cost being spread across every customer in a region through the grid operator's tariff. It avoids the regional cost-allocation fight but means the developer must find enough subscribers before it can finance the line.",
+      "aliases": [
+        "participant-funded",
+        "subscriber-funded"
       ]
     },
     {
@@ -9180,6 +9290,14 @@
       ]
     },
     {
+      "slug": "record-of-decision",
+      "term": "record of decision",
+      "def": "The document in which a federal agency formally announces what it has decided after an environmental impact statement — which route it approved, on what conditions — and which lets a project apply for the federal rights-of-way it needs.",
+      "aliases": [
+        "ROD"
+      ]
+    },
+    {
       "slug": "recordable-incident",
       "term": "recordable incident",
       "def": "A workplace injury or illness serious enough to be counted under the regulator's definition — beyond first aid, involving medical treatment, restricted duty, lost time or a diagnosed condition. Because the definition is regulatory rather than discretionary, it is what makes safety records comparable between firms at all.",
@@ -10092,6 +10210,16 @@
       ]
     },
     {
+      "slug": "share-consideration",
+      "term": "share consideration",
+      "def": "Paying for an acquisition with the buyer's own shares rather than cash. The seller ends up owning a bigger slice of the buyer, so when a shareholder sells a company to a business it already part-owns, its stake in the buyer goes up instead of cash changing hands.",
+      "aliases": [
+        "share-based transaction",
+        "stock consideration",
+        "stock-for-stock"
+      ]
+    },
+    {
       "slug": "shelf-life",
       "term": "shelf life",
       "def": "How long a cell remains usable in storage before self-discharge and ageing render it unfit for its job — distinct from cycle life, which counts charge and discharge cycles, and from calendar life, which measures degradation in service.",
@@ -10245,6 +10373,16 @@
       "def": "A long-term lease of a parcel from a landowner on which a developer builds a battery, paying rent instead of buying the land. Available Power's model leased commercial land from real-estate owners for small batteries.",
       "aliases": [
         "land lease"
+      ]
+    },
+    {
+      "slug": "siting-certificate",
+      "term": "siting certificate",
+      "def": "The state permission a transmission line needs for its route — issued by a public service commission or an environmental agency after hearings on need, route and land impacts. Names differ by state (route permit, certificate of corridor compatibility, certificate of compliance) but each is a gate that construction cannot pass without.",
+      "aliases": [
+        "route permit",
+        "certificate of corridor compatibility",
+        "certificate of compliance"
       ]
     },
     {
@@ -10737,6 +10875,14 @@
       ]
     },
     {
+      "slug": "structured-equity",
+      "term": "structured equity",
+      "def": "An investment in a project that is legally equity but is engineered to behave partly like debt — a preferred return, priority over the sponsor's own shares, sometimes a fixed exit — so an institutional investor can take part in a project without owning or running it.",
+      "aliases": [
+        "structured equity investment"
+      ]
+    },
+    {
       "slug": "subcooling",
       "term": "subcooling",
       "def": "How many degrees below its condensing temperature the liquid refrigerant is when it leaves the condenser. More subcooling means more useful cooling per kilogram circulated."
@@ -10765,6 +10911,14 @@
       "def": "The package a supplier sends after award — drawings, ratings, test reports, wiring diagrams — for the engineer of record to approve before manufacturing starts. Approval, not the purchase order, is usually what releases the factory slot.",
       "aliases": [
         "submittals"
+      ]
+    },
+    {
+      "slug": "subscriber-pto",
+      "term": "Subscriber PTO",
+      "def": "A California arrangement in which a merchant transmission line hands operational control to the state grid operator while its capacity stays owned by the subscribers who paid for it, so the line's power can be scheduled into California without its cost being spread across all California customers.",
+      "aliases": [
+        "subscriber participating transmission owner"
       ]
     },
     {
@@ -11278,6 +11432,17 @@
       ]
     },
     {
+      "slug": "three-interconnections",
+      "term": "three interconnections",
+      "def": "The US grid is really three separate machines — the Eastern Interconnection, the Western Interconnection and ERCOT in Texas — each running in lockstep internally but not synchronised with the others. Power can only cross the seams between them through direct-current converters, and there are very few of those.",
+      "aliases": [
+        "Eastern Interconnection",
+        "Western Interconnection",
+        "interconnection seam",
+        "grid seam"
+      ]
+    },
+    {
       "slug": "three-level-inverter",
       "term": "three-level inverter",
       "def": "An inverter whose output can sit at three voltage steps rather than two, usually by clamping to the midpoint of a split DC link. Each switch then blocks half the voltage and the output waveform starts closer to a sine wave, so both switching losses and the output filter shrink — the main reason large modern UPS units reach efficiencies in the high nineties where two-level designs did not.",
@@ -11482,6 +11647,15 @@
       "aliases": [
         "transformer-free UPS",
         "transformerless"
+      ]
+    },
+    {
+      "slug": "transmission-facilitation-program",
+      "term": "Transmission Facilitation Program",
+      "def": "A US Department of Energy programme in which the government agrees to buy up to half of a new transmission line's capacity as an anchor customer, then resells that capacity later. The promise lets a developer finance a line before enough utilities have signed up.",
+      "aliases": [
+        "TFP",
+        "transmission capacity contract"
       ]
     },
     {
@@ -12051,6 +12225,24 @@
       ]
     },
     {
+      "slug": "weather-diversity",
+      "term": "weather diversity",
+      "def": "The fact that wind, sun, temperature and demand peak at different times in different regions. A line between two regions lets each lean on the other's surplus, which is why a connector between grids can be worth more than the same megawatts of new generation in either one.",
+      "aliases": [
+        "geographic diversity",
+        "resource diversity"
+      ]
+    },
+    {
+      "slug": "wecc-path-rating",
+      "term": "WECC path rating",
+      "def": "The maximum transfer capability the Western grid's reliability body accepts for a transmission path after a multi-phase study of its effect on neighbouring lines. A new line cannot schedule its full capacity into the Western grid until it holds an accepted rating.",
+      "aliases": [
+        "accepted rating",
+        "path rating"
+      ]
+    },
+    {
       "slug": "wet-bulb",
       "term": "wet-bulb temperature",
       "def": "The lowest temperature air can be cooled to by evaporating water into it. It is always at or below the dry-bulb temperature, and it is the floor an evaporative device works against.",
@@ -12119,6 +12311,15 @@
         "WMP",
         "wildfire mitigation",
         "mitigation plan"
+      ]
+    },
+    {
+      "slug": "wind-turbine",
+      "term": "wind turbine",
+      "def": "A generator driven by a rotor whose blades convert moving air into torque. Output rises with the cube of wind speed up to the rated speed, so siting in steady, strong wind matters more than the turbine's nameplate; large onshore machines today are rated in the 3–6 MW range.",
+      "aliases": [
+        "onshore wind turbine",
+        "wind generator"
       ]
     },
     {

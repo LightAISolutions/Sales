@@ -1,0 +1,1197 @@
+{
+  "schemaVersion": 7,
+  "slug": "grid-united",
+  "name": "Grid United LLC",
+  "shortName": "Grid United",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://gridunited.com/",
+  "headquarters": "Houston, Texas, United States (712 Main Street, Suite 2500; the North Plains Connector LLC project office is at 1717 West Loop South, Suite 1800)",
+  "founded": 2021,
+  "employees": "Not published. 66 staff profiles on the company's About page (September 2026); a founding executive's bio says 'over 60 employees'; Built In lists 87",
+  "ownership": {
+    "type": "private",
+    "ticker": "Private (wholly owned by Centaurus Capital LP, the family office of John and Laura Arnold, per the Three Corners Connector application to the Oklahoma Corporation Commission as reported January 2026; no Form D on EDGAR)"
+  },
+  "summary": "**BOTTOM LINE UP FRONT:** Grid United is a Houston developer of interregional high-voltage transmission that is, on the record, a family-office-funded land-and-permits company: it holds no operating asset, publishes no financials, has filed no Form D, and is wholly owned by Centaurus Capital LP, the family office of John and Laura Arnold, per its own Oklahoma filing as reported; its flagship North Plains Connector — a 420-mile, ±525 kV, 3,000 MW HVDC line that would be the first link joining the Western Interconnection to both MISO and SPP — has a final federal environmental impact statement (28 August 2026), a North Dakota siting case heard 1–3 September 2026, a conditional USD 700 million DOE grant, and eight utilities holding 2,550 MW of capacity under non-binding memoranda, and its cost has risen from USD 2.5 billion (2023) to about USD 6 billion (2026) with commercial operation now 2032. **BACKGROUND.** Founded in 2021 (site history; the company states no year) by Michael Skelly, who ran Clean Line Energy Partners from 2009 until it shut down in 2019 after selling its lines to Invenergy, NextEra and Pattern, with Kris Zadlo (ex-Invenergy) and Kristen Williams Golden as founding members. Business model per the company and per Skelly's May 2026 House testimony: Grid United funds development — land options, studies, permits — and partner utilities 'will be the ultimate owners, with each owning a slice', investing 'when project regulatory approvals and permits are in place'. Five projects are listed: North Plains Connector (Colstrip, Montana to Center and St. Anthony, North Dakota; co-developed with ALLETE under December 2023 development agreements), Southline (280 miles, AC, 1,000 MW, New Mexico–Arizona, co-developed with Black Forest Partners with DOE Transmission Facilitation Program capacity contracts 'selected' worth over USD 700 million), Three Corners Connector (300 miles, HVDC, 1,800 MW, Pueblo, Colorado to Guymon, Oklahoma; Oklahoma certificate granted 29 July 2026), Pecos West (re-scoped to an El Paso–southeastern New Mexico link after Texas regulators rejected the original ERCOT tie in February 2023) and Wyoming Intertie (106 miles, 1,800 MW, pre-filing). Hitachi Energy holds an HVDC capacity-reservation agreement (March 2024) and an engineering services agreement for the North Plains converter stations (October 2025). Collection gap: no company channel names an owner, a capital raise or a headcount; the Centaurus statement rests on a regulator filing read through trade press, and Bloomberg's 2023 report of 'several hundred million dollars' committed by Arnold is the only sizing of the capital.",
+  "ecosystemRole": "The corpus's first pure-play interregional transmission developer, and the adjacent role the grid-equipment and utilities segments reserved for one. Grid United sits between the two: it is the customer that reserves Hitachi Energy's HVDC converter capacity years ahead of an order, and it is the developer that sells utilities — ALLETE, Portland General, Puget, NorthWestern, Avista, BHE U.S. Transmission, MDU, Minnkota — ownership slices of a line they would not have planned themselves. It owns no generation and takes no position on what flows; its product is a permitted, land-secured corridor between grids that do not otherwise touch. That makes it the counterpart to Invenergy's Grain Belt Express and Pattern Energy's SunZia and Southern Spirit in the merchant and participant-funded HVDC class, and the one member of that class with no operating asset, no disclosed investor beyond a family office, and every commitment still non-binding.",
+  "productsAndServices": [
+    {
+      "name": "North Plains Connector — 3,000 MW HVDC link between the Western Interconnection, MISO and SPP (flagship, permitting)",
+      "category": "Interregional HVDC transmission development",
+      "description": "The company's description: 'North Plains Connector is a 420-mile, up-to-525-kilovolt, high-voltage direct current transmission line connecting the eastern and western U.S. electric grids in North Dakota and Montana. North Plains Connector will transport electrical power of all generation sources and bidirectionally move power along the line in response to demand.' It runs from the Colstrip substation in Montana to two North Dakota endpoints — near Center (a 345 kV AC segment to MISO) and near St. Anthony (a 345 kV AC segment to SPP) — and DOE's final environmental impact statement describes 'a proposed 422-mile, 525-kv high-voltage direct current (HVDC) overhead transmission line... providing 3,000 megawatts (MW) of bidirectional transfer capability'. Cost: 'approximately $6 billion investment in Montana and North Dakota' on the project site and in the North Dakota application (the North Dakota facilities alone 'approximately $3.2 billion'), up from 'approximately $2.5 billion' in the January 2023 announcement. Schedule: 'approvals expected in 2026', EPC contractor onboarded 2026, 'major construction activities are expected to commence in 2028, and the line is expected to be operational in 2032' — the 2023 announcement said 2029. Owned through North Plains Connector LLC, 'a wholly owned entity of Grid United'; co-developed with ALLETE under development agreements signed 21 December 2023, with ALLETE expected to hold at least 35% and to operate the line. Eight further utilities hold non-binding MOUs: Puget Sound Energy 750 MW, Portland General Electric 600 MW (~20%), NorthWestern Energy 300 MW (10%), Avista 300 MW (10%), BHE U.S. Transmission 300 MW (10%), MDU Resources 150 MW and Minnkota Power Cooperative 150 MW (the eighth member, 1 June 2026); Great River Energy appears in the July 2026 consortium roster with no announced share. That sums to 2,550 of 3,000 MW (85% subscribed per HVDC World); how ALLETE's 35% ownership relates to the capacity MOUs is not reconciled by any source. Every MOU states 'Grid United will continue to fund the development' and the utility 'would invest when project regulatory approvals and permits are in place'; Avista's March 2026 investor deck put definitive agreements 'in the next 6–9 months' and financial commitment 'at conclusion of project in 2032'.",
+      "highlights": [
+        "Permitting record: DOE notice of intent 25 October 2024; joint DOE–Montana DEQ draft EIS 9 January 2026; final EIS 28 August 2026 with a record of decision listed for 'Summer 2026' and reported for about October; Montana Major Facility Siting Act application deemed complete September 2025 (certificate pending); North Dakota PSC Case PU-26-82 filed 20 February 2026 (1,370 pages; '99 percent of the private landowner easements have been secured'; all county conditional-use permits obtained), technical hearing 1 September and public hearings 2–3 September 2026, no order yet",
+        "Federal money is conditional, not banked: DOE's August 2024 GRIP award is 'up to $700 million' to the Montana Department of Commerce, of which 'an estimated $605 million' would pass to the project 'in a phased approach', and the November 2025 amended notice reserves DOE's right 'to finalize... or... terminate those components of the conditional GRIP award'; the project was not on DOE's October 2025 list of 321 cancelled awards and DOE's Office of Electricity praised it at the FEIS release. A separate USD 47.5 million DOE siting grant went to Montana Commerce for host counties and the Northern Cheyenne Tribe",
+        "Technology partner: Hitachi Energy — an HVDC 'capacity reservation agreement' covering 'multiple Grid United HVDC interconnections' (CERAWeek, 20 March 2024) and an Engineering Services Agreement (2 October 2025) to develop 'technical specifications for the HVDC converter stations' and the AC–DC interfaces with MISO, SPP and WECC. Nine RFPs issued December 2024–June 2026 (HVDC and T-line owner's engineer, civil survey, geotechnical, FEED, environmental monitoring); no EPC contractor named",
+        "Grid-operator studies: SPP interconnection request May 2022 (Transmission Working Group endorsed the planning study May 2025, 'a minor amount of network upgrades'); MISO requests June 2023 and December 2025, studies ongoing; the company-commissioned Astrapé study (June 2024) credits the line with an ELCC of 1,800 MW in WECC, 1,350 MW in SPP and 400 MW in MISO — 'greater than 3,000 MW' in total; DOE's 2026 draft National Transmission Needs Study names cross-interconnection links as having 'some of the highest potential for transmission congestion value'",
+        "No FERC docket — negotiated-rate, Order 1000 or otherwise — for any Grid United entity was found; the utility-ownership structure sits outside both the merchant negotiated-rate model and regional cost allocation. Community record: 21 tribal nations engaged since 2022; route lengthened about 50 miles for landowner preferences (CATF); USD 3.9 million of community grants 2023–26; no organised opposition, lawsuit or intervenor found"
+      ],
+      "positioning": "Against Invenergy's Grain Belt Express (5,000 MW, four grid regions, merchant, USD 11 billion, DOE loan guarantee terminated July 2025) and Pattern's SunZia (3,000 MW, energised 2025, subscriber-owned), North Plains is smaller and later but is the only proposed line that would join three markets across the Eastern–Western seam, and the only one being sold as utility-owned slices rather than merchant capacity. Its weakness is the same as its design: nothing is binding until permits are in hand, and the partner set has changed control (ALLETE to CPP Investments and GIP, December 2025) and is mid-merger (NorthWestern with Black Hills) before a definitive agreement exists.",
+      "soldThrough": "Direct: ownership shares and transfer capacity sold to utilities under non-binding MOUs that convert to definitive agreements after permits; ALLETE as co-developer and prospective operator; federal grant through a state agency (Montana Department of Commerce) as sub-grantor",
+      "targetSegments": [
+        "Investor-owned utilities and cooperatives in the Pacific Northwest, Montana, the Dakotas and Minnesota",
+        "Regional grid operators (MISO, SPP, WECC/NorthernGrid) for interconnection and transfer capability",
+        "Federal and state funders (DOE GRIP, TSED)"
+      ],
+      "roadmap": "DOE record of decision and BLM/USFS decisions (expected autumn 2026); Montana MFSA certificate and North Dakota PSC order (late 2026); definitive partner agreements (Avista guided September–December 2026); EPC onboarding 2026; construction start 2028 (Skelly to Congress: 'late 2027'); commercial operation Q4 2032 per the North Dakota application schedule"
+    },
+    {
+      "name": "Southline Transmission Project — 1,000 MW AC line, New Mexico to Arizona (co-developed with Black Forest Partners; pre-construction)",
+      "category": "Interregional AC transmission development",
+      "description": "'Grid United and Black Forest Partners are co-developing Southline Transmission Project, an approximately 280-mile, double-circuit, high-voltage transmission line and associated substation facilities' from Grant County, New Mexico to Pima County, Arizona in two phases — a new line between the Afton substation west of Las Cruces and the Apache substation at Willcox, plus the rebuild of a Western Area Power Administration line from Apache to Vail 'with a double-circuit 230/345-kV transmission line'. Black Forest 'originated Southline and serves as the Project's managing member' (development since 2008); Hunt Transmission Services is 'a founding investor'; Grid United joined in 2022 through GU Southline LLC, 'a wholly-owned subsidiary'; 64 miles of the western segment (Vail to Tortolita) were sold to Tucson Electric Power in 2021. Capacity 'a total capacity of 1,000 megawatts'. Permits: final EIS October 2015; BLM and WAPA records of decision April 2016; Arizona and New Mexico siting completed 2017; the Arizona Corporation Commission 'fully approved' the CEC 173 amendment for the remaining 57-mile WAPA segment on 4 March 2026; '100% of private land rights' secured by voluntary acquisition in both states. Federal anchor customer: DOE selected Phase 1 (748 MW, 'up to $477 million') in October 2023 and Phase 2 (108-mile 345 kV line to Las Cruces, 1,000 MW, 'up to $352 million') in October 2024 under the Transmission Facilitation Program, 'a combined capacity contract value of over $700 million'; DOE's page still lists both as 'Selected', and no source confirms an executed capacity contract.",
+      "highlights": [
+        "Schedule has slipped in four company statements: Phase 1 'could be operational by 2027' (October 2023) → construction 'in the latter half of 2025' (October 2024) → 'at the end of 2026' (January 2026) → 'Southline expects to begin construction in 2027. The first phase could be operational by 2028, with the full project online by 2029' (August 2026 handouts)",
+        "Capacity is still being marketed — 'Parties interested in acquiring transmission rights on Southline... are encouraged to submit their contact information' — and no transmission customer other than TEP's segment purchase is named; the DOE contract is designed to end 'once fully subscribed by other customers'",
+        "The only Grid United project with named third-party financial backers (Black Forest Partners, Hunt Transmission Services) and the only one whose federal permits are a decade old",
+        "Community commitments: at least USD 6 million into host communities under the TFP awards; over USD 12 million in DOE siting grants secured for New Mexico and Arizona communities"
+      ],
+      "positioning": "A permitted line waiting on a financeable customer book — the opposite of North Plains, where the customers signed first and the permits are arriving now. Its competitor for the same southern New Mexico wind and Arizona load corridor is SunZia (Pattern, operating) and the RioSol line (Southwestern Power Group, construction from late 2026).",
+      "soldThrough": "Co-development with Black Forest Partners (managing member); transmission rights marketed directly; DOE Transmission Facilitation Program capacity contracts as anchor customer",
+      "targetSegments": [
+        "Arizona and New Mexico utilities and load-serving entities (Tucson Electric Power, El Paso area)",
+        "Wind and solar developers in southwestern New Mexico needing a path to Arizona load"
+      ],
+      "roadmap": "Construction start 2027; Phase 1 operational 2028; full project 2029 (company, August 2026)"
+    },
+    {
+      "name": "Three Corners Connector — 1,800 MW HVDC link between SPP and Public Service Company of Colorado (state certificate granted)",
+      "category": "Interregional HVDC transmission development",
+      "description": "'Three Corners Connector is a 300-mile, up-to-525-kilovolt, high-voltage direct current (HVDC) transmission line connecting the U.S. eastern and western electric grids, with endpoints in Pueblo, Colorado, and Guymon, Oklahoma', with converter stations near each endpoint; the company's January 2026 benefits study frames it as 'an 1,800 MW high voltage direct current (HVDC) transmission line between Southwest Power Pool (SPP) Zone 5 and the Public Service Company of Colorado (PSCO)'. Cost 'approximately $2 billion' on the company site; the Oklahoma Corporation Commission application (20 January 2026) put the full project at USD 2.133 billion with the Oklahoma portion USD 862.3 million (converter station USD 566 million). Owned through Three Corners Connector LLC, 'a subsidiary of Grid United LLC'. Status: the OCC granted the Certificate of Authority on 29 July 2026 (Cause PUD2026-000004); Otero County's 1041 permit was issued 23 February 2026 and Bent County's special review use permit recorded 29 July 2026; Pueblo County's 1041 application (November 2025) and a Baca County development agreement are pending; '100% of private land rights in Oklahoma voluntarily acquired', with a 200-foot right-of-way and 'less than 9%' of the route on public land. The company says the line 'could be operational as early as 2031'. No utility partner, offtaker or investor is disclosed; the applicant's filing says ratepayer cost sharing 'will be addressed in a future Corporation Commission docket'.",
+      "highlights": [
+        "The Astrapé/PowerGEM evaluation (January 2026) credits it with an ELCC of 715 MW in PSCo and 1,362 MW in SPP Zone 5 — 2,077 MW against a 1,800 MW rating; the 1,800 MW figure is the applicant's assumed transfer capability, not a joint SPP–PSCo study result",
+        "The Oklahoma certificate was won on 100% voluntary land options in a state whose governor and attorney general killed DOE's Delta-Plains national-interest corridor in December 2024 over eminent domain; DOE cancelled the remaining corridors, including the Southwestern Grid Connector (Colorado, New Mexico, Oklahoma), on 12 August 2026",
+        "Schedule has moved from 'potentially online by 2028' (March 2024 trade press) to 2031 (company, 2026)"
+      ],
+      "positioning": "The second East–West seam project in the portfolio and the first to hold a state certificate; unlike North Plains it has no announced customer, so its financing path is the open question the Oklahoma order defers to 'a future docket'.",
+      "soldThrough": "Not yet sold — no capacity subscriber or partner announced; the Oklahoma order defers the ratepayer question",
+      "targetSegments": [
+        "Xcel Energy's Public Service Company of Colorado and Colorado load",
+        "SPP Zone 5 utilities and Oklahoma Panhandle wind"
+      ],
+      "roadmap": "Colorado county permits (Pueblo 1041, Baca development agreement) and any Colorado PUC proceeding; customer subscription; construction 'approximately three years'; operation 'as early as 2031'"
+    },
+    {
+      "name": "Pecos West and Wyoming Intertie — early-stage HVDC seam projects",
+      "category": "Interregional HVDC transmission development (pre-filing)",
+      "description": "Pecos West: as filed with the Texas PUC in July 2022 (Docket 53758, applicant Grid United Texas LLC) it was 'two proposed 1,500 MW, high-voltage direct current converter stations in the West Texas region of ERCOT (near Bakersfield) and El Paso in the Western Electricity Coordinating Council (WECC)... connected by an approximately 250-300 mile HVDC intertie line' that would 'provide more capacity to import power into the ERCOT region... than all of the currently existing Texas direct-current ties combined'; the PUCT rejected the certificate application in February 2023, citing Texas's right-of-first-refusal law. The current site describes a different line — one that 'will link the rapidly growing metro areas of El Paso, Texas, with southeastern New Mexico' and 'creates a vital connection between the Western and Eastern Interconnections' — with no capacity, voltage, route or cost figure, 'in the planning and development phase', 'operational in the mid-2030s'. The company does not explain the change. Wyoming Intertie: 'an approximately 106-mile, up-to-1,800 MW, high-voltage transmission line connecting the Eastern and Western Interconnection grids' through Carbon, Albany and Platte counties between substations near Medicine Bow and Wheatland; 'approximately $2.5 billion to $3 billion investment in the state'; 'will initiate regulatory filings after determining a preliminary route'; 'could be operational in the early 2030s'; the Wyoming Intertie Community Investment Program has awarded over USD 800,000 across 54 organisations. A sixth line, Continental Connector (Santa Fe County, New Mexico to Ford County, Kansas, up to 3,000 MW), has its own site but is not listed among the company's five projects; a founding executive's bio refers to 'over ten transmission development projects'.",
+      "highlights": [
+        "Pecos West is the company's one regulatory denial on the record, and the re-scoped line has no 2025–26 filing at the PUCT, the New Mexico PRC or ERCOT",
+        "Wyoming Intertie has no partner, filing or route; the company's own schedule ('early 2030s') sits behind Three Corners (2031) and North Plains (2032)",
+        "Bloomberg (March 2023) reported the company was 'actively buying land for three power lines', each able to 'cost $1 billion to $3 billion and... carry 1.5 to 3 gigawatts' — the land-first strategy Arnold described as carrying 'significantly greater financial risk'"
+      ],
+      "positioning": "Options on future seams rather than projects: each is a corridor being secured ahead of any customer, which is the strategy Clean Line ran and the one Grid United's family-office ownership is meant to make survivable.",
+      "soldThrough": "Not yet sold",
+      "targetSegments": [
+        "El Paso Electric and southeastern New Mexico load and generation (Pecos West)",
+        "Wyoming wind and Front Range / Western load (Wyoming Intertie)"
+      ],
+      "roadmap": "Pecos West: preliminary route with local stakeholders, 'mid-2030s'; Wyoming Intertie: Wyoming Industrial Siting permit, county conditional-use permits and NEPA after a preliminary route, 'early 2030s'"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "North Plains Connector (company, DOE and North Dakota filing figures)",
+      "specs": [
+        {
+          "band": "Line",
+          "label": "Technology",
+          "value": "'up-to-525-kilovolt, high-voltage direct current transmission line'; DOE: '525-kv high-voltage direct current (HVDC) overhead transmission line and three alternating current (AC) transmission lines'"
+        },
+        {
+          "band": "Line",
+          "label": "Length",
+          "value": "'420-mile' (company); 'approximately 422 miles' (DOE final EIS); North Dakota portion '168 miles of high-voltage direct current line and about 74 miles of 345 kilovolt transmission lines'"
+        },
+        {
+          "band": "Line",
+          "label": "Capacity",
+          "value": "'3,000 megawatts (MW) of bidirectional transfer capability'"
+        },
+        {
+          "band": "Line",
+          "label": "Endpoints",
+          "value": "'an existing substation in Colstrip, Montana, to two separate connections in North Dakota – one near the town of Center, and the other near St. Anthony'; '345-kV AC Segment to MISO' and '345-kV AC Segment to SPP'"
+        },
+        {
+          "band": "Line",
+          "label": "Structures",
+          "value": "'three to six structures per mile, with 900 to 1,600 feet between each structure. Structure height will typically range from 110 to 160 feet'"
+        },
+        {
+          "band": "Converter stations",
+          "label": "Design life",
+          "value": "'design life of a direct current (DC) converter station is typically 40 years'"
+        },
+        {
+          "band": "Converter stations",
+          "label": "Supplier",
+          "value": "Hitachi Energy — capacity reservation agreement (March 2024); Engineering Services Agreement for 'technical specifications for the HVDC converter stations' and 'AC–DC interface definitions for integration with MISO, SPP, and WECC' (October 2025)"
+        },
+        {
+          "band": "Converter stations",
+          "label": "Colstrip works",
+          "value": "'two new 500 kV bays within and adjacent to the existing Colstrip Substation' and a 5,000 A bus upgrade (DOE amended notice of intent); USD 70 million of the GRIP grant 'earmarked for Colstrip Transmission System upgrades' (NorthWestern)"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Cost",
+          "value": "'approximately $6 billion investment in Montana and North Dakota'; 'The total cost of the Project [North Dakota facilities] is estimated to be approximately $3.2 billion' (North Dakota application, February 2026)"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Schedule",
+          "value": "North Dakota application: 'Third Quarter 2027 Start construction (Montana); Third Quarter 2027 Start construction (North Dakota); Fourth Quarter 2031 Complete construction; First Quarter 2032 Testing; Fourth Quarter 2032 Commence commercial operation'"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Workforce",
+          "value": "'peak temporary workforce of approximately 800 workers'; 'Construction for North Plains Connector transmission line will take approximately three years'"
+        },
+        {
+          "band": "Capacity value",
+          "label": "ELCC (company-commissioned)",
+          "value": "'The ELCC value by region is 1,800 in WECC, 1,350 MW in SPP, and 400 MW in MISO... greater than 3,000 MW' (Astrapé, June 2024)"
+        }
+      ],
+      "notes": "All figures are pre-construction estimates from the developer, its consultant and its regulatory filings; no independent cost estimate exists and the USD 2.5 billion → USD 6 billion escalation is not explained by any source."
+    },
+    {
+      "product": "Three Corners Connector (company and Oklahoma Corporation Commission filing figures)",
+      "specs": [
+        {
+          "band": "Line",
+          "label": "Technology and length",
+          "value": "'300-mile, up-to-525-kilovolt, high-voltage direct current (HVDC) transmission line'; Oklahoma portion '66.24 miles of HVDC... and 9.04 miles of alternating current'"
+        },
+        {
+          "band": "Line",
+          "label": "Capacity",
+          "value": "'an 1,800 MW high voltage direct current (HVDC) transmission line between Southwest Power Pool (SPP) Zone 5 and the Public Service Company of Colorado (PSCO)'"
+        },
+        {
+          "band": "Line",
+          "label": "Right-of-way",
+          "value": "'The project acquired a 200-foot right-of-way from landowners along the proposed route'; 'less than 9%' of the route on public lands"
+        },
+        {
+          "band": "Converter station",
+          "label": "Pueblo County site",
+          "value": "'Footprint: 20-acre fenced facility within a 40-acre tract'; valve hall 'Approximately 75-100 feet'; sound 'not anticipated to exceed 55 decibels (dBA)'"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Cost",
+          "value": "'total estimated cost of the full Three Corners Connector project is $2.133 billion. The Oklahoma portion alone is estimated at $862.3 million' (converter station USD 566 million; lines USD 183.6 million; network upgrades USD 24.5 million)"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Schedule",
+          "value": "'construction timeline is approximately three to four years'; 'could be operational as early as 2031'"
+        },
+        {
+          "band": "Capacity value",
+          "label": "ELCC (company-commissioned)",
+          "value": "'715 MWs in PSCO and 1,362 MWs in SPP Zone 5... a total benefit of 2,077 MWs' (Astrapé/PowerGEM, January 2026)"
+        }
+      ],
+      "notes": "The 1,800 MW rating is the applicant's assumption; no SPP–PSCo joint study has been published."
+    },
+    {
+      "product": "Southline Transmission Project (company and DOE figures)",
+      "specs": [
+        {
+          "band": "Line",
+          "label": "Technology and length",
+          "value": "'approximately 280-mile, double-circuit, high-voltage transmission line' (AC); WAPA segment rebuilt 'with a double-circuit 230/345-kV transmission line'; Phase 2 'new 108-mile, 345 kV HVAC line'"
+        },
+        {
+          "band": "Line",
+          "label": "Capacity",
+          "value": "'a total capacity of 1,000 megawatts'; Phase 1 748 MW per DOE's Transmission Facilitation Program listing"
+        },
+        {
+          "band": "Federal anchor",
+          "label": "DOE TFP",
+          "value": "Phase 1 'Up to $477 million' (Selected, First Round, October 2023); Phase 2 'Up to $352 million' (Selected, Second Round, October 2024); 'a combined capacity contract value of over $700 million'"
+        },
+        {
+          "band": "Cost and schedule",
+          "label": "Schedule",
+          "value": "'Southline expects to begin construction in 2027. The first phase could be operational by 2028, with the full project online by 2029' (August 2026)"
+        }
+      ],
+      "notes": "Total project cost is not published by the company; the DOE listings show the federal capacity contract ceilings, not the line cost."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-01",
+      "category": "regulatory",
+      "headline": "North Dakota PSC holds the technical hearing on North Plains Connector (Case PU-26-82) in Bismarck, with public hearings in Mandan and Regent on 2–3 September",
+      "read": "The last state siting gate for the North Dakota half is in front of the commission; press reported testimony 'largely positive', and no order had issued by mid-September.",
+      "source": "https://news.prairiepublic.org/local-news/2026-08-05/psc-to-hold-hearings-on-the-north-plains-connector-project"
+    },
+    {
+      "date": "2026-08-28",
+      "category": "regulatory",
+      "headline": "DOE and Montana DEQ release the final environmental impact statement for North Plains Connector (DOE/EIS-0568); DOE's Office of Electricity calls connecting the grids 'a critical step toward ensuring long-term energy affordability and reliability'",
+      "read": "NEPA was completed in under two years under DOE's coordinated process, and the current administration chose to praise the project rather than pause it; the record of decision is the next federal step.",
+      "source": "https://www.energy.gov/oe/articles/energy-department-announces-major-milestone-north-plains-connector-bridging-eastern-and"
+    },
+    {
+      "date": "2026-07-29",
+      "category": "regulatory",
+      "headline": "Oklahoma Corporation Commission issues a final order granting Three Corners Connector LLC a Certificate of Authority (Cause PUD2026-000004); Bent County's special review use permit is recorded the same day",
+      "read": "The company's second seam project has its first state certificate — on 100% voluntary land options, in a state that had just rejected federal transmission corridors.",
+      "source": "https://oklahoma.gov/content/dam/ok/en/occ/documents/ajls/jls-courts/court-clerk/meetings/2026/2026-07-29-regular-meeting-agenda.pdf"
+    },
+    {
+      "date": "2026-07-21",
+      "category": "policy",
+      "headline": "The nine-member North Plains Connector utility consortium — now including Great River Energy — says DOE's 2026 draft National Transmission Needs Study 'affirms' the line's value; HVDC World reports 2,550 of 3,000 MW subscribed",
+      "read": "A ninth utility appears in the roster without an announcement; the subscription arithmetic works only if ALLETE's 35% ownership is counted separately from the capacity MOUs.",
+      "source": "https://finance.yahoo.com/energy/articles/doe-national-transmission-needs-study-130000422.html"
+    },
+    {
+      "date": "2026-06-01",
+      "category": "partnership",
+      "headline": "Minnkota Power Cooperative becomes the eighth utility in the North Plains Connector consortium with a non-binding MOU for 150 MW, 'subject to successful negotiation of definitive agreements'",
+      "read": "The consortium keeps growing on the same non-binding terms; the first definitive agreement is what would change the project's character.",
+      "source": "https://news.minnkota.com/post/minnkota-power-cooperative-joins-north-plains-connector-utility-consortium"
+    },
+    {
+      "date": "2026-05-13",
+      "category": "policy",
+      "headline": "Michael Skelly testifies to the House Energy and Commerce energy subcommittee: partner utilities 'will be the ultimate owners – with each owning a slice', construction hoped for 'in late 2027', and interregional cost allocation is a 'free-rider problem' Congress must solve",
+      "read": "The clearest first-party statement of the business model — Grid United develops, utilities own — and of its dependence on a cost-allocation fix the company cannot deliver itself.",
+      "source": "https://d1dth6e84htgma.cloudfront.net/05_13_2026_ENG_Testimony_Skelly_1a0a4321e8.pdf"
+    },
+    {
+      "date": "2026-03-04",
+      "category": "regulatory",
+      "headline": "Arizona Corporation Commission fully approves Southline's CEC 173 amendment covering the remaining 57-mile WAPA upgrade segment — 'one of the final pre-construction permitting submissions'",
+      "read": "Southline is now permit-complete on both ends; what it lacks is a customer book and a construction start that has slipped four times.",
+      "source": "https://southlinetransmission.com/wp-content/uploads/2026/05/Southline-Newsletter-April-2026.pdf"
+    },
+    {
+      "date": "2026-03-04",
+      "category": "partnership",
+      "headline": "Avista's investor materials describe its 10% North Plains MOU as 'Definitive agreements expected in the next 6 – 9 months' with 'Financial commitments likely to occur at conclusion of project in 2032' and the project 'outside the 5-year planning horizon'",
+      "read": "A partner's own guidance dates the first binding agreements to late 2026 and puts the cash a decade out — the honest shape of a utility-owned merchant line.",
+      "source": "https://www.stocktitan.net/sec-filings/AVA/8-k-avista-corp-reports-material-event-068d8ba96643.html"
+    },
+    {
+      "date": "2026-02-20",
+      "category": "regulatory",
+      "headline": "North Plains Connector LLC files its consolidated application for a Certificate of Corridor Compatibility and Route Permit with the North Dakota PSC: total project 'approximately $6 billion', North Dakota facilities 'approximately $3.2 billion', 99% of private easements secured, all county permits in hand",
+      "read": "The filing is where the cost doubled on the record — the USD 3.2 billion figure that trade press still quotes for the whole line now describes the North Dakota portion alone.",
+      "source": "https://www.psc.nd.gov/webdocs/case/26-0082/001-020.pdf"
+    },
+    {
+      "date": "2026-01-28",
+      "category": "corporate",
+      "headline": "Three Corners Connector's Oklahoma application, as reported, states that 'Grid United is wholly owned by Centaurus Capital LP, the Houston-based family office of John and Laura Arnold' and puts the project at USD 2.133 billion",
+      "read": "The only ownership statement on the record, and it is in a regulator's file rather than on any company page — Grid United is a family-office company, not a venture- or fund-backed one.",
+      "source": "https://www.okenergytoday.com/2026/01/2-1b-transmission-line-to-stretch-across-oklahoma-panhandle/"
+    },
+    {
+      "date": "2026-01-09",
+      "category": "regulatory",
+      "headline": "DOE and Montana DEQ publish the joint draft EIS for North Plains Connector; public comment to 23 February 2026, meetings in Miles City and online",
+      "read": "A single joint state–federal document, which is the CITAP-style coordination Skelly later held up to Congress as the model.",
+      "source": "https://deq.mt.gov/News/pressrelease-folder/npc-01-09-26"
+    },
+    {
+      "date": "2025-11-19",
+      "category": "policy",
+      "headline": "DOE's amended notice of intent adds its own decision — 'whether to finalize the NPCII GRIP award components... or whether to terminate those components of the conditional GRIP award' — to the EIS, with USD 605 million of the USD 700 million to pass to the project in phases",
+      "read": "The grant is formally still conditional and reviewable; surviving the October 2025 cancellations is evidence of intent, not of money received.",
+      "source": "https://www.govinfo.gov/content/pkg/FR-2025-11-19/html/2025-20267.htm"
+    },
+    {
+      "date": "2025-11-11",
+      "category": "partnership",
+      "headline": "MDU Resources (Montana-Dakota Utilities) signs a non-binding MOU for 150 MW — the seventh utility and 'the first utility representing North Dakota'",
+      "read": "A North Dakota utility on the subscriber list matters for the state siting case more than 5% of the line does for the economics.",
+      "source": "https://finance.yahoo.com/news/mdu-resources-joins-north-plains-191700291.html"
+    },
+    {
+      "date": "2025-10-02",
+      "category": "partnership",
+      "headline": "Hitachi Energy and Grid United sign an Engineering Services Agreement: Hitachi will 'develop technical specifications for the HVDC converter stations' and AC–DC interfaces with MISO, SPP and WECC",
+      "read": "The converter supplier is chosen before the permits, the customers or the EPC — the supply-chain slot is treated as the scarce input.",
+      "source": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/hitachi-energy-and-grid-united-announce-key-milestone-in-development-of-north-plains-connector-interregional-transmission-line"
+    },
+    {
+      "date": "2025-10-01",
+      "category": "policy",
+      "headline": "DOE terminates 321 awards worth USD 7.56 billion, including a USD 464 million GRIP award for five Midwest transmission lines; North Plains Connector is not on the list",
+      "read": "Selective survival: the project's Republican-state footprint, Colstrip framing and utility ownership fit the administration's stated priorities better than the cancelled awards did.",
+      "source": "https://www.latitudemedia.com/news/scoop-these-are-the-321-awards-doe-is-canceling/"
+    },
+    {
+      "date": "2025-09-01",
+      "category": "regulatory",
+      "headline": "Montana DEQ deems North Plains Connector's Major Facility Siting Act certificate application complete (submitted September 2024)",
+      "read": "Montana's certificate follows the joint EIS; no decision date has been published.",
+      "source": "https://deq.mt.gov/energy/assistance"
+    },
+    {
+      "date": "2025-07-23",
+      "category": "market",
+      "headline": "DOE cancels the USD 4.9 billion conditional loan guarantee for Invenergy's Grain Belt Express; Invenergy says it will proceed on private financing",
+      "read": "The nearest comparable merchant HVDC line lost its federal debt backstop the same summer Grid United's grant survived — the class is being sorted project by project.",
+      "source": "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/"
+    },
+    {
+      "date": "2025-02-25",
+      "category": "policy",
+      "headline": "Grid United files comments at FERC (Docket AD25-4) supporting 'an additional study with a broader scope... increasing transfer capacity through the buildout of interregional transmission'",
+      "read": "The company's regulatory posture is advocacy for interregional transfer requirements, not a tariff filing of its own — no Grid United docket exists at FERC.",
+      "source": "https://gridunited.com/wp-content/uploads/2025/03/20250225-5119_2025-02-25-Grid-United-AD25-4-Comments-FINAL.pdf"
+    },
+    {
+      "date": "2025-01-08",
+      "category": "partnership",
+      "headline": "BHE U.S. Transmission (Berkshire Hathaway Energy) signs a non-binding MOU for 10% / 300 MW of North Plains Connector; Skelly: 'Utilities accounting for 75 percent of the line's capacity have now signed MOUs'",
+      "read": "A Berkshire transmission affiliate on the subscriber list is the strongest credit signal the project has; it is still an MOU.",
+      "source": "https://www.tdworld.com/overhead-transmission/news/55262963/bhe-us-transmission-signs-mou-for-3000-mw-north-plains-connector-transmission-project"
+    },
+    {
+      "date": "2024-12-09",
+      "category": "partnership",
+      "headline": "Puget Sound Energy signs a non-binding MOU for 750 MW — 'the largest share among participating utilities'; NorthWestern Energy (10% / 300 MW) follows on 12 December and Avista (10%) signed on 5 November",
+      "read": "Three Pacific Northwest and Montana utilities in five weeks: the western buyers of the line's eastern capacity, all on the same develop-now, invest-after-permits terms.",
+      "source": "https://www.pse.com/en/press-release/details/Puget-Sound-Energy-signs-on-to-largest-share-of-North-Plains-Connector-transmission-project"
+    },
+    {
+      "date": "2024-10-25",
+      "category": "regulatory",
+      "headline": "DOE publishes the notice of intent to prepare an EIS for North Plains Connector, as lead federal agency under Federal Power Act section 216(h)",
+      "read": "Federal NEPA starts 21 months after the project was announced and finishes in 22 months — fast by the standard of the lines Clean Line failed to build.",
+      "source": "https://www.federalregister.gov/documents/2024/10/25/2024-24879/notice-of-intent-to-prepare-an-environmental-impact-statement-for-the-proposed-north-plains"
+    },
+    {
+      "date": "2024-10-03",
+      "category": "policy",
+      "headline": "DOE selects Southline Phase 2 (108-mile 345 kV line to Las Cruces, 1,000 MW, up to USD 352 million) in the second Transmission Facilitation Program round, after Phase 1's up-to-USD 477 million selection in October 2023",
+      "read": "Two federal anchor-customer selections, neither confirmed executed — the TFP contracts are the reason Southline can be marketed before a utility signs.",
+      "source": "https://southlinetransmission.com/southline-transmission-project-selected-for-second-round-of-transmission-facilitation-program/"
+    },
+    {
+      "date": "2024-08-06",
+      "category": "financial",
+      "headline": "DOE announces a conditional GRIP award of up to USD 700 million to the Montana Department of Commerce for the 'North Plains Connector Interregional Innovation' project; a USD 47.5 million siting grant to Montana Commerce for host counties and the Northern Cheyenne Tribe followed in July",
+      "read": "The largest federal grant to any single transmission line, routed through a state agency — and, two years later, still conditional on a record of decision.",
+      "source": "https://montanafreepress.org/2024/08/06/montana-lands-700-million-for-north-plains-connector-transmission-project/"
+    },
+    {
+      "date": "2024-05-28",
+      "category": "partnership",
+      "headline": "Portland General Electric signs a non-binding MOU for about 20% / 600 MW of North Plains Connector; the release puts the line at 'approximately $3.2 billion' and 415 miles",
+      "read": "The first western utility subscriber and the first statement of the develop-now, invest-later terms every later MOU repeats.",
+      "source": "https://www.prnewswire.com/news-releases/pge-joins-grid-united-and-allete-in-3-000-megawatt-east-west-transmission-line-302155457.html"
+    },
+    {
+      "date": "2024-03-20",
+      "category": "partnership",
+      "headline": "Hitachi Energy and Grid United announce a 'capacity reservation agreement' under which Hitachi will provide HVDC technology for 'multiple Grid United HVDC interconnections' (CERAWeek)",
+      "read": "Reserving converter slots across the portfolio before any line is permitted is the supply-chain bet the whole strategy rests on.",
+      "source": "https://www.hitachienergy.com/news-and-events/press-releases/2024/03/hitachi-energy-to-accelerate-introduction-of-hvdc-technology-with-grid-united-for-transmission-projects-to-strengthen-us-power-grid"
+    },
+    {
+      "date": "2023-12-21",
+      "category": "partnership",
+      "headline": "ALLETE and North Plains Connector LLC sign development agreements; ALLETE to pursue 'at least 35%' ownership and operate the line",
+      "read": "The one binding relationship on the project — ALLETE has since been taken private by CPP Investments and GIP (December 2025), the same CPP that controls Pattern Energy.",
+      "source": "https://northplainsconnector.com/allete-grid-united-sign-development-agreements-for-advancing-new-hvdc-transmission-line-in-north-dakota-and-montana/"
+    },
+    {
+      "date": "2023-03-15",
+      "category": "financial",
+      "headline": "Bloomberg reports John Arnold has committed 'several hundred million dollars' to Grid United, 'a joint venture he co-founded with transmission pioneer Michael Skelly, to acquire land, easements and the permits needed to build power lines'",
+      "read": "The only sizing of the company's capital, three and a half years old; Arnold 'declined to be more specific'.",
+      "source": "https://news.bloomberglaw.com/environment-and-energy/commodities-billionaire-arnold-bets-on-long-distance-power-lines"
+    },
+    {
+      "date": "2023-02-21",
+      "category": "regulatory",
+      "headline": "Texas PUC rejects Grid United Texas's certificate application for the 1,500 MW Pecos West ERCOT–WECC tie, citing the state's right-of-first-refusal law",
+      "read": "The company's only denial; Pecos West was later re-scoped away from ERCOT and Texas's export-charge politics.",
+      "source": "https://www.rtoinsider.com/31670-texas-puc-rejects-ccn-grid-united-pecos-west/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "hitachi-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-03",
+      "via": "HVDC converter stations",
+      "note": "HVDC technology partner: a capacity reservation agreement covering multiple Grid United lines (March 2024) and an Engineering Services Agreement for the North Plains Connector converter stations (October 2025).",
+      "context": "Hitachi Energy announced at CERAWeek 2024 that 'under an innovative approach known as a capacity reservation agreement, Hitachi Energy will provide HVDC technology to support the development of multiple Grid United HVDC interconnections' — a manufacturing-slot reservation made before any line was permitted. In October 2025 the two signed an Engineering Services Agreement under which Hitachi 'will deliver early-stage engineering services, including the development of technical specifications for the HVDC converter stations' and the AC–DC interface definitions with MISO, SPP and WECC. No equipment order has been announced; the North Dakota schedule puts construction in 2027–28.",
+      "source": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/hitachi-energy-and-grid-united-announce-key-milestone-in-development-of-north-plains-connector-interregional-transmission-line"
+    },
+    {
+      "slug": "invenergy",
+      "type": "competitor",
+      "status": "active",
+      "note": "The other private developer of interregional HVDC in the US — Grain Belt Express (5,000 MW, four grid regions) against North Plains (3,000 MW, three markets); Invenergy bought Grain Belt from Skelly's Clean Line in 2018, and Grid United co-founder Kris Zadlo is a former Invenergy senior vice president.",
+      "context": "Clean Line Energy Partners, which Skelly founded and ran until it shut in 2019, sold Grain Belt Express to Invenergy; Invenergy is now building it as a USD 11 billion merchant line after DOE terminated its USD 4.9 billion conditional loan guarantee in July 2025. Zadlo 'was a Senior Vice President at Invenergy, responsible for commercial analytics, government and regulatory affairs, strategy, transmission analysis'. The two companies compete for the same scarce inputs — HVDC converter slots, federal anchor programmes, utility subscribers — with different models: Invenergy sells merchant capacity under negotiated rates and finances on its own balance sheet; Grid United sells utilities ownership slices and funds only development.",
+      "source": "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/"
+    },
+    {
+      "slug": "pattern-energy",
+      "type": "competitor",
+      "status": "active",
+      "note": "Pattern is the developer that finished what Clean Line started — it bought Western Spirit from Clean Line, energised SunZia (3,000 MW HVDC) in 2025 and is permitting Southern Spirit (ERCOT–Southeast HVDC); its RioSol participation and SunZia corridor overlap Southline's southern New Mexico–Arizona market.",
+      "context": "MIT Technology Review's account of Clean Line's wind-down lists the sale of Western Spirit 'to Pattern Development' alongside the Grain Belt and Plains & Eastern sales. Pattern's SunZia — the first VSC HVDC wind corridor to reach commercial operation in the US — and its 324-mile Southern Spirit line are the operating and permitted comparables against which Grid United's five pre-construction lines are judged; Southline and SunZia both move southwestern New Mexico wind into Arizona. No commercial relationship between the two companies is on the record.",
+      "source": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/"
+    },
+    {
+      "slug": "nextera-energy-resources",
+      "type": "other",
+      "status": "historical",
+      "since": "2017",
+      "note": "NextEra bought the Oklahoma portion of Clean Line's Plains & Eastern HVDC project from Skelly's prior company as Clean Line wound down.",
+      "context": "MIT Technology Review records that Clean Line 'sold Grain Belt Express to Invenergy, the Oklahoma portion of Plains & Eastern to NextEra Energy, and Western Spirit to Pattern Development' before shutting in 2019. The link is to Skelly's history rather than to Grid United's business; it is recorded because the corpus's NextEra dossier is the one place the Plains & Eastern purchase can be cross-read.",
+      "source": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/"
+    },
+    {
+      "slug": "form-energy",
+      "type": "other",
+      "status": "active",
+      "note": "Michael Skelly sits on Form Energy's board, per his Grid United biography.",
+      "context": "The company biography states that Skelly 'sits on the boards of the Houston Bike Share, the Houston Parks Board, LINK Houston, Greentown Labs Houston, and Form Energy'. A personal directorship, not a commercial link between the companies; recorded so the Form Energy dossier's mention of Skelly resolves.",
+      "source": "https://gridunited.com/team/michael-skelly/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "DOE GRIP (Grid Resilience and Innovation Partnerships)",
+      "status": "announced",
+      "effectiveDate": "2024-08",
+      "exposure": "North Plains Connector holds a conditional GRIP award of 'up to $700 million' made to the Montana Department of Commerce in August 2024, of which 'an estimated $605 million' would be disbursed to the project 'in a phased approach subject to certain conditions met in the preceding phase'. DOE's November 2025 amended notice makes 'whether to finalize the NPCII GRIP award components... or whether to terminate those components' a decision to be taken with the record of decision. The award survived DOE's October 2025 cancellation of 321 grants, and USD 70 million is earmarked for Colstrip transmission upgrades.",
+      "mitigation": "The company posts a DOE conflict-of-interest policy and staffs a 'Manager, Financial Reporting and Grants Compliance'; every partner MOU states that Grid United funds development regardless.",
+      "source": "https://www.govinfo.gov/content/pkg/FR-2025-11-19/html/2025-20267.htm"
+    },
+    {
+      "regime": "DOE Transmission Facilitation Program",
+      "status": "announced",
+      "effectiveDate": "2023-10",
+      "exposure": "Southline Phase 1 (748 MW, 'Up to $477 million') and Phase 2 (1,000 MW, 'Up to $352 million') were selected for DOE capacity contracts in October 2023 and October 2024 — 'a combined capacity contract value of over $700 million' — under which DOE 'serves as an anchor tenant' and its 'involvement ends' once other customers subscribe. DOE's programme page lists both as 'Selected'; no source confirms that either capacity contract has been executed.",
+      "source": "https://www.energy.gov/oe/transmission-facilitation-program-selections"
+    },
+    {
+      "regime": "NEPA / Federal Power Act §216(h) coordinated permitting (CITAP-style)",
+      "status": "in-effect",
+      "effectiveDate": "2024-10-25",
+      "exposure": "DOE is lead federal agency for North Plains Connector's EIS (DOE/EIS-0568) with Montana DEQ as joint lead, BLM, USFS and the Agricultural Research Service cooperating; the process ran from the October 2024 notice of intent to the August 2026 final EIS, which DOE describes as 'well under the two-year maximum timeline'. Southline's federal record is older — final EIS October 2015, BLM and WAPA records of decision April 2016.",
+      "mitigation": "Skelly told Congress 'our company has had good success with DOE's Coordinated Interagency Transmission Authorization and Permits (CITAP) process, and believe it should be a model for other streamlining efforts', and asked for time-certain judicial review and Clean Water Act and NHPA §106 reform.",
+      "source": "https://www.energy.gov/nepa/doeeis-0568-north-plains-connector-multiple-locations"
+    },
+    {
+      "regime": "State siting — North Dakota PSC, Montana MFSA, Oklahoma OCC, Arizona ACC, Texas PUCT (ROFR)",
+      "status": "in-effect",
+      "exposure": "North Plains needs a North Dakota Certificate of Corridor Compatibility and Route Permit (Case PU-26-82, heard September 2026) and a Montana Major Facility Siting Act certificate (application complete September 2025); Three Corners holds its Oklahoma Certificate of Authority (29 July 2026) and needs Colorado county permits; Southline's Arizona CEC amendment was approved 4 March 2026. Texas is the one denial: the PUCT rejected Pecos West's certificate in February 2023 under the state's right-of-first-refusal law, and Grid United had told the PUCT it would 'obtain all necessary approvals from the Federal Energy Regulatory Commission to ensure ERCOT's jurisdictional status quo'. North Dakota's 2025 HB 1258 let the PSC override local zoning; the company had already obtained every county permit.",
+      "mitigation": "Voluntary land acquisition — 99% of North Dakota easements, 100% of Oklahoma and Southline private land — and county-by-county permits obtained before state hearings; the company reports no use of eminent domain on any project.",
+      "source": "https://www.psc.nd.gov/webdocs/case/26-0082/001-020.pdf"
+    },
+    {
+      "regime": "FERC Order 1920 / interregional cost allocation",
+      "status": "in-effect",
+      "effectiveDate": "2024-05",
+      "exposure": "None of Grid United's lines sits in a regional plan, so none benefits from Order 1920's regional cost allocation; the company's model — utility ownership slices, DOE anchor capacity, participant funding — is built to avoid the allocation fight rather than win it. Skelly to Congress: 'many of the other benefits of interregional lines accrue to customers who do not pay for the project. We will never get the grid that we desperately need unless we address this free-rider problem.' The company filed comments in FERC's interregional transfer capacity study (AD25-4, February 2025) but has no docket of its own; no negotiated-rate petition exists for any of its lines.",
+      "source": "https://gridunited.com/wp-content/uploads/2025/03/20250225-5119_2025-02-25-Grid-United-AD25-4-Comments-FINAL.pdf"
+    },
+    {
+      "regime": "Section 232 tariffs on grid equipment (steel, aluminium, copper derivatives)",
+      "status": "in-effect",
+      "effectiveDate": "2026-04-06",
+      "exposure": "The April 2026 restructuring applies Section 232 duties to the full customs value of derivative products, with 'electrical grid equipment, such as transformers and switchgear' at 15% through 31 December 2027, and copper smelt-and-cast reporting from July 2026. North Plains' converter stations and Southline's transformers are pre-procurement (2027 or later); no source quantifies the exposure, and the company's own channels do not mention tariffs.",
+      "mitigation": "The Hitachi Energy capacity reservation and engineering agreements are described by the company as enabling 'proactive supply chain management'.",
+      "source": "https://www.foley.com/insights/publications/2026/05/what-every-multinational-should-know-about-the-new-rules-for-section-232-tariffs-on-steel-aluminum-and-copper-derivatives/"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Michael Skelly",
+      "title": "Chief Executive Officer and Co-Founder",
+      "photo": "images/execs/grid-united-skelly.jpg",
+      "linkedin": "https://www.linkedin.com/in/michael-skelly-91b105/",
+      "background": [
+        "Founder and CEO of Grid United (2021–); testified to the House Energy and Commerce energy subcommittee on 13 May 2026",
+        "Founder and President, Clean Line Energy Partners (2009–2019) — 'a company that successfully permitted some of the longest transmission lines in the U.S. in the last 50 years'; its lines were sold to Invenergy, NextEra and Pattern before it shut",
+        "Chief Development Officer, Horizon Wind Energy (1999–2008), now part of EDPR; Democratic candidate for Congress, Texas 7th district (2008)",
+        "Boards: Form Energy, Houston Parks Board, Houston Bike Share, LINK Houston, Greentown Labs Houston; led the 2012 'Parks By You' USD 150 million bond campaign",
+        "MBA, Harvard Business School; BA economics, University of Notre Dame"
+      ]
+    },
+    {
+      "name": "Kris Zadlo",
+      "title": "President and Chief Technical Officer; co-founder",
+      "photo": "images/execs/grid-united-zadlo.jpg",
+      "linkedin": "https://www.linkedin.com/in/kris-zadlo-b455292/",
+      "background": [
+        "'One of the co-founders of Grid United responsible for identifying new development opportunities while overseeing its technical initiatives'; named CTO in the Three Corners Oklahoma application",
+        "Senior Vice President, Invenergy — 'commercial analytics, government and regulatory affairs, strategy, transmission analysis and the establishment of the company's energy storage program'",
+        "Vice President of Transmission, Calpine; ten years at Commonwealth Edison; 'responsible for interconnecting over 15,000 MW of utility scale energy projects'",
+        "BSEE Rose-Hulman; MSEE Purdue; registered professional engineer (Illinois)"
+      ]
+    },
+    {
+      "name": "Kristen Williams Golden",
+      "title": "Senior Vice President and Chief Legal Officer; founding member",
+      "photo": "images/execs/grid-united-golden.jpg",
+      "background": [
+        "'One of the founding members of Grid United and oversaw its growth to over 60 employees with a portfolio of over ten transmission development projects across North America'; also leads the HR function",
+        "Senior Legal Counsel, Shell — Lake Charles LNG, Shell Ventures and the Power business",
+        "Jones Day; Latham & Watkins",
+        "JD, University of Texas School of Law"
+      ]
+    },
+    {
+      "name": "Raj Mahagaokar",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/grid-united-mahagaokar.jpg",
+      "linkedin": "https://www.linkedin.com/in/rajen-mahagaokar-69a49956/",
+      "background": [
+        "'Develops and drives the execution of Grid United's capital strategy and financings'; 'evaluates and executes the acquisition and investment of external projects, and structures utility partnerships, project sales, and transmission service agreement contracts' (joined the site April 2022)",
+        "BA mathematical economic analysis, Rice University"
+      ]
+    },
+    {
+      "name": "Jack Farley",
+      "title": "Chief Commercial Officer",
+      "photo": "images/execs/grid-united-farley.jpg",
+      "linkedin": "https://www.linkedin.com/in/jackfarley/",
+      "background": [
+        "'Responsible for executing agreements with utilities and trading partners that wish to own equity or transmission rights in the company's portfolio of transmission projects' (joined the site December 2024)",
+        "US Army cavalry officer on the East–West German border",
+        "MBA, Wharton School; University of Kentucky, highest honors"
+      ]
+    },
+    {
+      "name": "Brant Johnson",
+      "title": "Senior Vice President, Development",
+      "photo": "images/execs/grid-united-johnson.jpg",
+      "linkedin": "https://www.linkedin.com/in/brant-johnson-2b7aaa36/",
+      "background": [
+        "'Provides strategic leadership for several of Grid United's development projects, including North Plains Connector, Wyoming Intertie and others'; filed pre-filed direct testimony in North Dakota PSC Case PU-26-82",
+        "More than 20 years in energy; adjunct law professor teaching energy regulation; licensed attorney in Texas and Montana",
+        "JD and BS zoology, Brigham Young University"
+      ]
+    },
+    {
+      "name": "Colleen Nash",
+      "title": "North Plains Connector Lead",
+      "photo": "images/execs/grid-united-nash.jpg",
+      "linkedin": "https://www.linkedin.com/in/colleen-nash-1721623a/",
+      "background": [
+        "'Responsible for leading the North Plains Connector team, comprised of Grid United colleagues and all partner organizations, to complete development and begin execution' (joined the site November 2025)",
+        "BS mechanical engineering, University of Texas at Austin"
+      ]
+    },
+    {
+      "name": "Joss Saccone",
+      "title": "Vice President, Project Execution",
+      "photo": "images/execs/grid-united-saccone.jpg",
+      "linkedin": "https://www.linkedin.com/in/jsaccone/",
+      "background": [
+        "'Oversees the development and implementation of construction and project management strategies... leads the contracting and supplier management strategies with construction suppliers'; contact on the 2025 HVDC owner's-engineer RFP",
+        "Supporting North Plains Connector and Southline 'as they progress towards construction'"
+      ]
+    },
+    {
+      "name": "Allie Wahrenberger",
+      "title": "Vice President, Engineering",
+      "photo": "images/execs/grid-united-wahrenberger.jpg",
+      "linkedin": "https://www.linkedin.com/in/allison-wahrenberger-4374b717/",
+      "background": [
+        "'Leads engineering and design efforts at Grid United'; quoted in Hitachi Energy's October 2025 engineering-agreement release",
+        "Wind project design, Enel Green Power — 'over 2,000 MW of wind projects, including approximately 100 miles of transmission lines'",
+        "MS Stanford; BS Tufts"
+      ]
+    },
+    {
+      "name": "John Kuba",
+      "title": "Vice President, Environmental",
+      "background": [
+        "Leads environmental permitting; filed pre-filed direct testimony in North Dakota PSC Case PU-26-82 (2026)"
+      ]
+    },
+    {
+      "name": "John D. Arnold",
+      "title": "Co-Founder and Chairman (per Columbia CGEP biography); founder of Centaurus Capital LP, the owner of record",
+      "background": [
+        "'Co-founder and chairman of Grid United, a developer of interregional, high-voltage transmission projects, and founder of Centaurus Capital, a family office investment fund focused on the energy industry' (Columbia Center on Global Energy Policy)",
+        "Bloomberg, March 2023: committed 'several hundred million dollars' to Grid United 'to acquire land, easements and the permits needed to build power lines'",
+        "Co-founder, Arnold Ventures; former natural-gas trader (Enron; Centaurus Energy hedge fund, closed 2012). Not listed on the company's team page"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Ownership and capital (regulator filing, press and EDGAR)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Owner of record",
+            "actual": "'Grid United is wholly owned by Centaurus Capital LP, the Houston-based family office of John and Laura Arnold' — Three Corners Connector LLC's application to the Oklahoma Corporation Commission (20 January 2026), as reported by OK Energy Today; Arnold is 'co-founder and chairman' per his Columbia CGEP biography",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No company channel names an owner; the filing itself was not opened (OCC documents are not web-served), so the statement is second-hand"
+          },
+          {
+            "name": "Capital committed",
+            "actual": "'several hundred million dollars' committed by John Arnold 'to acquire land, easements and the permits' (Bloomberg, 15 March 2023); 'He declined to be more specific'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The only sizing on the record; no later figure"
+          },
+          {
+            "name": "Form D / outside investors",
+            "actual": "EDGAR full-text search, Form D, 2021–2026: zero filings by any Grid United entity; 'Grid United' appears only in partner utilities' 10-K, 10-Q, 8-K and proxy filings (NorthWestern, ALLETE, Portland General, Avista)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No institutional investor, valuation, sale process or change of control found since 2025-01-01"
+          }
+        ],
+        "commentary": "Collection gap: Grid United publishes no revenue, cost, headcount or funding figure and files nothing with the SEC. Everything above is second-hand — a regulator's application read through trade press, and a three-year-old Bloomberg interview. The company's own statements are limited to 'Grid United will continue to fund the development' in every partner MOU."
+      },
+      {
+        "period": "Project capital in development (developer, DOE and state-filing figures)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "North Plains Connector",
+            "actual": "'approximately $6 billion' (company site and North Dakota application, 2026); North Dakota facilities 'approximately $3.2 billion'; was 'approximately $2.5 billion' (January 2023) and USD 3.2–3.6 billion (2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Federal support: conditional GRIP award up to USD 700 million (USD 605 million to the project, phased); USD 47.5 million DOE siting grant to Montana Commerce; no partner equity until permits"
+          },
+          {
+            "name": "Three Corners Connector",
+            "actual": "'$2.133 billion' total, 'Oklahoma portion... $862.3 million' (OCC application, January 2026); 'approximately $2 billion' on the company site",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No customer, partner or federal award"
+          },
+          {
+            "name": "Southline",
+            "actual": "Total cost not published; DOE Transmission Facilitation Program selections 'Up to $477 million' (Phase 1) and 'Up to $352 million' (Phase 2), 'a combined capacity contract value of over $700 million'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Contracts listed as 'Selected', execution unconfirmed; Black Forest Partners and Hunt Transmission Services are the named investors"
+          },
+          {
+            "name": "Wyoming Intertie",
+            "actual": "'approximately $2.5 billion to $3 billion investment in the state' (May 2025); 'estimated $2 billion' on the site",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Pre-filing"
+          }
+        ],
+        "commentary": "The portfolio the company describes would cost on the order of USD 11–12 billion at current estimates against a development budget sized in the hundreds of millions; the model is to have utilities and federal anchors fund construction. Cost escalation on North Plains (2.4× in three years) is unexplained by any source, though the North Dakota filing's USD 3.2 billion for that state alone suggests the earlier figure was re-scoped rather than simply overrun."
+      },
+      {
+        "period": "Operating scale (company and third-party, dated)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Headcount",
+            "actual": "66 staff profiles on the About page (September 2026); 'over 60 employees' (Golden bio); 87 per Built In; six open roles",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No company figure"
+          },
+          {
+            "name": "Capacity subscribed — North Plains",
+            "actual": "2,550 MW of 3,000 MW under non-binding MOUs with seven utilities (PSE 750, PGE 600, NorthWestern 300, Avista 300, BHE 300, MDU 150, Minnkota 150) plus ALLETE's 'at least 35%' development-agreement stake and Great River Energy's undisclosed commitment",
+            "expected": "",
+            "verdict": "inline",
+            "result": "'85% subscribed' (HVDC World, July 2026); no definitive agreement announced"
+          },
+          {
+            "name": "Land secured",
+            "actual": "North Plains: '99 percent of the private landowner easements' in North Dakota (February 2026), 'over 90% of the right-of-way' overall (ESIG, December 2024); Three Corners: '100% of private land rights in Oklahoma'; Southline: '100% of private land rights' in Arizona and New Mexico",
+            "expected": "",
+            "verdict": "inline",
+            "result": "All by voluntary acquisition per the company; no eminent domain use reported"
+          }
+        ],
+        "commentary": "The measurable outputs of a development company are land, permits and subscriptions, and on those Grid United's record is strong: a final EIS and a state certificate in 2026, and a subscriber list that covers 85% of its flagship. What it has not yet produced is a binding contract, a construction start or an operating asset."
+      }
+    ],
+    "commentary": "Private, family-office owned, no disclosure. Analyst expectations do not exist for this company and the 'expected' fields are left empty rather than reconstructed."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Grid United is a development-stage company whose product is a permitted, land-secured corridor and whose exit is the sale of ownership slices to utilities, not the operation of lines. Basis: the About page ('local utilities will often see fit to participate as owners or customers'), Skelly's testimony ('these electric companies will be the ultimate owners – with each owning a slice'), every North Plains MOU ('Grid United will continue to fund the development... [the utility] would invest when project regulatory approvals and permits are in place'), and the CFO's remit of 'project sales, and transmission service agreement contracts'.",
+    "2. **(High confidence)** We assess that the company is wholly owned and funded by John Arnold's family office, with no outside capital, and that this is what lets it carry a decade of at-risk development that Clean Line could not. Basis: the Three Corners application's ownership statement as reported; Columbia's 'co-founder and chairman' biography; Bloomberg's 'several hundred million dollars'; zero Form D filings across five years. Collection gap: none of this is on a company page, and no figure newer than March 2023 sizes the capital.",
+    "3. **(Moderate confidence)** We assess that North Plains Connector is more likely than not to reach a record of decision and definitive partner agreements within twelve months, but that construction in 2028 depends on the GRIP award being finalised and on partners whose own corporate positions are moving. Basis for the first half: the final EIS on 28 August 2026, DOE's public endorsement, all county permits, 99% easements, a supportive North Dakota hearing and Avista's 'next 6–9 months' guidance. Basis for the caution: every commitment but ALLETE's is non-binding, the grant remains 'conditional' with DOE reserving a termination decision, ALLETE changed control in December 2025, NorthWestern is mid-merger, and the cost has risen to USD 6 billion with no explanation on the record.",
+    "4. **(Moderate confidence)** We assess that the Hitachi Energy capacity reservation is the company's most valuable commercial asset after its land. Basis: HVDC converter capacity is the pacing constraint on every interregional line in the corpus, and Grid United secured a portfolio-wide reservation (March 2024) and a converter specification agreement (October 2025) before holding a single permit; the reservation's terms, price and duration are not disclosed, which is why this is not high confidence.",
+    "5. **(Moderate confidence)** We assess that the federal policy environment has, contrary to expectation, favoured Grid United's projects while punishing its merchant comparables — because its lines are utility-owned, generation-agnostic and sited in states aligned with the administration. Basis: North Plains absent from the 321 cancelled awards and praised by DOE's Office of Electricity; Grain Belt's loan guarantee terminated; the Southline and Southern Spirit TFP contracts still 'selected' but unexecuted. Indicator: the record of decision and the GRIP finalisation decision, expected together around October 2026.",
+    "6. **(Low confidence)** We assess that Three Corners Connector, Pecos West and Wyoming Intertie are options rather than projects — corridors secured ahead of any customer — and that without a subscriber or a federal anchor they will not enter construction this decade. Basis: no partner, offtaker or financing is disclosed for any of the three; the Oklahoma order defers cost sharing to a future docket; Pecos West's original scope was denied and its replacement has no filing. This is inference from absence and is stated at low confidence."
+  ],
+  "sources": [
+    {
+      "label": "Government Market News — North Plains Connector advances plans to link U.S. power grids (record of decision expected around October)",
+      "url": "https://govmarketnews.com/north-plains-connector-transmission-environmental-review/",
+      "date": "2026-09-11"
+    },
+    {
+      "label": "NorthWestern Energy — 8-K, Barclays conference deck: 'Approximately $6 billion, 425-mile, 525kv' North Plains Connector; $70M for Colstrip upgrades (via StockTitan; sec.gov blocked)",
+      "url": "https://www.stocktitan.net/sec-filings/NWE/8-k-north-western-energy-group-inc-reports-material-event-61441cdae93b.html",
+      "date": "2026-09-09"
+    },
+    {
+      "label": "Canary Media — This novel power line could link 3 grids across 3 time zones",
+      "url": "https://www.canarymedia.com/articles/transmission/novel-power-line-3-grids",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "DOE Office of Electricity — Energy Department announces major milestone for North Plains Connector (final EIS)",
+      "url": "https://www.energy.gov/oe/articles/energy-department-announces-major-milestone-north-plains-connector-bridging-eastern-and",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "DOE NEPA — DOE/EIS-0568 Final Environmental Impact Statement (August 2026)",
+      "url": "https://www.energy.gov/nepa/articles/doeeis-0568-final-environmental-impact-statement-august-2026",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Federal Register — Environmental Impact Statements; Notice of Availability (North Plains Connector FEIS)",
+      "url": "https://www.federalregister.gov/documents/2026/08/28/2026-17606/environmental-impact-statements-notice-of-availability",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "North Dakota Monitor — Hearings planned in southwest North Dakota power line project ($6B total; $3.2B North Dakota)",
+      "url": "https://northdakotamonitor.com/2026/08/25/hearings-planned-in-southwest-north-dakota-power-line-project/",
+      "date": "2026-08-25"
+    },
+    {
+      "label": "mGrid — DOE cancels the last three national interest electric transmission corridors",
+      "url": "https://mgrid.org/2026/08/12/doe-cancels-three-national-interest-transmission-corridors/",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "Southline Transmission — Arizona project handout (construction 2027; Phase 1 2028; full 2029; TFP 'over $700 million')",
+      "url": "https://southlinetransmission.com/wp-content/uploads/2026/08/GU-Southline-handout-Arizona-8.10.26.pdf",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Prairie Public — PSC to hold hearings on the North Plains Connector Project",
+      "url": "https://news.prairiepublic.org/local-news/2026-08-05/psc-to-hold-hearings-on-the-north-plains-connector-project",
+      "date": "2026-08-05"
+    },
+    {
+      "label": "Yahoo Finance — NorthWestern Energy Q2 2026 earnings call (Brian Bird on North Plains Connector)",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/northwestern-energy-group-inc-nwe-030104057.html",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Oklahoma Corporation Commission — 24-hour signing agenda: Final Order Granting Certificate of Authority, Three Corners Connector LLC (PUD2026-000004)",
+      "url": "https://oklahoma.gov/content/dam/ok/en/occ/documents/ajls/jls-courts/court-clerk/meetings/2026/2026-07-29-regular-meeting-agenda.pdf",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — DOE National Transmission Needs Study affirms value of North Plains Connector (nine-member consortium roster)",
+      "url": "https://finance.yahoo.com/energy/articles/doe-national-transmission-needs-study-130000422.html",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "HVDC World — DOE study endorses North Plains Connector HVDC project (2,550 MW of 3,000 MW subscribed)",
+      "url": "https://hvdcworld.com/news/doe-study-endorses-north-plains-connector-hvdc-project",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "DOE Office of Electricity — 2026 Draft National Transmission Needs Study published",
+      "url": "https://www.energy.gov/oe/articles/does-office-electricity-publishes-2026-draft-national-transmission-needs-study",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "Minnkota Power Cooperative — Minnkota joins North Plains Connector utility consortium (150 MW, non-binding MOU, eighth member)",
+      "url": "https://news.minnkota.com/post/minnkota-power-cooperative-joins-north-plains-connector-utility-consortium",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "Business Wire via Nasdaq — Minnkota Power Cooperative joins North Plains Connector utility consortium",
+      "url": "https://www.nasdaq.com/press-release/minnkota-power-cooperative-joins-north-plains-connector-utility-consortium-2026-06-01",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "Michael Skelly — Testimony to the House Energy and Commerce Subcommittee on Energy, 'Wires, Rates, and States'",
+      "url": "https://d1dth6e84htgma.cloudfront.net/05_13_2026_ENG_Testimony_Skelly_1a0a4321e8.pdf",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "Foley & Lardner — New rules for Section 232 tariffs on steel, aluminum and copper derivatives (grid equipment at 15% through 2027)",
+      "url": "https://www.foley.com/insights/publications/2026/05/what-every-multinational-should-know-about-the-new-rules-for-section-232-tariffs-on-steel-aluminum-and-copper-derivatives/",
+      "date": "2026-05"
+    },
+    {
+      "label": "Southline Transmission — April 2026 newsletter (ACC approves CEC 173 amendment, 4 March 2026)",
+      "url": "https://southlinetransmission.com/wp-content/uploads/2026/05/Southline-Newsletter-April-2026.pdf",
+      "date": "2026-04"
+    },
+    {
+      "label": "Avista — 8-K exhibit 99.1, investor presentation: North Plains MOU 10%, definitive agreements in 6–9 months, commitment at conclusion in 2032 (via StockTitan)",
+      "url": "https://www.stocktitan.net/sec-filings/AVA/8-k-avista-corp-reports-material-event-068d8ba96643.html",
+      "date": "2026-03-04"
+    },
+    {
+      "label": "Three Corners Connector — Oklahoma project handout (100% Oklahoma land rights; approvals expected 2026)",
+      "url": "https://threecornersconnector.com/wp-content/uploads/GU-3CC-Oklahoma-handout-3.2.26.pdf",
+      "date": "2026-03-02"
+    },
+    {
+      "label": "North Plains Connector — North Dakota PSC Certificate of Corridor Compatibility page (application filed 20 February 2026)",
+      "url": "https://northplainsconnector.com/permitting/north-dakota-psc-certificate-of-corridor-compatibility/",
+      "date": "2026-02-25"
+    },
+    {
+      "label": "North Dakota PSC — North Plains Connector LLC consolidated application, Case PU-26-82 (cost, easements, schedule, interconnection studies)",
+      "url": "https://www.psc.nd.gov/webdocs/case/26-0082/001-020.pdf",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Three Corners Connector — February 2026 newsletter (OCC filing 20 January 2026; county permits)",
+      "url": "https://threecornersconnector.com/wp-content/uploads/Three-Corners-Connector-Newsletter-February-2026.pdf",
+      "date": "2026-02"
+    },
+    {
+      "label": "OK Energy Today — $2.1B transmission line to stretch across Oklahoma Panhandle (OCC application: 'wholly owned by Centaurus Capital LP'; $2.133 billion)",
+      "url": "https://www.okenergytoday.com/2026/01/2-1b-transmission-line-to-stretch-across-oklahoma-panhandle/",
+      "date": "2026-01-28"
+    },
+    {
+      "label": "Montana DEQ — DEQ requests comment on North Plains Connector draft EIS",
+      "url": "https://deq.mt.gov/News/pressrelease-folder/npc-01-09-26",
+      "date": "2026-01-09"
+    },
+    {
+      "label": "Astrapé / PowerGEM — Three Corners Connector Project Evaluation (ELCC 715 MW PSCo, 1,362 MW SPP Zone 5)",
+      "url": "https://gridunited.com/wp-content/uploads/2026/01/Three-Corners-Connector-Project-Evaluation.pdf",
+      "date": "2026-01"
+    },
+    {
+      "label": "North Plains Connector — Project Overview (345 kV AC segments to MISO and SPP; approximately $6 billion)",
+      "url": "https://northplainsconnector.com/wp-content/uploads/North-Plains-Connector-Project-Overview.pdf",
+      "date": "2026-01"
+    },
+    {
+      "label": "ALLETE — Completion of acquisition by CPP Investments and GIP",
+      "url": "https://investor.allete.com/news-releases/news-release-details/allete-announces-completion-acquisition-cpp-investments-and",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Three Corners Connector — Converter station one-pager (Pueblo County)",
+      "url": "https://threecornersconnector.com/wp-content/uploads/2026/01/GU-Three-Corners-Connector-onepager-12.1.25.pdf",
+      "date": "2025-12-01"
+    },
+    {
+      "label": "Federal Register (govinfo mirror) — Amended notice of intent, DOE/EIS-0568: DOE's decision to finalize or terminate the conditional GRIP award; $605 million to the project proponent",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2025-11-19/html/2025-20267.htm",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — MDU Resources joins North Plains Connector utility consortium (150 MW, non-binding MOU)",
+      "url": "https://finance.yahoo.com/news/mdu-resources-joins-north-plains-191700291.html",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "North Plains Connector — MDU Resources joins the utility consortium (seventh utility)",
+      "url": "https://northplainsconnector.com/mdu-resources-joins-north-plains-connector-utility-consortium/",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "Hitachi Energy — Hitachi Energy and Grid United announce key milestone: Engineering Services Agreement for North Plains Connector",
+      "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/hitachi-energy-and-grid-united-announce-key-milestone-in-development-of-north-plains-connector-interregional-transmission-line",
+      "date": "2025-10-02"
+    },
+    {
+      "label": "Latitude Media — Scoop: these are the 321 awards DOE is canceling",
+      "url": "https://www.latitudemedia.com/news/scoop-these-are-the-321-awards-doe-is-canceling/",
+      "date": "2025-10-02"
+    },
+    {
+      "label": "Clean Air Task Force — The Power of Engagement: North Plains Connector case study",
+      "url": "https://www.catf.us/wp-content/uploads/2025/08/Power-of-Engagement-North-Plains-Connector.pdf",
+      "date": "2025-08"
+    },
+    {
+      "label": "Utility Dive — DOE cancels $4.9B conditional loan commitment for Grain Belt Express",
+      "url": "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "World Resources Institute — Community benefits snapshot: North Plains Connector",
+      "url": "https://www.wri.org/snapshots/community-benefits-snapshot-north-plains-connector-transmission-line-community-engagement",
+      "date": "2025-03-05"
+    },
+    {
+      "label": "Grid United — Comments to FERC, Docket AD25-4-000 (interregional transfer capacity study)",
+      "url": "https://gridunited.com/wp-content/uploads/2025/03/20250225-5119_2025-02-25-Grid-United-AD25-4-Comments-FINAL.pdf",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "T&D World — BHE U.S. Transmission signs MOU for 3,000 MW North Plains Connector (10% / 300 MW; 75% subscribed)",
+      "url": "https://www.tdworld.com/overhead-transmission/news/55262963/bhe-us-transmission-signs-mou-for-3000-mw-north-plains-connector-transmission-project",
+      "date": "2025-01-23"
+    },
+    {
+      "label": "North Plains Connector — BHE U.S. Transmission joins Grid United for North Plains Connector",
+      "url": "https://northplainsconnector.com/bhe-u-s-transmission-joins-grid-united-for-north-plains-connector-transmission-project/",
+      "date": "2025-01-08"
+    },
+    {
+      "label": "ESIG — A proposed HVDC interregional transmission line: North Plains Connector (Astrapé ELCC; over 90% of right-of-way acquired)",
+      "url": "https://www.esig.energy/proposed-hvdc-interregional-transmission-line/",
+      "date": "2024-12-26"
+    },
+    {
+      "label": "North Plains Connector — NorthWestern Energy to participate (non-binding MOU, 10% / 300 MW; approvals 2026, construction 2028, operation 2032)",
+      "url": "https://northplainsconnector.com/northwestern-energy-to-participate-in-regional-transmission-projects/",
+      "date": "2024-12-12"
+    },
+    {
+      "label": "Daily Montanan — NorthWestern Energy signs agreement for North Plains Connector megawatts",
+      "url": "https://dailymontanan.com/2024/12/12/northwestern-energy-signs-agreement-for-north-plains-connector-megawatts/",
+      "date": "2024-12-12"
+    },
+    {
+      "label": "Puget Sound Energy — PSE signs on to largest share of North Plains Connector (750 MW, non-binding MOU)",
+      "url": "https://www.pse.com/en/press-release/details/Puget-Sound-Energy-signs-on-to-largest-share-of-North-Plains-Connector-transmission-project",
+      "date": "2024-12-09"
+    },
+    {
+      "label": "GlobeNewswire — Avista joins PGE, Grid United and ALLETE in 3,000-megawatt east-west transmission line (10% non-binding MOU)",
+      "url": "https://www.globenewswire.com/news-release/2024/11/05/2974549/0/en/Avista-joins-PGE-Grid-United-and-ALLETE-in-3-000-megawatt-east-west-transmission-line.html",
+      "date": "2024-11-05"
+    },
+    {
+      "label": "Federal Register — Notice of intent to prepare an EIS for the proposed North Plains Connector (DOE/EIS-0568)",
+      "url": "https://www.federalregister.gov/documents/2024/10/25/2024-24879/notice-of-intent-to-prepare-an-environmental-impact-statement-for-the-proposed-north-plains",
+      "date": "2024-10-25"
+    },
+    {
+      "label": "Southline Transmission — Southline selected for second round of DOE Transmission Facilitation Program (Phase 2)",
+      "url": "https://southlinetransmission.com/southline-transmission-project-selected-for-second-round-of-transmission-facilitation-program/",
+      "date": "2024-10-03"
+    },
+    {
+      "label": "MIT Technology Review — Why one developer won't quit fighting to connect the US's grids (Clean Line history)",
+      "url": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/",
+      "date": "2024-09-25"
+    },
+    {
+      "label": "Montana Free Press — Montana lands $700 million for North Plains Connector transmission project ($3.6 billion; Colstrip context)",
+      "url": "https://montanafreepress.org/2024/08/06/montana-lands-700-million-for-north-plains-connector-transmission-project/",
+      "date": "2024-08-06"
+    },
+    {
+      "label": "North Plains Connector — Utilities of the North Plains Connector Interregional Innovation Consortium applaud DOE's $700 million GRIP investment",
+      "url": "https://northplainsconnector.com/utilities-of-north-plains-connector-interregional-innovation-consortium-applaud-the-u-s-department-of-energy-for-historic-investment-in-interregional-transmission-through-700-million-grid-resilience/",
+      "date": "2024-08-06"
+    },
+    {
+      "label": "North Plains Connector — Montana Commerce awarded $47.5 million federal grant for infrastructure improvements (DOE TSED)",
+      "url": "https://northplainsconnector.com/commerce-awarded-47-5-million-federal-grant-for-critical-infrastructure-improvements/",
+      "date": "2024-07-29"
+    },
+    {
+      "label": "PR Newswire — Grid United applauds bipartisan Energy Permitting Reform legislation",
+      "url": "https://www.prnewswire.com/news-releases/grid-united-applauds-bipartisan-energy-permitting-reform-legislation-302204276.html",
+      "date": "2024-07-23"
+    },
+    {
+      "label": "Astrapé Consulting — North Plains Connector Benefits Evaluation (ELCC 1,800 MW WECC, 1,350 MW SPP, 400 MW MISO)",
+      "url": "https://gridunited.com/wp-content/uploads/2024/06/North-Plains-Connector-Evaluation_Final-Report_Astrape-Reviewed_FINAL.pdf",
+      "date": "2024-06"
+    },
+    {
+      "label": "Utility Dive — Portland General Electric joins ALLETE, Grid United on $3.2B North Plains transmission line",
+      "url": "https://www.utilitydive.com/news/portland-general-allete-grid-united-north-plains-transmission/717312/",
+      "date": "2024-05-29"
+    },
+    {
+      "label": "PR Newswire — PGE joins Grid United and ALLETE in 3,000-megawatt east-west transmission line (20% / 600 MW non-binding MOU)",
+      "url": "https://www.prnewswire.com/news-releases/pge-joins-grid-united-and-allete-in-3-000-megawatt-east-west-transmission-line-302155457.html",
+      "date": "2024-05-28"
+    },
+    {
+      "label": "Latitude Media — As load woes grow, Hitachi doubles down on HVDC in the U.S. (Grid United portfolio and 2024 timelines)",
+      "url": "https://www.latitudemedia.com/news/as-load-woes-grow-hitachi-doubles-down-on-hvdc-in-the-u-s/",
+      "date": "2024-03-21"
+    },
+    {
+      "label": "Hitachi Energy — Hitachi Energy to accelerate introduction of HVDC technology with Grid United (capacity reservation agreement)",
+      "url": "https://www.hitachienergy.com/news-and-events/press-releases/2024/03/hitachi-energy-to-accelerate-introduction-of-hvdc-technology-with-grid-united-for-transmission-projects-to-strengthen-us-power-grid",
+      "date": "2024-03-20"
+    },
+    {
+      "label": "E&E News — It may be too late for Biden's grid expansion (Gramlich on merchant financing risk)",
+      "url": "https://www.eenews.net/articles/it-may-be-too-late-for-bidens-grid-expansion/",
+      "date": "2024-03-15"
+    },
+    {
+      "label": "Power Technology — ALLETE and Grid United sign development agreements for North Plains Connector ($3.2 billion; ALLETE 35%)",
+      "url": "https://www.power-technology.com/news/allete-grid-united-north-plains/",
+      "date": "2023-12-22"
+    },
+    {
+      "label": "North Plains Connector — ALLETE, Grid United sign development agreements for advancing new HVDC line",
+      "url": "https://northplainsconnector.com/allete-grid-united-sign-development-agreements-for-advancing-new-hvdc-transmission-line-in-north-dakota-and-montana/",
+      "date": "2023-12-21"
+    },
+    {
+      "label": "Grid United — Southline Transmission Project selected as part of a $1.3 billion DOE commitment (Transmission Facilitation Program, Phase 1)",
+      "url": "https://gridunited.com/2023/10/southline-transmission-project-selected-as-part-of-a-1-3-billion-commitment-to-build-out-nations-electric-transmission/",
+      "date": "2023-10-30"
+    },
+    {
+      "label": "Utility Dive — DOE picks National Grid, Berkshire Hathaway, Grid United projects in first Transmission Facilitation Program capacity buys",
+      "url": "https://www.utilitydive.com/news/doe-national-grid-berkshire-grid-united-transmission-facilitation/698137/",
+      "date": "2023-10-30"
+    },
+    {
+      "label": "Bloomberg Law — Commodities billionaire Arnold bets on long-distance power lines ('several hundred million dollars')",
+      "url": "https://news.bloomberglaw.com/environment-and-energy/commodities-billionaire-arnold-bets-on-long-distance-power-lines",
+      "date": "2023-03-15"
+    },
+    {
+      "label": "RTO Insider — Texas PUC rejects CCN for Grid United's Pecos West",
+      "url": "https://www.rtoinsider.com/31670-texas-puc-rejects-ccn-grid-united-pecos-west/",
+      "date": "2023-02-21"
+    },
+    {
+      "label": "Grid United — ALLETE, Grid United join forces to develop key transmission link (North Plains Connector: $2.5 billion, in service 2029)",
+      "url": "https://gridunited.com/2023/01/allete-grid-united-join-forces-to-develop-key-transmission-link-to-enhance-reliability-of-the-nations-electric-grid/",
+      "date": "2023-01-30"
+    },
+    {
+      "label": "ERCOT — Pecos West Intertie, Regional Planning Group presentation",
+      "url": "https://www.ercot.com/files/docs/2022/07/15/Pecos%20West%20Intertie%20ERCOT%20RPG%2020220719.pdf",
+      "date": "2022-07-19"
+    },
+    {
+      "label": "Grid United — Home",
+      "url": "https://gridunited.com/"
+    },
+    {
+      "label": "Grid United — About Us and team",
+      "url": "https://gridunited.com/about/"
+    },
+    {
+      "label": "Grid United — Projects",
+      "url": "https://gridunited.com/projects/"
+    },
+    {
+      "label": "Grid United — Solutions",
+      "url": "https://gridunited.com/solutions/"
+    },
+    {
+      "label": "Grid United — Michael Skelly",
+      "url": "https://gridunited.com/team/michael-skelly/"
+    },
+    {
+      "label": "Grid United — Kris Zadlo",
+      "url": "https://gridunited.com/team/kris-zadlo/"
+    },
+    {
+      "label": "Grid United — Kristen Williams Golden",
+      "url": "https://gridunited.com/team/kristen-williams-golden/"
+    },
+    {
+      "label": "Grid United — Raj Mahagaokar",
+      "url": "https://gridunited.com/team/raj-mahagaokar/"
+    },
+    {
+      "label": "Grid United — Jack Farley",
+      "url": "https://gridunited.com/team/jack-farley/"
+    },
+    {
+      "label": "Grid United — Public Utility Commission of Texas filings (Pecos West, Docket 53758)",
+      "url": "https://gridunited.com/resource/public-utility-commission-of-texas-filings/"
+    },
+    {
+      "label": "North Plains Connector — Home (approximately $6 billion; milestones 2023–2032)",
+      "url": "https://northplainsconnector.com/"
+    },
+    {
+      "label": "North Plains Connector — Frequently asked questions",
+      "url": "https://northplainsconnector.com/frequently-asked-questions/"
+    },
+    {
+      "label": "North Plains Connector — Permitting: National Environmental Policy Act",
+      "url": "https://northplainsconnector.com/permitting/national-environmental-policy-act/"
+    },
+    {
+      "label": "Southline Transmission — Home",
+      "url": "https://southlinetransmission.com/"
+    },
+    {
+      "label": "Southline Transmission — Frequently asked questions",
+      "url": "https://southlinetransmission.com/frequently-asked-questions/"
+    },
+    {
+      "label": "Southline Transmission — Transmission capacity",
+      "url": "https://southlinetransmission.com/transmission-capacity/"
+    },
+    {
+      "label": "Three Corners Connector — Home",
+      "url": "https://threecornersconnector.com/"
+    },
+    {
+      "label": "Three Corners Connector — Frequently asked questions",
+      "url": "https://threecornersconnector.com/frequently-asked-questions/"
+    },
+    {
+      "label": "Three Corners Connector — Materials (OCC order 759344, county permits)",
+      "url": "https://threecornersconnector.com/materials/"
+    },
+    {
+      "label": "Pecos West — Home",
+      "url": "https://pecoswest.com/"
+    },
+    {
+      "label": "Wyoming Intertie — Home",
+      "url": "https://wyomingintertie.com/"
+    },
+    {
+      "label": "Wyoming Intertie — Project overview",
+      "url": "https://wyomingintertie.com/wp-content/uploads/Wyoming-Intertie-Project-Overview.pdf"
+    },
+    {
+      "label": "DOE NEPA — DOE/EIS-0568 North Plains Connector project page",
+      "url": "https://www.energy.gov/nepa/doeeis-0568-north-plains-connector-multiple-locations"
+    },
+    {
+      "label": "DOE Office of Electricity — Transmission Facilitation Program selections",
+      "url": "https://www.energy.gov/oe/transmission-facilitation-program-selections"
+    },
+    {
+      "label": "Montana DEQ — Energy assistance (Major Facility Siting Act applications)",
+      "url": "https://deq.mt.gov/energy/assistance"
+    },
+    {
+      "label": "SEC EDGAR full-text search — 'Grid United', Form D (zero hits)",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22Grid%20United%22&forms=D&dateRange=custom&startdt=2021-01-01&enddt=2026-09-12"
+    },
+    {
+      "label": "Columbia SIPA Center on Global Energy Policy — John Arnold biography",
+      "url": "https://www.energypolicy.columbia.edu/john-arnold/"
+    },
+    {
+      "label": "Built In — Grid United company profile",
+      "url": "https://builtin.com/company/grid-united"
+    }
+  ],
+  "lastUpdated": "2026-09-12",
+  "profileVersion": 1
+}

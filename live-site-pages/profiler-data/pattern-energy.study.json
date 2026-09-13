@@ -1,0 +1,497 @@
+{
+ "schemaVersion": 2,
+ "slug": "pattern-energy",
+ "title": "Pattern Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-12",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a wind farm 550 miles from its customers",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Pattern Energy owns wind farms and, unusually, the wires that carry their output. SunZia — 3,650 MW of New Mexico wind on a 3,000 MW direct-current line to Arizona — is the worked example this guide is built around: how wind is turned into firm-enough power, how it is moved across a desert, how USD 11 billion is borrowed against it, and who buys it.",
+   "ps": [
+    "The best wind in the Southwest blows across empty plateau in central New Mexico. The customers are in Phoenix and Los Angeles. Between them lie 550 miles, two state commissions, a federal land agency, a tribal cultural landscape and a grid operator that had never taken a merchant line. Pattern's business is to close that gap: develop the plant, develop the line, finance both and sell the output under contracts long enough for a {{pension fund}} to own.",
+    "The company is private — owned by Canada's public pension fund with two more pension investors and management — and publishes no accounts, so the way to understand it is through its projects. The sequence: how a wind farm produces and what its ratings mean; why the line is DC and how it enters California; the capital stack that paid for SunZia; the contracts that sell the power; what an independent power producer owned by a pension fund is; SunZia's permit and court history; why the Texas-to-Southeast line has not moved; the policy clock; and the industry map."
+   ]
+  },
+  {
+   "id": "wind-basics",
+   "title": "What a wind farm produces, and what its numbers mean",
+   "kind": "prose",
+   "read": "A turbine's rated megawatts say what it can do in strong wind; its capacity factor says how often the wind is that strong. Siting, not nameplate, is the whole game — which is why the best sites are far from load.",
+   "ps": [
+    "A {{wind turbine}} converts the momentum of moving air into torque on a rotor, and the power available rises with the cube of wind speed: doubling the wind gives eight times the energy. Above a rated speed the machine limits itself to its {{nameplate capacity}}; below a cut-in speed it produces nothing. The fraction of nameplate a site actually delivers over a year is its {{capacity factor}} — a plains site with steady wind can reach the high thirties or forties per cent, a mediocre one the twenties — and the difference between the two is the difference between a bankable project and a dead one. SunZia's turbines are 3.6 MW and 4.5 MW machines (674 from GE Vernova, 242 from Vestas) chosen for a high-wind site the developer had held since the 2000s.",
+    "Two capacity figures appear for SunZia and both are correct. 3,515 MW is the nameplate at order — the turbines' ratings summed; 3,650 MW is what the plant reports as net summer capacity to the federal statistics agency. Read every fleet total the same way: the company's '6,047 MW installed' is nameplate, and 'excluding tax equity, Pattern owns 4,148 MW' is the share of that nameplate its own equity holds after partners and tax investors are counted.",
+    "A wind farm reaches the grid through its own {{gen-tie}} — at SunZia, more than 100 miles of collector lines and ten substations feeding a converter station at Corona, New Mexico. Because the plant is remote, its output is exposed to {{curtailment}} whenever the path to load is full; the answer, in Pattern's case, was to own the path."
+   ]
+  },
+  {
+   "id": "moving-it",
+   "title": "Moving 3,000 MW across two states: the line, the converters and the door into California",
+   "kind": "prose",
+   "read": "SunZia's line is direct current because of distance, voltage-source because of what it lands on, and a 'subscriber' line because California's grid operator had to invent a category for a merchant wire whose capacity belongs to its customers.",
+   "ps": [
+    "Over 550 miles alternating current loses too much to its own reactive effects, so the line is {{HVDC}} at ±525 kV — a {{bipole}}, two conductors at opposite polarity — with a {{converter station}} at each end built by Hitachi Energy on its HVDC Light platform. Those are {{voltage source converter}} stations: they can control reactive power and support the grid they land on, which matters at the Arizona end, where the line ties into Salt River Project's Pinal Central substation and must behave like a well-mannered generator rather than a load on the system.",
+    "In the Western grid a new line cannot schedule its full rating until the reliability body accepts it: SunZia holds a {{WECC path rating}} of 3,000 MW granted in May 2023 after a multi-year study of its effect on neighbouring paths. Energisation followed in 2025, testing ran through early 2026, and the wind was declared fully operational on 18 June 2026 — by which point the line had already helped push California's hourly wind record up by a fifth.",
+    "The commercial door is the {{Subscriber PTO}} model. California's operator, {{CAISO}}, normally plans lines and spreads their cost over all its customers. SunZia is a {{merchant transmission}} line whose 3,000 MW belong to the wind project that subscribed for them, so CAISO created a category in which the operator takes control of the line for scheduling while the subscribers keep the capacity and the cost stays off other Californians' bills. Pattern was 'the first entity to utilize the new SPTO policy'; about 2,100 MW of the line is allocated to CAISO deliveries."
+   ]
+  },
+  {
+   "id": "the-capital-stack",
+   "title": "The capital stack: how USD 11 billion was borrowed against wind",
+   "kind": "table",
+   "read": "No bank lends eleven billion dollars to a wind farm. It lends to a structure in which each layer takes a different risk, and the sponsor's own money is the thinnest layer.",
+   "intro": "SunZia's financing closed in December 2023 and was topped up with institutional equity in 2025–26. Read each row as: the layer, what it is secured on, who provided it, and what happens to it if the wind or the price disappoints. Terms: {{project financing}}, {{tax equity}}, {{structured equity}}, {{preferred equity}}, {{credit support}}.",
+   "cols": [
+    "Layer",
+    "What it is",
+    "Who provided it at SunZia",
+    "Risk it takes"
+   ],
+   "rows": [
+    [
+     "**Construction and term debt**",
+     "Non-recourse loans secured on the project's contracts and assets, not on Pattern",
+     "USD 8.8 billion of construction and term facilities plus letter-of-credit lines; Deutsche Bank as agent",
+     "First to be repaid; sized to contracted cash flow, so it takes construction and availability risk but little price risk"
+    ],
+    [
+     "**Tax-equity term loan**",
+     "Debt that monetises the production tax credits the project will earn",
+     "USD 2.25 billion; GE Vernova's finance arm among the arrangers; CPP in the holding-company facility",
+     "Repaid from the value of the credits — exposed to a change in tax law or a recapture"
+    ],
+    [
+     "**Structured equity**",
+     "Equity engineered to behave partly like debt: a preferred return and priority over the sponsor",
+     "HASI's USD 1.2 billion, closed October 2025, covering 'over 2.6 GW' of contracted capacity",
+     "Sits above the sponsor and below the lenders; takes operating and contract-renewal risk"
+    ],
+    [
+     "**Preferred equity**",
+     "A fixed-return equity layer paid before ordinary equity",
+     "Nuveen's USD 546 million (July 2026), about USD 1.5 billion with co-investors across four layers including 'preferred tax equity' for the northern phase",
+     "Post-completion capital replacing construction-phase money; paid before Pattern sees a dividend"
+    ],
+    [
+     "**Sponsor equity**",
+     "Pattern's own capital, and the residual claim",
+     "Undisclosed — the company publishes no accounts",
+     "Everything the other layers do not: price, wind, curtailment, litigation, refinancing"
+    ]
+   ]
+  },
+  {
+   "id": "selling-the-power",
+   "title": "Selling the power: the offtake menu",
+   "kind": "proscons",
+   "read": "A long-dated contract is what lets the layers above be borrowed. Each kind of buyer wants a different shape, and a plant this size needs several of them.",
+   "intro": "SunZia's disclosed buyers are a public utility (SRP, 600 MW), a community choice aggregator (Clean Power Alliance, 575 MW), an energy major (Shell), a university (UC Regents) and six more aggregators and municipal utilities. Terms: {{PPA}}, {{corporate PPA}}, {{community choice aggregator}}, {{offtake}}, {{hedge}}.",
+   "cards": [
+    {
+     "t": "**Utility PPA**",
+     "meta": "A regulated utility buys energy and attributes for 15–25 years",
+     "adv": [
+      "Investment-grade credit lenders accept without collateral",
+      "Volumes large enough to anchor a plant"
+     ],
+     "dis": [
+      "Procurement cycles are slow and commission-approved",
+      "The utility's own resource plan sets the timing"
+     ]
+    },
+    {
+     "t": "**Community choice aggregator contract**",
+     "meta": "A California local-government buyer procures for its residents",
+     "adv": [
+      "California's fastest-growing buyer class; eight of them at SunZia",
+      "Willing to contract for remote, high-value wind"
+     ],
+     "dis": [
+      "Thinner credit than an investor-owned utility",
+      "Each contract is smaller, so many are needed"
+     ]
+    },
+    {
+     "t": "**Corporate and institutional PPA**",
+     "meta": "A company or university buys to meet its own targets",
+     "adv": [
+      "Fast to sign, no regulator",
+      "Names like Shell, Microsoft, Amazon carry credit"
+     ],
+     "dis": [
+      "Often financial rather than physical, so the plant still sells into the market",
+      "Terms shorter than a utility's"
+     ]
+    },
+    {
+     "t": "**Merchant and hedged**",
+     "meta": "Sell at the market price, with or without a financial hedge",
+     "adv": [
+      "Captures high prices when they occur",
+      "No counterparty negotiation"
+     ],
+     "dis": [
+      "Lenders discount it heavily",
+      "A remote plant on a full line is the one most exposed to curtailment"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "what-an-ipp-is",
+   "title": "What an independent power producer is, and what it means to be owned by a pension fund",
+   "kind": "prose",
+   "read": "An IPP sells power under contract rather than to captive ratepayers, and lives on the spread between its cost of capital and the contract price. A pension owner lowers the first and lengthens the horizon — and can reshape the company by moving shares rather than cash.",
+   "ps": [
+    "A regulated utility earns an allowed return on assets its commission approves; an independent power producer earns whatever its contracts leave after its capital is paid. That makes the cost of capital the IPP's real product, and it explains Pattern's history: listed in 2013 as a {{yieldco}}-style vehicle that paid out contracted cash flow, then taken private in 2020 by CPP Investments at a premium when public markets stopped valuing that model, and recombined with its development company so that one owner held both the plants and the pipeline. A {{take-private}} by a pension fund substitutes fifty-year money for quarterly earnings.",
+    "The ownership then moved twice in a year. In June 2025 two more pension investors — APG for the Dutch fund ABP, and Australian Retirement Trust — bought the founding private-equity backer's stake in a {{secondary sale}}; no cash went to the company. In April 2026 Pattern bought Cordelio Power, another CPP-owned renewables company, for shares: {{share consideration}} means CPP received more of Pattern instead of money, so its stake rose — to a CPP-led institutional 69.1%, in CPP's words — and Pattern's fleet grew by about a quarter without a dollar of new debt. Consolidation inside one owner's portfolio is what a pension fund does with two companies that would otherwise compete for the same projects.",
+    "The trade-off is opacity. A private company with pension owners publishes sustainability metrics, not financial statements: the reader gets installed megawatts, generation, landowner payments and a headcount, and must infer leverage and returns from project financings and a rating agency's one-notch downgrade of the operating company's notes. The audited-feeling number for the platform is the owner's own: 5.6 GW developed since 2020."
+   ]
+  },
+  {
+   "id": "permits-and-courts",
+   "title": "SunZia: eighteen years on one clock",
+   "kind": "timeline",
+   "read": "Upper lane: permits, courts and grid approvals. Lower lane: ownership, contracts and construction. Nothing on the lower lane moved until the upper lane was nearly done.",
+   "intro": "Years across the bottom. Terms: {{NEPA}}, {{record of decision}}, {{siting certificate}}, {{WECC path rating}}, {{Subscriber PTO}}.",
+   "unit": "calendar year",
+   "lanes": {
+    "reg": "Permits, courts and grid approvals",
+    "co": "Ownership, contracts and construction"
+   },
+   "items": [
+    {
+     "x": 2015,
+     "lane": "reg",
+     "label": "BLM record of decision for the route",
+     "sub": "Federal review had begun in the 2000s"
+    },
+    {
+     "x": 2018,
+     "lane": "reg",
+     "label": "New Mexico commission rejects the line",
+     "sub": "Approved on a revised application in December 2022"
+    },
+    {
+     "x": 2022,
+     "lane": "co",
+     "label": "Pattern buys SunZia Transmission",
+     "sub": "Having been awarded its full 3,000 MW for its wind"
+    },
+    {
+     "x": 2022,
+     "lane": "reg",
+     "label": "Arizona certificate; New Mexico approvals",
+     "sub": "Route adjusted with the Army's missile range"
+    },
+    {
+     "x": 2023,
+     "lane": "reg",
+     "label": "New BLM decision (May); notice to proceed (September); WECC 3,000 MW rating",
+     "sub": "Construction begins in the San Pedro Valley"
+    },
+    {
+     "x": 2023,
+     "lane": "co",
+     "label": "EPC contracts; USD 11 billion financing closes",
+     "sub": "Quanta, Blattner, Hitachi Energy; Shell, UC and CPA contracts"
+    },
+    {
+     "x": 2024,
+     "lane": "reg",
+     "label": "Tribes sue over cultural sites; CAISO subscriber application",
+     "sub": "Injunction denied; case dismissed as untimely"
+    },
+    {
+     "x": 2025,
+     "lane": "reg",
+     "label": "Ninth Circuit revives the tribes' claim (May); line energised",
+     "sub": "No injunction; testing through early 2026"
+    },
+    {
+     "x": 2025,
+     "lane": "co",
+     "label": "HASI USD 1.2 billion structured equity",
+     "sub": "Riverstone sells its Pattern stake to APG and ART"
+    },
+    {
+     "x": 2026,
+     "lane": "reg",
+     "label": "Summary-judgment motion pending (March); CAISO endorses the line (July)",
+     "sub": "Remedy sought: nullify construction authorisations"
+    },
+    {
+     "x": 2026,
+     "lane": "co",
+     "label": "Fully operational (June); SRP 600 MW; Nuveen USD 546 million",
+     "sub": "Cordelio acquired for shares in April"
+    }
+   ]
+  },
+  {
+   "id": "southern-spirit-vs-sunzia",
+   "title": "Why one line got built and the other has not: SunZia against Southern Spirit",
+   "kind": "table",
+   "read": "Same developer, same technology, same decade. One is operating and one has slipped three years; the difference is who owned the destination grid and what the state let a developer do with land.",
+   "intro": "Southern Spirit would tie ERCOT to the Southeast — a seam crossing, like Grid United's lines — and has Louisiana's certificate but not Mississippi's. Read each row as the factor and how it fell for each line. Terms: {{DC tie}}, {{three interconnections}}, {{eminent domain}}, {{negotiated-rate authority}}, {{Transmission Facilitation Program}}.",
+   "cols": [
+    "Factor",
+    "SunZia (New Mexico–Arizona)",
+    "Southern Spirit (Texas–Mississippi)"
+   ],
+   "rows": [
+    [
+     "**What the line crosses**",
+     "One interconnection (the West); a long line inside a grid",
+     "A seam: ERCOT to the Eastern grid, through a converter at each end"
+    ],
+    [
+     "**Who owns the destination**",
+     "A public utility (SRP) that became a buyer, and a grid operator that created a category for the line",
+     "An incumbent utility (Entergy Mississippi) that hosts the terminus and testified the line would 'very likely harm' its customers"
+    ],
+    [
+     "**Captive generation to fill it**",
+     "Pattern's own 3,650 MW of wind, awarded the full capacity",
+     "None — capacity to be sold by open solicitation under federal negotiated-rate authority"
+    ],
+    [
+     "**Land**",
+     "Federal land under a 2015 decision and a 2016 fifty-year grant; private parcels in two states",
+     "Louisiana's 2024 law restricts expropriation for lines outside a regional plan; more than half the right-of-way unsecured in early 2025"
+    ],
+    [
+     "**Federal jurisdiction**",
+     "Ordinary: a Western line under FERC and CAISO",
+     "Settled in the project's favour — FERC's 2014 order and ERCOT's 2024 confirmation keep Texas outside federal reach"
+    ],
+    [
+     "**Anchor money**",
+     "USD 11 billion of private debt against contracts",
+     "A DOE anchor contract of up to USD 360 million, 'selected' in 2024 and never confirmed executed"
+    ],
+    [
+     "**Where it stands**",
+     "Operating since June 2026",
+     "Construction pushed to 2029, in service 2032; Mississippi docket continued since 2017"
+    ]
+   ]
+  },
+  {
+   "id": "policy-clock",
+   "title": "The policy clock: what a 2026 wind developer is watching",
+   "kind": "table",
+   "read": "Wind's economics in the United States run on a tax credit with a deadline, a tariff regime with an open investigation, and a federal permitting posture that has turned hostile to turbines and friendly to wires.",
+   "intro": "Read each row as: the instrument, the date that matters, and what it does to a pipeline like Pattern's. Terms: {{production tax credit}}, {{safe harbor}}, {{begin-construction deadline}}, {{FEOC}}, {{NIETC}}.",
+   "cols": [
+    "Instrument",
+    "Date that matters",
+    "Effect on a pipeline"
+   ],
+   "rows": [
+    [
+     "**Wind and solar tax credits under the 2025 tax law**",
+     "Begin construction by 4 July 2026, or be placed in service by end-2027",
+     "Projects that started physical work or safe-harboured equipment by the deadline keep their credits; Heritage Prairie began construction in June 2026"
+    ],
+    [
+     "**The 5% safe harbor**",
+     "Removed by IRS notice in August 2025; vacated by a federal court on 6 June 2026, subject to appeal",
+     "Whether buying 5% of a project's equipment counts as starting it — the difference between a paper start and a physical one"
+    ],
+    [
+     "**Foreign-entity rules**",
+     "Apply to credits for projects that begin construction from 2026",
+     "Turbines, blades and batteries from restricted suppliers can forfeit the credit; SunZia's GE and Vestas machines predate the rule"
+    ],
+    [
+     "**Section 232 tariffs**",
+     "Steel and aluminium at 50% from June 2025; a wind-turbine investigation opened August 2025 with no proclamation yet",
+     "Towers, transformer cores and imported nacelle components cost more; the turbine decision is the open variable"
+    ],
+    [
+     "**Federal permitting posture**",
+     "Interior orders from July 2025; Pentagon and FAA reviews holding onshore projects in 2026",
+     "Wind on federal land or near military airspace is stalled; the same administration fast-tracked Silver Rock, a wire, under FAST-41"
+    ]
+   ]
+  },
+  {
+   "id": "where-pattern-slots-in",
+   "title": "Where Pattern slots in: five seats in one chain",
+   "kind": "table",
+   "read": "Most companies in the corpus hold one of these seats. Pattern holds all five on SunZia, which is the point of the project.",
+   "intro": "Read each row as: the seat, who usually fills it, and what Pattern does there.",
+   "cols": [
+    "Seat",
+    "Usually held by",
+    "Pattern"
+   ],
+   "rows": [
+    [
+     "**Developer**",
+     "A specialist developer that sells the project at notice to proceed",
+     "Pattern, from land held since the 2000s to a 25–40 GW pipeline it never sells at NTP"
+    ],
+    [
+     "**Transmission owner**",
+     "The regional utility, through the operator's plan",
+     "Pattern's SunZia Transmission LLC — a merchant line the grid operator scheduled as a subscriber line; Western Spirit built and sold to PNM"
+    ],
+    [
+     "**Generator and IPP**",
+     "An IPP or a utility's unregulated arm",
+     "Pattern, about 12 GW operating and in construction, 61% owned by its own equity"
+    ],
+    [
+     "**Equipment buyer**",
+     "The EPC or the owner",
+     "Pattern, choosing Hitachi Energy converters and GE Vernova turbines that its EPCs (Quanta, Blattner) install"
+    ],
+    [
+     "**Power seller**",
+     "A trading desk or the utility",
+     "Pattern, contracting with SRP, LADWP, Shell, UC, Microsoft, Amazon, Digital Realty and eight California aggregators"
+    ]
+   ]
+  },
+  {
+   "id": "industry-map",
+   "title": "The industry map: who buys, who competes, why owning the wire matters",
+   "kind": "prose",
+   "read": "The buyers are the utilities and aggregators that must add firm-enough capacity faster than they can build it; the competitors are the other integrated developers with pension or founder capital; the economic argument is that the wire, not the turbine, is the scarce asset in a transmission-constrained decade.",
+   "ps": [
+    "Pattern's customers are two kinds. Regulated and provincial buyers — Ontario's operator, Hydro-Québec, BC Hydro, Manitoba Hydro, SCE, PG&E, NV Energy, SRP — sign for two to three decades and let a pension fund own the plant. California's aggregators and a few corporates — Microsoft at Winfield and Crossover, Amazon at Fowler Ridge, Digital Realty at Phoenix — sign for shorter terms but move faster. The data-centre wave reaches Pattern through those corporate contracts and through Silver Rock, a Utah–Nevada line pitched at that load; it has no hyperscaler campus deal of its own.",
+    "The competitors are Invenergy (founder-controlled, the other integrated developer with a merchant HVDC line in construction), NextEra Energy Resources (the largest fleet, inside a utility holding company), the European utilities' American arms (RWE, ENGIE, AES) and, on transmission alone, Grid United — five permitted-or-permitting seam lines with no generation behind them. Pattern's differentiation is the pairing: it is the only one of them to have put its own gigawatts on its own HVDC line and reached commercial operation.",
+    "Why the wire matters economically: the best renewable sites in the West are hundreds of miles from load, and interconnection queues, curtailment and full paths are what strand them. A developer that owns the path captures the resource's full value instead of the discounted, curtailed version — and, once built, holds an asset (3,000 MW of subscriber-owned transmission into California) that no tax-credit sunset or tariff can touch. That is the thesis Grid United is trying to prove without generation and Invenergy is trying to prove without a pension owner; Pattern has already proved it once, and the question its dossier cannot answer is what it earned doing so."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Wind, wires, capital, contracts and ownership.",
+   "cards": [
+    {
+     "q": "Why does wind power rise with the cube of wind speed, and what does that do to siting?",
+     "a": "The energy in moving air scales with speed cubed, so a site with 25% more wind yields nearly twice the energy. Siting on steady, strong wind — usually far from load — matters more than turbine size; {{capacity factor}} is the number that captures it."
+    },
+    {
+     "q": "What is the difference between 3,515 MW and 3,650 MW at SunZia?",
+     "a": "Nameplate at order versus reported net summer capacity. The first sums the turbines' ratings; the second is what the plant reports it can deliver. Both are correct; neither is what the owner's equity holds."
+    },
+    {
+     "q": "Why is SunZia's line DC and voltage-source?",
+     "a": "DC because 550 miles of AC would lose too much to reactive effects; {{voltage source converter}} stations because they control reactive power and can support the Arizona grid they land on, rather than lean on it."
+    },
+    {
+     "q": "What did California's Subscriber PTO model solve?",
+     "a": "How a merchant line whose capacity belongs to its subscribers could be scheduled by {{CAISO}} without its cost being spread over every Californian. The operator controls the line; the subscribers keep the capacity."
+    },
+    {
+     "q": "In the capital stack, what does tax equity actually buy?",
+     "a": "The production tax credits the project will earn. A {{tax equity}} investor or lender funds part of the plant and is repaid from the value of those credits — so a change in tax law hits that layer first."
+    },
+    {
+     "q": "How is structured equity different from a loan?",
+     "a": "{{structured equity}} is legally equity but engineered to behave partly like debt — a preferred return and priority over the sponsor's shares — so an institution can take part without owning or running the project; it ranks below lenders and above Pattern."
+    },
+    {
+     "q": "What happens to an owner's stake when its company is bought for shares?",
+     "a": "It rises. {{share consideration}} means the seller receives the buyer's shares instead of cash; when CPP sold Cordelio to Pattern, which it already controlled, its ownership of Pattern went up and no money changed hands."
+    },
+    {
+     "q": "Why has Southern Spirit not started while SunZia is operating?",
+     "a": "It crosses a seam into a grid whose incumbent utility opposes it, has no captive generation to fill it, faces a state expropriation law written around it, lacks Mississippi's certificate, and its federal anchor contract was never confirmed."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Seven questions on wind, wires, capital, contracts and ownership.",
+   "items": [
+    {
+     "q": "Doubling the wind speed at a turbine, below its rated speed, multiplies available power by about:",
+     "c": [
+      "Two",
+      "Four",
+      "Eight",
+      "Sixteen"
+     ],
+     "a": 2,
+     "why": "Power in moving air scales with the cube of speed."
+    },
+    {
+     "q": "The figure that tells you how much of a wind farm's nameplate its own equity actually holds is:",
+     "c": [
+      "Installed capacity",
+      "Net summer capacity",
+      "Owned capacity excluding tax equity",
+      "Contracted capacity"
+     ],
+     "a": 2,
+     "why": "Pattern reports 6,047 MW installed but 4,148 MW owned excluding tax equity at end-2024."
+    },
+    {
+     "q": "SunZia's line is direct current mainly because:",
+     "c": [
+      "DC is cheaper at any distance",
+      "Over 550 miles AC would lose too much to reactive effects",
+      "Arizona's grid is DC",
+      "Turbines produce DC"
+     ],
+     "a": 1,
+     "why": "Long lines favour HVDC; the converter stations' cost is justified by the distance."
+    },
+    {
+     "q": "Under California's Subscriber PTO model, the line's capacity belongs to:",
+     "c": [
+      "All California ratepayers",
+      "The grid operator",
+      "The subscribers who paid for it",
+      "The state"
+     ],
+     "a": 2,
+     "why": "The operator schedules the line; the subscribers — SunZia's wind — keep the capacity and the cost stays off other customers."
+    },
+    {
+     "q": "In SunZia's financing, the layer repaid from the value of federal tax credits is the:",
+     "c": [
+      "Construction loan",
+      "Tax-equity term loan",
+      "Structured equity",
+      "Sponsor equity"
+     ],
+     "a": 1,
+     "why": "The USD 2.25 billion tax-equity term loan 'monetizes project tax credit attributes'."
+    },
+    {
+     "q": "When Pattern bought Cordelio from CPP Investments for shares, CPP's ownership of Pattern:",
+     "c": [
+      "Fell",
+      "Stayed the same",
+      "Rose",
+      "Was sold to APG"
+     ],
+     "a": 2,
+     "why": "Share consideration gives the seller more of the buyer; CPP said the deal takes CPP-led ownership to 69.1%."
+    },
+    {
+     "q": "The factor that most separates Southern Spirit from SunZia is that Southern Spirit:",
+     "c": [
+      "Uses older converters",
+      "Crosses a seam into a grid whose incumbent opposes it and has no captive generation",
+      "Is longer",
+      "Has no federal permit"
+     ],
+     "a": 1,
+     "why": "Destination ownership, captive generation and state land law explain the three-year slip."
+    }
+   ]
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-12",
- "companies": 170,
+ "built": "2026-09-13",
+ "companies": 172,
  "edges": [
   {
    "a": "abb",
@@ -3926,6 +3926,38 @@
     }
    ],
    "last": "2025-11-25"
+  },
+  {
+   "a": "amazon",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon Wind Farm Fowler Ridge (150 MW, Indiana, 2015) supplies Amazon Web Services under a long-term PPA.",
+     "context": "Pattern's project page describes the facility as 'helping Amazon Web Services achieve the goal of powering its operations with 100% renewable energy by 2025'. It is one of the earliest hyperscaler wind PPAs in the corpus and still in the fleet.",
+     "source": "https://patternenergy.com/portfolio/",
+     "status": "active",
+     "since": "2015",
+     "scale": "150 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its data-centre exposure is indirect — Microsoft (Winfield, Crossover), Amazon (Fowler Ridge) and Digital Realty (Phoenix) as offtakers and a Silver Rock line pitched at Utah and Nevada data-centre load — with no announced hyperscaler campus deal of its own.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Operating wind, solar and storage fleet — about 12 GW installed across the United States, Canada and Mexico after Cordelio",
+     "date": "",
+     "text": "history', offtakers including LADWP and Uniper; Broadview 324 MW, NM, 2017 (SCE, two 20-year PPAs); Gulf Wind 271 MW, Texas, repowered 2021 (Austin Energy, 20 years); Ocotillo 265 MW, California, 2012–13; Grady 221 MW, NM, 2019; Panhandle 1 and 2 400 MW, Texas, 2014; Post Rock 201 MW, Kansas (Evergy); Logan's Gap 200 MW, Texas; Lost Creek 168 MW, Missouri; Spring Valley 152 MW, Nevada (NV Energy); Amazon Wind Farm Fowler Ridge 150 MW, Indiana (AWS); Hatchet Ridge 101 MW, California (PG&E); Santa Isabel 101 MW, Puerto Rico; Stillwater 80 MW, Montana (NorthWestern, 25 years); plus SunZia.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2015"
   },
   {
    "a": "amazon",
@@ -9857,6 +9889,20 @@
   },
   {
    "a": "blackstone",
+   "b": "pattern-energy",
+   "evid": [
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Champlain Hudson (Blackstone/TDI) and SunZia are the two lines Canary Media cites as the decade-plus precedents Grid United must repeat.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackstone",
    "b": "qts",
    "curated": {
     "a": {
@@ -10290,6 +10336,46 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "blattner",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Turnkey EPC for SunZia Wind — 'more than 900 turbines, ten substations... more than 100 miles of wind generation transmission lines' — and builder of Western Spirit Wind (1,050 MW).",
+     "context": "Blattner's own record is triangulated through owners' releases, and Pattern is its largest documented customer: the 674 GE Vernova and 242 Vestas turbines at SunZia, and the four-phase Western Spirit project before it. The Blattner dossier records SunZia as fully online on 18 June 2026, consistent with Pattern's announcement.",
+     "source": "https://patternenergy.com/pattern-energy-selects-epc-contractors-for-americas-largest-clean-energy-infrastructure-project/",
+     "status": "active",
+     "since": "2023-05",
+     "scale": "3,515 MW",
+     "via": "SunZia Wind EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale wind EPC (the historic franchise)",
+     "date": "",
+     "text": "Flagship: SunZia Wind (Pattern Energy) — turnkey EPC for 3,515+ MW, 674 GE Vernova turbines, 10 substations, 100+ miles of gen-tie; construction from Sep 2023, fully online Jun 18, 2026 — the largest clean-energy infrastructure project in US history.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Suppliers and contractors: Hitachi Energy (HVDC Light voltage-source converters and MACH control), Quanta Services (turnkey line), Blattner (wind, 'more than 900 turbines, ten substations'), GE Vernova (674 turbines) and Vestas (242).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-18",
+     "text": "'SunZia... is fully operational': about 3,650 MW of wind and the 550-mile HVDC line, 'on time and on budget', with Hitachi Energy, GE Vernova, Vestas, Quanta, Blattner, HASI, Nuveen, RETA, CAISO and seven offtakers quoted — The largest US clean-energy project completed on its 2023 schedule — the proof point every other merchant HVDC developer in the corpus now cites.",
+     "src": "https://patternenergy.com/sunzia-comes-online/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-18"
   },
   {
    "a": "blattner",
@@ -21137,6 +21223,39 @@
   },
   {
    "a": "digital-realty",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Digital Realty takes 65 MWac of the 83 MWac Phoenix Solar facility in Fannin County, Texas, under a 12-year PPA — Pattern's first US solar project.",
+     "context": "Pattern's October 2021 release on Phoenix Solar's start of operations names 'a 65 MWac, 12-year power purchase agreement with Digital Realty'; First Solar Series 6 modules, Nextracker trackers and Mortenson as builder.",
+     "source": "https://patternenergy.com/pattern-energy-begins-operations-phoenix-solar-power-facility-texas/",
+     "status": "active",
+     "since": "2021",
+     "scale": "65 MWac",
+     "via": "Phoenix Solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its data-centre exposure is indirect — Microsoft (Winfield, Crossover), Amazon (Fowler Ridge) and Digital Realty (Phoenix) as offtakers and a Silver Rock line pitched at Utah and Nevada data-centre load — with no announced hyperscaler campus deal of its own.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Operating wind, solar and storage fleet — about 12 GW installed across the United States, Canada and Mexico after Cordelio",
+     "date": "",
+     "text": "Solar in the United States: Phoenix 83 MWac, Texas (2021; 65 MWac to Digital Realty, 12 years), Winfield 150 MWac, Missouri (September 2025; 100% to Microsoft, 15 years; Qcells modules), Silver State 50 MWac, Nevada, Box Canyon, Arizona.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2021"
+  },
+  {
+   "a": "digital-realty",
    "b": "powerhouse-data-centers",
    "evid": [
     {
@@ -24779,6 +24898,43 @@
     }
    ],
    "last": "2026-07-15"
+  },
+  {
+   "a": "entergy",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Entergy Mississippi's Wolf Creek substation in Choctaw County is Southern Spirit's eastern terminus, and Entergy Mississippi testified against the line at the Mississippi PSC.",
+     "context": "The Louisiana PSC order describes Southern Spirit as running 'to Entergy Mississippi LLC's Wolf Creek Substation in Choctaw, Mississippi'. In October 2023 testimony Entergy Mississippi argued the line would 'very likely harm' its customers and that its Choctaw and Attala gas plants 'could not operate during periods with east-bound flow' — the incumbent utility as both interconnection host and opponent, which is why the Mississippi docket has been continued since 2017.",
+     "source": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/2/pattern-transmission-project-to-link-texas-grid-to-southeast-faces-hurdles-80279873",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "On the grid-equipment side it is Hitachi Energy's reference customer for HVDC Light and the buyer of 674 GE Vernova turbines; on the utilities side it is the merchant transmission owner that California's grid operator absorbed through the Subscriber PTO model, a wholesale seller to SRP, Shell, the University of California, LADWP and eight community choice aggregators, and the developer Entergy Mississippi fought at the state commission.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the company's own schedule slipped from 2029 in-service to 2029 construction start; no Mississippi certificate nine years after filing; an incumbent (Entergy Mississippi) opposing at the interconnection point; Louisiana's expropriation law; more than half the right-of-way unsecured as of January 2025; a DOE anchor contract no source confirms was executed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Pattern Transmission — Southern Spirit, Silver Rock, Bolo and the completed lines",
+     "date": "",
+     "text": "be borne by the ratepayers of the state of Louisiana'; Louisiana's SB 108 (August 2024) restricts expropriation for lines outside an RTO plan; the Mississippi PSC's docket 2017-UA-79 was still 'CONTINUED' on the June 2026 agenda, so no Mississippi certificate exists; Entergy Mississippi's testimony argued the line would 'very likely harm' its customers; DOE selected the line for a Transmission Facilitation Program capacity contract of up to USD 360 million in October 2024, execution unconfirmed.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "entergy",
@@ -29711,6 +29867,21 @@
   },
   {
    "a": "form-energy",
+   "b": "grid-united",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Michael Skelly sits on Form Energy's board, per his Grid United biography.",
+     "context": "The company biography states that Skelly 'sits on the boards of the Houston Bike Share, the Houston Parks Board, LINK Houston, Greentown Labs Houston, and Form Energy'. A personal directorship, not a commercial link between the companies; recorded so the Form Energy dossier's mention of Skelly resolves.",
+     "source": "https://gridunited.com/team/michael-skelly/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "form-energy",
    "b": "mortenson",
    "evid": [
     {
@@ -30621,6 +30792,46 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "ge-vernova",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Supplier of 674 turbines (about 2.4 GW) to SunZia Wind and of the 377 turbines at Western Spirit; GE Vernova Financial Services was a joint lead arranger on SunZia's tax-equity term loan.",
+     "context": "GE Vernova's 2023 announcement of a 2.4 GW order for SunZia was its largest onshore order; Pattern's June 2026 release quotes GE Vernova on '674 of GE Vernova's workhorse turbines'. The financing role — a joint lead arranger on the USD 2.25 billion tax-equity term loan per trade coverage — makes GE Vernova both supplier and financier.",
+     "source": "https://www.gevernova.com/news/press-releases/ge-vernova-announces-2point4-gw-order-for-pattern-energy-sunzia-wind-project",
+     "status": "active",
+     "since": "2023",
+     "scale": "674 turbines / 2.4 GW",
+     "via": "3.6-154 onshore turbines"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "On the grid-equipment side it is Hitachi Energy's reference customer for HVDC Light and the buyer of 674 GE Vernova turbines; on the utilities side it is the merchant transmission owner that California's grid operator absorbed through the Subscriber PTO model, a wholesale seller to SRP, Shell, the University of California, LADWP and eight community choice aggregators, and the developer Entergy Mississippi fought at the state commission.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Suppliers and contractors: Hitachi Energy (HVDC Light voltage-source converters and MACH control), Quanta Services (turnkey line), Blattner (wind, 'more than 900 turbines, ten substations'), GE Vernova (674 turbines) and Vestas (242).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-18",
+     "text": "'SunZia... is fully operational': about 3,650 MW of wind and the 550-mile HVDC line, 'on time and on budget', with Hitachi Energy, GE Vernova, Vestas, Quanta, Blattner, HASI, Nuveen, RETA, CAISO and seven offtakers quoted — The largest US clean-energy project completed on its 2023 schedule — the proof point every other merchant HVDC developer in the corpus now cites.",
+     "src": "https://patternenergy.com/sunzia-comes-online/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-18"
   },
   {
    "a": "ge-vernova",
@@ -32779,6 +32990,184 @@
    "last": ""
   },
   {
+   "a": "grid-united",
+   "b": "hitachi-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "HVDC technology partner: a capacity reservation agreement covering multiple Grid United lines (March 2024) and an Engineering Services Agreement for the North Plains Connector converter stations (October 2025).",
+     "context": "Hitachi Energy announced at CERAWeek 2024 that 'under an innovative approach known as a capacity reservation agreement, Hitachi Energy will provide HVDC technology to support the development of multiple Grid United HVDC interconnections' — a manufacturing-slot reservation made before any line was permitted. In October 2025 the two signed an Engineering Services Agreement under which Hitachi 'will deliver early-stage engineering services, including the development of technical specifications for the HVDC converter stations' and the AC–DC interface definitions with MISO, SPP and WECC. No equipment order has been announced; the North Dakota schedule puts construction in 2027–28.",
+     "source": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/hitachi-energy-and-grid-united-announce-key-milestone-in-development-of-north-plains-connector-interregional-transmission-line",
+     "status": "active",
+     "since": "2024-03",
+     "via": "HVDC converter stations"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hitachi Energy holds an HVDC capacity-reservation agreement (March 2024) and an engineering services agreement for the North Plains converter stations (October 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Grid United sits between the two: it is the customer that reserves Hitachi Energy's HVDC converter capacity years ahead of an order, and it is the developer that sells utilities — ALLETE, Portland General, Puget, NorthWestern, Avista, BHE U.S.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Moderate confidence)** We assess that the Hitachi Energy capacity reservation is the company's most valuable commercial asset after its land.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-02",
+     "text": "Hitachi Energy and Grid United sign an Engineering Services Agreement: Hitachi will 'develop technical specifications for the HVDC converter stations' and AC–DC interfaces with MISO, SPP and WECC — The converter supplier is chosen before the permits, the customers or the EPC — the supply-chain slot is treated as the scarce input.",
+     "src": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/hitachi-energy-and-grid-united-announce-key-milestone-in-development-of-north-plains-connector-interregional-transmission-line",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-03-20",
+     "text": "Hitachi Energy and Grid United announce a 'capacity reservation agreement' under which Hitachi will provide HVDC technology for 'multiple Grid United HVDC interconnections' (CERAWeek) — Reserving converter slots across the portfolio before any line is permitted is the supply-chain bet the whole strategy rests on.",
+     "src": "https://www.hitachienergy.com/news-and-events/press-releases/2024/03/hitachi-energy-to-accelerate-introduction-of-hvdc-technology-with-grid-united-for-transmission-projects-to-strengthen-us-power-grid",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-02"
+  },
+  {
+   "a": "grid-united",
+   "b": "invenergy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The other private developer of interregional HVDC in the US — Grain Belt Express (5,000 MW, four grid regions) against North Plains (3,000 MW, three markets); Invenergy bought Grain Belt from Skelly's Clean Line in 2018, and Grid United co-founder Kris Zadlo is a former Invenergy senior vice president.",
+     "context": "Clean Line Energy Partners, which Skelly founded and ran until it shut in 2019, sold Grain Belt Express to Invenergy; Invenergy is now building it as a USD 11 billion merchant line after DOE terminated its USD 4.9 billion conditional loan guarantee in July 2025. Zadlo 'was a Senior Vice President at Invenergy, responsible for commercial analytics, government and regulatory affairs, strategy, transmission analysis'. The two companies compete for the same scarce inputs — HVDC converter slots, federal anchor programmes, utility subscribers — with different models: Invenergy sells merchant capacity under negotiated rates and finances on its own balance sheet; Grid United sells utilities ownership slices and funds only development.",
+     "source": "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BACKGROUND.** Founded in 2021 (site history; the company states no year) by Michael Skelly, who ran Clean Line Energy Partners from 2009 until it shut down in 2019 after selling its lines to Invenergy, NextEra and Pattern, with Kris Zadlo (ex-Invenergy) and Kristen Williams Golden as founding members.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it the counterpart to Invenergy's Grain Belt Express and Pattern Energy's SunZia and Southern Spirit in the merchant and participant-funded HVDC class, and the one member of that class with no operating asset, no disclosed investor beyond a family office, and every commitment still non-binding.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · North Plains Connector — 3,000 MW HVDC link between the Western Interconnection, MISO and SPP (flagship, permitting)",
+     "date": "",
+     "text": "Against Invenergy's Grain Belt Express (5,000 MW, four grid regions, merchant, USD 11 billion, DOE loan guarantee terminated July 2025) and Pattern's SunZia (3,000 MW, energised 2025, subscriber-owned), North Plains is smaller and later but is the only proposed line that would join three markets across the Eastern–Western seam, and the only one being sold as utility-owned slices rather than merchant capacity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-23",
+     "text": "DOE cancels the USD 4.9 billion conditional loan guarantee for Invenergy's Grain Belt Express; Invenergy says it will proceed on private financing — The nearest comparable merchant HVDC line lost its federal debt backstop the same summer Grid United's grant survived — the class is being sorted project by project.",
+     "src": "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-07-23"
+  },
+  {
+   "a": "grid-united",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "NextEra bought the Oklahoma portion of Clean Line's Plains & Eastern HVDC project from Skelly's prior company as Clean Line wound down.",
+     "context": "MIT Technology Review records that Clean Line 'sold Grain Belt Express to Invenergy, the Oklahoma portion of Plains & Eastern to NextEra Energy, and Western Spirit to Pattern Development' before shutting in 2019. The link is to Skelly's history rather than to Grid United's business; it is recorded because the corpus's NextEra dossier is the one place the Plains & Eastern purchase can be cross-read.",
+     "source": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/",
+     "status": "historical",
+     "since": "2017"
+    }
+   },
+   "evid": [],
+   "last": "2017"
+  },
+  {
+   "a": "grid-united",
+   "b": "pattern-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Pattern is the developer that finished what Clean Line started — it bought Western Spirit from Clean Line, energised SunZia (3,000 MW HVDC) in 2025 and is permitting Southern Spirit (ERCOT–Southeast HVDC); its RioSol participation and SunZia corridor overlap Southline's southern New Mexico–Arizona market.",
+     "context": "MIT Technology Review's account of Clean Line's wind-down lists the sale of Western Spirit 'to Pattern Development' alongside the Grain Belt and Plains & Eastern sales. Pattern's SunZia — the first VSC HVDC wind corridor to reach commercial operation in the US — and its 324-mile Southern Spirit line are the operating and permitted comparables against which Grid United's five pre-construction lines are judged; Southline and SunZia both move southwestern New Mexico wind into Arizona. No commercial relationship between the two companies is on the record.",
+     "source": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other private developer of interregional HVDC in the corpus — five pre-construction lines, family-office funded — against Pattern's operating SunZia and certificated Southern Spirit; Grid United's Southline and Pattern's SunZia and RioSol interest share the southern New Mexico–Arizona corridor, and Michael Skelly's Clean Line sold Western Spirit to Pattern.",
+     "context": "MIT Technology Review's account of Clean Line's wind-down records the sale of Western Spirit 'to Pattern Development' as one of the three asset sales before Skelly's prior company shut in 2019 — Pattern finished that line in 2021. Today both companies court the same HVDC converter capacity at Hitachi Energy and the same DOE Transmission Facilitation Program, and both have a Texas-seam line (Southern Spirit with FERC's 2014 order; Pecos West denied by the PUCT in 2023). No commercial relationship between the two is on the record.",
+     "source": "https://www.technologyreview.com/2024/09/25/1104413/why-one-developer-wont-quit-fighting-to-connect-the-uss-grids/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That makes it the counterpart to Invenergy's Grain Belt Express and Pattern Energy's SunZia and Southern Spirit in the merchant and participant-funded HVDC class, and the one member of that class with no operating asset, no disclosed investor beyond a family office, and every commitment still non-binding.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-12-21",
+     "text": "ALLETE and North Plains Connector LLC sign development agreements; ALLETE to pursue 'at least 35%' ownership and operate the line — The one binding relationship on the project — ALLETE has since been taken private by CPP Investments and GIP (December 2025), the same CPP that controls Pattern Energy.",
+     "src": "https://northplainsconnector.com/allete-grid-united-sign-development-agreements-for-advancing-new-hvdc-transmission-line-in-north-dakota-and-montana/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against Grid United it is the comparable that has permits, customers, financing and an operating asset; against Invenergy it is the pension-owned, not founder-owned, version of the same integrated developer-transmission model.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "The only privately financed long-haul VSC HVDC corridor operating in the United States; Invenergy's Grain Belt Express (5,000 MW, line-commutated, construction from 2026) and Grid United's North Plains Connector (3,000 MW, permitting) are the comparables, neither yet built.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Champlain Hudson (Blackstone/TDI) and SunZia are the two lines Canary Media cites as the decade-plus precedents Grid United must repeat.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Pattern Transmission — Southern Spirit, Silver Rock, Bolo and the completed lines",
+     "date": "",
+     "text": "The only US developer with a delivered merchant HVDC line and a second one certificated in one of two states; Grid United (five lines, none certificated beyond Oklahoma) and Invenergy (Grain Belt, construction from 2026) are the peers.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2023-12-21"
+  },
+  {
    "a": "gridmatic",
    "b": "habitat-energy",
    "curated": {
@@ -33984,6 +34373,46 @@
     }
    ],
    "last": "2026-03-23"
+  },
+  {
+   "a": "hitachi-energy",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "HVDC converter supplier for SunZia — HVDC Light voltage-source converters at ±525 kV, 3,000 MW, 'the largest VSC-based HVDC installation in the United States'.",
+     "context": "Pattern named Hitachi Energy as SunZia's HVDC supplier in May 2023 alongside Quanta and Blattner as EPC contractors; Hitachi celebrated the line's inauguration in June 2026 as its reference for long-haul VSC HVDC in the United States. Hitachi also holds a capacity-reservation agreement with Grid United for the competing North Plains and Three Corners lines, so the same converter supplier sits behind both transmission developers in this corpus.",
+     "source": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/06/hitachi-energy-celebrates-the-inauguration-of-pattern-energy-s-sunzia-project-now-delivering-clean-reliable-power-to-millions-across-the-american-southwest",
+     "status": "active",
+     "since": "2023-05",
+     "scale": "3,000 MW",
+     "via": "HVDC Light"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "On the grid-equipment side it is Hitachi Energy's reference customer for HVDC Light and the buyer of 674 GE Vernova turbines; on the utilities side it is the merchant transmission owner that California's grid operator absorbed through the Subscriber PTO model, a wholesale seller to SRP, Shell, the University of California, LADWP and eight community choice aggregators, and the developer Entergy Mississippi fought at the state commission.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Suppliers and contractors: Hitachi Energy (HVDC Light voltage-source converters and MACH control), Quanta Services (turnkey line), Blattner (wind, 'more than 900 turbines, ten substations'), GE Vernova (674 turbines) and Vestas (242).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-18",
+     "text": "'SunZia... is fully operational': about 3,650 MW of wind and the 550-mile HVDC line, 'on time and on budget', with Hitachi Energy, GE Vernova, Vestas, Quanta, Blattner, HASI, Nuveen, RETA, CAISO and seven offtakers quoted — The largest US clean-energy project completed on its 2023 schedule — the proof point every other merchant HVDC developer in the corpus now cites.",
+     "src": "https://patternenergy.com/sunzia-comes-online/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-18"
   },
   {
    "a": "hitachi-energy",
@@ -37257,6 +37686,50 @@
     }
    ],
    "last": "2026-04-28"
+  },
+  {
+   "a": "invenergy",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The other integrated renewables-and-transmission developer: Invenergy's Grain Belt Express (5,000 MW HVDC, construction from 2026) is the merchant comparable to SunZia and Southern Spirit, and both firms compete for the same DOE transmission programmes and Midwest wind sites.",
+     "context": "DOE's October 2024 Transmission Facilitation Program round selected Pattern's Southern Spirit (up to USD 360 million) and Invenergy's Cimarron Link (up to USD 306 million) in the same USD 1.5 billion package; Invenergy then lost Grain Belt's USD 4.9 billion DOE loan guarantee in July 2025 and is proceeding privately. Invenergy is founder-controlled with Blackstone and CDPQ as investors; Pattern is pension-controlled — the two ownership models for the same asset class.",
+     "source": "https://www.utilitydive.com/news/doe-pattern-energy-avangrid-invenergy-grid-united-transmission-facilitation-capacity/728913/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against Grid United it is the comparable that has permits, customers, financing and an operating asset; against Invenergy it is the pension-owned, not founder-owned, version of the same integrated developer-transmission model.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "The only privately financed long-haul VSC HVDC corridor operating in the United States; Invenergy's Grain Belt Express (5,000 MW, line-commutated, construction from 2026) and Grid United's North Plains Connector (3,000 MW, permitting) are the comparables, neither yet built.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Operating wind, solar and storage fleet — about 12 GW installed across the United States, Canada and Mexico after Cordelio",
+     "date": "",
+     "text": "Among the corpus's IPPs Pattern is the wind-heavy, Canada-heavy, pension-owned one: more Ontario wind than any other owner, a fleet whose median asset is a decade old, and a solar and storage book that is small next to Invenergy's or NextEra's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Pattern Transmission — Southern Spirit, Silver Rock, Bolo and the completed lines",
+     "date": "",
+     "text": "The only US developer with a delivered merchant HVDC line and a second one certificated in one of two states; Grid United (five lines, none certificated beyond Oklahoma) and Invenergy (Grain Belt, construction from 2026) are the peers.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "invenergy",
@@ -42436,6 +42909,59 @@
   },
   {
    "a": "microsoft",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Buys 100% of Winfield Solar (150 MWac, Missouri, 15 years) and 100% of Crossover Wind (135 MW, Arkansas, 20 years) — both ex-Cordelio projects now owned by Pattern.",
+     "context": "Winfield 'sells 100% of its power to Microsoft under a 15-year contract' and reached commercial operation in September 2025; Cordelio's Crossover Wind, contracted to Microsoft for 20 years, reached commercial operation on 18 November 2025 and came to Pattern with the April 2026 acquisition. Neither was originated by Pattern; they are its only hyperscaler contracts on the record.",
+     "source": "https://patternenergy.com/projects/winfield-solar/",
+     "status": "active",
+     "since": "2025",
+     "scale": "150 MWac + 135 MW"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its data-centre exposure is indirect — Microsoft (Winfield, Crossover), Amazon (Fowler Ridge) and Digital Realty (Phoenix) as offtakers and a Silver Rock line pitched at Utah and Nevada data-centre load — with no announced hyperscaler campus deal of its own.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Operating wind, solar and storage fleet — about 12 GW installed across the United States, Canada and Mexico after Cordelio",
+     "date": "",
+     "text": "Solar in the United States: Phoenix 83 MWac, Texas (2021; 65 MWac to Digital Realty, 12 years), Winfield 150 MWac, Missouri (September 2025; 100% to Microsoft, 15 years; Qcells modules), Silver State 50 MWac, Nevada, Box Canyon, Arizona.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Operating wind, solar and storage fleet — about 12 GW installed across the United States, Canada and Mexico after Cordelio",
+     "date": "",
+     "text": "The Cordelio acquisition added 'approximately 1,550 megawatts of operating and in-construction assets, including 16 wind, solar, and energy storage projects'; the company does not list the sixteen, but fourteen are identifiable from portfolio pages added after closing — Glacier Sands 185 MW and Moraine Sands 171 MW (Illinois), Crossover 135 MW (Arkansas; 100% to Microsoft, 20 years, COD November 2025), Cedar Point (Colorado), McHenry, Box Canyon, Silver State, Winfield, and in Ontario Bluewater 60, Jericho 149, Summerhaven 124 and Conestogo 23 MW wind plus Sombra 20 and Moore 25 MW solar — with Axium Infrastructure holding 49% of the Ontario 'Denfield' portfolio since 2021.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-18",
+     "text": "Cordelio's Crossover Wind (135 MW, Cross County, Arkansas) reaches commercial operation — the first operating wind project in Arkansas, 100% contracted to Microsoft for 20 years — Now in Pattern's fleet: the one hyperscaler-contracted wind farm it owns, inherited rather than originated.",
+     "src": "https://www.prnewswire.com/news-releases/cordelio-power-achieves-commercial-operations-at-135-mw-crossover-wind-project-the-first-operating-wind-project-in-arkansas-302618392.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-01",
+     "text": "Winfield Solar (150 MWac, Lincoln County, Missouri; 100% to Microsoft for 15 years; Qcells modules made in Georgia) reaches commercial operation — an ex-Cordelio project now on Pattern's portfolio — The second Microsoft contract in the fleet, and the domestic-content module choice the tax rules now reward.",
+     "src": "https://patternenergy.com/projects/winfield-solar/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-18"
+  },
+  {
+   "a": "microsoft",
    "b": "prime-data-centers",
    "evid": [
     {
@@ -44018,6 +44544,21 @@
     }
    ],
    "last": "2026-08"
+  },
+  {
+   "a": "nextera-energy-resources",
+   "b": "pattern-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "NextEra Energy Canadian Operating Services runs day-to-day operations at the ex-Cordelio Summerhaven wind and Moore solar facilities in Ontario that Pattern acquired in April 2026.",
+     "context": "Pattern Canada's project pages for Summerhaven (124 MW) say 'day-to-day operations run by NextEra Energy Canadian Operating Services' and describe Moore Solar as a 'joint venture operated by NextEra Energy Canadian Operating Services'. An operating-services relationship inherited with Cordelio, recorded because the NextEra dossier is the place a reader would look for NextEra's Canadian O&M business.",
+     "source": "https://patterncanada.ca/wp-json/wp/v2/projects?per_page=100",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "nextera-energy-resources",
@@ -47058,6 +47599,31 @@
     }
    ],
    "last": "2025-11-25"
+  },
+  {
+   "a": "pattern-energy",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Turnkey EPC contractor for the 550-mile SunZia HVDC line; Quanta's 10-K names Pattern and SunZia among its flagship projects.",
+     "context": "Pattern's May 2023 release: 'Quanta Infrastructure Services Group' as the turnkey contractor for the 550-mile 525 kV HVDC line. Quanta's subsidiary Blattner built the wind farm, so the Quanta group delivered both halves of the project.",
+     "source": "https://patternenergy.com/pattern-energy-selects-epc-contractors-for-americas-largest-clean-energy-infrastructure-project/",
+     "status": "active",
+     "since": "2023-05",
+     "via": "SunZia Transmission EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · SunZia Wind and Transmission — 3,650 MW of New Mexico wind on a 550-mile, 3,000 MW ±525 kV HVDC line to Arizona (operating since June 2026)",
+     "date": "",
+     "text": "Suppliers and contractors: Hitachi Energy (HVDC Light voltage-source converters and MACH control), Quanta Services (turnkey line), Blattner (wind, 'more than 900 turbines, ten substations'), GE Vernova (674 turbines) and Vestas (242).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2023-05"
   },
   {
    "a": "piller",
