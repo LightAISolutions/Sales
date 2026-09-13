@@ -6,12 +6,62 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-13 01:47:06 AM EST
+**Repo version:** v05.47r — **four push commits** on `claude/adoring-planck-nczbq5` (v05.44r → v05.47r), all merged; this remember-session commit follows on the same branch
+**Branch:** `claude/adoring-planck-nczbq5`
+**Model:** Opus 5 xhigh as the orchestrator; **no subagents** — Bash, Node harnesses and Playwright throughout. ~30 minutes for the main push, then three shorter fix/diagnose cycles
+
+### What was done
+
+**C3 session 2 of 2–3 — the Guidance Homecoming's federation slice (v05.45r), plus three follow-ups the developer's testing surfaced (v05.46r, v05.47r).**
+
+1. **The Admin lens re-hosts in Classroom** (`Classroom.html` v01.10w → v01.11w) — `clLoadAdminLens` / `clApplyAdminLens`, the `cl*` port of Profiler's `gd*` pair on the light palette, behind `clCan('reports')` (admin only, unchanged in `CL_ROLE_CAPS`, so **no access-matrix value moved**). **No new server route**: the index and reports are public Pages data under `CL_DATA_BASE`. Twelve panels across five modules for an admin, zero on the other four, **zero for a contributor with zero report-data network requests issued**
+2. **`guidanceMentions_()` moved to `Classroom.gs`** byte-identical (v01.19g → v01.22g across the session) behind `?action=guidancepeer&t=…&gpop=mentions` — the mirror of `scHandleCorpus_`, token-gated on a **new** `GUIDANCE_PEER_TOKEN` Script Property, no browser-facing door. `Profiler.gs` (v01.36g → v01.38g) relays it via `guidanceMentionsProxy_()` on the `handleNewsOp_` shape. `guidanceAllowed_` stays the only browser-facing boundary; `Profiler.html` was untouched by that commit, which was the test
+3. **v05.46r — the peer route hardened** after the developer set the token and still saw nothing: both sides now `.trim()` the shared secret before comparing, and Profiler's proxy stopped collapsing three distinct upstream faults into `upstream_unreachable`
+4. **v05.47r — the actual reported bug, and it was not the token.** The chips had been rendering all along at **y ≈ 1817px on a 2035px page**: `ovGuidanceMentionsLine`'s `paint()` ended in `main.appendChild(line)`, below the tab panes *and* below the field-note form. Now inserts before `.ov-tabs` (`Profiler.html` v01.87w → v01.88w). **Developer confirmed both chips on Tesla and NVIDIA**
+5. **The slice plan records session 2** in `PHASE6-CLASSROOM-DESIGN.md`; `INTEGRATED-REMEDIATION-PLAN.md` has the §6 ledger row, the §7.3 order-2 row, a dated v05.45r progress note extended with the two follow-ups, and **§7.11 — the paste-in brief for C3 session 3** (written in this commit)
+6. **Verified:** `node --check` on both `.gs` files and every page script block; `check-gas-inner-scripts.js` (9 files / 86 blocks); `check-guidance-parity.py`, `check-readme-tree.py`, `check-classroom-curriculum.py --strict`, `check-classroom-pipeline.py --selftest` all clean; Playwright renders with **zero page errors** throughout
+
+### Where we left off
+
+All four pushes merged and deployed; the token is set and the chips are live and confirmed. Nothing in flight. **C3 session 3 is next and it is the last one** — its brief is `INTEGRATED-REMEDIATION-PLAN.md` **§7.11**, reproduced under *Recommendation* below.
+
+### Key decisions and findings
+
+- **The token was never the problem, and the evidence that settled it was a timestamp.** The developer's console showed `built: '2026-09-13T05:13:26.776Z'` — fifteen minutes *before* v05.46r deployed — so the secret had matched from the moment it was set. v05.46r is still worth having (a trailing newline pasted from an execution log produces exactly that symptom, invisible in the Script Properties UI and fatal under `!==`) but it fixed a trap that had not been sprung.
+- **Two diagnoses were made from plausible mechanisms before the page was actually rendered; the render took ninety seconds and settled it outright.** For anything visual on these pages, render first. This is the single most transferable lesson of the session.
+- **A verification fixture nearly produced a phantom finding.** The first Profiler render showed *empty* chips. Cause: the fixture had been written with `JSON.stringify(m, Object.keys(m).sort(), 1)` — the second argument is the **replacer** (a property allowlist), not `space` — so every hit object was stripped to `{}`. Use `JSON.stringify(m, null, 1)`. Always sanity-check a fixture before drawing a conclusion from it.
+- **`gd_progress:` is a shared store, not a guidance store** — it also holds `study-<slug>` and `dossier-<slug>` ticks. Session 3's item-4 migration must move **only** registered module ids. This is the largest correctness trap left in C3.
+- **Profiler's copy is twelve functions, not thirteen** — `guidanceMentions_()` has already gone. `check-guidance-parity.py` watches exactly those twelve and dies with them in session 3.
+- **The chip click path is load-bearing for session 3**: `ovGuideOpenDoc` opens Profiler's own overlay, so deleting the `gd*` engine breaks the chips unless they are re-pointed at `Classroom.html#guidance/<id>` first.
+- **CHANGELOG arithmetic is non-exempt, not raw.** It reads `100/100`, but four sections are dated 2026-09-13, so the non-exempt count is **96** and rotation correctly did **not** fire. **It fires on the first push dated after 2026-09-13.** Oldest whole date group: **thirteen sections dated 2026-09-04**. The clone was deepened here (55 → 1,138 commits) but a fresh session gets a fresh shallow clone — `git fetch --unshallow origin main` **before** any SHA lookup.
+- **Profiler render recipe (new, and it works):** scratch copy of `Profiler.html` in the scratchpad with `_e = ''` and `AUTO_REFRESH = false`, plus a copy of `profiler-data/`, served over **`http://127.0.0.1`** (not `file://`, or CORS silently kills every fetch and a skipped lens looks like a pass). `add_init_script` sets `ov_note_role` / `ov_note_session` / `ov_note_email` in localStorage; then set `window._gasNoteUrl` to a dummy host and patch `window.fetch` to answer it. Hide any fixed full-height `body > div` that is not `#ov-*` to clear the auth wall. The init block loads the registry and calls `ovRoute()` on its own — no `pass()` needed.
+- **Gate-proving recipe held again**: extract the functions with a brace-matched regex, stub `PropertiesService` / `UrlFetchApp` / `CacheService` / `validateSessionForData`, and drive per tier and per failure mode in Node. An **admin session carries `permissions: ['admin']`, not `role: 'admin'`** — a stub that omits it reports a false `ROLE_DENIED`.
+
+### Active context
+
+- **Repo version** `v05.47r`; **CHANGELOG at 100/100 raw / 96 non-exempt** — rotation due on the first push dated after 2026-09-13; **`Scrapergs.changelog.md` at 49/50** (untouched all session); `Profilerhtml.changelog.md` 47/50, `Profilergs.changelog.md` 38/50, `Classroomhtml.changelog.md` 11/50, `Classroomgs.changelog.md` 22/50
+- **GAS versions:** Classroom `v01.22g`, Profiler `v01.38g`, Scraper `v02.02g`. **Page versions:** Profiler `v01.88w`, Classroom `v01.11w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
+- **Operational state:** `GUIDANCE_PEER_TOKEN` **is set in both projects and working** — no setup step is outstanding. The nine modules are still **deliberately duplicated** in both `.gs` files until session 3
+- **Run order from here:** **C3 session 3** (§7.11) → the **bankability review** (`bess-bankability-2026-08`, `reviewBy` 2026-10-01 — after session 3 it edits only Classroom's copy) → Phase 4 row 1 → S2 ∥ Phase 4 → K2 → rows 25–26 → C5 → the plan clock. **~54 sessions remain**
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **C3 session 3, the Guidance Homecoming's final slice, on Opus 5 xhigh** from the `INTEGRATED-REMEDIATION-PLAN.md` §7.11 brief — in its stated order: migrate the guidance progress ticks (module ids **only**, verified against a pre-migration export, idempotent), re-point the dossier mention chips to `Classroom.html#guidance/<id>`, then delete Profiler's twelve functions and `check-guidance-parity.py`, re-target `.claude/rules/industry-guidance.md`, and ask before touching the quarterly Routine. The deletion goes last because everything else must be proven working while the fallback still exists.
+
+**To continue:** paste the C3 session 3 prompt (reproduced in chat, and stored as §7.11 of `INTEGRATED-REMEDIATION-PLAN.md`) into a new Opus 5 xhigh session.
+
+## Previous Sessions
+
+### Session — 2026-09-13 12:23:26 AM EST (v05.44r)
+
 **Date:** 2026-09-13 12:23:26 AM EST
 **Repo version:** v05.44r — **one push commit** on `claude/jolly-meitner-06wd3n` (v05.43r → v05.44r), merged; this remember-session commit follows on the same branch
 **Branch:** `claude/jolly-meitner-06wd3n`
 **Model:** Opus 5 xhigh as the orchestrator; **no subagents** — the whole migration was done in-session with Bash, Python extraction scripts and Playwright. ~31 minutes for the push commit against a 55-minute estimate, no cap hit
 
-### What was done
+#### What was done
 
 **C3 session 1 of 2–3 — the Guidance Homecoming. Order 2 of the §7.3 run table, now under way.**
 
@@ -23,11 +73,11 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 6. **`INTEGRATED-REMEDIATION-PLAN.md` §7.10 — the paste-in brief for C3 session 2** (written in this remember-session commit), plus run-table row 2 flipped to "session 1 done" and a dated v05.44r progress note
 7. **Verified:** `node --check` on `Classroom.gs` and both page script blocks; `check-gas-inner-scripts.js` (9 files / 86 blocks); a Playwright render + screenshot read of **every new surface** with **zero page errors**; the server gate proved per tier in Node; `check-guidance-parity.py`, `check-readme-tree.py`, `check-classroom-curriculum.py --strict` and `check-classroom-pipeline.py --selftest` all clean
 
-### Where we left off
+#### Where we left off
 
 The v05.44r push merged. Nothing in flight. **C3 session 2 is next** — its paste-in brief is `INTEGRATED-REMEDIATION-PLAN.md` **§7.10**, written in this commit at the developer's request and reproduced under *Recommendation* below.
 
-### Key decisions and findings
+#### Key decisions and findings
 
 - **The file-layout question was decided by the deployer, not the checker.** `scripts/check-gas-inner-scripts.js` walks `googleAppsScripts/*/*.gs`, so a second `.gs` is fine *to the toolchain* — but `pullAndDeployFromGitHub()` fetches exactly `FILE_PATH` and PUTs `[{name:"Code", type:"SERVER_JS", source:newCode}, manifest]` to `projects/<id>/content`, an API call that **replaces the project's entire file set**. A second file would be deleted by the next merge-triggered deploy, taking `guidanceDocs_()` with it; it also has no `var VERSION` line, which is exactly what the deployer diffs to decide whether to deploy at all. Supporting one would mean rewriting the pull-deploy path all nine projects share, with no staging environment. **One `.gs`.**
 - **The isolation a second file was wanted for is what the `// CONTENT END` fence already gives.** Guidance sits below it, so the unattended C2 pipeline's write set stays exactly what `CLASSROOM-COMMITTER-CONTRACT.md` §3 says it is — the `clLesson*_` / `clTrack*_` literals and the two registries — and `check-classroom-pipeline.py` (P2) already enforces that.
@@ -40,7 +90,7 @@ The v05.44r push merged. Nothing in flight. **C3 session 2 is next** — its pas
 - **Gate-proving recipe (stronger than a page render):** extract the `// PROJECT START` … `// PROJECT END` region with a regex, stub `auditLog`/`dataAuditLog`/`validateSessionForData`, and call `handleGuidanceOp_` in Node once per tier — the same technique `check-classroom-content.py` uses for the lesson gate. It proved analyst/viewer/unknown get `ROLE_DENIED` on `index` as well as `doc` (no titles leak into a filtered list), and that denials audit as `classroom_not_admitted` / `classroom_capability_denied`.
 - **CHANGELOG counter trap:** `Sections: 96/100` matched **three** places in the file (the header plus two historical notes quoting old counters). Anchor the replacement on the header's surrounding newlines, and verify the count empirically with `grep -c '^## \[v[0-9]'` rather than trusting the header.
 
-### Active context
+#### Active context
 
 - **Repo version** `v05.44r`; **CHANGELOG at 97/100** — three pushes of headroom, rotation is close; **`Scrapergs.changelog.md` at 49/50** (the next Scraper GAS bump is the last before mandatory rotation); `Classroomhtml.changelog.md` 10/50, `Classroomgs.changelog.md` 20/50, `Profilergs.changelog.md` 36/50
 - **GAS versions:** Classroom `v01.20g` (bumped), Profiler `v01.36g`, Scraper `v02.02g`. **Page versions:** Classroom `v01.10w` (bumped), Profiler `v01.87w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
@@ -48,58 +98,9 @@ The v05.44r push merged. Nothing in flight. **C3 session 2 is next** — its pas
 - **Run order from here:** **C3 session 2** (§7.10) → C3 session 3 → the **bankability review** (`reviewBy` 2026-10-01, and it must edit both copies while the duplicate stands) → Phase 4 row 1 → S2 ∥ Phase 4 → K2 → rows 25–26 → C5 → the plan clock. **~55 sessions remain**
 - **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
 
-### Recommendation for next session
+#### Recommendation for next session
 
 - Run **C3 session 2, the Guidance Homecoming's middle slice, on Opus 5 xhigh** from the `INTEGRATED-REMEDIATION-PLAN.md` §7.10 brief — checklist items 2 and 3 only: the Admin lens re-hosted in Classroom under `clCan('reports')` reading the public `reports/*.report.json`, and `guidanceMentions_()` moved to Classroom behind one narrow token-gated route that `Profiler.gs` proxies on the `scHandleCorpus_` pattern, with the dossier chips still working through an unchanged `ovGuideApi('mentions')` call. Do not delete Profiler's copy and do not wire guidance ticks — both are session 3.
 
 **To continue:** paste the C3 session 2 prompt (reproduced in chat, and stored as §7.10 of `INTEGRATED-REMEDIATION-PLAN.md`) into a new Opus 5 xhigh session.
-
-## Previous Sessions
-
-### Session — 2026-09-12 11:40:59 PM EST (v05.43r)
-
-**Date:** 2026-09-12 11:40:59 PM EST
-**Repo version:** v05.43r — **one push commit** on `claude/stoic-hypatia-i0f7vr` (v05.42r → v05.43r); this remember-session commit follows on the same branch
-**Branch:** `claude/stoic-hypatia-i0f7vr`
-**Model:** Opus 5 xhigh as the orchestrator; one Explore subagent (the seven-guide survey) inherited it — ~35 minutes of research, ~60 minutes total, no cap hit
-
-#### What was done
-
-**G6 — the large-load interconnection guidance module. Order 1 of the §7.3 run table, done in one session.**
-
-1. **`large-load-interconnection-2026-09` is the ninth module in `guidanceDocs_()`**, registered immediately after `utility-aidc-procurement-2026-08` so the "The AI Data-Center Wave" lane stays contiguous. Title *Large-Load Interconnection: The Federal Rulebook Above the Fence*; contributor tier through the existing `GUIDANCE_ROLES` gate; twelve sections (2 `prose`, 4 `table`, 1 `timeline` with three CVD lanes and twelve dated items, 1 `proscons`, 1 `callout`, `flashcards` 9, `quiz` 6, `ledger` 32 rows), four `tiles`, 21 glossary terms, 19 `{{term}}` tooltips all resolving, `reviewBy` **2026-11-16**
-2. **`repository-information/industry-guidance/large-load-interconnection-2026-09-analysis.md`** — 301 lines, 15 sections, a 50-plus-row claims ledger that labels every second-hand item, a ten-item "what the record does NOT say", and a freshness gate deriving `reviewBy` from three converging November 2026 dates (the 90-day abeyance filings, FERC's own projected next action on RM26-4, and the PJM compliance outcomes)
-3. **Primary-source research only.** Federal Register full text of **Order No. 2023** (RM22-14-000, 88 FR 61014, effective 2023-11-06) and **2023-A** (RM22-14-001, 89 FR 27006, effective 2024-05-16); the six FR notices instituting the large-load **FPA §206** proceedings (91 FR 37968–37975, 2026-06-24); FERC's orders in **PJM co-location** (193 FERC ¶ 61,217, 2025-12-18, EL25-49-000 *et al.*), **SPP HILL/HILLGA** (194 FERC ¶ 61,031, ER26-247-000) and **SPP CHILLS** (195 FERC ¶ 61,196, ER26-1323); FERC's Unified Agenda for **RM26-4-000** (91 FR 53150); the 2026-06-18 Sunshine Act notice (91 FR 36126); Texas **SB 6** (89R, effective 2025-06-20)
-4. **Scraper seed `topic-federal-interconnection`** (Scraper `v02.01g` → `v02.02g`), terms deliberately federal and narrow — the existing `topic-utility-procurement` seed already carries *interconnection*, *large load*, *co-location* and the RTO names, so repeating them would split one band rather than open a new one
-5. **Register row G6 CLOSED** in `CLASSROOM-CURRICULUM-PLAN.md` §6 with a dated re-check note — **the gap register now has no open row at all**. G6's ledger row in `INTEGRATED-REMEDIATION-PLAN.md` §6 flipped to Done; C3's row flipped to NEXT UP; §7.3 rows 1–2 updated and a dated progress note added
-6. **Verified:** `node --check` on both `.gs` files, `check-gas-inner-scripts.js` (9 files / 86 blocks), a Playwright `gdRenderDoc()` render with **zero page errors** (13 section nodes, 5 tables, 12 timeline items, 32 glossary spans, the `reviewBy` chip plain), `guidanceDocs_()` returns nine, `check-classroom-curriculum.py --strict` clean, `check-readme-tree.py` 0 findings after `--fix` synced the two GAS displays
-
-#### Where we left off
-
-The push merged. Nothing in flight. **G6 is closed and C3 is the next session** — a paste-in prompt for it was written in chat at the developer's request and is reproduced under *Recommendation* below.
-
-#### Key decisions and findings
-
-- **The module was composed AGAINST the seven guides, not over them.** An Explore subagent read `dominion-energy`, `oncor`, `aep`, `southern-company`, `xcel-energy`, `entergy` and `burns-mcdonnell` in full and returned ten things they already teach well and ten federal-layer gaps. The module therefore carries **no** tariff anatomy, **no** minimum-demand arithmetic and **no** SB 6 clauses — it references the guide section by id and moves on
-- **The finding the module turns on:** "large load" and "load interconnection" each appear **zero times** in the 336 Federal Register pages of Order No. 2023, and zero in 2023-A along with "co-location" and "data cent". Three federal rulemakings in twenty years standardised generator interconnection and none addressed load — which is the space the state large-load tariff grew into. "Order 2023" and FERC docket numbers now appear in the corpus for the first time
-- **Environment, and it shaped the sourcing:** **`ferc.gov` 403 and `misoenergy.org` 403** from this network on every path; `elibrary.ferc.gov` redirects. `federalregister.gov` (including its JSON API and `full_text/text/…` route), `govinfo.gov`, `spp.org` (which publishes FERC's own order PDFs), `pjm.com`, `ercot.com` and `capitol.texas.gov` all answered. `sec.gov` / `data.sec.gov` still 403. The six §206 orders are therefore established from their FR notices plus professional summaries, and the module's honesty section says so
-- **One citation conflict, recorded not smoothed:** a secondary summary gives 195 FERC ¶ 61,209 for the PJM large-load order; the FR notice ties **¶ 61,211** to EL26-67-000 explicitly. Primary wins, and the module states the discrepancy
-- **The 50 MW / >69 kV threshold is in the module only as FERC's *suggestion under investigation*** — two law-firm summaries of the same orders report no threshold at all. The only load thresholds stated as law are SPP's (10 MW ≤69 kV / 50 MW >69 kV) and Texas's 75 MW
-- **The curriculum plan's §3.3 prediction checked out** (Dec 2025 PJM order → June 2026 orders to all six RTOs), with one correction: June 2026 produced **six §206 investigations, not a rulemaking**, and RM26-4 still reads "Next Action Undetermined" on FERC's August 2026 agenda
-
-#### Active context
-
-- **Repo version** `v05.43r`; **CHANGELOG at 96/100** (no rotation due); **`Scrapergs.changelog.md` at 49/50** — the next Scraper GAS bump is the last before mandatory rotation; `Profilergs.changelog.md` at 36/50
-- **GAS versions:** Profiler `v01.36g`, Scraper `v02.02g`. **Page versions unchanged this session** — Profiler `v01.87w`, Classroom `v01.09w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
-- **Run order from here:** **C3** (Opus 5 xhigh, 2–3 sessions) → the **bankability review** (`bess-bankability-2026-08` `reviewBy` **2026-10-01**, already inside the 30-day horizon and flagged by the curriculum checker) → Phase 4 row 1 → S2 ∥ Phase 4 → K2 → rows 25–26 → C5 → the plan clock. **~56 sessions remain**
-- **Sizes C3 will care about:** the nine `guidanceDoc*_()` content functions are **~5,590 lines of a 14,748-line `Profiler.gs`**; `Classroom.gs` is already **~39,900 lines**. `Classroom.html` already carries the `cl*` guidance renderer from C1 slice 2; `CL_ROLE_CAPS` already grants `guidance` to admin and contributor, and `CL_PROVENANCE_CAPS` already maps `'guidance' → 'guidance'`
-- **Module render recipe (guidance, as used this session):** extract the module JSON straight out of `Profiler.gs`, write a **scratch copy** of `Profiler.html` with `var _e = ''`, open it `file://` with `bypass_csp`, then call `gdRenderDoc(doc, shell, {})` directly — never edit the repo's page. Playwright installs with `pip install playwright`; the browser is already at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. `ERR_FILE_NOT_FOUND` console errors for relative assets are expected under `file://` and are not page errors
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-#### Recommendation for next session
-
-- Run **C3, the Guidance Homecoming, session 1 of 2–3, on Opus 5 xhigh** — open by writing the slice plan and the file-layout decision (one `Classroom.gs` or a second `.gs` in the same project, given ~5,590 lines moving into a ~39,900-line file) into `PHASE6-CLASSROOM-DESIGN.md` under the C3 bullet, then execute session 1's slice only: the module content functions and the `guidanceDocs_`/index/doc/search/unified-glossary ops moving to Classroom under its own role gate and rendering there. Module ids must stay byte-identical (Scraper's `guidance:<module-id>` seeds depend on them), and Profiler's guidance keeps working until its slice is cut over.
-
-**To continue:** type `continue with your recommendation`
-
 Developed by: LightAISolutions
