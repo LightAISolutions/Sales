@@ -3,12 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 21/50`
+`Sections: 22/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.22g] — 2026-09-13 01:24:48 AM EST — v05.46r
+
+### Fixed
+- The link that lets a company dossier in the other app list which study modules mention that company no longer fails when the connection setting was pasted in with an invisible trailing space or line break. Surrounding blank space is now ignored on both ends
+- If that lookup cannot complete for some other reason, it now reports a readable reason instead of appearing to be a network fault
 ## [v01.21g] — 2026-09-13 12:52:01 AM EST — v05.45r
 
 ### Added

@@ -1,4 +1,4 @@
-var VERSION = "v01.21g";
+var VERSION = "v01.22g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -32799,15 +32799,31 @@ function guidanceMentions_() {
     without asking us. One op, read-only, no parameters that reach a store. */
 function clHandleGuidancePeer_(e) {
   var p = (e && e.parameter) || {};
-  var want = PropertiesService.getScriptProperties().getProperty('GUIDANCE_PEER_TOKEN') || '';
-  if (want.length < 16 || String(p.t || '') !== want) {
+  // Trimmed on both sides. The property is set by hand in two projects, and a
+  // value pasted out of an execution log or a text editor routinely carries a
+  // trailing newline or space — invisible in the Script Properties UI, fatal
+  // under `!==`, and indistinguishable from a wrong guess in the response.
+  // Surrounding whitespace is never meaningful in a shared secret, so it is
+  // stripped rather than allowed to fail the comparison silently.
+  var want = String(PropertiesService.getScriptProperties()
+    .getProperty('GUIDANCE_PEER_TOKEN') || '').trim();
+  if (want.length < 16 || String(p.t || '').trim() !== want) {
     return { success: false, error: 'denied' };
   }
-  if (String(p.gpop || '') === 'mentions') {
+  if (String(p.gpop || '') !== 'mentions') return { success: false, error: 'unknown_gpop' };
+  // The scan reaches out to public Pages for the company registry, so it can
+  // throw on a bad response as well as on a parse failure. Without this catch
+  // the throw escapes doGet, Apps Script answers with an HTML error page at
+  // HTTP 200, and the CALLER's JSON.parse fails — reporting a transport fault
+  // for what is really an upstream exception. Return the reason as JSON so the
+  // proxy can relay something true.
+  try {
     var men = guidanceMentions_();
     return { success: true, mentions: men.mentions, built: men.built };
+  } catch (mErr) {
+    return { success: false, error: 'mentions_failed',
+             detail: String((mErr && mErr.message) || mErr).slice(0, 200) };
   }
-  return { success: false, error: 'unknown_gpop' };
 }
 
 // ── The nine modules, in guidanceDocs_() lane order ──────────────────────

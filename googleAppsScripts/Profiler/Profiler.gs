@@ -1,4 +1,4 @@
-var VERSION = "v01.37g";
+var VERSION = "v01.38g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -528,8 +528,13 @@ function handleNewsOp_(e) {
 var CLASSROOM_GUIDANCE_EXEC =
   'https://script.google.com/macros/s/AKfycbzgrjTjU_lRoMsBzH2CIjZsqXmoN9PJMqSYawhARg9FkvjmxbyX0k85X0Q6Ud9mL3gy/exec';
 function guidanceMentionsProxy_() {
-  var token = PropertiesService.getScriptProperties().getProperty('GUIDANCE_PEER_TOKEN') || '';
+  // Trimmed for the same reason Classroom trims: the property is pasted into
+  // two projects by hand, and a trailing newline is invisible in the Script
+  // Properties UI but fatal to a strict comparison on the far side.
+  var token = String(PropertiesService.getScriptProperties()
+    .getProperty('GUIDANCE_PEER_TOKEN') || '').trim();
   if (token.length < 16) return { success: false, error: 'not_configured' };
+  var body;
   try {
     var resp = UrlFetchApp.fetch(CLASSROOM_GUIDANCE_EXEC
       + '?action=guidancepeer&gpop=mentions&t=' + encodeURIComponent(token),
@@ -537,9 +542,19 @@ function guidanceMentionsProxy_() {
     if (resp.getResponseCode() !== 200) {
       return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
     }
-    return JSON.parse(resp.getContentText());
+    body = resp.getContentText();
   } catch (fErr) {
     return { success: false, error: 'upstream_unreachable' };
+  }
+  // A parse failure is NOT a transport failure, and collapsing the two cost a
+  // debugging round: Apps Script serves its own exception pages as HTML at
+  // HTTP 200, so a throw upstream arrived here looking like a dead network.
+  // Name it, and carry a short snippet of what actually came back.
+  try {
+    return JSON.parse(body);
+  } catch (pErr) {
+    return { success: false, error: 'upstream_not_json',
+             detail: String(body || '').replace(/\s+/g, ' ').slice(0, 160) };
   }
 }
 

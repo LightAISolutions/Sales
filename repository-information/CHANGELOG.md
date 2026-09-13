@@ -3,11 +3,48 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.46r] — 2026-09-13 01:24:48 AM EST
+
+> See attached screenshots. I set the same GUIDANCE_PEER_TOKEN on both Profiler and Classroom's App Scripts' Script Properties and confirmed they are the same and have no trailing space. However, I cannot see the chip you are mentioning. What went wrong? Fix it.
+
+### Fixed
+
+**The v05.45r peer route compared its shared secret byte-for-byte and reported every upstream fault as a transport fault.** Both are defects introduced by that commit, and together they made a single silent symptom — no guidance chips on a dossier — cover four unrelated causes with no way to tell them apart. The developer set the token correctly on both sides and still saw nothing, which is exactly the failure this pair produces.
+
+What was ruled out first, by evidence rather than assumption: Profiler is deployed at `v01.37g` and Classroom's route answers `denied` to a deliberately wrong token, so both sides were live; `profiler-companies.json` returns HTTP 200 and 152 KB on public Pages, and both projects' `EMBED_PAGE_URL` derive the identical base, so the scan's input was reachable. That left the comparison and the error reporting.
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — v01.22g
+
+- `clHandleGuidancePeer_` now **trims both the stored property and the supplied token** before comparing. A value pasted out of an Apps Script execution log or a text editor routinely carries a trailing newline or space; it is invisible in the Script Properties UI, fatal under `!==`, and — because the refusal is deliberately the same flat `denied` a wrong guess gets — indistinguishable from having typed the secret wrong. Surrounding whitespace is never meaningful in a shared secret. **The boundary is unchanged**: a whitespace-only property trims to empty and still fails the 16-character floor, so trimming cannot open the route
+- `guidanceMentions_()` is now called **inside a try/catch**. It fetches the company registry from public Pages, so it can throw; an escaping throw made Apps Script serve its own HTML error page at HTTP 200, which the caller then failed to parse and reported as a dead network. It now returns `{success:false, error:'mentions_failed', detail}` — JSON the proxy can relay
+
+#### `googleAppsScripts/Profiler/Profiler.gs` — v01.38g
+
+- `guidanceMentionsProxy_` **trims its own property** for the same reason, so the token that goes on the wire is clean regardless of how it was pasted
+- **A parse failure is no longer reported as a transport failure.** The single `upstream_unreachable` catch spanned both the fetch and the `JSON.parse`, so an upstream exception, an Apps Script error page and a genuinely dead socket all produced the same word. The fetch and the parse now have separate handlers: a non-JSON body returns `upstream_not_json` carrying a 160-character snippet of what actually came back, while `upstream_unreachable` now means only what it says
+
+### Changed
+
+- **`README.md`** — Classroom `v01.22g`, Profiler `v01.38g`; `Last updated:` and `Repo version:`
+- **`live-site-pages/gs-versions/Classroomgs.version.txt`**, **`live-site-pages/gs-versions/Profilergs.version.txt`** — bumped
+- **`live-site-pages/gs-changelogs/Classroomgs.changelog.md`** (`Sections: 22/50`), **`live-site-pages/gs-changelogs/Profilergs.changelog.md`** (`Sections: 38/50`)
+
+### Verified
+
+- `node --check` on `.js` copies of both `.gs` files; `scripts/check-gas-inner-scripts.js` — 9 files, 86 inner blocks; `scripts/check-guidance-parity.py` still clean (the twelve watched functions are untouched)
+- **The whitespace cases now pass in Node, all four of them**: a trailing newline on the property, a trailing space on the property, a trailing space from the caller, and different whitespace on both sides at once — every one previously `denied`, every one now returning the full 29-company answer
+- **The boundary was re-proved, not assumed**: property unset, wrong token, whitespace-only property (trims to empty), sub-16-character property all still return a flat `denied`; an unknown `gpop` still returns `unknown_gpop`
+- **An upstream throw no longer escapes** — with the registry made unreachable, the handler returns `mentions_failed` with the reason instead of letting the exception reach `doGet`
+- **Each Profiler-side failure mode now names itself distinctly**: an HTML error page → `upstream_not_json` with a snippet, Classroom's own `mentions_failed` relayed intact, `denied` relayed intact, HTTP 403 → `upstream_http_403`, a thrown fetch → `upstream_unreachable`. Previously the first, second and fifth were all `upstream_unreachable`
+- **The role gate is unchanged**: viewer and analyst → `ROLE_DENIED` with zero upstream calls; contributor and admin → relayed in exactly one call. `verify-profiler-roles.py` not required — no access-matrix value changed
+- `scripts/check-readme-tree.py` 0 findings; `scripts/check-classroom-curriculum.py --strict` clean; `scripts/check-classroom-pipeline.py --selftest` 13 fixtures, 0 failures
+- Neither page was touched, so no page version moved and `Profiler.html` remains byte-identical to v01.87w
 
 ## [v05.45r] — 2026-09-13 12:52:01 AM EST
 
