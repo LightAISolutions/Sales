@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.88w">
+  <meta name="build-version" content="v01.89w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -847,11 +847,15 @@
 /* PROJECT END */
 /* ══════════════ */
 
-    /* ── Industry Guidance (admin-only, v01.38w) ─────────────────────────
-       Masthead button + full-screen overlay rendering document-analysis
-       modules fetched from the admin-gated GAS guidance ops. Colors for the
-       timeline lanes are CVD-validated against the card surface (dataviz
-       six-checks, 2026-08-22): gold #b18f35 / blue #4f83e6 / rose #cc5f75. */
+    /* ── gd-* section primitives (v01.38w; guidance moved out at C3 s3) ──
+       These began as the Industry Guidance overlay's stylesheet. The library
+       itself is in Classroom now and its library/search/glossary/lens rules
+       went with it; what is left here is the section-kind vocabulary that
+       three surfaces still render through — study guides (gdRenderDoc), the
+       report view, and the sign-in log — plus the masthead slot, which is a
+       deep link to Classroom. Colors for the timeline lanes are CVD-validated
+       against the card surface (dataviz six-checks, 2026-08-22):
+       gold #b18f35 / blue #4f83e6 / rose #cc5f75. */
     /* The masthead has to be at least as tall as the button stack it hosts, or
        the outermost slot overhangs the double rule. The slots are positioned
        against this box, so the value is simply the bottom of the last one:
@@ -860,7 +864,7 @@
        surface means raising this by another 40. */
     #ov-header { position: relative; min-height: 194px; }
     #ov-guide-btn {
-      position: absolute; top: 44px; right: 0; display: none;
+      position: absolute; top: 44px; right: 0; display: none; text-decoration: none;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -876,7 +880,6 @@
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
     #ov-classroom-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
-    .gd-group { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin: 20px 0 4px; border-bottom: 1px solid var(--ov-line); padding-bottom: 6px; }
     /* ── Industry Reports (v01.52w) ─────────────────────────────────────
        In-page views (#reports / #report/<id>) reusing the gd-* section
        primitives; rp-* covers only what reports add — citation superscripts,
@@ -980,17 +983,6 @@
     .gd-zh .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: var(--ov-gold);
       text-transform: uppercase; margin-bottom: 5px; }
     .gd-zh .tx { font: 13px/1.65 var(--ov-serif); color: var(--ov-paper); }
-    /* Admin lens — company-specific overlays sourced from admin-only reports (v01.64w).
-       Rose accent (the CVD-validated timeline rose) keeps it visually distinct from
-       the gold group-level Sales angle notes. */
-    .gd-lens { border-left: 3px solid #cc5f75; background: rgba(204,95,117,0.08);
-      border-radius: 0 9px 9px 0; padding: 10px 14px; margin-top: 14px; }
-    .gd-lens .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: #cc5f75;
-      text-transform: uppercase; margin-bottom: 5px; }
-    .gd-lens p { font: 13px/1.65 var(--ov-serif); color: var(--ov-paper); margin: 0 0 8px; }
-    .gd-lens .rpt { background: transparent; border: 1px solid rgba(204,95,117,0.5); color: #cc5f75;
-      border-radius: 7px; padding: 5px 11px; cursor: pointer; font: 11px var(--ov-mono); }
-    .gd-lens .rpt:hover { background: rgba(204,95,117,0.14); }
     /* Freshness chips (v01.65w) — guidance review-by state and report age tiers,
        reusing the roster freshness palette (dev=fresh, gold=aging/soon, adv=stale/due). */
     .gd-review, .rp-age { display: inline-block; font: 600 10px/1 var(--ov-mono); letter-spacing: 0.08em;
@@ -999,44 +991,33 @@
     .gd-review.soon, .rp-age.aging { color: var(--ov-gold); border-color: var(--ov-gold); }
     .gd-review.due, .rp-age.stale { color: var(--ov-adv); border-color: var(--ov-adv); }
     .rp-age.fresh { color: var(--ov-dev); border-color: var(--ov-dev); }
-    /* Revision notes (v01.68w) — modules carry a revisions[] meta rendered
-       under the module header; library cards show a small "revised" chip
-       from the index's latest revision date. */
-    .gd-rev-chip { display: inline-block; font: 600 10px/1 var(--ov-mono); letter-spacing: 0.08em;
-      border-radius: 5px; padding: 3px 7px; margin-left: 8px; vertical-align: 1px;
-      border: 1px solid var(--ov-line2); color: var(--ov-muted); }
+    /* Revision notes (v01.68w) — a study guide carries a revisions[] meta
+       rendered under its header by gdRenderDoc. The library "revised" chip
+       that shared this block went to Classroom with the guidance library
+       (C3 session 3). */
     .gd-revs { border-left: 3px solid var(--ov-line2); background: rgba(255,255,255,0.03);
       border-radius: 0 9px 9px 0; padding: 8px 14px; margin-top: 10px; }
     .gd-revs .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: var(--ov-muted);
       text-transform: uppercase; margin-bottom: 5px; }
     .gd-revs .rv { font: 12px/1.6 var(--ov-mono); color: var(--ov-muted); }
     .gd-revs .rv .d { color: var(--ov-paper); margin-right: 8px; }
-    /* Company cross-links (v01.66w) — covered company names in guidance prose
-       link to dossiers (CVD blue, distinct from the gold glossary terms);
-       dossiers get a "Covered in guidance modules" chip line. */
+    /* Company cross-links (v01.66w) — covered company names in study-guide
+       prose link to dossiers (CVD blue, distinct from the gold glossary
+       terms); dossiers get a "Covered in guidance modules" chip line, whose
+       chips deep-link into Classroom since C3 session 3. */
     .gd-co { border-bottom: 1px dotted #4f83e6; cursor: pointer; }
     .gd-co:hover { color: #4f83e6; }
     .ov-gd-mentions { margin: 2px 0 16px; font: 12px var(--ov-mono); color: var(--ov-muted); }
     .ov-gd-mentions .lbl { margin-right: 8px; }
-    .ov-gd-mentions .chip { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-paper);
+    .ov-gd-mentions .chip { display: inline-block; background: transparent; border: 1px solid var(--ov-line2);
+      color: var(--ov-paper); text-decoration: none;
       border-radius: 6px; padding: 4px 9px; margin: 0 6px 6px 0; cursor: pointer; font: 11px var(--ov-mono); }
     .ov-gd-mentions .chip:hover { border-color: #4f83e6; color: #4f83e6; }
-    /* Guidance search + unified glossary (v01.67w) */
-    .gd-search { display: block; width: 100%; box-sizing: border-box; margin: 14px 0 4px;
-      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 8px;
-      color: var(--ov-paper); padding: 10px 13px; font: 13px var(--ov-mono); }
-    .gd-search:focus { outline: none; border-color: var(--ov-gold); }
+    /* .gd-gloss-btn outlived the guidance library's search and glossary views
+       (C3 session 3) — the sign-in log's filter toggle reuses it. */
     .gd-gloss-btn { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-muted);
       border-radius: 7px; padding: 6px 12px; margin: 8px 0 0; cursor: pointer; font: 11.5px var(--ov-mono); }
     .gd-gloss-btn:hover { border-color: var(--ov-gold); color: var(--ov-gold); }
-    .gd-hit { cursor: pointer; }
-    .gd-hit .path { font: 600 10.5px/1 var(--ov-mono); letter-spacing: 0.1em; color: var(--ov-gold);
-      text-transform: uppercase; margin-bottom: 6px; }
-    .gd-hit .snip { font: 13px/1.6 var(--ov-serif); color: var(--ov-paper); }
-    .gd-hit .snip .hl { color: var(--ov-ink); background: var(--ov-gold); border-radius: 3px; padding: 0 3px; }
-    .gd-gl .src { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.08em;
-      color: var(--ov-muted); border: 1px solid var(--ov-line2); border-radius: 5px;
-      padding: 2px 6px; margin: 6px 6px 0 0; cursor: pointer; }
     .gd-gl .src:hover { border-color: var(--ov-gold); color: var(--ov-gold); }
     .gd-callout { border: 1px solid rgba(216,180,90,0.4); border-radius: 10px; padding: 4px 16px 10px; }
     .gd-callout.warn { border-color: rgba(224,122,139,0.45); }
@@ -6292,12 +6273,22 @@ function ovDocVersion() {
     window.addEventListener('hashchange', ovRoute);
 
 
-    // ── Industry Guidance (admin-only, v01.38w) ─────────────────────────
-    // Masthead button → full-screen overlay rendering document-analysis
-    // modules served by the GAS guidance ops (action=guidance, admin-gated
-    // server-side — the role check on the button is UI convenience only).
-    // Content arrives as structured JSON; every widget below renders from
-    // it, so future documents need no page changes.
+    // ── Industry Guidance links + the shared gd-* engine (C3 session 3) ──
+    // The guidance LIBRARY is Classroom's now: the nine modules, the index/doc
+    // ops, the search, the unified glossary and the Admin lens all moved there
+    // across C3 sessions 1-2 and this page's copies were deleted in session 3
+    // (PHASE6-CLASSROOM-DESIGN.md → Phase plan → C3 slice plan). What Profiler
+    // keeps of guidance is two links out — the masthead slot and the dossier
+    // mention chips — plus `ovGuideApi`, which still carries the two ops the
+    // backend still answers: gop=mentions (the chips) and gop=progress /
+    // gop=setprogress (the reading-progress store, which is study-guide and
+    // dossier ticks now).
+    //
+    // The gd-* renderer below did NOT move, because guidance was never its
+    // only caller: gdRenderDoc draws the study guides (v01.74w), the report
+    // view builds on gdTable/gdTimeline/gdBars/gdProsCons, and the sign-in log
+    // uses gdTable and gdCloseBtn. Deleting it would have been deleting three
+    // live surfaces to tidy up after a fourth.
     var GD_PROGRESS_KEY = 'ov_guide_progress';
     var gdGlossMap = {};
 
@@ -6318,22 +6309,34 @@ function ovDocVersion() {
         });
     }
 
-    // Admin-gated masthead button — created only after a validated admin
-    // session (called from the auth wall's pass()), so signed-out visitors
-    // and non-admin users never see it in the DOM at all.
+    // Role-gated masthead link — created only after a validated session that
+    // holds the capability (called from the auth wall's pass()), so signed-out
+    // visitors and tiers without it never have the element in the DOM at all.
+    //
+    // C3 session 3: this DEEP-LINKS to Classroom rather than opening an overlay
+    // here — the guidance library lives there now. Same ovCan('guidance') gate,
+    // same id and same slot in the masthead stack, so the access matrix and
+    // scripts/verify-profiler-roles.py see exactly what they saw before. It is
+    // an <a> because it navigates: middle-click and ctrl-click should open
+    // Classroom in a new tab the way every other link on this page does.
+    //
+    // gdProgressSync() stays: this is still the earliest point in a signed-in
+    // page load where the server progress map can be pre-warmed, and the
+    // dossier's "Mark as read" button reads that map. It is no longer about
+    // guidance — the ticks it pulls are study-guide and dossier ticks now.
     function ovGuideBtnShow() {
       if (!ovCan('guidance')) return;
       gdProgressSync();   // pre-warm the server progress map at sign-in
       if (document.getElementById('ov-guide-btn')) return;
       var head = document.getElementById('ov-header');
       if (!head) return;
-      var b = document.createElement('button');
-      b.id = 'ov-guide-btn'; b.type = 'button';
-      b.textContent = '✦ Industry Guidance';
-      b.title = 'Document-analysis study modules (admin)';
-      b.addEventListener('click', ovGuideOpen);
-      head.appendChild(b);
-      b.style.display = 'inline-block';
+      var a = document.createElement('a');
+      a.id = 'ov-guide-btn';
+      a.href = 'Classroom.html#guidance';
+      a.textContent = '✦ Industry Guidance';
+      a.title = 'Document-analysis study modules — opens the Classroom library';
+      head.appendChild(a);
+      a.style.display = 'inline-block';
     }
 
     // Cross-link to the Classroom app (Phase 6 C0). Gated on 'study' rather
@@ -6353,98 +6356,9 @@ function ovDocVersion() {
       head.appendChild(a);
     }
 
-    function ovGuideOpen() {
-      gdProgressSync();   // no-op once a sync has succeeded; retries after failures
-      var ov = document.getElementById('ov-guide-overlay');
-      if (!ov) {
-        ov = document.createElement('div');
-        ov.id = 'ov-guide-overlay';
-        document.body.appendChild(ov);
-      }
-      ov.style.display = 'block';
-      ov.innerHTML = '';
-      var shell = ovEl('div', 'gd-shell');
-      shell.appendChild(ovEl('p', 'ov-loading', 'Loading guidance library…'));
-      ov.appendChild(shell);
-      ovGuideApi('index', {}, function(res) {
-        if (!res || !res.success) {
-          shell.innerHTML = '';
-          shell.appendChild(ovEl('p', 'ov-loading', 'Could not load the guidance library ('
-            + ((res && res.error) || 'unknown') + '). Sign in as an admin and try again.'));
-          shell.appendChild(gdCloseBtn());
-          return;
-        }
-        if (res.docs.length === 1) { ovGuideLoadDoc(res.docs[0].id, shell); return; }
-        shell.innerHTML = '';
-        shell.appendChild(gdCloseBtn());
-        shell.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Library'));
-        // Search + unified glossary (v01.67w) — typing ≥2 chars hides the
-        // card list and searches every module's content; clearing restores it.
-        var search = document.createElement('input');
-        search.type = 'search'; search.className = 'gd-search';
-        search.placeholder = 'Search all modules — sections, tables, drills, glossary…';
-        shell.appendChild(search);
-        var gbtn = ovEl('button', 'gd-gloss-btn', '📖 Unified glossary — every term across all modules');
-        gbtn.type = 'button';
-        gbtn.addEventListener('click', function() { gdShowGlossary(shell); });
-        shell.appendChild(gbtn);
-        var results = ovEl('div');
-        shell.appendChild(results);
-        var cardsWrap = ovEl('div');
-        shell.appendChild(cardsWrap);
-        search.addEventListener('input', function() {
-          var q = search.value.trim();
-          results.innerHTML = '';
-          if (q.length < 2) { cardsWrap.style.display = ''; return; }
-          cardsWrap.style.display = 'none';
-          results.appendChild(ovEl('p', 'ov-loading', 'Searching…'));
-          gdFetchAllDocs(function(docs) {
-            if (search.value.trim() !== q) return;
-            results.innerHTML = '';
-            if (!docs) { results.appendChild(ovEl('p', 'ov-loading', 'Could not load module content for search.')); return; }
-            var hits = gdSearchHits(q, docs);
-            if (!hits.length) { results.appendChild(ovEl('p', 'ov-empty', 'No matches for "' + q + '".')); return; }
-            hits.forEach(function(h) {
-              var hitCard = ovEl('div', 'gd-sec gd-hit');
-              hitCard.appendChild(ovEl('div', 'path', h.docTitle + ' › ' + h.secTitle));
-              hitCard.appendChild(gdSnippet(h, q));
-              hitCard.addEventListener('click', function() { ovGuideLoadDoc(h.docId, shell, h.secId); });
-              results.appendChild(hitCard);
-            });
-          });
-        });
-        // Topic lanes: modules arrive grouped from the backend (each carries a
-        // `group` label); a header renders whenever the lane changes. Docs
-        // without a group (older backend) simply render ungrouped.
-        var lastGroup = null;
-        for (var i = 0; i < res.docs.length; i++) (function(d) {
-          var grp = d.group || '';
-          if (grp !== lastGroup) {
-            lastGroup = grp;
-            if (grp) cardsWrap.appendChild(ovEl('div', 'gd-group', grp));
-          }
-          var card = ovEl('div', 'gd-sec');
-          var h = ovEl('h3', null, d.title);
-          card.appendChild(h);
-          var meta = ovEl('div', 'gd-read', (d.date || '') + ' · ' + d.sections + ' sections');
-          var rc = gdReviewChip(d.reviewBy);
-          if (rc) meta.appendChild(rc);
-          if (d.revised) {
-            var rvch = ovEl('span', 'gd-rev-chip', '↻ revised ' + d.revised);
-            rvch.title = 'Content revised — notes on the module header';
-            meta.appendChild(rvch);
-          }
-          card.appendChild(meta);
-          card.appendChild(ovEl('p', null, d.short || ''));
-          card.style.cursor = 'pointer';
-          card.addEventListener('click', function() { ovGuideLoadDoc(d.id, shell); });
-          cardsWrap.appendChild(card);
-        })(res.docs[i]);
-      });
-    }
 
     // PROJECT: company cross-links (v01.66w). Covered company names inside
-    // guidance module text become chips that close the overlay and open the
+    // study-guide text become chips that close the overlay and open the
     // dossier. Matching reuses ovRelDerive's name authority (the registry)
     // and its ambiguity guard, so common-word one-word names never link at
     // sentence starts. Buttons (quiz choices, done buttons), existing links,
@@ -6506,16 +6420,6 @@ function ovDocVersion() {
         node.parentNode.replaceChild(frag, node);
       });
     }
-    // Open the guidance overlay directly on one module (dossier mention chips).
-    function ovGuideOpenDoc(id) {
-      var ov = document.getElementById('ov-guide-overlay');
-      if (!ov) { ov = document.createElement('div'); ov.id = 'ov-guide-overlay'; document.body.appendChild(ov); }
-      ov.style.display = 'block';
-      ov.innerHTML = '';
-      var shell = ovEl('div', 'gd-shell');
-      ov.appendChild(shell);
-      ovGuideLoadDoc(id, shell);
-    }
     // Dossier-side line: which guidance modules mention this company — served
     // by the role-gated gop=mentions op, so tiers without guidance access
     // never fetch (ovCan guard) and never see module titles. One fetch per
@@ -6529,10 +6433,13 @@ function ovDocVersion() {
         if (decodeURIComponent((window.location.hash || '').replace(/^#/, '')).split('/')[0] !== slug) return;
         var line = ovEl('div', 'ov-gd-mentions');
         line.appendChild(ovEl('span', 'lbl', '✦ Covered in guidance modules:'));
+        // C3 session 3: the chips leave for Classroom instead of opening an
+        // overlay here. Real <a> hrefs, so ctrl/middle-click opens the module
+        // in a new tab and the dossier the reader came from stays put.
         hits.forEach(function(h) {
-          var chip = ovEl('button', 'chip', h.title);
-          chip.type = 'button';
-          chip.addEventListener('click', function() { ovGuideOpenDoc(h.id); });
+          var chip = ovEl('a', 'chip', h.title);
+          chip.href = 'Classroom.html#guidance/' + encodeURIComponent(h.id);
+          chip.title = 'Open this module in Classroom';
           line.appendChild(chip);
         });
         // Sits directly under the dossier header, above the tab strip —
@@ -6553,10 +6460,12 @@ function ovDocVersion() {
       });
     }
 
-    // PROJECT: freshness discipline (v01.65w). Guidance modules carry a
-    // reviewBy date (set at authoring from each module's own dated gates);
-    // the chip turns gold inside 30 days and red once the date passes.
-    // Reports age on the dossier tiers: fresh ≤45d / aging ≤120d / stale.
+    // PROJECT: freshness discipline (v01.65w). gdReviewChip renders any
+    // reviewBy date gdRenderDoc is handed — guidance modules used to be its
+    // caller here and are Classroom's now (C3 session 3), so on this page it
+    // serves the study guides: plain more than 30 days out, gold within 30,
+    // red "⚠ review due" once passed. Reports age on the dossier tiers
+    // instead: fresh ≤45d / aging ≤120d / stale.
     function gdReviewChip(reviewBy) {
       if (!reviewBy) return null;
       var days = Math.floor((new Date(reviewBy + 'T23:59:59') - Date.now()) / 86400000);
@@ -6582,192 +6491,8 @@ function ovDocVersion() {
       return c;
     }
 
-    function ovGuideLoadDoc(id, shell, scrollTo) {
-      shell.innerHTML = '';
-      shell.appendChild(ovEl('p', 'ov-loading', 'Loading module…'));
-      ovGuideApi('doc', { id: id }, function(res) {
-        if (!res || !res.success) {
-          shell.innerHTML = '';
-          shell.appendChild(ovEl('p', 'ov-loading', 'Could not load the module ('
-            + ((res && res.error) || 'unknown') + ').'));
-          shell.appendChild(gdCloseBtn());
-          return;
-        }
-        gdRenderDoc(res.doc, shell);
-        gdLoadAdminLens(res.doc, shell);
-        if (scrollTo) {
-          var target = document.getElementById('gd-' + scrollTo);
-          if (target) target.scrollIntoView({ block: 'start' });
-        }
-      });
-    }
 
-    // PROJECT: guidance search + unified glossary (v01.67w). Entirely
-    // client-side against the role-gated index/doc ops — the six modules are
-    // fetched once per page load on first use and cached. gdSecText flattens
-    // every string a section renders (prose, tables, cards, drills, notes,
-    // sales angles) so the search sees what the reader sees.
-    var gdDocsCache = null;
-    function gdFetchAllDocs(cb) {
-      if (gdDocsCache) { cb(gdDocsCache); return; }
-      ovGuideApi('index', {}, function(res) {
-        if (!res || !res.success || !(res.docs || []).length) { cb(null); return; }
-        var ids = res.docs.map(function(d) { return d.id; });
-        var docs = [], left = ids.length, failed = false;
-        ids.forEach(function(id, i) {
-          ovGuideApi('doc', { id: id }, function(r2) {
-            if (!r2 || !r2.success) failed = true; else docs[i] = r2.doc;
-            if (--left === 0) {
-              if (failed) { cb(null); return; }
-              gdDocsCache = docs;
-              cb(docs);
-            }
-          });
-        });
-      });
-    }
-    function gdSecText(sec) {
-      var parts = [];
-      (function walk(node) {
-        if (typeof node === 'string') { parts.push(node); return; }
-        if (Array.isArray(node)) { node.forEach(walk); return; }
-        if (node && typeof node === 'object') {
-          for (var k in node) {
-            if (!node.hasOwnProperty(k)) continue;
-            if (k === 'id' || k === 'kind' || k === 'read' || k === 'moduleId' || k === 'sectionId') continue;
-            walk(node[k]);
-          }
-        }
-      })(sec);
-      return parts.join(' · ');
-    }
-    function gdSearchHits(q, docs) {
-      var needle = q.toLowerCase(), hits = [];
-      docs.forEach(function(doc) {
-        (doc.sections || []).forEach(function(sec) {
-          var text = gdSecText(sec);
-          var idx = text.toLowerCase().indexOf(needle);
-          var inTitle = String(sec.title || '').toLowerCase().indexOf(needle) !== -1;
-          if (idx === -1 && !inTitle) return;
-          hits.push({ docId: doc.id, docTitle: doc.title, secId: sec.id, secTitle: sec.title,
-                      text: text, at: idx, rank: inTitle ? 0 : 1 });
-        });
-        (doc.glossary || []).forEach(function(g) {
-          var blob = g.t + ' — ' + g.d;
-          var gidx = blob.toLowerCase().indexOf(needle);
-          if (gidx === -1) return;
-          hits.push({ docId: doc.id, docTitle: doc.title, secId: 'glossary', secTitle: 'Glossary · ' + g.t,
-                      text: blob, at: gidx, rank: g.t.toLowerCase().indexOf(needle) !== -1 ? 0 : 2 });
-        });
-      });
-      hits.sort(function(a, b) { return a.rank - b.rank; });
-      return hits.slice(0, 40);
-    }
-    function gdSnippet(hit, q) {
-      var el = ovEl('div', 'snip');
-      if (hit.at === -1) { el.textContent = hit.text.slice(0, 140) + (hit.text.length > 140 ? '…' : ''); return el; }
-      var s = Math.max(0, hit.at - 60), e = Math.min(hit.text.length, hit.at + q.length + 80);
-      if (s > 0) el.appendChild(document.createTextNode('…'));
-      el.appendChild(document.createTextNode(hit.text.slice(s, hit.at)));
-      el.appendChild(ovEl('span', 'hl', hit.text.slice(hit.at, hit.at + q.length)));
-      el.appendChild(document.createTextNode(hit.text.slice(hit.at + q.length, e)));
-      if (e < hit.text.length) el.appendChild(document.createTextNode('…'));
-      return el;
-    }
-    function gdShowGlossary(shell) {
-      shell.innerHTML = '';
-      shell.appendChild(ovEl('p', 'ov-loading', 'Loading all modules…'));
-      gdFetchAllDocs(function(docs) {
-        shell.innerHTML = '';
-        var back = ovEl('button', 'gd-gloss-btn', '← Library');
-        back.type = 'button';
-        back.addEventListener('click', function() { ovGuideOpen(); });
-        shell.appendChild(back);
-        shell.appendChild(gdCloseBtn());
-        shell.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Unified Glossary'));
-        if (!docs) { shell.appendChild(ovEl('p', 'ov-loading', 'Could not load module content.')); return; }
-        var byTerm = {};
-        docs.forEach(function(doc) {
-          (doc.glossary || []).forEach(function(g) {
-            var key = String(g.t).toLowerCase();
-            if (!byTerm[key]) byTerm[key] = { t: g.t, defs: [] };
-            byTerm[key].defs.push({ d: g.d, docId: doc.id, docTitle: doc.title });
-          });
-        });
-        var keys = Object.keys(byTerm).sort();
-        shell.appendChild(ovEl('div', 'gd-read', keys.length + ' terms across ' + docs.length
-          + ' modules — a term defined in several modules shows every definition with its source'));
-        var grid = ovEl('div', 'gd-gloss');
-        keys.forEach(function(k) {
-          var ent = byTerm[k], cell = ovEl('div', 'gd-gl');
-          cell.appendChild(ovEl('div', 't', ent.t));
-          ent.defs.forEach(function(def) {
-            cell.appendChild(ovEl('div', 'd', def.d));
-            var src = ovEl('span', 'src', def.docTitle);
-            src.title = 'Open this module’s glossary';
-            src.addEventListener('click', function() { ovGuideLoadDoc(def.docId, shell, 'glossary'); });
-            cell.appendChild(src);
-          });
-          grid.appendChild(cell);
-        });
-        shell.appendChild(grid);
-      });
-    }
 
-    // PROJECT: Admin lens — company-specific overlays inside guidance modules,
-    // sourced from admin-only reports (v01.64w). Guidance modules speak to
-    // supplier/buyer groups only; a report may declare guidanceOverlays[]
-    // ({moduleId, sectionId, ps}) and admins see those panels rendered inside
-    // the anchored sections, with a link to the source report. Contributors
-    // never fetch report data (the reports capability gates the loader), so
-    // the shared modules stay group-level. Fetch failures degrade silently —
-    // the lens is an enhancement, never a blocker for the module itself.
-    function gdLoadAdminLens(doc, shell) {
-      if (!ovCan('reports')) return;
-      ovFetchJson('reports/reports-index.json').then(function(idx) {
-        var entries = (idx && idx.reports) || [];
-        for (var i = 0; i < entries.length; i++) (function(e) {
-          if (e.status !== 'current') return;
-          if ((e.overlayModules || []).indexOf(doc.id) === -1) return;
-          ovFetchJson('reports/' + e.id + '.report.json').then(function(rep) {
-            gdApplyLens(doc, shell, rep);
-          }).catch(function() { /* report fetch failed — lens skipped */ });
-        })(entries[i]);
-      }).catch(function() { /* index unavailable — lens skipped */ });
-    }
-
-    function gdApplyLens(doc, shell, rep) {
-      var ovs = (rep && rep.guidanceOverlays) || [];
-      for (var i = 0; i < ovs.length; i++) (function(o) {
-        if (o.moduleId !== doc.id) return;
-        var panel = ovEl('div', 'gd-lens');
-        panel.appendChild(ovEl('div', 'lb', '🔒 Admin lens — ' + (o.title || rep.title || 'Report')
-          + (rep.generated ? ' · ' + rep.generated : '')));
-        var stale = !shell.querySelector('#gd-' + o.sectionId);
-        if (stale) panel.appendChild(gdP(gdFmt('*The section this note was anchored to ("'
-          + o.sectionId + '") no longer exists in this module — shown here at the end instead.*')));
-        for (var pj = 0; pj < (o.ps || []).length; pj++) panel.appendChild(gdP(gdFmt(o.ps[pj])));
-        var lk = ovEl('button', 'rpt', 'View source report →');
-        lk.type = 'button';
-        lk.addEventListener('click', function() {
-          var g = document.getElementById('ov-guide-overlay');
-          if (g) g.style.display = 'none';
-          location.hash = '#report/' + rep.id;
-        });
-        panel.appendChild(lk);
-        gdLinkCompanies(panel);
-        var sec = shell.querySelector('#gd-' + o.sectionId);
-        if (sec) {
-          var btn = sec.querySelector('.gd-done-btn');
-          if (btn) sec.insertBefore(panel, btn); else sec.appendChild(panel);
-        } else {
-          // Stale anchor (module revised after the report) — never drop admin content.
-          var glossary = shell.querySelector('#gd-glossary');
-          if (glossary && glossary.parentNode) glossary.parentNode.insertBefore(panel, glossary);
-          else shell.appendChild(panel);
-        }
-      })(ovs[i]);
-    }
 
     // Escape, then apply the module micro-markup: **bold**, *italic*,
     // {{term}} → glossary tooltip span. Content is our own admin-gated
@@ -6899,7 +6624,7 @@ function ovDocVersion() {
       return GD_PROGRESS_KEY + '_' + ovAcctKey() + '_' + docId;
     }
     // Server sync (v01.68w) — the account's ticks also live server-side behind
-    // the role-gated guidance ops (gop=progress / gop=setprogress), so progress
+    // the role-gated progress ops (gop=progress / gop=setprogress), so progress
     // follows the account across devices. localStorage stays as the offline
     // fallback: reads prefer the server map once a sync has succeeded, every
     // write lands in both, and local-only ticks (made offline or pre-sync)
@@ -7042,7 +6767,7 @@ function ovDocVersion() {
     })();
 
     // opts (v01.74w, Phase 5): shell variants for non-guidance callers.
-    //   kicker   — replaces the "Industry Guidance · Study Module" label
+    //   kicker   — replaces the default "Study Module" label
     //   concepts — pre-lowercased {term: def} map merged in UNDER the doc's
     //              own glossary, so {{term}} resolves doc-glossary-first and
     //              falls back to the shared concepts registry (study guides).
@@ -7059,7 +6784,7 @@ function ovDocVersion() {
 
       var top = ovEl('div', 'gd-top');
       var tl = ovEl('div');
-      tl.appendChild(ovEl('div', 'gd-kicker', opts.kicker || 'Industry Guidance · Study Module'));
+      tl.appendChild(ovEl('div', 'gd-kicker', opts.kicker || 'Study Module'));
       tl.appendChild(ovEl('h2', 'gd-title', doc.title));
       // Source line renders only when the doc carries source meta (guidance
       // modules always do); docs without one — study guides — get a plain

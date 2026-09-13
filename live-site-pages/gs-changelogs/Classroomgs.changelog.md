@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 22/50`
+`Sections: 23/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.23g] — 2026-09-13 03:24:43 AM EST — v05.48r
+
+### Added
+- **Reading marks on guidance modules are kept here now**, per account and across devices, in the same place lesson marks are kept — so a module you read on one machine shows as read on another
+- **Guidance flashcards and self-test questions feed the drill**, alongside the lesson and study-guide cards, on the same review schedule
+- A one-off tool for bringing across the reading history built up in the other app, together with a check that reports whether every mark arrived. It can be run twice safely, and a mark already recorded here is never replaced by an older one from the transfer
+
+### Changed
+- Who can read the modules is unchanged
 
 ## [v01.22g] — 2026-09-13 01:24:48 AM EST — v05.46r
 

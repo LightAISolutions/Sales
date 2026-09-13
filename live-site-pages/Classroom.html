@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.11w">
+  <meta name="build-version" content="v01.12w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -470,11 +470,6 @@
     .cl-nav .tick { flex: 0 0 auto; width: 12px; height: 12px; border: 1px solid var(--cl-line2);
       border-radius: 4px; display: inline-block; position: relative; top: 1px; }
     .cl-nav a.done .tick { background: var(--cl-accent); border-color: var(--cl-accent); }
-    /* Guidance renders read-only through C3 sessions 1-2, so its nav marker goes
-       back to a plain bullet: an unfillable checkbox would make exactly the
-       promise the rule above says the page keeps, and then not keep it. */
-    .cl-nav a.ro .tick { width: 5px; height: 5px; border: 0; border-radius: 999px;
-      background: var(--cl-line2); position: relative; top: -2px; margin: 0 3px; }
     .cl-nav a.done .nm { color: var(--cl-faint); text-decoration: line-through; }
     .cl-done-btn { margin-top: 14px; background: transparent; border: 1px solid var(--cl-line2);
       color: var(--cl-muted); border-radius: 999px; padding: 6px 15px; cursor: pointer;
@@ -657,8 +652,11 @@
     .cl-gd-chip { display: inline-block; font: 600 10px/1 var(--cl-mono); letter-spacing: 0.08em;
       text-transform: uppercase; color: var(--cl-muted); border: 1px solid var(--cl-line2);
       border-radius: 999px; padding: 3px 9px; margin-left: 8px; }
-    .cl-gd-note { font: 12px/1.65 var(--cl-mono); color: var(--cl-faint); border-left: 3px solid var(--cl-line2);
-      padding: 2px 0 2px 12px; margin: 0 0 16px; }
+    /* Library-card progress readout (C3 session 3) — the same vocabulary the
+       lesson rows use, so "12 / 14 sections" reads the same in both places. */
+    .cl-gd-card .r { font: 11px/1 var(--cl-mono); color: var(--cl-faint); white-space: nowrap; margin-left: 8px; }
+    .cl-gd-card.done { border-color: var(--cl-adv); }
+    .cl-gd-card.done .r { color: var(--cl-adv); }
     .cl-lens { border-left: 3px solid var(--cl-dis); background: rgba(163,58,76,0.055);
       border-radius: 0 8px 8px 0; padding: 12px 15px; margin: 16px 0 0; }
     .cl-lens .lb { font: 600 10px/1.5 var(--cl-mono); letter-spacing: 0.16em; text-transform: uppercase;
@@ -5008,6 +5006,24 @@ function clProgressSync() {
 }
 
 // How many sections of a lesson card are ticked, and whether that finishes it.
+// The guidance library's own repaint. Same shape as the lesson-row block in
+// clApplyProgressUI and the same clLessonDone_ arithmetic — a module card is a
+// lesson row with a different border. Kept separate only because the library
+// has no study-next or drill card to render after it.
+function clApplyGuidanceIndexUI(shell) {
+  var cards = shell.querySelectorAll('.cl-gd-card[data-doc]');
+  for (var i = 0; i < cards.length; i++) {
+    var st = clLessonDone_({ id: cards[i].getAttribute('data-doc'),
+                             sections: parseInt(cards[i].getAttribute('data-sections') || '0', 10) });
+    cards[i].classList.toggle('done', st.complete);
+    var mark = cards[i].querySelector('.r');
+    if (mark) {
+      mark.textContent = st.complete ? '✓ complete'
+        : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
+    }
+  }
+}
+
 function clLessonDone_(card) {
   var ticks = 0, pr = clProgress(card.id);
   for (var k in pr) if (pr.hasOwnProperty(k) && pr[k]) ticks++;
@@ -5084,13 +5100,22 @@ function clSectionDelta(lesson, secId, completed) {
 function clApplyProgressUI() {
   var shell = document.getElementById('cl-shell');
   if (!shell) return;
-  // A guidance view owns the shell read-only through C3 sessions 1-2: it has no
-  // ticks to paint, and the index-view tail below would otherwise inject the
-  // study-next and drill cards into a library page.
-  if (clCurGuidance) return;
-  // Lesson view — nav ticks and the mark-as-understood buttons.
-  if (clCurLesson) {
-    var prog = clProgress(clCurLesson);
+  // The guidance LIBRARY views (the index and the unified glossary) own the
+  // shell with nothing to paint, and the index-view tail below would otherwise
+  // inject the study-next and drill cards into a library page.
+  if (clCurGuidance === 'index') { clApplyGuidanceIndexUI(shell); return; }
+  if (clCurGuidance === 'glossary') return;
+  // A guidance MODULE view paints exactly like a lesson view: since C3 session
+  // 3 its ticks live in this app's store, so one code path serves both. The
+  // delta strip is inert on a module — a guidance revision carries date + note
+  // but no changed[], so clSectionDelta finds nothing to name and the strip
+  // stays hidden. That is the honest answer rather than a special case, and a
+  // module that ever gains changed[] lights up here with no further work.
+  var clCurDoc = clCurLesson || clCurGuidance;
+  var clCurDocObj = clCurLesson ? clCurLessonObj : clCurGuidanceObj;
+  // Lesson or module view — nav ticks and the mark-as-understood buttons.
+  if (clCurDoc) {
+    var prog = clProgress(clCurDoc);
     var navLinks = shell.querySelectorAll('.cl-nav a[id^="clnav-"]');
     for (var i = 0; i < navLinks.length; i++) {
       var secId = navLinks[i].id.slice('clnav-'.length);
@@ -5109,7 +5134,7 @@ function clApplyProgressUI() {
     var stales = shell.querySelectorAll('.cl-stale[data-sec]');
     for (var k = 0; k < stales.length; k++) {
       var ssec = stales[k].getAttribute('data-sec');
-      var delta = clSectionDelta(clCurLessonObj, ssec, prog[ssec]);
+      var delta = clSectionDelta(clCurDocObj, ssec, prog[ssec]);
       stales[k].textContent = delta
         ? 'Revised ' + delta.date + ' — after you marked this understood. ' + (delta.note || '')
         : '';
@@ -5131,7 +5156,7 @@ function clApplyProgressUI() {
         : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
     }
   }
-  if (!clCurLesson) { clRenderNext(shell); clRenderDrillCard(shell); }
+  if (!clCurDoc) { clRenderNext(shell); clRenderDrillCard(shell); }
   var rollups = shell.querySelectorAll('.cl-rollup[data-lessons]');
   for (var t = 0; t < rollups.length; t++) {
     var ids = (rollups[t].getAttribute('data-lessons') || '').split(',').filter(Boolean);
@@ -5149,10 +5174,12 @@ function clApplyProgressUI() {
 
 // ── Section + lesson rendering ────────────────────────────────────────────
 // opts.readOnly renders a section with no progress affordances at all — no
-// delta strip, no mark-as-understood button. Guidance modules use it through
-// C3 sessions 1-2: their per-account ticks still live in Profiler's store and
-// a second live store here would turn session 3's one-shot import into a
-// two-source merge. Lessons pass no opts and are unchanged.
+// delta strip, no mark-as-understood button. Guidance modules used it through
+// C3 sessions 1-2, while their ticks still lived in Profiler's store; session 3
+// migrated the store and guidance now renders with no opts at all, exactly like
+// a lesson. The option is kept because it is the honest shape for any future
+// caller that renders a section it does not own — but nothing passes it today,
+// so a reader finding it should know it is a seam, not a live branch.
 function clRenderSection(lesson, sec, opts) {
   opts = opts || {};
   var el = clEl('section', 'cl-sec');
@@ -5536,11 +5563,13 @@ function clShowLesson(id, scrollTo) {
 // is new here: the lane-grouped library, the cross-module search, and the
 // unified glossary.
 //
-// Read-only through C3 sessions 1-2: clRenderSection is called with
-// {readOnly:true} and clApplyProgressUI returns early, because the per-account
-// ticks for these modules still live in Profiler's store until session 3
-// migrates them in one shot.
-var clCurGuidance = '';
+// Read-only through C3 sessions 1-2 while the ticks were still Profiler's.
+// Session 3 migrated the store: modules render with mark-as-understood buttons
+// and filling nav ticks like any lesson, their flashcards and quizzes are in
+// the C4 drill pool, and the library cards carry a completion readout. This is
+// decision 6 of PHASE6-CLASSROOM-DESIGN.md at its target state.
+var clCurGuidance = '';       // '' | 'index' | 'glossary' | a module id
+var clCurGuidanceObj = null;  // ...and the module itself, for revisions[]
 var clGuidanceIndexCache = null;
 var clGuidanceDocsCache = null;
 
@@ -5647,6 +5676,7 @@ function clGdSnippet(hit, q) {
 // `group` label) and a header renders whenever the lane changes — the same
 // contract Profiler's index answered, so the ordering is the backend's.
 function clRenderGuidanceIndex(docs, shell) {
+  clProgressSync();          // no-op once a sync has succeeded; retries after failures
   shell.innerHTML = '';
   var top = clEl('div', 'cl-top');
   var tl = clEl('div');
@@ -5707,8 +5737,16 @@ function clRenderGuidanceIndex(docs, shell) {
       if (grp) cards.appendChild(clEl('div', 'cl-gd-group', grp));
     }
     var card = clEl('div', 'cl-sec cl-gd-card');
+    card.setAttribute('data-doc', d.id);
+    card.setAttribute('data-sections', String(d.sections || 0));
     card.appendChild(clEl('h3', null, d.title));
-    var meta = clEl('div', 'cl-read', (d.date || '') + ' · ' + d.sections + ' sections');
+    // The date keeps its middot separator — the readout that follows it used
+    // to be part of this same string ("August 2026 · 11 sections") and must
+    // not read as one run-on phrase now that it is painted separately.
+    var meta = clEl('div', 'cl-read', d.date ? d.date + ' ·' : '');
+    // Painted by clApplyProgressUI like every other progress-dependent state,
+    // so a sync landing after the render fills it in without a re-render.
+    meta.appendChild(clEl('span', 'r', (d.sections || 0) + ' sections'));
     var rc = clReviewChip(d.reviewBy);
     if (rc) meta.appendChild(rc);
     if (d.revised) {
@@ -5721,6 +5759,7 @@ function clRenderGuidanceIndex(docs, shell) {
     card.addEventListener('click', function() { window.location.hash = 'guidance/' + d.id; });
     cards.appendChild(card);
   });
+  clApplyProgressUI();
   window.scrollTo(0, 0);
 }
 
@@ -5728,6 +5767,8 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
   clGlossMap = {};
   clCurLesson = '';
   clCurGuidance = doc.id;
+  clCurGuidanceObj = doc;
+  clProgressSync();          // no-op once a sync has succeeded; retries after failures
   clConceptsLoad().then(function(concepts) {
     var ck;
     if (concepts) for (ck in concepts) if (concepts.hasOwnProperty(ck)) clGlossMap[ck] = concepts[ck];
@@ -5755,10 +5796,6 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
     back.addEventListener('click', function() { window.location.hash = 'guidance'; });
     top.appendChild(back);
     shell.appendChild(top);
-
-    shell.appendChild(clEl('div', 'cl-gd-note',
-      'Reading ticks for guidance modules still live in Profiler until the one-shot migration '
-      + '(C3 session 3). This module reads here; mark it read there.'));
 
     if (doc.revisions && doc.revisions.length) {
       var revs = clEl('div', 'cl-revs');
@@ -5793,7 +5830,9 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
 
     function navLink(id, label) {
       var a = document.createElement('a');
-      a.className = 'ro';           // no tick to fill while guidance is read-only
+      // C3 session 3: a real checkbox again. The ticks are this app's now, so
+      // the id is the one clApplyProgressUI paints, exactly as for a lesson.
+      a.id = 'clnav-' + id;
       a.href = '#cl-' + id;
       a.appendChild(clEl('span', 'tick'));
       a.appendChild(clEl('span', 'nm', label));
@@ -5807,7 +5846,7 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
 
     var secs = doc.sections || [];
     for (var si = 0; si < secs.length; si++) {
-      main.appendChild(clRenderSection(doc, secs[si], { readOnly: true }));
+      main.appendChild(clRenderSection(doc, secs[si]));
       navLink(secs[si].id, secs[si].title);
     }
 
@@ -5830,6 +5869,7 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
     }
 
     clBindTermTips(shell);
+    clApplyProgressUI();
     clLoadAdminLens(doc, shell);
     var target = scrollTo ? document.getElementById('cl-' + scrollTo) : null;
     if (target) target.scrollIntoView({ block: 'start' });
@@ -5852,10 +5892,11 @@ function clRenderGuidanceDoc(doc, shell, scrollTo) {
 // the same bytes either app fetches.
 //
 // Two differences from Profiler's gdApplyLens, both deliberate:
-//   1. Guidance renders READ-ONLY here through C3 session 2, so a section has
-//      no .cl-done-btn to insert before. The lookup is kept anyway (session 3
-//      may add ticks) but a miss appends to the section — a missed selector
-//      must never drop admin content.
+//   1. The .cl-done-btn lookup tolerates a miss. Through C3 sessions 1-2
+//      guidance rendered read-only and there was no button to insert before;
+//      session 3 wired the ticks, so there is one again and the panel lands
+//      above it exactly as Profiler's did. The fallback stays: a missed
+//      selector must never drop admin content, whatever a future render does.
 //   2. Company names inside panel prose are not linked. Profiler's
 //      gdLinkCompanies walks the registry and rewrites text nodes; Classroom
 //      has no such helper and adding one would be a page-wide feature, not a
@@ -5976,6 +6017,7 @@ function clRenderGuidanceGlossary(docs, shell) {
 // denied. A tier without the capability never sees the masthead link either.
 function clGuidanceDenied(shell) {
   clCurGuidance = '';
+  clCurGuidanceObj = null;
   shell.innerHTML = '';
   shell.appendChild(clEl('div', 'cl-err',
     'Industry Guidance is available to the admin and contributor tiers.'));
@@ -6002,10 +6044,14 @@ function clShowGuidanceDoc(id, scrollTo) {
   if (!shell) return;
   if (!clCan('guidance')) { clGuidanceDenied(shell); return; }
   clCurGuidance = id;
+  clCurGuidanceObj = null;
   shell.innerHTML = '';
   shell.appendChild(clEl('p', 'cl-loading', 'Loading module…'));
   clGuidanceApi('doc', { id: id }, function(res) {
-    if (!res || !res.success) { clCurGuidance = ''; clShowError(shell, res && res.error); return; }
+    if (!res || !res.success) {
+      clCurGuidance = ''; clCurGuidanceObj = null;
+      clShowError(shell, res && res.error); return;
+    }
     clRenderGuidanceDoc(res.doc, shell, scrollTo);
   });
 }
@@ -6219,6 +6265,17 @@ function clDrillPaint() {
     src.appendChild(document.createTextNode('Study guide · '));
     src.appendChild(gl);
     if (txt.section) src.appendChild(document.createTextNode(' · ' + txt.section));
+  } else if (it.src === 'guidance') {
+    // A guidance card opens its module scrolled to the section it came from —
+    // the same #guidance/<id>/<section> route the library and the dossier
+    // mention chips use. Guidance items joined the pool at C3 session 3.
+    var gl = clEl('button', 'lk', it.docTitle || it.doc);
+    gl.type = 'button';
+    gl.addEventListener('click', function() {
+      window.location.hash = 'guidance/' + it.doc + '/' + it.section;
+    });
+    src.appendChild(document.createTextNode('Guidance · '));
+    src.appendChild(gl);
   } else {
     var link = clEl('button', 'lk', it.lessonTitle || it.lesson);
     link.type = 'button';
@@ -6270,13 +6327,14 @@ function clDrillGrade(it, grade) {
 function clRoute() {
   if (!clAdmitted()) return;
   var h = String(window.location.hash || '').replace(/^#\/?/, '');
-  // Guidance routes first — they own the shell read-only, so every route below
-  // clears the flag and lets clApplyProgressUI resume painting ticks.
+  // Guidance routes first — they set the flag, so every route below clears it
+  // (and the module object with it) before clApplyProgressUI runs again.
   if (h === 'guidance') { clShowGuidanceIndex(); return; }
   if (h === 'guidance-glossary') { clShowGuidanceGlossary(); return; }
   var g = /^guidance\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
   if (g) { clShowGuidanceDoc(g[1], g[2] || ''); return; }
   clCurGuidance = '';
+  clCurGuidanceObj = null;
   if (h === 'drill') { clShowDrill(); return; }
   var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
   if (m) clShowLesson(m[1], m[2] || ''); else clShowIndex();

@@ -1,4 +1,4 @@
-var VERSION = "v01.22g";
+var VERSION = "v01.23g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -31990,7 +31990,9 @@ function clTrackIndexFor_(sess) {
 // first successful sync (the guidance pattern, Profiler.gs gd_progress).
 //
 // Storage is one Script Property per account ('cl_progress:<email>' →
-// {lessonId:{secId:'YYYY-MM-DD'}}). The blobs are tiny, well under the
+// {docId:{secId:'YYYY-MM-DD'}}). Since C3 session 3 a docId is a lesson id OR
+// a guidance module id — one store, because they are one kind of thing to a
+// reader, and because a module's ticks were imported straight into it. The blobs are tiny, well under the
 // 9KB/value cap, and have no cross-project consumers, so PropertiesService
 // beats a spreadsheet round-trip per tick. C4's drill history will NOT fit
 // this pattern — that is why the design doc calls out a sheet-backed store.
@@ -32034,7 +32036,20 @@ function clProgressAcct_(sess) {
   return em;
 }
 
-// {lessonId: {sectionId: true}} for every lesson this session may read.
+// {docId: {sectionId: true}} for everything this session may tick: every
+// lesson it may read, plus — since C3 session 3 — every guidance module, when
+// it holds the guidance capability.
+//
+// ONE map, not two, because the invariant is one: **progress is never a weaker
+// gate than reading.** A lesson is admitted by clLessonVisible_ (its own
+// provenance stamp); a guidance module is admitted by the same `guidance`
+// capability handleGuidanceOp_ checks before it will serve the module at all.
+// An analyst may read neither, so an analyst may tick neither, and
+// clProgressVisible_ drops both from a read for the same reason.
+//
+// Lesson ids and module ids share this namespace and must stay disjoint —
+// scripts/check-classroom-content.py asserts that against the two registries,
+// because a collision would let one id's sections validate the other's ticks.
 function clProgressValid_(sess) {
   var all = clLessons_(), valid = {};
   for (var i = 0; i < all.length; i++) {
@@ -32042,6 +32057,14 @@ function clProgressValid_(sess) {
     var set = {}, secs = all[i].sections || [];
     for (var j = 0; j < secs.length; j++) if (secs[j].id) set[secs[j].id] = true;
     valid[all[i].id] = set;
+  }
+  if (clCan_(sess, 'guidance')) {
+    var docs = guidanceDocs_();
+    for (var d = 0; d < docs.length; d++) {
+      var gset = {}, gsecs = docs[d].sections || [];
+      for (var g = 0; g < gsecs.length; g++) if (gsecs[g].id) gset[gsecs[g].id] = true;
+      valid[docs[d].id] = gset;
+    }
   }
   return valid;
 }
@@ -32142,6 +32165,175 @@ function clProgressWrite_(sess, p) {
   }
 }
 
+// PROJECT: ── Guidance progress import (C3 session 3, one-shot) ────────────
+// The migration's import half. Profiler's `exportGuidanceProgress()` prints a
+// filtered snapshot of `gd_progress:<email>` — module ids ONLY, never the
+// `study-<slug>` and `dossier-<slug>` ticks that share that property — and
+// this reads it into `cl_progress:<email>` beside the lesson ticks already
+// there. Checklist item 4 of the C3 slice plan; the design's phrasing for why
+// it is a one-shot admin operation rather than a lazy merge is "developer
+// study history is not resettable state".
+//
+// The payload arrives through a Script Property rather than an argument
+// because an editor-run function takes none: paste the exported JSON into
+// GUIDANCE_PROGRESS_IMPORT, then run the three no-underscore functions below
+// in order. Property values cap at 9KB; a store past that is split by running
+// the sequence once per account with a one-account payload (the export is
+// keyed by account, so cutting it up is a copy-paste).
+//
+// **The merge rule: an existing Classroom tick always stands.** That satisfies
+// the brief's "must not overwrite a newer Classroom tick with an older
+// Profiler one" and is correct in the other direction too — if Profiler's date
+// is the NEWER of the two, Classroom's earlier date is the true first
+// completion and moving it forward would fabricate history and suppress every
+// delta in between. It is also what makes the import idempotent by
+// construction: a second run finds every tick present and writes nothing. The
+// same rule clProgressWrite_ states as "an existing value stands".
+//
+// Values cross through clGuidanceTickValue_ below: 'YYYY-MM-DD' verbatim, and
+// legacy `true` — or anything unreadable — as `true`, "completed, date
+// unknown". The verifier calls the same helper, so its report always describes
+// what the import actually wrote.
+var CL_GUIDANCE_IMPORT_PROP = 'GUIDANCE_PROGRESS_IMPORT';
+
+function clGuidanceImportPayload_() {
+  var raw = PropertiesService.getScriptProperties().getProperty(CL_GUIDANCE_IMPORT_PROP);
+  if (!raw) throw new Error('set the ' + CL_GUIDANCE_IMPORT_PROP + ' Script Property to the '
+    + 'JSON printed by Profiler’s exportGuidanceProgress() first');
+  var payload = JSON.parse(raw);
+  if (!payload || typeof payload !== 'object' || !payload.accounts) {
+    throw new Error(CL_GUIDANCE_IMPORT_PROP + ' does not look like an export — no accounts{}');
+  }
+  return payload;
+}
+
+// {moduleId: {sectionId: true}} for every registered module — the enumerated
+// validation the store uses for lessons, applied to the modules this app now
+// holds. Nothing outside it can be imported, so a doc id that is not a module
+// (a study guide, a dossier, a typo) cannot ride in on the payload.
+function clGuidanceSectionMap_() {
+  var docs = guidanceDocs_(), map = {};
+  for (var i = 0; i < docs.length; i++) {
+    var set = {}, secs = docs[i].sections || [];
+    for (var j = 0; j < secs.length; j++) if (secs[j].id) set[secs[j].id] = true;
+    map[docs[i].id] = set;
+  }
+  return map;
+}
+
+// The value an exported tick becomes here. A 'YYYY-MM-DD' crosses verbatim;
+// anything else — legacy `true`, or a date an older or corrupted write left
+// unreadable — becomes `true`, the rule clProgressVisible_ already applies:
+// a tick is the developer's own history, so an unreadable date loses the date,
+// never the completion. The import and the verifier both call this, so the
+// report cannot disagree with what the import actually wrote.
+function clGuidanceTickValue_(v) {
+  return (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v)) ? v : true;
+}
+
+function clGuidanceImportRun_(payload, apply) {
+  var valid = clGuidanceSectionMap_();
+  var props = PropertiesService.getScriptProperties();
+  var plan = { apply: !!apply, exportedAt: payload.exportedAt || '',
+               accounts: [], imported: 0, kept: 0, skipped: [] };
+  var lock = null;
+  if (apply) {
+    try { lock = LockService.getScriptLock(); lock.waitLock(10000); }
+    catch (le) { lock = null; /* best effort — a one-shot admin run has no contender */ }
+  }
+  try {
+    for (var acct in payload.accounts) {
+      if (!payload.accounts.hasOwnProperty(acct)) continue;
+      var email = String(acct).toLowerCase().trim();
+      if (!email || email.indexOf('@') < 0) { plan.skipped.push('account ' + acct); continue; }
+      var key = CL_PROGRESS_PROP_PREFIX + email;
+      var cur = clProgressRaw_(email);
+      var row = { account: email, imported: [], kept: [] };
+      var incoming = payload.accounts[acct] || {};
+      for (var docId in incoming) {
+        if (!incoming.hasOwnProperty(docId)) continue;
+        if (!valid[docId]) { plan.skipped.push(email + ' ' + docId + ' (not a registered module)'); continue; }
+        var secs = incoming[docId] || {};
+        for (var secId in secs) {
+          if (!secs.hasOwnProperty(secId) || !secs[secId]) continue;
+          if (!valid[docId][secId]) { plan.skipped.push(email + ' ' + docId + '/' + secId + ' (no such section)'); continue; }
+          if (cur[docId] && cur[docId][secId]) { row.kept.push(docId + '/' + secId); plan.kept++; continue; }
+          if (!cur[docId]) cur[docId] = {};
+          cur[docId][secId] = clGuidanceTickValue_(secs[secId]);
+          row.imported.push(docId + '/' + secId);
+          plan.imported++;
+        }
+      }
+      if (!row.imported.length && !row.kept.length) continue;
+      plan.accounts.push(row);
+      if (apply && row.imported.length) props.setProperty(key, JSON.stringify(cur));
+    }
+  } finally {
+    if (lock) try { lock.releaseLock(); } catch (re) { /* already released */ }
+  }
+  Logger.log('%s guidance progress import — %s tick(s) imported, %s already present, %s skipped',
+    apply ? 'APPLIED' : 'DRY RUN', plan.imported, plan.kept, plan.skipped.length);
+  Logger.log(JSON.stringify(plan));
+  return plan;
+}
+
+function previewGuidanceProgressImport() { return clGuidanceImportRun_(clGuidanceImportPayload_(), false); }
+function applyGuidanceProgressImport() { return clGuidanceImportRun_(clGuidanceImportPayload_(), true); }
+
+// The design's stated done-when: "migrated progress ticks verify against a
+// pre-migration export" (PHASE6-CLASSROOM-DESIGN.md → Verification
+// expectations). Walks the export account by account and asserts every module
+// tick in it is present in this app's store, reporting each of:
+//   matched  — present with the same value; the migration carried it
+//   kept     — present with a DIFFERENT value; Classroom's own tick stood, per
+//              the merge rule. Not a failure, but named with both values so a
+//              surprise is visible rather than silent
+//   missing  — absent. The only real failure, and the one that means do NOT
+//              prune Profiler's copy
+//   skipped  — an id the registry does not know; reported, never imported
+// ok is true only when missing is empty.
+function verifyGuidanceProgressImport() {
+  var payload = clGuidanceImportPayload_();
+  var valid = clGuidanceSectionMap_();
+  var rep = { exportedAt: payload.exportedAt || '', ok: true,
+              matched: 0, kept: [], missing: [], skipped: [], accounts: [] };
+  for (var acct in payload.accounts) {
+    if (!payload.accounts.hasOwnProperty(acct)) continue;
+    var email = String(acct).toLowerCase().trim();
+    var cur = clProgressRaw_(email);
+    var row = { account: email, matched: 0, kept: 0, missing: 0 };
+    var incoming = payload.accounts[acct] || {};
+    for (var docId in incoming) {
+      if (!incoming.hasOwnProperty(docId)) continue;
+      if (!valid[docId]) { rep.skipped.push(email + ' ' + docId); continue; }
+      var secs = incoming[docId] || {};
+      for (var secId in secs) {
+        if (!secs.hasOwnProperty(secId) || !secs[secId]) continue;
+        if (!valid[docId][secId]) { rep.skipped.push(email + ' ' + docId + '/' + secId); continue; }
+        // Compare against what the import CONTRACTS to store, not against the
+        // raw export value — otherwise every legacy `true` and every corrupted
+        // date reads as an unexplained difference forever, and a reader cannot
+        // tell one from a genuine Classroom-tick-wins case.
+        var want = clGuidanceTickValue_(secs[secId]), got = cur[docId] && cur[docId][secId];
+        if (!got) {
+          rep.missing.push(email + ' ' + docId + '/' + secId + ' (export: ' + want + ')');
+          row.missing++; rep.ok = false;
+        } else if (String(got) === String(want)) {
+          rep.matched++; row.matched++;
+        } else {
+          rep.kept.push(email + ' ' + docId + '/' + secId + ' (classroom: ' + got + ', export: ' + want + ')');
+          row.kept++;
+        }
+      }
+    }
+    rep.accounts.push(row);
+  }
+  Logger.log('guidance progress verify — %s: %s matched, %s kept by Classroom, %s MISSING, %s skipped',
+    rep.ok ? 'OK' : 'FAILED', rep.matched, rep.kept.length, rep.missing.length, rep.skipped.length);
+  Logger.log(JSON.stringify(rep));
+  return rep;
+}
+
 // PROJECT: ── Study-next pointer (C1, final slice) ─────────────────────────
 // "Pick up where you left off": the first section this account has not yet
 // ticked, in the first unfinished lesson, in the first unfinished track.
@@ -32214,7 +32406,7 @@ var CL_DRILL_SESSION_CAP = 20;    // items served in one drill session
 var CL_DRILL_NEW_CAP = 10;        // never-seen items introduced per day
 var CL_DRILL_ACCOUNT_CAP = 3000;  // state rows per account — a guard, not a limit
 var CL_DRILL_INV_CAP = 2400;      // study items built into the pool — a guard, not a limit (~1,920 today)
-var CL_DRILL_ID_RE = /^(lc|lq|sf|ss):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
+var CL_DRILL_ID_RE = /^(lc|lq|sf|ss|gc|gq):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
 var CL_DRILL_SECTION_ID_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;   // an ss: section id must survive CL_DRILL_ID_RE
 
 // djb2 → base36. A CHANGE DETECTOR, not a checksum: it decides whether the
@@ -32416,11 +32608,65 @@ function clDrillStudyItems_() {
   return clDrillStudyExpand_(flat);
 }
 
-// The union of what this session may drill, lesson items and validated study
-// items together. The single place cop=drill and cop=grade both authorise
-// against, so the two ops cannot drift apart on what counts as readable.
+// The guidance half of the pool (C3 session 3). Guidance modules carry the
+// same `flashcards` and `quiz` section kinds lessons do — one renderer
+// vocabulary across both, which is invariant 8 of the C3 slice plan — so this
+// is clDrillLessonItems_ with one gate swapped: a module is drillable when the
+// session holds the `guidance` capability, exactly the check handleGuidanceOp_
+// makes before it will serve the module. **Decision 6 of
+// PHASE6-CLASSROOM-DESIGN.md reaches its target state here**: no guidance item
+// entered the drill until guidance both lived and was studied in this app,
+// which is what sessions 1-2's read-only window was protecting.
+//
+// Ids are 'gc:<moduleId>:<sectionId>:<n>' (card) and 'gq:…' (quiz) — their own
+// namespace, so a module id can never be read as a lesson id by an existing
+// row in the drill sheet. A section id CL_DRILL_ID_RE would reject never
+// enters the pool, for the same reason the study walk skips one: served and
+// gradable must stay a single set.
+function clDrillGuidanceItems_(sess) {
+  if (!clCan_(sess, 'guidance')) return {};
+  var docs = guidanceDocs_(), out = {};
+  for (var i = 0; i < docs.length; i++) {
+    var doc = docs[i], secs = doc.sections || [];
+    if (!CL_DRILL_SECTION_ID_RE.test(String(doc.id || ''))) continue;
+    for (var j = 0; j < secs.length; j++) {
+      var sec = secs[j];
+      if (!sec || !sec.id || !CL_DRILL_SECTION_ID_RE.test(String(sec.id))) continue;
+      if (sec.kind === 'flashcards') {
+        var cards = sec.cards || [];
+        for (var c = 0; c < cards.length; c++) {
+          if (!cards[c] || !cards[c].q) continue;
+          out['gc:' + doc.id + ':' + sec.id + ':' + c] = {
+            kind: 'flash', src: 'guidance', q: cards[c].q, a: cards[c].a,
+            doc: doc.id, docTitle: doc.title, section: sec.id,
+            hash: clDrillHash_(cards[c].q + '||' + cards[c].a)
+          };
+        }
+      } else if (sec.kind === 'quiz') {
+        var items = sec.items || [];
+        for (var q = 0; q < items.length; q++) {
+          var it = items[q];
+          if (!it || !it.q) continue;
+          out['gq:' + doc.id + ':' + sec.id + ':' + q] = {
+            kind: 'quiz', src: 'guidance', q: it.q, c: it.c || [], a: it.a, why: it.why,
+            doc: doc.id, docTitle: doc.title, section: sec.id,
+            hash: clDrillHash_(it.q + '||' + (it.c || []).join('|') + '||' + it.a)
+          };
+        }
+      }
+    }
+  }
+  return out;
+}
+
+// The union of what this session may drill — lesson items, guidance items and
+// validated study items together. The single place cop=drill and cop=grade
+// both authorise against, so the two ops cannot drift apart on what counts as
+// readable.
 function clDrillAllowed_(sess) {
   var items = clDrillLessonItems_(sess);
+  var guidance = clDrillGuidanceItems_(sess);
+  for (var g in guidance) if (guidance.hasOwnProperty(g)) items[g] = guidance[g];
   var study = clDrillStudyItems_();
   for (var k in study) if (study.hasOwnProperty(k)) items[k] = study[k];
   return items;
@@ -32573,18 +32819,23 @@ function handleClassroomOp_(e) {
       var dAllowed = clDrillAllowed_(sess);
       var dState = clDrillState_(dAcct);
       var built = clDrillQueue_(dAllowed, dState, dToday);
-      // Lesson items ship their payload — the gate has already been checked.
-      // Study items ship the id only; the client holds that text already.
+      // Lesson and guidance items ship their payload — the gate has already
+      // been checked. Study items ship the id only; the client holds that text
+      // already. `src` names where a payload item came from, so the page can
+      // link back to the right place: 'guidance' carries doc/docTitle for a
+      // #guidance/<id>/<section> link, anything else carries lesson/lessonTitle.
       var served = built.queue.map(function(id) {
         var it = dAllowed[id], st = dState[id];
         var row = { id: id, kind: it.kind, hash: it.hash,
                     seen: !!st, due: (st && st.due) || null };
-        if (it.kind === 'flash') {
-          row.q = it.q; row.a = it.a;
-          row.lesson = it.lesson; row.lessonTitle = it.lessonTitle; row.section = it.section;
-        } else if (it.kind === 'quiz') {
-          row.q = it.q; row.c = it.c; row.a = it.a; row.why = it.why;
-          row.lesson = it.lesson; row.lessonTitle = it.lessonTitle; row.section = it.section;
+        if (it.kind === 'flash' || it.kind === 'quiz') {
+          row.q = it.q; row.a = it.a; row.section = it.section;
+          if (it.kind === 'quiz') { row.c = it.c; row.why = it.why; }
+          if (it.src === 'guidance') {
+            row.src = 'guidance'; row.doc = it.doc; row.docTitle = it.docTitle;
+          } else {
+            row.lesson = it.lesson; row.lessonTitle = it.lessonTitle;
+          }
         } else {
           row.slug = it.slug;
         }
@@ -32653,23 +32904,24 @@ function handleClassroomOp_(e) {
 // the page-side engine is the `cl*` port that has been in Classroom.html since
 // C1 slice 2. Module ids are byte-identical and permanent: Scraper's
 // `guidance:<module-id>` seed sources and every lesson's provenance stamp key
-// on them, and `.claude/rules/industry-guidance.md` needs only its file target
-// changed (C3 session 3).
+// on them, and `.claude/rules/industry-guidance.md` was re-targeted at this
+// file in C3 session 3 — a file-target and op-name change, not a rewrite.
 //
 // Access is the `guidance` capability in CL_ROLE_CAPS — admin and contributor,
 // exactly the tiers GUIDANCE_ROLES admits in Profiler. The gate follows the
 // content across apps, which is the provenance rule stated forwards.
 //
-// Through C3 sessions 1–2 these functions are DUPLICATED in Profiler.gs so
-// Profiler's hub keeps serving until its slice is cut over (the design's own
-// requirement, and guidanceMentions_() cannot answer without the content
-// beside it). scripts/check-guidance-parity.py fails on any divergence; both
-// it and Profiler's copy are removed in session 3.
+// C3 session 3 ended the duplicate window: Profiler's copy of these twelve
+// functions is gone, and `scripts/check-guidance-parity.py` — which existed to
+// hold the two copies byte-identical while both were live — went with it. This
+// is the only copy now, so an edit to a module (the bankability review,
+// §7.3 order 3, is the scheduled one) edits exactly one file.
 //
-// Reading ticks are deliberately NOT wired here yet: session 3 migrates the
-// per-account store in one shot, and a second live store during the window
-// would turn that import into a two-source merge. Profiler stays the place
-// guidance is studied until then.
+// Reading ticks ARE wired here as of session 3: clProgressValid_ admits every
+// registered module to the same per-account store the lessons use, the
+// one-shot import above carried the history over from Profiler's
+// `gd_progress:`, and clDrillGuidanceItems_ admits module flashcards and
+// quizzes to the C4 drill. Profiler no longer serves module content at all.
 
 // gop=index | gop=doc — the two read ops, identical in shape to Profiler's so
 // the page engine ports unchanged. Order of checks: session → the app door and

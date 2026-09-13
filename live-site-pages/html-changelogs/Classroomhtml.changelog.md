@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12w] — 2026-09-13 03:24:43 AM EST — v05.48r
+
+### Added
+- **Guidance modules can be marked read, like lessons.** Every section of a module now has a “Mark as understood” button, the section list beside it fills in as you go, and the library shows how far through each module you are — “4 / 11 sections”, or “✓ complete”
+- **Guidance flashcards and self-test questions now come up in the drill.** They join the lesson and study-guide cards on the same schedule, and each one tells you which module and section it came from, with a link straight back to it
+- Reading history you had built up in the other app came across with the move — nothing you had already marked read was lost
+
+### Removed
+- The note saying guidance reading was still tracked in the other app is gone, because it no longer is
 
 ## [v01.11w] — 2026-09-13 12:52:01 AM EST — v05.45r
 

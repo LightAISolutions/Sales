@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.89w] — 2026-09-13 03:24:43 AM EST — v05.48r
+
+### Changed
+- **The Industry Guidance library now opens in the Classroom app.** The ✦ Industry Guidance button at the top of the page is a link across to Classroom's library rather than an overlay that opens here, and the module chips on a dossier's “✦ Covered in guidance modules” line open that module in Classroom. The modules, the search and the combined glossary are all there, and reading them is now tracked alongside the lessons
+- Because those are ordinary links now, you can middle-click or ctrl-click a module chip to open it in a new tab and keep the dossier you were reading
+- Who can see the guidance entry point is unchanged
+
+### Removed
+- The guidance overlay, its library, its search and its combined glossary no longer live on this page. Study guides, reports and the sign-in log are untouched — they share the same page furniture and all of it stays
 
 ## [v01.88w] — 2026-09-13 01:40:31 AM EST — v05.47r
 

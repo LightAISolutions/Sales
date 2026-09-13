@@ -520,6 +520,12 @@ Object.keys(TIERS).forEach(function(t) {
   var sess = { role: TIERS[t].role, permissions: TIERS[t].permissions, email: t + '@example.com' };
   out.tickable[t] = Object.keys(clProgressValid_(sess)).sort();
 });
+// C3 session 3: guidance modules are tickable and drillable here, behind the
+// `guidance` capability rather than a lesson's provenance stamp. Emit the
+// registry so the tier expectations below can be built from the real ids, and
+// so a lesson id colliding with a module id is caught rather than silently
+// letting one doc's sections validate the other's ticks.
+out.guidanceIds = guidanceDocs_().map(function(d) { return d.id; }).sort();
 var EM = 'shared@example.com';
 var asContrib = { role: 'contributor', permissions: [], email: EM };
 var asAnalyst = { role: 'analyst', permissions: [], email: EM };
@@ -563,6 +569,18 @@ clLessons_ = function() { return [
 out.drill = {};
 Object.keys(TIERS).forEach(function(t) {
   out.drill[t] = Object.keys(clDrillLessonItems_(TIERS[t])).sort();
+});
+// The guidance half of the pool: ids only (the modules are real, so the count
+// is large), plus the prefixes, which is what the gate assertion needs.
+out.drillGuidance = {};
+Object.keys(TIERS).forEach(function(t) {
+  var ids = Object.keys(clDrillGuidanceItems_(TIERS[t]));
+  var pfx = {};
+  ids.forEach(function(i) { pfx[i.split(':')[0]] = true; });
+  out.drillGuidance[t] = { n: ids.length, prefixes: Object.keys(pfx).sort(),
+                           gradable: ids.every(function(i) { return CL_DRILL_ID_RE.test(i); }),
+                           docs: ids.map(function(i) { return i.split(':')[1]; })
+                                    .filter(function(v, k, a) { return a.indexOf(v) === k; }).sort() };
 });
 clLessons_ = __clLessonsOrig;   // restore: study-next below asserts against the original registry
 // Study-item containment: a real slug validates, a bogus one does not, and
@@ -616,7 +634,7 @@ EXPECTED_INDEX = {
 CARD_KEYS = "edition,gate,group,id,kinds,reviewBy,revised,sections,short,title,type,updated"
 
 
-def run_gate_truth_table(src):
+def run_gate_truth_table(src, lesson_ids=()):
     m = re.search(r"^// PROJECT START.*?\n(.*?)^// PROJECT END", src, re.S | re.M)
     if not m:
         err("gate test: PROJECT region not found in %s" % GS.name); return
@@ -648,14 +666,27 @@ def run_gate_truth_table(src):
     if out["forbidden"] != 3:
         err("gate test: expected 3 CLASSROOM_FORBIDDEN throws, got %s" % out["forbidden"])
 
-    # Progress: a tier may tick exactly the lessons it may read — no more.
-    cases = 0
+    # Progress: a tier may tick exactly the lessons it may read, plus — since
+    # C3 session 3 — every guidance module, when it holds the `guidance`
+    # capability. Same invariant, one more surface: progress is never a weaker
+    # gate than reading, and a module is read behind exactly that capability.
+    gids = out.get("guidanceIds") or []
+    cases = 1
+    if len(gids) != 9:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 9" % len(gids))
+    cases += 1
+    clash = sorted(set(gids) & set(lesson_ids))
+    if clash:
+        err("registry test: %s is registered as BOTH a lesson and a guidance module — "
+            "they share the progress and drill namespaces, so one doc's sections "
+            "would validate the other's ticks" % clash)
     for t, want in EXPECTED_INDEX.items():
         got = out["tickable"].get(t)
         cases += 1
-        if got != sorted(want["lessons"]):
+        exp = sorted(want["lessons"] + (gids if t in READS["guidance"] else []))
+        if got != exp:
             err("progress test: %s may tick %s, but may read %s — progress must not be a weaker gate"
-                % (t, got, sorted(want["lessons"])))
+                % (t, got, exp))
     pr = out["progress"]
 
     # A completed section stores its COMPLETION DATE ('YYYY-MM-DD') as of
@@ -716,6 +747,28 @@ def run_gate_truth_table(src):
     cases += 1
     if "lq:l-pub:z1:0" not in dr.get("admin", []):
         err("drill: quiz items are not being enumerated (expected lq:l-pub:z1:0 for admin)")
+
+    # The guidance half of the pool, on the same rule: a tier without the
+    # `guidance` capability must draw nothing from it — not a card, not an id.
+    dg = out.get("drillGuidance") or {}
+    for tier in EXPECTED_INDEX:
+        row = dg.get(tier) or {}
+        cases += 1
+        if tier in READS["guidance"]:
+            if not row.get("n"):
+                err("drill gate: %s draws no guidance items — the gate test proves nothing" % tier)
+            if not row.get("gradable"):
+                err("drill gate: %s was served guidance ids CL_DRILL_ID_RE rejects, so cop=grade "
+                    "would refuse what cop=drill served" % tier)
+            stray = sorted(set(row.get("prefixes") or []) - {"gc", "gq"})
+            if stray:
+                err("drill gate: guidance items carry prefixes %s, expected only gc/gq" % stray)
+            stray_docs = sorted(set(row.get("docs") or []) - set(gids))
+            if stray_docs:
+                err("drill gate: guidance items reference %s, which are not registered modules" % stray_docs)
+        elif row.get("n"):
+            err("drill gate: %s drew %d guidance item(s) without the guidance capability"
+                % (tier, row.get("n")))
 
     ds = out["drillStudy"]
     cases += 1
@@ -813,7 +866,7 @@ def main():
         tracks_by_id[tid] = t
     check_prereq_cycles(tracks_by_id)
     check_segment_lessons(lessons_by_id)
-    cases = run_gate_truth_table(src) or 0
+    cases = run_gate_truth_table(src, list(lessons_by_id)) or 0
     return finish(len(lessons), len(tracks), cases)
 
 

@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 38/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.39g] — 2026-09-13 03:24:43 AM EST — v05.48r
+
+### Removed
+- **The study modules are no longer served from here.** They are served by the Classroom app now, which is where they are read. The dossier line listing which modules mention a company still works exactly as before
+
+### Changed
+- **Your reading history for the study modules moved to Classroom** in a one-off transfer, so what you had already marked read is still marked read there. Marks on study guides and on dossiers stay here and were not touched
+- A one-off tool is included for making that transfer and for checking afterwards that every mark arrived. It can be run twice safely, and it never replaces a more recent mark with an older one
 
 ## [v01.38g] — 2026-09-13 01:24:48 AM EST — v05.46r
 
