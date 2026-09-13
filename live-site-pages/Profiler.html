@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.86w">
+  <meta name="build-version" content="v01.87w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -2242,12 +2242,17 @@ function ovDocVersion() {
         var shown = companies.filter(function(c) {
           if (ovCat !== 'all' && (c.categories || []).indexOf(ovCat) < 0) return false;
           if (!q) return true;
-          // Names only (developer directive 2026-08-30) — taglines used to be
-          // in the haystack, so "nvidia" surfaced every card whose blurb
-          // mentioned NVIDIA. The slug rides along as the hyphenated name
-          // form ("burns-mcdonnell" still matches); it can never reintroduce
-          // the tagline noise.
-          return (c.name + ' ' + c.slug).toLowerCase().indexOf(q) >= 0;
+          // Names and aliases only (developer directives 2026-08-30 and
+          // 2026-09-13) — taglines used to be in the haystack, so "nvidia"
+          // surfaced every card whose blurb mentioned NVIDIA. The slug rides
+          // along as the hyphenated name form ("burns-mcdonnell" still
+          // matches), and the registry's aka[] — former names, native-script
+          // names, subsidiaries and product brands (PROFILER-SCHEMA.md,
+          // registry v3) — joined in on 2026-09-13 so "楚能", "Guy Carpenter"
+          // or "Mitra Future Technologies" find their card. Aliases are names,
+          // not prose, so they cannot reintroduce the tagline noise.
+          var hay = c.name + ' ' + c.slug + ' ' + (c.aka || []).join(' ');
+          return hay.toLowerCase().indexOf(q) >= 0;
         });
         if (!shown.length) { grid.appendChild(ovEl('p', 'ov-empty', 'No companies match.')); return; }
         shown.forEach(function(c) {

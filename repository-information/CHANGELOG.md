@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.42r] — 2026-09-12 10:25:27 PM EST
+
+> **Prompt:** "I want to resolve the open "aka[] entries" issue. What is awaiting my call? Also, see the attached screenshot. I just closed S3, so shouldn't the next step be G6 instead of S2? Re-evaluate where I am in the overall action plan and update the action plan (making sure each phase is tied to an AI model/effort level)." *(The developer then chose "Add aka[] to search" when asked.)*
+
+### Changed
+
+- **`live-site-pages/Profiler.html`** (v01.86w → v01.87w) — the roster search haystack now includes the registry's `aka[]` aliases (`c.name + c.slug + aka.join(' ')`), by developer decision on 2026-09-13; 265 aliases across 19 companies became searchable and taglines stay excluded. Verified in headless Chromium: "楚能" → Cornex, "Guy Carpenter" → Marsh McLennan, "Mitra Future" → Mitra Chem, "中创新航" → CALB, "nvidia" → one card, zero page errors. Meta tag and `Profilerhtml.version.txt` bumped together
+- **`live-site-pages/html-changelogs/Profilerhtml.changelog.md`** — v01.87w entry (`Sections: 46/50`)
+- **`repository-information/INTEGRATED-REMEDIATION-PLAN.md`** — re-evaluated at the close of S3 (v05.42r): §7.3 gains a dated run-order table with every remaining phase tied to a model and effort level (G6 → C3 → the bankability review due 2026-10-01 → Phase 4 row 1 → S2 interleaved with Phase 4 rows 2–24 → K2 → rows 25–26 → C5 → the plan clock; ~57 sessions, ~54 Opus 5 xhigh, 2–3 Fable 5.1 xhigh, none on Fable 5.1 High); §7.4 item 5 re-sequenced so G6 and C3 run before any S2 module; §6 ledger rows for G6 (next up), C3 (second) and S2 (all gates cleared, ordered after C3); new **§7.9** paste-in brief for G6 (Opus 5 xhigh)
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — §10.5 item D closed as done
+- **`README.md`** — Profiler version display v01.87w; timestamp and repo version
 
 ## [v05.41r] — 2026-09-12 10:03:55 PM EST
 

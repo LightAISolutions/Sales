@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.87w] — 2026-09-12 10:25:27 PM EST — v05.42r
+
+### Changed
+
+- The company search box now also matches a company's other names — former names, native-script names, subsidiaries and product brands — so searching for an alias finds the right card. Taglines remain excluded from search.
 
 ## [v01.86w] — 2026-09-10 03:31:19 AM EST — v05.33r
 
