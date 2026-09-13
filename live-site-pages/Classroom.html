@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.09w">
+  <meta name="build-version" content="v01.10w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -470,6 +470,11 @@
     .cl-nav .tick { flex: 0 0 auto; width: 12px; height: 12px; border: 1px solid var(--cl-line2);
       border-radius: 4px; display: inline-block; position: relative; top: 1px; }
     .cl-nav a.done .tick { background: var(--cl-accent); border-color: var(--cl-accent); }
+    /* Guidance renders read-only through C3 sessions 1-2, so its nav marker goes
+       back to a plain bullet: an unfillable checkbox would make exactly the
+       promise the rule above says the page keeps, and then not keep it. */
+    .cl-nav a.ro .tick { width: 5px; height: 5px; border: 0; border-radius: 999px;
+      background: var(--cl-line2); position: relative; top: -2px; margin: 0 3px; }
     .cl-nav a.done .nm { color: var(--cl-faint); text-decoration: line-through; }
     .cl-done-btn { margin-top: 14px; background: transparent; border: 1px solid var(--cl-line2);
       color: var(--cl-muted); border-radius: 999px; padding: 6px 15px; cursor: pointer;
@@ -624,6 +629,36 @@
       font: 12.5px/1.55 var(--cl-serif); color: var(--cl-ink); box-shadow: 0 8px 28px rgba(35,32,27,0.22); }
     #cl-tip .tt { font: 600 11px/1 var(--cl-mono); letter-spacing: 0.1em; color: var(--cl-accent);
       text-transform: uppercase; margin-bottom: 5px; }
+    /* Industry Guidance (C3) — the library, its search, and the module header.
+       Every section, table, drill and glossary inside a module renders through
+       the shared cl- primitives above; only the surface around them is new. */
+    .cl-gd-group { font: 600 10.5px/1 var(--cl-mono); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cl-accent); border-bottom: 1px solid var(--cl-line); padding-bottom: 7px;
+      margin: 26px 0 14px; }
+    .cl-gd-group:first-child { margin-top: 8px; }
+    .cl-gd-card { cursor: pointer; }
+    .cl-gd-card:hover { border-color: var(--cl-accent); }
+    .cl-gd-card p { font: 14px/1.7 var(--cl-serif); color: var(--cl-muted); margin: 8px 0 0; }
+    .cl-gd-search { width: 100%; box-sizing: border-box; border: 1px solid var(--cl-line2);
+      border-radius: 9px; background: var(--cl-card); color: var(--cl-ink);
+      font: 13px/1.4 var(--cl-mono); padding: 11px 14px; margin: 4px 0 10px; }
+    .cl-gd-search:focus { outline: none; border-color: var(--cl-accent); }
+    .cl-gd-btn { border: 1px solid var(--cl-line2); border-radius: 9px; background: var(--cl-card2);
+      color: var(--cl-muted); font: 12px/1 var(--cl-mono); padding: 10px 15px; cursor: pointer;
+      margin: 0 8px 14px 0; }
+    .cl-gd-btn:hover { border-color: var(--cl-accent); color: var(--cl-accent); }
+    .cl-gd-hit { cursor: pointer; padding: 12px 18px 14px; }
+    .cl-gd-hit:hover { border-color: var(--cl-accent); }
+    .cl-gd-hit .path { font: 600 10.5px/1.4 var(--cl-mono); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--cl-accent); margin-bottom: 6px; }
+    .cl-gd-snip { font: 13px/1.7 var(--cl-serif); color: var(--cl-ink); }
+    .cl-gd-snip .hl { background: #f6e9bf; font-weight: 700; }
+    .cl-gd-src { font: 11.5px/1.7 var(--cl-mono); color: var(--cl-faint); margin-top: 5px; }
+    .cl-gd-chip { display: inline-block; font: 600 10px/1 var(--cl-mono); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--cl-muted); border: 1px solid var(--cl-line2);
+      border-radius: 999px; padding: 3px 9px; margin-left: 8px; }
+    .cl-gd-note { font: 12px/1.65 var(--cl-mono); color: var(--cl-faint); border-left: 3px solid var(--cl-line2);
+      padding: 2px 0 2px 12px; margin: 0 0 16px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4503,10 +4538,10 @@ function clAdmitted() {
 }
 
 // PROJECT: ── Masthead + cross-links to Profiler ──────────────────────────
-// Pre-C3, Classroom holds no guidance content of its own: guidance-capable
-// tiers deep-link out to Profiler's hub instead (decision 6 — no interim
-// Profiler→Classroom guidance route is built). The dossier link is shown to
-// every admitted tier because all three can read dossiers in Profiler.
+// Since C3 session 1 the guidance hub lives here, so the guidance link is an
+// in-app route rather than a deep link out — decision 6 at its target state.
+// The dossier link is shown to every admitted tier because all three can read
+// dossiers in Profiler.
 function clHeaderShow() {
   if (!clAdmitted()) return;
   var head = document.getElementById('cl-header');
@@ -4521,8 +4556,8 @@ function clHeaderShow() {
   }
   add('Profiler.html', '← Profiler', 'Company dossiers, study guides and compare');
   if (clCan('guidance')) {
-    // Deep link into Profiler's guidance hub until C3 moves it here.
-    add('Profiler.html#guidance', '✦ Industry Guidance', 'Guidance modules still live in Profiler until C3');
+    // C3 session 1 brought the hub here; the link is an in-app route from now on.
+    add('#guidance', '✦ Industry Guidance', 'The guidance library — nine modules, search and unified glossary');
   }
   var badge = document.createElement('span');
   badge.className = 'cl-role';
@@ -5041,6 +5076,10 @@ function clSectionDelta(lesson, secId, completed) {
 function clApplyProgressUI() {
   var shell = document.getElementById('cl-shell');
   if (!shell) return;
+  // A guidance view owns the shell read-only through C3 sessions 1-2: it has no
+  // ticks to paint, and the index-view tail below would otherwise inject the
+  // study-next and drill cards into a library page.
+  if (clCurGuidance) return;
   // Lesson view — nav ticks and the mark-as-understood buttons.
   if (clCurLesson) {
     var prog = clProgress(clCurLesson);
@@ -5101,16 +5140,24 @@ function clApplyProgressUI() {
 }
 
 // ── Section + lesson rendering ────────────────────────────────────────────
-function clRenderSection(lesson, sec) {
+// opts.readOnly renders a section with no progress affordances at all — no
+// delta strip, no mark-as-understood button. Guidance modules use it through
+// C3 sessions 1-2: their per-account ticks still live in Profiler's store and
+// a second live store here would turn session 3's one-shot import into a
+// two-source merge. Lessons pass no opts and are unchanged.
+function clRenderSection(lesson, sec, opts) {
+  opts = opts || {};
   var el = clEl('section', 'cl-sec');
   el.id = 'cl-' + sec.id;
   el.appendChild(clEl('h3', null, sec.title));
   // Painted by clApplyProgressUI, like every other progress-dependent state,
   // so a server sync landing after the render fills it in without a re-render.
-  var stale = clEl('div', 'cl-stale');
-  stale.setAttribute('data-sec', sec.id);
-  stale.hidden = true;
-  el.appendChild(stale);
+  if (!opts.readOnly) {
+    var stale = clEl('div', 'cl-stale');
+    stale.setAttribute('data-sec', sec.id);
+    stale.hidden = true;
+    el.appendChild(stale);
+  }
   if (sec.read) el.appendChild(clEl('div', 'cl-read', sec.read));
   var host = el, wrap = null, pi;
   if (sec.kind === 'callout') {
@@ -5146,22 +5193,24 @@ function clRenderSection(lesson, sec) {
   }
   // Mark as understood. State is painted by clApplyProgressUI rather than here,
   // so a server sync landing after the render repaints correctly.
-  var done = clEl('button', 'cl-done-btn');
-  done.type = 'button';
-  done.setAttribute('data-sec', sec.id);
-  done.textContent = 'Mark as understood';
-  done.addEventListener('click', function() {
-    clSetProgress(lesson.id, sec.id, !done.classList.contains('on'));
-  });
-  el.appendChild(done);
+  if (!opts.readOnly) {
+    var done = clEl('button', 'cl-done-btn');
+    done.type = 'button';
+    done.setAttribute('data-sec', sec.id);
+    done.textContent = 'Mark as understood';
+    done.addEventListener('click', function() {
+      clSetProgress(lesson.id, sec.id, !done.classList.contains('on'));
+    });
+    el.appendChild(done);
+  }
   return el;
 }
 
 // The provenance strip — a lesson's sourcing IS its stamp, which is why
 // sections carry no citation tokens. Inputs are shown as their typed identity
-// (never a URL: the data must not depend on another app's routes). Pre-C3 a
-// guidance input links out to Profiler's hub, matching the masthead's own
-// deep link; when C3 moves guidance here, only this function changes.
+// (never a URL: the data must not depend on another app's routes). Since C3
+// session 1 a guidance input links into this app's own hub (#guidance/<id>) —
+// the module it names is served here now.
 var CL_PROV_LABEL = {
   'profile': 'dossier', 'study': 'study guide', 'project': 'project',
   'graph': 'relationship graph', 'concepts': 'concepts registry',
@@ -5180,9 +5229,9 @@ function clProvStrip(lesson) {
     row.appendChild(clEl('span', 'k', (CL_PROV_LABEL[prefix] || prefix || 'source') + ' · '));
     if (prefix === 'guidance') {
       var a = document.createElement('a');
-      a.href = 'Profiler.html#guidance';
+      a.href = '#guidance/' + id;
       a.textContent = id;
-      a.title = 'Guidance modules live in Profiler until C3 moves the hub here';
+      a.title = 'Open this guidance module';
       row.appendChild(a);
     } else {
       row.appendChild(document.createTextNode(id));
@@ -5465,6 +5514,422 @@ function clShowLesson(id, scrollTo) {
 }
 
 
+// PROJECT: ── Industry Guidance — the library (C3 session 1) ──────────────
+// The hub came home from Profiler at C3 session 1. The server half is
+// handleGuidanceOp_ in Classroom.gs (gop=index|doc behind the `guidance`
+// capability — admin and contributor, the same tiers GUIDANCE_ROLES admits in
+// Profiler); everything here renders what it is given and gates nothing
+// itself, exactly like the curriculum UI above.
+//
+// Sections, tables, timelines, drills, {{term}} tooltips and the glossary all
+// render through the shared cl- primitives — one section vocabulary across
+// study guides, guidance modules, reports and lessons, which is why the port
+// in C1 slice 2 left nothing to bring across. Only the surface around a module
+// is new here: the lane-grouped library, the cross-module search, and the
+// unified glossary.
+//
+// Read-only through C3 sessions 1-2: clRenderSection is called with
+// {readOnly:true} and clApplyProgressUI returns early, because the per-account
+// ticks for these modules still live in Profiler's store until session 3
+// migrates them in one shot.
+var clCurGuidance = '';
+var clGuidanceIndexCache = null;
+var clGuidanceDocsCache = null;
+
+function clGuidanceApi(gop, params, cb) {
+  var session = (loadSession() || {}).token || '';
+  if (!session) { cb({ success: false, error: 'SESSION_EXPIRED' }); return; }
+  var qp = { action: 'guidance', gop: gop, session: session };
+  for (var k in params) if (params.hasOwnProperty(k)) qp[k] = params[k];
+  _gasPost(qp)
+    .then(function(res) { cb(res || { success: false, error: 'empty_response' }); })
+    .catch(function(e) { cb({ success: false, error: String((e && e.message) || 'network_failed') }); });
+}
+
+// Search and the unified glossary both need every module's body, so the first
+// use of either pulls all nine and caches them for the page's lifetime. One
+// call per module, as in Profiler — the op contract is unchanged.
+function clGuidanceFetchAll(cb) {
+  if (clGuidanceDocsCache) { cb(clGuidanceDocsCache); return; }
+  clGuidanceApi('index', {}, function(res) {
+    if (!res || !res.success || !(res.docs || []).length) { cb(null); return; }
+    var ids = res.docs.map(function(d) { return d.id; });
+    var docs = [], left = ids.length, failed = false;
+    ids.forEach(function(id, i) {
+      clGuidanceApi('doc', { id: id }, function(r2) {
+        if (!r2 || !r2.success) failed = true; else docs[i] = r2.doc;
+        if (--left === 0) {
+          if (failed) { cb(null); return; }
+          clGuidanceDocsCache = docs;
+          cb(docs);
+        }
+      });
+    });
+  });
+}
+
+// Authoring markers have no place in a search snippet, and stripping them
+// before the match is found keeps the highlight offset honest.
+function clGdPlain(s) {
+  return String(s == null ? '' : s)
+    .replace(/\{\{([^}]+)\}\}/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*([^*\n]+)\*/g, '$1');
+}
+
+// Flatten every string a section renders — prose, tables, cards, drills, notes,
+// sales angles — so the search sees what the reader sees. Structural keys are
+// skipped; they are plumbing, not content.
+function clGdSecText(sec) {
+  var parts = [];
+  (function walk(node) {
+    if (typeof node === 'string') { parts.push(node); return; }
+    if (Object.prototype.toString.call(node) === '[object Array]') { node.forEach(walk); return; }
+    if (node && typeof node === 'object') {
+      for (var k in node) {
+        if (!node.hasOwnProperty(k)) continue;
+        if (k === 'id' || k === 'kind' || k === 'read' || k === 'moduleId' || k === 'sectionId') continue;
+        walk(node[k]);
+      }
+    }
+  })(sec);
+  return clGdPlain(parts.join(' · '));
+}
+
+function clGdHits(q, docs) {
+  var needle = q.toLowerCase(), hits = [];
+  docs.forEach(function(doc) {
+    (doc.sections || []).forEach(function(sec) {
+      var text = clGdSecText(sec);
+      var idx = text.toLowerCase().indexOf(needle);
+      var inTitle = String(sec.title || '').toLowerCase().indexOf(needle) !== -1;
+      if (idx === -1 && !inTitle) return;
+      hits.push({ docId: doc.id, docTitle: doc.title, secId: sec.id, secTitle: sec.title,
+                  text: text, at: idx, rank: inTitle ? 0 : 1 });
+    });
+    (doc.glossary || []).forEach(function(g) {
+      var blob = g.t + ' — ' + g.d;
+      var gidx = blob.toLowerCase().indexOf(needle);
+      if (gidx === -1) return;
+      hits.push({ docId: doc.id, docTitle: doc.title, secId: 'glossary',
+                  secTitle: 'Glossary · ' + g.t, text: blob, at: gidx,
+                  rank: g.t.toLowerCase().indexOf(needle) !== -1 ? 0 : 2 });
+    });
+  });
+  hits.sort(function(a, b) { return a.rank - b.rank; });
+  return hits.slice(0, 40);
+}
+
+function clGdSnippet(hit, q) {
+  var el = clEl('div', 'cl-gd-snip');
+  if (hit.at === -1) {
+    el.textContent = hit.text.slice(0, 140) + (hit.text.length > 140 ? '…' : '');
+    return el;
+  }
+  var s = Math.max(0, hit.at - 60), e = Math.min(hit.text.length, hit.at + q.length + 80);
+  if (s > 0) el.appendChild(document.createTextNode('…'));
+  el.appendChild(document.createTextNode(hit.text.slice(s, hit.at)));
+  el.appendChild(clEl('span', 'hl', hit.text.slice(hit.at, hit.at + q.length)));
+  el.appendChild(document.createTextNode(hit.text.slice(hit.at + q.length, e)));
+  if (e < hit.text.length) el.appendChild(document.createTextNode('…'));
+  return el;
+}
+
+// The library. Modules arrive grouped by lane from the backend (each carries a
+// `group` label) and a header renders whenever the lane changes — the same
+// contract Profiler's index answered, so the ordering is the backend's.
+function clRenderGuidanceIndex(docs, shell) {
+  shell.innerHTML = '';
+  var top = clEl('div', 'cl-top');
+  var tl = clEl('div');
+  tl.appendChild(clEl('div', 'cl-kick', 'Industry Guidance · Library'));
+  tl.appendChild(clEl('h2', 'cl-title', docs.length + ' modules'));
+  top.appendChild(tl);
+  var back = clEl('button', 'cl-back', '← All tracks');
+  back.type = 'button';
+  back.addEventListener('click', function() { window.location.hash = ''; });
+  top.appendChild(back);
+  shell.appendChild(top);
+
+  var search = document.createElement('input');
+  search.type = 'search';
+  search.className = 'cl-gd-search';
+  search.placeholder = 'Search all modules — sections, tables, drills, glossary…';
+  shell.appendChild(search);
+
+  var gbtn = clEl('button', 'cl-gd-btn', '📖 Unified glossary — every term across all modules');
+  gbtn.type = 'button';
+  gbtn.addEventListener('click', function() { window.location.hash = 'guidance-glossary'; });
+  shell.appendChild(gbtn);
+
+  var results = clEl('div');
+  shell.appendChild(results);
+  var cards = clEl('div');
+  shell.appendChild(cards);
+
+  search.addEventListener('input', function() {
+    var q = search.value.trim();
+    results.innerHTML = '';
+    if (q.length < 2) { cards.style.display = ''; return; }
+    cards.style.display = 'none';
+    results.appendChild(clEl('p', 'cl-loading', 'Searching…'));
+    clGuidanceFetchAll(function(all) {
+      if (search.value.trim() !== q) return;      // the query moved on
+      results.innerHTML = '';
+      if (!all) { results.appendChild(clEl('p', 'cl-loading', 'Could not load module content for search.')); return; }
+      var hits = clGdHits(q, all);
+      if (!hits.length) { results.appendChild(clEl('p', 'cl-empty', 'No matches for "' + q + '".')); return; }
+      hits.forEach(function(h) {
+        var card = clEl('div', 'cl-sec cl-gd-hit');
+        card.appendChild(clEl('div', 'path', h.docTitle + ' › ' + h.secTitle));
+        card.appendChild(clGdSnippet(h, q));
+        card.addEventListener('click', function() {
+          window.location.hash = 'guidance/' + h.docId + '/' + h.secId;
+        });
+        results.appendChild(card);
+      });
+    });
+  });
+
+  var lastGroup = null;
+  docs.forEach(function(d) {
+    var grp = d.group || '';
+    if (grp !== lastGroup) {
+      lastGroup = grp;
+      if (grp) cards.appendChild(clEl('div', 'cl-gd-group', grp));
+    }
+    var card = clEl('div', 'cl-sec cl-gd-card');
+    card.appendChild(clEl('h3', null, d.title));
+    var meta = clEl('div', 'cl-read', (d.date || '') + ' · ' + d.sections + ' sections');
+    var rc = clReviewChip(d.reviewBy);
+    if (rc) meta.appendChild(rc);
+    if (d.revised) {
+      var rv = clEl('span', 'cl-gd-chip', '↻ revised ' + d.revised);
+      rv.title = 'Content revised — notes on the module header';
+      meta.appendChild(rv);
+    }
+    card.appendChild(meta);
+    card.appendChild(clEl('p', null, d.short || ''));
+    card.addEventListener('click', function() { window.location.hash = 'guidance/' + d.id; });
+    cards.appendChild(card);
+  });
+  window.scrollTo(0, 0);
+}
+
+function clRenderGuidanceDoc(doc, shell, scrollTo) {
+  clGlossMap = {};
+  clCurLesson = '';
+  clCurGuidance = doc.id;
+  clConceptsLoad().then(function(concepts) {
+    var ck;
+    if (concepts) for (ck in concepts) if (concepts.hasOwnProperty(ck)) clGlossMap[ck] = concepts[ck];
+    for (var gi = 0; gi < (doc.glossary || []).length; gi++) {
+      clGlossMap[String(doc.glossary[gi].t).toLowerCase()] = doc.glossary[gi].d;
+    }
+    shell.innerHTML = '';
+
+    var top = clEl('div', 'cl-top');
+    var tl = clEl('div');
+    tl.appendChild(clEl('div', 'cl-kick', 'Industry Guidance · ' + (doc.group || 'Study module')));
+    tl.appendChild(clEl('h2', 'cl-title', doc.title));
+    var src = doc.source;
+    var line = src
+      ? (src.doc || '') + ' — ' + (src.publisher || '') + ', ' + (src.date || '')
+        + ' · ' + (src.pages || '?') + ' pp · ' + (src.series || '') + ' · analyzed ' + (doc.updated || '')
+      : 'as of ' + (doc.updated || '');
+    var srcline = clEl('div', 'cl-gd-src', line);
+    var chip = clReviewChip(doc.reviewBy);
+    if (chip) srcline.appendChild(chip);
+    tl.appendChild(srcline);
+    top.appendChild(tl);
+    var back = clEl('button', 'cl-back', '← Library');
+    back.type = 'button';
+    back.addEventListener('click', function() { window.location.hash = 'guidance'; });
+    top.appendChild(back);
+    shell.appendChild(top);
+
+    shell.appendChild(clEl('div', 'cl-gd-note',
+      'Reading ticks for guidance modules still live in Profiler until the one-shot migration '
+      + '(C3 session 3). This module reads here; mark it read there.'));
+
+    if (doc.revisions && doc.revisions.length) {
+      var revs = clEl('div', 'cl-revs');
+      revs.appendChild(clEl('div', 'lb', 'Revision notes'));
+      for (var rvi = doc.revisions.length - 1; rvi >= 0; rvi--) {
+        var rv = clEl('div', 'rv');
+        rv.appendChild(clEl('span', 'd', doc.revisions[rvi].date));
+        rv.appendChild(document.createTextNode(doc.revisions[rvi].note));
+        revs.appendChild(rv);
+      }
+      shell.appendChild(revs);
+    }
+
+    if (doc.tiles && doc.tiles.length) {
+      var tiles = clEl('div', 'cl-tiles');
+      for (var ti = 0; ti < doc.tiles.length; ti++) {
+        var t = doc.tiles[ti], tile = clEl('div', 'cl-tile');
+        tile.appendChild(clEl('div', 'k', t.k));
+        tile.appendChild(clEl('div', 'v', t.v));
+        tile.appendChild(clEl('div', 's', t.sub));
+        tiles.appendChild(tile);
+      }
+      shell.appendChild(tiles);
+    }
+
+    var body = clEl('div', 'cl-body');
+    var nav = clEl('nav', 'cl-nav');
+    nav.appendChild(clEl('div', 'hd', 'Sections'));
+    var main = clEl('div');
+    body.appendChild(nav); body.appendChild(main);
+    shell.appendChild(body);
+
+    function navLink(id, label) {
+      var a = document.createElement('a');
+      a.className = 'ro';           // no tick to fill while guidance is read-only
+      a.href = '#cl-' + id;
+      a.appendChild(clEl('span', 'tick'));
+      a.appendChild(clEl('span', 'nm', label));
+      a.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        var target = document.getElementById('cl-' + id);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      nav.appendChild(a);
+    }
+
+    var secs = doc.sections || [];
+    for (var si = 0; si < secs.length; si++) {
+      main.appendChild(clRenderSection(doc, secs[si], { readOnly: true }));
+      navLink(secs[si].id, secs[si].title);
+    }
+
+    if (doc.glossary && doc.glossary.length) {
+      var gsec = clEl('section', 'cl-sec');
+      gsec.id = 'cl-glossary';
+      gsec.appendChild(clEl('h3', null, 'Glossary'));
+      gsec.appendChild(clEl('div', 'cl-read',
+        doc.glossary.length + ' terms — dotted terms anywhere in the module show these on hover'));
+      var grid = clEl('div', 'cl-gloss');
+      for (var gj = 0; gj < doc.glossary.length; gj++) {
+        var g = doc.glossary[gj], cell = clEl('div', 'cl-gl');
+        cell.appendChild(clEl('div', 't', g.t));
+        cell.appendChild(clEl('div', 'd', g.d));
+        grid.appendChild(cell);
+      }
+      gsec.appendChild(grid);
+      main.appendChild(gsec);
+      navLink('glossary', 'Glossary');
+    }
+
+    clBindTermTips(shell);
+    var target = scrollTo ? document.getElementById('cl-' + scrollTo) : null;
+    if (target) target.scrollIntoView({ block: 'start' });
+    else window.scrollTo(0, 0);
+  });
+}
+
+// Every term in every module, merged. A term defined in several modules keeps
+// each definition beside the module that gave it — the modules disagree
+// sometimes, and flattening that would hide it.
+function clRenderGuidanceGlossary(docs, shell) {
+  shell.innerHTML = '';
+  var top = clEl('div', 'cl-top');
+  var tl = clEl('div');
+  tl.appendChild(clEl('div', 'cl-kick', 'Industry Guidance · Unified Glossary'));
+  var byTerm = {};
+  docs.forEach(function(doc) {
+    (doc.glossary || []).forEach(function(g) {
+      var key = String(g.t).toLowerCase();
+      if (!byTerm[key]) byTerm[key] = { t: g.t, defs: [] };
+      byTerm[key].defs.push({ d: g.d, docId: doc.id, docTitle: doc.title });
+    });
+  });
+  var keys = Object.keys(byTerm).sort();
+  tl.appendChild(clEl('h2', 'cl-title', keys.length + ' terms'));
+  tl.appendChild(clEl('div', 'cl-gd-src', 'across ' + docs.length
+    + ' modules — a term defined in several shows every definition with its source'));
+  top.appendChild(tl);
+  var back = clEl('button', 'cl-back', '← Library');
+  back.type = 'button';
+  back.addEventListener('click', function() { window.location.hash = 'guidance'; });
+  top.appendChild(back);
+  shell.appendChild(top);
+
+  var grid = clEl('div', 'cl-gloss');
+  keys.forEach(function(k) {
+    var ent = byTerm[k], cell = clEl('div', 'cl-gl');
+    cell.appendChild(clEl('div', 't', ent.t));
+    ent.defs.forEach(function(def) {
+      cell.appendChild(clEl('div', 'd', def.d));
+      var srcBtn = clEl('button', 'cl-gd-btn', def.docTitle);
+      srcBtn.type = 'button';
+      srcBtn.title = 'Open this module’s glossary';
+      srcBtn.addEventListener('click', function() {
+        window.location.hash = 'guidance/' + def.docId + '/glossary';
+      });
+      cell.appendChild(srcBtn);
+    });
+    grid.appendChild(cell);
+  });
+  shell.appendChild(grid);
+  window.scrollTo(0, 0);
+}
+
+// ── Guidance views ────────────────────────────────────────────────────────
+// clCan('guidance') is the page's own copy of the matrix; the server checks it
+// again in handleGuidanceOp_, so this only avoids a round trip that would be
+// denied. A tier without the capability never sees the masthead link either.
+function clGuidanceDenied(shell) {
+  clCurGuidance = '';
+  shell.innerHTML = '';
+  shell.appendChild(clEl('div', 'cl-err',
+    'Industry Guidance is available to the admin and contributor tiers.'));
+}
+
+function clShowGuidanceIndex() {
+  var shell = clShell();
+  if (!shell) return;
+  clCurLesson = '';
+  clCurGuidance = 'index';
+  if (!clCan('guidance')) { clGuidanceDenied(shell); return; }
+  if (clGuidanceIndexCache) { clRenderGuidanceIndex(clGuidanceIndexCache, shell); return; }
+  shell.innerHTML = '';
+  shell.appendChild(clEl('p', 'cl-loading', 'Loading the guidance library…'));
+  clGuidanceApi('index', {}, function(res) {
+    if (!res || !res.success) { clCurGuidance = ''; clShowError(shell, res && res.error); return; }
+    clGuidanceIndexCache = res.docs || [];
+    clRenderGuidanceIndex(clGuidanceIndexCache, shell);
+  });
+}
+
+function clShowGuidanceDoc(id, scrollTo) {
+  var shell = clShell();
+  if (!shell) return;
+  if (!clCan('guidance')) { clGuidanceDenied(shell); return; }
+  clCurGuidance = id;
+  shell.innerHTML = '';
+  shell.appendChild(clEl('p', 'cl-loading', 'Loading module…'));
+  clGuidanceApi('doc', { id: id }, function(res) {
+    if (!res || !res.success) { clCurGuidance = ''; clShowError(shell, res && res.error); return; }
+    clRenderGuidanceDoc(res.doc, shell, scrollTo);
+  });
+}
+
+function clShowGuidanceGlossary() {
+  var shell = clShell();
+  if (!shell) return;
+  clCurLesson = '';
+  clCurGuidance = 'glossary';
+  if (!clCan('guidance')) { clGuidanceDenied(shell); return; }
+  shell.innerHTML = '';
+  shell.appendChild(clEl('p', 'cl-loading', 'Loading all modules…'));
+  clGuidanceFetchAll(function(docs) {
+    if (!docs) { clCurGuidance = ''; clShowError(shell, 'could_not_load_modules'); return; }
+    clRenderGuidanceGlossary(docs, shell);
+  });
+}
+
+
 // PROJECT: ── The drill (C4) ──────────────────────────────────────────────
 // Reading progress answers "have I been through this"; the drill answers "do
 // I still know it". Every flashcard and quiz item in the corpus is drillable.
@@ -5710,6 +6175,13 @@ function clDrillGrade(it, grade) {
 function clRoute() {
   if (!clAdmitted()) return;
   var h = String(window.location.hash || '').replace(/^#\/?/, '');
+  // Guidance routes first — they own the shell read-only, so every route below
+  // clears the flag and lets clApplyProgressUI resume painting ticks.
+  if (h === 'guidance') { clShowGuidanceIndex(); return; }
+  if (h === 'guidance-glossary') { clShowGuidanceGlossary(); return; }
+  var g = /^guidance\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
+  if (g) { clShowGuidanceDoc(g[1], g[2] || ''); return; }
+  clCurGuidance = '';
   if (h === 'drill') { clShowDrill(); return; }
   var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
   if (m) clShowLesson(m[1], m[2] || ''); else clShowIndex();

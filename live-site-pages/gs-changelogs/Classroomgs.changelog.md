@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20g] — 2026-09-13 12:13:40 AM EST — v05.44r
+
+### Added
+- **The nine Industry Guidance modules are now served by this app.** The library, each module and their glossaries are answered here, so guidance no longer has to be read in a different app
+- Access is unchanged: the admin and contributor tiers can read guidance, and the analyst and viewer tiers cannot — the same rule that applied when the modules were served elsewhere
+
+### Changed
+- Guidance content sits outside the region the automatic weekly curriculum job is allowed to write, so a scheduled run can never alter a guidance module
 
 ## [v01.19g] — 2026-09-08 06:59:28 AM EST — v05.18r
 

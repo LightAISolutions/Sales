@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10w] — 2026-09-13 12:13:40 AM EST — v05.44r
+
+### Added
+- **Industry Guidance now lives in Classroom.** The ✦ Industry Guidance link in the header opens the library here instead of sending you over to Profiler — nine modules grouped by their topic lane, each card showing its review date and whether it has been revised
+- **Search across every module at once.** Type two or more characters into the library's search box and it looks through every section, table, drill card and glossary entry in all nine modules, showing where each match sits and highlighting it in context
+- **A unified glossary.** One page listing every term defined anywhere in the library, alphabetically. A term several modules define shows each definition beside the module it came from, so you can see where they differ
+- **A lesson's "Built from" strip now opens the guidance module it names** instead of linking out to the other app
+
+### Changed
+- Guidance modules are **read-only here for now** — a note on each module says so. Marking sections read still happens in Profiler until your reading history is moved across, which is the last step of this move; nothing you have already marked is affected
 
 ## [v01.09w] — 2026-09-10 03:31:19 AM EST — v05.33r
 
