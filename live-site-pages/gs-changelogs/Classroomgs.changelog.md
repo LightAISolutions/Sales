@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 24/50`
+`Sections: 25/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.25g] — 2026-09-13 04:35:07 PM EST — v05.52r
+
+### Changed
+- **Two Industry Guidance modules now warn you about a phrase that means different things in different rulebooks.** The same two words are used by more than one authority, for the same kind of equipment, with tests that can reach opposite answers about the very same unit — so a sentence that is correct under one rulebook is wrong under another. Both modules now say which rulebook they are answering for, and each points at the other
+- One module's reading sections, and both modules' section names and order, are unchanged — reading marks and review schedules carry over untouched
+- One flashcard was reworded to carry the distinction, so **it re-enters the review rotation as new**; the schedule built on the old wording no longer describes the new text. A self-test explanation was expanded, which does **not** affect its schedule
 
 ## [v01.24g] — 2026-09-13 06:28:51 AM EST — v05.50r
 

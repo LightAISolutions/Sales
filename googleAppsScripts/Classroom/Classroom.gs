@@ -1,4 +1,4 @@
-var VERSION = "v01.24g";
+var VERSION = "v01.25g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -37793,7 +37793,7 @@ function guidanceDocBankability_() {
   { "date": "2026-08-29",
     "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." },
   { "date": "2026-09-13",
-    "note": "Quarterly freshness review against primary sources - UL 9540A 6th edition and its Jan 1, 2027 effective date, ANSI/CSA C800:25 as the published large-scale fire test procedure, the FCC inverter Covered List entry restated as foreign-produced rather than Chinese-made, PRC-029-1's confirmed Oct 1, 2026 date and the pending PRC-029-2, ERCOT's Dec 1, 2025 and Apr 1, 2026 advanced-grid-support dates, BNEF's Aug 15, 2026 Tier 1 criteria change, and AB 303's actual death date of Jan 31, 2026." }
+    "note": "Quarterly freshness review against primary sources - UL 9540A 6th edition and its Jan 1, 2027 effective date, ANSI/CSA C800:25 as the published large-scale fire test procedure, the FCC inverter Covered List entry restated as foreign-produced rather than Chinese-made, PRC-029-1's confirmed Oct 1, 2026 date and the pending PRC-029-2, ERCOT's Dec 1, 2025 and Apr 1, 2026 advanced-grid-support dates, BNEF's Aug 15, 2026 Tier 1 criteria change, and AB 303's actual death date of Jan 31, 2026. Later the same day, a cross-reference added to the EO 14420 module, which uses \"foreign-produced\" for the same equipment with a different test." }
  ],
  "tiles": [
   {
@@ -37941,7 +37941,7 @@ function guidanceDocBankability_() {
     "**The Independent Engineer report is the gate.** Lenders and tax equity will not close without one (DNV, Sargent & Lundy, Black & Veatch, Leidos, ICF, UL Solutions and peers). The IE tests: the revenue model against the equipment's real capability (cycling regime vs warranty limits - a two-cycles-per-day contract against a one-cycle warranty voids coverage, and IEs check for exactly this); technology and integration quality; **degradation and warranty terms** (do the guaranteed retention curves support the pro forma? is {{augmentation}} costed and physically provided for?); grid compliance; commercial agreements; and **supplier counterparty strength** - financial health, factory-audit results, field record, spares and service network.",
     "**The contractual skeleton:** commissioning guarantees (capacity + round-trip efficiency at COD); long-term energy-retention warranties conditioned on an operating envelope; **availability guarantees delivered through the LTSA** with liquidated damages - and suppliers generally will not give long-term warranties without holding the LTSA, since the LTSA controls the conditions the warranty depends on. Lenders now expect availability-anchored LTSA structures as standard.",
     "**The scorecards buyers consult:** the {{BNEF Tier 1}} storage list (a financeability screen - Chinese firms held ~85% of the Q2 2026 list), whose criteria **tightened on August 15, 2026**: six eligible projects in two years to at least three different buyers is no longer enough on its own, because at least one of those projects must now have been financed with **non-recourse debt from two or more different commercial banks**. That is a screen a supplier can fail while its shipment volumes rise, and it is worth checking against your own project list before a buyer checks it for you; DNV's annual Battery Performance Scorecard (independent lab degradation/safety testing); and CEA's factory-audit reporting - whose headline finding reframed diligence: **72% of BESS manufacturing defects are now found at system level** (fire detection & suppression 28% of system-level findings, auxiliary circuit panels 19%, thermal management 15%). Cell quality is no longer where most defects live - which is why factory-audit rights are in every serious RFP. (No dedicated PVEL/Kiwa BESS scorecard was confirmed - their famous scorecard is PV modules; do not cite one.)",
-    "**The China overlay:** lenders cannot avoid Chinese content (90-100% of US BESS carries some), so they price and paper it - MACR documentation, FEOC certifications, ITC-eligibility representations, recapture indemnities (mechanics in the companion China-policy module). **The inverter rule is not the rule most decks still describe, and the difference decides bids.** In July 2026 the FCC added power inverters to its Covered List and in August it narrowed the definition; the entry now reads **'foreign-produced power inverters, except power inverters which have been granted a Conditional Approval'**. Three things follow that a seller must have straight. First, **the test is place of production, not nationality of the producer** - a European or Korean-made inverter is caught on the same terms as a Chinese one, so 'pair the DC block with a non-Chinese PCS' is no longer an answer. Second, the covered class is narrow and specific: a **utility-interactive inverter as UL 1741 defines one**, that **contains or can accept** a component enabling remote communication, control, sensing, data collection or monitoring over Ethernet, Wi-Fi, cellular, Bluetooth or anything similar, wired or wireless - non-utility-interactive inverters are outside it. Third, **there are three ways out**, and they are documentary: the inverter is eligible for the **section 45X** advanced-manufacturing credit; or it is a **domestic end product** (US-manufactured with domestic component cost above 65% through calendar 2028, above 75% from 2029); or its producer holds a **Conditional Approval** from the Department of War or Homeland Security under the published evaluation process.",
+    "**The China overlay:** lenders cannot avoid Chinese content (90-100% of US BESS carries some), so they price and paper it - MACR documentation, FEOC certifications, ITC-eligibility representations, recapture indemnities (mechanics in the companion China-policy module). **The inverter rule is not the rule most decks still describe, and the difference decides bids.** In July 2026 the FCC added power inverters to its Covered List and in August it narrowed the definition; the entry now reads **'foreign-produced power inverters, except power inverters which have been granted a Conditional Approval'**. Three things follow that a seller must have straight. First, **the test is place of production, not nationality of the producer** - a European or Korean-made inverter is caught on the same terms as a Chinese one, so 'pair the DC block with a non-Chinese PCS' is no longer an answer. Second, the covered class is narrow and specific: a **utility-interactive inverter as UL 1741 defines one**, that **contains or can accept** a component enabling remote communication, control, sensing, data collection or monitoring over Ethernet, Wi-Fi, cellular, Bluetooth or anything similar, wired or wireless - non-utility-interactive inverters are outside it. Third, **there are three ways out**, and they are documentary: the inverter is eligible for the **section 45X** advanced-manufacturing credit; or it is a **domestic end product** (US-manufactured with domestic component cost above 65% through calendar 2028, above 75% from 2029); or its producer holds a **Conditional Approval** from the Department of War or Homeland Security under the published evaluation process. **One vocabulary warning, because it will come up in the same meeting:** EO 14420 also turns on whether equipment is *\"foreign-produced\"* and also names grid-connected inverters — but it defines the phrase as *not manufactured, produced or assembled in the US*, so US final assembly clears **that** test and does not clear this one. The companion EO module carries the comparison; answer with the instrument named.",
     "**The consequence is that the FEOC file and the FCC file have collapsed into one.** Section 45X eligibility itself requires that the component carry no material assistance from a prohibited foreign entity - which is the same MACR arithmetic the tax-credit analysis already demands - so the document set that proves ITC eligibility is now largely the document set that proves the inverter can be authorised for sale at all. Note also what the rule does **not** do: it is prospective, so **models already holding an FCC authorization are unaffected**, and the Commission separately waived its permissive-change rules so that harm-mitigating software and firmware updates can still be pushed to already-authorised covered units. The sales posture: lead with 45X or domestic-end-product status rather than with the supplier's flag, ask any PCS partner for its authorization and Conditional-Approval position in writing, and bring cybersecurity documentation (SBOM, firmware provenance, remote-access policy) unprompted - the national-security determination behind the listing is explicitly about remote connectivity, so that file is now responsive rather than decorative."
    ]
   },
@@ -38329,12 +38329,16 @@ function guidanceDocEo14420_() {
   "series": "Industry Guidance — policy module",
   "repo": "repository-information/industry-guidance/eo14420-bulk-power-system-analysis.md"
  },
- "updated": "2026-09-01",
+ "updated": "2026-09-13",
  "reviewBy": "2026-12-24",
  "revisions": [
   {
    "date": "2026-09-01",
    "note": "Authored from the primary text on the day the federal-source roster was added to Scraper. Every figure is a section citation, not a secondary report."
+  },
+  {
+   "date": "2026-09-13",
+   "note": "Disambiguated \"foreign-produced\" against the FCC's inverter Covered List, which since July 2026 uses the same phrase for the same named equipment with a different test. No §5 fact changed and reviewBy stays on the §3(b) rulemaking date."
   }
  ],
  "tiles": [
@@ -38475,6 +38479,7 @@ function guidanceDocEo14420_() {
    "ps": [
     "**\"Bulk-power system\" (§5(a))** — transmission facilities and control systems plus the generation needed for reliability. It **includes transmission rated at 69,000 volts or more** and **excludes facilities used in local distribution**. The 69 kV line is the single most useful scoping fact in the order: it separates a covered substation asset from distribution-side equipment.",
     "**\"Foreign-produced\" (§5(c))** — \"not manufactured, produced, or assembled in the United States.\" Note *assembled*. On the text, US final assembly of foreign content sits outside this definition. This is a **materially different test** from the tax-side domestic-content rules, and conflating the two is the predictable error.",
+    "**And since July 2026 there is a THIRD test wearing the same words, on the same equipment.** The FCC's Covered List entry for power inverters also turns on whether a unit is **\"foreign-produced\"** — but it defines the phrase as one that is **neither** eligible for the section 45X advanced-manufacturing credit **nor** a domestic end product under 48 CFR 25.101(a) (US-manufactured with domestic component cost above 65% through calendar 2028, above 75% from 2029). The two tests can disagree about the same physical unit: an inverter given final assembly in the US from foreign subassemblies is **not** foreign-produced under §5(c), because assembly is in the definition, and **is** foreign-produced for the FCC unless it clears 45X or the content bar. Grid-connected inverters are named equipment under §5(b) here, so both tests reach them. Name the instrument before you answer the question — \"is it foreign-produced?\" has no single answer in 2026.",
     "**\"Covered Foreign Entity\" (§5(e))** — two routes. Either a government subject to a US arms embargo or sanctions regime under the {{ITAR}}, or one the Secretary determines is engaged in conduct detrimental to US national security or foreign policy. **The second route is discretionary and undated** — that is where the real uncertainty sits.",
     "**\"Transaction\" (§2(a))** — acquisition, importation, transfer *or installation*. Installation is a transaction in its own right, so a unit already imported is not automatically clear of the prohibition."
    ]
@@ -38567,8 +38572,8 @@ function guidanceDocEo14420_() {
      "a": "69,000 volts. §5(a) includes transmission rated at 69 kV or more and expressly excludes facilities used in local distribution."
     },
     {
-     "q": "What does 'foreign-produced' mean, and why is the wording load-bearing?",
-     "a": "Not manufactured, produced, OR ASSEMBLED in the United States (§5(c)). Because 'assembled' is included, US final assembly of foreign content falls outside this particular test — which is a different test from the tax-side domestic-content rules."
+     "q": "What does 'foreign-produced' mean here, and which OTHER instruments use the same phrase differently?",
+     "a": "Under EO 14420 §5(c): not manufactured, produced, OR ASSEMBLED in the United States. Because 'assembled' is included, US final assembly of foreign content falls outside this test. Two other regimes use the same words for the same equipment and mean something else — the tax-side domestic-content rules, and the FCC's inverter Covered List, where 'foreign-produced' means neither section 45X-eligible nor a 48 CFR 25.101(a) domestic end product. Always name the instrument before answering."
     },
     {
      "q": "Does the order reach equipment already installed?",
@@ -38614,7 +38619,7 @@ function guidanceDocEo14420_() {
       "The order does not define it"
      ],
      "a": 1,
-     "why": "§5(c) includes 'assembled'. US final assembly takes it outside this definition — though §5(b)'s software, firmware and remote-access language can still bring the unit into scope by another route."
+     "why": "§5(c) includes 'assembled'. US final assembly takes it outside this definition — though §5(b)'s software, firmware and remote-access language can still bring the unit into scope by another route. Do not carry this answer across instruments: the FCC's Covered List uses the same phrase for the same equipment and defines it as neither 45X-eligible nor a domestic end product, under which the same Texas-assembled unit probably IS foreign-produced."
     },
     {
      "q": "A BESS installed in 2024 using equipment from a later-designated Covered Foreign Entity. What can the Secretary do?",
@@ -38677,6 +38682,10 @@ function guidanceDocEo14420_() {
     [
      "'Foreign-produced' = not manufactured, produced, or assembled in the US",
      "§5(c)"
+    ],
+    [
+     "The FCC's inverter Covered List uses the same phrase for the same named equipment with a DIFFERENT test — neither 45X-eligible nor a 48 CFR 25.101(a) domestic end product — so the two can disagree about one unit (noted 2026-09-13)",
+     "FCC Public Notice DA 26-870; 48 CFR 25.101(a)"
     ],
     [
      "Covered Foreign Entity: ITAR arms-embargo/sanctions route, or Secretary determination",

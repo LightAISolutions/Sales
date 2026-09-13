@@ -3,11 +3,57 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.52r] — 2026-09-13 04:35:07 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**The sweep found nothing wrong, and then found something else.** All nine guidance modules were searched for the nationality-framed FCC claim that v05.50r corrected in the bankability module. **No other module repeats it** — that is the answer to the question asked. But the search surfaced a collision that v05.50r itself created, and this commit closes it.
+
+### The negative result, stated plainly
+
+Every module was parsed and every string walked against `FCC | inverter | non-Chinese | Chinese-made | Chinese inverter | equipment authoriz | Covered List | SBOM | PCS/EMS`. Hits outside the bankability module were four, and all four are correct as written:
+
+| Module | Hits | Verdict |
+|---|---|---|
+| `eo14420-bulk-power-2026-08` | 8 | EO 14420's **own** §5(b) equipment list and §5(c) definition — a different instrument, correctly stated |
+| `power-infra-aidc-2026-08` | 2 | NOGRR 245 vs 282 and the IBR glossary entry — correct |
+| `bess-tech-fundamentals-2026-08` | 1 | PCS glossary entry (UL 1741 SB / IEEE 2800) — correct |
+| `grid-equipment-shortage-2026-09` | 1 | a proscons card title — not a claim |
+| `china-policy-stack-2026-08` | 0 | — |
+
+The discrimination that mattered: **FEOC, PFE, §154 and tariff claims are legitimately about Chinese entities and were left alone.** Only the FCC Covered List is nationality-agnostic, and only the bankability module had ever framed it otherwise.
+
+### The collision v05.50r created
+
+`eo14420-bulk-power-2026-08` teaches **§5(c)**: *"foreign-produced" = not manufactured, produced, **or assembled** in the United States* — and its `defs` section already warns that this is "a materially different test from the tax-side domestic-content rules."
+
+v05.50r added a **third** test wearing the same two words, applied to **the same named equipment class**: the FCC's Covered List defines "foreign-produced power inverters" as those **neither** §45X-eligible **nor** a 48 CFR §25.101(a) domestic end product. The two disagree about one physical unit — an inverter given final assembly in the US from foreign subassemblies is **not** foreign-produced under §5(c), and **is** foreign-produced for the FCC unless it clears §45X or the content bar. EO 14420 §5(b) names grid-connected inverters explicitly, so both tests reach them.
+
+The EO module's quiz turns on exactly that fact pattern — *"An inverter assembled in Texas from foreign-made subassemblies. Under §5(c), is it 'foreign-produced'?"* — and a seller who learned only that answer would carry it into an FCC conversation and be wrong.
+
+### Changed
+
+- **`googleAppsScripts/Classroom/Classroom.gs`** (v01.24g → v01.25g)
+  - `eo14420-bulk-power-2026-08` — `defs` gains a fifth paragraph naming the FCC test as the third meaning and showing where the two disagree; the `foreign-produced` flashcard reworded to carry all three regimes; a ledger row added citing DA 26-870 and 48 CFR 25.101(a); the Texas-assembly quiz item's `why` extended. `updated` 2026-09-01 → 2026-09-13 with a `revisions[]` entry. **`reviewBy` stays at 2026-12-24** — that is its own §3(b) rulemaking gate and nothing in this edit moves it
+  - `bess-bankability-2026-08` — a reciprocal clause in the FCC paragraph of `bankability`, so the trap is visible from whichever module the reader opens first; the existing 2026-09-13 `revisions[]` note extended rather than a second same-day entry added
+  - **Section ids, module ids and all three `counterparty` report anchors unchanged** in both modules; the EO module's flashcard count is unchanged at 7 and no card or quiz item was inserted, so **no `gc:`/`gq:` positional index shifted**
+
+### Worth knowing
+
+- **A quiz item's `why` is not part of its drill hash.** `clDrillGuidanceItems_` hashes `q + '||' + c.join('|') + '||' + a` — `why` is excluded. Confirmed in source before relying on it, which is why the quiz explanation could be improved at **zero schedule cost**. A flashcard's hash covers both `q` and `a`, so the one reworded card does re-enter the drill as new; that is the designed rule
+- **This commit is the first live exercise of the v05.51r deploy fix.** Run #562 confirmed the fix shipped dark exactly as predicted — it touched no `.gs`, so no deploy step fired. This one touches `Classroom.gs`, so `Deploy Classroom` should now report `Classroom deploy confirmed (GET): Updated to v01.25g …` with no POST attempt at all
+
+### Verification
+
+- `node --check` on a `.js` copy clean; `check-gas-inner-scripts.js` 9 files / 86 blocks; both edited module literals re-parsed as strict JSON with their section-id lists asserted equal to the expected names
+- `check-classroom-content.py` **byte-identical to a pristine `HEAD` worktree** (the 24 pre-existing errors on twelve stale `segment-*` lessons, untouched); `check-classroom-curriculum.py --strict` clean; pipeline `--selftest` 13/0 and `--base origin/main` **9 P2, no P3**, so `gateDigest` correctly left alone; `check-profiler-reports.py` 0/0; `check-readme-tree.py` 0 findings after `--fix` synced the GAS display
+- **Playwright at admin, zero page errors across both modules.** The new `defs` paragraph, the reworded flashcard and the new ledger row all paint on `eo14420-bulk-power-2026-08`; the reciprocal clause paints on `bess-bankability-2026-08`. The quiz `why` was verified by **actually answering the question** in the harness — it is absent from the initial DOM by design and appears on answer
 
 ## [v05.51r] — 2026-09-13 04:08:09 PM EST
 
