@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.54r] — 2026-09-13 07:54:01 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**Phase 4's row 2, and the last track this curriculum needs.** `how-a-utility-buys` is the second mechanism lesson and the second track-creating one; with `market-access` registered, **every track `CLASSROOM-CURRICULUM-PLAN.md` §2.2 specifies now exists**, and rows 3–24 are pure lesson authoring with no registry shape left to change. It is also the first *public* utility lesson — until now the regulated machinery was visible only to contributors, behind `utility-procurement-meets-ai-load`.
+
+### Added
+
+- **`how-a-utility-buys`** (gate `tracks`) — *The Regulated Machine*, lane Market Access & Bankability, `updated` 2026-09-13, `reviewBy` **2026-12-31**. Nine sections at exactly the ids §3.5 fixes, in its order and kinds: `the-monopoly-bargain` (prose — the revenue-requirement equation, the $47m-against-nothing ownership arithmetic, cost of service, rider and prudence review, and the formula-rate-plan variant), `plan-file-prove-recover` (timeline — eleven steps from IRP to prudence review across three lanes, with the large-load customer's own contract marked as the separate track it is), `three-documents-three-questions` (table — the plan, the certificate, the tariff), `the-large-load-tariff` (table — Virginia, AEP's eight jurisdictions, Texas under SB 6, Georgia, Xcel's three drafts, across minimum demand, threshold and term, collateral and exit, and who pays for the substation), `who-picks-the-battery` (callout — three lanes, and the 9,885 MW Georgia certificate as the worked split), `ercot-is-the-exception` (callout), `where-it-fails` (callout — five failures, each a document read as something it is not), `drill` (7 cards) and `check-yourself` (5 items). Four tiles; **no lesson glossary — all 47 `{{term}}` tokens resolve in `profiler-concepts.json`**, so defining any locally would shadow the registry for no gain. Inputs, each date read off the fetched document and each slug identity-matched: `study:dominion-energy@2026-09-03` · `study:aep@2026-09-03` · `study:oncor@2026-09-03` · `study:southern-company@2026-09-03` · `study:xcel-energy@2026-09-03` · `study:entergy@2026-09-03` · `study:burns-mcdonnell@2026-08-21` · `concepts:profiler-concepts@2026-09-13`. All eight public, so the stamp folds to `tracks` — confirmed by running the real region in Node
+- **`market-access`** — the fifth and final track of §2.2, lane Market Access & Bankability, `short` verbatim from §3.5, `prereqs` `["bess-foundations", "aidc-grid-to-chip"]` exactly as §2.2 promised for track 5. One lesson today of the nine §3.5 orders. Registered at **`clTracks_()` position 5** per §4 — not appended
+
+### Changed
+
+- **`CLASSROOM-CURRICULUM-PLAN.md` §7 row 2** and **`INTEGRATED-REMEDIATION-PLAN.md` §7.3 run-table row 6** — flipped to built/done and dated, with the registry state, the P5 expectation, the `reviewBy` derivation and the `burns-mcdonnell` stamp decision recorded in the rows themselves
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.13 written** — the brief that was missing when v05.53r ran. It is reconstructed from the prompt as issued, with the two facts that run proved wrong corrected in place and marked, and it carries forward the three techniques that run had to invent: answering the render harness from the real serving functions, using `clStudyNext_` as the proof a new track is on the teaching walk, and checking the live deployment directly because the Actions log API truncates before the Deploy step. **The obligation it sets is the general one:** the session that closes a run-table row writes the next row's brief into the file in the same commit
+- **`Classroom.gs`** `VERSION` v01.26g → v01.27g with `live-site-pages/gs-versions/Classroomgs.version.txt`; `Classroomgs.changelog.md` gains a generic section (`Sections: 27/50`)
+
+### Notes
+
+- **`reviewBy` is 2026-12-31, and it was derived rather than defaulted.** The lesson's own dated gates are the Dominion GS-5 class effective 2027-01-01, the Colorado proceeding expected early 2027, Georgia's storage short list in December 2026 — and **the SB 6 cost-allocation review, which the statute orders completed by the end of 2026.** That is the nearest, so it is the date. A six-month default would have been 2027-03-13 and would have let the Texas allocation question go stale unwatched
+- **`study:burns-mcdonnell` is stamped because the lesson draws on it, not because §7 listed it.** §3.5 marks that input "referenced; taught in `the-fence-line`", which is a real caution against double-teaching. The guide was fetched and read, and `where-it-fails` takes two claims from it that no other input carries: the study ladder (feasibility → system impact → facilities) and the fact that *load* and *generation* interconnection are different studies under different rules — the reason regulators began writing large-load rules at all. The requester-side depth stays in `the-fence-line`
+- **No lesson glossary, deliberately.** Every one of the 47 `{{term}}` tokens was probed against `profiler-concepts.json` before authoring and all 47 resolve. §8 item 4's rule is to define locally *only* when the lesson needs a meaning the registry lacks; `four-machines` needed seven local entries a day earlier, this one needs none, and adding any would shadow a registry definition for no reader benefit
+- **`check-classroom-content.py`: 32 lesson(s), 8 track(s), 142 gate case(s) — 24 error(s), 0 warning(s)**, the error set diffed line by line against a pristine `HEAD` worktree captured before any edit and found byte-identical. The 24 remain the twelve stale `segment-*` lessons that are S2's to regenerate. `check-classroom-curriculum --strict`: no structural findings, and the Market Access lane now reports `1 lesson(s) analyst-visible 1/1`
+- **P5 fired and is accepted; P3 did not.** `--base origin/main` reports P1 on the two plan files and P5 on the track position — the correct outcome for a developer session placing a track at its §4 position. `gateDigest` untouched, confirmed by P3's silence rather than asserted. `--selftest`: 13 fixtures, 0 failures
+- **Verified on the walk, not just in the registry.** `clStudyNext_` run against the real PROJECT region returns `market-access → how-a-utility-buys → the-monopoly-bargain` for an account that has completed the first four tracks, and still returns `cell-to-container` for a fresh one. Rendered at admin under Playwright with **zero page errors**, the ops answered by the real serving functions replayed through a `_gasPost` stub: eight tracks on the index with Selling Into the Market fifth, all nine sections, the eleven-step three-lane timeline, both tables, three callouts, seven flashcards and the five-question self-test
+- **CHANGELOG rotation still did not fire, and the reason is now the clock rather than the count.** 107 raw; eleven sections are dated 2026-09-13 EST, so **non-exempt is 96** — the same 96 it has been for four consecutive pushes, because every one of them landed on the same day. The first push on any later date makes all eleven non-exempt and rotation becomes due at 107; the oldest whole date group is **thirteen sections dated 2026-09-04**. The clone was already deep (1,158 → 1,161 commits) from this session's earlier unshallow
 
 ## [v05.53r] — 2026-09-13 06:41:02 PM EST
 

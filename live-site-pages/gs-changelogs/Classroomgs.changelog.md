@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 26/50`
+`Sections: 27/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.27g] — 2026-09-13 07:54:01 PM EST — v05.54r
+
+### Added
+
+- New lesson added to the curriculum
+- New track added, grouping the lessons about selling into the market
+
+### Changed
+
+- The new track suggests two recommended tracks to finish first
 
 ## [v01.26g] — 2026-09-13 06:41:02 PM EST — v05.53r
 

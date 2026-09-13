@@ -1,4 +1,4 @@
-var VERSION = "v01.26g";
+var VERSION = "v01.27g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -32082,6 +32082,427 @@ function clLessonFourMachines_() {
 };
 }
 
+function clLessonHowAUtilityBuys_() {
+  return {
+ "schemaVersion": 1,
+ "id": "how-a-utility-buys",
+ "type": "module",
+ "title": "The Regulated Machine",
+ "short": "A regulated utility does not shop; it plans, files, proves and recovers. The ladder from plan to tariff, and where a storage seller enters the machine.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-13",
+ "reviewBy": "2026-12-31",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:dominion-energy",
+    "date": "2026-09-03",
+    "note": "the monopoly bargain and the revenue-requirement arithmetic; the plan-to-plant sequence; the three instruments and what a supplier can influence in each; the anatomy of a large-load tariff and the GS-5 terms; the minimum-demand arithmetic worked once; cost-causation against socialization"
+   },
+   {
+    "kind": "public",
+    "ref": "study:aep",
+    "date": "2026-09-03",
+    "note": "the eight-jurisdiction tariff comparison — thresholds, terms, minimums, exit structures and the energy-component footnote; the three market designs and how capacity is procured under each"
+   },
+   {
+    "kind": "public",
+    "ref": "study:oncor",
+    "date": "2026-09-03",
+    "note": "the wires-only utility and what is missing from its regulated chain; SB 6 clause by clause with the study fee and security figures; the customer's facilities against the postage stamp; who builds the generation when the utility may not"
+   },
+   {
+    "kind": "public",
+    "ref": "study:southern-company",
+    "date": "2026-09-03",
+    "note": "Georgia's large-load rule as a rule rather than a rate class, and what it does not publish; the four certified procurement channels; the utility-owned project against the developer's bid"
+   },
+   {
+    "kind": "public",
+    "ref": "study:xcel-energy",
+    "date": "2026-09-03",
+    "note": "the resource-plan approval sequence and where the customer contract enters it; the same tariff in three drafts across three states; the near-term procurement that runs beside the plan"
+   },
+   {
+    "kind": "public",
+    "ref": "study:entergy",
+    "date": "2026-09-03",
+    "note": "the formula rate plan worked once; the two readings of a plant built for one customer and the three numbers to read a one-customer certificate for"
+   },
+   {
+    "kind": "public",
+    "ref": "study:burns-mcdonnell",
+    "date": "2026-08-21",
+    "note": "the interconnection study ladder from the requester's side, and that load interconnection and generation interconnection are different studies — the reason regulators began writing large-load rules at all"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "9–10 %",
+   "v": "allowed return",
+   "sub": "on the equity half of rate base — the term every behaviour follows from"
+  },
+  {
+   "k": "85 / 60",
+   "v": "percent minimum",
+   "sub": "of contracted wires and generation demand, billed whether drawn or not"
+  },
+  {
+   "k": "three",
+   "v": "documents",
+   "sub": "the plan, the certificate, the tariff — three questions, three decision-makers"
+  },
+  {
+   "k": "$50k / MW",
+   "v": "twice, in Texas",
+   "sub": "security plus a non-refundable interconnection fee, before a wire is designed"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-monopoly-bargain",
+   "title": "The bargain, and the one equation under it",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Every other buyer in this curriculum shops. A developer picks the cheapest bankable container; a hyperscaler picks what fits its schedule. **A regulated utility does not shop — it plans, files, proves and recovers**, and each of those verbs is a proceeding with a {{docket}} number, a calendar and an audience. In exchange for the exclusive right to serve a territory, a {{vertically integrated utility}} accepts that a {{public utility commission}} sets what it may charge, approves what it may build, and decides *afterwards* whether what it spent was prudent. Nothing it buys at scale is its own decision alone. That is the bargain, and it is why the sale is made or lost a year or more before any purchase order exists.",
+    "Now the equation everything else falls out of. A utility's {{revenue requirement}} — what it may collect in a year — is its operating costs, plus depreciation, plus taxes, plus a return on its {{rate base}}: the depreciated value of the plant it has built to serve customers. The return is the {{allowed return}} the commission sets on the equity share of that plant, **somewhere between nine and ten percent in most recent US decisions.** Read the last term twice, because it is the whole of the utility's behaviour.",
+    "Do the arithmetic once. A one-billion-dollar substation-and-transmission program, half financed with equity at a 9.5 percent allowed return, earns the utility roughly **$47 million of profit in its first year**, declining slowly as the plant depreciates over thirty or forty years. A one-billion-dollar {{PPA}} for the same capacity from someone else's plant earns **nothing** — it is a pass-through cost. *The utility is not being greedy when it prefers to own; it is being exactly what its incentives make it.* This is why a storage mandate in a regulated state produces company-owned batteries as well as contracted ones, and why a seller who knows which purchases go into rate base knows which ones the utility will fight for.",
+    "{{Cost of service}} is how the requirement gets divided. A cost-of-service study allocates each category — generation, transmission, distribution, customer service — to the {{rate class}}es that caused it, using measures such as each class's share of the system's {{coincident peak}}. The output is a set of tariffs: residential, small and large commercial, industrial, and — since the AI wave — a very-large-load schedule. The study is dry, and it is exactly where the data-center fight happens, because **a flat load that draws the same at 3 a.m. as at the system peak looks nothing like a factory or a suburb**, and where its costs land decides whether everyone else's bill rises.",
+    "Two more words finish the vocabulary. A {{rider}} recovers one program outside base rates, so a new plant starts earning before the next {{rate case}} — which is why a utility's largest projects each arrive with their own line on the bill. And a {{prudence review}} is the commission's after-the-fact test: a cost found imprudent when it was incurred is **disallowed and falls on shareholders**. That review, years later, is the real reason a regulated buyer is so attentive to a supplier's {{bankability}} and paperwork. Every purchase must still look reasonable to a hearing examiner in 2032.",
+    "One variant is worth knowing because it changes the clock rather than the logic. Under a {{formula rate plan}} — three of Entergy's five operating companies run on one — the utility files its actual earned return each year, the commission compares it to a band around the allowed return, and rates move by formula to close the gap. If the allowed return is 9.5 percent with a band of half a point and the company earned 8.6 percent on a $10 billion equity rate base, it is 0.4 points and **about $40 million** below the band, and rates rise to recover it. No hearing on the whole revenue requirement — an annual arithmetic exercise. The rate base still grows; the rates simply follow it within about a year instead of a rate-case cycle."
+   ],
+   "sales": "The first question to ask about any regulated opportunity is **whose balance sheet the thing lands on.** If the utility will own it, it goes into rate base, earns the allowed return, and the utility will defend it through the docket — one buyer, slow, but committed. If it will be contracted, the utility earns nothing on it and will argue for the self-build wherever the numbers are close. Those are two different sales with two different champions, and mistaking one for the other is the most expensive error in this market."
+  },
+  {
+   "id": "plan-file-prove-recover",
+   "title": "Plan, file, prove, recover — the sequence a purchase moves through",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "A representative sequence in years from the first filing, not a calendar. **The utility files** (gold), **the commission decides** (blue), **the plant gets built and paid for** (red). Every arrow can loop back: a forecast revision reopens the plan, a rejected certificate restarts the solicitation, a rate case can reprice everything. Note where the large-load customer's own contract enters — much later than most readers expect, and on a completely separate track from the plan.",
+   "lanes": {
+    "gen": "Utility files",
+    "deploy": "Commission decides",
+    "eco": "Build and recover"
+   },
+   "items": [
+    {
+     "x": 1.0,
+     "lane": "gen",
+     "label": "{{IRP}} filed",
+     "sub": "The forecast and the preferred plan: what the system will need over fifteen to twenty-five years and how the utility intends to procure it. Certified need starts here."
+    },
+    {
+     "x": 1.4,
+     "lane": "deploy",
+     "label": "Intervenors file testimony",
+     "sub": "Consumer advocates, industrial customers, environmental groups and commission staff attack the forecast and the portfolio economics. This is where a load forecast built on a data-center pipeline gets tested."
+    },
+    {
+     "x": 1.7,
+     "lane": "deploy",
+     "label": "Order on the plan",
+     "sub": "Reasonable or not, with findings on the {{load forecast}} and the resource mix. A megawatt number and authority to solicit — **not an approval to build anything.**"
+    },
+    {
+     "x": 2.1,
+     "lane": "gen",
+     "label": "{{RFP}} issued",
+     "sub": "An all-source or storage solicitation for the capacity the plan calls for. The utility's own self-build proposals bid against third parties, usually behind an {{independent engineer}} to police the conflict. **Bids lock the bidding developer's bill of materials — the equipment vendor's real deadline.**"
+    },
+    {
+     "x": 2.9,
+     "lane": "gen",
+     "label": "{{CPCN}} application",
+     "sub": "One project, proven needed and prudent: cost, site, alternatives, the winning bids or the self-build case. Eighteen months from order to bid deadline is normal, not slow."
+    },
+    {
+     "x": 3.5,
+     "lane": "deploy",
+     "label": "Certificate granted",
+     "sub": "Permission to build and to put the plant into {{rate base}} — the order that turns a plan into a purchase order. Only here do projects have names, prices and ownership structures."
+    },
+    {
+     "x": 3.7,
+     "lane": "eco",
+     "label": "Contracts signed, construction starts",
+     "sub": "{{EPC}} and supply agreements. A battery site takes one to two years, a gas plant three to five, a transmission line longer."
+    },
+    {
+     "x": 4.0,
+     "lane": "gen",
+     "label": "Large-load customer signs — separate track",
+     "sub": "The campus's own {{ESA}} and the {{large-load tariff}} that prices it are a different proceeding entirely, often still open while the resource solicitation runs. **The two tracks are routinely confused and share almost nothing but the commission.**"
+    },
+    {
+     "x": 5.2,
+     "lane": "eco",
+     "label": "{{Commissioning}} and {{energization}}",
+     "sub": "The plant proves itself and enters service; its capacity counts toward the reserve requirement at its {{ELCC}} value."
+    },
+    {
+     "x": 5.5,
+     "lane": "gen",
+     "label": "{{Rider}} or rate case for recovery",
+     "sub": "The cost enters rates through its own adjustment clause, or waits for the next {{rate case}}. Between the order and recovery the utility carries the capital."
+    },
+    {
+     "x": 6.3,
+     "lane": "deploy",
+     "label": "{{Prudence review}}",
+     "sub": "Was the spending reasonable when it was decided? Disallowed cost falls on shareholders — the review a supplier's paperwork has to survive."
+    }
+   ],
+   "note": "**The seller's leverage is highest between the order on the plan and the solicitation's bid date** — before the bill of materials locks — and lowest after the certificate, when the buyer is a contracting officer executing an approved plan. A second, faster track exists in states whose load is outrunning their planning cycle: a bounded *near-term procurement* granted on a reliability need rather than on the plan's long-run portfolio. It is decided on thinner analysis — less modelling, less testimony, less independent evaluation — and that is the trade the commission knowingly makes."
+  },
+  {
+   "id": "three-documents-three-questions",
+   "title": "Three documents, three questions",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "These three are constantly confused, including by people who work in the industry. They answer different questions, are decided by different people on different clocks, and open different doors for a supplier. If you learn one thing from this lesson, learn which document a given number came out of.",
+   "cols": [
+    "The document",
+    "The question it answers",
+    "Who decides",
+    "What a seller can influence",
+    "Typical clock"
+   ],
+   "rows": [
+    [
+     "**The plan** — the {{IRP}}",
+     "What will the system need over the next fifteen to twenty-five years, and what mix of resources should meet it? A forecast and a preferred portfolio, modelled under scenarios.",
+     "Filed by the utility; reviewed by the commission, which finds it reasonable or not but **approves no project**.",
+     "Almost nothing directly — but the plan's storage and {{dispatchable}} totals are the addressable market for the next decade, and its assumptions on battery cost and {{ELCC}} decide how much storage it calls for at all.",
+     "A full plan every two or three years with annual updates; six to twelve months of review"
+    ],
+    [
+     "**The certificate** — the {{CPCN}}",
+     "Is this one plant or line needed, prudent, and the right choice among the alternatives — and may it enter {{rate base}}?",
+     "The commission, on the record of a {{docket}} with intervenors.",
+     "Indirectly through the applicant's case, and **directly through the solicitation that feeds it**: the developer bidding the {{RFP}} chooses its OEM at bid stage, while the utility's own self-build bid runs through its {{EPC}} and approved-vendor list. Two lanes, two buyers, and only one of them is the utility.",
+     "Nine to fifteen months from application to order; award to purchase order another twelve to thirty-six"
+    ],
+    [
+     "**The tariff** — written in the {{rate case}}",
+     "What may the utility collect in total, at what {{allowed return}}, from which {{rate class}}es — and on what terms may it serve a very large load?",
+     "The commission, on a statutory cycle; in some states the large-load terms are a published class, in others a contract filed under seal.",
+     "Nothing directly; **everything indirectly**, because the {{large-load tariff}} written here decides whether the campus that would buy your storage can afford to connect — and whether flexibility and {{curtailment}} are rewarded, which is the socket a {{BESS}} plugs into.",
+     "About a year, on a statutory cycle; a biennial review in some states"
+    ]
+   ],
+   "note": "**The most common seller's error in this whole market is to read a utility's plan megawatts as a pipeline.** They are the ceiling, not orders. The orders are the certificates and the solicitation awards, on a fuse of one to three years — and in most of them it is the developer bidding the solicitation, not the utility, who chooses the hardware."
+  },
+  {
+   "id": "the-large-load-tariff",
+   "title": "The large-load tariff, five jurisdictions across",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "A {{large-load tariff}} is a set of answers to the same five questions, and every term is a translation of one fear: that a utility builds a substation and a plant for a data center that never fully arrives, and the bill lands on everyone else. **Read a tariff as a list of the ways a commission has been burned.** Read down a column to see where a commission was strict; read across a row to price one state. Figures are as the utilities and commissions stated them; the Texas column is a statute rather than a tariff, which is the point of including it.",
+   "cols": [
+    "Jurisdiction",
+    "Minimum demand",
+    "Threshold and term",
+    "Collateral and exit",
+    "Who pays for the substation"
+   ],
+   "rows": [
+    [
+     "**Virginia — Dominion's GS-5 class**",
+     "**85 %** of contracted transmission-and-distribution demand, and a separate, lower **60 %** on generation",
+     "25 MW or more at a 75 % {{load factor}}; **14 years** — a four-year ramp plus ten — then one-year renewals",
+     "Exit fees equal to the remaining minimum obligations; cash deposits and enhanced collateral",
+     "Direct assignment of defined transmission through mandatory contributions in aid of construction, ordered July 2026"
+    ],
+    [
+     "**AEP — eight jurisdictions, one argument**",
+     "**80–90 %** depending on the state; in five of the eight the minimum bill includes an **energy** component as well as demand, so the headline percentage understates the obligation",
+     "Thresholds from 25 MW (Ohio) to 150 MW (Kentucky); terms from **12 years** with a four-year ramp to **20 years**",
+     "Collateral required on every approved class. Exit is typically minimum bills for the remaining term, capped at three to five years after year five",
+     "Set per jurisdiction; the multi-state backbone is a separate allocation fight of its own"
+    ],
+    [
+     "**Texas — Oncor under {{SB 6}}**",
+     "**No tariff minimum and no tariff term** — a letter of agreement under statute, not a rate class",
+     "**75 MW**, with the commission able to set a lower one. Study fee at least $100,000 by statute; the proposed rule scales it to $100,000 for 75–250 MW and $300,000 above that, plus actual costs",
+     "Statutory security instead of an exit fee: the proposed rule sets **$50,000 per MW of security plus a non-refundable $50,000 per MW interconnection fee**, forfeited security split 80 % to {{rate base}} and 20 % refunded on withdrawal",
+     "Dedicated facilities on the customer; the network on the {{postage-stamp rate}}, allocated on the four {{coincident peak}}s — and the statute orders that allocation method re-examined"
+    ],
+    [
+     "**Georgia — Southern's large-load rule**",
+     "'Minimum billing requirements' — **the percentage is in the filed contract, not the rule.** Treat any specific Georgia figure quoted in trade press as unverified",
+     "New customers above **100 MW**; terms lengthened from five years to **fifteen**",
+     "Termination payments and collateral per contract; the portfolio has been described as backed by collateral in the tens of billions of dollars",
+     "The customer pays upstream generation, transmission and distribution costs as construction progresses, on top of site-specific costs"
+    ],
+    [
+     "**Xcel — the same tariff in three drafts**",
+     "Colorado proposes **80 %**, the highest of the three; Minnesota's approved version and the Wisconsin filing both apply a minimum",
+     "Colorado's **50 MW** is the lowest threshold of the three, so the net catches more customers; all three are multi-year",
+     "{{Exit fee}} and {{credit support}} provisions in Colorado; cost-causation provisions in Minnesota",
+     "Set in each state's proceeding; the Colorado decision was expected in early 2027"
+    ]
+   ],
+   "note": "**Colorado is the row to read twice.** It sets the lowest threshold and the highest minimum — the strictest combination of the three — and it is also the state that had not decided yet, had the lowest earned return, and had its settled rate increase cut. *A commission under pressure to protect ordinary customers writes a harder tariff.* That is not a coincidence; it is the mechanism, and it is how you predict a draft you have not read yet.",
+   "sales": "Two terms in this table are the storage seller's entire opening. **Flexibility and {{curtailment}}** — where accepting an interruption buys an earlier connection, and in Texas is a condition of connecting at all — is the socket on-site storage plugs into. And the **ramp** is a calendar: a campus that slips a year against a four-year ramp eats a year of minimum charges, which is the moment on-site generation and storage stop being a line item and start being a rescue."
+  },
+  {
+   "id": "who-picks-the-battery",
+   "title": "Who actually picks the battery",
+   "kind": "callout",
+   "tone": "info",
+   "read": "6 min",
+   "intro": "The lesson so far has been about how a decision gets *authorised*. This is about who makes it. In a regulated state there are three lanes, they pass through the same commission, and the difference to a seller is who holds the purchase order and how far ahead of the certificate it is placed.",
+   "ps": [
+    "**Lane one — the utility owns it.** The project is certified, put into {{rate base}}, built by an {{EPC}} the utility hires, and the battery is bought under the utility's own supply agreement. Georgia's 2024 storage portfolio is this lane made concrete: one integrator's supply agreement, two EPCs, four sites, with the supplier named a year *before* certification. What it buys a seller is one known buyer with a published plan and a solicitation calendar, warranties running direct to the utility for the asset's life, and a customer that will defend the cost in the {{prudence review}} because it earns the {{allowed return}} on it. What it costs is speed — the project waits for the certificate and the utility's procurement gates — and exclusivity: **one buyer means one qualification list, and a seller not on it is not in the lane at all.**",
+    "**Lane two — a developer wins a {{PPA}}.** A third party wins a solicitation reviewed by an {{independent engineer}}, owns the plant, and chooses the hardware itself. There are many potential buyers — every developer preparing a bid — and the decision is commercial: price, bankability, schedule. It is also faster, because **the bid locks the bill of materials before the utility has decided anything.** The cost is that the utility earns nothing on a PPA and will argue for the self-build wherever the numbers are close; and in a state with no {{capacity market}}, the contract is the only revenue, so a developer that loses the bid has no merchant fallback.",
+    "**Lane three — the customer brings its own.** Increasingly the campus itself procures, under a customer-identified-resource or behind-the-meter arrangement, sometimes with a savings-sharing rule negotiated into the tariff. Here the counterparty is the campus and its EPC, and the decision is made in the electrical design rather than in any docket.",
+    "**The scale of the split, from one real certificate.** Georgia's December 2025 certification put 9,885 MW into four channels: self-build combined-cycle gas at existing plant sites; **eleven utility-owned battery projects**, with the plan calling for more than 1,500 MW of storage by 2035 on top of a 500 MW / 2,000 MWh portfolio already under construction; about **2,800 MW of third-party purchases** where the equipment was never the utility's decision; and uprates at existing plants. One state, one order, and the battery seller's counterparty is different in three of the four.",
+    "**And a warning about who is really neutral.** When the binding constraint is turbines and crews rather than permission, utilities sign with the supply chain first. One filed a strategic alliance reserving F-class gas turbines and a multi-gigawatt wind capacity reservation — and a joint development agreement for about 2 GW of data-center generation — **before** the tariffs that would price the load were approved and before either of its own solicitations closed. That is sound strategy and it creates a conflict a commission has to police: *a utility that has already reserved turbines is not a neutral evaluator of bids that would use someone else's.*"
+   ],
+   "sales": "Ask one question early and the rest of the qualification follows from it: **is this a rate-base project or a contracted one?** Rate-base means selling to the utility's procurement organisation, on its vendor list, years ahead, with the commission as the ultimate audience. Contracted means selling to whichever developer is assembling a bid, on a deadline set by the solicitation's bid date. Same megawatts, same commission, entirely different sale."
+  },
+  {
+   "id": "ercot-is-the-exception",
+   "title": "ERCOT is the exception, and it is half the market",
+   "kind": "callout",
+   "tone": "info",
+   "read": "6 min",
+   "intro": "Everything above describes a {{vertically integrated utility}}. Texas took that company apart in 1999, and because a very large share of US data-center load is landing inside {{ERCOT}}, a seller who has only learned the regulated machine has learned about half of the market. Here is precisely what changes.",
+   "ps": [
+    "**What a wires-only utility is.** Inside ERCOT, generation was sold to merchants competing in a wholesale market, the customer relationship went to competitive {{retail choice}} providers, and what remained — poles, lines, substations, meters — became a regulated {{TDU}}. It delivers power other companies made to customers other companies bill. The {{revenue requirement}} equation still holds, but **the rate base is wires alone**: no combined-cycle plants, no nuclear, no fuel. Growth comes only from building more wires and putting them into rate base, which is why a wires company welcomes load the way a merchant welcomes scarcity — every gigawatt that connects needs a substation, and every substation is rate base.",
+    "**What disappears from the chain.** No generation {{IRP}}. No {{CPCN}} for a plant. No all-source {{RFP}}. **No utility-owned battery lane at all** — the statute limits a wires utility's storage to narrow reliability uses that must not compete with the market, and every proposal is argued as market intrusion. *Nobody certifies the supply, because the utility has none.* What remains is a certificate for transmission lines, a wires {{rate case}}, and a {{large-load interconnection}} process that decides when a campus can energise. A seller who pitches a Texas wires utility a battery is pitching a company the statute forbids from buying it.",
+    "**Where the capacity decision went instead.** ERCOT is an {{energy-only market}}: there is no capacity product, nobody is obliged to build, and price is scarcity during tight hours up to an administrative cap. Compare the same corporate decision — sign a gigawatt of data-center load — across one company's three market designs and you get three different problems: a {{capacity market}} cost passed to customers in {{PJM}}, a certification docket and a state {{prudence review}} in {{SPP}}, and **a private financing question in ERCOT**. The generation that serves a Texas campus is built by merchants, by IPPs signing a {{PPA}} or a {{tolling agreement}} with the campus, by the hyperscaler {{behind-the-meter}} as a {{private use network}}, or by bridge-power vendors filling the gap until the grid arrives.",
+    "**So storage enters through the market, not the docket.** A grid battery in ERCOT earns on energy arbitrage and on the ancillary services the operator buys — regulation, responsive reserve, the newer fast-frequency products. That was enough to build the largest battery fleet outside California **without a single certificate** — and the fleet is now large enough that the ancillary markets it grew up on have saturated, pushing new projects toward energy revenues and longer durations. The counterparty is the developer or the IPP, and the decision is made at bid stage against a market forecast, not at a commission's certification.",
+    "**And the statute has started to look like a tariff anyway.** {{SB 6}} answered the queue's own failures clause by clause: a study fee because free requests are infinitely cheap to make; security because a request with no money behind it is indistinguishable from one with a signed lease; duplicate-request disclosure because one campus shopping five utilities appeared in the state forecast five times; backup-generation disclosure once on-site capability reaches half of demand, because the operator could not see generation inside the fence; a **deploy-or-curtail** authority; and curtailment equipment required *before* interconnection for loads connecting after 31 December 2025. **Read that list as a storage brief**: every one of those clauses pays a campus that can back off on command."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "7 min",
+   "intro": "Five ways a regulated sale goes wrong, each of them a document being read as something it is not.",
+   "ps": [
+    "**A bid that arrives outside the plan.** The commission's order on the plan authorises a solicitation for a stated quantity; a proposal that does not correspond to certified need has no instrument to land in, however good it is. The subtler version is timing rather than fit: a resource-plan cycle takes about three years from filing to signed contract, so an offer made after the bid window is an offer for the *next* cycle. The exception is the near-term procurement a commission grants when load is outrunning the planning cycle — faster, smaller, and decided on thinner analysis. **Knowing whether a state currently has one open is worth more than any amount of product positioning.**",
+    "**A tariff draft that moves.** The terms in a filed tariff are proposals until the order, and commissions change them — thresholds drop, minimums rise, ramps appear and disappear. A campus pro forma built on a draft is built on a negotiation. Worse, the headline number can be honest and still mislead: in five of one utility's eight jurisdictions the minimum bill carries an **energy** component alongside demand, so the quoted percentage understates the real obligation. And where the terms live in a contract filed under seal rather than a published class, there is no number to check at all — **a specific minimum-bill percentage quoted from trade press about such a state should be treated as unverified.**",
+    "**A docket that names your customer.** A plant or a contract certified for one identified campus becomes a public proceeding about that campus, with intervenors, conditions and reporting obligations attached. Read a one-customer certificate for **three numbers: the term of the contract, the life of the plant, and the share of the transmission the customer funds.** The gap between the first two is the exposure — a fifteen-year contract against a forty-year plant leaves twenty-five years the contract does not cover — and the third is how much of the shared system the deal admits it uses. Conditions negotiated after the turbine is ordered cannot change the plant; they can only change who pays for it.",
+    "**A cost-allocation fight that stalls the substation.** Underneath the tariff, the study and the rate case is one unresolved question: does the load that caused the cost pay it, or does the system? Cost-causation protects other rate classes and filters the queue, but shared assets are genuinely hard to attribute and front-loaded charges push development to the next utility over — or {{behind-the-meter}}, where the system then cannot see it. Socialisation gets the lines built and raises residential bills for load those customers do not use, which is the finding that made data centers a legislative issue. **Most regimes are a hybrid, and the hybrid is argued project by project** — which is time your schedule is paying for.",
+    "**And the study ladder nobody budgeted for.** Nothing connects without an interconnection study: engineers model what the new load does to power flows, voltages and fault currents, then price the network upgrades — which the requester typically funds. The studies run in queued phases — **feasibility, then system impact, then facilities** — and in busy regions the wait runs years. The trap specific to this lesson: *load* interconnection and *generation* interconnection are different studies under different rules, and regulators only began writing large-load rules at all because AI campuses broke the assumptions the old ones were built on. A schedule that assumed the generation-side clock is a schedule that has not started yet."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Write the revenue-requirement equation, and say which term explains a regulated utility's behaviour.",
+     "a": "What a utility may collect in a year is its operating costs plus depreciation plus taxes plus a return on its rate base — the depreciated value of the plant it has built to serve customers. The last term is the one that explains everything: the return is the allowed return the commission sets on the equity share of that plant, typically nine to ten percent in recent US decisions. A billion-dollar program half financed with equity at 9.5 percent earns roughly $47 million of profit in year one; a billion-dollar PPA for the same capacity earns nothing, because it is a pass-through cost. The utility prefers to own because its incentives make it prefer to own."
+    },
+    {
+     "q": "Name the three documents and the question each answers. Which one can a supplier actually influence?",
+     "a": "The plan (IRP) answers what the system will need over fifteen to twenty-five years — reviewed for reasonableness, approving no project. The certificate (CPCN) answers whether this one plant is needed, prudent and the best of the alternatives, and may enter rate base — decided by the commission on a docket. The tariff, written in the rate case, answers what may be collected, from which rate classes, and on what terms a very large load may be served. A supplier influences the certificate indirectly through the applicant's case, and directly through the solicitation that feeds it — because the developer bidding the RFP chooses its OEM at bid stage."
+    },
+    {
+     "q": "A utility's resource plan calls for 3 GW of storage. How much of that is a pipeline?",
+     "a": "None of it. Plan megawatts are the ceiling of the addressable market, not orders. The orders are the certificates and the solicitation awards, on a fuse of one to three years — and in most of them the developer bidding the solicitation, not the utility, chooses the hardware. Reading plan megawatts as a pipeline is the most common seller's error in the regulated market."
+    },
+    {
+     "q": "What is a minimum demand charge, what does it protect against, and what does it do to a campus plan?",
+     "a": "It bills a percentage of contracted capacity every month whether it is drawn or not — 85 percent of transmission-and-distribution demand with a lower generation minimum is one real example. It protects against speculative requests: a queue of paper megawatts the utility would otherwise plan and build for. For the campus it converts phasing from a construction question into a billing one — a 300 MW site taken as three 100 MW steps joins the queue three times, while signing the full 300 MW holds the place and carries the minimum until tenants arrive. For the utility it turns contracted intent into bankable revenue it can finance a substation against, which is the same thing take-or-pay does for a colocation lease."
+    },
+    {
+     "q": "Three lanes buy a grid battery in a regulated state. Name them and say who holds the purchase order in each.",
+     "a": "One, the utility owns it: certified, in rate base, built by an EPC the utility hires, with the battery under the utility's own supply agreement — one buyer, one qualification list, and the supplier is often named before certification. Two, a developer wins a PPA in the solicitation, owns the plant and chooses the hardware itself — many potential buyers, and the bid locks the bill of materials before the utility has decided anything. Three, the customer brings its own supply under a customer-identified-resource or behind-the-meter arrangement, where the counterparty is the campus and its EPC. The utility earns its allowed return only in lane one, which is why it argues for the self-build wherever the numbers are close."
+    },
+    {
+     "q": "What is a wires-only utility, and what does its existence delete from the sales map?",
+     "a": "A transmission-and-distribution utility that owns no generation — the shape left when a state separates generation into a competitive wholesale market and the customer relationship into competitive retail. Its rate base is wires alone, so it grows by connecting load. Deleted from the chain: the generation resource plan, the certificate for a plant, the all-source solicitation, and the utility-owned battery lane — statute limits its storage to narrow reliability uses that must not compete with the market. Nobody certifies its supply because it has none, so storage enters through the market instead: energy arbitrage and ancillary services, with the developer or IPP as counterparty."
+    },
+    {
+     "q": "An energy-only market has no capacity product. What did the state do instead once the queue outgrew the grid, and why should a storage seller care?",
+     "a": "It legislated the terms of connection: a threshold above which the statutory process applies, a study fee so requests are not free, per-megawatt security and a non-refundable interconnection fee, duplicate-request disclosure because one campus shopping five utilities appeared in the forecast five times, backup-generation disclosure once on-site capability reaches half of demand, an authority to direct large loads to run their own generation or reduce draw, and curtailment equipment installed before interconnection. Every one of those clauses pays a campus that can back off on command — which is the case for on-site storage stated by the state itself."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A utility can meet 500 MW of certified need by building the plant itself or by signing a PPA at the same total cost. Which does it prefer, and why?",
+     "c": [
+      "Building it — only the owned plant enters rate base and earns the allowed return",
+      "The PPA — it avoids construction risk and the commission prefers contracts",
+      "Neither; the commission chooses and the utility is indifferent",
+      "The PPA — pass-through costs are recovered faster than rate-base costs"
+     ],
+     "a": 0,
+     "why": "A PPA is a pass-through cost and earns the utility nothing. An owned plant enters rate base and earns the allowed return on its equity share for thirty or forty years — roughly $47 million in year one on a billion-dollar program at a 9.5 percent return. That is not greed, it is the incentive the bargain creates, and it is why a storage mandate in a regulated state produces company-owned batteries alongside contracted ones. It is also why the commission insists the self-build be tested against real third-party bids."
+    },
+    {
+     "q": "Which document actually decides whether the data center that would buy your storage can afford to connect?",
+     "c": [
+      "The large-load tariff, written in the rate case",
+      "The integrated resource plan",
+      "The certificate of public convenience and necessity",
+      "The interconnection study agreement"
+     ],
+     "a": 0,
+     "why": "The plan states need, the certificate authorises one project, and the interconnection study prices the wires — but the tariff sets the threshold, the term, the minimum demand charge, the collateral and the exit fee that decide whether the campus's numbers work at all. It is also where flexibility and curtailment are rewarded, which is the term that turns on-site storage from a line item into the thing that makes the tariff affordable."
+    },
+    {
+     "q": "A developer contracts 300 MW on a class whose minimum is 85 percent of contracted demand, and fills the campus over four years. What has it actually bought in year one?",
+     "c": [
+      "A bill for 255 MW of wires demand while drawing a fraction of it",
+      "A bill matched to the roughly 30 MW it actually draws",
+      "A waiver of demand charges until the campus is occupied",
+      "A refund of the difference at the end of the ramp"
+     ],
+     "a": 0,
+     "why": "The minimum is charged on contracted capacity, not consumption, so 85 percent of 300 MW is billed whether or not it is drawn — and at illustrative demand charges that is tens of millions of dollars a year for a building that is one-tenth full. That is the point of the instrument: it converts 300 MW of intent into bankable revenue the utility can take to a certificate docket and finance a substation against. A ramp softens year one; a tariff without one makes the minimum the price of the queue position."
+    },
+    {
+     "q": "Why can a seller not pitch a battery to a wires-only utility inside an energy-only market?",
+     "c": [
+      "Statute limits its storage to narrow reliability uses that must not compete with the market",
+      "Its rate base is too small to finance one",
+      "The grid operator, not the utility, owns all storage in that market",
+      "Batteries cannot be certified without an integrated resource plan"
+     ],
+     "a": 0,
+     "why": "The utility owns no generation by design, and its storage is confined by statute to narrow reliability cases that are argued as market intrusion every time they are proposed. Nobody certifies its supply because it has none. Storage in that market is built by merchants and IPPs earning on energy arbitrage and ancillary services, so the seller's counterparty is the developer — and the utility appears in the sale only as the owner of the energisation date."
+    },
+    {
+     "q": "A commission sets the lowest applicability threshold and the highest minimum demand charge of any state its utility has filed in. What does that most likely tell you?",
+     "c": [
+      "It is under pressure to protect ordinary ratepayers — the strictest terms come from the most pressured commissions",
+      "Its state has the least data-center load, so the terms are untested",
+      "It has the highest allowed return, so it can afford strict terms",
+      "The utility proposed the strictest version first as an opening position"
+     ],
+     "a": 0,
+     "why": "A low threshold catches more customers and a high minimum binds them harder — the strictest combination available. In the observed case it came from the state that had not yet decided, had the lowest earned return and had its settled rate increase cut. Every term in a large-load tariff is a translation of the fear that other customers end up paying for a campus that never fully arrives, so the more exposed the commission feels, the harder the tariff it writes. That is how you predict a draft you have not read."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -32153,6 +32574,24 @@ function clTrackAidcCampus_() {
  ],
  "prereqs": [
   "electrical-foundations",
+  "aidc-grid-to-chip"
+ ]
+};
+}
+
+function clTrackMarketAccess_() {
+  return {
+ "schemaVersion": 1,
+ "id": "market-access",
+ "title": "Selling Into the Market",
+ "short": "Finish this and you can name who signs the PO, under which contract, against which certification file, inside which policy fence — and say what 'bankable' concretely means to the lender who decides.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-13",
+ "lessons": [
+  "how-a-utility-buys"
+ ],
+ "prereqs": [
+  "bess-foundations",
   "aidc-grid-to-chip"
  ]
 };
@@ -32252,11 +32691,13 @@ function clLessons_() {
           clLessonSegmentSoftwareAndOptimization_(),
           clLessonSegmentInsuranceAndRiskTransfer_(),
           clLessonReadingTheGraph_(),
-          clLessonFourMachines_()];
+          clLessonFourMachines_(),
+          clLessonHowAUtilityBuys_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
           clTrackAidcGridToChip_(), clTrackAidcCampus_(),
+          clTrackMarketAccess_(),
           clTrackValueChainMakers_(),
           clTrackValueChainBuilders_(),
           clTrackValueChainBuyersAndBackers_()];
