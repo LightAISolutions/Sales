@@ -98,4 +98,18 @@ The prior `secrets.WORKFLOW_PAT || secrets.GITHUB_TOKEN` pattern was unsafe beca
 
 **Why a variable, not just a secret presence check:** a variable is explicit opt-in configuration. A secret presence check would silently activate `WORKFLOW_PAT` the moment someone added the secret, reintroducing the stale-PAT failure mode. The variable forces a conscious decision to use the PAT path.
 
+## GAS Self-Update Deploy Verification (`.github/scripts/gas-deploy.sh`)
+
+Every `Deploy <Project>` step is a four-line wrapper around one shared script. **Do not inline the verification logic back into the steps** — that is exactly how it drifted: response checking and the GET fallback were added to four of eight steps and never reached Testauthgas1, Testauthhtml1, Globalacl or MasterACL, which sat on `curl … || true` for months.
+
+**The assertion.** `pullAndDeployFromGitHub()` returns `Updated to <v>` on a real deploy and `Already up to date (<v>)` when the running deployment's `VERSION` already equals what it read from GitHub. The step used to accept either string **with any version in it**, which cannot distinguish a real deploy from a stale read of the `.gs` off the GitHub contents API — a stale read reports the OLD version as current and would pass. The script now requires the version in the answer to equal the version in the merged `.gs`, read with `sed -n 's/^var VERSION *= *"\([^"]*\)".*/\1/p'`. An unreadable `VERSION` is a failure, never a pass.
+
+**GET first, POST as fallback.** Measured on runs #558 and #561: the POST leg's response is never readable by the runner (Google's 302 drops it), so it printed `POST deploy unconfirmed` on every run — *including the runs where it had actually deployed* — at a cost of 8–13s per project. The GET route (`?action=api&op=deploy`) returns the function's real return string. POST is kept, not deleted, because it has been observed to complete a deploy on its own.
+
+**Failure is deferred on purpose — do not "fix" this by failing in place.** `gas-deploy.sh` records failures to `$RUNNER_TEMP/gas-deploy-failures` and **exits 0**. `Delete branch` and `Sweep stale claude branches` are gated on `success()`, so a step that failed in place would leave the `claude/*` branch alive and block the next session under push-once enforcement. The final step of the `auto-merge` job, **`Fail the run if any GAS deploy was unconfirmed`**, reads that file after cleanup and exits 1. Keep that step last.
+
+**Version ceiling.** The success string carries `N/200`. Apps Script caps a project at 200 versions; past that `pullAndDeployFromGitHub()` returns `DEPLOY HALTED` and the live app silently stops advancing. The script warns at ≥170. Classroom was at 32/200 on 2026-09-13.
+
+**Reading a run.** The authoritative check is the `Deploy <Project>` step log, not the green tick and not the page's GAS version pill (which reads the repo's `gs-versions/*.txt` off Pages — the repo's file, not the deployment). `Updated to vX …` = deployed this run. `Already up to date (vX)` = already on vX, and since the assertion landed, vX is guaranteed to be the merged version.
+
 Developed by: LightAISolutions

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-13 06:28:51 AM EST` · Repo version: `v05.50r`
+Last updated: `2026-09-13 04:08:09 PM EST` · Repo version: `v05.51r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -1440,6 +1440,8 @@ Last updated: `2026-09-13 06:28:51 AM EST` · Repo version: `v05.50r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/.github/workflows">workflows/</a>              — [template] CI/CD pipeline
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/workflows/auto-merge-claude.yml">auto-merge-claude.yml</a> — [template · initialized] Auto-merge, GAS deploy, Pages deploy, library mirror
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/workflows/clasp-deploy-pilot.yml">clasp-deploy-pilot.yml</a> — clasp push deployment pilot
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/.github/scripts">scripts/</a>                — Shell helpers called by the workflows
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/scripts/gas-deploy.sh">gas-deploy.sh</a> — Shared GAS self-update caller: asserts the deployed version equals the merged version
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/.github/ISSUE_TEMPLATE">ISSUE_TEMPLATE/</a>         — [template] Bug report &amp; feature request forms
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml">bug_report.yml</a> — [template · initialized] Bug report form
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/feature_request.yml">feature_request.yml</a> — [template · initialized] Feature request form

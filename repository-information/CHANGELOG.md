@@ -3,11 +3,59 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.51r] — 2026-09-13 04:08:09 PM EST
+
+> **Prompt:** "If there is nothing to do on my side, then I would prefer you execute steps 1-5 all together. If that would cause any issues, let me know. Otherwise, go for it."
+
+**The GAS deploy path stops reporting success it has not verified.** Investigated from the GitHub Actions logs rather than from the session note, which turned out to be partly wrong about what happened.
+
+### The correction to the record
+
+`SESSION-CONTEXT.md` carried: *"Run #558's Deploy Profiler reported success and ran ten seconds — and the Apps Script project was still on v01.38g."* The run log says otherwise. Line 477 of run #558's `auto-merge` job reads `Deploy confirmed (GET): Already up to date (v01.39g)`, and v05.48r is the commit that *introduced* v01.39g — so the deployment had already advanced to it within the preceding ten seconds, which only the POST at 07:32:25 can explain. **Profiler did deploy at run #558.** The "still on v01.38g" reading was almost certainly a stale Apps Script editor tab; that editor does not live-reload.
+
+What the logs do establish, across three observations:
+
+| Run | Project | POST leg | GET leg reported |
+|---|---|---|---|
+| #558 | Profiler v01.38→39g | unconfirmed (8s) | `Already up to date (v01.39g)` — POST had deployed |
+| #558 | Classroom v01.22→23g | unconfirmed (10s) | `Updated to v01.23g (deployment 32) \| 32/200` — GET deployed |
+| #561 | Classroom v01.23→24g | unconfirmed (13s) | `Already up to date (v01.24g)` — POST had deployed |
+
+The mechanism was delivering. It was delivering by luck of having a fallback, and reporting in a way nobody could read.
+
+### Added
+
+- **`.github/scripts/gas-deploy.sh`** (new) — one shared caller for all eight `Deploy <Project>` steps. The verification logic used to be inline, which is precisely how it drifted: response checking and the GET fallback reached four of eight steps and never reached the other four. Eight copies drift; one caller cannot
+- **`.github/workflows/auto-merge-claude.yml`** — a new final step in the `auto-merge` job, **`Fail the run if any GAS deploy was unconfirmed`**, placed **after** `Delete branch` and `Sweep stale claude branches`
+
+### Changed
+
+- **The assertion is now version-specific.** `pullAndDeployFromGitHub()` returns `Updated to <v>` or `Already up to date (<v>)`. The old `case` accepted either string **with any version in it** — which cannot tell a real deploy from a stale read of the `.gs` off the GitHub contents API, since a stale read reports the OLD version as current and passes. The version in the answer must now equal the version in the merged `.gs`
+- **GET first, POST as fallback** (the brief said "drop the POST"; reversing the order was taken instead, to keep a second path rather than delete one). The POST leg's response is never readable by the runner — Google's 302 drops it — so it printed `POST deploy unconfirmed` on every run, *including the two where it had actually deployed*, at 8–13s per project. Saves roughly 40s per run across eight projects
+- **All four laggards brought up**: `Deploy Testauthgas1`, `Testauthhtml1`, `Globalacl` and `MasterACL` were still `curl … || true` — no check, no fallback, no report. All eight steps are now four lines and identical but for their paths
+- **A version-ceiling gauge.** The success string carries `N/200`; Apps Script caps a project at 200 versions and past that `pullAndDeployFromGitHub()` returns `DEPLOY HALTED` while the live app silently stops advancing. Warns at ≥170. Classroom is at 32/200
+- **`repository-information/REPO-ARCHITECTURE.md`** — the flowchart node `Deploy GAS via curl POST` and the sequence message `curl POST doPost(action=deploy)` both depicted behaviour this commit changes ([PC-REPO-ARCH] #5). The flowchart gains the version-assertion branch and the record-failure path; the sequence diagram gains the return string, the assertion and the deferred failure. **Both pako URLs regenerated and verified by decompressing them back out of the committed file**
+- **`.claude/rules/workflows.md`** — a new section documenting the assertion, the GET/POST ordering and, most importantly, **why the failure is deferred and must not be "fixed" by failing in place**
+- **`README.md`** — `.github/scripts/` and `gas-deploy.sh` added to the structure tree
+
+### Why failure is deferred rather than raised in place
+
+`Delete branch` and `Sweep stale claude branches` are both gated on `success()`. A deploy step that exited non-zero would leave the `claude/*` branch alive on the remote, and the next session's Pre-Push push-once check would then block on it. So `gas-deploy.sh` records failures to `$RUNNER_TEMP/gas-deploy-failures` and **exits 0**; the gate step at the end of the job reads that file after cleanup has run and exits 1. Red run, clean remote. The rules file says this explicitly so a future session does not "tidy it up" into a bug.
+
+### Verification
+
+- **The fix ships dark and that is unavoidable**: every deploy step is gated on its own `.gs` having changed, and this commit touches no `.gs`, so no deploy step fires on its own run. Compensated by replaying the **real recorded response strings** from runs #558 and #561 against the new matching logic: **10 of 10** — all three real responses confirm; a stale read (`want v01.40g`, `got v01.39g`) is correctly rejected where the old pattern accepted it; and `DEPLOY HALTED`, both `DEPLOY FAILED` returns, an empty response and a Google sign-in HTML page are all rejected
+- `VERSION` extraction exercised against **all eight real `.gs` files** — every one yields a version, so no project can hit the empty-`WANT` path that would otherwise fail every deploy. An unreadable `VERSION` is a recorded failure, never a silent pass
+- Ceiling gauge exercised at 32, 171 and 200 out of 200, and against a response carrying no `N/200` at all
+- `bash -n` on the new script; the workflow parsed with `yaml.safe_load` after every edit; step ordering asserted programmatically — the gate is the **last** step of `auto-merge` and absent from `check-template` (it landed in the wrong job on the first attempt and was moved)
+- Both regenerated mermaid URLs decompress from the committed file, first lines `graph TB` and `sequenceDiagram`, each carrying the new content
+- `check-readme-tree.py` 0 findings
 
 ## [v05.50r] — 2026-09-13 06:28:51 AM EST
 

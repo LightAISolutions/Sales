@@ -71,25 +71,27 @@
 #          var EMBED_PAGE_URL = "https://<your-org>.github.io/<your-repo>/your-page.html";
 #     5. Bootstrap: manually copy-paste <page-name>.gs into the Apps Script editor and save
 #        (first deploy must be manual — doPost can't deploy itself before it exists)
-#     6. Add a new step in this workflow BEFORE "Delete branch", using this template:
+#     6. Add a new step in this workflow BEFORE "Delete branch", using this template.
+#        The verification logic is NOT inline — it lives once in
+#        .github/scripts/gas-deploy.sh, because when it was inline it was added
+#        to four of eight steps and never reached the other four:
 #
 #        - name: Deploy My New Project
 #          if: steps.guard.outputs.skip != 'true' && success()
 #          run: |
 #            PRE=${{ steps.merge.outputs.pre_merge_sha }}
-#            git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/MyNewProject/my-new-project.gs" || exit 0
+#            GS=googleAppsScripts/MyNewProject/my-new-project.gs
+#            git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
 #            DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/MyNewProject/my-new-project.config.json 2>/dev/null || echo "")
 #            case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-#            BASE="https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec"
-#            RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
-#            case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (POST): $RESP"; exit 0 ;; esac
-#            echo "POST deploy unconfirmed — retrying via GET fallback"
-#            RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
-#            case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (GET): $RESP"; exit 0 ;; esac
-#            echo "::warning title=My New Project GAS self-update unconfirmed::Neither POST nor GET deploy returned a confirmation — run pullAndDeployFromGitHub in the Apps Script editor. Response head: $(echo "$RESP" | head -c 200)"
+#            bash .github/scripts/gas-deploy.sh MyNewProject "$DEPLOYMENT_ID" "$GS"
 #
 #     7. That's it — the step only runs when that project's <page-name>.gs changes,
 #        and reads DEPLOYMENT_ID from <page-name>.config.json at merge time (auto-syncs on redeploy).
+#        gas-deploy.sh asserts that the version the web app reports back EQUALS the
+#        version in the merged .gs, records any mismatch, and exits 0 so branch
+#        cleanup still runs; the final "Fail the run if any GAS deploy was
+#        unconfirmed" step turns the run red afterwards. Nothing to add per project.
 name: Auto-merge Claude branches
 
 on:
@@ -410,105 +412,81 @@ jobs:
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Testauthgas1/testauthgas1.gs" || exit 0
+          GS=googleAppsScripts/Testauthgas1/testauthgas1.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Testauthgas1/testauthgas1.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
+          bash .github/scripts/gas-deploy.sh Testauthgas1 "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy Testauthhtml1
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Testauthhtml1/testauthhtml1.gs" || exit 0
+          GS=googleAppsScripts/Testauthhtml1/testauthhtml1.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Testauthhtml1/testauthhtml1.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
+          bash .github/scripts/gas-deploy.sh Testauthhtml1 "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy Globalacl
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Globalacl/globalacl.gs" || exit 0
+          GS=googleAppsScripts/Globalacl/globalacl.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Globalacl/globalacl.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
+          bash .github/scripts/gas-deploy.sh Globalacl "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy MasterACL
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/MasterACL/MasterACL.gs" || exit 0
+          GS=googleAppsScripts/MasterACL/MasterACL.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/MasterACL/MasterACL.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
+          bash .github/scripts/gas-deploy.sh MasterACL "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy Scraper
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Scraper/Scraper.gs" || exit 0
+          GS=googleAppsScripts/Scraper/Scraper.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Scraper/Scraper.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          BASE="https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec"
-          # POST first; the runner's POST can lose its body on Google's redirect, so verify
-          # the response and fall back to the GAS doGet deploy route (?action=api&op=deploy)
-          RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (POST): $RESP"; exit 0 ;; esac
-          echo "POST deploy unconfirmed — retrying via GET fallback"
-          RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (GET): $RESP"; exit 0 ;; esac
-          echo "::warning title=Scraper GAS self-update unconfirmed::Neither POST nor GET deploy returned a confirmation — run pullAndDeployFromGitHub in the Apps Script editor. Response head: $(echo "$RESP" | head -c 200)"
+          bash .github/scripts/gas-deploy.sh Scraper "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy Receipts
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Receipts/Receipts.gs" || exit 0
+          GS=googleAppsScripts/Receipts/Receipts.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Receipts/Receipts.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          BASE="https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec"
-          # POST first; the runner's POST can lose its body on Google's redirect, so verify
-          # the response and fall back to the GAS doGet deploy route (?action=api&op=deploy)
-          RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (POST): $RESP"; exit 0 ;; esac
-          echo "POST deploy unconfirmed — retrying via GET fallback"
-          RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (GET): $RESP"; exit 0 ;; esac
-          echo "::warning title=Receipts GAS self-update unconfirmed::Neither POST nor GET deploy returned a confirmation — run pullAndDeployFromGitHub in the Apps Script editor. Response head: $(echo "$RESP" | head -c 200)"
+          bash .github/scripts/gas-deploy.sh Receipts "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy Profiler
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Profiler/Profiler.gs" || exit 0
+          GS=googleAppsScripts/Profiler/Profiler.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Profiler/Profiler.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          BASE="https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec"
-          # POST first; the runner's POST can lose its body on Google's redirect, so verify
-          # the response and fall back to the GAS doGet deploy route (?action=api&op=deploy)
-          RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (POST): $RESP"; exit 0 ;; esac
-          echo "POST deploy unconfirmed — retrying via GET fallback"
-          RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (GET): $RESP"; exit 0 ;; esac
-          echo "::warning title=Profiler GAS self-update unconfirmed::Neither POST nor GET deploy returned a confirmation — run pullAndDeployFromGitHub in the Apps Script editor. Response head: $(echo "$RESP" | head -c 200)"
+          bash .github/scripts/gas-deploy.sh Profiler "$DEPLOYMENT_ID" "$GS"
 
       - name: Deploy Classroom
         if: steps.guard.outputs.skip != 'true' && success()
         run: |
           PRE=${{ steps.merge.outputs.pre_merge_sha }}
-          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Classroom/Classroom.gs" || exit 0
+          GS=googleAppsScripts/Classroom/Classroom.gs
+          git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0
           DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Classroom/Classroom.config.json 2>/dev/null || echo "")
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
-          BASE="https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec"
-          # POST first; the runner's POST can lose its body on Google's redirect, so verify
-          # the response and fall back to the GAS doGet deploy route (?action=api&op=deploy)
-          RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (POST): $RESP"; exit 0 ;; esac
-          echo "POST deploy unconfirmed — retrying via GET fallback"
-          RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
-          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (GET): $RESP"; exit 0 ;; esac
-          echo "::warning title=Classroom GAS self-update unconfirmed::Neither POST nor GET deploy returned a confirmation — run pullAndDeployFromGitHub in the Apps Script editor. Response head: $(echo "$RESP" | head -c 200)"
+          bash .github/scripts/gas-deploy.sh Classroom "$DEPLOYMENT_ID" "$GS"
 
       - name: Update AHK version files
         if: steps.guard.outputs.skip != 'true' && success()
@@ -719,6 +697,25 @@ jobs:
           else
             echo "No stale claude/* branches found"
           fi
+
+      # ── Step 2 of the deploy-defect fix ───────────────────────────────────
+      # The Deploy steps record failures to a file and exit 0 ON PURPOSE. They
+      # sit BEFORE "Delete branch" and "Sweep stale claude branches", both of
+      # which are gated on success() — so failing in place would leave the
+      # claude/* branch alive and block the next push under push-once
+      # enforcement. Cleanup runs first; the run goes red here.
+      - name: Fail the run if any GAS deploy was unconfirmed
+        if: steps.guard.outputs.skip != 'true' && success()
+        run: |
+          FAILFILE="${RUNNER_TEMP:-/tmp}/gas-deploy-failures"
+          if [ ! -s "$FAILFILE" ]; then
+            echo "All GAS deploys confirmed the merged version (or none were due)."
+            exit 0
+          fi
+          echo "These GAS project(s) did NOT confirm the version this merge carries:"
+          sed 's/^/  - /' "$FAILFILE"
+          echo "::error title=GAS deploy unconfirmed::The merge and branch cleanup completed normally; the listed project(s) may still be serving the PREVIOUS version. Run pullAndDeployFromGitHub() in each project's Apps Script editor, then confirm line 1 of the editor."
+          exit 1
 
   check-template:
     runs-on: ubuntu-latest
