@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 29/50`
+`Sections: 30/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.30g] — 2026-09-14 04:08:19 AM EST — v05.61r
+
+### Added
+
+- New lesson added to the curriculum
+
+### Changed
+
+- A track's reading list now includes the new lesson, so it appears in your study path
+- Corrected a few places where a glossary marker printed its own punctuation instead of the term it names
 
 ## [v01.29g] — 2026-09-13 09:25:11 PM EST — v05.57r
 

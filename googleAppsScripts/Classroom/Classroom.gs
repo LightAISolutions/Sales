@@ -1,4 +1,4 @@
-var VERSION = "v01.29g";
+var VERSION = "v01.30g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1958,7 +1958,7 @@ function clLessonBridgePower_() {
    "cards": [
     {
      "t": "Gas turbine",
-     "meta": "Jet-engine physics driving a generator. Heavy frames run roughly 430–570 MW each; {{aeroderivative}} machines land in blocks of about 50 MW",
+     "meta": "Jet-engine physics driving a generator. Heavy frames run roughly 430–570 MW each; aeroderivative machines land in blocks of about 50 MW",
      "adv": [
       "The most power per machine and per acre by a wide margin — one heavy frame is a small plant on its own",
       "A {{simple cycle}} machine vents its exhaust; add a steam bottoming cycle and it becomes {{combined cycle}}, past 60 per cent efficiency — the only route on this list that reaches there",
@@ -1991,7 +1991,7 @@ function clLessonBridgePower_() {
     },
     {
      "t": "Solid-oxide fuel cell",
-     "meta": "{{solid-oxide fuel cell}} modules — electrochemical, not thermal. No flame, no pistons, no blades; hundreds of small units per installation",
+     "meta": "Solid-oxide fuel cell modules — electrochemical, not thermal. No flame, no pistons, no blades; hundreds of small units per installation",
      "adv": [
       "No flame means near-zero nitrogen oxides and particulates — precisely the pollutants that drive air permitting",
       "Efficiency is nearly scale-free, so a building-sized installation performs like a combustion plant many times its size",
@@ -2006,7 +2006,7 @@ function clLessonBridgePower_() {
     },
     {
      "t": "Linear generator",
-     "meta": "A {{linear generator}}: flameless compression driving opposed magnets through coils. 250 kW units on 2.5 MW factory skids, arrayed upward",
+     "meta": "A linear generator: flameless compression driving opposed magnets through coils. 250 kW units on 2.5 MW factory skids, arrayed upward",
      "adv": [
       "Nitrogen oxides under 1.5 ppm with no {{selective catalytic reduction}} at all — the property that lets it site in a {{non-attainment area}} where the other three cannot",
       "Efficiency claimed flat across turndown, where turbines and engines both lose ground at part load",
@@ -2908,7 +2908,7 @@ function clLessonEightHundredVdcShift_() {
   },
   {
    "t": "I²R loss",
-   "d": "The heat a conductor makes when current flows through its resistance. The name is the formula: loss is proportional to the *square* of the current, so halving the current cuts the loss to a quarter. It is the reason nearly every question about a power architecture turns out to be a question about voltage."
+   "d": "The heat a conductor makes when current flows through its resistance. The name is the formula: loss is proportional to the square of the current, so halving the current cuts the loss to a quarter. It is the reason nearly every question about a power architecture turns out to be a question about voltage."
   },
   {
    "t": "sidecar",
@@ -3472,7 +3472,7 @@ function clLessonControlStack_() {
    "intro": "One decision inside the conversion layer changes what a storage plant *is*, and it now appears in tenders as a requirement rather than as a preference. The sources put it as a pair of images: a grid-following inverter is a surfer, and a {{grid-forming inverter}} is a metronome.",
    "cards": [
     {
-     "t": "{{grid-following}}",
+     "t": "Grid-following",
      "meta": "Locks onto the grid's existing voltage wave and injects current into it. The conventional mode, and still the majority of what is installed",
      "adv": [
       "Simpler control problem, long-proven, and certified against every grid code in the market",
@@ -3486,8 +3486,8 @@ function clLessonControlStack_() {
      ]
     },
     {
-     "t": "{{grid-forming inverter}}",
-     "meta": "Creates the voltage wave itself and sets the beat for others to synchronise to. In {{virtual synchronous generator}} mode it impersonates a spinning machine",
+     "t": "Grid-forming inverter",
+     "meta": "Creates the voltage wave itself and sets the beat for others to synchronise to. In virtual synchronous generator mode it impersonates a spinning machine",
      "adv": [
       "Supplies the stabilising behaviour that retiring thermal plant used to give the grid for free — resisting frequency change as though it had rotating mass",
       "Enables {{black start}} and off-grid operation, with many units sharing load in parallel",
@@ -3762,7 +3762,7 @@ function clLessonWhereBessPlugsIn_() {
    "intro": "Where batteries actually enter the AI buildout, and the honest fit in each. They are not three market segments of equal size or equal openness — one is the core lane, one is genuinely contested and new, and one is closed to most of the people reading this. Knowing which is which before a first call is most of the value of this lesson.",
    "cards": [
     {
-     "t": "Socket 1 — grid-side {{FOM}} storage",
+     "t": "Socket 1 — grid-side FOM storage",
      "meta": "The core lane. Ordinary front-of-meter storage, bought by utilities and independent power producers because load is growing",
      "adv": [
       "Judged on {{duration}}, cycle life and price — **storage criteria, not AI criteria**, which is to say the criteria you already compete on",
@@ -3775,7 +3775,7 @@ function clLessonWhereBessPlugsIn_() {
      ]
     },
     {
-     "t": "Socket 2 — campus and {{behind-the-meter}} buffering",
+     "t": "Socket 2 — campus and behind-the-meter buffering",
      "meta": "Contested, new, and code-driven. A battery inline between the grid and the campus, holding the load transients and the faults",
      "adv": [
       "**Demand created by rules rather than by preference** — large-load ride-through obligations and curtailment protocols made this socket exist, and rules do not change their minds",
@@ -33356,6 +33356,382 @@ function clLessonTheUpsRoom_() {
 };
 }
 
+function clLessonTheTransformerAndTheSubstation_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-transformer-and-the-substation",
+ "type": "module",
+ "title": "Why Electricity Changes Clothes",
+ "short": "Hundreds of kilovolts at one end, one volt at the other. How the transformer in between is built, why it takes years, and why its factory slot is fought over.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:mortenson",
+    "date": "2026-08-21",
+    "note": "the substation as the place the voltage changes; 115-765 kV transmission stepped down in stages; 345 kV as a bulk-grid plug rather than a customer connection; a 1 GW substation in about a year whose critical path is transformer slots and energisation testing, not concrete"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hitachi-energy",
+    "date": "2026-08-21",
+    "note": "inside the factory: the GOES lamination stack and the eddy currents it chokes, hand-laid windings by winders who train for years, paper vacuum-dried for weeks, bushings as a product line of their own and a known failure point, impulse tests and heat runs gating delivery, a 300-tonne shipment; and the valve hall, LCC against VSC"
+   },
+   {
+    "kind": "public",
+    "ref": "study:ge-vernova",
+    "date": "2026-08-21",
+    "note": "why the factories cannot simply be scaled: a lean cyclical industry facing a three-year capacity bet, expansion people-limited before machine-limited, GOES from a handful of mills that every announced expansion bids for, and high-voltage test bays gating the exit"
+   },
+   {
+    "kind": "public",
+    "ref": "study:abb",
+    "date": "2026-08-21",
+    "note": "medium against low voltage as two engineering worlds; 60,000 A at 480 V for a 50 MW load and the thirtyfold current cut at 13.8 kV; why functions that lived at low voltage are migrating up so a campus protects power once"
+   },
+   {
+    "kind": "public",
+    "ref": "study:siemens-energy",
+    "date": "2026-09-04",
+    "note": "why the wire rather than the plant is the constraint; the three limits and the transfer limit; N-1 and congestion; the terminals-to-line object list; AIS against GIS against SF6-free; the four reasons to build a DC link and what it honestly costs; the buyer's six instruments against a three-year transformer; 800 kV and 1,300 MVA at the top of one catalogue"
+   },
+   {
+    "kind": "public",
+    "ref": "study:powell-industries",
+    "date": "2026-09-03",
+    "note": "the one-line above the switchgear — radial against main-tie-main, and the two questions that decide whether a drawing's two incoming lines are redundancy; and the e-house as a switchgear maker selling schedule, proven at a factory acceptance test that cannot prove the plant"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mitsubishi-electric",
+    "date": "2026-09-03",
+    "note": "the buyer's side of the lead time: the ordering sequence inverting, standardisation as schedule optionality, impedance as the specification line that ripples furthest, the spare as a real decision, dry-type against oil-filled indoors, the tap changer as the only substantial moving part, GOES as why the shortage outlasts high prices, and what a quoted lead time is measured from"
+   },
+   {
+    "kind": "public",
+    "ref": "study:invenergy",
+    "date": "2026-09-05",
+    "note": "merchant transmission as a worked example of the HVDC section: Grain Belt Express at 800 miles and 600 kV DC, a converter station at each end of Phase 1, 5,000 MW, a stated USD 11 billion, revenue as transmission service under a FERC open-access tariff, and the converter terminal as a siting anchor for a large load"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips this lesson does not define locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "765 kV",
+   "v": "to one volt",
+   "sub": "the ladder every power system climbs down, one transformer per rung"
+  },
+  {
+   "k": "60,000 A",
+   "v": "at 480 volts",
+   "sub": "what a 50 MW load looks like without a medium-voltage tier"
+  },
+  {
+   "k": "30-40",
+   "v": "months",
+   "sub": "lead time for one large unit, and the queue sits upstream of the design"
+  },
+  {
+   "k": "1,300 MVA",
+   "v": "in one tank",
+   "sub": "more apparent power than the largest machine in the same catalogue makes"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "bushing",
+   "d": "The insulated terminal that carries a live conductor through the earthed steel wall of a transformer tank. It is the highest-stress interface in the machine: full voltage on the inside of a few centimetres of insulation, earth on the outside, and weather on top. Bushings are a specialised product line of their own rather than a part the transformer factory makes, which is why a plant can only run as fast as its supply of them and why a bushing is both a queue and a known failure point."
+  },
+  {
+   "t": "winding",
+   "d": "The copper coils wound around a transformer's core — one set on the high-voltage side, one on the low. The ratio of turns between them is the ratio of voltages, which is the whole trick. On a large power transformer they are laid largely by hand, by winders who train for years, because every unit is custom-engineered to its order rather than pulled off a shelf."
+  },
+  {
+   "t": "vacuum drying",
+   "d": "The weeks-long process of pulling moisture out of a transformer's paper insulation under heat and vacuum before the tank is filled with oil. Paper is hygroscopic and water is a far worse insulator than paper, so moisture left inside quietly shortens the machine's life from the first day. It is a slow step that cannot be hurried without being paid for later."
+  },
+  {
+   "t": "impulse test",
+   "d": "A factory test that fires a steep, very high-voltage pulse at the transformer to simulate a lightning strike arriving down the line, checking that the insulation survives the fastest stress it will ever see rather than only the steady one. Passing it is a gate on delivery, not a formality."
+  },
+  {
+   "t": "test bay",
+   "d": "The high-voltage laboratory a finished transformer must pass through before it can leave the works — a multimillion-dollar shielded hall with the generators and instrumentation to run impulse and heat-run tests. Because it is expensive and slow to build, it gates the exit of a factory the way the winding shop gates the middle, and adding winding capacity without adding bays moves the queue rather than shortening it."
+  },
+  {
+   "t": "transformer impedance",
+   "d": "How much a transformer resists the flow of fault current through it, quoted as a percentage on the nameplate. It is not a detail: it sets how much fault current can reach the switchgear on the other side. A lower-impedance unit lets more through, which is why swapping in a bigger transformer can take existing switchgear past what it is rated to interrupt."
+  },
+  {
+   "t": "partial discharge",
+   "d": "A small electrical breakdown inside insulation that does not yet bridge the whole gap — a void in resin, a contaminated surface, a bushing beginning to fail. Each event erodes a little more material, so partial discharge is both an early symptom and its own slow cause of failure, and measuring it is how a sealed machine is diagnosed without opening it."
+  }
+ ],
+ "sections": [
+  {
+   "id": "changing-clothes",
+   "title": "The ladder, and the current each rung implies",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A power system does not deliver electricity at one voltage. It delivers it at six or seven, one after another, and changes clothes at every step. The reason is the same pair of lines that opens this whole track: **power is voltage times current**, so a megawatt can be carried as a lot of volts and a few amps or as a few volts and a lot of amps — and **a wire wastes power as heat in proportion to the square of the current**, {{I²R loss}}, so the two arrangements are not equivalent at all. Move a given amount of power at ten times the voltage and you need a tenth of the current and lose a hundredth of the power. That single relationship is why transmission exists, why it runs at hundreds of kilovolts, and why every step of a power system is a voltage change.",
+    "So long-distance transmission runs at **115 to 765 kV** to keep the current small, and then steps down in stages for use. **A substation is simply the place where the voltage changes**, and the transformer is its heart: two sets of copper coils around an iron core, trading voltage for current in whatever ratio the turns dictate. Gigawatt-class substations use several massive main transformers, each one a multi-year factory order and a truckload measured in hundreds of tonnes. One vendor's published range for this single product spans **10 kV to 800 kV** and reaches **1,300 MVA** in one tank — which is more apparent power than the largest generating machine in the same catalogue produces. That is the physical reason the grid is a shared asset and generation is not.",
+    "The rungs have names, and the names carry meaning a seller should not miss. **345 kV is a transmission-class voltage.** A campus fed at 345 kV is plugged into the bulk grid like a small city, not connected like a customer. **{{medium voltage}} — roughly 1 to 35 kV — is the on-campus distribution layer** between that substation and the buildings. And **low voltage, under 1,000 V, is what equipment actually uses**: 480 V in North America, 400 V in much of the rest of the world. Then, inside the machine at the end, the ladder keeps going down to the roughly one volt a processor rail runs at.",
+    "Why keep a middle tier at all, when the load runs at 480 V? Do the arithmetic and the answer is unarguable. At 480 volts, a 50 MW load means **over 60,000 amps** — a quantity of copper that is not expensive but physically impossible. Distribute the same 50 MW at 13.8 kV and the current falls roughly **thirtyfold**, and local transformers step it down close to each building where the runs are short. Medium voltage is not a preference or a legacy; it is the only way to move campus-scale power more than a short distance. It is also a genuinely different engineering tier — metal-clad switchgear with insulated compartments, arc-resistant enclosures, and operating procedures for trained specialists, rather than the panelboards an electrician opens every day.",
+    "There is a live direction of travel here worth knowing about. Functions that always sat at low voltage — the {{UPS}} above all — are **migrating up to medium voltage**, so that a 100 MW campus can protect its power once, before it splits into hundreds of low-voltage feeds, instead of protecting it hundreds of times over. That is the same instinct as the 800-volt DC shift inside the hall: *delete conversion layers instead of multiplying them.* Both are arguments about where on the ladder you are willing to do the expensive thing.",
+    "One more thing the ladder does not tell you: **how much a given line can actually carry.** Three different limits compete, and which one binds depends on the line. **Thermal** — current heats the conductor, it expands and sags, and the clearance to whatever is beneath it is a legal limit; this is {{ampacity}}, and it binds on short lines. **Voltage** — pushing power along a long line drops the voltage at the far end, and past a point the drop runs away and the system collapses; this binds on long or weak corridors, and it is a {{reactive power}} problem rather than a heat one. **Stability** — the machines at each end must stay in step, and past some transfer a disturbance leaves them unable to re-synchronise. The real number is the {{transfer limit}}, whichever binds first, and it usually sits well below the sum of the lines' thermal ratings.",
+    "Then subtract one of everything. Networks are planned to the {{N-1}} rule: the system must survive losing any single element — a line, a transformer, a generator — without shedding load. So the usable limit is not what the corridor carries today but what it carries with its largest element out. That is why transmission looks over-built on an ordinary day, why one outage can make a region's apparent spare capacity vanish, and why a new large load is assessed against the worst credible single failure rather than against average conditions. When the cheapest generation cannot reach the load because the wires between are full, most US markets do not ration — they price, and that everyday monetised form of the shortage is {{congestion}}."
+   ],
+   "sales": "Two questions get further into a technical conversation than any feature list. **What voltage is the site fed at?** — 345 kV and 13.8 kV are different businesses with different timelines, not different sizes of the same one. And **how many steps down are there, and who owns each?** Every step is a transformer with its own lead time, its own failure modes and its own owner, and a campus that has not counted them has not costed its schedule."
+  },
+  {
+   "id": "inside-the-tank",
+   "title": "Inside the tank",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "Open a large power transformer and there is no electronics in it at all. It is the only one of this track's four machines that is not a semiconductor — iron, copper, paper and oil, with no switching and nothing to program. That is exactly why it is so hard to make quickly, and why understanding the inside of one is the difference between repeating a headline about lead times and being believed.",
+    "**The core is a stack, not a block.** Thousands of thin sheets of {{GOES}} — grain-oriented electrical steel, a specialty magnetic steel whose grain is aligned so the magnetism flows the easy way — are cut and layered with insulation between them. They are layered rather than solid because a solid iron core would carry circulating currents of its own and cook itself; thin insulated sheets choke those currents off. Cutting and stacking them to the required precision is fine work carried out at multi-hundred-tonne scale, which is an unusual combination and part of why the skill is scarce.",
+    "**The windings are laid largely by hand.** Around the core go the copper coils — the {{winding}} on each side, whose turns ratio *is* the voltage ratio — wound by people who train for years, because **every large power transformer is custom-engineered to its order** rather than pulled from a catalogue. Then comes the paper insulation, and then the step that surprises people: the whole assembly goes into **{{vacuum drying}}** for weeks, because paper holds water and water is a far worse insulator than paper. Moisture left inside does not fail the unit on day one. It shortens its life quietly from day one, which is a much harder problem to detect and a much more expensive one to have.",
+    "**The bushings are somebody else's product.** A {{bushing}} is the insulated terminal that carries a conductor through the earthed steel of the tank wall — full voltage inside a few centimetres of insulation, earth on the other side of it, weather on top. They are a specialised product line of their own, made by different firms on different schedules, and the consequence is blunt: **a transformer plant runs only as fast as its supply of bushings, tap changers and the other bought-in components.** The queue everyone talks about has a second queue inside it.",
+    "**The tap changer is the only substantial moving part.** An {{on-load tap changer}}, where one is fitted, selects between taps on a winding to correct the output voltage without interrupting the load — which is what lets a substation hold its voltage as the network moves around it. Being the one mechanism in an otherwise static machine, it is correspondingly the part most likely to need maintenance and **one of the more common causes of transformer outages.** A transformer specified without one is simpler and less adjustable, and that is a decision rather than an omission — worth asking about, because the answer tells you what the designer assumed about the network.",
+    "**Testing gates delivery, and the tests are severe.** An {{impulse test}} fires a steep, very high-voltage pulse at the unit to simulate a lightning strike arriving down the line, proving the insulation against the fastest stress it will ever meet; heat runs prove the cooling holds under sustained load. These happen in a **{{test bay}}**, a shielded high-voltage laboratory that costs millions and takes years to build, and every unit must pass through one to leave the works.",
+    "**One specification line ripples further than any other: {{transformer impedance}}.** It sets how much fault current reaches the switchgear on the far side. Order a lower-impedance unit than the design assumed — often the natural consequence of buying a bigger one to leave headroom — and the available fault current downstream rises, which can take existing switchgear past its {{withstand rating}} and invalidates the {{coordination study}} every protection setting in the building came from. **A transformer substitution is never only a transformer substitution.**",
+    "Two more choices that look like details. A {{dry-type transformer}}, insulated by air or solid resin rather than oil, carries no fire load and no oil-containment requirement, so it can sit inside an occupied building — which is why indoor unit substations on a campus are usually dry-type even though an oil-filled unit of the same rating would be smaller, quieter and more efficient. And **the spare is a real decision, not a contingency line.** If a failed unit takes years to replace, the only meaningful redundancy is a physical spare somewhere — on the pad, at another site, or shared under an agreement between owners. That is a large piece of capital doing nothing, and the alternative is accepting that a transformer failure is a multi-year outage of that capacity. Naming which of the two has been chosen is more useful than any reliability statistic.",
+    "Finally, note what the transformer is *not* responsible for, because the boundary matters when something goes wrong. The transformer changes the voltage. The {{bay}} around it — breaker, disconnects, earthing switches, {{current transformer}}s and the protection that belongs to that circuit — is what makes it switchable and protectable, and is the unit in which substations are counted, priced and extended. Adding a circuit means adding a bay, and a yard laid out without spare bays is expensive to extend. Beyond the fence is the {{point of interconnection}}: the exact spot where the owner's equipment ends and the network's begins, and the thing every study, tariff, protection setting and argument about who pays actually refers to. It is a commercial boundary drawn on an electrical drawing."
+   ]
+  },
+  {
+   "id": "why-forty-months",
+   "title": "Why one unit takes three years and more",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Lead times past **30 to 40 months** for a large power transformer are quoted often enough to sound like a fact of nature, and they are not — they are the sum of the steps below, each of which can be pointed at. **The numbers on the left are the order, not the calendar**: the sequence is fixed, the duration of any one step is not. Read it once for what the factory does, and once for where a buyer can actually intervene.",
+   "lanes": {
+    "gen": "Order and engineering",
+    "deploy": "Manufacture, test and deliver"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "gen",
+     "label": "A slot is reserved, before the design is finished",
+     "sub": "The ordering sequence inverts. Normally the design is completed, the equipment specified, then bought; when the equipment sets the critical path the order goes first — a {{slot reservation}} and a deposit against a specification deliberately kept coarse, with the detailed design catching up to it. **In a shortage the queue position is the thing being bought, not the transformer.**"
+    },
+    {
+     "x": 2,
+     "lane": "gen",
+     "label": "The unit is custom-engineered to this order",
+     "sub": "Rating, {{transformer impedance}}, configuration and tap range are fixed here, and each choice leaves the transformer and enters the rest of the design — impedance most of all, because it decides how much fault current reaches the switchgear behind it. This is also the last cheap moment to standardise on a configuration the factory already builds in repeat runs."
+    },
+    {
+     "x": 3,
+     "lane": "deploy",
+     "label": "The core is cut and stacked",
+     "sub": "Thousands of thin {{GOES}} laminations, insulated from one another so the core does not cook itself with its own circulating currents. **This is the material chokepoint**: a handful of mills worldwide make grain-oriented electrical steel, the plants that make it are themselves multi-year builds, and every announced factory expansion bids for the same tonnage."
+    },
+    {
+     "x": 4,
+     "lane": "deploy",
+     "label": "The windings are laid, largely by hand",
+     "sub": "Copper coils wound by people who train for years. **This is why expansion is people-limited before it is machine-limited**: winders, testers and design engineers cannot be hired off the street, and a new plant ramps only as fast as experienced staff can seed new crews."
+    },
+    {
+     "x": 5,
+     "lane": "deploy",
+     "label": "The paper insulation is vacuum-dried for weeks",
+     "sub": "A slow step with no shortcut. Moisture left in the paper does not announce itself — it shortens the machine's life from the first day, which is why the drying record is part of what a buyer is actually paying for."
+    },
+    {
+     "x": 6,
+     "lane": "deploy",
+     "label": "Testing gates the exit",
+     "sub": "An {{impulse test}} simulates a lightning strike arriving down the line; a heat run proves the cooling under sustained load. Both happen in a **{{test bay}}** — a multimillion-dollar high-voltage laboratory that every unit must pass through. Adding winding capacity without adding bays moves the queue rather than shortening it."
+    },
+    {
+     "x": 7,
+     "lane": "deploy",
+     "label": "A 300-tonne object is shipped",
+     "sub": "Hundreds of tonnes on a route that has to be surveyed, permitted and sometimes rebuilt, then set on a foundation and assembled. For a US buyer there is a further wrinkle: roughly four-fifths of large power transformers in service are imported, so the shipping leg is frequently an ocean and a port."
+    }
+   ],
+   "note": "**Where the queue actually is, and what a buyer can do about it.** The instruments are few and each has a price. **{{slot reservation}}** puts money at risk on a project that may not happen and freezes a specification before the design is ready. **Standardisation** — taking a rating and configuration the factory already builds instead of the optimal one for this site — buys a place in a repeat run at the cost of a slightly oversized or less efficient unit, and it is the single largest lever anyone has. A **{{mobile substation}}** delivers in weeks at a lower rating and a higher cost per MVA. **Re-using an existing connection** at a retired plant or an industrial site is the fastest route to power and the least controllable, because you inherit someone else's ratings and someone else's condition. **Generating on site** converts a queue problem into a permitting problem. And **simply waiting** is often the cheapest answer and almost never the chosen one, because being early in a build cycle is worth more than everything else in this list costs.",
+   "sales": "One question separates people who have bought this equipment from people who have read about it: **what is your quoted lead time measured from — order placement, drawing approval, or release to manufacture?** Those can differ by many months, and the gap is usually the buyer's own review cycle, which is the one part of the schedule they control and the part most often missing from their own plan."
+  },
+  {
+   "id": "the-biggest-lines-run-dc",
+   "title": "Why the biggest lines run on direct current",
+   "kind": "callout",
+   "tone": "info",
+   "read": "5 min",
+   "ps": [
+    "The grid is alternating current for one historical reason: **transformers only work on AC.** Changing an alternating voltage is cheap and nearly lossless, and for a century that was the only way up the ladder at all. So it is worth asking why the largest links in the world are the exception — why anyone would convert to direct current, run it, and convert it back, **paying for two converter stations to do it.**",
+    "**Four reasons, and they do not all apply at once.** *Distance*: {{HVDC}} needs fewer conductors for the same power and carries no reactive component, so the line itself is cheaper per kilometre and loses less — below some route length the two converter stations dominate and AC wins, above it DC does, and that {{break-even distance}} is a real number per project rather than a constant. *Cable, which is not the same thing as distance*: an AC cable is a long capacitor and draws {{cable charging current}} simply to charge itself, growing with length and voltage, so **past roughly a hundred kilometres of subsea cable that charging current consumes the entire rating and the cable delivers nothing at the far end.** There is no engineering around that within AC — it is why essentially every long offshore connection in the world is direct current, a hard boundary rather than a preference. *Control*: an AC line is a pipe and power flows through it according to impedance, while a DC link is a **valve** whose converters set exactly how much power flows and in which direction. *And keeping two networks apart*: an {{asynchronous tie}} joins two AC systems that are not in step and need not be, so power crosses and disturbances do not.",
+    "**What is actually in the building.** The heart of a {{converter station}} is the valve hall: towers of semiconductor switches chopping AC into DC and back, thousands of devices stacked in series because each can block only a few kilovolts while the line runs at hundreds. Classic {{line-commutated converter}} designs use thyristors — switches that can be turned on but not off, with the grid's own waveform switching them off each cycle. They are cheap and proven at the largest scales, and they need a strong AC grid at each end and cannot restart a dead network. Modern {{voltage source converter}} designs use IGBTs, which switch both on and off thousands of times a second, so the converter synthesises its own AC waveform: {{black start}} capability, connection to weak grids and offshore wind, compact stations, and independent control of real and reactive power. What the manufacturers actually differentiate on is neither — it is the control platform coordinating thousands of switching events per cycle across both ends, where decades of accumulated tuning rather than the semiconductors is the moat.",
+    "**And the honest costs, because this section is an aside in a transformer lesson for a reason.** Each station loses something in the region of a percent of the power passing through it, so a short link spends twice what the line would have lost. Each station's **converter transformers are themselves {{large power transformer}}s** with their own multi-year lead time — the very queue the rest of this lesson is about, joined twice over. And a DC fault is genuinely harder to clear: direct current has no {{zero crossing}} to help a breaker, so a {{DC circuit breaker}} must force the current to zero itself, which is why DC breakers arrived decades after AC ones and why many links are still protected by tripping the converters instead. *That same physics — an arc with no natural moment to go out — reappears at four hundred thousand times smaller scale inside an 800-volt rack, which is the subject of a later lesson in the AI data-centre track.*",
+    "**A worked example rather than an answer.** Grain Belt Express is 800 miles of 600 kV direct-current line from western Kansas to Indiana, with a converter station at each end of Phase 1, 5,000 MW of capacity and a stated cost of USD 11 billion. It is {{merchant transmission}}: its revenue is transmission service sold under a federal open-access tariff rather than a utility's regulated rate base. Read it for the shape of the decision, not for the company — a long overhead route, a wish to control the flow, and a set of customers at each end. **And note the detail a data-centre seller should carry away:** an HVDC terminal delivers gigawatts to one point, which makes a converter station a siting anchor for a very large load in a way an ordinary substation is not.",
+    "**The shape of the decision, in one line.** Long overhead route, or any long cable, or a need to control the flow, or a need to join two systems without joining their problems — direct current. Anything else — alternating current, and spend the money on the corridor instead."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "This is row 2 of the app's grid-to-chip failure map, opened up. Four causes recur across that whole map and three of them are in this table: **current squared becomes heat**, **heat flows through a series path**, and **human hands are in the loop**. Read the last column first if you are short of time — it is the difference between naming a failure mode and knowing what a buyer does about it.",
+   "cols": [
+    "Failure point",
+    "What actually happens",
+    "Why it fails *there*",
+    "What the buyer does about it"
+   ],
+   "rows": [
+    [
+     "**{{bushing}}s**",
+     "The insulated terminal carrying a conductor through the tank wall breaks down — sometimes as a slow erosion measurable for months, sometimes violently.",
+     "It is **the highest-stress interface in the machine**: full voltage on one side of a few centimetres of insulation, earthed steel on the other, and weather on top of both. It is also the one major part the transformer factory does not make, so its condition and its availability are somebody else's schedule.",
+     "Treat bushings as a separately sourced item with their own lead time rather than as part of the transformer, and monitor them — {{partial discharge}} and dissolved-gas trends are how a sealed machine tells you it is failing before it fails."
+    ],
+    [
+     "**Moisture in the paper**",
+     "The unit ages far faster than its design life, and nothing about its first year of service says so.",
+     "Paper insulation must be **vacuum-dried for weeks**, and drying is a process step performed by people against a schedule. Water is a much worse insulator than the paper it displaces, so moisture left inside is a permanent, invisible tax on insulation life — and it can be re-admitted later through a poor seal or a careless oil handling.",
+     "Ask for the factory drying and test record rather than the datasheet, and keep moisture-in-oil on the condition-monitoring list for the whole asset life. This is a failure you buy at manufacture and pay for a decade later."
+    ],
+    [
+     "**Tap changers**",
+     "The mechanism that selects between winding taps wears, sticks or arcs, and takes the transformer out with it.",
+     "An {{on-load tap changer}} is **the only substantial moving part in an otherwise static machine** — it switches under load, thousands of times a year, to hold the output voltage as the network moves. Being the one mechanism, it is the part most likely to need maintenance and **one of the more common causes of transformer outages.**",
+     "Decide deliberately whether the unit needs one at all — a transformer without a tap changer is simpler and less adjustable, and that is a design decision rather than an omission. Where one is fitted, its maintenance interval is the transformer's maintenance interval."
+    ],
+    [
+     "**Harmonic and overload heating**",
+     "The transformer runs hotter than its loading suggests it should, and its insulation ages at the rate the temperature sets rather than the rate the nameplate implies.",
+     "Non-linear loads — every rectifier front end in the building — draw current in gulps near the voltage peaks rather than smoothly. Those {{harmonics}} carry no useful power but **heat transformers and overload neutrals**, and they are heat doing no work. An AI campus adds a second version of the same problem: tens of megawatts swinging in milliseconds, repetitively, which the network sees as flicker and distortion and prices as an interconnection condition.",
+     "Size and specify against the *real* current waveform rather than the average kilowatts, mitigate at the source where the distortion is made, and treat a load with this shape as a disclosed characteristic in the interconnection conversation rather than a surprise after energisation."
+    ],
+    [
+     "**The slot itself**",
+     "Nothing breaks. The delivery date moves, and with it the energisation date and everything financed against it — or a unit fails in service and the replacement is years away.",
+     "The unit is **custom, the queue is people-limited, the steel comes from a handful of mills and a test bay gates the exit**, so supply answers a shortage in years rather than quarters. This is the one row in the table where the failure is commercial rather than physical, and it is the one most likely to actually happen to a project.",
+     "Reserve the slot early, standardise the rating so units are fungible across phases, and **name the spare decision out loud** — a physical spare on the pad, at another site, or shared under an agreement between owners, or an accepted multi-year outage of that capacity. One of those two is always being chosen; only one of them is usually said."
+    ]
+   ],
+   "note": "**The reading skill this table is really teaching.** Four of the five rows are decided before the transformer is energised — at specification, at manufacture, at the drying stage, at the order. Only the heating row is genuinely about operation. That is the opposite of most equipment in this curriculum, and it is why the transformer conversation is a *procurement* conversation held in electrical vocabulary. It is also why the same argument arrives one tier down: a switchgear maker selling an **{{e-house}}** — the power room built and wired in a factory and craned onto a foundation — is selling schedule and factory labour rather than equipment, proven at a {{factory acceptance test}} that can verify relay settings and interlocks but cannot prove the plant. Only integrated testing under real load on site does that.",
+   "sales": "When someone tells you their transformer is on order, the useful follow-up is **not** when it arrives. It is: *what is it measured from, what did you standardise to get the slot, and what happens if this one fails in year three?* Those three answers tell you whether you are talking to a project that has understood its own critical path or one that has written a date in a schedule."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why does a power system change voltage six or seven times between the generator and the load?",
+     "a": "Because power is voltage times current and a conductor's loss goes as the square of the current. The same power at ten times the voltage needs a tenth of the current and wastes a hundredth of the power, so transmission runs at 115–765 kV and steps down in stages — and a substation is simply the place where the voltage changes. The ladder stops at the bottom because the load's own voltage is fixed by what it is: a processor rail runs at about one volt no matter how clever the chain above it was."
+    },
+    {
+     "q": "What actually limits how much power a transmission line can carry?",
+     "a": "Three different things, and which binds depends on the line. Thermal: current heats the conductor, it sags, and clearance to the ground is a legal limit — this binds on short lines. Voltage: the drop along a long or weak corridor runs away past a point and the system collapses, which is a reactive-power problem rather than a heat one. Stability: the machines at each end must stay in step. The real number is whichever binds first, it usually sits well below the sum of the thermal ratings, and the N-1 rule then subtracts the largest single element on top of that."
+    },
+    {
+     "q": "Why does a large campus keep a medium-voltage tier instead of just distributing at 480 volts?",
+     "a": "Current. At 480 V a 50 MW load means over 60,000 amps, which is not expensive copper — it is impossible copper. Distributing the same power at 13.8 kV cuts the current roughly thirtyfold, and local transformers step it down close to each building where the runs are short. Medium voltage is also a distinct engineering tier, with metal-clad switchgear, arc-resistant enclosures and procedures for trained specialists rather than the panelboards an electrician opens daily."
+    },
+    {
+     "q": "What is inside a large power transformer, and which part is the known failure point?",
+     "a": "A core of thousands of thin grain-oriented electrical steel laminations, insulated from each other so circulating currents cannot cook it; copper windings laid largely by hand; paper insulation vacuum-dried for weeks; oil; bushings; and usually a tap changer. The bushings — the insulated terminals carrying the conductors through the earthed tank wall — are the known failure point and a specialised product line made by other firms, which is why a transformer plant runs only as fast as its supply of them."
+    },
+    {
+     "q": "Why can the transformer shortage not be fixed by building more factories?",
+     "a": "Three reasons stack. Expansion is people-limited before it is machine-limited — winders, testers and design engineers take years to develop and a new plant ramps only as fast as experienced staff can seed new crews. The material chokepoint is grain-oriented electrical steel from a handful of mills worldwide, and every announced expansion bids for the same tonnage. And high-voltage test bays gate the exit, so adding winding capacity without adding bays moves the queue rather than shortening it. Supply answers a shortage in years, not quarters."
+    },
+    {
+     "q": "Why is a transformer substitution never only a transformer substitution?",
+     "a": "Because impedance sets how much fault current reaches the switchgear on the far side. Ordering a lower-impedance unit — often the natural consequence of buying a bigger one for headroom — raises the available fault current downstream, which can take existing switchgear past its withstand rating and invalidates the coordination study every protection setting in the building was derived from. The transformer changed; so did the design around it."
+    },
+    {
+     "q": "Why would anyone convert AC to DC, run it, and convert it back?",
+     "a": "Four reasons, not all at once. Distance past the break-even point, where cheaper conductors and lower losses outweigh two converter stations. Cable, because an AC cable's own charging current consumes its entire rating past roughly a hundred kilometres subsea — a hard physical boundary, not a preference. Control, because a DC link is a valve while an AC line is a pipe. And an asynchronous tie, joining two systems that are not in step so power crosses while disturbances do not. The costs are two stations at about a percent loss each, converter transformers with their own multi-year lead time, and a fault that is harder to clear because DC has no zero crossing."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A campus is being fed at 345 kV. What does that voltage actually tell you?",
+     "c": [
+      "It is plugged into the bulk transmission grid like a small city, not connected like a customer",
+      "Its equipment runs at 345 kV, so no on-site transformers are needed",
+      "It has bypassed the interconnection queue by paying for a direct connection",
+      "It no longer needs a medium-voltage tier, because the supply is already high voltage"
+     ],
+     "a": 0,
+     "why": "345 kV is a transmission-class voltage — the bulk grid's own level, not a distribution feeder. Nothing on the site runs at it, which is exactly why a substation and then a medium-voltage tier still exist below it: the voltage says what the campus is connected *to*, not what it uses. The queue is a separate process entirely and a high connection voltage does not shorten it."
+    },
+    {
+     "q": "A 50 MW load at 480 volts implies roughly how much current, and what follows from it?",
+     "c": [
+      "Over 60,000 amps — which is why a medium-voltage tier exists on campus at all",
+      "About 6,000 amps — large but routine for a main switchboard",
+      "About 600 amps, because power is conserved through the transformer",
+      "The same current it would draw at 13.8 kV, since the load is the same"
+     ],
+     "a": 0,
+     "why": "Power is voltage times current, so 50 MW at 480 V is more than sixty thousand amps — a quantity of copper that is not expensive but physically impossible to install. Distributing at 13.8 kV instead cuts the current roughly thirtyfold and lets local transformers step down close to each building. The last option inverts the whole point: the load's power is conserved, its current very much is not."
+    },
+    {
+     "q": "A transformer maker announces a new plant that opens in three years. Why does that not resolve the shortage?",
+     "c": [
+      "Expansion is people-limited, and every announced expansion bids for the same scarce electrical steel",
+      "Because demand will certainly have collapsed by the time it opens",
+      "Because high-voltage test bays are trivial to add and are never the constraint",
+      "Because large transformers are commodity units and a new plant changes nothing"
+     ],
+     "a": 0,
+     "why": "Winders, testers and design engineers take years to develop and cannot be hired off the street, so a plant ramps only as fast as experienced staff can seed new crews. The material chokepoint is grain-oriented electrical steel from a handful of mills, and the steel plant is itself a multi-year build — which is why the shortage has outlasted several years of high prices, the thing that normally cures shortages. Test bays are the opposite of trivial: they are multimillion-dollar laboratories that gate the factory's exit."
+    },
+    {
+     "q": "A project substitutes a larger transformer with lower impedance than the design assumed. What breaks?",
+     "c": [
+      "The downstream switchgear may now be past its withstand rating, and the coordination study is invalid",
+      "The tap changer range, which is fixed by the core size",
+      "The oil containment volume, which is set by the tank",
+      "Nothing — impedance is a nameplate figure with no downstream consequence"
+     ],
+     "a": 0,
+     "why": "Impedance sets how much fault current can reach the switchgear on the other side of the transformer. Lower impedance lets more through, so the gear that was correctly rated against the old unit may now be asked to interrupt more than it can, and every protection setting derived from the old coordination study is describing a system that no longer exists. This is the specification line that ripples furthest, which is why a transformer substitution is never only a transformer substitution."
+    },
+    {
+     "q": "Which of these is a hard physical boundary rather than an economic preference?",
+     "c": [
+      "Past roughly a hundred kilometres of subsea cable, an AC cable's own charging current consumes its entire rating",
+      "Direct current is always cheaper than alternating current beyond 500 kilometres",
+      "Gas-insulated switchgear is always the right choice on an urban site",
+      "A DC link always gives better control of power flow than any AC solution"
+     ],
+     "a": 0,
+     "why": "An AC cable is a long capacitor and draws current simply to charge itself, growing with length and voltage, until at around a hundred kilometres subsea there is nothing left for the load. There is no engineering around it within AC, which is why essentially every long submarine connection in the world is direct current. The other three are real considerations that are nonetheless tradeoffs: the break-even distance moves with terrain, land cost and converter prices; GIS buys footprint at an environmental and diagnostic cost; and AC-side devices also control flow, just less completely."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -33380,9 +33756,10 @@ function clTrackElectricalFoundations_() {
  "title": "Electrical Foundations",
  "short": "Finish this and you can follow a megawatt through a transformer, a breaker and a converter, explain why the grid needs inertia, and hold the electrical conversation both the storage and the data-center markets sit on.",
  "group": "Technology Foundations",
- "updated": "2026-09-13",
+ "updated": "2026-09-14",
  "lessons": [
-  "four-machines"
+  "four-machines",
+  "the-transformer-and-the-substation"
  ]
 };
 }
@@ -33549,7 +33926,8 @@ function clLessons_() {
           clLessonFourMachines_(),
           clLessonHowAUtilityBuys_(),
           clLessonBackupGeneration_(),
-          clLessonTheUpsRoom_()];
+          clLessonTheUpsRoom_(),
+          clLessonTheTransformerAndTheSubstation_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

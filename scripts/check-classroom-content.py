@@ -351,6 +351,85 @@ def check_markup(doc, tag):
                     % (tag, sec.get("id"), path))
 
 
+# ── The mirror: fields the renderer prints, and never formats ────────────────
+# The check above covers everything that reaches clFmt. This one covers the
+# other half of the same hazard, pointing the opposite way: most content reaches
+# the DOM through clEl()'s textContent or a createTextNode, where `{{term}}`,
+# `**bold**` and `*italic*` are not markup at all — they are characters, and the
+# braces or asterisks are printed to the reader. Nothing else catches it either:
+# the JSON is valid, the term resolves in the registry, and clFmt never sees the
+# string. Found in a screenshot at v05.57r (a proscons card's `t`), and nine
+# occurrences had already shipped across four lessons when this check was added.
+#
+# The scope mirrors the renderer call site by call site, exactly as FMT_BY_KIND
+# does, and the two tables are complements rather than opposites — a `timeline`
+# item's `label` is formatted while a `bars` item's is printed, and a `timeline`
+# item's lane *value* is printed while the item beside it is formatted. So both
+# walks have to be kind-aware. `provenance.inputs[].note` is in NEITHER table:
+# it is an authoring aid that is never rendered at all, which is why the string
+# "{{...}} tooltips" sits safely in one today.
+PLAIN_BY_KIND = {
+    "proscons": ("cards.t", "cards.meta"),   # clProsCons: clEl('div', 't'|'m', …)
+    "timeline": ("lanes.*",),                # clTimeline: createTextNode(lanes[k])
+    "bars":     ("items.label", "items.sub"),# clBars: createTextNode / .textContent
+}
+
+# Document-level fields printed as text: the lesson or track card and header
+# (clEl('h2'|'h3'|'div', …)), the tile grid, the glossary grid, and a revision
+# note, which reaches the DOM through createTextNode beside its date.
+PLAIN_DOC_FIELDS = ("title", "short")
+PLAIN_DOC_LISTS = (("tiles", ("k", "v", "sub")),
+                   ("glossary", ("t", "d")),
+                   ("revisions", ("note",)))
+
+# Only the complete forms, because only those are silent: an unpaired asterisk
+# prints an asterisk in a formatted field too, so it is not evidence of a field
+# in the wrong table.
+MICRO_MARKUP = re.compile(r"\{\{[^{}]+\}\}|\*\*[^*]+\*\*|\*[^*\n]+\*")
+
+
+def plain_strings(doc):
+    """Yield (path, text) for the strings Classroom.html prints as textContent."""
+    for f in PLAIN_DOC_FIELDS:
+        if isinstance(doc.get(f), str):
+            yield f, doc[f]
+    for name, keys in PLAIN_DOC_LISTS:
+        for i, row in enumerate(doc.get(name) or []):
+            if not isinstance(row, dict):
+                continue
+            for k in keys:
+                if isinstance(row.get(k), str):
+                    yield "%s[%d].%s" % (name, i, k), row[k]
+    for sec in doc.get("sections") or []:
+        if not isinstance(sec, dict):
+            continue
+        sid = sec.get("id")
+        for f in ("title", "read"):                   # every kind's own header
+            if isinstance(sec.get(f), str):
+                yield "section %r %s" % (sid, f), sec[f]
+        for spec in PLAIN_BY_KIND.get(sec.get("kind"), ()):
+            outer, _, inner = spec.partition(".")
+            node = sec.get(outer)
+            if inner == "*":                          # timeline lanes: a dict
+                for k, v in (node or {}).items() if isinstance(node, dict) else ():
+                    if isinstance(v, str):
+                        yield "section %r %s.%s" % (sid, outer, k), v
+                continue
+            for i, row in enumerate(node or []):
+                if isinstance(row, dict) and isinstance(row.get(inner), str):
+                    yield "section %r %s[%d].%s" % (sid, outer, i, inner), row[inner]
+
+
+def check_plain_markup(doc, tag):
+    for path, text in plain_strings(doc):
+        m = MICRO_MARKUP.search(text)
+        if m:
+            err("%s: %s carries micro-markup %r in a field the renderer prints as "
+                "text rather than sending to clFmt — the braces or asterisks reach "
+                "the reader literally; write it as plain words"
+                % (tag, path, m.group(0)))
+
+
 def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
     for f in ("schemaVersion", "id", "title", "short", "group", "updated", "reviewBy",
               "provenance", "sections"):
@@ -392,12 +471,14 @@ def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
     check_sections(lesson.get("sections"), tag)
     check_terms(lesson, tag, public)
     check_markup(lesson, tag)
+    check_plain_markup(lesson, tag)
 
 
 def check_track(track, tag, lessons_by_id, schema_ver):
     for f in ("schemaVersion", "id", "title", "short", "group", "updated", "lessons"):
         if f not in track:
             err("%s: missing required field %r" % (tag, f))
+    check_plain_markup(track, tag)
     if track.get("schemaVersion") != schema_ver:
         err("%s: schemaVersion must be %s" % (tag, schema_ver))
     if not (isinstance(track.get("id"), str) and ID_RE.match(track.get("id") or "")):
@@ -946,11 +1027,12 @@ def main():
     # Guidance modules live below the // CONTENT END fence and are not lessons,
     # so nothing else here validates them — but Classroom.html renders them
     # through the SAME cl* engine, so they carry the identical markup hazard.
-    # Only the markup check is applied; their schema is the guidance rules', not
-    # this checker's. `guidanceDocs_()` (the plural registry) returns calls
+    # Only the two markup checks are applied; their schema is the guidance
+    # rules', not this checker's. `guidanceDocs_()` (the plural registry) returns calls
     # rather than a JSON literal, so the parser skips it on its own.
     for fn, doc in parse_literals(src, "guidanceDoc").items():
         check_markup(doc, "%s()" % fn)
+        check_plain_markup(doc, "%s()" % fn)
     cases = run_gate_truth_table(src, list(lessons_by_id)) or 0
     return finish(len(lessons), len(tracks), cases)
 
