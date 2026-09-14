@@ -53,16 +53,25 @@ confirm() {
 # cost 8-13s per project per run to learn nothing. The GET route returns the
 # function's actual return string. POST is kept as a fallback rather than
 # deleted because it has been observed to complete the deploy on its own.
-RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
-LEG=GET
-if ! confirm "$RESP"; then
-  echo "$NAME: GET did not confirm $WANT — trying POST fallback"
-  RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
-  LEG=POST
-fi
-
-if confirm "$RESP"; then
-  echo "$NAME deploy confirmed ($LEG): $RESP"
+#
+# THEN POLL, because two legs are not enough. Run #568 (Classroom, v01.29g) went
+# red here and the deploy HAD landed: the whole step took 76s, so neither leg hit
+# its 120s ceiling — the exec endpoint simply answered with something that was not
+# the function's return string. Reproduced by hand immediately afterwards: one GET
+# came back as Google's HTML shell, and the very next GET returned
+# "Already up to date (v01.29g)". So the failure is a non-answer, not a slow
+# deploy, and a re-read is what fixes it.
+#
+# Re-reading is safe and idempotent: the GET route runs pullAndDeployFromGitHub(),
+# which is the same call the first leg made, and once the version matches it
+# returns "Already up to date (<v>)" without doing anything. A poll therefore
+# either catches a deploy that landed or retries one that did not.
+#
+# The cost is bounded and lands only on the failure path: five re-reads at 45s
+# each behind 5/15/30/60/90s of backoff, so ~7 minutes worst case for a project
+# that never confirms, and zero for one that confirms on the first leg.
+report_success() {
+  echo "$NAME deploy confirmed ($1): $RESP"
   # Version-ceiling gauge. The success string carries "N/200"; Apps Script caps a
   # project at 200 versions, and past that pullAndDeployFromGitHub() returns
   # DEPLOY HALTED and the live app silently stops advancing.
@@ -71,9 +80,25 @@ if confirm "$RESP"; then
     echo "::warning title=$NAME version ceiling::$USED/200 Apps Script versions used. At 200 the deploy stops advancing the live app. Free up versions in the editor."
   fi
   exit 0
-fi
+}
 
-echo "::error title=$NAME GAS self-update FAILED::Expected $WANT; neither GET nor POST confirmed it. Run pullAndDeployFromGitHub() in the Apps Script editor, then check line 1. Response head: $(printf '%s' "$RESP" | head -c 300)"
+RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
+confirm "$RESP" && report_success GET
+
+echo "$NAME: GET did not confirm $WANT — trying POST fallback"
+RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
+confirm "$RESP" && report_success POST
+
+POLL=0
+for WAIT in 5 15 30 60 90; do
+  POLL=$((POLL + 1))
+  echo "$NAME: neither leg confirmed $WANT — re-reading in ${WAIT}s (poll $POLL/5)"
+  sleep "$WAIT"
+  RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 45 2>/dev/null || echo "")
+  confirm "$RESP" && report_success "POLL $POLL"
+done
+
+echo "::error title=$NAME GAS self-update FAILED::Expected $WANT; GET, POST and five re-reads over ~3.5 minutes all failed to confirm it. Run pullAndDeployFromGitHub() in the Apps Script editor, then check line 1. Response head: $(printf '%s' "$RESP" | head -c 300)"
 echo "$NAME (expected $WANT)" >> "$FAILFILE"
 exit 0
 
