@@ -6,82 +6,72 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-14 03:40:18 AM EST
+**Repo version:** v05.60r — the window v05.53r → v05.60r, eight pushes in one session
+**Branch:** `claude/optimistic-gauss-zqootb` (restarted from `origin/main` before each push)
+
+### What was done
+
+- **Phase 4 rows 1–4 of `CLASSROOM-CURRICULUM-PLAN.md` §7 — four mechanism lessons, one per push.** `four-machines` created the `electrical-foundations` track and wrote the `prereqs[]` §2.2 had promised since v05.07r (v05.53r); `how-a-utility-buys` created `market-access`, the last track the plan specifies, so rows 3–24 are now pure lesson authoring (v05.54r); `backup-generation` (v05.55r) and `the-ups-room` (v05.57r) were the first two pure rows, both inserted mid-track at their §4 positions. Registry went **30 → 34 lessons, 6 → 8 tracks**
+- **Two rendering defects found in screenshots that no checker could see, and only one of them fixed.** v05.55r shipped nested emphasis (`**a *b* c**`), which `clFmt`'s bold regex cannot match, so literal asterisks reached the reader; v05.56r turned that into a checker error across lessons, tracks and the nine guidance modules — implemented **narrower** than the recommendation that prompted it, because `tiles`, `glossary`, `short` and `title` reach the DOM through `textContent` and would have produced false positives. Then v05.57r found the mirror defect: a `proscons` card's `t` and `meta` are *also* `textContent`, so a `{{term}}` in either prints its braces. Fixed in that lesson; **nine occurrences are still shipped in four other lessons** and were deliberately left for row 5
+- **The GAS deploy gate stopped going red on deploys that worked.** Run #568 went red and the deploy had landed. v05.58r corrected the briefs that said otherwise; v05.59r fixed the mechanism — `.github/scripts/gas-deploy.sh` now polls the GET route five more times behind 5/15/30/60/90s of backoff after both legs fail
+- **First archive rotation in seven pushes** (v05.59r): EST rolled to 2026-09-14, the non-exempt count jumped 96 → 111, and thirteen sections dated 2026-09-04 (`v04.48r`–`v04.60r`) moved to `CHANGELOG-archive.md` with SHA enrichment
+- **v05.60r** corrected §7.15's two now-stale facts and saved this context
+
+### Where we left off
+
+Everything is merged and live. **Phase 4 stands at 4 of 26**; the next row is **5, `the-transformer-and-the-substation`** (`electrical-foundations` position 3), and its brief is **§7.15**, rewritten at v05.60r so its deploy and CHANGELOG paragraphs match reality. Row 5 also carries two things rows 1–4 could not do: the **nine shipped plain-field markup fixes plus the mirror checker** (blocked until now because the check errors on them and would have broken the pristine-HEAD baseline), and the **first real exercise of the deploy poll**, since every `Deploy` step exits early unless that project's `.gs` is in the merge diff and v05.59r touched none.
+
+### Key decisions made
+
+- **A defect found in another row's lesson is not fixed on a lesson-authoring commit.** Editing another row's literal adds a `check-classroom-pipeline.py` **P8** finding to a run whose signature (P1 + P5) is what the next run reads to verify its own write went in cleanly. The fix and the checker that guards it belong in one run, checker second
+- **A wording change owes no `revisions[].changed[]` entry** — G4, the meaning does not move — which is why the markup fixes can be batched without touching any account's progress deltas
+- **`clStudyNext_` against the real serving functions is the acceptance test**, not the registry. Every row since 3 has been proven on the walk three ways: fresh, with every *other* lesson completed, and with the new lesson completed
+- **Read every screenshot.** Both rendering defects this session found were invisible to every checker and visible in the first screenshot of the section carrying them
+
+### Active context
+
+- **Repo version** v05.60r · **CHANGELOG** 100 raw / 98 non-exempt after this push (`Sections: 100/100`); next oldest whole date group is eighteen sections dated 2026-09-05
+- **GAS versions:** Classroom v01.29g, Profiler v01.39g, Scraper v02.02g. **Page versions:** Profiler v01.90w, Classroom v01.13w, Scraper v01.72w
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+- `claude/adoring-brown-mvddj2` is still on the remote and is genuinely unmerged — not this session's, and not swept
+
+### Recommendation for next session
+
+- Run **Phase 4 row 5, `the-transformer-and-the-substation`**, following `INTEGRATED-REMEDIATION-PLAN.md` §7.15 — one lesson appended to `electrical-foundations` (so expect **P1, no P5**), plus the nine plain-field markup fixes and the mirror checker, in that order (**P8** comes from those). Watch the `Deploy Classroom` step for a `POLL <n>` line; it is the first run that can exercise the poll added at v05.59r.
+
+**To continue:** type `continue with your recommendation`
+
+## Previous Sessions
+
+### Session — 2026-09-13 06:41:02 PM EST (v05.52r, reconstructed)
+
 **Date:** 2026-09-13 06:41:02 PM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v05.52r — the window v05.50r → v05.52r, recovered because the session that ended at v05.52r did not run "remember session"
 **Branch:** `claude/optimistic-gauss-zqootb` (the session performing the reconstruction; the reconstructed work itself landed on earlier `claude/*` branches)
 
-### What was done
+#### What was done
 
 - The first quarterly Industry Guidance review, and the first under C3's file layout: `bess-bankability-2026-08` re-verified gate by gate against primary instruments only; five claims moved, two of them corrections; `updated` → 2026-09-13 and `reviewBy` 2026-10-01 → **2027-01-01**, set from the module's own next dated gate (UL 9540A Ed. 6's effective date) rather than a fixed cadence (v05.50r)
 - The GAS deploy path stopped reporting success it had not verified — investigated from the GitHub Actions logs rather than from the prior session's note, which was partly wrong about what had happened (v05.51r)
 - All nine guidance modules swept for the nationality-framed FCC claim v05.50r had corrected. **No other module repeats it** — the negative result the sweep was asked for — but the sweep surfaced a collision v05.50r had itself created, and that was closed in the same push (v05.52r)
 
-### Where we left off
+#### Where we left off
 
 All three pushes merged. The §7.3 run table's order 3 (the bankability review) closed at v05.50r and the pointer advanced to **order 4 — Phase 4 row 1, `four-machines`** — which is the session doing this reconstruction. **A brief for order 4 was never persisted as §7.13**; the file still ends at §7.12.
 
-### Active context
+#### Active context
 
 - **Repo version** v05.52r at the moment of reconstruction; this session is in flight and will land **v05.53r**
 - **CHANGELOG** 105/100 raw / 96 non-exempt (nine sections dated 2026-09-13, all exempt); oldest whole date group thirteen sections dated 2026-09-04
 - **GAS versions:** Classroom v01.25g, Profiler v01.39g, Scraper v02.02g. **Page versions:** Profiler v01.90w, Classroom v01.13w, Scraper v01.72w
 - **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
 
-### Recommendation for next session
+#### Recommendation for next session
 
 - Reconstructed context is a summary, not a handover — read the **v05.53r** CHANGELOG section for what the in-flight session actually did, then take the lowest-numbered unbuilt row of `CLASSROOM-CURRICULUM-PLAN.md` §7 (row 2, `how-a-utility-buys`, which creates the `market-access` track) or an S2 landscape, per `INTEGRATED-REMEDIATION-PLAN.md` §7.3 orders 5 and 6.
 
 **To continue:** type `continue with your recommendation`
 
-## Previous Sessions
-
-### Session — 2026-09-13 05:38:06 AM EST (v05.49r)
-
-**Date:** 2026-09-13 05:38:06 AM EST
-**Repo version:** v05.49r — **two push commits** on `claude/affectionate-galileo-rsr3k1` (v05.48r, v05.49r), both merged; this remember-session commit follows on the same branch
-**Branch:** `claude/affectionate-galileo-rsr3k1`
-**Model:** Opus 5 xhigh as the orchestrator; **no subagents** — Bash, Node VM harnesses and Playwright throughout. ~76 minutes for the C3 push, then a live-troubleshooting stretch with the developer, then ~20 minutes for the masthead push
-
-#### What was done
-
-**C3 session 3 of 3 — the Guidance Homecoming, CLOSED (v05.48r). Then a developer-directed masthead change (v05.49r), and a long live-support stretch in between.**
-
-1. **The progress ticks migrated** — six one-shot admin functions, three per project, deliberately named without a trailing underscore because **Apps Script hides `_`-suffixed functions from the editor's Run dropdown**. Profiler: `exportGuidanceProgress` / `previewGuidanceProgressPrune` / `applyGuidanceProgressPrune`, filtering `gd_progress:<email>` to the nine module ids over a **frozen `GD_MIGRATED_MODULE_IDS` literal** (the registry it would otherwise walk is deleted in the same commit). Classroom: `previewGuidanceProgressImport` / `applyGuidanceProgressImport` / `verifyGuidanceProgressImport`, reading the payload from a `GUIDANCE_PROGRESS_IMPORT` Script Property because an editor-run function takes no arguments
-2. **The design's done-when is met** — `scripts/check-guidance-migration.js` (new) runs all six real functions in **two isolated VM contexts with one Script Property store each**, fixture built from the real registry. **44 assertions pass**: export read-only and deterministic, dry run writes nothing, verifier accounts for every tick per account with zero missing, second import writes 0 and leaves the store byte-identical, prune leaves `study-`/`dossier-` ticks and unrelated properties alone and is itself idempotent
-3. **The read-only window closed** — `clProgressValid_` admits every registered module behind `clCan_(sess,'guidance')` (**one map, not two**: progress is never a weaker gate than reading); modules render with mark-as-understood buttons and filling nav ticks; library cards carry a completion readout; `clDrillGuidanceItems_` puts **139 guidance items** into the C4 pool as `gc:`/`gq:` ids beside 216 lesson items. **Decision 6 at its target state**
-4. **Profiler's copy deleted** — twelve functions, the `gop=index|doc` branches, ten page-side functions, five dead CSS blocks, and `scripts/check-guidance-parity.py`. `Profiler.gs` 760 KB → 449 KB; `Profiler.html` 8,099 → 7,818 lines. **The `gd-*` renderer deliberately stayed** — study guides, the report view and the sign-in log all render through it
-5. **`.claude/rules/industry-guidance.md` re-targeted** at `Classroom.gs` (frontmatter + steps 4/5/6/7/10) as a file-target and op-name change, and the **quarterly review Routine's prompt updated in place** after the developer was asked in-session and approved — same trigger id `trig_01CrhxzfBV6uKQNKpUXLLMSZ`, same cron, run history intact
-6. **v05.49r — the masthead directive.** Profiler lost `🎓 Classroom` and `✦ Industry Guidance` (stack five slots → three at 4/44/84, `#ov-header` 194px → 114px); Classroom lost `← Profiler`. `verify-profiler-roles.py` moved with the code: the `classroom` column is retired and the `guidance` row now reads the **dossier chip line** instead of a button — a stronger assertion, because the line only paints once the server has answered. **12 × 4 from here**
-7. **`INTEGRATED-REMEDIATION-PLAN.md` §7.12** — the paste-in brief for the bankability review (order 3), written in this remember-session commit, with the §7.3 row 3 flipped to NEXT UP
-
-#### Where we left off
-
-Both pushes merged and deployed. **C3 is closed and the plan's order 2 is done.** The developer confirmed Classroom's guidance surfaces work in production — library, ticks, drill — and the migration sequence itself **found an empty store**: `exportGuidanceProgress()` returned `accounts:{}`, `ticks:0`, `keptDocs:0`, so there was no history to move and the prune must not be run. **Open thread:** whether the developer's guidance ticks exist in browser `localStorage` under `ov_guide_progress_*`; a console snippet to recover them with their real dates was given and its result is not yet known.
-
-#### Key decisions and findings
-
-- **A green `Deploy <Project>` workflow step does NOT mean the code landed.** Run #558's `Deploy Profiler` step reported success and ran 10 seconds — it genuinely called the web app — yet the Apps Script project was still on v01.38g until the developer ran `pullAndDeployFromGitHub()` by hand. **This is an unfixed defect in `.github/workflows/auto-merge-claude.yml`** and it has been shipping silently for every GAS change. It cost most of an hour of live troubleshooting. Worth its own session.
-- **The GAS version pill on a page is NOT evidence of what is deployed.** It reads `live-site-pages/gs-versions/*.gs.version.txt` off GitHub Pages — the repo's file — which the commit bumps whether or not the script project ever pulled. The only authoritative check is line 1 of the Apps Script editor.
-- **The merge rule is "an existing Classroom tick always stands", and it is correct in BOTH directions.** The brief only required not overwriting a newer Classroom tick; max-date-wins would satisfy that and is wrong, because when Profiler's date is the newer, Classroom's earlier date is the true first completion. Never overwriting also makes the import idempotent by construction.
-- **C3 created a new permanence constraint nobody has hit yet.** A guidance module's **section ids** are now progress-tick keys in `cl_progress:` AND are embedded in drill ids (`gc:<moduleId>:<sectionId>:<n>`). Renaming one silently orphans reading history, resets that section's SM-2 schedules, and breaks report overlay anchors. §7.12 names this as the bankability review's primary trap.
-- **`check-classroom-content.py` asserted `tickable == readable lessons` per tier**, so admitting modules broke it by design; the checker moved with the code and the new assertions are stronger (guidance drill pool gated per tier, every served id gradable, **lesson ids and module ids asserted disjoint**). 134 → 142 gate cases. `clProgressValid_` is a `GATE_SYMBOLS` member, so `gateDigest` was refreshed.
-- **Two Classroom render traps, both cost a debugging cycle:** `HTML_CONFIG.STORAGE_TYPE` is `sessionStorage` and the page's single-tab enforcement **clears it on load**, so a session seeded from `add_init_script` is wiped before `clAdmitted()` reads it; and `_gasPost` is a top-level `function` declaration, so an init-script assignment to `window._gasPost` is **overwritten** by it. Both stubs must be installed AFTER the page's own scripts run. Recorded in the rules file's step 7.
-- **`gis_load_failed` in a Profiler Playwright run is a harness artifact** — the harness aborts `accounts.google.com`. Confirmed identical on a pristine `HEAD` Profiler across three runs each.
-- **The masthead harness lesson:** the button stack is built by the auth wall's `pass()`, which a harness bypassing the wall never calls — so the buttons are genuinely absent and the test fails for the wrong reason. Call the `ov*BtnShow()` builders explicitly.
-- **CHANGELOG arithmetic, third push in a row:** 102 raw / **96 non-exempt**, because six sections are dated 2026-09-13. Rotation has correctly not fired all session. **It fires on the first push landing on a later EST day**, when all six stop being exempt. The clone was unshallowed (55 → 1,145 commits) so SHA enrichment is ready.
-
-#### Active context
-
-- **Repo version** `v05.49r`; **CHANGELOG 102/100 raw / 96 non-exempt**; **`Profilerhtml.changelog.md` at 49/50 — one bump from mandatory rotation**; `Classroomhtml.changelog.md` 13/50, `Profilergs.changelog.md` 39/50, `Classroomgs.changelog.md` 23/50, `Scrapergs.changelog.md` 49/50 (untouched all session)
-- **GAS versions:** Classroom `v01.23g`, Profiler `v01.39g`, Scraper `v02.02g`. **Page versions:** Profiler `v01.90w`, Classroom `v01.13w`, Scraper `v01.72w`, Receipts `v01.37w`, MasterACL `v01.06w`, globalacl `v01.06w`, gas-project-creator `v01.04w`, testauthgas1 `v01.04w`, testauthhtml1 `v01.04w`, text-compare `v01.02w`
-- **Operational state:** `GUIDANCE_PEER_TOKEN` set and working in both projects. The six one-shot migration functions are **deployed but effectively unused** — the export found an empty store. **The prune must not be run.** `GUIDANCE_PROGRESS_IMPORT` should be deleted from Classroom's Script Properties if it was created
-- **Run order from here:** **the bankability review (§7.12, order 3)** → Phase 4 row 1 (`four-machines`) → S2 ∥ Phase 4 rows 2–24 → K2 → rows 25–26 → C5 → the plan clock. **~54 sessions remain**
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-#### Recommendation for next session
-
-- Run the **bankability review** — order 3 of the §7.3 run table, the only module inside the 30-day `reviewBy` horizon (2026-10-01) — on Opus 5 xhigh from the `INTEGRATED-REMEDIATION-PLAN.md` **§7.12** brief: re-verify `bess-bankability-2026-08`'s dated gates against primary sources, refresh `updated` and `reviewBy`, and **do not rename a single section id**, because since C3 they key the developer's reading history and the C4 drill schedules as well as three report overlay anchors.
-
-**To continue:** paste the bankability-review prompt (reproduced in chat, and stored as §7.12 of `INTEGRATED-REMEDIATION-PLAN.md`) into a new Opus 5 xhigh session.
-
+Developed by: LightAISolutions

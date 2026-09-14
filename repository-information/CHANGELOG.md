@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.60r] — 2026-09-14 03:40:18 AM EST
+
+> **Prompt:** "How many more steps are there to finish this "four machines lesson and Electrical Foundations track" action plan? Then, give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 5, the-transformer-and-the-substation, then remember session."
+
+**A handover commit, and the reason it is not only a context save.** The brief the next session is about to be pointed at — §7.15 — carried two facts that this session's own later pushes disproved. Handing over a prompt that says "READ FIRST: §7.15" without fixing them would have repeated exactly the failure v05.58r existed to correct.
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.15, the deploy paragraph** — it still described `gas-deploy.sh` as having "no poll afterwards" and still blamed run #568 on the GET leg outrunning its 120s budget. v05.59r disproved both: the step took **76 seconds**, so neither leg came near its ceiling, and the script now polls five times after both legs fail. The paragraph now carries the non-answer diagnosis, the `POLL <n>` log line to watch for, and the fact that **row 5's run is the first that can exercise the poll** — every `Deploy` step exits early unless that project's `.gs` is in the merge diff, and v05.59r touched none
+- **§7.15, the CHANGELOG paragraph** — it predicted a rotation that has since fired. It now records that v05.59r moved thirteen sections dated 2026-09-04 (`v04.48r`–`v04.60r`) with SHA enrichment, gives the current state (99 raw, 98 non-exempt) so the next session's arithmetic starts from truth, and names the next oldest whole group as eighteen sections dated 2026-09-05
+- §7.14 is deliberately **not** re-touched: row 4 is built, so it stands as the historical record of what that session was told
+
+### Added
+
+- **`repository-information/SESSION-CONTEXT.md`** — a real Latest Session entry for the first time in three sessions (the previous one was auto-reconstructed from CHANGELOG at v05.52r). Covers the whole v05.53r → v05.60r window: four mechanism lessons, two screenshot-only rendering defects of which one is fixed and one is scheduled, the deploy-gate diagnosis and fix, and the first archive rotation in seven pushes. The 2-session cap applied, so the v05.49r entry was dropped
+
+### Notes
+
+- **Where the plan actually stands, counted from the files rather than remembered.** `electrical-foundations` is **1 of 5 lessons built** — `four-machines` (§7 row 1); the four remaining are §7 rows 5, 13, 14 and 15. Phase 4 overall is **4 of 26 rows built, 22 remaining**. Carried alongside row 5 but not itself a row: the nine shipped plain-field markup occurrences and the mirror checker
+- **This is a Remember Session action that also bumped the version**, which the command's own text does not do. The exemption exists because a pure context save has nothing user-facing to log; this commit also corrects a plan document, and that deserves a version and an entry. Recorded here rather than left as an unexplained deviation
 
 ## [v05.59r] — 2026-09-14 03:23:58 AM EST
 
