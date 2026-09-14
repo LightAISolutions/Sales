@@ -833,9 +833,10 @@ def run_gate_truth_table(src, lesson_ids=()):
     # Hard-coded on purpose: it catches a module silently dropped from (or
     # doubled into) `guidanceDocs_()`, which deriving the count from the same
     # function could not. Bump it in the commit that registers a module —
-    # 9 at C3 session 3, 10 since S2 session 1 added the first landscape.
-    if len(gids) != 10:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 10" % len(gids))
+    # 9 at C3 session 3, 10 since S2 session 1 added the first landscape,
+    # 11 since S2 session 2 added the second (cells and chemistry).
+    if len(gids) != 11:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 11" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:
