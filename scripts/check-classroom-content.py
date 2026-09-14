@@ -275,6 +275,82 @@ def strings_in(node):
             yield from strings_in(v)
 
 
+# ── Micro-markup: only what the renderer actually formats ────────────────────
+# `clFmt` in Classroom.html resolves **bold** with /\*\*([^*]+)\*\*/g — a class
+# that CANNOT contain an asterisk — then *italic* with /\*([^*\n]+)\*/g. So an
+# italic nested inside a bold never matches, the italic pass chews the string,
+# and LITERAL ASTERISKS render to the reader. Nothing else catches it: the
+# schema is valid, the terms resolve, and `node --check` sees good JSON. It is
+# visible only in a screenshot, which is how it was found (v05.55r).
+#
+# The scope below is deliberately narrow and mirrors the renderer call site by
+# call site, because most content reaches the DOM through clEl()'s textContent
+# where an asterisk is a literal character. Two traps this encodes:
+#   * `provenance.inputs[].note` is an authoring aid and is NEVER rendered, so
+#     "P=V*I" there is multiplication, not broken markup;
+#   * `timeline` items are formatted but `bars` items are not, though both use
+#     `label`/`sub` — so the walk has to be kind-aware, not field-name-aware.
+FMT_BY_KIND = {
+    "prose":      (("ps",), ()),
+    "callout":    (("ps",), ()),
+    "table":      (("cols",), ("rows",)),
+    "ledger":     ((), ("rows",)),
+    "proscons":   ((), ("cards.adv", "cards.dis")),
+    "timeline":   ((), ("items.label", "items.sub")),
+    "flashcards": ((), ("cards.q", "cards.a")),
+    "quiz":       ((), ("items.q", "items.why", "items.c")),
+}
+
+
+def fmt_strings(sec):
+    """Yield (path, text) for exactly the strings Classroom.html sends to clFmt()."""
+    kind = sec.get("kind")
+    for f in ("intro", "note", "sales"):            # every kind, when present
+        if isinstance(sec.get(f), str):
+            yield f, sec[f]
+    flat, nested = FMT_BY_KIND.get(kind, ((), ()))
+    for f in flat:                                   # list of strings
+        for i, s in enumerate(sec.get(f) or []):
+            if isinstance(s, str):
+                yield "%s[%d]" % (f, i), s
+    for spec in nested:
+        outer, _, inner = spec.partition(".")
+        for i, row in enumerate(sec.get(outer) or []):
+            if inner:                                # list of dicts
+                if not isinstance(row, dict):
+                    continue
+                v = row.get(inner)
+                if isinstance(v, str):
+                    yield "%s[%d].%s" % (outer, i, inner), v
+                elif isinstance(v, list):            # e.g. quiz choices, adv/dis
+                    for j, s in enumerate(v):
+                        if isinstance(s, str):
+                            yield "%s[%d].%s[%d]" % (outer, i, inner, j), s
+            else:                                    # table rows: list of lists
+                for j, cell in enumerate(row if isinstance(row, list) else []):
+                    if isinstance(cell, str):
+                        yield "%s[%d][%d]" % (outer, i, j), cell
+
+
+def cl_fmt(s):
+    """The two substitutions Classroom.html's clFmt() applies, in its order."""
+    t = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
+    return re.sub(r"\*([^*\n]+)\*", r"<em>\1</em>", t)
+
+
+def check_markup(doc, tag):
+    for sec in doc.get("sections") or []:
+        if not isinstance(sec, dict):
+            continue
+        for path, text in fmt_strings(sec):
+            if "*" in cl_fmt(text):
+                err("%s: section %r %s leaves a literal '*' after clFmt — nested "
+                    "emphasis (**a *b* c**) never matches the bold regex and renders "
+                    "asterisks to the reader; use one level of emphasis"
+                    % (tag, sec.get("id"), path))
+
+
 def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
     for f in ("schemaVersion", "id", "title", "short", "group", "updated", "reviewBy",
               "provenance", "sections"):
@@ -315,6 +391,7 @@ def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
     check_stamp(lesson, tag, ref_kinds, strictness)
     check_sections(lesson.get("sections"), tag)
     check_terms(lesson, tag, public)
+    check_markup(lesson, tag)
 
 
 def check_track(track, tag, lessons_by_id, schema_ver):
@@ -866,6 +943,14 @@ def main():
         tracks_by_id[tid] = t
     check_prereq_cycles(tracks_by_id)
     check_segment_lessons(lessons_by_id)
+    # Guidance modules live below the // CONTENT END fence and are not lessons,
+    # so nothing else here validates them — but Classroom.html renders them
+    # through the SAME cl* engine, so they carry the identical markup hazard.
+    # Only the markup check is applied; their schema is the guidance rules', not
+    # this checker's. `guidanceDocs_()` (the plural registry) returns calls
+    # rather than a JSON literal, so the parser skips it on its own.
+    for fn, doc in parse_literals(src, "guidanceDoc").items():
+        check_markup(doc, "%s()" % fn)
     cases = run_gate_truth_table(src, list(lessons_by_id)) or 0
     return finish(len(lessons), len(tracks), cases)
 

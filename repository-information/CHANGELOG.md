@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 108/100`
+`Sections: 109/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.56r] — 2026-09-13 08:43:31 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**The defect v05.55r found by eye is now a checker that cannot miss it.** Nothing in this repo could see it: the schema was valid, the terms resolved, `node --check` saw good JSON, and the pipeline checker reads diffs. It was caught in a screenshot, which does not scale. This closes that gap — and the implementation is narrower than the recommendation that prompted it, for reasons worth recording.
+
+### Added
+
+- **`check_markup()` in `scripts/check-classroom-content.py`** — simulates the two substitutions `clFmt` applies, in its order, over every string the renderer actually formats, and **errors** on any surviving `*`, naming the section id and the exact path (`section 'what-a-battery-changes' cards[1].adv[0]`). Covers all 33 lessons, 8 tracks and, separately, the nine `guidanceDoc<Name>_()` literals below the `// CONTENT END` fence — those are not lessons and nothing else in this checker validates them, but `Classroom.html` renders them through the same `cl*` engine, so they carry the identical hazard. 108 module sections scanned, all clean
+
+### Changed
+
+- **`CLASSROOM-SCHEMA.md` → Verification** and **`.claude/rules/classroom-app.md` → Versioning and verification** now state the rule — *one level of emphasis per span* — and the two scope properties that keep it honest
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.14** — its manual simulation recipe is retired in favour of the checker, and the paragraph now records that the recipe it carried named **too wide a scope**
+
+### Notes
+
+- **The recommendation this session acted on was partly wrong, and reading the renderer is what caught it.** v05.55r proposed checking `sections`, `tiles`, `glossary`, `short` and `title`. Three of those five are wrong: `tiles`, `glossary`, the lesson's `title`/`short`, section `title`/`read`, proscons card `t`/`meta` and timeline lane labels all reach the DOM through **`clEl()`'s `textContent`**, where an asterisk is a literal character. Checking them would have manufactured a fresh class of false positives on the very defect class being guarded. The implemented scope is the sixteen clFmt call sites in `Classroom.html`, read off the file rather than assumed
+- **The walk had to be kind-aware, which the recommendation did not anticipate.** A `timeline` item's `label` and `sub` go through `clFmt`; a **`bars` item's `label` and `sub` do not** — `clBars` uses `createTextNode` and `textContent`. Identical field names, opposite answers, so `FMT_BY_KIND` is keyed on `kind` and mirrors the renderer call site by call site. Proven directly: the same nested-emphasis string in both shapes yields **0 errors as `bars`, 2 as `timeline`**
+- **`provenance.inputs[].note` is excluded by construction**, because the schema says a note is an authoring aid that is never rendered. That is the `P=V*I` in `cell-to-container` — a multiplication sign that v05.55r's first, wider sweep flagged and then cleared. The narrow scope makes that class of false positive impossible rather than merely unlikely
+- **The check was proven to fire, not merely to pass.** A checker that never fires is worthless, so the real v05.55r defect string was re-injected into a scratch clone and caught with its exact path; a nested emphasis injected into `guidanceDocBankability_()`'s `ps[0]` was caught with its module and section. In both negative tests the error count went **24 → 25**, confirming the injected provenance-note asterisk in the same run produced nothing
+- **No GAS version bump, and that is the rule rather than an omission.** `Classroom.gs` is untouched this push, so [PC-GS-VERSION] #1 forbids bumping `VERSION`, and there is no page or GAS changelog entry because no deployed content changed. The README's Classroom GAS display correctly stays at `v01.28g`
+- **`check-classroom-content.py`: 33 lesson(s), 8 track(s), 142 gate case(s) — 24 error(s), 0 warning(s)**, error set diffed line by line against a pristine `HEAD` worktree and byte-identical — the new check adds nothing to the baseline every future session compares against. `check-classroom-curriculum --strict`: no structural findings. `check-classroom-pipeline --selftest` 13/0; `--base origin/main` reports **P1 alone** — no P5 (no registry touched) and no P3 (no gate surface touched), which is the right signature for a checker-and-docs change
+- **Rotation did not fire, on the EST clock again.** `TZ=America/New_York` reads 2026-09-13 while UTC is already 2026-09-14, so the thirteen sections dated 2026-09-13 stay exempt: **109 raw, 96 non-exempt** — the sixth consecutive push at exactly 96. Oldest whole date group remains **thirteen sections dated 2026-09-04**
 
 ## [v05.55r] — 2026-09-13 08:31:30 PM EST
 
