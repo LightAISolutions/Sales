@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.71r] — 2026-09-14 05:30:21 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 7, then remember session."
+
+**A handover commit, and the counter refresh §7.20 needed for the same reason §7.19 did at v05.69r.** §7.20 was written at the close of S2 session 2 and described the state at that moment — but this push moves the repo version and adds a CHANGELOG section, which would have left its body and its pasteable prompt describing a state one push out of date. Both halves are refreshed together so they agree, which is the failure v05.69r had to correct by hand.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.20 — repo version, deployment counter and changelog figures refreshed to the state the next session will actually find**, which is the state *after* this push: repo **v05.71r** (was v05.70r), CHANGELOG **111 raw / 98 non-exempt with thirteen sections dated 2026-09-14** (was 110 / twelve), rotation on 2026-09-15 or later leaving **93** (was 92). **Body and prompt now carry identical numbers.**
+- **The deployment counter changed from a forecast to a measurement.** §7.20 was written predicting "44/200 before this session's own deploy — expect to bump from 45/200". v05.70r's workflow then reported `Classroom deploy confirmed (GET): Updated to v01.34g (deployment 45) | 45/200` **on the first GET leg with no `POLL <n>` line, and no `?op=deploy` probe was issued at all** — Pages and the job log agreed, which is the §7.19 order working exactly as it was rewritten to. §7.20 now states that as fact rather than as an expectation, and records that the probe cost nothing because it was never needed.
+- **`repository-information/SESSION-CONTEXT.md` — Remember Session.** The v05.69r entry moves to `## Previous Sessions` and the v05.66r entry is dropped under the two-session cap. The new Latest Session records S2 session 2 in full: the re-measured segment, the fifteen-row bets table, the `reviewBy`-is-read-not-sorted finding with its three rejected candidates, the Scraper-seed decision and the two sub-layers it left, the P1/P2/P7 signature correction, the "only segment" correction, the name-your-players decision, and the render harness that now works first try.
+
+### Notes
+
+- **Nothing in the Classroom surface moved.** This push touches one plan document, `SESSION-CONTEXT.md`, `README.md`, `repository.version.txt` and this file. Classroom stays at **v01.34g** / **v01.14w**, the content-checker baseline stays **0 errors / 0 warnings at 36 lessons / 8 tracks / 142 gate cases**, and `build-classroom-segments.py --check` still reports **1 due** (`storage-developers-and-ipps`), which is Phase 4 row 6's residue and S2 session 3's to clear.
+- **The branch name was corrected mid-session before any commit.** A branch was created under a descriptive name for the next row's work; the session's designated branch is `claude/cells-chemistry-guidance-module-fbepwj`, and since its prior push had already merged and been swept, the correct move is to restart **that same name** from `origin/main` rather than invent a new one. Caught and fixed before staging, so no commit carries the wrong branch.
+- **Rotation checked, not assumed:** 111 sections with this one, of which **13 are dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** The next push landing 2026-09-15 or later does rotate, moving the eighteen sections dated 2026-09-05 (`v04.61r`–`v04.78r`) and leaving 93.
+- **Counters re-counted rather than carried:** repo CHANGELOG 110 raw / 12 today before this entry; `Classroomgs.changelog.md` 34 raw / 5 today / **29 non-exempt**; `Scrapergs.changelog.md` 50 raw / 1 today / **49 non-exempt**; `Profilerhtml.changelog.md` 49 / 0 / 49. All four match what §7.20 records.
 
 ## [v05.70r] — 2026-09-14 05:01:12 PM EST
 

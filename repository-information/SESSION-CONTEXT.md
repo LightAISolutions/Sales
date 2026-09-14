@@ -3,8 +3,54 @@
 Claude writes to this file when the developer says **"Remember Session"** — capturing enough context for a future session to pick up the train of thought quickly. This is separate from "Reminders for Developer" (REMINDERS.md), which is the developer's own notes.
 
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
-
 ## Latest Session
+
+**Date:** 2026-09-14 05:30:21 PM EST
+**Repo version:** v05.71r — two pushes (v05.70r the landscape module, v05.71r this handover)
+**Branch:** `claude/cells-chemistry-guidance-module-fbepwj` (restarted from `origin/main` before each push)
+
+### What was done
+
+- **S2 session 2 — the `cells-and-chemistry` landscape module** (v05.70r). `landscape-cells-and-chemistry-2026-09`: the **eleventh guidance module and the second landscape**, authored below the `// CONTENT END` fence, nine §10.6 sections in its order, four tiles, a six-term glossary, and the **full fifteen-row `each-players-bet` table** with none trimmed. Registered at the end of `guidanceDocs_()`; the content checker's hard-coded module count moved **10 → 11** in the same commit
+- **The analysis file first** — `repository-information/industry-guidance/landscape-cells-and-chemistry-analysis.md`, 255 lines, eleven sections, a **50-row claims ledger** in which every load-bearing claim names a dossier field at its `profileVersion`. Corpus synthesis over the 22 member dossiers and `profiler-segments.json` only; no ingested document, no web research
+- **The segment re-measured on the day: 22 members, 4 · 11 · 7** — §7.19's figure confirmed exactly, and so was its correction that this is the **fifth**-deepest segment (behind 34 / 32 / 30 / 27), not the second
+- **One `--segment cells-and-chemistry` regeneration, run after the module existed.** `read-next` went from "No landscape module yet" to naming the module. `--check` moved **1 due → 2 due → 1 due**, exactly as §7.19 predicted
+- **§7.20 written** for Phase 4 row 7 (`inside-the-rack`), and **refreshed in this handover** so its body and prompt describe the state the next session will actually find
+
+### Where we left off
+
+Everything is merged and live. **Phase 4 is 6 of 26; S2 is 2 of ~19.** GAS live at Classroom **v01.34g**, Pages serving `|v01.34g|` and `|v01.14w|`, both confirmed. The content-checker baseline is **0 errors / 0 warnings at 36 lessons / 8 tracks / 142 gate cases** and was held across the whole session. `build-classroom-segments.py --check` reports **1 due** — `storage-developers-and-ipps`, Phase 4 row 6's residue, which S2 session 3 clears.
+
+### Key decisions made
+
+- **`reviewBy` is read, not sorted — the finding worth carrying across both lanes.** It resolved to **2027-01-01**, on China's export VAT rebate for batteries falling to zero: a *rate that changes on a schedule* stated by two members inside a `policyExposure[].exposure` **paragraph**, while that same entry's `effectiveDate` carries **2026-04-01**, the earlier first step of a two-step schedule. So **a sort of the fence returns 2027-02** (an adjacent member's EU battery passport) and **the generator returns 2027-10-01** — a **ten-month spread across three defensible readings of one registry**. Three nearer candidates were rejected in writing rather than silently: a challenger's October 2026 plant start (one company's execution, already an indicator row), an adjacent member's November 2026 graphite-control expiry (a real dated gate the module leans on no claim from — session 1's Cummins test), and "late 2026" for the final FEOC rules (load-bearing, but **not a date**)
+- **The Scraper seed was correctly NOT added, and the evidence was already in the file.** `topic-bess-technology` owns the cell and chemistry layer, and **S2 session 1's own seed comment says so in as many words** — written to justify adding an integrator seed, readable forwards as the answer to this session's question. `Scraper.gs` untouched; `Scrapergs.changelog.md` stays at **50 raw / 49 non-exempt**, still one short of its trigger. Two genuinely unscored sub-layers (the **format ladder**, the **EU battery passport**) are recorded in §11 of the analysis file and left, because their natural homes are other modules' seeds and a near-duplicate seed double-counts an article in the digest's topic band
+- **§7.19's pipeline prediction was wrong and is corrected in §7.3 for session 3.** The run reports **P1 ×4, P2 ×9, P7 ×1 and no P3** — not "P1 and P10". P2 is what a developer diff outside the content fence reports; one regenerated lesson is well inside P10's cap of three; the single P7 is the same-day `updated` on the regenerated segment. **Identical to the signature session 1 recorded**
+- **§7.19's "only segment" claim was too strong, in the other direction to its depth correction.** 11 to 4 is 2.75, but `neoclouds` is **6.00** and `compute-and-the-rack` **2.00** on a handful of members each. The module claims only the defensible version: **the widest challenger-to-incumbent ratio of any segment holding more than ten members**
+- **A landscape's prose names its players.** The threat section was drafted anonymously ("one challenger…") and rewritten to name them: the developer-approved exception exists for exactly that, and anonymising is weaker guidance rather than safer guidance
+- **The deploy cost nothing, and the §7.19 order is now proven on its second use.** Pages and the workflow's own `Classroom deploy confirmed (GET): Updated to v01.34g (deployment 45) | 45/200` agreed, so **no `?op=deploy` probe was issued at all**. Confirmed on the **first GET leg with no `POLL` line**
+
+### Active context
+
+- **Repo version** v05.71r · **CHANGELOG** 111 raw / **98 non-exempt** (13 sections dated 2026-09-14). **The next push landing 2026-09-15 or later rotates** — the 2026-09-14 group stops being exempt, the count clears 100, and the oldest whole group is **eighteen sections dated 2026-09-05 (`v04.61r`–`v04.78r`)**, leaving 93. **Re-count rather than trusting this line**: `grep -c '^## \[v'` minus the same grep narrowed to today's EST date is the whole rule
+- **Standing changelog traps, neither of them the next session's:** `Scrapergs.changelog.md` at **50/50 with 49 non-exempt** fires rotation for the next session to touch `Scraper.gs` on a later EST day (oldest group: twenty-six sections dated 2026-08-28); `Profilerhtml.changelog.md` sits at 49/50. `Classroomgs.changelog.md` 34/50 with 29 non-exempt — not near the line. **A Phase 4 row touches neither Scraper nor Profiler**
+- **GAS versions:** Classroom **v01.34g**, Scraper v02.03g, Profiler v01.39g. **Page versions:** Classroom **v01.14w**, Profiler v01.90w, Scraper v01.72w
+- **Content-checker baseline is 0 errors / 0 warnings at 36 lessons / 8 tracks / 142 gate cases** — protect it; nothing inherited remains, so any error the next session sees is unambiguously its own. Its **guidance-module count assertion is now 11**, and a Phase 4 row does not touch it
+- **Deployment counters:** Classroom **45/200** (the workflow's own deploy, no probe), Scraper 148/200. **The v05.59r poll is armed and has still never been needed**
+- **`build-classroom-segments.py --check` reports 1 due (`storage-developers-and-ipps`)** — row 6's residue, S2 session 3's to clear. Registering a lesson named in a segment's `READ_NEXT` can make it 2 due; that is expected, and a Phase 4 row **regenerates nothing**
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+- **The render harness now works first-try and is worth keeping intact.** Run the PROJECT region of `Classroom.gs` under Node with GAS shims, shim **only** `validateSessionForData` and let the real `handleGuidanceOp_` / `clRequire_` answer, and replay those recorded answers into `window._gasPost`. Serve a scratch copy over `http://127.0.0.1` with `_e = ''` and `AUTO_REFRESH = false`; copy `profiler-data/`, `sounds/` and `images/` in; seed `sessionStorage` **after** load; override `_gasPost` **after** load; **hide** the overlays with CSS including `#cl-app{display:block !important}`, never `remove()`. Section nodes are `#cl-<sectionId>`. `pip install playwright` is needed; Chromium is pre-installed at `/opt/pw-browsers` — never run `playwright install`
+- **Open, recorded, not taken:** the `.cl-tbl` `min-width` question, now with **four** data points against column or row count being the cause (a 5 × 11 mechanism table, an 18-row and a 15-row landscape table, and a 50-row ledger, all clean at 1400px). **Also open:** the generated segment lesson's `read-next` **names** the landscape module without linking to it — a generator-template question, and §10.4 forbids hand-editing a generated literal
+
+### Recommendation for next session
+
+- Run **Phase 4 row 7 — `inside-the-rack`, *The Last Ten Metres*** — on Opus 5 xhigh. Its brief is **`INTEGRATED-REMEDIATION-PLAN.md` §7.20**, written at the close of S2 session 2 and refreshed in this handover so its repo version, deployment counter and changelog figures describe the state the session will actually find. It restores the §7.4 item 6 interleave at 6:2, takes Phase 4 to 7 of 26, and is a **mid-track insertion at position 8 of `aidc-grid-to-chip`** — expect the **P1 + P5** signature, and no P3 or P8.
+
+**To continue:** type `run Phase 4 row 7`
+
+## Previous Sessions
+
+### Session — 2026-09-14 04:24:32 PM EST (v05.69r)
 
 **Date:** 2026-09-14 04:24:32 PM EST
 **Repo version:** v05.69r — three pushes (v05.67r the lesson, v05.68r the deploy-guidance correction, v05.69r this handover)
@@ -53,55 +99,3 @@ Everything is merged and live. **Phase 4 is 6 of 26; S2 is 1 of 19.** GAS live a
 - Run **S2 session 2 — the `cells-and-chemistry` landscape module** on Opus 5 xhigh. Its brief is **`INTEGRATED-REMEDIATION-PLAN.md` §7.19**, written at the close of Phase 4 row 6 and refreshed in this handover so its repo version and changelog counters describe the state the session will actually find. It restores the §7.4 item 6 interleave at 6:1, takes S2 to 2 of 19, and is the first S2 session that must move the content checker's guidance-module assertion from 10 to 11.
 
 **To continue:** type `run S2 session 2`
-
-## Previous Sessions
-
-### Session — 2026-09-14 12:15:03 PM EST (v05.66r)
-
-**Date:** 2026-09-14 12:15:03 PM EST
-**Repo version:** v05.66r — three pushes (v05.64r the landscape module, v05.65r the README tree it owed, v05.66r this handover)
-**Branch:** `claude/practical-keller-oxeb5d` (restarted from `origin/main` before each push)
-
-#### What was done
-
-- **S2 session 1 — the first landscape module ever** (v05.64r). `landscape-storage-integrators-and-containers-2026-09`: the **tenth** guidance module and the **first in a fourth lane, `The Value Chain`**, authored below the `// CONTENT END` fence, registered at the end of `guidanceDocs_()`, contributor tier on the unchanged `CL_ROLE_CAPS.guidance`. Nine §10.6 sections at §10.6's own ids and in its order, **all eighteen `each-players-bet` rows** (10 incumbents + 8 challengers, none trimmed), a **41-row claims ledger**, fourteen indicators, nine flashcards, six quiz items, nine glossary terms, four tiles
-- **Corpus synthesis only** — no ingested document, no new web research. The analysis file `repository-information/industry-guidance/landscape-storage-integrators-and-containers-analysis.md` (268 lines) is the source of truth; every claim traces to a member dossier at its `profileVersion`, and the dossiers carry the primary sources
-- **`reviewBy` 2027-01-01 on a written judgment**, not a sort — the reasoning is §10 of the analysis file and is the part worth re-reading before S2 session 2 sets its own
-- **Then the step §10.6 requires, in the order it requires**: `build-classroom-segments.py --segment storage-integrators-and-containers` run **after** the module existed, so the lesson's `read-next` stopped saying "No landscape module yet". `--check` 1 due → **0 due**
-- **Scraper gained `topic-bess-integrators`** (v02.03g) after reading all 27 existing seeds and establishing none scores the integrator layer
-- **v05.65r paid a debt v05.64r missed**: [PC-README-TREE] #7 fires on a file *added*, and the tree enumerates `industry-guidance/` file by file. Caught after the merge, so it needed its own push. The directory's own description was also two phases stale ("Profiler app's admin-only") and was corrected
-- **v05.66r (this push)** — §7.18, row 6's re-measured brief, superseding §7.16; §7.16 marked superseded at its own heading; §6, §7.3 and §7.17's closing pointer all re-aimed at §7.18
-
-#### Where we left off
-
-Everything is merged and live. **S2 is 1 of 19; Phase 4 is 5 of 26.** GAS live at Classroom `v01.32g` and Scraper `v02.03g`, Pages serving `|v01.32g|`, `|v02.03g|`, `|v01.14w|`, all confirmed independently after the Deploy step finished. The content-checker baseline is **0 errors / 0 warnings** and was held across the whole session.
-
-#### Key decisions made
-
-- **Backticks render literally through `clFmt` and no checker sees it.** `clFmt` resolves `**bold**`, `*italic*` and `{{term}}` — nothing else. 254 literal backticks went into the module's ledger Source column and were caught **only by reading the screenshot**. The backticked form belongs in the analysis markdown; the module gets plain text (`profile:sungrow @ v9 — ecosystemRole`). This is now recorded in §10.6's built-so-far note for the next eighteen landscapes
-- **The `reviewBy` judgment was written out rather than taken.** Five future gates exist across the 32 members; the nearest (Cummins `2027-01`) is on an **adjacent** member, is `proposed`, and governs highway engine emissions. Rejecting it buys no later review — `updated`+6mo is 2027-03-14 and the next candidate is 2027-04-01, *later*. 2027-01-01 was taken because the dominance section rests on **annual ranking editions** whose own labels state their cadence. Cummins' date is the coincidence; the ranking cycle is the reason
-- **The generated lesson's `reviewBy` is deliberately different (2027-10-01) and that is correct.** `build-classroom-segments.py`'s `review_by()` only accepts a full `YYYY-MM-DD` (`DATE_RE.match`), so all three partial dates are invisible to it. A script being conservative; a hand-authored module may resolve a partial and say why. Recorded in the analysis file so nobody "fixes" the gap
-- **§10.3's `read-next` row was wrong and was corrected in place.** It claimed the renderer gates the landscape sentence per tier. This was the first session with a module to name, and the sentence is emitted **unconditionally** — an analyst reads it. Not an access defect (an **id** leaks; the module is denied at the server) but the parenthetical described a gate that never existed, and a future session would have "fixed" a renderer that was never broken
-- **The contributor gate was proven from the real serving path, not asserted.** The PROJECT region ran under Node: admin OK, contributor OK, **analyst `ROLE_DENIED`** on both `gop=index` and `gop=doc`, 0 modules visible. On screen an analyst sees only "Industry Guidance is available to the admin and contributor tiers"
-- **Both §7.17 changelog-rotation predictions were wrong in the same way, and the failure mode is worth remembering**: they read the **raw** counters where the rule counts **non-exempt** sections (total minus today's). Neither rotation fired. The brief format invites this — a written-down counter gets acted on instead of the rule
-- **`page.evaluate(fn, arg)` passes exactly one argument.** An arrow function `(a, b) => …` silently gets the array as `a` and `undefined` as `b`; the page then renders with **zero errors and zero content**, which looks like a content bug. Destructure: `([a, b]) => …`
-- **Commit attribution stayed omitted**, consistent with v05.62r/v05.63r — the standing rule bars model identifiers in repository artifacts while the harness reminder asks for `Co-Authored-By`. Still the developer's ruling to make
-
-#### Active context
-
-- **Repo version** v05.66r · **CHANGELOG** 106 raw / **98 non-exempt** (8 sections dated 2026-09-14). **The next push landing 2026-09-15 or later rotates** — the 2026-09-14 group stops being exempt, the count clears 100, and the oldest whole group is **eighteen sections dated 2026-09-05 (`v04.61r`–`v04.78r`)**, leaving 88
-- **Two standing changelog traps for whoever touches those files next:** `Scrapergs.changelog.md` now reads **50/50 with 49 non-exempt**, so the next session that touches `Scraper.gs` on a later EST day fires rotation there (oldest group: twenty-six sections dated 2026-08-28, repo cross-refs `v03.21r`–`v03.47r`); and `Profilerhtml.changelog.md` sits at **49/50**. `Classroomgs.changelog.md` 32/50, `Classroomhtml.changelog.md` 14/50 — neither near the line
-- **GAS versions:** Classroom **v01.32g**, Scraper **v02.03g**, Profiler v01.39g. **Page versions:** Classroom **v01.14w**, Profiler v01.90w, Scraper v01.72w
-- **Content-checker baseline is 0 errors / 0 warnings** — protect it; there is nothing inherited left in that output, so any error the next session sees is unambiguously its own. `build-classroom-segments.py --check` reports **0 due**
-- **Deployment counters:** Classroom **42/200**, Scraper **148/200**. Both v05.64r deploys confirmed on the **first GET leg with no `POLL <n>` line** — the v05.59r poll is armed and **has still never been needed**. Probe `?op=deploy` with `curl -sL` (it redirects) and only *after* the Deploy step finishes, or the race burns a version
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-- **Open, recorded, not taken:** the `.cl-tbl` `min-width` question — a four-column table's first column wraps one word per line, which is the renderer's normal auto-layout and a **page** change to fix. Row 6's `the-classes` is a **five-column, eleven-row** table, the widest a mechanism lesson has carried, so it is the most likely place for it to show. New data point: this session's four-column, eighteen-row landscape table rendered cleanly at 1400px
-- **Also open:** the segment lesson's `read-next` **names** the landscape module but does not link to it — the generator emits the id as italic text and the `cl*` renderer has no anchor syntax. §10.6 calls it a deep link; today it is a stated id. A generator-template question, and §10.4 forbids hand-editing a generated literal
-- **Render harness that works** (unchanged, plus one new gotcha): run the PROJECT region of `Classroom.gs` under Node with GAS shims and replay the real serving functions into `window._gasPost`; serve a scratch copy over `http://127.0.0.1` with `_e = ''` and `AUTO_REFRESH = false`; seed `sessionStorage` **after** load; override `_gasPost` **after** load; **hide** the overlays with CSS, never `remove()`. Copy `profiler-data/profiler-concepts.json`, `sounds/` and `images/` in. And destructure `page.evaluate`'s single argument
-- `claude/adoring-brown-mvddj2` is still on the remote and genuinely unmerged — not this session's, not swept
-
-#### Recommendation for next session
-
-- Run **Phase 4 row 6 — `who-buys-storage`** on Opus 5 xhigh. Its live brief is **`INTEGRATED-REMEDIATION-PLAN.md` §7.18**, written at the close of this session and **superseding §7.16**, whose every figure this session's own work invalidated — the content-checker baseline is 0/0 rather than 24/0, the candidate stamp is 31 refs (seven of them dossiers) rather than "roughly thirty, four dossiers", and the repo CHANGELOG is 105 raw / 98 non-exempt rather than 101/99. It restores the §7.4 item 6 alternation at 5:1, inserts at `market-access` position 1 so the P1+P5 signature returns, and takes Phase 4 to 6 of 26.
-
-**To continue:** type `run Phase 4 row 6`
