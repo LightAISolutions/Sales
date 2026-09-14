@@ -1,4 +1,4 @@
-var VERSION = "v01.30g";
+var VERSION = "v01.31g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4037,15 +4037,27 @@ function clLessonSegmentCellsAndChemistry_() {
  "title": "Cells and chemistry",
  "short": "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
    {
     "kind": "public",
+    "ref": "profile:albemarle",
+    "date": "2026-09-09",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:byd",
     "date": "2026-09-08",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:calb",
+    "date": "2026-09-09",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -4058,6 +4070,12 @@ function clLessonSegmentCellsAndChemistry_() {
     "ref": "profile:catl",
     "date": "2026-09-07",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cornex",
+    "date": "2026-09-13",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -4085,6 +4103,12 @@ function clLessonSegmentCellsAndChemistry_() {
    },
    {
     "kind": "public",
+    "ref": "profile:great-power",
+    "date": "2026-09-09",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:hithium",
     "date": "2026-09-07",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -4097,9 +4121,21 @@ function clLessonSegmentCellsAndChemistry_() {
    },
    {
     "kind": "public",
+    "ref": "profile:mitra-chem",
+    "date": "2026-09-13",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:narada",
     "date": "2026-09-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:novonix",
+    "date": "2026-09-09",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -4140,20 +4176,20 @@ function clLessonSegmentCellsAndChemistry_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "16",
+   "k": "22",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -4163,12 +4199,12 @@ function clLessonSegmentCellsAndChemistry_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "8",
+   "k": "11",
    "v": "challengers",
-   "sub": "contesting that set; 4 adjacent"
+   "sub": "contesting that set; 7 adjacent"
   },
   {
-   "k": "68",
+   "k": "88",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -4212,12 +4248,12 @@ function clLessonSegmentCellsAndChemistry_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (33 edges) · Storage integrators and containers (13 edges) · Software and optimization (9 edges) · In-hall power (8 edges) · Clean firm and nuclear (8 edges) · Hyperscalers and AI labs (8 edges) · Utilities (8 edges) · AIDC developers and landlords (7 edges) · Grid equipment (3 edges) · Capital (3 edges) · Power conversion and rack-power silicon (2 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Neoclouds (2 edges) · Bridge and on-site generation (1 edge)",
+     "Storage developers and IPPs (33 edges) · Storage integrators and containers (15 edges) · Software and optimization (9 edges) · In-hall power (8 edges) · Clean firm and nuclear (8 edges) · Hyperscalers and AI labs (8 edges) · Utilities (8 edges) · AIDC developers and landlords (7 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Capital (3 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Neoclouds (2 edges) · Bridge and on-site generation (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Power conversion and rack-power silicon (5 edges) · Grid equipment (3 edges) · In-hall power (3 edges) · Storage integrators and containers (2 edges) · Assurance (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
+     "Assurance (10 edges) · Software and optimization (6 edges) · Power conversion and rack-power silicon (5 edges) · Grid equipment (3 edges) · In-hall power (3 edges) · Storage integrators and containers (2 edges) · Bridge and on-site generation (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -4296,6 +4332,18 @@ function clLessonSegmentCellsAndChemistry_() {
      "ecosystemRole: the ecosystem's premier non-Chinese ESS supply chain; 140 GWh ESS backlog; five North American ESS sites"
     ],
     [
+     "**CALB**",
+     "calb",
+     "challenger",
+     "ecosystemRole: \"one of the four Chinese makers clustered between 6.5% and 7.7% of global storage-cell shipments behind CATL, EVE and Hithium\"; productsAndServices › ZHIJIU energy-storage cells positioning: fifth on SNE, TrendForce and InfoLink at 31.5 GWh and 6.8% for H1 2026, sixth on EVTank for FY2025, seventh on SPIR, and absent from Benchmark's top ten. Challenger not incumbent: its share is roughly a quarter of CATL's and REPT sits 0.1 GWh behind on the same 6.8%."
+    ],
+    [
+     "**Cornex**",
+     "cornex",
+     "challenger",
+     "ecosystemRole: \"a challenger in energy-storage cells — seventh globally on SNE Research's H1-2026 table at 30.2 GWh and 6.5%, roughly a quarter of CATL's 27.1% and 1.3 GWh behind CALB\"; productsAndServices › Energy-storage cells positioning: InfoLink, TrendForce and ICC sixth, Benchmark fifth (+116%), SPIR third for H1 2026; InfoLink and EVTank ninth for FY2025. Challenger not incumbent: the fastest riser on every table (the challenger definition), no leader language from any house, and the company's 'global top three' rests on SPIR alone. Completes the SNE H1-2026 storage-cell top twelve in this segment."
+    ],
+    [
      "**Envision**",
      "envision-energy",
      "challenger",
@@ -4318,6 +4366,12 @@ function clLessonSegmentCellsAndChemistry_() {
      "gotion",
      "challenger",
      "ecosystemRole: §154(b)-named cell maker with an operating US plant that cannot claim §45X; Gotion Grid storage line; claims first place in UPS backup batteries"
+    ],
+    [
+     "**Great Power**",
+     "great-power",
+     "challenger",
+     "productsAndServices › Fengpeng large-format energy-storage cells and Residential and portable storage: eighth to tenth globally in storage-cell shipments across four houses (SPIR 8th, TrendForce 9th, SNE 10th at 20.5 GWh and 4.4%, Benchmark inside the top ten), growing 202% year on year — the fastest in the global top ten — with share up from 2.5%. A fast riser off a mid-tier base, which is the challenger definition; it is a leader only inside residential cells, a sub-segment."
     ],
     [
      "**Narada**",
@@ -4344,10 +4398,28 @@ function clLessonSegmentCellsAndChemistry_() {
      "ecosystemRole: the fastest riser of the Chinese top ten; top-10 global storage-cell supplier (InfoLink H1 2025); 684 Ah cell"
     ],
     [
+     "**Albemarle**",
+     "albemarle",
+     "adjacent",
+     "ecosystemRole: \"Albemarle sits one layer above every cell maker in this corpus: it sells the lithium compounds that the cell is built from, not the cell\" — and productsAndServices › Energy Storage quotes the company's own grid-storage page calling lithium carbonate \"the primary raw material to make LFP\", the chemistry it puts at under 90% of energy-storage cells. Upstream materials, not a cell maker."
+    ],
+    [
      "**Canadian Solar**",
      "canadian-solar",
      "adjacent",
      "ecosystemRole: a domestic cell plant announced before the rules bit (Shelbyville KY ramp unconfirmed); cells feed SolBank"
+    ],
+    [
+     "**Mitra Chem**",
+     "mitra-chem",
+     "adjacent",
+     "ecosystemRole: \"Mitra Chem sits one layer above every cell maker in this corpus, in the same upstream position as Albemarle on lithium and NOVONIX on anode material: it would sell the LFP cathode active material that a storage cell is built from, not the cell\" — and productsAndServices › LFP cathode active material records multi-ton samples, no named customer and an unbuilt 15,000 t/yr Muskegon plant (groundbreaking guided to early 2027). Upstream cathode material, pre-commercial: adjacent, and it counts toward neither the incumbent nor the challenger requirement."
+    ],
+    [
+     "**NOVONIX**",
+     "novonix",
+     "adjacent",
+     "ecosystemRole: \"it makes the anode active material that goes into the negative electrode of a lithium-ion cell, in the same upstream position that a lithium producer occupies on the cathode side\" — and productsAndServices › synthetic graphite anode active material records binding offtakes with Panasonic Energy, itself a member of this segment, and with PowerCo SE. Adjacent rather than challenger: continuing-operations revenue is zero and no commercial anode volume has shipped."
     ],
     [
      "**Panasonic**",
@@ -4427,6 +4499,16 @@ function clLessonSegmentCellsAndChemistry_() {
      "—"
     ],
     [
+     "**CALB**",
+     "FY2025 · 2025-12-31",
+     "6,177.6",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**EVE Energy**",
      "FY2025 · 2025-12-31",
      "8,552.6",
@@ -4441,6 +4523,16 @@ function clLessonSegmentCellsAndChemistry_() {
      "FY2025 · 2025-12-31",
      "6,270.8",
      "RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Great Power**",
+     "FY2025 · 2025-12-31",
+     "1,661.8",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
      "—",
      "—",
      "—",
@@ -4487,9 +4579,29 @@ function clLessonSegmentCellsAndChemistry_() {
      "—"
     ],
     [
+     "**Albemarle**",
+     "FY2025 · 2025-12-31",
+     "5,142.7",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Canadian Solar**",
      "FY2025 · 2025-12-31",
      "5,600",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**NOVONIX**",
+     "FY2025 · 2025-12-31",
+     "5.6",
      "as reported",
      "—",
      "—",
@@ -4514,7 +4626,7 @@ function clLessonSegmentCellsAndChemistry_() {
      "—",
      "—",
      "—",
-     "Envision, Form Energy, Panasonic, Trina Storage"
+     "Cornex, Envision, Form Energy, Mitra Chem, Panasonic, Trina Storage"
     ]
    ]
   },
@@ -4533,6 +4645,14 @@ function clLessonSegmentCellsAndChemistry_() {
     "Via"
    ],
    "rows": [
+    [
+     "**Albemarle**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
     [
      "**BYD**",
      "**CATL**",
@@ -4564,6 +4684,30 @@ function clLessonSegmentCellsAndChemistry_() {
      "active",
      "—",
      "LFP cells"
+    ],
+    [
+     "**CALB**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "RMB 263m claimed across three suits",
+     "—"
+    ],
+    [
+     "**CALB**",
+     "**Gotion High-Tech**",
+     "competitor",
+     "active",
+     "31.2 GWh vs 28.0 GWh EV installs, H1 2026",
+     "—"
+    ],
+    [
+     "**CALB**",
+     "**REPT BATTERO**",
+     "competitor",
+     "active",
+     "31.5 GWh vs 31.4 GWh, H1 2026",
+     "—"
     ],
     [
      "**CATL**",
@@ -4628,6 +4772,86 @@ function clLessonSegmentCellsAndChemistry_() {
      "—",
      "—",
      "SolBank"
+    ],
+    [
+     "**Cornex**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**CALB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Canadian Solar**",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**EVE Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Gotion High-Tech**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Great Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**REPT BATTERO**",
+     "competitor",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**EVE Energy**",
@@ -4798,6 +5022,22 @@ function clLessonSegmentCellsAndChemistry_() {
      "—"
     ],
     [
+     "**Great Power**",
+     "**Hithium**",
+     "competitor",
+     "announced",
+     "~4 GWh framework",
+     "—"
+    ],
+    [
+     "**Great Power**",
+     "**REPT BATTERO**",
+     "competitor",
+     "active",
+     "REPT 31.4 GWh vs Great Power 20.5 GWh, H1 2026",
+     "—"
+    ],
+    [
      "**Hithium**",
      "**BYD**",
      "competitor",
@@ -4860,6 +5100,38 @@ function clLessonSegmentCellsAndChemistry_() {
      "active",
      "$4.3B; production from 2027",
      "Megapack 3 LFP cells"
+    ],
+    [
+     "**Mitra Chem**",
+     "**LG Energy Solution**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Mitra Chem**",
+     "**NOVONIX**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**NOVONIX**",
+     "**LG Energy Solution**",
+     "investor",
+     "active",
+     "US$30m convertible notes",
+     "—"
+    ],
+    [
+     "**NOVONIX**",
+     "**Panasonic**",
+     "customer",
+     "active",
+     "at least 10,000 tonnes",
+     "synthetic graphite anode active material"
     ],
     [
      "**Narada**",
@@ -5158,6 +5430,22 @@ function clLessonSegmentCellsAndChemistry_() {
      "SolBank"
     ],
     [
+     "**Cornex**",
+     "CRRC Zhuzhou",
+     "customer",
+     "active",
+     "25 GWh framework",
+     "688Ah and 588Ah storage cells"
+    ],
+    [
+     "**Cornex**",
+     "Sungrow",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**EVE Energy**",
      "FlexGen",
      "other",
@@ -5244,6 +5532,14 @@ function clLessonSegmentCellsAndChemistry_() {
      "active",
      "—",
      "Series F and Series G participation plus a strategic memorandum of understanding"
+    ],
+    [
+     "**Great Power**",
+     "CRRC Zhuzhou",
+     "partner",
+     "active",
+     "688Ah cell for 6.9 MWh systems",
+     "688Ah WindPeng cell"
     ],
     [
      "**Hithium**",
@@ -5372,33 +5668,9 @@ function clLessonSegmentCellsAndChemistry_() {
      "active",
      "—",
      "—"
-    ],
-    [
-     "**ON.energy**",
-     "**CATL**",
-     "supplier",
-     "historical",
-     "~320 MWh LatAm fleet",
-     "—"
-    ],
-    [
-     "**ON.energy**",
-     "**Hithium**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Prevalon**",
-     "**REPT BATTERO**",
-     "supplier",
-     "historical",
-     "2.5 GWh LOI for US deployments in 2024, within a stated 10 GWh Americas target",
-     "—"
     ]
    ],
-   "note": "Curated edges among members: 68 · to the neighbouring segments: 60 (the first 40 shown, by company) · derived-only mentions (no curated typing): 6 among members, 5 to the neighbours."
+   "note": "Curated edges among members: 88 · to the neighbouring segments: 63 (the first 40 shown, by company) · derived-only mentions (no curated typing): 18 among members, 7 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -5413,74 +5685,74 @@ function clLessonSegmentCellsAndChemistry_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-09 — Hefei Research Institute project signed",
+     "sub": "CALB · corporate"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-08 — Full-scale UL 9540A:2026 fire test on the MAX-20HC-5000 container certified by TUV Rheinland",
+     "sub": "Great Power · product-launch"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-09-08 — BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
      "sub": "BYD · regulatory"
     },
     {
-     "x": 2,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-07 — Partial cancellation of granted 2025 share options completed",
+     "sub": "Great Power · corporate"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-04 — S&P Dow Jones Indices announces the September 2026 quarterly rebalance of the S&P/ASX indices: NOVONIX (NVX) is listed for removal from the S&P/ASX 300, effective prior to the open of trading on Monday 21 September 2026",
+     "sub": "NOVONIX · market"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-09-04 — Awarded the 10th Changjiang Quality Award (长江质量奖), Hubei's top quality prize, presented by the vice-governor",
+     "sub": "Cornex · other"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-09-04 — Xiaomi Auto publicly names CALB an official power-battery strategic partner",
+     "sub": "CALB · customer"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-09-02 — Board appoints Ragnar Udd to succeed J. Kent Masters, Jr. as President and Chief Executive Officer effective 1 February 2027 or a mutually agreed earlier date; Masters becomes Executive Chair",
+     "sub": "Albemarle · leadership"
+    },
+    {
+     "x": 9,
      "lane": "record",
      "label": "2026-09-01 — CSRC accepts a filing for a second H-share full circulation — 676,172,244 domestic unlisted shares, about 48.21% of that class, to convert to H shares",
      "sub": "REPT BATTERO · corporate"
     },
     {
-     "x": 3,
-     "lane": "record",
-     "label": "2026-08-28 — H1 2026: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%); Q2 net profit RMB 8.2B (+29.8%), the first quarterly growth in five quarters; overseas revenue above half of the total for the first time",
-     "sub": "BYD · financial"
-    },
-    {
-     "x": 4,
-     "lane": "record",
-     "label": "2026-08-26 — REPT reports retaining first place globally in residential storage cell shipments for H1 2026",
-     "sub": "REPT BATTERO · market"
-    },
-    {
-     "x": 5,
-     "lane": "record",
-     "label": "2026-08-26 — H1 2026 results — revenue RMB 14,915.6m (+57.2%), gross margin 13.3%, profit RMB 778.3m against a RMB 62.7m loss a year earlier",
-     "sub": "REPT BATTERO · financial"
-    },
-    {
-     "x": 6,
-     "lane": "record",
-     "label": "2026-08-25 — Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
-     "sub": "Gotion High-Tech · leadership"
-    },
-    {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-08-25 — H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
-     "sub": "Gotion High-Tech · financial"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-08-25 — Board authorises management to sell listed equity holdings opportunistically, up to 15% of net assets attributable to the parent — roughly RMB 4.37bn — over twelve months",
-     "sub": "Gotion High-Tech · corporate"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-21 — Benchmark places BYD #1 in H1 2026 BESS system-integrator shipments at 9.1% of 313 GWh and #4 in cells at 6.7% of 490 GWh; InfoLink also ranks BYD #1 in systems",
-     "sub": "BYD · market-position"
-    },
-    {
      "x": 10,
      "lane": "record",
-     "label": "2026-08-20 — First grid-connected storage project in Japan delivered — 1.99 MW / 8.35 MWh at Kanuma City, Tochigi, on 417 kWh liquid-cooled outdoor cabinets",
-     "sub": "REPT BATTERO · project"
+     "label": "2026-08-31 — Half-year report to 30 June 2026 lodged with the ASX: net loss US$24.6m, operating cash outflow US$23.1m, cash US$59.5m, net current liabilities US$2.5m, and a PwC review report flagging a material uncertainty over going concern",
+     "sub": "NOVONIX · financial"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-20 — USITC institutes Section 337 investigation 337-TA-1518 over five US patents; ten respondents including Bosch, Koki Holdings and Chervon",
-     "sub": "EVE Energy · regulatory"
+     "label": "2026-08-31 — Sixth board of directors elected; Liu Ming replaces Song Xiaoning as independent director and Audit Committee chair",
+     "sub": "Great Power · leadership"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-19 — H1 2026: revenue RMB 45.691B (+62.20%), net profit RMB 3.301B (+105.66%), storage revenue RMB 15.094B (+69.15%) at 12.51% gross margin; interim dividend RMB 2.3 per 10 shares",
-     "sub": "EVE Energy · financial"
+     "label": "2026-08-30 — Xiangyang 70 GWh lithium-battery park starts production ten months after groundbreaking, 'two months ahead of plan'; 100Ah, 588Ah and 648Ah storage cells and fast-charge EV cells; about 400,000 cells a day at full run",
+     "sub": "Cornex · capacity"
     }
    ]
   },
@@ -5498,10 +5770,22 @@ function clLessonSegmentCellsAndChemistry_() {
    ],
    "rows": [
     [
+     "AD/CVD — active anode material from China",
+     "expired",
+     "2026-03-12",
+     "NOVONIX"
+    ],
+    [
      "Brazil forced-labour registry and labour prosecution",
      "in-effect",
      "2026-04-07",
      "BYD"
+    ],
+    [
+     "Chile — CORFO Salar de Atacama agreement",
+     "in-effect",
+     "2044-01-01",
+     "Albemarle"
     ],
     [
      "China battery export controls",
@@ -5510,10 +5794,40 @@ function clLessonSegmentCellsAndChemistry_() {
      "Hithium"
     ],
     [
+     "China export tax rebate",
+     "in-effect",
+     "2026-04-01",
+     "Cornex, Great Power"
+    ],
+    [
+     "Chinese export controls on graphite and graphitisation equipment",
+     "in-effect",
+     "2023-12-01",
+     "NOVONIX"
+    ],
+    [
+     "Critical minerals designation — US Geological Survey",
+     "in-effect",
+     "—",
+     "NOVONIX"
+    ],
+    [
+     "CSRC overseas listing filing",
+     "expired",
+     "2026-07-30",
+     "Great Power"
+    ],
+    [
      "DoD 1260H list",
      "in-effect",
      "2026-06-08",
      "EVE Energy"
+    ],
+    [
+     "DoD 1260H listing",
+     "in-effect",
+     "—",
+     "Cornex"
     ],
     [
      "DoD 1260H listing",
@@ -5528,10 +5842,34 @@ function clLessonSegmentCellsAndChemistry_() {
      "BYD"
     ],
     [
+     "DOE MESC battery-manufacturing grants",
+     "in-effect",
+     "2024-12-16",
+     "Mitra Chem"
+    ],
+    [
      "EU Battery Regulation",
      "in-effect",
      "—",
      "Hithium"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "2026-02-18",
+     "CALB, Great Power"
+    ],
+    [
+     "EU Digital Battery Passport",
+     "announced",
+     "2027-02",
+     "Albemarle"
+    ],
+    [
+     "EU restrictions on brominated flame retardants",
+     "proposed",
+     "—",
+     "Albemarle"
     ],
     [
      "Federal energy demonstration funding",
@@ -5550,6 +5888,24 @@ function clLessonSegmentCellsAndChemistry_() {
      "in-effect",
      "2026-01",
      "Trina Storage"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01-01",
+     "CALB, Cornex, Mitra Chem"
+    ],
+    [
+     "FEOC restrictions — NDAA FY2026 Section 842",
+     "announced",
+     "2028-01-01",
+     "NOVONIX"
+    ],
+    [
+     "Inflation Reduction Act sourcing requirements",
+     "in-effect",
+     "2022-08-16",
+     "Albemarle"
     ],
     [
      "IRA domestic content bonus",
@@ -5573,7 +5929,13 @@ function clLessonSegmentCellsAndChemistry_() {
      "ITC/45X",
      "in-effect",
      "—",
-     "Form Energy, LG Energy Solution, Panasonic, Samsung SDI"
+     "Form Energy, LG Energy Solution, Mitra Chem, Panasonic, Samsung SDI"
+    ],
+    [
+     "Jordan — Arab Potash Company concession",
+     "in-effect",
+     "2058-12-31",
+     "Albemarle"
     ],
     [
      "Lists BYD is NOT on",
@@ -5588,6 +5950,18 @@ function clLessonSegmentCellsAndChemistry_() {
      "Gotion High-Tech"
     ],
     [
+     "Nasdaq Listing Rule 5450(a)(1) — minimum bid price",
+     "in-effect",
+     "2026-03-18",
+     "NOVONIX"
+    ],
+    [
+     "NDAA Section 1260H",
+     "in-effect",
+     "2026-06-08",
+     "CALB"
+    ],
+    [
      "NDAA §154",
      "announced",
      "2027-10",
@@ -5597,7 +5971,7 @@ function clLessonSegmentCellsAndChemistry_() {
      "NDAA §154",
      "in-effect",
      "—",
-     "Narada"
+     "Mitra Chem, Narada"
     ],
     [
      "NDAA §154",
@@ -5618,10 +5992,22 @@ function clLessonSegmentCellsAndChemistry_() {
      "REPT BATTERO"
     ],
     [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2024-01-01",
+     "Albemarle"
+    ],
+    [
+     "Section 232 — processed critical minerals",
+     "proposed",
+     "2026-01-14",
+     "NOVONIX"
+    ],
+    [
      "Section 301 tariffs",
      "in-effect",
      "—",
-     "Canadian Solar, Narada, Trina Storage"
+     "Canadian Solar, NOVONIX, Narada, Trina Storage"
     ],
     [
      "Section 301 tariffs",
@@ -5630,10 +6016,46 @@ function clLessonSegmentCellsAndChemistry_() {
      "Sunwoda"
     ],
     [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01-01",
+     "CALB, Cornex, Great Power, Mitra Chem"
+    ],
+    [
+     "Section 301 tariffs and 2025 US–China measures",
+     "in-effect",
+     "—",
+     "Albemarle"
+    ],
+    [
+     "Section 45X Advanced Manufacturing Production Credit",
+     "in-effect",
+     "—",
+     "NOVONIX"
+    ],
+    [
+     "Section 48C Advanced Energy Project Credit",
+     "in-effect",
+     "2026-04-08",
+     "NOVONIX"
+    ],
+    [
      "State utility cost recovery",
      "in-effect",
      "2023-07-06",
      "Form Energy"
+    ],
+    [
+     "UFLPA",
+     "in-effect",
+     "2022-06-21",
+     "CALB, Great Power"
+    ],
+    [
+     "US critical-minerals funding — DOE grant and DoD award",
+     "in-effect",
+     "2022-01-01",
+     "Albemarle"
     ],
     [
      "US domestic content bonus and §30D clean vehicle credit",
@@ -5705,7 +6127,7 @@ function clLessonSegmentCellsAndChemistry_() {
    "ps": [
     "**Mechanism lessons for this segment:** *From Cell to Container* · *Duration, Degradation, and the Twenty-Year Promise* · *From Powder to Cell: Manufacturing, Formats, and Yield* (planned) · *Long Duration, Sodium, and the Engine Boundary* (planned) · *Four Levers and One Order* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** BYD, CATL, Hithium, LG Energy Solution, Envision, EVE Energy, Form Energy, Gotion High-Tech, Narada, REPT BATTERO, Samsung SDI, Sunwoda, Canadian Solar, Panasonic, Tesla, Trina Storage — each member's dossier carries one in Profiler."
+    "**Study guides:** BYD, CATL, Hithium, LG Energy Solution, CALB, Cornex, Envision, EVE Energy, Form Energy, Gotion High-Tech, Great Power, Narada, REPT BATTERO, Samsung SDI, Sunwoda, Albemarle, Canadian Solar, Mitra Chem, NOVONIX, Panasonic, Tesla, Trina Storage — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -5758,7 +6180,7 @@ function clLessonSegmentCellsAndChemistry_() {
      "why": "This segment is the first link; position 2 follows it."
     },
     {
-     "q": "The graph records a curated edge from **BYD** to **CATL**. How is it typed from BYD's side?",
+     "q": "The graph records a curated edge from **Albemarle** to **Tesla**. How is it typed from Albemarle's side?",
      "c": [
       "partner",
       "investor",
@@ -5766,8 +6188,24 @@ function clLessonSegmentCellsAndChemistry_() {
       "competitor"
      ],
      "a": 3,
-     "why": "Competes with CATL both as cell merchant and as system vendor — HaoHan 14.5 MWh vs TENER 6.25 MWh, Blade LFP vs CATL cells at the same Tesla account."
+     "why": "Albemarle names Tesla in its FY2025 10-K list of major competitors in lithium compounds — the only vehicle maker on that list."
     }
+   ]
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:albemarle added@2026-09-09; profile:calb added@2026-09-09; profile:cornex added@2026-09-13; profile:great-power added@2026-09-09; profile:mitra-chem added@2026-09-13; profile:novonix added@2026-09-09",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
    ]
   }
  ]
@@ -5782,7 +6220,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
  "title": "Storage integrators and containers",
  "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -5791,6 +6229,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     "ref": "profile:byd",
     "date": "2026-09-08",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:calb",
+    "date": "2026-09-09",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -5809,6 +6253,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     "ref": "profile:catl",
     "date": "2026-09-07",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cornex",
+    "date": "2026-09-13",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -5850,6 +6300,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     "kind": "public",
     "ref": "profile:ge-vernova",
     "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:great-power",
+    "date": "2026-09-09",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -5963,20 +6419,20 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "29",
+   "k": "32",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -5988,10 +6444,10 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
   {
    "k": "8",
    "v": "challengers",
-   "sub": "contesting that set; 11 adjacent"
+   "sub": "contesting that set; 14 adjacent"
   },
   {
-   "k": "128",
+   "k": "140",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -6035,12 +6491,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (48 edges) · AIDC developers and landlords (20 edges) · Utilities (12 edges) · Clean firm and nuclear (10 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (6 edges) · Capital (5 edges) · Grid equipment (3 edges) · EPC and construction (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
+     "Storage developers and IPPs (49 edges) · AIDC developers and landlords (20 edges) · Utilities (13 edges) · Clean firm and nuclear (10 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (6 edges) · Capital (5 edges) · Grid equipment (4 edges) · EPC and construction (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "In-hall power (8 edges) · Cells and chemistry (7 edges) · Assurance (5 edges) · Software and optimization (5 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
+     "Assurance (18 edges) · Software and optimization (10 edges) · In-hall power (8 edges) · Cells and chemistry (7 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -6207,10 +6663,22 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "ecosystemRole: sold its US plant and retreated to import-plus-services; betting bankability over volume in Europe and Asia"
     ],
     [
+     "**CALB**",
+     "calb",
+     "adjacent",
+     "productsAndServices › ZHIJIU energy-storage systems: 20-foot 5MWh and 6.25MWh+ liquid-cooled containers, 373 kWh and 261 kWh commercial cabinets and a residential range, sold as a route to market for its own cells. Adjacent rather than challenger because CALB is named in neither Wood Mackenzie's 2026 global BESS integrator ranking nor Benchmark's H1 2026 system-integrator top ten — it has no independent standing as an integrator."
+    ],
+    [
      "**Caterpillar**",
      "caterpillar",
      "adjacent",
      "productsAndServices › Cat Energy Storage Systems, microgrid controls and hybrid solutions (launched January 2025)"
+    ],
+    [
+     "**Cornex**",
+     "cornex",
+     "adjacent",
+     "productsAndServices › CORNEX M5 and M6 containers: the M5 (5,015 kWh, 314Ah) in mass production since February 2024 with CSA Group UL 1973/9540A/9540 and TÜV SÜD IEC 62619/63056 certificates, the M6 (6,262 kWh, 588Ah) entering mass production in 2026, named overseas system buyers (Bison Energy, YN Energy, Immersa, an Indian partner, Intermepro) and C&I cabinets — sold as a route to market for its own cells. Adjacent rather than challenger on the CALB and Great Power precedent: no third-party BESS integrator ranking names Cornex (Benchmark's H1-2026 integrator top five is BYD, Sungrow, CATL, Tesla and HyperStrong)."
     ],
     [
      "**Cummins**",
@@ -6235,6 +6703,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "ge-vernova",
      "adjacent",
      "productsAndServices › BESS & solar (FLEXRESERVOIR, RESTORE DC Block)"
+    ],
+    [
+     "**Great Power**",
+     "great-power",
+     "adjacent",
+     "productsAndServices › GreatCom, GreatOne and GreatE: MAX-20HC-6250 and MAX-20HC-5000 containers, Magna commercial and utility cabinets, and named deployments including Azerbaijan 500MWh and Sichuan Zhongfu 428.48MWh. Adjacent rather than challenger because it appears in no third-party BESS integrator ranking; the one exception, CNESA ranking it second among Chinese companies for commercial and industrial system shipments, is a national sub-segment rather than the global integrator set."
     ],
     [
      "**Huawei Digital Power**",
@@ -6402,6 +6876,16 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "—"
     ],
     [
+     "**CALB**",
+     "FY2025 · 2025-12-31",
+     "6,177.6",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Caterpillar**",
      "FY2025 · 2025-12-31",
      "67,600",
@@ -6436,6 +6920,16 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "FY2025 · 2025-12-31",
      "38,100",
      "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Great Power**",
+     "FY2025 · 2025-12-31",
+     "1,661.8",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
      "—",
      "—",
      "—",
@@ -6479,7 +6973,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "—",
      "—",
      "—",
-     "CRRC Zhuzhou, Envision, HyperStrong, Wärtsilä, LS-ES, Prevalon, Trina Storage, FlexGen, Huawei Digital Power, ON.energy, Rolls-Royce Power Systems"
+     "CRRC Zhuzhou, Envision, HyperStrong, Wärtsilä, LS-ES, Prevalon, Trina Storage, Cornex, FlexGen, Huawei Digital Power, ON.energy, Rolls-Royce Power Systems"
     ]
    ]
   },
@@ -6537,6 +7031,14 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "active",
      "—",
      "LFP cells"
+    ],
+    [
+     "**CALB**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "RMB 263m claimed across three suits",
+     "—"
     ],
     [
      "**CATL**",
@@ -6715,6 +7217,78 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "Medium-speed gas engines for data-center prime power"
     ],
     [
+     "**Cornex**",
+     "**BYD**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**CALB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**CATL**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**CRRC Zhuzhou**",
+     "customer",
+     "active",
+     "25 GWh framework",
+     "688Ah and 588Ah storage cells"
+    ],
+    [
+     "**Cornex**",
+     "**Canadian Solar**",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Envision**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Great Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "**Sungrow**",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**Cummins**",
      "**Caterpillar**",
      "competitor",
@@ -6880,6 +7454,22 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "competitor",
      "active",
      "—",
+     "—"
+    ],
+    [
+     "**Great Power**",
+     "**CRRC Zhuzhou**",
+     "partner",
+     "active",
+     "688Ah cell for 6.9 MWh systems",
+     "688Ah WindPeng cell"
+    ],
+    [
+     "**Great Power**",
+     "**Hithium**",
+     "competitor",
+     "announced",
+     "~4 GWh framework",
      "—"
     ],
     [
@@ -7539,11 +8129,35 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "—"
     ],
     [
+     "**Albemarle**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**BYD**",
      "REPT BATTERO",
      "competitor",
      "active",
      "—",
+     "—"
+    ],
+    [
+     "**CALB**",
+     "Gotion High-Tech",
+     "competitor",
+     "active",
+     "31.2 GWh vs 28.0 GWh EV installs, H1 2026",
+     "—"
+    ],
+    [
+     "**CALB**",
+     "REPT BATTERO",
+     "competitor",
+     "active",
+     "31.5 GWh vs 31.4 GWh, H1 2026",
      "—"
     ],
     [
@@ -7560,6 +8174,30 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "portfolio",
      "announced",
      "RMB 4,099,858,823.53 for 49.00% of the controlling holdco",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "EVE Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "Gotion High-Tech",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Cornex**",
+     "REPT BATTERO",
+     "competitor",
+     "active",
+     "—",
      "—"
     ],
     [
@@ -7787,63 +8425,15 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "—"
     ],
     [
-     "**Hitachi Energy**",
-     "**Eaton**",
+     "**Great Power**",
+     "REPT BATTERO",
      "competitor",
      "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Hitachi Energy**",
-     "**GE Vernova**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Hitachi Energy**",
-     "**Vertiv**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Hithium**",
-     "EVE Energy",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Huawei Digital Power**",
-     "ABB",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Huawei Digital Power**",
-     "Megmeet",
-     "other",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**HyperStrong**",
-     "EVE Energy",
-     "supplier",
-     "active",
-     "50 GWh",
+     "REPT 31.4 GWh vs Great Power 20.5 GWh, H1 2026",
      "—"
     ]
    ],
-   "note": "Curated edges among members: 128 · to the neighbouring segments: 81 (the first 40 shown, by company) · derived-only mentions (no curated typing): 9 among members, 28 to the neighbours."
+   "note": "Curated edges among members: 140 · to the neighbouring segments: 95 (the first 40 shown, by company) · derived-only mentions (no curated typing): 19 among members, 32 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -7858,74 +8448,74 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-09 — Hefei Research Institute project signed",
+     "sub": "CALB · corporate"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-08 — Full-scale UL 9540A:2026 fire test on the MAX-20HC-5000 container certified by TUV Rheinland",
+     "sub": "Great Power · product-launch"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-09-08 — BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
      "sub": "BYD · regulatory"
     },
     {
-     "x": 2,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-07 — Partial cancellation of granted 2025 share options completed",
+     "sub": "Great Power · corporate"
+    },
+    {
+     "x": 5,
      "lane": "record",
      "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
      "sub": "Sungrow · regulatory"
     },
     {
-     "x": 3,
+     "x": 6,
+     "lane": "record",
+     "label": "2026-09-04 — Awarded the 10th Changjiang Quality Award (长江质量奖), Hubei's top quality prize, presented by the vice-governor",
+     "sub": "Cornex · other"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-09-04 — Xiaomi Auto publicly names CALB an official power-battery strategic partner",
+     "sub": "CALB · customer"
+    },
+    {
+     "x": 8,
      "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 4,
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-31 — Sixth board of directors elected; Liu Ming replaces Song Xiaoning as independent director and Audit Committee chair",
+     "sub": "Great Power · leadership"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-30 — Xiangyang 70 GWh lithium-battery park starts production ten months after groundbreaking, 'two months ahead of plan'; 100Ah, 588Ah and 648Ah storage cells and fast-charge EV cells; about 400,000 cells a day at full run",
+     "sub": "Cornex · capacity"
+    },
+    {
+     "x": 11,
      "lane": "record",
      "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
      "sub": "Sungrow · financial"
     },
     {
-     "x": 5,
-     "lane": "record",
-     "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
-     "sub": "Caterpillar · capacity"
-    },
-    {
-     "x": 6,
-     "lane": "record",
-     "label": "2026-08-28 — H1 2026: revenue RMB 344.82B (-7.13%), net profit RMB 12.33B (-20.54%); Q2 net profit RMB 8.2B (+29.8%), the first quarterly growth in five quarters; overseas revenue above half of the total for the first time",
-     "sub": "BYD · financial"
-    },
-    {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-08-26 — US Executive Order 14420 declares a national emergency over the bulk-power system, reaching foreign-made grid equipment at 69 kV and above including storage; Sungrow shares fall more than 11% the following day",
-     "sub": "Sungrow · policy"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-08-24 — James Hopkins promoted to VP, Financial Planning, Capital Management and Investor Relations effective 2026-09-01, reporting to CFO Mark Smith; Nick Arens now reports to Hopkins",
-     "sub": "Cummins · leadership"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-21 — Benchmark places BYD #1 in H1 2026 BESS system-integrator shipments at 9.1% of 313 GWh and #4 in cells at 6.7% of 490 GWh; InfoLink also ranks BYD #1 in systems",
-     "sub": "BYD · market-position"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-20 — FCC second national security determination (DA 26-870) narrows the covered device class to UL 1741 utility-interactive inverters while extending the connectivity prong to connections \"whether wired or wireless\", and removes §45X-eligible inverters from the Covered List",
-     "sub": "Sungrow · regulatory"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-18 — Parent LS ELECTRIC wins a $34M Bloom Energy power order for a hyperscale data center in Wyoming (repeat order) and posts record Q2 2026 results (revenue ~KRW 1.58T, operating profit ~KRW 179B)",
-     "sub": "LS-ES · partnership"
-    },
-    {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-18 — Selected to supply battery energy storage for a large US data-center project — 5 MWh nominal LFP blocks, the largest BESS deployment in company history; customer, location and value undisclosed",
-     "sub": "Cummins · order-win"
+     "label": "2026-08-28 — Four Latin American agreements in São Paulo, including a 1.5 GWh cell framework with Windey (运达) for its Camaçari, Bahia plant and MoUs with Intermepro, ION Energy and JSN Energia",
+     "sub": "Cornex · order-win"
     }
    ]
   },
@@ -7973,6 +8563,18 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "Hithium"
     ],
     [
+     "China export tax rebate",
+     "in-effect",
+     "2026-04-01",
+     "Cornex, Great Power"
+    ],
+    [
+     "CSRC overseas listing filing",
+     "expired",
+     "2026-07-30",
+     "Great Power"
+    ],
+    [
      "Cybersecurity regulation (IEC 62443 / NIS2)",
      "in-effect",
      "—",
@@ -7982,7 +8584,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "DoD 1260H listing",
      "in-effect",
      "—",
-     "CRRC Zhuzhou"
+     "CRRC Zhuzhou, Cornex"
     ],
     [
      "DoD 1260H listing",
@@ -8031,6 +8633,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "in-effect",
      "—",
      "Hithium"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "2026-02-18",
+     "CALB, Great Power"
     ],
     [
      "EU Foreign Subsidies Regulation",
@@ -8087,6 +8695,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "Prevalon, Trina Storage"
     ],
     [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01-01",
+     "CALB, Cornex"
+    ],
+    [
      "German grid code VDE-AR-N 4110",
      "in-effect",
      "—",
@@ -8121,6 +8735,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "in-effect",
      "2026-07-31",
      "BYD"
+    ],
+    [
+     "NDAA Section 1260H",
+     "in-effect",
+     "2026-06-08",
+     "CALB"
     ],
     [
      "NDAA §154",
@@ -8177,6 +8797,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "Prevalon, Sunwoda"
     ],
     [
+     "Section 301 tariffs",
+     "in-effect",
+     "2026-01-01",
+     "CALB, Cornex, Great Power"
+    ],
+    [
      "State data-center siting and air-permit review",
      "proposed",
      "2026",
@@ -8187,6 +8813,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "in-effect",
      "2020",
      "CRRC Zhuzhou"
+    ],
+    [
+     "UFLPA",
+     "in-effect",
+     "2022-06-21",
+     "CALB, Great Power"
     ],
     [
      "Uptime Institute Tier standards",
@@ -8252,7 +8884,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "ps": [
     "**Mechanism lessons for this segment:** *From Cell to Container* · *The Spec Sheet, Decoded* · *The Control Stack: BMS, PCS, EMS — Who Decides What* · *The Independent Engineer's Report* (planned) · *Listing, Test Method, Code* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** BYD, Canadian Solar, CATL, CRRC Zhuzhou, Envision, Fluence, HyperStrong, Sungrow, Tesla, Wärtsilä, Hithium, Jinko, LG Energy Solution, LS-ES, Prevalon, Samsung SDI, Sunwoda, Trina Storage, Caterpillar, Cummins, Eaton, FlexGen, GE Vernova, Huawei Digital Power, Narada, ON.energy, Rolls-Royce Power Systems, Sinexcel, Vertiv — each member's dossier carries one in Profiler."
+    "**Study guides:** BYD, Canadian Solar, CATL, CRRC Zhuzhou, Envision, Fluence, HyperStrong, Sungrow, Tesla, Wärtsilä, Hithium, Jinko, LG Energy Solution, LS-ES, Prevalon, Samsung SDI, Sunwoda, Trina Storage, CALB, Caterpillar, Cornex, Cummins, Eaton, FlexGen, GE Vernova, Great Power, Huawei Digital Power, Narada, ON.energy, Rolls-Royce Power Systems, Sinexcel, Vertiv — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -8317,6 +8949,21 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:calb added@2026-09-09; profile:cornex added@2026-09-13; profile:great-power added@2026-09-09",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -8329,8 +8976,8 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
  "title": "Power conversion and rack-power silicon",
  "short": "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -8362,6 +9009,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     "ref": "profile:ge-vernova",
     "date": "2026-09-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:heron-power",
+    "date": "2026-09-12",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -8450,20 +9103,20 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "19",
+   "k": "20",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -8473,12 +9126,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "2",
+   "k": "3",
    "v": "challengers",
    "sub": "contesting that set; 8 adjacent"
   },
   {
-   "k": "85",
+   "k": "94",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -8522,12 +9175,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (23 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (15 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Neoclouds (6 edges) · Utilities (6 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Capital (2 edges) · Grid equipment (1 edge) · Software and optimization (1 edge)",
+     "Storage developers and IPPs (27 edges) · AIDC developers and landlords (22 edges) · Hyperscalers and AI labs (15 edges) · Utilities (9 edges) · Neoclouds (8 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Grid equipment (4 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (3 edges) · Compute and the rack (2 edges) · EPC and construction (2 edges) · Capital (2 edges) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Cells and chemistry (15 edges) · In-hall power (14 edges) · Storage integrators and containers (11 edges) · Assurance (3 edges) · Grid equipment (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · AIDC developers and landlords (1 edge) · Utilities (1 edge)",
+     "Cells and chemistry (16 edges) · In-hall power (14 edges) · Storage integrators and containers (12 edges) · Assurance (7 edges) · Software and optimization (5 edges) · Grid equipment (2 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · AIDC developers and landlords (1 edge) · Utilities (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -8544,7 +9197,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "rows": [
     [
      "Efficiency at the operating point (0.1 % is real money at utility scale, paid twice more in cooling)",
-     "*Rectifier, Inverter, DC-DC, Transformer* (planned)"
+     "*Rectifier, Inverter, DC-DC, Transformer*"
     ],
     [
      "Grid-forming and ride-through capability (utility scale) or NVIDIA platform qualification (rack scale)",
@@ -8556,7 +9209,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     ],
     [
      "Manufacturing location under the FCC inverter rule and EO 14420",
-     "*Rectifier, Inverter, DC-DC, Transformer* (planned)"
+     "*Rectifier, Inverter, DC-DC, Transformer*"
     ],
     [
      "Second-source status and roadmap alignment (800 VDC, Vera Rubin)",
@@ -8564,7 +9217,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     ],
     [
      "Patent position on bus conversion and vertical power delivery",
-     "*Rectifier, Inverter, DC-DC, Transformer* (planned)"
+     "*Rectifier, Inverter, DC-DC, Transformer*"
     ]
    ]
   },
@@ -8640,6 +9293,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "flex",
      "challenger",
      "productsAndServices › Flex-branded rack and row power (power shelves to NVIDIA platform requirements, 800 VDC Power Rack); the pending $4.4bn EPC Power purchase"
+    ],
+    [
+     "**Heron Power**",
+     "heron-power",
+     "challenger",
+     "ecosystemRole: the hall-edge challenger in the power-conversion layer — a 34.5 kV-to-800 V DC solid-state transformer sold against the transformer-rectifier units and the adjacent incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider); the only startup on NVIDIA's facility-tier roster, pre-production"
     ],
     [
      "**Megmeet**",
@@ -8892,7 +9551,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—",
      "—",
      "—",
-     "Huawei Digital Power, LS-ES"
+     "Huawei Digital Power, Heron Power, LS-ES"
     ]
    ]
   },
@@ -9110,6 +9769,78 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "active",
      "—",
      "800 VDC reference designs"
+    ],
+    [
+     "**Heron Power**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**NVIDIA**",
+     "partner",
+     "active",
+     "—",
+     "Heron Link"
+    ],
+    [
+     "**Heron Power**",
+     "**Schneider Electric**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Sungrow**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Tesla**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Zhonhen Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**Hitachi Energy**",
@@ -9712,6 +10443,14 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
     ],
     [
+     "**Cornex**",
+     "**Sungrow**",
+     "customer",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**Delta Electronics**",
      "Vertiv",
      "competitor",
@@ -9840,6 +10579,22 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—"
     ],
     [
+     "**Grid United**",
+     "**Hitachi Energy**",
+     "supplier",
+     "active",
+     "—",
+     "HVDC converter stations"
+    ],
+    [
+     "**Heron Power**",
+     "LG Energy Solution",
+     "partner",
+     "announced",
+     "—",
+     "Heron Link for Solar & Storage"
+    ],
+    [
      "**Hitachi Energy**",
      "Siemens Energy",
      "competitor",
@@ -9886,33 +10641,9 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "active",
      "—",
      "—"
-    ],
-    [
-     "**Huawei Digital Power**",
-     "Vertiv",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Infineon**",
-     "BYD",
-     "competitor",
-     "active",
-     "—",
-     "Power modules in China"
-    ],
-    [
-     "**Infineon**",
-     "Mitsubishi Electric",
-     "competitor",
-     "active",
-     "—",
-     "Power discretes and modules"
     ]
    ],
-   "note": "Curated edges among members: 85 · to the neighbouring segments: 108 (the first 40 shown, by company) · derived-only mentions (no curated typing): 32 among members, 16 to the neighbours."
+   "note": "Curated edges among members: 94 · to the neighbouring segments: 113 (the first 40 shown, by company) · derived-only mentions (no curated typing): 34 among members, 20 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -9927,74 +10658,74 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-10 — USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
+     "sub": "Heron Power · financial"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
      "sub": "Sungrow · regulatory"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-04 — Flex agrees to acquire the US conversion manufacturer EPC Power for $4.4bn",
      "sub": "Power Electronics · market"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-03 — Consensus for the 10 or 11 November Q4 FY2026 print stands at €4,704m of revenue and a 23.2% Segment Result margin",
      "sub": "Infineon · corporate"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 5,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
      "sub": "Sungrow · financial"
     },
     {
-     "x": 6,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 7,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-27 — Board approves a $150 million share-repurchase authorization with no expiration, replacing the prior program (8-K, event date August 25, 2026)",
      "sub": "Vicor · corporate"
     },
     {
-     "x": 8,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-27 — Headquarters-base project deferred from September 2026 to December 2027",
      "sub": "Megmeet · corporate"
     },
     {
-     "x": 9,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: revenue +29.68%, headline profit +45.21%, ex-non-recurring profit −16.13%",
      "sub": "Megmeet · financial"
     },
     {
-     "x": 10,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-26 — US Executive Order 14420 declares a national emergency over the bulk-power system, reaching foreign-made grid equipment at 69 kV and above including storage; Sungrow shares fall more than 11% the following day",
      "sub": "Sungrow · policy"
     },
     {
-     "x": 11,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-26 — Executive Order 14420 declares a national emergency over the bulk-power system, naming grid-connected inverters and storage at 69 kV and above",
      "sub": "Power Electronics · policy"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-26 — Q2 FY2027: revenue $96.2B (+106% YoY, +18% QoQ) against a $91B guide; data center $89.0B (+117%); GAAP EPS $2.46 above non-GAAP $2.22; Q3 guided to $108.0B ±2% at 74.0% gross margin",
-     "sub": "NVIDIA · financial"
     }
    ]
   },
@@ -10011,6 +10742,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     "Members exposed"
    ],
    "rows": [
+    [
+     "California Competes Tax Credit",
+     "in-effect",
+     "2026-04-10",
+     "Heron Power"
+    ],
     [
      "China Anti-Monopoly Law",
      "in-effect",
@@ -10034,6 +10771,24 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "in-effect",
      "—",
      "Flex"
+    ],
+    [
+     "DC arc-flash and 800 V DC listings",
+     "proposed",
+     "—",
+     "Heron Power"
+    ],
+    [
+     "Domestic-content and import restrictions on power conversion",
+     "in-effect",
+     "—",
+     "Heron Power"
+    ],
+    [
+     "ERCOT NOGRR 282",
+     "in-effect",
+     "2026-07-09",
+     "Heron Power"
     ],
     [
      "EU Chips Act",
@@ -10205,9 +10960,9 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* (planned) · *One Big Box or Many Small Ones* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* (planned) · *Faults, Grounding, and the Interlock at 800 Volts* (planned).",
+    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* (planned) · *Faults, Grounding, and the Interlock at 800 Volts* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Flex, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
+    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Flex, Heron Power, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -10272,6 +11027,22 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:heron-power added@2026-09-12",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-is-bought-and-on-what",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -10284,8 +11055,8 @@ function clLessonSegmentGridEquipment_() {
  "title": "Grid equipment",
  "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -10314,6 +11085,12 @@ function clLessonSegmentGridEquipment_() {
    },
    {
     "kind": "public",
+    "ref": "profile:grid-united",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:hitachi-energy",
     "date": "2026-09-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -10335,6 +11112,12 @@ function clLessonSegmentGridEquipment_() {
     "ref": "profile:mitsubishi-electric",
     "date": "2026-09-06",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:pattern-energy",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -10369,20 +11152,20 @@ function clLessonSegmentGridEquipment_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "13",
+   "k": "15",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -10394,10 +11177,10 @@ function clLessonSegmentGridEquipment_() {
   {
    "k": "1",
    "v": "challenger",
-   "sub": "contesting that set; 7 adjacent"
+   "sub": "contesting that set; 9 adjacent"
   },
   {
-   "k": "54",
+   "k": "62",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -10441,12 +11224,12 @@ function clLessonSegmentGridEquipment_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (19 edges) · Clean firm and nuclear (11 edges) · Hyperscalers and AI labs (10 edges) · Utilities (10 edges) · Storage developers and IPPs (8 edges) · Storage integrators and containers (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · Capital (2 edges) · In-hall power (1 edge) · EPC and construction (1 edge)",
+     "AIDC developers and landlords (20 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (11 edges) · Utilities (10 edges) · Storage developers and IPPs (8 edges) · Storage integrators and containers (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Capital (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · In-hall power (1 edge) · Compute and the rack (1 edge) · EPC and construction (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Cells and chemistry (3 edges) · Storage integrators and containers (3 edges) · In-hall power (3 edges) · Clean firm and nuclear (2 edges) · EPC and construction (2 edges) · Assurance (1 edge)",
+     "Cells and chemistry (3 edges) · Storage integrators and containers (3 edges) · In-hall power (3 edges) · EPC and construction (3 edges) · Assurance (3 edges) · Clean firm and nuclear (2 edges) · Software and optimization (2 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -10463,7 +11246,7 @@ function clLessonSegmentGridEquipment_() {
    "rows": [
     [
      "Lead time and the manufacturing slot (transformers 30–40 months; test-bay availability)",
-     "*Why Electricity Changes Clothes* (planned)"
+     "*Why Electricity Changes Clothes*"
     ],
     [
      "Voltage and MVA class; GIS vs AIS; SF6-free options",
@@ -10479,11 +11262,11 @@ function clLessonSegmentGridEquipment_() {
     ],
     [
      "Service, spares and the bushing supply chain",
-     "*Why Electricity Changes Clothes* (planned)"
+     "*Why Electricity Changes Clothes*"
     ],
     [
      "Custom-engineered speed (ten-week MV switchgear from a domestic plant)",
-     "*Why Electricity Changes Clothes* (planned)"
+     "*Why Electricity Changes Clothes*"
     ]
    ]
   },
@@ -10549,6 +11332,12 @@ function clLessonSegmentGridEquipment_() {
      "productsAndServices › Crown Technical Systems and Electrical Power Products (OWNED): relay panels, MV switchgear, substation control and protection"
     ],
     [
+     "**Grid United**",
+     "grid-united",
+     "adjacent",
+     "productsAndServices › North Plains Connector: Hitachi Energy holds a portfolio-wide HVDC capacity reservation agreement (March 2024) and an Engineering Services Agreement for the converter-station specifications (October 2025) — the developer as the buyer that reserves converter slots years ahead of an order; no equipment order yet"
+    ],
+    [
      "**Invenergy**",
      "invenergy",
      "adjacent",
@@ -10559,6 +11348,12 @@ function clLessonSegmentGridEquipment_() {
      "ls-energy-solutions",
      "adjacent",
      "productsAndServices › Parent channel: LS ELECTRIC's Bastrop TX switchgear, transformer and distribution campus — the channel, not an LS-ES product"
+    ],
+    [
+     "**Pattern Energy**",
+     "pattern-energy",
+     "adjacent",
+     "productsAndServices › SunZia Wind and Transmission: buyer of Hitachi Energy's HVDC Light voltage-source converters (±525 kV, 3,000 MW, the largest VSC HVDC installation in the US) and 674 GE Vernova turbines; Pattern Transmission has 'sponsored 30 percent of the HVDC transmission lines in the United States'"
     ],
     [
      "**Quanta Services**",
@@ -10705,7 +11500,7 @@ function clLessonSegmentGridEquipment_() {
      "—",
      "—",
      "—",
-     "Mitsubishi Electric, Invenergy, LS-ES"
+     "Mitsubishi Electric, Grid United, Invenergy, LS-ES, Pattern Energy"
     ]
    ]
   },
@@ -10885,6 +11680,30 @@ function clLessonSegmentGridEquipment_() {
      "—"
     ],
     [
+     "**Grid United**",
+     "**Hitachi Energy**",
+     "supplier",
+     "active",
+     "—",
+     "HVDC converter stations"
+    ],
+    [
+     "**Grid United**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Grid United**",
+     "**Pattern Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Hitachi Energy**",
      "**ABB**",
      "competitor",
@@ -11003,6 +11822,46 @@ function clLessonSegmentGridEquipment_() {
      "announced",
      "—",
      "SF6-free high-voltage switching"
+    ],
+    [
+     "**Pattern Energy**",
+     "**GE Vernova**",
+     "supplier",
+     "active",
+     "674 turbines / 2.4 GW",
+     "3.6-154 onshore turbines"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Grid United**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Hitachi Energy**",
+     "supplier",
+     "active",
+     "3,000 MW",
+     "HVDC Light"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Quanta Services**",
+     "supplier",
+     "active",
+     "—",
+     "SunZia Transmission EPC"
     ],
     [
      "**Powell Industries**",
@@ -11277,6 +12136,54 @@ function clLessonSegmentGridEquipment_() {
      "800 VDC reference designs"
     ],
     [
+     "**Heron Power**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Schneider Electric**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Zhonhen Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Hitachi Energy**",
      "Delta Electronics",
      "competitor",
@@ -11427,57 +12334,9 @@ function clLessonSegmentGridEquipment_() {
      "active",
      "—",
      "Uninterruptible power supplies"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Vertiv",
-     "competitor",
-     "active",
-     "—",
-     "Data-center UPS and switchgear manufacturing capacity"
-    ],
-    [
-     "**NVIDIA**",
-     "**ABB**",
-     "partner",
-     "active",
-     "—",
-     "800VDC ecosystem"
-    ],
-    [
-     "**NVIDIA**",
-     "**Eaton**",
-     "partner",
-     "active",
-     "—",
-     "800VDC ecosystem"
-    ],
-    [
-     "**NVIDIA**",
-     "**Flex**",
-     "partner",
-     "active",
-     "—",
-     "800 VDC power shelves and racks"
-    ],
-    [
-     "**NVIDIA**",
-     "**GE Vernova**",
-     "partner",
-     "active",
-     "—",
-     "800VDC ecosystem"
-    ],
-    [
-     "**NVIDIA**",
-     "**Hitachi Energy**",
-     "partner",
-     "active",
-     "—",
-     "800VDC ecosystem"
     ]
    ],
-   "note": "Curated edges among members: 54 · to the neighbouring segments: 65 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 26 to the neighbours."
+   "note": "Curated edges among members: 62 · to the neighbouring segments: 71 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 27 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -11492,74 +12351,74 @@ function clLessonSegmentGridEquipment_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-04 — Osgood Wind (up to 200 MW, Québec, with Connectif des Sommets and the W8banaki Nation) presented to local communities; to be bid into Hydro-Québec's 2026 call, construction 2030, operation 2032",
+     "sub": "Pattern Energy · project"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
      "sub": "Invenergy · project"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 3,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-02 — BLM opens EIS scoping for Silver Rock Transmission — up to two lines, up to 600 kV, Millard County, Utah to Clark County, Nevada — with comments to 5 October 2026, after FAST-41 coverage in December 2025",
+     "sub": "Pattern Energy · regulatory"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-01 — North Dakota PSC holds the technical hearing on North Plains Connector (Case PU-26-82) in Bismarck, with public hearings in Mandan and Regent on 2–3 September",
+     "sub": "Grid United · regulatory"
+    },
+    {
+     "x": 6,
      "lane": "record",
      "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
      "sub": "Invenergy · project"
     },
     {
-     "x": 4,
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-28 — DOE and Montana DEQ release the final environmental impact statement for North Plains Connector (DOE/EIS-0568); DOE's Office of Electricity calls connecting the grids 'a critical step toward ensuring long-term energy affordability and reliability'",
+     "sub": "Grid United · regulatory"
+    },
+    {
+     "x": 8,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 5,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
      "sub": "Zhonhen Electric · other"
     },
     {
-     "x": 6,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-20 — Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
      "sub": "Mitsubishi Electric · ma"
     },
     {
-     "x": 7,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-20 — Quincy Solar (120 MW, Grant County, Washington) breaks ground; Cupertino Electric named contractor; commercial late 2027",
      "sub": "Invenergy · project"
     },
     {
-     "x": 8,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-18 — Parent LS ELECTRIC wins a $34M Bloom Energy power order for a hyperscale data center in Wyoming (repeat order) and posts record Q2 2026 results (revenue ~KRW 1.58T, operating profit ~KRW 179B)",
      "sub": "LS-ES · partnership"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-15 — CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed",
-     "sub": "Zhonhen Electric · corporate"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-14 — CATL signs definitive agreements: RMB 4.099B (RMB 3.512B cash + a 49% stake in Times Tianyuan valued RMB 588M) for 49% of controlling holdco Zhonhen Technology Investment; Zhu Guoding remains actual controller (35.7% of holdco post-deal, wife Bao Xiaoru 15.3%); same-day strategic cooperation across computing-power infrastructure, charging/swap and power trading",
-     "sub": "Zhonhen Electric · financial"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-14 — Cantor Fitzgerald cuts its price target to $235 from $320 and keeps a Neutral rating after a call with the CFO, reiterating $235 on 2026-09-02",
-     "sub": "Powell Industries · market"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-12 — EGM approves the third employee stock ownership plan: up to RMB 40M, ≤40 participants, buyback shares at RMB 21.79 (half the market average), with unlock hurdles of revenue +30%/+70%/+120% vs FY2025 (or profit alternatives) across 2026–2028",
-     "sub": "Zhonhen Electric · other"
     }
    ]
   },
@@ -11595,10 +12454,28 @@ function clLessonSegmentGridEquipment_() {
      "Mitsubishi Electric"
     ],
     [
+     "DOE GRIP (Grid Resilience and Innovation Partnerships)",
+     "announced",
+     "2024-08",
+     "Grid United"
+    ],
+    [
      "DOE Loan Programs Office",
      "expired",
      "2025-07-23",
      "Invenergy"
+    ],
+    [
+     "DOE Transmission Facilitation Program",
+     "announced",
+     "2023-10",
+     "Grid United"
+    ],
+    [
+     "DOE Transmission Facilitation Program and Energy Dominance Financing",
+     "announced",
+     "2024-10-03",
+     "Pattern Energy"
     ],
     [
      "DOE transmission policy (FAST-41, NIETC)",
@@ -11613,6 +12490,12 @@ function clLessonSegmentGridEquipment_() {
      "Mitsubishi Electric"
     ],
     [
+     "Federal wind permitting posture (Interior secretarial orders, BLM, Pentagon/FAA reviews) and FAST-41",
+     "in-effect",
+     "2025-07",
+     "Pattern Energy"
+    ],
+    [
      "FEOC restrictions",
      "in-effect",
      "—",
@@ -11623,6 +12506,18 @@ function clLessonSegmentGridEquipment_() {
      "in-effect",
      "2026-01",
      "Invenergy"
+    ],
+    [
+     "FERC negotiated-rate authority and the CAISO Subscriber PTO model (merchant transmission)",
+     "in-effect",
+     "—",
+     "Pattern Energy"
+    ],
+    [
+     "FERC Order 1920 / interregional cost allocation",
+     "in-effect",
+     "2024-05",
+     "Grid United"
     ],
     [
      "IEEE C37.20.7 arc-resistant switchgear testing",
@@ -11637,10 +12532,28 @@ function clLessonSegmentGridEquipment_() {
      "Invenergy"
     ],
     [
+     "ITC/45X — OBBBA §45Y/§48E phase-down and the begin-construction test",
+     "in-effect",
+     "2025-07-04",
+     "Pattern Energy"
+    ],
+    [
      "NDAA 889 / Entity List",
      "in-effect",
      "—",
      "Schneider Electric"
+    ],
+    [
+     "NEPA / Federal Power Act §216(h) coordinated permitting (CITAP-style)",
+     "in-effect",
+     "2024-10-25",
+     "Grid United"
+    ],
+    [
+     "NHPA/NEPA litigation — Tohono O'odham Nation et al. v. U.S. Department of the Interior (SunZia)",
+     "in-effect",
+     "2025-05-27",
+     "Pattern Energy"
     ],
     [
      "OECD Pillar Two global minimum tax",
@@ -11685,6 +12598,18 @@ function clLessonSegmentGridEquipment_() {
      "Powell Industries"
     ],
     [
+     "Section 232 tariffs on grid equipment (steel, aluminium, copper derivatives)",
+     "in-effect",
+     "2026-04-06",
+     "Grid United"
+    ],
+    [
+     "Section 232 tariffs — steel and aluminium at 50%, transformer cores, and the wind-turbine investigation",
+     "in-effect",
+     "2025-06-03",
+     "Pattern Energy"
+    ],
+    [
      "Section 301 tariffs",
      "in-effect",
      "2026-07-24",
@@ -11707,6 +12632,18 @@ function clLessonSegmentGridEquipment_() {
      "in-effect",
      "2023-10",
      "Invenergy"
+    ],
+    [
+     "State siting and expropriation law — Louisiana SB 108 and Mississippi PSC (Southern Spirit)",
+     "in-effect",
+     "2024-08",
+     "Pattern Energy"
+    ],
+    [
+     "State siting — North Dakota PSC, Montana MFSA, Oklahoma OCC, Arizona ACC, Texas PUCT (ROFR)",
+     "in-effect",
+     "—",
+     "Grid United"
     ],
     [
      "US import tariffs",
@@ -11740,9 +12677,9 @@ function clLessonSegmentGridEquipment_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* (planned) · *Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* · *Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** ABB, GE Vernova, Hitachi Energy, Mitsubishi Electric, Siemens Energy, Powell Industries, Eaton, Flex, Invenergy, LS-ES, Quanta Services, Schneider Electric, Zhonhen Electric — each member's dossier carries one in Profiler."
+    "**Study guides:** ABB, GE Vernova, Hitachi Energy, Mitsubishi Electric, Siemens Energy, Powell Industries, Eaton, Flex, Grid United, Invenergy, LS-ES, Pattern Energy, Quanta Services, Schneider Electric, Zhonhen Electric — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -11807,6 +12744,22 @@ function clLessonSegmentGridEquipment_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:grid-united added@2026-09-12; profile:pattern-energy added@2026-09-12",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-is-bought-and-on-what",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -11819,7 +12772,7 @@ function clLessonSegmentInHallPower_() {
  "title": "In-hall power",
  "short": "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -11876,6 +12829,12 @@ function clLessonSegmentInHallPower_() {
     "ref": "profile:gotion",
     "date": "2026-09-06",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:heron-power",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -11982,20 +12941,20 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "26",
+   "k": "27",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -12007,10 +12966,10 @@ function clLessonSegmentInHallPower_() {
   {
    "k": "7",
    "v": "challengers",
-   "sub": "contesting that set; 9 adjacent"
+   "sub": "contesting that set; 10 adjacent"
   },
   {
-   "k": "91",
+   "k": "96",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -12054,12 +13013,12 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (20 edges) · Storage developers and IPPs (19 edges) · Storage integrators and containers (17 edges) · Power conversion and rack-power silicon (16 edges) · Utilities (16 edges) · Hyperscalers and AI labs (15 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (7 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Bridge and on-site generation (2 edges) · Compute and the rack (2 edges) · Grid equipment (1 edge)",
+     "AIDC developers and landlords (24 edges) · Storage developers and IPPs (21 edges) · Storage integrators and containers (17 edges) · Power conversion and rack-power silicon (16 edges) · Utilities (16 edges) · Hyperscalers and AI labs (15 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (9 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (7 edges) · Cells and chemistry (6 edges) · Power conversion and rack-power silicon (4 edges) · Assurance (3 edges) · Software and optimization (2 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge)",
+     "Assurance (8 edges) · Cells and chemistry (7 edges) · Storage integrators and containers (7 edges) · Software and optimization (6 edges) · Power conversion and rack-power silicon (4 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -12088,7 +13047,7 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Battery type under the UPS — VRLA, lithium, flywheel — minutes of autonomy and float life",
-     "*Static, Rotary, Modular, and the Battery Under Each* (planned)"
+     "*The UPS Room: Static, Rotary, and the Battery Under Each*"
     ],
     [
      "Reference-design alignment (NVIDIA blueprints) and 800 VDC readiness",
@@ -12238,6 +13197,12 @@ function clLessonSegmentInHallPower_() {
      "flexgen",
      "adjacent",
      "productsAndServices › Integrated systems & data-center energy solutions; the BESSUPS product with Rosendin"
+    ],
+    [
+     "**Heron Power**",
+     "heron-power",
+     "adjacent",
+     "productsAndServices › Heron Link for Data Centers with SuperBBU: the battery on the 800 V bus gives 30 seconds of full-load backup and takes the UPS's job; the 12 MW block eliminates twelve UPS, four PDUs and twenty RPPs — conversion is the primary business"
     ],
     [
      "**Prevalon**",
@@ -12466,7 +13431,7 @@ function clLessonSegmentInHallPower_() {
      "—",
      "—",
      "—",
-     "Huawei Digital Power, Mitsubishi Electric, Panasonic, ON.energy, FlexGen, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin"
+     "Huawei Digital Power, Mitsubishi Electric, Panasonic, ON.energy, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin"
     ]
    ]
   },
@@ -12784,6 +13749,46 @@ function clLessonSegmentInHallPower_() {
     [
      "**Gotion High-Tech**",
      "**Sunwoda**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**LG Energy Solution**",
+     "partner",
+     "announced",
+     "—",
+     "Heron Link for Solar & Storage"
+    ],
+    [
+     "**Heron Power**",
+     "**Schneider Electric**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**Zhonhen Electric**",
      "competitor",
      "active",
      "—",
@@ -13334,6 +14339,22 @@ function clLessonSegmentInHallPower_() {
      "—"
     ],
     [
+     "**Heron Power**",
+     "GE Vernova",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "Hitachi Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Hitachi Energy**",
      "**ABB**",
      "competitor",
@@ -13516,25 +14537,9 @@ function clLessonSegmentInHallPower_() {
      "active",
      "—",
      "—"
-    ],
-    [
-     "**Quanta Services**",
-     "**Rosendin**",
-     "competitor",
-     "active",
-     "—",
-     "data-center electrical"
-    ],
-    [
-     "**Rolls-Royce Power Systems**",
-     "Wärtsilä",
-     "competitor",
-     "active",
-     "Wartsila 790 MW Texas data-center order, April 2026",
-     "Behind-the-meter prime power"
     ]
    ],
-   "note": "Curated edges among members: 91 · to the neighbouring segments: 46 (the first 40 shown, by company) · derived-only mentions (no curated typing): 12 among members, 18 to the neighbours."
+   "note": "Curated edges among members: 96 · to the neighbouring segments: 48 (the first 40 shown, by company) · derived-only mentions (no curated typing): 14 among members, 18 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -13549,74 +14554,74 @@ function clLessonSegmentInHallPower_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-10 — USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
+     "sub": "Heron Power · financial"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-08-28 — New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
      "sub": "Piller · regulatory"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
      "sub": "Caterpillar · capacity"
     },
     {
-     "x": 5,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 6,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-27 — Rehlko joined the Wisconsin Data Center Coalition as an energy-resilience member, stating a track record of 14-plus GW of deployed data-center capacity, more than 90 percent of it custom-engineered",
      "sub": "Rehlko · corporate"
     },
     {
-     "x": 7,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-25 — Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
      "sub": "Gotion High-Tech · leadership"
     },
     {
-     "x": 8,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-25 — H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
      "sub": "Gotion High-Tech · financial"
     },
     {
-     "x": 9,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-25 — Board authorises management to sell listed equity holdings opportunistically, up to 15% of net assets attributable to the parent — roughly RMB 4.37bn — over twelve months",
      "sub": "Gotion High-Tech · corporate"
     },
     {
-     "x": 10,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-24 — James Hopkins promoted to VP, Financial Planning, Capital Management and Investor Relations effective 2026-09-01, reporting to CFO Mark Smith; Nick Arens now reports to Hopkins",
      "sub": "Cummins · leadership"
     },
     {
-     "x": 11,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
      "sub": "Zhonhen Electric · other"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-20 — Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
-     "sub": "Mitsubishi Electric · ma"
     }
    ]
   },
@@ -13652,6 +14657,12 @@ function clLessonSegmentInHallPower_() {
      "Rehlko"
     ],
     [
+     "California Competes Tax Credit",
+     "in-effect",
+     "2026-04-10",
+     "Heron Power"
+    ],
+    [
      "China battery export controls",
      "in-effect",
      "—",
@@ -13670,6 +14681,12 @@ function clLessonSegmentInHallPower_() {
      "Flex"
     ],
     [
+     "DC arc-flash and 800 V DC listings",
+     "proposed",
+     "—",
+     "Heron Power"
+    ],
+    [
      "DoD 1260H list",
      "in-effect",
      "2026-06-08",
@@ -13680,6 +14697,12 @@ function clLessonSegmentInHallPower_() {
      "in-effect",
      "2024-07-08",
      "Mitsubishi Electric"
+    ],
+    [
+     "Domestic-content and import restrictions on power conversion",
+     "in-effect",
+     "—",
+     "Heron Power"
     ],
     [
      "ENERGY STAR",
@@ -13716,6 +14739,12 @@ function clLessonSegmentInHallPower_() {
      "in-effect",
      "—",
      "ON.energy"
+    ],
+    [
+     "ERCOT NOGRR 282",
+     "in-effect",
+     "2026-07-09",
+     "Heron Power"
     ],
     [
      "EU Battery Regulation",
@@ -14019,9 +15048,9 @@ function clLessonSegmentInHallPower_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Static, Rotary, Modular, and the Battery Under Each* (planned) · *The Ten-Second Race* (planned) · *N+1, 2N, and Six Nines* (planned) · *Where BESS Plugs In: The Three Sockets*.",
+    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *The UPS Room: Static, Rotary, and the Battery Under Each* · *The Ten-Second Race* · *N+1, 2N, and Six Nines* (planned) · *Where BESS Plugs In: The Three Sockets*.",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Caterpillar, Cummins, Delta Electronics, FlexGen, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
+    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Caterpillar, Cummins, Delta Electronics, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -14086,6 +15115,22 @@ function clLessonSegmentInHallPower_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:heron-power added@2026-09-12",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-is-bought-and-on-what",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -14098,8 +15143,8 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
  "title": "Bridge and on-site generation",
  "short": "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -14207,13 +15252,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -14279,12 +15324,12 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (21 edges) · Hyperscalers and AI labs (20 edges) · Utilities (12 edges) · Clean firm and nuclear (11 edges) · Storage developers and IPPs (10 edges) · Neoclouds (10 edges) · Capital (4 edges) · Storage integrators and containers (2 edges) · Grid equipment (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
+     "AIDC developers and landlords (21 edges) · Hyperscalers and AI labs (20 edges) · Utilities (13 edges) · Clean firm and nuclear (11 edges) · Storage developers and IPPs (11 edges) · Neoclouds (10 edges) · Capital (4 edges) · Grid equipment (3 edges) · Storage integrators and containers (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Power conversion and rack-power silicon (2 edges) · Grid equipment (2 edges) · In-hall power (2 edges) · Clean firm and nuclear (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · EPC and construction (1 edge) · Assurance (1 edge)",
+     "Power conversion and rack-power silicon (2 edges) · Grid equipment (2 edges) · In-hall power (2 edges) · Clean firm and nuclear (2 edges) · Assurance (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · EPC and construction (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -15041,6 +16086,22 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
      "Series F and Series G participation plus a strategic memorandum of understanding"
     ],
     [
+     "**Heron Power**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Heron Power**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Huawei Digital Power**",
      "**Eaton**",
      "competitor",
@@ -15199,25 +16260,9 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
      "active",
      "5 GW of pad-mount transformers",
      "pad-mount transformers"
-    ],
-    [
-     "**Oklo**",
-     "**Siemens Energy**",
-     "supplier",
-     "active",
-     "SST-600 turbine + SGen-100A generator",
-     "Power conversion system"
-    ],
-    [
-     "**Piller**",
-     "ABB",
-     "competitor",
-     "active",
-     "—",
-     "—"
     ]
    ],
-   "note": "Curated edges among members: 40 · to the neighbouring segments: 61 (the first 40 shown, by company) · derived-only mentions (no curated typing): 16 among members, 15 to the neighbours."
+   "note": "Curated edges among members: 40 · to the neighbouring segments: 63 (the first 40 shown, by company) · derived-only mentions (no curated typing): 16 among members, 15 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -15630,7 +16675,7 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Bridge Power: Building the Plant Before the Grid Arrives* · *The Ten-Second Race* (planned) · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**Mechanism lessons for this segment:** *Bridge Power: Building the Plant Before the Grid Arrives* · *The Ten-Second Race* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
     "**Study guides:** Caterpillar, Cummins, ERock, GE Vernova, Mitsubishi Power, Siemens Energy, VoltaGrid, Wärtsilä, Bloom Energy, Mainspring, ProEnergy, Rehlko, Rolls-Royce Power Systems, Eaton, ENGIE North America, NRG Energy, Piller — each member's dossier carries one in Profiler."
    ]
@@ -15697,6 +16742,17 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
+   "changed": [
+    "read-next",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -15709,7 +16765,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
  "title": "Clean firm and nuclear",
  "short": "Firm carbon-free power as a product — existing reactor output sold on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -15812,13 +16868,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -17266,6 +18322,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
+   "changed": []
+  }
  ]
 };
 }
@@ -17278,7 +18341,7 @@ function clLessonSegmentCooling_() {
  "title": "Cooling",
  "short": "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2026-11-09",
  "provenance": {
   "inputs": [
@@ -17332,6 +18395,12 @@ function clLessonSegmentCooling_() {
    },
    {
     "kind": "public",
+    "ref": "profile:supermicro",
+    "date": "2026-09-08",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:trane-technologies",
     "date": "2026-09-04",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -17345,20 +18414,20 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "10",
+   "k": "11",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -17370,10 +18439,10 @@ function clLessonSegmentCooling_() {
   {
    "k": "1",
    "v": "challenger",
-   "sub": "contesting that set; 5 adjacent"
+   "sub": "contesting that set; 6 adjacent"
   },
   {
-   "k": "38",
+   "k": "39",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -17417,12 +18486,12 @@ function clLessonSegmentCooling_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (11 edges) · Hyperscalers and AI labs (7 edges) · Power conversion and rack-power silicon (3 edges) · Compute and the rack (2 edges) · Neoclouds (2 edges) · Capital (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Utilities (1 edge) · Software and optimization (1 edge)",
+     "AIDC developers and landlords (11 edges) · Hyperscalers and AI labs (8 edges) · Power conversion and rack-power silicon (3 edges) · Compute and the rack (3 edges) · Neoclouds (2 edges) · Capital (2 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Utilities (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (4 edges) · Power conversion and rack-power silicon (3 edges) · Cells and chemistry (2 edges) · In-hall power (2 edges)",
+     "Storage integrators and containers (4 edges) · Power conversion and rack-power silicon (4 edges) · Compute and the rack (3 edges) · Cells and chemistry (2 edges) · In-hall power (2 edges) · Assurance (1 edge) · Software and optimization (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -17535,6 +18604,12 @@ function clLessonSegmentCooling_() {
      "mitsubishi-electric",
      "adjacent",
      "productsAndServices › Data-center cooling and integrated power — the CritiCool chiller line"
+    ],
+    [
+     "**Supermicro**",
+     "supermicro",
+     "adjacent",
+     "productsAndServices › Direct Liquid Cooling (DLC-2): the FY2026 10-K states Supermicro manufactures the coolant distribution units and manifolds itself — in-rack CDUs to 250 kW, in-row to 1.8 MW, rear-door heat exchangers 10-120 kW per door and 1-50 MW cooling towers, sold inside DCBBS racks"
     ]
    ]
   },
@@ -17620,6 +18695,16 @@ function clLessonSegmentCooling_() {
      "FY2025 · 2025-12-31",
      "5,328.7",
      "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Supermicro**",
+     "FY2026 · 2026-06-30",
+     "39,063.1",
+     "as reported",
      "—",
      "—",
      "—",
@@ -17893,6 +18978,14 @@ function clLessonSegmentCooling_() {
      "—"
     ],
     [
+     "**Supermicro**",
+     "**CoolIT Systems**",
+     "competitor",
+     "active",
+     "—",
+     "In-house cold plates and coolant distribution units"
+    ],
+    [
      "**Trane Technologies**",
      "**Eaton**",
      "partner",
@@ -17955,6 +19048,22 @@ function clLessonSegmentCooling_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**AMD**",
+     "**Flex**",
+     "supplier",
+     "active",
+     "—",
+     "Instinct MI355X eight-GPU platform"
+    ],
+    [
+     "**AMD**",
+     "**Supermicro**",
+     "customer",
+     "active",
+     "—",
+     "Instinct MI300A/MI300X/MI325X/MI350X/MI355X systems and Helios"
     ],
     [
      "**Aligned Data Centers**",
@@ -18077,6 +19186,22 @@ function clLessonSegmentCooling_() {
      "reference designs and AI-factory blueprints"
     ],
     [
+     "**Supermicro**",
+     "AMD",
+     "supplier",
+     "active",
+     "—",
+     "Instinct MI300A/MI300X/MI325X/MI350X/MI350P/MI355X and EPYC"
+    ],
+    [
+     "**Supermicro**",
+     "NVIDIA",
+     "supplier",
+     "active",
+     "—",
+     "GB300/GB200 NVL72, HGX B300/B200, Vera Rubin platforms"
+    ],
+    [
      "**Trane Technologies**",
      "NVIDIA",
      "partner",
@@ -18101,7 +19226,7 @@ function clLessonSegmentCooling_() {
      "—"
     ]
    ],
-   "note": "Curated edges among members: 38 · to the neighbouring segments: 18 · derived-only mentions (no curated typing): 2 among members, 1 to the neighbours."
+   "note": "Curated edges among members: 39 · to the neighbouring segments: 22 · derived-only mentions (no curated typing): 3 among members, 2 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -18122,68 +19247,68 @@ function clLessonSegmentCooling_() {
     {
      "x": 2,
      "lane": "record",
+     "label": "2026-08-31 — FY2026 Form 10-K filed: three of four material weaknesses remediated, the IT general controls weakness remains unremediated, and disclosure controls are again not effective",
+     "sub": "Supermicro · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-08-31 — Calgary Herald: since the Ecolab close CoolIT's headcount has grown from about 650 to 'nearly 900'; Ecolab's Global High-Tech head says the Calgary manufacturing, engineering and R&D footprint will keep growing and new offices are planned in the Bay Area and Houston",
      "sub": "CoolIT Systems · capacity"
     },
     {
-     "x": 3,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-20 — Independent board investigation into the export-control matter completes, finding no evidence senior management knew of the alleged diversion scheme",
+     "sub": "Supermicro · legal"
+    },
+    {
+     "x": 5,
      "lane": "record",
      "label": "2026-08-20 — Agreement signed to wholly acquire PCI Energy Solutions of Norman, Oklahoma for approximately US$1.4bn, closing expected before end-2026 subject to regulatory approval",
      "sub": "Mitsubishi Electric · ma"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-17 — Trane Technologies and Eaton publish an industry-first joint power-and-thermal reference design for AI data centres",
      "sub": "Trane Technologies · partnership"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-17 — 'Launching September 28, 2026: CoolIT's next-generation CDU is engineered for 1MW+ ultra-dense AI racks' — no name, capacity or specification disclosed",
      "sub": "CoolIT Systems · product-launch"
     },
     {
-     "x": 6,
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-11 — Q4 and FY2026 results: FY2026 net sales $39,063.1m up 77.8%, more than $60bn of new orders in the year, and FY2027 guided to $65.0–72.0bn against a consensus near $54.4bn",
+     "sub": "Supermicro · financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-05 — Board declares the initial dividend on the 7.00% Series A Mandatory Convertible Preferred — $14.7778 per preferred share, $0.73889 per depositary share",
+     "sub": "Supermicro · financial"
+    },
+    {
+     "x": 10,
      "lane": "record",
      "label": "2026-07-31 — Q1 FY2027 (quarter ended 2026-06-30): revenue ¥1,497.1bn (+14.0%), adjusted operating profit ¥144.3bn (+53.8%); full-year guidance raised to ¥6,270.0bn revenue and ¥620.0bn adjusted operating profit",
      "sub": "Mitsubishi Electric · financial"
     },
     {
-     "x": 7,
+     "x": 11,
      "lane": "record",
      "label": "2026-07-31 — Q2 2026 all-time records: revenue NT$52.7B (+30%), EPS NT$3.14 (+126%), gross margin 27.2%, operating margin 15.6%; 2026 capex raised NT$13B → NT$18B; DenseLight optical stake announced",
      "sub": "LITEON · financial"
     },
     {
-     "x": 8,
+     "x": 12,
      "lane": "record",
      "label": "2026-07-31 — Record Q2 2026 — revenue $8.53B (+21.4%), both lines beat; Mobility spin-off announced for Q1 2027",
      "sub": "Eaton · financial"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-07-30 — Q2 2026: revenue $6,353.5M up 11%, adjusted continuing EPS $4.31 up 11%, backlog a record $12.1bn up 70%, Applied bookings up 130%",
-     "sub": "Trane Technologies · financial"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-07-30 — H1 2026 record: revenue €21.2B (+14% organic), adjusted EBITA €4.09B (+22% organic, beat ~€3.8B expected); FY2026 guidance raised to +14-19% organic EBITA growth",
-     "sub": "Schneider Electric · financial"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-07-29 — Q2 2026: EPS beat ($1.52 vs ~$1.43) but first revenue miss of the run ($3.27B vs ~$3.37B consensus); stock fell ~10-17% despite raised FY guidance",
-     "sub": "Vertiv · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-07-29 — Q1 FY2027: revenue $7,928m up 21%, record adjusted earnings per share of $1.00, FY2027 guidance raised — and the shares fell about 9%",
-     "sub": "Flex · financial"
     }
    ]
   },
@@ -18231,6 +19356,12 @@ function clLessonSegmentCooling_() {
      "CoolIT Systems"
     ],
     [
+     "Customer and supplier concentration",
+     "in-effect",
+     "—",
+     "Supermicro"
+    ],
+    [
      "Data-centre siting and energy regulation",
      "in-effect",
      "—",
@@ -18253,6 +19384,18 @@ function clLessonSegmentCooling_() {
      "in-effect",
      "2026-05-26",
      "Trane Technologies"
+    ],
+    [
+     "IEEPA tariff refunds following the February 2026 Supreme Court ruling",
+     "announced",
+     "2026-02",
+     "Supermicro"
+    ],
+    [
+     "Internal control over financial reporting — material weakness",
+     "in-effect",
+     "2026-06-30",
+     "Supermicro"
     ],
     [
      "Irish domicile and OECD Pillar Two",
@@ -18289,6 +19432,12 @@ function clLessonSegmentCooling_() {
      "in-effect",
      "2025-08-18",
      "Mitsubishi Electric"
+    ],
+    [
+     "Section 232 tariffs and general trade policy",
+     "in-effect",
+     "—",
+     "Supermicro"
     ],
     [
      "Section 232 tariffs on steel, aluminium and copper",
@@ -18331,6 +19480,12 @@ function clLessonSegmentCooling_() {
      "in-effect",
      "2026-08",
      "Aligned Data Centers"
+    ],
+    [
+     "US export controls (EAR advanced-computing rules) and the related investigations",
+     "in-effect",
+     "2026-03-19",
+     "Supermicro"
     ],
     [
      "US import tariffs",
@@ -18378,7 +19533,7 @@ function clLessonSegmentCooling_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Heat Is the Constraint* · *PUE, WUE, and the Plant Outside the Hall* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** CoolIT Systems, Schneider Electric, Trane Technologies, Vertiv, Eaton, Aligned Data Centers, Delta Electronics, Flex, LITEON, Mitsubishi Electric — each member's dossier carries one in Profiler."
+    "**Study guides:** CoolIT Systems, Schneider Electric, Trane Technologies, Vertiv, Eaton, Aligned Data Centers, Delta Electronics, Flex, LITEON, Mitsubishi Electric, Supermicro — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -18399,7 +19554,7 @@ function clLessonSegmentCooling_() {
      "why": "The registry's basis line: ecosystemRole: the CDU specialist the corpus lacked — designs the cold plate to NVIDIA's reference (Recommended Vendor List); customers 'four of the five hyperscalers'"
     },
     {
-     "q": "What role does the registry give **Mitsubishi Electric** in Cooling?",
+     "q": "What role does the registry give **Supermicro** in Cooling?",
      "c": [
       "incumbent",
       "challenger",
@@ -18443,6 +19598,22 @@ function clLessonSegmentCooling_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:supermicro added@2026-09-08",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -18455,10 +19626,16 @@ function clLessonSegmentComputeAndTheRack_() {
  "title": "Compute and the rack",
  "short": "The compute that sits in the rack and defines the power ask — the GPU, the rack-scale system it ships as, and the system integrators that build it — the load…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:amd",
+    "date": "2026-09-08",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
    {
     "kind": "public",
     "ref": "profile:flex",
@@ -18473,21 +19650,27 @@ function clLessonSegmentComputeAndTheRack_() {
    },
    {
     "kind": "public",
-    "ref": "graph:profiler-graph",
+    "ref": "profile:supermicro",
     "date": "2026-09-08",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "2",
+   "k": "4",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -18497,12 +19680,12 @@ function clLessonSegmentComputeAndTheRack_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "0",
+   "k": "2",
    "v": "challengers",
    "sub": "contesting that set; 1 adjacent"
   },
   {
-   "k": "2",
+   "k": "7",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -18546,12 +19729,12 @@ function clLessonSegmentComputeAndTheRack_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (9 edges) · AIDC developers and landlords (3 edges) · Neoclouds (3 edges)",
+     "Hyperscalers and AI labs (17 edges) · AIDC developers and landlords (6 edges) · Neoclouds (6 edges)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Power conversion and rack-power silicon (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · EPC and construction (1 edge) · AIDC developers and landlords (1 edge)",
+     "Power conversion and rack-power silicon (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · AIDC developers and landlords (2 edges) · EPC and construction (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -18608,6 +19791,18 @@ function clLessonSegmentComputeAndTheRack_() {
      "ecosystemRole: the ecosystem's gravitational center — does not sell power or storage, but its architecture decisions create the market for both; GB200/GB300 NVL72, Vera Rubin"
     ],
     [
+     "**AMD**",
+     "amd",
+     "challenger",
+     "ecosystemRole: defines what a rack must be fed and cooled — Helios puts 72 Instinct MI455X and 18 EPYC 'Venice' in one OCP Open Rack Wide frame with quick-disconnect liquid cooling; productsAndServices › Instinct: an estimated 5-10% of data-centre accelerator revenue against NVIDIA's 75-92%"
+    ],
+    [
+     "**Supermicro**",
+     "supermicro",
+     "challenger",
+     "ecosystemRole: the rack and server OEM that turns a chip vendor's reference design into a delivered, factory-tested rack; productsAndServices › GPU and accelerator systems: peaked at 8.0% of worldwide server revenue in 4Q23 and sat at 7.6% in 1Q26 against Dell's 16.5%, with gross margin down 719bp in three years"
+    ],
+    [
      "**Flex**",
      "flex",
      "adjacent",
@@ -18643,6 +19838,26 @@ function clLessonSegmentComputeAndTheRack_() {
      "—"
     ],
     [
+     "**AMD**",
+     "FY2025 · 2025-12-27",
+     "34,639",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Supermicro**",
+     "FY2026 · 2026-06-30",
+     "39,063.1",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Flex**",
      "FY2026 · 2026-03-31",
      "27,914",
@@ -18670,6 +19885,30 @@ function clLessonSegmentComputeAndTheRack_() {
    ],
    "rows": [
     [
+     "**AMD**",
+     "**Flex**",
+     "supplier",
+     "active",
+     "—",
+     "Instinct MI355X eight-GPU platform"
+    ],
+    [
+     "**AMD**",
+     "**NVIDIA**",
+     "competitor",
+     "active",
+     "—",
+     "Instinct accelerators and Helios racks"
+    ],
+    [
+     "**AMD**",
+     "**Supermicro**",
+     "customer",
+     "active",
+     "—",
+     "Instinct MI300A/MI300X/MI325X/MI350X/MI355X systems and Helios"
+    ],
+    [
      "**Flex**",
      "**NVIDIA**",
      "partner",
@@ -18684,6 +19923,22 @@ function clLessonSegmentComputeAndTheRack_() {
      "active",
      "—",
      "800 VDC power shelves and racks"
+    ],
+    [
+     "**Supermicro**",
+     "**AMD**",
+     "supplier",
+     "active",
+     "—",
+     "Instinct MI300A/MI300X/MI325X/MI350X/MI350P/MI355X and EPYC"
+    ],
+    [
+     "**Supermicro**",
+     "**NVIDIA**",
+     "supplier",
+     "active",
+     "—",
+     "GB300/GB200 NVL72, HGX B300/B200, Vera Rubin platforms"
     ],
     [
      "**Aligned Data Centers**",
@@ -18886,6 +20141,14 @@ function clLessonSegmentComputeAndTheRack_() {
      "reference designs and AI-factory blueprints"
     ],
     [
+     "**Supermicro**",
+     "CoolIT Systems",
+     "competitor",
+     "active",
+     "—",
+     "In-house cold plates and coolant distribution units"
+    ],
+    [
      "**Trane Technologies**",
      "**NVIDIA**",
      "partner",
@@ -18910,7 +20173,7 @@ function clLessonSegmentComputeAndTheRack_() {
      "800 VDC power systems"
     ]
    ],
-   "note": "Curated edges among members: 2 · to the neighbouring segments: 28 · derived-only mentions (no curated typing): 0 among members, 0 to the neighbours."
+   "note": "Curated edges among members: 7 · to the neighbouring segments: 29 · derived-only mentions (no curated typing): 0 among members, 2 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -18931,68 +20194,68 @@ function clLessonSegmentComputeAndTheRack_() {
     {
      "x": 2,
      "lane": "record",
+     "label": "2026-08-31 — FY2026 Form 10-K filed: three of four material weaknesses remediated, the IT general controls weakness remains unremediated, and disclosure controls are again not effective",
+     "sub": "Supermicro · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-31 — AMD, Cisco and HUMAIN put MI355X infrastructure live in production in Saudi Arabia; next phase up to 250 MW on MI400 Series from 2027",
+     "sub": "AMD · customer"
+    },
+    {
+     "x": 4,
+     "lane": "record",
      "label": "2026-08-26 — Q2 FY2027: revenue $96.2B (+106% YoY, +18% QoQ) against a $91B guide; data center $89.0B (+117%); GAAP EPS $2.46 above non-GAAP $2.22; Q3 guided to $108.0B ±2% at 74.0% gross margin",
      "sub": "NVIDIA · financial"
     },
     {
-     "x": 3,
+     "x": 5,
      "lane": "record",
      "label": "2026-08-26 — AWS to deploy 2 million additional NVIDIA GPUs across its global infrastructure in 2027-2028 — on top of the 1 million announced at GTC 2026 — spanning Blackwell Ultra, Rubin and Rubin Ultra, Vera CPU, NVLink Fusion and Spectrum networking, plus 100,000 GPUs for federal workloads",
      "sub": "NVIDIA · partnership"
     },
     {
-     "x": 4,
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-20 — Independent board investigation into the export-control matter completes, finding no evidence senior management knew of the alleged diversion scheme",
+     "sub": "Supermicro · legal"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-19 — Tim Ryan appointed to the board; KC McClure becomes chair of the Audit and Finance Committee; Joseph Householder retires after eleven years",
+     "sub": "AMD · leadership"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-17 — Closed a $4.75bn public senior-notes offering across 2029, 2031, 2033 and 2036 maturities",
+     "sub": "AMD · financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-11 — Q4 and FY2026 results: FY2026 net sales $39,063.1m up 77.8%, more than $60bn of new orders in the year, and FY2027 guided to $65.0–72.0bn against a consensus near $54.4bn",
+     "sub": "Supermicro · financial"
+    },
+    {
+     "x": 10,
      "lane": "record",
      "label": "2026-08-10 — Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital",
      "sub": "NVIDIA · partnership"
     },
     {
-     "x": 5,
-     "lane": "record",
-     "label": "2026-07-29 — Q1 FY2027: revenue $7,928m up 21%, record adjusted earnings per share of $1.00, FY2027 guidance raised — and the shares fell about 9%",
-     "sub": "Flex · financial"
-    },
-    {
-     "x": 6,
-     "lane": "record",
-     "label": "2026-07-29 — Leadership teams named for Flex and the planned spin-off",
-     "sub": "Flex · corporate"
-    },
-    {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-07-29 — A significant customer accounted for 12% of net sales in Q1 FY2027, with the majority in Cloud and Power Infrastructure",
-     "sub": "Flex · financial"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-07-09 — Expanded partnership with Cerebras to raise CS-3 production capacity roughly sevenfold through 2026 at Milpitas, California",
-     "sub": "Flex · customer"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-06-25 — JetCool launches a turnkey liquid-cooled Dell PowerEdge XE7745 at up to 8 kW per server",
-     "sub": "Flex · product-launch"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-06-09 — Flex admitted to the S&P 500 index effective before the open on 22 June 2026",
-     "sub": "Flex · corporate"
-    },
-    {
      "x": 11,
      "lane": "record",
-     "label": "2026-06-01 — COMPUTEX 2026: the 110 kW Vera Rubin power shelf, a 30 kW capacitive energy storage system, and the BMR317 intermediate bus converter",
-     "sub": "Flex · product-launch"
+     "label": "2026-08-06 — Definitive agreement to acquire Taalas, a Toronto specialist in AI inference silicon",
+     "sub": "AMD · ma"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-05-20 — Q1 FY2027: revenue $81.6B (+85% YoY) vs $78.8B consensus; Q2 guided to $91B; dividend raised 25x, +$80B buyback",
-     "sub": "NVIDIA · financial"
+     "label": "2026-08-05 — Board declares the initial dividend on the 7.00% Series A Mandatory Convertible Preferred — $14.7778 per preferred share, $0.73889 per depositary share",
+     "sub": "Supermicro · financial"
     }
    ]
   },
@@ -19010,10 +20273,22 @@ function clLessonSegmentComputeAndTheRack_() {
    ],
    "rows": [
     [
+     "AI Diffusion Rule and replacement regulations",
+     "expired",
+     "2025-05",
+     "AMD"
+    ],
+    [
      "China Anti-Monopoly Law",
      "in-effect",
      "—",
      "NVIDIA"
+    ],
+    [
+     "Customer and supplier concentration",
+     "in-effect",
+     "—",
+     "Supermicro"
     ],
     [
      "Data-centre siting and energy regulation",
@@ -19022,10 +20297,40 @@ function clLessonSegmentComputeAndTheRack_() {
      "Flex"
     ],
     [
+     "General tariff policy and Section 232 semiconductor action",
+     "in-effect",
+     "—",
+     "AMD"
+    ],
+    [
+     "IEEPA tariff refunds following the February 2026 Supreme Court ruling",
+     "announced",
+     "2026-02",
+     "Supermicro"
+    ],
+    [
+     "Internal control over financial reporting — material weakness",
+     "in-effect",
+     "2026-06-30",
+     "Supermicro"
+    ],
+    [
+     "MI325 China licences and the 25% inspection tariff",
+     "in-effect",
+     "2026-02",
+     "AMD"
+    ],
+    [
      "OECD Pillar Two global minimum tax",
      "in-effect",
      "2025-01-01",
      "Flex"
+    ],
+    [
+     "Section 232 tariffs and general trade policy",
+     "in-effect",
+     "—",
+     "Supermicro"
     ],
     [
      "Section 301 tariffs",
@@ -19040,10 +20345,34 @@ function clLessonSegmentComputeAndTheRack_() {
      "Flex"
     ],
     [
+     "Taiwan and TSMC foundry concentration",
+     "in-effect",
+     "—",
+     "AMD"
+    ],
+    [
      "US export controls (China)",
      "in-effect",
      "—",
      "NVIDIA"
+    ],
+    [
+     "US export controls (EAR advanced-computing rules) and the related investigations",
+     "in-effect",
+     "2026-03-19",
+     "Supermicro"
+    ],
+    [
+     "US export controls on advanced AI chips (BIS advanced-computing rule)",
+     "in-effect",
+     "2025-04-15",
+     "AMD"
+    ],
+    [
+     "US government revenue-share expectation on licensed China sales",
+     "proposed",
+     "2025-08",
+     "AMD"
     ],
     [
      "US import tariffs",
@@ -19067,7 +20396,7 @@ function clLessonSegmentComputeAndTheRack_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Last Ten Metres* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *Heat Is the Constraint*.",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** NVIDIA, Flex — each member's dossier carries one in Profiler."
+    "**Study guides:** NVIDIA, AMD, Supermicro, Flex — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -19120,16 +20449,32 @@ function clLessonSegmentComputeAndTheRack_() {
      "why": "Chain position 8 against this segment's 9."
     },
     {
-     "q": "The graph records a curated edge from **Flex** to **NVIDIA**. How is it typed from Flex's side?",
+     "q": "The graph records a curated edge from **AMD** to **Flex**. How is it typed from AMD's side?",
      "c": [
       "portfolio",
       "customer",
-      "partner",
-      "competitor"
+      "supplier",
+      "partner"
      ],
      "a": 2,
-     "why": "NVIDIA names Flex Power in the power-system-components tier of its own published 800 VDC ecosystem, and Flex has since shipped power shelves built to NVIDIA platform requirements."
+     "why": "Flex manufactures AMD's Instinct MI355X eight-GPU platform in Austin, Texas — AMD owns the product and Flex assembles it."
     }
+   ]
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:amd added@2026-09-08; profile:supermicro added@2026-09-08",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
    ]
   }
  ]
@@ -19144,8 +20489,8 @@ function clLessonSegmentEpcAndConstruction_() {
  "title": "EPC and construction",
  "short": "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -19265,13 +20610,13 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -19337,7 +20682,7 @@ function clLessonSegmentEpcAndConstruction_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (31 edges) · AIDC developers and landlords (24 edges) · Hyperscalers and AI labs (18 edges) · Utilities (9 edges) · Capital (9 edges) · Clean firm and nuclear (8 edges) · Neoclouds (4 edges) · Grid equipment (3 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Compute and the rack (1 edge) · Software and optimization (1 edge)",
+     "Storage developers and IPPs (33 edges) · AIDC developers and landlords (24 edges) · Hyperscalers and AI labs (18 edges) · Utilities (11 edges) · Capital (9 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Compute and the rack (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -20215,6 +21560,22 @@ function clLessonSegmentEpcAndConstruction_() {
      "TIC — The Industrial Company"
     ],
     [
+     "**Pattern Energy**",
+     "**Blattner**",
+     "supplier",
+     "active",
+     "3,515 MW",
+     "SunZia Wind EPC"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Quanta Services**",
+     "supplier",
+     "active",
+     "—",
+     "SunZia Transmission EPC"
+    ],
+    [
      "**RWE Clean Energy**",
      "**Blattner**",
      "supplier",
@@ -20367,7 +21728,7 @@ function clLessonSegmentEpcAndConstruction_() {
      "Quanta Infrastructure Solutions Group"
     ]
    ],
-   "note": "Curated edges among members: 57 · to the neighbouring segments: 38 · derived-only mentions (no curated typing): 8 among members, 4 to the neighbours."
+   "note": "Curated edges among members: 57 · to the neighbouring segments: 40 · derived-only mentions (no curated typing): 8 among members, 4 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -20643,6 +22004,16 @@ function clLessonSegmentEpcAndConstruction_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -20655,14 +22026,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
  "title": "Storage developers and IPPs",
  "short": "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
     "kind": "public",
     "ref": "profile:aes-clean-energy",
-    "date": "2026-09-06",
+    "date": "2026-09-09",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -20727,6 +22098,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    },
    {
     "kind": "public",
+    "ref": "profile:gridmatic",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:gridstor",
     "date": "2026-09-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
@@ -20740,7 +22117,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:intersect-power",
-    "date": "2026-09-05",
+    "date": "2026-09-12",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -20787,6 +22164,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    },
    {
     "kind": "public",
+    "ref": "profile:pattern-energy",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:plus-power",
     "date": "2026-09-06",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -20823,6 +22206,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    },
    {
     "kind": "public",
+    "ref": "profile:stem",
+    "date": "2026-09-09",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:strata-clean-energy",
     "date": "2026-09-06",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
@@ -20848,20 +22237,20 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "31",
+   "k": "34",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -20873,10 +22262,10 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
   {
    "k": "8",
    "v": "challengers",
-   "sub": "contesting that set; 4 adjacent"
+   "sub": "contesting that set; 7 adjacent"
   },
   {
-   "k": "68",
+   "k": "75",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -20920,12 +22309,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (42 edges) · AIDC developers and landlords (12 edges) · Utilities (8 edges) · Clean firm and nuclear (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Software and optimization (1 edge)",
+     "Hyperscalers and AI labs (44 edges) · AIDC developers and landlords (13 edges) · Utilities (8 edges) · Clean firm and nuclear (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (50 edges) · Cells and chemistry (33 edges) · EPC and construction (30 edges) · Power conversion and rack-power silicon (23 edges) · Software and optimization (23 edges) · In-hall power (19 edges) · Grid equipment (11 edges) · Bridge and on-site generation (11 edges) · Utilities (8 edges) · Assurance (5 edges) · Clean firm and nuclear (4 edges)",
+     "Storage integrators and containers (51 edges) · Cells and chemistry (33 edges) · EPC and construction (32 edges) · Power conversion and rack-power silicon (27 edges) · Software and optimization (23 edges) · In-hall power (21 edges) · Grid equipment (14 edges) · Bridge and on-site generation (12 edges) · Utilities (8 edges) · Assurance (5 edges) · Clean firm and nuclear (4 edges) · Insurance and risk transfer (3 edges)",
      "who this segment buys from"
     ]
    ]
@@ -21148,10 +22537,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "productsAndServices › Nuclear fleet & long-term PPAs; Calpine gas & geothermal — a merchant generator with no storage fleet on the record"
     ],
     [
+     "**Gridmatic**",
+     "gridmatic",
+     "adjacent",
+     "productsAndServices › Battery storage optimisation, tolling and revenue-floor offtake: the offtaker on Energy Vault's Cross Trails — a ten-year physically settled revenue floor with upside participation backed by the Gridmatic Storage Fund, the buyer position on a merchant battery that Energy Vault's SEC filings report; the company owns no plants."
+    ],
+    [
      "**ON.energy**",
      "on-energy",
      "adjacent",
      "productsAndServices › Legacy merchant BESS — ~240 MW ERCOT Palo Verde / Palo de Agua portfolio"
+    ],
+    [
+     "**Pattern Energy**",
+     "pattern-energy",
+     "adjacent",
+     "productsAndServices › Operating wind, solar and storage fleet: a ~12 GW wind-and-solar IPP whose storage book is McHenry (20 MW, 2015) and the 220 MW Amanecer Puerto Rico batteries under a USD 489.4 million DOE loan (August 2026) — an IPP at scale, adjacent rather than a storage position on the record"
     ],
     [
      "**ProEnergy**",
@@ -21164,6 +22565,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "samsung-ct",
      "adjacent",
      "productsAndServices › US renewables development platform (T&I): ~20 GW of solar and ESS positions sold to credit-sensitive buyers who pick the batteries"
+    ],
+    [
+     "**Stem**",
+     "stem",
+     "adjacent",
+     "productsAndServices › Project and Professional Services, and the DevCo storage-development joint ventures: since January 2022 Stem has run joint ventures through wholly-owned development subsidiaries 'with the purpose of originating potential battery storage facility projects', consolidated as variable interest entities with third-party minority owners as non-controlling interests; it also carried $34.0m of energy storage systems on its own balance sheet at 2026-06-30 earning Host Customer and merchant revenue. Both positions are in run-off — a $6.4m DevCo project-asset impairment in FY2025 and $2.8m of held-for-sale impairment in H1 2026 — but both are documented in the current filing."
     ]
    ]
   },
@@ -21245,6 +22652,16 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—"
     ],
     [
+     "**Stem**",
+     "FY2025 · 2025-12-31",
+     "156.3",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "*No normalized figure on record*",
      "—",
      "—",
@@ -21252,7 +22669,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—",
      "—",
      "—",
-     "Apex Clean Energy, Arevon, Aypa Power, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, Plus Power, RWE Clean Energy, Terra-Gen, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Spearmint Energy, Strata Clean Energy, Constellation Energy, ON.energy, ProEnergy, Samsung C&T"
+     "Apex Clean Energy, Arevon, Aypa Power, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, Plus Power, RWE Clean Energy, Terra-Gen, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Spearmint Energy, Strata Clean Energy, Constellation Energy, Gridmatic, ON.energy, Pattern Energy, ProEnergy, Samsung C&T"
     ]
    ]
   },
@@ -21504,6 +22921,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—"
     ],
     [
+     "**Gridmatic**",
+     "**Hunt Energy Network**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gridmatic**",
+     "**Stem**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Hunt Energy Network**",
      "**ENGIE North America**",
      "competitor",
@@ -21616,6 +23049,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—"
     ],
     [
+     "**Pattern Energy**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Pattern Energy**",
+     "**NextEra**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Plus Power**",
      "**ENGIE North America**",
      "competitor",
@@ -21710,6 +23159,30 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "—",
      "ERCOT merchant storage"
+    ],
+    [
+     "**Stem**",
+     "**Available Power**",
+     "customer",
+     "historical",
+     "up to 100 front-of-meter sites",
+     "—"
+    ],
+    [
+     "**Stem**",
+     "**ENGIE North America**",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Stem**",
+     "**Excelsior Energy Capital**",
+     "partner",
+     "historical",
+     "—",
+     "—"
     ],
     [
      "**Strata Clean Energy**",
@@ -22064,6 +23537,30 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "AI UPS"
     ],
     [
+     "**Pattern Energy**",
+     "Blattner",
+     "supplier",
+     "active",
+     "3,515 MW",
+     "SunZia Wind EPC"
+    ],
+    [
+     "**Pattern Energy**",
+     "Digital Realty",
+     "customer",
+     "active",
+     "65 MWac",
+     "Phoenix Solar"
+    ],
+    [
+     "**Pattern Energy**",
+     "Quanta Services",
+     "supplier",
+     "active",
+     "—",
+     "SunZia Transmission EPC"
+    ],
+    [
      "**Prime Data Centers**",
      "**Plus Power**",
      "other",
@@ -22110,33 +23607,9 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "Lafitte Solar 100 MW; Bright Arrow 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
      "EPC construction on utility-scale solar and solar-plus-storage"
-    ],
-    [
-     "**Recurrent Energy**",
-     "Blattner",
-     "supplier",
-     "active",
-     "Papago Solar 150 MWac and Cobalt Solar 330 MW",
-     "Solar EPC"
-    ],
-    [
-     "**Recurrent Energy**",
-     "Burns & McDonnell",
-     "supplier",
-     "historical",
-     "Fort Duncan, 100 MW / 200 MWh",
-     "EPC on a merchant ERCOT battery"
-    ],
-    [
-     "**Recurrent Energy**",
-     "Primoris",
-     "supplier",
-     "active",
-     "Desert Bloom Storage, 600 MWh",
-     "Battery storage EPC"
     ]
    ],
-   "note": "Curated edges among members: 68 · to the neighbouring segments: 55 (the first 40 shown, by company) · derived-only mentions (no curated typing): 31 among members, 9 to the neighbours."
+   "note": "Curated edges among members: 75 · to the neighbouring segments: 58 (the first 40 shown, by company) · derived-only mentions (no curated typing): 33 among members, 9 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -22151,74 +23624,74 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-04 — Osgood Wind (up to 200 MW, Québec, with Connectif des Sommets and the W8banaki Nation) presented to local communities; to be bid into Hydro-Québec's 2026 call, construction 2030, operation 2032",
+     "sub": "Pattern Energy · project"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
      "sub": "Invenergy · project"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-02 — California's Attorney General and Energy Commission serve a notice of intent to sue the Department of the Interior and RWE over the cancellation of the Humboldt floating-wind lease, alleging OCSLA violations including no pre-cancellation hearing, no five-year suspension, no governor notification, and compensation of US$121.3m exceeding statutory formulas",
      "sub": "RWE Clean Energy · legal"
     },
     {
-     "x": 3,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-02 — BLM opens EIS scoping for Silver Rock Transmission — up to two lines, up to 600 kV, Millard County, Utah to Clark County, Nevada — with comments to 5 October 2026, after FAST-41 coverage in December 2025",
+     "sub": "Pattern Energy · regulatory"
+    },
+    {
+     "x": 5,
      "lane": "record",
      "label": "2026-09-01 — Available Infrastructure partners with EarthSpark International to host minigrid data on its SanQtum edge platform; CEO recalls the company's founding 'focus on the energy sector, including ... battery energy storage systems'",
      "sub": "Available Power · partnership"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
      "sub": "Invenergy · project"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-27 — Q2 2026: Recurrent revenue $117.3m, operating loss $19.4m including a $24m impairment on a Latin America project sale; storage pipeline restated to 84.1 GWh and segment debt to $4.1bn",
      "sub": "Recurrent Energy · financial"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-27 — CFIUS clears the Global Infrastructure Partners and EQT acquisition of The AES Corporation",
      "sub": "AES Clean Energy · ma"
     },
     {
-     "x": 7,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-24 — FERC approves extension of the Brandon Shores and H.A. Wagner reliability-must-run agreements through 2031",
      "sub": "Talen Energy · regulatory"
     },
     {
-     "x": 8,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
      "sub": "NRG Energy · market"
     },
     {
-     "x": 9,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-20 — Quincy Solar (120 MW, Grant County, Washington) breaks ground; Cupertino Electric named contractor; commercial late 2027",
      "sub": "Invenergy · project"
     },
     {
-     "x": 10,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-19 — Pennsylvania executive order conditions preferential permitting for data centres above 25 MW on new in-zone supply",
      "sub": "Talen Energy · policy"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-19 — Datavault AI's Q2 2026 results: SanQtum deployments completed in New York and Philadelphia; 'no tokens sold or capital raised to date' for the $QEST programme",
-     "sub": "Available Power · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-18 — $300M letter-of-credit facility closed with Standard Chartered (sole provider/arranger) — to post development-phase credit support, NYISO + MISO focus",
-     "sub": "Key Capture · financial"
     }
    ]
   },
@@ -22308,6 +23781,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Invenergy"
     ],
     [
+     "DOE Transmission Facilitation Program and Energy Dominance Financing",
+     "announced",
+     "2024-10-03",
+     "Pattern Energy"
+    ],
+    [
      "DOE transmission policy (FAST-41, NIETC)",
      "in-effect",
      "2024-02",
@@ -22386,6 +23865,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "ON.energy"
     ],
     [
+     "ERCOT Real-Time Co-optimization plus Batteries (RTC+B)",
+     "in-effect",
+     "2025-12-05",
+     "Gridmatic"
+    ],
+    [
      "ERCOT RTC+B and ancillary-service redesign",
      "in-effect",
      "2025-12-05",
@@ -22404,6 +23889,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "AES Clean Energy"
     ],
     [
+     "Federal wind permitting posture (Interior secretarial orders, BLM, Pentagon/FAA reviews) and FAST-41",
+     "in-effect",
+     "2025-07",
+     "Pattern Energy"
+    ],
+    [
      "FEOC restrictions",
      "in-effect",
      "—",
@@ -22413,7 +23904,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "FEOC restrictions",
      "in-effect",
      "2025-07",
-     "Intersect"
+     "Intersect, Stem"
     ],
     [
      "FEOC restrictions",
@@ -22468,6 +23959,18 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "proposed",
      "2025-07-14",
      "Spearmint Energy"
+    ],
+    [
+     "FERC negotiated-rate authority and the CAISO Subscriber PTO model (merchant transmission)",
+     "in-effect",
+     "—",
+     "Pattern Energy"
+    ],
+    [
+     "FERC Orders 841, 2222 and 2023 — wholesale market access for storage and distributed resources",
+     "in-effect",
+     "2018-02",
+     "Stem"
     ],
     [
      "FERC review of the LS Power acquisition (Federal Power Act section 203)",
@@ -22536,6 +24039,18 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Intersect"
     ],
     [
+     "ITC/45X — OBBBA §45Y/§48E phase-down and the begin-construction test",
+     "in-effect",
+     "2025-07-04",
+     "Pattern Energy"
+    ],
+    [
+     "ITC/45X — Sections 48E and 45X as amended by the One Big Beautiful Bill Act",
+     "in-effect",
+     "2025-07",
+     "Stem"
+    ],
+    [
      "Local BESS zoning and fire-code approvals (NFPA 855 / UL 9540A)",
      "in-effect",
      "2025-07",
@@ -22578,10 +24093,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "NRG Energy"
     ],
     [
+     "NHPA/NEPA litigation — Tohono O'odham Nation et al. v. U.S. Department of the Interior (SunZia)",
+     "in-effect",
+     "2025-05-27",
+     "Pattern Energy"
+    ],
+    [
      "Nuclear production tax credit (section 45U)",
      "in-effect",
      "2024-01-01",
      "Talen Energy, Vistra"
+    ],
+    [
+     "NYSE continued-listing standards (Section 802.01C)",
+     "in-effect",
+     "2024-08-28",
+     "Stem"
     ],
     [
      "OBBBA (HR1) credit phase-down and FEOC restrictions",
@@ -22626,6 +24153,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Talen Energy"
     ],
     [
+     "PUCT Project 58379 — energy storage resource offer and scheduling rules ('small fish' exemption removal)",
+     "in-effect",
+     "2026-06-01",
+     "Gridmatic"
+    ],
+    [
      "Retail supply regulation (state PUCs)",
      "in-effect",
      "—",
@@ -22642,6 +24175,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "proposed",
      "2025-07-01",
      "Recurrent Energy"
+    ],
+    [
+     "Section 232 tariffs — steel and aluminium at 50%, transformer cores, and the wind-turbine investigation",
+     "in-effect",
+     "2025-06-03",
+     "Pattern Energy"
     ],
     [
      "Section 301 tariffs",
@@ -22672,6 +24211,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "in-effect",
      "2023-10",
      "Invenergy"
+    ],
+    [
+     "State siting and expropriation law — Louisiana SB 108 and Mississippi PSC (Southern Spirit)",
+     "in-effect",
+     "2024-08",
+     "Pattern Energy"
     ],
     [
      "State siting law (OH SB 52 / IL PA 102-1123)",
@@ -22716,6 +24261,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "NRG Energy"
     ],
     [
+     "Texas retail electric provider certification (PUCT Chapter 25)",
+     "in-effect",
+     "2022-03-16",
+     "Gridmatic"
+    ],
+    [
      "Texas SB 6 (large-load and co-located generation)",
      "in-effect",
      "2025",
@@ -22738,6 +24289,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "in-effect",
      "2025-06",
      "Vistra"
+    ],
+    [
+     "Trade tariffs",
+     "in-effect",
+     "—",
+     "Stem"
     ],
     [
      "Turbine safety and product liability",
@@ -22773,7 +24330,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Eight Buyer Classes* (planned) · *From Site Control to Commercial Operation* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Constellation Energy, ON.energy, ProEnergy, Samsung C&T — each member's dossier carries one in Profiler."
+    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Constellation Energy, Gridmatic, ON.energy, Pattern Energy, ProEnergy, Samsung C&T, Stem — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -22794,7 +24351,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "why": "The registry's basis line: registry tagline: third-largest US battery owner; ecosystemRole: one of the three largest storage buyers, procurement entangled with a 22 % Fluence stake"
     },
     {
-     "q": "What role does the registry give **Samsung C&T** in Storage developers and IPPs?",
+     "q": "What role does the registry give **Stem** in Storage developers and IPPs?",
      "c": [
       "challenger",
       "incumbent",
@@ -22838,6 +24395,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:aes-clean-energy 2026-09-06→2026-09-09; profile:gridmatic added@2026-09-12; profile:intersect-power 2026-09-05→2026-09-12; profile:pattern-energy added@2026-09-12; profile:stem added@2026-09-09",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -22850,7 +24423,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
  "title": "AIDC developers and landlords",
  "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -22893,7 +24466,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:crusoe",
-    "date": "2026-09-06",
+    "date": "2026-09-12",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -22953,7 +24526,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:intersect-power",
-    "date": "2026-09-05",
+    "date": "2026-09-12",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23037,13 +24610,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -23109,12 +24682,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (35 edges) · Neoclouds (16 edges) · Clean firm and nuclear (2 edges) · Storage developers and IPPs (2 edges) · Power conversion and rack-power silicon (1 edge) · Compute and the rack (1 edge) · Utilities (1 edge)",
+     "Hyperscalers and AI labs (35 edges) · Neoclouds (16 edges) · Clean firm and nuclear (2 edges) · Compute and the rack (2 edges) · Storage developers and IPPs (2 edges) · Power conversion and rack-power silicon (1 edge) · Utilities (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Utilities (32 edges) · EPC and construction (24 edges) · Clean firm and nuclear (23 edges) · Bridge and on-site generation (21 edges) · Storage integrators and containers (20 edges) · In-hall power (20 edges) · Grid equipment (19 edges) · Power conversion and rack-power silicon (18 edges) · Software and optimization (18 edges) · Storage developers and IPPs (12 edges) · Cooling (11 edges) · Cells and chemistry (7 edges) · Compute and the rack (3 edges)",
+     "Utilities (33 edges) · In-hall power (24 edges) · EPC and construction (24 edges) · Clean firm and nuclear (23 edges) · Power conversion and rack-power silicon (22 edges) · Bridge and on-site generation (21 edges) · Storage integrators and containers (20 edges) · Grid equipment (20 edges) · Software and optimization (18 edges) · Storage developers and IPPs (13 edges) · Cooling (11 edges) · Cells and chemistry (7 edges) · Compute and the rack (6 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -24619,7 +26192,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "custom-built data centres, Texas and New York and beyond"
     ]
    ],
-   "note": "Curated edges among members: 98 · to the neighbouring segments: 99 (the first 40 shown, by company) · derived-only mentions (no curated typing): 21 among members, 43 to the neighbours."
+   "note": "Curated edges among members: 98 · to the neighbouring segments: 100 (the first 40 shown, by company) · derived-only mentions (no curated typing): 21 among members, 43 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -25405,6 +26978,16 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:crusoe 2026-09-06→2026-09-12; profile:intersect-power 2026-09-05→2026-09-12",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -25417,7 +27000,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
  "title": "Hyperscalers and AI labs",
  "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -25472,13 +27055,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -25549,7 +27132,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (42 edges) · AIDC developers and landlords (35 edges) · Utilities (30 edges) · Neoclouds (28 edges) · Clean firm and nuclear (25 edges) · Bridge and on-site generation (20 edges) · EPC and construction (18 edges) · Power conversion and rack-power silicon (15 edges) · In-hall power (15 edges) · Storage integrators and containers (10 edges) · Grid equipment (10 edges) · Capital (10 edges) · Software and optimization (10 edges) · Compute and the rack (9 edges) · Cells and chemistry (8 edges) · Cooling (7 edges)",
+     "Storage developers and IPPs (44 edges) · AIDC developers and landlords (35 edges) · Utilities (32 edges) · Neoclouds (28 edges) · Clean firm and nuclear (25 edges) · Bridge and on-site generation (20 edges) · EPC and construction (18 edges) · Compute and the rack (17 edges) · Power conversion and rack-power silicon (15 edges) · In-hall power (15 edges) · Grid equipment (12 edges) · Storage integrators and containers (10 edges) · Capital (10 edges) · Software and optimization (10 edges) · Cells and chemistry (8 edges) · Cooling (8 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -26432,6 +28015,15 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
+   "changed": [
+    "where-it-sits"
+   ]
+  }
  ]
 };
 }
@@ -26444,8 +28036,8 @@ function clLessonSegmentNeoclouds_() {
  "title": "Neoclouds",
  "short": "The GPU-cloud operators that sell contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets — faster than…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -26457,7 +28049,7 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "profile:crusoe",
-    "date": "2026-09-06",
+    "date": "2026-09-12",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -26493,13 +28085,13 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -26570,7 +28162,7 @@ function clLessonSegmentNeoclouds_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (21 edges) · Bridge and on-site generation (10 edges) · In-hall power (7 edges) · Storage integrators and containers (6 edges) · Power conversion and rack-power silicon (6 edges) · Capital (5 edges) · EPC and construction (4 edges) · Storage developers and IPPs (4 edges) · Grid equipment (3 edges) · Clean firm and nuclear (3 edges) · Compute and the rack (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges) · Cooling (2 edges) · Utilities (2 edges)",
+     "AIDC developers and landlords (21 edges) · Bridge and on-site generation (10 edges) · In-hall power (9 edges) · Power conversion and rack-power silicon (8 edges) · Storage integrators and containers (6 edges) · Compute and the rack (6 edges) · Capital (5 edges) · EPC and construction (4 edges) · Storage developers and IPPs (4 edges) · Grid equipment (3 edges) · Clean firm and nuclear (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges) · Cooling (2 edges) · Utilities (2 edges)",
      "who this segment buys from"
     ]
    ]
@@ -27311,6 +28903,15 @@ function clLessonSegmentNeoclouds_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:crusoe 2026-09-06→2026-09-12",
+   "changed": [
+    "where-it-sits"
+   ]
+  }
  ]
 };
 }
@@ -27323,7 +28924,7 @@ function clLessonSegmentUtilities_() {
  "title": "Utilities",
  "short": "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -27353,6 +28954,12 @@ function clLessonSegmentUtilities_() {
    },
    {
     "kind": "public",
+    "ref": "profile:grid-united",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:invenergy",
     "date": "2026-09-06",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
@@ -27374,6 +28981,12 @@ function clLessonSegmentUtilities_() {
     "ref": "profile:oncor",
     "date": "2026-09-03",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:pattern-energy",
+    "date": "2026-09-12",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -27402,20 +29015,20 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "12",
+   "k": "14",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -27427,10 +29040,10 @@ function clLessonSegmentUtilities_() {
   {
    "k": "2",
    "v": "challengers",
-   "sub": "contesting that set; 4 adjacent"
+   "sub": "contesting that set; 6 adjacent"
   },
   {
-   "k": "20",
+   "k": "27",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -27474,12 +29087,12 @@ function clLessonSegmentUtilities_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (32 edges) · Hyperscalers and AI labs (30 edges) · Storage developers and IPPs (8 edges) · Clean firm and nuclear (2 edges) · Neoclouds (2 edges) · Capital (2 edges) · EPC and construction (1 edge)",
+     "AIDC developers and landlords (33 edges) · Hyperscalers and AI labs (32 edges) · Storage developers and IPPs (8 edges) · Capital (3 edges) · Clean firm and nuclear (2 edges) · Neoclouds (2 edges) · EPC and construction (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Cells and chemistry (20 edges) · Storage integrators and containers (20 edges) · In-hall power (16 edges) · Bridge and on-site generation (13 edges) · Clean firm and nuclear (12 edges) · Grid equipment (10 edges) · EPC and construction (9 edges) · Assurance (9 edges) · Power conversion and rack-power silicon (7 edges) · Software and optimization (7 edges) · Storage developers and IPPs (4 edges) · Cooling (1 edge) · AIDC developers and landlords (1 edge)",
+     "Storage integrators and containers (21 edges) · Cells and chemistry (20 edges) · In-hall power (16 edges) · Grid equipment (14 edges) · Bridge and on-site generation (14 edges) · Clean firm and nuclear (12 edges) · EPC and construction (11 edges) · Power conversion and rack-power silicon (10 edges) · Assurance (9 edges) · Software and optimization (7 edges) · Storage developers and IPPs (4 edges) · Cooling (1 edge) · AIDC developers and landlords (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -27496,7 +29109,7 @@ function clLessonSegmentUtilities_() {
    "rows": [
     [
      "Cost recovery — what the commission will allow into rate base or a customer-specific charge",
-     "*The Regulated Machine* (planned)"
+     "*The Regulated Machine*"
     ],
     [
      "Firmness and resource adequacy against the plan's need",
@@ -27588,6 +29201,12 @@ function clLessonSegmentUtilities_() {
      "productsAndServices › ENGIE Resources — commercial and industrial retail supply in deregulated markets since 2002"
     ],
     [
+     "**Grid United**",
+     "grid-united",
+     "adjacent",
+     "ecosystemRole: sells utilities ownership slices of interregional lines they would not have planned themselves — ALLETE (development agreements, ~35%, operator) and seven utilities on non-binding MOUs for 2,550 MW of North Plains Connector; 'these electric companies will be the ultimate owners'"
+    ],
+    [
      "**Invenergy**",
      "invenergy",
      "adjacent",
@@ -27598,6 +29217,12 @@ function clLessonSegmentUtilities_() {
      "nextera-energy-resources",
      "adjacent",
      "registry tagline: the $67B Dominion merger — the competitive arm of a holding company that owns FPL"
+    ],
+    [
+     "**Pattern Energy**",
+     "pattern-energy",
+     "adjacent",
+     "productsAndServices › Pattern Transmission: merchant transmission owner scheduled into CAISO as the first Subscriber Participating Transmission Owner, build-own-transfer of Western Spirit Transmission to PNM (USD 285 million, 2021), wholesale seller to SRP, LADWP and eight California CCAs, and the developer Entergy Mississippi opposes at the state commission"
     ],
     [
      "**Tesla**",
@@ -27722,7 +29347,7 @@ function clLessonSegmentUtilities_() {
      "—",
      "—",
      "—",
-     "ENGIE North America, Invenergy, NextEra"
+     "ENGIE North America, Grid United, Invenergy, NextEra, Pattern Energy"
     ]
    ]
   },
@@ -27782,6 +29407,30 @@ function clLessonSegmentUtilities_() {
      "Large-load contracting design"
     ],
     [
+     "**Grid United**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Grid United**",
+     "**NextEra**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Grid United**",
+     "**Pattern Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Invenergy**",
      "**AEP**",
      "customer",
@@ -27836,6 +29485,38 @@ function clLessonSegmentUtilities_() {
      "announced",
      "765 kV eastern backbone, co-sponsored by four transmission providers",
      "ERCOT Regional Planning Group project 25RPG025"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Entergy**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Grid United**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Invenergy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Pattern Energy**",
+     "**NextEra**",
+     "partner",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**Southern Company**",
@@ -27980,9 +29661,17 @@ function clLessonSegmentUtilities_() {
      "active",
      "—",
      "AI Infrastructure Partnership (AIP) — agreement with parent NextEra Energy"
+    ],
+    [
+     "**Pattern Energy**",
+     "Digital Realty",
+     "customer",
+     "active",
+     "65 MWac",
+     "Phoenix Solar"
     ]
    ],
-   "note": "Curated edges among members: 20 · to the neighbouring segments: 10 · derived-only mentions (no curated typing): 6 among members, 2 to the neighbours."
+   "note": "Curated edges among members: 27 · to the neighbouring segments: 11 · derived-only mentions (no curated typing): 6 among members, 3 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -27997,74 +29686,74 @@ function clLessonSegmentUtilities_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-04 — Osgood Wind (up to 200 MW, Québec, with Connectif des Sommets and the W8banaki Nation) presented to local communities; to be bid into Hydro-Québec's 2026 call, construction 2030, operation 2032",
+     "sub": "Pattern Energy · project"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
      "sub": "Invenergy · project"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-03 — Arkansas Democrat-Gazette: APSC staff testified that 'Google is paying well below the full cost of this resource' on Cypress Solar; the November 17, 2026 hearing is mostly closed; Entergy sought to stop publication of the FOIA'd contract",
      "sub": "Entergy · regulatory"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-03 — Special meeting of shareholders to vote on the NextEra Energy combination — 9:30 a.m. ET, virtual; joint proxy statement mailed July 28 after the S-4 went effective July 23",
      "sub": "Dominion Energy · corporate"
     },
     {
-     "x": 4,
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-02 — BLM opens EIS scoping for Silver Rock Transmission — up to two lines, up to 600 kV, Millard County, Utah to Clark County, Nevada — with comments to 5 October 2026, after FAST-41 coverage in December 2025",
+     "sub": "Pattern Energy · regulatory"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-09-01 — North Dakota PSC holds the technical hearing on North Plains Connector (Case PU-26-82) in Bismarck, with public hearings in Mandan and Regent on 2–3 September",
+     "sub": "Grid United · regulatory"
+    },
+    {
+     "x": 7,
      "lane": "record",
      "label": "2026-08-31 — Minnesota Attorney General Ellison and the Citizens Utility Board file reconsideration petitions against the PUC's 3–2 verbal decision granting NSP-Minnesota ~$211 million over two years at a 9.6 percent ROE; the PUC's response is due mid-October",
      "sub": "Xcel Energy · regulatory"
     },
     {
-     "x": 5,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
      "sub": "Invenergy · project"
     },
     {
-     "x": 6,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-31 — Arkansas Democrat-Gazette reads the Google contract: $526M ($443M accelerated, $83M minimum-demand) plus $190M for transmission, a 20-year term, 480 MW minimum against 600 MW maximum, a ~$2B termination fee declining after year 13",
      "sub": "Entergy · customer"
     },
     {
-     "x": 7,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-30 — Texas regulators approved 424 miles of Oncor 765 kV lines despite calls to wait — the Permian backbone AEP Texas's Howard–Solstice line connects to advances alongside it",
      "sub": "AEP · regulatory"
     },
     {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-08-28 — Ohio Consumers' Counsel urged FERC to resolve its three-year-old local transmission complaint, noting Ohio utilities have since put more than $4.3B of local and supplemental projects into PJM's plan",
-     "sub": "AEP · regulatory"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-27 — AJC: the OpenAI contract's added protections — no recovery of a revenue shortfall from residential customers on early termination, PSC notice within 15 days of any large-customer cancellation, semiannual public reporting; Georgia Watch calls the commitment letter 'full of ifs'",
-     "sub": "Southern Company · regulatory"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-27 — Entergy says customers are beginning to see benefits from the data-center agreements — about $7B over two decades; Mississippi residential bills avoided a $4.87 monthly increase in July; Meta to pay about 10 percent of Entergy Louisiana's storm and resiliency charges",
-     "sub": "Entergy · corporate"
-    },
-    {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-26 — CPR reports resident and advocate pushback on Xcel's Colorado large-load tariff (Proceeding 26AL-0137E), following an Earthjustice-led intervention in May",
-     "sub": "Xcel Energy · regulatory"
+     "label": "2026-08-28 — DOE and Montana DEQ release the final environmental impact statement for North Plains Connector (DOE/EIS-0568); DOE's Office of Electricity calls connecting the grids 'a critical step toward ensuring long-term energy affordability and reliability'",
+     "sub": "Grid United · regulatory"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-26 — Georgia PSC review window closes on Georgia Power's OpenAI contract (~3,200 MW, 25 years, Effingham County); the company says its large-load contract portfolio now delivers approximately $950M a year of customer savings from 2029, up from the $556M the December order required",
-     "sub": "Southern Company · regulatory"
+     "label": "2026-08-28 — Ohio Consumers' Counsel urged FERC to resolve its three-year-old local transmission complaint, noting Ohio utilities have since put more than $4.3B of local and supplemental projects into PJM's plan",
+     "sub": "AEP · regulatory"
     }
    ]
   },
@@ -28094,6 +29783,12 @@ function clLessonSegmentUtilities_() {
      "ENGIE North America"
     ],
     [
+     "DOE GRIP (Grid Resilience and Innovation Partnerships)",
+     "announced",
+     "2024-08",
+     "Grid United"
+    ],
+    [
      "DOE Loan Programs Office",
      "expired",
      "2025-07-23",
@@ -28104,6 +29799,18 @@ function clLessonSegmentUtilities_() {
      "in-effect",
      "2026-02-25",
      "Southern Company"
+    ],
+    [
+     "DOE Transmission Facilitation Program",
+     "announced",
+     "2023-10",
+     "Grid United"
+    ],
+    [
+     "DOE Transmission Facilitation Program and Energy Dominance Financing",
+     "announced",
+     "2024-10-03",
+     "Pattern Energy"
     ],
     [
      "DOE transmission policy (FAST-41, NIETC)",
@@ -28166,6 +29873,12 @@ function clLessonSegmentUtilities_() {
      "Dominion Energy"
     ],
     [
+     "Federal wind permitting posture (Interior secretarial orders, BLM, Pentagon/FAA reviews) and FAST-41",
+     "in-effect",
+     "2025-07",
+     "Pattern Energy"
+    ],
+    [
      "FEOC restrictions",
      "in-effect",
      "—",
@@ -28194,6 +29907,18 @@ function clLessonSegmentUtilities_() {
      "announced",
      "2025-12-18",
      "Dominion Energy"
+    ],
+    [
+     "FERC negotiated-rate authority and the CAISO Subscriber PTO model (merchant transmission)",
+     "in-effect",
+     "—",
+     "Pattern Energy"
+    ],
+    [
+     "FERC Order 1920 / interregional cost allocation",
+     "in-effect",
+     "2024-05",
+     "Grid United"
     ],
     [
      "FERC review of the LS Power acquisition (Federal Power Act section 203)",
@@ -28238,6 +29963,12 @@ function clLessonSegmentUtilities_() {
      "ENGIE North America"
     ],
     [
+     "ITC/45X — OBBBA §45Y/§48E phase-down and the begin-construction test",
+     "in-effect",
+     "2025-07-04",
+     "Pattern Energy"
+    ],
+    [
      "Large-load tariffs (Minnesota approved; Colorado and Wisconsin filed)",
      "in-effect",
      "2026",
@@ -28262,10 +29993,22 @@ function clLessonSegmentUtilities_() {
      "Entergy"
     ],
     [
+     "NEPA / Federal Power Act §216(h) coordinated permitting (CITAP-style)",
+     "in-effect",
+     "2024-10-25",
+     "Grid United"
+    ],
+    [
      "New York Public Service Commission consumer settlement (Case 25-M-0516)",
      "in-effect",
      "2026-04-16",
      "NRG Energy"
+    ],
+    [
+     "NHPA/NEPA litigation — Tohono O'odham Nation et al. v. U.S. Department of the Interior (SunZia)",
+     "in-effect",
+     "2025-05-27",
+     "Pattern Energy"
     ],
     [
      "Nuclear production tax credit (section 45U)",
@@ -28322,6 +30065,18 @@ function clLessonSegmentUtilities_() {
      "Oncor"
     ],
     [
+     "Section 232 tariffs on grid equipment (steel, aluminium, copper derivatives)",
+     "in-effect",
+     "2026-04-06",
+     "Grid United"
+    ],
+    [
+     "Section 232 tariffs — steel and aluminium at 50%, transformer cores, and the wind-turbine investigation",
+     "in-effect",
+     "2025-06-03",
+     "Pattern Energy"
+    ],
+    [
      "State clean-energy mandates — Minnesota 100% carbon-free by 2040; Colorado 80% by 2030 and coal exit; New Mexico RPS",
      "in-effect",
      "—",
@@ -28338,6 +30093,18 @@ function clLessonSegmentUtilities_() {
      "in-effect",
      "2023-10",
      "Invenergy"
+    ],
+    [
+     "State siting and expropriation law — Louisiana SB 108 and Mississippi PSC (Southern Spirit)",
+     "in-effect",
+     "2024-08",
+     "Pattern Energy"
+    ],
+    [
+     "State siting — North Dakota PSC, Montana MFSA, Oklahoma OCC, Arizona ACC, Texas PUCT (ROFR)",
+     "in-effect",
+     "—",
+     "Grid United"
     ],
     [
      "Storm-cost securitization statutes (Louisiana, Mississippi)",
@@ -28455,9 +30222,9 @@ function clLessonSegmentUtilities_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Regulated Machine* (planned) · *The Gatekeeper* (planned) · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence* (planned).",
+    "**Mechanism lessons for this segment:** *The Regulated Machine* · *The Gatekeeper* (planned) · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** AEP, Dominion Energy, Entergy, Oncor, Southern Company, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Invenergy, NextEra, Tesla — each member's dossier carries one in Profiler."
+    "**Study guides:** AEP, Dominion Energy, Entergy, Oncor, Southern Company, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Grid United, Invenergy, NextEra, Pattern Energy, Tesla — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -28522,6 +30289,22 @@ function clLessonSegmentUtilities_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:grid-united added@2026-09-12; profile:pattern-energy added@2026-09-12",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-is-bought-and-on-what",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -28534,7 +30317,7 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-14",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -28589,13 +30372,13 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -28666,7 +30449,7 @@ function clLessonSegmentCapital_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "EPC and construction (9 edges) · Storage integrators and containers (5 edges) · In-hall power (4 edges) · Bridge and on-site generation (4 edges) · Software and optimization (4 edges) · Cells and chemistry (3 edges) · Power conversion and rack-power silicon (2 edges) · Grid equipment (2 edges) · Cooling (2 edges) · Utilities (2 edges) · Clean firm and nuclear (1 edge)",
+     "EPC and construction (9 edges) · Storage integrators and containers (5 edges) · Software and optimization (5 edges) · In-hall power (4 edges) · Bridge and on-site generation (4 edges) · Cells and chemistry (3 edges) · Grid equipment (3 edges) · Utilities (3 edges) · Power conversion and rack-power silicon (2 edges) · Cooling (2 edges) · Clean firm and nuclear (1 edge) · Storage developers and IPPs (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -29017,9 +30800,25 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "AI Infrastructure Partnership (AIP) — agreement with parent NextEra Energy"
+    ],
+    [
+     "**Pattern Energy**",
+     "**Digital Realty**",
+     "customer",
+     "active",
+     "65 MWac",
+     "Phoenix Solar"
+    ],
+    [
+     "**UL Solutions**",
+     "**Digital Realty**",
+     "other",
+     "active",
+     "—",
+     "—"
     ]
    ],
-   "note": "Curated edges among members: 13 · to the neighbouring segments: 8 · derived-only mentions (no curated typing): 5 among members, 1 to the neighbours."
+   "note": "Curated edges among members: 13 · to the neighbouring segments: 10 · derived-only mentions (no curated typing): 5 among members, 2 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -29349,6 +31148,16 @@ function clLessonSegmentCapital_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -29361,8 +31170,8 @@ function clLessonSegmentAssurance_() {
  "title": "Assurance",
  "short": "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -29379,8 +31188,20 @@ function clLessonSegmentAssurance_() {
    },
    {
     "kind": "public",
+    "ref": "profile:csa-group",
+    "date": "2026-09-08",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:dnv",
     "date": "2026-09-04",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:intertek",
+    "date": "2026-09-09",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -29391,36 +31212,42 @@ function clLessonSegmentAssurance_() {
    },
    {
     "kind": "public",
+    "ref": "profile:ul-solutions",
+    "date": "2026-09-09",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "4",
+   "k": "7",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "2",
+   "k": "4",
    "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "0",
-   "v": "challengers",
+   "k": "1",
+   "v": "challenger",
    "sub": "contesting that set; 2 adjacent"
   },
   {
-   "k": "7",
+   "k": "15",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -29464,7 +31291,7 @@ function clLessonSegmentAssurance_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Clean firm and nuclear (11 edges) · Utilities (9 edges) · Storage integrators and containers (5 edges) · Storage developers and IPPs (5 edges) · Power conversion and rack-power silicon (3 edges) · In-hall power (3 edges) · Cells and chemistry (2 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · Software and optimization (1 edge)",
+     "Storage integrators and containers (18 edges) · Clean firm and nuclear (11 edges) · Cells and chemistry (10 edges) · Utilities (9 edges) · In-hall power (8 edges) · Power conversion and rack-power silicon (7 edges) · Software and optimization (6 edges) · Storage developers and IPPs (5 edges) · Grid equipment (3 edges) · Bridge and on-site generation (2 edges) · Cooling (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -29526,10 +31353,28 @@ function clLessonSegmentAssurance_() {
      "ecosystemRole: the seat every financing passes through — the independent engineer lenders and tax-equity investors appoint; also writes the recommended practice and runs the laboratory"
     ],
     [
+     "**Intertek**",
+     "intertek",
+     "incumbent",
+     "ecosystemRole: the other half of the assurance pair this corpus's battery chain runs through, reaching a project from the buyer's side through Intertek CEA — 400-point factory audits, 280-point inline production monitoring and factory acceptance test witnessing sold to developers, EPCs, IPPs and financiers — while the laboratory issues ETL and cETL marks against standards other bodies write. Third-party basis: MarketsandMarkets (2026-07-08) names Intertek and UL Solutions the leading key players in battery-storage TIC, framing Intertek's strategy as lifecycle project assurance rather than laboratory specialisation. NOT an incumbent by scale — Aventis Advisors ranks it 5th of ten in global TIC at USD 4,619m, roughly 1.5-2% world share"
+    ],
+    [
      "**Sargent & Lundy**",
      "sargent-lundy",
      "incumbent",
      "ecosystemRole: the owner's-engineer counterpart to DNV's lender's-engineer profile — writes the specification the bidders answer, reviews the EPC's 30/60/90 designs, sits as independent engineer when needed"
+    ],
+    [
+     "**UL Solutions**",
+     "ul-solutions",
+     "incumbent",
+     "ecosystemRole: the default certifier of the battery and data-centre equipment this corpus tracks — when a fire code requires a system listed to UL 9540 and tested to UL 9540A it is citing documents UL Solutions tests against but does not own. Third-party basis for the role rather than the dossier's own language: MarketsandMarkets (2026-07-08) names UL Solutions and Intertek the leading key players in battery-storage TIC. NOT an incumbent by scale — Aventis Advisors ranks it 8th of ten in global TIC at USD 3,106m, under 2% of the outsourced market — so the incumbency is in North American product-safety listing and battery certification, not in TIC generally"
+    ],
+    [
+     "**CSA Group**",
+     "csa-group",
+     "challenger",
+     "ecosystemRole: the certification body and second source to UL Solutions for the North American energy-storage listing, and the author of the TS-800/C800 large-scale fire test that NFPA 855-2026 references; trade press places it among the 'major companies' in battery TIC behind the named leaders (UL Solutions, Intertek, TÜV Rheinland, TÜV SÜD, DNV) — the registry's challenger definition"
     ],
     [
      "**Black & Veatch**",
@@ -29563,6 +31408,26 @@ function clLessonSegmentAssurance_() {
    ],
    "rows": [
     [
+     "**Intertek**",
+     "FY2025 · 2025-12-31",
+     "4,527",
+     "GBP 3,431.6m converted at 1.3193 USD/GBP, the 2025 calendar-year average (poundsterlinglive.com, which also records a 2025 high of 1.3789 on 1 July and a low of 1.21 on 13 January; a second source gives 1.3190 for the same average). Cross-check: Aventis Advisors' TIC league table of 2026-05-11 carries Intertek at USD 4,619m on its own unstated basis, about 2 per cent above this conversion.",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "FY2025 · 2025-12-31",
+     "3,053",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "*No normalized figure on record*",
      "—",
      "—",
@@ -29570,7 +31435,7 @@ function clLessonSegmentAssurance_() {
      "—",
      "—",
      "—",
-     "DNV, Sargent & Lundy, Black & Veatch, Burns & McDonnell"
+     "DNV, Sargent & Lundy, CSA Group, Black & Veatch, Burns & McDonnell"
     ]
    ]
   },
@@ -29606,6 +31471,14 @@ function clLessonSegmentAssurance_() {
      "—"
     ],
     [
+     "**CSA Group**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**DNV**",
      "**Black & Veatch**",
      "competitor",
@@ -29616,6 +31489,30 @@ function clLessonSegmentAssurance_() {
     [
      "**DNV**",
      "**Sargent & Lundy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Intertek**",
+     "**CSA Group**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Intertek**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Intertek**",
+     "**UL Solutions**",
      "competitor",
      "active",
      "—",
@@ -29644,6 +31541,78 @@ function clLessonSegmentAssurance_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**UL Solutions**",
+     "**CSA Group**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "**Intertek**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "**Sargent & Lundy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CSA Group**",
+     "Canadian Solar",
+     "customer",
+     "active",
+     "SolBank 3.0",
+     "CSA C800:25 §9.7 large-scale fire test"
+    ],
+    [
+     "**CSA Group**",
+     "Fluence",
+     "customer",
+     "active",
+     "Gridstack Pro 5000 (5.6 MWh)",
+     "Large-scale fire test witness"
+    ],
+    [
+     "**CSA Group**",
+     "HyperStrong",
+     "customer",
+     "active",
+     "HyperBlock III, five units at 100% SOC",
+     "CSA/ANSI C800:2025 and UL 9540A draft large-scale fire test"
+    ],
+    [
+     "**CSA Group**",
+     "Prevalon",
+     "other",
+     "historical",
+     "HD5 (6 MWh), four-unit array",
+     "CSA TS-800 protocol"
+    ],
+    [
+     "**CSA Group**",
+     "Wärtsilä",
+     "customer",
+     "active",
+     "Quantum High Energy, Quantum 2, Quantum 3",
+     "CSA TS-800 / large-scale fire tests"
     ],
     [
      "**DNV**",
@@ -29670,15 +31639,47 @@ function clLessonSegmentAssurance_() {
      "—"
     ],
     [
+     "**Intertek**",
+     "Schneider Electric",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Sargent & Lundy**",
      "Wärtsilä",
      "other",
      "active",
      "72 MW",
      "Reciprocating-engine plants engineered by Sargent & Lundy"
+    ],
+    [
+     "**Stem**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "Digital Realty",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "Schneider Electric",
+     "customer",
+     "active",
+     "—",
+     "ECOLOGO certification to UL 2711"
     ]
    ],
-   "note": "Curated edges among members: 7 · to the neighbouring segments: 4 · derived-only mentions (no curated typing): 1 among members, 4 to the neighbours."
+   "note": "Curated edges among members: 15 · to the neighbouring segments: 13 · derived-only mentions (no curated typing): 3 among members, 4 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -29699,68 +31700,68 @@ function clLessonSegmentAssurance_() {
     {
      "x": 2,
      "lane": "record",
+     "label": "2026-09-01 — Chief executive Jennifer Scanlon sells 12,500 Class A shares at $73.21 to $74.72 under a Rule 10b5-1 plan adopted 2025-12-09, six days after the December secondary priced",
+     "sub": "UL Solutions · corporate"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-28 — CSA Group agrees to sell CSA Group Testing & Certification Inc. — 20 laboratories, about 2,100 employees, the CSA mark and the NRTL and SCC accreditations — to Kiwa Group for approximately C$2.1 billion in cash (€1.3 billion enterprise value); two-thirds member vote in early October, closing targeted for the fourth quarter of 2026",
+     "sub": "CSA Group · ma"
+    },
+    {
+     "x": 4,
+     "lane": "record",
      "label": "2026-08-27 — NRC issues its environmental assessment and finding of no significant impact for Long Mott Energy (Dow) and X-energy's four-unit Xe-100 plant at Seadrift; Sargent & Lundy prepared the environmental report with WSP and expects the PSAR review 'to be completed by year-end'",
      "sub": "Sargent & Lundy · regulatory"
     },
     {
-     "x": 3,
+     "x": 5,
      "lane": "record",
      "label": "2026-08-21 — Sargent & Lundy discusses floating nuclear plants at the NEI/DOE industry day after signing a July MoU with Samsung Heavy Industries for a 'floating small modular reactor standard platform' designed to accept any reactor type",
      "sub": "Sargent & Lundy · partnership"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-20 — Grid-forming versus grid-following, black start and hybrid dispatch: Sargent & Lundy's storage consultant previews an Intersolar Middle East paper citing Eleven Mile, the UAE BESS, Archtop and the PJM frequency-response battery",
      "sub": "Sargent & Lundy · market"
     },
     {
-     "x": 5,
-     "lane": "record",
-     "label": "2026-07-28 — Duke Energy names Black & Veatch its 2026 Corporate Responsibility Supplier of the Year, citing BESS, substation, distribution, solar, and telecom work",
-     "sub": "Black & Veatch · Recognition"
-    },
-    {
-     "x": 6,
-     "lane": "record",
-     "label": "2026-07-23 — Curio engages Sargent & Lundy for siting, environmental, licensing and conceptual design of the NuCycle used-fuel recycling facility",
-     "sub": "Sargent & Lundy · customer"
-    },
-    {
      "x": 7,
      "lane": "record",
-     "label": "2026-07-21 — GreenPowerMonitor and IP Gotion Poland sign an MoU on EMS/SCADA for battery storage in Poland and Central and Eastern Europe",
-     "sub": "DNV · partnership"
+     "label": "2026-08-13 — Intertek CEA publishes its Q2 2026 ESS Price Forecasting Report, finding that 587Ah-class cells lift module- and rack-level energy density 60-80% while cell-level density gains only about 20%",
+     "sub": "Intertek · market"
     },
     {
      "x": 8,
      "lane": "record",
-     "label": "2026-07-20 — Named No. 89 on TIME's inaugural America's Best Private Companies list; the release restates that the firm 'remains privately owned and led by engineers'",
-     "sub": "Sargent & Lundy · corporate"
+     "label": "2026-08-13 — Canadian Solar's e-STORAGE runs its KuBank 3.0 large-scale fire test under UL 9540A:2026 with TÜV Rheinland, not CSA — fourteen months after CSA witnessed its SolBank 3.0 test",
+     "sub": "CSA Group · market"
     },
     {
      "x": 9,
      "lane": "record",
-     "label": "2026-07-15 — ENR Sourcebook 2026: Sargent & Lundy No. 1 in nuclear plants, No. 2 in battery storage (from No. 5), No. 3 in fossil fuel, No. 8 in transmission and distribution",
-     "sub": "Sargent & Lundy · market"
+     "label": "2026-08-06 — Court Meeting and General Meeting approve the Isotope Bidco scheme with 98.72% of votes cast in favour at both",
+     "sub": "Intertek · corporate"
     },
     {
      "x": 10,
      "lane": "record",
-     "label": "2026-07-08 — Seventh Circuit affirms the $1 nominal-damages verdict on B&V's ~$29.4M Boldt wind-farm counterclaim — and orders a new trial on Boldt's wrongful-termination claim",
-     "sub": "Black & Veatch · Risk"
+     "label": "2026-08-04 — Q2 2026: revenue $816m with 6.6% organic growth, record adjusted EBITDA of $219m at a record 26.8% margin — and the shares fall about 11 per cent",
+     "sub": "UL Solutions · financial"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-06-29 — ENR ranks the firm No. 26 among Top 50 construction managers and No. 56 in CM/PM-for-fee",
-     "sub": "Sargent & Lundy · market"
+     "label": "2026-07-31 — H1 2026 results: revenue £1,771.3m (+4.9% like-for-like at constant currency), adjusted operating profit £309.7m (+12.4%), margin 17.5% — and no interim dividend",
+     "sub": "Intertek · financial"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-06-26 — DNV forecasts a fiftyfold storage surge — half of new solar with batteries by the mid-2030s — and expands the GPM EMS/HEMS line with IEC 62443 and ISO 27001 certification",
-     "sub": "DNV · market"
+     "label": "2026-07-31 — Bidco's Interim Facilities Agreement amended and restated to admit thirteen additional lenders alongside the five original mandated lead arrangers",
+     "sub": "Intertek · financial"
     }
    ]
   },
@@ -29778,16 +31779,76 @@ function clLessonSegmentAssurance_() {
    ],
    "rows": [
     [
+     "Acceptance of third-party test results and harmonised standards",
+     "proposed",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "Artificial intelligence as a disruption risk to the service itself",
+     "proposed",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "Canadian Electrical Code adoption (provincial and territorial)",
+     "in-effect",
+     "2025-03-04",
+     "CSA Group"
+    ],
+    [
+     "China operating regime, CNCA and SAFE",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "Crown copyright and the government-edicts doctrine (Canadian Electrical Code)",
+     "in-effect",
+     "2024-07-16",
+     "CSA Group"
+    ],
+    [
      "DOE Loan Programs Office",
      "in-effect",
      "—",
      "Sargent & Lundy"
     ],
     [
+     "EU AI Act",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "EU MDR, IVDD, UKCA medical devices and MDSAP",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
      "EU Network Code Requirements for Generators (Regulation 2016/631)",
      "in-effect",
      "2016-04",
      "DNV"
+    ],
+    [
+     "FCC national-security review of the Cyber Trust Mark programme",
+     "in-effect",
+     "2025-12-19",
+     "UL Solutions"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "—",
+     "Intertek"
     ],
     [
      "FERC Order 1920 (long-term transmission planning) and Order 1000",
@@ -29802,10 +31863,40 @@ function clLessonSegmentAssurance_() {
      "Sargent & Lundy"
     ],
     [
+     "Foreign direct investment and national security screening",
+     "in-effect",
+     "2026-06-18",
+     "Intertek"
+    ],
+    [
+     "GOTS certification-body approval",
+     "in-effect",
+     "2024-07-25",
+     "Intertek"
+    ],
+    [
      "Inflation Reduction Act ITC/PTC (as amended in 2025)",
      "in-effect",
      "—",
      "Sargent & Lundy"
+    ],
+    [
+     "ITAR",
+     "in-effect",
+     "2026-06-18",
+     "Intertek"
+    ],
+    [
+     "ITC/45X domestic content",
+     "in-effect",
+     "—",
+     "Intertek"
+    ],
+    [
+     "Merger control — nine jurisdictions",
+     "in-effect",
+     "2026-06-18",
+     "Intertek"
     ],
     [
      "NERC large-load reliability standards (Large Loads Task Force)",
@@ -29814,10 +31905,28 @@ function clLessonSegmentAssurance_() {
      "Sargent & Lundy"
     ],
     [
+     "NFPA 855",
+     "in-effect",
+     "—",
+     "Intertek"
+    ],
+    [
      "NFPA 855 / UL 9540A",
      "in-effect",
      "—",
      "DNV"
+    ],
+    [
+     "NFPA 855 / UL 9540A",
+     "in-effect",
+     "2026-03",
+     "CSA Group"
+    ],
+    [
+     "NFPA 855, NFPA 68, NFPA 69, IFC, IRC and the California Fire Code",
+     "in-effect",
+     "—",
+     "UL Solutions"
     ],
     [
      "Norway Transparency Act",
@@ -29832,10 +31941,82 @@ function clLessonSegmentAssurance_() {
      "Sargent & Lundy"
     ],
     [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "UL Solutions"
+    ],
+    [
+     "OSHA NRTL programme",
+     "in-effect",
+     "2025-08-22",
+     "Intertek"
+    ],
+    [
+     "OSHA NRTL recognition",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "OSHA NRTL recognition (29 CFR 1910.7)",
+     "in-effect",
+     "2021-03-05",
+     "CSA Group"
+    ],
+    [
+     "Russia and Belarus",
+     "in-effect",
+     "2022-03",
+     "UL Solutions"
+    ],
+    [
+     "Section 301 tariffs and AD/CVD",
+     "in-effect",
+     "—",
+     "Intertek"
+    ],
+    [
+     "Standards Council of Canada accreditation",
+     "in-effect",
+     "—",
+     "Intertek"
+    ],
+    [
+     "Standards Council of Canada accreditation and federal funding",
+     "in-effect",
+     "2026-05-05",
+     "CSA Group"
+    ],
+    [
+     "UFLPA",
+     "in-effect",
+     "—",
+     "Intertek"
+    ],
+    [
+     "UK City Code on Takeovers and Mergers",
+     "in-effect",
+     "2026-04-16",
+     "Intertek"
+    ],
+    [
+     "UKCA marking",
+     "in-effect",
+     "—",
+     "Intertek"
+    ],
+    [
      "US sanctions — Protecting Europe's Energy Security Act (PEESA)",
      "in-effect",
      "2020-12",
      "DNV"
+    ],
+    [
+     "US tariffs and trade restrictions",
+     "in-effect",
+     "—",
+     "UL Solutions"
     ]
    ]
   },
@@ -29847,7 +32028,7 @@ function clLessonSegmentAssurance_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Listing, Test Method, Code* (planned) · *The Independent Engineer's Report* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** DNV, Sargent & Lundy, Black & Veatch, Burns & McDonnell — each member's dossier carries one in Profiler."
+    "**Study guides:** DNV, Intertek, Sargent & Lundy, UL Solutions, CSA Group, Black & Veatch, Burns & McDonnell — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -29912,6 +32093,21 @@ function clLessonSegmentAssurance_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:csa-group added@2026-09-08; profile:intertek added@2026-09-09; profile:ul-solutions added@2026-09-09",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -29924,8 +32120,8 @@ function clLessonSegmentSoftwareAndOptimization_() {
  "title": "Software and optimization",
  "short": "The energy-management, controls, asset-performance and market-bidding software that decides what a storage plant earns — the site controller, the fleet…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
@@ -29972,6 +32168,18 @@ function clLessonSegmentSoftwareAndOptimization_() {
    },
    {
     "kind": "public",
+    "ref": "profile:gridmatic",
+    "date": "2026-09-12",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:habitat-energy",
+    "date": "2026-09-12",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:hunt-energy-network",
     "date": "2026-09-06",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
@@ -30008,8 +32216,20 @@ function clLessonSegmentSoftwareAndOptimization_() {
    },
    {
     "kind": "public",
+    "ref": "profile:stem",
+    "date": "2026-09-09",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:tesla",
     "date": "2026-09-05",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:ul-solutions",
+    "date": "2026-09-09",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -30027,35 +32247,35 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "16",
+   "k": "20",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "1",
-   "v": "incumbent",
+   "k": "2",
+   "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "1",
-   "v": "challenger",
-   "sub": "contesting that set; 14 adjacent"
+   "k": "3",
+   "v": "challengers",
+   "sub": "contesting that set; 15 adjacent"
   },
   {
-   "k": "18",
+   "k": "37",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -30099,12 +32319,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (22 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Clean firm and nuclear (8 edges) · Utilities (8 edges) · Storage integrators and containers (4 edges) · Capital (4 edges) · Neoclouds (3 edges) · Cells and chemistry (2 edges) · Power conversion and rack-power silicon (2 edges) · EPC and construction (2 edges) · In-hall power (1 edge)",
+     "Storage developers and IPPs (23 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Storage integrators and containers (9 edges) · Clean firm and nuclear (8 edges) · Utilities (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · Neoclouds (3 edges) · EPC and construction (2 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Cells and chemistry (21 edges) · Storage integrators and containers (15 edges) · In-hall power (13 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Storage developers and IPPs (3 edges) · Bridge and on-site generation (2 edges) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Utilities (1 edge)",
+     "Cells and chemistry (22 edges) · Storage integrators and containers (16 edges) · In-hall power (13 edges) · Assurance (4 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Storage developers and IPPs (3 edges) · Bridge and on-site generation (2 edges) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Utilities (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -30161,10 +32381,28 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "registry tagline: software-first US BESS integrator (HybridOS EMS); 25+ GWh across 200+ systems under software and services; hardware-agnostic site controls"
     ],
     [
+     "**Stem**",
+     "stem",
+     "incumbent",
+     "ecosystemRole: the corpus's first listed pure-play energy-optimisation software company, selling a hardware-agnostic suite against vendor-bundled EMS arms; productsAndServices › PowerTrack Software: 38.3 GW of solar and 1.8 GWh of storage operating assets under management at 2026-06-30 and $62.4m of ARR — the largest fleet under management in this segment, which is its fifth buying criterion. Incumbency is on SOLAR AND HYBRID ASSET-PERFORMANCE MANAGEMENT, not on merchant storage bidding: the only third-party rank found is Guidehouse Insights' 2022 first place for AlsoEnergy in Solar and Storage Monitoring and Control, and Modo Energy's 2025 US optimizer directory lists Stem with no quantified revenue-performance claim while naming one for every peer. Storage AUM has been flat at 1.7-1.8 GWh for two years against the 25+ GWh FlexGen records under HybridOS."
+    ],
+    [
      "**Fluence**",
      "fluence",
      "challenger",
      "productsAndServices › Mosaic (AI-enabled market bidding) and Nispera (asset performance management, multi-OEM) — software lines sold beyond its own hardware"
+    ],
+    [
+     "**Gridmatic**",
+     "gridmatic",
+     "challenger",
+     "ecosystemRole: the second pure-play merchant optimiser, which puts its own fund's capital behind the battery — tolling or revenue-floor offtake plus the QSE seat — and runs a retail book on the same forecasts; productsAndServices › Battery storage optimisation, tolling and revenue-floor offtake: '300 MW / 1 GWh under management' (December 2024), Cross Trails (Energy Vault, 10-year floor), Caballero (CAISO, optimiser) and Endurance Park. Challenger: every ranking is the company's own; the one independent leaderboard (Amperical, ERCOT public settlements, Jan–Jul 2026) places its two batteries 11th and 43rd of 308."
+    ],
+    [
+     "**Habitat Energy**",
+     "habitat-energy",
+     "challenger",
+     "ecosystemRole: the pure-play merchant battery optimiser the segment was missing — sells nothing but the route to market (QSE / Virtual Lead Party registration, forecast, bid and trader) on a percentage of what the battery earns; productsAndServices › EVOLVE for Battery Storage: 5.5 GW under contract by the company's count; third in GB by MW optimised at January 2025 (600 MW behind EDF and Tesla, Modo via Tamarindo) and first among ERCOT optimisers in Modo's December 2025 capture-rate table (84% vs 35% median). Challenger rather than incumbent: the only third-party ranks place it third in GB behind two utility-scale incumbents and first for a single month in ERCOT under a one-week-old market design, and no source ranks it on fleet size across markets."
     ],
     [
      "**Canadian Solar**",
@@ -30239,6 +32477,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "productsAndServices › Autobidder & Opticaster — real-time trading and control for storage fleets"
     ],
     [
+     "**UL Solutions**",
+     "ul-solutions",
+     "adjacent",
+     "productsAndServices > ULTRUS software: HOMER Pro and HOMER Grid for microgrid and distributed-energy optimisation at time steps from one minute to one hour, RAMP for renewable asset monitoring with real-time production KPIs and power forecasting, and Openwind and Windographer for wind resource and layout modelling — a documented software line touching the segment, but about 9% of revenue and cross-sold into the testing base rather than a primary business"
+    ],
+    [
      "**Wärtsilä**",
      "wartsila",
      "adjacent",
@@ -30269,6 +32513,16 @@ function clLessonSegmentSoftwareAndOptimization_() {
     "MW contracted"
    ],
    "rows": [
+    [
+     "**Stem**",
+     "FY2025 · 2025-12-31",
+     "156.3",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
     [
      "**Fluence**",
      "FY2025 · 2025-09-30",
@@ -30330,6 +32584,16 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "—"
     ],
     [
+     "**UL Solutions**",
+     "FY2025 · 2025-12-31",
+     "3,053",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
      "**Zhonhen Electric**",
      "FY2025 · 2025-12-31",
      "297.3",
@@ -30347,7 +32611,7 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "—",
      "—",
      "—",
-     "FlexGen, DNV, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, Prevalon, Rolls-Royce Power Systems, Wärtsilä"
+     "FlexGen, Gridmatic, Habitat Energy, DNV, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, Prevalon, Rolls-Royce Power Systems, Wärtsilä"
     ]
    ]
   },
@@ -30439,6 +32703,102 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "—"
     ],
     [
+     "**Gridmatic**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gridmatic**",
+     "**Habitat Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gridmatic**",
+     "**Hunt Energy Network**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gridmatic**",
+     "**Stem**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Gridmatic**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Canadian Solar**",
+     "investor",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Gridmatic**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Hunt Energy Network**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Stem**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Habitat Energy**",
+     "**Wärtsilä**",
+     "partner",
+     "historical",
+     "50 MW/50 MWh",
+     "—"
+    ],
+    [
      "**Hunt Energy Network**",
      "**Canadian Solar**",
      "supplier",
@@ -30487,12 +32847,68 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "Behind-the-meter prime power"
     ],
     [
+     "**Stem**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Stem**",
+     "**ENGIE North America**",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**Stem**",
+     "**FlexGen**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Stem**",
+     "**Fluence**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Stem**",
+     "**Tesla**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Tesla**",
      "**Fluence**",
      "competitor",
      "active",
      "—",
      "—"
+    ],
+    [
+     "**UL Solutions**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "**Schneider Electric**",
+     "customer",
+     "active",
+     "—",
+     "ECOLOGO certification to UL 2711"
     ],
     [
      "**Wärtsilä**",
@@ -30509,6 +32925,62 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "active",
      "—",
      "Quantum3"
+    ],
+    [
+     "**Aon**",
+     "**DNV**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CSA Group**",
+     "**Canadian Solar**",
+     "customer",
+     "active",
+     "SolBank 3.0",
+     "CSA C800:25 §9.7 large-scale fire test"
+    ],
+    [
+     "**CSA Group**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**CSA Group**",
+     "**Fluence**",
+     "customer",
+     "active",
+     "Gridstack Pro 5000 (5.6 MWh)",
+     "Large-scale fire test witness"
+    ],
+    [
+     "**CSA Group**",
+     "**HyperStrong**",
+     "customer",
+     "active",
+     "HyperBlock III, five units at 100% SOC",
+     "CSA/ANSI C800:2025 and UL 9540A draft large-scale fire test"
+    ],
+    [
+     "**CSA Group**",
+     "**Prevalon**",
+     "other",
+     "historical",
+     "HD5 (6 MWh), four-unit array",
+     "CSA TS-800 protocol"
+    ],
+    [
+     "**CSA Group**",
+     "**Wärtsilä**",
+     "customer",
+     "active",
+     "Quantum High Energy, Quantum 2, Quantum 3",
+     "CSA TS-800 / large-scale fire tests"
     ],
     [
      "**DNV**",
@@ -30535,6 +33007,38 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "—"
     ],
     [
+     "**Intertek**",
+     "**DNV**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Intertek**",
+     "**Schneider Electric**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Intertek**",
+     "**UL Solutions**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Marsh McLennan**",
+     "**DNV**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Sargent & Lundy**",
      "**DNV**",
      "competitor",
@@ -30549,9 +33053,49 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "active",
      "72 MW",
      "Reciprocating-engine plants engineered by Sargent & Lundy"
+    ],
+    [
+     "**UL Solutions**",
+     "CSA Group",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "Intertek",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**UL Solutions**",
+     "Sargent & Lundy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**kWh Analytics**",
+     "**DNV**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**kWh Analytics**",
+     "**ENGIE North America**",
+     "investor",
+     "historical",
+     "USD 5 million Series A (round total)",
+     "—"
     ]
    ],
-   "note": "Curated edges among members: 18 · to the neighbouring segments: 5 · derived-only mentions (no curated typing): 4 among members, 2 to the neighbours."
+   "note": "Curated edges among members: 37 · to the neighbouring segments: 21 · derived-only mentions (no curated typing): 6 among members, 5 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -30566,74 +33110,74 @@ function clLessonSegmentSoftwareAndOptimization_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-01 — Chief executive Jennifer Scanlon sells 12,500 Class A shares at $73.21 to $74.72 under a Rule 10b5-1 plan adopted 2025-12-09, six days after the December secondary priced",
+     "sub": "UL Solutions · corporate"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
      "sub": "NRG Energy · market"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
      "sub": "Zhonhen Electric · other"
     },
     {
-     "x": 5,
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-18 — 'The Gridmatic Podcast' launches with three episodes; the retail president says the business 'scaled to thousands of customers across ERCOT and PJM in just two years'",
+     "sub": "Gridmatic · corporate"
+    },
+    {
+     "x": 7,
      "lane": "record",
      "label": "2026-08-18 — ENGIE and QTS extend their Texas partnership: 48 MWac of ABEI Energy's ~61 MWac Lubio Solar (Kaufman County) to QTS's Irving data centres, ~150 GWh a year, with retail supply and energy management bundled",
      "sub": "ENGIE North America · customer"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-15 — CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed",
      "sub": "Zhonhen Electric · corporate"
     },
     {
-     "x": 7,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-14 — CATL signs definitive agreements: RMB 4.099B (RMB 3.512B cash + a 49% stake in Times Tianyuan valued RMB 588M) for 49% of controlling holdco Zhonhen Technology Investment; Zhu Guoding remains actual controller (35.7% of holdco post-deal, wife Bao Xiaoru 15.3%); same-day strategic cooperation across computing-power infrastructure, charging/swap and power trading",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 8,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-13 — CNBC/BofA frame EROC as 'a play on the Anthropic IPO'; Buy reiterated",
      "sub": "ERock · market"
     },
     {
-     "x": 9,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-12 — EGM approves the third employee stock ownership plan: up to RMB 40M, ≤40 participants, buyback shares at RMB 21.79 (half the market average), with unlock hurdles of revenue +30%/+70%/+120% vs FY2025 (or profit alternatives) across 2026–2028",
      "sub": "Zhonhen Electric · other"
     },
     {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-12 — 33 mtu engines ordered for the modernisation of the Korean freight locomotive fleet",
-     "sub": "Rolls-Royce Power Systems · order-win"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-12 — Series G raises $750m led by T. Rowe Price, with Sequoia Capital, Janus Henderson, Franklin Templeton and PEAK6 new; total equity raised passes $2bn and the backlog is stated as having grown from about 20 GWh to about 80 GWh",
-     "sub": "Form Energy · financial"
-    },
-    {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-12 — Navneet Govil joins as Chief Financial Officer from SoftBank Investment Advisers, and Wes Sloan as Chief Operating Officer from Panasonic Energy North America",
-     "sub": "Form Energy · leadership"
+     "label": "2026-08-12 — Solarmarkt Group selects PowerTrack EMS to hybridise two operating Hungarian utility-scale solar plants — 40 MW / 80 MWh added to each 60 MWp site, with EPC partner Pannonwatt",
+     "sub": "Stem · customer"
     }
    ]
   },
@@ -30651,10 +33195,28 @@ function clLessonSegmentSoftwareAndOptimization_() {
    ],
    "rows": [
     [
+     "Acceptance of third-party test results and harmonised standards",
+     "proposed",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "Artificial intelligence as a disruption risk to the service itself",
+     "proposed",
+     "—",
+     "UL Solutions"
+    ],
+    [
      "Beginning-of-construction safe harbor (IRS Notice 2025-42)",
      "in-effect",
      "2025-08",
      "ENGIE North America"
+    ],
+    [
+     "China operating regime, CNCA and SAFE",
+     "in-effect",
+     "—",
+     "UL Solutions"
     ],
     [
      "Cybersecurity regulation (IEC 62443 / NIS2)",
@@ -30675,10 +33237,34 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "NRG Energy"
     ],
     [
+     "ERCOT Real-Time Co-optimization plus Batteries (RTC+B)",
+     "in-effect",
+     "2025-12-05",
+     "Gridmatic, Habitat Energy"
+    ],
+    [
      "ERCOT RTC+B and ancillary-service redesign",
      "in-effect",
      "2025-12-05",
      "Hunt Energy Network"
+    ],
+    [
+     "EU AI Act",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "EU Battery Regulation",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "EU MDR, IVDD, UKCA medical devices and MDSAP",
+     "in-effect",
+     "—",
+     "UL Solutions"
     ],
     [
      "EU Network Code Requirements for Generators (Regulation 2016/631)",
@@ -30691,6 +33277,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "proposed",
      "—",
      "Rolls-Royce Power Systems"
+    ],
+    [
+     "FCC national-security review of the Cyber Trust Mark programme",
+     "in-effect",
+     "2025-12-19",
+     "UL Solutions"
     ],
     [
      "Federal energy demonstration funding",
@@ -30707,6 +33299,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
     [
      "FEOC restrictions",
      "in-effect",
+     "2025-07",
+     "Stem"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
      "2025-07-04",
      "ENGIE North America"
     ],
@@ -30715,6 +33313,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "in-effect",
      "2026-01",
      "Prevalon"
+    ],
+    [
+     "FERC Orders 841, 2222 and 2023 — wholesale market access for storage and distributed resources",
+     "in-effect",
+     "2018-02",
+     "Stem"
     ],
     [
      "FERC review of the LS Power acquisition (Federal Power Act section 203)",
@@ -30753,6 +33357,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "ENGIE North America"
     ],
     [
+     "ITC/45X — Sections 48E and 45X as amended by the One Big Beautiful Bill Act",
+     "in-effect",
+     "2025-07",
+     "Stem"
+    ],
+    [
      "NDAA 889 / Entity List",
      "in-effect",
      "—",
@@ -30777,16 +33387,46 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "DNV"
     ],
     [
+     "NFPA 855, NFPA 68, NFPA 69, IFC, IRC and the California Fire Code",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
      "Norway Transparency Act",
      "in-effect",
      "—",
      "DNV"
     ],
     [
+     "NYSE continued-listing standards (Section 802.01C)",
+     "in-effect",
+     "2024-08-28",
+     "Stem"
+    ],
+    [
+     "OECD Pillar Two global minimum tax",
+     "in-effect",
+     "2025-01-01",
+     "UL Solutions"
+    ],
+    [
      "Offshore wind leasing suspension and lease relinquishment",
      "in-effect",
      "2026-04-28",
      "ENGIE North America"
+    ],
+    [
+     "OSHA NRTL recognition",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
+     "PUCT Project 58379 — energy storage resource offer and scheduling rules ('small fish' exemption removal)",
+     "in-effect",
+     "2026-06-01",
+     "Gridmatic"
     ],
     [
      "Renewable fuel approvals (EN 15940 / HVO)",
@@ -30799,6 +33439,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "in-effect",
      "—",
      "ENGIE North America"
+    ],
+    [
+     "Russia and Belarus",
+     "in-effect",
+     "2022-03",
+     "UL Solutions"
     ],
     [
      "Section 301 tariffs",
@@ -30837,6 +33483,24 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "NRG Energy"
     ],
     [
+     "Texas retail electric provider certification (PUCT Chapter 25)",
+     "in-effect",
+     "2022-03-16",
+     "Gridmatic"
+    ],
+    [
+     "Trade tariffs",
+     "in-effect",
+     "—",
+     "Stem"
+    ],
+    [
+     "UK National Security and Investment Act and Ofgem consent on a change of control",
+     "in-effect",
+     "—",
+     "Habitat Energy"
+    ],
+    [
      "Uptime Institute Tier standards",
      "in-effect",
      "—",
@@ -30867,6 +33531,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
      "DNV"
     ],
     [
+     "US tariffs and trade restrictions",
+     "in-effect",
+     "—",
+     "UL Solutions"
+    ],
+    [
      "US–China battery tariffs",
      "in-effect",
      "—",
@@ -30888,7 +33558,7 @@ function clLessonSegmentSoftwareAndOptimization_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Control Stack: BMS, PCS, EMS — Who Decides What* · *Who Carries Which Risk* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** FlexGen, Fluence, Canadian Solar, DNV, ERock, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, NRG Energy, Prevalon, Rolls-Royce Power Systems, Schneider Electric, Tesla, Wärtsilä, Zhonhen Electric — each member's dossier carries one in Profiler."
+    "**Study guides:** FlexGen, Stem, Fluence, Gridmatic, Habitat Energy, Canadian Solar, DNV, ERock, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, NRG Energy, Prevalon, Rolls-Royce Power Systems, Schneider Electric, Tesla, UL Solutions, Wärtsilä, Zhonhen Electric — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -30953,6 +33623,21 @@ function clLessonSegmentSoftwareAndOptimization_() {
     }
    ]
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:gridmatic added@2026-09-12; profile:habitat-energy added@2026-09-12; profile:stem added@2026-09-09; profile:ul-solutions added@2026-09-09",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  }
  ]
 };
 }
@@ -30965,42 +33650,60 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
  "title": "Insurance and risk transfer",
  "short": "The brokers, insurers and risk-analytics firms that price and carry the risks a financing cannot hold — property and business interruption, delay-in-start-up…",
  "group": "The Value Chain",
- "updated": "2026-09-08",
- "reviewBy": "2027-03-08",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
  "provenance": {
   "inputs": [
    {
     "kind": "public",
+    "ref": "profile:aon",
+    "date": "2026-09-09",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:kwh-analytics",
+    "date": "2026-09-09",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:marsh-mclennan",
+    "date": "2026-09-09",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-13",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-07",
+    "date": "2026-09-13",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "0",
+   "k": "3",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "0",
+   "k": "2",
    "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "0",
-   "v": "challengers",
+   "k": "1",
+   "v": "challenger",
    "sub": "contesting that set; 0 adjacent"
   },
   {
-   "k": "0",
+   "k": "4",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -31044,7 +33747,7 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "none on the record",
+     "Storage developers and IPPs (3 edges) · Cells and chemistry (1 edge) · Grid equipment (1 edge) · In-hall power (1 edge) · AIDC developers and landlords (1 edge) · Hyperscalers and AI labs (1 edge) · Utilities (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -31100,10 +33803,22 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    ],
    "rows": [
     [
-     "—",
-     "—",
-     "—",
-     "No member on record — the segment starts empty and fills as dossiers land"
+     "**Aon**",
+     "aon",
+     "incumbent",
+     "ecosystemRole: the second incumbent broker, and the one whose published position sits closest to the AI build-out. Incumbent on independent evidence: ranked second globally by AM Best and Business Insurance for more than fifteen consecutive years at USD 17.20bn for 2025, first among reinsurance brokers on FY2024 revenue inside a top tier holding more than 85 percent of premium, and seated by the segment's challenger on its own Broker Council in both published years. Its distinctive contribution is capital assembly for data centres — a Data Center Lifecycle Insurance Program that went from USD 1.5bn to USD 5bn in twelve months, larger than any competing facility, plus what the company calls the first-ever data-centre-specific reinsurance treaty aligning up to USD 5bn behind a single insurer. Its battery record is real but thin: one documented first-of-its-kind UK storage placement in July 2026, and published guidance that names engineering criteria but no standard."
+    ],
+    [
+     "**Marsh McLennan**",
+     "marsh-mclennan",
+     "incumbent",
+     "ecosystemRole: the larger of the two brokers that assemble the risk-transfer programme a project financing depends on — the seat kWh Analytics' own dossier names as 'the seat Marsh and Aon hold'. Incumbent on independent evidence: AM Best ranks it first among global brokers on 2025 total revenue at USD 26.98bn for a sixteenth consecutive year, Business Insurance ranks it first globally and first among the largest brokers of US business, and its reinsurance arm sits inside a top tier holding more than 85 percent of reinsurance premium. Its evidenced contribution to this corpus's market is capacity construction for data centres — Nimbus at USD 2.7bn, Nimbus Casualty at USD 75m excess of USD 25m, and the Stratus exchange offering up to USD 10bn on a single placement — rather than battery storage, where no independent source names it in a placement and its credentials appear only on its own website."
+    ],
+    [
+     "**kWh Analytics**",
+     "kwh-analytics",
+     "challenger",
+     "ecosystemRole: the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf — the underwriter whose property policy, revenue put or parametric hedge sits beside the independent engineer's report at financial close; a challenger because it holds no balance sheet and contests the brokers' and carriers' established set with data-priced capacity"
     ]
    ]
   },
@@ -31125,14 +33840,34 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    ],
    "rows": [
     [
+     "**Aon**",
+     "FY2025 · 2025-12-31",
+     "17,181",
+     "as reported",
      "—",
-     "No member carries a normalized figure for this period",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Marsh McLennan**",
+     "FY2025 · 2025-12-31",
+     "26,981",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "*No normalized figure on record*",
+     "—",
      "—",
      "",
      "—",
      "—",
      "—",
-     "—"
+     "kWh Analytics"
     ]
    ]
   },
@@ -31152,15 +33887,71 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    ],
    "rows": [
     [
+     "**Aon**",
+     "**Marsh McLennan**",
+     "competitor",
+     "active",
      "—",
+     "—"
+    ],
+    [
+     "**Aon**",
+     "**kWh Analytics**",
+     "partner",
+     "active",
      "—",
-     "No curated edge among the members or to the neighbouring segments",
+     "Broker Council"
+    ],
+    [
+     "**Marsh McLennan**",
+     "**Aon**",
+     "competitor",
+     "active",
      "—",
+     "—"
+    ],
+    [
+     "**Marsh McLennan**",
+     "**kWh Analytics**",
+     "partner",
+     "active",
      "—",
+     "Broker Council"
+    ],
+    [
+     "**Aon**",
+     "DNV",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Marsh McLennan**",
+     "DNV",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**kWh Analytics**",
+     "DNV",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**kWh Analytics**",
+     "ENGIE North America",
+     "investor",
+     "historical",
+     "USD 5 million Series A (round total)",
      "—"
     ]
    ],
-   "note": "Curated edges among members: 0 · to the neighbouring segments: 0 · derived-only mentions (no curated typing): 0 among members, 0 to the neighbours."
+   "note": "Curated edges among members: 4 · to the neighbouring segments: 4 · derived-only mentions (no curated typing): 0 among members, 1 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -31175,8 +33966,74 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
     {
      "x": 1,
      "lane": "record",
-     "label": "No dated development on record",
-     "sub": "The members' dossiers carry no dated development yet"
+     "label": "2026-09-03 — Underwriting analytics offering positioned to help insurers avoid concentration risk; company to speak at the KBW insurance conference",
+     "sub": "Aon · other"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-01 — Guy Carpenter formally becomes Marsh Re, retiring a reinsurance broking name in use for over a century; marked by two publications ahead of the Rendez-Vous de Septembre",
+     "sub": "Marsh McLennan · corporate"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-08-31 — Agreement announced to acquire USI Advantage Corp. for USD 17.0bn in cash — about USD 3bn of revenue, 10,500 people and 200 US offices — funded entirely with new debt, closing expected Q4 2026",
+     "sub": "Aon · ma"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-08-28 — Aon Securities' twentieth annual insurance-linked securities report: alternative capital USD 144.5bn, catastrophe-bond issuance USD 24.9bn, outstanding USD 63.4bn, sidecars USD 23bn, 78 sponsors including 16 first-timers, investor return 12.5 percent",
+     "sub": "Aon · market"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-08-26 — Stratus launched — up to USD 10bn of property capacity on a single placement for operational digital infrastructure, drawing on 30 traditional and alternative capital providers on a prior-submit exchange basis",
+     "sub": "Marsh McLennan · product-launch"
+    },
+    {
+     "x": 6,
+     "lane": "record",
+     "label": "2026-08-25 — Totalis Specialty Group announced, to launch 1 January 2027",
+     "sub": "Aon · product-launch"
+    },
+    {
+     "x": 7,
+     "lane": "record",
+     "label": "2026-08-21 — Marsh Risk named Business Insurance's 2026 US Insurance Awards Broker Team of the Year, over Aon, EPIC, Spring Consulting and WTW, for the TerraPower Natrium placement at Kemmerer, Wyoming",
+     "sub": "Marsh McLennan · other"
+    },
+    {
+     "x": 8,
+     "lane": "record",
+     "label": "2026-08-21 — Katie Burke, US specialty energy and power growth leader at Marsh Risk, describes 'unprecedented' new-business growth as hyperscalers become power-generation companies; the same report describes battery storage as an increasingly popular means to stabilise data-centre loads",
+     "sub": "Marsh McLennan · market"
+    },
+    {
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-19 — Doug Hammond, previously chief executive of NFP, becomes Global Executive Chairman of Middle Market including NFP, with a dedicated North American middle-market leadership tier named beneath him",
+     "sub": "Aon · leadership"
+    },
+    {
+     "x": 10,
+     "lane": "record",
+     "label": "2026-08-17 — Chief Financial Officer Edmund Reese departs effective immediately to pursue opportunities outside the firm; Nadin Virani, Global Head of Corporate Planning and Analytics, appointed interim Chief Financial Officer with an external search under way; 2026 guidance reaffirmed the same day",
+     "sub": "Aon · leadership"
+    },
+    {
+     "x": 11,
+     "lane": "record",
+     "label": "2026-08-10 — Marsh McLennan Agency agrees to acquire Accel Holdings, Inc. of Waverly, Iowa — commercial and personal lines, employee benefits, agribusiness, wealth management and retirement advisory; terms undisclosed, expected to close in Q3 2026",
+     "sub": "Marsh McLennan · ma"
+    },
+    {
+     "x": 12,
+     "lane": "record",
+     "label": "2026-08-05 — Beazley's H1 2026 results describe 'the addition of kWh Analytics in March' with its underwriters 'working alongside our broader team'; profit before tax fell to USD 237.7 million from USD 502.5 million",
+     "sub": "kWh Analytics · corporate"
     }
    ]
   },
@@ -31194,10 +34051,106 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    ],
    "rows": [
     [
+     "Antitrust — the terminated Willis Towers Watson combination",
+     "expired",
+     "2021-07-26",
+     "Aon"
+    ],
+    [
+     "Artificial intelligence regulation and AI operational risk",
+     "in-effect",
      "—",
+     "Aon"
+    ],
+    [
+     "Climate change and insurability",
+     "in-effect",
      "—",
+     "Aon"
+    ],
+    [
+     "Contingent commission disclosure (the 2004-05 settlements)",
+     "in-effect",
      "—",
-     "No member's dossier records a policy exposure"
+     "Marsh McLennan"
+    ],
+    [
+     "Data protection and AI regulation",
+     "in-effect",
+     "2026-01-01",
+     "Marsh McLennan"
+    ],
+    [
+     "Data protection, sanctions and financial crime",
+     "in-effect",
+     "—",
+     "Aon"
+    ],
+    [
+     "Errors and omissions and fiduciary duty",
+     "in-effect",
+     "—",
+     "Marsh McLennan"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-01-01",
+     "kWh Analytics"
+    ],
+    [
+     "Irish corporate law and enforcement of judgments",
+     "in-effect",
+     "—",
+     "Aon"
+    ],
+    [
+     "Irish domicile and OECD Pillar Two",
+     "in-effect",
+     "2024-01-01",
+     "Aon"
+    ],
+    [
+     "ITC/45X",
+     "in-effect",
+     "—",
+     "kWh Analytics"
+    ],
+    [
+     "NFPA 855 / UL 9540A",
+     "in-effect",
+     "—",
+     "kWh Analytics"
+    ],
+    [
+     "Sanctions, export control and anti-corruption",
+     "in-effect",
+     "—",
+     "Marsh McLennan"
+    ],
+    [
+     "SEC enforcement — Aon Investments USA and the PSERS matter",
+     "in-effect",
+     "2024-01",
+     "Aon"
+    ],
+    [
+     "UK Financial Conduct Authority",
+     "in-effect",
+     "—",
+     "Marsh McLennan"
+    ],
+    [
+     "US state insurance licensing and surplus lines",
+     "in-effect",
+     "—",
+     "Marsh McLennan"
+    ],
+    [
+     "US state surplus-lines insurance regulation",
+     "in-effect",
+     "—",
+     "kWh Analytics"
     ]
    ]
   },
@@ -31209,21 +34162,42 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* (planned).",
     "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
-    "**Study guides:** none yet — each member's dossier carries one in Profiler."
+    "**Study guides:** Aon, Marsh McLennan, kWh Analytics — each member's dossier carries one in Profiler."
    ]
   },
   {
    "id": "check-yourself",
    "title": "Self-test",
    "kind": "quiz",
-   "read": "2 questions",
+   "read": "5 questions",
    "items": [
+    {
+     "q": "Which segment does the registry place **Aon** in?",
+     "c": [
+      "Neoclouds",
+      "EPC and construction",
+      "Insurance and risk transfer",
+      "Assurance"
+     ],
+     "a": 2,
+     "why": "The registry's basis line: ecosystemRole: the second incumbent broker, and the one whose published position sits closest to the AI build-out. Incumbent on independent evidence: ranked second globally by AM Best and Business Insurance for more than fifteen consecutive years at USD 17.20bn for 2025, first among reinsurance brokers on FY2024 revenue inside a top tier holding more than 85 percent of premium, and seated by the segment's challenger on its own Broker Council in both published years. Its distinctive contribution is capital assembly for data centres — a Data Center Lifecycle Insurance Program that went from USD 1.5bn to USD 5bn in twelve months, larger than any competing facility, plus what the company calls the first-ever data-centre-specific reinsurance treaty aligning up to USD 5bn behind a single insurer. Its battery record is real but thin: one documented first-of-its-kind UK storage placement in July 2026, and published guidance that names engineering criteria but no standard."
+    },
+    {
+     "q": "What role does the registry give **kWh Analytics** in Insurance and risk transfer?",
+     "c": [
+      "adjacent",
+      "challenger",
+      "incumbent"
+     ],
+     "a": 1,
+     "why": "challenger — The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves."
+    },
     {
      "q": "Which of these is a criterion buyers in **Insurance and risk transfer** buy on, per the registry?",
      "c": [
-      "Fleet scale under management and the QSE or scheduling-entity service behind it",
-      "Reliance — who may trust the report, and the lender's acceptance of the firm",
-      "Dual-sourcing and geography of the two suppliers chosen per project",
+      "Financing route — ABS, project notes, sponsor equity",
+      "Schedule certainty and speed benchmarks (commissioned MW per year, days to energize)",
+      "First-power date and the licensing path (NRC vs DOE authorization; combined licence vs construction permit)",
       "Premium and deductible against the technology's loss record (legacy indoor NMC vs modern outdoor LFP)"
      ],
      "a": 3,
@@ -31232,14 +34206,41 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
     {
      "q": "Which segment sits one link **upstream** of Insurance and risk transfer?",
      "c": [
-      "Power conversion and rack-power silicon",
-      "Bridge and on-site generation",
-      "Software and optimization",
-      "In-hall power"
+      "Compute and the rack",
+      "Clean firm and nuclear",
+      "Hyperscalers and AI labs",
+      "Software and optimization"
      ],
-     "a": 2,
+     "a": 3,
      "why": "Chain position 18 against this segment's 19."
+    },
+    {
+     "q": "The graph records a curated edge from **Aon** to **kWh Analytics**. How is it typed from Aon's side?",
+     "c": [
+      "other",
+      "partner",
+      "portfolio",
+      "investor"
+     ],
+     "a": 1,
+     "why": "Holds a named seat on kWh Analytics' Renewable Energy Broker Council in both published years, represented both times by the same person — the only firm on the council with that continuity."
     }
+   ]
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13; profile:aon added@2026-09-09; profile:kwh-analytics added@2026-09-09; profile:marsh-mclennan added@2026-09-09",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
    ]
   }
  ]
