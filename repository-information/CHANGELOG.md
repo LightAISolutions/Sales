@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 112/100`
+`Sections: 113/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.73r] — 2026-09-14 07:09:15 PM EST
+
+> **Prompt:** "Evaluate and show me where I am in the overall action plan, then give me a prompt to paste into a new Opus 5 xhigh session to continue the plan, then remember session."
+
+**A handover commit with one real finding in it.** The evaluation of §7.3 and §6 against the live corpus turned up a **stale gate in the curriculum plan**: §7 row 23 still forbade authoring rows 23–24 until the bankability module's quarterly review landed, and that review landed at v05.50r on 2026-09-13. Correcting it changes the answer to "what can I run next" — with it fixed, **all 19 remaining Phase 4 rows are runnable today**, because no guidance module's `reviewBy` is inside the checker's 30-day horizon. §7.21's counters are also refreshed to the state the next session will actually find, which is the failure v05.69r and v05.71r each had to correct by hand.
+
+### Changed
+
+- **`CLASSROOM-CURRICULUM-PLAN.md` §7 row 23 — a stale gate corrected, dated.** The note read *"inherits `reviewBy` 2026-10-01 — do not author before the module's quarterly review lands"*. That review **did** land (v05.50r, 2026-09-13) and moved `bess-bankability-2026-08` from 2026-10-01 to **2027-01-01**, so rows 23 and 24 stopped being blocked the day it did and nothing recorded it. The row now says the gate is open and carries the correction with its date.
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.21 — counters refreshed to the post-push state, body and prompt together.** Repo **v05.72r → v05.73r**; CHANGELOG **112 raw / fourteen dated today → 113 raw / fifteen**, with the 2026-09-15 rotation leaving **95** rather than 94; and the deployment counter changed **from a forecast to a measurement** — v05.72r's workflow reported `Classroom deploy confirmed (GET): Updated to v01.35g (deployment 46) | 46/200` on the first GET leg with no `POLL` line and no `?op=deploy` probe issued at all, which is the §7.19 order working correctly on its third consecutive use.
+- **`repository-information/SESSION-CONTEXT.md` — Remember Session.** The v05.71r entry moves to `## Previous Sessions` and the v05.69r entry is dropped under the two-session cap. The new Latest Session records Phase 4 row 7 in full: the sharpened `READ_NEXT` finding (1 due → 3 due, two segments, a second differing section, and a planned title byte-identical to the authored one), the section-level omission record, the argued `reviewBy` default, the content contract coming out stronger than "no proper-noun answers", the fourth clean five-column table, the row-23 correction, and the one render-harness detail worth never rediscovering — the entrypoint is `clShowLesson(id)`, not `clRenderLesson`.
+
+### Notes
+
+- **Nothing in the Classroom surface moved.** This push touches two plan documents, `SESSION-CONTEXT.md`, `README.md`, `repository.version.txt` and this file — **no `.gs` and no `.html`**, so there is no GAS or page bump and no entry in `Classroomgs.changelog.md`. Classroom stays at **v01.35g** / **v01.14w**, the content-checker baseline stays **0 errors / 0 warnings at 37 lessons / 8 tracks / 142 gate cases**, and `build-classroom-segments.py --check` still reports **3 due** — one row 6's residue and two row 7's, all three S2's to clear.
+- **The position report, measured rather than remembered.** Done: Phases 0, 1, 2a, 2b, 3, 5 and 6; S0, K1, S1, S3 (10 of 10), G6, C3 (three sessions), the first Q bankability review, and the one-off segment regeneration. Open: **Phase 4 at 7 of 26** (rows 8–24 under §7.3 order 6, rows 25–26 under order 8), **S2 at 2 of ~19**, **K2** (1–2 sessions, runnable any time), **C5** (~6 sessions, gated on ~6 landscapes), and the **Q plan clock** (Fable 5.1 xhigh, next due ~2026-12). Deferred: C6. **About 43 sessions remain**, roughly 42 of them Opus 5 xhigh — consistent with §7.3's "about 57" at v05.43r less the fourteen run since.
+- **No Phase 4 row is gated by a review date today**, which is the finding behind the row-23 correction. Every module's `reviewBy` is beyond the curriculum checker's 30-day horizon: the nearest is `large-load-interconnection-2026-09` at **2026-11-16** (inherited by row 26), then `nvidia-800vdc-2026-08` 2026-11-30, `utility-aidc-procurement-2026-08` and `power-infra-aidc-2026-08` 2026-12-10, `eo14420-bulk-power-2026-08` 2026-12-24, `china-policy-stack-2026-08` 2026-12-31, and the three at 2027-01-01. `check-classroom-curriculum.py --strict` reports **0 items due for review**.
+- **Rotation checked, not assumed:** 113 sections with this one, of which **15 are dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** The next push landing 2026-09-15 or later does rotate, moving the eighteen sections dated 2026-09-05 (`v04.61r`–`v04.78r`) and leaving 95. **One trap worth recording, hit this session and the previous one:** the capacity-counter string also appears **inside older entries**, so the counter edit must match the standalone line rather than the first `grep` hit.
+- **Counters re-counted rather than carried:** repo CHANGELOG 112 raw / 14 today before this entry; `Classroomgs.changelog.md` 35 raw / 6 today / **29 non-exempt**; `Scrapergs.changelog.md` 50 raw / 1 today / **49 non-exempt**; `Profilerhtml.changelog.md` 49 / 0 / 49. The Scraper trap is still armed, and **S2 session 3 must ask the Scraper-seed question**, so it may well be the session that fires it.
 
 ## [v05.72r] — 2026-09-14 06:53:36 PM EST
 
