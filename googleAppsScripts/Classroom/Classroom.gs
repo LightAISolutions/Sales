@@ -1,4 +1,4 @@
-var VERSION = "v01.31g";
+var VERSION = "v01.32g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -8883,7 +8883,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "read": "1 min",
    "ps": [
     "**Mechanism lessons for this segment:** *From Cell to Container* · *The Spec Sheet, Decoded* · *The Control Stack: BMS, PCS, EMS — Who Decides What* · *The Independent Engineer's Report* (planned) · *Listing, Test Method, Code* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-storage-integrators-and-containers-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** BYD, Canadian Solar, CATL, CRRC Zhuzhou, Envision, Fluence, HyperStrong, Sungrow, Tesla, Wärtsilä, Hithium, Jinko, LG Energy Solution, LS-ES, Prevalon, Samsung SDI, Sunwoda, Trina Storage, CALB, Caterpillar, Cornex, Cummins, Eaton, FlexGen, GE Vernova, Great Power, Huawei Digital Power, Narada, ON.energy, Rolls-Royce Power Systems, Sinexcel, Vertiv — each member's dossier carries one in Profiler."
    ]
   },
@@ -8962,6 +8962,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -37942,9 +37949,9 @@ function handleClassroomOp_(e) {
 // the guidance capability in one clRequire_ call (a viewer is turned away
 // before any title leaves the server) → the answer. Denials are audited by
 // clRequire_. Successful doc reads are deliberately NOT audited, unlike gated
-// lesson reads: the page's search and unified glossary bulk-fetch all nine
-// modules on first use, so a row per doc would be volume rather than trail.
-// Revisit if a single bulk op ever replaces the nine calls.
+// lesson reads: the page's search and unified glossary bulk-fetch every
+// registered module on first use, so a row per doc would be volume rather
+// than trail. Revisit if a single bulk op ever replaces the per-doc calls.
 function handleGuidanceOp_(e) {
   var p = (e && e.parameter) || {};
   var op = String(p.gop || '');
@@ -37973,13 +37980,21 @@ function handleGuidanceOp_(e) {
 
 function guidanceDocs_() {
   // Ordered by topic lane (the library renders these as grouped sections):
-  // fundamentals first, then the AI data-center wave, then market access.
+  // fundamentals first, then the AI data-center wave, then market access, and
+  // since S2 session 1 a FOURTH lane at the end - The Value Chain, which holds
+  // the landscape modules (CLASSROOM-CURRICULUM-PLAN.md 10.6). The lane string
+  // already existed in this file: 23 lessons and tracks carry it, and every
+  // generated segment-* lesson sits in it. No MODULE had carried it before.
+  // S2 authors one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
+  // 7.3 sales-value order, so this lane grows by appending - a new landscape
+  // goes after the last one, never interleaved with the first three lanes.
   return [guidanceDocBessTech_(), guidanceDocPowerInfra_(),
           guidanceDocNvidia800_(), guidanceDocUtilityAidc_(),
           guidanceDocLargeLoadInterconnection_(),
           guidanceDocGridEquipment_(),
           guidanceDocChinaPolicy_(), guidanceDocBankability_(),
-          guidanceDocEo14420_()];
+          guidanceDocEo14420_(),
+          guidanceDocLandscapeStorageIntegrators_()];
 }
 
 function guidanceIndex_() {
@@ -38092,7 +38107,7 @@ function clHandleGuidancePeer_(e) {
   }
 }
 
-// ── The nine modules, in guidanceDocs_() lane order ──────────────────────
+// ── The ten modules, in guidanceDocs_() lane order ───────────────────────
 
 // Content: BESS Technology Fundamentals for the Sales Team (teaching synthesis, 2026-08-24).
 // Derived from repository-information/industry-guidance/bess-technology-fundamentals-analysis.md;
@@ -43764,6 +43779,680 @@ function guidanceDocEo14420_() {
   {
    "t": "FAR",
    "d": "Federal Acquisition Regulation — the rulebook for federal procurement. §4 directs recommendations to amend it so federal energy-infrastructure buys weigh national-security risk and prioritise US-manufactured equipment."
+  }
+ ]
+};
+}
+
+// Content: Landscape - Storage Integrators and Containers (corpus synthesis, 2026-09-14).
+// S2 session 1, the first landscape module: the layer-4 judgment above the public
+// segment lesson segment-storage-integrators-and-containers, per
+// CLASSROOM-CURRICULUM-PLAN.md 10.6. Derived from
+// repository-information/industry-guidance/landscape-storage-integrators-and-containers-analysis.md;
+// no ingested document and no new external research - every claim rests on a member
+// dossier at the profileVersion the claims ledger pins, and the dossiers carry the
+// primary sources. This is the one module class that names and RANKS covered
+// companies, by the developer decision of 2026-09-07 (INTEGRATED-REMEDIATION-PLAN.md
+// 7.2 decision 2); the guidance it gives is still to a group, the seller reading it.
+// Contributor tier, unchanged: CL_ROLE_CAPS.guidance is the gate and no capability moved.
+function guidanceDocLandscapeStorageIntegrators_() {
+  return {
+ "id": "landscape-storage-integrators-and-containers-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — Storage Integrators and Containers",
+ "short": "Who dominates the BESS integrator segment and on what basis, who threatens it, what each of the eighteen ranked players is betting, and what to watch. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 32 member dossiers of the storage-integrators-and-containers segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-storage-integrators-and-containers-analysis.md"
+ },
+ "updated": "2026-09-14",
+ "reviewBy": "2027-01-01",
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "First authoring, and the first landscape module of the segment layer. Corpus synthesis over the 32 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. Composed against the public segment lesson rather than restating it: the roster, the normalized figures, the graph edges and the policy fence stay where they are generated. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis, and is labelled as analysis rather than blended with fact."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "32",
+   "v": "members on record",
+   "sub": "Ten incumbent, eight challenger, fourteen adjacent — the largest supply segment in the registry, measured 14 September 2026"
+  },
+  {
+   "k": "5",
+   "v": "rankers, no agreement",
+   "sub": "Wood Mackenzie, Benchmark, InfoLink, SNE and S&P place this segment differently for 2025, and no source reconciles them"
+  },
+  {
+   "k": "18",
+   "v": "bets on the table",
+   "sub": "Every incumbent and challenger carries a strategy read, so no player is missing from the bets table for want of evidence"
+  },
+  {
+   "k": "2027-10",
+   "v": "the one shared date",
+   "sub": "NDAA Section 154 bars Department of Defense battery procurement from three of the ten incumbents"
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**The segment's first buying criterion is a ranking, and the rankings do not agree.** The registry lists {{bankability}} — a Wood Mackenzie or BloombergNEF ranking plus independent-engineer acceptance — as criterion one of seven. For the 2025 assessment year, at least three houses answer *who is number one* differently. Wood Mackenzie's 2026 {{comprehensive ranking}} puts **Sungrow** first, the first vendor ever to take the integrator crown from Tesla. Benchmark puts **BYD** first at roughly 60 GWh and 13% share. InfoLink puts **Tesla** first, Sungrow second, BYD third. Wood Mackenzie's own two 2025 instruments disagree with each other: BYD is third on market share and fourth on the ten-criteria scorecard.",
+    "**The BYD dossier states the reason, and it is the most useful sentence in the segment:** none of the rankers states its metric precisely enough — shipments against installations against contracted volume is never nailed down — and no source reconciles them. Treat any single ranking as settled and you have taken one house's definition of a gigawatt-hour as the market's.",
+    "**So there are two kinds of top-ten placement here and they are not interchangeable.** One is earned on volume — Tesla's 46.7 GWh deployed in 2025, Sungrow's 43 GWh shipped, BYD's roughly 60 GWh. The other is earned on a scorecard. Canadian Solar's e-STORAGE ranks in the 2026 global top ten **on bankability while sitting outside the volume top five**. Trina Storage is Grade A and tied fifth on comprehensive scoring at roughly 8 GWh, against Tesla's roughly 47. Envision is tied fifth on the ten-criteria method while absent from InfoLink's 2025 {{shipment league}}. Wärtsilä holds a global top-ten placement on an order book that fell 60% that year. A buyer applying criterion one and a buyer applying criterion two are reading different leagues.",
+    "**Dominance on volume, disputed at the top.** Sungrow holds both Wood Mackenzie crowns at once — integrator and PV inverter — with a sixth BloombergNEF inverter-bankability ranking alongside, and its storage line overtook inverters to reach exactly half of revenue in the first half of 2026. Tesla was first globally for 2024 at 15% world and 39% North American share and is second in the 2026 ranking. BYD leads the first half of 2026 on two independent rankers, with InfoLink calling BYD and Sungrow *extremely similar* in utility-scale. CATL reaches down from the cell layer: first in energy-storage batteries for five consecutive years, ESS battery sales from 93 GWh to 121 GWh, and the sole supplier of 19 GWh into the largest single BESS order on record.",
+    "**Dominance on a scorecard, at a fraction of the volume.** Canadian Solar's placement rests on the most complete adaptation playbook in the segment — a Western listing, a corporate restructuring built against the {{OBBBA}} ownership tests, a US cell plant and a captive developer arm. Envision's own dossier calls it *capability-tier-1 but volume-tier-2*. Fluence is seventh on 6.8 GW cumulative and a record 6.4 billion dollar backlog. Wärtsilä's is built on more than 19 GWh across 130-plus sites and a first-in-industry IEC 62443 certification for its controls platform.",
+    "**Dominance inside one market, by construction.** CRRC Zhuzhou dominates the world's largest domestic market with no US office, no US channel and no adaptation attempted — its dossier calls it the ecosystem's control case. Its moat is a rail-traction power-electronics stack: in-house IGBT and SiC feeding a {{grid-forming}}, 35 kV transformerless family that the dossier says only Sungrow and Huawei match in-house, and four consecutive tender cycles of CNY 0.46 to 0.53 per watt-hour winning bids that make it the domestic price-setter. HyperStrong is the integrator-without-cells case: domestic first on cumulative installs, top five by shipments through mid-2025, and completely absent from Wood Mackenzie's and Benchmark's 2025 global top tens.",
+    "**And the Western–Chinese split is a policy artifact rather than a capability one.** Chinese integrators took roughly 76% of a market that passed 100 GW of annual installs. The Fluence dossier states that Fluence and Tesla hold the only two at-scale {{FEOC}}-compliant Western supply chains. The most capable Chinese systems in this segment — CRRC's transformerless grid-forming line, Envision's Gen 8 and solid-state-transformer work, HyperStrong's grid-forming blocks — are kept out of the US tax-credit-linked market by ownership tests, not by specification."
+   ],
+   "sales": "**Name the instrument before the number.** \"Top-five integrator\" is unfalsifiable until you say which house, which year and which metric — and in this segment naming them usually helps. A Grade A scorecard placement at 8 GWh is a different and defensible claim from a volume placement, and an independent engineer reads the two differently. If a competitor quotes a rank without its instrument, the question that moves the room is *which table, and what did it count?*"
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**Four routes of attack, and the fourth comes from outside the segment's own ranking tables.**",
+    "**1 — The cell makers coming downstream, on price and without standing.** CALB, Cornex and Great Power all build and sell factory-assembled containers, and all three sit at {{adjacent}} rather than {{challenger}} for one stated reason: no third-party integrator ranking names them. CALB's line runs 20-foot 5 MWh and 6.25 MWh-plus liquid-cooled containers. Cornex's M5 at 5,015 kWh has been in mass production since February 2024 with CSA Group and TÜV SÜD certificates, and its 6,262 kWh M6 enters mass production in 2026. Great Power ships containers with named deployments at 500 MWh and 428 MWh. The registry's own phrase for all three is a {{route to market}} for the cell. **The threat is to price and to the mid-tier's volume — not yet to a ranked incumbent's standing**, and the role field is the registry saying exactly what a bankability-driven buyer will conclude.",
+    "**2 — The clean-provenance mid-tier, attacking on ownership rather than cost.** Four challengers are selling a supply chain rather than a container. LG Energy Solution is structurally the strongest: five North American sites targeting roughly 50 GWh of regional cell output by the end of 2026, a 140 GWh backlog, first-half 2026 storage shipments up 357% with about 86% going to North America, and its own claim to be the only supplier covering all three AI-data-centre storage applications on a non-prohibited chain. Its dossier's verdict on the advantage is blunt — **regulatory, not technical**. Samsung SDI attacks a narrower seam with high-power chemistry for data-centre uninterruptible power and {{BBU}}, guided to grow more than 70% in 2026, on a world-first indoor large-scale fire-test pass.",
+    "**3 — Vertical integration squeezing the integrator-without-cells model.** BYD's cost position comes from a {{LFP}} platform shared with its vehicle business across planned capacity above 500 GWh; CATL's from already being the cell superpower. Against that, HyperStrong owns no cells and has locked 200-plus GWh from CATL and 50 GWh from EVE at undisclosed terms — from two suppliers who sell competing systems. CRRC has the same entanglement pointing the other way: 120-plus GWh from Hithium through 2030, where Hithium is simultaneously its anchor supplier and its rival in systems. Trina Storage's dossier makes the cycle argument outright — the 2025–26 cell market flipped from glut to tightness, and in a tight cell market **the wrap plus the cell is the margin story**.",
+    "**4 — The reframing from outside: the AI-campus power buffer as its own category.** ON.energy sits adjacent in this segment because its pivot product is a medium-voltage uninterruptible power system rather than a grid container — and its dossier argues the category's US terms are being set there rather than by any ranked integrator, on a ride-through certification and a 5 GW deployment. Prevalon attacks the same problem from inside the segment with a stabiliser product validated against GPU load profiles at a US national laboratory. Both are selling to a buyer who appears in no BESS integrator ranking at all.",
+    "**And the counter-current worth naming: three of the eighteen are retreating, not attacking.** Trina Storage sold its Texas plant in December 2025 and cut its stake in the buyer to 10% in May 2026 to ease that buyer's own compliance, leaving no owned US manufacturing. Wärtsilä is moving its storage business into a joint venture after a 60% collapse in 2025 order intake. LS-ES has announced no new US project win in over a year and a half. A segment this concentrated at the top still has a mid-tier that is thinning."
+   ],
+   "sales": "The competitive question is no longer *who makes a better container*. On three of these four routes it is **who may sell it to this buyer, on this project, under this credit** — and on the fourth it is whether the buyer is even shopping for a container. Ask which route your competitor is on before you price against them: a cell maker moving downstream will beat you on price and lose on standing, and a clean-provenance challenger will do the reverse."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet — the eighteen",
+   "read": "8 min",
+   "kind": "table",
+   "intro": "**Everything in the bet column is analysis, not fact.** Each entry reads that member's own strategy-read field, and the dossier's own confidence label travels with it in the last column. A strategy read is itself analytical — the segment-lesson generator is forbidden to touch it for exactly that reason — so a bet is a judgment resting on a judgment, and this table says so rather than letting it read as a datum. **No figure here should be quoted as a fact about a company**; the figures live in the dossiers and in the public segment lesson. One row per {{incumbent}} and {{challenger}}, all eighteen of them, in the roles the registry assigns.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet — analysis, not fact",
+    "Dossier's own confidence"
+   ],
+   "rows": [
+    [
+     "**Sungrow**",
+     "incumbent",
+     "Hold both Wood Mackenzie crowns while storage becomes the revenue centre without becoming the profit centre, and treat the US as structurally lost rather than temporarily disrupted — Europe's volume target and the medium-voltage-to-800 VDC stage are the growth, not America.",
+     "High on position and on the US impairment; Moderate on the AIDC line being commercial"
+    ],
+    [
+     "**Tesla**",
+     "incumbent",
+     "Answer Chinese density leadership with standardization plus software — integrated block units winning on site-level cost and schedule, and a fleet-optimization layer deepening a software moat — rather than competing on container density alone.",
+     "High on Energy being the execution bright spot; Moderate on the standardization answer"
+    ],
+    [
+     "**BYD**",
+     "incumbent",
+     "Amortize a 500-plus GWh {{LFP}} platform across vehicles and storage, then follow tender demand into local assembly market by market — Brazil built on the Chile sequence.",
+     "High on the cost position; Moderate on the Latin America template"
+    ],
+    [
+     "**CATL**",
+     "incumbent",
+     "Defend a narrowing storage lead with chemistry rather than price — sodium-ion as the post-lithium hedge that competitors must answer — and **buy** into the data-centre power chain rather than build into it.",
+     "High on the narrowing lead; Moderate on sodium and on the acquisition route"
+    ],
+    [
+     "**Fluence**",
+     "incumbent",
+     "Make domestic content the product — qualifying customers for the {{ITC}} domestic-content bonus — and convert AI and data-centre demand into a contracted channel rather than pipeline talk.",
+     "High on both"
+    ],
+    [
+     "**Envision**",
+     "incumbent",
+     "Arm the compliant competition. Statutorily fenced out of direct US sales, convert the US cell asset into influence through a restructured plant and keep a minority stake plus licensing income; no own-branded system sells into the US at all.",
+     "High on the strategy; Moderate on whether the structure survives the final rules"
+    ],
+    [
+     "**Canadian Solar** (e-STORAGE)",
+     "incumbent",
+     "Run the adaptation playbook to completion — Western listing, an ownership restructuring against the {{OBBBA}} tests, a US cell plant, a captive developer arm — and let the storage arm carry a loss-making module business.",
+     "High on the playbook and on storage as the profit engine; Moderate on the AIDC exposure"
+    ],
+    [
+     "**Wärtsilä**",
+     "incumbent",
+     "Exit merchant storage integration into a joint venture while keeping the engine business's data-centre book, and hold cybersecurity-first positioning as the differentiator that survives the ownership change.",
+     "High on the managed retreat; Moderate on the moat surviving"
+    ],
+    [
+     "**HyperStrong**",
+     "incumbent",
+     "Prove that integration skill alone crosses the Pacific — no cells, no converter fab, no US manufacturing — so the US lane is tax-credit-indifferent buyers while Europe and the Middle East carry the margin.",
+     "High on the ranking being methodology-dependent; Moderate on the US position and on the AIDC narrative running ahead of the book"
+    ],
+    [
+     "**CRRC Zhuzhou**",
+     "incumbent",
+     "Accept permanent US exclusion as a fact and price for domestic share — state-enabled floor pricing, a rail-grade power-electronics moat, and expansion through Europe, the Middle East, Central Asia and Australia.",
+     "High on exclusion being structural and on floor pricing; Moderate on AIDC relevance being inferential"
+    ],
+    [
+     "**LG Energy Solution**",
+     "challenger",
+     "Convert electric-vehicle overcapacity into a storage franchise faster than any peer, and sell a regulatory advantage rather than a technical one — the default non-Chinese North American chain.",
+     "High on both; Moderate on profitability quality"
+    ],
+    [
+     "**Hithium**",
+     "challenger",
+     "Win on cell scale and duration as a stationary-only specialist — a large-cell ladder feeding 6-plus MWh blocks with eight-hour-native long duration — and use US and European plants to insulate the order book from content rules.",
+     "High on the scale achieved and on the AIDC line being marketing rather than business; Moderate on the plants and on financing being the constraint"
+    ],
+    [
+     "**Samsung SDI**",
+     "challenger",
+     "Make AI data-centre power the recovery vector through high-power chemistry for uninterruptible power and {{BBU}}, and through safety certification — never through price.",
+     "High on AIDC being the chosen vector; Moderate on the US conversion and on profit quality"
+    ],
+    [
+     "**Prevalon**",
+     "challenger",
+     "Sell provenance engineering rather than scale — certified controls, large-scale fire testing, seismic qualification, US-made cells — and bet the company on the AI-data-centre power buffer.",
+     "High on both"
+    ],
+    [
+     "**Trina Storage**",
+     "challenger",
+     "Sell trust and vertical integration rather than volume — Grade A bankability plus captive cells in a tightening cell market — and treat the US retreat as structural rather than tactical.",
+     "High on the bankability-versus-volume split, on the US retreat, and on vertical integration"
+    ],
+    [
+     "**Sunwoda**",
+     "challenger",
+     "Wear two hats — merchant cell supplier to integrators it competes with, and a roughly ninth-ranked integrator — accepting that the conflict caps how far partners will let it climb the stack.",
+     "High on the two-hat conflict, on the US market being closed, and on the financial base being the fragility"
+    ],
+    [
+     "**Jinko**",
+     "challenger",
+     "Treat storage as a survival strategy rather than a diversification, with an integrated solar-plus-storage sell and a demand-side hedge it owns — a data-centre campus of its own.",
+     "High on storage being survival; Moderate on the margin story and the campus moves"
+    ],
+    [
+     "**LS-ES**",
+     "challenger",
+     "Hold the cleanest structural compliance story in the US mid-tier and — on its own dossier's reading — fail to market it; re-weight toward converters and components under the parent brand while waiting for storage to attach to the parent's data-centre franchise.",
+     "High on the position and the anomaly, and on the re-weighting; Moderate on the attach thesis"
+    ]
+   ],
+   "sales": "Read the column down rather than across and the pattern is the finding: **only three of the eighteen bets are primarily about the container** — density, cost, duration. The other fifteen are about access: a supply chain's ownership, a certification, a tax credit, a ranking, a parent's order book, or an exit. In a segment whose first buying criterion is a third-party ranking and whose fourth is prohibited-foreign-entity exposure of the cell inside, that is the coherent outcome — but it is not what a product datasheet suggests, and it tells you which conversation actually decides the deal."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators — what to watch",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "Dated where the record dates it. A date in the third column is the dossier's own; an entry without one is a condition to watch rather than an event to diary. The first row is the only one that moves three members at once.",
+   "cols": [
+    "What to watch",
+    "Whose",
+    "On the record",
+    "Why it moves the segment"
+   ],
+   "rows": [
+    [
+     "**Final prohibited-foreign-entity regulations**, and whether continuing licence and intellectual-property ties taint effective control",
+     "Envision · Prevalon · Fluence",
+     "due late 2026",
+     "The single largest open question in the US market. If the restructured plant fails the test, the domestic-content halo comes off its cells and **two** integrators' supply narratives take damage at once — a systemic event for the US mid-tier, not a single-company one"
+    ],
+    [
+     "**Kentucky cell and module output** confirmed by an independent source",
+     "Canadian Solar",
+     "no third-party confirmation through August 2026",
+     "Until those cells ship at volume, e-STORAGE's US sales carry the same tariff and {{material assistance cost ratio}} exposure as its Chinese peers — the adaptation playbook is unproven at its most expensive step"
+    ],
+    [
+     "**US LFP conversion** at the Indiana joint-venture plant",
+     "Samsung SDI",
+     "October 2026",
+     "Both billion-dollar-class US storage deals and the claimed order book through 2029 depend on it landing on time"
+    ],
+    [
+     "**The storage joint venture closing**, and who the counterparty becomes",
+     "Wärtsilä",
+     "closing around Q3 2026",
+     "After closing the sales counterpart may be the joint venture rather than Wärtsilä. Contract and service continuity is the live item for anyone holding an {{LTSA}}"
+    ],
+    [
+     "**The 1.6 GWh German EPC** completing",
+     "HyperStrong",
+     "completes 2026",
+     "Its largest Western reference. A slip damages the European franchise that carries the margin story, at the same time as a state-owned rival has displaced it from first on new domestic installs"
+    ],
+    [
+     "**The Spanish cell and system gigafactory**",
+     "Hithium",
+     "target 2027",
+     "The pacing item for European content insulation, committed at 400 million euros against three failed listing attempts — its dossier says financing, not demand, is the constraint"
+    ],
+    [
+     "**First deliveries of the eight-hour block**",
+     "Hithium",
+     "Q4 2026",
+     "The AIDC line has had two launches, four product codes and zero named customers. First deliveries are when a marketing position becomes a business, or does not"
+    ],
+    [
+     "**The round-the-clock delivery schedule** on the largest single order on record",
+     "BYD · CATL",
+     "2027",
+     "The verification point for field-performance credibility at gigascale"
+    ],
+    [
+     "**Brazilian capacity auctions** against a forced-labour listing",
+     "BYD",
+     "auctions December 2026; listing since April 2026",
+     "A US$98M line is being built for that market by a company whose listing blocks government loans and triggers bank credit review"
+    ],
+    [
+     "**The claimed hyperscaler contract book** being named or corroborated",
+     "Prevalon",
+     "claimed, uncorroborated",
+     "Its own dossier calls it the single most important unverified number in the profile. If real, the largest disclosed data-centre storage book of any integrator; if inflated, the AIDC story is a product launch plus a laboratory test"
+    ],
+    [
+     "**The dual listing** clearing its three regulators",
+     "Sungrow",
+     "refiled 24 April 2026, still pending",
+     "Would fund international expansion. The earlier application lapsed and the interim report does not discuss it at all"
+    ],
+    [
+     "**The Hong Kong listing**",
+     "Sunwoda",
+     "execution-critical",
+     "Core profit near zero, cell gross margin under 5%, operating cash flow down 95% — the storage expansion is being funded from a barely profitable core"
+    ],
+    [
+     "**The next ranking editions**",
+     "all ten incumbents",
+     "2026 edition assessed 2025; the other league is a half-year table",
+     "Criterion one is a published table. Every edition re-cuts the field, and this module's ordering is only as current as the edition it names — which is why its review date sits at the turn of the year"
+    ],
+    [
+     "**{{NDAA Section 154}}** Department of Defense procurement bar",
+     "CATL · Envision · BYD",
+     "2027-10 (one member states 2027-10-01)",
+     "Not an import ban and not a market-access event for commercial projects — but it is the segment's one hard shared date, and it names three of the ten incumbents"
+    ]
+   ],
+   "sales": "Thirteen of these fourteen are one company's execution. **The first one is the market's** — and it is the only item on this list that can change who is sellable to a tax-credit-linked project without any vendor doing anything. If you track one thing in this segment, track that, and know which of your competitors' domestic-content claims rest on the structure it tests."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "4 min",
+   "kind": "callout",
+   "ps": [
+    "**Two readers arrive here by different roads, and the segment sits differently on each.** The curriculum's two implicit role paths are the storage seller, who reaches this module through the product and the market-access track, and the AI-data-centre power seller, who reaches it through the power chain.",
+    "**The storage seller — three moves.** *First*, name the instrument before the number: a top-five claim is unfalsifiable until the house, the year and the metric are attached, and attaching them usually helps rather than hurts. *Second*, treat provenance as a specification line rather than a compliance footnote — four of the eight challengers are selling supply-chain ownership as the product, the buyer's fourth criterion is literally the prohibited-foreign-entity exposure of the cell inside, and one competitor with the cleanest structure in the mid-tier does not market it at all. *Third*, read the role before the revenue: three cell makers here build and sell containers and are still adjacent, because no ranking house names them as integrators — which is the registry stating in one field exactly what a bankability-driven buyer will conclude.",
+    "**The AI-data-centre power seller — two moves.** *First*, recognise that the campus power buffer is a different category from the grid container and the ranked integrators do not own it yet: the clearest US position belongs to a member the registry places adjacent, and the most specific product from inside the segment belongs to a challenger. *Second*, the uninterruptible-power and {{BBU}} seam is where the non-Chinese cell makers are strongest, and it is a different sale from a container — high-power chemistry and a fire-test pass, not gigawatt-hours and an {{LTSA}}.",
+    "**Common to both: the segment has exactly one shared date and one shared open question.** The date is October 2027. The question is what the final prohibited-foreign-entity rules do to a restructured US cell plant that two Western integrators depend on. Everything else on the indicator list is one company's execution, and should be tracked as such rather than as a market signal."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions in the claims ledger; no ingested document. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher citation appears anywhere in it. A claim that could not be placed on a dossier field is not in the module; it is in the next section instead. The full ledger, with the reasoning behind the review date, is in the analysis file in the repo.",
+   "rows": [
+    [
+     "Segment holds 32 members — 10 incumbent, 8 challenger, 14 adjacent; seven buying criteria with bankability first",
+     "profiler-segments.json @ v05.63r — segments[].members[], .buyingCriteria[], .definition"
+    ],
+    [
+     "Sungrow first in both Wood Mackenzie 2026 rankings, first ever to take the integrator crown from Tesla, 43 GWh of 2025 storage shipments, sixth BNEF inverter-bankability ranking",
+     "profile:sungrow @ v9 — ecosystemRole; strategyRead[0]"
+    ],
+    [
+     "Sungrow storage at 41.8% of FY2025 revenue on 36.5% gross margin, exactly 50.00% of H1 2026 revenue on 32.43% against inverters' 42.72%",
+     "profile:sungrow @ v9 — strategyRead[1]; ecosystemRole"
+    ],
+    [
+     "Sungrow's US position structurally impaired by category rather than by name; its own guidance is a gradual pullback",
+     "profile:sungrow @ v9 — strategyRead[2]; policyExposure[] FCC Covered List"
+    ],
+    [
+     "Sungrow's medium-voltage-AC to 800 VDC stage launched, with small-batch trials through 2026 and batch orders from 2027; dual listing refiled 24 April 2026 and still pending",
+     "profile:sungrow @ v9 — strategyRead[3]; strategyRead[5]"
+    ],
+    [
+     "EU high-risk inverter phase-out, announced, effective 2027-04, scoped to EU-funded projects",
+     "profile:sungrow @ v9 — policyExposure[] EU high-risk inverter phase-out"
+    ],
+    [
+     "Tesla first globally for 2024 at 15% world and 39% North American share, second in the 2026 ranking; Chinese integrators took roughly 76% of a market past 100 GW",
+     "profile:tesla @ v7 — ecosystemRole"
+    ],
+    [
+     "Tesla 46.7 GWh deployed in 2025, up 49%; the answer to Chinese density leadership is standardization plus software",
+     "profile:tesla @ v7 — strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "BYD first on Benchmark for 2025 at roughly 60 GWh and 13% share, third on Wood Mackenzie and InfoLink, third on share and fourth on the scorecard within Wood Mackenzie's own two instruments, first on two rankers for H1 2026",
+     "profile:byd @ v9 — ecosystemRole; strategyRead[1]"
+    ],
+    [
+     "No ranker states its metric precisely enough — shipments against installations against contracted volume is never nailed down, and no source reconciles them",
+     "profile:byd @ v9 — strategyRead[1]"
+    ],
+    [
+     "BYD planned cell capacity above 500 GWh on a platform shared with the vehicle business; Brazilian line ahead of December 2026 auctions against a forced-labour listing carried since April 2026",
+     "profile:byd @ v9 — ecosystemRole; strategyRead[0]; strategyRead[5]"
+    ],
+    [
+     "NDAA Section 154 Department of Defense battery procurement bar from October 2027, stated by one member as 2027-10-01",
+     "profile:byd @ v9 · profile:catl @ v7 · profile:envision-energy @ v3 — policyExposure[] NDAA §154"
+    ],
+    [
+     "CATL first in energy-storage batteries for five consecutive years, share 30.4% in 2025 from 36.5%, ESS battery sales 93 GWh to 121 GWh; sole supplier of 19 GWh into the largest single BESS order on record",
+     "profile:catl @ v7 — ecosystemRole; strategyRead[0]"
+    ],
+    [
+     "CATL's sodium-ion line as a post-lithium hedge, and a route into data-centre power by acquisition rather than by build",
+     "profile:catl @ v7 — strategyRead[1]; strategyRead[4]"
+    ],
+    [
+     "Fluence seventh in Wood Mackenzie's first comprehensive integrator ranking (July 2026), 6.8 GW cumulative deployed, record $6.4B backlog, roughly $850M of data-centre orders through July 2026",
+     "profile:fluence @ v9 — ecosystemRole; strategyRead[1]"
+    ],
+    [
+     "Fluence and Tesla hold the only two at-scale prohibited-foreign-entity-compliant Western supply chains; roughly half of Fluence's US cell supply comes from the restructured Tennessee plant",
+     "profile:fluence @ v9 — policyExposure[] FEOC restrictions; strategyRead[0]"
+    ],
+    [
+     "Envision tied fifth on the ten-criteria methodology while absent from InfoLink's 2025 shipment top tier — capability-tier-1 but volume-tier-2",
+     "profile:envision-energy @ v3 — strategyRead[0]"
+    ],
+    [
+     "Envision's US cell asset supplies roughly half of one Western integrator's US LFP and 10 GWh to another as domestic content; no Envision-branded system sells into the US",
+     "profile:envision-energy @ v3 — strategyRead[1]"
+    ],
+    [
+     "Whether the restructured plant survives the final prohibited-foreign-entity regulations, due late 2026, is the single biggest open question in the file",
+     "profile:envision-energy @ v3 — strategyRead[2]; corroborated at profile:prevalon @ v5 — policyExposure[]"
+    ],
+    [
+     "Canadian Solar's e-STORAGE in the 2026 global top ten on bankability while outside the volume top five; 3.9 GWh of 2025 US deliveries; a 2.5 GWh March 2026 data-centre-demand order placed through a utility procurement",
+     "profile:canadian-solar @ v4 — ecosystemRole"
+    ],
+    [
+     "Ownership restructuring at 75.1% parent-held with explicit OBBBA framing, a US cell plant, and FY2026 guidance of 4.5–5.5 GWh into the US; no independent confirmation of that plant's output through August 2026",
+     "profile:canadian-solar @ v4 — strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "Storage carrying a loss-making module business — FY2025 storage revenue $1.37B, roughly 24% of group, against a $104M group net loss",
+     "profile:canadian-solar @ v4 — strategyRead[2]"
+    ],
+    [
+     "Wärtsilä more than 19 GWh deployed or contracted across 130-plus sites, a global top-ten placement, first-in-industry IEC 62443 certification; 2025 order intake down 60% to EUR 455M with the joint venture closing around Q3 2026",
+     "profile:wartsila @ v7 — ecosystemRole; strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "HyperStrong domestic first on cumulative installs and top five by shipments through mid-2025, absent from Wood Mackenzie's and Benchmark's 2025 global top tens, roughly 86% of volume still Chinese",
+     "profile:hyperstrong @ v4 — strategyRead[0]; ecosystemRole"
+    ],
+    [
+     "HyperStrong owns no cells; 200-plus GWh from CATL and 50 GWh from EVE at undisclosed terms, both suppliers selling competing systems; the 1.6 GWh German EPC completes in 2026",
+     "profile:hyperstrong @ v4 — strategyRead[1]; strategyRead[4]"
+    ],
+    [
+     "CRRC Zhuzhou's US exclusion structural and permanent, with no US office, channel or workaround attempted; floor pricing at CNY 0.46–0.53/Wh across four consecutive tender cycles",
+     "profile:crrc-zhuzhou @ v3 — strategyRead[0]; strategyRead[1]; ecosystemRole"
+    ],
+    [
+     "In-house IGBT and SiC feeding a grid-forming 35 kV transformerless family that only two other vendors match in-house; 120-plus GWh of cells from a company that is simultaneously its systems rival",
+     "profile:crrc-zhuzhou @ v3 — strategyRead[2]; strategyRead[3]"
+    ],
+    [
+     "LG Energy Solution's five North American sites targeting roughly 50 GWh of regional cell output by end-2026, a 140 GWh backlog, H1 2026 storage shipments up 357% with roughly 86% to North America, and its own claim to cover all three AI-data-centre storage applications on a non-prohibited chain",
+     "profile:lg-energy-solution @ v6 — ecosystemRole; strategyRead[0]; strategyRead[3]"
+    ],
+    [
+     "That the durable advantage is regulatory rather than technical",
+     "profile:lg-energy-solution @ v6 — strategyRead[1]"
+    ],
+    [
+     "Hithium second in 2025 storage-cell shipments, cumulative past 100 GWh in August 2025, a 10 GWh Texas module and system plant, a 400 million euro Spanish gigafactory targeting 2027",
+     "profile:hithium @ v13 — ecosystemRole; strategyRead[0]; strategyRead[2]"
+    ],
+    [
+     "The large-cell ladder feeding 6-plus MWh blocks with eight-hour-native long duration; the AIDC line a marketing position rather than a business as of August 2026, with first flagship deliveries in Q4 2026",
+     "profile:hithium @ v13 — strategyRead[1]; strategyRead[4]"
+    ],
+    [
+     "Samsung SDI twelfth in H1 2026 at 1.4% share; uninterruptible-power and BBU lines guided above 70% growth in 2026; a world-first indoor large-scale fire-test pass; 1.6 GWh of H1 2026 storage shipments to AI data centres; the Indiana LFP conversion in October 2026",
+     "profile:samsung-sdi @ v5 — ecosystemRole; strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "Prevalon differentiating on provenance engineering rather than scale, with certified controls, large-scale fire testing, seismic qualification and 10 GWh of US-made cells; a stabiliser product validated against GPU load profiles at a US national laboratory; a claimed hyperscaler book that is the most important unverified number in its profile",
+     "profile:prevalon @ v5 — strategyRead[0]; strategyRead[1]; strategyRead[4]"
+    ],
+    [
+     "Trina Storage Grade A and tied fifth on comprehensive scoring while absent from every volume top five, at roughly 8 GWh against roughly 47; the US plant sold in December 2025 and the stake cut to 10% in May 2026",
+     "profile:trina-storage @ v4 — strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "The 2025–26 cell market flipping from glut to tightness, making the wrap plus the cell the margin story",
+     "profile:trina-storage @ v4 — strategyRead[2]"
+    ],
+    [
+     "Sunwoda's two-hat model as both merchant cell supplier and roughly ninth-ranked integrator, the US containerized market effectively closed to it, and a core profit near zero with cell gross margin under 5% and operating cash flow down 95%",
+     "profile:sunwoda @ v4 — ecosystemRole; strategyRead[0]; strategyRead[1]; strategyRead[3]"
+    ],
+    [
+     "Jinko a Tier-1 storage maker absent from top-ten integrator rankings, with storage as a survival strategy at 2.2% FY2025 module gross margin",
+     "profile:jinko @ v5 — ecosystemRole; strategyRead[0]"
+    ],
+    [
+     "LS-ES holding the cleanest structural compliance story in the US mid-tier with no marketing of it anywhere, no new US project win in over a year and a half, and a 2026 re-weighting toward converters and components",
+     "profile:ls-energy-solutions @ v3 — strategyRead[0]; strategyRead[1]; strategyRead[3]"
+    ],
+    [
+     "Three cell makers selling factory-assembled containers as a route to market for their own cells, placed adjacent because no third-party integrator ranking names any of them",
+     "profile:calb @ v1 · profile:cornex @ v1 · profile:great-power @ v1 — registry basis; ecosystemRole"
+    ],
+    [
+     "The clearest US position in the AI-campus power-buffer category held by an adjacent member, on a ride-through certification and a 5 GW deployment",
+     "profile:on-energy @ v4 — ecosystemRole"
+    ],
+    [
+     "The EPA 2027 on-highway emissions rules, proposed, dated 2027-01, carried by an adjacent member whose membership rests on its storage catalogue rather than its engine line",
+     "profile:cummins @ v1 — policyExposure[] EPA 2027 on-highway emissions rules"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "4 min",
+   "kind": "callout",
+   "ps": [
+    "**1 — There is no agreed ranking of this segment, and this module does not invent one.** It reports which house put whom where, and it never states that the number-one integrator is anybody without the instrument attached. A claim that does is quoting one table and hiding four others.",
+    "**2 — No revenue figure exists for one incumbent's storage business at all.** Its dossier records that storage sits inside a combined automotive line and that no standalone energy-storage revenue has ever been disclosed in any period. Any storage revenue attributed to it is a third-party estimate; only shipment volumes and ranks exist.",
+    "**3 — This module carries no financial comparison across the segment.** The normalized figures belong to the public segment lesson's numbers section and regenerate on their own clock. Repeating them here would create two copies that drift.",
+    "**4 — No web source was consulted.** Every claim traces to a dossier field and each dossier carries its own citations. If a dossier is wrong, this module is wrong in the same way and at the same version — which is exactly why the ledger pins a profile version rather than a date.",
+    "**5 — One challenger's hyperscaler contract book is uncorroborated and is presented as such.** No customer is named and no third party has confirmed it. It appears in the indicators as something to watch, never in the dominance section as a fact.",
+    "**6 — No US data-centre storage deal is documented for the state-owned incumbent in any English source**, and its AIDC relevance is explicitly inferential on its own dossier's reading. Another incumbent's disclosed data-centre wins are pilots with unnamed operators. Neither appears here as an AIDC position.",
+    "**7 — Several relationships in this segment are supplier and rival at once, and none of them is resolved.** One incumbent buys another member's cells and competes with its systems. Another locks multi-year supply from two companies that both sell competing containers. A third gave a strategic-partner award to a company fielding rival containers. The record states the entanglement; it does not state how any of them ends.",
+    "**8 — The three cell makers placed adjacent may be under-rated by the role rather than correctly placed.** The registry's stated reason is the absence of a third-party integrator ranking — an evidentiary test, not a capability one. One of the three basis lines records the single contrary data point and dismisses it as a national sub-segment rather than the global set. That is a defensible call and it is a call; a future ranking edition could move all three.",
+    "**9 — The review date rests on a judgment, not on a sort.** The nearest dated gate in the member set belongs to an adjacent member, is a proposed rule, and governs highway engine emissions rather than anything here. The analysis file sets out in full why the date was taken anyway and what actually justifies it.",
+    "**10 — This module does not forecast.** It states what each player is betting, sourced to that player's own strategy read and labelled as analysis, and what is dated on the record. It does not predict who will be first next year, what the final content rules will do to any structure, or whether any of the fourteen indicators resolves the way its owner hopes."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the first buying criterion in this segment, and why is it unstable?",
+     "a": "**Bankability** — a Wood Mackenzie or BloombergNEF ranking plus independent-engineer acceptance. It is unstable because the houses disagree: for 2025, Wood Mackenzie's comprehensive ranking puts Sungrow first, Benchmark puts BYD first, and InfoLink puts Tesla first. None states its metric precisely enough to be reconciled with the others — shipments, installations and contracted volume are never separated."
+    },
+    {
+     "q": "Name the two different kinds of top-ten placement in this segment.",
+     "a": "**Volume** — gigawatt-hours shipped, installed or contracted, which is what a shipment league counts. And a **multi-criteria scorecard**, which is what a comprehensive ranking scores. A vendor can rank tied fifth on the scorecard at roughly 8 GWh while the volume leader ships roughly 47 GWh. Both placements are real; they answer different questions, and a buyer applying criterion one is reading one of them."
+    },
+    {
+     "q": "Why do three cell makers that build and sell containers sit at the adjacent role rather than challenger?",
+     "a": "Because no third-party integrator ranking names any of them. The registry's test for the leading set is evidentiary — someone else put you in a table — so a company can ship certified 5 and 6 MWh containers at volume and still be adjacent. The registry's own phrase is that the system business is a route to market for the cell."
+    },
+    {
+     "q": "What separates the Western and Chinese fields in the US market, on this segment's own record?",
+     "a": "Ownership rules, not engineering. Chinese integrators took roughly 76% of a market past 100 GW, and the most capable Chinese systems here — a transformerless grid-forming line, solid-state-transformer and 800 VDC work, grid-forming blocks — are excluded from the tax-credit-linked US market by prohibited-foreign-entity tests rather than by specification. Only two Western integrators hold at-scale compliant supply chains."
+    },
+    {
+     "q": "Read the eighteen bets as a set. What is the pattern?",
+     "a": "Only three of the eighteen are primarily about the container — density, cost, duration. The other fifteen are about **access**: a supply chain's ownership, a certification, a tax credit, a ranking, a parent's order book, or an exit. That follows from the buying criteria themselves, where criterion one is a third-party ranking and criterion four is the prohibited-foreign-entity exposure of the cell inside."
+    },
+    {
+     "q": "What is the single indicator that moves three members of this segment at once?",
+     "a": "The **final prohibited-foreign-entity regulations**, due late 2026, and whether continuing licence and intellectual-property ties taint effective control of a restructured US cell plant. One incumbent owns the structure; two Western integrators depend on its cells for their domestic-content claims. If it fails the test the damage is systemic to the US mid-tier, not to one company."
+    },
+    {
+     "q": "Which is the segment's one hard shared date, and what does it actually do?",
+     "a": "**October 2027**, when NDAA Section 154 bars Department of Defense battery procurement from three of the ten incumbents. It is a procurement bar, not an import ban, and it does not reach commercial projects — so it is a narrower instrument than the tax-credit rules that bite every day, and it should not be quoted as a market-access event."
+    },
+    {
+     "q": "A competitor says they are a top-five BESS integrator. What is the first question?",
+     "a": "Which table, which year, and what did it count? Five houses rank this segment and at least three disagree about first place for 2025; one house's own two instruments disagree with each other. Without the instrument the claim is unfalsifiable — and with it, a scorecard placement is often the stronger and more defensible claim anyway."
+    },
+    {
+     "q": "Where does the AI-campus power buffer sit relative to this segment's rankings?",
+     "a": "Outside them. The clearest US position in that category belongs to a member the registry places **adjacent**, whose product is a medium-voltage uninterruptible power system rather than a grid container, on a ride-through certification and a 5 GW deployment. The most specific product from inside the segment belongs to a challenger and is validated at a national laboratory. No ranked incumbent owns the category yet."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A prospect says their incumbent supplier is \"the number one BESS integrator\". What is the strongest response?",
+     "c": [
+      "Correct them — the number one is Sungrow, per Wood Mackenzie's 2026 ranking",
+      "Ask which ranking house, which year and which metric, because at least three houses name a different first place for 2025",
+      "Agree, since integrator rankings are published annually and converge",
+      "Point out that rankings do not matter because bankability is set by the independent engineer"
+     ],
+     "a": 1,
+     "why": "Three houses answer differently for 2025 — Wood Mackenzie names Sungrow, Benchmark names BYD, InfoLink names Tesla — and one house's own two 2025 instruments place the same company third and fourth. The dossier record is explicit that none of them states its metric precisely enough to reconcile. Option A repeats the same error in the other direction; option D is wrong because the ranking IS the first buying criterion, alongside independent-engineer acceptance."
+    },
+    {
+     "q": "A cell maker ships certified 5 MWh and 6.26 MWh containers at volume and is placed adjacent rather than challenger. What does that tell a seller?",
+     "c": [
+      "Its containers are not certified to the standards a US buyer requires",
+      "It sells only into its domestic market",
+      "No third-party integrator ranking names it, so it has no standing on the segment's first buying criterion",
+      "The registry has not been updated since the company entered the segment"
+     ],
+     "a": 2,
+     "why": "The role is assigned on an evidentiary test — whether someone else put the company in a table — not on capability or certification. All three cell makers in this position carry real certificates and named deployments. What they lack is a ranking placement, which is precisely what criterion one asks for, so the role field is the registry stating in advance what a bankability-driven buyer will conclude."
+    },
+    {
+     "q": "Which of these would change who is sellable into a US tax-credit-linked project without any vendor doing anything?",
+     "c": [
+      "The Department of Defense procurement bar taking effect in October 2027",
+      "The next comprehensive integrator ranking edition",
+      "The final prohibited-foreign-entity regulations ruling on whether a restructured plant's licence ties taint effective control",
+      "A joint venture closing on a Western integrator's storage business"
+     ],
+     "a": 2,
+     "why": "The procurement bar is a federal-counterparty rule and does not reach commercial projects. A ranking edition changes standing, not eligibility. A joint-venture close changes one counterparty. The content rules decide whether one plant's cells still carry a domestic-content halo — and two Western integrators rest their claims on that plant, so a single ruling moves three members of the segment at once."
+    },
+    {
+     "q": "Read the eighteen bets as a set. Which statement is best supported?",
+     "c": [
+      "Most players are competing on container density and installed cost",
+      "Most players are competing on access — supply-chain ownership, certification, credits, rankings and channel — rather than on the container",
+      "The Chinese players compete on cost and the Western players on technology",
+      "The bets divide evenly between product and market strategy"
+     ],
+     "a": 1,
+     "why": "Only three of the eighteen are primarily about the container itself. The rest turn on who may sell what to whom under which rule — which follows directly from buying criteria that open with a third-party ranking and include the prohibited-foreign-entity exposure of the cell inside. Option C fails on its own terms: the deepest grid-forming and 800 VDC engineering in the segment sits with Chinese vendors who are excluded on ownership, not out-engineered."
+    },
+    {
+     "q": "A mid-tier integrator has Korean cells, a Korean parent and a US-engineered converter — the cleanest compliance structure in the segment. Its dossier calls something about it an anomaly. What?",
+     "c": [
+      "That it has never been ranked despite the clean structure",
+      "That it does not market the structure at all — no page, white paper or release anywhere — while messier competitors built campaigns on domestic content",
+      "That its cells are sourced from a competitor",
+      "That it exited the US market despite the advantage"
+     ],
+     "a": 1,
+     "why": "The dossier's finding is a marketing absence, not a commercial one: no compliance or non-Chinese-supply-chain page, white paper or press release exists on its site or in trade press, while competitors with messier chains built entire campaigns on exactly that claim. Buyers screening for compliant supply have to discover it on their own — which is the opening for anyone selling against it, and the warning for anyone selling like it."
+    },
+    {
+     "q": "Why does this module sit at the contributor tier while the segment lesson it sits above is public?",
+     "c": [
+      "Because it contains figures the dossiers do not publish",
+      "Because it names covered companies, which public modules may not do",
+      "Because it ranks and judges named companies — the public lesson states the record, and judgment about named companies is what the content-scope rule keeps out of public modules",
+      "Because its sources are not public"
+     ],
+     "a": 2,
+     "why": "Every input to both layers is the same public dossier set, so option D is wrong and option A is wrong. The public segment lesson names all 32 members already, which rules out option B. The difference is judgment: the lesson states what the registry and the dossiers state, while this module ranks, assesses bets and recommends a play. The 2026-09-07 decision moved that fence to contributor rather than to admin, so the future team reads it."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "Segment role. The dossier places the company in the segment's established leading set — ranked top-tier by a third party, or described by the dossier as the incumbent, the benchmark, the reference, or the leader for what the segment makes or does."
+  },
+  {
+   "t": "challenger",
+   "d": "Segment role. The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves."
+  },
+  {
+   "t": "adjacent",
+   "d": "Segment role. The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members never count toward the floor rule's incumbent or challenger."
+  },
+  {
+   "t": "comprehensive ranking",
+   "d": "A ranking built from a multi-criteria scorecard rather than from volume — Wood Mackenzie's integrator ranking scores ten criteria, so a vendor can place highly on it while shipping a fraction of the leaders' gigawatt-hours."
+  },
+  {
+   "t": "shipment league",
+   "d": "A ranking built from counted volume — gigawatt-hours shipped, installed or contracted in a period. InfoLink, Benchmark and SNE publish these. A shipment league and a comprehensive ranking can order the same field differently and both be right about what they measure."
+  },
+  {
+   "t": "OBBBA",
+   "d": "The US budget act carrying the prohibited-foreign-entity rules that govern which projects may claim the storage tax credits, and the material assistance cost ratio that prices foreign content into a project rather than banning it outright."
+  },
+  {
+   "t": "NDAA Section 154",
+   "d": "The National Defense Authorization Act provision barring Department of Defense battery procurement from named Chinese producers from October 2027. It is a procurement bar, not an import ban, and it does not reach commercial projects."
+  },
+  {
+   "t": "material assistance cost ratio",
+   "d": "The test under the prohibited-foreign-entity rules that measures how much of a project's cost comes from a prohibited source. Because it is a ratio rather than a list, its effect is on a bid's competitiveness rather than on market access outright."
+  },
+  {
+   "t": "route to market",
+   "d": "A cell maker selling a finished container so that its own cells reach a buyer who does not purchase cells. The registry treats it as an adjacent position rather than a challenger one when no third-party integrator ranking names the seller."
   }
  ]
 };

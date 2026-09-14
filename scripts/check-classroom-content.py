@@ -830,8 +830,12 @@ def run_gate_truth_table(src, lesson_ids=()):
     # gate than reading, and a module is read behind exactly that capability.
     gids = out.get("guidanceIds") or []
     cases = 1
-    if len(gids) != 9:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 9" % len(gids))
+    # Hard-coded on purpose: it catches a module silently dropped from (or
+    # doubled into) `guidanceDocs_()`, which deriving the count from the same
+    # function could not. Bump it in the commit that registers a module —
+    # 9 at C3 session 3, 10 since S2 session 1 added the first landscape.
+    if len(gids) != 10:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 10" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

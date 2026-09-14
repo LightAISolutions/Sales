@@ -3,11 +3,162 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.64r] — 2026-09-14 06:39:45 AM EST
+
+> **Prompt:** "Run S2 session 1 — the landscape module for storage-integrators-and-containers — on Opus 5 xhigh
+> as a fresh session. ONE landscape module: no mechanism lesson, no new track, no dossier, no
+> report, no second segment.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest Session); INTEGRATED-REMEDIATION-PLAN.md
+> §7.17 (your brief — it carries today's measured numbers and two changelog traps), §7.3 (run table
+> order 5) and §7.2 decision 2 (why a landscape may name companies when no other guidance module may);
+> CLASSROOM-CURRICULUM-PLAN.md §10.6 VERBATIM — its section list, tier, provenance line and
+> claims-ledger rule are the contract — plus §10.2 (the floor), §10.3 (what the segment lesson already
+> carries, so the module does not repeat it), §10.8 and §10.10; .claude/rules/industry-guidance.md IN
+> FULL, especially steps 3, 4, 5, 9 and 10; repository-information/CLASSROOM-SCHEMA.md; and
+> .claude/rules/classroom-app.md.
+>
+> THE SEGMENT, measured 2026-09-14 at v05.62r. 32 members — 10 incumbent, 8 challenger, 14 adjacent —
+> the largest supply segment, far above the floor. All 32 have a dossier and all 32 carry strategyRead,
+> including all 18 incumbents and challengers, which is the each-players-bet row set: eighteen rows,
+> and all eighteen belong. §10.2's S0 table still says 29 (10·8·11) — that was 2026-09-07, before calb,
+> cornex and great-power arrived. Re-measure from profiler-segments.json before you trust any count,
+> including this one.
+>
+> THE WORK — one push commit. (1) `git fetch --unshallow origin main` first if the clone is shallow —
+> you will need history for SHA enrichment, see the CHANGELOG paragraph. (2) Write
+> repository-information/industry-guidance/landscape-storage-integrators-and-containers-analysis.md on
+> the standard analysis shape with a claims ledger: every claim → profile:<slug> at its profileVersion
+> and the dossier field it rests on. Corpus synthesis over the member dossiers ONLY — no new web
+> research, no ingested document; the dossiers already cite their sources and the ledger cites the
+> dossiers. (3) Author guidanceDocLandscapeStorageIntegrators_() in
+> googleAppsScripts/Classroom/Classroom.gs BELOW the // CONTENT END fence (guidance is not pipeline
+> write-set), id landscape-storage-integrators-and-containers-2026-09, group "The Value Chain",
+> contributor tier, a **Provenance:** line reading "Corpus synthesis over the segment's member dossiers
+> at the versions in the claims ledger; no ingested document", the nine §10.6 sections in its order.
+> Register it at the END of guidanceDocs_() and extend that function's lane-ordering comment — this is
+> the tenth module and the first in a fourth lane. (4) Set reviewBy from the nearest dated gate, not a
+> cadence: across the 32 members the future gates are 2027-01 (Cummins, EPA 2027 on-highway), 2027-04
+> (Sungrow, EU high-risk inverter phase-out) and three at 2027-10 (CATL, Envision, BYD — NDAA §154).
+> The nearest is earlier than updated+6mo so take it, but TWO ARE PARTIAL DATES and the nearest sits on
+> an adjacent member — resolve that judgment explicitly in the analysis markdown. A nearer date on a
+> development the module leans on wins. (5) Scraper interest seed per industry-guidance step 9 — but
+> CHECK FIRST whether an existing SCRAPER_INTEREST_TOPIC_SEEDS entry already covers this topic; if it
+> does, no Scraper edit and no Scraper rotation. (6) THEN regenerate the segment lesson:
+> `python3 scripts/build-classroom-segments.py --segment storage-integrators-and-containers`, which
+> rewrites its read-next from "No landscape module yet" to the deep link. This is the step §10.6
+> requires and it must come AFTER the module exists. Never hand-edit the generated literal. (7) Bump
+> Classroom's GAS version in BOTH Classroom.gs VERSION and live-site-pages/gs-versions/Classroomgs.version.txt
+> (and Scraper's in both, if step 5 touched it), with GENERIC entries per changelog-security —
+> "Guidance library updated" / "Curriculum updated", never naming the segment's companies or the analysis.
+>
+> DO NOT: author or revise any mechanism lesson. Do not regenerate any segment other than this one. Do
+> not put the module inside the content fence. Do not touch Profiler.gs or Profiler.html — module
+> authoring stopped touching Profiler at C3. Do not blend analysis with fact in each-players-bet: a bet
+> drawn from strategyRead is labelled as analysis, per §10.6. Do not refresh gateDigest — guidance sits
+> outside the fence and touches no gate symbol, so expect P2 on your own diff (you are a developer
+> session, not a pipeline run) and NO P3; if P3 fires, something is wrong and refreshing the digest
+> would hide it.
+>
+> VERIFY: node --check on a .js copy of Classroom.gs (and Scraper.gs if touched);
+> scripts/check-gas-inner-scripts.js; scripts/check-classroom-content.py — capture a pristine HEAD
+> baseline BEFORE any edit; v05.62r took it to 0 errors / 0 warnings, so YOUR BASELINE IS 0/0 AND IT
+> MUST STILL BE 0/0 AFTER. That is the first Classroom session in months with a clean baseline to
+> protect — any error you introduce is unambiguously yours. Then scripts/check-classroom-curriculum.py
+> --strict (it should now report the segment's landscape module present);
+> scripts/build-classroom-segments.py --check (expect 0 due after step 6 — it will read 19 due before
+> it, because concepts and graph pins move on every dossier session; that is the known §10.4
+> degeneracy, not your defect); scripts/check-classroom-pipeline.py --selftest (13 fixtures, 0 failures)
+> and --base origin/main — expect P1 on the developer files and P2 on the guidance literal, expect NO
+> P3, and P7/P8/P10 only from the one regenerated segment. scripts/check-readme-tree.py after the
+> version bumps. Playwright render at admin of BOTH
+> Classroom.html#guidance/landscape-storage-integrators-and-containers-2026-09 AND the regenerated
+> segment lesson's read-next, with ZERO page errors, ops answered by the REAL serving functions, and
+> READ THE SCREENSHOTS — the eighteen-row each-players-bet table is the one most likely to render badly.
+> Also prove the gate: a contributor sees the module, an ANALYST MUST NOT — that is the §7.2 decision
+> that put judgment at contributor, and an analyst-visible landscape would be a real access defect.
+> Render recipe: step 7 of .claude/rules/industry-guidance.md — serve a scratch copy over
+> http://127.0.0.1 with _e = '' and AUTO_REFRESH = false, seed the session AFTER page load
+> (sessionStorage, and single-tab enforcement clears it on load), override window._gasPost AFTER load
+> too, and HIDE #auth-wall / .splash / #gas-pill / #verify-overlay with CSS rather than remove()ing
+> them — removing raises a pageerror from unrelated page code.
+>
+> THE DEPLOY: watch the Deploy Classroom step (and Deploy Scraper if touched). At v05.62r Classroom
+> confirmed on the first GET leg — "confirmed (GET): Updated to v01.31g (deployment 41) | 41/200" —
+> with no "POLL <n>" line, so the v05.59r poll is armed and has still never been needed; report it if
+> you see one. A RED gate is not proof the deploy failed. Confirm independently AFTER the Deploy step
+> has finished, not while it is in flight, or you race it and burn a deployment version:
+> curl -sL "https://script.google.com/macros/s/$(jq -r .DEPLOYMENT_ID googleAppsScripts/Classroom/Classroom.config.json)/exec?action=api&op=deploy"
+> — NOTE THE -L, the endpoint redirects and without it you get an empty body that looks like a failure —
+> and https://lightaisolutions.github.io/Sales/gs-versions/Classroomgs.version.txt. If GAS is current
+> but Pages is stale, recover with a workflow_dispatch on main.
+>
+> CHANGELOGS — READ THE COUNTERS AND DO THE NON-EXEMPT ARITHMETIC, do not trust the raw numbers. Use
+> the EST clock (TZ=America/New_York date '+%Y-%m-%d'). (a) The repo CHANGELOG stands at 103 raw / 98
+> non-exempt, held under the line only by five sections dated 2026-09-14; IF YOUR PUSH LANDS 2026-09-15
+> OR LATER those stop being exempt, the count is 103, and ROTATION FIRES — move the oldest whole group,
+> eighteen sections dated 2026-09-05 (v04.61r–v04.78r), leaving 85. One group is enough. (b)
+> Scrapergs.changelog.md stands at 49/50, so if step 5 touches Scraper its entry REACHES 50 AND ROTATION
+> FIRES THERE TOO — oldest whole group is twenty-six sections dated 2026-08-28 (repo cross-refs
+> v03.21r–v03.47r), leaving 24. SHA enrichment is mandatory on every moved header in both files, and the
+> unshallow in step 1 is the precondition, not the remedy. Classroomgs.changelog.md is at 31/50 — no
+> rotation there.
+>
+> Normal Pre-Commit and Pre-Push checklists; claude/* branch restarted from origin/main first,
+> git ls-remote before each push.
+>
+> AFTER THIS SESSION the interleave is 5:1 and §7.4 item 6 says the lanes alternate, so the recommended
+> next run is a Phase 4 row — row 6, who-buys-storage, whose brief is already written and standing at §7.16."
+
+**S2 opens. The landscape layer of `CLASSROOM-CURRICULUM-PLAN.md` §10 now exists in the app, and the module that opens it is the biggest segment in the registry.** One landscape module, one regenerated segment lesson, one Scraper seed — and two of the brief's own predictions measured wrong and corrected on the day, which is the pattern §10.4 asked the next session to expect.
+
+### Added
+
+#### `Classroom.gs` — v01.32g
+
+- **`guidanceDocLandscapeStorageIntegrators_()` — `landscape-storage-integrators-and-containers-2026-09`, the tenth guidance module and the FIRST in a fourth lane, `The Value Chain`.** Authored **below the `// CONTENT END` fence** (guidance is never the unattended pipeline's write set), registered at the END of `guidanceDocs_()`, contributor tier on the unchanged `CL_ROLE_CAPS.guidance` capability — no access value moved. `guidanceDocs_()`'s lane-ordering comment extended to record the fourth lane and the rule that S2 grows it by appending rather than interleaving
+- The nine §10.6 sections at §10.6's own ids and in its order: `who-dominates-and-on-what-basis` · `who-threatens` · `each-players-bet` · `the-indicators` · `the-sellers-play` · `claims-ledger` · `what-the-record-does-not-say` · `drill` · `check-yourself`. Nine glossary terms, four tiles, nine flashcards, six quiz items
+- **The `each-players-bet` table carries all eighteen rows** — every incumbent and every challenger, none trimmed. All 32 members carry `strategyRead[]`, so there was no thin-evidence case for a shortlist, and a shortlist would have turned a complete roster into an editor's pick. Every bet is labelled as analysis and carries **the dossier's own confidence label** in its own column, so a judgment resting on a judgment reads as one
+- **A 41-row claims ledger**, every row a claim → `profile:<slug>` at its `profileVersion` on the day → the dossier field it rests on. No publisher citation appears anywhere in the module: the dossiers carry the primary sources and this ledger carries the dossiers
+- **`reviewBy` 2027-01-01, taken on a written judgment rather than a sort.** Five future-dated gates exist across the 32 members and no `recentDevelopments[]` entry anywhere in the segment is future-dated. The nearest is Cummins' `2027-01` — but Cummins is **adjacent**, the regime is `proposed`, and it governs highway engine emissions rather than anything in the module. Rejecting it does not buy a later review: `updated` + 6 months is 2027-03-14 and the next real candidate (Sungrow, EU inverter phase-out) is 2027-04-01, *later* than the default. The date is taken because the module's dominance section rests entirely on **published ranking editions** whose own labels (a 2026 edition assessing 2025, an H1 2026 table) state their cadence — the turn of the year is when that clock ticks. Cummins' date is the coincidence; the ranking cycle is the reason. Full reasoning in §10 of the analysis file
+
+#### `Scraper.gs` — v02.03g
+
+- **`SCRAPER_INTEREST_TOPIC_SEEDS` gains `topic-bess-integrators`**, sourced `guidance:landscape-storage-integrators-and-containers-2026-09`. Every existing seed was read first, as step 5 of the brief required: `topic-bess-technology` owns the cell layer, `topic-bess-bankability` the certification and warranty layer, `topic-china-policy` the content rules — **none scores the integrator layer**, which is where this module ages (who is ranked where, by which house, on how many GWh). Bare `container` and `integrator` are deliberately absent from the terms; both match everything and would pad the band
+
+#### `repository-information/industry-guidance/`
+
+- **`landscape-storage-integrators-and-containers-analysis.md`** — the module's source of truth, 270 lines: the segment as measured, the executive read, known-vs-new against the curriculum, the four routes of attack, the eighteen bets, the indicators, the seller's play on §10.10's two paths, the 41-row ledger, ten things the record does not say, and the `reviewBy` judgment written out in full. **Corpus synthesis only — no ingested document, no new web research**
+
+### Changed
+
+- **`segment-storage-integrators-and-containers` regenerated** with `build-classroom-segments.py --segment` **after** the module existed, which is the order §10.6 requires: its `read-next` stopped reading "No landscape module yet" and now names the module. `--check` 1 due → **0 due**; the literal was not hand-edited. `revisions[]` took a second entry with `changed: ["read-next"]`, which is exactly the differs set P8 computes
+- **`live-site-pages/Classroom.html` — v01.14w.** The masthead tooltip read "The guidance library — nine modules, search and unified glossary" and registering the tenth made it false. Rewritten count-free so it cannot go stale again, and the `clGuidanceFetchAll` comment beside it likewise. `<meta build-version>` bumped with `html.version.txt`
+- **`scripts/check-classroom-content.py` — the gate truth table's module count 9 → 10**, with a comment recording why it is hard-coded (it catches a module silently dropped from or doubled into `guidanceDocs_()`, which deriving the count from the same function could not) and that it is bumped in the commit that registers a module
+- **`CLASSROOM-CURRICULUM-PLAN.md` §10.3's `read-next` row corrected in place, measured.** It claimed "the renderer applies the reader's gate; a tier that cannot read it sees nothing" for the landscape-module sentence. This is the first session with a module to name, and the sentence is emitted **unconditionally** — an analyst reads it. That is not an access defect (what leaks is an **id**, the sentence says in its own words that the module is gated, and the module itself is denied at the server) but the parenthetical described a per-sentence gate the generator's template and the `cl*` renderer never had, and a future session reading it would have "fixed" a renderer that was never broken
+- §10.6 gained a **built-so-far** note carrying the three things the next eighteen landscapes inherit; §10's provenance paragraph and the §6 and §7.3 ledgers flipped S2 from 0 to **1 of 19**
+
+### Fixed
+
+- **254 literal backticks were stripped from the module before it shipped, and only the screenshot found them.** `clFmt` resolves `**bold**`, `*italic*` and `{{term}}` — and nothing else — so the ledger's source column would have printed `` `profile:sungrow` `` with its backticks to every reader. No checker sees this: the micro-markup check scans for `{{}}`, `**…**` and `*…*` only. The backticked form stays in the analysis markdown, where it is correct
+
+### Verified
+
+- **`check-classroom-content.py` 0 errors / 0 warnings — the pristine `HEAD` baseline, protected.** v05.62r had just taken it there from 24, so any error here would have been unambiguously this session's
+- `check-classroom-curriculum.py --strict` — **no structural findings**, and the segment now shows its landscape module present in the coverage table. `build-classroom-segments.py --check` **0 due**. `check-classroom-pipeline.py --selftest` 13 fixtures / **0 failures**; `--base origin/main` reported **P1 ×6, P2 ×9, P7 ×1 and no P3** — the guidance literal sits outside the fence by construction, `gateDigest` was correctly left alone, and the single P7 is the same-day `updated` on the regenerated segment (v05.62r set it to 2026-09-14 this morning). `node --check` on both `.gs` files, `check-gas-inner-scripts.js` 86 blocks, `check-readme-tree.py` re-synced and clean
+- **The contributor gate proven from the real serving path, not asserted.** The PROJECT region was run under Node and `clRequire_` / `guidanceIndex_` / `guidanceDoc_` answered for each tier: admin **OK**, contributor **OK**, analyst **`ROLE_DENIED`** on both `gop=index` and `gop=doc` — 0 modules visible. On screen an analyst opening the module route gets "Industry Guidance is available to the admin and contributor tiers." and nothing else, while the public segment lesson still renders for them in full
+- **Five Playwright renders, zero page errors on every one**, ops answered by those same real functions. The eighteen-row table, the fourteen-row indicator table and the 41-row ledger were read on screen rather than counted in text: all rows present, term chips resolving, bold and italic rendering, no literal markup anywhere
+
+### Notes
+
+- **Neither predicted changelog rotation fired, and both predictions were the same arithmetic error.** §7.17 read the raw counters where the rule counts **non-exempt** sections. This push landed 2026-09-14, so the repo CHANGELOG's five same-day sections plus this one stay exempt at **98 non-exempt** against a trigger of 100; `Scrapergs.changelog.md`'s new section is itself same-day, leaving **49 non-exempt** against a trigger of 50. The clone was deepened first regardless — that is the right order whether or not rotation fires, and it is a precondition rather than a remedy
+- The regenerated `read-next` names the module but does not link to it — the generator's template emits the id as italic text and the `cl*` renderer has no anchor syntax. §10.6 calls it a deep link; today it is a stated id. That is a generator-template question and §10.4 forbids hand-editing the generated literal, so it is recorded here rather than patched
 
 ## [v05.63r] — 2026-09-14 05:51:27 AM EST
 

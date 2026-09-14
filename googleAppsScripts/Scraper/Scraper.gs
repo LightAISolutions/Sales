@@ -1,4 +1,4 @@
-var VERSION = "v02.02g";
+var VERSION = "v02.03g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -650,6 +650,21 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
   { key: 'topic-bess-technology', label: 'BESS technology & battery cell supply',
     terms: ['LFP', 'battery cell', 'sodium-ion', 'grid-scale battery', 'energy storage system'],
     source: 'guidance:bess-tech-fundamentals-2026-08' },
+  // Guidance seed for the first landscape module (industry-guidance.md step 9).
+  // Checked against every existing seed before adding: 'topic-bess-technology'
+  // above owns the CELL and chemistry layer, 'topic-bess-bankability' owns the
+  // certification and warranty layer, and 'topic-china-policy' owns the content
+  // rules — none of the three scores the INTEGRATOR layer, which is where this
+  // module ages: who is ranked where, by which house, and on how many GWh. The
+  // terms are that layer's own nouns. 'container' and 'integrator' are absent
+  // as bare words on purpose — both match everything from shipping to IT and
+  // would pad the topic band, the same trap the 'supply chain'/'warranty' notes
+  // below record.
+  { key: 'topic-bess-integrators', label: 'BESS integrators: rankings, shipment leagues & containerized systems',
+    terms: ['BESS integrator', 'storage integrator', 'integrator ranking', 'GWh shipped',
+            'containerized battery', 'containerized storage', 'DC block', 'AC block',
+            'long-term service agreement'],
+    source: 'guidance:landscape-storage-integrators-and-containers-2026-09' },
   // Guidance seed for the grid-equipment-shortage module (industry-guidance.md
   // step 9). Terms are the trade press's own nouns for the SUPPLY side, chosen
   // to discriminate against 'topic-grid-infrastructure' above, which already
