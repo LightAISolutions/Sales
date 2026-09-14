@@ -1,4 +1,4 @@
-var VERSION = "v01.27g";
+var VERSION = "v01.28g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -32503,6 +32503,410 @@ function clLessonHowAUtilityBuys_() {
 };
 }
 
+function clLessonBackupGeneration_() {
+  return {
+ "schemaVersion": 1,
+ "id": "backup-generation",
+ "type": "module",
+ "title": "The Ten-Second Race",
+ "short": "The grid drops and a gen-set has ten seconds to be carrying the hall. Ratings, block load, transfer, load shed, the permit's hours — and what a battery changes.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-13",
+ "reviewBy": "2027-03-13",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:caterpillar",
+    "date": "2026-09-03",
+    "note": "the ten-second race row by row; open against closed transition; the standby / prime / continuous ratings and ISO 8528; block load and the swinging hall; paralleling, droop and spinning reserve; load-shed priority and the return trip; what the air permit constrains from the engine's side"
+   },
+   {
+    "kind": "public",
+    "ref": "study:cummins",
+    "date": "2026-09-04",
+    "note": "the four derating conditions and why the nameplate is a laboratory number; the emissions class as a purchase decision — Tier 2 emergency against Tier 4 Final, Stage V and local overlays, and the hour allowance that comes with each"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rolls-royce-power-systems",
+    "date": "2026-09-04",
+    "note": "what a battery changes about the start — soft loading, sizing to the average rather than the peak, and the asset that can earn; power battery against energy battery and the C-rate that separates them; the state-of-charge arbitration that is the genuinely hard part"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rehlko",
+    "date": "2026-09-04",
+    "note": "the four clocks on one bus — hold-up, ride-through, autonomy and transfer time — and the design relationship that autonomy must exceed transfer time with margin for a failed start"
+   },
+   {
+    "kind": "public",
+    "ref": "study:eaton",
+    "date": "2026-08-21",
+    "note": "the transfer choreography from the switch side: the ATS as conductor, the relay race between stored energy and the engines, and paralleling switchgear adding sets in priority order"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:enchanted-rock",
+    "date": "2026-09-05",
+    "note": "the gas-microgrid archetype as a worked example of the diesel-replacement and bridge-power pitch"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mainspring-energy",
+    "date": "2026-09-05",
+    "note": "the linear-generator archetype as a worked example of a machine whose sub-1.5 ppm NOx without after-treatment is a permitting wedge where combustion competitors are excluded"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "10 s",
+   "v": "to carry the hall",
+   "sub": "the one number the whole standby architecture is built around"
+  },
+  {
+   "k": "10–20 ms",
+   "v": "of hold-up",
+   "sub": "what the servers coast on — and nothing with a crankshaft can meet it"
+  },
+  {
+   "k": "~100 h",
+   "v": "a year",
+   "sub": "the emergency class's allowance; past it the machine is a different purchase"
+  },
+  {
+   "k": "one step",
+   "v": "block load",
+   "sub": "the spec that separates a standby diesel from everything else"
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-grid-drops",
+   "title": "The grid drops — ten seconds, in order",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "The whole standby architecture exists to get through the window below. The left-hand gutter is **seconds from the loss of supply**, so everything above the first tick happens inside the first second. Times are typical for a diesel standby set; a lean-burn gas set is slower to accept load and a turbine slower still, which is most of why standby fleets stay diesel even on a campus whose main supply is gas.",
+   "lanes": {
+    "gen": "What is carrying the hall",
+    "deploy": "What the plant is doing",
+    "eco": "After the transfer"
+   },
+   "items": [
+    {
+     "x": 0.0,
+     "lane": "deploy",
+     "label": "Utility voltage collapses or drifts out of tolerance",
+     "sub": "The grid, or a fault on the site's own feeder. Nothing upstream of this point is under anyone's control."
+    },
+    {
+     "x": 0.02,
+     "lane": "gen",
+     "label": "Server supplies coast on their capacitors — {{hold-up time}}",
+     "sub": "**10 to 20 milliseconds.** This is the hard deadline everything else is designed around, and **nothing with a crankshaft can meet it.** It is physics, not a product."
+    },
+    {
+     "x": 0.05,
+     "lane": "gen",
+     "label": "The {{UPS}} picks the hall up inside that window",
+     "sub": "Inverter carries the critical load from battery or flywheel. In a double-conversion UPS the load was never on the mains, so there is nothing to detect and nothing to transfer — the hall notices nothing at all."
+    },
+    {
+     "x": 1.0,
+     "lane": "deploy",
+     "label": "The {{ATS}} times out its start delay, then signals start",
+     "sub": "One to three seconds of deliberate waiting, so a momentary dip does not launch a room full of engines. Every second spent here is a second of {{autonomy}} spent."
+    },
+    {
+     "x": 3.0,
+     "lane": "deploy",
+     "label": "Crank, fire, climb to rated speed and voltage",
+     "sub": "Roughly two to eight seconds. The starter turns, fuel lights, the engine reaches rated speed and the alternator builds rated voltage and frequency. A failed first start is the case the whole time budget has to survive."
+    },
+    {
+     "x": 8.0,
+     "lane": "deploy",
+     "label": "Within limits — the ATS transfers",
+     "sub": "Open the utility side, close the generator side. **This is the number {{NFPA 110}} classes a system by**, and for the standard emergency class it is about ten seconds."
+    },
+    {
+     "x": 10.0,
+     "lane": "gen",
+     "label": "The hall lands on the engine as a {{block load}}",
+     "sub": "The whole demand arrives in one step. Speed dips because the engine was carrying nothing an instant ago; voltage dips because the alternator's field takes time to rebuild under current. The governor opens the fuel, the regulator raises excitation, and both recover in a second or two — **if the step was inside what the set can take.**"
+    },
+    {
+     "x": 11.0,
+     "lane": "eco",
+     "label": "The UPS starts recharging from the engine",
+     "sub": "The insurance that just paid out is now a load on the machine that replaced it — and it is drawing while the engine is already carrying the hall."
+    },
+    {
+     "x": 12.0,
+     "lane": "eco",
+     "label": "Mechanical plant added in priority order",
+     "sub": "Minutes. Chillers are the awkward case: a hall rides a few minutes on thermal mass and not many more, and a large chiller motor starting is itself a block load. **A site's thermal ride-through is often the tighter clock, not its electrical one.**"
+    },
+    {
+     "x": 13.0,
+     "lane": "eco",
+     "label": "The fleet runs on stored fuel",
+     "sub": "Hours to days. Deliveries get arranged; every testing regime assumes this is rare. Fuel stops being a spec and becomes logistics."
+    },
+    {
+     "x": 14.0,
+     "lane": "eco",
+     "label": "Utility returns — and is not trusted immediately",
+     "sub": "A return delay lets the supply prove itself stable, then the load moves home, open or closed. The engines run unloaded through a cool-down so turbochargers and exhaust come down gradually. **The whole event is logged — and those run-hours are a legal instrument, not just a maintenance record.**"
+    }
+   ],
+   "note": "**Four clocks get quoted in this conversation and they are not the same thing.** {{hold-up time}} belongs to the server's own power supply (10–20 ms). {{ride-through}} belongs to the UPS and the facility (cycles to seconds). {{autonomy}} belongs to the UPS battery or flywheel (seconds to minutes) and is the budget the entire start-synchronise-load sequence has to fit inside. {{transfer time}} belongs to the ATS and the engines (up to about ten seconds). The design relationship in one sentence: **autonomy must exceed transfer time with enough margin to survive a failed start and a restart attempt** — which is why the arithmetic is done against the whole recovery sequence, not against the transfer figure alone.",
+   "sales": "The gap between **autonomy** and **transfer time** is the entire commercial opening for stored energy in this room, and it is a number the operator already knows. Ask what their measured time-to-load was on the last real transfer — not the design figure — and whether the sequence has ever been run with a first-start failure. The difference between those two answers is what you are selling into."
+  },
+  {
+   "id": "three-ratings",
+   "title": "Standby, prime, continuous — one engine, three numbers",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The same iron carries different kilowatt ratings depending on how it will be used. **A rating is a promise about hours and average load, not a description of the hardware.** {{ISO 8528}} is the rulebook that makes one maker's kilowatt comparable with another's, and every serious {{gen-set}} spec sheet quotes against it.",
+   "cols": [
+    "Rating",
+    "Hours a year",
+    "Load it may carry",
+    "Where it belongs"
+   ],
+   "rows": [
+    [
+     "**{{Standby rating}}** (emergency standby)",
+     "Limited — on the order of a couple of hundred, and only while the normal supply is out",
+     "Varying load averaged well below the rating, with **no overload allowance at all**",
+     "A data center's backup fleet. It is the biggest number the engine will ever wear, bought on the assumption it almost never runs"
+    ],
+    [
+     "**{{Prime power}}**",
+     "Unlimited",
+     "Varying load averaged around **seventy percent** of the rating, with a short overload allowance",
+     "The engine that *is* the site's supply: a {{bridge power}} plant, a remote mine, an island utility"
+    ],
+    [
+     "**{{Continuous rating}}**",
+     "Unlimited",
+     "Constant load at up to the full rating, hour after hour",
+     "A machine run like a power station — a permanently {{islanded}} campus at steady output, or grid export"
+    ]
+   ],
+   "note": "**Read down the table and the number shrinks.** A set that says three megawatts standby is a smaller machine prime and smaller again continuous, because the manufacturer is promising the engine will survive the duty. That is why *a backup fleet cannot simply be re-declared as the campus's main supply when the grid date slips* — the rating, the maintenance interval and the emission class all move together. A fourth rating, limited-time running power, sits between standby and prime for sites expecting long but bounded outages. Manufacturers also publish data-center-specific ratings that relax the average-load rule; treat those as brand vocabulary layered on the same standard. **And every one of these numbers is a laboratory number** — see the derating four in the next section."
+  },
+  {
+   "id": "block-load-and-the-swinging-hall",
+   "title": "Block load, and why an AI hall is a hard load to catch",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "When the transfer closes, the hall's whole demand lands on the alternator in one step. Speed dips, because the engine was carrying nothing an instant ago. Voltage dips, because the alternator's magnetic field takes time to rebuild under current. The governor opens the fuel, the voltage regulator raises excitation, and within a second or two both recover — **if the step was inside what the set can take.** That share of its rating is its {{block load}} capability, and it is the single spec that most separates a standby diesel from everything else. A turbocharged diesel can typically accept its full rated load in one step; the companion part of the rating standard grades how far speed and voltage may dip and how fast they must recover, and critical-load specifications call for its tightest common class.",
+    "**A {{lean-burn}} gas engine cannot do that, and the reason is chemistry rather than engineering effort.** Burning with excess air keeps the flame cool and the {{NOx}} low — which is the whole point of it — but it also leaves less fuel in the cylinder to answer a sudden call for torque, and the turbocharger has to spool before the air-fuel ratio can be held. So gas sets take load in steps, a fraction of the rating at a time, with the controls adding it in stages. That is entirely acceptable for a plant running all day against load that creeps. It is not acceptable for the one moment the entire hall arrives at once, which is why **the standby fleet stays diesel even at a campus whose main supply is gas.**",
+    "Ratings also assume an atmosphere, and four conditions move them. **Altitude:** thinner air means less oxygen per stroke; a turbocharger recovers much of it, which is why a modern turbocharged engine derates far more gently than a naturally aspirated one — until the turbo runs out of margin. **Ambient temperature:** hot intake air is less dense and hot ambient air makes the radiator less effective, so the engine hits a coolant-temperature limit before a power limit; usually free to a stated ambient, then a percentage per degree above it. **Fuel:** ratings assume a reference fuel of stated energy content, so a blend or a different gas composition changes what the engine can make. **Exhaust backpressure and intake restriction:** a long duct run, a hospital-grade silencer or a clogging {{diesel particulate filter}} makes the engine work harder for the same output, and the datasheet states a maximum. The corrections **multiply rather than add**, and the design day — not the average day — is what matters. A gas turbine, being a mass-flow machine, loses output steeply on a hot afternoon, which is the worst possible time because that is when the chillers are working hardest. *A fleet sized from nameplate rather than site-rated numbers is one of the quiet ways a backup plant ends up smaller than the hall it protects.*",
+    "Then there is the load nobody used to design for. **Thousands of accelerators starting, stopping or checkpointing together swing a hall's demand by tens of megawatts inside milliseconds — and no governor answers in milliseconds.** A diesel that took the initial block gracefully can still be driven out of its frequency band by a load oscillating faster than it can breathe. The industry's answer is to put something electronic between the engines and the load: the {{UPS}} on a backup site, a {{BESS}} with a {{grid-forming inverter}} or a bank of {{synchronous condenser}}s on a prime-power one, so **the engines see the average and the electronics see the swing.** From the engine maker's side that buffer is a product line, not a competitor — which is the commercial fact this lesson is pointing at."
+   ],
+   "sales": "Two numbers decide whether there is a conversation: the hall's **block load** at transfer, and its **swing rate** in normal operation. The first is what the engines were bought for; the second is what nobody bought anything for, because it did not exist when the plant was specified. A site whose demand moves tens of megawatts inside milliseconds has a problem no governor can solve, and the honest pitch is not that the battery replaces the engines — it is that **the engines get to see a load they were actually designed for.**"
+  },
+  {
+   "id": "paralleling-and-load-shed",
+   "title": "Paralleling, and the priority list on the way back",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A hall of any size needs more than one engine, and engines cannot simply be wired together. **Two alternators connected out of step push against each other with the full force of the grid behind them:** the one ahead in phase throws its load onto the one behind, currents surge, shafts take a torque shock. {{Synchronization}} is the discipline of never letting that happen — matching voltage, frequency, phase angle and phase rotation before a breaker closes — and the sync-check relay is the device that physically refuses to close until they match. The first set onto a dead bus needs no partner and closes freely; every set after it has to catch up with a bus that is already alive.",
+    "{{Paralleling switchgear}} does this automatically and is the most complex electrical gear in the building. Its controller starts the whole fleet on the {{ATS}} signal, lets the fastest set claim the dead bus, synchronises the others onto it one by one, and then transfers the load — so **the ten-second clock is met by whichever engine wins the race, while the rest arrive seconds later.** Once several sets share a bus they must agree how to split the load. The usual method is {{droop}}: each governor lets its speed sag slightly as its load rises, so the machines settle into shares proportional to their size instead of fighting. One machine — or the controller acting for all of them — runs isochronous to pin the bus frequency exactly where it belongs.",
+    "The fleet is sized in the same grammar as the rest of the data center. **{{N+1}}** means one more engine than the load needs, so any single unit can fail or be down for maintenance. The spare capacity is not idle while the plant runs — it is {{spinning reserve}}, headroom already synchronised and available in seconds, which is what lets the bus absorb a unit trip or a chiller start without a frequency excursion. This is also why an outage plan states how many engines must be *running*, not merely how many exist.",
+    "**If generation runs short, the plant does not go dark — it sheds.** {{Load shedding}} drops pre-ranked non-critical circuits in order: the office floors, then lower-priority mechanical plant, then whole halls by contract tier, until the remaining engines can carry what is left. The list is written in advance, agreed with the tenants, and executed by the paralleling controller in a fraction of a second — *because a human cannot decide it fast enough and a frequency collapse would take everything.* The add-back runs the same list in reverse as engines join the bus, with the mechanical plant staged deliberately.",
+    "Everything in this section is **a written sequence executed by a computer**, and that is its weakness as much as its strength. The order sets are added, the delays between steps, the frequency and voltage windows for a permitted close — all of it is settings, and settings drift as the plant is expanded, as engines are swapped, as someone tunes a nuisance alarm away. *A paralleling lineup that worked on {{commissioning}} day is proven again only when it runs under real load,* which is why the test calendar is not paperwork. And it is why the transfer style matters: an **open transition** never connects the engine to the grid and needs no synchronisation, but its gap is longer than the hold-up time, so stored energy carries **every** transfer including the routine monthly test — a UPS on bypass or short of battery turns that test into an outage. A **closed transition** parallels for under a tenth of a second so the hall sees no break at all, at the price of synchronisation, utility approval, and protection that can detect a lost grid and separate at once."
+   ]
+  },
+  {
+   "id": "the-permit-is-the-ceiling",
+   "title": "The permit is the ceiling, not the engineering",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "7 min",
+   "intro": "Everything above is about what the machine can do. This is about what it is *allowed* to do, and it is the constraint that decides more projects than any spec sheet. **The run-hour meter on the controller is a legal instrument.**",
+   "ps": [
+    "**The pollutant is {{NOx}}, and the first thing the permit decides is what class of machine you own.** Nitrogen oxides make ground-level ozone downwind, and every metropolitan region with a data-center cluster is watching its ozone number. An **{{emergency generator}}** may run when the supply fails, plus a limited annual allowance — commonly around **100 hours** — for testing and maintenance; in exchange it is held to an earlier emission stage and permitted with little review. Run that same engine for {{prime power}}, {{peak shaving}} or a {{demand response}} payment and it is a *non-emergency* engine: it must meet **{{Tier 4}}**, which in practice means {{selective catalytic reduction}} and a particulate filter on the exhaust, {{DEF}} in a tank with freeze protection, more backpressure, more maintenance and a longer lead time.",
+    "**So the emissions class and the business model are the same decision.** A fleet certified emergency-only is *pure insurance* — it can never earn. Certifying the same steel for unrestricted running turns it into a plant that can shave peaks, sell demand response or bridge a late grid connection. Europe's {{EU Stage V}} is a separately certified variant, stricter on particle number, so a European and a US version of one model are not the same machine; and **local overlays sit on top of the federal floor** — a state or county limit, of which Northern Virginia's nitrogen-oxide restrictions are the best-known example in this industry, can mandate a different after-treatment or cap the site's total installed generation outright.",
+    "**The second thing the permit decides is how big the plant may be before the review changes character.** Potential emissions are counted for the *whole site*. Above the thresholds the plant is a **{{major source}}**: modelling, public comment, best-available-control analysis, a schedule measured in years. Below them it is a **{{minor source}}**, and a plant can stay below deliberately by accepting enforceable limits on hours or fuel — a synthetic minor. That is why on-site power is packaged in blocks sized to the permit rather than to the engineering, and why a campus in a {{non-attainment area}} pays a premium for the lowest-emitting machine available.",
+    "**And there is an unresolved question sitting under the whole category.** Whether dozens of nominally separate or mobile units running together count as *one* source is the live legal risk over on-site generation generally. A project structured around the answer being 'no' is a project carrying a regulatory bet, and it is worth knowing whether the customer has priced it.",
+    "**Two archetypes exist precisely because of this section, and they are worth recognising as shapes rather than as names.** The **gas-microgrid platform** sells bridge power, diesel-replacement backup and interconnection enablement on natural gas — the answer where the grid is late and diesel's hour cap is the binding constraint. The **linear generator** is a fourth category alongside engines, turbines and fuel cells: a flameless uniform-compression reaction driving opposed magnets through coils, quoted at **under 1.5 ppm NOx with no after-treatment at all**, zero water, and software-switchable fuel. Its whole commercial wedge is permitting — it wins where air quality forbids diesels, reciprocating engines and turbines outright. *When a seller cannot get a diesel permitted, the competitor is not a better diesel.*"
+   ],
+   "sales": "Ask which class the fleet is permitted in **before** talking about anything else, because it silently answers three questions at once: whether the engines can legally earn, how many hours a year they may run, and whether the site is a major or minor source. A campus whose backup is emergency-only has an asset that is pure cost — and **a battery has no air permit and no hour cap**, which is the single most useful sentence in this lesson for a storage seller."
+  },
+  {
+   "id": "what-a-battery-changes",
+   "title": "What a battery changes — and what it does not",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "The classical chain is a relay race with an awkward handoff: capacitors hold for milliseconds, the UPS holds for minutes, and the engine has ten seconds to start and take the whole hall in one bite. Put a megawatt-scale battery on the bus and the gap changes shape — the engine no longer has to be *first*, only *eventually*. Read both cards; the second is the one that keeps a proposal honest.",
+   "cards": [
+    {
+     "t": "What it genuinely changes",
+     "meta": "A battery at megawatt scale is not a bigger UPS — it sits at a different point on the bus and does a different job",
+     "adv": [
+      "**The engine can start gently.** With the battery carrying the hall, sets can be brought up, synchronised and *soft-loaded* over tens of seconds instead of catching the load in one step — so the {{turbo lag}} and load-acceptance problem that forces standby fleets to be diesel is relaxed, and machines that would never survive a cold block load become usable",
+      "**The plant can be smaller.** A standby plant is sized for the peak the site can ever present; if the battery absorbs the peaks and the swings, the engines only cover the *average* — and in an AI hall the gap between peak and average is large. The battery is buying engine capacity, and past some load profile it is cheaper than the steel it replaces",
+      "**The asset can earn.** An engine certified emergency-only is pure insurance. A battery has no {{air permit}} and no hour cap, so it can shave the demand peaks that set the bill, arbitrage energy price or hold frequency — all year, not just during outages. That is why {{microgrid}} controls are sold as a product rather than an accessory",
+      "**Power and energy are two separate purchases.** Megawatts are set by the inverter, megawatt-hours by how many cells there are, and the {{C-rate}} between them decides what you are actually buying: a {{power battery}} for smoothing swings and bridging the start, an {{energy battery}} for riding a whole outage"
+     ],
+     "dis": [
+      "**It is still a finite store with a {{state of charge}}** — and a hybrid that spent its charge on peak shaving is a hybrid that cannot ride an outage",
+      "**Arbitrating the money duty against the insurance duty in real time is the genuinely hard part**, and getting that policy wrong is how a hybrid becomes *less* reliable than the dumb diesel plant it replaced",
+      "**It does not replace the UPS.** The UPS buys milliseconds to minutes and is a reliability device; the battery buys minutes to hours and is an economic device that happens also to improve reliability. They are not substitutes, and a site with a battery still needs the UPS",
+      "**Cells fade.** A system sized exactly to requirement on day one is undersized by year five, so the design either oversizes at the start or plans {{augmentation}} later — which is why {{state of health}} sits on a hybrid plant's dashboard beside state of charge"
+     ]
+    },
+    {
+     "t": "Why the engines are still there",
+     "meta": "Each technology is bought for what it is cheap at, and the arithmetic is not close",
+     "adv": [
+      "**Engines are a far cheaper way to buy hours than cells are** — a multi-day outage is an amount of energy no economically sized battery carries",
+      "**Cells are a far cheaper way to buy seconds and steps than an oversized engine is**, which is exactly why most real designs land on a power-shaped battery plus engines rather than on either alone",
+      "Fuel is storable and re-suppliable on a timescale a depleted battery cannot match, which is why the long tail of an outage belongs to the engine"
+     ],
+     "dis": [
+      "The engine's hours are legally capped unless it is re-certified, and re-certification changes the machine, the price and the lead time",
+      "Its value is entirely contingent — it earns nothing in the years nothing happens, and its readiness is only ever proven by a test that itself consumes the UPS on an open transition",
+      "It remains the one piece of the chain that must start, from cold, on demand, with a bounded number of attempts"
+     ]
+    }
+   ],
+   "note": "**The mental model that keeps this straight:** the UPS buys *milliseconds to minutes*, the battery buys *minutes to hours*, the engine buys *hours to days*, and each is the cheapest way to buy its own stretch of that line. A proposal that claims one of them abolishes another is selling past the arithmetic."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "intro": "Four failures, and every one of them is a plant that passed its paperwork.",
+   "ps": [
+    "**An open transition with no stored energy behind it.** Break-before-make is simple, cheap and never connects the engine to a de-energised utility line — and its gap is longer than the {{hold-up time}}. So the {{UPS}} carries *every* transfer, **including the routine monthly test.** A UPS on bypass, out of battery or quietly under-sized turns a scheduled exercise into the outage it was meant to prevent. Large motor loads have the same problem from the other side: they see a re-energisation transient and often must be restarted rather than transferred.",
+    "**Generators that do not synchronise.** Everything about paralleling is settings — the order sets are added, the delays, the frequency and voltage windows for a permitted close — and settings drift as a plant is expanded, as engines are swapped, as someone tunes away a nuisance alarm. The sync-check relay does its job and refuses to close, which is the *safe* failure; the fleet then arrives late or incompletely against a ten-second clock that does not move. **A lineup proven on {{commissioning}} day is proven again only under real load.**",
+    "**Load not shed in priority.** The shed list is the plant's last line: pre-ranked circuits dropped in a fraction of a second so the remaining engines can carry what is left. It fails in two directions. A list that was agreed with tenants who have since changed, or a site that grew past the fleet it was sized for, sheds the wrong things. And the add-back has its own trap — **a hall rides a few minutes on thermal mass and not many more**, and a large chiller starting is itself a block load, so the *thermal* ride-through is often the tighter clock while everyone is watching the electrical one.",
+    "**The permit that lags the shell.** A building can be finished before its air permit allows the generation it needs, and the plant's class cannot be changed by paying more — a fleet certified emergency-only may not run for {{peak shaving}}, a bridge, or a {{demand response}} payment, whatever the commercial pressure. Sites in a {{non-attainment area}} meet this first and hardest, and the re-certification path costs after-treatment, lead time and often a different machine. *The permit is the one constraint in this lesson that cannot be engineered around after the fact.*"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Walk the ten seconds from loss of supply to a loaded engine. What is carrying the hall at each stage?",
+     "a": "0 to about 20 milliseconds: the server power supplies coast on their own capacitors — hold-up time, which nothing with a crankshaft can meet. Inside that window the UPS inverter picks the critical load up from battery or flywheel. One to three seconds: the ATS times out a deliberate start delay so a momentary dip does not launch the fleet, then signals start. Two to eight seconds: crank, fire, climb to rated speed and voltage. About eight to ten seconds: voltage and frequency are within limits and the ATS opens the utility side and closes the generator side. The next second: the hall lands on the engine as a block load. Then the UPS recharges from the engine and the mechanical plant is added in priority order."
+    },
+    {
+     "q": "Four clocks get quoted in the same conversation. Name them and give the design relationship between them.",
+     "a": "Hold-up time belongs to the server's power supply, 10 to 20 milliseconds. Ride-through belongs to the UPS and the facility, cycles to seconds. Autonomy belongs to the UPS battery or flywheel, seconds to minutes, and is the budget the whole start-synchronise-load sequence must fit inside. Transfer time belongs to the ATS and the generator plant, up to about ten seconds for the standard emergency class, and is the number NFPA 110 classes a system by. The relationship: autonomy must exceed transfer time with enough margin to survive a failed start and a restart attempt — so the arithmetic is done against the whole recovery sequence, not against the transfer figure alone."
+    },
+    {
+     "q": "What does a standby rating actually promise, and why can a backup fleet not be re-declared as the site's main supply when the grid date slips?",
+     "a": "A rating is a promise about hours and average load rather than a description of hardware, made against ISO 8528. Standby means a limited number of hours a year, only while the normal supply is out, at a varying load averaged well below the rating, with no overload allowance at all. Prime means unlimited hours at around seventy percent average with a short overload allowance; continuous means constant load at full rating. Read down that list and the kilowatt number shrinks for the same iron — and the rating, the maintenance interval and the emission class all move together, so re-declaring the fleet changes what machine you legally own, not just what you call it."
+    },
+    {
+     "q": "What is block load, and why can a lean-burn gas engine not take it the way a diesel can?",
+     "a": "When the transfer closes, the hall's whole demand lands on the alternator in one step: speed dips because the engine was carrying nothing an instant before, voltage dips because the alternator's field takes time to rebuild under current, and the governor and voltage regulator have a second or two to recover. The share of its rating a set can accept in one step is its block-load capability. A turbocharged diesel can typically take its full rated load in one bite. A lean-burn gas engine burns with excess air to keep the flame cool and NOx low, which leaves less fuel in the cylinder to answer a sudden torque demand, and the turbocharger must spool before the air-fuel ratio can be held — so gas sets take load in stages. That is why standby fleets stay diesel even where the campus's main supply is gas."
+    },
+    {
+     "q": "Why is a nameplate rating a laboratory number, and which four conditions move it?",
+     "a": "Ratings are measured at a reference condition, conventionally around 25 °C at sea level on reference fuel, and the corrections multiply rather than add. Altitude: thinner air, less oxygen per stroke, partly recovered by a turbocharger until it runs out of margin. Ambient temperature: hot intake air is less dense and a hot radiator is less effective, so the engine hits a coolant-temperature limit before a power limit. Fuel: a different diesel, a blend or a gas of different composition changes what the engine can make. Exhaust backpressure and intake restriction: long ducts, heavy silencers or a clogging particulate filter cost power, with a maximum stated on the datasheet. The design day, not the average day, is what the fleet must be sized against."
+    },
+    {
+     "q": "Why can engines not simply be wired together, and what happens when generation runs short?",
+     "a": "Two alternators connected out of step push against each other with the full force of the grid behind them — the one ahead in phase throws its load onto the one behind, currents surge and shafts take a torque shock. Synchronisation matches voltage, frequency, phase angle and rotation before any breaker closes, and a sync-check relay physically refuses to close until they do. The paralleling controller lets the fastest set claim the dead bus and synchronises the rest onto it one at a time, so the ten-second clock is met by whichever engine wins the race. Sets then share load by droop, each governor letting speed sag slightly as load rises. If generation runs short the plant sheds: pre-ranked non-critical circuits dropped in a fraction of a second, because a human cannot decide fast enough and a frequency collapse would take everything."
+    },
+    {
+     "q": "A site wants its backup fleet to earn money between outages. What does that actually cost?",
+     "a": "It changes the class of machine. An emergency generator may run when the supply fails plus a limited annual allowance — commonly around a hundred hours — for testing and maintenance, and in exchange is held to an earlier emission stage with little permitting review. Running for prime power, peak shaving or a demand-response payment makes it a non-emergency engine, which must meet Tier 4: selective catalytic reduction, a particulate filter, DEF in a tank with freeze protection, more backpressure, more maintenance and a longer lead time. Emissions class and business model are the same decision, and the run-hour meter on the controller is a legal instrument."
+    },
+    {
+     "q": "A battery goes on the bus in front of the engines. Name three things that changes — and three it does not.",
+     "a": "Changes: the engine can start gently, because the battery carries the hall while sets are synchronised and soft-loaded over tens of seconds instead of catching the load in one step, which relaxes the load-acceptance problem that forces fleets to be diesel. The plant can be smaller, because the engines only need to cover the average rather than the peak. The asset can earn, because a battery has no air permit and no hour cap. Does not change: it is still a finite store, and a hybrid that spent its charge on peak shaving cannot ride an outage. It does not replace the UPS — the UPS buys milliseconds to minutes as a reliability device, the battery buys minutes to hours as an economic one. And arbitrating the earning duty against the insurance duty in real time is the genuinely hard part; getting that policy wrong makes the hybrid less reliable than the plant it replaced."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Server power supplies hold up for 10 to 20 milliseconds and the engines need about ten seconds. What covers the gap?",
+     "c": [
+      "The UPS, from battery or flywheel",
+      "The automatic transfer switch's start delay",
+      "The engines' spinning reserve",
+      "The block-load capability of the lead generator"
+     ],
+     "a": 0,
+     "why": "The UPS inverter picks the critical load up inside the hold-up window and carries it until the engines are loaded — which is the whole reason a UPS exists on a site that also has generators. The ATS start delay is deliberate waiting that *spends* part of that budget rather than covering it; spinning reserve is headroom on engines that are already running; and block load is what happens at the end of the sequence, not during it."
+    },
+    {
+     "q": "A datasheet says 3 MW standby. What is the same engine rated at for prime power?",
+     "c": [
+      "Less than 3 MW",
+      "The same 3 MW, with an hour cap",
+      "More than 3 MW",
+      "It cannot be rated for prime at all"
+     ],
+     "a": 0,
+     "why": "Read down the ratings and the number shrinks, because the manufacturer is promising the engine survives the duty. Standby is a limited number of hours at an average well below the rating with no overload allowance; prime is unlimited hours at roughly seventy percent average. The trap this question exists for: a backup fleet cannot be re-declared as the site's main supply when the grid date slips, because the rating, the maintenance interval and the emission class all move together."
+    },
+    {
+     "q": "Why does a campus whose main supply is gas still buy diesel standby sets?",
+     "c": [
+      "A lean-burn gas engine takes load in stages and the whole hall arrives at once",
+      "Gas engines cannot be paralleled onto a common bus",
+      "Diesel is cheaper per kilowatt at every rating",
+      "Air permits do not apply to diesel in emergency service"
+     ],
+     "a": 0,
+     "why": "Burning with excess air keeps the flame cool and NOx low, and it also leaves less fuel in the cylinder to answer a sudden torque demand, with the turbocharger needing to spool before the air-fuel ratio can be held. So gas sets accept load in steps — fine for a plant running all day against creeping load, and not fine for the one moment the entire hall lands in a single block. Air permits very much do apply to emergency diesels; that class is exactly what caps their hours."
+    },
+    {
+     "q": "A site wants to use its standby fleet for demand-response payments. What is the binding constraint?",
+     "c": [
+      "It becomes a non-emergency engine and must meet a stricter emissions class",
+      "The paralleling switchgear cannot export to the grid",
+      "ISO 8528 forbids standby-rated sets from running in parallel with the utility",
+      "The UPS would have to be bypassed for the duration"
+     ],
+     "a": 0,
+     "why": "Emissions class and business model are the same decision. Emergency service buys a looser emission stage and light permitting in exchange for a hard legal ceiling on use — roughly a hundred hours a year for testing and maintenance beyond genuine outages. Earning money is non-emergency operation, which means Tier 4: SCR, a particulate filter, DEF with freeze protection, more backpressure and a longer lead time. The switchgear question is real but solvable; the permit is not solvable by spending more on switchgear."
+    },
+    {
+     "q": "A hybrid plant has spent the afternoon shaving its demand peak. The grid then fails. What is the risk the design has to manage?",
+     "c": [
+      "The battery's state of charge may be too low to carry the start sequence",
+      "The engines will have derated from running warm",
+      "The air permit counts peak shaving against the outage hours",
+      "The UPS cannot recharge from a partly discharged battery"
+     ],
+     "a": 0,
+     "why": "A battery is a finite store, and a hybrid that spent its charge earning cannot ride an outage. Arbitrating the money-making duty against the insurance duty in real time is the genuinely hard part of these systems, and getting the policy wrong is how a hybrid ends up less reliable than the dumb diesel plant it replaced — which is why state of charge, and state of health beside it, sit on the dashboard."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -32546,6 +32950,7 @@ function clTrackAidcGridToChip_() {
   "the-fence-line",
   "bridge-power",
   "the-aidc-power-chain",
+  "backup-generation",
   "the-800-vdc-shift"
  ],
  "prereqs": [
@@ -32692,7 +33097,8 @@ function clLessons_() {
           clLessonSegmentInsuranceAndRiskTransfer_(),
           clLessonReadingTheGraph_(),
           clLessonFourMachines_(),
-          clLessonHowAUtilityBuys_()];
+          clLessonHowAUtilityBuys_(),
+          clLessonBackupGeneration_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

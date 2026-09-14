@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 107/100`
+`Sections: 108/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.55r] — 2026-09-13 08:31:30 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**The first Phase 4 row that only authors a lesson** — no track to create, no `prereqs[]` to write. The registry work finished at v05.54r, so rows 3 through 24 are pure authoring, and this run is the one that establishes what that looks like. It also found a silent rendering defect that no checker in the repo can see.
+
+### Added
+
+- **`backup-generation`** (gate `tracks`) — *The Ten-Second Race*, lane The AI Data-Center Wave, `updated` 2026-09-13, `reviewBy` 2027-03-13. Nine sections at exactly the ids §3.3 fixes, in its order and kinds: `the-grid-drops` (timeline — eleven steps on a **seconds** gutter from the voltage collapse to the return trip, with the three lanes showing what carries the hall, what the plant is doing, and what happens after transfer), `three-ratings` (table — standby, prime, continuous against ISO 8528), `block-load-and-the-swinging-hall` (prose), `paralleling-and-load-shed` (prose), `the-permit-is-the-ceiling` (callout), `what-a-battery-changes` (proscons — two cards, the second one being what keeps a proposal honest), `where-it-fails` (callout), `drill` (8 cards) and `check-yourself` (5 items). Four tiles; **no lesson glossary** — all 48 `{{term}}` tokens resolve in `profiler-concepts.json`. Inputs, each date read off the fetched document and each slug identity-matched: `study:caterpillar@2026-09-03` · `study:cummins@2026-09-04` · `study:rolls-royce-power-systems@2026-09-04` · `study:rehlko@2026-09-04` · `study:eaton@2026-08-21` · `profile:enchanted-rock@2026-09-05` · `profile:mainspring-energy@2026-09-05` · `concepts:profiler-concepts@2026-09-13`. All eight public, so the stamp folds to `tracks`
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.14** — the next row's brief, written in the same commit per the obligation §7.13 set. It carries forward what three runs have established (the real-serving-function render harness, `clStudyNext_` as the on-the-walk proof, the truncating Actions log API, the EST clock) so row 4 does not rediscover any of it
+
+### Changed
+
+- **`aidc-grid-to-chip`** — `backup-generation` **inserted** into `lessons[]` at its §4 position, ahead of `the-800-vdc-shift`, rather than appended
+- **`CLASSROOM-CURRICULUM-PLAN.md` §7 row 3** and **`INTEGRATED-REMEDIATION-PLAN.md` §7.3 run-table row 6** — flipped to built/done and dated
+- **`Classroom.gs`** `VERSION` v01.27g → v01.28g with `live-site-pages/gs-versions/Classroomgs.version.txt`; `Classroomgs.changelog.md` gains a generic section (`Sections: 28/50`)
+
+### Notes
+
+- **A silent rendering defect was found, and it was this session's own.** `clFmt` in `Classroom.html` resolves bold with `/\*\*([^*]+)\*\*/g` — a character class that **cannot contain an asterisk** — so *italic nested inside bold* never matches, the italic pass then chews the string, and **literal asterisks render to the reader**. Two strings in the `what-a-battery-changes` proscons hit it. Nothing catches this: `check-classroom-content.py` validates schema and terms, the pipeline checker reads diffs, and `node --check` sees valid JSON. **It was visible only in the screenshot.** Both were rewritten to use one level of emphasis, and the two regexes were then simulated over every rendered string in **all 33 lessons and 8 tracks** — `sections`, `tiles`, `glossary`, `short`, `title` — which now leaves **zero** surviving asterisks corpus-wide. The hazard is written into §7.14 so the next author checks it before pushing rather than after
+- **The sweep's one other hit was a false positive, and the distinction matters.** `cell-to-container` appeared to have a broken string until it was traced to `provenance.inputs[1].note` — `"P=V*I, why plants run high DC voltage…"`. The schema says a `note` is an *authoring aid, never rendered*, so the asterisk there is a multiplication sign that never reaches `clFmt`. Scoping the sweep to rendered surfaces only is what separated a real defect from an arithmetic symbol; a checker built on this should inherit that scoping
+- **P5 fired on a `lessons[]` insertion and the finding is a real consequence, not noise.** The checker's message is precise — *"a reorder moves every account's study-next pointer without a tick changing"* — and `clStudyNext_`, run against the real PROJECT region, confirms it: an account that had completed all four previously-built lessons of `aidc-grid-to-chip` is now pointed back at `backup-generation`. For a newly published lesson that is the intended behaviour and the reason §4 tells a developer session to insert at position rather than append; for an unattended run it is forbidden, which is why P5 exists. **No P3** — `gateDigest` correctly untouched
+- **The spec and §8 item 6 disagree, and the spec won.** Item 6 asserts that no outline runs two `prose` sections back to back. §3.3's outline does — `block-load-and-the-swinging-hall` then `paralleling-and-load-shed` — and the ids and order are load-bearing (progress keys and drill ids), so they were followed exactly and the inaccuracy recorded in the §7 row rather than papered over by changing a kind
+- **The two `profile:` stamps are archetypes, not company trivia.** They appear once, in `the-permit-is-the-ceiling`, as *shapes* of machine — the gas-microgrid platform and the linear generator whose sub-1.5 ppm NOx without after-treatment is a permitting wedge — and no drill item asks about either. That is the mechanism-lesson content contract observed at the point it is easiest to breach
+- **`check-classroom-content.py`: 33 lesson(s), 8 track(s), 142 gate case(s) — 24 error(s), 0 warning(s)**, error set diffed line by line against a pristine `HEAD` worktree and byte-identical. `check-classroom-curriculum --strict`: no structural findings; the AI Data-Center Wave lane now reads 7 lessons, analyst-visible 6/7, and the drill pool grows to `lc 92 + lq 161 = 253`. `--selftest` 13/0. Rendered at admin with **zero page errors**
+- **Rotation did not fire, and tonight it needed the right clock to decide that.** `TZ=America/New_York` reads **2026-09-13** while UTC has already rolled to 2026-09-14. The rule says today is EST, so the twelve sections dated 2026-09-13 (eleven plus this one) stay exempt: **108 raw, 96 non-exempt** — the fifth consecutive push at exactly 96. Had the harness clock been used instead, non-exempt would have computed as 107 and fired a rotation about four hours early. The first push after EST midnight makes all twelve non-exempt and rotation becomes due at 108; the oldest whole date group is **thirteen sections dated 2026-09-04**
 
 ## [v05.54r] — 2026-09-13 07:54:01 PM EST
 
