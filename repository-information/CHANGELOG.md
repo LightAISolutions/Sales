@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.65r] — 2026-09-14 06:49:38 AM EST
+
+> **Prompt:** "Run S2 session 1 — the landscape module for storage-integrators-and-containers — on Opus 5 xhigh as a fresh session. ONE landscape module: no mechanism lesson, no new track, no dossier, no report, no second segment. [...] Normal Pre-Commit and Pre-Push checklists; claude/* branch restarted from origin/main first, git ls-remote before each push." — the same interaction as v05.64r, whose section quotes the prompt verbatim and in full. This push exists only because [PC-README-TREE] #7 was caught after v05.64r had already merged, and a merged commit cannot be amended.
+
+**The tree audit v05.64r owed and did not pay.** [PC-README-TREE] #7 fires on a file *added*, and the README tree enumerates `repository-information/industry-guidance/` file by file — so adding the analysis markdown made the tree incomplete, and the item's completeness rule is explicit that every directory shown in the tree must have every child listed. Caught by re-reading the checklist against the diff after the push. The fix is two lines.
+
+### Added
+
+- **`landscape-storage-integrators-and-containers-analysis.md` added to the README structure tree**, beside the other research-synthesis analyses, in the linked-entry format the tree uses and with a description naming what it is: the storage-integrator landscape, corpus synthesis over 32 member dossiers, no ingested source document, source of truth for the in-app module
+
+### Fixed
+
+- **The `industry-guidance/` directory description in the tree was two phases stale.** It read "Analyses of industry-wide documents feeding the **Profiler** app's **admin-only** Industry Guidance modules" — wrong on both counts since C3 session 3 (2026-09-13) moved the hub to Classroom, and since §7.2 decision 2 put the landscape tier at **contributor**. It now reads "Source-of-truth analyses behind the Classroom app's Industry Guidance modules, admin and contributor tiers (not deployed)". Corrected rather than left, because the new entry would otherwise sit under a heading that misstates both where its module lives and who may read it
+
+### Notes
+
+- **No page or GAS version moves on this push** — it touches `README.md`, `repository.version.txt` and this file only, so there is no page or GAS changelog entry to write. `check-readme-tree.py` reports 10 page + 8 GAS displays matching their sources, 0 findings, before and after
+- **Rotation checked, not assumed:** 105 sections with this one, of which **7 are dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation**
+- **v05.64r's two deploys both confirmed on the first GET leg, with no `POLL <n>` line on either** — `Scraper deploy confirmed (GET): Updated to v02.03g (deployment 148) | 148/200` and `Classroom deploy confirmed (GET): Updated to v01.32g (deployment 42) | 42/200`. The v05.59r poll is armed and **has still never been needed**. Classroom's live endpoint answered "Already up to date (v01.32g)" independently, after the Deploy step had finished rather than while it was in flight
 
 ## [v05.64r] — 2026-09-14 06:39:45 AM EST
 
