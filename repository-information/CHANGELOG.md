@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 107/100`
+`Sections: 108/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.68r] — 2026-09-14 02:16:52 PM EST
+
+> **Prompt:** (continuation of the v05.67r session — the deploy-confirmation probe's own cost, measured after the push landed and corrected in the brief it would otherwise have been repeated in.)
+
+**A one-paragraph correction to §7.19, made because the instruction it was about to hand the next session had just cost a deployment version here.** v05.67r merged and deployed green, and its independent confirmation — issued exactly as every brief since v05.59r has specified, **after** the Deploy step finished — was itself a second deploy.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.19 — the deploy paragraph rewritten, and the counter corrected from 42/200 to 44/200.** The workflow's own step reported `Classroom deploy confirmed (GET): Updated to v01.33g (deployment 43) | 43/200` on the **first GET leg with no `POLL <n>` line** — the v05.59r poll is armed and has still never been needed. The confirmation probe several minutes later answered `Updated to v01.33g (deployment 44) | 44/200`: not a confirmation, a deploy
+- **The mechanism, read out of `pullAndDeployFromGitHub()` rather than guessed.** It fetches `Classroom.gs` from GitHub, reads the pulled `VERSION`, and compares it against the `VERSION` constant **of the code currently executing**. Equal returns `Already up to date (…)` and does nothing; unequal **deploys**. Between a deployment being repointed and `/exec` actually executing the new bundle there is a propagation lag, so a probe inside that window runs under the *old* `VERSION`, sees a mismatch, and deploys again. "After the Deploy step has finished" is therefore **necessary and not sufficient** — the real condition is that `/exec` is already running the new `VERSION`
+- **The order that costs nothing, now written into §7.19:** read Pages (`gs-versions/Classroomgs.version.txt` is a static file, free to poll) and the workflow's own `Classroom deploy confirmed (GET)` line from the job log. Probe `?op=deploy` **only if those two disagree**, accept that it may deploy once, and re-probe afterwards — a second probe returning `Already up to date (v01.33g)` is how the settled state was established here, and it consumed no version
+
+### Notes
+
+- **Final live state, confirmed twice:** GAS `Already up to date (v01.33g)`, Pages serving `|v01.33g|` and `|v01.14w|`, workflow run **green**, branch swept. Deployment counter **44/200**
+- **Why this is a second commit and not an amendment:** v05.67r is physically on `main`, which is the one case the single-commit-per-interaction rule names as unavoidable
+- **Rotation checked, not assumed:** 108 sections with this one, of which **10 are dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** No page or GAS version moves — this touches `README.md`, `repository.version.txt`, one plan document and this file
 
 ## [v05.67r] — 2026-09-14 02:07:50 PM EST — v01.33g
 
