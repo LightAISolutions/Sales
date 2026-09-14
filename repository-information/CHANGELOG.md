@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.66r] — 2026-09-14 12:17:26 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 6, then remember session."
+
+**A handover commit, and the thing it hands over is a correction.** §7.16 has been row 6's standing brief since v05.61r and its reasoning is still right — but the two pushes that landed between it and the row, the segment regeneration (v05.62r) and S2 session 1 (v05.64r), moved **every number a session checks its own work against**. So this push writes §7.18 as row 6's live brief, marks §7.16 superseded at its own heading rather than patching it, and re-aims the three places that pointed at the old one.
+
+### Added
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.18 — the paste-in brief for Phase 4 row 6 (`who-buys-storage`), superseding §7.16.** It opens with an eight-row **corrections table** naming each stale figure, what it is today, and why the difference matters, then keeps only what §7.16 still owns and does not restate it at length
+- **The correction that matters most: the pristine content-checker baseline is 0 errors / 0 warnings, not 24.** §7.16 told a session that twenty-four errors across twelve stale `segment-*` lessons were S2's and neither caused nor fixed by the row. Both halves are now false — v05.62r regenerated all nineteen and v05.64r held the result — so **a session expecting 24 and seeing 1 would read its own error as progress**. §7.18 says the baseline is 0/0 and that any error is unambiguously the row's
+- **The candidate stamp is 31 refs measured exactly, not "roughly thirty".** Seven `profile:` (§7.16 said four — it counted §3.5's base inputs line and missed `brookfield`, `blackstone` and `mgx` from the v05.07r scope line), twenty-three `study:`, and `concepts:profiler-concepts`. **All 31 were verified to exist today and their live dates recorded in the brief** — as this session's observation, explicitly not as the pin, because §8 item 2 binds the authoring session to re-fetch and read the date off the body
+- **A pointer §7.16 carried that leads nowhere is removed.** It told the row to read "§5 for the failure-map row its `where-it-fails` draws from". §5 states in its own first line that it is the checklist **every equipment lesson's** `where-it-fails` draws from; `who-buys-storage` is a market lesson and has no row there. Its `where-it-fails` is specified directly in §3.5's outline
+- **Two renderer traps carried forward with the reason each was found only by eye.** The v05.61r plain-field markup check is live and errors on `{{term}}`/`**bold**`/`*italic*` in `textContent` fields — and `epc-versus-gc` is a `proscons` section, so this row writes exactly the fields that shipped the original defect four times. And, newly measured at v05.64r, **`clFmt` renders a backtick literally** and no checker scans for one
+- **The five-column table is flagged as this row's most likely rendering defect.** `the-classes` is five columns by eleven rows, the widest any mechanism lesson has carried, and the `.cl-tbl` `min-width` question the row-5 note left open is still open — verified, the CSS has no `min-width` today. The brief says read that screenshot first, and that the fix is a page change and stays recorded-not-taken. One new data point in its favour: v05.64r's four-column, eighteen-row landscape table rendered cleanly at 1400px
+- **A Playwright gotcha that costs a whole cycle**, measured this session: `page.evaluate(fn, arg)` passes exactly one argument, so `(a, b) => …` silently receives the array as `a` and `undefined` as `b` — and the page then renders **zero content with zero errors**, which reads as a content bug rather than a harness bug. Destructure
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md` — Remember Session.** The v05.63r entry moves to `## Previous Sessions` and the v05.61r entry is dropped under the two-session cap; the new Latest Session records S2 session 1, the README-tree debt, the backtick finding, the `reviewBy` reasoning, the §10.3 correction, and both changelog traps now standing
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.16 marked SUPERSEDED at its own heading**, with a blockquote naming the four stale figures and pointing at §7.18. Kept as written rather than patched, because it is the v05.61r record
+- **Three pointers re-aimed**: §7.17's closing line (which recommended §7.16 by name), the §6 ledger's Phase 4 row, and the §7.3 run-table order 6 row all now name §7.18 as row 6's live brief
+
+### Notes
+
+- **Rotation checked, not assumed:** 106 sections with this one, of which **8 are dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** The next push landing 2026-09-15 or later does rotate, moving the eighteen sections dated 2026-09-05 (`v04.61r`–`v04.78r`) and leaving 88
+- **Two standing traps recorded in the brief and the session context, neither of them row 6's:** `Scrapergs.changelog.md` now reads **50/50 with 49 non-exempt**, so the next session to touch `Scraper.gs` on a later EST day fires rotation there; `Profilerhtml.changelog.md` sits at **49/50**
+- **No page or GAS version moves** — this push touches two plan documents, `README.md`, `repository.version.txt` and this file. `check-readme-tree.py` reports 10 page + 8 GAS displays matching their sources, 0 findings
 
 ## [v05.65r] — 2026-09-14 06:49:38 AM EST
 
