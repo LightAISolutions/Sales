@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 108/100`
+`Sections: 109/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.69r] — 2026-09-14 04:24:32 PM EST
+
+> **Prompt:** "Give me a prompt to paste into a new Opus 5 xhigh session to run S2 session 2, then remember session."
+
+**A handover commit whose real content is a counter correction.** §7.19 was written at the close of Phase 4 row 6 and corrected once already at v05.68r — but v05.68r moved the repo version and added a CHANGELOG section, which left §7.19's own body describing a state one push out of date and, worse, **contradicting its own pasteable prompt**: the body said 107 raw / nine sections dated today, the prompt said 108 / ten. A session reading both would have had to pick one.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.19 — repo version and both changelog figures refreshed to the state the next session will actually find**, which is the state *after* this push: repo **v05.69r** (was v05.67r), CHANGELOG **109 raw / 98 non-exempt with eleven sections dated 2026-09-14** (was 107 / nine in the body and 108 / ten in the prompt), rotation on 2026-09-15 or later leaving **91**. Body and prompt now agree
+- **A standing instruction added in place of the number.** Three briefs in a row (§7.17, §7.18, §7.19) have now had a written-down changelog counter corrected, so §7.19 tells the next session to **re-count rather than trust the line** — `grep -c '^## \[v'` minus the same grep narrowed to today's EST date is the whole rule, and it is cheaper than reading the counter
+- **`repository-information/SESSION-CONTEXT.md` — Remember Session.** The v05.66r entry moves to `## Previous Sessions` and the v05.63r entry is dropped under the two-session cap. The new Latest Session records Phase 4 row 6, the twelve unpinned stamps and their one shared reason, the `READ_NEXT`-makes-a-segment-due finding, the deploy-probe finding and its cost, the five-column table result, the guidance-module assertion S2 session 2 must move, and the render-harness fix below
+
+### Notes
+
+- **One harness fix recorded that cost a cycle this session and would cost the next one the same:** `#cl-app` is `display: none` in `Classroom.html`'s stylesheet until the app boots, so a Playwright render that stubs auth must add `#cl-app{display:block !important}` to its CSS override. Without it every section renders at **height 0** and Playwright reports "element is not visible" — which reads as a content failure and is not. Section nodes are `#cl-<sectionId>`, not `#clsec-<id>`
+- **No page or GAS version moves** — this push touches one plan document, `SESSION-CONTEXT.md`, `README.md`, `repository.version.txt` and this file. Classroom stays at **v01.33g** / **v01.14w**
+- **Rotation checked, not assumed:** 109 sections with this one, of which **11 are dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** The next push landing 2026-09-15 or later does rotate, moving the eighteen sections dated 2026-09-05 (`v04.61r`–`v04.78r`) and leaving 91
+- **Checkers unchanged and re-run:** content **0 errors / 0 warnings at 36 lessons / 8 tracks / 142 gate cases**; curriculum `--strict` no structural findings; `--selftest` 13/0; `check-readme-tree.py` 0 findings. `build-classroom-segments.py --check` still reports **1 due**, which is Phase 4 row 6's expected residue and is documented as such in three places
 
 ## [v05.68r] — 2026-09-14 02:16:52 PM EST
 
