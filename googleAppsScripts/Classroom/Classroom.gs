@@ -1,4 +1,4 @@
-var VERSION = "v01.32g";
+var VERSION = "v01.33g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -36740,6 +36740,472 @@ function clLessonTheTransformerAndTheSubstation_() {
 };
 }
 
+function clLessonWhoBuysStorage_() {
+  return {
+ "schemaVersion": 1,
+ "id": "who-buys-storage",
+ "type": "module",
+ "title": "Eleven Buyer Classes",
+ "short": "Who actually signs, in eleven kinds of room. What each class buys, the criterion it buys on, the desk that approves it, and how long each one takes.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:plus-power",
+    "date": "2026-09-06",
+    "note": "the tolling franchise as the contracted end of the IPP class, and the dual-source doctrine: integrated systems bought from exactly two suppliers, chosen per project on bankability and geography, with a tax-equity syndicate and an independent-engineer process every supplier must clear"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:nextera-energy-resources",
+    "date": "2026-09-05",
+    "note": "the self-integrating buyer: cells and DC blocks bought direct and integrated in-house, so there is no integrator channel to sell through; long-dated domestic supply locked years ahead; storage buildable in 16-18 months as the speed argument a buyer makes to its own customer"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:arevon",
+    "date": "2026-09-07",
+    "note": "the opposite procurement doctrine on the same class: one integrator for the whole fleet, with the offtake stack behind it and no second-vendor precedent; the worked example of a channel that is a relationship rather than a bid"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:jupiter-power",
+    "date": "2026-09-06",
+    "note": "the safe-harbour window as a procurement channel with its own rules and its own closing date, the quiet buyer who never co-markets, and an owner-operator with its own trading desk"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:brookfield",
+    "date": "2026-09-06",
+    "note": "the investor as a desk reached through its portfolio companies rather than directly, and the one variant that owns generation and data-centre platforms inside a single franchise"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:blackstone",
+    "date": "2026-09-06",
+    "note": "the same rule stated a second way, from a firm that owns both the demand side and the supply side: the portfolio company buys the switchgear and the batteries, not the fund"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mgx",
+    "date": "2026-09-06",
+    "note": "the limit case of the investor class: an owner of no power project, with no energy position of its own, whose every energy statement is made through a company it part-owns"
+   },
+   {
+    "kind": "public",
+    "ref": "study:constellation-energy",
+    "date": "2026-08-21",
+    "note": "the two ways to own a plant — a regulated return against a wholesale clearing price — and why a long fixed-price contract is prized: it converts volatile revenue into bond-like cash flow and both sides are trading risk"
+   },
+   {
+    "kind": "public",
+    "ref": "study:equinix",
+    "date": "2026-08-21",
+    "note": "the three layers of the landlord market and the rule that the customer defines the layer; power rather than floor area as the unit of sale; margins running opposite to deal size"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vantage",
+    "date": "2026-08-21",
+    "note": "powered shell against turnkey and who supplies what; the take-or-pay lease that makes the cash flow financeable like infrastructure; why a tenant pays a premium for time-to-power"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mortenson",
+    "date": "2026-08-21",
+    "note": "EPC against GC: who owns the power-plant problem, self-performed crews against a subcontracted trade stack, balance of plant as a separate contract, and the developer-against-builder split that decides who originates"
+   },
+   {
+    "kind": "public",
+    "ref": "study:turner-construction",
+    "date": "2026-08-21",
+    "note": "the delivery chain from owner to subcontractor; CM-at-risk and the guaranteed maximum price; why procurement became the product and the buying desk reserves factory slots during design; multiple builders on one campus because capacity, not loyalty, drives awards"
+   },
+   {
+    "kind": "public",
+    "ref": "study:stack-infrastructure",
+    "date": "2026-08-22",
+    "note": "the product ladder as three rungs on one campus, and which tenant prefers which rung — the self-performing tenant taking shell, the tenant in a hurry taking turnkey"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dominion-energy",
+    "date": "2026-09-03",
+    "note": "the utility row in one line: none of the four authorising bodies buys equipment, and the purchase order is the last document in the chain rather than the first"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dnv",
+    "date": "2026-09-04",
+    "note": "the five parties around one project and what each wants the engineer to say, including where the integrator's warranty is read as carefully for its exclusions as for its promises"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sargent-lundy",
+    "date": "2026-09-04",
+    "note": "the advisor class stated precisely: three engineers on one project, each defined by whose behalf it acts, and the rules that keep them apart"
+   },
+   {
+    "kind": "public",
+    "ref": "study:excelsior-energy-capital",
+    "date": "2026-09-05",
+    "note": "the investor that owns a developer, and the supply framework: volume and factory slots reserved years ahead at agreed terms, with purchase orders drawn down project by project as each reaches financing"
+   },
+   {
+    "kind": "public",
+    "ref": "study:spearmint-energy",
+    "date": "2026-09-05",
+    "note": "the developer class's one decision — sell the project or keep it — and the market in which unbuilt projects change hands between developers"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips this lesson does not define locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "11",
+   "v": "buyer classes",
+   "sub": "the categories the roster itself uses, and the eleven rooms a seller can be sent to"
+  },
+  {
+   "k": "1",
+   "v": "class buys nothing",
+   "sub": "the advisor sells judgment on somebody else's behalf and can still lose you the deal"
+  },
+  {
+   "k": "3",
+   "v": "builders, one campus",
+   "sub": "on the largest jobs the award follows capacity rather than loyalty"
+  },
+  {
+   "k": "last",
+   "v": "document in the chain",
+   "sub": "in the regulated room the purchase order is the end of the process, not the start"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buyer class",
+   "d": "The kind of organisation a counterparty is, read from what it does rather than what it is called. It is a working label, not a legal one: a firm can hold several at once, and the one that matters in a given deal is whichever describes the money and the signature on that deal. This lesson uses the eleven categories the company roster itself carries."
+  },
+  {
+   "t": "CM-at-risk",
+   "d": "Construction manager at risk: the dominant delivery model on large buildings, in which the construction manager commits to a guaranteed maximum price, holds the subcontracts, and absorbs overruns above that price. It earns a fee of a few percent on very large volume, which is why a healthy year for such a firm still looks like a thin margin."
+  },
+  {
+   "t": "open-book procurement",
+   "d": "A buying arrangement in which the client sees what the contractor actually paid for equipment and the contractor charges a stated fee on top, instead of quoting one price and keeping the difference. It trades margin opacity for trust, and is how repeat work at the largest scale is generally bought."
+  },
+  {
+   "t": "approved vendor list",
+   "d": "The register of suppliers a buyer has already qualified, maintained by procurement and usually endorsed by an engineer. Getting onto it is a separate sale, made long before any project, and a supplier that is not on it is generally not evaluated at bid time no matter how good the offer is."
+  },
+  {
+   "t": "retail colocation",
+   "d": "Data-centre capacity sold by the cabinet or the cage to many customers, who bring their own equipment. The unit of sale is reserved kilowatts rather than floor area, revenue is recurring and monthly, and the operator layers connection services on top of the space."
+  },
+  {
+   "t": "wholesale colocation",
+   "d": "Data-centre capacity leased a whole hall, building or campus at a time to a handful of very large tenants. The landlord owns and runs the building, the power plant and the cooling; the tenant owns the computers. Fewer, larger and stickier deals than retail, and financed like infrastructure rather than like a technology business."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-classes",
+   "title": "The eleven classes, and what each one is actually buying",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "Read this table once for the shape and once for the last two columns, which are the ones a seller gets wrong. **Every row is a different question being asked about the same box.** The classes are the roster's own categories, and they describe what an organisation *does* rather than what it calls itself — a firm can hold several at once, and several of the largest hold four. The column that decides your quarter is *how fast*, because it is the only one that tells you whether the deal you are working closes this year or exists mainly as a forecast.",
+   "cols": [
+    "Class",
+    "What it buys",
+    "What it buys on",
+    "Who signs",
+    "How fast"
+   ],
+   "rows": [
+    [
+     "**Supplier** — makes equipment and sells it",
+     "The things that go inside its own product: cells, DC blocks, {{PCS}}, enclosures, controls",
+     "Qualification and a bill of materials its customer's lender will accept — then price",
+     "A supply-chain or procurement function, under a multi-year framework rather than a purchase order",
+     "Framework years ahead; orders drawn down per project. One large buyer buys cells and DC blocks direct and integrates in-house, which removes the integrator channel entirely"
+    ],
+    [
+     "**Integrator** — assembles a complete storage system and warrants it as one",
+     "Cells, enclosures, cooling, {{PCS}} and control software, bought to be warranted together",
+     "Whether the assembled system clears {{bankability}} — because the buyer's warranty and service relationship is with the integrator, not the cell maker",
+     "Engineering and supply chain jointly; the warranty is the product, so both own it",
+     "Slower than it looks: a {{reservation agreement}} fixes volume and factory slots years out, and purchase orders are drawn down project by project as each reaches financing"
+    ],
+    [
+     "**Developer** — originates projects and sells or keeps them",
+     "Land, a {{queue position}}, {{entitlement}} and permits — and, late, the equipment, at the moment the project reaches financing",
+     "Whether the purchase lets the project climb one more rung: financeable, on schedule, and acceptable to whoever buys the project next",
+     "The project's own development lead, inside the budget the sponsor funded",
+     "Two speeds. {{develop-to-sell}} never buys the equipment at all; {{develop-to-own}} buys it, and only at {{notice to proceed}}"
+    ],
+    [
+     "**IPP** — owns plants and sells their output without captive customers",
+     "Complete systems, and the long-term service that keeps the availability promise behind them",
+     "Bankability first, then geography and delivery date; price decides between two suppliers who have already cleared the bar",
+     "Procurement, with the lender's {{independent engineer}} holding an effective veto",
+     "Per project, to the construction date. The window is set by the contract behind the project, not by the buyer's enthusiasm"
+    ],
+    [
+     "**EPC** — engineers, procures and constructs a working plant",
+     "Everything inside its scope, {{balance of plant}} included, priced into one number before the work starts",
+     "Whether it meets the specification, the codes and the schedule it already sold — a late change is a change order or a delay to its own milestone",
+     "The project director, inside a {{lump-sum turnkey}} contract already signed with the owner",
+     "Fast once awarded and closed before that: the bill of materials is locked at bid, so a supplier not qualified by then is not in the job"
+    ],
+    [
+     "**GC** — builds a building somebody else designed",
+     "Subcontracts for most of the labour, and increasingly the {{long-lead equipment}} itself through its own buying desk",
+     "Price and certainty against a {{guaranteed maximum price}} it has committed to, and delivery dates it can hold a schedule to",
+     "The buying desk, on {{open-book procurement}} at the largest scale; the client sees what was paid",
+     "Slots are reserved during design, sometimes years before groundbreaking — and on the biggest campuses the award follows capacity, not loyalty"
+    ],
+    [
+     "**Utility** — a regulated monopoly serving a franchised territory",
+     "Only what a filed plan, a certificate of need and a solicitation have already authorised it to buy",
+     "Prudence — whether a commission will later agree the money was well spent — and whatever the solicitation scored",
+     "Nobody you can reach quickly: four bodies authorise, and only then does procurement raise the order",
+     "Years. The purchase order is the **last** document in the chain, often more than a year after the sale was actually won or lost inside a {{docket}}"
+    ],
+    [
+     "**Investor** — funds the owners rather than the projects",
+     "Platforms, portfolios and positions — not equipment. In this corpus a fund is reached **through** its portfolio companies, never directly",
+     "Contracted cash flow, the risks already retired, and the exit multiple that follows from both",
+     "An investment committee, on a paper nobody in your pipeline will ever show you",
+     "Quarters for a transaction — but its screens reach your deal immediately, because the portfolio company applies them"
+    ],
+    [
+     "**Hyperscaler** — buys compute capacity at gigawatt scale",
+     "Power and buildings, to its own specification; sometimes the developer itself rather than the contract",
+     "{{time-to-power}} above almost everything, then a design its own engineers already trust",
+     "Its own infrastructure organisation, which carries designs and standards of its own",
+     "Very fast to commit and very slow to qualify. The scarce thing is a delivery date, which is why a premium for speed is paid without argument"
+    ],
+    [
+     "**Neocloud** — rents out AI compute, growing faster than its capital base",
+     "Leased capacity rather than built capacity — a finished hall it can fill immediately",
+     "Speed and contract terms it can finance: it is buying the time it does not have to spend building",
+     "The chief executive or finance officer, because a lease of this size sets the company's shape",
+     "Fastest of all to sign and the hardest to underwrite — the counterparty question arrives before the technical one"
+    ],
+    [
+     "**Advisor** — engineers, certifiers and independent engineers",
+     "Nothing. It buys no equipment at all and has no budget you can win",
+     "Evidence: test data, certification, warranty terms read as carefully for the exclusions as for the promises",
+     "It does not sign your contract — it signs the report that lets somebody else sign yours",
+     "It is early and it is decisive. An engagement begins about a year before financial close, and it can end your sale in a sentence"
+    ]
+   ],
+   "note": "**Three habits make this table usable in a live conversation.** First, the class describes the *deal*, not the logo: a firm may develop, own and contract, and the class that matters is whichever one is holding the signature you need. Second, *what it buys on* is the sentence you should be able to say back to the buyer before you present anything — get it wrong and every feature you lead with is answering a question nobody asked. Third, the **advisor** and the **investor** are the two classes with no budget and the most reach: neither one buys anything, and either one can end the deal without ever meeting you.",
+   "sales": "Open with one question, not a pitch: *what has to be true for this to be approved, and by whom?* The answer names the class, the criterion and the clock in a single sentence, and it is the only piece of qualification that the counterparty is always willing to give you."
+  },
+  {
+   "id": "the-ipp",
+   "title": "The IPP, in three arguments",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Of the eleven, the {{independent power producer}} is the class a storage seller meets most often and reads least carefully, because the label covers two businesses that buy in opposite ways. An IPP owns power plants and sells their output, and — this is the whole of the definition — it has **no captive customers**. A regulated utility earns an approved return on what it builds and its customers are obliged to pay through rates. An IPP has neither of those things, so its revenue comes from contracts and markets, and its cost of capital and its exposure to prices are both higher. Everything else about how it buys follows from that one difference.",
+    "**The first argument is contracted against merchant, and it is an argument about who owns the upside.** At the contracted end, the owner sells availability for a fixed fee under a long agreement — a {{tolling agreement}}, where the offtaker pays for the right to charge and discharge the battery as it likes and takes the market risk, or a capacity-style contract that pays the plant to exist. The fee is the line a lender counts at face value, and that is the point: a fixed-price contract converts volatile revenue into something bond-like, and the buyer pays a premium for the certainty. Both sides are trading risk rather than electricity. At the merchant end the owner keeps the upside and the whole of the downside: the plant earns the wholesale price, which clears like an auction — every plant offers, the grid operator stacks the offers cheapest first until demand is met, and the last accepted offer sets the price every winner receives.",
+    "The same company is usually at both ends at once, and the allocation is made by **market rather than by philosophy**. Where a buyer for availability exists, the owner sells it; where none exists, the owner keeps it because nobody will pay for it. One franchise in this corpus has built its identity on the contracted end — a new twenty-year tolling market roughly every year across four different utilities — while running a seasoned merchant fleet of several hundred megawatts in the one large market that has no capacity payment at all. That is not inconsistency. It is the same firm answering two different questions about two different grids.",
+    "**Why it matters to you:** the two ends buy on different evidence. A contracted project is being underwritten against a twenty-year availability promise, so the buyer's real question is about your warranty, your service organisation and your ability to still exist in year twelve. A merchant project is being financed against a floor and a trading desk, so the question moves to cost, delivery date and how quickly the thing can be earning. Bring the contracted answer to a merchant conversation and you sound expensive; bring the merchant answer to a contracted one and you sound like a risk.",
+    "**The second argument is the safe harbour, and it is the one that creates channels other buyers cannot use.** {{safe harbor}} means starting a project far enough — by spending, or by taking delivery of equipment — to lock in the tax rules in force at that moment, even if the rules later change. The consequence is structural rather than clever: it creates a *cohort* of owners still buying under older terms, and therefore a procurement channel whose constraints differ from everyone else's. One owner-operator in this corpus bought several gigawatt-hours of Chinese-made systems quietly inside its window, then hedged loudly with domestic supply once the window closed at the end of 2025. Read that behaviour as the class trait it is: the buyer is not making a statement about a supplier, it is managing the tax basis of a fleet, and the two look identical from outside.",
+    "So a live question in any IPP conversation is **which vintage this project belongs to**, because the answer decides what you may even be compared against. A buyer inside a safe-harboured cohort is choosing between options the rules have since narrowed for everyone else; a buyer outside it is choosing under today's constraints, where {{FEOC}} tests and the {{domestic content bonus}} can be worth more than a supplier's price advantage. The same buyer can be in both positions on two projects in the same year.",
+    "**The third argument is dual-sourcing, and it is a strategy rather than an accident.** Look at two owners of comparable scale in this corpus and you will find two opposite doctrines. One buys integrated systems from **exactly two suppliers**, chosen per project on bankability and geography — so every project is a live comparison, the incumbency resets each time, and both suppliers know it. The other channels an entire multi-gigawatt-hour-a-year buying cadence through a **single** integrator, with an operations relationship behind it and, on the record, no second-vendor precedent at all. Neither is a mistake. The dual-source buyer is paying a little in overhead for competitive tension and supply insurance; the single-source buyer is paying in price leverage for a fleet that is uniform to operate, to maintain and to finance.",
+    "There is a third doctrine, and it is the one that quietly removes you from the conversation altogether: **self-integration**. The largest buyer in this corpus buys cells and DC blocks direct and assembles in-house. For a company selling a complete containerised system there is no integrator channel to ride at that account — the only entry point is direct component supply, which is a different product, a different margin and a different qualification. The lesson for a seller is to establish the doctrine before the product: *how many suppliers does this fleet run on, and who decides that?* One of the three answers means your product, as configured, cannot be bought here at any price.",
+    "One last thing the class shares, whichever doctrine it follows. Because an IPP's money is borrowed against the plant, the buyer you are talking to is rarely the last word. The lender appoints an {{independent engineer}}, and a supplier that cannot clear that process is not bought regardless of what procurement thinks — which is the subject of the advisor row above, and the reason it sits in the same table as the people who actually sign."
+   ]
+  },
+  {
+   "id": "epc-versus-gc",
+   "title": "EPC versus GC",
+   "kind": "proscons",
+   "read": "8 min",
+   "intro": "Two of the eleven classes are contractors, and confusing them is the most common single error in a first meeting. The difference is not size or prestige — it is **which problem the firm has agreed to own**. An {{EPC}} owns design, purchasing and construction, and hands over a working plant, because on a power project the design *is* the product. A {{general contractor}} manages the construction of a building somebody else designed, and adds its value in scheduling, coordination, procurement and risk-taking rather than in its own labour. An AI campus needs both at once — a building and a gigawatt of power infrastructure — which is why a contractor holding both franchises can sell a scope its competitors have to split, and why you will meet both on the same site.",
+   "cards": [
+    {
+     "t": "EPC — engineer, procure, construct",
+     "meta": "One firm owns the design, the equipment purchasing and the construction, and delivers a plant that works. On a solar farm or a battery plant it self-performs most of the site work with its own crews, so it lives or dies on its own field productivity. Typical of power projects and increasingly of a data centre's electrical scope",
+     "adv": [
+      "**One throat to choke, and it knows it.** The owner buys an outcome rather than a set of trades, so the schedule, the interfaces and the performance all belong to one counterparty — which is exactly why lenders like the structure and why it is usually priced as a {{lump-sum turnkey}} contract.",
+      "**Your product is specified by the same firm that buys it**, so a supplier that gets in early can shape the specification rather than answer it. That is the single highest-leverage moment in this class and it happens long before the bid.",
+      "**{{balance of plant}} is often a separate contract** — the foundations, roads, cabling and substation around the core equipment — which means there is more than one scope to be in, and a supplier shut out of one may still be in the other.",
+      "Because it self-performs, an EPC's opinion of how your equipment **installs and commissions** is first-hand. Win that and you gain an advocate who is trusted on schedule, which is the currency of the whole job."
+     ],
+     "dis": [
+      "**The bill of materials is locked at bid.** The price was committed before the work started, so a supplier not qualified by then is not in the job, and an introduction made after award is a conversation about the *next* project whatever anyone says.",
+      "**Every change is a change order or a delay to its own milestone**, so the firm's incentive is to refuse late substitutions even when they are better — the independent engineer's comments land on it the same way.",
+      "It carries cost and schedule risk inside the agreed scope, which makes it **structurally conservative about anything unproven**: novelty is a risk it is paid to eliminate, not an advantage it is paid to find.",
+      "Its engineer is the {{engineer of record}} and stamps the drawings — so it may not also hold the {{owner's engineer}} seat on the same job, and the advice you think you are influencing may be coming from a firm you have never met."
+     ]
+    },
+    {
+     "t": "GC — the builder of the building",
+     "meta": "The owner hires a construction manager or general contractor to run the job; the GC hires the specialty subcontractors — electrical, mechanical, concrete — who employ most of the workers. The dominant form is CM-at-risk: a guaranteed maximum price, the subcontracts held by the GC, and a fee of a few percent on enormous volume, so a three to four percent pre-tax margin is a normal healthy year",
+     "adv": [
+      "**Procurement became the product.** A campus's schedule is set by {{long-lead equipment}} — transformers, switchgear, generators, chillers — with multi-year order books, not by concrete or steel, so the buying desk is where the value now sits.",
+      "That desk **reserves factory slots during design**, sometimes years before groundbreaking, which means a real purchasing conversation is available to you far earlier than the construction schedule suggests.",
+      "**The desk compounds.** The more campuses a builder delivers, the larger its standing equipment volume and the better its slots — scale in procurement is self-reinforcing in a way jobsite labour never is, so the relationship is worth more each year.",
+      "At the largest scale the buying is **{{open-book procurement}}**: the client sees the actual equipment prices and the builder charges a stated fee. Margin opacity is traded for trust, which means your price is visible and your *terms* are what differentiate you."
+     ],
+     "dis": [
+      "It **subcontracts most of the labour**, so the firm that decides whether your equipment is acceptable to install may be a specialty sub two tiers down, and the GC's endorsement does not reach that far on its own.",
+      "**A {{guaranteed maximum price}} makes certainty worth more than performance.** Anything that could move the number — a new supplier, an unproven lead time, a delivery you cannot date — is expensive to the firm even when it is cheap to the owner.",
+      "It does not own the design, so a technical objection it raises is usually somebody else's decision being relayed — **argue with the relay and you lose the relationship without moving the decision**.",
+      "On the biggest campuses **owners split the work among several builders at once** — three on one site is normal — because capacity, not loyalty, drives awards. A framework with one of them is not a position on the campus."
+     ]
+    }
+   ],
+   "note": "**The rule of thumb, and the exception that matters.** If the thing being built is a plant, the design is the product and you are selling to an {{EPC}}. If the thing being built is a building, the design came from elsewhere and you are selling to a buying desk. The exception is the AI campus, which is both at once and where the two classes meet on one site — the same owner may hold an EPC contract for the electrical scope and several CM-at-risk contracts for the halls, and the two will have different approved-vendor positions, different locking moments and different opinions of you. **Ask which contract your scope sits inside before you ask anything else**, because the answer changes who can say yes and when they stopped being able to.",
+   "sales": "The question that separates them in ten seconds: *who holds the design?* If the answer is the firm in front of you, its purchasing decision is real and early. If it is somebody else, the firm in front of you is a schedule and a budget, and your technical case has to be won in a room it does not control."
+  },
+  {
+   "id": "the-landlord-tiers",
+   "title": "The landlord tiers, and what each rung leaves for you to sell",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Three of the eleven classes — the {{hyperscaler}}, the {{neocloud}} and the landlord side of the developer class — meet each other inside one market, and that market **stratifies by deal size**. {{retail colocation}} sells cabinets and cages: kilowatts at a time, to thousands of customers who bring their own machines. {{wholesale colocation}} leases whole data halls: single-digit megawatts at a time, to dozens of tenants. And {{build-to-suit}} erects a dedicated campus of hundreds of megawatts for one named tenant, designed to that tenant's requirements before ground is broken. Same industry, same buildings, three different businesses.",
+    "**Margins run opposite to size, which is not the direction most people guess.** Retail earns the highest revenue per kilowatt and layers connection fees on top, but it fills slowly, one customer at a time. A hyperscale deal fills an entire building with one signature at thin, real-estate-like returns. In both cases **power is the unit of sale** rather than floor area — a cabinet is priced mostly by the kilowatts reserved for it, which is why operators quote capacity in megawatts and why a densifying rack turned the same square footage into several times the revenue.",
+    "The rule to carry out of this is short: **the customer defines the layer.** An enterprise with a few racks buys retail. A company that needs a private hall buys wholesale. A hyperscaler with its own designs and its own operations team wants a shell built to its specification — it is buying construction and power, not services. Operators mix the layers deliberately, because the retail ecosystem generates the premium margin while the hyperscale programme adds scale and an anchor tenant, often inside a joint venture with pension or sovereign money so it never touches the parent's balance sheet.",
+    "**Inside wholesale there is a second ladder, and this is the one that decides what is left for you to sell.** A {{powered shell}} is the building plus the utility power connection, and sometimes the substation — and nothing else. The tenant installs its own electrical distribution, its own {{UPS}}, its own generators and its own cooling. Cheapest rent, most tenant control, longest fit-out. **{{turnkey}} wholesale** delivers the complete environment — distribution, backup, cooling, security, operations staff — so the tenant rolls in racks and starts. Higher rent, fastest path to running compute. Build-to-suit goes one step further and designs the campus around one named tenant before construction, trading speculative risk for a locked lease.",
+    "Read the rung and you know **who your customer is on that campus**. On a shell, the tenant buys the power train — so the specification, the approved vendors and the purchase order all belong to the tenant's own infrastructure organisation, and the landlord is close to irrelevant to you. On a turnkey hall, the landlord buys the entire power train and the tenant never sees your name. On build-to-suit, the tenant writes the specification and the landlord buys against it, which means there are **two** rooms to win and losing either one is enough. A single campus can and does mix all three: master-plan the site, build shells for the self-performers and turnkey halls for everyone else — which is why 'engineered for shell and turnkey' now appears in campus specifications, and why 'who is the customer here' has to be asked per building rather than per campus.",
+    "**Which tenant takes which rung is predictable, and it is a class trait rather than a preference.** The most sophisticated hyperscalers often prefer shell: they trust their own fit-out engineering and their own supply chain, and they would rather own the power train than rent it. Scaling AI tenants — the {{neocloud}} class, by definition growing faster than its capital base — prefer turnkey speed, because their scarce resource is not capital efficiency but time. And what a hyperscaler will pay a premium for is **{{time-to-power}}**: a proven landlord who delivers a hundred-megawatt building on schedule beats saving a few percent on rent, every time. A seller who can credibly move a delivery date is selling the only thing that class is short of.",
+    "One structural fact underneath all of it, because it explains why these tenants behave like infrastructure buyers rather than technology buyers. Wholesale leases are typically **{{take-or-pay}}**: rent is owed on the reserved megawatts whether or not the tenant fills them. That shifts utilisation risk to the tenant and turns a speculative revenue line into one a lender will underwrite — which is what makes these cash flows financeable like infrastructure rather than like a technology business. It is also why the counterparty question arrives early with a fast-growing tenant and late with an established one: **the lease is only as good as the company signing it**, and everyone in the room knows it before the technical conversation starts."
+   ],
+   "sales": "Ask two questions and you have located yourself on the campus: *is this hall shell or turnkey* — which tells you whether the tenant or the landlord buys the power train — and *is the lease signed* — which tells you whether you are selling into a funded project or into a forecast. Neither question is sensitive, and most people on site can answer both."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "8 min",
+   "intro": "This lesson's failures are not equipment failures. Every one of them is a correctly built product sold into the wrong room, or into the right room after the moment when the room could still say yes. The first two are the ones the curriculum names for this lesson; the rest are what the eleven rows above imply once you read the last two columns.",
+   "ps": [
+    "**Pitching storage criteria to a desk that buys on AI criteria.** A storage buyer is underwriting a twenty-year availability promise, so cycle life, degradation, warranty exclusions and the service organisation behind them are the whole conversation. A data-centre infrastructure buyer is underwriting a **delivery date** — {{time-to-power}} — against a design its own engineers already trust. Lead with a degradation curve in the second room and you are answering a question nobody asked; lead with schedule in the first and you sound like somebody who has not read the offtake. Both desks may sit in the same building and buy the same box.",
+    "**And the same error running the other way.** Sell speed and standardisation to an owner whose project is contracted for twenty years and the buyer hears a supplier who has not understood that the fee it earns is an availability fee. What looks like efficiency to one class looks like an unpriced risk to the other, and the vocabulary that wins one room is the vocabulary that loses the other.",
+    "**Selling to the utility when the developer picks the equipment.** The regulated buyer is the most visible counterparty in the market and frequently the least relevant to a specific purchase. On a great many projects the utility is contracting for *output* — capacity, energy, availability — and the party that actually selects the equipment is the developer or the {{independent power producer}} behind the contract. Sell hard into the utility and you may win an enthusiastic audience with no purchase authority at all, in a building where the purchase order is already the last document in a chain of four authorisations.",
+    "**And the inverse, which costs more.** When the utility *is* buying the equipment, the sale is made or lost inside a proceeding — a plan, a certificate, a solicitation — often more than a year before any purchase order exists. Arrive when the {{RFP}} is published and you have arrived after the specification was written by somebody who was in the room a year earlier. Nothing about the meeting will tell you this; the calendar has already decided it.",
+    "**Treating the {{approved vendor list}} as paperwork.** Qualification is a separate sale, made to a different function, with no project attached and no urgency to help you. A supplier that is not on the list at bid time is generally not evaluated at all, however good the offer — and on an {{EPC}} job the list is effectively closed when the bill of materials is locked at bid. The commonest version of this failure is a supplier who spends a quarter on a project that was never open to it.",
+    "**Mistaking the investor for the buyer.** A fund does not buy equipment. In this corpus the funds are reached **through** their portfolio companies and appear in supplier records as an ownership attribution rather than as a counterparty — one of them owns no power project and has no energy position of its own, and makes every energy statement through a company it part-owns. But its screens reach your deal immediately, because the portfolio company applies them. Selling to the fund wastes a quarter; ignoring what the fund requires loses the account.",
+    "**Forgetting that one class has no budget and a veto.** The {{independent engineer}} buys nothing from you and is not your customer. It is appointed by the lender, paid by the developer, and its job is to verify the owner's plan with somebody else's money — reading your warranty's **exclusions** as carefully as its promises, and your test data more carefully than either. It starts roughly a year before financial close. A supplier who meets it for the first time during diligence is being examined by a party that has already formed a view.",
+    "**Reading a company's category instead of the deal's.** The largest counterparties hold several of the eleven at once, and the class that governs a given purchase is whichever one is holding that signature. The same firm can be a developer on one project, an owner on the second and a landlord on the third, with three different approval paths and three different locking moments. A relationship built on one of them does not transfer to the other two, and assuming it does is how a well-managed account quietly produces no orders.",
+    "**Believing a reserved gigawatt-hour is an order.** A {{reservation agreement}} reserves manufacturing volume and slots at agreed terms; the purchase orders are drawn down later, project by project, as each reaches financing. The headline number is an option on supply, not a delivery schedule — and in at least one case in this corpus, two years after a multi-gigawatt-hour framework was signed, no named project had drawn on it. When a volume is announced, the question to ask is **which project drew on it, and when**."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "4 min",
+   "cards": [
+    {
+     "q": "One fact defines the {{independent power producer}} class. What is it, and what two things follow from it?",
+     "a": "It has **no captive customers** — nobody is obliged to pay it through rates. Two things follow. Its revenue comes from **contracts and markets** rather than from an approved return, and both its **cost of capital and its exposure to prices are higher** than a regulated utility's. Every difference in how it buys traces back to that one fact."
+    },
+    {
+     "q": "Give the difference between an {{EPC}} and a {{general contractor}} in one sentence each, and say what it means for when your equipment is chosen.",
+     "a": "An EPC owns **design, purchasing and construction** and hands over a working plant, because on a power project the design is the product. A general contractor **manages construction of a building somebody else designed**, adding value in scheduling, coordination, procurement and risk-taking rather than in its own labour. So an EPC's purchasing decision is real and **locked at bid**, while a general contractor's buying desk reserves factory slots during design — sometimes years before groundbreaking — but usually cannot overrule a specification it did not write."
+    },
+    {
+     "q": "In the regulated room, where in the sequence does the purchase order sit — and why does the answer decide your timing?",
+     "a": "**Last.** None of the authorising bodies buys equipment: a filed plan establishes the need, a certificate approves it, a solicitation picks the winner and a rate order lets the cost be recovered — only then does procurement raise the order. Each of those is a proceeding with a calendar, so the sale is **made or lost a year or more before any purchase order exists**. Arriving when the {{RFP}} is published is arriving after the specification was written."
+    },
+    {
+     "q": "A tenant takes a {{powered shell}} rather than a {{turnkey}} hall. Who specifies and buys the power train, and what does that change for a seller?",
+     "a": "**The tenant does.** A powered shell is the building plus the utility connection and often the substation; the tenant installs its own distribution, {{UPS}}, generators and cooling. So on a shell the specification, the approved vendors and the order all belong to the tenant's infrastructure organisation and the landlord is close to irrelevant to you — while in a turnkey hall the **landlord** buys the whole power train and the tenant never sees your name. One campus commonly mixes both, so the question is asked per building."
+    },
+    {
+     "q": "Name the three procurement doctrines a fleet owner can follow, and what each one means for a company selling complete systems.",
+     "a": "**Dual-source** — two qualified suppliers chosen per project on bankability and geography, so incumbency resets each time and there is a live comparison every project. **Single-source** — one integrator for the whole fleet, bought for uniformity in operations, maintenance and financing, where the channel is a relationship rather than a bid and there may be no second-vendor precedent to point at. **Self-integration** — cells and DC blocks bought direct and assembled in-house, which removes the integrator channel altogether: the only entry point is component supply, a different product at a different margin. Establish which one the account runs on before you present anything, because one of the three answers means your product as configured cannot be bought there at any price."
+    },
+    {
+     "q": "The advisor class buys nothing from you and has no budget. Why can it still end the sale?",
+     "a": "Because it sells **judgment on somebody else's behalf**, and the money listens to it. The {{independent engineer}} is appointed by the lender and paid by the developer, and its job is to verify the owner's plan for someone else's money — it reads your warranty's **exclusions** as carefully as its promises, and your cell test data more carefully than either. It is engaged about **a year before financial close**, so a supplier meeting it first during diligence is being examined by a party that has already formed a view."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "kind": "quiz",
+   "read": "4 min",
+   "items": [
+    {
+     "q": "An account tells you it buys cells and DC blocks direct and integrates them in-house. What does that mean for a vendor selling complete containerised systems?",
+     "c": [
+      "There is no integrator channel to sell through — the only entry point is direct component supply",
+      "It is a negotiating position that softens once volume is offered",
+      "The vendor should approach the account's EPC contractor instead",
+      "It means the account will buy complete systems only for its smaller projects"
+     ],
+     "a": 0,
+     "why": "Self-integration is a structural fact about the buyer, not a stance. The account has replaced the integrator's job with its own, so the product it buys is a **component** — different specification, different margin, different qualification. That is worth establishing early, because the containerised system is not a thing this account purchases at any price."
+    },
+    {
+     "q": "A supplier announces a multi-gigawatt-hour framework signed with a large buyer two years ago. What has the number actually established?",
+     "c": [
+      "An option on supply — volume and factory slots reserved at agreed terms, drawn down per project as each reaches financing",
+      "A firm delivery schedule the buyer is contractually obliged to take",
+      "That the buyer's pipeline is at least that large today",
+      "That the equipment has cleared the buyer's independent engineer"
+     ],
+     "a": 0,
+     "why": "A {{reservation agreement}} fixes volume and slots, not deliveries; individual purchase orders are drawn down later, project by project, as financing closes. The useful question when you see such a headline is **which project drew on it, and when** — in this corpus there is a framework two years old against which no named project had yet drawn."
+    },
+    {
+     "q": "You are selling power equipment for a data hall leased as a powered shell. Whose approved-vendor list decides whether you are evaluated?",
+     "c": [
+      "The tenant's, because on a shell the tenant installs its own distribution, backup and cooling",
+      "The landlord's, because the landlord owns the building and the utility connection",
+      "Neither — on a shell the equipment is specified by the utility",
+      "Both equally, since the lease splits the power train between them"
+     ],
+     "a": 0,
+     "why": "The rung decides the customer. A shell is the building plus the utility power connection and often the substation; everything after that is the **tenant's** scope, so the specification, the vendor list and the order all sit with the tenant's own infrastructure organisation. In a turnkey hall the same question has the opposite answer."
+    },
+    {
+     "q": "An owner has awarded work on one campus to three different builders at once. What does a framework agreement with one of them establish about your position on that campus?",
+     "c": [
+      "Very little — awards at that scale follow capacity rather than loyalty, so each builder's scope is its own sale",
+      "That you are effectively specified across the campus, since the builders coordinate procurement",
+      "That the owner has pre-approved you and the other two awards will follow",
+      "That the campus is being delivered under a single guaranteed maximum price"
+     ],
+     "a": 0,
+     "why": "Splitting a gigacampus among several builders is normal, and **capacity, not loyalty, drives the awards**. Each holds its own subcontracts and its own buying desk, so a framework with one is a position in that builder's scope and nothing more. It is also why 'we are approved with the contractor' is a claim worth testing before it is forecast."
+    },
+    {
+     "q": "A lender-appointed engineer asks for your warranty document during diligence. What is it reading it for first?",
+     "c": [
+      "The exclusions — it reads the limits as carefully as the promises, because it is verifying the owner's plan with somebody else's money",
+      "The headline capacity-retention figure, to compare against competing products",
+      "The commercial terms, so the lender can negotiate the price down",
+      "Evidence that the product is already installed elsewhere at that scale"
+     ],
+     "a": 0,
+     "why": "The {{independent engineer}} is not a customer and is not buying anything. Appointed by the lender and paid by the developer, it tests the design against the use case, the contracts against the model and the warranty against both — and an exclusion that voids cover under the cycling regime the offtake demands is precisely the kind of gap it exists to find."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -36826,8 +37292,9 @@ function clTrackMarketAccess_() {
  "title": "Selling Into the Market",
  "short": "Finish this and you can name who signs the PO, under which contract, against which certification file, inside which policy fence — and say what 'bankable' concretely means to the lender who decides.",
  "group": "Market Access & Bankability",
- "updated": "2026-09-13",
+ "updated": "2026-09-14",
  "lessons": [
+  "who-buys-storage",
   "how-a-utility-buys"
  ],
  "prereqs": [
@@ -36935,7 +37402,8 @@ function clLessons_() {
           clLessonHowAUtilityBuys_(),
           clLessonBackupGeneration_(),
           clLessonTheUpsRoom_(),
-          clLessonTheTransformerAndTheSubstation_()];
+          clLessonTheTransformerAndTheSubstation_(),
+          clLessonWhoBuysStorage_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
