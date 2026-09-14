@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 28/50`
+`Sections: 29/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.29g] — 2026-09-13 09:25:11 PM EST — v05.57r
+
+### Added
+
+- New lesson added to the curriculum
+
+### Changed
+
+- One track's reading order now places the new lesson before a lesson you may already have finished, so it appears next in your study path
+- A track summary card now describes everything the track currently covers
 
 ## [v01.28g] — 2026-09-13 08:31:30 PM EST — v05.55r
 

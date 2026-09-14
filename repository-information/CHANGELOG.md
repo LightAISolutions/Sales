@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.57r] — 2026-09-13 09:25:11 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**Phase 4 row 4 — `the-ups-room`, the fourth of twenty-six mechanism lessons and the second pure lesson row.** Nine sections at the ids and kinds `CLASSROOM-CURRICULUM-PLAN.md` §3.3 fixes, gate `tracks` on nine public stamps, inserted at its §4 position inside `aidc-grid-to-chip`. The screenshot pass found a second rendering defect that no checker can see — and this commit fixes it only where this row owns it, which is the part worth reading below.
+
+### Added
+
+- **`the-ups-room`** (`tracks`) — the UPS room taught as a machine rather than described from the corridor: what the room is actually buying time for and the arithmetic that splits a seconds store from a minutes store; the three shapes sold, on the two axes that get argued as one (switching against spinning is electrical, monolithic against modular is packaging); the module/frame/unit/system vocabulary and the datasheet lines a buyer skips; VRLA against lithium against a flywheel, sized by rate rather than by amp-hours; the grid-interactive UPS as a storage conversation; the rack shelf that threatens the category; and §5 row 6's three failures with the five this room's own sources add. Inputs: `study:piller`@2026-09-03 · `study:vertiv`@2026-09-04 · `study:schneider-electric`@2026-09-04 · `study:mitsubishi-electric`@2026-09-03 · `study:rehlko`@2026-09-04 · `study:eaton`@2026-08-21 · `study:samsung-sdi`@2026-08-21 · `study:narada`@2026-09-04 · `concepts:profiler-concepts`@2026-09-13, every date read off the fetched file after `git fetch origin main`. `reviewBy` **2027-03-13** on the ~6-month default — nothing in the nine fetched sources carries an *upcoming* dated gate; the standards they name (IEC 62040-3, NFPA 855, UL 1973, UL 9540A, IEC 62619, IEEE 519, NFPA 110) appear without effective dates, and every date present is a past event. One local glossary entry (`reserve floor`), the registry resolving the other 143 terms used
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.15** — the paste-in brief for row 5, carrying the plain-field markup job below as a named obligation and predicting its checker signature
+
+### Changed
+
+- **`clLessons_()`** gains `clLessonTheUpsRoom_()` at the end; **`aidc-grid-to-chip`'s `lessons[]`** takes `the-ups-room` at position 5 — its §4 position 6 among the *built* lessons, after `backup-generation` and ahead of `the-800-vdc-shift`. That is the expected `check-classroom-pipeline.py` **P5** finding for a developer session and a real consequence rather than checker noise: `clStudyNext_`, run against the real PROJECT region in Node, now points an account that had finished all five previously-built lessons of that track back at `the-ups-room`, and on to `the-800-vdc-shift` once it is done. Registry after: **34 lessons, 8 tracks**
+- **`aidc-grid-to-chip`'s `short`** — its running "So far:" list was two lessons behind, never updated when `backup-generation` landed at v05.55r. It now names the ten-second race and the room that covers the seconds the engines cannot
+- **`CLASSROOM-CURRICULUM-PLAN.md` §4** — the status column still read `§7 row N` for rows 1–3 although all three are built; all four cells now read `built`. §7 row 4 flipped to a dated Built note; `INTEGRATED-REMEDIATION-PLAN.md` §7.3 run-table order 6 records row 4 and Phase 4 as **4 of 26**
+- **`Classroom.gs`** `VERSION` v01.28g → v01.29g with `live-site-pages/gs-versions/Classroomgs.version.txt`; `Classroomgs.changelog.md` gains a generic section (`Sections: 29/50`); the README tree's Classroom GAS display follows
+
+### Fixed
+
+- **A `proscons` card's `t` and `meta` are `textContent`, not `clFmt` — so a `{{term}}` in either prints its braces to the reader.** Found in the first screenshot of `three-ways-to-build-one`, where nine `{{…}}` tokens across three card `meta` fields rendered as literal `{{rectifier}}`, `{{DC link}}` and so on. Removed from this lesson before commit, with each term re-tooltipped in an `adv` bullet of the same section so no definition is lost. The plain-field set, read off `Classroom.html`'s call sites rather than assumed: `proscons` `cards[].t` and `cards[].meta`, a `timeline`'s `lanes` values, a `bars` item's `label` and `sub`, a section's `title` and `read`, and the lesson's `title`, `short`, `tiles[]` and `glossary[]`
+
+### Notes
+
+- **Nine identical occurrences are already shipped and are deliberately not touched here.** `bridge-power` (3 × `meta`), `the-control-stack` (2 × `t`, 1 × `meta`), `where-bess-plugs-in` (2 × `t`) and a `*square*` in `the-800-vdc-shift`'s `glossary[6].d`. Two reasons, both structural rather than cautious: editing another row's lesson literal would add a **P8** finding to a commit whose expected signature is P1 + P5, and P8's signature is what the next run reads to know its own write went in cleanly; and the mirror check — the v05.56r markup check inverted over the plain-field set — errors on all nine, so adding it before they are fixed would break the pristine-`HEAD` error baseline every Classroom session diffs against. The fix and the check belong in one run, in that order, and §7.15 specifies it with the expected **P1 + P8** signature. The wording change owes no `revisions[].changed[]` entry: the meaning does not move (G4), and none of these are `sections[]` fields a completed tick can be reconciled against
+- **Checkers.** `check-classroom-content.py` 34 lessons / 8 tracks / 142 gate cases — **24 errors, 0 warnings**, the error set byte-identical to a pristine `HEAD` worktree captured before any edit (twelve stale `segment-*` lessons, S2's to regenerate, neither caused nor fixed here). `check-classroom-curriculum.py --strict` no structural findings, 0 items due for review. `check-classroom-pipeline.py --selftest` 13 fixtures / 0 failures; `--base origin/main` **P1 and P5 alone — no P3**, the gate surface untouched and `gateDigest` deliberately not refreshed. `check-readme-tree.py` 10 page + 8 GAS displays match. `node --check` and `check-gas-inner-scripts.js` clean
+- **Verified on the walk and on the page, not just in the registry.** The ops were answered by the real serving functions run in Node, and `clStudyNext_` was exercised three ways — fresh, with every other lesson completed, and with `the-ups-room` completed — so the lesson is demonstrably on the teaching walk rather than merely registered. Playwright render at admin: all nine sections present, title and local glossary resolving, **zero page errors**
+- **CHANGELOG rotation did not fire.** 110 raw sections with 14 dated 2026-09-13 EST leaves 96 non-exempt, below the 100 trigger. The first push landing on a later EST date rotates, oldest whole date group thirteen sections dated 2026-09-04
 
 ## [v05.56r] — 2026-09-13 08:43:31 PM EST
 

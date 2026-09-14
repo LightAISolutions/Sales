@@ -1,4 +1,4 @@
-var VERSION = "v01.28g";
+var VERSION = "v01.29g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -32907,6 +32907,455 @@ function clLessonBackupGeneration_() {
 };
 }
 
+function clLessonTheUpsRoom_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-ups-room",
+ "type": "module",
+ "title": "The UPS Room: Static, Rotary, and the Battery Under Each",
+ "short": "Seconds or minutes; an inverter switching or a magnet spinning; one frame or a drawer at a time. What a UPS is for, the battery under each, the one that earns.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-13",
+ "reviewBy": "2027-03-13",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:piller",
+    "date": "2026-09-03",
+    "note": "what uninterruptible means and the three IEC 62040-3 grades; the seconds-against-minutes energy arithmetic; the anatomy of a static and of a rotary machine; the diesel on the shaft; the stiff source and why fault current is a feature; redundancy without doubling, to the isolated-parallel ring; the load that swings and the islanded campus; the failure map of the room"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vertiv",
+    "date": "2026-09-04",
+    "note": "what a power module physically is and what has to be true for one to be pulled live; module / frame / unit / system as four different purchases; the capacity-on-demand argument; the ratings ladder from the rack shelf to the room block; the datasheet line by line; the eleven-step procurement sequence; the shelf in the rack as a threat to the category"
+   },
+   {
+    "kind": "public",
+    "ref": "study:schneider-electric",
+    "date": "2026-09-04",
+    "note": "the five redundancy arrangements above the machine and the installed-megawatts-per-protected-megawatt arithmetic; the maintenance day as the design case and what the module level changes about it; the manual wrap-around bypass; the grid-interactive UPS, the reserve floor and why operators buy a separate asset instead"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mitsubishi-electric",
+    "date": "2026-09-03",
+    "note": "the three-level inverter and what silicon carbide moves; the efficiency curve and the redundancy tax that parks every unit below its best point; transformer-based against transformerless and the three jobs the missing iron used to do; VRLA against lithium under a large static UPS"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rehlko",
+    "date": "2026-09-04",
+    "note": "the four blocks of a static UPS and the VFI vocabulary; the four clocks on one bus and the design relationship between autonomy and transfer time; monolithic against modular as a form-factor and repair-time decision; sizing a UPS, and why a redundancy claim means nothing until its level is named"
+   },
+   {
+    "kind": "public",
+    "ref": "study:eaton",
+    "date": "2026-08-21",
+    "note": "the double-conversion against eco-mode dial, referenced rather than re-taught: hold-up time as the physics referee and the detection question that is the whole of the argument"
+   },
+   {
+    "kind": "public",
+    "ref": "study:samsung-sdi",
+    "date": "2026-08-21",
+    "note": "why a UPS battery is a power battery and not an energy battery; float duty inverting the optimisation toward calendar life and rate capability; why the niche pays premium prices and certification rather than cost decides the sale"
+   },
+   {
+    "kind": "public",
+    "ref": "study:narada",
+    "date": "2026-09-04",
+    "note": "power not energy and the C-rate ladder; how a backup battery is actually specified, constant power rather than amp-hours; what lead-carbon changed and where lead still wins; the cell behind the rack shelf and its pulse-cycle life; the two ways to make a backup store earn"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "t": "reserve floor",
+   "d": "The state of charge in a grid-interactive UPS below which no market signal is allowed to draw, because the backup duty is not negotiable. It is the honest autonomy figure once the store is also earning — and it is a safety case only if it is an interlock rather than a setting."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "VFI",
+   "v": "the class a hall buys",
+   "sub": "voltage and frequency independent — nothing from the supply reaches the load"
+  },
+  {
+   "k": "4.2 kWh",
+   "v": "carries 1 MW for 15 s",
+   "sub": "ten minutes needs forty times more: seconds are sized by power, minutes by energy"
+  },
+  {
+   "k": "N+1",
+   "v": "of what?",
+   "sub": "module, frame, unit or system — four levels, four prices, four sets of surviving failures"
+  },
+  {
+   "k": "352 kW",
+   "v": "for 5 minutes",
+   "sub": "about 29 kWh delivered — you are buying a rate, not stored energy"
+  }
+ ],
+ "sections": [
+  {
+   "id": "seconds-or-minutes",
+   "title": "Seconds or minutes: what the room is actually buying time for",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The generator lesson before this one owns the ten seconds between the grid dropping and an engine carrying the hall. This room owns the part of that window nothing with a crankshaft can reach. A server's own power supply coasts for **10 to 20 milliseconds** on its internal capacitors, and that is the hard deadline everything upstream is designed around. The {{UPS}} is what stands in the gap — and the first question about one is not which brand but *how much* of that gap it is being bought to cover.",
+    "**Do the arithmetic once and the whole product category falls into two halves.** Carrying a one-megawatt hall for fifteen seconds needs fifteen megajoules — about **4.2 kWh**, a few laptop batteries' worth of cells, delivered at the rate of a small town's demand. Carrying the same hall for ten minutes needs forty times more, roughly **170 kWh**, before any of the margins engineers add for ageing and temperature. The seconds store is sized by *power*; the minutes store is sized by *energy*. Everything else in this lesson — the machine, the chemistry, the footprint, the fire code — follows from which of those two a site decided to buy.",
+    "**Which seconds do you actually need?** Honest engineers give two answers and both are defensible. About ten to fifteen with margin, *if* the start path is engineered to be reliable — redundant starters, a second engine already cranking, or a diesel on the same shaft as the store. Or several minutes, *because* first starts sometimes fail and an orderly shutdown of a hall is worth a great deal more than an abrupt one. The industry's split between flywheel-backed and battery-backed machines is, at bottom, that argument. A hybrid — a flywheel to take the hit with a small battery behind it — exists because each answer is right about something.",
+    "**The vocabulary that makes the datasheets legible is {{IEC 62040-3}}**, which grades a machine by how much of the supply's misbehaviour reaches the load. *VFD*, voltage and frequency dependent: everything reaches the load until a switch acts. *VI*, voltage independent: the supply's frequency reaches the load, with the voltage corrected. *{{VFI}}*, voltage and frequency independent: nothing from the supply reaches the load at all. A data hall specifies VFI, and 'VFI' on a datasheet is the compact way of asserting it. Note what the class is a promise about, though — **normal operation**. Put the load on {{static bypass}} for maintenance or run a static unit in {{eco-mode}} and the machine is temporarily behaving as a lower class than the one on its nameplate, which is why the classification and the failure map are the same lesson read twice.",
+    "**Four clocks get quoted in the same conversation and mean different things.** {{Hold-up time}} is the server's own property, 10 to 20 ms. {{Ride-through}} is the machine's, cycles to seconds — free in {{double conversion}} because the load is never on the mains, and a detection-and-transfer budget in eco-mode. {{Autonomy}} is the store's, seconds for a {{flywheel}} and minutes for a battery. {{Transfer time}} belongs to the {{ATS}} and the generator plant, up to about ten seconds for the standard emergency class, which is what {{NFPA 110}} classes systems by. The design relationship is one sentence: **autonomy must exceed transfer time with enough margin to survive a failed start and a restart attempt.** A five-minute battery against a ten-second transfer looks generous until the first engine fails, the sequence times out, the second is called, and the mechanical plant has to come back in stages behind it."
+   ],
+   "sales": "Before quoting anything, ask which of the two answers the site bought — seconds with a trusted start path, or minutes because the start is not trusted. That one answer tells you whether you are selling power or energy, and the two have almost nothing in common but a chemistry name."
+  },
+  {
+   "id": "three-ways-to-build-one",
+   "title": "Three ways to build one",
+   "kind": "proscons",
+   "read": "8 min",
+   "intro": "Two different axes get argued as though they were one. The first is **how the clean wave is made** — by switching, or by spinning a magnet — and it changes the machine's electrical behaviour, its fault current, its voltage class and what its store can be. The second is **how the machine is packaged** — one large cabinet lineup, or a frame of drawers — and it changes repair time, how capacity is bought, and almost nothing electrical. The three cards below are the shapes actually sold; read the first two against each other, and the third as a form factor the first one can take.",
+   "note": "No column wins the table. The static machine wins on efficiency at full load, on modularity and on the minutes; the rotary machine wins on fault current, harmonic isolation, voltage class and a store whose state of charge is proven every second; the modular frame wins on repair time and on matching capital to a lease-up curve. Which a campus buys is decided by the row it cares about most — and hyperscalers, who standardise on low-voltage blocks and buy minutes, have mostly chosen the left-hand column. That is why the rotary family's home is the very large block, the medium-voltage connection, and the operator who would rather have one machine per block than four.",
+   "cards": [
+    {
+     "t": "Static — clean power by switching",
+     "meta": "Four blocks in a row: a rectifier to direct current, a DC link with the store hanging permanently on it, an inverter chopping it back into a sine wave thousands of times a second, and a static bypass beside them. No moving parts but the fans",
+     "adv": [
+      "**Nothing switches when the supply fails.** The store is already on the {{DC link}}, so energy simply stops arriving from one side and starts arriving from the other — which is the whole architectural argument for {{double conversion}}, and the reason the topology is the data-hall default",
+      "**Minutes are affordable**, because energy is cheap per kilowatt-hour. That buys time to confirm the generators, attempt a second start, or shut a hall down in order rather than abruptly",
+      "**The best efficiency at the design point**, and still improving: splitting the DC link and adding a path to its midpoint — the {{three-level inverter}} — lets each switch block half the voltage and shrinks the output filter, and {{SiC}} devices move the same trade again. One published catalogue shows 97.0 % on a silicon flagship against 98.2 % on a silicon-carbide unit at half the rating",
+      "Built at {{low voltage}} from components the whole industry knows how to install, monitor and replace"
+     ],
+     "dis": [
+      "**{{Fault current}} is limited to a little above rating by the very switches that make the wave** — they would be destroyed by more. So a downstream fault may need more current to clear a breaker than the inverter can legally supply, which is why the bypass exists at all, and why the {{coordination study}} has to be done twice: once for the load on the inverter and once for the load on bypass",
+      "**Efficiency is worst at part load**, exactly where redundancy parks it. Fixed losses — controls, fans, magnetics, standing losses in the semiconductors — do not scale down, so a 2N plant at 40 % IT utilisation runs each machine near 20 % load, permanently and by construction",
+      "Modern units are {{transformerless UPS}} designs, and the missing iron was doing three jobs: {{galvanic isolation}}, deriving the output neutral, and contributing fault current. If those were not explicitly reassigned elsewhere on the {{single-line diagram}}, they were not done",
+      "The store is a battery room — an {{NFPA 855}} object with spacing, ventilation and a replacement cycle inside the machine's life"
+     ]
+    },
+    {
+     "t": "Rotary and DRUPS — clean power by spinning a magnet",
+     "meta": "A synchronous machine fed from the supply through a coupling choke, with the critical load connected at the machine's terminals and a flywheel on its shaft. Put a diesel on the same shaft through a clutch and it is a DRUPS — the flywheel now covers the engine's own start instead of a remote generator's",
+     "adv": [
+      "**A stiff source.** The machine delivers several times its rating in {{fault current}} for the first cycles out of its stored magnetic energy, so {{selective coordination}} downstream behaves exactly as it does on utility power — which an {{inverter}} of the same rating cannot do",
+      "**Conditioning is continuous, not a mode.** {{Excitation}} holds the output voltage, the {{coupling choke}} and the machine block {{harmonics}} in both directions, and the load's {{power factor}} is corrected by the machine rather than by a setting",
+      "**The state of the store is read off a tachometer.** If it is spinning at speed it is full, and proven, every second of every day — against a battery whose condition is on a report",
+      "A wound {{synchronous machine}} can be built for {{medium voltage}} directly, and a DRUPS collapses UPS, transfer switch and generator into one machine per block: no {{ATS}}, no remote engine to synchronise, no battery"
+     ],
+     "dis": [
+      "**Seconds are all you get** — on the order of ten to thirty at full load — so the start path must be trusted. Where a battery-backed plant fails gracefully into minutes of warning, a DRUPS that does not start has seconds, which is why a lone DRUPS is a design error and the topology, not the machine, carries the block",
+      "**Standing losses never stop.** Windage, friction and magnetising current are constant, so the machine is least efficient exactly where a lightly loaded hall runs it",
+      "Bearings and a rotor inspection replace the battery replacement cycle — and each inspection is a planned outage of that unit, which means the load goes to bypass or onto the ring",
+      "Heavy, loud, and a precision rotating machine with a maintenance calendar of its own"
+     ]
+    },
+    {
+     "t": "Modular — the same static machine, bought a drawer at a time",
+     "meta": "A power module is a complete, independently operable UPS in a slide-in chassis — its own rectifier, DC-link capacitors, inverter, control processor, fans and protection — sharing only the frame's busbars, its input and output breakers, and a supervisor that tells it nothing more than what share of the load to take",
+     "adv": [
+      "**Repair time collapses from hours to minutes**, and without a bypass window: pull the drawer, insert another, the load never notices. That converts the commonest maintenance event from a plant-level procedure into a technician's task, which is most of the practical difference between plants that get maintained and plants that do not",
+      "**{{N+1}} costs one module rather than one whole unit**, so redundancy in a small or lightly loaded block is a fraction of the price",
+      "**Capital tracks revenue.** Frames, breakers, cabling and the battery room are sized for the end state and modules are added as the hall fills — which also keeps the plant nearer its efficient band throughout, instead of parking a full block at a quarter load for two years"
+     ],
+     "dis": [
+      "**{{Hot-swap}} is a property of the slot, not of the module.** Three things have to be engineered in: {{current sharing}}, done by giving each module a deliberate {{droop}} so one running high backs off; a defined {{precharge}} and isolation sequence so pulling a drawer does not hand the bus a transient; and shrouded connections, because a hand is in the frame while several hundred kilowatts flow centimetres away",
+      "**Every addition is live work on an energised frame** — a procedure, a competent person and an accepted risk, not a delivery",
+      "**The parts you cannot defer are the expensive ones.** Frame, breakers, {{floor loading}}, battery room, cooling for the electrical room: deferring modules defers perhaps a third of the cost, and later modules are bought at future prices from a vendor who knows the frame is captive",
+      "Higher cost per kilowatt, more connectors, more fans, and more control interactions to get wrong"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-ladder-and-the-datasheet",
+   "title": "The ladder, then the datasheet",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "The first four rows are the vocabulary. 'Module', 'unit', 'system' and 'block' are used interchangeably in marketing and name four different things in a specification — which is precisely how a redundancy claim gets made at one level and read at another. The remaining rows are the datasheet: about thirty lines, of which four get read. These are most of the rest of them.",
+   "note": "Two disciplines worth carrying. **Write every redundancy claim as a sentence with the level in it** — 'N+1 modules within a single frame' and 'N+1 frames within a system' differ by roughly an order of magnitude in price and by an entire class of failure, and both are correct designs for different buildings. And the four lines that most often produce a surprise on site are {{overload rating}}, short-circuit contribution, {{floor loading}} and the battery charge-current limit. None of the four appears in a headline comparison, and each can invalidate a design that compared well on the numbers that did.",
+   "cols": [
+    "What you are reading",
+    "What it actually says",
+    "What goes wrong when it is skipped"
+   ],
+   "rows": [
+    [
+     "**{{power module}}**",
+     "A complete small UPS in a slide-in chassis — typically tens to a couple of hundred kilowatts",
+     "Its rating is the granularity of every future decision, and it is the number that decides what {{N+1}} costs"
+    ],
+    [
+     "**{{UPS frame}}**",
+     "The cabinet the modules live in: internal busbars, input and output breakers, controls, and a fixed number of slots",
+     "It is the **permanent** maximum of that position in the room. Populating it later is cheap; replacing it is a construction project inside a live building, so the frame is the decision that cannot be deferred"
+    ],
+    [
+     "**Unit or block**",
+     "One complete UPS as the {{single-line diagram}} sees it — a populated frame or a large monolith, with one output breaker",
+     "One point of common failure and one maintenance event. Module-level N+1 inside a single frame still has one frame and one output breaker — a perfectly reasonable design, and not the {{2N}} most people picture when they hear the phrase"
+    ],
+    [
+     "**System**",
+     "Several units paralleled onto a common output bus with load sharing and a common control",
+     "A ceiling set by the vendor's parallel limit — commonly four to eight units — plus a shared control layer whose failure modes are now yours. In N+1 the common bus is still single: a fault there takes every unit on it"
+    ],
+    [
+     "**Output kW and kVA**",
+     "Real power and {{apparent power}}. Equal means the machine is unity-rated; when they differ, the smaller number is what you can use",
+     "A specification written against an old 0.8 or 0.9 ratio and filled with a unity-rated machine — or the reverse — silently mis-sizes the plant by ten percent or more. Always compare kW"
+    ],
+    [
+     "**{{overload rating}} and short-circuit contribution**",
+     "How far above nameplate the machine goes and for how long, and how much {{fault current}} it will push into a bolted fault",
+     "This is the line that decides whether a downstream fault clears. A machine that folds back to its rating to protect its semiconductors leaves the branch breaker unable to trip, so the fault stays and the **bus** goes instead of the circuit"
+    ],
+    [
+     "**Efficiency at 25 / 50 / 75 / 100 %, in each mode**",
+     "A curve, quoted at its best point — typically somewhere between 50 and 75 % load on a modern large unit",
+     "Every new hall lives at the light-load end for its first year or two, and redundancy holds it there by construction. Read the efficiency at the load you will actually run at, confirm whether the curve is double conversion or {{eco-mode}}, and check whether kVA and kW are equal — those three questions separate competing quotes more than the headline does"
+    ],
+    [
+     "**{{THDi}} and input {{power factor}}**",
+     "How cleanly the machine draws its own supply. A modern {{active front end}} is close to a plain resistor; an older {{12-pulse rectifier}} is not",
+     "It sizes the generator and the upstream {{transformer}}. A distorted front end forces the {{gen-set}} to be oversized for distortion rather than for load, and pushes site voltage distortion toward the {{IEEE 519}} limit — and when the UPS and the engine come from different suppliers, that factor belongs in one document or it belongs to nobody"
+    ],
+    [
+     "**Battery interface: DC voltage window, charge-current limit, {{ripple current}}**",
+     "The contract between the machine and the store — what string voltages it accepts, how fast it refills them, and how much alternating current it puts back through the cells",
+     "It silently constrains the chemistry. A charge-current limit that refills a depleted string slowly is a second outage waiting for the first one to repeat, and ripple above what the cell was rated for never appears as a fault — only as a string that ages faster than its neighbours"
+    ],
+    [
+     "**Footprint, weight and {{floor loading}}**",
+     "Square metres, kilograms, and kilograms per square metre — the last of which is a building property, not an equipment one",
+     "In a retrofit this ends more equipment selections than price does. It is also why {{footprint density}} is quoted as a commercial argument at all: plant room converted into {{white space}} is the thing being sold"
+    ],
+    [
+     "**{{IEC 62040-3}} classification and safety listing**",
+     "Which class of supply misbehaviour the machine actually isolates the load from, and to which standard it was built",
+     "The classification is the honest version of the marketing. A machine sold as 'online' that classifies as voltage-and-frequency-dependent is not the same purchase"
+    ]
+   ],
+   "sales": "The level-naming discipline is the cheapest credibility a seller can buy in this room: ask 'N+1 of what — modules, frames, units or paths?' and then trace both paths back from one server until they first touch. Whatever they touch is the real redundancy of everything below it, whatever the tier claim says."
+  },
+  {
+   "id": "the-battery-under-each",
+   "title": "The battery under each",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Given that the store is chemistry rather than steel, which chemistry — and what does the choice drag in behind it? The {{UPS}} is a power application, not an energy one, and that changes almost every answer from what a grid-storage reader expects. The flywheel column is here as the third answer rather than as a chemistry: it is what the same row looks like when the store is rotation.",
+   "note": "The trap worth naming: a reader who knows grid-scale storage will reach for energy-density and cycle-life instincts that do not apply here. A UPS battery may see a handful of real discharges in its whole life. **{{Design life}} at {{float charge}}, discharge rate, footprint, monitoring and the fire code decide it.** One worked example carries the whole discipline — a published cabinet rated **352 kW for 5 minutes** delivers roughly **29 kWh**, a trivial amount of energy by grid standards, from a cabinet that must supply a third of a megawatt while doing it. You are buying a rate; the energy is whatever the rate multiplied by the runtime happens to require.",
+   "cols": [
+    "Dimension",
+    "{{VRLA}} lead-acid",
+    "Lithium ({{LFP}} or {{NMC}})",
+    "{{Flywheel}}"
+   ],
+   "rows": [
+    [
+     "**What it stores, and for how long**",
+     "Minutes, bought cheaply in cells",
+     "Minutes, in a fraction of the space",
+     "Seconds — on the order of ten to thirty at full load, and a footprint that does not grow with the minutes you did not buy"
+    ],
+    [
+     "**The rating that actually sizes it**",
+     "{{Constant-power rating}}: watts per cell, for a stated time, to a stated {{end-of-discharge voltage}}, at a stated temperature. All four qualifiers travel together",
+     "The same specification, with far less capacity penalty as the rate rises",
+     "Not a capacity question at all — the store is sized by the seconds the start sequence needs, and proven by the tachometer"
+    ],
+    [
+     "**{{C-rate}}, and why it is the number**",
+     "Delivers high rates, but usable capacity falls sharply as the rate rises — so an amp-hour figure describes a slow discharge and overstates what a UPS discharge will get",
+     "Tolerates high rates with much less penalty. One vendor's 512 V cabinet line is sold in 1C, 2C, 5C and 6C models that differ only in the cell inside the same mechanical product",
+     "Enormous power for a short time; energy is what it does not have"
+    ],
+    [
+     "**Life, and what consumes it**",
+     "A few years, and temperature dominates: the standard rule of thumb is that every 10 °C above the design point roughly halves it. A room a few degrees warm consumes years quietly, and nothing about it looks like a fault",
+     "Two to three times longer and far less punished by temperature — which halves the number of replacement windows over twenty years, and that is much of the commercial case",
+     "Essentially unlimited cycles and no chemical ageing; bearings and a rotor inspection replace the replacement cycle"
+    ],
+    [
+     "**Footprint and weight**",
+     "Large and very heavy; the battery room is often a structural design input",
+     "Published at roughly 60 % less weight and 50 % less footprint against lead on one 512 V line",
+     "No battery room at all — but a precision rotating machine standing in its place"
+    ],
+    [
+     "**What certifies it**",
+     "A long-understood risk profile; hydrogen evolution on charge means the room needs ventilation",
+     "{{UL 1973}} listing, {{UL 9540A}} test data and {{NFPA 855}} installation rules — spacing, enclosure, suppression, detection; {{IEC 62619}} internationally. Cheaper to buy and more expensive to permit, and the authority having jurisdiction decides, not the vendor",
+     "No fire-code review for the store itself"
+    ],
+    [
+     "**How its condition is known**",
+     "Cell-level monitoring is an added system and is sometimes omitted. A string ends when its **first** cell reaches {{end-of-discharge voltage}}, so one weak unit costs the whole string's runtime rather than its own share",
+     "A {{BMS}} is intrinsic — the pack cannot operate without one, so {{state of health}} is continuous and reported",
+     "{{State of charge}} is rpm: if it is spinning at speed it is full, every second of every day"
+    ],
+    [
+     "**Where it still wins, honestly stated**",
+     "Capital cost, a genuinely mature recycling route, no BMS needed to function, and a shorter permitting conversation. {{Lead-carbon}} negative plates suppress the {{sulphation}} that killed its ancestors in {{partial state of charge}} duty — which is why a thirty-year lead franchise is an asset rather than a legacy",
+     "New builds, where floor and rack space is money. The lead-to-lithium move in backup power was a space, weight and instrumentation argument, not a chemistry one",
+     "A start path engineered to be reliable — and a campus that also wants {{inertia}}, {{fault current}} and reactive power from the same machine, which is the {{synchronous condenser}} duty an {{islanded}} site needs and no inverter of that rating supplies"
+    ]
+   ]
+  },
+  {
+   "id": "the-battery-that-earns",
+   "title": "The battery that earns",
+   "kind": "callout",
+   "tone": "info",
+   "read": "5 min",
+   "intro": "This is the section that makes the UPS room a storage conversation rather than a facilities one — and the reason a seller who can only talk about containers keeps losing the meeting to someone who can talk about float duty.",
+   "ps": [
+    "**A UPS battery spends essentially all of its life at {{float charge}}, doing nothing, ageing anyway.** In a large hall that is several megawatt-hours of installed, cooled, monitored and insured storage that produces no revenue and is replaced on a schedule. The {{grid-interactive UPS}} proposition is to let it work — shave the building's {{coincident peak}}, answer a {{demand response}} call, hold frequency for the network, or soak the training-step swings the hall itself creates.",
+    "**What has to change in the machine.** The conversion has to run backwards, which means a genuinely bidirectional front end rather than a {{rectifier}} with a charger bolted to it. Metering has to be revenue-grade if the energy is going to be paid for. The control layer has to hold a {{reserve floor}} — and prove it holds it, to an insurer and to an authority. And the protection has to handle export, {{anti-islanding}} included, which a conventional UPS never had to think about.",
+    "**What the operator has to accept.** Three things, and they are why this remains a small business relative to the noise it makes. The store now cycles, and cycles consume {{cycle life}} the warranty counted on not being consumed — and a {{power battery}} has less of it to give than a grid cell does, because a cell chosen for {{specific power}} is a deliberately poor energy store. The honest {{autonomy}} figure becomes the reserve floor rather than the nameplate. And a battery that discharges on purpose is a different fire-code conversation — {{NFPA 855}}, {{UL 9540A}} data, spacing and suppression — decided by the authority having jurisdiction rather than by the vendor.",
+    "**Where it actually lands, and why it is a storage conversation either way.** The pattern across this corpus is that operators buy a *separate* {{BESS}} and talk about converting the UPS: containers and skids from the same vendors who sell the UPS, or the same outcome sold as an energy-as-a-service microgrid. The reason is governance more than engineering — the person who owns uptime and the person who owns the energy bill are rarely the same person, and a separate asset lets each keep their own risk. Whichever box wins, the tender that lands on the desk has a reserve floor, a cycle-life warranty and export protection in it. Those three lines are how you recognise a storage tender wearing a facilities job title."
+   ],
+   "sales": "The UPS room is the one place inside the hall where a battery is already installed, cooled, monitored and insured — which makes it the easiest storage sale to describe and the hardest to close. Find out who owns the reserve floor and whether it is an interlock or a setting; that answer tells you whether you are talking to the uptime owner or the energy-bill owner, and they buy different things."
+  },
+  {
+   "id": "the-shelf-that-threatens-the-room",
+   "title": "The shelf that threatens the room",
+   "kind": "callout",
+   "tone": "info",
+   "read": "5 min",
+   "ps": [
+    "**Everything above describes a machine that lives in an electrical room, feeds a {{busway}} and protects a hall.** The 800-volt DC rack architecture proposes something else: put the store on a DC bus inside the rack and delete the room machine's job. Put both on one scale and the gap is the argument — an Open Compute {{power shelf}} delivering tens to low hundreds of kilowatts per rack, against a room block published at one and a half to two and a half megawatts and paralleled to around twenty. Roughly an order of magnitude, and that gap is exactly the territory the new architecture is trying to occupy.",
+    "**The room UPS is not only a converter, which is why the argument is not settled by efficiency.** Each {{conversion stage}} costs something and the room machine is a stage the shelf can in principle remove — but the room machine is also where the {{autonomy}} lives, where the {{fault current}} for downstream {{selective coordination}} comes from, and where one maintenance action protects a whole hall. Moving the store into the rack distributes all three. Stored energy becomes hundreds of small {{BBU}} shelves instead of one battery room; the fault duty moves to devices with no {{zero crossing}} to help them, which is why {{SSCB}}s appear in these designs; and maintenance becomes a per-rack activity.",
+    "**The cell changes with it, because the duty is a pulse rather than a discharge.** A rack store is not carrying the load until an engine starts — the machine downstairs does that. It covers a transfer, absorbs a step, or holds the bus for the fraction of a second before something upstream reacts. One published power cell quotes its life not in cycles but in {{pulse cycle}}s: more than **200,000 discharges of 500 milliseconds**, a figure that would be meaningless for any other kind of battery. Two hundred thousand half-second events is not backup duty. It is a component being exercised as part of normal operation, on a life budget that was priced against a different job.",
+    "**The honest limit, and where this hands off.** Distributing the store distributes the problem: hundreds of small stores inside occupied racks, each with its own {{state of health}}, each in the airflow of equipment it must not heat, each a fire-code object in a room full of people. That is a genuinely harder operational problem than one battery room and nobody has solved it yet — which is why both architectures are being built at once, and why the installed base alone guarantees decades of service revenue for the room machine. What is actually in play is the *marginal* megawatt in new AI halls. The 800 VDC lesson later in this track takes the same argument from the bus's side: why the voltage climbed, and what converting once, early and high actually buys."
+   ],
+   "sales": "When a customer says the UPS is going away, ask which three jobs the rack is picking up — the autonomy, the fault current, and the one maintenance action that covered a hall. Nobody has a clean answer to all three yet, and the gap between the shelf and the room block is where the next five years of this category is decided."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "intro": "Row 6 of this app's failure map is the UPS, and it names three failures. All three are below, with the ones this room's own sources add underneath them. Notice how many are not equipment faults at all: the machine works, and the room is unprotected anyway.",
+   "ps": [
+    "**Load exposed on bypass while a monolith waits for a specialist.** A unit goes to maintenance {{static bypass}} — raw mains, no conditioning, no store behind it — and the supply dips for longer than the {{hold-up time}}. Nothing failed except the assumption that maintenance mode is safe mode. A monolith's repair time is measured in hours and the hold-up is 10 to 20 milliseconds, so the exposure is not a risk the operator takes once; it is a scheduled, repeated window. It is owned by the operator and the service contract — and by the topology that decided whether bypass was the only option, since a {{modular UPS}} converts the commonest repair into a drawer swap that needs no bypass at all.",
+    "**A transfer that is fast for the typical fault and not for every fault.** {{Eco-mode}} runs the load on the raw supply and bets that detection and transfer back to the {{inverter}} finish inside the hold-up window for every kind of failure. A clean open circuit is easy. A slow sag, a single-phase fault, a frequency drift or an upstream fault that clears itself is where the bet is tested. Modern implementations are much better than their reputation and the honest position is that eco-mode trades a small, quantified reliability margin for a large, certain energy saving — but the margin is quantified by the OEM who published the detection times and taken by the operator who set the dial.",
+    "**Modules parked below their efficiency sweet spot.** Redundancy holds every unit under its rating by construction — that is what a spare is *for* — and a switching converter's efficiency falls at part load while a rotating machine's standing losses stay constant. A hall that fills over two years starts there anyway. Either way the block's real efficiency is below the nameplate curve, nobody chose it, no alarm reports it, and the difference is heat that must be cooled for the life of the building.",
+    "**The string that was proven three years ago.** {{State of health}} is known only when it is tested, one weak cell limits the whole series string, and a battery room a few degrees warm ages twice as fast per ten degrees. {{Conductance testing}} screens for the cell that has already failed; it does not tell you how many minutes remain, and a site that substituted screening for {{capacity test}}ing has bought a fast measurement of the wrong quantity.",
+    "**The recharge that was never in the arithmetic.** After a discharge the store has to be refilled before it can protect anything again, and the charger's current limit — a UPS datasheet line — usually decides that rather than the battery. A plant that takes many hours to recover is unprotected against the repeat event, which is the event most likely to happen. And the mid-life battery replacement is a project, not a maintenance task: budgeted as a line item it is cheap, budgeted as a scheduled period of reduced {{autonomy}} it needs a plan.",
+    "**The engine that does not start inside the flywheel's seconds.** In a {{DRUPS}} the store's autonomy is the entire margin for a diesel start and a clutch engagement under load. A fuel, starter or control fault that a battery-backed plant would have minutes to notice presents here with seconds left. Its topology cousin has the mirror-image exposure: an {{isolated parallel bus}} removes the transfer switch and puts the redundancy in impedance, which makes the ring, its chokes and its protection common to every unit on it — the one failure the arrangement was not built to absorb.",
+    "**The {{reserve floor}} that was only a setting.** In a {{grid-interactive UPS}} the state of charge below which market signals may not draw is the entire safety case. If it lives as a configurable parameter with no interlock, no alarm and no audit, the backup duty is protected by somebody's memory.",
+    "**And 'rated for' read as 'operating at'.** kVA on the nameplate against kW at the load's {{power factor}}; autonomy quoted at a load the hall no longer runs; a {{coordination study}} done on utility power and never repeated for the load on the inverter. The UPS room inherits every {{commissioning}} sin the rest of the chain commits — and it is the room where they present as a dropped hall."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "6 cards",
+   "cards": [
+    {
+     "q": "Why is a seconds store a completely different object from a minutes store, and what number separates them?",
+     "a": "Because one is sized by power and the other by energy. Carrying a one-megawatt hall for fifteen seconds needs about 4.2 kWh delivered at the rate of a small town's demand; carrying it for ten minutes needs roughly 170 kWh, forty times more, before any ageing or temperature margin. The number that separates the two objects is C-rate — discharge speed relative to capacity, where 1C empties a cell in an hour and 10C in six minutes. A power cell is thin-coated with many more current-collector tabs, so it delivers current hard and stores much less; a thick-coated energy cell does the opposite. That is why one catalogue can span a fortyfold range in the single number that governs cell design, and why grid-storage credentials tell you very little about a backup product."
+    },
+    {
+     "q": "A static UPS and a rotary UPS both deliver clean power. Name the one difference they come from, and three consequences of it.",
+     "a": "The static machine makes the clean wave by switching — an IGBT or SiC inverter chopping DC and filtering it — and the rotary machine makes it by spinning a magnet, a synchronous machine fed through a coupling choke with the load at its terminals. Consequences: fault current, which is limited to a little above rating by the switches in the static machine and runs to several times rating for the first cycles in the rotating one, so downstream coordination behaves differently; the store, which sits on the DC link as minutes of battery against a flywheel's seconds on the shaft; and the voltage class, since a wound machine can be built for medium voltage directly while a static unit is low voltage with a transformer above it. Harmonic isolation follows too — inherent in the choke and the machine, mode-dependent in the static unit."
+    },
+    {
+     "q": "Someone says the plant is N+1. What do you have to ask, and why does it change the answer by an order of magnitude?",
+     "a": "N+1 of what: modules inside one frame, frames inside one system, units inside one path, or whole paths. A module is a complete small UPS in a drawer and the cheapest step in which redundancy can be bought. A frame is the permanent capacity ceiling of that position in the room — cheap to populate later, a construction project to replace. A unit is what the single-line sees, with one output breaker, so module-level N+1 still has one frame and one common point. A system is several units on a common output bus, and in N+1 that bus is single: a fault there takes every unit on it. Each level is a different price and a different set of surviving failures, and the discipline that catches the error is to trace both paths back from one server and see where they first touch."
+    },
+    {
+     "q": "Why is a UPS battery specified in watts rather than amp-hours, and what are the four qualifiers that must travel with the number?",
+     "a": "Because a UPS discharges hard and briefly — minutes, not hours — and usable capacity falls as the discharge rate rises, so an amp-hour figure describes a slow discharge and overstates what the string will actually deliver in the event it exists for. The real specification is constant power: watts per cell, for a stated time, to a stated end-of-discharge voltage, at a stated temperature. All four qualifiers are load-bearing. A published cabinet rated 352 kW for five minutes delivers only about 29 kWh — you are buying a rate, and the energy is whatever the rate times the runtime happens to require."
+    },
+    {
+     "q": "What changes in a UPS before its battery is allowed to earn money, and what does the operator give up?",
+     "a": "Four things change in the machine: a genuinely bidirectional front end rather than a rectifier with a charger bolted on; revenue-grade metering; a control layer holding a reserve floor — the state of charge below which no market signal may draw — and proving it holds it to an insurer and an authority; and export protection including anti-islanding. The operator gives up cycle life the warranty counted on not being consumed, and a power cell has less of it to give than a grid cell; gives up the nameplate autonomy figure, which becomes the reserve floor; and enters a different fire-code conversation decided by the authority having jurisdiction. The common outcome is a separate storage asset instead, for governance reasons — uptime and the energy bill are usually owned by different people."
+    },
+    {
+     "q": "Why does moving the store into the rack not simply delete the UPS room, and what does it do to the cell?",
+     "a": "Because the room machine does three jobs, not one. It is where the autonomy lives, where the fault current for downstream selective coordination comes from, and where a single maintenance action protects a whole hall. Moving the store into the rack distributes all three: the store becomes hundreds of small shelves instead of one battery room, the fault duty moves to devices with no zero crossing to help them — hence solid-state breakers — and maintenance becomes a per-rack activity inside occupied space. The cell changes too: the rack store's duty is a pulse rather than a discharge, with one published cell rated for more than 200,000 half-second discharges. That is a component exercised as part of normal operation, on a life budget priced against a different job."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A hall's UPS is quoted with fifteen seconds of autonomy instead of five minutes. What has to be true for that to be a sound design?",
+     "c": [
+      "The generator start path has to be engineered reliable enough to finish inside those seconds",
+      "The servers' hold-up time has to be extended to cover the difference",
+      "The load has to be below half the UPS rating",
+      "The machine has to be running in eco-mode"
+     ],
+     "a": 0,
+     "why": "Autonomy must exceed transfer time with enough margin to survive a failed start and a restart attempt, so a seconds store is only sound where the start is trusted — redundant starters, an engine already cranking, or a diesel on the same shaft. That is the whole flywheel-versus-battery argument. Hold-up time belongs to the server's own power supply at 10 to 20 milliseconds and is not adjustable by the plant; load level changes efficiency, not the time budget; and eco-mode is a question about detection during normal running, not about how long the store lasts."
+    },
+    {
+     "q": "A downstream branch breaker fails to clear a fault and the whole bus drops instead of the one circuit. Which datasheet line explains it?",
+     "c": [
+      "The overload rating and short-circuit contribution",
+      "The IEC 62040-3 classification",
+      "The THDi and input power factor",
+      "The efficiency curve at 25 percent load"
+     ],
+     "a": 0,
+     "why": "An inverter limits its output current to protect its own semiconductors, so it may not feed a fault hard enough for the branch device to trip — the fault stays and the bus goes instead of the circuit. That is why the coordination study must be run for the load on the inverter as well as on bypass, and it is the structural reason a rotating machine's several-times-rating fault contribution is sold as a feature. The classification says what the machine isolates the load from; THDi sizes the generator upstream; the efficiency curve costs money rather than selectivity."
+    },
+    {
+     "q": "A buyer compares two 2 MW units on headline efficiency and picks the higher number. What is the most likely thing they have missed?",
+     "c": [
+      "Where on the curve their plant will actually run, and in which mode",
+      "That kVA and kW are always equal on modern machines",
+      "That a three-level inverter is less efficient than a two-level one",
+      "That redundancy improves part-load efficiency"
+     ],
+     "a": 0,
+     "why": "A headline figure is one point on a curve, quoted where the machine is best — typically 50 to 75 percent load — and real plants sit elsewhere for structural reasons. A hall fills over one to three years, and redundancy parks every unit below its rating by construction, so a 2N plant at 40 percent IT utilisation runs each machine near 20 percent load permanently. The other three are inverted: unity rating is common but not universal and the mismatch mis-sizes a plant by ten percent or more; a three-level topology lets each switch block half the voltage and shrinks the filter, so it is more efficient; and redundancy is exactly what pushes the plant down the curve."
+    },
+    {
+     "q": "A colocation operator is filling a hall over three years and is choosing between one monolithic unit per block and a frame of hot-swappable modules. Which argument actually decides it?",
+     "c": [
+      "When the money leaves, and how long a repair takes",
+      "Whether the site needs voltage and frequency independence",
+      "Whether the store should be a flywheel or a battery",
+      "Whether the machine can supply fault current for coordination"
+     ],
+     "a": 0,
+     "why": "Monolithic against modular is a form-factor argument about repair time and about when capital is committed — capacity bought against a lease-up curve nobody can predict, and a failed module pulled and replaced in minutes with no bypass window against a specialist visit measured in hours. Both are the same electrical machine, so VFI class and fault-current behaviour do not separate them, and the store question is independent of the packaging. The caution is that the parts you cannot defer — frame, breakers, floor loading, battery room, electrical-room cooling — are most of the cost, so deferring modules defers perhaps a third of it."
+    },
+    {
+     "q": "An operator says their UPS batteries will start earning in the demand-response market next year. What is the single most important thing to establish?",
+     "c": [
+      "Whether the reserve floor is an interlock or a configurable setting",
+      "Whether the cells are LFP or NMC",
+      "Whether the room is at 2N or N+1",
+      "Whether the machine is transformer-based or transformerless"
+     ],
+     "a": 0,
+     "why": "The state of charge below which a market signal may not draw is the entire safety case for a grid-interactive UPS. As a parameter with no interlock, no alarm and no audit, the backup duty is protected by somebody's memory — and the honest autonomy figure is the floor, not the nameplate. Chemistry, redundancy arrangement and the presence of an output transformer all matter to the room, but none of them is what keeps the store from being spent on a payment the morning of an outage."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -32943,7 +33392,7 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, and the case for converting it to DC once, early and high.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, and the case for converting it all to DC once, early and high.",
  "group": "The AI Data-Center Wave",
  "updated": "2026-09-13",
  "lessons": [
@@ -32951,6 +33400,7 @@ function clTrackAidcGridToChip_() {
   "bridge-power",
   "the-aidc-power-chain",
   "backup-generation",
+  "the-ups-room",
   "the-800-vdc-shift"
  ],
  "prereqs": [
@@ -33098,7 +33548,8 @@ function clLessons_() {
           clLessonReadingTheGraph_(),
           clLessonFourMachines_(),
           clLessonHowAUtilityBuys_(),
-          clLessonBackupGeneration_()];
+          clLessonBackupGeneration_(),
+          clLessonTheUpsRoom_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
