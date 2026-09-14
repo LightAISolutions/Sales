@@ -1,4 +1,4 @@
-var VERSION = "v01.34g";
+var VERSION = "v01.35g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -37213,6 +37213,358 @@ function clLessonWhoBuysStorage_() {
 };
 }
 
+function clLessonInsideTheRack_() {
+  return {
+ "schemaVersion": 1,
+ "id": "inside-the-rack",
+ "type": "module",
+ "title": "The Last Ten Metres",
+ "short": "The rack is now one machine. Its inlet to the die: the server supply, the 48-volt busbar, the thousand-amp last centimetre, and the load that swings in rhythm.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:delta-electronics",
+    "date": "2026-08-21",
+    "note": "the 12-volt-to-48-volt evolution stated as arithmetic: four times less current for the same power, sixteen times less loss through identical copper; the last centimetre at roughly one volt and hundreds to over a thousand amps; and the two-stage against direct-conversion trade, with the rule that every stage removed makes the surviving converter's job harder"
+   },
+   {
+    "kind": "public",
+    "ref": "study:liteon",
+    "date": "2026-08-21",
+    "note": "hot-swap as an engineered property rather than an inherited one: ORing to isolate a failed unit from the shared bus, precharge to tame inrush on live insertion, firmware rebalancing current sharing across survivors; the standardised supply slot and the watts-per-cubic-inch density race it creates; and the efficiency tax redundancy levies, with cold redundancy as the trade"
+   },
+   {
+    "kind": "public",
+    "ref": "study:lambda",
+    "date": "2026-08-21",
+    "note": "the rack sold and wired as one machine — 72 accelerators in a single memory-coherent domain with pooled fast memory, about 142 kW drawn by one rack — and the consequence that the facility question flips from servers per rack to how many hundred-kilowatt racks the floor, the cooling loop and the feed can carry"
+   },
+   {
+    "kind": "public",
+    "ref": "study:nvidia",
+    "date": "2026-08-21",
+    "note": "why the load is continuous and synchronised: thousands of simple cores executing one instruction across many threads, saturated by work that is the same operation repeated across independent data; the memory wall and the stacked memory answer to it; and the copper reach of a scale-up link, which is about one rack and is why the rack is the unit"
+   },
+   {
+    "kind": "public",
+    "ref": "study:megmeet",
+    "date": "2026-08-07",
+    "note": "the legacy chain named stage by stage from medium voltage to the regulators on the board; one megawatt at 415 volts as roughly 1,400 amps; efficiency compounding, so five stages at 97 per cent deliver about 86 per cent; and the definition of power usage effectiveness this lesson leans on once"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vicor",
+    "date": "2026-09-03",
+    "note": "the spine of this lesson: amps per kilowatt at each voltage in the chain, the sixteen-to-one arithmetic worked through one milliohm of busbar, the 60-volt safety line that fixes the bus at 48 nominal and about 54 as run, the split of regulation from transformation, the power delivery network at one volt, lateral against vertical placement, the battery and capacitor shelves on the DC bus, and living on a shared bus"
+   },
+   {
+    "kind": "public",
+    "ref": "study:infineon",
+    "date": "2026-09-04",
+    "note": "the per-stage loss budget for a modern high-voltage DC chain, as the class of figure vendors publish for good equipment at full load — distribution, the isolated bus converter, intermediate regulation, the point of load and the delivery network — and what a converter moved under the package must then be: a thermal orphan, flat, instantaneous and effectively unserviceable"
+   },
+   {
+    "kind": "public",
+    "ref": "study:flex",
+    "date": "2026-09-04",
+    "note": "how to read one power shelf against another when every vendor is building to the same published reference: efficiency and at what load, hold-up in milliseconds at full load, watts per rack unit, input flexibility — and the question the datasheet does not answer, which is what happens electrically when a unit is drawn out of a live shared bus"
+   },
+   {
+    "kind": "public",
+    "ref": "study:narada",
+    "date": "2026-09-04",
+    "note": "the cell inside the rack-level store: a power battery rather than an energy battery, thin electrodes and high specific power, a published life of more than 200,000 pulse cycles at 500 milliseconds on a small cell; why the store sits in the rack rather than the room; and the honest limit, that distributing the store distributes the problem"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips this lesson does not define locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "16×",
+   "v": "less loss, same copper",
+   "sub": "moving the bus from 12 volts to 48 quarters the current, and heat in a conductor goes as the square of it"
+  },
+  {
+   "k": "1,000 A",
+   "v": "at about one volt",
+   "sub": "what a single accelerator's rail drinks — a current nobody routes across a board, so it is made in the last centimetre"
+  },
+  {
+   "k": "60 V",
+   "v": "the line nobody crosses",
+   "sub": "below it a DC bus is safe to touch and can be worked live; above it the insulation, the clearances and the service rules all change"
+  },
+  {
+   "k": "worst",
+   "v": "stage in the chain",
+   "sub": "the final conversion to about one volt loses the most of any stage, because the current is highest where the voltage is lowest"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "scale-up domain",
+   "d": "The group of accelerators wired together by short, memory-like links so that software sees them as one very large machine with pooled fast memory. The links ride copper, and copper's reach at those speeds is roughly the height of one rack — so the domain ends where the fast wire does. That boundary, not any architect's preference, is why the rack became the unit of computing and therefore the unit of the power problem."
+  },
+  {
+   "t": "tray",
+   "d": "The sliding chassis that holds compute or storage and clips into the rack, taking its power from the vertical busbar at the back rather than from a supply of its own. Calling it a tray rather than a server is the useful habit: in a rack-scale machine it is a subassembly of one computer, not a computer."
+  },
+  {
+   "t": "open rack",
+   "d": "A published rack standard, contributed rather than kept secret, in which a pooled shelf of power supplies feeds a vertical DC busbar that every tray clips onto. Any manufacturer may build to it, which is exactly why the operator that publishes it does so: an open socket turns its suppliers into interchangeable competitors on execution."
+  },
+  {
+   "t": "cold redundancy",
+   "d": "Parking a spare power supply in standby instead of sharing the load with it, so the active unit runs near the peak of its efficiency curve rather than half way down it. It buys back the watts that redundancy costs and pays for them in wake-up latency — the spare has to come up before it can carry anything."
+  },
+  {
+   "t": "memory wall",
+   "d": "The long-running gap between how fast processors can compute and how fast memory can feed them. Arithmetic units end up idle waiting for data, which makes memory delivery rather than arithmetic the binding constraint — and is why modern accelerators stack their memory vertically, millimetres from the die, instead of placing it out on the board."
+  },
+  {
+   "t": "phase shedding",
+   "d": "Switching off some of the parallel phases of a multi-phase regulator when the load is light, so the phases that remain each carry more current and run closer to their efficient point. The same idea as cold redundancy, one conversion stage further down."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-rack-is-the-machine",
+   "title": "The rack stopped being furniture",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "For thirty years a rack was a shelf. It held nineteen inches of independent computers, each with its own power supply, its own fans and its own reason to be there; you could pull one out and the others would not notice. The power design followed from that: feed the rack, and every box inside it takes care of itself. Everything upstream of this lesson — the fence, the substation, the engines, the room that covers the seconds they cannot — was built on the assumption that the thing at the end of the wire is a shelf of unrelated machines.",
+    "That assumption has gone. An AI rack is now assembled, wired, sold and cooled as **one machine**. The published systems of the current generation put **72 accelerators in a single {{scale-up domain}}** — links fast enough and short enough that software addresses the whole rack as one enormous accelerator with its memory pooled, on the order of **37 terabytes of fast memory and 130 terabytes per second of internal bandwidth**. Pull a {{tray}} out of that and you have not removed a server; you have broken the computer.",
+    "The reason the boundary falls at the rack and not somewhere more convenient is unglamorous. A {{scale-up}} link is memory-like: enormous bandwidth, tiny latency, almost no protocol overhead — and it rides copper, whose reach at those speeds is **about the height of one rack**. Beyond that the traffic has to cross a switched network, with the latency and the overhead that implies, which is why training software is written to keep its chattiest work inside the domain and send only what must travel. Nobody chose rack density as a goal. It is what you get when the fastest wire stops there, and it is the same physical limit that then decides the power problem.",
+    "Two numbers make the consequence concrete. One of these racks draws roughly **142 kilowatts** — about what a hundred houses draw — against the five to fifteen kilowatts the old shelf drew, and each generation has been raising both the internal bandwidth and the draw. So the facility question inverts. It stops being *how many servers fit in a rack* and becomes *how many hundred-kilowatt racks can this floor, this cooling loop and this feed carry* — which is the question every earlier lesson in this track was quietly answering from the other end.",
+    "One boundary is worth fixing in your head before the next section, because it decides who you are actually selling to. **The rack inlet is a change of ownership.** Everything above it — the switchboard, the panel out on the floor, the whip — is the building's, specified by the electrical engineer and installed by the electrical contractor. Everything below it is the **server OEM's design**: the shelf, the busbar, the converters on the tray, and the stored energy if there is any. Two different organisations, two different specification documents, two different buying cycles. The last ten metres of the chain are not a smaller version of the first ten kilometres; they are somebody else's product."
+   ]
+  },
+  {
+   "id": "psu-to-die",
+   "title": "Stage by stage, inlet to die",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "Six stages, read downward. Two rules govern all of them. Power is voltage times current, so the same watts at a lower voltage means proportionally more amps. And heat in a conductor is current **squared** times resistance — {{I²R loss}} — so each step down in voltage makes the copper problem worse by a square, not by a ratio. That is why the chain holds the voltage up for as long as it possibly can and makes the thousand amps only at the very end. The current column is quoted **per kilowatt delivered** where that is the clearer number, and per megawatt where the rack-level figure is the point. The loss column is the class of figure vendors publish for good equipment **at full load**: a lightly loaded stage does worse and a badly matched one does much worse, so read the column for the ranking rather than the decimals.",
+   "cols": [
+    "Stage",
+    "Voltage",
+    "Current",
+    "Why that voltage",
+    "What it wastes"
+   ],
+   "rows": [
+    [
+     "**The feed to the rack inlet** — the last run of building copper, ending at the whip",
+     "415 V AC three-phase in the legacy hall; **800 V DC** in the new one",
+     "About **1,400 A** to feed one megawatt at 415 V AC; about **1,250 A** for the same megawatt at 800 V DC",
+     "The highest voltage the hall is willing to carry, because this is the longest copper in the last ten metres and length multiplies every amp's cost",
+     "Not a conversion at all — pure {{I²R loss}} in busbar and cable, around **99 %**. This is the single bar the whole distribution argument exists to raise"
+    ],
+    [
+     "**The shelf** — a pooled {{power shelf}} feeding the rack, in place of a supply in every box",
+     "AC in and about **54 V DC** out in the legacy rack; **800 V DC in, about 50 V out** at a fixed 16-to-1 ratio in the new one",
+     "Tens of amps into each module, hundreds out of it",
+     "The output has to land below the 60-volt line, and the input is wherever the hall left it. This stage is also the {{galvanic isolation}} barrier, which is a safety job rather than an efficiency one",
+     "About **97.5 %**. Isolation costs a transformer and a transformer costs loss; running the stage {{soft switching}} is what keeps the number where it is"
+    ],
+    [
+     "**The rack busbar** — a vertical bar down the back of the rack that every {{tray}} clips onto",
+     "**48 V nominal**, run in practice around **54 V**",
+     "About **21 A per kilowatt**, so a megawatt rack is a bar carrying **more than twenty thousand amps**",
+     "The highest bus that stays comfortably under the touch-safe line, with room for the swings a live bar sees. Above that line the bar could not be worked live",
+     "{{I²R loss}} in the bar — and it shows up first at the **tray connector**, which is the highest-resistance point on the whole bar and the place a stretched rack overheats"
+    ],
+    [
+     "**Intermediate regulation** — the stage that actually holds a voltage steady",
+     "About **40–60 V** in, a controlled voltage out, sized for whatever follows it",
+     "Tens of amps, because it sits where the voltage is still high",
+     "Something must hold the rail steady as the input drifts and the load steps. Doing that **upstream**, before the current is multiplied, means doing it at a fraction of the amps",
+     "About **97 %** — and newer designs delete this stage outright. A stage that is not there wastes nothing, at the price of a harder job for the survivor"
+    ],
+    [
+     "**The {{point of load}} converter** — the last box, beside the package or beneath it",
+     "About **48 V in, 0.8–1.0 V out**",
+     "**More than a thousand amps** for a single accelerator",
+     "One volt is not a choice. It is what the transistors on the die run on, so nothing downstream of here can be any higher",
+     "About **91 %** — **the worst stage in the chain and the one that matters most.** A few tens of millivolts dropped across the switches is a few per cent of a one-volt output, at a thousand amps"
+    ],
+    [
+     "**The {{PDN}}** — board copper, vias, the balls under the package and the {{substrate}}",
+     "About **one volt**, falling the whole way",
+     "The same thousand amps, now spread across planes and vias",
+     "There is no voltage left to trade. The only remaining lever is **distance**, which is why the last converter keeps being pushed closer to the die",
+     "About **96 %**. A tenth of a milliohm — a few centimetres of board plane — drops a tenth of a volt and turns **a hundred watts into heat** in copper nobody designed as a heater"
+    ]
+   ],
+   "note": "**Read the last two rows together, because that is where the watts are.** Loss follows current and current is highest where the voltage is lowest, so the final conversion and the few centimetres after it hold the largest single pool of waste in the building. **And read the whole column as a product, not a list:** efficiencies multiply, so five stages at 97 % each deliver about **86 %** of what entered, and the missing fraction is heat that the cooling plant must then remove and the utility has already billed. At megawatt scale every one per cent lost is roughly **ten kilowatts of heat per megawatt, paid for twice** — once in the fuel and once in the chiller. That product is what {{PUE}} measures, and it is why deleting a {{conversion stage}} is worth rebuilding an architecture for. One row is missing on purpose: until recently a **12-volt** bus sat between the shelf and the tray, and the next section is about why it left.",
+   "sales": "The **why that voltage** column is the one to rehearse, not the loss column. Anyone can quote an efficiency; being able to say *why the bus is 48 and not 100, and why the last rail is one volt and not five* is what makes an engineer decide you are worth the next half hour. The loss column then tells you where in the chain your product has to earn its place — and the honest answer for most of them is the bottom two rows."
+  },
+  {
+   "id": "forty-eight-volts",
+   "title": "Why the bus is 48 volts, and why that is a ceiling",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "For decades the server was a 12-volt machine inside. Its supply made 12 volts, the motherboard distributed them, and small regulators beside each chip stepped them down. At a few hundred watts per box that is entirely reasonable. At a multi-kilowatt tray it is not: a 12-volt {{intermediate bus}} at those powers carries **hundreds of amps**, and the board's copper stops being a conductor and becomes a heater.",
+    "Do the arithmetic once and the rest of this lesson follows. **The same kilowatt is 83 amps at 12 volts and 21 amps at 48.** Push each through the same one-milliohm stretch of busbar and connector. The 12-volt bus loses about **6.9 watts**; the 48-volt bus loses about **0.43 watts** — a quarter of the current, a sixteenth of the loss, through identical copper. Read it the other way and it is better still: for the same loss the higher bus carries the same kilowatt through a quarter of the copper cross-section, or four kilowatts through the copper that used to carry one. In a rack where every cubic centimetre is contested by compute, the metal saved is worth as much as the watts.",
+    "So why 48 and not 100, or 200, when the square law says higher is always better? Because of a line drawn by the safety standards rather than by physics. Below about **60 volts DC** a supply is classed as {{SELV}} — safe to touch. It can be wired with ordinary connectors, worked on by ordinary technicians without a lockout procedure, and clipped onto a live bar by a bare-metal {{tray}}. Cross that line and the bus becomes a hazardous voltage: insulation ratings, clearances, arc-fault thinking and the whole service procedure change at once. Forty-eight volts nominal, run around 54 in practice, is the **highest bus that stays comfortably under the line** with headroom for the swings a live bar sees. The telecom industry arrived at the same number for the same reason a century earlier, which is usually the sign that a number is physics and regulation rather than fashion.",
+    "The move to 48 volts also changed where the supply lives. In an {{open rack}} the per-box supply is gone and a pooled {{power shelf}} feeds the bar for the whole rack: fewer, larger, better-loaded converters instead of dozens of small ones each running wherever its own box happened to sit on the efficiency curve. That is an efficiency argument and a serviceability one, and it is the reason the next section exists — a shared bar is only usable if things can join it and leave it while it is live.",
+    "And then it stops. The bus is 48 volts because of the touch-safe line, and **the line does not move**, so the only variable left is current. A rack drawing a megawatt on a 48-volt bar needs more than twenty thousand amps through it, and at that point the bar is not an electrical problem any more but a mechanical and thermal one — copper you cannot bend, connectors that heat before anything else does, and weight in a rack that has no weight to spare. That is where the 48-volt rack runs out of road. The next lesson is about the only lever the square law leaves once the bus voltage is pinned: raise the voltage upstream of it, where nobody has to touch anything.",
+    "Keep three voltages in view from here on, because every remaining question is about the gaps between them: a **distribution voltage** that reaches the rack, the **48-volt bus** that reaches the tray, and the **one-volt rail** that reaches the die. Each gap is a {{conversion stage}}; each stage costs efficiency and space; and the design questions that decide a rack are how many stages there are, where each one sits, and which of them has to hold its output steady."
+   ]
+  },
+  {
+   "id": "hot-swap-is-engineered",
+   "title": "Hot-swap is engineered, not inherited",
+   "kind": "callout",
+   "tone": "info",
+   "read": "5 min",
+   "ps": [
+    "**Nothing on the bus may drag it down.** A shelf of supplies feeding one bar is a set of sources in parallel, and a source that fails short — or is simply pulled while live — would take the bar with it. {{ORing}} devices in each module's output let current flow only outward, so a dead module is cut off by its own behaviour and the survivors carry on. This is the whole content of the claim that a supply is redundant: **{{N+1}} is a statement about the ORing path, not about the number of modules in the shelf.**",
+    "**Nothing joining the bus may pull it down either.** A module's empty output capacitors, connected to a live 48-volt bar, would draw a spike of {{inrush}} big enough to sag the bus and pit the connector. {{Precharge}} brings those capacitors up gently through a controlled path before the main contact closes, and the connector itself is staged so that ground touches first and the live pin last. Live insertion is **designed in**, one connector and one control circuit at a time. Nothing about a shared bar makes it safe by default.",
+    "**Everyone on the bus must carry a fair share.** Two supplies whose outputs differ by a few millivolts will not split a load: the higher one takes all of it until it overheats. {{Current sharing}} — a small deliberate droop in each output, or an active loop between modules — makes the split fair, and firmware rebalances it as modules come and go.",
+    "**And fairness has a bill.** Two supplies each at half load both sit well down their {{efficiency curve}}, so a redundant shelf runs hotter and wastes more than the load it protects deserves. The fixes are real and each has a cost: {{cold redundancy}} parks the spare in standby and pays in wake-up latency; {{phase shedding}} does the same trick inside a multi-phase regulator. A wake-up delay is itself a way to miss a {{load transient}}, which is the trade in one sentence.",
+    "**How to read one shelf against another.** Modern shelves are built to a published reference, so the vendors converge by design and only four numbers are genuinely comparable: **efficiency, and at what load** — a redundant shelf spends its life near half load, so a figure quoted there is more honest than one quoted at full load, and a vendor offering only the full-load number is telling you something; **{{hold-up time}} in milliseconds at full load**, because that is what carries the rack across a transfer and it is what the whole backup architecture is sized around; **watts per {{rack unit}}**, which is the density actually being bought; and **input flexibility**, which decides whether one part number works across an estate. Then ask the question no datasheet answers: **what happens electrically when a unit is drawn out of a live shared bus** — which is the first three paragraphs of this section, asked as a purchase question."
+   ],
+   "sales": "The fourth paragraph is where a storage conversation can start honestly. Every fix for the efficiency tax buys watts with **time** — a spare that has to wake, a phase that has to come back. Anything that can cover the gap instead is selling into a real, quantified problem rather than into a preference, and it is specified in the vocabulary of this section: milliseconds, hold-up, ORing thresholds. Bring megawatt-hours to that conversation and you are in the wrong room. The qualifying questions sit in this section already: **what happens at the tray connector under a doubled load, who owns the {{BBU}} ORing threshold, and what the hold-up is at the load the shelf actually runs at.**"
+  },
+  {
+   "id": "the-periodic-swing",
+   "title": "A load with a rhythm, and the two stores that answer it",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Earlier in this track the AI load swing appeared from the building's side: tens of megawatts moving in milliseconds, periodically, capable of exciting grid resonances below line frequency. This section is the same phenomenon from inside the rack, where it is not a disturbance at all but simply **what the machine does**.",
+    "The shape comes from how the silicon works. An {{accelerator}} spends its area on thousands of simple cores that execute **one instruction across many threads at once**, which is the right bet for work that is the same small operation repeated over millions of independent data points. Training is exactly that shape, so the cores saturate together rather than in a staggered average — and because a training job proceeds in **steps**, with the whole cluster synchronising at the end of each one, thousands of accelerators go flat out and then wait, together, in rhythm. Add the {{memory wall}}: when the arithmetic stalls waiting for data the draw falls, and when the data lands it snaps back. The result is not noise around a mean. It is a **square wave the size of a power station**.",
+    "Two different jobs are therefore being asked of stored energy inside the rack, and they want two different stores. The first is {{hold-up time}}: when the upstream supply drops, the bus must be carried long enough for a transfer, or a controlled shutdown, to complete without the trays noticing. Capacitors in the {{power shelf}} give **tens of milliseconds**; a {{BBU}} gives **seconds to minutes**, which is what lets a hall shrink or delete the room upstream. The second is the swing itself: a {{supercapacitor}} shelf absorbs and returns energy within milliseconds, **thousands of times an hour**, which a battery cannot do without wearing out — while a battery holds the bus for minutes, which a capacitor cannot do at all. They are complements on one bus, not alternatives.",
+    "The cell inside a rack store is therefore a different object from the cell in a container outside. It is a {{power battery}}, not an {{energy battery}}: thin electrodes, very high {{specific power}}, internal resistance low enough that it does not cook itself during the pulse, and a chemistry that tolerates being **worked** rather than left on {{float charge}}. The published life figure for one such cell is not cycles at all — it is **more than 200,000 {{pulse cycle}}s of 500 milliseconds**, on a small cell of about 55 amp-hours. Two hundred thousand half-second events is not backup duty. It is a component being exercised as part of normal operation, and the vocabulary follows: hold-up seconds, ORing threshold, bus voltage, specific power. Nobody in that room will ask you for a megawatt-hour.",
+    "Why it sits in the rack rather than the room comes down to three things, and only one of them is physics. **Distance**: a half-second response is only useful if the store is electrically close to the load, and the DC bus is right there. **Architecture**: in a rack fed from a DC bus there may be no room-scale machine left to fall back on, so the shelf *is* the ride-through. **Commerce**: a shelf is a component designed into a rack at volume on a design-in cycle, not a project sold to a facilities organisation over two years.",
+    "And the honest limit, which anyone selling into this should be able to say before the customer does. **Distributing the store distributes the problem.** Instead of one battery room with one monitoring system, one fire strategy and one maintenance procedure, there are hundreds of small stores inside occupied racks — each with its own state of health, each in the airflow path of equipment it must not heat, each a fire-code object in a room people work in. That is genuinely harder to operate than a battery room, and it is not yet solved by anybody, which is precisely why both architectures are being built at the same time."
+   ],
+   "sales": "This is the closest an in-hall socket ever gets to a battery sale, and it is the one most storage sellers walk past. The buyer is the server designer or the operator, not the utility-side team; the specification is in milliseconds and pulse counts, not hours and megawatt-hours; and the first question worth asking is **which of the two stores the customer actually needs** — because a buyer who describes a swing and is quoted an energy product has just learned you were in the wrong room."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**Inrush on a live swap.** A module slotted onto a live bar with its {{precharge}} path faulty, its connector pins worn so the live pin touches first, or a design that never staged the contacts at all: the empty capacitors draw an {{inrush}} spike, the bar sags below the converters' undervoltage trip, and **a whole rack resets from a maintenance action**. The same bar has a quieter version of the fault — an {{ORing}} device that fails short turns a redundant supply into a **load** on its neighbours, the survivors current-limit, and {{N+1}} protected nothing. Both are invisible until the day they matter, which is why the ORing path is proven at commissioning by pulling modules under load rather than by reading the datasheet. Owned by the server OEM whose slot it is: hot-swap is a designed property, never an inherited one.",
+    "**A bus that behaves like a heater.** A 48-volt bar sized for the rack it was designed for and then asked to carry the rack it grew into. {{I²R loss}} scales with the square of the current, so a doubled load **quadruples** the heat in the same copper — and it shows first at the {{tray}} connector, the highest-resistance point on the bar. The tell is thermal rather than electrical: a rack that trips nothing, measures fine, and runs hot at the connectors. Owned by the rack designer, and the only real cure is the one the next lesson is about — fewer amps on the bar, which means more volts upstream of it.",
+    "**The last centimetre with no thermal margin.** A {{point of load}} converter rated for the chip's current at a {{thermal resistance}} it never actually gets: a cold plate that does not reach the underside of the board, a gap-filler pad that was specified and not fitted, airflow the next generation's heat sink now blocks. **A converter's current rating is a thermal statement, not an electrical one** — run above its junction limit it derates first and fails second, in the millimetres beside the most expensive silicon in the building. The failure mode gets worse as the converter moves: beneath the package it is a thermal orphan on the far side of the board from everything that was there to cool it, and it cannot be replaced without pulling the board. Owned by the board and mechanical designers jointly, which in practice means nobody notices until integration.",
+    "**The swing that excites a resonance.** Thousands of accelerators stepping together produce a **periodic** load, and a periodic load can find a resonance — in the grid below line frequency, which is the building's problem and appeared earlier in this track, and inside the rack, where the loop that matters runs from the input capacitance through the converters and back. Two things make it worse than it sounds: the store that was supposed to absorb the swing joins the bus a few milliseconds late because the bus voltage, the {{BBU}} ORing threshold and the converters' undervoltage limits were each specified by a different party; and a stage deleted for efficiency took its fault duty and its stored charge with it. **Every converter in the old chain also did something protective**, and deleting one deletes that too. Owned by whoever integrated the rack — which is to say, by the one organisation that can see all three specifications at once."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "The same kilowatt travels a 12-volt bus and a 48-volt bus, through identical copper. What happens to the current, and what happens to the heat?",
+     "a": "The current falls **fourfold** — 83 amps at 12 volts, 21 amps at 48 — and the heat falls **sixteenfold**, because {{I²R loss}} goes as the square of the current. Through one milliohm of bar and connector that is about 6.9 watts against about 0.43. Read the other way, the higher bus carries the same kilowatt through a quarter of the copper, which in a rack contested by compute is worth as much as the watts."
+    },
+    {
+     "q": "Higher voltage always means less loss. So why is the rack bus 48 volts and not 100?",
+     "a": "Because of a safety line, not physics. Below about **60 volts DC** a supply is classed as {{SELV}} — safe to touch — so it can use ordinary connectors, be worked without a lockout procedure, and take a bare-metal {{tray}} clipped onto it live. Forty-eight nominal, run around 54, is the highest bus that stays comfortably under that line with headroom for the swings a live bar sees."
+    },
+    {
+     "q": "Three things have to be engineered before anything can join or leave a live shared bus. Name them and what each prevents.",
+     "a": "**{{ORing}}** — current may only flow out of a module, so a failed one cannot drag the bar down. **{{Precharge}} with staged contacts** — empty capacitors are brought up gently and ground touches before the live pin, so a joining module cannot sag the bar with {{inrush}}. **{{Current sharing}}** — a deliberate droop or an active loop, so the module sitting a few millivolts high does not take the whole load until it overheats."
+    },
+    {
+     "q": "Which stage between the rack inlet and the die wastes the most, and why is it that one?",
+     "a": "The final conversion to about **one volt** — around 91 per cent for good equipment at full load, against 97 to 99 for every stage above it. Loss follows current, and current is highest where voltage is lowest: at a thousand amps, a few tens of millivolts dropped across the switches is already a few per cent of a one-volt output. The few centimetres of delivery network after it are the second-largest pool for the same reason."
+    },
+    {
+     "q": "Why does a rack DC bus end up carrying two different stores rather than one bigger one?",
+     "a": "Two different duties. A {{supercapacitor}} shelf absorbs and returns the load swing within milliseconds, **thousands of times an hour** — a duty that would wear a battery out. A {{BBU}} holds the bus for **seconds to minutes** of {{hold-up time}} so a transfer or a controlled shutdown can finish — which a capacitor cannot do at all. They are complements on one bus, and asking which one a customer needs is the first qualifying question."
+    },
+    {
+     "q": "What changes hands at the rack inlet, and why does it decide who you sell to?",
+     "a": "**Ownership.** Above the inlet the chain belongs to the building — specified by the electrical engineer, installed by the electrical contractor, bought as part of a project. Below it the chain belongs to the **server designer**: the shelf, the busbar, the converters on the tray, the stored energy if any. Two organisations, two specification documents, two buying cycles — so the same product sold above and below that line is two entirely different sales."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A rack's load has roughly doubled since it was commissioned. Nothing trips, every measurement is in range, but the bar runs hot and the hottest points are the tray connectors. What is the best explanation?",
+     "c": [
+      "Loss goes as the square of the current, so a doubled load quadruples the heat in the same copper — and it shows first at the connectors, the highest-resistance points on the bar",
+      "The supplies have drifted out of current sharing, so one module is carrying most of the rack",
+      "The bar is picking up harmonic distortion reflected from the trays' front ends",
+      "The connectors have exceeded their rated cycle count from repeated tray swaps"
+     ],
+     "a": 0,
+     "why": "This is the square law read as a thermal symptom rather than an electrical one, which is why nothing trips. **A bar sized for the rack it was designed for becomes a heater in the rack it grew into**, and the connector is where the resistance is concentrated. The fix is not a bigger bar for very long: it is fewer amps, which means more volts upstream — the argument the next lesson makes."
+    },
+    {
+     "q": "Two vendors quote shelf efficiency. One publishes a figure at full load only; the other publishes one at half load. Which is the more useful number for a redundant shelf, and why?",
+     "c": [
+      "The half-load figure — a redundant shelf spends its life near half load, so that is the efficiency it will actually run at",
+      "The full-load figure — it is the shelf's best case and therefore the fair basis for comparing two products",
+      "Neither, because efficiency at the shelf is dominated by the point-of-load stage further down the chain",
+      "Both equally, since a shelf's efficiency curve is essentially flat between half and full load"
+     ],
+     "a": 0,
+     "why": "Redundancy means the modules split the load, so each sits well down its {{efficiency curve}} — and that is the operating point, not the datasheet's. A vendor publishing only the full-load number **is telling you something**. The same logic is why {{cold redundancy}} and {{phase shedding}} exist at all: both buy back the watts that the split costs, and both pay for them in wake-up time."
+    },
+    {
+     "q": "A design moves the final converter from beside the processor package to directly beneath the board. What becomes the binding constraint on that converter?",
+     "c": [
+      "The thermal path and the package — it now dissipates into a surface nobody planned to cool, has a height budget measured in millimetres, and cannot be replaced without pulling the board",
+      "Its purchase cost, since a converter under the board has to be qualified to a higher reliability grade and priced accordingly",
+      "Electromagnetic compatibility, because the converter now sits directly beneath the fastest signals on the board",
+      "The bus voltage, which must be reduced before it can be routed to the underside of a board"
+     ],
+     "a": 0,
+     "why": "The move shortens the delivery route to the thickness of the board, which is the point of making it — but the constraint moves with the converter. **Efficiency stops being an operating-cost argument and becomes a mechanical-feasibility one:** every watt wasted now needs a second cooling path, and a stage two points more efficient can be the difference between needing one and not. Height and serviceability push the same way, toward fewer parts inside one package."
+    },
+    {
+     "q": "A customer describes tens of megawatts appearing and disappearing in milliseconds, thousands of times an hour, and asks what battery would smooth it. What is the right answer?",
+     "c": [
+      "That duty wants a capacitor store, not a battery — a battery on that cycle would wear out; the battery's job on the same bus is minutes of hold-up, which is a different question",
+      "A larger battery, sized so that the swing is a small fraction of its capacity and therefore a shallow cycle",
+      "A battery is the right store, but it belongs in the room upstream rather than in the rack",
+      "Neither store helps — a swing at that speed has to be absorbed by the converters' own control loops"
+     ],
+     "a": 0,
+     "why": "Two duties, two stores. A {{supercapacitor}} shelf takes the millisecond swing thousands of times an hour; a {{BBU}} carries the bus for seconds to minutes. **A buyer who describes a swing and is quoted an energy product has just learned the seller was in the wrong room** — and the cell inside a rack store is a {{power battery}} anyway, with a published life quoted in {{pulse cycle}}s of half a second rather than in cycles."
+    },
+    {
+     "q": "A technician replaces a failed power module in a live shelf and the entire rack resets. Where should the investigation start?",
+     "c": [
+      "At the precharge path and the connector's staged contacts — inrush into empty capacitors sagged the bar below the converters' undervoltage limit",
+      "At the failed module itself, which was probably still partially conducting when it was withdrawn",
+      "At the upstream breaker, whose instantaneous trip setting is too close to the shelf's normal draw",
+      "At the rack's stored-energy shelf, which should have carried the bar through the swap"
+     ],
+     "a": 0,
+     "why": "Live insertion is engineered, never inherited. {{Precharge}} brings the new module's capacitors up gently before the main contact closes, and the connector is staged so ground touches first and the live pin last; **with either defeated — a faulty precharge path, worn pins — the {{inrush}} spike is enough to take the bar down.** The related fault worth ruling out in the same visit is an {{ORing}} device that failed short, which turns a redundant module into a load on its neighbours."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -37250,15 +37602,16 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, and the case for converting it all to DC once, early and high.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the last ten metres from the rack inlet to the die, and the case for converting it all to DC once, early and high.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-13",
+ "updated": "2026-09-14",
  "lessons": [
   "the-fence-line",
   "bridge-power",
   "the-aidc-power-chain",
   "backup-generation",
   "the-ups-room",
+  "inside-the-rack",
   "the-800-vdc-shift"
  ],
  "prereqs": [
@@ -37410,7 +37763,8 @@ function clLessons_() {
           clLessonBackupGeneration_(),
           clLessonTheUpsRoom_(),
           clLessonTheTransformerAndTheSubstation_(),
-          clLessonWhoBuysStorage_()];
+          clLessonWhoBuysStorage_(),
+          clLessonInsideTheRack_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
