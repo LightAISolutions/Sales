@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.63r] — 2026-09-14 05:51:27 AM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run S2 session 1, then remember session."
+
+**A handover commit, written from measured state rather than remembered state.** The last three handovers all found that the figure the plan carried had gone stale between the measuring session and the session that read it — §10.4's "5 substantive, 14 bookkeeping" was the most recent, corrected one push ago. So every number in this brief was measured today against the files, including the ones already written down: §10.2's S0 table still records `storage-integrators-and-containers` at 29 members, and it is 32.
+
+### Added
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.17 — the paste-in brief for S2 session 1 (`storage-integrators-and-containers`), S2's first session ever.** Because it is first, the brief carries the shape of the phase rather than just the row: a landscape module is a different artefact from a mechanism lesson — it lives **below** the `// CONTENT END` fence, is authored through the `industry guidance:` machinery on the G4 research-synthesis precedent, sits at **contributor** tier, and is the **tenth module and the first in a fourth lane** (`The Value Chain`), so `guidanceDocs_()`'s lane-ordering comment needs extending
+- **The segment measured today rather than read off §10.2's S0 table** — **32 members: 10 incumbent, 8 challenger, 14 adjacent**, against the table's 2026-09-07 figure of 29 (10 · 8 · 11); the three added are the S3 cell makers `calb`, `cornex` and `great-power`, which arrived as adjacent. **All 32 carry a dossier and all 32 carry `strategyRead`**, including all 18 incumbents and challengers — so `each-players-bet` is an **eighteen-row table** with no thin-evidence excuse anywhere, and the brief says all eighteen belong rather than letting a session trim to the interesting ones
+- **`reviewBy` resolved to candidates rather than left to the six-month default.** Across the 32 members there are exactly five future-dated gates: `2027-01` (Cummins, EPA 2027 on-highway), `2027-04` (Sungrow, EU high-risk inverter phase-out) and three at `2027-10` (CATL, Envision, BYD — NDAA §154). The nearest is **earlier than `updated` + 6 months**, so §10.6 takes it — but two are **partial `YYYY-MM` dates** and the nearest sits on an **adjacent** member, so the brief requires that judgment be resolved explicitly in the analysis markdown rather than silently
+- **Both changelog rotations that fire on the next session, computed rather than estimated.** (a) The repo CHANGELOG stands at **103 raw / 98 non-exempt**, held under the line only by five sections dated 2026-09-14; a push landing 2026-09-15 or later makes it 103 non-exempt and rotation fires, moving **eighteen sections dated 2026-09-05** (`v04.61r`–`v04.78r`), leaving 85 — one group suffices. (b) **`Scrapergs.changelog.md` is at 49/50** and the S2 session must touch Scraper for `industry-guidance.md` step 9's interest-topic seed, so its entry **reaches 50 and fires rotation there too** — **twenty-six sections dated 2026-08-28** (`v03.21r`–`v03.47r`), leaving 24, SHA enrichment on every header, with the unshallow named as the precondition rather than the remedy
+- **The step the regeneration run deliberately left open is step 6 of the brief** — `--segment storage-integrators-and-containers` **after** the module exists, which rewrites that lesson's `read-next` from "No landscape module yet" to the deep link §10.6 requires. Ordering matters and the brief says so
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.3, order 5 (S2)** — now points at §7.17 by number and carries the re-measured 32-member count, so a session reading the run table gets the corrected figure without opening the brief
+- **`repository-information/SESSION-CONTEXT.md`** — a new Latest Session covering the v05.62r regeneration and this handover; the v05.61r entry demoted to Previous Sessions under the 2-session cap
+
+### Notes
+
+- **This is a Remember Session action that also bumped the version**, which the command's own text does not do — the same exemption v05.60r recorded: a pure context save has nothing user-facing to log, but this commit also writes a plan document, and that deserves a version and an entry
+- **No rotation on this push.** 103 raw, but five sections dated 2026-09-14 are exempt → **98 non-exempt**, under the 100 trigger. The next push is the one that rotates
+- **No GAS or page version bump** — nothing under `googleAppsScripts/` or `live-site-pages/` was touched, so [PC-GS-VERSION] #1, [PC-HTML-VERSION] #2 and [PC-PAGE-CHANGELOG] #16 do not fire and no deploy step runs
+- **A correction carried forward for the developer's ruling:** this session stated that the repo's commit convention carries no `Co-Authored-By` footer. That was wrong — recent commits do carry it; the log had been read through `head -30`, which truncated it. v05.62r and v05.63r omit the footer because the standing rule bars model identifiers in repository artifacts, so the two conventions genuinely conflict and the developer should settle which wins
 
 ## [v05.62r] — 2026-09-14 05:05:11 AM EST
 
