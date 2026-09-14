@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.58r] — 2026-09-13 09:34:44 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**A correction to a claim this session wrote an hour earlier and then disproved.** The v05.57r push merged cleanly and its workflow run went **red** at `Fail the run if any GAS deploy was unconfirmed` — and the deploy had in fact landed. The paste-in briefs in §7.14 and §7.15 both told the next session that a red gate "means the deploy did not land". It does not, and a session acting on that would have concluded its own lesson was not live.
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.14 and §7.15** — the deploy-verification paragraph now states what run #568 actually showed. `.github/scripts/gas-deploy.sh` fires **one** GET (`--max-time 120`) and, failing that, **one** POST, with no poll afterwards; when the GET leg outruns its budget the confirmation is lost even though Apps Script completes the update seconds later. A direct `curl` two minutes after the run returned `Already up to date (v01.29g)`. `Classroom.gs` is now ~1.9 MB and is the slowest project in the repo, so it is the one that hits this — and it grows by roughly 450 lines per lesson with twenty-two lesson rows still to run
+
+### Notes
+
+- **The consequence worth knowing, and the reason this is not cosmetic.** The `deploy` job is gated `needs.auto-merge.result == 'success'`, so a red GAS gate **skips the GitHub Pages deploy entirely**. On run #568 the GAS project was current while the live site still served the previous `Classroomgs.version.txt` and `Classroomgs.changelog.md` — the version pill and the changelog popup were stale against a lesson that was already being served
+- **Recovery, now documented in both briefs.** A `workflow_dispatch` on `main`: `auto-merge` is gated `github.ref != 'refs/heads/main'` so it skips, and `deploy` fires through its `auto-merge.result == 'skipped' && is-initialized` branch. Run **#569** did exactly that and went green — `deploy` and `mirror-library` both success, Pages now serving `|v01.29g|`
+- **The deploy script itself is deliberately not changed here.** A poll after the POST leg would close this properly — `Already up to date (<v>)` is the idempotent confirmation and is precisely what a later GET returns — but that path confirms all eight GAS projects, its deferred-failure design is explicitly flagged in the briefs as something a session must not "tidy up", and verifying a change to it means watching a real merge. It is the developer's call, and it is the recommendation left at the close of this session
+- No GAS or page version bump: no deployed content changed ([PC-GS-VERSION] #1), so no page or GAS changelog entry
 
 ## [v05.57r] — 2026-09-13 09:25:11 PM EST
 
