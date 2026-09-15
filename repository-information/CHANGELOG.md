@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.90r] — 2026-09-15 04:43:20 AM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 11, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.28 — two figures refreshed in BOTH halves**, found by re-running the brief's own stated measurements against the working tree before reproducing its prompt block. The repo CHANGELOG count moved `90 raw / 80 non-exempt` → **`91 raw / 80 non-exempt`** (prose and prompt block), the "within ten of its cap for the first time" phrasing became **"nine from its cap"**, and the prose half's version-to-bump-from moved `v05.88r` → **`v05.89r`** with its baselines anchor line to match
+
+### Added
+
+- **`SESSION-CONTEXT.md`** — the v05.84r entry is dropped under the two-session cap, the v05.87r entry moves to `## Previous Sessions`, and the new `## Latest Session` records S2 session 6 in full
+
+### Notes
+
+- **THE RECURSION FIRED A THIRD TIME, on a third consecutive handover, and this is now a pattern rather than an incident.** v05.86r refreshed §7.27's counters and its own commit made §7.27's changelog arithmetic stale; v05.87r corrected that and its own commit made it stale again; **v05.89r corrected §7.28's counters and its own commit made §7.28's changelog arithmetic and version anchor stale.** Each handover is caught only because the next session re-runs the measurements rather than trusting the brief. **The cheap defence, already stated at v05.87r and now confirmed three times over: re-run every figure a brief quotes against the working tree immediately before the final push — not only the figures the commit was opened to fix**
+- **It was caught this time by procedure rather than by luck.** The first action of this response was to re-measure the repo version, both clocks, all three changelog counts, both GAS versions, the due count, the content checker and the module assertion against §7.28's quoted values. Six of the nine agreed; two did not, and both were this session's own doing
+- **No rotation.** 91 raw / 80 non-exempt before, **92 raw / 80 non-exempt** after, twelve sections dated 2026-09-15 on the EST clock, against a trigger of 100 — **eight from the cap**. Nothing in any deployed surface moved — no `.gs` and no `.html` — so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.42g / v01.14w** and Scraper at **v02.07g**
 
 ## [v05.89r] — 2026-09-15 04:37:13 AM EST
 
