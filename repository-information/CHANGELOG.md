@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 83/100`
+`Sections: 84/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.82r] — 2026-09-15 01:59:13 AM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run S2 session 5, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.25 — the prompt block now matches its own body.** v05.81r refreshed the deployment counters in §7.25's prose but left the **quoted paste-in prompt** still reading `Classroom 50/200 and Scraper 150/200 EXPECTED rather than measured` and `Repo CHANGELOG 82 raw / 80 non-exempt`. The prompt block is the half that actually gets pasted into the next session, so the stale half was the one that mattered. Both figures corrected, and the measured deploy line quoted in full. **The transferable lesson: a §7.x brief has two halves and refreshing one does not refresh the other — edit both.** §7.24's prompt block was deliberately left alone; that brief is spent, and its text is the record of what row 9 was actually told
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md`** — Remember Session. The v05.77r entry is dropped under the two-session cap, the v05.79r entry moves to Previous Sessions, and the new Latest Session records Phase 4 row 9 in full: the shallow-clone pin finding, the thirty-input roster that corrected the brief's twenty-nine, the omission record one level down, the `the-800-vdc-shift` reassignment out of the Phase 4 queue, the 5 → 8 due count, and the brief-refresh trap this push fixed
+- `README.md` — `Last updated:` line and repo version
+
+### Notes
+
+- **Nothing in the Classroom or Scraper surface moved** — no `.gs` and no `.html`, so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.39g / v01.14w**. The content checker holds **0 errors / 0 warnings at 39 lessons / 8 tracks / 142 gate cases** and `--check` still reports **8 due**
+- **No rotation.** 83 raw / 80 non-exempt before, **84 raw / 80 non-exempt** after, four sections dated 2026-09-15 on the EST clock, against a trigger of 100
 
 ## [v05.81r] — 2026-09-15 01:49:12 AM EST
 
