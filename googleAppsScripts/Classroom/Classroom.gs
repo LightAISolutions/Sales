@@ -1,4 +1,4 @@
-var VERSION = "v01.40g";
+var VERSION = "v01.41g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -38621,6 +38621,518 @@ function clLessonTheCampusAsAPowerProject_() {
 };
 }
 
+function clLessonHowAStorageProjectHappens_() {
+  return {
+ "schemaVersion": 1,
+ "id": "how-a-storage-project-happens",
+ "type": "module",
+ "title": "From Site Control to Commercial Operation",
+ "short": "A grid-storage project end to end — site, interconnection, offtake, financing, EPC, commissioning, COD — and where along it a supplier is chosen.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:fluence",
+    "date": "2026-08-08",
+    "note": "the cast and the gap the integrator sits in - cell makers sell commodity cells by the million and warrant nothing about grid performance, while lenders will only finance a system somebody guarantees for fifteen to twenty years; commissioning as the handover gate after which the meter starts earning; and augmentation as a design decision taken years before it is needed"
+   },
+   {
+    "kind": "public",
+    "ref": "study:tesla",
+    "date": "2026-08-08",
+    "note": "interconnection as the industry's bottleneck and the reason anything that pushes more energy through an approved connection point is worth real money; the physical build order from pads and containers through inverters and step-up transformers to the substation; balance-of-plant cost rivalling the batteries; and the contracted-against-merchant split that decides whose forecast the revenue depends on"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mortenson",
+    "date": "2026-08-21",
+    "note": "the developer-against-builder division of labour, entitlement and environmental review as the developer's own risk, and the EPC-against-GC distinction that decides who owns the power-plant problem - an EPC owns design, procurement and construction and hands over a working plant, which is why on a power project the design is the product"
+   },
+   {
+    "kind": "public",
+    "ref": "study:primoris",
+    "date": "2026-08-21",
+    "note": "the two halves of the overruns callout: percentage-of-completion on a cost-to-cost basis with the estimate of total cost as its engine and the cumulative catch-up as its failure mode, and backlog quality - the MSA-against-fixed-price mix, the twelve-month conversion share and the customer concentration that make a headline backlog figure several different numbers"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hitt",
+    "date": "2026-08-21",
+    "note": "commissioning as a five-level staged proof rather than a formality, level five as the deliberate theatre of failure under simulated load, the fact that a facility failing integrated testing is neither accepted nor paid for, and commissioned megawatts as the only output metric that has survived a test rather than describing an intention"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:solv-energy",
+    "date": "2026-08-30",
+    "note": "the channel fact the whole seller section turns on - on every verified flagship battery build the cells were owner-furnished and the builder installed what the owner had already bought - plus the two doors that leaves open to a supplier: constructability familiarity, and an operations-and-maintenance fleet whose augmentation purchases recur for decades"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:blattner",
+    "date": "2026-09-06",
+    "note": "the same channel fact from the opposite kind of firm - a builder that discloses almost nothing and whose value to a supplier is compatibility rather than procurement - and the reading that the realistic entry is being specified once by a repeat owner, after which install familiarity becomes repeatable across that owner's whole framework"
+   },
+   {
+    "kind": "public",
+    "ref": "study:aypa-power",
+    "date": "2026-09-05",
+    "note": "the conversion ladder rung by rung with what each rung retires and what it costs; the five contract forms and the dispatch-rights question that separates a fee from a revenue risk; and three of the five failure modes - a county refusing a permit after a state commission had already approved the contract, a queue date years behind a contracted delivery date, and a single-vendor supply chain"
+   },
+   {
+    "kind": "public",
+    "ref": "study:intersect-power",
+    "date": "2026-09-05",
+    "note": "the co-located energy-park variant in which generation, storage and load file once and sit behind one point of interconnection, and the reading that the load is what makes the park financeable because it is a customer whose bill is certain standing where the generation is"
+   },
+   {
+    "kind": "public",
+    "ref": "study:invenergy",
+    "date": "2026-09-05",
+    "note": "the build-and-transfer route as a different transaction from an offtake - the developer builds, a regulated utility buys the finished plant, and the price is approved into rate base by a commission - together with what that does to the developer's exit and to who carries the forty years of operation"
+   },
+   {
+    "kind": "public",
+    "ref": "study:excelsior-energy-capital",
+    "date": "2026-09-05",
+    "note": "the reservation agreement as a supply position taken before the projects exist, why a fund signs one (supply certainty, the domestic-content bonus and insulation from foreign-entity rules), and the trap that makes it the seller's cautionary tale - a reservation is only as real as its draw-down; plus the own-operate-or-develop fork that decides where a fund meets a project"
+   },
+   {
+    "kind": "public",
+    "ref": "study:recurrent-energy",
+    "date": "2026-09-06",
+    "note": "the four-stage pipeline ladder with the company's own definitions and the share sitting at each rung, the finding that the interconnection rather than the hardware is the thing being bought because a queue position transfers with the project, and the connected share of a pipeline as the honest question to ask of any pipeline figure"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dnv",
+    "date": "2026-09-04",
+    "note": "the spine of the timeline - the financing sequence measured in months either side of financial close - and the independent engineer's review section by section, including the single most common finding on a battery project, a use case the design or the warranty cannot support; plus bankability as a property of the package rather than of the battery, and the five parties and what each wants the engineer to say"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mastec",
+    "date": "2026-09-06",
+    "note": "craft labour as the one input that cannot be procured, and the argument that a labour shortage is a schedule risk rather than a cost line because in a tight market the hours are not available at the higher price either; plus prequalification as a market-structure decision that shortens the list of firms allowed to bid"
+   },
+   {
+    "kind": "public",
+    "ref": "study:samsung-ct",
+    "date": "2026-09-06",
+    "note": "the payment cycle of measurement, certification and release with retainage held against it; liquidated damages split into delay and performance, and the caps as the point where the risk transfer stops; the six security instruments and what each one does not cover; and underbilling on a growing book as the condition that ends contractors in booms"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary the lesson leans on rather than redefining - site control, the interconnection queue and agreement, offtake, tolling, financial close, conditions precedent, the independent engineer, notice to proceed, drawdown, commissioning, the capacity test, commercial operation date, balance of plant, liquidated damages, retainage, augmentation and the tax-credit vocabulary"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "8",
+   "v": "stages, one gate",
+   "sub": "site control, interconnection, offtake, financing, EPC award, construction, commissioning, commercial operation - and every one of them is a condition of the same day, financial close, which is why the lifecycle is best read as months either side of that date rather than as a straight line"
+  },
+  {
+   "k": "~18",
+   "v": "months before the money",
+   "sub": "the bill of materials is fixed when the developer prices its offtake bid and settles the basis of design with its lenders - roughly a year and a half before financial close, and long before there is a purchase order for anyone to chase"
+  },
+  {
+   "k": "15%",
+   "v": "of one pipeline connected",
+   "sub": "one developer's own figure on its own earnings call: about 6 GW of solar and 13 GWh of storage had secured interconnection against an 84.1 GWh pipeline, and the connected share had fallen from about 22% two years earlier"
+  },
+  {
+   "k": "0",
+   "v": "builds where the builder chose the battery",
+   "sub": "on every verified flagship battery build at either pure-play builder in this corpus the cells were owner-furnished; no ranking of storage builders exists here either, and this lesson does not invent one"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "approved-vendor list",
+   "d": "The set of suppliers a project may buy from without reopening a decision somebody has already relied on. It is rarely one list: the developer keeps one to protect its own estimate, the offtaker may impose another through its contract, the lender inherits whatever the independent engineer was willing to accept, and the tax-credit rules impose a fourth by disqualifying certain supply chains. A vendor is on the project's list only when it is on all of them, which is why qualification is a campaign rather than a meeting."
+  },
+  {
+   "t": "owner-furnished equipment",
+   "d": "Equipment bought directly by the project owner and handed to the builder to install, rather than procured by the builder inside its contract price. On grid-storage sites the batteries are usually owner-furnished, which moves the purchase decision upstream of the construction contract entirely: the builder's influence is constructability - container handling, foundation and spacing standards, termination and commissioning interfaces - not selection. Selling to the builder is selling to a desk that does not hold the pen."
+  },
+  {
+   "t": "percentage-of-completion",
+   "d": "The accounting method by which a contractor recognises revenue as work progresses, usually cost-to-cost: spend forty per cent of the estimated total cost and book forty per cent of the contract revenue. Its engine is not the spending but the estimate, because the denominator is a forecast rather than a fact. Nothing about the method is irregular; what it does is make the quality of one internal number visible only when that number is finally corrected."
+  },
+  {
+   "t": "cost to complete",
+   "d": "The contractor's running forecast of what the remaining work on a job will cost. It is the denominator percentage-of-completion divides by, so every revenue figure already reported on that job depends on it. When it is revised upward the arithmetic restates the past through the present: profit booked in earlier quarters reverses at once, in the quarter the estimate moved rather than the quarter the cost was incurred. That is why contractor blow-ups look sudden and are not."
+  },
+  {
+   "t": "backlog quality",
+   "d": "The composition of signed-but-unearned work, as against its total. The things that decide it: the share under multi-year unit-price frameworks that re-price regularly versus fixed-price work that locked a number years ahead of uncertain costs; who bears escalation; how concentrated the book is by customer; and how much converts to revenue within twelve months. The risk inverts intuition - a thousand small framework jobs cannot sink a firm and one fixed-price megaproject can."
+  },
+  {
+   "t": "pro forma",
+   "d": "The project's financial model: the schedule of revenues, costs and debt service that every party negotiates against and the lender sizes its loan from. It is the document a date lives in, which is why a slipped energisation is not merely late - it moves revenue out of the years the model assumed, and the model is what the debt was sized against. A date that moves the pro forma is a financing event, not a scheduling one."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-lifecycle",
+   "title": "Eight stages, measured against one day",
+   "kind": "timeline",
+   "read": "9 min",
+   "intro": "A grid-storage project is usually drawn as a straight line from land to meter. It is more useful drawn as a convergence, because almost everything on it is a condition of the same day: **{{financial close}}**, when the loan agreement's **{{conditions precedent}}** are satisfied and money can flow. **The numbers in the gutter are months either side of that day, not calendar dates** - the elapsed time between two of them varies enormously with which lane is binding. Read the colours: gold is the developer's own work, blue is what the developer does not control, and rose is the money and the engineer the money appoints. A first project that reaches the meter in four years has done well; most of the ones that enter the blue lane never arrive at all.",
+   "lanes": {
+    "gen": "The developer's clock - what money and effort can buy",
+    "deploy": "The grid and the county - what money cannot buy",
+    "eco": "The money's clock - lenders, tax equity and the engineer they appoint"
+   },
+   "items": [
+    {
+     "x": -48,
+     "lane": "gen",
+     "label": "**{{site control}}** - an option, a lease, or nothing",
+     "sub": "Land is optioned or leased where a large connection can plausibly be secured, often on fixed payments with the developer carrying install, maintenance and removal. This rung retires exactly one risk - having nowhere to build - and it is the cheapest rung on the ladder, which is why a pipeline counted at this stage is mostly land somebody has an option over."
+    },
+    {
+     "x": -46,
+     "lane": "deploy",
+     "label": "**A {{queue position}} is taken**",
+     "sub": "The project enters the **{{interconnection queue}}** and waits for studies that decide which network upgrades its connection would require. In most American markets this now runs for years, and **the majority of projects that enter never leave as operating plants.** One battery in this corpus entered the ERCOT queue in August 2021 and operated in February 2026 - four and a half years, and that is a success story."
+    },
+    {
+     "x": -36,
+     "lane": "deploy",
+     "label": "**Permits - the rung money cannot buy**",
+     "sub": "Zoning, a **{{conditional use permit}}**, environmental review. One developer in this corpus filed a 437-page application for a single site and was refused unanimously by a county board after a two-hour hearing; a second project was refused by a city planning commission six months after the state commission had approved its contract. A multi-gigawatt pipeline loses projects here one hearing at a time."
+    },
+    {
+     "x": -30,
+     "lane": "deploy",
+     "label": "The studies finish; the **{{interconnection agreement}}** is signed",
+     "sub": "The project commits to pay for the network upgrades its connection triggers, and in exchange holds something transferable. **This is the moment the project stops being land and becomes an asset** - when a development-stage project changes hands, a large part of what the buyer is paying for is this piece of paper and the studies behind it. The land, the pads and the batteries can be bought by anyone."
+    },
+    {
+     "x": -24,
+     "lane": "eco",
+     "label": "Feasibility, technology shortlist, first offtake conversations",
+     "sub": "Lenders are not yet committed and nothing is signed, but the shape of the project is being set: duration, cycles per day, the dispatch the revenue model will assume. Every one of those choices constrains which equipment can be specified later, and none of them is revisited cheaply."
+    },
+    {
+     "x": -18,
+     "lane": "gen",
+     "label": "**{{offtake}} - the rung that retires price risk**",
+     "sub": "A utility toll paying a fixed monthly amount per megawatt for twenty years with the utility dispatching; a capacity agreement bought by a joint-action agency for eight municipal utilities; resource adequacy with an energy settlement; build-own-operate with the utility holding dispatch. The forms differ in one respect that decides everything else - **who holds the {{dispatch rights}}.** Hold them and you hold the revenue risk; give them away and you are paid a fee, which is the form a lender likes best."
+    },
+    {
+     "x": -18,
+     "lane": "eco",
+     "label": "**Equipment and EPC selection; the {{basis of design}} is fixed**",
+     "sub": "The term sheet is negotiated and the supplier warranty terms with it. **This is where the {{BOM}} locks, and it is the single most important date on this chart for anyone selling equipment** - it sits roughly eighteen months before there is any money, and considerably longer before there is a purchase order to chase. A vendor that is not credible here is not selling into this project; it is selling into the next one."
+    },
+    {
+     "x": -12,
+     "lane": "eco",
+     "label": "**The {{independent engineer}} is appointed - by the lenders**",
+     "sub": "Scope agreed, **{{reliance letter}}** and liability terms set, document request list issued. Note who appoints and who pays: the sponsor pays the engineer's fee and does not choose the engineer, and the report may cut the sponsor's own debt sizing. That asymmetry is the entire product - a report the lender can rely on legally is worth nothing if the borrower picked its author."
+    },
+    {
+     "x": -8,
+     "lane": "eco",
+     "label": "**Technology, design and contract review**",
+     "sub": "The dispatch the revenue model assumes - cycles per day, **{{depth of discharge}}**, duration - is set against the plant's electrical and thermal design and against the warranty envelope. **The single most common finding on a battery project is a use case the design or the warranty cannot support.** In parallel the EPC contract, the supply and warranty terms, the **{{LTSA}}** and the offtake are read against the model to see whether the risks it assigns to other parties are actually theirs on paper."
+    },
+    {
+     "x": -5,
+     "lane": "eco",
+     "label": "Draft report; the model's technical inputs are validated or haircut",
+     "sub": "Capacity, efficiency, **{{degradation}}**, availability, operating cost and the **{{augmentation}}** reserve. The engineer does not opine on price forecasts - it validates every technical number the spreadsheet contains, and a haircut here shrinks the debt the project can carry."
+    },
+    {
+     "x": -2,
+     "lane": "gen",
+     "label": "**{{conditions precedent}} cleared**",
+     "sub": "Permits, insurance, legal opinions, the final report and its reliance letters. The list is long, every item has an owner, and the developer is carrying the cost of the whole project while it is worked through."
+    },
+    {
+     "x": 0,
+     "lane": "eco",
+     "label": "**{{financial close}} - and the first {{drawdown}}**",
+     "sub": "The loan agreement takes effect. Miss the date and construction slips, equipment slots lapse and the developer carries interest on nothing - which is why the engineer is not writing an essay but clearing a gate on a calendar everybody can already see."
+    },
+    {
+     "x": 0,
+     "lane": "gen",
+     "label": "**{{notice to proceed}}** - the drawing becomes a site",
+     "sub": "The construction contract is released and the first equipment payment goes out. A **{{limited notice to proceed}}** with an equipment prepayment is common and does more than accelerate procurement: it takes the largest cash exposure off the builder's balance sheet, which lets a smaller builder hold a larger job. That is a financing decision dressed as a scheduling one."
+    },
+    {
+     "x": 8,
+     "lane": "gen",
+     "label": "**Construction - and the input nobody can order**",
+     "sub": "Pads, containers, DC cable to the inverters, inverters to step-up transformers, transformers to the **{{substation}}**. **{{balance of plant}}** rivals the batteries in cost, and the work is a productivity game rather than a craftsmanship one. Every other input can be procured; craft labour cannot, because it is already employed somewhere and the training pipeline takes years."
+    },
+    {
+     "x": 8,
+     "lane": "eco",
+     "label": "**{{construction monitoring}} - the engineer certifies each draw**",
+     "sub": "Monthly site visits, progress and spend against plan, and a certificate against every **{{drawdown}}**. No certificate, no disbursement - so the engineer's signature controls the flow of funds throughout construction, which is a quieter power than the report and a more continuous one."
+    },
+    {
+     "x": 16,
+     "lane": "deploy",
+     "label": "Mechanical completion and **{{energisation}}**",
+     "sub": "The utility energises the connection. Everything upstream of this moment was preparation; nothing downstream can start without it, and it is the last item on the chart the developer does not control."
+    },
+    {
+     "x": 18,
+     "lane": "eco",
+     "label": "**{{commissioning}} - the theatre of deliberate failure**",
+     "sub": "Every subsystem is configured and tested against contract specification, then the **{{capacity test}}** and the **{{round-trip efficiency}}** test are witnessed. The industry runs five levels, and the last of them is integrated: pull the feed and watch the plant behave. **A facility that fails integrated testing is neither accepted nor paid for**, which is why commissioned megawatts is the only capacity figure that has survived a test rather than describing an intention."
+    },
+    {
+     "x": 20,
+     "lane": "gen",
+     "label": "**{{commercial operation date}}** - the meter starts earning",
+     "sub": "The completion certificate is issued and the construction loan converts to a term loan; the lender's exposure moves from construction risk to operating risk. Only now does revenue exist, which is why a delivery or commissioning slip translates directly into missed revenue quarters rather than into an inconvenience."
+    },
+    {
+     "x": 32,
+     "lane": "eco",
+     "label": "Annual operating review - and the second sale",
+     "sub": "Degradation measured against the warranty curve, the augmentation reserve tested, covenants checked. **This is where a supplier that lost the original {{BOM}} gets a second entrance**: augmentation purchases recur for decades, and the original equipment maker's hold weakens as a fleet ages."
+    }
+   ],
+   "note": "**Read the chart by lane rather than left to right.** The gold lane is the only one the developer can spend its way through. The blue lane is the one that decides whether the project exists, and it answers to a grid operator and a county rather than to a budget. The rose lane does not begin in earnest until the blue lane has produced something to lend against - which is why the money arrives late and then governs everything, and why the two most consequential dates for a supplier both sit in lanes it will never be a party to.",
+   "sales": "Ask which of the three lanes a prospect's date lives in before you promise anything against it. A slip in the gold lane is a conversation about crews; a slip in the blue lane is a conversation about whether there is a project."
+  },
+  {
+   "id": "who-does-what-when",
+   "title": "Who owns each stage, and what a supplier can move",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "The same eight stages, read as a question of authority. The third column is what is actually decided at that stage and therefore cannot be reopened afterwards without reopening something else; the fourth is the honest answer to *what can I do about it* - which for most of the chart is **nothing directly**, and saying so is more useful than pretending otherwise.",
+   "cols": [
+    "Stage",
+    "Who owns the decision",
+    "What is decided there",
+    "What a supplier can actually influence"
+   ],
+   "rows": [
+    [
+     "**{{site control}}**",
+     "The developer, on its own money",
+     "Where, how much land, and on what terms - an option or a lease. The risk retired is having nowhere to build, and it is the cheapest risk on the ladder to retire.",
+     "**Nothing.** No equipment decision exists yet and no supplier is in the room. A pipeline figure counted at this rung is the weakest number a developer publishes, and reading it as addressable demand is the first forecasting error in this market."
+    ],
+    [
+     "**{{interconnection}}**",
+     "The grid operator, on its own queue",
+     "Whether the project can connect at all, when, and who pays for the network upgrades it triggers. Years, routinely. The agreement that comes out transfers with the project.",
+     "**Nothing, and it is worth understanding why.** Anything that pushes more energy through an already-approved connection point is worth real money - which is a genuine argument about **{{energy density}}** and footprint, but one made to a developer choosing between designs rather than to the queue."
+    ],
+    [
+     "**{{offtake}}**",
+     "The developer and the buyer - a utility, a trader or a load",
+     "Whether revenue is a fee or a market outcome, and who holds the **{{dispatch rights}}**. This also fixes the duty cycle: cycles per day, duration, **{{depth of discharge}}**.",
+     "**Indirectly, and this is the first real opening.** The duty cycle the developer is about to promise has to be one some warranty will cover. A supplier whose warranty envelope comfortably contains the contract being bid is a supplier the developer can price aggressively with; one whose envelope does not is a risk the developer prices against."
+    ],
+    [
+     "**Financing**",
+     "The lenders and the tax-equity investor",
+     "How much debt the project carries, on what technical assumptions, and against which contracts. The **{{independent engineer}}** tests the design against the use case, the contracts against the model, and the degradation curve against the warranty.",
+     "**Directly, and earlier than most suppliers expect.** The engineer asks for field record of *this exact product generation*, certifications held, test data, warranty exclusions, spares and service network, and the financial strength behind the warranty. Every one of those is prepared months before anyone asks, or it is not prepared."
+    ],
+    [
+     "**EPC award**",
+     "The developer",
+     "Who builds it, under what price and schedule, with what **{{liquidated damages}}** and what caps. On a power project the **{{EPC}}** owns design, procurement and construction and hands over a working plant - which is why the design is the product.",
+     "**Compatibility, not selection.** On grid-storage sites the cells are usually owner-furnished: the builder installs what the owner already bought. What the builder does decide is whether your hardware is easy to build and service - container handling, foundation and spacing standards, termination and commissioning interfaces - and that quietly lowers the friction in the owner's next selection."
+    ],
+    [
+     "**Construction**",
+     "The EPC, against the developer's schedule",
+     "Whether the date holds. Pads, cable, inverters, transformers, the substation - and crews. **{{balance of plant}}** rivals the batteries in cost, and craft labour is the one input that cannot be procured at any price when the market is tight.",
+     "**Delivery reliability, and it is worth more than price here.** A slipped shipment lands on the one exposure with money attached per day. A supplier that misses a slot is not costing the builder a margin point; it is putting the builder into damages, and builders remember which suppliers did that."
+    ],
+    [
+     "**{{commissioning}}**",
+     "The developer, the EPC and the engineer together",
+     "Whether the contracted numbers were actually demonstrated. The **{{capacity test}}** and the **{{round-trip efficiency}}** test are witnessed; integrated testing proves the plant under deliberate failure. A facility that fails is neither accepted nor paid for.",
+     "**Directly, and visibly.** This is where a supplier's commissioning support, spares position and field engineering are observed by every party at once - the developer, the builder, the engineer and the offtaker. It is the cheapest reference a supplier will ever earn and the most expensive one to lose."
+    ],
+    [
+     "**{{commercial operation date}}** and after",
+     "The owner and its operations-and-maintenance contractor",
+     "How the plant is run inside the warranty envelope, when capacity is added back as it fades, and whether the **{{availability guarantee}}** holds. The construction loan converts to a term loan and the lender's exposure changes shape.",
+     "**Directly, and repeatedly.** **{{augmentation}}** purchases recur for decades, they sit outside the new-build tax-credit screens, and the incumbent's hold weakens as a fleet ages. The largest operations fleets are the counterparties that execute them - which makes the second sale a different sale to a different desk."
+    ]
+   ],
+   "note": "**Two readings fall straight out of the fourth column.** The first is that a supplier's influence is concentrated at three points - the duty cycle being promised at offtake, the engineer's technical review at financing, and the augmentation cycle years after commercial operation - and is close to zero everywhere else. The second is that none of those three is a purchase order, and two of them happen in rooms the supplier is not in. **That is the shape of this sale: it is won by being already acceptable when a decision arrives, rather than by being present when it is made.** The corpus carries no ranking of storage builders and this lesson does not supply one; what it does carry is a consistent account of who holds which pen.",
+   "sales": "When a prospect names a stage, you have learned what is still open. 'We are in financing' means the bill of materials is closed and the conversation is about documentation; 'we are bidding an offtake' means it is genuinely open and the warranty envelope is the argument."
+  },
+  {
+   "id": "where-the-seller-enters",
+   "title": "Where the seller actually enters",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "Knowing the product is not knowing the sale. The lifecycle above has one uncomfortable property for anyone selling equipment into it: **the decision that matters is taken early, by a party that is not yet spending money, and is then relied on by three other parties who will not reopen it cheaply.** Everything that feels like selling - the quotation, the negotiation, the purchase order - happens downstream of it.",
+    "**The bill of materials locks at the bid, not at the order.** When a developer prices an offtake bid it is committing to a number it cannot revise later, and to price it the developer must already know what the plant contains: which cells, which **{{PCS}}**, what duty cycle the warranty permits, what the augmentation profile costs over twenty years. The **{{basis of design}}** is settled in the same window, alongside the lenders' term sheet. On the chart above that is roughly eighteen months before **{{financial close}}** and further still before any purchase order exists. **A supplier waiting to be asked for a quotation is waiting for a decision that was taken a year and a half earlier.**",
+    "**And it is rarely one list that has to be satisfied.** The developer keeps an **{{approved-vendor list}}** to protect its own estimate. The offtaker may impose another through its contract. The lender inherits whatever the **{{independent engineer}}** was willing to accept. And the tax rules impose a fourth: where a project's economics depend on the **{{ITC}}** and its **{{domestic content bonus}}**, the **{{FEOC}}** screens disqualify certain supply chains from the credit altogether - so the wrong cell does not make the project more expensive, it makes the financing structure stop working. One developer in this corpus has exactly one named battery supplier across a multi-gigawatt fleet. That is not incuriosity; it is what a list looks like once all four constraints have been applied to it.",
+    "**Selling to the builder is selling to a desk that does not hold the pen.** Both pure-play builders in this corpus tell the same story from opposite ends. On every verified flagship battery build at the larger one, the cells were **{{owner-furnished equipment}}** - the builder installed what the owner had already bought. The other discloses almost nothing, is essentially never co-named with a battery maker, and has installed more than three thousand containers; its own record shows it installing China-linked hardware on one site and a domestic stack on another, because in each case the owner chose. **There is no blanket preference at the builder level, only owner-level economics and politics.**",
+    "**What the builder does decide is whether you are easy.** Container handling, foundation and spacing standards, termination and commissioning interfaces, service training - a supplier that has cleared those is a supplier the builder does not price first-build risk into, and that shows up as a lower number in the owner's comparison without anyone having sold anything. It is qualification as documentation rather than qualification as a pursuit, and the realistic route is to be specified once by a repeat owner, after which the familiarity is reusable across that owner's whole framework of sites.",
+    "**The second gate is the engineer's technical review, and it is the one most suppliers under-prepare.** The engineer is appointed by the lenders, paid by the sponsor, and chosen by neither the supplier nor the borrower. It asks whether this is proven equipment or a first-of-a-kind dressed as one; it wants field record of the exact product generation, the certifications actually held, **{{UL 9540A}}** test data and what it shows, **{{NFPA 855}}** compliance, the spares and service network, and the financial strength standing behind the warranty. **It reads the warranty's exclusions as carefully as its promises**, and it may ask for independent test data the supplier would rather not supply. None of that is a negotiation; it is a file that either exists or does not.",
+    "**The finding the engineer makes most often on a battery project is not about the battery.** It is that the use case the revenue model assumes - the cycles per day, the **{{depth of discharge}}**, the duration - is one the design or the warranty cannot support. A two-cycle-a-day contract written against a one-cycle warranty is a project whose insurance expires the day it opens. For a supplier this is both the risk and the opening: the party that notices the mismatch first is usually the engineer, months after the bid was priced, and the supplier who raised it during the bid is the one whose warranty envelope the developer now trusts.",
+    "**A third door exists and it is easy to misread: the supply framework.** A fund in this corpus signed **{{reservation agreement}}s** for 2.2 GWh of one maker's systems and 7.5 GWh of another's, neither release naming a project - because that is what a reservation is. Manufacturing volume and slots are reserved over several years at agreed terms, and individual orders are drawn down later, project by project, as each reaches financing. The reasons were supply certainty, qualifying future projects for the domestic-content bonus, and insulation from tariff and foreign-entity rules. **But a reservation is only as real as its draw-down**: two years after the first signing, no source in this corpus names a project that received the reserved hardware, and the fund's own platform chief said the frameworks did not affect its first three batteries. A gigawatt-hour headline is an option on supply, not a delivery schedule - ask which project drew on it, and when.",
+    "**Finally, the entrance that opens years after everyone has stopped watching.** Cells fade, so operators periodically add fresh capacity to hold the contracted energy - **{{augmentation}}**. Those purchases recur for decades, they sit outside the new-build credit screens, and the original maker's hold weakens as a fleet ages - and a design that makes augmentation easy, with space, wiring and controls that will mix old cells with new, changes the twenty-year economics of a site enough to be an argument at the bid. **A supplier that lost the original bill of materials has not lost the site; it has lost the first of two decisions, and the second one is bought by a different desk.**"
+   ],
+   "sales": "The three questions that place you on this chart in one call: what duty cycle is the offtake being bid on, who is the independent engineer, and is the equipment owner-furnished. The answers tell you whether you are selling, documenting, or waiting for the augmentation cycle."
+  },
+  {
+   "id": "how-overruns-hide",
+   "title": "How an overrun hides, and why it arrives all at once",
+   "kind": "callout",
+   "read": "7 min",
+   "tone": "info",
+   "ps": [
+    "The builder on the site above is usually a public company, and reading its numbers is part of reading the project. Two of those numbers behave in ways that surprise people the first time, and both of them matter to a supplier, because a builder in trouble pays late, renegotiates hard, and stops taking schedule risk on anybody's behalf.",
+    "**One. Revenue is recognised against an estimate, so the estimate is the whole game.** Under **{{percentage-of-completion}}** on a cost-to-cost basis, a contractor that has spent forty per cent of the estimated total cost of a job books forty per cent of its contract revenue. Nothing about that is irregular - it is how you report a three-year job in quarters. But the denominator is the **{{cost to complete}}**, which is a forecast rather than a fact, and it is produced by the same people whose job it is to hit it.",
+    "**Two. When the estimate moves, the past restates itself through the present.** Discovering that a job will cost twenty per cent more than thought does not raise next quarter's costs; it forces an immediate cumulative catch-up, so profit booked in earlier quarters reverses all at once in the quarter of discovery. **That is why contractor blow-ups look sudden and are not.** The costs accreted quietly for quarters while the estimate lagged; the disclosure is the moment the forecasting machinery finally admits it, and investors and courts then spend a year asking when management should have known.",
+    "**What actually prevents it is unglamorous and visible from outside.** Independent project reviews, honest productivity tracking against the estimate, escalation clauses in the contracts, and a culture where field teams report bad news early. Project controls is the discipline the whole edifice rests on, and a builder that talks about it in specifics is telling you something a headline margin cannot.",
+    "**Three. Backlog is not one number, and its mix inverts the intuition.** Signed-but-unearned work varies enormously in quality: recurring unit-price work under multi-year utility frameworks is sticky, lower-risk and re-priced regularly, while fixed-price project backlog locks a number years ahead against uncertain costs. **A thousand small framework jobs cannot sink a firm; one giant fixed-price megaproject can.** So **{{backlog quality}}** - the mix, the twelve-month conversion share, who bears escalation, how concentrated by customer - is read before the headline figure by anyone who has done this before.",
+    "**Four. Backlog can set records while earnings collapse, and both are honest.** New awards keep flowing on demand strength even as older jobs burn cost, because backlog measures the future book and an overrun hits the current income statement. A record backlog beside a charge is not a contradiction; it is the normal shape of a firm growing into trouble.",
+    "**And one more that shows up before either of the others.** In a contractor's accounts the relationship between work performed and work billed appears as overbilling or underbilling. Persistent underbilling on a growing book means the firm is financing its customers out of its own equity - **the condition that ends construction companies in booms rather than in downturns.** The cash cycle behind it is ordinary and slow: monthly measurement, certification by the owner's engineer, payment on terms afterwards, and **{{retainage}}** of five or ten per cent withheld from every certificate until completion. Retainage is typically a large fraction of the builder's entire profit on the job, held without interest for the length of it. The same structure repeats down the chain, usually worse, because a subcontractor often works on pay-when-paid terms and has a payroll every Friday."
+   ],
+   "note": "**The supplier's reading of all this is short.** A builder whose backlog is heavily fixed-price, concentrated in a few customers and converting slowly is a builder whose next hard conversation is about somebody's schedule - and equipment delivery is the part of that schedule it can most easily push onto a supplier. A builder financing its customers through underbilling is one whose payment terms are about to get longer. **Neither is a reason not to sell; both are reasons to read the counterparty before agreeing to the liquidated-damages language.**",
+   "sales": "Backlog mix and the twelve-month conversion share are in every public builder's own quarterly disclosure. Reading them before a pricing conversation is twenty minutes that tells you whether you are negotiating with a firm that has room."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "8 min",
+   "tone": "warn",
+   "ps": [
+    "Five ways a storage project goes wrong, and in four of them the equipment worked perfectly. The lifecycle above is a sequence of conditions, and a condition that fails late is more expensive than one that fails early - which is precisely the opposite of the order in which the conditions are usually tested.",
+    "**The offtake that does not close.** An offtake is the rung that retires price risk, and it is easy to assume that a contract approved by a regulator is a project. It is not. One project in this corpus was refused by a city planning commission **six months after the state commission had approved its contract**; another - two hundred megawatts, eight hundred megawatt-hours - was denied unanimously by a county board after a two-hour hearing, on a 437-page application. A **{{conditional use permit}}** is the rung money cannot buy, and the contract does not survive the site. The failure runs the other way too: a buyer's own approval process can lapse, a counterparty's credit can move, and a framework signed with a fund is not a project until a project draws on it.",
+    "**An interconnection date that moves the {{pro forma}}.** The queue is slower than the contract, and the gap is sometimes years rather than months: one utility's own evaluator flagged queue dates of **2031 and 2033 against contracted deliveries in 2027**. Understand what that does. The model the debt was sized against assumed revenue starting in a particular year; move the start and you have not merely delayed a project, you have changed the number the lender lent. A contract that begins before the grid connection exists is a promise the developer may have to pay to keep - and the developer's response is to look for cost anywhere it still has discretion, which is usually the equipment.",
+    "**A vendor qualified after the RFP cycle.** This is the quiet one, and it is nobody's fault. The bill of materials locked when the bid was priced; the **{{independent engineer}}** reviewed that bill of materials and wrote a report the lenders now rely on; the **{{conditions precedent}}** were cleared against it. **Arriving after that is not arriving late for this project - it is arriving on time for the next one**, and the difference is worth stating plainly to your own management, because a pipeline of prospects that are all in financing is a pipeline with no revenue in it this year. The same trap has a longer-dated form: a supply framework can reserve gigawatt-hours for years without a single project drawing on it, and the volume headline is an option on supply rather than a delivery schedule.",
+    "**The estimate that was wrong for four quarters.** The builder's cost-to-complete lagged, revenue was recognised against it, and the correction arrives as a single cumulative charge. Around the same mechanism sit the ordinary slips: one battery in this corpus slipped eight weeks against its own projected date, and a developer took a twenty-four million dollar impairment in a quarter when early-stage positions stopped clearing. **A schedule is not a plan that is either met or missed; it is a forecast being continuously revised, and the revision is what is disclosed.**",
+    "**The labour that could not be ordered - and the cap that stopped covering it.** Every other input to a project can be procured. Craft labour cannot: in a genuinely tight market the hours are **not available at the higher price either**, because the people are already employed and the training pipeline runs for years. What the contractor gets is not expensive labour but less labour than planned, so the work takes longer, the date moves, and **{{liquidated damages}}** - the one exposure with money attached per day - begin to run. Acceleration buys overtime and crew density, both of which reduce the productivity that was already short. Then the second half: every damages regime is **capped**, and **the cap is where the risk transfer stops.** If the plant is a year late and the delay cap is reached in month four, the remaining eight months are the owner's, and the wrap it paid a premium for has already stopped working."
+   ],
+   "note": "**One sentence runs through all five: the project was never the developer's alone to promise.** A county's vote, a grid operator's queue, a lender's reliance on a report already written, a builder's forecast of its own costs and a regional labour market all sit outside the developer's control, and each of them can arrive after money has been committed against the opposite assumption. **The habit that catches all five is the same one: for every date you are given, ask who else has to act for it to hold.** That party's incentives, not your customer's, are the schedule - and they are also the reason a supplier's delivery reliability is worth more to this buyer than a price concession."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is a storage project's lifecycle better read as months either side of financial close than as a straight line from land to meter?",
+     "a": "Because almost every stage is a condition of that one day rather than a step toward it. Site control, permits, the interconnection agreement, the offtake, the equipment and EPC contracts, the permits and insurances and legal opinions all have to be in hand before the loan agreement can take effect, and the independent engineer's report is normally one of the conditions too. Reading it as a line implies each stage hands off to the next; reading it as a convergence shows why a single late item holds the whole project, and why missing the date costs the developer interest on a project that is not yet earning."
+    },
+    {
+     "q": "What does an interconnection agreement actually give a project, and why is it worth more than the land?",
+     "a": "It gives a defined right to connect at a defined point, with the required network upgrades identified and their cost allocated - and it transfers with the project. The queue that produces it runs for years in most American markets and the majority of projects that enter never leave it as operating plants, so the agreement is the scarce item. Land, pads and batteries can be bought by anyone at roughly market price; the connection cannot be bought at any price on a schedule. That is why a development-stage sale is mostly a sale of the queue position and the studies behind it."
+    },
+    {
+     "q": "At what point in the lifecycle does the bill of materials effectively lock, and why that point?",
+     "a": "When the developer prices its offtake bid and settles the basis of design with its lenders - roughly eighteen months before financial close. It locks there because the bid commits the developer to a revenue number it cannot revise, and to produce that number it must already know the duty cycle the warranty permits, the round-trip efficiency, the degradation curve and the twenty-year augmentation cost. Changing the equipment afterwards changes all of those, which reopens a price that has already been offered and a report the lenders are relying on."
+    },
+    {
+     "q": "Why does selling batteries to the EPC contractor usually fail on a grid-storage site, and what is the EPC's real influence?",
+     "a": "Because the cells are typically owner-furnished: the owner buys them and hands them to the builder to install, so the purchase decision sits upstream of the construction contract entirely. The builder's influence is constructability rather than selection - container handling, foundation and spacing standards, termination and commissioning interfaces, service training. A supplier that has cleared those gets priced without first-build risk in the owner's next comparison, which is real influence arriving indirectly."
+    },
+    {
+     "q": "Who appoints the independent engineer, who pays for it, and why does that arrangement exist?",
+     "a": "The lenders appoint it; the sponsor pays for it. The arrangement exists because the report's whole value is that a lender can rely on it legally, and a report whose author was chosen by the borrower is not reliable in that sense. The consequence is an engineer that may reduce the debt the sponsor can raise while being paid by the sponsor - the sponsor wants issues closed, the lender wants every downside case explored, and the engineer's independence is the product being bought."
+    },
+    {
+     "q": "What is the most common finding an independent engineer makes on a battery project, and why is it usually found late?",
+     "a": "That the use case the revenue model assumes - cycles per day, depth of discharge, duration - is one the design or the warranty cannot support. It is found late because the revenue model and the equipment specification are produced by different people at different times: the model is built to win an offtake, the specification to hit a capital cost, and nobody compares the contract's duty cycle with the warranty's envelope until a party is paid to. A two-cycle-a-day contract against a one-cycle warranty is a project whose insurance expires the day it opens."
+    },
+    {
+     "q": "A contractor books revenue on a percentage-of-completion basis. Why do its overruns appear suddenly?",
+     "a": "Because revenue is recognised against the estimated total cost of the job, so every quarter already reported depends on a forecast of the cost still to come. While the forecast lags reality the cost accretes invisibly. When the forecast is finally revised upward the arithmetic restates the past through the present: profit booked in earlier quarters reverses in a single cumulative catch-up charge, in the quarter the estimate moved rather than the quarters the cost was incurred. The suddenness is in the disclosure, not in the events."
+    },
+    {
+     "q": "Why is a labour shortage a schedule risk rather than a cost line, and where does that risk finally land?",
+     "a": "Because in a genuinely tight market the hours are not available at the higher price either - the people are already employed elsewhere and the training pipeline takes years, so what the contractor gets is less labour than planned rather than dearer labour. Fewer hours means a longer job, a longer job means a moved date, and a moved date means liquidated damages, which are the one exposure with money attached per day. Acceleration buys overtime and crew density, both of which cut the productivity that was already short. The risk lands in the schedule, and the schedule is where the money is."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A developer reports an 84 GWh pipeline, of which about 85% is described as early-stage. What is that 85% actually made of?",
+     "c": [
+      "Land control and a queue position — projects still trying to secure interconnection rights, most of which will never be built",
+      "Projects with signed offtake contracts awaiting financing",
+      "Capacity under construction across several markets",
+      "Capacity already energised but not yet commissioned"
+     ],
+     "a": 0,
+     "why": "The company's own stage definition is projects it controls that are in the process of securing interconnection rights — that is land control plus a place in a queue, and the honest reading is an option portfolio rather than a forward order book. Strip early-stage out of that figure and it falls by more than eighty-five per cent. The useful question about any pipeline is not how big it is but how much of it is connected."
+    },
+    {
+     "q": "Your product is qualified by a developer six months before financial close on a project it is bidding equipment into. What have you most likely won?",
+     "c": [
+      "A position on the next project, not this one",
+      "A share of this project's supply, subject to price",
+      "Nothing — qualification without a purchase order has no value",
+      "The right to be considered at the commissioning stage"
+     ],
+     "a": 0,
+     "why": "The bill of materials locked when the offtake bid was priced and the basis of design was fixed with the lenders, roughly eighteen months before close. By six months out the independent engineer has reviewed that specification and the lenders are relying on the report. Arriving now is arriving on time for the next bid, which is a real win and should be reported to your own management as such — just not as revenue this year."
+    },
+    {
+     "q": "A utility's evaluator notes interconnection dates of 2031 and 2033 against contracted deliveries in 2027. What is the developer's exposure?",
+     "c": [
+      "It has promised delivery it may have to pay to keep, and the financing was sized on the earlier revenue",
+      "It will simply renegotiate the contract dates with the utility",
+      "The interconnection agreement will be reissued to match the contract",
+      "None — contracted dates always supersede queue dates"
+     ],
+     "a": 0,
+     "why": "A contract that starts before the connection exists is a promise backed by damages, and the pro forma the debt was sized against assumed revenue in the earlier year. Moving the start does not merely delay the project; it changes the number the lender lent against. The developer's response is to hunt cost wherever it still has discretion, which in practice means the equipment — so this is a schedule problem that arrives at a supplier as a pricing conversation."
+    },
+    {
+     "q": "A public builder reports record backlog in the same quarter as a large charge against a project. Which conclusion is safe?",
+     "c": [
+      "Both are ordinary — backlog measures the future book while an overrun hits the current income statement",
+      "The backlog figure must include the project that took the charge twice",
+      "The charge indicates the backlog will be restated next quarter",
+      "Record backlog rules out a genuine cost problem"
+     ],
+     "a": 0,
+     "why": "New awards keep flowing on demand strength while an older fixed-price job burns cost, so a record book and a cumulative catch-up charge sit together naturally. It is the normal shape of a firm growing into trouble rather than a contradiction. What tells you which it is here is the backlog's mix — the fixed-price share, the twelve-month conversion rate and the customer concentration — not the headline figure."
+    },
+    {
+     "q": "An owner has a wrap with delay damages capped at a percentage of contract value. The plant runs a year late and the cap is reached in month four. Who carries months five to twelve?",
+     "c": [
+      "The owner — the cap is where the risk transfer stops",
+      "The contractor, through the performance bond",
+      "The lender, under the construction loan",
+      "The equipment supplier, through back-to-back damages"
+     ],
+     "a": 0,
+     "why": "Beyond the cap the owner is uninsured against its own contractor, and the wrap it paid a premium for has stopped working. A performance bond secures completion rather than timeliness and is itself capped; back-to-back damages down the supply chain usually shrink at each step. This is one of the few contract terms whose adequacy can be tested arithmetically rather than argued — which is exactly what the lender's independent engineer does when it asks whether the cap covers exposure through to the outside date in the financing documents."
+    }
+   ]
+  }
+ ]
+};
+}
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -38710,9 +39222,10 @@ function clTrackMarketAccess_() {
  "title": "Selling Into the Market",
  "short": "Finish this and you can name who signs the PO, under which contract, against which certification file, inside which policy fence — and say what 'bankable' concretely means to the lender who decides.",
  "group": "Market Access & Bankability",
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "lessons": [
   "who-buys-storage",
+  "how-a-storage-project-happens",
   "how-a-utility-buys"
  ],
  "prereqs": [
@@ -38824,7 +39337,8 @@ function clLessons_() {
           clLessonWhoBuysStorage_(),
           clLessonInsideTheRack_(),
           clLessonRedundancyByTheNumbers_(),
-          clLessonTheCampusAsAPowerProject_()];
+          clLessonTheCampusAsAPowerProject_(),
+          clLessonHowAStorageProjectHappens_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
