@@ -1,4 +1,4 @@
-var VERSION = "v01.38g";
+var VERSION = "v01.39g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -38034,6 +38034,586 @@ function clLessonRedundancyByTheNumbers_() {
 };
 }
 
+function clLessonTheCampusAsAPowerProject_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-campus-as-a-power-project",
+ "type": "module",
+ "title": "Reading the Named Projects",
+ "short": "An AI campus is a power project with servers attached: the development lifecycle, who is in the room at each stage, and the named projects as worked examples.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "project:colossus",
+    "date": "2026-09-06",
+    "note": "the owner-occupier row of the table, and the row that proves the tenant column is not a property of the campus: a single-tenant supercomputer campus whose whole first-phase capacity was later contracted out to a rival lab, with a second lab signing a month after that"
+   },
+   {
+    "kind": "public",
+    "ref": "project:frontier",
+    "date": "2026-09-06",
+    "note": "the fully islanded row - a landlord-developed Stargate campus whose prime power is reciprocating gas engines rather than the grid, and the worked example behind the engines-against-turbines drill card"
+   },
+   {
+    "kind": "public",
+    "ref": "project:homer-city",
+    "date": "2026-09-06",
+    "note": "the kind column's first exception: a power campus rather than a data-centre campus, redeveloping a retired coal site, where the asset being reused is the interconnection the old plant left behind"
+   },
+   {
+    "kind": "public",
+    "ref": "project:hyperion",
+    "date": "2026-09-06",
+    "note": "the grid-served owner-occupier row, and the largest programme figure in the registry - used for the difference between a programme number and a building number, never for the number itself"
+   },
+   {
+    "kind": "public",
+    "ref": "project:jupiter-nm",
+    "date": "2026-09-06",
+    "note": "the fuel-cell row: a third prime-power answer beside engines and the grid, and one chosen partly for permitting speed rather than for the electricity"
+   },
+   {
+    "kind": "public",
+    "ref": "project:lighthouse",
+    "date": "2026-09-06",
+    "note": "the grid-served landlord row with a dedicated utility arrangement, and the multi-contractor bench that shows a GC bench is a set of firms rather than a firm"
+   },
+   {
+    "kind": "public",
+    "ref": "project:river-bend-campus",
+    "date": "2026-09-06",
+    "note": "the four-party row - landlord, tenant of record, credit support and end user as four different companies - and the source of the registry's own conflation warning about a nuclear station of a similar name in the same parish"
+   },
+   {
+    "kind": "public",
+    "ref": "project:stargate",
+    "date": "2026-09-06",
+    "note": "the kind column's second exception: a programme rather than a campus, which is why its name appears above several different landlords in the same table"
+   },
+   {
+    "kind": "public",
+    "ref": "project:trimount",
+    "date": "2026-09-06",
+    "note": "the kind column's third exception: front-of-meter grid storage rather than a campus at all, and the reason the lesson opens the table by reading that column first"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-13",
+    "note": "the who-builds, who-powers and who-is-the-tenant columns, assembled edge by edge: the GC benches, the microgrid and fuel-cell suppliers, the utility on each campus, and the compute agreements that moved one campus from owner-occupied to merchant"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vantage",
+    "date": "2026-08-21",
+    "note": "the four-step development lifecycle that is the spine of the timeline; the powered-shell against turnkey split; prime and backup engines as the same redundancy logic applied to a power plant; and the community layer - tax-increment financing, the first US referendum requiring a public vote on a data-centre incentive package, and the developer-funded generation counter-model"
+   },
+   {
+    "kind": "public",
+    "ref": "study:stack-infrastructure",
+    "date": "2026-08-22",
+    "note": "the three-rung product ladder of powered shell, turnkey and build-to-suit and the fact that one campus can carry all three; power banking as holding approved megawatts rather than acreage; and the rule that a multi-billion campus programme is announced only after an anchor commits, so the announcement is the disclosure of a signed lease"
+   },
+   {
+    "kind": "public",
+    "ref": "study:crusoe",
+    "date": "2026-08-21",
+    "note": "energy-first siting as an inversion of the order the industry used to work in; the layer cake of land, shell, fit-out, operations and computers, each layer separable; what an islanded campus actually has to do - second-by-second balancing, spinning reserve, black start; and the merchant-developer variant that treats campuses as inventory"
+   },
+   {
+    "kind": "public",
+    "ref": "study:xai",
+    "date": "2026-08-21",
+    "note": "schedule compression as running phases in parallel and buying the rework risk, with a brownfield shell as the single biggest shortcut and decision latency as a construction technology; the grid-against-own-plant decision and its usual hybrid end state; megawatts as the honest common denominator against GPU counts and FLOPS; and the air-permit layer, where the live question is whether many nominally mobile turbines running together for months are one major source"
+   },
+   {
+    "kind": "public",
+    "ref": "study:meta",
+    "date": "2026-08-21",
+    "note": "the asymmetric-depreciation argument for building a sufficient structure rather than a permanent one - five-year contents inside a thirty-year container - and the accepted trade-offs that make it tolerable for training and not for a customer-serving cloud"
+   },
+   {
+    "kind": "public",
+    "ref": "study:applied-digital",
+    "date": "2026-08-21",
+    "note": "the unnamed-tenant problem - a lease that identifies its counterparty only by rating band, and what a reader can and cannot conclude from that; a right of first refusal as control of a campus's growth without paying for it; and available interconnection capacity as a siting driver in its own right"
+   },
+   {
+    "kind": "public",
+    "ref": "study:nebius",
+    "date": "2026-08-21",
+    "note": "the contracted, connected and active ladder that is the backbone of the announcement callout, including the observation that the gap between the tiers is execution risk measured in time; and power and permits as the critical path that replaced silicon"
+   },
+   {
+    "kind": "public",
+    "ref": "study:oracle",
+    "date": "2026-08-21",
+    "note": "capex-on-demand against speculative construction as the two ways to build, the pre-leasing discipline borrowed from real estate, and the reading test - capital spending should trail contracted backlog, and capex accelerating ahead of contracts is the tell"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hut-8",
+    "date": "2026-09-06",
+    "note": "the counterparty of record, the credit support and the end user as three different companies, with the explicit warning that collapsing them loses the credit structure; and the ring-fence that lets a building under construction borrow at investment grade on the strength of the rent rather than the borrower"
+   },
+   {
+    "kind": "public",
+    "ref": "study:cipher-mining",
+    "date": "2026-09-06",
+    "note": "the conversion layer table - which parts of an existing site transfer to an AI hall and which are scrap - and the conclusion that the interconnection and the substation are the whole asset because an approved grid connection does not care what the electrons are for"
+   },
+   {
+    "kind": "public",
+    "ref": "study:galaxy-digital",
+    "date": "2026-09-06",
+    "note": "five different published figures for one lease, only one of which is audited, and the reason a headline total is not comparable with a peer's; plus rent priced as a yield on cost, which is why a landlord quotes a return rather than a rate per foot"
+   },
+   {
+    "kind": "public",
+    "ref": "study:fermi-america",
+    "date": "2026-09-05",
+    "note": "time to power as the thing actually being sold, and who owns the date on a grid-fed campus against a generation-first one; rent quoted on total facility power rather than critical IT load, which a tenant must divide by the campus efficiency ratio before comparing; and the signature clause of the generation-first model, where the tenant will not pay for a plant that may not be financed and the lender will not finance a plant without the tenant"
+   },
+   {
+    "kind": "public",
+    "ref": "study:tract",
+    "date": "2026-09-05",
+    "note": "the land value ladder from raw acreage through entitlement to power to a lease, with the observation that only the lease rung is one a lender will lend against at scale; and the precise against fuzzy readings of ready-to-build, where the precise half is the developer's work and the fuzzy half is a date the utility will deliver or miss"
+   },
+   {
+    "kind": "public",
+    "ref": "study:prime-data-centers",
+    "date": "2026-09-05",
+    "note": "the utility-pacing table - six campuses where the developer's stated date met the utility's instrument - and its finding that the fastest path in the set was a municipal utility plus a self-built substation"
+   },
+   {
+    "kind": "public",
+    "ref": "study:compass-datacenters",
+    "date": "2026-09-05",
+    "note": "the five-rung pipeline ladder of operating, contracted, reserved, land with power and land without it, and the rule that a gigawatt figure without its rung is marketing while the same figure with its rung is data; and the co-serve model, where a developer pre-funds the substation and buys a schedule and a seat with it"
+   },
+   {
+    "kind": "public",
+    "ref": "study:edgecore",
+    "date": "2026-09-05",
+    "note": "the two clocks this lesson names - the lease clock that starts at signature and runs to ready for service, and the entitlement clock that runs from land purchase through power and permits and slips for reasons the landlord does not control; and a walk-away threshold stated in public, which is the honest form of a pledge to pay for one's own power delivery"
+   },
+   {
+    "kind": "public",
+    "ref": "study:powerhouse-data-centers",
+    "date": "2026-09-05",
+    "note": "powered land as the difference a secured connection makes to a field, with the substation as its physical form and the question of who funded it as the question of who holds the position; the two utility contracts, retail at the state commission and transmission at the federal one; the case where both were cancelled after the council had already approved the campus; and a pipeline counter read as a press cycle rather than a ledger"
+   },
+   {
+    "kind": "public",
+    "ref": "study:digital-realty",
+    "date": "2026-09-06",
+    "note": "backlog as the most reliable forward indicator a landlord publishes because the contracts are signed; and the pre-leased share of the development pipeline as the test that matters, with the worked case where capacity underway rose far faster than the leased share fell, so speculative megawatts more than doubled while the percentage understated it"
+   },
+   {
+    "kind": "public",
+    "ref": "study:cyrusone",
+    "date": "2026-09-06",
+    "note": "co-location on somebody else's electrical asset as a way to buy time rather than electrons, with the grid connection and not the energy as the scarce thing; and the price written into state law - a large co-located load that must be able to curtail fully within thirty minutes of an emergency instruction, without compensation"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary the lesson leans on rather than redefining - powered shell, powered land, entitlement, interconnection queue, critical IT load, total facility power, substation, behind-the-meter, prime power, ready for service, contracted and reserved capacity, the electric service and transmission agreements, curtailment and the rest"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "3",
+   "v": "clocks, not one",
+   "sub": "the developer's, the utility's and the tenant's run in parallel, and a campus is finished when the slowest of them finishes rather than when the building is built"
+  },
+  {
+   "k": "5",
+   "v": "rungs on the ladder",
+   "sub": "land, entitled, powered, leased, operating - a gigawatt figure means nothing until you know which rung it was counted at, and most published ones mix several"
+  },
+  {
+   "k": "4",
+   "v": "parties, one lease",
+   "sub": "landlord, tenant of record, credit support and end user are routinely four different companies, and collapsing them into one name loses the only part that matters if the demand disappoints"
+  },
+  {
+   "k": "0",
+   "v": "league tables",
+   "sub": "no ranking of these landlords exists in this corpus and this lesson does not invent one; the lifecycle is the transferable thing and the projects are only the evidence for it"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "power banking",
+   "d": "Acquiring sites where a large grid connection can be secured, then holding the position while demand catches up. The phrase is deliberate: what is being banked is approved megawatts, not acreage, because the land is the cheap and abundant part. A developer's inventory is therefore a set of queue positions and utility instruments, and its balance sheet understates it - the dirt is carried at what dirt costs."
+  },
+  {
+   "t": "entitlement clock",
+   "d": "The elapsed time from buying land to holding a signed lease on a powered, permitted site - through zoning, a development agreement, water, roads, the utility instruments and the substation. It is the clock a landlord does not control, and the one that slips: a utility's switchyard land requirement, a cooperative's delivery date, a council vote, a site change. Equity is committed against it before any lease exists."
+  },
+  {
+   "t": "lease clock",
+   "d": "The elapsed time from a tenant's signature to ready for service, governed by dated milestones in the lease with damages behind them. It is the clock a landlord does control, because it does not start until the site, the power and the design are already in hand. A developer can truthfully report a perfect record against it while campuses with no lease slip for years."
+  },
+  {
+   "t": "commissioned megawatts",
+   "d": "Capacity proven end to end under load and deliberate failure, and therefore capable of carrying a tenant. It is the only megawatt figure on the ladder that has survived a test rather than describing an intention, which is why it is the honest output metric of a construction programme and why it is almost never the number in a headline."
+  },
+  {
+   "t": "speculative construction",
+   "d": "Breaking ground before a tenant has signed, in the expectation that demand arrives before the building finishes. Its opposite is the pre-leasing discipline, where no hall starts without a lease behind it. Neither removes risk: pre-leasing converts stranded-asset risk into counterparty risk, and speculation is sometimes the only way to have capacity at all in a market where the binding constraint is power rather than demand."
+  },
+  {
+   "t": "development agreement",
+   "d": "The contract between a developer and a local authority that fixes what may be built and what the developer owes for the privilege - road and utility commitments, water reservations, community payments, sometimes a schedule. It is the instrument the entitlement rung actually consists of, it survives even when the utility contracts behind it are cancelled, and it is negotiated in public at meetings where the project can be refused."
+  }
+ ],
+ "sections": [
+  {
+   "id": "from-land-to-fit-out",
+   "title": "From land to fit-out, on three clocks",
+   "kind": "timeline",
+   "read": "9 min",
+   "intro": "A campus is not one project running from left to right. It is three, running at once and owned by three different parties, and the building is finished only when the slowest of them finishes. **The numbers in the left-hand gutter are stages, not calendar years** - the elapsed time between two of them varies by years depending on which clock is binding. Read the colours: gold is the developer's own work, blue is the utility's, and rose is the tenant's. Almost every schedule story in this industry is a story about the blue lane.",
+   "lanes": {
+    "gen": "The developer's clock - what money and crews can buy",
+    "deploy": "The utility's clock - what money cannot buy",
+    "eco": "The tenant's clock - what a signature starts"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "gen",
+     "label": "**Land and {{power banking}}**",
+     "sub": "Hundreds to well over a thousand acres are bought where a large connection can be secured - and the order of that sentence is the whole model. Energy-first siting inverts the old playbook, which picked sites for fibre, customers and tax incentives and assumed the utility would supply the power. Scout where gigawatt-scale energy already exists, then buy land, which is abundant and cheap exactly where the power is."
+    },
+    {
+     "x": 1,
+     "lane": "deploy",
+     "label": "A queue position is taken",
+     "sub": "Grid operators process {{interconnection}} requests in order, and for gigawatt-class load the {{interconnection queue}} can run years. Every date downstream is measured against this one, and it is the first thing on the chart the developer does not own. A site with an approved connection date is worth more than the dirt under it."
+    },
+    {
+     "x": 2,
+     "lane": "gen",
+     "label": "**{{entitlement}} - the county's consent, bought in public**",
+     "sub": "Rezoning or a by-right confirmation, a {{development agreement}}, annexation, water reservations, road and utility commitments. It costs lawyers, hearings and community-benefit money, it is decided at meetings anyone may attend, and it can be refused four votes to three after a planning commission recommended it six to one. The backlash toolkit is maturing alongside it: one Wisconsin village passed the first US referendum requiring a public vote on large incentive packages."
+    },
+    {
+     "x": 3,
+     "lane": "deploy",
+     "label": "**Two utility contracts, at two different regulators**",
+     "sub": "A retail {{electric service agreement}} at the state {{public utility commission}} fixes the megawatts, the tariff, the minimum bill and the collateral. A separate transmission agreement at {{FERC}} covers the high-voltage upgrades the load triggers - the customer posts security and commits to take the capacity, and the utility builds. Deposits scale with size and are forfeitable, because the rule is written to charge for exactly what a developer does: hold a grid position it may never fill."
+    },
+    {
+     "x": 3,
+     "lane": "gen",
+     "label": "**The {{substation}} is funded - and who pays decides who holds the position**",
+     "sub": "Under a traditional {{large-load tariff}} the utility builds it and recovers the cost from every customer, which is the objection now raised in every state where campuses cluster. A developer that funds its own sits in its own schedule rather than the utility's capital plan, and holds a dedicated asset it can market to a tenant and pledge to a lender. That is a cost line bought for a schedule, and it is now a regulatory expectation as much as a strategy."
+    },
+    {
+     "x": 4,
+     "lane": "gen",
+     "label": "**The shell**",
+     "sub": "Twelve to twenty-four months of vertical construction for a large building. At the {{powered shell}} rung the landlord's product stops here - the building plus power at the wall, with the tenant self-performing distribution, backup and cooling. At the {{turnkey}} rung the landlord goes on to deliver rack-ready halls. A single campus can master-plan for both, which is why modern specs say engineered for shell and turnkey."
+    },
+    {
+     "x": 4,
+     "lane": "eco",
+     "label": "**The lease - and where it sits on this axis is the strategy**",
+     "sub": "Nobody carries a ten-billion-dollar build on hope, so a mega-campus programme is announced *after* an anchor commits: the announcement is the disclosure of a signed lease. Move the signature left of the shell and it is {{build-to-suit}}, designed around one named tenant before ground breaks. Move it right and it is {{speculative construction}}. From here the landlord owns the {{lease clock}}, and has owned the {{entitlement clock}} all along."
+    },
+    {
+     "x": 5,
+     "lane": "gen",
+     "label": "**Fit-out**",
+     "sub": "Electrical rooms, the cooling plant, distribution down to the hall. This is the layer that differs most by density: a shed built for air at low density and a hall built for liquid at a hundred kilowatts a rack are broadly the same electrical job and a completely different thermal one, which is why a converted site reuses its switchgear and rebuilds its cooling."
+    },
+    {
+     "x": 5,
+     "lane": "deploy",
+     "label": "**Energisation - or the day the power does not come**",
+     "sub": "The utility's date, or the microgrid's. A campus can be fully entitled and still have no power: in 2026 one 1,800 MW campus had both its retail and its transmission agreement cancelled by the utility over security-deposit timing, eight days after a federal regulator had accepted a batch of such agreements and four months after the city council had approved the project. The annexation agreement and its promised payments survived; the electricity did not."
+    },
+    {
+     "x": 6,
+     "lane": "eco",
+     "label": "**{{ready for service}} - the moment rent starts**",
+     "sub": "The lease's milestone, with damages behind it. Every month of slip above this line is lost rent on capital already spent, which is why the whole ladder is priced in months rather than in dollars per square foot, and why a tenant whose scarce resource is time will pay a premium to a landlord that delivers on schedule."
+    },
+    {
+     "x": 6,
+     "lane": "gen",
+     "label": "**{{commissioned megawatts}}**",
+     "sub": "Proven end to end, under artificial load, and then failed on purpose. It is the only figure on the whole ladder that has survived a test rather than describing an intention - and it is almost never the number in the headline, because it is the smallest one a campus can honestly publish."
+    },
+    {
+     "x": 7,
+     "lane": "gen",
+     "label": "**Phase two, on the same dirt**",
+     "sub": "The ladder now repeats on land already banked, already entitled and already beside a substation - which is why the second phase of a campus is faster than the first and why developers pipeline these stages across many sites at once. It is also why a portfolio counter grows far faster than a delivered count: each new campus enters the series at its ceiling."
+    }
+   ],
+   "note": "**The single most useful habit in this lesson: when a date is quoted, ask which lane owns it.** A developer can compress the gold lane almost arbitrarily - run design, permitting and construction in parallel and buy the rework risk, reuse a brownfield shell and delete a year of sitework, rent temporary generation and cooling while the permanent kit is permitted, and cut the approval loop down to one owner who decides in hours rather than four parties who decide in weeks. Organisational structure is itself a construction technology. **None of that moves the blue lane by a single day.** GPUs arrive in months; interconnection and air permits take years. That asymmetry is the reason behind-the-meter generation exists, the reason a retired power plant's connection is worth more than its turbines, and the reason the most valuable thing a developer owns is usually a piece of paper from a utility.",
+   "sales": "Ask which stage the campus is at and let the answer set the conversation, because each stage buys something different. Before the utility instruments are signed, nobody is buying equipment. Between energisation and ready for service, the buyer is solving bridging and ride-through and is in the market this quarter. After commissioning, the conversation is about phase two on the same dirt - which is the one that repeats."
+  },
+  {
+   "id": "the-named-projects",
+   "title": "The named projects, as worked examples",
+   "kind": "table",
+   "read": "10 min",
+   "intro": "Every project the corpus names, read across the same six columns. **Read the kind column first and the rest second** - three of the nine are not AI campuses at all, and a reader who assumes they are will mis-hear every sentence about them. Then read the last three columns together, because they are the lesson: prime power, who builds, and who is the tenant are three independent choices, and a campus is the particular combination a developer landed on.",
+   "cols": [
+    "Name",
+    "Kind",
+    "Location",
+    "Prime power",
+    "Who builds",
+    "Who is the tenant"
+   ],
+   "rows": [
+    [
+     "**Colossus**",
+     "AI campus",
+     "Memphis, TN",
+     "Own generation first, grid behind it - the compressed-build pattern, with turbines on site while permanent supply is permitted, and the batteries that let engines survive a training load's swings.",
+     "The occupier itself, self-performed on a {{brownfield}} shell at industrial scale. Deleting a year of sitework is the shortcut; the accepted cost is rework.",
+     "It began as its own tenant and stopped being one. The first phase's whole capacity was later contracted to a rival lab, and a second lab signed a month after that. **Owner-occupier is a phase, not a property.**"
+    ],
+    [
+     "**Frontier**",
+     "AI campus, inside a programme",
+     "Shackelford County, TX",
+     "Fully islanded on reciprocating gas engines - 210 units, 197 running as {{prime power}} and 13 as backup, about 700 MW. The same N+1 logic as a UPS room, applied to a power plant.",
+     "A wholesale developer-landlord builds and owns the campus; a microgrid specialist supplies and operates the generation under a partnership of more than a gigawatt.",
+     "One cloud company holds the lease; the AI lab behind the programme is the end user. The landlord's customer and the party in every headline are different companies."
+    ],
+    [
+     "**Homer City Energy Campus**",
+     "**Power** campus, not a data-centre campus",
+     "Homer City, PA",
+     "New gas generation built on a retired coal site. **The asset being reused is the grid connection the old plant left behind**, not the old plant.",
+     "A standing generation venture of a turbine maker, an EPC contractor and a merchant generator, holding reserved turbine slots against years of backlog.",
+     "Not named in this corpus. The campus is being built to a power position rather than to a signature - the inverse of a {{build-to-suit}}."
+    ],
+    [
+     "**Hyperion**",
+     "AI campus",
+     "Richland Parish, LA",
+     "Grid-served, with the utility building to the load, and renewable offtakes signed nearby and framed against it.",
+     "The occupier itself, on a shared bench of several national general contractors rather than one - which is what a multi-gigawatt programme means in practice.",
+     "The occupier. Note what the programme figure covers: a multi-year, multi-building programme, which is not the same number as any building in it."
+    ],
+    [
+     "**Project Jupiter**",
+     "AI campus, inside a programme",
+     "Doña Ana County, NM",
+     "Behind-the-meter **solid-oxide fuel cells** under a master agreement of up to 2.8 GW, with the bulk earmarked here. A third answer beside engines and the grid - and one that avoids the pre-construction air review a turbine triggers.",
+     "A wholesale developer-landlord; the fuel-cell maker supplies the prime power.",
+     "The same cloud company and the same programme as Frontier, under a different landlord. **The programme name is above several landlords at once.**"
+    ],
+    [
+     "**Lighthouse**",
+     "AI campus, inside a programme",
+     "Port Washington, WI",
+     "Grid-served under a dedicated arrangement: new zero-emission capacity split with the public and a dedicated rate, so the campus is visibly paying its own way.",
+     "One landlord across four buildings, with two general contractors in a fifty-fifty joint venture on two of them and a third firm on the others. **A GC bench is a set of firms, not a firm.**",
+     "The same cloud company and programme again. The community layer is unusually visible here - this is the village that passed the incentive referendum."
+    ],
+    [
+     "**River Bend Campus**",
+     "AI campus",
+     "West Feliciana Parish, LA",
+     "Grid-served: 330 MW of utility capacity under 245 MW of {{critical IT load}}, on a path to far more. **Note that the two numbers differ and neither is wrong.**",
+     "A former miner turned landlord, with named infrastructure and engineering-procurement partners.",
+     "**Four parties, not one.** A subsidiary of one company is the tenant of record, a hyperscaler backstops the rent, and the AI lab everyone names as the user is not a party to the lease at all."
+    ],
+    [
+     "**Stargate**",
+     "**Programme**, not a campus",
+     "A Texas flagship, plus multiple US sites",
+     "Varies by site, which is the point - the programme sets the demand and each site solves power its own way. The flagship put 200 MW live in about fifteen months.",
+     "A different developer and a different lead contractor per site; the flagship ran eight buildings of about 474,000 sq ft each, delivered in under a year apiece.",
+     "The programme is the tenant-side entity: an AI lab with a cloud partner and a capital partner. This is why its name sits above three of the rows in this table."
+    ],
+    [
+     "**Trimount**",
+     "**Grid storage**, not a campus at all",
+     "Everett, MA",
+     "Not applicable - it is front-of-meter infrastructure. About 2.8 GWh of batteries, approved by the state siting board in February 2026.",
+     "A storage developer builds and owns it; a cell maker supplies it, as its flagship US design win.",
+     "The grid. There is no tenant, no lease and no hall - and it is in the registry because the buildout it serves is the same buildout."
+    ]
+   ],
+   "note": "**Read down the prime-power column and the lesson is already taught.** The same demand produced grid service with a dedicated rate, grid service beside a bigger utility allocation, reciprocating engines running fully islanded, fuel cells, turbines on a compressed schedule, and the reuse of a dead coal plant's connection. Nobody picked a technology because they preferred it. Each picked the fastest lawful route to firm megawatts on the date their tenant needed them, and the routes differ because the constraint differs by site - queue depth, air quality, fuel access, what the neighbours will vote for. **The corollary is the discipline C8 asks for: there is no ranking here.** These developers are not better and worse at the same job; they are solving different constraints, and a table that ordered them would be inventing a comparison the record does not support.",
+   "sales": "Two of these columns change who you are selling to. When prime power is behind the meter, the buyer of ride-through and balancing is the campus or its microgrid partner, and the decision is engineering. When it is grid-served, that same need shows up on the utility's side of the meter and the decision is a tariff and a queue. And when who-builds and who-is-the-tenant are different companies - which is six of these nine - the specification is usually written by neither of them, but by the engineering firm on the who-builds line."
+  },
+  {
+   "id": "who-is-in-the-room",
+   "title": "Who is in the room, and whose problem each layer is",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "A campus is a layer cake and each layer can belong to a different party: land and power rights at the bottom, then the shell, then the fit-out, then operations, then the computers. Six roles recur, and the useful question at any meeting is not who is senior but **which layer's problem is being discussed**, because that decides who can actually say yes.",
+    "**The developer-landlord** owns the ladder. Its skill is queue position, entitlement and substation funding, and its risk is a parcel that never reaches the powered rung - which is why its equity is committed years before any lease exists. Three variants matter. A **horizontal developer** manufactures the entitled-and-powered rungs as a product and sells the parcel on to someone else who adds the lease. A **merchant developer** treats campuses as inventory: develop, sign the anchor, sell stabilised stakes to long-term investors, recycle the cash. A **fund-model developer** sources the pipeline and contributes a small slice of the equity, so its published counter measures sites optioned and joint ventures signed rather than buildings delivered.",
+    "**The general-contractor bench** is a set of firms, not a firm. A mega-campus routinely runs several national contractors in parallel, sometimes two of them in a fifty-fifty joint venture on the same buildings and direct rivals everywhere else. Their contract is with the landlord, not with the tenant whose name is in the press release - a distinction the corpus records explicitly on more than one campus. Their problem is sequence and labour, and beside them sits an **independent commissioning agent** whose problem is proving the thing works and who does not work for them.",
+    "**The power partner** is whoever owns the electrons: a utility, a microgrid operator running engines on the customer's side of the meter, a fuel-cell supplier under a master agreement, or a merchant generator selling {{powered land}} - the plant, the connection and the site as one package. Its problem is firm capacity on a date, and its instruments are contracts rather than equipment. On a generation-first campus this party is the developer, which is why such a developer employs fuel buyers and turbine procurement teams alongside construction managers.",
+    "**The equipment makers** - switchgear, transformers, UPS, cooling, engines, batteries - sell into a specification usually written by the engineering firm on the who-builds line rather than by the landlord or the tenant. Their problem is lead time, and in this cycle lead time is a strategic variable: a factory-built unit deliverable in months is worth more than a better unit deliverable in three years.",
+    "**The tenant** may be an occupier, a cloud reselling capacity, an AI lab, or a chain of all three. Its scarce resource is time to power, which is why it will pay a premium to a landlord with a delivery record and why it cares about the {{lease clock}} rather than the ladder beneath it. And its identity may be deliberately withheld: a lease can describe its counterparty only by rating band, because naming a tenant creates competitive friction the tenant does not want.",
+    "**The utility and its regulator** are the party with no commercial interest in the campus succeeding and the power to decide whether it does. The utility's problem is serving a load the size of a generating station arriving at one substation without its existing customers paying for it. The regulator's problem is whether the tariff, the deposit and the collateral make that true. Both are now writing rules faster than campuses are being built, and the developer's posture in response - fund your own delivery infrastructure, bring or buy your own supply, pay whether you use the power or not, reuse your own water - has become a public pledge rather than a negotiating position.",
+    "**And behind all of it sits the community**, which is not a stakeholder to be managed but a decision-maker with a vote. Consent is a cost line with a price: hearings, community-benefit payments, water commitments, road contributions, and sometimes a refusal. One county refused a park four votes to three after its own planning commission had recommended approval six to one. One village put incentive packages above a threshold to a public referendum - the first in the US. **The layer with no contract is the one that can stop the project.**"
+   ],
+   "note": "**The single question that resolves most confusion in this sector: which of these parties does the name in the headline belong to?** A campus announcement can name the AI lab that will use the compute, the cloud that holds the lease, the landlord that owns the building, the contractor pouring the concrete, the generator selling the power, or the programme all of them sit under - and all six statements can be true of the same site on the same day. When the corpus records a company issuing two press releases on one day specifically to keep the tenant, the credit support and the end user apart, that is not corporate fussiness. It is the structure being protected from the summary."
+  },
+  {
+   "id": "reading-an-announcement",
+   "title": "Reading an announcement",
+   "kind": "callout",
+   "read": "9 min",
+   "tone": "warn",
+   "ps": [
+    "Campus announcements are written to be true and to sound larger than they are, and almost all of the distance between those two things lives in four habits. None of them requires inside knowledge - each is a question you can ask of the press release itself.",
+    "**One. Which megawatt is it?** {{critical IT load}} is the power available to the racks; {{total facility power}} is everything the campus draws, cooling losses included. The second is larger than the first by the campus's {{PUE}}, so a figure quoted on total facility power must be divided by that ratio before it can be set beside a figure quoted on critical load. The corpus carries one campus with 330 MW of utility capacity under 245 MW of critical IT - **both numbers are correct and they are not the same number.** Rent is quoted on one or the other too, so the same building can be expensive or cheap depending only on which basis the quote used.",
+    "**Two. Which rung of the ladder was it counted at?** The rungs, bottom to top: **operating** - energised, tenant in occupation, rent flowing; **contracted** - signed but not yet delivered; **reserved** - a tenant holds an option or a {{right of first refusal}}, with no rent commitment; **land with power**; and **land without power**. A figure with its rung attached is data. A figure without one is marketing - and the phrase 'delivered or under development' is a two-rung count with no boundary between the rungs, where 'under development' can mean building against a signed lease or a field with favourable zoning. The corpus's sharpest case: a portfolio counter that ran from about 4 GW to about 10 GW in twenty-one months while the delivered count went from one building to one building.",
+    "**Three. Which clock does the date belong to?** A landlord can report a perfect record of hitting customer milestones and have campuses that slipped for years, and both are honest: a customer milestone is a date in a signed lease, and the lease is signed *after* the site, the power and the design are in hand. That is the {{lease clock}}. The {{entitlement clock}} - land to power to permits to signature - is where the slippage lives, and it slips for reasons the landlord does not control. **Ask which clock a delivery claim is measured on.**",
+    "**Four. How many of the published numbers are audited?** One lease in the corpus is described by at least five different figures, each correct in its own document: a fifteen-year total for one phase, a minimum-payments total for another, an annual run rate, a total-potential-value figure that includes both extension options - and one audited future-minimum-lease-income figure, which is neither the largest nor the one that gets quoted. **Find the audited one before comparing anything with a peer.**",
+    "Two smaller tells are worth the same attention. **'Up to'** is a ceiling and is doing work in every sentence it appears in - up to 2.8 GW of fuel cells, up to a thousand megawatts of eventual capacity, up to a rating band. And **a first phase is what actually energises**: the second phase is faster because the land is banked, the entitlement is done and the substation is there, but it is a separate decision that a separate signature has to trigger.",
+    "**The forward-looking numbers, when a landlord publishes them, are better than any of the above.** Backlog - signed leases not yet paying - is the most reliable indicator there is, because the contracts exist. And the development pipeline's **pre-leased share** is the one to track quarter by quarter: in the corpus's worked case, capacity underway rose 82% in six months while the pre-leased share fell from 64% to 54%, which sounds mild until you convert it - about 277 MW unleased became about 645 MW unleased. **Speculative megawatts more than doubled while the percentage understated the change.**"
+   ],
+   "note": "**Put the four questions together and you have the only sentence you need from any campus announcement:** *how many megawatts, measured how, at which rung, on whose clock.* Nothing in that sentence is adversarial and nothing in it requires distrust - the numbers in these releases are generally accurate. They are simply answers to four different questions presented as answers to one.",
+   "sales": "Asking which megawatt a figure is quoted on is an ordinary engineering question and it reads as competence rather than scepticism. It also does real work for you: the answer tells you the campus's efficiency ratio, roughly when the load is real, and whether the person you are talking to knows. Someone who cannot say whether their own headline number is critical or total is not the person who will specify your equipment."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "8 min",
+   "tone": "warn",
+   "ps": [
+    "Five ways a campus goes wrong, and not one of them is a building that could not be built. In every case the construction was the easy part.",
+    "**The tenant that is never named.** A lease can identify its counterparty only as a company rated above a given band - a contractual representation in a regulated filing, so the rating is real and underwritable. What the band cannot tell you is that tenant's other commitments, whether it leases from the same landlord's rivals, or how the capacity will be used. And the failure mode is subtler than fraud: the counterparty of record, the credit support and the end user are frequently three different companies, so a reader who collapses them into the most famous name has thrown away the credit structure - which is the only part that matters if the compute demand disappoints. A neocloud anchor, itself leveraged and itself dependent on its own customers, is a materially weaker credit than a hyperscaler, and the bond market prices the difference in hundreds of basis points.",
+    "**A bridge plant whose permit lags the shell.** Temporary generation is the standard answer to a slow queue, and it works - until the air permit catches up with it. US air law regulates each combustion source by what it adds to local air, and a **{{major source}}** triggers pre-construction review with modelling, public comment and best-available-control requirements, while staying below the threshold permits far faster with far less scrutiny. The live legal question is aggregation and duration: whether dozens of nominally mobile turbines running together for months are one major stationary source. **That question prices speed for every builder**, and a campus whose shell is finished while its bridging plant is in front of a regulator is a campus with racks and no power.",
+    "**A campus that is fully entitled and has no power.** The inverse failure, and the corpus has a worked case. The council approved the project; the developer held its annexation agreement and its promised payments; a federal regulator had accepted a batch of transmission agreements days earlier - and then the utility cancelled both the transmission and the retail agreement over security-deposit timing, and the dispute went to a federal court. Deposits are structured precisely to charge for holding a grid position you may never fill, which is exactly what the fund-model developer's business consists of. **Entitlement and power are separate rungs and either can fail without the other.**",
+    "**A campus scaled to a GPU generation that moved.** The contents of these buildings are economically obsolete in about five years while a concrete shell lasts thirty, and the industry's own answer to that asymmetry is to build a structure engineered to be sufficient rather than permanent - fabric over steel frames around prefabricated power and cooling modules, accepting weather exposure and operating friction because a training cluster can pause and a customer-serving cloud cannot. The failure is committing to permanence at the wrong layer: a hall specified around one rack density, with a cooling approach and an electrical topology to match, is hard to re-aim when the next generation asks for liquid at a multiple of the power. The electrical distribution usually converts; the thermal design usually does not.",
+    "**The trade that was made and then called in.** Co-locating on somebody else's electrical asset - a generator's site, an existing battery's connection - buys the scarcest thing in the industry, which is time, because an existing connection does not queue. It is bought with a commitment: under one state's law a co-located load above a threshold must be able to shed its demand entirely within thirty minutes of an emergency instruction, without compensation, and must fit remote-disconnect equipment - a {{curtailment}} obligation written into statute rather than negotiated into a contract. **The campus has become a grid resource that can be switched off by someone else's instruction**, and a tenant mid-training-run has views about that. Whether the trade was good depends entirely on how often the instruction comes, which nobody knows when the lease is signed."
+   ],
+   "note": "**One sentence runs through all five: the megawatts were never the campus's to promise.** A tenant's credit, a regulator's threshold, a utility's deposit rule, a chip generation's thermal envelope and a grid operator's emergency authority all sit outside the developer's control, and every one of them can arrive after the concrete has cured. **The habit that catches all five is the habit the timeline opened with: for each commitment the campus has made, ask who else has to act for it to hold.** That party's incentives, not the developer's, are the schedule."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why did an islanded campus choose reciprocating engines over gas turbines?",
+     "a": "Because the constraint was time and granularity rather than efficiency. Engines are factory-built and deliverable in months, they run efficiently at partial load, and they arrive in units small enough that redundancy is bought in increments - a few hundred units means the same N+1 logic a UPS room uses, applied to a power plant, with maintenance staggered so any one machine can fail without dropping the campus. A turbine of equivalent output is a larger, longer-lead, single machine, and its emissions profile pulls a slower pre-construction air review into the schedule."
+    },
+    {
+     "q": "A press release says a campus is 1.4 GW. What four questions decide what that number is worth?",
+     "a": "Which megawatt (critical IT load or total facility power, which differ by the campus's efficiency ratio); which rung of the ladder it was counted at (operating, contracted, reserved, land with power, land without); which clock the date belongs to (the lease clock the landlord controls, or the entitlement clock it does not); and how many of the published figures are audited. The number is almost always accurate - it is simply an answer to one of those questions presented as an answer to all four."
+    },
+    {
+     "q": "Why is the interconnection, rather than the buildings, the asset when an old industrial site is converted to an AI campus?",
+     "a": "Because an approved grid connection takes years to obtain and does not care what the electrons are used for, while everything above it is either rebuildable or replaceable. Site control, permits, water rights and the substation transfer intact; the shell, transformers and switchgear largely transfer; the cooling usually does not, because a low-density air-cooled shed and a liquid-cooled hall are different thermal buildings; and the previous occupant's specialised machines are scrap. A retired power plant is the same argument in reverse - what is being reused is the connection it leaves behind."
+    },
+    {
+     "q": "What is the difference between the lease clock and the entitlement clock, and why can a landlord truthfully claim a perfect delivery record while campuses slip for years?",
+     "a": "The lease clock runs from a tenant's signature to ready for service and is governed by dated milestones with damages behind them. It does not start until the site, the power and the design are already in hand, so it is the clock the landlord controls. The entitlement clock runs from land purchase through zoning, the utility instruments, the substation and finally a signature, and it slips for reasons the landlord does not control. Both claims are honest; they are measured on different clocks, and only one of them has a contract behind it."
+    },
+    {
+     "q": "Why would a developer pay for its own substation when the utility would build it?",
+     "a": "Because who funds it decides who holds the position. A utility-built substation sits in the utility's capital plan and its schedule, and the developer holds a queue entry; a developer-funded one is a dedicated asset the developer can market to a tenant and pledge to a lender, and it advances on the developer's own schedule. It also changes the politics: under a traditional large-load tariff the cost is recovered from every customer, which is the objection now raised wherever campuses cluster, so paying up front buys a schedule, an asset and a seat in the utility's planning at once."
+    },
+    {
+     "q": "A single campus lease can involve four different companies. What are the roles, and what is lost by collapsing them into one name?",
+     "a": "The landlord owns the building; the tenant of record signs the lease and owes the rent; a credit-support party may backstop that rent; and the end user actually consumes the compute, sometimes without being a party to the lease at all. Collapsing them loses the credit structure - which is the only part that matters if the compute demand disappoints, because it determines who is still obliged to pay. The bond market prices this difference directly: identical assets have priced hundreds of basis points apart on the strength of the credit support alone."
+    },
+    {
+     "q": "What does co-locating a campus on an existing generator's or battery's grid connection buy, and what does it cost?",
+     "a": "It buys time: an existing connection does not queue, so the campus skips the years a new interconnection would take. What is being sold is the connection rather than the electrons - the scarce asset is the grid position. The cost is that the campus becomes a grid resource: above a threshold, state law can require it to shed its demand entirely within thirty minutes of an emergency instruction, without compensation, and to fit remote-disconnect equipment. Whether that trade is good depends on how often the instruction comes, which is unknown when the lease is signed."
+    },
+    {
+     "q": "Which parts of a campus schedule can a developer compress with money and organisation, and which cannot be compressed at all?",
+     "a": "Compressible: run design, permitting and construction in parallel and accept the rework risk; reuse a brownfield shell and delete a year of sitework; rent temporary generation and cooling while the permanent plant is permitted; and cut the approval loop to one owner who decides in hours rather than four parties who decide in weeks. Not compressible by the developer: the interconnection queue, the utility's two contracts and their regulators, the air permit, and the local consent vote. That asymmetry is why behind-the-meter generation exists and why the most valuable thing a developer owns is usually a piece of paper from a utility."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A campus is described as having 330 MW of utility capacity and 245 MW of critical IT load. What is the most likely explanation?",
+     "c": [
+      "Both are correct and measure different things — total facility power against the power available to the racks",
+      "The 330 MW is the announced figure and the 245 MW is what was actually delivered",
+      "85 MW is being resold to the grid",
+      "The 245 MW is phase one of a 330 MW build"
+     ],
+     "a": 0,
+     "why": "Critical IT load is the power that reaches the racks; total facility power is everything the campus draws, cooling and distribution losses included. The two differ by the campus's efficiency ratio, so a gap of roughly that size between them is the normal state of affairs rather than a discrepancy. Any figure quoted on one basis must be converted before it is compared with a figure quoted on the other."
+    },
+    {
+     "q": "A developer's portfolio counter rises from 4 GW to 10 GW in under two years while its delivered count stays at one building. What has actually been measured?",
+     "c": [
+      "Sites optioned and joint ventures signed — capacity requested, entering the count at its ceiling",
+      "Construction progress across the portfolio",
+      "Capacity contracted with tenants but not yet energised",
+      "An error, since the two numbers cannot both be true"
+     ],
+     "a": 0,
+     "why": "Both numbers are honest and they count different rungs. A pipeline counter that says 'in planning, underway, or completed' is precise about what it includes and silent about the share of each, and every new campus enters it at its full eventual capacity. For a developer whose product is a sourced pipeline that counter is the thing being sold — which is why it grows, and why it should be read as a press cycle with a date rather than as a balance sheet."
+    },
+    {
+     "q": "Why does a campus with a finished shell and a bridging power plant still risk having no power?",
+     "c": [
+      "The air permit may treat the temporary generation as one major source, triggering a slow pre-construction review",
+      "Temporary generators cannot carry a continuous load",
+      "Bridging plants are not allowed to run once a shell is occupied",
+      "The grid connection is voided once on-site generation is installed"
+     ],
+     "a": 0,
+     "why": "Air law regulates combustion by what it adds to local air, and crossing the major-source threshold pulls in modelling, public comment and best-available-control requirements — a slow process. Whether many nominally mobile units running together for months constitute one stationary major source is a live legal question, and its answer prices speed for every builder using this shortcut. Nothing about the machines themselves fails; the schedule does."
+    },
+    {
+     "q": "A landlord reports that it met 100% of customer milestones, and separately a campus of its slipped by four years. Which is the safe conclusion?",
+     "c": [
+      "Both are true — one is measured on the lease clock and the other on the entitlement clock",
+      "The milestone claim must be measured against a small number of leases",
+      "The slipped campus was cancelled and re-announced",
+      "Customer milestones exclude power delivery"
+     ],
+     "a": 0,
+     "why": "A customer milestone is a date in a signed lease, and a lease is signed only after the site, the power and the design are in hand — so the lease clock starts late and is the one the landlord controls. The entitlement clock runs from land purchase through power, permits and signature, and it slips on a utility's requirements, a cooperative's delivery date or a council vote. The claim and the slip describe different periods of the same project's life."
+    },
+    {
+     "q": "Which of these is the best single indicator that a landlord is taking on more leasing risk?",
+     "c": [
+      "Megawatts under construction rising while the pre-leased share of that pipeline falls",
+      "Total contracted capacity rising faster than operating capacity",
+      "A larger share of leases written on a triple-net basis",
+      "An increase in reserved capacity held under rights of first refusal"
+     ],
+     "a": 0,
+     "why": "Pre-leased share against pipeline size is the combination that isolates speculative capacity, and the percentage understates the move: a pipeline rising 82% while pre-leasing falls from 64% to 54% more than doubles the unleased megawatts. That is not automatically bad — where power is the binding constraint, building before signing may be the only way to have capacity when a tenant appears — but the risk has moved onto the landlord's balance sheet, and the test is to track it quarter by quarter rather than to read it once."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -38101,11 +38681,12 @@ function clTrackAidcCampus_() {
  "schemaVersion": 1,
  "id": "aidc-campus",
  "title": "The AI Campus: Heat, Water, Power Projects, and the BESS Socket",
- "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall — and where a battery does and does not plug into the buildout.",
+ "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall; how to read a campus announcement as a power project running on three clocks, and who is in the room at each stage; and where a battery does and does not plug into the buildout.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-13",
+ "updated": "2026-09-15",
  "lessons": [
   "heat-is-the-constraint",
+  "the-campus-as-a-power-project",
   "where-bess-plugs-in"
  ],
  "prereqs": [
@@ -38235,7 +38816,8 @@ function clLessons_() {
           clLessonTheTransformerAndTheSubstation_(),
           clLessonWhoBuysStorage_(),
           clLessonInsideTheRack_(),
-          clLessonRedundancyByTheNumbers_()];
+          clLessonRedundancyByTheNumbers_(),
+          clLessonTheCampusAsAPowerProject_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
