@@ -1,4 +1,4 @@
-var VERSION = "v02.03g";
+var VERSION = "v02.04g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -665,6 +665,26 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'containerized battery', 'containerized storage', 'DC block', 'AC block',
             'long-term service agreement'],
     source: 'guidance:landscape-storage-integrators-and-containers-2026-09' },
+  // Guidance seed for the THIRD landscape module — storage developers and IPPs
+  // (industry-guidance.md step 9). Checked against all 144 terms already in
+  // this array before adding, and the first draft had to be cut back because
+  // of it: 'topic-storage-offtake' below already owns 'tolling agreement',
+  // 'resource adequacy', 'offtake' and 'capacity contract' — the CONTRACT
+  // layer — and 'topic-capacity-markets' owns the queue and the auction. What
+  // no seed scores is the OWNERSHIP layer: who owns the fleet, where it ranks
+  // on the one independent owner table that exists, and who is buying or
+  // selling the platform. That layer is where this module ages, and the
+  // module's own indicators section finds ten of thirty-four members carrying
+  // a live or just-closed ownership event — a risk that appears in none of
+  // the segment's six buying criteria. Terms are that layer's own nouns only;
+  // every contract-form and market-structure word was deliberately left to
+  // the seeds that already carry it, because a near-duplicate seed
+  // double-counts one article in the digest's topic band (the trap the
+  // 'supply chain' and 'warranty' notes below record).
+  { key: 'topic-storage-owners', label: 'Storage fleet ownership: owner rankings, platform sales & IPP M&A',
+    terms: ['battery storage owner', 'storage platform', 'merchant battery', 'standalone storage',
+            'independent power producer', 'tax credit transfer', 'yieldco', 'stake sale'],
+    source: 'guidance:landscape-storage-developers-and-ipps-2026-09' },
   // Guidance seed for the grid-equipment-shortage module (industry-guidance.md
   // step 9). Terms are the trade press's own nouns for the SUPPLY side, chosen
   // to discriminate against 'topic-grid-infrastructure' above, which already

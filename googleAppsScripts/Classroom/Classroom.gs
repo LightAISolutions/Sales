@@ -1,4 +1,4 @@
-var VERSION = "v01.35g";
+var VERSION = "v01.36g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -24342,8 +24342,8 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Eight Buyer Classes* (planned) · *From Site Control to Commercial Operation* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *Eleven Buyer Classes* · *From Site Control to Commercial Operation* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-storage-developers-and-ipps-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Constellation Energy, Gridmatic, ON.energy, Pattern Energy, ProEnergy, Samsung C&T, Stem — each member's dossier carries one in Profiler."
    ]
   },
@@ -24423,6 +24423,13 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -38824,7 +38831,8 @@ function guidanceDocs_() {
           guidanceDocChinaPolicy_(), guidanceDocBankability_(),
           guidanceDocEo14420_(),
           guidanceDocLandscapeStorageIntegrators_(),
-          guidanceDocLandscapeCellsAndChemistry_()];
+          guidanceDocLandscapeCellsAndChemistry_(),
+          guidanceDocLandscapeStorageDevelopersAndIpps_()];
 }
 
 function guidanceIndex_() {
@@ -45959,6 +45967,787 @@ function guidanceDocLandscapeCellsAndChemistry_() {
   {
    "t": "digital battery passport",
    "d": "The EU requirement, from February 2027, that industrial batteries above 2 kWh placed on the EU market carry a digital record of provenance, chemistry and recyclability. The obligation falls on the battery producer, but the data has to come from up the chain, so it reaches the cathode, anode and lithium suppliers as a reporting duty."
+  }
+ ]
+};
+}
+
+function guidanceDocLandscapeStorageDevelopersAndIpps_() {
+  return {
+ "id": "landscape-storage-developers-and-ipps-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — Storage Developers and IPPs",
+ "short": "Why nineteen incumbents can share one segment without any of them holding it, what all twenty-seven ranked players are betting, and where the veto on a battery purchase actually sits. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 34 member dossiers of the storage-developers-and-ipps segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-storage-developers-and-ipps-analysis.md"
+ },
+ "updated": "2026-09-14",
+ "reviewBy": "2027-01-01",
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "First authoring, and the third landscape module of the segment layer. Corpus synthesis over the 34 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. Composed against the public segment lesson rather than restating it: the roster, the normalized figures, the graph edges and the policy fence stay where they are generated. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis, and is labelled as analysis rather than blended with fact. All twenty-seven incumbent-and-challenger rows are carried, the longest bets table the corpus holds, because the segment's distinguishing fact is the size of its incumbent set and trimming the table would destroy it. The review date is set from a rate that changes on a schedule, stated inside two members' policy prose and in no date field anywhere in the segment; the reasoning and three rejected nearer candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "34",
+   "v": "members on record",
+   "sub": "Nineteen incumbent, eight challenger, seven adjacent — the deepest segment in the registry, measured 14 September 2026"
+  },
+  {
+   "k": "19",
+   "v": "incumbents",
+   "sub": "The largest incumbent set of the nineteen segments. The next-highest carries 16, and no other reaches 11"
+  },
+  {
+   "k": "27",
+   "v": "bets on the table",
+   "sub": "Every incumbent and challenger carries a strategy read, so no player is missing for want of evidence and none is trimmed"
+  },
+  {
+   "k": "1 Jan 2027",
+   "v": "the nearest gate",
+   "sub": "The prohibited-foreign-entity content ratio steps to its next calendar-year value — and it is in none of the segment's date fields"
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "6 min",
+   "kind": "prose",
+   "ps": [
+    "**Nineteen {{incumbent}}s is not a concentration, and reading it as one is the first mistake this segment invites.** In the integrator segment the dominance question was *which ranking house do you believe*. In cells it was *on which of four different bases does each incumbent stand*. Here the registry places **nineteen companies** in the established leading set of a single segment — the largest incumbent set of the nineteen segments, against 16 for EPC and construction and no other segment reaching 11 — and **no ranking house publishes a table they all appear on.** What the nineteen share is that they own grid-connected batteries at scale. What separates them is the structure that pays for the battery, and on that axis they fall into four groups that are not competing for the same dollar.",
+    "**Group 1 — the three that appear on an independent table.** S&P Global Commodity Insights, working from government filings, measured US operating battery storage at 30 June 2026: **NextEra Energy Resources first at 5.779 GW, ENGIE North America second at 3.662 GW, AES Clean Energy third at 1.978 GW** — with Intersect closing to within 42 MW of AES over the same year and Arevon reaching 1.470 GW. That is the closest thing the segment has to a ranking and it names three companies out of nineteen. NextEra's own record calls it the market-maker rather than an account: storage buildable in 16 to 18 months against four to five years for a gas peaker, 2026 to 2029 needs covered at 1.5 times by non-{{FEOC}} supply, and **self-integration** — it buys cells and DC blocks direct, so a containerised-system vendor has no integrator channel to ride at all.",
+    "**Group 2 — the eight standalone-storage franchises, and this is where procurement actually happens.** Aypa Power, Plus Power, Arevon, Jupiter Power, Eolian, Key Capture Energy, Terra-Gen and Apex Clean Energy are the members whose primary business is the battery, funded by {{tolling agreement}}s, {{resource adequacy}} contracts or {{merchant}} trading. It is here that the criteria other than {{bankability}} get exercised, and the record shows all three settings side by side: **Plus Power dual-sources Tesla and Sungrow per project** on bankability and geography, with 330-plus Sungrow containers deployed through 2025; **Terra-Gen ran LG, Samsung and BYD together at 3.3 GWh scale** until a single 8 GWh LG Vertech framework for 2026 to 2029 — US-made Arizona {{LFP}}, about 1.43 billion dollars — ended the practice; and **Arevon is seven-for-seven Tesla across roughly 5.6 GWh** with, on its own record, no second-vendor precedent to point at when a third is pitched. Aypa's pending sale at about **7 billion dollars of enterprise value** for a book the buyer describes as 95 per cent contracted with an average remaining contract life of 17 years is the clearest public mark of what a contracted platform in this group is worth.",
+    "**Group 3 — the five for whom storage is an attachment.** Lightsource bp, Intersect, Invenergy, Clearway Energy and RWE Clean Energy are large, credible, hyperscaler-facing developers whose storage book is small, new, or invisible. Invenergy is the sharpest instance and its dossier states it as a finding rather than an aside: **no battery integrator, cell supplier, power-conversion vendor or storage EPC is named in any Invenergy release, microsite, counterparty release or trade-press article read** — the only chemistry statement anywhere is lithium iron phosphate. Lightsource bp is the number-one US solar developer whose US storage business, in its own dossier's words, barely exists yet, while its Australian arm buys Chinese systems freely. Intersect became a Google subsidiary on 10 March 2026 and is now a captive developer with no third-party customers.",
+    "**Group 4 — the three merchant generators selling from an existing fleet.** Talen Energy, Vistra and NRG Energy are in this segment because they sell firm power to AI load, not because they buy batteries. Talen holds **15.7 GW of PJM generation** and the Susquehanna arrangement that produced the co-location rulebook everyone now lives under. Vistra runs **43,641 MW hedged by a five-million-customer retail book** against a battery fleet of **624 MW — down from 1,024 MW between two consecutive filings**. NRG doubled its fleet to about 25 GW with an acquisition that closed on 30 January 2026. **For a battery seller these three are the segment's most expensive misread**: they carry the largest numbers on the page and the smallest procurement behind them.",
+    "**And the thing the nineteen agree on is that the league table does not exist.** Three of them say so about themselves, which is unusual enough to be the segment's most reliable fact. Vistra's own record says the description of it as the largest merchant battery-storage owner in the country **should be dropped rather than qualified**, because no independent dated ranking of storage owners by fleet size exists — the closest available table measured megawatts brought online during one year, which is a flow rather than a stock. Clearway's says **no independent tracker measures its battery fleet at owner level at all**, and that its 1,439 MW figure is its own, corroborated only by summing its own project table. RWE's says the company does not appear in the independent top five of US owners, and that the 931 MW under-construction figure still circulating about it is **stale company material from October 2024 that should be retired**."
+   ],
+   "sales": "**Find out which group you are in before the first meeting, because the four groups buy differently or not at all.** A market-maker is intelligence, not pipeline — NextEra's own record says so in those words. A merchant generator carries the biggest fleet number and the smallest battery budget. The eight standalone franchises are where the purchase order lives. And when anyone quotes a US storage-owner ranking at you, the question that moves the room is *which table* — because three of this segment's own incumbents have gone on record that the table being quoted does not exist."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**Eight {{challenger}}s against nineteen incumbents, and not one of the eight is trying to become one of the nineteen.** That is the finding, and it is the opposite of the last landscape's. In cells, eleven challengers were attacking four incumbents along one shared axis and the question was why the axis had not moved the incumbency. Here **there is no shared axis.** Each challenger is a different answer to the question *how does a battery get paid for*, and the incumbents are largely not defending, because they are not in those markets. Four routes, eight runners — and this section is short because the honest version of it is short.",
+    "**Route 1 — pure {{merchant}}, carried by a trading desk. Spearmint Energy and Hunt Energy Network.** Spearmint owns 350 MW / 700 MWh operating in {{ERCOT}}, single-source Sungrow, financed on tax credits and private credit rather than utility contracts, and monetises through its own desk. Hunt Energy Network is the same idea at a different shape: **thirty-two distribution-connected batteries at 9.9 MW each** — sized deliberately under the threshold at which a project enters ERCOT's full interconnection study — plus one 100 MW transmission battery, described in its own releases as 100 per cent merchant, with an in-house qualified scheduling entity and a five-minute optimisation platform it also sells to third-party owners. Its dossier's judgment is that the trading platform is the company's competitive asset and the reason it can stay merchant while ERCOT revenues compress. **This route carries the segment's revenue risk**: one house measured average ERCOT battery revenue falling from 149 dollars per kW in 2023 to a projected 17 dollars per kW in 2025 with {{ancillary services}} revenue down about 90 per cent, while another measured merchant revenue at 43 dollars per kW for 2024 to 2025 against 192 dollars in 2023. **The two series disagree and no source reconciles them.**",
+    "**Route 2 — originate the contract, then sell the battery under it. Strata Clean Energy and Available Power.** Strata originates land, interconnection and a utility toll, then converts the package to cash by selling to a fund-backed owner while keeping the EPC, operations or asset-management contract: all three flagship batteries were sold to fund-backed owners before or during construction. Its own record explains why in one sentence — **the company has no financial sponsor and is financed by bank revolvers on a founder-owned balance sheet, so a twenty-year toll is worth more to a fund than to Strata, which is why the tolls are sold.** Available Power runs the same model one size down and is this route's cautionary case: no battery operates under its ownership, the storage business has been publicly dormant since March 2024, and the parent has redirected its identity and capital to edge micro data centres.",
+    "**Route 3 — a sponsor's balance sheet buying finished projects. GridStor and Excelsior Energy Capital.** GridStor is what a bank's infrastructure platform looks like when it decides to own batteries directly: created by a Goldman Sachs Asset Management fund around a pre-acquired project, grown by **five late-stage purchases from four originators in eighteen months**, contracted with a utility, an investor-owned utility toll and a Fortune 500 counterparty. Its own read says the sponsor's equity is not the binding constraint. Excelsior is the route's purest form — a buyer of batteries rather than a builder — and holds two of the largest US-made supply frameworks in the corpus: **2.2 GWh with one integrator from July 2024 and 7.5 GWh with another from December 2024, 9.7 GWh reserved in total.** Its dossier's second judgment is the one a seller needs: **that volume is a procurement option sized to the pipeline, not a delivery schedule** — neither release names a project, its own operating batteries use a third supplier's cells, and its chief executive said the two frameworks do not affect those projects.",
+    "**Route 4 — mixed books and captive channels. esVolta and Recurrent Energy.** esVolta runs contracted {{resource adequacy}} batteries in {{CAISO}} beside hedged-and-merchant batteries in ERCOT, a structure its dossier judges financeable **because the credits and the corporate facility carry it, not because the hedge is large** — 258 million dollars of project debt against 980 MWh, with the hedge counterparty, tenor and volume never disclosed. Recurrent is the captive case: a developer inside a manufacturer, supplying demand to its own group's battery arm, with intersegment eliminations of 790.1 million dollars in one year showing the flow's scale. That is a real advantage on cost, schedule and warranty alignment — and it is simultaneously how the developer inherits its parent's {{FEOC}} and tariff exposure at exactly the point where US {{tax equity}} is most sensitive to it.",
+    "**Why none of the eight has taken anything from the nineteen, in three sentences from the record.** Their fleets are an order of magnitude smaller — the largest challenger position on the page is 490 MW / 980 MWh against the leading incumbent's 5.779 GW. **Six of the eight are being sold, are for sale, or are owned by the party who will decide the next procurement**, and two dossiers make the identical judgment that the outcome of the sale, not the current sponsor, decides the next three years of buying. And the route most of them attack on is the one the market is repricing: merchant ERCOT, where revenue fell about 84 per cent from 2023, interconnection applications fell 50 per cent in the second half of 2025, and the median queue lengthened to 4.1 years — which, as one incumbent's own dossier notes, **protects incumbents.**"
+   ],
+   "sales": "**Do not sell against these eight; sell to them, and sell the thing their structure needs.** A merchant owner with a trading desk buys {{round-trip efficiency}} and availability because that is what its revenue is made of. An originate-and-sell developer buys whatever the fund that will own the asset will accept, so the {{independent engineer}} is the real counterparty. A sponsor-backed buyer of finished projects inherits whatever supplier the originator chose, which means the sale happened one company upstream. Read the route before the requirement."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "12 min",
+   "kind": "table",
+   "intro": "**Everything in the bet column is analysis, not fact.** Each entry reads that member's own strategy-read field, and the dossier's own confidence label travels with it in the last column. A strategy read is itself analytical — the segment-lesson generator is forbidden to touch it for exactly that reason — so a bet is a judgment resting on a judgment, and this table says so rather than letting it read as a finding. **All twenty-seven incumbents and challengers are here and none is trimmed.** At twenty-seven rows this is the longest table the guidance corpus carries, and in a segment whose distinguishing fact is the size of its incumbent set, cutting it to the interesting players would destroy the only thing the table is for.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet — analysis, not fact",
+    "Dossier's own confidence"
+   ],
+   "rows": [
+    [
+     "**NextEra Energy Resources**",
+     "incumbent",
+     "Plan around it rather than sell into it: domestic supply locked through 2029 at 1.5 times coverage, self-integration removing the integrator channel entirely, and safe-harboured begin-construction positions covering the near-term backlog — with the only reopening scenario a Korean or US cell ramp slipping mid-decade.",
+     "High on the structural closure and on the self-integration barrier; Moderate on supplier concentration as the one reopening scenario and on treating the account as intelligence rather than pipeline"
+    ],
+    [
+     "**ENGIE North America**",
+     "incumbent",
+     "Recycle capital rather than grow the balance sheet — three consecutive minority sell-downs on an identical formula that retains control and the operating mandate — and answer {{ERCOT}} revenue compression by co-locating compute at its own generation and storage sites.",
+     "High on the measured storage lead, on capital recycling as policy and on the group's capital priority moving away from North America; Moderate on ERCOT concentration as the central risk and on co-location as the answer; Low on the leadership vacancy as an execution risk"
+    ],
+    [
+     "**AES Clean Energy**",
+     "incumbent",
+     "Complete the take-private, sell development services and powered land rather than own generation, and step back from the integrator stake its procurement was entangled with — while siting, not capital or {{offtake}}, stays the binding constraint on storage growth.",
+     "High on the take-private reorganising everything, on the hyperscaler claim being real but not independently verified, and on the storage position being third and being caught; Moderate on the integrator entanglement, on development services as the earnings driver and on siting as the constraint; Low on the restructuring pre-figuring the sale"
+    ],
+    [
+     "**Aypa Power**",
+     "incumbent",
+     "Carry a 95-per-cent-contracted, investment-grade book of about 17 years' average remaining life into new ownership, having proved that capital is abundant — and accept that the conversion bottleneck is now county and city permitting rather than money.",
+     "High on the transaction being signed and pending rather than closed, and on what is being bought being a contracted book rather than a merchant fleet; Moderate on the headline overstating operating capacity, on permitting as the binding constraint and on supplier concentration being unaddressed publicly; Low on the 2024 completion target having been met"
+    ],
+    [
+     "**Plus Power**",
+     "incumbent",
+     "Convert one new twenty-year utility {{tolling agreement}} per year into a franchise across four utilities, dual-sourced per project on {{bankability}} and geography — and leave the {{FEOC}} posture unstated until the next construction start forces it.",
+     "High on being a genuinely open dual-source buyer historically, and on the absence of any public compliance posture being the defining intelligence gap; Moderate on the bankability gauntlet as the qualification bar, on near-term volume being thin and long-cycle, and on utility tolling rather than merchant being where the economics are heading"
+    ],
+    [
+     "**Arevon**",
+     "incumbent",
+     "Stay single-integrator at {{CAISO}} scale and let an explicit domestic-supply doctrine do the compliance work, funded by a transferability machine whose {{ITC}} dependence makes FEOC compliance economically existential.",
+     "High on being effectively closed to a named Chinese supplier on current settings, and on there being no second-vendor precedent at all; Moderate on the one visible near-term opening, on the leadership transition being a watch item rather than an opening, and on the account's value as a market signal"
+    ],
+    [
+     "**Jupiter Power**",
+     "incumbent",
+     "Buy big and quietly inside the safe-harbour window, never co-market the supplier, and hedge loudly with domestic supply — while collecting first-mover franchises across four markets and running an in-house trading desk that benchmarks among the best in ERCOT.",
+     "High on the supply relationship being the most valuable of its kind, on it being deliberately unreciprocated in public, and on delivery excellence being the right account strategy; Moderate on post-2025 procurement tilting domestic by default and on the AI-data-centre angle being siting-led and latent"
+    ],
+    [
+     "**Eolian**",
+     "incumbent",
+     "Make the American-built argument the product rather than the compliance posture, and prove that a battery interconnection is data-centre currency — converting storage interconnections into speed-to-power for hyperscale campuses and funding long-duration blocks on {{capacity market}} scarcity.",
+     "High on being ideologically closed to a named Chinese supplier, and on energy-plus-load being the batch's most important strategic idea; Moderate on the open supplier slots being effectively reserved for compliant vendors, on the sponsor-sibling convergence risk and on the account's value as a leading indicator"
+    ],
+    [
+     "**Key Capture Energy**",
+     "incumbent",
+     "Decide late and on terms — a fleet built on Chinese systems and US integrators with Chinese cells, never pivoted to the parent's own chemistry — with concentrated, dated procurement windows and no disclosed compliance pathway.",
+     "High on being the most procurement-open account on revealed behaviour, and on the ownership overhang being the gating condition; Moderate on the integrator-failure history reshaping vendor selection both ways, on the FEOC bind being decisive for credit-claiming vintages, and on working the account as a timing play"
+    ],
+    [
+     "**Terra-Gen**",
+     "incumbent",
+     "Solve FEOC with one long-dated Korean-US supply chain rather than by diversifying among Chinese suppliers — an 8 GWh framework for 2026 to 2029 replacing a multi-vendor practice that ran three suppliers side by side at 3.3 GWh scale.",
+     "High on the framework being the decisive fact of the account, and on the institutional memory cutting both ways; Moderate on the realistic entry windows, on the safety history being net-favourable terrain for a chemistry-safety pitch, and on the account as a case study in how a China-comfortable buyer de-risks"
+    ],
+    [
+     "**Apex Clean Energy**",
+     "incumbent",
+     "Farm down bankable, operated projects in slices to long-dated foreign capital while retaining control and operating fees — which means **the parties who must approve a battery are the {{tax equity}} banks and the minority co-owners, not Apex alone.**",
+     "High on the conversion to a farmdown model, and on storage procurement being genuinely open for the first time and structurally constrained; Moderate on powered land being a real pivot without a customer yet, and on the financing surge being timed to the begin-construction deadline; Low on ownership changing within 12 to 18 months"
+    ],
+    [
+     "**Lightsource bp**",
+     "incumbent",
+     "Run a geographically split playbook around the content rules: a US book that is FEOC-clean by design with a storage business that barely exists yet, and an Asia-Pacific pipeline aimed at data-centre demand where Chinese supply competes freely.",
+     "High on the supply relationship being real, single-deal and geographically fenced, and on the export-market playbook working and having a ceiling; Moderate on ownership volatility being the dominant account risk, on the practical plays and on the AI-data-centre angle being PPA-mediated rather than storage-led"
+    ],
+    [
+     "**Intersect**",
+     "incumbent",
+     "Be the hyperscaler's own procurement channel: put solar, wind, batteries and firming gas behind one interconnection on the same site as the data centre, then become part of the tenant — with the operating fleet carved out to a separate owner at the sale.",
+     "High on the acquisition being closed rather than pending, and on what was bought being a development capability rather than an operating fleet; Moderate on being a captive developer with no third-party customers, on the energy-park design change and on the binding exposure being state co-location law rather than federal; Low on how the pre-sale supply frameworks were split"
+    ],
+    [
+     "**Invenergy**",
+     "incumbent",
+     "Re-weight growth capital toward gas plants built and transferred to regulated utilities for data-centre load, keep storage as a utility-contracted Southwest business — and name no battery supplier anywhere in the public record.",
+     "High on the pipeline-ranking correction, on the ownership stack being unchanged and on the re-weighting toward gas; Moderate on storage remaining utility-contracted rather than merchant, and on the transmission project reaching construction on a slower schedule; Low on the data-centre siting business, which is announced intent rather than pipeline"
+    ],
+    [
+     "**Clearway Energy**",
+     "incumbent",
+     "Hold a contracted rather than {{merchant}} fleet on twenty-year tolls and {{resource adequacy}} agreements so that an {{ancillary services}} collapse never reaches the revenue line — and keep the hyperscaler origination at the sponsor until the independent directors approve each drop-down.",
+     "High on two widely repeated descriptions now being wrong, on the sponsor conversion changing liquidity without changing control, on the fleet being contracted rather than merchant, and on the geographic shift already having happened; Moderate on the hyperscaler exposure sitting mostly at the sponsor, on the gas fleet being under-disclosed and on the guidance cut being a weather outcome; Low on the internal-control weakness"
+    ],
+    [
+     "**RWE Clean Energy**",
+     "incumbent",
+     "Reverse the retrenchment with 17 billion euros committed to the United States through 2031, convert a stranded offshore book into gas and liquefied natural gas, and narrow the portfolio to utility-scale — having changed the business's name before changing what it builds.",
+     "High on the retrenchment being a group capital decision since reversed, on the offshore exit converting into gas and buying a lawsuit, and on the rename being the tell; Moderate on the company's own ranking claims being the weakest part of its record, on a circulating capacity figure being stale, and on the portfolio being narrowed on purpose; Low on the hyperscaler relationship being contractual only"
+    ],
+    [
+     "**Talen Energy**",
+     "incumbent",
+     "Convert from a nuclear-plus-coal company into a {{PJM}} gas company with a nuclear anchor, funded with debt rather than equity — and earn more from the {{capacity market}}, now clearing three auctions running at the administrative price cap, than from the data-centre contract it is famous for.",
+     "High on the famous precedent being a regulatory loss and a commercial workaround, on earnings power resting on the capacity market, and on the conversion having been debt-funded; Moderate on the four-gigawatt land-and-contracting figure being optionality rather than pipeline, on the reliability-must-run agreements and on what the executive realignment signals; Low on the ownership picture, which the public record does not settle"
+    ],
+    [
+     "**Vistra**",
+     "incumbent",
+     "Run the integrated-merchant hedge — own both the generation and the customers so a price move that hurts one side helps the other — and buy operating gas capacity faster than it contracts it, on the logic that gas earns from capacity and scarcity whether or not a data centre signs.",
+     "High on the largest-merchant-battery-owner description needing to be dropped, on every signed large-load agreement being nuclear rather than gas, on the integrated model being the real differentiator, and on the storage incident having permanently changed what merchant storage costs to own; Moderate on buying gas faster than contracting it and on the disclosure pattern; Low on the digital-infrastructure commitment"
+    ],
+    [
+     "**NRG Energy**",
+     "incumbent",
+     "Start from the customers and buy the generation to match them — a fleet doubled to about 25 GW by acquisition — and run the integration for the collateral effect rather than the margin, while the retail book quietly weakens and a smart-home business carries the growth.",
+     "High on the development-agreement description being wrong, on the acquisition being closed and consequential, on being the only large merchant with no named hyperscaler counterparty, and on the model being more load-led than any peer; Moderate on the retail book weakening, on the market having repudiated the story faster than the sell side, and on state policy now cutting both ways"
+    ],
+    [
+     "**Spearmint Energy**",
+     "challenger",
+     "Develop to hold rather than to sell: a pure {{merchant}} ERCOT fleet on a single integrator, financed on tax credits and private credit instead of utility contracts, monetised through its own trading desk, and assembled by buying other developers' projects.",
+     "High on being a develop-to-hold merchant owner rather than a develop-to-sell developer, and on no sponsor standing behind the company; Moderate on realised revenue running well below the underwriting, on the pipeline figure being early-stage inventory, and on supplier concentration being the largest policy exposure; Low on whether the trading arm tolls third-party batteries"
+    ],
+    [
+     "**GridStor**",
+     "challenger",
+     "Buy other originators' late-stage projects with a bank's sponsorship behind you, contract them with utilities and a retailer before construction, and finance project by project — while deliberately holding procurement un-committed until the federal content guidance lands.",
+     "High on being a contracted owner rather than a merchant specialist, on the sponsor having created the company rather than funded it, and on late-stage acquisition being the growth model; Moderate on the market focus having moved from California to the Southwest and Texas, and on procurement being deliberately un-committed; Low on the data-centre customer segment, which is stated intent"
+    ],
+    [
+     "**Available Power**",
+     "challenger",
+     "Develop distribution-connected batteries sized just under the threshold at which a project enters the full interconnection study, package them with an EPC, and sell at notice to proceed to financial buyers who own but do not develop.",
+     "High on being a Texas-only develop-and-sell developer rather than an owner-operator, on no battery operating under its ownership and the business being publicly dormant since March 2024, and on the parent having redirected to edge data centres; Moderate on the sub-10 MW template having been sound and the problem being the buyer side; Low on whether the one named project was sold and built under another name"
+    ],
+    [
+     "**esVolta**",
+     "challenger",
+     "Carry a mixed book — contracted {{resource adequacy}} in California beside hedged-and-merchant in Texas — financeable because the tax credits and the corporate facility carry it rather than because the hedge is large, with the sponsor sale deciding the next procurement.",
+     "High on being a mixed contracted-and-merchant owner in two markets rather than three, on the preferred-equity transaction being a financing rather than a divestiture, and on the sale outcome deciding the next three years of procurement; Moderate on why the Texas model is financeable and on the default integrator's treatment under the content rules being unaddressed; Low on whether the largest pipeline project gets contracted before construction"
+    ],
+    [
+     "**Strata Clean Energy**",
+     "challenger",
+     "Originate the land, the interconnection and the utility toll, then sell the battery with the contract attached and keep the EPC, operations or asset-management role — because with no financial sponsor and a founder-owned balance sheet, a twenty-year toll is worth more to a fund than to you.",
+     "High on the battery business being develop-contract-and-sell rather than an owner's book, on the handed premise being wrong on every clause, and on there being no financial sponsor; Moderate on the sale of tolled projects being a choice rather than distress, and on the reorganisation and powered-land line being positioning; Low on whether the first large owned battery is operating"
+    ],
+    [
+     "**Hunt Energy Network**",
+     "challenger",
+     "Own and trade thirty-two distribution-connected batteries at 9.9 MW each with an in-house scheduling entity and a five-minute optimisation platform sold to third parties — staying 100 per cent {{merchant}} as revenues compress, now adding transmission-scale assets and fuel-oil peakers.",
+     "High on being an ERCOT-only fully merchant owner of sub-threshold batteries, on the ownership being a family holding funded by an insurer's infrastructure funds, and on the distributed design being supplemented rather than replaced; Moderate on the trading platform being the competitive asset, and on the peaker programme being a hedge and a bridge rather than a separate business; Low on financing beyond the insurer's equity being unpublished rather than absent"
+    ],
+    [
+     "**Recurrent Energy**",
+     "challenger",
+     "Run the captive channel inside a manufacturer — a developer whose projects supply demand to its own group's battery arm — and monetise finished operating assets to deleverage, on a balance sheet where interest expense runs at a third of segment revenue.",
+     "High on the company not being wholly owned as the corpus and its own sister brand state, on the 84 GWh pipeline being development optionality that must never sit beside an operating figure, and on that pipeline churning rather than compounding; Moderate on the captive channel being both the advantage and the largest risk, on the pivot to owner-operator being incomplete, and on the balance sheet rather than the pipeline being the binding constraint; Low on what the two chief-executive changes signal"
+    ],
+    [
+     "**Excelsior Energy Capital**",
+     "challenger",
+     "Buy batteries rather than build them: reserve US-made volume across two large frameworks as an option sized to the pipeline, own through a platform that acquires late-stage projects, and harvest the contracted book through a strategic sale.",
+     "High on being an owner-operator with a captive late-stage development arm rather than a greenfield developer, and on the 9.7 GWh of reserved volume being a procurement option rather than a delivery schedule; Moderate on what the contracted book is worth to a strategic buyer, and on the merchant Texas batteries being behind schedule while the platform rotates toward contracted storage; Low on the data-centre and firm-power pivot, which has no project"
+    ]
+   ],
+   "sales": "**Three things this table says that no single row does.** First, **nine of the nineteen incumbents are betting on something other than buying batteries** — gas sold to utilities, capacity-market revenue, development services, powered land, a retail hedge — so nine of the largest names in the segment are not a storage pipeline at all. Second, **six of the eight challengers describe a financing structure rather than a technology**, which is why their requirements read nothing like an incumbent's. Third, the confidence column is worth reading on its own: the judgments rated High across this segment are overwhelmingly about **ownership, structure and closure**, and the ones rated Moderate or Low are about **supply, pipelines and data-centre intent** — the record is confident about who controls these companies and unconfident about what they will buy."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "Dated where the record dates it. A date in the third column is the dossier's own; an entry without one is a condition to watch rather than an event to diary. **Not one of this segment's policy entries carries a future effective date** — the 34 members hold 142 of them between them, 96 carry a date at all, and the latest of those is 1 September 2026 — so a sort of the fence table returns this list **empty**. Every dated gate below was read out of prose. The second row sets this module's review date; the first row is nearer, load-bearing and deliberately not taken.",
+   "cols": [
+    "What to watch",
+    "Whose",
+    "On the record",
+    "Why it moves the segment"
+   ],
+   "rows": [
+    [
+     "**The reformed grid-operator tariff language on co-located and large load**, out of the federal show-cause orders to all six grid operators",
+     "Talen — and every member selling firm power to AI load",
+     "orders issued 18 June 2026; comments due 16 September 2026; **the resulting tariff carries no date**",
+     "It governs every future {{co-location}} in the segment. A rule pricing co-located load on gross rather than net withdrawals raises the cost of the whole powered-land model. **A comment deadline is a step in a docket, not a rule taking effect — which is why this row is first and is not the review date**"
+    ],
+    [
+     "**The {{material assistance cost ratio}} stepping to its next calendar-year value**",
+     "Every member financing on the {{ITC}} — which on this roster is nearly all of them",
+     "**1 January 2027**",
+     "The non-prohibited share of project cost is indexed to the calendar year, rising from 55 per cent in 2026 toward 75 per cent in 2030. Every 2026 framework is priced against the 2026 ratio, and a supply chain that qualifies this year may not qualify next. **This is the module's review date**"
+    ],
+    [
+     "**Final prohibited-foreign-entity rules**, and whether the deferred effective-control question is resolved",
+     "Invenergy · GridStor · esVolta · Spearmint · Key Capture — every buyer without a disclosed compliance pathway",
+     "the February 2026 draft guidance **deferred** it; final rules undated",
+     "One buyer is on the record waiting for the guidance before advancing procurement decisions on its longer-dated projects. Until it lands, a whole tier of the segment's buying is paused rather than lost — which is a pipeline that reappears, not one that disappeared"
+    ],
+    [
+     "**The large-load interconnection audit and verification report** in the segment's biggest {{merchant}} market",
+     "NRG · Vistra · Talen · Intersect",
+     "pause began 3 August 2026; verification stated to **run to December 2026**",
+     "The first study batch was halted against a queue put at roughly 410 GW, of which about 9 GW has approval to energize. Grid-served large load is exposed and {{behind-the-meter}} generation is exempt, which cuts in favour of bring-your-own-power. **A window rather than a date, which is why it is not the review date**"
+    ],
+    [
+     "**The vacated beginning-of-construction {{safe harbor}}**, now on appeal",
+     "ENGIE — and every project that qualified under the restored position",
+     "vacated in full **6 June 2026**, under appeal, no decision date",
+     "A project that safe-harboured under the restored notice holds a tax position that could be reversed retroactively. That is a credit at risk rather than a schedule at risk, and it reaches back into work already done"
+    ],
+    [
+     "**Whether the largest pending platform sale closes**, and whether its corporate facilities survive the change of control",
+     "Aypa Power",
+     "signed 22 July 2026, **pending**, no closing date given",
+     "About 7 billion dollars of enterprise value for a 95-per-cent-contracted book. A lapse past the first quarter of 2027 would indicate a regulatory or financing problem the parties have not disclosed"
+    ],
+    [
+     "**Whether the third-ranked owner's take-private clears its remaining regulators**",
+     "AES Clean Energy",
+     "outside date **1 June 2027**; termination fee about 320.7 million dollars",
+     "The third-largest owner on the only independent table changes hands. Antitrust and foreign-investment review cleared in mid-2026; the state commissions and the federal energy regulator are outstanding"
+    ],
+    [
+     "**Who buys the two platforms currently in sale processes**",
+     "esVolta · Key Capture Energy",
+     "both live, no outcome",
+     "Both dossiers make the same judgment in the same words: **the outcome, not the current sponsor, decides the next three years of procurement.** A financial sponsor tends to preserve price-driven buying; a strategic owner with its own supply arm does not"
+    ],
+    [
+     "**Who buys the solar platform whose storage attach is still ahead of it**",
+     "Lightsource bp",
+     "parent mid-process; buyer reported, unconfirmed",
+     "The counterparty that signed, the entity owning the asset at commercial operation and the owner deciding future procurement can be **three different organisations inside a year**. This is the segment's most under-priced supplier risk and it is in none of the six buying criteria"
+    ],
+    [
+     "**A named supplier for any of the sponsor-backed buyer's three unannounced projects**",
+     "GridStor",
+     "none named despite a signed battery supply agreement",
+     "Its own dossier calls this the largest gap in the file. The first award after the federal guidance lands is the segment's cleanest read on what a deliberately paused buyer does when the pause lifts"
+    ],
+    [
+     "**Any release from the second-largest US developer naming a battery supplier**",
+     "Invenergy",
+     "none exists in any source read",
+     "The first named supplier would close the segment's single largest collection gap. Until then, the second-largest developer by pipeline buys storage invisibly and cannot be sold to through the public record"
+    ],
+    [
+     "**Whether the incumbent Chinese supply relationship survives the content rules at a dual-source account**",
+     "Plus Power — read across to every Chinese-supplied fleet in the segment",
+     "no public posture; the next construction start is in 2026",
+     "Its own dossier calls this the leading indicator of whether **any** Chinese-brand system retains a path at that account — and the account is the segment's clearest worked example of genuine dual-sourcing"
+    ],
+    [
+     "**The first named delivery against the 9.7 GWh of reserved US-made volume**",
+     "Excelsior Energy Capital",
+     "none reported as of September 2026",
+     "It converts the largest reserved volume in the segment from an option into execution. Another year without one confirms the frameworks were pipeline sizing rather than a delivery schedule"
+    ],
+    [
+     "**The next quarterly independent owner table**",
+     "NextEra · ENGIE · AES · Intersect · Arevon",
+     "last measured 30 June 2026",
+     "The only independent owner ranking the segment has. One member closed to within 42 MW of third place over a single year, so the top three is not stable — and it is the only ranking in this module that rests on government filings rather than a company's own count"
+    ],
+    [
+     "**The first uncollared capacity auction after three consecutive clears at the price cap**",
+     "Talen · Vistra · NRG",
+     "scheduled **May 2027**",
+     "Three auctions running have cleared at the administrative cap, so the collar rather than scarcity is setting the price — and a collar is a political artefact whose extension someone else decides. It is the largest single swing factor in merchant-generator earnings in this segment"
+    ]
+   ],
+   "sales": "**Thirteen of these fifteen are one company's execution. Two are the market's** — the content ratio stepping on 1 January 2027 and the final ownership rules — and only those two can change who is sellable and at what price. **But the third column is the one to read twice.** Ten of the fifteen rows concern who owns, buys or approves something, and only three concern a technology, a product or a plant. In this segment the calendar that matters is a transaction calendar, not a product roadmap."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "ps": [
+    "**Two readers arrive here by different roads, and this segment is the end of one of them.** The curriculum's two implicit role paths are the storage seller, who reaches this module through the product and market-access tracks — and for whom this is the terminal segment, because this is the desk that signs — and the AI-data-centre power seller, who reaches it through the power chain and meets a different half of the same roster.",
+    "**The storage seller — four moves.** *First*, **find the veto before you find the buyer.** The registry says this segment decides which integrator's product gets installed; the members say otherwise in their own words. One states plainly that the parties who must approve a battery are the {{tax equity}} banks and the minority co-owners, not the developer alone. Another names five financing syndicates and an {{independent engineer}} process every supplier must clear. A third describes minority sell-downs that put an infrastructure fund's diligence between a vendor and a signature. **Criterion one is not a preference in this segment — it is a description of where the veto sits**, and qualifying the developer without qualifying the syndicate is the characteristic way to lose a year here. *Second*, **read criterion four against the project's vintage, not the company.** The content rules bind by construction start, so a buyer with safe-harboured 2025 positions and the same buyer starting construction in 2026 are two different customers inside one logo — and several members are explicitly both. *Third*, **treat criterion six as the entry point it demonstrably is.** A segment whose sixth buying criterion is dual-sourcing and geography has, by construction, a second slot: one member split its fleet between two suppliers per project, another ran three side by side at gigawatt-hour scale. The instructive exception is the member that is seven-for-seven with one supplier and, on its own record, has **no second-vendor precedent to point at** — which is a harder room than a competitive one. *Fourth*, **ask who owns the counterparty this quarter.** Ten of the thirty-four members carry a live or just-closed ownership event.",
+    "**The AI-data-centre power seller — three moves.** *First*, **know which members are selling power rather than buying batteries.** Three merchant generators in this segment carry its largest generation numbers and its smallest storage procurement — one runs 43,641 MW of generation against a 624 MW battery fleet that shrank by 400 MW between two filings. Reading fleet size as battery opportunity is the most expensive misread available here. *Second*, **the co-location rulebook is being written now, and this segment is where it is being written.** One member's own arrangement produced the finding that a grid operator's tariff was unjust and unreasonable for co-located load, and then show-cause orders to all six operators; its dossier's own words are that the rulebook governing every future co-location is still being written. Nothing in this area is settled, and a proposal that assumes it is will be re-priced. *Third*, **distinguish announced intent from pipeline.** Powered-land and data-centre lines appear across this segment — five members carry one — and in every case the dossier rates it Low or Moderate confidence and records that **no customer, site, megawatt figure or contract has been published.** One member has 445 MW of signed retail power agreements with a counterparty it has never named.",
+    "**And one move both readers share.** The market-makers are intelligence, not pipeline — the leading incumbent's own strategy read says so in those words, and the reason generalises past that one company. Its hub economics, its earnings-call supply-chain language and its order book are the best public indicator of domestic-supply tightness anywhere in the corpus. **That is worth more than a meeting you were never going to get**, and it is available for free to anyone who reads the filings."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions in the claims ledger; no ingested document. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column.",
+   "rows": [
+    [
+     "Segment holds 34 members — 19 incumbent, 8 challenger, 7 adjacent; six buying criteria; chain position 11 of 19, tier demand",
+     "profiler-segments.json @ v05.73r — segments[].members[], .buyingCriteria[], .definition, .position, .tier"
+    ],
+    [
+     "The deepest segment in the registry, and the largest incumbent set of the nineteen; next-highest is EPC and construction at 16, and no other segment reaches 11",
+     "profiler-segments.json @ v05.73r — all nineteen segments[].members[], counted 2026-09-14"
+    ],
+    [
+     "The registry's own definitions of incumbent, challenger and adjacent, quoted in the glossary",
+     "profiler-segments.json @ v05.73r — roles"
+    ],
+    [
+     "Only 7 of the 34 members carry a normalized revenue figure and only 3 carry any non-revenue operating KPI",
+     "the 34 profile files — financials.periods[].metrics[].kpi, read 2026-09-14"
+    ],
+    [
+     "The 34 members hold 142 policy entries between them, 96 with an effective date, none in the future and the latest 1 September 2026",
+     "the 34 profile files — policyExposure[].effectiveDate, sorted 2026-09-14"
+    ],
+    [
+     "US operating battery storage at 30 June 2026: first 5.779 GW, second 3.662 GW, third 1.978 GW; one member closed to within 42 MW of third and another reached 1.470 GW",
+     "profile:aes-clean-energy @ v2 — strategyRead[3]"
+    ],
+    [
+     "The market-maker read: storage buildable in 16 to 18 months against four to five years for a gas peaker; 2026 to 2029 needs covered at 1.5 times by non-prohibited supply",
+     "profile:nextera-energy-resources @ v4 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Self-integration — cells and DC blocks bought direct, so a containerized-system vendor has no integrator channel to ride",
+     "profile:nextera-energy-resources @ v4 — strategyRead[2]"
+    ],
+    [
+     "Treat the market-maker as intelligence rather than pipeline; its earnings-call supply-chain language is the best public indicator of domestic-supply tightness",
+     "profile:nextera-energy-resources @ v4 — strategyRead[5]"
+    ],
+    [
+     "Three consecutive minority sell-downs on an identical formula retaining control and the operating mandate",
+     "profile:engie-north-america @ v2 — strategyRead[2]"
+    ],
+    [
+     "An infrastructure fund's diligence sits between a vendor and a signature",
+     "profile:engie-north-america @ v2 — ecosystemRole"
+    ],
+    [
+     "ERCOT battery revenue from 149 dollars per kW in 2023 to a projected 17 dollars per kW in 2025, ancillary revenue down about 90 per cent; a second house measured 43 dollars per kW for 2024 to 2025 against 192 dollars in 2023, and no source reconciles the two series",
+     "profile:engie-north-america @ v2 — strategyRead[4]"
+    ],
+    [
+     "Interconnection applications fell 50 per cent in the second half of 2025 and the median queue lengthened to 4.1 years, which protects incumbents",
+     "profile:engie-north-america @ v2 — strategyRead[4]"
+    ],
+    [
+     "No cell, module, inverter or turbine supplier is named anywhere in North America",
+     "profile:engie-north-america @ v2 — strategyRead[8]"
+    ],
+    [
+     "The beginning-of-construction safe harbour notice was vacated in full on 6 June 2026 and is under appeal, leaving qualifying projects with a tax position that could be reversed retroactively",
+     "profile:engie-north-america @ v2 — policyExposure[] beginning-of-construction safe harbor, inside the exposure prose"
+    ],
+    [
+     "The take-private at 15.00 dollars a share and about 33.4 billion dollars of enterprise value; antitrust expired 22 June and foreign-investment review cleared 27 August 2026; outside date 1 June 2027; termination fee 320,651,487 dollars",
+     "profile:aes-clean-energy @ v2 — strategyRead[1], strategyRead[9]"
+    ],
+    [
+     "A 22 per cent stake in an integrator whose 10-K states many of its storage construction projects use that integrator as supplier or EPC",
+     "profile:aes-clean-energy @ v2 — ecosystemRole, strategyRead[4]"
+    ],
+    [
+     "Permissible percentages vary by calendar year and applicable technology, limiting the share of total project costs derived from products mined, produced or manufactured in China",
+     "profile:aes-clean-energy @ v2 — policyExposure[] FEOC restrictions, inside the exposure prose"
+    ],
+    [
+     "About 7 billion dollars of enterprise value for a book described as 95 per cent contracted with an average remaining contract life of 17 years; signed 22 July 2026 and pending",
+     "profile:aypa-power @ v2 — strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "The binding constraint moved from capital to local permitting — two county and city denials in twelve months against 1.55 billion dollars of corporate facilities",
+     "profile:aypa-power @ v2 — strategyRead[4]"
+    ],
+    [
+     "Dual-sourced per project on bankability and geography, with 330-plus containers from the Chinese supplier deployed through 2025; five financing syndicates and an independent-engineer process every supplier must clear",
+     "profile:plus-power @ v4 — ecosystemRole, strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "No public compliance or domestic-content posture exists, and the 2026 construction start forces the question",
+     "profile:plus-power @ v4 — strategyRead[2]"
+    ],
+    [
+     "Whether the Chinese supply relationship survives the content rules is the leading indicator of whether any Chinese-brand system retains a path at that account",
+     "profile:plus-power @ v4 — strategyRead[5]"
+    ],
+    [
+     "Seven-for-seven with one integrator across about 5.6 GWh, and no second-vendor precedent to point at",
+     "profile:arevon @ v4 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Tax-credit-transfer dependence makes content compliance economically existential",
+     "profile:arevon @ v4 — strategyRead[1]"
+    ],
+    [
+     "A verified 3 GWh supply agreement and a 2.8 GWh design win; the relationship is deliberately unreciprocated in public",
+     "profile:jupiter-power @ v6 — strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "Energy-plus-load converts a storage interconnection into speed-to-power for a hyperscale campus; the American-built argument is the product rather than the compliance posture",
+     "profile:eolian @ v6 — ecosystemRole, strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "A fleet built on Chinese systems and a US integrator with Chinese cells, never pivoted to the parent's own chemistry; the sale process freezes framework decisions",
+     "profile:key-capture-energy @ v3 — strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "Three suppliers run side by side at 3.3 GWh scale until a single 8 GWh framework for 2026 to 2029 — US-made Arizona LFP, about 1.43 billion dollars — replaced the practice",
+     "profile:terra-gen @ v5 — ecosystemRole, strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "The parties who must approve a battery are the tax-equity banks and the minority co-owners, not the developer alone",
+     "profile:apex-clean-energy @ v1 — strategyRead[1]"
+    ],
+    [
+     "Storage procurement genuinely open for the first time — the incumbent integrator in liquidation, the first post-liquidation award to a Chinese-manufactured product, 13-plus GW in development",
+     "profile:apex-clean-energy @ v1 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Wind and solar credits terminate for projects that neither began construction by 4 July 2026 nor are placed in service by 31 December 2027",
+     "profile:apex-clean-energy @ v1 — policyExposure[] ITC/45X, inside the exposure prose"
+    ],
+    [
+     "Ownership may change within 12 to 18 months on a single report with no second source and no outcome — recorded at Low confidence",
+     "profile:apex-clean-energy @ v1 — strategyRead[5]"
+    ],
+    [
+     "Number-one US solar developer whose US storage business barely exists, buying Chinese systems only where the content rules do not reach",
+     "profile:lightsource-bp @ v6 — ecosystemRole, strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "The signer, the owner at commercial operation and the party deciding future procurement may be three different organisations within a year",
+     "profile:lightsource-bp @ v6 — strategyRead[2]"
+    ],
+    [
+     "The hyperscaler acquisition closed 10 March 2026, and the developer is now captive with no third-party customers",
+     "profile:intersect-power @ v2 — strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "Second-largest US developer by pipeline and largest privately owned; no battery integrator, cell supplier, power-conversion vendor or storage EPC is named in any source read, and the only chemistry statement is lithium iron phosphate",
+     "profile:invenergy @ v3 — strategyRead[1], strategyRead[7]"
+    ],
+    [
+     "The February 2026 draft guidance deferred the effective-control question and set 4 July 2026 as the wind-and-solar begin-construction deadline",
+     "profile:invenergy @ v3 — policyExposure[] FEOC restrictions, inside the exposure prose"
+    ],
+    [
+     "The storage fleet is contracted on twenty-year tolls and resource-adequacy agreements and earns nothing from ancillary arbitrage; no independent tracker measures the fleet at owner level and the 1,439 MW figure is the company's own",
+     "profile:clearway-energy @ v1 — strategyRead[3], strategyRead[10]"
+    ],
+    [
+     "17 billion euros committed to the United States through 2031, taking capacity from 13 GW to 22 GW; the company appears in no independent top five of US storage owners; the 931 MW under-construction figure is stale October 2024 material that should be retired",
+     "profile:rwe-clean-energy @ v1 — strategyRead[1], strategyRead[4], strategyRead[5]"
+    ],
+    [
+     "15.7 GW of PJM generation; the tariff was found unjust and unreasonable for co-located load on 18 December 2025, and show-cause orders went to all six grid operators in June 2026 with comments due 16 September 2026",
+     "profile:talen-energy @ v2 — ecosystemRole, policyExposure[] FERC co-located load, recentDevelopments[] 2026-06-18"
+    ],
+    [
+     "Earnings power rests more on the capacity market than on the data-centre contract; the last three auctions cleared at the administrative price cap and the next is scheduled for May 2027",
+     "profile:talen-energy @ v2 — strategyRead[2], strategyRead[8]"
+    ],
+    [
+     "43,641 MW of generation hedged by a five-million-customer retail book against a 624 MW battery fleet, down from 1,024 MW between two filings; the largest-merchant-battery-owner description should be dropped rather than qualified because no independent dated owner ranking exists",
+     "profile:vistra @ v3 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Every signed large-load agreement is nuclear; the gas fleet's own language is unchanged across four consecutive filings",
+     "profile:vistra @ v3 — strategyRead[2]"
+    ],
+    [
+     "The fleet doubled to about 25 GW on an acquisition that closed 30 January 2026; the only large merchant with no named hyperscaler counterparty, and 445 MW of signed retail power agreements with a counterparty never named",
+     "profile:nrg-energy @ v1 — strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "Large-load interconnections paused 3 August 2026 against a queue of roughly 410 GW of which about 9 GW has approval to energize; verification stated to run to December 2026; behind-the-meter generation is exempt",
+     "profile:nrg-energy @ v1 — strategyRead[7], policyExposure[] Texas large-load interconnection pause, inside the exposure prose"
+    ],
+    [
+     "350 MW / 700 MWh operating, single-source, develop-to-hold merchant financed on credits and private credit rather than utility contracts",
+     "profile:spearmint-energy @ v1 — ecosystemRole, strategyRead[1], strategyRead[5]"
+    ],
+    [
+     "Created by a bank's infrastructure fund around a pre-acquired project; five late-stage purchases from four originators in eighteen months; sponsor equity is not the binding constraint",
+     "profile:gridstor @ v1 — strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "Procurement deliberately un-committed pending federal guidance, with no supplier named for three projects despite a signed battery supply agreement",
+     "profile:gridstor @ v1 — strategyRead[5], strategyRead[7]"
+    ],
+    [
+     "Distribution-connected batteries sized under the full-study threshold and sold at notice to proceed; no battery operates under the company's ownership and the storage business has been publicly dormant since March 2024",
+     "profile:available-power @ v1 — ecosystemRole, strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "Non-prohibited cost ratios rise from 55 per cent in 2026 to 75 per cent in 2030 for storage projects beginning construction from 2026",
+     "profile:available-power @ v1 — policyExposure[] FEOC restrictions, inside the exposure prose"
+    ],
+    [
+     "490 MW / 980 MWh in ERCOT plus CAISO resource-adequacy batteries; 258 million dollars of project debt against 980 MWh with the hedge counterparty, tenor and volume never disclosed",
+     "profile:esvolta @ v1 — ecosystemRole, strategyRead[4], strategyRead[5]"
+    ],
+    [
+     "The sponsor is selling the platform and the outcome, not the current sponsor, decides the next three years of procurement",
+     "profile:esvolta @ v1 — strategyRead[3]"
+    ],
+    [
+     "Originate the toll, sell the battery under it and keep a service role; with no financial sponsor and a founder-owned balance sheet, a twenty-year toll is worth more to a fund than to the originator",
+     "profile:strata-clean-energy @ v2 — ecosystemRole, strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "Thirty-two distribution-connected batteries at 9.9 MW each plus a 100 MW transmission battery, 100 per cent merchant, with an in-house scheduling entity and a five-minute optimisation platform; the supplier of the 32 units is unreported",
+     "profile:hunt-energy-network @ v3 — ecosystemRole, strategyRead[1], strategyRead[4], strategyRead[7]"
+    ],
+    [
+     "A developer inside a manufacturer with intersegment eliminations of 790.1 million dollars in one year; 84.7 per cent of the 84.1 GWh pipeline is early-stage and net-equity operating storage is roughly 1.5 GWh",
+     "profile:recurrent-energy @ v1 — ecosystemRole, strategyRead[2], strategyRead[4]"
+    ],
+    [
+     "9.7 GWh reserved across two US-made frameworks from July and December 2024; a procurement option sized to the pipeline rather than a delivery schedule, with no delivery reported to any of the platform's sites",
+     "profile:excelsior-energy-capital @ v1 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "The segment lesson already carries the roster, the normalized figures, the graph edges and the policy fence, so this module does not restate them",
+     "segment-storage-developers-and-ipps in Classroom.gs, updated 2026-09-14 — sections the-players, the-numbers, who-is-connected, the-fence"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "5 min",
+   "kind": "callout",
+   "ps": [
+    "**1 — There is no owner league table that covers this segment, and three of its own incumbents say so about themselves.** The only independent measurement in the file works from government filings and names three companies out of nineteen. One member's own record says the largest-merchant-battery-owner description of it **should be dropped rather than qualified**, because no independent dated ranking of storage owners by fleet size exists. A second says no independent tracker measures its fleet at owner level, and that its own figure is corroborated only by summing its own project table. A third says it does not appear in the independent top five at all, and that the capacity figure still circulating about it is stale 2024 company material. **This module states no rank without its instrument attached, and invents none.**",
+    "**2 — Twenty-seven of the thirty-four publish no comparable financials.** Seven carry a revenue figure in the normalized overlay and three carry any other operating measure. That is not a collection failure; it is what a buyer class composed mostly of sponsor-owned platforms, family holdings and private developers looks like. **Every fleet figure in this module is therefore a company's own or a third party's**, and is attributed as such.",
+    "**3 — This module carries no financial comparison across the segment.** The normalized figures belong to the public segment lesson's numbers section and regenerate on their own clock. Repeating them here would create two copies that drift apart, and the one that drifted would be this one.",
+    "**4 — The second-largest US developer by pipeline buys storage invisibly.** Its dossier states that no battery integrator, cell supplier, power-conversion vendor or storage EPC is named in **any** release, microsite, counterparty release or trade-press article read, and that the only chemistry statement anywhere is lithium iron phosphate. A second incumbent's record says the same for North America across cells, modules, inverters and turbines. Two of the segment's largest members are, on the supply question, closed books — and that is a finding about the segment, not a gap in the research.",
+    "**5 — No powered-land or data-centre line in this segment has a named customer.** Five members carry one. Every one is rated Low or Moderate confidence by its own dossier, and in each case no site, megawatt figure, offtaker or contract has been published. The sharpest instance is a member with 445 MW of signed retail power agreements and **a counterparty it has never named**.",
+    "**6 — The two published merchant-revenue series for the segment's biggest market do not reconcile.** Two research houses measure the same market over the same period and disagree materially, and the dossier carrying both states that no source reconciles them. Any {{augmentation}} or revenue-model conversation in that market rests on a number the record does not agree on.",
+    "**7 — Ownership percentages and deal terms are frequently unavailable.** A sponsor's stake in the platform it created, another sponsor's stake in the platform it is selling, the economic split between two classes of unit at a family holding, an investor's current as-converted percentage after a dividend compounding in kind, the purchase price of an acquired operating battery, the sale prices of three flagship projects — all unreported. **A supplier reasoning about who has the capital to sign is reasoning without those numbers.**",
+    "**8 — The rulebook that governs co-location is unfinished and undated.** A grid operator's tariff was found unjust and unreasonable for co-located load in December 2025; show-cause orders went to all six operators in June 2026; comments were due 16 September 2026. **The resulting tariff language carries no date anywhere in the record** — which is exactly why the indicators table lists it first and the review date is not set from it.",
+    "**9 — Not one policy entry in this segment carries a future effective date.** The 34 members hold 142 of them; 96 carry a date at all; the latest is 1 September 2026. Every dated gate in the indicators was read out of a paragraph rather than a date field. **A generator implementing 'earliest future effective date, else six months' would find nothing to sort and fall through to the default** — which is precisely what the public segment lesson's own review date does."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "This segment holds nineteen incumbents — the largest incumbent set in the registry. Why is that not a concentration?",
+     "a": "Because the nineteen are not competing for the same dollar. They share one thing — they own grid-connected batteries at scale — and they separate on **what pays for the battery**: three appear on the only independent owner table, eight are standalone-storage franchises funded by tolls, resource adequacy or merchant trading, five are developers for whom storage is an attachment to a solar or wind book, and three are merchant generators selling firm power from an existing fleet. **No ranking house publishes a table all nineteen appear on.**"
+    },
+    {
+     "q": "The registry says this segment is the desk that decides which integrator's product gets installed. What do the members themselves say?",
+     "a": "That the decision is mostly **not theirs alone**. One states that the parties who must approve a battery are the {{tax equity}} banks and the minority co-owners, not the developer. Another names five financing syndicates and an {{independent engineer}} process every supplier must clear. A third describes minority sell-downs that put an infrastructure fund's diligence between a vendor and a signature. **Criterion one is a description of where the veto sits, not a preference.**"
+    },
+    {
+     "q": "Eight challengers against nineteen incumbents. What are the eight actually attacking?",
+     "a": "**The contract form, not the incumbents.** Each is a different answer to how a battery gets paid for: pure merchant carried by a trading desk; sub-threshold distributed batteries developed and sold at notice to proceed; originate-the-toll-then-sell-the-battery; a sponsor's balance sheet buying finished projects; a mixed contracted-and-merchant book; and a captive channel inside a manufacturer. **None is trying to out-scale an incumbent**, and the largest challenger position on the page is roughly a twelfth of the leading incumbent's fleet."
+    },
+    {
+     "q": "A prospect's fleet number is one of the largest in the segment. Why might that mean no battery budget at all?",
+     "a": "Because three of the nineteen incumbents are **merchant generators selling from an existing fleet** rather than battery buyers. One runs 43,641 MW of generation against a 624 MW battery fleet that **fell from 1,024 MW between two consecutive filings**; another holds 15.7 GW of grid generation and is in the segment for its co-location arrangement. They carry the biggest numbers on the page and the smallest procurement behind them."
+    },
+    {
+     "q": "Where does this segment's nearest dated gate live, and why can a sort not find it?",
+     "a": "Inside **policy prose**, not a date field. The 34 members hold 142 policy entries, 96 carry an effective date, and **not one of those 96 is in the future** — the latest is 1 September 2026. The real gate is the {{material assistance cost ratio}}, indexed to the calendar year and rising from 55 per cent in 2026 toward 75 per cent in 2030, so it steps on **1 January 2027**. Two members state the mechanism between them and neither puts it in a date field."
+    },
+    {
+     "q": "Why is the 16 September 2026 comment deadline not this module's review date, even though it is nearer and load-bearing?",
+     "a": "Because **a comment deadline is a procedural step in a docket, not a rule taking effect.** The gate it leads to — the reformed grid-operator tariff language on co-located and large load — is what changes what the segment can do, and **that carries no date anywhere in the record.** It is the indicators table's first row instead, which is where a condition without a date belongs."
+    },
+    {
+     "q": "What does a segment whose sixth buying criterion is dual-sourcing and geography tell a supplier?",
+     "a": "That there is, by construction, **a second slot**. The record shows it working: one member split its fleet between two suppliers chosen per project on bankability and geography, with 330-plus containers from the Chinese one; another ran three suppliers side by side at 3.3 GWh scale until a single 8 GWh Korean-US framework replaced the practice. The instructive exception is the member that is **seven-for-seven with one integrator** and, on its own record, has no second-vendor precedent to point at."
+    },
+    {
+     "q": "Ten of thirty-four members carry a live or just-closed ownership event. Why does that matter more here than the buying criteria suggest?",
+     "a": "Because ownership decides procurement and **it is in none of the six criteria.** Two dossiers make the identical judgment — that the outcome of a sale, not the current sponsor, decides the next three years of buying. A third warns that the counterparty who signed, the entity owning the asset at commercial operation and the owner deciding future procurement **may be three different organisations within a year.**"
+    },
+    {
+     "q": "Why should a seller distrust every powered-land and data-centre line in this segment?",
+     "a": "Because five members carry one and **not a single one has a named customer.** In every case the member's own dossier rates the line Low or Moderate confidence and records that no site, megawatt figure, offtaker or contract has been published. One member has 445 MW of signed retail power agreements with a counterparty it has never named. That is not a reason to dismiss them; it is the question to ask them."
+    },
+    {
+     "q": "What does the confidence column of the bets table say when you read it as a whole?",
+     "a": "That the record is **confident about control and unconfident about buying.** The judgments rated High across this segment are overwhelmingly about ownership, structure and closure — who owns whom, which model is running, which door is shut. The ones rated Moderate or Low are about supply, pipelines and data-centre intent. A seller planning around this segment can rely on the structure and should not rely on the pipeline."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A prospect in this segment likes your product and says the decision is theirs. What does the segment's own record suggest you do next?",
+     "c": [
+      "Accept it — the registry names this segment as the desk that decides which integrator's product gets installed",
+      "Qualify the financing syndicate and the independent engineer as well, because several members state in their own words that the approving parties are the tax-equity banks and the minority co-owners",
+      "Escalate to the parent company, since most members are subsidiaries",
+      "Ask for a letter of intent before doing further diligence"
+     ],
+     "a": 1,
+     "why": "The registry's definition and the members' own strategy reads disagree, and the members are the better evidence about themselves. One states plainly that the parties who must approve a battery are the tax-equity banks and the minority co-owners, not the developer alone; another names five syndicates and an independent-engineer process every supplier must clear; a third describes minority sell-downs that put a fund's diligence between a vendor and a signature. Criterion one is a description of where the veto sits."
+    },
+    {
+     "q": "Which statement about this segment's nineteen incumbents is supported by the record?",
+     "c": [
+      "They are the nineteen largest US battery owners, in order",
+      "They are ranked by an independent house that publishes a quarterly owner table",
+      "Only three of them appear on any independent owner table, and three separate incumbents state on their own record that the ranking being quoted about them does not exist",
+      "Nineteen is a data error — the registry over-counts because adjacent members were included"
+     ],
+     "a": 2,
+     "why": "The only independent measurement works from government filings and names three companies. Beyond those three the record is explicit and unusually candid: one incumbent says the largest-merchant-battery-owner description of it should be dropped rather than qualified; another says no independent tracker measures its fleet at owner level; a third says it appears in no independent top five and that a figure still circulating about it is stale 2024 company material. The seven adjacent members are counted separately and are not among the nineteen."
+    },
+    {
+     "q": "You are told a segment member has 43,641 MW of generation. What is the correct inference about its battery procurement?",
+     "c": [
+      "It is among the segment's largest battery buyers, in proportion to its fleet",
+      "None — generation scale and storage procurement are unrelated here, and that member's battery fleet is 624 MW and fell by 400 MW between two consecutive filings",
+      "It buys batteries only through its retail subsidiary",
+      "Its procurement is invisible, so nothing can be said either way"
+     ],
+     "a": 1,
+     "why": "Three of the nineteen incumbents are merchant generators selling firm power from an existing fleet rather than battery buyers, and they carry the segment's largest generation numbers with its smallest procurement behind them. The 624 MW figure and the fall from 1,024 MW are both in that member's own filings. Reading fleet size as battery opportunity is the most expensive misread this segment offers."
+    },
+    {
+     "q": "A colleague sets this module's review date to 16 September 2026, the comment deadline in the co-location docket. What is wrong with that?",
+     "c": [
+      "Nothing — it is the nearest future date in the segment and the docket is load-bearing",
+      "The date is in the past, so it cannot be a review date",
+      "A comment deadline is a procedural step in a docket rather than a rule taking effect, and the gate it leads to — the reformed tariff language — carries no date anywhere in the record",
+      "Review dates may only be set from a policy entry's effective-date field"
+     ],
+     "a": 2,
+     "why": "The curriculum plan sets the review date from the nearest dated gate, and its own examples are a regulatory effective date, a deployment milestone and a rate that changes on a schedule. A filing deadline is none of those: what changes the segment is the tariff the docket produces, and that has no date. The taken value is 1 January 2027, when the material assistance cost ratio steps to its next calendar-year value — stated in two members' policy prose and in no date field in the segment."
+    },
+    {
+     "q": "Which of these best describes what the eight challengers are contesting?",
+     "c": [
+      "Installed cost per kWh, where they undercut the incumbents",
+      "The contract form — each runs a different answer to how a battery gets paid for, and none is trying to out-scale an incumbent",
+      "Cell chemistry, where they have moved faster than the incumbents",
+      "Interconnection queue position, which they buy earlier than the incumbents"
+     ],
+     "a": 1,
+     "why": "Read side by side, the eight are a pure merchant with a trading desk, an owner of thirty-two sub-threshold distributed batteries, a develop-and-sell shop in the same size class, an originate-the-toll-then-sell-the-battery developer, a bank-sponsored buyer of finished projects, a buyer of batteries rather than a builder, a mixed contracted-and-merchant owner and a captive developer inside a manufacturer. Eight different revenue structures. Cell chemistry belongs to a different segment entirely, and the largest challenger fleet here is roughly a twelfth of the leading incumbent's."
+    },
+    {
+     "q": "A member's data-centre or powered-land line is presented to you as a pipeline. What does this segment's record support?",
+     "c": [
+      "Treating it as pipeline — five members carry one, so the pattern is established",
+      "Treating it as announced intent until a customer is named, because all five are rated Low or Moderate confidence by their own dossiers with no site, megawatt figure, offtaker or contract published",
+      "Discounting it entirely, since no member in this segment sells to data centres",
+      "Treating it as pipeline only for the three merchant generators"
+     ],
+     "a": 1,
+     "why": "Five members carry a powered-land or data-centre line and not one has a named customer on the record; every one is rated Low or Moderate confidence by its own dossier. The sharpest instance is a member with 445 MW of signed retail power agreements and a counterparty it has never named. The merchant generators are the exception in the other direction: their large-load contracts are real and signed, and every one of them is nuclear rather than gas at the member where that distinction was tested."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "Segment role. The dossier places the company in the segment's established leading set — ranked top-tier by a third party, or described by the dossier as the incumbent, the benchmark, the reference, or the leader for what the segment makes or does."
+  },
+  {
+   "t": "challenger",
+   "d": "Segment role. The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves."
+  },
+  {
+   "t": "adjacent",
+   "d": "Segment role. The segment is not the company's primary business, but its dossier records a product line, a division, a channel, or a buyer or supplier position that touches it. Adjacent members count toward the floor rule's three but never toward its incumbent or challenger."
+  },
+  {
+   "t": "tolling agreement",
+   "d": "A long-dated contract under which a utility or other offtaker pays a fixed capacity charge for the right to dispatch a battery, and keeps the market revenue. The owner is paid whether or not the battery earns in the market, which is why a tolled asset is worth more to an infrastructure fund than a merchant one — and why several members in this segment originate tolls and then sell the asset underneath them."
+  },
+  {
+   "t": "resource adequacy",
+   "d": "A capacity product bought by load-serving entities, chiefly in California, to prove they can meet peak demand. A resource-adequacy contract pays a battery for being available rather than for arbitrage, so a fleet contracted this way does not move when energy or ancillary prices collapse — the distinction that separates this segment's contracted owners from its merchant ones."
+  },
+  {
+   "t": "material assistance cost ratio",
+   "d": "The share of a project's total cost that must NOT derive from a prohibited foreign entity for the project to keep its tax credit. It is indexed to the calendar year and to the technology, so a supply chain that qualifies in one construction vintage may not qualify in the next. The record puts it at 55 per cent for storage projects beginning construction in 2026, rising toward 75 per cent by 2030 — which is why its next calendar-year step is this module's review date."
   }
  ]
 };

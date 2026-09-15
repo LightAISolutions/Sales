@@ -834,9 +834,13 @@ def run_gate_truth_table(src, lesson_ids=()):
     # doubled into) `guidanceDocs_()`, which deriving the count from the same
     # function could not. Bump it in the commit that registers a module —
     # 9 at C3 session 3, 10 since S2 session 1 added the first landscape,
-    # 11 since S2 session 2 added the second (cells and chemistry).
-    if len(gids) != 11:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 11" % len(gids))
+    # 11 since S2 session 2 added the second (cells and chemistry),
+    # 12 since S2 session 3 added the third (storage developers and IPPs).
+    # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
+    # 7.3 sales-value order, so this number rises by one per S2 session and
+    # the session that forgets it is stopped here rather than in review.
+    if len(gids) != 12:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 12" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 35/50`
+`Sections: 36/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.36g] — 2026-09-14 08:22:55 PM EST — v05.74r
+
+### Added
+
+- A new module in the guidance library, covering another part of the market
+
+### Changed
+
+- One curriculum page now points on to the new guidance module instead of saying none was available yet
 
 ## [v01.35g] — 2026-09-14 06:53:36 PM EST — v05.72r
 
