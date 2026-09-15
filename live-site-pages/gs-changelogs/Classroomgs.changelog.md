@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 36/50`
+`Sections: 37/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.37g] — 2026-09-14 10:21:39 PM EST — v05.76r
+
+### Added
+
+- A new lesson in the AI data-center track, on how reliability is written down, priced and proven
+
+### Changed
+
+- That track now has one more step in its reading order, and its summary says what the new step covers
 
 ## [v01.36g] — 2026-09-14 08:22:55 PM EST — v05.74r
 

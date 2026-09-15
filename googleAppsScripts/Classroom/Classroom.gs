@@ -1,4 +1,4 @@
-var VERSION = "v01.36g";
+var VERSION = "v01.37g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -37572,6 +37572,461 @@ function clLessonInsideTheRack_() {
 };
 }
 
+function clLessonRedundancyByTheNumbers_() {
+  return {
+ "schemaVersion": 1,
+ "id": "redundancy-by-the-numbers",
+ "type": "module",
+ "title": "N+1, 2N, and Six Nines",
+ "short": "How reliability is written, priced and proven: the redundancy vocabulary, what a nine costs, the Uptime tiers, the commissioning ladder and who deletes the UPS.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-14",
+ "reviewBy": "2027-03-14",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:liteon",
+    "date": "2026-08-21",
+    "note": "the supply-level vocabulary this lesson generalises: N+1 as one spare module against N+N as two independent feeds each able to carry the whole load; ORing and precharge as the engineering that makes a live swap safe; and the two costs redundancy actually levies - supplies parked below their efficiency sweet spot, and the wake-up latency cold redundancy trades those watts for"
+   },
+   {
+    "kind": "public",
+    "ref": "study:huawei-digital-power",
+    "date": "2026-08-21",
+    "note": "repair time as the availability case rather than component quality: a module swapped in minutes against hours or days on bypass awaiting a specialist; redundancy in small increments costing far less than duplicating a monolith; a facility at a third of design load running a third of its modules near their optimum; and paralleled units needing to share current without a single master whose failure takes the system"
+   },
+   {
+    "kind": "public",
+    "ref": "study:switch",
+    "date": "2026-08-21",
+    "note": "the four Uptime rungs stated in one place - basic, redundant components, concurrently maintainable, fault-tolerant - and the self-declared standard beside them: not an Uptime rating, audited by nobody, a superset bundling real design choices with brand control, and carrying within one document two different benchmarks for the same rung. The four questions any tier claim should be translated back into are taken from here"
+   },
+   {
+    "kind": "public",
+    "ref": "study:microsoft",
+    "date": "2026-08-21",
+    "note": "reliability bought at the fleet rather than the facility: regions and independent failure domains inside them; three nines as about nine hours a year and four nines as under an hour; each extra nine multiplying cost; and the conclusion that a building can drop backup power entirely, accept a lower target, buy firm power upstream and bank the capital"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hitt",
+    "date": "2026-08-21",
+    "note": "the commissioning ladder as five levels from factory witness test to integrated systems testing; level five as the theatre of failure, run under load banks standing in for servers; a plant that fails integrated testing not being accepted or paid for; and commissioned megawatts as the industry's honest output metric"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rosendin",
+    "date": "2026-08-21",
+    "note": "the last link of the chain as the installer sees it - busway tap to rack whip, delivering the A and B feeds every cabinet expects - and thousands of terminations whose quality is proven in commissioning before a single server arrives; also the automatic transfer schemes that swap sources without dropping a server"
+   },
+   {
+    "kind": "public",
+    "ref": "study:turner-construction",
+    "date": "2026-08-21",
+    "note": "six nines as roughly thirty-one seconds of downtime a year, the top rung of the bars section; concurrent maintainability named as the property most colocation leases legally require; and reliability engineering sold as a service line because a facility that fails its nines tests is not accepted"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dpr",
+    "date": "2026-08-21",
+    "note": "the hall-by-hall shape of an AI building - four halls of twenty-five megawatts quoted as one hundred - and the consequence that energising, flushing and proving the power and liquid systems hall by hall is the long pole rather than the shell"
+   },
+   {
+    "kind": "public",
+    "ref": "study:whiting-turner",
+    "date": "2026-09-06",
+    "note": "commissioning run by an agent independent of the builder; the ladder described as factory testing, installation checks, functional testing of each system, then integrated systems testing under deliberate failure; commissioning as frequently the longest single item and last, so every upstream delay lands on it; and substantial completion as the contested milestone that starts warranties and stops daily damages"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mccarthy",
+    "date": "2026-09-04",
+    "note": "the second chain of gates that runs alongside commissioning and is held by people who do not work for the project - special inspection of work about to be covered up, the authority having jurisdiction, the cross-system fire and life-safety tests that cannot start until every trade is substantially complete, and the certificate of occupancy - with the observation that a building can be fully commissioned and still not legally occupiable"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips this lesson does not define locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "÷10",
+   "v": "per extra nine",
+   "sub": "each nine divides the year's allowed downtime by ten - and multiplies what it costs to hold it"
+  },
+  {
+   "k": "N+1",
+   "v": "of what?",
+   "sub": "modules inside a frame, frames inside a system, whole systems, whole paths - four different purchases, all correctly written the same way"
+  },
+  {
+   "k": "L5",
+   "v": "the theatre of failure",
+   "sub": "the last commissioning level loads the plant artificially and then fails it on purpose; a plant that does not pass is not accepted or paid for"
+  },
+  {
+   "k": "0",
+   "v": "UPS, deliberately",
+   "sub": "an owner with a fleet can accept a lower target for one building, buy firm power upstream and bank the capital - a bet a single-hall operator cannot make"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "2(N+1)",
+   "d": "Two independent paths, each of which is internally N+1 - the arrangement most large critical halls actually buy. It covers the realistic bad day rather than the theoretical one: a whole path down for planned work at the moment something inside the surviving path fails. It is the most expensive rung on the redundancy ladder, and the one a fault-tolerant tier claim usually rests on."
+  },
+  {
+   "t": "reserve bus",
+   "d": "A spare supply arrangement shared across several blocks instead of duplicated inside each of them: one standby system stands behind the blocks and is switched onto whichever loses its own source. It buys most of the availability of a duplicated design for roughly the cost of one extra system, and concentrates the risk in the shared spare and its switching."
+  },
+  {
+   "t": "A/B feeds",
+   "d": "Two independent supply paths run all the way to the equipment, so every dual-corded machine takes one cord from each and does not care which is live. It is the only redundancy the server itself can see. It doubles nothing upstream of where the two paths separate - two cords from two panels behind one transformer is a single path in a redundant costume."
+  },
+  {
+   "t": "cold redundancy",
+   "d": "Parking a spare unit in standby rather than sharing the load with it, so the active unit runs near the peak of its efficiency curve instead of half way down it. It buys back the watts that redundancy costs and pays for them in wake-up latency: the spare has to come up before it can carry anything, and the moment it is asked to is the moment the active unit failed."
+  },
+  {
+   "t": "availability zone",
+   "d": "An independent failure domain inside one metro-area cluster of data centres - its own power, cooling and networking - placed far enough from its neighbours to fail on its own and close enough to mirror data to them in real time. It is the unit reliability is bought in when reliability is architected in software rather than in switchgear."
+  },
+  {
+   "t": "commissioned megawatts",
+   "d": "Capacity that has been proven end to end and could actually carry a tenant's load, as distinct from capacity that has been built, announced or contracted. It is the honest output metric of a construction programme precisely because it counts nothing that has not survived the integrated test."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-vocabulary",
+   "title": "The vocabulary, and what each arrangement actually buys",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Six phrases carry almost the whole redundancy conversation, and all six are shorthand for a count of equipment rather than for a property of the plant. Read the middle two columns together: what an arrangement protects against, and what it leaves exactly as it was.",
+   "cols": [
+    "Written as",
+    "What it actually is",
+    "What it protects against",
+    "What it doubles - and what it does not"
+   ],
+   "rows": [
+    [
+     "**N**",
+     "Exactly the equipment the load needs and not one unit more - four 500 kW modules under a 2 MW hall.",
+     "Nothing. It is the baseline the other five are measured against, and a perfectly legitimate design wherever the load is not critical.",
+     "Nothing. Every unit is load-bearing, so a failure is an outage and so is a maintenance window."
+    ],
+    [
+     "**{{N+1}}**",
+     "N plus one spare of the same thing, all of them sharing the load - five 500 kW modules under the same 2 MW hall.",
+     "One unit failing, and one unit being worked on. Not two at once, and not the thing all of them are plugged into.",
+     "One unit's worth of capital. It does **not** double the path: the spare sits on the same bus, behind the same breaker, inside the same frame as the four it is covering."
+    ],
+    [
+     "**{{2N}}**, also written N+N",
+     "Two complete, independent sets, each able to carry the whole load alone - two 2 MW systems under a 2 MW hall.",
+     "The loss of an entire path: a whole utility feed, a whole electrical room, a whole lineup of switchgear, without the servers noticing it happened.",
+     "Everything - equipment, space, cabling, maintenance labour, commissioning hours. What it does not double is whatever the two paths still share downstream of the point where they meet."
+    ],
+    [
+     "**{{2(N+1)}}**",
+     "Two independent paths, each of them internally N+1. The arrangement most large critical halls actually buy.",
+     "A path failure and a unit failure at the same time, which is the realistic bad day rather than the theoretical one: one path down for planned work when something on the other path lets go.",
+     "Everything twice, plus a spare inside each. It is the most expensive rung here and the one a fault-tolerant claim usually rests on."
+    ],
+    [
+     "**{{catcher}}** or a **{{reserve bus}}**",
+     "One spare system standing behind several N blocks and switched onto whichever block loses its own supply.",
+     "Any one block failing - at roughly the cost of one extra system in total rather than one extra system per block.",
+     "Far less than doubling, which is the entire point. What it concentrates is the risk: the spare and its switching are shared, so they become the things that must not fail."
+    ],
+    [
+     "**{{A/B feeds}}**",
+     "Two cords into every {{dual-corded}} machine, each from a different path, each able to carry that machine alone. The only redundancy the server itself can see.",
+     "Losing one whole side of the hall, down to and including the rack whip - the flexible drop from the busway tap to the cabinet, of which a large hall has thousands.",
+     "The last few metres, and nothing above them. Two cords from two panels behind one {{transformer}} is a single path in a redundant costume."
+    ]
+   ],
+   "note": "**Every phrase above answers a question it does not itself ask: N+1 of what?** A spare module inside one frame, a spare frame inside one system, a spare system, and a spare path are all correctly written N+1, and they differ by roughly an order of magnitude in price and by an entire class of failure. The four-rung ladder that answers the *of what* - module, frame, unit, system - belongs to the lesson on the UPS room, and this is the place to go and fetch it. **The discipline that works without any of that vocabulary is simpler: trace both supplies of one machine backwards until they first touch.** Whatever they touch is the real availability of everything below it, whatever the arrangement above it is called.",
+   "sales": "Never accept a redundancy claim without the noun after it. \"We are 2N\" is not a specification; \"two independent paths from separate transformers, each internally N+1 at module level\" is. Asking which one they mean is an ordinary engineering question, and the answer tells you what they actually bought rather than what they are calling it."
+  },
+  {
+   "id": "pricing-a-nine",
+   "title": "What a nine costs",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "min of allowed downtime per year",
+   "intro": "Availability is quoted as a percentage of the year, and at a glance the percentages all look alike. Converting each one into the downtime it permits is what makes them comparable - and what makes the shape of the ladder impossible to miss. A year holds 525,600 minutes, and every extra nine divides the allowance below by ten.",
+   "items": [
+    {
+     "label": "99.9 % - three nines",
+     "v": 525.6,
+     "sub": "about eight and three-quarter hours a year"
+    },
+    {
+     "label": "99.99 % - four nines",
+     "v": 52.6,
+     "sub": "under one hour a year"
+    },
+    {
+     "label": "99.999 % - five nines",
+     "v": 5.3,
+     "sub": "about the length of one coffee break, once"
+    },
+    {
+     "label": "99.9999 % - six nines",
+     "v": 0.5,
+     "sub": "about thirty-one seconds a year"
+    }
+   ],
+   "note": "**Two of these rungs come straight off the sources and the other two are the same division of the same year.** One hyperscale operator's own teaching states three nines as about nine hours a year and four nines as under an hour; a large general contractor's reliability practice states six nines as roughly thirty-one seconds. Five nines sits between them by arithmetic rather than by assertion, and so does the exact figure for three. **The shape is the lesson and it is worth staring at: the bars fall by a factor of ten at every step while the cost of holding them rises.** That asymmetry is why the serious design question is never \"how many nines can we build\" but \"which workloads need protection in hardware at all, and which can be covered by running them in more than one place\" - which is the argument the last section of this lesson is about."
+  },
+  {
+   "id": "the-tiers",
+   "title": "The tiers, and the tiers nobody certifies",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The Uptime Institute's tier system is the industry's availability ladder and it has exactly four rungs, each of which is a statement about topology rather than about equipment quality. **Tier I** is basic capacity: one path, no redundant components, everything stops for maintenance. **Tier II** adds redundant components but still on that one path. **{{Tier III}}** is concurrently maintainable - any single component can be taken out of service for planned work without the critical load noticing. **{{Tier IV}}** is fault-tolerant: the site survives any single equipment failure, unplanned, with nobody standing over it.",
+    "The step that matters commercially is the third one. {{concurrent maintainability}} means there is a way to work on any one thing while the load stays up, which in practice means a second path and a means of moving between them - and it is the design property most colocation leases legally require. That is a sharper fact than it looks. Most of a facility's downtime is planned rather than unplanned, and a tenant who can be taken down for somebody else's maintenance window has bought a different product from one who cannot.",
+    "Then there are the tiers nobody certifies. Large operators publish their own availability standards, some of them numbered above the certified ladder, and the honest reading is that such a standard is a superset: it bundles real and often excellent design choices with brand control. The structural point is not that the engineering is bad - frequently it is better than the rung it claims to beat - but that **no third party audits or certifies it, which means the standard can change its own definitions, including the definition of the thing it is being compared against.**",
+    "One published guide to exactly this practice demonstrates the problem inside a single document. It reports an industry expectation of roughly ninety-six hours of on-site ride-through at the top certified rung, and separately reports the self-declaring operator's own framing of that same rung as a twelve-hour benchmark its hundred-hour standard beats. Both sentences are in print, both are about the same rung, and neither is audited. The benchmark a self-declared standard beats is chosen by the party declaring it.",
+    "So the useful skill is not memorising the ladder. It is translating any tier claim - certified, self-declared, or absent from the slide entirely - back into four questions that have to be answered in plain language. **Can it ride through the loss of grid supply, and for how long? Can every component be maintained with the load up? What is the set of things that fail together? And who verified any of it?** Those four work on every claim in this lesson, and the fourth is the one most often left unasked."
+   ]
+  },
+  {
+   "id": "commissioning",
+   "title": "Commissioning: five levels, and the chain running alongside them",
+   "kind": "timeline",
+   "read": "8 min",
+   "intro": "A data centre is not finished when it is built. It is finished when it has been proven to survive failure, by an agent who is independent of the builder, in a ladder of levels the industry runs five of. **The numbers in the left-hand gutter are commissioning levels, not calendar time.** Running beside the ladder is a second chain of gates held by people who do not work for the project and cannot be scheduled by it - which is why a building can be fully commissioned and still not legally occupiable.",
+   "lanes": {
+    "gen": "Proving the pieces",
+    "deploy": "Proving the whole plant",
+    "eco": "The statutory chain, alongside"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "gen",
+     "label": "**L1 - factory witness test**",
+     "sub": "The equipment is tested at the maker's works, watched by the owner's people, before it ships. A problem found here costs a re-test; the same problem found on site costs a crane."
+    },
+    {
+     "x": 1.5,
+     "lane": "eco",
+     "label": "{{special inspection}} begins with the first lift of fill",
+     "sub": "Independent, code-required inspection of work that is about to be covered up - compaction, concrete, welds, anchors - engaged by the owner rather than the contractor, and scheduled on the inspector's calendar. **Work covered before its inspection gets uncovered.**"
+    },
+    {
+     "x": 2,
+     "lane": "gen",
+     "label": "**L2 - delivered and installed as specified**",
+     "sub": "The installation check: the right unit, in the right place, supported and wired the way the drawings and the manufacturer require. Nothing has been energised to prove anything yet."
+    },
+    {
+     "x": 3,
+     "lane": "gen",
+     "label": "**L3 - energised and started, piece by piece**",
+     "sub": "Each device is brought to life on its own and taken through its start-up procedure. This is where settings and wiring errors surface one box at a time, while they are still cheap to fix."
+    },
+    {
+     "x": 4,
+     "lane": "gen",
+     "label": "**L4 - each system proved against its design intent**",
+     "sub": "System by system rather than box by box: the {{UPS}} against its own sequence, the engines against theirs, the chilled-water loop against its. Every path is still proved separately here - nothing has yet been asked to hand over to anything else."
+    },
+    {
+     "x": 4.5,
+     "lane": "eco",
+     "label": "Fire and life-safety acceptance",
+     "sub": "Sprinkler and pump tests, alarm verification device by device, smoke control, and the interlocks between them - a detector that must stop a fan, a fan that must start on alarm, a door that must release. These are cross-system tests, so they cannot begin until electrical, mechanical and fire work are all substantially complete: the end of the programme, where there is least float."
+    },
+    {
+     "x": 5,
+     "lane": "deploy",
+     "label": "**L5 - the {{integrated systems test}}**",
+     "sub": "The theatre of failure. The plant is put under a full artificial heat load - {{load bank}} racks standing in for servers - and then failed on purpose: the utility feed is pulled and the engines have to catch it, a chiller is killed and the redundant loop has to take it over. **This is where an N+1 diagram stops being a drawing and becomes an observed behaviour.** A plant that does not pass is not accepted and not paid for."
+    },
+    {
+     "x": 5.5,
+     "lane": "eco",
+     "label": "The {{certificate of occupancy}}",
+     "sub": "The document that turns a finished building into a usable one, and it can be held by something with no connection to the hall at all - a stormwater as-built, a landscaping condition, a traffic contribution. The {{ahj}} does not work for the project. Experienced owners chase a partial or temporary certificate months before they think they need one."
+    },
+    {
+     "x": 6,
+     "lane": "deploy",
+     "label": "**{{substantial completion}}, and {{commissioned megawatts}}**",
+     "sub": "The contested milestone that starts the warranties and stops the daily damages a late contractor pays - and the point from which capacity can honestly be counted. Commissioned megawatts is the industry's real output metric because it counts only what a tenant could actually use, not shells standing empty."
+    }
+   ],
+   "note": "**The ladder is five rungs and the L-numbers on your project are whatever that project's commissioning plan says they are.** Both construction sources here agree on five and both name the first and the last explicitly - factory witness at one end, integrated systems testing at the other - while describing the middle as installation checks followed by functional testing of each system. Read the numbers off the plan rather than assuming them; what never varies is the shape, which is pieces, then systems, then the whole plant failed on purpose. **The part outsiders underestimate is that commissioning is frequently the single longest item on the programme and it sits at the very end** - so it absorbs every delay upstream of it, and the deliberate-failure sequence at the top of the ladder is exactly the part that gets compressed when it does. A modern AI building makes this worse rather than better: the shell is finished months before the halls, and energising, flushing and proving the power and liquid systems hall by hall is the long pole.",
+   "sales": "The transfer test is where a battery claim is settled; the datasheet is where it is only asserted. Ask what the measured result of the last integrated systems test was - the measured one, not the design figure - and whether the sequence has been re-run since the hall filled up. A plant proved at a third of design load and now running at four fifths has been proved at a condition it no longer operates in, and the people who own that building already know it. That question opens the storage conversation without being about storage."
+  },
+  {
+   "id": "the-vanishing-ups",
+   "title": "The vanishing UPS",
+   "kind": "callout",
+   "read": "5 min",
+   "ps": [
+    "Everything above prices reliability inside one building. There is a school that prices it across many, and it is the school running most of the world's AI training capacity. Cloud reliability is architected in layers: a region is a metro-area cluster of data centres, and inside it {{availability zone}}s are independent failure domains with their own power, cooling and networking - far enough apart to fail on their own, close enough to mirror data between them in real time.",
+    "What follows from that is a genuine reversal. Rather than make every building unkillable with batteries and engines, replicate the workload across zones and let software route around any single failure. Availability is still priced in nines, but the nines are now bought at the fleet level, where an extra one costs a routing rule instead of a second lineup of {{switchgear}}. The design question stops being how many nines the plant can hold and becomes which workloads need protection in hardware at all.",
+    "Carried to its conclusion, a data centre can drop backup power **entirely**: accept a slightly lower availability target for that one building, buy {{firm power}} upstream from the grid, and bank the capital. That is not a cost-cutting story. It is a bet that reliability lives in the fleet rather than in the facility - and it is a bet only an owner with a fleet can place. A colocation operator selling one hall to one tenant cannot make it on that tenant's behalf, which is why the tier ladder, the lease language about {{concurrent maintainability}} and the UPS room itself are not going anywhere.",
+    "This lesson deliberately does not describe the machine being deleted. The static, rotary and modular answers, the battery under each of them and the case for making that battery earn belong to the lesson on the UPS room. Here the UPS is only a line item that a fleet-level architecture has started deciding whether to keep - and the vocabulary in this lesson is how that decision gets written down either way."
+   ],
+   "sales": "A vanishing UPS is a relocating opportunity rather than a disappearing one, and the giveaway phrase is \"buy firm power upstream\". An operator who says that has just told you they have moved their reliability budget from inside the building to the supply side of the meter, which is the side stored energy is sold on. Ask what **firm** means in their contract, what it costs when the counterparty cannot deliver it, and what carries the hall in the hours when it is not firm at all."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "Five failures, and not one of them is a redundancy count being written down wrongly. In every case the count was correct and the path was not.",
+   "cols": [
+    "What fails",
+    "What the drawing promised",
+    "What happens on the day",
+    "Who owns it"
+   ],
+   "rows": [
+    [
+     "**The shared {{static bypass}}**",
+     "Two independent paths, N+1 inside each, and a redundancy figure that was true of every unit on the diagram.",
+     "Both paths run through one bypass path and one output bus, because that is how the machines were paralleled. A fault there takes everything below it, and the arrangement above it was never wrong - it was measured at the wrong level.",
+     "Whoever drew the {{single-line diagram}}. It is found by tracing both paths back from one server until they meet, and it is proved - or not - only if the {{coordination study}} was run with the load on the inverter as well as on bypass."
+    ],
+    [
+     "**The {{automatic transfer switch}}**",
+     "Sources swapped without dropping a single server, on the strength of a device rated to do exactly that.",
+     "The transfer scheme sits in series with both sources by construction, so the one component that turns two paths into one supply is itself a single thing. It is also the component least often exercised: it works on the day it is commissioned and then waits years for its second real transfer.",
+     "The electrical designer specifies it and the commissioning agent is the only person who ever sees it operate on purpose. After handover it belongs to whoever schedules - or quietly stops scheduling - the periodic transfer test."
+    ],
+    [
+     "**Human error during {{commissioning}}**",
+     "A plant proved end to end, failed on purpose under full artificial load, with every redundant path observed taking over.",
+     "Commissioning is the longest single item on the programme and it is last, so it absorbs every slip upstream. What gets compressed is the top of the ladder - the deliberate-failure sequence - and what gets signed is a test run once, in daylight, by people who had been told which breaker was about to open.",
+     "Nobody on the engineering drawing. It belongs to the programme, which is exactly why it is missed: no equipment failed and no design was wrong, so the shortfall stays invisible until the first unplanned event."
+    ],
+    [
+     "**Supplies parked below their sweet spot**",
+     "A redundancy arrangement whose only cost was the spare equipment.",
+     "Two supplies sharing one load each sit at half load, below the peak of the {{efficiency curve}}, and the arrangement holds them there by construction. A hall that fills over two or three years compounds it: a third of design load means everything runs near the bottom of the curve for years, and the watts are lost every hour of every one of them.",
+     "Whoever wrote the redundancy specification; paid for by operations forever. It is why granular redundancy - more units, each smaller - is an efficiency argument as much as an availability one."
+    ],
+    [
+     "**The wake-up latency of {{cold redundancy}}**",
+     "A spare that is present, and an efficiency figure better than the sharing arrangement's.",
+     "The spare was in standby precisely so the active unit could run near its optimum, which means it has to come up before it can carry anything. The trade bought watts and sold time, and the time is spent at the worst possible instant - the one in which the active unit failed.",
+     "The firmware policy, usually set fleet-wide and rarely revisited per site. Whether the trade is sound depends entirely on what bridges the gap underneath it, which is a question about the store rather than about the supplies."
+    ]
+   ],
+   "note": "**One sentence runs through all five: the number on the drawing was true and the path was not.** Each is a case where a correct redundancy count was measured at one level while the thing that actually failed sat at another - a shared bus, a series device, a compressed test, a curve, a latency. **The habit that catches every one of them is the habit the first section opened with: trace, do not count.** Follow both supplies of one machine backwards until they meet, and write down what you find at the meeting point. That component, and not the arrangement above it, is the availability of everything below.",
+   "sales": "Four of the five are invisible in a specification and visible in the operator's own test records, which is why the most useful question in this room is about the last integrated test rather than about the design. It is also a question that does not sound like a pitch: whatever answer comes back names the gap the plant is bridging today, and something has to bridge it."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is \"we are N+1\" not a specification?",
+     "a": "Because N+1 names an arrangement, not a level. A spare module inside one frame, a spare frame inside one system, a spare system and a spare path are all correctly written N+1, and they differ by roughly an order of magnitude in price and by an entire class of failure. The claim only means something once the noun after it is supplied."
+    },
+    {
+     "q": "What does 2N protect against that N+1 does not?",
+     "a": "The loss of an entire path - a whole feed, a whole lineup of switchgear, a whole electrical room - rather than the loss of one unit inside a path. N+1 covers a unit failing or being worked on; it does nothing about the bus, breaker or frame that every one of those units shares."
+    },
+    {
+     "q": "What is a catcher or reserve-bus arrangement buying, and what is it concentrating?",
+     "a": "It buys most of the availability of a duplicated design for roughly the cost of one extra system in total, by standing a single spare behind several blocks and switching it onto whichever one loses its supply. What it concentrates is the spare and its switching: both are now shared, so both become things that must not fail."
+    },
+    {
+     "q": "How much downtime does each extra nine remove?",
+     "a": "Nine tenths of whatever was left. Three nines allows about eight and three-quarter hours a year, four nines under an hour, five nines about five minutes and six nines about thirty seconds. The allowance divides by ten at every step; the cost of holding it does not."
+    },
+    {
+     "q": "What is concurrent maintainability, and why do leases care about it?",
+     "a": "It is the property that any single component can be taken out of service for planned work without dropping the critical load - a question about topology rather than about equipment quality. Leases care because most of a facility's downtime is planned, so a tenant who cannot be taken down for someone else's maintenance window has to have that written into the contract."
+    },
+    {
+     "q": "Why is the last level of commissioning both the one that matters most and the one most likely to be cut?",
+     "a": "It is the only stage at which the whole plant is loaded artificially and then failed on purpose, so it is where redundancy stops being a diagram and becomes an observed behaviour. It is cut because it sits at the very end of the programme and therefore absorbs every delay upstream of it."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A provider says the hall is 2N. Tracing the single line, you find both UPS systems parallel onto one output bus ahead of the distribution boards. What have they actually bought?",
+     "c": [
+      "Redundancy down to the shared bus, and a single point of failure below it",
+      "2N, since both systems are complete and independent of each other",
+      "N+1, because the second system is acting as the spare",
+      "A fault-tolerant design, because any single equipment failure is survived"
+     ],
+     "a": 0,
+     "why": "The arrangement above the bus genuinely is duplicated and the claim is not a lie - it is measured at the wrong level. Everything downstream of the point where two paths first touch has the availability of that touching point, not of the arrangement above it. It is not 2N as the load experiences it, and it is not N+1 either, because the second system is not a spare sharing work with the first. No fault-tolerant rating follows from a topology with a single shared element in the critical path, which is precisely what the tracing exercise exists to find."
+    },
+    {
+     "q": "A workload moves from one facility rated at five nines to three ordinary buildings in separate failure domains, with software routing around any one of them. What has changed about the reliability budget?",
+     "c": [
+      "It moved from the facility to the fleet, and is now bought with routing rather than with equipment",
+      "It fell, because none of the three buildings is rated as highly as the one it left",
+      "It is unchanged, because the workload still needs the same number of nines",
+      "It tripled, because three buildings are three times as reliable as one"
+     ],
+     "a": 0,
+     "why": "Replicating a workload across independent failure domains buys availability at the fleet level, where an extra nine costs a routing rule instead of a second lineup of switchgear - which is exactly why an owner with a fleet can accept a lower target for any one building, buy firm power upstream and bank the capital. The lower per-building rating is the design rather than a regression. The budget is not unchanged: what it is spent on changed. And independent failure domains do not compose by multiplication - the point is that simultaneous failure is unlikely, not that reliability adds up."
+    },
+    {
+     "q": "Two server power supplies share one load, each running at about half its rating. What is the standing cost of that, and what is the usual answer to it?",
+     "c": [
+      "Both sit below the peak of their efficiency curve for the life of the plant; parking one in standby buys the watts back and pays in wake-up time",
+      "Both age at twice the rate, and the answer is a shorter maintenance interval",
+      "Neither can carry the load alone, and the answer is to add a third supply",
+      "The pair draws more current than one would, and the answer is a higher bus voltage"
+     ],
+     "a": 0,
+     "why": "Redundancy taxes efficiency: a unit at half load is off the top of its curve, and the arrangement holds it there permanently - worse in a hall that fills over years, where a third of design load parks everything near the bottom of the curve for a long time. Cold redundancy is the standard answer, and it is an explicit trade: the spare stands by so the active unit runs near its optimum, and it has to wake before it can carry anything. Load sharing does not double the ageing rate, a redundant pair is sized so that either unit alone can carry the load, and bus voltage is a conduction-loss argument belonging to a different lesson entirely."
+    },
+    {
+     "q": "An operator publishes its own top-grade availability standard and cites a benchmark that standard beats. What is the single most important thing to establish?",
+     "c": [
+      "Who verified it, and against whose definition of the benchmark",
+      "Whether the standard is numbered above the highest certified rung",
+      "Whether the buildings were designed before or after the standard was published",
+      "Whether every one of the operator's own halls meets it"
+     ],
+     "a": 0,
+     "why": "A self-declared standard is audited by nobody outside the company declaring it, which means it can change its own definitions - including the definition of the thing it is being measured against. One published guide to this practice manages, inside a single document, to report an industry expectation for the top certified rung and, separately, a materially smaller benchmark as the self-declaring operator frames that same rung. Neither figure is wrong in its own frame, and that is the problem. What a standard is numbered, when the buildings were designed and how consistently it is applied internally are all secondary to the two questions that make any claim comparable: who checked, and against what."
+    },
+    {
+     "q": "Commissioning has slipped to the end of a delayed programme and its schedule has been halved. Which part is most likely to be cut, and why does that matter more than the hours saved?",
+     "c": [
+      "The deliberate-failure sequence at the top of the ladder, because it is the only part that proves redundancy behaves rather than exists",
+      "The factory witness tests, because the equipment has already been delivered by then",
+      "The installation checks, because they duplicate the contractor's own inspections",
+      "The statutory fire and life-safety tests, because they are the least technical part"
+     ],
+     "a": 0,
+     "why": "The ladder runs from factory tests through installation checks and system-by-system proving to an integrated test in which the plant is loaded artificially and then failed on purpose. Only that last stage turns a redundancy diagram into an observed behaviour, and it is last, so a squeezed programme squeezes it. The earlier levels are largely spent by the time the squeeze arrives - factory tests happen before shipping and installation checks before energisation - and the statutory tests are held by authorities who do not work for the project and cannot be compressed by it at all, which is also why a fully commissioned building can still fail to be legally occupiable."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -37609,7 +38064,7 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the last ten metres from the rack inlet to the die, and the case for converting it all to DC once, early and high.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the vocabulary all of it is written, priced and proven in, the last ten metres from the rack inlet to the die, and the case for converting it all to DC once, early and high.",
  "group": "The AI Data-Center Wave",
  "updated": "2026-09-14",
  "lessons": [
@@ -37618,6 +38073,7 @@ function clTrackAidcGridToChip_() {
   "the-aidc-power-chain",
   "backup-generation",
   "the-ups-room",
+  "redundancy-by-the-numbers",
   "inside-the-rack",
   "the-800-vdc-shift"
  ],
@@ -37771,7 +38227,8 @@ function clLessons_() {
           clLessonTheUpsRoom_(),
           clLessonTheTransformerAndTheSubstation_(),
           clLessonWhoBuysStorage_(),
-          clLessonInsideTheRack_()];
+          clLessonInsideTheRack_(),
+          clLessonRedundancyByTheNumbers_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
