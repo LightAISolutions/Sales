@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.92r] — 2026-09-15 06:08:12 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run S2 session 7, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.29 — three figures refreshed in BOTH halves**, found by re-running all thirteen of the brief's own quoted measurements against the working tree before reproducing its prompt block. The repo CHANGELOG count moved `93 raw / 80 non-exempt` → **`94 raw / 80 non-exempt`** with "seven from its cap" → **"six"** (prose and prompt block); the prose half's version-to-bump-from moved `v05.91r` → **`v05.92r`**; and the deployment-counter line was split by provenance — **`Classroom 54/200, measured at v05.91r; Scraper 152/200, measured at v05.88r and unmoved since`** — in both halves. The section heading now carries *(counters refreshed at v05.92r)* per the §7.25 convention
+
+### Added
+
+- **`SESSION-CONTEXT.md`** — the v05.87r entry is dropped under the two-session cap, the v05.89r entry moves to `## Previous Sessions`, and the new `## Latest Session` records Phase 4 row 11 in full: the first firing of the row-10 deepening case, the overlapping-amendment roster trap, the fourth `reviewBy` outcome, the three written boundaries, the counter-provenance correction, the truncated-`git log` mistake, and the deliberate refusal to auto-reconstruct
+
+### Notes
+
+- **THE HANDOVER RECURSION FIRED A FOURTH TIME, ON A FOURTH CONSECUTIVE HANDOVER, AND IT SHOULD NOW BE RECORDED AS STRUCTURAL RATHER THAN AS AN INCIDENT.** v05.86r refreshed §7.27's counters and its own commit made §7.27's arithmetic stale; v05.87r corrected that and made it stale again; v05.89r/v05.90r corrected §7.28's and did the same; and here **v05.91r wrote §7.29 quoting a repo CHANGELOG of 93 raw, which this handover commit made 94 before anyone could read it.** Four firings on four consecutive handovers is not a run of oversights — **it is a property of the handover itself**: any commit that reproduces a brief also moves the numbers that brief quotes. The defence is unchanged and now four-times confirmed — **re-run every figure a brief quotes against the working tree immediately before the final push, not only the figures the commit was opened to fix**
+- **Eleven of the thirteen quoted figures agreed, and the two that did not were both this session's own doing** — which is the signature the defence predicts. Verified unchanged: repo `v05.91r`; Classroom GAS `v01.43g` in both `Classroom.gs` and the version file; Classroom page `v01.14w`; Scraper `v02.07g`; Profiler `v01.39g`; content checker **0 errors / 0 warnings at 41 lessons / 8 tracks / 142 gate cases**; the guidance-module assertion at **15** against a `guidanceDocs_()` that returns exactly **15**; `--strict` with no structural findings, **28 stale pins** and **1 review item**; `--selftest` **13 fixtures / 0 failures**; `--check` at **10 due** with `in-hall-power` first and differing in both sections; the `in-hall-power` segment at **27 members (10 · 7 · 10)**, position 5; `Classroomgs.changelog.md` 43 raw / 38 non-exempt; `Scrapergs.changelog.md` 28 raw / 26 non-exempt
+- **A COUNTER'S PROVENANCE IS PART OF THE FIGURE, NOT METADATA ABOUT IT — and this is the second-order form of the v05.88r correction.** §7.29 as first written read *"Classroom 54/200 and Scraper 152/200, MEASURED at v05.91r"*. Classroom's 54/200 was measured at v05.91r. **Scraper's 152/200 was measured at v05.88r and merely carried forward**, because its step never fired at v05.91r and a step that never fires consumes none and logs nothing. **Both numbers were right and one attribution was wrong** — and an attribution is exactly what the next session reconciles an interval against, which is how v05.88r found the missing Scraper consumption in the first place. A forecast anchored on a mis-dated measurement inherits the error silently. Both halves now carry the split provenance
+- **`Profilerhtml.changelog.md` is one section from its own trigger** — **49 raw / 49 non-exempt** against a cap of 50, with no section dated today, so nothing is exempt and the next Profiler page edit arms it. It is now the closest of any changelog in the repo to rotating, ahead of `Classroomgs.changelog.md` at 43/50 and the repo CHANGELOG at 94/100. Recorded in `SESSION-CONTEXT.md`; not this session's to touch, since nothing here edits Profiler
+- **No rotation.** 93 raw / 80 non-exempt before, **94 raw / 80 non-exempt** after, fourteen sections dated 2026-09-15 on the EST clock, against a trigger of 100 — **six from the cap, the closest it has ever been**. Both clocks read 2026-09-15 (18:02 EST / 22:02 UTC), two hours short of the divergence window. Nothing in any deployed surface moved — no `.gs` and no `.html` — so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.43g / v01.14w** and Scraper at **v02.07g**
 
 ## [v05.91r] — 2026-09-15 05:11:51 AM EST
 
