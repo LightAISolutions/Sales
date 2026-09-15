@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.94r] — 2026-09-15 07:18:17 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 12, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.30** — the repo-CHANGELOG figures refreshed in **both halves** (prose paragraphs and the quoted paste-in prompt block): **95 raw / 80 non-exempt → 96 raw / 80 non-exempt**, fifteen same-day sections → **sixteen**, and **"five from its cap" → "four"**. The version to bump from moves **v05.93r → v05.94r**. The heading now carries *(counters refreshed at v05.94r)*
+
+### Changed
+
+- **`SESSION-CONTEXT.md`** — the v05.89r entry drops under the two-session cap, the v05.92r entry moves to `## Previous Sessions`, and the new `## Latest Session` records S2 session 7 in full
+
+### Notes
+
+- **THE HANDOVER RECURSION FIRED A FIFTH TIME, and this push produced the refinement that explains its shape.** v05.86r, v05.87r, v05.89r/v05.90r and v05.92r each recorded it. v05.93r wrote §7.30 **inside the work commit** and re-ran every quoted figure against the working tree minutes before pushing — and **every figure held through that push**. It went stale only here, on the handover, which adds a CHANGELOG section of its own. **So the recursion fires on the SECOND push, not the first**: writing the brief in the work commit is not a defence by itself, and a session that writes its brief there and then hands over must re-run the figures **again** before the handover push. Both halves now carry the refreshed numbers, and §7.30's own text records the refinement for the next run
+- **Every other figure §7.30 quotes was re-measured and held.** Unchanged: Classroom **v01.44g**, Scraper **v02.08g**, Profiler v01.39g, page v01.14w; the content checker at **0 errors / 0 warnings at 41 lessons / 8 tracks / 142 gate cases** with the module assertion at **16** against a `guidanceDocs_()` returning 16; `--strict` with 28 stale pins and **2 items due for review**; `--selftest` 13/0; `--check` at **9 due**; `Classroomgs.changelog.md` 44 raw / 38 non-exempt; `Scrapergs.changelog.md` 29 raw / 26 non-exempt; and the deployment counters **Classroom 55/200 and Scraper 153/200, both measured at v05.93r** — a step that never fires consumes none and logs nothing, and this push puts no `.gs` in the merge diff
+- **The EST/UTC trap did not fire** — both clocks read 2026-09-15 at the time of writing, about forty minutes ahead of the 20:00 EST divergence window
+- Nothing in a deployed surface moved, so **no GAS bump, no page bump and no public changelog entry**
 
 ## [v05.93r] — 2026-09-15 06:56:26 PM EST
 
