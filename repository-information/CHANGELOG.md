@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 114/100`
+`Sections: 115/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.75r] — 2026-09-14 09:35:03 PM EST
+
+> **Prompt:** "Give me a prompt to paste into a new Opus 5 xhigh session to run Ohase 4 row 8, then remember session."
+
+**A handover commit that turns one forecast into a measurement.** §7.22 was written inside the v05.74r commit, so its deployment counter could only forecast what that push's own deploy would do. The deploy has since landed and the forecast was right — the paragraph now carries the measured line instead, which is the same correction v05.73r made for §7.21.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.22 — counters refreshed to the post-push state, body and prompt together.** The deployment counter moves **from a forecast to a measurement**: v05.74r's workflow reported `Classroom deploy confirmed (GET): Updated to v01.36g (deployment 47) | 47/200` **on the first GET leg with no `POLL` line**, and **no `?op=deploy` probe was issued at all** because Pages and the job log agreed — the §7.19 order working correctly on its fourth consecutive use. Scraper landed at **149/200** in the same run. The repo CHANGELOG figures move **114 raw / sixteen dated today → 115 / seventeen**, with the 2026-09-15 rotation leaving **97** rather than 96, and the repo version the next session bumps from moves to **v05.75r**. The refresh is dated in place so a reader can see which half was written when.
+- **`repository-information/SESSION-CONTEXT.md` — Remember Session.** The v05.73r entry moves to `## Previous Sessions` and the v05.71r entry is dropped under the two-session cap. The new Latest Session records S2 session 3 in full: the `reviewBy` finding in its stronger form (the sort returns **nothing at all** — 142 policy entries, 96 dated, none in the future), the three rejected nearer candidates, the Scraper-seed answer **and the fact that its first draft was wrong**, the four-group reading of nineteen incumbents, the EST-versus-UTC clock finding that decided three rotations, and the two render-harness corrections that are not in the recorded recipe.
+
+### Notes
+
+- **Nothing in the Classroom or Scraper surface moved.** This push touches two plan and context documents, `README.md`, `repository.version.txt` and this file — **no `.gs` and no `.html`**, so there is no GAS or page bump and no entry in any public changelog. Classroom stays at **v01.36g** / **v01.14w** and Scraper at **v02.04g**; the content-checker baseline stays **0 errors / 0 warnings at 37 lessons / 8 tracks / 142 gate cases**, and `build-classroom-segments.py --check` still reports **2 due**, both Phase 4 row 7's residue.
+- **A structural false positive in the stop hook, diagnosed rather than worked around.** At the close of v05.74r the hook reported "1 unpushed commit". It was not one: `f9ebfdf` is an ancestor of `origin/main` and `rev-list origin/main..HEAD` was 0. The hook resolves `upstream` to `origin/$current_branch` when that ref *resolves locally* — and `origin/claude/hopeful-gates-1lzznw` still resolved as a **stale remote-tracking ref**, because `git fetch origin main` is refspec-limited and prunes nothing outside `main`. The commit it counted was **the workflow's own `Update last-processed-commit.sha … [skip ci]`**, already on the remote, pulled in by `git pull --ff-only origin main`. **`git fetch --prune origin` clears it** and the upstream then falls back to `origin/HEAD`. Re-pushing would have been the wrong fix — it would queue a second workflow run on already-merged commits, which the flow's own stale-branch guard exists to reject. This will recur on every session that follows the deployment flow; the one-line inoculation is to make the post-merge sync `git fetch --prune origin`.
+- **A live branch was nearly mistaken for a stale ref.** `origin/claude/adoring-brown-mvddj2` survived `--prune`; `git ls-remote` shows it **exists on the remote and is not merged into main** — a real branch from a different session. Left untouched.
+- **Rotation checked on the EST clock, not the UTC one.** 115 sections with this entry, **17 dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** `Scrapergs.changelog.md` stays **51 raw / 49 non-exempt** and remains armed for the next session to touch `Scraper.gs` on a later EST day; `Classroomgs.changelog.md` 36 / 29; `Profilerhtml.changelog.md` 49 / 49.
 
 ## [v05.74r] — 2026-09-14 08:22:55 PM EST
 
