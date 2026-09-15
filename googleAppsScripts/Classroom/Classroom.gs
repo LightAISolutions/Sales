@@ -1,4 +1,4 @@
-var VERSION = "v01.42g";
+var VERSION = "v01.43g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -39140,6 +39140,426 @@ function clLessonHowAStorageProjectHappens_() {
  ]
 };
 }
+
+function clLessonContractsAndRevenue_() {
+  return {
+ "schemaVersion": 1,
+ "id": "contracts-and-revenue",
+ "type": "module",
+ "title": "Who Carries Which Risk",
+ "short": "PPA, tolling, take-or-pay, capacity, merchant, hedge — the instruments a storage or compute asset is financed on, and which party each one hands the risk to.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:constellation-energy",
+    "date": "2026-08-21",
+    "note": "the four instrument foundations this lesson is built on - merchant sale as the absence of a contract and the wholesale auction that clears it; capacity markets as payment for the promise of availability and the missing-money problem that explains why they exist; the restart arithmetic of 800-plus megawatts of firm clean power in three to four years against a decade for a new build, with inherited interconnection rights as its hidden advantage; and attribute markets as a second product cleaved off every clean megawatt-hour, whose value hierarchy hourly accounting inverts"
+   },
+   {
+    "kind": "public",
+    "ref": "study:coreweave",
+    "date": "2026-08-21",
+    "note": "the economics of committed capacity - why a high-fixed-cost fleet lives or dies on utilisation and empty capacity is pure loss, how a take-or-pay converts a spot-rental business into a stream a lender can underwrite, the four fine-print tests that decide whether committed means committed (term against collateral life, payment start against delivery, credit support, walk events), and concentration measured in backlog share as well as revenue share; plus the asset-backed structure behind it, the ring-fenced vehicle, the advance rate and the covenants that police fast-depreciating collateral"
+   },
+   {
+    "kind": "public",
+    "ref": "study:core-scientific",
+    "date": "2026-08-21",
+    "note": "the anatomy of a take-or-pay colocation contract line by line - a monthly base licence fee per megawatt with a 2.5 to 3 per cent annual escalator over twelve to fifteen years paid whether or not the capacity is used, customer-funded fit-out of one to one and a half million dollars per megawatt booked as deferred revenue and credited back against a capped share of fees, power passed through at no markup so the margin lives entirely in the licence fee, and dollars per megawatt-year as the one basis on which two such contracts can be compared"
+   },
+   {
+    "kind": "public",
+    "ref": "study:amazon",
+    "date": "2026-08-21",
+    "note": "how a corporate power purchase agreement actually works - the ten-to-twenty-year commitment a developer needs before a bank will finance construction, the virtual form in which no electrons flow and the two parties settle the difference against a strike price, the certificates the buyer keeps and what they let it claim, and additionality as the quality test; plus the co-location cost-shifting objection and why the durable answer was to move in front of the meter and pay the allocated grid charges"
+   },
+   {
+    "kind": "public",
+    "ref": "study:google",
+    "date": "2026-08-21",
+    "note": "what hourly matching changes about a procurement - annual matching says nothing about timing while twenty-four-seven accounting asks whether a contracted carbon-free megawatt-hour was generated on the same grid in the same hour, the marginal hour costing many times the average, and the consequence that the accounting choice dictates the shopping list, which is why hourly commitments are what create markets for storage and clean firm power; plus a first-of-a-kind offtake read as a market signal rather than only a power deal"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:plus-power",
+    "date": "2026-09-06",
+    "note": "tolling as a franchise rather than as a contract form - five twenty-year utility tolls and energy storage agreements across four counterparties won at a cadence of roughly one new tolling market a year, run alongside a seasoned seven-hundred-megawatt merchant fleet in the same company, which is the corpus's cleanest demonstration that the toll and the merchant sale are two businesses rather than two prices; and the tax-equity and multi-bank syndicates whose diligence the tolled projects are financed through"
+   },
+   {
+    "kind": "public",
+    "ref": "study:talen-energy",
+    "date": "2026-09-05",
+    "note": "what a merchant generator actually sells, split into energy, capacity and ancillary services and the warning that confusing them is the commonest newcomer error; the capacity revenue series and the clearing prices behind it, which is the lesson's evidence that an auction nobody negotiates can transform a generator's fortunes; the behind-the-meter against front-of-meter comparison row by row; the regulator's rejection read correctly as a loss on burden of proof rather than a ruling that co-location is unlawful; the commercial workaround that never waited for the regulatory track; the reliability-must-run contract as payment for not closing; and the shortfall make-whole estimated at fifty to sixty-five per cent of full impact and capped"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vistra",
+    "date": "2026-09-05",
+    "note": "accreditation rather than nameplate as what a capacity auction actually buys, with unforced capacity, the forced outage rate and the effective-load-carrying-capability arithmetic that makes a megawatt of one technology comparable with a megawatt of another; the consequence that reliability is revenue and that availability equipment has a return computable directly from accreditation gain times clearing price; and the five-row table of what a data centre can actually buy from an operating fleet, whose last row - new capacity attached to an existing site - is the one column that is unambiguously additional"
+   },
+   {
+    "kind": "public",
+    "ref": "study:nrg-energy",
+    "date": "2026-09-05",
+    "note": "the retail book read as a short position and shape rather than volume as the retailer's real problem, which is where this lesson's definition of shape comes from; the two ways to sell a data centre power set against each other as sell-from-the-fleet versus build-new-the-customer-underwrites, with additionality as the test that separates them; and the signed-announced-reserved vocabulary, in which one company's own figures run from four hundred and forty-five contracted megawatts to sixty-five hundred megawatts of stated potential and every step between them is a different verb"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hut-8",
+    "date": "2026-09-06",
+    "note": "ring-fencing as the mechanism by which a pre-revenue building borrows at investment grade - the rating depends on the rent rather than on the borrower, with loan-to-cost, the debt-service coverage covenant and the completion guarantee as the three terms that do the work; the price of credit measured across three landlords buying the same backstop from the same guarantor for the same tenant and paying nothing, about five and a half per cent of themselves and about fourteen per cent, against an unenhanced comparison priced roughly three hundred and seventy basis points wider; and the rule that the counterparty of record, the credit support and the end user are frequently three different companies"
+   },
+   {
+    "kind": "public",
+    "ref": "study:cipher-mining",
+    "date": "2026-09-06",
+    "note": "curtailment sold as a product and read correctly as being short a call option on power for a premium, together with the finding that the flexibility a grid pays for is exactly what a compute tenant will not accept - so converting a flexible load to a firm-power obligation surrenders a revenue line that announcements rarely quantify; and the warning, kept here as a pointer rather than taught, that the dollar figures attached to these leases circulate under four different names that differ by more than an order of magnitude"
+   },
+   {
+    "kind": "public",
+    "ref": "study:excelsior-energy-capital",
+    "date": "2026-09-05",
+    "note": "the reservation agreement as an instrument in its own right - manufacturing volume and slots reserved over several years at agreed terms with purchase orders drawn down project by project, signed for supply certainty, for the domestic-content bonus and for insulation from tariff and foreign-entity rules - together with the trap that a reservation is only as real as its draw-down; and the green tariff structure in which a regulated utility signs the power purchase agreement and passes energy and attributes through to a corporate customer that is not the offtaker at all"
+   },
+   {
+    "kind": "public",
+    "ref": "study:plus-power",
+    "date": "2026-09-07",
+    "note": "the fleet view of contracting - a pipeline held as a portfolio of options in which the discipline is killing them early, and the reading that the scarcest input behind any of these instruments is dated queue time rather than money; plus the observation that what a network can force an owner to change is a short list and never the cells, which is why a contract signed against one grid's requirements is not portable to another"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary this lesson leans on rather than redefining - power purchase agreement, tolling agreement, offtake and offtaker, merchant, capacity market, unforced capacity, forced outage rate, effective load-carrying capability, take-or-pay, contracted revenue, reliability must-run, additionality, renewable energy certificate, hourly matching, clean firm power, behind-the-meter and front-of-meter, green tariff, reservation agreement, the investment-tax-credit and domestic-content vocabulary, curtailment, demand response, ancillary services, the energy-only market, dispatch rights, critical IT load and the debt-service coverage ratio"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "11",
+   "v": "instruments, two questions",
+   "sub": "Every contract below answers the same pair — who carries price risk, and who carries volume risk. Learn the pair rather than the list and you can read a contract form you have never seen before, including one invented next year."
+  },
+  {
+   "k": "5.5x",
+   "v": "capacity price, one auction",
+   "sub": "One eastern generator's capacity revenue went from USD 192m in 2024 to USD 485m in 2025 and USD 444m in the first half of 2026 alone. Nothing about the plants changed. The clearing price went USD 49.49 per megawatt-day, then USD 269.92, USD 329.17, USD 333.44 and USD 325.00."
+  },
+  {
+   "k": "~375 bp",
+   "v": "the price of a tenant's credit",
+   "sub": "Three landlords bought the same backstop from the same guarantor for the same tenant and paid nothing, about 5.4 per cent of themselves, and about 14 per cent. A fourth, behind a single unrated tenant with no backstop, issued at 9.875 per cent against the best-enhanced 6.192 per cent."
+  },
+  {
+   "k": "50-65%",
+   "v": "of a take-or-pay actually paid",
+   "sub": "One disclosed shortfall make-whole is estimated to cover fifty to sixty-five per cent of the full impact if the customer draws nothing, and it is capped. A take-or-pay is not the same as being paid in full, and the cap is where the risk transfer stops."
+  }
+ ],
+ "glossary": [
+  {
+   "t": "price risk",
+   "d": "Exposure to movement in the price per unit. A contract that fixes the price moves this exposure from one party to the other; it never removes it, which is why both sides of a long fixed-price deal believe they won."
+  },
+  {
+   "t": "volume risk",
+   "d": "Exposure to how much is actually taken, or actually produced. A take-or-pay moves it to the buyer; a market sale leaves it with the seller; a financial swap settles on what the project generated rather than on what the buyer consumed, which puts it back on the buyer from the other direction."
+  },
+  {
+   "t": "strike price",
+   "d": "The fixed reference price in a financial swap. The project sells its output into the wholesale market at whatever that market pays, and the two parties settle the difference between the market price and this number."
+  },
+  {
+   "t": "make-whole",
+   "d": "The payment a contract owes when a counterparty does not take what it committed to. Usually an estimate of the seller's loss rather than the full contract value, and usually capped."
+  },
+  {
+   "t": "shape",
+   "d": "The hour-by-hour profile of a load or of a generator's output. A flat block of energy does not cover a peaky load, and the mismatch between the block bought and the shape served is a cost discovered after the fact."
+  },
+  {
+   "t": "energy storage agreement",
+   "d": "A utility contract for a battery's capacity and dispatch rights — the tolling structure written in a regulated procurement's own language, which is why the same asset can be described as tolled in one filing and contracted in another."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-instruments",
+   "title": "Eleven instruments, and the two questions that sort them",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "A contract does not create value out of nothing. It moves risk from the party that cannot bear it to the party that will be paid to. So every form below is read the same way: *who pays for what*, then the two questions that actually decide the price — **who carries {{price risk}}** and **who carries {{volume risk}}**. The last column is the one a seller cares about, because a project that cannot be financed does not buy anything.",
+   "cols": [
+    "Instrument",
+    "Who pays for what",
+    "Who carries price risk",
+    "Who carries volume risk",
+    "Who finances on it"
+   ],
+   "rows": [
+    [
+     "**{{Merchant}} sale**",
+     "Nobody pays anything in advance. The asset offers into the wholesale market and is paid the clearing price for what it actually delivered, settled in five-minute intervals.",
+     "**The owner, entirely.** Prices swing with gas, weather and scarcity, bounded only by an administrative {{offer cap}}.",
+     "**The owner.** Nothing obliges anyone to take the output.",
+     "**Equity, mostly.** A lender will size debt against a forecast it does not believe, so the debt is small relative to the asset — which is the whole reason the other ten rows exist."
+    ],
+    [
+     "**Physical {{PPA}}, ten to twenty years**",
+     "The buyer pays an agreed price per megawatt-hour on a stated escalation schedule and takes delivery through the grid.",
+     "**Both, in opposite directions.** Above the contract price the buyer is winning; below it the seller is. Each gave up an upside to be rid of a downside.",
+     "**Whichever party the shape clause names** — and this is the clause newcomers skip. A contract for *what the project generates* leaves it with the buyer; a contract for a firm block leaves it with the seller.",
+     "**The developer.** This is the document a bank underwrites, and the reason a creditworthy long-term buyer can get a premium price for signing one."
+    ],
+    [
+     "**{{Virtual PPA}} — a financial swap**",
+     "No electrons reach the buyer at all. The project sells into the wholesale market; the two parties settle the difference against a {{strike price}}, and the buyer keeps the certificates.",
+     "**Shared by construction.** The swap *is* the price risk, transferred in exchange for a fixed number.",
+     "**The buyer**, and by a route that surprises people: settlement follows what the project generated, not what the buyer consumed. A windless quarter is the buyer's problem even though the buyer used the same electricity as ever.",
+     "**The developer**, provided the buyer's credit holds — the contract is only as good as the counterparty behind it, because there is no physical asset to repossess."
+    ],
+    [
+     "**{{Tolling agreement}} / {{energy storage agreement}}**",
+     "The offtaker pays a fixed fee for the right to dispatch the asset, and supplies or pays for the energy it charges with. The owner operates a machine somebody else decides how to run.",
+     "**The offtaker, completely.** The owner never sees a market price, which is exactly what it is selling.",
+     "**The offtaker** — it chooses the cycles. What stays with the owner is *availability*: the fee is reduced when the asset is not there to be called.",
+     "**The most financeable form standalone storage has.** A twenty-year toll from an {{investment grade}} utility produces bond-like cash flow, which is why one developer in this corpus has won roughly one new tolling counterparty a year and finances against them through tax-equity syndicates."
+    ],
+    [
+     "**{{Capacity market}} payment**",
+     "The grid operator pays per megawatt-day for *being available* on a future delivery year, bought years ahead at auction, whether or not the asset ever runs.",
+     "**The owner** — the price is set by an auction nobody negotiates, and it has moved by a factor of five in a single year.",
+     "**Nobody, because the product is not energy.** What replaces volume risk is a performance obligation: fail to show up when called and the payment is clawed back.",
+     "**Partly.** It is known years before delivery, so lenders count it — but it is the most policy-exposed money in the power business, because the cost lands on every consumer's bill."
+    ],
+    [
+     "**{{Take-or-pay}} colocation lease**",
+     "A monthly base licence fee per megawatt with a 2.5 to 3 per cent annual {{escalator}}, for twelve to fifteen years, paid used or not. Power passes through at no markup, and the tenant often advances one to one and a half million dollars per megawatt toward the build.",
+     "**The landlord has none on power.** Pass-through removes it, which is why the margin lives entirely in the licence fee.",
+     "**The tenant.** That is what take-or-pay means, and it is what converts a building into collateral.",
+     "**The landlord** — this rent is what an investment-grade bond gets written against, even on a campus that has not delivered a megawatt."
+    ],
+    [
+     "**Take-or-pay compute contract**",
+     "The customer reserves capacity for a term and pays whether it uses it — the same instrument one layer up the stack, with chips as the asset instead of a building.",
+     "**The customer**, for the term.",
+     "**The customer.**",
+     "**The seller**, through a ring-fenced vehicle lending against the contracted rental stream. The test that decides whether it works is whether the contract outlives the collateral, because a chip has no resale reference price."
+    ],
+    [
+     "**{{Reliability must-run}}**",
+     "A plant that filed to retire is required to keep running, at a fixed rate per megawatt-day plus reimbursement of fuel and variable cost.",
+     "**Neither party** — the payment is cost-of-service and does not move with market prices.",
+     "**Neither.** These units are not capacity resources, so they carry no availability obligation and no performance penalty.",
+     "**Nothing new gets built on it.** Its consequence for a seller is different: the plant becomes a captive cost-of-service buyer of parts and services for a defined number of years, with a regulator watching the spend."
+    ],
+    [
+     "**{{Green tariff}}**",
+     "The corporate customer commits to a special utility rate schedule; the utility signs the power purchase agreement with the project and passes the energy and the attributes through.",
+     "**The customer**, at the tariff price the commission approved.",
+     "**The utility**, which stands between the project and the customer — and whose other customers are shielded from the cost by design.",
+     "**The developer** — but note whose credit was underwritten. It is the utility's, not the hyperscaler's, which is why an owner on a green tariff cannot take that relationship anywhere the tariff does not exist."
+    ],
+    [
+     "**Attribute sale — {{renewable energy certificate}} or equivalent**",
+     "The buyer pays separately for the certificate proving a clean megawatt-hour was generated. The electricity itself is sold to somebody else.",
+     "**The buyer**, in a market that reprices whenever the accounting standard moves.",
+     "**The seller** — no certificate exists for an hour the plant did not generate.",
+     "**Rarely on its own.** It is a second revenue stream and, for firm clean generation under hourly accounting, a moat: it charges for exactly what variable renewables cannot supply."
+    ],
+    [
+     "**{{Reservation agreement}} — a supply framework**",
+     "Nobody pays for power at all. A buyer reserves manufacturing volume and delivery slots over several years at agreed terms; purchase orders are drawn down project by project as each reaches financing.",
+     "**Neither, yet.** It is an option on supply, taken for supply certainty, for the {{domestic content bonus}} and for insulation from tariff and foreign-entity rules.",
+     "**The supplier keeps it** until a draw-down actually happens.",
+     "**Nothing is financed on it**, and that is the trap. A reservation is only as real as its draw-down — read a gigawatt-hour headline by asking which project drew on it, and when."
+    ]
+   ],
+   "note": "**Read down the two middle columns before you read anything else.** Nine of the eleven rows are a trade of one for the other, and the two that are not — the must-run and the reservation — are the two that finance nothing. That is not a coincidence: an instrument earns its financing by taking a risk off somebody, and a contract that takes no risk off anybody is a letter of intent with better typesetting.",
+   "sales": "Ask which row a prospect's project sits in before you quote anything. A tolled project is buying availability and will pay for evidence of it; a merchant project is buying optionality and will not."
+  },
+  {
+   "id": "capacity-markets",
+   "title": "Being paid to exist — and the fight over how much you are worth",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "An energy market pays only for megawatt-hours actually generated. A grid, however, does not need average hours — it needs to survive the worst hour of the year, which may arrive once a decade. A plant that exists for that hour and runs for almost none of the others earns nothing in an energy-only design and retires. Economists call the gap the missing money, and a {{capacity market}} is the instrument built to close it: a payment for the promise of availability, made whether or not the resource is ever called.",
+    "The mechanism is an auction held years before delivery. The operator forecasts peak demand plus a reserve margin, generators offer their megawatts, the auction clears at one price, and every resource that committed is paid that price per megawatt-day for the delivery year. Two consequences follow immediately and neither is obvious. The first is that the revenue is known years ahead, which is why a lender will count it. The second is that it is set by an auction nobody negotiates — so a generator's fortunes can be transformed by an outcome it had no part in.",
+    "The corpus's worked example is stark. One eastern generator collected USD 192 million of capacity revenue in 2024, USD 485 million in 2025, and USD 444 million in the first half of 2026 alone. Nothing about the plants changed. What changed was the clearing price, which went from **USD 49.49** per megawatt-day for the 2024/2025 delivery year to **USD 269.92**, then **USD 329.17**, **USD 333.44** and **USD 325.00**. A different company in the same market has 10,924 MW cleared at that last figure for the 2028/2029 year — revenue locked in three years before the electricity exists.",
+    "**Now the fight, which is where the money actually is.** A capacity auction does not buy nameplate megawatts. It buys {{unforced capacity}} — a plant's rating discounted for how often it is expected to be unavailable, derived from its {{forced outage rate}}. For a battery or a solar farm the same arithmetic runs under the name {{ELCC}}: a four-hour battery is credited well below its nameplate because it cannot cover a long evening peak alone, while a gas plant is credited close to nameplate because it can run as long as the fuel lasts. Accreditation is the mechanism that makes a megawatt of one technology comparable with a megawatt of another, and it is negotiated in rulemakings rather than in contracts.",
+    "For an owner this has a consequence worth stating as a sentence: **reliability is revenue.** Raising a unit's availability raises its accredited capacity, which raises the megawatts it can sell, at a clearing price it never had to negotiate. When an operator quotes commercial availability of ninety-seven per cent or better through a heatwave, it is making a financial statement rather than an operational boast.",
+    "That sentence also sorts a category of spending a seller should understand before pitching into it. Equipment that raises availability — better instrumentation, faster return from an outage, condition monitoring — has a return that can be computed directly as the accreditation gain multiplied by the clearing price. Equipment that only raises efficiency has to compete for capital against that arithmetic, in a market where the clearing price has recently been the largest number on the page.",
+    "**And the politics, because capacity revenue is the most policy-exposed money in the business.** When demand surges the auction clears high and the cost lands on every consumer's bill; windfalls to existing generators become legislative targets; and three consecutive auctions clearing at an administrative price cap is a political event rather than a market one. A revenue line that a legislature can reopen is not the same kind of asset as a signed twenty-year contract, however similar the two look in a spreadsheet.",
+    "One boundary to keep. Not every market has this instrument at all — an {{energy-only market}} has no capacity product, nobody is obliged to build, and the investment signal is scarcity pricing up to a cap. What that does to a regulated seller's route to market is *The Regulated Machine*'s subject, and it is taught there rather than here. What matters at this point in the track is narrower: in a capacity market you are selling availability, and availability is a number somebody else calculates."
+   ],
+   "sales": "In a capacity market, an availability argument outranks an efficiency argument and can be priced. Bring the accreditation arithmetic, not the datasheet."
+  },
+  {
+   "id": "take-or-pay",
+   "title": "Committed capacity — from a colocation lease to a compute contract",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "A high-fixed-cost business lives or dies on utilisation. A building or a fleet of chips costs nearly the same to own idle as busy, so empty capacity is not lost margin — it is pure loss. That single fact produces the same contract in industries that otherwise have nothing in common: airlines oversell seats, pipelines demand shipper commitments before laying pipe, and data-centre landlords write {{take-or-pay}} leases. The instrument shifts utilisation risk to the buyer, and in doing so converts a rental business into a stream a lender can underwrite.",
+    "**The colocation form, line by line.** A monthly base licence fee per megawatt, escalating about 2.5 to 3 per cent a year, over twelve to fifteen years with renewal options, payable whether or not the tenant uses the capacity. Power costs pass through at no markup. The tenant advances roughly one to one and a half million dollars per megawatt toward construction, booked as deferred revenue and credited back against a capped share of monthly fees — so the tenant co-finances the building it is about to rent. The landlord's margin lives entirely in the licence fee, which is why two such contracts are only comparable in **dollars per megawatt-year**: total value divided by megawatts divided by years, the rent-per-square-foot of this industry.",
+    "The compute form is the same instrument one layer up the stack, with chips as the asset. A customer reserves capacity for a term and pays whether it uses it; the seller borrows against the contracted rental stream inside a ring-fenced vehicle. The difference that matters is the collateral: there is no established resale reference for used accelerators, so the lender underwrites the contract rather than the hardware and demands that principal be repaid **within the contract term**, before residual value is ever tested.",
+    "**Four questions decide whether committed means committed**, and they are the questions to ask of any take-or-pay in either form. Does the term outlive the collateral, or does the asset age out before the contract ends? Does payment start on the contract date or on the delivery date, and who carries the gap? What credit support stands behind the obligation? And what events let the customer walk?",
+    "The fourth question is where the instrument is weakest, and the corpus has the number. One disclosed shortfall {{make-whole}} is estimated to cover **fifty to sixty-five per cent** of the full impact if the customer draws nothing — and it is capped. A take-or-pay is therefore not a promise to be paid in full; it is a promise to be partly compensated, up to a limit, and beyond that limit the seller is uninsured against its own customer.",
+    "**Credit support is the other half of the contract, and it has an observable price.** A landlord with a thin-credit tenant needs somebody stronger behind the rent. Three landlords in this corpus bought that service from the same guarantor for the same tenant and paid three different prices in equity: one paid **nothing** and kept full economic ownership; one paid about **5.4 per cent of itself** in penny warrants for a USD 1.73 billion backstop and issued notes at **7.125 per cent**; one paid about **14 per cent** for backstops of roughly USD 4.5 billion. The enhanced end of that range priced at **6.192 per cent** and carried an investment-grade rating on a building under construction. A fourth landlord, behind a single unrated tenant with no disclosed backstop, priced at **9.875 per cent** — roughly 370 basis points wider. The spread is the market quoting what a tenant's credit is worth, and it is quoted in the coupon rather than in a press release.",
+    "Three cautions travel with every backstop. It usually covers part of the lease rather than all of it — one of the above covers about 46 per cent of contracted revenue. It usually **starts late**, effective only from rent commencement, which is precisely the period a construction lender is exposed to; and a delayed completion can let a tenant terminate without ever triggering the guarantee. And the guarantor is not disinterested: it has its own reason for standing behind that tenant.",
+    "**Which brings the single most transferable rule in this section.** In this sector the counterparty of record, the credit support and the end user are frequently **three different companies**. One campus in the corpus has a landlord, a tenant that is a subsidiary of one firm, a rent backstop from a second, and an end user under a separate partnership who is not a party to the lease at all. A reader who collapses that into *the landlord leased to the end user* has thrown away the credit structure, which is the only part that matters if the demand disappoints. Always ask which of the three a headline is naming — and note that a tenant need not be named at all for the rent to be underwritable: a contractual representation that the counterparty is rated AA- or better, made in a filed document, is enough to lend against without a name.",
+    "Two habits close the section. Measure concentration in **backlog share** as well as revenue share, because an anchor customer whose contract the whole debt structure quietly assumes will roll holds more leverage at renewal than its revenue line suggests. And when you meet the large dollar figure attached to one of these leases, do not compare it with another company's until you know which of several bases it is on — that discipline is *One Dollar, Four Names*' subject later in this track, and it exists because the same lease is routinely published under three different labels in three documents from the same firm."
+   ],
+   "sales": "A take-or-pay tenant is buying certainty, so every claim you make about uptime, delivery date and warranty becomes a term in somebody's credit file. Write them as if a rating agency will read them, because one will."
+  },
+  {
+   "id": "clean-firm-and-the-restart",
+   "title": "Clean firm, the restart, and what hourly accounting actually buys",
+   "kind": "callout",
+   "tone": "info",
+   "read": "8 min",
+   "intro": "This section is the **instrument** view of clean power: what the contracts are, who signs them and what each one proves. The physics — why a reactor follows load badly, what a small modular reactor changes, what *clean firm* admits — belongs to *Clean Firm Power* in the campus track, and is deliberately not repeated here.",
+   "ps": [
+    "**Start with the buyer's claim, because the claim is what is being bought.** Annual matching, the standard corporate practice, buys enough clean generation over a year to equal total consumption. It says nothing about timing, so a company can be matched on paper while running on gas-heavy grid power every night. {{Hourly matching}} — twenty-four-seven carbon-free accounting — asks a harder question for every hour of consumption: was a contracted carbon-free megawatt-hour generated on the same grid in the same hour? The score is the percentage of hours covered.",
+    "**That accounting choice dictates the shopping list, and this is the sentence a storage or clean-firm seller should memorise.** An annual matcher buys the cheapest renewables anywhere on earth. An hourly matcher must buy specific technologies on specific grids, because solar and wind cover sunny and windy hours cheaply while the dark calm week costs many times the average hour. Hourly commitments are therefore what *create* markets for storage and for {{clean firm power}} — the commitment comes first and the procurement follows from it.",
+    "**Attributes are a separate product, and hourly accounting inverts their value.** Every clean megawatt-hour yields two things: the electricity, and a certificate proving it was generated. Under annual accounting a solar certificate is as good as any other. Under hourly accounting it cannot make midnight consumption clean, so always-on generation becomes the scarce premium product and time-stamped certificates become a second revenue line for whoever owns it. The premium is the market pricing exactly what variable renewables cannot provide.",
+    "**The corporate {{PPA}} is the instrument that finances all of this**, and most of them are virtual: no electrons flow to the buyer, the project sells into the wholesale market, and the two parties settle the difference against a {{strike price}} while the buyer keeps the certificates. What makes the contract bankable is the buyer's credit over ten to twenty years — a developer cannot convince a bank to finance construction on a hope. And the quality test is {{additionality}}: the purchase counts for most when it causes a new project to be built rather than claiming credit for generation that already existed.",
+    "**Additionality is also the objection that every existing-fleet deal invites**, which is why the corpus contains both answers. Selling from an operating fleet is fast, carries no construction risk and commands a premium for certainty — and the megawatt-hours existed already, so the displaced buyer is simply served by the next unit in the {{merit order}}. Building new capacity the customer underwrites is additional by construction and politically durable, and it is slow, capital-intensive and dependent on equipment slots that may be reserved rather than ordered. One state has already begun conditioning preferential permitting for large loads on sourcing from new in-zone supply, which turns the accounting argument into a permitting one.",
+    "**The middle answer is an addition attached to an existing site**, and it is the one column in the corpus that is unambiguously additional: a {{nuclear uprate}}, a new unit, or storage built beside a plant that already holds a connection. A 433 MW uprate programme attached to a 2,609 MW supply agreement is the seller buying an answer to the additionality question and the buyer paying for it — read that pairing whenever you see an uprate appear inside a power deal.",
+    "**The restart is the sharpest instrument in the set.** A retired reactor is not demolished immediately; it can sit preserved for years. Restarting means proving to the regulator that every dormant system still meets its licensing basis, reinstating the operating licence and rebuilding a staff of hundreds including licensed operators whose examination pipeline takes years. What it buys is 800-plus megawatts of firm clean power in roughly three to four years for low single-digit billions, against a decade and several times the cost for an equivalent new build. **And its biggest hidden advantage is contractual rather than nuclear**: the plant inherits existing interconnection rights instead of joining a years-long queue. The restart is therefore bought before it exists — a creditworthy long-term offtake is what makes the decision financeable, exactly as a first-of-a-kind offtake for a new technology is a market signal as much as a power deal.",
+    "**One structure to recognise before you misread an announcement.** In a regulated, vertically integrated territory a data centre cannot legally buy from a project across the street, because only the utility may sell retail power. The commission-approved workaround is a {{green tariff}}: the utility signs the power purchase agreement with the project, the corporate customer commits to take its output at a tariff price, and the utility's other customers are shielded from the cost. The credit the lenders underwrote is the **utility's**. So when an owner tells you it supplies a named hyperscaler, ask whose name is on the contract — the answer decides whether that relationship is repeatable anywhere else."
+   ],
+   "sales": "Ask a prospect whether it reports annually or hourly. The answer tells you, before any technical conversation, whether it is shopping on price per megawatt-hour or shopping for the hours nobody else can cover."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "8 min",
+   "ps": [
+    "**A merchant asset resourced like a contracted one.** A merchant project keeps whatever its forecasting and bidding extract from volatile prices — so the trading and optimisation layer is not overhead on that asset, it is the revenue. Signing merchant and staffing tolled is the commonest way an owner discovers that the two rows in the instruments table are two businesses rather than two prices. One developer in this corpus runs both deliberately and separately: five twenty-year utility tolls across four counterparties, and a seasoned seven-hundred-megawatt merchant fleet beside them.",
+    "**A toller's warranty cycle budget.** Under a {{tolling agreement}} the offtaker chooses the cycles and the owner carries availability. That makes the duty cycle a contractual quantity — cycles per day, duration, depth of discharge — fixed when the offtake is signed, which is years before anyone issues a purchase order for equipment. A dispatch right sold wider than the warranty envelope that will eventually cover it is a contract the asset cannot perform, and the discovery happens in year three rather than at signature.",
+    "**A {{PPA}} priced on a queue date.** A contract whose deliveries start before the connection exists is a promise backed by damages, and the financing was sized on the earlier revenue. Moving the start does not merely delay the project; it changes the number the lender lent against. The developer's response is to hunt cost wherever it still has discretion, which in practice means the equipment — so a schedule problem in the queue arrives at a supplier as a pricing conversation.",
+    "**The cap, on any instrument that has one.** A {{make-whole}} estimated at fifty to sixty-five per cent of full impact and then capped; {{liquidated damages}} capped at a share of contract value; a backstop covering less than half of contracted revenue. Every one of these is a risk transfer that **stops at a number**, and the party on the other side is uninsured beyond it. This is one of the few contract terms whose adequacy can be tested arithmetically rather than argued — which is exactly what a lender's independent engineer does.",
+    "**A guarantee that starts after the risk does.** Credit support effective only from rent commencement leaves the construction period unprotected, and a delayed completion may let the tenant terminate without triggering the guarantee at all. Read the commencement date of the support against the exposure period of the debt, not against the term of the lease.",
+    "**A reservation read as an order.** A {{reservation agreement}} reserves manufacturing volume and slots; purchase orders are drawn down later, project by project. Two years after one such signing no source named a project that had received the reserved product, and the platform's own first three batteries used a different supplier's cells. A gigawatt-hour headline is an option on supply — ask which project drew on it, and when.",
+    "**The verb, which is the cheapest error to avoid and the commonest to make.** One company's own public data-centre figures run: 445 MW **signed**; 1,200 MW *aligned on principal commercial terms*; 3,600 MW of turbine slots **reserved**, which the manufacturer counts separately from firm backlog; a 5,400 MW development-agreement **ceiling** stated as *up to*; 400 MW under letters of intent; and 6,500 MW of stated **potential** never repeated in a later filing. Every figure is real and publicly stated. Only the first is a contract. A pipeline chart that stacks them is not a forecast — it is a list of sentences with different verbs.",
+    "**And the revenue line an announcement forgets to subtract.** A load that can shut down in seconds is valuable to a grid operator, and flexible loads sell {{curtailment}} through {{demand response}} and ancillary markets — in the worst hours it can pay more than the activity forgone. A compute tenant will not accept that: a training run cannot stop for four hours. So converting a flexible site to a firm-power obligation surrenders a real revenue line, and the announcement almost never quantifies it. Whenever an asset changes contract form, ask what the old form was earning that the new one forbids."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What two questions sort every offtake instrument, and why is asking them better than memorising the contract names?",
+     "a": "Who carries price risk, and who carries volume risk. Every form is a trade of one against the other: a merchant sale leaves both with the owner; a toll moves both to the offtaker and leaves the owner carrying availability instead; a take-or-pay moves volume risk to the buyer while price is already fixed; a financial swap fixes price and hands volume risk to the buyer from an unexpected direction, because it settles on what the project generated rather than on what the buyer consumed. The names change between markets and new forms are invented regularly. The pair does not, so a contract you have never seen can still be read the moment you find its answers to those two questions."
+    },
+    {
+     "q": "In a capacity auction, what is actually being bought — and why does that make reliability a revenue line rather than an operating virtue?",
+     "a": "Unforced capacity: nameplate discounted for how often the resource is expected to be unavailable, derived from its forced outage rate, and computed for a battery or a solar farm under the name effective load-carrying capability. Because the auction pays per accredited megawatt-day, raising availability raises accredited megawatts, which raises the quantity sold at a clearing price the owner never negotiated. The practical consequence is that equipment which improves availability has a return computable as accreditation gain times clearing price, while equipment that only improves efficiency has to compete against that number."
+    },
+    {
+     "q": "Why does a take-or-pay contract exist at all, and in what sense is it not a promise to be paid in full?",
+     "a": "It exists because a high-fixed-cost asset costs nearly as much idle as busy, so empty capacity is pure loss rather than lost margin; committing the buyer to pay whether or not it uses the capacity converts a rental business into a stream a lender can underwrite. It is not payment in full because the remedy when the buyer draws nothing is a shortfall make-whole — an estimate of the seller's loss rather than the contract value, and capped. One disclosed example is estimated at fifty to sixty-five per cent of full impact. Beyond the cap the seller is uninsured against its own customer."
+    },
+    {
+     "q": "A landlord's tenant has thin credit, so a stronger party backstops the rent. Where does the price of that support show up, and what does it not cover?",
+     "a": "In two places: in equity given to the guarantor, and in the coupon on the debt. Across one corpus cohort the same guarantor backstopped the same tenant for three landlords who paid nothing, about 5.4 per cent of themselves in warrants, and about 14 per cent — while an unenhanced issue behind a single unrated tenant priced roughly 370 basis points wider than the best-enhanced one. What it typically does not cover is the whole lease (one example covers about 46 per cent of contracted revenue), the construction period (support is often effective only from rent commencement), or termination events, some of which can end the lease without the guarantee ever being triggered."
+    },
+    {
+     "q": "Why does hourly carbon-free accounting create demand for storage and clean firm generation when annual matching does not?",
+     "a": "Because annual matching only requires enough clean generation over a year to equal consumption, so the cheapest renewable anywhere satisfies it. Hourly accounting asks whether a contracted carbon-free megawatt-hour was generated on the same grid in the same hour, which means the dark calm week has to be covered by something — storage, geothermal, nuclear, or a shifted workload. The last percentage points cost many times the average hour, so the accounting standard, not the technology, is what summons the procurement. It also inverts the value of attribute certificates: under hourly rules a certificate from always-on generation is scarce and a midday solar certificate cannot clean a midnight hour."
+    },
+    {
+     "q": "What is the difference between a tolling agreement and a power purchase agreement from the owner's side, and what risk stays with the owner under a toll?",
+     "a": "Under a power purchase agreement the owner still runs the asset and sells a product — megawatt-hours at an agreed price. Under a toll the offtaker buys the right to dispatch the asset and supplies or pays for the charging energy, so the owner operates a machine somebody else decides how to run and never sees a market price at all. What stays with the owner is availability: the fee is reduced when the asset is not there to be called. That is why a tolled asset's commercial risk sits in warranty envelopes, maintenance and uptime rather than in price forecasting."
+    },
+    {
+     "q": "In this sector, why is 'who is the tenant' usually three questions rather than one?",
+     "a": "Because the counterparty of record, the credit support and the end user are frequently three different companies: a landlord may lease to a subsidiary of one firm, have the rent backstopped by a second, and serve an end user under a separate partnership who is not a party to the lease at all. Collapsing that into a single name discards the credit structure, which is the only part that matters if demand disappoints. A tenant need not even be named for the rent to be underwritable — a contractual representation that the counterparty is rated in a stated band, made in a filed document, is enough to lend against."
+    },
+    {
+     "q": "A supplier is shown a multi-gigawatt-hour framework agreement and a multi-gigawatt project pipeline. What has actually been committed in each case?",
+     "a": "In neither case, a purchase. A reservation agreement reserves manufacturing volume and delivery slots at agreed terms, with purchase orders drawn down project by project as each reaches financing — it is an option on supply taken for supply certainty, policy-bonus eligibility and tariff insulation, and it is only as real as its draw-down. A pipeline is a portfolio of options on land, permits and queue positions, deliberately larger than what the owner intends to build because the value of an option comes from uncertainty. Both are read the same way: ask which specific project drew on it, and when."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A corporate buyer signs a twelve-year virtual PPA with a wind project. The following year is unusually calm and the project generates well below its long-run average. Who is worse off, and why?",
+     "c": [
+      "The buyer — a virtual PPA settles on what the project generated, so a low-output year means fewer settled megawatt-hours and fewer certificates against the same consumption",
+      "The seller — it produced less electricity and is therefore paid less under the contract",
+      "Neither — a fixed-price contract removes both price and volume exposure from both parties",
+      "The grid operator, which must buy replacement energy at the contract price"
+     ],
+     "a": 0,
+     "why": "The swap fixes price, not quantity. Settlement follows the project's actual output, so the buyer receives fewer settled megawatt-hours and fewer certificates while its own consumption is unchanged — it must cover the gap somewhere else. This is the counter-intuitive half of volume risk: the buyer is exposed to a generator's weather even though no electrons ever flowed to it. Read the settlement basis before assuming a fixed price means a fixed outcome."
+    },
+    {
+     "q": "A four-hour battery with a 100 MW nameplate clears a capacity auction. Its owner is surprised that the payment reflects well under 100 MW. What happened?",
+     "c": [
+      "The auction bought accredited capacity, and a four-hour battery is credited below nameplate because it cannot cover a long evening peak alone",
+      "The clearing price was applied only to the hours the battery actually discharged",
+      "Capacity payments are pro-rated by the forced outage rate of the whole fleet, not the individual unit",
+      "The battery was credited at nameplate but paid at the energy-market price instead"
+     ],
+     "a": 0,
+     "why": "A capacity auction buys unforced capacity — a rating discounted for expected unavailability — and for duration-limited resources the same arithmetic runs as effective load-carrying capability. A gas plant is credited close to nameplate because it can run as long as the fuel lasts; a four-hour battery cannot hold up a long peak by itself, so it is accredited lower. Accreditation is the mechanism that makes one technology's megawatt comparable to another's, and it is decided in a rulemaking rather than negotiated in the contract."
+    },
+    {
+     "q": "A colocation landlord's tenant walks away and draws nothing. The lease is take-or-pay with a shortfall make-whole. What should the landlord expect to recover?",
+     "c": [
+      "A capped estimate of its loss — materially less than the contract value — after which it is uninsured against its own customer",
+      "The full remaining contract value, since take-or-pay means payment is unconditional",
+      "Nothing, because a make-whole applies only to early termination and not to non-use",
+      "The full value, reduced only by the power costs it no longer incurs"
+     ],
+     "a": 0,
+     "why": "Take-or-pay names an obligation, not a guaranteed payment. The remedy is usually a make-whole — an estimate of the seller's loss rather than the contract sum — and it is normally capped. One disclosed example is estimated at fifty to sixty-five per cent of the full impact. The cap is where the risk transfer stops, and it is one of the few contract terms whose adequacy can be tested arithmetically before signature rather than argued afterwards."
+    },
+    {
+     "q": "A generator markets a long-term supply agreement from an operating nuclear plant and, in the same deal, a several-hundred-megawatt uprate at that plant. Why is the uprate in the deal?",
+     "c": [
+      "It answers the additionality objection — an addition at an existing site is capacity that did not exist before the contract",
+      "It is required by the capacity market before an existing unit may be contracted bilaterally",
+      "It lowers the plant's forced outage rate and therefore its accreditation discount",
+      "It converts the arrangement from front-of-meter to behind-the-meter"
+     ],
+     "a": 0,
+     "why": "Selling from an existing fleet is fast and carries no construction risk, but the megawatt-hours already existed, so the displaced buyer is simply served by the next unit in the merit order — which is precisely what the additionality test catches. Adding capacity at a site that already holds a connection is the one structure that is unambiguously additional. So the uprate is the seller buying an answer to the objection, and the buyer paying for it. Whenever an uprate appears inside a power deal, read the pairing rather than the two halves separately."
+    },
+    {
+     "q": "A renewable owner's release says a named hyperscaler buys the project's energy and environmental attributes under a regulated utility's green tariff. Whose credit did the lenders underwrite?",
+     "c": [
+      "The utility's — it signs the power purchase agreement and the hyperscaler is its retail customer on a special rate schedule",
+      "The hyperscaler's, since it is the ultimate payer and the strongest counterparty in the chain",
+      "The owner's, because a green tariff leaves the project merchant until the tariff is renewed",
+      "Both jointly, as a green tariff creates a direct contractual link between project and customer"
+     ],
+     "a": 0,
+     "why": "In a regulated, vertically integrated territory only the utility may sell retail power, so a data centre cannot contract directly with a project across the street. The green tariff is the commission-approved workaround: the utility signs the PPA, the customer commits to take the output at a tariff price, and other ratepayers are shielded. The investment-grade counterparty the financing rests on is the utility. The consequence for the owner is that the relationship is not portable — that demand is available only where that tariff exists. When an owner says it supplies a hyperscaler, ask whose name is on the contract."
+    }
+   ]
+  }
+ ]
+};
+}
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -39233,6 +39653,7 @@ function clTrackMarketAccess_() {
  "lessons": [
   "who-buys-storage",
   "how-a-storage-project-happens",
+  "contracts-and-revenue",
   "how-a-utility-buys"
  ],
  "prereqs": [
@@ -39345,7 +39766,8 @@ function clLessons_() {
           clLessonInsideTheRack_(),
           clLessonRedundancyByTheNumbers_(),
           clLessonTheCampusAsAPowerProject_(),
-          clLessonHowAStorageProjectHappens_()];
+          clLessonHowAStorageProjectHappens_(),
+          clLessonContractsAndRevenue_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.43g] — 2026-09-15 05:08:34 AM EST — v05.91r
+
+### Added
+
+- A new lesson in the Market Access & Bankability track, on the contract forms a power or compute asset is financed on and which party each one hands the risk to
+
+### Changed
+
+- One track's reading list now includes the new lesson in its teaching order
 
 ## [v01.42g] — 2026-09-15 04:21:39 AM EST — v05.88r
 
