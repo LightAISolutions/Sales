@@ -1,4 +1,4 @@
-var VERSION = "v01.37g";
+var VERSION = "v01.38g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -30244,7 +30244,7 @@ function clLessonSegmentUtilities_() {
    "read": "1 min",
    "ps": [
     "**Mechanism lessons for this segment:** *The Regulated Machine* · *The Gatekeeper* (planned) · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-utilities-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** AEP, Dominion Energy, Entergy, Oncor, Southern Company, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Grid United, Invenergy, NextEra, Pattern Energy, Tesla — each member's dossier carries one in Profiler."
    ]
   },
@@ -30324,6 +30324,13 @@ function clLessonSegmentUtilities_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -39289,7 +39296,8 @@ function guidanceDocs_() {
           guidanceDocEo14420_(),
           guidanceDocLandscapeStorageIntegrators_(),
           guidanceDocLandscapeCellsAndChemistry_(),
-          guidanceDocLandscapeStorageDevelopersAndIpps_()];
+          guidanceDocLandscapeStorageDevelopersAndIpps_(),
+          guidanceDocLandscapeUtilities_()];
 }
 
 function guidanceIndex_() {
@@ -47205,6 +47213,670 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
   {
    "t": "material assistance cost ratio",
    "d": "The share of a project's total cost that must NOT derive from a prohibited foreign entity for the project to keep its tax credit. It is indexed to the calendar year and to the technology, so a supply chain that qualifies in one construction vintage may not qualify in the next. The record puts it at 55 per cent for storage projects beginning construction in 2026, rising toward 75 per cent by 2030 — which is why its next calendar-year step is this module's review date."
+  }
+ ]
+};
+}
+
+// Content: Landscape - Utilities (corpus synthesis, 2026-09-14). The FOURTH
+// landscape module and the fourteenth guidance module overall; lane The Value
+// Chain. Derived from repository-information/industry-guidance/
+// landscape-utilities-analysis.md; no ingested document and no new research -
+// every load-bearing claim traces to a member dossier at the profileVersion in
+// the claims ledger. Companies are named and ranked under the developer-approved
+// exception of 2026-09-07 (INTEGRATED-REMEDIATION-PLAN.md 7.2 decision 2), the
+// one module class that does.
+//
+// THE ONE THING A LATER SESSION SHOULD NOT UNDO: this is the first landscape
+// whose segment is already partly covered by another guidance module. The split
+// against guidanceDocUtilityAidc_() (utility-aidc-procurement-2026-08) is stated
+// in the opening paragraph of who-dominates-and-on-what-basis and held to
+// throughout - that module owns the PROCESS (the four moves, the tariff terms,
+// the five BESS channels, the buyer map, the calendar) and this one owns the
+// PARTIES (the instrument each franchise built, the eight bets, the three
+// disintermediation routes, and the four members the other module never covers).
+// Adding a tariff table or a channel list here would collapse the split and
+// re-tell the playbook, which is the predictable failure the brief named.
+//
+// reviewBy is 2026-10-01, SEVENTEEN DAYS after updated, and that is deliberate.
+// The segment's 14 members carry 76 policyExposure entries, 64 dated, and
+// exactly one of those dates is in the future (2027-01-01). The nearer gate was
+// read out of southern-company's policy PROSE - an Alabama 150 MW threshold
+// statute effective 1 October 2026 - while that same entry's effectiveDate field
+// carries the earlier Georgia step. This module therefore ships inside its own
+// 30-day review horizon and renders a gold review chip immediately. That is the
+// freshness rule working, not a defect; section 10 of the analysis file carries
+// the reasoning and the four rejected candidates.
+function guidanceDocLandscapeUtilities_() {
+  return {
+ "id": "landscape-utilities-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — Utilities",
+ "short": "Six franchises that do not compete with each other, two challengers larger than most of them, and a threat that is structural rather than competitive. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 14 member dossiers of the utilities segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-utilities-analysis.md"
+ },
+ "updated": "2026-09-14",
+ "reviewBy": "2026-10-01",
+ "revisions": [
+  {
+   "date": "2026-09-14",
+   "note": "First authoring, and the fourth landscape module of the segment layer. Corpus synthesis over the 14 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This is the first landscape whose segment is partly covered by an existing guidance module, so the split against When Utility Procurement Meets AI Data-Center Load is stated in the opening section and held to throughout: that module owns the procurement process, this one owns the parties. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis, and is labelled as analysis rather than blended with fact. The review date is seventeen days out because the nearest dated gate in the segment genuinely is — an Alabama threshold statute taking effect on 1 October 2026, stated inside a policy entry's prose while the same entry's date field carries the earlier Georgia step. The reasoning and four rejected candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "14",
+   "v": "members on record",
+   "sub": "Six incumbent, two challenger, six adjacent — measured 14 September 2026, confirming the programme's written figure exactly"
+  },
+  {
+   "k": "0",
+   "v": "of them compete",
+   "sub": "A regulated franchise is a geographic monopoly. No member in this segment takes share from another member of it"
+  },
+  {
+   "k": "46%",
+   "v": "of the wires incumbent's revenue is its two challengers",
+   "sub": "Vistra at 25 per cent and NRG at 21 per cent of Oncor's 2025 operating revenues; no other customer above 10 per cent"
+  },
+  {
+   "k": "5",
+   "v": "instruments, six franchises",
+   "sub": "The filter, the certificate, the contract, the collateral and the customer-specific charge — how each turns AI load into plant"
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Read this beside the procurement module, not instead of it.** *When Utility Procurement Meets AI Data-Center Load* is the playbook: the four moves a utility makes against AI load, what the {{large-load tariff}} terms say, the five channels where storage enters, and who signs the purchase order. It answers **what you have to do to sell into this**. This module answers a different question — **who this is, and what they are trying to do** — over the same franchises plus four the playbook does not carry. Nothing below repeats its tariff table, its channel list or its buyer map; where you need those, go there.",
+    "**Six {{incumbent}}s, and not one of them competes with another.** That is the fact everything else here follows from, and it makes the usual form of this section impossible. A {{regulated franchise}} is a geographic monopoly: Dominion cannot bid for load in Georgia, Southern cannot bid for load in Virginia, and Oncor cannot bid for anything at all, because it is not a seller of electricity and certifies no generation. Nobody in this segment takes share from anybody else in it. So a ranking of the six against each other would be a ranking of nothing. What can be ranked is **how far along each one's instrument is** — and the instruments are genuinely different in kind.",
+    "**The filter — Dominion.** The whole disclosure is a conversion ladder. Of 53.8 GW of data-centre capacity contracted, 12.0 GW sits under {{electric service agreement}}s that include the {{revenue requirement}} whether the customer takes service or not, 9.4 GW under construction authorisations with full cost reimbursement on walk-away, and 32.4 GW merely at the engineering stage. Against that, a February 2026 commission filing counted about 70,000 MW of requests against a 24,678 MW peak, 45,000 MW of it with no connection date — while actual connections have run at eleven to fifteen a year for a decade, against 118 requests in 2025 alone. The instrument is the new large-load class effective 1 January 2027 plus the deposit and reimbursement clauses, and the honest measure of throughput is the annual connection count, not the gigawatt headline. Its binding constraint is **wires, not generation**, through at least 2028 and in places 2032 — which is why {{behind-the-meter}} bridge power persists on that system for the rest of the decade.",
+    "**The certificate — Southern, and Entergy in a variant.** Georgia Power plans, certifies and builds inside a system it balances itself: there is no capacity auction to bid into and no regional queue, so the {{CPCN}} is the instrument. It certified 9,885 MW in a single December 2025 order, five votes to nothing — then saw reconsideration denied three to two two months later, after two seats on the elected commission changed hands on affordability. Contracted large load rose from 8 GW to 17 GW in three quarters against a 75 GW prospective figure the company never counts as load. **And Southern is the one member that buys the battery itself:** that certificate added 3,022.5 MW of company-owned stand-alone storage, against a 500 MW storage solicitation that is the developer lane — smaller by an order of magnitude. Entergy runs the same instrument with a customer's name on it. A phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an agreement whose minimum charges are designed to recover the annual {{revenue requirement}}, and 15.5 GW of executed agreements was ranked in April 2026 the largest disclosed block among nineteen utilities. Its second instrument closes a market rather than opening one: a turbine exclusivity agreement with a quarterly manufacturing slot for large frames, its minimum order raised from fifteen to twenty-one to twenty-seven power-island sets as the campus filings multiplied.",
+    "**The contract — AEP.** {{Large-load tariff}}s approved in six of eight states by August 2026, every one carrying {{take-or-pay}} minimum billing demand between 80 and 90 per cent, terms of twelve to twenty years, ramp periods, collateral and exit fees. The result is 69 GW contracted, reported separately from roughly 195 GW of queue activity and never blended with it — and in Ohio, 17,861 MW contracted against 30,000 MW of original pre-tariff requests. **The instrument deleted roughly two-fifths of the company's own stated demand, on purpose.** That is the same event the playbook module cites as evidence that tariffs work; here it is evidence of what an incumbent's instrument is *for*. The second moat is physical and far less replicable: nearly 90 per cent of the national 765 kV network, a 33-billion-dollar transmission plan inside a 78-billion-dollar capital plan, and a 2025 agreement aimed at expanding domestic manufacture of extra-high-voltage transformers and breakers — the company treats the supply chain, not the permit, as the binding constraint.",
+    "**The collateral — Oncor.** The narrowest and most absolute instrument in the segment, because Oncor certifies no generation, is not a seller of electricity and holds no capacity obligation — in an {{energy-only market}} there is none to hold. It decides whether and when a customer gets a transmission-voltage point of delivery, at what {{contribution in aid of construction}}, against what collateral, and in what batch sequence. It publishes three figures every quarter and never blends them: 737 requests totalling 298 GW at 30 June 2026, about 44 GW eligible in the grid operator's first interconnection batch, and about 8 GW already energised. **Collateral held rose from roughly 2.8 billion dollars in November 2025 to 3.5 billion in February 2026, 4.0 billion in May and 5.9 billion in August — more than doubling in nine months while the request queue's growth rate fell from 24 per cent to 15 per cent year over year.** Money posted is the only commitment test in this segment a customer cannot walk away from for free.",
+    "**The customer-specific charge — Xcel.** The first utility to put a hyperscaler's full incremental cost into a charge with that customer's name on it: 1,400 MW of wind, 200 MW of solar and a 300 MW, 30 GWh iron-air battery under a single clean-energy accelerator charge. Large-load tariffs are filed in three states with published minimum-demand, term and exit-fee parameters, and only one is approved. The consequence is visible in the numbers — about 2 GW contracted against more than 20 GW of pipeline, roughly 1 GW expected to be signed in 2026, and a contracted figure that did not move between two consecutive quarterly decks. **Xcel's growth is gated by commission decisions rather than by demand or by equipment**, and its supply was reserved first: twelve gas-turbine reservations and a 2 GW joint development agreement executed before any tariff outside that one state was approved.",
+    "**Reading the six as a set.** Three things separate them that a seller can act on, and none of the three appears in the public segment lesson's player table. **How far along the instrument is** — one company's is approved in six states and already before a state supreme court; another's is approved in one. **Whether the utility owns what it buys** — Southern owns its batteries and reserved the equipment for a ten-gigawatt build under fixed-price turnkey contracts before the certificate issued, while AEP has no named battery supplier or integrator on any project in any source its dossier reviewed, and neither does Entergy on any company-owned system. **And what the instrument is denominated in** — a certificate, a contract, cash, or a line on a bill. **The module's own assessment, stated as analysis rather than as a finding of the record: in this segment you are not selling against the other five. You are selling into one of five machines, and the machine decides the conversation.**"
+   ],
+   "sales": "Before the first call, name the instrument: certificate, contract, collateral or charge. It decides whether you are selling to the utility, to the developer bidding its solicitation, or to nobody — Oncor buys no generation at all."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**Start by reading the label honestly, because the registry does.** Its own note for this segment says that regulated franchises have no challenger by construction, and that the competitive retail suppliers of the restructured markets carry the role here. That is the registry telling you the {{challenger}} label in this segment is a **structural placeholder**, not a threat claim. The two companies carrying it are neither insurgents nor small: NRG's 2025 revenue of 30,713 million dollars is the largest figure in the segment, and Vistra's 17,738 million is third. Only Southern at 29,600 million and AEP at 21,876 million sit above Vistra — which puts both challengers ahead of Entergy, Xcel, Dominion and Oncor. **Two of the eight ranked players are labelled challenger and rank first and third by revenue.**",
+    "**And in Texas the challenger is the incumbent's customer.** Oncor's record states that the retail subsidiaries of Vistra and NRG are its two largest customers, at 25 per cent and 21 per cent of 2025 total operating revenues, with no other customer above 10 per cent. Both challengers state the same relationship from their own side, and the graph types the edge as *other*, not *competitor*. **Forty-six per cent of the largest pure-play wires incumbent's revenue comes from the two companies the registry calls its challengers.** Where restructuring split the franchise it did not create rivals; it created a wires company and the two retailers that bill through it.",
+    "**What the two are actually doing is building the thing a franchise already has, from opposite ends.** NRG started with the customers and bought the generation to match: retail was 29.5 billion of its 30.7 billion dollars of 2025 revenue, and a January 2026 acquisition closing at 10,583 million dollars of consideration plus about 3.2 billion of assumed debt added roughly 13 GW across nine states and doubled the fleet to about 25 GW. Vistra started with the plants and owns the customers to hedge them — and **every signed large-load agreement it has is nuclear**, not gas: 1,200 MW to one hyperscaler and 2,609 MW to another from three nuclear sites and an uprate programme, while its own language about the gas fleet is unchanged across four consecutive filings. Neither is attacking a {{regulated franchise}}. Both are assembling one without the obligation to serve.",
+    "**So where is the threat? Not from a rival franchise — there cannot be one. It is disintermediation, it runs on three routes, and the six {{adjacent}} members carry all three.**",
+    "**Route one — the load never becomes the franchise's load.** One adjacent frames {{co-location}} of compute at its own generation and storage sites in market-structure terms rather than sustainability terms: relieving congestion, offsetting basis risk, mitigating {{curtailment}}, under a preliminary agreement of up to 300 MW and one collaboration. Neither discloses megawatts under contract and no third party has verified the second counterparty's construction or load commitment, so this is the least proven route as well as the most direct. Another adjacent runs the retail-side version as a Texas {{retail electricity provider}} aggregating home batteries into a {{virtual power plant}}. And one challenger's record prices the route exactly: when Texas paused data-centre grid interconnections in August 2026, its signed 445 MW were grid-served and exposed **while behind-the-meter generation was exempt**.",
+    "**Route two — the asset arrives already built.** One adjacent created a dedicated unit in April 2026 for natural gas and data-centre development, on a {{build-own-transfer}} model rather than merchant gas: a 918 MW plant filed by one regulated utility, two more filed by another at about 2.3 billion dollars combined, and a further 1.95 GW planned. A second sells utilities ownership slices of interregional lines they would not have planned themselves — one partner at roughly 35 per cent as operator, seven more on non-binding memoranda for 2,550 MW — and its founder's testimony is unambiguous: these electric companies will be the ultimate owners, each owning a slice. A third has already executed the template, transferring a completed line to a regulated utility for 285 million dollars in 2021, and now runs the merchant version as the first {{Subscriber Participating Transmission Owner}} scheduled into the California market. **The franchise still owns the asset and still earns on it. It did not plan, develop or build it — and it is not the party a supplier sold to.**",
+    "**Route three — the franchise changes hands.** The largest structural event in the segment is a 67-billion-dollar combination of one incumbent with the parent of the corpus's biggest merchant developer. The incumbent's own reading is that it changes the buyer more than the docket: the release keeps the utility president in place, and the state, federal and nuclear approvals leave the rate proceedings, {{IRP}} cycle and solicitation calendar intact — **but capital allocation, supplier qualification and framework agreements would sit with the acquirer**, whose merchant arm self-integrates, buying cells and DC blocks direct so that a containerised-system vendor has no integrator channel to ride. If that doctrine migrates after an expected second-half-2027 close, the largest regulated procurement machine in the country changes what it will buy without any docket changing at all.",
+    "**The summary, and it is the section's point.** Nothing here threatens an incumbent's *share*, because share is fixed by statute. What is under threat is the **scope of the franchise** — how much of the load sits inside the meter, how much of the asset base the utility actually originated, and who decides what the utility buys. A threat section written to the proportions of the last landscape would have produced eight paragraphs about two retailers and missed all three routes. **This is the module's own assessment, not a claim any single dossier makes.**"
+   ],
+   "sales": "Ask which side of the meter the opportunity sits on before you ask who signs. The August 2026 Texas pause exempted behind-the-meter generation and caught grid-served load — the regulatory risk is not symmetric across the two routes."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "7 min",
+   "kind": "table",
+   "intro": "**Everything in the bet column is analysis, not fact.** Each entry reads that member's own strategy-read field, and the dossier's own confidence label travels with it in the last column. A strategy read is itself analytical — the segment-lesson generator is forbidden to touch it for exactly that reason — so a bet is a judgment resting on a judgment, and this table says so rather than letting it read as a finding. **All six incumbents and both challengers are here.** At eight rows this is the shortest bets table in the landscape corpus, against eighteen, fifteen and twenty-seven before it, and that is the segment being reported honestly rather than a table cut for space: six franchises and two retailers is the whole ranked roster. **Note what six of the eight bets are about — an instrument, not a product.** None of these companies sells a technology, so none of them has a technology position to bet on.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet — analysis, not fact",
+    "Dossier's own confidence"
+   ],
+   "rows": [
+    [
+     "**Dominion Energy**",
+     "incumbent",
+     "That the pipeline is firm in its smallest tranche and speculative in its largest, and that the company's own instruments are built to keep it that way — the contracted tranche converts, the engineering tranche does not, and the annual connection count rather than the gigawatt headline stays the measure of throughput.",
+     "High"
+    ],
+    [
+     "**Southern Company**",
+     "incumbent",
+     "That owning the battery and reserving the equipment before the certificate beats bidding for both — and that the exposure is not the instrument but the body reading it, an elected commission that certified 9,885 MW unanimously and then denied reconsideration three to two once two seats changed hands.",
+     "High on the instrument; moderate on the political guarantee"
+    ],
+    [
+     "**Entergy**",
+     "incumbent",
+     "That the single-customer certificate is the operating model rather than an exception, and that a turbine exclusivity agreement is worth more than a competitive solicitation for in-service dates between 2028 and 2031 — with the term-versus-life gap priced as a renewal option rather than as a stranded cost.",
+     "High on the model; moderate on the term gap"
+    ],
+    [
+     "**Oncor**",
+     "incumbent",
+     "That refusing to forecast is the strategy: publish three unblended figures, take cash before construction begins, and let collateral rather than queue position be the commitment metric — accepting that a wires-only structure leaves the company exposed to political rather than commercial risk, with no listed equity to price it.",
+     "High"
+    ],
+    [
+     "**AEP**",
+     "incumbent",
+     "That the durable advantage is contractual rather than physical — the {{take-or-pay}} obligation, not the queue position, is what a data centre actually buys — with the 765 kV franchise as the second and far less replicable moat, and the supply chain rather than the permit as the binding constraint on building it out.",
+     "High"
+    ],
+    [
+     "**Xcel Energy**",
+     "incumbent",
+     "That the tariff design is the product: be the utility that writes the template hyperscalers accept, put a customer's full incremental cost into a charge carrying that customer's name, and reserve the turbines before the commissions rule — accepting reserved slots without certificated projects as the cost of the sequence.",
+     "High on the commission gating; low on the template becoming a standard"
+    ],
+    [
+     "**NRG Energy**",
+     "challenger",
+     "That the natural hedge runs better from the customer end — start with the retail book, buy the generation to match it, and let a behind-the-meter supply model route around a grid-served interconnection pause that exempts it.",
+     "High"
+    ],
+    [
+     "**Vistra**",
+     "challenger",
+     "That owning both the plants and the customers is the differentiator, and that the large-load contracts worth signing are nuclear — the gas fleet earns from capacity and scarcity whether or not a data centre ever signs, so buying operating capacity faster than it is contracted is a deliberate position rather than a gap.",
+     "High on the integration; moderate on buying faster than contracting"
+    ]
+   ],
+   "sales": "The confidence column is the sales-cycle guide. A bet the dossier holds at high confidence is a posture that will not move in your favour this year; a moderate or low one is where a supplier's evidence can still change the answer."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "Dated where the record dates it. A date in the third column is a dossier's own; the last three rows are conditions to watch rather than events to diary, and are marked undated rather than given a guessed date. **The first row sets this module's review date, and it is unusually close.** Of the 76 policy entries the fourteen members carry, 64 hold an effective date and exactly one of those is in the future — 1 January 2027 — so a sort of the fence returns that. The nearer gate below was read out of a policy entry's prose, where the same entry's date field carries the earlier first step of the same schedule. That is why this list is read rather than sorted.",
+   "cols": [
+    "What to watch",
+    "Whose",
+    "On the record",
+    "Why it moves the segment"
+   ],
+   "rows": [
+    [
+     "**An Alabama threshold statute takes effect**, extending one holding company's Georgia contract model to its second operating utility at a 150 MW threshold rather than 100 MW",
+     "Southern — and every seller working that footprint",
+     "**effective 1 October 2026**",
+     "The threshold-contract instrument spreads inside a holding company, at a higher bar. **This is this module's review date**, and it is seventeen days after authoring because the record genuinely puts it there."
+    ],
+    [
+     "The state commission hearing on a second-phase single-customer application of 5,278 MW, with the vote expected in December",
+     "Entergy",
+     "hearing 7 October 2026; vote December 2026",
+     "Approval with the company's terms intact would confirm the single-customer certificate as a repeatable model rather than one order. **A hearing is a step in a docket, not a rule taking effect** — which is why it is not the review date."
+    ],
+    [
+     "An amended line-extension policy imposing mandatory {{contribution in aid of construction}} on data centres, due ninety days after a July order",
+     "Dominion",
+     "about 29 October 2026 — a computed clock, not a stated effective date",
+     "Direct assignment of transmission cost is the second half of that franchise's filter. Recorded as a near miss for the review date: a date derived from a ninety-day clock is a window by another name."
+    ],
+    [
+     "A state commission general election in two districts, on a body that certified 9,885 MW five to nothing and then split three to two on reconsideration",
+     "Southern",
+     "3 November 2026",
+     "The instrument is sound and the body reading it is elected, with data-centre overbuilding a stated issue. An election is not a rule taking effect."
+    ],
+    [
+     "Merger hearings on a 67-billion-dollar combination — the state commission evidentiary hearing, and a cost-allocation hearing on a separate utility's hyperscaler contract the same day",
+     "Dominion; Entergy",
+     "17 November 2026",
+     "Route three of the threat map. Conditions on data-centre cost allocation would show the docket outlasting the buyer."
+    ],
+    [
+     "A second state's commission hearings on the same merger",
+     "Dominion",
+     "8 December 2026",
+     "The second of five approvals the combination needs before an expected second-half-2027 close."
+    ],
+    [
+     "The grid operator and commission verification report due under an August 2026 data-centre audit directive",
+     "AEP, Oncor, NRG — every grid-served large load in that market",
+     "due 10 December 2026",
+     "Governs the batch queue, a 45 GW contracted tranche and one challenger's signed 445 MW alike. **A report due inside an audit is a deliverable, not a commencement** — and the tariff or order it may produce carries no date anywhere in the record."
+    ],
+    [
+     "A dispatchable-generation solicitation's bids due on the largest data-centre system in the country",
+     "Dominion",
+     "18 December 2026",
+     "A storage or hybrid winner would open a third procurement lane on a system whose owned-storage programme is small."
+    ],
+    [
+     "**A new large-load rate class takes effect**, with minimum demand on transmission and on generation set at different percentages",
+     "Dominion",
+     "**effective 1 January 2027**",
+     "The only future effective date in the whole segment's policy fence, and the answer a sort returns. It decides the economics of every behind-the-meter project on that system."
+    ],
+    [
+     "A 500 MW storage solicitation's contracts, and a final merger order expected in the same month",
+     "Southern; Dominion",
+     "January 2027; order expected 29 January 2027",
+     "A developer winner other than the utility's existing engineering contractors would widen the one battery lane that franchise leaves open."
+    ],
+    [
+     "A state attorney-general trial over wildfire liability at a growth subsidiary carrying a 22 per cent rate-base growth rate",
+     "Xcel",
+     "19 April 2027",
+     "A judgment barring customer recovery of fire costs would change that subsidiary's credit story more than any mitigation spend, and it funds the tariff programme."
+    ],
+    [
+     "A grid operator's interim resource-adequacy service, which distribution utilities must administer for certain new large loads",
+     "AEP and every distribution utility in that market",
+     "from 1 June 2027",
+     "The first time a grid operator makes the franchise the administrator of someone else's adequacy obligation."
+    ],
+    [
+     "A certification filing for a 2,000 to 6,000 MW solicitation opened in June 2026",
+     "Southern",
+     "mid-2027",
+     "A self-build share above two-thirds would confirm the owned lane; a purchase-heavy filing would indicate the commission has begun preferring purchases."
+    ],
+    [
+     "A state supreme court decision on the data-centre tariff that seven other state filings were argued from",
+     "AEP",
+     "*undated* — appeal filed November 2025, briefing closed March 2026",
+     "A reversal would remove the instrument without voiding contracts already signed. It is template risk, not a single-state exposure."
+    ],
+    [
+     "Commission decisions on four pending 765 kV certificate applications, publicly opposed by state officials in July 2026",
+     "Oncor",
+     "*undated*",
+     "Over 2,000 breakers and transformers are already reserved through 2030 against certificates that are still pending — capital committed ahead of an approval."
+    ],
+    [
+     "The close of a 5,496 MW generation acquisition, approved by the federal regulator and unclosed",
+     "Vistra",
+     "*undated, expected late 2026*",
+     "Takes the challenger fleet to about 50 GW on capacity-market economics rather than on a signed AI load — the shape of the challenger bet, restated."
+    ]
+   ],
+   "sales": "Three of these sixteen are proceedings of the state ratemaking class — rate case, resource plan, certificate. That class decides whether the plant gets built and who pays; put it on the account calendar beside the interconnection milestones, not instead of them."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "ps": [
+    "**Two readers arrive here by different roads.** The curriculum puts this segment on the storage seller's path — reached through the product and market-access tracks and then the third Value Chain track — while the AI-data-centre power seller reaches the same six franchises through the power chain and the interconnection rulebook. Both end up in front of the same companies with different questions. **And both should have the procurement module open beside this one:** it owns the process, this owns the parties, and a utility account needs both.",
+    "**1 — Identify the instrument before you build the account plan.** The six franchises convert load into plant by five different mechanisms, and the sales motion follows the mechanism, not the logo. Southern buys the battery itself under supply agreements and named engineering contractors, so the work is approved-vendor qualification ahead of the next solicitation. AEP and Entergy have **no named battery supplier on any project in any source their dossiers reviewed**, so the entry point is the developer bidding their solicitations. Dominion's own record puts the addressable market as the developer bidding the October 2026 purchase solicitation and the utility's approved-vendor list, in that order. Oncor buys no generation at all and is never the counterparty for it. **Pitching a container to a wires-only utility is a category error the public segment lesson's player table will not warn you about.**",
+    "**2 — Read the collateral, not the queue.** Every incumbent here publishes a large number it does not itself believe: 298 GW of requests against 8 GW energised; 195 GW of queue against 69 GW contracted; 70,000 MW against eleven to fifteen connections a year; 75 GW prospective against 17 GW contracted; 20 GW of pipeline against 2 GW. In every case the smaller number is the one with money or a signature behind it. Oncor makes the point most cleanly because it publishes the money — **collateral more than doubled in nine months while the queue's growth rate fell** — and the ratio between a franchise's two numbers tells you how far along its instrument actually is.",
+    "**3 — Know which side of the meter you are on, because the policy risk is not symmetric.** When Texas paused grid interconnections in August 2026, {{behind-the-meter}} generation was exempt and grid-served load was not. That one asymmetry is the whole disintermediation thesis in a single event: the regulated route carries the regulatory risk and the routes around it do not. A seller with a {{behind-the-meter}} or {{co-location}} product is selling **against** the franchise's timeline rather than into it — a different buyer, a different call sheet, and quarters rather than regulatory years.",
+    "**4 — Watch who the buyer will become, not only who it is today.** Route three is live on the largest regulated system in the country: a combination that leaves the dockets intact and moves supplier qualification onto a platform whose merchant arm self-integrates, buying cells and DC blocks direct. A vendor qualified with that utility today is not thereby qualified with the combined company after close. **Qualification is an asset with an expiry date, and this is the one segment where it can expire without the customer doing anything.**",
+    "**5 — Two of the three largest revenue lines in this segment are not utilities.** The two challengers sign for generation on commercial timescales rather than certificate timescales, and one of them has signed only nuclear. In the Texas market they are also the parties that actually pay the wires incumbent. **A seller who works this segment as six regulated accounts is ignoring its two largest counterparties.**"
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Two claims in this module are the module's own** and are labelled as analysis wherever they appear: that the six incumbents are best read by instrument rather than by size, and that the threat runs on three disintermediation routes.",
+   "rows": [
+    [
+     "Segment holds 14 members — 6 incumbent, 2 challenger, 6 adjacent; six buying criteria; chain position 15 of 19, tier demand",
+     "profiler-segments.json @ v05.77r — segments[].members[], .buyingCriteria[], .definition, .position, .tier"
+    ],
+    [
+     "Regulated franchises have no challenger by construction; the competitive retail suppliers of restructured markets carry that role here; the reserved adjacent role was filled by two transmission developers",
+     "profiler-segments.json @ v05.77r — segments[].notes"
+    ],
+    [
+     "The registry's own definitions of incumbent, challenger and adjacent, quoted in the glossary",
+     "profiler-segments.json @ v05.77r — roles"
+    ],
+    [
+     "2025 revenue: NRG 30,713M; Southern 29,600M; AEP 21,876M; Vistra 17,738M; Dominion 16,506M; Xcel 14,669M; Entergy 12,947M; Oncor 6,778M — all USD millions",
+     "the eight profile files — financials.periods[] FY2025 annual, metrics[].kpi = revenue, usdMillions"
+    ],
+    [
+     "53.8 GW contracted split 12.0 GW under service agreements, 9.4 GW under construction authorisation, 32.4 GW at engineering; agreements include the revenue requirement whether service is taken or not",
+     "profile:dominion-energy @ v1 — strategyRead[0]"
+    ],
+    [
+     "About 70,000 MW of requests against a 24,678 MW peak, 45,000 MW with no connection date; connections at 11 to 15 a year against 118 requests in 2025",
+     "profile:dominion-energy @ v1 — strategyRead[0]"
+    ],
+    [
+     "Wires rather than generation is the binding constraint through at least 2028 and in places 2032, sustaining behind-the-meter bridge power on that system",
+     "profile:dominion-energy @ v1 — strategyRead[1]"
+    ],
+    [
+     "The addressable storage market is the developer bidding the 1 October 2026 purchase solicitation and the approved-vendor list, in that order",
+     "profile:dominion-energy @ v1 — strategyRead[2]"
+    ],
+    [
+     "The combination changes the buyer more than the docket — dockets and solicitation calendar intact, capital allocation and supplier qualification moving to the acquirer, close expected in the second half of 2027",
+     "profile:dominion-energy @ v1 — strategyRead[5]"
+    ],
+    [
+     "New large-load class effective 1 January 2027; a 31 July 2026 order requires direct assignment through mandatory contributions in aid of construction",
+     "profile:dominion-energy @ v1 — policyExposure[].effectiveDate and its exposure text"
+    ],
+    [
+     "Merger hearings 17 November 2026 and 8 December 2026, final order expected 29 January 2027; dispatchable-generation bids due 18 December 2026; amended line-extension policy about 90 days after 31 July",
+     "profile:dominion-energy @ v1 — policyExposure[] prose and strategyRead[7]"
+    ],
+    [
+     "No capacity auction to bid into and no regional queue — the company plans, certifies and builds inside a system it balances itself",
+     "profile:southern-company @ v2 — ecosystemRole"
+    ],
+    [
+     "17 GW contracted against 75 GW prospective; contracted rose from 8 GW in three quarters and prospective was never counted as load",
+     "profile:southern-company @ v2 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "9,885 MW certified five to nothing in December 2025; reconsideration denied three to two two months later after two seats changed hands; two more seats on the 3 November 2026 ballot",
+     "profile:southern-company @ v2 — strategyRead[0]"
+    ],
+    [
+     "3,022.5 MW of company-owned stand-alone storage certified in December 2025; the 500 MW solicitation is the developer lane and is smaller by an order of magnitude; equipment for the ten-gigawatt build reserved under fixed-price turnkey contracts",
+     "profile:southern-company @ v2 — strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "An Alabama 2026 statute, 150 MW threshold, effective 1 October 2026, extends the Georgia contract model to the second operating utility — the module's review date",
+     "profile:southern-company @ v2 — policyExposure[] prose; the same entry's effectiveDate field carries the earlier Georgia step, 2025-02-01"
+    ],
+    [
+     "A 2,000 to 6,000 MW solicitation opened June 2026 with certification mid-2027; storage contracts January 2027",
+     "profile:southern-company @ v2 — strategyRead[1], strategyRead[7]"
+    ],
+    [
+     "A phase-one order certified 2,262 MW for a named hyperscaler subsidiary on an agreement whose minimum charges recover the annual revenue requirement; phase two repeats it for 5,278 MW on a twenty-year term",
+     "profile:entergy @ v2 — strategyRead[0]"
+    ],
+    [
+     "15.5 GW of executed service agreements ranked in April 2026 the largest disclosed block among nineteen utilities",
+     "profile:entergy @ v2 — strategyRead[0]"
+    ],
+    [
+     "A turbine exclusivity agreement with a quarterly manufacturing slot for frames above 400 MW, its minimum order raised from 15 to 21 to 27 power-island sets, 10 fulfilled by June 2026",
+     "profile:entergy @ v2 — strategyRead[1]"
+    ],
+    [
+     "No battery supplier is named on any company-owned project in any source found; the storage lane is the one channel a new supplier can enter and is small against roughly 8 GW of approved gas",
+     "profile:entergy @ v2 — strategyRead[4]"
+    ],
+    [
+     "Phase-two hearing 7 October 2026 with the vote in December 2026; a cost-allocation hearing on a hyperscaler contract 17 November 2026",
+     "profile:entergy @ v2 — strategyRead[7]"
+    ],
+    [
+     "Certifies no generation, is not a seller of electricity, holds no capacity obligation because an energy-only market creates none; decides point of delivery, contribution in aid of construction, collateral and batch sequence",
+     "profile:oncor @ v1 — ecosystemRole, strategyRead[3]"
+    ],
+    [
+     "737 requests totalling 298 GW at 30 June 2026; about 44 GW eligible in the first interconnection batch; about 8 GW energised — three figures reported separately and never blended",
+     "profile:oncor @ v1 — strategyRead[0]"
+    ],
+    [
+     "Collateral held rose from about 2.8 billion dollars in November 2025 to 3.5 billion in February 2026, 4.0 billion in May and 5.9 billion in August, while queue growth decelerated from 24 to 15 per cent year over year",
+     "profile:oncor @ v1 — strategyRead[1]"
+    ],
+    [
+     "The retail subsidiaries of the two challengers are its two largest customers at 25 per cent and 21 per cent of 2025 total operating revenues; no other customer exceeded 10 per cent",
+     "profile:oncor @ v1 — productsAndServices, targetSegments"
+    ],
+    [
+     "Four 765 kV certificate applications pending and publicly opposed by state officials in July 2026, against over 2,000 breakers and transformers already reserved through 2030",
+     "profile:oncor @ v1 — strategyRead[2], strategyRead[5]"
+    ],
+    [
+     "Large-load tariffs approved in six of eight states by August 2026, take-or-pay minimum billing demand of 80 to 90 per cent, terms of twelve to twenty years, ramps, collateral and exit fees",
+     "profile:aep @ v1 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "69 GW contracted reported separately from roughly 195 GW of queue activity; one state filing shows 17,861 MW contracted against 30,000 MW of pre-tariff requests",
+     "profile:aep @ v1 — strategyRead[0]"
+    ],
+    [
+     "Nearly 90 per cent of the national 765 kV network; 33 billion dollars of transmission inside a 78 billion dollar capital plan; a 2025 agreement to expand domestic manufacture of extra-high-voltage transformers and breakers",
+     "profile:aep @ v1 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "No named battery supplier or integrator on any project in any source reviewed; approved-but-not-in-service renewables and storage of 1,808 MW containing a single 224 MW battery project",
+     "profile:aep @ v1 — strategyRead[5]"
+    ],
+    [
+     "The state tariff is on appeal at that state's supreme court and the other seven state filings were argued from the same premise",
+     "profile:aep @ v1 — strategyRead[3], policyExposure[] prose"
+    ],
+    [
+     "A verification report due 10 December 2026; an interim resource-adequacy service administered by distribution utilities from 1 June 2027",
+     "profile:aep @ v1 — policyExposure[] prose"
+    ],
+    [
+     "First utility to put a hyperscaler's full incremental cost into a customer-specific charge — 1,400 MW wind, 200 MW solar, 300 MW and 30 GWh iron-air; large-load tariffs filed in three states",
+     "profile:xcel-energy @ v4 — ecosystemRole"
+    ],
+    [
+     "About 2 GW contracted against more than 20 GW of pipeline, about 1 GW expected signed in 2026, contracted unmoved between two consecutive quarterly decks; growth gated by commissions rather than demand or equipment",
+     "profile:xcel-energy @ v4 — strategyRead[0]"
+    ],
+    [
+     "Twelve gas-turbine reservations including five F-class, ten further turbines at 2,088 MW and a 2 GW joint development agreement, all executed before any tariff outside one state was approved",
+     "profile:xcel-energy @ v4 — strategyRead[1]"
+    ],
+    [
+     "An attorney-general trial set for 19 April 2027; a judgment barring customer recovery would change the subsidiary's credit story more than any mitigation spend",
+     "profile:xcel-energy @ v4 — strategyRead[3], strategyRead[7]"
+    ],
+    [
+     "Started with the customers and bought the generation to match; retail was 29.5 billion of 30.7 billion dollars of 2025 revenue; integration reduces actual and contingent collateral",
+     "profile:nrg-energy @ v1 — ecosystemRole, strategyRead[3]"
+    ],
+    [
+     "A January 2026 acquisition closed at 10,583 million dollars of consideration plus about 3.2 billion of assumed debt, adding about 13 GW across nine states and doubling the fleet to about 25 GW",
+     "profile:nrg-energy @ v1 — strategyRead[1]"
+    ],
+    [
+     "The only one of the four large merchants with no named hyperscaler counterparty; 445 MW of signed retail power agreements with an unnamed counterparty",
+     "profile:nrg-energy @ v1 — strategyRead[2]"
+    ],
+    [
+     "The August 2026 pause left those signed 445 MW exposed because they are grid-served, while behind-the-meter generation was exempt",
+     "profile:nrg-energy @ v1 — strategyRead[6]"
+    ],
+    [
+     "Owns both the generation and the customers so that a price move hurting one side helps the other; the wires incumbent's single largest customer group at 25 per cent of 2025 revenue",
+     "profile:vistra @ v3 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Every signed large-load agreement is nuclear — 1,200 MW and 2,609 MW from three nuclear sites and an uprate programme; the gas-fleet language is unchanged across four consecutive filings",
+     "profile:vistra @ v3 — strategyRead[1]"
+    ],
+    [
+     "A 5,496 MW acquisition clears to roughly 50,000 MW pro forma, approved by the federal regulator and unclosed, expected late 2026",
+     "profile:vistra @ v3 — strategyRead[4], strategyRead[7]"
+    ],
+    [
+     "Frames co-location of compute at its own generation and storage sites in market-structure terms — up to 300 MW under one preliminary agreement — with no megawatts disclosed and the second counterparty unverified by any third party",
+     "profile:engie-north-america @ v2 — strategyRead[4]"
+    ],
+    [
+     "Sells commercial and industrial retail supply in deregulated markets since 2002; ranked second in US operating battery storage at 3.662 GW on 30 June 2026",
+     "profiler-segments.json @ v05.77r — members[].basis; profile:engie-north-america @ v2 — strategyRead[0]"
+    ],
+    [
+     "Operates as a Texas retail electricity provider aggregating home batteries into a virtual power plant",
+     "profile:tesla @ v7 — productsAndServices; profiler-segments.json @ v05.77r — members[].basis"
+    ],
+    [
+     "A 67 billion dollar combination with an incumbent; the single largest AI-data-centre energy counterparty; self-integrates, buying cells and DC blocks direct so a containerised-system vendor has no integrator channel to ride",
+     "profile:nextera-energy-resources @ v4 — ecosystemRole, strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "Created a dedicated unit in April 2026 for natural gas and data-centre development; build-and-transfer at commissioning — 918 MW filed by one regulated utility, two plants at about 2.3 billion dollars combined by another, a further 1.95 GW planned",
+     "profile:invenergy @ v3 — strategyRead[2]"
+    ],
+    [
+     "Sells utilities ownership slices of interregional lines they would not have planned themselves — one partner at about 35 per cent as operator, seven on non-binding memoranda for 2,550 MW; these electric companies will be the ultimate owners, each owning a slice",
+     "profile:grid-united @ v1 — ecosystemRole, strategyRead[0]; profiler-segments.json @ v05.77r — members[].basis"
+    ],
+    [
+     "Build-own-transfer of a completed line to a regulated utility for 285 million dollars in 2021; the first Subscriber Participating Transmission Owner scheduled into the California market; opposed by an incumbent at a state commission",
+     "profile:pattern-energy @ v1 — ecosystemRole, strategyRead[0], strategyRead[3]; profiler-segments.json @ v05.77r — members[].basis"
+    ],
+    [
+     "The fourteen members carry 76 policy entries, 64 with an effective date, and exactly one of those is in the future",
+     "the 14 profile files — policyExposure[], counted 2026-09-14"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "5 min",
+   "kind": "callout",
+   "ps": [
+    "**1 — Two of the six incumbents run open storage solicitations and neither one's battery supplier is discoverable.** One dossier states that no battery supplier is named on any company-owned project in any source it found; the other states that no named battery supplier or integrator appears on any project in any source reviewed. Southern is the exception that shows the shape, because its owned fleet does name a supplier and two engineering contractors. **A seller cannot work half this segment's owned lane from the dossiers alone**, and that is a fact about disclosure rather than about the opportunity.",
+    "**2 — The commercial terms that decide the economics are sealed.** Contracted megawatts, minimum-bill percentages and termination formulas in two franchises' large-load contracts are filed under seal or redacted, and both dossiers say so in their own collection gaps. Every figure this module quotes about those contracts is a company disclosure or a regulator's summary, never the contract.",
+    "**3 — The wires incumbent names no large-load customer anywhere.** Not a hyperscaler, a colocation developer, an engineering contractor or a transformer manufacturer, across its annual report, two quarterlies, every earnings release, an investor presentation, a sustainability report and 151 newsroom items. **The composition of its 298 GW is therefore not determinable from its own materials** — how much is one developer filing at several sites, and how much is speculative, cannot be read out.",
+    "**4 — There is no third-party ranking of these six against each other, and there could not be.** They do not compete for the same customer, so no ranking house has a table to build. Every ordering in this module is by instrument and is stated as a judgment. The one third-party ranking the segment touches measures storage ownership and names an adjacent, not an incumbent.",
+    "**5 — The turbine supplier is unstated for most of the gas build this segment is certifying.** Two dossiers infer one manufacturer each at low confidence and both say in terms that no source states it. A supplier reading either as fact would be reading an inference the dossier itself flagged as an inference.",
+    "**6 — Disclosure is asymmetric between the two challengers in exactly opposite directions.** One publishes no net leverage ratio in any filing and its investor site was unreachable, so the share of expected generation hedged — which its peers publish — is unobtainable. The other discloses storage in megawatts only, with no megawatt-hour figure for any asset in any filing, deck or sustainability report.",
+    "**7 — The most direct disintermediation route is an announced intent, not a delivered one.** Neither co-location arrangement discloses megawatts under contract, and no third party has verified one counterparty's construction progress, financing or load commitment. The same caution applies one link further along route two: whether any of those transferred gas plants is contractually tied to a named hyperscaler campus, beyond the utility filings' own references, is not established.",
+    "**8 — And the franchise most openly designing tariffs says its supplier map is incomplete on purpose.** Its record states that further supply-chain partnerships exist but are undisclosed for confidentiality. **This module states no rank without its instrument attached, and invents nothing to fill these eight gaps.**"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "This segment holds six incumbents. Why can they not be ranked against each other?",
+     "a": "Because a {{regulated franchise}} is a geographic monopoly and none of them competes with another. One cannot bid for load in another's territory, and one of the six is not a seller of electricity at all. **Share here is fixed by statute**, so the only thing that can be ranked is how far along each one's instrument is."
+    },
+    {
+     "q": "What are the five instruments the six franchises use to turn AI load into plant?",
+     "a": "**The filter** (a conversion ladder plus a new rate class and deposit clauses), **the certificate** (planning and certifying inside a self-balanced system — used in a single-customer variant by a second member), **the contract** ({{take-or-pay}} minimum billing demand of 80 to 90 per cent), **the collateral** (cash posted before construction, by a wires-only utility), and **the customer-specific charge** (a hyperscaler's full incremental cost billed as a named charge)."
+    },
+    {
+     "q": "The registry labels two companies in this segment challenger. What does its own note say that label means here?",
+     "a": "That regulated franchises have **no challenger by construction**, so the role is carried by the competitive retail suppliers of the restructured markets. It is a **structural placeholder, not a threat claim** — and the two companies carrying it rank first and third in the segment by revenue."
+    },
+    {
+     "q": "What is the relationship between the wires incumbent and the two challengers in the Texas market?",
+     "a": "**Customer and supplier, not rivals.** The two challengers' retail subsidiaries are the wires utility's two largest customers, at 25 per cent and 21 per cent of its 2025 operating revenues, with no other customer above 10 per cent — forty-six per cent of its revenue between them. The graph types the edge as other, not competitor."
+    },
+    {
+     "q": "If no rival franchise can threaten an incumbent here, what is actually under threat, and by which three routes?",
+     "a": "**The scope of the franchise**, not its share. Route one: the load never becomes the franchise's load ({{co-location}} and {{behind-the-meter}} supply). Route two: the asset arrives already built ({{build-own-transfer}} gas plants and utility-owned slices of merchant lines). Route three: the franchise changes hands, and supplier qualification moves with the buyer. **All three are carried by adjacents that sell to or through the incumbents rather than against them.**"
+    },
+    {
+     "q": "A utility publishes a very large interconnection figure and a much smaller contracted figure. Which one should a seller plan against, and what is the cleanest evidence?",
+     "a": "The smaller one — it is the figure with money or a signature behind it. The cleanest evidence in the segment is the wires utility that publishes the money: **collateral held more than doubled in nine months, from about 2.8 to 5.9 billion dollars, while the request queue's growth rate fell from 24 to 15 per cent.**"
+    },
+    {
+     "q": "Which member of this segment buys the battery itself, and how large is its owned lane against its developer lane?",
+     "a": "Southern. Its December 2025 certificate added **3,022.5 MW of company-owned stand-alone storage**, against a **500 MW** storage solicitation that is the developer lane — smaller by an order of magnitude. Two other incumbents name no battery supplier on any project at all, so their entry point is the developer bidding the solicitation."
+    },
+    {
+     "q": "Why does this module carry no tariff-terms table, no five-channel list and no buyer map?",
+     "a": "Because the procurement module already owns them. **That module answers what you have to do to sell into a utility; this one answers who the utility is and what it is trying to do.** The split is deliberate: restating the playbook would have been the predictable failure for a landscape over the same franchises."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "You are preparing a competitive strategy for this segment and want to know which incumbent is taking share from which. What does the segment's structure tell you?",
+     "c": [
+      "Rank them by contracted gigawatts — the largest contracted book is the leader",
+      "There is no share to take: each franchise is a statutory geographic monopoly, so the useful comparison is which instrument each has built and how far along it is",
+      "Rank them by revenue, since that is the only figure all eight ranked members publish",
+      "Compare their interconnection queues, which is the standard measure of demand in this segment"
+     ],
+     "a": 1,
+     "why": "A regulated franchise is a geographic monopoly — one incumbent cannot bid for load in another's territory, and one of the six sells no electricity at all. Contracted gigawatts are not comparable across franchises because the instruments behind them differ in kind, and every incumbent here publishes a queue figure it does not itself treat as demand. What varies and can be acted on is the instrument: certificate, contract, collateral or charge."
+    },
+    {
+     "q": "A colleague says the two challengers in this segment are small insurgents attacking the regulated incumbents. What does the record show?",
+     "c": [
+      "Correct — challenger is the registry's term for an entrant contesting the leading set",
+      "They are mid-sized and compete with the incumbents for the same large-load contracts",
+      "They rank first and third in the segment by revenue, and in one market they are the wires incumbent's two largest customers — the registry's own note says regulated franchises have no challenger by construction",
+      "They are former incumbents that lost their franchises in restructuring and are trying to win them back"
+     ],
+     "a": 2,
+     "why": "The registry's note for this segment states that regulated franchises have no challenger by construction and that the competitive retail suppliers of restructured markets carry the role. Their 2025 revenues are the largest and third-largest in the segment, and the wires incumbent's own record puts their retail subsidiaries at 25 and 21 per cent of its operating revenues. The label is a structural placeholder, not a threat claim."
+    },
+    {
+     "q": "Your product is a behind-the-meter power solution for a data-centre campus. A regulated interconnection pause is announced in that state. What does this segment's record suggest?",
+     "c": [
+      "The pause applies to all new large load, so the opportunity is delayed either way",
+      "Behind-the-meter generation was exempt from the August 2026 pause while grid-served load was not — the regulatory risk is not symmetric across the two routes",
+      "Behind-the-meter projects need the same certificate, so the pause is neutral",
+      "The pause makes the regulated route faster, because the queue shortens"
+     ],
+     "a": 1,
+     "why": "One challenger's record states the asymmetry directly: its signed 445 MW were grid-served and therefore exposed, while behind-the-meter generation was exempt — which it notes cuts in favour of a supply model that routes around the grid. That single event is the clearest pricing of the disintermediation thesis in the segment, and it is why a seller has to know which side of the meter the opportunity sits on."
+    },
+    {
+     "q": "You have been a qualified vendor with one of these incumbents for three years. It announces a merger in which its own dockets, resource-plan cycle and solicitation calendar stay intact. What is the risk to your position?",
+     "c": [
+      "None — the dockets and solicitation calendar are unchanged, so procurement continues as before",
+      "The whole relationship lapses at close and must be rebuilt from nothing",
+      "Capital allocation, supplier qualification and framework agreements would sit with the acquirer, whose merchant arm self-integrates and buys cells and blocks direct — so qualification can expire without the customer doing anything",
+      "Only pricing changes, because the acquirer will demand volume discounts"
+     ],
+     "a": 2,
+     "why": "The incumbent's own strategy read is that the combination changes the buyer more than the docket: the regulatory calendar survives, but capital allocation, supplier qualification and framework agreements move to the acquirer's platform. The acquirer's own record describes self-integration — buying cells and DC blocks direct — which removes the integrator channel entirely. Nothing in the docket changes, and the qualification can still lapse."
+    },
+    {
+     "q": "A seller asks whether to read this module or the utility procurement module before a first meeting with a regulated utility. What is the right answer?",
+     "c": [
+      "This one — it is newer and covers more of the segment",
+      "The procurement module — it names the tariffs and the channels, which is what a first meeting is about",
+      "Both, because they answer different questions: the procurement module answers what you must do to sell into a utility, and this one answers who that utility is and what it is trying to do",
+      "Neither — the public segment lesson's player table carries everything a first meeting needs"
+     ],
+     "a": 2,
+     "why": "The two modules were written to a stated split. The procurement module owns the process — the four moves, the tariff terms, the five channels where storage enters and who signs the purchase order. This module owns the parties — the instrument each franchise built, what each of the eight ranked players is betting, the three disintermediation routes, and four members the procurement module does not cover at all. A utility account needs both, and the public segment lesson carries neither judgment layer."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "Segment role. The dossier places the company in the segment's established leading set — ranked top-tier by a third party, or described by the dossier as the incumbent, the benchmark, the reference, or the leader for what the segment makes or does. In this segment the role means something unusual: each incumbent leads its own territory absolutely, because no other member is permitted to serve it."
+  },
+  {
+   "t": "challenger",
+   "d": "Segment role. The dossier places the company as contesting that set — an entrant, a second source, a fast riser, a business converting a base into the segment, a niche or mid-tier player, or a leader elsewhere attacking the market the corpus serves. In this segment the registry's own note records that regulated franchises have no challenger by construction, so the role is carried by the competitive retail suppliers of the restructured markets. It is a structural placeholder here, not a threat claim."
+  },
+  {
+   "t": "adjacent",
+   "d": "Segment role. The segment is not the company's primary business, but its dossier record bears on it. In this segment the six adjacents are where the threat actually lives, because four of them sell to or through the incumbents rather than against them."
+  },
+  {
+   "t": "regulated franchise",
+   "d": "The exclusive right and obligation to serve electric customers in a defined territory, granted by a state and priced by a commission rather than by a market. It is what makes share in this segment fixed by statute: the franchise cannot be taken by a competitor, only narrowed by load leaving the meter, bought by an acquirer, or abolished by restructuring."
+  },
+  {
+   "t": "retail electricity provider",
+   "d": "In a restructured market, the company that sells electricity to the end customer and buys it wholesale, while a separate wires company delivers it. The two challengers here are retail providers that bought generation to hedge their customer books; in Texas they are also the delivery utility's two largest customers."
+  },
+  {
+   "t": "Subscriber Participating Transmission Owner",
+   "d": "A California grid-operator role that lets a merchant transmission owner place a privately financed line under the operator's control while selling its capacity to subscribers rather than recovering it from all ratepayers. It is one of the routes by which a line reaches service without a regulated utility having planned it."
   }
  ]
 };

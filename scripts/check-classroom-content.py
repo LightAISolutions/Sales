@@ -835,12 +835,17 @@ def run_gate_truth_table(src, lesson_ids=()):
     # function could not. Bump it in the commit that registers a module —
     # 9 at C3 session 3, 10 since S2 session 1 added the first landscape,
     # 11 since S2 session 2 added the second (cells and chemistry),
-    # 12 since S2 session 3 added the third (storage developers and IPPs).
+    # 12 since S2 session 3 added the third (storage developers and IPPs),
+    # 13 since S2 session 4 added the fourth (utilities) — the first landscape
+    # over a segment an earlier module already partly covered, so it is also
+    # the first whose registration puts TWO modules on the same franchises;
+    # they split process from parties rather than duplicating, and the header
+    # comment above guidanceDocLandscapeUtilities_() records the split.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 12:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 12" % len(gids))
+    if len(gids) != 13:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 13" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

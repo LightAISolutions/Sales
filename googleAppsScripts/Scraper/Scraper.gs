@@ -1,4 +1,4 @@
-var VERSION = "v02.04g";
+var VERSION = "v02.05g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -766,7 +766,29 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     source: 'market' },
   { key: 'topic-dc-cooling', label: 'Data-center cooling & power density',
     terms: ['liquid cooling', 'power density', 'rack density', 'kilowatt per rack', 'thermal design', 'pue'],
-    source: 'market' }
+    source: 'market' },
+  // Added by the utilities landscape (S2 session 4, 2026-09-14). THE GAP THIS
+  // FILLS, so nobody merges it into a neighbour: the STATE RATEMAKING VENUE was
+  // scored by nothing. Checked against all 381 distinct terms across both seed
+  // arrays before adding, and 'rate case', 'rate base', 'integrated resource
+  // plan', 'certificate', 'cost allocation', 'ratepayer', 'commission' and
+  // 'prudence' each returned ZERO matches. topic-utility-procurement owns the
+  // interconnection PROCESS (its seven terms are all process words),
+  // topic-federal-interconnection owns the FERC docket, topic-capacity-markets
+  // owns the queue and the auction, and topic-federal-action is federal-only -
+  // so a headline like "state commission approves a rate freeze" or "commission
+  // orders direct assignment of transmission cost to data centers" matched no
+  // seed at all, in the one venue that decides whether an AI-load plant is built
+  // and who pays for it. Six of the utilities segment's fourteen dossiers are
+  // organised around this venue and three of the module's indicators are
+  // proceedings of this class. No `tv` marker: tv guards edits to an EXISTING
+  // seed's terms and lives on SCRAPER_SEGMENT_SEEDS; this is a new key with no
+  // sheet row.
+  { key: 'topic-utility-ratemaking',
+    label: 'State ratemaking: rate cases, IRPs, certificates & cost allocation',
+    terms: ['rate case', 'rate base', 'integrated resource plan', 'certificate of public convenience',
+            'cost allocation', 'ratepayer', 'public utility commission', 'prudence review'],
+    source: 'guidance:landscape-utilities-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies
