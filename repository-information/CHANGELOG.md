@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 85/100`
+`Sections: 86/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.84r] — 2026-09-15 02:53:26 AM EST
+
+> **Prompt:** "Picking up from my last session, add a Session Start Checklist line under \"Always Run\" requiring git fetch --unshallow origin main before any pin read or --check reading … Then, author S2 session 5 — the power-conversion-and-rack-power-silicon landscape module … THE DEPLOY and THE CHANGELOG ARITHMETIC: exactly as §7.25's paragraphs set out. Confirm the deploy from Pages and the job log, NOT by probing ?op=deploy first." *(the handover half of the same prompt — §7.25's brief is reproduced in full there)*
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.26 — deployment counters moved from forecast to measurement, and BOTH halves were edited together.** The prose paragraph and the quoted paste-in prompt block both read `Classroom 51/200 and Scraper 151/200 EXPECTED`; both now carry the measured figures. This is the trap §7.25 recorded and v05.81r fell into — refreshing a brief's body does not refresh the half that actually gets pasted. §7.26's CHANGELOG arithmetic was restated for the post-push state (**86 raw / 80 non-exempt**) in both halves as well
+
+### Notes
+
+- **THE DEPLOY, and it produced a first: the v05.59r poll FIRED, on the Scraper leg, and it was needed.** Seven consecutive briefs have recorded that poll as armed and never used. v05.83r's workflow reported `Scraper: neither leg confirmed v02.06g — re-reading in 5s (poll 1/5)`, then `… in 15s (poll 2/5)`, then **`Scraper deploy confirmed (POLL 2): Already up to date (v02.06g)`**. Without the poll that leg would have reported a failure on a deploy that had in fact succeeded. **The mechanism is worth keeping: the poll re-reads rather than re-deploying, so it costs nothing and resolves in seconds**
+- **And it corrected this session's own counter forecast, in the safe direction.** `Already up to date` is **not** `Updated to` — it means the running `/exec` bundle had already caught up, so **no deployment was consumed** and Scraper stays at **150/200**, against the 151/200 §7.26 forecast. The transferable rule: **forecast a deployment counter from whether the running bundle is behind, not from whether the file changed.** Classroom, by contrast, reported `Classroom deploy confirmed (GET): Updated to v01.40g (deployment 51) | 51/200` on the **first GET leg with no POLL line**, and **no `?op=deploy` probe was issued at all** — the eighth consecutive clean use of the §7.19 order
+- **Pages confirmed both files on the first read** — `|v01.40g|` and `|v02.06g|` — and the Pages deploy job reported success for commit `a2c7933`. The §7.19 order held: Pages first, then the job log, no probe
+- **Both findings are recorded where a future session will meet them** — §7.3's order-5 row gains finding (ix) and §6's S2 row gains the poll sentence, so neither is discoverable only from this CHANGELOG
+- **No rotation.** 85 raw / 80 non-exempt before, **86 raw / 80 non-exempt** after, six sections dated 2026-09-15 on the EST clock, against a trigger of 100. Nothing in the Classroom or Scraper surface moved — no `.gs` and no `.html` — so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.40g / v01.14w** and Scraper at **v02.06g**
 
 ## [v05.83r] — 2026-09-15 02:37:11 AM EST
 
