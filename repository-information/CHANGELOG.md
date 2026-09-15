@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.87r] — 2026-09-15 03:46:21 AM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run S2 session 6, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.27 — the CHANGELOG arithmetic corrected in BOTH halves**, from `87 raw / 80 non-exempt` to **`88 raw / 80 non-exempt`** (and the post-roll figure from 87 to 88). Found while reproducing §7.27's prompt block verbatim for the handover
+
+### Added
+
+- **`SESSION-CONTEXT.md`** — the v05.81r entry is dropped under the two-session cap, the v05.84r entry moves to `## Previous Sessions`, and the new `## Latest Session` records Phase 4 row 10 in full
+
+### Notes
+
+- **THE "EDIT BOTH HALVES" RULE HAS A SECOND EDGE, and this session found it by falling over it.** §7.27's *deployment counters* were correctly refreshed from forecast to measurement at v05.86r, in both the prose paragraph and the quoted prompt block — the trap §7.25 recorded. But **that same handover commit added a CHANGELOG section of its own**, which silently made §7.27's *changelog arithmetic* paragraph stale by one, again in both halves. The counters were the half being watched; the section count was not. **The rule generalises: a handover commit that moves any number the brief quotes must refresh that number too, not only the ones it was opened to fix.** The cheap check is to re-run the brief's own stated measurements against the working tree immediately before the final push, rather than trusting figures written earlier in the same session
+- **No rotation.** 88 raw / 80 non-exempt before, **89 raw / 80 non-exempt** after, nine sections dated 2026-09-15 on the EST clock, against a trigger of 100. Nothing in any deployed surface moved — no `.gs` and no `.html` — so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.41g / v01.14w**
 
 ## [v05.86r] — 2026-09-15 03:39:56 AM EST
 
