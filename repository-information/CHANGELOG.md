@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 116/100`
+`Sections: 117/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.77r] — 2026-09-14 10:33:30 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Opus 5 xhigh session to run S2 session 4, then remember session."
+
+**A handover commit that turns one forecast into a measurement, for the third time in a row.** §7.23 was written inside the v05.76r commit, so its deployment counter could only forecast what that push's own deploy would do. The deploy has since landed and the forecast was right — the paragraph now carries the measured line instead, which is the same correction v05.73r made for §7.21 and v05.75r for §7.22.
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.23 — counters refreshed to the post-push state, body and prompt together.** The deployment counter moves **from a forecast to a measurement**: v05.76r's workflow reported `Classroom deploy confirmed (GET): Updated to v01.37g (deployment 48) | 48/200` **on the first GET leg with no `POLL` line**, and **no `?op=deploy` probe was issued at all** because Pages and the job log agreed — the §7.19 order working correctly on its **fifth** consecutive use. Scraper stayed at **149/200**. The repo CHANGELOG figures move **116 raw / eighteen dated today → 117 / nineteen**, with the 2026-09-15 rotation leaving **99** rather than 98, and the repo version the next session bumps from moves to **v05.77r**. The refresh is dated in place so a reader can see which half was written when.
+- **`repository-information/SESSION-CONTEXT.md` — Remember Session.** The v05.75r entry moves to `## Previous Sessions` and the v05.73r entry is dropped under the two-session cap. The new Latest Session records Phase 4 row 8 in full: the **due-count mechanism correction** (the buying-criteria lexicon is subordinate to `READ_NEXT`, not a second independent channel, so the bound is |READ_NEXT membership| + prior residue), the `reviewBy` reasoning with both candidates rejected, the source contradiction taught rather than smoothed over in `the-tiers`, the written answer to §8 item 6 for the corpus's first `bars` section in this lane, the `.cl-tbl` question now **diagnosed** on seven clean data points, the **two render-harness gaps** (`#auth-wall` is the overlay the recorded selector list misses, and a missing `favicon.ico` reports a 404 that belongs to the harness), the EST/UTC clock navigated correctly for a second consecutive session, and the stop-hook inoculation holding.
+
+### Notes
+
+- **Nothing in the Classroom or Scraper surface moved.** This push touches two plan and context documents, `README.md`, `repository.version.txt` and this file — **no `.gs` and no `.html`**, so there is no GAS or page bump and no entry in any public changelog. Classroom stays at **v01.37g** / **v01.14w** and Scraper at **v02.04g**; the content-checker baseline stays **0 errors / 0 warnings at 38 lessons / 8 tracks / 142 gate cases**, `check-readme-tree.py` reports **0 findings**, and `build-classroom-segments.py --check` still reports **5 due** — two of Phase 4 row 7's residue and three of row 8's, all five S2's to clear.
+- **The §7.23 correction that matters most to the next session is not the counter.** Its due-count paragraph carries row 8's finding rather than repeating §7.22's framing: `sec_what_is_bought` guards its lexicon match with `if lid in eligible`, so a lesson can only alter a segment whose `READ_NEXT` already names it. S2 session 4 inherits a **checkable bound** (5 due before, 6 after registering the module, back to 5 after regenerating its own segment) rather than a range.
+- **Rotation checked on the EST clock, not the UTC one — for the second consecutive session.** 117 sections with this entry, **19 dated 2026-09-14 and therefore exempt → 98 non-exempt → no rotation.** `Scrapergs.changelog.md` stays **51 raw / 49 non-exempt** and remains armed for the next session to touch `Scraper.gs` on a later EST day — **and S2 session 4 must ask the Scraper-seed question, so it may well be that session**; `Classroomgs.changelog.md` 37 / 29; `Profilerhtml.changelog.md` 49.
 
 ## [v05.76r] — 2026-09-14 10:21:39 PM EST
 
