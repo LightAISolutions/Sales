@@ -1,4 +1,4 @@
-var VERSION = "v01.39g";
+var VERSION = "v01.40g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -8990,8 +8990,8 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
  "title": "Power conversion and rack-power silicon",
  "short": "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
  "provenance": {
   "inputs": [
    {
@@ -10974,8 +10974,8 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* (planned) · *Faults, Grounding, and the Interlock at 800 Volts* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* · *Faults, Grounding, and the Interlock at 800 Volts* (planned).",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-power-conversion-and-rack-power-silicon-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Flex, Heron Power, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
    ]
   },
@@ -11055,6 +11055,13 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -39879,7 +39886,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeStorageIntegrators_(),
           guidanceDocLandscapeCellsAndChemistry_(),
           guidanceDocLandscapeStorageDevelopersAndIpps_(),
-          guidanceDocLandscapeUtilities_()];
+          guidanceDocLandscapeUtilities_(),
+          guidanceDocLandscapePowerConversion_()];
 }
 
 function guidanceIndex_() {
@@ -48459,6 +48467,676 @@ function guidanceDocLandscapeUtilities_() {
   {
    "t": "Subscriber Participating Transmission Owner",
    "d": "A California grid-operator role that lets a merchant transmission owner place a privately financed line under the operator's control while selling its capacity to subscribers rather than recovering it from all ratepayers. It is one of the routes by which a line reaches service without a regulated utility having planned it."
+  }
+ ]
+};
+}
+
+// Content: Landscape — Power Conversion and Rack-Power Silicon (corpus
+// synthesis, 2026-09-15). Derived from
+// repository-information/industry-guidance/landscape-power-conversion-analysis.md;
+// every claim rests on a member dossier at the profileVersion in the ledger.
+//
+// THE SPLIT, written before the module was (CLASSROOM-CURRICULUM-PLAN.md 10.6
+// (j), the rule the utilities landscape established). nvidia-800vdc-2026-08
+// owns the ARCHITECTURE of this exact layer - the four deployment options,
+// the TRU-versus-SST device classes, the grounding schemes, the protection
+// zones and SSCB ratings, the rack-power ladder, the certification plan. It
+// is deliberately vendor-blind and says so in its own guardrails section.
+// This module owns the PARTIES: who stands where along that architecture,
+// which incumbent holds which stage, what each of the twelve ranked players
+// is betting. The shared number is ~2029, the next-generation SST launch: a
+// roadmap gate over there (what can I build, and when), a position clock here
+// (who is exposed, and for how long). Six things that module owns are omitted
+// here on purpose and are listed in section 2 of the analysis file - do not
+// import them in a later revision.
+//
+// eo14420-bulk-power-2026-08 owns the origin TEST behind the segment's
+// manufacturing-location criterion, and china-policy-stack-2026-08 owns the
+// four federal machines. This module states only which members sit which side
+// of them - no definition of foreign-produced, no FEOC thresholds, no 45X
+// mechanics.
+//
+// reviewBy is 2026-11-27, seventy-three days after updated, and it is a read
+// rather than a sort. The roster's 20 members carry 40 policyExposure entries,
+// 17 dated, and exactly ONE of those dates is in the future (2027-04). The
+// nearer gate was read out of infineon's policy PROSE - China's export ban on
+// gallium is suspended in favour of a licensing regime only until 27 November
+// 2026 - while that same entry's effectiveDate field carries the 2023 first
+// step. Gallium is the input to gallium nitride, one of the two wide-bandgap
+// materials this segment is defined by. Section 10 of the analysis file
+// carries the reasoning and the four rejected candidates.
+function guidanceDocLandscapePowerConversion_() {
+  return {
+ "id": "landscape-power-conversion-and-rack-power-silicon-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — Power Conversion and Rack-Power Silicon",
+ "short": "Nine incumbents holding nine different stages of one chain, three challengers attacking on three different routes, and an architecture that deletes a stage. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 20 member dossiers of the power-conversion-and-rack-power-silicon segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-power-conversion-analysis.md"
+ },
+ "updated": "2026-09-15",
+ "reviewBy": "2026-11-27",
+ "revisions": [
+  {
+   "date": "2026-09-15",
+   "note": "First authoring, and the fifth landscape module of the segment layer. Corpus synthesis over the 20 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This is the second landscape whose segment an existing guidance module already covers, and the overlap is far sharper than the first: NVIDIA 800 VDC — Industry Alignment and Execution covers the architecture of the exact layer this segment is defined as. The split is stated in the opening paragraph and held to throughout — that module owns the architecture, this one owns the parties — and this module deliberately carries no deployment-option table, no TRU-versus-SST comparison, no grounding schemes, no protection zones and no rack-power ladder. Two policy modules own the manufacturing-location criterion in the same way: EO 14420 — The Bulk-Power System Emergency owns the origin test itself, and The China Policy Stack for a BESS Seller owns the four federal machines; this module states only which members sit which side of them. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis and is labelled as analysis rather than blended with fact. The review date is 27 November 2026 — the expiry of China's licensing regime suspending its gallium export ban, gallium being the input to gallium nitride and one of the two wide-bandgap materials this segment is defined by. It was read out of a member's policy prose while that same entry's date field carries the 2023 first step; the only future effective date in any field across the roster's forty policy entries is four months later. The reasoning and four rejected candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "20",
+   "v": "members on record",
+   "sub": "Nine incumbent, three challenger, eight adjacent — measured 15 September 2026, confirming the programme's written figure exactly, member for member"
+  },
+  {
+   "k": "9",
+   "v": "incumbents, one chain",
+   "sub": "They hold different stages of the same conversion chain rather than competing across it. Two of them would never meet in a bid"
+  },
+  {
+   "k": "1 of 40",
+   "v": "policy dates lies ahead",
+   "sub": "Across the roster's forty policy entries exactly one effective date is in the future, so this module's review gate had to be read out of prose instead"
+  },
+  {
+   "k": "0",
+   "v": "sourced rankings of the rack-shelf fight",
+   "sub": "The segment's most repeated claim — who is second in the NVIDIA rack — is carried by three dossiers and qualified by all three"
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Read this beside the architecture module, not instead of it.** *NVIDIA 800 VDC: Industry Alignment & Execution* is the engineering document: the four deployment architectures, the {{transformer-rectifier unit}} against the {{solid-state transformer}}, the grounding schemes, the protection zones, the rack-power ladder and the certification plan. It answers **what the voltage change is, why it happens, and what it deletes** — and it is deliberately vendor-blind, saying in its own words that it names no power-equipment vendors. This module answers the other half: **who is standing where along it.** Nothing below repeats its option table, its device comparison or its ladder; where you need those, go there.",
+    "**Nine {{incumbent}}s, and they are not nine vendors of one thing.** That is the fact everything else here follows from, and it is why this section is organised by stage of the chain rather than as a league table. The segment converts power at every voltage between the medium-voltage room and the processor die, and its members occupy **different stages of that one chain**: utility-scale conversion, the integrated Eastern data-centre power stack, the rack power shelf, the hall-edge direct-current block, the last centimetre at the die, and the silicon every one of those is built from. Two of them would never meet in a bid. A ranking of the nine against each other would be a ranking of nothing.",
+    "**The utility-scale stage — Sungrow, Huawei Digital Power, Sinexcel, Power Electronics.** Sungrow is the only member holding two Wood Mackenzie crowns at once, number one in both the Global PV Inverter Manufacturer and the Global BESS Integrator rankings for 2026, plus a sixth BloombergNEF inverter-bankability ranking, on company-reported 2025 shipments of 143 GW of inverters and 43 GWh of storage. Huawei Digital Power holds the other global number-one franchise claim — FusionSolar, 176 GWac shipped in 2024 — and is the benchmark Western vendors are measured against outside NATO geographies while being a structural non-factor in the United States. Sinexcel is a third-party {{power conversion system}} supplier the corpus deliberately leaves unresolved: BloombergNEF named it a Tier 1 power-inverter manufacturer for the first quarter of 2026, and CNESA's 2025 China shipment top ten does not list it at all. A bankability tier and a shipment ranking measure different things, and its disclosed strength is commercial-and-industrial and microgrid rather than utility-scale gigawatts. Power Electronics is the layer itself rather than a ranked competitor: it makes no cells and sells no turnkey battery system, which is **why** Wood Mackenzie's integrator ranking structurally cannot contain it — that ranking's published scope is factory-assembled systems — and its dossier records that no independent United States conversion ranking exists to place it in.",
+    "**The rack power shelf — Delta Electronics and LITEON.** Delta is the incumbent standard inside the NVIDIA rack: first-qualified power-shelf supplier for GB200 and GB300 NVL72, TrendForce's named primary beneficiary of the 800 V high-voltage direct-current shift, and the only vendor publishing a complete grid-to-chip {{800 VDC}} stack from solid-state transformer through direct-current brick to liquid-cooled busbar, with a reported two-billion-dollar {{silicon carbide}} supply lock behind it. LITEON is the leading {{second source}}, and its differentiator is a franchise rather than a price: {{battery backup unit}}s it has invested in since 2010 with first large cloud adoption in 2017, plus power-supply-and-backup firmware co-design. Its own 800 V {{power shelf}} rack reaches mass production in the first quarter of 2027 — about a step behind Delta — routed to custom-silicon customers first and to GPU clients potentially a quarter later. The reason that ordering matters commercially is that backup units move from optional on one rack generation to standard on the next, so LITEON's strongest product becomes non-discretionary content.",
+    "**The hall-edge block — Zhonhen.** Number one in China's data-centre high-voltage direct-current market at 31 per cent share on independent data, with the top three at 72 per cent; lead author of the national 240 V and 336 V direct-current standard; a national single-champion designation; and co-developer with Alibaba of the one-stage ten-kilovolt-to-direct-current Panama architecture that NVIDIA's August 2026 execution paper names as a transformer-rectifier implementation of its own data-hall power block. **Architectural endorsement and commercial inclusion are separate questions and only the first has been answered.** Exports are 4.1 per cent of revenue, no United States entity is on record, it is absent from every published NVIDIA partner roster, and its own interim discloses no order, no backlog and no named data-centre customer for the architecture it pioneered.",
+    "**The last centimetre — Vicor.** The corpus's reference for taking an 800 V or 400 V rack bus down to 48 V and then to about one volt at a thousand amps beside the processor: fixed-ratio {{bus converter}}s, current multipliers, 128 patents. It is absent from NVIDIA's May 2025, October 2025 and March 2026 partner lists, and its route into those racks is the module socket at the contract manufacturer plus the patent, not a listing. **Its position is the one in this segment that a competitor cannot close by building a better product**, and the numbers show why: royalty revenue moved from 3.9 per cent of net revenues in 2023 to 13.0 per cent in 2024 to 14.1 per cent in 2025, and consolidated gross margin from 51.2 per cent to 58.0 per cent, after an exclusion order brought original-equipment manufacturers to the licensing table.",
+    "**The silicon — Infineon.** The switches, drivers, controllers and protection devices every box above is built from, in silicon, {{silicon carbide}} and {{gallium nitride}}, from the solid-state transformer to the {{point of load}}. Gartner named it the company to beat in AI data-centre power semiconductors in May 2026, and it is the only vendor in NVIDIA's 800 VDC silicon tier publishing across the whole chain in all three materials, with its own reported AI data-centre revenue moving from 250 million euros in one financial year to above 700 million. The same Gartner assessment pairs that with the observation that its lead is tested at the compute-board level, where it is one of five rather than first — and NVIDIA's roster names thirteen other silicon providers, so no sole-source reading survives. It also sits downstream of a supply chain China controls: gallium is the input to gallium nitride, and the export ban is only suspended.",
+    "**Reading the nine as a set, and an honesty note the section owes the reader.** The nine leadership claims above do not rest on comparable evidence, and flattening them into an ordering would misrepresent all of them. Four rest on a ranking somebody publishes. Three rest on a qualification set reported by trade press rather than by the qualifier. One — Power Electronics — rests on the **absence** of a ranking, stated as an absence. And one — Vicor — rests on a trade-commission determination rather than on any market measure at all. **The module's own assessment, stated as analysis rather than as a finding of the record: in this segment the useful question is not who is biggest but which stage of the chain a player's revenue sits in, because the architecture is adding one stage, compressing another and deleting a third.**"
+   ],
+   "sales": "Before the first call, name the stage: utility-scale conversion, rack shelf, hall-edge block, last centimetre, or silicon. It decides who you are competing with — and two of the nine incumbents are not competing with each other at all."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**Three {{challenger}}s, and they are not a smaller version of the incumbents.** Each is attacking on a different route, and only one of the three is attacking the same stage it would eventually occupy. Note first what the registry does **not** say: unlike the utilities segment, whose registry note explains its own challenger label, this segment's note field is empty. The roles have to be read off the twenty basis lines and the dossiers, and the reading below is that work rather than a label repeated.",
+    "**Megmeet — the qualified-but-unranked mainland entrant, attacking a qualification slot.** Its 2026 interim states in the company's own words that it is one of NVIDIA's designated recommended data-centre power suppliers, participating in the Blackwell and Vera Rubin power and high-voltage direct-current programmes. Read that precisely: it is **membership of a set, not a position within it.** The same 238-page interim names no competitor anywhere and makes no share or rank claim. It is the only mainland-China power vendor NVIDIA has named for GB200 NVL72 power, and it publishes the full grid-to-GPU chain — edge cabinets rectifying 380 to 480 V alternating current directly to 800 V direct current at over a megawatt per rack, a solid-state transformer still in development, power, backup and supercapacitor shelves. Its wedge is assessed as architecture timing rather than price, and it is funding the pivot out of a declining appliance-controls business: profit excluding non-recurring items fell 93 per cent in the 2025 financial year, concurrent with the 800 VDC build-out.",
+    "**And the claim about Megmeet that a seller should not repeat.** Chinese trade reporting has it displacing LITEON as the second source on NVIDIA power shelves. **Three dossiers carry that report and all three qualify it.** Delta's calls it unverified in precision though directionally corroborated; LITEON's notes that it conflicts with record shipments and two new North American cloud-provider additions, and that both can be true if the market is growing faster than share is shifting; Megmeet's own calls it unsourced and says it has become weaker rather than stronger, because the interim claims no rank and two independent supplier notes name Delta and LITEON without mentioning Megmeet at all. There is no sourced number two. Saying so is the accurate position.",
+    "**Flex — the challenger that bought its way up the chain, attacking a scope boundary.** NVIDIA's roster places Flex Power in the same power-system-components tier as Delta, LITEON and Megmeet, but Flex also owns the switchgear and the cooling, so it can quote a buyer from the medium-voltage room to the cold plate on the die. That position was bought rather than built: roughly 6.3 billion dollars of acquisitions, **two thirds of it committed in the sixteen months after the AI build-out began**, culminating in a 4.4-billion-dollar agreement for a United States conversion manufacturer in September 2026. Two complications a seller must know. The board approved separating the cloud and power infrastructure business in May 2026, targeted for the first quarter of calendar 2027 — so the competitor is being reconstituted mid-fight. And the segment blends what Flex owns with hardware it builds to other companies' designs, with no revenue line ever published for the branded power businesses, so **anyone quoting a Flex data-centre revenue figure is quoting something the record does not contain.**",
+    "**Heron Power — the pre-production specialist, attacking a device generation that does not exist yet.** A 34.5-kilovolt-to-800 V direct-current solid-state transformer whose specification maps one-to-one onto the medium-voltage-direct block the architecture reserves for its next generation. It is the only startup on NVIDIA's facility-tier roster. It also has **no shipped unit, no independently checkable datasheet and no listing on the record**, with two named customer engagements — one quote and one letter of intent. Its own dossier states the exposure without softening it: mass production begins late in 2027 against an architecture that attaches medium-voltage-direct transformers to a target of toward 2029, which is survivable if the factory holds schedule and **fatal to the data-centre thesis if it slips a year** — because the adjacent incumbents it sells against are hedged across both the near-term bridge and the later target, one of them on a conditional thousand-unit commitment from a hyperscaler.",
+    "**What the three have in common, and it is not size.** None of them is attacking an incumbent's ranking. One is attacking a qualification slot, one a scope boundary, one a device generation. So the threat to this segment's incumbents is **not share loss to a cheaper rival — it is stage obsolescence**: the architecture removes conversion stages, and whoever's revenue sits in a removed stage loses regardless of how well they execute. That is the single most useful sentence in this module, and it is the module's own assessment rather than a finding of the record.",
+    "**The threat that carries no challenger label at all.** In the United States market the position is decided by an origin test rather than by engineering. Two 2026 instruments — the communications regulator's inverter Covered List entry of 28 July, refined on 20 August, and the bulk-power-system executive order of 26 August — turn on **where equipment is manufactured, not on who owns the manufacturer.** Neither names a company or a country. On the corpus record that has already re-sorted this roster in a way no reading of the roles predicts: it closes the United States market to the corpus's largest single inverter importer, whose own guidance is now a gradual pullback; and it catches a Spanish manufacturer at roughly 70 per cent United States revenue on identical terms, because hardware assembled in Valencia is covered exactly as hardware assembled in China. **The tests themselves belong to the two policy modules** — *EO 14420: The Bulk-Power System Emergency* and *The China Policy Stack for a BESS Seller* — and are not restated here. What belongs here is the sorting, and the second-order effect that matters more to a seller than the first: it is a durable share subsidy to whoever can pass the domestic-end-product or advanced-manufacturing-credit test."
+   ],
+   "sales": "The honest line on the rack-shelf fight is three sentences and no ranking: Delta first-qualified, LITEON the leading second source, Megmeet the only mainland vendor NVIDIA named for that platform. A seller who states the displacement claim as fact hands the room a correction."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "7 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger — twelve of the twenty members. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment with a confidence level, restated here in one line. They are never blended with the fact rows above. The eight adjacents get no row because they are not ranked players in this segment; what they do to it is in the section above and in the indicators below.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet (analysis)"
+   ],
+   "rows": [
+    [
+     "Sungrow",
+     "incumbent",
+     "That two Wood Mackenzie crowns and a sixth bankability ranking travel outside the United States faster than the United States closes — conceding that market by gradual pullback, and accepting that storage now carries the revenue at the lower margin: exactly half of first-half 2026 revenue at 32.4 per cent against the inverter line's 42.7 per cent"
+    ],
+    [
+     "Huawei Digital Power",
+     "incumbent",
+     "That the integrated-solution tier wins the geographies it can still sell into — prefabricated containerized power blocks on an eighteen-week delivery claim — and that grid-forming engineering leadership eventually travels; accepting that regulation, not engineering, sets the ceiling"
+    ],
+    [
+     "Delta Electronics",
+     "incumbent",
+     "That first-qualification compounds: hold the rack power shelf through the architecture change, lock the silicon supply, publish the only complete grid-to-chip stack, and let content-per-watt growth do the rest — while its own guidance concedes the margin narrative has peaked near-term"
+    ],
+    [
+     "LITEON",
+     "incumbent",
+     "That the battery-backup franchise becomes non-discretionary as backup units move from optional to standard, and that routing the 800 V ramp through custom-silicon customers first is a better trade than racing the incumbent to the GPU slot"
+    ],
+    [
+     "Infineon",
+     "incumbent",
+     "That portfolio breadth across silicon, silicon carbide and gallium nitride — from the solid-state transformer to the point of load — beats any single device, and that profit follows revenue eventually rather than immediately"
+    ],
+    [
+     "Sinexcel",
+     "incumbent",
+     "That overseas utility conversion margin and grid certifications used as tender queue-jumps sustain a differentiated niche, with AI data-centre power treated as optionality rather than as revenue until revenue is disclosed"
+    ],
+    [
+     "Power Electronics",
+     "incumbent",
+     "That being the conversion layer itself — no cells, no turnkey system — is durable for developers who want to unbundle, and that grid-forming as standard is the feature that matters; against an origin rule that treats its Spanish plant exactly as it treats a Chinese one"
+    ],
+    [
+     "Zhonhen",
+     "incumbent",
+     "That an architecture China has run at scale for six years is now globally validated, and that an offshore brand and joint-venture structure buys speed into the West with minimal listed-company capital at risk — while the interim converts none of the validation into a disclosed order"
+    ],
+    [
+     "Vicor",
+     "incumbent",
+     "That the patent is the product: exclusion orders bring original-equipment manufacturers to the licensing table, and licensing is the faster-growing and higher-margin half of the company — a position no competitor closes by building a better converter"
+    ],
+    [
+     "Megmeet",
+     "challenger",
+     "That architecture timing rather than price is the wedge into an incumbent-dominated market — funded out of a declining industrial base, and packaged geographically to be buyable by American AI-infrastructure buyers despite the friction"
+    ],
+    [
+     "Flex",
+     "challenger",
+     "That owning switchgear plus cooling plus rack power lets it quote grid-to-chip scope no component vendor can match — bought rather than built, and about to be separated into its own company mid-fight"
+    ],
+    [
+     "Heron Power",
+     "challenger",
+     "That the second wave of the 800 V transition is worth more than the first, and that being the only startup on the facility-tier roster converts into the medium-voltage-direct slot — on a schedule with no shipped unit behind it"
+    ]
+   ],
+   "note": "**The shape of this table is the finding.** Nine of the twelve bets defend a stage the architecture is changing. Three — the patent, the scope boundary, the device generation — are bets on a different basis of competition altogether. That ratio is what to carry into a room, and it is why the table is not sorted by revenue.",
+   "sales": "Ask which bet you are selling into. A vendor defending a stage answers on efficiency and density; a vendor changing the basis of competition answers on something you cannot out-spec."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it. Three of the ten are policy dates and **two of those are not yet knowable in their effect** — which is the honest state of this segment's regulatory exposure, and is stated that way rather than smoothed.",
+   "cols": [
+    "On record",
+    "Indicator",
+    "What a move means"
+   ],
+   "rows": [
+    [
+     "27 Nov 2026",
+     "China's gallium and germanium export licensing regime expires — the suspension of the outright ban on exports to the United States lapses",
+     "Gallium is the input to gallium nitride. A lapse without renewal re-prices the wide-bandgap half of the silicon layer and reaches every box above it. **This module's review date**"
+    ],
+    [
+     "24 Dec 2026",
+     "The energy department must publish the bulk-power-system order's implementing rules, which define the covered countries and companies",
+     "Until they land, which members are actually caught is unknowable. Two dossiers say so in as many words; any assessment written before that date is speculation"
+    ],
+    [
+     "Q4 2026",
+     "The 4.4-billion-dollar acquisition of a United States conversion manufacturer closes",
+     "Removes the fourth independent conversion business absorbed in four years. Independence in this layer is consolidating, which changes who a developer can unbundle to"
+    ],
+    [
+     "Q1 2027",
+     "The acquirer separates its cloud and power infrastructure business",
+     "The grid-to-chip scope argument either survives as a focused company or fragments — and the competitor a seller prepared against becomes two companies"
+    ],
+    [
+     "Q1 2027",
+     "The leading second source's 800 V power rack reaches mass production, custom-silicon customers first",
+     "The second-source position either lands a step behind the incumbent as planned, or slips — and the backup-unit franchise rides on it"
+    ],
+    [
+     "Apr 2027",
+     "The European high-risk inverter phase-out fully applies to new contracts under European funding instruments",
+     "The only future effective date in any member's policy field. Scoped to funded projects rather than to the European market at large — read the scope before pricing the impact"
+    ],
+    [
+     "late 2027",
+     "The pre-production challenger's mass production begins",
+     "The one challenger with no shipped unit. Its own dossier calls a one-year slip fatal to the data-centre thesis, because the hedged adjacents carry both device generations"
+    ],
+    [
+     "2027",
+     "The last-centimetre incumbent's second trade-commission case reaches final determination; its finance chief ties the next licence tranche to it",
+     "Tests whether patent-as-product is repeatable or was a one-off. A second exclusion order re-prices the whole bus-conversion layer"
+    ],
+    [
+     "toward 2029",
+     "Next-generation solid-state transformers launch, unlocking medium-voltage-direct conversion",
+     "The position clock: how long the transformer-rectifier incumbents hold the first-deployed block slot. The architecture module treats this date as a buildability gate; here it is an exposure clock"
+    ],
+    [
+     "standing",
+     "A **sourced** ranking of the rack power-shelf fight appearing anywhere",
+     "There is none today. The appearance of one is itself the news, and it would settle the segment's most repeated and least supported claim"
+    ]
+   ],
+   "sales": "Two of these ten are dates on which somebody must publish a rule. Diary them: the reach of both instruments is unknowable until they land, and a confident answer before then is a tell."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "ps": [
+    "**If you sell storage.** The conversion layer is now a **separable purchase**. One member of this segment exists in the corpus precisely because a developer can unbundle conversion from storage — it makes no cells and sells no turnkey system — and another sells a modular version around the integrators. Two consequences. First, when a buyer asks about {{grid-forming}} behaviour or {{ride-through}}, that answer belongs to the conversion stage and can be sourced independently of the battery; do not let an integrator's bundle foreclose the question. Second, the origin test cuts straight through the bundle: an alternating-current block whose conversion stage fails the domestic-end-product or advanced-manufacturing-credit test carries the whole system's exposure. **Ask which entity manufactured the conversion stage**, not who badged the container.",
+    "**If you sell AI data-centre power — move one: know which stage you are selling into.** The architecture creates a stage at the hall edge, compresses the chain inside the rack, and threatens to delete the discrete front end in every rack. All twelve bets in the table above are bets about which. A conversation that opens on efficiency without naming the stage is a conversation with whoever happens to be in the room, not with the buyer's actual problem.",
+    "**Move two: do not repeat the rack-shelf displacement claim.** It is the segment's most repeated assertion and it has no source. Three dossiers carry it and three qualify it. Say what is sourced instead: one vendor first-qualified, one the leading second source, one the only mainland vendor named for that platform. Precision here is cheap and the correction is expensive.",
+    "**Move three: the 4.8 MW composition question is the qualifying question.** The architecture standardizes on a power block of that size with a defined switchboard, busway and tap-can interface. A vendor whose module rating sits below the standard block has to be able to say how the lineup parallels up to it and how it meets those interfaces. A vendor who cannot answer is not yet in this segment, whatever the datasheet says — and that is the one number in this module that does a **different job** than it does in the architecture module, where it is a design standard rather than an entry barrier.",
+    "**What this module is not for.** It does not teach the architecture — send the reader to *NVIDIA 800 VDC: Industry Alignment & Execution*. It does not teach the two origin tests — those are *EO 14420: The Bulk-Power System Emergency* and *The China Policy Stack for a BESS Seller*. Its job is the parties, and using it for anything else means quoting a document that does not contain what you are claiming."
+   ],
+   "sales": "One qualifying question covers most of this: which stage, and how does your lineup compose into the standard block?"
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 15 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change rather than at this session's, because it did not move this session. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that the useful question is which stage a player's revenue sits in rather than who is biggest; that the threat to the incumbents is stage obsolescence rather than share loss; and every row of the bets table.",
+   "rows": [
+    [
+     "Segment holds 20 members — 9 incumbent, 3 challenger, 8 adjacent; chain position 3, tier supply",
+     "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"
+    ],
+    [
+     "The definition names utility-scale conversion, the solid-state transformer and MV-to-800 VDC sidecar, the power, PSU and BBU shelf, the bus converter and point-of-load regulator, and the SiC/GaN silicon",
+     "profiler-segments.json @ v05.41r — segments[].definition"
+    ],
+    [
+     "The six buying criteria, including manufacturing location under the FCC inverter rule and EO 14420, and patent position on bus conversion and vertical power delivery",
+     "profiler-segments.json @ v05.41r — segments[].buyingCriteria[]"
+    ],
+    [
+     "The segment's notes field is empty — no registry guidance on the role labels, unlike the utilities segment",
+     "profiler-segments.json @ v05.41r — segments[].notes"
+    ],
+    [
+     "The registry's own definitions of incumbent, challenger and adjacent",
+     "profiler-segments.json @ v05.41r — roles"
+    ],
+    [
+     "Sungrow: No. 1 in both Wood Mackenzie 2026 rankings, first to take the integrator top spot from Tesla, sixth BNEF inverter-bankability ranking",
+     "profile:sungrow @ v9 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Sungrow 2025 company-reported shipments: 43 GWh of storage (+53.5 per cent) and 143 GW of inverters",
+     "profile:sungrow @ v9 — ecosystemRole"
+    ],
+    [
+     "Sungrow ESS at 50.00 per cent of H1 2026 revenue at 32.43 per cent gross margin against the inverter line's 42.72 per cent",
+     "profile:sungrow @ v9 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Sungrow identified as the largest single importer of solar PV inverters into the US; its own guidance is a gradual pullback from that market",
+     "profile:sungrow @ v9 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "The FCC test is a Buy American origin standard, neither determination names a company or country, and US manufacture verified through the tax code is the only route back in",
+     "profile:sungrow @ v9 — strategyRead[2]; profile:huawei-digital-power @ v8 — strategyRead[4]"
+    ],
+    [
+     "Sungrow's EnerNeo SST gives it an MV-AC-to-800-VDC stage, stated in an audited interim as launched; its own curve is small-batch trials through 2026, batch orders 2027, scale 2028",
+     "profile:sungrow @ v9 — strategyRead[3]"
+    ],
+    [
+     "Huawei Digital Power: global No. 1 PV inverter franchise, 176 GWac shipped in 2024",
+     "profile:huawei-digital-power @ v8 — productsAndServices"
+    ],
+    [
+     "Huawei is the benchmark Western AIDC power vendors are measured against outside NATO geographies and a structural non-factor in the US; prefab 2.4-3.2 MW power blocks on an 18-week delivery claim",
+     "profile:huawei-digital-power @ v8 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Huawei's AIDC ceiling is set by regulation rather than engineering, and no product-line revenue split is disclosed — the opacity itself is the finding",
+     "profile:huawei-digital-power @ v8 — strategyRead[0], strategyRead[3]"
+    ],
+    [
+     "Delta is the first-qualified power-shelf supplier for GB200/GB300 NVL72 and the named primary beneficiary of the 800 V HVDC shift",
+     "profile:delta-electronics @ v5 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Delta publishes the only complete grid-to-chip 800 VDC stack and has a reported two-billion-dollar SiC supply lock",
+     "profile:delta-electronics @ v5 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Delta's own guidance: H2 2026 gross margins will not exceed about 35.6 per cent against Q1's record 37.0 per cent",
+     "profile:delta-electronics @ v5 — strategyRead[1]"
+    ],
+    [
+     "No third-party source quantifies NVIDIA as a share of Delta revenue — the dossier calls that a transparency gap",
+     "profile:delta-electronics @ v5 — strategyRead[3]"
+    ],
+    [
+     "The rack-shelf displacement report is Chinese-press, directionally corroborated but of unverified precision",
+     "profile:delta-electronics @ v5 — strategyRead[2]"
+    ],
+    [
+     "The same report conflicts with LITEON's record shipments and two new North American CSP additions; both can be true if the market grows faster than share shifts",
+     "profile:liteon @ v6 — strategyRead[2]"
+    ],
+    [
+     "The same report is unsourced and now weaker: the 238-page interim names no competitor and claims no rank, and two independent supplier notes name the other two without mentioning it",
+     "profile:megmeet @ v7 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "LITEON is the leading second source in NVIDIA-class rack power; BBU franchise invested in since 2010, first large cloud adoption 2017, plus PSU-BBU firmware co-design",
+     "profile:liteon @ v6 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "LITEON's 800 V power rack reaches mass production Q1 2027, ASIC customers first, GPU clients potentially Q2 2027 — about a step behind Delta",
+     "profile:liteon @ v6 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "BBUs move from optional on one rack generation to standard on the next; 2025 BBU shipments about 30 times the prior year against acknowledged capacity constraints",
+     "profile:liteon @ v6 — strategyRead[0]"
+    ],
+    [
+     "Infineon is the silicon layer from the SST to the point of load in all three materials; NVIDIA's roster tiers silicon, power system components and data-centre power systems separately",
+     "profile:infineon @ v1 — ecosystemRole"
+    ],
+    [
+     "Gartner named Infineon the company to beat in AI data-centre power semiconductors in May 2026, while noting its lead is tested at the compute-board level where it is one of five",
+     "profile:infineon @ v1 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "The NVIDIA relationship is real, product-level and not exclusive — the same roster names thirteen other silicon providers",
+     "profile:infineon @ v1 — strategyRead[1]"
+    ],
+    [
+     "Infineon's reported AI data-centre revenue moved from 250 million euros in FY2024 to above 700 million",
+     "profile:infineon @ v1 — strategyRead[0]"
+    ],
+    [
+     "Gallium is the input to gallium nitride; the export ban to the US is suspended in favour of a licensing regime until 27 November 2026, with the military-end-user prohibition still in force",
+     "profile:infineon @ v1 — policyExposure[] (China gallium and germanium export controls; the effectiveDate field holds the 2023 first step)"
+    ],
+    [
+     "Sinexcel: a BNEF Tier 1 power-inverter designation for Q1 2026 and absence from CNESA's 2025 China PCS shipment top ten — two readings the corpus carries rather than resolves",
+     "profile:sinexcel @ v8 — ecosystemRole"
+    ],
+    [
+     "Sinexcel's margin engine is overseas utility conversion, with grid certifications functioning as tender queue-jumps; its AIDC power line is optionality and pre-revenue",
+     "profile:sinexcel @ v8 — strategyRead[0], strategyRead[2]"
+    ],
+    [
+     "Power Electronics is the conversion layer itself — no cells, no turnkey system — which is why the integrator ranking structurally cannot contain it, and no independent US conversion ranking exists",
+     "profile:power-electronics @ v1 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Power Electronics is a US business manufacturing in Spain at roughly 70 per cent US revenue; the rule covers hardware assembled there exactly as hardware assembled in China",
+     "profile:power-electronics @ v1 — strategyRead[0], policyExposure[]"
+    ],
+    [
+     "Four independent conversion businesses absorbed in four years",
+     "profile:power-electronics @ v1 — strategyRead[2]"
+    ],
+    [
+     "The energy department must publish the bulk-power-system order's implementing rules by 24 December 2026, and those rules define the covered countries and companies",
+     "profile:power-electronics @ v1 — policyExposure[] (Executive Order 14420)"
+    ],
+    [
+     "Zhonhen is No. 1 in China's data-centre HVDC market at 31 per cent share with the top three at 72 per cent, lead author of the national DC standard, and the Panama co-developer",
+     "profile:zhonhen @ v8 — strategyRead[0]"
+    ],
+    [
+     "NVIDIA's August 2026 execution paper names the Panama architecture as a transformer-rectifier implementation of its data-hall block; endorsement and commercial inclusion are separate and only the first is answered",
+     "profile:zhonhen @ v8 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Zhonhen exports are 4.1 per cent of revenue, no US entity is on record, it is absent from the published partner rosters, and H1 2026 data-centre power grew 98.48 per cent at a falling margin with no 800 VDC order disclosed",
+     "profile:zhonhen @ v8 — ecosystemRole, strategyRead[1], recentDevelopments[] 2026-08-27"
+    ],
+    [
+     "Vicor is the corpus's reference for the last centimetre — fixed-ratio bus converters and current multipliers, 128 patents — and is absent from all three published NVIDIA partner lists",
+     "profile:vicor @ v2 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Vicor royalty revenue at 3.9 per cent of net revenues in 2023, 13.0 per cent in 2024 and 14.1 per cent in 2025; consolidated gross margin from 51.2 per cent to 58.0 per cent",
+     "profile:vicor @ v2 — strategyRead[0]"
+    ],
+    [
+     "The exclusion order rather than the datasheet brought OEMs to the licensing table, and the next tranche is tied to a second case reaching final determination in 2027",
+     "profile:vicor @ v2 — strategyRead[1], policyExposure[] (Section 337)"
+    ],
+    [
+     "Megmeet is one of NVIDIA's designated recommended data-centre power suppliers in its own words — membership of a set, not a position within it — and the only mainland vendor named for that platform's power",
+     "profile:megmeet @ v7 — ecosystemRole"
+    ],
+    [
+     "Megmeet publishes the full grid-to-GPU chain including edge cabinets rectifying 380-480 VAC to 800 VDC at over a megawatt per rack",
+     "profile:megmeet @ v7 — ecosystemRole"
+    ],
+    [
+     "Megmeet is running an incumbent-funded pivot: profit excluding non-recurring items fell 93 per cent in FY2025 concurrent with the 800 VDC build-out, and the wedge is architecture timing rather than price",
+     "profile:megmeet @ v7 — strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "NVIDIA's roster places Flex Power in the power-system-components tier, and Flex also owns the switchgear and the cooling",
+     "profile:flex @ v1 — ecosystemRole"
+    ],
+    [
+     "Flex acquisitions total roughly 6.3 billion dollars, two thirds committed in the sixteen months after the AI build-out began, culminating in a 4.4-billion-dollar agreement expected to close in Q4 calendar 2026",
+     "profile:flex @ v1 — strategyRead[2], recentDevelopments[] 2026-09-03"
+    ],
+    [
+     "The Flex board approved separating cloud and power infrastructure in May 2026, targeted for Q1 calendar 2027; no revenue line has ever been published for the branded power businesses",
+     "profile:flex @ v1 — strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Heron Power's SST specification maps one-to-one onto the architecture's hall-edge block; no shipped unit, no independently checkable datasheet, no listing on the record, two named customer engagements",
+     "profile:heron-power @ v1 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Heron is the only startup on NVIDIA's facility-tier roster; mass production begins late 2027 against an architecture attaching MV-direct SSTs to toward 2029, and a one-year slip is called fatal to the data-centre thesis",
+     "profile:heron-power @ v1 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Five adjacent incumbents are hedged across both the near-term bridge and the SST target, one on a conditional thousand-unit hyperscaler commitment from 2027",
+     "profile:heron-power @ v1 — strategyRead[2]"
+    ],
+    [
+     "GE Vernova sells solid-state transformers and 800 VDC reference designs, and holds turbine and transformer capacity that sets campus energization dates",
+     "profile:ge-vernova @ v6 — productsAndServices, ecosystemRole"
+    ],
+    [
+     "ABB's static medium-voltage UPS is the first of its kind and a centrepiece of the ecosystem's 800 VDC architecture work, alongside the first IEC-certified solid-state breaker",
+     "profile:abb @ v7 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Eaton's bet is delivered power systems rather than components, with an 800 VDC architecture and solid-state transformers assembled inorganically in fourteen months",
+     "profile:eaton @ v8 — productsAndServices, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Schneider's edge is the design layer rather than the hardware layer — reference designs and AI-factory blueprints spanning grid to chip, a design franchise rather than a converter line",
+     "profile:schneider-electric @ v9 — productsAndServices, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Hitachi Energy's data-centre offering carries 800 VDC alongside its grid products, and its transformer delivery calendar is the binding constraint on energization timelines",
+     "profile:hitachi-energy @ v5 — productsAndServices, strategyRead[0]"
+    ],
+    [
+     "NVIDIA is the buyer that prescribes the architecture and names the vendors, tiering power-system components separately from grid-tier data-centre power systems",
+     "profile:nvidia @ v10 — productsAndServices, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Tesla's Megapack 3 carries a silicon-carbide integrated inverter and an MV block — captive conversion rather than a merchant sale",
+     "profile:tesla @ v7 — productsAndServices"
+    ],
+    [
+     "LS Energy Solutions' string conversion line sits inside its own AC block, and its 2026 re-weighting moves toward conversion, components and services under the parent brand",
+     "profile:ls-energy-solutions @ v3 — productsAndServices, strategyRead[1]"
+    ],
+    [
+     "The European high-risk inverter phase-out applies fully to new contracts under European funding instruments from April 2027, scoped to funded projects rather than the European market at large",
+     "profile:sungrow @ v9 — policyExposure[] (the only future effectiveDate across the roster)"
+    ],
+    [
+     "Across the twenty members, policyExposure[] holds 40 entries, 17 with an effectiveDate, of which exactly one is in the future",
+     "the twenty profile.json files — policyExposure[], counted 2026-09-15"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**There is no independent ranking of this segment as a whole**, and two of the nine incumbents are explicitly unrankable on the record: one because no United States conversion ranking exists at all, which its dossier states as an absence rather than working around; and one because the two available readings — a bankability tier and a shipment table that omits it — point different ways, and the corpus carries both rather than resolving them.",
+    "**The rack power-shelf ordering is not established.** Three dossiers carry the displacement report and all three qualify it, and the company said to have done the displacing names no competitor and claims no rank in its own 238-page interim. There is no sourced number two, and this module does not supply one.",
+    "**The hall-edge leader has disclosed no order, no backlog and no named data-centre customer** for the architecture its own paper-level endorsement rests on. The endorsement and the commercial silence are two separate facts and are stated separately.",
+    "**Two members' exposure to their largest relationship is not quantified by anybody.** No third-party source gives the buyer as a share of the rack-shelf incumbent's revenue, and no revenue line has ever been published for the challenger's branded power businesses. Anyone quoting either figure is quoting something the record does not contain.",
+    "**The pre-production challenger has no shipped unit and no listing on the record**, and the most recent independent read in the corpus states that no vendor had completed data-centre solid-state-transformer certification at all.",
+    "**The reach of the bulk-power-system order is not knowable yet.** Its implementing rules, due 24 December 2026, define the covered countries and companies. Two dossiers say so in as many words, and both decline to assess scope before that date.",
+    "**Nothing here ranks the adjacents against each other.** Five of the eight are facility-power vendors that compete hard one tier up; that contest belongs to the in-hall power and grid-equipment layers, not to this one.",
+    "**And no figure in this module was sourced outside the corpus.** Where a number's only trace is a company's own release or an aggregator, the dossier says so and this module inherits the qualification rather than laundering it into a fact."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the split between this module and the 800 VDC architecture module?",
+     "a": "That module owns the architecture — the deployment options, the device classes, grounding, protection, the rack-power ladder, certification — and names no vendors. This module owns the parties: who holds which stage, and what each is betting."
+    },
+    {
+     "q": "The segment's twenty members, by role?",
+     "a": "Nine incumbent, three challenger, eight adjacent. The nine incumbents hold different stages of one chain rather than competing across it."
+    },
+    {
+     "q": "Name the five stages the nine incumbents occupy.",
+     "a": "Utility-scale conversion; the integrated Eastern data-centre power stack; the rack power shelf; the hall-edge direct-current block; the last centimetre at the die — plus the silicon layer every one of those is built from."
+    },
+    {
+     "q": "Why is a ranking of the nine incumbents against each other not useful?",
+     "a": "Because they mostly do not compete: two of them would never meet in a bid. The useful question is which stage a player's revenue sits in, since the architecture adds one stage, compresses another and deletes a third."
+    },
+    {
+     "q": "What do the three challengers have in common, and what is the real threat to the incumbents?",
+     "a": "Nothing about size — one attacks a qualification slot, one a scope boundary, one a device generation. The threat is stage obsolescence, not share loss: the architecture removes conversion stages, and whoever's revenue sits in a removed stage loses regardless of execution."
+    },
+    {
+     "q": "What decides competitive position in the US market for this layer, and what does it turn on?",
+     "a": "An origin test, not engineering. Both 2026 instruments turn on where equipment is manufactured rather than on who owns the manufacturer — so a Spanish plant is covered on the same footing as a Chinese one, and the second-order effect is a share subsidy to whoever passes the domestic test."
+    },
+    {
+     "q": "Why should a seller never state the rack-shelf displacement claim as fact?",
+     "a": "It has no source. Three dossiers carry it and all three qualify it, and the company said to have displaced names no competitor and claims no rank in its own interim. Say instead: one first-qualified, one the leading second source, one the only mainland vendor named for that platform."
+    },
+    {
+     "q": "What is the segment's one position that a better product cannot close, and what date tests it?",
+     "a": "A patent position on bus conversion, converted into a licensing business by an exclusion order — royalties rising from 3.9 to 14.1 per cent of net revenues across three years. A second trade-commission case reaching final determination in 2027 tests whether it is repeatable."
+    },
+    {
+     "q": "What is this module's review date, and why that date rather than the sorted one?",
+     "a": "27 November 2026 — the expiry of China's licensing regime suspending its gallium export ban, gallium being the input to gallium nitride. It was read out of a member's policy prose while that entry's date field holds the 2023 first step; the only future date in any field is four months later."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague asks you to rank this segment's nine incumbents from strongest to weakest. What is the right response?",
+     "c": [
+      "Rank them by revenue, the only figure all nine publish",
+      "Decline the ordering: they hold different stages of one chain and several do not compete at all, so the useful comparison is which stage each one's revenue sits in and what the architecture is doing to that stage",
+      "Rank them by whether NVIDIA's partner roster names them, which is the segment's real scoreboard",
+      "Rank them by shipment volume, using the two published inverter rankings as the spine"
+     ],
+     "a": 1,
+     "why": "The nine occupy utility-scale conversion, the rack shelf, the hall-edge block, the last centimetre and the silicon beneath all of it. Two of them would never meet in a bid, and the evidence behind each leadership claim is not even commensurable — four rest on published rankings, three on reported qualification sets, one on the absence of a ranking and one on a trade-commission determination. The architecture is adding a stage, compressing another and deleting a third, which is what actually sorts them."
+    },
+    {
+     "q": "You are told that a Spanish-manufactured inverter is safe from the US inverter restriction because the maker is European rather than Chinese. Is that right?",
+     "c": [
+      "Yes — the rule is aimed at Chinese vendors and the notices name the countries concerned",
+      "Yes, provided the maker has no Chinese ownership",
+      "No — the test is where the hardware is manufactured, not who owns the manufacturer, so a Spanish plant is covered on the same footing as a Chinese one",
+      "No, but only because the European maker also has Chinese subcontractors"
+     ],
+     "a": 2,
+     "why": "Neither determination names a company or a country. One member of this segment is a United States business at roughly 70 per cent US revenue that manufactures in Spain, and is caught on identical terms. That is the sharpest illustration that the criterion re-sorts the roster in a way the role labels do not predict. The test itself belongs to the bulk-power-system module; what belongs here is the sorting."
+    },
+    {
+     "q": "A prospect cites trade reporting that one vendor has displaced another as the number-two rack power-shelf supplier. How should you handle it?",
+     "c": [
+      "Confirm it — it is reported consistently across the Chinese trade press",
+      "Say the record does not support a number two: three dossiers carry that report and all three qualify it, and the company said to have displaced claims no rank in its own interim",
+      "Dismiss the report as false and give the opposite ordering",
+      "Avoid the topic, since supplier rankings are commercially sensitive"
+     ],
+     "a": 1,
+     "why": "Both extremes are wrong. The report exists and is directionally corroborated in one dossier; it is also called unsourced in another, and it conflicts with the record shipments and two new cloud-provider additions noted in a third. The accurate position names what is sourced — first-qualified, leading second source, only mainland vendor named for that platform — and stops there."
+    },
+    {
+     "q": "Why does this module carry no table of the four deployment architectures, no transformer-rectifier versus solid-state-transformer comparison and no grounding schemes?",
+     "c": [
+      "Because those are too technical for a contributor-tier audience",
+      "Because the underlying dossiers do not support them",
+      "Because an existing guidance module owns the architecture of this exact layer, and the split between the two was written before this module was drafted",
+      "Because they change too often to be worth writing down"
+     ],
+     "a": 2,
+     "why": "The 800 VDC module covers the architecture and is deliberately vendor-blind; this one covers the parties. The test that the split is genuine is that the one number both cite does a different job in each: toward 2029 is a buildability gate there and an exposure clock here. Six things that module owns are omitted here on purpose, and importing any of them in a later revision would collapse the split."
+    },
+    {
+     "q": "This module's review date is 27 November 2026, while the only future effective date anywhere in the roster's forty policy entries is April 2027. What does that tell you about how a review date is set?",
+     "c": [
+      "It is an error — the review date should be the earliest future effective date on record",
+      "The nearest dated gate can sit inside a policy entry's prose rather than in its date field, because one entry can carry a multi-step schedule with only the first step in the field",
+      "Review dates are set six months out by default and this one was rounded",
+      "The review date follows whichever module was authored most recently"
+     ],
+     "a": 1,
+     "why": "The gate here is the expiry of China's licensing regime suspending its gallium export ban — stated in a member's policy prose while that same entry's date field holds the 2023 first step. Gallium is the input to gallium nitride, one of the two wide-bandgap materials this segment is defined by. A sort of the fence returns April 2027 and the six-month default returns March 2027; both are months later than the real gate."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry's role for a member that holds an established position in the segment on a stated basis. In this segment the nine incumbents hold different stages of one chain rather than competing across it, so the label marks position, not rivalry."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry's role for a member attacking an incumbent position. Here the three challengers attack on three different routes — a qualification slot, a scope boundary and a device generation — and none of them attacks an incumbent's ranking."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry's role for a member whose main business sits in another segment but whose products or decisions bear on this one. Here the eight include the buyer that prescribes the architecture, five facility-power vendors hedged across it, and two captive converters."
+  },
+  {
+   "t": "domestic end product",
+   "d": "The Buy American origin standard the US inverter restriction turns on: an article manufactured in the United States meeting the regulation's component test. It asks where hardware is made, not who owns the maker — which is why a European plant can be covered on the same footing as a Chinese one."
+  },
+  {
+   "t": "Covered List",
+   "d": "The communications regulator's list of equipment barred from new US equipment authorisation. Foreign-produced connected power inverters were added in July 2026 and the definition was refined in August; the escape route is US manufacture verified through the tax code rather than connection topology."
+  },
+  {
+   "t": "stage obsolescence",
+   "d": "This module's term for the threat that actually bears on the segment: an architecture change that removes a conversion stage takes the revenue of whoever sits in that stage, however well they execute. It is distinct from share loss, which is what a challenger label normally implies."
   }
  ]
 };

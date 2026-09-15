@@ -1,4 +1,4 @@
-var VERSION = "v02.05g";
+var VERSION = "v02.06g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -788,7 +788,38 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     label: 'State ratemaking: rate cases, IRPs, certificates & cost allocation',
     terms: ['rate case', 'rate base', 'integrated resource plan', 'certificate of public convenience',
             'cost allocation', 'ratepayer', 'public utility commission', 'prudence review'],
-    source: 'guidance:landscape-utilities-2026-09' }
+    source: 'guidance:landscape-utilities-2026-09' },
+
+  // Added by the power-conversion landscape (S2 session 5, 2026-09-15). THE
+  // GAP THIS FILLS, so nobody merges it into a neighbour: the WIDE-BANDGAP
+  // POWER-SEMICONDUCTOR LAYER and the LAST CENTIMETRE were scored by nothing.
+  // Checked against all 390 distinct terms across both seed arrays before
+  // adding, and 'silicon carbide', 'gallium nitride', 'wide-bandgap', 'point of
+  // load' and 'vertical power delivery' each returned ZERO matches.
+  // topic-800vdc-power owns the ARCHITECTURE (its five terms are all
+  // architecture words), seg-power-electronics owns the BOX (inverter,
+  // rectifier, UPS, busway), seg-semiconductors owns COMPUTE silicon (chip,
+  // wafer, foundry, accelerator), and topic-china-policy owns the TRADE
+  // INSTRUMENT - so a headline like "Infineon doubles silicon carbide and GaN
+  // capacity at Dresden" or "NVIDIA names vertical power delivery a Gen 4
+  // requirement" matched no seed at all, in two of the five sub-layers the
+  // segment's own definition names and in which one of its nine incumbents
+  // entirely lives. Two of that segment's six buying criteria sit here, and the
+  // landscape module's review gate is a gallium date.
+  // RE-SCOPED ONCE BEFORE LANDING, per the session-3 warning: 'bus converter'
+  // and 'power semiconductor' were in the first draft and were DROPPED because
+  // 'converter' (seg-inverters) and 'semiconductor' (seg-semiconductors)
+  // already carry them. 'MOSFET' and 'IGBT' are also clear of all 390 terms and
+  // were left out deliberately - legacy-device words would pull the general
+  // power-electronics news seg-power-electronics already scores, and a
+  // near-duplicate seed double-counts an article in the digest's topic band.
+  // No `tv` marker: tv guards edits to an EXISTING seed's terms and lives on
+  // SCRAPER_SEGMENT_SEEDS; this is a new key with no sheet row.
+  { key: 'topic-power-semiconductors',
+    label: 'Power semiconductors & the last centimetre: SiC, GaN, point-of-load conversion',
+    terms: ['silicon carbide', 'gallium nitride', 'wide-bandgap', 'point of load',
+            'vertical power delivery'],
+    source: 'guidance:landscape-power-conversion-and-rack-power-silicon-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

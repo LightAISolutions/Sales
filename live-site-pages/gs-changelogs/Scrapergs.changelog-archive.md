@@ -8,6 +8,242 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.79g] — 2026-08-28 11:43:43 PM EST — v03.47r — [4647ef5](https://github.com/LightAISolutions/Sales/commit/4647ef5)
+
+### Fixed
+- **"Why thin?" no longer hangs.** The report was reading every story from every edition ever built — including the long summaries and analyses — when all it needed were a few details from the one edition being asked about. On a spreadsheet with a lot of history that took long enough to look frozen. It now reads only that edition's rows, and only the handful of details it uses
+
+## [v01.78g] — 2026-08-28 11:19:00 PM EST — v03.45r — [a702e4b](https://github.com/LightAISolutions/Sales/commit/a702e4b)
+
+### Fixed
+- **Rebuilding an edition now searches the same companies as the build it replaces.** Alongside the news sources, each build runs a rotating set of twelve company-name searches, and that rotation was moving forward on every build — so a rebuild searched a *different* twelve companies and could come back with noticeably fewer stories than the build it replaced, with nothing about the rebuild to explain why. The rotation still advances each day; it no longer moves under a rebuild of the same day
+- **Building one edition no longer uses up another edition's turn in that rotation.** The rotation was shared, so building the morning digest advanced it and the BESS edition built afterwards searched a different set of companies. Each edition now keeps its own place in the rotation
+
+### Added
+- **A report explaining why an edition came out thin.** It shows how many stories came in, where their scores landed, how many just missed the relevance bar and by how much, how many were down-weighted for being outside the US market, and how much came from company searches rather than the news sources — so a quiet edition can be read rather than guessed at
+
+## [v01.77g] — 2026-08-28 11:06:15 PM EST — v03.44r — [be4dd94](https://github.com/LightAISolutions/Sales/commit/be4dd94)
+
+### Fixed
+- **"View More" no longer says nothing was held back when stories were.** The count in the footer and the list the link opens were worked out two different ways, so they could disagree — and when the list could not be read, you were told the edition held nothing back rather than that something had gone wrong. The footer now counts the same list the link opens, so the two can no longer contradict each other, and a genuine failure explains itself
+- **A large edition can no longer be stored in a state it cannot be read back from.** Editions were saved by cutting them at a fixed length, which on a busy day cut mid-sentence and left the whole record unreadable. A long edition is now shortened deliberately — trimming the held-back stories first, keeping as many as will fit — so it always reads back, and says so when it had to give something up
+
+### Changed
+- **The emailed digest sits between the last two sizes.** The previous version was too large on a phone and the one after it a little small; this is the middle. The desktop version is unchanged
+- **Figures in a summary are now green rather than white.** Amber already means analysis, and white bold said nothing in particular — green gives the numbers a meaning of their own. Figures inside an analysis stay amber, so the footer key stays true
+
+## [v01.76g] — 2026-08-28 09:48:51 PM EST — v03.43r — [0346350](https://github.com/LightAISolutions/Sales/commit/0346350)
+
+### Changed
+- **The emailed digest is noticeably smaller on a phone.** Every size came down about two steps — the masthead now fits on one line, headlines wrap far less, and the body sits at a comfortable reading size instead of filling the screen. Spacing between stories was tightened to match, so a whole edition takes much less scrolling. The desktop version is unchanged
+- **Rebuilding a digest replaces the earlier one from the same day again**, as it did before. Building a second edition on a day you have already built one leaves you with a single, current issue rather than two
+- You still receive only one email per edition per day. That safeguard is kept regardless, so a digest can never be sent to you twice
+
+## [v01.75g] — 2026-08-28 09:39:29 PM EST — v03.42r — [58891ed](https://github.com/LightAISolutions/Sales/commit/58891ed)
+
+### Changed
+- **Rebuilding a digest no longer erases the earlier one from the same day.** Both are kept, so you can build a second edition in the afternoon and still open the morning's. Two builds of a day share that day's issue number — they are two takes of one issue, not two issues
+- **You still receive only one email per edition per day, however many times you rebuild.** The newest build is the one that goes out; earlier ones are marked as superseded and never mail. If the day's edition has already been sent, rebuilding it afterwards sends nothing at all
+- Protection against duplicate copies is unchanged. It now recognises a repeated build of the *same run* — which is what produced the nine copies — instead of treating every rebuild of the day as a duplicate
+
+## [v01.74g] — 2026-08-28 09:04:47 PM EST — v03.41r — [30cff4c](https://github.com/LightAISolutions/Sales/commit/30cff4c)
+
+### Fixed
+- **The emailed edition is now sized for a phone first.** The type sizes that make it readable are written directly onto each element, and the larger desktop sizes are applied on top only when the screen is wide enough. Previously it was the other way round, and Gmail was discarding the block of styling that shrank everything for small screens — leaving a headline built for a laptop wrapping across three lines on a phone. On a 390-pixel screen the masthead now fits on one line and the body runs at a comfortable reading width with no sideways scrolling
+- The footer no longer depends on that styling either. It stacks on its own, so the publisher line, the amber key and the View More link stay in order at any width
+
+### Changed
+- **Held-back stories now arrive with their summary and analysis.** Opening View More used to show only a headline and a source for work the desk had already read; each story now carries the same summary, and the same amber analysis, that it would have had if it had fit inside a section
+- **Every relevant story is summarized, not just the first thirty.** On a heavy news day, stories ranked past thirty cleared the relevance bar, were held back by a section cap, and reached View More with nothing but the raw feed snippet. The summarizing pass now follows the relevance bar rather than a fixed count, up to a ceiling of seventy. On a quiet day it is also cheaper, since it no longer summarizes stories that scored too low to be printed anywhere
+
+## [v01.73g] — 2026-08-28 08:42:20 PM EST — v03.40r — [dad570a](https://github.com/LightAISolutions/Sales/commit/dad570a)
+
+### Changed
+- **Each story takes up less room.** The separate "What it means" heading and the rule above it are gone; the analysis now runs on from the summary in the same paragraph, marked in amber. Measured on a phone, an edition is about 11 per cent shorter for the same content — roughly 46 pixels back per story
+- A short **Amber = analysis** key now sits in the footer, in amber, and only appears when the edition actually contains analysis
+- **Figures are no longer amber.** They are still bold, now in the brighter headline ink. Amber was doing two jobs at once — marking figures and marking analysis — which would have made the new key untrue. In the body it now means one thing
+
+## [v01.72g] — 2026-08-28 08:33:28 PM EST — v03.39r — [02ffe26](https://github.com/LightAISolutions/Sales/commit/02ffe26)
+
+### Changed
+- **The reporting and the interpretation are now visibly separate.** Each story gives you what the article says, then a short **What it means** passage underneath — set off by a rule and a label, so it is always clear which sentences come from the source and which are the desk's read
+- **The interpretation is written at the confidence it deserves.** Where the desk is extrapolating it now says so, favouring conditional language over flat assertion. Facts the article reports directly are still stated plainly — the aim is that you can tell how much weight a claim carries, not that everything is hedged
+- The lead story is split the same way, so the edition reads consistently from the top
+- Editions published before this release are unaffected and display exactly as they did, and a story whose summary fell back to raw source text is shown without an interpretation rather than with a manufactured one
+
+## [v01.71g] — 2026-08-28 08:02:19 PM EST — v03.38r — [449ed2c](https://github.com/LightAISolutions/Sales/commit/449ed2c)
+
+### Fixed
+- **Stories about the UK are now recognised as foreign.** The country list knew "United Kingdom" and "Britain" but not the abbreviation headlines actually use, so a UK datacenter story was treated as having no country at all and kept its full score. The EU and a few other common abbreviations were missing the same way
+- **The lead story must now clear the relevance bar.** Sections already required it, but the lead was chosen from the highest-scoring items regardless — so on a day with few qualifying stories, the most prominent item in the edition could be one that never qualified
+- **Corroboration can no longer push a weak story over the bar.** Being covered by several outlets adds to an article's score, but that was being added on top of a score whose supporting signals had already been capped. It is now bounded by the same limit, and reduced for foreign stories like every other part of the score
+
+### Changed
+- **Each edition now summarises from its own point of view.** Every summary used to close from a BESS seller's perspective because that viewpoint was fixed in one place. The AIDC edition now identifies which part of the data-center power chain a story touches — generation, interconnection, transformers, cooling and water, siting, tariffs — and closes on what it means for people working in that part. The BESS edition is unchanged in intent
+- Closing lines are deliberately not templated. Each edition specifies what its closing thought must accomplish, not how to word it, and the summariser is asked to vary its phrasing rather than end every item the same way
+- The rubric tester now scores against the edition selected in the Digest panel, and states the bar it judged against and whether the article cleared it. It was scoring against a general profile no edition actually uses, so it could disagree with the digest it was being used to explain
+
+## [v01.70g] — 2026-08-28 07:42:36 PM EST — v03.37r — [610d568](https://github.com/LightAISolutions/Sales/commit/610d568)
+
+### Changed
+- **An article now has to be about something you cover, not merely well written.** Length, a figure, a quotation and an action verb are marks of good writing, not of relevance, and an article that had all four could reach the relevance bar on those alone. Those supporting marks are now limited in proportion to how strongly the article actually matches your companies, topics and segments
+- **Matching one of your segments now counts in an article's favour**, rather than only ever being used to rule articles out. A market or policy story that names no covered company can still earn its place; a story that matches only a loose topic no longer can
+- The relevance bar was raised slightly. A story naming one of your covered companies clears it comfortably, so this only affects borderline items
+- The rubric tester now says when an article was held back for thin evidence, and what its evidence and supporting scores were
+
+## [v01.69g] — 2026-08-28 07:28:57 PM EST — v03.36r — [d212517](https://github.com/LightAISolutions/Sales/commit/d212517)
+
+### Fixed
+- **Building an edition no longer produces multiple copies of it.** A build could finish without the app being told, so the app kept asking it to continue and a new copy of the edition was filed on every attempt. Introduced in the previous release and fixed here
+- Rebuilding an edition now **replaces** that day's copy instead of adding another, so the same fault can never leave more than one copy again — and the duplicates already on your shelf are cleared the next time that edition is built
+- A rebuild keeps the record of an edition having already been emailed, so rebuilding something that already went out will not send it twice
+
+## [v01.68g] — 2026-08-28 06:57:56 PM EST — v03.35r — [5d8a1f0](https://github.com/LightAISolutions/Sales/commit/5d8a1f0)
+
+### Fixed
+- **Your editions now actually arrive at 7:00 on weekday mornings.** The scheduler advanced the build by one small step per hour, so the first edition could not finish before mid-afternoon and the second and third were pushed to later days. The build now starts at 6:00 and runs continuously until it is done, and everything ready is emailed at 7:00
+- All three editions are built the same morning instead of one per day
+- Running a build by hand no longer wipes the progress of a build the scheduler already had underway — each edition keeps its own place in the queue
+
+### Changed
+- **Building an edition no longer emails it.** Pressing "Run intake now" builds silently, so you can rebuild as often as you like without anything reaching your subscribers. To send by hand, use **Go-live → Email me latest**
+- Sending is now a separate step from building, so an edition finished early waits for 7:00 rather than going out at 6:20
+- Each edition records when it was delivered. If nobody is subscribed to an edition, that is recorded on the edition instead of being skipped in silence — the previous behaviour gave no indication at all
+
+## [v01.67g] — 2026-08-28 05:58:49 PM EST — v03.34r — [76bdd29](https://github.com/LightAISolutions/Sales/commit/76bdd29)
+
+### Changed
+- **Scoring now treats the US market as the clear priority.** Stories about other countries are heavily devalued, so they no longer crowd out US coverage or take the lead slot
+- China, Mexico, Chile and Canada are treated as a closer second tier — devalued, but far less sharply than the rest of the world
+- A story about any other country that also touches the US market — a shipment, a tariff, a US buyer — keeps most of its score. The devaluation is aimed at coverage with no bearing on your market, not at anything foreign
+- Stories that name no country at all are completely unaffected. Most US trade coverage never says "United States", so nothing is penalised for simply failing to say where it is
+- The rubric tester now shows when geography lowered a score, which countries it found, and whether a US connection softened it
+
+## [v01.66g] — 2026-08-28 05:46:45 PM EST — v03.33r — [fb27634](https://github.com/LightAISolutions/Sales/commit/fb27634)
+
+### Fixed
+- **An edition no longer loses every summary because one batch of them failed.** A single unusable reply from the AI used to abandon the rest of the edition, so all thirty stories dropped to raw source text at once. Now only the handful in that batch fall back, and the rest are summarized normally
+- Summaries that arrive cut off part-way are salvaged instead of discarded — the complete ones are kept and only the unfinished one is dropped
+- Unusable replies are retried before anything is given up on. Most succeed on the second attempt
+- The summarizer is given a much larger writing budget, so long summaries are far less likely to be cut off in the first place
+- When something does fall back, the edition footer now says a few summaries used source text rather than claiming the whole edition did
+- The status message now names what actually went wrong — cut off, unreadable, or blocked — instead of one catch-all
+
+## [v01.65g] — 2026-08-28 05:34:27 PM EST — v03.32r — [61ef1fa](https://github.com/LightAISolutions/Sales/commit/61ef1fa)
+
+### Fixed
+- **Issue numbers now match the editions you actually have.** The number was counting rows in the archive rather than issues of the edition it belonged to, so it climbed past the number of editions on the shelf and never came back down when you deleted old ones
+- Each edition now counts its own issues from No. 001 — the BESS and AIDC editions no longer inherit the count of your main morning edition
+- Rebuilding a day's edition keeps that day's issue number instead of taking the next one
+- Deleting an edition immediately renumbers the ones that remain, so the sequence stays unbroken — in the app, in share links, and in the stored copy itself
+- The numbering is refreshed once more just before an edition is emailed. The copy in your inbox is the one that can never be corrected later, so it is the one that most needs to be right when it is sent
+- **Past editions are now always listed in date order.** They were listed in the order they were built, so rebuilding an older day pushed it to the top of the News Stand ahead of newer editions
+- Each edition in the News Stand now carries its issue number
+
+## [v01.64g] — 2026-08-28 05:22:01 PM EST — v03.31r — [24178db](https://github.com/LightAISolutions/Sales/commit/24178db)
+
+### Changed
+- When an edition holds nothing back, the footer's right-hand slot is now left empty rather than offering a link into the app. An edition that showed you everything relevant has nothing more to offer
+
+## [v01.63g] — 2026-08-28 05:16:12 PM EST — v03.30r — [8e42dec](https://github.com/LightAISolutions/Sales/commit/8e42dec)
+
+### Changed
+- Emailed editions are now built for reading on a phone: the page fits the screen with no sideways scrolling, and the masthead, headlines, and body text scale down to stay readable. On a desktop or in the app the edition looks exactly as it did
+- "The Morning Edition" is now "Your Morning Digest", and its BESS and AIDC versions are "Your Morning Digest (BESS)" and "Your Morning Digest (AIDC)". Editions already published show the new name too
+- The footer's "Tune tomorrow's edition" link is now **View More**, which opens the stories that were held back by a section's cap. When nothing was held back it offers a way into the app instead
+
+### Added
+- Every edition now keeps its own list of held-back stories, so View More works on any edition you open — not only the most recent one
+- Shared edition links now get the same corrections applied when they are opened: current masthead, and article links that open reliably no matter which Google account the reader is signed into
+
+## [v01.62g] — 2026-08-28 06:28:13 AM EST — v03.29r — [2c273c4](https://github.com/LightAISolutions/Sales/commit/2c273c4)
+
+### Fixed
+- **Article links no longer depend on which Google account you happen to be signed into.** They are built to point at the app's own page rather than straight at the script, which is what was causing an account chooser to appear instead of the article for anyone signed into more than one account. Readers with no Google account at all are unaffected either way
+- Editions built before this fix are corrected when they are opened, so older editions work too
+
+### Changed
+- The destination lookup can now answer in a form the page can read directly, which is what lets the page forward you without an extra visible step. The older form still works, so links in editions already delivered by email keep resolving
+
+## [v01.61g] — 2026-08-28 06:02:57 AM EST — v03.28r — [eaa3714](https://github.com/LightAISolutions/Sales/commit/eaa3714)
+
+### Fixed
+- **Article links in older editions worked again.** Building an edition used to clear the record of where every previously stored article actually pointed, so from the moment the next edition was built, every article link in every earlier edition — on the page and in editions already delivered by email — stopped opening the article and dropped you on the app's home screen instead. That record is now kept for as long as the edition it belongs to
+- **Searching the archive, the company timeline, and source statistics now cover every stored edition** rather than only the most recently built one. They read the same record and had been quietly reduced to a single edition's worth of stories by the same cause
+- Opening an article link no longer gets slower as the archive grows
+
+### Changed
+- Leftovers from a build that was interrupted are still cleared away, and stories older than roughly sixteen weeks of daily editions are retired. A link older than that opens the app rather than the article — the behaviour every link had before this fix
+
+## [v01.60g] — 2026-08-28 05:44:48 AM EST — v03.27r — [b0ef21c](https://github.com/LightAISolutions/Sales/commit/b0ef21c)
+
+### Added
+- **Read-only share links.** An edition can be given a link that anyone can open without signing in. Each link points at one edition only — editing the address cannot reach a different one — and revoking a link stops it working straight away
+- Pressing Share twice on the same edition reuses the existing link rather than creating a second one to keep track of
+- A share link records how many times it has been opened
+
+### Changed
+- Editions delete cleanly: a link created for an edition that has since been removed says so plainly instead of showing an empty page
+
+## [v01.59g] — 2026-08-28 04:35:51 AM EST — v03.26r — [7faf9f0](https://github.com/LightAISolutions/Sales/commit/7faf9f0)
+
+### Changed
+- **Far more of your past editions are kept.** Retention rises from roughly four working days to about six months of daily editions, now that loading the list no longer has to move every stored edition to draw it
+- **Opening the app is much lighter.** Listing past editions, opening one, deleting one and emailing yourself the latest all now read just the parts they need rather than the whole archive
+
+### Added
+- Past editions can be filtered by edition, date range and text, and are delivered a page at a time with a count per edition
+- An edition can be marked as a variant of another, so a parent and its variants group together and filtering by the parent includes them
+
+### Fixed
+- Clearing every edition from a subscriber is refused with an explanation rather than quietly signing them up to everything
+
+## [v01.58g] — 2026-08-28 02:27:57 AM EST — v03.25r — [e482172](https://github.com/LightAISolutions/Sales/commit/e482172)
+
+### Added
+- Delivery details now report the people on your subscriber list, so the home screen and the Digest panel agree with who actually receives an edition
+- Stored editions now report which edition built them
+
+### Changed
+- Removing the last edition from a subscriber is now refused with an explanation instead of quietly signing them up to everything
+- Pausing a subscriber is kept separate from their edition choices, so resuming restores exactly what they had
+
+## [v01.57g] — 2026-08-28 01:38:29 AM EST — v03.24r — [21a984a](https://github.com/LightAISolutions/Sales/commit/21a984a)
+
+### Fixed
+- **Turning a narrow segment off now actually keeps that news out.** A story about a switched-off segment could still get in — and even lead the edition — because a broader, still-on segment covering the same ground vouched for it. A broad category no longer speaks for a narrower one you have switched off
+- **A switched-off segment now excludes a story even when no company you follow is involved.** Previously switching a segment off only removed the boost a story got from mentioning one of your companies, so a story from an unfamiliar vendor could still ride in on loosely matched topics. A story about a segment you turned off can no longer reach the relevance bar at all
+- **A busy AI service no longer costs you the whole edition.** When the summariser replies "too busy, try again", that is now waited out and retried over about a minute instead of being treated as a hard failure that dropped every summary to the basic non-AI fallback. Genuine problems, like a bad key, still fail immediately rather than wasting your daily allowance
+- A few filter words were too broad to carry a match on their own — "warranty", "supply chain", and the generic phrase for grid-scale batteries appearing in the utility-scale list. They were letting unrelated stories score as if they were on-topic
+
+## [v01.56g] — 2026-08-28 12:53:40 AM EST — v03.23r — [7a9c704](https://github.com/LightAISolutions/Sales/commit/7a9c704)
+
+### Fixed
+- **Switching a segment or topic ON for a single edition did not stick.** The change was saved as OFF, so a second later the switch snapped back to where it started. Turning something off worked, which is why the problem looked intermittent. Your choices now save exactly as made
+- Older entries moved to the archive
+
+## [v01.55g] — 2026-08-28 12:36:36 AM EST — v03.22r — [c9cd23b](https://github.com/LightAISolutions/Sales/commit/c9cd23b)
+
+### Changed
+- **A new edition no longer starts out following your main edition's settings.** When you create one you pick the starting point you want, and every segment and topic is written into that edition immediately — so it is its own publication from the moment it exists, and changing your main edition never quietly changes it
+- Your two focused editions were rebuilt on the same footing, so every switch in them is now theirs rather than borrowed
+- Choices you have not yet made are no longer left undecided: if a new segment or topic is added later, each edition is given its own answer for it straight away instead of falling back to the shared setting
+
+### Added
+- **Starting points to choose from** when creating an edition — everything on, a utility-scale storage focus, a data-center power-chain focus, or follow the shared settings
+- **Reset to recommended** — put an edition back to its starting point, or move it onto a different one, without deleting and rebuilding it
+
+## [v01.54g] — 2026-08-28 12:02:02 AM EST — v03.21r — [3861d8e](https://github.com/LightAISolutions/Sales/commit/3861d8e)
+
+### Added
+- **Editions can now differ from one another.** Each edition keeps its own answers for which business segments and topics it follows, layered on top of your shared settings. An edition only stores what it actually changes, so anything you have not adjusted follows the shared setting and keeps following it when you change your mind later
+- **Two new editions** alongside the original: one focused on utility-scale storage, and one focused on the data-center power chain. The original is untouched and reads exactly as it did
+- **Many more filters to choose from.** Storage is now separated by scale — utility-scale, data-center, residential, commercial, and long-duration — and the data-center power chain is separated into medium-voltage conversion, inverters, transformers, backup generators, turbines and engines, skid-mounted power, rack power, server power supplies, accelerator chips, and cooling. New topics cover storage contracting, warranties and degradation, interconnection queues, and power density. All start switched on, so nothing changes until you decide otherwise
+
+### Changed
+- The edition's own name now appears on the emailed edition, so the three read as distinct publications rather than three copies of one
+- Older entries moved to the archive
+
 ## [v01.53g] — 2026-08-27 11:51:21 PM EST — v03.20r — [886efa3](https://github.com/LightAISolutions/Sales/commit/886efa3fb3db9a3069c57e7be4bbaeee47d66508)
 
 ### Changed

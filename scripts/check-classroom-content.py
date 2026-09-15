@@ -840,12 +840,22 @@ def run_gate_truth_table(src, lesson_ids=()):
     # over a segment an earlier module already partly covered, so it is also
     # the first whose registration puts TWO modules on the same franchises;
     # they split process from parties rather than duplicating, and the header
-    # comment above guidanceDocLandscapeUtilities_() records the split.
+    # comment above guidanceDocLandscapeUtilities_() records the split,
+    # 14 since S2 session 5 added the fifth (power conversion and rack-power
+    # silicon) — where the overlap is no longer partial: nvidia-800vdc-2026-08
+    # covers the ARCHITECTURE of the exact layer that segment is defined as, so
+    # the split had to be written before the module and is the sharpest of the
+    # five. THREE registered modules now bear on this one segment (the 800 VDC
+    # architecture, and the two policy modules that own its manufacturing-
+    # location buying criterion), which is the first time that has happened and
+    # the reason the header comment above guidanceDocLandscapePowerConversion_()
+    # enumerates the six things it deliberately does NOT carry — a later
+    # revision that imports any of them collapses the split this count guards.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 13:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 13" % len(gids))
+    if len(gids) != 14:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 14" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:
