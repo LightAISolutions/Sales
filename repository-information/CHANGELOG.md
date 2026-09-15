@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.89r] — 2026-09-15 04:37:13 AM EST
+
+> **Prompt:** "THE DEPLOY and THE CHANGELOG ARITHMETIC: exactly as §7.27's paragraphs set out. **Confirm the deploy from Pages and the job log, NOT by probing `?op=deploy` first.**" *(the deploy-confirmation half of §7.27's brief, executed after the v05.88r merge)*
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.28 — deployment counters moved from forecast to measurement, and BOTH halves were edited together.** The prose paragraph and the quoted paste-in prompt block both read `Classroom 53/200 and Scraper 151/200 — FORECAST`; both now carry the measured **Classroom 53/200 and Scraper 152/200** and the corrected mechanism
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.3 order-5 row — finding (xiv) added**, so the counter-rule correction is discoverable from the record that owns S2 and not only from this CHANGELOG
+
+### Notes
+
+- **THE DEPLOY CORRECTED A RULE THREE BRIEFS HAD CARRIED, and arithmetic rather than log-reading is what caught it.** Both legs fired — `Scraper deploy confirmed (GET): Updated to v02.07g (deployment 152) | 152/200` and `Classroom deploy confirmed (GET): Updated to v01.42g (deployment 53) | 53/200` — each on the **first GET leg with no POLL line and no `?op=deploy` probe issued**, the **tenth consecutive** clean use of the §7.19 order and the first two-line deploy since v05.83r. Pages confirmed `|v01.42g|` and `|v02.07g|` before the job log was opened, so the two sources agreed and no probe was warranted
+- **Classroom's counter was exact at 53/200. Scraper's came in ONE ABOVE the 151/200 forecast.** Read the chain back to the last measured anchor: **150/200 at v05.78r** (`Updated to v02.05g (deployment 150)`) → v05.83r's leg, poll-resolved as `Already up to date (v02.06g)` and recorded as consuming none → v05.85r's step never fired and logged nothing → **152/200 here**. This push's `Updated to` accounts for exactly one. **One consumption is unaccounted for, and the only Scraper deploy activity in the interval was v05.83r's**
+- **So §7.26's middle case is wrong as stated, and the mechanism is recoverable.** `Already up to date` is what the deployment reports at **read** time — it is not a statement that the call spent nothing. v05.83r's first GET leg **failed to confirm and had already run `pullAndDeployFromGitHub()`**, consuming a deployment; the poll then re-read a bundle that was by then current and printed `Already up to date`. The v05.84r conclusion was inferred from the log's wording and was never measured across the event. **This is the first measurement that spans it.** The corrected rule, stated as the inference it is: `Updated to` consumes one; a step that never fires consumes none and logs nothing; **`Already up to date` is silent on consumption and must not be forecast as zero**
+- **The transferable lesson is about evidence class, not about deployments.** A rule derived from *what a log says* survives until someone does *arithmetic across two measurements*. Three consecutive briefs restated the middle case because each read one run's wording; none subtracted an anchor. **When a counter is the thing being forecast, anchor the forecast on the last measured value and reconcile the whole interval — a per-run reading cannot detect a silent consumption**
+- **No rotation.** 90 raw / 80 non-exempt before, **91 raw / 80 non-exempt** after, eleven sections dated 2026-09-15 on the EST clock, against a trigger of 100 — now **nine** from the cap. Nothing in any deployed surface moved — no `.gs` and no `.html` — so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.42g / v01.14w** and Scraper at **v02.07g**
 
 ## [v05.88r] — 2026-09-15 04:30:47 AM EST
 
