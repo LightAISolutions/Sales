@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.44g] — 2026-09-15 06:47:49 PM EST — v05.93r
+
+### Added
+
+- A new module in the Value Chain library, covering the equipment that keeps a data hall running when the grid drops — who leads and on what basis, who is contesting the field and on which route, and what each is betting. Available to the tiers that hold guidance access
+
+### Changed
+
+- One curriculum page's reading list and its summary of what buyers decide on have been refreshed against the current company records
 
 ## [v01.43g] — 2026-09-15 05:08:34 AM EST — v05.91r
 

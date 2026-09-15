@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.93r] — 2026-09-15 06:56:26 PM EST
+
+> **Prompt:** "Author S2 session 7 — the in-hall-power landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module. It authors no lesson, no dossier and no report, creates no track, and regenerates exactly ONE segment: its own. READ FIRST: SESSION-CONTEXT.md; INTEGRATED-REMEDIATION-PLAN.md §7.29 (your brief), §7.27 and §7.28, §7.3 order 5 and §6; CLASSROOM-CURRICULUM-PLAN.md §10.6 VERBATIM, §10.2's floor table, §10.9's ownership rule and §10.10's two seller paths; then CLASSROOM-SCHEMA.md and .claude/rules/classroom-app.md IN FULL, .claude/rules/industry-guidance.md IN FULL, .claude/rules/scraper-sources.md before any seed edit, and .claude/rules/changelog-security.md before you write any public changelog line. UNSHALLOW THE CLONE FIRST. THE WORK — one push commit: author guidanceDocLandscapeInHallPower_() below the // CONTENT END fence at §10.6's nine section ids in its order, register it at the end of The Value Chain lane, write the analysis file; re-measure the segment on the day; WRITE THE SPLIT BEFORE THE MODULE (§10.6 (j)) — five guidance modules bear on it and its READ_NEXT names five public lessons with the-800-vdc-shift beside them; regenerate only --segment in-hall-power; flip the §7.3 order-5 row, the §6 S2 row and the curriculum plan's §10.6 bullet block, all dated; write §7.30 in the same commit, editing BOTH halves of any brief you refresh. PREDICT BOTH HALVES OF THE DUE COUNT. DO NOT author or revise any lesson; the one assertion you DO move is the guidance-module count 15 → 16. VERIFY with node --check, check-gas-inner-scripts.js, check-classroom-content.py against a pristine HEAD baseline, check-classroom-curriculum.py --strict, check-classroom-pipeline.py --selftest and --base origin/main, build-classroom-segments.py --check, check-readme-tree.py, and a Playwright render at contributor with ZERO page errors — then READ EVERY SECTION'S SCREENSHOT."
+
+### Added
+
+- **`landscape-in-hall-power-2026-09`** — the **sixteenth guidance module** and the **seventh landscape**, authored below the `// CONTENT END` fence as `guidanceDocLandscapeInHallPower_()` and registered at the end of `guidanceDocs_()`'s **The Value Chain** lane. Nine sections at §10.6's ids in its order: `who-dominates-and-on-what-basis` (prose, 12 paragraphs) · `who-threatens` (prose, 8) · `each-players-bet` (table, **17 rows**) · `the-indicators` (table, 10 rows) · `the-sellers-play` (callout) · `claims-ledger` (ledger, **45 rows**) · `what-the-record-does-not-say` (callout, 8) · `drill` (11 cards) · `check-yourself` (5 items). Four tiles, a six-term local glossary, `updated` 2026-09-15, `reviewBy` **2026-10-01**. Corpus synthesis over the segment's **27 member dossiers** at the profile versions in the ledger — no ingested document, no new research
+- **`repository-information/industry-guidance/landscape-in-hall-power-analysis.md`** — the module's source of truth, eleven sections, with §2 (the split) written before any other section per §10.6 (j)
+- **`topic-in-hall-power`** in `SCRAPER_INTEREST_TOPIC_SEEDS` — eleven terms (`rotary ups`, `drups`, `flywheel ups`, `flywheel`, `modular ups`, `isolated parallel bus`, `eco-mode`, `vrla`, `transfer switch`, `critical power`, `grid-interactive ups`), each verified to score **zero** against all **399** terms in both seed arrays and none a superstring of an existing term
+- Two `repository-information/industry-guidance/` entries added to the README structure tree — this session's analysis file **and session 6's**, which was never added at v05.88r and which this session's completeness audit surfaced
+
+### Changed
+
+- **`segment-in-hall-power` regenerated** (`--segment in-hall-power` only): `read-next` now names the landscape module, and `what-is-bought-and-on-what` was refreshed. No pin moved
+- **`scripts/check-classroom-content.py`** — the guidance-module assertion moved **15 → 16**, the one edit outside the fence a landscape session makes, with the comment extended to record the eleven-neighbour split
+- `INTEGRATED-REMEDIATION-PLAN.md` §6 and §7.3 order 5 flipped to **S2 7 of ~19**, with the session-7 record and findings (xv)–(xix); `CLASSROOM-CURRICULUM-PLAN.md` §10.6 to **7 of 19** with the session-7 bullet block (x1)–(x6)
+- `INTEGRATED-REMEDIATION-PLAN.md` **§7.30** written — the brief for Phase 4 row 12 (`where-batteries-stop`), both halves
+
+### Notes
+
+- **The split is the most crowded any landscape has faced: ELEVEN neighbours, six of them public lessons.** The organising finding is that **all six** of the segment's buying criteria have their mechanism owned by a neighbour, so the module owns none of the six tests and only says who sits where on each. **Nineteen omissions** are enumerated in the function's header comment and in §2e of the analysis file
+- **The first landscape-against-landscape split, and the line is a ROLE INVERSION** the registry draws itself: eight members sit in both this segment and `power-conversion-and-rack-power-silicon`, and five carry a different role in each. §7.23's test held on **`late 2027`** — an arrival risk there, a reprieve clock here
+- **Three public neighbours pre-declared the handoff** under §10.6 (t), one of them supplying the module's glossary term *marginal megawatt*
+- **`reviewBy` read not sorted for the eighth consecutive session, and this is the fifth distinct failure mode plus a new sub-field**: 81 policy entries, 29 dated, exactly three in the future, and the nearest is an adjacent member's on-highway engine model year. The date taken was read out of `policyExposure[0].mitigation`. Five candidates rejected in writing. The module ships inside its own 30-day horizon, so the curriculum checker reports **2 items due** rather than 1, still exiting 0
+- **Due-count arithmetic 10 → 10 → 9, both halves predicted correctly.** The netting rule of §10.6 (p) held on its third run and no deepening fired elsewhere
+- **Verification:** `check-classroom-content.py` **0 errors / 0 warnings at 41 lessons / 8 tracks / 142 gate cases**, unchanged from the pristine HEAD baseline; `node --check` clean on both `.gs` files; `check-gas-inner-scripts.js` 9 files / 86 blocks; `check-classroom-curriculum.py --strict` no structural findings, 28 stale pins (pre-existing); `check-classroom-pipeline.py --selftest` 13 fixtures / 0 failures, `--base origin/main` **P1 ×4, P2, no P3 and no P7**; `check-readme-tree.py` 0 findings; Playwright render at **contributor** — 9/9 sections, zero page errors, no unresolved `{{term}}` and no literal asterisk, every section screenshot read — and at **analyst** the real serving path returned `ROLE_DENIED` and no section rendered
 
 ## [v05.92r] — 2026-09-15 06:08:12 PM EST
 

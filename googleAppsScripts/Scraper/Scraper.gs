@@ -1,4 +1,4 @@
-var VERSION = "v02.07g";
+var VERSION = "v02.08g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -858,7 +858,32 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     label: 'AIDC developers & landlords: powered land, build-to-suit and the landlord capital stack',
     terms: ['powered land', 'land entitlement', 'build-to-suit', 'data center ABS',
             'tenant credit', 'take-or-pay lease', 'bitcoin miner'],
-    source: 'guidance:landscape-aidc-developers-and-landlords-2026-09' }
+    source: 'guidance:landscape-aidc-developers-and-landlords-2026-09' },
+  // S2 session 7. Checked against every term in BOTH arrays (399 distinct at
+  // this session, up from 392) per CLASSROOM-CURRICULUM-PLAN.md 10.6 (i), not
+  // against the seed labels. MOST of the in-hall-power vocabulary is already
+  // covered, and by FIVE different segment seeds: seg-bess-datacenter has
+  // 'ups battery'; seg-mv-power-conversion has 'mv ups' and 'static ups';
+  // seg-sidecar-power has 'power skid', 'prefabricated power', 'power module';
+  // seg-rack-power has 'busway', 'power distribution unit', 'remote power
+  // panel'; seg-psu has 'bbu' and 'battery backup unit'. What scores ZERO is
+  // the ROTARY machine, the STORE under the machine and the PACKAGING axis -
+  // which is buying criteria 2, 3 and 4 of that segment, the three whose
+  // mechanism the public UPS-room lesson owns and whose parties nobody was
+  // watching. Dropped on duplication grounds: 'uninterruptible power supply'
+  // and 'data center ups' (superstrings of existing terms, so they would
+  // double-count the same article), 'rpp', 'power pod'. Dropped on SPLIT
+  // grounds rather than duplication grounds, per 10.6 (v): 'supercapacitor',
+  // 'capacitor backup unit' and 'panama architecture' all score zero and all
+  // belong to nvidia-800vdc-2026-08 and the power-conversion landscape -
+  // seeding them here would blur in the digest exactly the line the module
+  // draws in the curriculum.
+  { key: 'topic-in-hall-power',
+    label: 'In-hall power: UPS, rotary machines and the store under them',
+    terms: ['rotary ups', 'drups', 'flywheel ups', 'flywheel', 'modular ups',
+            'isolated parallel bus', 'eco-mode', 'vrla', 'transfer switch',
+            'critical power', 'grid-interactive ups'],
+    source: 'guidance:landscape-in-hall-power-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

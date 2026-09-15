@@ -860,11 +860,17 @@ def run_gate_truth_table(src, lesson_ids=()):
     # named parties, and the header comment above
     # guidanceDocLandscapeAidcDevelopersAndLandlords_() enumerates NINE
     # omissions across all four neighbours rather than six across one.
+    # 16 at S2 session 7 (landscape-in-hall-power-2026-09), which raised the
+    # neighbour count again: ELEVEN bear on that segment - SIX of them public
+    # mechanism lessons and five modules, one of which is another LANDSCAPE, so
+    # the split is drawn on the registry's own role assignment (eight members
+    # sit in both segments and five carry a different role in each). Its header
+    # comment enumerates NINETEEN omissions across all eleven.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 15:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 15" % len(gids))
+    if len(gids) != 16:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 16" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 28/50`
+`Sections: 29/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.08g] — 2026-09-15 06:47:49 PM EST — v05.93r
+
+### Added
+
+- A new topic added to the interests list, so news about uninterruptible power equipment, rotating-machine backup and the batteries underneath them is scored and surfaced in the digest. It arrives switched on and flagged as new, and can be turned off or edited in the sheet like any other interest
 
 ## [v02.07g] — 2026-09-15 04:21:39 AM EST — v05.88r
 

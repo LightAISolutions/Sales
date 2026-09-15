@@ -1,4 +1,4 @@
-var VERSION = "v01.43g";
+var VERSION = "v01.44g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -12793,7 +12793,7 @@ function clLessonSegmentInHallPower_() {
  "title": "In-hall power",
  "short": "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -13056,7 +13056,7 @@ function clLessonSegmentInHallPower_() {
    "rows": [
     [
      "kVA per frame and installed MW per protected MW under the chosen redundancy topology",
-     "*N+1, 2N, and Six Nines* (planned)"
+     "*N+1, 2N, and Six Nines*"
     ],
     [
      "Efficiency in double conversion and in eco-mode; SiC content",
@@ -15069,8 +15069,8 @@ function clLessonSegmentInHallPower_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *The UPS Room: Static, Rotary, and the Battery Under Each* · *The Ten-Second Race* · *N+1, 2N, and Six Nines* (planned) · *Where BESS Plugs In: The Three Sockets*.",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *The UPS Room: Static, Rotary, and the Battery Under Each* · *The Ten-Second Race* · *N+1, 2N, and Six Nines* · *Where BESS Plugs In: The Three Sockets*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-in-hall-power-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Caterpillar, Cummins, Delta Electronics, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
    ]
   },
@@ -15150,6 +15150,14 @@ function clLessonSegmentInHallPower_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -40831,7 +40839,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeStorageDevelopersAndIpps_(),
           guidanceDocLandscapeUtilities_(),
           guidanceDocLandscapePowerConversion_(),
-          guidanceDocLandscapeAidcDevelopersAndLandlords_()];
+          guidanceDocLandscapeAidcDevelopersAndLandlords_(),
+          guidanceDocLandscapeInHallPower_()];
 }
 
 function guidanceIndex_() {
@@ -50883,6 +50892,722 @@ function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
   {
    "t": "batch process",
    "d": "A grid operator's practice of grouping large-load interconnection requests and studying their system impact on a portfolio basis rather than one at a time, rather than first come first served. Several of this segment's uncontracted sites are explicitly qualified in filings as subject to it."
+  }
+ ]
+ };
+}
+
+// Content: Landscape - In-Hall Power (corpus synthesis, 2026-09-15). Derived
+// from repository-information/industry-guidance/landscape-in-hall-power-analysis.md;
+// every claim rests on a member dossier at the profileVersion in the ledger.
+//
+// THE SPLIT, written before the module was (CLASSROOM-CURRICULUM-PLAN.md 10.6
+// (j)). ELEVEN neighbours - the most any landscape has faced, against session
+// 6's four. SIX are PUBLIC mechanism lessons (the-aidc-power-chain,
+// the-ups-room, backup-generation, redundancy-by-the-numbers,
+// where-bess-plugs-in, the-800-vdc-shift) and FIVE are registered modules
+// (nvidia-800vdc-2026-08, power-infra-aidc-2026-08,
+// grid-equipment-shortage-2026-09, bess-tech-fundamentals-2026-08, and
+// landscape-power-conversion-and-rack-power-silicon-2026-09).
+//
+// THE ORGANISING FINDING: ALL SIX of this segment's buying criteria have their
+// MECHANISM owned by a neighbour. 1 and 3 are the-ups-room's; 2 is
+// the-ups-room's and the-aidc-power-chain's; 4 is the-ups-room's and
+// bess-tech-fundamentals-2026-08's; 5 is nvidia-800vdc-2026-08's and
+// the-800-vdc-shift's; 6 is grid-equipment-shortage-2026-09's. So this module
+// owns NONE of the six tests and only says who sits where on each.
+//
+// THE FIRST LANDSCAPE-AGAINST-LANDSCAPE SPLIT, and the line is a ROLE
+// INVERSION rather than a subject. EIGHT members sit in both this segment and
+// power-conversion-and-rack-power-silicon, and FIVE carry a DIFFERENT role in
+// each: schneider-electric, eaton and abb are incumbent here / adjacent there;
+// delta-electronics is adjacent here / incumbent there; heron-power is
+// adjacent here / challenger there. huawei-digital-power, zhonhen and flex
+// carry the same role in both. The registry draws the line; that module ranks
+// the conversion layer, this one ranks the room.
+//
+// 7.23's test held on FIVE numbers, one per neighbour group. vs the
+// conversion landscape: LATE 2027, heron-power's mass production - an ARRIVAL
+// RISK on a challenger's own business there (its dossier calls a one-year slip
+// fatal), a REPRIEVE CLOCK on an installed product category here. vs
+// nvidia-800vdc-2026-08: 800 VDC itself - the converged voltage there, a
+// ROSTER-MEMBERSHIP TEST here (zhonhen's Panama architecture is named in that
+// buyer's own paper and zhonhen is on no published roster). vs
+// grid-equipment-shortage-2026-09: 24 WEEKS against 46-48 - two points on a
+// lead-time series there, a weapon aimed at this segment's own switchgear
+// here. vs bess-tech-fundamentals-2026-08: the C-RATE - a chemistry property
+// there, the market-entry test sorting six of seven challengers here. vs
+// the-ups-room: THIRTY SECONDS - an arithmetic lesson there (4.2 kWh carries
+// 1 MW for 15 s), a named party's sufficiency claim against a named
+// incumbent's product here.
+//
+// THREE PUBLIC NEIGHBOURS PRE-DECLARE THE HANDOFF (10.6 (t)), which is why
+// they were read before drafting. the-ups-room's shelf-that-threatens-the-room
+// closes on a paragraph headed "The honest limit, and where this hands off"
+// and states that what is in play is the MARGINAL MEGAWATT in new AI halls -
+// that sentence is this module's brief. redundancy-by-the-numbers'
+// the-vanishing-ups says "This lesson deliberately does not describe the
+// machine being deleted". where-bess-plugs-in's the-honest-no says the answer
+// on socket 3 is "No" and then says "Keep watching it anyway" - this module
+// is what the watching looks like.
+//
+// NINETEEN things the eleven neighbours own are omitted here on purpose and
+// are listed in section 2e of the analysis file - do not import them in a
+// later revision. From the-ups-room: the seconds-vs-minutes arithmetic; the
+// IEC 62040-3 classification and the four clocks; the three ways to build one
+// as engineering; the eleven-row ladder-and-datasheet table; the four-column
+// battery-under-each table; the grid-interactive UPS mechanism; the
+// shelf-vs-room argument as engineering; its eight failure modes. From
+// backup-generation: the ten-second sequence, the three ratings, block load,
+// paralleling, load shed, the permit ceiling. From redundancy-by-the-numbers:
+// the redundancy vocabulary and what a nine costs, the tiers, the five
+// commissioning levels; the fleet-level vanishing-UPS argument. From
+// where-bess-plugs-in: the three sockets as a map and the honest no as advice.
+// From the-aidc-power-chain: the service-to-rack hierarchy, selective
+// coordination, the UPS dial, the outage choreography, dirty loads. From
+// the-800-vdc-shift: why the number is 800, the three chains, the new boxes,
+// DC safety. From nvidia-800vdc-2026-08: the four deployment architectures,
+// TRU vs SST, the fault and grounding tables, protection zones and SSCBs,
+// certification, the rack-power ladder. From power-infra-aidc-2026-08: how the
+// grid is organised and what a battery earns, the three sockets, the 2026-28
+// gates. From grid-equipment-shortage-2026-09: the four constraints, the
+// lead-time series, the buyer's instruments, sparing. From
+// bess-tech-fundamentals-2026-08: the cell in plain terms, the spec sheet, the
+// large-cell ladder, sodium, duration classes, the safety words. From the
+// conversion landscape: its nine stages, the rack-shelf fight, the origin test
+// as a re-sorting, its twelve-row bets table, and the eight shared members'
+// positions IN THAT SEGMENT.
+//
+// reviewBy is 2026-10-01, SIXTEEN days after updated, and it is a read rather
+// than a sort - the EIGHTH consecutive session on 10.6 (d)/(k), and a FIFTH
+// distinct failure mode for the sort. The roster's 27 members carry 81
+// policyExposure entries, 29 dated, and exactly THREE of those dates are in
+// the future: 2027-01 (an adjacent member's on-highway engine model year) and
+// two at 2027-10-01 (the same statute). A sort would have clocked an in-hall
+// power module on a TRUCK ENGINE'S MODEL YEAR. The date taken is samsung-sdi's
+// US prismatic LFP cell start at the StarPlus Indiana JV, read out of
+// policyExposure[0].MITIGATION - a field no previous session has found a gate
+// in - on an entry carrying no effectiveDate at all, and called "the pivotal
+// execution item" by that dossier's own strategyRead. It is this module's gate
+// because the central threat argument is that six of seven challengers came
+// from the storage layer and what sorts them is whether their cells may enter
+// a US project. FIVE rejections are written out in section 10 of the analysis
+// file, including caterpillar's CFO retirement on the SAME DAY (the trap of
+// taking the nearest date rather than the nearest gate) and nvidia-800vdc
+// -2026-08's own 2026-11-30 clock, which is indicator 3 per 10.6 (r).
+// CONSEQUENCE ACCEPTED: the module ships INSIDE its own 30-day horizon, so
+// check-classroom-curriculum.py reports 2 items due rather than 1, still
+// exiting 0. That is session 4's (k) firing a second time.
+function guidanceDocLandscapeInHallPower_() {
+  return {
+ "id": "landscape-in-hall-power-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — In-Hall Power",
+ "short": "Ten incumbents in three groups that do not compete, seven challengers of whom six arrived from the storage layer, and three routes that delete the room machine — all carried by members the registry calls adjacent. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 27 member dossiers of the in-hall-power segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-in-hall-power-analysis.md"
+ },
+ "updated": "2026-09-15",
+ "reviewBy": "2026-10-01",
+ "revisions": [
+  {
+   "date": "2026-09-15",
+   "note": "First authoring, and the seventh landscape module of the segment layer. Corpus synthesis over the 27 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This segment has eleven neighbours — six public mechanism lessons and five registered modules — which is the most any landscape has faced, and one of the five is another landscape, so the split was written before the module and is stated in the opening paragraph. The organising fact is that every one of the segment's six buying criteria has its mechanism taught somewhere else, so this module owns none of the six tests and only says who sits where on each. Against the adjacent landscape the line is the registry's own role assignment, which inverts: eight members sit in both segments and five carry a different role in each. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis and is labelled as analysis rather than blended with fact. The review date is 1 October 2026, sixteen days after updated, read out of a challenger's policy mitigation prose on an entry that carries no date field at all — a sort of the fence would have clocked this module on a truck engine's model year. The reasoning and five rejected candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "27",
+   "v": "members on record",
+   "sub": "Ten incumbent, seven challenger, ten adjacent — re-measured 15 September 2026, confirming the programme's written figure exactly, member for member. The third-deepest segment in the corpus"
+  },
+  {
+   "k": "6 of 6",
+   "v": "buying criteria taught elsewhere",
+   "sub": "Every test this segment is bought on has its mechanism owned by one of eleven neighbours. No landscape has met that before, and it is why this module ranks parties and teaches nothing"
+  },
+  {
+   "k": "6 of 7",
+   "v": "challengers came from the store",
+   "sub": "Five cell makers and one storage integrator. Not one of the seven was a UPS vendor — so the contested layer moved underneath the machine rather than onto it"
+  },
+  {
+   "k": "12 · 4 · 20",
+   "v": "UPS, PDUs and RPPs per 12 MW",
+   "sub": "One adjacent member's own published bill of what its hall-edge block removes. Those are this segment's products, counted by a company that does not sell them"
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Read this beside six public lessons, not instead of them — and this segment has more neighbours than any landscape before it.** Eleven bear on it: *The AI Data-Center Power Chain*, *The UPS Room*, *The Ten-Second Race*, *N+1, 2N, and Six Nines*, *Where BESS Plugs In* and *The 800 VDC Shift* on the public side; the 800 VDC architecture module, the power-chain module, the grid-equipment module, the cell-fundamentals module and the power-conversion landscape on the gated side. **The organising fact falls out of that list: every one of the segment's six buying criteria has its mechanism taught somewhere else.** The datasheet lines and the redundancy ladder are in *The UPS Room*; the eco-mode dial is there and in *The AI Data-Center Power Chain*; the chemistry table is there and in the cell module; roster alignment is the 800 VDC module's; lead time is the grid-equipment module's. **So this module owns none of the six tests. It owns only who sits where on each — and the fact that the six together do not sort the roster the way the role labels predict.**",
+    "**The split against the adjacent landscape is the first of its kind, and the line is not subject matter.** *Landscape — Power Conversion and Rack-Power Silicon* ranks the conversion layer. This one ranks the room. **Eight members sit in both segments and five of the eight carry a different role in each**: Schneider, Eaton and ABB are {{incumbent}}s here and {{adjacent}} there; Delta and Heron Power are adjacent here and incumbent and {{challenger}} there. The registry itself draws the line, and nothing below re-ranks the conversion layer, re-runs its rack-shelf fight or repeats its origin test.",
+    "**Ten incumbents, and three of them are not in the same business as the other seven.** That is the fact everything here follows from, and it is why this section is organised by what each incumbency is made of rather than as a league table. **Seven build the machine** — Schneider Electric, Vertiv, Eaton, ABB, Huawei Digital Power, Mitsubishi Electric and Piller. **One sells the architecture of the bus the machine sits on** — Zhonhen. **Two build the store underneath it** — Panasonic and Narada. A ranking across those three groups would rank a {{UPS}} frame against a lead-acid string against a national direct-current standard.",
+    "**The two at the top are shared, and the corpus says so precisely.** Dell'Oro places *Schneider Electric* and *Vertiv* about **one tenth of a point apart** at the top of data-centre physical infrastructure — the most exact statement in the record that this segment has no single leader — and their incumbencies are made of different material. Schneider's is the **design layer**: the only vendor with co-developed reference designs spanning power management, cooling controls and whole-factory blueprints, a position its own dossier says pulls its hardware into projects *before competitive bidding starts*, plus a disclosed three-hundred-and-seventy-three-million-dollar supply-capacity agreement with one landlord. Vertiv's is **concentration**: the highest data-centre revenue share among large caps at about seventy-five to eighty per cent, a fifteen-billion-dollar backlog and a book-to-bill near two point nine — which makes it the sector's leveraged proxy in both directions, up fourteen to twenty per cent on an order print and down twenty-five to thirty per cent in days on a demand scare.",
+    "**Eaton's incumbency is bought scope, and its own numbers say so.** Roughly **twelve and a half billion dollars across three acquisitions in fourteen months**, plus a five-hundred-megawatt on-site power alliance, assembled to sell delivered power systems rather than components. Its data-centre orders grew two hundred to two hundred and forty per cent against a market growing about seven and a half per cent a year — and the dossier's own read is that this is **content per megawatt rather than unit-share capture**, because the third-party share structures are unchanged. That distinction matters more here than it would elsewhere: content expands with the architecture, and share does not.",
+    "**ABB's is one voltage class up.** HiPerGuard is the industry's first static medium-voltage {{UPS}}, the thirty-four-and-a-half-kilovolt class removes a conversion stage outright, and its dossier's read is that it has no direct static-MV-UPS competitor at scale while trailing Schneider, Vertiv, Eaton and Huawei in low-voltage UPS. **Its bet is that the medium-voltage and {{800 VDC}} transition resets the leaderboard.** Two structural facts travel with it into any counterparty relationship and its own dossier states both: it sold its grid and transmission business before the supercycle, so it cannot supply the transformers its customers' connections need; and it is a three-time settler of United States bribery cases, which large customers' compliance teams know.",
+    "**Huawei Digital Power is the excluded benchmark, and that is the only way a United States seller should read it.** It competes at the integrated-solution tier rather than the component tier; its prefabricated power block — two point four to three point two megawatts, containerised, on an eighteen-week delivery claim — is the pattern the industry is converging on; and it is a structural non-factor in the United States market. **Its exclusion is a durable share subsidy** to the four Western majors in NATO geographies, and its specification and speed claims are the bar they are measured against everywhere else.",
+    "**Mitsubishi Electric is the one whose marketing and whose revenue point in different directions, and it answers a buying criterion by refusing it.** It is consistently named in the leading vendor set for data-centre UPS, power transformers and gas-insulated switchgear — and **no firm reachable in the research publishes a market-share percentage for it in any of the three**. Its own quarterly numbers put the AI exposure in transmission and distribution rather than in the UPS line its data-centre marketing leads with: energy-systems orders up **eighty per cent** year on year, while the sub-segment containing UPS saw full-year orders **fall nine per cent**. And on {{eco-mode}} it publishes no figure for any model, states that silicon carbide makes the mode and its switching event unnecessary, and publishes ninety-eight point two per cent {{double conversion}} efficiency instead. **That is criterion two answered by declining the question**, and it is the clearest instance in the segment of an incumbency made of something other than share.",
+    "**Piller is the only vendor in the corpus that answers the room's question with a rotating machine** rather than power electronics and a battery — rotary, {{DRUPS}} and {{flywheel}} machines, and the isolated-parallel bus. Its own franchise moved: its parent states plainly that hyperscale *moved away from Piller rotary technology in recent years in favour of battery-static UPS*, and the relevance now runs through the fence line, where its stabiliser ships **one unit per twelve-megawatt gen-set** into behind-the-meter plants. **Its binding constraint is factory capacity, not demand** — a twenty-million-euro programme lifts output from about a hundred to about four hundred large systems a year only by the **end of 2027**, with build slots already being released for 2028.",
+    "**Zhonhen holds the architecture and not the market, and the gap between the two is the most instructive single fact in this segment.** It is China's data-centre {{HVDC}} leader at **thirty-one per cent share** with the top three at seventy-two, lead author of the national direct-current standard, and its one-stage ten-kilovolt-to-DC conversion predates the Western 800 VDC push by six years. The architecture buyer's own August 2026 execution paper **names that architecture** as an implementation of its own data-hall block. And the company's H1 2026 interim converts none of it into commercial traction: **no order, no backlog, no named data-centre customer, no 800-volt revenue**, exports at four point one per cent, and absence from every published partner roster. **Architectural endorsement and commercial inclusion are separate questions, and only the first has been answered** — which is criterion five returning an answer the role label does not predict.",
+    "**And the two who build the store.** *Panasonic* claims about **eighty per cent of the data-centre distributed-power market** — the {{BBU}} layer — self-reported and verified by no third party, behind three hundred and fifty billion yen of dedicated capital expenditure and a chief executive calling an eight-hundred-billion-yen FY2029 target *a minimum commitment*; its most recent quarter put data-centre storage sales at a hundred and thirteen billion yen, one point nine times the year before. *Narada* is the cautionary comparable: **second in base-station and data-centre backup shipments** on a thirty-year franchise, carrying a creditor reorganisation petition, a going-concern-qualified audit, an adverse internal-controls opinion and a hundred and sixty-three frozen accounts. **Its backup segment grew through the collapse**, which is what makes it an asset map rather than an obituary — the distress is actively freeing accounts, channel partners and experienced people.",
+    "**The honesty note this section owes the reader.** Those are not measures of one thing. A design franchise is a procurement fact; a tenth of a share point is a market fact; a published refusal of eco-mode is an engineering position; a national standard authored for one country is a regulatory fact; and a backup-market share stated by the company that holds it is a company's own statement. **Flattening them into an ordering would misrepresent all of them.** The module's own assessment, stated as analysis rather than as a finding of the record: **in this segment the useful question is not who is biggest but what each incumbency is made of — because that is what decides what can take it away, and the answer differs for all three groups.**"
+   ],
+   "sales": "Before the first call, work out which of the three groups you are talking to. A machine maker buys a component inside a design it owns. An architecture vendor buys a standard. A store maker buys a cell specification. Three different conversations, and no ranking connects them — the two at the top of this segment are a tenth of a point apart, and three of the ten would never meet in a bid."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Seven {{challenger}}s, and the shape of the set is the finding: six of the seven arrived from the storage layer, and not one of the seven was a UPS vendor.** Note first what the registry does **not** say — like the landlords segment, this one's note field is empty, so the roles have to be read off the twenty-seven basis lines and the dossiers rather than off a label. Read that way they divide into three routes, and only the third is attacking the machine itself.",
+    "**Route one — the cell makers selling a product line rather than a box. Five of the seven.** *Samsung SDI* has made AI data-centre power its chosen recovery vector: {{UPS}} and {{BBU}} guided to grow **more than seventy per cent in 2026**, a return to profit after seven loss-making quarters that the company attributed to those lines, and a **world-first indoor large-scale fire-test pass for UPS batteries** as the deliberate differentiation against Chinese price leaders. *LG Energy Solution* frames the same market more broadly and claims to be **the only supplier serving all three AI-data-centre storage applications — grid storage, UPS and BBU — on a chain free of restricted foreign entities**, behind five North American sites and a hundred-and-forty-gigawatt-hour order backlog. *EVE Energy* brought a rack-to-grid backup portfolio to an open-compute event on eight-hundred-volt {{HVDC}}, and its own dossier records that **no independent source names a hyperscaler, cloud provider or server builder among its customers**. *Gotion* claims **first place globally above twenty-eight per cent share** in base-station and data-centre UPS backup batteries **in its own audited annual report** rather than only in marketing — a claim no research house corroborates. *Hithium* launched a four-product AI-data-centre line in December 2025 **with zero named customers**.",
+    "**What sorts those five is not product. It is whether their cells can lawfully enter a United States project.** Samsung SDI and LG Energy Solution are the pair the {{FEOC}} regime favours, and both build the compliance case deliberately rather than claiming it. Gotion, EVE and Hithium are three of the **exactly six entities named in the statute itself** — a designation removable only by an act of Congress. And Gotion is simultaneously the most United-States-exposed and the most United-States-constrained member of the cohort: it is the only one with an operating American plant, five lines on more than five hundred and thirty-six million dollars of pledged state incentives, **and its American subsidiaries are captured with it**, so the plant it actually runs cannot claim the manufacturing credit for what it makes there.",
+    "**Route two — productising storage into a UPS category that did not exist. One of the seven.** *ON.energy* is the inverse of the gas-bridge cohort: rather than displacing storage with generation it sells storage **as** a medium-voltage UPS, competing with Vertiv, Eaton and Schneider on one flank and with a cell maker's own data-centre line on the other, validated against the Texas grid operator's large-load {{ride-through}} rule and carrying a **five-gigawatt deployment agreement** with one developer. Its own dossier is blunt about the gap: those multi-gigawatt claims run far ahead of roughly **two hundred and forty megawatt-hours of verified operating assets**, and more than two hundred and fifty million dollars of lifetime capital against a five-gigawatt buildout implies financing that has not surfaced. **The single most valuable open question in this segment is who supplies its cells** — an award that size is one of the largest non-Chinese cell procurements in the American market, and whoever wins it sets the sourcing norm for the whole storage-as-UPS category.",
+    "**Route three — the only one attacking the machine, and it bought its way in.** *Flex* owns branded critical-power switchgear, {{busway}} and power pods, plus medium-voltage switchgear and substation protection — roughly **six point four billion dollars of acquisitions**, culminating in a four-point-four-billion-dollar agreement in September 2026. It is the one challenger selling this segment's own products. Two facts govern the reading, and both come from its own dossier. The branded power businesses are **commercially sub-scale against the named leaders** — busway researchers list Schneider, Starline, Eaton, ABB and Siemens as leaders and categorise its own brand as an *other player* — and **no revenue line has ever been published** for them, so anyone quoting a data-centre revenue figure for this company is quoting something the record does not contain. And the whole proposition is **being separated into an independent public company in the first calendar quarter of 2027**, which means the competitor is being reconstituted mid-fight.",
+    "**What the three routes have in common, and it is not size.** None of them attacks a ranking, because the segment has no single ranking to attack. Route one attacks with a chemistry and a compliance status, route two with a category that did not exist three years ago, route three with a purchase order. So **the module's own assessment, stated as analysis rather than as a finding of the record: the threat here is not share loss to a cheaper UPS — it is that the contested layer moved underneath the machine, from the frame to the store, and the companies that make the store were never in this segment.** That is also why every incumbent response is a **content** move rather than a price move: a medium-voltage class that deletes a stage, a silicon-carbide line that makes eco-mode unnecessary, a prefabricated block on an eighteen-week clock, and a stabiliser sold at the fence line by the vendor that lost the hall.",
+    "**And the three {{deletion route}}s that carry no challenger label at all — every one of them held by an {{adjacent}} member.** **First, the battery outside the building.** A hyperscale electrical contractor and a storage integrator jointly sell a medium-voltage, utility-scale battery UPS replacement sited **outside** the hall, explicitly replacing data-centre UPS systems *and* diesel generators, on a design-and-method patent plus grid-interconnection and transient-stabilisation patents. A third adjacent member sells a stabiliser for the same GPU load-swing problem with UPS-replacement ambitions stated in its own product description, hardware-in-the-loop tested at a national laboratory. **Second, the battery on the eight-hundred-volt bus.** A pre-production converter maker's backup skid couples straight to the bus with no intermediate stage and gives **thirty seconds of full-load backup matched to generator start** — and its twelve-megawatt block eliminates four medium-voltage transformers, four low-voltage switchboards, **twelve UPS, four {{PDU}}s and twenty remote power panels**, on a single twenty-four-week lead time against the forty-six to forty-eight weeks it quotes for switchgear. Another adjacent member publishes the deepest eight-hundred-volt catalogue of any vendor — in-row power racks with embedded {{BBU}}, supercapacitor shelves, silicon-carbide fuses — **while also selling a conventional UPS line and claiming more than six and a half gigawatts of UPS capacity across American data centres**. It is hedged across the deletion; most are not. **Third, the architecture that declines to protect the building at all** — the fleet-level answer, which belongs to the public redundancy lesson and is named here rather than taught here, because a seller will hear it described as a UPS decision when it is a procurement decision made one level up.",
+    "**The counter-threat the incumbents hold and none of the challengers does: the installed base.** The public lesson on the UPS room states the principle — decades of service revenue are guaranteed by the fleet already in the ground, and what is actually in play is **the {{marginal megawatt}} in new AI halls**. This module's contribution is to say who owns that fleet: seven machine makers with multi-decade franchises, one of which cannot quadruple its output before the end of 2027, and a second whose backup segment grew straight through a creditor reorganisation. **A deletion route with no shipped unit, no public datasheet and no listing on the record does not touch any of it before late 2027 at the earliest** — and that date is the one number this module and the power-conversion landscape share, doing opposite jobs in each."
+   ],
+   "sales": "Ask which route the account took to get here before you ask what it needs. A cell maker buys qualification and a compliance file. A storage integrator selling a UPS category buys certification evidence and a cell contract. A scope buyer buys another company. And if the account is one of the ten adjacent members, it may not be buying from this segment at all — it may be selling against it."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "7 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger — seventeen of the twenty-seven members, in registry order. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment carrying a confidence level, restated here in one line. They are never blended with the fact rows above. The ten {{adjacent}} members get no row because they are not ranked players in this segment; what they do to it is in the section above and in the indicators below. At seventeen rows the table sits between the landlords segment's twenty-two and the conversion layer's twelve — section proportions follow the segment, never the last module.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet (analysis)"
+   ],
+   "rows": [
+    [
+     "Schneider Electric",
+     "incumbent",
+     "That the design layer beats the hardware layer — co-developed reference designs that pull its hardware into projects before competitive bidding starts — and that a two-speed portfolio cushions an AI-capital-expenditure shock better than a pure play does, at the price of the multiple"
+    ],
+    [
+     "Vertiv",
+     "incumbent",
+     "That the highest data-centre concentration in the sector is worth the volatility it brings, and that a fifteen-billion-dollar backlog carries it through the one architecture transition that contracts its own core franchise — while no incumbent has yet named a shipping eight-hundred-volt switchboard product"
+    ],
+    [
+     "Eaton",
+     "incumbent",
+     "That buyers want delivered power systems rather than components, bought rather than built at twelve and a half billion dollars in fourteen months — and that content per megawatt, not unit share, is the metric that compounds through an architecture change"
+    ],
+    [
+     "ABB",
+     "incumbent",
+     "That pushing the uninterruptible supply a voltage class up resets a leaderboard it currently sits fourth or fifth on: the first static medium-voltage UPS, a class that deletes a conversion stage outright, and an architecture role in the next rack generation"
+    ],
+    [
+     "Huawei Digital Power",
+     "incumbent",
+     "That the integrated-solution tier is the right altitude and the non-NATO world a large enough market to hold it — while its own exclusion subsidises the four Western majors whose specification and delivery bar it sets"
+    ],
+    [
+     "Mitsubishi Electric",
+     "incumbent",
+     "That owning the power semiconductor is the durable differentiator, and that refusing eco-mode outright — publishing no figure for it and selling double-conversion efficiency instead — is a position rather than a gap"
+    ],
+    [
+     "Piller",
+     "incumbent",
+     "That a rotating machine still wins where a buyer values fault current, harmonic isolation, a medium-voltage connection and no battery room — and that the franchise has moved from the hall it lost to the fence line, where its stabiliser ships one unit per twelve-megawatt gen-set"
+    ],
+    [
+     "Zhonhen",
+     "incumbent",
+     "That the architecture it has run at scale for six years is the one the West is now converging on, and that being named in the buyer's own paper converts into commercial inclusion — which its own interim reports no order, no backlog and no named customer against"
+    ],
+    [
+     "Narada",
+     "incumbent",
+     "That a thirty-year backup franchise survives the balance sheet carrying it: the segment grew through a creditor reorganisation, and the product differentiation is real enough that a restructuring would preserve it or a buyer would want it"
+    ],
+    [
+     "Panasonic",
+     "incumbent",
+     "That backup power rather than grid storage is where its cell business belongs — three hundred and fifty billion yen of capital expenditure, electric-vehicle lines physically repurposed — and that a distributed-power share it reports itself survives contact with a growing market"
+    ],
+    [
+     "Samsung SDI",
+     "challenger",
+     "That safety certification is the one dimension hyperscalers will pay a premium for, and that a world-first indoor fire test plus a compliant chain converts a one-point-four-per-cent global share into a defensible position — with a United States cell ramp as the pivotal execution item"
+    ],
+    [
+     "LG Energy Solution",
+     "challenger",
+     "That the durable advantage is regulatory rather than technical: five North American sites make it the default non-Chinese chain, and serving all three data-centre storage applications at once is a claim no competitor can match on the same compliance footing"
+    ],
+    [
+     "Gotion",
+     "challenger",
+     "That a world-leading backup-battery share stated in its own audited report is worth holding while a route around a statutory designation is built — an operating American plant that cannot claim the credit for what it makes there, and a distribution partnership as the visible workaround"
+    ],
+    [
+     "EVE Energy",
+     "challenger",
+     "That forcing the large-cell transition upstream buys it a position downstream, and that a rack-to-grid backup portfolio is logical adjacency worth building before a single customer is named"
+    ],
+    [
+     "ON.energy",
+     "challenger",
+     "That storage sold as a medium-voltage UPS is a category rather than a substitution, and that being first to a ride-through certification sets the supply-chain norms everyone after it copies — on a five-gigawatt award against roughly two hundred and forty megawatt-hours of verified operating assets"
+    ],
+    [
+     "Hithium",
+     "challenger",
+     "That top-two stationary-cell scale carries into a building it has never sold into, with a four-product data-centre line launched ahead of any named customer, and financing capacity rather than demand as the binding constraint"
+    ],
+    [
+     "Flex",
+     "challenger",
+     "That owning switchgear plus busway plus power pods plus cooling lets it quote grid-to-chip scope no component vendor can match — bought rather than built, sub-scale against the named leaders, never published as a revenue line, and about to be separated into its own company mid-fight"
+    ]
+   ],
+   "note": "**The shape of this table is the finding.** Ten of the seventeen bets defend or extend a position in the machine. **Six of the remaining seven are bets that the store is the contested layer** — and every one of those six is placed by a company that was not in this segment five years ago. The seventh bought its way in and is being split in two before the fight resolves.",
+   "sales": "Match the bet to the buying criterion it defends and you have the account's real evaluation grid. A design-layer bet is evaluated on reference-design alignment; a semiconductor bet on efficiency without eco-mode; a rotary bet on fault current and the absence of a battery room; a cell-maker's bet on a compliance file. Pitching efficiency to a buyer whose bet is fault current is a category error."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it. **Two of the ten were considered for this module's own review date and rejected** — a gate another module already owns belongs here rather than in a review date, and a gate beyond the six-month horizon belongs here too. Both are marked, because the rejection is part of the reading.",
+   "cols": [
+    "On record",
+    "Indicator",
+    "What a move means"
+   ],
+   "rows": [
+    [
+     "1 Oct 2026",
+     "A challenger's United States prismatic cell production starts at its Indiana joint venture, toward a thirty-gigawatt-hour target",
+     "The dated test of the compliant-chain claim underwriting the whole challenger cohort's American access. Its own dossier calls it the pivotal execution item. **This module's review date**"
+    ],
+    [
+     "Q4 cal 2026",
+     "The four-point-four-billion-dollar acquisition closes into the challenger that owns switchgear, busway and power pods",
+     "The last piece before the separation. A slip re-opens whether the grid-to-chip scope claim survives being split into two companies"
+    ],
+    [
+     "30 Nov 2026",
+     "The eight-hundred-volt architecture module's own review gate",
+     "**Rejected for the review date** — it is that module's clock, and buying criterion five reads off it rather than off this one. Watch it there"
+    ],
+    [
+     "31 Dec 2026",
+     "The direct-current architecture incumbent's full-year data-centre power revenue and cash conversion, against its own incentive hurdles",
+     "The only public test of whether architectural endorsement has converted into commercial inclusion. Still no order, no backlog and no named customer as of the H1 interim"
+    ],
+    [
+     "Q1 cal 2027",
+     "The scope challenger separates into an independent public company; its chief executive leaves with the spun-off half",
+     "The competitor is reconstituted mid-fight. Watch whether the branded power businesses receive a published revenue line for the first time"
+    ],
+    [
+     "Early Feb 2027",
+     "The rotary incumbent's parent publishes its 2026 annual report",
+     "The external check on a franchise that is capacity-constrained rather than demand-constrained, and on the behind-the-meter plants its stabiliser ships into"
+    ],
+    [
+     "From Q1 2027",
+     "Any safety listing of the hall-edge block, and a data-centre pilot energised at a named campus",
+     "The first evidence that the second deletion route is a product rather than a specification. No shipped unit and no independently checkable datasheet exist today"
+    ],
+    [
+     "31 Dec 2027",
+     "The capped fifteen-per-cent derivative tariff rate on specified electrical-grid equipment expires, rising to twenty-five per cent from 2028",
+     "Buying criterion six, priced. It reaches transformers and switchgear on full customs value — this segment's own products, and the reason two incumbents are building United States plants"
+    ],
+    [
+     "Late 2027",
+     "The hall-edge challenger's mass production begins; a twenty-million-euro programme quadruples rotary-UPS output",
+     "**The deletion clock and the supply answer land in the same quarter.** One incumbent is sold out until 2028; the block that eliminates twelve UPS is not orderable before then. This is the date the power-conversion landscape reads as an arrival risk and this module reads as a reprieve"
+    ],
+    [
+     "1 Oct 2027",
+     "Three of the seven challengers become barred from defence procurement by statute, removable only by an act of Congress",
+     "**Rejected for the review date** — it is the policy modules' subject and three hundred and eighty-one days out. It is nonetheless the single most consequential date for the challenger cohort's American access"
+    ]
+   ],
+   "sales": "Three of these ten are dates on which somebody must publish something — a revenue line, an annual report, a set of interim numbers. Diary those separately from the regulatory ones: a disclosure date tells you whether a claim was true, and a regulatory date tells you whether it will still be allowed."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell storage — and this half is short, because a public lesson already answered it.** *Where BESS Plugs In* tells a grid-storage supplier without a rack-scale or {{UPS}}-class product that the answer on the third socket is **no** — not *not yet*, not *let us explore a partnership* — and then tells them to keep watching the socket anyway, because its specifications cascade outward to the campus a year later. **This module is what the watching looks like**, and it adds three things the lesson cannot, because the lesson names no companies. **First, the honest no has exceptions and they are countable**: seven challengers built a UPS-class or rack-scale product and entered, five of them cell makers, and what sorted them was not product quality but whether their cells can lawfully enter an American project. **Second, the entry price is visible**: a world-first indoor fire test, a compliant chain built deliberately over years, an open-compute portfolio, a {{ride-through}} certification — attributes that are compliance as much as engineering, and that are being written into the category's specifications now. **Third, if you sell cells rather than systems, the most valuable question in the segment is who supplies the five-gigawatt storage-as-UPS award** — that contract sets the sourcing precedent for the whole category.",
+    "**If you sell AI data-centre power — move one: read buying criterion five as a roster question, not a technology question.** Being named in a buyer's published architecture paper and being on that buyer's published partner roster are **different facts**, and this segment contains a member that has the first and not the second — six years of field record, a national standard it authored, an architecture the paper names, and absence from every roster the same buyer publishes. When an account says it is aligned with the reference design, ask **which roster, published where, and at which tier**.",
+    "**Move two: know which incumbents are hedged across the deletion and which are exposed to it.** One {{adjacent}} member publishes the deepest eight-hundred-volt catalogue in the market **and** a conventional UPS line with more than six and a half gigawatts deployed — hedged on both sides of the same transition. One incumbent's own dossier carries the independent read that the architecture contracts the centralised UPS market, its core franchise, while creating new rack-power and transformer markets — and that **no incumbent has yet named a shipping eight-hundred-volt switchboard product**. A vendor with a hedge and a vendor with a roadmap are in different positions, and no datasheet says which is which.",
+    "**Move three: on lead time, ask what is being compared with what.** The most aggressive claim in the segment is twenty-four weeks for a hall-edge block against forty-six to forty-eight weeks for {{switchgear}} — quoted by a company that does not sell switchgear, has no shipped unit, and whose own dossier records that **no third party has stated or tested the claim**. Criterion six is where this segment is most exposed and where its challengers' evidence is thinnest at the same time. The supply-system explanation of *why* a lead time is what it is belongs to the grid-equipment module; the question here is only who is quoting what, and against what.",
+    "**Move four: the installed base is the argument the incumbents will not make for themselves, and it is the strongest one they have.** The {{marginal megawatt}} in new AI halls is genuinely contested. The fleet already in the ground is not, and it guarantees decades of service revenue. A seller who treats a deletion story as present tense is arguing against the public lesson's own conclusion — and against a supply fact, since the clearest deletion route cannot ship in volume before late 2027 and one rotary incumbent's capacity is already sold out into 2028."
+   ],
+   "sales": "Whichever half you are in, the first qualifying question is the same: which of this segment's six buying criteria is the account actually deciding on? Five of the six have a public lesson teaching how to read them, so an account that cannot answer has not run the evaluation yet — and that is a different sales motion from one that has."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 15 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change rather than at this session's, because it did not move this session. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that the ten incumbents form three groups which do not compete; that the threat is a change in what the store is rather than share loss on the machine; and every row of the bets table.",
+   "rows": [
+    [
+     "Segment holds 27 members — 10 incumbent, 7 challenger, 10 adjacent; chain position 5, tier build",
+     "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"
+    ],
+    [
+     "The definition names static/rotary/modular UPS, switchgear, busway and PDUs inside the fence, the prefabricated power module, the facility DC bus, and the VRLA/lithium/flywheel stores including BBU and UPS cells",
+     "profiler-segments.json @ v05.41r — segments[].definition"
+    ],
+    [
+     "The six buying criteria, including reference-design alignment and 800 VDC readiness (5) and lead time for factory-built power rooms (6)",
+     "profiler-segments.json @ v05.41r — segments[].buyingCriteria"
+    ],
+    [
+     "Eight members sit in both this segment and power-conversion-and-rack-power-silicon; five carry a different role in each",
+     "profiler-segments.json @ v05.41r — segments[].members[].role, both segments"
+    ],
+    [
+     "Schneider and Vertiv are shared #1 in data-center physical infrastructure, about 0.1 point apart (Dell'Oro)",
+     "profile:vertiv @ v9 — strategyRead[1]; profile:schneider-electric @ v9 — ecosystemRole"
+    ],
+    [
+     "Schneider's edge is the design layer: the only incumbent with NVIDIA co-developed designs across power, cooling controls and whole-factory blueprints; a $373M supply-capacity agreement with one landlord",
+     "profile:schneider-electric @ v9 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Vertiv carries ~75–80 % data-center revenue concentration, a $15B backlog and ~2.9× book-to-bill; it moved -25–30 % in days on a demand scare",
+     "profile:vertiv @ v9 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Independent analysis projects the 800 VDC architecture contracts the centralized UPS market; no incumbent has yet named a shipping 800 VDC switchboard product",
+     "profile:vertiv @ v9 — strategyRead[2]"
+    ],
+    [
+     "Eaton assembled ~$12.5B of scope across Fibrebond, Ultra PCS and Boyd Thermal in 14 months plus a Siemens Energy 500 MW alliance; DC orders grew 200–240 % against a market growing ~7.5 % a year",
+     "profile:eaton @ v8 — ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "ABB's HiPerGuard is the first static MV UPS; the 34.5 kV class removes a conversion stage; ABB trails Schneider, Vertiv, Eaton and Huawei in UPS; it sold its grid business before the supercycle and is a three-time US bribery settler",
+     "profile:abb @ v7 — ecosystemRole, strategyRead[0], strategyRead[2], strategyRead[4]"
+    ],
+    [
+     "Huawei Digital Power competes at the integrated-solution tier; PowerPOD is 2.4–3.2 MW containerized blocks on an 18-week delivery claim; its exclusion is a durable share subsidy to Western vendors in NATO geographies",
+     "profile:huawei-digital-power @ v8 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Mitsubishi Electric is named in the leading vendor set for data-center UPS, transformers and GIS, and no reachable firm publishes a share percentage for it in any of the three",
+     "profile:mitsubishi-electric @ v3 — ecosystemRole, strategyRead[4]"
+    ],
+    [
+     "Energy Systems orders rose 80 % YoY in the quarter to 2026-06-30 while Public Utility Systems — which contains UPS — saw full-year FY2026 orders fall 9 %",
+     "profile:mitsubishi-electric @ v3 — strategyRead[0]"
+    ],
+    [
+     "Mitsubishi Electric publishes no eco-mode efficiency figure for any model, states SiC makes eco-mode unnecessary, and publishes 98.2 % double-conversion efficiency on its SiC line",
+     "profile:mitsubishi-electric @ v3 — strategyRead[1]"
+    ],
+    [
+     "Piller is the corpus's reference for rotary, diesel-rotary and flywheel UPS and the isolated-parallel bus; hyperscale \"moved away from Piller rotary technology in recent years in favour of battery-static UPS\"",
+     "profile:piller @ v2 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "SHIELDX ships one unit per 12 MW gen-set in behind-the-meter plants; a €20M programme lifts Bilshausen output from ~100 to ~400 large systems a year only by end-2027, with slots released for 2028",
+     "profile:piller @ v2 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Zhonhen is China's data-center HVDC leader at 31 % share, CR3 72 %, lead author of the national 240V/336V DC standard; Panama converts 10 kV directly to DC in one stage at over 97.5 %",
+     "profile:zhonhen @ v8 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "NVIDIA's August 2026 execution paper names the Panama Architecture (pp. 21–23); Zhonhen is absent from NVIDIA's published 800VDC partner rosters, discloses no order, no named customer and no 800V revenue, and exports are 4.1 % of revenue",
+     "profile:zhonhen @ v8 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Panasonic claims ~80 % of the data-center distributed-power (BBU) market, unverified by any third party; ¥350B of capex; Q1 FY2027 data-center storage sales ¥113B (1.9× YoY) against an ¥800B FY2029 target",
+     "profile:panasonic @ v4 — ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Narada is #2 in base-station and data-centre backup shipments on a 30-year franchise, carries a creditor reorganization petition, a going-concern-qualified audit, an adverse internal-controls opinion and 163 frozen accounts — and the comms/DC segment grew through the collapse",
+     "profile:narada @ v4 — ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Samsung SDI's UPS and BBU lines are guided to grow >70 % in 2026; it holds a world-first UL indoor large-scale fire test pass for UPS batteries; its global ESS share is 1.4 % (#12, H1 2026)",
+     "profile:samsung-sdi @ v5 — ecosystemRole, strategyRead[0], strategyRead[2]"
+    ],
+    [
+     "US prismatic LFP cell production starts at the StarPlus Indiana JV from October 2026, toward a 30 GWh BESS cell target, and both billion-dollar-class US ESS deals depend on it landing on time",
+     "profile:samsung-sdi @ v5 — policyExposure[0].mitigation, strategyRead[1]"
+    ],
+    [
+     "LG Energy Solution claims to be the only supplier serving all three AI-DC storage applications — BESS, UPS and BBU — on a non-FEOC chain, behind five North American sites and a 140 GWh ESS backlog",
+     "profile:lg-energy-solution @ v6 — ecosystemRole, strategyRead[3]"
+    ],
+    [
+     "Gotion claims first place globally above 28 % share in base-station and data-centre UPS backup batteries in its own audited annual report, uncorroborated by any research house",
+     "profile:gotion @ v1 — ecosystemRole"
+    ],
+    [
+     "Gotion is named in NDAA §154(b), its US subsidiaries are captured with it, and its operating Manteno plant cannot claim the advanced manufacturing credit for what it makes there",
+     "profile:gotion @ v1 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "EVE, Gotion and Hithium are three of exactly six entities named in §154(b) of the FY2024 NDAA, barred from DoD procurement from 1 October 2027 and removable only by an act of Congress",
+     "profile:eve-energy @ v6 — policyExposure, strategyRead[1]; profile:gotion @ v1 — policyExposure"
+    ],
+    [
+     "EVE's AIDC BBU portfolio (OCP China 2026) spans rack, distribution and grid-scale backup on 800V HVDC; no independent source names a hyperscaler, cloud provider or server ODM customer",
+     "profile:eve-energy @ v6 — ecosystemRole, strategyRead[3]"
+    ],
+    [
+     "ON.energy sells storage as a medium-voltage UPS competing with Vertiv/Eaton/Schneider, validated against ERCOT NOGRR 282, on a 5 GW award — against roughly 240 MWh of verified operating assets and >$250M of lifetime capital",
+     "profile:on-energy @ v4 — ecosystemRole, strategyRead[0], strategyRead[2]"
+    ],
+    [
+     "The unnamed cell supplier behind that 5 GW award is the segment's single most valuable open question and sets the sourcing precedent for the storage-as-UPS category",
+     "profile:on-energy @ v4 — strategyRead[1]"
+    ],
+    [
+     "Hithium launched a four-SKU lithium-sodium AIDC line in December 2025 with zero named customers, and financing capacity rather than demand is its binding constraint",
+     "profiler-segments.json @ v05.41r — members[].basis; profile:hithium @ v13 — strategyRead[3]"
+    ],
+    [
+     "Flex owns Anord Mardix switchgear, busway and power pods, Crown Technical Systems and Electrical Power Products; ~$6.4B of acquisitions culminating in $4.4bn for EPC Power agreed 3 September 2026, closing Q4 calendar 2026",
+     "profile:flex @ v1 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Busway researchers list Schneider, Starline, Eaton, ABB and Siemens as leaders and categorise Anord Mardix as an other player; no revenue line has ever been published for the branded power businesses",
+     "profile:flex @ v1 — strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "The Cloud and Power Infrastructure separation was approved 5 May 2026 for the first calendar quarter of 2027, with the chief executive going to the spun-off company",
+     "profile:flex @ v1 — strategyRead[0]"
+    ],
+    [
+     "Rosendin and FlexGen's BESSUPS is a medium-voltage (1–35 kV) utility-scale battery UPS replacement sited outside the hall, replacing data-center UPS systems and diesel generators, on a design-and-method patent",
+     "profile:rosendin @ v7 — productsAndServices; profile:flexgen @ v7 — productsAndServices"
+    ],
+    [
+     "Prevalon's Hybrid Power Stabilizer is a BESS-plus-power-electronics product for GPU load swings carrying UPS-replacement ambitions, hardware-in-the-loop tested at a US national laboratory",
+     "profile:prevalon @ v5 — ecosystemRole, productsAndServices"
+    ],
+    [
+     "Heron Power's SuperBBU couples directly to the 800 V bus with no DC-DC stage and gives 30 seconds of full-load backup matched to generator start",
+     "profile:heron-power @ v1 — productsAndServices, technicalSpecs"
+    ],
+    [
+     "Its 12 MW block eliminates four MV transformers, four LV switchboards, twelve UPS, four PDUs and twenty RPPs, on a single 24-week lead time against the 46–48 weeks it quotes for switchgear",
+     "profile:heron-power @ v1 — productsAndServices"
+    ],
+    [
+     "Heron has no shipped unit, no independently checkable datasheet and no UL listing on the record; mass production begins late 2027 against an architecture that attaches MV-direct SSTs to a target of toward 2029",
+     "profile:heron-power @ v1 — strategyRead[0], strategyRead[2]"
+    ],
+    [
+     "Delta publishes the deepest 800 VDC catalogue of any vendor — 660 kW in-row racks with 480 kW of embedded BBU, supercapacitor shelves, SiC e-fuses — and separately claims >6.5 GW of UPS capacity across US data centers",
+     "profile:delta-electronics @ v5 — summary, productsAndServices"
+    ],
+    [
+     "Rehlko is the only gen-set OEM in the corpus that also manufactures a three-phase static UPS, to 500 kVA per system, alongside paralleling switchgear to 15 kV and transfer switches to 4,000 A",
+     "profile:rehlko @ v1 — ecosystemRole"
+    ],
+    [
+     "Rolls-Royce Power Systems sells a diesel-rotary UPS in the mtu Kinetic PowerPack, 480 to 3,000 kVA, alongside gen-sets and a battery line",
+     "profile:rolls-royce-power-systems @ v1 — ecosystemRole; profiler-segments.json @ v05.41r — members[].basis"
+    ],
+    [
+     "Cummins and Caterpillar both reach into the room with paralleling switchgear and transfer switches — to 4,000 A and 40 A to 4,000 A respectively",
+     "profile:cummins @ v1 — ecosystemRole; profile:caterpillar @ v2 — ecosystemRole"
+    ],
+    [
+     "Sunwoda's four-tier AIDC energy architecture runs grid-side storage → campus backup → rack backup → BBU, with UPS/HVDC backup from 1 kVA to 800 kVA; it is a prohibited foreign entity with no US manufacturing",
+     "profile:sunwoda @ v4 — ecosystemRole, productsAndServices"
+    ],
+    [
+     "The capped 15 % Section 232 rate for specified electrical-grid equipment runs through 2027-12-31, rising to 25 % from 2028, on full customs value; transformers and switchgear are within derivative scope",
+     "profile:mitsubishi-electric @ v3 — policyExposure[0]"
+    ],
+    [
+     "The EU is phasing high-risk inverters out of EU-funded projects with new contracts fully incorporating the restrictions from April 2027",
+     "profile:huawei-digital-power @ v8 — policyExposure[3]"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**There is no ranking of this segment.** The nearest thing to one is two vendors placed about a tenth of a point apart by a single research house, and the top-five structures the dossiers cite measure *data-centre power* as a whole rather than the room. No source ranks a rotary machine against a backup battery, because no source treats them as the same market — and this module declines to invent the ordering.",
+    "**No market-share percentage exists for one of the ten incumbents in any of the three markets it is named in.** Its own dossier says so in as many words, and records that where sources rank rather than list, it falls below the top five. A vendor being named in a leading set and a vendor holding a measured share are different facts, and only one of them is available here.",
+    "**The largest share claim in the segment — about eighty per cent of the distributed-power layer — is self-reported and carries no third-party verification.** So is the twenty-eight-per-cent-plus backup-battery claim from a challenger, which appears in an audited annual report and is corroborated by no research house. Both are recorded here as claims, with the absence of corroboration stated alongside them.",
+    "**Two of the seven challengers have launched data-centre product lines with no named customer at all**, and a third's engineering samples were guided to customers in mid-2026 with nothing corroborating since. In this segment, product existence and commercial traction come apart more often than in any segment covered so far.",
+    "**The most quantified deletion claim in the corpus comes from a company with no shipped unit, no public datasheet and no safety listing on the record** — and its own dossier notes that the lead-time claim customers are actually buying is the one no third party has stated or tested. The twelve-UPS arithmetic is a vendor model with vendor-chosen boundaries, and is used here as evidence of intent rather than of outcome.",
+    "**No revenue line has ever been published for one challenger's branded power businesses**, so any data-centre revenue figure attributed to that company is something the record does not contain. Its segment reporting blends what it owns with hardware it builds to other companies' designs.",
+    "**Three of the ten adjacent members name no data-centre customer anywhere in any source, first-party or third-party.** Their dossiers state the collection gap rather than fill it. Breadth of product line is verifiable for them; who bought it is not — which matters because two of the three sell a rotating uninterruptible supply or a static one alongside their engines.",
+    "**And the absence this segment shares with no other: the buyer's test is public and the vendor's answer to it is not.** All six buying criteria have a public lesson or a module teaching how to read them — the datasheet lines, the classification codes, the redundancy levels, the chemistry table, the roster, the lead-time series. What no source publishes is where each named vendor actually sits on those lines. **This module narrows that gap from dossiers, and it narrows it rather than closing it.**"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the split between this module and the six public lessons that cover this segment?",
+     "a": "Every one of the segment's six buying criteria has its mechanism taught in a public lesson or another module — the datasheet ladder, the eco-mode dial, the monolith-versus-modular choice, the chemistry table, the roster, the lead-time series. Those lessons teach the test. This module owns only which named parties sit where on each."
+    },
+    {
+     "q": "How does this module split against the power-conversion landscape, and why is that split unusual?",
+     "a": "It is the first landscape-against-landscape split, and the line is the registry's own role assignment rather than subject matter. Eight members sit in both segments and five carry a different role in each: Schneider, Eaton and ABB are incumbents here and adjacent there; Delta and Heron are adjacent here and incumbent and challenger there."
+    },
+    {
+     "q": "The segment's twenty-seven members, by role?",
+     "a": "Ten incumbent, seven challenger, ten adjacent. It is the third-deepest segment in the corpus and its ten incumbents are the second-largest incumbent set the landscape programme has met."
+    },
+    {
+     "q": "Why can the ten incumbents not be ranked against one another?",
+     "a": "Because three of them are not in the same business as the other seven. Seven build the machine, one sells the architecture of the direct-current bus it sits on, and two build the store underneath it. A ranking across those groups would rank a UPS frame against a lead-acid string against a national standard."
+    },
+    {
+     "q": "What is the shape of the challenger set, and why does it matter?",
+     "a": "Six of the seven arrived from the storage layer — five cell makers and one storage integrator — and the seventh arrived from contract manufacturing carrying bought switchgear. Not one was a UPS vendor, so the contested layer moved underneath the machine rather than onto it."
+    },
+    {
+     "q": "What actually sorts the five cell-maker challengers?",
+     "a": "Not product. Whether their cells can lawfully enter a United States project: two are the pair the foreign-entity regime favours, and three are among exactly six entities named in the statute itself, removable only by an act of Congress."
+    },
+    {
+     "q": "Name the three routes that could delete the room machine, and the thing they have in common.",
+     "a": "A utility-scale battery outside the building at medium voltage; a battery on the eight-hundred-volt bus at the hall edge; and a fleet-level architecture that declines to protect one building at all. All three are carried by members the registry classes as adjacent, not by challengers — which is what makes them easy to miss."
+    },
+    {
+     "q": "What does one adjacent member's twelve-megawatt block claim to eliminate, and why is the number quoted here?",
+     "a": "Four medium-voltage transformers, four low-voltage switchboards, twelve UPS, four PDUs and twenty remote power panels. Those are this segment's products, counted by a company that does not sell them — so it is a bill of what leaves the segment's addressable market per block, not a product specification."
+    },
+    {
+     "q": "A vendor is named in the architecture buyer's own execution paper. Is it on that buyer's partner roster?",
+     "a": "Not necessarily, and one incumbent here is the worked example: its architecture is named in the paper, and it is absent from every published partner roster, with no order, no backlog, no named data-centre customer and no revenue at that voltage in its own interim. Architectural endorsement and commercial inclusion are separate questions."
+    },
+    {
+     "q": "Which incumbent answers a buying criterion by refusing it, and how?",
+     "a": "The vertically integrated one. It publishes no eco-mode efficiency figure for any model, states that silicon carbide makes the mode and its switching event unnecessary, and publishes a double-conversion figure instead. That is criterion two answered by declining the question."
+    },
+    {
+     "q": "Why is the installed base the incumbents' strongest counter-argument, and what is the date that bounds it?",
+     "a": "Because the fleet already in the ground guarantees decades of service revenue, and only the marginal megawatt in new AI halls is contested. The clearest deletion route cannot ship in volume before late 2027 — the same date the power-conversion landscape reads as an arrival risk and this one reads as a reprieve."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague asks you to rank this segment's ten incumbents from strongest to weakest. What is the right response?",
+     "c": [
+      "Rank them by data-centre revenue, the one figure all ten publish",
+      "Decline the ordering: three of the ten are not in the same business as the other seven, the two at the top are a tenth of a point apart on the only measure that covers them both, and one of the ten has no published share in any of its three named markets",
+      "Rank them by whether the architecture buyer's partner roster names them, which is the segment's real scoreboard",
+      "Rank them by installed UPS capacity, using the two vendors that publish a gigawatt figure as the spine"
+     ],
+     "a": 1,
+     "why": "Seven build the machine, one sells the architecture of the bus, and two build the store. A ranking across those groups compares a frame with a string with a standard. The only precise comparison in the record puts two vendors about a tenth of a point apart, and a third incumbent has no share percentage published in data-centre UPS, transformers or gas-insulated switchgear at all. The roster answer is wrong for a separate reason: one incumbent's architecture is named in the buyer's own paper while the company is absent from every roster."
+    },
+    {
+     "q": "An account tells you its next hall will delete the UPS room entirely because a hall-edge block does the job. What is the most useful thing to establish first?",
+     "c": [
+      "Which of the three deletion routes they mean, and on what schedule — because two are products with no shipped unit and the third is a procurement decision made a level above the hall",
+      "Whether they have compared efficiency curves, since the architecture wins on efficiency",
+      "Whether their insurer will accept a distributed store, since that decides the question",
+      "Which cell chemistry the block uses, since that determines the autonomy"
+     ],
+     "a": 0,
+     "why": "The three routes are genuinely different conversations. The battery outside the building is sold today by a contractor and an integrator; the battery on the eight-hundred-volt bus has no shipped unit, no public datasheet and no listing on the record, and mass production begins late 2027; and the fleet-level architecture is not a UPS decision at all — it is an availability target set one level up, and only an owner with a fleet can set it. Efficiency is the wrong first question because the architecture's own rating for the two competing devices is the same."
+    },
+    {
+     "q": "A cell maker tells you it is the world leader in data-centre backup batteries. How should that claim be recorded?",
+     "c": [
+      "As fact, if it appears in an audited annual report",
+      "As a claim, with the absence of third-party corroboration recorded alongside it — and the same treatment given to the eighty-per-cent claim from the other side of the segment",
+      "As marketing, and left out",
+      "As fact, since no competitor has published a contradicting figure"
+     ],
+     "a": 1,
+     "why": "This segment carries two very large self-reported share claims — about eighty per cent of the distributed-power layer from an incumbent, and above twenty-eight per cent of base-station and data-centre backup from a challenger's own audited report. Neither is corroborated by any research house. An audited report makes a statement the company stands behind; it does not make it an independently measured share. Leaving it out would be worse, because the claim is load-bearing for how each company positions itself."
+    },
+    {
+     "q": "You sell grid-scale storage with no rack-form-factor or UPS-class product. An account inside a hall asks you to quote. What does the curriculum say, and what does this module add?",
+     "c": [
+      "The lesson says yes if you can partner; the module names the partners",
+      "The lesson says the answer is no; the module says the no has seven countable exceptions and names what each of them had to build to become one",
+      "The lesson says the answer is no; the module says the lesson is out of date",
+      "Both say yes, because the segment is growing faster than the grid lane"
+     ],
+     "a": 1,
+     "why": "The public lesson is unambiguous — not not yet, not a partnership, no — and it tells the reader to keep watching the socket anyway, because its specifications cascade outward. This module is what the watching looks like: seven challengers entered, five of them cell makers, and the entry price is visible in what each had to build — an indoor fire-test pass, a compliant chain assembled over years, an open-compute portfolio, a ride-through certification. The lesson is not out of date; it is teaching the test that the seven passed."
+    },
+    {
+     "q": "Why does this module carry no datasheet table, no redundancy vocabulary and no chemistry comparison, when all three are central to how the segment is bought?",
+     "c": [
+      "Because they are gated material that contributor tier cannot see",
+      "Because all six buying criteria have their mechanism taught in a public lesson or another module, and material drifting either way across that boundary crosses an access tier",
+      "Because the dossiers do not carry them",
+      "Because the segment lesson already lists them"
+     ],
+     "a": 1,
+     "why": "It is the reverse of gating: the six lessons are analyst-visible and this module is contributor-only. Material drifting from here into a lesson's territory is material an analyst can already read; material drifting the other way raises a gate on something already public. Two of those lessons pre-declare the handoff in their own text — one closes a callout on where this hands off, and another states that it deliberately does not describe the machine being deleted."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry's role for a member that holds an established position in the segment on a stated basis. Here the ten incumbents fall into three groups that do not compete — seven machine makers, one architecture vendor and two store makers — so the label marks position, not rivalry."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry's role for a member attacking an incumbent position. Here six of the seven arrived from the storage layer and none was a UPS vendor, so the label marks where the attack comes from rather than what it competes with."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry's role for a member whose main business sits in another segment but whose products or decisions bear on this one. Here the ten include every party carrying a route that would delete the room machine — which is exactly why the routes are easy to miss."
+  },
+  {
+   "t": "deletion route",
+   "d": "This module's term for a change that removes the room machine's job rather than out-competing it: a battery outside the building, a battery on the rack's direct-current bus, or an availability target set at the fleet level. All three are carried here by adjacent members, and none of them is a better UPS."
+  },
+  {
+   "t": "marginal megawatt",
+   "d": "The public lesson on the UPS room's own phrase for what is actually contested: the installed base guarantees the room machine decades of service revenue, so the fight is over new AI-hall capacity rather than over the fleet already in the ground."
+  },
+  {
+   "t": "roster alignment",
+   "d": "This module's term for buying criterion five as it actually behaves. Being named in the architecture buyer's execution paper and appearing on that buyer's published partner roster are different facts, and this segment contains a member that has the first and not the second."
   }
  ]
  };
