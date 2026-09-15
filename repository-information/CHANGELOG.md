@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.81r] — 2026-09-15 01:49:12 AM EST
+
+> **Prompt:** *(no new prompt — the deploy-confirmation half of the v05.80r session, performed once the workflow had reported.)*
+
+### Changed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.25** — the deployment counters move from forecast to **measurement**, the fifth consecutive handover to make that correction (v05.73r for §7.21, v05.75r for §7.22, v05.77r for §7.23, v05.79r for §7.24). v05.80r's workflow reported `Classroom deploy confirmed (GET): Updated to v01.39g (deployment 50) | 50/200` **on the first GET leg with no POLL line**, and **no `?op=deploy` probe was issued at all** because Pages and the job log agreed — the **seventh consecutive** use of the §7.19 order, and the forecast written into §7.25 an hour earlier proved exactly right. Scraper was not touched and stays at 150/200. The brief's repo-version line moves to **v05.81r** and its CHANGELOG arithmetic is restated for the state S2 session 5 will actually find
+- `README.md` — `Last updated:` line and repo version
+
+### Notes
+
+- **Nothing in the Classroom or Scraper surface moved** — no `.gs` and no `.html`, so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.39g / v01.14w**, Scraper at v02.05g, Profiler at v01.39g. The content checker holds **0 errors / 0 warnings at 39 lessons / 8 tracks / 142 gate cases**, `check-readme-tree.py` reports 0 findings, and `build-classroom-segments.py --check` still reports **8 due** — one of which (`power-conversion-and-rack-power-silicon`) is S2 session 5's own to clear
+- **No rotation.** 82 raw / 80 non-exempt before, **83 raw / 80 non-exempt** after, three sections dated 2026-09-15 on the EST clock, against a trigger of 100. The oldest remaining group is still thirteen sections dated 2026-09-07
 
 ## [v05.80r] — 2026-09-15 01:36:51 AM EST
 
