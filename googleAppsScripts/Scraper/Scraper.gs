@@ -1,4 +1,4 @@
-var VERSION = "v02.06g";
+var VERSION = "v02.07g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -819,7 +819,46 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     label: 'Power semiconductors & the last centimetre: SiC, GaN, point-of-load conversion',
     terms: ['silicon carbide', 'gallium nitride', 'wide-bandgap', 'point of load',
             'vertical power delivery'],
-    source: 'guidance:landscape-power-conversion-and-rack-power-silicon-2026-09' }
+    source: 'guidance:landscape-power-conversion-and-rack-power-silicon-2026-09' },
+  // Guidance seed for the AIDC developers-and-landlords landscape (S2 session
+  // 6). Asked from scratch against every term in BOTH arrays per curriculum
+  // plan 10.6 (i), all 392 of them, and the brief's own prior turned out HALF
+  // right - which is the reason the check is run against terms rather than
+  // against seed labels. What IS already covered: the physical data centre and
+  // the power layer (seg-aidc, topic-aidc-buildout, topic-grid-infrastructure),
+  // the consent layer (topic-community-opposition owns moratorium and zoning),
+  // and - contrary to the brief's guess - the CO-LOCATION STATUTES, since
+  // 'co-location', 'behind-the-meter', 'large load', 'interconnection',
+  // 'substation' and 'ratepayer' are all exact existing terms.
+  // What scores ZERO is the segment's own COMMERCIAL layer - the landlord's
+  // product and its capital stack. 'powered land' (the word 'land' matches only
+  // 'richland parish'), 'land entitlement', 'build-to-suit', 'data center ABS'
+  // ('abs', 'bond' and 'securit' return nothing but 'national security'),
+  // 'tenant credit' ('tenant' zero, 'credit' only 'tax credit transfer'),
+  // 'take-or-pay lease' ('lease' zero) and 'bitcoin miner' ('bitcoin', 'miner'
+  // and 'mining' all zero) each returned zero matches. So a headline about an
+  // ABS pricing, a powered-land sale or a miner signing a take-or-pay lease
+  // matched NO seed at all - in the segment's own product, its own financing
+  // route, and the route seven of its thirteen challengers took to get here.
+  // Two of its six buying criteria sat entirely unscored.
+  // RE-SCOPED ONCE BEFORE LANDING, per the session-3 warning: 'colocation',
+  // 'hyperscale', 'moratorium', 'zoning' and 'data center' were dropped as
+  // exact duplicates of seg-aidc, topic-aidc-buildout and
+  // topic-community-opposition, and 'powered shell' as a narrower near-
+  // duplicate of 'powered land'. 'special contract' and 'energy service
+  // agreement' both score zero and are left out on SPLIT grounds rather than
+  // duplication grounds - they are utility instruments that
+  // utility-aidc-procurement-2026-08 owns, and seeding them here would blur in
+  // the digest exactly the line the module draws in the curriculum.
+  // 'securitization' is left out in favour of the precise 'data center ABS'
+  // because the broader word would pull solar and BESS deals into this band.
+  // No `tv` marker: tv guards edits to an EXISTING seed's terms and lives on
+  // SCRAPER_SEGMENT_SEEDS; this is a new key with no sheet row.
+  { key: 'topic-aidc-landlords',
+    label: 'AIDC developers & landlords: powered land, build-to-suit and the landlord capital stack',
+    terms: ['powered land', 'land entitlement', 'build-to-suit', 'data center ABS',
+            'tenant credit', 'take-or-pay lease', 'bitcoin miner'],
+    source: 'guidance:landscape-aidc-developers-and-landlords-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

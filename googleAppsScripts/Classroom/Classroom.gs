@@ -1,4 +1,4 @@
-var VERSION = "v01.41g";
+var VERSION = "v01.42g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -24451,7 +24451,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
  "title": "AIDC developers and landlords",
  "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -26939,8 +26939,8 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Fence Line: Interconnection and the Substation* · *Bridge Power: Building the Plant Before the Grid Arrives* · *Reading the Eight Named Projects* (planned) · *N+1, 2N, and Six Nines* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The Fence Line: Interconnection and the Substation* · *Bridge Power: Building the Plant Before the Grid Arrives* · *Reading the Named Projects* · *N+1, 2N, and Six Nines*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-aidc-developers-and-landlords-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Aligned Data Centers, Compass Datacenters, CyrusOne, Digital Realty, Equinix, QTS Data Centers, STACK Infrastructure, Switch, Vantage Data Centers, Applied Digital, Cipher Digital, Core Scientific, Crusoe, EdgeCore, Fermi America, Galaxy Digital, Hut 8, IREN, PowerHouse Data Centers, Prime Data Centers, TeraWulf, Tract, Apex Clean Energy, Eolian, Fluidstack, Intersect, Nscale, Samsung C&T, Strata Clean Energy, Talen Energy — each member's dossier carries one in Profiler."
    ]
   },
@@ -27014,6 +27014,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "changed": [
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -40401,7 +40408,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeCellsAndChemistry_(),
           guidanceDocLandscapeStorageDevelopersAndIpps_(),
           guidanceDocLandscapeUtilities_(),
-          guidanceDocLandscapePowerConversion_()];
+          guidanceDocLandscapePowerConversion_(),
+          guidanceDocLandscapeAidcDevelopersAndLandlords_()];
 }
 
 function guidanceIndex_() {
@@ -49654,6 +49662,808 @@ function guidanceDocLandscapePowerConversion_() {
   }
  ]
 };
+}
+
+// Content: Landscape - AIDC Developers and Landlords (corpus synthesis,
+// 2026-09-15). Derived from
+// repository-information/industry-guidance/landscape-aidc-developers-and-landlords-analysis.md;
+// every claim rests on a member dossier at the profileVersion in the ledger.
+//
+// THE SPLIT, written before the module was (CLASSROOM-CURRICULUM-PLAN.md 10.6
+// (j)). This segment has FOUR neighbours and the new one is not a module at
+// all: the-campus-as-a-power-project (Phase 4 row 9, v05.80r) is a PUBLIC
+// mechanism lesson built on nine of this segment's own members, and
+// how-a-storage-project-happens touches two more. No landscape had split
+// against a lesson before. The line, and it is one sentence: THE LESSON
+// TEACHES THE TEST, THIS MODULE APPLIES IT TO NAMED PARTIES. It matters more
+// than usual because the lesson is analyst-visible and this module is
+// contributor-only - material drifting either way crosses an access boundary.
+// The 7.23 test held on the pre-leased share falling 64% -> 54% while
+// capacity underway rose 82%: an ARITHMETIC EXERCISE there (convert a
+// percentage into exposure) and a SOLITARY MARKET GAUGE here (the only
+// speculative-build number the segment has, because eighteen of thirty
+// members publish nothing).
+//
+// NINE things the four neighbours own are omitted here on purpose and are
+// listed in section 2 of the analysis file - do not import them in a later
+// revision. From the lesson: the eight-stage lifecycle and its three clocks;
+// the five-rung capacity ladder; critical IT load vs total facility power;
+// the lease clock vs the entitlement clock; the six roles in the room; the
+// five failure modes and the named-projects table. From
+// how-a-storage-project-happens: the storage lifecycle and where a supplier
+// is chosen along it. From large-load-interconnection-2026-09: Order No.
+// 2023, the study-cost ladders, the docket trail, the flexibility bargain.
+// From utility-aidc-procurement-2026-08: the four-move playbook, the tariff
+// comparison, the five BESS channels, the buyer map. power-infra-aidc-2026-08
+// owns the chain and the three BESS sockets; this module states only which
+// members own generation and which queue for it.
+//
+// reviewBy is 2026-12-15, ninety-one days after updated, and it is a read
+// rather than a sort. The roster's 30 members carry 107 policyExposure
+// entries, 84 dated, and exactly TWO of those dates are in the future - both
+// 2027-12-31, both the Section 232 schedule on transformers and switchgear.
+// A sort would have set this module's clock on a tariff expiry. The nearest
+// GENUINE gate is 10 December 2026, the grid operator's audit report - and it
+// is REJECTED, because it is already the reviewBy of utility-aidc-procurement
+// -2026-08 (whose own Texas section names that completion target) and of
+// power-infra-aidc-2026-08. Per 10.6 (r) a gate a module watches but does not
+// own belongs in the-indicators, and it is indicator 1. The date taken is
+// Virginia's tax-policy study, read out of edgecore's policy PROSE while that
+// entry's effectiveDate field carries the consumption tax's 1 July start.
+// Section 10 of the analysis file carries the reasoning and five rejections.
+function guidanceDocLandscapeAidcDevelopersAndLandlords_() {
+  return {
+ "id": "landscape-aidc-developers-and-landlords-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — AIDC Developers and Landlords",
+ "short": "Nine incumbents whose leadership rests on four things that cannot be compared, thirteen challengers who arrived owning substations rather than winning bids, and a tenant-credit layer whose price is quoted in basis points. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 30 member dossiers of the aidc-developers-and-landlords segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-aidc-developers-and-landlords-analysis.md"
+ },
+ "updated": "2026-09-15",
+ "reviewBy": "2026-12-15",
+ "revisions": [
+  {
+   "date": "2026-09-15",
+   "note": "First authoring, and the sixth landscape module of the segment layer. Corpus synthesis over the 30 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This is the third landscape to land on a segment existing modules already cover and the first to land on one an existing PUBLIC lesson covers: Reading the Named Projects is built on nine of this segment's members and How a Storage Project Happens on two more. The split was written before the module and is stated in the opening paragraph — that lesson owns the lifecycle and how to read an announcement, this module owns who stands where and what each is betting — and nine things the four neighbours own are omitted here on purpose and listed in section 2 of the analysis file. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis and is labelled as analysis rather than blended with fact. The review date is 15 December 2026 — the tax-policy study due under Virginia's 2026 budget, read out of a member's policy prose while that same entry's date field carries the consumption tax's 1 July start. The genuine nearest gate, 10 December 2026, was rejected because it is already the review clock of two registered modules, and it appears in the indicators instead. The reasoning and five rejected candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "30",
+   "v": "members on record",
+   "sub": "Nine incumbent, thirteen challenger, eight adjacent — re-measured 15 September 2026, confirming the programme's written figure exactly, member for member"
+  },
+  {
+   "k": "18 of 30",
+   "v": "publish no revenue figure",
+   "sub": "And seven of the nine incumbents are among them. The half of this segment you can measure is its challengers, because they arrived already listed and already filing"
+  },
+  {
+   "k": "~375 bp",
+   "v": "the price of borrowed credit",
+   "sub": "Between the best credit-enhanced campus notes in the converted-miner cohort and the one with no enhancement to show. It is a price for the tenant, not for the building"
+  },
+  {
+   "k": "0",
+   "v": "rankings of these landlords",
+   "sub": "Four dossiers say so independently and one calls the category claim unfalsifiable rather than true or false. This module states the absence and declines to supply an ordering"
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Read this beside the campus lesson, not instead of it.** *Reading the Named Projects* is the public mechanism lesson for this segment, and it is built on nine of these very companies. It teaches the campus lifecycle — land and power banking, {{entitlement}}, the two utility contracts, {{substation}} funding, shell, lease, fit-out, energisation, {{ready for service}}, commissioned megawatts — on three parallel clocks, plus the four tests for reading an announcement and the five ways a campus fails. One of its own tiles reads *zero league tables: no ranking of these landlords exists in this corpus and this lesson does not invent one.* **That is a handoff, and this module is what it hands off to.** Nothing below repeats its ladder, its megawatt definitions or its clocks. The rule between the two is one sentence: **the lesson teaches the test, and this module applies it to named parties.**",
+    "**Nine {{incumbent}}s, and the record will not order them.** That is the fact everything here follows from. *Digital Realty*'s own dossier reaches it directly: the claim that any company is the largest AI-data-centre landlord is **unfalsifiable rather than true or false**, because every published ranking measures something else — colocation revenue share, markets rather than operators, active information-technology load — and the private platforms that captured the demand publish no comparable figure, so a category ranking would omit half the field by construction. *CyrusOne*'s dossier measures how bad that is: published third-party rankings of that one company disagree **by a factor of about 4.5**, three thousand and twenty-six megawatts of tracked capacity against six hundred and seventy-four megawatts of active load, because each is estimating a different thing from outside. So this section is organised not as a league table but by **what each incumbency is actually made of** — and it says out loud that the four bases are not comparable with one another.",
+    "**Basis one — a {{securitization}} franchise.** The three largest private platforms are financing machines before they are builders. *Vantage* originated the data-centre {{data center ABS}} asset class in 2018, opened the sterling and euro markets for it, runs regionally ring-fenced equity, and claims sixty billion dollars or more raised globally since late 2024; its own dossier reads that franchise, rather than design intellectual property, as the durable moat. *Switch* is the largest single issuer since 2024 on its own attribution — four point two billion across five issuances plus the largest green data-centre commercial mortgage-backed deal on record at two point four billion — and retired all of its six and a half billion dollars of take-private bank debt through securitisation by July 2025. *STACK Infrastructure* has run ten series since 2019. *Compass Datacenters* took the first triple-A rating from Moody's on hyperscale collateral. *QTS* set the sector's fastest pace and capped it with a four point six billion dollar green bond at twelve and a half billion of peak demand. **None of those is a market-share statement, and every one of them is checkable** — which is exactly why they carry the weight here that a share figure would carry anywhere else.",
+    "**Basis two — a standardized building product.** *QTS*'s Freedom design is one repeatable thirty-six to seventy-two megawatt water-free building stamped across roughly two dozen mega-campus sites, with in-house construction management and a three-thousand-acre power-ready land bank feeding it. *Compass* industrialised further: eighty-four per cent of the building fabricated offsite, eighty to ninety per cent of power-centre work moved into the factory, a Schneider Electric plant standing on its own Red Oak campus under a three-billion-dollar agreement, up to fifteen hundred Siemens medium-voltage skids, a 1.27 design {{PUE}} and one hundred per cent uptime on 2025 deliveries — at the price of a smaller footprint, one hundred and ninety-five employees against multi-gigawatt peers. *Vantage* replicates one blueprint across forty-one campuses behind a newly centralised chief procurement office. **For a vendor this is the most actionable of the four bases**, because a standardized product means one qualification decision propagates fleet-wide.",
+    "**Basis three — proprietary engineering.** *Aligned Data Centers* runs source-capture cooling arrays at about one per cent of information-technology load in fan power against about ten per cent for conventional computer-room air rows, behind fifty-plus patents, with a universal liquid platform rejecting three hundred and fifty kilowatts per rack and converting live halls from air to liquid with zero downtime — a decade-long build-rather-than-buy pattern with its own cooling laboratory behind it. *Switch* holds more than nine hundred and fifty issued and pending patent claims and a self-authored facility standard that is explicitly **not** an Uptime Institute rating, proven by two consecutive world-first accelerator bring-ups inside its halls. *Equinix* has crossed from power consumer to power developer — a fuel-cell fleet above one hundred megawatts, roughly one and a quarter gigawatts of advanced-nuclear commitments and letters of intent, and a {{take-or-pay}} structure in which it funds all of the grid upgrades — and its dossier's framing is that these now function as **procurement standards for the whole colocation tier**.",
+    "**Basis four — being the one that has to publish.** *Digital Realty* is the listed benchmark, and its incumbency is the only one an outsider can audit. A real-estate investment trust must distribute most of its taxable income, so it cannot retain earnings to fund a development programme of four and a quarter to four and three-quarter billion dollars a year; it issues equity and notes instead, and increasingly manages third-party capital for a fee — a three and a quarter billion dollar hyperscale fund closed in March 2026 with twenty per cent retained and the management mandate, and fee income up ninety-eight per cent in the 2025 financial year. The cost of that answer is transparency: twenty unconsolidated entities now sit between the reader and the assets.",
+    "**And the honesty note this section owes the reader.** Those four bases are not four measures of one thing. A securitisation franchise is a cost-of-capital fact; a standardized product is an operating fact; a patent estate is a legal fact; a trust's disclosure is a regulatory obligation. **Flattening them into an ordering would misrepresent all four — and the two members most likely to top such a list, QTS and Vantage, publish no revenue at all.** The module's own assessment, stated as analysis rather than as a finding of the record: **in this segment the useful question is not who is biggest but what each landlord's incumbency is made of, because that is what decides what can take it away.**",
+    "**The constraint all nine now share, and it is neither power nor capital.** It is **consent**, and four dossiers reach that conclusion independently. *QTS*'s names it the binding constraint after the Dane County withdrawal — the first outright loss of a ten-billion-dollar-class site, despite a fifty-million-dollar community package and seven hundred and fifty megawatts of new renewables. *Compass*'s says consent rather than capital, and records a two-thousand-acre Virginia rezoning dying in court in April 2026. *Vantage*'s records the host town of one of its own campuses passing **the first anti-data-centre referendum in the United States** at sixty-six per cent, requiring a public vote on tax-increment incentives above ten million dollars. And the response is now collective: *Compass*, *QTS*, *Vantage* and *Digital Realty* co-founded an infrastructure coalition in September 2026, and three of them plus *EdgeCore* have signed a ratepayer-protection pledge or endorsed a state governor's data-centre standards. **Four rivals lobbying together is the clearest signal in the segment that the binding constraint is external to all of them.**"
+   ],
+   "sales": "Before the first call, decide which basis you are selling into. A securitisation-led landlord buys cost of capital, a product-led landlord buys a fleet-wide specification, an engineering-led landlord buys a component inside a design it owns, and the listed one buys against a number its investors can see. Four different conversations, and no ranking connects them."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Thirteen {{challenger}}s is the largest challenger set this programme has met, and they are not a smaller version of the incumbents.** They divide into three routes, and only the third is attacking the thing the incumbents actually sell. Note first what the registry does **not** say: unlike the utilities segment, whose registry note explains its own challenger label, this segment's note field is empty. The roles have to be read off the thirty basis lines and the dossiers, and the reading below is that work rather than a label repeated.",
+    "**Route one — the converted miners, attacking with an energised power position. Seven of the thirteen.** *Applied Digital*, *Core Scientific*, *TeraWulf*, *Cipher Digital*, *Hut 8*, *IREN* and *Galaxy Digital* did not win a bid against any incumbent. They already owned substations, cheap power contracts and energised interconnections for a different business, and the market re-priced the asset underneath them. *Cipher* is furthest through the conversion: self-mining capacity fell from about 23.6 to about 11.6 exahashes per second, the joint ventures were sold, one site remains, and **the registrant renamed itself on 20 February 2026** with the stated reason that the new name aligns with scaling into a data-centre developer and operator. *IREN* is liquidating rather than diversifying — a hundred and seventy-two million dollars of voluntary chip impairments in two quarters, bitcoin dropped from the corporate boilerplate, and no hashrate figure published since October 2025. **The tell that this is a route and not a coincidence: not one of the seven competes on building product, cooling design or facility standard. Every one of them competes on a date.**",
+    "**Route two — the energy-first developers, attacking by owning the generation. Two of the thirteen.** *Crusoe* energised more than two hundred megawatts at its flagship within a year of groundbreaking and a substation in under six months, on a procurement list that reads like a supplier index — turbines, reciprocating engines, a five-gigawatt medium-voltage battery commitment among the largest anywhere, iron-air storage and two nuclear developers. *Fermi America* goes further and treats the utility as the supplement rather than the source: roughly one and a half gigawatts of turbines landed and six gigawatts of gas permitted **before any tenant existed**, financed by three equipment lenders at twelve to thirteen per cent, with a four-unit reactor licence application docketed. Both are betting that behind-the-fence generation beats the {{interconnection queue}} — and both carry the same exposure in its acute form. *Crusoe*'s dossier records two single-counterparty decisions reshaping the company inside one year; *Fermi*'s records a warehouse facility that **penalises the absence of a four-hundred-megawatt lease by November 2026** and a single signed tenant whose lease is conditional on financing and a guarantor that has not been named.",
+    "**Route three — the ladder specialists, attacking one rung rather than the whole thing. Four of the thirteen.** *Tract* is the purest case: it sells {{powered land}} — entitled, permitted ground — and leaves the vertical work to others. Its own dossier records that the product **has not yet been sold to anyone outside the group**: across four years and fourteen parks the only recorded transactions are two parcels bought by its own affiliate's project companies. *PowerHouse Data Centers* buys or options sites, secures utility capacity and zoning, builds {{powered shell}}s and, at its one completed cycle, sold the stabilised building to its tenant; its portfolio counter is expressly *in planning, underway, or completed*, and the boilerplate grew from four point one to about ten gigawatts in twenty-one months while the delivered base stayed at one building. *EdgeCore* runs the sponsor-financed single-tenant {{build-to-suit}} at project level, with a verifiable operating base of **about sixty-two megawatts in two buildings** behind a headline of one point eight gigawatts *delivered or under development*. *Prime Data Centers* is the recapitalisation case — five equity rounds, an acquisition line, a shelved bond, project-level high-yield debt — against about a hundred and fifty-one megawatts operating after nine years.",
+    "**What the three routes have in common, and it is not size.** None of the thirteen is attacking an incumbent's ranking, because there is no ranking to attack. Route one attacks with a date, route two with a fuel supply, route three with a rung of the ladder. So **the threat to this segment's incumbents is not share loss to a cheaper rival — it is that the scarce asset moved, from land to an energised interconnection**, and a miner already owned one. That is the module's own assessment rather than a finding of the record, and it is the single most useful sentence here. It also explains why every incumbent response is a **procurement** move rather than a product move: self-funded substations at *Vantage*, *QTS*, *Compass*, *EdgeCore* and *Switch*; a seven-hundred-megawatt behind-the-meter microgrid at *Vantage*; fuel cells at *Equinix* and *STACK*; a battery framed explicitly as an interconnection accelerator at *Aligned*; and at *CyrusOne*, co-location on somebody else's electrical asset at three of its four largest campuses.",
+    "**The counter-threat route one carries and the incumbents do not.** That power position arrived with a tenant problem. *Core Scientific*'s annual filing states that one leveraged neocloud is **one hundred per cent of colocation revenue and about eighty-three per cent of total quarterly revenue**. *Applied Digital*'s filings show two customers at one hundred per cent of continuing revenue, with an **unnamed** hyperscaler holding about sixty-nine per cent of a thirty-six billion dollar backlog — an unverifiable credit until it is named. *Galaxy Digital*'s single tenant is that same neocloud, and its own risk factor concedes the dependence. **The credit-substitution layer exists because route one's tenants are thin**, and the corpus quotes its price.",
+    "**And the price is quoted in basis points, which is the most useful number in the segment.** On substantially the same lease template, campus-level notes priced at **6.125 per cent** where an investment-grade parent guaranteed the rent directly, **6.192 per cent** with a triple-B-minus rating behind a technology-company backstop, **7.125 per cent** where the backstop was a step further from the tenant, and **9.875 per cent** where the tenant was unrated and levered with **no credit enhancement disclosed at all**. That is a spread of roughly three hundred and seventy-five basis points, and it is a price for the tenant rather than for the building. It is also paid in equity: one landlord gave the backstop provider about fourteen per cent of pro forma equity, a second warrants over about five and a half per cent of itself — and **a third, on the same template, gave neither and obtained the backstop anyway**, which its own dossier identifies as its differentiator and which no peer matched. **{{credit substitution}} is a market with observable prices, and a seller who does not know where a counterparty sits on it is mispricing its schedule risk.**",
+    "**The threat that carries no challenger label at all.** Three of the eight {{adjacent}} members are not suppliers to this segment — they are **parties that can host a campus without being a landlord**. A merchant generator in this roster is the corpus's worked example of selling from an existing fleet rather than a pipeline, and the federal record its co-location arrangement produced now governs every operator here. A co-located energy-park developer put solar, wind, batteries and gas on the same site as a hyperscaler's data centre **and then became part of that hyperscaler**, in a twelve-billion-dollar combined exit completed in March 2026. A storage developer converts a battery's interconnection into speed-to-power, and the first marquee case of it in Texas has one of this segment's own incumbents as the tenant. **A tenant that can buy a powered site directly from a generator does not need a landlord** — and the registry classes these three as adjacent precisely because they are not landlords, which is what makes the route easy to miss."
+   ],
+   "sales": "Ask which route the account took to get here before you ask what it needs. Route one buys schedule certainty and long-lead equipment; route two buys generation and the balance of plant around it; route three may not buy equipment at all, because it sells the parcel before the fit-out. Pitching a cooling architecture to a powered-land developer is a category error, not a hard sell."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "8 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger — twenty-two of the thirty members, in registry order. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment carrying a confidence level, restated here in one line. They are never blended with the fact rows above. The eight adjacent members get no row because they are not ranked players in this segment; what they do to it is in the section above and in the indicators below. At twenty-two rows this is the second-largest bets table in the corpus, and nothing has been trimmed — the size of the challenger set is one of the things the segment is about.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet (analysis)"
+   ],
+   "rows": [
+    [
+     "Vantage Data Centers",
+     "incumbent",
+     "That the capital-markets franchise it invented outlasts any design advantage, and that it can carry concentration in one tenant complex to a 2027 liquidity event — two campuses of a single programme behind a record thirty-eight billion dollar four-year bank package whose refinancing is now tied to that complex's credit trajectory in a way no earlier financing was"
+    ],
+    [
+     "QTS Data Centers",
+     "incumbent",
+     "That one standardized water-free building stamped fleet-wide sets the market-clearing pace of United States wholesale delivery — and that the binding constraint has moved to community consent, answered town by town with priced packages and a national brand campaign rather than with a different design"
+    ],
+    [
+     "Aligned Data Centers",
+     "incumbent",
+     "That owning cooling intellectual property beats buying it, and that being acquired by a consortium containing its own most probable tenants converts a fund-owned developer into the demand side's buildout vehicle — with capital cadence, not ownership, as the operating constant: an upsized securitisation priced one week after the close"
+    ],
+    [
+     "STACK Infrastructure",
+     "incumbent",
+     "That a sponsor can monetise stabilised and regional assets at cycle-peak marks while the development engine compounds — three monetisation moves in fourteen months against a stated thirteen-gigawatt pipeline — and that currency-matched regional ring-fencing makes each region separately sellable without touching the others"
+    ],
+    [
+     "Equinix",
+     "incumbent",
+     "That crossing from power consumer to power developer sets the procurement standard for the whole colocation tier, and that five to seven billion dollars a year of capital expenditure is the right answer to a market where power scarcity rather than demand or capital is the growth gate — leaving no room for a pause in demand"
+    ],
+    [
+     "Digital Realty",
+     "incumbent",
+     "That managing third-party capital breaks the distribution constraint that stops a trust retaining earnings — and that accepting a falling pre-leased share while capacity underway rises eighty-two per cent is a deliberate speculative position in a market where power sets the schedule, not a signal that demand has softened"
+    ],
+    [
+     "Switch",
+     "incumbent",
+     "That a self-authored facility standard plus a patent estate of more than nine hundred and fifty claims is a genuine engineering moat proved by reference deployments rather than by certifications — and that the sequencing of a rebuilt securitisation franchise and a confidential listing filing lands a return to public markets at the top of the cycle"
+    ],
+    [
+     "CyrusOne",
+     "incumbent",
+     "That co-locating on somebody else's electrical asset is a bet on interconnection scarcity rather than on real estate — three of its four largest campuses beside a generator or on a battery — and that mandatory thirty-minute uncompensated curtailment is an acceptable price for speed to power, stated as a feature rather than conceded as a cost"
+    ],
+    [
+     "Compass Datacenters",
+     "incumbent",
+     "That delivery certainty beats a land bank: an industrialised product fabricated mostly offsite, three sponsors paid at asset level rather than through a listing, and pre-emption on consent — endorse the standards, fund the substations, join the coalition — rather than resistance, after losing a two-thousand-acre rezoning in court"
+    ],
+    [
+     "Applied Digital",
+     "challenger",
+     "That the cleanest landlord conversion in the cohort — sell the cloud, keep the mining cash flow, put every incremental dollar into fifteen-year take-or-pay leases at a ninety-one per cent operating margin — is worth the capital structure that buys the speed, including a preferred instrument at twelve and three-quarter per cent paid in kind with a return floor attached"
+    ],
+    [
+     "Core Scientific",
+     "challenger",
+     "That rejecting the anchor tenant's acquisition offer was right on customer economics — backlog from ten to more than twenty-four billion dollars in nine months, and the first landlord in the cohort with two five-hundred-megawatt-class anchors — and that a post-bankruptcy balance sheet can be relevered to build the standalone plan if both anchors pay to term"
+    ],
+    [
+     "TeraWulf",
+     "challenger",
+     "That the business is credit arbitrage on power scarcity: convert brownfield megawatts into long take-or-pay leases signed by thinly capitalised intermediaries, then make the paper bankable with third-party enhancement — and that roughly fourteen per cent of pro forma equity is a fair price for that bankability"
+    ],
+    [
+     "Cipher Digital",
+     "challenger",
+     "That the power position rather than the fleet was always the asset — completing the conversion, renaming the company and differentiating on counterparty credit, holding the cohort's only directly investment-grade-guaranteed lease — while carrying its concentration in that same counterparty, and while its own filing warns the guarantees protect a delivered building rather than one under construction"
+    ],
+    [
+     "Hut 8",
+     "challenger",
+     "That the most conventional capital structure in the converted-miner cohort is the differentiator: about seven and a half billion dollars of non-recourse, investment-grade-rated campus-level notes against roughly a hundred and sixty million of parent recourse debt — and that a backstop can be obtained without warrants or equity, which no peer on the same template achieved"
+    ],
+    [
+     "Galaxy Digital",
+     "challenger",
+     "That a broker-dealer can own a gigawatt-class campus and be valued for it — with the market's disagreement about which business it actually is as the live risk, and an unenhanced single-tenant lease priced at nine and seven-eighths per cent as the visible cost of having no credit support to show"
+    ],
+    [
+     "IREN",
+     "challenger",
+     "That one company can hold both ends of the stack — landlord-grade power ownership across five gigawatts of secured capacity on its own substations, plus a climbing cloud business — and that filling an energised 1.4-gigawatt campus decides whether the integrated model compounds or the power simply sits there as optionality"
+    ],
+    [
+     "Crusoe",
+     "challenger",
+     "That energy-first development is a durable business rather than a leveraged construction cycle, on time-to-power execution no incumbent matched publicly in the same window — while single-customer decisions reshaped the company twice inside one year, which is customer concentration in its most acute form"
+    ],
+    [
+     "EdgeCore Digital Infrastructure",
+     "challenger",
+     "That the sponsor-financed single-tenant build-to-suit executed at project level scales from two operating buildings, and that leading on the ratepayer question — expecting to bear all of the cost of power delivery, and stating publicly a willingness to abandon projects whose power economics fail — converts an external constraint into a marketing claim, at the price of a walk-away threshold now on the record"
+    ],
+    [
+     "PowerHouse Data Centers",
+     "challenger",
+     "That a land-and-entitlement developer can sell pipeline to capital partners while supplying only five to ten per cent of the equity — and that the utility-first model survives a utility cancelling a federally accepted transmission agreement four months after acceptance over deposit timing, a proposition now being tested in federal court"
+    ],
+    [
+     "Prime Data Centers",
+     "challenger",
+     "That recapitalisation is itself a strategy — five equity rounds, an acquisition line, a shelved bond and project-level high-yield debt on the one fully leased campus — making it a neocloud landlord in fact and a hyperscale landlord in aspiration, against about a hundred and fifty-one megawatts operating after nine years"
+    ],
+    [
+     "Tract",
+     "challenger",
+     "That entitled, powered ground is a product somebody else will buy — a proposition the record has not yet confirmed outside its own affiliate — with the position that would prove it now contingent on a utility dispute, a billion-dollar network-upgrade demand and a regulator's decision it cannot control"
+    ],
+    [
+     "Fermi America",
+     "challenger",
+     "That time to power, not land or buildings, is the product — converting the balance sheet into landed turbines and permitted gas before any tenant existed, on equipment debt at twelve to thirteen per cent — with a reactor programme as the long banner and a capital need one order of magnitude above the company's own market value"
+    ]
+   ],
+   "note": "Read column three downwards and the divide is unmissable: **the incumbents' bets turn on capital structure and consent, the challengers' on power and credit.** Not one incumbent row turns on owning generation, and not one challenger row turns on a building product. That is the same split the two sections above describe, seen from the other side — and it is why the seller's approach has to differ by route rather than by product.",
+   "sales": "Match your opening to the column. To an incumbent, lead with what your product does to cost of capital or to a consent argument. To a challenger, lead with what it does to a date or to a lender's view of the tenant."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it and marked undated where it is not. Six of the twenty-two dossiers carry an indicators block of their own; these are the segment-level ones, drawn across the whole roster. **Row one is the largest dated risk in the segment and is deliberately not this module's review date** — it is already the review clock of two other guidance modules, so it is watched here rather than owned here.",
+   "cols": [
+    "Watch",
+    "When",
+    "Why it matters, and to whom"
+   ],
+   "rows": [
+    [
+     "The grid operator's audit report to the state commission under the August 2026 directive, with new large-load energisations paused meanwhile",
+     "10 Dec 2026",
+     "The single largest dated risk here. Scope is roughly two hundred and fifty to three hundred projects of at least seventy-five megawatts, against a queue of more than eighteen hundred requests totalling about four hundred and seventy-four gigawatts on a grid peaking near ninety-one. *Cipher Digital*'s Stingray and *Hut 8*'s Beacon Point energisation targets sit inside the window, and *Galaxy Digital*'s eight hundred and thirty megawatts of approved but uncontracted capacity depends on it. **This is the review clock of When Utility Procurement Meets AI Data-Center Load and of Power Infrastructure and the AIDC Power Chain, which is why it is an indicator here rather than this module's own date**"
+    ],
+    [
+     "The state tax-policy study due under the 2026 budget that preserved the equipment exemption and added a per-kilowatt-hour electricity consumption tax",
+     "15 Dec 2026",
+     "The segment's largest single operating concentration is one state: *Digital Realty* holds eight hundred and forty-two megawatts of white-space load at 98.6 per cent occupancy plus more than a gigawatt developable; *CyrusOne* five Sterling facility groups at two hundred and thirty-three megawatts plus the acquired Ashburn campus, carrying 61.7 per cent of its 2025 securitisation pool by location; *EdgeCore* three campuses including Louisa's 1.1-gigawatt planning-stage site; *Compass Datacenters* its remaining seventy-nine megawatts at Loudoun after losing the Digital Gateway rezoning in court; and *PowerHouse Data Centers* its Arcola expansion. **Five of the twenty-two ranked players on one state's tax decision — and this module's own review date**"
+    ],
+    [
+     "A named anchor tenant at any of the unnamed-tenant campuses",
+     "undated",
+     "The most informative disclosure this segment can make. *Applied Digital*'s unnamed hyperscaler is about sixty-nine per cent of a thirty-six billion dollar backlog; *Hut 8*'s Beacon Point tenant is unnamed in every first-party source; *Compass Datacenters*, *EdgeCore* and *STACK Infrastructure* name no customer anywhere, and *Prime Data Centers*' leading hyperscaler at Avondale is unnamed with no delivery date"
+    ],
+    [
+     "The pre-leased share of *Digital Realty*'s development pipeline, quarter by quarter",
+     "quarterly",
+     "The segment's only speculative-build gauge, because it is the only member that publishes one. It moved from sixty-four to fifty-four per cent in six months while capacity underway rose eighty-two per cent — which converts to roughly two hundred and seventy-seven megawatts unleased becoming about six hundred and forty-five"
+    ],
+    [
+     "A fifth securitisation series from *Compass Datacenters*, or a second issuance from *EdgeCore*",
+     "2026–27",
+     "Tests whether *Compass*'s top rating on hyperscale collateral extends to new collateral, and whether *EdgeCore*'s 2025 single-A-minus and triple-B-minus ratings improve with seasoning. **The securitisation market is this segment's real scoreboard**, and it is the one an outsider can read"
+    ],
+    [
+     "The three 2027 liquidity events — *Vantage* (a reported hundred-billion-dollar listing exploration), *Switch* (a confidential filing with five banks) and *CyrusOne* (banks, timing and approximate size named in reporting)",
+     "2027",
+     "Any one that completes converts a private incumbent into a disclosing one, and *CyrusOne*'s dossier states plainly that **the resulting disclosure would itself be a material event**. It is also the only mechanism by which this segment becomes rankable at all"
+    ],
+    [
+     "The federal ruling on ComEd's cancellation of *PowerHouse Data Centers*' accepted transmission security agreement, and the parallel federal suit",
+     "pending",
+     "The live test of whether a developer may hold a grid position ahead of a tenant. Illinois's deposit rule — five hundred thousand dollars per hundred megawatts above two hundred, retained on failure — prices exactly the behaviour route three's model depends on"
+    ],
+    [
+     "NV Energy's litigation and arbitration over *Tract*'s Nevada portfolio, and the billion-dollar network-upgrade demand behind it",
+     "pending",
+     "Decides whether twelve thousand acres and five and a half gigawatts of stated load energise on the published dates, and whether *Tract* or its utility sets large-load cost allocation in Nevada"
+    ],
+    [
+     "*Fermi America*'s warehouse-facility test of a four-hundred-megawatt lease, and the conditions on its only signed lease",
+     "Nov 2026",
+     "The clearest single-company test of whether generation-first development can finance itself before a tenant exists"
+    ],
+    [
+     "Tariff rates on transformers and switchgear, held at fifteen per cent through the end of 2027, against lead times of seventy-five to a hundred and ten weeks for substation transformers and fifty-two to eighty for medium-voltage switchgear largely sold out through 2028",
+     "31 Dec 2027",
+     "**The only two future effective dates anywhere in this roster's hundred and seven policy entries.** A landlord whose whole proposition is speed to market carries this as a schedule risk before it is a cost risk. *Digital Realty* answered with a three-hundred-and-seventy-three-million-dollar Schneider Electric supply-capacity agreement reserving factory slots rather than ordering equipment; *CyrusOne*'s dossier notes it has announced none"
+    ]
+   ],
+   "sales": "Two of these are yours to use directly. The lead-time row is the strongest argument any equipment seller has in this cycle, and the securitisation row tells you when an account's cost of capital just moved — which is when a capital-expenditure conversation is easiest to open."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**This segment is a buyer class, so both of the curriculum's two seller paths end here — and the advice differs by route rather than by product.**",
+    "**For the AIDC-power seller.** Three things decide the call. **One: establish the route before the product.** An incumbent is buying a specification decision that propagates fleet-wide; a converted miner is buying a date; a ladder specialist may not be buying equipment at all, because it sells the parcel before the fit-out. **Two: lead with lead time, then with the specification.** The dossiers say this in chorus — substation transformers at seventy-five to a hundred and ten weeks, generator step-up units at a hundred to a hundred and fifty weeks or more, medium-voltage switchgear at fifty-two to eighty weeks and largely sold out through 2028, and independent trade coverage flagging minimal procurement buffer on one challenger's 2027 schedule with exactly those three items named as the choke point. In this cycle **a factory-built unit deliverable in months outranks a better unit deliverable in three years**, and this segment has already voted with reservations rather than orders: supply-capacity agreements at *Digital Realty* and *Switch*, a supplier's plant standing on *Compass*'s own campus, and up to fifteen hundred medium-voltage skids contracted ahead of need. **Three: know who signs.** The general-contractor bench holds its contract with the landlord, not with the tenant named in the press release, and the specification is usually written by the engineering firm rather than by either. Where a landlord has centralised procurement — *Vantage*'s chief procurement office, *QTS*'s repeat-contractor model, *Compass*'s factory — one qualification decision is worth a fleet.",
+    "**For the BESS seller.** This is where storage stops being a grid asset and becomes an interconnection instrument, and there are three live sockets in it. **One, the interconnection accelerator**: *Aligned*'s battery is framed explicitly as that, and *CyrusOne*'s Fort Worth campus sits on top of *Eolian*'s battery for the same reason. The pitch is not arbitrage revenue — **it is a date**. **Two, the ride-through requirement**: new large electronic loads in Texas must ride through voltage and frequency disturbances rather than trip, which practically mandates buffering between the grid and the processors; *Hut 8* states that its largest campus design incorporates battery systems to mitigate voltage impacts and support integration. The mechanism belongs to the chain and interconnection modules — what belongs here is that it is a **named, funded requirement at a named campus**. **Three, the medium-voltage commitment at scale**: *Crusoe*'s five-gigawatt battery commitment is among the largest anywhere and sits in the energy-first route rather than in the incumbent tier, which is where a storage seller should look first, because those developers own the power decision outright.",
+    "**The discipline both paths share, and it is the one thing a contributor can get wrong in front of an analyst.** Never quote a capacity figure back to this segment without saying which rung it was counted at, and never quote a lease value without saying which of the five measures it is. **Both tests are taught in the public lesson** — so an analyst on the same account already has them, and a contributor who gets them wrong in the room is corrected by a colleague with less access, not more."
+   ],
+   "sales": "The fastest credibility move in this segment is to name the rung and the measure unprompted. It signals you have read the filings rather than the press release, and in a market where every published number is a different number, that is the whole of the first meeting."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 15 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change rather than at this session's, because it did not move this session. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that dominance here cannot be ranked and the useful question is what each incumbency is made of; that the threat is the scarce asset moving from land to an energised interconnection rather than share loss; and that tenant credit is manufactured with an observable price. **Every row of the bets table is likewise analysis.**",
+   "rows": [
+    [
+     "Segment holds 30 members — 9 incumbent, 13 challenger, 8 adjacent; chain position 12, tier demand",
+     "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"
+    ],
+    [
+     "The definition names wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and lease to a hyperscaler or neocloud",
+     "profiler-segments.json @ v05.41r — segments[].definition"
+    ],
+    [
+     "The six buying criteria, led by time to power and including tenant credit and the credit-substitution layer, financing route and grid posture",
+     "profiler-segments.json @ v05.41r — segments[].buyingCriteria[]"
+    ],
+    [
+     "The registry's notes field is empty for this segment, so the roles are read off the thirty basis lines",
+     "profiler-segments.json @ v05.41r — segments[].notes absent"
+    ],
+    [
+     "Eighteen of thirty members carry no normalized revenue figure, and seven of the nine incumbents are among them",
+     "segment-aidc-developers-and-landlords — the-numbers, generated from the members' financials overlay"
+    ],
+    [
+     "The largest-AI-landlord claim is unfalsifiable rather than true or false; every published ranking measures something else",
+     "profile:digital-realty @ v2 — strategyRead"
+    ],
+    [
+     "Third-party rankings of one member disagree by about 4.5 times — 3,026 MW tracked capacity against 674 MW of active IT load",
+     "profile:cyrusone @ v1 — strategyRead"
+    ],
+    [
+     "Vantage originated the data-centre ABS asset class in 2018 and claims $60B+ raised globally since late 2024",
+     "profile:vantage @ v9 — strategyRead"
+    ],
+    [
+     "Vantage is being positioned for a 2027 liquidity event; an approximately $100B listing exploration was reported in August 2026",
+     "profile:vantage @ v9 — strategyRead"
+    ],
+    [
+     "Two campuses of one programme (1.4 GW and 902 MW) sit behind a record ~$38B four-year bank package at around +250 bps",
+     "profile:vantage @ v9 — strategyRead"
+    ],
+    [
+     "One of those campuses runs fully off-grid on a 700 MW microgrid of 210 reciprocating engines",
+     "profile:vantage @ v9 — strategyRead"
+    ],
+    [
+     "Vantage's host town passed the first US anti-data-centre referendum (April 2026, 66%), requiring a public vote on TIF incentives above $10M",
+     "profile:vantage @ v9 — policyExposure"
+    ],
+    [
+     "One blueprint replicated across 41 campuses behind a newly created chief procurement office",
+     "profile:vantage @ v9 — ecosystemRole"
+    ],
+    [
+     "QTS: leased capacity up 14x since 2021, a $30B+ pre-leased pipeline, and a $4.6B Baa2 green bond at $12.5B peak demand",
+     "profile:qts @ v8 — strategyRead"
+    ],
+    [
+     "The Freedom design is one standardized 36–72 MW water-free building across roughly two dozen mega-campus sites, with a 3,000+ acre power-ready land bank",
+     "profile:qts @ v8 — strategyRead"
+    ],
+    [
+     "Community consent is QTS's binding constraint; the Dane County withdrawal was the first outright loss of a $10B-class site despite a $50M package and 750 MW of new renewables",
+     "profile:qts @ v8 — strategyRead"
+    ],
+    [
+     "Aligned's source-capture arrays run ~1% of IT load in fan power against ~10% for CRAC/CRAH rows, behind 50+ patents; its liquid platform rejects 350 kW/rack with zero-downtime live conversion",
+     "profile:aligned @ v7 — strategyRead"
+    ],
+    [
+     "The ~$40B consortium acquisition closed 21 July 2026 with Microsoft, NVIDIA, xAI and Cisco among its members and $5B of growth capital committed at closing",
+     "profile:aligned @ v7 — strategyRead"
+    ],
+    [
+     "A 31 MW / 62 MWh battery is framed explicitly as an interconnection accelerator (October 2025)",
+     "profile:aligned @ v7 — strategyRead"
+    ],
+    [
+     "STACK is developer-owner of all three campuses in one hyperscaler's Louisiana programme, raised from $12B to $18B in six months, and of one site in a second programme",
+     "profile:stack-infrastructure @ v7 — strategyRead"
+    ],
+    [
+     "Three monetisation moves in fourteen months against a stated 13 GW pipeline; ten securitisation series since 2019",
+     "profile:stack-infrastructure @ v7 — strategyRead"
+    ],
+    [
+     "No revenue, EBITDA or tenant-mix disclosure exists anywhere in STACK's public record",
+     "profile:stack-infrastructure @ v7 — strategyRead"
+    ],
+    [
+     "Equinix has crossed from power consumer to power developer: a >100 MW fuel-cell fleet, ~1.25 GW of advanced-nuclear commitments and LOIs, and a take-or-pay structure funding 100% of grid upgrades",
+     "profile:equinix @ v7 — strategyRead"
+    ],
+    [
+     "Power scarcity is the growth gate: 0.3% Northern Virginia vacancy, a >70 MW Amsterdam moratorium, and ~$130B of blocked or delayed US projects in Q1 2026",
+     "profile:equinix @ v7 — strategyRead, policyExposure"
+    ],
+    [
+     "Digital Realty funds a $4.25–4.75bn annual development programme from issuance because a REIT must distribute most taxable income; fee income rose 98.3% in FY2025 and a $3.25bn fund closed in March 2026 with 20% retained",
+     "profile:digital-realty @ v2 — strategyRead"
+    ],
+    [
+     "Capacity underway rose 82% in six months to 1,402 MW while the pre-leased share fell from 64% to 54%",
+     "profile:digital-realty @ v2 — strategyRead"
+    ],
+    [
+     "Northern Virginia carries 842 MW of white-space IT load across 32 data centres at 98.6% occupancy, with more than 1,000 MW developable",
+     "profile:digital-realty @ v2 — policyExposure"
+    ],
+    [
+     "A $373m supply-capacity agreement reserves manufacturing capacity for UPS, low-voltage switchgear and prefabricated skids rather than ordering equipment",
+     "profile:digital-realty @ v2 — policyExposure"
+    ],
+    [
+     "Switch holds 950+ issued and pending patent claims, and its facility standard is self-authored and explicitly not an Uptime Institute rating",
+     "profile:switch @ v7 — strategyRead"
+    ],
+    [
+     "Switch is the largest single data-centre ABS issuer since 2024 on its own attribution — $4.2B across five issuances plus a $2.4B green CMBS",
+     "profile:switch @ v7 — ecosystemRole, strategyRead"
+    ],
+    [
+     "A confidential listing filing with five banks on an up-to-$10B raise at a press-reported $50–80B including debt",
+     "profile:switch @ v7 — strategyRead"
+    ],
+    [
+     "Switch's power posture is offtaker rather than owner — a 12 GW non-binding nuclear master agreement through 2044 and a 20-year geothermal PPA",
+     "profile:switch @ v7 — strategyRead"
+    ],
+    [
+     "Three of CyrusOne's four largest campuses sit on someone else's electrical asset — 760 MW and 400 MW beside two gas plants, 200 MW on a battery",
+     "profile:cyrusone @ v1 — strategyRead"
+    ],
+    [
+     "Under Texas SB 6 a co-located large load must curtail fully within thirty minutes of an emergency instruction, without compensation",
+     "profile:cyrusone @ v1 — policyExposure"
+    ],
+    [
+     "A November 2025 outage paused a $1.3bn bond sale on the same campus within a week; the deal returned at $1.25bn",
+     "profile:cyrusone @ v1 — strategyRead"
+    ],
+    [
+     "No revenue, EBITDA, leverage, backlog or bookings figure exists in any first-party CyrusOne source, and no current corporate credit rating was resolvable",
+     "profile:cyrusone @ v1 — strategyRead"
+    ],
+    [
+     "Compass: 84% of the building fabricated offsite, 80–90% of power-centre work in the factory, a supplier plant on its own campus under a $3bn agreement, up to 1,500 medium-voltage skids, 1.27 design PUE",
+     "profile:compass-datacenters @ v5 — strategyRead"
+    ],
+    [
+     "Compass took the first Moody's AAA on hyperscale ABS collateral; three sponsors are paid at asset level, so a listing is not in prospect",
+     "profile:compass-datacenters @ v5 — strategyRead"
+    ],
+    [
+     "A 2,000-acre Virginia rezoning co-developed with QTS died in court in April 2026; Compass, QTS, Vantage and Digital Realty co-founded an infrastructure coalition in September 2026",
+     "profile:compass-datacenters @ v5 — strategyRead, policyExposure"
+    ],
+    [
+     "Applied Digital: two customers are 100% of continuing revenue; an unnamed hyperscaler holds about 69% of a $36B backlog; the neocloud tenant's lease security was restructured with a $50M letter of credit",
+     "profile:applied-digital @ v4 — strategyRead"
+    ],
+    [
+     "About $6.1B of project notes at 6.75–9.25% plus a preferred at 12.75% paid in kind with a 1.80x return floor; Q4 FY2026 operating margin 91%",
+     "profile:applied-digital @ v4 — strategyRead"
+    ],
+    [
+     "Core Scientific: one neocloud is 100% of colocation revenue and about 83% of total Q2 2026 revenue; the second anchor's revenue starts only with early-2027 deliveries",
+     "profile:core-scientific @ v3 — strategyRead"
+    ],
+    [
+     "Backlog moved from $10.2B to $24B+ in nine months; the second anchor's book prices about $1.76M per MW-year against about $1.44M for the first; build costs $11–12M per MW",
+     "profile:core-scientific @ v3 — strategyRead"
+    ],
+    [
+     "TeraWulf converts brownfield megawatts into take-or-pay leases made bankable by about $4.5B of third-party backstops, with about 14% of pro forma equity the disclosed price",
+     "profile:terawulf @ v7 — strategyRead"
+    ],
+    [
+     "Its flagship builds at about $9.1M per critical-IT MW, and trade coverage flags transformers, switchgear and chillers as the choke point on the second-half 2027 schedule",
+     "profile:terawulf @ v7 — strategyRead"
+    ],
+    [
+     "Cipher's self-mining capacity fell from about 23.6 to about 11.6 EH/s and the registrant renamed itself on 20 February 2026 to align with becoming a data-centre developer",
+     "profile:cipher-mining @ v1 — strategyRead"
+    ],
+    [
+     "Cipher holds the cohort's only directly investment-grade-guaranteed lease; one research house measures its investment-grade-backed share at 67%, the highest in the cohort",
+     "profile:cipher-mining @ v1 — strategyRead"
+    ],
+    [
+     "Its own filing states tenant guarantees are effective only after rent commencement, are subject to default triggers or liability caps, and do not survive a delay-driven termination",
+     "profile:cipher-mining @ v1 — strategyRead"
+    ],
+    [
+     "About 4.4 GW of a 5.3 GW portfolio has no tenant, and four sites are explicitly subject to the grid operator's batch process",
+     "profile:cipher-mining @ v1 — strategyRead, policyExposure"
+    ],
+    [
+     "Hut 8 received no warrants or equity consideration for its backstop, against about 5.4% at one peer and about 14% at another on the same template",
+     "profile:hut-8 @ v2 — strategyRead"
+    ],
+    [
+     "About $7.5bn of non-recourse campus-level notes — $3.25bn at 6.192% rated BBB- for one campus and $4.25bn for the other — against about $159.3m of parent recourse debt",
+     "profile:hut-8 @ v2 — strategyRead"
+    ],
+    [
+     "One campus is a three-party arrangement — landlord, an intermediary subsidiary as lessee, and a technology company as payment backstop — with the end user not a party to the lease at all",
+     "profile:hut-8 @ v2 — strategyRead"
+    ],
+    [
+     "That campus's Q1 2027 energisation sits inside the audit window; the report is targeted to the commission by 10 December 2026; scope is some 250 to 300 projects of at least 75 MW against a queue of 1,800+ totalling about 474 GW",
+     "profile:hut-8 @ v2 — policyExposure"
+    ],
+    [
+     "Galaxy's second-phase notes priced at 9.875% against 6.125% for parent-guaranteed paper, 7.125% for backstopped paper and 6.192% for the BBB- campus bond; its tenant is unrated and levered with no credit enhancement disclosed",
+     "profile:galaxy-digital @ v1 — strategyRead"
+    ],
+    [
+     "Its campus is 1.63 GW approved and utility-contracted, of which 800 MW gross and 526 MW of critical IT is leased to one tenant, 133 MW was delivered at 30 June 2026, and 830 MW remains available to contract",
+     "profile:galaxy-digital @ v1 — strategyRead"
+    ],
+    [
+     "It publishes an annual lease rate rather than a base-term aggregate, which is why cross-company lease comparison in this cohort is unsound",
+     "profile:galaxy-digital @ v1 — strategyRead"
+    ],
+    [
+     "IREN holds 5 GW of secured power on substations it owns; its newest contracts price about $15M per MW against about $1.4M per MW for pure landlord colocation",
+     "profile:iren @ v4 — ecosystemRole, strategyRead"
+    ],
+    [
+     "A 1.4 GW bulk substation energised on schedule in April 2026 with no announced tenant",
+     "profile:iren @ v4 — strategyRead"
+    ],
+    [
+     "Crusoe energised 200+ MW within a year of groundbreaking and a substation in under six months; its procurement list includes a 5 GW medium-voltage battery commitment",
+     "profile:crusoe @ v6 — strategyRead, ecosystemRole"
+    ],
+    [
+     "Two single-counterparty decisions reshaped the company in 2026 — one halting a flagship expansion, the other reassigning it out of a state",
+     "profile:crusoe @ v6 — strategyRead"
+    ],
+    [
+     "EdgeCore's verifiable operating base is about 62 MW in two buildings, behind a 1.8 GW delivered-or-under-development headline",
+     "profile:edgecore @ v1 — strategyRead"
+    ],
+    [
+     "Its stated posture is that it expects to bear 100% of the cost of power delivery, with a stated willingness to abandon projects whose power economics become unworkable",
+     "profile:edgecore @ v1 — strategyRead, policyExposure"
+    ],
+    [
+     "Virginia's 2026 budget preserved the equipment exemption and added an electricity consumption tax of $0.011 per kWh from 1 July 2026 to 30 June 2028, capped at $600m a year, with a tax-policy study due 15 December 2026",
+     "profile:edgecore @ v1 — policyExposure"
+    ],
+    [
+     "PowerHouse supplies 5–10% of the equity through its parent's own funds; the boilerplate grew from 4.1 GW to about 10 GW in 21 months while the delivered base stayed at one building",
+     "profile:powerhouse-data-centers @ v2 — strategyRead"
+    ],
+    [
+     "A utility cancelled a federally accepted transmission security agreement four months after acceptance over deposit timing; the developer challenged it federally and sued. The state rule sets a $500,000 deposit per 100 MW above 200 MW, retained on failure",
+     "profile:powerhouse-data-centers @ v2 — strategyRead, policyExposure"
+    ],
+    [
+     "Prime has taken five equity rounds, shelved a bond and financed its one fully leased campus with project-level high-yield debt — against about 151 MW operating after nine years",
+     "profile:prime-data-centers @ v3 — strategyRead"
+    ],
+    [
+     "Tract's entitled-and-powered parcel has not been sold to any third party on the record across four years and fourteen parks; the only recorded transactions are to its own affiliate's project companies",
+     "profile:tract @ v3 — strategyRead"
+    ],
+    [
+     "Its utility sued on 24 July 2026 seeking about $1bn of network upgrades and commission rather than arbitral jurisdiction over roughly 5.5 GW of stated load",
+     "profile:tract @ v3 — policyExposure, strategyRead"
+    ],
+    [
+     "Fermi landed about 1.5 GW of turbines and permitted 6 GW of gas before any tenant, on equipment debt at 12–13% and a warehouse line that tests a 400 MW lease by November 2026",
+     "profile:fermi-america @ v1 — strategyRead"
+    ],
+    [
+     "Its only signed lease is conditional on project financing, board approvals and a third-party guarantor by 30 September 2026, with no named guarantor on the record",
+     "profile:fermi-america @ v1 — strategyRead"
+    ],
+    [
+     "A merchant generator in this roster is the corpus's worked example of selling from an existing fleet, and the federal record its co-location arrangement produced now governs every operator",
+     "profile:talen-energy @ v2 — ecosystemRole"
+    ],
+    [
+     "A co-located energy-park developer put solar, wind, batteries and gas on one site with a hyperscaler's data centre and became part of that hyperscaler on 10 March 2026, in a $12bn combined exit",
+     "profile:intersect-power @ v2 — ecosystemRole"
+    ],
+    [
+     "Energy-plus-load converts a battery interconnection into speed to power, and the first marquee Texas case has one of this segment's incumbents as the tenant",
+     "profile:eolian @ v6 — ecosystemRole"
+    ],
+    [
+     "The credit-substitution layer of record: three converted miners sign 10–25 year leases with one intermediary's subsidiaries while a technology company's recognition agreements make it the tenant of last resort and the end user is named only separately",
+     "profile:fluidstack @ v2 — ecosystemRole"
+    ],
+    [
+     "Transformers and switchgear carry a reduced 15% tariff rate through 31 December 2027; substation transformers run 75–110 weeks, generator step-up units 100–150+ weeks, and 15 kV medium-voltage switchgear 52–80 weeks with many manufacturers sold out through 2028",
+     "profile:digital-realty @ v2 — policyExposure; profile:cyrusone @ v1 — policyExposure"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "4 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**It does not rank these landlords, and no published source does.** Four dossiers reach that conclusion independently and from different directions: *Digital Realty*'s calls the category claim unfalsifiable; *CyrusOne*'s records a 4.5-times disagreement between published rankings of one company; *Cipher Digital*'s states that no independent ranking of AI-data-centre landlords by contracted megawatts or lease value exists in either direction; *Hut 8*'s finds only a second-hand contracted-revenue-per-megawatt measure that does not publish its own figure. **This module states the absence and declines to supply an ordering.**",
+    "**It does not name the tenants.** *Compass Datacenters* names no customer on any page or release. *EdgeCore* has no tenant at any campus on the record. *STACK Infrastructure* publishes no tenant-mix data outside securitisation collateral. *Applied Digital*'s largest counterparty is an unnamed hyperscaler at about sixty-nine per cent of backlog. *Hut 8*'s second campus tenant is unnamed in every first-party source. Eleven of *PowerHouse*'s thirteen announced campuses have no disclosed tenant.",
+    "**It does not give revenue for most of the leading set.** Seven of the nine incumbents publish none, and so do five of the thirteen challengers. Any statement about the relative size of *QTS*, *Vantage*, *Aligned*, *STACK*, *Switch*, *CyrusOne* or *Compass* rests on an estimate made from outside the company.",
+    "**It does not settle whether the powered-land product has a market.** *Tract*'s is the clearest case: four years, fourteen parks, and **no third-party parcel sale with a named buyer or a price anywhere on the record.**",
+    "**It does not reconcile the cohort's lease-value figures.** *Cipher*'s own dossier counts four different labels for three revenue concepts plus one cost concept inside ten weeks. *Galaxy* publishes an annual rate where peers publish a fifteen-year base term, and its audited figure differs from both. **Cross-company lease comparison in this segment is unsound, and this module does not perform one.**",
+    "**It does not establish intent behind the speculative build.** *Digital Realty*'s own dossier holds the falling pre-leased share at moderate confidence precisely because no source establishes management intent, and it names the equally consistent alternative: leases lagging construction starts in a market where power sets the schedule.",
+    "**It does not tell you what the grid operator's audit will conclude.** The report is targeted, not delivered. What the record carries is the pause, the scope and the date.",
+    "**And it does not carry the neighbours' material, by construction.** The campus lifecycle, the capacity ladder, the megawatt definitions, the two clocks, the six roles and the five failure modes belong to *Reading the Named Projects*. The federal rulebook belongs to *Large-Load Interconnection*. The utility playbook and the tariff comparison belong to *When Utility Procurement Meets AI Data-Center Load*. The chain and the BESS sockets belong to *Power Infrastructure and the AIDC Power Chain*. All nine omissions are listed in section 2 of the analysis file so a later revision cannot quietly import them."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "5 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "How many members does the AIDC developers and landlords segment hold, and in what split?",
+     "a": "Thirty — nine incumbent, thirteen challenger, eight adjacent. It is the third-deepest segment in the registry and the largest challenger set the landscape programme has met."
+    },
+    {
+     "q": "Why does this module refuse to rank the nine incumbents?",
+     "a": "Because the record cannot support a ranking and says so. Every published ranking measures something different, the private platforms publish no comparable figure, and third-party rankings of one member disagree by about 4.5 times. One dossier calls the category claim unfalsifiable rather than true or false."
+    },
+    {
+     "q": "What are the four bases of incumbency here, and why can they not be compared?",
+     "a": "A securitisation franchise, a standardized building product, proprietary engineering, and the disclosure obligation of a listed trust. They are a cost-of-capital fact, an operating fact, a legal fact and a regulatory obligation — four different kinds of thing, not four measures of one."
+    },
+    {
+     "q": "Eighteen of the thirty members publish no normalized revenue figure. Which half of the segment is the measurable one?",
+     "a": "The challengers. Seven of the nine incumbents publish nothing, while eight of the thirteen challengers do — because the converted-miner cohort arrived in this segment already listed and already filing."
+    },
+    {
+     "q": "What are the three routes the thirteen challengers are attacking on?",
+     "a": "An energised power position (the seven converted miners), owning the generation (the two energy-first developers), and one rung of the ladder rather than the whole thing (the four land, shell and build-to-suit specialists)."
+    },
+    {
+     "q": "State this module's own assessment of what actually threatens the incumbents.",
+     "a": "Not share loss to a cheaper rival — the scarce asset moved, from land to an energised interconnection, and a bitcoin miner already owned one. It is analysis, not a finding of the record."
+    },
+    {
+     "q": "What is the roughly 375 basis point spread in this segment a price for?",
+     "a": "The tenant, not the building. On substantially the same lease template, campus notes priced from about 6.125 per cent with an investment-grade parent guaranteeing rent directly, up to 9.875 per cent where the tenant was unrated and levered with no credit enhancement disclosed."
+    },
+    {
+     "q": "One landlord obtained a third-party backstop without giving warrants or equity. Why does its own dossier treat that as the differentiator?",
+     "a": "Because two peers on the same template paid for the same service in equity — about fourteen per cent of pro forma equity at one, warrants over about five and a half per cent at the other. Getting bankability for nothing is the capital-structure claim, not the lease."
+    },
+    {
+     "q": "Which constraint do four incumbents independently name as binding, and what is the evidence that it is external to all of them?",
+     "a": "Community consent. The evidence is that four direct rivals founded a joint infrastructure coalition in September 2026, and that several signed a ratepayer-protection pledge or endorsed a state's data-centre standards rather than competing on the question."
+    },
+    {
+     "q": "Why does 10 December 2026 appear in this module's indicators rather than as its review date?",
+     "a": "Because it is already the review clock of two registered guidance modules. A gate a module watches but does not own belongs in the indicators."
+    },
+    {
+     "q": "What does the public campus lesson teach that this module deliberately does not repeat?",
+     "a": "The eight-stage lifecycle on three clocks, the five-rung capacity ladder, critical IT load against total facility power, the lease clock against the entitlement clock, the six roles in the room, the five failure modes and the named-projects table. The lesson teaches the test; this module applies it to named parties."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "4 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague says one landlord in this segment is clearly the largest. What is the accurate reply?",
+     "c": [
+      "That the claim is unfalsifiable rather than true or false, because every published ranking measures something different and most of the field publishes nothing comparable",
+      "That the listed trust is largest, since it is the only one with audited figures",
+      "That the ranking exists but is behind a paywall",
+      "That the largest is whichever has the biggest announced pipeline"
+     ],
+     "a": 0,
+     "why": "One dossier reaches exactly that conclusion and gives the reason: the rankings measure colocation revenue share, markets rather than operators, or active IT load, and the private platforms that captured the demand publish no comparable megawatt or revenue figure — so a category ranking would omit half the field by construction. The listed trust is largest by leasable area and pipeline and second on revenue, which is a narrower and defensible statement, not the same claim."
+    },
+    {
+     "q": "Seven of this segment's thirteen challengers are converted bitcoin miners. What does this module assess that they are competing on?",
+     "c": [
+      "A date — they already owned energised substations and the market re-priced that asset under them",
+      "Price per megawatt, undercutting the incumbents",
+      "Building design and cooling efficiency",
+      "Access to cheaper construction labour"
+     ],
+     "a": 0,
+     "why": "Not one of the seven competes on building product, cooling design or facility standard. They arrived owning substations, cheap power contracts and energised interconnections for a different business. That is why the module's own assessment is that the threat is the scarce asset moving from land to an energised interconnection, rather than share loss to a cheaper rival."
+    },
+    {
+     "q": "A developer's marketing says 1.8 GW delivered or under development. What does this module say about that figure, and what does it deliberately leave to the public lesson?",
+     "c": [
+      "The module states the verifiable operating base is about 62 MW in two buildings; the lesson teaches the five-rung ladder that makes such a figure readable",
+      "The module teaches the five-rung ladder and the lesson names the company",
+      "Both teach the ladder, so either source will do",
+      "Neither addresses it — capacity claims are outside both scopes"
+     ],
+     "a": 0,
+     "why": "This is the split in one example. The lesson teaches the test — which rung was the figure counted at, operating, contracted, reserved, land with power or land without — and says that delivered-or-under-development is a two-rung count with no boundary between the rungs. This module applies that test to a named party and states where that party actually stands. The lesson teaches the test; the module applies it."
+    },
+    {
+     "q": "Which claim in this module is the module's own analysis rather than a finding of the record?",
+     "c": [
+      "That the useful question is what each incumbency is made of, because that decides what can take it away",
+      "That eighteen of thirty members publish no normalized revenue figure",
+      "That one campus note priced at 9.875 per cent",
+      "That a state tax-policy study is due on 15 December 2026"
+     ],
+     "a": 0,
+     "why": "The other three are record: the count comes from the generated segment lesson's numbers table, the coupon and the study date come from named dossier fields. The module carries exactly three of its own judgments — that dominance here cannot be ranked and the useful question is what each incumbency is made of, that the threat is the scarce asset moving, and that tenant credit is manufactured with an observable price — plus every row of the bets table, which restates each member's own strategy read as analysis."
+    },
+    {
+     "q": "Why is the price of credit substitution worth knowing before a schedule conversation with a converted-miner landlord?",
+     "c": [
+      "Because where a counterparty sits on that spread tells you what its capital costs and therefore how much schedule risk it can absorb",
+      "Because the spread determines the equipment specification",
+      "Because lenders set the cooling architecture",
+      "Because it is the only figure the segment publishes"
+     ],
+     "a": 0,
+     "why": "The spread is a price for the tenant rather than the building, and it runs roughly 375 basis points from a directly guaranteed lease to an unenhanced single-tenant one. A landlord paying the wide end has less room for an overrun and a stronger reason to buy delivery certainty — which is the argument an equipment seller actually has in this cycle, given lead times of seventy-five to a hundred and ten weeks on substation transformers."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The segments registry's role for an established leading member of a segment, assigned per company on the dossier's own evidence and recorded in that member's basis line. It is a characterisation of position, not a measure of size — and in this segment it is explicitly not a ranking, because the record carries none."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry's role for a member contesting the leading set. In this segment the label covers three structurally different routes — converted bitcoin miners holding energised power, energy-first developers owning their own generation, and specialists selling one rung of the development ladder — so the label alone tells you far less than the route does."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry's role for a member that bears on a segment without being a ranked player in it. Adjacent members count toward the three-member floor for authoring a landscape and never toward the incumbent or challenger roles. Three of this segment's eight can host a campus without being a landlord at all."
+  },
+  {
+   "t": "credit substitution",
+   "d": "The practice of making a thin tenant's lease bankable by inserting a stronger third party between the tenant and the landlord — a payment backstop, a recognition agreement, or a parent guaranty. The cost is visible in two places: the coupon on the resulting campus notes, and the equity or warrants the backstop provider is given."
+  },
+  {
+   "t": "data center ABS",
+   "d": "Asset-backed securities collateralised by data-centre leases and the buildings under them, originated as an asset class in 2018 and now the principal financing route for private wholesale landlords. Because the private platforms publish no revenue, the securitisation market is the main place an outsider can observe their cost of capital."
+  },
+  {
+   "t": "batch process",
+   "d": "A grid operator's practice of grouping large-load interconnection requests and studying their system impact on a portfolio basis rather than one at a time, rather than first come first served. Several of this segment's uncontracted sites are explicitly qualified in filings as subject to it."
+  }
+ ]
+ };
 }
 
 // PROJECT END

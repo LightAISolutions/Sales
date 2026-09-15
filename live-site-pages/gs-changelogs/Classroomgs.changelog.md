@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.42g] — 2026-09-15 04:21:39 AM EST — v05.88r
+
+### Added
+
+- A new module in the Value Chain library, covering the companies that build and lease AI data-centre campuses — who leads and on what basis, who is contesting the field and how, and what each is betting. Available to the tiers that hold guidance access
+
+### Changed
+
+- One curriculum page's reading list now points to that module, and its onward reading names two lessons that have since been written
 
 ## [v01.41g] — 2026-09-15 03:32:29 AM EST — v05.85r
 

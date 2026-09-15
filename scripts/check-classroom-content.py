@@ -851,11 +851,20 @@ def run_gate_truth_table(src, lesson_ids=()):
     # the reason the header comment above guidanceDocLandscapePowerConversion_()
     # enumerates the six things it deliberately does NOT carry — a later
     # revision that imports any of them collapses the split this count guards.
+    # 15 since S2 session 6 added the sixth (AIDC developers and landlords) —
+    # where the fourth neighbour is not a module at all. `the-campus-as-a-power
+    # -project` is a PUBLIC mechanism lesson built on nine of that segment's own
+    # members, so the split crosses an ACCESS TIER as well as a subject: the
+    # lesson is analyst-visible and the module is contributor-only. The line
+    # taken is that the lesson teaches the test and the module applies it to
+    # named parties, and the header comment above
+    # guidanceDocLandscapeAidcDevelopersAndLandlords_() enumerates NINE
+    # omissions across all four neighbours rather than six across one.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 14:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 14" % len(gids))
+    if len(gids) != 15:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 15" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:
