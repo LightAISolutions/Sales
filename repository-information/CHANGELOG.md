@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.86r] — 2026-09-15 03:39:56 AM EST
+
+> **Prompt:** "Author Phase 4 row 10 — the how-a-storage-project-happens lesson — on Opus 5 xhigh as a fresh session. … THE DEPLOY and THE CHANGELOG ARITHMETIC: exactly as §7.26's paragraphs set out. Confirm the deploy from Pages and the job log, NOT by probing ?op=deploy first." *(the handover half of the same prompt — §7.26's brief is reproduced in full there)*
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.27 — deployment counters moved from forecast to measurement, and BOTH halves were edited together.** The prose paragraph and the quoted paste-in prompt block both read `Classroom 52/200 and Scraper 150/200 — FORECAST`; both now carry the measured figures and the corrected mechanism. This is the trap §7.25 recorded and v05.81r fell into — refreshing a brief's body does not refresh the half that actually gets pasted
+
+### Notes
+
+- **THE DEPLOY, and it produced a third case of the counter rule.** §7.26 established that `Already up to date` consumes no deployment where `Updated to` consumes one. v05.85r's run produced **neither on the Scraper leg, because the Scraper deploy step never fired**: each project's step opens with `git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0`, and `Scraper.gs` was not in the merge diff, so the step exited 0 in under a second without contacting the deployment at all. **So the rule has three cases and only the first spends anything** — `Updated to` consumes one; `Already up to date` consumes none because the leg ran and found the bundle current; and a step that never fires consumes none *and logs nothing*. Forecasting from "whether the running bundle is behind" gets the number right in all three but describes only the middle case: **to predict the log line you will actually read, ask first whether the file is in the diff**
+- **Classroom confirmed on the first GET leg with no POLL and no probe** — `Classroom deploy confirmed (GET): Updated to v01.41g (deployment 52) | 52/200` — the **ninth consecutive** clean use of the §7.19 order. Pages confirmed `|v01.41g|` before the job log was opened, and `|v02.06g|` for Scraper, so the two sources agreed and no `?op=deploy` probe was warranted
+- **Both findings are recorded where a future session will meet them** — §7.3's order-6 row gains the three-case rule and §7.27 carries it in both halves, so neither is discoverable only from this CHANGELOG
+- **No rotation.** 87 raw / 80 non-exempt before, **88 raw / 80 non-exempt** after, eight sections dated 2026-09-15 on the EST clock, against a trigger of 100. Nothing in the Classroom or Scraper surface moved — no `.gs` and no `.html` — so no GAS bump, no page bump and no public changelog entry. Classroom stays at **v01.41g / v01.14w** and Scraper at **v02.06g**
 
 ## [v05.85r] — 2026-09-15 03:32:29 AM EST
 
