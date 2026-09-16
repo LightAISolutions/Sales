@@ -1,4 +1,4 @@
-var VERSION = "v01.55g";
+var VERSION = "v01.56g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -41823,6 +41823,695 @@ function clLessonCleanFirmPower_() {
 };
 }
 
+// THE CAPSTONE OF `aidc-grid-to-chip`, AND THE ONE ROW THE DEVELOPER ASKED FOR
+// BY NAME. Its specification is not section 3.3's outline but section 5 of
+// CLASSROOM-CURRICULUM-PLAN.md - the failure-point map - and that table has
+// FOURTEEN rows while section 3.3 fixes the first section's id as
+// `one-chain-twelve-weak-points`. Section 5 resolves it in its own closing
+// line: rows 1-12 are the power chain, and rows 13-14 (the thermal chain, and
+// commissioning) are the two failures that most often PRESENT as power
+// failures and are not. DECIDED DELIBERATELY, BECAUSE SECTION IDS ARE
+// PERMANENT: the id stays `one-chain-twelve-weak-points`, all fourteen rows
+// are carried, and the 12-against-14 split is an explicit line in the table's
+// `note`. It is the sharpest single teaching point in the lesson and hiding it
+// behind a tidier table would have cost the diagnosis. Two of the stamped
+// guides (Vertiv, Schneider) already name rows 13 and 14 BY THESE NUMBERS in
+// their own where-it-fails sections, so the numbering is corpus-visible and
+// the map had to match it.
+//
+// THE FOUR CAUSES WERE COUNTED, NOT ASSERTED, AND NO FIFTH WAS INVENTED.
+// Section 5 names four that recur - current squared becomes heat, direct
+// current has no zero crossing, heat flows through a series path, human hands
+// are in the loop - and says every row should trace to one or be marked as
+// tracing to none. Tallied across the fourteen: HANDS 6 (rows 2, 3, 5, 6, 8,
+// 14), CURRENT SQUARED 5 (3, 6, 7, 9, 10), NO ZERO CROSSING 1 (11), SERIES
+// HEAT 1 (13), NONE OF THE FOUR 3 (1, 4, 12). Rows 3 and 6 carry two. The
+// teaching point the count produces: the commonest cause on the map is not
+// physics at all, and the most-discussed hazard in the chain (the DC arc) is
+// its rarest. The three "none" rows share a property worth stating - in each
+// the equipment works exactly as specified and the failure is in the system
+// around it.
+//
+// THE DC-ARC TAXONOMY IS DECLINED, NOT QUIETLY OWNED - session 10's (aa1)
+// posture. Row 11 states the failure (a sustained series arc, no zero
+// crossing, the devices that exist because of it) and stops. The
+// classification belongs to `dc-fault-engineering`, section 7 row 20,
+// guidance-gated and UNBUILT, so the taxonomy is currently held by nobody -
+// and the row, the drill card and the table note all say so rather than
+// teaching a classification the curriculum has reserved.
+//
+// THE STAMP IS 30 PUBLIC INPUTS AND EVERY ONE CONTRIBUTED. All `study:` and
+// `concepts:`, so the fold is `tracks` - analyst-visible, as a capstone over
+// public equipment guides must be. Three guides section 5 names per row are
+// NOT pinned because this lesson used none of their failure content
+// (mortenson, wartsila, vantage - their rows are carried by Hitachi/GE Vernova,
+// Caterpillar/Cummins and xAI respectively). Two guides section 5 does NOT
+// name for row 1 ARE pinned, with the reason: `study:dominion-energy` carries
+// row 1 almost verbatim in its own where-it-fails, and `study:aep` is the ONLY
+// guide in the corpus that carries section 5's "audit that pauses a batch" -
+// a grid operator pausing its batch process in August 2026 to audit what was
+// in it. Neither burns-mcdonnell nor stack-infrastructure carries that clause,
+// checked by grep before it was written, so teaching it off section 5 alone
+// would have been a claim no fetched document supported.
+//
+// `reviewBy` 2027-03-16 on the ~6-month default from `updated`, read and not
+// sorted for the thirteenth consecutive session. Nothing in the fourteen rows
+// is a dated gate ON THIS LESSON: the forward dates in the material (a
+// rack-power generation in 2027, refrigerant code editions, turbine slots
+// 2027-29) gate products and plants rather than this map's mechanisms. The
+// default also stays outside the curriculum checker's 30-day horizon
+// (2026-10-16), so the 3 items it reports due stay 3.
+//
+// THE TIMELINE IS MILLISECOND-SCALE AND ITS GUTTER WAS CHECKED. `clTimeline`
+// floors `x` and suppresses repeats, so two rungs inside one integer render a
+// blank gutter. All eleven x values here (0, 2, 4, 8, 16, 20, 25, 40, 120,
+// 250, 300) have distinct integer floors, verified programmatically, so every
+// gutter prints. The gutter is milliseconds and the intro says so.
+//
+// THE DUE COUNT, PREDICTED BOTH HALVES AND MEASURED FROM THE FILE RATHER THAN
+// FROM THE BRIEF: --check opens at 8 due. The three-part deepening test FAILS
+// AT PART ONE - `where-the-chain-breaks` appears in ZERO CRITERION_LEXICON
+// entries (the block was parsed and counted, not eyeballed), so no deepening
+// can fire. It sits in exactly ONE READ_NEXT, `epc-and-construction`, which is
+// already due and already differing in BOTH read-next and
+// what-is-bought-and-on-what - so registering this lesson flips that segment's
+// lesson_ref from "(planned)" to the real title and the change NETS.
+// Forecast 8 -> 8 -> 8, no segment regenerated (a Phase 4 row runs the
+// generator on nothing), and the FIFTH consecutive Phase 4 row to leave a
+// stale lesson_ref behind.
+//
+// (bb1) WAS MEASURED AND DOES NOT BIND. All 21 registered guidance modules
+// were grepped for this lesson's id, its title, and any claim that it is
+// planned or unbuilt: zero hits on the id, zero on "Failure-Point Map", zero
+// on a capstone claim. The single "(planned)" occurrence anywhere in the file
+// is inside the GENERATED `clLessonSegmentEpcAndConstruction_()`, which is the
+// mechanical detector doing its job. No landscape module covers
+// `epc-and-construction` at all, so there is no hand-authored prose to revise
+// and the module assertion stays at 21.
+function clLessonWhereTheChainBreaks_() {
+  return {
+ "schemaVersion": 1,
+ "id": "where-the-chain-breaks",
+ "type": "module",
+ "title": "The Failure-Point Map",
+ "short": "One chain, a dozen weak points. Where the grid-to-chip path fails, why the physics makes it fail there, and who owns each failure.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:burns-mcdonnell",
+    "date": "2026-08-21",
+    "note": "row 1: the three interconnection studies in queued phases (feasibility, system impact, facilities), the requester funding upgrades it does not control, and load interconnection being a different study from generation interconnection"
+   },
+   {
+    "kind": "public",
+    "ref": "study:stack-infrastructure",
+    "date": "2026-08-22",
+    "note": "row 1: why the date is the asset - the developer's real inventory is approved megawatts rather than acreage, and a dedicated campus substation removes the shared-infrastructure bottleneck"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dominion-energy",
+    "date": "2026-09-03",
+    "note": "row 1 in its own words: the study models the grid as it will be and the grid keeps changing, so a re-study, a re-priced batch or a queue audit moves the date; and the energisation date rather than the lease date is the supplier's real delivery date"
+   },
+   {
+    "kind": "public",
+    "ref": "study:aep",
+    "date": "2026-09-03",
+    "note": "row 1's audit clause, which no other guide carries: a grid operator paused its batch process in August 2026 and began an audit of the projects moving through it, with the prior study timeline to be reassessed"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hitachi-energy",
+    "date": "2026-08-21",
+    "note": "row 2: bushings as a specialised product line and a known failure point, paper insulation vacuum-dried for weeks because moisture shortens life, tap changers, and the thirty-to-forty-month lead time that follows from custom engineering and scarce craft labour"
+   },
+   {
+    "kind": "public",
+    "ref": "study:ge-vernova",
+    "date": "2026-08-21",
+    "note": "row 2: why the slot slips rather than the factory - expansion is people-limited before it is machine-limited, grain-oriented electrical steel comes from a handful of mills, and high-voltage test bays gate the exit"
+   },
+   {
+    "kind": "public",
+    "ref": "study:siemens-energy",
+    "date": "2026-09-04",
+    "note": "rows 1, 2, 3, 11 and 12, each named by number in this guide's own where-it-fails: the connection date moving, a generator step-up transformer that is useless to anyone else, protection coordinated against a fault current that has since changed, the DC fault with no zero crossing, and a swinging load on a point that was strong enough for a factory"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mitsubishi-electric",
+    "date": "2026-09-03",
+    "note": "the row 2 to row 3 bridge: a late substitution to a larger, lower-impedance transformer raises downstream fault current, can take existing switchgear past its withstand rating and quietly invalidates the coordination study; and row 6's fixed losses, static-bypass exposure and the neutral nobody re-derived"
+   },
+   {
+    "kind": "public",
+    "ref": "study:abb",
+    "date": "2026-08-21",
+    "note": "row 3: how a breaker actually stops a fault by killing the arc, and why a vacuum interrupter relies on the AC zero crossing; row 11: solid-state devices that stop conducting in microseconds because DC has no natural moment to die; and protection as a networked application"
+   },
+   {
+    "kind": "public",
+    "ref": "study:eaton",
+    "date": "2026-08-21",
+    "note": "rows 3, 5, 6, 7 and 12: time-current curves converging at high fault current and zone-selective interlocking restoring order; the transfer choreography and paralleling switchgear; the eco-mode bet against the ten-to-twenty-millisecond hold-up window; distortion heating transformers and neutrals with IEEE 519 measured at the point of common coupling; and GPU clusters swinging tens of megawatts rhythmically into resonances below line frequency"
+   },
+   {
+    "kind": "public",
+    "ref": "study:powell-industries",
+    "date": "2026-09-03",
+    "note": "row 3's signature failure stated as such - a downstream fault opening a main, relay settings never re-checked after a load change, incident energy treated as a label rather than a design output, and a main-tie-main whose two sources are each sized for half the load; and row 14's factory acceptance test mistaken for commissioning"
+   },
+   {
+    "kind": "public",
+    "ref": "study:kiewit",
+    "date": "2026-08-21",
+    "note": "row 4: three OEMs supply virtually all heavy-duty gas turbines, their slots sold out years ahead, and turbine delivery rather than construction now sets when new gas power can exist"
+   },
+   {
+    "kind": "public",
+    "ref": "study:xai",
+    "date": "2026-08-21",
+    "note": "row 4's permit clause: a major source triggers pre-construction review with modelling and public comment, and whether many nominally mobile turbines running together for months are one stationary source is a live legal question"
+   },
+   {
+    "kind": "public",
+    "ref": "study:caterpillar",
+    "date": "2026-09-03",
+    "note": "rows 4 and 5: the permit lagging the shell and the emergency-generator class forbidding bridge duty; fuel as a supply chain that N+1 on the engines does not cover; the reserved production slot as a schedule asset; open transition with nothing behind it; generators that will not synchronise as a settings fault presenting as an electrical one; and a load-shed list the building has outgrown"
+   },
+   {
+    "kind": "public",
+    "ref": "study:cummins",
+    "date": "2026-09-04",
+    "note": "rows 4, 5 and 12: a rating read as capability rather than permission, with a stationary-emergency fleet allowed roughly a hundred hours a year; redundancy applied to the nameplate instead of the derated rating; the seam between the gen-set order and the switchgear sequence that is nobody's warranty; and an enterprise diversity factor applied to a hall whose accelerators do peak together"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rosendin",
+    "date": "2026-08-21",
+    "note": "row 8: the rack whip as the last link, A and B feeds every cabinet expects, and thousands of terminations whose quality is proven in commissioning before a single server arrives"
+   },
+   {
+    "kind": "public",
+    "ref": "study:huawei-digital-power",
+    "date": "2026-08-21",
+    "note": "row 6: the availability case resting on repair time - a module hot-swaps in minutes while a monolithic failure can mean hours or days on bypass with the load on raw utility power"
+   },
+   {
+    "kind": "public",
+    "ref": "study:liteon",
+    "date": "2026-08-21",
+    "note": "rows 6 and 9: ORing circuits isolating a failed unit so it cannot drag down the shared bus, precharge taming inrush on a live insertion, and redundancy taxing efficiency by holding two supplies at half load - with cold redundancy trading wake-up latency for watts"
+   },
+   {
+    "kind": "public",
+    "ref": "study:piller",
+    "date": "2026-09-03",
+    "note": "row 6 at its fullest: load exposed on bypass because maintenance mode was assumed to be safe mode, an eco-mode transfer that is fast for the typical fault and not for every fault, modules parked below their sweet spot by design, and the shared element on an isolated parallel bus"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vertiv",
+    "date": "2026-09-04",
+    "note": "rows 6, 13 and 14, three of them named by number here: an overload rating read as a headline rather than a coordination input, the integrated systems test cut for schedule, and the thermal chain stated as the failure that presents as a power failure and is not"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sinexcel",
+    "date": "2026-08-08",
+    "note": "row 7: rectifiers and drives drawing current in sharp gulps, harmonics overheating transformers and neutral wires, power-factor penalties below about 0.9, and a hundred-millisecond voltage sag being enough to crash a hall"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hitt",
+    "date": "2026-08-21",
+    "note": "rows 8 and 14: the five commissioning levels, level 5 as the theatre of failure run under load banks, temporary power for early commissioning as a schedule trick, and commissioned megawatts as the industry's honest output metric"
+   },
+   {
+    "kind": "public",
+    "ref": "study:schneider-electric",
+    "date": "2026-09-04",
+    "note": "rows 8, 13 and 14: two paths that meet upstream as the most expensive error in the subject, dual-corded equipment with both cords on one path, cross-ties nobody has analysed since the load changed, and a sequence of operations written for a hall that no longer exists"
+   },
+   {
+    "kind": "public",
+    "ref": "study:delta-electronics",
+    "date": "2026-08-21",
+    "note": "rows 10 and 11: twelve volts to forty-eight cutting current fourfold for a sixteenfold loss reduction, the last centimetre at about one volt and hundreds to over a thousand amps, and every stage removed making the surviving converter's job harder"
+   },
+   {
+    "kind": "public",
+    "ref": "study:zhonhen",
+    "date": "2026-08-19",
+    "note": "row 11: an AC arc self-extinguishing a hundred and twenty times a second while a DC arc has no zero crossing and must be engineered out through DC-rated breakers, arc-fault management and grounding design"
+   },
+   {
+    "kind": "public",
+    "ref": "study:megmeet",
+    "date": "2026-08-07",
+    "note": "row 12 and the chain the map walks: the legacy five-or-more conversions from medium voltage to about one volt, and one megawatt at 415 volts being roughly fourteen hundred amps"
+   },
+   {
+    "kind": "public",
+    "ref": "study:switch",
+    "date": "2026-08-21",
+    "note": "row 14's second half: design ratings are ceilings rather than deployed reality, and distinguishing rated for from operating at is the named skill - with a self-declared availability tier as the worked example of a claim nobody audited"
+   },
+   {
+    "kind": "public",
+    "ref": "study:coolit",
+    "date": "2026-09-04",
+    "note": "row 13 at the coolant loop: an approach temperature eaten by a plant that arrives warm, flow starving the far rack while the pump's gauges read normal, coolant chemistry that is nobody's job, and a single unit on a header whose pump redundancy is not unit redundancy"
+   },
+   {
+    "kind": "public",
+    "ref": "study:trane-technologies",
+    "date": "2026-09-04",
+    "note": "row 13 at the plant: low delta-T syndrome staging a chiller nobody needs, a pinched approach raising lift silently with no alarm, a sequence of operations left as the vendor shipped it, and no thermal ride-through for the chiller restart while the UPS keeps the racks making heat"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "hold-up time, selective coordination, time-current curve, zone-selective interlocking, incident energy, arc flash, coordination study, withstand rating, static bypass, eco-mode, static transfer switch, ORing, precharge, block load, load shedding, paralleling switchgear, derating, diversity factor, harmonics, IEEE 519, power factor, voltage sag, zero crossing, SSCB, DC circuit breaker, approach temperature, low delta-T syndrome, sequence of operations, factory acceptance test, integrated systems test and commissioning all resolved from the public registry rather than defined locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "14",
+   "v": "rows on one map",
+   "sub": "twelve are the power chain grid to chip; the last two are the failures that most often present as power failures and are not"
+  },
+  {
+   "k": "6 of 14",
+   "v": "rows the operator owns",
+   "sub": "more than any other party, and it buys almost none of the equipment in them"
+  },
+  {
+   "k": "1",
+   "v": "row with a single owner",
+   "sub": "the forty-eight volt bus and the last centimetre, the only stage of the chain that sits entirely inside one vendor's box"
+  },
+  {
+   "k": "10-20 ms",
+   "v": "is the whole margin",
+   "sub": "about one grid cycle of capacitance inside a server supply; every protective layer above it exists to act inside that window"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "bushing",
+   "d": "The insulated terminal that carries a live conductor through the grounded steel wall of a transformer tank. It is the highest-stress interface in the machine - full voltage on one side, earth a few centimetres away - which is why it is both a specialised product line of its own and the component most often named when a transformer fails. Its test tap, which exists so the bushing can be diagnosed, is itself a documented failure site when its cap is not properly grounded."
+  },
+  {
+   "t": "rack whip",
+   "d": "The flexible factory-made cable that drops from a busway tap-off to a cabinet's power strips, delivering the A feed and the B feed every rack expects. It is the last link in the building's power chain and the point at which thousands of terminations exist whose quality is proven only in commissioning."
+  },
+  {
+   "t": "blanking panel",
+   "d": "A blank plate fitted into an empty rack slot so that cooling air is forced through the servers rather than around them. Leaving slots open lets hot exhaust recirculate to the intakes, which raises inlet temperatures across a whole row for the cost of a few pieces of sheet metal nobody was assigned to fit."
+  },
+  {
+   "t": "cold redundancy",
+   "d": "Holding a spare power supply in standby rather than sharing the load with it, so the active unit runs near its efficient point instead of both units sitting at half load. It buys watts and pays for them in wake-up latency: the spare has to come up when the active unit fails, which is a different risk from one that was already carrying current."
+  },
+  {
+   "t": "seam",
+   "d": "This lesson's name for a boundary between two contracts, two suppliers or two disciplines where a requirement belongs to both and is owned by neither. Most rows of the failure map fail at a seam rather than inside a box: the engine's governor settings and the switchgear's sequence, the transformer's impedance and the relay's curve, the coolant's chemistry and the facilities team's test kit."
+  }
+ ],
+ "sections": [
+  {
+   "id": "one-chain-twelve-weak-points",
+   "title": "One chain, a dozen weak points",
+   "kind": "table",
+   "read": "14 min",
+   "intro": "Read this as a diagnostic instrument rather than a list to memorise. Every earlier lesson in this track taught one stage and its own failure; this puts all of them on one map so that a described outage can be placed on a layer. **The Stage column walks the chain in physical order.** The **Which cause** column says which of four recurring mechanisms sits underneath the symptom. And the **Who owns it** column is the one a seller reads twice, because it names who will be in the room when the failure is discussed.",
+   "cols": ["Stage", "What goes wrong", "Why it fails there", "Which cause", "Who owns it"],
+   "rows": [
+    [
+     "**1 · Interconnection**",
+     "The date moves. A study re-runs, a batch is re-priced, a neighbouring request withdraws - and in August 2026 one grid operator paused its batch process outright and began auditing the projects moving through it, with the prior study timeline to be reassessed.",
+     "The {{system impact study}} models the grid as it will be, and the grid keeps changing. The requester funds upgrades it does not control, and load interconnection is a different study from generation interconnection under rules regulators only recently began writing.",
+     "None of the four. A queue is not a physical failure - it is a study whose assumptions expired.",
+     "Developer and utility together. The {{energization}} date, not the lease date, is the supplier's real delivery date."
+    ],
+    [
+     "**2 · Substation transformer**",
+     "A {{bushing}} fails, paper insulation that was not dried long enough ages fast, a {{tap changer}} wears - or the unit is simply late, because a delivery slot slipped.",
+     "The bushing carries a live conductor through a grounded wall, the highest-stress interface in the tank. The rest is craft: windings laid largely by hand, paper vacuum-dried for weeks, every large unit custom-engineered to its order. Thirty-to-forty-month lead times follow from that, and from {{grain-oriented electrical steel}} coming out of a handful of mills.",
+     "**Hands.** Expansion is people-limited before it is machine-limited, and a winder trains for years.",
+     "OEM and the {{owner's engineer}}. A {{GSU}} is useless to anyone else, so one unit with no spare sits between a finished plant and any revenue at all."
+    ],
+    [
+     "**3 · MV switchgear and protection**",
+     "Miscoordination: a fault at one rack's power strip opens a main breaker and darkens the hall. Beside it, relay settings never re-checked after a load change, and {{arc flash}} labels computed from clearing times that have since moved.",
+     "{{time-current curve}}s separate cleanly at moderate current and converge at the fault level that actually occurs, which is what {{zone-selective interlocking}} exists to override. Protection is a networked application now and drifts like software: energise a second hall, close a tie, fit a lower-impedance transformer, and every setting derived from the old model is approximately right rather than right. Nothing alarms.",
+     "**Hands**, over **current squared**. A person set the curves; the energy they release is I²R for as long as they take to clear.",
+     "Electrical contractor and {{EPC}} - and then, quietly, nobody: the re-check after a load change is usually in no one's contract."
+    ],
+    [
+     "**4 · On-site generation**",
+     "Turbines at {{part load}} or in hot thin air; an {{air permit}} that lags the shell; fuel bought as a price rather than as a supply; a reserved turbine slot that slips.",
+     "A large turbine is efficient only near full load, and {{derating}} for altitude and ambient makes the fleet smaller than the hall on exactly the days the cooling peaks. The permit is for what comes out of the stack, not for the building. And three OEMs supply almost all heavy-duty gas turbines, so machine delivery rather than construction now sets when new gas power can exist.",
+     "None of the four. Thermodynamics, law and a factory queue - all real, none of them one of the four that recur.",
+     "Power partner and developer. Whether many nominally mobile turbines running together for months are one {{major source}} is still a live legal question."
+    ],
+    [
+     "**5 · Transfer switch and generator paralleling**",
+     "An open transition with nothing behind it; generators that will not synchronise; load that is not shed in priority.",
+     "An open transition deliberately breaks before it makes, and the gap is longer than any server's {{hold-up time}}. {{paralleling switchgear}} runs a hand-written sequence, so a governor on the wrong {{droop}}, a voltage window tightened to silence a nuisance alarm or an engine swapped for a slightly different model all produce the same picture: the fleet starts on time and the bus stays empty.",
+     "**Hands.** It presents as an electrical fault and is a settings fault, and it is proven only under real load.",
+     "Electrical contractor and operator. When the engines and the switchgear come from different suppliers, the agreement between each engine's settings and the switchgear's written sequence is nobody's warranty - the clearest {{seam}} on the map."
+    ],
+    [
+     "**6 · UPS**",
+     "Load exposed on {{static bypass}} while a monolithic unit waits for a specialist; {{eco-mode}} detection that is fast for the typical fault and not for every fault; modules parked below their efficiency sweet spot.",
+     "{{hold-up time}} is ten to twenty milliseconds and a monolith's repair time is hours, so maintenance mode is a scheduled, repeated window in which the plant is unprotected. And redundancy taxes efficiency by construction: a 2N or {{N+1}} block holds every unit well below its design point, and the difference is heat that must be cooled for the life of the building.",
+     "**Hands**, over **current squared**. The bypass is a procedure and the dial is a setting; the part-load penalty is loss, and loss is heat.",
+     "Operator and OEM. A transformerless machine may sit on bypass for a physical reason - it cannot supply enough {{fault current}} to clear a downstream breaker - which is a design choice nobody wrote down as an exposure."
+    ],
+    [
+     "**7 · Distribution and busway**",
+     "Harmonic heating of transformers and neutrals; {{power factor}} penalties on the bill; a {{busway}} tap-off added without a coordination re-check.",
+     "Rectifiers, drives and server supplies draw current in sharp gulps rather than smooth sine waves, and the distortion reflects back into the building's wiring. {{harmonics}} do no useful work and still occupy copper, so distortion is simply heat. {{IEEE 519}} draws the property line at the {{point of common coupling}} so that one customer's dirty loads cannot degrade a neighbour's.",
+     "**Current squared.** The purest row on the map - every symptom here is I²R spent on current that carries no power.",
+     "Electrical contractor and operator. Power factor is billed rather than merely calculated, so this row usually arrives as an invoice before it arrives as a fault."
+    ],
+    [
+     "**8 · Rack whip and PDU**",
+     "Termination quality; A and B feeds that trace back to a shared upstream point; {{dual-corded}} equipment with both cords on one path.",
+     "The {{rack whip}} is the last link, and thousands of terminations are proven only in {{commissioning}}, before a single server arrives. Redundancy that meets upstream is not redundancy: the arrangement is 2N on the drawing and both sides trace to one transformer, one switchboard or one earthing point. It is invisible in operation and appears on the day it matters.",
+     "**Hands.** Each of these is a person's work - a crimp, a re-plug, a drawing read to the floor above instead of all the way back to the service.",
+     "Electrical contractor and {{commissioning agent}}. One of only two rows the map hands to the commissioning agent, and both are rows whose failure is that something was never proven."
+    ],
+    [
+     "**9 · Server power supply**",
+     "Inrush on a live swap; a failed unit dragging the shared bus down with it; two supplies each sitting at half load.",
+     "{{hot swap}} is an engineered trick rather than a given: {{ORing}} isolates a failed unit so it cannot pull the bus down, {{precharge}} tames the inrush when a fresh one slots in live, and firmware rebalances {{current sharing}} across the survivors. Efficiency curves peak near full load, so a redundant pair sits below its best point permanently unless {{cold redundancy}} parks the spare.",
+     "**Current squared**, with a wake-up latency attached.",
+     "OEM and operator. The slot is standardised, so any qualified vendor's unit drops in - which makes this the one row where the buyer's real defence is a qualification list rather than a design."
+    ],
+    [
+     "**10 · Forty-eight volt bus and the last centimetre**",
+     "A busbar that behaves like a heater; a thousand amps arriving at a regulator with no thermal margin left.",
+     "Loss scales with current squared, so moving the internal bus from twelve volts to forty-eight cuts current fourfold and loss sixteenfold through the same copper. Below that nothing rescues you: the chip drinks about one volt at hundreds to over a thousand amps, so the final conversion happens millimetres from the silicon because a thousand amps cannot be routed across a motherboard.",
+     "**Current squared.** This row is the cause itself, written at its smallest scale.",
+     "Server OEM, alone. **It is the only row of the fourteen with a single owner** - the one stage of the chain that sits entirely inside one vendor's box."
+    ],
+    [
+     "**11 · DC distribution at {{800 VDC}}**",
+     "A sustained series arc; a conversion stage deleted without a plan for its fault duty; a stock supply that was never rated for DC.",
+     "An AC arc self-extinguishes a hundred and twenty times a second at the {{zero crossing}}, which is exactly what a {{vacuum interrupter}} relies on. A DC arc has no such moment and must be engineered out - {{DC circuit breaker}}s, arc-fault management, grounding treated as a design decision, and {{SSCB}} devices that stop conducting in microseconds because nothing else will stop them. Every stage removed makes the surviving converter's job harder.",
+     "**No zero crossing.** The one row where the genuinely new physics is dominant - and the one row this lesson deliberately stops short on.",
+     "OEM and electrical contractor. **The arc taxonomy itself is not taught here.** *Faults, Grounding, and the Interlock at 800 Volts* owns it, and that lesson is not yet built, so the classification is currently held by nobody."
+    ],
+    [
+     "**12 · The load itself**",
+     "Tens of megawatts swinging in milliseconds, periodically, exciting resonances below line frequency - and a plant sized on an enterprise {{diversity factor}} for a hall whose accelerators do peak together.",
+     "Training steps are rhythmic. {{diversity factor}} exists because loads do not peak together, and thousands of accelerators executing one synchronised job step do exactly that. The grid has never served a load of this shape at this scale, which is why detecting it only recently became a monitoring product rather than a known quantity.",
+     "None of the four, and the honest version of that: it is a rate of change and a resonance, and the map has no column for it yet.",
+     "Operator, utility and whoever sold the buffer. It surfaces as {{flicker}}, as distortion, and as an interconnection condition the developer never priced."
+    ],
+    [
+     "**13 · The thermal chain (cooling)**",
+     "One exchanger's {{approach temperature}} pinched; recirculation for want of {{blanking panel}}s; a {{sequence of operations}} that heats and cools at once; no thermal ride-through for the {{chiller restart}}.",
+     "Heat flows in series and the worst stage limits the whole path. {{low delta-T syndrome}} is the pure case: return water comes back too cool, so the plant moves far more water for the same duty and flow rather than load stages the next machine on - caused downstream, presenting at the plant, which is where people look. And when the utility fails, the {{UPS}} carries the racks without interruption so they keep making heat immediately, while compressors on generator power wait out a timer measured in minutes.",
+     "**Heat flows through a series path.** The row that names its own cause.",
+     "Mechanical contractor and operator. **The first of the two rows that are not on the power chain** - and when a hall throttles, the electrical room is the first place people look and the second place the fault usually is."
+    ],
+    [
+     "**14 · Commissioning**",
+     "The {{integrated systems test}} skipped, shortened or run on temporary power; a {{factory acceptance test}} mistaken for commissioning; *rated for* read as *operating at*.",
+     "Level 5 is the theatre of failure: pull the feed and watch the engines catch, kill a chiller and watch the redundant loop take over, all under {{load bank}}s standing in for servers. The works test proved the machine and the site test proved the installation; neither has ever failed the utility on purpose. It is also the test most often shortened when a programme is late.",
+     "**Hands.** The purest instance on the map: the failure is that a person decided the proof could wait.",
+     "{{commissioning agent}} and general contractor. Commissioned megawatts is the industry's honest output metric for exactly this reason - it counts capacity a tenant could actually use rather than shells standing empty."
+    ]
+   ],
+   "note": "**Why the section is called twelve and the table has fourteen rows.** Rows 1-12 are the power chain this map was asked for, grid to chip, in physical order. Rows 13 and 14 are here because they are the two failures that most often *present* as power failures and are not: a hall that throttles, and a plant that was never proven. Leaving them off would make the map tidier and the diagnosis worse, and two of the guides behind this lesson name them by these row numbers in their own failure sections. **The Which cause column is the other half of the lesson** - and the count is in the next section, because the cause that recurs most is not a physical mechanism at all.",
+   "sales": "When a prospect describes an outage, resist diagnosing it. Ask which row it was. The question is disarming because it assumes the reader already has the map, and the answer tells you which of five parties is carrying the blame in that building right now - which is the one thing that decides whether your product is a purchase or an accusation."
+  },
+  {
+   "id": "the-physics-behind-them",
+   "title": "The four causes that keep coming back",
+   "kind": "callout",
+   "tone": "info",
+   "read": "8 min",
+   "ps": [
+    "**Fourteen rows, four recurring causes, and the counting is the lesson.** **Current squared becomes heat.** **Direct current has no zero crossing.** **Heat flows through a series path.** **Human hands are in the loop.** Every row of the map traces to one of those or is marked as tracing to none, and nothing here invents a fifth - if a row does not fit, it says so.",
+    "**Current squared becomes heat** is underneath five rows, and it is the only one that is arithmetic rather than judgement. Power lost in a conductor rises with the square of the current, so halving current quarters the loss - which is why the internal server bus moved from twelve volts to forty-eight for a sixteenfold reduction through the same copper, and why {{harmonics}} are treated as a thermal problem rather than an aesthetic one: distortion is current that does no work and still heats the wire. It is also why {{incident energy}} at a fault is a function of current and clearing time, which is the bridge from this cause to the next lesson a reader will want.",
+    "**Direct current has no zero crossing** is underneath exactly one row, and that single appearance is worth pausing on. An alternating arc dies a hundred and twenty times a second whether anyone designed for it or not, and a great deal of protection equipment quietly depends on that gift - a {{vacuum interrupter}} is built around it. Remove it and the arc has to be extinguished deliberately, which is what {{DC circuit breaker}}s and {{SSCB}} devices exist to do. **Newness and frequency are unrelated**: this is the most-discussed hazard in the whole chain and the rarest cause on this map.",
+    "**Heat flows through a series path** is underneath one row too, and it is the one people reach for last. A thermal chain has no parallel routes: chip to cold plate to coolant to exchanger to water to air, and the worst stage sets the whole path. That is why a pinched {{approach temperature}} anywhere is felt at the silicon, and why a plant can be staged up by a fault that was created two rooms downstream.",
+    "**Human hands are in the loop is underneath six rows - more than any other cause, and it is not physics at all.** A curve somebody plotted, a shed list somebody wrote for a hall that has since been re-tenanted, a crimp, a re-plug, a drying schedule, a decision that the integrated test could be shortened because the programme was late. Every one of those is reversible for the cost of an afternoon, and every one of them is discovered during the event it would have prevented.",
+    "**Three rows trace to none of the four, and they have something in common.** In row 1 the equipment is fine and the queue moved; in row 4 the turbine runs exactly as specified and the permit does not allow it to; in row 12 nothing is broken and the load is simply a shape the grid has not served before. **Where a component fails, one of the four is underneath it. Where a system fails around a working component, none of them is** - and that is the honest boundary of this map rather than a gap in it."
+   ],
+   "sales": "The four causes are the fastest way to sound like an engineer without claiming to be one. You do not need to know a customer's plant to say that their distortion problem is a heating problem, or that their DC question is a question about how an arc is going to be put out. Both statements are true in every building."
+  },
+  {
+   "id": "who-owns-the-failure",
+   "title": "Who owns it, and where the warranties stop",
+   "kind": "prose",
+   "read": "9 min",
+   "ps": [
+    "**Count the owners down the last column and one party is named more than any other: the operator, in six of the fourteen rows.** The electrical contractor is in five and the OEM in five; the developer, the utility and the {{commissioning agent}} are in two each; the {{EPC}}, the {{owner's engineer}}, the power partner, the mechanical contractor, the buffer vendor and the {{general contractor}} are in one apiece. **The asymmetry is the point: the party that owns the most failures buys almost none of the equipment in them.** An operator inherits a plant designed by someone else, sequenced by someone else and proven - or not - by someone else, and then owns the consequences for twenty years.",
+    "**Exactly one row of the fourteen has a single owner**, and it is row 10, the forty-eight volt bus and the last centimetre. That is not a coincidence about voltages. It is the only stage of the whole chain that sits entirely inside one vendor's product, so there is no boundary for a requirement to fall through. **Every other row is a boundary**, which is why the map reads as a list of {{seam}}s rather than a list of broken parts.",
+    "**Warranties stop at the box, and every failure on this map that matters happens between two boxes.** An OEM warrants its machine: its output, its efficiency curve, the hours it will run before a service. Nobody warrants the *agreement* between two machines. When the engines come from one supplier and the {{paralleling switchgear}} from another, the match between each engine's {{droop}} setting and the switchgear's written sequence is a requirement that belongs to both contracts and is guaranteed by neither. The same shape appears at the transformer and the relay, where a late substitution to a lower-impedance unit raises downstream {{fault current}} and silently invalidates a {{coordination study}} that somebody else signed; and at the coolant loop, where the fluid is specified by the server maker, filled by the mechanical contractor and inherited by a facilities team that tests boiler water.",
+    "**The two rows that name the commissioning agent are the two rows whose failure is that something was never proven** - the rack whip that was terminated a thousand times and load-tested never, and the {{integrated systems test}} that was shortened because the programme was late. That is a structural trap rather than bad luck. The one party whose entire product is proof is also the party whose scope is easiest to cut, because cutting it removes no hardware and delays nothing that anyone can see on the day.",
+    "**For a seller, the column is a map of the room.** A product pitched against row 3 to an operator has been pitched to someone who does not own row 3 and cannot buy the fix; a product pitched against row 6 to an electrical contractor has been pitched to a party who leaves the building at handover. **And the harder truth is worth saying out loud in the room: most of these failures cannot be bought away at all.** They are closed by a re-run {{coordination study}}, a re-checked load-shed table, a chemistry test somebody was finally assigned, an integrated test nobody shortened. **A seller who says that about the rows their product does not touch is trusted with the rows it does.**"
+   ],
+   "sales": "Ask who signed the coordination study and when it was last re-run. The answer is a date, it is never defensive, and it tells you in one question whether this building's protection matches this building - which is the difference between a site that will evaluate your equipment and a site that has a bigger problem than your equipment."
+  },
+  {
+   "id": "a-fault-walks-the-chain",
+   "title": "A fault walks the chain",
+   "kind": "timeline",
+   "read": "10 min",
+   "intro": "One fault, at one rack, followed downwards in time. **The gutter is milliseconds from the moment the fault strikes**, and the whole story is over before a human being has registered that anything happened. Read the colours: gold is the protection deciding what to do, blue is stored energy buying the time in which to decide, and rose is a clock that belongs to a different lesson and has not started yet. **Nothing in this sequence is a broken component** - every device does exactly what it was set to do.",
+   "lanes": {
+    "gen": "The protection, deciding",
+    "deploy": "Stored energy, buying time",
+    "eco": "Clocks that have not started yet"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "gen",
+     "label": "A bolted fault at a {{rack whip}} termination",
+     "sub": "One cabinet, one crimp made three years ago and proven in {{commissioning}} - or not. Current begins to rise toward whatever the upstream transformer's impedance allows, which is a number computed in a study and not measured in this building."
+    },
+    {
+     "x": 2,
+     "lane": "gen",
+     "label": "Fault current peaks at ten to fifty times normal",
+     "sub": "This is row 3's clock starting: the energy now being spent in the fault is I²R, and it will keep being spent for exactly as long as the protection takes to decide. Nothing upstream knows yet whether this is a rack problem or a hall problem."
+    },
+    {
+     "x": 4,
+     "lane": "gen",
+     "label": "Two breakers pick up at once",
+     "sub": "The branch device's instantaneous element sees it - and so does the main above it, because at this current their {{time-current curve}}s have converged. Both are now timing. **Neither has opened.** This is the moment the whole of {{selective coordination}} exists for."
+    },
+    {
+     "x": 8,
+     "lane": "gen",
+     "label": "The window in which the downstream device says *I have it*",
+     "sub": "{{zone-selective interlocking}} is a wire between the two breakers carrying exactly that message, and it restores order at the currents where the curves cannot. If it was specified and never commissioned, or the hall is running in a tie configuration the study did not model, this window passes in silence."
+    },
+    {
+     "x": 16,
+     "lane": "gen",
+     "label": "One cycle: a breaker opens",
+     "sub": "If coordination held, it is the branch device and one cabinet is dark. If it did not, the main opened and **the hall is dark from a fault in one power strip** - row 3's signature failure, and the reason coordination studies are a contract deliverable rather than good practice."
+    },
+    {
+     "x": 20,
+     "lane": "deploy",
+     "label": "The server supplies run out of capacitor",
+     "sub": "{{hold-up time}} is ten to twenty milliseconds, which is about one grid cycle. From here the clock belongs to the capacitors rather than to anybody's design intent, and everything that has not already happened is too late."
+    },
+    {
+     "x": 25,
+     "lane": "deploy",
+     "label": "The UPS either was in the circuit or was not",
+     "sub": "In double conversion it took over before anyone could measure it and the hall never noticed. On {{eco-mode}} it had to detect the event and transfer back inside that same window, which it does reliably for a clean fault and less reliably for a slow sag. On {{static bypass}} for maintenance there was nothing to take over - row 6, and the day's maintenance window is what made it possible."
+    },
+    {
+     "x": 40,
+     "lane": "deploy",
+     "label": "A {{static transfer switch}} completes, and it is a real event",
+     "sub": "A shared-reserve arrangement recovers by transferring rather than by continuing uninterrupted. It is fast and it is not nothing: a genuine disturbance that a fully duplicated arrangement would never have produced, and the price paid knowingly when the cheaper arrangement was chosen."
+    },
+    {
+     "x": 120,
+     "lane": "deploy",
+     "label": "The {{voltage sag}} has finished propagating",
+     "sub": "A dip of about a hundred milliseconds is invisible to a person and fatal to precision equipment elsewhere on the same feed. Neighbouring loads that were never part of this story have now seen it, which is what {{IEEE 519}} and the {{point of common coupling}} are about at the other end of the same argument."
+    },
+    {
+     "x": 250,
+     "lane": "gen",
+     "label": "The relay writes its fault record",
+     "sub": "A digital relay captures the waveform, and the post-mortem that will decide who pays starts with that file. It is also the moment the {{arc flash}} label on the door becomes evidence - the incident energy printed on it was computed from the clearing times this event just measured."
+    },
+    {
+     "x": 300,
+     "lane": "eco",
+     "label": "The generators have not started, and should not have",
+     "sub": "This was never a loss of supply. The utility is still there, the engines' ten-second race is not this lesson's story, and the heat in the hall has not begun to move yet either - the {{chiller restart}} sequence belongs to row 13 and to a clock measured in minutes. **What ends a fault is protection; what ends an outage is something else entirely.**"
+    }
+   ],
+   "note": "**Why this timeline stops at three hundred milliseconds.** The engines, the fuel and the return trip are the subject of *The Ten-Second Race*, and the thermal recovery is row 13's. Everything above happens inside the first third of a second, and all of it is decided by settings written long before it - which is the reason the map's most common cause is human hands rather than any of the three physical ones."
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "kind": "flashcards",
+   "read": "9 min",
+   "intro": "One card per row of the map, in the chain's own order. Each answer closes on the cause the row traces to, because the cause is the part that transfers to a building you have never seen.",
+   "cards": [
+    {
+     "q": "**Row 1.** A campus's connection date has moved twice in a year and nothing on site is broken. What moved, and who pays for it?",
+     "a": "The study, not the equipment. A {{system impact study}} models the grid as it will be, and the grid keeps changing - a neighbouring request withdraws, a batch is re-priced, or the operator pauses the process to audit what is in it. The requester funds the network upgrades and controls none of them, which is why the {{energization}} date rather than the lease date is the supplier's real delivery date. **Cause: none of the four - the equipment is fine and a queue moved.**"
+    },
+    {
+     "q": "**Row 2.** Name the most-cited failure point inside a large power transformer, and say why the physics puts it there.",
+     "a": "The {{bushing}} - the insulated terminal carrying a live conductor through the grounded steel of the tank. It is the highest-stress interface in the machine: full voltage on one side, earth a few centimetres away. The rest of the row is craft and queue - paper vacuum-dried for weeks because moisture ages insulation fast, windings laid largely by hand, and thirty-to-forty-month lead times that follow from people-limited factories rather than idle machines. **Cause: hands.**"
+    },
+    {
+     "q": "**Row 3.** A fault in one rack's power strip darkened a whole hall. Which device failed?",
+     "a": "**Probably none of them.** This is miscoordination: {{time-current curve}}s that separate cleanly at moderate current converge at the fault level that actually occurs, so the main and the branch device both pick up and the wrong one wins the race. {{zone-selective interlocking}} is the wire that overrides it. The slower version is drift - protection is a networked application now, and every setting derived from a superseded model is approximately right rather than right, with nothing alarming. **Cause: hands, over current squared.**"
+    },
+    {
+     "q": "**Row 4.** A campus finished its shell in eleven months and its bridge plant still cannot run. Why?",
+     "a": "The {{air permit}} is for what comes out of the stack rather than for the building, and a {{major source}} review takes as long as the process it triggers. A fleet certified in the stationary-emergency class may run during a genuine outage plus a small annual allowance and no more, so it cannot bridge a late grid connection however much iron is standing on site. The neighbouring traps are {{part load}} - a large turbine is efficient only near full output - and the reserved factory slot, because three OEMs supply almost all heavy-duty gas turbines. **Cause: none of the four.**"
+    },
+    {
+     "q": "**Row 5.** The utility failed, every engine started, and the bus stayed empty. What class of fault is this?",
+     "a": "A settings fault presenting as an electrical one. {{paralleling switchgear}} runs a hand-written sequence, so a governor on the wrong {{droop}}, a voltage window tightened to silence a nuisance alarm, or an engine swapped for a slightly different model all produce this same picture. It is proven only under real load - and when the engines and the switchgear come from different suppliers, the agreement between them is nobody's warranty. **Cause: hands.**"
+    },
+    {
+     "q": "**Row 6.** Why is a scheduled UPS maintenance window a genuine exposure rather than a safe state?",
+     "a": "Because on {{static bypass}} the load is on raw utility power with nothing stored behind it, and a monolithic unit's repair time is hours against a {{hold-up time}} of ten to twenty milliseconds. That gap is the whole availability case for a modular machine, which hot-swaps in minutes. Two relatives: {{eco-mode}} bets that detection and transfer finish inside that same window for every fault type rather than only the clean ones, and a redundant block holds every unit below its efficiency point by construction. **Cause: hands, over current squared.**"
+    },
+    {
+     "q": "**Row 7.** In what sense is harmonic distortion a thermal problem rather than a waveform problem?",
+     "a": "{{harmonics}} are current that does no useful work and still occupies copper, so everything they cause is heat - in transformers, and especially in neutrals, where the distortion components add rather than cancel. That is why specifications call for K-rated transformers and oversized neutrals. {{IEEE 519}} draws the property line at the {{point of common coupling}} so one customer's chopped current cannot degrade a neighbour's supply, and {{power factor}} is billed rather than merely calculated. **Cause: current squared, in its purest form.**"
+    },
+    {
+     "q": "**Row 8.** A hall is 2N on the drawing. What makes that claim false, and when is it discovered?",
+     "a": "Two paths that meet upstream. Everything below is genuinely duplicated and the common-mode point sits above where anyone looked - one transformer, one switchboard, one earthing point. It is invisible in operation and appears on the day it matters, which is what makes it the most expensive error in the subject. The row's other half is termination quality: thousands of {{rack whip}} terminations proven only in {{commissioning}}, before a single server arrives. **Cause: hands.**"
+    },
+    {
+     "q": "**Row 9.** Why is hot-swapping a server power supply an engineering achievement rather than a convenience?",
+     "a": "Because a live insertion is three hazards at once. {{ORing}} isolates a failed unit so it cannot drag the shared bus down with it; {{precharge}} tames the inrush when a fresh unit meets a live rail; and firmware rebalances {{current sharing}} across the survivors afterwards. The redundancy also costs efficiency - two supplies at half load both sit below their peak - which is precisely what {{cold redundancy}} trades away in exchange for a wake-up latency. **Cause: current squared.**"
+    },
+    {
+     "q": "**Row 10.** The internal server bus moved from twelve volts to forty-eight. By how much did the loss fall, and why is that the end of the trick?",
+     "a": "Sixteenfold, through the same copper: four times less current, and loss scales with the square of it. It is the end of the trick because the chip itself drinks about one volt at hundreds to over a thousand amps, and a thousand amps cannot be routed across a motherboard - so the last conversion happens millimetres from the silicon with no thermal margin to spare. **Cause: current squared. It is also the only row of the fourteen with a single owner, because it is the only stage entirely inside one vendor's box.**"
+    },
+    {
+     "q": "**Row 11.** What does an alternating-current arc do for free that a direct-current arc does not?",
+     "a": "It dies. An AC arc self-extinguishes a hundred and twenty times a second at the {{zero crossing}}, and a great deal of protection quietly depends on that gift - a {{vacuum interrupter}} is built around it. A DC arc has no such moment and must be extinguished deliberately: {{DC circuit breaker}}s, arc-fault management, grounding as a design decision, and {{SSCB}} devices that stop conducting in microseconds. **This lesson states the failure and stops.** The classification of DC arcs belongs to *Faults, Grounding, and the Interlock at 800 Volts*, which is not yet built - so that taxonomy is currently held by nobody, and this card says so rather than inventing one."
+    },
+    {
+     "q": "**Row 12.** Why does an enterprise sizing assumption undersize a plant for an AI hall?",
+     "a": "Because {{diversity factor}} rests on the premise that loads do not all peak together, and thousands of accelerators executing one synchronised job step do exactly that. The symptom is not a failure to start: it is frequency and voltage wandering under a load that will not sit still - tens of megawatts moving in milliseconds, rhythmically, exciting resonances below line frequency. **Cause: none of the four. It is a rate of change and a resonance, and the map has no column for it yet.**"
+    },
+    {
+     "q": "**Row 13.** A hall throttled and the electrical room is clean. Where is the fault, and why does it look electrical?",
+     "a": "In the thermal chain, which has no parallel routes: chip, cold plate, coolant, exchanger, water, air - and the worst stage limits the whole path. A pinched {{approach temperature}} anywhere is felt at the silicon. The pure case is {{low delta-T syndrome}}, caused downstream and presenting at the plant, which is where people look. And after a utility event the {{UPS}} keeps the racks making heat immediately while compressors wait out a timer measured in minutes. **Cause: heat flows through a series path.**"
+    },
+    {
+     "q": "**Row 14.** Distinguish a works test, a site test and an integrated systems test - and say which one gets cut.",
+     "a": "The works test proves the machine in the factory and the site test proves the installation. The {{integrated systems test}} is the only one that has ever failed the utility on purpose, under {{load bank}}s standing in for servers, to watch the engines catch and the redundant loop take over. It is the one that is cut, because cutting it removes no hardware and delays nothing anyone can see that day. A {{factory acceptance test}} mistaken for it is the same error wearing a certificate. **Cause: hands, in its purest form.**"
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "7 min",
+   "intro": "Five outages and one sales question. In each case the task is the same: place what is described on a row, then say who owns it.",
+   "items": [
+    {
+     "q": "The hall browned out for about forty milliseconds and one row of cabinets rebooted while everything else rode through. Which row of the map is the best first hypothesis?",
+     "c": [
+      "Row 1 - the interconnection study was re-run and the supply is now weaker",
+      "Row 8 - the rebooted row's two feeds trace back to a shared upstream point",
+      "Row 2 - a substation transformer bushing is degrading",
+      "Row 14 - the plant was never properly commissioned"
+     ],
+     "a": 1,
+     "why": "The discriminator is which equipment survived. A disturbance everything sees but only one row fails on points at that row's own redundancy rather than at the supply: {{dual-corded}} cabinets whose A and B cords ended up on one path, or a pair of feeds that meet upstream where nobody traced them. Rows 1 and 2 move dates and take out whole buildings rather than single rows. Row 14 describes why a fault was never found; it is not itself a fault."
+    },
+    {
+     "q": "A fault in one cabinet's power strip took the whole hall dark. The breakers are new, the relays self-test continuously, and nothing upstream is physically damaged. What happened?",
+     "c": [
+      "The fault current exceeded the main breaker's interrupting rating",
+      "The UPS transferred to bypass and never transferred back",
+      "The branch device and the main above it both saw the fault, and the wrong one opened first",
+      "The load-shed table shed the wrong bus"
+     ],
+     "a": 2,
+     "why": "This is row 3's signature, and it is almost never a broken device. {{time-current curve}}s that separate at moderate current converge at high fault current, so both devices pick up and the race is decided by settings rather than by intent - which is exactly what {{zone-selective interlocking}} exists to override. Load shedding belongs to row 5 and only runs when generation is short; a UPS stuck on bypass belongs to row 6 and explains a dropped load rather than an opened main."
+    },
+    {
+     "q": "A campus's protection was fully coordinated at commissioning three years ago. Since then a second hall and an extra generator have been added. What is the correct level of confidence in those settings?",
+     "c": [
+      "High - a coordination study is a permanent engineering document",
+      "Low - available fault current has changed, so every derived setting is now approximately right and nothing will alarm",
+      "High - the relays self-test continuously, so drift would be reported",
+      "Low - but only because the relays are now outside their warranty"
+     ],
+     "a": 1,
+     "why": "Protection is coordinated against the {{fault current}} available when the study was run. Adding generation, closing a tie or fitting a lower-impedance transformer changes that current, so a relay that used to see a fault may no longer see it. The {{arc flash}} labels on the doors are quietly wrong too, because the {{incident energy}} printed on them was computed from the old clearing times. Self-testing proves the relay is healthy; it says nothing about whether its settings still match this building."
+    },
+    {
+     "q": "A prospect's plant is specified N+1 and was derated for the site. On the first outage that fell on a design-day afternoon it ran as N. What was done in the wrong order?",
+     "c": [
+      "The spare was applied to the nameplate rating rather than to the derated rating",
+      "The generators were paralleled before they were synchronised",
+      "The air permit was obtained after the fleet had been purchased",
+      "The load-shed table was written before the hall was tenanted"
+     ],
+     "a": 0,
+     "why": "The correct order is connected load, then {{diversity factor}}, then {{derating}} for altitude, ambient, fuel and backpressure, and only then {{N+1}}. Applying the spare to the laboratory number silently consumes it - on a hot, high site the derate alone can be a fifth of the plate - so a plant specified as N+1 is running as N. It shows up only on an outage that coincides with a design day, which is the day it was bought for."
+    },
+    {
+     "q": "Across the fourteen rows, which of the four recurring causes is underneath the largest number of them?",
+     "c": [
+      "Current squared becoming heat",
+      "Direct current having no zero crossing",
+      "Human hands in the loop",
+      "Heat flowing through a series path"
+     ],
+     "a": 2,
+     "why": "Hands is underneath six rows, current squared five, and the two remaining physical causes one each. That ordering is the map's single most useful fact: the most-discussed hazard in the whole chain - the DC arc - is the rarest cause on it, while the commonest is a curve somebody plotted, a shed list somebody never revisited and a test somebody shortened. Three further rows trace to none of the four, and in all three the equipment works exactly as specified while the system around it does not."
+    },
+    {
+     "q": "A customer describes an outage and asks what you would sell them so that it does not happen again. The failure was row 3. What is the strongest answer?",
+     "c": [
+      "A larger UPS, because the hall dropped",
+      "That row 3 is closed by a re-run coordination study rather than by equipment - and then which rows your product does cover",
+      "A second utility feed, because one feed proved insufficient",
+      "An integrated systems test, because the plant was clearly never proven"
+     ],
+     "a": 1,
+     "why": "Row 3 is owned by the electrical contractor and the engineer who set the relays, and its fix is a document rather than a purchase. Saying so costs nothing and buys the right to be believed about the rows a product genuinely does address. The other three answers all sell hardware against a failure hardware did not cause - and a second feed can make row 8 *worse* rather than better if the two paths meet upstream, which is the error this map exists to make visible."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -41864,9 +42553,9 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the vocabulary all of it is written, priced and proven in, the last ten metres from the rack inlet to the die, and the case for converting it all to DC once, early and high.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the vocabulary all of it is written, priced and proven in, the last ten metres from the rack inlet to the die, the case for converting it all to DC once, early and high - and the map of where the whole chain breaks, with who owns each break.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-14",
+ "updated": "2026-09-16",
  "lessons": [
   "the-fence-line",
   "bridge-power",
@@ -41875,7 +42564,8 @@ function clTrackAidcGridToChip_() {
   "the-ups-room",
   "redundancy-by-the-numbers",
   "inside-the-rack",
-  "the-800-vdc-shift"
+  "the-800-vdc-shift",
+  "where-the-chain-breaks"
  ],
  "prereqs": [
   "electrical-foundations"
@@ -42040,7 +42730,8 @@ function clLessons_() {
           clLessonBreakersRelaysAndFaults_(),
           clLessonGridStabilityAndTheGenerator_(),
           clLessonStringVersusCentral_(),
-          clLessonCleanFirmPower_()];
+          clLessonCleanFirmPower_(),
+          clLessonWhereTheChainBreaks_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

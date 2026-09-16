@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 55/50`
+`Sections: 56/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.56g] — 2026-09-16 06:47:59 PM EST — v06.22r
+
+### Added
+
+- A new lesson at the end of the grid-to-chip track: a single map of where the power path from the grid to the chip actually fails, what makes it fail at each point, and which party owns each failure
+
+### Changed
+
+- The grid-to-chip track now closes on that map, and its summary says so
 
 ## [v01.55g] — 2026-09-16 06:02:51 PM EST — v06.20r
 
