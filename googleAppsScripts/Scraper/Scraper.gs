@@ -1,4 +1,4 @@
-var VERSION = "v02.11g";
+var VERSION = "v02.12g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -987,7 +987,40 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'subsequent license renewal', 'uprate', 'clean firm',
             'zero emission credit', '45U', 'HALEU', 'TRISO',
             'fuel fabrication', 'additionality', 'AP1000'],
-    source: 'guidance:landscape-clean-firm-and-nuclear-2026-09' }
+    source: 'guidance:landscape-clean-firm-and-nuclear-2026-09' },
+  // S2 session 11. The demand end of the chain, and the check had to run
+  // against BOTH arrays: SCRAPER_INTEREST_TOPIC_SEEDS (36 seeds, 220 terms)
+  // AND SCRAPER_SEGMENT_SEEDS (29 lenses, 249 terms) - 469 raw, 444 distinct,
+  // which is the denominator industry-guidance.md step 9 and 10.6 (i) ask
+  // for. A first pass here counted the topic array alone, read 220, and would
+  // have recorded `fuel cell`, `microgrid` and `TPU` as gaps; all three are
+  // held by the LENSES (seg-fuel-cells, seg-bess-datacenter's `microgrid
+  // storage`, seg-gpu-silicon). The segment's NAME band is covered twice over
+  // - topic-aidc-buildout holds `hyperscaler` and `capex`, seg-aidc holds
+  // `hyperscale` and `compute campus` - and SEVEN of the nine project seeds
+  // are this segment's own campuses, so the digest already watches its SITES.
+  // What scored ZERO is the segment's COMMERCIAL INSTRUMENTS, covering
+  // buying criteria 2, 3 and 4 plus its unit of account.
+  // Dropped and why, in full in section 11 of the analysis file: FOUR on
+  // SPLIT grounds to topic-aidc-landlords, which already holds `tenant
+  // credit` and owns the lease-credit layer from the other side of the same
+  // trade (`tenant credit`, `anchor tenant`, `credit support`, `backstop`);
+  // TWO on split grounds to the unwritten compute-and-the-rack seed
+  // (`Trainium`, `custom silicon`); TWO on split grounds to the unwritten
+  // neoclouds seed, which is the NEXT segment in the 7.3 order (`neocloud`,
+  // `merchant cloud`); FOUR as too generic (`AI lab`, `IPO`, `S-1`, `joint
+  // venture`); one as a product name (`Megapack`). `restart` scores zero and
+  // is topic-landscape-clean-firm-and-nuclear's word, recorded for that
+  // module's next revision rather than taken here; its partner `SMR` is NOT a
+  // gap - session 10 dropped it deliberately as an ambiguous abbreviation of
+  // seg-nuclear's `small modular reactor`.
+  { key: 'topic-landscape-hyperscalers-and-ai-labs',
+    label: 'Hyperscalers and AI labs: the demand book, the matching pledge and the buyer\'s own grid',
+    terms: ['remaining performance obligation', 'compute commitment',
+            '24/7 carbon-free', 'hourly matching', 'demand response',
+            'energy park', 'grid upgrade', 'speed to power',
+            'circular financing', 'frontier lab'],
+    source: 'guidance:landscape-hyperscalers-and-ai-labs-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

@@ -1,4 +1,4 @@
-var VERSION = "v01.51g";
+var VERSION = "v01.52g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -27086,7 +27086,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
  "title": "Hyperscalers and AI labs",
  "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-16",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -28034,8 +28034,8 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Reading the Eight Named Projects* (planned) · *The Gatekeeper* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Reading the Named Projects* · *The Gatekeeper* (planned).",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-hyperscalers-and-ai-labs-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Amazon, Google, Meta, Microsoft, Oracle, Anthropic, OpenAI, xAI — each member's dossier carries one in Profiler."
    ]
   },
@@ -28108,6 +28108,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
    "changed": [
     "where-it-sits"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -42545,7 +42552,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeInHallPower_(),
           guidanceDocLandscapeGridEquipment_(),
           guidanceDocLandscapeBridgeAndOnSiteGeneration_(),
-          guidanceDocLandscapeCleanFirmAndNuclear_()];
+          guidanceDocLandscapeCleanFirmAndNuclear_(),
+          guidanceDocLandscapeHyperscalersAndAiLabs_()];
 }
 
 function guidanceIndex_() {
@@ -55132,6 +55140,633 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
      ],
      "a": 1,
      "why": "One incumbent's behind-the-meter structure was rejected outright in November 2024 and re-signed front-of-the-meter, needing no federal approval at all; another filed the complaint that opened the rulemaking; a third says none of its own agreements is a co-location. All three files describe the rulebook as still being written — which makes it this segment's most consequential indicator and the one with **no date attached to it**."
+    }
+   ]
+  }
+ ]
+  };
+}
+
+// S2 session 11 (2026-09-16) - the ELEVENTH landscape and the TWENTIETH
+// guidance module. Corpus synthesis over the eight member dossiers of the
+// hyperscalers-and-ai-labs segment at the profile versions in the claims
+// ledger; no ingested document, no new research. Source of truth:
+// repository-information/industry-guidance/landscape-hyperscalers-and-ai-labs-analysis.md
+//
+// THE SMALLEST SEGMENT ANY LANDSCAPE HAS COVERED, AND THE FIRST CLOSED ONE.
+// Eight members - 5 incumbent, 3 challenger, 0 adjacent - against a previous
+// smallest of fourteen. Re-measured across all nineteen segments on
+// 2026-09-16: not one of the eight is ranked anywhere else, so the segment is
+// CLOSED (zero adjacents AND zero cross-memberships), and only two of the
+// nineteen are - this one at 8 of 8 and insurance-and-risk-transfer at 3 of 3.
+// A third segment (neoclouds) has no adjacents but is not closed. What the
+// closure means is stated on its own terms rather than borrowed: this is the
+// chain's TERMINUS. It buys from every segment above it and sells into none,
+// so nobody arrives as an adjacent and nobody leaves.
+//
+// TWO STANDING INSTRUMENTS CANNOT BE RUN HERE, AND THAT IS THE FINDING.
+// (1) Session 10's (aa2) adjacency instrument - adjacents 100 % ranked
+// elsewhere means the segment is a PRODUCT other industries make rather than
+// a LAYER they sell into - is computed over adjacents, and there are none.
+// (2) The role-inversion instruments of (x2), (y1) and (z3) need shared
+// members; all eight are pure plays, so the overlap with every one of the ten
+// built landscapes is EXACTLY ZERO. This is the first landscape-against-
+// landscape pairing in the programme with no shared member at all.
+//
+// ELEVEN NEIGHBOURS, tying session 7's record. Three guidance modules
+// (utility-aidc-procurement-2026-08 names Meta x7 and Google x2;
+// nvidia-800vdc-2026-08 names Google and Microsoft x4 each and owns this
+// segment's buying criterion 6 outright; power-infra-aidc-2026-08 names Meta
+// once), three built landscapes (aidc-developers-and-landlords, utilities,
+// storage-developers-and-ipps - one passing mention each), four public
+// lessons (reading-the-graph, bridge-power, the-aidc-power-chain, the-campus-
+// as-a-power-project) and one UNBUILT READ_NEXT lesson (utility-procurement-
+// meets-ai-load). 10.6 (j)'s full form does NOT fire - no module covers this
+// segment's parties as parties - but the boundary against the landlord
+// landscape one position down the chain is stated in the opening paragraph
+// anyway, in session 4's direction: THAT MODULE OWNS WHO BUILDS AND LEASES
+// THE HALL; THIS ONE OWNS WHO SIGNS THE LEASE AND SETS THE CAPEX.
+//
+// 7.23's TEST HOLDS ON 7.125 PER CENT, one landlord's campus-note coupon. In
+// the landlord module it is a PRICE - one rung on a four-rung credit ladder
+// spanning about 375 basis points, measuring what a tenant's credit is worth
+// to a landlord. Here it is a RULER: the backstop cap at that campus matches
+// those notes almost exactly, as two other caps match two other note issues,
+// which is the evidence that the instrument was sized to what the LENDERS
+// needed rather than to the rent.
+//
+// 10.6 (t) FIRES ON THE STRONGEST PRE-DECLARATION IN THE CORPUS SO FAR, and
+// on a second neighbour in a new shape. the-campus-as-a-power-project (row 9,
+// PUBLIC, built) reads NINE named campuses of which five are this segment's
+// own - and names not one of their parties: "One cloud company holds the
+// lease; the AI lab behind the programme is the end user." Its fourth tile
+// reads "0 league tables - no ranking of these landlords exists in this
+// corpus and this lesson does not invent one." Session 9's (z1) found a
+// public lesson reserving layer 4's job across four sections; this is one
+// reserving it ON THE LANDSCAPE'S OWN PROJECT LIST. Separately
+// reading-the-graph - the Value Chain LANE OPENER, public, read before every
+// segment lesson - uses THIS SEGMENT'S credit-substitution chain as its
+// worked example, names Google fifteen times and Anthropic twice, and names
+// the segment out loud ("Google is incumbent in Hyperscalers and AI labs").
+// A LANDSCAPE CAN BE PRE-EMPTED BY THE LESSON THAT TEACHES PEOPLE TO READ IT.
+//
+// SIX OF SIX BUYING CRITERIA HAVE NO TAUGHT OWNER, AND STRUCTURALLY SO. The
+// public segment lesson prints a dash against every one. The cause is read
+// off the generator rather than guessed: sec_what_is_bought intersects
+// CRITERION_LEXICON with the segment's own READ_NEXT, and this segment's
+// three mapped lessons appear in NO lexicon entry, so the intersection is
+// empty whatever the criteria say - and one of the three is unbuilt anyway.
+// (y3) at its strongest: a landscape that started teaching a criterion here
+// would be teaching six, which is a curriculum rather than a landscape.
+//
+// NINETEEN OMISSIONS across the eleven neighbours are enumerated in section
+// 2e of the analysis file and summarised here so a later revision cannot
+// import them and collapse the split. FROM the-campus-as-a-power-project (4):
+// the three clocks; the five-rung land-to-operating ladder; the four-parties-
+// one-lease structure; the nine-project table and its read-the-kind-column
+// rule. FROM reading-the-graph (4): what a curated edge is and how the chips
+// read; the seven relationship types and their inverses; the three-typings
+// worked example; what a segment role is and how it differs from an edge
+// type. FROM landscape-aidc-developers-and-landlords-2026-09 (3): the credit
+// ladder in basis points; the pre-leased-share gauge; any ranking of
+// landlords. FROM utility-aidc-procurement-2026-08 (3): the four procurement
+// moves; the tariff terms and the ESA instrument; the buyer map and the
+// calendar. FROM nvidia-800vdc-2026-08 (2): what the voltage change is and
+// what it deletes; the phased AC/DC coexistence roadmap - criterion 6 in its
+// entirety, so this module says only which members signed the joint position
+// and never what it says. FROM bridge-power (2): the three ways out of a
+// factory queue; the machine classes and the permit ceiling. FROM
+// utility-procurement-meets-ai-load (1), UNBUILT: the gatekeeper test itself,
+// named as unowned and not filled.
+//
+// reviewBy 2026-12-31, READ NOT SORTED for the twelfth consecutive session,
+// and this fence produced a SEVENTH distinct failure mode. Eleven
+// policyExposure entries across eight members - the thinnest any landscape
+// has faced, seven of them on one member and two members carrying none - of
+// which nine are dated and EXACTLY ONE is in the future. A day-level scan of
+// all eight dossiers confirms 2027-01-01 is the ONLY day-level future date in
+// the whole segment. It is rejected THREE times over: off-subject (a
+// frontier-model transparency statute in a module whose six criteria are all
+// power); already four modules' reviewBy; and ALREADY THIS SEGMENT'S OWN
+// GENERATED LESSON'S reviewBy, set by the generator from the same entry -
+// which is the new ground, because (r), (u) and (aa3) rejected a day another
+// MODULE held, not the clock of the artefact directly below this one. Taken
+// instead: a SEVEN-WAY convergence on end-2026 that one dossier's own
+// indicator list calls "the first hard delivery tests" - a gate rather than
+// (aa3)'s tell. 2026-12-31 is now carried by FOUR modules; the bells are
+// distinct (a tariff expiry, a fuel-and-permit convergence, a licensing
+// filing deadline and, here, a delivery checkpoint), and the only
+// alternatives were a five-way-shared off-subject day or fabricating a
+// December date the record does not state. Six rejections are in writing in
+// section 10 of the analysis file. The module ships OUTSIDE its own 30-day
+// horizon, so check-classroom-curriculum.py still reports 2 items due.
+//
+// Authored BELOW the CONTENT END fence because guidance is authored by a
+// named session, never by the unattended C2 pipeline
+// (CLASSROOM-COMMITTER-CONTRACT.md 3, enforced by P2).
+function guidanceDocLandscapeHyperscalersAndAiLabs_() {
+  return {
+ "id": "landscape-hyperscalers-and-ai-labs-2026-09",
+ "group": "The Value Chain",
+ "title": "Hyperscalers and AI Labs — the Landscape",
+ "short": "Five incumbents holding five instruments that cannot be compared, three challengers who are not taking share because they are the demand, and the only closed segment at the end of the chain.",
+ "source": {
+  "doc": "Corpus synthesis over the 8 member dossiers of the hyperscalers-and-ai-labs segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-hyperscalers-and-ai-labs-analysis.md"
+ },
+ "updated": "2026-09-16",
+ "reviewBy": "2026-12-31",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "8",
+   "v": "members on record",
+   "sub": "Five incumbent, three challenger, no adjacents — re-measured 16 September 2026 from the registry, member for member. The smallest segment any landscape has been written on; the previous smallest was fourteen, and every one of the eight carries a dossier and a study guide"
+  },
+  {
+   "k": "8 of 8",
+   "v": "belong to nothing else",
+   "sub": "Not one member is ranked in any other segment. With zero adjacents that makes this a closed segment — one of only two in the whole taxonomy — and the reason is simply that this is where the chain ends"
+  },
+  {
+   "k": "0 of 6",
+   "v": "buying criteria have a taught owner",
+   "sub": "The public segment lesson prints a dash against every one of the six, and structurally so: the three mechanism lessons mapped to this segment appear nowhere in the criterion lexicon, so the match is empty by construction. This module owns none of the six tests"
+  },
+  {
+   "k": "11",
+   "v": "policy entries across eight members",
+   "sub": "Seven of the eleven belong to one member and two members carry none at all. The thinnest policy fence any landscape has faced, and the reason this module's review date had to be read out of delivery milestones rather than out of a regulation"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held — here, a cloud platform whose energy procurement is institutionalised and running at gigawatt scale."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member attacking the segment on a route the incumbents do not hold. In this segment it means a new buyer scaling up rather than a rival selling against the five, which is why the label and the money point in opposite directions."
+  },
+  {
+   "t": "closed segment",
+   "d": "A segment with no adjacent members and no member belonging to any other segment. Only two of the nineteen are closed: this one at eight of eight, and insurance and risk transfer at three of three."
+  },
+  {
+   "t": "energy services agreement",
+   "d": "A contract under which a utility builds generation for one named customer and recovers the cost from that customer rather than from the general ratepayer base. It is the instrument behind the largest single-customer utility arrangement this corpus records."
+  },
+  {
+   "t": "remaining performance obligation",
+   "d": "Contracted revenue a company has not yet delivered, disclosed in its filings. In this segment it is the closest thing to a common measure of the demand book, and the largest of them is press-attributed roughly half to one counterparty."
+  },
+  {
+   "t": "24/7 carbon-free energy",
+   "d": "A commitment to match every hour of consumption with carbon-free generation on the same grid, rather than matching an annual total. It is the second buying criterion here, and the driver of one incumbent's entire storage programme."
+  },
+  {
+   "t": "credit backstop",
+   "d": "An undertaking by a creditworthy party to pay a tenant's rent if the tenant does not. In this segment one incumbent runs a programme of them across several landlords, and its own file reads the programme as capacity procurement wearing the clothes of credit support."
+  },
+  {
+   "t": "behind-the-meter generation",
+   "d": "Generation built on the customer's side of the utility connection, so the load never enters the interconnection queue for that capacity. One challenger built a gigawatt-class campus almost entirely this way."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "7 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with the shape, because it is a measurement and it decides how the rest reads.** Eight members: **Amazon, Google, Microsoft, Meta and Oracle** as incumbents, **OpenAI, Anthropic and xAI** as challengers, and **no adjacents at all**. Re-measured across all nineteen segments on 16 September 2026, not one of the eight is ranked anywhere else — which makes this a {{closed segment}}, one of only two in the taxonomy. The reason is not coverage: it is that this is **the end of the chain**. Every segment above sells into this one, and this one sells into none of them, so nobody arrives here as an adjacent and nobody leaves.",
+    "**The second measurement is about the curriculum rather than the market, and it sets this module's scope.** The public segment lesson prints a dash against **all six** of this segment's buying criteria. That is structural, not an oversight: the generator only names a lesson that is mapped to the segment, and the three lessons mapped here — *The AI Data-Center Power Chain*, *Reading the Named Projects* and *The Gatekeeper* — appear nowhere in its criterion index, so the match is empty whatever the criteria say. One of the three is not built at all. **So this module owns none of the six tests.** It says who sits where on each, and where a test has no owner it says that rather than teaching it.",
+    "**Now the finding. The five incumbents do not compete on one axis — each has bought a different instrument for the same thing, which is firm power at a date.** That is why there is no league table here and why this section is written instrument by instrument rather than rank by rank.",
+    "**Amazon — the portfolio, and the precedent it triggered.** The largest corporate clean-energy portfolio on earth: more than 40 GW across 700-plus projects, ranked first by a third-party tracker since 2020, and including **eleven utility-scale battery projects**. One of them targets 1 GW of solar with 1 GW / 4,000 MWh of storage, with the first 500 MW and 1 GWh phase completed in June 2025. The nuclear half is a front-of-meter PPA ramping to **1,920 MW through 2042** — restructured into that shape only after the federal regulator rejected the behind-the-meter version, **a precedent Amazon itself triggered and which every other member now structures around.**",
+    "**Google — ownership, and a credit instrument nobody else runs.** It bought its own developer outright and now co-develops generation-and-storage parks that sit behind the fence specifically to bypass the interconnection queue; it has signed **1 GW of data-centre demand response across five utilities**; and it anchors first-of-kind storage, including a 300 MW / 30 GWh iron-air battery. Separately it runs a programme of {{credit backstop}}s behind a tenant-of-record intermediary at several landlords — which its own file reads as *capacity procurement wearing the clothes of credit support*: first call on gigawatts of capacity without the leases, the land or the project debt touching its balance sheet.",
+    "**Microsoft — firmness bought upstream, and the machine deleted inside the hall.** Its flagship design deliberately runs on resilient grid power with **no on-site generators and no UPS**, accepting four-nines availability at three-nines cost. The resilience spend therefore moves above the fence line: a roughly 835 MW nuclear restart on a twenty-year PPA, a record 10.5 GW renewables framework, a ~40 GW clean portfolio and the first fusion PPA on record. Its dossier states plainly that **no major standalone battery-storage procurement has surfaced in 2025 or 2026.**",
+    "**Meta — make the utility build it, and move the campus off the balance sheet.** More than 30 GW contracted and about 7.7 GW of nuclear, but the distinguishing instrument is the {{energy services agreement}}: a utility building seven new gas plants plus three grid-scale batteries and nuclear uprates for one campus, funded by Meta. The financing instrument is its twin — roughly $41 bn of announced development cost moved into two private-capital joint ventures at 80/20, with four-year leases and a sixteen-year residual guarantee.",
+    "**Oracle — publish the menu, and pay your own way.** It does not merely buy campuses, it publishes how each one is powered: a reciprocating-engine microgrid with 115 MW already live at one site, fuel cells earmarked up to 2.45 GW at another in place of the turbines originally planned, turbines plus grid at a third, utility grid plus new battery storage at a fourth, and about 70 % renewables-plus-battery at a fifth. A January 2026 policy post codified self-funded energy as doctrine. Its own dossier calls this **the single richest observable menu of behind-the-fence power choices** in the corpus.",
+    "**Why this is not a ranking, stated so it cannot be quietly turned into one.** The five bases are a third-party portfolio ranking, a closed acquisition, a design decision, a utility docket and a set of published site pages. Those are not measures of one thing. The only figure published for all five is capex, and capex measures **the size of the buyer, not its position in this segment** — three of the five moved it twice inside a year. This module therefore states the instrument and declines the ordering."
+   ],
+   "sales": "Ask which of the five instruments the account in front of you is actually running, because it decides who your counterparty is. Portfolio and energy-park buyers put the asset decision with a developer. An energy-services buyer puts it with a utility. A no-UPS design moves the whole resilience conversation above the fence line. A published site menu means the architecture is already chosen per campus and the question is which campus."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens",
+   "read": "6 min",
+   "kind": "prose",
+   "ps": [
+    "**The registry's {{challenger}} label means something here it has meant in no previous landscape, and reading it wrongly inverts the whole section.** These three are not selling against the five. **OpenAI, Anthropic and xAI are the demand the five incumbents' order books are made of** — the plan's own taxonomy note says the labs carry the role as *new buyers scaling up*. So the label and the money point in opposite directions, and the threat has to be found somewhere other than share.",
+    "**Direction one — upward, into the incumbents' books.** One challenger's commitments are, to a first approximation, the AI half of several incumbents' backlogs: roughly $300 bn to one of them (press-attributed as about half of a $638 bn contracted-revenue figure), $250 bn of cloud purchases to another, $38 bn to a third with a reported $100 bn expansion — alongside multi-gigawatt letters with three silicon suppliers. A second challenger's book is the mirror image: up to 5 GW of one incumbent's custom accelerator at more than $100 bn over ten years, well over a gigawatt of another's in 2026 with multiple gigawatts from 2027, $30 bn of a third's cloud and up to 1 GW of merchant GPUs. **Three signatures underwrite a large share of five order books.**",
+    "**Direction two — downward, past the incumbents entirely. This is the newer half and it is what makes the label defensible.** Since mid-2026 one challenger **signs the leases and the generation orders in its own name**: a twenty-year 401 MW lease at about $19 bn, a 470 MW equipment purchase order for on-site generation, a 191 MW build-to-suit, an anchor-tenant platform with two infrastructure investors, and a February 2026 pledge to pay **100 % of the grid upgrades** its sites need and to cover the consumer price effects — voluntarily assuming what large-load tariffs are only beginning to require. Its own file states the posture precisely: rent the building, buy the power, let a lessor hold the silicon and a hyperscaler hold the credit. **An infrastructure counterparty that never becomes an owner.**",
+    "**Direction three — sideways, which is the one nobody predicted.** The third challenger proved a gigawatt-class campus can skip the queue: about 1.0 GW of nameplate compute draw by March 2026 from zero in 2023, powered almost entirely by self-deployed {{behind-the-meter generation}} buffered by the largest battery installation of its kind, with utility allocations covering only a fraction of campus load. It now sells that capacity **back up the chain** — one incumbent pays about $920 m a month for roughly 110,000 GPUs at its sites from October 2026, and a fellow challenger pays $1.25 bn a month for an entire campus. **A challenger in this segment is simultaneously an incumbent's largest customer, a landlord's tenant and an incumbent's supplier.**",
+    "**So what is the threat, stated as this module's own judgment rather than as a fact from a file?** It is **disintermediation of the procurement function** — the exact thing the five instruments in the previous section exist to perform. If a lab can sign a twenty-year lease, order 470 MW of generation and pay for the grid upgrades itself, then the hyperscaler's balance sheet stops being the scarce input, and what the five are selling reduces to silicon and operations.",
+    "**And here is the counter-evidence, which is why this is a threat rather than an outcome.** Every one of the three is financed by the five. One incumbent holds about $190 bn of one challenger's paper and a second holds about 14 % of its equity, contractually capped at 15 %; a third holds about 27 % of another challenger; the third challenger was absorbed by a sister company and its own filing makes it IPO-dependent. **The circularity is contractual rather than rhetorical** — one investor's $20 bn facility releases against that investor's own delivery milestones as a supplier. A buyer that disintermediates its own funder has not disintermediated anything yet."
+   ],
+   "sales": "Do not sell to these three as if they were start-ups and do not sell to them as if they were the five. Two of them now run their own energy procurement with their own signatures on twenty-year paper, which means there is a real buying centre to find — and one of them has said in public that it will pay 100 % of the grid upgrades, which is the most generous counterparty posture in the corpus. The qualifying question is whether the account signs its own leases yet."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off each dossier's own strategy section and labelled as judgment, never blended with fact. **Eight rows because the ranked roster is eight.** This is the smallest segment any landscape has covered and the table is not padded to look like the others: there are no adjacents to omit, and inventing a ninth row would be inventing a member.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet (analysis)"
+   ],
+   "rows": [
+    [
+     "Amazon",
+     "incumbent",
+     "That **the complete machine wins** — paired solar-and-storage PPAs at GWh scale, about 2 GW of front-of-meter nuclear, small-reactor construction plans and eleven named battery projects — and that a **dual-silicon hedge** (its own accelerator for one lab, merchant GPUs for the rest) converts compute supply into balance-sheet gains no rival replicates at this scale. Its own file states the cost without softening it: trailing free cash flow swung from **+$38.2 bn to negative** while capex guidance rose toward $220 bn"
+    ],
+    [
+     "Google",
+     "incumbent",
+     "That **owning beats procuring** — buying its developer, co-developing generation parks behind the fence, anchoring first-of-kind storage — and that a backstop programme buys first call on gigawatts without the debt appearing anywhere on its own balance sheet. Its file is explicit that the equity strip is **negotiated, not structural**, and that it was negotiated away: about 14 % of one landlord, about 5.4 % of the next, and **nothing at all** on the largest and latest lease"
+    ],
+    [
+     "Microsoft",
+     "incumbent",
+     "That **resilience belongs upstream of the fence line** — a flagship design with no generators and no UPS, four-nines availability at three-nines cost, paid for with nuclear, a 10.5 GW renewables framework and a fusion option. The demand case is the best-documented of the five: a **$678 bn backlog growing faster than capex**, so the buildout is substantially pre-sold. The exposure is a single restart date, and its own file reads slippage as pushing firming demand toward gas and storage across the whole sector"
+    ],
+    [
+     "Meta",
+     "incumbent",
+     "That **the highest-beta position is the right one** — no cloud revenue absorbs the spend, so the capex and a 6.6 GW nuclear package inside a roughly 7.7 GW nuclear book are a bet that the products monetise, with free cash flow collapsing to sub-$1 bn quarters as the measurable cost. The instrument is to make the **utility** build the generation and a **private-capital joint venture** hold the campus. Its file reads the resulting ratepayer proceeding as the sector's regulatory bellwether: a judge has compelled demand-evidence disclosure and a commissioner has dissented on fifteen-year contracts against thirty-year plant lives"
+    ],
+    [
+     "Oracle",
+     "incumbent",
+     "That **a concentrated landlord bet is worth its funding cost** — $638 bn of contracted revenue, roughly half press-attributed to a single counterparty, funded by debt and equity at a scale that made its credit default swaps a market-wide barometer for AI-capex risk. Its file is candid that the economics are thin near-term (free cash flow −$23.7 bn, leaked gross margins of about 14–16 % on GPU rentals against about 70 % on the legacy book). The power half is deliberate, and it is the one thing it publishes in full"
+    ],
+    [
+     "OpenAI",
+     "challenger",
+     "That **commitment is the instrument** — about $1.4 tn and roughly 30 GW acknowledged by its own chief executive, which reprice every counterparty's order book on announcement. Its file states the fragility in the same breath: the financing is **circular by construction**, the same dollars appearing as vendor revenue, as its own funding and as counterparty backlog. The bridge between about $25 bn annualised and $750 bn of planned compute through 2030 is serial mega-raises and a public listing"
+    ],
+    [
+     "Anthropic",
+     "challenger",
+     "That **the buyer should remove its own binding constraint** — a three-silicon hedge on suppliers who are also its shareholders, and then, from mid-2026, leases, generation orders and a grid-upgrade pledge in its own name. Its file calls the make-versus-lease answer *neither*: rent the building, buy the power, let a lessor hold the silicon. The exposure it names itself is **delivery-date risk larger than allocation risk**, with start-up counterparties carrying the execution and the book's start dates concentrated in one window"
+    ],
+    [
+     "xAI",
+     "challenger",
+     "That **speed-to-power beats model quality as a differentiator** — behind-the-meter gas plus battery buffering skipping the queue outright, 64-to-91-day cluster bring-ups, and turbine procurement that made it one of the largest mobile-turbine buyers anywhere. The same playbook is the risk template in its own file: a federal air-quality suit, four different turbine counts with four different evidentiary statuses, and a self-recorded $399 m accrual. Related-party procurement is **structural rather than incidental**, and vendors should assume the affiliate gets first look at any storage scope"
+    ]
+   ],
+   "note": "**The eight rows are not comparable to each other and are not meant to be.** Two of the incumbents are betting on instruments they own, one on an instrument it has deleted, one on an instrument a utility owns and one on publishing the menu. Two of the challengers are betting that commitments create supply and the third that supply can be self-built. Reading down the column is the point; ranking across it is not available from anything in this corpus.",
+   "sales": "The bet column is the fastest way to a first meeting that does not waste it. An account betting on the complete machine wants to hear about its developers' asset choices. One betting on deleting the machine does not want a UPS conversation at all and does want a grid-interactive one. One betting on speed wants a delivery date before it wants a price."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it. **Where the record dates something only to a month, a quarter or a year, the row says so** rather than supplying a day — and here that is the dominant case, not the exception: a day-level scan of all eight dossiers found **exactly one future day-level date in the whole segment**, and it belongs to a statute about model disclosure rather than to anything about power.",
+   "cols": [
+    "Watch",
+    "When the record dates it",
+    "Why it moves the segment"
+   ],
+   "rows": [
+    [
+     "The delivery checkpoint — one lab's custom-silicon programme reaching *nearly 1 GW*, and its landlord programme's sites *online throughout 2026*",
+     "**End-2026.** That lab's own indicator list calls these *the first hard delivery tests*",
+     "The whole segment is priced on commitments. This is the first date on which a commitment either became megawatts or did not — and it is **this module's own review date**"
+    ],
+    [
+     "The flagship campus's announced-to-operational gap",
+     "**1.2 GW projected by Q4 2026**, against about 0.3 GW live",
+     "The single most load-bearing ratio in the segment, stated independently by two dossiers. One expansion at the same campus has already been reversed"
+    ],
+    [
+     "A frontier lab's public registration statement, filed confidentially on 1 June 2026",
+     "**Q4 2026 expected** — quarter only",
+     "It would replace every press-sourced revenue and commitment figure in this module, and name the credit provider behind two leases that no source has named"
+    ],
+    [
+     "A nuclear restart reaching commercial operation",
+     "**2027 — year only.** No month is stated in any source read",
+     "The best-documented firm-power bet of the five incumbents. Its own file reads slippage as pushing firming demand toward gas and storage sector-wide"
+    ],
+    [
+     "A state commission's second phase on about 5.2 GW of customer-funded gas, after a first phase of about 2.3 GW was approved",
+     "**Open — no date stated anywhere**",
+     "The template argument for every multi-gigawatt campus. A judge has already compelled demand-evidence disclosure and a commissioner has dissented on contract term against plant life"
+    ],
+    [
+     "Mobile turbines coming off a self-built campus under an environmental agreed order, with a permitted permanent plant behind them",
+     "**August 2026 to July 2027** — a removal window, not a date",
+     "Whether the fastest behind-the-fence build in the corpus converts into permanent permitted plant, or whether the permit path turns out to be the constraint the queue was"
+    ],
+    [
+     "An incumbent paying a challenger for compute at its own sites",
+     "**From October 2026** — month only, about $920 m per month to June 2029",
+     "The clearest single instance of the inversion this module is about: the segment's demand renting capacity from the segment's demand"
+    ],
+    [
+     "Custom-silicon delivery against three separate accelerator programmes",
+     "**End-2026 initial deployment for one; 2027 for another; and for the third, the record says only starting in 2027**",
+     "Each is a gigawatt-denominated commitment whose power draw lands in somebody's hall. Where the silicon slips, the power schedule slips with it"
+    ]
+   ],
+   "sales": "Rows two and seven are the ones to put in front of a sceptical sales manager. The first says the flagship campus is at about 0.3 GW live against 1.2 GW projected by Q4 2026 and more than 9 GW by 2029; the second says one of the five incumbents has begun renting compute from one of the three challengers. Both are in the record, both are dated, and both change how an account plan should be written."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell storage, the headline finding is uncomfortable and it is a measurement: not one of the five incumbents buys behind-the-meter storage at its own campus, and the only on-campus battery fleet in the whole segment belongs to a challenger.** Read member by member from their own files —",
+    "One incumbent's dossier splits its storage demand into three explicit layers and says the campus layer has **no announced deployments at all**, drawing the contrast with the challenger's fleet itself. Its utility-scale layer is PPAs in which **the developer owns the asset and chooses the cells**, so the equipment decision sits with the developer. A second states its exposure runs through **utility-side tolled storage** and finds no evidence of behind-the-meter batteries at either flagship campus, naming its utility counterparties as the sales channel outright. A third records **no major standalone battery procurement in 2025 or 2026** and a flagship design that deletes the UPS. A fourth's storage is real and large but sits at the **generation park**, behind its own developer's fence rather than in the white space. The fifth's batteries appear on two of its five published site architectures and in both cases belong to the utility or the renewables package.",
+    "**So the storage channel into this segment is the members' counterparties, not the members.** Qualify the developer who owns the utility-scale asset, the utility who owns the tolled fleet, and — in the one on-campus case — accept that the file says an affiliate gets first look at any storage scope. **The third layer is the interesting one and it is not yet measurable:** rack-level backup inside the white space, which one dossier calls *where AI-specific battery demand actually lands*, appears only in reporting from unnamed sources that names the same cell maker in parallel talks with three of these five, confirmed by nobody. Carry it as reporting, and say so when you carry it.",
+    "**If you sell AIDC power, the posture inverts.** This is the segment that **writes the architecture** — one of its six buying criteria is reference-architecture control passed down to landlords and vendors, and two of the five incumbents co-signed the joint industry position that defines it. It is also the segment that **pays for the grid**: one challenger has pledged 100 % of the grid upgrades its sites need, one incumbent has codified self-funded energy as doctrine, and one incumbent is funding a utility's entire new gas fleet. The practical consequences are three. The specification is written above you and reaches you through the landlord. The buying centre for firm power is the tenant's own energy team, not the landlord's. And the clock you are selling against is **a delivery date rather than a price** — the one member that buys generation equipment outright has placed a 470 MW order whose sites and dates its file says are **not disclosed**.",
+    "**One caution for both paths.** The segment's own definition calls these the largest and most institutionalised energy buyers in the ecosystem, and the record supports that. But **the credit behind a campus is routinely not the company in the headline** — the public lane-opener lesson teaches exactly this on this segment's own lease chain — so establish which of landlord, tenant of record, credit support and end user you are actually contracting with before you price anything."
+   ],
+   "sales": "Two sentences to take into a pipeline review. For storage: the addressable buyer in this segment is almost never the member itself, so build the account plan around its developers and utilities and treat any rack-level backup story as unconfirmed reporting. For AIDC power: the member is the right account, the criterion is a date rather than a price, and the specification has usually been set before the conversation starts."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's eight member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 16 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Four claims in this module are the module's own** and are labelled as analysis wherever they appear: that the closure makes this segment the chain's terminus; that the five incumbents hold five non-comparable instruments rather than five ranks; that the challengers' threat is disintermediation of the procurement function rather than share; and every row of the bets table.",
+   "rows": [
+    [
+     "Segment holds 8 members — 5 incumbent, 3 challenger, 0 adjacent; chain position 13, tier demand; and the registry entry carries NO notes field",
+     "profiler-segments.json @ v06.10r — segments[].members[], .position, .tier"
+    ],
+    [
+     "Not one of the eight members is ranked in any other segment, so the segment is closed; only two of the nineteen segments are (this one and insurance-and-risk-transfer)",
+     "profiler-segments.json @ v06.10r — every segments[].members[].slug, cross-checked"
+    ],
+    [
+     "The definition names the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream, and the tenants whose credit shapes the leases below them",
+     "profiler-segments.json @ v06.10r — segments[].definition"
+    ],
+    [
+     "The six buying criteria, verbatim, and the plan's note that the labs carry challenger as new buyers scaling up",
+     "profiler-segments.json @ v06.10r — segments[].buyingCriteria; CLASSROOM-CURRICULUM-PLAN.md 10.2 and 10.11"
+    ],
+    [
+     "All six buying criteria print a dash in the public segment lesson, because the three lessons mapped to this segment appear in no entry of the generator's criterion index",
+     "scripts/build-classroom-segments.py — READ_NEXT and CRITERION_LEXICON, intersected in sec_what_is_bought"
+    ],
+    [
+     "40-plus GW across 700-plus projects, first by a third-party ranking since 2020, eleven utility-scale battery projects, 1 GW solar with 1 GW / 4,000 MWh at one of them, phase one 500 MW and 1 GWh complete June 2025",
+     "profile:amazon @ v10 — ecosystemRole"
+    ],
+    [
+     "Nuclear PPA ramping to 1,920 MW through 2042, restructured front-of-meter after the federal regulator rejected the behind-the-meter version, a precedent Amazon itself triggered",
+     "profile:amazon @ v10 — policyExposure[0], ecosystemRole"
+    ],
+    [
+     "Three storage layers that must not be conflated: developers own the utility-scale assets and choose the cells; no announced campus deployments at all; rack-level backup is where AI-specific battery demand actually lands",
+     "profile:amazon @ v10 — strategyRead[5]"
+    ],
+    [
+     "Rack-level backup supply reported only through unnamed sources, the same supplier reported in parallel talks with three of these members, confirmed by neither side",
+     "profile:amazon @ v10 — strategyRead[6]"
+    ],
+    [
+     "Trailing free cash flow swung from +$38.2 bn to negative while capex guidance rose toward $220 bn",
+     "profile:amazon @ v10 — strategyRead[3], summary"
+    ],
+    [
+     "Developer acquired outright; energy parks co-locate generation and storage behind the fence to bypass the interconnection queue; 1 GW of demand response across five utilities; a 300 MW / 30 GWh iron-air battery",
+     "profile:google @ v9 — ecosystemRole, strategyRead[0], strategyRead[2], recentDevelopments"
+    ],
+    [
+     "The backstop programme read as capacity procurement wearing the clothes of credit support; the caps are debt-sized rather than lease-sized, matching the landlords' note sizes almost exactly; exposure ramps with delivered capacity",
+     "profile:google @ v9 — ecosystemRole, strategyRead[6]"
+    ],
+    [
+     "The equity strip is negotiated rather than structural and was negotiated away — about 14 % at one landlord, about 5.4 % at the next, nothing at all on the largest and latest lease",
+     "profile:google @ v9 — strategyRead[7], recentDevelopments"
+    ],
+    [
+     "Flagship design runs on resilient grid power with no on-site generators and no UPS, four-nines availability at three-nines cost; resilience spend moves upstream of the fence line",
+     "profile:microsoft @ v4 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "About 835 MW nuclear restart on a twenty-year PPA with a $1 bn federal loan, a record 10.5 GW renewables framework, a ~40 GW clean portfolio, the first fusion PPA; no major standalone battery procurement surfaced in 2025 or 2026",
+     "profile:microsoft @ v4 — summary, ecosystemRole, policyExposure[0]"
+    ],
+    [
+     "A $678 bn commercial backlog growing at +84 %, faster than capex, so the buildout is substantially pre-sold",
+     "profile:microsoft @ v4 — strategyRead[0], summary"
+    ],
+    [
+     "More than 30 GW contracted, about 7.7 GW of nuclear; the utility building seven gas plants plus three grid-scale batteries and nuclear uprates for one campus; BESS exposure runs through utility-side tolling with no behind-the-meter batteries at either flagship",
+     "profile:meta @ v9 — ecosystemRole, strategyRead[2], recentDevelopments"
+    ],
+    [
+     "About $41 bn of announced development cost moved into two private-capital joint ventures at 80/20, with four-year leases and a sixteen-year residual guarantee; free cash flow collapsing to sub-$1 bn quarters",
+     "profile:meta @ v9 — strategyRead[0], strategyRead[1], recentDevelopments"
+    ],
+    [
+     "The ratepayer proceeding read as the sector's regulatory bellwether: a judge compelling demand-evidence disclosure and a commissioner dissenting on fifteen-year contracts against thirty-year plant lives",
+     "profile:meta @ v9 — policyExposure[0], strategyRead[3]"
+    ],
+    [
+     "Five simultaneously active and different site architectures — engine microgrid with 115 MW live, fuel cells up to 2.45 GW replacing planned turbines, turbines plus grid, utility grid plus new battery storage, about 70 % renewables plus battery — codified by a January 2026 self-funded-energy policy post",
+     "profile:oracle @ v4 — ecosystemRole, strategyRead[2], recentDevelopments"
+    ],
+    [
+     "$638 bn of remaining performance obligations at +363 %, roughly half press-attributed to one counterparty and never split by the company; free cash flow −$23.7 bn; leaked gross margins about 14–16 % on GPU rentals against about 70 % legacy; credit default swaps became a market-wide AI-capex barometer",
+     "profile:oracle @ v4 — summary, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "About $1.4 tn and roughly 30 GW of infrastructure commitments acknowledged by the chief executive; per-counterparty tallies of about $300 bn, $250 bn, $38 bn plus a reported $100 bn, and multi-gigawatt letters with three silicon suppliers",
+     "profile:openai @ v5 — summary, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "The financing is circular by construction — the same dollars appear as vendor revenue, as funding and as counterparty backlog — and about $25 bn annualised stands against $750 bn of planned compute through 2030",
+     "profile:openai @ v5 — strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "About 0.3 GW live at the flagship campus against 1.2 GW projected by Q4 2026 and more than 9 GW projected by 2029; one expansion at that campus was reversed",
+     "profile:openai @ v5 — technicalSpecs, strategyRead[3]"
+    ],
+    [
+     "From mid-2026 the lab signs leases and generation orders itself: a twenty-year 401 MW lease at about $19 bn, a 470 MW equipment purchase order with no sites or dates disclosed, a 191 MW build-to-suit, an anchor-tenant platform with two infrastructure investors",
+     "profile:anthropic @ v3 — ecosystemRole, strategyRead[1], recentDevelopments"
+    ],
+    [
+     "Up to 5 GW of one incumbent's accelerator at more than $100 bn over ten years; well over a gigawatt of another's in 2026 with multiple gigawatts from 2027; $30 bn of a third's cloud and up to 1 GW of merchant GPUs",
+     "profile:anthropic @ v3 — summary, strategyRead[0]"
+    ],
+    [
+     "The February 2026 pledge to pay 100 % of the grid upgrades needed to interconnect its data centres and to cover demand-driven consumer price effects — voluntarily assuming what large-load tariffs are beginning to require",
+     "profile:anthropic @ v3 — policyExposure[6], recentDevelopments"
+    ],
+    [
+     "Delivery-date risk assessed as larger than allocation risk, with the book's start dates concentrated in one window and start-up counterparties carrying the execution; end-2026 named as the first hard delivery tests",
+     "profile:anthropic @ v3 — strategyRead[3], strategyRead[8]"
+    ],
+    [
+     "One incumbent holds about $190 bn of the lab's paper and a second about 14 % of its equity, contractually capped at 15 %; a $20 bn facility releases against that investor's own compute-delivery milestones",
+     "profile:anthropic @ v3 — strategyRead[0], recentDevelopments"
+    ],
+    [
+     "About 1.0 GW of nameplate compute draw by March 2026 from zero in 2023, almost entirely on self-deployed generation buffered by the largest installation of its battery type; utility allocations cover only a fraction of campus load",
+     "profile:xai @ v4 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Cluster bring-ups of 64 to 91 days independently corroborated; about $3.7 bn of 2026 turbine commitments; a federal air-quality suit, four different turbine counts with different evidentiary statuses, and a self-recorded $399 m accrual",
+     "profile:xai @ v4 — strategyRead[0], strategyRead[1], recentDevelopments"
+    ],
+    [
+     "Related-party procurement described as structural rather than incidental, with the recommendation that vendors assume the affiliate gets first look at any storage scope",
+     "profile:xai @ v4 — strategyRead[3]"
+    ],
+    [
+     "Mobile turbines under an environmental agreed order with removal running August 2026 to July 2027, behind a permitted permanent 1.2 GW behind-the-meter plant",
+     "profile:xai @ v4 — technicalSpecs, recentDevelopments"
+    ],
+    [
+     "One incumbent pays about $920 m per month for roughly 110,000 GPUs at the challenger's sites, October 2026 through June 2029; a fellow challenger pays $1.25 bn per month for an entire campus",
+     "profile:google @ v9 and profile:xai @ v4 — recentDevelopments (both sides); profile:anthropic @ v3 — recentDevelopments"
+    ],
+    [
+     "Eleven policyExposure entries across the eight members, seven of them on one member and two members carrying none; nine carry an effectiveDate and exactly one is in the future",
+     "profile:amazon, google, meta, microsoft, oracle, anthropic, openai, xai — policyExposure[] counted at the versions above"
+    ],
+    [
+     "The one future effective date in the fence is 2027-01-01, a state frontier-AI transparency statute — also the review date of four registered modules and of this segment's own generated lesson",
+     "profile:anthropic @ v3 — policyExposure[2]; Classroom.gs — guidanceDocs() reviewBy fields and clLessonSegmentHyperscalersAndAiLabs()"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "3 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "Seven absences. Each one is **stated by the dossier that has it**, not inferred from silence — and on a segment this small the absences carry more weight than usual, because there is no eighth or ninth member to fill them in.",
+    "**1. No contract price, anywhere, for any of the eight.** Not one dossier publishes a per-megawatt-hour figure for a nuclear, renewable or firm contract. The second buying criterion is priced in no source this segment holds.",
+    "**2. No behind-the-meter campus storage for four of the five incumbents** — and three of them say so in their own files, one of them calling the absence *a genuine structural contrast* with the challenger that has a fleet.",
+    "**3. No battery vendor is named anywhere in the utility-scale layer.** One dossier says its renewables disclosures name developers but never battery vendors, and explicitly refuses the obvious inference from a developer's corporate stake as *an untested inference, not a sourced fact*.",
+    "**4. No rack-level backup supply agreement is confirmed by anybody.** The only reporting rests on unnamed sources at trade outlets, names the same supplier in parallel talks with three of these members, and is confirmed by neither side of any of them.",
+    "**5. No customer split for the largest contracted-revenue figure in the segment.** The company has never disclosed it; the *roughly half* attribution is press reporting, and analysts openly handicap collectability in the same dossier.",
+    "**6. No consolidated capacity total, fiscal-year revenue, compute spend, burn or headcount** for the challenger with the deepest file — its own collection-gaps note lists all five — and the credit-support provider behind two of its leases is **unnamed in every source read**.",
+    "**7. No league table of these eight exists in this corpus.** The public campus lesson says the same thing one layer down, in as many words, and declines to invent one. This module states five instruments and declines the ordering for the same reason: the bases do not compare."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "read": "5 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What does it mean that this segment is *closed*, and how many segments are?",
+     "a": "Closed means **zero adjacent members and no member belonging to any other segment**. Only **two** of the nineteen are: this one at **8 of 8 pure plays**, and insurance and risk transfer at 3 of 3. A third segment has no adjacents but is not closed, because four of its seven members are ranked elsewhere too."
+    },
+    {
+     "q": "Why does nobody arrive in this segment as an adjacent?",
+     "a": "Because it is **the chain's terminus**. It buys from every segment above it and sells into none of them, so there is no other business that makes end demand as a sideline. Adjacency exists where a company's main business is somewhere else; here there is no somewhere else."
+    },
+    {
+     "q": "How many of this segment's six buying criteria have a lesson that teaches them, and why?",
+     "a": "**None of the six.** The public segment lesson prints a dash against every one, and the reason is structural: the generator only names a lesson mapped to the segment, and this segment's three mapped lessons appear in **no entry** of its criterion index, so the match is empty whatever the criteria say. One of the three is not built at all. **This module owns none of the six tests and does not teach them.**"
+    },
+    {
+     "q": "The five incumbents all buy firm power. What actually separates them?",
+     "a": "**Five different instruments, not five ranks.** A portfolio plus a front-of-meter nuclear PPA; an acquired developer plus a credit backstop programme; firmness bought upstream with the in-hall machine deleted; a utility building the generation under an energy services agreement with the campus in a private-capital joint venture; and a published per-site architecture menu with self-funded energy as doctrine."
+    },
+    {
+     "q": "Why is a league table of these five not available?",
+     "a": "Because the five bases are **a third-party portfolio ranking, a closed acquisition, a design decision, a utility docket and a set of published site pages** — not measures of one thing. The only figure published for all five is capex, which measures the size of the buyer rather than its position here, and three of the five moved it twice in a year."
+    },
+    {
+     "q": "In what sense are the three challengers a threat, given that they are the incumbents' customers?",
+     "a": "Not share — **disintermediation of the procurement function**. Two of the three now sign twenty-year leases, buy generation and pledge grid upgrades in their own names, which is what the incumbents' five instruments exist to do. The counter-evidence is that all three are financed by the five, with one investor's facility releasing against its own delivery milestones as a supplier."
+    },
+    {
+     "q": "What is the single measurement a storage seller should take away from this segment?",
+     "a": "That **the addressable buyer is almost never the member**. Four of the five incumbents have no behind-the-meter campus storage — three say so themselves — and the utility-scale layer is developer-owned, so the cell choice sits with the developer. The only on-campus fleet in the segment belongs to a challenger, whose own file says an affiliate gets first look at any storage scope."
+    },
+    {
+     "q": "This module's review date is a delivery checkpoint rather than a regulation. Why?",
+     "a": "Because the fence has **eleven policy entries across eight members, nine dated and exactly one in the future** — a model-transparency statute that is off-subject, already four modules' review date, and already this segment's own generated lesson's clock. The record instead converges on end-2026 from seven directions, and one dossier calls that point *the first hard delivery tests*, which is a gate rather than a signal."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "read": "6 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague asks you to rank this segment's five incumbents from strongest to weakest on energy. What is the right response?",
+     "c": [
+      "Rank them by contracted clean-energy gigawatts, the one figure that exists for most of them",
+      "Rank them by capex, which all five publish and update quarterly",
+      "Decline the ordering: the five positions rest on a portfolio ranking, a closed acquisition, a design decision, a utility docket and a set of published site pages, which are not measures of one thing, and no source here ranks across them",
+      "Rank them by nuclear megawatts contracted, since firmness is the binding constraint"
+     ],
+     "a": 2,
+     "why": "Gigawatts contracted fails because one of the five deliberately deletes in-hall machinery and buys firmness upstream instead, so the figure measures a different strategy rather than a weaker one. Capex fails harder: it measures **the size of the buyer, not its position in this segment**, and three of the five moved it twice inside a year. Nuclear megawatts fails for the same reason as the first — it ranks one instrument as though it were the only one."
+    },
+    {
+     "q": "The registry calls three of these eight members *challengers*, and those three are among the largest sources of demand in the whole corpus. What does the label actually mean here?",
+     "c": [
+      "The registry is using the role loosely and it should be read as a coverage note rather than a position",
+      "New buyers scaling up — so the label and the money point in opposite directions, and the threat has to be found in how they buy rather than in share taken",
+      "Companies with less revenue than the incumbents, which is what challenger means everywhere in the registry",
+      "Suppliers attacking the incumbents' cloud businesses on price"
+     ],
+     "a": 1,
+     "why": "The plan's own taxonomy note says the labs carry the role **as new buyers scaling up**. Reading it as a size ranking inverts the section: one of the three underwrites roughly half of one incumbent's entire contracted-revenue figure. The threat that is actually present is **disintermediation of procurement** — two of the three now sign their own leases, buy their own generation and pay their own grid upgrades."
+    },
+    {
+     "q": "Eight of eight members here belong to no other segment, and there are no adjacents. What is the correct inference?",
+     "c": [
+      "The segment is under-covered and more members will be added as the corpus fills",
+      "The registry's adjacent role was applied inconsistently to this segment",
+      "That this is the chain's terminus: it buys from every segment above it and sells into none, so no other business makes end demand as a sideline and nobody is ranked here and elsewhere",
+      "That the segment sits high in the chain, where adjacency is unusual"
+     ],
+     "a": 2,
+     "why": "It is a measurement rather than a gap — checked against all nineteen segments, only **two are closed**, this one and insurance and risk transfer, and the three-segments-with-no-adjacents set is larger than the closed set. The consequence for a reader is practical: the standing instrument that reads a segment's adjacents for what kind of thing the segment is **cannot be run here at all**, and neither can the role-inversion comparison against a neighbouring landscape, because there are no shared members to invert."
+    },
+    {
+     "q": "You are selling containerised storage and you have a meeting with one of the five incumbents. What is the most useful thing this module tells you before you walk in?",
+     "c": [
+      "That the segment's capex is large enough that the opportunity is proportional",
+      "That four of the five have no behind-the-meter campus storage, the utility-scale assets are developer-owned and developer-specified, and the real channel is the member's counterparties rather than the member",
+      "That reference-architecture control is one of the six buying criteria, so lead with the architecture",
+      "That the segment's nuclear programmes will reduce storage demand over time"
+     ],
+     "a": 1,
+     "why": "Three of the five state the absence in their own files, one of them explicitly contrasting itself with the challenger that does have a campus fleet. The utility-scale layer is PPAs where **the developer owns the asset and chooses the cells**. Leading with architecture is the right move for an AIDC-power seller and the wrong one here; and nothing in the record supports the nuclear-displaces-storage claim, which is an inference no dossier makes."
+    },
+    {
+     "q": "A landlord's announcement says a hyperscaler is behind a new 400 MW campus. What does this module tell you to do, and what does it leave to the public curriculum?",
+     "c": [
+      "Take the hyperscaler as the counterparty; this module ranks the members and that is the ranking",
+      "Establish which of landlord, tenant of record, credit support and end user that company actually is, because they are routinely four different parties — while leaving the lifecycle, the five-rung ladder and the reading method to the public campus and graph lessons",
+      "Discount the announcement, since the module shows headline gigawatts are mostly undelivered",
+      "Check the module's claims ledger for the campus, which carries every lease in the segment"
+     ],
+     "a": 1,
+     "why": "The four-parties structure and how to read a campus announcement are taught **in public**, by the campus lesson and the lane-opener graph lesson — the latter worked on this segment's own credit chain. This module deliberately carries neither. What it adds is which named company is playing which part and at what size, which is the layer-four judgment the public lessons decline to make: one of them says outright that no ranking exists in this corpus and that it will not invent one."
     }
    ]
   }

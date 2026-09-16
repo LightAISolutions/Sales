@@ -886,11 +886,35 @@ def run_gate_truth_table(src, lesson_ids=()):
     # ONE-FOR-ONE onto the segment's five challengers. It also has SIX built
     # landscape neighbours, a record, with a BIMODAL inversion rate (in-hall
     # power 6 of 6, grid equipment 0 of 3).
+    # 19 at S2 session 10 (landscape-clean-firm-and-nuclear-2026-09,
+    # 2026-09-16), where the split was drawn by a lesson that DOES NOT EXIST
+    # YET: a built public lesson hands the physics off by name to
+    # clean-firm-power, curriculum plan 7 row 16, unbuilt - so the material it
+    # declined is held by nobody and the module names the gap rather than
+    # filling it. Its other finding was an instrument: with an EMPTY registry
+    # notes field, the lopsided roster was answered by measurement instead -
+    # eleven of eleven adjacents ranked elsewhere, uniformly demoted INTO the
+    # segment, which reads as the segment being a PRODUCT other industries
+    # make rather than a LAYER they sell into.
+    # 20 at S2 session 11 (landscape-hyperscalers-and-ai-labs-2026-09,
+    # 2026-09-16): the SMALLEST segment any landscape has covered (eight
+    # members against a previous smallest of fourteen) and the FIRST CLOSED
+    # one - zero adjacents AND not one member ranked in any other segment, one
+    # of only two closed segments in the taxonomy. The closure disables two
+    # standing instruments rather than merely being unusual: session 10's
+    # adjacency instrument is computed over adjacents and there are none, and
+    # the role-inversion comparisons of sessions 7, 8 and 9 need shared
+    # members, of which this segment has EXACTLY ZERO with all ten built
+    # landscapes. It also has SIX of six buying criteria with no taught owner,
+    # and structurally - the three lessons READ_NEXT maps to it appear in NO
+    # CRITERION_LEXICON entry, so the generator's intersection is empty by
+    # construction. Eleven neighbours, tying session 7's record, with
+    # NINETEEN omissions enumerated in its header comment.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 19:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 19" % len(gids))
+    if len(gids) != 20:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 20" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:
