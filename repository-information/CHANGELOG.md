@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.14r] — 2026-09-16 05:42:34 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **The deploy counters recorded from the job log, and the reconciliation holds for a second consecutive cycle.** Exactly **one** `.gs` file in the v06.13r merge diff fired **exactly one deploy step and logged exactly one line**, confirming on the **first GET** — the twenty-first resolution of the §7.19 order on its two reads:
+  - `Classroom deploy confirmed (GET): Updated to v01.53g (deployment 65) | 65/200`
+- **Every other `Deploy <Project>` step exited 0 silently on its own `git diff` guard and logged nothing at all** — including `Deploy Scraper`, which is why Scraper stands unchanged at **157/200**. That is the counter rule's "a step that never fires consumes none and logs nothing" branch, observed cleanly.
+- **Classroom's deployment number and its tally are EQUAL for a second consecutive cycle** — 64/64 at v06.12r, 65/65 here. This holds v06.12r's correction of the v06.10r reading: the divergence there (63 against 62/200) was a **read-time artefact of an unconfirmed leg**, not a standing offset, and both figures derive from the same state. Real headroom: Classroom **200 − 65 = 135**, Scraper **200 − 157 = 43**.
+- **Pages agreed with the log** (`|v01.53g|` on the static file at `gs-versions/Classroomgs.version.txt`) and **no `?op=deploy` probe was made**. Pages lagged the merge by roughly a minute and was read again rather than assumed.
+- **§7.39's deploy and counter paragraphs refreshed with the measured figures in BOTH halves** — the prose and the quoted prompt block.
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Written in the same commit as the repo-version bump, per the rule v06.02r established. The prior Latest Session moved to `## Previous Sessions` and the 2-session cap applied.
+
+### Notes
+
+- **A CONVENTION SLIP TO RECORD RATHER THAN HIDE: the v06.13r commit message omitted the attribution footer that every recent commit in this repo carries.** Checking `git log` at the time, the sample read was truncated and the two commits immediately before it appeared to have no footer; they do — both v06.11r and v06.12r end with `Co-Authored-By:` and `Claude-Session:` lines. The v06.13r commit is merged, so **it is not amended** — rewriting merged history is worse than an inconsistent footer. This commit carries the footer and the next session should keep carrying it.
+- **NO ROTATION, FOR THE THIRD CONSECUTIVE SESSION, AND THE FOURTH DEFERRAL IS NOW ARITHMETICALLY IMPOSSIBLE.** `TZ=America/New_York date` read **2026-09-16** against UTC's 2026-09-16 09:4x, so this push also lands **on** 2026-09-16 EST and that day's sections stay exempt. `CHANGELOG.md` goes to **103 raw / 93 non-exempt** against a 100 trigger; `Classroomgs.changelog.md` is untouched at **53 raw / 48 non-exempt** against a cap of 50. **The moment EST reads 2026-09-17 or later both jump to their raw counts and both rotate** — 103 against 100 and 53 against 50 — and no later day can repeat the escape clause. **§7.38's oldest-group figure for the GAS file was wrong and is corrected in §7.39**: it named 2026-09-02 (11 sections); the file's oldest whole group is **2026-09-01 (2 sections)** with 2026-09-02 second, so the next GAS rotation must clear **two** groups (53 − 2 = 51 is still above the cap) rather than one. `CHANGELOG.md`'s oldest group is **2026-09-08 (10 sections)** and clears in one pass.
+- **Where the programme stands after this session.** **Phase 4 is 16 of 26; S2 is 11 of ~19**, so the interleave stands at 16:11 and hands the turn to **S2 session 12, `neoclouds`** — its brief is **§7.39**, written inside the v06.13r work commit with its counters refreshed here. GAS live at Classroom **v01.53g**, Scraper v02.12g, Profiler v01.39g. Content-checker baseline **0 errors / 0 warnings at 46 lessons / 8 tracks / 142 gate cases**, guidance-module assertion **20** (session 12 moves it to 21). `--check` reports **10 due**, `neoclouds` among them and `clean-firm-and-nuclear` newly among them with two differing sections.
 
 ## [v06.13r] — 2026-09-16 05:33:09 AM EST
 
