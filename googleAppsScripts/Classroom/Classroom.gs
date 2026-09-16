@@ -1,4 +1,4 @@
-var VERSION = "v01.48g";
+var VERSION = "v01.49g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -11076,8 +11076,8 @@ function clLessonSegmentGridEquipment_() {
  "title": "Grid equipment",
  "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
  "group": "The Value Chain",
- "updated": "2026-09-15",
- "reviewBy": "2027-03-15",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
  "provenance": {
   "inputs": [
    {
@@ -12698,7 +12698,7 @@ function clLessonSegmentGridEquipment_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* · *Stopping Ten Thousand Amps* · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* · *Stopping Ten Thousand Amps* · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-grid-equipment-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** ABB, GE Vernova, Hitachi Energy, Mitsubishi Electric, Siemens Energy, Powell Industries, Eaton, Flex, Grid United, Invenergy, LS-ES, Pattern Energy, Quanta Services, Schneider Electric, Zhonhen Electric — each member's dossier carries one in Profiler."
    ]
@@ -12794,6 +12794,13 @@ function clLessonSegmentGridEquipment_() {
    "changed": [
     "read-next",
     "what-is-bought-and-on-what"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -15187,8 +15194,8 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
  "title": "Bridge and on-site generation",
  "short": "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells…",
  "group": "The Value Chain",
- "updated": "2026-09-15",
- "reviewBy": "2027-03-15",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
  "provenance": {
   "inputs": [
    {
@@ -16719,7 +16726,7 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Bridge Power: Building the Plant Before the Grid Arrives* · *The Ten-Second Race* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**Mechanism lessons for this segment:** *Bridge Power: Building the Plant Before the Grid Arrives* · *The Ten-Second Race* · *Inertia, Reactive Power, and Teaching Electronics to Lead*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-bridge-and-on-site-generation-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Caterpillar, Cummins, ERock, GE Vernova, Mitsubishi Power, Siemens Energy, VoltaGrid, Wärtsilä, Bloom Energy, Mainspring, ProEnergy, Rehlko, Rolls-Royce Power Systems, Eaton, ENGIE North America, NRG Energy, Piller — each member's dossier carries one in Profiler."
    ]
@@ -16799,6 +16806,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
   },
   {
    "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-16",
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
@@ -40396,6 +40410,378 @@ function clLessonBreakersRelaysAndFaults_() {
 };
 }
 
+function clLessonGridStabilityAndTheGenerator_() {
+  return {
+ "schemaVersion": 1,
+ "id": "grid-stability-and-the-generator",
+ "type": "module",
+ "title": "Inertia, Reactive Power, and Teaching Electronics to Lead",
+ "short": "A generator is a magnet locked to the grid's rhythm. What retires with it, why a grid of followers has no leader, and what a grid-forming inverter really does.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:ge-vernova",
+    "date": "2026-08-21",
+    "note": "generator physics - excitation, 3,600 rpm on a two-pole machine, torque angle against excitation as two independent knobs, hydrogen cooling as the size limit"
+   },
+   {
+    "kind": "public",
+    "ref": "study:black-veatch",
+    "date": "2026-08-21",
+    "note": "inertia and reactive power as stability services, the synchronous condenser as the elegant fix, and the afterlife of retired coal units"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hitachi-energy",
+    "date": "2026-08-21",
+    "note": "grid-following against grid-forming, the stability ceiling on a grid of pure followers, forming controls becoming a tender requirement"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sinexcel",
+    "date": "2026-08-08",
+    "note": "frequency as the live balance meter between supply and demand, sub-second frequency regulation, and the voltage-sag contrast"
+   },
+   {
+    "kind": "public",
+    "ref": "study:siemens-energy",
+    "date": "2026-09-04",
+    "note": "holding-the-grid-up - the three things a generator gives free, the synchronous condenser against the STATCOM, and the protection consequence of less fault current with faster RoCoF"
+   },
+   {
+    "kind": "public",
+    "ref": "study:piller",
+    "date": "2026-09-03",
+    "note": "the-stiff-source - a rotating machine's fault contribution against an inverter that limits current to protect its own switches, seen from the UPS room"
+   },
+   {
+    "kind": "public",
+    "ref": "study:power-electronics",
+    "date": "2026-09-06",
+    "note": "following-and-forming (phase-locked loop, short-circuit ratio, voltage source against current source), ride-through (anti-islanding, momentary cessation, the rules inverting) and two-rulebooks (which regime applies where)"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "3,600 rpm",
+   "v": "is not a setting",
+   "sub": "a two-pole generator on a 60 Hz grid turns at exactly that. The turbine supplies torque; the grid dictates speed"
+  },
+  {
+   "k": "2 knobs",
+   "v": "one machine",
+   "sub": "torque advances the rotor angle and moves real power; excitation moves reactive power and voltage. Turning one does not turn the other"
+  },
+  {
+   "k": "0",
+   "v": "vendors named",
+   "sub": "no input to this lesson sizes or ranks the grid-stability machine market, and this lesson invents neither. Who sells which machine is the judgment layer's, for the tiers that hold it"
+  },
+  {
+   "k": "named everywhere",
+   "v": "quantified nowhere",
+   "sub": "grid-forming appears as standard on datasheets in this corpus with no inertia constant, no fault-current contribution and no RoCoF withstand published beside it"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "rotor",
+   "d": "The spinning part of a generator. In a synchronous machine it is an electromagnet: direct current fed into its winding makes it a bar magnet that the turbine drags around inside the stationary windings."
+  },
+  {
+   "t": "stator",
+   "d": "The stationary part of a generator - heavy copper windings set in an iron core, in which the spinning rotor's magnetic field induces the current that leaves the machine. Large machines cool their stator bars with water."
+  },
+  {
+   "t": "torque angle",
+   "d": "The angle by which the rotor's magnetic field runs ahead of the grid's rotating field. Push more torque into a synchronised generator and it does not speed up - the angle widens and more real power flows. Open it too far and the machine slips out of step with the grid."
+  },
+  {
+   "t": "hydrogen cooling",
+   "d": "Sealing a large generator in hydrogen rather than air. Hydrogen is light and highly heat-conductive, so it removes the copper losses of a several-hundred-megawatt machine with far less windage - which is what lets one machine reach that size at all."
+  },
+  {
+   "t": "short-circuit ratio",
+   "d": "How firmly a connection point holds its voltage, expressed as the network's fault capacity at that point divided by the plant's rating. It is the number engineers mean by system strength: a high ratio is a stiff grid to lean on, a low one is a grid that moves when you push it."
+  },
+  {
+   "t": "stiff source",
+   "d": "A supply that holds its voltage and delivers a large current into a fault for the first cycles, out of stored magnetic energy. Every rotating machine is one, and protection schemes are designed assuming it."
+  },
+  {
+   "t": "soft source",
+   "d": "A supply that limits its own current to protect its semiconductors, so a fault downstream sees far less current than the same fault on utility power. Every conventional inverter is one - which is why the fault-current picture changes the moment the load moves onto it."
+  },
+  {
+   "t": "current source",
+   "d": "A machine you tell how many amps to push. It takes the surrounding voltage as a given - something it measures rather than something it makes. The control mode of a grid-following inverter."
+  },
+  {
+   "t": "voltage source",
+   "d": "A machine that imposes a voltage waveform of its own chosen magnitude, frequency and phase, and lets the current be whatever the network draws in response. What a spinning generator does, and what a grid-forming inverter is asked to imitate."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-spinning-machine",
+   "title": "A magnet locked to the grid's rhythm",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "A generator turns torque into electricity with a rotating magnetic field. The {{rotor}} is an electromagnet, energised by a direct-current **{{excitation}}** current, spinning inside a {{stator}} wound with heavy copper coils; the moving field drives current through those windings. That is the whole machine. Everything else in this lesson is a consequence of it.",
+    "**Grid frequency locks rotation.** A two-pole rotor on a 60 Hz grid turns at exactly **3,600 rpm**, synchronised with every other machine on the interconnection. The turbine supplies torque; the grid effectively dictates speed. Read that sentence twice, because it is the opposite of the intuition: the machine does not set the frequency on its own, and the frequency does not follow one machine. Every synchronous generator on an interconnection is mechanically tied to every other one through the network, turning in step.",
+    "**Pushing harder does not spin it faster - it shifts the angle.** More torque advances the rotor's magnetic position relative to the grid's, and more real power flows. That lead is the {{torque angle}}, and it is the only thing that moves when a control room asks a synchronised machine for more megawatts. Adjusting the {{excitation}} instead changes voltage support - {{reactive power}} - without touching the real power at all. One machine, two independent knobs.",
+    "**Heat sets the size limit.** Hundreds of megawatts through copper produce losses that have to be removed, so large generators run sealed in hydrogen - light and highly heat-conductive - with water-cooled stator bars. {{hydrogen cooling}} is the engineering that lets one machine reach 500-plus MW, which is why the biggest units on a system are few and large rather than many and small.",
+    "**Hold on to the mass.** A 500 MW machine turning at 3,600 rpm is an enormous store of kinetic energy that is coupled to the grid whether anyone asks for it or not. It is not a product, it has no line on the invoice, and nothing about the machine's datasheet draws attention to it. It is also, as the next three sections are about, the single thing the grid is losing that nobody was billing for."
+   ],
+   "sales": "When a customer says they need stability, the first useful question is which of the two knobs they are short of - the answers are different machines at different prices."
+  },
+  {
+   "id": "two-knobs",
+   "title": "Two knobs, two products - and one thing that is not a knob at all",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The generator's two independent controls are the reason a stability conversation goes wrong so often: buyers, and plenty of sellers, collapse them into one word. Separate them here and the rest of the lesson follows, because **the first two knobs can be replicated by electronics and the third row cannot** - it has to be replaced by something.",
+   "cols": [
+    "What you turn",
+    "What actually changes",
+    "What comes out",
+    "What the market calls it"
+   ],
+   "rows": [
+    [
+     "**Torque** - how hard the turbine pushes",
+     "the {{torque angle}}: the rotor's field runs further ahead of the grid's, and the machine does not speed up",
+     "**Real power** - the megawatts that do work",
+     "energy. This is the metered product, the one with a price per megawatt-hour"
+    ],
+    [
+     "**{{excitation}}** - how much direct current energises the rotor",
+     "the strength of the rotor's field, and so the machine's voltage against the grid's",
+     "**{{reactive power}}** - current that does no net work but holds the system upright",
+     "voltage support, {{power factor}}, an {{ancillary services}} line rather than energy"
+    ],
+    [
+     "**Nothing** - the mass itself is not a control",
+     "no setting exists; the machine responds because physics responds, with no control loop and nothing to configure",
+     "**{{inertia}}** and **{{fault current}}**: stored rotational energy released without being asked, and a large current for the first cycles of a fault",
+     "{{system strength}}. It arrives free with the machine, which is exactly why nobody priced it until it started leaving"
+    ]
+   ],
+   "note": "Rows one and two are genuinely independent - a machine at full real-power output can still be asked for more or less {{reactive power}}, within its {{capability curve}}. Row three is the one to watch: a rotating machine is a {{stiff source}} and a conventional {{inverter}} is a {{soft source}}, because the inverter limits its own current to protect its switches. That single difference is why a protection scheme proven on utility power can misbehave once the load is fed from electronics, and it is the thread that runs through the two sections after next."
+  },
+  {
+   "id": "frequency-is-a-meter",
+   "title": "Frequency is a meter, and it reads supply minus demand",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "**Grid frequency is a live balance meter between supply and demand.** Too much demand and it droops; too much generation and it rises. Nobody dials it. It is a reading, taken continuously, of whether the machines are being asked for more than they are producing - and because it is the same reading everywhere on an interconnection, it is the one number that tells every participant the same thing at the same moment.",
+    "**Why it moves the way it does follows directly from the last section.** Every synchronous machine on the system is turning in lock-step, so a mismatch between supply and demand is not paid out of a reserve somewhere - it is paid instantly out of the kinetic energy in all that spinning mass at once. Frequency falls because the whole fleet is decelerating together. That is what {{inertia}} is, seen from the meter rather than from the machine.",
+    "**The number that matters in the seconds after a big unit trips is {{RoCoF}}** - the rate at which frequency collapses, rather than how far it eventually goes. More stored spinning energy on the system means a slower fall, and a slower fall means more time for everything else to act. Less spinning mass and the same lost megawatts means a steeper slope, and the protection and control settings written against the old slope are still in service, still set for the old one.",
+    "**What uses the time inertia buys is fast, and increasingly it is not spinning at all.** Batteries earn from frequency regulation by injecting or absorbing power in under a second, and from black start - re-energising a dead grid - and all of it flows through the converter. This is the division of labour worth carrying: **inertia buys the seconds and fast resources spend them.** A system can be rich in one and poor in the other, and it will fail in a way that looks like the other one's problem.",
+    "**Voltage is a separate meter with a separate cause, and confusing the two is the classic mistake.** Frequency is a system-wide reading; voltage is local. A sag - a dip lasting a few cycles when lightning hits a line or a large motor starts - is invisible to a person and fatal to precision industry, where a 100-millisecond {{voltage sag}} can scrap a semiconductor batch or crash a data hall. When a customer says the grid is unstable, the diagnostic question is which meter moved: a frequency problem and a voltage problem buy different machines, and the next section is about why."
+   ],
+   "sales": "Make the customer say which meter moved before anyone quotes anything. Frequency falling too fast and voltage moving too fast are different failures with different answers, and a quote against the wrong one is a quote against the wrong machine."
+  },
+  {
+   "id": "what-retires-with-coal",
+   "title": "Three things leave with the machine, and only one of them was ever on the invoice",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "7 min",
+   "intro": "A synchronous generator gives a grid three things free while it sells electricity. Retire it and all three go, and because two of them were never priced, nothing in the transaction records that they have gone.",
+   "ps": [
+    "**The three are {{inertia}}, {{system strength}} and {{reactive power}} on demand.** Inertia is heavy spinning mass resisting sudden frequency change. System strength is a stiff voltage and plenty of {{fault current}}, so that protection can operate and nearby converters can stay stable. Reactive power holds voltage up. Only the megawatt-hours were metered.",
+    "**Inverter-based resources supply energy without spinning mass.** Solar, batteries and HVDC deliver the energy and none of the three services, so as coal retires a grid loses the inertia and voltage support the old machines provided for nothing - a hidden cost of the transition that appears on no project's balance sheet and on every system operator's.",
+    "**The protection consequence is the one that surprises people, and it is invisible.** Less available fault current and faster {{RoCoF}} together mean a relay may no longer see a fault it used to see, and a relay set for a fast RoCoF may trip on an event it should have ridden through. Nothing about the installation looks different. Nothing was touched. The settings simply describe a grid that no longer exists. How relays decide is *Stopping Ten Thousand Amps*, earlier in this track; this lesson only says what moved underneath them.",
+    "**The {{synchronous condenser}} is the elegant fix.** It is a large synchronous machine with no fuel and no turbine - it just spins, synchronised to the grid, supplying inertia, reactive power and fault current on demand. It generates nothing and sells nothing. It is bought purely for row three of the last section, which is the clearest possible evidence that row three was always a product and was simply never invoiced.",
+    "**Retired coal and gas units can be converted into one.** The turbine comes off and the generator keeps its second life stabilising the very grid that replaced it - and the site keeps its interconnection, its transformer and its bay alive, which is frequently worth more than the machine. Sometimes it is the cheapest option on the table for exactly that reason.",
+    "**The other answer is a {{STATCOM}}, and the distinction is worth memorising.** A STATCOM injects or absorbs reactive power in milliseconds to hold voltage, and it is far faster than any mechanical alternative - but it supplies **no inertia** and very little fault current, so it cannot slow a frequency fall and it does not raise system strength in the way protection engineers mean. It is also itself a converter, and converters want a reasonably strong grid to stay stable, which is uncomfortable when the reason it was bought is that the grid is weak.",
+    "**So they are not competitors. They are answers to different words in the same sentence.** If the problem is *frequency falling too fast*, only stored mechanical energy helps - or a very fast grid-forming inverter with real energy behind it, which is the next section. If the problem is *voltage moving too fast*, the STATCOM beats the machine. Large AI campuses generate the second problem specifically: tens of megawatts swinging in milliseconds, repetitively."
+   ],
+   "note": "**Which suppliers sell which of these two machines, and how they rank against each other commercially, is a judgment this lesson deliberately does not make.** No input to this lesson sizes or ranks that market, and a ranking assembled here would be invented rather than reported. The physics above is the transferable thing; the named-parties view of this segment is authored separately, for the tiers that hold it."
+  },
+  {
+   "id": "following-versus-forming",
+   "title": "A surfer and a metronome, and what the metaphor leaves out",
+   "kind": "proscons",
+   "read": "9 min",
+   "intro": "A {{grid-following}} inverter is a surfer riding an existing wave; a {{grid-forming inverter}} is a metronome setting the beat. The metaphor is right and it is not enough, because what it leaves out is the part that decides whether a plant can be built where the developer wants it. The real difference is one line of control theory: **a follower behaves as a {{current source}} and a former behaves as a {{voltage source}}.**",
+   "cards": [
+    {
+     "t": "Grid-following - tell it how many amps and it pushes them",
+     "meta": "Inside sits a phase-locked loop that watches the grid voltage and continuously estimates its frequency and phase; the inverter then injects current synchronised to that estimate",
+     "adv": [
+      "It is the mature, cheap and overwhelmingly deployed answer, and it works well everywhere large rotating machines are still setting the rhythm",
+      "The control problem is easier: the grid's voltage is a given, something the machine measures rather than something it makes",
+      "It is never asked to supply whatever current a fault demands, so it lives comfortably inside its own rating and its hardware is sized for normal operation",
+      "Nothing about it has to be trusted to lead, which means nothing about it has to be proven to lead - a real commercial advantage while the rules still allow it"
+     ],
+     "dis": [
+      "A {{phase-locked loop}} needs a stable voltage to lock onto, and **a follower cannot play without a leader**",
+      "Its accuracy depends on how firmly the connection point holds its voltage - {{system strength}}, quantified as the {{short-circuit ratio}}. Where conventional generation retired and inverters connected, that ratio falls and the estimate degrades",
+      "Below that point inverters begin interacting with each other's control loops in ways that destabilise all of them. **There is no amount of following that fixes a location where there is nothing to follow**",
+      "A region of pure followers has no voltage reference, struggles through faults and cannot restart itself - the stability ceiling on how much inverter-based generation a grid can carry"
+     ]
+    },
+    {
+     "t": "Grid-forming - it imposes a waveform and lets the current be whatever the network draws",
+     "meta": "It chooses its own voltage magnitude, frequency and phase, which is exactly what a spinning synchronous machine does - hence the control mode's name, the virtual synchronous generator",
+     "adv": [
+      "Synthetic {{inertia}}, so the plant resists {{RoCoF}} instead of standing by while it happens",
+      "{{black start}} - energising a dead network with nothing else running, which is a capability no follower has at any price",
+      "Islanded operation: a {{microgrid}} keeps its own voltage and frequency when the main grid disappears",
+      "**It can connect at all in a weak-grid location where a following inverter would be refused.** That is a permission to build rather than a performance figure, and on a constrained network it is worth more than either",
+      "It is becoming a tender requirement in renewable-heavy grids - the stability toolkit migrating from spinning iron to firmware"
+     ],
+     "dis": [
+      "A voltage source has to be willing to supply whatever current the network asks for during a disturbance, which is a claim on the machine's overload headroom rather than on new hardware",
+      "**A machine that cannot briefly exceed its rating cannot behave as a voltage source when the network faults** - it hits its current limit and falls back to behaving like a follower at precisely the moment it mattered. The {{soft source}} problem does not disappear because the control mode changed",
+      "The capability is named everywhere in this corpus and quantified nowhere: no inertia constant, no fault-current contribution and no {{RoCoF}} withstand is published on any datasheet here. Naming a mode is not publishing what it does",
+      "It is firmware, which means settings, versions and interactions with the other converters nearby. Leadership implemented in software is still software"
+     ]
+    }
+   ],
+   "note": "**These are two control philosophies, not two rungs of a product ladder.** The same hardware is frequently capable of either, and where forming is listed as standard rather than priced as an option the useful question is not whether the box has the mode but what the mode delivers. *Grid forming: standard* is a claim about a menu, not a measurement - and the honest reading of this corpus is that the measurement does not yet exist in public.",
+   "sales": "Ask for the number behind the mode - inertia constant, fault-current contribution, {{RoCoF}} withstand - and ask what the overload ladder is, because ride-through is paid out of it. A vendor who can answer both is ahead of everything published here."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "8 min",
+   "intro": "Three failures, and the striking thing about the middle one is that it was not a defect at all. It was the rule, obeyed correctly, by equipment certified to obey it.",
+   "ps": [
+    "**A region of pure followers, through a fault.** With no voltage reference, followers have nothing to lock onto exactly when the reference is disturbed; the region struggles through the event and cannot re-energise itself afterwards. This is not a failure of any one machine - every unit does what it was designed to do - and it is the reason a stability ceiling exists at all.",
+    "**{{anti-islanding}}, and a rule that was right when it was written.** Early interconnection rules were drafted when distributed generation was rare and small, and the overriding worry was a rooftop array energising a line a utility crew believed was dead. Under that logic a resource that disconnected quickly at the first sign of abnormality was behaving correctly. Tripping was the safe, compliant, responsible thing to do.",
+    "**{{momentary cessation}} was the polite version of letting go** - the inverter stops injecting current for the duration of the disturbance while staying nominally connected, then resumes when voltage and frequency return to range. On one machine it is sensible. It is what happens when thousands of machines do it simultaneously that turned out to be the problem: the sudden loss of injection looks to the system exactly like losing a very large power station, at the worst possible moment, and can turn a survivable fault into a cascading one.",
+    "**What changed the answer was arithmetic, not ideology.** Once inverter-based resources became a large share of generation, the safe behaviour and the compliant behaviour had drifted apart - and storage is the sharpest case, because anti-islanding protection taking a fleet offline removes exactly the resource the event needed. So the rules inverted. {{IEEE 1547}}-2018 replaced the must-trip posture with graded {{ride-through}} obligations under Categories I, II and III. On transmission, {{FERC Order 901}} directed that reliability standards be written, {{NERC}} produced PRC-029-1 adopting ride-through requirements aligned with {{IEEE 2800}}, and momentary cessation was prohibited inside the must-ride-through zones. A companion standard, PRC-030-1, requires resources to record and report unexplained losses of output so the next event can actually be diagnosed.",
+    "**Which rulebook you are under is decided by where you connect, not by how big you are or what you do.** IEEE 1547 is the distribution rulebook, enforced by your utility through state interconnection rules and proven by a listing. IEEE 2800 is the transmission one, voluntary as an IEEE document and given teeth by NERC PRC-029-1, enforced by a regional reliability organisation with penalties and with no equivalent listing mark to buy. Getting this wrong means certifying against the wrong standard and finding out at the interconnection study.",
+    "**And the failure nobody sees coming is the certified one.** Equipment certified against the older posture is not merely less capable - it is certified to do the wrong thing. This is the clearest case in the industry of a requirement that reversed direction inside one equipment generation, so when a datasheet or a developer says a plant is compliant, the useful follow-up is always *compliant with which vintage*.",
+    "**Underneath all three sits the same arithmetic as the first callout.** Riding through a voltage dip means continuing to inject current into a fault, which is a demand on the overload headroom and on the {{fault current}} the machine can supply. The ride-through obligation and the grid-forming claim are the same engineering fact seen twice, and both are paid from the same budget."
+   ],
+   "note": "The pattern to carry out of this lesson: **stability was free, then it was assumed, and it is now specified.** Each of those three sentences describes a different decade, and equipment, settings and contracts written in one of them are still running in the next."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "A synchronised generator is asked for more megawatts. What physically changes?",
+     "a": "The {{torque angle}}, not the speed. The rotor's magnetic field advances further ahead of the grid's rotating field and more real power flows, while the machine keeps turning at the frequency the grid dictates - 3,600 rpm for a two-pole machine on 60 Hz. The turbine supplies torque; the grid supplies speed. Open the angle too far and the machine slips out of step."
+    },
+    {
+     "q": "Name the generator's two independent knobs and what each one sells.",
+     "a": "**Torque** moves the {{torque angle}} and produces **real power** - the metered megawatt-hours. **{{excitation}}** changes the strength of the rotor's field and produces **{{reactive power}}** - voltage support, bought as an ancillary service rather than as energy. They are genuinely independent within the machine's {{capability curve}}: a unit at full output can still be asked for more or less reactive power."
+    },
+    {
+     "q": "What is the third thing a generator gives a grid, and why did nobody price it?",
+     "a": "{{inertia}} and {{fault current}} - together, {{system strength}}. They are not a knob at all: the machine responds because physics responds, with no control loop and nothing to configure. They arrived free with every machine that was bought for its megawatt-hours, so no market formed for them until inverter-based generation started displacing the machines and the services began leaving with them."
+    },
+    {
+     "q": "What does grid frequency actually measure, and what is {{RoCoF}}?",
+     "a": "Frequency is a live balance meter between supply and demand - too much demand and it droops, too much generation and it rises - and it reads the same everywhere on an interconnection. A mismatch is paid instantly out of the kinetic energy of all the synchronised spinning mass, so frequency falls because the fleet is decelerating together. {{RoCoF}} is the *rate* of that fall in the seconds after a large unit trips. Less spinning mass for the same lost megawatts gives a steeper slope - against settings written for the old one."
+    },
+    {
+     "q": "A {{synchronous condenser}} and a {{STATCOM}} both hold a grid up. When is each the right purchase?",
+     "a": "If **frequency is falling too fast**, only stored mechanical energy helps - a condenser, or a very fast grid-forming inverter with real energy behind it. A STATCOM supplies **no inertia** and very little fault current, so it cannot slow a frequency fall. If **voltage is moving too fast**, the STATCOM answers in milliseconds and beats the machine. They are answers to different words in the same sentence, not competitors."
+    },
+    {
+     "q": "What is the one-line control difference between a grid-following and a grid-forming inverter?",
+     "a": "A follower is a {{current source}}: a {{phase-locked loop}} estimates the grid's frequency and phase, and the machine injects current synchronised to that estimate - the voltage is a given it measures. A former is a {{voltage source}}: it imposes a waveform of its own chosen magnitude, frequency and phase and lets the current be whatever the network draws. The second is what a spinning machine does, which is why the mode is called a {{virtual synchronous generator}}."
+    },
+    {
+     "q": "Why can a grid-forming claim be worthless without an overload figure beside it?",
+     "a": "Because a {{voltage source}} must be willing to supply whatever current the network asks for during a disturbance. A machine that cannot briefly exceed its rating hits its current limit and reverts to behaving like a follower at exactly the moment it mattered - the {{soft source}} problem does not go away because the control mode changed. Ride-through compliance is paid from the same budget, so the overload ladder and the grid-forming claim are one engineering fact seen twice."
+    },
+    {
+     "q": "Why was {{momentary cessation}} banned after being the compliant behaviour?",
+     "a": "Because the arithmetic changed, not the ethics. It was written when distributed generation was rare and the worry was {{anti-islanding}} - a small resource energising a line a crew thought was dead - so disconnecting fast was correct. Once inverter-based resources were a large share of supply, thousands of machines ceasing at once looked to the system like losing a very large power station at the worst possible moment, turning survivable faults into cascading ones. {{IEEE 1547}}-2018 and NERC PRC-029-1 inverted the posture to graded {{ride-through}}."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A control room asks a synchronised 500 MW generator for another 50 MW. What happens to its speed?",
+     "c": [
+      "Nothing - it stays locked to grid frequency and the torque angle widens instead",
+      "It speeds up until the governor catches it and settles at a new speed",
+      "It speeds up, and grid frequency rises with it",
+      "It slows, because more load means more drag on the shaft"
+     ],
+     "a": 0,
+     "why": "The grid dictates speed and the turbine supplies torque. A two-pole machine on a 60 Hz system turns at 3,600 rpm whether it is delivering 50 MW or 500. Extra torque advances the rotor's magnetic position relative to the grid's - the {{torque angle}} widens - and more real power flows. Push the angle too far and the machine slips out of step, which is a different and much worse event than speeding up."
+    },
+    {
+     "q": "A system operator needs to slow the rate at which frequency falls after a large generator trips. Which purchase does the job?",
+     "c": [
+      "A {{synchronous condenser}}, because only physically stored rotational energy slows a frequency fall",
+      "A {{STATCOM}}, because it responds in milliseconds and nothing is faster",
+      "Either - both are grid-stability equipment and the choice is commercial",
+      "Neither - frequency is set by generation dispatch, not by equipment"
+     ],
+     "a": 0,
+     "why": "Slowing a frequency fall requires energy that is physically stored and released without being asked. A STATCOM is faster than any mechanical alternative at supporting **voltage**, but it stores nothing and supplies **no {{inertia}}**, so it cannot affect {{RoCoF}} at all. Speed is the wrong axis here; the question is whether there is stored energy behind the response. A grid-forming inverter with real energy behind it is the third answer."
+    },
+    {
+     "q": "A developer is refused a connection at a weak point in the network. The plant's inverters are grid-following. What is the technical objection?",
+     "c": [
+      "The phase-locked loop needs a stable voltage to lock onto, and the short-circuit ratio there is too low",
+      "The inverters are undersized for the fault current the network will deliver",
+      "Grid-following inverters cannot export reactive power, which the weak point needs",
+      "Following inverters are less efficient, so the losses are unacceptable at that location"
+     ],
+     "a": 0,
+     "why": "A follower estimates the grid's frequency and phase with a {{phase-locked loop}}, and that estimate is only as good as how firmly the connection point holds its voltage - {{system strength}}, quantified as the {{short-circuit ratio}}. Where the ratio is low the estimate degrades and inverters can begin interacting with each other's control loops in ways that destabilise all of them. There is no amount of following that fixes a location with nothing to follow, which is why grid-forming is a permission to build rather than a performance upgrade."
+    },
+    {
+     "q": "A datasheet lists grid forming as standard. What is the useful follow-up question?",
+     "c": [
+      "What inertia constant, fault-current contribution and RoCoF withstand does it deliver, and what is the overload ladder behind them",
+      "Whether the mode is enabled by default or has to be licensed",
+      "Which certification body listed the grid-forming mode",
+      "Nothing - grid forming as standard is the strongest possible position"
+     ],
+     "a": 0,
+     "why": "Naming a mode is not publishing what it does, and across this lesson's inputs the capability is named everywhere and quantified nowhere. The overload question is not a separate one: a {{voltage source}} must supply whatever current the network asks for during a disturbance, so a machine that cannot briefly exceed its rating reverts to following exactly when it mattered. Standard-fit is a genuinely strong commercial position - it is just a claim about a menu until a number appears beside it."
+    },
+    {
+     "q": "A transmission-connected storage plant's vendor offers a UL 1741 SB listing as proof of ride-through compliance. Is that the right document?",
+     "c": [
+      "No - that listing proves IEEE 1547, the distribution rulebook; transmission runs on IEEE 2800 made enforceable by NERC PRC-029-1",
+      "Yes - UL 1741 SB is the current listing and it covers both regimes",
+      "No - transmission requires UL 1741 SA rather than SB",
+      "Yes, provided the plant is below the size threshold for transmission rules"
+     ],
+     "a": 0,
+     "why": "Which rulebook applies is decided by where the plant connects, not by how big it is or what it does. {{IEEE 1547}}-2018 is the distribution standard, adopted by state interconnection rules and proven through UL 1741 SB. Transmission-connected resources fall under {{IEEE 2800}}, which is voluntary as an IEEE document and given teeth by {{NERC}} PRC-029-1 following {{FERC Order 901}} - and there is no equivalent listing mark to buy, so compliance is demonstrated through the interconnection study, model validation and performance testing. Offering the wrong one is how a project discovers the mistake at the study."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -40421,11 +40807,12 @@ function clTrackElectricalFoundations_() {
  "title": "Electrical Foundations",
  "short": "Finish this and you can follow a megawatt through a transformer, a breaker and a converter, explain why the grid needs inertia, and hold the electrical conversation both the storage and the data-center markets sit on.",
  "group": "Technology Foundations",
- "updated": "2026-09-15",
+ "updated": "2026-09-16",
  "lessons": [
   "four-machines",
   "the-transformer-and-the-substation",
-  "breakers-relays-and-faults"
+  "breakers-relays-and-faults",
+  "grid-stability-and-the-generator"
  ]
 };
 }
@@ -40607,7 +40994,8 @@ function clLessons_() {
           clLessonHowAStorageProjectHappens_(),
           clLessonContractsAndRevenue_(),
           clLessonWhereBatteriesStop_(),
-          clLessonBreakersRelaysAndFaults_()];
+          clLessonBreakersRelaysAndFaults_(),
+          clLessonGridStabilityAndTheGenerator_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
