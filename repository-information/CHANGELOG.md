@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.12r] — 2026-09-16 04:18:11 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/CHANGELOG.md` · `INTEGRATED-REMEDIATION-PLAN.md`
+- **The deploy counters recorded from the job log, and the v06.10r divergence has RECONCILED.** Two `.gs` files in the v06.11r merge diff fired **exactly two deploy steps and logged exactly two lines**, both confirming on the **first GET** — the streak restored after v06.10r's single break, and the twentieth resolution of the §7.19 order on its two reads:
+  - `Scraper deploy confirmed (GET): Updated to v02.12g (deployment 157) | 157/200`
+  - `Classroom deploy confirmed (GET): Updated to v01.52g (deployment 64) | 64/200`
+- **CLASSROOM'S DEPLOYMENT NUMBER AND ITS TALLY ARE EQUAL AGAIN, AND THAT CORRECTS THE v06.10r READING.** v06.10r recorded `deployment 63 | 62/200` and concluded that the deployment number is authoritative while *the tally under-reports by one, permanently*. It does not. The number advanced by **one** (63 → 64) and the tally by **two** (62 → **64**), so the tally **caught up**: both figures derive from the same state, and an unconfirmed leg makes them disagree only at read time, not thereafter. **The corrected rule: a leg that fires without confirming still consumes a deployment and the tally does not see it *on that read*; the next read reconciles them.** Real headroom is **200 − 64 = 136** for Classroom and **200 − 157 = 43** for Scraper
+- **Scraper crossed three quarters of its allowance** (150 at v05.83r → 156 at v06.03r → **157**) and is now the counter to watch, though only an S2 seed moves it. Pages agreed with the log on both files — `|v01.52g|` and `|v02.12g|` — and **no `?op=deploy` probe was made**; Pages lagged at the previous pair only while its own deploy job was still running
+- **§7.38's deploy and counter paragraphs refreshed with the measured figures, in BOTH halves** — the prose paragraph and the quoted prompt block
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.12r; the v06.08r entry dropped and the v06.10r entry moved to `## Previous Sessions` under the 2-session cap
+
+### Notes
+
+- **This is the handover push.** The deploy counters cannot be read before the merge, so recording them requires a second commit; `SESSION-CONTEXT.md` rides in the same commit as the repo-version bump, per the rule v06.02r established
+- **No rotation, for the second consecutive session, and §7.37's forecast was wrong twice over.** `TZ=America/New_York date` read **2026-09-16 04:17 EST** against UTC's 08:17, so this push also lands **on** 2026-09-16 EST. `CHANGELOG.md` goes to **101 raw / 93 non-exempt** against a 100 trigger — the raw counter is **past** the trigger and the rotation still moves nothing, because the rule rotates until fewer than 100 **non-exempt** remain and 93 already is. `Classroomgs.changelog.md` is untouched by this commit at **52 raw / 48 non-exempt against a cap of 50**. **Both files arm the moment EST rolls past 2026-09-16**, at 101 against 100 and 52 against 50; the groups in line are **2026-09-08 (10 sections)** and **2026-09-02 (11 sections)**. `Scrapergs.changelog.md` 33/50; `Profilerhtml.changelog.md` 49/50
+- **The next run is Phase 4 row 16, `clean-firm-power`**, briefed in §7.38 — and it is not an ordinary row: it is **the lesson session 10 found a built public lesson handing material to by name, when the lesson did not exist**. `contracts-and-revenue`'s `clean-firm-and-the-restart` section declines the physics to it explicitly. Row 16 is the row that makes the handoff good
 
 ## [v06.11r] — 2026-09-16 04:04:07 AM EST
 
