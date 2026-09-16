@@ -866,11 +866,23 @@ def run_gate_truth_table(src, lesson_ids=()):
     # the split is drawn on the registry's own role assignment (eight members
     # sit in both segments and five carry a different role in each). Its header
     # comment enumerates NINETEEN omissions across all eleven.
+    # 17 at S2 session 8 (landscape-grid-equipment-2026-09), where the split
+    # runs in THREE directions for the first time. Its nearest neighbour,
+    # grid-equipment-shortage-2026-09, is a module about that segment's OWN
+    # scarcity and its first buying criterion IS that scarcity - so the line is
+    # the calendar as a market condition there against who holds which slot
+    # here, and that module pre-declared the handoff in its own buyer callout.
+    # It is also the FIRST segment with a built landscape on BOTH sides of it
+    # in the chain (positions 3 and 5), and both splits are role inversions
+    # pointing in OPPOSITE directions, which is why the header comment above
+    # guidanceDocLandscapeGridEquipment_() enumerates THIRTY-FIVE omissions
+    # across six neighbours rather than nineteen across eleven: fewer
+    # neighbours, deeper overlap per neighbour.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 16:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 16" % len(gids))
+    if len(gids) != 17:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 17" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

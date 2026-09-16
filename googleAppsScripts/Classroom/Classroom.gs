@@ -1,4 +1,4 @@
-var VERSION = "v01.45g";
+var VERSION = "v01.46g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -11076,8 +11076,8 @@ function clLessonSegmentGridEquipment_() {
  "title": "Grid equipment",
  "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
  "provenance": {
   "inputs": [
    {
@@ -12699,7 +12699,7 @@ function clLessonSegmentGridEquipment_() {
    "read": "1 min",
    "ps": [
     "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* · *Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-grid-equipment-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** ABB, GE Vernova, Hitachi Energy, Mitsubishi Electric, Siemens Energy, Powell Industries, Eaton, Flex, Grid United, Invenergy, LS-ES, Pattern Energy, Quanta Services, Schneider Electric, Zhonhen Electric — each member's dossier carries one in Profiler."
    ]
   },
@@ -12779,6 +12779,13 @@ function clLessonSegmentGridEquipment_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -41271,7 +41278,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeUtilities_(),
           guidanceDocLandscapePowerConversion_(),
           guidanceDocLandscapeAidcDevelopersAndLandlords_(),
-          guidanceDocLandscapeInHallPower_()];
+          guidanceDocLandscapeInHallPower_(),
+          guidanceDocLandscapeGridEquipment_()];
 }
 
 function guidanceIndex_() {
@@ -52039,6 +52047,668 @@ function guidanceDocLandscapeInHallPower_() {
   {
    "t": "roster alignment",
    "d": "This module's term for buying criterion five as it actually behaves. Being named in the architecture buyer's execution paper and appearing on that buyer's published partner roster are different facts, and this segment contains a member that has the first and not the second."
+  }
+ ]
+ };
+}
+
+// PROJECT: Landscape - Grid Equipment (S2 session 8, 2026-09-15, v05.97r).
+// The EIGHTH landscape module and the seventeenth entry in guidanceDocs_().
+// Corpus synthesis over the 15 member dossiers of the grid-equipment segment
+// at the profile versions in the claims ledger - no ingested document and no
+// new research. Re-measured on the day: 15 members, 5 incumbent, 1 challenger,
+// 9 adjacent, confirming INTEGRATED-REMEDIATION-PLAN.md 7.31 member for member
+// - the EIGHTH consecutive S2 session to confirm its brief exactly.
+//
+// THE THINNEST CHALLENGER BENCH ANY LANDSCAPE HAS FACED: exactly one named
+// party. The section that handles it is honest rather than padded because the
+// registry's own `notes` field says the ADJACENT role here was reserved and
+// then filled with BUYERS - two transmission developers placed beside a third,
+// all customers of HVDC converter capacity. So the nine adjacents split two
+// ways: six suppliers who carry the real routes, three buyers who are demand.
+// And the single challenger is the only one of the fifteen that belongs to no
+// other segment, while it buys its interrupting elements from four of the five
+// incumbents it is listed against.
+//
+// THE SPLIT RUNS IN THREE DIRECTIONS AND IT WAS WRITTEN BEFORE THIS MODULE
+// (10.6 (j)). SIX neighbours, fewer than session 7's eleven, and deeper per
+// neighbour. (1) grid-equipment-shortage-2026-09 is a module about THIS
+// SEGMENT'S OWN SCARCITY, and this segment's first buying criterion is that
+// scarcity. 7.23's test held on the transformer lead time: a MARKET CONDITION
+// there - a dated series with a measurement basis, produced by four
+// constraints, taught vendor-blind - and here ONE VENDOR'S OWN QUOTED WAIT
+// travelling with that vendor's own reservation instrument. That module
+// PRE-DECLARED the handoff in its buyer callout ("the queue position is the
+// thing being bought, not the transformer"), which is 10.6 (t) firing on a
+// MODULE rather than a lesson for the first time. (2) This is the FIRST
+// segment with a built landscape on BOTH sides of it in the chain - position 3
+// power-conversion-and-rack-power-silicon and position 5 in-hall-power - and
+// both splits are ROLE INVERSIONS that point in OPPOSITE directions: eight
+// members shared upstream with five inverting (three of this segment's
+// incumbents are adjacent there), six shared downstream with four inverting
+// the other way. Each landscape ranks the members whose centre of gravity sits
+// at its own position. (3) eo14420-bulk-power-2026-08 owns criterion 3 as an
+// INSTRUMENT and this module owns the SORTING (10.6 (o), second firing);
+// power-infra-aidc-2026-08 owns the chain. On the public side READ_NEXT names
+// FOUR lessons of which only TWO are built, so this is the first landscape
+// written against a half-unbuilt curriculum: criteria 2 and 4 have no complete
+// owner and the module names the gap rather than appointing itself to teach
+// it. the-transformer-and-the-substation pre-declares twice in one callout -
+// "Read it for the shape of the decision, not for the company", and it names
+// the differentiator (the control platform) while declining to say who holds
+// it. the-fence-line pre-declares a mechanism instead ("The slot nobody
+// reserved"), naming no vendor and no reservation holder.
+//
+// THIRTY-FIVE things the six neighbours own are omitted here on purpose and
+// are listed in section 2e of the analysis file - do not import them in a
+// later revision. From the shortage module: the four constraints as a system;
+// GOES and the single domestic producer; the bushing failure band; the test
+// bay and IEC 60076-3; the dated lead-time series and its bases; the
+// slot-versus-duration distinction; the capacity arithmetic against demand;
+// the buyer's six instruments; the sparing layer; the Schnabel-car transport
+// queue; the price spread by category. From eo14420-bulk-power-2026-08: what
+// the order is and the IEEPA authority; the 5(b) covered-equipment list; the
+// four definitions; the dated rulemaking gates. From power-infra-aidc-2026-08:
+// how the grid is organised and paid; what a grid battery earns; the
+// grid-to-GPU chain and the three sockets. From the conversion landscape: its
+// nine stages; the rack-shelf fight; the origin test as a re-sorting; the
+// eight shared members' positions IN THAT SEGMENT. From the in-hall landscape:
+// its three incumbent groups and seventeen-row bets table; the three deletion
+// routes; the storage-layer origin of six of seven challengers; the six shared
+// members' positions IN THAT SEGMENT. From the-transformer-and-the-substation:
+// the voltage ladder; inside the tank and why forty months; the AC-versus-DC
+// decision and the converter station; its where-it-fails table; the Grain Belt
+// worked example as a decision shape. From the-fence-line: the three studies
+// and the queue; load-versus-generation rules, the large-load tariff, SB 6 and
+// NOGRR 282; what arrives at the property line; the five numbers called
+// megawatts.
+//
+// reviewBy is 2026-10-31, and A SORT OF THE FENCE RETURNS NOTHING AT ALL -
+// session 3's (g) case firing a SECOND time, on a fence a third the size. The
+// roster's 15 members carry 41 policyExposure entries, 25 dated, and NOT ONE
+// of those dates lies in the future; five members carry no policy array at
+// all. The generated segment lesson proves it independently: its reviewBy is
+// the generator's six-month default (2027-03-14), which is what the code does
+// when the sort finds nothing. The date taken was read out of grid-united's
+// own strategyRead[4] - "the record of decision and the GRIP finalisation
+// decision, expected together around October 2026" - a NEW SUB-FIELD for a
+// gate, admitted by 10.6's "and the developments the module leans on", and
+// legitimate because that development IS the module's central argument made
+// concrete. 31 October rather than 1 October because a review that fires on
+// the first of the month fires BEFORE the event it watches, and because it
+// keeps the module outside its own 30-day horizon so the curriculum checker
+// still reports 2 items due rather than 3. SIX rejections are written out in
+// section 10 of the analysis file, including the bulk-power order's own
+// reviewBy to the day (10.6 (r)), the shortage module's own review gate - also
+// rejected because THE CORPUS STATES ITS DATE TWO WAYS - an incumbent's
+// gas-turbine sell-out date (right company, wrong product line), and two on
+// split grounds per 10.6 (v).
+function guidanceDocLandscapeGridEquipment_() {
+  return {
+ "id": "landscape-grid-equipment-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — Grid Equipment",
+ "short": "Five incumbents covering five different subsets of one definition, exactly one challenger — the thinnest bench any landscape has faced — and a contest carried by adjacent members building their own plants. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 15 member dossiers of the grid-equipment segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-grid-equipment-analysis.md"
+ },
+ "updated": "2026-09-15",
+ "reviewBy": "2026-10-31",
+ "revisions": [
+  {
+   "date": "2026-09-15",
+   "note": "First authoring, and the eighth landscape module of the segment layer. Corpus synthesis over the 15 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This is the first segment with a built landscape module on both sides of it in the chain, and the first whose nearest guidance neighbour is a module about this segment's own scarcity, so the split was written before the module and runs in three directions. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis and is labelled as analysis rather than blended with fact. The review date is 31 October 2026, read out of a member's own strategy-read indicator because a sort of the policy fence returns nothing at all: 41 policy entries, 25 dated, none of them in the future. Six rejected candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "15",
+   "v": "members on record",
+   "sub": "Five incumbent, one challenger, nine adjacent — re-measured 15 September 2026, confirming the programme's written figure exactly, member for member. The thinnest challenger bench in the corpus"
+  },
+  {
+   "k": "1 of 15",
+   "v": "belongs to nothing else",
+   "sub": "The single challenger is the only one of these fifteen that sits in no other segment. Every other member is here because of a business it runs somewhere else, and five of them sit in three segments or more"
+  },
+  {
+   "k": "0 of 41",
+   "v": "policy dates lie ahead",
+   "sub": "Forty-one policy exposures across the roster, twenty-five of them dated, and not one date in the future — so this module's review date had to be read out of prose rather than sorted out of the fence"
+  },
+  {
+   "k": "2 of 5",
+   "v": "cover the whole definition",
+   "sub": "The segment names five product families and no two incumbents cover the same set. One sold two of the five before the supercycle; one has no published share in any market it is named in"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry's role for a member that holds an established position in the segment on a stated basis. Here the five incumbents cover five different subsets of the segment's own definition, so the label marks position rather than a comparable rank."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry's role for a member attacking an incumbent position. This segment has exactly one, and it is also the only member of the fifteen that belongs to no other segment — so the label marks the whole of the contest inside the segment, and almost none of the contest over it."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry's role for a member whose main business sits in another segment but whose products or decisions bear on this one. Here the nine split two ways: six are suppliers or near-suppliers carrying the real routes, and three are buyers the registry deliberately placed in the roster."
+  },
+  {
+   "t": "build slot",
+   "d": "A position in a finite production schedule, as opposed to a lead time, which is a duration. Durations can be planned around; positions can be lost. What the shortage module teaches as a mechanism, this module reads as an instrument one vendor rations and one buyer bought before it had a project."
+  },
+  {
+   "t": "engineer-to-order",
+   "d": "Manufacturing where each unit is designed to the customer's specification rather than picked from a catalogue. It is the content on which this segment's only challenger built its margin, and the content its own risk factors say the data-centre mix now entering its backlog needs less of."
+  },
+  {
+   "t": "bushing",
+   "d": "The insulated terminal that carries a conductor through a transformer's tank wall. It is the one major part a transformer factory does not make, which is why the segment's fifth buying criterion names the bushing supply chain rather than the transformer factory."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Read this beside two public lessons and a module about this segment's own scarcity — and note first that this is the first segment in the chain with a built landscape module on BOTH sides of it.** Six neighbours bear on it: *Why Electricity Changes Clothes* and *The Fence Line* on the public side; the grid-equipment shortage module, the bulk-power-system order module, the power-chain module, and the two landscapes at chain positions three and five on the gated side. Fewer neighbours than the previous landscape faced, and a harder split, because of what they are.",
+    "**The hardest line runs against the shortage module, whose subject is this segment's own first buying criterion.** That module teaches the {{transformer}} lead time as a **market condition** — a dated series with a measurement basis, produced by four independent constraints, under an instruction never to quote a single remembered number. Here the same figure does a different job. It is **one named vendor's own quoted wait, travelling with that vendor's own rationing instrument**: Hitachi Energy's dossier puts its large-transformer lead times at thirty to forty months, *up to four years without a reservation*, with capacity allocated through {{reservation agreement}}s on a template worth up to seven hundred million dollars and twenty thousand transformers. **A condition of the market there; the price of a position in one company's queue here.** And that module pre-declared the handoff in its own buyer's callout — *in a shortage the queue position is the thing being bought, not the transformer* — teaching the instrument and naming no holder. This module names the holders.",
+    "**The two landscapes on either side split themselves, and the inversions point in opposite directions.** Eight members sit in both this segment and the conversion layer upstream, and **five carry a different role in each**: three of this segment's {{incumbent}}s are {{adjacent}} there, while Zhonhen is adjacent here and incumbent there and Flex is adjacent here and a {{challenger}} there. Six members sit in both this segment and in-hall power downstream, and **four invert the other way** — Eaton, Schneider Electric and Zhonhen are adjacent here and incumbent there. The registry is not disagreeing with itself; it is describing a chain, and **each landscape ranks the members whose centre of gravity sits at its own position.** Two companies are incumbent on both sides of the fence line and on neither side of the conversion split: ABB and Mitsubishi Electric.",
+    "**Now the segment itself — and the organising move is to read the five incumbents against the five product families its own definition names, rather than as a league table.** The definition names {{transformer}}s, medium- and high-voltage {{switchgear}}, {{HVDC}} converters, protection relays and grid-stability machines. **No two incumbents cover the same set.** Two cover all five. One covers most of it and owns the deepest American footprint. **One sold the two families the definition leads with.** And one has no published market share in any of the three markets it is named in. The record does not contain a ranking across all five, and the two nearest measures disagree about who leads the first of them.",
+    "**Hitachi Energy's incumbency is the installed base, and the queue that rations access to it.** First in transformers by installed base and footprint, with twenty-plus units at eight hundred kilovolts ultra-high-voltage direct current and five hundred-plus at seven hundred and thirty-five to seven hundred and sixty-five kilovolts alternating current; first in {{converter station}}s at about fifteen point three per cent share, having supplied roughly half the world's HVDC projects since pioneering the technology. The financial trajectory is scarcity monetisation executed cleanly — orders from twelve point four billion dollars to **thirty-two point eight billion** in four years, backlog **fifty-seven point nine billion** at about two point nine times revenue, adjusted margin from six point one to thirteen point four per cent. **And the mechanism that converts scarcity into position is the reservation agreement.** Its own dossier's high-confidence read is that anyone selling power equipment into this market is selling into, or around, this company's calendar.",
+    "**Siemens Energy's is the only book a gigawatt campus can be written from in one go, and the grid half is the more durable half.** Grid Technologies took five point four billion euros of orders in a single quarter, up twenty-eight per cent, at a nineteen point nine per cent margin on a **fifty-one billion euro backlog with transformers named as the biggest growth driver** — inside a group backlog of a hundred and sixty-two billion. Its dossier's own read is explicit that transformer scarcity outlasts any single generation cycle. Its domestic answer is capacity rather than argument: a hundred and fifty million dollar large-transformer plant and a new high-voltage {{switchgear}} plant in the United States, about a third of a six billion euro capital programme going to transformers and switchgear, and {{GIS}} and {{AIS}} lines including an {{SF6}}-free portfolio. **And on the one measure that covers it and Hitachi together — power-transformer revenue share — it is placed first.**",
+    "**GE Vernova's is American weight, bought.** Prolec GE — roughly ten thousand employees and seven Americas plants, **five of them in the United States** — became wholly owned in February 2026 for five point two seven five billion dollars, and its dossier's phrase for the result is that the company **owns the bottleneck's American toll booth**. Data-centre electrification orders ran about seven hundred million dollars in 2024, above two billion in 2025, and **above five billion in the first half of 2026 alone**. It is also the only incumbent here holding a disclosed hyperscaler commitment to buy **a thousand {{solid-state transformer}}s from 2027** if the specification is met — which is best read not as a product line but as an **option on the deletion of part of its own alternating-current chain**, since an SST at the perimeter removes stages this segment sells.",
+    "**ABB's is one voltage class and one machine, and its own dossier states the hole rather than hiding it.** It sold the grid and transmission business to Hitachi before the supercycle, **so it cannot supply the transformers and HVDC its customers' connections need** — two of the five families, gone. What it holds instead is medium voltage and stability: the first IEC-certified solid-state breaker, and **sixty-two flywheel {{synchronous condenser}}s** ordered by one behind-the-meter developer across two years, which its dossier calls the strongest independent validation that AI load volatility is now a purchasable category. Its electrification order book is the hottest of any diversified electrical — seven point two billion dollars in a quarter, up sixty per cent, the Americas up a hundred and fourteen. **Two structural facts travel with it into any counterparty relationship and its own dossier states both**: the divested grid business, and a three-time record of United States bribery settlements that large customers' compliance teams know.",
+    "**Mitsubishi Electric's is a marketing position its revenue does not sit under, and it answers no criterion with a number.** It is consistently named in the leading vendor set for data-centre uninterruptible supplies, power transformers and {{gas-insulated switchgear}} — and **no firm reachable in the research publishes a market-share percentage for it in any of the three**, with sources that rank rather than list placing it below the top five in transformers. Its own quarterly numbers put the exposure in transmission and distribution: energy-systems orders up **eighty per cent** year on year, attributed to North American transformer expansion — **while its dossier records that the company has been narrowing that footprint, closing a high-voltage transformer plant**, and leaves the attribution as its outstanding question. Its domestic answer is an eighty-six million dollar switchgear factory its own dossier reads as a tariff and lead-time hedge rather than a bid for share.",
+    "**The honesty note this section owes the reader.** An installed base, a revenue-share percentage, a segment backlog, an absence of any published share, a divested product line and a count of flywheel machines are not measures of one thing. **Flattening them into an ordering would misrepresent all of them**, and the corpus does not contain the ordering to flatten. **The module's own assessment, stated as analysis rather than as a finding of the record: in this segment the useful question is not who is biggest but which parts of the definition each incumbency actually covers — because the buyer of a converter station and the buyer of {{arc-resistant}} switchgear are not shopping the same list, and only two of the five vendors can answer both.**"
+   ],
+   "sales": "Before the first call, establish which of the five product families the account is actually buying, and then which of the five vendors on its shortlist makes that one. Two of the five cover the whole definition; one cannot supply transformers or HVDC at all and says so in its own materials. A single-supplier claim that has not been tested against the second family is the most common thing this segment gets wrong."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Exactly one {{challenger}} — the thinnest bench any landscape in this series has faced — and the honest way to write this section is to read the registry's own note first.** That note says the {{adjacent}} role here was *reserved* and then filled with **buyers**: two transmission developers placed alongside a third, all of them customers of HVDC converter capacity, with the incumbents unchanged. **That is a statement by the registry, not an inference of convenience**, and it is the key to the whole section: nine adjacents, of which six are suppliers or near-suppliers and three are demand.",
+    "**First, the challenger, at its real size and no larger.** Powell Industries is a Houston {{engineer-to-order}} maker of medium-voltage {{switchgear}} and factory-built power rooms, and it has been **repriced by one order rather than by a trend**: roughly eight hundred million dollars of data-centre awards across nine months, including a **single order above four hundred million** it calls the largest in its history — more than sixteen per cent of a two point four billion dollar backlog on its own, that backlog up sixty-nine per cent year on year on a three-times book-to-bill in the quarter. Commercial and other industrial moved from fifteen to forty per cent of backlog in three quarters, and **the company names no customer in any filing.**",
+    "**What it attacks with is schedule, which is an attack on the segment's first buying criterion rather than on any incumbent's product.** Researchers place the top five — ABB, Siemens, Schneider Electric, Eaton and GE Vernova — at fifty-five to sixty per cent of North American medium-voltage switchgear volume, and name this company's differentiator explicitly: **tailored switchgear in ten weeks from a Texas facility**, credited with multiple data-centre awards. In a market where equipment delivery sets the project date, that is a power-on date the buyer cannot otherwise obtain.",
+    "**And here is the fact that decides how much weight this section can put on it: the one challenger is a customer of four of the five companies it is listed against.** Its low-voltage platform is engineered to accept Eaton, Siemens or Schneider draw-out elements, and its control platform accepts Eaton or Allen-Bradley contactors. **It buys the interrupting element from the companies its own filings name as principal competitors** and sells the engineering, the structure and the {{arc-resistant}} assembly around whichever breaker the customer's standards already specify. The threat it carries is a *route*, not a displacement. **And the threat inside its own file is to the margin that justified the re-rating**: new risk-factor language says data-centre work will likely require **less** custom engineered content — precisely the content on which its gross margin expanded from twenty-seven to thirty point six per cent.",
+    "**Second, and this is where the section's weight actually sits: the six supplier-adjacents carry the routes, and every one of them is a domestic-capacity route.** *Quanta Services* is the largest buyer of critical-path grid equipment in the corpus and is becoming a maker of it — **five to seven hundred million dollars to nearly double its own high-voltage transformer capacity by 2028**, plus a joint venture making eight hundred kilovolt-class breakers in Pennsylvania; its dossier's own words are that this turns the contractor into a partial competitor of Hitachi Energy, Siemens Energy and GE Vernova on critical-path gear. *Flex* owns branded relay panels, medium-voltage switchgear and **substation control and protection** — which is buying criterion four's product line, owned by a contract manufacturer — and the whole business is being separated into an independent public company in the first quarter of 2027. *LS Energy Solutions*' parent runs a Texas switchgear and transformer campus and is booking United States data-centre power orders quarter after quarter; the most recent one **went switchgear-only**. *Eaton* is opening a third United States transformer site and a new medium-voltage switchgear plant. *Schneider Electric* is named in the medium-voltage switchgear top five and is spending above seven hundred million dollars across eight American sites. And *Zhonhen* sells the same products at the other end of the world.",
+    "**Third — and this is what makes a one-challenger section honest rather than padded — three of the nine adjacents are not threats at all. They are the demand, and between them they name exactly two suppliers.** Pattern Energy owns the one long-haul {{voltage source converter}} HVDC corridor in the United States to reach commercial operation, and its supplier list names **Hitachi Energy** for the converters and control platform. Invenergy is building an eleven billion dollar {{merchant transmission}} line with **Siemens Energy** as the HVDC technology partner. And Grid United holds no operating asset, publishes no financials and has filed no Form D — and **reserved Hitachi Energy's HVDC converter capacity portfolio-wide in March 2024, signing a converter specification agreement in October 2025, before holding a single permit.** Its own dossier calls that reservation the company's most valuable commercial asset after its land. **The one contractor all three share is the adjacent that is becoming a maker.**",
+    "**So the module's own assessment, stated as analysis rather than as a finding of the record: the threat here is not share moving inside the segment — it is capacity entering it from outside, and buying criterion three is the sorting mechanism, because every entering route is a domestic-manufacturing route.** A contractor's transformer plant, a Korean parent's Texas campus, an electronics manufacturer's bought switchgear brands and a challenger's ten-week Texas line are the same bet made four ways: that the scarce thing is a domestic {{build slot}}, and that whoever adds one sells an {{energization}} date the incumbents' calendars cannot offer.",
+    "**The counter-threat the incumbents hold, and it is not size.** It is **coverage**. Two of the five can supply all five product families for one campus; every entering route covers exactly one. A buyer assembling a grid connection from four suppliers is buying four calendars, four coordination studies and four warranty positions, and the segment's own definition is what makes that expensive. **That is why the entrants are competing on criterion one and criterion three rather than on the definition** — and why the thing to watch is not a share figure but whether any of the new domestic plants actually reaches production, which is where the indicators start."
+   ],
+   "sales": "Ask which route the account came in on before you ask what it needs. An incumbent is selling a calendar. The challenger is selling a date. An adjacent building its own plant is selling a hedge against everyone else's calendar, and it will be buying components while it builds. And if the account is one of the three buyer-adjacents, it is not competing with this segment at all — it is holding a reservation, and the interesting question is what it paid for it."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "One row per {{incumbent}} and {{challenger}} — six of the fifteen members, in registry order. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment carrying a confidence level, restated here in one line. They are never blended with the fact rows above. The nine {{adjacent}} members get no row because they are not ranked players in this segment; what they do to it is in the section above and in the indicators below. **At six rows this is the shortest bets table in the series** — against the conversion layer's twelve, the room's seventeen and the developers' twenty-seven — and that is the segment reported honestly rather than a section cut short.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet (analysis)"
+   ],
+   "rows": [
+    [
+     "Hitachi Energy",
+     "incumbent",
+     "That **the queue is the product** — scarcity monetised through a reservation system that rations access years ahead, while a nine billion dollar capacity programme lands in 2027–28. Its own back-loaded risk is that the whole industry's announced American investment arrives in the same window, and that a contrarian reading — procurement inefficiency rather than shortage — already exists"
+    ],
+    [
+     "Siemens Energy",
+     "incumbent",
+     "That **one book beats four** — turbines, transformers, switchgear, HVDC and stability equipment for a gigawatt campus from one supplier — with a deliberate thirty to fifty per cent rather than maximal expansion, so the scarcity is managed rather than spent. The price is a multiple near seventy times earnings that fell on a twenty-one per cent beat"
+    ],
+    [
+     "GE Vernova",
+     "incumbent",
+     "That **the American toll booth beats the global installed base** — five wholly-owned United States transformer plants plus turbine slots selling against 2031 — while hedging its own alternating-current chain with a hyperscaler-funded solid-state-transformer commitment that leapfrogs the switchboard incumbents if the specification lands and hands the market to challengers if it slips"
+    ],
+    [
+     "ABB",
+     "incumbent",
+     "That **the medium-voltage and 800 VDC transition resets a leaderboard it does not lead** — pushing protection and stability functions up to a voltage class where it has no direct competitor at scale — accepting that it cannot supply the two product families it sold to the company now ranked first here"
+    ],
+    [
+     "Mitsubishi Electric",
+     "incumbent",
+     "That **vertical integration into its own power semiconductors is the durable differentiator**, and that a defensive domestic footprint suffices — a switchgear plant its own dossier reads as a tariff and lead-time hedge rather than a bid for share, against a rival's programme fifty times its size"
+    ],
+    [
+     "Powell Industries",
+     "challenger",
+     "That **schedule is a product** — ten-week engineered-to-order switchgear sold as a power-on date the oligopoly cannot quote — accepting that the data-centre mix now entering the backlog needs less of the custom content the margin was built on, which its own risk factors say in as many words"
+    ]
+   ],
+   "note": "**Read the table beside the roster, not instead of it.** Six ranked players out of fifteen members is the lowest ratio of any landscape in the series, and it is the segment's defining structural fact rather than a gap in the record: nine of the fifteen are here because of a business they run somewhere else, and three of those nine are customers.",
+   "sales": "Three of the six bets are capacity bets with dated landings, and they are all in the indicators below. The other three are positioning bets with no date at all — which means they can only be tested by what an account actually orders. Diary the first three; qualify the second three."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it. **Six of these ten were considered for this module's own review date and rejected** — four because the gate is already another module's clock or another module's subject, one because it is the right company on the wrong product line, and one because a comment deadline is not a decision. Each rejection is marked, because the rejection is part of the reading.",
+   "cols": [
+    "On record",
+    "Indicator",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "31 Oct 2026",
+     "The record of decision and the federal grid-programme finalisation on a 420-mile, 525-kilovolt, 3,000-megawatt interregional line, expected together around October 2026",
+     "**This module's review date.** The dated test of the segment's own defining claim: whether converter capacity reserved *before any permit* converts into an order"
+    ],
+    [
+     "31 Oct 2026",
+     "An adjacent member's quarterly filing deadline under its home regulator",
+     "**Rejected for the review date on split grounds** — that company's open question is commercial traction for an architecture the conversion landscape ranks it on. Same calendar day as the date taken, different event, different owner"
+    ],
+    [
+     "5 Oct 2026",
+     "Comment deadline on an environmental scoping notice for a second transmission corridor",
+     "**Rejected twice over** — a comment deadline is not a decision, and corridor siting is not an equipment gate"
+    ],
+    [
+     "24 Dec 2026",
+     "Implementing rules due under the bulk-power-system emergency order, with covered-entity designations and licensing procedures",
+     "Buying criterion three's operational moment for the whole roster. **Rejected for the review date: it is already that module's own review date, to the day**"
+    ],
+    [
+     "End of 2026",
+     "One incumbent expected to be largely sold out of 2030 deliveries",
+     "**Rejected for the review date: the right company on the wrong product line** — that is its gas-turbine book, not its transformer book"
+    ],
+    [
+     "Q1 cal 2027",
+     "An adjacent member's electrical business separates into an independent public company, with a four point four billion dollar acquisition closing into it first",
+     "The competitor is reconstituted mid-fight, and it owns this segment's relay and protection products. **Rejected on split grounds** — the in-hall landscape already carries it"
+    ],
+    [
+     "Early / full production 2027",
+     "The first new United States large-power-transformer line reaches production",
+     "The most on-point supply gate the segment has. **Rejected twice**: it is the shortage module's own review gate, and the corpus states its date two different ways"
+    ],
+    [
+     "2027",
+     "A third United States transformer site hiring; a fourth domestic facility targeting the same year",
+     "Whether the domestic-capacity bet is a plan or a plant. Watch for a hiring notice rather than a press release"
+    ],
+    [
+     "2H 2027",
+     "Larger high-voltage programmes begin to stack more meaningfully for the craft contractor",
+     "That company's own phasing language, and the single best leading indicator of United States grid construction — from the firm with the best view of it"
+    ],
+    [
+     "2028",
+     "The contractor's doubled high-voltage transformer capacity lands; the largest announced American transformer plant becomes operational; and the capped fifteen per cent rate on specified electrical-grid equipment rises to twenty-five per cent from 1 January",
+     "Three separate things converging on one year. **This is when this segment's ranking can actually change**, and it is beyond any six-month horizon, which is why it is an indicator rather than a review date"
+    ]
+   ],
+   "sales": "Four of these ten are moments when somebody must publish something, and four are moments when a plant must exist. Diary them separately. A disclosure date tells you whether a claim was true; a plant date tells you whether the calendar you are quoting is about to change."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell storage — this segment is not your socket, and the module says so plainly.** The three places a battery earns in this buildout belong to the power-chain module and the public lessons, and none of them is here. **What this segment is for a storage seller is a lesson in instruments and a short list of counterparties**, and it adds three things no lesson can. **First, the {{reservation agreement}} is the transferable idea**: the scarce thing here is a position in a queue, bought years before the project that needs it, and this segment's own buyers do it — one holds a portfolio-wide converter reservation with no permit at all. If your cells or your containers ever go short, this is the instrument the market reaches for, and this is where it is already priced. **Second, buying criterion three sorts this roster exactly the way it sorts yours**: the origin test that decides whose transformer may enter an American project is the origin test that decides whose cell may, and here it re-sorts the field around domestic plants rather than around role labels. **Third, two of the three buyer-adjacents buy utility-scale storage and one of them names no supplier anywhere in the public record** — no integrator, no cell supplier, for a developer of that size. That dossier's own author flags it. An absence that large is a sales finding, not a research gap.",
+    "**If you sell AI data-centre power — move one: ask whether the slot is reserved or merely quoted.** A lead time is a duration and a {{build slot}} is a position, and only one of the two survives somebody else's schedule slipping. In this segment the difference is a contract term with a name and a price, and the buyer who does not know which one it holds does not have a date. **Move two: ask which of the five product families the vendor on the project actually makes.** Two of the five incumbents cover all five; one cannot supply {{transformer}}s or {{HVDC}} at all and its own materials say so. On a campus needing a grid connection *and* in-hall stability, that is not a detail — it is whether a single-supplier claim survives the first change order. **Move three: read buying criterion four as an open question rather than a settled one.** The mechanism this curriculum will use to teach protection and coordination has not been written yet, and this segment's relay and protection products are concentrated in an adjacent member that is about to become a different company. An account that cannot say who owns its coordination study has not finished its evaluation — and that is a different sales motion from one that has."
+   ],
+   "sales": "Whichever half you are in, the qualifying question is the same and it is about time rather than product: what is this account's energization date, who set it, and which piece of equipment is on its critical path? In this segment the answer is almost never the one the account leads with."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 15 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change rather than at this session's, because it did not move this session. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that the five incumbents cover five different subsets of the definition and cannot be ordered across them; that the threat here is capacity entering from outside the segment rather than share moving inside it; and every row of the bets table.",
+   "rows": [
+    [
+     "Segment holds 15 members — 5 incumbent, 1 challenger, 9 adjacent; chain position 4, tier build",
+     "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"
+    ],
+    [
+     "The definition names transformers, MV/HV switchgear, HVDC converters, protection relays and grid-stability machines, and closes on the delivery calendar setting energization dates",
+     "profiler-segments.json @ v05.41r — segments[].definition"
+    ],
+    [
+     "The six buying criteria, verbatim",
+     "profiler-segments.json @ v05.41r — segments[].buyingCriteria"
+    ],
+    [
+     "The adjacent role was reserved and filled at V3 with two transmission developers as buyers of HVDC converter capacity; incumbents unchanged",
+     "profiler-segments.json @ v05.41r — segments[].notes"
+    ],
+    [
+     "powell-industries is the only one of the fifteen that belongs to no other segment; five members belong to three or more",
+     "profiler-segments.json @ v05.41r — segments[].members[] across all nineteen segments"
+    ],
+    [
+     "First in transformers by installed base and footprint; MarketsandMarkets puts Siemens Energy ahead on power-transformer revenue share",
+     "profile:hitachi-energy @ v5 — productsAndServices[0].positioning"
+    ],
+    [
+     "Track record 20+ units at 800 kV UHVDC, 500+ at 735–765 kV AC",
+     "profile:hitachi-energy @ v5 — productsAndServices[0].description"
+    ],
+    [
+     "Lead times 30–40 months, up to 4 years without a reservation; capacity allocated via reservation agreements on the E.ON framework template (up to USD 700M, 20,000+ transformers)",
+     "profile:hitachi-energy @ v5 — productsAndServices[0].positioning"
+    ],
+    [
+     "~15.3 % HVDC converter-station share; supplied roughly half the world's HVDC projects",
+     "profile:hitachi-energy @ v5 — productsAndServices[1].positioning"
+    ],
+    [
+     "FY25 orders USD 32.8B (from USD 12.4B in FY21), backlog USD 57.9B ≈2.9× revenue, revenue USD 19.8B +26 %, adj. EBITA margin 6.1 %→13.4 %",
+     "profile:hitachi-energy @ v5 — summary; strategyRead[1]; financials.periods[0]"
+    ],
+    [
+     "USD 9B+ global capacity programme; USD 457M South Boston VA plant operational 2028; USD 155M across three North American plants",
+     "profile:hitachi-energy @ v5 — productsAndServices[0].roadmap; profile:mitsubishi-electric @ v3 — strategyRead[3]"
+    ],
+    [
+     "Anyone selling power equipment into this market is selling into or around this company's calendar",
+     "profile:hitachi-energy @ v5 — strategyRead[0]"
+    ],
+    [
+     "Industry's announced US transformer investment all lands 2027–28; a contrarian \"not a shortage\" reading exists",
+     "profile:hitachi-energy @ v5 — strategyRead[3]"
+    ],
+    [
+     "Grid Technologies Q3 FY26 orders €5.4B (+28 %), margin 19.9 %, backlog €51B with transformers the biggest growth driver; group backlog €162B",
+     "profile:siemens-energy @ v7 — productsAndServices[1].description; summary"
+    ],
+    [
+     "Transformers 10 kV–800 kV / 10–1,300 MVA; GIS/AIS incl. SF6-free \"Blue\"; DC-GIS to ±550 kV; HVDC PLUS; E-STATCOM marketed for data-centre load fluctuation",
+     "profile:siemens-energy @ v7 — productsAndServices[1].description"
+    ],
+    [
+     "USD 150M Charlotte LPT plant, \"first units early 2026, full production 2027\"; new Mississippi HV switchgear plant; €220M Nuremberg; ~⅓ of the €6B FY26–28 capex to transformers/switchgear",
+     "profile:siemens-energy @ v7 — productsAndServices[1].positioning and .roadmap"
+    ],
+    [
+     "The grid side is the more durable franchise than gas turbines",
+     "profile:siemens-energy @ v7 — strategyRead[2]"
+    ],
+    [
+     "Prolec GE ~10,000 employees, seven Americas plants, five in the US; wholly owned for USD 5.275B in February 2026",
+     "profile:ge-vernova @ v6 — productsAndServices[2].description; summary"
+    ],
+    [
+     "\"GEV owns the bottleneck's American toll booth\"; data-centre Electrification orders ~USD 0.7B (2024) → >USD 2B (2025) → >USD 5B in 1H 2026; ~USD 1B Prolec capex 2026–28",
+     "profile:ge-vernova @ v6 — productsAndServices[2].positioning and .roadmap"
+    ],
+    [
+     "Switchgear 50–800 kV; six consecutive 2 GW bipole contracts; STATCOMs, synchronous condensers, SVCs",
+     "profile:ge-vernova @ v6 — productsAndServices[2].description"
+    ],
+    [
+     "An R&D cost-share with a hyperscaler carries a commitment to buy 1,000 SSTs from 2027 if spec is met; the only grid-equipment incumbent with a disclosed one",
+     "profile:ge-vernova @ v6 — productsAndServices[3].description and .positioning"
+    ],
+    [
+     "Expected \"largely sold out of 2030 deliveries by end of 2026\"",
+     "profile:ge-vernova @ v6 — productsAndServices[0].roadmap"
+    ],
+    [
+     "ABB sold its grid/transmission business to Hitachi before the supercycle and cannot supply the transformers and HVDC its campuses' connections need; three-time US bribery settler",
+     "profile:abb @ v7 — strategyRead[4]"
+    ],
+    [
+     "SACE Infinitus is the first IEC-certified solid-state breaker; 62 flywheel synchronous condensers ordered by one behind-the-meter developer across two years",
+     "profile:abb @ v7 — ecosystemRole; strategyRead[1]"
+    ],
+    [
+     "Q2 2026 Electrification orders USD 7.2B (+60 %), Americas +114 %, backlog USD 13.7B (+57 %)",
+     "profile:abb @ v7 — summary"
+    ],
+    [
+     "Named in the leading vendor set for data-centre UPS, power transformers and GIS, with no published market-share percentage in any of the three, and below the top five where sources rank",
+     "profile:mitsubishi-electric @ v3 — ecosystemRole; strategyRead[4]"
+    ],
+    [
+     "Energy Systems orders +80 % YoY in the quarter ended 2026-06-30, attributed to North American transformer expansion; the Memphis plant closure makes that attribution the dossier's outstanding question",
+     "profile:mitsubishi-electric @ v3 — strategyRead[0]; recentDevelopments[13].read"
+    ],
+    [
+     "Transformers to 765 kV, GIS and breakers to 800 kV; USD 86M Pennsylvania switchgear factory with USD 6.75M of state grants, read as a tariff and lead-time hedge",
+     "profile:mitsubishi-electric @ v3 — summary; strategyRead[3]"
+    ],
+    [
+     "~USD 800M of data-centre awards in 9M FY2026; a single order above USD 400M, >16 % of a USD 2.4B backlog; backlog +69 % YoY at 2026-06-30 on 3.0× book-to-bill; commercial/other industrial 15 %→40 % of backlog",
+     "profile:powell-industries @ v2 — summary; strategyRead[1]"
+    ],
+    [
+     "Top five hold 55–60 % of North American MV switchgear volume; the differentiator is tailored switchgear in ten weeks from a Texas facility",
+     "profile:powell-industries @ v2 — ecosystemRole; strategyRead[0]"
+    ],
+    [
+     "FlexGear accepts Eaton, Siemens or Schneider draw-out elements; FlexTrol accepts Eaton or Allen-Bradley contactors — it buys the interrupting element from its named competitors",
+     "profile:powell-industries @ v2 — strategyRead[3]"
+    ],
+    [
+     "New risk-factor language that data-centre work will need less custom engineered-to-order equipment, against gross margin 27.0 %→29.4 %→30.6 % on that content; no customer named in any filing",
+     "profile:powell-industries @ v2 — strategyRead[2]; summary"
+    ],
+    [
+     "USD 500–700M programme to nearly double HV transformer capacity by 2028; Hyosung HICO JV making 800 kV-class breakers in Pennsylvania; \"a partial competitor of Hitachi Energy, Siemens Energy and GE Vernova on critical-path gear\"",
+     "profile:quanta-services @ v5 — ecosystemRole; productsAndServices[3].positioning and .roadmap"
+    ],
+    [
+     "~USD 13.5M craft-led spend per MW; HV transformers/substations 10–15 % of a load-centre budget",
+     "profile:quanta-services @ v5 — ecosystemRole"
+    ],
+    [
+     "Larger high-voltage programmes \"stack more meaningfully in 2H 2027\"",
+     "profile:quanta-services @ v5 — productsAndServices[0].roadmap"
+    ],
+    [
+     "Owns Crown Technical Systems (relay panels, MV switchgear; USD 319M, November 2024) and Electrical Power Products (substation control and protection, ~USD 1B), plus Anord Mardix switchgear, busway and power pods",
+     "profile:flex @ v1 — productsAndServices[0] and [3]; recentDevelopments[10]"
+    ],
+    [
+     "The segment separates into an independent public company in the first calendar quarter of 2027; a USD 4.4B acquisition agreed 3 September 2026 lands inside it first",
+     "profile:flex @ v1 — summary; strategyRead[0] and [2]"
+    ],
+    [
+     "No revenue line has ever been published for Anord Mardix, JetCool or Crown; busway researchers categorise its brand as an \"other player\"",
+     "profile:flex @ v1 — strategyRead[9]; productsAndServices[0].positioning"
+    ],
+    [
+     "Parent opened a Bastrop, Texas campus in April 2025 (+USD 240M by 2030) and booked USD 115M, USD 70M, USD 64M and USD 34M US data-centre power orders on a >KRW 7T backlog; the most recent went switchgear-only",
+     "profile:ls-energy-solutions @ v3 — summary; recentDevelopments[0] and [2].read"
+    ],
+    [
+     "Third US transformer site at Jonesville, SC hiring from 2027; new Bellevue, NE MV switchgear plant; >USD 1B in North American electrical manufacturing since 2023",
+     "profile:eaton @ v8 — productsAndServices[1].description and .roadmap"
+    ],
+    [
+     "Named in the MV switchgear top five; >USD 700M of US expansion through 2027 across eight sites including an El Paso switchgear plant",
+     "profile:schneider-electric @ v9 — productsAndServices[3].description"
+    ],
+    [
+     "AC low-voltage switchgear and substation DC systems for State Grid and Southern Grid; relay-protection setting-calculation software",
+     "profile:zhonhen @ v8 — productsAndServices[3] and [5].description"
+    ],
+    [
+     "Next report Q3 2026, due by the 2026-10-31 regulator deadline",
+     "profile:zhonhen @ v8 — financials.periods[0].commentary"
+    ],
+    [
+     "SunZia: 550 miles, ±525 kV, 3,000 MW VSC HVDC, the one long-haul US corridor in commercial operation; suppliers Hitachi Energy (HVDC Light and MACH) and Quanta for the line",
+     "profile:pattern-energy @ v1 — summary; productsAndServices[0].description"
+    ],
+    [
+     "BLM EIS scoping on a second corridor opened 2 September 2026 with comments to 5 October 2026",
+     "profile:pattern-energy @ v1 — productsAndServices[2].description"
+    ],
+    [
+     "Grain Belt Express: 800 miles, USD 11B, privately financed after the federal guarantee was terminated; Siemens Energy the HVDC technology partner; EPC to Quanta and Kiewit",
+     "profile:invenergy @ v3 — summary; productsAndServices[3].description and .soldThrough"
+    ],
+    [
+     "Its storage procurement is invisible in the public record — no integrator or cell supplier named anywhere",
+     "profile:invenergy @ v3 — ecosystemRole"
+    ],
+    [
+     "Holds no operating asset, publishes no financials, has filed no Form D; reserved Hitachi Energy HVDC converter capacity portfolio-wide (March 2024) and signed a converter specification agreement (October 2025) before holding a permit; that reservation is its most valuable commercial asset after its land",
+     "profile:grid-united @ v1 — summary; strategyRead[0] and [3]"
+    ],
+    [
+     "North Plains Connector: 420 miles, ±525 kV, 3,000 MW; final federal EIS 28 August 2026; conditional USD 700M federal grant; cost USD 2.5B (2023) → ~USD 6B (2026); COD 2032",
+     "profile:grid-united @ v1 — summary"
+    ],
+    [
+     "Indicator: the record of decision and the grid-programme finalisation decision, expected together around October 2026",
+     "profile:grid-united @ v1 — strategyRead[4]"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**There is no ranking of this segment that covers its own definition.** The two nearest measures disagree about who leads in transformers *and* measure different things — an installed base against a revenue share — and no source reachable through these dossiers ranks across transformers, switchgear, HVDC converters, protection relays and stability machines together. This module declines to invent the ordering, which is why the dominance section is organised as coverage rather than as a league table.",
+    "**One of the five incumbents has no published market-share percentage in any of the three markets it is named in.** Its own dossier says so in as many words and records that where sources rank rather than list, it falls below the top five. A vendor named in a leading set and a vendor holding a measured share are different facts, and only one of them is available here.",
+    "**The corpus states this segment's most-cited supply-relief date two different ways, and both statements are inside this app.** A member dossier records the flagship domestic transformer line as delivering first units in early 2026 with full production in 2027; the guidance module on the shortage, working from research sources rather than from that dossier, records production starting by early 2027. **This module reports the disagreement rather than choosing** — and it is one of two reasons that date was rejected as this module's review gate.",
+    "**No revenue line has ever been published for the adjacent member's branded switchgear, busway and protection businesses.** Its own dossier states this. **Anyone quoting a data-centre revenue figure for that company is quoting something the record does not contain**, and the company is weeks from separating that business into its own listing.",
+    "**The single challenger names no customer in any filing.** The order above four hundred million dollars that repriced the company is attached to an unidentified counterparty in every public source; the company discloses backlog only to the nearest hundred million and gives no numeric guidance at all.",
+    "**No source in this corpus sizes the grid-stability machine market.** Four of the five incumbents sell {{synchronous condenser}}s or {{STATCOM}}s, and the only quantity anywhere in these fifteen dossiers is one developer's sixty-two-unit order, whose dollar value is undisclosed — so revenue materiality is unproven, a point that dossier makes itself. **That is the fifth product family in the definition, and the record cannot measure it.**",
+    "**The reservation instrument's terms are not disclosed.** Neither the price, the duration nor the conditions of the portfolio-wide converter reservation are on the record, which is exactly why the dossier holds that claim at moderate rather than high confidence. **This module treats the reservation as an instrument and never as a valuation.**",
+    "**And nothing here forecasts when the delivery calendar loosens.** The announced capacity, its dated starts and the arithmetic against demand belong to the shortage module. This one says who holds which slot, on what basis, and stops there."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the split between this module and the guidance module on the grid-equipment shortage?",
+     "a": "The shortage module owns the calendar as a market condition — the lead-time series with its measurement bases, and the four independent constraints that produce it, taught vendor-blind. This module owns who holds which slot and on what basis. The same thirty-to-forty-month figure is a condition of the market there and the price of a position in one company's queue here. That module even pre-declares the handoff: it says the queue position is the thing being bought, and names no holder."
+    },
+    {
+     "q": "Why is this the first landscape with a split running in three directions?",
+     "a": "It is the first segment in the chain with a built landscape module on both sides of it — the conversion layer upstream at position three and in-hall power downstream at position five — while its nearest guidance neighbour is a module about this segment's own scarcity. Earlier landscapes split against one neighbour landscape at most."
+    },
+    {
+     "q": "How do the two neighbouring landscapes draw their own boundaries, and what is unusual about the direction?",
+     "a": "By role inversion, and the inversions point opposite ways. Eight members sit in both this segment and the conversion layer, and five carry a different role in each — three of this segment's incumbents are adjacent there. Six sit in both this segment and in-hall power, and four invert the other way — Eaton, Schneider and Zhonhen are adjacent here and incumbent there. Each landscape ranks the members whose centre of gravity sits at its own chain position."
+    },
+    {
+     "q": "Why is the dominance section organised as a coverage table rather than a ranking?",
+     "a": "Because the segment's definition names five product families and no two incumbents cover the same set. Two cover all five; one covers most and owns the deepest American footprint; one sold the two the definition leads with; and one has no published share in any market it is named in. No source ranks across all five, and the two nearest measures disagree about who leads the first of them."
+    },
+    {
+     "q": "One incumbent in this segment cannot supply two of the five product families. Which, and why does it matter commercially?",
+     "a": "ABB, which sold its grid and transmission business before the supercycle and, in its own dossier's words, cannot supply the transformers and HVDC its customers' connections need. It matters because a campus needing a grid connection and in-hall stability is buying from two different lists, and only two of the five vendors can answer both."
+    },
+    {
+     "q": "This segment has exactly one challenger. What are the three facts that fix how much weight the threat section can put on it?",
+     "a": "It was repriced by one order rather than by a trend — a single award above four hundred million dollars, more than a sixth of its backlog, with no customer named in any filing. Its advantage is schedule rather than price or technology: ten-week engineered-to-order switchgear from a Texas plant. And it buys the interrupting element from four of the five companies its own filings name as principal competitors."
+    },
+    {
+     "q": "If the single challenger is not the main threat, what is?",
+     "a": "Capacity entering the segment from outside it rather than share moving inside it, carried by adjacent members. A craft contractor spending five to seven hundred million dollars to nearly double its own high-voltage transformer capacity and making eight-hundred-kilovolt-class breakers in a joint venture; a contract manufacturer that owns relay panels, medium-voltage switchgear and substation protection and is about to spin that business out; a Korean parent's Texas switchgear and transformer campus; and two incumbents' new domestic plants. Every route is a domestic-manufacturing route, so buying criterion three is the sorting mechanism."
+    },
+    {
+     "q": "Three of this segment's nine adjacent members are not suppliers at all. Who are they and what do they tell you?",
+     "a": "Three transmission developers, placed in the roster deliberately — the registry's own note says the adjacent role was reserved and filled with buyers of HVDC converter capacity. Between them they name exactly two converter suppliers and one line contractor, and that contractor is the adjacent that is becoming a maker. The demand side of the segment's most concentrated product is served by two of its five incumbents."
+    },
+    {
+     "q": "What is the single clearest demonstration that this segment's power is its delivery calendar?",
+     "a": "A developer holding no operating asset, publishing no financials and having filed no Form D reserved the segment's number-one supplier's HVDC converter capacity portfolio-wide in March 2024 and signed a converter specification agreement in October 2025 — before holding a single permit. Its own dossier calls that reservation its most valuable commercial asset after its land."
+    },
+    {
+     "q": "Why was this module's review date read out of prose rather than sorted out of the policy fence?",
+     "a": "Because a sort returns nothing at all. Across the fifteen members there are forty-one policy exposures, twenty-five of them dated, and not one of those dates lies in the future; five members carry no policy array at all. The generated segment lesson proves it independently — its review date is the generator's six-month default rather than a fence date."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague asks you to rank this segment's five incumbents from strongest to weakest. What is the right response?",
+     "c": [
+      "Rank them by grid-equipment revenue, the one figure all five publish",
+      "Decline the ordering: the segment's definition names five product families, no two incumbents cover the same set, one of the five sold two of those families outright, and the two nearest measures disagree about who leads the first one",
+      "Rank them by backlog, since backlog is the only forward-looking measure in an equipment market",
+      "Rank them by announced domestic capacity, because criterion three makes that the segment's real scoreboard"
+     ],
+     "a": 1,
+     "why": "Two vendors cover all five families, one covers most of it, one sold transformers and HVDC before the supercycle and its own dossier says it cannot supply them, and one has no published market share in any of the three markets it is named in. The revenue answer fails because these are business units of very differently shaped companies and one member is a whole grid company while another is a conglomerate. Backlog fails for the same reason and is disclosed on incompatible bases. Announced domestic capacity is a real indicator but it is a bet landing in 2027 and 2028, not a current rank."
+    },
+    {
+     "q": "An account tells you its campus is supplied end-to-end by a single grid-equipment vendor. What do you establish first?",
+     "c": [
+      "Which of the five product families that vendor actually makes, because only two of the five incumbents cover all of them",
+      "Whether the vendor has domestic plants, since criterion three decides the award",
+      "What lead time the vendor quoted, since lead time is the first buying criterion",
+      "Whether the vendor's relay platform supports IEC 61850, since that is the integration test"
+     ],
+     "a": 0,
+     "why": "Single-supplier claims in this segment routinely survive only until the second product family. One of the five incumbents cannot supply transformers or HVDC at all; another has no measured share in any of the three markets it is named in. Domestic footprint, lead time and protection integration are all real criteria, but each of them is downstream of whether the vendor makes the thing at all."
+    },
+    {
+     "q": "Which statement about this segment's single challenger is the most useful one to carry into a conversation?",
+     "c": [
+      "It is taking share from the top five, which hold fifty-five to sixty per cent of North American medium-voltage switchgear volume",
+      "It competes on schedule rather than price or technology, and it buys the interrupting element from four of the five companies it competes with",
+      "It has the largest data-centre backlog in the segment",
+      "It is the only member of the segment with a published market-share percentage"
+     ],
+     "a": 1,
+     "why": "Its differentiator is tailored switchgear in ten weeks from a Texas facility — a power-on date rather than a price — and its own platforms are engineered to accept Eaton, Siemens or Schneider draw-out elements, so it is simultaneously a competitor and a customer. Share-taking overstates a company repriced by one order. Its backlog is a fraction of the incumbents'. And no member of this segment has a share percentage published across the definition."
+    },
+    {
+     "q": "Where does the real contest over this segment sit, and why is it easy to miss?",
+     "c": [
+      "With the challenger, because the registry only assigns that role where an attack is real",
+      "With the incumbents' own capacity programmes, since they are the only parties who can add slots",
+      "With adjacent members building their own capacity — a contractor, a contract manufacturer and a foreign parent — and it is easy to miss because the registry classes them as adjacent for a business they run elsewhere",
+      "With the three transmission developers, who are the only parties large enough to change the calendar"
+     ],
+     "a": 2,
+     "why": "The contractor is spending five to seven hundred million dollars to nearly double its own high-voltage transformer capacity and is making eight-hundred-kilovolt-class breakers in a joint venture; the contract manufacturer owns relay panels, medium-voltage switchgear and substation protection; the foreign parent runs a Texas switchgear and transformer campus. All three are classed adjacent because their main business is somewhere else, which is exactly why the routes are easy to miss. The three transmission developers are the demand, not a threat — the registry's own note says the adjacent role was reserved for them as buyers."
+    },
+    {
+     "q": "A buyer tells you it has a thirty-month transformer lead time from its vendor. What is the question that actually matters?",
+     "c": [
+      "Whether that is the industry average or the vendor's own figure",
+      "Whether the buyer holds a reserved build slot or only a quoted duration",
+      "Whether the unit is above or below the seventy-two-and-a-half-kilovolt testing threshold",
+      "Whether the vendor's domestic plant is operational yet"
+     ],
+     "a": 1,
+     "why": "A lead time is a duration and a build slot is a position in a finite schedule. Durations can be planned around; positions can be lost when somebody else's programme moves. This segment's number one rations capacity through reservation agreements years ahead, and its most striking customer reserved converter capacity before holding a permit. The testing threshold and the plant date are both real, and both belong to the shortage module rather than to a buyer's own contract position."
+    }
+   ]
   }
  ]
  };

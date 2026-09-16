@@ -1,4 +1,4 @@
-var VERSION = "v02.08g";
+var VERSION = "v02.09g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -883,7 +883,34 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     terms: ['rotary ups', 'drups', 'flywheel ups', 'flywheel', 'modular ups',
             'isolated parallel bus', 'eco-mode', 'vrla', 'transfer switch',
             'critical power', 'grid-interactive ups'],
-    source: 'guidance:landscape-in-hall-power-2026-09' }
+    source: 'guidance:landscape-in-hall-power-2026-09' },
+  // S2 session 8 (2026-09-15). Checked against all 410 distinct terms across
+  // both arrays before adding, per industry-guidance.md step 9. The CALENDAR
+  // half of this segment's vocabulary is already covered FIVE times over -
+  // 'transformer', 'switchgear', 'substation', 'hvdc' and 'grid equipment' by
+  // seg-grid-equipment and seg-transformers; 'large power transformer',
+  // 'transformer lead time', 'bushing', 'test bay', 'on-load tap changer',
+  // 'GOES' and 'grain-oriented electrical steel' by topic-grid-equipment-
+  // shortage; 'transformer shortage' and 'transmission' by topic-grid-
+  // infrastructure; 'eo 14420' by topic-bps-security; 'tariff' and 'section
+  // 301' by topic-china-policy. What scored ZERO is the segment's FIFTH
+  // product family - the grid-stability machine, sold by four of its five
+  // incumbents - plus the whole of buying criterion 4 (protection and
+  // automation) and criterion 2's SF6 option. Dropped as superstrings or
+  // duplicates: 'sf6-free' (caught by 'sf6'), 'gas-insulated switchgear'
+  // (caught by 'switchgear'), 'power transformer', 'hvdc converter'. Dropped
+  // as too generic to score cleanly: bare 'relay', 'inertia', 'power quality',
+  // 'svc'. Dropped on SPLIT grounds though all three score zero: 'build slot'
+  // (the shortage module's own vocabulary), 'section 232' (a tariff regime -
+  // belongs with the policy seeds, and recorded in the analysis file as a
+  // genuine unscored gap) and 'energization' (the interconnection module's and
+  // the-fence-line's word for the process, not this segment's for its goods).
+  { key: 'topic-landscape-grid-equipment',
+    label: 'Grid equipment: the stability machine and the protection layer',
+    terms: ['synchronous condenser', 'statcom', 'grid stability',
+            'reactive power', 'protective relay', 'iec 61850', 'sf6',
+            'arc-resistant', 'engineer-to-order'],
+    source: 'guidance:landscape-grid-equipment-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies
