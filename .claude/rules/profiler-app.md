@@ -161,9 +161,34 @@ Three properties of the old design made that failure invisible, and the calendar
 
 What the convention was designed to protect is kept: refreshes still fire on the market's clock rather than the operator's memory. What is dropped is the part that broke — a secret and a procedure hidden inside opaque trigger records that the repo could not see, diff, or check.
 
-**The desk's prompt.** Kept here so it can be recreated without re-deriving it. It is deliberately short: identity, the calendar, a pointer to this file, the cap, the stand-down rule, the report shape. Nothing procedural that this file already says — the 22 retired prompts drifted precisely because the procedure was copied into 22 places. Paste the real `CORPUS_TOKEN` in at creation; it lives in the Routine prompt and nowhere else.
+**The 2026-09-16 measurement — the mechanism was never the prompt.** The calendar fixed all three properties above and the desk still landed nothing: the 7 Sep run landed no commit, and the 16 Sep run researched IREN, Jinko and Oracle, committed locally as `a378a96`, and was **denied on push**. The cause sits one level below the prompt. **A Routine created through the `create_trigger` MCP tool is stored with `sources: []`** — so every fired session gets a container with no repository checkout and no push credential. Measured against the API on 2026-09-16: all six Routines read `sources: []`, and a test Routine created *from a session that did have the repo attached* also came back `sources: []`. Neither `create_trigger` nor `update_trigger` exposes a `sources` parameter at all; only the claude.ai Routines UI can attach one. Sessions the developer starts carry `sources: [{git_repository: .../Sales}]`; fired sessions carry nothing.
+
+The August one-shots died of the same thing, and **the record above already held the evidence without naming it**: IREN was "abandoned holding a permission prompt for a `find` over `/home` and `/root`". It was not hunting for the checkout because its prompt had drifted — it was hunting because there was no checkout. The three properties explain why the failure stayed *invisible* for a month; they do not explain the failure. This does.
+
+**STEP 0 — what every scheduled prompt now opens with.** All six Routines were amended on 2026-09-16 so their first instruction is to call `add_repo` (owner `LightAISolutions`, repo `Sales`, `access: push`; `read` for the ACL detector), run the clone command it returns, call `register_repo_root` with the clone path, then `git fetch --unshallow origin main`. Two properties are deliberate. It must **not** pre-probe with `curl`, `gh` or `git ls-remote` — unauthenticated probes return 404 on a private repo and talk the session out of calling the tool, which is precisely what cost IREN its run. And it **fails closed**: if `add_repo` is denied the run stops before any research, because research that cannot be pushed is research thrown away. STEP 0 is a bootstrap, not the cure — the durable fix is attaching the repository to each Routine in the Routines UI, which no API call here can do.
+
+**So: never create a Routine and assume it can reach the repo.** `create_trigger` cannot attach a source. A new Routine needs the repository attached in the Routines UI *and* the STEP 0 block in its prompt.
+
+**The desk's prompt.** Kept here so it can be recreated without re-deriving it. It is deliberately short: the STEP 0 repo bootstrap, then identity, the calendar, a pointer to this file, the cap, the stand-down rule, the report shape. Nothing procedural that this file already says — the 22 retired prompts drifted precisely because the procedure was copied into 22 places. Paste the real `CORPUS_TOKEN` in at creation; it lives in the Routine prompt and nowhere else.
 
 ```text
+STEP 0 — ATTACH THE REPO BEFORE ANYTHING ELSE. This Routine fires into a fresh session that is NOT
+provisioned with a repository source: the working directory is empty and every push is denied. That
+silently discarded a completed IREN/Jinko/Oracle refresh on 2026-09-16. Fix it first.
+  a. Call the `add_repo` tool with owner `LightAISolutions`, repo `Sales`, access `push`. Do NOT
+     pre-check with curl, `gh` or `git ls-remote` — unauthenticated probes return 404 on private
+     repos and will mislead you into skipping the tool.
+  b. Run the clone command it returns, then call `register_repo_root` with the clone's absolute
+     path so CLAUDE.md and `.claude/rules/` load on the next turn.
+  c. `cd` into the clone and run `git fetch --unshallow origin main || true` BEFORE reading any
+     version pin, any `git log` date or any `--check` result — a shallow clone reports false
+     staleness.
+  d. If it reports the repo is already attached, you are set — continue.
+  e. If it returns an authorization or policy error, STOP. Do no research, write no files, advance
+     no calendar row. Report the tool's exact reason verbatim and end the run. Research that cannot
+     be pushed is research thrown away — that is the failure this step exists to prevent.
+Only once the repo is attached and CLAUDE.md has loaded, do the following:
+
 You are a fresh session in the LightAISolutions/Sales repo, running the Profiler earnings desk.
 
 Read repository-information/profiler-refresh-calendar.json. It is the queue.
