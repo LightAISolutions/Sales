@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.10r] — 2026-09-16 03:00:50 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/CHANGELOG.md` · `INTEGRATED-REMEDIATION-PLAN.md`
+- **The deploy counters recorded from the job log, and this one broke a streak and a rule of thumb at the same time.** One `.gs` file in the v06.09r merge diff fired **exactly one deploy step and logged exactly one line**, so the one-step forecast held — but the line is **not** a first-GET confirmation, and it is the **first in nineteen uses of the §7.19 order that is not**:
+  - `Classroom: GET did not confirm v01.51g — trying POST fallback`
+  - `Classroom: neither leg confirmed v01.51g — re-reading in 5s (poll 1/5)`
+  - `Classroom deploy confirmed (POLL 1): Updated to v01.51g (deployment 63) | 62/200`
+- **THE DEPLOYMENT NUMBER AND THE COUNTER HAVE DIVERGED FOR THE FIRST TIME, AND THE DIVERGENCE IS THE FINDING.** Every previous record has them equal — `deployment 61 | 61/200`, `deployment 59 | 59/200`, `deployment 156 | 156/200`. This run reads **`deployment 63` against `62/200`**: the deployment number advanced by **two** (61 → 63) while the script's own tally advanced by **one** (61 → 62). The log explains it — the GET leg fired a deploy, the POST fallback fired another, and only the poll read a confirmation — so **two deployments were consumed and one was tallied**. This is the case the standing counter rule has always warned about in the abstract (*a call can consume a deployment without the tally seeing it*) and it has now been observed. **From here the deployment number is the authoritative figure and the counter under-reports by one**: real headroom is 200 − 63 = **137**, not 200 − 62 = 138. Scraper is untouched at **156/200** with `Scraper.gs` at v02.11g, exactly as forecast
+- **Pages and the job log agreed and no `?op=deploy` probe was made.** Pages served `|v01.50g|` while the deploy job was still running — a publishing lag, not a disagreement — and read `|v01.51g|` once the Pages job finished, with `|v02.11g|` unchanged beside it. The §7.19 order resolved on its two reads for the nineteenth time, even though the confirmation leg inside the log was a poll rather than a GET
+- **§7.37's deploy and counter paragraphs refreshed with the measured figures, in BOTH halves** — the prose paragraph and the quoted prompt block, because unlike §7.36 this brief's prompt block does name the counters
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.10r; the v06.06r entry dropped and the v06.08r entry moved to `## Previous Sessions` under the 2-session cap
+
+### Notes
+
+- **This is the handover push.** The deploy counters cannot be read before the merge, so recording them requires a second commit; `SESSION-CONTEXT.md` rides in the same commit as the repo-version bump, per the rule v06.02r established — the staleness check is a plain equality against `repository.version.txt` and nothing else reconciles them
+- **No rotation.** v06.09r closed `CHANGELOG.md` at 98 raw with five sections dated 2026-09-16 EST; this section makes it **99 raw / 94 non-exempt**, counter `Sections: 99/100`, one clear of the trigger. **The next session is almost certainly the repo rotator as well as the GAS rotator** — its own section takes the file to 100, which is the trigger by the "reaches" rule, and the group in line is **2026-09-08 (10 sections)**. `Classroomgs.changelog.md` is untouched by this commit and stands at **51 raw / 48 non-exempt against a cap of 50**, armed the moment EST rolls past 2026-09-16; its oldest group is **2026-09-02 (11 sections)**
+- **The next run is S2 session 11, `hyperscalers-and-ai-labs`**, briefed in §7.37 — the eleventh landscape and the twentieth guidance module. It carries a segment shape no landscape has met: **eight members, zero adjacents, and one of only two *closed* segments in the taxonomy**, so session 10's adjacency instrument cannot be run on it at all
 
 ## [v06.09r] — 2026-09-16 02:38:20 AM EST
 
