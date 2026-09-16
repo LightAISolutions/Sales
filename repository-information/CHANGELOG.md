@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.21r] — 2026-09-16 06:09:58 PM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 15, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.40 refreshed in BOTH halves** — the prose paragraphs and the quoted prompt block — because a revision session ran between that brief being written and its execution. The due set drops **9 → 8** (`clean-firm-and-nuclear` was cleared at v06.20r), the bump-from version becomes **v01.55g**, the `--check` forecast becomes **8 → 8 → 8**, and the instruction *"`clean-firm-and-nuclear` is NOT yours to clear"* is retired as moot
+- **The (bb1) rule added to §7.40's prompt block** so the next Phase 4 row is bound by it: before writing, grep the registered modules for the lesson's id and title and for a claim that it is planned or unbuilt. Revising such a module is **not** authoring one, so the module assertion stays at 21
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.21r; the v06.16r entry moved to `## Previous Sessions` and the 2-session cap applied
+
+### Notes
+
+- **A STALE PREMISE WAS CORRECTED BEFORE ANY WORK STARTED, AND IT IS THE REASON THIS SESSION EXISTED AT ALL.** The request asked to revise the module "before running Phase 4 row 15" — but **row 15 was built at v06.09r and row 16 at v06.13r**, and the real next unbuilt row is **17, `where-the-chain-breaks`**, whose brief **§7.40 already existed**. The handover prompt therefore targets row 17, not row 15. *Acting on the stated row would have re-authored a lesson that already exists.*
+- **The programme moved v06.08r → v06.19r while this session's container was restarted**, so the local clone was eight versions stale on resume. `git fetch --prune` plus `git checkout -B <branch> origin/main` before any measurement is what caught it; a session that measured first would have read every counter wrong
+- **No rotation on either file, for an eighth consecutive session.** This push also lands on 2026-09-16 EST: `CHANGELOG.md` **110 raw / 93 non-exempt** against a 100 trigger, seventeen sections dated 2026-09-16 EST, counter `Sections: 110/100`. `Classroomgs.changelog.md` holds at **56 raw / 48 non-exempt** against 50 — untouched by this push. **Both deferrals lapse on the first push dated 2026-09-17 EST or later, and that session rotates both**
 
 ## [v06.20r] — 2026-09-16 06:02:51 PM EST
 
