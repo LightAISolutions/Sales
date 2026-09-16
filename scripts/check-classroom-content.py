@@ -878,11 +878,19 @@ def run_gate_truth_table(src, lesson_ids=()):
     # guidanceDocLandscapeGridEquipment_() enumerates THIRTY-FIVE omissions
     # across six neighbours rather than nineteen across eleven: fewer
     # neighbours, deeper overlap per neighbour.
+    # 18 at S2 session 9 (landscape-bridge-and-on-site-generation-2026-09,
+    # 2026-09-15): the FIRST segment two of whose three READ_NEXT mechanism
+    # lessons are already built, so 10.6 (t)'s pre-declaration fires across
+    # four whole sections of two public lessons rather than on one tile or one
+    # callout - and the lesson's own three-ways-out-of-a-queue taxonomy maps
+    # ONE-FOR-ONE onto the segment's five challengers. It also has SIX built
+    # landscape neighbours, a record, with a BIMODAL inversion rate (in-hall
+    # power 6 of 6, grid equipment 0 of 3).
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 17:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 17" % len(gids))
+    if len(gids) != 18:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 18" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

@@ -1,4 +1,4 @@
-var VERSION = "v02.09g";
+var VERSION = "v02.10g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -910,7 +910,55 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     terms: ['synchronous condenser', 'statcom', 'grid stability',
             'reactive power', 'protective relay', 'iec 61850', 'sf6',
             'arc-resistant', 'engineer-to-order'],
-    source: 'guidance:landscape-grid-equipment-2026-09' }
+    source: 'guidance:landscape-grid-equipment-2026-09' },
+
+  // S2 session 9 (2026-09-16) - the bridge-and-on-site-generation landscape.
+  // Scored from scratch against ALL 444 terms in both arrays per 10.6 (i),
+  // never against seed labels, and the answer is HALF AND HALF (10.6 (v)).
+  // Already covered, several seeds over, so NOT re-seeded: the whole MACHINE
+  // vocabulary of buying criterion 2 and the RATING vocabulary of criterion 6
+  // ('gas turbine', 'aeroderivative', 'reciprocating engine', 'simple cycle',
+  // 'combined cycle', 'turbine order' in seg-gas-engines/seg-gas-turbines;
+  // 'linear generator' there too; 'fuel cell', 'hydrogen' in seg-fuel-cells;
+  // 'genset', 'diesel generator', 'standby generator', 'backup generator',
+  // 'emergency power', 'prime power', 'generator set' in seg-gensets) and the
+  // PACKAGING layer ('skid-mounted', 'containerized power', 'modular power
+  // block', 'prefabricated power', 'power module' in seg-sidecar-power, which
+  // is the MEPP / RockBlock / 500 MW block family). A label-level glance would
+  // have returned "already covered" and been WRONG: none of those seeds
+  // reaches criterion 1, 3, 4 or 5 at all, and every term below scores ZERO.
+  // Criterion 3 gets four terms because that is where the whole challenger
+  // case lives - the non-attainment wedge and the no-SCR machine are two of
+  // the five challengers' entire commercial argument.
+  // Dropped as too generic or false-positive-prone: 'scr' (description,
+  // scrap), 'nox' (Lennox, Knoxville, noxious), 'aggregation', 'islanded',
+  // 'part load', 'time to power' (time to power up/down). Dropped as
+  // near-duplicates of a kept term: 'major source', 'air permit', 'ride
+  // through' unhyphenated. Dropped on SPLIT grounds per (v): 'interconnection
+  // queue' (topic-capacity-markets holds it and large-load-interconnection-
+  // 2026-09 owns the subject), 'transfer switch'/'flywheel'/'drups'
+  // (topic-in-hall-power), 'synchronous condenser' (the seed above),
+  // 'take-or-pay' (topic-aidc-landlords' lease instrument), 'power delivery
+  // agreement' (adjacent to topic-storage-offtake's contract band). Dropped
+  // as company names per (y7): 'jenbacher', 'solar turbines', 'mtu'.
+  // 'section 232' - 7.32 item (vi) - is DECIDED here rather than deferred a
+  // third time. Session 8 left it out as "a tariff regime belonging with the
+  // policy seeds"; checked, NO POLICY SEED OWNS IT. topic-china-policy holds
+  // 'tariff' and 'Section 301' but is China-scoped, and 232 is a steel-and-
+  // aluminium-derivatives statute biting Germany, France and Japan - four
+  // members here carry that exposure and two name the regime in their own
+  // policyExposure. It stays out on a SHARPENED ground: it is a CROSS-SEGMENT
+  // regime and a landscape session may only add topic-landscape-<segment>, so
+  // seeding it here would mis-band every other segment's tariff article. It
+  // wants a policy-level home (its own topic-trade-tariffs, or an addition to
+  // topic-federal-action) - a developer or policy-session decision.
+  { key: 'topic-landscape-bridge-and-on-site-generation',
+    label: 'Bridge and on-site generation: the slot, the air permit and the fuel',
+    terms: ['slot reservation', 'reservation fee', 'heat rate',
+            'non-attainment', 'tier 4 final', 'minor source',
+            'selective catalytic reduction', 'firm gas', 'virtual pipeline',
+            'block load', 'ride-through', 'dealer network'],
+    source: 'guidance:landscape-bridge-and-on-site-generation-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

@@ -1,4 +1,4 @@
-var VERSION = "v01.47g";
+var VERSION = "v01.48g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -15187,8 +15187,8 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
  "title": "Bridge and on-site generation",
  "short": "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
  "provenance": {
   "inputs": [
    {
@@ -16720,7 +16720,7 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    "read": "1 min",
    "ps": [
     "**Mechanism lessons for this segment:** *Bridge Power: Building the Plant Before the Grid Arrives* · *The Ten-Second Race* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-bridge-and-on-site-generation-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Caterpillar, Cummins, ERock, GE Vernova, Mitsubishi Power, Siemens Energy, VoltaGrid, Wärtsilä, Bloom Energy, Mainspring, ProEnergy, Rehlko, Rolls-Royce Power Systems, Eaton, ENGIE North America, NRG Energy, Piller — each member's dossier carries one in Profiler."
    ]
   },
@@ -16795,6 +16795,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
     "read-next",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -41666,7 +41673,8 @@ function guidanceDocs_() {
           guidanceDocLandscapePowerConversion_(),
           guidanceDocLandscapeAidcDevelopersAndLandlords_(),
           guidanceDocLandscapeInHallPower_(),
-          guidanceDocLandscapeGridEquipment_()];
+          guidanceDocLandscapeGridEquipment_(),
+          guidanceDocLandscapeBridgeAndOnSiteGeneration_()];
 }
 
 function guidanceIndex_() {
@@ -53100,6 +53108,733 @@ function guidanceDocLandscapeGridEquipment_() {
  ]
  };
 }
+
+// The NINTH landscape module (S2 session 9) and the EIGHTEENTH guidance
+// module. Corpus synthesis over the 17 member dossiers of
+// bridge-and-on-site-generation at the profile versions in the claims ledger:
+// no document ingested, no new research. 8 incumbent, 5 challenger, 4
+// adjacent, re-measured 2026-09-15 and confirming 7.33 member for member;
+// all seventeen carry a dossier. Authored BELOW the CONTENT END fence
+// because guidance is authored by a named session, never by the unattended
+// pipeline (CLASSROOM-COMMITTER-CONTRACT.md 3, enforced by P2).
+//
+// THE SPLIT, written before the module (10.6 (j)) and recorded in section 2
+// of repository-information/industry-guidance/landscape-bridge-and-on-site-
+// generation-analysis.md. This is the first segment TWO of whose three
+// READ_NEXT mechanism lessons are ALREADY BUILT, and 10.6 (t) fires harder
+// here than anywhere: bridge-power teaches the four machine classes AND the
+// slot-reservation instrument, and backup-generation teaches the rating
+// ladder, block load and the whole permit ceiling - FIVE of the segment's six
+// buying criteria - and between them they name NOT ONE VENDOR. Every actor is
+// "one supplier", "one operator", "three manufacturers". Earlier
+// pre-declarations were a tile (session 6) or a callout (session 8); this is
+// four whole sections reserved for layer 4 on purpose. Session 8's line holds
+// unamended: a market condition taught vendor-blind belongs in the mechanism
+// lesson, one named vendor's own instrument belongs here. 7.23's test holds
+// on the slot itself - a mechanism that explains why the escape routes exist
+// there, a balance-sheet position a buyer with no permit can own here.
+//
+// THE FINDING OF THIS SESSION: bridge-power says there are EXACTLY THREE ways
+// out of a factory queue and names nobody, and the registry's five challengers
+// fill all three one-for-one - machine class (rolls-royce-power-systems,
+// rehlko), where the machine comes from (proenergy), a machine nobody queues
+// for (bloom-energy, mainspring-energy). The first time a public lesson's own
+// CLASSIFICATION has mapped one-to-one onto a segment's challenger bench.
+// Second finding: SIX built landscape neighbours (a record), and the
+// inversion rate is BIMODAL - in-hall-power 6 shared / 6 inverted (100 %),
+// grid-equipment 3 shared / 0 inverted (0 %). The rate measures whether a
+// shared member's business CROSSES the boundary or STRADDLES it.
+//
+// TWENTY-ONE OMISSIONS are enumerated in section 2g of the analysis file - do
+// not import them in a later revision. From bridge-power: the four machine
+// classes with advantages and disadvantages; the efficiency ladder; the
+// three-ways-out taxonomy itself; behind-the-meter; prime versus backup and
+// off-grid versus bridge; the siting inversion; the PDA and utility-owned
+// structures as concepts; the four-campus table; islanding and black start.
+// From backup-generation: the ten-second timeline; standby/prime/continuous
+// against ISO 8528; block load and the lean-burn limit; the four derating
+// conditions; paralleling, droop and load shed; the permit ladder; what a
+// battery changes. From where-batteries-stop: the cost-of-duration axis.
+// From large-load-interconnection-2026-09: the study process and the tariff.
+// From the six neighbouring landscapes: each shared member's position IN THAT
+// SEGMENT.
+//
+// reviewBy is 2026-12-31, and A SORT OF THE FENCE IS WORSE THAN USELESS -
+// session 3's (g) case a THIRD time, on the largest fence any landscape has
+// faced. 60 policyExposure entries across seventeen members, 24 dated, and
+// EXACTLY ONE date in the future: cummins policyExposure[3] at 2027-01, whose
+// own text says it affects the ON-HIGHWAY platforms rather than the
+// data-centre gen-sets. A sort returns it and clocks a bridge-generation
+// module on a truck engine - session 8's (y5) class in the one shape that
+// would actually have fooled a sort. The date taken was read out of
+// caterpillar's own strategyRead[5] indicator list ("Q4 2026: first shipments
+// from the ~1.5 GW medium-speed restart ... slippage would confirm that
+// capacity, not demand, gates 2027 revenue") and corroborated by FOUR other
+// members converging on end-2026: piller (36 engines and SHIELDX modules on
+// site), enchanted-rock (~1.2 GW/yr Houston line), bloom-energy (Fremont 1 to
+// 2 GW), rehlko (Cholet complete). 31 December rather than 1 October or 1
+// December because a review that fires at the START of a window fires before
+// the event it watches, and it keeps the module outside its own 30-day
+// horizon so the curriculum checker still reports 2 items due rather than 3.
+// FOUR rejections are written out in section 10 of the analysis file.
+// ONE THING STATED RATHER THAN HIDDEN: china-policy-stack-2026-08 also
+// carries 2026-12-31. 10.6 (r)/(u) reject a candidate that is ALREADY ANOTHER
+// MODULE'S OWN GATE - two modules ringing the SAME bell. This is a different
+// bell on the same calendar day, and shifting to 30 December would mean
+// FABRICATING a date the corpus does not state. Recorded as a deliberate
+// first-of-its-kind acceptance rather than an oversight.
+function guidanceDocLandscapeBridgeAndOnSiteGeneration_() {
+  return {
+ "id": "landscape-bridge-and-on-site-generation-2026-09",
+ "group": "The Value Chain",
+ "title": "Landscape — Bridge and On-Site Generation",
+ "short": "Eight incumbents holding four kinds of incumbency that cannot be compared — two of which build no machine at all — and five challengers sitting on exactly the three escape routes the public lesson already named. The judgment layer above the public segment lesson.",
+ "source": {
+  "doc": "Corpus synthesis over the 17 member dossiers of the bridge-and-on-site-generation segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 10,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-bridge-and-on-site-generation-analysis.md"
+ },
+ "updated": "2026-09-15",
+ "reviewBy": "2026-12-31",
+ "revisions": [
+  {
+   "date": "2026-09-15",
+   "note": "First authoring, and the ninth landscape module of the segment layer. Corpus synthesis over the 17 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. This is the first segment two of whose three mechanism lessons are already built, and those two lessons teach five of its six buying criteria vendor-blind on purpose, so the split was written before the module and is the reason the module carries no machine comparison and no explanation of what a reservation is. It is also the first landscape with six built landscape modules among its neighbours. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis and is labelled as analysis rather than blended with fact. The review date is 31 December 2026, read out of an incumbent's own indicator list and corroborated by four other members converging on the same window, because a sort of the policy fence returns essentially nothing: 60 policy entries across seventeen members, 24 dated, and exactly one date in the future which belongs to a truck engine. Four rejected candidates are written out in the analysis file."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "17",
+   "v": "members on record",
+   "sub": "Eight incumbent, five challenger, four adjacent — re-measured 15 September 2026, confirming the programme's written figure exactly, member for member. The ninth consecutive session to do so"
+  },
+  {
+   "k": "2 of 8",
+   "v": "incumbents make no machine",
+   "sub": "Two of the eight hold the largest contracted behind-the-meter books in the corpus and manufacture no prime mover at all. One buys its engines from an Austrian maker, the other from a supplier majority-owned by a Chinese parent"
+  },
+  {
+   "k": "63 of 116 GW",
+   "v": "is reservations, not orders",
+   "sub": "The largest incumbent's committed gas position is 53 GW of equipment backlog plus 63 GW of deposit-backed slot reservations. More of it is held places than sold machines — the single number the whole segment turns on"
+  },
+  {
+   "k": "1 of 60",
+   "v": "policy dates lie ahead",
+   "sub": "Sixty policy exposures across the roster, twenty-four of them dated, and exactly one date in the future — which its own entry says applies to on-highway truck engines rather than to anything this segment sells"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry's role for a member that holds an established position in the segment on a stated basis. Here the label marks a claim on delivery rather than on manufacturing, which is why two of the eight carry it while building no machine, and why the eight split into four kinds of incumbency measured in four incompatible units."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry's role for a member attacking an incumbent position. All five here sit on one of exactly three escape routes from a factory queue — change machine class, change where the machine comes from, or build a machine nobody queues for — which is the taxonomy the public bridge-power lesson teaches without naming anyone."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry's role for a member whose main business sits in another segment but whose products or decisions bear on this one. Here the four split cleanly two and two: two suppliers of equipment that goes inside the plant, and two owners of generation who buy what this segment sells."
+  },
+  {
+   "t": "slot reservation",
+   "d": "A deposit-backed position in a manufacturer's production schedule, bought before the project that needs it is final. It is a position rather than a duration, so it survives somebody else's schedule slipping and a quoted lead time does not. In this segment it is a balance-sheet asset: one member holds 3.6 GW of them with no permit, no final investment decision and no named site."
+  },
+  {
+   "t": "prime mover",
+   "d": "The machine that converts fuel into shaft power before anything electrical happens — a gas turbine, a reciprocating engine, a fuel cell stack or a linear generator. The segment is defined by prime movers, which is what makes it notable that two of its eight incumbents do not manufacture one."
+  },
+  {
+   "t": "non-attainment area",
+   "d": "A region whose air quality fails a federal standard, where a new combustion source faces limits that can exclude it outright. It is the permitting wedge two of the five challengers are built on, and one of them claims roughly 46 per cent of planned data-centre capacity sits inside one."
+  },
+  {
+   "t": "aggregation",
+   "d": "The unresolved question of whether dozens of nominally separate or mobile generating units running together at one site constitute a single major stationary source for permitting purposes. Two members' own filings name it as the risk that could re-open the architecture of the whole mobile-turbine bridge model."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Read this beside two public lessons that already teach five of this segment's six buying criteria — and note first what they deliberately do not do.** *Bridge Power: Building the Plant Before the Grid Arrives* teaches the four machine classes this segment's own definition names, and teaches the {{slot reservation}} instrument in full: that turbine delivery rather than construction sets when new gas power can exist, that reservations became assets in their own right, and that a builder holding one can promise a power date a rival physically cannot. *The Ten-Second Race* teaches {{standby rating}} against {{prime power}} and {{continuous rating}}, teaches {{block load}} as the one spec that separates a standby diesel from everything else, and teaches the whole permitting ladder from the hundred-hour emergency allowance to the {{minor source}} and the {{non-attainment area}}. **Between them they name not one vendor.** Every actor is *one supplier*, *one operator*, *three manufacturers*. That is layer four's job being reserved for layer four, and it settles what this module is for: the lessons teach the tests, and this names the parties.",
+    "**The organising judgment, and it is this module's own rather than the record's: in this segment incumbency is a claim on DELIVERY rather than on manufacturing.** The proof is one line of arithmetic on the largest member's file. GE Vernova's 116 gigawatts of committed gas capacity is **53 gigawatts of equipment backlog plus 63 gigawatts of deposit-backed slot reservations** — *more of it is held places than sold machines.* And the corollary runs the length of the roster: **two of the eight {{incumbent}}s manufacture no {{prime mover}} at all.** So the eight are read below as **four kinds of incumbency measured in four incompatible units**, not as a league table. The corpus contains no ranking across them and this module declines to invent one.",
+    "**Group one — the three heavy-frame makers, who do not so much compete for a campus as set its date.** Together they supply roughly **two-thirds of the turbines in gas plants under construction worldwide**, against global orders near 110 gigawatts at end-2025 and manufacturing capacity of sixty to seventy. One of their own chief executives puts the three-maker total at about sixty gigawatts a year. That gap is the founding fact of the segment, and everything else in this module is a response to it.",
+    "**GE Vernova is first by committed position, and it is also the clearest single read on the whole market.** Reservations now sell against **2031** delivery at about three thousand dollars a kilowatt of implied combined-cycle pricing, roughly triple three years ago, at around twenty per cent cash down — and a single quarter converted ten gigawatts of them into orders. Data-centre electrification orders ran about seven hundred million dollars in 2024, above two billion in 2025 and **above five billion in the first half of 2026 alone**. Its own dossier is unsentimental about what that is: **scarcity rent rather than a durable moat**, because a rival nearly doubled unit sales year on year and competitor supply lands in the same 2028-to-2030 windows it is currently selling. It also holds the segment's fast line — five-minute starts across more than 1,300 fielded aeroderivative units, and a mobile machine installed in **eleven days**.",
+    "**Siemens Energy is the only book a gigawatt campus can be written from in one go, and the first to productise on-site power.** Its gas business booked **ten billion euros in a single quarter** — a book-to-bill of 2.65, seventy-three turbines, fifteen gigawatts — with United States data centres the named driver, inside a group backlog of a hundred and sixty-two billion, and the quarter carried the highest group margin in company history. Its data-centre product is a **standardised five-hundred-megawatt block** built with one of this segment's own adjacent members: grid-independent, hydrogen-ready, explicitly *eliminating diesel backup gensets*, claiming up to two years off time to power. **And its expansion is deliberately thirty to fifty per cent rather than maximal**, which its own file reads as managing the scarcity rather than spending it. Large-frame slots are nearly full through 2028 and reservation fees are back for the first time since the early-2000s boom.",
+    "**Mitsubishi Power is the distant third by order book and the only one of the three deliberately declining the volume.** Thirty-five gigawatts of large-frame backlog across eighty units, against a hundred and sixteen and ninety-five — with its stated focus on **core utility customers rather than data centres**. Its data-centre offer is explicitly two-tier: aeroderivative packages from twenty-nine to a hundred and forty megawatts as *a temporary bridge until a grid connection arrives*, and industrial frames of roughly forty to a hundred and twenty megawatts with absorption chillers as permanent behind-the-fence cogeneration. **Three honesty notes travel with it and its own dossier states all three**: it is a brand rather than a reporting segment, so **no revenue figure for it exists or can be derived**; the three-way backlog comparison is not like-for-like, because the other two include reservations and this one does not split its out; and it **exited battery storage entirely** in July 2026, which leaves the storage half of its own stated behind-the-meter answer as somebody else's product.",
+    "**Group two — the two gen-set makers who own the standby fleet and are buying their way into prime.** Third-party market data puts them at about **eighteen and sixteen per cent** of the data-centre generator market, and the larger of the two, counted with its turbine arm, at **thirty-three per cent of tracked permitted behind-the-meter data-centre capacity**. Both are capacity stories rather than demand stories and both say so in their own filings.",
+    "**Caterpillar has the widest footprint across the on-site chain of any member here** — diesel standby, gas prime, turbines from one to thirty-nine megawatts with more than sixteen thousand units installed, plus its own switchgear, transfer switches, microgrid controller and a battery line — sold through **a hundred and fifty dealers and more than eighteen hundred branches**. Diesel is sold into 2028 and gas prime into 2029 on a backlog that has nearly doubled in a year; large-engine capacity is going to roughly three times its 2024 level and **about 1.5 gigawatts of medium-speed capacity is being restarted**. Its own group president supplies the commercial point in one number: **a continuous-duty gas set is worth roughly forty times the lifetime service opportunity of a standby diesel.** The dealer channel turns every prime-power sale into an annuity, and the exposure is that the emergency class it dominates is the one an AI campus grows out of.",
+    "**Cummins reaches furthest down the electrical chain from the engine** — gen-set, alternator, paralleling switchgear, transfer switch, digital master control and, since 2025, batteries, all under one part-number tree, behind a distribution arm that is itself a **twelve-billion-dollar business of about fifteen thousand people**. High-horsepower sets are sold out into the second half of 2028; two hundred million dollars and nine gigawatts of capacity are already added and **four hundred and fifty million more is committed to add twenty gigawatts**, reaching fifty-five by 2030. **And its own analyst day named its three gaps aloud** — emissions-certified after-treatment, a large-megawatt gas platform, and battery and hybrid integration — which is a company describing its own weakness in a slide deck. Prime power is where its position is most contestable and it knows it.",
+    "**Group three — the engine-plant builder.** Wärtsilä sells medium-speed plants assembled from six-to-twenty-three-megawatt sets and **scaling past four hundred and fifty megawatts**, at up to 52.1 per cent electrical efficiency with two-minute starts and thirty-second grid connection on parts of the range, and it booked **789 megawatts of United States data-centre projects in 2025** plus further orders since. The fact that decides how to read it: the engine business is **the half it kept**. Its storage business is folding into a joint venture after a sixty per cent order collapse, and its own file is explicit that data-centre exposure continues regardless of that outcome. **It is an incumbent here because of the business it retained, not the one it is leaving.**",
+    "**Group four — the two platform operators, and the sharpest structural fact in the roster: neither makes a machine.** VoltaGrid holds **more than four gigawatts fully contracted through 2028 and an order book of 7.5 gigawatts through 2030**, stacks twenty-megawatt high-inertia engine nodes to **two hundred megawatts of prime power under a single {{minor source}} air permit**, and markets the result with *zero reliance on battery storage*, holding transients on engine inertia plus sixty-two {{synchronous condenser}}s with flywheels. **Its moat is engine-supply logistics rather than technology and its own dossier says so**: at least 3.8 gigawatts of locked engine production — the two largest orders that manufacturer has ever taken — plus firm gas and the largest Permian compressed-gas terminal among five. ERock is the same shape at finer granularity and inside a different structure: a backlog up roughly tenfold in a year after a four-hundred-and-seventy-megawatt order, a Houston assembly line ramping toward about 1.2 gigawatts a year, production sold out through 2027 into 2028, and a flagship contract in which **a utility owns the plant, a hyperscaler funds all of it under a commission-approved rate, and ERock operates it** — a merchant bridge sale converted into regulated paper. **And the irony its own dossier records rather than hides: its single-source engine supplier is majority-owned by a Chinese parent, so a platform sold on supply-chain cleanliness has a dependency one layer down.**",
+    "**The honesty note this section owes the reader.** A gigawatt of contracted turbine slots, a percentage of a generator market, a megawatt figure for engine plants booked and a gigawatt of signed customer contract are **not measures of one thing**, and no source reachable through these seventeen dossiers ranks across them. Flattening them into an ordering would misrepresent all four. **The module's own assessment, stated as analysis rather than as a finding of the record: the useful question here is not who is biggest but what each incumbency is actually a claim on — because the buyer of a heavy frame and the buyer of a delivered megawatt are not shopping the same list, and only one of those two lists has a factory behind it.**"
+   ],
+   "sales": "Before the first call, establish which of the four incumbencies the vendor on the account actually is. A frame maker is selling a date. A gen-set maker is selling a fleet plus twenty years of service. An engine-plant builder is selling a plant. A platform operator is selling delivered megawatts with somebody else's engines inside — which means the account has inherited that operator's supply constraint without being told about it."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**The public lesson already drew the map, and the registry's five {{challenger}}s fill it one for one.** *Bridge Power* says, in as many words, that there are **exactly three ways out of a factory queue** and that every supplier archetype in it is one of them — change machine class, change where the machine comes from, or build a machine nobody queues for — and it names nobody at all. **This is the first time a public lesson's own classification has mapped one-to-one onto a segment's challenger bench**, so this section does not re-derive the routes. It says who is on each, at what size, and which of the three the record can actually measure.",
+    "**Route one, change machine class — two challengers, and the wider of them is also the most re-rated.** Rolls-Royce Power Systems has the widest single-vendor span in on-site power anywhere in this corpus: diesel sets to four thousand kilovolt-amperes, lean-burn gas sets, a **diesel rotary uninterruptible supply**, a grid-scale battery line, a microgrid controller and, since February 2026, **prefabricated ten, twenty and thirty-megawatt gas power-plant modules with a stated twelve-to-eighteen-month lead time**. Data centres have re-rated it more completely than any other gen-set maker — divisional margin from 13.1 to 20.3 per cent in eighteen months, book-to-bill of 1.8 times, and a broker note making this division the **largest single contributor to the listed parent's sum-of-the-parts, ahead of civil aerospace**. **Three checks come from its own file**: {{prime power}} is *less than ten per cent* of its power-generation business today against a fifteen-to-twenty per cent target by 2030; trade surveys of gigawatt-scale engine awards list it on product attributes **with no named deal**; and **no hyperscaler, landlord or neocloud is named as a customer in any source.**",
+    "**Rehlko is the fourth-ranked gen-set maker and the only private, leveraged one — and its route into prime power is rented rather than built.** It took about 1.7 gigawatts of hyperscale backup awards in a single sixty-day window, plans capacity up more than four hundred per cent through the decade, and is the only gen-set maker here that also manufactures a three-phase static uninterruptible supply and medium-voltage metal-clad paralleling switchgear — a genuine single-package pitch. **But it reaches the gas prime-power campus through a distribution arm that is another manufacturer's largest authorised distributor across twenty-seven countries**, which is the structural difference from the other three gen-set makers, all of which build their own engines. Two facts bound it and both are in its own dossier: **its seven-hundred-to-four-thousand-kilowatt engines are co-developed with and built by a partner in France**, so its capacity ceiling is somebody else's investment decision and its American supply chain is a tariff exposure it publishes nothing about; and **it discloses no revenue, no earnings, no backlog and no headcount in any first-party source, in any year.**",
+    "**Route two, change where the machine comes from — one challenger, and the cleanest arbitrage in the segment.** ProEnergy overhauls retired wide-body airliner cores into its own-spec forty-eight-megawatt package — interchangeable with the original manufacturer's machine but **outside that manufacturer's queue** — and quotes **2027** delivery against three-to-five-year waits on the equivalent original-equipment line. Its proof of model is a 2.4-gigawatt merchant peaker fleet it developed, built and then **sold to two utilities for about 2.16 billion dollars while retaining long-term operations and maintenance on all of it**, recycling the proceeds into owning bridge assets outright. **And its own file states the window is closing**: the original manufacturer's aeroderivative output rose thirty-two per cent year on year in a single quarter, and the engine incumbents are adding tens of gigawatts.",
+    "**Route three, build a machine nobody queues for — two challengers, and they are the largest and the smallest on the bench.** Bloom Energy is the biggest challenger by any revenue measure: guidance raised twice to **3.9 to 4.2 billion dollars**, a first billion-dollar quarter, a master agreement reaching **up to 2.8 gigawatts**, a one-gigawatt utility order firmed at 2.65 billion, a financing framework expanded fivefold to twenty-five billion, and a **fifty-five-day** first deployment against multi-year interconnect waits. **Its own dossier supplies the discount and this module repeats it rather than the headline**: the 2.8 gigawatts is a *ceiling* with roughly 1.2 contracted, management disclaims more than about six months of demand visibility, and the manufacturing ramp is the binding constraint. Its permitting case is the real asset — non-combustion, three thousandths of a pound of {{NOx}} per megawatt-hour, zero water — and the acknowledged trade is that gas-fed cells emit carbon dioxide roughly on par with modern {{combined cycle}}.",
+    "**Mainspring Energy is the permitting wedge in its purest form, and the smallest company on the bench by a wide margin.** A {{linear generator}} at **under 1.5 parts per million of {{NOx}} with no after-treatment at all** admits it to {{non-attainment area}}s that exclude diesels, engines and turbines outright — *a claimed forty-six per cent of planned data-centre capacity* — and a legislative change classified the machine as qualified fuel cell property, earning a flat thirty per cent investment credit with no zero-emissions requirement and no Chinese supply-chain exposure. **The constraint is arithmetic and it is not close**: today's plant plus a delayed second one is about **two hundred and fifty megawatts a year against gigawatt-class procurement**, and there is no named hyperscaler logo. Its boldest reference is real and unnamed — a greenfield AI data centre running fully islanded on its generators **with no diesel backup at all** since summer 2025.",
+    "**Now the counter-threat, and it is not size or price. It is that every incumbent's answer to all three routes is the same move, and it lands in the same eighteen months.** Caterpillar to roughly three times its 2024 large-engine output plus the medium-speed restart; Cummins four hundred and fifty million dollars for twenty gigawatts more; Siemens Energy thirty to fifty per cent over three years; GE Vernova from about twenty to twenty-four to thirty gigawatts a year and *largely sold out of 2030 deliveries by the end of 2026*; Mitsubishi thirty per cent. **The module's own assessment, stated as analysis: the challengers here are not attacking a product position — they are renting a window, and the incumbents are closing it with capital rather than with price.**",
+    "**And the most useful corroboration of that judgment comes from an incumbent stating it against itself.** VoltaGrid's own strategy read says the moat is engine-supply logistics rather than technology, and then says the consequence out loud: **the moat is time-limited, because engine capacity is scaling industry-wide and interconnection reform would collapse the speed premium that justifies the price.** That is a platform operator with more than four gigawatts contracted describing the expiry date on its own advantage — which is why the indicators below are capacity dates rather than policy dates, and why this module's review gate is one of them."
+   ],
+   "sales": "Ask which of the three routes the account came in on before you ask what it needs. A machine-class switch is buying months. A queue bypass is buying a delivery slot somebody else cannot get. A machine nobody queues for is buying an air permit. All three are time purchases with different expiry dates — and the incumbents' capacity programmes are the clock every one of them is running against."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "One row per {{incumbent}} and {{challenger}} — thirteen of the seventeen members, in registry order. **Every bet below is analysis, not fact**: each is that member's own strategy read, which its dossier already marks as an assessment carrying a confidence level, restated here in one line. They are never blended with the fact rows above. The four {{adjacent}} members get no row because they are not ranked players in this segment; what they do to it is in the section above and the indicators below. **At thirteen rows this table sits between grid equipment's six and the developers' twenty-seven**, and it is the whole ranked roster with nothing trimmed.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet (analysis)"
+   ],
+   "rows": [
+    [
+     "GE Vernova",
+     "incumbent",
+     "That **the reservation is the product** — sixty-three gigawatts of deposit-backed slots against a fifty-three gigawatt equipment backlog, selling 2031 delivery at roughly triple the price of three years ago — while hedging its own alternating-current chain with a hyperscaler-funded solid-state-transformer commitment. Its own file calls the pricing scarcity rent rather than moat, because rival supply lands in the same windows it is selling"
+    ],
+    [
+     "Siemens Energy",
+     "incumbent",
+     "That **one book beats four, and managed scarcity beats maximal expansion** — a deliberate thirty-to-fifty per cent build-out rather than all-out, and a standardised five-hundred-megawatt diesel-free block that sells time to power rather than turbines. The price is a multiple near seventy times earnings that fell on a twenty-one per cent beat"
+    ],
+    [
+     "Mitsubishi Power",
+     "incumbent",
+     "That **declining the volume is the position** — large frames for core utility customers who post deposits early, a two-tier aeroderivative-bridge-plus-industrial-frame offer for the data centres it does take, and thirty per cent more capacity rather than a doubling. The unhedged cost is the storage business it sold in July 2026, which its own behind-the-meter page still names"
+    ],
+    [
+     "Caterpillar",
+     "incumbent",
+     "That **the whole stack plus the dealer annuity beats the best single machine** — turbines, gas prime, diesel standby, switchgear, controls and batteries through eighteen hundred branches, on the arithmetic that a continuous-duty gas set is worth roughly forty times a standby diesel in lifetime service. The exposure is that the emergency class it dominates is the one an AI campus grows out of"
+    ],
+    [
+     "Cummins",
+     "incumbent",
+     "That **depth down the electrical chain and twenty years of service beat share** — engine, alternator, paralleling switchgear, transfer switch and control under one part-number tree behind a twelve-billion-dollar distribution arm — while four hundred and fifty million dollars of capacity buys the prime-power seat it does not yet hold and its own analyst day names all three gaps aloud"
+    ],
+    [
+     "Wärtsilä",
+     "incumbent",
+     "That **the engine plant was the half worth keeping** — medium-speed plants past four hundred and fifty megawatts at 52.1 per cent efficiency with thirty-second grid connection, monetising data-centre demand on its own — while merchant storage integration folds into a joint venture after a sixty per cent order collapse. The near-term risk its own file names is counterparty continuity through that transition"
+    ],
+    [
+     "VoltaGrid",
+     "incumbent",
+     "That **locked engine production is a better asset than an engine factory** — at least 3.8 gigawatts of another maker's output held against turbine queues quoting 2031, two hundred megawatts stacked under one minor-source permit, and transients carried on inertia and flywheels rather than cells. **Its own file names the expiry**: engine capacity is scaling industry-wide and interconnection reform would collapse the speed premium"
+    ],
+    [
+     "ERock",
+     "incumbent",
+     "That **the utility-owned, hyperscaler-funded bridge is the structure that scales** — five-hundred-kilowatt granularity, a Houston assembly ramp toward 1.2 gigawatts a year, and a commission-approved rate turning a merchant sale into regulated paper. Two fragilities its own file states: three contracts dominate the story, and the single-source engine supplier is majority-owned by a Chinese parent"
+    ],
+    [
+     "Bloom Energy",
+     "challenger",
+     "That **the core sale is time rather than electricity** — fifty-five-to-ninety-day deployments against interconnect waits of up to seven years, every shipment ready for direct-current integration, and fuel cells displacing planned turbines and gen-sets outright at a gigawatt-plus campus. The discounts are in its own filings: a 2.8 gigawatt ceiling against roughly 1.2 contracted, and about six months of demand visibility"
+    ],
+    [
+     "Rolls-Royce Power Systems",
+     "challenger",
+     "That **breadth of the on-site stack under one brand is the differentiation** — diesel, gas, rotary uninterruptible supply, battery and controller — and that prefabricated ten-to-thirty-megawatt gas modules at twelve to eighteen months convert that breadth into the prime-power share it does not have. Prime power is under ten per cent of the business today against a fifteen-to-twenty per cent target by 2030"
+    ],
+    [
+     "Rehlko",
+     "challenger",
+     "That **available capacity converts to share while the leaders are sold out**, sold as one integrated package — gen-set, medium-voltage paralleling switchgear, transfer switch, uninterruptible supply and enclosure — with a distribution arm renting a gas prime-power route rather than building one. The structural cost is that a partner builds its large engines and it discloses no financials at all"
+    ],
+    [
+     "ProEnergy",
+     "challenger",
+     "That **the retired airliner fleet is a factory nobody queues for** — own-spec forty-eight-megawatt packages from overhauled wide-body cores, delivered in 2027 against three-to-five-year waits, with a develop-build-sell-keep-the-service model recycling about 2.16 billion dollars into owning bridge assets outright. Its own file says the window is closing as original-equipment aero output scales"
+    ],
+    [
+     "Mainspring Energy",
+     "challenger",
+     "That **the air permit is the moat** — under 1.5 parts per million of nitrogen oxides with no after-treatment, a flat thirty per cent investment credit with no Chinese exposure, and an islanded AI data centre running with no diesel backup at all. The binding constraint is arithmetic: about two hundred and fifty megawatts a year of planned output against gigawatt-class procurement, and no named hyperscaler"
+    ]
+   ],
+   "note": "**Read the table beside the roster, not instead of it.** Thirteen ranked players out of seventeen members is the **highest ratio of any landscape in this series** — grid equipment ranked six of fifteen, the room seventeen of twenty-six — and that is the segment's defining structural fact rather than an authoring choice: this is a segment of specialists, and four of the seventeen belong to no other segment at all.",
+   "sales": "Eight of the thirteen bets are capacity bets with dated landings and they are all in the indicators below. The other five are structural bets with no date — the dealer annuity, the rented distribution route, the regulated-paper structure, the reservation book and the permit wedge — and those can only be tested by what an account actually signs. Diary the first eight; qualify the second five."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it. **Four of these ten were considered for this module's own review date and rejected** — one because a personnel change is not a gate and its date is already two other modules' clock, one because it is the right company on the wrong product line, one on split grounds because it is a neighbouring module's own subject, and one because it sits further out than the default it would replace. Each rejection is marked, because the rejection is part of the reading.",
+   "cols": [
+    "On record",
+    "Indicator",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "Q4 2026",
+     "First shipments from an incumbent's restart of about 1.5 gigawatts of medium-speed engine capacity, together with its large-engine capacity step-up",
+     "**This module's review gate.** Its own indicator list states the consequence: slippage would confirm that capacity, not demand, gates 2027 revenue — which is this module's central argument made testable in one observation"
+    ],
+    [
+     "end-2026",
+     "Four more members' capacity landings in the same window: thirty-six engines and their stabiliser modules due on site at a four-hundred-megawatt plant, a Houston assembly line reaching about 1.2 gigawatts a year, a fuel-cell factory doubling from one to two gigawatts, and a French power-control plant completing",
+     "**The same gate from four other members.** Whether announced capacity actually lands is the only question that separates this segment's incumbents from its challengers, and five files put it in one quarter"
+    ],
+    [
+     "Dec 2026",
+     "A Texas grid operator's verification report on the large-load interconnection audit covering a queue of roughly 474 gigawatts",
+     "Governs every grid-served large load in the state — and **behind-the-meter generation is exempt**, which makes this the clearest available read on how much bridge demand a pause creates. *Considered as the review gate and rejected: grid interconnection is a neighbouring module's own subject*"
+    ],
+    [
+     "1 Oct 2026",
+     "An incumbent's chief financial officer handover completes",
+     "It appears on that company's own indicator list, so it is recorded here. *Rejected twice over as the review gate: a personnel event is not a gate on anything this module teaches, and 1 October is already the review date of two registered modules*"
+    ],
+    [
+     "Jan 2027",
+     "A phased model-year launch under revised on-highway emissions rules, with two engine platforms entering limited production",
+     "**The only future-dated effective date anywhere in this segment's sixty policy exposures**, so a mechanical sort of the fence returns exactly this. *Rejected as the review gate: its own entry says it affects the on-highway platforms rather than the data-centre gen-sets — the right company on the wrong product line*"
+    ],
+    [
+     "Q1 2027",
+     "An adjacent member completes the separation of its mobility group, finishing its conversion to an electrical pure play",
+     "That member carries the five-hundred-megawatt on-site alliance with one of this segment's incumbents, so its shape matters to the block's roadmap"
+    ],
+    [
+     "Feb 2027",
+     "Two parent-level annual results — a private group's report covering its stabiliser business against a thirty per cent growth guide, and a European utility's full-year results covering a four-gigawatt data-centre pipeline",
+     "The only windows into two adjacents that publish almost nothing else. One's volume is a function of another company's engine sales; the other's pipeline is a forward claim rather than a delivered one"
+    ],
+    [
+     "through Jul 2027",
+     "Removal of sixty-nine temporary turbines from one contested campus, and any regulatory ruling on {{aggregation}}",
+     "The live legal question under the entire mobile and modular bridge model, in which this segment's largest turbine supplier by permitted capacity is the leading equipment maker. An adverse ruling re-opens architecture choices across the roster"
+    ],
+    [
+     "31 May 2027",
+     "An adjacent member's initial test period ends on a state-funded dispatchable plant, starting ten annual grant instalments",
+     "The state paying for capacity that shows up rather than capacity that is announced — the cleanest public test of whether on-site dispatchable capacity converts. *Considered as the review gate and rejected on distance: it sits further out than the six-month default it would replace*"
+    ],
+    [
+     "2028 · 2030",
+     "A storage joint venture's counterparty transition; a next-generation engine series with more than twenty per cent additional power density; one maker largely sold out of 2030 deliveries by the end of 2026; fifty-five gigawatts of gen-set capacity and hundred-per-cent-hydrogen frames by 2030",
+     "Where the capacity race is actually settled. **Every challenger's schedule advantage is priced against these dates**, and one incumbent's own file says so about itself"
+    ]
+   ],
+   "sales": "Two of these ten are worth a calendar entry rather than a note. The Q4 2026 capacity landing decides whether the speed premium this segment charges survives 2027 — and the aggregation ruling decides whether the modular permitting strategy that sets the block size survives at all. Everything else is confirmation."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell storage — this is the segment every bridge or buffer proposal is priced against, and the public lesson already told you where the socket is.** *The socket is not the campus, it is the moment*: the bring-up, the transient and ride-through duty, and the conversion at the end of a bridge when the engines drop back to backup. What this module adds is **which named counterparty has closed that moment and which has left it open**, and there are three things a lesson cannot tell you. **First, one incumbent markets the closure explicitly.** VoltaGrid's prime-power platform is sold with *zero reliance on battery storage*, holding transients on engine inertia plus sixty-two {{synchronous condenser}}s with flywheels — so every one of those campuses is a site where the storage layer was designed out **at the architecture stage**, not lost in a bake-off. **Second, four members have an open socket and one of them says so in its own roadmap**: one challenger has no storage offering anywhere in a platform carrying more than 1.65 gigawatts of announced turbine capacity; another's islanded no-diesel plants still carry redundancy and transient-coverage duties with no storage partner announced; a third manufactures no battery at all while its own marketing describes exactly the problem a battery solves; and **one incumbent's own bridge narrative concedes that sites transition to permanent utility feeds supplemented by battery storage after the roughly five-year bridge**. **Third, the counter-example is the instructive one** — both gen-set incumbents now pair engines with cells, one of them on a named campus with a grid-forming battery and the other on its largest-ever storage order written to *utility-defined requirements* for managing AI load oscillation at the interconnection. **The engine makers are buying the answer; the platform operators are designing around it.** That is the map, and it is a map of moments rather than of logos.",
+    "**If you sell AI data-centre power — move one: establish whether the account holds a slot or a quotation.** A quoted lead time is a duration and a {{slot reservation}} is a position, and only one of the two survives somebody else's schedule slipping. In this segment that difference is a contract with a deposit, roughly twenty per cent cash down, selling against 2031 — and one adjacent member holds 3.6 gigawatts of reserved slots with **no firm order, no final investment decision and no named site**. A buyer who does not know which one it holds does not have a date. **Move two: establish which of the four incumbencies the vendor actually is**, because **two of the eight incumbents manufacture no {{prime mover}}** and the machine inside their product is somebody else's supply constraint. An account that has locked a platform operator has inherited that operator's engine supplier one layer down, and nobody will have said so. **Move three: read buying criterion three as the sorting mechanism rather than as a compliance box.** Emissions permitting is where the entire challenger case lives — the {{non-attainment area}} wedge, the machine with no {{selective catalytic reduction}}, the non-combustion machine — and it is the criterion an incumbent seller is least likely to raise first. The specific question is {{aggregation}}: whether dozens of nominally separate or mobile units running together count as one major source is unresolved, and **a project structured on the answer being no is carrying a regulatory bet.** Ask whether the customer has priced it."
+   ],
+   "sales": "Whichever half you are in, the qualifying question is the same and it is about time rather than product: what is this account's energisation date, who set it, and is the thing on its critical path a machine or a place in a queue? In this segment the answer is almost never the one the account leads with."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 15 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. The registry is cited at the repo version of its last change rather than at this session's, because it did not move this session. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that incumbency here is a claim on delivery rather than on manufacturing; that the challengers are renting a window the incumbents are closing with capital rather than with price; and every row of the bets table.",
+   "rows": [
+    [
+     "Segment holds 17 members — 8 incumbent, 5 challenger, 4 adjacent; chain position 6, tier build; no notes field on the registry entry",
+     "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"
+    ],
+    [
+     "The definition names heavy-frame and aeroderivative turbines, reciprocating engines, fuel cells, linear generators and standby gen-sets, and closes on converting the interconnection queue into a calendar",
+     "profiler-segments.json @ v05.41r — segments[].definition"
+    ],
+    [
+     "The six buying criteria, verbatim",
+     "profiler-segments.json @ v05.41r — segments[].buyingCriteria"
+    ],
+    [
+     "Four of the seventeen belong to no other segment; twelve are shared with a built landscape module",
+     "profiler-segments.json @ v05.41r — segments[].members[] across all nineteen segments"
+    ],
+    [
+     "116 GW committed = 53 GW equipment backlog + 63 GW deposit-backed slot reservations; reservations selling against 2031 at ~USD 3,000/kW, ~20 % cash down; one quarter converted 10 GW",
+     "profile:ge-vernova @ v6 — summary; productsAndServices[0].description"
+    ],
+    [
+     "One of three OEMs supplying two-thirds of turbines for gas plants under construction; largest single heavy-duty share",
+     "profile:ge-vernova @ v6 — productsAndServices[0].positioning"
+    ],
+    [
+     "Output ~20 GW/yr (Q3 2026) to 24 GW in 2028 toward 30 GW by 2030; largely sold out of 2030 deliveries by end of 2026",
+     "profile:ge-vernova @ v6 — productsAndServices[0].roadmap"
+    ],
+    [
+     "LM6000 five-minute starts across 1,300+ fielded units; TM2500 mobile units installed in 11 days",
+     "profile:ge-vernova @ v6 — productsAndServices[1].description"
+    ],
+    [
+     "Data-centre electrification orders ~USD 0.7B (2024) to >USD 2B (2025) to >USD 5B in 1H 2026",
+     "profile:ge-vernova @ v6 — productsAndServices[2].roadmap"
+    ],
+    [
+     "Pricing power is scarcity rent rather than durable moat; competitor supply lands in the same 2028-2030 windows",
+     "profile:ge-vernova @ v6 — strategyRead[0]"
+    ],
+    [
+     "Gas Services EUR 10.0B orders in one quarter, book-to-bill 2.65, 73 turbines = 15 GW, US data centres the named driver; group backlog EUR 162B; record 14.2 % quarterly margin",
+     "profile:siemens-energy @ v7 — summary"
+    ],
+    [
+     "Large-frame slots nearly full for 2028; reservation fees back for the first time since the early-2000s boom; deliberate +30-50 % rather than maximal expansion",
+     "profile:siemens-energy @ v7 — ecosystemRole; strategyRead[0]"
+    ],
+    [
+     "The 500 MW standardised block — grid-independent, eliminates diesel backup gensets, 99.99 %+ availability, hydrogen-ready, up to two years off time-to-power",
+     "profile:siemens-energy @ v7 — productsAndServices[2].description; strategyRead[1]"
+    ],
+    [
+     "35 GW of large-frame backlog across 80 units against 116 GW and 95 GW; the figures are not like-for-like because the other two include slot reservations",
+     "profile:mitsubishi-power @ v1 — productsAndServices[0].positioning; strategyRead[5]"
+    ],
+    [
+     "Deliberately focused on core utility customers rather than data-centre volume; customers pay reservation fees for the first time in decades; a buyer who posts a deposit early gets a date",
+     "profile:mitsubishi-power @ v1 — strategyRead[0]; strategyRead[4]"
+    ],
+    [
+     "Two-tier data-centre offer: aeroderivative packages 29-140 MW as a temporary bridge; H-25/H-100 industrial frames ~40-120 MW as permanent behind-the-meter cogeneration",
+     "profile:mitsubishi-power @ v1 — productsAndServices[1]; productsAndServices[2]"
+    ],
+    [
+     "No Mitsubishi Power revenue or profit figure exists or can be derived; exited battery storage in July 2026, leaving a gap its own behind-the-meter page still names",
+     "profile:mitsubishi-power @ v1 — summary; strategyRead[3]; strategyRead[6]"
+    ],
+    [
+     "About 18 % of the data-centre generator market, and 33 % of tracked permitted behind-the-meter data-centre capacity counted with the turbine arm",
+     "profile:caterpillar @ v2 — summary; profiler-segments.json @ v05.41r — basis line"
+    ],
+    [
+     "Diesel sold into 2028 and gas prime into 2029; USD 72.1B backlog nearly doubled in a year; ~3x large-engine capacity, 2.5x turbines, ~1.5 GW medium-speed restart shipping from Q4 2026",
+     "profile:caterpillar @ v2 — strategyRead[0]; productsAndServices[1].roadmap"
+    ],
+    [
+     "A continuous-duty gas gen-set yields roughly forty times the lifetime services opportunity of a standby diesel; 150 dealers and more than 1,800 branches",
+     "profile:caterpillar @ v2 — strategyRead[1]; productsAndServices[5].description"
+    ],
+    [
+     "Turbine arm spans 1-39 MW with more than 16,000 units installed and 3 billion operating hours; mobile turbine package set up in under 12 hours",
+     "profile:caterpillar @ v2 — productsAndServices[2].description"
+    ],
+    [
+     "The principal risk to the power-generation book is regulatory rather than technical — aggregation of nominally mobile units into major sources; 59 unpermitted mobile units and removals through July 2027",
+     "profile:caterpillar @ v2 — strategyRead[3]; policyExposure[2].exposure"
+    ],
+    [
+     "Q4 2026 first shipments from the medium-speed restart and the large-engine step-up; slippage would confirm that capacity, not demand, gates 2027 revenue",
+     "profile:caterpillar @ v2 — strategyRead[5]"
+    ],
+    [
+     "High-horsepower gen-sets sold out into 2H 2028; USD 200M and 9 GW added, USD 450M committed for 20 GW more to reach 55 GW by 2030; Power Systems margin a record 29.5 %",
+     "profile:cummins @ v1 — summary; strategyRead[0]"
+    ],
+    [
+     "Scope from engine to alternator to paralleling switchgear to transfer switch to control; Distribution is a USD 12.4B business of ~15,000 people across 190+ countries",
+     "profile:cummins @ v1 — ecosystemRole; strategyRead[4]"
+    ],
+    [
+     "The analyst day named three gaps: emissions-certified after-treatment, a large-megawatt gas platform, battery and hybrid integration; prime power is where the position is most contestable",
+     "profile:cummins @ v1 — strategyRead[2]"
+    ],
+    [
+     "The largest-ever battery award meets utility-defined requirements for AI load fluctuation, oscillation and ride-through at the interconnection",
+     "profile:cummins @ v1 — strategyRead[3]"
+    ],
+    [
+     "Model Year 2027 phased launch affects the on-highway platforms rather than the data-centre gen-sets",
+     "profile:cummins @ v1 — policyExposure[3].exposure; recentDevelopments[4]"
+    ],
+    [
+     "Engine power plants from 6-23 MW sets scaling past 450 MW; 52.1 % electrical efficiency on one platform; 30-second grid connection and 2-minute starts across the range",
+     "profile:wartsila @ v7 — productsAndServices[5].description"
+    ],
+    [
+     "789 MW of US data-centre projects booked in 2025 plus further Q1 2026 orders; data-centre exposure continues regardless of the storage outcome",
+     "profile:wartsila @ v7 — strategyRead[3]"
+    ],
+    [
+     "Storage folds into a 50/50 joint venture after a 60 % order-intake collapse; counterparty transition is the near-term operational risk",
+     "profile:wartsila @ v7 — strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "4.3+ GW fully contracted through 2028 and a 7.5 GW order book through 2030; USD 5B of debt and a USD 1B equity round",
+     "profile:voltagrid @ v5 — summary"
+    ],
+    [
+     "The prime-power platform stacks 20 MW nodes to 200 MW under a single minor-source air permit and is marketed with zero reliance on battery storage; transients on inertia plus 62 synchronous condensers with flywheels",
+     "profile:voltagrid @ v5 — productsAndServices[0].description; productsAndServices[2].description"
+    ],
+    [
+     "The moat is engine-supply logistics rather than technology — at least 3.8 GW of locked engine production, firm gas and five CNG terminals — and it is time-limited by industry capacity scaling and interconnection reform",
+     "profile:voltagrid @ v5 — strategyRead[1]"
+    ],
+    [
+     "Backlog up roughly tenfold year on year to ~USD 1.7B after a ~470 MW order; USD 626.6M cash and zero debt; Houston assembly toward ~1.2 GW/yr by end-2026; sold out through 2027 into 2028",
+     "profile:enchanted-rock @ v4 — summary; productsAndServices[0].roadmap"
+    ],
+    [
+     "The flagship bridge is utility-owned, hyperscaler-funded under a commission-approved rate and operator-run — 366 MW, ~USD 473-500M, exclusive five-year bridge from 2027",
+     "profile:enchanted-rock @ v4 — summary; productsAndServices[1].positioning"
+    ],
+    [
+     "Engines are bought under a ~USD 335M exclusive five-year supply agreement from a supplier majority-owned by a Chinese parent",
+     "profile:enchanted-rock @ v4 — productsAndServices[0].description; strategyRead[1]"
+    ],
+    [
+     "Its own bridge narrative concedes sites transition to permanent utility feeds supplemented by battery storage after the roughly five-year bridge",
+     "profile:enchanted-rock @ v4 — strategyRead[2]"
+    ],
+    [
+     "2026 guidance raised twice to USD 3.9-4.2B; first USD 1B+ quarter; a master agreement up to 2.8 GW; a 1 GW / USD 2.65B utility order; a financing framework expanded fivefold to USD 25B; 55-day first deployment",
+     "profile:bloom-energy @ v6 — summary"
+    ],
+    [
+     "The headline pipeline overstates firm demand: 2.8 GW is a ceiling with ~1.2 GW contracted, and management disclaims more than about six months of demand visibility",
+     "profile:bloom-energy @ v6 — strategyRead[1]"
+    ],
+    [
+     "0.003 lbs/MWh NOx, zero water, non-combustion — avoiding major-source air permitting; CO2 of 679-833 lbs/MWh on gas is the acknowledged trade; all shipments 800 VDC-ready",
+     "profile:bloom-energy @ v6 — productsAndServices[0].description; .positioning; .roadmap"
+    ],
+    [
+     "The widest single-vendor span in on-site power — diesel and gas sets, a rotary UPS, a battery line, a microgrid controller, and prefabricated 10/20/30 MW gas modules at a stated 12-18 month lead time",
+     "profile:rolls-royce-power-systems @ v1 — ecosystemRole; productsAndServices[6].description"
+    ],
+    [
+     "Divisional margin 13.1 % to 20.3 % in eighteen months, book-to-bill 1.8x; a broker sum-of-the-parts makes the division the largest single contributor ahead of civil aerospace",
+     "profile:rolls-royce-power-systems @ v1 — strategyRead[0]"
+    ],
+    [
+     "Prime power is less than 10 % of the power-generation business today against a 15-20 % target by 2030; trade surveys list it on attributes with no named gigawatt deal; no hyperscaler, landlord or neocloud is named as a customer in any source",
+     "profile:rolls-royce-power-systems @ v1 — strategyRead[3]; strategyRead[6]"
+    ],
+    [
+     "About 1.7 GW of hyperscale backup awards in a single 60-day window; capacity planned up more than 400 % through the decade; the only gen-set OEM here that also makes a three-phase static UPS and 15 kV metal-clad paralleling switchgear",
+     "profile:rehlko @ v1 — summary; strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "Its gas prime-power route is a distribution arm that is another manufacturer's largest authorised distributor across 27 countries — reaching the campus without building the engine",
+     "profile:rehlko @ v1 — productsAndServices[6].description; .positioning"
+    ],
+    [
+     "The 700-4,000 kW engines are co-developed with and built by a partner in France, so the capacity ceiling is a partner's decision and the US supply chain is an unpublished tariff exposure; no revenue, EBITDA, backlog or headcount is disclosed in any first-party source",
+     "profile:rehlko @ v1 — strategyRead[2]; strategyRead[5]"
+    ],
+    [
+     "Own-spec 48 MW package built from overhauled wide-body turbofan cores, interchangeable with the OEM machine but outside its queue, quoting 2027 against 3-5 year waits",
+     "profile:proenergy @ v4 — productsAndServices[0].description; .positioning"
+    ],
+    [
+     "A 2.4 GW merchant peaker fleet developed, built and sold to two utilities for about USD 2.16B with long-term O&M retained and the proceeds recycled into owning bridge assets",
+     "profile:proenergy @ v4 — summary; productsAndServices[1].description"
+    ],
+    [
+     "The schedule-arbitrage window is real but closing — OEM aeroderivative output up 32 % year on year in one quarter and recip incumbents adding tens of GW",
+     "profile:proenergy @ v4 — strategyRead[0]"
+    ],
+    [
+     "Under 1.5 ppm NOx with no after-treatment admits it to non-attainment areas covering a claimed ~46 % of planned data-centre capacity; a flat 30 % investment credit with no zero-emissions requirement and no Chinese exposure",
+     "profile:mainspring-energy @ v4 — strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "250 kW units on 2.5 MW skids at 46 % efficiency claimed flat across turndown; a fully islanded greenfield AI data centre running with no diesel backup since summer 2025; a ~USD 1B data-centre pipeline",
+     "profile:mainspring-energy @ v4 — productsAndServices[0].description; productsAndServices[1].description"
+    ],
+    [
+     "Scale is the binding constraint — about 250 MW a year of planned output against multi-GW procurement, a delayed plant and no named hyperscaler logo",
+     "profile:mainspring-energy @ v4 — strategyRead[2]; strategyRead[3]"
+    ],
+    [
+     "The stabiliser ships one unit per 12 MW gen-set; more than 3 GW of such plants signed in the year to June 2026; build slots now being released for 2028 and the 12.5 MW engines sold out to Q2 2028",
+     "profile:piller @ v2 — strategyRead[0]; strategyRead[1]"
+    ],
+    [
+     "At the 400 MW plant, all 36 engines and stabiliser modules are due on site by end-2026 with full output in Q1 2027; a state regulator found generators running with no permit and no application in August 2026",
+     "profile:piller @ v2 — recentDevelopments[12]; strategyRead[5]; strategyRead[6]"
+    ],
+    [
+     "The standardised ~500 MW modular on-site plants built with an incumbent; the mobility separation completes by Q1 2027",
+     "profile:eaton @ v8 — basis line; summary"
+    ],
+    [
+     "Slot reservation agreements expanded from 1.2 GW to 3.6 GW without a press release; the arrangement is a project development agreement rather than a joint venture, with no firm order, no final investment decision and no named site",
+     "profile:nrg-energy @ v1 — strategyRead[0]"
+    ],
+    [
+     "An August 2026 state pause on new data-centre grid interconnections over a ~474 GW queue, with verification running to December 2026; behind-the-meter generation is exempt, which cuts in favour of the bring-your-own-power model",
+     "profile:nrg-energy @ v1 — policyExposure[1].exposure; strategyRead[6]; strategyRead[7]"
+    ],
+    [
+     "An initial test period on a state-funded dispatchable plant ends 31 May 2027, starting ten annual grant instalments subject to performance",
+     "profile:nrg-energy @ v1 — recentDevelopments[4].read; policyExposure[0].exposure"
+    ],
+    [
+     "Sustainable microgrids pairing on-site generation with battery storage; a 4 GW advanced data-centre pipeline that is a forward claim, with full-year results in February 2027",
+     "profile:engie-north-america @ v2 — basis line; strategyRead[4]; strategyRead[8]"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**There is no ranking of this segment that covers its own roster.** The four kinds of incumbency are measured in incompatible units — gigawatts of contracted turbine slots, a percentage of a generator market, megawatts of engine plant booked, gigawatts of signed customer contract — and no source reachable through these seventeen dossiers ranks across them. This module declines to invent the ordering, which is why the dominance section is written as four groups rather than as a league table.",
+    "**No revenue or profit figure exists for one of the three heavy-frame makers, and none can be derived.** Its own dossier states plainly that it is a brand rather than a reporting segment of its parent, and that the narrowest published line still mixes in businesses it does not sell. **Any figure presented elsewhere as that company's revenue is a derivation, not a disclosure.** The three-way backlog comparison in the same file carries the matching caution: two of the three figures include slot reservations and the third does not split them out, so the ranking is almost certainly right in order and its magnitude is not established.",
+    "**One of the five challengers discloses no revenue, no earnings, no backlog and no headcount in any first-party source, in any year** — the company states plainly that financial details are not disclosed. The only figures anywhere are rating-agency numbers relayed through trade press at the time of its 2024 buyout. A market position quoted for it is quoted from a research vendor's ranking, not from the company.",
+    "**Two of the largest books in this segment have no named counterparty, and one member names no customer at all.** A multi-gigawatt hyperscaler framework and a record battery order both leave the buyer unnamed; a challenger's twenty-one-unit, gigawatt-plus order is attached to two unnamed data-centre projects; and a third challenger has **no hyperscaler, colocation landlord or neocloud named as a customer in any first-party or third-party source**, with its own framework agreements described only as unnamed.",
+    "**The reservation instrument's terms are not disclosed by anyone.** Neither price, duration nor conditions are on the record for any of the reservation agreements described here, including the 3.6 gigawatts an adjacent member holds. **This module treats reservations as instruments and never as valuations.**",
+    "**No source sizes the behind-the-meter AI generation market by vendor.** The nearest available figures are a share of *the data-centre generator market* — a different thing, and weighted toward standby — and a share of *tracked permitted* behind-the-meter capacity, which is a permit-record proxy rather than a revenue measure. **Anyone quoting a vendor share of on-site AI power is quoting something the record does not contain.**",
+    "**The {{aggregation}} question is unresolved and the whole mobile and modular bridge model depends on the answer.** Whether dozens of nominally separate or mobile units running together constitute one major stationary source is live, the regulator's position is unstated, and one contested campus is the worked example. Two members' own filings name it as the risk that could re-open the architecture. **A project structured on the answer being no is carrying an unpriced regulatory bet.**",
+    "**And nothing here forecasts when the queue clears.** The interconnection process, the study sequence and the large-load tariff belong to the interconnection module; the mechanism of the four machines, the rating ladder and the permit ceiling belong to the two public lessons. This one says who holds which slot, on what basis, and stops there."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the split between this module and the two public lessons that are this segment's own reading list?",
+     "a": "The lessons teach the tests and this module names the parties. Bridge Power teaches the four machine classes and the slot-reservation instrument; The Ten-Second Race teaches the rating ladder, block load and the whole permitting ceiling. Between them they cover five of the segment's six buying criteria and they name not one vendor — every actor is one supplier, one operator, three manufacturers. So this module carries no machine comparison, no efficiency ladder and no explanation of what a reservation is. It carries the holders."
+    },
+    {
+     "q": "Why is the dominance section written as four groups rather than as a ranking?",
+     "a": "Because the eight incumbents hold four kinds of incumbency measured in four incompatible units: three heavy-frame makers who set everyone's date, two gen-set makers who own the standby fleet by installed base and dealer network, one engine-plant builder, and two platform operators selling delivered megawatts. Gigawatts of contracted slots, a percentage share of a generator market, megawatts of plant booked and gigawatts of customer contract are not measures of one thing, and no source ranks across them."
+    },
+    {
+     "q": "What is the single arithmetic fact that carries this module's central argument?",
+     "a": "The largest incumbent's 116 gigawatts of committed gas capacity is 53 gigawatts of equipment backlog plus 63 gigawatts of deposit-backed slot reservations — more of it is held places than sold machines. That is why the module's judgment is that incumbency here is a claim on delivery rather than on manufacturing."
+    },
+    {
+     "q": "What is the most surprising structural fact about this segment's incumbent list?",
+     "a": "Two of the eight incumbents manufacture no prime mover at all. Both are platform operators selling delivered power rather than machines, and between them they hold the two largest contracted behind-the-meter AI books in the corpus. One buys its engines from an Austrian manufacturer under the two largest orders that maker has ever taken; the other buys from a single supplier majority-owned by a Chinese parent — which its own dossier records as the irony inside a platform sold on supply-chain cleanliness."
+    },
+    {
+     "q": "How does the public lesson's taxonomy determine the shape of this module's threat section?",
+     "a": "Bridge Power states that there are exactly three ways out of a factory queue — change machine class, change where the machine comes from, or build a machine nobody queues for — and names nobody. The registry's five challengers fill all three: two on machine class with modular gas plants and a rented distribution route, one on cores from outside the queue, and two on machines nobody queues for, a fuel cell and a linear generator. It is the first time a public lesson's own classification has mapped one-to-one onto a segment's challenger bench."
+    },
+    {
+     "q": "If the five challengers are all selling speed, what is the incumbents' counter-move?",
+     "a": "Capacity, not price, and all of it landing in the same eighteen months: roughly three times the 2024 large-engine output plus a 1.5 gigawatt medium-speed restart at one; 450 million dollars for twenty gigawatts more at another; thirty to fifty per cent over three years at a third; twenty to twenty-four to thirty gigawatts a year at a fourth; thirty per cent at a fifth. The module's judgment is that the challengers are renting a window rather than attacking a product position — and an incumbent states the same clock against itself, saying its own moat is time-limited because recip capacity is scaling and interconnection reform would collapse the speed premium."
+    },
+    {
+     "q": "Which buying criterion is the sorting mechanism in this segment, and why is a seller unlikely to raise it?",
+     "a": "Emissions permitting. Two of the five challengers exist because of it — one at under 1.5 parts per million of nitrogen oxides with no after-treatment, admitting it to non-attainment areas that exclude diesels, engines and turbines; the other non-combustion and therefore outside major-source air permitting. And the unresolved aggregation question sits under the whole mobile and modular bridge model. An incumbent selling a machine has no reason to lead with the criterion that explains why two competitors exist."
+    },
+    {
+     "q": "What do the four adjacent members tell you about this segment?",
+     "a": "They split two and two. Two are suppliers of equipment that goes inside the plant — one supplying a kinetic stabiliser at one unit per twelve megawatts of engine, the other supplying the electrical stack in a five-hundred-megawatt standardised block with an incumbent. Two are owners of generation who buy what this segment sells, and one of them holds 3.6 gigawatts of reserved turbine slots with no firm order, no final investment decision and no named site — which is the clearest demonstration in the corpus that a reservation is a balance-sheet asset."
+    },
+    {
+     "q": "Where is the storage socket in this segment, and which counterparties have closed it?",
+     "a": "The socket is a moment rather than a campus: the bring-up, the transient and ride-through duty, and the conversion at the end of a bridge. One incumbent closes it explicitly, marketing zero reliance on battery storage and holding transients on engine inertia plus sixty-two synchronous condensers with flywheels. Four members leave it open, and one of them concedes in its own roadmap that sites move to permanent utility feeds supplemented by battery storage after the roughly five-year bridge. Meanwhile both gen-set incumbents now pair engines with cells — so the engine makers are buying the answer while the platform operators design around it."
+    },
+    {
+     "q": "Why was this module's review date read out of an incumbent's indicator list rather than sorted out of the policy fence?",
+     "a": "Because a sort returns essentially nothing usable. The seventeen members carry sixty policy exposures, twenty-four of them dated, and exactly one date lies in the future — and that one entry says in as many words that it applies to on-highway truck platforms rather than to the data-centre gen-sets, so a sort would have clocked a bridge-generation module on a semi-truck engine. The date taken is a fourth-quarter capacity landing that five different members converge on, and whose consequence one of them states: slippage would confirm that capacity, not demand, gates the following year."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague asks you to rank this segment's eight incumbents from strongest to weakest. What is the right response?",
+     "c": [
+      "Rank them by gigawatts of gas capacity committed, the one figure that spans the group",
+      "Decline the ordering: the eight hold four kinds of incumbency measured in four incompatible units, two of them manufacture no machine at all, and no source in this corpus ranks across them",
+      "Rank them by data-centre generator market share, since third parties publish it",
+      "Rank them by backlog, since backlog is the only forward-looking measure in an equipment market"
+     ],
+     "a": 1,
+     "why": "Three of the eight are heavy-frame makers measured in gigawatts under contract, two are gen-set makers measured in percentage share of a generator market, one is an engine-plant builder measured in megawatts booked, and two are platform operators measured in gigawatts of signed customer contract — and those two build no machine. Committed gigawatts fails because it does not exist for five of the eight. Generator market share fails because it is published for only two and is weighted toward standby. Backlog fails because one member publishes none at all and another's is not disclosed on a comparable basis."
+    },
+    {
+     "q": "An account tells you it has a 2028 power date from a named turbine maker. What do you establish first?",
+     "c": [
+      "The quoted lead time on the machine, since lead time is the first buying criterion",
+      "Whether it holds a deposit-backed slot reservation or only a quotation, because a position survives somebody else's schedule slipping and a duration does not",
+      "Whether the maker has domestic plants, since manufacturing location decides the award",
+      "The heat rate at the site's design-day conditions, since that sets the operating cost"
+     ],
+     "a": 1,
+     "why": "In this segment reservations are contracts with deposits at around twenty per cent cash down, selling against 2031, and a buyer holding one can promise a date a rival physically cannot. An adjacent member in this very roster holds 3.6 gigawatts of reserved slots with no firm order, no final investment decision and no named site — which is what a position looks like on a balance sheet. The lead time, the plant location and the heat rate are all real questions, and all three are downstream of whether the date is owned or merely quoted."
+    },
+    {
+     "q": "Two of this segment's eight incumbents hold enormous contracted books and manufacture no prime mover. What follows commercially?",
+     "c": [
+      "Their books are less secure, because they are reselling somebody else's product at a markup",
+      "Their customers have inherited a second supply constraint one layer down, and usually have not been told which one",
+      "Nothing follows — the machine inside a delivered-power contract is the operator's problem, not the buyer's",
+      "It means they will eventually acquire an engine maker, which is the thing to watch"
+     ],
+     "a": 1,
+     "why": "A platform operator's schedule is only as good as its engine supply, and both of these have concentrated that supply deliberately: one holds at least 3.8 gigawatts of a single Austrian maker's production under the two largest orders that maker has ever taken, and the other buys under an exclusive five-year agreement from a single supplier majority-owned by a Chinese parent. That is a real inherited exposure and it is usually invisible from the contract. The first answer is wrong because locked production is an asset rather than a markup, the third is wrong because a supply failure lands on the campus's date, and the fourth is speculation the record does not support."
+    },
+    {
+     "q": "A prospect's campus sits in a non-attainment area and its shortlist is two diesel gen-set makers. What is the most useful thing you know from this module?",
+     "c": [
+      "That the shortlist is probably incomplete, because two of this segment's five challengers exist specifically to win where air quality excludes combustion machines",
+      "That the campus should apply for a synthetic minor permit and keep the shortlist",
+      "That the diesel sets will need selective catalytic reduction and the shortlist is otherwise fine",
+      "That non-attainment status is a state matter and rarely decides an equipment choice"
+     ],
+     "a": 0,
+     "why": "Emissions permitting is the criterion on which the challenger bench was built. One challenger runs under 1.5 parts per million of nitrogen oxides with no after-treatment at all and claims roughly forty-six per cent of planned data-centre capacity sits in areas where that matters; another is non-combustion and avoids major-source air permitting entirely. The permitting routes in the other answers are real mechanisms — and they are taught in the public backup-generation lesson, not here. What this module adds is that the constraint has named vendors attached to it."
+    },
+    {
+     "q": "Why does this module treat a capacity date rather than a policy date as its own review gate?",
+     "c": [
+      "Because policy moves too slowly to matter in an equipment segment",
+      "Because the segment's policy fence carries essentially no future dates, and its one future entry belongs to a truck engine — while five members converge on one capacity window that decides the module's central argument",
+      "Because capacity dates are more reliable than regulatory dates in general",
+      "Because the segment's regulatory exposure belongs to a neighbouring module and is therefore out of scope"
+     ],
+     "a": 1,
+     "why": "Across the seventeen members there are sixty policy exposures, twenty-four dated, and exactly one date in the future — and that entry states that it applies to on-highway platforms rather than to anything this segment sells, so a mechanical sort would clock the module on the wrong product line. Meanwhile five separate members put a capacity landing in the same quarter, and one of them states the consequence explicitly: slippage would confirm that capacity, not demand, gates the following year. The first and third answers are generalisations the evidence does not support, and the fourth is false — regulatory risk is squarely in scope here, it just has no date attached."
+    }
+   ]
+  }
+ ]
+};
+}
+
 
 // PROJECT END
 // ══════════════
