@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.98r] — 2026-09-15 09:18:06 PM EST
+
+> **Prompt:** "Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.32** — the deploy figures refreshed in **both halves** (prose paragraphs and the quoted paste-in prompt block) now that the v05.97r job log is readable. Both counters were **forecast** in the work commit and land **exactly**: `Scraper deploy confirmed (GET): Updated to v02.09g (deployment 154) | 154/200` and `Classroom deploy confirmed (GET): Updated to v01.46g (deployment 57) | 57/200`, both on the **first GET leg** with no POLL and no `?op=deploy` probe, and Pages read `|v02.09g|` and `|v01.46g|` in agreement before the job log was closed. **The fourteenth consecutive clean use of the §7.19 order**, and the two-line forecast held exactly. The heading now carries *(counters refreshed at v05.98r)*
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md`** — the v05.94r entry drops under the two-session cap, the v05.96r entry moves to `## Previous Sessions`, and a new `## Latest Session` records S2 session 8 in full: the first segment with a built landscape on both sides of it and the two role inversions pointing in opposite directions; §10.6 (t) firing on a module rather than a lesson; the first landscape written against a half-unbuilt curriculum; how a one-challenger threat section was made writable by the registry's own `notes`; session 3's (g) case firing a second time with `strategyRead[]` as a new gate sub-field; both due-count halves called correctly with the section half derived from the generator; the first Scraper-seed prior right in both halves; and the EST/UTC trap deciding the rotation for a second consecutive session
+- **`README.md`** — `Last updated:` and `Repo version:` `v05.97r` → `v05.98r`
+
+### Notes
+
+- **The handover recursion fired a seventh consecutive time**, exactly as §7.30's refinement predicted: any commit that reproduces a brief also moves the numbers that brief quotes. §7.32's own CHANGELOG paragraph was written during the v05.97r push at 99 raw / 80 non-exempt and this section takes the file to **100 raw / 80 non-exempt** — which is the figure §7.32 already states, because the recursion was anticipated in the text rather than discovered after it
+- **No rotation, and the EST clock is again why.** At counting time EST read **2026-09-15 21:18** while UTC read **2026-09-16 01:18**. 99 raw minus the nineteen sections dated 2026-09-15 EST is **80 non-exempt**; this section makes it 100 raw / 80 non-exempt, twenty clear of the cap. **The moment EST rolls past 2026-09-15 it becomes 100 non-exempt — exactly at the cap — so the next session is the rotator unless its push also lands on 2026-09-15 EST.** That is what §7.32 tells it, and it tells it to check `TZ=America/New_York date` first
+- **Every other figure §7.32 quotes was re-measured against the working tree and held.** `Classroomgs.changelog.md` **46 raw / 38 non-exempt**; `Scrapergs.changelog.md` **30 raw / 26 non-exempt**; `Profilerhtml.changelog.md` **49 raw / 49 non-exempt**. Classroom GAS **v01.46g**, Scraper **v02.09g**, page **v01.14w**, Profiler **v01.39g** — unchanged. Nothing in a deployed surface moved in this commit, so **no GAS bump, no page bump and no public changelog entry**
 
 ## [v05.97r] — 2026-09-15 09:08:13 PM EST
 
