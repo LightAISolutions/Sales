@@ -1,4 +1,4 @@
-var VERSION = "v01.50g";
+var VERSION = "v01.51g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -40789,6 +40789,479 @@ function clLessonGridStabilityAndTheGenerator_() {
 };
 }
 
+// string-versus-central - Phase 4 row 15, the forty-fifth lesson and the one
+// that COMPLETES electrical-foundations. It is an INSERT, not an append: §4
+// puts it at track position 2, between four-machines and
+// the-transformer-and-the-substation, and the track's lessons[] already held
+// positions 1, 3, 4 and 5. So check-classroom-pipeline.py's P5 fires on this
+// commit BY CONSTRUCTION - head[:len(base)] != base on that one track - and it
+// is the contract working rather than a defect. P5 binds the unattended
+// committer, which may only append; a developer session places a lesson at its
+// planned position. Appending instead would have put it at position 5 and
+// silently contradicted §4. Registry order in clLessons_() is a separate test
+// and IS appended.
+//
+// EIGHT SECTIONS, NOT THE SEVEN §3.2 SPECIFIES, and the extra one is the
+// lesson's spine. §3.2's outline opens the-fork (prose) and solar-taught-it
+// (prose) back to back, which §8 item 6 forbids in as many words. §7.36
+// preferred converting the second to bars or table IF the corpus states a
+// harvest delta or an availability figure - it states NEITHER. Huawei's guide
+// says granularity "harvests more" and that a failed module swaps "in minutes"
+// against "hours or days"; Sungrow says "more independent MPPT channels = less
+// energy lost". Every one of those is a RELATIONSHIP WITHOUT A FIGURE, which
+// §8 item 6 itself routes to table rather than bars, and the only percentages
+// anywhere near this material belong to other arguments (Fluence's >99% uptime
+// is a transmission-grade BESS spec, not a fork comparison). So route (a) was
+// taken, as row 14 took it: a proscons, three-answers-not-two, inserted at
+// position 2. It is load-bearing, not a spacer - the corpus names THREE shapes,
+// not two (Sungrow: "Modular designs try to capture both advantages:
+// central-class blocks assembled from swappable sub-modules"), and the middle
+// term is what where-it-fails later weaponises as "a monolith in disguise".
+// Without it the lesson would teach a binary the record does not hold. Section
+// ids are permanent, so eight is now the contract.
+//
+// WHAT four-machines OWNS, AND IS DELIBERATELY NOT REPEATED HERE. It is track
+// position 1 and the only lesson a reader is guaranteed to have finished before
+// this one, so it was read in full: P = V·I and I²R and the voltage ladder; the
+// four machines themselves and the PCS as a rectifier and inverter in one box;
+// switch-mode against linear, conduction against switching loss, SiC and GaN
+// and the frequency-versus-magnetics trade; efficiencies multiplying and the
+// 0.1 % argument; peak against weighted efficiency and the 10 %-load tier;
+// power quality in all three of its forms; derating with heat and the overload
+// ladder. This lesson adds exactly one thing to that: nothing in the physics of
+// those four machines decides HOW MANY BOXES do the converting.
+//
+// AND WHAT THREE DOWNSTREAM LESSONS ALREADY OWN - the §10.6 (t) check ran the
+// unusual way round here, because this lesson is read BEFORE them in the walk
+// (track 2 against track 3) and yet they were built first. the-ups-room owns
+// the module/frame/unit/system/path ladder, the static-against-rotary axis and
+// the UPS datasheet; inside-the-rack owns the ORing, precharge and
+// current-sharing mechanics at the scale of a power shelf; and
+// redundancy-by-the-numbers owns N, N+1, 2N, 2(N+1), the catcher and the nines.
+// None of that is restated. the-hidden-engineering names the first two by
+// title as where the mechanics live and keeps only the TEST - who decides the
+// split, and what happens to the split when that decider fails - and
+// where-it-fails states the level-naming discipline without re-teaching the
+// arrangements. The boundary, in one line: those lessons answer "how many of
+// them"; this one answers "how big is one of them".
+//
+// NO LEAGUE TABLE, BY C7's FINDING RATHER THAN BY TASTE. study:power-electronics
+// records that no independent ranking of conversion suppliers is published at
+// all - "not paywalled - not published" - so a lesson implying a winner would
+// invent the thing C7 established does not exist. A tile reads 0 published
+// rankings and the-fork states it outright. The parties belong to
+// landscape-power-conversion-and-rack-power-silicon-2026-09, which is
+// contributor-only while this lesson is public: the lesson teaches the test,
+// the module names the parties. The one ranking sentence in the roster (a 2023
+// Wood Mackenzie line naming two central-inverter makers) was read and NOT
+// used.
+//
+// A §10.6 (t) GAP FOUND AND NAMED, NOT FILLED - the session-10 shape. the-800-
+// vdc-shift (built, public) hands off in terms: "The taxonomy of arc types and
+// how each is detected and cleared belongs to the engineering lesson at the
+// stricter gate". That lesson is dc-fault-engineering, §7 row 20, gate
+// guidance - UNBUILT. breakers-relays-and-faults carries the principle (a DC
+// arc must be engineered out, not waited out) but explicitly not the taxonomy,
+// so the material is in nobody's hands. It is not this lesson's to take: the
+// gate differs and the subject is protection, not granularity. Recorded here
+// and in the §8 CHANGELOG record for whoever authors row 20.
+//
+// reviewBy 2027-03-16 is the ~6-month default from updated, with three
+// rejections in writing. (1) study:power-electronics' "available from January
+// 2027" overload-ladder line - a vendor product-availability date in a
+// vendor-blind lesson, and month-level rather than a day. Row 14 rejected the
+// identical candidate. (2) EO 14420's implementing rules due 24 December 2026 -
+// a manufacturing-origin gate, off this lesson's subject, and already
+// eo14420-2026-09's own clock. (3) IEC 62040-3, which appears in three of the
+// nine guides and is a classification rather than a dated gate. The default
+// lands on the same day as grid-stability-and-the-generator's because both
+// lessons were pushed on 2026-09-16 EST; that is arithmetic, not a collision.
+function clLessonStringVersusCentral_() {
+  return {
+ "schemaVersion": 1,
+ "id": "string-versus-central",
+ "type": "module",
+ "title": "One Big Box or Many Small Ones",
+ "short": "Every large conversion job faces one fork: a central machine or many modules. Solar settled it first; UPS rooms and battery plants argue it now.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:huawei-digital-power",
+    "date": "2026-08-21",
+    "note": "the fork stated in its general form - central wins on cost per watt, distributed on availability, granularity of control and graceful failure; mismatch and MPPT as the harvest argument; the availability case resting on repair time; modular UPS as the same argument brought indoors; decentralised control as the hidden engineering"
+   },
+   {
+    "kind": "public",
+    "ref": "study:fluence",
+    "date": "2026-08-08",
+    "note": "the DC block against the AC block - battery-only containers wired to shared central conversion skids against a container that ships its own conversion and delivers grid-ready AC; the smart skid and swappable pod design that splits the two inside one product"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sungrow",
+    "date": "2026-08-08",
+    "note": "the three shapes named as three - string, central and a modular middle built from swappable sub-modules; MPPT channel counts as the granularity number; the published module and paralleling figures; string units at a few hundred kilowatts against a few multi-megawatt central machines"
+   },
+   {
+    "kind": "public",
+    "ref": "study:liteon",
+    "date": "2026-08-21",
+    "note": "redundancy at the supply level - N+1 against two independent feeds; hot-swap as an engineered trick rather than a given (ORing, precharge, firmware rebalancing the share); and the efficiency tax redundancy levies, with cold redundancy as the trade that answers it"
+   },
+   {
+    "kind": "public",
+    "ref": "study:power-electronics",
+    "date": "2026-09-06",
+    "note": "the commercial fork that sits beside the architectural one - conversion bought separately against a turnkey wrap, the 15 to 25 per cent equipment-only figure, and who signs the performance guarantee; and C7's finding that no independent ranking of conversion suppliers is published at all"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vertiv",
+    "date": "2026-09-04",
+    "note": "what a power module physically is - a complete UPS in a drawer sharing only busbars and a supervisory controller; the three properties a live swap needs; and the vocabulary trap where module, unit, frame and system are used interchangeably"
+   },
+   {
+    "kind": "public",
+    "ref": "study:schneider-electric",
+    "date": "2026-09-04",
+    "note": "the usable-capacity arithmetic of each arrangement and why redundancy pushes a plant down its efficiency curve permanently; the published module and frame figures at hall scale; the same machine idea read across four orders of magnitude"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rehlko",
+    "date": "2026-09-04",
+    "note": "monolithic against modular as a form-factor and repair-time decision, and its conclusion that both are correct answers to different financing structures; the part-load trap; and the discipline that a redundancy claim means nothing until its level is named"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "PCS, power module, current sharing, droop, precharge, ORing, hot-swap, static bypass, DC block, AC block, round-trip efficiency, availability guarantee, modular UPS and single-line diagram resolved from the public registry rather than defined locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "16",
+   "v": "trackers in one unit",
+   "sub": "a utility string inverter is published with up to sixteen independent tracking channels; one central machine tracks a whole block at once"
+  },
+  {
+   "k": "minutes",
+   "v": "or hours and a crane",
+   "sub": "the fork is not about the electronics - it is about how long the load waits while the failed thing is replaced"
+  },
+  {
+   "k": "0",
+   "v": "published rankings",
+   "sub": "no independent ranking of conversion suppliers exists, so this lesson teaches the test and names no winner"
+  },
+  {
+   "k": "three",
+   "v": "answers, not two",
+   "sub": "central, a central-class block of swappable modules, and many small units - the middle one is where the word modular hides"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "granularity",
+   "d": "The size of the smallest piece a system is bought, controlled, failed and repaired in. A plant of forty 500-kilowatt converters and a plant of four 5-megawatt converters deliver the same power; the first has ten times the granularity, which is another way of saying its smallest unit of everything is ten times smaller. Almost every argument in this lesson is an argument about what that number should be."
+  },
+  {
+   "t": "MPPT",
+   "d": "Maximum power point tracking. A solar panel's output depends on light, temperature and the electrical operating point the converter presents to it, and at any instant exactly one operating point extracts the most power. MPPT is the control loop that hunts for it continuously. A converter with several independent tracking channels finds a separate optimum for each group of panels instead of one compromise for all of them."
+  },
+  {
+   "t": "string inverter",
+   "d": "A solar or storage converter of roughly a few hundred kilowatts, one of many spread through the plant, each converting for the group of panel strings or battery racks wired to it and each doing its own tracking. The distributed end of the fork this lesson is about."
+  },
+  {
+   "t": "central inverter",
+   "d": "A single multi-megawatt converter serving a large area of a plant, fed by combiners that gather many strings into a few heavy cables. The concentrated end of the fork: cheapest per watt, coarsest in control, and the largest single thing that can fail."
+  },
+  {
+   "t": "mismatch",
+   "d": "The condition in which parts of a plant that are wired together are not performing identically - a shaded row, a dusty row, panel batches from different production weeks, or battery racks at different ages. It matters because series-connected equipment is dragged toward its weakest member, so a converter serving a mismatched area must pick one compromise operating point and forfeit the difference everywhere else."
+  },
+  {
+   "t": "cold redundancy",
+   "d": "Holding a spare converter in standby rather than sharing the load with it, so the units that are running sit near their efficient band instead of all of them running lightly loaded. It buys back the efficiency that redundancy costs, and pays for it in the moment the spare needs to wake up and take load."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-fork",
+   "title": "The fork, and why it is not an electrical question",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The lesson before this one named four machines and said what each of them converts. It said nothing about **how many boxes do the converting**, and nothing in the physics decides it: a megawatt of rectification is a megawatt whether it happens in one enclosure or in forty. That freedom is the subject here, and it produces the same fork everywhere the power is large - **one central machine, or many small ones.** The trade comes out the same way in every room it is argued in. *Central wins on cost per watt; distributed wins on availability, on how finely the machine can be controlled, and on what happens when one part of it dies.*",
+    "It is worth saying early what the fork is **not**. It is not a question about the silicon: both ends chop with the same switches, use the same topologies and buy from the same device makers. It is not really a question about efficiency at the design point either, where the large machine is usually a little ahead and the difference is smaller than the argument around it. **The fork is a question about the size of the unit** - the size of the thing you buy, the size of the thing that fails, and the size of the thing somebody has to lift into place while the rest of the plant keeps running. Nearly everything else follows from that one number.",
+    "The engineering word for that number is **{{granularity}}**. The word the market *sells* it with is \"modular\", which is the most-used and least-defined term on either market's spec sheets. A vendor saying modular may mean a machine assembled from repeated sub-units in the factory, a machine whose sub-units a customer can add later, a machine whose sub-units can be pulled and replaced while it runs, or simply a product line that comes in several sizes. Those are four different purchases and only one of them is about availability. The question that separates them is the one to carry out of this lesson: **what happens to the load while you swap the failed unit?**",
+    "One honest constraint before the argument, because it shapes how the rest of this lesson is written. **There is no published independent ranking of the companies that supply this layer** - not paywalled, not restricted: not published. The research houses rank either photovoltaic inverters or factory-assembled AC storage systems, and a vendor selling conversion on its own falls between the two scopes, so a sentence of the form *\"the leading supplier of this layer\"* is unfalsifiable rather than true or false. This lesson therefore teaches **the test** and not the winners. Which architecture is right is a property of the building, the plant and the balance sheet - and the three shapes the market actually sells are the next section."
+   ],
+   "sales": "The fastest way into a real conversation here is to refuse the word. When a customer or a competitor says **modular**, ask which of the four meanings is meant - factory-assembled, customer-extendable, live-replaceable, or merely available in sizes. Half the time the person using the word has not separated them either, and the question lands as competence rather than as a challenge. The follow-up is the one that decides the design: *what happens to my load during the swap?*"
+  },
+  {
+   "id": "three-answers-not-two",
+   "title": "The fork has three answers, not two",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "Before the story of how the argument got settled, the three shapes the market actually sells - because the middle one is where the word \"modular\" does most of its hiding. Read the first and third cards as the two ends of the fork and the second as the compromise built to capture both. Then notice what the second card quietly keeps from the first.",
+   "cards": [
+    {
+     "t": "Central - one large machine per block of capacity",
+     "meta": "A few multi-megawatt machines, each converting for a large area of the plant or for a whole room, fed by cables that gather many smaller circuits into a few heavy ones",
+     "adv": [
+      "**The lowest cost per watt.** This is why the shape exists, why it has never gone away, and why every alternative has to argue against it rather than the other way round",
+      "**The fewest of everything else**: enclosures, cable runs, control interactions, commissioning hours, spare-part lines and service relationships. One machine to qualify and one {{grid code}} argument to have",
+      "The best efficiency at the design point, and the smallest footprint per megawatt once the plant is actually loaded to what it was built for"
+     ],
+     "dis": [
+      "**Control is coarse by construction.** One conversion decision is made for everything behind the machine, so anything uneven in that area is averaged away rather than tracked",
+      "**The failure is the size of the machine.** One fault drops the whole block, and putting it back is a specialist, a lifting plan and a wait measured in days rather than hours",
+      "**Capacity arrives in large indivisible steps**, so the plant is either oversized on day one - paying for megawatts that sit idle and down its efficiency curve - or short of a step later"
+     ]
+    },
+    {
+     "t": "Modular - a central-class block assembled from swappable sub-units",
+     "meta": "Central economics built out of repeated power modules: utility inverters published at 800 kW a module paralleling to about 9.6 MW, and UPS frames published at 125 kW a module filling to 1,250 kW",
+     "adv": [
+      "**Repair collapses from a crane to a drawer.** A failed module is pulled and replaced, in most designs with the remaining modules still carrying the load and nothing transferred to {{static bypass}}",
+      "**Redundancy costs one module rather than one whole machine**, which is what makes a spare affordable in a small or lightly loaded block instead of a luxury",
+      "**Capacity can track revenue.** Modules are added as the plant grows or the hall leases up, so capital is committed against load that exists rather than against a forecast"
+     ],
+     "dis": [
+      "**Higher cost per watt**, more connectors, more fans, and more things that can be inserted incorrectly - the live-swap promise depends on a disciplined procedure as much as on the hardware",
+      "**The frame is still one object.** A fault on the shared bus, or on the single output breaker everything sits behind, takes every module in the frame - which is why a redundancy claim here means nothing until it names its level",
+      "**Coordination is genuine engineering**, and where it is done by one supervisory box the fleet has quietly re-created the single point of failure it was bought to remove"
+     ]
+    },
+    {
+     "t": "String or distributed - many small units spread through the plant",
+     "meta": "Units of roughly a few hundred kilowatts, each with its own conversion and its own control, wired directly to the group of panel strings, battery racks or cabinets it serves",
+     "adv": [
+      "**The finest control available.** Each unit makes its own decision for its own patch, which is where the harvest argument of the next section lives",
+      "**The smallest failure.** One unit down is a sliver of the plant, and the replacement is two people and a van rather than a lifting plan and a road closure",
+      "**Installed capacity tracks connected load closely**, because it arrives in small steps - so the fleet spends more of its life near its efficient band"
+     ],
+     "dis": [
+      "**The highest cost per watt**, and the most units to install, cable, commission, monitor and eventually replace",
+      "More enclosures living outdoors in the weather, and a much larger surface of firmware and communications to keep current across a fleet",
+      "**Fine machines do not help a coarse problem.** Where the plant is uniform and the load is steady, the granularity is bought and then not used - which is a real way to lose the cost-per-watt argument for nothing"
+     ]
+    }
+   ],
+   "note": "**The middle card is the one to watch, because it is sold as the right-hand card and behaves in one important way like the left-hand one.** A block built from swappable modules buys the repair time of a distributed fleet while keeping the cost, the density and the single qualification of a central machine - a genuinely good trade, and the reason the shape has spread from solar plants into UPS rooms. What it does not buy is a smaller *failure*: everything in the frame still sits behind one bus and one breaker. So judge any modular claim on two questions the datasheet rarely answers on the same page - **what is the smallest piece that can be replaced, and what is the largest piece that can fail?** Where the answers are far apart the modularity is real. Where they are the same object, it is packaging.",
+   "sales": "This is the section to have in mind when a specification says \"modular\" and a competitor's does too. The two questions in the note above are worth asking about your own product before you ask them about anyone else's, because the answer is a property of the design and not of the brochure - and a seller who can state both numbers for their own machine, including the unflattering one, is usually the only person in the room who has."
+  },
+  {
+   "id": "solar-taught-it",
+   "title": "Solar settled it first, and showed what granularity is worth",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Solar met this fork before either of the markets this curriculum is about, and settled enough of it that both inherited the vocabulary. A **{{central inverter}}** ties hundreds of panel strings to one machine; a **{{string inverter}}** gives each group of strings its own conversion and its own tracking. The reason the fine-grained answer took so much ground is a property of the panels rather than of the electronics, and it has a name: **{{mismatch}}**.",
+    "A panel's output depends on light, temperature and the electrical operating point the converter presents to it, and at any instant there is exactly one operating point that extracts the most power from it. Hunting for that point continuously is **{{MPPT}}**. The fact that makes it an architecture argument rather than a control-loop detail is that **the best point is not the same across a plant**: a cloud edge over one corner, a row that is dustier than its neighbours, a shadow thrown by a pole in the afternoon, two batches of panels made weeks apart. Each of those shifts the optimum for its own patch. One tracker serving a whole area has to choose a single compromise point, and every group of panels that was not at its own optimum gives up the difference. **Per-string tracking recovers energy that plant-wide averaging forfeits** - more independent tracking channels, less of it lost. A utility string inverter is published with as many as sixteen channels in a single unit.",
+    "Be careful with that argument in exactly one respect, because it is where a seller will overreach and where a buyer should push. **The record states the relationship and does not state the size of it.** Every source behind this lesson says granularity harvests more; not one of them says *how much* more, for a given plant, in a given climate, against a given central design - and the honest reason is that the answer depends on the site rather than on the product. So the defensible form of the claim is directional: *finer tracking recovers mismatch losses that a single tracker averages away.* Any percentage attached to it in a meeting is a number somebody should be asked to source, and that includes a percentage of your own.",
+    "The second half of what solar taught is the half that actually travelled, because it does not depend on sunlight at all. **A failed string unit takes down a sliver of the array and is swapped by two technicians; a failed central unit is a crane, a wait, and a revenue hole.** That is an availability argument rather than an energy one, and it generalises to anything that converts power in bulk - which is precisely what happened. The same sentence is now argued in {{UPS}} rooms, where the load is a data hall rather than a market, and in battery plants, where the machine runs in both directions. **The tracking half stayed in solar; the repair-time half went everywhere**, and the next section puts the three rooms side by side to show how little the argument changes and how much its price does."
+   ],
+   "note": "**Watch which half of the solar argument is being borrowed.** Mismatch and tracking are specific to a generator whose output varies across its own footprint - a battery rack and a server cabinet do not have weather. When the fine-grained case is made in a UPS room or a storage plant on *harvest* grounds it has usually been imported without its physics; when it is made on repair-time, spare-cost and capacity-step grounds it has been imported correctly. Both arguments are made with the same word.",
+   "sales": "In a solar or storage room the useful question is **what is actually mismatched here, and by how much** - shading, soiling, orientation, panel vintage, rack age after an {{augmentation}}. A site with genuine unevenness is a site where granularity earns its premium and you can say so plainly. A flat, uniform, single-vintage plant is one where the honest answer is that the central machine is cheaper and the difference will not show up, and saying *that* is what makes the first answer believable later."
+  },
+  {
+   "id": "same-argument-three-rooms",
+   "title": "The same argument, in three rooms",
+   "kind": "table",
+   "read": "8 min",
+   "intro": "Three markets, one fork. Read **down** a column to see how the argument looks in that room, and **across** a row to see how little it changes between them - the rows are the same six questions every time, asked of machines that have nothing else in common. The vocabulary is what makes them look like three subjects.",
+   "cols": [
+    "The question",
+    "Solar conversion",
+    "The UPS room",
+    "Battery-plant conversion"
+   ],
+   "rows": [
+    [
+     "**What the two shapes are called**",
+     "A few multi-megawatt {{central inverter}}s against many {{string inverter}}s of roughly 250 to 500 kW - with a middle answer of central-class blocks built from swappable modules of about 800 kW",
+     "One monolithic machine per block against a frame of hot-swappable **{{power module}}s** of tens to a couple of hundred kilowatts, sharing the frame's busbars and breakers",
+     "A **{{DC block}}** - battery-only containers wired out to shared central conversion skids - against an **{{AC block}}**, where each container carries its own {{PCS}} and hands over grid-ready AC"
+    ],
+    [
+     "**Cost per watt**",
+     "Central is cheapest; the distributed fleet pays for its granularity in units, cabling, mounting and installation labour",
+     "Monolithic is cheapest at full load; the modular frame costs more per kilowatt and adds connectors, fans and control complexity",
+     "The DC block is cheapest per unit and hands the integration work to the buyer - equipment-only procurement is reported at **15 to 25 % below turnkey**"
+    ],
+    [
+     "**What one failure costs**",
+     "A string unit is a sliver of the array; a central unit is megawatts of the plant at once",
+     "A module is a fraction of the frame - but **a frame fault is still the whole frame**, because everything in it sits behind one output breaker",
+     "A container's own converter costs one container; a shared skid costs every container behind it"
+    ],
+    [
+     "**Repair time, and where the load sits meanwhile**",
+     "Two technicians and a van against a crane, a lifting plan and a wait - during which the array simply produces less",
+     "**Minutes on a drawer swap with the load still protected**, against hours or days on {{static bypass}} - raw mains, no conditioning and no store behind it. This is the row that built the modular UPS market",
+     "A swap at one container against a skid outage that stops the block - and a block that is out is missing the market it was financed against"
+    ],
+    [
+     "**Efficiency at part load**",
+     "Both shapes sag away from their design point; the fleet sits closer to its own because capacity arrived in small steps",
+     "The worst case of the three: a hall at a third of its eventual load runs a monolith far down the curve, and redundancy **pushes it further down by construction** - a spare's whole job is to be under-used",
+     "Conversion loss is paid **twice**, once charging and once discharging, so it lands straight in the {{round-trip efficiency}} the plant is actually sold on"
+    ],
+    [
+     "**Who does the swap - and who signed the guarantee**",
+     "The plant's own operations crew on a string unit; the vendor's service organisation on the large machine",
+     "Site staff on a module, a specialist visit on a monolith - which is why the **service contract** usually decides this row rather than the electrical design",
+     "The unbundled question in full: one counterparty warranting {{round-trip efficiency}}, {{availability guarantee}} and capacity, or two vendors and **no single signatory** when something underperforms"
+    ]
+   ],
+   "note": "**The rows are a shopping list, and they are not independent of one another.** Buying the smallest failure generally means buying the highest cost per watt; buying the lowest cost per watt generally means accepting the longest repair. What differs between the three rooms is not the trade but **the price of the fourth row**. A solar array down a sliver for a day has lost some energy. A UPS frame on bypass for a day is an unprotected hall, and the exposure is scheduled and repeated rather than accidental. A storage block out for a week has missed the market it was financed against. *That is why the same fork settles differently in each room* - and why an architecture comparison copied from one of these columns into another is the commonest mistake in this argument.",
+   "sales": "Use the table as a diagnostic rather than a pitch. Whichever room you are in, ask the customer to rank these six rows and you will learn more about the decision than any product question would tell you - because the ranking is where their financing structure, their staffing and their risk appetite all show through at once. A buyer who puts the fourth row first has already chosen a fine-grained architecture and does not know it yet; a buyer who puts the second row first will not be argued out of it by an availability story."
+  },
+  {
+   "id": "the-hidden-engineering",
+   "title": "The engineering that is not on the datasheet",
+   "kind": "callout",
+   "tone": "info",
+   "read": "6 min",
+   "intro": "A distributed architecture is a set of sources wired in parallel, and parallel sources are not a packaging decision. Three things have to be designed in before one unit can be removed from a live system, none of them is advertised, and all three are properties of the **slot** rather than of the module that plugs into it.",
+   "ps": [
+    "**One - sharing the load with nobody in charge.** Two converters whose outputs differ by a few millivolts will not split a load: the higher one takes all of it until it runs out of headroom or overheats. {{Current sharing}} fixes that either by giving every unit a deliberate {{droop}} - a small designed sag in output as it takes more load, so a unit running high naturally backs off and its neighbours pick up - or by an active loop between units that negotiates the split directly. The engineering is ordinary; **the commercially important property is that it is done peer to peer.** A fleet whose sharing depends on one supervisory box has re-created, in software, exactly the single large failure the architecture was bought to remove.",
+    "**Two - joining and leaving without a transient.** A module slotted onto a live bus arrives with empty capacitors, and empty capacitors look like a short circuit for a moment. A {{precharge}} path brings them up gently and staged contacts make ground before live, so a joining unit cannot sag the bus below the point where everything else drops out. Leaving is the mirror problem: a unit that fails, or is simply pulled, must be isolated by its own behaviour rather than by somebody noticing. {{ORing}} devices let current flow only *outward* from each unit, so a dead one is cut off by physics instead of by a decision. **That is the actual content of a redundancy claim at this level** - it is a statement about the isolation path, not about the number of units in the frame.",
+    "**Three - a hand in a live frame.** Because the frame stays energised through the swap, the module's own connections have to be shrouded well enough that a person can work in the opening while several hundred kilowatts flow a few centimetres away. Vendors give this property brand names. The underlying fact is that **{{hot-swap}} is a designed-in behaviour of the slot, not an inherited property of anything small and rectangular.** A rack of small units is not hot-swappable because the units are small.",
+    "**The test this section is for.** All three come down to one question a buyer can ask without any of the vocabulary: **who decides how the load is split, and what happens to the split when that decider fails?** If the answer names a box, the architecture has a monolith in it. If the answer is that each unit decides for itself and the others absorb the difference, the fork was genuinely taken. The detailed mechanics belong elsewhere in this curriculum and are deliberately not repeated here - *The Last Ten Metres* works them through at the scale of a rack's power shelf, and *The UPS Room* works through the four levels at which a redundancy claim can be made in an electrical room. **What belongs here is the question**, because it is the same question in both places and in the battery plant besides."
+   ],
+   "note": "**A useful asymmetry to notice.** Everything in this section is work the *vendor* does once and the buyer inherits invisibly - which is why it almost never appears in a comparison, and why two products that look identical on a specification can behave completely differently the first time somebody pulls a unit under load. The one moment it becomes visible is {{commissioning}}: pulling modules under real load, and watching the survivors take up the share, is a test that costs an hour and is the only proof any of it works. It is also, reliably, the test that gets dropped when a programme runs late."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "7 min",
+   "intro": "Six ways this decision disappoints the people who made it. Four of them are a claim that was true about one property of a machine being read as a claim about another, which is what happens to any argument that gets compressed into a single adjective.",
+   "ps": [
+    "**A central failure is a crane and a wait, and the wait is not in the quotation.** The purchase compared two machines on price, efficiency and footprint, all of which are properties of a working machine. The thing that separates them is a property of a broken one: how long the plant runs degraded, who is qualified to come, whether the part is in the country, and what a lifting operation needs on that site. None of it appears on a datasheet, all of it is knowable in advance, and it is almost never asked before the order.",
+    "**A module fleet with one controller is a monolith in disguise.** The frame is full of independent units and the marketing is about graceful failure, but every one of them takes its share instruction from a single supervisory box, or sits behind a single output breaker, or both. The failure the architecture was bought to avoid still exists; it has moved from the power path into the control path, where it is harder to see and rarely commissioned against. **The tell is a single-line diagram that narrows to one object below the modules**, and the question in the previous section is the fast way to find it.",
+    "**Redundancy parks the fleet below its efficiency sweet spot, permanently.** A converter is most efficient near its design load, and a spare's entire purpose is to be under-used - so a redundant plant runs every machine lighter than it wants to run, for its whole life, by construction. Add a hall that is at a third of its eventual load for its first two years and the effect compounds: this is not a transient, it is the normal operating point. **{{Cold redundancy}}** is the honest answer where it is available - park the spare in standby so the working units sit near their optimum, and pay for it in the moment the spare has to wake up and take load. The trade is watts against latency, and it should be a decision rather than a default.",
+    "**A redundancy claim made at one level and read at another.** \"N+1\" is written identically whether the spare is a module inside one frame, a frame inside one system, or a whole independent path, and those differ by roughly an order of magnitude in money and by an entire class of surviving failure. Every one of them is a legitimate design. **What is not legitimate is a claim that does not say which**, and the discipline that catches it is to write the claim out as a sentence with its level in it before agreeing to anything.",
+    "**\"Modular\" asserted about a machine that is only manufactured that way.** A product assembled from repeated sub-units in the factory is not necessarily a product a customer can extend later, and neither of those is necessarily a product that can be worked on while it runs. Three different properties, one adjective, and the gap between them is discovered on the first maintenance visit rather than at the quotation.",
+    "**Granularity bought where the problem is uniform.** The fine-grained machine earns its premium out of unevenness - shaded rows, mixed vintages, a lease-up curve, a repair window that matters. A flat single-vintage plant with a steady load and a tolerant owner has none of those, so the premium is paid and the mechanism that would have repaid it never engages. This is the failure mode nobody writes up, because nothing breaks; the plant simply cost more than it needed to and no one can point at the line."
+   ],
+   "note": "**The single question that prevents most of the six.** *What is the largest thing that can fail, and how long does the load run degraded while it is replaced?* Both halves are needed - the first alone lets a modular frame hide behind its module count, and the second alone lets a cheap machine hide behind a plausible repair story nobody has costed. Asked together, and asked of a specific site rather than of a product line, they compress this entire lesson into one exchange.",
+   "sales": "The six above are the honest reasons a customer's last project disappointed them, and asking which of them they have lived through is a better opening than any capability question. It also protects you from the one that cuts the other way: **if the site is uniform, the load is steady and nobody is going to be there at three in the morning, the fine-grained machine is the wrong recommendation** - and being the person who says so is worth more over a two-year sales cycle than the order you would have got by not saying it."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "State the fork in one sentence, and say what it is *not* about.",
+     "a": "One central machine or many small ones. **Central wins on cost per watt; distributed wins on availability, granularity of control and graceful failure.** It is not about the silicon - both ends use the same switches and topologies - and it is barely about efficiency at the design point. It is about **the size of the unit**: the size of what you buy, what fails, and what somebody has to replace while the rest keeps running."
+    },
+    {
+     "q": "Why does finer tracking harvest more energy from a solar plant - and what must you not claim about it?",
+     "a": "Because the best electrical operating point is **not the same across a plant**: shading, dust, orientation and panel vintage shift it patch by patch. One tracker must pick a single compromise and forfeits the difference everywhere else, so per-string {{MPPT}} recovers what plant-wide averaging gives up. **What you must not claim is a size.** The record states the relationship and no source states how much more, for a given plant in a given climate - so the honest claim is directional, and any percentage needs a source."
+    },
+    {
+     "q": "A vendor says their product is \"modular\". What are the four things that could mean?",
+     "a": "**Factory-assembled** from repeated sub-units; **customer-extendable** later; **live-replaceable** while it runs; or merely **available in several sizes**. Only the third is an availability claim and only the second is a capital-phasing claim. They are routinely conflated, including by the person using the word, so the separating question is: *what happens to the load while you swap the failed unit?*"
+    },
+    {
+     "q": "What two questions expose whether a modular architecture is real or is packaging?",
+     "a": "**What is the smallest piece that can be replaced, and what is the largest piece that can fail?** Far apart, the modularity is real. The same object, it is packaging. A frame of swappable modules sitting behind one shared bus and one output breaker has bought the repair time of a distributed fleet while keeping the failure size of a central machine - a good trade, but not the trade it is usually sold as."
+    },
+    {
+     "q": "Three things have to be engineered before a unit can be pulled from a live system. Name them.",
+     "a": "**{{Current sharing}}** - a deliberate {{droop}} or an active loop, so the unit sitting a few millivolts high does not take the whole load. **A defined {{precharge}} and isolation sequence** with staged contacts, so a joining unit cannot sag the bus and {{ORing}} cuts a dead one off by its own behaviour. **Touch safety** - shrouded connections, because the frame stays live with a hand in it. All three are properties of the *slot*, not of the module."
+    },
+    {
+     "q": "Why is a distributed fleet coordinated by one supervisory controller a problem?",
+     "a": "Because the single large failure the architecture was bought to remove has not been removed - it has moved from the power path to the **control path**, where it is harder to see and rarely commissioned against. The test is one question: *who decides how the load is split, and what happens to the split when that decider fails?* An answer that names a box has found the monolith."
+    },
+    {
+     "q": "Why does redundancy cost efficiency, and what is the standard answer?",
+     "a": "A converter is most efficient near its design load and a spare's whole purpose is to be under-used, so a redundant plant runs every machine lighter than it wants to - permanently, by construction - and a hall at a third of its eventual load compounds it. **{{Cold redundancy}}** is the trade: park the spare in standby so the working units sit near their optimum, and pay for it in wake-up latency when the spare has to take load."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A developer is comparing a central converter against a fleet of small ones for a flat, single-vintage plant with a steady load and a well-staffed operations team. Which argument should decide it?",
+     "c": [
+      "Cost per watt - the conditions that repay granularity are largely absent here",
+      "Availability, because a distributed fleet always fails more gracefully",
+      "Efficiency at the design point, where the fleet is ahead",
+      "Control granularity, because finer tracking always harvests more energy"
+     ],
+     "a": 0,
+     "why": "Granularity earns its premium out of **unevenness** - mismatch across the plant, a repair window that matters, capacity arriving against an uncertain load. A flat single-vintage plant with steady load and staff on site has none of those, so the fine-grained machine's mechanism never engages and the premium is simply paid. Graceful failure is real but is worth what the degraded hours cost, which here is little. The large machine is usually slightly ahead at the design point, not behind. And finer tracking harvests more only where there is {{mismatch}} to recover."
+    },
+    {
+     "q": "A UPS frame is quoted as N+1 with twelve hot-swappable modules. What does that arrangement **not** survive?",
+     "c": [
+      "A fault on the frame's shared bus or its single output breaker",
+      "One module failing while the load stays protected",
+      "One module being pulled for maintenance",
+      "A module that fails to take its share of the load"
+     ],
+     "a": 0,
+     "why": "Module-level {{N+1}} buys the loss of one module and the ability to work on one module, both with the load still carried. It does **not** buy a second frame: every module in it sits on the same internal busbars and behind the same output breaker, so a fault there takes all twelve. That is a perfectly reasonable design - it is simply not what most people picture when they hear a redundancy claim, which is why the claim has to name its level. A module that will not share is a {{current sharing}} problem the frame's control handles, not a survivability question."
+    },
+    {
+     "q": "Which statement about the mismatch-and-tracking argument is defensible from the record as it stands?",
+     "c": [
+      "Finer tracking recovers mismatch losses that a single tracker averages away",
+      "Per-string tracking recovers about 3 % more energy across a typical plant",
+      "Central inverters lose roughly a fifth of their yield to mismatch",
+      "Tracking granularity makes no measurable difference on modern plants"
+     ],
+     "a": 0,
+     "why": "The relationship is stated everywhere in this material and **the size of it is stated nowhere** - because it depends on the site rather than on the product. So the directional claim is sound and any percentage attached to it, in either direction, is a number that needs a source. The fourth option is the mirror error: the mechanism is real, it simply has no published general magnitude. Treat a specific figure as a claim about one plant until somebody shows you the study."
+    },
+    {
+     "q": "A storage developer buys battery-only containers and wires them out to shared central conversion skids, rather than containers that each ship their own converter. What has that choice bought and cost?",
+     "c": [
+      "Lower cost per unit, and the integration risk plus a guarantee with no single signatory",
+      "Lower cost per unit, and a longer factory lead time on the containers",
+      "Higher availability, because conversion is consolidated and easier to maintain",
+      "A simpler {{grid code}} argument, because there are fewer converters to certify"
+     ],
+     "a": 0,
+     "why": "This is the **{{DC block}}** against the **{{AC block}}**, and it is the storage form of the same fork. Equipment-only procurement is reported at 15 to 25 % below turnkey, which is the saving. What comes with it is the integration work and - the part that decides financings - **no single counterparty warranting {{round-trip efficiency}}, {{availability guarantee}} and capacity together**, so when performance is short the cell vendor and the conversion vendor each point at the other. It also concentrates the failure: a skid outage stops every container behind it."
+    },
+    {
+     "q": "A distributed fleet is presented as having no single point of failure. One question tests the claim. Which?",
+     "c": [
+      "Who decides how the load is split, and what happens when that decider fails",
+      "How many units are in the fleet, and what each one is rated at",
+      "What the fleet's combined efficiency is at 30 % load",
+      "Whether the units are rated for outdoor installation"
+     ],
+     "a": 0,
+     "why": "Distribution in the power path can be undone by concentration in the **control** path. If the share instruction comes from one supervisory box, or everything sits behind one output breaker, the single large failure was moved rather than removed - and it is now somewhere harder to see and rarely tested. Peer coordination, where each unit takes its own share by {{droop}} or an active loop and the survivors absorb the difference, is what makes the architecture worth what it costs. Unit counts, part-load efficiency and enclosure ratings are all real questions that this particular claim does not turn on."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -40817,6 +41290,7 @@ function clTrackElectricalFoundations_() {
  "updated": "2026-09-16",
  "lessons": [
   "four-machines",
+  "string-versus-central",
   "the-transformer-and-the-substation",
   "breakers-relays-and-faults",
   "grid-stability-and-the-generator"
@@ -41002,7 +41476,8 @@ function clLessons_() {
           clLessonContractsAndRevenue_(),
           clLessonWhereBatteriesStop_(),
           clLessonBreakersRelaysAndFaults_(),
-          clLessonGridStabilityAndTheGenerator_()];
+          clLessonGridStabilityAndTheGenerator_(),
+          clLessonStringVersusCentral_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
