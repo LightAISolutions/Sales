@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 108/100`
+`Sections: 109/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.20r] — 2026-09-16 06:02:51 PM EST
+
+> Before running Phase 4 row 15, revise the clean-firm-and-nuclear module against the built clean-firm-power lesson. Then, give me a prompt to paste into a new Opus 5 xhigh session to run Phase 4 row 15, then remember session.
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeCleanFirmAndNuclear_()` revised against the now-built `clean-firm-power` lesson.** The module was authored at v06.07r around the finding that a built public lesson (`contracts-and-revenue`) had pre-declared a handoff **to a lesson that did not exist**; Phase 4 row 16 built that lesson at **v06.13r, the same EST day**, and the module's prose still asserted the gap. **Five sections revised** — `who-dominates-and-on-what-basis`, `the-sellers-play`, `what-the-record-does-not-say`, `drill`, `check-yourself` — with one `revisions[]` entry naming exactly those ids. `updated` stays 2026-09-16 (same EST day); `reviewBy` stays **2026-12-31**, which is unaffected because the lesson's arrival is not a dated gate
+- **The split inverted from a two-cornered one with a hole to the ordinary S2 shape**: two **public** mechanism lessons own the tests, this **contributor** module owns the parties. Measured rather than assumed — `clean-firm-power` is eight sections, stamped on **eight of this segment's sixteen members**, and **names not one company** (checked programmatically across the whole literal), which is what leaves the ranking to this tier
+- **The quiz's correct answer had become wrong and was corrected in place.** `check-yourself` item 4 asked where to send a reader for the mechanism; its correct choice read *"Nowhere yet … that lesson is unbuilt"*. The choice text now names the built lesson, the answer index is unchanged, and the content hash reset re-introduces the item to anyone who had drilled it — which is the intended behaviour for material whose meaning moved
+- **`clLessonSegmentCleanFirmAndNuclear_()` regenerated** with `--segment clean-firm-and-nuclear --today 2026-09-16` and nothing else. It was due from the **same** staleness on the **same** segment: `lesson_ref` had been rendering the now-built lesson as `(planned)` in both `read-next` and `what-is-bought-and-on-what`. The run's own line: `changed: read-next, what-is-bought-and-on-what; no pin moved`. `--check` **9 → 8**
+
+#### `repository-information/industry-guidance/landscape-clean-firm-and-nuclear-analysis.md`
+- **§2 rewritten** — the split, the module's source of truth. Six sub-sections: the history of the line, the three-way split now all three exist, what the built lesson actually took (**a criterion-by-criterion table: five of six now have a built public owner, against five having none**), §7.23's test holding across all three, **twenty-six** enumerated omissions (up from twenty-two), and the rule in §2f
+
+### Notes
+
+- **THE RULE THIS ESTABLISHES, recorded in the module's header comment and in §2f: a Phase 4 row that builds a lesson an existing landscape declared unbuilt must revise that landscape in the same commit.** Row 16 **stated the inverted split correctly in its own record** — *"the contributor landscape owns the parties, this public lesson owns the physics, and no company is ranked in it"* — and still left the module's prose asserting the lesson did not exist. Nothing would have surfaced that before the module's `reviewBy` of 2026-12-31, three and a half months out
+- **The asymmetry is the whole argument for a rule rather than a habit.** A generated `segment-*` lesson catches this event **mechanically** — `lesson_ref` stops rendering `(planned)` and `--check` reports the segment due, which is exactly how this one surfaced. A hand-authored guidance module has **no detector at all**: no checker reads its prose for claims about what exists, and `reviewBy` is months out by design
+- **One criterion is still genuinely unowned and the module now says so precisely** rather than claiming a blanket gap: criterion 6, the sponsor's balance sheet and its ability to carry a first-of-a-kind schedule. Criteria 1–5 all have a built public owner
+- **P7 IS EXPECTED THIS TIME AND HAS NO LEGITIMATE FIX.** `segment-clean-firm-and-nuclear` was already regenerated on 2026-09-16 EST (at v06.07r), so this second regeneration on the same EST day changes content without advancing `updated` — §7.32's case exactly. The UTC date is the one this repo refuses and hand-editing a generated literal is forbidden by §10.4, §10.9 and `classroom-app.md`. Signature this push: **P1, P2, P7** — no P3 (no `GATE_SYMBOLS` member moved, so `gateDigest` is deliberately untouched) and no P5
+- **No rotation on either file.** This push lands on 2026-09-16 EST: `CHANGELOG.md` **109 raw / 93 non-exempt** against a 100 trigger, sixteen sections dated 2026-09-16 EST, counter `Sections: 109/100`. `Classroomgs.changelog.md` **55 raw / 48 non-exempt** against a cap of 50, seven same-day. **Both deferrals lapse on the first push dated 2026-09-17 EST or later**, and that session rotates both
 
 ## [v06.19r] — 2026-09-16 05:39:26 PM EST
 

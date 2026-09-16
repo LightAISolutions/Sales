@@ -2,7 +2,7 @@
 
 **Module:** `landscape-clean-firm-and-nuclear-2026-09` · lane **The Value Chain** · tier **contributor**
 **Provenance:** Corpus synthesis over the segment's 16 member dossiers at the versions in the claims ledger; no ingested document and no new research.
-**Written:** 2026-09-16 (S2 session 10) · **Tenth landscape, nineteenth guidance module.**
+**Written:** 2026-09-16 (S2 session 10) · **Revised:** 2026-09-16 (v06.20r), against the newly built `clean-firm-power` lesson · **Tenth landscape, nineteenth guidance module.**
 
 ## What this is
 
@@ -43,63 +43,76 @@ Re-measured from `profiler-segments.json` on **16 September 2026**, member for m
 **The judgment.** In this segment the licence is the schedule and the *contract* is the product. The incumbents' scarcity is not reactors — it is **uncontracted existing output**, and roughly 30 % of one incumbent's clean baseload is already spoken for. The gating variable for the next wave of deals is not capacity, not fuel and not price: it is a **rulebook still being written** at FERC, which all three incumbents' dossiers name as the origin case and which one of them filed the complaint that opened. The challengers are gated on something else entirely — a **licensing pathway choice** the two of them have made differently, and a fuel supply chain that is pre-commercial for both.
 
 
-## 2. The split — EIGHT neighbours, and the line is drawn by a lesson that DOES NOT EXIST YET
+## 2. The split — EIGHT neighbours, and a line that was re-drawn the same day it was written
 
-*Written first, before any other section of this file and before a line of the module, per §10.6 (j).*
+*§2 was written first, before any other section of this file and before a line of the module, per §10.6 (j). It was then **revised the same EST day** — see §2f — because the lesson it was built around stopped being hypothetical.*
 
-This segment has **eight** neighbours bearing on it: **four built landscape modules** (`landscape-utilities-2026-09`, `landscape-storage-developers-and-ipps-2026-09`, `landscape-aidc-developers-and-landlords-2026-09`, `landscape-cells-and-chemistry-2026-09`), **two registered guidance modules** (`utility-aidc-procurement-2026-08`, `large-load-interconnection-2026-09`), and **two public mechanism lessons in this segment's own `READ_NEXT`** — of which **one is built and one is not**.
+This segment has **eight** neighbours bearing on it: **four built landscape modules** (`landscape-utilities-2026-09`, `landscape-storage-developers-and-ipps-2026-09`, `landscape-aidc-developers-and-landlords-2026-09`, `landscape-cells-and-chemistry-2026-09`), **two registered guidance modules** (`utility-aidc-procurement-2026-08`, `large-load-interconnection-2026-09`), and **two public mechanism lessons in this segment's own `READ_NEXT`** — **both of which are now built.**
 
-**The organising fact, and the reason this split is unlike any of the nine before it: the curriculum has already assigned this segment's physics to a lesson that has not been written.** `contracts-and-revenue` — Phase 4 row 11, public, built, and stamped on all three of this segment's incumbents — carries a section called `clean-firm-and-the-restart` whose opening sentence is a handoff:
+**As first written, the organising fact was that the curriculum had assigned this segment's physics to a lesson that did not exist.** `contracts-and-revenue` — Phase 4 row 11, public, built, and stamped on all three of this segment's incumbents — carries a section called `clean-firm-and-the-restart` whose opening sentence is a handoff:
 
 > *"This section is the **instrument** view of clean power: what the contracts are, who signs them and what each one proves. The physics — why a reactor follows load badly, what a small modular reactor changes, what* clean firm *admits — belongs to* Clean Firm Power *in the campus track, and is deliberately not repeated here."*
 
-`clean-firm-power` is **§7 row 16 and unbuilt**. So a built public lesson has pre-declared a handoff **to a lesson that does not exist**, and the material it declined is sitting in nobody's hands. That is the gap, and naming it rather than filling it is the whole of this module's discipline. **A landscape that starts teaching a criterion because nobody else does stops being a landscape** (session 8's (y3)) — and here the temptation is at its strongest, because the missing lesson is the *nuclear* lesson and this is the *nuclear* segment.
+At the time `clean-firm-power` was **§7 row 16 and unbuilt**, so a built public lesson had pre-declared a handoff **to a lesson that did not exist**, and the declined material sat in nobody's hands. The module named that gap and refused to fill it, per session 8's (y3).
 
-**A second §7.35 measurement that did not survive the check.** The brief says *"four of the six buying criteria (licensing path, the price ladder, capacity factor and firmness, HALEU supply) have no built owner at all."* Run against the generator, the count is different and worse: `what-is-bought-and-on-what` prints a **dash against five** — the licensing path, capacity factor and firmness, fuel security, additionality and the sponsor's balance sheet — and the **sixth** (the price ladder) points at `clean-firm-power`, which is unbuilt. So **five of six have no owner at all and six of six have no *built* owner.** The module states the measured figure, not the brief's.
+**Phase 4 row 16 then built it — v06.13r, the same EST day — and the split inverted.**
 
-### 2a. The three-way split, one party of which has not been born
+### 2a. The three-way split, now that all three exist
 
-| Owns | Who | Built? |
-|---|---|---|
-| The **instruments** of clean firm — hourly matching, the corporate PPA, additionality, the uprate, the restart, the green tariff | `contracts-and-revenue` (public, analyst-visible) | **yes** |
-| The **physics** — why a reactor follows load badly, what an SMR changes, what *clean firm* admits | `clean-firm-power` (public, campus track) | **NO — §7 row 16** |
-| The **parties** — who dominates and on what basis, who threatens and on which route, each player's bet | **this module** (contributor) | this commit |
+| Owns | Who | Gate | Built? |
+|---|---|---|---|
+| The **instruments** of clean firm — hourly matching, the corporate PPA, additionality, the uprate, the restart, the green tariff | `contracts-and-revenue` | public (`tracks`) | **yes** |
+| The **physics** — why a reactor follows load badly, the licensing ladder, the four kinds of clean firm, the fuel stack, the additionality fight | `clean-firm-power`, *When the Campus Signs a Reactor* | public (`tracks`) | **yes, since v06.13r** |
+| The **parties** — who dominates and on what basis, who threatens and on which route, each player's bet | **this module** | contributor | this commit |
 
 The module therefore:
 
-- **Does not restate the instruments.** No definition of hourly matching, of a virtual PPA, of additionality, of a green tariff, of what a restart is. Those are `contracts-and-revenue`'s, taught vendor-blind and public, and the module's own opening says so by name.
-- **Does not teach the physics.** No reactor-type tutorial, no capacity-factor derivation, no load-following explanation, no HALEU chemistry. That is `clean-firm-power`'s, and the module says out loud that it is unbuilt so the reader knows where the gap is rather than mistaking this module for the answer.
-- **Does say who sits where.** Which of the three incumbents sells which instrument, which of the two challengers is on which licensing pathway, and why eleven of sixteen members are adjacent.
+- **Does not restate the instruments.** No definition of hourly matching, of a virtual PPA, of additionality, of a green tariff, of what a restart is.
+- **Does not teach the physics.** No reactor-type tutorial, no capacity-factor derivation, no load-following explanation, no HALEU chemistry, no licensing-route comparison. All of that is now `clean-firm-power`'s, **and it is a tier below this module**, so duplicating it would restate material the reader can already get.
+- **Does say who sits where** — which of the three incumbents sells which instrument, which of the two challengers is on which licensing pathway, and why eleven of sixteen members are adjacent.
 
-### 2b. §7.23's test — the one number both cite, doing a different job in each
+### 2b. What the built lesson actually took, measured rather than assumed
 
-The shared number is **the uprate attached to a supply agreement**. `contracts-and-revenue` uses it as an *arithmetic worked example* of additionality: *"A 433 MW uprate programme attached to a 2,609 MW supply agreement is the seller buying an answer to the additionality question and the buyer paying for it — read that pairing whenever you see an uprate appear inside a power deal."* It names nobody.
+`clean-firm-power` is **eight sections**, stamped on **eight of this segment's sixteen members** (`oklo`, `x-energy`, `sargent-lundy`, `constellation-energy`, `talen-energy`, `vistra`, `southern-company`, `fermi-america`) — and it **names not one company**, checked programmatically across the whole literal. That vendor-blindness is what leaves the ranking to this tier; a mechanism lesson that had named them would have taken the module's job with it.
 
-This module uses the same pairing as a **position marker**: it is Vistra's, it is what distinguishes Vistra's PJM book from Talen's Susquehanna book and from Constellation's Crane restart, and it sorts the three incumbents into three different answers to the same objection. Same number; a *test* there, a *sorting mechanism* here. §7.23's test holds.
+**Five of the six buying criteria now have a built public owner**, against five having *none* when this module was written:
 
-### 2c. The second pre-declaration — §10.6 (t), on a tile, for the seventh time
+| Criterion | Owner now |
+|---|---|
+| 1 · First-power date and the licensing path | `clean-firm-power` — `the-ladder-of-first-power`, `where-it-fails` |
+| 2 · $/MWh against the price ladder | `contracts-and-revenue` + `clean-firm-power`'s *"nobody in this record publishes the number"* |
+| 3 · Capacity factor and firmness | `clean-firm-power` — `what-firm-means`, `why-a-reactor-follows-badly` |
+| 4 · Fuel security, HALEU | `clean-firm-power` — `where-it-fails`, the 900 kg tile |
+| 5 · Additionality and behind- vs front-of-meter | `clean-firm-power` — `the-additionality-fight` |
+| 6 · **Balance sheet and a first-of-a-kind schedule** | **nobody** |
 
-`the-campus-as-a-power-project` — the one **built** entry in this segment's `READ_NEXT` — carries a tile reading **0 league tables** *("no ranking of these landlords exists in this corpus and this lesson does not invent one; the lifecycle is the transferable thing and the projects are only the evidence for it")*, and its `who-is-in-the-room` section names *"the power partner"* as a role rather than a company: *"a utility, a microgrid operator …, a fuel-cell supplier …, or a merchant generator selling powered land."* Read in full before drafting. It declines the ranking; this module supplies it — for the generators, not for the landlords.
+**Criterion 6 is the one genuine remaining gap**, and the module says so rather than quietly dropping the claim.
+
+### 2c. §7.23's test — the one number both cite, doing a different job in each
+
+The shared number is **the uprate attached to a supply agreement**. `contracts-and-revenue` uses it as an *arithmetic worked example* of additionality, naming nobody. `clean-firm-power` uses it as one of *three seller answers to the additionality objection* — again naming nobody. This module uses the same pairing as a **position marker**: it is Vistra's, and it sorts the three incumbents into three answers to one objection. Same fact; a *test* in both lessons, a *sorting mechanism* here. The test holds across all three.
 
 ### 2d. The omissions, enumerated so a later revision cannot import them
 
-Written down per session 5's (n), because a split that is not enumerated collapses at the first refresh. **Twenty-two** across the eight neighbours.
+**Twenty-six** across the eight neighbours — four more than at first writing, because the physics lesson now owns material that was previously unowned.
 
-**`contracts-and-revenue` (public, built) owns — 7:** hourly vs annual matching and what each buys · the corporate/virtual PPA and the strike-price settlement · additionality as the quality test · the uprate as the middle answer · what a restart physically involves and the interconnection-rights inheritance · the green tariff in a regulated territory · the eleven-instrument table and the price of a tenant's credit.
+**`contracts-and-revenue` (public) owns — 7:** hourly vs annual matching · the corporate/virtual PPA and the strike-price settlement · additionality as the quality test · the uprate as the middle answer · what a restart physically involves and the interconnection-rights inheritance · the green tariff in a regulated territory · the eleven-instrument table.
 
-**`clean-firm-power` (public, UNBUILT) is assigned — 4:** why a reactor follows load badly · what an SMR changes · what *clean firm* admits as a category · the licensing path as a physical schedule. **Nobody holds these today.** The module states the gap and points at the planned lesson.
+**`clean-firm-power` (public, built v06.13r) owns — 8:** what *firm* means as a physics word · the four-rung ladder of first power · why a reactor follows load badly and the two things that change it · why a campus that signed a reactor still buys gas and batteries · the four kinds of clean firm and what each is selling · the additionality fight and what the regulator actually decided in November 2024 · the seven failure modes, including the regulatory-noun distinction and the fuel stack · the modular claim and the road that caps it.
 
-**`the-campus-as-a-power-project` (public, built) owns — 4:** the three clocks · the five-rung ladder and which rung a figure was counted at · the four-parties-one-lease structure · the five campus failure modes including the co-location curtailment trade.
+**`the-campus-as-a-power-project` (public) owns — 4:** the three clocks · the five-rung ladder · the four-parties-one-lease structure · the five campus failure modes.
 
-**`landscape-utilities-2026-09` owns — 3:** the regulated franchise's instrument, the disintermediation routes, and the four utilities' rate-case machinery. Four of this segment's adjacents are that module's incumbents.
-
-**`landscape-storage-developers-and-ipps-2026-09` owns — 2:** the IPP's development pipeline and the merchant-versus-contracted ownership split. Two of this segment's incumbents are that module's incumbents too.
-
-**`utility-aidc-procurement-2026-08` and `large-load-interconnection-2026-09` own — 2:** the tariff terms and the buyer map; the rulebook above the fence, including the FERC co-location docket's *procedure*. This module takes only the docket's *effect on who can sell what*.
+**`landscape-utilities-2026-09` — 3 · `landscape-storage-developers-and-ipps-2026-09` — 2 · the two policy/procurement modules — 2:** the franchise's instrument and the rate-case machinery; the IPP's pipeline and the merchant-versus-contracted split; the tariff terms, the buyer map and the co-location docket's *procedure*.
 
 ### 2e. Why the split matters more here than a subject boundary
 
-Three of the eight neighbours are **public** and this module is **contributor**. Material drifting from the module into `contracts-and-revenue`'s or `the-campus-as-a-power-project`'s territory is material an analyst can already read — a restatement, not a leak. Material drifting the other way is a gate raised on something already public. Session 6's (s) line holds and sharpens: **the lesson teaches the test, the module applies it to named parties** — except that here one of the two lessons that should teach the test has not been written, so the module's third posture is **to say the test is unowned and decline to own it**.
+Three of the eight neighbours are **public** and this module is **contributor**. Material drifting from the module into a lesson's territory is material an analyst can already read — a restatement, not a leak. Material drifting the other way is a gate raised on something already public. Session 6's (s) line holds in its **standard** direction now: **the lesson teaches the test, the module applies it to named parties.** The third posture this module briefly needed — *say the test is unowned and decline to own it* — was correct for one day and is now retired for this segment; it remains on the record because the next landscape to meet an unbuilt `READ_NEXT` entry will need it.
+
+### 2f. The revision, and the rule it establishes
+
+Row 16's own record stated the inverted split correctly — *"the contributor landscape owns the parties, this public lesson owns the physics, and no company is ranked in it"* — and still left this module's prose asserting the lesson did not exist. Nothing would have surfaced that before the module's `reviewBy` of **2026-12-31**, three and a half months out.
+
+**The rule, and it generalises past this pair: a Phase 4 row that builds a lesson an existing landscape declared unbuilt must revise that landscape in the same commit.** The generated `segment-*` lesson catches the same event mechanically — `lesson_ref` stops rendering `(planned)` and `--check` reports the segment due, which is exactly what happened here — but a hand-authored module has **no detector at all**. That asymmetry is the whole argument for making it a rule rather than a habit.
 
 ## 3. Who dominates, and on what basis — three incumbents, three answers to one objection
 

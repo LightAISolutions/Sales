@@ -1,4 +1,4 @@
-var VERSION = "v01.54g";
+var VERSION = "v01.55g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -17031,7 +17031,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
     ],
     [
      "$/MWh against the restart, existing-reactor and new-build price ladder",
-     "*When the Campus Signs a Reactor* (planned)"
+     "*When the Campus Signs a Reactor*"
     ],
     [
      "Capacity factor and firmness; how badly the unit follows load",
@@ -18320,7 +18320,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *When the Campus Signs a Reactor* (planned) · *Reading the Named Projects*.",
+    "**Mechanism lessons for this segment:** *When the Campus Signs a Reactor* · *Reading the Named Projects*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-clean-firm-and-nuclear-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Constellation Energy, Talen Energy, Vistra, Oklo, X-energy, Bechtel, Black & Veatch, Dominion Energy, Entergy, Fermi America, Form Energy, Kiewit, NextEra, Sargent & Lundy, Southern Company, Xcel Energy — each member's dossier carries one in Profiler."
    ]
@@ -18399,6 +18399,14 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -55270,20 +55278,35 @@ function guidanceDocLandscapeBridgeAndOnSiteGeneration_() {
 // no ingested document, no new research. Source of truth:
 // repository-information/industry-guidance/landscape-clean-firm-and-nuclear-analysis.md
 //
-// THE SPLIT, AND IT IS UNLIKE THE NINE BEFORE IT: the line is drawn by a
-// lesson that DOES NOT EXIST YET. contracts-and-revenue (Phase 4 row 11,
-// PUBLIC, built, stamped on all three of this segment's incumbents) carries a
-// section clean-firm-and-the-restart whose opening sentence hands the physics
-// off by name - "The physics - why a reactor follows load badly, what a small
-// modular reactor changes, what clean firm admits - belongs to Clean Firm
-// Power in the campus track, and is deliberately not repeated here."
-// clean-firm-power is CLASSROOM-CURRICULUM-PLAN.md section 7 row 16 and
-// UNBUILT. So a built public lesson has pre-declared a handoff TO A LESSON
-// THAT DOES NOT EXIST, and the material it declined is in nobody's hands.
-// This module NAMES that gap and does not fill it: 10.6 (y3) - a landscape
-// that starts teaching a criterion because nobody else does stops being a
-// landscape - and the temptation is at its strongest here because the missing
-// lesson is the nuclear lesson and this is the nuclear segment.
+// THE SPLIT, AND IT WAS RE-DRAWN THE SAME DAY IT WAS WRITTEN. As authored,
+// this module's organising fact was that the line was drawn by a lesson that
+// DID NOT EXIST: contracts-and-revenue (Phase 4 row 11, PUBLIC, built,
+// stamped on all three of this segment's incumbents) hands the physics off by
+// name in its clean-firm-and-the-restart section - "The physics ... belongs
+// to Clean Firm Power in the campus track, and is deliberately not repeated
+// here" - and clean-firm-power was section 7 row 16 and UNBUILT, so the
+// declined material was in nobody's hands. The module named that gap and
+// refused to fill it, per 10.6 (y3).
+// PHASE 4 ROW 16 THEN BUILT THAT LESSON (v06.13r, the same EST day), and the
+// split inverted from a two-cornered one with a hole to the ORDINARY S2
+// shape: two PUBLIC mechanism lessons own the tests, this CONTRIBUTOR module
+// owns the parties. When the Campus Signs a Reactor teaches the licensing
+// ladder, why a reactor follows load badly, the four kinds of clean firm, the
+// fuel stack and the additionality fight - across eight sections, stamped on
+// EIGHT of this segment's sixteen members, and NAMING NOT ONE COMPANY, which
+// is what leaves the ranking to this tier. Between the two lessons FIVE of the
+// six buying criteria now have a built public owner; the sixth (the sponsor's
+// balance sheet) is still taught nowhere and the module says so.
+// Revised 2026-09-16 (v06.20r) - five sections, listed in revisions[].
+// THE RULE THIS PAIR ESTABLISHES, and it generalises past this module: A
+// PHASE 4 ROW THAT BUILDS A LESSON AN EXISTING LANDSCAPE DECLARED UNBUILT
+// MUST REVISE THAT LANDSCAPE IN THE SAME COMMIT. Row 16 stated the inverted
+// split correctly in its own record and still left this module's prose
+// asserting the lesson did not exist - a landscape's reviewBy is months out,
+// so nothing would have surfaced it before 2026-12-31. The generated segment
+// lesson catches the same event mechanically (lesson_ref stops rendering
+// "(planned)" and --check reports the segment due); the hand-authored module
+// has no such detector, which is exactly why the obligation has to be a rule.
 //
 // EIGHT NEIGHBOURS. Four built landscapes (utilities, storage-developers-and-
 // ipps, aidc-developers-and-landlords, cells-and-chemistry), two guidance
@@ -55371,7 +55394,13 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
  },
  "updated": "2026-09-16",
  "reviewBy": "2026-12-31",
- "revisions": [],
+ "revisions": [
+  {
+   "date": "2026-09-16",
+   "note": "Clean Firm Power was built the same day (Phase 4 row 16, public, campus track) after this module had been written against it being unbuilt. The split is re-drawn: the physics now has a built public owner, so the module states who sits where on tests it does not own rather than naming a gap. Sections revised: who-dominates-and-on-what-basis, the-sellers-play, what-the-record-does-not-say, drill, check-yourself.",
+   "changed": ["who-dominates-and-on-what-basis", "the-sellers-play", "what-the-record-does-not-say", "drill", "check-yourself"]
+  }
+ ],
  "tiles": [
   {
    "k": "16",
@@ -55435,7 +55464,7 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
    "read": "8 min",
    "kind": "prose",
    "ps": [
-    "**Start with what this module is not.** The physics of this segment — why a reactor follows load badly, what a small modular reactor changes, what *{{clean firm power}}* admits as a category — belongs to a planned public lesson, *Clean Firm Power*, **which does not exist yet**. The *instruments* — hourly matching, the corporate {{PPA}}, {{additionality}}, the {{uprate}}, the restart, the {{green tariff}} — belong to *Who Carries Which Risk*, which does exist, is analyst-visible, and says in its own text that it is deliberately not teaching the physics. **So one of this segment's two teachers has not been written, and this module is not going to appoint itself.** What follows is the parties.",
+    "**Start with what this module is not.** Both of this segment's mechanism teachers are now built and both are **public**, so an analyst can already read everything this module does not say. The *physics* — why a reactor follows load badly, what a small modular reactor changes, what *{{clean firm power}}* admits as a category, and the four kinds it admits — belongs to *When the Campus Signs a Reactor*, in the campus track. The *instruments* — hourly matching, the corporate {{PPA}}, {{additionality}}, the {{uprate}}, the restart, the {{green tariff}} — belong to *Who Carries Which Risk*, which hands the physics off to that lesson by name. **Between them they teach five of this segment's six buying criteria, and they name not one company.** What follows is the parties.",
     "**The shape first, because it is the most useful single fact about this segment and no summary states it.** Sixteen members: three incumbents, two challengers, **eleven adjacents**. That is 69 per cent adjacent, the second-highest in the registry — and the registry's own notes field for this segment is empty, so the explanation has to be measured. It measures cleanly. **Every one of the eleven adjacents is ranked — incumbent or challenger — in another segment.** Four are utilities and incumbents in the utilities segment. Three are EPCs and incumbents in engineering and construction. One is an engineering firm and an incumbent in assurance. One is a renewables IPP and an incumbent among storage developers. One is a battery maker and a challenger in cells. One is a data-centre landlord and a challenger there. **Eleven out of eleven, with no exception.**",
     "**And the converse is just as clean: the two challengers are the only members of the sixteen that belong to no other segment at all.** Both are pre-commercial reactor vendors. Every incumbent is ranked somewhere else too. **So the segment reads like this: firm carbon-free power is a product made almost entirely by companies whose main business is something else, plus two companies that exist only to sell it and have never sold any.** That is the room a seller is walking into, and it is why a pitch built on segment share lands badly here.",
     "**The three incumbents do not compete on a product.** All three sell the same physical thing — firm carbon-free megawatt-hours from an operating reactor fleet, delivered under a long-dated contract. What separates them is **three different answers to the same objection**, which is whether power that already existed counts as new. That objection is {{additionality}}, it is the *Who Carries Which Risk* lesson's quality test, and it is this segment's fifth buying criterion. Read the three as three answers and the field stops looking like a ranking.",
@@ -55513,7 +55542,7 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
     "**A restart** puts the whole campus on a **three-to-four-year clock**, and the advantage that makes that clock possible is contractual rather than nuclear: the plant inherits existing {{interconnection rights}} instead of joining a queue. **Your window is that clock.** Everything that has to be delivered before first power has a date set by the restart, not by the campus.",
     "**And one structure to recognise before you misread an announcement, because it changes whose credit was underwritten.** In a regulated, vertically integrated territory a data centre cannot buy from a project across the street — only the franchise may sell retail power. The approved workaround is a {{green tariff}}, where the utility signs the contract and the corporate customer commits to take the output. **The credit the lenders underwrote is the utility's.** So when an owner tells you it supplies a named hyperscaler, ask whose name is on the contract: the answer decides whether that relationship is repeatable anywhere else. *That mechanism is taught in full, publicly, in* Who Carries Which Risk *— this module only tells you which counterparties are using it.*"
    ],
-   "sales": "Not one of this segment's six buying criteria has a built lesson teaching it, so in most rooms you will be the only person who has read the licensing path and the fuel position together. That is an advantage — use it to ask, not to lecture."
+   "sales": "Both mechanism lessons behind this segment are public, so assume the room can already get the physics and the instruments. What you bring is the join: which named counterparty sits where on each of them, and that is not written down anywhere a prospect can read. Use it to ask, not to lecture."
   },
   {
    "id": "claims-ledger",
@@ -55586,7 +55615,7 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
     "**Five. No independent laboratory validation exists for the multi-day chemistry at its full rated duration.** It appears in neither of the two federal long-duration assessments the corpus cites, and no third-party teardown or bench validation is public — so every cost figure in circulation traces back to the vendor or to one reported transaction. That is a material gap in a product sold on the argument that it is cheap.",
     "**Six. One incumbent discloses storage in megawatts only** — no energy figure in any filing, deck or report — so any megawatt-hour number you see attached to that fleet came from somewhere else.",
     "**Seven. Two of the sixteen members carry no policy-exposure record at all.** Both are engineering and construction firms. That is an absence in the corpus rather than evidence that the engineering-and-construction half of this segment is unexposed, and it is worth saying out loud because this is a segment where a permit is the schedule.",
-    "**And the largest absence is not in the dossiers at all — it is in the curriculum.** **Not one of this segment's six buying criteria has a built lesson teaching it.** The generated segment lesson's own table prints a dash against **five** of them — the licensing path, capacity factor and firmness, fuel security, additionality and the sponsor's balance sheet — and the sixth points at *Clean Firm Power*, which is planned and unbuilt. **This module deliberately does not fill that gap.** Its job is to say who sits where, not to become the nuclear lesson by default — so where you want the mechanism rather than the parties, the honest answer today is that nobody in this curriculum has written it yet."
+    "**And one absence that used to sit here has closed, which is worth saying because it changes where to send a reader.** When this module was first written, *Clean Firm Power* was planned and unbuilt, so five of this segment's six buying criteria had no lesson teaching them and the honest answer was that nobody in the curriculum had written the mechanism yet. **That lesson now exists** — *When the Campus Signs a Reactor*, public and in the campus track — and it teaches the licensing ladder, why a reactor follows load badly, the four kinds of clean firm, the fuel stack and the additionality fight, **without naming a company anywhere in it**. So the gap is closed and this module's job is narrower than it was: **it says who sits where on tests it does not own.** One criterion is still taught nowhere — the sponsor's balance sheet and its ability to carry a first-of-a-kind schedule — and that is a genuine gap rather than a rhetorical one, because it is where a first-of-a-kind actually fails."
    ]
   },
   {
@@ -55597,7 +55626,7 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
    "cards": [
     {
      "q": "What is the split between this module and the lessons that are this segment's own reading list?",
-     "a": "Three-way, and one of the three does not exist. *Who Carries Which Risk* — public and built — owns the **instruments**: hourly matching, the corporate PPA, additionality, the uprate, the restart, the green tariff. *Clean Firm Power* is assigned the **physics** and is unbuilt, so nobody holds it. This module owns the **parties**. It carries no instrument definitions and no reactor tutorial, and it says the gap is a gap rather than filling it."
+     "a": "Three-way, and all three now exist. *Who Carries Which Risk* — public — owns the **instruments**: hourly matching, the corporate PPA, additionality, the uprate, the restart, the green tariff. *When the Campus Signs a Reactor* — public, and built after this module was first written — owns the **physics**: the licensing ladder, why a reactor follows load badly, the four kinds of clean firm, and the fuel stack. This module owns the **parties**. It carries no instrument definitions and no reactor tutorial, because both are a tier below it and free to read."
     },
     {
      "q": "Why are eleven of this segment's sixteen members adjacent?",
@@ -55673,11 +55702,11 @@ function guidanceDocLandscapeCleanFirmAndNuclear_() {
      "c": [
       "This module's dominance section, which covers it",
       "The public lesson on contracts and revenue, which teaches clean firm",
-      "Nowhere yet: the public lesson that teaches the instruments says in its own text that the physics belongs to a planned lesson, and that lesson is unbuilt",
+      "*When the Campus Signs a Reactor* — the public campus-track lesson that owns exactly that material, and the one *Who Carries Which Risk* hands the physics off to by name",
       "The generated segment lesson, which carries it in the players table"
      ],
      "a": 2,
-     "why": "*Who Carries Which Risk* hands the physics off by name and says it is *deliberately not repeated here*; the lesson it hands off to is planned and unbuilt. This module owns the parties and **declines to become the nuclear lesson by default** — a landscape that starts teaching a criterion because nobody else does stops being a landscape. Saying the gap is a gap is the correct answer today."
+     "why": "*Who Carries Which Risk* hands the physics off by name and says it is *deliberately not repeated here*, and the lesson it names now exists. Send the reader there: it is **public**, so an analyst can read it without the tier this module needs. This module owns the parties and **still declines to become the nuclear lesson** — a landscape that starts teaching a criterion because it can stops being a landscape, and it is now duplicating a public lesson rather than filling a gap."
     },
     {
      "q": "A counterparty describes a co-location arrangement at an operating plant. What is the first thing to establish?",
