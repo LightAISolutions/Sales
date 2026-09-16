@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.08r] — 2026-09-16 01:52:45 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/CHANGELOG.md` · `INTEGRATED-REMEDIATION-PLAN.md`
+- **The deploy counters recorded from the job log, which is the only place they can be measured.** Two `.gs` files in the v06.07r merge diff fired exactly two steps and logged exactly two lines, both on the first GET leg with no POLL and no `?op=deploy` probe — the **eighteenth consecutive clean use** of the §7.19 order, and the two-line forecast held exactly:
+  - `Scraper deploy confirmed (GET): Updated to v02.11g (deployment 156) | 156/200`
+  - `Classroom deploy confirmed (GET): Updated to v01.50g (deployment 61) | 61/200`
+- Both counters advanced by exactly one (Scraper 155 → 156, Classroom 60 → 61). Pages read `|v01.50g|` and `|v02.11g|` in agreement before the log was closed, so the §7.19 order resolved on its first two reads. §7.36's deploy paragraph refreshed with the measured figures; **its quoted prompt block names no counters, so there was no second half to edit** — checked rather than assumed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.08r; the v06.06r entry moved to `## Previous Sessions` and the 2-session cap applied
+
+### Notes
+
+- **This is the handover push.** The deploy counters cannot be read before the merge, so recording them requires a second commit; `SESSION-CONTEXT.md` rides in the same commit as the repo-version bump, per the rule v06.02r established — the staleness check is a plain equality against `repository.version.txt` and nothing else reconciles them
+- **No rotation.** v06.07r closed `CHANGELOG.md` at 96 raw with three sections dated 2026-09-16 EST; this section makes it **97 raw / 93 non-exempt**, counter `Sections: 97/100`, seven clear of the trigger. **The next session is not the repo rotator** — but it **is** the GAS rotator: `Classroomgs.changelog.md` closed at **50 raw / 48 non-exempt against a cap of 50**, and the moment EST rolls past 2026-09-16 it stands at 50 non-exempt, which is the trigger. Its oldest whole date group is **2026-09-02 (11 sections)**
+- **The next run is Phase 4 row 15, `string-versus-central`**, briefed in §7.36 — the lesson that completes `electrical-foundations`, and the first Phase 4 row whose correct write is a **mid-array insert** into a track's `lessons[]`. It will fire **P5**, and P5 firing there is the contract working rather than a defect
 
 ## [v06.07r] — 2026-09-16 01:36:51 AM EST
 
@@ -46,6 +67,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 - **The Scraper-seed prior resolved YES and decisively.** A `seg-nuclear` seed already exists but carries four generic words. Against all **431** terms the segment's **licensing, fuel and contracting vocabulary scored zero across the board** — criteria 1, 2 and 4 entire. Thirteen terms seeded; nine dropped as superstrings, four as already exact, six as too generic, one company name, three ambiguous tokens, two on `seg-nuclear` duplication, one absent from the record, two as fragile — and **three on split grounds** per session 6's (v), including `front-of-the-meter`, whose mirror already sits in `seg-bess-utility`
 - **Verification.** `node --check` on `.js` copies of both `.gs` files — clean. `check-gas-inner-scripts.js` — 86 blocks, clean. `check-classroom-content.py` — **0 errors / 0 warnings at 44 lessons / 8 tracks / 142 gate cases**, module assertion at 19, **micro-markup clean on the first draft**. `check-classroom-curriculum.py --strict` — no structural findings, 28 stale pins (unmoved), 2 items due for review. `check-classroom-pipeline.py --selftest` — 13 fixtures, 0 failures. `--base origin/main` — **P1 ×7, P2 ×9, no P3, no P5, no P7** across 13 changed paths, exactly the forecast signature. `build-classroom-segments.py --check` — 10 → 10 → 9. `check-readme-tree.py` — 0 findings after `--fix` synced the two GAS displays
 - **Playwright, through the REAL serving path.** Contributor: **9/9 sections rendered, ZERO page errors**, zero surviving `{{…}}` and zero literal asterisks across **42,495 characters**; every section screenshot read. Analyst: **0/9 sections, 187 body characters**, and the server-side probe returned `{"success":false,"error":"ROLE_DENIED","role":"analyst"}` from `handleGuidanceOp_`'s own `clRequire_(sess,'guidance')` boundary. The two console errors are the known environmental `ERR_CERT_AUTHORITY_INVALID`. **The CSP workaround held**: `_gasPost` pointed at a same-origin `/__gas` and fulfilled by `page.route()`. **One harness defect found and fixed in this session**: splicing the new function after the previous one's `};` nested it *inside* that function — valid JavaScript, so `node --check` passed while the registry could never have resolved it. Caught by inspecting the splice point rather than by any checker
+- **THE DEPLOY, MEASURED AT v06.08r: two `.gs` files in the merge diff fired exactly two steps and logged exactly two lines, both on the first GET leg with no POLL and no `?op=deploy` probe** — the **eighteenth consecutive clean use** of the §7.19 order, and the two-line forecast held exactly. `Scraper deploy confirmed (GET): Updated to v02.11g (deployment 156) | 156/200` and `Classroom deploy confirmed (GET): Updated to v01.50g (deployment 61) | 61/200`. **Both counters advanced by exactly one** (Scraper 155 → 156, Classroom 60 → 61), and Pages read `|v01.50g|` and `|v02.11g|` in agreement before the log was closed
 - **The `.cl-tbl` `min-width` question now has twenty clean data points** — a three-column five-row bets table and a three-column nine-row indicators table, both clean at 1400px with no horizontal overflow
 - **No rotation on any of the three.** EST read **2026-09-16 01:2x** against UTC's **05:2x**; the harness banner agreed. `CHANGELOG.md` closes at **96 raw**, three sections dated 2026-09-16 EST → **93 non-exempt**, counter `Sections: 96/100`. **`Classroomgs.changelog.md` closes at 50 raw / 48 non-exempt against a cap of 50** — two sections dated 2026-09-16 EST — so **the session after this one rotates it** unless its push also lands on 2026-09-16 EST; its oldest group is **2026-09-02 (11 sections)**. `Scrapergs.changelog.md` 32/50; `Profilerhtml.changelog.md` untouched at 49/50
 
