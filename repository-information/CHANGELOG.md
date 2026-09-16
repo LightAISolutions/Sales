@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.16r] — 2026-09-16 06:54:40 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **THE FIRST TWO-PROJECT DEPLOY CYCLE ON RECORD, AND THE COUNTER RULE IS NOW CONFIRMED IN ITS POSITIVE BRANCH.** The v06.15r merge carried **two** `.gs` files — `Classroom.gs` for the module and `Scraper.gs` for the seed — and fired **exactly two** deploy steps logging **exactly two** lines, both confirming on the **first GET**:
+  - `Scraper deploy confirmed (GET): Updated to v02.13g (deployment 158) | 158/200`
+  - `Classroom deploy confirmed (GET): Updated to v01.54g (deployment 66) | 66/200`
+- **Every other `Deploy <Project>` step exited 0 silently on its own `git diff` guard, in zero seconds, and logged nothing.** The last three cycles confirmed the rule's *never fires, consumes none, logs nothing* branch; this one confirms the *fires and confirms* branch just as cleanly, with two projects at once.
+- **Both projects' deployment numbers equal their tallies** — 66/66 and 158/158 — which is Classroom's **third** consecutive equal cycle (64/64 → 65/65 → 66/66) and settles v06.12r's reconciliation of the v06.10r reading for good. Real headroom: **Classroom 200 − 66 = 134, Scraper 200 − 158 = 42**. Scraper is past four fifths of its allowance and only an S2 seed moves it.
+- **Pages agreed with the log** (`|v01.54g|` and `|v02.13g|` on the static `gs-versions/` files) after roughly a minute's lag; it was **re-read rather than assumed**, and **no `?op=deploy` probe was made** — the §7.19 order resolved on its two reads for the **twenty-second** time.
+- **§7.40's deploy and counter paragraphs refreshed with the measured figures in BOTH halves** — the prose and the quoted prompt block.
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Written in the same commit as the repo-version bump, per the rule v06.02r established. The prior Latest Session moved to `## Previous Sessions` and the 2-session cap applied.
+
+### Notes
+
+- **No rotation, for a FOURTH consecutive session, and the reason §7.39 got it wrong is worth keeping.** `TZ=America/New_York date` read **2026-09-16** again, so this push also lands **on** 2026-09-16 EST and that day's sections stay exempt. `CHANGELOG.md` goes to **105 raw / 93 non-exempt** against a 100 trigger, counter `Sections: 105/100`, with **twelve** sections dated 2026-09-16 EST; `Classroomgs.changelog.md` is untouched at 54 raw / 48 non-exempt. **§7.39 argued a fourth deferral was arithmetically impossible — it assumed the next push would land on a later day, and four sessions have now run on the same calendar day.** The deferral is a function of **the day of the push, not the section count**, and it lapses on the first push dated **2026-09-17 EST or later**, whenever that is. That correction is written into §7.40 in both halves.
 
 ## [v06.15r] — 2026-09-16 06:38:00 AM EST
 
