@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 33/50`
+`Sections: 34/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.13g] — 2026-09-16 06:38:00 AM EST — v06.15r
+
+### Added
+
+- A new news-interest topic for the contracted GPU-cloud operators, so stories about that part of the market are picked up and scored in the daily digest
 
 ## [v02.12g] — 2026-09-16 04:04:07 AM EST — v06.11r
 

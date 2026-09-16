@@ -910,11 +910,36 @@ def run_gate_truth_table(src, lesson_ids=()):
     # CRITERION_LEXICON entry, so the generator's intersection is empty by
     # construction. Eleven neighbours, tying session 7's record, with
     # NINETEEN omissions enumerated in its header comment.
+    # 21 at S2 session 12 (landscape-neoclouds-2026-09, 2026-09-16): the most
+    # LOPSIDED roster any landscape has covered - seven members, ONE incumbent
+    # and SIX challengers, zero adjacents - so who-dominates is a section about
+    # a single company's basis and each-players-bet is seven rows in which six
+    # attack one position. Three findings. First, the incumbency basis is a
+    # THIRD-PARTY OPERATIONAL RATING covering six of the seven, in which the
+    # incumbent holds the only top tier across both cycles - while it is first
+    # on neither contracted power nor growth, so the role is measuring
+    # LEGIBILITY (four of seven publish no revenue at all). Second, the ONE
+    # built landscape sharing members with it inverts 2 of 4 - the first
+    # INTERMEDIATE inversion rate, and it decomposes on a finer line than
+    # developer-against-tenant: the two that hold the same role in both SELL
+    # campus capacity to others, while of the two that invert one owns three
+    # campuses but builds them for its own load and the other owns almost
+    # nothing - so the rate sorts on whether a member's campus position is a
+    # business it SELLS or a book it merely HAS, which is a sharper cut than
+    # the segment's own third buying criterion along the same axis. Third, a NEW
+    # mechanism for an empty criterion intersection: unlike sessions 8, 10 and
+    # 11, every one of the five criteria DOES hit a CRITERION_LEXICON key -
+    # but not one of the matching lessons is in this segment's READ_NEXT, so
+    # the mapped set and the keyword-matching set are DISJOINT and the dash
+    # row is largely a keyword artefact rather than a curriculum hole. Its
+    # header comment enumerates TWENTY-THREE omissions across eight
+    # neighbours, the heaviest of which is the public Value Chain LANE OPENER
+    # that uses this segment's own credit chain as its worked example.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 20:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 20" % len(gids))
+    if len(gids) != 21:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 21" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

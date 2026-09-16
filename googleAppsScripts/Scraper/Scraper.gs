@@ -1,4 +1,4 @@
-var VERSION = "v02.12g";
+var VERSION = "v02.13g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1020,7 +1020,55 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             '24/7 carbon-free', 'hourly matching', 'demand response',
             'energy park', 'grid upgrade', 'speed to power',
             'circular financing', 'frontier lab'],
-    source: 'guidance:landscape-hyperscalers-and-ai-labs-2026-09' }
+    source: 'guidance:landscape-hyperscalers-and-ai-labs-2026-09' },
+  // S2 session 12. HALF AND HALF - (v)'s third outcome - and the halves fall
+  // along the segment's own split. Denominator re-measured against BOTH
+  // arrays per 10.6 (bb5): SCRAPER_INTEREST_TOPIC_SEEDS (37 seeds, 230 terms)
+  // AND SCRAPER_SEGMENT_SEEDS (29 lenses, 249 terms) - 479 raw, 454 distinct,
+  // which reconciles exactly with session 11's 469/444 plus its own ten terms.
+  // COVERED ALREADY: the demand-book half, and by the segment one link UP -
+  // topic-landscape-hyperscalers-and-ai-labs holds `remaining performance
+  // obligation`, `compute commitment`, `circular financing` and `speed to
+  // power`, because the hyperscalers are the counterparties in the same
+  // contracts and therefore the same ARTICLES. Buying criterion 5 is covered
+  // exactly (`rack density`, `liquid cooling`, `direct-to-chip` all score
+  // EXACT), and criterion 3's real-estate vocabulary is topic-aidc-landlords'.
+  // ZERO across all 454: the segment's own CATEGORY and its credit structure.
+  // Dropped and why, in full in section 11 of the analysis file.
+  // TWO as NEAR-DUPLICATES an exact-match score does not catch, which is the
+  // check (i) demands and the one that nearly failed here: `time to power`
+  // scores zero but session 11 seeded `speed to power`, the same concept in
+  // different words; `contracted compute` scores zero against its `compute
+  // commitment`. SIX on split grounds to topic-aidc-landlords, honouring
+  // session 11's line that it owns the lease-credit layer from the other side
+  // of the same trade (`tenant of record`, `credit backstop`, `recognition
+  // agreement`, `bankruptcy-remote`, `triple-net lease`, `penny warrant`).
+  // THREE on split grounds elsewhere (`sovereign AI` to the policy seeds;
+  // `GB300` and `NVL72` to the unwritten compute-and-the-rack seed). SIX as
+  // superstrings of `gpu`, `chip`, `offtake` or `ai factory`. THREE as too
+  // generic (`backlog` would mis-band transformer and EPC backlogs;
+  // `inference`; `investment grade`). TWO as product or programme names
+  // (`supercluster`, `Exemplar Cloud`).
+  // A NEW DROP CLASS - BLOCKED IN BOTH DIRECTIONS. The segment's single
+  // largest bear-case variable is GPU residual value and the useful-life
+  // assumption, and it cannot be seeded at all: every precise form
+  // (`GPU residual value`, `GPU useful life`, `chip depreciation`) is a
+  // SUPERSTRING of an existing term, and every short form that is not
+  // (`useful life`, `depreciation schedule`) MIS-BANDS into battery
+  // degradation. A genuine gap with no admissible term - a fifth reason
+  // beyond duplication, split, too-generic and product-name, and it wants a
+  // developer decision about whether the scorer should admit a narrowing term
+  // over an existing broad one.
+  // The first two terms below are NOT a discovery: session 11 reserved
+  // `neocloud` and `merchant cloud` for this seed by name. `restart` still
+  // scores zero and is still topic-landscape-clean-firm-and-nuclear's word for
+  // that module's next revision, not this session's.
+  { key: 'topic-landscape-neoclouds',
+    label: 'Neoclouds: the contracted GPU-cloud operators, their credit structures and the quality ladder',
+    terms: ['neocloud', 'merchant cloud', 'AI cloud',
+            'credit substitution', 'delayed-draw term loan',
+            'customer concentration', 'ClusterMAX', 'bare metal'],
+    source: 'guidance:landscape-neoclouds-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies
