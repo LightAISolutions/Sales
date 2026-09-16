@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.18r] — 2026-09-16 05:20:48 PM EST
+
+> See the attached screenshot for what the probe report says. The 2nd screenshot is the first few lines. Also, do I have to do anything with the "routine-rebuild-guide.md"?
+
+### Fixed
+
+#### Scheduled Routines — all six STEP 0 blocks rewritten (not repo files)
+- **v06.17r's STEP 0 WAS WRONG, AND A LIVE PROBE THE SAME AFTERNOON PROVED IT.** The ACL health check was fired manually with a diagnostic addendum. Its first finding, verbatim: *"`add_repo`: no such tool exists in this environment. I ran toolSearch for `add_repo` and `register_repo_root` — both returned 'No matching deferred tools found'. This isn't a denial from the tool itself; the harness simply doesn't expose that tool in this session's toolset."* **A Routine-fired session's toolset is narrower than an interactive session's, and that difference is invisible from inside an interactive session.** v06.17r inferred otherwise and disclosed the inference as untested; the probe settled it.
+- **WHAT ACTUALLY WORKS IS A PLAIN CLONE.** `git clone https://github.com/LightAISolutions/Sales.git` succeeds from a fired session — the git proxy authenticates transparently, no token and no `gh`. The run only got a working checkout because v06.17r's STEP 0 happened to carry a fallback clause ("just clone it directly") written for an unrelated case. All six prompts now **lead** with the clone.
+- **PROVE THE PUSH PATH BEFORE RESEARCHING, NOT AFTER — the single most valuable change here.** A clone proves *read* access and says nothing about *write*, and write is exactly what failed on `a378a96`. The five committing Routines now run `git push --dry-run origin HEAD:refs/heads/claude/pushprobe-<date>` as step (c), before any research, and **stop dead** if it is denied. Ten seconds of probe replaces an hour of unpushable work. The ACL detector, which never pushes, is exempt.
+- **NOTHING AUTO-LOADS IN A FIRED SESSION.** With no `register_repo_root` there is no repo-root registration, so `CLAUDE.md` and `.claude/rules/` are absent from context. Every prompt now says to read them explicitly — a scheduled run "following the Pre-Commit checklist" it has never read is following nothing.
+- **A SECOND ENVIRONMENT DIFFERENCE: the sandbox can refuse to execute a repo script.** `bash scripts/check-acl-health.sh` was denied as *"Code from External"* on one firing and ran normally on the next. For the detector, hand-replicating the probe is acceptable **if the report says which path it used**. For the C2 pipeline it is not — §2 and §4.5 forbid substituting for a checker, so a blocked checker is BLOCKED, never a hand-rolled pass. Both prompts now say so.
+- **THE UI QUESTION IS SETTLED, AND v06.17r's ADVICE WAS NOT ACTIONABLE.** v06.17r said to attach the repository to each Routine in the Routines UI. Checked against the live UI: the edit menu, the "Runs with" card and the detail page expose **no repository control at all**. The picker exists **only on the "New routine" creation form**. A Routine created without a source therefore cannot be given one — it must be recreated and the old one deleted.
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **"Scheduled Refreshes" corrected against the probe** — the `add_repo` claim replaced with the clone-plus-dry-run-push procedure, the three deliberate properties (prove push early, fail closed, nothing auto-loads), the sandbox script-block finding, and the settled UI finding with the connector warning below.
+- **The mirrored desk prompt re-synced** to the live STEP 0 text, so recreating the Routine from this file reproduces the working version rather than the `add_repo` one.
+
+### Notes
+
+- **🚨 THE PROBE FOUND A LIVE OUTAGE, AND IT IS STILL OPEN.** `check-acl-health.sh` returned **exit 1 — UNHEALTHY, 2 of 2 projects cannot read the Master ACL.** Profiler fails `stage=open reason=acl_unreachable` with *"You do not have permission to call SpreadsheetApp.openById. Required permissions: https://www.googleapis.com/auth/spreadsheets"*; Receipts returned HTML instead of the probe's JSON (a transient Google-side redirect, per the run — an hour earlier it returned the same `acl_unreachable` JSON as Profiler). This is the ACCOUNT-LEVEL fault of v04.02r: the script account's `spreadsheets` grant has lapsed, so `SpreadsheetApp` cannot be called at all and the Master ACL spreadsheet is irrelevant. **Sign-in is broken for every user of both apps right now.** Receipts' last-known-good grace snapshot exists but is marked unusable, so it will not cushion this. The repair is in Google, not the repo: Receipts → Apps Script editor → Run → `diagnoseAuthorization()` → open the URL incognito as the script account only → approve EVERY checkbox → re-run the script. **No repair has been applied. This is the cost of the Routine bug made concrete — the detector has never once reached the repo, so the outage ran undetected.**
+- **The correction is recorded by supersession, not rewriting.** v06.17r's entry stands as written; this entry names what in it was wrong. Editing a published version section would erase the fact that the error was made and caught the same day.
+- **No rotation, for a SIXTH consecutive session, same reason.** This push also lands on 2026-09-16 EST, so that day's sections stay exempt: **107 raw / 93 non-exempt** against a 100 trigger, counter `Sections: 107/100`, with **fourteen** sections dated 2026-09-16 EST. The deferral still lapses on the first push dated **2026-09-17 EST or later**.
 
 ## [v06.17r] — 2026-09-16 02:57:53 PM EST
 

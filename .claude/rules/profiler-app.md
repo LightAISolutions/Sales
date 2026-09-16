@@ -165,29 +165,45 @@ What the convention was designed to protect is kept: refreshes still fire on the
 
 The August one-shots died of the same thing, and **the record above already held the evidence without naming it**: IREN was "abandoned holding a permission prompt for a `find` over `/home` and `/root`". It was not hunting for the checkout because its prompt had drifted — it was hunting because there was no checkout. The three properties explain why the failure stayed *invisible* for a month; they do not explain the failure. This does.
 
-**STEP 0 — what every scheduled prompt now opens with.** All six Routines were amended on 2026-09-16 so their first instruction is to call `add_repo` (owner `LightAISolutions`, repo `Sales`, `access: push`; `read` for the ACL detector), run the clone command it returns, call `register_repo_root` with the clone path, then `git fetch --unshallow origin main`. Two properties are deliberate. It must **not** pre-probe with `curl`, `gh` or `git ls-remote` — unauthenticated probes return 404 on a private repo and talk the session out of calling the tool, which is precisely what cost IREN its run. And it **fails closed**: if `add_repo` is denied the run stops before any research, because research that cannot be pushed is research thrown away. STEP 0 is a bootstrap, not the cure — the durable fix is attaching the repository to each Routine in the Routines UI, which no API call here can do.
+**STEP 0 — what every scheduled prompt now opens with, corrected by live probe the same day.** The first version of STEP 0, written on 2026-09-16, told the session to call `add_repo` and `register_repo_root`. **A manual firing of the ACL health check that afternoon proved those tools DO NOT EXIST in a Routine-fired session** — the run's own words: *"I ran toolSearch for `add_repo` and `register_repo_root` — both returned 'No matching deferred tools found'. This isn't a denial from the tool itself; the harness simply doesn't expose that tool in this session's toolset."* Do not write a scheduled prompt against a tool this session can see; a fired session's toolset is **narrower** than an interactive one's, and that difference is invisible from here.
 
-**So: never create a Routine and assume it can reach the repo.** `create_trigger` cannot attach a source. A new Routine needs the repository attached in the Routines UI *and* the STEP 0 block in its prompt.
+What does work is a **plain clone**: `git clone https://github.com/LightAISolutions/Sales.git /home/user/Sales` succeeds, because the session's git proxy authenticates transparently — no token, no `gh`, no credential wrangling. All six prompts were rewritten to lead with that. Three further properties are deliberate:
+
+- **Prove the push path before researching, not after.** `git push --dry-run origin HEAD:refs/heads/claude/pushprobe-<date>` authenticates against the remote without creating anything. Clone proves *read* access; it says nothing about *write*, and write is what failed on `a378a96`. A run that cannot push must discover that in ten seconds, not after an hour of research. The five committing Routines carry this; the ACL detector, which never pushes, does not.
+- **Fail closed.** A failed clone or a denied dry-run push stops the run before any research, dossier write or calendar advance. A queue row left due is recoverable; an hour of unpushable research is not.
+- **Nothing auto-loads.** Without `register_repo_root` there is no repo-root registration, so `CLAUDE.md` and `.claude/rules/` are **not** in a fired session's context. Every prompt now says to read them explicitly. A scheduled run that "follows the Pre-Commit checklist" without having read it is following nothing.
+
+**A further environment difference, observed the same day:** the sandbox can refuse to execute a repo script outright — `bash scripts/check-acl-health.sh` was denied as *"Code from External"* on one firing and ran normally on the next. For a detector, hand-replicating the probe is an acceptable fallback **if the report says so**. For the C2 pipeline it is not: §2 and §4.5 forbid substituting for a checker, so a blocked checker is BLOCKED, never a hand-rolled pass.
+
+**So: never create a Routine and assume it can reach the repo.** `create_trigger` cannot attach a source, and `update_trigger` cannot add one later. **The repository picker exists ONLY on the claude.ai "New routine" creation form** — confirmed 2026-09-16 against the live UI: the edit menu, the "Runs with" card and the detail page expose no repository control at all. So a Routine created without a source can never be given one; it has to be **recreated** with the repo selected and the old one deleted. When recreating, note that the form pre-loads five connectors (Claude Docs, Gmail, Calendar, Drive, visualize) under a *"write actions, without asking"* warning while all six existing Routines run with `mcp_connections: []` — remove them, or unattended runs silently gain write access to mail and files they have never had.
 
 **The desk's prompt.** Kept here so it can be recreated without re-deriving it. It is deliberately short: the STEP 0 repo bootstrap, then identity, the calendar, a pointer to this file, the cap, the stand-down rule, the report shape. Nothing procedural that this file already says — the 22 retired prompts drifted precisely because the procedure was copied into 22 places. Paste the real `CORPUS_TOKEN` in at creation; it lives in the Routine prompt and nowhere else.
 
 ```text
-STEP 0 — ATTACH THE REPO BEFORE ANYTHING ELSE. This Routine fires into a fresh session that is NOT
-provisioned with a repository source: the working directory is empty and every push is denied. That
-silently discarded a completed IREN/Jinko/Oracle refresh on 2026-09-16. Fix it first.
-  a. Call the `add_repo` tool with owner `LightAISolutions`, repo `Sales`, access `push`. Do NOT
-     pre-check with curl, `gh` or `git ls-remote` — unauthenticated probes return 404 on private
-     repos and will mislead you into skipping the tool.
-  b. Run the clone command it returns, then call `register_repo_root` with the clone's absolute
-     path so CLAUDE.md and `.claude/rules/` load on the next turn.
-  c. `cd` into the clone and run `git fetch --unshallow origin main || true` BEFORE reading any
-     version pin, any `git log` date or any `--check` result — a shallow clone reports false
-     staleness.
-  d. If it reports the repo is already attached, you are set — continue.
-  e. If it returns an authorization or policy error, STOP. Do no research, write no files, advance
-     no calendar row. Report the tool's exact reason verbatim and end the run. Research that cannot
-     be pushed is research thrown away — that is the failure this step exists to prevent.
-Only once the repo is attached and CLAUDE.md has loaded, do the following:
+STEP 0 — CLONE, THEN PROVE YOU CAN PUSH, BEFORE ANY RESEARCH. This Routine fires into a session
+with NO repository source. On 2026-09-16 a run completed a full IREN/Jinko/Oracle refresh, committed
+it locally as a378a96, and was DENIED on push — every minute of that work was thrown away. Do not
+repeat it. Establish the push path first, while it still costs nothing.
+  a. git clone https://github.com/LightAISolutions/Sales.git /home/user/Sales
+     The session's git proxy authenticates transparently — no token, no `gh`, no credentials.
+     If /home/user/Sales already exists with a clean `git status`, it is already cloned: just cd in.
+  b. cd /home/user/Sales && git fetch --unshallow origin main || true
+     Do this BEFORE reading any version pin, any `git log` date or any `--check` result — a shallow
+     clone reports false staleness.
+  c. PROVE PUSH WORKS NOW, before researching anything:
+       git push --dry-run origin HEAD:refs/heads/claude/pushprobe-$(date +%Y%m%d)
+     This authenticates against the remote without creating or changing anything.
+  d. IF THE DRY-RUN PUSH IS DENIED, STOP IMMEDIATELY. Do no research, verify no reports, write no
+     dossier, advance no calendar row, make no commit. Report the exact git error verbatim and end
+     the run. A queue row left due is recoverable; an hour of research that cannot be pushed is not.
+  e. Read CLAUDE.md and the rules files you need EXPLICITLY — they do NOT auto-load in this session,
+     so the Pre-Commit and Pre-Push checklists are not in your context until you read them yourself.
+
+  DO NOT look for `add_repo` or `register_repo_root`. Those tools do NOT exist in a Routine-fired
+  session — verified 2026-09-16, both return "No matching deferred tools found". Searching for them
+  only wastes turns. `git clone` is the supported path.
+
+Only once the clone exists AND the dry-run push succeeded, do the following:
 
 You are a fresh session in the LightAISolutions/Sales repo, running the Profiler earnings desk.
 
