@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v05.96r] — 2026-09-15 08:24:16 PM EST
+
+> **Prompt:** "Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.31** — the deploy and CHANGELOG figures refreshed in **both halves** (prose paragraphs and the quoted paste-in prompt block) now that the v05.95r job log is readable. **Classroom 55/200 → 56/200, MEASURED at v05.95r**, with the forecast-versus-measured provenance split restated: Scraper's 153/200 is a **v05.93r** measurement carried forward, because its step never fired. Repo CHANGELOG **97 raw / 80 non-exempt → 98 raw / 80 non-exempt**, seventeen same-day sections → **eighteen**, and **"three from its cap" → "two"**. The version to bump from moves **v05.95r → v05.96r**. The heading now carries *(counters refreshed at v05.96r)*
+
+### Changed
+
+- **`SESSION-CONTEXT.md`** — the v05.92r entry drops under the two-session cap, the v05.94r entry moves to `## Previous Sessions`, and the new `## Latest Session` records Phase 4 row 12 in full
+
+### Notes
+
+- **THE DEPLOY WAS CONFIRMED IN THE §7.19 ORDER AND THE ONE-LINE FORECAST HELD EXACTLY.** `Classroom deploy confirmed (GET): Updated to v01.45g (deployment 56) | 56/200` on the **first GET leg**, with no POLL line and no `?op=deploy` probe, and Pages read `|v01.45g|` in agreement — **the thirteenth consecutive clean use of the order**. Only `Classroom.gs` was in the merge diff, so the Scraper step's `git diff --name-only "$PRE" HEAD | grep -q "$GS" || exit 0` exited immediately: it never fired, consumed nothing and logged nothing, which is why **its 153/200 remains a v05.93r figure and not a v05.95r one**
+- **THE HANDOVER RECURSION FIRED A SIXTH TIME, EXACTLY AS §7.30's REFINEMENT PREDICTED.** v05.86r, v05.87r, v05.89r/v05.90r, v05.92r and v05.94r each recorded it. v05.93r established that the recursion fires on the **second** push rather than the first: writing the brief inside the work commit is not a defence by itself. v05.95r wrote §7.31 in the work commit and every figure held through that push — and went stale here, on the handover, which adds a CHANGELOG section of its own **and** makes the v05.95r job log readable for the first time. Both causes were foreseen and both were re-measured before this push
+- **Every other figure §7.31 quotes was re-measured and held.** Unchanged: Classroom GAS **v01.45g**, page **v01.14w**, Scraper **v02.08g**, Profiler v01.39g; the content checker at **0 errors / 0 warnings at 42 lessons / 8 tracks / 142 gate cases** with the module assertion at **16** against a `guidanceDocs_()` returning 16; `--strict` with no structural findings, **28 stale pins** and **2 items due for review**; `--selftest` 13/0; `--check` at **10 due** with `grid-equipment` **not** among them; `Classroomgs.changelog.md` 45 raw / 38 non-exempt; `Scrapergs.changelog.md` 29 raw / 26 non-exempt
+- **The EST/UTC divergence is still open at the time of this push** — EST reads 2026-09-15 and UTC 2026-09-16, so this section is the **eighteenth** dated 2026-09-15 EST and is exempt like the other seventeen. **80 non-exempt, twenty clear of the cap; no rotation.** The moment EST rolls it becomes 98 non-exempt, two from the cap, which is why §7.31 tells the next session to check `TZ=America/New_York date` before deciding
+- Nothing in a deployed surface moved, so **no GAS bump, no page bump and no public changelog entry**
 
 ## [v05.95r] — 2026-09-15 08:08:36 PM EST
 
