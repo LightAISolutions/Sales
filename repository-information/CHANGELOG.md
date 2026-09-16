@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.06r] — 2026-09-16 12:38:06 AM EST
+
+> **Prompt:** "Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session." *(The handover push — the deploy counters can only be measured after the merge, and `SESSION-CONTEXT.md` must ride with the repo-version bump per the v06.02r rule.)*
+
+### Changed
+- **`repository-information/CHANGELOG.md`** — the v06.05r Notes gain the **measured** deploy line: one `.gs` in the merge diff fired **one** step and logged **one** line, on the **first GET leg** with no POLL and no probe — `Classroom deploy confirmed (GET): Updated to v01.49g (deployment 60) | 60/200`. Pages read `|v01.49g|` and agreed, so the §7.19 order resolved on its first two reads. **The seventeenth consecutive clean use, and the one-line forecast held exactly**; Scraper's step never fired and it holds at **155/200**
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.35** — the deploy paragraph's forecast replaced with the measured figures (**Classroom 60/200, Scraper 155/200**) and a note that session 10's line count follows from the diff, not from the work
+- **`repository-information/SESSION-CONTEXT.md`** — the Latest Session rewritten and the previous one demoted under the two-session cap. **Carried in the same commit as the repo-version bump**, per the rule v06.02r established: the staleness check is a plain equality against `repository.version.txt` and nothing else reconciles them
+- **`README.md`** — `Last updated:` and `Repo version:` to v06.06r
+
+### Notes
+- **No rotation.** v06.05r rotated the 2026-09-07 group and closed the file at 94; this section makes it **95 raw**, two of which (both of this session's) are dated 2026-09-16 EST. Once EST rolls past that date the file reads **93 non-exempt** against a 100 trigger, so **the next session is not the rotator** — the next group in line is 2026-09-08 (10 sections) and it does not arm until the file is back at 100
+- **Nothing in a deployed surface moved**, so no GAS bump, no page bump and no public changelog entry
 
 ## [v06.05r] — 2026-09-16 12:25:00 AM EST
 
@@ -40,6 +54,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 - **THE MICRO-MARKUP CHECK EARNED ITSELF A FOURTH TIME, ON ITS OTHER HALF.** The first draft carried five errors and every one was the `textContent` trap `CLASSROOM-SCHEMA.md` documents: a `proscons` card's `t` and `meta`, and a `glossary[].d`, are printed as text rather than sent to `clFmt`, so a `{{term}}` in any of them reaches the reader as literal braces. Nothing else in the toolchain sees it, and the rendered page confirmed the fix — **zero surviving `{{…}}` and zero literal asterisks across 26,208 characters**
 - **RENDER — all eight sections at analyst, zero page errors, and the negative half is INVERTED on a public lesson.** A `tracks`-gated lesson **is** visible to an analyst, so the test is that it renders rather than that it is refused, and it did: `#cl-<sectionId>` present for all eight, every screenshot read. The two console errors are the standing environmental `ERR_CERT_AUTHORITY_INVALID` pair. **One harness finding worth carrying: `Classroom.html`'s CSP `connect-src` is `'self'` plus Google hosts, so a shim server on another port is REFUSED outright** — the fix is to point `_gasPost` at a same-origin path (`/__gas`) and fulfil it with Playwright's `page.route()`. The `two-knobs` table rendered clean at 1400px, a **seventeenth** data point against the open `.cl-tbl` `min-width` question
 - **THE ROTATION FIRED, AND FOR ONCE THE EST/UTC TRAP RESOLVED THE OTHER WAY.** EST read **2026-09-16 00:07** against UTC's **04:07**, so the **twenty-six** sections dated 2026-09-15 all stopped being exempt overnight and the file stood at **106 raw / 106 non-exempt against a 100 trigger** — §7.33's escape clause could not fire. The **2026-09-07 group (13 sections, `v05.07r` … `v05.20r`)** moved to `CHANGELOG-archive.md`, **all thirteen SHA-resolved** on a 1,269-commit clone, and the mandatory post-rotation grep passed on the first attempt. The file closes at **94 raw**, one of which (this section) is today's — so it reads 94 non-exempt tomorrow and the next group in line, **2026-09-08 (10 sections)**, does not arm until the file is back at 100. `Classroomgs.changelog.md` closes at **49/50** and does **not** rotate: its own new section is same-day exempt. `Scrapergs.changelog.md` 31/50; `Profilerhtml.changelog.md` 49/50, untouched by a Phase 4 row
+- **THE DEPLOY WAS MEASURED, NOT FORECAST, AND THE ONE-LINE FORECAST HELD EXACTLY.** One `.gs` in the merge diff fired exactly one step and logged exactly one line, on the **first GET leg** with no POLL and no `?op=deploy` probe: `Classroom deploy confirmed (GET): Updated to v01.49g (deployment 60) | 60/200`. Pages (`gs-versions/Classroomgs.version.txt`) read `|v01.49g|` and agreed, so the §7.19 order resolved on its first two reads — **its seventeenth consecutive clean use**. Every other project's step exited 0 without firing and logged nothing, so **Scraper holds at 155/200** exactly as §7.34 predicted. *(Recorded at v06.06r — counters can only be measured after the merge.)*
 - **Checkers.** `check-classroom-content.py` **0 errors / 0 warnings at 44 lessons, 8 tracks, 142 gate cases**, the guidance-module assertion **still 18** as a Phase 4 row requires; the gate-case count did **not** move, because an all-public stamp reuses fixture classes the truth table already covers. `check-classroom-curriculum.py --strict` exit 0, no structural findings, **28 stale pins** (unchanged — this lesson's eight pins are all current) and **2 items due for review**, both by design. `check-classroom-pipeline.py --selftest` **13 fixtures / 0 failures**. `node --check` clean; `check-gas-inner-scripts.js` 9 files / 86 blocks clean; `check-readme-tree.py` 0 findings after `--fix` synced the one drifted GAS display
 
 ## [v06.04r] — 2026-09-15 11:39:58 PM EST
