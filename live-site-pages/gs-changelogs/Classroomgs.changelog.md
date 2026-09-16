@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.47g] — 2026-09-15 09:43:03 PM EST — v05.99r
+
+### Added
+- New lesson added to a track
+
+### Changed
+- Curriculum updated
 
 ## [v01.46g] — 2026-09-15 09:08:13 PM EST — v05.97r
 

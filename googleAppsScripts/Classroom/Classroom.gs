@@ -1,4 +1,4 @@
-var VERSION = "v01.46g";
+var VERSION = "v01.47g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -11279,7 +11279,7 @@ function clLessonSegmentGridEquipment_() {
     ],
     [
      "Protection and automation integration (IEC 61850) and the coordination study",
-     "*Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation*"
+     "*Stopping Ten Thousand Amps* · *The Fence Line: Interconnection and the Substation*"
     ],
     [
      "Service, spares and the bushing supply chain",
@@ -12698,7 +12698,7 @@ function clLessonSegmentGridEquipment_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* · *Stopping Ten Thousand Amps* (planned) · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
+    "**Mechanism lessons for this segment:** *Why Electricity Changes Clothes* · *Stopping Ten Thousand Amps* · *The Fence Line: Interconnection and the Substation* · *Inertia, Reactive Power, and Teaching Electronics to Lead* (planned).",
     "**The landscape module** — the judgment layer for this segment — is *landscape-grid-equipment-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** ABB, GE Vernova, Hitachi Energy, Mitsubishi Electric, Siemens Energy, Powell Industries, Eaton, Flex, Grid United, Invenergy, LS-ES, Pattern Energy, Quanta Services, Schneider Electric, Zhonhen Electric — each member's dossier carries one in Profiler."
    ]
@@ -12786,6 +12786,14 @@ function clLessonSegmentGridEquipment_() {
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -40004,6 +40012,383 @@ function clLessonWhereBatteriesStop_() {
 };
 }
 
+function clLessonBreakersRelaysAndFaults_() {
+  return {
+ "schemaVersion": 1,
+ "id": "breakers-relays-and-faults",
+ "type": "module",
+ "title": "Stopping Ten Thousand Amps",
+ "short": "A breaker's hard job is not carrying current but stopping it. How arcs are killed, how relays decide, and why direct current changes the rules.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:abb",
+    "date": "2026-08-21",
+    "note": "arc interruption — chutes, vacuum, SF6, solid-state; protection relays, IEDs, IEC 61850, reclosers and FLISR"
+   },
+   {
+    "kind": "public",
+    "ref": "study:eaton",
+    "date": "2026-08-21",
+    "note": "fault energy as what sizes each tier of the hierarchy — the sizing argument only; selective coordination stays taught in the-aidc-power-chain"
+   },
+   {
+    "kind": "public",
+    "ref": "study:zhonhen",
+    "date": "2026-08-19",
+    "note": "DC safety literacy: no zero crossing, and the 240/336 V fleet precedent for 800 V"
+   },
+   {
+    "kind": "public",
+    "ref": "study:siemens-energy",
+    "date": "2026-09-04",
+    "note": "AIS against GIS against SF6-free — the insulating medium as a footprint and emissions decision"
+   },
+   {
+    "kind": "public",
+    "ref": "study:powell-industries",
+    "date": "2026-09-03",
+    "note": "the lineup and its three ratings, arc flash and incident energy, and the three-stage protection study and how it goes stale"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "10–50×",
+   "v": "normal current",
+   "sub": "what a fault delivers, and what the gear must survive rather than merely carry"
+  },
+  {
+   "k": "~20,000 °C",
+   "v": "an arc in air",
+   "sub": "several times the surface of the sun, with a pressure blast on top"
+  },
+  {
+   "k": "clearing time",
+   "v": "the one term you can change",
+   "sub": "halve it and you roughly halve the incident energy"
+  },
+  {
+   "k": "no zero crossing",
+   "v": "why DC changes the rules",
+   "sub": "an AC arc dies 120 times a second; a DC arc has to be engineered out"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "arc chute",
+   "d": "A stack of insulated steel plates inside a low-voltage breaker that drags the arc in, splits it into many short arcs and cools them against the metal until the circuit can no longer supply the voltage the arc needs to stay alive."
+  },
+  {
+   "t": "vacuum interrupter",
+   "d": "A sealed ceramic bottle holding a pair of contacts in high vacuum. With almost nothing to ionise, the arc that forms as the contacts part dies at the next current zero and the gap recovers its strength in microseconds."
+  },
+  {
+   "t": "solid-state breaker",
+   "d": "A breaker that interrupts with semiconductors instead of moving contacts, turning current off in microseconds without drawing an arc at all — at the cost of conduction losses and heat while it is merely carrying load."
+  },
+  {
+   "t": "protection relay",
+   "d": "The device that watches currents and voltages and decides, within milliseconds, whether what it is seeing is a fault worth tripping for. The relay makes the decision; the breaker carries it out."
+  },
+  {
+   "t": "instrument transformer",
+   "d": "A current or voltage transformer that scales a power circuit down to a small, safe signal a relay can measure. A relay only ever sees what its instrument transformers give it."
+  },
+  {
+   "t": "differential protection",
+   "d": "A scheme that compares the current entering a protected zone with the current leaving it. Any difference means current is escaping inside the zone, which is a fault by definition — so it can trip at once without judging magnitude."
+  },
+  {
+   "t": "distance protection",
+   "d": "A scheme that infers how far away a fault is from the ratio of measured voltage to measured current, tripping quickly for a fault close by and more slowly for one further down the line."
+  },
+  {
+   "t": "recloser",
+   "d": "An outdoor switching device that trips on a fault and then closes again after a pause to test whether the fault has cleared itself — which most overhead faults have, being a branch or an animal rather than a broken conductor."
+  },
+  {
+   "t": "FLISR",
+   "d": "Fault location, isolation and service restoration: a distribution automation scheme that finds a fault on a feeder, opens switches either side of the damaged section and re-feeds the rest from another direction, in seconds and without a human."
+  },
+  {
+   "t": "interrupting rating",
+   "d": "The largest fault current a breaker is certified to break and survive, in kiloamps. It is a different question from how much current the breaker carries all day, and it is the rating a short-circuit study exists to check."
+  },
+  {
+   "t": "bolted fault",
+   "d": "A short circuit through solid metal contact, drawing the full current the system can deliver. It is the worst case for equipment ratings and the easiest case for a relay to recognise."
+  }
+ ],
+ "sections": [
+  {
+   "id": "what-a-fault-is",
+   "title": "What a fault actually is, and what it sizes",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "Normal current is what a circuit was *designed* to carry. A fault is what happens when the design is bypassed — insulation gives way, a tool is dropped across two bars, an animal bridges a gap — and current finds a path with almost nothing in the way. The only thing still limiting it is the impedance of the wiring and the transformers between the source and the failure, and that is small. {{Fault current}} at a low-voltage board runs **10 to 50 times** the normal load current, and it arrives inside the first cycle, before anything has decided anything.",
+    "**Where it comes from matters as much as how large it is.** Several sources push into the same fault at once: the utility's contribution at the service point, which is the biggest and the stiffest; every on-site generator; and every large motor, which for the first few cycles spins down and briefly behaves as a generator in reverse. A {{short-circuit study}} adds all of them up at every point on the one-line diagram and reports one number per bus, in kiloamps. That number is the available fault current, and almost every other number in this lesson is derived from it.",
+    "**It is what sizes the room, and it is not the load.** Each tier of the distribution hierarchy — {{switchgear}} at the service entrance, distribution boards, then panelboards and {{PDU}}s near the load — is rated for the fault energy it must survive, not merely the current it normally carries. Two separate ratings say so. A breaker's {{interrupting rating}} is the largest fault it can break and live through. An assembly's {{withstand rating}} is how much fault current the steel and copper can take without coming apart — and that one is structural, because the magnetic force trying to tear two parallel conductors away from each other grows with the **square** of the current flowing in them. Raising a lineup's fault rating is a redesign, not a paperwork change.",
+    "**The counter-intuitive consequence is the sentence to carry out of this section.** Every improvement that makes a supply *stronger* makes the fault *larger*. A beefier utility service, an added generator, a transformer swapped for a bigger one with lower impedance — each of them lowers the impedance between the sources and the failure, so each of them raises available fault current, and each can silently take existing gear past a rating it comfortably met last year. Nothing alarms when that happens. The equipment is simply under-rated from the day the upgrade is energised, and stays that way until somebody re-runs the numbers.",
+    "**One more distinction, because it governs everything below.** A {{bolted fault}} runs through solid metal: the full current the system can deliver, unmistakable to a relay. An arcing fault jumps a gap in air instead. It draws *less* current and draws it erratically, which makes it harder for protection to recognise — and far more dangerous to anyone standing in front of it, which is what the next section is about."
+   ],
+   "sales": "Ask what the available fault current is at the board you are selling into, and when it was last calculated. The honest answer is a number with a date on it, and the date is usually older than the site."
+  },
+  {
+   "id": "killing-the-arc",
+   "title": "Four ways to kill an arc",
+   "kind": "proscons",
+   "read": "8 min",
+   "intro": "When contacts separate under load the current does not stop — it keeps flowing through an arc of ionised gas at something like **20,000 °C**. Interrupting means killing that arc: stretching it, cooling it, and de-ionising the gap fast enough that it cannot re-strike when voltage rebuilds across the freshly opened contacts. There are four ways to do it, they live at different voltages, and the industry is in the middle of moving between two of them.",
+   "cards": [
+    {
+     "t": "Arc chutes",
+     "meta": "Low voltage — drag the arc into steel and cool it to death",
+     "adv": [
+      "Nothing to seal, nothing to leak and nothing to monitor: the mechanism is steel plates and a magnetic blowout",
+      "Splitting one long arc into many short ones raises the voltage the arc needs to survive above what the circuit can supply",
+      "Cheap, mature and repairable, which is why very nearly every low-voltage breaker on earth uses it"
+     ],
+     "dis": [
+      "Needs room for the arc to travel, and the hot gas has to vent somewhere",
+      "Contacts and plates erode a little on every operation — interruption is a wear mechanism, not a clean event",
+      "It does not scale upward: at medium voltage the arc is too energetic to beat with geometry alone"
+     ]
+    },
+    {
+     "t": "Vacuum interrupters",
+     "meta": "Medium voltage — take away everything the arc could ionise",
+     "adv": [
+      "A sealed bottle with almost nothing in it, so the arc dies at the next {{zero crossing}} and the gap recovers in microseconds",
+      "Essentially maintenance-free across tens of thousands of operations, with no gas to handle, report or replace",
+      "Now the default for medium-voltage distribution, and the interruption half of most {{SF6-free switchgear}}"
+     ],
+     "dis": [
+      "The bottle is a sealed unit: it can be tested but not inspected, and a lost vacuum is not visible",
+      "Interrupting current just *before* its natural zero chops it, and a chopped current in an inductive circuit throws a voltage spike the insulation has to survive",
+      "The practical ceiling is medium voltage — transmission classes need something else"
+     ]
+    },
+    {
+     "t": "SF6",
+     "meta": "High voltage — one gas that both insulates and quenches, extremely well",
+     "adv": [
+      "Several times better than air as an insulator and far better at quenching, so the gear is a fraction of the size for the same voltage",
+      "It is what makes {{gas-insulated switchgear}} possible, and therefore what puts a substation on an urban site, an offshore platform or under a building",
+      "Sealed against salt, dust and weather, with decades of field history behind it"
+     ],
+     "dis": [
+      "Among the most potent greenhouse gases known, and it persists in the atmosphere for millennia",
+      "Leak rates are regulated and inventories are reported, so the gas is tracked across the asset's whole life",
+      "Sealed also means blind: diagnosis is by gas density and partial-discharge monitoring, and an internal fault is a major intervention"
+     ]
+    },
+    {
+     "t": "Solid-state",
+     "meta": "Semiconductors instead of moving contacts — no arc at all",
+     "adv": [
+      "Turns current off in microseconds, with no arc to kill and no contacts to erode",
+      "The only one of the four that answers direct current cleanly, because it does not need a current zero to work",
+      "Fast enough to cut the fault off before it fully develops, which lowers what everything downstream has to withstand"
+     ],
+     "dis": [
+      "Semiconductors have resistance, so the breaker burns power and makes heat all day long while merely carrying load",
+      "Expensive per amp, and the cost scales with the current it must carry rather than with the fault it must break",
+      "Young at power scale — far less field history than the century of practice behind the other three"
+     ]
+    }
+   ],
+   "note": "The {{SF6}} story is worth reading as a commercial pattern rather than a chemical one. A gas that is close to ideal on every engineering axis is being displaced for a reason that appears on none of them — and the replacement is not one substance. {{SF6-free switchgear}} pairs a *weaker* insulating medium, dried natural-origin air or a lower-warming fluorinated gas, with vacuum interruption, so two technologies together do what one gas used to do alone. That is why it arrives voltage class by voltage class rather than all at once, and why the buyer is trading proven service life for a regulatory position. The same choice also settles the footprint: {{air-insulated switchgear}} insulates with distance, and a high-voltage yard is measured in hectares, while the gas-insulated equivalent is a small fraction of it."
+  },
+  {
+   "id": "the-brain-and-the-muscle",
+   "title": "The brain and the muscle",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "A breaker is the muscle. It has no opinion about when to open — something has to tell it, and that something is a {{protection relay}}. The relay watches currents and voltages through {{instrument transformer}}s and decides, within milliseconds, whether what it is seeing is a fault worth tripping for. Everything subtle about protection lives inside that decision, and one property of it governs the rest: **a relay only ever sees what its instrument transformers give it.** A current transformer with the wrong ratio, or one saturating on a large fault, hands the relay a picture of an event that did not happen.",
+    "**Overcurrent is the crude answer and it is not enough on its own.** Too much current for too long is a fault — but a motor starting draws several times its running current quite legitimately, and a fault at the far end of a long feeder may draw barely more than a heavy load nearby. So protection learns to ask better questions. {{Differential protection}} compares the current going into a protected zone — a transformer, a bus, a generator — against the current coming out, and any difference means current is escaping *inside* the zone. That is a fault by definition, so the scheme can trip at once without having to judge whether the magnitude is large enough to count. {{Distance protection}} infers how far away a fault is from the ratio of measured voltage to measured current, and trips quickly for a fault close by and more slowly for one further down the line.",
+    "**The hardware changed underneath all of it.** Spinning electromechanical discs — one per function, each calibrated by hand — gave way to digital relays, which the industry calls intelligent electronic devices. One box now runs overcurrent, differential and distance protection simultaneously, records the fault waveform so that the post-mortem is evidence rather than argument, and self-tests continuously, so a dead protection function announces itself instead of waiting to be discovered by the next fault.",
+    "**Then the boxes were networked, and protection became a distributed application.** Substation communications standardised on {{IEC 61850}}, so relays from different vendors share measurements and trip commands over Ethernet rather than through dedicated copper per signal. The engineering gain is real: less wiring, faster schemes, and logic that can be changed without re-pulling cable. The bill arrives as a **cybersecurity obligation that did not previously exist** — the trip decision now travels on a network, and a network is a thing that can be reached. That is why protection and automation integration appears as its own line in a switchgear tender, sitting next to the ratings rather than under them.",
+    "**Outdoors the same reflexes go further.** Most overhead faults are temporary — a branch brushing a line, an animal, a lightning flashover — and clear themselves the instant the current stops. A {{recloser}} exploits exactly that: it trips, waits, and closes again to test whether the fault is still there, locking out only after a set number of attempts. Above it, {{FLISR}} schemes locate a fault on a feeder, open switches either side of the damaged section and re-feed the remainder from another direction, in seconds and without anyone deciding anything.",
+    "**One question this lesson deliberately does not answer.** When several breakers in series can all see the same fault, deciding which of them should open — and only that one — is {{selective coordination}}, and it is taught where it bites hardest, in *The AI Data-Center Power Chain* over in the grid-to-chip track. This lesson supplies the two halves that argument needs: how much current is available, and what a relay is capable of deciding. What to do about the timing belongs to that lesson."
+   ],
+   "sales": "Protection and automation integration is the point at which a switchgear conversation stops being about metal. A buyer with an IEC 61850 requirement has a security requirement too, whether or not anyone has written it down yet."
+  },
+  {
+   "id": "dc-has-no-zero",
+   "title": "Direct current takes away the escape hatch",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "intro": "Everything above quietly depends on one gift that alternating current gives away for free, and it is worth saying out loud before the industry moves to a bus that does not offer it.",
+   "ps": [
+    "**An alternating current passes through zero twice per cycle** — 120 times a second on a 60 Hz system. Every arc-quenching technology except the solid-state one is built around that moment. The arc is at its weakest at the current zero, the medium de-ionises in the lull, and the gap recovers its strength before the voltage comes back. Arc chutes, vacuum bottles and gas all *use* the zero crossing; not one of them creates it.",
+    "**A direct current never crosses zero.** There is no weak moment, no natural instant for the arc to die, and a DC arc left to itself is stable — it will sit and burn through metal for as long as the source keeps feeding it. So a DC arc cannot be waited out. It has to be **engineered out**: a breaker rated for DC rather than merely used on it, arc-fault detection that recognises a developing arc from its electrical signature rather than from its magnitude, and a grounding design that decides in advance what the first fault does instead of finding out.",
+    "**This is the sharpest edge of the 800 VDC conversation, and it is not new.** Chinese telecom and data-center fleets ran 240 V and 336 V DC distribution across a decade of operations and did this engineering already; the 800 V ecosystem is doing the same work now, at a voltage where the arc is considerably more energetic. It is also the clearest argument for solid-state interruption: a device that stops current in microseconds with semiconductors does not need a current zero, which is precisely the commodity a DC bus is short of."
+   ],
+   "note": "Read the whole 800 VDC argument as a breaker problem and much of it becomes legible at once. The efficiency case for converting once, early and high is straightforward physics; the reason it took this long is that the protection had to be re-invented rather than re-used."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "Five ways protection disappoints the people who bought it. Only one of them is a piece of equipment failing — the rest are a model of the plant that quietly stopped matching the plant, which is the characteristic failure of this whole discipline. Read the last column first if you are short of time.",
+   "cols": [
+    "Failure point",
+    "What actually happens",
+    "Why it fails *there*",
+    "What the buyer does about it"
+   ],
+   "rows": [
+    [
+     "**Miscoordination**",
+     "A fault in one rack's power strip opens a main breaker instead of the nearest device, and a whole hall goes dark for a failure the physical size of a plug.",
+     "Breakers sit in series and every one of them can see the same fault. At high fault current their {{time-current curve}}s converge, so a scheme that behaves correctly at moderate currents can lose its ordering **exactly when the current is largest**. The mechanism, and what is done about it, is taught in *The AI Data-Center Power Chain*.",
+     "Make the {{coordination study}} a contract deliverable with a named owner rather than an internal exercise, and check that the obligation survives handover to whoever operates the site."
+    ],
+    [
+     "**Nuisance trips**",
+     "Protection operates correctly on an event that was not a fault: a motor inrush, a transformer energising, a converter starting up, or a saturating {{current transformer}} handing the relay a distorted picture of a real but harmless event.",
+     "Overcurrent protection judges a fault by magnitude and duration, and several entirely legitimate events look like a fault by those two measures alone. The cost lands on availability rather than on equipment, which is why it is chronically under-reported.",
+     "Ask what the trip history actually contains. A site with a pattern of unexplained trips has a settings problem, and its digital relays have already recorded the waveform that says which one."
+    ],
+    [
+     "**Settings nobody re-checked**",
+     "A new hall is energised, a second generator is commissioned, a normally-open tie is closed for maintenance — and the relay settings derived from the old one-line diagram quietly stop describing the plant they are protecting.",
+     "**A protection study is true only for the diagram it was built against.** It is three studies in a fixed order — short-circuit, then coordination, then arc-flash — and each one inherits the outputs of the one above it, so a change in available fault current invalidates all three at once. Nothing alarms. The system is simply wrong until somebody re-runs it.",
+     "Treat the study as a living document versioned with the electrical system. On a campus that energises in phases, name the re-study obligation in the contract for each phase instead of assuming someone owns it."
+    ],
+    [
+     "**A sustained DC series arc**",
+     "A loose termination on a DC bus develops an arc in series with the load. The current does not rise — the arc is a *resistance* — so nothing watching magnitude ever sees a fault, while the arc burns.",
+     "Series arcing is invisible to conventional overcurrent protection by construction, and on direct current there is no {{zero crossing}} to end it. This is the failure mode that makes DC distribution a different engineering problem rather than the same one at a different voltage.",
+     "Require arc-fault detection that works on signature rather than magnitude, and read **DC-rated** as a certification to check rather than as an adjective on a datasheet."
+    ],
+    [
+     "**{{SF6}} handling**",
+     "Gas is lost through leakage, through maintenance and at end of life — and every kilogram of it counts thousands of times more than the same mass of carbon dioxide.",
+     "The property that makes the gas excellent is the property that makes it persist: it is extremely stable, so it does not break down in the atmosphere for millennia. The emissions therefore attach to the *operator*, across the whole asset life, rather than to the manufacturer at the point of sale.",
+     "Find out whether the asset sits inside a reported inventory before buying it, and read an {{SF6-free switchgear}} quote for what it actually is — a newer fleet, less field history, a supply chain still being built out — rather than as a like-for-like substitution."
+    ]
+   ],
+   "note": "Four of these five are settings, models and paperwork rather than metal, and that is the honest summary of modern protection. The hardware is extremely good. The failure surface has moved almost entirely into the question of whether the model of the plant is still the plant."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is a breaker's hard job stopping current rather than carrying it?",
+     "a": "Because when the contacts part, the current does not stop — it keeps flowing through an arc of ionised gas at something like 20,000 °C. Interrupting means killing that arc: stretching it, cooling it and de-ionising the gap fast enough that it cannot re-strike when the voltage rebuilds across the freshly opened contacts. Carrying current is a thermal problem with a known answer; stopping it is a race the breaker has to win every time."
+    },
+    {
+     "q": "What sizes equipment at each tier of a distribution hierarchy, and which two ratings express it?",
+     "a": "The fault energy it must survive, not the current it normally carries. The {{interrupting rating}} is the largest fault a breaker can break and live through; the {{withstand rating}} is how much fault current the assembly's steel and copper can take without coming apart. The second is structural, because the magnetic force pulling two parallel conductors apart grows with the **square** of the current in them — so raising a lineup's fault rating is a redesign rather than a paperwork change."
+    },
+    {
+     "q": "Why does making a supply stronger make the equipment less safe?",
+     "a": "Because available fault current is set by how little impedance stands between the sources and the failure. A beefier utility service, an extra generator, or a transformer swapped for a larger one with lower impedance all *lower* that impedance and therefore *raise* the fault current — and can take existing gear past a rating it comfortably met before the upgrade. Nothing alarms; the gear is simply under-rated from the day the upgrade is energised until somebody re-runs the short-circuit study."
+    },
+    {
+     "q": "Name the four ways of killing an arc and say where each one lives.",
+     "a": "Arc chutes — steel plates that split and cool the arc — at low voltage. Vacuum interrupters, where there is almost nothing to ionise so the arc dies at the next current zero, at medium voltage. {{SF6}}, a gas that both insulates and quenches superbly, at high voltage and shrinking the gear dramatically — and being displaced for its warming potential. And solid-state, semiconductors that stop current in microseconds with no arc at all, which is the only one that answers direct current cleanly."
+    },
+    {
+     "q": "What does a protection relay actually do, and what is the one limit on it worth remembering?",
+     "a": "It watches currents and voltages through {{instrument transformer}}s and decides in milliseconds whether what it sees is a fault worth tripping for — the relay decides, the breaker acts. The limit: a relay only ever sees what its instrument transformers give it. A current transformer with the wrong ratio, or one saturating on a large fault, feeds the relay a picture of an event that did not happen."
+    },
+    {
+     "q": "Why does direct current need arcs engineered out rather than waited out?",
+     "a": "Because an alternating current passes through zero 120 times a second and every quenching technology except the solid-state one is built around that moment — the arc is weakest there, the medium de-ionises, and the gap recovers. A direct current never crosses zero, so a DC arc is stable and will burn as long as the source feeds it. The answers are DC-rated breakers, arc-fault detection that works on signature rather than magnitude, and a grounding design decided in advance."
+    },
+    {
+     "q": "A protection study produces relay settings. Why does it go stale, and what makes it stale?",
+     "a": "Because it is true only for the one-line diagram it was built against. It runs in a fixed order — short-circuit, then coordination, then arc-flash — and each stage inherits the one above, so anything that changes available fault current invalidates all three at once: a new hall energised, a second generator, a normally-open tie closed for maintenance. Nothing alarms. The plant is simply mis-protected until someone re-runs it, which is why it belongs in a contract as a living deliverable."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A campus upgrades its utility service and adds a second generator. What has that done to the existing switchgear?",
+     "c": [
+      "Raised the available fault current, possibly past what the gear is rated to survive",
+      "Nothing — the gear is rated for the load, and the load has not changed",
+      "Lowered the available fault current, because the sources now share it",
+      "Improved coordination, because there is more current for the relays to see"
+     ],
+     "a": 0,
+     "why": "Both changes lower the impedance between the sources and any fault, and fault current is set by that impedance. So the available fault current goes up, and the {{interrupting rating}} and {{withstand rating}} that comfortably covered it last year may no longer. Nothing alarms when this happens — it is discovered only by re-running the {{short-circuit study}}."
+    },
+    {
+     "q": "Why is a vacuum interrupter unsuitable for a DC bus, and what is?",
+     "c": [
+      "It relies on the current passing through zero, which direct current never does — a solid-state breaker does not",
+      "It is only rated for low voltage, and DC buses run high",
+      "The vacuum leaks faster on DC because the polarity does not alternate",
+      "It works fine on DC; the objection is cost"
+     ],
+     "a": 0,
+     "why": "The vacuum bottle's trick is that there is almost nothing to ionise, so the arc dies at the next current zero and the gap recovers. Remove the zero crossing and the trick has nothing to work with. Semiconductors interrupt without needing a current zero at all, which is exactly why solid-state is the technology the 800 VDC conversation keeps arriving at."
+    },
+    {
+     "q": "A loose termination on a DC bus is arcing in series with the load, and no protection has operated. Why not?",
+     "c": [
+      "A series arc is a resistance, so the current does not rise and magnitude-based protection sees nothing wrong",
+      "The relay has been set too slowly and will trip eventually",
+      "Series arcs are harmless until the current doubles",
+      "The current transformer is saturating"
+     ],
+     "a": 0,
+     "why": "This is the failure mode that separates DC distribution from AC. Overcurrent protection judges a fault by how much current is flowing; a series arc *reduces* current rather than increasing it, so it is invisible to that question by construction — and with no zero crossing it does not self-extinguish either. It needs detection that recognises the arc's signature rather than its size."
+    },
+    {
+     "q": "What does arc-resistant construction actually buy, and what does it not?",
+     "c": [
+      "A much better outcome if a fault occurs — not a lower probability that one does",
+      "A guarantee that an internal arc cannot form",
+      "Faster clearing, because the relay sees the arc sooner",
+      "Exemption from arc-flash labelling requirements"
+     ],
+     "a": 0,
+     "why": "It does not stop the arc. It is type-tested with an arc deliberately started inside the cell, to prove that the pressure and hot gas leave through a relief path rather than through the person at the front. The buyer is purchasing the outcome conditional on a fault — which is worth most where equipment is operated by people rather than left alone, the profile of a campus energising new halls for years while the first ones run."
+    },
+    {
+     "q": "Substation relays are now networked on IEC 61850. What obligation arrived with that?",
+     "c": [
+      "Cybersecurity — the trip decision now travels on a network, and a network can be reached",
+      "A requirement to replace all instrument transformers with digital equivalents",
+      "Mandatory annual re-certification of every breaker",
+      "Loss of vendor interoperability, since each vendor implements it differently"
+     ],
+     "a": 0,
+     "why": "The standard's whole point is the opposite of the last option — relays from different vendors share measurements and trip commands over Ethernet instead of dedicated copper per signal. The gain is less wiring and faster schemes; the bill is that protection became a networked application, which is why protection and automation integration now sits as its own line in a switchgear tender rather than as an afterthought."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -40029,10 +40414,11 @@ function clTrackElectricalFoundations_() {
  "title": "Electrical Foundations",
  "short": "Finish this and you can follow a megawatt through a transformer, a breaker and a converter, explain why the grid needs inertia, and hold the electrical conversation both the storage and the data-center markets sit on.",
  "group": "Technology Foundations",
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "lessons": [
   "four-machines",
-  "the-transformer-and-the-substation"
+  "the-transformer-and-the-substation",
+  "breakers-relays-and-faults"
  ]
 };
 }
@@ -40213,7 +40599,8 @@ function clLessons_() {
           clLessonTheCampusAsAPowerProject_(),
           clLessonHowAStorageProjectHappens_(),
           clLessonContractsAndRevenue_(),
-          clLessonWhereBatteriesStop_()];
+          clLessonWhereBatteriesStop_(),
+          clLessonBreakersRelaysAndFaults_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
