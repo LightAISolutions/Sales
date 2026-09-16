@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.00r] — 2026-09-15 09:58:10 PM EST
+
+> **Prompt:** "Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session."
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.33** — the deploy figure refreshed in **both halves** (prose paragraphs and the quoted paste-in prompt block) now that the v05.99r job log is readable. Classroom's counter was **forecast** in the work commit and lands **exactly**: `Classroom deploy confirmed (GET): Updated to v01.47g (deployment 58) | 58/200`, the **only** line logged, on the **first GET leg** with no POLL and no `?op=deploy` probe, and Pages read `|v01.47g|` in agreement before the job log was closed. **The fifteenth consecutive clean use of the §7.19 order**, and the one-line forecast held exactly — every other `Deploy <Project>` step completed in zero seconds and logged nothing, which is what "a step that never fires consumes none" looks like in the log. The heading now carries *(counters refreshed at v06.00r)*
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.33's changelog arithmetic**, both halves — the repo CHANGELOG figures re-measured against the working tree after the handover section was written (**101 → 102 raw**, 80 non-exempt either way, counter `Sections: 102/100`), and `Classroomgs.changelog.md` corrected from **47 raw / 39 non-exempt** to **47 / 38**: the work commit's own new section is dated today, so it joined the exempt set rather than the non-exempt one. A one-section error, caught only by re-counting from the file — which is exactly what the brief tells the next session to do
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md`** — the v05.96r entry drops under the two-session cap, the v05.98r entry moves to `## Previous Sessions`, and a new `## Latest Session` records Phase 4 row 13 in full: the first section-half **deepening at birth**; the first **same-EST-day double regeneration** and the P7 rule it establishes; §8 item 8's reverse pointer being available and **declined with a structural reason**; the roster agreeing for a fourth row with the amendment re-read for sections; `reviewBy` as a deliberate default rather than a lazy fallback; the EST/UTC trap deciding the rotation for a third consecutive session; and the `ctx.handleClassroomOp_` correction to the render recipe
+- **`README.md`** — `Last updated:` and `Repo version:` `v05.99r` → `v06.00r`
+
+### Notes
+
+- **The handover recursion fired an eighth consecutive time**, exactly as §7.30's refinement predicted: any commit that reproduces a brief also moves the numbers that brief quotes. §7.33's own CHANGELOG paragraph was written during the v05.99r push at 101 raw / 80 non-exempt and this section takes the file to **102 raw / 80 non-exempt** — so the figures were re-run against the tree a second time and both were corrected, one of them a genuine off-by-one on the page/GAS side
+- **No rotation, and the EST clock is again why — for the third consecutive session.** At counting time EST read **2026-09-15 21:56** while UTC read **2026-09-16 01:56**, and this session's harness date banner said **2026-09-16**. 101 raw minus the twenty-one sections dated 2026-09-15 EST is **80 non-exempt**; this section makes it 102 raw / 80 non-exempt, twenty clear of the cap. **The moment EST rolls past 2026-09-15 it becomes 102 non-exempt — past the 100 trigger — so the next session is the rotator unless its push also lands on 2026-09-15 EST.** That is what §7.33 tells it, and it tells it to check `TZ=America/New_York date` first
+- **Every other figure §7.33 quotes was re-measured against the working tree.** `Classroomgs.changelog.md` **47 raw / 38 non-exempt** (corrected, see above); `Scrapergs.changelog.md` **30 raw / 26 non-exempt**; `Profilerhtml.changelog.md` **49 raw / 49 non-exempt**. Classroom GAS **v01.47g**, Scraper **v02.09g**, page **v01.14w**, Profiler **v01.39g** — unchanged. Nothing in a deployed surface moved in this commit, so **no GAS bump, no page bump and no public changelog entry**
 
 ## [v05.99r] — 2026-09-15 09:43:03 PM EST
 
