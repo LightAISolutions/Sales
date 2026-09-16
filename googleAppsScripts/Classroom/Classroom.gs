@@ -1,4 +1,4 @@
-var VERSION = "v01.52g";
+var VERSION = "v01.53g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -41269,6 +41269,545 @@ function clLessonStringVersusCentral_() {
 };
 }
 
+// Phase 4 row 16 (2026-09-16) - the FORTY-SIXTH lesson, aidc-campus position 4
+// of five, INSERTED between the-campus-as-a-power-project and where-bess-plugs-
+// in. CLASSROOM-CURRICULUM-PLAN.md section 3.4 spec and section 7 row 16; the
+// section 2.2 "Nuclear and SMRs" reversal - nuclear taught as procurement and
+// firmness, never as reactor technology.
+//
+// THIS ROW PAYS A DEBT A BUILT PUBLIC LESSON NAMED BY TITLE. contracts-and-
+// revenue (row 11, PUBLIC, built) carries a section clean-firm-and-the-restart
+// whose opening sentence reads: "The physics - why a reactor follows load
+// badly, what a small modular reactor changes, what clean firm admits -
+// belongs to Clean Firm Power in the campus track, and is deliberately not
+// repeated here." At session 10 that was the first time a built public lesson
+// pre-declared a handoff to a lesson THAT DID NOT EXIST; the landscape module
+// then recorded the same four items as held by nobody. THE SEARCH, run across
+// every hand-authored lesson registered in clLessons_() for the id
+// clean-firm-power, for the title "When the Campus Signs a Reactor" and for
+// the phrase "clean firm": EXACTLY ONE creditor - contracts-and-revenue, by
+// title, in that one intro. The id string appears nowhere in an authored
+// lesson at all. The title appears twice more and both are GENERATOR OUTPUT -
+// segment-clean-firm-and-nuclear's read-next and what-is-bought-and-on-what
+// cells, each rendering "(planned)". The phrase "clean firm" appears in all
+// nineteen generated segment lessons and in two guidance modules, but only
+// contracts-and-revenue DECLINES material to this lesson. One debt, one
+// creditor, three declined things - and the three are this outline's spine:
+// why-a-reactor-follows-badly, the SMR rung of the-ladder-of-first-power, and
+// four-kinds-of-clean-firm.
+//
+// THE SPLIT RUNS THE OTHER WAY FROM EVERY S2 SPLIT. landscape-clean-firm-and-
+// nuclear-2026-09 (contributor, built at v06.07r) owns the PARTIES - three
+// incumbents as three answers to one objection, two pre-commercial
+// challengers, eleven adjacents, and a price ladder its own text says no
+// incumbent discloses. This lesson is PUBLIC and owns the PHYSICS. Every S2
+// split before this one ran the opposite way, with the module naming parties
+// the built lesson had left alone; here the module was built first and left
+// the mechanism open on purpose. NOTHING THE MODULE RANKS APPEARS HERE: no
+// league table, no price ladder, no company sorted against another. Companies
+// appear only as the corpus's own worked examples of a mechanism, per the
+// mechanism-lesson contract.
+//
+// FOUR NEIGHBOURS, TWENTY-ONE OMISSIONS, enumerated so a later revision cannot
+// import them.
+// FROM the-campus-as-a-power-project (row 9, public, built, position 3 - the
+// lesson immediately before this one) (5): the three clocks; the five-rung
+// land-to-fit-out ladder; the four-parties-one-lease structure; the named
+// projects as worked examples; the five campus failure modes. Its own tile
+// reads "0 league tables ... this lesson does not invent one" and this lesson
+// inherits that discipline rather than restating it.
+// FROM contracts-and-revenue (row 11, public, built) (7): hourly versus annual
+// matching as an ACCOUNTING choice; the corporate and virtual PPA and the
+// strike-price settlement; additionality as the quality test on a PURCHASE;
+// the uprate as a contractual answer; the restart as a CONTRACT and the
+// interconnection-rights inheritance; the green tariff in a regulated
+// territory; the eleven-instrument table. This lesson takes only what hourly
+// accounting DEMANDS OF A MACHINE, and says so where the two touch.
+// FROM landscape-clean-firm-and-nuclear-2026-09 (contributor, built) (5): the
+// three-incumbent roster and their three answers to one objection; the two
+// challengers; the eleven adjacents; the price ladder; the claims ledger.
+// FROM landscape-utilities-2026-09 (contributor, built) (2): the franchise's
+// instrument and the rate-case machinery; who may legally sell retail power.
+// FROM where-bess-plugs-in (position 5, GUIDANCE-gated, built - the lesson
+// immediately AFTER this one) (2): the three sockets, and the honest no. This
+// lesson argues WHY a fast machine must sit between a reactor and a rack; it
+// does not say where the battery plugs in, because that is the next lesson and
+// it sits at a stricter gate.
+//
+// THE OUTLINE IS SECTION 3.4'S NINE, AT ITS IDS AND IN ITS ORDER, UNMOVED.
+// what-firm-means (prose) - the-ladder-of-first-power (timeline) - why-a-
+// reactor-follows-badly (prose) - the-campus-still-buys-gas-and-batteries
+// (callout) - four-kinds-of-clean-firm (table) - the-additionality-fight
+// (callout) - where-it-fails (callout) - drill - check-yourself. Section 8
+// item 6 is satisfied as written: the two prose sections are positions 1 and
+// 3 with a timeline between them, and six kinds appear. FOUR of the seven
+// content sections carry a sales line (drill and check-yourself never do),
+// which sits inside the measured range of the built lessons - 5 of 8, 3 of 7,
+// 4 of 7 and 3 of 8 - rather than the section 8 item 7 ratio being asserted.
+// ONE RUNG OF THE TIMELINE IS UNDATED AND THE SECTION SAYS SO: the corpus
+// dates the restart (three to four years), the advanced first-of-a-kind
+// (about eight years to first criticality) and the large new build (fourteen
+// years, certificate to second unit), and states NO elapsed time for an
+// uprate. Its marker is placed at the left edge to mean "sooner than the
+// others", which the intro and the note both state in terms, rather than
+// inventing a duration.
+//
+// GAS WITH CAPTURE IS THE THIN ROW AND THE TABLE SAYS SO. Of the four kinds
+// section 3.4 names, the nine stamped guides carry nuclear in depth, geothermal
+// in one guide's own clean-firm section, storage-firmed renewables as the
+// thing hourly accounting buys when the dark calm week arrives - and gas with
+// capture ONLY as the concepts registry's own definition of clean firm power
+// plus one passing EPC credit in an engineering guide. The row is kept because
+// the category is part of what "clean firm" admits, and the table's note
+// states the evidence is thinnest there rather than writing it up to match.
+//
+// reviewBy 2027-03-16 is the ~6-month default from updated, and the sort
+// returned NOTHING - failure mode 1 of the seven now on record. All 43
+// policyExposure entries across the nine stamped dossiers were read: 24 carry
+// an effectiveDate, and ZERO of them is a future day-level date. Three
+// candidates rejected in writing. (1) The construction-permit clock on one
+// first-of-a-kind - a final safety evaluation targeted November 2026 and the
+// permit guided to the first quarter of 2027: month- and quarter-level rather
+// than a day, and one applicant's docket in a lesson that ranks nobody.
+// (2) One COL applicant's Part 3 filing "due at the end of 2026" and a final
+// environmental impact statement targeted December 2026: the same two defects.
+// (3) The clean-firm landscape module's own 2026-12-31 - a MODULE's clock,
+// which a lesson does not inherit, and already four modules' reviewBy. The
+// default also stays outside the curriculum checker's 30-day horizon
+// (2026-10-16), so the 2 items it reports due stay 2.
+//
+// THE DUE COUNT, PREDICTED BOTH HALVES AND MEASURED: --check opens at 9 due
+// with clean-firm-and-nuclear NOT among them. Registering this lesson flips
+// that segment's lesson_ref from "(planned)" to the real title in read-next,
+// AND the three-part deepening test passes for the first time in the
+// programme - clean-firm-power is in CRITERION_LEXICON on keys nuclear, smr,
+// clean firm and reactor; it is in exactly one READ_NEXT; and criterion 2 of
+// the segment's six ("$/MWh against the restart, existing-reactor and new-
+// build price ladder") hits the keyword "reactor", printed and read rather
+// than assumed. So both read-next AND what-is-bought-and-on-what should
+// differ: 9 -> 10 -> 10. The segment is NOT regenerated (section 10.4,
+// 10.9 - a Phase 4 row runs the generator on nothing), so this is the FOURTH
+// consecutive Phase 4 row to leave a stale lesson_ref behind.
+function clLessonCleanFirmPower_() {
+  return {
+ "schemaVersion": 1,
+ "id": "clean-firm-power",
+ "type": "module",
+ "title": "When the Campus Signs a Reactor",
+ "short": "\"Clean firm\" is the phrase in every hyperscaler PPA. What firm means in physics, why a reactor follows load badly, and why the campus still buys gas.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:oklo",
+    "date": "2026-09-04",
+    "note": "the xenon-135 mechanism and why a fast spectrum escapes it; the thermal store as the second route to a following plant; two regulators and two clocks, and the six regulatory nouns that are not each other; the fuel as the binding constraint and what sits above and beneath enrichment; the megawatt ladder and its note that the real competitive set is gas engines and turbines; the design-to-first-power timeline and its reading that the first three years contain no construction; the shipping envelope that caps what factory-built means"
+   },
+   {
+    "kind": "public",
+    "ref": "study:x-energy",
+    "date": "2026-09-05",
+    "note": "the two US licensing routes and what an 18-month construction-permit clock changed; a construction permit as a right exercised at final investment decision rather than a commitment to build; the fuel chain step by step, from enrichment through kernel and coating to qualification, and a fabrication plant sized for eleven units; the slip from a 2027 programme goal to an early-2030s guidance and a 2033 analyst model"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sargent-lundy",
+    "date": "2026-09-04",
+    "note": "a standard plant against a site-specific design, and what a licensing package physically is; the regulator inspecting the engineer as the credential a campus owner actually buys; behind-the-meter nuclear described mechanically as a switchyard, a metering arrangement and protection studies; the deliverables that exist before any reactor vendor is chosen"
+   },
+   {
+    "kind": "public",
+    "ref": "study:constellation-energy",
+    "date": "2026-08-21",
+    "note": "the economics of running flat - nearly all fixed costs, so every unsold hour is margin thrown away - and capacity factors above 90 per cent; what restarting a preserved unit physically takes, in people as much as hardware, and the three-to-four-year figure; capacity markets as payment for availability rather than energy"
+   },
+   {
+    "kind": "public",
+    "ref": "study:talen-energy",
+    "date": "2026-09-05",
+    "note": "behind the meter against in front of it, row by row, including what happens to the load when the plant trips; what the federal regulator actually decided in the co-location case - a loss on burden of proof, not a ruling on the merits - and the process that followed it; the additionality objection and the three answers sellers give"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vistra",
+    "date": "2026-09-05",
+    "note": "accreditation rather than nameplate, and reliability as revenue; the four different things a data centre can buy from an operating fleet and the awkward question against each; new capacity attached to an existing site as the one unambiguously additional column"
+   },
+   {
+    "kind": "public",
+    "ref": "study:southern-company",
+    "date": "2026-09-03",
+    "note": "the fourteen-year certificate-to-second-unit record of a first-of-a-kind large build, a cost more than doubled, a contractor bankruptcy and an overrun split between customers and shareholders; and what that history did to one buyer's appetite for building the next one"
+   },
+   {
+    "kind": "public",
+    "ref": "study:fermi-america",
+    "date": "2026-09-05",
+    "note": "what a combined licence is and what docketing is not; the applicant-prepared environmental impact statement; and how a first-power year built backwards from a licence date the regulator has not set slips by a year inside twelve months"
+   },
+   {
+    "kind": "public",
+    "ref": "study:google",
+    "date": "2026-08-21",
+    "note": "the definition of clean firm as carbon-free and available on demand at any hour; why the marginal hour costs many times the average one; enhanced geothermal as a manufactured rather than hunted resource and the learning-curve logic that travels with the drill rigs; a first-of-a-kind offtake as a market signal"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "clean firm power, capacity factor, capacity credit, baseload, dispatchable, additionality, HALEU, load-following, xenon poisoning, fast spectrum, SMR, microreactor, nuclear uprate, construction permit, combined licence, unforced capacity and ELCC resolved from the public registry rather than defined locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "90%+",
+   "v": "capacity factor",
+   "sub": "what a well-run reactor fleet sustains - firmness is a measured number before it is a word in a contract, and this is the number"
+  },
+  {
+   "k": "hours",
+   "v": "to come back from a step down",
+   "sub": "a neutron-absorbing fission product builds up after a power cut and suppresses the chain reaction while it is there; that, not the turbine, is why a thermal reactor follows load badly"
+  },
+  {
+   "k": "3",
+   "v": "years before a shovel",
+   "sub": "on a representative first-of-a-kind schedule the first three years contain no construction at all - the licence is the schedule, and the building is the easy part"
+  },
+  {
+   "k": "900 kg",
+   "v": "of fuel delivered",
+   "sub": "one US enricher producing high-assay fuel at pilot scale, against a federal programme target of 21 metric tons - the fuel, not the reactor, is the binding constraint"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "firmness",
+   "d": "The property of being available when asked rather than when conditions allow. It is measured, not asserted: a plant's capacity factor says how much of the year it actually ran, its forced outage rate says how often it was broken, and its accredited capacity says how much of its nameplate a grid planner is willing to count on at the worst hour. All three are different numbers and a firmness claim that names none of them is a slogan."
+  },
+  {
+   "t": "thermal store",
+   "d": "A tank of hot material - molten salt is the usual choice - placed between a heat source and the steam turbine it feeds. The heat source runs flat out into the store and the turbine draws from the store at whatever rate the grid wants, so the plant follows load while the machine that hates changing never changes. It is the same trick as a battery beside a solar farm, moved one step upstream into the heat."
+  },
+  {
+   "t": "enhanced geothermal",
+   "d": "Geothermal power made where hot rock is dry rather than where a natural reservoir already exists: drillers crack the rock using horizontal drilling and fracturing borrowed from shale oil, circulate water through the fractures and harvest the heat. It matters commercially because a well is a repetitive manufactured product whose cost falls with each repetition, which is a different cost curve from a one-off giant plant."
+  },
+  {
+   "t": "first criticality",
+   "d": "The first moment a reactor's chain reaction sustains itself. It is a milestone in the commissioning sequence and not the same thing as power on the grid: synchronisation and stepwise power ascension with testing at each plateau follow it, and those are measured in months."
+  },
+  {
+   "t": "operating licence",
+   "d": "The permission to run a reactor, as distinct from the permission to build one. Under the older two-step US route the two are separate applications years apart; under the one-step route they are granted together against inspections and tests agreed in advance. A plant that is finished and has not got one is a building."
+  },
+  {
+   "t": "licensing basis",
+   "d": "The complete set of commitments, analyses and conditions a plant's licence rests on - what the equipment is, what it is required to do, and what the operator promised the regulator about both. It is the thing a restart has to prove is still true after years of shutdown, system by system, which is why restarting is a paperwork project with a plant attached."
+  }
+ ],
+ "sections": [
+  {
+   "id": "what-firm-means",
+   "title": "What \"firm\" means, and why it is a physics word first",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**{{Clean firm power}} is the phrase in every large campus power announcement, and it has a precise meaning**: generation that is carbon-free *and* available on demand at any hour. It is the category solar and wind cannot fill on their own, and the registry's own definition lists what qualifies - nuclear, geothermal, hydro, or a fuel-burning plant with capture. Everything else in this lesson follows from taking the second half of that definition as seriously as the first. **Firm is a claim about a machine's behaviour, and behaviour is measurable.**",
+    "**Three different numbers all get called firmness in conversation, and a seller who cannot separate them will be corrected in front of a customer.** {{Capacity factor}} is what a plant actually produced over a period divided by what it would have produced running flat out the whole time - a well-run reactor fleet sustains above ninety per cent, a solar farm sits in the twenties, a peaker in single digits. {{Forced outage rate}} is the share of time the plant was *broken*, as distinct from in planned maintenance. And {{capacity credit}} - the accredited figure, computed as {{unforced capacity}} or through an {{ELCC}} calculation - is how much of the nameplate a grid planner will actually count on at the moment of system peak. **A four-hour battery is accredited well below its nameplate; a plant that can run as long as its fuel lasts is accredited close to it.** They answer three different questions and none of them is the nameplate on the side of the machine.",
+    "**That third number is where firmness becomes money, and the mechanism is worth carrying.** Accreditation is what makes a megawatt of one technology comparable with a megawatt of another, and a capacity market buys the accredited figure rather than the nameplate. So improving a unit's availability raises its accredited capacity, which raises the megawatts it can sell, at a clearing price nobody had to negotiate. **Reliability is revenue** - which is why an operator quoting availability during a heatwave is making a financial statement rather than an operational boast, and why equipment that raises availability is evaluated against a return that can be computed directly while equipment that only raises efficiency competes for the same capital without one.",
+    "**Now the two words this lesson refuses to let you blur.** {{Baseload}} describes how a plant is *operated and financed* - it earns by selling many hours of energy rather than a few expensive ones - and it is not a physical property of anything. {{Dispatchable}} describes what the plant can be *asked* to do: turn on, up, down or off when the operator says so. A reactor is close to the best machine ever built at the first and, as the next-but-one section shows, genuinely poor at the second. **Clean firm is bought on the first property and the campus discovers the second afterwards**, which is the single most useful thing to understand before walking into one of these rooms.",
+    "**Why the category exists at all is an accounting decision rather than an engineering one**, and the accounting belongs to a different lesson. Annual matching buys enough clean generation over a year to equal total consumption and says nothing about timing. {{Hourly matching}} asks, for every hour of consumption, whether a contracted carbon-free megawatt-hour was generated on the same grid in the same hour. **The last percentage points of that score are brutally expensive**: solar and wind cover sunny and windy hours cheaply, and closing a dark calm week needs storage, geothermal, nuclear, or moving the work somewhere else - so the marginal hour costs many times the average one. *Who Carries Which Risk* teaches that choice as an instrument. What this lesson takes from it is the consequence for hardware: **an hourly commitment is a demand for machines with particular behaviour, and this is the lesson about the behaviour.**"
+   ],
+   "sales": "Before quoting anything, ask which number the customer means by firm. If they answer with a capacity factor they are talking about energy over a year; if they answer with an accredited figure they are talking about a capacity auction; if they answer with an availability percentage they are talking about the worst hour. Three different products get sold against those three answers, and the question costs you nothing to ask."
+  },
+  {
+   "id": "the-ladder-of-first-power",
+   "title": "The ladder of first power: four rungs, and what each one is really waiting for",
+   "kind": "timeline",
+   "read": "9 min",
+   "intro": "Four ways to buy firm nuclear megawatts, ordered by how long they take. **The gutter numbers are years from the decision to proceed, not calendar years**, and the four rungs are not alternatives on one site - they are four different products bought by four different kinds of owner. Read the colours: gold is a rung available on a site that already holds a licence, blue is a rung that needs a licence nobody holds yet, and rose is an input or a queue that runs on a clock nobody on the project controls. **One rung carries no year at all**, and that absence is the section's second lesson.",
+   "lanes": {
+    "gen": "Rungs on a site that already holds a licence",
+    "deploy": "Rungs that need a licence nobody holds yet",
+    "eco": "The inputs and queues nobody on the project owns"
+   },
+   "items": [
+    {
+     "x": 0.5,
+     "lane": "gen",
+     "label": "Uprate - the one rung the record does not date",
+     "sub": "Raising an existing reactor's licensed output, by a few per cent through better instrumentation or by up to a fifth through new turbines and equipment, with the regulator's approval. The site, the licence, the operators and the grid connection all already exist, which is why it is the cheapest firm capacity a fleet owner can add. **The corpus states no elapsed time for one anywhere** - read this marker as *sooner than the others*, not as a measured duration."
+    },
+    {
+     "x": 1.5,
+     "lane": "eco",
+     "label": "The grid position, which is not the plant",
+     "sub": "A gigawatt-class {{interconnection}} request can sit in the {{interconnection queue}} for years, and every date to the right of it is measured against it. **The two gold rungs inherit a position that already exists; the two blue ones join the queue.** That inheritance is one of the largest hidden advantages on this whole chart, and it is contractual rather than nuclear."
+    },
+    {
+     "x": 2,
+     "lane": "eco",
+     "label": "The fuel pathway - and for the newest designs it is not a market",
+     "sub": "Conventional fuel is bought. {{HALEU}}, the enrichment band between about five and twenty per cent that compact advanced cores need, barely exists: one US enricher is producing it at pilot scale and completed a **900 kilogram** delivery in January 2026, against a federal availability programme that targeted **21 metric tons** by mid-2026. One developer's first core is roughly five metric tons recovered from fuel irradiated decades ago and still owned by the government. *That is an inheritance, not a supply chain* - and it is enough for a first unit."
+    },
+    {
+     "x": 3,
+     "lane": "deploy",
+     "label": "Year three: the application is filed - and filed is not approved",
+     "sub": "Years zero to three contain **no construction at all**: pre-application engagement runs for years on topical reports, design criteria and methodology, with no deadlines and no shortage of time, and only then is the application itself filed. **Most public attention starts at the filing, and the filing is already year three** - which is what makes *the licence is the schedule* a description rather than a complaint. And the filing is where the vocabulary trap starts: **application, acceptance, docketing, approval, permit and licence are six different words**, and only the last two let anyone build or run anything."
+    },
+    {
+     "x": 4,
+     "lane": "gen",
+     "label": "Restart of a preserved unit - 800-plus MW in three to four years",
+     "sub": "A retired reactor is preserved rather than demolished, and can sit for years. Restarting means proving to the regulator that every dormant system still meets its {{licensing basis}}, reinstating the {{operating licence}}, and rebuilding a staff of hundreds including licensed operators whose examination pipeline takes years - **the human rebuild rivals the hardware**, and restaffing begins long before fuel arrives. Low single-digit billions against a decade and several times the cost for an equivalent new build. *It is the fastest large nuclear anyone can buy.*"
+    },
+    {
+     "x": 5.5,
+     "lane": "deploy",
+     "label": "Groundbreaking",
+     "sub": "Site work, foundations, equipment pads. Under an authorisation route that lets construction and safety review advance **in parallel** rather than in sequence this can begin while the review continues, and that parallelism is the entire speed argument - one privately sited pilot went from groundbreaking to {{first criticality}} in about eleven months. It is also exactly what a reactor at a customer's commercial campus does not get."
+    },
+    {
+     "x": 8.2,
+     "lane": "deploy",
+     "label": "Advanced first-of-a-kind: first criticality at about year eight",
+     "sub": "Then grid synchronisation and stepwise power ascension with testing at each plateau - months, not days. An {{SMR}} is sold on **repetition**: one design licensed once and built many times, with unit cost falling by a roughly constant percentage each time cumulative output doubles, capital at risk per unit far smaller, and output matched to demand incrementally. *The honest caveat is structural: it is a claim about the tenth unit, made while building the first.*"
+    },
+    {
+     "x": 14,
+     "lane": "deploy",
+     "label": "Large new build, first-of-a-kind: fourteen years from certificate to the second unit",
+     "sub": "One fully documented sequence: two units certified at about **14 billion dollars** for all owners; first-of-a-kind design changes, module fabrication problems and a contractor that had never built the design in that country; the reactor vendor in bankruptcy at year eight; both units in service at years fourteen and fifteen; **roughly 35 billion dollars** total for all owners, more than double the certified figure; and a recovery order splitting the overrun between customers and shareholders. The commission that lived through it now certifies nothing large without construction monitoring."
+    }
+   ],
+   "note": "**Three readings.** First, **the two gold rungs are fast because of what they inherit, not because of the reactor** - a licence, a staffed site and a grid position. Every argument for a restart or an uprate is an argument about assets that already exist, which is why they appear inside power contracts as answers to a different question. Second, **the blue rungs are gated by paperwork and fuel, not by construction**: on the advanced schedule the first three years hold no building at all and the two rose items can each become the binding constraint while everybody watches the other. **And read the order of the rows**: on this axis the restart is **delivering power at year four while the new-build project is still not in the ground** - which is the whole commercial case for the rungs that inherit rather than apply. Third, **the undated rung is the honest one**. The corpus dates a restart, an advanced first-of-a-kind and a large new build, and gives no elapsed time for an uprate anywhere - so this chart shows it early and says it is showing a class rather than a measurement.",
+   "sales": "When a prospect says a campus is going nuclear, the useful question is which rung. A restart or an uprate means an existing site, an existing connection and a date inside four years. A new build of either size means a licence that does not exist, a queue position that does not exist, and a first-power year built backwards from a decision no regulator has yet made - which is a completely different conversation about what the campus buys in the meantime."
+  },
+  {
+   "id": "why-a-reactor-follows-badly",
+   "title": "Why a reactor follows load badly - and the two things that change it",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Start with the economics, because that is the answer most people already have and it is only half of one.** A reactor's costs are nearly all fixed - fuel is a small fraction of them - so every megawatt-hour it does not sell is margin thrown away. The whole financial logic pushes a reactor to run flat out around the clock, and well-run fleets sustain capacity factors above ninety per cent. That is true, it is sufficient to explain the operating pattern, and it is not why a reactor *cannot* follow a load. **There is a physical reason underneath it, and it is one of the most elegant mechanisms in the subject.**",
+    "**Meet xenon-135.** It is a fission product, it is produced both directly by fission and by the decay of iodine-135 on a roughly six-and-a-half-hour half-life, and it has one of the largest {{neutron cross-section}}s of any nucleus known - an appetite for *thermal* neutrons some millions of times greater than the fuel's own. At steady power this is invisible: xenon is created by fission and destroyed by neutron absorption at the same rate, sitting at an equilibrium the operators long ago accounted for.",
+    "**Now cut the power, and watch the balance break.** Fission drops at once, so the xenon being made directly by fission drops with it - but the iodine already sitting in the fuel keeps decaying into xenon on its own schedule, and the neutron flux that had been *destroying* the xenon has collapsed. Production continues; destruction stops. So **xenon accumulates**, peaking several hours later, and while it is there it eats the very neutrons the chain reaction needs. This is the {{xenon poisoning}} pit, and the practical consequence is severe: **for a period of hours after a significant power reduction a thermal reactor may be unable to return to full power at all**, whatever the operator or the customer wants.",
+    "**Two mechanical reasons sit on top of the physical one.** Rapid power changes cycle fuel and cladding through thermal stress, and every cycle consumes some of the fuel's conditioning and some of the plant's overhaul life. Load-following nuclear is not impossible - grids with very high nuclear shares cycle their reactors daily - but it sacrifices revenue and adds wear, so operators do it only where the grid leaves them no choice. The planned exception is the refuelling outage every eighteen to twenty-four months, which is scheduled years ahead precisely because it cannot be improvised.",
+    "**The first thing that changes it is the neutron spectrum, and this is the payoff of the reactor-design fork.** Xenon's enormous appetite is a thermal-neutron phenomenon: its cross-section is vast for slow neutrons and small for fast ones. A {{fast spectrum}} core is therefore far less troubled by it. *This does not make a fast reactor a good follower by itself* - the thermal-stress argument and the fixed-cost argument both still apply - but the physical trap that most constrains a conventional plant is largely absent, which is a real difference between two things both sold under the same three-letter label.",
+    "**The second thing that changes it is a tank, and it is the route the field is actually taking.** Put a {{thermal store}} between the reactor and the turbine - molten salt is the usual choice - and run the reactor flat out into the store while varying only what the store releases to the steam cycle. **The reactor never changes power; the plant follows the grid.** It is the same trick as a battery beside a solar farm, moved one step upstream into the heat, and it decouples a machine that hates changing from a market that demands it. Notice what it implies commercially: the following is done by *storage*, not by fission, wherever it is done at all.",
+    "**And now the sentence that makes this an AI-campus lesson rather than a nuclear one.** The demand-side pairing argument is the one every announcement makes: an AI hall draws nearly flat power around the clock, which matches the output profile a reactor wants to produce and earns nuclear a high {{capacity credit}}, so neither side needs the shaping that batteries and peakers exist to provide. **That argument is correct about the average and wrong about the shape.** An AI training load is not flat - it steps, hard and rhythmically, and the record puts a size on it: **tens of megawatts swinging in milliseconds** from a single training job. A generator that cannot follow is perfectly fine when the average is what matters and a problem when the steps are. *Which is why every serious campus design has something fast between the reactor and the racks* - and that is the next section."
+   ],
+   "sales": "This is the highest-value paragraph in the lesson for a storage or generation seller, and it is not a pitch - it is a correction of a claim the customer has usually already made to somebody. The flat-average argument for nuclear is sound. It does not survive contact with the step, and the step is a property of the workload rather than of anyone's product. Say it that way and the conversation about what sits between the two becomes the customer's question rather than your proposal."
+  },
+  {
+   "id": "the-campus-still-buys-gas-and-batteries",
+   "title": "The campus that signed a reactor still buys gas and batteries",
+   "kind": "callout",
+   "tone": "info",
+   "read": "8 min",
+   "intro": "This is the commercial payload of the lesson and it is deliberately argued as **physics rather than preference**. Three separate physical facts each independently force a fast machine onto a campus that has signed a reactor. None of them is a procurement style, none is a hedge, and none of them goes away when the customer is confident about the nuclear deal - **and the third gets worse, not better, the closer the campus sits to the plant.**",
+   "ps": [
+    "**One: the reactor is not there yet, and the load is.** Read the ladder again. The fastest rung on it delivers in three to four years and only because it inherits a licence, a staffed site and a grid position; the rungs that need a new licence run to about eight years for an advanced first-of-a-kind and fourteen for a large new build, measured from a decision rather than from a groundbreaking. **A campus signs a reactor and then has to be powered for the whole interval before it arrives** - and that interval is longer than most tenant contracts. The bridge machine is not bought because somebody doubts the reactor; it is bought because the calendar is the calendar.",
+    "**Two: the reactor cannot follow the step, and the step belongs to the workload.** The previous section is the whole argument and it is worth restating in one line: a thermal reactor that steps down can be held out of full power for hours by its own fission products, and where nuclear plants do follow load at all the following is done by a {{thermal store}} rather than by the fission. An AI training load, meanwhile, steps hard and rhythmically. **So the shaping is not optional - it is the fission machine physically declining a job somebody has to do.** The only live commercial question is who owns the machine that does it, and where it sits.",
+    "**Three: the closer the campus sits to the reactor electrically, the MORE backup it has to own.** This is the inversion worth memorising, because most people expect the opposite. Under {{behind-the-meter}} co-location power flows from the generator to the load without passing the point where the plant meets the grid - and the corollary in the record is blunt: **when the plant trips, the load is exposed unless it has its own backup, because it is not a grid customer.** Under a {{front-of-meter}} arrangement the load keeps drawing from the grid like anyone else and the seller buys replacement power. *Sitting next to a power station is not the same as being connected to a grid*, and the arrangement that most reduces the network bill is the one that most increases the on-site backup requirement.",
+    "**And the scale argument, which decides who the reactor is actually competing with.** On a published-ratings ladder a {{microreactor}}-class unit lands in the single-digit-to-tens of megawatts and a first advanced unit at seventy-five, against roughly a hundred megawatts for one aeroderivative gas turbine, three hundred for the upper small-modular class, and about eleven hundred for a combined-cycle block or a conventional nuclear unit. **For a campus that needs a few tens of megawatts of firm capacity, the alternatives on the table are gas engines and turbines that arrive in months** - against a reactor measured in years that carries almost no fuel cost once it is built. The commercial tell is already in the record: the same advanced-reactor developers announce gas bridge-power alliances alongside their reactors. *They are not hedging. They are selling the only thing that answers the customer's date, with the reactor behind it.*",
+    "**What this section does not tell you, on purpose.** Where the battery physically plugs in - grid-side, campus buffer, or inside the hall - is the next lesson in this track, and it sits at a stricter gate because it draws on guidance material. The contracts that pay for any of this, and the question of which party ends up owning the fast machine, belong to *Who Carries Which Risk*. **This section claims only the thing nobody else in the curriculum claims: that the fast machine beside a nuclear campus is a consequence of how the two machines behave, not a preference anyone is entitled to argue out of the design.**"
+   ],
+   "sales": "The strongest version of this in a room is the one that concedes the most. Agree that the nuclear deal is real, agree that the average matches, and then ask three dated questions: what powers the site until first power, what covers the step, and what covers the trip if the campus ends up behind the meter. Every one of those is answered by equipment, and none of them is answered by the reactor."
+  },
+  {
+   "id": "four-kinds-of-clean-firm",
+   "title": "Four kinds of clean firm, and what each one is really selling",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "\"Clean firm\" names a **behaviour**, not a technology, so the same line in a power agreement can be any of these four with radically different dates, gates and risks behind it. Read the second column as the physics, the third as what actually governs when the megawatts appear, and the fifth as the kind of counterparty the deal puts you opposite. **The evidence behind these rows is not equally thick and the note below says exactly where it thins.**",
+   "cols": ["Kind", "What makes it firm", "What gates the date", "The price signal", "Who is selling it"],
+   "rows": [
+    [
+     "**Nuclear**",
+     "A fuel load that sits in the core for eighteen to twenty-four months and burns regardless of weather, season or time of day. Output is indifferent to everything outside the fence, and well-run fleets sustain capacity factors above ninety per cent. Firm by **fuel residence**",
+     "A licence, and for advanced designs a fuel band that barely exists. Three to four years on a rung that inherits a licence and a grid position; about eight years for an advanced first-of-a-kind and fourteen for a large new build, measured from the decision",
+     "A premium over ordinary existing output, bought for certainty. **Nobody in this record publishes the number** - the ladders in circulation are estimates or management aggregates, so treat any figure as the market's estimate of a seller's pricing rather than a tariff",
+     "Two groups with almost nothing commercially in common: owners of operating fleets selling existing output, restarts and uprates; and pre-commercial developers selling units that have never produced power"
+    ],
+    [
+     "**Geothermal, enhanced**",
+     "Heat drawn continuously from hot rock. What is new is that the resource is **manufactured rather than hunted**: horizontal drilling and fracturing borrowed from shale oil crack hot dry rock, water circulates through the fractures, and the heat is harvested almost anywhere. Firm by **the rock not cooling**",
+     "Drilling programmes and resource proof rather than a nuclear licence. *The corpus does not date one*, which is itself worth knowing before repeating a schedule for it",
+     "A {{learning curve}}. A well is a repetitive manufactured product that gets cheaper each time it is repeated - unlike a one-off giant plant - so an early commercial contract directly funds the repetitions that pull the cost down",
+     "Developers for whom a {{first-of-a-kind}} offtake is a market signal as much as a power deal, in the role early purchase contracts played for wind and solar"
+    ],
+    [
+     "**Gas with capture**",
+     "An ordinary thermal plant, firm for the ordinary reason - it runs as long as fuel arrives - with its exhaust carbon captured. It is clean only to the degree the capture actually works and the carbon stays where it was put, which is a measurement question rather than a design one",
+     "**This is the thinnest row in the table and the lesson will not write it up.** The category appears in the registry's own definition of clean firm power and as a single construction credit in one engineering record. No stamped source here dates a project, prices one, or states a capture rate",
+     "Not stated by any source in this lesson's stamp",
+     "Not stated by any source in this lesson's stamp. Treat a clean-firm claim resting on capture as a claim to go and check, not one to repeat"
+    ],
+    [
+     "**Storage-firmed renewables**",
+     "Not a generator at all: a weather-driven resource plus enough stored energy to make its delivery look firm across the hours that matter. **Firm by arithmetic rather than by fuel** - and the arithmetic stops exactly where the purchased duration stops, which is why the dark calm week is the case that decides it",
+     "Equipment lead time and a queue position - months to a couple of years, **the shortest schedule on this table by a wide margin**, and the reason it is the incumbent answer while everything else is being licensed",
+     "The marginal hour. Cheap while sun or wind covers the hour; many times the average hour once the week goes dark and calm. An hourly commitment prices that gap explicitly, which is what creates the market for the other three rows",
+     "Developers and integrators, and increasingly the buyer itself through its own procurement - the only row on this table whose seller a campus can also be"
+    ]
+   ],
+   "note": "**Where the record is thick and where it is thin, stated rather than smoothed.** Nine public guides stand behind the nuclear row and the reader should weight it accordingly. The geothermal row rests on **one** guide's own clean-firm section - enough for the mechanism and the cost logic, not enough for a schedule. The storage-firmed row is assembled from the hourly-matching argument that names storage as what closes the dark calm week, and the duration argument itself belongs to *Long Duration, Sodium, and the Engine Boundary* rather than here. **The gas-with-capture row is carried on a definition and a single construction credit**, and it is kept in the table because the category is part of what \"clean firm\" admits - not because this corpus can teach it. A lesson that levelled the four rows would be inventing three of them."
+  },
+  {
+   "id": "the-additionality-fight",
+   "title": "The additionality fight, and what the regulator actually decided",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "8 min",
+   "intro": "Every clean-firm deal built on an **existing** plant invites one objection, and it is not a green talking point - it is an argument about dispatch that a grid operator's own market monitor has made. This section teaches the objection, the physical reason it bites, and the one regulatory decision whose contents are misreported more often than any other in this subject.",
+   "ps": [
+    "**The objection, stated mechanically.** Selling an operating reactor's output to a data centre does not create a single new megawatt-hour. The reactor was already running and its power was already flowing to somebody. When the campus buys it, that somebody has to be supplied from whatever is next in the {{merit order}} - which, in most hours in most markets, is a gas plant. **So a carbon-free contract can raise system emissions without a single molecule changing inside the fence line**, and that is why this class of deal attracts criticism a new wind farm does not. {{Additionality}} is the name of the test: did the purchase *cause* new generation, or move existing output to a new buyer?",
+    "**The structural question underneath it is where the meter sits.** Under {{behind-the-meter}} co-location the power never passes the point where the plant connects to the grid: there is no delivery, no transmission service and little or no network charge - **which is simultaneously the commercial attraction and the entire regulatory objection**, because the load is relying on a network it has stopped paying for. Under {{front-of-meter}} supply the plant injects, the customer withdraws through an ordinary utility connection, and both are visible to the operator. The physics is nearly identical in the two cases. The bills are not, and neither is who has to approve the arrangement.",
+    "**What the federal regulator actually decided, in November 2024, was narrower than almost anybody reports.** It rejected an amendment to a connection agreement two votes to one, on the ground that the grid operator had not demonstrated the proposed non-conforming provisions were *necessary* deviations from the standard form. The concurring commissioner wrote that the rejection was without prejudice and that the arrangement proposed **may well make sense** - only that it had not been proven on that record. The dissenting chairman thought the majority had missed the forest for the trees. **This was a loss on burden of proof, not a ruling that co-location is unlawful**, and the difference decides whether you are describing a closed door or an open question.",
+    "**And the consequence of that distinction is the thing worth carrying into a sales conversation.** A ruling on the merits settles a question; a ruling on evidence leaves it open, and open questions get litigated repeatedly. What followed was a process rather than an answer: a show-cause order to the grid operator in February 2025, a December 2025 finding that its tariff was unjust and unreasonable for co-located load, three new categories of transmission service ordered into existence, a compliance filing, further guidance in April 2026, and in June 2026 show-cause orders to **every** regional grid operator in the country. As of September 2026 the rulebook is still being written. *When a technology arrives faster than the rules that govern it, the first company through the door does not get a ruling - it gets a process, and it usually finds a commercial route around the process before the process ends.*",
+    "**Sellers answer the objection in three ways and they are not equally strong.** **First**, the plant might otherwise have closed, so the contract preserves supply rather than diverting it - a real argument for a marginal unit and a weak one for a low-cost nuclear station that was never going to retire. **Second**, the contract funds new capacity: an uprate adds output at a site that already has a licence and a connection, and a new unit adds more. **Third**, the load pays its way - a front-of-meter structure puts the customer on the network like every other customer. Only the second creates megawatt-hours that did not exist, which is why new capacity attached to an existing site is the one arrangement in the record that is **unambiguously** additional.",
+    "**The policy response has already started, and it moves the argument from accounting to permitting.** In August 2026 one state made preferential permitting for data centres above twenty-five megawatts conditional on sourcing electricity from **new** supplies in the local zone. Analysts read it as closing the door on selling existing generation under long-term contracts, while judging already-signed deals safe. **A rule written after your contract is signed is a different problem from one written before it** - and for a seller of equipment rather than electrons, the practical effect is that additionality pressure pushes buyers toward the rungs that build something, which are the slow rungs, which lengthens the interval the previous section is about.",
+    "**The boundary, stated so you can find the other half.** Additionality as a **quality test on a purchase** - the corporate and virtual power purchase agreement, the strike-price settlement, the uprate folded into a supply agreement as a contractual answer, the green tariff in a regulated territory - is taught in *Who Carries Which Risk* and is deliberately not repeated here. **What this lesson owns is why the objection bites at all**: the displaced megawatt-hour has to come from somewhere, and the merit order says where."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "9 min",
+   "ps": [
+    "**The licence is the schedule, and the building is the easy part.** On a representative first-of-a-kind sequence the first three years contain no construction at all - they are pre-application dialogue, design criteria and methodology, none of it under a deadline. The corollary is the one people skip: **a faster safety review does not shorten a transmission study or a fuel delivery.** Emergency planning, security, material accounting, environmental review and the queue all still apply whichever licensing route a project takes, so compressing the review compresses the middle of the chart and nothing else.",
+    "**The regulatory noun is the fact.** Application, acceptance, docketing, approval, permit and licence are six different things and only the last two let anyone build or run anything. Two specific traps live in that sentence. **A materials licence is not a reactor licence** - authorisation to possess and distribute a couple of curies of a radioisotope is real and says nothing about permission to operate a power plant, yet headlines routinely blur them. And **an application accepted in one year and denied in a later one is not a pending application**, however many secondary sources still describe the acceptance in the present tense.",
+    "**A construction permit is a right, not a commitment to build.** It is exercised at {{final investment decision}}, and between the two sit the sponsor's balance sheet, a cost estimate that one prospectus says has increased, and a cost-share window with an outside date. One project in this record has its permit guided to the first quarter of 2027 while its industrial sponsor says it does not expect a final investment decision before 2028 and operations are likely 2031 to 2032 - and the single legal challenge filed against it went precisely to whether the applicant had demonstrated its financial qualifications. **Read a permit as permission, and then ask who is paying.**",
+    "**The fuel is the constraint, and it has a stack above it and a stack beneath it.** One US enricher is producing {{HALEU}} at all, at pilot scale - a 900 kilogram delivery in January 2026 against a federal programme target of 21 metric tons - and a first allocation round divided material among five developers. Above enrichment sits fabrication, which is its own bottleneck: metal fuel is not made by the companies that make oxide pellets, so **the fabrication plant has to be built too**, which is why reactor developers end up constructing fuel facilities and why one licensed fuel plant is sized for eleven units against an order book quoted in the hundreds. Beneath it sit three things people forget entirely - tighter material control and accounting with a different security category, certified transport packages that are a genuine bottleneck with their own development programme, and conversion and deconversion steps between the enricher's product and the fabricator's feed that almost nobody has capacity for.",
+    "**A power agreement priced on a first-power date is priced on the least reliable number in the transaction.** One combined-licence applicant plans a unit in each of 2033, 2034, 2035 and 2036 - a schedule built backwards from a licence date the regulator has not set plus about five years of construction per unit - and it slipped a year inside twelve months. Another programme whose stated goal was operations within seven years of October 2020 is now guided by its own sponsor to the early 2030s, with a press-reported analyst case modelling first power in 2033. **Neither of those is a failure of honesty; both are what a first-of-a-kind schedule does.** The failure is a contract, a financing or a campus plan that treats the date as fixed.",
+    "**The modular claim is about the tenth unit and it is made while building the first** - and the physical cap on it is a road. Factory-built is limited by what can leave the factory: road and rail clearances cap module width, height and weight, which caps how much can be assembled before shipping, which caps how much site labour the factory can actually displace. That is why a factory-built reactor still arrives as a set of large pieces to be joined on site. **The honest question about any modular claim is what fraction of the labour hours moved indoors, and nobody publishes that number.**",
+    "**And the buyer's risk appetite is a fact about the buyer that survives the technology improving.** The documented first-of-a-kind large build finished at roughly 35 billion dollars for all owners against a certificate of about 14 billion, with a vendor bankruptcy in the middle and an overrun split between customers and shareholders by regulatory order. The instruments that commission now uses - construction monitoring, a certified cost treated as a cap, every large-load contract filed before signing - **are the institutional memory of that project**, and one chief executive's statement that the company would not be the next to build such a unit unless others shared the overrun risk is the sentence to keep. A seller offering anything first-of-a-kind to that kind of buyer is selling to somebody who has already lived through one."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Define \"clean firm\" in one sentence, and say what makes it different from \"carbon-free\".",
+     "a": "Generation that is **carbon-free and available on demand at any hour** - the category solar and wind cannot fill alone. Carbon-free describes the fuel; **firm describes the behaviour**, and behaviour is what an hourly commitment is actually buying. A plant can be perfectly carbon-free and worthless to an hourly matcher if it only produces when the weather cooperates."
+    },
+    {
+     "q": "Name the three numbers people call \"firmness\" and say what each one answers.",
+     "a": "**{{Capacity factor}}** - what the plant actually produced over a period divided by what it would have produced running flat out; it answers *how much of the year did it run*. **{{Forced outage rate}}** - the share of time it was broken rather than in planned maintenance; it answers *how often does it fail*. **{{Capacity credit}}**, the accredited figure, computed as {{unforced capacity}} or through {{ELCC}} - how much of the nameplate a planner will count on at system peak; it answers *what may I rely on in the worst hour*. None of them is the nameplate."
+    },
+    {
+     "q": "Why does a thermal reactor follow load badly? Give the economic reason and the physical one.",
+     "a": "**Economic:** nearly all of its costs are fixed, so every unsold megawatt-hour is margin thrown away and the whole financial logic pushes it to run flat out. **Physical:** cutting power stops the fission that was *destroying* xenon-135 while the iodine already in the fuel keeps decaying into more of it, so the xenon builds up, peaks hours later, and eats the neutrons the chain reaction needs - **the {{xenon poisoning}} pit can leave the reactor unable to return to full power for hours.** Thermal stress on fuel and cladding is a third, smaller reason."
+    },
+    {
+     "q": "Two things change how well a nuclear plant follows load. What are they, and which one does the following?",
+     "a": "**A {{fast spectrum}} core**, because xenon's enormous appetite is a *thermal*-neutron phenomenon and largely disappears for fast neutrons - though the thermal-stress and fixed-cost arguments still apply, so this does not by itself make a good follower. And **a {{thermal store}} between the reactor and the turbine**: the reactor runs flat out into the store and the turbine draws from it at whatever rate the grid wants. In the second case **the following is done by storage, not by fission** - the reactor never changes power, the plant does."
+    },
+    {
+     "q": "Name the four rungs of the ladder of first power, fastest first, and say what makes the fast ones fast.",
+     "a": "**Uprate** (undated in this record, and the fastest because nothing new is being licensed), **restart** (800-plus megawatts in three to four years), **advanced first-of-a-kind** (about eight years to {{first criticality}}) and **large new build** (fourteen years, certificate to second unit). The two fast rungs are fast because of **what they inherit** - a licence, a staffed site and an existing grid position - not because of anything about the reactor."
+    },
+    {
+     "q": "Give the three physical reasons a campus that has signed a reactor still buys fast-starting plant.",
+     "a": "**One, the reactor is not there yet** - three to four years at best and eight to fourteen for a new licence, while the load arrives now. **Two, the reactor cannot follow the step** - an AI training load steps hard and rhythmically, and a thermal reactor that steps down can be held out of full power for hours. **Three, the reactor can trip** - and under {{behind-the-meter}} co-location the load is not a grid customer, so it is exposed unless it owns its own backup. The third is the counter-intuitive one: **sitting closer to the plant increases the on-site backup requirement.**"
+    },
+    {
+     "q": "What is the additionality objection, and which of the three standard answers actually creates new megawatt-hours?",
+     "a": "Selling an operating plant's output to a new buyer creates no new generation - the displaced customer is served by whatever is next in the {{merit order}}, usually gas - so a carbon-free contract can raise system emissions. The three answers are: the plant might otherwise have closed; the contract funds new capacity; and the load pays its way front-of-meter. **Only the second creates megawatt-hours that did not exist**, which is why new capacity attached to an existing site is the one unambiguously additional arrangement."
+    },
+    {
+     "q": "Six regulatory nouns get used interchangeably. Name them and say which ones matter.",
+     "a": "**Application, acceptance, docketing, approval, permit and licence.** Only the last two let anyone build or operate. Two traps follow: a *materials* licence to possess a radioisotope is a genuine licence and is **not** a reactor licence; and an application accepted in one year and denied in a later one is **not** pending, whatever secondary coverage still says in the present tense."
+    },
+    {
+     "q": "Why is the fuel, rather than the reactor, usually named as the binding constraint on advanced designs?",
+     "a": "Because {{HALEU}} - uranium enriched between about five and twenty per cent - barely exists at scale: one US enricher producing at pilot scale delivered 900 kilograms in January 2026 against a programme target of 21 metric tons. Above it, **fabrication is its own bottleneck** (metal fuel is not made by the makers of oxide pellets, so the plant has to be built too). Beneath it sit material control and accounting, certified transport packages, and conversion and deconversion steps almost nobody has capacity for."
+    },
+    {
+     "q": "What does the modular argument actually claim, and what physically caps it?",
+     "a": "It claims the **economics of series** rather than of scale: one design licensed once and repeated, with unit cost falling by a roughly constant percentage each time cumulative output doubles, less capital at risk per unit, and capacity added incrementally. **It is a claim about the tenth unit, made while building the first.** The physical cap is the shipping envelope - road and rail clearances limit module size and weight, which limits how much can be assembled indoors, which limits how much site labour the factory displaces."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A prospect tells you its campus is \"one hundred per cent carbon-free\". What does that claim tell you about whether it needs clean firm power?",
+     "c": [
+      "Nothing on its own - the claim may be annual matching, which says nothing about timing",
+      "That it has already bought storage to cover the night",
+      "That it is running on nuclear or geothermal today",
+      "That it is matched hour by hour on its local grid"
+     ],
+     "a": 0,
+     "why": "Annual matching buys enough clean generation over a year to equal total consumption and is silent about when any of it was generated, so a company can be matched on paper while running on gas-heavy grid power every night. Only the hourly question - was a contracted carbon-free megawatt-hour generated on the same grid in the same hour - creates a demand for machines that produce on request. Ask which accounting is in use before assuming anything about the shopping list."
+    },
+    {
+     "q": "A thermal reactor reduces power sharply at two in the morning. When can it return to full output?",
+     "c": [
+      "Immediately - a reactor is a dispatchable machine",
+      "Within a minute, once the turbine resynchronises",
+      "Possibly not for several hours, because a neutron-absorbing fission product builds up while it is down",
+      "Not until the next refuelling outage"
+     ],
+     "a": 2,
+     "why": "Cutting power stops the fission that was destroying xenon-135, while the iodine already in the fuel keeps decaying into more of it. Production continues, destruction collapses, the xenon peaks hours later, and while it is there it absorbs the neutrons the chain reaction needs. That is the physical reason a thermal reactor follows load badly - distinct from, and underneath, the economic reason that its costs are nearly all fixed."
+    },
+    {
+     "q": "One rung of the ladder of first power carries no elapsed time in this record. Which is it, and why is it still the fastest?",
+     "c": [
+      "The restart, because the staffing pipeline cannot be estimated",
+      "The uprate, because nothing new is being licensed and the site, staff and grid position already exist",
+      "The advanced first-of-a-kind, because the fuel supply is unknown",
+      "The large new build, because the constructor has not been chosen"
+     ],
+     "a": 1,
+     "why": "An uprate raises an existing reactor's licensed output with the regulator's approval on a site that already holds a licence, operators and a connection - which is why it is the cheapest firm capacity a fleet owner can add. The corpus states no duration for one anywhere, so the honest presentation places it early as a class rather than quoting a year. The restart, by contrast, is dated at three to four years."
+    },
+    {
+     "q": "A campus signs to take power behind the meter from the plant next door. What happens to its on-site backup requirement?",
+     "c": [
+      "It falls, because the generation is physically adjacent",
+      "It is unchanged, because the electricity is identical either way",
+      "It rises, because the load is not a grid customer and has nothing to fall back on when the plant trips",
+      "It is set by the utility's standard tariff either way"
+     ],
+     "a": 2,
+     "why": "Behind the meter, power never passes the point where the plant connects to the grid - there is no delivery and little or no network charge, which is the commercial attraction. The corollary is that the load is not a grid customer, so when the plant trips it is exposed unless it owns backup. Front of meter, the load keeps drawing from the grid like anyone else and the seller buys replacement power. The arrangement that most reduces the network bill most increases what the campus has to own."
+    },
+    {
+     "q": "A deal is described to you as \"clean firm\". What is the most useful next question?",
+     "c": [
+      "Which certificate registry the attributes are tracked in",
+      "Which of the four kinds it is, and on what date it delivers",
+      "What the strike price under the agreement is",
+      "Whether the power purchase agreement is physical or virtual"
+     ],
+     "a": 1,
+     "why": "\"Clean firm\" names a behaviour rather than a technology, and the four kinds that satisfy it - nuclear, enhanced geothermal, gas with capture, and storage-firmed renewables - carry completely different gates, schedules and counterparties. The other three questions are good ones and they belong to the instruments lesson, Who Carries Which Risk; none of them tells you when the megawatts appear or what has to cover the interval before they do."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -41342,10 +41881,11 @@ function clTrackAidcCampus_() {
  "title": "The AI Campus: Heat, Water, Power Projects, and the BESS Socket",
  "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall; how to read a campus announcement as a power project running on three clocks, and who is in the room at each stage; and where a battery does and does not plug into the buildout.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-15",
+ "updated": "2026-09-16",
  "lessons": [
   "heat-is-the-constraint",
   "the-campus-as-a-power-project",
+  "clean-firm-power",
   "where-bess-plugs-in"
  ],
  "prereqs": [
@@ -41484,7 +42024,8 @@ function clLessons_() {
           clLessonWhereBatteriesStop_(),
           clLessonBreakersRelaysAndFaults_(),
           clLessonGridStabilityAndTheGenerator_(),
-          clLessonStringVersusCentral_()];
+          clLessonStringVersusCentral_(),
+          clLessonCleanFirmPower_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
