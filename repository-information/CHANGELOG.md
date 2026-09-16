@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.01r] — 2026-09-15 10:00:26 PM EST
+
+> **Prompt:** "Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session." *(This section is a defect found while reading the produced prompt back to the developer, inside the same request.)*
+
+### Fixed
+
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.33, both halves — the forward-looking repo-version claim is REMOVED rather than corrected, which closes a recursion instead of patching it.** §7.33 was written inside the v05.99r work commit and told S2 session 9 *"Repo v05.99r — your push is v06.00r, the first of the v06 series"*. Both figures were true when written and **both were consumed by this session's own v06.00r handover commit** — the handover that exists precisely to refresh the brief's counters is also the commit that invalidates this particular one. **Correcting the number would not have worked**: a correction commit consumes the next version too, so `v06.01r` would have been stale the moment it was written, and so would `v06.02r`. The claim is therefore **deleted** and replaced, in the prose paragraph and in the quoted prompt block alike, with an instruction to **read `repository-information/repository.version.txt` on the day and bump it by 0.01**, plus a one-line note recording why a brief structurally cannot state its successor's version. **This is the first of the handover recursion's effects to be closed rather than absorbed** — the other seven were counters a later measurement could legitimately refresh; this one was a value no measurement can ever make current, because writing it down is what spends it
+- Every other figure in §7.33 remains a **measurement** and is unaffected: the deploy counters, the segment membership, the `policyExposure[]` arithmetic, the checker baselines and the changelog counts are all values a later session can and should re-verify against the files
+
+### Changed
+
+- **`README.md`** — `Last updated:` and `Repo version:` `v06.00r` → `v06.01r`
+
+### Notes
+
+- **Found by reading the deliverable back rather than by a checker** — no assertion in the toolchain watches a brief's prose for a version number it will not hold, and none reasonably could. The defect surfaced only because the paste-in prompt was printed in full for the developer before the session closed, which is itself an argument for printing it
+- **No rotation.** At counting time EST read **2026-09-15 22:00** while UTC read **2026-09-16 02:00** — the EST/UTC divergence holding for a third consecutive session and a third consecutive push within it. 102 raw minus the twenty-two sections dated 2026-09-15 EST is **80 non-exempt**; this section makes it **103 raw / 80 non-exempt**, twenty clear of the cap, counter `Sections: 103/100`. **The moment EST rolls past 2026-09-15 it becomes 103 non-exempt — past the 100 trigger — so the next session is the rotator unless its push also lands on 2026-09-15 EST**
+- Nothing in a deployed surface moved in this commit, so **no GAS bump, no page bump and no public changelog entry**. Classroom GAS stays **v01.47g**, Scraper **v02.09g**, page **v01.14w**
 
 ## [v06.00r] — 2026-09-15 09:58:10 PM EST
 
